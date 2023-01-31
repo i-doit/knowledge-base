@@ -1,0 +1,17 @@
+/* light mode */
+.md-typeset__table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+.md-typeset td:not([class]):not(:last-child) {
+    border-right: 1px solid #e0e0e0;
+}
+
+/* dark mode */
+[data-md-color-scheme="slate"] .md-typeset__table tr:nth-child(2n) {
+    background-color: hsla(var(--md-hue),25%,25%,1)
+}
+
+[data-md-color-scheme="slate"] .md-typeset td:not([class]):not(:last-child) {
+    border-right: 1px solid #444755;
+}

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="alternate" type="application/atom+xml" title="Atom feed of release notes" href="{{ config.site_url }}releases.atom">
+    <link rel="alternate" type="application/atom+xml" title="Atom feed of announcements" href="{{ config.site_url }}announcements.atom">
+
+    <meta name="dc.creator" content="{{ config.site_author }}">
+    <meta name="dc.description" content="{{ config.site_description }}">
+    <meta name="dc.language" content="en-US">
+    <meta name="dc.license" content="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License">
+    <meta name="dc.publisher" content="MkDocs, Material for MkDocs">
+    <meta name="dc.title" content="{{ config.site_name }}">
+    <meta name="dc.type" content="Text">
+
+    <meta property="og:title" content="{{ config.site_name }}">
+    <meta property="og:description" content="{{ config.site_description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ config.site_url }}">
+    <meta property="og:image" content="{{ base_url }}/assets/images/logos/social-card.png">
+    <meta property="og:image:secure_url" content="{{ base_url }}/assets/images/logos/social-card.png">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ config.site_name }}">
+    <meta name="twitter:description" content="{{ config.site_description }}">
+    <meta name="twitter:image" content="{{ base_url }}/assets/images/logos/social-card.png">
+    <meta name="twitter:site:id" content="@i_doit">
+    <meta name="twitter:creator:id" content="@i_doit">
+    <meta name="twitter:domain" content="kb.i-doit.com">
+
+    <link rel="image_src" href="{{ base_url }}/assets/images/logos/social-card.png">
+
+    <meta name="application-name" content="{{ config.site_name }}">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="{{ config.site_name }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#1D1D1B">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#E3000F">
+    <meta name="msapplication-config" content="{{ base_url }}/browserconfig.xml">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ base_url }}/assets/images/logos/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ base_url }}/assets/images/logos/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ base_url }}/assets/images/logos/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ base_url }}/assets/images/logos/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ base_url }}/assets/images/logos/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ base_url }}/assets/images/logos/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ base_url }}/assets/images/logos/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ base_url }}/assets/images/logos/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ base_url }}/assets/images/logos/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="{{ base_url }}/assets/images/logos/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ base_url }}/assets/images/logos/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ base_url }}/assets/images/logos/favicon-96x96.png" sizes="96x96">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ base_url }}/assets/images/logos/favicon.ico">
+    <link href="{{ base_url }}/assets/images/logos/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+    <link href="{{ base_url }}/assets/images/logos/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="{{ base_url }}/assets/images/logos/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="{{ base_url }}/assets/images/logos/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape)" rel="apple-touch-startup-image">
+    <link href="{{ base_url }}/assets/images/logos/apple-touch-startup-image-750x1024.png" media="" rel="apple-touch-startup-image">
+    <link href="{{ base_url }}/assets/images/logos/apple-touch-startup-image-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="{{ base_url }}/assets/images/logos/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait)" rel="apple-touch-startup-image">
+    <link href="{{ base_url }}/assets/images/logos/apple-touch-startup-image-1182x2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" rel="apple-touch-startup-image">
+    <link href="{{ base_url }}/assets/images/logos/apple-touch-startup-image-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" rel="apple-touch-startup-image">
+    <link href="{{ base_url }}/assets/images/logos/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" rel="apple-touch-startup-image">
+    <link href="{{ base_url }}/assets/images/logos/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" rel="apple-touch-startup-image">
+    <link rel="manifest" href="{{ base_url }}/manifest.webmanifest" />
+{% endblock %}
+
+{% block announce -%}
+
+{%- endblock %}

@@ -1,0 +1,96 @@
+---
+site_name: Knowledge Base
+docs_dir: '../../docs/en'
+site_dir: '../../generated/en' 
+site_url: https://kb.i-doit.com/
+site_description: Knowledge Base
+site_author: synetics GmbH
+copyright: Copyright &copy; 2019-23 synetics GmbH
+repo_url: https://github.com/i-doit/knowledge-base
+edit_uri: edit/main/docs/de
+strict: true
+theme:
+  name: material
+  custom_dir: '../../overrides/'
+  palette:
+    - scheme: default
+      primary: grey
+      accent: red
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: grey
+      accent: red
+      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font: false
+  logo: assets/images/logos/logo.svg
+  language: en
+  favicon: assets/images/logos/favicon.ico
+  features:
+    - content.action.edit
+    - content.code.copy
+    - navigation.footer
+    - navigation.top
+    - search.suggest
+    - navigation.indexes
+
+plugins:
+  - search:
+      lang: en
+  - minify:
+      minify_html: true
+#  - git-revision-date-localized:
+#      type: iso_date
+markdown_extensions:
+  - admonition
+  - attr_list
+  - meta
+  - toc:
+      permalink: "#"
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: table
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      check_paths: true
+extra:
+  manifest: overrides/manifest.webmanifest
+  social:
+    - name: i-doit on Twitter
+      link: https://twitter.com/i_doit
+      icon: fontawesome/brands/twitter
+    - name: i-doit on YouTube (English)
+      link: https://www.youtube.com/channel/UC5wvDZjCslEWW2jE6R_5CUg
+      icon: fontawesome/brands/youtube
+    - name: i-doit on LinkedIn
+      link: https://www.linkedin.com/company/1097514/
+      icon: fontawesome/brands/linkedin
+    - name: i-doit on Facebook
+      link: https://facebook.com/itdokumentation/
+      icon: fontawesome/brands/facebook
+    - name: i-doit on GitHub
+      link: https://github.com/i-doit
+      icon: fontawesome/brands/github
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
+    - name: Deutsch
+      link: /de/
+      lang: de
+use_directory_urls: false
+watch:
+  - ../../overrides/
+nav:
+  - Übersicht: index.md
+  - Glossar: glossary.md
