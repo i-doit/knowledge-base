@@ -120,7 +120,7 @@ Wichtig ist, dass der Dienst von außen nicht erreichbar ist. Meist läuft der D
 
 Wir schließen uns den üblichen Rants zu PHP keineswegs an, denn die Scriptsprache lässt sich für unsere Zwecke angemessen "härten". Eine wichtige Botschaft ist: **PHP sollte immer auf dem neusten Patch-Stand sein.** Hierbei ist zu beachten, welche Major-Versionen von PHP (5.x, 7.x) von den PHP-Entwicklern und welche PHP-Pakete von der genutzten Distribution unterstützt werden. Distributionen setzen oftmals nicht auf die neusten Major-Versionen, sondern pflegen ältere, eher stabilere Versionen. Diese werden mit Bug- und Security-Fixes gepatcht. Updates von PHP sollten also immer schnellstmöglich eingespielt werden.
 
-Für den Betrieb von i-doit erforderliche haben wir bereits in den [Systemeinstellungen](../installation/manuelle-manuelle-installation/systemeinstellungen.md) beschrieben. **Diese Einstellungen lassen sich durch zusätzliche erweitern.** Dafür erstellen wir eine neue .ini-Datei:
+Für den Betrieb von i-doit erforderliche haben wir bereits in den [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) beschrieben. **Diese Einstellungen lassen sich durch zusätzliche erweitern.** Dafür erstellen wir eine neue .ini-Datei:
 
     sudo editor /etc/php/7.2/mods-available/zz_security.ini
 

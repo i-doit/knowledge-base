@@ -37,12 +37,12 @@ Zugangsdaten
 <!---Todo: Fixme--->
 | Tool | Benutzername | Passwort |
 | --- | --- | --- |
-| i-doit Web GUI | **`admin`** | **`admin`** |
+| i-doit Web GUI | **admin** | **admin** |
 | i-doit Web GUI | **controller** | **controller** |
-| [i-doit Admin-Center](/display/de/Admin+Center) | **`admin`** | **`idoit`** |
-| SSH | **`idoitadm`** | **`idoit`** |
-| MySQL (i-doit) | **`idoit`** | **`idoit`** |
-| MySQL (Systemuser) | **`root`** | **`idoit`** |
+| [i-doit Admin-Center](/display/de/Admin+Center) | **admin** | **idoit** |
+| SSH | **idoitadm** | **idoit** |
+| MySQL (i-doit) | **idoit** | **idoit** |
+| MySQL (Systemuser) | **root** | **idoit** |
 
 Weiterhin existieren [die vordefinierten Personen- und Personengruppen](/display/de/Erstanmeldung) in i-doit.
 
@@ -55,17 +55,17 @@ Die Konfiguration der Appliance kann auf der Konsole erledigt werden. Nach dem A
 <!---Todo: Fixme--->
 | Shortcut | Menüpunkt | Funktion |
 | --- | --- | --- |
-| **`1`** | **`Configure networking`** | Netzwerkanbindung festlegen; die Netzwerkkonfiguration ist per Default auf DHCP gesetzt. |
-| **`2`** | **`Proxy configuration`** | HTTP Proxy für das System angeben |
-| **`3`** | **`E-Mail configuration`** | E-Mail-Einstellungen |
-| **`4`** | **`Timezone`** | Zeitzone einstellen |
-| **`5`** | **`Keyboard layout`** | Tastatur-Belegung; `de` ist als Standard definiert |
-| **`6`** | **`Change idoitadm user password`** | Passwort vom User **`idoitadm`** ändern |
-| **`7`** | **`i-doit scripting configuration  <br>`** | Einstellungen für CLI, [Cron Jobs](/display/de/Cronjobs+einrichten), [Backups und Restore](/display/de/Daten+sichern+und+wiederherstellen) ändern |
-| **`8`** | **`Reboot system`** | System neustarten |
-| **`9`** | **`Shutdown system`** | System herunterfahren |
-| **`0`** | **`Launch shell`** | Shell öffnen für weitere Aktionen |
-| **`A`** | **`Logout`** | Den User **`idoitadm`** vom System abmelden |
+| **1** | **Configure networking** | Netzwerkanbindung festlegen; die Netzwerkkonfiguration ist per Default auf DHCP gesetzt. |
+| **2** | **Proxy configuration** | HTTP Proxy für das System angeben |
+| **3** | **E-Mail configuration** | E-Mail-Einstellungen |
+| **4** | **Timezone** | Zeitzone einstellen |
+| **5** | **Keyboard layout** | Tastatur-Belegung; de ist als Standard definiert |
+| **6** | **Change idoitadm user password** | Passwort vom User **idoitadm** ändern |
+| **7** | **i-doit scripting configuration  <br>** | Einstellungen für CLI, [Cron Jobs](/display/de/Cronjobs+einrichten), [Backups und Restore](/display/de/Daten+sichern+und+wiederherstellen) ändern |
+| **8** | **Reboot system** | System neustarten |
+| **9** | **Shutdown system** | System herunterfahren |
+| **0** | **Launch shell** | Shell öffnen für weitere Aktionen |
+| **A** | **Logout** | Den User **idoitadm** vom System abmelden |
 
 Scripte und Cronjobs
 --------------------
@@ -74,14 +74,14 @@ Die Appliance verfügt über diverse Scripte und Cronjobs.
 
 | Script | Zweck |
 | --- | --- |
-| **`idoit`** | i-doit CLI |
-| `idoit-backup` | Backup manuell ausführen |
-| `idoit-restore` | Restore ausführen |
-| `idoit-jobs` | Cronjobs manuell ausführen |
+| **idoit** | i-doit CLI |
+| idoit-backup | Backup manuell ausführen |
+| idoit-restore | Restore ausführen |
+| idoit-jobs | Cronjobs manuell ausführen |
 
-Die Scripte befinden sich unter `**/usr/local/bin/**`.
+Die Scripte befinden sich unter **/usr/local/bin/**.
 
-Unter **`/etc/cron.d/i-doit`** existieren vorkonfigurierte [Cronjobs](/display/de/CLI), die das System regelmäßig optimieren.
+Unter **/etc/cron.d/i-doit** existieren vorkonfigurierte [Cronjobs](/display/de/CLI), die das System regelmäßig optimieren.
 
 Jede Nacht werden die Daten von i-doit lokal gesichert. Der Speicherzeitraum beträgt eine Woche.
 
@@ -92,12 +92,12 @@ Wo ist was zu finden?
 
 | Verzeichnis | Zweck |
 | --- | --- |
-| `/var/www/html/` | Installationsverzeichnis von i-doit |
-| `/etc/apache2/` | Konfiguration des Apache Webservers |
-| `/etc/php/7.0/` | Konfiguration von PHP |
-| `/etc/mysql/` | Konfiguration von MariaDB |
-| `/var/log/apache2/` | Logs vom Apache Webserver |
-| `/var/backups/i-doit` | Backups |
+| /var/www/html/ | Installationsverzeichnis von i-doit |
+| /etc/apache2/ | Konfiguration des Apache Webservers |
+| /etc/php/7.0/ | Konfiguration von PHP |
+| /etc/mysql/ | Konfiguration von MariaDB |
+| /var/log/apache2/ | Logs vom Apache Webserver |
+| /var/backups/i-doit | Backups |
 
 Nachbereitung
 -------------
@@ -117,7 +117,7 @@ Troubleshooting
 
         mysqli_connect(): (HY000/2002): Connection refused (/var/www/html/src/classes/components/isys_component_database_mysqli.class.php:16
 
-    ausgegeben, ist der MySQL-Dienst vermutlich nicht gestartet. Das hängt in der Regel damit zusammen, dass die virtuelle Hardware der Appliance verändert wurde, ohne die Konfigurationen anzupassen. Hier müssen entweder die Einstellungen der virtuellen Maschine zurück auf die mitgelieferten Werte gesetzt und die Maschine neu gestartet werden oder die Konfiguration unter **`/etc/mysql/mariadb.conf.d/99-i-doit.cnf`** angepasst werden, sodass die Hardware dafür ausreicht und der MySQL-Dienst wieder mit **`systemctl start mysql`** gestartet werden kann.
+    ausgegeben, ist der MySQL-Dienst vermutlich nicht gestartet. Das hängt in der Regel damit zusammen, dass die virtuelle Hardware der Appliance verändert wurde, ohne die Konfigurationen anzupassen. Hier müssen entweder die Einstellungen der virtuellen Maschine zurück auf die mitgelieferten Werte gesetzt und die Maschine neu gestartet werden oder die Konfiguration unter **/etc/mysql/mariadb.conf.d/99-i-doit.cnf** angepasst werden, sodass die Hardware dafür ausreicht und der MySQL-Dienst wieder mit **systemctl start mysql** gestartet werden kann.
 
 !!! attention "VM startet nicht"
 
@@ -125,15 +125,15 @@ Troubleshooting
 
 !!! attention "Unsupported hardware family"
 
-    Wenn die eingesetzte VMware-Umgebung nicht aktuell ist, erscheint beim Import die Fehlermeldung **`line 25 unsupported hardware family 'vmx-10'`**. Um dennoch importieren zu können, muss die Datei **`i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf`** editiert werden. In der Zeile
+    Wenn die eingesetzte VMware-Umgebung nicht aktuell ist, erscheint beim Import die Fehlermeldung **line 25 unsupported hardware family 'vmx-10'**. Um dennoch importieren zu können, muss die Datei **i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf** editiert werden. In der Zeile
 
         <vssd:VirtualSystemType>vmx-10</vssd:VirtualSystemType>
 
-    muss eine niedrigere Version gewählt werden. Für ESXi 5.1 passt der Wert **`vmx-9`**:
+    muss eine niedrigere Version gewählt werden. Für ESXi 5.1 passt der Wert **vmx-9**:
 
         <vssd:VirtualSystemType>vmx-9</vssd:VirtualSystemType>
 
-    Nach dem Speichern muss der Hash-Wert (SHA1) der geänderten Datei in der Datei **`i-doit Eval Appliance 1.x.x i-doit 1.x.x.mf`** aktualisiert werden. Unter GNU/Linux kann der Befehl **`sha1sum`** verwendet werden:
+    Nach dem Speichern muss der Hash-Wert (SHA1) der geänderten Datei in der Datei **i-doit Eval Appliance 1.x.x i-doit 1.x.x.mf** aktualisiert werden. Unter GNU/Linux kann der Befehl **sha1sum** verwendet werden:
 
         sha1sum i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf
 <!---Todo: Fixme--->
