@@ -1,15 +1,4 @@
-**Inhaltsverzeichnis**
-
-*   1[Motivation](#Upgradevonidoitopenaufpro-Motivation)
-*   2[In Sieben Schritten zur i-doit pro](#Upgradevonidoitopenaufpro-InSiebenSchrittenzuri-doitpro)
-*   3[Vorbereitung](#Upgradevonidoitopenaufpro-Vorbereitung)
-*   4[pro-Update herunterladen und durchführen](#Upgradevonidoitopenaufpro-pro-Updateherunterladenunddurchführen)
-*   5[i-doit pro-addon installieren](#Upgradevonidoitopenaufpro-i-doitpro-addoninstallieren)
-*   6[Lizenz einspielen](#Upgradevonidoitopenaufpro-Lizenzeinspielen)
-*   7[Caches leeren](#Upgradevonidoitopenaufpro-Cachesleeren)
-*   8[Rechte konfigurieren](#Upgradevonidoitopenaufpro-Rechtekonfigurieren)
-*   9[Nacharbeiten](#Upgradevonidoitopenaufpro-Nacharbeiten)
-*   10[Downgrade auf i-doit open?](#Upgradevonidoitopenaufpro-Downgradeaufi-doitopen?)
+# Upgrade von i-doit open auf pro
 
 Wie steigt man schnell und einfach von _i-doit open_ auf _i-doit pro_ mit erweiterten Funktionen um?
 
@@ -34,7 +23,7 @@ Bevor wir ins Detail gehen, verschaffen wir uns einen kurzen Überblick, welche 
 Vorbereitung
 ------------
 
-Wichtig: Dieser Vorgang kann nicht rückgängig gemacht werden. Ein funktionierendes [Backup](/display/de/Daten+sichern+und+wiederherstellen) ist daher unablässig.Nach dem Upgrade ist eine gültige [Lizenz für i-doit pro](/display/de/Lizenz+aktivieren)erforderlich. Ebenso müssen die [Systemvoraussetzungen](/display/de/Systemvoraussetzungen)und [\-einstellungen](/display/de/Systemeinstellungen)erfüllt sein.
+Wichtig: Dieser Vorgang kann nicht rückgängig gemacht werden. Ein funktionierendes [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) ist daher unablässig.Nach dem Upgrade ist eine gültige [Lizenz für i-doit pro](../wartung-und-betrieb/lizenz-aktivieren.md)erforderlich. Ebenso müssen die [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) und [Einstellungen](../installation/manuelle-installation/systemeinstellungen.md) erfüllt sein.
 
 Sollte es sich um eine ältere open-Installation handeln, müssen noch weitere Schritte befolgt werden:
 
@@ -46,32 +35,32 @@ Die jeweils aktuelle Version steht auf [i-doit.org](http://i-doit.org/) zum Down
 
 _pro_\-Update herunterladen und durchführen
 -------------------------------------------
-
-Das Update-Paket der pro-Variante muss im [Kundenportal](/display/de/Kundenportal) heruntergeladen und [auf die übliche Art und Weise eingespielt](/display/de/Update+einspielen) werden. Wichtig ist hierbei, dass die Versionsnummern der installierten open- und der gewünschten pro-Variante übereinstimmen. Beispiel: Ist i-doit open 1.8 installiert, muss das Update-Paket i-doit pro 1.8 verwendet werden.
+<!---Todo: Fixme--->
+Das Update-Paket der pro-Variante muss im [Kundenportal](/display/de/Kundenportal) heruntergeladen und [auf die übliche Art und Weise eingespielt](../wartung-und-betrieb/update-einspielen.md) werden. Wichtig ist hierbei, dass die Versionsnummern der installierten open- und der gewünschten pro-Variante übereinstimmen. Beispiel: Ist i-doit open 1.8 installiert, muss das Update-Paket i-doit pro 1.8 verwendet werden.
 
 Mit dem Installations-Paket der pro-Variante funktioniert das Upgrade nicht.
 
 _i-doit pro_\-addon installieren
 --------------------------------
-
-Nach dem Update auf die pro-Variante muss das pro-addon installiert werden. Das pro-addon ist bereits im [Admin Center](/display/de/Admin+Center) unter `**Add-ons**` verfügbar. Dort befindet sich ein Button zum Installieren.
+<!---Todo: Fixme--->
+Nach dem Update auf die pro-Variante muss das pro-addon installiert werden. Das pro-addon ist bereits im [Admin Center](/display/de/Admin+Center) unter **Add-ons** verfügbar. Dort befindet sich ein Button zum Installieren.
 
 Lizenz einspielen
 -----------------
 
-Das eigentliche Upgrade ist nun vollendet und muss nur noch durch eine gültige Lizenz "veredelt" werden. Die Lizenz kann [direkt im Admin Center unter `**Licenses**` eingespielt](/display/de/Lizenz+aktivieren) werden.
+Das eigentliche Upgrade ist nun vollendet und muss nur noch durch eine gültige Lizenz "veredelt" werden. Die Lizenz kann [direkt im Admin Center unter **Licenses** eingespielt](../wartung-und-betrieb/lizenz-aktivieren.md) werden.
 
 Caches leeren
 -------------
 
-Nun melden wir uns vom Admin Center ab und in i-doit an. Dort klicken wir uns über **`Verwaltung` → `Systemtools` → `Cache / Datenbank`** zur Schaltfläche **`Kompletten Cache leeren`**. Anschließend leeren wir den Browser-eigenen Cache mit der Tastenkombination **`STRG+F5`.**
+Nun melden wir uns vom Admin Center ab und in i-doit an. Dort klicken wir uns über **Verwaltung → Systemtools → Cache / Datenbank** zur Schaltfläche **Kompletten Cache leeren**. Anschließend leeren wir den Browser-eigenen Cache mit der Tastenkombination **STRG+F5.**
 
 Rechte konfigurieren
 --------------------
-
+<!---Todo: Fixme--->
 Im Gegensatz zu i-doit open besitzt i-doit pro ein umfangreiches, frei konfigurierbares [Rechtesystem](/display/de/Rechteverwaltung). Der angemeldete Benutzer wird daher noch nicht über alle Berechtigungen verfügen.
-
-Um dem Benutzer mit wenigen Schritten vollen Zugriff zu gewähren, rufen wir **`Verwaltung`→ `Rechtesystem`** **→ `Rechtesystem zurücksetzen`** auf und erteilen ihm mit der Eingabe der Credentials für das [Admin Center](/display/de/Admin+Center) vollen Zugriff auf i-doit.
+<!---Todo: Fixme--->
+Um dem Benutzer mit wenigen Schritten vollen Zugriff zu gewähren, rufen wir **Verwaltung→ Rechtesystem** **→ Rechtesystem zurücksetzen** auf und erteilen ihm mit der Eingabe der Credentials für das [Admin Center](/display/de/Admin+Center) vollen Zugriff auf i-doit.
 
 Nun können über die einzelnen Rechtevergaben weitere Rechte für Personen und Personengruppen konfiguriert werden.
 
@@ -79,10 +68,10 @@ Nacharbeiten
 ------------
 
 Falls noch nicht geschehen, sollten folgende Dinge nicht außer Acht gelassen werden, damit i-doit reibungslos funktioniert:
-
-*   [Backup und Restore einrichten und testen](/display/de/Daten+sichern+und+wiederherstellen)
+<!---Todo: Fixme--->
+*   [Backup und Restore einrichten und testen](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
 *   [Cronjobs einrichten](/display/de/CLI) (mit dem Controller)
-*   [Optional Update auf aktuelle pro-Version durchführen:](/display/de/Update+einspielen) Mit einer gültigen Lizenz ist es möglich und auch sehr empfehlenswert, immer auf die neuste Version von i-doit pro zu aktualisieren.  
+*   [Optional Update auf aktuelle pro-Version durchführen:](../wartung-und-betrieb/update-einspielen.md) Mit einer gültigen Lizenz ist es möglich und auch sehr empfehlenswert, immer auf die neuste Version von i-doit pro zu aktualisieren.  
     
 
 Downgrade auf i-doit open?
