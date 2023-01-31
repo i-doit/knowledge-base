@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+    <link type="text/html" rel="alternate" href="https://kb.i-doit.com/ref/announcements.html"/>
+    <link type="application/atom+xml" rel="self" href="https://kb.i-doit.com/announcements.atom"/>
+    <title>i-doit Announcements</title>
+    <updated>{{ buildDate }}</updated>
+    <id>i-doit:announcements</id>
+{%- for announcement in announcements[:10] %}
+    <entry>
+        <updated>{{ announcement.date }}</updated>
+        <link rel="alternate" type="text/html" href="https://kb.i-doit.com/ref/announcements.html"/>
+        <title>{{- announcement.title -}}</title>
+        <content type="html">{{- announcement.content | e -}}</content>
+        <author>
+            <name>i-doit team</name>
+        </author>
+        <media:thumbnail height="32" width="32" url="https://kb.i-doit.com/assets/images/logos/favicon-32x32.png"/>
+        <id>i-doit:announcements:{{ announcement.date | default('upcoming-change') }}</id>
+    </entry>
+{% endfor -%}
+</feed>

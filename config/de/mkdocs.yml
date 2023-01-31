@@ -1,0 +1,148 @@
+---
+site_name: Knowledge Base
+docs_dir: '../../docs/de'
+site_dir: '../../generated/de' 
+site_url: https://kb.i-doit.com/
+site_description: Knowledge Base
+site_author: synetics GmbH
+copyright: Copyright &copy; 2019-23 synetics GmbH
+repo_url: https://github.com/i-doit/knowledge-base
+edit_uri: edit/main/docs/de
+strict: true
+theme:
+  name: material
+  custom_dir: '../../overrides/'
+  palette:
+    - scheme: default
+      primary: grey
+      accent: red
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: grey
+      accent: red
+      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font: false
+  logo: assets/images/logos/logo.svg
+  language: de
+  favicon: assets/images/logos/favicon.ico
+  features:
+    - content.action.edit
+    - content.code.copy
+    - navigation.footer
+    - navigation.top
+    - search.suggest
+    - navigation.indexes
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+plugins:
+  - search:
+      lang: de
+  - minify:
+      minify_html: true
+  - mkdocs-video
+#  - git-revision-date-localized:
+#      type: iso_date
+markdown_extensions:
+  - admonition
+  - attr_list
+  - meta
+  - toc:
+      permalink: "#"
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: table
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      check_paths: true
+
+extra:
+  manifest: overrides/manifest.webmanifest
+  social:
+    - name: i-doit on Twitter
+      link: https://twitter.com/i_doit
+      icon: fontawesome/brands/twitter
+    - name: i-doit on YouTube (English)
+      link: https://www.youtube.com/channel/UC5wvDZjCslEWW2jE6R_5CUg
+      icon: fontawesome/brands/youtube
+    - name: i-doit on LinkedIn
+      link: https://www.linkedin.com/company/1097514/
+      icon: fontawesome/brands/linkedin
+    - name: i-doit on Facebook
+      link: https://facebook.com/itdokumentation/
+      icon: fontawesome/brands/facebook
+    - name: i-doit on GitHub
+      link: https://github.com/i-doit
+      icon: fontawesome/brands/github
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
+    - name: Deutsch
+      link: /de/
+      lang: de
+extra_css:
+  - assets/custom.css
+use_directory_urls: false
+watch:
+  - ../../overrides/
+nav:
+  - Übersicht: index.md
+  - Einführung: 
+      - einfuehrung/index.md
+      - Wie beginne ich zu dokumentieren?: einfuehrung/wie-beginne-ich-zu-dokumentieren.md
+      - Checkliste für die IT-Dokumentation: einfuehrung/checkliste-fuer-die-it-dokumentation.md
+  - Installation:
+      - installation/index.md
+      - Systemvoraussetzungen: installation/systemvoraussetzungen.md
+      - Automatische Installation: installation/automatische-installation.md
+      - Manuelle Installation:
+        - installation/manuelle-installation/index.md
+        - Debian GNU/Linux: installation/manuelle-installation/debian.md
+        - Red Hat Enterprise Linux (RHEL):
+          - installation/manuelle-installation/red-hat-enterprise-linux/index.md
+          - Red Hat Enterprise Linux 8.6 (RHEL 8): installation/manuelle-installation/red-hat-enterprise-linux/red-hat-enterprise-linux-8.6.md
+        - Suse Linux Enterprise Server (SLES): installation/manuelle-installation/suse-linux-enterprise-server.md
+        - Ubuntu GNU/Linux:
+          - installation/manuelle-installation/ubuntu-linux/index.md
+          - Ubuntu 20.04.1 LTS "Focal Fossa": installation/manuelle-installation/ubuntu-linux/ubuntu-20.04.1-lts.md
+        - Microsoft Windows Server: installation/manuelle-installation/microsoft-windows-server.md
+        - Systemeinstellungen: installation/manuelle-installation/systemeinstellungen.md
+        - Setup: installation/manuelle-installation/setup.md
+      - i-doit Virtual Eval Appliance:
+        - installation/i-doit-virtual-eval-appliance/index.md
+        - Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 9 "Stretch": installation/i-doit-virtual-eval-appliance/upgrade-virtual-appliance-debian-9.md
+        - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
+        - Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 10 "Buster": installation/i-doit-virtual-eval-appliance/upgrade-virtual-appliance-debian-10.md
+  - Wartung und Betrieb:
+      - wartung-und-betrieb/index.md
+      - Lizenz Aktivieren: wartung-und-betrieb/lizenz-aktivieren.md
+      - Cronjobs einrichten: wartung-und-betrieb/cronjobs-einrichten.md
+      - Daten sichern und wiederherstellen:
+        - wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md
+        - Backup-Script für Daten und Dateien: wartung-und-betrieb/daten-sichern-und-wiederherstellen/backup-script-fuer-daten-und-dateien.md
+      - Update einspielen: wartung-und-betrieb/update-einspielen.md
+      - Sicherheit und Schutz: wartung-und-betrieb/sicherheit-und-schutz.md
+  - Glossar: glossar.md
