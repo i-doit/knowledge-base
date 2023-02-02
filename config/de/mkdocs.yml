@@ -153,4 +153,30 @@ nav:
       - Upgrade zu MySQL 5.6 oder MariaDB 10.0: upgrades-und-umzuege/upgrade-zu-mysql-5.6-oder-mariadb-10.0.md
       - Umzug einer Installation unter GNU/Linux: upgrades-und-umzuege/umzug-einer-installation-unter-linux.md
       - Umzug von Windows zu Linux: upgrades-und-umzuege/umzug-von-windows-zu-linux.md
+  - Grundlagen:
+      - grundlagen/index.md
+      - Erstanmeldung: grundlagen/erstanmeldung.md
+      - Struktur und IT-Dokumentation: grundlagen/struktur-it-dokumentation.md
+      - Dashboard und Widgets: grundlagen/dashboard-und-widgets.md
+      - Objekt-Liste:
+        - grundlagen/objekt-liste/index.md
+        - Aktionsleiste: grundlagen/objekt-liste/aktionsleiste.md
+        - Navigieren und filtern: grundlagen/objekt-liste/navigieren-und-filtern.md
+        - Listenansicht Konfigurieren: grundlagen/objekt-liste/listenansicht-konfigurieren.md
+        - Erweiterte Einstellungen: grundlagen/objekt-liste/erweiterte-einstellungen.md
+        - Objekt Listen konfigurieren: grundlagen/objekt-liste/objekt-listen-konfigurieren.md
+      - Attributfelder: grundlagen/attributfelder.md
+      - Dialog-Admin: grundlagen/dialog-admin.md
+      - Objekttypen: grundlagen/objekttypen.md
+      - Zuordnung von Kategorien zu Objekttypen: grundlagen/zurodnung-von-kategorien-zu-objekttypen.md
+      - Kategorien und Attribute: grundlagen/kategorien-und-attribute.md
+      - Benutzerdefinierte Objektentypen: grundlagen/benutzerdefinierte-objekttypen.md
+      - Benutzerdefinierte Kategorien: grundlagen/benutzerdefinierte-kategorien.md
+      - Logbuch: grundlagen/logbuch.md
+      - Objekt-Beziehungen: grundlagen/objekt-beziehungen.md
+      - Lebens und Dokumentationszyklus: grundlagen/lebens-und-dokumentationszyklus.md
+      - Eindeutige Referenzierungen: grundlagen/eindeutige-referenzierungen.md
+      - Web GUI: grundlagen/web-gui.md
+      - Benutzerdefinierte Zähler: grundlagen/benutzerdefinierte-zaehler.md
+      - Attributsichtbarkeit: grundlagen/attributsichtbarkeit.md
   - Glossar: glossar.md
