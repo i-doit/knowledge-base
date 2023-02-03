@@ -1,0 +1,5 @@
+*   [Changelog 1.12.4](/display/de/Changelog+1.12.4)
+*   [Changelog 1.12.3](/display/de/Changelog+1.12.3)
+*   [Changelog 1.12.2](/display/de/Changelog+1.12.2)
+*   [Changelog 1.12.1](/display/de/Changelog+1.12.1)
+*   [Changelog 1.12](/display/de/Changelog+1.12)

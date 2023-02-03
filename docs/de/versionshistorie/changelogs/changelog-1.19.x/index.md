@@ -1,0 +1,1 @@
+*   [Changelog 1.19](/display/de/Changelog+1.19)
