@@ -1,0 +1,1 @@
+[Bug][CMDB] Detach connections under Cabling -> Connectors deletes all connections
