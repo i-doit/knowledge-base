@@ -56,14 +56,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-[1.8.1](1.8.1) - 2022-11-21
+[1.8.1] - 2022-11-21
 ---------------------------
 
 ### Fixes
 
 *   Adding compatibility to checkmk 2.1
 
-[1.8.0](1.8.0) - 2022-09-05
+[1.8.0] - 2022-09-05
 ---------------------------
 
 ### Added
@@ -76,7 +76,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 *   Error message when synchronizing tags
 *   Synchronizing IPv6 IPs and networks generates an error message
 
-[1.7.1](1.7.1) - 2021-10-18
+[1.7.1] - 2021-10-18
 ---------------------------
 
 ### Added
@@ -88,7 +88,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 *   Add/fix CPU attributes from checkmk to i-doit
 *   Add/fix operating system attributes from checkmk to i-doit
 
-[1.7.0](1.7.0) - 2021-08-09
+[1.7.0] - 2021-08-09
 ---------------------------
 
 ### Added
@@ -100,7 +100,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 *   Tags (static) Dropdown ‘Tag group’ attributes cannot be deleted
 *   CheckMK 2: Tags are not displayed with the tag group in reports
 
-[1.6.1](1.6.1) – 2021-06-15
+[1.6.1] – 2021-06-15
 ---------------------------
 
 ### Fixed
@@ -117,7 +117,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 *   No attributes are imported for applications
 *   Pull with the same Host as parent ends in a loop
 
-[1.6.0](1.6.0) – 2019-12-06
+[1.6.0] – 2019-12-06
 ---------------------------
 
 ### Added
@@ -161,7 +161,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 *   `push`: Use IPv4 address which is explicitly marked as primary
 *   Web GUI: Add missing translations in English
 
-[1.5.1](1.5.1) – 2019-05-08
+[1.5.1] – 2019-05-08
 ---------------------------
 
 This is a bug fix release after we received tons of useful feedback from our users.
@@ -232,7 +232,7 @@ This is a bug fix release after we received tons of useful feedback from our use
 *   Category `Check_MK Host`: Write full command output incl. STDERR to log file
 *   Category `Check_MK Tags`: Make “dynamic tags” and “CMDB tags” available in reports
 
-[1.5.0](1.5.0) – 2018-12-18
+[1.5.0] – 2018-12-18
 ---------------------------
 
 First public release 🎉
@@ -270,7 +270,7 @@ First public release 🎉
 *   `sync-folders`: Fix typos
 *   `pull`: Accept only EUI-48 MAC addresses (48-bit)
 
-[1.4.0](1.4.0) – 2018-11-05
+[1.4.0] – 2018-11-05
 ---------------------------
 
 Remember, remember, the fifth of November… 🎃
@@ -288,7 +288,7 @@ Remember, remember, the fifth of November… 🎃
 *   Fix error when installing add-on in i-doit admin center without parallel login to i-doit tenant
 *   `fetch-objects`: Print URL without PHP notice
 
-[1.3.0](1.3.0) – 2018-09-10
+[1.3.0] – 2018-09-10
 ---------------------------
 
 **Important note:** There are changes in the configuration settings. Re-configure your application with `idoitcmk init`.
@@ -315,7 +315,7 @@ Remember, remember, the fifth of November… 🎃
 *   Configure individual proxy hosts for both i-doit JSON-RPC API and Check\_MK Web API
 *   Verbose mode: Do not print that no objects have been found by blacklisted object types
 
-[1.2.0](1.2.0) – 2018-07-09
+[1.2.0] – 2018-07-09
 ---------------------------
 
 **Important notice:** Before installing/updating this add-on, please update your i-doit instance to the latest version (  
@@ -336,11 +336,11 @@ currently 1.11).
 *   `push`, `fetch-objects`: Increase performance when using option `--include-type`
 *   `push`, `fetch-objects`: Include dynamic host tags
 
-[1.1.0](1.1.0) – 2018-05-24
+[1.1.0] – 2018-05-24
 ---------------------------
 
 **Important notice:** Default configuration has changed. Setting `pull.identifier` has new value `user-defined`.  
-See [documentation](docs/configuration.md) for details.
+See (docs/configuration.md) for details.
 
 ### Added
 
@@ -355,7 +355,7 @@ See [documentation](docs/configuration.md) for details.
 
 *   `pull`: Import right amount of CPU cores
 
-[1.0.0](1.0.0) – 2018-04-30
+[1.0.0] – 2018-04-30
 ---------------------------
 
 ### Added
@@ -370,7 +370,7 @@ See [documentation](docs/configuration.md) for details.
 
 *   `pull`: Prevent PHP warnings while accessing unknown information
 
-[0.10](0.10) – 2018-04-27
+[0.10] – 2018-04-27
 -------------------------
 
 **Important note:** There are changes in the configuration settings. Re-configure your application with `idoitcmk init`.
@@ -390,7 +390,7 @@ See [documentation](docs/configuration.md) for details.
 *   `sync-tags`: Incomplete host group tags may cause errors
 *   Configuration setting `push.autoTagging`: Missing slashes in regular expressions
 
-[0.9](0.9) – 2018-04-25
+[0.9] – 2018-04-25
 -----------------------
 
 **Important note:** There are changes in the configuration settings. Re-configure your application with `idoitcmk init`.
@@ -412,7 +412,7 @@ See [documentation](docs/configuration.md) for details.
 *   Let user overwrite (not merge) configuration settings `pull.identifier` and `blacklistedObjectTypes`
 *   `pull`: Do not ignore RAM, CPU sockets and cores
 
-[0.8](0.8) – 2018-04-19
+[0.8] – 2018-04-19
 -----------------------
 
 ### Added
@@ -425,7 +425,7 @@ See [documentation](docs/configuration.md) for details.
 *   `pull`: Prevent mismatches for i-doit objects and Check\_MK hosts
 *   `pull`: Handle i-doit objects with missing attributes properly
 
-[0.7](0.7) – 2018-04-19
+[0.7] – 2018-04-19
 -----------------------
 
 **Important notes:**
@@ -449,7 +449,7 @@ See [documentation](docs/configuration.md) for details.
 *   `pull`: Respect `ignore` mode
 *   `init`: Ask for configuration setting `pull.updateObjects`
 
-[0.6](0.6) – 2018-04-13
+[0.6] – 2018-04-13
 -----------------------
 
 ### Added
@@ -462,7 +462,7 @@ See [documentation](docs/configuration.md) for details.
 *   `push`: PHP warning is thrown while fetching a contact without specified role
 *   `pull`/`fetch-hosts`: Prevent HTTP error code 414 `URI Too Long` while fetching hw/sw inventory data from Check\_MK
 
-[0.5](0.5) – 2018-04-12
+[0.5] – 2018-04-12
 -----------------------
 
 This release fixes several issues in required packages.
@@ -478,7 +478,7 @@ This release fixes several issues in required packages.
 *   Remove backslashes from configuration settings
 *   Fix several problems while parsing responses from Check\_MK Web API
 
-[0.4](0.4) – 2018-04-05
+[0.4] – 2018-04-05
 -----------------------
 
 ### Added
@@ -490,7 +490,7 @@ This release fixes several issues in required packages.
 
 *   Decreased binary file size
 
-[0.3](0.3) – 2018-03-09
+[0.3] – 2018-03-09
 -----------------------
 
 ### Fixed
@@ -498,7 +498,7 @@ This release fixes several issues in required packages.
 *   `help`/`init`/`configtest`/`print-example-config`/`print-config`/`list`: Validation error for missing/invalid  
     configuration settings
 
-[0.2](0.2) – 2018-03-08
+[0.2] – 2018-03-08
 -----------------------
 
 This release is dedicated to all women.
