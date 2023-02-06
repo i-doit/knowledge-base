@@ -14,5 +14,5 @@ Naturally, we welcome any feedback. The continuing development of a professional
 
 We wish you a successful start with i-doit.
 
-Kind regards from Düsseldorf  
+Kind regards from Düsseldorf
 Your i-doit team
