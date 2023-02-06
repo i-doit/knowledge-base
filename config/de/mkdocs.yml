@@ -58,8 +58,7 @@ plugins:
   - minify:
       minify_html: true
   - mkdocs-video
-#  - git-revision-date-localized:
-#      type: iso_date
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -195,14 +194,14 @@ nav:
           - Changelog 1.9.3: versionshistorie/changelogs/changelog-1.9.x/changelog-1.9.3.md
           - Changelog 1.9.2: versionshistorie/changelogs/changelog-1.9.x/changelog-1.9.2.md
           - Changelog 1.9.1: versionshistorie/changelogs/changelog-1.9.x/changelog-1.9.1.md
-          - Changelog 1.12: versionshistorie/changelogs/changelog-1.9.x/changelog-1.9.md
+          - Changelog 1.9: versionshistorie/changelogs/changelog-1.9.x/changelog-1.9.md
         - Changelogs 1.8.x:
           - versionshistorie/changelogs/changelog-1.8.x/index.md
           - Changelog 1.8.3.1: versionshistorie/changelogs/changelog-1.8.x/changelog-1.8.3.1.md
           - Changelog 1.8.3: versionshistorie/changelogs/changelog-1.8.x/changelog-1.8.3.md
           - Changelog 1.8.2: versionshistorie/changelogs/changelog-1.8.x/changelog-1.8.2.md
           - Changelog 1.8.1: versionshistorie/changelogs/changelog-1.8.x/changelog-1.8.1.md
-          - Changelog 1.12: versionshistorie/changelogs/changelog-1.8.x/changelog-1.8.md
+          - Changelog 1.8: versionshistorie/changelogs/changelog-1.8.x/changelog-1.8.md
         - Changelogs 1.7.x:
           - versionshistorie/changelogs/changelog-1.7.x/index.md
           - Changelog 1.7.5: versionshistorie/changelogs/changelog-1.7.x/changelog-1.7.5.md
@@ -210,7 +209,7 @@ nav:
           - Changelog 1.7.3: versionshistorie/changelogs/changelog-1.7.x/changelog-1.7.3.md
           - Changelog 1.7.2: versionshistorie/changelogs/changelog-1.7.x/changelog-1.7.2.md
           - Changelog 1.7.1: versionshistorie/changelogs/changelog-1.7.x/changelog-1.7.1.md
-          - Changelog 1.12: versionshistorie/changelogs/changelog-1.7.x/changelog-1.7.md
+          - Changelog 1.7: versionshistorie/changelogs/changelog-1.7.x/changelog-1.7.md
         - Changelogs 1.6.x:
           - versionshistorie/changelogs/changelog-1.6.x/index.md
           - Changelog 1.6.5: versionshistorie/changelogs/changelog-1.6.x/changelog-1.6.5.md
@@ -218,7 +217,7 @@ nav:
           - Changelog 1.6.3: versionshistorie/changelogs/changelog-1.6.x/changelog-1.6.3.md
           - Changelog 1.6.2: versionshistorie/changelogs/changelog-1.6.x/changelog-1.6.2.md
           - Changelog 1.6.1: versionshistorie/changelogs/changelog-1.6.x/changelog-1.6.1.md
-          - Changelog 1.12: versionshistorie/changelogs/changelog-1.6.x/changelog-1.6.md
+          - Changelog 1.6: versionshistorie/changelogs/changelog-1.6.x/changelog-1.6.md
         - Changelogs 1.5.x:
           - versionshistorie/changelogs/changelog-1.5.x/index.md
           - Changelog 1.5.6: versionshistorie/changelogs/changelog-1.5.x/changelog-1.5.6.md
@@ -227,7 +226,7 @@ nav:
           - Changelog 1.5.3: versionshistorie/changelogs/changelog-1.5.x/changelog-1.5.3.md
           - Changelog 1.5.2: versionshistorie/changelogs/changelog-1.5.x/changelog-1.5.2.md
           - Changelog 1.5.1: versionshistorie/changelogs/changelog-1.5.x/changelog-1.5.1.md
-          - Changelog 1.12: versionshistorie/changelogs/changelog-1.5.x/changelog-1.5.md
+          - Changelog 1.5: versionshistorie/changelogs/changelog-1.5.x/changelog-1.5.md
         - changelog-aeltere-versionen:
           - versionshistorie/changelogs/changelog-aeltere-versionen/index.md
           - Changelog 1.4: versionshistorie/changelogs/changelog-aeltere-versionen/changelog-1.4.md

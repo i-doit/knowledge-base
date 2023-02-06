@@ -19,15 +19,15 @@ Update über die Web-Oberfläche
 
 Das Update erreichst du entweder unter **Verwaltung → Systemtools → i-doit Update**, über das Quicklaunch-Widget auf dem Dashboard oder über die URL http://i-doit-host/i-doit/?load=update
 
-[![update-quicklaunch](../assets/images/maintenance-operation/update/1-Update_Quicklaunch.png)](../assets/images/maintenance-operation/update/1-Update_Quicklaunch.png)
+[![update-quicklaunch](../assets/images/wartung-und-betrieb/update/1-Update_Quicklaunch.png)](../assets/images/wartung-und-betrieb/update/1-Update_Quicklaunch.png)
 
 Nach dem Aufruf öffnet sich eine eigene Oberfläche, in der geprüft wird, wie der aktuelle Zustand des Systems ist. In unserem Screenshot sehen wir, dass unter anderem die PHP-Extension mcrypt nicht gefunden wurde. Sollte solch eine Meldung ausgegeben werden, ist es sehr wichtig, das System dementsprechend anzupassen. Schaue hier am besten in unsere [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) bzw. in unsere [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md). Nach der Anpassung der Umgebung sollte alles grün abgehakt bzw. auf "OK" stehen.
 
-[![Update-Compatibility](../assets/images/maintenance-operation/update/2-Update_Compatibility.png)](../assets/images/maintenance-operation/update/2-Update_Compatibility.png)
+[![Update-Compatibility](../assets/images/wartung-und-betrieb/update/2-Update_Compatibility.png)](../assets/images/wartung-und-betrieb/update/2-Update_Compatibility.png)
 
 Im nächsten Schritt werden die verfügbaren Update-Pakete angezeigt. In unserem Beispiel ist _i-doit_ in Version 1.6.1 installiert und ein Update ist derzeit lediglich auf die gleiche Version möglich. Über **Check for a new version** kannst du prüfen lassen, ob ein neues Paket verfügbar ist. Hierfür ist jedoch zwingend eine Verbindung zum Internet nötig.
 
-[![Update-Available-Check](../assets/images/maintenance-operation/update/3-Update_Available_Chec.png)](../assets/images/maintenance-operation/update/3-Update_Available_Chec.png)
+[![Update-Available-Check](../assets/images/wartung-und-betrieb/update/3-Update_Available_Chec.png)](../assets/images/wartung-und-betrieb/update/3-Update_Available_Chec.png)
 
 Nach einem Klick auf "Check for a new version" wird im nach der nächsthöheren Version geprüft. 
 
@@ -41,19 +41,19 @@ Nach einem Klick auf **Download** wird das Update-Paket heruntergeladen und entp
 
      Sollte es beim Herunterladen und Entpacken zu einer Fehlermeldung kommen, liegt dies in vielen Fällen daran, dass der Apache Webserver keine Schreibrechte auf das Verzeichnis hat, in dem i-doit installiert ist. Weitere Hinweise darauf befinden sich ebenfalls weiter unten.
 
-[![Update-Available-Download](../assets/images/maintenance-operation/update/4-Update_Available_Download.png)](../assets/images/maintenance-operation/update/4-Update_Available_Download.png)
+[![Update-Available-Download](../assets/images/wartung-und-betrieb/update/4-Update_Available_Download.png)](../assets/images/wartung-und-betrieb/update/4-Update_Available_Download.png)
 
 Nun steht die neue Version für das Update bereit. Es kann ausgewählt und mit einem Klick auf "Next" gestartet werden. Wer sich für die Änderungen interessiert, die das Paket mit sich bringt, findet dazu unter **see changelog** eine Auflistung.
 
-[![Update-Available-Donw](../assets/images/maintenance-operation/update/5-Update_Available_DL_Done.png)](../assets/images/maintenance-operation/update/5-Update_Available_DL_Done.png)
+[![Update-Available-Donw](../assets/images/wartung-und-betrieb/update/5-Update_Available_DL_Done.png)](../assets/images/wartung-und-betrieb/update/5-Update_Available_DL_Done.png)
 
 In der Regel sind die Haken bereits, wie im Bild erkennbar, gesetzt, sodass die Systemdatenbank und die dazugehörigen Mandanten schon für das Update ausgewählt sind. Sollte es keinen Grund geben, einzelne Mandanten nicht zu aktualisieren, sollten die Haken gesetzt bleiben.
 
-[![Update-DB](../assets/images/maintenance-operation/update/6-Update_Database.png)](../assets/images/maintenance-operation/update/6-Update_Database.png)
+[![Update-DB](../assets/images/wartung-und-betrieb/update/6-Update_Database.png)](../assets/images/wartung-und-betrieb/update/6-Update_Database.png)
 
 Allerspätestens jetzt solltest du ein [Backup](daten-sichern-und-wiederherstellen/index.md) anfertigen. Wenn du ein Backup hast, kannst du über den Button **Yes, I did a backup! - Start the update** das Update einspielen. 
 
-[![Update-Files](../assets/images/maintenance-operation/update/7-Update_File_Update.png)](../assets/images/maintenance-operation/update/7-Update_File_Update.png)
+[![Update-Files](../assets/images/wartung-und-betrieb/update/7-Update_File_Update.png)](../assets/images/wartung-und-betrieb/update/7-Update_File_Update.png)
 
 Jede Änderung kann Auswirkungen auf Dateien und die Datenbanken haben.
 
@@ -63,19 +63,19 @@ Jede Änderung kann Auswirkungen auf Dateien und die Datenbanken haben.
 
 Wenn alles mit einem grünen "DONE" angezeigt wird, kannst du über **Next** den nächsten Schritt aufrufen.
 
-[![Update-Overview](../assets/images/maintenance-operation/update/8-Update_Overview.png)](../assets/images/maintenance-operation/update/8-Update_Overview.png)
+[![Update-Overview](../assets/images/wartung-und-betrieb/update/8-Update_Overview.png)](../assets/images/wartung-und-betrieb/update/8-Update_Overview.png)
 
 Je nach Update werden Änderungen an bestehenden Daten vorgenommen. Der Schritt "Migration" führt diese aus und meldet, ob die Änderungen erfolgreich waren.
 
-[![Update-Migration](../assets/images/maintenance-operation/update/9-Update_migration.png)](../assets/images/maintenance-operation/update/9-Update_migration.png)
+[![Update-Migration](../assets/images/wartung-und-betrieb/update/9-Update_migration.png)](../assets/images/wartung-und-betrieb/update/9-Update_migration.png)
 
 Nach der sogenannten "Property Migration" sollte hier ebenfalls alles grün angezeigt werden.
 
-[![Update-Attributes](../assets/images/maintenance-operation/update/10-Update_Attributes.png)](../assets/images/maintenance-operation/update/10-Update_Attributes.png)
+[![Update-Attributes](../assets/images/wartung-und-betrieb/update/10-Update_Attributes.png)](../assets/images/wartung-und-betrieb/update/10-Update_Attributes.png)
 
 Nun ist das Update abgeschlossen. Wer detaillierte Informationen zum Update nachlesen möchte, kann dies in der verlinkten Log-Datei tun. Über **Run i-doit v.<VERSION>** kann zu _i-doit_ zurückgekehrt werden. Es ist sehr zu empfehlen, den Browser und den _i-doit_\-Cache unter **Verwaltung → Systemtools → Cache / Datenbank** zu löschen.
 
-[![Update-Complete](../assets/images/maintenance-operation/update/11-Update_Complete.png)](../assets/images/maintenance-operation/update/11-Update_Complete.png)
+[![Update-Complete](../assets/images/wartung-und-betrieb/update/11-Update_Complete.png)](../assets/images/wartung-und-betrieb/update/11-Update_Complete.png)
 
 Update über die Konsole vorbereiten
 -----------------------------------
