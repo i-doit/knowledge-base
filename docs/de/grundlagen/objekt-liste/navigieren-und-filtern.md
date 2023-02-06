@@ -2,7 +2,7 @@
 
 Durch eine [Objekt-Liste](index.md) zu navigieren und nach bestimmten [Objekten](../struktur-it-dokumentation.md) zu filtern ist keine große Kunst. Und trotzdem lohnt sich ein genauer Blick.
 
-[![Alle-Felder](../../assets/images/grundlagen/navigation-und-filtern/1-nuf.png)](../../assets/images/grundlagen/navigation-und-filtern/1-nuf.png)
+[![Alle-Felder](../../assets/images/de/grundlagen/navigation-und-filtern/1-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/1-nuf.png)
 
 Navigieren
 ----------
@@ -24,7 +24,7 @@ Pro Benutzer kann festgelegt werden, [wie viele Objekte pro Seite dargestellt](e
 
     Um einen Bereich von Objekten auszuwählen, kann die Shift-Taste auch in Kombination mit der linken Maustaste verwendet werden.
 
-    [![Alle-Felder](../../assets/images/grundlagen/navigation-und-filtern/2-nuf.gif)](../../assets/images/grundlagen/navigation-und-filtern/2-nuf.gif)
+    [![Alle-Felder](../../assets/images/de/grundlagen/navigation-und-filtern/2-nuf.gif)](../../assets/images/de/grundlagen/navigation-und-filtern/2-nuf.gif)
 
 Filtern
 -------
@@ -35,7 +35,7 @@ Zudem kann über ein Drop-Down-Menü nach mehreren Attributen gleichzeitig gefil
 
 Seit Version 1.17 kann auch nach leeren Werten gefiltert werden. Dazu muss eine oder mehrere Checkbox/en, hinter dem jeweiligen Wert, markiert werden.
 
-[![objekte-markieren](../../assets/images/grundlagen/navigation-und-filtern/3-nuf.png)](../../assets/images/grundlagen/navigation-und-filtern/3-nuf.png)
+[![objekte-markieren](../../assets/images/de/grundlagen/navigation-und-filtern/3-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/3-nuf.png)
 
 Die Objekt-Liste kann bereits beim Laden [gefiltert](listenansicht-konfigurieren.md) werden.
 
@@ -46,6 +46,6 @@ Weitere Funktionen
 
 |   Button  |   Funktion  |
 | --- | --- |
-| [![](../../assets/images/grundlagen/navigation-und-filtern/4-nuf.png)](../../assets/images/grundlagen/navigation-und-filtern/4-nuf.png) | Die Objekt-Liste wird neu geladen |
-| [![](../../assets/images/grundlagen/navigation-und-filtern/5-nuf.png)](../../assets/images/grundlagen/navigation-und-filtern/5-nuf.png) | Die Spaltenbreiten werden automatisch festgelegt. Die Spalten lassen sich andernfalls pro Benutzer in der Breite variieren. |
-| [![](../../assets/images/grundlagen/navigation-und-filtern/6-nuf.png)](../../assets/images/grundlagen/navigation-und-filtern/6-nuf.png) | [Listenansicht konfigurieren](listenansicht-konfigurieren.md) |
+| [![](../../assets/images/de/grundlagen/navigation-und-filtern/4-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/4-nuf.png) | Die Objekt-Liste wird neu geladen |
+| [![](../../assets/images/de/grundlagen/navigation-und-filtern/5-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/5-nuf.png) | Die Spaltenbreiten werden automatisch festgelegt. Die Spalten lassen sich andernfalls pro Benutzer in der Breite variieren. |
+| [![](../../assets/images/de/grundlagen/navigation-und-filtern/6-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/6-nuf.png) | [Listenansicht konfigurieren](listenansicht-konfigurieren.md) |

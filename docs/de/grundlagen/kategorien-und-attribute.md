@@ -11,7 +11,7 @@ Globale Kategorien
 <!---Todo: Fixme--->
 | Kategorie | Attribut | Beschreibung |
 | --- | --- | --- |
-| **Alle Tickets** [![alle-tickets](../assets/images/grundlagen/icons/comments.png)](../assets/images/grundlagen/icons/comments.png) | \-  | [Service Desk](/display/de/Service+Desk): Wenn die Schnittstelle zum Service Desk aktiviert ist, können über diese Kategorie alle referenzierten Tickets zu diesem Objekt angezeigt werden. |
+| **Alle Tickets** [![alle-tickets](../assets/images/de/grundlagen/icons/comments.png)](../assets/images/de/grundlagen/icons/comments.png) | \-  | [Service Desk](/display/de/Service+Desk): Wenn die Schnittstelle zum Service Desk aktiviert ist, können über diese Kategorie alle referenzierten Tickets zu diesem Objekt angezeigt werden. |
 | **Allgemein** | **ID** | Jedes Objekt erhält vom dahinter liegende DBMS MySQL/MariaDB [einen eindeutigen Identifier (ID)](eindeutige-referenzierungen.md). |
 |     | **Name** | Jedes Objekt muss einen Namen erhalten. Dieser kann sogar eindeutig pro Mandant oder pro Objekttyp sein. Synonyme sind **Bezeichnung** und **Objekt-Titel**. |
 |     | **Zustand** | Über den **Zustand** (oftmals auch **Status** genannt) wird der [Lebenszyklus der Dokumentation](lebens-und-dokumentationszyklus.md) abgebildet. |
@@ -21,12 +21,12 @@ Globale Kategorien
 |     | **SYSID** | Neben der **Objekt-ID** ist die **SYSID** ebenfalls für [eine eindeutige Referenzierung](eindeutige-referenzierungen.md) geeignet. Zudem lässt es sich vom Benutzer bearbeiten, während die **Objekt-ID** fest vergeben wird. |
 |     | **Tags** | Jedes Objekt kann mit beliebig vielen Stichwörtern versehen werden. Dies ist praktisch, um einem Objekt beispielsweise bestimmte Rollen oder einen Einsatzzweck zuzuordnen. |
 |     | **Beschreibung** | Fast jeder Eintrag in einer Kategorie kann am Ende mit einer Beschreibung versehen werden. Hier können zusätzliche Notizen hinterlegt werden. Da es sich hierbei um umstrukturierte Texte handelt, wird eine einfache Auswertung erschwert. |
-| **Analyse** [![analyse](../assets/images/grundlagen/icons/chart_pie.png)](../assets/images/grundlagen/icons/chart_pie.png) | \-  | Leitet zur **Ausfallsimulation** des [Analysis](/display/de/Analysis)\-Add-ons weiter |
+| **Analyse** [![analyse](../assets/images/de/grundlagen/icons/chart_pie.png)](../assets/images/de/grundlagen/icons/chart_pie.png) | \-  | Leitet zur **Ausfallsimulation** des [Analysis](/display/de/Analysis)\-Add-ons weiter |
 | **Anschlüsse** | \-  | Hierüber wird die Verkabelung zwischen Komponenten dokumentiert. Es wird zwischen **Eingang** und **Ausgang** unterschieden, die miteinander verbunden werden können. Diese Kategorie wird durch weitere Kategorien automatisch befüllt, zum Beispiel **Port** oder **Stromverbraucher** |
 | **Anschrift** | \-  | Hausanschrift; wird oftmals Objekten vom Typ **Gebäude** zugeordnet |
 | **Bereiche** | \-  | Verwendung eines Netzbereichs; ist im Kategorie-Ordner **Netzbereich** enthalten; rückwärtige Kategorie: **Netz → Netzbereiche** |
 | **Betriebssystem** | \-  | Das primär installierte Betriebssystem kann hier hinterlegt werden; ergänzt die Kategorie **Softwarezuweisung** |
-| **Beziehungen** [![Beziehungen](../assets/images/grundlagen/icons/arrow_out.png)](../assets/images/grundlagen/icons/arrow_out.png) | \-  | Auflistung aller [Objekt-Beziehungen](objekt-beziehungen.md) |
+| **Beziehungen** [![Beziehungen](../assets/images/de/grundlagen/icons/arrow_out.png)](../assets/images/de/grundlagen/icons/arrow_out.png) | \-  | Auflistung aller [Objekt-Beziehungen](objekt-beziehungen.md) |
 | **Bilder** | \-  | Bildergalerie |
 | **Buchhaltung** | \-  | Buchhalterische Angaben wie eine **Inventarnummer**, **Kostenstelle** usw. |
 | **Cluster** | \-  | Ein **Cluster** kann über diesen Kategorie-Ordner dokumentiert werden. Virtualisierungs-, Web- und Datenbank-Cluster sind häufige Formen. Untergeordnete Kategorien: **Cluster**, **Clusterdienstzuweisung**, **Clustermitglieder**, **Clustervitalität**, **Gemeinsamer Speicher**, **Gemeinsame Virtuelle Switche**, **Verwaltungsinstanz** |
@@ -34,7 +34,7 @@ Globale Kategorien
 | **Clustermitglieder** | \-  | Komponenten, die einen **Cluster** bilden; ist im Kategorie-Ordner **Cluster** enthalten; rückwärtige Kategorie: **Clustermitgliedschaften** |
 | **Clustermitgliedschaften** | \-  | Objekte können einem oder mehreren Clustern zugeordnet werden. Rückwärtige Kategorie: **Clustermitglieder** |
 | **Clustervitalität** | \-  | Visualisierung und Statistiken zur **Objektvitalität** von Clustermitgliedern; ist im Kategorie-Ordner **Cluster** enthalten |
-| **CMDB-Explorer** [![cmdb-explorer](../assets/images/grundlagen/icons/chart_organisation.png)](../assets/images/grundlagen/icons/chart_organisation.png) | \-  | Öffnet das Objekt im [CMDB-Explorer](/display/en/CMDB+Explorer) |
+| **CMDB-Explorer** [![cmdb-explorer](../assets/images/de/grundlagen/icons/chart_organisation.png)](../assets/images/de/grundlagen/icons/chart_organisation.png) | \-  | Öffnet das Objekt im [CMDB-Explorer](/display/en/CMDB+Explorer) |
 | **Controller** | \-  | Verbaute Onboard oder PCIe-Steckkarten zur Anbindung von Speicherlaufwerken; ist im Kategorie-Ordner **Lokaler Massenspeicher** enthalten |
 | **CPU** | \-  | Auflistung von CPU-Sockeln und verbauten CPUs. |
 | **CUCM VoIP Leitung** | \-  | Angaben zum Cisco Unified Call Manager (CUCM) |
@@ -75,7 +75,7 @@ Globale Kategorien
 | **Letzter eingeloggter Benutzer** | \-  | Zuletzt angemeldeter Benutzer; kann durch [JDisc Discovery](/display/de/JDisc+Discovery) importiert werden |
 | **Listener** | \-  | Öffnet eine installierte Applikation (siehe Kategorie **Softwarezuweisung**) einen Port (1-65535) über das IP-Protokoll (siehe Kategorie **Hostadresse**), sprich über Protokolle wie TCP und UDP, kann dies hier dokumentiert werden; ist im Kategorie-Ordner **Netzwerkverbindungen** enthalten; rückwärtige Kategorie: **Verbindung** |
 | **Livestatus** | \-  | [Network Monitoring](/display/de/Network+Monitoring): zeigt aktuelle Informationen zu einem Host und dessen Services an, die über die Schnittstelle Livestatus zur Verfügung stehen; ist im Kategorie-Ordner **Monitoring** enthalten und wird dort konfiguriert |
-| **Logbuch** [![logbuch](../assets/images/grundlagen/icons/book_open.png)](../assets/images/grundlagen/icons/book_open.png) | \-  | [Änderungen an einem Objekt](logbuch.md) |
+| **Logbuch** [![logbuch](../assets/images/de/grundlagen/icons/book_open.png)](../assets/images/de/grundlagen/icons/book_open.png) | \-  | [Änderungen an einem Objekt](logbuch.md) |
 | **Logische Geräte (Client)** | \-  | Greift ein Objekt auf LUNs eines SANs zu, wird dies hier dokumentiert; ist im Kategorie-Ordner **Speichernetze** enthalten; rückwärtige Kategorie: **Logische Geräte (LDEV Server)** |
 | **Logische Geräte (LDEV Server)** | \-  | Bietet ein Objekt, zum Beispiel ein SAN, anderen Objekten LUNs an, wird dies hier dokumentiert; ist im Kategorie-Ordner **Speichernetze** enthalten; rückwärtige Kategorie: **Logische Geräte (Client)** |
 | **Logische Ports** | \-  | Zusammenfassung von physikalischen Netzwerkanschlüssen (siehe Kategorie **Netzwerk → Port**), oftmals Trunking oder Bonding genannt; ist im Kategorie-Ordner **Netzwerk** enthalten |
@@ -108,7 +108,7 @@ Globale Kategorien
 | **Räumlich zugeordnete Objekte** | \-  | Liste aller physikalisch-räumlich untergeordneten Objekte; rückwärtige Kategorie: **Standort** |
 | **Rechenressourcen** | \-  | Angaben zu den Systemvoraussetzungen von Applikationen (CPU, Arbeitsspeicher, Speicherplatz, Netzwerkbandbreite); wird von der Kategorie **Objektvitalität** ausgewertet |
 | **Rechnung** | \-  | Liste von Rechnungen; ergänzt Kategorie **Buchhaltung** |
-| **Rechteverwaltung** [![rechteverwaltung](../assets/images/grundlagen/icons/lock.png)](../assets/images/grundlagen/icons/lock.png) | \-  | [Rechteverwaltung](/pages/viewpage.action?pageId=42303548): Welche Person oder Personengruppe hat welche Zugriffsmöglichkeiten auf dieses Objekt? |
+| **Rechteverwaltung** [![rechteverwaltung](../assets/images/de/grundlagen/icons/lock.png)](../assets/images/de/grundlagen/icons/lock.png) | \-  | [Rechteverwaltung](/pages/viewpage.action?pageId=42303548): Welche Person oder Personengruppe hat welche Zugriffsmöglichkeiten auf dieses Objekt? |
 | **Remote Management Controller** | **Zugewiesenes Objekt** | Verfügt das Objekt über ein Lights Out Management (LOM), kann dies über hierüber verknüpft werden. Häufig dient dazu der gleichnamige Objekttyp **Remote Management Controller**. Rückwärtige Kategorie: **Gemanagte Geräte** |
 |     | **Primäre ZugriffsURL** | Verfügt das zugewiesene Objekt über einen Link (siehe Kategorie **Zugriff**), wird dieser hier angezeigt. Bei mehreren Links wird der als primär markierte angezeigt. |
 | **Rückwärtige Servicezuweisung** |     |     |
@@ -135,7 +135,7 @@ Globale Kategorien
 | **Stack Mitgliedschaft** | \-  | Zuordnung des Objekts zu einem Hardware-Stack; rückwärtige Kategorie **Stack Mitglieder** |
 | **Stacking** | \-  | Angaben zu einem Hardware-Stack; diese Logik wurde durch den Objekttypen **Stacking** und den Kategorien Stack Mitglieder bzw. Stack Mitgliedschaft ersetzt |
 | **Standort** | \-  | Physikalisch-räumliche Zuordnung des Objekts zu einem anderen Objekt; zusätzlich können 19"-fähige Objekte (siehe Kategorie **Formfaktor**) einem Serverschrank (Rack) in der passenden Höheneinheit "eingebaut" werden; Geokoordinaten sind ebenfalls möglich; rückwärtige Kategorie: **Räumlich zugeordnete Objekte** |
-| **Status-Planung** [![status-planung](../assets/images/grundlagen/icons/calendar.png)](../assets/images/grundlagen/icons/calendar.png) | \-  | Angabe, wann welcher **CMDB-Status** (siehe Kategorie **Allgemein**) gültig ist |
+| **Status-Planung** [![status-planung](../assets/images/de/grundlagen/icons/calendar.png)](../assets/images/de/grundlagen/icons/calendar.png) | \-  | Angabe, wann welcher **CMDB-Status** (siehe Kategorie **Allgemein**) gültig ist |
 | **Stromlieferant** | \-  | Angaben zu einem Stromerzeuger |
 | **Stromverbraucher** | \-  | Liste von verbauten Netzteilen; bietet somit die Dokumentation einer redundanten Stromversorgung; befüllt automatisch die Kategorie **Verkablung → Anschlüsse**; ermöglicht die Angabe einer **BTU** (geeignet für die Berechnung der Kühlung/Klimatisierung) |
 | **Subskriptionen** | \-  | Angaben zu vorhandenen Subskriptionen, welche über die Kategorie **Zugewiesene Benutzer** zu **Personen** zugewiesen wird; Kann über **JDisc** importiert werden |
@@ -155,7 +155,7 @@ Globale Kategorien
 | **Virtuelle Switche** | \-  | Virtuelle Netzwerk-Switche in einer virtuellen Umgebung; ist im Kategorie-Ordner **Virtueller Host** enthalten |
 | **Virtueller Host** | \-  | Kategorie-Ordner mit den untergeordneten Kategorien **Gastsysteme**, **Virtueller Host** und **Virtuelle Switche**; wird typischerweise einem Wirtssystem für virtuelle Maschinen (siehe Objekttyp **Virtueller Host**) oder einem **Cluster** zugeordnet; rückwärtige Kategorie: Virtuelle Maschine |
 | **Virtueller Host** | \-  | Angaben zum Wirtssystem oder Cluster einer virtuellen Umgebung; ist im gleichnamigen Kategorie-Ordner **Virtueller Host** enthalten |
-| **VIVA** [![viva](../assets/images/grundlagen/icons/shield.png)](../assets/images/grundlagen/icons/shield.png) | \-  | Add-on [VIVA](/display/de/VIVA): IT-Grundschutz-relevante Informationen |
+| **VIVA** [![viva](../assets/images/de/grundlagen/icons/shield.png)](../assets/images/de/grundlagen/icons/shield.png) | \-  | Add-on [VIVA](/display/de/VIVA): IT-Grundschutz-relevante Informationen |
 | **VRRP** | \-  | Kategorie-Ordner mit der untergeordneten Kategorien **Mitglieder**; enthält Angaben zu den Protokollen VRRP/HSRP/CARP |
 | **VRRP Mitgliedschaft** | \-  | Liste aller logischen Ports (siehe Kategorie **Netzwerk → Logische Ports**), die einem VRRP-/HSRP-/CARP-Cluster zugeordnet sind; ist im Kategorie-Ordner **Netzwerk** enthalten; rückwärtige Kategorie: **VRRP → Mitglieder** |
 | **WAN-Leitungen** | \-  | Attribute wie Up- und Download-Bandbreite einer Internet-Anbindung; oftmals dem Objekttyp **WAN-Leitung** zugeordnet |

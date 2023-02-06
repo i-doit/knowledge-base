@@ -7,7 +7,7 @@ Aufruf des Quick Configuration Wizards
 
 Du findest den Quick Configuration Wizard unter **Verwaltung → CMDB Einstellungen → Quick Configuration Wizard. **Alle Änderungen im Quick Configuration Wizard werden umgehend übernommen und müssen nicht über eine Schaltfläche gespeichert werden. Bei Änderungen werden keine Daten gelöscht. Der QCW ist lediglich für die Darstellung von Daten zuständig.
 
-[![QCW](../assets/images/grundlagen/zuordnung-von-kategorien-zu-objekttypen/1-zko.png)](../assets/images/grundlagen/zuordnung-von-kategorien-zu-objekttypen/1-zko.png)
+[![QCW](../assets/images/de/grundlagen/zuordnung-von-kategorien-zu-objekttypen/1-zko.png)](../assets/images/de/grundlagen/zuordnung-von-kategorien-zu-objekttypen/1-zko.png)
 ------------------------------------------------------------------------------------------------------------
 
 Aufbau des Quick Configuration Wizards
@@ -15,18 +15,18 @@ Aufbau des Quick Configuration Wizards
 
 Die Konfiguration der Zuweisungen erfolgt über eine Aufteilung in drei Spalten. Diese Spalten repräsentieren deine Objekttypgruppen, Objekttypen und Kategorien. In jeder Spalte steht dir pro Zeile ein gepunkteter Bereich zur Verfügung, der es dir erlaubt per Drag 'n' Drop die Reihenfolge zu verändern.
 
-[![QCW-Aufbau](../assets/images/grundlagen/zuordnung-von-kategorien-zu-objekttypen/2-zko.png)](../assets/images/grundlagen/zuordnung-von-kategorien-zu-objekttypen/2-zko.png)
+[![QCW-Aufbau](../assets/images/de/grundlagen/zuordnung-von-kategorien-zu-objekttypen/2-zko.png)](../assets/images/de/grundlagen/zuordnung-von-kategorien-zu-objekttypen/2-zko.png)
 
   
 
 Objekttyp-Gruppen, Objekttypen und Kategorien Anpassen
 ------------------------------------------------------
 
-Über den [![QCW-Kategorien-anpassen](../assets/images/grundlagen/zuordnung-von-kategorien-zu-objekttypen/3-zko.png)](../assets/images/grundlagen/zuordnung-von-kategorien-zu-objekttypen/3-zko.png) Button kannst du in allen drei Hauptfeldern in den Bearbeitungsmodus wechseln.
+Über den [![QCW-Kategorien-anpassen](../assets/images/de/grundlagen/zuordnung-von-kategorien-zu-objekttypen/3-zko.png)](../assets/images/de/grundlagen/zuordnung-von-kategorien-zu-objekttypen/3-zko.png) Button kannst du in allen drei Hauptfeldern in den Bearbeitungsmodus wechseln.
 
 Hier kannst du die Zuweisungen der jeweiligen Objektgruppe bearbeiten, aber auch neue Gruppen, Objekttypen oder auch Kategorien erzeugen und ausprägen.
 
-[![QCW-Kategorien-anpassen-2](../assets/images/grundlagen/zuordnung-von-kategorien-zu-objekttypen/4-zko.png)](../assets/images/grundlagen/zuordnung-von-kategorien-zu-objekttypen/4-zko.png)
+[![QCW-Kategorien-anpassen-2](../assets/images/de/grundlagen/zuordnung-von-kategorien-zu-objekttypen/4-zko.png)](../assets/images/de/grundlagen/zuordnung-von-kategorien-zu-objekttypen/4-zko.png)
 
 Bearbeitung der Zuweisungen
 ---------------------------

@@ -8,7 +8,7 @@ Die Konfiguration der jeweiligen Objekt Listen erreichen Sie über das Symbol ne
 
 Die Konfiguration einer Listenansicht ist benutzerspezifisch. Das bedeutet, dass diese Einstellungen nur für den Benutzer selbst gelten. Die Ansichten anderer Benutzer werden nicht geändert, es sei denn, einer der Benutzer überträgt diese Ansichten an andere. Der jeweilige Benutzer benötigt die entsprechenden Rechte, die in der Rechteverwaltung eingestellt werden können. Auf diese Weise kann die Notwendigkeit regelmäßiger Anpassungen von Benutzern mit unterschiedlichen Prioritäten (z. B. weil sie in verschiedenen Abteilungen arbeiten) vermieden werden.
 
-[![benutzerdefinierte-listenansicht](../../assets/images/grundlagen/objekt-listen-konfigurieren/1-olk.png)](../../assets/images/grundlagen/objekt-listen-konfigurieren/1-olk.png)
+[![benutzerdefinierte-listenansicht](../../assets/images/de/grundlagen/objekt-listen-konfigurieren/1-olk.png)](../../assets/images/de/grundlagen/objekt-listen-konfigurieren/1-olk.png)
 
 Einstellen der Art des Öffnens eines Objekts
 --------------------------------------------

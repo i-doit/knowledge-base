@@ -7,28 +7,28 @@ Von der Navigation
 
 Nach der [Anmeldung](erstanmeldung.md) erscheint zunächst das [Dashboard mit Widgets](dashboard-und-widgets.md). Von dort aus lässt sich die IT-Dokumentation erkunden. Vom Hauptnavigationsleiste (der schwarze Bereich oben) erreicht man fast alle Funktionen in i-doit.
 
-[![Navigation](../assets/images/grundlagen/struktur-der-it-dokumentation/1-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/1-sitdoku.png)
+[![Navigation](../assets/images/de/grundlagen/struktur-der-it-dokumentation/1-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/1-sitdoku.png)
 
 Um sich zu orientieren, wo man sich befindet, hilft ein Blick auf die Brotkrumen-Navigation. Von dort aus lassen sich übergeordnete Seiten ansteuern.
 
-[![Navigation-2](../assets/images/grundlagen/struktur-der-it-dokumentation/2-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/2-sitdoku.png)
+[![Navigation-2](../assets/images/de/grundlagen/struktur-der-it-dokumentation/2-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/2-sitdoku.png)
 
 Von Gruppen, Typen und Kategorisierungen
 ----------------------------------------
 
 Objekttypengruppen umfassen Objekttypen instantiieren Objekte erben Kategorien beinhalten Attribute. Alles klar? Noch einmal langsam und ganz von vorn.
 
-[![Objekttypgruppen](../assets/images/grundlagen/struktur-der-it-dokumentation/3-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/3-sitdoku.png)
+[![Objekttypgruppen](../assets/images/de/grundlagen/struktur-der-it-dokumentation/3-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/3-sitdoku.png)
 
 ### Objekttypgruppe
 
 In einer gelebten und gut gefüllten IT-Dokumentation kommen nicht selten viele Objekttypen zum Einsatz. Damit sich diese Fülle übersichtlich präsentiert, können gleichartige Objekttypen gruppiert werden. Diese Objekttypgruppen erscheinen in der Hauptnavigationsleiste (oberster Bereich) von i-doit.
 
-[![Objekttypgruppen-2](../assets/images/grundlagen/struktur-der-it-dokumentation/4-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)
+[![Objekttypgruppen-2](../assets/images/de/grundlagen/struktur-der-it-dokumentation/4-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)
 
 In unserem Beispiel betrachten wir die Objekttypgruppe "Hardware".
 
-[![Objekttypgruppen-3](../assets/images/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)
+[![Objekttypgruppen-3](../assets/images/de/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)
 
 ### Objekttyp
 
@@ -38,7 +38,7 @@ i-doit enthält in der Standard-Installation bereits eine Vielzahl an vor konfig
 
 Pro Objekttyp existiert eine [Objektliste](objekt-liste/index.md), die alle diesem Objekttyp zugeordneten Objekte mit einigen Attributen auflistet. Als Beispiel betrachten wir die Objektliste für den Objekttyp "Virtualisierungsserver".
 
-[![Objekttyp](../assets/images/grundlagen/struktur-der-it-dokumentation/6-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/6-sitdoku.png)
+[![Objekttyp](../assets/images/de/grundlagen/struktur-der-it-dokumentation/6-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/6-sitdoku.png)
 
 ### Objekt
 
@@ -49,7 +49,7 @@ In i-doit gibt es in der Standard-Installation einige Objekte, die für die korr
 
 Jedes Objekt in i-doit erhält einen Titel. Dieser wird als Attribut in der Kategorie "Allgemein" dokumentiert. Synoym wird dieses Attribut auch "Bezeichnung", "Name", "Objekt-Link" genannt.
 
-[![Objekt](../assets/images/grundlagen/struktur-der-it-dokumentation/7-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/7-sitdoku.png)
+[![Objekt](../assets/images/de/grundlagen/struktur-der-it-dokumentation/7-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/7-sitdoku.png)
 
 Im Beispiel beleuchten wir das Objekt mit dem Objekt-Titel "ESX1". Dazu reicht ein Klick auf den Objekt-Link in der oben genannten Objektliste.
 
@@ -59,33 +59,33 @@ Thematisch zusammenhängende Attribute werden pro Objekt in Kategorien zusammeng
 
 Kategorien werden im linken Navigationsbaum in der Objektsicht angezeigt.
 
-[![Kategorie](../assets/images/grundlagen/struktur-der-it-dokumentation/8-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/8-sitdoku.png)
+[![Kategorie](../assets/images/de/grundlagen/struktur-der-it-dokumentation/8-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/8-sitdoku.png)
 
 Oberhalb des linken Navigationsbaums werden die statischen Kategorien als Icons aufgelistet.
 
-[![Icons](../assets/images/grundlagen/struktur-der-it-dokumentation/9-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/9-sitdoku.png)
+[![Icons](../assets/images/de/grundlagen/struktur-der-it-dokumentation/9-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/9-sitdoku.png)
 
 Kategorien haben in der Regel zwei Ansichten: eine zum Lesen und eine zum Bearbeiten. Um Attribute in einer Kategorie zu bearbeiten, klickt man in der Aktionsleiste auf den Button **Editieren**.
 
-[![Kategorien](../assets/images/grundlagen/struktur-der-it-dokumentation/10-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/10-sitdoku.png)
+[![Kategorien](../assets/images/de/grundlagen/struktur-der-it-dokumentation/10-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/10-sitdoku.png)
 
 Für unser Beispiel betrachten wir die Kategorie Modell.
 
-[![Kategorie-Modell](../assets/images/grundlagen/struktur-der-it-dokumentation/11-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/11-sitdoku.png)
+[![Kategorie-Modell](../assets/images/de/grundlagen/struktur-der-it-dokumentation/11-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/11-sitdoku.png)
 
 [Kategorien werden Objekttypen zugeordnet](zurodnung-von-kategorien-zu-objekttypen.md), nicht Objekten. Jedes Objekt eines Objekttyps hat dieselben Kategorien zugeordnet.
 
 #### Übersichtsseite
 
-Die Übersichtsseite wird beim Aufruf eines Objekts in der Web GUI von i-doit dargestellt. Sie besteht aus der Kategorie "Allgemein" und optional weiteren Kategorien, die dem Objekttyp zugeordnet sind. Diese können in der [Objekttyp-Konfiguration](../assets/images/grundlagen/struktur-der-it-dokumentation/0-sitdoku.png) an- oder abgewählt sowie sortiert werden.
+Die Übersichtsseite wird beim Aufruf eines Objekts in der Web GUI von i-doit dargestellt. Sie besteht aus der Kategorie "Allgemein" und optional weiteren Kategorien, die dem Objekttyp zugeordnet sind. Diese können in der [Objekttyp-Konfiguration](../assets/images/de/grundlagen/struktur-der-it-dokumentation/0-sitdoku.png) an- oder abgewählt sowie sortiert werden.
 
-[![Übersichtsseite](../assets/images/grundlagen/struktur-der-it-dokumentation/12-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/12-sitdoku.png)
+[![Übersichtsseite](../assets/images/de/grundlagen/struktur-der-it-dokumentation/12-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/12-sitdoku.png)
 
 #### Kategorie "Allgemein"
 
 Die Kategorie "Allgemein" gehört zu jenen Kategorien, die fester Bestandteil eines jeden Objekts sind. Daher lässt sie sich pro Objekttyp nicht als unerwünscht abwählen. In dieser Kategorien werden wichtige Attribute festgehalten wie der Objekt-Titel, SYS-ID, [CMDB-Status und Zustand](lebens-und-dokumentationszyklus.md).
 
-[![Kategorie-Allgemein](../assets/images/grundlagen/struktur-der-it-dokumentation/13-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/13-sitdoku.png)
+[![Kategorie-Allgemein](../assets/images/de/grundlagen/struktur-der-it-dokumentation/13-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/13-sitdoku.png)
 
 #### Globale Kategorie
 
@@ -119,17 +119,17 @@ In einigen Kategorien können keine Attribute pro Objekt hinterlegt werden. Sie 
 
 Ein Attribut ist ein dokumentierter Wert zu einem Objekt. Gleichartige Attribute werden in i-doit zu Kategorien zusammengefasst. Beispiel: in der Kategorie "Modell" das Attribut "Seriennummer".
 
-[![Attribut-Seriennummer](../assets/images/grundlagen/struktur-der-it-dokumentation/14-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/14-sitdoku.png)
+[![Attribut-Seriennummer](../assets/images/de/grundlagen/struktur-der-it-dokumentation/14-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/14-sitdoku.png)
 
 Wichtige Attribute aus verschiedenen Kategorien werden zu einer Ansicht vereint, die über jeder Kategorie angezeigt wird. Diese Primär-Attribute sind "SYS-ID", "Einsatzzweck" (beides in Kategorie "Allgemein"), "Beziehungen", "Standort", "Kontaktzuweisung" und "Primäre Zugriffs-URL" (Kategorie "Zugriff"). Daneben wird zudem ein QR-Code dargestellt, der den Link zur Übersichtsseite beinhaltet.
 
-[![Kategorie-Zugriff](../assets/images/grundlagen/struktur-der-it-dokumentation/15-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/15-sitdoku.png)
+[![Kategorie-Zugriff](../assets/images/de/grundlagen/struktur-der-it-dokumentation/15-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/15-sitdoku.png)
 
 ### Attributfeld
 
 In der Web GUI von i-doit werden Attribute von Objekten über Formularfelder gespeichert und bearbeitet. Diese Felder werden demnach Attributfelder genannt. Sie können unterschiedlicher Art sein: Es gibt ein- oder mehrzeilige Textfelder, Datumsfelder, HTML-Editoren, Objekt-Browser, [Dialog-Plus-Felder](dialog-admin.md) und viele weitere.
 
-[![Attributfeld](../assets/images/grundlagen/struktur-der-it-dokumentation/16-sitdoku.png)](../assets/images/grundlagen/struktur-der-it-dokumentation/16-sitdoku.png)
+[![Attributfeld](../assets/images/de/grundlagen/struktur-der-it-dokumentation/16-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/16-sitdoku.png)
 
 Von Beziehungen
 ---------------

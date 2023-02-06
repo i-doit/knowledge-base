@@ -7,14 +7,14 @@ In _i-doit_ kommt oftmals das [Attributfeld](../glossar.md#Glossar-Attributfeld
 
 Eine Übersicht über alle [Attribute](../glossar.md) vom Feldtyp **Dialog+** ist unter **Verwaltung → CMDB Einstellungen → Dialog-Admin** zu finden. Im linken Navigationsbaum sind diese alphabetisch nach den zugehörigen Kategorien sortiert. Wenn eine [benutzerdefinierte Kategorie](benutzerdefinierte-kategorien.md) mit einem Attribut vom Feldtyp **Dialog+** angelegt ist, erscheint dieses Attribut mit der zugehörigen Kategorie ebenfalls im Navigationsbaum unter **Benutzerdefinierte Dialog+**.
 
-[![benutzerdefinierte-dialog+](../assets/images/grundlagen/dialog-admin/1-da.png)](../assets/images/grundlagen/dialog-admin/1-da.png)
+[![benutzerdefinierte-dialog+](../assets/images/de/grundlagen/dialog-admin/1-da.png)](../assets/images/de/grundlagen/dialog-admin/1-da.png)
 
 Werte anzeigen
 --------------
 
 Klickt man im linken Navigationsbaum innerhalb des Bereichs **Dialog-Admin** auf ein Attribut, wird im Hauptbereich eine Übersicht der bisher dokumentierten Werte (falls vorhanden) geladen.
 
-[![werte-anzeigen](../assets/images/grundlagen/dialog-admin/2-da.png)](../assets/images/grundlagen/dialog-admin/2-da.png)
+[![werte-anzeigen](../assets/images/de/grundlagen/dialog-admin/2-da.png)](../assets/images/de/grundlagen/dialog-admin/2-da.png)
 
 Werte anlegen
 -------------
@@ -28,7 +28,7 @@ Um einen neuen Wert anzulegen klickt man oberhalb der Übersicht auf den Button 
 
 Gespeichert wird der Wert, wie gewohnt, über den Button **Speichern**.
 
-[![werte-anlegen](../assets/images/grundlagen/dialog-admin/3-da.png)](../assets/images/grundlagen/dialog-admin/3-da.png)
+[![werte-anlegen](../assets/images/de/grundlagen/dialog-admin/3-da.png)](../assets/images/de/grundlagen/dialog-admin/3-da.png)
 
 Werte bearbeiten
 ----------------

@@ -2,7 +2,7 @@
 
 Oberhalb einer [Objekt-Liste](index.md) befindet sich die Aktionsleiste, über die sich verschiedene Aktionen durchführen lassen.
 
-[![objekt-erstellen](../../assets/images/grundlagen/aktionsleiste/1-al.png)](../../assets/images/grundlagen/aktionsleiste/1-al.png)
+[![objekt-erstellen](../../assets/images/de/grundlagen/aktionsleiste/1-al.png)](../../assets/images/de/grundlagen/aktionsleiste/1-al.png)
 
 Objekt erstellen
 ----------------
@@ -13,14 +13,14 @@ Beim Erstellen eines neuen Objekts stehen verschiedene Optionen zur Verfügung:
 *   **Neues Objekt aus Template** wechselt zum Dialog, um aus einer [Vorlage](/display/de/Templates) ein oder mehrere Objekte zu erstellen
 *   **Neues Template erzeugen** ist ähnlich zum ersten Punkt, allerdings wird der [Zustand](../lebens-und-dokumentationszyklus.md) **Template** vorausgewählt, sodass nach dem Speichern aus dem Objekt eine [Vorlage](/display/de/Templates) wird.
 
-[![objekt-editieren](../../assets/images/grundlagen/aktionsleiste/2-al.png)](../../assets/images/grundlagen/aktionsleiste/2-al.png)
+[![objekt-editieren](../../assets/images/de/grundlagen/aktionsleiste/2-al.png)](../../assets/images/de/grundlagen/aktionsleiste/2-al.png)
 
 Objekt editieren
 ----------------
 <!---Todo: Fixme--->
 Um ein Objekt zu editieren, wählt man das zu editierende Objekt über die jeweilige Checkbox aus und klickt auf den Button **Editieren**. Werden mehrere Objekte ausgewählt, startet die [Listeneditierung](/display/de/Listeneditierung).
 
-[![objekt-duplizieren](../../assets/images/grundlagen/aktionsleiste/3-al.png)](../../assets/images/grundlagen/aktionsleiste/3-al.png)
+[![objekt-duplizieren](../../assets/images/de/grundlagen/aktionsleiste/3-al.png)](../../assets/images/de/grundlagen/aktionsleiste/3-al.png)
 
 Objekt duplizieren
 ------------------
@@ -37,7 +37,7 @@ Druckansicht
 
 Über den Button **Druckansicht** öffnet sich ein Popup mit einer druck-optimierten Sicht auf die Liste. Die Liste wird durch Attribute ergänzt, die auf der Übersichtsseite des jeweiligen Objekts dargestellt sind.
 
-[![druckansicht](../../assets/images/grundlagen/aktionsleiste/4-al.png)](../../assets/images/grundlagen/aktionsleiste/4-al.png)
+[![druckansicht](../../assets/images/de/grundlagen/aktionsleiste/4-al.png)](../../assets/images/de/grundlagen/aktionsleiste/4-al.png)
 
 !!! success "Druckvorschau des Webbrowsers"
 
@@ -61,4 +61,4 @@ Zustand wechseln
 
 Um nur Objekte eines bestimmten [Zustands](../lebens-und-dokumentationszyklus.md) anzuzeigen, kann der jeweilige Zustand über das Drop-Down-Menü auf der rechten Seite der Aktionsleiste ausgewählt werden. In Klammern ist pro Zustand angegeben, wie viele Objekte diesen Typs sich im jeweiligen Zustand befinden. Der ausgewählte Zustand ist standardmäßig auf **Normal** gestellt. Ein Wechsel auf einen anderen Zustand wird gespeichert und wirkt sich daher auf alle anderen Objekt-Listen aus.
 
-[![zustand-wechseln](../../assets/images/grundlagen/aktionsleiste/5-al.png)](../../assets/images/grundlagen/aktionsleiste/5-al.png)
+[![zustand-wechseln](../../assets/images/de/grundlagen/aktionsleiste/5-al.png)](../../assets/images/de/grundlagen/aktionsleiste/5-al.png)

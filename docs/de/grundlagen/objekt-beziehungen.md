@@ -7,7 +7,7 @@ Beziehungsarten
 
 Objekte können auf die unterschiedlichste Art in Beziehung stehen. Um hier Klarheit zu schaffen, erhält jede Beziehung eine Art. i-doit bringt in der Standardinstallation bereits viele vordefinierte Beziehungsarten mit. Eine Auflistung aller Arten gibt es unter **Verwaltung → CMDB Einstellungen → Beziehungsarten**.
 
-[![Beziehungen](../assets/images/grundlagen/objekt-beziehungen/1-ob.png)](../assets/images/grundlagen/objekt-beziehungen/1-ob.png)
+[![Beziehungen](../assets/images/de/grundlagen/objekt-beziehungen/1-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/1-ob.png)
 
 | Beziehungstitel | Beschreibung aus Sicht des Master-Objekts | Beschreibung aus Sicht des Slave-Objekts |
 | --- | --- | --- |
@@ -61,11 +61,11 @@ Objekte können auf die unterschiedlichste Art in Beziehung stehen. Um hier Klar
 
 Unter der Auflistung der Beziehungsarten kann über den Button **Neuen Wert Hinzufügen** eine neue Art erstellt werden. Möchten Sie diese Beziehung in einer benutzerdefinierten Kategorie verwenden, müssen Sie diese als "Implizit" definieren.
 
-[![beziehung-hinzufügen](../assets/images/grundlagen/objekt-beziehungen/2-ob.png)](../assets/images/grundlagen/objekt-beziehungen/2-ob.png)
+[![beziehung-hinzufügen](../assets/images/de/grundlagen/objekt-beziehungen/2-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/2-ob.png)
 
 Bereits dokumentierte Objekt-Beziehungen werden unter **Extras → CMDB → Beziehungen** je nach Art aufgelistet. Klickt man im linken Navigationsbaum auf Alle, werden alle Objekt-Beziehungen unabhängig von der Art geladen. Das Laden der Liste kann bei einer größeren IT-Dokumentation etwas dauern.
 
-[![vorhandene-beziehungsarten](../assets/images/grundlagen/objekt-beziehungen/3-ob.png)](../assets/images/grundlagen/objekt-beziehungen/3-ob.png)
+[![vorhandene-beziehungsarten](../assets/images/de/grundlagen/objekt-beziehungen/3-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/3-ob.png)
 
 Beziehungs-Objekte
 ------------------
@@ -86,7 +86,7 @@ Das Beziehungs-Objekt ist nötig, um Eigenschaften der Beziehung als [Attribute]
 
 Wie bereits ersichtlich besteht eine Objekt-Beziehung aus einem Master- und einem Slave-Objekt. Es handelt sich also um eine gerichtete Beziehung. Das Slave-Objekt ist abhängig vom Master-Objekt.
 
-[![beziehungsobjekt](../assets/images/grundlagen/objekt-beziehungen/4-ob.png)](../assets/images/grundlagen/objekt-beziehungen/4-ob.png)
+[![beziehungsobjekt](../assets/images/de/grundlagen/objekt-beziehungen/4-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/4-ob.png)
 <!---Todo: Fixme--->
 Die Richtung der Beziehung – also welches ist Objekt Master, welches Slave – hat Auswirkungen auf den [CMDB-Explorer](/display/de/CMDB-Explorer). In der Baumansicht werden Objekt-Beziehungen entweder nach oben oder unten rekursiv aufgebaut. Im [Standard-Profil](/display/de/Profile+im+CMDB-Explorer) stehen Master-Objekte unter den Slave-Objekten.
 
@@ -99,7 +99,7 @@ Kategorie Beziehungen
 
 Pro Objekt werden Beziehungen zu anderen Objekten in der [Kategorie](struktur-it-dokumentation.md) **Beziehungen** gesammelt. Diese ist jedem Objekttyp fest zugeordnet und über das Pfeile-Icon aufzurufen.
 
-[![kategorie-beziehungen](../assets/images/grundlagen/objekt-beziehungen/5-ob.png)](../assets/images/grundlagen/objekt-beziehungen/5-ob.png)
+[![kategorie-beziehungen](../assets/images/de/grundlagen/objekt-beziehungen/5-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/5-ob.png)
 
 Implizite vs. explizite Beziehungen
 -----------------------------------
@@ -108,7 +108,7 @@ Beziehungen unterscheiden sich nicht nur nach ihrer Art (siehe oben), sondern au
 
 Soll unabhängig von den Kategorien und ihren Attributen eine Beziehung zwischen zwei Objekten gesetzt werden, wird eine explizite Beziehung erstellt. Diese explizite Beziehung wird in der Kategorie **Beziehungen** erstellt. Das Objekt, in dem man sich befindet, ist als **Objekt 1** vorausgewählt. Das Objekt, mit dem **Objekt 1** in Beziehung stehen soll, wird unter **Objekt 2** ausgewählt. Zudem muss zwischen beiden die Richtung gewählt werden. Als Beziehungsart ist standardmäßig **Abhängigkeit** vorausgewählt, weil diese Art unter **Verwaltung → CMDB Einstellungen → Beziehungen** bereits als explizit ausgewiesen ist. Es ist hier aber auch problemlos möglich eine neue explizite Beziehung zu definieren und direkt zu verwenden. Dies kann über das Zettel-Icon, wie bei Dialog+-Feldern, gemacht werden.
 
-[![explizite-beziehungsart](../assets/images/grundlagen/objekt-beziehungen/6-ob.png)](../assets/images/grundlagen/objekt-beziehungen/6-ob.png)
+[![explizite-beziehungsart](../assets/images/de/grundlagen/objekt-beziehungen/6-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/6-ob.png)
 
 Beim Anlegen einer neuen expliziten Beziehungsart können die Art und die Beschreibungen aus den jeweiligen Objektsichten definiert werden. 
 
@@ -134,7 +134,7 @@ Beispiel: Ist in i-doit ein Web Cluster mit mehreren Nodes dokumentiert, agieren
 
 Eine Auflistung aller gleichgerichteter Beziehungen befindet sich unter **Extras → CMDB → Beziehungen → Gleichgerichtete Beziehungen**. Sie können nicht vom Benutzer erstellt werden, sondern werden implizit, automatisch im Hintergrund erstellt.
 
-[![gleichberechtigte-beziehungen](../assets/images/grundlagen/objekt-beziehungen/7-ob.png)](../assets/images/grundlagen/objekt-beziehungen/7-ob.png)
+[![gleichberechtigte-beziehungen](../assets/images/de/grundlagen/objekt-beziehungen/7-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/7-ob.png)
 
 Objekt-Beziehung in benutzerdefinierter Kategorie
 -------------------------------------------------

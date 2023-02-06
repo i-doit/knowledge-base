@@ -5,9 +5,9 @@ Die Ansicht der [Objekt-Listen](index.md) kann pro Liste und pro Benutzer indivi
 Konfiguration aufrufen
 ----------------------
 
-Die Konfiguration der jeweiligen Objekt-liste wird über den Button [![systemeinstellungen](../../assets/images/grundlagen/listenansicht-konfigurieren/1-lk.png)](../../assets/images/grundlagen/listenansicht-konfigurieren/1-lk.png) in der [Navigations- und Filterleiste](navigieren-und-filtern.md) erreicht. Alternativ ist der Weg über **Verwaltung → Benutzereinstellungen → Objekt-Listen → [Objekttyp]**.
+Die Konfiguration der jeweiligen Objekt-liste wird über den Button [![systemeinstellungen](../../assets/images/de/grundlagen/listenansicht-konfigurieren/1-lk.png)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/1-lk.png) in der [Navigations- und Filterleiste](navigieren-und-filtern.md) erreicht. Alternativ ist der Weg über **Verwaltung → Benutzereinstellungen → Objekt-Listen → [Objekttyp]**.
 
-[![objekt-listen](../../assets/images/grundlagen/listenansicht-konfigurieren/2-lk.png)](../../assets/images/grundlagen/listenansicht-konfigurieren/2-lk.png)
+[![objekt-listen](../../assets/images/de/grundlagen/listenansicht-konfigurieren/2-lk.png)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/2-lk.png)
 
 Attribute auswählen
 -------------------
@@ -16,9 +16,9 @@ Attribute auswählen
 
 Zuerst wird eine [globale, spezifische](../struktur-it-dokumentation.md) oder [benutzerdefinierte](../benutzerdefinierte-kategorien.md) Kategorie im Drop-Down-Menü ausgewählt. Über ein Textfeld lässt sich die Liste der Kategorien filtern.
 
-Bei Auswahl einer Kategorie erscheinen diejenigen Attribute, die sich als Spalte definieren lassen. Bei Klick auf den Button [![plus](../../assets/images/grundlagen/listenansicht-konfigurieren/3-lk.png)](../../assets/images/grundlagen/listenansicht-konfigurieren/3-lk.png) wird das Attribut zu den gewählten Attributen hinzugefügt.
+Bei Auswahl einer Kategorie erscheinen diejenigen Attribute, die sich als Spalte definieren lassen. Bei Klick auf den Button [![plus](../../assets/images/de/grundlagen/listenansicht-konfigurieren/3-lk.png)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/3-lk.png) wird das Attribut zu den gewählten Attributen hinzugefügt.
 
-Die Liste der gewählten Attribute lässt sich manipulieren. Per Drag'n'Drop ist die Reihenfolge zu beeinflussen. Je höher das Attribut in der Auswahl, desto weiter links wird es in der Objekt-Liste dargestellt. Über den Button [![delete](../../assets/images/grundlagen/listenansicht-konfigurieren/4-lk.png)](../../assets/images/grundlagen/listenansicht-konfigurieren/4-lk.png) wird ein Attribut entfernt.
+Die Liste der gewählten Attribute lässt sich manipulieren. Per Drag'n'Drop ist die Reihenfolge zu beeinflussen. Je höher das Attribut in der Auswahl, desto weiter links wird es in der Objekt-Liste dargestellt. Über den Button [![delete](../../assets/images/de/grundlagen/listenansicht-konfigurieren/4-lk.png)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/4-lk.png) wird ein Attribut entfernt.
 
 !!! info "Einschränkungen"
 
@@ -77,14 +77,14 @@ Konfiguration als Standard setzen
 
 Damit eine Objekt-Liste zum Standard wird, genügt im Bereich **Konfiguration als Standard definieren** ein Klick auf den Button **Als Standard definieren**. Bereits von Benutzern geänderte Objekt-Listen werden dadurch nicht beeinflusst. Diese Änderung betrifft also neue Benutzer und Benutzer, die eine Objekt-Liste noch nicht geändert haben.
 
-[![standard-setzen](../../assets/images/grundlagen/listenansicht-konfigurieren/5-lk.png)](../../assets/images/grundlagen/listenansicht-konfigurieren/5-lk.png)
+[![standard-setzen](../../assets/images/de/grundlagen/listenansicht-konfigurieren/5-lk.png)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/5-lk.png)
 
 Konfiguration anderen Benutzern zuweisen
 ----------------------------------------
 
 Wenn anderen Benutzern eine bestimmte Objekt-Liste vorgegeben werden soll, werden diese im Bereich **Konfiguration anderen Benutzern zuweisen** über einen [Objekt-Browser](../attributfelder.md) ausgewählt. Anschließend wird die Auswahl über den Button **Konfiguration überschreiben** bestätigt.
 
-[![benutzer-zuweisen](../../assets/images/grundlagen/listenansicht-konfigurieren/6-lk.png)](../../assets/images/grundlagen/listenansicht-konfigurieren/6-lk.png)
+[![benutzer-zuweisen](../../assets/images/de/grundlagen/listenansicht-konfigurieren/6-lk.png)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/6-lk.png)
 
 Speichern der Konfiguration
 ---------------------------

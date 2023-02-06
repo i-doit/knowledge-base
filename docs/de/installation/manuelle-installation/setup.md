@@ -67,19 +67,19 @@ Das Setup wird automatisch aufgerufen, wenn man mit dem Browser i-doit aufruft (
 
 Im ersten Schritt werden wichtige Systemeinstellungen abgefragt. Sollte etwas nicht in Ordnung sein, wird der Benutzer darauf hingewiesen.
 
-[![system-check](../../assets/images/installation/setup/i-doit_setup_01_system_check.png)](../../assets/images/installation/setup/i-doit_setup_01_system_check.png)
+[![system-check](../../assets/images/de/installation/setup/i-doit_setup_01_system_check.png)](../../assets/images/de/installation/setup/i-doit_setup_01_system_check.png)
 
 #### Directory Configuration
 
 Hierbei werden die Pfade abgefragt, in der installations- und benutzerspezifische Dateien abgelegt werden sollen. Die Vorschläge können übernommen werden.
 
-[![directory-configuration](../../assets/images/installation/setup/i-doit_setup_02_directory_configuration.png)](../../assets/images/installation/setup/i-doit_setup_02_directory_configuration.png)
+[![directory-configuration](../../assets/images/de/installation/setup/i-doit_setup_02_directory_configuration.png)](../../assets/images/de/installation/setup/i-doit_setup_02_directory_configuration.png)
 
 #### Database Configuration
 
 Für die Datenbank-Anbindung sind wichtige Credentials und Einstellungen einzutragen. Für i-doit werden mindestens zwei Datenbanken und ein spezieller Benutzer angelegt.
 
-[![database-configuration](../../assets/images/installation/setup/i-doit_setup_03_database_configuration.png)](../../assets/images/installation/setup/i-doit_setup_03_database_configuration.png)
+[![database-configuration](../../assets/images/de/installation/setup/i-doit_setup_03_database_configuration.png)](../../assets/images/de/installation/setup/i-doit_setup_03_database_configuration.png)
 
 *   **Connection settings**
     *   **Host:** in der Regel der Host selbst, also localhost oder 127.0.0.1
@@ -117,7 +117,7 @@ Für die Datenbank-Anbindung sind wichtige Credentials und Einstellungen einzutr
 <!---Todo: Fixme--->
 Für den Zugang zum **[Admin-Center](/display/de/Admin+Center)** in i-doit gibt es gesonderte Credentials, die hier festgelegt werden können. Es wird empfohlen, dies auch zu tun.
 
-[![framework-configuration](../../assets/images/installation/setup/i-doit_setup_04_framework_configuration.png)](../../assets/images/installation/setup/i-doit_setup_04_framework_configuration.png)
+[![framework-configuration](../../assets/images/de/installation/setup/i-doit_setup_04_framework_configuration.png)](../../assets/images/de/installation/setup/i-doit_setup_04_framework_configuration.png)
 
 #### Config Check
 

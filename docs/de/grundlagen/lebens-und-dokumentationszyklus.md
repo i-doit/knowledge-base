@@ -24,7 +24,7 @@ Der Lebenszyklus einer IT-Komponente wird im **CMDB-Status** dokumentiert. Bei e
 
 Der **CMDB-Status** kann in den Objektlisten als Spalte dargestellt werden, um möglichst schnell den Soll-Zustand eines dokumentierten Objekts zu recherchieren.
 
-[![cmdb-status](../assets/images/grundlagen/lebens-und-dokumentationszyklus/1-lud.png)](../assets/images/grundlagen/lebens-und-dokumentationszyklus/1-lud.png)
+[![cmdb-status](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/1-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/1-lud.png)
 
 !!! success "Planung"
 
@@ -34,7 +34,7 @@ Der **CMDB-Status** kann in den Objektlisten als Spalte dargestellt werden, um m
 
 Um den gesamten Lebenszyklus eines Objekts abzubilden, wird pro [Objekt](../glossar.md) das [Attribut](../glossar.md) **CMDB-Status** in der [Kategorie](../glossar.md) **Allgemein** verwendet. Wird ein neues Objekt angelegt, erhält dies **In Betrieb** als **CMDB-Status**, solange nichts anderes explizit angegeben wurde.
 
-[![cmdb-status-pro-objekt](../assets/images/grundlagen/lebens-und-dokumentationszyklus/2-lud.png)](../assets/images/grundlagen/lebens-und-dokumentationszyklus/2-lud.png)
+[![cmdb-status-pro-objekt](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/2-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/2-lud.png)
 
 ### CMDB-Status verwalten
 
@@ -44,7 +44,7 @@ Das Hinzufügen, Ändern oder Löschen eines **CMDB-Status** erfolgt über **Ver
 *   Eindeutige Konstante (beispielsweise für die Nutzung der [API](/pages/viewpage.action?pageId=7831613) hilfreich)
 *   Farbe (wird in Objektlisten, der **Allgemein**\-Kategorie, im [**CMDB-Explorer**](/display/de/CMDB-Explorer) und an vielen anderen Stellen verwendet)
 
-[![cmdb-status-verwalten](../assets/images/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)](../assets/images/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)
+[![cmdb-status-verwalten](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)
 
 Lebenszyklus der IT-Dokumentation
 ---------------------------------
@@ -77,7 +77,7 @@ Soll ein Dokumentations-Artefakt unwiderruflich gelöscht werden, folgt nach der
 
 Der Zustand eines Objekts ist in der **Allgemein**\-Kategorie sichtbar. Sollen ein oder mehrere Objekte archiviert, als gelöscht markiert oder unwiderruflich gelöscht werden, geschieht dies über die [Objekt-Liste](objekt-liste/index.md). Dazu werden die Checkboxen der jeweiligen Objekte markiert und einer der Buttons **Archivieren**, **Löschen** oder **Purge** gedrückt.
 
-[![objekte-archivieren-oder-purgen](../assets/images/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)](../assets/images/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)
+[![objekte-archivieren-oder-purgen](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)
 
 Es kann immer nur in den nächstmöglichen Zustand gewechselt werden. Ist ein Objekt im Status **Normal**, kann aus der Liste heraus nur der zum nächsten Zustand **archiviert** gewechselt werden. Gelöscht kann dann erst aus der oben rechts nach archivierten Objekten gefilterten Liste heraus werden. Zudem kann mit **Wiederherstellen** wieder auf den vorherigen Zustand gewechselt werden.
 
