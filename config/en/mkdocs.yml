@@ -54,7 +54,7 @@ theme:
       quote: octicons/quote-16
 plugins:
   - search:
-      lang: de
+      lang: en
   - minify:
       minify_html: true
   - mkdocs-video
@@ -124,6 +124,7 @@ nav:
         - Release notes 1.16: version-history/release-notes/release-notes-1.16.md
         - Release notes 1.14: version-history/release-notes/release-notes-1.14.md
         - Release notes 1.13: version-history/release-notes/release-notes-1.13.md
+        - Release notes 1.12: version-history/release-notes/release-notes-1.12.md
         - Release notes 1.11: version-history/release-notes/release-notes-1.11.md
         - Release notes 1.10: version-history/release-notes/release-notes-1.10.md
         - Release notes 1.9: version-history/release-notes/release-notes-1.9.md
@@ -374,6 +375,7 @@ nav:
     - Locations: use-cases/locations.md
     - Switch Stacking: use-cases/switch-stacking.md
     - i-doit with OpenID-Connect authentication explained with Google login: use-cases/i-doit-with-openid-connect-auth.md
+    - VM Provisioning: use-cases/vm-provisioning.md
     - Custom translations: use-cases/custom-translation.md
   - i-doit pro Add-ons:
     - i-doit-pro-add-ons/index.md
@@ -426,7 +428,15 @@ nav:
       - Publish forms: i-doit-pro-add-ons/forms/publish-form.md
       - Fill out form: i-doit-pro-add-ons/forms/fill-out-forms.md
       - Using Forms Add-on API: i-doit-pro-add-ons/forms/using-forms-api.md
-    - i-diary: i-doit-pro-add-ons/i-diary.md
+    - i-diary:
+      - i-doit-pro-add-ons/i-diary/index.md
+      - i-diary Requirements: i-doit-pro-add-ons/i-diary/requirements.md
+      - i-diary Install: i-doit-pro-add-ons/i-diary/install.md
+      - i-diary Update: i-doit-pro-add-ons/i-diary/update.md
+      - i-diary Configuration: i-doit-pro-add-ons/i-diary/configuration.md
+      - i-diary Basic Usage: i-doit-pro-add-ons/i-diary/basic-usage.md
+      - i-diary Determine the author: i-doit-pro-add-ons/i-diary/determine-the-author.md
+      - i-diary Determine the host: i-doit-pro-add-ons/i-diary/determine-the-host.md
     - ISMS: i-doit-pro-add-ons/isms.md
     - i-doit QR-Code Printer: i-doit-pro-add-ons/i-doit-qr-code-printer.md
     - Maintenance: i-doit-pro-add-ons/maintenance.md
@@ -436,8 +446,8 @@ nav:
     - VIVA:
       - i-doit-pro-add-ons/viva/index.md
       - Introduction to VIVA: i-doit-pro-add-ons/viva/introduction-to-viva.md
-      - Preparation of the VIVA installation: i-doit-pro-add-ons/viva/preparation-of-the-viva-insatllation.md
-      - Procedure with VIVA: i-doit-pro-add-ons/viva/precedure-with-viva.md
+      - Preparation of the VIVA installation: i-doit-pro-add-ons/viva/preparation-of-the-viva-installation.md
+      - Procedure with VIVA: i-doit-pro-add-ons/viva/procedure-with-viva.md
       - Risk analysis according to IT-Grundschutz: i-doit-pro-add-ons/viva/risk-analysis-according-to-it-grundschutz.md
       - Reports with VIVA: i-doit-pro-add-ons/viva/reports-with-viva.md
       - Support audits with VIVA: i-doit-pro-add-ons/viva/support-audits-with-viva.md
@@ -448,29 +458,29 @@ nav:
     - VIVA2: i-doit-pro-add-ons/viva2.md
     - Workflow: i-doit-pro-add-ons/workflow.md
     - Rights Documentation: i-doit-pro-add-ons/rights-documentation.md
-  - Software Entwicklung:
+  - Software Development:
     - software-development/index.md
-    - Datenbank-Modell:
+    - Database Model:
       - software-development/database-model/index.md
-      - Kategorie-Tabellen 1.10: software-development/database-model/category-tables-1.10.md
-      - Kategorie-Tabellen 1.9: software-development/database-model/category-tables-1.9.md
-    - Add-ons entwickeln:
-      - software-entwicklung/add-ons-entwickeln/index.md
-      - Add-ons installieren, aktualisieren und aktivieren: software-entwicklung/add-ons-entwickeln/add-ons-installieren-aktualisieren-und-entwickeln.md
-      - Datei- und Ordnerstruktur eines Add-on: software-entwicklung/add-ons-entwickeln/datei-und-ordnerstruktur-eines-add-ons.md
-      - Bootstrapping eines Add-ons (init.php): software-entwicklung/add-ons-entwickeln/boostraping-eines-add-ons.md
-      - Metadaten eines Add-ons (package.json): software-entwicklung/add-ons-entwickeln/metadaten-eines-add-ons.md
-      - Lokalisierung: software-entwicklung/add-ons-entwickeln/lokalisierung.md
-      - Routing und MVC: software-entwicklung/add-ons-entwickeln/routing-und-mvc.md
-      - Benutzerrechte im Add-on nutzen: software-entwicklung/add-ons-entwickeln/benutzerrechte-im-add-on-nutzen.md
-      - Commands im Add-on nutzen: software-entwicklung/add-ons-entwickeln/commands-im-add-on-nutzen.md
-      - Systemeinstellungen erweitern: software-entwicklung/add-ons-entwickeln/systemeinstellungen-erweitern.md
-      - API erweitern: software-entwicklung/add-ons-entwickeln/api-erweitern.md
-      - Attribut-Definition: software-entwicklung/add-ons-entwickeln/attribut-definition.md
-      - Kategorien programmieren: software-entwicklung/add-ons-entwickeln/kategorien-programmieren.md
-      - Report Views: software-entwicklung/add-ons-entwickeln/report-views.md
-      - Signal-Slot System: software-entwicklung/add-ons-entwickeln/signal-slot-system.md
-      - DIY Daten-Import: software-entwicklung/add-ons-entwickeln/diy-daten-import.md
-      - Dashboard Widget programmieren: software-entwicklung/add-ons-entwickeln/dashboard-widget-programmieren.md
-  - Glossar: glossary.md
+      - Category Tables 1.10: software-development/database-model/category-tables-1.10.md
+      - Category Tables 1.9: software-development/database-model/category-tables-1.9.md
+    - Develop add-ons:
+      - software-development/software-development/index.md
+      - Install, update and activate add-ons: software-development/software-development/install-update-and-activate-add-ons.md
+      - File and folder structure of an add-on: software-development/software-development/file-and-folder-structure-of-an-add-on.md
+      - Bootstrapping an add-on (init.php): software-development/software-development/bootstrapping-an-add-on.md
+      - Metadata of an add-on (package.json): software-development/software-development/metadata-of-an-add-on.md
+      - Localization: software-development/software-development/localization.md
+      - Routing and MVC: software-development/software-development/routing-and-mvc.md
+      - Using user rights in the add-on: software-development/software-development/using-user-rights-in-the-add-on.md
+      - Using commands in the add-on: software-development/software-development/using-commands-in-the-add-on.md
+      - Extend system settings: software-development/software-development/extend-system-settings.md
+      - Extend API: software-development/software-development/extend-api.md
+      - Attribute-Definition: software-development/software-development/attribute-definitio.md
+      - Program categories: software-development/software-development/program-categories.md
+      - Report views: software-development/software-development/report-views.md
+      - Signal-Slot System: software-development/software-development/signal-slot-system.md
+      - DIY data import: software-development/software-development/diy-data-import.md
+      - Program Dashboard Widget: software-development/software-development/program-dashboard-widgets.md
+  - Glossary: glossary.md
   - FAQ: faq.md
