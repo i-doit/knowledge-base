@@ -7,36 +7,36 @@ Globales Logbuch
 
 Das Logbuch, in dem alle Änderungen einfließen, befindet sich unter **Extras → CMDB → Logbuch → Listenansicht Logbuch**. Einträge können dort nach verschiedenen Parametern gefiltert werden. Wenn möglich, enthält ein Eintrag zudem die genauen Änderungen (Welcher Wert wurde von was zu was geändert?).
 
-[![globales-logbuch](../assets/images/grundlagen/logbuch/1-lb.png)](../assets/images/grundlagen/logbuch/1-lb.png)
+[![globales-logbuch](../assets/images/de/grundlagen/logbuch/1-lb.png)](../assets/images/de/grundlagen/logbuch/1-lb.png)
 
 Die letzte Änderung ist auf jeder Seite im unteren Bereich nachvollziehbar.
 
-[![letzte-änderung](../assets/images/grundlagen/logbuch/2-lb.png)](../assets/images/grundlagen/logbuch/2-lb.png)
+[![letzte-änderung](../assets/images/de/grundlagen/logbuch/2-lb.png)](../assets/images/de/grundlagen/logbuch/2-lb.png)
 
 Logbuch pro Objekt
 ------------------
 
 Das Logbuch lässt sich nicht nur global, sondern auf ein einzelnes [Objekt](../glossar.md) beschränkt anzeigen. Jedem [Objekttyp](../glossar.md) ist die [Kategorie](../glossar.md) **Logbuch** fest zugeordnet. In der **Objektsicht** ist das Logbuch über das Buch-Icon oberhalb des Kategorie-Baums zu erreichen.
 
-[![objekt-logbuch](../assets/images/grundlagen/logbuch/3-lb.png)](../assets/images/grundlagen/logbuch/3-lb.png)
+[![objekt-logbuch](../assets/images/de/grundlagen/logbuch/3-lb.png)](../assets/images/de/grundlagen/logbuch/3-lb.png)
 
 Die Filter-Funktionen und die Detail-Tiefe entsprechen denen des globalen Logbuchs.
 
-[![logbuch-filter](../assets/images/grundlagen/logbuch/4-lb.png)](../assets/images/grundlagen/logbuch/4-lb.png)
+[![logbuch-filter](../assets/images/de/grundlagen/logbuch/4-lb.png)](../assets/images/de/grundlagen/logbuch/4-lb.png)
 
 Logbuch pro Service
 -------------------
 
 Zu jedem Service, der in i-doit modelliert ist, existiert ein Logbuch, dass die Änderungen an allen Service-Komponenten (oder Sub-Services) enthält. Die Kategorie heißt **Service Logbuch** und kann durch die Kategorie **Service** denjenigen Objekttypen hinzugefügt werden, die Services repräsentieren.
 
-[![logbuch-service](../assets/images/grundlagen/logbuch/5-lb.png)](../assets/images/grundlagen/logbuch/5-lb.png)
+[![logbuch-service](../assets/images/de/grundlagen/logbuch/5-lb.png)](../assets/images/de/grundlagen/logbuch/5-lb.png)
 
 Logbuch konfigurieren
 ---------------------
 
 Die Konfiguration des Logbuchs befindet sich unter **Extras → CMDB → Logbuch → Logbuch** Konfiguration.
 
-[![logbuch-konfigurieren](../assets/images/grundlagen/logbuch/6-lb.png)](../assets/images/grundlagen/logbuch/6-lb.png)
+[![logbuch-konfigurieren](../assets/images/de/grundlagen/logbuch/6-lb.png)](../assets/images/de/grundlagen/logbuch/6-lb.png)
 
 Änderungen wirken sich **nicht** auf bereits existierende Einträge aus.
 
@@ -58,7 +58,7 @@ Eigene Einträge
 
 Zu jedem Objekt kann ein neuer Eintrag im Logbuch generiert werden. Dazu wird innerhalb des Objekts die Kategorie **Logbuch** aufgerufen (siehe oben). Anschließend wird über den Button **Neu** das Formular für einen neuen Eintrag angezeigt. Hierbei können **Alert Level**, **Nachricht** und **Beschreibung** angegeben werden. Nachdem man auf den Button **Speichern** geklickt hat, erscheint der Eintrag im Logbuch.
 
-[![eigene-einträge](../assets/images/grundlagen/logbuch/7-lb.png)](../assets/images/grundlagen/logbuch/7-lb.png)
+[![eigene-einträge](../assets/images/de/grundlagen/logbuch/7-lb.png)](../assets/images/de/grundlagen/logbuch/7-lb.png)
 
 Einträge aus Dritt-Systemen
 ---------------------------
@@ -70,7 +70,7 @@ Das Logbuch nimmt neue Einträge aus Dritt-Systemen entgegen, beispielsweise dur
 
 Über **Extras → CMDB → Logbuch → Archivieren** lässt sich konfigurieren, ob ältere Einträge archiviert werden sollen. Dabei ist anzugeben, ob welchem Alter (in Tagen) ein Eintrag archiviert wird. Hilfreich ist diese Funktion, wenn das Logbuch sehr groß ist und die Auswertung durch lange Wartezeiten behindert wird. Archivierte Einträge werden in eine separate Datenbank-Tabelle ausgelagert. Diese Tabelle wird entweder in der jeweiligen Mandanten-Datenbank oder auf einer dritten Datenbank-Instanz angelegt.
 
-[![](../assets/images/grundlagen/logbuch/8-lb.png)](../assets/images/grundlagen/logbuch/8-lb.png)
+[![](../assets/images/de/grundlagen/logbuch/8-lb.png)](../assets/images/de/grundlagen/logbuch/8-lb.png)
 <!---Todo: Fixme--->
 Über die [i-doit Console](/display/de/Console) wird die Archivierung ausgeführt. Dieser Schritt kann daher auch automatisieren werden. Ein entsprechendes Beispiel für einen Aufruf sowie eine Auflistung der Parameter lässt sich im [zugehörigen Artikel](https://kb.i-doit.com/display/de/Optionen+und+Parameter+der+Console#OptionenundParameterderConsole-logbook-archive) für die Option **logbook-archive** finden.
 
@@ -80,18 +80,18 @@ Beispiel:
 
 Archivierte Einträge lassen sich zur weiteren Auswertung wiederherstellen. Dieser Punkt befindet sich unter **Extras → CMDB → Logbuch → Wiederherstellen**.
 
-[![archivierte-einträge](../assets/images/grundlagen/logbuch/9-lb.png)](../assets/images/grundlagen/logbuch/9-lb.png)
+[![archivierte-einträge](../assets/images/de/grundlagen/logbuch/9-lb.png)](../assets/images/de/grundlagen/logbuch/9-lb.png)
 
 Erstellungs- und Änderungsdatum
 -------------------------------
 
 Jegliche Änderung an Objekten ([Erstellen, Ändern, Archivieren, Löschen, Wiederherstellen](lebens-und-dokumentationszyklus.md) bewirkt nicht nur einen Eintrag im Logbuch, sondern auch an den [Attributen](../glossar.md) **Erstellungdatum** und **Änderungsdatum** in der Kategorie **Allgemein**, die jedem Objekttypen fest zugeordnet ist.
 
-[![Änderungsdatum](../assets/images/grundlagen/logbuch/10-lb.png)](../assets/images/grundlagen/logbuch/10-lb.png)
+[![Änderungsdatum](../assets/images/de/grundlagen/logbuch/10-lb.png)](../assets/images/de/grundlagen/logbuch/10-lb.png)
 
 Auf dem [Dashboard](dashboard-und-widgets.md) kann das Widget **Meine zuletzt geänderten Objekte** hinzugefügt werden, das die letzten eigenen Änderungen an Objekten anzeigt.
 
-[![dashboard](../assets/images/grundlagen/logbuch/11-lb.png)](../assets/images/grundlagen/logbuch/11-lb.png)
+[![dashboard](../assets/images/de/grundlagen/logbuch/11-lb.png)](../assets/images/de/grundlagen/logbuch/11-lb.png)
 
 Rechte setzen
 -------------

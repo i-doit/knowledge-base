@@ -5,14 +5,14 @@ Es ist damit möglich bestimmte Attribute in [Kategorien](kategorien-und-attribu
 
 Die konfigurierte Sichtbarkeit wird für alle Benutzer übernommen.
 
-[![attributsichtbarkeit](../assets/images/grundlagen/attributsichtbarkeit/1-as.png)](../assets/images/grundlagen/attributsichtbarkeit/1-as.png)
+[![attributsichtbarkeit](../assets/images/de/grundlagen/attributsichtbarkeit/1-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/1-as.png)
 
 Rechte setzen
 -------------
 <!---Todo: Fixme--->
 [Die Rechte](/display/de/Rechtesystem) zur Ansicht und zum Bearbeiten der Attributsichtbarkeit kann pro Benutzer(-gruppe) vergeben werden. So ist es beispielsweise möglich und oft auch ratsam, dass nur bestimmte Benutzergruppen Attribute ausblenden können.
 
-[![rechte-setzen](../assets/images/grundlagen/attributsichtbarkeit/2-as.png)](../assets/images/grundlagen/attributsichtbarkeit/2-as.png)
+[![rechte-setzen](../assets/images/de/grundlagen/attributsichtbarkeit/2-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/2-as.png)
 
 Verwendung
 ----------
@@ -27,7 +27,7 @@ Neben dem Namen der Kategorie befindet sich ein Dreieck, das nach unten im geöf
 
 Ganz rechts in jedem Block befindet sich ein rotes X-Symbol , mit dem Sie die Konfiguration für diese Kategorie entfernen können. Wenn es verwendet wird, wird der Block entfernt.
 
-Standardmäßig ist die Sichtbarkeit für alle Attribute aktiviert "Angezeigt"[![button-angezeigt](../assets/images/grundlagen/attributsichtbarkeit/3-as.png)](../assets/images/grundlagen/attributsichtbarkeit/3-as.png). In diesem Zustand ist die Schaltfläche grün und mit "Angezeigt"  beschriftet. Wenn Sie darauf klicken, wird die Schaltfläche grau und mit "Ausgeblendet"[![button-ausgeblendet](../assets/images/grundlagen/attributsichtbarkeit/4-as.png)](../assets/images/grundlagen/attributsichtbarkeit/4-as.png)beschriftet.
+Standardmäßig ist die Sichtbarkeit für alle Attribute aktiviert "Angezeigt"[![button-angezeigt](../assets/images/de/grundlagen/attributsichtbarkeit/3-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/3-as.png). In diesem Zustand ist die Schaltfläche grün und mit "Angezeigt"  beschriftet. Wenn Sie darauf klicken, wird die Schaltfläche grau und mit "Ausgeblendet"[![button-ausgeblendet](../assets/images/de/grundlagen/attributsichtbarkeit/4-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/4-as.png)beschriftet.
 
 **Objekt Bezeichnung**, **Zustand** und **CMDB-Status** können **nicht** ausgeblendet werden. In den entsprechenden Spalten steht ein Hinweis "Kann nicht ausgeblendet werden".
 
@@ -45,4 +45,4 @@ Durch eine Ja/Nein-Auswahl wird diese Änderung bestätigt oder verworfen.
 
 Die letzte Spalte erlaubt es, die ausgewählten Attribute nur auf Übersichtsseiten auszublenden, in den regulären Kategorien werden diese Attribute jedoch weiterhin angezeigt. Wenn ein Attribut in der Kategorie bereits ausgeblendet ist, ist die Auswahl hier deaktiviert.
 
-[![attributsichtbarkeit-2](../assets/images/grundlagen/attributsichtbarkeit/5-as.png)](../assets/images/grundlagen/attributsichtbarkeit/5-as.png)
+[![attributsichtbarkeit-2](../assets/images/de/grundlagen/attributsichtbarkeit/5-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/5-as.png)

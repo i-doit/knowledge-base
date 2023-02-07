@@ -19,7 +19,7 @@ Der Download kommt als gewöhnliche ZIP-Datei, die nach dem Herunterladen zu ent
 
 Beim Importieren werden eventuell Einstellungen abgefragt (Name, CPU-Kerne, Arbeitsspeicher). Die Vorgaben können ohne Probleme übernommen werden. Sollten sie jedoch abgeändert werden, ist es sehr wahrscheinlich, dass auch die [Einstellungen](../manuelle-installation/systemeinstellungen.md) von MariaDB und PHP angepasst werden müssen. Wichtig ist ebenfalls, die [Systemvoraussetzungen](../systemvoraussetzungen.md) nicht zu unterschreiten.
 
-[![Appliance-Einstellungen](../../assets/images/installation/virtual-appliance/import/vm_import.png)](../../assets/images/installation/virtual-appliance/import/vm_import.png)
+[![Appliance-Einstellungen](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)
 
 !!! info "Betriebssystem"
 
@@ -51,7 +51,7 @@ Konfiguration
 
 Die Konfiguration der Appliance kann auf der Konsole erledigt werden. Nach dem Anmelden via SSH erscheint ein Menü:
 
-[![Appliance-Konfiguration](../../assets/images/installation/virtual-appliance/import/appliance_menu.png)](../../assets/images/installation/virtual-appliance/import/appliance_menu.png)
+[![Appliance-Konfiguration](../../assets/images/de/installation/virtual-appliance/import/appliance_menu.png)](../../assets/images/de/installation/virtual-appliance/import/appliance_menu.png)
 <!---Todo: Fixme--->
 | Shortcut | Menüpunkt | Funktion |
 | --- | --- | --- |

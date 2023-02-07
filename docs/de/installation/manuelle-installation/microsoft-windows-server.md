@@ -10,7 +10,7 @@ Wie i-doit unter dem Betriebssystem Windows installiert wird, beschreiben wir in
 
 ### Schritt 1: Die Installation
 
-![type:video](../../assets/images/installation/windows/xampp-installation-unter-windows.mp4)
+![type:video](../../assets/images/de/installation/windows/xampp-installation-unter-windows.mp4)
 
 Zuerst wird das XAMPP-Paket unter [https://www.apachefriends.org/de/index.html](https://www.apachefriends.org/de/index.html) herunter.  
 Andere Pakete funktionieren jedoch auch. Beispielweise kann das gepackte Packet (.zip) auch einfach unter C:\\ entpackt werden.  
@@ -19,23 +19,23 @@ Wichtig ist bei der Installation von XAMPP, dass der Installationspfad unbedingt
 Hierbei müssen die [Systemvoraussetzungen](../systemvoraussetzungen.md) der jeweiligen i-doit Version beachtet werden. Deshalb wird in diesem Beispiel das Installationspaket → xampp-windows-x64-8.0.23-0-VS16-installer.exe mit PHP 8 welches ab i-doit 1.19 unterstützt wird
 
 Es müssen mindestens die Komponenten **Apache**, **MySQL** und **PHP** installiert werden.  
-[![Installation](../../assets/images/installation/windows/schritt-1-installation.png)](../../assets/images/installation/windows/schritt-1-installation.png)
+[![Installation](../../assets/images/de/installation/windows/schritt-1-installation.png)](../../assets/images/de/installation/windows/schritt-1-installation.png)
 
 Als Ordner wird der Standard belassen → **`C:\xampp`**
 
-[![Installationspfad](../../assets/images/installation/windows/schritt-1-installation-pfad.png)](../../assets/images/installation/windows/schritt-1-installation-pfad.png)
+[![Installationspfad](../../assets/images/de/installation/windows/schritt-1-installation-pfad.png)](../../assets/images/de/installation/windows/schritt-1-installation-pfad.png)
 
 Dann wählen wir noch die Sprache aus, ich belasse diese bei **English**.
 
-[![Installationssprache](../../assets/images/installation/windows/schritt-1-installation-sprache.png)](../../assets/images/installation/windows/schritt-1-installation-sprache.png)
+[![Installationssprache](../../assets/images/de/installation/windows/schritt-1-installation-sprache.png)](../../assets/images/de/installation/windows/schritt-1-installation-sprache.png)
 
 Die nächsten **`Next >`** Buttons sollten selbsterklärend sein.
 
-[![Installations abschließen](../../assets/images/installation/windows/schritt-1-installation-fertig.png)](../../assets/images/installation/windows/schritt-1-installation-fertig.png)
+[![Installations abschließen](../../assets/images/de/installation/windows/schritt-1-installation-fertig.png)](../../assets/images/de/installation/windows/schritt-1-installation-fertig.png)
 
 Somit wäre die Installations nun abgeschlossen und wir lassen mit Klick auf `Finish` das Control Panel von XAMPP starten.
 
-[![Installation-control-panel](../../assets/images/installation/windows/schritt-1-installation-control-panel.png)](../../assets/images/installation/windows/schritt-1-installation-control-panel.png)
+[![Installation-control-panel](../../assets/images/de/installation/windows/schritt-1-installation-control-panel.png)](../../assets/images/de/installation/windows/schritt-1-installation-control-panel.png)
 
 ### Schritt 2: Die Konfiguration der Umgebung
 
@@ -43,7 +43,7 @@ Somit wäre die Installations nun abgeschlossen und wir lassen mit Klick auf `Fi
 
 Nun Konfigurieren wir PHP. Dazu Klicken wir auf den Button Config → PHP (php.ini) um die php.ini zu öffnen.
 
-[![Konfiguration-PHP](../../assets/images/installation/windows/schritt-2-php.png)](../../assets/images/installation/windows/schritt-2-php.png)
+[![Konfiguration-PHP](../../assets/images/de/installation/windows/schritt-2-php.png)](../../assets/images/de/installation/windows/schritt-2-php.png)
 
 Im Normalfall sollte die Datei automatisch mit dem Editor geöffnet werden. Wir fügen am Ende der Datei die folgenden Einstellungen ein und speichern:
 
@@ -81,7 +81,7 @@ Gesonderte Einstellungen für den Apache Webserver sind hier nicht notwendig.
 
 Nun Konfigurieren wir MySQL/MariaDB. Dazu Klicken wir auf den Button Config → my.ini.
 
-[![Konfiguration-MySQL](../../assets/images/installation/windows/schritt-2-mysql.png)](../../assets/images/installation/windows/schritt-2-mysql.png)
+[![Konfiguration-MySQL](../../assets/images/de/installation/windows/schritt-2-mysql.png)](../../assets/images/de/installation/windows/schritt-2-mysql.png)
 
 Im Normalfall sollte auch diese Datei automatisch mit dem Editor geöffnet werden. Wir fügen auch hier am Ende der Datei die folgenden Einstellungen ein und speichern:
 
@@ -136,17 +136,17 @@ Im Normalfall sollte auch diese Datei automatisch mit dem Editor geöffnet werde
 ### Schritt 3: Starten von Apache und MySQL
 
 
-Wir klicken bei Apache und MySQL auf den![start-button](../../assets/images/installation/windows/start.png) Start button. Ggf. wird nun ein Firewall popup erscheinen.  
+Wir klicken bei Apache und MySQL auf den![start-button](../../assets/images/de/installation/windows/start.png) Start button. Ggf. wird nun ein Firewall popup erscheinen.  
 Nun sollten beiden Module Grün hinterlegt sein.
 
-[![Service-start](../../assets/images/installation/windows/schritt-3-start.png)](../../assets/images/installation/windows/schritt-3-start.png)
+[![Service-start](../../assets/images/de/installation/windows/schritt-3-start.png)](../../assets/images/de/installation/windows/schritt-3-start.png)
 
 #### Passwort für den MySQL root
 
 Nun sollten wir für den MySQL root Benutzer ein Passwort setzen.  
-Dazu klicken wir auf den ![shell-button](../../assets/images/installation/windows/shell.png) Shell button.
+Dazu klicken wir auf den ![shell-button](../../assets/images/de/installation/windows/shell.png) Shell button.
 
-[![shell-control-panel](../../assets/images/installation/windows/schritt-3-passwort-root.png)](../../assets/images/installation/windows/schritt-3-passwort-root.png)
+[![shell-control-panel](../../assets/images/de/installation/windows/schritt-3-passwort-root.png)](../../assets/images/de/installation/windows/schritt-3-passwort-root.png)
 
 Zuerst loggen wir uns ein:
 

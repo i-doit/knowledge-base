@@ -8,16 +8,16 @@ Die Möglichkeit, benutzerdefinierte Objekttypen zu erstellen findest du unter *
 
 Alternativ kannst du über die Bezeichnung der [Objekttypgruppe](../glossar.md) oberhalb der [Objekttyp-Liste](../glossar.md) im [Baum-Menü](../glossar.md) auf der linken Seite ebenfalls zur Objekttyp-Konfiguration gelangen. Klicke hierzu nur auf den Link und du befindest dich direkt in der Auflistung der Objekttypen dieser Objekttypgruppe und kannst diese bearbeiten.
 
-[![objektsicht](../assets/images/grundlagen/benutzerdefinierte-objekttypen/1-bo.png)](../assets/images/grundlagen/benutzerdefinierte-objekttypen/1-bo.png)
+[![objektsicht](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/1-bo.png)](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/1-bo.png)
 
 In der Listenansicht der Objekttyp-Konfiguration verwende die Schaltfläche **Neu** um mit der Konfiguration eines eigenen Objekttyps zu beginnen.
 
-[![liste-objekttyp-konfiguration](../assets/images/grundlagen/benutzerdefinierte-objekttypen/2-bo.png)](../assets/images/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)
+[![liste-objekttyp-konfiguration](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/2-bo.png)](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)
   
 
 Nun kannst du deinen eigenen Objekttyp konfigurieren.
 
-[![objekttyp-konfiguration](../assets/images/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)](../assets/images/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)
+[![objekttyp-konfiguration](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)
 
   
 

@@ -56,7 +56,7 @@ Wie erhält man den Weblicense Token und wie den Offline License Key String?
 Der **License Token** ist im i-doit pro Kundenportal zu finden.  
 Den Offline License Key können wir abrufen, indem wir den Button “**Show Offline License**”, oben rechts klicken. Dies öffnet ein Popup mit den Offline License Key String.
 
-[![How-to-get-a-token](../assets/images/maintenance-operation/activate-license/0.how-to-get-a-token.png)](../assets/images/maintenance-operation/activate-license/0.how-to-get-a-token.png)
+[![How-to-get-a-token](../assets/images/de/wartung-und-betrieb/activate-license/0.how-to-get-a-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/0.how-to-get-a-token.png)
 
 * * *
 
@@ -65,19 +65,19 @@ Den Offline License Key können wir abrufen, indem wir den Button “**Show Offl
 
 **Schritt 1:** Als erstes rufen wir die i-doit pro installation über den Browser auf. Um in das Admin-Center zu gelangen klicken Sie auf den Link in der Anmeldemaske.
 
-[![Admin-login](../assets/images/maintenance-operation/activate-license/1.Login_admin.png)](../assets/images/maintenance-operation/activate-license/1.Login_admin.png)
+[![Admin-login](../assets/images/de/wartung-und-betrieb/activate-license/1.Login_admin.png)](../assets/images/de/wartung-und-betrieb/activate-license/1.Login_admin.png)
 
 **Schritt 2:** Als nächstes müssen wir die Anmeldedaten eingeben, die wir bei der Installation von i-doit pro für das Admin-Center vergeben haben.
 
-[![Admin-Center-login](../assets/images/maintenance-operation/activate-license/2.login_admin_center.png)](../assets/images/maintenance-operation/activate-license/2.login_admin_center.png)
+[![Admin-Center-login](../assets/images/de/wartung-und-betrieb/activate-license/2.login_admin_center.png)](../assets/images/de/wartung-und-betrieb/activate-license/2.login_admin_center.png)
 
 **Schritt 3:** Nun sind wir im Admin-Center angemeldet und klicken auf den Reiter “Licenses”.
 
-[![Admin-Center-home](../assets/images/maintenance-operation/activate-license/3.admin-center-home.png)](../assets/images/maintenance-operation/activate-license/3.admin-center-home.png)
+[![Admin-Center-home](../assets/images/de/wartung-und-betrieb/activate-license/3.admin-center-home.png)](../assets/images/de/wartung-und-betrieb/activate-license/3.admin-center-home.png)
 
 **Schritt 4:** Hier können wir Ihren Weblicense Token aktivieren. Dazu kopieren wir den License Token in das Eingabefeld.
 
-[![Admin-Center-license](../assets/images/maintenance-operation/activate-license/4.admin-center-licenses.png)](../assets/images/maintenance-operation/activate-license/4.admin-center-licenses.png)
+[![Admin-Center-license](../assets/images/de/wartung-und-betrieb/activate-license/4.admin-center-licenses.png)](../assets/images/de/wartung-und-betrieb/activate-license/4.admin-center-licenses.png)
 
 \***ist hier noch eine Lizenz Datei eingespielt muss diese gelöscht werden.**
 
@@ -85,7 +85,7 @@ Anschließend klicken wir auf den “**Save & Check**”-Button. Nun wird der Li
 
 **Schritt 5:** Der License Token wurde vom Lizenzserver verifiziert und es werden alle damit verbundenen Lizenzen angezeigt. Fertig.
 
-[![License-save](../assets/images/maintenance-operation/activate-license/5.admin-center-licenses-token.png)](../assets/images/maintenance-operation/activate-license/5.admin-center-licenses-token.png)
+[![License-save](../assets/images/de/wartung-und-betrieb/activate-license/5.admin-center-licenses-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/5.admin-center-licenses-token.png)
 
 **_Hinweis_**_: Der Weblicense Token ist wie folgt aufgebaut:_ **_2e23aa70df492b7e7b8f321929gcfcde_**
 
@@ -100,25 +100,25 @@ Wir führen zuvor die [Schritte 1-4](#license-token-online-aktivieren) durch.
 
 **Schritt 5:** Nun fügen wir den License Token ein. Klicken auf den **“Save”**\-button. Klicken Sie **nicht** auf "Save and Check".
 
-[![offline-key](../assets/images/maintenance-operation/activate-license/6-offline-token.png)](../assets/images/maintenance-operation/activate-license/6-offline-token.png)
+[![offline-key](../assets/images/de/wartung-und-betrieb/activate-license/6-offline-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/6-offline-token.png)
 
 **Schritt 6:** Nachdem der Token gespeichert wurde klicken wir auf den "**Install new license**" Button.
 
-[![offline-key-install](../assets/images/maintenance-operation/activate-license/7.add-new-license-button.png)](../assets/images/maintenance-operation/activate-license/7.add-new-license-button.png)
+[![offline-key-install](../assets/images/de/wartung-und-betrieb/activate-license/7.add-new-license-button.png)](../assets/images/de/wartung-und-betrieb/activate-license/7.add-new-license-button.png)
 
-**Schritt 7:** Nun sehen wir das Feld in welches der gesamte **Offline License Key** hineinkopiert werden muss.[![license-file](../assets/images/maintenance-operation/activate-license/8.add-new-license.png)](../assets/images/maintenance-operation/activate-license/8.add-new-license.png)
+**Schritt 7:** Nun sehen wir das Feld in welches der gesamte **Offline License Key** hineinkopiert werden muss.[![license-file](../assets/images/de/wartung-und-betrieb/activate-license/8.add-new-license.png)](../assets/images/de/wartung-und-betrieb/activate-license/8.add-new-license.png)
 
 **_Hinweis:_** Je nachdem wie viele Add-ons in der gekauften Lizenz enthalten sind, variiert die Länge der Zeichenkette. Diese können Sie zusammenhängend in das Feld kopieren.
 
-[![license-file-insert](../assets/images/maintenance-operation/activate-license/9.add-new-license-end.png)](../assets/images/maintenance-operation/activate-license/9.add-new-license-end.png)
+[![license-file-insert](../assets/images/de/wartung-und-betrieb/activate-license/9.add-new-license-end.png)](../assets/images/de/wartung-und-betrieb/activate-license/9.add-new-license-end.png)
 
 **Schritt 8:** Klicken Sie nun auf den “**Add license**”-Button.
 
-[![license-file-add](../assets/images/maintenance-operation/activate-license/10.add-new-license-save.png)](../assets/images/maintenance-operation/activate-license/10.add-new-license-save.png)
+[![license-file-add](../assets/images/de/wartung-und-betrieb/activate-license/10.add-new-license-save.png)](../assets/images/de/wartung-und-betrieb/activate-license/10.add-new-license-save.png)
 
 Der License Token wird mit dem Offline License Key verifiziert und es werden alle damit verbundenen Lizenzen angezeigt.
 
-[![license-overview](../assets/images/maintenance-operation/activate-license/11.admin-center-licenses-token.png)](../assets/images/maintenance-operation/activate-license/11.admin-center-licenses-token.png)
+[![license-overview](../assets/images/de/wartung-und-betrieb/activate-license/11.admin-center-licenses-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/11.admin-center-licenses-token.png)
 
   
 
@@ -133,7 +133,7 @@ Die Installation über das [Admin Center](/display/de/Admin+Center) erfolgt nach
 
     Wird eine Lizenz erfolgreich eingespielt, kann es dennoch vorkommen, dass beim Weiterarbeiten mit i-doit ein Hinweis erscheint, es sei keine gültige Lizenz aktiviert. Hier hilft es, sich mit dem derzeitigen Benutzer ab- und wieder anzumelden. Daraufhin sollte der Hinweis nicht wieder erscheinen.
 
-[![license-installation](../assets/images/maintenance-operation/activate-license/12.i-doit-license.png)](../assets/images/maintenance-operation/activate-license/12.i-doit-license.png)
+[![license-installation](../assets/images/de/wartung-und-betrieb/activate-license/12.i-doit-license.png)](../assets/images/de/wartung-und-betrieb/activate-license/12.i-doit-license.png)
 
 Automatische Lizenzdistribution
 
@@ -155,4 +155,4 @@ FAQ
 
 !!! success "Öffne den Reiter Tenant im Admin Center und klicke auf **Save license settings**."
 
-    [![tenant-licenses](../assets/images/maintenance-operation/activate-license/13.png)](../assets/images/maintenance-operation/activate-license/13.png)
+    [![tenant-licenses](../assets/images/de/wartung-und-betrieb/activate-license/13.png)](../assets/images/de/wartung-und-betrieb/activate-license/13.png)

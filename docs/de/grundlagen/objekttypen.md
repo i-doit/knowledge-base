@@ -85,7 +85,7 @@ i-doit bringt in der Standard-Installation bereits eine Vielzahl von [Objekttype
 
   
 
-[![objekttypkonfiguration](../assets/images/grundlagen/objekttypen/1-ot.png)](../assets/images/grundlagen/objekttypen/1-ot.png)
+[![objekttypkonfiguration](../assets/images/de/grundlagen/objekttypen/1-ot.png)](../assets/images/de/grundlagen/objekttypen/1-ot.png)
 
 Felder in der Konfiguration
 ---------------------------

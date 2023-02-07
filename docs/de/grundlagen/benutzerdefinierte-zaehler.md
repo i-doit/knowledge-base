@@ -4,7 +4,7 @@ Hier werden alle konfigurierten Zähler in einer Liste dargestellt.
 
 Oben in dieser Liste befindet sich eine Schaltfläche zum Hinzufügen von X neuen Zählern zu dieser Liste.
 
-[![Benutzerdefinierter-Zähler](../assets/images/grundlagen/benutzerdefinierte-zaehler/1-bz.png)](../assets/images/grundlagen/benutzerdefinierte-zaehler/1-bz.png)
+[![Benutzerdefinierter-Zähler](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)
 
 Für jeden definierten Zähler gibt es eine eigene Zeile in dieser Liste.
 
@@ -22,7 +22,7 @@ Die letzte Spalte enthält eine Schaltfläche **Löschen**, um den Zähler dauer
 
 Die gesamte Konfiguration sieht wie folgt aus:
 
-[![Benutzerdefinierter-Zähler](../assets/images/grundlagen/benutzerdefinierte-zaehler/2-bz.png)](../assets/images/grundlagen/benutzerdefinierte-zaehler/2-bz.png)
+[![Benutzerdefinierter-Zähler](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/2-bz.png)](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/2-bz.png)
 
 !!! attention ""
     Wenn man den Mauszeiger über das (Info-) Symbol bewegt, erscheint ein kleiner Text, der darauf hinweist, dass diese Funktion den Zähler auf 1 zurücksetzt und alle zukünftigen Verwendungen dieses Zählers diese neue Zählung verwenden werden.
@@ -44,8 +44,8 @@ Der benutzerdefinierte Zähler kann auch für führende Nullen auf die gleiche W
 Zusätzlich gibt es eine [Experteneinstellung](/display/de/Experteneinstellungen). Hier kann der Benutzer den Zähler bei Bedarf auf einen bestimmten Wert setzen.  
 Setzt man den Wert auf z.B. 1000 wird dieser Wert.
 
-[![Benutzerdefinierter-Zähler](../assets/images/grundlagen/benutzerdefinierte-zaehler/1-bz.png)](../assets/images/grundlagen/benutzerdefinierte-zaehler/1-bz.png)
+[![Benutzerdefinierter-Zähler](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)
 
 Alle Zähler sind in der Listenbearbeitung, der Massenbearbeitung, den Vorlagen und der automatisch generierten Inventarnummer aus der Objekttypkonfiguration verfügbar/verwendbar.  
 Außerdem sind die Counter auch bei Textfeldern von benutzerdefinierten Kategorien verwendbar.  
-Diese Counter werden durch klick auf das  [![icon](../assets/images/grundlagen/icons/riddle.png)](../assets/images/grundlagen/icons/riddle.png) Fragenzeichen Symbol neben dem Feld aufgelistet.
+Diese Counter werden durch klick auf das  [![icon](../assets/images/de/grundlagen/icons/riddle.png)](../assets/images/de/grundlagen/icons/riddle.png) Fragenzeichen Symbol neben dem Feld aufgelistet.
