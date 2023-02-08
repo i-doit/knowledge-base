@@ -1,18 +1,4 @@
-<<<<<<< HEAD
 # How do i start documenting?
-=======
-**Contents**
-
-*   1[Know your Requirements](#HowDoIStartDocumenting?-KnowyourRequirements)
-*   2[Know your Users](#HowDoIStartDocumenting?-KnowyourUsers)
-*   3 [Know your Existing Documentation](#HowDoIStartDocumenting?-KnowyourExistingDocumentation)
-*   4[Know your IT](#HowDoIStartDocumenting?-KnowyourIT)
-*   5 [Know your Processes](#HowDoIStartDocumenting?-KnowyourProcesses)
-*   6[Take your Time](#HowDoIStartDocumenting?-TakeyourTime)
-*   7 [Document your Documentation](#HowDoIStartDocumenting?-DocumentyourDocumentation)
-*   8[Think Outside the Box](#HowDoIStartDocumenting?-ThinkOutsidetheBox)
-*   9[Bottom Line](#HowDoIStartDocumenting?-BottomLine)
->>>>>>> ec3bcea546db75b354fed3457a42c22be614ac67
 
 Often people consult us with the following questions or similar considerations:
 
@@ -22,11 +8,11 @@ Often people consult us with the following questions or similar considerations:
 *   How many categories do I _have_ to cover to get a good overview?
 *   …
 
-<<<<<<< HEAD
+
 Anyone who deals with the subject of IT documentation in depth will recognize quickly that here as well as elsewhere the following applies: The first step is always the hardest. In this article we would like to map out what the reasons for these questions are and how we can answer them in an optimal way.
-=======
-Anyone who deals with the subject of IT documentation in depth will recognize quickly that here as well as elsewhere the following applies: The first step is always the hardest. In this article we would like to map out what the reasons for these questions are and how we can answer them in an optimal way.  
->>>>>>> ec3bcea546db75b354fed3457a42c22be614ac67
+
+Anyone who deals with the subject of IT documentation in depth will recognize quickly that here as well as elsewhere the following applies: The first step is always the hardest. In this article we would like to map out what the reasons for these questions are and how we can answer them in an optimal way.
+
 Take a look at our [whitepapers](https://www.i-doit.com/en/downloads/) as well.
 
 Know your Requirements
