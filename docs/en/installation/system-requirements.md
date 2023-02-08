@@ -1,23 +1,12 @@
+# System requirements
+
 In order to guarantee the operation of all functionalities of i-doit, some requirements must be met by the underlying system.
 
 Current version
 
-The requirements shown below apply to the current version of i-doit, in this case **21**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+The requirements shown below apply to the current version of i-doit, in this case **22**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
-**Contents**
-
-*   1[Minimum Requirements](#SystemRequirements-MinimumRequirements)
-    *   1.1[Virtual Hardware](#SystemRequirements-VirtualHardware)
-    *   1.2[Operating System](#SystemRequirements-OperatingSystem)
-    *   1.3[LAMP Stack](#SystemRequirements-LAMPStack)
-    *   1.4[Virtual Hardware](#SystemRequirements-VirtualHardware.1)
-    *   1.5[Operating System](#SystemRequirements-OperatingSystem.1)
-    *   1.6[LAMP Stack](#SystemRequirements-LAMPStack.1)
-*   2[Client](#SystemRequirements-Client)
-*   3[Compatibility matrix](#SystemRequirements-Compatibilitymatrix)
-
-Minimum Requirements
---------------------
+## Minimum Requirements
 
 The following system parameters are the minimum requirements to guarantee i-doit to work with up to around 10,000 objects and up to 10 users working simultaneously.
 
@@ -27,65 +16,58 @@ The following system parameters are the minimum requirements to guarantee i-doit
 *   2 GB RAM
 *   10 GB free disc space
 
-We recommend the use of a dedicated virtual machine. The actual demand for hardware is based on the scope of the [IT documentation](/display/en/Glossary) and the amount of simultaneous users.
+We recommend the use of a dedicated virtual machine. The actual demand for hardware is based on the scope of the [IT documentation](../glossary.md) and the amount of simultaneous users.
 
 ### Operating System
 
-*   [Debian GNU/Linux](/pages/viewpage.action?pageId=36864037) 10 "buster", 11 "bullseye"
-*   [Ubuntu](/display/en/Ubuntu+Linux) 18.04 LTS "bionic", 20.04 LTS "focal fossa"  
-    
-*   [SUSE Linux Enterprise Server (SLES)](/pages/viewpage.action?pageId=37355545) 15, 15 SP1, 15 SP2, 15 SP3  
-    
-*   [Red Hat Enterprise Linux (RHEL)](/pages/viewpage.action?pageId=37355543) 7, 8  
-    
-*   [Microsoft Windows Server](/display/en/Microsoft+Windows+Server) 2016, 2019  
-    
+*   [Debian GNU/Linux](manual-installation/debian.md) 10 "buster", 11 "bullseye"
+*   [Ubuntu](manual-installation/ubuntu-linux/index.md) 18.04 LTS "bionic", 20.04 LTS "focal fossa"
+*   [SUSE Linux Enterprise Server (SLES)](manual-installation/suse-linux-enterprise-server.md) 15, 15 SP1, 15 SP2, 15 SP3
+*   [Red Hat Enterprise Linux (RHEL)](manual-installation/red-hat-enterprise-linux/index.md) 7, 8
+*   [Microsoft Windows Server](manual-installation/microsoft-windows-server.md)) 2016, 2019
 
-We recommend the usage of [Debian GNU/Linux](/pages/viewpage.action?pageId=36864037) in 64bit architecture (amd64) in version 11 "bullseye".
+
+We recommend the usage of [Debian GNU/Linux](manual-installation/debian.md) in 64bit architecture (amd64) in version 11 "bullseye".
 
 ### LAMP Stack
 
 *   Apache Web server 2.4
 *   MariaDB 10.2, 10.3, 10.4, 10.5 (recommended) or MySQL 5.7. _But we highly recommend to use MariaDB instead of MySQL. __When version 10.6 is marked as stable we plan to support it in a later release._
-*   PHP >= 7.4, 8.0 (recommended) _At the moment, PHP version `8.1` is not supported. We plan the support of PHP`8`.1 in a later release._  
-    
-*   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip  
-    
+*   PHP >= 7.4, 8.0 (recommended) _At the moment, PHP version `8.1` is not supported. We plan the support of PHP `8.1` in a later release._
+*   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
+
 
 We recommend the usage of **Apache Webserver 2.4, PHP 8.0 and MariaDB 10.5**.
 
-Reference Configuration
+!!! success Reference configuration
 
-The following system parameters comprise a configuration reference that is tested and recommended by us and guarantees high performance when used with up to 500,000 objects and a high number of simultaneously working users.
+    The following system parameters comprise a configuration reference that is tested and recommended by us and guarantees high performance when used with up to 500,000 objects and a high number of simultaneously working users.
 
-### Virtual Hardware
+    ### Virtual Hardware
 
-*   2 vCPUs
-*   8 GB RAM
-*   50 GB free disc space
+    *   2 vCPUs
+    *   8 GB RAM
+    *   50 GB free disc space
 
-### Operating System
+    ### Operating System
 
-[Debian GNU/Linux](/pages/viewpage.action?pageId=36864037) 10 "buster" (64bit)
+    [Debian GNU/Linux](/pages/viewpage.action?pageId=36864037) 10 "buster" (64bit)
 
-### LAMP Stack
+    ### LAMP Stack
 
-*   Apache 2.4.x (default package)
-*   MariaDB 10.3.x (default package)
-*   PHP 8.0.x (default package)
+    *   Apache 2.4.x (default package)
+    *   MariaDB 10.3.x (default package)
+    *   PHP 8.0.x (default package)
 
-Note
+    !!! note Note
 
-Because i-doit is a database application, it intensively uses the hard drive. Since the I/O throughput strongly determines the performance, a fast hard drive is recommended.
+        Because i-doit is a database application, it intensively uses the hard drive. Since the I/O throughput strongly determines the performance, a fast hard drive is recommended.
 
-The need for disc space can increase with intense usage of file or image storage in i-doit.
+        The need for disc space can increase with intense usage of file or image storage in i-doit.
 
-The value of 50 GB is solely geared to the maximal size of the database, which can be achieved by full usage, updates and similar operations.
+        The value of 50 GB is solely geared to the maximal size of the database, which can be achieved by full usage, updates and similar operations.
 
-  
-
-Client
-------
+## Client
 
 A Web browser is needed on the client side in order to access the Web GUI of i-doit. For each Web browser the current version as well as the version prior to this are supported:
 
@@ -94,10 +76,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 *   Microsoft Internet Explorer/Edge (disabled compatibility mode)
 *   Apple Safari
 
-  
-
-Compatibility matrix
---------------------
+## Compatibility matrix
 
 |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
