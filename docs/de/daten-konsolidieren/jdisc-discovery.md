@@ -22,7 +22,7 @@ Dieser Artikel widmet sich im Folgenden der Schnittstelle zwischen i-doit und JD
 
 Die Konfiguration der Schnittstelle befindet sich unter `**Verwaltung → Schnittstellen / externe Daten → Import → JDISC → JDisc-Konfiguration**`. Dort können beliebig viele Instanzen von JDisc Discovery angegeben werden. Dies ermöglicht komplexe Inventarisierungs-Szenarien mit voneinander getrennten Netzen.
 
-![JDisc Konfiguration](../../assets/images/de/daten-konsolidieren/jdisc/1-jdisc.jpg)
+[![JDisc Konfiguration](../assets/images/de/daten-konsolidieren/jdisc/1-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/1-jdisc.jpg)
 
 ### Allgemeine Einstellungen
 
@@ -57,7 +57,7 @@ Damit die Verbindung zu JDisc Discovery funktioniert, muss auf dem Host von i-do
 
 Die JDisc-Profile innerhalb von i-doit geben die Möglichkeit, die Verknüpfung von Objekttypen und ihren Attributen zwischen JDisc und i-doit zu definieren. Unter `**Verwaltung → Schnittstellen / externe Daten → Import → JDISC → JDisc-Profile**` kann festgelegt werden, in welcher Weise die durch JDisc gefundenen Objekte ihren Weg in die IT-Dokumentation finden.
 
-![JDisc Profile](../../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.jpg)
+[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.jpg)
 
 In der Standard-Installation von i-doit sind bereits vordefinierte Profile vorhanden. Darunter befindet sich das Profile `**Complete import**`, dass darauf ausgelegt ist, alle Daten in i-doit zu importieren, die JDisc inventarisiert hat.
 Falls bestimmte Objekte nicht importiert werden sollte das Profil auf den entsprechenden Objekttyp angepasst werden. Dazu muss der `JDisc-Typ` ausgewählt werden
@@ -114,7 +114,7 @@ Support Entitlements, Custom Identifier, JDisc Custom Attributes, JDisc Disco
 
 Der Import von Inhalten aus JDisc erfolgt über **`Extras → CMDB → Import → JDisc`**.
 
-![JDisc Import GUI](../../assets/images/de/daten-konsolidieren/jdisc/3-jdisc.jpg)
+[![JDisc Import GUI](../assets/images/de/daten-konsolidieren/jdisc/3-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/3-jdisc.jpg)
 
 Vor dem Ausführen des Imports müssen die Import-Parameter festlegt sein.
 
@@ -143,11 +143,11 @@ Der Import der Daten aus JDisc nach i-doit ist nicht nur manuell über die Oberf
 
 Für den Import lässt sich die ID des gewünschten Profils angeben. Die ID ist in der Liste der Profile zu finden:
 
-![JDisc Profile](../../assets/images/de/daten-konsolidieren/jdisc/4-jdisc.jpg)
+[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/4-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/4-jdisc.jpg)
 
 Ebenfalls kann die ID des zu verwendenden JDisc Servers angegeben werden. Diese ist in der Konfiguration zu finden:
 
-![JDisc Konfiguration](../../assets/images/de/daten-konsolidieren/jdisc/5-jdisc.jpg)
+[![JDisc Konfiguration](../assets/images/de/daten-konsolidieren/jdisc/5-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/5-jdisc.jpg)
 
 Eine jdisc.ini könnte so aussehen
 

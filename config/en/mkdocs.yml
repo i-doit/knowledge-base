@@ -8,7 +8,7 @@ site_author: synetics GmbH
 copyright: Copyright &copy; 2019-23 synetics GmbH
 repo_url: https://github.com/i-doit/knowledge-base
 edit_uri: edit/main/docs/de
-strict: false
+strict: true
 theme:
   name: material
   custom_dir: '../../overrides/'
@@ -75,6 +75,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
+  - pymdownx.details
+
 extra:
   manifest: overrides/manifest.webmanifest
   social:

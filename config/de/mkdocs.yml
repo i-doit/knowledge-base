@@ -1,7 +1,7 @@
 ---
 site_name: Knowledge Base
 docs_dir: '../../docs/de'
-site_dir: '../../generated/de' 
+site_dir: '../../generated/de'
 site_url: https://kb.i-doit.com/
 site_description: Knowledge Base
 site_author: synetics GmbH
@@ -76,6 +76,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
+  - pymdownx.details
 
 extra:
   manifest: overrides/manifest.webmanifest
@@ -97,7 +98,7 @@ extra:
       icon: fontawesome/brands/github
   alternate:
     - name: English
-      link: /en/ 
+      link: /en/
       lang: en
     - name: Deutsch
       link: /de/
@@ -109,7 +110,7 @@ watch:
   - ../../overrides/
 nav:
   - Übersicht: index.md
-  - Einführung: 
+  - Einführung:
       - einfuehrung/index.md
       - Wie beginne ich zu dokumentieren?: einfuehrung/wie-beginne-ich-zu-dokumentieren.md
       - Checkliste für die IT-Dokumentation: einfuehrung/checkliste-fuer-die-it-dokumentation.md

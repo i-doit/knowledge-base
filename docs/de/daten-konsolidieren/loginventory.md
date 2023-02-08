@@ -1,46 +1,32 @@
-**Inhaltsverzeichnis**
+# LOGINventory
 
-*   1[Voraussetzungen](#LOGINventory-Voraussetzungen)
-*   2[Einstellungen in i-doit](#LOGINventory-Einstellungenini-doit)
-*   3[Konfiguration der Datenbank](#LOGINventory-KonfigurationderDatenbank)
-*   4[Konfiguration der Schnittstelle](#LOGINventory-KonfigurationderSchnittstelle)
-
-Mit i-doit Version 1.11 wurde LOGINventory entfernt
-
-  
+!!! warning
+    Mit i-doit Version 1.11 wurde LOGINventory entfernt
 
 Über diesen Import können Informationen aus LOGINventory in i-doit importiert und verwendet werden.
 
-Voraussetzungen
----------------
+## Voraussetzungen
 
 *   Der Import unterstützt LOGINventory bis einschließlich Version 5. Die Versionen 6 und folgende werden derzeit nicht unterstützt.
 *   PDO muss installiert sein.
 *   PDO-Treiber `dblib` muss installiert sein.
 *   In der Datei `freetds.conf` muss die globale Einstellung `tds version` auf `7.0` gesetzt werden
 
-Einstellungen in i-doit
------------------------
+## Einstellungen in i-doit
 
 Einstellungen zu LOGINventory findet man unter **`Verwaltung → Schnittstellen → externe Daten → Loginventory`**
 
-Konfiguration der Datenbank
----------------------------
+## Konfiguration der Datenbank
 
 **`IP:`** Server, auf dem die Datenbank zu finden ist.
-
 **`Port:`** der IP Port zur Kommunikation (Standard 3108)
-
 **`Datenbank / Schema:`** Datenbank Bezeichnung (Standard `**loginventory**`)
-
 **`Benutzername:`** Benutzername zum Einloggen in die Datenbank
-
 **`Passwort:`** selbsterklärend
 
-![](/download/attachments/7831609/logindb.jpg?version=1&modificationDate=1441872342791&api=v2)
+[![LOGINventory DB Konfigratution](../assets/images/de/daten-konsolidieren/loginventory/logindb.jpg)](../assets/images/de/daten-konsolidieren/loginventory/logindb.jpg)
 
-Konfiguration der Schnittstelle
--------------------------------
+## Konfiguration der Schnittstelle
 
 Hier kann man das Standardverhalten des Imports für das LOGINventory beeinflussen.
 

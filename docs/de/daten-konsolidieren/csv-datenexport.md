@@ -6,19 +6,19 @@ Viele Daten lassen sich direkt aus der [IT-Dokumentation](../glossar.md) im CSV-
 
 Objekte und deren Attribute lassen sich über die [Objekt-Liste](../grundlagen/objekt-liste/index.md) exportieren. Hierzu dient der Button `**Als CSV exportieren**` in der Aktionsleiste. Die Spalten entsprechen den [in der Listenansicht konfigurierten Attributen](../grundlagen/objekt-liste/listenansicht-konfigurieren.md). Eine aktive [Filterung der Objekt-Liste](../grundlagen/objekt-liste/navigieren-und-filtern.md) wird beim Export **nicht** berücksichtigt.
 
-![CSV-Export in der Aktionsleiste](../../assets/images/de/daten-konsolidieren/csv-datenexport/1-csv-de.png)
+[![CSV-Export in der Aktionsleiste](../assets/images/de/daten-konsolidieren/csv-datenexport/1-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/1-csv-de.png)
 
 ## Listen-Kategorien
 
 Derzeit unterstützt der CSV-Export viele der [Listen-Kategorien](../glossar.md) (Multi-Value). Die in deren Liste aufgeführten Einträge und [Attribute](../glossar.md) werden nach Druck auf den Button **`Als CSV exportieren`** zum Download angeboten. Als Spaltenüberschriften dienen die Attributnamen.
 
-![Multi-Value Kategorie](../../assets/images/de/daten-konsolidieren/csv-datenexport/2-csv-de.png)
+[![Multi-Value Kategorie](../assets/images/de/daten-konsolidieren/csv-datenexport/2-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/2-csv-de.png)
 
 ## Reports
 
 Der [Report Manager](../auswertungen/report-manager.md) verfügt ebenfalls über einen Export ins CSV-Format. In einem Report klickt man dazu auf den Button `**CSV**`.aadawdwa
 
-![Report Darstellung](../../assets/images/de/daten-konsolidieren/csv-datenexport/3-csv-de.png)
+[![Report Darstellung](../assets/images/de/daten-konsolidieren/csv-datenexport/3-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/3-csv-de.png)
 
 ## CSV-Format
 
