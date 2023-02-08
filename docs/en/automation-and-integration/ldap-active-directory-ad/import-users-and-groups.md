@@ -1,0 +1,554 @@
+**Table of contents**
+
+*   1[Filter configuration](#Filterconfiguration)
+    *   1.1[Import from all users](#Importfromallusers)
+    *   1.2[Import of users with specific attributes](#Importofuserswithspecificattributes)
+    *   1.3[Import from all users and all groups](#Importfromallusersandallgroups)
+    *   1.4[Import of users who are members of the idoit-read group](#Importofuserswhoaremembersoftheidoit-readgroup)
+    *   1.5[Import of users who are members of the group idoit-read and idoit-write](#Importofuserswhoaremembersofthegroupidoit-readandidoit-write)
+    *   1.6[Import of users and groups that are below a nested group](#Importofusersandgroupsthatarebelowanestedgroup)
+    *   1.7[How to filter users with more than one objectClass](#HowtofilteruserswithmorethanoneobjectClass)
+*   2[Which other attributes can be imported via ldap.ini](#Whichotherattributescanbeimportedvialdap.ini)
+    *   2.1[The configuration of the category extension](#Theconfigurationofthecategoryextension)
+    *   2.2[Import assignments to rooms from AD/LDAP](#ImportassignmentstoroomsfromAD/LDAP)
+    *   2.3[How to import attributes from LDAP](#HowtoimportattributesfromLDAP)
+    *   2.4[More options](#Moreoptions)
+        *   2.4.1[autoReactivateUsers](#autoReactivateUsers)
+        *   2.4.2[ignoreUsersWithAttributes](#ignoreUsersWithAttributes)
+        *   2.4.3[ignoreFunction](#ignoreFunction)
+        *   2.4.4[Synchronize empty attributes](#Synchronizeemptyattributes)
+    *   2.5[The complete ldap.ini](#Thecompleteldap.ini)
+
+Importing users and groups from Active Directory into i-doit always takes place via the [console.php](https://kb.i-doit.com/display/en/Console) command. For this we use the [ldap-sync](https://kb.i-doit.com/display/en/Options+and+Parameters+for+the+Console#OptionsandParametersfortheConsole-ldap-sync) command.  
+At the end of the article there is a complete example of the created advanced configuration.
+
+The article about configuration of [LDAP directory/Active Directory](https://kb.i-doit.com/pages/viewpage.action?pageId=37355601) should be known to everyone before.  
+Here we will go through different LDAP filters and a complete [ldap.ini configuration](https://kb.i-doit.com/display/en/Using+Configuration+Files+for+Console+Commands#:~:text=Example%20for%20the%20command%20ldap%2Dsync).  
+The goal is to synchronize all users and groups from AD/LDAP with i-doit, as well as their memberships.
+
+I assume a basic knowledge of AD/LDAP.  
+In these examples for persons the `objectClass = user` is used.  
+For groups the `objectClass = group` is used.  
+If you do not want to synchronize all users or groups of the domain, you have to enter the DN/CN of an OU or container under “Search for users in (OU)\*”.
+
+![](/download/attachments/113475861/image2021-11-30_20-46-31.png?version=1&modificationDate=1638306894495&api=v2&effects=drop-shadow)![](/download/attachments/113475861/1.png?version=1&modificationDate=1638306894486&api=v2)
+
+Filter configuration
+--------------------
+
+* * *
+
+### Import from all users
+
+Here only users are synchronized, which also means that no groups are created. So that only users are synchronized the filter must look like this:
+
+![Import users](https://kb.i-doit.com/download/attachments/113475861/1.png)
+
+[?](#)
+
+`(objectClass=user)`
+
+* * *
+
+### Import of users with specific attributes
+
+We want to filter on an attribute and synchronize only this user.  
+Only the user who has the value `MichaelO` in the attribute `sAMAccountName` should be synchronized.
+
+![Import users with specific attributes](https://kb.i-doit.com/download/attachments/113475861/2.png)
+
+[?](#)
+
+`(&(objectClass=user)(sAMAccountName=MichaelO))`
+
+* * *
+
+### Import from all users and all groups
+
+Here users and groups are created and the users are assigned to the respective groups.  
+So that users and groups are synchronized the filter must look like this:
+
+![Import of users and groups](https://kb.i-doit.com/download/attachments/113475861/3.png)
+
+[?](#)
+
+`(|(objectClass=user)(objectClass=group))`
+
+* * *
+
+### Import of users who are members of the `idoit-read` group
+
+To synchronize only users who are members of the `idoit-read` group, the filter must look like this:
+
+![Import of users who are members of the idoit group](https://kb.i-doit.com/download/attachments/113475861/4.png)
+
+[?](#)
+
+`(&(objectClass=user)(memberOf=CN=idoit-read,CN=Users,DC=synetics,DC=test))`
+
+* * *
+
+### Import of users who are members of the group `idoit-read` and `idoit-write`
+
+To synchronize only users who are members of the `idoit-read` group, the filter must look like this:
+
+![Import von Benutzer die Mitglied der Gruppe idoit-read and idoit-write sind](https://kb.i-doit.com/download/attachments/113475861/5.png)
+
+[?](#)
+
+`(&(objectClass=user)(&(memberOf=CN=idoit-read,CN=Users,DC=synetics,DC=test)(memberOf=CN=idoit-write,CN=Users,DC=synetics,DC=test)))`
+
+* * *
+
+### Import of users and groups that are below a nested group
+
+I have a group `idoit` in which the i-doit groups `idoit-read` and `idoit-write` are members. I want to synchronize these two groups. With this filter I can directly create the groups and the users.  
+This will not create the `idoit` group, it will only create the groups below it. Also, the groups will not be linked, because groups cannot have a group as a member.
+
+![Import of users who are members below the group idoit](https://kb.i-doit.com/download/attachments/113475861/6.png)
+
+[?](#)
+
+`(memberOf:1.2.840.113556.1.4.1941:=CN=idoit,CN=Users,DC=synetics,DC=test)`
+
+* * *
+
+### How to filter users with more than one `objectClass`
+
+For example, if the users differ by having two objectClass attributes (e.g. person and user), I would build the filter this way:
+
+![People and users](https://kb.i-doit.com/download/attachments/113475861/7.png)
+
+[?](#)
+
+`(&(objectClass=person)(objectClass=user))`
+
+* * *
+
+Which other attributes can be imported via ldap.ini
+---------------------------------------------------
+
+*   The post [ldap.ini Configuration](https://kb.i-doit.com/display/en/Options+and+Parameters+for+the+Console#OptionsandParametersfortheConsole-ldap-sync) should be known.
+*   An `.ini` file can be created for the import, with this additional attributes can be imported.
+*   The [Category Extension](https://kb.i-doit.com/display/en/CMDB+Settings#CMDBSettings-CategoryExtension) should already be configured.
+*   We use the `.ini` section “[additional](additional)”
+
+### The configuration of the category extension
+
+![ldap.ini configuration](https://kb.i-doit.com/download/attachments/113475861/category-extension.png)
+
+Here again as a table
+
+| Field title | Attribut | Mapping with |
+| --- | --- | --- |
+| Field title | Attribut | Mapping with |
+| --- | --- | --- |
+| Field title 1 | objectGUID | Key: custom\_1 |
+| Field title 2 | objectSid | Key: custom\_2 |
+| Field title 3 | initials | Key: custom\_3 |
+| Field title 4 | telephonenumber | Key: custom\_4 |
+| Field title 5 | title | Key: custom\_5 |
+| Field title 6 | pager | Key: custom\_6 |
+| Field title 7 | manager | Key: custom\_7 |
+| Field title 8 | info | Key: custom\_8 |
+
+* * *
+
+### Import assignments to rooms from AD/LDAP
+
+Fixed assignments of users to rooms can be entered in the `ldap.ini`.  
+The users are then assigned to the assigned room as a contact.  
+(The rooms must exist in i-doit before!).
+
+[?](#)
+
+`rooms["Room A"]=["MichaelO","migel"]`
+
+* * *
+
+### How to import attributes from LDAP
+
+I want to import more LDAP attributes to users and I have already configured the [category extension](https://kb.i-doit.com/display/en/CMDB+Settings#CMDBSettings-CategoryExtension).  
+Now I have to configure the LDAP sync configuration file (ldap.ini).
+
+If you have done an LDAP sync for users before, you will find an entry like this in the ldap log
+
+[?](#)
+
+`Available attributes for this user:`
+
+`objectclass,`
+
+`cn,`
+
+`sn,`
+
+`c,`
+
+`l,`
+
+`st,`
+
+`title,`
+
+`description,`
+
+`postalcode,`
+
+`postofficebox,`
+
+`physicaldeliveryofficename,`
+
+`telephonenumber,`
+
+`facsimiletelephonenumber,`
+
+`givenname,`
+
+`initials,`
+
+`distinguishedname,`
+
+`instancetype,`
+
+`whencreated,`
+
+`whenchanged,`
+
+`displayname,`
+
+`usncreated,`
+
+`info,`
+
+`memberof,`
+
+`usnchanged,`
+
+`co,`
+
+`department,`
+
+`company,`
+
+`streetaddress,`
+
+`directreports,`
+
+`wwwhomepage,`
+
+`name,`
+
+`objectguid,`
+
+`useraccountcontrol,`
+
+`badpwdcount,`
+
+`codepage,`
+
+`countrycode,`
+
+`badpasswordtime,`
+
+`lastlogoff,`
+
+`lastlogon,`
+
+`pwdlastset,`
+
+`primarygroupid,`
+
+`userparameters,`
+
+`objectsid,`
+
+`admincount,`
+
+`accountexpires,`
+
+`logoncount,`
+
+`samaccountname,`
+
+`samaccounttype,`
+
+`userprincipalname,`
+
+`lockouttime,`
+
+`ipphone,`
+
+`objectcategory,`
+
+`dscorepropagationdata,`
+
+`lastlogontimestamp,`
+
+`mail,`
+
+`homephone,`
+
+`mobile,`
+
+`pager,`
+
+`dn`
+
+From this I can search for the attributes that I want to synchronize additionally.  
+Which attributes belong to which field can be found via Google.
+
+As an example I take the following attributes and add them to `ldap.ini`:
+
+[?](#)
+
+`;LDAP Attributes are individual. This default configuration is prepared for Active Directory:`
+
+`attributes[department]=department`
+
+`attributes[phone_company]=telephonenumber`
+
+`attributes[phone_home]=homephone`
+
+`attributes[phone_mobile]=mobile`
+
+`attributes[fax]=facsimileTelephoneNumber`
+
+`attributes[description]=info`
+
+`attributes[personnel_number]=initials`
+
+`attributes[organization]=company`
+
+`attributes[location]=physicalDeliveryOfficeName`
+
+`attributes[street]=streetAddress`
+
+`attributes[city]=l`
+
+`attributes[zip_code]=postalCode`
+
+`attributes[function]=title`
+
+`attributes[service_designation]=title`
+
+`attributes[pager]=pager`
+
+`;Category extension for persons`
+
+`attributes[custom_1]=objectSid`
+
+`attributes[custom_2]=sn`
+
+`attributes[custom_3]=homePhone`
+
+`attributes[custom_4]=mobile`
+
+`attributes[custom_5]=info`
+
+`attributes[custom_6]=manager`
+
+`attributes[custom_7]=company`
+
+`attributes[custom_8]=objectGUID`
+
+As you can see here I mapped the master data attribute `department` with the LDAP attribute `department`.  
+Additionally I used the category extension.  
+The structure for e.g.  
+`attributes[custom_1]=objectSid`  
+would be as follows:  
+`attributes` tells the handler to synchronize the i-doit attribute `[custom_1]` with the LDAP attribute \`objectSid.
+
+After synchronizing the users I find the following master data:
+
+![Master data after sync](https://kb.i-doit.com/download/attachments/113475861/master-data.png)
+
+* * *
+
+### More options
+
+#### autoReactivateUsers
+
+To have a clean start, this setting automatically sets all users to the status normal before synchronization.
+
+This is helpful in case users were accidentally `archived` or `deleted` before.  
+Note that this only works with `NDS` & `OpenLDAP`, as it is always enabled in `Active Directory`!
+
+We should be aware that with `NDS` or `OpenLDAP` it is currently not possible to identify deleted users to archive them later. Users are then always activated!
+
+[?](#)
+
+`autoReactivateUsers=false`
+
+* * *
+
+#### ignoreUsersWithAttributes
+
+Disable synchronization for users with attributes checked against `ignoreFunction`.
+
+This function helps to prevent synchronization of unwanted directory objects.  
+The user will not be synchronized if `ignoreFunction` fails for ALL selected attributes.
+
+By default it says `ignoreUsersWithAttributes=[]` so nothing will be ignored.
+
+We only want to import users where the attributes `samaccountname`, `sn`, `givenname` and `mail` are not empty.  
+So the configuration for `ignoreUsersWithAttributes` should look like this:
+
+[?](#)
+
+`ignoreUsersWithAttributes[] = "samaccountname"`
+
+`ignoreUsersWithAttributes[] = "sn"`
+
+`ignoreUsersWithAttributes[] = "givenname"`
+
+`ignoreUsersWithAttributes[] = "mail"`
+
+* * *
+
+#### ignoreFunction
+
+Is the check function to ignore users (see’ignoreUsersWithAttributes’)
+
+This can be any function name callable via `call_user_func` or the defined functions.
+
+[?](#)
+
+`definierte functions:`
+
+`empty`
+
+`!empty`
+
+`isset`
+
+`!isset`
+
+`Example: empty would be executed as empty($value)`
+
+We check for empty attributes with
+
+[?](#)
+
+`ignoreFunction=empty`
+
+#### Synchronize empty attributes
+
+This option decides whether empty or emptied attributes from AD should be synchronized with i-doit or not.
+
+[?](#)
+
+`syncEmptyAttributes=true`
+
+* * *
+
+### The complete ldap.ini
+
+Now we put all the parts together and create our ldap.ini  
+The first part of the ldap.ini is obtained from [Using Configuration Files for Console Commands](https://kb.i-doit.com/display/en/Using+Configuration+Files+for+Console+Commands#:~:text=Example%20for%20the%20command%20ldap%2Dsync).
+
+[?](#)
+
+`[commandArguments]`
+
+`[commandOptions]`
+
+`user=admin`
+
+`password=pass`
+
+`tenantId=1`
+
+`[additional]`
+
+`;Import rooms from ldap`
+
+`import_rooms=true`
+
+`;Automatically assign this company to every ldap user`
+
+`defaultCompany='i-doit'`
+
+`;What to do with deleted users - archive, delete, purge`
+
+`deletedUsersBehaviour=archive`
+
+`;What to do with disabled users - archive, delete, disable_login`
+
+`disabledUsersBehaviour=disable_login`
+
+`;Attach users to Rooms statically`
+
+`rooms["Room A"]=["MichaelO","migel"]`
+
+`;LDAP Attributes are individual. This default configuration is prepared for Active Directory:`
+
+`attributes[department]=department`
+
+`attributes[phone_company]=telephonenumber`
+
+`attributes[phone_home]=homephone`
+
+`attributes[phone_mobile]=mobile`
+
+`attributes[fax]=facsimileTelephoneNumber`
+
+`attributes[description]=info`
+
+`attributes[personnel_number]=initials`
+
+`attributes[organization]=company`
+
+`attributes[location]=physicalDeliveryOfficeName`
+
+`attributes[street]=streetAddress`
+
+`attributes[city]=l`
+
+`attributes[zip_code]=postalCode`
+
+`attributes[function]=title`
+
+`attributes[service_designation]=title`
+
+`attributes[pager]=pager`
+
+`;Category extension for persons`
+
+`attributes[custom_1]=objectSid`
+
+`attributes[custom_2]=sn`
+
+`attributes[custom_3]=homePhone`
+
+`attributes[custom_4]=mobile`
+
+`attributes[custom_5]=info`
+
+`attributes[custom_6]=manager`
+
+`attributes[custom_7]=company`
+
+`attributes[custom_8]=objectGUID`
+
+`;Automatically sets all users to status normal NDS and OpenLDAP`
+
+`autoReactivateUsers=false`
+
+`;Disable sync for users with Attributes checked against 'ignoreFunction'`
+
+`ignoreUsersWithAttributes=[]`
+
+`;The check function used for ignoring users (see 'ignoreUsersWithAttributes') empty - !empty - isset - !isset`
+
+`ignoreFunction=empty`
+
+`syncEmptyAttributes=true`
+
+On the console the command would look like this:
+
+[?](#)
+
+`sudo -u www-data php console.php ldap-sync -c /var/www/html/i-doit/src/handler/config/ldap-sync.ini`
+
+[![](/s/-rg4ht/8803/xi7l17/5.0.0/_/download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-small-file.png)example-ldap.ini](/download/attachments/113475861/example-ldap.ini?version=1&modificationDate=1649746640588&api=v2)
