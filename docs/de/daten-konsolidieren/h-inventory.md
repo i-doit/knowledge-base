@@ -6,7 +6,7 @@ i-doit ist in der Lage, Daten aus dem Inventarisierungswerkzeug _h-inventory_ zu
 
 **Folgende Daten können von h-inventory übernommen werden:**
 
-![Attribute und Kategorien](../../../overrides/assets/images/de/daten-konsolidieren/h-inventory/1-hinv.jpg)
+![Attribute und Kategorien](../../assets/images/de/daten-konsolidieren/h-inventory/1-hinv.jpg)
 
 Vor einem Import muss i-doit entsprechend konfiguriert werden.
 
@@ -18,7 +18,7 @@ Für einen manuellen Datenimport befindet sich die Konfiguration unter `**Verwal
 
 Download des H-Inventory Pakets von **`i-doit → Extras → Import → Scripts`**
 
-![](../../../overrides/assets/images/de/daten-konsolidieren/h-inventory/2-hinv.jpg)
+![XML Import](../../assets/images/de/daten-konsolidieren/h-inventory/1-hinv.jpg)
 
 Archiv entpacken.
 Zu scannende IP-Adresse(n) in **`computer.txt`** eintragen **`scan.bat`** ausführen.

@@ -1,20 +1,10 @@
+# JDisc Discovery
+
 [JDisc Discovery](http://www.jdisc.com/de/) inventarisiert gesamte Netzwerke und erkennt alle wichtigen Betriebssysteme (einschließlich HP-UX, Solaris und AIX). Es erkennt Hardware- und Software, IP-Netzwerke, Windows-Domänen und Active Directory. Darüber hinaus identifiziert JDisc Discovery alle wichtigen Virtualisierungstechnologien, sowie viele Cluster-Umgebungen.
 
 Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/it-service-management-mit-dem-discovery-tool-jdisc-und-i-doit/)
 
-**Inhaltsverzeichnis**
-
-*   1[Konfiguration](#JDiscDiscovery-Konfiguration)
-    *   1.1[Allgemeine Einstellungen](#JDiscDiscovery-AllgemeineEinstellungen)
-    *   1.2[Discovery Einstellungen](#JDiscDiscovery-DiscoveryEinstellungen)
-*   2[Profile](#JDiscDiscovery-Profile)
-    *   2.1[Allgemein Einstellungen](#JDiscDiscovery-AllgemeinEinstellungen)
-    *   2.2[Objekttyp-Zuweisungen](#JDiscDiscovery-Objekttyp-Zuweisungen)
-    *   2.3[Zusätzliche Optionen](#JDiscDiscovery-ZusätzlicheOptionen)
-*   3[Import von Daten über die Web GUI](#JDiscDiscovery-ImportvonDatenüberdieWebGUI)
-*   4[Import über die i-doit Console](#JDiscDiscovery-Importüberdiei-doitConsole)
-
-Installation
+## Installation
 
 Für den Betrieb ist die Installation der JDisc-Server-Komponenten auf einem Microsoft Windows (bestenfalls in der Server-Variante) erforderlich Die Installationsdateien hierfür können unter folgender Adresse heruntergeladen werden:
 
@@ -28,12 +18,11 @@ Bei Fragen zur Installation oder Konfiguration von JDisc hilft der Support des H
 
 Dieser Artikel widmet sich im Folgenden der Schnittstelle zwischen i-doit und JDisc Discovery.
 
-Konfiguration
--------------
+## Konfiguration
 
 Die Konfiguration der Schnittstelle befindet sich unter `**Verwaltung → Schnittstellen / externe Daten → Import → JDISC → JDisc-Konfiguration**`. Dort können beliebig viele Instanzen von JDisc Discovery angegeben werden. Dies ermöglicht komplexe Inventarisierungs-Szenarien mit voneinander getrennten Netzen.
 
-![](/download/attachments/7831601/jdisc.jpg?version=1&modificationDate=1441870539306&api=v2)
+![JDisc Konfiguration](../../assets/images/de/daten-konsolidieren/jdisc/1-jdisc.jpg)
 
 ### Allgemeine Einstellungen
 
@@ -64,14 +53,13 @@ Auch hier kann nach dem Speichern der Parameter über den Button `**Verbindung p
 
 Damit die Verbindung zu JDisc Discovery funktioniert, muss auf dem Host von i-doit die PHP-Erweiterung `SOAP` installiert sein. Auf einem Debian-basierten Betriebssystem ist dies mit der Installation von PHP bereits geschehen, unter anderen Betriebssystemen sollte es ggf. ein passendes Distributionspaket geben.
 
-Profile
--------
+## Profile
 
 Die JDisc-Profile innerhalb von i-doit geben die Möglichkeit, die Verknüpfung von Objekttypen und ihren Attributen zwischen JDisc und i-doit zu definieren. Unter `**Verwaltung → Schnittstellen / externe Daten → Import → JDISC → JDisc-Profile**` kann festgelegt werden, in welcher Weise die durch JDisc gefundenen Objekte ihren Weg in die IT-Dokumentation finden.
 
-![](/download/attachments/7831601/jdisc_profile.jpg?version=1&modificationDate=1441870978264&api=v2)
+![JDisc Profile](../../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.jpg)
 
-In der Standard-Installation von i-doit sind bereits vordefinierte Profile vorhanden. Darunter befindet sich das Profile `**Complete import**`, dass darauf ausgelegt ist, alle Daten in i-doit zu importieren, die JDisc inventarisiert hat.  
+In der Standard-Installation von i-doit sind bereits vordefinierte Profile vorhanden. Darunter befindet sich das Profile `**Complete import**`, dass darauf ausgelegt ist, alle Daten in i-doit zu importieren, die JDisc inventarisiert hat.
 Falls bestimmte Objekte nicht importiert werden sollte das Profil auf den entsprechenden Objekttyp angepasst werden. Dazu muss der `JDisc-Typ` ausgewählt werden
 
 ### Allgemein Einstellungen
@@ -94,14 +82,14 @@ Für jeden Typ in JDisc kann ein äquivalenter Objekttyp in i-doit ausgewählt w
 
 | Option | Beschreibung |
 | --- | --- |
-| **`Kategorien auswählen`** | Welche [Kategorien](/display/de/Struktur+der+IT-Dokumentation) sollen beim Import befüllt werden? Es werden nur Kategorien gelistet, die der Import behandeln kann. |
+| **`Kategorien auswählen`** | Welche [Kategorien]() sollen beim Import befüllt werden? Es werden nur Kategorien gelistet, die der Import behandeln kann. |
 | **`Netzwerk Interfaces importieren als`** | Inventarisierte Netzwerk-Schnittstellen können in unterschiedlichen Kategorien abgebildet werden. |
 | **`Software beim Import berücksichtigen`** | Soll inventarisierte Software als Objekttyp `**Anwendungen**` importiert werden? |
 | **`Softwarelizenzen beim Import berücksichtigen`** | Sollen inventarisierte Softwarelizenzen als Objekttyp **`Lizenzen`** importiert werden? |
 | `**Systemdienste importieren**` | Sollen inventarisierte Systemdienste als Objekttyp `**Systemdienst**` importiert werden? |
 | `**Cloud Subscriptionen importieren**` | Sollen Daten aus der JDisc Kategorie Cloud importiert werden? |
 | `**Verbindungs Endpunkte importieren**` | Die Verbindungen werden nicht in die Verkabelung, sondern in die Kategorie “Verbindungs Endpunkte” importiert. Das ermöglicht zwischen der manuellen Verkabelung und der automatischen Verkabelung durch JDisc zu unterscheiden. |
-| `**Einfache Datenbank Modellierung verwenden?**` | Soll die neue oder die alte [Datenbanklogik](/display/de/Dokumentation+von+Datenbanken) verwendet werden? |
+| `**Einfache Datenbank Modellierung verwenden?**` | Soll die neue oder die alte [Datenbanklogik](../anwendungsfaelle/dokumentation-von-datenbanken.md) verwendet werden? |
 | **`Layer-3-Netze beim Import berücksichtigen`** | Sollen inventarisierte IP-Netze als Objekttyp `**Layer-3-Netze**` importiert werden? |
 | `**IP Adressentypen beibehalten**` | Sollen **`IPv4 Adressen`**, **`IPv6 Adressen`**, `**Loopback Adressen**`, `**Virtuelle Adressen**` importiert werden? |
 | `**Importtyp für DHCP IP Adressen**` | Sollen per DHCP zugewiesen Adressen überschrieben werden? |
@@ -111,26 +99,22 @@ Für jeden Typ in JDisc kann ein äquivalenter Objekttyp in i-doit ausgewählt w
 | **`Objekttyp der zugewiesenen Module innerhalb eines Blade/Chassis Gerätes`** | Ist ein Blade oder Switch Chassis inventarisiert worden, können die eingesteckten Module einem bestimmten Objekttyp beim Import zugeordnet werden. |
 | **`Objekttyp der zugewiesenen Module aktualisieren`** | Sollen die Objekttypen der zugewiesenen Module eines Blade/Chassis Gerätes aktualisiert werden? |
 | `**Custom attributes importieren**` | Wenn in JDisc Discovery benutzerdefinierte Attribute (`**Custom Attributes**`) gepflegt werden, können diese in i-doit importiert werden. Diese werden nach dem Import in der Kategorie `**JDisc Custom Attributes**` angezeigt. |
-| **`Standard Templates aus Objekttypen berücksichtigen (nur bei Neuanlage)`** | Wird ein neues Objekt erstellt, kann automatisch ein [Template](/display/de/Templates) berücksichtigt werden. Die Auswahl des Templates findet in der Objekttyp-Konfiguration statt. |
+| **`Standard Templates aus Objekttypen berücksichtigen (nur bei Neuanlage)`** | Wird ein neues Objekt erstellt, kann automatisch ein [Template](../effizientes-dokumentieren/templates.md) berücksichtigt werden. Die Auswahl des Templates findet in der Objekttyp-Konfiguration statt. |
 | **`CMDB-Status der Objekte ändern auf`** | Bereits vorhandene Objekte können beim Aktualisieren einen bestimmten `**[CMDB-Status](/display/de/Lebens-+und+Dokumentationszyklus)**` erhalten. Soll der `**CMDB-Status**` nicht geändert werden, ist in der Auswahl `**CMDB-Status beibehalten**` zu wählen. |
 | **`Software Filter`** | Entweder kann eine White- oder eine Blacklist an Software-Applikationen angegeben werden, welche importiert werden sollen (Whitelist) oder eben nicht (Blacklist). Es können Wildcards (\*) angegeben werden. Die Liste von Titeln wird durch Kommas separiert. |
 | `**Filter als regexp gebrauchen**` | Den Software Filter mit Strings oder mit Regulären Ausdrücken verwenden? Da das regex direkt an die JDisc Datenbank weitergeleitet wird, sollten die passenden regex paramter verwendet werden.  <br>Diese sind z.B. unter [h](https://www.postgresql.org/docs/9.3/functions-matching.html)[ttps://www.postgresql.org/docs/9.3/functions-matching.html](https://www.postgresql.org/docs/9.3/functions-matching.html) zu finden.<br><br>Hinweis eines Anwenders:<br><br>`\s kann nicht verwendet werden. Hier wird mit Leerzeichen gearbeitet.`  <br>`\d kann nicht verwendet werden. Hier muss mit [a-zA-Z] gearbeitet werden.` |
 | `**Benutze OS-Familie (falls verfügbar) anstatt OS-Version als Objekttitel**` | Für den Softwareimport anstatt der Softwareversion die Softwarefamilie als Objekttitel verwenden. Z.B. anstatt "Windows Server 2008 Standard" nur "Windows" mit "Server 2008 Standard" als Variante. |
-| **`Objekt-Matching Profil`** | [Welche Strategie soll erfolgen](/display/de/Objekte+identifizieren+bei+Importen), um bereits in i-doit dokumentierte Objekte durch einen Import zu aktualisieren? |
+| **`Objekt-Matching Profil`** | [Welche Strategie soll erfolgen](objekt-identifizieren-bei-importen.md), um bereits in i-doit dokumentierte Objekte durch einen Import zu aktualisieren? |
 | **`Objekttyp aktualisieren`** | Ist das Device bereits als Objekt in i-doit vorhanden, kann hierüber bestimmt werden, ob der Objekttyp anhand der Zuweisung (siehe oben) aktualisiert werden soll oder nicht. |
 | `**Objekt-Titel aktualisieren**` | Soll der Objekttitel durch den Import aktualisiert werden? |
 
-Kategorien die für JDisc erstellt wurden sind:  
+Kategorien die für JDisc erstellt wurden sind:
 Support Entitlements, Custom Identifier, JDisc Custom Attributes, JDisc Discovery und Netzwerk > Verbindungs Endpunkte
-
-Import von Daten über die Web GUI
----------------------------------
+## Import von Daten über die Web GUI
 
 Der Import von Inhalten aus JDisc erfolgt über **`Extras → CMDB → Import → JDisc`**.
 
-![](/download/attachments/7831601/import.jpg?version=1&modificationDate=1441871649742&api=v2)
-
-  
+![JDisc Import GUI](../../assets/images/de/daten-konsolidieren/jdisc/3-jdisc.jpg)
 
 Vor dem Ausführen des Imports müssen die Import-Parameter festlegt sein.
 
@@ -145,7 +129,6 @@ Da es möglich ist, dass mehr als ein JDisc-Server eingesetzt wird, muss im erst
 | **Überschreiben** | Der Import-Modus **"Überschreiben"** verhält sich genauso wie der Modus "Aktualisieren" mit dem Unterschied, das Listen-Kategorien erst geleert und dann neu angelegt werden. |
 | **Überschreiben (Neu inventarisiert)** | Mit dem Zusatz **"(Neu inventarisiert)"** werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet. |
 
-  
 In der Protokollierung kann der Umfang der geschriebenen Logs beeinflusst werden. Ein umfangreicheres Logging erhöht die Dauer des Imports.
 
 Wenn die Einstellungen vollständig vorgenommen wurden, kann der Import über **`Importvorgang starten`** angestoßen werden. Bitte beachte, dass die Dauer des Imports sowohl von der Größe der JDisc-Datenbank, als auch von der verwendeten Hardware abhängig ist.
@@ -154,51 +137,38 @@ Wenn der Import abgeschlossen wurde, wird eine Zusammenfassung im Bereich **`Erg
 
 Beim Import erzeugte Logs findest du im i-doit-Verzeichnis `log/`.
 
-Import über die i-doit Console
-------------------------------
+## Import über die i-doit Console
 
-Der Import der Daten aus JDisc nach i-doit ist nicht nur manuell über die Oberfläche möglich. Er kann ebenfalls über die i-doit [Console](/display/de/Console) ausgeführt und somit automatisiert werden. Wie der entsprechende Aufruf erzeugt wird, finden Sie im [zugehörigen Artikel](/display/de/Optionen+und+Parameter+der+Console) mit einem Beispiel für die Option **`import-jdisc`**.
+Der Import der Daten aus JDisc nach i-doit ist nicht nur manuell über die Oberfläche möglich. Er kann ebenfalls über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) ausgeführt und somit automatisiert werden. Wie der entsprechende Aufruf erzeugt wird, finden Sie im [zugehörigen Artikel](../automatisierung-und-integration/cli/console/index.md#commands) mit einem Beispiel für die Option **`import-jdisc`**.
 
 Für den Import lässt sich die ID des gewünschten Profils angeben. Die ID ist in der Liste der Profile zu finden:
 
-![](/download/attachments/7831601/image2016-10-17%2010%3A48%3A49.png?version=1&modificationDate=1476694124339&api=v2&effects=drop-shadow)
+![JDisc Profile](../../assets/images/de/daten-konsolidieren/jdisc/4-jdisc.jpg)
 
 Ebenfalls kann die ID des zu verwendenden JDisc Servers angegeben werden. Diese ist in der Konfiguration zu finden:
 
-![](/download/attachments/7831601/image2016-10-17%2011%3A29%3A28.png?version=1&modificationDate=1476696568579&api=v2&effects=drop-shadow)
+![JDisc Konfiguration](../../assets/images/de/daten-konsolidieren/jdisc/5-jdisc.jpg)
 
 Eine jdisc.ini könnte so aussehen
 
-[?](#)
-
-`[commandArguments]`
-
-`[commandOptions]`
-
-`user=admin`
-
-`password=admin`
-
-`tenantId=6`
-
-`profile=1`
-
-`group=`
-
-`mode=1`
-
-`server=2`
-
-`overwriteHost`
-
-`detailedLogging=3`
-
-`regenerateSearchIndex`
-
-`[additional]`
+```ini
+[commandArguments]
+[commandOptions]
+user=admin
+password=admin
+tenantId=6
+profile=1
+group=
+mode=1
+server=2
+overwriteHost
+detailedLogging=3
+regenerateSearchIndex
+[additional]
+```
 
 Wenn wir davon ausgehen, dass diese im i-doit root Verzeichnis liegt, dann wird der Import mit der ldap.ini so aufgerufen:
 
-[?](#)
-
-`sudo` `-u www-data php console.php` `import``-jdisc -c jdisc.ini`
+```shell
+sudo -u www-data php console.php import -jdisc -c jdisc.ini
+```
