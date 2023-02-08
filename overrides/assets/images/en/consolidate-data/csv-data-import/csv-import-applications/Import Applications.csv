@@ -1,0 +1,5 @@
+Object type;Object title;Application - Specification;Application - Manufacturer;Application - Installation;Application - Registration key;Application - Install path;Variants - Title;Variants - Variant;Version - Version number;Version - Servicepack;Version - Kernel;Version - Patchlevel
+C__OBJTYPE__APPLICATION;Application;Specification;"Manufacturer Alpha";Automatic;"No RegKey";"C:\Program Files\Application";Application PRO;Pro;1.0;Service Pack 1;;1
+C__OBJTYPE__APPLICATION;Applicationx;Specification;"Manufacturer Beta";Automatic;"No RegKey";"C:\Program Files\Applicationx";Application PRO,Applicationx ENTERPRISE;Pro,Enterprise;2,3;Service Pack 1,Service Pack 2;;1,2
+C__OBJTYPE__APPLICATION;Applicationy;Specification;"Manufacturer Gamma";Automatic;"No RegKey";"C:\Program Files\Application";Application PRO,Applicationy ENTERPRISE,Applicationy BUSINESS;Pro,Enterprise,Business;1.5,2.0,2.5;Service Pack 1,Service Pack 2,Service Pack 3;;5,6,7
+C__OBJTYPE__APPLICATION;Applicationz;Specification;"Manufacturer Delta";Automatic;"No RegKey";"/etc/Applicationz/";Applicationz PRO,Applicationz ENTERPRISE,Applicationz BUSINESS;Pro,Enterprise,Business;10,11,12;;4.19.37;2,3,4

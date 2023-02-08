@@ -1,0 +1,62 @@
+Object title;Location;Object type
+HEADQUARTER;Root location;C__OBJTYPE__BUILDING
+Basement;HEADQUARTER;C__OBJECT_TYPE__FLOOR
+First Floor;HEADQUARTER;C__OBJECT_TYPE__FLOOR
+Second Floor;HEADQUARTER;C__OBJECT_TYPE__FLOOR
+Third Floor;HEADQUARTER;C__OBJECT_TYPE__FLOOR
+Room 0.001;Basement;C__OBJTYPE__ROOM
+Room 0.002;Basement;C__OBJTYPE__ROOM
+Room 0.003;Basement;C__OBJTYPE__ROOM
+Room 0.004;Basement;C__OBJTYPE__ROOM
+Room 0.005;Basement;C__OBJTYPE__ROOM
+Room 0.006;Basement;C__OBJTYPE__ROOM
+Room 0.007;Basement;C__OBJTYPE__ROOM
+Room 0.008;Basement;C__OBJTYPE__ROOM
+Room 0.009;Basement;C__OBJTYPE__ROOM
+Room 0.010;Basement;C__OBJTYPE__ROOM
+Room 0.011;Basement;C__OBJTYPE__ROOM
+Room 0.012;Basement;C__OBJTYPE__ROOM
+Room 0.013;Basement;C__OBJTYPE__ROOM
+Room 0.014;Basement;C__OBJTYPE__ROOM
+Room 1.001;First Floor;C__OBJTYPE__ROOM
+Room 1.002;First Floor;C__OBJTYPE__ROOM
+Room 1.003;First Floor;C__OBJTYPE__ROOM
+Room 1.004;First Floor;C__OBJTYPE__ROOM
+Room 1.005;First Floor;C__OBJTYPE__ROOM
+Room 1.006;First Floor;C__OBJTYPE__ROOM
+Room 1.007;First Floor;C__OBJTYPE__ROOM
+Room 1.008;First Floor;C__OBJTYPE__ROOM
+Room 1.009;First Floor;C__OBJTYPE__ROOM
+Room 1.010;First Floor;C__OBJTYPE__ROOM
+Room 1.011;First Floor;C__OBJTYPE__ROOM
+Room 1.012;First Floor;C__OBJTYPE__ROOM
+Room 1.013;First Floor;C__OBJTYPE__ROOM
+Room 1.014;First Floor;C__OBJTYPE__ROOM
+Room 2.001;Second Floor;C__OBJTYPE__ROOM
+Room 2.002;Second Floor;C__OBJTYPE__ROOM
+Room 2.003;Second Floor;C__OBJTYPE__ROOM
+Room 2.004;Second Floor;C__OBJTYPE__ROOM
+Room 2.005;Second Floor;C__OBJTYPE__ROOM
+Room 2.006;Second Floor;C__OBJTYPE__ROOM
+Room 2.007;Second Floor;C__OBJTYPE__ROOM
+Room 2.008;Second Floor;C__OBJTYPE__ROOM
+Room 2.009;Second Floor;C__OBJTYPE__ROOM
+Room 2.010;Second Floor;C__OBJTYPE__ROOM
+Room 2.011;Second Floor;C__OBJTYPE__ROOM
+Room 2.012;Second Floor;C__OBJTYPE__ROOM
+Room 2.013;Second Floor;C__OBJTYPE__ROOM
+Room 2.014;Second Floor;C__OBJTYPE__ROOM
+Room 3.001;Third Floor;C__OBJTYPE__ROOM
+Room 3.002;Third Floor;C__OBJTYPE__ROOM
+Room 3.003;Third Floor;C__OBJTYPE__ROOM
+Room 3.004;Third Floor;C__OBJTYPE__ROOM
+Room 3.005;Third Floor;C__OBJTYPE__ROOM
+Room 3.006;Third Floor;C__OBJTYPE__ROOM
+Room 3.007;Third Floor;C__OBJTYPE__ROOM
+Room 3.008;Third Floor;C__OBJTYPE__ROOM
+Room 3.009;Third Floor;C__OBJTYPE__ROOM
+Room 3.010;Third Floor;C__OBJTYPE__ROOM
+Room 3.011;Third Floor;C__OBJTYPE__ROOM
+Room 3.012;Third Floor;C__OBJTYPE__ROOM
+Room 3.013;Third Floor;C__OBJTYPE__ROOM
+Room 3.014;Third Floor;C__OBJTYPE__ROOM
