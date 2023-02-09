@@ -65,6 +65,7 @@ markdown_extensions:
   - meta
   - toc:
       permalink: "#"
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -76,8 +77,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.details
-
 extra:
   manifest: overrides/manifest.webmanifest
   social:
