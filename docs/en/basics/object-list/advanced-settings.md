@@ -11,7 +11,7 @@ Many parameters concerning the [object lists](/display/en/Object+List) can be a
 Adapting the Number of Objects per Page
 ---------------------------------------
 
-You have the possibility to define the number of displayed [objects](/display/en/Structure+of+the+IT+Documentation) per page for the system. This is a custom setting so that all users are able to determine the objects per page for their own view individially. You can enter and set the number with **`Administration → User settings → System settings`**. A very high value may reduce performance.
+You have the possibility to define the number of displayed [objects](../../basics/structure-of-the-it-documentation.md) per page for the system. This is a custom setting so that all users are able to determine the objects per page for their own view individially. You can enter and set the number with **`Administration → User settings → System settings`**. A very high value may reduce performance.
 
 Maximum Length of Object Titles
 -------------------------------
@@ -26,7 +26,7 @@ You can add the [`**Quickpurge**`](/display/en/Life+and+Documentation+Cycle) but
 Activation/ Deactivation of the Drag and Drop Function
 ------------------------------------------------------
 
-An object can be assigned to another [object type](/display/en/Structure+of+the+IT+Documentation) by using the drag and drop function. With **`` `**Administration **`→ CMDB settings → General configuration → **Drag 'n' Drop of objects**``**  you can either activate the function by choosing **`Yes`** or deactivate it by choosing **`No`**.
+An object can be assigned to another [object type](../../basics/structure-of-the-it-documentation.md) by using the drag and drop function. With **`` `**Administration **`→ CMDB settings → General configuration → **Drag 'n' Drop of objects**``**  you can either activate the function by choosing **`Yes`** or deactivate it by choosing **`No`**.
 
 Display of Templates in Object Lists
 ------------------------------------

@@ -2,7 +2,7 @@ The object lists in i-doit do not only serve the purpose of listing [objects](/d
 
 ![](/download/attachments/37355668/object-list.png?version=1&modificationDate=1631705460735&api=v2&effects=drop-shadow)
 
-For each [object type](/display/en/Structure+of+the+IT+Documentation) the object list shows all assigned objects in a table. Each line focuses on an object with its corresponding [attributes](/display/en/Structure+of+the+IT+Documentation). You can [specify](/display/en/Configuration+of+the+List+View) which attributes you want to display.
+For each [object type](../../basics/structure-of-the-it-documentation.md) the object list shows all assigned objects in a table. Each line focuses on an object with its corresponding [attributes](../../basics/structure-of-the-it-documentation.md). You can [specify](/display/en/Configuration+of+the+List+View) which attributes you want to display.
 
 With a click on the column headers you can sort the columns in ascending or descending order. You can also set a [preliminary sorting](/display/en/Configuration+of+the+List+View) or vary the width of the columns per user.
 

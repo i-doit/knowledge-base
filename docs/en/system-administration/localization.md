@@ -24,7 +24,7 @@ Supported Languages
 | English | yes | yes |
 | German | no  | yes |
 
-The localization refers to the [web GUI of i-doit](/display/en/Structure+of+the+IT+Documentation). [Login](/display/en/Initial+Login), [Admin Center](/display/en/Admin+Center), [Setup](/display/en/Setup), [Update assistant](/display/en/Update) as well as the [command line tool Controller](/display/en/CLI) are in English.
+The localization refers to the [web GUI of i-doit](../../basics/structure-of-the-it-documentation.md). [Login](/display/en/Initial+Login), [Admin Center](/display/en/Admin+Center), [Setup](/display/en/Setup), [Update assistant](/display/en/Update) as well as the [command line tool Controller](/display/en/CLI) are in English.
 
   
 
@@ -113,24 +113,24 @@ Generally, any text of the web GUI can be translated. If you want to find out wh
 
 ### Multilingual Object Type Groups
 
-The language constants are located in the row named `isys_obj_type_group__title` of the table called `isys_obj_type_group` in the tenant database. If a new [object-type group](/display/en/Structure+of+the+IT+Documentation) is created, the value can be converted to a language constant in the database. An existing object-type group should not be renamed in the database. Instead the respective language constant should be translated anew in the `custom` files.
+The language constants are located in the row named `isys_obj_type_group__title` of the table called `isys_obj_type_group` in the tenant database. If a new [object-type group](../../basics/structure-of-the-it-documentation.md) is created, the value can be converted to a language constant in the database. An existing object-type group should not be renamed in the database. Instead the respective language constant should be translated anew in the `custom` files.
 
 ### Multilingual Object Types
 
-An [object type](/display/en/Structure+of+the+IT+Documentation) can be set as localized at **`Administration → CMDB settings → Object type configuration → [Object type group] → Language constant / Title`**. This applies both to standard object types as well as [custom object types](/display/en/Custom+Object+Types).
+An [object type](../../basics/structure-of-the-it-documentation.md) can be set as localized at **`Administration → CMDB settings → Object type configuration → [Object type group] → Language constant / Title`**. This applies both to standard object types as well as [custom object types](/display/en/Custom+Object+Types).
 
 ### Multilingual Object Titles
 
-Localized [object titles](/display/en/Structure+of+the+IT+Documentation) are not possible. This would hinder [unambiguous referencing](/display/en/Unique+References).
+Localized [object titles](../../basics/structure-of-the-it-documentation.md) are not possible. This would hinder [unambiguous referencing](/display/en/Unique+References).
 
 ### Multilingual Categories
 
-If the concerned category is a standard [category,](/display/en/Structure+of+the+IT+Documentation) you can overwrite the language constant in the `custom` files.
+If the concerned category is a standard [category,](../../basics/structure-of-the-it-documentation.md) you can overwrite the language constant in the `custom` files.
 
 In case of [custom categories](/display/en/Custom+Categories), the category title is tied to a language constant which is translated in the `custom` files.
 
 ### Multilingual Attributes
 
-The default [attributes](/display/en/Structure+of+the+IT+Documentation) are translated via the language files. The language constants are located in the source code and should therefore not be adjusted.
+The default [attributes](../../basics/structure-of-the-it-documentation.md) are translated via the language files. The language constants are located in the source code and should therefore not be adjusted.
 
 Attributes in [custom categories](/display/en/Custom+Categories) can be translated with a language constant.

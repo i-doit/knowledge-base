@@ -8,7 +8,7 @@
 *   6[Parallel Relations](#ObjectRelations-ParallelRelations)
 *   7[Object Relation in a Custom Category](#ObjectRelations-ObjectRelationinaCustomCategory)
 
-[Objects](/display/en/Structure+of+the+IT+Documentation) generally do not exist separately in i-doit but are in relation to each other. The servers are contained in racks, admins maintain servers, an operating system with software is running on a server ... In this article we will elaborate on the basic concepts of object relations.
+[Objects](../../basics/structure-of-the-it-documentation.md) generally do not exist separately in i-doit but are in relation to each other. The servers are contained in racks, admins maintain servers, an operating system with software is running on a server ... In this article we will elaborate on the basic concepts of object relations.
 
 Relation Types
 --------------
@@ -78,7 +78,7 @@ Already documented object relations are listed in **`Extras → CMDB → Relati
 Relation Objects
 ----------------
 
-When creating a relation between two objects, a third object of the [type](/display/en/Structure+of+the+IT+Documentation) **`Relations`** is created in the background. The object title of this object consists of the object title of the master object, followed by the description and the object title of the slave object.
+When creating a relation between two objects, a third object of the [type](../../basics/structure-of-the-it-documentation.md) **`Relations`** is created in the background. The object title of this object consists of the object title of the master object, followed by the description and the object title of the slave object.
 
 Example:
 
@@ -88,7 +88,7 @@ Example:
 | --- | --- | --- |
 | `PDU-HQ-Intern-01-A` | **`supplies power  <br>`** | `ESX1` |
 
-The relation object is required to save characteristics of the relation as [attributes](/display/en/Structure+of+the+IT+Documentation). This includes:
+The relation object is required to save characteristics of the relation as [attributes](../../basics/structure-of-the-it-documentation.md). This includes:
 
 *   `**Relation type**`: see above
 *   `**Weighting**`: see below
@@ -107,7 +107,7 @@ Relation objects do not require a [license](/display/en/Activate+License).
 Relations Category
 ------------------
 
-Relations to other objects are gathered in the **`Relations`** [category](/display/en/Structure+of+the+IT+Documentation) per object. This category is assigned to each object type in a fixed way and can be opened via the arrows icon.
+Relations to other objects are gathered in the **`Relations`** [category](../../basics/structure-of-the-it-documentation.md) per object. This category is assigned to each object type in a fixed way and can be opened via the arrows icon.
 
 ![](/download/attachments/45187086/rel5.png?version=1&modificationDate=1467026594194&api=v2&effects=drop-shadow)
 
@@ -142,7 +142,7 @@ Parallel Relations
 
 Besides the direction-based relations with master and slave objects there exist also parallel relations in i-doit. The parallel relations also set two objects in relation to each other, however, without expressing a dependency on each other.
 
-Example: When a web cluster with multiple nodes is documented in i-doit, the nodes act independently of each other. Only the functioning of the cluster depends on all nodes. The **`Cluster members`** category (or the [mirrored category](/display/en/Structure+of+the+IT+Documentation) **`Cluster memberships`**) creates parallel object relations between the cluster members in the background.
+Example: When a web cluster with multiple nodes is documented in i-doit, the nodes act independently of each other. Only the functioning of the cluster depends on all nodes. The **`Cluster members`** category (or the [mirrored category](../../basics/structure-of-the-it-documentation.md) **`Cluster memberships`**) creates parallel object relations between the cluster members in the background.
 
 A listing of all parallel relations can be found at **`Extras → CMDB → Relations → Parallel relations`**. They cannot be created by the user but are created implicitly and automatically in the background.
 

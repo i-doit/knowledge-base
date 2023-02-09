@@ -1,7 +1,7 @@
 The [know-how](/display/en/Introduction) is there and i-doit is [installed](/display/en/Installation)? Excellent! It's time for the “basics” of how i-doit functions. This way please:
 
 *   [Initial Login](/display/en/Initial+Login)
-*   [Structure of the IT Documentation](/display/en/Structure+of+the+IT+Documentation)
+*   [Structure of the IT Documentation](../../basics/structure-of-the-it-documentation.md)
 *   [Dashboard and Widgets](/display/en/Dashboard+and+Widgets)
 *   [Assignment of Categories to Object Types](/display/en/Assignment+of+Categories+to+Object+Types)
 *   [Attribute Fields](/display/en/Attribute+Fields)

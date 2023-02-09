@@ -117,7 +117,7 @@ The [CLI tool i-doit controller](/display/en/CLI) allows you to search via the c
 Search via the API
 ------------------
 
-It is also possible to search the [IT documentation](/display/en/Structure+of+the+IT+Documentation) via the [programmable interface (API)](/pages/viewpage.action?pageId=37355644) of _i-doit_. The required method is `idoit.search`:
+It is also possible to search the [IT documentation](../../basics/structure-of-the-it-documentation.md) via the [programmable interface (API)](/pages/viewpage.action?pageId=37355644) of _i-doit_. The required method is `idoit.search`:
 
 [?](#)
 

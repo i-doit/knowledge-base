@@ -2,7 +2,7 @@ Many tasks in i-doit can be automated with help of the CLI tool [controller](/di
 
 Cronjobs setup - yes or no?
 
-The setup of cronjobs is optional. However, we definitely recommend using this option, at best directly after the [installation](/display/en/Installation).
+The setup of cronjobs is optional. However, we definitely recommend using this option, at best directly after the [IT documentation](../glossary.md).
 
 **Contents**
 

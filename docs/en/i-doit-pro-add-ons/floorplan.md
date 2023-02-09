@@ -10,7 +10,7 @@
 
   
 
-Via the **`Floorplan`** [add-on](/display/en/i-doit+pro+Add-ons) it is possible for you to assign graphical plans to all [objects](/display/en/Structure+of+the+IT+Documentation) which are location objects, to match them with measurements and to position the locally assigned objects in this plan.
+Via the **`Floorplan`** [add-on](/display/en/i-doit+pro+Add-ons) it is possible for you to assign graphical plans to all [objects](../../basics/structure-of-the-it-documentation.md) which are location objects, to match them with measurements and to position the locally assigned objects in this plan.
 
 ![](/download/attachments/46759975/image2016-3-23%2012%3A58%3A2.png?version=1&modificationDate=1489766160382&api=v2&effects=drop-shadow)
 
@@ -31,7 +31,7 @@ Under `**Administration → Authorization system → Rights → Floorplan**`, ri
 Create a Floorplan
 ------------------
 
-The objects for which you wish to create a floorplan can be selected via the magnifier ![](/download/attachments/46759975/image2016-3-23%2012%3A8%3A22.png?version=1&modificationDate=1467723675007&api=v2) at the top of the screen. All [object types](/display/en/Structure+of+the+IT+Documentation) that can serve as locations are available for this. If floorplans have been created already, these can be selected and opened via the multicolored table![](/download/attachments/46759975/image2016-3-23%2012%3A10%3A35.png?version=1&modificationDate=1467723674507&api=v2)next to the magnifier. Graphics as for example the layout of a room can be put in the background via the ![](/download/attachments/46759975/floor1.png?version=2&modificationDate=1467880415974&api=v2) button. A scale can be added to this graphic using the ![](/download/attachments/46759975/floor2.png?version=1&modificationDate=1467880549697&api=v2) button. The measuring of the room helps for the positioning of objects later on so that these can be represented true to their scale and their defined formfactor.
+The objects for which you wish to create a floorplan can be selected via the magnifier ![](/download/attachments/46759975/image2016-3-23%2012%3A8%3A22.png?version=1&modificationDate=1467723675007&api=v2) at the top of the screen. All [object types](../../basics/structure-of-the-it-documentation.md) that can serve as locations are available for this. If floorplans have been created already, these can be selected and opened via the multicolored table![](/download/attachments/46759975/image2016-3-23%2012%3A10%3A35.png?version=1&modificationDate=1467723674507&api=v2)next to the magnifier. Graphics as for example the layout of a room can be put in the background via the ![](/download/attachments/46759975/floor1.png?version=2&modificationDate=1467880415974&api=v2) button. A scale can be added to this graphic using the ![](/download/attachments/46759975/floor2.png?version=1&modificationDate=1467880549697&api=v2) button. The measuring of the room helps for the positioning of objects later on so that these can be represented true to their scale and their defined formfactor.
 
 The following graphic formats are supported for the floorplan: `bmp, png, jpg, jpeg, gif`. The maximum file size is limited to 5mb.
 
@@ -64,7 +64,7 @@ In the left area you will find the option to further adjust and form objects. As
 
 ![](/download/attachments/46759975/image2016-3-23%2012%3A39%3A17.png?version=1&modificationDate=1467881662401&api=v2) Unposition object: The object disappears from the floorplan but can be added again using the object list.
 
-![](/download/attachments/46759975/floor7.png?version=1&modificationDate=1467883411610&api=v2) The objects data from the **`Formfactor`** [category](/display/en/Structure+of+the+IT+Documentation) are applied via this button. The object will be scaled and displayed accordingly to the set scale of the floorplan.
+![](/download/attachments/46759975/floor7.png?version=1&modificationDate=1467883411610&api=v2) The objects data from the **`Formfactor`** [category](../../basics/structure-of-the-it-documentation.md) are applied via this button. The object will be scaled and displayed accordingly to the set scale of the floorplan.
 
 ![](/download/attachments/46759975/floor8.png?version=1&modificationDate=1467882751061&api=v2)Certain object types can be shown or hidden within the floorplan using this selection list in the lower area.
 

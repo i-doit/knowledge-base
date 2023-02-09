@@ -5,7 +5,7 @@
 *   3[Creation of Profiles](#ObjectIdentificationDuringImports-CreationofProfiles)
 *   4[Possible Identifiers](#ObjectIdentificationDuringImports-PossibleIdentifiers)
 
-i-doit provides various data imports. Existing data in the [IT documentation](/display/en/Glossary) can be updated with imports instead of generating (often) unnecessary redundancy. In order to achieve this, i-doit tries to identify existing [objects](/display/en/Structure+of+the+IT+Documentation) by means of various [attributes](/display/en/Structure+of+the+IT+Documentation).
+i-doit provides various data imports. Existing data in the [IT documentation](/display/en/Glossary) can be updated with imports instead of generating (often) unnecessary redundancy. In order to achieve this, i-doit tries to identify existing [objects](../../basics/structure-of-the-it-documentation.md) by means of various [attributes](../../basics/structure-of-the-it-documentation.md).
 
 Data Imports Concerned
 ----------------------

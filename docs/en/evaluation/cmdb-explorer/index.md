@@ -11,7 +11,7 @@ The CMDB explorer graphically represents the [relations between objects](/displa
 Access the CMDB Explorer
 ------------------------
 
-The CMDB explorer can be accessed both via the menu bar at the top and within an [object](/display/en/Structure+of+the+IT+Documentation) via the associated icon above the [category](/display/en/Glossary) list.
+The CMDB explorer can be accessed both via the menu bar at the top and within an [object](../../basics/structure-of-the-it-documentation.md) via the associated icon above the [category](/display/en/Glossary) list.
 
 ![](/download/attachments/41844775/cmdb1.png?version=1&modificationDate=1465469467722&api=v2&effects=drop-shadow)
 
@@ -46,7 +46,7 @@ The direction for the expansion of individual tiles depends on the orientation o
 Information Area
 ----------------
 
-The information area is located at the left border of the CMDB explorer and displays additional information about the chosen object. The kind of information shown can be determined via the applied [profile](/display/en/Profiles+in+the+CMDB+Explorer) of the CMDB explorer. Once an object has been selected, the `**Show / Hide object type**` button can be used to gray out all [objects of this type](/display/en/Structure+of+the+IT+Documentation). If you wish to select a different object as root object, then the `**Set as root**` button can be used. This way, the centralization can be put to the currently activated object and the relations are built around this object. Via **`Open object`** the object is opened in i-doit so that you can see and edit its attributes. Object colors for each [object type](/display/en/Glossary) are displayed in the legend. It is also possible to gray out all objects of a type globally in the CMDB explorer.
+The information area is located at the left border of the CMDB explorer and displays additional information about the chosen object. The kind of information shown can be determined via the applied [profile](/display/en/Profiles+in+the+CMDB+Explorer) of the CMDB explorer. Once an object has been selected, the `**Show / Hide object type**` button can be used to gray out all [objects of this type](../../basics/structure-of-the-it-documentation.md). If you wish to select a different object as root object, then the `**Set as root**` button can be used. This way, the centralization can be put to the currently activated object and the relations are built around this object. Via **`Open object`** the object is opened in i-doit so that you can see and edit its attributes. Object colors for each [object type](/display/en/Glossary) are displayed in the legend. It is also possible to gray out all objects of a type globally in the CMDB explorer.
 
 ![](/download/attachments/41844775/cmdb3.png?version=1&modificationDate=1465469467178&api=v2&effects=drop-shadow)
 

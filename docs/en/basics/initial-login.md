@@ -34,7 +34,7 @@ Preferably select the `**admin**` user from the above mentioned default users as
 Add Further Users and Groups
 ----------------------------
 
-Each user in i-doit is an [object](/display/en/Structure+of+the+IT+Documentation) of the type `**Persons**`. After the initial login, we _strongly recommend_ to set up a [LDAP connection](/pages/viewpage.action?pageId=37355601) or other local users _and_ to change the credentials of the above mentioned users. For this purpose, you can select the particular user in the [object group](/display/en/Structure+of+the+IT+Documentation) C`**ontacts**` under the [object type](/display/en/Structure+of+the+IT+Documentation) `**Persons**` and change the credentials in the category `**Persons → Login**`. Alternatively, you can [archive](/display/en/Life+and+Documentation+Cycle) the `**Persons**` objects. In doing this, the login of these users is denied.
+Each user in i-doit is an [object](../../basics/structure-of-the-it-documentation.md) of the type `**Persons**`. After the initial login, we _strongly recommend_ to set up a [LDAP connection](/pages/viewpage.action?pageId=37355601) or other local users _and_ to change the credentials of the above mentioned users. For this purpose, you can select the particular user in the [object group](../../basics/structure-of-the-it-documentation.md) C`**ontacts**` under the [object type](../../basics/structure-of-the-it-documentation.md) `**Persons**` and change the credentials in the category `**Persons → Login**`. Alternatively, you can [archive](/display/en/Life+and+Documentation+Cycle) the `**Persons**` objects. In doing this, the login of these users is denied.
 
 ![](/download/attachments/37355574/Initiallogin1.png?version=1&modificationDate=1464006288193&api=v2)
 

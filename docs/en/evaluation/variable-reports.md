@@ -10,11 +10,11 @@ Variable reports are very useful to customize your own i-doit installation for y
 Custom Categories
 -----------------
 
-A lot of users already use the [custom categories](/display/en/Custom+Categories). One thing which characterizes the custom categories is the possibility to link [objects](/display/en/Structure+of+the+IT+Documentation).
+A lot of users already use the [custom categories](/display/en/Custom+Categories). One thing which characterizes the custom categories is the possibility to link [objects](../../basics/structure-of-the-it-documentation.md).
 
 To give an example: Say that your company uses printers which are assigned to certain offices. The rooms `**1.01**` to `**1.07**` use `**Printer A**`, rooms `**1.0**``**8**` to `**1.11**` use `**Printer B**`.
 
-This can be documented with the custom category `**Department**`. This category is assigned to the [object type](/display/en/Structure+of+the+IT+Documentation) `**Printer**` and defined as [single-value category](/display/en/Structure+of+the+IT+Documentation), not as [list category ("Multi-Value")](/display/en/Structure+of+the+IT+Documentation). The `**Department**` [attribute](/display/en/Structure+of+the+IT+Documentation)  is added as `**Object-Relation (multiple selection)**` with the addition `**Share Access**`.  
+This can be documented with the custom category `**Department**`. This category is assigned to the [object type](../../basics/structure-of-the-it-documentation.md) `**Printer**` and defined as [single-value category](../../basics/structure-of-the-it-documentation.md), not as [list category ("Multi-Value")](../../basics/structure-of-the-it-documentation.md). The `**Department**` [attribute](../../basics/structure-of-the-it-documentation.md)  is added as `**Object-Relation (multiple selection)**` with the addition `**Share Access**`.  
 
 ![](/download/attachments/66356130/en_custom_category_department.png?version=1&modificationDate=1522315288886&api=v2&effects=drop-shadow)
 

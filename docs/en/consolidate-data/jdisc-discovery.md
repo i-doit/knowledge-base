@@ -93,7 +93,7 @@ For each type in JDisc you can select an equivalent object type in i-doit. If no
 
 | Option | Description |
 | --- | --- |
-| **`Select categories`** | Which [categories](/display/en/Structure+of+the+IT+Documentation) do you want to fill during import? Only supported categories are listed. |
+| **`Select categories`** | Which [categories](../../basics/structure-of-the-it-documentation.md) do you want to fill during import? Only supported categories are listed. |
 | **`Import network interfaces as`** | You can map inventoried network interfaces in different categories. |
 | **`Include software`** | Do you want to import inventoried software as object type **`Applications`**? |
 | `**Include software licences**` | Do you want to import inventoried licences as object type **Licences**? |

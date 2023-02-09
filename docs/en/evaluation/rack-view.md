@@ -12,7 +12,7 @@ i-doit provides a visualization for 19" racks with which you can display all bui
 Rack Category
 -------------
 
-The `**Rack**` [category](/display/en/Structure+of+the+IT+Documentation) is already assigned to the [object type](/display/en/Structure+of+the+IT+Documentation) `**Rack**` in the default [installation](/display/en/Installation) of i-doit. The category shows the modeled front and back of the rack.
+The `**Rack**` [category](../../basics/structure-of-the-it-documentation.md) is already assigned to the [object type](../../basics/structure-of-the-it-documentation.md) `**Rack**` in the default [IT documentation](../glossary.md) of i-doit. The category shows the modeled front and back of the rack.
 
 ![](/download/attachments/66355674/image2017-10-12%209%3A13%3A34.png?version=1&modificationDate=1507815665515&api=v2&effects=drop-shadow)
 
@@ -38,7 +38,7 @@ In this box you can also define how many **`vertical slots`** are available on t
 Positioning of Objects in the Rack
 ----------------------------------
 
-Two conditions apply to fill racks with [objects](/display/en/Structure+of+the+IT+Documentation): On the one hand, you have to define for each object in the **`Form factor`** category how many **`rack units`** it requires and that it has the **`Form factor 19"`**. On the other hand, you have to tick the box in the [object type configuration](/display/en/Assignment+of+Categories+to+Object+Types) confirming that objects of this type can be positioned in the rack. If the entry in the **`Form factor`** category is missing, i-doit assumes that a 19" component with 1 RU is involved.
+Two conditions apply to fill racks with [objects](../../basics/structure-of-the-it-documentation.md): On the one hand, you have to define for each object in the **`Form factor`** category how many **`rack units`** it requires and that it has the **`Form factor 19"`**. On the other hand, you have to tick the box in the [object type configuration](/display/en/Assignment+of+Categories+to+Object+Types) confirming that objects of this type can be positioned in the rack. If the entry in the **`Form factor`** category is missing, i-doit assumes that a 19" component with 1 RU is involved.
 
 The assignment from object to rack is carried out in the **`Location`** category in which physical locations are set into [relation](/display/en/Object+Relations) to each other. First you choose the rack in the **`Location`** attribute; afterwards further attributes to be filled in are shown:
 

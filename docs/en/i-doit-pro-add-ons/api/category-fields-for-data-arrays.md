@@ -1,4 +1,4 @@
-This article lists all available [categories and their attributes](/display/en/Structure+of+the+IT+Documentation) of i-doit. This can be a very helpful list when you use the [application programming interface (API)](/pages/viewpage.action?pageId=37355644) of i-doit.
+This article lists all available [categories and their attributes](../../basics/structure-of-the-it-documentation.md) of i-doit. This can be a very helpful list when you use the [application programming interface (API)](/pages/viewpage.action?pageId=37355644) of i-doit.
 
 Create this contents automatically
 

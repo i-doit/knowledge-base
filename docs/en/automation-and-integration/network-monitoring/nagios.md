@@ -31,7 +31,7 @@ This includes the main configuration, service templates and host templates as we
 Configuration in Objects
 ------------------------
 
-All further configurations are carried out within the [objects](/display/en/Structure+of+the+IT+Documentation). The easiest case is the configuration of host parameters. For this purpose, the `**Nagios (Host)**`[category](/display/en/Structure+of+the+IT+Documentation) folder has to be assigned to the desired [object type](/display/en/Structure+of+the+IT+Documentation) via the ``**[**`Quick Configuration Wizard`**](/display/en/Assignment+of+Categories+to+Object+Types)**``.
+All further configurations are carried out within the [objects](../../basics/structure-of-the-it-documentation.md). The easiest case is the configuration of host parameters. For this purpose, the `**Nagios (Host)**`[category](../../basics/structure-of-the-it-documentation.md) folder has to be assigned to the desired [object type](../../basics/structure-of-the-it-documentation.md) via the ``**[**`Quick Configuration Wizard`**](/display/en/Assignment+of+Categories+to+Object+Types)**``.
 
 In the category `**Host Definition**` a host definition for Nagios can be set either via a Nagios template or via individual configuration.
 

@@ -4,7 +4,7 @@
 *   2[Characteristics of the Category](#CustomCategories-CharacteristicsoftheCategory)
 *   3[Technical Configuration](#CustomCategories-TechnicalConfiguration)
 
-Besides having standard categories _i-doit_ makes it possible to create (custom) [categories](/display/en/Structure+of+the+IT+Documentation) in order to document additional [attributes](/display/en/Structure+of+the+IT+Documentation), which are not included in standard categories.
+Besides having standard categories _i-doit_ makes it possible to create (custom) [categories](../../basics/structure-of-the-it-documentation.md) in order to document additional [attributes](../../basics/structure-of-the-it-documentation.md), which are not included in standard categories.
 
 Configuration of the Category
 -----------------------------
@@ -19,11 +19,11 @@ As a first step, it is necessary to give a unique name to the category so that i
 
 ![](/download/attachments/37355678/Cat-title.png?version=1&modificationDate=1631784361918&api=v2&effects=drop-shadow)
 
-Furthermore, the category has to be linked to one or more [object types](/display/en/Structure+of+the+IT+Documentation) in order to use it.
+Furthermore, the category has to be linked to one or more [object types](../../basics/structure-of-the-it-documentation.md) in order to use it.
 
 ![](/download/attachments/37355678/Cat-objects.png?version=1&modificationDate=1631784393224&api=v2&effects=drop-shadow)
 
-Now you can define if you require a [single-](/display/en/Structure+of+the+IT+Documentation) or a [multi-value-category](/display/en/Structure+of+the+IT+Documentation). If you wish to use attributes which are unique in their combination, the configuration as single-value category will be sufficient. However, if you want to use the values repeatedly, you will need a multi-value category. This way it is possible to save multiple entries in one category.
+Now you can define if you require a [single-](../../basics/structure-of-the-it-documentation.md) or a [multi-value-category](../../basics/structure-of-the-it-documentation.md). If you wish to use attributes which are unique in their combination, the configuration as single-value category will be sufficient. However, if you want to use the values repeatedly, you will need a multi-value category. This way it is possible to save multiple entries in one category.
 
 ![](/download/attachments/37355678/Cat-mv.png?version=1&modificationDate=1631784432683&api=v2&effects=drop-shadow)
 

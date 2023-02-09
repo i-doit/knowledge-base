@@ -46,7 +46,7 @@ Example for MK Livestatus:
 Categories
 ----------
 
-In order to read out data the [category folder](/display/en/Structure+of+the+IT+Documentation) `**Monitoring**` has to be assigned to the [object types](/display/en/Structure+of+the+IT+Documentation) with the **`[Quick Configuration Wizard](/display/en/Assignment+of+Categories+to+Object+Types)`**. The respective [identification key](/display/en/Unique+References) for the monitoring has to be configured for the [object](/display/en/Structure+of+the+IT+Documentation) in the `**Monitoring**` category. For this, either the object title, the hostname with or without domain name or a freely chosen name can be used. This entry determines the name which is queried in the monitoring.
+In order to read out data the [category folder](../../basics/structure-of-the-it-documentation.md) `**Monitoring**` has to be assigned to the [object types](../../basics/structure-of-the-it-documentation.md) with the **`[Quick Configuration Wizard](/display/en/Assignment+of+Categories+to+Object+Types)`**. The respective [identification key](/display/en/Unique+References) for the monitoring has to be configured for the [object](../../basics/structure-of-the-it-documentation.md) in the `**Monitoring**` category. For this, either the object title, the hostname with or without domain name or a freely chosen name can be used. This entry determines the name which is queried in the monitoring.
 
 If multiple monitoring instances are configured, the corresponding instance is chosen.
 

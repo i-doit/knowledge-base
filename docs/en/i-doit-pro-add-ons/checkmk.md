@@ -33,7 +33,7 @@ For Check\_MK a configuration has to be saved at `**Administration → Interface
 
 Further configuration parameters are opened after selecting Check\_MK as the type.
 
-`**Export assigned contacts**` allows the storing of contacts which were assigned to the corresponding [objects](/display/en/Structure+of+the+IT+Documentation) in this role in the exported configuration of the object. In this connection the [object title](/display/en/Unique+References) of the contacts is also exported
+`**Export assigned contacts**` allows the storing of contacts which were assigned to the corresponding [objects](../../basics/structure-of-the-it-documentation.md) in this role in the exported configuration of the object. In this connection the [object title](/display/en/Unique+References) of the contacts is also exported
 
 In the plain text field `**Site**` you can define a site to which the exported configuration is forwarded to. For this `**Multisite (Distributed Monitoring)**` has to be set to "**`Yes`**"`.`
 
@@ -46,7 +46,7 @@ The sites that are selectable as `**Master Site**` are the ones that were added 
 Categories
 ----------
 
-Generally, the [category folder](/display/en/Structure+of+the+IT+Documentation) `**Check_MK (Host)**` needs to be assigned to the [object types](/display/en/Structure+of+the+IT+Documentation) that are going to be used via the `**[Quick Configuration Wizard](/display/en/Assignment+of+Categories+to+Object+Types)**`.
+Generally, the [category folder](../../basics/structure-of-the-it-documentation.md) `**Check_MK (Host)**` needs to be assigned to the [object types](../../basics/structure-of-the-it-documentation.md) that are going to be used via the `**[Quick Configuration Wizard](/display/en/Assignment+of+Categories+to+Object+Types)**`.
 
 An export configuration has to be chosen and a host nanme/ host address have to be defined in the category `**Check_MK (HOST)**`. Additionally, the export of the IP address can be prevented, for example, if it was supplied by the DHCP and changes.
 
@@ -59,7 +59,7 @@ The `**Host tags**` are assigned and shown via the category of the same name. Th
 
 *   **`Host tags`** – simple and manual assignment of tags (and thus statically)
     
-*   **`CMDB tags`** – tags that are defined by an [attribute](/display/en/Structure+of+the+IT+Documentation) from the CMDB
+*   **`CMDB tags`** – tags that are defined by an [attribute](../../basics/structure-of-the-it-documentation.md) from the CMDB
     
 *   `**Dynamic tags**` – host tags which are generated through rules
     

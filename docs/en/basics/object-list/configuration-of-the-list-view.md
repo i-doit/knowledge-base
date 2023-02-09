@@ -25,7 +25,7 @@ Attribute selection
 
 Similar to the [report manager](/display/en/Report+Manager) you can define the columns via the selection of the category and the included attribute.
 
-First you select a [global, specific](/display/en/Structure+of+the+IT+Documentation) or [custom](/display/en/Custom+Categories) category in the drop-down menu. You can filter the list of categories with a text field.
+First you select a [global, specific](../../basics/structure-of-the-it-documentation.md) or [custom](/display/en/Custom+Categories) category in the drop-down menu. You can filter the list of categories with a text field.
 
 When selecting a category, the attributes which can be defined as a column are displayed. Add an attribute to the selected attributes with a click on the ![](/download/attachments/61014331/add.png?version=1&modificationDate=1485958534874&api=v2)button .
 
@@ -38,7 +38,7 @@ The following restrictions apply to the selection of attributes:
 *   Not all attributes of all categories are available.
 *   The number of attributes is limited to `**10**`.
 
-Attributes originating from [list categories (multi-valued)](/display/en/Structure+of+the+IT+Documentation) can be presented in different ways. With the drop-down menu for the presentation of grouped data you can display the attributes either comma-separated in parallel or as a list one below each other. An example is the `**Host addresses**` attribute of the `**Host address**` category.
+Attributes originating from [list categories (multi-valued)](../../basics/structure-of-the-it-documentation.md) can be presented in different ways. With the drop-down menu for the presentation of grouped data you can display the attributes either comma-separated in parallel or as a list one below each other. An example is the `**Host addresses**` attribute of the `**Host address**` category.
 
 Tip
 

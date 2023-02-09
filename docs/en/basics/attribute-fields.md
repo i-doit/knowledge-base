@@ -15,7 +15,7 @@
     *   11.2[Location Selection](#AttributeFields-LocationSelection)
     *   11.3[Browser with Subselection](#AttributeFields-BrowserwithSubselection)
 
-Now that you are familiar with the [structure of the IT documentation](/display/en/Structure+of+the+IT+Documentation) let's take a closer look at the attribute fields which i-doit provides in the Web GUI.
+Now that you are familiar with the [structure of the IT documentation](../../basics/structure-of-the-it-documentation.md) let's take a closer look at the attribute fields which i-doit provides in the Web GUI.
 
 Overview
 --------
