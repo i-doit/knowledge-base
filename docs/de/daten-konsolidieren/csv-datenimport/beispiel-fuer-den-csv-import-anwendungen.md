@@ -2,30 +2,30 @@
 
 In diesem Beispiel wollen wir Anwendungen importieren. Wir möchten so viele Informationen zu einer Anwendung importieren wie möglich.
 
-!!! Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft
+!!! note "Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft"
+
 
 Für den Import können wir folgende Informationen importieren:
 
-*   Objekttyp → Um welchen Objekttypen soll es sich Handeln
-*   Objekt-Titel → Wie heißt die Anwendung
-*   Anwendung - Spezifikation → Welche Spezifikation hat die Anwendung?
-*   Anwendung - Hersteller → Wer hat die Anwendung hergestellt?
-*   Anwendung - Installationsart → Wird die Anwendung automatisch oder manuell installiert?
-*   Anwendung - Registrierungs-Key → Welcher Registrierungs-Key wurde verwendet?
-*   Anwendung - Installationspfad → Wie lautet der Installationspfad?
-*   Anwendung-Varianten - Bezeichnung → Wie soll die Variante bezeichnet werden?
-*   Anwendung-Varianten - Variante → Wie wurde die Variante bezeichnet?
-*   Anwendung-Version - Versionsnummer → Welche Versionsnummern gibt es?
-*   Anwendung-Version - Servicepack → Welche Servicepacks gibt es?
-*   Anwendung-Version - Kernel → Welche Kernel Versionen gibt es?
-*   Anwendung-Version - Patchlevel → Welche Patchlevel gibt es?
+- Objekttyp → Um welchen Objekttypen soll es sich Handeln
+- Objekt-Titel → Wie heißt die Anwendung
+- Anwendung - Spezifikation → Welche Spezifikation hat die Anwendung?
+- Anwendung - Hersteller → Wer hat die Anwendung hergestellt?
+- Anwendung - Installationsart → Wird die Anwendung automatisch oder manuell installiert?
+- Anwendung - Registrierungs-Key → Welcher Registrierungs-Key wurde verwendet?
+- Anwendung - Installationspfad → Wie lautet der Installationspfad?
+- Anwendung-Varianten - Bezeichnung → Wie soll die Variante bezeichnet werden?
+- Anwendung-Varianten - Variante → Wie wurde die Variante bezeichnet?
+- Anwendung-Version - Versionsnummer → Welche Versionsnummern gibt es?
+- Anwendung-Version - Servicepack → Welche Servicepacks gibt es?
+- Anwendung-Version - Kernel → Welche Kernel Versionen gibt es?
+- Anwendung-Version - Patchlevel → Welche Patchlevel gibt es?
 
 Beispiel CSV Datei für diesen Import:
 
 [Import Anwendungen](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/Import-Anwendungen.csv)
 
-??? Import-Anwendungen.csv
-
+??? example "Import-Anwendungen.csv"
     Objekttyp;ObjektName;Anwendungen - Spezifikation;Anwendung - Hersteller;Anwendung - Installationsart;Anwendung - Registrierungs-Key;Anwendung - Installationspfad;Anwendungen: Varianten - Bezeichnung;Anwendungen: Varianten - Variante;Version - Versionsnummer;Version - Servicepack;Version - Kernel;Version - Patchlevel
     C__OBJTYPE__APPLICATION;Anwendung;Spezifikation;"Hersteller Alpha";Automatisch;"Kein RegKey";"C:\Program Files\Anwendung";Anwendung PRO;Pro;1.0;Service Pack 1;;1
     C__OBJTYPE__APPLICATION;Anwendungx;Spezifikation;"Hersteller Beta";Automatisch;"Kein RegKey";"C:\Program Files\Anwendungx";Anwendungx PRO,Anwendungx ENTERPRISE;Pro,Enterprise;2,3;Service Pack 1,Service Pack 2;;1,2
