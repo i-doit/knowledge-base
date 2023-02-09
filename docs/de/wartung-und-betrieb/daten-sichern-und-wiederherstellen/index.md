@@ -2,7 +2,7 @@
 
 Da sich in der [IT-Dokumentation](../../glossar.md#Glossar-IT-Dokumentation) wichtige, für die tägliche Arbeit benötigte Daten befinden, ist ein Backup und Recovery von _i-doit_ unablässig. Daher sollte _i-doit_ bei der bereits bestehenden Backup-Strategie berücksichtigt werden.
 
-<!---Todo: Fixme--->
+
 Hierbei müssen drei Bereiche abgedeckt werden: die [Datenbanken](#backup-und-recovery-der-datenbanken), die [Dateien](#backup-und-recovery-der-dateien) von _i-doit_ und die [Systemkonfiguration](#backup-und-recovery-der-systemkonfiguration).
 
 Backup und Recovery der Datenbanken
@@ -17,15 +17,15 @@ Das entsprechende Recovery:
 
     mysql -hlocalhost -uroot -p < backup.sql
 
-Während eines Backups sollte _i-doit_ nicht verwendet werden, um die Backups nicht zu korrumpieren. Für die Zeit des Backups bzw. des Recoverys kann der Webserver deaktiviert werden. Auf [Debian](../installation/../../installation/manuelle-installation/debian.md)\-basierten Linux-Distributionen führt man
+Während eines Backups sollte _i-doit_ nicht verwendet werden, um die Backups nicht zu korrumpieren. Für die Zeit des Backups bzw. des Recoverys kann der Webserver deaktiviert werden. Auf [Debian](../../installation/manuelle-installation/debian.md)\-basierten Linux-Distributionen führt man
 
     sudo service apache2 stop
 
 aus. Nach dem Backup/Recovery kann mit
 
     sudo service apache2 start
-<!---Todo: Fixme--->
-der Webserver wieder aktiviert werden. Sind [Cronjobs](/display/de/CLI) für _i-doit_ eingerichtet, sollten diese ebenfalls während der Sicherung deaktiviert und nach Abschluss wieder aktiviert werden.
+
+der Webserver wieder aktiviert werden. Sind [Cronjobs](../../automatisierung-und-integration/cli/index.md) für _i-doit_ eingerichtet, sollten diese ebenfalls während der Sicherung deaktiviert und nach Abschluss wieder aktiviert werden.
 
 !!! success "Komprimieren"
 

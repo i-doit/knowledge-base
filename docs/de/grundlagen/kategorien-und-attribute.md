@@ -8,7 +8,7 @@ i-doit bringt bereits über 200 vordefinierte [Kategorien](struktur-it-dokumenta
 
 Globale Kategorien
 ------------------
-<!---Todo: Fixme--->
+
 | Kategorie | Attribut | Beschreibung |
 | --- | --- | --- |
 | **Alle Tickets** [![alle-tickets](../assets/images/de/grundlagen/icons/comments.png)](../assets/images/de/grundlagen/icons/comments.png) | \-  | [Service Desk](/display/de/Service+Desk): Wenn die Schnittstelle zum Service Desk aktiviert ist, können über diese Kategorie alle referenzierten Tickets zu diesem Objekt angezeigt werden. |
@@ -21,7 +21,7 @@ Globale Kategorien
 |     | **SYSID** | Neben der **Objekt-ID** ist die **SYSID** ebenfalls für [eine eindeutige Referenzierung](eindeutige-referenzierungen.md) geeignet. Zudem lässt es sich vom Benutzer bearbeiten, während die **Objekt-ID** fest vergeben wird. |
 |     | **Tags** | Jedes Objekt kann mit beliebig vielen Stichwörtern versehen werden. Dies ist praktisch, um einem Objekt beispielsweise bestimmte Rollen oder einen Einsatzzweck zuzuordnen. |
 |     | **Beschreibung** | Fast jeder Eintrag in einer Kategorie kann am Ende mit einer Beschreibung versehen werden. Hier können zusätzliche Notizen hinterlegt werden. Da es sich hierbei um umstrukturierte Texte handelt, wird eine einfache Auswertung erschwert. |
-| **Analyse** [![analyse](../assets/images/de/grundlagen/icons/chart_pie.png)](../assets/images/de/grundlagen/icons/chart_pie.png) | \-  | Leitet zur **Ausfallsimulation** des [Analysis](/display/de/Analysis)\-Add-ons weiter |
+| **Analyse** [![analyse](../assets/images/de/grundlagen/icons/chart_pie.png)](../assets/images/de/grundlagen/icons/chart_pie.png) | \-  | Leitet zur **Ausfallsimulation** des [Analysis](../i-doit-pro-add-ons/analysis.md)\-Add-ons weiter |
 | **Anschlüsse** | \-  | Hierüber wird die Verkabelung zwischen Komponenten dokumentiert. Es wird zwischen **Eingang** und **Ausgang** unterschieden, die miteinander verbunden werden können. Diese Kategorie wird durch weitere Kategorien automatisch befüllt, zum Beispiel **Port** oder **Stromverbraucher** |
 | **Anschrift** | \-  | Hausanschrift; wird oftmals Objekten vom Typ **Gebäude** zugeordnet |
 | **Bereiche** | \-  | Verwendung eines Netzbereichs; ist im Kategorie-Ordner **Netzbereich** enthalten; rückwärtige Kategorie: **Netz → Netzbereiche** |
@@ -34,17 +34,17 @@ Globale Kategorien
 | **Clustermitglieder** | \-  | Komponenten, die einen **Cluster** bilden; ist im Kategorie-Ordner **Cluster** enthalten; rückwärtige Kategorie: **Clustermitgliedschaften** |
 | **Clustermitgliedschaften** | \-  | Objekte können einem oder mehreren Clustern zugeordnet werden. Rückwärtige Kategorie: **Clustermitglieder** |
 | **Clustervitalität** | \-  | Visualisierung und Statistiken zur **Objektvitalität** von Clustermitgliedern; ist im Kategorie-Ordner **Cluster** enthalten |
-| **CMDB-Explorer** [![cmdb-explorer](../assets/images/de/grundlagen/icons/chart_organisation.png)](../assets/images/de/grundlagen/icons/chart_organisation.png) | \-  | Öffnet das Objekt im [CMDB-Explorer](/display/en/CMDB+Explorer) |
+| **CMDB-Explorer** [![cmdb-explorer](../assets/images/de/grundlagen/icons/chart_organisation.png)](../assets/images/de/grundlagen/icons/chart_organisation.png) | \-  | Öffnet das Objekt im [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md) |
 | **Controller** | \-  | Verbaute Onboard oder PCIe-Steckkarten zur Anbindung von Speicherlaufwerken; ist im Kategorie-Ordner **Lokaler Massenspeicher** enthalten |
 | **CPU** | \-  | Auflistung von CPU-Sockeln und verbauten CPUs. |
 | **CUCM VoIP Leitung** | \-  | Angaben zum Cisco Unified Call Manager (CUCM) |
 | **CUCM VoIP Telefon** | \-  | Angaben zum Cisco Unified Call Manager (CUCM) |
-| **Data Source** | \-  | Angabe, aus welchem [Datenimport](/display/de/Daten+konsolidieren) die Attribute dieses Objekts stammen |
+| **Data Source** | \-  | Angabe, aus welchem [Datenimport](../daten-konsolidieren/index.md) die Attribute dieses Objekts stammen |
 | **Dateizuweisung** | \-  | Zuweisung von Dateien, die wiederum als Objekte vom Typ **Dateien** abgelegt werden; per Drag'n'Drop können neue Dateien hochgeladen werden; ähnelt den Kategorien **Handbuchzuweisung** und **Notfallplanzuweisung**; rückwärtige Kategorie: **Dateien → Zugewiesene Objekte** |
 | **Datenbankzuweisung** | \-  | Greift eine installierte Applikation (siehe Objekttypen **Anwendungen** und **Systemdienst**) auf eine oder mehrere Datenbanken zu, kann dies hier dokumentiert werden; ergänzt Kategorie **Installation** in den Kategorie-Ordnern **Anwendungen** und **Dienste** |
 | **Datensicherung** | \-  | Backup: Die Daten dieses Objekts wird von einem anderen Objekt gesichert. Rückwärtige Kategorie: **Datensicherung (zugewiesene Objekte)** |
 | **Datensicherung (zugewiesene Objekte)** | \-  | Backup: Dieses Objekt sichert Daten anderer Objekte. Rückwärtige Kategorie: **Datensicherung** |
-| **Dokumente** | \-  | Add-on [Documents](/display/de/Documents): Liste von generierten Dokumenten |
+| **Dokumente** | \-  | Add-on [Documents](../i-doit-pro-add-ons/documents/index.md): Liste von generierten Dokumenten |
 | **E-Mail-Adressen** | \-  | Liste von E-Mail-Adressen; oftmals in Verbindung von Kontakten (siehe Objekttypen **Personen**, **Personengruppen** und **Organisation**); ergänzt die Kategorie **Stammdaten** in den Kategorie-Ordnern **Personen**, **Personengruppen** und **Organisation** |
 | **Fahrzeug** | \-  | Angaben zu einem Fahrzeug, zum Beispiel KfZ-Kennzeichen; eignet sich zur Dokumentation eines Fuhrparks oder eines Dienstwagens; siehe gleichnamigen Objekttyp **Fahrzeug** |
 | **Faser/Ader** | \-  | Detaillierte Beschreibung einer Glasfaser bzw. von Adern eines Kupferkabels; ist daher häufig dem Objekttyp **Kabel** zugeordnet |
@@ -61,20 +61,20 @@ Globale Kategorien
 | **Grafikkarte** | \-  | Liste von eingebauten Grafikkarten |
 | **Gruppenmitgliedschaft** | \-  | Zuordnung des Objekts zu einer dynamischen oder statischen Gruppe; siehe Objekttyp **Objektgruppe**; rückwärtige Kategorie: **Objektgruppe** |
 | **Handbuchzuweisung** | \-  | Zuweisung von Dateien, die wiederum als Objekte vom Typ **Dateien** abgelegt werden; per Drag'n'Drop können neue Dateien hochgeladen werden; ähnelt den Kategorien **Dateizuweisung** und **Notfallplanzuweisung**; rückwärtige Kategorie: **Dateien → Zugewiesene Objekte** |
-| **Host Definition** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
-| **Host-Template definition** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
+| **Host Definition** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
+| **Host-Template definition** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Hostadapter (HBA)** | \-  | Liste von HBAs, die Fiber Channel Ports (siehe **Speichernetze → FC-Port**) bereitstellen; dient der Dokumentation von Storage Area Networks (SANs); ist im Kategorie-Ordner **Speichernetze** enthalten |
-| **Hostadresse** | \-  | [IPAM](/pages/viewpage.action?pageId=23068674): Liste von konfigurierten IP-Adressen (IPv4/IPv6); zusätzliche Zuordnung von **Hostname**, **Domain**, Netzwerkanschlüssen (siehe Kategorie **Netzwerk** **→ Port**) und Subnetzen (siehe Objekttyp **Layer-3-Netz**); rückwärtige Kategorie: **IP-Liste** |
+| **Hostadresse** | \-  | [IPAM](../anwendungsfaelle/ip-adress-management.md): Liste von konfigurierten IP-Adressen (IPv4/IPv6); zusätzliche Zuordnung von **Hostname**, **Domain**, Netzwerkanschlüssen (siehe Kategorie **Netzwerk** **→ Port**) und Subnetzen (siehe Objekttyp **Layer-3-Netz**); rückwärtige Kategorie: **IP-Liste** |
 | **Interface** | \-  | Zuweisung von physikalischen Netzwerkanschlüssen (siehe Kategorie **Netzwerk → Port**) zu internen Anschlüssen eines Geräts, zum Beispiel Onboard oder PCIe-Steckkarte; ist im Kategorie-Ordner **Netzwerk** enthalten |
-| **JDisc Custom Attributes** | \-  | Benutzerdefinierte Attribute, die aus [JDisc Discovery](/display/de/JDisc+Discovery) importiert worden sind, anzeigen und bearbeiten |
-| **JDisc Discovery** | \-  | Import aus [JDisc Discovery](/display/de/JDisc+Discovery) für dieses Objekt durchführen |
+| **JDisc Custom Attributes** | \-  | Benutzerdefinierte Attribute, die aus [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) importiert worden sind, anzeigen und bearbeiten |
+| **JDisc Discovery** | \-  | Import aus [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) für dieses Objekt durchführen |
 | **Kabel** | \-  | Angaben zu einem **Kabel**, zum Beispiel Länge und Farbe |
 | **Kontaktzuweisung** | \-  | Ordnet **Personen**, **Personengruppen**, **Organisationen** o. ä. einem Objekt zu; jede Zuordnung kann mit einer **Rolle** versehen werden, z. B. **Administrator**; rückwärtige Kategorie: **Personen/Personengruppen/Organisation → Zugewiesene Objekte** |
 | **Laufwerk** | \-  | Dokumentation von konfigurierten Mount Points oder Laufwerksbuchstaben; ergänzt Kategorie-Ordner **Lokaler Massenspeicher**; siehe auch Kategorien **Freigabenzugriff** und **Speichernetze → Logische Geräte (Client)** |
-| **LDAP** | **Distinguished Name (DN)** | Wird eine Person oder eine Personengruppe über [LDAP/AD](/pages/viewpage.action?pageId=9666615) synchronisiert, wird hier der zugehörige DN hinterlegt. |
-| **Letzter eingeloggter Benutzer** | \-  | Zuletzt angemeldeter Benutzer; kann durch [JDisc Discovery](/display/de/JDisc+Discovery) importiert werden |
+| **LDAP** | **Distinguished Name (DN)** | Wird eine Person oder eine Personengruppe über [LDAP/AD](../automatisierung-und-integration/ldap-verzeichnis/index.md) synchronisiert, wird hier der zugehörige DN hinterlegt. |
+| **Letzter eingeloggter Benutzer** | \-  | Zuletzt angemeldeter Benutzer; kann durch [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) importiert werden |
 | **Listener** | \-  | Öffnet eine installierte Applikation (siehe Kategorie **Softwarezuweisung**) einen Port (1-65535) über das IP-Protokoll (siehe Kategorie **Hostadresse**), sprich über Protokolle wie TCP und UDP, kann dies hier dokumentiert werden; ist im Kategorie-Ordner **Netzwerkverbindungen** enthalten; rückwärtige Kategorie: **Verbindung** |
-| **Livestatus** | \-  | [Network Monitoring](/display/de/Network+Monitoring): zeigt aktuelle Informationen zu einem Host und dessen Services an, die über die Schnittstelle Livestatus zur Verfügung stehen; ist im Kategorie-Ordner **Monitoring** enthalten und wird dort konfiguriert |
+| **Livestatus** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): zeigt aktuelle Informationen zu einem Host und dessen Services an, die über die Schnittstelle Livestatus zur Verfügung stehen; ist im Kategorie-Ordner **Monitoring** enthalten und wird dort konfiguriert |
 | **Logbuch** [![logbuch](../assets/images/de/grundlagen/icons/book_open.png)](../assets/images/de/grundlagen/icons/book_open.png) | \-  | [Änderungen an einem Objekt](logbuch.md) |
 | **Logische Geräte (Client)** | \-  | Greift ein Objekt auf LUNs eines SANs zu, wird dies hier dokumentiert; ist im Kategorie-Ordner **Speichernetze** enthalten; rückwärtige Kategorie: **Logische Geräte (LDEV Server)** |
 | **Logische Geräte (LDEV Server)** | \-  | Bietet ein Objekt, zum Beispiel ein SAN, anderen Objekten LUNs an, wird dies hier dokumentiert; ist im Kategorie-Ordner **Speichernetze** enthalten; rückwärtige Kategorie: **Logische Geräte (Client)** |
@@ -84,14 +84,14 @@ Globale Kategorien
 | **Mitglieder** | \-  | Liste von Objekten mit ihren logischen Ports (siehe Kategorie **Netzwerk → Logische Ports**), die einem VRRP-/HSRP-/CARP-Cluster zugeordnet sind; ist im Kategorie-Ordner **VRRP** enthalten; rückwärtige Kategorie: **VRRP Mitgliedschaft** |
 | **Modell** | \-  | Eine der wichtigsten Kategorien eines (Hardware-)Objekts mit Angaben zu **Hersteller**, **Modell** und **Seriennummer** |
 | **Monitoring** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Kategorie-Ordner mit den untergeordneten Kategorien **Livestatus** und **NDO**; konfiguriert und aktiviert die Abfrage von aktuellen Informationen zu einem Host |
-| **Nagios (Anwendungen)** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
-| **Nagios (Host TPL)** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
-| **Nagios (Host)** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
-| **Nagios (Service TPL)** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
-| **Nagios (Service)** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
-| **Nagios Gruppe** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
-| **Nagios Service-Dependencies** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
-| **NDO** | \-  | [Network Monitoring](/display/de/Network+Monitoring): zeigt aktuelle Informationen zu einem Host und dessen Services an, die über die Schnittstelle NDOUtils (bzw. IDOUtils) zur Verfügung stehen; ist im Kategorie-Ordner **Monitoring** enthalten und wird dort konfiguriert |
+| **Nagios (Anwendungen)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
+| **Nagios (Host TPL)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
+| **Nagios (Host)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
+| **Nagios (Service TPL)** | \-  | [Network Monitoring](/../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
+| **Nagios (Service)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
+| **Nagios Gruppe** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
+| **Nagios Service-Dependencies** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
+| **NDO** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): zeigt aktuelle Informationen zu einem Host und dessen Services an, die über die Schnittstelle NDOUtils (bzw. IDOUtils) zur Verfügung stehen; ist im Kategorie-Ordner **Monitoring** enthalten und wird dort konfiguriert |
 | **Netzbereich** | \-  | Kategorie-Ordner mit den untergeordneten Kategorien **Bereiche** und **Optionen**; wird in der Regel dem Objekttyp **Netzbereich** zugeordnet |
 | **Netzwerk** | \-  | Kategorie-Ordner mit den untergeordneten Kategorien **Interface**, **Logische Ports**, **Port**, **Portübersicht** und **VRRP Mitgliedschaft** |
 | **Netzwerkverbindungen** | \-  | Kategorie-Ordner mit den untergeordneten Kategorien **Listener** und **Verbindung**; ermöglicht das Dokumentieren von Netzwerkkommunikation zwischen Applikationen; wird häufig (virtueller) Hardware wie Server, VMs oder Clients zugeordnet, auf denen Applikationen installiert sind (siehe Kategorie **Softwarezuweisung**); benötigt zudem IP-Adressen (siehe Kategorie **Hostadresse**) |
@@ -108,18 +108,18 @@ Globale Kategorien
 | **Räumlich zugeordnete Objekte** | \-  | Liste aller physikalisch-räumlich untergeordneten Objekte; rückwärtige Kategorie: **Standort** |
 | **Rechenressourcen** | \-  | Angaben zu den Systemvoraussetzungen von Applikationen (CPU, Arbeitsspeicher, Speicherplatz, Netzwerkbandbreite); wird von der Kategorie **Objektvitalität** ausgewertet |
 | **Rechnung** | \-  | Liste von Rechnungen; ergänzt Kategorie **Buchhaltung** |
-| **Rechteverwaltung** [![rechteverwaltung](../assets/images/de/grundlagen/icons/lock.png)](../assets/images/de/grundlagen/icons/lock.png) | \-  | [Rechteverwaltung](/pages/viewpage.action?pageId=42303548): Welche Person oder Personengruppe hat welche Zugriffsmöglichkeiten auf dieses Objekt? |
+| **Rechteverwaltung** [![rechteverwaltung](../assets/images/de/grundlagen/icons/lock.png)](../assets/images/de/grundlagen/icons/lock.png) | \-  | [Rechteverwaltung](../effizientes-dokumentieren/rechteverwaltung/cmdb.md): Welche Person oder Personengruppe hat welche Zugriffsmöglichkeiten auf dieses Objekt? |
 | **Remote Management Controller** | **Zugewiesenes Objekt** | Verfügt das Objekt über ein Lights Out Management (LOM), kann dies über hierüber verknüpft werden. Häufig dient dazu der gleichnamige Objekttyp **Remote Management Controller**. Rückwärtige Kategorie: **Gemanagte Geräte** |
 |     | **Primäre ZugriffsURL** | Verfügt das zugewiesene Objekt über einen Link (siehe Kategorie **Zugriff**), wird dieser hier angezeigt. Bei mehreren Links wird der als primär markierte angezeigt. |
 | **Rückwärtige Servicezuweisung** |     |     |
 | **Schnittstelle** | \-  | Weitere externe Schnittstellen einer Hardware, die über physikalische Netzwerkports (siehe Kategorie **Netzwerk → Port**) und Netzteile (siehe Kategorie **Stromverbraucher**) hinaus gehen, zum Beispiel Peripherie-Geräte über USB, HDMI, Display Port, VGA usw.; eignet sich damit zur Dokumentation eher "unwichtiger" Komponenten wie Mäuse und Tastaturen |
 | **Service** | \-  | Kategorie-Ordner mit den untergeordneten Kategorien **Service Beziehung**, **Service Komponenten**, **Service Logbuch** und **Service Typ**; enthält Angaben zum Service; ist meist dem gleichnamigen Objekttypen **Service** zugewiesen |
 | **Service Beziehung** | \-  | Wenn Komponenten eines Services untereinander abhängig sind, kann diese Abhängigkeit hier dokumentiert werden. Es werden nur Objekte, die in der Kategorie **Service Komponenten** hinzugefügt sind, aufgelistet. Ist im Kategorie-Ordner **Service** enthalten |
-| **Service definition** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
+| **Service definition** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md: Export von Konfigurationseinstellungen für Nagios |
 | **Service Komponenten** | \-  | Auflistung von Objekten, die dem Service untergeordnet sind; ist im Kategorie-Ordner **Service** enthalten; rückwärtige Kategorie: **Servicezuweisung** |
 | **Service Logbuch** | \-  | Auflistung von [Logbuch](logbuch.md)\-Einträgen aus allen Objekten, die dem Service als Komponente hinzugefügt sind (siehe Kategorie **Service Komponenten**); ist im Kategorie-Ordner **Service** enthalten |
 | **Service Typ** | **Typ** | Typisierung von Services; ist im Kategorie-Ordner **Service** enthalten |
-| **Service-Template definition** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
+| **Service-Template definition** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Servicezuweisung** | \-  | Dient das Objekt als Komponente eines Services, kann es hierüber hinzugefügt werden. Ein Objekt kann mehreren Services zugewiesen werden. Rückwärtige Kategorie: **Service Komponenten** |
 | **SIM** | \-  | Angaben zu  einer **SIM-Karte** (Netzanbieter, Tarif, Telefonnummer usw.) |
 | **Karten** | \-  | Angaben zu einer SIM-Karte (Verknüpftes Mobiltelefon, Pin, Seriennummer); rückwärtige Kategorie: **Zugewiesene SIM-Karten** |
@@ -155,7 +155,7 @@ Globale Kategorien
 | **Virtuelle Switche** | \-  | Virtuelle Netzwerk-Switche in einer virtuellen Umgebung; ist im Kategorie-Ordner **Virtueller Host** enthalten |
 | **Virtueller Host** | \-  | Kategorie-Ordner mit den untergeordneten Kategorien **Gastsysteme**, **Virtueller Host** und **Virtuelle Switche**; wird typischerweise einem Wirtssystem für virtuelle Maschinen (siehe Objekttyp **Virtueller Host**) oder einem **Cluster** zugeordnet; rückwärtige Kategorie: Virtuelle Maschine |
 | **Virtueller Host** | \-  | Angaben zum Wirtssystem oder Cluster einer virtuellen Umgebung; ist im gleichnamigen Kategorie-Ordner **Virtueller Host** enthalten |
-| **VIVA** [![viva](../assets/images/de/grundlagen/icons/shield.png)](../assets/images/de/grundlagen/icons/shield.png) | \-  | Add-on [VIVA](/display/de/VIVA): IT-Grundschutz-relevante Informationen |
+| **VIVA** [![viva](../assets/images/de/grundlagen/icons/shield.png)](../assets/images/de/grundlagen/icons/shield.png) | \-  | Add-on [VIVA](../i-doit-pro-add-ons/viva/index.md): IT-Grundschutz-relevante Informationen |
 | **VRRP** | \-  | Kategorie-Ordner mit der untergeordneten Kategorien **Mitglieder**; enthält Angaben zu den Protokollen VRRP/HSRP/CARP |
 | **VRRP Mitgliedschaft** | \-  | Liste aller logischen Ports (siehe Kategorie **Netzwerk → Logische Ports**), die einem VRRP-/HSRP-/CARP-Cluster zugeordnet sind; ist im Kategorie-Ordner **Netzwerk** enthalten; rückwärtige Kategorie: **VRRP → Mitglieder** |
 | **WAN-Leitungen** | \-  | Attribute wie Up- und Download-Bandbreite einer Internet-Anbindung; oftmals dem Objekttyp **WAN-Leitung** zugeordnet |
@@ -170,7 +170,7 @@ Globale Kategorien
 
 Spezifische Kategorien
 ----------------------
-<!---Todo: Fixme--->
+
 | Kategorie | Attribute | Beschreibung |
 | --- | --- | --- |
 | **Aktuelle Datei** | \-  | Aktuelle Revision einer Datei zum Download; ist im Kategorie-Ordner **Dateien** enthalten; speist sich aus der Kategorie **Dateiversionen** |
@@ -208,7 +208,7 @@ Spezifische Kategorien
 | **Mitglieder** | \-  | Liste von Personen, die der Personengruppe zugeordnet sind; ist im Kategorie-Ordner **Personengruppen** zugeordnet; rückwärtige Kategorie: **Personen → Personengruppenmitgliedschaft** |
 | **Mobilfunk** | **IMEI-Nummer** | Eindeutige Nummer eines Handys/Smartphones; häufig dem Objekttypen **Mobiltelefon** zugeordnet |
 | **Monitor** | \-  | Angaben zu einem Monitor, zum Beispiel **Auflösung**; daher häufig dem Objekttypen **Monitore** zugeordnet |
-| **Nagios** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Export von Konfigurationseinstellungen für Nagios |
+| **Nagios** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Netz** | \-  | Kategorie-Ordner mit untergeordneten Kategorien **DHCP**, **IP-Liste** und **Netzbereiche**; enthält Angaben zu einem Subnet, daher häufig dem Objekttypen **Layer-3-Netz** zugeordnet |
 | **Netzart** | **Netzart** | Angaben zu einem **Leistungsnetz**, zum Beispiel "Strom", "Wasser", "Gas"; ist im Kategorie-Ordner **Leistungsnetz** enthalten |
 | **Netzbereiche** | \-  | Angaben zur Segmentierung von Subnetzen; ist im Kategorie-Ordner **Netz** enthalten; rückwärtige Kategorie: **Netzbereich → Bereiche** |
@@ -222,7 +222,7 @@ Spezifische Kategorien
 | **Personengruppen** | \-  | Kategorie-Ordner mit den untergeordneten Kategorien **Mitglieder**, **Nagios**, **Rechtevergabe**, **Stammdaten** und **Zugewiesene Objekte** |
 | **Personengruppenmitgliedschaft** | \-  | Liste von **Personengruppen**, denen die Person untergeordnet ist; ist im Kategorie-Ordner **Personen** enthalten; rückwärtige Kategorie: **Mitglieder** |
 | **Raum** | \-  | Angaben wie **Typ**, **Raumnummer** und **Stockwerk**; häufig dem gleichnamigen Objekttypen **Raum** zugeordnet |
-| **Rechtevergabe** | \-  | Siehe [Rechteverwaltung](/display/de/Rechteverwaltung); ist in den Kategorie-Ordnern **Personen** und **Personengruppen** enthalten |
+| **Rechtevergabe** | \-  | Siehe [Rechteverwaltung](../effizientes-dokumentieren/rechteverwaltung/cmdb.md); ist in den Kategorie-Ordnern **Personen** und **Personengruppen** enthalten |
 | **Replikation** | \-  | Kategorie-Ordner mit untergeordneter Kategorie **Replikationspartner**; enthält Angabe zum **Replikationsmechanismus**; häufig dem Objekttypen **Replikationsobjekt** zugeordnet |
 | **Replikationspartner** | \-  | Liste von Objekten, die repliziert werden; ist im Kategorie-Ordner **Replikation** enthalten |
 | **Routing** | \-  | Angaben zu konfigurierten Routen: **Routingprotokoll** und **Gateway Adresse** (siehe Kategorie **Hostadresse**); häufig dem Objekttypen **Router** zugeordnet |
@@ -231,7 +231,7 @@ Spezifische Kategorien
 | **Slots** | \-  | Liste von verfügbaren Slots in einem Blade oder Switch Chassis; ist im Kategorie-Ordner **Chassis** enthalten |
 | **Stammdaten** | \-  | 1.  Angaben zu einer Person; ist im Kategorie-Ordner **Personen** enthalten<br>2.  Angaben zu einer Personengruppe; ist im Kategorie-Ordner **Personengruppen** enthalten<br>3.  Angaben zu einer Organisation; ist im Kategorie-Ordner **Organisation** enthalten |
 | **Switch** | \-  | Angaben zum **Switch**; speist sich aus Informationen aus der Kategorie **Hostadresse** und **Netzwerk → Port** |
-| **Typ** | \-  | Definition, ob eine **Objektgruppe** dynamisch (per [Report](/display/de/Report+Manager)) oder statisch aufgebaut ist; ist im Kategorie-Ordner **Objektgruppe** enthalten |
+| **Typ** | \-  | Definition, ob eine **Objektgruppe** dynamisch (per [Report](../auswertungen/report-manager.md)) oder statisch aufgebaut ist; ist im Kategorie-Ordner **Objektgruppe** enthalten |
 | **Übersicht** | \-  | 1.  Zusammenfassung von Angaben zu einer Lizenz; ist im Kategorie-Ordner Lizenzzuweisung enthalten<br>2.  Visuelle Darstellung und Statistiken von PDU Branches; ist im Kategorie-Ordner **PDU** enthalten |
 | **Unterbrechungsfreie Stromversorgung** | \-  | Angaben zu einer USV, daher häufig dem gleichnamigen Objekttypen **Unterbrechungsfreie Stromversorgung** zugeordnet |
 | **Varianten** | \-  | Liste von Varianten, zum Beispiel "Standard", "Enterprise", "Pro", "Open", einer Applikation; ist in den Kategorie-Ordnern **Anwendungen**, **DBMS** und **Dienste** enthalten; ergänzt die Kategorie **Installation** in diesen Kategorie-Ordnern |

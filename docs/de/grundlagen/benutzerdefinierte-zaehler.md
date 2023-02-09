@@ -40,8 +40,8 @@ Der benutzerdefinierte Zähler kann auch für führende Nullen auf die gleiche W
 **%COUNTER_CUSTOMTEXT#N%**
 
 **%COUNTER_CUSTOMTEXT#3%** würde zu 001 führen.
-<!---Todo: Fixme--->
-Zusätzlich gibt es eine [Experteneinstellung](/display/de/Experteneinstellungen). Hier kann der Benutzer den Zähler bei Bedarf auf einen bestimmten Wert setzen.  
+
+Zusätzlich gibt es eine [Experteneinstellung](../administration/systemeinstellungen/experteneinstellungen.md). Hier kann der Benutzer den Zähler bei Bedarf auf einen bestimmten Wert setzen.  
 Setzt man den Wert auf z.B. 1000 wird dieser Wert.
 
 [![Benutzerdefinierter-Zähler](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)

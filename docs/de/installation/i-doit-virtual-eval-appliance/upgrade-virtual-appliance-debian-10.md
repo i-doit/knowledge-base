@@ -1,11 +1,11 @@
 # Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 10 "Buster"
 Neben der Wartung von i-doit sollte auch die Pflege des darunter liegenden Betriebssystems nicht außer Acht gelassen werden. Wir beschreiben das Upgrade von[Debian GNU/Linux](../manuelle-installation/debian.md) in Version 9 "Stretch" auf 10 "Buster". In einigen Schritten ist die[i-doit Eval Virtual Appliance](index.md)auf dem neuesten Stand.
-<!---Todo: Fixme--->
+
 !!! info "Warum ein Upgrade?"
 
     Warum lohnt sich die Mühe, das Betriebssystem auf den neusten Stand anzuheben? Es gibt sehr gute Gründe:
 
-    1.  Die IT-Dokumentation beinhaltet [sensible Daten, die zu schützen sind](fixme). Dies kann nur gewährleistet werden, wenn alle Systemkomponenten auf einem aktuellen Stand sind.
+    1.  Die IT-Dokumentation beinhaltet [sensible Daten, die zu schützen sind](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md). Dies kann nur gewährleistet werden, wenn alle Systemkomponenten auf einem aktuellen Stand sind.
     2.  Der Wechsel von PHP 7.0 auf 7.3 bringt einen messbaren Performance-Schub.
 
 Voraussetzungen
@@ -24,10 +24,10 @@ Einige Dinge müssen vor dem Upgrade bedacht werden:
 
 Tipps
 -----
-<!---Todo: Fixme--->
+
 Weiterhin sollte vor einem Upgrade Folgendes bedacht werden:
 
-*   [Backups](https://kb.i-doit.com/display/de/Daten+sichern+und+wiederherstellen) sollten vorhanden sein.
+*   [Backups](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) sollten vorhanden sein.
 *   Benutzer von i-doit sollten vor der Downtime informiert werden.
 *   Automatismen, Cronjobs und externe Zugriffe sollten für die Dauer des Upgrades gestoppt werden.
 

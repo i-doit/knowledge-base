@@ -14,8 +14,8 @@ Spalten lassen sich über einen Klick auf die Spaltenüberschriften auf- oder ab
 Per Drag'n'Drop zieht man das Objekt zum gewünschten Objekttypen im linken Menübaum, der **Objektsicht**.
 
 [![objekt-liste-3](../../assets/images/de/grundlagen/objekt-listen/3-ol.gif)](../../assets/images/de/grundlagen/objekt-listen/3-ol.gif)
-<!---Todo: Fixme--->
-Dazu muss die [Allgemeine Konfiguration](https://kb.i-doit.com/display/de/CMDB+Einstellungen#CMDBEinstellungen-AllgemeineEinstellungen) Drag 'n' Drop von Objekten auf Ja stehen.
+
+Dazu muss die [Allgemeine Konfiguration](../../administration/verwaltung/cmdb-einstellungen.md) Drag 'n' Drop von Objekten auf Ja stehen.
 
 Welche weiteren Funktionen und Anpassungen für die Objekt-Liste genutzt werden können, verraten folgende Artikel:
 

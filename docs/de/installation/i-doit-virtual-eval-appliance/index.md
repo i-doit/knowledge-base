@@ -34,17 +34,17 @@ Die IP-Adresse kann über die Konsole konfiguriert werden (siehe weiter unten).
 
 Zugangsdaten
 ------------
-<!---Todo: Fixme--->
+
 | Tool | Benutzername | Passwort |
 | --- | --- | --- |
 | i-doit Web GUI | **admin** | **admin** |
 | i-doit Web GUI | **controller** | **controller** |
-| [i-doit Admin-Center](/display/de/Admin+Center) | **admin** | **idoit** |
+| [i-doit Admin-Center](../../administration/admin-center.md) | **admin** | **idoit** |
 | SSH | **idoitadm** | **idoit** |
 | MySQL (i-doit) | **idoit** | **idoit** |
 | MySQL (Systemuser) | **root** | **idoit** |
 
-Weiterhin existieren [die vordefinierten Personen- und Personengruppen](/display/de/Erstanmeldung) in i-doit.
+Weiterhin existieren [die vordefinierten Personen- und Personengruppen](../../grundlagen/erstanmeldung.md) in i-doit.
 
 Konfiguration
 -------------
@@ -52,7 +52,7 @@ Konfiguration
 Die Konfiguration der Appliance kann auf der Konsole erledigt werden. Nach dem Anmelden via SSH erscheint ein Menü:
 
 [![Appliance-Konfiguration](../../assets/images/de/installation/virtual-appliance/import/appliance_menu.png)](../../assets/images/de/installation/virtual-appliance/import/appliance_menu.png)
-<!---Todo: Fixme--->
+
 | Shortcut | Menüpunkt | Funktion |
 | --- | --- | --- |
 | **1** | **Configure networking** | Netzwerkanbindung festlegen; die Netzwerkkonfiguration ist per Default auf DHCP gesetzt. |
@@ -61,7 +61,7 @@ Die Konfiguration der Appliance kann auf der Konsole erledigt werden. Nach dem A
 | **4** | **Timezone** | Zeitzone einstellen |
 | **5** | **Keyboard layout** | Tastatur-Belegung; de ist als Standard definiert |
 | **6** | **Change idoitadm user password** | Passwort vom User **idoitadm** ändern |
-| **7** | **i-doit scripting configuration  <br>** | Einstellungen für CLI, [Cron Jobs](/display/de/Cronjobs+einrichten), [Backups und Restore](/display/de/Daten+sichern+und+wiederherstellen) ändern |
+| **7** | **i-doit scripting configuration  <br>** | Einstellungen für CLI, [Cron Jobs](../../wartung-und-betrieb/cronjobs-einrichten.md), [Backups und Restore](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) ändern |
 | **8** | **Reboot system** | System neustarten |
 | **9** | **Shutdown system** | System herunterfahren |
 | **0** | **Launch shell** | Shell öffnen für weitere Aktionen |
@@ -81,7 +81,7 @@ Die Appliance verfügt über diverse Scripte und Cronjobs.
 
 Die Scripte befinden sich unter **/usr/local/bin/**.
 
-Unter **/etc/cron.d/i-doit** existieren vorkonfigurierte [Cronjobs](/display/de/CLI), die das System regelmäßig optimieren.
+Unter **/etc/cron.d/i-doit** existieren vorkonfigurierte [Cronjobs](../../automatisierung-und-integration/cli/index.md), die das System regelmäßig optimieren.
 
 Jede Nacht werden die Daten von i-doit lokal gesichert. Der Speicherzeitraum beträgt eine Woche.
 
@@ -101,12 +101,12 @@ Wo ist was zu finden?
 
 Nachbereitung
 -------------
-<!---Todo: Fixme--->
-Die Appliance stellt eine "nackte" Installation von i-doit pro zur Verfügung. Das bedeutet, es sind weder Demodaten, noch zusätzliche [i-doit pro Add-ons](/display/de/i-doit+pro+Add-ons) enthalten.
 
-Beim ersten Anmelden fragt i-doit nach einer gültigen [Lizenz](/display/de/Lizenz+aktivieren), die eingespielt werden muss, damit alle Funktionen zur Verfügung stehen.
+Die Appliance stellt eine "nackte" Installation von i-doit pro zur Verfügung. Das bedeutet, es sind weder Demodaten, noch zusätzliche [i-doit pro Add-ons](../../i-doit-pro-add-ons/index.md) enthalten.
 
-Weitere erste Schritte mit i-doit sind ebenfalls in der Knowledge Base unter [Grundlagen](/display/de/Grundlagen) beschrieben.
+Beim ersten Anmelden fragt i-doit nach einer gültigen [Lizenz](../../wartung-und-betrieb/lizenz-aktivieren.md), die eingespielt werden muss, damit alle Funktionen zur Verfügung stehen.
+
+Weitere erste Schritte mit i-doit sind ebenfalls in der Knowledge Base unter [Grundlagen](../../grundlagen/index.md) beschrieben.
 
 Troubleshooting
 ---------------
@@ -136,7 +136,7 @@ Troubleshooting
     Nach dem Speichern muss der Hash-Wert (SHA1) der geänderten Datei in der Datei **i-doit Eval Appliance 1.x.x i-doit 1.x.x.mf** aktualisiert werden. Unter GNU/Linux kann der Befehl **sha1sum** verwendet werden:
 
         sha1sum i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf
-<!---Todo: Fixme--->
+
 !!! attention "VSphere < 6.5.0"
 
     Unsere Virtual Appliance wird aus Sicherheitsgründen mit einem SHA265 Hash verschlüsselt.  

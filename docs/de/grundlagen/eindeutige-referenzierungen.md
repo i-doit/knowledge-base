@@ -1,10 +1,10 @@
 # Eindeutige Referenzierungen
 
 Referenzierungen sind wichtig, um innerhalb der [IT-Dokumentation](../glossar.md) Eindeutigkeiten zu schaffen. Sollen beispielsweise [Objekte](struktur-it-dokumentation.md) für Drittsysteme referenziert werden, bieten sich verschiedene [Attribute](struktur-it-dokumentation.md) an.
-<!---Todo: Fixme--->
+
 !!! info "Datenimporte"
 
-    Um bereits bestehende Daten zu erkennen, existieren für die [Datenimporte](/display/de/Daten+konsolidieren) entsprechende Strategien. Diese beziehen sich größtenteils auf die nachfolgend erwähnten Attribute. Details sind den jeweiligen Artikeln zu entnehmen.
+    Um bereits bestehende Daten zu erkennen, existieren für die [Datenimporte](../daten-konsolidieren/index.md) entsprechende Strategien. Diese beziehen sich größtenteils auf die nachfolgend erwähnten Attribute. Details sind den jeweiligen Artikeln zu entnehmen.
 
 Objekt-ID
 ---------
@@ -42,10 +42,10 @@ Objekt-Titel
 Jedes Objekt erhält zwingend einen Titel. Dieser wird als Attribut in der Kategorie **Allgemein** dokumentiert. Synonym wird dieses Attribut auch **Bezeichnung**, **Name**, **Objekt-Link** genannt.
 
 [![objekt-titel](../assets/images/de/grundlagen/eindeutige-referenzierungen/4-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/4-er.png)
-<!---Todo: Fixme--->
+
 !!! success "Objekt-Titel automatisch vergeben"
 
-    Objekt-Titel können automatisch vergeben werden. Besonders hilfreich ist dies bei [Templates](/display/de/Templates):
+    Objekt-Titel können automatisch vergeben werden. Besonders hilfreich ist dies bei [Templates](../effizientes-dokumentieren/templates.md):
 
     1.  Template erzeugen
     2.  Als Objekt-Titel die zur Verfügung stehenden Platzhalter nutzen und speichern
@@ -56,8 +56,8 @@ IP-Adresse
 ----------
 
 Pro Objekt können beliebig viele IP-Adressen vergeben werden. Dies geschieht in der Kategorie **Hostadresse**. Für jede IP-Adresse wird ein Kategorie-Eintrag erzeugt.
-<!---Todo: Fixme--->
-IP-Adressen sind per se nicht eindeutig. Beispielsweise kehren dieselben Adressen bei privaten Netzbereichen wieder und wieder (192.168.1.1 etc.). Werden in i-doit [**Layer-3-Netze**](/pages/viewpage.action?pageId=23068674) mit überlappenden Netzbereichen dokumentiert, kommt es häufig zu Objekten mit nicht-eindeutigen IP-Adressen. Durch Techniken wie DHCP wird es umso schwerer, Objekte anhand dynamisch vergebener IP-Adressen zu identifizieren. Daher ist dieses Attribut für eindeutige Referenzierungen oftmals **nicht geeignet**.
+
+IP-Adressen sind per se nicht eindeutig. Beispielsweise kehren dieselben Adressen bei privaten Netzbereichen wieder und wieder (192.168.1.1 etc.). Werden in i-doit [**Layer-3-Netze**](../anwendungsfaelle/ip-adress-management.md) mit überlappenden Netzbereichen dokumentiert, kommt es häufig zu Objekten mit nicht-eindeutigen IP-Adressen. Durch Techniken wie DHCP wird es umso schwerer, Objekte anhand dynamisch vergebener IP-Adressen zu identifizieren. Daher ist dieses Attribut für eindeutige Referenzierungen oftmals **nicht geeignet**.
 
 Hostname und FQDN
 -----------------
@@ -83,15 +83,15 @@ Die Inventarisierung von Eigentümern erfolgt meist Organisations-übergreifend,
 Wenn Inventarnummern automatisch generiert werden sollen, kann dies unter **Verwaltung → CMDB Einstellungen → Objekttyp-Konfiguration → [Objekttypgruppe] → [Objekttyp]** konfiguriert werden. Hierbei stehen verschiedene Platzhalter zur Verfügung, um ein Namensschema pro Objekttyp zu erzeugen.
 
 [![inventarnummer](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)
-<!---Todo: Fixme--->
+
 !!! success "Labels"
 
-    Inventarnummern lassen sich ideal mit QR-Codes zu einem Label verbinden. QR-Codes werden von i-doit pro Objekt generiert. Solche Labels lassen sich beispielsweise mit dem [i-doit QR-Code Printer](/display/de/i-doit+QR-Code+Printer) ausdrucken.
+    Inventarnummern lassen sich ideal mit QR-Codes zu einem Label verbinden. QR-Codes werden von i-doit pro Objekt generiert. Solche Labels lassen sich beispielsweise mit dem [i-doit QR-Code Printer](../i-doit-pro-add-ons/i-doit-qr-code-printer.md) ausdrucken.
 
 Identifier von Dritt-Systemen
 -----------------------------
-<!---Todo: Fixme--->
-Daten aus Dritt-Systemen, beispielsweise aus den Bereichen Inventory/Discovery, können in i-doit [importiert](/display/de/Daten+konsolidieren) werden. Solche Systeme verfügen meist ebenfalls über eindeutige Identifier o. ä. Werden diese Identifier importiert, kann dazu die Kategorie **Data Source** genutzt werden. Auf diese Art können mehrere eingesetzte Systeme aufeinander abgestimmt werden, sodass Objekte auf sämtlichen Systemen eindeutig referenziert werden können.
+
+Daten aus Dritt-Systemen, beispielsweise aus den Bereichen Inventory/Discovery, können in i-doit [importiert](../daten-konsolidieren/index.md) werden. Solche Systeme verfügen meist ebenfalls über eindeutige Identifier o. ä. Werden diese Identifier importiert, kann dazu die Kategorie **Data Source** genutzt werden. Auf diese Art können mehrere eingesetzte Systeme aufeinander abgestimmt werden, sodass Objekte auf sämtlichen Systemen eindeutig referenziert werden können.
 
 [![identifier](../assets/images/de/grundlagen/eindeutige-referenzierungen/8-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/8-er.png)
 

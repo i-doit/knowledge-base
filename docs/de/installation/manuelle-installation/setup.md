@@ -8,8 +8,8 @@ In einem Verzeichnis, auf das der Apache Webserver Zugriff hat, entpackt man das
 
 Installationspaket herunterladen und entpacken
 ----------------------------------------------
-<!---Todo: Fixme--->
-Das Installationspaket der pro-Variante ist für alle Kunden im [Kundenportal](/display/de/Kundenportal) erreichbar, das der open-Variante unter [i-doit.org](https://i-doit.org/). Dieses Paket wird auf den vorbereiteten Server kopiert, entpackt und die Dateien sowie Verzeichnisse mit den passenden Rechten versehen. Diese Anweisungen unterscheiden sich je nach Betriebssystem.
+
+Das Installationspaket der pro-Variante ist für alle Kunden im [Kundenportal](../../administration/kundenportal.md) erreichbar, das der open-Variante unter [i-doit.org](https://i-doit.org/). Dieses Paket wird auf den vorbereiteten Server kopiert, entpackt und die Dateien sowie Verzeichnisse mit den passenden Rechten versehen. Diese Anweisungen unterscheiden sich je nach Betriebssystem.
 
 ### Debian GNU/Linux oder Ubuntu Linux
 
@@ -114,8 +114,8 @@ Für die Datenbank-Anbindung sind wichtige Credentials und Einstellungen einzutr
     Dieser Tipp bezieht sich auf Unix-artige Betriebssysteme. Windows ist davon ausgenommen.
 
 #### Framework Configuration
-<!---Todo: Fixme--->
-Für den Zugang zum **[Admin-Center](/display/de/Admin+Center)** in i-doit gibt es gesonderte Credentials, die hier festgelegt werden können. Es wird empfohlen, dies auch zu tun.
+
+Für den Zugang zum **[Admin-Center](../../administration/admin-center.md)** in i-doit gibt es gesonderte Credentials, die hier festgelegt werden können. Es wird empfohlen, dies auch zu tun.
 
 [![framework-configuration](../../assets/images/de/installation/setup/i-doit_setup_04_framework_configuration.png)](../../assets/images/de/installation/setup/i-doit_setup_04_framework_configuration.png)
 
@@ -128,8 +128,8 @@ In diesem Schritt werden alle vorherigen Schritte zusammengefasst und überprüf
 In diesem Schritt geschieht die eigentliche Installation von i-doit auf dem System. Nach erfolgreicher Installation folgt eine Zusammenfassung. Danach kann i-doit aufgerufen und verwendet werden.
 
 ### Konsole
-<!---Todo: Fixme--->
-Über die Konsole lässt sich i-doit über die mitgelieferte [console.php](/display/de/Console) installieren: durch einen geführten Assistenten oder durch eine einfache Zeile, die sich für automatisierte Installationen eignet. Beide Arten führt man innerhalb des **i-doit**\-Verzeichnisses durch:
+
+Über die Konsole lässt sich i-doit über die mitgelieferte [console.php](../../automatisierung-und-integration/cli/console/index.md) installieren: durch einen geführten Assistenten oder durch eine einfache Zeile, die sich für automatisierte Installationen eignet. Beide Arten führt man innerhalb des **i-doit**\-Verzeichnisses durch:
 
 
 cd /var/www/html/i-doit/
@@ -143,8 +143,8 @@ Die Optionen orientieren sich am Setup über die Web GUI.
     sudo -u www-data php console.php install
 
 Der Assistent fragt einige Credentials und Einstellungen ab. In Klammern angegebene Werte sind Standardwerte, die durch Druck auf **Enter** übernommen werden.  
-<!---Todo: Fixme--->
-Anschließend kann ein [Mandant](/pages/viewpage.action?pageId=36864089) über das [Admin Center](/display/de/Admin+Center) oder über die [console.php](/display/de/Console) erstellt werden.
+
+Anschließend kann ein [Mandant](../../administration/mandantenfaehigkeit.md) über das [Admin Center](../../administration/admin-center.md) oder über die [console.php](../../automatisierung-und-integration/cli/console/index.md) erstellt werden.
 
 
 sudo -u www-data php console.php create-tenant
@@ -153,16 +153,16 @@ sudo -u www-data php console.php create-tenant
 
 
 sudo -u www-data php console.php install --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --admin-password admincenterpw --no-interaction
-<!---Todo: Fixme--->
-Nun wurde i-doit installiert. Wir benötigen noch einen [Mandant](/pages/viewpage.action?pageId=36864089). Diesen erstellen wir auch über die [console.php](/display/de/Console):
+
+Nun wurde i-doit installiert. Wir benötigen noch einen [Mandant](../../administration/mandantenfaehigkeit.md). Diesen erstellen wir auch über die [console.php](../../automatisierung-und-integration/cli/console/index.md):
 
 
     sudo -u www-data php console.php tenant-create --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --admin-password admincenterpw --no-interaction
 
 Weitere Schritte
 ----------------
-<!---Todo: Fixme--->
-*   [Lizenz herunterladen und einspielen](/display/de/Lizenz+aktivieren)
-*   [Backup einrichten](/display/de/Daten+sichern+und+wiederherstellen)
-*   [Cronjobs einrichten](/display/de/Cronjobs+einrichten)
-*   [Erstanmeldung](/display/de/Erstanmeldung)
+
+*   [Lizenz herunterladen und einspielen](../../wartung-und-betrieb/lizenz-aktivieren.md)
+*   [Backup einrichten](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
+*   [Cronjobs einrichten](../../wartung-und-betrieb/cronjobs-einrichten.md)
+*   [Erstanmeldung](../../grundlagen/erstanmeldung.md)

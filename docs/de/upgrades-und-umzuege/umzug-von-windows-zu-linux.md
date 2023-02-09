@@ -8,8 +8,8 @@ Vorbereitungen und Annahmen
 Bevor es los geht, sollten ein paar Dinge beachtet werden. Ziel soll sein, ohne lange Downtime und vor allem ohne Datenverlust den Umzug zu wagen.
 
 Jeder, der mit den Daten von i-doit arbeitet, sollte rechtzeitig über den Umzug informiert werden. Nichts ist schlimmer als wütende Kollegen, deren Arbeit unterbrochen wurde.
-<!---Todo: Fixme--->
-Zudem sollte identifiziert werden, welche Schnittstellen von i-doit genutzt werden. Konkret: Welche Drittsysteme wie [Nagios](/display/de/Nagios), [OTRS](/display/de/Service+Desk) & [Co.](/display/de/Daten+konsolidieren) greifen aufi-doit zu? Während des Umzugs sollte der Datenzugriff abgeschaltet werden. Ähnliches gilt für laufende [Tasks](/display/de/CLI), [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) und das Monitoring, welches überwacht, dass auf dem Windows-System auf Port 80/443 ein laufender Webserver HTTP-Anfragen beantwortet.
+
+Zudem sollte identifiziert werden, welche Schnittstellen von i-doit genutzt werden. Konkret: Welche Drittsysteme wie [Nagios](../automatisierung-und-integration/network-monitoring/nagios.md), [OTRS](../automatisierung-und-integration/service-desk/otrs-help-desk.md) & [Co.](../daten-konsolidieren/index.md) greifen aufi-doit zu? Während des Umzugs sollte der Datenzugriff abgeschaltet werden. Ähnliches gilt für laufende [Tasks](../automatisierung-und-integration/cli/index.md), [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) und das Monitoring, welches überwacht, dass auf dem Windows-System auf Port 80/443 ein laufender Webserver HTTP-Anfragen beantwortet.
 
 Wir nehmen an, unter Windows wird ein nicht bis minimal angepasstes XAMP verwendet, beispielsweise eine neuere Version von den [Apache Friends](https://www.apachefriends.org/). Über diese Distribution wird der Apache Webserver, das DBMS MySQL oder MariaDB und die Scriptsprache PHP auf dem System installiert. Im Folgenden sprechen wir nur noch von MySQL, auch wenn MariaDB zum Einsatz kommt. Wenn Änderungen an der Konfiguration vorgenommen worden sind, sollten diese eventuell auch auf dem neuen System bedacht werden.
 
@@ -38,12 +38,12 @@ Daten nach GNU/Linux umziehen
 Nachdem wir sowohl die ZIP-Datei mit dem i-doit-Verzeichnis als auch die SQL-Datei mit den Datenbankinhalten auf den neuen Server kopiert haben (gute Dienste leistet hier [WinSCP](http://winscp.net/eng/docs/lang:de)), verbinden wir uns via SSH (beispielsweise via [Putty](http://www.putty.org/)) und agieren fortan auf der Kommandozeile. Der Apache Webserver, MySQL und PHP sind fertig konfiguriert und alle benötigten Pakete sind ordnungsgemäß [installiert](/display/de/Installation). Fehlt nur noch i-doit:
 
 ### Datenbank
-<!---Todo: Fixme--->
+
 1.  Wir importieren die Datenbank. Hierzu rufen wir den MySQL-Client auf:
     
         mysql -uroot -p < i-doit.sql
     
-    ###### Wenn beim einspielen der Datenbank diese Fehlermeldung erscheint "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". Ist die Lösung dazu [HIER](https://kb.i-doit.com/pages/viewpage.action?pageId=97288438) zu finden.
+    ###### Wenn beim einspielen der Datenbank diese Fehlermeldung erscheint "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". Ist die Lösung dazu [HIER](../administration/troubleshooting/cant-create-table.md) zu finden.
     
       
     

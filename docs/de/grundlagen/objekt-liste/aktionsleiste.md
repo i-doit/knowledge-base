@@ -8,24 +8,24 @@ Objekt erstellen
 ----------------
 
 Beim Erstellen eines neuen Objekts stehen verschiedene Optionen zur Verfügung:
-<!---Todo: Fixme--->
+
 *   **Neu** oder **Neues Objekt** erstellen ein neues Objekt, das über Formulare editiert werden kann
 *   **Neues Objekt aus Template** wechselt zum Dialog, um aus einer [Vorlage](/display/de/Templates) ein oder mehrere Objekte zu erstellen
-*   **Neues Template erzeugen** ist ähnlich zum ersten Punkt, allerdings wird der [Zustand](../lebens-und-dokumentationszyklus.md) **Template** vorausgewählt, sodass nach dem Speichern aus dem Objekt eine [Vorlage](/display/de/Templates) wird.
+*   **Neues Template erzeugen** ist ähnlich zum ersten Punkt, allerdings wird der [Zustand](../lebens-und-dokumentationszyklus.md) **Template** vorausgewählt, sodass nach dem Speichern aus dem Objekt eine [Vorlage](../../effizientes-dokumentieren/templates.md) wird.
 
 [![objekt-editieren](../../assets/images/de/grundlagen/aktionsleiste/2-al.png)](../../assets/images/de/grundlagen/aktionsleiste/2-al.png)
 
 Objekt editieren
 ----------------
-<!---Todo: Fixme--->
-Um ein Objekt zu editieren, wählt man das zu editierende Objekt über die jeweilige Checkbox aus und klickt auf den Button **Editieren**. Werden mehrere Objekte ausgewählt, startet die [Listeneditierung](/display/de/Listeneditierung).
+
+Um ein Objekt zu editieren, wählt man das zu editierende Objekt über die jeweilige Checkbox aus und klickt auf den Button **Editieren**. Werden mehrere Objekte ausgewählt, startet die [Listeneditierung](../../effizientes-dokumentieren/listeneditierung.md).
 
 [![objekt-duplizieren](../../assets/images/de/grundlagen/aktionsleiste/3-al.png)](../../assets/images/de/grundlagen/aktionsleiste/3-al.png)
 
 Objekt duplizieren
 ------------------
-<!---Todo: Fixme--->
-Um ein [Objekt mit seinen Attributen zu kopieren](/display/de/Objekte+duplizieren), wird der Button **Duplizieren** verwendet.
+
+Um ein [Objekt mit seinen Attributen zu kopieren](../../effizientes-dokumentieren/objekte-duplizieren.md), wird der Button **Duplizieren** verwendet.
 
 Objekt archivieren, als gelöscht markieren, wiederherstellen oder unwiderruflich löschen
 ----------------------------------------------------------------------------------------
@@ -48,8 +48,8 @@ Druckansicht
 
 Objekt-Liste als CSV-Datei exportieren
 --------------------------------------
-<!---Todo: Fixme--->
-Die angezeigte Objekt-Liste lässt sich über den Button **Als CSV exportieren** [im CSV-Format als Datei herunterladen](/display/de/CSV-Datenexport) und mit Dritt-Applikationen weiterverarbeiten.
+
+Die angezeigte Objekt-Liste lässt sich über den Button **Als CSV exportieren** [im CSV-Format als Datei herunterladen](../../daten-konsolidieren/csv-datenexport.md) und mit Dritt-Applikationen weiterverarbeiten.
 
 Link zu dieser Seite
 --------------------

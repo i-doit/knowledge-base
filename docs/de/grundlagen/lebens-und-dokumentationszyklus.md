@@ -39,10 +39,10 @@ Um den gesamten Lebenszyklus eines Objekts abzubilden, wird pro [Objekt](../glos
 ### CMDB-Status verwalten
 
 Das Hinzufügen, Ändern oder Löschen eines **CMDB-Status** erfolgt über **Verwaltung → CMDB Einstellungen → CMDB-Status**. Pro **CMDB-Status** werden folgende Angaben benötigt:
-<!---Todo: Fixme--->
-*   Eindeutige Bezeichnung bzw. [Sprachkonstante (zur Übersetzung)](/pages/viewpage.action?pageId=37781507)
-*   Eindeutige Konstante (beispielsweise für die Nutzung der [API](/pages/viewpage.action?pageId=7831613) hilfreich)
-*   Farbe (wird in Objektlisten, der **Allgemein**\-Kategorie, im [**CMDB-Explorer**](/display/de/CMDB-Explorer) und an vielen anderen Stellen verwendet)
+
+*   Eindeutige Bezeichnung bzw. [Sprachkonstante (zur Übersetzung)](../administration/mehrsprachigkeit-und-uebersetzungen.md)
+*   Eindeutige Konstante (beispielsweise für die Nutzung der [API](../i-doit-pro-add-ons/api/index.md) hilfreich)
+*   Farbe (wird in Objektlisten, der **Allgemein**\-Kategorie, im [**CMDB-Explorer**](../auswertungen/cmdb-explorer/index.md) und an vielen anderen Stellen verwendet)
 
 [![cmdb-status-verwalten](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)
 
@@ -66,10 +66,10 @@ So gut wie alle Dokumentations-Artefakte (Objekte, Kategorie-Einträge, Werte i
 Der Zyklus sieht vor, dass jedes Dokumentations-Artefakt den Zustand **Normal** erhält. Später folgt **Archiviert**, danach **Gelöscht**. Eine Wiederherstellung in den vorherigen Zustand ist jederzeit möglich.
 
 Neben diesen drei Zuständen existieren bei Objekten Sonderfälle:
-<!---Todo: Fixme--->
+
 *   **Unfertig**: Wird ein neues Objekt erstellt, aber nicht gespeichert, erhält es diesen Zustand. Dies passiert beispielsweise, wenn ein Objekt zwar neu angelegt, aber der Button **Speichern** nicht gedrückt wird. Diese Objekte lassen sich nur über einen Report aufspüren und dann weiter verwenden. Daher sollten diese regelmäßig gelöscht werden. Dies kann über **Verwaltung → Systemtools → Cache / Datenbank → Unfertige Objekte entfernen***gemacht werden. Alternativ kann dies auch automatisch geschehen. Mehr dazu finden Sie weiter unten in diesem Artikel.
-*   **Template**: Ein Objekt kann als [Vorlage](/display/de/Templates) für weitere Objekte fungieren.
-*   **Änderungsvorlage**: Ein Objekt kann als Änderungsvorlage für die [Massenänderung](/pages/viewpage.action?pageId=20250697) fungieren.
+*   **Template**: Ein Objekt kann als [Vorlage](../effizientes-dokumentieren/templates.md) für weitere Objekte fungieren.
+*   **Änderungsvorlage**: Ein Objekt kann als Änderungsvorlage für die [Massenänderung](../effizientes-dokumentieren/massenaenderung.md) fungieren.
 
 Soll ein Dokumentations-Artefakt unwiderruflich gelöscht werden, folgt nach der Markierung als **Gelöscht** die Funktion **Purge**. Dies ist allerdings kein Zustand, denn alle Daten (auch der bisherige Zustand und jegliche Logbuch-Einträge) gehen dabei verloren, sodass nicht mehr nachvollzogen werden kann, dass dieses Objekt jemals existiert hat. Diese Funktion sollte also mit Bedacht verwendet werden.
 
@@ -94,8 +94,8 @@ Eine ähnliche Funktionalität wie bei Objekten existiert bei manchen [Listen-Ka
 Soll ein Dokumentations-Artefakt unwiderruflich gelöscht werden, muss es zuvor erst archiviert und dann als gelöscht markiert werden. Um diesen Zyklus abzukürzen, bietet sich an, den Button **Quickpurge** zu aktivieren. Dies geschieht unter **Verwaltung → Systemeinstellungen → System Parameters → Quickpurge-Button aktivieren**. Auf diese Weise kann ein Objekt oder ein Kategorie-Eintrag unabhängig vom Zustand unwiderruflich gelöscht werden.
 
 ### Auflisten aller archivierten oder als gelöscht markierten Objekte
-<!---Todo: Fixme--->
-Um eine Liste mit allen archivierten oder als gelöscht markierten Objekte zu erhalten, bietet sich ein [Report](/display/de/Report+Manager) an, der über den Abfrage-Editor zusammengestellt werden kann.
+
+Um eine Liste mit allen archivierten oder als gelöscht markierten Objekte zu erhalten, bietet sich ein [Report](../auswertungen/report-manager.md) an, der über den Abfrage-Editor zusammengestellt werden kann.
 
 ### Unfertige/archivierte/gelöscht markierte Objekte oder Kategorie-Einträge gesammelt löschen (Purge)
 
@@ -106,8 +106,8 @@ Fast immer sind unfertige Objekte unerwünscht, denn sie sind nicht sichtbar und
 Über die Web GUI lassen sich diese Artefakte löschen. Die entsprechende Funktionalität befindet sich unter **Verwaltung → Systemtools → Cache / Datenbank → Objekte** bzw. **Kategorien**. Nach dem Drücken eines der angebotenen Buttons wird eine Meldung mit der Anzahl der zu löschenden Objekte oder Kategorie-Einträge angezeigt und nach dem Löschen am unteren Ende der Seite eine Statistik angezeigt, wie viele Objekte bzw. Kategorie-Einträge gelöscht wurden.
 
 #### Automatisches Löschen
-<!---Todo: Fixme--->
-Die i-doit [Console](/display/de/Console) bietet ebenfalls eine Möglichkeit, gewisse unerwünschte Objekte unwiderruflich zu löschen.  Ein Beispiel für einen Aufruf sowie die möglichen Parameter können im [dazugehörigen Artikel](/display/de/Optionen+und+Parameter+der+Console) für die Option **system-objectcleanup** eingesehen werden.
+
+Die i-doit [Console](../automatisierung-und-integration/cli/index.md) bietet ebenfalls eine Möglichkeit, gewisse unerwünschte Objekte unwiderruflich zu löschen.  Ein Beispiel für einen Aufruf sowie die möglichen Parameter können im [dazugehörigen Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) für die Option **system-objectcleanup** eingesehen werden.
 
     sudo -u www-data console.php system-objectcleanup -u admin -p admin -i 1 --objectStatus 3
 

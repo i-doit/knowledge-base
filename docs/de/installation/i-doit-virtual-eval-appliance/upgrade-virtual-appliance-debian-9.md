@@ -1,11 +1,11 @@
 # Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 9 "Stretch"
 Neben der Wartung von i-doit sollte auch die Pflege des darunter liegenden Betriebssystems nicht außer Acht gelassen werden. Wir beschreiben das Upgrade von [Debian GNU/Linux](../manuelle-installation/debian.md) in Version 8 "Jessie" auf 9 "Stretch". In einigen Schritten ist die [i-doit Eval Virtual Appliance](index.md) auf dem neuesten Stand.
-<!---Todo: Fixme--->
+
 !!! info "Warum ein Upgrade?"
 
     Warum lohnt sich die Mühe, das Betriebssystem auf den neusten Stand anzuheben? Es gibt sehr gute Gründe:
-        1.  Die IT-Dokumentation beinhaltet [sensible Daten, die zu schützen sind](/display/de/Sicherheit+und+Schutz). Dies kann nur gewährleistet werden, wenn alle Systemkomponenten auf einem aktuellen Stand sind.
-    2.  Der Wechsel von PHP 5.6 auf 7.0 bringt einen messbaren Performance-Schub.
+        1.  Die IT-Dokumentation beinhaltet [sensible Daten, die zu schützen sind](../../wartung-und-betrieb/sicherheit-und-schutz.md). Dies kann nur gewährleistet werden, wenn alle Systemkomponenten auf einem aktuellen Stand sind.
+    1.  Der Wechsel von PHP 5.6 auf 7.0 bringt einen messbaren Performance-Schub.
 
 Voraussetzungen
 ---------------
@@ -18,10 +18,10 @@ Einige Dinge müssen vor dem Upgrade bedacht werden:
 
 Tipps
 -----
-<!---Todo: Fixme--->
+
 Weiterhin sollte vor einem Upgrade Folgendes bedacht werden:
 
-*   [Backups](/display/de/Daten+sichern+und+wiederherstellen) sollten vorhanden sein.
+*   [Backups](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) sollten vorhanden sein.
 *   Benutzer von i-doit sollten vor der Downtime informiert werden.
 *   Automatismen, Cronjobs und externe Zugriffe sollten für die Dauer des Upgrades gestoppt werden.
 
@@ -30,7 +30,7 @@ Viele weitere [Hinweise zum Upgrade des Betriebssystems](https://www.debian.org/
 Upgrade vorbereiten
 -------------------
 
-Wir verbinden uns via SSH und rufen im Menü den Punkt **`0 Launch Shell`** auf.
+Wir verbinden uns via SSH und rufen im Menü den Punkt **0 Launch Shell** auf.
 
 Anschließend führen wir Updates durch:
 
@@ -66,7 +66,7 @@ Folgende Zeile wird am Ende ergänzt:
 
     deb http://mirrors.kernel.org/debian stretch main contrib
 
-Alle vorherigen Zeilen werden auskommentiert. Hierbei wird jeder Zeile ein **`#`** vorangestellt.
+Alle vorherigen Zeilen werden auskommentiert. Hierbei wird jeder Zeile ein **#** vorangestellt.
 
 Anschließend werden die Paketquellen aktualisiert und ein Update der Pakete durchgeführt:
 
@@ -131,7 +131,7 @@ Weiterhin:
 Inhalt:
 
     #!/bin/bash
-    echo "                                         `/bin/hostname -I`"
+    echo "                                         /bin/hostname -I"
 
 Und zu guter Letzt die Versions-Nummer der Appliance:
 

@@ -11,8 +11,8 @@ Die Konfiguration der jeweiligen Objekt-liste wird über den Button [![systemein
 
 Attribute auswählen
 -------------------
-<!---Todo: Fixme--->
-Ähnlich wie beim [Report Manager](/display/de/Report+Manager) werden über die Auswahl der Kategorie und dem dort enthaltenen Attribut die Spalten definiert.
+
+Ähnlich wie beim [Report Manager](../../auswertungen/report-manager.md) werden über die Auswahl der Kategorie und dem dort enthaltenen Attribut die Spalten definiert.
 
 Zuerst wird eine [globale, spezifische](../struktur-it-dokumentation.md) oder [benutzerdefinierte](../benutzerdefinierte-kategorien.md) Kategorie im Drop-Down-Menü ausgewählt. Über ein Textfeld lässt sich die Liste der Kategorien filtern.
 
@@ -97,5 +97,5 @@ Speichern der Konfiguration
 
 Rechte zum Bearbeiten der Listenansicht
 ---------------------------------------
-<!---Todo: Fixme--->
-Die [Rechteverwaltung](/pages/viewpage.action?pageId=42303548) erlaubt das Vergeben von Rechten, welche Person oder Personengruppe die Listenansicht konfigurieren und anderen Benutzern vorgeben darf.
+
+Die [Rechteverwaltung](../../effizientes-dokumentieren/rechteverwaltung/cmdb.md) erlaubt das Vergeben von Rechten, welche Person oder Personengruppe die Listenansicht konfigurieren und anderen Benutzern vorgeben darf.

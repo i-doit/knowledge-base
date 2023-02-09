@@ -19,8 +19,8 @@ Weiterhin muss die Kategorie mit einem oder mehreren [Objekttypen](struktur-it-d
 Danach muss festgelegt werden, ob es sich um eine [Single-](struktur-it-dokumentation.md) oder [Multi-Value-Kategorie](struktur-it-dokumentation.md) (Listen-Kategorie) handeln soll. Wenn Attribute gepflegt werden soll, die in ihrer Kombination eindeutig sind, ist die Konfiguration als Single-Value-Kategorie ausreichend. Sollen jedoch die Werte mehrfach gepflegt werden, so ist eine Multi-Value-Kategorie die richtige Wahl. Auf diese Weise ist es möglich, mehrfache Einträge in einer Kategorie zu speichern.
 
 [![benutzerdefinierte-kategorien-4](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/4-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/4-bk.png)
-<!---Todo: Fixme--->
-Um auf die Kategorie bei Abfragen (zum Beispiel in selbst geschriebenen [Reports](/display/de/Report+Manager)) zugreifen zu können, sollte außerdem eine Konstante hinterlegt werden. Diese Konstante wird beim Erstellen der Kategorie automatisch vorgeschlagen und darf geändert werden.
+
+Um auf die Kategorie bei Abfragen (zum Beispiel in selbst geschriebenen [Reports](../auswertungen/report-manager.md)) zugreifen zu können, sollte außerdem eine Konstante hinterlegt werden. Diese Konstante wird beim Erstellen der Kategorie automatisch vorgeschlagen und darf geändert werden.
 
 [![benutzerdefinierte-kategorien-5](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/5-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/5-bk.png)
 
@@ -88,14 +88,14 @@ Die Reihenfolge der erstellten Attribute kann über die schraffierten Flächen a
 Über den Button **Entfernen** können Attribute gelöscht werden.
 
 [![benutzerdefinierte-kategorien-7](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/7-bk.gif)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/7-bk.gif)
-<!---Todo: Fixme--->
+
 !!! attention "Achtung!"
 
     Sobald die Kategorie in Verwendung ist, ist das Ändern von bestehenden Feldtypen nicht mehr möglich, um Datenverlust zu vermeiden.
 
     Sollten Felder in der Konfiguration entfernt werden, kann man auf deren Inhalte nicht mehr zugreifen.
 
-    Anschließend müssen die Attribute über die [Systemtools](/display/de/Systemtools) neu indiziert werden.
+    Anschließend müssen die Attribute über die [Systemtools](../administration/verwaltung/systemtools.md) neu indiziert werden.
 
 Unterhalb der Konfiguration erfolgt eine Auswertung:
 
@@ -108,7 +108,7 @@ Sobald deine Kategorie konfiguriert und ausgeprägt wurde, kannst du die Schaltf
 
 Technische Konfiguration
 ------------------------
-<!---Todo: Fixme--->
-Um die benutzerdefinierte Kategorie über die [API](/pages/viewpage.action?pageId=7831613) nutzen zu können, hilft die technische Konfiguration. Diese ist über den Button **Technische Konfiguration anzeigen** erreichbar.
+
+Um die benutzerdefinierte Kategorie über die [API](../i-doit-pro-add-ons/api/index.md) nutzen zu können, hilft die technische Konfiguration. Diese ist über den Button **Technische Konfiguration anzeigen** erreichbar.
 
 [![benutzerdefinierte-kategorien-9](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/9-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/9-bk.png)
