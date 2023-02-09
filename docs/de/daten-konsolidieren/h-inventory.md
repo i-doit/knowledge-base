@@ -12,17 +12,17 @@ Vor einem Import muss i-doit entsprechend konfiguriert werden.
 
 ## Konfiguration
 
-Für einen manuellen Datenimport befindet sich die Konfiguration unter `**Verwaltung → Schnittstellen / externe Daten → Import → H-Inventory → Konfiguration**`. Dort wird lediglich im Parameter `**Objekt-Matching Profil**` angegeben, [wie bereits dokumentierte Objekte identifiziert werden sollen](objekt-identifizieren-bei-importen.md). Identifizierte Objekte werden beim Datenimport aktualisiert.
+Für einen manuellen Datenimport befindet sich die Konfiguration unter **Verwaltung → Schnittstellen / externe Daten → Import → H-Inventory → Konfiguration**. Dort wird lediglich im Parameter **Objekt-Matching Profil** angegeben, [wie bereits dokumentierte Objekte identifiziert werden sollen](objekt-identifizieren-bei-importen.md). Identifizierte Objekte werden beim Datenimport aktualisiert.
 
 ## Inventarisierung eines Microsoft Windows Clients via H-Inventory
 
-Download des H-Inventory Pakets von **`i-doit → Extras → Import → Scripts`**
+Download des H-Inventory Pakets von **i-doit → Extras → Import → Scripts**
 
 [![XML Import](../assets/images/de/daten-konsolidieren/h-inventory/1-hinv.jpg)](../assets/images/de/daten-konsolidieren/h-inventory/1-hinv.jpg)
 
 Archiv entpacken.
-Zu scannende IP-Adresse(n) in **`computer.txt`** eintragen **`scan.bat`** ausführen.
-Nach erfolgreicher Abarbeitung des Scripts befindet sich der Export in der Datei „**`computername-xx.xml`**“ im selben Verzeichnis.
+Zu scannende IP-Adresse(n) in **computer.txt** eintragen **scan.bat** ausführen.
+Nach erfolgreicher Abarbeitung des Scripts befindet sich der Export in der Datei „**computername-xx.xml**“ im selben Verzeichnis.
 
 ## Grafischer Import eines H-Inventory Exports
 
@@ -35,4 +35,4 @@ Nach erfolgreicher Abarbeitung des Scripts befindet sich der Export in der Datei
 
 ## Import eines H-Inventory Exports per Console
 
-Neben der Möglichkeit, die XML-Datei über die i-doit Oberfläche hochzuladen und die Informationen zu importieren, kann dieser Vorgang auch automatisiert werden. Hierzu wird die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) verwendet. Bevor der Import ausgeführt werden kann, muss sichergestellt werden, dass die XML-Datei dem System verfügbar ist. Hierfür muss die XML-Datei in das i-doit Verzeichnis **`imports`** kopiert oder direkt dort abgelegt werden. Anschließend lässt sich der Import über die Console starten. Eine Beschreibung der möglichen Parameter und ein Beispielaufruf sind im [entsprechenden Artikel](../automatisierung-und-integration/cli/console/index.md#commands) für den Command import-hinventory zu finden.
+Neben der Möglichkeit, die XML-Datei über die i-doit Oberfläche hochzuladen und die Informationen zu importieren, kann dieser Vorgang auch automatisiert werden. Hierzu wird die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) verwendet. Bevor der Import ausgeführt werden kann, muss sichergestellt werden, dass die XML-Datei dem System verfügbar ist. Hierfür muss die XML-Datei in das i-doit Verzeichnis **imports** kopiert oder direkt dort abgelegt werden. Anschließend lässt sich der Import über die Console starten. Eine Beschreibung der möglichen Parameter und ein Beispielaufruf sind im [entsprechenden Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#import-hinventory) für den Command import-hinventory zu finden.

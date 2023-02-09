@@ -41,7 +41,7 @@ Bevor das Mapping zwischen Tabellenspalten und Attributen in i-doit stattfinden 
 
 ### Objekttyp
 
-Wenn man im Drown-Down-Menü unter **Globaler Objekttyp** einen [Objekttypen](/display/de/Struktur+der+IT-Dokumentation) auswählt, werden alle Objekte der .csv\-Datei als dieser Objekttyp importiert. Wird kein globaler Objekttyp definiert, wird ein zusätzliches Feld in der .csv\-Datei zur Angabe der [Datenbank-Konstante](/display/de/Struktur+der+IT-Dokumentation) benötigt. Pro Zeile wird dadurch der jeweilige Objekttyp festgelegt, dem das Objekt zugehörig sein soll. Auf diesem Weg ist es möglich, Objekte aus verschiedenen Objekttypen (Client, Drucker, Monitore, ...) über eine Datei zu importieren. Diese Angabe muss für alle Objekte gepflegt werden, wenn kein globaler Objekttyp verwendet wird. Eine Mischform ist nicht möglich.
+Wenn man im Drown-Down-Menü unter **Globaler Objekttyp** einen [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) auswählt, werden alle Objekte der .csv\-Datei als dieser Objekttyp importiert. Wird kein globaler Objekttyp definiert, wird ein zusätzliches Feld in der .csv\-Datei zur Angabe der [Datenbank-Konstante](../../grundlagen/struktur-it-dokumentation.md) benötigt. Pro Zeile wird dadurch der jeweilige Objekttyp festgelegt, dem das Objekt zugehörig sein soll. Auf diesem Weg ist es möglich, Objekte aus verschiedenen Objekttypen (Client, Drucker, Monitore, ...) über eine Datei zu importieren. Diese Angabe muss für alle Objekte gepflegt werden, wenn kein globaler Objekttyp verwendet wird. Eine Mischform ist nicht möglich.
 
 ### Trennzeichen, Überschriften und Default-Template berücksichtigen
 
@@ -49,7 +49,7 @@ Solltest du ein anderes **Trennzeichen** anstelle des Semikolons (;) verwenden, 
 
 Falls du keine Überschriften-Zeile nutzt, kannst du die Überschriften-Zeile deaktivieren, sodass die erste Zeile der .csv\-Datei als das erste Objekt interpretiert wird.
 
-Die Objekte werden mit den Daten aus dem [default Template](../../) angelegt.
+Die Objekte werden mit den Daten aus dem [default Template](../../effizientes-dokumentieren/templates.md) angelegt.
 
 ### Leerwerte
 
@@ -60,9 +60,9 @@ Sollen durch den CSV-Datenimport bestehende Objekte aktualisiert werden, kann mi
 
 ### Umgang mit Einträgen in Listen-Kategorien (Multi-Value)
 
-Weiterhin ist anzugeben, in welcher Form [Listen-Kategorien](/display/de/Struktur+der+IT-Dokumentation) (Multi-Value) in der .csv\-Datei vorzufinden sind. Falls keine Kategorien dieser Art vom Datenimport berührt werden, können die folgenden Optionen ignoriert werden.
+Weiterhin ist anzugeben, in welcher Form [Listen-Kategorien](../../grundlagen/struktur-it-dokumentation.md) (Multi-Value) in der .csv\-Datei vorzufinden sind. Falls keine Kategorien dieser Art vom Datenimport berührt werden, können die folgenden Optionen ignoriert werden.
 
-Bei dem Beispiel (siehe oben) fällt auf, dass "Client 02" mehrfach auftaucht. Da dieser Client über zwei CPUs verfügt, sollen in der Listen-Kategorie **CPU** zwei Einträge (einer pro CPU) erzeugt werden. Durch die Verwendung einer weiteren **Zeile** erhält das Objekt daher die beiden Einträge in der Kategorie **CPU**. Es ist nicht notwendig, gleichbleibende [Attribute](/display/de/Glossar) in den weiteren Zeilen des Objekts erneut anzugeben. Somit musst du also nicht die Inventarnummer "ABCD-2000" erneut angeben.
+Bei dem Beispiel (siehe oben) fällt auf, dass "Client 02" mehrfach auftaucht. Da dieser Client über zwei CPUs verfügt, sollen in der Listen-Kategorie **CPU** zwei Einträge (einer pro CPU) erzeugt werden. Durch die Verwendung einer weiteren **Zeile** erhält das Objekt daher die beiden Einträge in der Kategorie **CPU**. Es ist nicht notwendig, gleichbleibende [Attribute](../../glossar.md) in den weiteren Zeilen des Objekts erneut anzugeben. Somit musst du also nicht die Inventarnummer "ABCD-2000" erneut angeben.
 
 Alternativ ist es dir auch möglich, die einzelnen Einträge aus Listen-Kategorien entweder in einer **Spalte** zu hinterlegen oder in einer Zelle, als **Komma-separierte** Liste.
 
@@ -76,7 +76,7 @@ Sind bereits Kategorie-Einträge vorhanden, stehen weitere Optionen zur Verfügu
 
 ## Identifizierungsmerkmale festlegen
 
-Sobald die Optionen festgelegt sind, kann das Mapping beginnen. Zunächst kann ein [**Objekt-Matching Profil**](/display/de/Objekte+identifizieren+bei+Importen) ausgewählt werden, falls bestehende Objekte aktualisiert werden sollen. Dieses Profil kann nachträglich bearbeitet werden.
+Sobald die Optionen festgelegt sind, kann das Mapping beginnen. Zunächst kann ein [**Objekt-Matching Profil**](../objekt-identifizieren-bei-importen.md) ausgewählt werden, falls bestehende Objekte aktualisiert werden sollen. Dieses Profil kann nachträglich bearbeitet werden.
 
 [![Objekte identifizieren](../../assets/images/de/daten-konsolidieren/csv-import/6-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/6-csvi.png)
 
@@ -98,7 +98,7 @@ Existiert bereits ein passendes Profil, kann es ohne Angabe eines Namens übersc
 
 ## Datenimport starten
 
-Den Detailgrad des Loggings des CSV-Datenimports kann unterhalb des Mappings festlegt werden. Je umfangreicher das Logging, desto höher die Dauer und der Ressourcenbedarf des Datenimports. Für mögliches [Troubleshooting](/display/de/Troubleshooting) ist das Loggen von Debug-Meldungen sehr hilfreich.
+Den Detailgrad des Loggings des CSV-Datenimports kann unterhalb des Mappings festlegt werden. Je umfangreicher das Logging, desto höher die Dauer und der Ressourcenbedarf des Datenimports. Für mögliches [Troubleshooting](../../administration/troubleshooting/index.md) ist das Loggen von Debug-Meldungen sehr hilfreich.
 
 Über den Button **Importieren** unterhalb des Mappings wird der Datenimport gestartet. Die Dauer des Datenimports ist abhängig von Umfang der zu importierenden Informationen sowie dem ausgewählten Level des Loggings.
 
@@ -109,7 +109,7 @@ Nachdem der Import abgeschlossen wurde, werden die Informationen zum Import sowi
 
 ## Import von Beziehungen (Verknüpfen von Objekten)
 
-Der CSV-Datenimport ist in der Lage, Verknüpfungen von Objekten ([Beziehungen](/display/de/Objekt-Beziehungen)) zu erzeugen, wenn diese über eine Kategorie gepflegt werden. Das zu verknüpfende Objekt kann ebenfalls in einer Spalte der .csv\-Datei hinterlegt und das Feld zur Verknüpfung als zuzuweisendes Attribut angeben werden. Ein Beispiel zur Angabe des physikalischen Standorts in Spalte H:
+Der CSV-Datenimport ist in der Lage, Verknüpfungen von Objekten ([Beziehungen](../../grundlagen/objekt-beziehungen.md)) zu erzeugen, wenn diese über eine Kategorie gepflegt werden. Das zu verknüpfende Objekt kann ebenfalls in einer Spalte der .csv\-Datei hinterlegt und das Feld zur Verknüpfung als zuzuweisendes Attribut angeben werden. Ein Beispiel zur Angabe des physikalischen Standorts in Spalte H:
 
 [![Verknüpfen von Beziehungen](../../assets/images/de/daten-konsolidieren/csv-import/9-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/9-csvi.png)
 
@@ -132,4 +132,4 @@ Einige Attribute beinhalten aus Werten und Einheiten. In den jeweiligen Formular
 
 ## CSV-Dateien über die i-doit Console importieren
 
-Der Import von CSV-Dateien ist nicht nur manuell über die Benutzeroberfläche möglich, sondern kann auch mit der i-doit [Console](/display/de/Console) umgesetzt werden. Dies erlaubt die Automatisierung des Imports, mit dem regelmäßig Informationen aktualisiert werden können. Eine Beschreibung aller Parameter ist im [entsprechenden Artikel](/display/de/Optionen+und+Parameter+der+Console) inklusive eines Beispiels unter der Option **import-csv** zu finden. Weiterhin kann die ID eines zuvor erstellten Import-Profils im Aufruf angegeben werden. Diese IDs lassen sich mit der Option **import-csvprofiles** auslesen. Die Verwendung dieser Option ist ebenfalls im genannten Artikel beschrieben.
+Der Import von CSV-Dateien ist nicht nur manuell über die Benutzeroberfläche möglich, sondern kann auch mit der i-doit [Console](../../automatisierung-und-integration/cli/console/index.md) umgesetzt werden. Dies erlaubt die Automatisierung des Imports, mit dem regelmäßig Informationen aktualisiert werden können. Eine Beschreibung aller Parameter ist im [entsprechenden Artikel](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#import-csv) inklusive eines Beispiels unter der Option **import-csv** zu finden. Weiterhin kann die ID eines zuvor erstellten Import-Profils im Aufruf angegeben werden. Diese IDs lassen sich mit der Option **import-csvprofiles** auslesen. Die Verwendung dieser Option ist ebenfalls im genannten Artikel beschrieben.

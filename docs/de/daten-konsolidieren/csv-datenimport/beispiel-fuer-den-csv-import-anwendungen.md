@@ -36,18 +36,18 @@ Bei diesem Import werden keine Abhängigkeiten vorausgesetzt. Da wir neue Anwend
 
 Für den Import begeben wir uns wieder in den CSV Import Bereich. Die Einstellungen im oberen Bereich bleiben auf den Standard Einstellungen und wir klicken auf Mapping vorbereiten.
 
-[![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/1-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/)
+[![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/1-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/1-csva.png)
 
 Jetzt können wir im unteren Bereich die Import Konfiguratio]n wie folgt vornehmen, und danach den Import Vorgang starten:
 
-[![CSV Zuweisung]](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/)
+[![CSV Zuweisung](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/2-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/2-csva.png)
 
 Sollten wir alles richtig gemacht haben, erscheinen nun die einzelnen Anwendungen in der Listenansicht.
 
-[![Anwedungs Objekte](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/)
+[![Anwedungs Objekte](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/3-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/3-csva.png)
 
 Außerdem sind die Kategorien `Anwendungen → Varianten` und `Version` gefüllt.
 
-[![Anwendung Varianten](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/)
+[![Anwendung Varianten](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/4-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/4-csva.png)
 
-[![Awendung Versionen](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/)
+[![Awendung Versionen](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/5-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/5-csva.png)

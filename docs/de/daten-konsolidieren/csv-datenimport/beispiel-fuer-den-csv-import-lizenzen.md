@@ -28,7 +28,7 @@ Und das Numerische Format: X.XXX,XX (9.999,99) da wir allerdings Multi-Values Ko
 
 Beispiel CSV Datei für diesen Import:
 
-![Import Lizenzen.csv](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/Import-Lizenzen.csv)
+[Import Lizenzen.csv](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/Import-Lizenzen.csv)
 
 ??? example "Import Lizenzen.csv"
     Objekttyp;ObjektName;Lizenzzuweisung: Lizenzschlüssel - Lizenz Typ;Lizenzzuweisung: Lizenzschlüssel - Anzahl;Lizenzzuweisung: Lizenzschlüssel - Schlüssel;Lizenzzuweisung: Lizenzschlüssel - Seriennummer;Lizenzzuweisung: Lizenzschlüssel - Startdatum;Lizenzzuweisung: Lizenzschlüssel - Ablaufdatum;Lizenzzuweisung: Lizenzschlüssel - Einzelpreis
