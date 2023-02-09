@@ -4,8 +4,8 @@ i-doit ist [installiert](../installation/manuelle-installation/index.md) und der
 
 Standard-Benutzer und -Gruppen
 ------------------------------
-<!---Todo: Fixme--->
-Für die Anmeldung gibt es einige Standard-Benutzer, die Standard-Gruppen zugewiesen sind und somit vordefinierte [Rechte](/display/de/Rechteverwaltung) besitzen:
+
+Für die Anmeldung gibt es einige Standard-Benutzer, die Standard-Gruppen zugewiesen sind und somit vordefinierte [Rechte](../effizientes-dokumentieren/rechteverwaltung/index.md) besitzen:
 
 | Benutzer | Passwort | Gruppe | Rechte (oberflächlich) |
 | --- | --- | --- | --- |
@@ -26,15 +26,15 @@ Aus den oben genannten Standard-Benutzern wählt man bestenfalls den Benutzer **
 
 Weitere Benutzer und Gruppen hinzufügen
 ---------------------------------------
-<!---Todo: Fixme--->
-Jeder Benutzer in i-doit ist ein [Objekt](struktur-it-dokumentation.md) vom Typ **Personen**. Es ist _dringend zu empfehlen_ nach dem ersten Login eine [LDAP-Kopplung](/pages/viewpage.action?pageId=9666615) oder weitere lokale Benutzer einzurichten _und_ den Login der oben genannten Benutzer zu ändern. Hierfür werden in der [Objekttypgruppe](struktur-it-dokumentation.md) **Kontakte** unter dem [Objekttyp](struktur-it-dokumentation.md) **Personen** der jeweilige Benutzer ausgewählt und in der Kategorie **Personen → Login** die Zugangsdaten geändert. Alternativ können die **Personen**\-Objekte [archiviert](lebens-und-dokumentationszyklus.md) werden. Dadurch wird der Login dieser Benutzer verweigert.
+
+Jeder Benutzer in i-doit ist ein [Objekt](struktur-it-dokumentation.md) vom Typ **Personen**. Es ist _dringend zu empfehlen_ nach dem ersten Login eine [LDAP-Kopplung](../automatisierung-und-integration/ldap-verzeichnis/index.md) oder weitere lokale Benutzer einzurichten _und_ den Login der oben genannten Benutzer zu ändern. Hierfür werden in der [Objekttypgruppe](struktur-it-dokumentation.md) **Kontakte** unter dem [Objekttyp](struktur-it-dokumentation.md) **Personen** der jeweilige Benutzer ausgewählt und in der Kategorie **Personen → Login** die Zugangsdaten geändert. Alternativ können die **Personen**\-Objekte [archiviert](lebens-und-dokumentationszyklus.md) werden. Dadurch wird der Login dieser Benutzer verweigert.
 
 [![Benutzer-und-Gruppen](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)
 
-<!---Todo: Fixme--->
+
 !!! success "Lokaler Administrator"
 
-    Auch wenn ein [LDAP-Verzeichnisserver oder ein Active Directory (AD)](/pages/viewpage.action?pageId=9666615) zum Einsatz kommt, bietet es sich an, trotzdem einen lokalen Benutzer mit allen Rechten anzulegen. Falls nämlich der externe Dienst nicht erreichbar sein sollte, kann man sich immer noch mit dem lokalen Benutzer anmelden.
+    Auch wenn ein [LDAP-Verzeichnisserver oder ein Active Directory (AD)](../automatisierung-und-integration/ldap-verzeichnis/index.md) zum Einsatz kommt, bietet es sich an, trotzdem einen lokalen Benutzer mit allen Rechten anzulegen. Falls nämlich der externe Dienst nicht erreichbar sein sollte, kann man sich immer noch mit dem lokalen Benutzer anmelden.
 
 Begrüßungstext
 --------------

@@ -1,6 +1,6 @@
 # Cronjobs einrichten
-<!---Todo: Fixme--->
-Viele Aufgaben können in i-doit durch das CLI Tool [Controller](/display/de/CLI) automatisiert werden. Dies machen wir uns zu Nutze, um die IT-Dokumentation regelmäßig zu warten.
+
+Viele Aufgaben können in i-doit durch das CLI Tool [Controller](../automatisierung-und-integration/cli/index.md) automatisiert werden. Dies machen wir uns zu Nutze, um die IT-Dokumentation regelmäßig zu warten.
 
 !!! info "Einrichten ja oder nein?"
 
@@ -225,14 +225,14 @@ Ab dann kann es von jedem User verwendet werden:
     idoit-jobs
 
 Wird das Script ausgeführt werden folgende Arbeiten erledigt:
-<!---Todo: Fixme--->
+
 *   Datei-Caches im **temp/**\-Verzeichnis werden geleert.
 *   Nicht mehr benötigte [Update-Pakete](update-einspielen.md) werden gelöscht.
-*   Ältere [Logbuch](/display/de/Logbuch)\-Einträge werden archiviert.
-*   Der Cache für [Benutzerrechte](/display/de/Rechteverwaltung) wird neu aufgebaut.
-*   ["Unfertige" Objekte](/display/de/Lebens-+und+Dokumentationszyklus) werden unwiderruflich gelöscht.
-*   Der [Suchindex](/display/de/Suche) wird neu aufgebaut.
-*   [Benachrichtigungen](/display/de/Benachrichtigungen) werden per E-Mail versendet.  
+*   Ältere [Logbuch](../grundlagen/logbuch.md)\-Einträge werden archiviert.
+*   Der Cache für [Benutzerrechte](../effizientes-dokumentieren/rechteverwaltung/index.md) wird neu aufgebaut.
+*   ["Unfertige" Objekte](../grundlagen/lebens-und-dokumentationszyklus.md) werden unwiderruflich gelöscht.
+*   Der [Suchindex](../effizientes-dokumentieren/suche.md) wird neu aufgebaut.
+*   [Benachrichtigungen](../auswertungen/benachrichtigungen.md) werden per E-Mail versendet.  
     
 
 Aufruf der Jobs automatisieren

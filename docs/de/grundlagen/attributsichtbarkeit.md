@@ -1,6 +1,6 @@
 # Attributsichtbarkeit
-<!---Todo: Fixme--->
-Die Sichtbarkeit von [Attributen](attributfelder.md) kann ab i-doit [Version 1.19](/display/de/Release+Notes+1.19) in den [CMDB Einstellungen](/display/de/CMDB+Einstellungen) konfiguriert werden.  
+
+Die Sichtbarkeit von [Attributen](attributfelder.md) kann ab i-doit [Version 1.19](../versionshistorie/release-notes/release-notes-1.19.md) in den [CMDB Einstellungen](../administration/verwaltung/cmdb-einstellungen.md) konfiguriert werden.  
 Es ist damit möglich bestimmte Attribute in [Kategorien](kategorien-und-attribute.md) oder/und auf der [Übersichtsseite von Objekttypen](objekttypen.md) auszublenden.
 
 Die konfigurierte Sichtbarkeit wird für alle Benutzer übernommen.
@@ -9,8 +9,8 @@ Die konfigurierte Sichtbarkeit wird für alle Benutzer übernommen.
 
 Rechte setzen
 -------------
-<!---Todo: Fixme--->
-[Die Rechte](/display/de/Rechtesystem) zur Ansicht und zum Bearbeiten der Attributsichtbarkeit kann pro Benutzer(-gruppe) vergeben werden. So ist es beispielsweise möglich und oft auch ratsam, dass nur bestimmte Benutzergruppen Attribute ausblenden können.
+
+[Die Rechte](../administration/verwaltung/rechtesystem.md) zur Ansicht und zum Bearbeiten der Attributsichtbarkeit kann pro Benutzer(-gruppe) vergeben werden. So ist es beispielsweise möglich und oft auch ratsam, dass nur bestimmte Benutzergruppen Attribute ausblenden können.
 
 [![rechte-setzen](../assets/images/de/grundlagen/attributsichtbarkeit/2-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/2-as.png)
 

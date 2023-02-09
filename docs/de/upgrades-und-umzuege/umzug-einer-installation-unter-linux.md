@@ -6,8 +6,8 @@ Vorbereitungen und Annahmen
 ---------------------------
 
 Es sind ein paar Dinge zu beachten, um einen möglichst reibungslosen Umzug zu gewährleisten:
-<!---Todo: Fixme--->
-1.  i-doit und optional installierte [i-doit pro Add-ons](/display/de/i-doit+pro+Add-ons) sollten auf einem [aktuellen Stand](../wartung-und-betrieb/update-einspielen.md) sein.
+
+1.  i-doit und optional installierte [i-doit pro Add-ons](../i-doit-pro-add-ons/index.md) sollten auf einem [aktuellen Stand](../wartung-und-betrieb/update-einspielen.md) sein.
 2.  Wir verändern das alte System nicht, um im Fall der Fälle schnell wieder in den Ursprungszustand zurückkehren zu können.
 3.  Die gezeigten Befehle passen zu einem aktuellen [Debian GNU/Linux](../installation/manuelle-installation/debian.md) und sollten an die entsprechende Umgebung angepasst werden. Blindes Ausführen der Befehle sollten vermieden werden.
 
@@ -24,10 +24,10 @@ Altes System außer Betrieb nehmen
 ---------------------------------
 
 Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwendet werden:
-<!---Todo: Fixme--->
+
 1.  Downtimes sind nervig – vor allem unerwartete. Die Benutzer von i-doit sollten vorab informiert worden sein, dass die Installation umzieht und in welchem Zeitraum sie nicht erreichbar ist.
 2.  [Automatisierte Zugriffe von Drittsystemen](/display/de/Automatisierung+und+Integration) sollten deaktiviert werden.
-3.  [Cronjobs](/display/de/CLI) sollten ebenfalls deaktiviert werden. Hierzu reicht es meist, die Befehlszeilen auszukommentieren.
+3.  [Cronjobs](../automatisierung-und-integration/cli/index.md) sollten ebenfalls deaktiviert werden. Hierzu reicht es meist, die Befehlszeilen auszukommentieren.
 4.  Nach Sicherstellung der obigen Punkte sollte der Apache Webserver gestoppt werden:
     
         sudo systemctl stop apache2.service
@@ -60,13 +60,13 @@ Dateien und Verzeichnisse umziehen
 
 Datenbanken umziehen
 --------------------
-<!---Todo: Fixme--->
-1.  i-doit benötigt mindestens 2 [Datenbanken](/display/de/Datenbank-Modell). Von jeder einzelnen sollte auf dem alten System ein Dump erstellt werden:
+
+1.  i-doit benötigt mindestens 2 [Datenbanken](../software-entwicklung/datenbank-modell/index.md). Von jeder einzelnen sollte auf dem alten System ein Dump erstellt werden:
     
         mysqldump -uroot -p idoit_system > /tmp/idoit_system.sql
         mysqldump -uroot -p idoit_data > /tmp/idoit_data.sql
-    <!---Todo: Fixme--->
-    ###### Wenn beim einspielen der Datenbank diese Fehlermeldung erscheint "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". Ist die Lösung dazu [HIER](https://kb.i-doit.com/pages/viewpage.action?pageId=97288438) zu finden.
+
+    ###### Wenn beim einspielen der Datenbank diese Fehlermeldung erscheint "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". Ist die Lösung dazu [HIER](../administration/troubleshooting/cant-create-table.md) zu finden.
     
 2.  Diese Dumps kopieren wir auf das neue System:
         

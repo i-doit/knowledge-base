@@ -21,7 +21,7 @@ Hierbei müssen die [Systemvoraussetzungen](../systemvoraussetzungen.md) der jew
 Es müssen mindestens die Komponenten **Apache**, **MySQL** und **PHP** installiert werden.  
 [![Installation](../../assets/images/de/installation/windows/schritt-1-installation.png)](../../assets/images/de/installation/windows/schritt-1-installation.png)
 
-Als Ordner wird der Standard belassen → **`C:\xampp`**
+Als Ordner wird der Standard belassen → **C:\xampp**
 
 [![Installationspfad](../../assets/images/de/installation/windows/schritt-1-installation-pfad.png)](../../assets/images/de/installation/windows/schritt-1-installation-pfad.png)
 
@@ -29,11 +29,11 @@ Dann wählen wir noch die Sprache aus, ich belasse diese bei **English**.
 
 [![Installationssprache](../../assets/images/de/installation/windows/schritt-1-installation-sprache.png)](../../assets/images/de/installation/windows/schritt-1-installation-sprache.png)
 
-Die nächsten **`Next >`** Buttons sollten selbsterklärend sein.
+Die nächsten **Next >** Buttons sollten selbsterklärend sein.
 
 [![Installations abschließen](../../assets/images/de/installation/windows/schritt-1-installation-fertig.png)](../../assets/images/de/installation/windows/schritt-1-installation-fertig.png)
 
-Somit wäre die Installations nun abgeschlossen und wir lassen mit Klick auf `Finish` das Control Panel von XAMPP starten.
+Somit wäre die Installations nun abgeschlossen und wir lassen mit Klick auf Finish das Control Panel von XAMPP starten.
 
 [![Installation-control-panel](../../assets/images/de/installation/windows/schritt-1-installation-control-panel.png)](../../assets/images/de/installation/windows/schritt-1-installation-control-panel.png)
 
@@ -70,8 +70,8 @@ Im Normalfall sollte die Datei automatisch mit dem Editor geöffnet werden. Wir 
     session.gc_maxlifetime = 604800
     session.cookie_lifetime = 0
 
-_Zusätzlich kann es für die LDAP Extension notwendig sein, die Datei **`libsasl.dll`**von **`C:\xampp\php\`** nach `**C:**``**\xampp\apache\bin**` zu kopieren.  
-Außerdem muss in der php.ini unter Dynamic Extensions die `;extension=ldap` und `;extension=gd` vom anführenden Semikolon befreit werden._
+_Zusätzlich kann es für die LDAP Extension notwendig sein, die Datei **libsasl.dll**von **C:\xampp\php\** nach **C:****\xampp\apache\bin** zu kopieren.  
+Außerdem muss in der php.ini unter Dynamic Extensions die ;extension=ldap und ;extension=gd vom anführenden Semikolon befreit werden._
 
 #### Apache Webserver
 
@@ -159,8 +159,8 @@ Nun ändern wir das Passwort, '_thisistotallysecure!!11_' sollte durch ein eige
 ### Schritt 4: i-doit herunterladen und entpacken
 
 #### i-doit Herunterladen und Entpacken
-<!---Todo: Fixme--->
-Nun laden wir uns i-doit in der aktuellsten Version aus dem [Kundenportal](/display/de/Kundenportal) herunter.  
+
+Nun laden wir uns i-doit in der aktuellsten Version aus dem [Kundenportal](../../administration/kundenportal.md) herunter.  
 Die idoit-1.xx.x.zip entpacken wir unter C:\\xampp\\htdocs und benennen den idoit-1.xx.x Ordner in idoit um.
 
   
@@ -168,7 +168,7 @@ Die idoit-1.xx.x.zip entpacken wir unter C:\\xampp\\htdocs und benennen den idoi
 ### Schritt 5: Überprüfen der Installation
 
 Mit der vorherigen Konfiguration haben wir den Webserver vorbereitet. Nun sollten wir, wenn wir in einem Browser die IP des Systems oder localhost aufrufen, die Willkommensseite des Apaches angezeigt bekommen.  
-Unter `PHPInfo` im Menü kann man nachprüfen, ob die in der `php.ini` eingestellten Werte richtig übernommen wurden.
+Unter PHPInfo im Menü kann man nachprüfen, ob die in der php.ini eingestellten Werte richtig übernommen wurden.
 
   
 
@@ -183,4 +183,4 @@ Das Betriebssystem ist nun vorbereitet, sodass i-doit installiert werden kann:
 Mit XAMPP "xampp-windows-x64-8.0.23-0-VS16-installer" wurde eine neue Version der PHP extension gd hinzugefügt.  
 Daher sollte die php.ini nicht durch die der PHP7.4 Version ersetzt werden.
 
-Für PHP 7.4 hieß diese noch `extension=gd2` und in PHP8.0 heißt Sie `extension=gd`.
+Für PHP 7.4 hieß diese noch extension=gd2 und in PHP8.0 heißt Sie extension=gd.

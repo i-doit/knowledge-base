@@ -243,9 +243,9 @@ Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe,
 | --- | --- | --- | --- |
 | **login.i-doit.com** | **HTTP** | **80** | Updates für i-doit und dessen Add-ons herunterladen |
 | **login.i-doit.com** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
-| **reports-ng.i-doit.org** | **HTTP** | **80** | Online Repositories (z. B. für [Reports](/display/de/Report+Manager)) |
+| **reports-ng.i-doit.org** | **HTTP** | **80** | Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md)) |
 | **reports-ng.i-doit.org** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
-| **r.i-doit.com** | **HTTP** | **80** | Online Repositories (z. B. für [Vorlagen](/display/de/Documents)) |
+| **r.i-doit.com** | **HTTP** | **80** | Online Repositories (z. B. für [Vorlagen](../i-doit-pro-add-ons/documents/index.md)) |
 | **r.i-doit.com** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
 | **news.i-doit.com** | **HTTP** | **80** | Neuigkeiten zu i-doit im Dashboard (open-Variante) |
 | **news.i-doit.com** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
@@ -257,17 +257,17 @@ Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe,
 | **lizenzen.i-doit.com** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
 
 Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss der jeweilige Zugriff ebenfalls erlaubt sein:
-<!---Todo: Fixme--->
+
 | Schnittstelle | Protokoll | Standard-Port |
 | --- | --- | --- |
-| [E-Mails senden](/display/de/Benachrichtigungen) | **SMTP** | **25/465/587** |
-| [LDAP/AD](/pages/viewpage.action?pageId=9666615) | **LDAP** | **389/636** |
-| [Livestatus](/pages/viewpage.action?pageId=57180182) | **Livestatus** | **6557** |
-| [NDOUtils/IDOUtils](/pages/viewpage.action?pageId=57180182) | **MySQL** | **3306** |
-| [OTRS Help Desk](/display/de/OTRS+Help+Desk), [Request Tracker](/pages/viewpage.action?pageId=7831603), iTop | **HTTP/HTTPS** | **80/443** |
-| [JDisc Discovery](/display/de/JDisc+Discovery) | **PostgreSQL** | **25321** |
-| [JDisc Discovery](/display/de/JDisc+Discovery) | **HTTP** | **9000** |
-| [OCS Inventory NG](/display/de/OCS+Inventory+NG) | **MySQL** | **3306** |
+| [E-Mails senden](../auswertungen/benachrichtigungen.md) | **SMTP** | **25/465/587** |
+| [LDAP/AD](../automatisierung-und-integration/ldap-verzeichnis/index.md) | **LDAP** | **389/636** |
+| [Livestatus](../automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md) | **Livestatus** | **6557** |
+| [NDOUtils/IDOUtils](../automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md) | **MySQL** | **3306** |
+| [OTRS Help Desk](../automatisierung-und-integration/service-desk/otrs-help-desk.md), [Request Tracker](../automatisierung-und-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443** |
+| [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) | **PostgreSQL** | **25321** |
+| [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) | **HTTP** | **9000** |
+| [OCS Inventory NG](../i-doit-pro-add-ons/ocs-inventory-ng.md) | **MySQL** | **3306** |
 
 ### Sicherheits-Frameworks
 
@@ -326,10 +326,10 @@ Ein i-doit wird für Testzwecke "schnell mal" aufgesetzt. Dieses "schnell mal" b
 *   MySQL-Benutzer, den i-doit für die Datenbanken einrichtet
 *   Benutzer für das Admin Center
 *   Standard-Benutzer in i-doit (admin, reader, author, editor)
-<!---Todo: Fixme--->
+
 #### MySQL-Benutzer
 --------------------------------
-Dieser Benutzer wird bereits beim [Setup](../installation/manuelle-installation/setup.md) angelegt. Das Passwort kann nachträglich mit wenigen SQL-Befehlen geändert werden. Es wird davon ausgegangen, dass der Benutzer idoit heißt und die [System-Datenbank](/display/de/Datenbank-Modell) idoit_system. Zuerst kommt die Anmeldung:
+Dieser Benutzer wird bereits beim [Setup](../installation/manuelle-installation/setup.md) angelegt. Das Passwort kann nachträglich mit wenigen SQL-Befehlen geändert werden. Es wird davon ausgegangen, dass der Benutzer idoit heißt und die [System-Datenbank](../software-entwicklung/datenbank-modell/index.md) idoit_system. Zuerst kommt die Anmeldung:
 
     mysql -uroot -p -hlocalhost
 
@@ -337,8 +337,7 @@ Anschließend folgt das ändern des Passworts:
 
     ALTER USER 'idoit'@'localhost' IDENTIFIED BY 'thisistotallysecure!!11';
 
-<!---Todo: Fixme--->
-Dieses Passwort muss auch i-doit mitgeteilt werden. Zuerst in der Systemdatenbank, damit die [Mandanten-Datenbanken](/display/de/Datenbank-Modell) erreicht werden können:
+Dieses Passwort muss auch i-doit mitgeteilt werden. Zuerst in der Systemdatenbank, damit die [Mandanten-Datenbanken](../software-entwicklung/datenbank-modell/index.md) erreicht werden können:
 
     UPDATE idoit_system.isys_mandator SET isys_mandator__db_pass = 'thisistotallysecure!!11' WHERE isys_mandator__db_user = 'idoit';
 
@@ -349,8 +348,8 @@ Und zuletzt muss das Passwort in der zentralen Konfiguration abgelegt werden, da
 Dieser Benutzer wird ebenfalls beim Setup angelegt. Anschließend kann das Passwort dort unter **Config** geändert werden. Alternativ kann die Datei src/config.inc.php bearbeitet werden.
 
 #### Standard-Benutzer in i-doit
-<!---Todo: Fixme--->
-Die Benutzer admin, reader, author und editor werden bereits beim Setup angelegt. Best Practice ist es, diese Benutzer niemals zu verwenden, sondern für jeden Benutzer ein eigenes [Personenobjekt](/display/de/Struktur+der+IT-Dokumentation) anzulegen. Die Personenobjekte für admin & Co. können nicht gelöscht, aber [archiviert](/display/de/Lebens-+und+Dokumentationszyklus) werden. Dadurch wird die Anmeldung ausgeschlossen. Wer auf den Einsatz dieser Standard-Benutzer nicht verzichten möchte, sollte deren Passwörter dringend ändern, weil sie gleichlautend mit dem Benutzernamen sind. Erledigt wird dies im jeweiligen Personenobjekt in der Kategorie **Personen → Login**.
+
+Die Benutzer admin, reader, author und editor werden bereits beim Setup angelegt. Best Practice ist es, diese Benutzer niemals zu verwenden, sondern für jeden Benutzer ein eigenes [Personenobjekt](../grundlagen/struktur-it-dokumentation.md) anzulegen. Die Personenobjekte für admin & Co. können nicht gelöscht, aber [archiviert](../grundlagen/struktur-it-dokumentation.md) werden. Dadurch wird die Anmeldung ausgeschlossen. Wer auf den Einsatz dieser Standard-Benutzer nicht verzichten möchte, sollte deren Passwörter dringend ändern, weil sie gleichlautend mit dem Benutzernamen sind. Erledigt wird dies im jeweiligen Personenobjekt in der Kategorie **Personen → Login**.
 
 #### Standard-Benutzer unter Linux
 
@@ -365,20 +364,20 @@ i-doit bringt mehrere Maßnahmen mit, um Angriffe, die unter [**Cross-Site-Reque
 ### Zwei-Faktor-Authentifizierung
 
 Die Anmeldung via Benutzernamen und -passwort wird heutzutage als nicht mehr zeitgemäß angesehen. **Zusätzliche Authentifzierungsmechanismen bringen einen Zugewinn an Sicherheit.** Wenn ein weiterer Mechanismus hinzukommt, spricht man von Zwei-Faktor-Authentifizierung, bei mehr als zweien von Mehr-Faktor-Authentifizierung. Eine gängige Art der Umsetzung ist der Einsatz eines (USB-)Tokens.
-<!---Todo: Fixme--->
-i-doit erlaubt zusätzliche Mechanismen durch den zugrunde liegenden Apache Webserver. Beispielsweise beruht die das **[Single-Sign-On-Verfahren](/pages/viewpage.action?pageId=10780674)** darauf. Dieses lässt sich dazu nutzen, weitere Mechanismen direkt im Webserver zu aktivieren und zu konfigurieren. Hier sind praktisch keine Grenzen gesetzt, solange das Verfahren i-doit über entsprechende HTTP-Header mitteilt, für welchen Benutzer die Authentifizierung erfolgreich ist.
+
+i-doit erlaubt zusätzliche Mechanismen durch den zugrunde liegenden Apache Webserver. Beispielsweise beruht die das **[Single-Sign-On-Verfahren](../automatisierung-und-integration/single-sign-on/index.md)** darauf. Dieses lässt sich dazu nutzen, weitere Mechanismen direkt im Webserver zu aktivieren und zu konfigurieren. Hier sind praktisch keine Grenzen gesetzt, solange das Verfahren i-doit über entsprechende HTTP-Header mitteilt, für welchen Benutzer die Authentifizierung erfolgreich ist.
 
 ### Monitoring und Logs
 
 Alle getätigten Maßnahmen sollten permanent überwacht werden. Bestenfalls automatisch.
-<!---Todo: Fixme--->
-Das System ist gut in einem [Network Monitoring](/display/de/Network+Monitoring) wie Nagios oder Check\_MK aufgehoben. Es gibt kaum etwas, was sich nicht damit überwachen lässt. Wichtig ist beispielsweise, das Betriebssystem und die (virtuelle) Hardware im Blick zu haben: laufende Prozesse, Speicherverbrauch, angemeldete Benutzer, verfügbare Updates usw. **Für i-doit sollten Apache, MariaDB/MySQL und der verfügbare Speicherplatz überwacht werden.**
+
+Das System ist gut in einem [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md) wie Nagios oder Check\_MK aufgehoben. Es gibt kaum etwas, was sich nicht damit überwachen lässt. Wichtig ist beispielsweise, das Betriebssystem und die (virtuelle) Hardware im Blick zu haben: laufende Prozesse, Speicherverbrauch, angemeldete Benutzer, verfügbare Updates usw. **Für i-doit sollten Apache, MariaDB/MySQL und der verfügbare Speicherplatz überwacht werden.**
 
 Neben dem Network Monitoring bieten sich noch weitere Dienste an, die **Logs überwachen**. Bevor man mit der Installation eines ausgewachsenen Log-Servers (zum Beispiel [Logstash](https://www.elastic.co/products/logstash)) beginnt, kann man erst einmal auf kleinere Tools wie [Logwatch](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-logwatch-log-analyzer-and-reporter-on-a-vps) zurückgreifen. Logwatch überwacht die Log-Dateien von Apache, SSH sowie weiteren Diensten und verschickt täglich einen gut lesbaren Report per E-Mail.
-<!---Todo: Fixme--->
-i-doit produziert ebenfalls laufend Log-Dateien. Im Installationsverzeichnis befinden sie sich unterhalb vom Verzeichnis log/. Eine (regelmäßige) Auswertung lohnt sich nicht nur bei der [Suche nach Fehlern](/display/de/Troubleshooting).
-<!---Todo: Fixme--->
-Nachdem [Cronjobs einmal eingerichtet](/display/de/CLI) worden sind, interessiert sich niemand mehr dafür. Das ist fatal, wenn beim automatischen Ausführen etwas schief geht und niemand etwas mitbekommt. Es ist demnach ratsam, die **Ausgaben von laufenden Jobs in Log-Dateien umzuleiten** und bei Bedarf E-Mails zu verschicken.
+
+i-doit produziert ebenfalls laufend Log-Dateien. Im Installationsverzeichnis befinden sie sich unterhalb vom Verzeichnis log/. Eine (regelmäßige) Auswertung lohnt sich nicht nur bei der [Suche nach Fehlern](../administration/troubleshooting/index.md).
+
+Nachdem [Cronjobs einmal eingerichtet](../automatisierung-und-integration/cli/console/index.md) worden sind, interessiert sich niemand mehr dafür. Das ist fatal, wenn beim automatischen Ausführen etwas schief geht und niemand etwas mitbekommt. Es ist demnach ratsam, die **Ausgaben von laufenden Jobs in Log-Dateien umzuleiten** und bei Bedarf E-Mails zu verschicken.
 
 Apropos E-Mail: Wenn das System E-Mails verschicken soll (wie es Logwatch täglich tut), sollte man dies vorher testen. Ein passender SMTP-Server sollte erreichbar sein. Eventuell hilft es, einen simplen Dienst wie [sSMTP](https://wiki.debian.org/sSMTP) als Relay-Server zu verwenden.
 

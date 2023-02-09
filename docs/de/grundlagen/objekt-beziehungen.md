@@ -87,8 +87,8 @@ Das Beziehungs-Objekt ist nötig, um Eigenschaften der Beziehung als [Attribute]
 Wie bereits ersichtlich besteht eine Objekt-Beziehung aus einem Master- und einem Slave-Objekt. Es handelt sich also um eine gerichtete Beziehung. Das Slave-Objekt ist abhängig vom Master-Objekt.
 
 [![beziehungsobjekt](../assets/images/de/grundlagen/objekt-beziehungen/4-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/4-ob.png)
-<!---Todo: Fixme--->
-Die Richtung der Beziehung – also welches ist Objekt Master, welches Slave – hat Auswirkungen auf den [CMDB-Explorer](/display/de/CMDB-Explorer). In der Baumansicht werden Objekt-Beziehungen entweder nach oben oder unten rekursiv aufgebaut. Im [Standard-Profil](/display/de/Profile+im+CMDB-Explorer) stehen Master-Objekte unter den Slave-Objekten.
+
+Die Richtung der Beziehung – also welches ist Objekt Master, welches Slave – hat Auswirkungen auf den [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md). In der Baumansicht werden Objekt-Beziehungen entweder nach oben oder unten rekursiv aufgebaut. Im [Standard-Profil](../auswertungen/cmdb-explorer/profile-im-cmdb-explorer.md) stehen Master-Objekte unter den Slave-Objekten.
 
 !!! info "Lizenzpflichtige Objekte"
 
@@ -122,8 +122,8 @@ Gewichtung
 Wie weiter oben bereits erwähnt, erhält jede Beziehung eine Gewichtung. Diese wird im Beziehungsobjekt als Attribut angegeben. Als Gewichtung sind Werte zwischen **1** und **10** möglich. Sie drücken aus, wie abhängig das Slave- vom Master-Objekt ist. **1** bedeutet **sehr wichtig**, **10** hingegen **unwichtig**, **5** ist die goldene Mitte mit **wichtig** und stellt den Standard dar.
 
 Beispiel: Bekommt ein nicht redundant ausgelegtes Netzteil Strom von einer USV, dann könnte die Gewichtung bei **1 (sehr wichtig)** liegen, denn ohne funktionierende USV funktioniert das Netzteil nicht. Fällt stattdessen eine Node im Web Cluster aus, übernehmen andere Nodes ihren Job. Die Abhängigkeit zu übergeordneten Services ist also nicht ganz so hart, sondern könnte zwischen **5 (wichtig)** und **10 (nicht wichtig)** liegen.
-<!---Todo: Fixme--->
-Das Analyse-Modul verwendet diese Gewichtung in Kombination mit Services und [Network Monitoring](/display/de/Network+Monitoring), um Aussagen treffen zu können, welche Services von Ausfällen betroffen sind.
+
+Das Analyse-Modul verwendet diese Gewichtung in Kombination mit Services und [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md), um Aussagen treffen zu können, welche Services von Ausfällen betroffen sind.
 
 Gleichgerichtete Beziehungen
 ----------------------------
@@ -140,8 +140,8 @@ Objekt-Beziehung in benutzerdefinierter Kategorie
 -------------------------------------------------
 
 In [benutzerdefinierten Kategorien](benutzerdefinierte-kategorien.md) können Objekt-Beziehungen dokumentiert werden. Hierbei ist zwischen zwei Feldtypen zu unterscheiden:
-<!---Todo: Fixme--->
-*   **Objekt-Browser**: Es wird kein Beziehungs-Objekt erzeugt. Die hier zu dokumentierende Beziehung zwischen zwischen zwei Objekten wird in der Kategorie Beziehungen nicht aufgelistet und der [CMDB-Explorer](/display/de/CMDB-Explorer) wertet diese Beziehung nicht aus.
+
+*   **Objekt-Browser**: Es wird kein Beziehungs-Objekt erzeugt. Die hier zu dokumentierende Beziehung zwischen zwischen zwei Objekten wird in der Kategorie Beziehungen nicht aufgelistet und der [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md) wertet diese Beziehung nicht aus.
 *   **Objekt-Beziehung**: Als **Zusatz** kann hier nur eine implizite Beziehungsart angegeben werden. Explizite Beziehungen werden hier nicht angezeigt.
 
 !!! success "Objekt-Browser oder -Beziehung?"

@@ -43,9 +43,9 @@ Pro Objekttyp existiert eine [Objektliste](objekt-liste/index.md), die alle dies
 ### Objekt
 
 Zu jedem Artefakt, das dokumentiert werden soll, muss entschieden werden, als was es gespeichert wird. Beispielsweise wird ein einzelner Server oftmals als ein zusammenhängendes Konstrukt betrachtet. In diesem Fall wird ein Server als Objekt in i-doit angelegt. Objekte sind in i-doit alle Dinge, die wir in einer IT-Dokumentation dokumentieren, gleich ob es sich um physische Geräte wie Server oder Clients oder logische Konstrukte wie Netze oder Services handelt. Ein Objekt definiert sich durch seinen Objekttyp, der bestimmt, welche Attribute für das Objekt mit Werten belegt werden kann. In ITIL© wird der Begriff "Configuration Item (CI)" verwendet. Im Asset Management ist der Begriff "Asset Value" verbreitet. Wir möchten durch den Begriff "Objekt" eine abstraktere und damit allgemeingültige sowie vielseitig verwendbare Definition etablieren.
-<!---Todo: Fixme--->
 
-In i-doit gibt es in der Standard-Installation einige Objekte, die für die korrekte Funktionsweise essentiell sind. Dazu gehören Benutzer-Objekte vom Objekttyp "Personen", weiterhin "Personengruppen" für die Rechte und "[Layer-3-Netze](/pages/viewpage.action?pageId=23068674)". Zudem gibt es nicht sichtbare Objekte, z. B. die "Root-Lokation" für Standorte. Diese lassen sich nicht löschen.
+
+In i-doit gibt es in der Standard-Installation einige Objekte, die für die korrekte Funktionsweise essentiell sind. Dazu gehören Benutzer-Objekte vom Objekttyp "Personen", weiterhin "Personengruppen" für die Rechte und "[Layer-3-Netze](../anwendungsfaelle/ip-adress-management.md)". Zudem gibt es nicht sichtbare Objekte, z. B. die "Root-Lokation" für Standorte. Diese lassen sich nicht löschen.
 
 Jedes Objekt in i-doit erhält einen Titel. Dieser wird als Attribut in der Kategorie "Allgemein" dokumentiert. Synoym wird dieses Attribut auch "Bezeichnung", "Name", "Objekt-Link" genannt.
 

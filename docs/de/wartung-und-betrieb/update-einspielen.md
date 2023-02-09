@@ -1,10 +1,10 @@
 # Update einspielen
 
 _i-doit_ sollte immer in der aktuellsten Version betrieben werden. In Minor-Releases befinden sich immer zahlreiche Bugfixes, in Major-Releases dazu dann noch neue Funktionen und Verbesserungen von bestehenden Funktionen. Minor-Releases erscheinen ungefähr alle vier Wochen, Major-Releases alle sechs Monate. Das Update kann [über die Web-Oberfläche von i-doit durchgeführt werden](#update-uber-die-web-oberflache), setzt jedoch einen Internetzugang (gegebenenfalls über einen HTTP-Proxy) voraus. Alternativ kann das Update [über die Konsole vorbereitet](#update-uber-die-konsole-vorbereiten) und anschließend über die Web-Oberfläche fortgeführt werden.
-<!---Todo: Fixme--->
+
 !!! attention "Releases überspringen"
 
-    Wenn aktuell die Version 1.13.1 installiert und schon die Version 1.13.3 verfügbar ist, wird trotzdem nur die nächsthöhere Version – also 1.13.2 – angezeigt. Allerdings können Minor-Releases grundsätzlich übersprungen werden. Dennoch werden über diesen Weg trotzdem alle Minor-Releases einzeln installiert, bis die aktuellste Version erreicht ist. Wenn du direkt auf die Version 1.13.3 springen möchtest, kannst du das neueste Paket im [Kundenportal](/display/de/Kundenportal) herunterladen und auf dem _i-doit_\-Host entpacken. Die notwendigen Schritte dafür kannst du hier im unteren Teil des Artikels finden(#Updateeinspielen-UpdateüberdieKonsolevorbereiten).
+    Wenn aktuell die Version 1.13.1 installiert und schon die Version 1.13.3 verfügbar ist, wird trotzdem nur die nächsthöhere Version – also 1.13.2 – angezeigt. Allerdings können Minor-Releases grundsätzlich übersprungen werden. Dennoch werden über diesen Weg trotzdem alle Minor-Releases einzeln installiert, bis die aktuellste Version erreicht ist. Wenn du direkt auf die Version 1.13.3 springen möchtest, kannst du das neueste Paket im [Kundenportal](../administration/kundenportal.md) herunterladen und auf dem _i-doit_\-Host entpacken. Die notwendigen Schritte dafür kannst du hier im unteren Teil des Artikels finden(#Updateeinspielen-UpdateüberdieKonsolevorbereiten).
 
 !!! info "Version 1.16.1"
 
@@ -31,9 +31,8 @@ Im nächsten Schritt werden die verfügbaren Update-Pakete angezeigt. In unserem
 
 Nach einem Klick auf "Check for a new version" wird im nach der nächsthöheren Version geprüft. 
 
-<!---Todo: Fixme--->
 !!! attention "Releases überspringen"
-    Wenn aktuell die Version 1.13.1 installiert und schon die Version 1.13.3 verfügbar ist, wird trotzdem nur die nächsthöhere Version – also 1.13.2 – angezeigt. Allerdings können Minor-Releases grundsätzlich übersprungen werden. Dennoch werden über diesen Weg trotzdem alle Minor-Releases einzeln installiert, bis die aktuellste Version erreicht ist. Wenn du direkt auf die Version 1.13.3 springen möchtest, kannst du das neueste Paket im [Kundenportal](/display/de/Kundenportal) herunterladen und auf dem _i-doit_\-Host entpacken. Die notwendigen Schritte dafür kannst du hier im unteren Teil des Artikels finden(#Updateeinspielen-UpdateüberdieKonsolevorbereiten).
+    Wenn aktuell die Version 1.13.1 installiert und schon die Version 1.13.3 verfügbar ist, wird trotzdem nur die nächsthöhere Version – also 1.13.2 – angezeigt. Allerdings können Minor-Releases grundsätzlich übersprungen werden. Dennoch werden über diesen Weg trotzdem alle Minor-Releases einzeln installiert, bis die aktuellste Version erreicht ist. Wenn du direkt auf die Version 1.13.3 springen möchtest, kannst du das neueste Paket im [Kundenportal](../administration/kundenportal.md) herunterladen und auf dem _i-doit_\-Host entpacken. Die notwendigen Schritte dafür kannst du hier im unteren Teil des Artikels finden(#Updateeinspielen-UpdateüberdieKonsolevorbereiten).
 
 Nach einem Klick auf **Download** wird das Update-Paket heruntergeladen und entpackt.
 
@@ -58,8 +57,8 @@ Allerspätestens jetzt solltest du ein [Backup](daten-sichern-und-wiederherstell
 Jede Änderung kann Auswirkungen auf Dateien und die Datenbanken haben.
 
 !!! info "Sollte hierbei etwas schief gehen (typischerweise durch fehlende Schreibrechte), wird dies mit einem roten  **ERROR** bemängelt."
-<!---Todo: Fixme--->
-!!! attention "Sollte hier die Fehlermeldung "... row size too large" auftauchen, dann finden Sie die Lösung unter [Troubleshooting](/display/de/Row+size+too+large)."
+
+!!! attention "Sollte hier die Fehlermeldung "... row size too large" auftauchen, dann finden Sie die Lösung unter [Troubleshooting](../administration/troubleshooting/index.md)."
 
 Wenn alles mit einem grünen "DONE" angezeigt wird, kannst du über **Next** den nächsten Schritt aufrufen.
 
@@ -114,9 +113,9 @@ Update über die Konsole via console.php
 !!! attention "Backup"
 
     Vor dem Update sollte unbedingt ein [Backup](daten-sichern-und-wiederherstellen/index.md) angefertigt werden.
-<!---Todo: Fixme--->
+
 Möchte man das Update über die Konsole ausführen wird die console.php verwendet.  
-Dazu verwenden wir den den [update](https://kb.i-doit.com/display/de/Optionen+und+Parameter+der+Console#OptionenundParameterderConsole-update) Befehl der [console.php](/display/de/Console).
+Dazu verwenden wir den den [update](../wartung-und-betrieb/update-einspielen.md) Befehl der [console.php](../automatisierung-und-integration/cli/index.md).
 
 Zuerst wechseln wir in das i-doit root Verzeichnis:
 
@@ -162,6 +161,6 @@ Die Ausgabe kann dann z.B. so aussehen:
 | Migrate tenant databases | OK  |
 | Migrate properties of \idoit\_data\_i-doit\\ with /var/www/html/i-doit/updates/versions/v1.18.1/migration/: Migration is successful | OK  |
 | Clear caches | OK  |
-<!---Todo: Fixme--->
+
 Anschließend kann i-doit verwendet werden.  
-Nach dem Update sollte der [Cache](/display/de/Systemtools) geleert und der [Suche-index](https://kb.i-doit.com/display/de/Systemtools#Systemtools-Cache/Datenbank) erneuert werden.
+Nach dem Update sollte der [Cache](../administration/verwaltung/systemtools.md) geleert und der [Suche-index](../administration/verwaltung/systemtools.md) erneuert werden.

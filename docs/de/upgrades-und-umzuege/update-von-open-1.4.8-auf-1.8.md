@@ -44,13 +44,13 @@ Nachbereitung
 -------------
 
 Nach dem Update lohnt es sich, weitere Schritte zu befolgen:
-<!---Todo: Fixme--->
+
 *   [Backup konfigurieren](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
-*   [Cronjobs einrichten](/display/de/CLI)
+*   [Cronjobs einrichten](../automatisierung-und-integration/cli/index.md)
 
 Troubleshooting
 ---------------
 
 Bei jedem Schritt wird eine Log-Datei im Verzeichnis log/ angelegt. Sollte ein Schritt aufgrund eines Fehlers nicht beendet werden, wird dies im Log protokolliert. Von weiteren Update-Schritten sollte man absehen, um Folgefehler zu vermeiden. Hilfestellungen bei Fehlern gibt es im [open-Forum](https://forum.i-doit.org/).
-<!---Todo: Fixme--->
-[Weitere Tipps bei Problemen](/display/de/Troubleshooting) finden sich hier in der Knowledge Base.
+
+[Weitere Tipps bei Problemen](../administration/troubleshooting/index.md) finden sich hier in der Knowledge Base.

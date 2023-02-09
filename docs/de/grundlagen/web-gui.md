@@ -4,8 +4,8 @@ Bei der GUI von i-doit handelt es sich um eine WEB Anwendung die mit dem jeweili
 
 Anmeldemaske
 ------------
-<!---Todo: Fixme--->
-Wird nach erfolgreicher Installation die Seite deiner i-doit Installation aufgerufen erscheint als erstes der Anmeldebildschirm. Hier hast du die Möglichkeit dich direkt bei i-doit anzumelden, oder den Weg in das [Admin Center]() zu suchen. Dieses erreichst du mit einem Klick auf "Admin Center" im unteren Bereich des Anmeldefensters.
+
+Wird nach erfolgreicher Installation die Seite deiner i-doit Installation aufgerufen erscheint als erstes der Anmeldebildschirm. Hier hast du die Möglichkeit dich direkt bei i-doit anzumelden, oder den Weg in das [Admin Center](../administration/admin-center.md) zu suchen. Dieses erreichst du mit einem Klick auf "Admin Center" im unteren Bereich des Anmeldefensters.
 
 [![anmeldemaske](../assets/images/de/grundlagen/web-gui/1-web-gui.png)](../assets/images/de/grundlagen/web-gui/1-web-gui.png)
 
@@ -52,22 +52,22 @@ Im mittleren Bereich der oberen Taskleiste findest du die einzelnen [Objekttyp](
 [![objekttyp-gruppebwahl](../assets/images/de/grundlagen/web-gui/7-web-gui.png)](../assets/images/de/grundlagen/web-gui/7-web-gui.png)
 Extras
 ------
-<!---Todo: Fixme--->
-Unter Extras sind ganz viele Sonderfunktionen von i-doit untergebracht. Hier findest du zum einen unter CMDB Features um effizienter mit i-doit zu arbeiten und hast Zugriff auf die jeweiligen installierten [i-doit pro Add-ons](/display/de/i-doit+pro+Add-ons) von i-doit.
+
+Unter Extras sind ganz viele Sonderfunktionen von i-doit untergebracht. Hier findest du zum einen unter CMDB Features um effizienter mit i-doit zu arbeiten und hast Zugriff auf die jeweiligen installierten [i-doit pro Add-ons](../i-doit-pro-add-ons/i-diary.md) von i-doit.
 
 [![extras](../assets/images/de/grundlagen/web-gui/8-web-gui.png)](../assets/images/de/grundlagen/web-gui/8-web-gui.png)
 
 Die globale Suche
 -----------------
-<!---Todo: Fixme--->
-Über das [Suchfeld](/display/de/Suche) am rechten oberen Rand hast du einen direkten Zugriff auf die Volltextsuche von i-doit. Über diese kannst du schnell zu gefundenen Ergebnissen springen, oder dir eine Liste dieser anzeigen lassen.
+
+Über das [Suchfeld](../effizientes-dokumentieren/suche.md) am rechten oberen Rand hast du einen direkten Zugriff auf die Volltextsuche von i-doit. Über diese kannst du schnell zu gefundenen Ergebnissen springen, oder dir eine Liste dieser anzeigen lassen.
 
 [![suche](../assets/images/de/grundlagen/web-gui/9-web-gui.png)](../assets/images/de/grundlagen/web-gui/9-web-gui.png)
 
 User Info/Sprache und Verwaltung
 --------------------------------
-<!---Todo: Fixme--->
-In der rechten oberen Ecke wird der aktuell angemeldete Benutzer angezeigt. Sobald man mit der Maus auf diesen klickt erscheint die Möglichkeit zum Abmelden, oder auch in die [Verwaltung](/display/de/Verwaltung) von i-doit zu wechseln.
+
+In der rechten oberen Ecke wird der aktuell angemeldete Benutzer angezeigt. Sobald man mit der Maus auf diesen klickt erscheint die Möglichkeit zum Abmelden, oder auch in die [Verwaltung](../administration/verwaltung/index.md) von i-doit zu wechseln.
 
 [![user-info](../assets/images/de/grundlagen/web-gui/10-web-gui.png)](../assets/images/de/grundlagen/web-gui/10-web-gui.png)
 

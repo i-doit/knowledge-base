@@ -1,8 +1,8 @@
 # Lizenz aktivieren
 
 i-doit PRO wird mit einer Lizenz freigeschaltet.
-<!---Todo: Fixme--->
-Die Lizenzen für dein Unternehmen sind im [Kundenportal](/display/de/Kundenportal) erhältlich. Zugriff hat jene Person, die als primärer Ansprechpartner angegeben wurde.
+
+Die Lizenzen für dein Unternehmen sind im [Kundenportal](../administration/kundenportal.md) erhältlich. Zugriff hat jene Person, die als primärer Ansprechpartner angegeben wurde.
 
 !!! attention "Name der Datenbank"
 
@@ -19,17 +19,17 @@ Die Lizenzen für dein Unternehmen sind im [Kundenportal](/display/de/Kundenport
 
     Wird eine Lizenz erfolgreich eingespielt, kann es dennoch vorkommen, dass beim Weiterarbeiten mit i-doit ein Hinweis erscheint, es sei keine gültige Lizenz aktiviert. Hier hilft es, sich mit dem derzeitigen Benutzer ab- und wieder anzumelden. Daraufhin sollte der Hinweis nicht wieder erscheinen.
 
-<!---Todo: Fixme--->
+
 !!! info "Verhalten vor i-doit Version 1.12.2"
 
     Für i-doit _pro_ gibt es verschiedene Formen von Lizenzen:
 
     *   Die **Subskriptionslizenz** für einen einzelnen Mandanten (Hierzu zählen auch **Test-Lizenzen**)  
-    Eine **Subskriptionslizenz** kannst du entweder über das [Admin Center](/display/de/Admin+Center) oder über **Verwaltung → Lizenzverwaltung** aktivieren.
+    Eine **Subskriptionslizenz** kannst du entweder über das [Admin Center](../administration/admin-center.md) oder über **Verwaltung → Lizenzverwaltung** aktivieren.
     *   Die **Subskriptionslizenz** für mehrere **Mandanten**   
     Wenn du eine Subskriptionslizenz für mehrere Mandanten verwenden möchtest, kann diese ausschließlich über das Admin Center installiert werden.
     *   Die **Kauflizenz** für einen einzelnen oder mehrere **Mandanten**
-    Die Installation erfolgt für beide Lizenzarten ebenfalls über das [Admin Center](/display/de/Admin+Center).
+    Die Installation erfolgt für beide Lizenzarten ebenfalls über das [Admin Center](../administration/admin-center.md).
 
 Installation über das Admin-Center (License Token)
 --------------------------------------------------
@@ -127,7 +127,7 @@ Der License Token wird mit dem Offline License Key verifiziert und es werden all
 Installation über das Admin-Center (Lizenz Datei veraltet)
 ----------------------------------------------------------
 
-Die Installation über das [Admin Center](/display/de/Admin+Center) erfolgt nach dem Login im Reiter **licenses**. Verwende hier die Schaltfläche **Install new license** um den erweiterten Dialog zu öffnen und die aus dem Kundenportal heruntergeladene Lizenz auszuwählen.
+Die Installation über das [Admin Center](../administration/admin-center.md) erfolgt nach dem Login im Reiter **licenses**. Verwende hier die Schaltfläche **Install new license** um den erweiterten Dialog zu öffnen und die aus dem Kundenportal heruntergeladene Lizenz auszuwählen.
 
 !!! info "Neuanmeldung eventuell nötig"
 
