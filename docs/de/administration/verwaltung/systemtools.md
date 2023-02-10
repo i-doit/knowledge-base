@@ -1,25 +1,15 @@
-**Inhaltsverzeichnis**
-
-*   1[Cache/Datenbank](#Systemtools-Cache/Datenbank)
-    *   1.1[Cache](#Systemtools-Cache)
-    *   1.2[Datenbank](#Systemtools-Datenbank)
-    *   1.3[Objekte](#Systemtools-Objekte)
-    *   1.4[Kategorien](#Systemtools-Kategorien)
-    *   1.5[Andere](#Systemtools-Andere)
-*   2[i-doit Update](#Systemtools-i-doitUpdate)
-*   3[Systemübersicht](#Systemtools-Systemübersicht)
+# Systemtools
 
 Cache/Datenbank
 ---------------
 
 Hier kannst du verschiedene Reparatur Funktionen für die i-doit Datenbank ausführen.
 
-![](/download/attachments/61014221/Cache-Datenbank-1.13.2.png?version=1&modificationDate=1573641755144&api=v2&effects=drop-shadow)
+[![Cache/Datenbank](../../assets/images/de/administration/verwaltung/systemtools/1-st.png)](../../assets/images/de/administration/verwaltung/systemtools/1-st.png)
+
 
 ### Cache
 
-| Button | Was passiert? |
-| --- | --- |
 | Button | Was passiert? |
 | --- | --- |
 | Kompletten Cache leeren | Leert den kompletten Cache und erstellt diesen neu  <br>Ordner unter i-doit/temp/cache\_Mandantenname |
@@ -30,8 +20,6 @@ Hier kannst du verschiedene Reparatur Funktionen für die i-doit Datenbank ausf�
 
 ### Datenbank
 
-| Button | Was passiert? |
-| --- | --- |
 | Button | Was passiert? |
 | --- | --- |
 | Tabellen optimieren | Im Hintergrund wird eine Query zur MySQL Datenbank geschickt welche die Tabellen optimiert Siehe[https://dev.mysql.com/doc/refman/8.0/en/optimize-table.html](https://dev.mysql.com/doc/refman/8.0/en/optimize-table.html) |
@@ -52,16 +40,15 @@ Hier kannst du verschiedene Reparatur Funktionen für die i-doit Datenbank ausf�
 
 | Button | Was passiert? |
 | --- | --- |
-| Button | Was passiert? |
-| --- | --- |
-| Unfertige Objekte entfernen | Objekte die keine Bezeichnung o.Ä haben werden aus der Datenbank entfernt  <br>Die Objekte können über den Button ![](/download/thumbnails/61014221/eye.png?version=1&modificationDate=1624283454748&api=v2) zuvor angezeigt werden |
-| Archivierte Objekte entfernen | Objekte die archiviert sind werden aus der Datenbank entfernt  <br>Die Objekte können über den Button ![](/download/thumbnails/61014221/eye.png?version=1&modificationDate=1624283454748&api=v2) zuvor angezeigt werden |
-| Gelöschte  Objekte entfernen | Gelöschte Objekte werden aus der Datenbank entfernt  <br>Die Objekte können über den Button ![](/download/thumbnails/61014221/eye.png?version=1&modificationDate=1624283454748&api=v2) zuvor angezeigt werden |
+| Unfertige Objekte entfernen | Objekte die keine Bezeichnung o.Ä haben werden aus der Datenbank entfernt  <br>Die Objekte können über den Button [![eye](../../assets/images/de/administration/verwaltung/systemtools/eye.png)](../../assets/images/de/administration/verwaltung/systemtools/eye.png)
+ zuvor angezeigt werden |
+| Archivierte Objekte entfernen | Objekte die archiviert sind werden aus der Datenbank entfernt  <br>Die Objekte können über den Button [![eye](../../assets/images/de/administration/verwaltung/systemtools/eye.png)](../../assets/images/de/administration/verwaltung/systemtools/eye.png)
+ zuvor angezeigt werden |
+| Gelöschte  Objekte entfernen | Gelöschte Objekte werden aus der Datenbank entfernt  <br>Die Objekte können über den Button [![eye](../../assets/images/de/administration/verwaltung/systemtools/eye.png)](../../assets/images/de/administration/verwaltung/systemtools/eye.png)
+ zuvor angezeigt werden |
 
 ### Kategorien
 
-| Button | Was passiert? |
-| --- | --- |
 | Button | Was passiert? |
 | --- | --- |
 | Unfertige Kategorie-Einträge entfernen | Kategorie-Einträge die z.B. keine Daten enthalten werden aus der Datenbank entfernt |
@@ -72,10 +59,8 @@ Hier kannst du verschiedene Reparatur Funktionen für die i-doit Datenbank ausf�
 
 | Button | Was passiert? |
 | --- | --- |
-| Button | Was passiert? |
-| --- | --- |
 | Suche-Index erneuern | Der Suche-Index wird erneuert damit z.B. neu erstellte oder importierte Objekte gefunden werden |
-| Migriere Datenbank Objekte in Kategorien | Migriert die vorhandene Datenbank Dokumentation in das neue Modell, siehe [Dokumentation von Datenbanken](/display/de/Dokumentation+von+Datenbanken) |
+| Migriere Datenbank Objekte in Kategorien | Migriert die vorhandene Datenbank Dokumentation in das neue Modell, siehe [Dokumentation von Datenbanken](../../anwendungsfaelle/dokumentation-von-datenbanken.md) |
 | Mandanten Datenbank Passwort verschlüsseln | Das Passwort zur Mandanten Datenbank wird verschlüsselt mit Angabe der Admin-Center Login Credentials |
 | Exportierte Check\_MK-Tags löschen | Die von Check\_MK-Tags importierten Tags werden einfach gelöscht |
 | Verwaiste Einträge benutzerdefinierter Kategorien löschen | Benutzerdefinierte Kategorie Einträge, die nicht mehr über eine data\_\_id verfügen oder keinem Objekt mehr zugewiesen sind, werden entfernt |
@@ -83,15 +68,13 @@ Hier kannst du verschiedene Reparatur Funktionen für die i-doit Datenbank ausf�
 i-doit Update
 -------------
 
-Hier kommst du zur [Update](/display/de/Update+einspielen) Funktion von i-doit. → [READMORE](/display/de/Update+einspielen)
+Hier kommst du zur [Update](../../wartung-und-betrieb/update-einspielen.md) Funktion von i-doit. → [READMORE](../../wartung-und-betrieb/update-einspielen.md)
 
-![](/download/attachments/61014221/image2016-10-13%2010%3A51%3A57.png?version=1&modificationDate=1476355234847&api=v2&effects=drop-shadow)
-
-  
+[![i-doit Update](../../assets/images/de/administration/verwaltung/systemtools/2-st.png)](../../assets/images/de/administration/verwaltung/systemtools/2-st.png)
 
 Systemübersicht
 ---------------
 
-i-doit hat vieles System Voraussetzungen. In der Systemübersicht kannst du nachschauen ob die [Voraussetzungen](/display/de/Systemvoraussetzungen) erfüllt sind.
+i-doit hat vieles System Voraussetzungen. In der Systemübersicht kannst du nachschauen ob die [Voraussetzungen](../../installation/systemvoraussetzungen.md) erfüllt sind.
 
-![](/download/attachments/61014221/image2016-10-13%2010%3A54%3A15.png?version=1&modificationDate=1476355234820&api=v2&effects=drop-shadow)
+[![Systemübersicht](../../assets/images/de/administration/verwaltung/systemtools/3-st.png)](../../assets/images/de/administration/verwaltung/systemtools/3-st.png)

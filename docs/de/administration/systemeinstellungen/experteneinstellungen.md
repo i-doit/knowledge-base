@@ -1,32 +1,29 @@
+# Experteneinstellungen
+
 Die Experteneinstellungen sind so etwas wie die "Registry" von i-doit. Hier können viele Einstellungen gesetzt werden, die teilweise nicht über die Web GUI erreichbar sind.
 
-Vorsicht
+!!! attention "Vorsicht"
 
-In der Regel ist es nicht nötig, in den Experteneinstellungen Werte hinzuzufügen oder zu verändern. Für den normalen Gebrauch bringt die Web GUI an den entsprechenden Stellen Funktionen mit, um das Verhalten von i-doit zu steuern.
+    In der Regel ist es nicht nötig, in den Experteneinstellungen Werte hinzuzufügen oder zu verändern. Für den normalen Gebrauch bringt die Web GUI an den entsprechenden Stellen Funktionen mit, um das Verhalten von i-doit zu steuern.
 
-Vor der Änderung an den Experteneinstellungen sollte **unbedingt ein [Backup](/display/de/Daten+sichern+und+wiederherstellen) angefertigt** werden. Einige der aufgelisteten Einstellungen haben einen gravierenden Einfluss auf die Applikation. Im Zweifel hilft der [Support](/display/de/Kundenportal) gerne weiter.
+    Vor der Änderung an den Experteneinstellungen sollte **unbedingt ein [Backup](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) angefertigt** werden. Einige der aufgelisteten Einstellungen haben einen gravierenden Einfluss auf die Applikation. Im Zweifel hilft der [Support](../kundenportal.md) gerne weiter.
 
 Konfiguration
 -------------
 
-Zu erreichen sind die Einstellungen unter `**Verwaltung → Systemeinstellungen → Experteneinstellungen**`.
+Zu erreichen sind die Einstellungen unter **Verwaltung → Systemeinstellungen → Experteneinstellungen**.
 
-![](/download/attachments/61014153/image2016-10-13%2011%3A56%3A49.png?version=1&modificationDate=1476352610190&api=v2)
-
+[![Experteneinstellungen](../../assets/images/de/administration/systemeinstellungen/experteneinstellungen/experteneinstellungen.png)](../../assets/images/de/administration/systemeinstellungen/experteneinstellungen/experteneinstellungen.png)
 Jede Einstellung besteht aus drei Teilen:
 
 | Key | Value | Type |
 | --- | --- | --- |
-| Key | Value | Type |
-| --- | --- | --- |
-| Der Schlüssel (`**Key**`) gibt der Einstellung einen eindeutigen Namen. Sollte ein Schlüssel noch nicht existieren, kann er nachträglich hinzugefügt werden. | Der Wert (`**Value**`) ist in der Regel eine Zeichenkette bzw. ein längerer Text (String) oder eine Ganzzahl (Integer). | Über den Typ (`**Type**`) wird die Reichweite der Einstellung angegeben. Eine Einstellung mit dem Typ `**Tenant-wide**` wirkt sich nur auf denjenigen Mandanten aus, mit dem der Benutzer derzeit angemeldet ist. `**System-wide**` bedeutet, dass sich die Einstellung auf das gesamte i-doit auswirkt, also unabhängig von den verfügbaren Mandanten. |
+| Der Schlüssel (**Key**) gibt der Einstellung einen eindeutigen Namen. Sollte ein Schlüssel noch nicht existieren, kann er nachträglich hinzugefügt werden. | Der Wert (**Value**) ist in der Regel eine Zeichenkette bzw. ein längerer Text (String) oder eine Ganzzahl (Integer). | Über den Typ (**Type**) wird die Reichweite der Einstellung angegeben. Eine Einstellung mit dem Typ **Tenant-wide** wirkt sich nur auf denjenigen Mandanten aus, mit dem der Benutzer derzeit angemeldet ist. **System-wide** bedeutet, dass sich die Einstellung auf das gesamte i-doit auswirkt, also unabhängig von den verfügbaren Mandanten. |
 
 Liste der Einstellungen
 -----------------------
 
-| Key | Default Value (Standardwert) | Recommended Value (vorgeschlagener Wert) | Type | Module<br><br>(Bereich/[Add-on](/display/de/i-doit+pro+Add-ons) in i-doit) | Beschreibung |
-| --- | --- | --- | --- | --- | --- |
-| Key | Default Value (Standardwert) | Recommended Value (vorgeschlagener Wert) | Type | Module<br><br>(Bereich/[Add-on](/display/de/i-doit+pro+Add-ons) in i-doit) | Beschreibung |
+| Key | Default Value (Standardwert) | Recommended Value (vorgeschlagener Wert) | Type | Module<br><br>(Bereich/[Add-on](../../i-doit-pro-add-ons/i-diary.md) in i-doit) | Beschreibung |
 | --- | --- | --- | --- | --- | --- |
 | api.authenticated-users-only | 0   |     | Systemweite Einstellung | PRO/CMDB | Erzwingt die Authentifizierung für die Verwendung der API |
 | auth.active | 1   |     | Systemweite Einstellung | PRO/CMDB | Aktivierung/Deaktivierung des Rechtesystems |
