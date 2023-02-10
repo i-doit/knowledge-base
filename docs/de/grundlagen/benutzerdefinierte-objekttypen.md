@@ -23,7 +23,7 @@ Nun kannst du deinen eigenen Objekttyp konfigurieren.
 
 Felder in der Konfiguration
 ---------------------------
-<!---Todo: Fixme---> 
+
 Folgende Felder werden in der Konfiguration neuer und bestehender Objekttypen angezeigt:
 
 *   **ID**  
@@ -33,7 +33,7 @@ Folgende Felder werden in der Konfiguration neuer und bestehender Objekttypen an
     Hier kannst du prüfen, ob die Sprachkonstante, die du verwendest in der aktuell gewählten Sprache korrekt übersetzt wird, falls du eine eigene Sprachdatei verwendest  
     
 *   **Sprachkonstante/Bezeichnung**  
-    In diesem Feld ist es dir möglich, eine [Sprachkonstante](/pages/viewpage.action?pageId=37781507) oder eine Bezeichnung im Klartext zu vergeben. Solltest du _i-doit_ multilingual nutzen, verwende bitte eine Konstante, die du in den eigenen Sprachdateien übersetzt.  
+    In diesem Feld ist es dir möglich, eine [Sprachkonstante](../administration/mehrsprachigkeit-und-uebersetzungen.md) oder eine Bezeichnung im Klartext zu vergeben. Solltest du _i-doit_ multilingual nutzen, verwende bitte eine Konstante, die du in den eigenen Sprachdateien übersetzt.  
       
     
 *   **SYSID Präfix**  
@@ -48,7 +48,7 @@ Folgende Felder werden in der Konfiguration neuer und bestehender Objekttypen an
       
     
 *   **Objekt Farbe**  
-    Hierbei kannst du jedem Objekttyp eine eigene Farbe zuordnen. Diese farblichen Markierungen findest du zum Beispiel im [CMDB-Explorer](/display/de/CMDB-Explorer) sowie in der grafischen Darstellung von Schränken wieder, damit dir der Überblick erleichtert wird.  
+    Hierbei kannst du jedem Objekttyp eine eigene Farbe zuordnen. Diese farblichen Markierungen findest du zum Beispiel im [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md) sowie in der grafischen Darstellung von Schränken wieder, damit dir der Überblick erleichtert wird.  
       
     
 *   **Objekttyp-Gruppe**  
@@ -92,7 +92,7 @@ Folgende Felder werden in der Konfiguration neuer und bestehender Objekttypen an
       
     
 *   **Default-Template**  
-    Wenn du mit der [Template](/display/de/Templates)\-Funktion bereits Templates erzeugt hast, kannst du hier ein Template auswählen, nach dessen Vorlage neue Objekte automatisch befüllt werden. So kannst du Werte, die bei allen Objekten dieses Typs gleich sind, vorbefüllen. Diese vorbefüllten Werte kannst du jederzeit anpassen, falls dies notwendig ist.  
+    Wenn du mit der [Template](../effizientes-dokumentieren/templates.md)\-Funktion bereits Templates erzeugt hast, kannst du hier ein Template auswählen, nach dessen Vorlage neue Objekte automatisch befüllt werden. So kannst du Werte, die bei allen Objekten dieses Typs gleich sind, vorbefüllen. Diese vorbefüllten Werte kannst du jederzeit anpassen, falls dies notwendig ist.  
       
     
 *   **Übersichtsseite als Standard Ansicht**  

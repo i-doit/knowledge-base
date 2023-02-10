@@ -1,6 +1,6 @@
 #  Objekttypen
 i-doit bringt in der Standard-Installation bereits eine Vielzahl von [Objekttypen](struktur-it-dokumentation.md) mit, die sich für vielfältige Zwecke nutzen oder bei Nichtverwendung ausblenden lassen. Welche das sind, erklärt dieser Artikel.
-<!---Todo: Fixme--->
+
 | Objekttyp | Beschreibung | Beispiele |
 | --- | --- | --- |
 | **Anwendung** | Endbenutzer-Applikationen | Webbrowser, Office-Programme |
@@ -23,7 +23,7 @@ i-doit bringt in der Standard-Installation bereits eine Vielzahl von [Objekttype
 | **Gebäude** | Gebäude in einer **Stadt** |     |
 | **Geräte/Appliance** | Appliances, die in der Organisation betrieben werden, aber eher als Black Box konzipiert sind | Firewalls |
 | **Host** | Entfernte Rechner, die nicht im direkten Zugriff stehen | DNS-Server |
-| **information domain** | Informationsverbünde (IT-Grundschutz); siehe [Add-on VIVA](/display/de/VIVA) |     |
+| **information domain** | Informationsverbünde (IT-Grundschutz); siehe [Add-on VIVA](../i-doit-pro-add-ons/viva/index.md) |     |
 | **Kabel** | Lange, schlauchartige Ansammlung von Kupfern/Fasern, ummantelt von einer Schutzhülle und mit zwei Enden |     |
 | **Kabeltrasse** | Kabeltrassen; siehe **Kabel** |     |
 | **Klimaanlage** | Klimatisierung von aktiven Komponenten |     |
@@ -40,9 +40,9 @@ i-doit bringt in der Standard-Installation bereits eine Vielzahl von [Objekttype
 | **Migrationsobjekte** | Objekte, die nach früheren Updates migriert werden mussten (derzeit nicht in Verwendung) |     |
 | **Mobiltelefon** | Handys, Feature Phones, Smartphones; siehe **SIM-Karte** |     |
 | **Monitore** | Externe Displays für Rechner; siehe **Client** |     |
-| **Nagios Host-Template** | Siehe [Network Monitoring mit Nagios](/display/de/Nagios) |     |
-| **Nagios Service** | Siehe [Network Monitoring mit Nagios](/display/de/Nagios) |     |
-| **Nagios Service-Template** | Siehe [Network Monitoring mit Nagios](/display/de/Nagios) |     |
+| **Nagios Host-Template** | Siehe [Network Monitoring mit Nagios](../automatisierung-und-integration/network-monitoring/nagios.md) |     |
+| **Nagios Service** | Siehe [Network Monitoring mit Nagios](../automatisierung-und-integration/network-monitoring/nagios.md) |     |
+| **Nagios Service-Template** | Siehe [Network Monitoring mit Nagios](../automatisierung-und-integration/network-monitoring/nagios.md) |     |
 | **Netzbereich** | Segmentierung von Subnetzen; siehe Layer-3-Netz |     |
 | **Netzersatzanlage** | Anlagen zur Stromversorgung, wenn die Hauptstromversorgung wegbricht | Dieselgeneratoren |
 | **Notfallplan** | Notfallpläne als **Dateien** |     |
@@ -97,9 +97,9 @@ Folgende Felder werden in der Konfiguration neuer und bestehender Objekttypen an
      
 *   **Übersetzte Bezeichnung**  
     Hier kannst du prüfen, ob die Sprachkonstante, die du verwendest in der aktuell gewählten Sprache korrekt übersetzt wird, falls du eine eigene Sprachdatei verwendest  
-     <!---Todo: Fixme--->
+
 *   **Sprachkonstante/Bezeichnung**  
-    In diesem Feld ist es dir möglich, eine [Sprachkonstante](/pages/viewpage.action?pageId=37781507) oder eine Bezeichnung im Klartext zu vergeben. Solltest du _i-doit_ multilingual nutzen, verwende bitte eine Konstante, die du in den eigenen Sprachdateien übersetzt.  
+    In diesem Feld ist es dir möglich, eine [Sprachkonstante](../administration/mehrsprachigkeit-und-uebersetzungen.md) oder eine Bezeichnung im Klartext zu vergeben. Solltest du _i-doit_ multilingual nutzen, verwende bitte eine Konstante, die du in den eigenen Sprachdateien übersetzt.  
       
     
 *   **SYSID Präfix**  
@@ -112,9 +112,9 @@ Folgende Felder werden in der Konfiguration neuer und bestehender Objekttypen an
 *   **Position im Baum**  
     Wenn du keine alphabetische Sortierung für die Objekttypen im Baum-Menü der linken Seite verwendest, kannst du über die Sortierung eine eigene Reihenfolge erzeugen. Die Sortierung erfolgt auf Basis der Zahlenwerte in aufsteigender Reihenfolge.  
       
-    <!---Todo: Fixme--->
+
 *   **Objekt Farbe**  
-    Hierbei kannst du jedem Objekttyp eine eigene Farbe zuordnen. Diese farblichen Markierungen findest du zum Beispiel im [CMDB-Explorer](/display/de/CMDB-Explorer) sowie in der grafischen Darstellung von Schränken wieder, damit dir der Überblick erleichtert wird.  
+    Hierbei kannst du jedem Objekttyp eine eigene Farbe zuordnen. Diese farblichen Markierungen findest du zum Beispiel im [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md) sowie in der grafischen Darstellung von Schränken wieder, damit dir der Überblick erleichtert wird.  
       
     
 *   **Objekttyp-Gruppe**  
@@ -156,9 +156,9 @@ Folgende Felder werden in der Konfiguration neuer und bestehender Objekttypen an
 *   **Konstante**  
     Du kannst eine [Konstante](../glossar.md) festlegen, über die Datenbankabfragen auf den Objekttyp möglich sind. Das Standard-Schema hierfür lautet in _i-doit_ **C__OBJTYPE__[NAME]**, wobei **[NAME]** durch die Bezeichnung des Objekttyps zu ersetzen ist. _i-doit_ erzeugt automatisch eine Konstante, die statt des Namens den aktuellen Unix Timestamp enthält. Für eine bessere Lesbarkeit (bei SQL-Reports o. ä,) ist der Unix Timestamp durch den stilisierten Namen des Objekttyps zu ersetzen (bestenfalls nur ASCII-Großbuchstaben).  
       
-    <!---Todo: Fixme--->
+
 *   **Default-Template**  
-    Wenn du mit der [Template](/display/de/Templates)\-Funktion bereits Templates erzeugt hast, kannst du hier ein Template auswählen, nach dessen Vorlage neue Objekte automatisch befüllt werden. So kannst du Werte, die bei allen Objekten dieses Typs gleich sind, vorbefüllen. Diese vorbefüllten Werte kannst du jederzeit anpassen, falls dies notwendig ist.  
+    Wenn du mit der [Template](../effizientes-dokumentieren/templates.md)\-Funktion bereits Templates erzeugt hast, kannst du hier ein Template auswählen, nach dessen Vorlage neue Objekte automatisch befüllt werden. So kannst du Werte, die bei allen Objekten dieses Typs gleich sind, vorbefüllen. Diese vorbefüllten Werte kannst du jederzeit anpassen, falls dies notwendig ist.  
       
     
 *   **Übersichtsseite als Standard Ansicht**  

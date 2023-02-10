@@ -4,8 +4,8 @@ Nachdem wir uns mit der [Struktur der IT-Dokumentation](struktur-it-dokumentatio
 
 Überblick
 ---------
-<!---Todo: Fixme--->
-Jedes Attribut, dass bearbeitet werden kann, wird durch ein Formularfeld repräsentiert. Dies betrifft sowohl die Standard-Kategorien, als auch die [benutzerdefinierten Kategorien](benutzerdefinierte-kategorien.md). Fast jedes Attributfeld kann als [Pflichtfeld deklariert und/oder mit Validierungsoptionen belegt](/display/de/Validierung+und+Pflichtfelder) werden.
+
+Jedes Attribut, dass bearbeitet werden kann, wird durch ein Formularfeld repräsentiert. Dies betrifft sowohl die Standard-Kategorien, als auch die [benutzerdefinierten Kategorien](benutzerdefinierte-kategorien.md). Fast jedes Attributfeld kann als [Pflichtfeld deklariert und/oder mit Validierungsoptionen belegt](../effizientes-dokumentieren/validierung-und-pflichtfelder.md) werden.
 
 [![Überblick](../assets/images/de/grundlagen/attributfelder/1-af.png)](../assets/images/de/grundlagen/attributfelder/1-af.png)
 
@@ -128,7 +128,7 @@ Der Objekt-Browser ist individuell aufgebaut, je nachdem, welche Beziehungsart d
 Wenn die Auswahl des referenzierten Objekts über Radio-Buttons erfolgt, ist lediglich eine einfache Auswahl möglich. Stehen hingegen die [![](../assets/images/de/grundlagen/attributfelder/hinzufuegen.png)](../assets/images/de/grundlagen/attributfelder/hinzufuegen.png)\-Schaltflächen zur Verfügung, ist eine Mehrfachauswahl möglich.
 
 Im oberen Bereich befinden sich mehrere Tabs:
-<!---Todo: Fixme--->
+
 *   **Objektsicht**: Die Objektsicht wird nach Filtern sortiert. Fehlt das passende Objekt, kann es über den Button **Neues Objekt erstellen** erzeugt werden. Filter:  
     *   **nach Objekttyp**: Zunächst wird der Objekttyp ausgewählt, anschließend das oder die Objekte.
     *   **nach Objektgruppe**: Wird der Objekttyp **Objektgruppe** genutzt, lassen sich Objekte pro **Objektgruppe** auflisten.
@@ -136,8 +136,8 @@ Im oberen Bereich befinden sich mehrere Tabs:
     *   **nach Beziehungen**: Es werden alle Beziehungs-Objekte aufgelistet, wobei zunächst die Beziehungsart ausgewählt werden muss.
     *   **nach Datum**: Es werden Objekte nach Datum sortiert. Die Optionen sind: **kürzlich erstellt**, **kürzlich verändert**, **diesen Monat erstellt**, **letzten Monat erstellt**.
 *   **Standortsicht**: Der Standortbaum mit allen Pfaden wird aufgebaut, aus dem das passende Objekt ausgewählt werden kann.
-*   **Suche**: Hierüber werden Objekte anhand der Objekt-Titel [gesucht](/display/de/Suche).
-*   **Reports**: Anhand von bereits erstellten [Reports](/display/de/Report+Manager) werden Objekte aufgelistet.
+*   **Suche**: Hierüber werden Objekte anhand der Objekt-Titel [gesucht](../effizientes-dokumentieren/suche.md).
+*   **Reports**: Anhand von bereits erstellten [Reports](../auswertungen/report-manager.md) werden Objekte aufgelistet.
 *   **Ausgewählte Objekte**: In diesem Tab werden alle bereits ausgewählten Objekte angezeigt. Über den Button **Neue Objektgruppe aus Auswahl erzeugen** wird ein Objekt vom Typ Objektgruppe erstellt und mit der Auswahl an Objekten befüllt.
 
 Im Log werden alle derzeitigen Änderungen aufgelistet.

@@ -1,22 +1,13 @@
-In diesem Artikel beschreiben wir das Benachrichtigungsmodul, das dafür gedacht ist, unterschiedliche Daten in der IT-Dokumentation zu prüfen und bei Eintreten von gewissen Ereignissen E-Mails zu versenden. Es besteht aus den jeweiligen [Benachrichtigungsarten](#Benachrichtigungen-Benachrichtigungsarten), der [Einrichtung](#Benachrichtigungen-Einrichtung) dieser, den [E-Mail-Vorlagen](#Benachrichtigungen-E-Mail-Vorlagen) und letztendlich einer regelmäßigen Ausführung des [Controllers](#Benachrichtigungen-Controller). 
+# Benachrichtigungen
 
-  
+In diesem Artikel beschreiben wir das Benachrichtigungsmodul, das dafür gedacht ist, unterschiedliche Daten in der IT-Dokumentation zu prüfen und bei Eintreten von gewissen Ereignissen E-Mails zu versenden. Es besteht aus den jeweiligen [Benachrichtigungsarten](./benachrichtigungen.md#benachrichtigungsarten), der [Einrichtung](./benachrichtigungen.md#einrichtung) dieser, den [E-Mail-Vorlagen](./benachrichtigungen.md#e-mail-vorlagen) und letztendlich einer regelmäßigen Ausführung des [Controllers](./benachrichtigungen.md#controller). 
 
-Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/benachrichtigungen-und-eskalationsstufen-mit-i-doit/)
-
-**Inhaltsverzeichnis**
-
-*   1[Benachrichtigungsarten](#Benachrichtigungen-Benachrichtigungsarten)
-*   2[Einrichtung](#Benachrichtigungen-Einrichtung)
-    *   2.1[Domänen](#Benachrichtigungen-Domänen)
-*   3[Empfänger](#Benachrichtigungen-Empfänger)
-*   4[E-Mail-Vorlagen](#Benachrichtigungen-E-Mail-Vorlagen)
-*   5[Konfiguration des Aufrufs mit der i-doit Console](#Benachrichtigungen-KonfigurationdesAufrufsmitderi-doitConsole)
+!!! info "Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/benachrichtigungen-und-eskalationsstufen-mit-i-doit/)"
 
 Benachrichtigungsarten
 ----------------------
 
-Die Konfiguration findet unter **`Extras → CMDB → Benachrichtigungen`** statt.
+Die Konfiguration findet unter **Extras → CMDB → Benachrichtigungen** statt.
 
 Als Benachrichtigungsarten stehen aktuell die folgenden zur Auswahl:
 
@@ -56,9 +47,9 @@ Als Benachrichtigungsarten stehen aktuell die folgenden zur Auswahl:
 *   **i-doit Update**  
     Prüft, ob eine neue Version von i-doit pro verfügbar ist. Dafür benötigt i-doit einen Zugang zum Internet.
 
-Hinweis
+!!! info "Hinweis"
 
-Die Benachrichtigungsart "Reportbasierte Benachrichtigung" ist sehr flexibel einsetzbar und kann bei fast allen Events und Zuständen passende Benachrichtigungen versenden.
+    Die Benachrichtigungsart "Reportbasierte Benachrichtigung" ist sehr flexibel einsetzbar und kann bei fast allen Events und Zuständen passende Benachrichtigungen versenden.
 
 Einrichtung
 -----------
@@ -99,9 +90,9 @@ Unter den Domänen lassen sich gezielt Objekte oder nach einem Schema gesammelt 
 *   **Reports**  
     Mit einem Report kann noch gezielter benachrichtigt werden. Beispiel: Es soll geprüft werden, ob es noch genug freie Lizenzen gibt, die mehr als 150€ pro Stück kosten, da dort ein längerer Prozess zu beachten ist, als bei günstigeren Lizenzen. Ein zweiter Report kann dann erstellt und in einer anderen Benachrichtigung verwendet werden, um die günstigeren abzufragen und zu einem anderen, vielleicht späteren Zeitpunkt, zu benachrichtigen. Bitte hier auch unbedingt auf die Domäne und die in den abgefragten Objekttypen zugewiesenen Kategorien achten!
 
-Hinweis
+!!! info "Hinweis"
 
-Je nach Benachrichtigungsart werden nur bestimmte Objekttypen unterstützt. Beispielsweise dürfen bei Prüfung von Verträgen nur Objekte vom Typ "Vertrag" und bei Prüfung von Lizenzen nur Objekte vom Typ "Lizenz" angegeben werden.
+    Je nach Benachrichtigungsart werden nur bestimmte Objekttypen unterstützt. Beispielsweise dürfen bei Prüfung von Verträgen nur Objekte vom Typ "Vertrag" und bei Prüfung von Lizenzen nur Objekte vom Typ "Lizenz" angegeben werden.
 
 Empfänger
 ---------
@@ -116,7 +107,7 @@ Bei den Empfängern kann ebenfalls gezielt oder gesammelt benachrichtigt werden.
 *   **Zugewiesene Kontakte**  
     Es kann auch ein oder mehrere Kontakte bzw. ein oder mehrere Personengruppen oder Organisationen benachrichtigt werden. Wichtig hierbei ist eine zu jedem Kontaktobjekt hinterlegte E-Mail-Adresse.
     
-     Hier zugewiesene Kontakte werden immer und über alle Objekte benachrichtigt.
+    !!! info "Hier zugewiesene Kontakte werden immer und über alle Objekte benachrichtigt."
     
 
 *   **Strategie zur Berechnung der Empfänger**  
@@ -150,20 +141,18 @@ Im linken Navigationsbaum lassen sich die jeweiligen, zu den Benachrichtigungen 
 Konfiguration des Aufrufs mit der i-doit Console
 ------------------------------------------------
 
-Damit die eingerichteten Benachrichtigungen auch regelmäßig überprüft werden, muss die i-doit [Console](/display/de/Console) mit dem Command `**[notifications-send](https://kb.i-doit.com/display/de/Optionen+und+Parameter+der+Console#OptionenundParameterderConsole-notifications-send)**` zum Beispiel als Cronjob ausgeführt werden. Es lässt sich nicht jede Benachrichtigung einzeln abrufen, sondern es werden immer automatisch alle Benachrichtigungen nacheinander geprüft. Sinnvoll ist es, zu überlegen, wie oft maximal geprüft werden soll. Bewährt hat es sich unserer Erfahrung nach täglich kurz vor Arbeitsbeginn zu prüfen, damit morgens sofort klar ist, womit man sich den Tag über beschäftigen sollte.
+Damit die eingerichteten Benachrichtigungen auch regelmäßig überprüft werden, muss die i-doit [Console](../automatisierung-und-integration/cli/index.md) mit dem Command **[notifications-send](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#OptionenundParameterderConsole-notifications-send)** zum Beispiel als Cronjob ausgeführt werden. Es lässt sich nicht jede Benachrichtigung einzeln abrufen, sondern es werden immer automatisch alle Benachrichtigungen nacheinander geprüft. Sinnvoll ist es, zu überlegen, wie oft maximal geprüft werden soll. Bewährt hat es sich unserer Erfahrung nach täglich kurz vor Arbeitsbeginn zu prüfen, damit morgens sofort klar ist, womit man sich den Tag über beschäftigen sollte.
 
-Hinweis
+!!!info "Hinweis"
 
-Ohne einen Aufruf des Commands über die i-doit Console findet **kein** Versand der Benachrichtigungen statt!
+    Ohne einen Aufruf des Commands über die i-doit Console findet **kein** Versand der Benachrichtigungen statt!
 
-Die Möglichen Parameter sowie ein Beispielaufruf für den Versand der Benachrichtigungen sind im [entsprechenden Artikel](/display/de/Optionen+und+Parameter+der+Console) für den Command `**[notifications-send](https://kb.i-doit.com/display/de/Optionen+und+Parameter+der+Console#OptionenundParameterderConsole-notifications-send)**` zu finden.
+Die Möglichen Parameter sowie ein Beispielaufruf für den Versand der Benachrichtigungen sind im [entsprechenden Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) für den Command **[notifications-send](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#notifications-send)** zu finden.
 
-Hinweis
+!!! info "Hinweis"
 
-Mit dem Benachrichtigungsmodul lassen sich Eskalationsstufen abbilden. Dazu ist nötig, für dieselben Benachrichtigungsarten mehrere Benachrichtigungen mit verschiedenen Empfängerkreisen und Schwellwerten einzurichten.
+    Mit dem Benachrichtigungsmodul lassen sich Eskalationsstufen abbilden. Dazu ist nötig, für dieselben Benachrichtigungsarten mehrere Benachrichtigungen mit verschiedenen Empfängerkreisen und Schwellwerten einzurichten.
 
 **Beispiel zur Verwendung**
 
-[?](#)
-
-`sudo` `-u www-data php console.php notifications-send --user admin --password admin --tenantId 1`
+    sudo -u www-data php console.php notifications-send --user admin --password admin --tenantId 1

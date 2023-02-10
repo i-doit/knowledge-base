@@ -21,8 +21,8 @@ Du kannst du über den Stift eins oder mehrere Objekte auswählen und in einem G
 [![CMDB-Status-Lebenszyklus](../assets/images/de/grundlagen/desktop-und-widgets/1-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/1-duw.png)
 
 ### CMDB-Explorer
-<!---Todo: Fixme--->
-Hier kann der reguläre [CMDB-Explorer](/display/de/CMDB-Explorer) in einer kleineren Variante ohne erweiterte Funktionen angezeigt werden. Hierfür muss über den Stift vorher ein Objekt ausgewählt werden, das beim Aufruf des Dashboards automatisch geladen wird.
+
+Hier kann der reguläre [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md) in einer kleineren Variante ohne erweiterte Funktionen angezeigt werden. Hierfür muss über den Stift vorher ein Objekt ausgewählt werden, das beim Aufruf des Dashboards automatisch geladen wird.
 
 [![cmdb-explorer](../assets/images/de/grundlagen/desktop-und-widgets/2-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/2-duw.png)
 
@@ -75,8 +75,8 @@ In diesem Widget werden die letzten, von dem angemeldeten Benutzer geänderten O
 [![geänderte-objekte](../assets/images/de/grundlagen/desktop-und-widgets/12-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/12-duw.png)
 
 ### Monitoring: Gefährdete Hosts
-<!---Todo: Fixme--->
-Dieses Widget benötigt eine Anbindung an [Nagios oder Check\_MK](#) und zeigt eine Ansicht der gefährdeten Hosts an. Über den Stift kann ein Host für die Anzeige ausgewählt werden.
+
+Dieses Widget benötigt eine Anbindung an [Nagios oder Check\_MK](../automatisierung-und-integration/network-monitoring/index.md) und zeigt eine Ansicht der gefährdeten Hosts an. Über den Stift kann ein Host für die Anzeige ausgewählt werden.
 
 ### Notizen
 
@@ -171,8 +171,8 @@ Das Statistik-Diagramm betrachtet die unter dem Stift konfigurierten Objekttypen
 [![tipps](../assets/images/de/grundlagen/desktop-und-widgets/31-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/31-duw.png)
 
 ### VIVA Reports
-<!---Todo: Fixme--->
-Für diese Reports muss das [VIVA-Modul](/display/de/VIVA) installiert und Informationsverbünde dokumentiert sein. Im Widget kann über den Stift ein Informationsverbund ausgewählt werden.
+
+Für diese Reports muss das [VIVA-Modul](../i-doit-pro-add-ons/viva/index.md) installiert und Informationsverbünde dokumentiert sein. Im Widget kann über den Stift ein Informationsverbund ausgewählt werden.
 
 [![viva-reports](../assets/images/de/grundlagen/desktop-und-widgets/32-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/32-duw.png)
 

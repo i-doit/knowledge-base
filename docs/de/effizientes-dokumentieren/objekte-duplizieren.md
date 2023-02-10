@@ -14,4 +14,4 @@ Der Vorgang wird über die Schaltfläche **Duplizieren** innerhalb des Dialogfen
 
     Es ist nur möglich, ein Objekt zur selben Zeit zu duplizieren. Solltest du mehrere Objekte duplizieren wollen, wiederhole den Vorgang für jedes Objekt einzeln.
 
-[![massenaenderung-finden](../assets/images/de/effizientes-dokumentieren/objekte-duplizieren/1-od.gif)](../assets/images/de/effizientes-dokumentieren/objekte-duplizieren/1-od.gif)
+[![objektduplizieren-mehrfach](../assets/images/de/effizientes-dokumentieren/objekte-duplizieren/1-od.gif)](../assets/images/de/effizientes-dokumentieren/objekte-duplizieren/1-od.gif)

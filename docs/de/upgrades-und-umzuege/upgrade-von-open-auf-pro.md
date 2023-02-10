@@ -35,15 +35,15 @@ Die jeweils aktuelle Version steht auf [i-doit.org](http://i-doit.org/) zum Down
 
 _pro_\-Update herunterladen und durchführen
 -------------------------------------------
-<!---Todo: Fixme--->
-Das Update-Paket der pro-Variante muss im [Kundenportal](/display/de/Kundenportal) heruntergeladen und [auf die übliche Art und Weise eingespielt](../wartung-und-betrieb/update-einspielen.md) werden. Wichtig ist hierbei, dass die Versionsnummern der installierten open- und der gewünschten pro-Variante übereinstimmen. Beispiel: Ist i-doit open 1.8 installiert, muss das Update-Paket i-doit pro 1.8 verwendet werden.
+
+Das Update-Paket der pro-Variante muss im [Kundenportal](../administration/kundenportal.md) heruntergeladen und [auf die übliche Art und Weise eingespielt](../wartung-und-betrieb/update-einspielen.md) werden. Wichtig ist hierbei, dass die Versionsnummern der installierten open- und der gewünschten pro-Variante übereinstimmen. Beispiel: Ist i-doit open 1.8 installiert, muss das Update-Paket i-doit pro 1.8 verwendet werden.
 
 Mit dem Installations-Paket der pro-Variante funktioniert das Upgrade nicht.
 
 _i-doit pro_\-addon installieren
 --------------------------------
-<!---Todo: Fixme--->
-Nach dem Update auf die pro-Variante muss das pro-addon installiert werden. Das pro-addon ist bereits im [Admin Center](/display/de/Admin+Center) unter **Add-ons** verfügbar. Dort befindet sich ein Button zum Installieren.
+
+Nach dem Update auf die pro-Variante muss das pro-addon installiert werden. Das pro-addon ist bereits im [Admin Center](../administration/admin-center.md) unter **Add-ons** verfügbar. Dort befindet sich ein Button zum Installieren.
 
 Lizenz einspielen
 -----------------
@@ -57,10 +57,10 @@ Nun melden wir uns vom Admin Center ab und in i-doit an. Dort klicken wir uns ü
 
 Rechte konfigurieren
 --------------------
-<!---Todo: Fixme--->
-Im Gegensatz zu i-doit open besitzt i-doit pro ein umfangreiches, frei konfigurierbares [Rechtesystem](/display/de/Rechteverwaltung). Der angemeldete Benutzer wird daher noch nicht über alle Berechtigungen verfügen.
-<!---Todo: Fixme--->
-Um dem Benutzer mit wenigen Schritten vollen Zugriff zu gewähren, rufen wir **Verwaltung→ Rechtesystem** **→ Rechtesystem zurücksetzen** auf und erteilen ihm mit der Eingabe der Credentials für das [Admin Center](/display/de/Admin+Center) vollen Zugriff auf i-doit.
+
+Im Gegensatz zu i-doit open besitzt i-doit pro ein umfangreiches, frei konfigurierbares [Rechtesystem](../effizientes-dokumentieren/rechteverwaltung/index.md). Der angemeldete Benutzer wird daher noch nicht über alle Berechtigungen verfügen.
+
+Um dem Benutzer mit wenigen Schritten vollen Zugriff zu gewähren, rufen wir **Verwaltung→ Rechtesystem** **→ Rechtesystem zurücksetzen** auf und erteilen ihm mit der Eingabe der Credentials für das [Admin Center](../administration/admin-center.md) vollen Zugriff auf i-doit.
 
 Nun können über die einzelnen Rechtevergaben weitere Rechte für Personen und Personengruppen konfiguriert werden.
 
@@ -68,9 +68,9 @@ Nacharbeiten
 ------------
 
 Falls noch nicht geschehen, sollten folgende Dinge nicht außer Acht gelassen werden, damit i-doit reibungslos funktioniert:
-<!---Todo: Fixme--->
+
 *   [Backup und Restore einrichten und testen](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
-*   [Cronjobs einrichten](/display/de/CLI) (mit dem Controller)
+*   [Cronjobs einrichten](../automatisierung-und-integration/cli/index.md) (mit dem Controller)
 *   [Optional Update auf aktuelle pro-Version durchführen:](../wartung-und-betrieb/update-einspielen.md) Mit einer gültigen Lizenz ist es möglich und auch sehr empfehlenswert, immer auf die neuste Version von i-doit pro zu aktualisieren.  
     
 
