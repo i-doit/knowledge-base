@@ -1,24 +1,6 @@
-**Inhaltsverzeichnis**
+# Tipps und Tricks zur Nutzung der API
 
-*   1[Don't Repeat Yourself (DRY)](#TippsundTrickszurAPI-Don'tRepeatYourself(DRY))
-*   2[Keep It Simple, Stupid (KISS)](#TippsundTrickszurAPI-KeepItSimple,Stupid(KISS))
-*   3[Benutze die API anstatt SQL](#TippsundTrickszurAPI-BenutzedieAPIanstattSQL)
-*   4[Benutze die API anstatt CSV-Datenimport](#TippsundTrickszurAPI-BenutzedieAPIanstattCSV-Datenimport)
-*   5[Benutze die API anstatt CSV-Datenexport](#TippsundTrickszurAPI-BenutzedieAPIanstattCSV-Datenexport)
-*   6[Benutze die API für das Sammeln von Daten](#TippsundTrickszurAPI-BenutzedieAPIfürdasSammelnvonDaten)
-*   7[Benutze die Zwei-Faktor-Authentifizierung](#TippsundTrickszurAPI-BenutzedieZwei-Faktor-Authentifizierung)
-*   8[Logge alle API Calls](#TippsundTrickszurAPI-LoggealleAPICalls)
-*   9[Teste nicht im Produktivsystem](#TippsundTrickszurAPI-TestenichtimProduktivsystem)
-*   10[Sichere die Kommunikation ab](#TippsundTrickszurAPI-SicheredieKommunikationab)
-*   11[Sichere das Script ab](#TippsundTrickszurAPI-SicheredasScriptab)
-*   12[Melde dich an und wieder ab](#TippsundTrickszurAPI-Meldedichanundwiederab)
-*   13[Benutze Batch Requests](#TippsundTrickszurAPI-BenutzeBatchRequests)
-*   14[Automatisiere den Datenaustausch](#TippsundTrickszurAPI-AutomatisieredenDatenaustausch)
-*   15[Kombiniere API und Events](#TippsundTrickszurAPI-KombiniereAPIundEvents)
-*   16[Veröffentliche dein Script](#TippsundTrickszurAPI-VeröffentlichedeinScript)
-*   17[Read the Fine Manual (RTFM)](#TippsundTrickszurAPI-ReadtheFineManual(RTFM))
-
-An dieser Stelle tragen wir viele Tipps und Tricks zum effizienten Umgang mit der [Programmierschnittstelle (API)](/pages/viewpage.action?pageId=7831613) von i-doit zusammen.
+An dieser Stelle tragen wir viele Tipps und Tricks zum effizienten Umgang mit der [Programmierschnittstelle (API)](./index.md) von i-doit zusammen.
 
 Don't Repeat Yourself (DRY)
 ---------------------------
@@ -33,7 +15,7 @@ Ein weithin bekanntes Paradigma aus der Software-Entwicklung. Jedes Script zum A
 Benutze die API anstatt SQL
 ---------------------------
 
-i-doit speichert fast alle Daten in einem Datenbankmanagementsystem (MariaDB oder MySQL). Da ist es für den SQL-Kenner verlockend, auf diese Daten direkt zuzugreifen. Doch Vorsicht: Wer die Mechanismen in i-doit explizit umgeht und die Daten via SQL verändert, kann sich schnell eine korrupte Installation einhandeln. Hierfür gilt keine Gewährleistung seitens des Herstellers. Besser ist es, die API zu nutzen. Denn nur hierüber lässt sich gewährleisten, dass beispielsweise [Objekt-Beziehungen](/display/de/Objekt-Beziehungen) oder [Logbuch-Einträge](/display/de/Logbuch) korrekt angelegt werden.
+i-doit speichert fast alle Daten in einem Datenbankmanagementsystem (MariaDB oder MySQL). Da ist es für den SQL-Kenner verlockend, auf diese Daten direkt zuzugreifen. Doch Vorsicht: Wer die Mechanismen in i-doit explizit umgeht und die Daten via SQL verändert, kann sich schnell eine korrupte Installation einhandeln. Hierfür gilt keine Gewährleistung seitens des Herstellers. Besser ist es, die API zu nutzen. Denn nur hierüber lässt sich gewährleisten, dass beispielsweise [Objekt-Beziehungen](../../grundlagen/objekt-beziehungen.md) oder [Logbuch-Einträge](../../grundlagen/logbuch.md) korrekt angelegt werden.
 
 Benutze die API anstatt CSV-Datenimport
 ---------------------------------------
@@ -43,42 +25,42 @@ Wer seine damals provisorischen, aber dann doch über Jahre gepflegten Excel-Tab
 Benutze die API anstatt CSV-Datenexport
 ---------------------------------------
 
-Umgekehrt kann die API flexibler verwendet werden, wenn es um den Datenexport geht. Die API stellt also auch eine Alternative zum [Report Manager](/display/de/Report+Manager) und den [CSV-Datenexport](/display/de/CSV-Datenexport) dar.
+Umgekehrt kann die API flexibler verwendet werden, wenn es um den Datenexport geht. Die API stellt also auch eine Alternative zum [Report Manager](../../auswertungen/report-manager.md) und den [CSV-Datenexport](../../daten-konsolidieren/csv-datenexport.md) dar.
 
 Benutze die API für das Sammeln von Daten
 -----------------------------------------
 
-Keine Frage: Das automatisierte Sammeln von Informationen durch ein Network Discovery erleichtert die Pflege der IT-Dokumentation ungemein. i-doit bietet hier bereits Schnittstellen zu [JDisc Discovery](/display/de/JDisc+Discovery), [OCS Inventory NG](/display/de/OCS+Inventory+NG) und weitere. Sollte eine Schnittstelle fehlen, hilft die API weiter.
+Keine Frage: Das automatisierte Sammeln von Informationen durch ein Network Discovery erleichtert die Pflege der IT-Dokumentation ungemein. i-doit bietet hier bereits Schnittstellen zu [JDisc Discovery](../../daten-konsolidieren/jdisc-discovery.md), [OCS Inventory NG](../ocs-inventory-ng.md) und weitere. Sollte eine Schnittstelle fehlen, hilft die API weiter.
 
 Benutze die Zwei-Faktor-Authentifizierung
 -----------------------------------------
 
-Neben dem API Key bietet die zusätzliche Authentifizierung mit einem Benutzer-Account mehrere Vorteile: Die so erreichte Zwei-Faktor-Authentifizierung erhöht zum einen die Sicherheit. Zum anderen erleichtert sie die Nachvollziehbarkeit, wenn jedes Script einen eigenen Benutzer-Account verwendet. Auf diese Weise lässt sich anhand des [Logbuchs](/display/de/Logbuch) recherchieren, welches Script welche Daten in der IT-Dokumentation verändert hat.
+Neben dem API Key bietet die zusätzliche Authentifizierung mit einem Benutzer-Account mehrere Vorteile: Die so erreichte Zwei-Faktor-Authentifizierung erhöht zum einen die Sicherheit. Zum anderen erleichtert sie die Nachvollziehbarkeit, wenn jedes Script einen eigenen Benutzer-Account verwendet. Auf diese Weise lässt sich anhand des [Logbuchs](../../grundlagen/logbuch.md) recherchieren, welches Script welche Daten in der IT-Dokumentation verändert hat.
 
 Logge alle API Calls
 --------------------
 
-Nützlich fürs [Troubleshooting](/display/de/Troubleshooting): Alle API Calls lassen sich von i-doit loggen. Requests und Responses werden in handlichen Textdateien unter `log/` im Installationsverzeichnis gespeichert.
+Nützlich fürs [Troubleshooting](../../administration/troubleshooting/index.md): Alle API Calls lassen sich von i-doit loggen. Requests und Responses werden in handlichen Textdateien unter log/ im Installationsverzeichnis gespeichert.
 
 Teste nicht im Produktivsystem
 ------------------------------
 
-Um die produktiven Daten nicht durch ein fehlerhaftes Script zu gefährden, bietet sich eine zweite Installation zum Testen an. Das obligatorische [Backup](/display/de/Daten+sichern+und+wiederherstellen) darf natürlich nicht fehlen.
+Um die produktiven Daten nicht durch ein fehlerhaftes Script zu gefährden, bietet sich eine zweite Installation zum Testen an. Das obligatorische [Backup](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) darf natürlich nicht fehlen.
 
 Sichere die Kommunikation ab
 ----------------------------
 
-Die IT-Dokumentation enthält in vielen Fällen sensible Informationen, die nicht in falsche Hände geraten dürfen. Damit API Keys, Zugangsdaten und Nutzdaten nicht im Klartext über das Netzwerk ausgetauscht werden, bietet sich die verschlüsselte Kommunikation via TLS (HTTPS) mit einem Zertifikat an. Nur so kann sicher gestellt werden, dass Daten integer sind und nicht missbraucht werden können. Eine mögliche Konfiguration und viele weitere Tipps enthält der Artikel "[Sicherheit und Schutz](/display/de/Sicherheit+und+Schutz)".
+Die IT-Dokumentation enthält in vielen Fällen sensible Informationen, die nicht in falsche Hände geraten dürfen. Damit API Keys, Zugangsdaten und Nutzdaten nicht im Klartext über das Netzwerk ausgetauscht werden, bietet sich die verschlüsselte Kommunikation via TLS (HTTPS) mit einem Zertifikat an. Nur so kann sicher gestellt werden, dass Daten integer sind und nicht missbraucht werden können. Eine mögliche Konfiguration und viele weitere Tipps enthält der Artikel "[Sicherheit und Schutz](../../wartung-und-betrieb/sicherheit-und-schutz.md)".
 
 Sichere das Script ab
 ---------------------
 
-Die API umgeht derzeit die in der Web GUI verwendete [Rechteverwaltung](/display/de/Rechteverwaltung). Umso wichtiger ist es, dass der Zugang zur API und die Kommunikation zur API gesichert werden (siehe oben). Ebenfalls essentiell ist es, das Script gegen unberechtigten Zugriff zu schützen.
+Die API umgeht derzeit die in der Web GUI verwendete [Rechteverwaltung](../../effizientes-dokumentieren/rechteverwaltung/index.md). Umso wichtiger ist es, dass der Zugang zur API und die Kommunikation zur API gesichert werden (siehe oben). Ebenfalls essentiell ist es, das Script gegen unberechtigten Zugriff zu schützen.
 
 Melde dich an und wieder ab
 ---------------------------
 
-Führt das Script gleich mehrere API Calls aus, ist der explizite Login zu empfehlen. Mit der Methode `**idoit.login**` wird eine neue Session erstellt, die für alle weiteren API Calls wiederverwendet werden kann. Zum Schluss schließt man die Session mit der Methode **`idoit.logout`**. So spart man zahlreiche Sessions, die von PHP erst nach und nach gelöscht werden, teilweise erst nach Wochen.
+Führt das Script gleich mehrere API Calls aus, ist der explizite Login zu empfehlen. Mit der Methode **idoit.login** wird eine neue Session erstellt, die für alle weiteren API Calls wiederverwendet werden kann. Zum Schluss schließt man die Session mit der Methode **idoit.logout**. So spart man zahlreiche Sessions, die von PHP erst nach und nach gelöscht werden, teilweise erst nach Wochen.
 
 Benutze Batch Requests
 ----------------------
@@ -95,9 +77,9 @@ Läuft das Script erst einmal, dass die API von i-doit ansteuert, kann man diese
 Kombiniere API und Events
 -------------------------
 
-Eine gute Ergänzung zur API stellen die [Events](/display/de/Events) in i-doit dar. Wird über i-doit ein Objekt erstellt oder ein Kategorie-Eintrag verändert, kann ein beliebiges Script ausgeführt werden. Diesem werden die wichtigsten Daten des Events übermittelt (Welches Objekt wurde erstellt? Welche Attribute wurden aktualisiert?). Das ausgeführte Script kann nun die API ansteuern, um weitere Daten abzufragen oder zu manipulieren.
+Eine gute Ergänzung zur API stellen die [Events](../events.md) in i-doit dar. Wird über i-doit ein Objekt erstellt oder ein Kategorie-Eintrag verändert, kann ein beliebiges Script ausgeführt werden. Diesem werden die wichtigsten Daten des Events übermittelt (Welches Objekt wurde erstellt? Welche Attribute wurden aktualisiert?). Das ausgeführte Script kann nun die API ansteuern, um weitere Daten abzufragen oder zu manipulieren.
 
-Ein konkretes Beispiel, das sowohl API, als auch Events verwendet, ist die [Provisionierung von virtuellen Maschinen](/pages/viewpage.action?pageId=38371351).
+Ein konkretes Beispiel, das sowohl API, als auch Events verwendet, ist die [Provisionierung von virtuellen Maschinen](../../anwendungsfaelle/vm-provisionieren.md).
 
 Veröffentliche dein Script
 --------------------------

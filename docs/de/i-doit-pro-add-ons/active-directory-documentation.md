@@ -1,20 +1,10 @@
-Das "Active Directory Dokumentation" Add-on wurde als erstes [Add-on](/display/de/i-doit+pro+Add-ons) mit dem [Add-on Packager](/display/de/Add-on+Packager) entworfen und erstellt. Mit dem "Active Directory Dokumentation" Add-on soll es Administratoren einfacher gemacht werden, Microsoft Umgebungen zu dokumentieren. Dabei werden durch das Add-on die nötigen Objekttypen und Kategorien erstellt.
+# Active Directory Documentation
 
+Das "Active Directory Dokumentation" Add-on wurde als erstes [Add-on](./index.md) mit dem [Add-on Packager](./add-on-packager.md) entworfen und erstellt. Mit dem "Active Directory Dokumentation" Add-on soll es Administratoren einfacher gemacht werden, Microsoft Umgebungen zu dokumentieren. Dabei werden durch das Add-on die nötigen Objekttypen und Kategorien erstellt.
   
 Installation und Lizenz
 
-Das "Active Directory Dokumentation" Add-on wird wie jedes Add-on über das [Admin Center](/display/de/Admin+Center) installiert. Das Add-on ist nicht lizenzpflichtig. Es kann allerdings nur mit der pro-Variante genutzt werden.
-
-**Inhaltsverzeichnis**
-
-*   1[Inhalt des Add-ons](#ActiveDirectoryDocumentation-InhaltdesAdd-ons)
-*   2[Domäne](#ActiveDirectoryDocumentation-Domäne)
-*   3[Gesamtstruktur](#ActiveDirectoryDocumentation-Gesamtstruktur)
-*   4[Zertifizierungsstelle](#ActiveDirectoryDocumentation-Zertifizierungsstelle)
-*   5[Windows Server](#ActiveDirectoryDocumentation-WindowsServer)
-*   6[Windows Client](#ActiveDirectoryDocumentation-WindowsClient)
-*   7[DNS Server](#ActiveDirectoryDocumentation-DNSServer)
-*   8[DHCP Server](#ActiveDirectoryDocumentation-DHCPServer)
+Das "Active Directory Dokumentation" Add-on wird wie jedes Add-on über das [Admin Center](../administration/admin-center.md) installiert. Das Add-on ist nicht lizenzpflichtig. Es kann allerdings nur mit der pro-Variante genutzt werden.
 
 Inhalt des Add-ons
 ------------------
@@ -31,8 +21,6 @@ Es werden zwei neuen Objekttyp-Gruppen "Active Directory" und "Windows Systems" 
 | Zertifizierungsstelle | Window Server |
 
 Im folgenden werden die einzelnen Objekttypen mit den neu ausgelieferten Kategorien kurz erläutert.
-
-  
 
 Domäne
 ------
@@ -51,7 +39,7 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 | Zugewiesene Partitionen |
 | Zugewiesene Standorte |
 
-![](/download/attachments/97288806/domain.png?version=1&modificationDate=1612950533853&api=v2&effects=drop-shadow)
+[![Domäne](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/1-add.png)](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/1-add.png)
 
 Gesamtstruktur
 --------------
@@ -66,7 +54,7 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 | Vertrauenswürdige Strukturen |
 | Zugewiesene Katalogserver |
 
-![](/download/attachments/97288806/forest.png?version=1&modificationDate=1612950533844&api=v2&effects=drop-shadow)
+[![Gesamtstruktur](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/2-add.png)](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/2-add.png)
 
 Zertifizierungsstelle
 ---------------------
@@ -79,7 +67,7 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 | Ausgestellte Zertifikate |
 | Zertifizierungsstelle |
 
-![](/download/attachments/97288806/cert_authority.png?version=1&modificationDate=1612950533826&api=v2&effects=drop-shadow)
+[![Zertifizierungsstelle](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/3-add.png)](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/3-add.png)
 
 Windows Server
 --------------
@@ -102,7 +90,7 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 | Windows Server Gruppe |
 | Windows Update |
 
-![](/download/attachments/97288806/winserv.png?version=1&modificationDate=1612950533816&api=v2&effects=drop-shadow)
+[![Windows Server](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/4-add.png)](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/4-add.png)
 
 Windows Client
 --------------
@@ -115,7 +103,7 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 | RDP Einstellungen |
 | Windows Informationen |
 
-![](/download/attachments/97288806/winclient.png?version=1&modificationDate=1612950533806&api=v2&effects=drop-shadow)
+[![Windows Client](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/5-add.png)](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/5-add.png)
 
 DNS Server
 ----------
@@ -128,7 +116,7 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 | DNS Zonen Einträge |
 | Zugewiesene DNS Server |
 
-![](/download/attachments/97288806/dnsserv.png?version=1&modificationDate=1612950533797&api=v2&effects=drop-shadow)
+[![DNS Server](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/6-add.png)](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/6-add.png)
 
 DHCP Server
 -----------
@@ -141,7 +129,7 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 | DHCP Bereiche |
 | Zugewiesene DHCP Server |
 
-![](/download/attachments/97288806/dhcpserv.png?version=1&modificationDate=1612950533779&api=v2&effects=drop-shadow)
+[![DHCP Server](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/7-add.png)](../assets/images/de/i-doit-pro-add-ons/active-directory-documentation/7-add.png)
 
 Changelog
 

@@ -1,7 +1,5 @@
-  
-
-  
+# Formular ausfuellen
 
 Wir öffnen das Formular über den Link und füllen es aus.
 
-![](/download/attachments/117801244/fillout.gif?version=2&modificationDate=1644594819064&api=v2)
+[![Formular ausfuellen](../../assets/images/de/i-doit-pro-add-ons/forms/ausfuellen/fillout.gif)](../../assets/images/de/i-doit-pro-add-ons/forms/ausfuellen/fillout.gif)
