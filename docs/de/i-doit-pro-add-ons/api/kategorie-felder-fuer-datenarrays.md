@@ -1,21 +1,14 @@
-In diesem Artikel werden alle in i-doit verfügbaren [Kategorien und deren Attribute](/display/de/Struktur+der+IT-Dokumentation) aufgeführt. Dies kann sehr hilfreich sein, wenn die [programmierbare Schnittstelle (API)](/pages/viewpage.action?pageId=7831613) von i-doit eingesetzt wird.
+In diesem Artikel werden alle in i-doit verfügbaren [Kategorien und deren Attribute](../../grundlagen/struktur-it-dokumentation.md) aufgeführt. Dies kann sehr hilfreich sein, wenn die [programmierbare Schnittstelle (API)](./index.md) von i-doit eingesetzt wird.
 
 Diesen Inhalt automatisch erstellen
 
-Über den URL-Parameter `load=api_properties` werden die Kategorie-Tabellen für die derzeit installierte Version von i-doit erstellt. Es muss ein Benutzer angemeldet sein. Beispiel: `[https://demo.i-doit.com/?load=api_properties](https://demo.i-doit.com/?load=api_properties)`
-
-**Inhaltsverzeichnis**
-
-*   1[Globale Kategorien (catg)](#KategorieFelderfürDatenarrays-GlobaleKategorien(catg))
-*   2[Spezifische Kategorien (cats)](#KategorieFelderfürDatenarrays-SpezifischeKategorien(cats))
+Über den URL-Parameter load=api_properties werden die Kategorie-Tabellen für die derzeit installierte Version von i-doit erstellt. Es muss ein Benutzer angemeldet sein. Beispiel: [https://demo.i-doit.com/?load=api_properties](https://demo.i-doit.com/?load=api_properties)
 
 Globale Kategorien (catg)
 -------------------------
 
 ### Allgemein (C\_\_CATG\_\_GLOBAL)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | ID  | id  | int |     | Ja  |
@@ -37,8 +30,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Hersteller | manufacturer | int | isys\_model\_manufacturer\_\_id | Ja  |
 | Modell | title | int | isys\_model\_title\_\_id | Ja  |
 | Produkt-ID | productid | text |     | Ja  |
@@ -49,8 +40,6 @@ Globale Kategorien (catg)
 
 ### Formfaktor (C\_\_CATG\_\_FORMFACTOR)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Formfaktor | formfactor | int | isys\_catg\_formfactor\_type\_\_id | Ja  |
@@ -67,8 +56,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Hersteller | manufacturer | int | isys\_catg\_cpu\_manufacturer\_\_id | Ja  |
 | Typ | type | int | isys\_catg\_cpu\_type\_\_id | Ja  |
@@ -79,8 +66,6 @@ Globale Kategorien (catg)
 
 ### Speicher (C\_\_CATG\_\_MEMORY)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Anzahl | quantity | int |     | Ja  |
@@ -96,8 +81,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Hersteller | manufacturer | int | isys\_iface\_manufacturer\_\_id | Ja  |
 | Modell | model | int | isys\_iface\_model\_\_id | Ja  |
@@ -107,8 +90,6 @@ Globale Kategorien (catg)
 
 ### Stromverbraucher (C\_\_CATG\_\_POWER\_CONSUMER)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -128,8 +109,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Verbindungstyp | type | int | isys\_ui\_con\_type\_\_id | Ja  |
 | Anschlusstyp | plug | int | isys\_ui\_plugtype\_\_id | Ja  |
@@ -141,8 +120,6 @@ Globale Kategorien (catg)
 
 ### Softwarezuweisung (C\_\_CATG\_\_APPLICATION)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Anwendung | application | int | isys\_connection\_\_id | Ja  |
@@ -161,8 +138,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Primäre Zugriffs-URL | primary\_url | text |     | Ja  |
 | Bezeichnung | title | text |     | Ja  |
 | Zugriffstyp | type | int | isys\_access\_type\_\_id | Ja  |
@@ -173,8 +148,6 @@ Globale Kategorien (catg)
 
 ### Datensicherung (C\_\_CATG\_\_BACKUP)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -188,8 +161,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Zugewiesener Notfallplan | emergency\_plan | int | isys\_connection\_\_id | Ja  |
 | Zeitbedarf | time\_needed | text |     | Ja  |
@@ -201,8 +172,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Datei | file | int | isys\_connection\_\_id | Ja  |
 | Revision | revision | int |     | Ja  |
 | HTTP-Link (extern) | link | text |     | Ja  |
@@ -210,8 +179,6 @@ Globale Kategorien (catg)
 
 ### Kontaktzuweisung (C\_\_CATG\_\_CONTACT)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Kontakt | contact | int |     | Ja  |
@@ -224,8 +191,6 @@ Globale Kategorien (catg)
 
 ### Logbuch (C\_\_CATG\_\_LOGBOOK)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Datum | date | date\_time |     | Ja  |
@@ -247,8 +212,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Typ | type | int | isys\_controller\_type\_\_id | Ja  |
 | Hersteller | manufacturer | int | isys\_controller\_manufacturer\_\_id | Ja  |
@@ -257,8 +220,6 @@ Globale Kategorien (catg)
 
 ### Standort (C\_\_CATG\_\_LOCATION)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Standort-Pfad | location\_path | text |     | Ja  |
@@ -275,16 +236,12 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Hochgeladene Bilder | image\_selection | int |     | Ja  |
 | Datei | image | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Handbuchzuweisung (C\_\_CATG\_\_MANUAL)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -295,8 +252,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Hersteller | manufacturer | int | isys\_sound\_manufacturer\_\_id | Ja  |
 | Bezeichnung | title | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
@@ -305,14 +260,10 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Objekt | assigned\_object | int |     | Ja  |
 
 ### Grafikkarte (C\_\_CATG\_\_GRAPHIC)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -325,8 +276,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Virtuelle Maschine | virtual\_machine | int |     | Ja  |
 | Läuft auf Host | hosts | int | isys\_connection\_\_id | Ja  |
 | Virtualisierungs-System | system | int | isys\_vm\_type\_\_id | Ja  |
@@ -336,8 +285,6 @@ Globale Kategorien (catg)
 
 ### Buchhaltung (C\_\_CATG\_\_ACCOUNTING)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Inventarnummer | inventory\_no | text |     | Ja  |
@@ -363,8 +310,6 @@ Globale Kategorien (catg)
 
 ### Port (C\_\_CMDB\_\_SUBCAT\_\_NETWORK\_PORT)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -395,8 +340,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Hersteller | manufacturer | int | isys\_iface\_manufacturer\_\_id | Ja  |
 | Modell | model | int | isys\_iface\_model\_\_id | Ja  |
@@ -406,8 +349,6 @@ Globale Kategorien (catg)
 
 ### Logische Ports (C\_\_CMDB\_\_SUBCAT\_\_NETWORK\_INTERFACE\_L)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -424,8 +365,6 @@ Globale Kategorien (catg)
 
 ### Laufwerk (C\_\_CATG\_\_DRIVE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Laufwerksbuchstabe | mount\_point | text |     | Ja  |
@@ -451,8 +390,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Typ | type | int | isys\_stor\_type\_\_id | Ja  |
 | Bezeichnung | title | text |     | Ja  |
 | Hersteller | manufacturer | int | isys\_stor\_manufacturer\_\_id | Ja  |
@@ -473,8 +410,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Typ | type | int | isys\_fc\_port\_type\_\_id | Ja  |
 | Verbundener Controller | connected\_controller | int | isys\_catg\_hba\_list\_\_id | Ja  |
@@ -493,8 +428,6 @@ Globale Kategorien (catg)
 
 ### Hostadresse (C\_\_CATG\_\_IP)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Primäre Hostadresse | primary\_hostaddress | text | isys\_cats\_net\_ip\_addresses\_list\_\_id | Ja  |
@@ -527,8 +460,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Versionsnummer | title | text |     | Ja  |
 | Servicepack | servicepack | text |     | Ja  |
 | Kernel | kernel | text |     | Ja  |
@@ -537,8 +468,6 @@ Globale Kategorien (catg)
 
 ### Anschlüsse (C\_\_CATG\_\_CONNECTOR)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -560,8 +489,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | denotation | text |     | Ja  |
 | Rechnungsdatum | date | date |     | Ja  |
 | Betrag | amount | double |     | Ja  |
@@ -572,8 +499,6 @@ Globale Kategorien (catg)
 
 ### Stromlieferant (C\_\_CATG\_\_POWER\_SUPPLIER)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -590,8 +515,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | RAID-Typ | raid\_type | int | isys\_raid\_type\_\_id | Ja  |
 | Bezeichnung | title | text |     | Ja  |
 | RAID Level | raid\_level | int | isys\_stor\_raid\_level\_\_id | Ja  |
@@ -602,8 +525,6 @@ Globale Kategorien (catg)
 
 ### Logische Geräte (LDEV Server) (C\_\_CATG\_\_LDEV\_SERVER)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -622,8 +543,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Pfad | paths | int |     | Ja  |
 | Logische Geräte (LDEV Server) | assigned\_ldevserver | int | isys\_catg\_sanpool\_list\_\_id | Ja  |
@@ -633,8 +552,6 @@ Globale Kategorien (catg)
 
 ### Hostadapter (HBA) (C\_\_CATG\_\_HBA)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -647,8 +564,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Quorum | quorum | int |     | Ja  |
 | Verwaltungsinstanz | administration\_service | text |     | Ja  |
 | Clustermitglieder | cluster\_members | text |     | Ja  |
@@ -657,8 +572,6 @@ Globale Kategorien (catg)
 
 ### Cluster (C\_\_CATG\_\_CLUSTER)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Quorum | quorum | int |     | Ja  |
@@ -671,8 +584,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Freigabename | title | text |     | Ja  |
 | UNC-Pfad | unc\_path | text |     | Ja  |
 | Laufwerk | volume | int | isys\_catg\_drive\_list\_\_id | Ja  |
@@ -681,8 +592,6 @@ Globale Kategorien (catg)
 
 ### Clusterdienstzuweisung (C\_\_CATG\_\_CLUSTER\_SERVICE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Typ | type | int | isys\_cluster\_type\_\_id | Ja  |
@@ -699,22 +608,16 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Clustermitglied | member | int | isys\_connection\_\_id | Ja  |
 
 ### Clustermitgliedschaften (C\_\_CATG\_\_CLUSTER\_MEMBERSHIPS)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Cluster | connected\_object | int | isys\_connection\_\_isys\_obj\_\_id | Ja  |
 
 ### Rechenressourcen (C\_\_CATG\_\_COMPUTING\_RESOURCES)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | RAM | ram | float |     | Ja  |
@@ -731,15 +634,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | SNMP Community | title | int | isys\_snmp\_community\_\_id | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Virtueller Host (C\_\_CATG\_\_VIRTUAL\_HOST\_ROOT)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Virtueller Host | virtual\_host | int |     | Ja  |
@@ -751,8 +650,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Virtueller Host | virtual\_host | int |     | Ja  |
 | Lizenzserver | license\_server | int | isys\_connection\_\_id | Ja  |
 | Verwaltungsinstanz | administration\_service | int | isys\_connection\_\_id | Ja  |
@@ -762,16 +659,12 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Gastsysteme | connected\_object | int |     | Ja  |
 | Hostname | hostname | text |     | Ja  |
 | Läuft auf | runs\_on | text |     | Ja  |
 
 ### Virtuelle Maschine (C\_\_CATG\_\_VIRTUAL\_MACHINE\_\_ROOT)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Virtuelle Maschine | virtual\_machine | int |     | Ja  |
@@ -785,8 +678,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Ports | ports | int | isys\_virtual\_switch\_2\_port\_\_isys\_catg\_virtual\_switch\_list\_\_id | Ja  |
 | Portgruppen | portgroup | int | isys\_virtual\_port\_group\_\_isys\_catg\_virtual\_switch\_list\_\_id | Ja  |
@@ -796,8 +687,6 @@ Globale Kategorien (catg)
 
 ### Virtuelle Geräte (C\_\_CATG\_\_VIRTUAL\_DEVICE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Gerätetyp | host\_stor\_device | int | isys\_catg\_stor\_list\_\_id | Ja  |
@@ -822,8 +711,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Sichert | backup | int |     | Ja  |
 | Art des Backups | backup\_type | int | isys\_backup\_type\_\_id | Ja  |
@@ -835,8 +722,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Gruppe | connected\_object | int |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
@@ -844,15 +729,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zugewiesenes Objekt | connected\_object | int | isys\_connection\_\_id | Ja  |
 | Objekttyp | objtype | int |     | Ja  |
 
 ### Service Logbuch (C\_\_CATG\_\_ITS\_LOGBOOK)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Datum | date | date\_time |     | Ja  |
@@ -873,15 +754,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Service | connected\_object | int |     | Ja  |
 | SYSID | sysid | text |     | Ja  |
 
 ### Beziehungen (C\_\_CATG\_\_RELATION)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Object 1 | object1 | int | isys\_obj\_\_id | Nein |
@@ -895,8 +772,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Object 1 | object1 | int | isys\_obj\_\_id | Nein |
 | Object 2 | object2 | int | isys\_obj\_\_id | Nein |
 | Beziehungsart | relation\_type | int | isys\_relation\_type\_\_id | Nein |
@@ -908,16 +783,12 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | verwendetes Datenbankschema | database\_assignment | int |     | Nein |
 | Software läuft auf | runs\_on | int |     | Nein |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Service Typ (C\_\_CATG\_\_ITS\_TYPE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Typ | its\_type | int | isys\_its\_type\_\_id | Ja  |
@@ -927,8 +798,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Benutzername | username | text |     | Ja  |
 | Passwort | password | text |     | Ja  |
@@ -936,8 +805,6 @@ Globale Kategorien (catg)
 
 ### SOA-Stacks (C\_\_CATG\_\_SOA\_STACKS)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -950,8 +817,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | CMDB-Status | cmdb\_status | int | isys\_cmdb\_status\_\_id | Ja  |
 | Gültigkeitszeitraum von | start | date |     | Ja  |
 | Gültigkeitszeitraum bis | end | date |     | Ja  |
@@ -961,14 +826,10 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Verknüpfte Karten | connected\_obj | int |     | Ja  |
 
 ### SIM-Karte (C\_\_CATG\_\_SIM\_CARD)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Typ | type | int | isys\_cp\_contract\_type\_\_id | Ja  |
@@ -1001,15 +862,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | TSI-Service ID | tsi\_service\_id | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Prüfung (C\_\_CATG\_\_AUDIT)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -1029,8 +886,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Übergeordnetes Objekt | parent | int |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
@@ -1038,14 +893,10 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Objekt | assigned\_object | int | isys\_obj\_\_id | Ja  |
 
 ### Zugewiesener Arbeitsplatz (C\_\_CATG\_\_ASSIGNED\_WORKSTATION)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Übergeordnetes Objekt | parent | int |     | Ja  |
@@ -1055,15 +906,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zugewiesene Arbeitsplätze | assigned\_workstations | int |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Vertragszuweisung (C\_\_CATG\_\_CONTRACT\_ASSIGNMENT)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Zugewiesener Vertrag | connected\_contract | int | isys\_connection\_\_id | Ja  |
@@ -1076,14 +923,10 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Chassis | assigned\_object | int | isys\_connection\_\_id | Ja  |
 
 ### E-Mail Adressen (C\_\_CATG\_\_MAIL\_ADDRESSES)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | E-Mail Adresse | title | text |     | Ja  |
@@ -1093,8 +936,6 @@ Globale Kategorien (catg)
 
 ### CUCM VoIP Telefon (C\_\_CATG\_\_VOIP\_PHONE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Geräte Protokoll | device\_protocol | text |     | Ja  |
@@ -1124,8 +965,6 @@ Globale Kategorien (catg)
 
 ### CUCM VoIP Leitung (C\_\_CATG\_\_VOIP\_PHONE\_LINE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Verzeichnis-Nummer | directory\_number | text |     | Ja  |
@@ -1181,8 +1020,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Typ | type | int | isys\_telephone\_fax\_type\_\_id | Ja  |
 | Telefonnummer | telephone\_number | text |     | Ja  |
 | Faxnummer | fax\_number | text |     | Ja  |
@@ -1193,8 +1030,6 @@ Globale Kategorien (catg)
 
 ### Smartcard Zertifikat (C\_\_CATG\_\_SMARTCARD\_CERTIFICATE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Kartennummer | cardnumber | text |     | Ja  |
@@ -1208,8 +1043,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Gewähltes Objekt | assigned\_objects | int | isys\_connection\_\_id | Ja  |
 | Mountpoint | mountpoint | text |     | Ja  |
 | Freigabename | shares | int | isys\_catg\_shares\_list\_\_id | Ja  |
@@ -1219,8 +1052,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Typ | type | int | isys\_certificate\_type\_\_id | Ja  |
 | Erstelldatum | create\_date | date |     | Ja  |
 | Ablaufdatum | expire\_date | date |     | Ja  |
@@ -1228,8 +1059,6 @@ Globale Kategorien (catg)
 
 ### SLA (C\_\_CATG\_\_SLA)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Service-ID | service\_id | text |     | Ja  |
@@ -1254,15 +1083,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Distinguished Name (DN) | title | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Host Definition (C\_\_CATG\_\_NAGIOS)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Diese Konfiguration exportieren | is\_exportable | int |     | Ja  |
@@ -1328,8 +1153,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Diese Konfiguration exportieren | is\_exportable | int |     | Ja  |
 | Gruppen-Typ | type | int |     | Ja  |
 | display\_name | name | text |     | Ja  |
@@ -1342,8 +1165,6 @@ Globale Kategorien (catg)
 
 ### Nagios (Service) (C\_\_CATG\_\_NAGIOS\_SERVICE\_FOLDER)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Aktiv | is\_active | int |     | Ja  |
@@ -1397,8 +1218,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | check\_command | check\_command | int | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_id | Ja  |
 | name | name | text |     | Ja  |
 | check\_command\_plus | check\_command\_plus | int | isys\_nagios\_commands\_plus\_\_id | Ja  |
@@ -1446,8 +1265,6 @@ Globale Kategorien (catg)
 
 ### Service definition (C\_\_CATG\_\_NAGIOS\_SERVICE\_DEF)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Aktiv | is\_active | int |     | Ja  |
@@ -1501,14 +1318,10 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zugewiesene Objekte | assigned\_objects | int |     | Ja  |
 
 ### Service-Template definition (C\_\_CATG\_\_NAGIOS\_SERVICE\_TPL\_DEF)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | check\_command | check\_command | int | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_id | Ja  |
@@ -1560,14 +1373,10 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zugewiesene Objekte | assigned\_objects | int |     | Ja  |
 
 ### Nagios (Host TPL) (C\_\_CATG\_\_NAGIOS\_HOST\_TPL\_FOLDER)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Hostname | name | text |     | Ja  |
@@ -1622,8 +1431,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Hostname | name | text |     | Ja  |
 | Nagios Host | nagios\_host | int | isys\_monitoring\_export\_config\_\_id | Ja  |
 | LC\_\_CATG\_\_NAGIOS\_HOST\_TPL\_DEF\_MAX\_CHECK\_ATTEMPTS | max\_check\_attempts | int |     | Ja  |
@@ -1674,8 +1481,6 @@ Globale Kategorien (catg)
 
 ### Nagios (Host) (C\_\_CATG\_\_NAGIOS\_HOST\_FOLDER)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Diese Konfiguration exportieren | is\_exportable | int |     | Ja  |
@@ -1741,14 +1546,10 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zugewiesene Objekte | assigned\_objects | text |     | Ja  |
 
 ### Servicezuweisung (C\_\_CATG\_\_NAGIOS\_REFS\_SERVICES)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Nagios Service | assigned\_objects | int | isys\_obj\_\_id | Ja  |
@@ -1757,22 +1558,16 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Nagios Service | assigned\_objects | int | isys\_obj\_\_id | Ja  |
 
 ### Servicezuweisung (C\_\_CATG\_\_NAGIOS\_APPLICATION\_REFS\_NAGIOS\_SERVICE)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Nagios Service | assigned\_objects | int | isys\_obj\_\_id | Ja  |
 
 ### Nagios Service-Dependencies (C\_\_CATG\_\_NAGIOS\_SERVICE\_DEP)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Host | host | int | isys\_catg\_nagios\_refs\_services\_list\_\_id | Ja  |
@@ -1789,8 +1584,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Adresszusatz | address | text\_area |     | Ja  |
 | Straße | street | text |     | Ja  |
 | Hausnummer | house\_no | text |     | Ja  |
@@ -1805,8 +1598,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Aktiv? | active | int |     | Ja  |
 | Host | monitoring\_host | int | isys\_monitoring\_hosts\_\_id | Ja  |
 | Hostname | host\_name | text |     | Ja  |
@@ -1817,15 +1608,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Livestatus | livestatus\_state | int |     | Ja  |
 | Livestatus (Knopf) | livestatus\_state\_button | int |     | Ja  |
 
 ### Fahrzeug (C\_\_CATG\_\_VEHICLE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Kennzeichen | licence\_plate | text |     | Ja  |
@@ -1835,15 +1622,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Luftfahrzeugkennzeichen | registration | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Netzwerkverbindungen (C\_\_CATG\_\_NET\_CONNECTIONS\_FOLDER)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Layer 3/4 Protokoll | protocol | int | isys\_net\_protocol\_\_id | Ja  |
@@ -1859,8 +1642,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Layer 3/4 Protokoll | protocol | int | isys\_net\_protocol\_\_id | Ja  |
 | Layer 5-7 Protokoll | protocol\_layer\_5 | int | isys\_net\_protocol\_layer\_5\_\_id | Ja  |
 | (Bind) IP-Adresse | ip\_address | int | isys\_cats\_net\_ip\_addresses\_list\_\_id | Ja  |
@@ -1872,8 +1653,6 @@ Globale Kategorien (catg)
 
 ### Verbindung (C\_\_CATG\_\_NET\_CONNECTOR)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | (Source) IP-Adresse | ip\_address | int | isys\_cats\_net\_ip\_addresses\_list\_\_id | Ja  |
@@ -1888,15 +1667,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Verwaltungsinstanz (Objekt) | connected\_object | int | isys\_connection\_\_id | Ja  |
 | Objekttyp | objtype | int |     | Ja  |
 
 ### JDisc Custom Attributes (C\_\_CATG\_\_JDISC\_CA)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Attribut | attribute | text |     | Ja  |
@@ -1907,8 +1682,6 @@ Globale Kategorien (catg)
 
 ### LC\_\_CATG\_\_CMK\_FOLDER (C\_\_CATG\_\_CMK)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | LC\_\_CATG\_\_CMK\_\_ACTIVE | active | int |     | Ja  |
@@ -1924,15 +1697,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | LC\_\_CATG\_\_CMK\_TAG\_\_TAGS | tags | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### LC\_\_CATG\_\_CMK\_HOST\_SERVICE (C\_\_CATG\_\_CMK\_HOST\_SERVICE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | LC\_\_CATG\_\_CMK\_SERVICE\_\_CHECK\_MK\_SERVICES | service | text |     | Ja  |
@@ -1943,16 +1712,12 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | LC\_\_MODULE\_\_CHECK\_MK\_\_HOST | host | int |     | Ja  |
 | LC\_\_CATG\_\_CMK\_SERVICE\_\_CHECK\_MK\_SERVICES | service | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### LC\_\_CATG\_\_CMK\_DEF (C\_\_CATG\_\_CMK\_DEF)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | LC\_\_CATG\_\_CMK\_\_ACTIVE | active | int |     | Ja  |
@@ -1968,15 +1733,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | NDO Status | ndo\_state | text |     | Ja  |
 | NDO Status Button | ndo\_state\_button | text |     | Ja  |
 
 ### Kabel (C\_\_CATG\_\_CABLE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Art des Kabels | cable\_type | int | isys\_cable\_type\_\_id | Ja  |
@@ -1992,8 +1753,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Key | key | text |     | Ja  |
 | Value | value | text |     | Ja  |
 | Zuletzt editiert | last\_edited | date\_time |     | Ja  |
@@ -2005,8 +1764,6 @@ Globale Kategorien (catg)
 
 ### Service (C\_\_CATG\_\_SERVICE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Service Nummer | service\_number | text |     | Ja  |
@@ -2023,8 +1780,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Betriebssystem | application | int | isys\_connection\_\_id | Ja  |
 | Typ | application\_type | int | isys\_catg\_application\_type\_\_id | Ja  |
 | Priorität | application\_priority | int | isys\_catg\_application\_priority\_\_id | Ja  |
@@ -2039,15 +1794,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zugewiesenes SP-VLAN | spvlan | int | isys\_connection\_\_id | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Faser/Ader (C\_\_CATG\_\_FIBER\_LEAD)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Label | label | text |     | Ja  |
@@ -2060,14 +1811,10 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zugewiesenes SP-VLAN | spvlan | int | isys\_connection\_\_id | Ja  |
 
 ### Bilder (C\_\_CATG\_\_IMAGES)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Dateiname | name | text |     | Nein |
@@ -2075,8 +1822,6 @@ Globale Kategorien (catg)
 
 ### WAN-Leitungen (C\_\_CATG\_\_WAN)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -2106,8 +1851,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Primäre ZugriffsURL | remote\_url | text |     | Ja  |
 | Remote Management Controller | connected\_object | int | isys\_connection\_\_id | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
@@ -2116,22 +1859,16 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Remote Management Controller | connected\_object | int |     | Ja  |
 
 ### Virtuell gemanagte Objekte (C\_\_CATG\_\_MANAGED\_OBJECTS)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Objekt | connected\_object | int |     | Ja  |
 
 ### VRRP (C\_\_CATG\_\_VRRP)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Typ | type | int | isys\_vrrp\_type\_\_id | Ja  |
@@ -2142,15 +1879,11 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | VRRP Mitglied | member | int | isys\_catg\_log\_port\_list\_\_id | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Stack Mitglieder (C\_\_CATG\_\_STACK\_MEMBER)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Mitglied | assigned\_object | int | isys\_obj\_\_id | Ja  |
@@ -2161,8 +1894,6 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Letzter eingeloggter Benutzer | last\_login | text |     | Ja  |
 | Typ | type | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
@@ -2171,14 +1902,10 @@ Globale Kategorien (catg)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bereiche | from-to | text | isys\_obj\_\_id | Ja  |
 
 ### Optionen (C\_\_CATG\_\_NET\_ZONE\_OPTIONS)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bereichsfarbe | color | text |     | Ja  |
@@ -2187,8 +1914,6 @@ Globale Kategorien (catg)
 
 ### Bereiche (C\_\_CATG\_\_NET\_ZONE\_SCOPES)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bereiche | from-to | text | isys\_obj\_\_id | Ja  |
@@ -2200,8 +1925,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Vertikale Einschübe (Frontseite) | vertical\_slots\_front | int |     | Ja  |
 | Vertikale Einschübe (Rückseite) | vertical\_slots\_rear | int |     | Ja  |
 | Sortierung der Höheneinheit | slot\_sorting | text |     | Ja  |
@@ -2211,8 +1934,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Typ | type | int | isys\_room\_type\_\_id | Ja  |
 | Raumnummer | number | text |     | Ja  |
 | Stockwerk | floor | text |     | Ja  |
@@ -2220,8 +1941,6 @@ Spezifische Kategorien (cats)
 
 ### Dienste (C\_\_CATS\_\_SERVICE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Spezifikation | specification | text |     | Ja  |
@@ -2236,8 +1955,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | VLAN Management Protokoll | vlan | int | isys\_vlan\_management\_protocol\_\_id | Ja  |
 | Rolle | role | int | isys\_switch\_role\_\_id | Ja  |
 | Spanning Tree | spanning\_tree | int | isys\_switch\_spanning\_tree\_\_id | Ja  |
@@ -2245,8 +1962,6 @@ Spezifische Kategorien (cats)
 
 ### WAN-Leitungen (C\_\_CATS\_\_WAN)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Rolle | role | int | isys\_wan\_role\_\_id | Ja  |
@@ -2259,8 +1974,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zeitbedarf | time\_needed | int |     | Ja  |
 | Einheit | time\_unit | int | isys\_unit\_of\_time\_\_id | Ja  |
 | Datum Notfallübung | practice\_date | date\_time |     | Ja  |
@@ -2268,8 +1981,6 @@ Spezifische Kategorien (cats)
 
 ### Klimaanlage (C\_\_CATS\_\_AC)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Art | type | int | isys\_ac\_type\_\_id | Ja  |
@@ -2289,8 +2000,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Funktion | function | int | isys\_wlan\_function\_\_id | Ja  |
 | Standard | standard | int | isys\_wlan\_standard\_\_id | Ja  |
@@ -2307,8 +2016,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Display | size | float |     | Ja  |
 | Einheit | size\_unit | int | isys\_depth\_unit\_\_id | Ja  |
 | Typ | type | int | isys\_monitor\_type\_\_id | Ja  |
@@ -2321,16 +2028,12 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Typ des Clients | type | int | isys\_client\_type\_\_id | Ja  |
 | Tastatur-Layout | keyboard\_layout | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### FC-Switch (C\_\_CATS\_\_SWITCH\_FC)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -2341,16 +2044,12 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Routingprotokoll | routing\_protocol | int | isys\_routing\_protocol\_\_id | Ja  |
 | Gateway Adresse | gateway\_address | int |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Drucker (C\_\_CATS\_\_PRT)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Typ | type | int | isys\_cats\_prt\_type\_\_id | Ja  |
@@ -2362,8 +2061,6 @@ Spezifische Kategorien (cats)
 
 ### Dateien (C\_\_CATS\_\_FILE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | file\_title | text |     | Ja  |
@@ -2379,8 +2076,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Spezifikation | specification | text |     | Ja  |
 | Hersteller | manufacturer | int | isys\_application\_manufacturer\_\_id | Ja  |
 | Installationsart | installation | int | isys\_installation\_type\_\_id | Ja  |
@@ -2391,8 +2086,6 @@ Spezifische Kategorien (cats)
 
 ### Netz (C\_\_CATS\_\_NET)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -2417,15 +2110,11 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | IMEI-Nummer | imei\_number | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Objektgruppe (C\_\_CATS\_\_GROUP)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Objekt | object | int | isys\_connection\_\_id | Ja  |
@@ -2434,8 +2123,6 @@ Spezifische Kategorien (cats)
 
 ### Lizenzschlüssel (C\_\_CMDB\_\_SUBCAT\_\_LICENCE\_LIST)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Schlüssel | key | text |     | Ja  |
@@ -2454,8 +2141,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | file\_title | text |     | Ja  |
 | Dateiname | file\_physical | int |     | Ja  |
 | Kategorie | file\_category | int | isys\_file\_category\_\_id | Ja  |
@@ -2467,8 +2152,6 @@ Spezifische Kategorien (cats)
 
 ### Dateiversionen (C\_\_CMDB\_\_SUBCAT\_\_FILE\_VERSIONS)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Dateiname | file\_physical | text |     | Ja  |
@@ -2484,14 +2167,10 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zugewiesene Objekte | assigned\_objects | int |     | Ja  |
 
 ### Notfallplan Eigenschaften (C\_\_CMDB\_\_SUBCAT\_\_EMERGENCY\_PLAN)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Zeitbedarf | time\_needed | int |     | Ja  |
@@ -2503,14 +2182,10 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | object | text |     | Ja  |
 
 ### Netzart (C\_\_CMDB\_\_SUBCAT\_\_WS\_NET\_TYPE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Netzart | title | int | isys\_net\_type\_title\_\_id | Ja  |
@@ -2520,14 +2195,10 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zugewiesene Objekte | connected\_object | int |     | Ja  |
 
 ### Leitungsnetz (C\_\_CATS\_\_WS)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Netzart | title | int | isys\_net\_type\_title\_\_id | Ja  |
@@ -2535,8 +2206,6 @@ Spezifische Kategorien (cats)
 
 ### Unterbrechungsfreie Stromversorgung (C\_\_CATS\_\_UPS)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Typ | type | int | isys\_ups\_type\_\_id | Ja  |
@@ -2552,8 +2221,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Art | type | int | isys\_cats\_eps\_type\_\_id | Ja  |
 | Anlaufzeit | warmup\_time | int |     | Ja  |
 | Einheit | warmup\_time\_unit | int | isys\_unit\_of\_time\_\_id | Ja  |
@@ -2567,16 +2234,12 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Mitglieder | members | int |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Organisation (C\_\_CATS\_\_ORGANIZATION)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Nein |
@@ -2590,8 +2253,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Nein |
 | Telefon | telephone | text |     | Ja  |
 | Fax | fax | text |     | Ja  |
@@ -2603,15 +2264,11 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | object | int |     | Ja  |
 | Kontakt | contact | int |     | Ja  |
 
 ### Personen (C\_\_CATS\_\_PERSON)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -2649,8 +2306,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Anrede | salutation | text |     | Ja  |
 | Vorname | first\_name | text |     | Ja  |
@@ -2686,8 +2341,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Username | title | text |     | Ja  |
 | Passwort | user\_pass | text |     | Ja  |
 | Passwort | user\_pass2 | text |     | Ja  |
@@ -2705,15 +2358,11 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Personengruppenmitgliedschaft | connected\_object | int |     | Ja  |
 | Kontakt | contact | int |     | Ja  |
 
 ### Personengruppen (C\_\_CATS\_\_PERSON\_GROUP)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Name | title | text |     | Ja  |
@@ -2726,8 +2375,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Name | title | text |     | Ja  |
 | Email | email\_address | text |     | Ja  |
 | Telefon | phone | text |     | Ja  |
@@ -2736,8 +2383,6 @@ Spezifische Kategorien (cats)
 
 ### Mitglieder (C\_\_CATS\_\_PERSON\_GROUP\_MEMBERS)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Vorname | first\_name | text |     | Ja  |
@@ -2753,15 +2398,11 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | object | int |     | Ja  |
 | Rolle | role | int | isys\_contact\_tag\_\_id | Ja  |
 
 ### Zugewiesene Objekte (C\_\_CATS\_\_PERSON\_CONTACT\_ASSIGNMENT)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Objekt | object | int | isys\_connection\_\_isys\_obj\_\_id | Nein |
@@ -2773,8 +2414,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Objekt | object | int | isys\_connection\_\_isys\_obj\_\_id | Nein |
 | Objekttyp | object\_type | int |     | Ja  |
 | Rolle | role | int | isys\_contact\_tag\_\_id | Ja  |
@@ -2782,8 +2421,6 @@ Spezifische Kategorien (cats)
 
 ### Zugeordnete Cluster (C\_\_CATS\_\_CLUSTER\_SERVICE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Zugeordnete Cluster | cluster | int |     | Nein |
@@ -2800,8 +2437,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Object1 | object1 | int |     | Ja  |
 | Object2 | object2 | int |     | Ja  |
 | Service | itservice | int |     | Ja  |
@@ -2813,8 +2448,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Läuft auf | link | int |     | Ja  |
 | Datenbankinstanz | instance | int | isys\_cats\_database\_instance\_list\_\_id | Ja  |
 | Bezeichnung | title | text |     | Ja  |
@@ -2823,8 +2456,6 @@ Spezifische Kategorien (cats)
 
 ### Datenbanklinks (C\_\_CATS\_\_DATABASE\_LINKS)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -2838,15 +2469,11 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | DBMS | dbms | int | isys\_dbms\_\_id | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Instanz / Oracle Datenbank (C\_\_CATS\_\_DATABASE\_INSTANCE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | DBMS | instance | int | isys\_connection\_\_id | Ja  |
@@ -2859,15 +2486,11 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | PDU | pdu\_id | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Branch (C\_\_CATS\_\_PDU\_BRANCH)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | PDU | pdu\_id | int |     | Ja  |
@@ -2879,8 +2502,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Mindestmenge an aktiven Komponenten | threshold | text |     | Ja  |
 | Gleichgerichtete Beziehungen | rel\_pool | text |     | Ja  |
@@ -2888,8 +2509,6 @@ Spezifische Kategorien (cats)
 
 ### Datenbankobjekte (C\_\_CATS\_\_DATABASE\_OBJECTS)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
@@ -2900,14 +2519,10 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zugeordnete Objekte | access | int |     | Ja  |
 
 ### Datenbank Gateway (C\_\_CATS\_\_DATABASE\_GATEWAY)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Gateway Typ | type | text |     | Ja  |
@@ -2921,15 +2536,11 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Replikationsmechanismus | replication\_mechanism | int | isys\_replication\_mechanism\_\_id | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Replikationspartner (C\_\_CATS\_\_REPLICATION\_PARTNER)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Replikationstyp | type | int | isys\_replication\_type\_\_id | Ja  |
@@ -2938,8 +2549,6 @@ Spezifische Kategorien (cats)
 
 ### Installation (C\_\_CATS\_\_APPLICATION\_ASSIGNED\_OBJ)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Installiert auf | object | int |     | Nein |
@@ -2957,8 +2566,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Spezifikation | specification | text |     | Ja  |
 | Hersteller | manufacturer | int | isys\_application\_manufacturer\_\_id | Ja  |
 | Installationsart | installation | int | isys\_installation\_type\_\_id | Ja  |
@@ -2969,8 +2576,6 @@ Spezifische Kategorien (cats)
 
 ### Kryptokarte (C\_\_CATS\_\_KRYPTO\_CARD)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Zertifikatsnummer | certificate\_number | text |     | Ja  |
@@ -2987,8 +2592,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Typ | net\_type | int | isys\_net\_type\_\_id | Ja  |
 | Hostadresse | title | text |     | Ja  |
 | Objekt | assigned\_object | int |     | Ja  |
@@ -3001,8 +2604,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Typ v4 | type | int | isys\_net\_dhcp\_type\_\_id | Ja  |
 | Typ v6 | typev6 | int | isys\_net\_dhcpv6\_type\_\_id | Ja  |
 | DHCP von | range\_from | text |     | Ja  |
@@ -3011,8 +2612,6 @@ Spezifische Kategorien (cats)
 
 ### Layer-2-Netz (C\_\_CATS\_\_LAYER2\_NET)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | ID (VLAN) | vlan\_id | text |     | Ja  |
@@ -3030,16 +2629,12 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Objekt-Titel | isys\_obj\_\_id | int |     | Ja  |
 | Zugewiesene Ports | isys\_catg\_port\_list\_\_id | int |     | Ja  |
 | MAC-Adresse | isys\_catg\_port\_list\_\_mac | int |     | Ja  |
 
 ### Vertrag (C\_\_CATS\_\_CONTRACT)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Vertragsart | type | int | isys\_contract\_type\_\_id | Ja  |
@@ -3070,8 +2665,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Vertragsart | type | int | isys\_contract\_type\_\_id | Ja  |
 | Vertragsnummer | contract\_no | text |     | Ja  |
 | Kundennummer | customer\_no | text |     | Ja  |
@@ -3100,14 +2693,10 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Zugeordnete Objekte | assigned\_object | int |     | Ja  |
 
 ### Chassis (C\_\_CATS\_\_CHASSIS)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Vorderseite horizontale Einheiten | front\_x | int |     | Ja  |
@@ -3120,8 +2709,6 @@ Spezifische Kategorien (cats)
 
 ### Slots (C\_\_CATS\_\_CHASSIS\_SLOT)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Anschlusstyp | connector\_type | int | isys\_chassis\_connector\_type\_\_id | Ja  |
@@ -3138,8 +2725,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Rolle | role | int | isys\_chassis\_role\_\_id | Ja  |
 | Gerätezuordnung | assigned\_device | int | isys\_connection\_\_id | Ja  |
 | Gerätezuordnung (Hostadapter) | assigned\_hba | int | isys\_catg\_hba\_list\_\_id | Ja  |
@@ -3150,8 +2735,6 @@ Spezifische Kategorien (cats)
 
 ### Chassis Ansicht (C\_\_CATS\_\_CHASSIS\_VIEW)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Vorderseite horizontale Einheiten | front\_x | int |     | Ja  |
@@ -3166,16 +2749,12 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Bezeichnung | title | text |     | Ja  |
 | Variante | variant | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Nagios (C\_\_CATS\_\_PERSON\_NAGIOS)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Alias | alias | text |     | Ja  |
@@ -3202,16 +2781,12 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Diese Konfiguration exportieren | is\_exportable | int |     | Ja  |
 | alias | alias | text |     | Ja  |
 | Beschreibung | description | text\_area |     | Ja  |
 
 ### Typ (C\_\_CATS\_\_GROUP\_TYPE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Typ | group\_type | int |     | Ja  |
@@ -3222,15 +2797,11 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Objekt-Titel | isys\_obj\_\_id | int |     | Ja  |
 | Zugewiesene logische Ports | isys\_catg\_log\_port\_list\_\_id | int |     | Ja  |
 
 ### Installation (C\_\_CATS\_\_APPLICATION\_SERVICE\_ASSIGNED\_OBJ)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Installiert auf | object | int |     | Nein |
@@ -3248,8 +2819,6 @@ Spezifische Kategorien (cats)
 
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Installiert auf | object | int |     | Nein |
 | Typ | application\_type | int | isys\_catg\_application\_type\_\_id | Ja  |
 | Priorität | application\_priority | int | isys\_catg\_application\_priority\_\_id | Ja  |
@@ -3263,8 +2832,6 @@ Spezifische Kategorien (cats)
 
 ### Netzbereiche (C\_\_CATS\_\_NET\_ZONE)
 
-| Feldname | Key | Datentyp | Referenz | Optional |
-| --- | --- | --- | --- | --- |
 | Feldname | Key | Datentyp | Referenz | Optional |
 | --- | --- | --- | --- | --- |
 | Netzbereich Objekt | zone | int | isys\_obj\_\_id | Ja  |

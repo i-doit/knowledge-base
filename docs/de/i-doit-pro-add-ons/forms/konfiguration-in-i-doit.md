@@ -1,7 +1,8 @@
-Damit das Frontend mit dem Backend kommunizieren kann, müssen wir den zuvor verwendeten Benutzername und den API Key unter in den [Mandanteneinstellungen](/display/de/Mandanteneinstellungen) hinterlegen.  
-Aufgerufen werden diese über `Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Forms Add-on`.  
-![](/download/attachments/117801128/image2022-2-8_12-35-21.png?version=1&modificationDate=1644504533842&api=v2&effects=drop-shadow)
+# Konfiguration in i-doit
 
-  
+Damit das Frontend mit dem Backend kommunizieren kann, müssen wir den zuvor verwendeten Benutzername und den API Key unter in den [Mandanteneinstellungen](../../administration/systemeinstellungen/mandanteneinstellungen.md) hinterlegen.  
+Aufgerufen werden diese über Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Forms Add-on.
 
-[approve Weiter zum Formulare erstellen](/display/de/Forms+verwenden)
+[![Konfiguration in i-doit](../../assets/images/de/i-doit-pro-add-ons/forms/konfiguration-i-doit/konfig-i-doit.png)](../../assets/images/de/i-doit-pro-add-ons/forms/konfiguration-i-doit/konfig-i-doit.png)
+
+!!! info "[Weiter zum Formulare erstellen](./forms-verwenden.md)"

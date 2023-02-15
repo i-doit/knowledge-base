@@ -1,4 +1,6 @@
-[Über i-diary](#über-i-diary)
+# i-diary
+
+[Über i-diary](#ueber-i-diary)
 =============================
 
 i-diary ist eine Anwendung für Microsoft Windows, die als Add-On für i-doit funktioniert.  
@@ -6,20 +8,16 @@ Mit Hilfe des Add-ons sind Systemadministratoren in der Lage, sich einen Überbl
 
 Dies ist möglich, indem sie die Anwendung “diary” direkt auf einem Windows-Server verwenden, ohne sich bei i-doit anmelden und nach den Informationen suchen zu müssen.
 
-  
-
-  
-
 [Dokumentation](#dokumentation)
 ===============================
 
-*   [Anforderungen](#Anforderungen)
-*   [Installation](#Installation)
-*   [Updates](#Updates)
-*   [Konfiguration](#Konfiguration)
-*   [Grundlegende Verwendung](#Grundlegende-Verwendung)
-*   [Auswahl des Hosts](#Auswahl-des-Hosts)
-*   [Auswahl des Autors](#Auswahl-des-Autors)
+*   [Anforderungen](#anforderungen)
+*   [Installation](#installation)
+*   [Updates](#updates)
+*   [Konfiguration](#konfiguration)
+*   [Grundlegende Verwendung](#krundlegende-verwendung)
+*   [Auswahl des Hosts](#auswahl-des-hosts)
+*   [Auswahl des Autors](#auswahl-des-autors)
 
 [Copyright & License](#copyright-license)
 -----------------------------------------
@@ -27,10 +25,6 @@ Dies ist möglich, indem sie die Anwendung “diary” direkt auf einem Windows-
 Copyright (C) 2020 [synetics GmbH](https://i-doit.com/en)
 
 * * *
-
-  
-
-  
 
 [Anforderungen](#anforderungen)
 ===============================
@@ -63,40 +57,28 @@ Die folgenden Anforderungen sind vor der Installation oder Verwendung des i-diar
 
 * * *
 
-  
-
-  
-
 [Installation](#installation)
 =============================
 
-Das Add-on wird über das [`Kundenportal`](https://kb.i-doit.com/display/de/Kundenportal) heruntergeladen  
-Das Add-on muss zuvor über das [`Admin Center`](https://kb.i-doit.com/display/de/Add-ons#Add-ons-Installation) installiert werden.
+Das Add-on wird über das [Kundenportal](../administration/kundenportal.md) heruntergeladen  
+Das Add-on muss zuvor über das [Admin Center](../administration/admin-center.md) installiert werden.
 
 * * *
-
-  
-
-  
 
 [Updates](#updates)
 ===================
 
-i-diary wird wie andere Add-on auch über das [`Admin Center`](https://kb.i-doit.com/display/de/Add-ons#Add-ons-Installation) aktualisiert.  
+i-diary wird wie andere Add-on auch über das [Admin Center](../administration/admin-center.md) aktualisiert.  
 Die neue i-diary.exe muss dann durch die aktualisierte i-diary.exe ersetzt werden.  
-Diese befindet sich in der heruntergeladenen ZIP `idoit-i_diary-x.x.x.zip` im Pfad  
-`\idoit-i-diary-1.1\src\classes\modules\syneticsgmbh_idoit\i-diary`
+Diese befindet sich in der heruntergeladenen ZIP idoit-i_diary-x.x.x.zip im Pfad  
+\idoit-i-diary-1.1\src\classes\modules\syneticsgmbh_idoit\i-diary
 
 * * *
-
-  
-
-  
 
 [Konfiguration](#konfiguration)
 ===============================
 
-[Einstellungen über GUI ändern und speichern](#einstellungen-über-gui-ändern-und-speichern)
+[Einstellungen über GUI ändern und speichern](#einstellungen-über-gui-aendern-und-speichern)
 -------------------------------------------------------------------------------------------
 
 Der Benutzer hat die Möglichkeit, die Konfigurationsdatei über die Anwendung zu erstellen und zu ändern.
@@ -107,15 +89,10 @@ Dies sind die folgenden Fälle:
 
   
 
-![](/download/attachments/97288310/image2022-2-2_10-40-47.png?version=1&modificationDate=1643794847922&api=v2&effects=drop-shadow)
+[![Konfiguration](../assets/images/de/i-doit-pro-add-ons/i-diary/1-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/1-id.png)
 
-![](/download/attachments/97288310/image2022-2-2_13-50-44.png?version=1&modificationDate=1643806244451&api=v2&effects=drop-shadow)
+[![Konfiguration](../assets/images/de/i-doit-pro-add-ons/i-diary/2-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/2-id.png)
 
-  
-
-  
-
-  
 
 *   Wenn der Benutzer etwas in der GUI-Konfiguration ändert, wird die Änderung sofort geprüft und gespeichert, wenn sie gültig ist.
     
@@ -127,10 +104,6 @@ Dies sind die folgenden Fälle:
     
 
 * * *
-
-  
-
-  
 
 [Grundlegende Verwendung](#grundlegende-verwendung)
 ===================================================
@@ -151,13 +124,7 @@ Der Benutzer kann außerdem einen Eintrag aktualisieren. Dazu muss das Stift Ico
 
 * * *
 
-![](/download/attachments/97288310/image2022-2-2_14-4-38.png?version=1&modificationDate=1643807078498&api=v2&effects=drop-shadow)
-
-  
-
-  
-
-  
+[![Einen neuen Eintrag erstellen](../assets/images/de/i-doit-pro-add-ons/i-diary/3-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/3-id.png)
 
 [Auswahl des Hosts](#auswahl-des-hosts)
 =======================================
@@ -169,10 +136,6 @@ Es gibt drei Möglichkeiten, einen Host auszuwählen:
 
 Wenn in den Einstellungen kein Host gespeichert ist, sollte ein Host automatisch ermittelt und dem Benutzer vorgeschlagen werden. Zu diesem Zweck wird der Name des Hosts ermittelt.
 
-  
-
-  
-
 [Der Name des Hosts wird als Objekttitel in i-doit gesucht](#der-name-des-hosts-wird-als-objekttitel-in-i-doit-gesucht)
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -183,18 +146,14 @@ Wenn in den Einstellungen kein Host gespeichert ist, sollte ein Host automatisch
 *   Der Benutzer kann die Auswahl abbrechen, um den Host manuell auszuwählen.
     
 
-[Host manuell auswählen](#host-manuell-auswählen)
+[Host manuell auswählen](#host-manuell-auswaehlen)
 -------------------------------------------------
 
 *   Der Benutzer legt die Objekt-ID in der Konfigurationsdatei fest. Nach einem Neustart der Anwendung wird die Einstellung wirksam.
 
-![](/download/attachments/97288310/image2022-2-2_14-8-31.png?version=1&modificationDate=1643807311488&api=v2&effects=drop-shadow)
+[![Host manuell auswählen](../assets/images/de/i-doit-pro-add-ons/i-diary/4-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/4-id.png)
 
-  
-
-![](/download/attachments/97288310/image2022-2-2_11-21-54.png?version=1&modificationDate=1643797314897&api=v2&effects=drop-shadow)
-
-  
+[![Host manuell auswählen](../assets/images/de/i-doit-pro-add-ons/i-diary/5-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/5-id.png)
 
 *   Der Benutzer wählt einen Objekttitel aus einer Liste aus. Es werden nur Objekte angezeigt, deren Objekttypen der Kategorie “Diary” zugeordnet sind. Die Liste ist nach Objekttypen aufgeteilt. Als Listenüberschrift wird der übersetzte Titel des jeweiligen Objekttyps angezeigt. Wenn der Benutzer ein Objekt aus der Liste auswählt, wird dessen ID gespeichert.
     
@@ -215,16 +174,12 @@ Wenn in den Einstellungen kein Host gespeichert ist, sollte ein Host automatisch
 
 * * *
 
-  
-
-  
-
 [Auswahl des Autors](#auswahl-des-autors)
 =========================================
 
 Es gibt drei Möglichkeiten, einen Autor auszuwählen:
 
-[Der Autor wird automatisch ausgewählt](#der-autor-wird-automatisch-ausgewählt)
+[Der Autor wird automatisch ausgewählt](#der-autor-wird-automatisch-ausgewaehlt)
 -------------------------------------------------------------------------------
 
 Wenn kein Autor gespeichert wurde und der Benutzer die Anwendung startet, versucht die Anwendung, den Autor automatisch zu erkennen.
@@ -233,27 +188,18 @@ Dies geschieht durch den folgenden Prozess:
 
 Wenn in den Einstellungen ein “Benutzername” angegeben wird, prüft die Anwendung, ob die Person mit einem Personen-Objekt in i-doit übereinstimmt. Ist dies der Fall, wird die ID des Autors gespeichert.
 
-  
-
-  
-
-[Den Autor manuell auswählen](#den-autor-manuell-auswählen)
+[Den Autor manuell auswählen](#den-autor-manuell-auswaehlen)
 -----------------------------------------------------------
 
 Der Benutzer kann einen Autor für einen neuen Eintrag mit den folgenden Optionen manuell auswählen:
 
 *   Der Benutzer kann die Objekt-ID des Autors in die Konfigurationsdatei schreiben. Diese Einstellung wird erst beim Neustart der Anwendung wirksam.
 
-  
-
-![](/download/attachments/97288310/config.PNG?version=1&modificationDate=1600688053422&api=v2&effects=drop-shadow)
-
-  
+[![Den Autor manuell auswählen](../assets/images/de/i-doit-pro-add-ons/i-diary/6-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/6-id.png)
 
 *   Der Benutzer kann eine Person als Autor aus einer durchsuchbaren Liste auswählen. Diese Liste ist unterteilt in “Kontakte” (Objektbeziehungen aus der Kategorie “Kontaktzuordnung”) und “Personen” (Objekte vom Typ “Personen”).
     
 *   Die Titel der Objekte werden in der Liste angezeigt. Wenn der Benutzer ein Objekt auswählt, wird dessen ID gespeichert.
-    
 
 [Autor wird in der Konfiguration gespeichert](#autor-wird-in-der-konfiguration-gespeichert)
 -------------------------------------------------------------------------------------------
@@ -261,20 +207,17 @@ Der Benutzer kann einen Autor für einen neuen Eintrag mit den folgenden Optione
 *   Wenn der Benutzer die Anwendung startet, ist der bereits gespeicherte Autor für einen neuen Eintrag vorausgewählt.
     
 *   Die Anwendung prüft, ob die Objekt-ID in der Konfigurationsdatei gültig ist. Anhand der ID ruft die Anwendung den Objekttitel ab, um ihn anzuzeigen.
-    
 
 [Object Details](#object-details)
 =================================
 
 *   Wenn ein Objekt ausgewählt wurde können nun Details zu diesem angezeigt werden. Hierzu muss das Info Icon geklickt werden, nun öffnet sich ein weiteres Fenster mit den Informationen
 
-![](/download/attachments/97288310/image2022-2-2_13-57-37.png?version=1&modificationDate=1643806657726&api=v2&effects=drop-shadow)
+[![Object Details](../assets/images/de/i-doit-pro-add-ons/i-diary/7-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/7-id.png)
 
 Sind Informationen nicht vorhanden werden diese durch n/a dargestellt.
 
-![](/download/attachments/97288310/image2022-2-2_13-58-43.png?version=1&modificationDate=1643806724123&api=v2&effects=drop-shadow)
-
-  
+[![Object Details](../assets/images/de/i-doit-pro-add-ons/i-diary/8-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/8-id.png)
 
 [FAQ](#faq)
 ===========

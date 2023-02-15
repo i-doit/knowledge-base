@@ -1,54 +1,47 @@
-  
-
-  
-
+# Formulare publishen
 Formulare freigeben (Publish)
 -----------------------------
 
 Um ein Formular freizugeben gibt es diese Möglichkeiten.
 
-Entweder wird der ![](/download/thumbnails/117801182/pubbut.png?version=1&modificationDate=1644506709675&api=v2) Button im Formular direkt angeklickt.
+Entweder wird der [![Publish](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/1-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/1-fp.png) Button im Formular direkt angeklickt.
 
-![](/download/attachments/117801182/publish.png?version=1&modificationDate=1644506709695&api=v2&effects=drop-shadow)
+[![Publish](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/2-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/2-fp.png)
 
-Oder auf der Übersichtsseite der Formulare. Dort wird über Klick auf das ![](/download/thumbnails/117801182/more-act.png?version=1&modificationDate=1644506709713&api=v2) _More actions_ Menü auch der ![](/download/thumbnails/117801182/pubbut.png?version=1&modificationDate=1644506709675&api=v2) Button dargestellt.
+Oder auf der Übersichtsseite der Formulare. Dort wird über Klick auf das [![More actions](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/3-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/3-fp.png) _More actions_ Menü auch der [![Publish](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/4-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/4-fp.png) Button dargestellt.
 
-![](/download/attachments/117801182/pub-but-over.png?version=1&modificationDate=1644506709722&api=v2&effects=drop-shadow)
+[![Übersicht](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/5-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/5-fp.png)
 
 Nach dem Klick wird ein Popup mit dem Hinweis, dass jeder mit dem Link des Formulars zugriff auf dieses hat.
 
-![](/download/attachments/117801182/pub-form.png?version=1&modificationDate=1644506709729&api=v2&effects=drop-shadow)
+[![Confirm popup](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/6-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/6-fp.png)
 
-Haben wir den Hinweis bestätigt, erhalten wir eine Erfolgsmeldung. Der ![](/download/thumbnails/117801182/open.png?version=1&modificationDate=1644527140432&api=v2) Button öffnet das Formular im Browser und der ![](/download/thumbnails/117801182/copy.png?version=1&modificationDate=1644527168119&api=v2) Button kopiert den Link zum Formular in die Zwischenablage.
+Haben wir den Hinweis bestätigt, erhalten wir eine Erfolgsmeldung. Der [![open](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/7-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/7-fp.png) Button öffnet das Formular im Browser und der [![copy](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/8-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/8-fp.png) Button kopiert den Link zum Formular in die Zwischenablage.
 
-![](/download/attachments/117801182/pub-success.png?version=1&modificationDate=1644527038729&api=v2&effects=drop-shadow)
-
-  
+[![success](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/9-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/9-fp.png)
 
 Formulare nicht mehr freigeben (Unpublish)
 ------------------------------------------
 
 Um die Freigabe eines Formulars wieder zu beenden gibt es diese Möglichkeiten.
 
-Um die Freigabe für das Formular wieder zu entziehen verwenden wir den ![](/download/thumbnails/117801182/unpub.png?version=2&modificationDate=1644534859828&api=v2) Button im Formular.
+Um die Freigabe für das Formular wieder zu entziehen verwenden wir den [![Unpublish](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/10-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/10-fp.png) Button im Formular.
 
-![](/download/attachments/117801182/unpub-edito.png?version=1&modificationDate=1644534826763&api=v2&effects=drop-shadow)
+[![Unpublish](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/11-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/11-fp.png)
 
-  
+Oder auf der Übersichtsseite der Formulare. Dort wird über Klick auf das [![More actions](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/12-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/12-fp.png) _More actions_ Menü auch der [![Unpublish](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/13-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/13-fp.png) Button dargestellt.
 
-Oder auf der Übersichtsseite der Formulare. Dort wird über Klick auf das ![](/download/thumbnails/117801182/more-act.png?version=1&modificationDate=1644506709713&api=v2) _More actions_ Menü auch der ![](/download/thumbnails/117801182/unpub.png?version=2&modificationDate=1644534859828&api=v2) Button dargestellt.
-
-![](/download/attachments/117801182/unpub-overv.png?version=1&modificationDate=1644534918738&api=v2&effects=drop-shadow)
+[![Übersicht](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/14-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/14-fp.png)
 
 Nach dem Klick wird ein Popup mit dem Hinweis, dass das Formular nicht mehr über den Link erreichbar ist.
 
-![](/download/attachments/117801182/unpub-pop.png?version=1&modificationDate=1644535201266&api=v2&effects=drop-shadow)
+[![Unpublish popup](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/15-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/15-fp.png)
 
-Wird das Formular über den ![](/download/thumbnails/117801182/save.png?version=1&modificationDate=1644589356151&api=v2) Button gespeichert erscheint eine Erfolgsmeldung.
+Wird das Formular über den [![](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/16-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/16-fp.png) Button gespeichert erscheint eine Erfolgsmeldung.
 
-![](/download/attachments/117801182/savesucc.png?version=1&modificationDate=1644589468519&api=v2&effects=drop-shadow)  
+[![Success](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/17-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/17-fp.png) 
 Konnte das Formular nicht gespeichert werden erhalten wir eine Fehlermeldung. 
 
-![](/download/attachments/117801182/savefail.png?version=1&modificationDate=1644589428980&api=v2&effects=drop-shadow)
+[![Failed](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/18-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/18-fp.png)
 
-[approve Weiter zum Formular ausfüllen](/display/de/Formular+ausfuellen)
+!!! info "[Weiter zum Formular ausfüllen](./formulare-ausfuellen.md)"
