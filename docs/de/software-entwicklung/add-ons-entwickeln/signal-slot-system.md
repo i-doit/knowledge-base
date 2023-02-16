@@ -1,3 +1,5 @@
+# Signal-Slot System
+
 Das [Signal-Slot System](https://de.wikipedia.org/wiki/Signal-Slot-Konzept) kann benutzt werden, um in i-doit auf bestimmte _Ereignisse_ zu reagieren. Darunter fallen sowohl CMDB Ereignisse, wie “Objekt wurde erstellt”, “Datensatz wurde geändert” oder “Datensatz wurde archiviert”, als auch technische Ereignisse, wie “Kategorie wurde initialisiert”, “GUI wird gerendert” oder “CSS wird zusammengefasst”. 
 
 Das “Events” Add-on greift zum Beispiel auf eine Reihe dieser Signale zurück und bildet somit einen Adapter zwischen technischen Signalen und einer Konfiguration in der i-doit Oberfläche.
@@ -20,9 +22,7 @@ Verwendung der Signale
 
 Um mit Signalen arbeiten zu können, benötigen wir zunächst eine Instanz der “isys\_component\_signalcollection” Klasse aus dem Container:
 
-[?](#)
-
-`$signals` `= isys_application::instance()->container->get(``'signals'``);`
+    $signals = isys_application::instance()->container->get('signals');
 
 Mit dieser Instanz können wir nun Signale senden oder vorhandene Signale beobachten. Die Beobachtung eines Signals kann auch nachträglich gestoppt werden.
 
@@ -33,15 +33,9 @@ Um bei Erreichen eines Signals seine eigene Logik auszuführen, wird mit sogenan
 
 Wir empfehlen “callbacks” mittels String- oder Array-Notation zu übergeben, also zum Beispiel:
 
-  
-
-[?](#)
-
-`$signal``->connect(``'signal.name'``,` `'function_name'``);`
-
-`// Or`
-
-`$signal``->connect(``'signal.name'``, [``'class_name'``,` `'method_name'``]);`
+    $signal->connect('signal.name', 'function_name');
+    // Or
+    $signal->connect('signal.name', ['class_name', 'method_name']);
 
   
 
@@ -52,9 +46,7 @@ Signale beobachten
 
 Um auf Signale zu reagieren, müssen wir einen validen “Callback” an das entsprechende Signal hängen. Das passiert mit Hilfe der “connect” Methode:
 
-[?](#)
-
-`$signal``->connect(``'name.des.signals'``, callable, priority);`
+    $signal->connect('name.des.signals', callable, priority);
 
 *   An erster Stelle steht der Name des Signals.
 *   Der zweite Parameter muss “[callable](https://www.php.net/callable)” sein, es empfiehlt sich hier ein Array oder ein String zu übergeben. Lambda Funktionen oder Closures funktionieren natürlich auch, lassen sich aber nachträglich nicht mehr “disconnecten”.
@@ -69,13 +61,9 @@ Beobachtung beenden
 
 Mittels “disconnect” lassen sich verbundene Beobachtungen nachträglich lösen. Wichtig hierbei: dies funktioniert NICHT mit Lambda Funktionen und Closures, sondern nur mit “callbacks” in String oder Array-Form, also zum Beispiel:  
 
-[?](#)
-
-`$signals``->disconnect(``'signal.name'``,` `'function_name'``);`
-
-`// Or`
-
-`$signals``->disconnect(``'signal.name'``, [``'class_name'``,` `'method_name'``]);`
+    $signals->disconnect('signal.name', 'function_name');
+    // Or
+    $signals->disconnect('signal.name', ['class_name', 'method_name']);
 
 Eigene Signale senden
 =====================
