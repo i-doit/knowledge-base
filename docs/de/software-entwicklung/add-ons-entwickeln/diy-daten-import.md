@@ -1,3 +1,5 @@
+# DIY Daten-Import
+
 Von Zeit zu Zeit kann es nötig sein große Datenmengen aus einem Fremd-System nach i-doit zu überführen - sowohl für eine Initiale Befüllung als auch für regelmäßige Synchronisationen und Updates. Zu diesem Zweck bietet i-doit einige Schnittstellen, sogenannte Imports an, um Daten aus externen Quellen in die CMDB zu übernehmen.
 
 Unter anderem bieten wir den CSV Import und die JSON-RPC API für generische Daten an. Auch für andere Tools, wie JDisc und OCS gibt es fertige Lösungen. Doch manchmal ist eine komplett neue bzw. eigene Lösung notwendig, um die Daten zuverlässig und ohne großen “Mehraufwand” nach i-doit zu überführen.
@@ -76,74 +78,47 @@ Die Aufgabe besteht darin, die Quelldaten auf Kategorie-Attribute zu mappen, sod
 
 Um unseren Import ohne Umwege mit den Daten versorgen zu können, sollten wir das gleiche Format nutzen, welches auch schon in der API genutzt wird:
 
-[?](#)
-
-`{`
-
-`"Kategorie Konstante"``: [`
-
-`{``"Attribut"``:` `"Wert"``},`
-
-`{``"Attribut 2"``:` `"Wert 2"``}`
-
-`]`
-
-`}`
+    {
+        "Kategorie Konstante": [
+            {"Attribut": "Wert"},
+            {"Attribut 2": "Wert 2"}
+        ]
+    }
 
 Oder mit konkreten Daten:
 
-  
+    {
+        "C__CATG__CPU": [
+            {"title": "CPU #1", "frequency": 3.6, "frequency_unit": 3},
+            {"title": "CPU #2", "manufacturer": "Intel", "type": "Core i7"}
+        ]
+    }
 
-[?](#)
+Wir sehen hier eine Mischung aus ID-Referenzen und lesbaren Werten (siehe "frequency_unit": 3 und "manufacturer": "Intel"). Beim manuellen Import via Kategorie “sync” müssen wir alle Referenzen auflösen - i-doit kann intern nur mit ID-Referenzen arbeiten!
 
-`{`
-
-`"C__CATG__CPU"``: [`
-
-`{``"title"``:` `"CPU #1"``,` `"frequency"``: 3.6,` `"frequency_unit"``: 3},`
-
-`{``"title"``:` `"CPU #2"``,` `"manufacturer"``:` `"Intel"``,` `"type"``:` `"Core i7"``}`
-
-`]`
-
-`}`
-
-Wir sehen hier eine Mischung aus ID-Referenzen und lesbaren Werten (siehe `"frequency_unit": 3` und `"manufacturer": "Intel"`). Beim manuellen Import via Kategorie “sync” müssen wir alle Referenzen auflösen - i-doit kann intern nur mit ID-Referenzen arbeiten!
-
-Wie das funktioniert wird im nächsten Punkt erläutert. Der Artikel [Kategorien programmieren](https://kb.i-doit.com/display/de/Kategorien+programmieren) und [Attribut-Definition](https://kb.i-doit.com/display/de/Attribut-Definition) werden uns beim Verständnis helfen!
+Wie das funktioniert wird im nächsten Punkt erläutert. Der Artikel [Kategorien programmieren](./kategorien-programmieren.md) und [Attribut-Definition](./attribut-definition.md) werden uns beim Verständnis helfen!
 
 AttributeDataCollector
 ----------------------
 
 Diese Komponente kann genutzt werden, um Datenreferenzen, wie “Hersteller: Intel”, aufzulösen. Sie funktioniert auf Attribut-Basis und kümmert sich automatisch um die übergebenen Typen. Hierbei benötigen wir konkret das jeweilige Attribut:
 
-[?](#)
+    use idoit\Component\Property\Property;
+    use idoit\Module\Cmdb\Component\AttributeDataCollector\Collector;
 
-`use` `idoit\Component\Property\Property;`
+    $property = '<property definition from category DAO>';
+    $data = null;
+    $collector = new Collector();
 
-`use` `idoit\Module\Cmdb\Component\AttributeDataCollector\Collector;`
+    // We need to check if we are handling a property in the “old” format.
+    if (!$property instanceof Property) {
+        $property = Property::createInstanceFromArray($property);
+    }
 
-`$property` `=` `'<property definition from category DAO>'``;`
-
-`$data` `= null;`
-
-`$collector` `=` `new` `Collector();`
-
-`// We need to check if we are handling a property in the “old” format.`
-
-`if` `(!``$property` `instanceof` `Property) {`
-
-`$property` `= Property::createInstanceFromArray(``$property``);`
-
-`}`
-
-`// Only process if the property can be handled by the collector.`
-
-`if` `(``$collector``->isApplicable(``$property``)) {`
-
-`$data` `=` `$collector``->getApplicableType()->collectData(``$property``, false);`
-
-`}`
+    // Only process if the property can be handled by the collector.
+    if ($collector->isApplicable($property)) {
+        $data = $collector->getApplicableType()->collectData($property, false);
+    }
 
 Am Ende wird in der $data Variable eine Liste der verfügbaren Daten existieren - diese kann nun auf passende Inhalte geprüft werden. Kann keine Übereinstimmung festgestellt  werden, muss individuell entschieden werden, ob ein Datensatz zur Laufzeit erzeugt werden soll.
 
@@ -154,33 +129,26 @@ Der “CiMerger” ist eine Komponente zum finden von Objekten mittels verschied
 
 Die Nutzung ist sehr einfach gestaltet:
 
-[?](#)
+    $numberOfNecessaryMatches = 2;
+    $matcher = new CiMatcher(MatchConfig::factory($numberOfNecessaryMatches, isys_application::instance()->container));
 
-`$numberOfNecessaryMatches` `= 2;`
+    $match = $matcher->match([
+        new MatchKeyword(Hostname::KEY, $hostname),
+        new MatchKeyword(ModelSerial::KEY, $serialNumber),
+        new MatchKeyword(IpAddress::KEY, $ipAddress),
+        new MatchKeyword(Mac::KEY, $macAddress),
+    ]);
 
-`$matcher` `=` `new` `CiMatcher(MatchConfig::factory(``$numberOfNecessaryMatches``, isys_application::instance()->container));`
+    $foundObjectId = $match->getId();
 
-`$match` `=` `$matcher``->match([`
+Sofern kein Objekt gefunden werden konnte wird getId() lediglich null zurückliefern. Sollten mehrere Objekte gefunden werden können diese mittels getMatchResult() ausgelesen werden.
 
-`new` `MatchKeyword(Hostname::KEY,` `$hostname``),`
+!!! info "Achtung!"
 
-`new` `MatchKeyword(ModelSerial::KEY,` `$serialNumber``),`
-
-`new` `MatchKeyword(IpAddress::KEY,` `$ipAddress``),`
-
-`new` `MatchKeyword(Mac::KEY,` `$macAddress``),`
-
-`]);`
-
-`$foundObjectId` `=` `$match``->getId();`
-
-Sofern kein Objekt gefunden werden konnte wird `getId()` lediglich null zurückliefern. Sollten mehrere Objekte gefunden werden können diese mittels `getMatchResult()` ausgelesen werden.
-
-Achtung!
-
-Aufgrund der PHP 8 kompatibilität wird der Methodenname “match” sich zukünftig ändern!
+    Aufgrund der PHP 8 kompatibilität wird der Methodenname “match” sich zukünftig ändern!
 
 Merger
+------
 
 Der “Merger” hat nur eine einzige Aufgabe: übergebene Datensätze auf Vollständigkeit zu prüfen und ggf. mit vorhandenen Daten oder Standardwerten der CMDB zu ergänzen.
 
@@ -194,7 +162,7 @@ Um Kategoriedaten tatsächlich in die Datenbank zu schreiben werden die verschie
 
 Für Objektdaten kann die “CMDB DAO” verwendet werden - oder auch jede beliebige Kategorie-DAO, da diese von der CMDB-DAO erben.
 
-Zum erstellen von Objekten gibt es eine Methode die genutzt werden muss: “`isys_cmdb_dao->insert_new_obj()`”. Objekte dürfen nicht mit eigenem SQL erzeugt werden, da sonst einige notwendige Prozeduren übersprungen werden, die vom System benötigt wird.
+Zum erstellen von Objekten gibt es eine Methode die genutzt werden muss: “isys_cmdb_dao->insert_new_obj()”. Objekte dürfen nicht mit eigenem SQL erzeugt werden, da sonst einige notwendige Prozeduren übersprungen werden, die vom System benötigt wird.
 
 Gut zu Wissen!
 ==============
@@ -235,146 +203,118 @@ Beispiel-Daten im JSON Format
 
 Diese Beispiel-Daten wurden im Vorfeld bereits in ein Format gebracht mit dem wir ohne weiteres arbeiten können - das heißt die Schritte zur Beschaffung und der “Mapping” Prozess sind hier bereits abgeschlossen.
 
-[?](#)
-
-`[`
-
-`{`
-
-`"C__CATG__GLOBAL"``: [`
-
-`{`
-
-`"title"``:` `"My empty Object"`
-
-`}`
-
-`]`
-
-`},`
-
-`{`
-
-`"C__CATG__GLOBAL"``: [`
-
-`{`
-
-`"title"``:` `"My filled Object"``,`
-
-`"purpose"``: 3`
-
-`}`
-
-`],`
-
-`"C__CATG__CPU"``: [`
-
-`{`
-
-`"title"``:` `"cpu1"``,`
-
-`"manufacturer"``: 1,`
-
-`"type"``: 2,`
-
-`"cores"``: 3`
-
-`},`
-
-`{`
-
-`"title"``:` `"CPU 2"``,`
-
-`"manufacturer"``:` `"Intel"``,`
-
-`"type"``:` `"Core i5"``,`
-
-`"cores"``: 4,`
-
-`"frequency"``: 2.5,`
-
-`"frequency_unit"``:` `"Ghz"`
-
-`}`
-
-`],`
-
-`"C__CATG__MODEL"``: [`
-
-`{`
-
-`"manufacturer"``:` `"Custom Manufacturer"``,`
-
-`"title"``:` `"Custom Title"``,`
-
-`"productid"``:` `"Custom Product ID"``,`
-
-`"service_tag"``:` `"Custom Service Tag"``,`
-
-`"serial"``:` `"Custom Serial"`
-
-`}`
-
-`],`
-
-`"C__CATG__IP"``: [`
-
-`{`
-
-`"primary"``: 0,`
-
-`"active"``: 0,`
-
-`"net"``: 20,`
-
-`"ipv4_address"``:` `"127.0.0.1"`
-
-`},`
-
-`{`
-
-`"primary"``: 1,`
-
-`"active"``: 1,`
-
-`"net"``: 21,`
-
-`"ipv6_address"``:` `"affe::"`
-
-`}`
-
-`],`
-
-`"C__CATG__SLA"``: [`
-
-`{`
-
-`"service_id"``:` `"Service ID"``,`
-
-`"service_level"``: 1,`
-
-`"monday_time"``:` `"08:00 - 16:00"``,`
-
-`"tuesday_time"``:` `"08:00 - 16:00"`
-
-`}`
-
-`]`
-
-`}`
-
-`]`
+    [
+        {
+            "C__CATG__GLOBAL": [
+                {
+                    "title": "My empty Object"
+                }
+            ]
+        },
+        {
+            "C__CATG__GLOBAL": [
+                {
+                    "title": "My filled Object",
+                    "purpose": 3
+                }
+            ],
+            "C__CATG__CPU": [
+                {
+                    "title": "cpu1",
+                    "manufacturer": 1,
+                    "type": 2,
+                    "cores": 3
+                },
+                {
+                    "title": "CPU 2",
+                    "manufacturer": "Intel",
+                    "type": "Core i5",
+                    "cores": 4,
+                    "frequency": 2.5,
+                    "frequency_unit": "Ghz"
+                }
+            ],
+            "C__CATG__MODEL": [
+                {
+                    "manufacturer": "Custom Manufacturer",
+                    "title": "Custom Title",
+                    "productid": "Custom Product ID",
+                    "service_tag": "Custom Service Tag",
+                    "serial": "Custom Serial"
+                }
+            ],
+            "C__CATG__IP": [
+                {
+                    "primary": 0,
+                    "active": 0,
+                    "net": 20,
+                    "ipv4_address": "127.0.0.1"
+                },
+                {
+                    "primary": 1,
+                    "active": 1,
+                    "net": 21,
+                    "ipv6_address": "affe::"
+                }
+            ],
+            "C__CATG__SLA": [
+                {
+                    "service_id": "Service ID",
+                    "service_level": 1,
+                    "monday_time": "08:00 - 16:00",
+                    "tuesday_time": "08:00 - 16:00"
+                }
+            ]
+        }
+    ]
 
 Basis Code
 ----------
 
 Der folgende Code bietet eine funktionierende Grundlage zum erstellen eines eigenen Imports. Ein solcher Code sollte am besten in eine eigene Klasse oder funktion gekapselt sein, damit sie von verschiedenen Stellen aus aufrufbar ist - zum Beispiel von einem Command, dem i-doit Frontend oder auch einem eigenen API Endpunkt aus.
 
-[?](#)
-
-|     |     |
-| --- | --- |
-| 1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7<br><br>8<br><br>9<br><br>10<br><br>11<br><br>12<br><br>13<br><br>14<br><br>15<br><br>16<br><br>17<br><br>18<br><br>19<br><br>20<br><br>21<br><br>22<br><br>23<br><br>24<br><br>25<br><br>26<br><br>27<br><br>28<br><br>29<br><br>30<br><br>31<br><br>32<br><br>33<br><br>34<br><br>35<br><br>36<br><br>37<br><br>38<br><br>39<br><br>40<br><br>41<br><br>42 | `use` `idoit\Module\Cmdb\Component\SyncMerger\Config;`<br><br>`use` `idoit\Module\Cmdb\Component\SyncMerger\Merger;`<br><br>`$data` `=` `'{JSON Data}'``;`<br><br>`$dao` `= isys_application::instance()->container->get(``'cmdb_dao'``);`<br><br>`$database` `= isys_application::instance()->container->get(``'database'``);`<br><br>`$objectTypeId` `= C__OBJTYPE__CLIENT;` `// ID of the “client” type (10)`<br><br>`foreach` `(``$data` `as` `$objectData``) {`<br><br>`$objectTitle` `=` `$objectData``[``'C__CATG__GLOBAL'``][0][``'title'``] ?:` `'Created by import: '` `.` `date``(``'Y-m-d H:i:s'``);`<br><br>`$objectId` `=` `$dao``->insert_new_obj(``$objectTypeId``, null,` `$objectTitle``, null, C__RECORD_STATUS__NORMAL);`<br><br>`foreach` `(``$objectData` `as` `$categoryConst` `=>` `$categoryData``) {`<br><br>`$category` `=` `$dao``->get_cat_by_const(``$categoryConst``);`<br><br>`if` `(!``class_exists``(``$category``[``'class_name'``])) {`<br><br>`continue``;`<br><br>`}`<br><br>`/** @var isys_cmdb_dao_category $categoryDao */`<br><br>`$categoryDao` `=` `$category``[``'class_name'``]::instance(``$database``);`<br><br>`foreach` `(``$categoryData` `as` `$entryData``) {`<br><br>`// Will contain either 'true' or a associative array with 'key' => 'validation error message'`<br><br>`$validationResult` `=` `$categoryDao``->validate(``$entryData``);`<br><br>`if` `(``$validationResult` `=== true) {`<br><br>`// Die Kategoriedaten müssen in ein bestimmtes Format gebracht werden damit der Merger damit arbeiten kann`<br><br>`$fakeEntry` `= [`<br><br>`Config::CONFIG_DATA_ID    => null,`<br><br>`Config::CONFIG_PROPERTIES =>` `array_map``(``function` `(``$prop``) {` `return` `[C__DATA__VALUE =>` `$prop``]; },` `$entryData``)`<br><br>`];`<br><br>`$syncData` `= Merger::instance(Config::instance(``$categoryDao``,` `$objectId``,` `$fakeEntry``))->getDataForSync();`<br><br>`$categoryEntryId` `=` `$categoryDao``->sync(``$syncData``,` `$objectId``, isys_import_handler_cmdb::C__CREATE);`<br><br>`}`<br><br>`}`<br><br>`}`<br><br>`}` |
+    use idoit\Module\Cmdb\Component\SyncMerger\Config;
+    use idoit\Module\Cmdb\Component\SyncMerger\Merger;
+    
+    $data = '{JSON Data}';
+    
+    $dao = isys_application::instance()->container->get('cmdb_dao');
+    $database = isys_application::instance()->container->get('database');
+    $objectTypeId = C__OBJTYPE__CLIENT; // ID of the “client” type (10)
+    
+    foreach ($data as $objectData) {
+        $objectTitle = $objectData['C__CATG__GLOBAL'][0]['title'] ?: 'Created by import: ' . date('Y-m-d H:i:s');
+    
+        $objectId = $dao->insert_new_obj($objectTypeId, null, $objectTitle, null, C__RECORD_STATUS__NORMAL);
+    
+        foreach ($objectData as $categoryConst => $categoryData) {
+            $category = $dao->get_cat_by_const($categoryConst);
+    
+            if (!class_exists($category['class_name'])) {
+                continue;
+            }
+    
+            /** @var isys_cmdb_dao_category $categoryDao */
+            $categoryDao = $category['class_name']::instance($database);
+    
+            foreach ($categoryData as $entryData) {
+                // Will contain either 'true' or a associative array with 'key' => 'validation error message'
+                $validationResult = $categoryDao->validate($entryData);
+    
+                if ($validationResult === true) {
+                    // Die Kategoriedaten müssen in ein bestimmtes Format gebracht werden damit der Merger damit arbeiten kann
+                    $fakeEntry = [
+                        Config::CONFIG_DATA_ID    => null,
+                        Config::CONFIG_PROPERTIES => array_map(function ($prop) { return [C__DATA__VALUE => $prop]; }, $entryData)
+                    ];
+                    
+                    $syncData = Merger::instance(Config::instance($categoryDao, $objectId, $fakeEntry))->getDataForSync();
+                    
+                    $categoryEntryId = $categoryDao->sync($syncData, $objectId, isys_import_handler_cmdb::C__CREATE);
+                }
+            }
+        }
+    }
 
 Erklärung des Code
 ------------------
@@ -406,7 +346,7 @@ Es fehlen allerdings einige (optionale) Funktionen die ein Import üblicherweise
 
 *   Dieser Import ist auf das erstellen von Daten beschränkt - es können damit keine existierenden Daten aktualisiert werden. Dies ist ein äußerst aufwändiger Prozess der am besten für jede betroffene Kategorie händisch implementiert wird
 *   Ein Import sollte seinen Fortschritt und auch unerwartete Probleme in Form eines Logs aufzeichnen. Um eine Logger Instanz zu erzeugen können wir zu Beginn des Imports folgende Zeile nutzen:  
-    `$logger = idoit\Component\Logger::factory('my-import', BASE_DIR . 'log/my-import_' . date('Y-m-d') . '.log');`
+    $logger = idoit\Component\Logger::factory('my-import', BASE_DIR . 'log/my-import_' . date('Y-m-d') . '.log');
 *   Die $entryData Daten müssen auf allgemeine Konsistenz geprüft werden - Objekte und Dialog-Felder benötigen immer Referenzen mittels IDs. Falls hier String-Werte übergeben werden wird der Import für den entsprechenden Wert fehlschlagen
 *   Bevor die Daten an den “Merger” übergeben werden sollte ein Kategorie Prozessor verwendet werden der die Daten für die entsprechende Kategorie vorbereitet
 *   Aktuell schreibt der Import keinerlei Daten in das CMDB Logbuch, das muss sowohl für die Objekte als auch Kategorie Daten nachgeholt werden
