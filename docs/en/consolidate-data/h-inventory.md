@@ -1,11 +1,6 @@
+# H-Inventory
+
 h-inventory is an open source software for automatic inventory of hardware and software components as well as entire networks. The software is available on SourceForge at [http://sourceforge.net/projects/h-inventory/](http://sourceforge.net/projects/h-inventory/) for various operating systems.
-
-**Contents**
-
-*   1[Configuration](#hinventory-Configuration)
-*   2[Inventory of a Microsoft Windows Client via H-Inventory](#hinventory-InventoryofaMicrosoftWindowsClientviaH-Inventory)
-*   3[Graphical import of an H-Inventory export](#hinventory-GraphicalimportofanH-Inventoryexport)
-*   4[Import eines H-Inventory Exports per Konsole](#hinventory-ImporteinesH-InventoryExportsperKonsole)
 
 i-doit is able to import data from the inventory tool h-inventory. The data exported there in XML format is prepared during import to such an extent that the information necessary for a CMDB can be taken over as far as possible. In this way, a lot of essential information can be collected automatically as the basis for a CMDB or IT documentation, in order to be manually enriched with further information in a later step.
 
@@ -13,21 +8,21 @@ i-doit is able to import data from the inventory tool h-inventory. The data expo
 
 **The following data can be transferred from h-inventory:**
 
-**![](/download/attachments/113475652/hinv.jpg?version=1&modificationDate=1637052099273&api=v2)**
+**[![h-inventory-transfer](../assets/images/en/consolidate-data/h-inventory/1-hi.png)](../assets/images/en/consolidate-data/h-inventory/1-hi.png)**
 
 Before an import, i-doit must be configured accordingly.
 
 Configuration
 -------------
 
-For a manual data import, the configuration is located under `Administration → Interfaces / External Data → Import → h-Inventory → Configuration`. There, only the parameter `Object Matching Profile` is used to specify [how already documented objects are to be identified](/display/en/Object+Identification+During+Imports). Identified objects are updated during data import.
+For a manual data import, the configuration is located under Administration → Interfaces / External Data → Import → h-Inventory → Configuration. There, only the parameter Object Matching Profile is used to specify [how already documented objects are to be identified](object-identification-during-imports.md). Identified objects are updated during data import.
 
 Inventory of a Microsoft Windows Client via H-Inventory
 -------------------------------------------------------
 
-Download the H-Inventory package from `i-doit → Tools → Import → Scripts`
+Download the H-Inventory package from i-doit → Tools → Import → Scripts
 
-`![](/download/attachments/113475652/image2021-11-16_9-37-3.png?version=1&modificationDate=1637052099237&api=v2&effects=drop-shadow)`
+[![h-inventory-transfer](../assets/images/en/consolidate-data/h-inventory/2-hi.png)](../assets/images/en/consolidate-data/h-inventory/2-hi.png)
 
 Unpack the archive.
 
@@ -55,4 +50,4 @@ The imported client is now available
 Import eines H-Inventory Exports per Konsole
 --------------------------------------------
 
-Besides the possibility to upload the XML file via the i-doit interface and import the information, this process can also be automated. The i-doit [Console](/display/en/Console) is used for this purpose. Before the import can be executed, it must be ensured that the XML file is available to the system. To do this, the XML file must be copied to the i-doit directory imports or stored there directly. Afterwards the import can be started via the console. A description of the possible parameters and an example call can be found in the [corresponding article](/display/en/Options+and+Parameters+for+the+Console) for the import-hinventory command.
+Besides the possibility to upload the XML file via the i-doit interface and import the information, this process can also be automated. The i-doit [Console](../automation-and-integration/cli/console/index.md) is used for this purpose. Before the import can be executed, it must be ensured that the XML file is available to the system. To do this, the XML file must be copied to the i-doit directory imports or stored there directly. Afterwards the import can be started via the console. A description of the possible parameters and an example call can be found in the [corresponding article](../automation-and-integration/cli/console/options-and-parameters-cli.md) for the import-hinventory command.
