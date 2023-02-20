@@ -1,14 +1,10 @@
-**Inhaltsverzeichnis**
-
-*   1[Lizenzübersicht](#LizenzAdministration-Lizenzübersicht)
-*   2[Objekte die nicht Lizenzpflichtig sind und nicht dazu gezählt werden](#LizenzAdministration-ObjektedienichtLizenzpflichtigsindundnichtdazugezähltwerden)
-
+# Lizenz Administration
 Lizenzübersicht
 ---------------
 
 Die Lizenzübersicht gibt dir einen guten Überblick über die aktuelle Auslastung der genutzten i-doit Lizenz und zeigt dir wieviel Freie Objekte noch vorhanden sind. Weiterhin kann man sich eine Auflistung nach Objekttyp anzeigen lassen.
 
-![](/download/attachments/61014193/lizenzuebersicht.png?version=1&modificationDate=1603708728119&api=v2&effects=drop-shadow)
+[![Lizenzübersicht](../../assets/images/de/administration/verwaltung/lizenz-administration/1-la.png)](../../assets/images/de/administration/verwaltung/lizenz-administration/1-la.png)
 
 Objekte die nicht Lizenzpflichtig sind und nicht dazu gezählt werden
 --------------------------------------------------------------------
@@ -16,8 +12,6 @@ Objekte die nicht Lizenzpflichtig sind und nicht dazu gezählt werden
 Beziehungen sind nicht Lizenzpflichtig und belasten nicht die Lizenz.  
 Außerdem werden diese Objekte nicht von der Lizenz abgezogen;
 
-| Objekt Konstante | Objekt Titel |
-| --- | --- |
 | Objekt Konstante | Objekt Titel |
 | --- | --- |
 | **C\_\_OBJ\_\_ROOT\_LOCATION** | Root location |

@@ -1,16 +1,6 @@
-**Inhaltsverzeichnis**
+# Datenbank-Modell
 
-*   1[Grundsätzliches](#DatenbankModell-Grundsätzliches)
-*   2[Referenzierungen (Foreign Keys)](#DatenbankModell-Referenzierungen(ForeignKeys))
-*   3[Namensschema](#DatenbankModell-Namensschema)
-*   4[Objekte](#DatenbankModell-Objekte)
-*   5[Globale und spezifische Kategorien](#DatenbankModell-GlobaleundspezifischeKategorien)
-*   6[Benutzer, Kontakte, Personen, Personengruppen](#DatenbankModell-Benutzer,Kontakte,Personen,Personengruppen)
-*   7[Logbuch](#DatenbankModell-Logbuch)
-*   8[Tabellenübersicht](#DatenbankModell-Tabellenübersicht)
-*   9[Dialog-Plus-Tabellen](#DatenbankModell-Dialog-Plus-Tabellen)
-
-i-doit speichert die meisten Inhalte und Einstellungen in einem Database Management System (DBMS) ab. Als DBMS kommen [MySQL oder MariaDB](/display/de/Systemvoraussetzungen) zum Einsatz. Doch wie ist das Datenbank-Modell von i-doit aufgebaut?
+i-doit speichert die meisten Inhalte und Einstellungen in einem Database Management System (DBMS) ab. Als DBMS kommen [MySQL oder MariaDB](../../installation/systemvoraussetzungen.md) zum Einsatz. Doch wie ist das Datenbank-Modell von i-doit aufgebaut?
 
 Grundsätzliches
 ---------------
@@ -29,19 +19,12 @@ Namensschema
 
 Neben der Benennung der einzelnen Tabellen, zieht sich ein konsequentes Namensschema durch alle Feldbezeichnungen der i-doit Tabellen, welches mit dem Namen der Tabelle beginnt, gefolgt von dem eigentlichen Namen der Spalte. Somit heisst das id Feld der Tabelle isys\_catg\_cpu\_list zum Beispiel:
 
-[?](#)
-
-`isys_catg_cpu_list__id`
-
-`/\              /\`
-
-`Tabelle CPU            Spalte (ID)`
-
-`isys_catg_cpu_list__title`
-
-`/\               /\`
-
-`Tabelle CPU            Spalte (Titel)`
+    isys_catg_cpu_list__id
+    /\              /\
+    Tabelle CPU            Spalte (ID)
+    isys_catg_cpu_list__title
+    /\               /\
+    Tabelle CPU            Spalte (Titel)
 
   
 
@@ -49,13 +32,9 @@ Referenzen auf andere Felder (Fremdschlüssel) folgen analog hierzu einem ähnli
 Beispiel Objektreferenz einer Kategorie:   
   
 
-[?](#)
-
-`isys_catg_cpu_list__isys_obj__id`
-
-`/\                 /\      /\`
-
-`Tabelle CPU    Tabelle Obj.   Spalte`
+    isys_catg_cpu_list__isys_obj__id
+    /\                 /\      /\
+    Tabelle CPU    Tabelle Obj.   Spalte
 
 Objekte
 -------
@@ -74,61 +53,34 @@ isys\_catg\_ip\_list beinhaltet den Fremdschlüssel isys\_catg\_ip\_list\_\_isys
   
 Somit ergibt sich folgenes SQL Statement für die Ermittlung alle Objekte, dessen Grafikkarte und IP Infos:
 
-[?](#)
-
-`SELECT`
-
-`isys_obj__title,`
-
-`isys_catg_graphic_list__title,`
-
-`isys_catg_graphic_list__memory,`
-
-`isys_memory_unit__title,`
-
-`isys_catg_ip_list__hostname,`
-
-`isys_catg_ip_list__address`
-
-`FROM` `isys_obj`
-
-`INNER` `JOIN` `isys_catg_graphic_list`
-
-`ON` `isys_catg_graphic_list__isys_obj__id = isys_obj__id`
-
-`INNER` `JOIN` `isys_memory_unit`
-
-`ON` `isys_catg_graphic_list__isys_memory_unit__id = isys_memory_unit__id`
-
-`INNER` `JOIN` `isys_catg_ip_list`
-
-`ON` `isys_catg_ip_list__isys_obj__id = isys_obj__id`
+    SELECT
+    isys_obj__title,
+    isys_catg_graphic_list__title,
+    isys_catg_graphic_list__memory,
+    isys_memory_unit__title,
+    isys_catg_ip_list__hostname,
+    isys_catg_ip_list__address
+    FROM isys_obj
+    INNER JOIN isys_catg_graphic_list
+    ON isys_catg_graphic_list__isys_obj__id = isys_obj__id
+    INNER JOIN isys_memory_unit
+    ON isys_catg_graphic_list__isys_memory_unit__id = isys_memory_unit__id
+    INNER JOIN isys_catg_ip_list
+    ON isys_catg_ip_list__isys_obj__id = isys_obj__id
 
 Spezifische Kategorien verhalten sich gleich. Die Abfrage der Netzinformationen aller Netz Objekte würde folgendermaßen aussehen:
 
-[?](#)
-
-`SELECT`
-
-`isys_obj__title,`
-
-`isys_cats_net_list__address,`
-
-`isys_cats_net_list__dhcp_range_from,`
-
-`isys_cats_net_list__dhcp_range_to,`
-
-`isys_cats_net_list__dhcp,`
-
-`isys_cats_net_list__def_gw`
-
-`FROM`
-
-`isys_cats_net_list`
-
-`INNER` `JOIN` `isys_obj`
-
-`ON` `isys_cats_net_list__isys_obj__id = isys_obj__id`
+    SELECT
+    isys_obj__title,
+    isys_cats_net_list__address,
+    isys_cats_net_list__dhcp_range_from,
+    isys_cats_net_list__dhcp_range_to,
+    isys_cats_net_list__dhcp,
+    isys_cats_net_list__def_gw
+    FROM
+    isys_cats_net_list
+    INNER JOIN isys_obj
+    ON isys_cats_net_list__isys_obj__id = isys_obj__id
 
   
 
@@ -136,12 +88,12 @@ Spezifische Kategorien verhalten sich gleich. Die Abfrage der Netzinformationen 
 
   
 
-**![](/download/attachments/3014658/Screenshot%202016-06-03%20um%2010.40.12.png?version=1&modificationDate=1464943496329&api=v2)  
+**[![datenbankmodell-beziehungen](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)  
 **
 
 In der Grafik ist zu sehen wie ein Objekt mit der globalen Kategorie CPU verknüpft ist. Diese Kategorie greift wiederum auf  Dialog+ Einträge wie den Hersteller und den Typ zu. Das gleiche geschieht mit der globalen Kategorie Formfaktor, die auf den Formfaktor-Typ zugreift.
 
- ![](/download/attachments/3014658/Screenshot%202016-06-03%20um%2010.42.09.png?version=1&modificationDate=1464943512106&api=v2)
+[![datenbankmodell-formfaktor](../../assets/images/de/software-entwicklung/datenbank-modell/2-dm.png)](../../assets/images/de/software-entwicklung/datenbank-modell/2-dm.png)
 
   
 

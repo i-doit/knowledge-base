@@ -15,3 +15,8 @@
 [data-md-color-scheme="slate"] .md-typeset td:not([class]):not(:last-child) {
     border-right: 1px solid #444755;
 }
+
+/* Maximum space for text block */
+.md-grid {
+    max-width: 90%; /* or 100%, if you want to stretch to full-width */
+  }

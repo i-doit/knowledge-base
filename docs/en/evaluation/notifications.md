@@ -1,23 +1,11 @@
-**Contents**
+# Notifications
 
-*   1[Kinds of Notifications](#Notifications-KindsofNotifications)
-*   2[Setup](#Notifications-Setup)
-    *   2.1[General Settings](#Notifications-GeneralSettings)
-    *   2.2[Domains](#Notifications-Domains)
-    *   2.3[Recipient](#Notifications-Recipient)
-*   3[E-mail Templates](#Notifications-E-mailTemplates)
-*   4[Configuration of the call with the i-doit Console](#Notifications-Configurationofthecallwiththei-doitConsole)
-
-  
-
-  
-
-In this article we describe the notifications module, which has the purpose to check various data in the IT documentation and to send emails in the case of specific events. The module consists of particular kinds of notifications, the setup of these notification types, e-mail templates and last but not least the regular execution of the [controller](/display/en/CLI).
+In this article we describe the notifications module, which has the purpose to check various data in the IT documentation and to send emails in the case of specific events. The module consists of particular kinds of notifications, the setup of these notification types, e-mail templates and last but not least the regular execution of the [controller](../i-doit-pro-add-ons/api/index.md).
 
 Kinds of Notifications
 ----------------------
 
-You can carry out the configuration settings at **`Extras → CMDB →` `Notifications`**.
+You can carry out the configuration settings at **Extras → CMDB → Notifications**.
 
 Currently, you can choose from the following kinds of notifications:
 
@@ -68,12 +56,9 @@ Currently, you can choose from the following kinds of notifications:
 *   **i-doit** **u****pdate**  
     Checks whether a new version of i-doit pro is available. i-doit requires an internet connection to do so.
     
+!!! info "Report based notification"
 
-  
-
-Report based notification
-
-The notification type “report based notification” can be used in a very flexible way and can send appropriate notifications for almost all events and statuses.
+    The notification type “report based notification” can be used in a very flexible way and can send appropriate notifications for almost all events and statuses.
 
 Setup
 -----
@@ -100,11 +85,6 @@ The \* constitutes a mandatory field in i-doit.
       
     The counter will be reset to 0 if the object cannot be found anymore by this notification, for example, when the object is updated or after the maximum number of notifications was made.
     
-
-  
-
-  
-
 *   **Number of sent notifications**  
     This display is purely for information purposes and is either increased when a notification is sent or reset if none is sent.
     
@@ -130,9 +110,9 @@ Objects which are to be checked by the notification can be selected specifically
     Example: The aim is to test whether enough free licenses are left which cost more than 150 EUR per license since a longer process applies here compared to the cheaper licenses. Then a second report can be created and used in another notification in order to query the cheaper licences and to effect a notification at a later time. Please be really mindful of the domain and the queried categories assigned to the object types!
     
 
-Restricted object types
+!!! info "Restricted object types"
 
-Only certain object types are supported, depending on the type of notification. For example, when checking contracts only objects of the type “Contract” and when checking licenses only objects of the type “License” may be chosen.
+    Only certain object types are supported, depending on the type of notification. For example, when checking contracts only objects of the type “Contract” and when checking licenses only objects of the type “License” may be chosen.
 
 ### Recipient
 
@@ -152,19 +132,12 @@ You can also notify recipients both specifically or collectively.
     
     | Strategie | Beschreibung |
     | --- | --- |
-    | Strategie | Beschreibung |
-    | --- | --- |
     | \-  | This is the default = Groups if available, otherwise assigned persons |
     | Groups and Persons | The primary email address of the Person group and each Person group member are notified. |
     | Groups if available, otherwise assigned persons | If the person group has stored a primary e-mail address, this will be notified.  <br>If the person group does NOT have a primary e-mail address, the primary e-mail address of each person group member will be notified. |
     | Groups only | Person groups with a primary email address will be notified. |
     | Persons only | Person group member with a primary email address will be notified. |
     
-      
-    
-      
-    
-
 E-mail Templates
 ----------------
 
@@ -186,26 +159,18 @@ The templates matching the corresponding notifications can be selected and adjus
 Configuration of the call with the i-doit Console
 -------------------------------------------------
 
-To ensure that the set-up notifications are also checked regularly, the i-doit [Console](/display/en/Console) must be executed with the command **`[notifications-send](https://kb.i-doit.com/display/en/Options+and+Parameters+for+the+Console#OptionsandParametersfortheConsole-notifications-send)`**, for example as a cron job. It is not possible to call up each notification individually, but all notifications are always checked automatically one after the other. It makes sense to consider how often the maximum number of checks should be. In our experience, it has proven useful to check every day shortly before starting work, so that it is immediately clear in the morning what you should deal with during the day.
+To ensure that the set-up notifications are also checked regularly, the i-doit [Console](../console/../automation-and-integration/cli/index.md) must be executed with the command **[notifications-send](../automation-and-integration/cli/console/options-and-parameters-cli.md#notifications-send)**, for example as a cron job. It is not possible to call up each notification individually, but all notifications are always checked automatically one after the other. It makes sense to consider how often the maximum number of checks should be. In our experience, it has proven useful to check every day shortly before starting work, so that it is immediately clear in the morning what you should deal with during the day.
 
-  
+!!! info "Hint"
 
-Hint
+    Without a call of the command via the i-doit [Console](../console/../automation-and-integration/cli/index.md) no dispatch of the notifications takes place!
 
-Without a call of the command via the i-doit [Console](/display/en/Console) no dispatch of the notifications takes place!
+The possible parameters as well as an example call for sending notifications can be found in the [corresponding article](,/../notifications.md) for the command **[notifications-send](../automation-and-integration/cli/console/options-and-parameters-cli.md#notifications-send)**.
 
-The possible parameters as well as an example call for sending notifications can be found in the [corresponding article](/display/en/Notifications) for the command **`[notifications-send](https://kb.i-doit.com/display/en/Options+and+Parameters+for+the+Console#OptionsandParametersfortheConsole-notifications-send)`**.
+!!! info "Escalation levels"
 
-  
-
-Escalation levels
-
-You can map escalation levels by using the notification module. For this, you need to set up multiple notifications with different recipient groups and threshold values for the same notification types.
-
-  
+    You can map escalation levels by using the notification module. For this, you need to set up multiple notifications with different recipient groups and threshold values for the same notification types.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php notifications-send --user admin --password admin --tenantId 1`
+    sudo -u www-data php console.php notifications-send --user admin --password admin --tenantId 1
