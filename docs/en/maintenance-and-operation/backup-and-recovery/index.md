@@ -2,7 +2,7 @@
 
 Since the [IT-documentation](../../glossary.md) contains important data required for daily work, the backup and recovery of i-doit is essential. Therefore it is important to consider i-doit with regard to the existing backup strategy.
 
-In this context, the following three areas need to be covered: [databases](./index.md), [files](./index.md) of i-doit and the [system configuration](./index.md).
+In this context, the following three areas need to be covered: [databases](index.md), [files](index.md) of i-doit and the [system configuration](index.md).
 
 Backup and Recovery of Databases
 --------------------------------
@@ -65,11 +65,7 @@ The corresponding recovery is this:
 Backup and Recovery of the System Configuration
 -----------------------------------------------
 
-<<<<<<< HEAD
-It is important for the immediate operation of i-doit to secure the configuration files of the Apache Webserver, PHP and MySQL/MariaDB and restore them, if needed. In the best case, you already documented the corresponding changes of the configuration files and stored them safely during the [IT documentation](../glossary.md) process of i-doit.
-=======
 It is important for the immediate operation of i-doit to secure the configuration files of the Apache Webserver, PHP and MySQL/MariaDB and restore them, if needed. In the best case, you already documented the corresponding changes of the configuration files and stored them safely during the [installation](../../installation/index.md) process of i-doit.
->>>>>>> main
 
 Backup via VM-Snapshots
 -----------------------

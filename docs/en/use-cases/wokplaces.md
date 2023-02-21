@@ -10,11 +10,11 @@ Which IT components are available for which staff member and where can I find th
 Persons and their Workplaces
 ----------------------------
 
-Besides the physical assignement of [objects](../../basics/structure-of-the-it-documentation.md) to [locations](/display/en/Locations), workplaces can be documented as logical construct. The **`Workplace`** [object type](../../basics/structure-of-the-it-documentation.md) plays a central role.
+Besides the physical assignement of [objects](../basics/structure-of-the-it-documentation.md) to [locations](/display/en/Locations), workplaces can be documented as logical construct. The **`Workplace`** [object type](../basics/structure-of-the-it-documentation.md) plays a central role.
 
 ![](/download/attachments/66355764/image2017-11-7%208%3A59%3A36.png?version=1&modificationDate=1510048910178&api=v2&effects=drop-shadow)
 
-An object of this type is assigned to a person via the `**Logical Location**` [category](../../basics/structure-of-the-it-documentation.md).
+An object of this type is assigned to a person via the `**Logical Location**` [category](../basics/structure-of-the-it-documentation.md).
 
 ![](/download/attachments/66355764/image2017-11-7%2010%3A2%3A15.png?version=1&modificationDate=1510048910146&api=v2&effects=drop-shadow)
 

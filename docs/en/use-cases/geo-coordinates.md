@@ -4,12 +4,12 @@
 *   2[Accessing Maps](#GeoCoordinates-AccessingMaps)
 *   3[Inheriting Geo Coordinates](#GeoCoordinates-InheritingGeoCoordinates)
 
-Each [object](../../basics/structure-of-the-it-documentation.md) in i-doit can be tagged with geographic coordinates stating longitude and latitude.
+Each [object](../basics/structure-of-the-it-documentation.md) in i-doit can be tagged with geographic coordinates stating longitude and latitude.
 
 Saving Geo Coordinates
 ----------------------
 
-If not yet done, you can determine the geo coordinates of a location via various map and navigation services. The coordinates are saved in the `**Location**` [category](../../basics/structure-of-the-it-documentation.md). Here you can find the attributes `**Latitude**` and `**Longitude**`.
+If not yet done, you can determine the geo coordinates of a location via various map and navigation services. The coordinates are saved in the `**Location**` [category](../basics/structure-of-the-it-documentation.md). Here you can find the attributes `**Latitude**` and `**Longitude**`.
 
 ![](/download/attachments/61015771/en_geo_coordinates.png?version=1&modificationDate=1492690694184&api=v2)
 

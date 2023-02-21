@@ -1,4 +1,4 @@
-The add-on **`Relocate-CI`** allows for easy documentation of location changes of IT components. The focus is on classic workplace components such as desktop PCs, telephones or monitors. Supported are also logical groupings by the [object type](../../basics/structure-of-the-it-documentation.md) Workplace.
+The add-on **`Relocate-CI`** allows for easy documentation of location changes of IT components. The focus is on classic workplace components such as desktop PCs, telephones or monitors. Supported are also logical groupings by the [object type](../basics/structure-of-the-it-documentation.md) Workplace.
 
 The functions are accessible via the **`Extras`** menu under **`Relocate-CI`**.
 

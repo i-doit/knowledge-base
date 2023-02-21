@@ -25,7 +25,7 @@ You can also use local users when external authorization interfaces, such as LDA
 Creating a New Object
 ---------------------
 
-Users in i-doit are a part of the IT documentation, therefore all users are an [object](../../basics/structure-of-the-it-documentation.md) of the type `**Persons**`. To create a local user, you initially create a new `**Persons**` object.
+Users in i-doit are a part of the IT documentation, therefore all users are an [object](../basics/structure-of-the-it-documentation.md) of the type `**Persons**`. To create a local user, you initially create a new `**Persons**` object.
 
 ![Personen-Objekt](/download/attachments/66355798/object_person.png?version=1&modificationDate=1510139894088&api=v2&effects=drop-shadow "Personen-Objekt")
 

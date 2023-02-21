@@ -24,7 +24,7 @@ Like any add-on, the Packager add-on is installed via the Admin Center. The Pack
 Which structures can be packed into an add-on?
 ----------------------------------------------
 
-Currently the following [structures](../../basics/structure-of-the-it-documentation.md) can be included in an add-on with the Add-on Packager:
+Currently the following [structures](../basics/structure-of-the-it-documentation.md) can be included in an add-on with the Add-on Packager:
 
 Object type groups  
 Object types  

@@ -12,11 +12,7 @@ You will find the template function in i-doit at **Extras → CMDB → Templates
 Configuration
 -------------
 
-<<<<<<< HEAD
-The settings for templates can be configured at **`Administration →` `General` `s``ettings → Template configuration`**. It is possible to display templates in the [object lists](/display/en/Object+List) by activating the template filter. When you set the status filter within an object list to "Template", all templates associated with this [object type](../../basics/structure-of-the-it-documentation.md) will be shown.
-=======
 The settings for templates can be configured at **Administration → General settings → Template configuration**. It is possible to display templates in the [object lists](../basics/object-list/index.md) by activating the template filter. When you set the status filter within an object list to "Template", all templates associated with this [object type](../basics/structure-of-the-it-documentation.md) will be shown.
->>>>>>> main
 
 [![Configuration](../assets/images/en/efficient-documentation/templates/2-te.png)](../assets/images/en/efficient-documentation/templates/2-te.png)
 

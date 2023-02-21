@@ -82,33 +82,6 @@ For each type in JDisc you can select an equivalent object type in i-doit. If no
 
 | Option | Description |
 | --- | --- |
-<<<<<<< HEAD
-| **`Select categories`** | Which [categories](../../basics/structure-of-the-it-documentation.md) do you want to fill during import? Only supported categories are listed. |
-| **`Import network interfaces as`** | You can map inventoried network interfaces in different categories. |
-| **`Include software`** | Do you want to import inventoried software as object type **`Applications`**? |
-| `**Include software licences**` | Do you want to import inventoried licences as object type **Licences**? |
-| **`Import system services`** | Do you want to import inventoried Services as object type `**System Services**`? |
-| **`Import cloud subscriptions`** | Do you want to import inventoried Cloud data? |
-| `**Import connection endpoints**` | The connections are not imported into the cabling, but into the category "Connection endpoints". This allows to distinguish between manual cabling and automatic cabling by JDisc. |
-| **`Use simple database modelling?`** | Should the new or the old database logic be used? |
-| **`Include layer 3 nets`** | Do you want to import inventoried IP nets as object type `**Layer 3 nets**`? |
-| `**Keep IP address types**` | Should IPv4 addresses, IPv6 addresses, loopback addresses, virtual addresses be imported? |
-| `**Import type for DHCP IP addresses**` | Should addresses assigned via DHCP be overwritten? |
-| **`Include VLans`** | Do you want to import inventoried VLans as object type `**Layer 2 nets**`? |
-| **`Include clusters`** | Do you want to import (virtualization) environments as object type `**Cluster**`? |
-| **`Include Blade/Chassis connections during import  <br>`** | Do you want to include objects of the type `**Blade Server**` to objects of the type `**Blade Chassis**` during import? |
-| **`Object type of the assigned modules within a blade/chassis unit`** | When a blade chassis or switch chassis was inventoried, you can allocate the modules to a certain object type during import. |
-| `**Update the object type of the assigned modules**` | Should the object types of the assigned modules of a blade/chassis device be updated? |
-| `**Import custom attributes**` | When you maintain customized attributes  (`**Custom Attributes**`) in JDisc Discovery, you can import these in i-doit. After import, they are displayed in the `**JDisc Custom Attributes**`category. |
-| **`Consider default templates from object types (only for newly created objects)`** | When a new object is created, it is possible to consider [templates](/display/en/Templates) automatically. The template selection is carried out in the object type configuration. |
-| **`Change CMDB-status of objects to`** | Already existing objects can receive a certain [CMDB status](/display/en/Life+and+Documentation+Cycle) during updating. If you don't want to change the CMDB-Status, select the option **`Keep CMDB-Status`**. |
-| **`Software filter`** | You can either enter a white list or a black list of software applications which you want to import (Whitelist) or don't want to import (Blacklist). You can enter wildcards (\*)  in this field. The list of titles is separated by commas. |
-| `**Use filter as regular expression**` | Should the object types of the assigned modules of a blade/chassis device be updated? |
-| `**Use OS family (if available) instead of OS version as object title**` | For software import, use the software family as object title instead of the software version. E.g. instead of "Windows Server 2008 Standard" only "Windows" with "Server 2008 Standard" as variant. |
-| **`Object matching profile`** | [Which strategy do you want to use](/display/en/Object+Identification+During+Imports) to update objects which are already documented in i-doit with an import? |
-| **`Update objecttype`** | When the device already exists as an object in i-doit, you can determine whether the object type is to be updated with help of the assignment (see above) or not. |
-| `**Update object title**` | Should the object title be updated by the import? |
-=======
 | **Select categories** | Which [categories](../basics/structure-of-the-it-documentation.md) do you want to fill during import? Only supported categories are listed. |
 | **Import network interfaces as** | You can map inventoried network interfaces in different categories. |
 | **Include software** | Do you want to import inventoried software as object type **Applications**? |
@@ -134,7 +107,6 @@ For each type in JDisc you can select an equivalent object type in i-doit. If no
 | **Object matching profile** | [Which strategy do you want to use](object-identification-during-imports.md) to update objects which are already documented in i-doit with an import? |
 | **Update objecttype** | When the device already exists as an object in i-doit, you can determine whether the object type is to be updated with help of the assignment (see above) or not. |
 | **Update object title** | Should the object title be updated by the import? |
->>>>>>> main
 
 Import of Data via the Web GUI
 ------------------------------

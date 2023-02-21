@@ -27,11 +27,7 @@ Preferably select the **admin** user from the above mentioned default users as t
 Add Further Users and Groups
 ----------------------------
 
-<<<<<<< HEAD
-Each user in i-doit is an [object](../../basics/structure-of-the-it-documentation.md) of the type `**Persons**`. After the initial login, we _strongly recommend_ to set up a [LDAP connection](/pages/viewpage.action?pageId=37355601) or other local users _and_ to change the credentials of the above mentioned users. For this purpose, you can select the particular user in the [object group](../../basics/structure-of-the-it-documentation.md) C`**ontacts**` under the [object type](../../basics/structure-of-the-it-documentation.md) `**Persons**` and change the credentials in the category `**Persons → Login**`. Alternatively, you can [archive](/display/en/Life+and+Documentation+Cycle) the `**Persons**` objects. In doing this, the login of these users is denied.
-=======
-Each user in i-doit is an [object](./structure-of-the-it-documentation.md) of the type **Persons**. After the initial login, we _strongly recommend_ to set up a [LDAP connection](../automation-and-integration/ldap-active-directory-ad/index.md) or other local users _and_ to change the credentials of the above mentioned users. For this purpose, you can select the particular user in the [object group](./structure-of-the-it-documentation.md) **Contacts** under the [object type](./structure-of-the-it-documentation.md) **Persons** and change the credentials in the category **Persons → Login**. Alternatively, you can [archive](./life-and-documentation-cycle.md) the **Persons** objects. In doing this, the login of these users is denied.
->>>>>>> main
+Each user in i-doit is an [object](structure-of-the-it-documentation.md) of the type **Persons**. After the initial login, we _strongly recommend_ to set up a [LDAP connection](../automation-and-integration/ldap-active-directory-ad/index.md) or other local users _and_ to change the credentials of the above mentioned users. For this purpose, you can select the particular user in the [object group](structure-of-the-it-documentation.md) **Contacts** under the [object type](structure-of-the-it-documentation.md) **Persons** and change the credentials in the category **Persons → Login**. Alternatively, you can [archive](life-and-documentation-cycle.md) the **Persons** objects. In doing this, the login of these users is denied.
 
 [![Login](../assets/images/en/basics/initial-login/1-il.png)](../assets/images/en/basics/initial-login/1-il.png)
 

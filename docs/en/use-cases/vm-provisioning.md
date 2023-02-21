@@ -26,7 +26,7 @@ For the daily routine, this means that the process is characterized by a dedicat
 1.  Start the configuration tool of the virtualization cluster
 2.  Create and configure a new VM
 3.  Switch to the IT documentation (i-doit)
-4.  Create a new VM, configure the respective [categories](../../basics/structure-of-the-it-documentation.md), assign the VM to the cluster
+4.  Create a new VM, configure the respective [categories](../basics/structure-of-the-it-documentation.md), assign the VM to the cluster
 
 There is no data exchange between the applied tool and i-doit, thus the VM configuration has to be performed twice. Errors cannot be ruled out when transferring the configuration. The redundant maintenance of configuration files is therefore a very thankless task for the admin.
 
@@ -44,7 +44,7 @@ Solution
 We wish to optimize this process by using the configuration files available in i-doit and by automating some of the steps. With this in mind, we change the process:
 
 1.  Open the IT documentation (i-doit)
-2.  Create a new VM, configure the respective [categories](../../basics/structure-of-the-it-documentation.md), assign the VM to the cluster
+2.  Create a new VM, configure the respective [categories](../basics/structure-of-the-it-documentation.md), assign the VM to the cluster
 3.  The VM will be created and provisioned automatically in the configuration tool of the virtualization cluster
 
 Four manual steps become two. The third step is carried out automatically in the background. The doubled maintenance of the configuration files by the admin can be omitted. Error sources are eliminated and the admin is happy.
@@ -711,7 +711,7 @@ The storage side is construed accordingly. The **`Logic devices (LDEV Server)`**
 
 ### Create New VM
 
-The vSphere Cluster and the storage are now ready according to the [IT documentation](../../basics/structure-of-the-it-documentation.md). It is time to document VMs – and provision them automatically.
+The vSphere Cluster and the storage are now ready according to the [IT documentation](../basics/structure-of-the-it-documentation.md). It is time to document VMs – and provision them automatically.
 
 First you create a new VM (object type **`Virtual server`**) and set its CMDB status to `**planned**` (since it does not exist yet).
 

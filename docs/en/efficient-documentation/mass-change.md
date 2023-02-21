@@ -12,21 +12,13 @@ You can find the mass change function at **Extras → CMDB → Mass change**. He
 Creating a Change Template
 --------------------------
 
-<<<<<<< HEAD
-You can create a change template by clicking `**Create new template**` on the left side of the tree menu as soon as you access the mass change. In the first step, you are prompted to set the [object type](../../basics/structure-of-the-it-documentation.md) the template will be associated with. Choose the type in the drop-down menu and confirm with the button `**Create new template**`. The following configuration for a template is identical to the creation of a regular object. Leave all content you want to transfer to the objects later on and save your inputs.
-=======
 You can create a change template by clicking **Create new template** on the left side of the tree menu as soon as you access the mass change. In the first step, you are prompted to set the [object type](../basics/structure-of-the-it-documentation.md) the template will be associated with. Choose the type in the drop-down menu and confirm with the button **Create new template**. The following configuration for a template is identical to the creation of a regular object. Leave all content you want to transfer to the objects later on and save your inputs.
->>>>>>> main
 
 [![Creating a Change Template](../assets/images/en/efficient-documentation/mass-change/2-mc.png)](../assets/images/en/efficient-documentation/mass-change/2-mc.png)
 
 !!! info "Generic templates"
 
-<<<<<<< HEAD
-You can also use the **Generic template** as the object type for your change templates. In this way you can apply the template to any object type. But if this template contains content in categories which are not assigned to the objects, then you will only be able to view these contents if those respective [categories](../../basics/structure-of-the-it-documentation.md) are assigned.
-=======
     You can also use the **Generic template** as the object type for your change templates. In this way you can apply the template to any object type. But if this template contains content in categories which are not assigned to the objects, then you will only be able to view these contents if those respective [categories](../basics/structure-of-the-it-documentation.md) are assigned.
->>>>>>> main
 
 View, Edit and Delete Existing Change Templates
 -----------------------------------------------
