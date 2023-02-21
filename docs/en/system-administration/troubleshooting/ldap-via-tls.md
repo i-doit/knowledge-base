@@ -1,3 +1,5 @@
+# LDAP via TLS
+
 Some users unfortunately have problems with LDAP connection via TLS so we share the previous solutions here.  
 Unfortunately there is no general solution.
 

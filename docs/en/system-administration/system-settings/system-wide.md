@@ -1,55 +1,46 @@
-**Table of Contents**
-
-*   1[E-Mail](#Systemwide-E-Mail)
-*   2[Logging](#Systemwide-Logging)
-*   3[Login](#Systemwide-Login)
-*   4[Proxy](#Systemwide-Proxy)
-*   5[Session](#Systemwide-Session)
-*   6[Single Sign On](#Systemwide-SingleSignOn)
-*   7[System Parameters](#Systemwide-SystemParameters)
-*   8[User Interface](#Systemwide-UserInterface)
+# System-wide
 
 E-Mail
 ------
 
 Here you can configure the mail server used by i-doit.
 
-![](/download/attachments/113475874/image2021-12-23_15-31-41.png?version=1&modificationDate=1640269902364&api=v2&effects=drop-shadow)
+[![E-Mail](../../assets/images/en/system-administration/system-settings/system-wide/1-sysw.png)](../../assets/images/en/system-administration/system-settings/system-wide/1-sysw.png)
 
 Logging
 -------
 
 Here the logging functions for the API, the CMDB import and the LDAP debugging can be switched on and off.
 
-![](/download/attachments/113475874/image2021-12-23_15-32-1.png?version=1&modificationDate=1640269921501&api=v2&effects=drop-shadow)
+[![Logging](../../assets/images/en/system-administration/system-settings/system-wide/2-sysw.png)](../../assets/images/en/system-administration/system-settings/system-wide/2-sysw.png)
 
 Login
 -----
 
 Here you can define a Welcome message for login mask
 
-![](/download/attachments/113475874/image2021-12-23_15-33-55.png?version=1&modificationDate=1640270036173&api=v2&effects=drop-shadow)
+[![Login](../../assets/images/en/system-administration/system-settings/system-wide/3-sysw.png)](../../assets/images/en/system-administration/system-settings/system-wide/3-sysw.png)
 
 Proxy
 -----
 
 If no direct internet connection is available, a proxy server can be configured here.
 
-![](/download/attachments/113475874/image2021-12-23_15-32-49.png?version=1&modificationDate=1640269969952&api=v2&effects=drop-shadow)
+[![Proxy](../../assets/images/en/system-administration/system-settings/system-wide/4-sysw.png)](../../assets/images/en/system-administration/system-settings/system-wide/4-sysw.png)
 
 Session
 -------
 
 Here you can define after which period of time the active session will be terminated.
 
-![](/download/attachments/113475874/image2021-12-23_15-34-12.png?version=1&modificationDate=1640270053242&api=v2&effects=drop-shadow)
+[![Session](../../assets/images/en/system-administration/system-settings/system-wide/5-sysw.png)](../../assets/images/en/system-administration/system-settings/system-wide/5-sysw.png)
 
 Single Sign On
 --------------
 
 The SSO function can be switched on or off here. If SSO is active, no client selection is made during logon. Here you can define which client is to be used as the default for logon.
 
-![](/download/attachments/113475874/image2021-12-23_15-34-27.png?version=1&modificationDate=1640270067961&api=v2&effects=drop-shadow)
+[![Single Sign On](../../assets/images/en/system-administration/system-settings/system-wide/6-sysw.png)](../../assets/images/en/system-administration/system-settings/system-wide/6-sysw.png)
 
 System Parameters
 -----------------
@@ -66,7 +57,7 @@ Enable quick purge button → Here you can enable or disable the quick purge but
 Prefix for automatic naming of cable objects → Here you can define a special prefix for cable names.  
 Keep state of imported objects? → Here you can define whether objects keep their CMDB status or get a new one during an import.
 
-![](/download/attachments/113475874/image2021-12-23_15-34-47.png?version=1&modificationDate=1640270087964&api=v2&effects=drop-shadow)
+[![System Parameters](../../assets/images/en/system-administration/system-settings/system-wide/7-sysw.png)](../../assets/images/en/system-administration/system-settings/system-wide/7-sysw.png)
 
 User Interface
 --------------
@@ -78,4 +69,4 @@ WYSIWYG Editor in categories → Here you can define whether normal text fields 
 Enable all WYSIWYG Editor functions → Here you can enable the advanced functions of the WYSIWYG Editor.  
 Sort function of the client list at login → Here you can define by which attribute the client list should be sorted at login.
 
-![](/download/attachments/113475874/image2021-12-23_15-35-7.png?version=1&modificationDate=1640270108166&api=v2&effects=drop-shadow)
+[![User Interface](../../assets/images/en/system-administration/system-settings/system-wide/8-sysw.png)](../../assets/images/en/system-administration/system-settings/system-wide/8-sysw.png)
