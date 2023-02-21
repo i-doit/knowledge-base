@@ -1,4 +1,4 @@
-You can plan, coordinate and control maintenance dates with help of the `**Maintenance intervals**`  [add-on](/display/en/i-doit+pro+Add-ons). Planned maintenance works can be linked to any [objects](/display/en/Structure+of+the+IT+Documentation). You will receive notifications automatically via e-mail so that you do not miss the maintenance works.
+You can plan, coordinate and control maintenance dates with help of the `**Maintenance intervals**`  [add-on](/display/en/i-doit+pro+Add-ons). Planned maintenance works can be linked to any [objects](../../basics/structure-of-the-it-documentation.md). You will receive notifications automatically via e-mail so that you do not miss the maintenance works.
 
 **Contents**
 

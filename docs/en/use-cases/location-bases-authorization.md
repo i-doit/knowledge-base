@@ -9,7 +9,7 @@ i-doit enables the definition of a very fine-grained rights management to allow 
 Example Task
 ------------
 
-Mr. Smith is responsible for all servers at the Düsseldorf location. Mr. Smith's user authorizations shall be limited to the extent that he can see all servers at the Düsseldorf location and create new server [objects](/display/en/Structure+of+the+IT+Documentation). He shall have the right to edit all [categories](/display/en/Structure+of+the+IT+Documentation) of all servers at the location in Düsseldorf. But other servers or objects in other locations should not be accessible for Mr. Smith.
+Mr. Smith is responsible for all servers at the Düsseldorf location. Mr. Smith's user authorizations shall be limited to the extent that he can see all servers at the Düsseldorf location and create new server [objects](../../basics/structure-of-the-it-documentation.md). He shall have the right to edit all [categories](../../basics/structure-of-the-it-documentation.md) of all servers at the location in Düsseldorf. But other servers or objects in other locations should not be accessible for Mr. Smith.
 
 Configuration
 -------------

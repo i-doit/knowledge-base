@@ -1,6 +1,15 @@
 # Object Identification during Imports
 
+<<<<<<< HEAD
+*   1[Data Imports Concerned](#ObjectIdentificationDuringImports-DataImportsConcerned)
+*   2[Approach](#ObjectIdentificationDuringImports-Approach)
+*   3[Creation of Profiles](#ObjectIdentificationDuringImports-CreationofProfiles)
+*   4[Possible Identifiers](#ObjectIdentificationDuringImports-PossibleIdentifiers)
+
+i-doit provides various data imports. Existing data in the [IT documentation](/display/en/Glossary) can be updated with imports instead of generating (often) unnecessary redundancy. In order to achieve this, i-doit tries to identify existing [objects](../../basics/structure-of-the-it-documentation.md) by means of various [attributes](../../basics/structure-of-the-it-documentation.md).
+=======
 i-doit provides various data imports. Existing data in the [IT documentation](../glossary.md) can be updated with imports instead of generating (often) unnecessary redundancy. In order to achieve this, i-doit tries to identify existing [objects](../basics/structure-of-the-it-documentation.md) by means of various [attributes](../basics/structure-of-the-it-documentation.md).
+>>>>>>> main
 
 Data Imports Concerned
 ----------------------

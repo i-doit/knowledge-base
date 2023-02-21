@@ -17,7 +17,7 @@ If you can't do (or don't want to do) without a password manager, you can instea
 **`Passwords`** Category
 ------------------------
 
-You can store any number of access data for each [object](/display/en/Structure+of+the+IT+Documentation) with the `**Passwords**` [category](/display/en/Structure+of+the+IT+Documentation). The data are saved in encoded form in the respective [tenant](/display/en/Multi-Tenants) database of i-doit.
+You can store any number of access data for each [object](../../basics/structure-of-the-it-documentation.md) with the `**Passwords**` [category](../../basics/structure-of-the-it-documentation.md). The data are saved in encoded form in the respective [tenant](/display/en/Multi-Tenants) database of i-doit.
 
 ![](/download/attachments/61015750/image2017-4-27%2011%3A13%3A55.png?version=1&modificationDate=1493284433219&api=v2&effects=drop-shadow)
 

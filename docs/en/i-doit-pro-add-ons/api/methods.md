@@ -589,7 +589,7 @@ This namespace is related to all CMDB-specific methods like handling objects and
 
 ### cmdb.object.create
 
-Create new [object](/display/en/Structure+of+the+IT+Documentation) with some optional information
+Create new [object](../../basics/structure-of-the-it-documentation.md) with some optional information
 
 #### Request parameters
 
@@ -676,7 +676,7 @@ Body:
 
 ### `cmdb.object.read`
 
-Read common information about an [object](/display/en/Structure+of+the+IT+Documentation)
+Read common information about an [object](../../basics/structure-of-the-it-documentation.md)
 
 #### Request parameters
 
@@ -1633,7 +1633,7 @@ Body:
 
 ### `cmdb.category.create`
 
-Create a new [category](/display/en/Structure+of+the+IT+Documentation) entry
+Create a new [category](../../basics/structure-of-the-it-documentation.md) entry
 
 #### Request parameters
 
@@ -1747,7 +1747,7 @@ Body:
 
 ### cmdb.category.read
 
-Read one or more [category](/display/en/Structure+of+the+IT+Documentation) entries for an object
+Read one or more [category](../../basics/structure-of-the-it-documentation.md) entries for an object
 
 #### Request parameters
 
@@ -1760,7 +1760,7 @@ Read one or more [category](/display/en/Structure+of+the+IT+Documentation) entri
 
 #### Response
 
-JSON key `**result**` contains an array of JSON objects. Each object contains [all available attributes](/display/en/Category+Fields+for+Data+Arrays) for the requested category. **Note:** Even if it is a [single-value category](/display/en/Structure+of+the+IT+Documentation) or a [multi-value category](/display/en/Structure+of+the+IT+Documentation) with only 1 entry, the JSON key `**result**` contains always an array of JSON objects.
+JSON key `**result**` contains an array of JSON objects. Each object contains [all available attributes](/display/en/Category+Fields+for+Data+Arrays) for the requested category. **Note:** Even if it is a [single-value category](../../basics/structure-of-the-it-documentation.md) or a [multi-value category](../../basics/structure-of-the-it-documentation.md) with only 1 entry, the JSON key `**result**` contains always an array of JSON objects.
 
 | Key | JSON data type | Description |
 | --- | --- | --- |
@@ -1866,7 +1866,7 @@ Body:
 
 ### `cmdb.category.update`
 
-Update [category](/display/en/Structure+of+the+IT+Documentation) entry of an object
+Update [category](../../basics/structure-of-the-it-documentation.md) entry of an object
 
 #### Request parameters
 
@@ -1877,7 +1877,7 @@ Update [category](/display/en/Structure+of+the+IT+Documentation) entry of an obj
 | `**objID**` | Integer | Yes | Object identifier, for example: `**42**` |
 | `**category**` | String | Yes | [Category constant](/display/en/Category+Fields+for+Data+Arrays), for example: `**"C__CATG__MODEL"**` |
 | `**data**` | Object | Yes | [Attributes](/display/en/Category+Fields+for+Data+Arrays) which will be updated |
-| `**data.category_id**` | Integer | No  | Entry identifier (only required for [multi-value categories](/display/en/Structure+of+the+IT+Documentation)) |
+| `**data.category_id**` | Integer | No  | Entry identifier (only required for [multi-value categories](../../basics/structure-of-the-it-documentation.md)) |
 
 #### Response
 
@@ -1958,7 +1958,7 @@ Body:
 
 #### Limitations
 
-*   This only works with [multi-value categories](/display/en/Structure+of+the+IT+Documentation) at the moment.
+*   This only works with [multi-value categories](../../basics/structure-of-the-it-documentation.md) at the moment.
 *   You can only archive category entries which have a normal status.
 *   You can only mark category entries as deleted which are archived.
 *   You can only purge category entries from the database which are marked as deleted.

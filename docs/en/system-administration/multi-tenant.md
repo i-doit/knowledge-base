@@ -79,6 +79,6 @@ If [Single Sign On (SSO)](/pages/viewpage.action?pageId=37355648) is active, a t
 Switch Tenants
 --------------
 
-You can switch between tenants without having to log out first. The [main navigation bar](/display/en/Structure+of+the+IT+Documentation) displays the user and the tenant you are currently using. Hovering above the tenant name with your cursor shows a drop-down menu. Here the other tenants are selectable. Clicking on one will sign off the user from the current tenant and sign him in automatically to the new one. This however only works if the credentials of the user are the same in both tenants.
+You can switch between tenants without having to log out first. The [main navigation bar](../../basics/structure-of-the-it-documentation.md) displays the user and the tenant you are currently using. Hovering above the tenant name with your cursor shows a drop-down menu. Here the other tenants are selectable. Clicking on one will sign off the user from the current tenant and sign him in automatically to the new one. This however only works if the credentials of the user are the same in both tenants.
 
 ![](/download/attachments/44171296/logged_in.png?version=1&modificationDate=1490626996681&api=v2)

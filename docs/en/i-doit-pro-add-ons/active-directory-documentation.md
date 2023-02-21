@@ -1,4 +1,4 @@
-The [IT documentation](/display/en/Structure+of+the+IT+Documentation) and the [CMDB](/display/en/Structure+of+the+IT+Documentation) are in the foreground of i-doit. Moreover, there are extra add-ons to expand the scope of available functions of i-doit in line with your demands. In this way, the user is provided with a completely new perspective on IT documentation.
+The [IT documentation](../../basics/structure-of-the-it-documentation.md) and the [CMDB](../../basics/structure-of-the-it-documentation.md) are in the foreground of i-doit. Moreover, there are extra add-ons to expand the scope of available functions of i-doit in line with your demands. In this way, the user is provided with a completely new perspective on IT documentation.
 
 "Modules" and "Extensions"
 

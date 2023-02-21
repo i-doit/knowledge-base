@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+i-doit provides over 200 predefined [categories](../../basics/structure-of-the-it-documentation.md). The result is a wide range of over 1,000 [attributes](../../basics/structure-of-the-it-documentation.md) which theoretically can be documented for each [object](../../basics/structure-of-the-it-documentation.md). This abundance inevitably leads to the frequently asked question "What is the purpose of category XY with all its attributes?" Which concepts represent each single category and each single attribute?
+=======
 # Categories and Attributes
 
 i-doit provides over 200 predefined [categories](./structure-of-the-it-documentation.md). The result is a wide range of over 1,000 [attributes](./structure-of-the-it-documentation.md) which theoretically can be documented for each [object](./structure-of-the-it-documentation.md). This abundance inevitably leads to the frequently asked question "What is the purpose of category XY with all its attributes?" Which concepts represent each single category and each single attribute?
+>>>>>>> main
 
 Flexibility versus specifications
 
