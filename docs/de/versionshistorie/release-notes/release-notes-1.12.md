@@ -1,3 +1,5 @@
+# Release Notes 1.12
+
 System requirements
 -------------------
 
@@ -22,6 +24,7 @@ Notes
     
 
 |     |     |
+| --- | --- |
 | C\_\_CMDB\_\_SUBCAT\_\_NETWORK\_PORT | C\_\_CATG\_\_NETWORK\_PORT |
 | C\_\_CMDB\_\_SUBCAT\_\_NETWORK\_INTERFACE\_P | C\_\_CATG\_\_NETWORK\_INTERFACE |
 | C\_\_CMDB\_\_SUBCAT\_\_NETWORK\_INTERFACE\_L | C\_\_CATG\_\_NETWORK\_LOG\_PORT |

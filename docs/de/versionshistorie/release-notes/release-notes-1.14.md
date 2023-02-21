@@ -1,17 +1,19 @@
+# Release Notes 1.14
+
 Changelog
 =========
 
-This release brings many bug fixes, some minor changes and a few new features. Please see the [changelog](/display/de/Changelog+1.14) for a full list of changes since i-doit 1.13.2.
+This release brings many bug fixes, some minor changes and a few new features. Please see the [changelog](../changelogs/changelog-1.14.x/changelog-1.14.md) for a full list of changes since i-doit 1.13.2.
 
 Backup
 ======
 
-As always, please [backup your data](/display/de/Daten+sichern+und+wiederherstellen) before you update to the latest version of i-doit.
+As always, please [backup your data](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) before you update to the latest version of i-doit.
 
 System requirements
 ===================
 
-i-doit 1.14 has updated [requirements](/display/de/Systemvoraussetzungen). Please make sure all requirements are met before you install/update i-doit 1.14.
+i-doit 1.14 has updated [requirements](../../installation/systemvoraussetzungen.md). Please make sure all requirements are met before you install/update i-doit 1.14.
 
 As a side-effect, this reduces the list of supported operating systems. We encourage you to upgrade your operating system before updating i-doit.
 
@@ -33,7 +35,7 @@ MariaDB
 Reports
 =======
 
-In i-doit 1.13.1 there was a first important step to migrate all reports from system to tenant database(s). With 1.14 we finalize this migration during the update process. All remaining reports in system database will be permanently removed. Please make sure all your [reports](/display/de/Report+Manager) are properly migrated and still working.
+In i-doit 1.13.1 there was a first important step to migrate all reports from system to tenant database(s). With 1.14 we finalize this migration during the update process. All remaining reports in system database will be permanently removed. Please make sure all your [reports](../../auswertungen/report-manager.md) are properly migrated and still working.
 
 Support
 =======

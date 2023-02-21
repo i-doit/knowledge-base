@@ -1,13 +1,6 @@
-**Contents**
+# Fetch Data with Livestatus/ NDOUtils  
 
-*   1[Interfaces](#FetchDatawithLivestatus/NDOUtils-Interfaces)
-*   2[Basic Configuration](#FetchDatawithLivestatus/NDOUtils-BasicConfiguration)
-*   3[Categories](#FetchDatawithLivestatus/NDOUtils-Categories)
-*   4[Log Entries from the Monitoring](#FetchDatawithLivestatus/NDOUtils-LogEntriesfromtheMonitoring)
-
-  
-
-For a target/actual-comparison between the target documentation in i-doit and the actual status provided by a [Network Monitoring](/display/en/Network+Monitoring) software, a suitable interface can be very helpful. With this interface you can display data from the Network Monitoring in i-doit and evaluate them.  
+For a target/actual-comparison between the target documentation in i-doit and the actual status provided by a [Network Monitoring](./index.md) software, a suitable interface can be very helpful. With this interface you can display data from the Network Monitoring in i-doit and evaluate them.  
 
 Interfaces
 ----------
@@ -22,49 +15,45 @@ The interfaces
 
 for [Nagios](https://www.nagios.org/), [Check\_MK](http://mathias-kettner.com/check_mk.html), [Icinga](https://www.icinga.org/) and all compatible forks are supported.
 
-Recommendation
+!!! success "Recommendation"
 
-MK Livestatus offers a highly performant connection to the Network Monitoring. Thus it is to be preferred over NDOUtils.
+    MK Livestatus offers a highly performant connection to the Network Monitoring. Thus it is to be preferred over NDOUtils.
 
 Basic Configuration
 -------------------
 
-A running NDOUtils or MK Livestatus are required on the monitoring system. The access to one of the interfaces has to be configurated in i-doit at `**Administration → Interfaces → Monitoring → Livestatus/NDO**`.
+A running NDOUtils or MK Livestatus are required on the monitoring system. The access to one of the interfaces has to be configurated in i-doit at **Administration → Interfaces → Monitoring → Livestatus/NDO**.
 
-![](/download/attachments/66355714/network1.png?version=1&modificationDate=1507892544364&api=v2&effects=drop-shadow)
+[![Livestatus/NDO](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/1-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/1-fdwls.png)
 
 A TCP/UNIX socket or a database configuration with corresponding access permissions has to be set depending on the type of interface.
 
 Example for NDOUtils:
 
-![](/download/attachments/66355714/network2.png?version=1&modificationDate=1507892544351&api=v2&effects=drop-shadow)
+[![NDOUtils](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/2-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/2-fdwls.png)
 
 Example for MK Livestatus:
 
-![](/download/attachments/66355714/network3.png?version=1&modificationDate=1507892544336&api=v2&effects=drop-shadow)
+[![Livestatus](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/3-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/3-fdwls.png)
 
 Categories
 ----------
 
-In order to read out data the [category folder](../../basics/structure-of-the-it-documentation.md) `**Monitoring**` has to be assigned to the [object types](../../basics/structure-of-the-it-documentation.md) with the **`[Quick Configuration Wizard](/display/en/Assignment+of+Categories+to+Object+Types)`**. The respective [identification key](/display/en/Unique+References) for the monitoring has to be configured for the [object](../../basics/structure-of-the-it-documentation.md) in the `**Monitoring**` category. For this, either the object title, the hostname with or without domain name or a freely chosen name can be used. This entry determines the name which is queried in the monitoring.
+In order to read out data the [category folder](../../basics/structure-of-the-it-documentation.md) **Monitoring** has to be assigned to the [object types](../../basics/structure-of-the-it-documentation.md) with the **[Quick Configuration Wizard](../../basics/assignment-of-categories-to-object-types.md)**. The respective [identification key](../../basics/unique-references.md) for the monitoring has to be configured for the [object](../../basics/structure-of-the-it-documentation.md) in the **Monitoring** category. For this, either the object title, the hostname with or without domain name or a freely chosen name can be used. This entry determines the name which is queried in the monitoring.
 
 If multiple monitoring instances are configured, the corresponding instance is chosen.
 
-![](/download/attachments/66355714/network4.png?version=1&modificationDate=1507892544282&api=v2&effects=drop-shadow)
+[![monitoring](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/4-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/4-fdwls.png)
 
-Is the category activated and the entry saved, then the current status can be queried in the **`Livestatus`** or the **`NDO`** category.
+Is the category activated and the entry saved, then the current status can be queried in the **Livestatus** or the **NDO** category.
 
-****![](/download/attachments/66355714/en_category_monitoring_livestatus.png?version=1&modificationDate=1522312787759&api=v2&effects=drop-shadow)  
-****
+[![Livestatus](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/5-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/5-fdwls.png)
 
-A column for the NDO or Livestatus can be additionally chosen in the [object list configuration](/display/en/Configuration+of+the+List+View) so that the current host status is also shown in the [object list](/display/en/Object+List).
+A column for the NDO or Livestatus can be additionally chosen in the [object list configuration](../../basics/object-list/configuration-of-the-list-view.md) so that the current host status is also shown in the [object list](../../basics/object-list/index.md).
 
-****![Object list with Livestatus](/download/attachments/66355714/en_object_list_with_livestatus.png?version=1&modificationDate=1522312825469&api=v2&effects=drop-shadow "Object list with Livestatus")  
-****
+[![Object list with Livestatus](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/6-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/6-fdwls.png)
 
 Log Entries from the Monitoring
 -------------------------------
 
-Status notifications from the monitoring can be transferred to the i-doit log via the [controller](/display/en/CLI). The corresponding handler, `**check_mk**` or `**nagios**`, has to be opened and all status changes which happened since the last run are transferred to the log automatically.
-
-![CLI](https://lh5.googleusercontent.com/433Qx7ROTJYwL2BqB4nnAdZ_3URB3tOH7Q7-Fc7jIXVAzWdp-abR0Pc3wWgaHWTP47pRSPbDhSoWrN5HVVHpEscspsXpxDjBMSzLqiuRgnCUMuzxJwf-WrkbaRe8cdMqpFeloxrd)
+Status notifications from the monitoring can be transferred to the i-doit log via the [controller](../cli/index.md). The corresponding handler, **check_mk** or **nagios**, has to be opened and all status changes which happened since the last run are transferred to the log automatically.

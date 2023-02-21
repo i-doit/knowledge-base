@@ -1,4 +1,4 @@
-We're happy to announce our latest major version 1.19 of i-doit pro. This release is a very important step in the development of i-doit. See the changelog for a complete list of changes. We encourage you to [update](/display/en/Update) to this release as soon as possible.
+We're happy to announce our latest major version 1.19 of i-doit pro. This release is a very important step in the development of i-doit. See the changelog for a complete list of changes. We encourage you to [update](../../maintenance-and-operation/update.md) to this release as soon as possible.
 
 Highlights in this release
 --------------------------
@@ -6,32 +6,33 @@ Highlights in this release
 *   A complete **redesign** of the i-doit frontend to **improve the user experience**.
 *   Added **compatibility** for **PHP 8.0**.
 *   **New configuration** to **create custom translations** and **custom languages**.
-*   **Setting** to define a [**default language**](https://kb.i-doit.com/display/en/Tenantsettings#Tenantsettings-Language) for newly created users.
-*   **New configuration** to **[hide attributes](/display/en/Attribute+visibility)** from categories and/or overview pages.
-*   **Option** to **log** the **[last login](https://kb.i-doit.com/display/en/Tenantsettings#Tenantsettings-Security)** of a user.
-*   [**Export** for **reports**](https://kb.i-doit.com/display/en/Report+Manager#ReportManager-Export/Importreports) which have been created via **query builder**.
+*   **Setting** to define a [**default language**](../../system-administration/system-settings/tenantsettings.md) for newly created users.
+*   **New configuration** to **[hide attributes](../../basics/attribute-visibility.md)** from categories and/or overview pages.
+*   **Option** to **log** the **[last login](../../system-administration/system-settings/tenantsettings.md#logging)** of a user.
+*   [**Export** for **reports**](../../evaluation/report-manager.md#exportimport-reports) which have been created via **query builder**.
 
 Add-ons
 -------
 
-The New Add-on Versions require i-doit >= 1.19
+!!! warning
+    The New Add-on Versions require i-doit >= 1.19
 
 Alongside i-doit pro 1.19, we will also release new versions of the following **add-ons**, which **need to be updated** afterwards to be compatible with **PHP 8.0** and the **new design**:
 
-*   [API](/pages/viewpage.action?pageId=37355644) **1.13**
-*   [Documents](/display/en/Documents) **1.5**
-*   [Analysis](/display/en/Analysis) **1.3**
-*   [Floorplan](/display/en/Floorplan) **1.6**
-*   [Cabling](/display/en/Cabling) **1.2**
-*   [Relocate CI](/display/en/Relocate-CI) **1.2**
-*   [Replacement](/display/en/Replacement) **1.4**
-*   [Maintenance](/display/en/Maintenance) **1.2**
-*   [Events](/display/en/Events) **1.3**
-*   [Workflow](/display/en/Workflow) **1.1**
-*   [Checkmk](/display/en/Checkmk) **1.1**
-*   [Check\_MK 2](/display/en/Checkmk2) **1.8**
-*   [Nagios](/display/en/Nagios) **1.1**
-*   [Packager](/display/en/Add-on+Packager) **1.2**
+*   [API](../../i-doit-pro-add-ons/api/index.md) **1.13**
+*   [Documents](../../i-doit-pro-add-ons/documents/index.md) **1.5**
+*   [Analysis](../../i-doit-pro-add-ons/analysis.md) **1.3**
+*   [Floorplan](../../i-doit-pro-add-ons/floorplan.md) **1.6**
+*   [Cabling](../../i-doit-pro-add-ons/cabling.md) **1.2**
+*   [Relocate CI](../../i-doit-pro-add-ons/relocate-ci.md) **1.2**
+*   [Replacement](../../i-doit-pro-add-ons/replacement.md) **1.4**
+*   [Maintenance](../../i-doit-pro-add-ons/maintenance.md) **1.2**
+*   [Events](../../i-doit-pro-add-ons/events.md) **1.3**
+*   [Workflow](../../i-doit-pro-add-ons/workflow.md) **1.1**
+*   [Checkmk](../../i-doit-pro-add-ons/checkmk.md) **1.1**
+*   [Check\_MK 2](../../i-doit-pro-add-ons/checkmk2/index.md) **1.8**
+*   [Nagios](../../automation-and-integration/network-monitoring/nagios.md) **1.1**
+*   [Packager](../../i-doit-pro-add-ons/add-on-packager.md) **1.2**
 
 Important update notes
 ----------------------
@@ -43,12 +44,12 @@ Important update notes
 *   **Before activating** the feature to log the **last login of a user**, please check whether this is compatible with the **data protection agreements** of your company and country. Contact your data privacy expert first if you are not sure about this.  
       
     
-*   If you want to use the **new icons** for object types after updating to i-doit pro 1.19, you can activate them manually in your i-doit **administration** under `System tools` > `Cache / Database`.  
+*   If you want to use the **new icons** for object types after updating to i-doit pro 1.19, you can activate them manually in your i-doit **administration** under System tools > Cache / Database.  
       
     
 *   The following **Partner Add-ons** need to be updated **before** the i-doit 1.19 update (If these version requirements are not matched, the i-doit update cannot be performed):  
-    *   **[ISMS](/display/de/ISMS)** needs to be updated to version **1.5.2 or higher**
-    *   **[VIVA 2](/display/de/VIVA+2)** needs to be updated to version **3.2.1 or higher**
+    *   **[ISMS](../../i-doit-pro-add-ons/isms.md)** needs to be updated to version **1.5.2 or higher**
+    *   **[VIVA 2](../../i-doit-pro-add-ons/viva2.md** needs to be updated to version **3.2.1 or higher**
     *   **Privacy** needs to be updated to version **1.1 or higher**
         
     *   **Label** needs to be updated to version **0**.5** or higher**
@@ -60,4 +61,4 @@ Important update notes
 System requirements
 -------------------
 
-Please check that your system matches the [system requirements](/display/en/System+Requirements) before updating your instance to i-doit pro 1.19. Please also check that you have created a [backup of all your data](/display/en/Backup+and+Recovery) and all add-ons are [up-to-date](/display/en/i-doit+pro+Add-ons).
+Please check that your system matches the [system requirements](../../installation/system-requirements.md) before updating your instance to i-doit pro 1.19. Please also check that you have created a [backup of all your data](../../maintenance-and-operation/backup-and-recovery/index.md) and all add-ons are [up-to-date](../../i-doit-pro-add-ons/index.md).

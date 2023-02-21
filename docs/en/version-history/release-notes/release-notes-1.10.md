@@ -3,7 +3,7 @@ System requirements
 
 *   i-doit now supports PHP from 5.6 to 7.0
     
-*   MySQL parameter `**innodb_stats_on_metadata = 0**` should be set to increase performance
+*   MySQL parameter **innodb_stats_on_metadata = 0** should be set to increase performance
     
 
 Additional information

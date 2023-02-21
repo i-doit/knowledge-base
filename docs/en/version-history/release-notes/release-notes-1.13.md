@@ -18,7 +18,7 @@ System requirements
 *   i-doit 1.13 supports MySQL 5.6 and 5.7
     
 
-[More details can be found in the i-doit knowledge base.](/display/en/System+Requirements)
+[More details can be found in the i-doit knowledge base.](../../installation/system-requirements.md)
 
 Notes
 -----

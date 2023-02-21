@@ -1,3 +1,5 @@
+# Release Notes 1.8
+
 > System Requirements
 > -------------------
 > 
@@ -18,14 +20,14 @@
 > 
 > Starting from i-doit 1.8 imports functions now match existing objects against imported objects with a new function. The feature comes with default settings that comply with the existing behaviour.
 > 
-> Please check the settings before the next import at `**Administration → Interfaces → Import → Object-Matching Profiles**`.
+> Please check the settings before the next import at **Administration → Interfaces → Import → Object-Matching Profiles**.
 > 
 > API
 > ---
 > 
 > The api is not longer part of our official package and is separately released as a module.
 > 
-> For more information see our knowledge base article: [https://kb.i-doit.com/display/en/API](https://kb.i-doit.com/display/en/API)
+> 
 > 
 > Floorplan Extension
 > -------------------
