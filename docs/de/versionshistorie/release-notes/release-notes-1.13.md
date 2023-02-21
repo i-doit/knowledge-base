@@ -1,3 +1,5 @@
+# Release Notes 1.13
+
 System requirements
 -------------------
 
@@ -12,7 +14,7 @@ System requirements
 
 *   i-doit 1.13 supports MySQL 5.6 and 5.7
 
-[More details can be found in the i-doit knowledge base.](/display/de/Systemvoraussetzungen)
+[More details can be found in the i-doit knowledge base.](../../installation/systemvoraussetzungen.md)
 
 Notes
 -----

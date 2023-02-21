@@ -1,3 +1,3 @@
-*   [Changelog 1.17.2](/display/en/Changelog+1.17.2)
-*   [Changelog 1.17.1](/display/en/Changelog+1.17.1)
-*   [Changelog 1.17](/display/en/Changelog+1.17)
+*   [Changelog 1.17.2](changelog-1.17.2.md)
+*   [Changelog 1.17.1](changelog-1.17.1.md)
+*   [Changelog 1.17](changelog-1.17.md)

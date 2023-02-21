@@ -1,3 +1,5 @@
+# Release Notes 1.8
+
 > Systemvoraussetzungen
 > ---------------------
 > 
@@ -18,12 +20,12 @@
 > 
 > Ab i-doit 1.8 nutzen Importe die neue Objekt-Matching Funktion. Dieses Feature wird mit Standardeinstellungen ausgeliefert, die im Wesentlichen dem bekannten Verhalten von i-doit entsprechen.
 > 
-> Bitte prüfen Sie die Einstellungen vor dem nächsten Import unter `**Verwaltung → Schnittstellen → Import → Objekt-Matching Profile**`.
+> Bitte prüfen Sie die Einstellungen vor dem nächsten Import unter **Verwaltung → Schnittstellen → Import → Objekt-Matching Profile**.
 > 
 > API
 > ---
 > 
-> Die API ist nicht mehr Teil des offiziellen Pakets und wird ab sofort als separates Modul veröffentlicht. Weitere Informationen hierzu erhalten Sie in unserem Knowledge Base Eintrag: [](https://kb.i-doit.com/display/de/API)[https://kb.i-doit.com/display/de/API](https://kb.i-doit.com/display/de/API)
+> Die API ist nicht mehr Teil des offiziellen Pakets und wird ab sofort als separates Modul veröffentlicht. Weitere Informationen hierzu erhalten Sie in unserem Knowledge Base Eintrag: [API](../../i-doit-pro-add-ons/api/index.md)
 > 
 > Erweiterung Floorplan
 > ---------------------

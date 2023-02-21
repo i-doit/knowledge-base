@@ -1,1 +1,1 @@
-*   [Changelog 1.19](/display/en/Changelog+1.19)
+*   [Changelog 1.19](changelog-1.19.md)

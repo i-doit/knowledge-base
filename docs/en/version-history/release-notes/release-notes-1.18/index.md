@@ -1,6 +1,6 @@
-We're happy to announce that the latest major version 1.18 of i-doit has been released. This update contains a lot of bug fixes, which can be found in the [changelog](/display/en/Changelog+1.18) and new features which have been highly requested by our customers.
+We're happy to announce that the latest major version 1.18 of i-doit has been released. This update contains a lot of bug fixes, which can be found in the [changelog](../../changelogs/changelog-1.18.x/changelog-1.18.md) and new features which have been highly requested by our customers.
 
-You should [update](/display/en/Update) to the latest version to benefit from these changes.
+You should [update](../../../maintenance-and-operation/update.md) to the latest version to benefit from these changes.
 
 Highlights in this release
 --------------------------
@@ -14,17 +14,17 @@ Add-ons
 
 With i-doit v1.18, we’ve released a bunch of add-ons to be compatible with this major release:
 
-[API](/pages/viewpage.action?pageId=37355644) **1.12.3**  
-[Documents](/display/en/Documents) **1.4.5**  
-[Analysis](/display/en/Analysis) **1.2**  
-[Replacement](/display/en/Replacement) **1.3.2**  
-[Floorplan](/display/en/Floorplan) **1.5.1**  
-[Cabling](/display/en/Cabling) **1.1**  
-[Packager](/display/en/Add-on+Packager) **1.1**  
-[Forms](/display/en/Forms) **1.0**
+[API](../../../i-doit-pro-add-ons/api/index.md) **1.12.3**  
+[Documents](../../../i-doit-pro-add-ons/documents/index.md) **1.4.5**  
+[Analysis](../../../i-doit-pro-add-ons/analysis.md) **1.2**  
+[Replacement](../../../i-doit-pro-add-ons/replacement.md) **1.3.2**  
+[Floorplan](../../../i-doit-pro-add-ons/floorplan.md) **1.5.1**  
+[Cabling](../../../i-doit-pro-add-ons/cabling.md) **1.1**  
+[Packager](../../../i-doit-pro-add-ons/add-on-packager.md) **1.1**  
+[Forms](../../../i-doit-pro-add-ons/forms/index.md) **1.0**
 
 System requirements
 -------------------
 
-Make sure, your system matches our [system requirements](/display/en/System+Requirements) before updating your instance of i-doit to 1.18 and you have created a [backup of all your data](/display/en/Backup+and+Recovery).  
-If you are using any of the add-ons listed above, make sure that they are [up-to-date](/display/en/i-doit+pro+Add-ons) before performing the update.
+Make sure, your system matches our [system requirements](../../../installation/system-requirements.md) before updating your instance of i-doit to 1.18 and you have created a [backup of all your data](../../../maintenance-and-operation/backup-and-recovery/index.md).  
+If you are using any of the add-ons listed above, make sure that they are [up-to-date](../../../i-doit-pro-add-ons/index.md) before performing the update.
