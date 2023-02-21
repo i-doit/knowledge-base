@@ -1,75 +1,72 @@
-Notes
+!!! attention "Notes"
 
-All examples on this page refer to the use of the i-doit user with the combination user name/password: **admin**/**admin**.
-
-All parameters are case-sensitive, which means that upper and lower case must be followed exactly according to the examples and specifications.
+    All examples on this page refer to the use of the i-doit user with the combination user name/password: **admin**/**admin**.
+    All parameters are case-sensitive, which means that upper and lower case must be followed exactly according to the examples and specifications.
 
 The following handlers are available for the i-doit Console
 -----------------------------------------------------------
 
 | Command | Internal system description |
 | --- | --- |
-| Command | Internal system description |
-| --- | --- |
-| [addon-activate](#OptionsandParametersfortheConsole-addon-activate) | Activating Add-ons |
-| [addon-deactivate](#OptionsandParametersfortheConsole-addon-deactivate) | Deactivating Add-ons |
-| [addon-install](#OptionsandParametersfortheConsole-addon-install) | Installing Add-ons |
-| [addon-list](#OptionsandParametersfortheConsole-addon-list) | Displays a list of all installed add-ons |
-| [admin-center-cryptohash-reset](#OptionsandParametersfortheConsole-admin-center-cryptohash-reset) | The crypto-hash of i-doit is changed, which renews the entire encryption (ATTENTION! A backup should be created prior to execution) |
-| [admin-center-password-reset](#OptionsandParametersfortheConsole-admin-center-password-reset) | Reset the password for the Admin Center |
-| [auth-cleanup](#OptionsandParametersfortheConsole-auth-cleanup) | Clean up rights system |
-| [check\_mk-export](#OptionsandParametersfortheConsole-check_mk-export) | Export configuration data for Check\_MK |
-| [check\_mk-livestatus](#OptionsandParametersfortheConsole-check_mk-livestatus) | Write actual state from Check\_MK to logbook |
-| [clear-credentials](#OptionsandParametersfortheConsole-clear-credentials) | Removes user credentials |
-| [help](#OptionsandParametersfortheConsole-help) | Displays the help for a command |
-| [import-csv](#OptionsandParametersfortheConsole-import-csv) | Import data from a CSV file (uses a defined import profile from the GUI) |
-| [import-csvprofiles](#OptionsandParametersfortheConsole-import-csvprofiles) | Listing all CSV Import Profiles |
-| [import-hinventory](#OptionsandParametersfortheConsole-import-hinventory) | Import data from hinventory data from hinventory |
-| [import-jdisc](#OptionsandParametersfortheConsole-import-jdisc) | Import data from JDisc Discovery (SQL Server access is configured via the GUI) |
-| [import-jdiscdiscovery](#OptionsandParametersfortheConsole-import-jdiscdiscovery) | Start a scan in JDisc Discovery (API access is configured via the GUI) |
-| [import-ocs](#OptionsandParametersfortheConsole-import-ocs) | Import data from OCS Inventory NG (SQL Server access is configured via GUI) |
-| [import-syslog](#OptionsandParametersfortheConsole-import-ocs) | Import data from a syslog into the i-doit logbook |
-| [import-xml](#OptionsandParametersfortheConsole-import-ocs) | Importing data from XML |
-| [ldap-sync](#OptionsandParametersfortheConsole-ldap-sync) | Import persons and groups of persons from an LDAP directory or Active Directory (AD) |
-| [ldap-syncdn](#OptionsandParametersfortheConsole-ldap-sync) | Synchronize from an LDAP/AD the Distinguished Name (DN) of the users (see category LDAP) |
-| [list](#OptionsandParametersfortheConsole-list) | Lists all commands |
-| [license-add](#OptionsandParametersfortheConsole-license-add) | Adds a license for i-doit (in progress) |
-| [license-assign](#OptionsandParametersfortheConsole-license-assign) | Assigns a hosting license to a client (in progress) |
-| [license-import](#OptionsandParametersfortheConsole-license-import) | Imports licenses from the i-doit Server (in progress) |
-| [license-key](#OptionsandParametersfortheConsole-license-key) | Sets a license key for i-doit (in process) |
-| [license-list](#OptionsandParametersfortheConsole-license-list) | Lists all licenses with all information (ID; product; type; start date; end date; licensed objects; licensed clients; environment) |
-| [license-remove](#OptionsandParametersfortheConsole-license-remove) | Removes licenses from i-doit |
-| [logbook-archive](#OptionsandParametersfortheConsole-logbook-archive) | Archiving logbook entries |
-| [maintenance](#OptionsandParametersfortheConsole-maintenance) | Sends notifications of scheduled maintenance from the Maintenance Add-on |
-| [nagios-export](#OptionsandParametersfortheConsole-nagios-export) | Export Nagios configuration |
-| [nagios-ndoutils](#OptionsandParametersfortheConsole-nagios-ndoutils) | Write actual state from Nagios to logbook |
-| [notifications-send](#OptionsandParametersfortheConsole-notifications-send) | Send notifications by e-mail (notifications are configured in the GUI) |
-| [report-export](#OptionsandParametersfortheConsole-report-export) | Exporting a report as a file |
-| [search](#OptionsandParametersfortheConsole-search) | Search in i-doit |
-| [search-index](#OptionsandParametersfortheConsole-search-index) | Create/renew search index |
-| [sync-dynamic-groups](#OptionsandParametersfortheConsole-sync-dynamic-groups) | Resynchronizes dynamic group members |
-| [system-autoincrement](#OptionsandParametersfortheConsole-system-autoincrement) | set auto\_increment of MariaDB/MySQL tables to a positive integer value (concerns the data structure! Use with caution!) |
-| [system-checkforupdates](#OptionsandParametersfortheConsole-system-checkforupdates) | Check for updates for i-doit |
-| [system-convert-non-innodb-tables](#OptionsandParametersfortheConsole-system-convert-non-innodb-tables) | Converts all tables that are not in INNODB to INNODB (concerns the database coding. Use with caution!) |
-| [system-convert-non-utf8-tables](#OptionsandParametersfortheConsole-system-convert-non-utf8-tables) | Converts all non-UTF8 tables to UTF8 tables (concerns database encoding. Use with caution!) |
-| [system-location-fix](#OptionsandParametersfortheConsole-system-location-fix) | Executes the location correction from the GUI on the console |
-| [system-maintenancecontract](#OptionsandParametersfortheConsole-system-maintenancecontract) | Send e-mail for maintenance contracts (Function deprecated. Please use [notifications-send](#OptionsandParametersfortheConsole-notifications-send)) |
-| [system-objectcleanup](#OptionsandParametersfortheConsole-system-objectcleanup) | Clean up objects (objects with the status "unfinished", "archived" or "deleted" are permanently removed) |
-| [system-objectrelations](#OptionsandParametersfortheConsole-system-objectrelations) | Recreate Object Relationships |
-| [tenant-create](#OptionsandParametersfortheConsole-tenant-create) | Add a new tenant |
-| [tenant-disable](#OptionsandParametersfortheConsole-tenant-disable) | Deactivate an existing tenant |
-| [tenant-enable](#OptionsandParametersfortheConsole-tenant-enable) | Activate an existing tenant |
-| [tenant-list](#OptionsandParametersfortheConsole-tenant-list) | List all available tenants |
-| [tenant-remove](#OptionsandParametersfortheConsole-tenant-remove) | Remove an existing tenant |
-| [uninstall](#OptionsandParametersfortheConsole-uninstall) | Uninstalls i-doit |
-| [update](#OptionsandParametersfortheConsole-update) | Installs an update for i-doit |
-| [workflows-process](#OptionsandParametersfortheConsole-workflows-process) | Processes all workflows, sends e-mails and creates new tasks from checklists |
+| [addon-activate](#addon-activate) | Activating Add-ons |
+| [addon-deactivate](#addon-deactivate) | Deactivating Add-ons |
+| [addon-install](#addon-install) | Installing Add-ons |
+| [addon-list](#addon-list) | Displays a list of all installed add-ons |
+| [admin-center-cryptohash-reset](#admin-center-cryptohash-reset) | The crypto-hash of i-doit is changed, which renews the entire encryption (ATTENTION! A backup should be created prior to execution) |
+| [admin-center-password-reset](#admin-center-password-reset) | Reset the password for the Admin Center |
+| [auth-cleanup](#auth-cleanup) | Clean up rights system |
+| [check\_mk-export](#check_mk-export) | Export configuration data for Check\_MK |
+| [check\_mk-livestatus](#check_mk-livestatus) | Write actual state from Check\_MK to logbook |
+| [clear-credentials](#clear-credentials) | Removes user credentials |
+| [help](#help) | Displays the help for a command |
+| [import-csv](#import-csv) | Import data from a CSV file (uses a defined import profile from the GUI) |
+| [import-csvprofiles](#import-csvprofiles) | Listing all CSV Import Profiles |
+| [import-hinventory](#import-hinventory) | Import data from hinventory data from hinventory |
+| [import-jdisc](#import-jdisc) | Import data from JDisc Discovery (SQL Server access is configured via the GUI) |
+| [import-jdiscdiscovery](#import-jdiscdiscovery) | Start a scan in JDisc Discovery (API access is configured via the GUI) |
+| [import-ocs](#import-ocs) | Import data from OCS Inventory NG (SQL Server access is configured via GUI) |
+| [import-syslog](#import-ocs) | Import data from a syslog into the i-doit logbook |
+| [import-xml](#import-ocs) | Importing data from XML |
+| [ldap-sync](#ldap-sync) | Import persons and groups of persons from an LDAP directory or Active Directory (AD) |
+| [ldap-syncdn](#ldap-sync) | Synchronize from an LDAP/AD the Distinguished Name (DN) of the users (see category LDAP) |
+| [list](#list) | Lists all commands |
+| [license-add](#license-add) | Adds a license for i-doit (in progress) |
+| [license-assign](#license-assign) | Assigns a hosting license to a client (in progress) |
+| [license-import](#license-import) | Imports licenses from the i-doit Server (in progress) |
+| [license-key](#license-key) | Sets a license key for i-doit (in process) |
+| [license-list](#license-list) | Lists all licenses with all information (ID; product; type; start date; end date; licensed objects; licensed clients; environment) |
+| [license-remove](#license-remove) | Removes licenses from i-doit |
+| [logbook-archive](#logbook-archive) | Archiving logbook entries |
+| [maintenance](#maintenance) | Sends notifications of scheduled maintenance from the Maintenance Add-on |
+| [nagios-export](#nagios-export) | Export Nagios configuration |
+| [nagios-ndoutils](#nagios-ndoutils) | Write actual state from Nagios to logbook |
+| [notifications-send](#notifications-send) | Send notifications by e-mail (notifications are configured in the GUI) |
+| [report-export](#report-export) | Exporting a report as a file |
+| [search](#search) | Search in i-doit |
+| [search-index](#search-index) | Create/renew search index |
+| [sync-dynamic-groups](#sync-dynamic-groups) | Resynchronizes dynamic group members |
+| [system-autoincrement](#system-autoincrement) | set auto\_increment of MariaDB/MySQL tables to a positive integer value (concerns the data structure! Use with caution!) |
+| [system-checkforupdates](#system-checkforupdates) | Check for updates for i-doit |
+| [system-convert-non-innodb-tables](#system-convert-non-innodb-tables) | Converts all tables that are not in INNODB to INNODB (concerns the database coding. Use with caution!) |
+| [system-convert-non-utf8-tables](#system-convert-non-utf8-tables) | Converts all non-UTF8 tables to UTF8 tables (concerns database encoding. Use with caution!) |
+| [system-location-fix](#system-location-fix) | Executes the location correction from the GUI on the console |
+| [system-maintenancecontract](#system-maintenancecontract) | Send e-mail for maintenance contracts (Function deprecated. Please use [notifications-send](#notifications-send)) |
+| [system-objectcleanup](#system-objectcleanup) | Clean up objects (objects with the status "unfinished", "archived" or "deleted" are permanently removed) |
+| [system-objectrelations](#system-objectrelations) | Recreate Object Relationships |
+| [tenant-create](#tenant-create) | Add a new tenant |
+| [tenant-disable](#tenant-disable) | Deactivate an existing tenant |
+| [tenant-enable](#tenant-enable) | Activate an existing tenant |
+| [tenant-list](#tenant-list) | List all available tenants |
+| [tenant-remove](#tenant-remove) | Remove an existing tenant |
+| [uninstall](#uninstall) | Uninstalls i-doit |
+| [update](#update) | Installs an update for i-doit |
+| [workflows-process](#workflows-process) | Processes all workflows, sends e-mails and creates new tasks from checklists |
 
-Configuration file and parameters --config
+!!! attention "Configuration file and parameters --config"
 
-It is possible to pass additional content to the call via a configuration file. This file must be stored in the i-doit directory src/handler/config/. An example in the form of the file "isys\_handler\_ldap.ini" can be found in the directory src/handler/config/examples/.
+    It is possible to pass additional content to the call via a configuration file. This file must be stored in the i-doit directory src/handler/config/. An example in the form of the file "isys\_handler\_ldap.ini" can be found in the directory src/handler/config/examples/.
 
-If this file is to be included in the process, it must be included using the --config or -c parameter.
+    If this file is to be included in the process, it must be included using the --config or -c parameter.
 
 ### addon-activate
 
@@ -79,8 +76,6 @@ Activates installed add-ons for the desired tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
 | \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
 | \-t | \--tenant=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
@@ -95,9 +90,7 @@ Activates installed add-ons for the desired tenant
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php addon-activate --user admin --password admin --tenant 1 --addon api`
+    sudo -u www-data php console.php addon-activate --user admin --password admin --tenant 1 --addon api
 
 ### addon-deactivate
 
@@ -107,8 +100,6 @@ Disabled installed add-ons for the desired tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
 | \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
 | \-t | \--tenant=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
@@ -123,9 +114,7 @@ Disabled installed add-ons for the desired tenant
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php addon-deactivate --user admin --password admin --tenant 1 --addon api`
+    sudo -u www-data php console.php addon-deactivate --user admin --password admin --tenant 1 --addon api
 
 ### addon-install
 
@@ -133,8 +122,6 @@ Installs add-ons for the desired tenant
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -152,9 +139,7 @@ Installs add-ons for the desired tenant
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php addon-``install` `--user admin --password admin --tenant 1 --addon api --zip` `/path/to/the/zip/file``.zip`
+    sudo -u www-data php console.php addon-install --user admin --password admin --tenant 1 --addon api --zip /path/to/the/zip/file.zip
 
 ### addon-list
 
@@ -162,8 +147,6 @@ Displays a list with all installed add-ons for the selected tenant
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-t | \--tenant=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
@@ -178,9 +161,7 @@ Displays a list with all installed add-ons for the selected tenant
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php addon-list --tenant 1`
+    sudo -u www-data php console.php addon-list --tenant 1
 
 ### admin-center-cryptohash-reset
 
@@ -188,8 +169,6 @@ The crypto-hash of i-doit is changed, which renews the entire encryption (ATTENT
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USER\] | Username of a user who is authorized to execute |
@@ -204,9 +183,7 @@ The crypto-hash of i-doit is changed, which renews the entire encryption (ATTENT
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php admin-center-cryptohash-reset --user admin --password admin`
+    sudo -u www-data php console.php admin-center-cryptohash-reset --user admin --password admin
 
 ### admin-center-password-reset
 
@@ -214,8 +191,6 @@ Reset the password for the Admin Center
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -230,9 +205,7 @@ Reset the password for the Admin Center
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php admin-center-password-reset --user admin --password admin`
+    sudo -u www-data php console.php admin-center-password-reset --user admin --password admin
 
 ### auth-cleanup
 
@@ -240,8 +213,6 @@ Empties the cache of the rights system so that the currently configured rights a
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -258,9 +229,7 @@ Empties the cache of the rights system so that the currently configured rights a
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php auth-cleanup --user admin --password admin --tenantId 1`
+    sudo -u www-data php console.php auth-cleanup --user admin --password admin --tenantId 1
 
 ### check\_mk-export
 
@@ -268,8 +237,6 @@ Performs a Check\_MK export
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-l | \--exportLanguage=EXPORTLANGUAGE | Definition of the language used for the export (default = 0) |
@@ -288,9 +255,7 @@ Performs a Check\_MK export
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php check_mk-``export` `--user admin --password admin --tenantId 1`
+    sudo -u www-data php console.php check_mk-export --user admin --password admin --tenantId 1
 
   
 
@@ -300,8 +265,6 @@ Imports the monitoring status changes from Livestatus to i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -318,9 +281,7 @@ Imports the monitoring status changes from Livestatus to i-doit
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php check_mk-livestatus --user admin --password admin --tenantId 1`
+    sudo -u www-data php console.php check_mk-livestatus --user admin --password admin --tenantId 1
 
 ### clear-credentials
 
@@ -328,8 +289,6 @@ Removes the entries of the attributes "username" and "password" from user logins
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--object=\[OBJECT\] | Object ID of the user to be deactivated |
@@ -345,9 +304,7 @@ Removes the entries of the attributes "username" and "password" from user logins
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php` `clear``-credentials --user admin --password admin --object ObjectID`
+    sudo -u www-data php console.php clear-credentials --user admin --password admin --object ObjectID
 
 ### help
 
@@ -355,8 +312,6 @@ Used in conjunction with another command to display its usage, arguments and opt
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--format=\[FORMAT\] | Set the output format (txt, xml, json or md) \[Default: txt\] |
@@ -371,9 +326,7 @@ Used in conjunction with another command to display its usage, arguments and opt
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php help --``format``=txt <``command``>`
+    sudo -u www-data php console.php help --format=txt <command>
 
 ### import-csv
 
@@ -381,8 +334,6 @@ Performs the import of a CSV file with the desired import parameters
 
  **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--importFile=IMPORTFILE | Specifies the file and its path to be used for the import |
@@ -402,9 +353,7 @@ Performs the import of a CSV file with the desired import parameters
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php` `import``-csv --user admin --password admin --tenantId 1 --importFile` `/var/www/imports/idoit-Demo-CSV-Import``.csv --importProfileId 1 --csvSeparator` `";"` `--multiValueMode column`
+    sudo -u www-data php console.php import-csv --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-CSV-Import.csv --importProfileId 1 --csvSeparator ";" --multiValueMode column
 
 ### import-csvprofiles
 
@@ -412,8 +361,6 @@ Returns a list of the import profiles for the CSV import
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -429,11 +376,7 @@ Returns a list of the import profiles for the CSV import
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php` `import``-csvprofiles --user admin --password admin --tenantId 1`
-
-  
+    sudo -u www-data php console.php import-csvprofiles --user admin --password admin --tenantId 1
 
 ### import-hinventory
 
@@ -441,8 +384,6 @@ Performs an h-inventory import of a compatible XML file
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--importFile=IMPORTFILE | Specifies the file and its path to be used for the import |
@@ -463,11 +404,8 @@ Performs an h-inventory import of a compatible XML file
 
 **Example of use**
 
-[?](#)
+    sudo -u www-data php console.php import-hinventory --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-h-inventory-import.xml
 
-`sudo` `-u www-data php console.php` `import``-hinventory --user admin --password admin --tenantId 1 --importFile` `/var/www/imports/idoit-Demo-h-inventory-import``.xml`
-
-  
 
 ### import-jdisc
 
@@ -475,8 +413,6 @@ Performs a JDisc import to i-doit.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-r | \--profile=PROFILE | Specify/select the JDisc profile to be used for the import |
@@ -501,11 +437,7 @@ Performs a JDisc import to i-doit.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php` `import``-jdisc --user admin --password admin --tenantId 1 --profile 3 --mode 4 --server 2 --detailedLogging --regenerateSearchIndex`
-
-  
+    sudo -u www-data php console.php import-jdisc --user admin --password admin --tenantId 1 --profile 3 --mode 4 --server 2 --detailedLogging --regenerateSearchIndex
 
 ### import-jdiscdiscovery
 
@@ -513,8 +445,6 @@ Triggers a JDisc Discovery job.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-s | \--server=SERVER | Selecting the JDisc Server |
@@ -536,11 +466,7 @@ Triggers a JDisc Discovery job.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php` `import``-jdiscdiscovery --user admin --password admin --tenantId 1 --server 2`
-
-  
+    sudo -u www-data php console.php import-jdiscdiscovery --user admin --password admin --tenantId 1 --server 2
 
 ### import-ocs  
 
@@ -548,8 +474,6 @@ Performs an import of contents of an OCS database to i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--ipPortOverwrite=IPPORTOVERWRITE | Specifies whether host addresses and ports are cleared before import. Possible values: 1 = active, 0 = inactive |
@@ -577,11 +501,7 @@ Performs an import of contents of an OCS database to i-doit
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php` `import``-ocs --user admin --password admin --tenantId 1 --databaseSchema ocs --objectType C__OBJTYPE__CLIENT`
-
-  
+    sudo -u www-data php console.php import-ocs --user admin --password admin --tenantId 1 --databaseSchema ocs --objectType C__OBJTYPE__CLIENT
 
 ### import-syslog  
 
@@ -589,8 +509,6 @@ Imports content from a Syslog Server text file into the i-doit logbook.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -607,9 +525,7 @@ Imports content from a Syslog Server text file into the i-doit logbook.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php` `import``-syslog --user admin --password admin --tenantId 1`
+    sudo -u www-data php console.php import-syslog --user admin --password admin --tenantId 1
 
 ###   
 
@@ -619,8 +535,6 @@ Performs an import of an XML file into i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--importFile=IMPORTFILE | Specification of the import file and its path |
@@ -639,9 +553,7 @@ Performs an import of an XML file into i-doit
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php` `import``-xml --user admin --password admin --tenantId 1 --importFile` `/var/www/imports/idoit-Demo-xml-import``.xml`
+    sudo -u www-data php console.php import-xml --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-xml-import.xml
 
 ###   
 
@@ -651,8 +563,6 @@ Synchronizes users from LDAP to i-doit and creates them as person objects. 
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-l | \--ldapServerId=LDAPSERVERID | Specifies the ID of the LDAP server from which the users are to be synchronized  <br>If no ldapServerId is specified, all active servers are synchronized |
@@ -675,11 +585,7 @@ Synchronizes users from LDAP to i-doit and creates them as person objects. 
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php ldap-``sync` `--user admin --password admin --tenantId 1 --verbose --ldapServerId 1`
-
-  
+    sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1
 
 ### ldap-syncdn  
 
@@ -687,8 +593,6 @@ Synchronizes LDAP DNs with the i-doit users
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--ldapServerId=LDAPSERVERID | Specifying the LDAP server via the ID |
@@ -706,9 +610,7 @@ Synchronizes LDAP DNs with the i-doit users
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php ldap-syncdn --user admin --password admin --tenantId 1 --ldapServerId 1`
+    sudo -u www-data php console.php ldap-syncdn --user admin --password admin --tenantId 1 --ldapServerId 1
 
 ### list
 
@@ -718,27 +620,19 @@ Lists all commands. Format of the output can be changed.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 |     | \--format=\[FORMAT\] | Setting the output format (txt, xml, json or md) \[Default: txt\] |
 |     | \--raw | Output of the command help |
 
 **Example of use**
 
-[?](#)
+    sudo -u www-data php console.php list --format=txt
 
-`sudo` `-u www-data php console.php list --``format``=txt`
-
-  
-
-license-add
+### license-add
 
 Adds a license for i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -755,9 +649,7 @@ Adds a license for i-doit
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php license-add --user admin --password admin --tenantId 1 --license` `/path/to/license/file``.key`
+    sudo -u www-data php console.php license-add --user admin --password admin --tenantId 1 --license /path/to/license/file.key
 
 ### license-assign
 
@@ -765,8 +657,6 @@ Assigns a hosting license to a tenant
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -783,9 +673,7 @@ Assigns a hosting license to a tenant
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php license-assign --user admin --password admin --tenantId 1 --count 1000`
+    sudo -u www-data php console.php license-assign --user admin --password admin --tenantId 1 --count 1000
 
 ### license-import
 
@@ -793,8 +681,6 @@ Imports licenses from the i-doit license server
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -810,9 +696,7 @@ Imports licenses from the i-doit license server
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php license-``import` `--user admin --password admin --license-server https:``//lizenzen``.i-doit.com`
+    sudo -u www-data php console.php license-import --user admin --password admin --license-server https://lizenzen.i-doit.com
 
 ### license-key
 
@@ -820,8 +704,6 @@ Sets a license key for i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -838,9 +720,7 @@ Sets a license key for i-doit
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php license-key --user admin --password admin --license-server https:``//lizenzen``.i-doit.com --key license`
+    sudo -u www-data php console.php license-key --user admin --password admin --license-server https://lizenzen.i-doit.com --key license
 
 ###   
 
@@ -850,8 +730,6 @@ Lists all installed licenses
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-t | \--tenant=\[TENANT\] | ID of the assigned tenant to filter (multiple values allowed) |
@@ -865,11 +743,7 @@ Lists all installed licenses
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php license-list --tenant 1`
-
-  
+    sudo -u www-data php console.php license-list --tenant 1
 
 ### license-remove
 
@@ -877,8 +751,6 @@ Deletes a license from i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -894,9 +766,7 @@ Deletes a license from i-doit
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php license-remove --user admin --password admin --license LicenseID`
+    sudo -u www-data php console.php license-remove --user admin --password admin --license LicenseID
 
 ### logbook-archive  
 
@@ -904,8 +774,6 @@ Archives the logbook entries with a defined age, according to the settings on th
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -922,9 +790,7 @@ Archives the logbook entries with a defined age, according to the settings on th
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php logbook-archive --user admin --password admin --tenantId 1`
+    sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
 
 ### maintenance  
 
@@ -932,8 +798,6 @@ Sends e-mails with scheduled maintenance according to the time periods specified
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -949,11 +813,7 @@ Sends e-mails with scheduled maintenance according to the time periods specified
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php maintenance --user admin --password admin --tenantId 1`
-
-  
+    sudo -u www-data php console.php maintenance --user admin --password admin --tenantId 1
 
 ### nagios-export  
 
@@ -961,8 +821,6 @@ Exports the Nagios settings and i-doit objects to Nagios configuration files
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--nagiosHostId=NAGIOSHOSTID | Specifies the Nagios host to be used for the export |
@@ -981,11 +839,7 @@ Exports the Nagios settings and i-doit objects to Nagios configuration files
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php nagios-``export` `--user admin --password admin --tenantId 1 --nagiosHostId 1`
-
-  
+    sudo -u www-data php console.php nagios-export --user admin --password admin --tenantId 1 --nagiosHostId 1
 
 ### nagios-ndoutils  
 
@@ -993,8 +847,6 @@ Imports monitoring status changes from the NDOUtils into the i-doit logbook.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -1011,11 +863,7 @@ Imports monitoring status changes from the NDOUtils into the i-doit logbook.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php nagios-ndoutils --user admin --password admin --tenantId 1`
-
-  
+    sudo -u www-data php console.php nagios-ndoutils --user admin --password admin --tenantId 1
 
 ### notifications-send  
 
@@ -1023,8 +871,6 @@ Sends the notifications configured on the i-doit interface
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--notification-ids=NOTIFICATION-IDS | Pass specific notification IDs to be sent 1,2,3 |
@@ -1043,11 +889,7 @@ Sends the notifications configured on the i-doit interface
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php notifications-send --user admin --password admin --tenantId 1`
-
-  
+    sudo -u www-data php console.php notifications-send --user admin --password admin --tenantId 1
 
 ### report-export  
 
@@ -1055,8 +897,6 @@ Exports a report to the desired file format.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-r | \--reportId=REPORTID | ID of the report to be exported |
@@ -1077,11 +917,7 @@ Exports a report to the desired file format.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php report-``export` `--user admin --password admin --tenantId 1 --reportId 27 --exportPath` `/var/www/exported-reports/` `--exportFilename Report-Buchhaltung-November-2019 --exportFileType csv`
-
-  
+    sudo -u www-data php console.php report-export --user admin --password admin --tenantId 1 --reportId 27 --exportPath /var/www/exported-reports/ --exportFilename Report-Buchhaltung-November-2019 --exportFileType csv
 
 ### search  
 
@@ -1089,8 +925,6 @@ Searches for content in the documentation
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--searchString=SEARCHSTRING | Content to be searched for |
@@ -1108,11 +942,7 @@ Searches for content in the documentation
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php search --user admin --password admin --tenantId 1 --searchString` `"Server001"`
-
-  
+    sudo -u www-data php console.php search --user admin --password admin --tenantId 1 --searchString "Server001"
 
 ### search-index  
 
@@ -1120,8 +950,6 @@ Restores the search index by deleting and rewriting it.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--update | Instead of just creating a new index, the current index documents are overwritten |
@@ -1141,11 +969,7 @@ Restores the search index by deleting and rewriting it.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php search-index --user admin --password admin --tenantId 1`
-
-  
+    sudo -u www-data php console.php search-index --user admin --password admin --tenantId 1
 
 ### sync-dynamic-groups  
 
@@ -1153,8 +977,6 @@ Resynchronizes dynamic group members.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-g | \--groups=GROUPS | Comma-separated list of IDs of the dynamic groups |
@@ -1171,11 +993,7 @@ Resynchronizes dynamic group members.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php` `sync``-dynamic-``groups` `--user admin --password admin --tenantId --``groups` `173,188,219`
-
-  
+    sudo -u www-data php console.php sync-dynamic-groups --user admin --password admin --tenantId --groups 173,188,219
 
 ### system-autoincrement  
 
@@ -1183,8 +1001,7 @@ Determines the value of the system's auto-increment. This affects object IDs, ca
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
+
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--autoIncrement=AUTOINCREMENT | Number to which the auto-increment should be set |
@@ -1201,11 +1018,7 @@ Determines the value of the system's auto-increment. This affects object IDs, ca
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php system-autoincrement --user admin --password admin --tenantId 1 --autoIncrement 20`
-
-  
+    sudo -u www-data php console.php system-autoincrement --user admin --password admin --tenantId 1 --autoIncrement 20
 
 ### system-checkforupdates
 
@@ -1213,8 +1026,6 @@ Checks if a new i-doit version is available.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-h | \--help | Help message for displaying further information |
@@ -1227,9 +1038,7 @@ Checks if a new i-doit version is available.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php system-checkforupdates`
+    sudo -u www-data php console.php system-checkforupdates
 
 ### system-convert-non-innodb-tables
 
@@ -1237,8 +1046,6 @@ Converts all non INNODB tables to INNODB
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--convert | Starts the process of converting all non-UTF-8 tables |
@@ -1256,9 +1063,7 @@ Converts all non INNODB tables to INNODB
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php system-convert-non-innodb-tables --convert --table TABLE_NAME`
+    sudo -u www-data php console.php system-convert-non-innodb-tables --convert --table TABLE_NAME
 
 ###   
 
@@ -1268,8 +1073,6 @@ Converts all non-UTF-8 data types to UTF-8.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--convert | Starts the process of converting all non-UTF-8 tables |
@@ -1286,9 +1089,7 @@ Converts all non-UTF-8 data types to UTF-8.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php system-convert-non-utf8-tables --convert`
+    sudo -u www-data php console.php system-convert-non-utf8-tables --convert
 
 ###   
 
@@ -1300,8 +1101,6 @@ Executes the location correction from the GUI in the console
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
 | \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
 | \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
@@ -1316,9 +1115,7 @@ Executes the location correction from the GUI in the console
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php system-location-fix --user admin --password admin --tenantId 1 --config` `/path/to/config/file`
+    sudo -u www-data php console.php system-location-fix --user admin --password admin --tenantId 1 --config /path/to/config/file
 
 ### system-maintenancecontract  
 
@@ -1328,8 +1125,6 @@ Sends an e-mail notification for maintenance contacts.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
 | \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
 | \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
@@ -1344,9 +1139,7 @@ Sends an e-mail notification for maintenance contacts.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php system-maintenancecontract --user admin --password admin --tenantId 1`
+    sudo -u www-data php console.php system-maintenancecontract --user admin --password admin --tenantId 1
 
 ### system-objectcleanup
 
@@ -1354,8 +1147,6 @@ Cleans all objects with a self-defined status.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--objectStatus=OBJECTSTATUS | Determines which status is to be cleaned up: 1: "unfinished"; 3: "archived"; 4: "deleted |
@@ -1373,11 +1164,7 @@ Cleans all objects with a self-defined status.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php system-objectcleanup --user admin --password admin --tenantId 1 --objectStatus 1`
-
-  
+    sudo -u www-data php console.php system-objectcleanup --user admin --password admin --tenantId 1 --objectStatus 1
 
 ### system-objectrelations  
 
@@ -1385,8 +1172,6 @@ Renews the names of all object relationships.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 |     | \--categoryConstant=CATEGORYCONSTANT | constant of the category for which the operation is to be performed (z.B. C\_\_CATG\_\_IP) |
@@ -1404,11 +1189,7 @@ Renews the names of all object relationships.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php system-objectrelations --user admin --password admin --tenantId 1 --categoryConstant C__CATG__IP`
-
-  
+    sudo -u www-data php console.php system-objectrelations --user admin --password admin --tenantId 1 --categoryConstant C__CATG__IP
 
 ### tenant-create  
 
@@ -1416,8 +1197,6 @@ Creates a new tenant
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--root-user=\[ROOT-USER\] | Database password of the new tenant |
@@ -1436,11 +1215,7 @@ Creates a new tenant
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php tenant-create --title Musterfirma --user idoit --password idoitpassword --` `enable` `--tenantId 3`
-
-  
+    sudo -u www-data php console.php tenant-create --title Musterfirma --user idoit --password idoitpassword -- enable --tenantId 3
 
 ### tenant-disable  
 
@@ -1450,8 +1225,6 @@ Deactivates an existing tenant.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
 | \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
 | \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
@@ -1465,11 +1238,7 @@ Deactivates an existing tenant.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php tenant-disable --tenantId 3`
-
-  
+    sudo -u www-data php console.php tenant-disable --tenantId 3
 
 ### tenant-enable  
 
@@ -1479,8 +1248,6 @@ Activates an existing tenant.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
 | \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
 | \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
@@ -1494,11 +1261,7 @@ Activates an existing tenant.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php tenant-``enable` `--tenantId 3`
-
-  
+    sudo -u www-data php console.php tenant-enable --tenantId 3
 
 ### tenant-list  
 
@@ -1506,8 +1269,6 @@ Lists all existing tenants.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-h | \--help | Hilfenachricht zur Einblendung weiterer Informationen |
@@ -1520,9 +1281,7 @@ Lists all existing tenants.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php tenant-list`
+    sudo -u www-data php console.php tenant-list
 
 ###   
 
@@ -1532,8 +1291,6 @@ Removes an existing client
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -1549,9 +1306,7 @@ Removes an existing client
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php tenant-remove --user admin --password admin --tenant 1`
+    sudo -u www-data php console.php tenant-remove --user admin --password admin --tenant 1
 
 ###   
 
@@ -1561,8 +1316,6 @@ Uninstalls the used i-doit installation
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -1577,9 +1330,7 @@ Uninstalls the used i-doit installation
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php uninstall --user admin --password admin`
+    sudo -u www-data php console.php uninstall --user admin --password admin
 
 ###   
 
@@ -1589,8 +1340,6 @@ Updates the i-doit installation
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
@@ -1607,9 +1356,7 @@ Updates the i-doit installation
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php update --user admin --password admin --zip` `/path/to/zip/file``.zip --``v` `1.14`
+    sudo -u www-data php console.php update --user admin --password admin --zip /path/to/zip/file.zip --v 1.14
 
 ###   
 
@@ -1619,8 +1366,6 @@ Sends emails about workflows and creates tasks from checklists.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | \-t | \--types=TYPES | Workflow types (multiple values allowed) |
@@ -1638,6 +1383,4 @@ Sends emails about workflows and creates tasks from checklists.
 
 **Example of use**
 
-[?](#)
-
-`sudo` `-u www-data php console.php workflows-process --user admin --password admin --tenantId 1 --types task --types checklist`
+    sudo -u www-data php console.php workflows-process --user admin --password admin --tenantId 1 --types task --types checklist

@@ -1,2 +1,4 @@
-*   [Console](/display/en/Console)
-*   [Controller](/display/en/Controller)
+# CLI
+
+*   [Console](./console/index.md)
+*   [Controller](./controller.md)
