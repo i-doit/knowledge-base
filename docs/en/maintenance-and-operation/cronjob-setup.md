@@ -2,7 +2,11 @@
 
 Many tasks in i-doit can be automated with help of the CLI tool [controller](../automation-and-integration/cli/index.md). We use it to maintain the IT documentation on a regular basis.
 
+<<<<<<< HEAD
+The setup of cronjobs is optional. However, we definitely recommend using this option, at best directly after the [IT documentation](../glossary.md).
+=======
 !!! success "Cronjobs setup - yes or no?"
+>>>>>>> main
 
     The setup of cronjobs is optional. However, we definitely recommend using this option, at best directly after the [installation](../installation/index.md).
 

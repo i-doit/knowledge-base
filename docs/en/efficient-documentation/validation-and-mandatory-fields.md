@@ -8,7 +8,13 @@ Overview
 The validation meets the following requirements:
 
 *   Determination of specified values for particular fields
+<<<<<<< HEAD
+    
+*   Determination of an uniqueness of the field value per [object](/display/en/Glossary) ([multi-value category](../../basics/structure-of-the-it-documentation.md))/ [object type](/display/en/Glossary)/ [client](/display/en/Glossary) (global)
+    
+=======
 *   Determination of an uniqueness of the field value per [object](../glossary.md) ([multi-value category](../basics/structure-of-the-it-documentation.md))/ [object type](../glossary.md)/ [client](../glossary.md) (global)
+>>>>>>> main
 *   Definition of the field as mandatory when creating a new object or editing the information
 
 Configuration
@@ -20,7 +26,11 @@ You can find the possibility to specify these settings at **Administration** **â
 
 Now the attributes of the category are ready for configuration of the validation. Using the **Mandatory field** button will make the users' input in this field mandatory. It is not possible to save the category if this field is empty. The indication for this in the category is a red asterisk (\*) next to the attribute name.
 
+<<<<<<< HEAD
+Additionally, you can state whether or not the attribute has to be unique in your [IT documentation](../../basics/structure-of-the-it-documentation.md) and thus may exist only once. This happens via the following buttons:
+=======
 Additionally, you can state whether or not the attribute has to be unique in your [IT documentation](../basics/structure-of-the-it-documentation.md) and thus may exist only once. This happens via the following buttons:
+>>>>>>> main
 
 *   **Unique (per object):** This option is only available in multi-value categories. When activated, it is not possible for this object to use the same value repeatedly in two entries of this category. It is possible, however, to use the entered value in other objects.
     

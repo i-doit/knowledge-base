@@ -13,9 +13,9 @@ The required knowledge around [Reporting](/display/en/Report+Manager) and the [d
 Time Intervals
 --------------
 
-Often a report is needed to provide information about a certain time interval. i-doit already supplies the required fields with date specifications, for example, when an [object](/display/en/Structure+of+the+IT+Documentation) was changed the last time or when a maintenance contract expires. The query builder of the report manager can address these fields but only with fixed date specifications: Which objects were changed since `2016-01-01`? However, often the date is required to be in relation to the current time: Which objects were changed during this month? You don't specify the month but it is assumed that the month during which the report is executed is the month in question.
+Often a report is needed to provide information about a certain time interval. i-doit already supplies the required fields with date specifications, for example, when an [object](../../basics/structure-of-the-it-documentation.md) was changed the last time or when a maintenance contract expires. The query builder of the report manager can address these fields but only with fixed date specifications: Which objects were changed since `2016-01-01`? However, often the date is required to be in relation to the current time: Which objects were changed during this month? You don't specify the month but it is assumed that the month during which the report is executed is the month in question.
 
-In order to generate such a report we create a new report with the query builder first. For the query we add, for example, [object title](/display/en/Unique+References), [object type](/display/en/Structure+of+the+IT+Documentation), date of the last change and the name of the editing person.
+In order to generate such a report we create a new report with the query builder first. For the query we add, for example, [object title](/display/en/Unique+References), [object type](../../basics/structure-of-the-it-documentation.md), date of the last change and the name of the editing person.
 
 ![](/download/attachments/66355775/image2017-11-7%2013%3A48%3A7.png?version=1&modificationDate=1510061181128&api=v2&effects=drop-shadow)
 

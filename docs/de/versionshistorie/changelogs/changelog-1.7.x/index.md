@@ -1,6 +1,8 @@
-*   [Changelog 1.7.5](/display/de/Changelog+1.7.5)
-*   [Changelog 1.7.4](/display/de/Changelog+1.7.4)
-*   [Changelog 1.7.3](/display/de/Changelog+1.7.3)
-*   [Changelog 1.7.2](/display/de/Changelog+1.7.2)
-*   [Changelog 1.7.1](/display/de/Changelog+1.7.1)
-*   [Changelog 1.7](/display/de/Changelog+1.7)
+# Changelog 1.7.X
+
+*   [Changelog 1.7.5](changelog-1.7.5.md)
+*   [Changelog 1.7.4](changelog-1.7.4.md)
+*   [Changelog 1.7.3](changelog-1.7.3.md)
+*   [Changelog 1.7.2](changelog-1.7.2.md)
+*   [Changelog 1.7.1](changelog-1.7.1.md)
+*   [Changelog 1.7](changelog-1.7.md)

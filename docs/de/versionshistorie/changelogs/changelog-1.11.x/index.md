@@ -1,3 +1,5 @@
-*   [Changelog 1.11.2](/display/de/Changelog+1.11.2)
-*   [Changelog 1.11.1](/display/de/Changelog+1.11.1)
-*   [Changelog 1.11](/display/de/Changelog+1.11)
+# Changelog 1.11.X
+
+*   [Changelog 1.11.2](changelog-1.11.2.md)
+*   [Changelog 1.11.1](changelog-1.11.1.md)
+*   [Changelog 1.11](changelog-1.11.md)

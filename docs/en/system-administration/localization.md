@@ -12,7 +12,7 @@ Supported Languages
 
 The localization refers to the [web GUI of i-doit](../basics/structure-of-the-it-documentation.md). [Login](../basics/initial-login.md), [Admin Center](./admin-center.md), [Setup](../installation/manual-installation/setup.md), [Update assistant](../maintenance-and-operation/update.md) as well as the [command line tool Controller](../automation-and-integration/cli/index.md) are in English.
 
-!!! info "Support new languages"
+!!! info "Support new languages"<<<<<<< system-administration-en
 
     i-doit can not be expanded with additional languages without getting into the source code. We would be pleased to hear from you if there are any efforts to translate i-doit into another language.
 
@@ -40,7 +40,7 @@ Texts to be translated are represented by so-called language constants within th
 
 | Language constant | English | German |
 | --- | --- | --- |
-| LC__CMDB__OBJTYPE__ROOM | Room | Raum |
+| LC__CMDB__OBJTYPE__ROOM | Room | Raum |<<<<<<< system-administration-en
 
 Only the language constant LC__CMDB__OBJTYPE__ROOM is in the source code/ in the databases. The user, however, receives the matching translation ("Room" or "Raum") in the web GUI of i-doit. Language constants can be identified by the fact that they only contain capital letters (A-Z), underscores (_) and in some cases numbers (0-9). They always begin with the LC__ prefix.
 
@@ -96,6 +96,7 @@ Localized [object titles](../basics/structure-of-the-it-documentation.md) are no
 ### Multilingual Categories
 
 If the concerned category is a standard [category,](../basics/structure-of-the-it-documentation.md) you can overwrite the language constant in the custom files.
+
 
 In case of [custom categories](../basics/custom-categories.md), the category title is tied to a language constant which is translated in the custom files.
 

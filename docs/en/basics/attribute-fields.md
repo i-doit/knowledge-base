@@ -1,6 +1,25 @@
 # Attribute Fields
 
+<<<<<<< HEAD
+*   1[Overview](#AttributeFields-Overview)
+*   2[Single-line Text Fields](#AttributeFields-Single-lineTextFields)
+*   3[HTML Editor/ Multiline Text Fields](#AttributeFields-HTMLEditor/MultilineTextFields)
+*   4[Dialog Field (Drop Down)](#AttributeFields-DialogField(DropDown))
+*   5[Dialog Plus Field (Extended Drop Down)](#AttributeFields-DialogPlusField(ExtendedDropDown))
+*   6[Multi-Dialog-Plus Field (Multiselection)](#AttributeFields-Multi-Dialog-PlusField(Multiselection))
+*   7[Date Field](#AttributeFields-DateField)
+*   8[Units and Intervals](#AttributeFields-UnitsandIntervals)
+*   9[Costs](#AttributeFields-Costs)
+*   10[Links](#AttributeFields-Links)
+*   11[Object Relationships](#AttributeFields-ObjectRelationships)
+    *   11.1[Object Browser](#AttributeFields-ObjectBrowser)
+    *   11.2[Location Selection](#AttributeFields-LocationSelection)
+    *   11.3[Browser with Subselection](#AttributeFields-BrowserwithSubselection)
+
+Now that you are familiar with the [structure of the IT documentation](../../basics/structure-of-the-it-documentation.md) let's take a closer look at the attribute fields which i-doit provides in the Web GUI.
+=======
 Now that you are familiar with the [structure of the IT documentation](./structure-of-the-it-documentation.md) let's take a closer look at the attribute fields which i-doit provides in the Web GUI.
+>>>>>>> main
 
 Overview
 --------

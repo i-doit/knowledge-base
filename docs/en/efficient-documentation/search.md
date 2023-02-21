@@ -81,7 +81,11 @@ The [CLI tool i-doit controller](../i-doit-pro-add-ons/api/index.md) allows you 
 Search via the API
 ------------------
 
+<<<<<<< HEAD
+It is also possible to search the [IT documentation](../../basics/structure-of-the-it-documentation.md) via the [programmable interface (API)](/pages/viewpage.action?pageId=37355644) of _i-doit_. The required method is `idoit.search`:
+=======
 It is also possible to search the [IT documentation](../basics/structure-of-the-it-documentation.md) via the [programmable interface (API)](../i-doit-pro-add-ons/api/index.md) of _i-doit_. The required method is idoit.search:
+>>>>>>> main
 
     {
         "version": "2.0",

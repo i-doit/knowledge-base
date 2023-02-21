@@ -1,5 +1,7 @@
-*   [Changelog 1.9.4](/display/de/Changelog+1.9.4)
-*   [Changelog 1.9.3](/display/de/Changelog+1.9.3)
-*   [Changelog 1.9.2](/display/de/Changelog+1.9.2)
-*   [Changelog 1.9.1](/display/de/Changelog+1.9.1)
-*   [Changelog 1.9](/display/de/Changelog+1.9)
+# Changelog 1.9.X
+
+*   [Changelog 1.9.4](changelog-1.9.4.md)
+*   [Changelog 1.9.3](changelog-1.9.3.md)
+*   [Changelog 1.9.2](changelog-1.9.2.md)
+*   [Changelog 1.9.1](changelog-1.9.1.md)
+*   [Changelog 1.9](changelog-1.9.md)

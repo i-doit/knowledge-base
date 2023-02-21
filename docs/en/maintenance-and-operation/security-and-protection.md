@@ -346,7 +346,11 @@ This user is also created during the setup. Afterwards, you can change the passw
 
 #### Default User in i-doit
 
+<<<<<<< HEAD
+The users `admin`, `reader`, `author` and `editor` are already generated during the setup. The best practice is to never use these users but to create a [person object](../../basics/structure-of-the-it-documentation.md) for each user instead. The person objects for `admin` etc. cannot be deleted, but archived. By this means, you exclude the login. If you do not want to do without these default users, you should urgently change their passwords as they are identical to the user name. You can implement the changes in the respective person object in respective person object in the **`Persons → Login`** category.
+=======
 The users admin, reader, author and editor are already generated during the setup. The best practice is to never use these users but to create a [person object](../basics/structure-of-the-it-documentation.md) for each user instead. The person objects for admin etc. cannot be deleted, but archived. By this means, you exclude the login. If you do not want to do without these default users, you should urgently change their passwords as they are identical to the user name. You can implement the changes in the respective person object in respective person object in the **Persons → Login** category.
+>>>>>>> main
 
 #### Default User under Linux
 

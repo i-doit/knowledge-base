@@ -1,14 +1,16 @@
+# Release Notes
+
 Welche Änderungen sind mit welchen Versionen veröffentlicht worden?
 
-*   [Release Notes 22](/display/de/Release+Notes+22)
-*   [Release Notes 1.19](/display/de/Release+Notes+1.19)
-*   [Release Notes 1.18](/display/de/Release+Notes+1.18)
-*   [Release Notes 1.17](/display/de/Release+Notes+1.17)
-*   [Release Notes 1.16](/display/de/Release+Notes+1.16)
-*   [Release Notes 1.14](/display/de/Release+Notes+1.14)
-*   [Release Notes 1.13](/display/de/Release+Notes+1.13)
-*   [Release Notes 1.11](/display/de/Release+Notes+1.11)
-*   [Release Notes 1.10](/display/de/Release+Notes+1.10)
-*   [Release Notes 1.9](/display/de/Release+Notes+1.9)
-*   [Release Notes 1.8](/display/de/Release+Notes+1.8)
-*   [Release Notes 1.7](/display/de/Release+Notes+1.7)
+*   [Release Notes 22](release-notes-22.md)
+*   [Release Notes 1.19](release-notes-1.19.md)
+*   [Release Notes 1.18](release-notes-1.18/release-notes-1.18.2.md)
+*   [Release Notes 1.17](release-notes-1.17.md)
+*   [Release Notes 1.16](release-notes-1.16.md)
+*   [Release Notes 1.14](release-notes-1.14.md)
+*   [Release Notes 1.13](release-notes-1.13.md)
+*   [Release Notes 1.11](release-notes-1.11.md)
+*   [Release Notes 1.10](release-notes-1.10.md)
+*   [Release Notes 1.9](release-notes-1.9.md)
+*   [Release Notes 1.8](release-notes-1.8.md)
+*   [Release Notes 1.7](release-notes-1.7.md)

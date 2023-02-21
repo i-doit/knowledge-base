@@ -1,10 +1,12 @@
+# Release Notes 1.7
+
 > Mit i-doit pro 1.7 gibt es einige Neuerungen, die vor dem Update zu beachten sind.
 > 
 > ### Geänderte Systemvoraussetzungen
 > 
 > Die Systemvoraussetzungen haben sich geändert. i-doit pro benötigt nun mindestens MySQL 5.6 oder MariaDB 10 als Datenbankplattform. Bitte updaten Sie Ihre Datenbankplattform, bevor sie das i-doit Update ausführen.
 > 
-> Anleitungen und Hinweise zum Update des Datenbanksystems finden Sie in unserer Knowledge Base unter: [https://i-doit.atlassian.net/wiki/display/KB/Upgrade+zu+MySQL+5.6+oder+MariaDB+10.0](https://i-doit.atlassian.net/wiki/display/KB/Upgrade+zu+MySQL+5.6+oder+MariaDB+10.0)
+> Anleitungen und Hinweise zum Update des Datenbanksystems finden Sie in unserer Knowledge Base unter: [Upgrade zu MySQL5.6 und MariaDB 10.0](../../upgrades-und-umzuege/upgrade-zu-mysql-5.6-oder-mariadb-10.0.md)
 > 
 > Wenn Sie Fragen oder Probleme haben, zögern Sie nicht und wenden sich bitte an unseren Support unter [support@i-doit.com](mailto:support@i-doit.com). Wir freuen uns, wenn wir Ihnen helfen können.
 > 

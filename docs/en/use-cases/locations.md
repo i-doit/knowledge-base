@@ -12,12 +12,12 @@
 *   10[Floor Plan](#Locations-FloorPlan)
 *   11[User Rights for Locations](#Locations-UserRightsforLocations)
 
-The location of hardware and other components is an essential part of i-doit. This article explains the documentation of locations and how you place [objects](/display/en/Structure+of+the+IT+Documentation).
+The location of hardware and other components is an essential part of i-doit. This article explains the documentation of locations and how you place [objects](../../basics/structure-of-the-it-documentation.md).
 
 Overview
 --------
 
-In the default installation i-doit already supplies [object types](/display/en/Structure+of+the+IT+Documentation) which are suitable for the documentation of locations - you can use them or hide them:
+In the default installation i-doit already supplies [object types](../../basics/structure-of-the-it-documentation.md) which are suitable for the documentation of locations - you can use them or hide them:
 
 *   `**Country**`
 *   `**City**`
@@ -25,7 +25,7 @@ In the default installation i-doit already supplies [object types](/display/en/
 *   `**Room**`
 *   `**Rack**`
 
-Beside these object types there are [categories](/display/en/Structure+of+the+IT+Documentation) for each object where you can store the location:
+Beside these object types there are [categories](../../basics/structure-of-the-it-documentation.md) for each object where you can store the location:
 
 *   `**Location**`: Information about the object which is physically on a higher-level
 *   `**Locally assigned objects**`: List of objects which are physically on a lower level
