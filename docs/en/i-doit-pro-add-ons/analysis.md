@@ -79,7 +79,7 @@ Should object types and/ or categories falsify the results, you can hide them. T
 Object Catalog
 --------------
 
-You can create a list showing you which objects belong to a service. With **`**Extras → Analyse → Objectcatalog**`** you can choose an object of the type `**Service**` via `**Object selection**` . Then you limit the analysis optionally via the **`**Service filter**`**. Similar to the [Report Manager](/display/en/Report+Manager) you can vary the display of objects by selecting the matching [attributes](../../basics/structure-of-the-it-documentation.md) from [global and specific categories](../../basics/structure-of-the-it-documentation.md). With a click on `**Load object data**` the result is generated in a tabular overview.
+You can create a list showing you which objects belong to a service. With **`**Extras → Analyse → Objectcatalog**`** you can choose an object of the type `**Service**` via `**Object selection**` . Then you limit the analysis optionally via the **`**Service filter**`**. Similar to the [Report Manager](/display/en/Report+Manager) you can vary the display of objects by selecting the matching [attributes](../basics/structure-of-the-it-documentation.md) from [global and specific categories](../basics/structure-of-the-it-documentation.md). With a click on `**Load object data**` the result is generated in a tabular overview.
 
 ![](/download/attachments/61015507/en_analysis_object_catalog.png?version=1&modificationDate=1490630879891&api=v2&effects=drop-shadow)
 

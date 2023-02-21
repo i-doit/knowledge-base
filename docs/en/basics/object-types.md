@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-The default installation of i-doit already offers a large variety of [object types](../../basics/structure-of-the-it-documentation.md) which can be used for a wide range of purposes or can be hidden when they are not used. This article provides a short overview of object types.
-=======
 # Object Types
 
-The default installation of i-doit already offers a large variety of [object types](./structure-of-the-it-documentation.md) which can be used for a wide range of purposes or can be hidden when they are not used. This article provides a short overview of object types.
->>>>>>> main
+The default installation of i-doit already offers a large variety of [object types](structure-of-the-it-documentation.md) which can be used for a wide range of purposes or can be hidden when they are not used. This article provides a short overview of object types.
 
 | Object type | Description | Examples |
 | --- | --- | --- |

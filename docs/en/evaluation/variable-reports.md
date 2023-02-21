@@ -5,19 +5,11 @@ Variable reports are very useful to customize your own i-doit installation for y
 Custom Categories
 -----------------
 
-<<<<<<< HEAD
-A lot of users already use the [custom categories](/display/en/Custom+Categories). One thing which characterizes the custom categories is the possibility to link [objects](../../basics/structure-of-the-it-documentation.md).
-=======
 A lot of users already use the [custom categories](../basics/custom-categories.md). One thing which characterizes the custom categories is the possibility to link [objects](../basics/structure-of-the-it-documentation.md).
->>>>>>> main
 
 To give an example: Say that your company uses printers which are assigned to certain offices. The rooms **1.01** to **1.07** use **Printer A**, rooms **1.0****8** to **1.11** use **Printer B**.
 
-<<<<<<< HEAD
-This can be documented with the custom category `**Department**`. This category is assigned to the [object type](../../basics/structure-of-the-it-documentation.md) `**Printer**` and defined as [single-value category](../../basics/structure-of-the-it-documentation.md), not as [list category ("Multi-Value")](../../basics/structure-of-the-it-documentation.md). The `**Department**` [attribute](../../basics/structure-of-the-it-documentation.md)  is added as `**Object-Relation (multiple selection)**` with the addition `**Share Access**`.  
-=======
 This can be documented with the custom category **Department**. This category is assigned to the [object type](../basics/structure-of-the-it-documentation.md) **Printer** and defined as [single-value category](../basics/structure-of-the-it-documentation.md), not as [list category ("Multi-Value")](../basics/structure-of-the-it-documentation.md). The **Department** [attribute](../basics/structure-of-the-it-documentation.md)  is added as **Object-Relation (multiple selection)** with the addition **Share Access**.  
->>>>>>> main
 
 [![Object-Relation](../assets/images/en/evaluation/variable-reports/1-vr.png)](../assets/images/en/evaluation/variable-reports/1-vr.png)
 

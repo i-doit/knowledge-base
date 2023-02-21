@@ -5,11 +5,7 @@ Collaborating on the IT documentation also has its pitfalls. Therefore i-doit pr
 Functionality
 -------------
 
-<<<<<<< HEAD
-When a user edits an [object](../../basics/structure-of-the-it-documentation.md), it will be locked for a certain period of time for other users. Even though other users can view the object, they cannot edit it. A big red reference is displayed on the [overview page](../../basics/structure-of-the-it-documentation.md) and in each [category](../../basics/structure-of-the-it-documentation.md) of the object indicating that this object is locked and also stating by whom: `**- LOCKED ([User]) -**`
-=======
 When a user edits an [object](../basics/structure-of-the-it-documentation.md), it will be locked for a certain period of time for other users. Even though other users can view the object, they cannot edit it. A big red reference is displayed on the [overview page](../basics/structure-of-the-it-documentation.md) and in each [category](../basics/structure-of-the-it-documentation.md) of the object indicating that this object is locked and also stating by whom: **- LOCKED ([User]) -**
->>>>>>> main
 
 As soon as the object lock is activated, a counter starts. When the countdown is finished, the object is unlocked again. During this period the user should have saved his changes in order to avoid the risk of other users overwriting the changes (or the other way around).
 

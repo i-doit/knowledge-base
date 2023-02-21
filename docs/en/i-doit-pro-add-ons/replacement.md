@@ -9,7 +9,7 @@
 *   7[Swap Report](#Replacement-SwapReport)
 *   8[Releases](#Replacement-Releases)
 
-A new switch is put into operation but you want to maintain all the connections? Use the **Replacement** [add-on](/display/en/i-doit+pro+Add-ons) so that you don't have to document all the connections anew. This add-on allows swapping of [objects](../../basics/structure-of-the-it-documentation.md) with configurable adoption of existing connections.
+A new switch is put into operation but you want to maintain all the connections? Use the **Replacement** [add-on](/display/en/i-doit+pro+Add-ons) so that you don't have to document all the connections anew. This add-on allows swapping of [objects](../basics/structure-of-the-it-documentation.md) with configurable adoption of existing connections.
 
 Download and Installation
 -------------------------
@@ -23,7 +23,7 @@ You can find the configuration at `**Administration**` **`→ CMDB settings → 
 
 | Option | Description |
 | --- | --- |
-| `**Selectable object-types**` | Here you specify which objects of which type can be swapped. Additionally, you define per [object type](../../basics/structure-of-the-it-documentation.md) which [categories](../../basics/structure-of-the-it-documentation.md) (and thus which [attributes](../../basics/structure-of-the-it-documentation.md)) are to be swapped. The categories which aren't selected aren't affected by swaps. |
+| `**Selectable object-types**` | Here you specify which objects of which type can be swapped. Additionally, you define per [object type](../basics/structure-of-the-it-documentation.md) which [categories](../basics/structure-of-the-it-documentation.md) (and thus which [attributes](../basics/structure-of-the-it-documentation.md)) are to be swapped. The categories which aren't selected aren't affected by swaps. |
 | `**CMDB status for storing objects**` | You can restrict the selection of objects offered for swapping via their [`**CMDB status**`](/display/en/Life+and+Documentation+Cycle). |
 | `**Consider the "swap" status?**` | When the swap status is considered, the swapped object receives the `**CMDB status**` `**stored**` and the object of swapping the `**CMDB status in operation**`. |
 | `**Archive swapped objects?**` | Do you want the object which is swapped to receive the [status](/display/en/Life+and+Documentation+Cycle) `**Archived**`? |
@@ -45,7 +45,7 @@ Under `**Administration → Authorization system → Rights → Object swap**` y
 Requirements
 ------------
 
-Before two objects can be swapped, the following conditions have to be met:  
+Before two objects can be swapped, the following conditions have to be met:
 
 *   Both objects have the same object type.
 *   You can't swap an object with itself.

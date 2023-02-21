@@ -1,6 +1,6 @@
 # Manual installation
 
-This article describes the manual [IT documentation](../glossary.md) of i-doit. The required software packages are installed and configured independently. Afterwards, i-doit is downloaded and installed. The necessary steps for Cronjobs and backups also have to be carried out by the user.
+This article describes the manual [IT documentation](../../glossary.md) of i-doit. The required software packages are installed and configured independently. Afterwards, i-doit is downloaded and installed. The necessary steps for Cronjobs and backups also have to be carried out by the user.
 
 ## Scope
 
