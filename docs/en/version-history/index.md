@@ -3,63 +3,63 @@ When were all the i-doit pro release dates?
 | Version | Date | Release Notes | Changelog |
 | --- | --- | --- | --- |
 | 2022<br>---- |     |     |     |
-| **21** | **2022-12-06** |     | **[Changelog](https://kb.i-doit.com/display/de/Changelog+21)** |
-| **20** | **2022-11-07** |     | **[Changelog](https://kb.i-doit.com/display/en/Changelog+20)** |
-| **1.19** | **2022-09-05** | **[Release Notes](/display/de/Release+Notes+1.19)** | **[Changelog](/display/de/Changelog+1.19)** |
-| 1.18.1 | 2022-06-27 |     | **[Changelog](/display/de/Changelog+1.18.2)** |
-| 1.18.2 | 2022-04-11 |     | **[Changelog](/display/de/Changelog+1.18.1)** |
-| **1.18** | **2022-02-21** | **[Release Notes](/display/en/Release+Notes+1.18)** | **[Changelog](/display/en/Changelog+1.18)** |
+| **21** | **2022-12-06** |     | **[Changelog](./changelogs/changelog-21.md)** |
+| **20** | **2022-11-07** |     | **[Changelog](./changelogs/changelog-20.md)** |
+| **1.19** | **2022-09-05** | **[Release Notes](./release-notes/release-notes-1.19.md)** | **[Changelog](./changelogs/changelog-1.19.x/changelog-1.19.md)** |
+| 1.18.1 | 2022-06-27 |     | **[Changelog](./changelogs/changelog-1.18.x/changelog-1.18.2.md)** |
+| 1.18.2 | 2022-04-11 |     | **[Changelog](./changelogs/changelog-1.18.x/changelog-1.18.1.md)** |
+| **1.18** | **2022-02-21** | **[Release Notes](./release-notes/release-notes-1.18/index.md)** | **[Changelog](./changelogs/changelog-1.18.x/changelog-1.18.md)** |
 | 2021<br>---- |     |     |     |
-| 1.17.2 | 2021-11-22 |     | **[Changelog](/display/en/Changelog+1.17.2)** |
-| 1.17.2 | 2021-09-27 |     | **[Changelog](/display/en/Changelog+1.17.1)** |
-| **1.17** | 2021-07-26 | **[Release Notes](/display/en/Release+Notes+1.17)** | **[Changelog](/display/en/Changelog+1.17)** |
-| 1.16.3 | 2021-06-14 |     | **[Changelog](/display/en/Changelog+1.16.3)** |
-| 1.16.2 | 2021-03-26 |     | **[Changelog](/display/en/Changelog+1.16.2)** |
-| 1.16.1 | 2021-03-22 |     | **[Changelog](/display/en/Changelog+1.16.1)** |
-| **1.16** | **2021-01-18** | **[Release Notes](/display/en/Release+Notes+1.16)** | **[Changelog](/display/en/Changelog+1.16)** |
+| 1.17.2 | 2021-11-22 |     | **[Changelog](./changelogs/changelog-1.17.x/changelog-1.17.2.md)** |
+| 1.17.2 | 2021-09-27 |     | **[Changelog](./changelogs/changelog-1.17.x/changelog-1.17.1.md)** |
+| **1.17** | 2021-07-26 | **[Release Notes](./release-notes/release-notes-1.17.md)** | **[Changelog](./changelogs/changelog-1.17.x/changelog-1.17.md)** |
+| 1.16.3 | 2021-06-14 |     | **[Changelog](./changelogs/changelog-1.16.x/changelog-1.16.3.md)** |
+| 1.16.2 | 2021-03-26 |     | **[Changelog](./changelogs/changelog-1.16.x/changelog-1.16.2.md)** |
+| 1.16.1 | 2021-03-22 |     | **[Changelog](./changelogs/changelog-1.16.x/changelog-1.16.1.md)** |
+| **1.16** | **2021-01-18** | **[Release Notes](./release-notes/release-notes-1.16.md)** | **[Changelog](./changelogs/changelog-1.16.x/changelog-1.16.md)** |
 | 2020<br>---- |     |     |     |
-| 1.15.2 | 2020-11-23 |     | [Changelog](/display/en/Changelog+1.15.2) |
-| 1.15.1 | 2020-09-28 |     | [Changelog](/display/en/Changelog+1.15.1) |
-| **1.15** | **2020-07-27** |     | **[Changelog](/display/en/Changelog+1.15)** |
-| 1.14.2 | 2020-05-18 |     | [Changelog](/display/en/Changelog+1.14.2) |
-| 1.14.1 | 2020-03-23 |     | [Changelog](/display/en/Changelog+1.14.1) |
-| **1.14** | **2020-01-20** | **[Release Notes](/display/en/Release+Notes+1.14)** | **[Changelog](/display/en/Changelog+1.14)** |
+| 1.15.2 | 2020-11-23 |     | [Changelog](./changelogs/changelog-1.15.x/changelog-1.15.2.md) |
+| 1.15.1 | 2020-09-28 |     | [Changelog](./changelogs/changelog-1.15.x/changelog-1.15.1.md) |
+| **1.15** | **2020-07-27** |     | **[Changelog](./changelogs/changelog-1.15.x/changelog-1.15.md)** |
+| 1.14.2 | 2020-05-18 |     | [Changelog](./changelogs/changelog-1.14.x/changelog-1.14.2.md) |
+| 1.14.1 | 2020-03-23 |     | [Changelog](./changelogs/changelog-1.14.x/changelog-1.14.1.md) |
+| **1.14** | **2020-01-20** | **[Release Notes](./release-notes/release-notes-1.14.md)** | **[Changelog](./changelogs/changelog-1.14.x/changelog-1.14.md)** |
 | 2019<br>---- |     |     |     |
-| 1.13.2 | 2019-10-14 |     | [Changelog](/display/en/Changelog+1.13.2) |
-| 1.13.1 | 2019-09-02 |     | [Changelog](/display/en/Changelog+1.13.1) |
-| **1.13** | **2019-06-24** | **[Release Notes](/display/en/Release+Notes+1.13)** | **[Changelog](/display/en/Changelog+1.13)** |
-| 1.12.4 | 2019-05-20 |     | [Changelog](/display/en/Changelog+1.12.4) |
-| 1.12.3 | 2019-05-06 |     | [Changelog](/display/en/Changelog+1.12.3) |
-| 1.12.2 | 2019-04-01 |     | [Changelog](/display/en/Changelog+1.12.2) |
-| 1.12.1 | 2019-01-23 |     | [Changelog](/display/en/Changelog+1.12.1) |
+| 1.13.2 | 2019-10-14 |     | [Changelog](./changelogs/changelog-1.13.x/changelog-1.13.2.md) |
+| 1.13.1 | 2019-09-02 |     | [Changelog](./changelogs/changelog-1.13.x/changelog-1.13.1.md) |
+| **1.13** | **2019-06-24** | **[Release Notes](./release-notes/release-notes-1.13.md)** | **[Changelog](./changelogs/changelog-1.13.x/changelog-1.13.md)** |
+| 1.12.4 | 2019-05-20 |     | [Changelog](./changelogs/changelog-1.12.x/changelog-1.12.4.md) |
+| 1.12.3 | 2019-05-06 |     | [Changelog](./changelogs/changelog-1.12.x/changelog-1.12.3.md) |
+| 1.12.2 | 2019-04-01 |     | [Changelog](./changelogs/changelog-1.12.x/changelog-1.12.2.md) |
+| 1.12.1 | 2019-01-23 |     | [Changelog](./changelogs/changelog-1.12.x/changelog-1.12.1.md) |
 | 2018<br>---- |     |     |     |
-| **1.12** | **2018-12-17** | **[Release Notes](/display/en/Release+Notes+1.12)** | **[Changelog](/display/en/Changelog+1.12)** |
-| 1.11.2 | 2018-10-22 |     | [Changelog](/display/en/Changelog+1.11.2) |
-| 1.11.1 | 2018-08-27 |     | [Changelog](/display/en/Changelog+1.11.1) |
-| **1.11** | **2018-07-02** | **[Release Notes](/display/en/Release+Notes+1.11)** | [**Changelog**](/display/en/Changelog+1.11) |
-| 1.10.3 | 2018-07-02 |     | [Changelog](/display/en/Changelog+1.10.3) |
-| 1.10.2 | 2018-04-16 |     | [Changelog](/display/en/Changelog+1.10.2) |
-| 1.10.1 | 2018-02-26 |     | [Changelog](/display/en/Changelog+1.10.1) |
+| **1.12** | **2018-12-17** | **[Release Notes](./release-notes/release-notes-1.12.md)** | **[Changelog](./changelogs/changelog-1.12.x/changelog-1.12.md)** |
+| 1.11.2 | 2018-10-22 |     | [Changelog](./changelogs/changelog-1.11.x/changelog-1.11.2.md) |
+| 1.11.1 | 2018-08-27 |     | [Changelog](./changelogs/changelog-1.11.x/changelog-1.11.1.md) |
+| **1.11** | **2018-07-02** | **[Release Notes](./release-notes/release-notes-1.11.md)** | [**Changelog**](./changelogs/changelog-1.11.x/changelog-1.11.md) |
+| 1.10.3 | 2018-07-02 |     | [Changelog](./changelogs/changelog-1.10.x/changelog-1.10.3.md) |
+| 1.10.2 | 2018-04-16 |     | [Changelog](./changelogs/changelog-1.10.x/changelog-1.10.2.md) |
+| 1.10.1 | 2018-02-26 |     | [Changelog](./changelogs/changelog-1.10.x/changelog-1.10.1.md) |
 | 2017<br>---- |     |     |     |
-| **1.10** | **2017-12-18** | **[Release Notes](/display/en/Release+Notes+1.10)** | **[Changelog](/display/en/Changelog+1.10)** |
-| 1.9.4 | 2017-11-06 |     | [Changelog](/display/en/Changelog+1.9.4) |
-| 1.9.3 | 2017-09-18 |     | [Changelog](/display/en/Changelog+1.9.3) |
-| 1.9.2 | 2017-07-31 |     | [Changelog](/display/en/Changelog+1.9.2) |
-| 1.9.1 | 2017-06-19 |     | [Changelog](/display/en/Changelog+1.9.1) |
-| **1.9** | **2017-05-08** | **[Release Notes](/display/en/Release+Notes+1.9)** | [**Changelog**](/display/en/Changelog+1.9) |
-| 1.8.3.1 | 2017-03-24 |     | [Changelog](/display/en/Changelog+1.8.3.1) |
-| 1.8.3 | 2017-03-08 |     | [Changelog](/display/en/Changelog+1.8.3) |
+| **1.10** | **2017-12-18** | **[Release Notes](./release-notes/release-notes-1.10.md)** | **[Changelog](./changelogs/changelog-1.10.x/changelog-1.10.md)** |
+| 1.9.4 | 2017-11-06 |     | [Changelog](./changelogs/changelog-1.9.x/changelog-1.9.4.md) |
+| 1.9.3 | 2017-09-18 |     | [Changelog](./changelogs/changelog-1.9.x/changelog-1.9.3.md) |
+| 1.9.2 | 2017-07-31 |     | [Changelog](./changelogs/changelog-1.9.x/changelog-1.9.2.md) |
+| 1.9.1 | 2017-06-19 |     | [Changelog](./changelogs/changelog-1.9.x/changelog-1.9.1.md) |
+| **1.9** | **2017-05-08** | **[Release Notes](./release-notes/release-notes-1.9.md)** | [**Changelog**](./changelogs/changelog-1.9.x/changelog-1.9.md) |
+| 1.8.3.1 | 2017-03-24 |     | [Changelog](./changelogs/changelog-1.8.x/changelog-1.8.3.1.md) |
+| 1.8.3 | 2017-03-08 |     | [Changelog](./changelogs/changelog-1.8.x/changelog-1.8.3.md) |
 | 1.8.2 | 2017-01-19 |     |     |
 | 2016<br>---- |     |     |     |
 | 1.8.1 | 2016-11-30 |     |     |
-| **1.8** | **2016-10-17** | [**Release Notes**](/display/en/Release+Notes+1.8) |     |
+| **1.8** | **2016-10-17** | [**Release Notes**](./release-notes/release-notes-1.8.md) |     |
 | 1.7.5 | 2016-09-29 |     |     |
 | 1.7.4 | 2016-09-07 |     |     |
 | 1.7.3 | 2016-07-27 |     |     |
 | 1.7.2 | 2016-06-14 |     |     |
 | 1.7.1 | 2016-04-26 |     |     |
 | 1.6.5 | 2016-04-26 |     |     |
-| **1.7** | **2016-03-23** | **[Release Notes](/display/en/Release+Notes+1.7)** |     |
+| **1.7** | **2016-03-23** | **[Release Notes](./release-notes/release-notes-1.7.md)** |     |
 | 1.6.4 | 2016-03-08 |     |     |
 | 1.6.3 | 2016-02-05 |     |     |
 | 2015<br>---- |     |     |     |
@@ -147,4 +147,4 @@ When were all the i-doit pro release dates?
 | 0.8.1.1 |     |     |     |
 | 0.8.1 |     |     |     |
 | 2004<br>---- |     |     |     |
-| 0.8 | [2004-09-27](https://forum.i-doit.org/index.php/topic,2.0.html) |     |     |
+| 0.8 |  |     |     |
