@@ -48,7 +48,7 @@ After that we choose the generation for the new virtual machine:
 
 ![](/download/attachments/108658809/image2019-6-13_12-57-58.png?version=1&modificationDate=1631702558990&api=v2&effects=drop-shadow)
 
-Give this Sufficient memory ([System Requirements](/display/en/System+Requirements)) :
+Give this Sufficient memory ([System Requirements](../system-requirements.md)) :
 
   
 
