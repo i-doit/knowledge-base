@@ -11,7 +11,7 @@ Globale Kategorien
 
 | Kategorie | Attribut | Beschreibung |
 | --- | --- | --- |
-| **Alle Tickets** [![alle-tickets](../assets/images/de/grundlagen/icons/comments.png)](../assets/images/de/grundlagen/icons/comments.png) | \-  | [Service Desk](/display/de/Service+Desk): Wenn die Schnittstelle zum Service Desk aktiviert ist, können über diese Kategorie alle referenzierten Tickets zu diesem Objekt angezeigt werden. |
+| **Alle Tickets** [![alle-tickets](../assets/images/de/grundlagen/icons/comments.png)](../assets/images/de/grundlagen/icons/comments.png) | \-  | [Service Desk](../automatisierung-und-integration/service-desk/index.md): Wenn die Schnittstelle zum Service Desk aktiviert ist, können über diese Kategorie alle referenzierten Tickets zu diesem Objekt angezeigt werden. |
 | **Allgemein** | **ID** | Jedes Objekt erhält vom dahinter liegende DBMS MySQL/MariaDB [einen eindeutigen Identifier (ID)](eindeutige-referenzierungen.md). |
 |     | **Name** | Jedes Objekt muss einen Namen erhalten. Dieser kann sogar eindeutig pro Mandant oder pro Objekttyp sein. Synonyme sind **Bezeichnung** und **Objekt-Titel**. |
 |     | **Zustand** | Über den **Zustand** (oftmals auch **Status** genannt) wird der [Lebenszyklus der Dokumentation](lebens-und-dokumentationszyklus.md) abgebildet. |
@@ -83,7 +83,7 @@ Globale Kategorien
 | **Lokaler Massenspeicher** | \-  | Kategorie-Ordner mit den untergeordneten Kategorien **Controller**, **Gerät** und **Raid-Verbund**; Auswertung ebendieser Kategorien; ergänzt die Kategorie **Laufwerk**; für Zugriffe auf Freigaben siehe Kategorie **Freigabenzugriff** und für LUNs die Kategorie **Speichernetze → Logische Geräte (Client)** |
 | **Mitglieder** | \-  | Liste von Objekten mit ihren logischen Ports (siehe Kategorie **Netzwerk → Logische Ports**), die einem VRRP-/HSRP-/CARP-Cluster zugeordnet sind; ist im Kategorie-Ordner **VRRP** enthalten; rückwärtige Kategorie: **VRRP Mitgliedschaft** |
 | **Modell** | \-  | Eine der wichtigsten Kategorien eines (Hardware-)Objekts mit Angaben zu **Hersteller**, **Modell** und **Seriennummer** |
-| **Monitoring** | \-  | [Network Monitoring](/display/de/Network+Monitoring): Kategorie-Ordner mit den untergeordneten Kategorien **Livestatus** und **NDO**; konfiguriert und aktiviert die Abfrage von aktuellen Informationen zu einem Host |
+| **Monitoring** | \-  | [Network Monitoring](./automatisierung-und-integration/network-monitoring/index.md): Kategorie-Ordner mit den untergeordneten Kategorien **Livestatus** und **NDO**; konfiguriert und aktiviert die Abfrage von aktuellen Informationen zu einem Host |
 | **Nagios (Anwendungen)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Nagios (Host TPL)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Nagios (Host)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |

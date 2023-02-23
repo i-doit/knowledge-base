@@ -24,7 +24,7 @@ Die Anwendung idoitcmk stellt eine enge Verbindung zwischen i-doit und checkmk h
 *   Lassen Sie Ihre Netzwerküberwachung wichtige Informationen über Hosts sammeln und diese in Ihrer Dokumentation wiederverwenden.
 *   Automatisieren Sie alle langweiligen Aufgaben, die ein Systemadministrator nicht mag.
 
-Wir wissen, dass jede (IT-)Organisation unterschiedliche Anforderungen und verschiedene Prozesse hat. Aus diesem Grund ist es wichtig, eine [highly customizable](/display/de/viewpage.action?pageId=75989114) Anwendung zu haben.
+Wir wissen, dass jede (IT-)Organisation unterschiedliche Anforderungen und verschiedene Prozesse hat. Aus diesem Grund ist es wichtig, eine [highly customizable](checkmk2-konfiguration.md) Anwendung zu haben.
 
 **Dokumentation**
 

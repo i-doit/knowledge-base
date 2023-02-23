@@ -10,7 +10,7 @@ Objekt erstellen
 Beim Erstellen eines neuen Objekts stehen verschiedene Optionen zur Verfügung:
 
 *   **Neu** oder **Neues Objekt** erstellen ein neues Objekt, das über Formulare editiert werden kann
-*   **Neues Objekt aus Template** wechselt zum Dialog, um aus einer [Vorlage](/display/de/Templates) ein oder mehrere Objekte zu erstellen
+*   **Neues Objekt aus Template** wechselt zum Dialog, um aus einer [Vorlage](../../effizientes-dokumentieren/templates.md) ein oder mehrere Objekte zu erstellen
 *   **Neues Template erzeugen** ist ähnlich zum ersten Punkt, allerdings wird der [Zustand](../lebens-und-dokumentationszyklus.md) **Template** vorausgewählt, sodass nach dem Speichern aus dem Objekt eine [Vorlage](../../effizientes-dokumentieren/templates.md) wird.
 
 [![objekt-editieren](../../assets/images/de/grundlagen/aktionsleiste/2-al.png)](../../assets/images/de/grundlagen/aktionsleiste/2-al.png)

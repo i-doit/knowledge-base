@@ -14,11 +14,7 @@ Attribute selection
 
 Similar to the [report manager](../../evaluation/report-manager.md) you can define the columns via the selection of the category and the included attribute.
 
-<<<<<<< HEAD
-First you select a [global, specific](../../basics/structure-of-the-it-documentation.md) or [custom](/display/en/Custom+Categories) category in the drop-down menu. You can filter the list of categories with a text field.
-=======
-First you select a [global, specific](../structure-of-the-it-documentation.md) or [custom](../custom-categories.md) category in the drop-down menu. You can filter the list of categories with a text field.
->>>>>>> main
+First you select a [global, specific](../../basics/structure-of-the-it-documentation.md) or [custom](../custom-categories.md) category in the drop-down menu. You can filter the list of categories with a text field.
 
 When selecting a category, the attributes which can be defined as a column are displayed. Add an attribute to the selected attributes with a click on the [![icon](../../assets/images/en/basics/object-list/configuration-of-the-list-view/3-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/3-cotlv.png) button .
 
@@ -31,11 +27,7 @@ You can manipulate the list of selected attributes and change their order per dr
     *   Not all attributes of all categories are available.
     *   The number of attributes is limited to **10**.
 
-<<<<<<< HEAD
 Attributes originating from [list categories (multi-valued)](../../basics/structure-of-the-it-documentation.md) can be presented in different ways. With the drop-down menu for the presentation of grouped data you can display the attributes either comma-separated in parallel or as a list one below each other. An example is the `**Host addresses**` attribute of the `**Host address**` category.
-=======
-Attributes originating from [list categories (multi-valued)](../structure-of-the-it-documentation.md) can be presented in different ways. With the drop-down menu for the presentation of grouped data you can display the attributes either comma-separated in parallel or as a list one below each other. An example is the **Host addresses** attribute of the **Host address** category.
->>>>>>> main
 
 !!! success "Tip"
 

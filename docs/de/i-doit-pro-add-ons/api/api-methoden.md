@@ -970,7 +970,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     | --- | --- | --- | --- |
     | **object** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **456** |
     | --- | --- | --- | --- |
-    | **category** | String | Ja  | [Kategoriekonstante](/display/de/Kategorien+und+Attribute), zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
+    | **category** | String | Ja  | [Kategoriekonstante](../../grundlagen/kategorien-und-attribute.md), zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
     | **data** | Object | Ja  | {<br><br> "title":”Name of the access”,<br><br>  "description":”description of the access<br><br>} |
 
     Antwort

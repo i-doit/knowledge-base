@@ -35,7 +35,7 @@ Zuallererst kümmern wir uns darum, die Daten aus dem alten System zu sichern, u
 Daten nach GNU/Linux umziehen
 -----------------------------
 
-Nachdem wir sowohl die ZIP-Datei mit dem i-doit-Verzeichnis als auch die SQL-Datei mit den Datenbankinhalten auf den neuen Server kopiert haben (gute Dienste leistet hier [WinSCP](http://winscp.net/eng/docs/lang:de)), verbinden wir uns via SSH (beispielsweise via [Putty](http://www.putty.org/)) und agieren fortan auf der Kommandozeile. Der Apache Webserver, MySQL und PHP sind fertig konfiguriert und alle benötigten Pakete sind ordnungsgemäß [installiert](/display/de/Installation). Fehlt nur noch i-doit:
+Nachdem wir sowohl die ZIP-Datei mit dem i-doit-Verzeichnis als auch die SQL-Datei mit den Datenbankinhalten auf den neuen Server kopiert haben (gute Dienste leistet hier [WinSCP](http://winscp.net/eng/docs/lang:de)), verbinden wir uns via SSH (beispielsweise via [Putty](http://www.putty.org/)) und agieren fortan auf der Kommandozeile. Der Apache Webserver, MySQL und PHP sind fertig konfiguriert und alle benötigten Pakete sind ordnungsgemäß [installiert](../installation/index.md). Fehlt nur noch i-doit:
 
 ### Datenbank
 
@@ -94,7 +94,7 @@ Jetzt wird es Zeit für einen ersten großen Test: Lässt sich über den Browser
 
 ### Cronjobs
 
-Was noch fehlt, ist die Übertragung der Windows-Tasks zu Cronjobs. Zumeist geht es um wiederkehrende Aufgaben, die der [CLI](/display/de/CLI) erledigen soll. Wer bisher keine Tasks/Cronjobs für i-doit eingerichtet hatte, sollte dies spätestens jetzt tun.
+Was noch fehlt, ist die Übertragung der Windows-Tasks zu Cronjobs. Zumeist geht es um wiederkehrende Aufgaben, die der [CLI](../automatisierung-und-integration/cli/index.md) erledigen soll. Wer bisher keine Tasks/Cronjobs für i-doit eingerichtet hatte, sollte dies spätestens jetzt tun.
 
 Nacharbeiten
 ------------

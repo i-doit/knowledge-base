@@ -1,7 +1,7 @@
 # Debian GNU/Linux
 
 !!! tip
-    For the operation of i-doit we [recommend](/display/en/System+Requirements) the use of Debian GNU/Linux in Version 11 "bullseye" as operating system. 
+    For the operation of i-doit we [recommend](../system-requirements.md) the use of Debian GNU/Linux in Version 11 "bullseye" as operating system. 
 
 In this article we explain in just a few steps which packages need to be installed and configured.
 

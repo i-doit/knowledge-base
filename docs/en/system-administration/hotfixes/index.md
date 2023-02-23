@@ -15,7 +15,7 @@ Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP fil
     Please use hotfixes exclusively with the specified version. Hotfixes will be included in newer versions so that a renewed installation is not necessary.
     Should you use an older i-doit version it is essential to make an update to the latest version first.
     If a hotfix is required to update an older version, it can be found in the hotfix subchapters here in the Knowledge Base.
-    As these are hotfixes we recommend installing them only when the adjustments are necessary for a flawless operation of your installation or you are requested by the support team to use them. Please ensure that you made a [backup of i-doit](/display/en/Backup+and+Recovery) before you use any hotfix.
+    As these are hotfixes we recommend installing them only when the adjustments are necessary for a flawless operation of your installation or you are requested by the support team to use them. Please ensure that you made a [backup of i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) before you use any hotfix.
     Please inform us about the use of hotfixes should you contact our support team afterwards.
 
 !!! info "Current version"

@@ -21,7 +21,7 @@ Die Objekt-ID findet in der Generierung der URIs eine hohe Bedeutung. Anhand der
 
     http://i-doit.example.net/i-doit/?objID=1000
 
-Objekt-IDs werden vor allem zu internen Zwecken verwendet, können aber auch dem Benutzer oder Dritt-Systemen sehr nützlich sein. Die IDs sind beispielsweise bei [API-Zugriffen](/pages/viewpage.action?pageId=7831613) essentiell.
+Objekt-IDs werden vor allem zu internen Zwecken verwendet, können aber auch dem Benutzer oder Dritt-Systemen sehr nützlich sein. Die IDs sind beispielsweise bei [API-Zugriffen](../i-doit-pro-add-ons/api/index.md) essentiell.
 
 SYS-ID
 ------
@@ -30,7 +30,7 @@ Das Attribut **SYS-ID** erhebt den Anspruch, Mandanten- und Installations-überg
 
 [![sysid](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)
 
-Pro [Objekttyp](/display/de/Struktur+der+IT-Dokumentation) kann ein Präfix angegeben werden, der der automatisch generierten Zahl voran gestellt wird. Konfiguriert wird der Präfix unter **Verwaltung → CMDB Einstellungen → Objekttyp-Konfiguration → [Objekttypgruppe] → [Objekttyp] → SYSID Präfix**. Wird dort nichts angegeben, beginnt eine SYS-ID mit dem Präfix SYSID_. Durch die Angabe eines alternativen Präfixes ändert sich die Generierung der Zahl: Statt des UNIX-Timestamps wird die Objekt-ID verwendet.
+Pro [Objekttyp](struktur-it-dokumentation.md) kann ein Präfix angegeben werden, der der automatisch generierten Zahl voran gestellt wird. Konfiguriert wird der Präfix unter **Verwaltung → CMDB Einstellungen → Objekttyp-Konfiguration → [Objekttypgruppe] → [Objekttyp] → SYSID Präfix**. Wird dort nichts angegeben, beginnt eine SYS-ID mit dem Präfix SYSID_. Durch die Angabe eines alternativen Präfixes ändert sich die Generierung der Zahl: Statt des UNIX-Timestamps wird die Objekt-ID verwendet.
 
 [![sysid-präfix](../assets/images/de/grundlagen/eindeutige-referenzierungen/3-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/3-er.png)
 
@@ -109,5 +109,5 @@ In der Web GUI lassen sich diese Konstanten nicht betrachten, geschweige denn ed
 Weitere Eindeutigkeiten
 -----------------------
 
-*   Attribute können global, pro Objekttyp oder (bei Listen-Kategorien) pro Objekt [als eindeutig definiert werden](/display/de/Validierung+und+Pflichtfelder). Mehrfachvorkommen werden von i-doit beim Speichern moniert.
+*   Attribute können global, pro Objekttyp oder (bei Listen-Kategorien) pro Objekt [als eindeutig definiert werden](eindeutige-referenzierungen.md). Mehrfachvorkommen werden von i-doit beim Speichern moniert.
 *   Genügen die oben genannten Attribute nicht, können weitere [erzeugt](benutzerdefinierte-kategorien.md) werden.

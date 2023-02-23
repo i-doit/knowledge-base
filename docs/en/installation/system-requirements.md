@@ -51,7 +51,7 @@ We recommend the usage of **Apache Webserver 2.4, PHP 8.0 and MariaDB 10.5**.
 
     ### Operating System
 
-    [Debian GNU/Linux](/pages/viewpage.action?pageId=36864037) 10 "buster" (64bit)
+    [Debian GNU/Linux](../installation/manual-installation/debian.md) 10 "buster" (64bit)
 
     ### LAMP Stack
 

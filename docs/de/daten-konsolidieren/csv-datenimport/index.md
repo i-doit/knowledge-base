@@ -88,7 +88,7 @@ Jede Spalte erhält im Mapping eine eigene Zeile. So kann jede Zeile der .csv\-
 
 Pflichtangaben
 
-Bei der Angabe von Objekt-Titel _und_ Objekttyp handelt es sich um Pflichtangaben_._ Wenn in den Optionen des Datenimports ein globaler Objekttyp definiert ist, muss im Mapping lediglich der [Objekt-Titel](/display/de/Eindeutige+Referenzierungen) mit einer Spalte verknüpft werden. Sollte kein globaler Objekttyp festgelegt sind, muss ebenfalls der Objekttyp in einer Spalte repräsentiert sein. Andernfalls ist es nicht möglich, den Import durchzuführen. Die Angabe des Objekttyps erfolgt über dessen Datenbank-Konstante (zum Beispiel **C\_\_OBJTYPE\_\_SERVER**). Die Angabe der Bezeichnung des Objekttyps (z. B. **Server**) ist **nicht** ausreichend.
+Bei der Angabe von Objekt-Titel _und_ Objekttyp handelt es sich um Pflichtangaben_._ Wenn in den Optionen des Datenimports ein globaler Objekttyp definiert ist, muss im Mapping lediglich der [Objekt-Titel](../objekt-identifizieren-bei-importen.md) mit einer Spalte verknüpft werden. Sollte kein globaler Objekttyp festgelegt sind, muss ebenfalls der Objekttyp in einer Spalte repräsentiert sein. Andernfalls ist es nicht möglich, den Import durchzuführen. Die Angabe des Objekttyps erfolgt über dessen Datenbank-Konstante (zum Beispiel **C\_\_OBJTYPE\_\_SERVER**). Die Angabe der Bezeichnung des Objekttyps (z. B. **Server**) ist **nicht** ausreichend.
 
 ## Profil anlegen
 

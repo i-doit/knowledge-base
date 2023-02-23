@@ -34,7 +34,7 @@ When importing, settings may be requested (name, CPU cores, memory). The presets
 
 Operating System
 
-The installed operating system is **[Debian GNU/Linux](/pages/viewpage.action?pageId=36864037)** ****10 "buster"** as 64-bit version**. If the virtualizer doesn't recognize this automatically, it is essential to enter this information manually. Otherwise it is possible that problems arise when starting and executing the VM.
+The installed operating system is **[Debian GNU/Linux](../manual-installation/debian.md) 10 "buster"** as 64-bit version**. If the virtualizer doesn't recognize this automatically, it is essential to enter this information manually. Otherwise it is possible that problems arise when starting and executing the VM.
 
 Start of i-doit
 ---------------
