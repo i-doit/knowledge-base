@@ -1,37 +1,6 @@
-  
+# Cable patches and paths  
 
-  
-
-  
-
-**Contents**
-
-*   1[Concept](#Cablepatchesandpaths-Concept)
-*   2[Category Folder for Cabling](#Cablepatchesandpaths-CategoryFolderforCabling)
-*   3[Category Folder for Connectors](#Cablepatchesandpaths-CategoryFolderforConnectors)
-    *   3.1[Category for Interface](#Cablepatchesandpaths-CategoryforInterface)
-*   4[Object Type Cable](#Cablepatchesandpaths-ObjectTypeCable)
-    *   4.1[Category Folder for Cable Connection](#Cablepatchesandpaths-CategoryFolderforCableConnection)
-    *   4.2[Category for Cable](#Cablepatchesandpaths-CategoryforCable)
-    *   4.3[Category for Fiber/Lead](#Cablepatchesandpaths-CategoryforFiber/Lead)
-    *   4.4[Attribute](#Cablepatchesandpaths-Attribute)
-    *   4.5[Description](#Cablepatchesandpaths-Description)
-*   5[Object Type Patch Panel](#Cablepatchesandpaths-ObjectTypePatchPanel)
-*   6[Object Type Cable Tray](#Cablepatchesandpaths-ObjectTypeCableTray)
-*   7[Object Type Conduit](#Cablepatchesandpaths-ObjectTypeConduit)
-*   8[Single Wiring](#Cablepatchesandpaths-SingleWiring)
-*   9[Connection Browser](#Cablepatchesandpaths-ConnectionBrowser)
-*   10[Cabling Import](#Cablepatchesandpaths-CablingImport)
-
-  
-
-  
-
-  
-
-  
-
-With an extensive [IT documentation](/display/de/Glossar), sooner or later, you will have to deal with the question of how to map the cabling. This article offers an introduction and describes how to wire hardware [objects](../basics/structure-of-the-it-documentation.md) to each other.
+With an extensive [IT documentation](../glossary.md), sooner or later, you will have to deal with the question of how to map the cabling. This article offers an introduction and describes how to wire hardware [objects](../basics/structure-of-the-it-documentation.md) to each other.
 
 Concept
 -------

@@ -1,46 +1,41 @@
-**Contents**
-
-*   1[Persons and their Workplaces](#Workplaces-PersonsandtheirWorkplaces)
-*   2[IT Components at the Workplace](#Workplaces-ITComponentsattheWorkplace)
-*   3[Location of a Workplace](#Workplaces-LocationofaWorkplace)
-*   4[Relocation of a Workplace](#Workplaces-RelocationofaWorkplace)
+# Workplaces
 
 Which IT components are available for which staff member and where can I find them? To ensure that you always have a good overview with regard to this question, you can document IT workplaces in i-doit.
 
 Persons and their Workplaces
 ----------------------------
 
-Besides the physical assignement of [objects](../basics/structure-of-the-it-documentation.md) to [locations](/display/en/Locations), workplaces can be documented as logical construct. The **`Workplace`** [object type](../basics/structure-of-the-it-documentation.md) plays a central role.
+Besides the physical assignement of [objects](../basics/structure-of-the-it-documentation.md) to [locations](./locations.md), workplaces can be documented as logical construct. The **Workplace** [object type](../basics/structure-of-the-it-documentation.md) plays a central role.
 
-![](/download/attachments/66355764/image2017-11-7%208%3A59%3A36.png?version=1&modificationDate=1510048910178&api=v2&effects=drop-shadow)
+[![workplaces](../assets/images/en/use-cases/workplaces/1-wp.png)](../assets/images/en/use-cases/workplaces/1-wp.png)
 
-An object of this type is assigned to a person via the `**Logical Location**` [category](../basics/structure-of-the-it-documentation.md).
+An object of this type is assigned to a person via the **Logical Location** [category](../basics/structure-of-the-it-documentation.md).
 
-![](/download/attachments/66355764/image2017-11-7%2010%3A2%3A15.png?version=1&modificationDate=1510048910146&api=v2&effects=drop-shadow)
+[![workplaces](../assets/images/en/use-cases/workplaces/2-wp.png)](../assets/images/en/use-cases/workplaces/2-wp.png)
 
-Conversely, this person is assigned to one or more workplaces via the **`Persons`** object in the `**Assigned Workplaces**` category.
+Conversely, this person is assigned to one or more workplaces via the **Persons** object in the **Assigned Workplaces** category.
 
-![](/download/attachments/66355764/image2017-11-7%2010%3A8%3A47.png?version=1&modificationDate=1510048910075&api=v2&effects=drop-shadow)
+[![workplaces](../assets/images/en/use-cases/workplaces/3-wp.png)](../assets/images/en/use-cases/workplaces/3-wp.png)
 
 IT Components at the Workplace
 ------------------------------
 
-The assignment of any (IT) components to a workplace is carried out in the `**Workplace components**` category within the `**Workplace**` object.
+The assignment of any (IT) components to a workplace is carried out in the **Workplace components** category within the **Workplace** object.
 
-![](/download/attachments/66355764/image2017-11-7%2010%3A23%3A48.png?version=1&modificationDate=1510048910058&api=v2&effects=drop-shadow)
+[![workplaces](../assets/images/en/use-cases/workplaces/4-wp.png)](../assets/images/en/use-cases/workplaces/4-wp.png)
 
-A workplace component can only be assigned to one workplace. You can search for the specific workplace of a component within the category `**Assigned workstation**` in the **`Workplace components`** object.
+A workplace component can only be assigned to one workplace. You can search for the specific workplace of a component within the category **Assigned workstation** in the **Workplace components** object.
 
-![](/download/attachments/66355764/image2017-11-7%2010%3A30%3A16.png?version=1&modificationDate=1510048910044&api=v2&effects=drop-shadow)
+[![workplaces](../assets/images/en/use-cases/workplaces/5-wp.png)](../assets/images/en/use-cases/workplaces/5-wp.png)
 
 Location of a Workplace
 -----------------------
 
-Last but not least, you can also physically locate a workplace, for example with an office room. With the [`**Floor Plan**`](/display/de/Floorplan) add-on you can then even visualize this room.
+Last but not least, you can also physically locate a workplace, for example with an office room. With the [**Floor Plan**](../i-doit-pro-add-ons/floorplan.md) add-on you can then even visualize this room.
 
-![](/download/attachments/66355764/en_add-on_floorplan_office.png?version=1&modificationDate=1522316217968&api=v2&effects=drop-shadow)
+[![workplaces](../assets/images/en/use-cases/workplaces/6-wp.png)](../assets/images/en/use-cases/workplaces/6-wp.png)
 
 Relocation of a Workplace
 -------------------------
 
-Should a person change the room within the company, you can manage the relocation of the workplace and selected workplace components. The `**[Relocate CI](/display/en/Relocate-CI)**` add-on offers a function solution for a relocation.
+Should a person change the room within the company, you can manage the relocation of the workplace and selected workplace components. The **[Relocate CI](../i-doit-pro-add-ons/relocate-ci.md)** add-on offers a function solution for a relocation.

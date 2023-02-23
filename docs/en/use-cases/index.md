@@ -1,19 +1,21 @@
-In this section, you will find information on the advanced use of _i-doit_: For one thing, to refine your [IT documentation](/display/en/Glossary#Glossary-IT-Documentation) and secondly, to even better support the processes in your IT service management.
+# Use Cases
+
+In this section, you will find information on the advanced use of _i-doit_: For one thing, to refine your [IT documentation](../glossary.md) and secondly, to even better support the processes in your IT service management.
 
 The following articles are already available online:
 
-*   [Cable patches and paths](/display/en/Cable+patches+and+paths)
-*   [Complex Reports](/display/en/Complex+Reports)
-*   [Creating a Local User](/display/en/Creating+a+Local+User)
-*   [Documentation of Databases](/display/en/Documentation+of+Databases)
-*   [Geo Coordinates](/display/en/Geo+Coordinates)
-*   [i-doit with OpenID-Connecht authentication explained with Google login](/display/en/i-doit+with+OpenID-Connecht+authentication+explained+with+Google+login)
-*   [IP Address Management (IPAM)](/pages/viewpage.action?pageId=66355803)
-*   [Location-based Authorization](/display/en/Location-based+Authorization)
-*   [Locations](/display/en/Locations)
-*   [Manage Passwords](/display/en/Manage+Passwords)
-*   [Mapping of Customer Sites](/display/en/Mapping+of+Customer+Sites)
-*   [Switch Stacking](/display/en/Switch+Stacking)
-*   [Upload and Link of Files](/display/en/Upload+and+Link+of+Files)
-*   [VM Provisioning](/display/en/VM+Provisioning)
-*   [Workplaces](/display/en/Workplaces)
+*   [Cable patches and paths](./cable-patches-and-path.md)
+*   [Complex Reports](./complex-reports.md)
+*   [Creating a Local User](./creating-a-local-user.md)
+*   [Documentation of Databases](./documentation-of-databases.md)
+*   [Geo Coordinates](./geo-coordinates.md)
+*   [i-doit with OpenID-Connecht authentication explained with Google login](./i-doit-with-openid-connect-auth.md)
+*   [IP Address Management (IPAM)](./ip-adress-management.md)
+*   [Location-based Authorization](./location-bases-authorization.md)
+*   [Locations](./locations.md)
+*   [Manage Passwords](./manage-password.md)
+*   [Mapping of Customer Sites](./mapping-of-customer-sites.md)
+*   [Switch Stacking](./switch-stacking.md)
+*   [Upload and Link of Files](./upload-and-link-files.md)
+*   [VM Provisioning](./vm-provisioning.md)
+*   [Workplaces](./wokplaces.md)
