@@ -1,36 +1,34 @@
-Before using the [i-doit pro add-on VIVA](/display/en/i-doit+pro+Add-ons) for the first time, you need to install it.
+# Preparation of the VIVA installation
+
+Before using the [i-doit pro add-on VIVA](../index.md) for the first time, you need to install it.
 
 System requirements
 -------------------
 
-In addition to the system [requirements](/display/en/System+Requirements) and [system settings](/display/en/System+Settings) generally applicable to i-doit, this add-on imposes the following conditions on the system on which it is installed:
+In addition to the system [requirements](../../installation/system-requirements.md) and [system settings](../../installation/manual-installation/system-settings.md) generally applicable to i-doit, this add-on imposes the following conditions on the system on which it is installed:
 
 An executable i-doit pro in the versions currently supported by Synetics is installed.  
-The PHP setting `short_open_tag` is enabled (`On`).  
+The PHP setting short_open_tag is enabled (On).  
 Optionally, Graphviz (in the form of the dot or neato binaries) is required on the system to create a cleaned up network and the PHP exec function is required to be allowed to run. This will not work on a Windows operating system.
 
 Download, install, update, (de)activate
 ---------------------------------------
 
-See article [i-doit pro add-ons](/display/en/i-doit+pro+Add-ons).
+See article [i-doit pro add-ons](../index.md).
 
 Rights management
 -----------------
 
-i-doit pro has a fine-granular rights management, which is also used for VIVA. Rights can be assigned per user/user group under `Administration → Rights System → VIVA`. The following rights are available:
+i-doit pro has a fine-granular rights management, which is also used for VIVA. Rights can be assigned per user/user group under Administration → Rights System → VIVA. The following rights are available:
 
 Reading access: editing is not possible.  
 Writing access: reading, creating, saving and deleting information.  
 Administrative access: without restrictions.  
 To simplify the first steps, the eponymous person group VIVA is created during installation, which already has administrative rights. If persons are to receive these rights, it is sufficient to add them to this person group. In this way, the Admin person group is given administrative access.
 
-Note
+!!! attention Note
 
-After installation, the logged-in user does not yet have the corresponding group membership. Therefore, VIVA does not appear in the Extras menu. If the person object corresponding to the user has been added to the person group, the user must log in again once for the change to take effect. After that, the VIVA appears in the Extras menu.
-
-  
-
-  
+    After installation, the logged-in user does not yet have the corresponding group membership. Therefore, VIVA does not appear in the Extras menu. If the person object corresponding to the user has been added to the person group, the user must log in again once for the change to take effect. After that, the VIVA appears in the Extras menu.
 
 Migrate from the previous ITGS module
 -------------------------------------
@@ -59,10 +57,8 @@ If the requirements are met and the old module is not (yet) deleted, the migrati
 *   Start migration ...
 *   Remove old module ...
 
-  
-
 The former guides through the migration and shows the progress of the respective steps. After the user has defined the ITGS groups as target groups and assigned them to an IT-Grundschutz layer, the migration is performed. When clicking on Finish, the user is redirected to the newly created information federation.
 
 Optionally, the old module including all data (objects, categories) can be deleted after the migration. This step is irrevocable.
 
-Before performing any of the above actions, a backup of the database and the i-doit installation should be made in order to be able to return to a working state in the event of an error.
+!!! attention "Before performing any of the above actions, a backup of the database and the i-doit installation should be made in order to be able to return to a working state in the event of an error."

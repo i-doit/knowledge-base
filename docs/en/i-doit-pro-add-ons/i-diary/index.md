@@ -1,4 +1,6 @@
-![](/download/attachments/97288326/setting.PNG?version=1&modificationDate=1600688211825&api=v2&effects=drop-shadow)
+# i-diary
+
+[![i-diary](../../assets/images/en/i-doit-pro-add-ons/i-diary/1-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/1-i-diary.png)
 
 About i-diary
 -------------
@@ -7,18 +9,18 @@ i-diary is an application for Microsoft Windows, which works as an add-on for i-
 
 This will be possible by using the application “diary” directly on a Windows server, without having to log in to i-doit and search for the information.
 
-![](/download/attachments/97288326/main.PNG?version=1&modificationDate=1600688211828&api=v2&effects=drop-shadow)
+[![search for the information](../../assets/images/en/i-doit-pro-add-ons/i-diary/2-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/2-i-diary.png)
 
 Documentation
 -------------
 
-*   [Requirements](https://kb.i-doit.com/display/en/i-Diary%3A+Requirements)
-*   [Install](https://kb.i-doit.com/display/en/i-Diary%3A+Install)
-*   [Update](https://kb.i-doit.com/display/en/i-Diary%3A+Update)
-*   [Configuration](https://kb.i-doit.com/display/en/i-Diary%3A+Configuration)
-*   [Basic Usage](https://kb.i-doit.com/display/en/i-Diary%3A+Basic-usage)
-*   [Determine the host](https://kb.i-doit.com/display/en/i-Diary%3A+Determine+the+host)
-*   [Determine the author](https://kb.i-doit.com/display/en/i-Diary%3A+Determine+the+author)
+*   [Requirements](./requirements.md)
+*   [Install](./install.md)
+*   [Update](./update.md)
+*   [Configuration](./configuration.md)
+*   [Basic Usage](./basic-usage.md)
+*   [Determine the host](./determine-the-host.md)
+*   [Determine the author](./determine-the-author.md)
 
 Copyright & License
 -------------------
@@ -58,35 +60,22 @@ The following requirements are necessary before installing or using the i-diary.
 
 * * *
 
-  
-
-  
-
 [Install](#install)
 ===================
 
-The add-on is downloaded via the [customer portal](https://kb.i-doit.com/display/en/Customer+Portal)  
-The add-on must first be installed via the [`Admin Center`](https://kb.i-doit.com/display/en/Add-ons#Add-ons-Installation).
+The add-on is downloaded via the [customer portal](../../system-administration/customer-portal.md)  
+The add-on must first be installed via the [Admin Center](../../system-administration/admin-center.md#add-ons).
 
 * * *
-
-  
-
-  
-
 [Update](#update)
 =================
 
-i-diary is updated like other add-ons via the [`Admin Center`](https://kb.i-doit.com/display/en/Add-ons#Add-ons-Installation).  
+i-diary is updated like other add-ons via the [Admin Center](../../system-administration/admin-center.md#add-ons).  
 The new i-diary.exe must then be replaced by the updated i-diary.exe.  
-This can be found in the downloaded ZIP `idoit-i_diary-x.x.x.zip` in path  
-`\idoit-i_diary-1.0.1\src\classes\modules\idoit-i_diary\i-diary\`
+This can be found in the downloaded ZIP idoit-i_diary-x.x.x.zip in path  
+\idoit-i_diary-1.0.1\src\classes\modules\idoit-i_diary\i-diary\
 
 * * *
-
-  
-
-  
 
 [Change and save settings via GUI](#change-and-save-settings-via-gui)
 ---------------------------------------------------------------------
@@ -97,30 +86,17 @@ These are the following cases:
 
 *   If the configuration file is empty or does not exist yet or if it the configuration file empty, the GUI setting is opened automatically when the application is started.
 
-  
+[![Change and save settings via GUI](../../assets/images/en/i-doit-pro-add-ons/i-diary/3-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/3-i-diary.png)
 
-![](/download/attachments/97288326/setting.PNG?version=1&modificationDate=1600688211825&api=v2&effects=drop-shadow)
+[![Change and save settings via GUI](../../assets/images/en/i-doit-pro-add-ons/i-diary/4-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/4-i-diary.png)
 
-  
 
-![](/download/attachments/97288326/config.PNG?version=1&modificationDate=1600688211823&api=v2&effects=drop-shadow)
-
-  
-
-*   If the user changes something in the GUI setting, the change is immediately checked and saved if it is valid.
-    
+*   If the user changes something in the GUI setting, the change is immediately checked and saved if it is valid.  
 *   When the user does not specify ‘[http://](http://)’, ‘[http://](http://)’ is used for the check and saved.
-    
 *   When the user does specify ‘rc/jsonrpc.php’ as a suffix in the URL field, it will be ignored for the check and saved without it.
-    
 *   The user can test the connection manually by clicking the button ‘Test the connection’.
-    
 
-* * *
-
-  
-
-  
+* * *  
 
 [Basic Usage](#basic-usage)
 ===========================
@@ -131,17 +107,10 @@ These are the following cases:
 The user can create a new entry, for this purpose the following steps are taken:
 
 *   The author, date, and entry must be filled in and valid.
-    
 *   For further entries, the selection of author and date persists until the application is closed.
-    
 *   When the user saves an entry, the list of entries is updated.
     
-
 * * *
-
-  
-
-  
 
 [Determine the host](#determine-the-host)
 =========================================
@@ -153,37 +122,26 @@ There are three ways to select a host:
 
 If no object is stored in the settings, an object should be determined automatically and proposed to the user. The name of the application host is determined for this purpose.
 
-![](/download/attachments/97288326/setting.PNG?version=1&modificationDate=1600688211825&api=v2&effects=drop-shadow)
+[![Automatically select a host](../../assets/images/en/i-doit-pro-add-ons/i-diary/5-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/5-i-diary.png)
 
 [The hostname is searched for as the object title in i-doit](#the-hostname-is-searched-for-as-the-object-title-in-i-doit)
 -------------------------------------------------------------------------------------------------------------------------
 
 *   If exactly one object is found, its ID is saved.
-    
 *   If several objects with the same name are found, the user can choose from these objects.
-    
 *   The user can cancel the selection to manually select the host.
-    
 
 [Set host manually](#set-host-manually)
 ---------------------------------------
 
 *   The user sets the Object ID in the configuration file. After restarting the application the setting takes effect.
 
-  
+[![Set host manually](../../assets/images/en/i-doit-pro-add-ons/i-diary/6-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/6-i-diary.png)
 
-![](/download/attachments/97288326/config.PNG?version=1&modificationDate=1600688211823&api=v2&effects=drop-shadow)
-
-  
-
-*   The user selects an object title from a searchable list. Only objects whose object types are assigned to the category “Diary” are displayed. The list is divided into the respective object types. The translated title of the respective object type is displayed as the list heading. If the user selects an object from the list, its ID is saved.
-    
+*   The user selects an object title from a searchable list. Only objects whose object types are assigned to the category “Diary” are displayed. The list is divided into the respective object types. The translated title of the respective object type is displayed as the list heading. If the user selects an object from the list, its ID is saved. 
 *   The user types the Object ID into a search mask. The application gives feedback whether the object was found and saves its ID.
-    
 *   The user enters the Object Title in a search mask. The application gives feedback if the object was found and saves its ID.
-    
 *   If several objects with the same name are found, the user can choose from this list.
-    
 
 [Reuse host](#reuse-host)
 -------------------------
@@ -193,10 +151,6 @@ When the application is started, the configuration file is read if the configura
 If an object ID is saved, the application gets the respective title to display it.
 
 * * *
-
-  
-
-  
 
 There are three ways to select an author:
 
@@ -209,7 +163,7 @@ This will be done through the following process:
 
 When a “user name” is specified in the settings, the application will check whether the person matches a person object in i-doit. If this is the case the ID will be saved.
 
-![](/download/attachments/97288326/setting.PNG?version=1&modificationDate=1600688211825&api=v2&effects=drop-shadow)
+[![Automatically discover an author](../../assets/images/en/i-doit-pro-add-ons/i-diary/7-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/7-i-diary.png)
 
 [Set author manually](#set-author-manually)
 -------------------------------------------
@@ -218,7 +172,7 @@ The user can manually select an author for a new entry with the following option
 
 *   The user can write the object ID of the author in the configuration file. This setting takes effect when the application is restarted.
 
-![](/download/attachments/97288326/config.PNG?version=1&modificationDate=1600688211823&api=v2&effects=drop-shadow)
+[![Set author manually](../../assets/images/en/i-doit-pro-add-ons/i-diary/8-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/8-i-diary.png)
 
 *   The user can select a person from a searchable list. This list is divided into “Contacts” (object relations from the category “Contact assignment”) and “Persons” (objects of the type “Persons”).
 
@@ -233,17 +187,11 @@ The application checks whether the object ID in the configuration file is valid,
 
 * * *
 
-  
-
-  
-
 [FAQ](#faq)
 ===========
 
 Known error messages and their meaning:
 
-| Error Message | Possible cause |
-| --- | --- |
 | Error Message | Possible cause |
 | --- | --- |
 | The HTTP response status code does not indicate a successful service response | URL incorrect |
@@ -257,8 +205,6 @@ Known error messages and their meaning:
 [Changelog](#changelog)
 =======================
 
-| Version | Release | Changelog |
-| --- | --- | --- |
 | Version | Release | Changelog |
 | --- | --- | --- |
 | 1.2 | 23.01.2023 | Primary IP address is shown empty  <br>Clicking on the info icon crashes i-diary  <br>Contact assignment does not show the Primary contact |
