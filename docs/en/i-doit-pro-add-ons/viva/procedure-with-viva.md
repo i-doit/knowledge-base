@@ -1,6 +1,6 @@
-Manage IT-Grundschutz catalogs
+# Procedure with VIVA
 
-  
+Manage IT-Grundschutz catalogs
 
 Import catalogs
 ---------------
@@ -30,8 +30,6 @@ The ZIP file can now be processed by VIVA. In the menu item Catalogs the button 
 
 After the successful import the EL appears on the loaded page and can be used. If further ELs are to be used, the last steps must be repeated.
 
-  
-
 Customize catalogs
 ------------------
 
@@ -45,8 +43,6 @@ Model Information domains
 One or more information networks can be created under the menu item Information networks. They represent the starting point for more in-depth documentation. When creating an information network, it is important to specify which IT-Grundschutz catalogs are to be applied to the information network.
 
 When a new information network is created, a target group with the same name and a suitable target object is automatically created. The building blocks of layer 1 Cross-cutting aspects are applied to this target group. Likewise, the protection requirement categories are filled in with the examples from BSI Standard 100-2.
-
-  
 
 Create target groups
 --------------------
@@ -80,7 +76,7 @@ Target objects automatically inherit the properties of their target group, so no
 
 This is especially true for the implementation of measures. Therefore, a few properties that differ from the target group can be recorded within a target object, for example, to document the date of implementation, which may differ if necessary.
 
-The reference documents do not respect inheritance, but draw the information from the target groups and not from the target objects.
+!!! attention "The reference documents do not respect inheritance, but draw the information from the target groups and not from the target objects."
 
 Define protection requirement categories
 ----------------------------------------

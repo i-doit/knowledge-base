@@ -1,6 +1,6 @@
 # Custom Categories
 
-Besides having standard categories _i-doit_ makes it possible to create (custom) [categories](./structure-of-the-it-documentation.md) in order to document additional [attributes](./structure-of-the-it-documentation.md), which are not included in standard categories.
+Besides having standard categories _i-doit_ makes it possible to create (custom) [categories](structure-of-the-it-documentation.md) in order to document additional [attributes](./structure-of-the-it-documentation.md), which are not included in standard categories.
 
 Configuration of the Category
 -----------------------------
@@ -13,11 +13,11 @@ As a first step, it is necessary to give a unique name to the category so that i
 
 [![category list](../assets/images/en/basics/custom-categories/2-cc.png)](../assets/images/en/basics/custom-categories/2-cc.png)
 
-Furthermore, the category has to be linked to one or more [object types](./structure-of-the-it-documentation.md) in order to use it.
+Furthermore, the category has to be linked to one or more [object types](structure-of-the-it-documentation.md) in order to use it.
 
 [![object types](../assets/images/en/basics/custom-categories/3-cc.png)](../assets/images/en/basics/custom-categories/3-cc.png)
 
-Now you can define if you require a [single-](./structure-of-the-it-documentation.md) or a [multi-value-category](./structure-of-the-it-documentation.md). If you wish to use attributes which are unique in their combination, the configuration as single-value category will be sufficient. However, if you want to use the values repeatedly, you will need a multi-value category. This way it is possible to save multiple entries in one category.
+Now you can define if you require a [single-](structure-of-the-it-documentation.md) or a [multi-value-category](structure-of-the-it-documentation.md). If you wish to use attributes which are unique in their combination, the configuration as single-value category will be sufficient. However, if you want to use the values repeatedly, you will need a multi-value category. This way it is possible to save multiple entries in one category.
 
 [![multi-value-category](../assets/images/en/basics/custom-categories/4-cc.png)](../assets/images/en/basics/custom-categories/4-cc.png)
 
