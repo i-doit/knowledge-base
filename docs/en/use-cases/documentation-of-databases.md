@@ -1,8 +1,10 @@
+# Documentation of Databases
+
 With version 1.xx of i-doit we have added an additional variant that can be used to document databases within i-doit.
 
 The two models differ in that the old model included the following three object types:
 
-![](/download/thumbnails/97288619/Bildschirmfoto%202020-12-01%20um%2012.15.42.png?version=1&modificationDate=1606822157283&api=v2)  
+[![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/1-dod.png)](../assets/images/en/use-cases/documentation-of-databases/1-dod.png)  
   
 
 **DBMS** - this object type corresponds to that of normal applications, we can define here which database software is available in the company.
@@ -23,15 +25,15 @@ In the new model the object types database schema and database instance are drop
 
 The new category offers a new view of the database hierarchy that can be expanded:
 
-![](/download/attachments/97288619/Bildschirmfoto%202020-12-01%20um%2012.24.38.png?version=1&modificationDate=1606822157275&api=v2)
+[![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/2-dod.png)](../assets/images/en/use-cases/documentation-of-databases/2-dod.png)
 
 Below _Databases -> Databases_ we can now document the respective databases running on the resource:
 
-![](/download/attachments/97288619/Bildschirmfoto%202020-12-01%20um%2012.18.49.png?version=1&modificationDate=1606822157267&api=v2)
+[![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/3-dod.png)](../assets/images/en/use-cases/documentation-of-databases/3-dod.png)
 
 Below _Databases -> DBMS_ we see the connection to the respective DBMS object to which the server has a relationship.
 
-![](/download/attachments/97288619/Bildschirmfoto%202020-12-01%20um%2012.18.05.png?version=1&modificationDate=1606822157258&api=v2)
+[![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/4-dod.png)](../assets/images/en/use-cases/documentation-of-databases/4-dod.png)
 
   
   
@@ -39,11 +41,11 @@ Below _Databases -> DBMS_ we see the connection to the respective DBMS object to
 
 You can decide which type of database documentation is better suited for your needs. If you want to change from the old model to the new one we offer a moderation function which you can find in the administration under System Tools -> Cache Database:
 
-![](/download/attachments/97288619/Bildschirmfoto%202020-12-01%20um%2012.19.27.png?version=1&modificationDate=1606822157250&api=v2)  
+[![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/5-dod.png)](../assets/images/en/use-cases/documentation-of-databases/5-dod.png)  
 After clicking you will get another message about the effect of the migration:
 
-![](/download/attachments/97288619/Bildschirmfoto%202020-12-01%20um%2012.27.00.png?version=1&modificationDate=1606822157240&api=v2)
+[![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/6-dod.png)](../assets/images/en/use-cases/documentation-of-databases/6-dod.png)
 
 And when the migration is complete, a message will appear indicating whether the migration was successful:
 
-![](/download/thumbnails/97288619/image2020-3-20_11-14-22.png?version=2&modificationDate=1606822157227&api=v2)
+[![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/7-dod.png)](../assets/images/en/use-cases/documentation-of-databases/7-dod.png)
