@@ -1,11 +1,9 @@
-Generate this content automatically
+# Category Tables 1.10
 
-You can create this content on your own i-doit host. Pass the parameter `load=property_infos` to the URL, for example:  `[https://demo.i-doit.com/?load=property_infos](https://demo.i-doit.com/?load=property_infos)`.You need to be logged-in.
+!!! info "Generate this content automatically"
 
-**Inhaltsverzeichnis**
+    You can create this content on your own i-doit host. Pass the parameter load=property_infos to the URL, for example:  [https://demo.i-doit.com/?load=property_infos](https://demo.i-doit.com/?load=property_infos).You need to be logged-in.
 
-*   1[Global categories](#CategoryTables1.10-Globalcategories)
-*   2[Specific categories](#CategoryTables1.10-Specificcategories)
 
 Global categories
 -----------------
@@ -14,8 +12,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_global\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | ID  | int | isys\_obj | isys\_obj\_\_id |     |     |
@@ -39,8 +35,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Manufacturer | int | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_isys\_model\_manufacturer\_\_id | isys\_model\_manufacturer | isys\_model\_manufacturer\_\_id |
 | Model | int | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_isys\_model\_title\_\_id | isys\_model\_title | isys\_model\_title\_\_id |
 | Product ID | text | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_productid |     |     |
@@ -53,8 +47,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_formfactor\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Form factor | int | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_isys\_catg\_formfactor\_type\_\_id | isys\_catg\_formfactor\_type | isys\_catg\_formfactor\_type\_\_id |
@@ -73,8 +65,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_title |     |     |
 | Manufacturer | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_catg\_cpu\_manufacturer\_\_id | isys\_catg\_cpu\_manufacturer | isys\_catg\_cpu\_manufacturer\_\_id |
 | Type | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_catg\_cpu\_type\_\_id | isys\_catg\_cpu\_type | isys\_catg\_cpu\_type\_\_id |
@@ -87,8 +77,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_memory\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Quantity | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_quantity |     |     |
@@ -106,8 +94,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_title |     |     |
 | Manufacturer | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_manufacturer\_\_id | isys\_iface\_manufacturer | isys\_iface\_manufacturer\_\_id |
 | Model | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_model\_\_id | isys\_iface\_model | isys\_iface\_model\_\_id |
@@ -119,8 +105,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_pc\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_title |     |     |
@@ -142,8 +126,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_title |     |     |
 | Connection type | int | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_isys\_ui\_con\_type\_\_id | isys\_ui\_con\_type | isys\_ui\_con\_type\_\_id |
 | Plug type | int | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_isys\_ui\_plugtype\_\_id | isys\_ui\_plugtype | isys\_ui\_plugtype\_\_id |
@@ -157,8 +139,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Application | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
@@ -179,8 +159,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Primary access URL | text | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_url |     |     |
 | Title | text | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_title |     |     |
 | Access type | int | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_isys\_access\_type\_\_id | isys\_access\_type | isys\_access\_type\_\_id |
@@ -193,8 +171,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_backup\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_title |     |     |
@@ -210,8 +186,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_title |     |     |
 | Assigned emergency plan | int | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Time need | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_id |     |     |
@@ -225,8 +199,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | File | int | isys\_catg\_file\_list | isys\_catg\_file\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Revision | int | isys\_catg\_file\_list | isys\_file\_version\_\_revision |     |     |
 | HTTP-Link (extern) | text | isys\_catg\_file\_list | isys\_catg\_file\_list\_\_link |     |     |
@@ -236,8 +208,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_contact\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Contact | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_id |     |     |
@@ -252,8 +222,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_logb\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Date | date\_time | isys\_catg\_logb\_list | isys\_logbook\_\_date |     |     |
@@ -277,8 +245,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_title |     |     |
 | Type | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_type\_\_id | isys\_controller\_type | isys\_controller\_type\_\_id |
 | Manufacturer | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_manufacturer\_\_id | isys\_controller\_manufacturer | isys\_controller\_manufacturer\_\_id |
@@ -289,8 +255,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_location\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Location path | text | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_parentid |     |     |
@@ -310,8 +274,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Uploaded images | json | isys\_catg\_image\_list | isys\_catg\_image\_list\_\_image\_link |     |     |
 | File | text | isys\_catg\_image\_list | isys\_catg\_image\_list\_\_image\_link |     |     |
 | Description | text\_area | isys\_catg\_image\_list | isys\_catg\_image\_list\_\_description |     |     |
@@ -320,8 +282,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_manual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_manual\_list | isys\_catg\_manual\_list\_\_title |     |     |
@@ -334,8 +294,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Manufacturer | int | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_isys\_sound\_manufacturer\_\_id | isys\_sound\_manufacturer | isys\_sound\_manufacturer\_\_id |
 | Title | text | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_title |     |     |
 | Description | text\_area | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_description |     |     |
@@ -346,16 +304,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Object | int | isys\_catg\_virtual\_list | isys\_catg\_location\_list\_\_isys\_obj\_\_id |     |     |
 
 ### Graphic card
 
 #### Tabelle: isys\_catg\_graphic\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_title |     |     |
@@ -370,8 +324,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Virtual machine | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_vm |     |     |
 | Running on host | int | connection\_vm | isys\_catg\_virtual\_machine\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Virtualization system | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_isys\_vm\_type\_\_id | isys\_vm\_type | isys\_vm\_type\_\_id |
@@ -383,8 +335,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_accounting\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Inventory number | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_inventory\_no |     |     |
@@ -413,8 +363,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_port\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_title |     |     |
@@ -447,8 +395,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_title |     |     |
 | Manufacturer | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_manufacturer\_\_id | isys\_iface\_manufacturer | isys\_iface\_manufacturer\_\_id |
 | Model | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_model\_\_id | isys\_iface\_model | isys\_iface\_model\_\_id |
@@ -460,8 +406,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_log\_port\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_title |     |     |
@@ -480,8 +424,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_drive\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Drive letter | text | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_driveletter |     |     |
@@ -509,8 +451,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_type\_\_id | isys\_stor\_type | isys\_stor\_type\_\_id |
 | Title | text | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_title |     |     |
 | Manufacturer | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_manufacturer\_\_id | isys\_stor\_manufacturer | isys\_stor\_manufacturer\_\_id |
@@ -533,8 +473,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_title |     |     |
 | Type | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_isys\_fc\_port\_type\_\_id | isys\_fc\_port\_type | isys\_fc\_port\_type\_\_id |
 | Connected controller | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_isys\_catg\_hba\_list\_\_id | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_id |
@@ -555,8 +493,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_ip\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Primary hostaddress | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
@@ -591,8 +527,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Version number | text | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_title |     |     |
 | Servicepack | text | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_servicepack |     |     |
 | Kernel | text | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_kernel |     |     |
@@ -603,8 +537,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_connector\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_title |     |     |
@@ -628,8 +560,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_denotation |     |     |
 | Invoice Date | date | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_date |     |     |
 | Amount | double | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_amount |     |     |
@@ -642,8 +572,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_power\_supplier\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | mine | isys\_catg\_connector\_list\_\_title |     |     |
@@ -662,8 +590,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_isys\_raid\_type\_\_id | isys\_raid\_type | isys\_raid\_type\_\_id |
 | Title | text | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_title |     |     |
 | RAID Level | int | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_isys\_stor\_raid\_level\_\_id | isys\_stor\_raid\_level | isys\_stor\_raid\_level\_\_id |
@@ -676,8 +602,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_sanpool\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_title |     |     |
@@ -698,8 +622,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_title |     |     |
 | Path | int | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_id |     |     |
 | Logical devices (LDEV Server) | int | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_isys\_catg\_sanpool\_list\_\_id | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_id |
@@ -711,8 +633,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_hba\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_title |     |     |
@@ -727,8 +647,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Quorum | int | isys\_catg\_cluster\_list | isys\_catg\_cluster\_list\_\_quorum |     |     |
 | Administration service | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_adm\_service\_list\_\_isys\_obj\_\_id |     |     |
 | Cluster Members | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_members\_list\_\_isys\_obj\_\_id |     |     |
@@ -739,8 +657,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_cluster\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Quorum | int | isys\_catg\_cluster\_list | isys\_catg\_cluster\_list\_\_quorum |     |     |
@@ -755,8 +671,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Share name | text | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_title |     |     |
 | UNC-path | text | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_unc\_path |     |     |
 | Volume | int | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_isys\_catg\_drive\_list\_\_id | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_id |
@@ -767,8 +681,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_cluster\_service\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_cluster\_type\_\_id | isys\_cluster\_type | isys\_cluster\_type\_\_id |
@@ -788,8 +700,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Cluster Member | int | isys\_catg\_cluster\_members\_list | isys\_catg\_cluster\_members\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 
 ### Cluster memberships
@@ -798,16 +708,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Cluster | int | isys\_catg\_cluster\_members\_list | isys\_catg\_cluster\_members\_list\_\_isys\_obj\_\_id | isys\_connection | isys\_connection\_\_isys\_obj\_\_id |
 
 ### Computing resources
 
 #### Tabelle: isys\_catg\_computing\_resources\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | RAM | float | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_ram |     |     |
@@ -826,8 +732,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | SNMP Community | int | isys\_catg\_snmp\_list | isys\_catg\_snmp\_list\_\_isys\_snmp\_community\_\_id | isys\_snmp\_community | isys\_snmp\_community\_\_id |
 | Description | text\_area | isys\_catg\_snmp\_list | isys\_catg\_snmp\_list\_\_description |     |     |
 
@@ -835,8 +739,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_virtual\_host\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Virtualization host | int | isys\_catg\_virtual\_host\_list | isys\_catg\_virtual\_host\_list\_\_virtual\_host |     |     |
@@ -848,8 +750,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_virtual\_host\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Virtualization host | int | isys\_catg\_virtual\_host\_list | isys\_catg\_virtual\_host\_list\_\_virtual\_host |     |     |
@@ -863,8 +763,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Guest systems | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_isys\_obj\_\_id |     |     |
 | Hostname | text | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_isys\_obj\_\_id |     |     |
 | Runs on | text | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_primary |     |     |
@@ -873,8 +771,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_virtual\_machine\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Virtual machine | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_vm |     |     |
@@ -890,8 +786,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_virtual\_switch\_list | isys\_catg\_virtual\_switch\_list\_\_title |     |     |
 | Ports | int | isys\_catg\_virtual\_switch\_list | isys\_catg\_virtual\_switch\_list\_\_id | isys\_virtual\_switch\_2\_port | isys\_virtual\_switch\_2\_port\_\_isys\_catg\_virtual\_switch\_list\_\_id |
 | Port groups | int | isys\_catg\_virtual\_switch\_list | isys\_virtual\_port\_group\_\_id | isys\_virtual\_port\_group | isys\_virtual\_port\_group\_\_isys\_catg\_virtual\_switch\_list\_\_id |
@@ -903,8 +797,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_virtual\_device\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Device type | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_isys\_catg\_stor\_list\_\_id | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_id |
@@ -931,8 +823,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_title |     |     |
 | Backups | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_obj\_\_id |     |     |
 | Backup type | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_backup\_type\_\_id | isys\_backup\_type | isys\_backup\_type\_\_id |
@@ -946,8 +836,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Group | int | isys\_cats\_group\_list | isys\_cats\_group\_list\_\_isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_cats\_group\_list | isys\_cats\_group\_list\_\_description |     |     |
 
@@ -957,8 +845,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned object | int | isys\_catg\_its\_components\_list | isys\_catg\_its\_components\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Object type | int | itsc | isys\_obj\_\_isys\_obj\_type\_\_id |     |     |
 
@@ -966,8 +852,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_logb\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Date | date\_time | isys\_catg\_logb\_list | isys\_logbook\_\_date |     |     |
@@ -990,8 +874,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Service | int | isys\_catg\_its\_components\_list | isys\_catg\_its\_components\_list\_\_isys\_obj\_\_id |     |     |
 | SYSID | text | isys\_catg\_its\_components\_list | isys\_obj\_\_sysid |     |     |
 
@@ -999,8 +881,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_relation\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Object 1 | int | masterobj | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_master | isys\_obj | isys\_obj\_\_id |
@@ -1016,8 +896,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Object 1 | int | masterobj | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_master | isys\_obj | isys\_obj\_\_id |
 | Object 2 | int | slaveobj | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_slave | isys\_obj | isys\_obj\_\_id |
 | Relation type | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_relation\_type\_\_id | isys\_relation\_type | isys\_relation\_type\_\_id |
@@ -1031,8 +909,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Target schema | int | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_isys\_obj\_\_id |     |     |
 | Software runs on | int | isys\_cats\_database\_access\_list | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_slave |     |     |
 | Description | text\_area | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_description |     |     |
@@ -1041,8 +917,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_its\_type\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_catg\_its\_type\_list | isys\_catg\_its\_type\_list\_\_isys\_its\_type\_\_id | isys\_its\_type | isys\_its\_type\_\_id |
@@ -1054,8 +928,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_password\_list | isys\_catg\_password\_list\_\_title |     |     |
 | Username | text | isys\_catg\_password\_list | isys\_catg\_password\_list\_\_username |     |     |
 | Password | text | isys\_catg\_password\_list | isys\_catg\_password\_list\_\_password |     |     |
@@ -1065,8 +937,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_soa\_stacks\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_soa\_stacks\_list | isys\_catg\_soa\_stacks\_list\_\_title |     |     |
@@ -1081,8 +951,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | CMDB status | int | isys\_catg\_planning\_list | isys\_catg\_planning\_list\_\_isys\_cmdb\_status\_\_id | isys\_cmdb\_status | isys\_cmdb\_status\_\_id |
 | Validity period from | date | isys\_catg\_planning\_list | isys\_catg\_planning\_list\_\_start |     |     |
 | Validity period to | date | isys\_catg\_planning\_list | isys\_catg\_planning\_list\_\_end |     |     |
@@ -1094,16 +962,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned cards | int | isys\_catg\_assigned\_cards\_list | isys\_catg\_assigned\_cards\_list\_\_isys\_obj\_\_id\_\_card |     |     |
 
 ### SIM card
 
 #### Tabelle: isys\_catg\_sim\_card\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_isys\_cp\_contract\_type\_\_id | isys\_cp\_contract\_type | isys\_cp\_contract\_type\_\_id |
@@ -1138,8 +1002,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | TSI service ID | text | isys\_catg\_tsi\_service\_list | isys\_catg\_tsi\_service\_list\_\_tsi\_service\_id |     |     |
 | Description | text\_area | isys\_catg\_tsi\_service\_list | isys\_catg\_tsi\_service\_list\_\_description |     |     |
 
@@ -1147,8 +1009,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_audit\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_title |     |     |
@@ -1170,8 +1030,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Parent object | int | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id\_\_parent |     |     |
 | Description | text\_area | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_description |     |     |
 
@@ -1181,16 +1039,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Object | int | isys\_catg\_virtual\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id | isys\_obj | isys\_obj\_\_id |
 
 ### Assigned workstation
 
 #### Tabelle: isys\_catg\_logical\_unit\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Parent object | int | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id\_\_parent |     |     |
@@ -1202,8 +1056,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned Workplaces | int | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_description |     |     |
 
@@ -1211,8 +1063,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_contract\_assignment\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Assigned contract | int | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
@@ -1227,16 +1077,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Chassis | int | isys\_catg\_stacking\_list | isys\_catg\_stacking\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 
 ### E-Mail addresses
 
 #### Tabelle: isys\_catg\_mail\_addresses\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | E-mail address | text | isys\_catg\_mail\_addresses\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
@@ -1248,8 +1094,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_voip\_phone\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Device protocol | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_device\_protocol |     |     |
@@ -1281,8 +1125,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_voip\_phone\_line\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Directory number | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_directory\_number |     |     |
@@ -1340,8 +1182,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_isys\_telephone\_fax\_type\_\_id | isys\_telephone\_fax\_type | isys\_telephone\_fax\_type\_\_id |
 | Telephone number | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_telephone\_number |     |     |
 | Fax number | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_fax\_number |     |     |
@@ -1354,8 +1194,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_smartcard\_certificate\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Card number | text | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_cardnumber |     |     |
@@ -1371,8 +1209,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Selected object | int | isys\_catg\_share\_access\_list | isys\_catg\_share\_access\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Mountpoint | text | isys\_catg\_share\_access\_list | isys\_catg\_share\_access\_list\_\_mountpoint |     |     |
 | Share name | int | isys\_catg\_share\_access\_list | isys\_catg\_share\_access\_list\_\_isys\_catg\_shares\_list\_\_id | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_id |
@@ -1382,8 +1218,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_certificate\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_catg\_certificate\_list | isys\_catg\_certificate\_list\_\_isys\_certificate\_type\_\_id | isys\_certificate\_type | isys\_certificate\_type\_\_id |
@@ -1396,8 +1230,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_sla\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Service-ID | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_service\_id |     |     |
@@ -1424,8 +1256,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Distinguished name (DN) | text | isys\_catg\_ldap\_dn\_list | isys\_catg\_ldap\_dn\_list\_\_title |     |     |
 | Description | text\_area | isys\_catg\_ldap\_dn\_list | isys\_catg\_ldap\_dn\_list\_\_description |     |     |
 
@@ -1433,8 +1263,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_nagios\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Export this configuration | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_is\_exportable |     |     |
@@ -1502,8 +1330,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Export this configuration | int | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_is\_exportable |     |     |
 | Group type | int | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_type |     |     |
 | display\_name | text | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_name |     |     |
@@ -1518,8 +1344,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_nagios\_service\_def\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Active | int | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_is\_active |     |     |
@@ -1575,8 +1399,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | check\_command | int | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_check\_command | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_id |
 | name | text | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_name |     |     |
 | check\_command\_plus | int | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_check\_command\_plus | isys\_nagios\_commands\_plus | isys\_nagios\_commands\_plus\_\_id |
@@ -1626,8 +1448,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_nagios\_service\_def\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Active | int | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_is\_active |     |     |
@@ -1683,16 +1503,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned objects | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_host |     |     |
 
 ### Service-template definition
 
 #### Tabelle: isys\_catg\_nagios\_service\_tpl\_def\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | check\_command | int | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_check\_command | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_id |
@@ -1746,16 +1562,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned objects | int | isys\_catg\_virtual\_list | isys\_catg\_nagios\_service\_def\_list\_\_service\_template |     |     |
 
 ### Nagios (host TPL)
 
 #### Tabelle: isys\_catg\_nagios\_host\_tpl\_def\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Hostname | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_name1 |     |     |
@@ -1812,8 +1624,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Hostname | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_name1 |     |     |
 | Nagios Host | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_export\_host | isys\_monitoring\_export\_config | isys\_monitoring\_export\_config\_\_id |
 | LC\_\_CATG\_\_NAGIOS\_HOST\_TPL\_DEF\_MAX\_CHECK\_ATTEMPTS | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_max\_check\_attempts |     |     |
@@ -1866,8 +1676,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_nagios\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Export this configuration | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_is\_exportable |     |     |
@@ -1935,16 +1743,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned objects | text | isys\_catg\_virtual\_list | isys\_catg\_nagios\_list\_\_host\_tpl |     |     |
 
 ### Servicecheck assignment
 
 #### Tabelle: isys\_catg\_nagios\_refs\_services\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Nagios service | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_service | isys\_obj | isys\_obj\_\_id |
@@ -1955,8 +1759,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Nagios service | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_service | isys\_obj | isys\_obj\_\_id |
 
 ### Servicecheck assignment
@@ -1965,16 +1767,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Nagios service | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_service | isys\_obj | isys\_obj\_\_id |
 
 ### Service dependencies
 
 #### Tabelle: isys\_catg\_nagios\_service\_dep\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Host | int | chostdep | isys\_catg\_nagios\_service\_dep\_list\_\_host\_dep\_connection | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_id |
@@ -1993,8 +1791,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Additional address information | text\_area | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_address |     |     |
 | Street | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_street |     |     |
 | House number | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_house\_no |     |     |
@@ -2011,8 +1807,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Active? | int | isys\_catg\_monitoring\_list | isys\_catg\_monitoring\_list\_\_active |     |     |
 | Host | int | isys\_catg\_monitoring\_list | isys\_catg\_monitoring\_list\_\_isys\_monitoring\_hosts\_\_id | isys\_monitoring\_hosts | isys\_monitoring\_hosts\_\_id |
 | Hostname | text | isys\_catg\_monitoring\_list | isys\_catg\_monitoring\_list\_\_host\_name |     |     |
@@ -2025,8 +1819,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Livestatus | int | isys\_catg\_virtual\_list | isys\_catg\_monitoring\_list\_\_active |     |     |
 | Livestatus (button) | int | isys\_catg\_virtual\_list | isys\_catg\_monitoring\_list\_\_active |     |     |
 
@@ -2034,8 +1826,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_vehicle\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Licence plate | text | isys\_catg\_vehicle\_list | isys\_catg\_vehicle\_list\_\_licence\_plate |     |     |
@@ -2047,8 +1837,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Aircraft registration | text | isys\_catg\_aircraft\_list | isys\_catg\_aircraft\_list\_\_registration |     |     |
 | Description | text\_area | isys\_catg\_aircraft\_list | isys\_catg\_aircraft\_list\_\_description |     |     |
 
@@ -2056,8 +1844,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_net\_listener\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Layer 3/4 Protocol | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_net\_protocol\_\_id | isys\_net\_protocol | isys\_net\_protocol\_\_id |
@@ -2075,8 +1861,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Layer 3/4 Protocol | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_net\_protocol\_\_id | isys\_net\_protocol | isys\_net\_protocol\_\_id |
 | Layer 5-7 Protocol | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_net\_protocol\_layer\_5\_\_id | isys\_net\_protocol\_layer\_5 | isys\_net\_protocol\_layer\_5\_\_id |
 | (Bind) ip address | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
@@ -2090,8 +1874,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_net\_connector\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | (Source) ip address | int | isys\_catg\_net\_connector\_list | isys\_catg\_net\_connector\_list\_\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
@@ -2108,8 +1890,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Administration service (Object) | int | isys\_catg\_cluster\_adm\_service\_list | isys\_catg\_cluster\_adm\_service\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Object type | int | isys\_catg\_cluster\_adm\_service\_list | isys\_obj\_\_isys\_obj\_type\_\_id |     |     |
 
@@ -2117,8 +1897,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_jdisc\_ca\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Attribute | text | isys\_catg\_jdisc\_ca\_list | isys\_catg\_jdisc\_ca\_list\_\_title |     |     |
@@ -2133,8 +1911,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | NDO state | text | isys\_catg\_virtual\_list |     |     |     |
 | NDO state button | text | isys\_catg\_virtual\_list |     |     |     |
 
@@ -2142,8 +1918,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_cable\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Cable type | int | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_isys\_cable\_type\_\_id | isys\_cable\_type | isys\_cable\_type\_\_id |
@@ -2161,8 +1935,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Key | text | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_key |     |     |
 | Value | text | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_value |     |     |
 | Initial Import | date\_time | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_datetime |     |     |
@@ -2176,8 +1948,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_service\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Service number | text | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_service\_number |     |     |
@@ -2196,8 +1966,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Operating system | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Type | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_type\_\_id | isys\_catg\_application\_type | isys\_catg\_application\_type\_\_id |
 | Priority | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_priority\_\_id | isys\_catg\_application\_priority | isys\_catg\_application\_priority\_\_id |
@@ -2214,8 +1982,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned SP-VLAN | int | isys\_catg\_qinq\_list | isys\_catg\_qinq\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Description | text\_area | isys\_catg\_qinq\_list | isys\_catg\_qinq\_list\_\_description |     |     |
 
@@ -2223,8 +1989,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_fiber\_lead\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Label | text | isys\_catg\_fiber\_lead\_list | isys\_catg\_fiber\_lead\_list\_\_label |     |     |
@@ -2239,16 +2003,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned SP-VLAN | int | isys\_catg\_qinq\_list | isys\_catg\_qinq\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 
 ### Images
 
 #### Tabelle: isys\_catg\_images\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Filename | text | isys\_catg\_images\_list | isys\_catg\_images\_list\_\_filename |     |     |
@@ -2258,8 +2018,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_wan\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_title |     |     |
@@ -2291,8 +2049,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Primary access URL | text | isys\_catg\_rm\_controller\_list | isys\_catg\_access\_list\_\_id |     |     |
 | Remote Management Controller | int | isys\_catg\_rm\_controller\_list | isys\_catg\_rm\_controller\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Description | text\_area | isys\_catg\_rm\_controller\_list | isys\_catg\_rm\_controller\_list\_\_description |     |     |
@@ -2303,8 +2059,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Remote Management Controller | int | isys\_catg\_virtual\_list | isys\_connection\_\_isys\_obj\_\_id |     |     |
 
 ### Virtual managed objects
@@ -2313,16 +2067,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Object | int | isys\_catg\_virtual\_list | isys\_catg\_virtual\_host\_list\_\_administration\_service |     |     |
 
 ### VRRP
 
 #### Tabelle: isys\_catg\_vrrp\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_catg\_vrrp\_list | isys\_catg\_vrrp\_list\_\_isys\_vrrp\_type\_\_id | isys\_vrrp\_type | isys\_vrrp\_type\_\_id |
@@ -2335,8 +2085,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | VRRP member | int | isys\_catg\_vrrp\_member\_list | isys\_catg\_vrrp\_member\_list\_\_isys\_catg\_log\_port\_list\_\_id | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |
 | Description | text\_area | isys\_catg\_vrrp\_member\_list | isys\_catg\_vrrp\_member\_list\_\_description |     |     |
 
@@ -2344,8 +2092,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_stack\_member\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Member | int | isys\_catg\_stack\_member\_list | isys\_catg\_stack\_member\_list\_\_stack\_member | isys\_obj | isys\_obj\_\_id |
@@ -2358,8 +2104,6 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Last logged in user | text | isys\_catg\_last\_login\_user\_list | isys\_catg\_last\_login\_user\_list\_\_last\_login |     |     |
 | Type | text | isys\_catg\_last\_login\_user\_list | isys\_catg\_last\_login\_user\_list\_\_type |     |     |
 | Description | text\_area | isys\_catg\_last\_login\_user\_list | isys\_catg\_last\_login\_user\_list\_\_description |     |     |
@@ -2370,16 +2114,12 @@ Global categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Scope | text | isys\_catg\_virtual\_list | isys\_cats\_net\_zone\_list\_\_isys\_obj\_\_id\_\_zone | isys\_obj | isys\_obj\_\_id |
 
 ### Options
 
 #### Tabelle: isys\_catg\_net\_zone\_options\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Zone color | text | isys\_catg\_net\_zone\_options\_list | isys\_catg\_net\_zone\_options\_list\_\_color |     |     |
@@ -2390,8 +2130,6 @@ Global categories
 
 #### Tabelle: isys\_catg\_virtual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Scope | text | isys\_catg\_virtual\_list | isys\_cats\_net\_zone\_list\_\_isys\_obj\_\_id\_\_zone | isys\_obj | isys\_obj\_\_id |
@@ -2405,8 +2143,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Vertical slots (front side) | int | isys\_cats\_enclosure\_list | isys\_cats\_enclosure\_list\_\_vertical\_slots\_front |     |     |
 | Vertical slots (backside) | int | isys\_cats\_enclosure\_list | isys\_cats\_enclosure\_list\_\_vertical\_slots\_rear |     |     |
 | Height unit sorting | text | isys\_cats\_enclosure\_list | isys\_cats\_enclosure\_list\_\_slot\_sorting |     |     |
@@ -2418,8 +2154,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_cats\_room\_list | isys\_cats\_room\_list\_\_isys\_room\_type\_\_id | isys\_room\_type | isys\_room\_type\_\_id |
 | Room number | text | isys\_cats\_room\_list | isys\_cats\_room\_list\_\_number |     |     |
 | Floor | text | isys\_cats\_room\_list | isys\_cats\_room\_list\_\_floor |     |     |
@@ -2429,8 +2163,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Specification | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
@@ -2447,8 +2179,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | VLAN management protocol | int | isys\_cats\_switch\_net\_list | isys\_cats\_switch\_net\_list\_\_isys\_vlan\_management\_protocol\_\_id | isys\_vlan\_management\_protocol | isys\_vlan\_management\_protocol\_\_id |
 | Role | int | isys\_cats\_switch\_net\_list | isys\_cats\_switch\_net\_list\_\_isys\_switch\_role\_\_id | isys\_switch\_role | isys\_switch\_role\_\_id |
 | Spanning Tree | int | isys\_cats\_switch\_net\_list | isys\_cats\_switch\_net\_list\_\_isys\_switch\_spanning\_tree\_\_id | isys\_switch\_spanning\_tree | isys\_switch\_spanning\_tree\_\_id |
@@ -2458,8 +2188,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_wan\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Role | int | isys\_cats\_wan\_list | isys\_cats\_wan\_list\_\_isys\_wan\_role\_\_id | isys\_wan\_role | isys\_wan\_role\_\_id |
@@ -2474,8 +2202,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Time need | int | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_calc\_time\_need |     |     |
 | Unit | int | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
 | Date of emergency practice | date\_time | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_practice\_actual\_date |     |     |
@@ -2485,8 +2211,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_ac\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_isys\_ac\_type\_\_id | isys\_ac\_type | isys\_ac\_type\_\_id |
@@ -2508,8 +2232,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_title |     |     |
 | Function | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_isys\_wlan\_function\_\_id | isys\_wlan\_function | isys\_wlan\_function\_\_id |
 | Standard | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_isys\_wlan\_standard\_\_id | isys\_wlan\_standard | isys\_wlan\_standard\_\_id |
@@ -2528,8 +2250,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Display | float | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_display |     |     |
 | Unit | int | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_isys\_depth\_unit\_\_id | isys\_depth\_unit | isys\_depth\_unit\_\_id |
 | Type | int | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_isys\_monitor\_type\_\_id | isys\_monitor\_type | isys\_monitor\_type\_\_id |
@@ -2544,8 +2264,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Client type | int | isys\_cats\_client\_list | isys\_cats\_client\_list\_\_isys\_client\_type\_\_id | isys\_client\_type | isys\_client\_type\_\_id |
 | Keyboard Layout | text | isys\_cats\_client\_list | isys\_cats\_client\_list\_\_keyboard\_layout |     |     |
 | Description | text\_area | isys\_cats\_client\_list | isys\_cats\_client\_list\_\_description |     |     |
@@ -2554,8 +2272,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_switch\_fc\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_switch\_fc\_list | isys\_cats\_switch\_fc\_list\_\_title |     |     |
@@ -2568,8 +2284,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Routing protocol | int | isys\_cats\_router\_list | isys\_cats\_router\_list\_\_routing\_protocol | isys\_routing\_protocol | isys\_routing\_protocol\_\_id |
 | Gateway address | int | isys\_cats\_router\_list | isys\_cats\_router\_list\_\_id |     |     |
 | Description | text\_area | isys\_cats\_router\_list | isys\_cats\_router\_list\_\_description |     |     |
@@ -2578,8 +2292,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_prt\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_cats\_prt\_list | isys\_cats\_prt\_list\_\_isys\_cats\_prt\_type\_\_id | isys\_cats\_prt\_type | isys\_cats\_prt\_type\_\_id |
@@ -2593,8 +2305,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_file\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_file\_list | isys\_file\_version\_\_title |     |     |
@@ -2612,8 +2322,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Specification | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
 | Manufacturer | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
 | Installation | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
@@ -2626,8 +2334,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_net\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_title |     |     |
@@ -2654,8 +2360,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | IMEI number | text | isys\_cats\_mobile\_phone\_list | isys\_cats\_mobile\_phone\_list\_\_imei\_number |     |     |
 | Description | text\_area | isys\_cats\_mobile\_phone\_list | isys\_cats\_mobile\_phone\_list\_\_description |     |     |
 
@@ -2663,8 +2367,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_group\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Object | int | isys\_cats\_group\_list | isys\_cats\_group\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
@@ -2675,8 +2377,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_lic\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Key | text | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_key |     |     |
@@ -2697,8 +2397,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_file\_list | isys\_file\_version\_\_title |     |     |
 | Filename | int | isys\_cats\_file\_list | isys\_file\_version\_\_isys\_file\_physical\_\_id |     |     |
 | Category | int | isys\_cats\_file\_list | isys\_cats\_file\_list\_\_isys\_file\_category\_\_id | isys\_file\_category | isys\_file\_category\_\_id |
@@ -2712,8 +2410,6 @@ Specific categories
 
 #### Tabelle: isys\_file\_version\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Filename | text | isys\_file\_version\_list | isys\_file\_physical\_\_filename\_original |     |     |
@@ -2731,16 +2427,12 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned objects | int | isys\_cats\_file\_list |     |     |     |
 
 ### Emergency plan properties
 
 #### Tabelle: isys\_cats\_emergency\_plan\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Time need | int | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_calc\_time\_need |     |     |
@@ -2754,16 +2446,12 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_isys\_obj\_\_id |     |     |
 
 ### Net type
 
 #### Tabelle: isys\_cats\_ws\_net\_type\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Net type | int | isys\_cats\_ws\_net\_type\_list | isys\_cats\_ws\_net\_type\_list\_\_isys\_net\_type\_title\_\_id | isys\_net\_type\_title | isys\_net\_type\_title\_\_id |
@@ -2775,16 +2463,12 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned Objects | int | isys\_cats\_ws\_net\_type\_list | isys\_obj\_\_id |     |     |
 
 ### Wiring System
 
 #### Tabelle: isys\_cats\_ws\_net\_type\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Net type | int | isys\_cats\_ws\_net\_type\_list | isys\_cats\_ws\_net\_type\_list\_\_isys\_net\_type\_title\_\_id | isys\_net\_type\_title | isys\_net\_type\_title\_\_id |
@@ -2794,8 +2478,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_ups\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_isys\_ups\_type\_\_id | isys\_ups\_type | isys\_ups\_type\_\_id |
@@ -2813,8 +2495,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_isys\_cats\_eps\_type\_\_id | isys\_cats\_eps\_type | isys\_cats\_eps\_type\_\_id |
 | Warm-up time | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_warmup\_time |     |     |
 | Unit | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_warmup\_time\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
@@ -2830,8 +2510,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_san\_zoning\_list | isys\_cats\_san\_zoning\_list\_\_title |     |     |
 | Members | int | isys\_cats\_san\_zoning\_list | isys\_cats\_san\_zoning\_list\_\_id |     |     |
 | Description | text\_area | isys\_cats\_san\_zoning\_list | isys\_cats\_san\_zoning\_list\_\_description |     |     |
@@ -2840,8 +2518,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_organization\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_title |     |     |
@@ -2857,8 +2533,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_title |     |     |
 | Telephone | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_telephone |     |     |
 | Fax | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_fax |     |     |
@@ -2872,8 +2546,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | int | isys\_cats\_organization\_list | isys\_cats\_person\_list\_\_isys\_obj\_\_id |     |     |
 | Contact | int | isys\_cats\_organization\_list | isys\_cats\_person\_list\_\_isys\_obj\_\_id |     |     |
 
@@ -2881,8 +2553,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_person\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_title |     |     |
@@ -2920,8 +2590,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_person\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_title |     |     |
@@ -2961,8 +2629,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | User name | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_title |     |     |
 | Password | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_user\_pass |     |     |
 | Password | text | isys\_cats\_person\_list |     |     |     |
@@ -2982,8 +2648,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Person group memberships | int | isys\_person\_2\_group\_list | isys\_cats\_person\_group\_list\_\_isys\_obj\_\_id |     |     |
 | Contact | int | isys\_person\_2\_group\_list | isys\_person\_2\_group\_\_isys\_obj\_\_id\_\_group |     |     |
 
@@ -2991,8 +2655,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_person\_group\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_title |     |     |
@@ -3007,8 +2669,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_title |     |     |
 | E-Mail | text | isys\_cats\_person\_group\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
 | Phone | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_phone |     |     |
@@ -3019,8 +2679,6 @@ Specific categories
 
 #### Tabelle: isys\_person\_2\_group\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | First name | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_first\_name |     |     |
@@ -3038,8 +2696,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned Objects | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_obj\_\_id |     |     |
 | Role | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_contact\_tag\_\_id | isys\_contact\_tag | isys\_contact\_tag\_\_id |
 
@@ -3047,8 +2703,6 @@ Specific categories
 
 #### Tabelle: isys\_catg\_contact\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Object | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_obj\_\_id |     |     |
@@ -3062,8 +2716,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Object | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_obj\_\_id |     |     |
 | Object type | int | isys\_catg\_contact\_list | isys\_obj\_\_isys\_obj\_type\_\_id |     |     |
 | Role | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_contact\_tag\_\_id | isys\_contact\_tag | isys\_contact\_tag\_\_id |
@@ -3073,8 +2725,6 @@ Specific categories
 
 #### Tabelle: isys\_catg\_cluster\_service\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Assigned clusters | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_obj\_\_id |     |     |
@@ -3094,8 +2744,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Object1 | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_master |     |     |
 | Object2 | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_slave |     |     |
 | Service | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_itservice |     |     |
@@ -3109,8 +2757,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Runs on | int | isys\_cats\_database\_schema\_list | isys\_cats\_database\_schema\_list\_\_isys\_connection\_\_id |     |     |
 | Database instance | int | isys\_cats\_database\_schema\_list | isys\_cats\_database\_schema\_list\_\_isys\_cats\_db\_instance\_list\_\_id | isys\_cats\_database\_instance\_list | isys\_cats\_database\_instance\_list\_\_id |
 | Title | text | isys\_cats\_database\_schema\_list | isys\_cats\_database\_schema\_list\_\_title |     |     |
@@ -3121,8 +2767,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_database\_links\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_database\_links\_list | isys\_cats\_database\_links\_list\_\_title |     |     |
@@ -3138,8 +2782,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | DBMS | int | isys\_cats\_dbms\_list | isys\_cats\_dbms\_list\_\_isys\_dbms\_\_id | isys\_dbms | isys\_dbms\_\_id |
 | Description | text\_area | isys\_cats\_dbms\_list | isys\_cats\_dbms\_list\_\_description |     |     |
 
@@ -3147,8 +2789,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_database\_instance\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | DBMS | int | isys\_cats\_database\_instance\_list | isys\_cats\_database\_instance\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
@@ -3163,8 +2803,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | PDU | text | isys\_cats\_pdu\_list | isys\_cats\_pdu\_list\_\_pdu\_id |     |     |
 | Description | text\_area | isys\_cats\_pdu\_list | isys\_cats\_pdu\_list\_\_description |     |     |
 
@@ -3172,8 +2810,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_pdu\_branch\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | PDU | int | isys\_cats\_pdu\_branch\_list | isys\_cats\_pdu\_branch\_list\_\_pdu\_id |     |     |
@@ -3187,8 +2823,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_relpool\_list | isys\_cats\_relpool\_list\_\_title |     |     |
 | Minimum amount of active items | text | isys\_cats\_relpool\_list | isys\_cats\_relpool\_list\_\_threshold |     |     |
 | Parallel relations | text | isys\_cats\_relpool\_list | isys\_cats\_relpool\_list\_\_isys\_obj\_\_id |     |     |
@@ -3198,8 +2832,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_database\_objects\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_database\_objects\_list | isys\_cats\_database\_objects\_list\_\_title |     |     |
@@ -3212,16 +2844,12 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned objects | int | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_isys\_connection\_\_id |     |     |
 
 ### Database gateway
 
 #### Tabelle: isys\_cats\_database\_gateway\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Gateway type | text | isys\_cats\_database\_gateway\_list | isys\_cats\_database\_gateway\_list\_\_type |     |     |
@@ -3237,8 +2865,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Replication mechanism | int | isys\_cats\_replication\_list | isys\_cats\_replication\_list\_\_isys\_replication\_mechanism\_\_id | isys\_replication\_mechanism | isys\_replication\_mechanism\_\_id |
 | Description | text\_area | isys\_cats\_replication\_list | isys\_cats\_replication\_list\_\_description |     |     |
 
@@ -3246,8 +2872,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_replication\_partner\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Replication type | int | isys\_cats\_replication\_partner\_list | isys\_cats\_replication\_partner\_list\_\_isys\_replication\_type\_\_id | isys\_replication\_type | isys\_replication\_type\_\_id |
@@ -3258,8 +2882,6 @@ Specific categories
 
 #### Tabelle: isys\_catg\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Installed on | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_obj\_\_id |     |     |
@@ -3279,8 +2901,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Specification | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
 | Manufacturer | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
 | Installation | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
@@ -3293,8 +2913,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_krypto\_card\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Certificate number | text | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_certificate\_number |     |     |
@@ -3313,8 +2931,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Type | int | isys\_cats\_net\_ip\_addresses\_list | isys\_catg\_ip\_list\_\_isys\_net\_type\_\_id | isys\_net\_type | isys\_net\_type\_\_id |
 | Host address | text | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_title |     |     |
 | Object | int | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |     |     |
@@ -3329,8 +2945,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Type v4 | int | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_isys\_net\_dhcp\_type\_\_id | isys\_net\_dhcp\_type | isys\_net\_dhcp\_type\_\_id |
 | Type v6 | int | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_isys\_net\_dhcpv6\_type\_\_id | isys\_net\_dhcpv6\_type | isys\_net\_dhcpv6\_type\_\_id |
 | DHCP from | text | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_range\_from |     |     |
@@ -3341,8 +2955,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_layer2\_net\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | ID (VLAN) | text | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_ident |     |     |
@@ -3362,8 +2974,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Object title | int | isys\_cats\_layer2\_net\_assigned\_ports\_list | isys\_cats\_layer2\_net\_assigned\_ports\_list\_\_isys\_obj\_\_id |     |     |
 | Assigned ports | int | isys\_cats\_layer2\_net\_assigned\_ports\_list | isys\_catg\_port\_list\_\_id |     |     |
 | MAC-address | int | isys\_cats\_layer2\_net\_assigned\_ports\_list | isys\_catg\_port\_list\_\_id |     |     |
@@ -3372,8 +2982,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_contract\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Contract type | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_type\_\_id | isys\_contract\_type | isys\_contract\_type\_\_id |
@@ -3407,8 +3015,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Contract type | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_type\_\_id | isys\_contract\_type | isys\_contract\_type\_\_id |
 | Contract id | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_contract\_no |     |     |
 | Customer id | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_customer\_no |     |     |
@@ -3440,16 +3046,12 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Assigned objects | int | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_isys\_obj\_\_id |     |     |
 
 ### Chassis
 
 #### Tabelle: isys\_cats\_chassis\_view\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Front horizontal units | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_width |     |     |
@@ -3464,8 +3066,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_chassis\_slot\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Connector type | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_isys\_chassis\_connector\_type\_\_id | isys\_chassis\_connector\_type | isys\_chassis\_connector\_type\_\_id |
@@ -3484,8 +3084,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Role | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_chassis\_role\_\_id | isys\_chassis\_role | isys\_chassis\_role\_\_id |
 | Device assignment | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Device assignment (Hostadapter) | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_catg\_hba\_list\_\_id | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_id |
@@ -3498,8 +3096,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_chassis\_view\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Front horizontal units | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_width |     |     |
@@ -3516,8 +3112,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Title | text | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_title |     |     |
 | Variant | text | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_variant |     |     |
 | Description | text\_area | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_description |     |     |
@@ -3526,8 +3120,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_person\_nagios\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Alias | text | isys\_cats\_person\_nagios\_list | isys\_cats\_person\_nagios\_list\_\_alias |     |     |
@@ -3556,8 +3148,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Export this configuration | int | isys\_cats\_person\_group\_nagios\_list | isys\_cats\_person\_group\_nagios\_list\_\_is\_exportable |     |     |
 | alias | text | isys\_cats\_person\_group\_nagios\_list | isys\_cats\_person\_group\_nagios\_list\_\_alias |     |     |
 | Description | text\_area | isys\_cats\_person\_group\_nagios\_list | isys\_cats\_person\_group\_nagios\_list\_\_description |     |     |
@@ -3566,8 +3156,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_group\_type\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Typ | int | isys\_cats\_group\_type\_list | isys\_cats\_group\_type\_list\_\_type |     |     |
@@ -3580,8 +3168,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Object title | int | main | isys\_obj\_\_id |     |     |
 | Assigned logical ports | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |     |     |
 
@@ -3589,8 +3175,6 @@ Specific categories
 
 #### Tabelle: isys\_catg\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Installed on | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_obj\_\_id |     |     |
@@ -3608,8 +3192,6 @@ Specific categories
 
 #### Tabelle: isys\_catg\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Installed on | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_obj\_\_id |     |     |
@@ -3629,8 +3211,6 @@ Specific categories
 
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Net zone objekt | int | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_isys\_obj\_\_id\_\_zone | isys\_obj | isys\_obj\_\_id |
 | Zone from | text | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_range\_from |     |     |
 | Zone from | text | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_range\_from\_long |     |     |
@@ -3642,8 +3222,6 @@ Specific categories
 
 #### Tabelle: isys\_cats\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
 | Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
 | --- | --- | --- | --- | --- | --- |
 | Specification | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
