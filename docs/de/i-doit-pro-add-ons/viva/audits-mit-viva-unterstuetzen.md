@@ -1,6 +1,6 @@
 # Audits mit VIVA unterstützen
 
-Audits sind die Berichte, die für eine mögliche Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz benötigt werden. Mit dem [Add-on](../index.md) **VIVA** können Audits erstellt und verwaltet werden. Neben den Audits verfügt VIVA über weitere [Berichte](/display/de/Berichte+mit+VIVA), die der kontinuierlichen Qualitätssicherung dienen.
+Audits sind die Berichte, die für eine mögliche Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz benötigt werden. Mit dem [Add-on](../index.md) **VIVA** können Audits erstellt und verwaltet werden. Neben den Audits verfügt VIVA über weitere [Berichte](berichte-mit-viva.md), die der kontinuierlichen Qualitätssicherung dienen.
 
 Audits erstellen
 ----------------

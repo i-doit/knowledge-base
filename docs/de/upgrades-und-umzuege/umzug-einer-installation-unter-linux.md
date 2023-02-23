@@ -26,7 +26,7 @@ Altes System außer Betrieb nehmen
 Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwendet werden:
 
 1.  Downtimes sind nervig – vor allem unerwartete. Die Benutzer von i-doit sollten vorab informiert worden sein, dass die Installation umzieht und in welchem Zeitraum sie nicht erreichbar ist.
-2.  [Automatisierte Zugriffe von Drittsystemen](/display/de/Automatisierung+und+Integration) sollten deaktiviert werden.
+2.  [Automatisierte Zugriffe von Drittsystemen](../automatisierung-und-integration/index.md) sollten deaktiviert werden.
 3.  [Cronjobs](../automatisierung-und-integration/cli/index.md) sollten ebenfalls deaktiviert werden. Hierzu reicht es meist, die Befehlszeilen auszukommentieren.
 4.  Nach Sicherstellung der obigen Punkte sollte der Apache Webserver gestoppt werden:
     

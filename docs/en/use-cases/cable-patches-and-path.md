@@ -9,12 +9,12 @@ The mapping of cablings in i-doit is as versatile as in reality: Ethernet, fiber
 
 i-doit provides **a strict separation between the documentation of connections and the physical wiring**. A good example is the network wiring via Ethernet. For one thing, the connections between active network components (switches, routers, firewalls) can be recorded in the [category](../basics/structure-of-the-it-documentation.md) `**Network → Port**`. By this means, you can recognize which switch is connected with which server. Connection routes between several components become visible. On the other hand, passive components often play an important role: Patch panels and network outlets help to get things in line to avoid tangled cables. However, when the connections between active components cover your needs, you can ignore the passive components and their corresponding cables. i-doit is able to carry out the documentation of the cabling in the background; the user does not have to take out additional steps. If detailed knowledge of the cabling becomes necessary at a later time, the present documentation can just be complemented and the user does not have to start from scratch.
 
-As usual in i-doit, the documentation of the cabling is executed with the help of objects and [attributes](/display/de/Struktur+der+IT-Dokumentation). Beside numerous forms, i-doit supplies functions for visualization, evaluation and import. The following text describes these functions.
+As usual in i-doit, the documentation of the cabling is executed with the help of objects and [attributes](../basics/structure-of-the-it-documentation.md). Beside numerous forms, i-doit supplies functions for visualization, evaluation and import. The following text describes these functions.
 
 Category Folder for `**Cabling**`
 ---------------------------------
 
-Every [object type](../basics/structure-of-the-it-documentation.md) can be [configured](/display/en/Assignment+of+Categories+to+Object+Types) with the category folder `**Cabling**`. By this means, objects of these selected types receive the categories `**Connectors**` and **`Interface`**.
+Every [object type](../basics/structure-of-the-it-documentation.md) can be [configured](../basics/assignment-of-categories-to-object-types.md) with the category folder `**Cabling**`. By this means, objects of these selected types receive the categories `**Connectors**` and **`Interface`**.
 
 The category folder does not only serve as a superordinate level for the specified subcategories, but also offers some interesting visualization options for the cabling:
 

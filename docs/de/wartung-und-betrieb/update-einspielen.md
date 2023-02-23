@@ -79,7 +79,7 @@ Nun ist das Update abgeschlossen. Wer detaillierte Informationen zum Update nach
 Update über die Konsole vorbereiten
 -----------------------------------
 
-Das Update kann über die Konsole vorbereitet werden. Für die Vorbereitung muss aus dem [Kundenportal](/display/de/Kundenportal) das neuste Update-Paket heruntergeladen werden.
+Das Update kann über die Konsole vorbereitet werden. Für die Vorbereitung muss aus dem [Kundenportal](../administration/kundenportal.md) das neuste Update-Paket heruntergeladen werden.
 
 !!! attention "Releases überspringen"
 

@@ -1,4 +1,4 @@
-# CMDB Settings 
+# CMDB Settings
 
 CMDB Settings
 -------------
@@ -77,14 +77,14 @@ With the [object relations](../../basics/object-relations.md) feature you can or
 CMDB Status
 -----------
 
-You can organize and edit the existing [states](/display/en/Life+and+Documentation+Cycle) with the CMDB status feature. Furthermore, you can determine which status is assigned to an imported object and if the status filter should be displayed. →  [READMORE](/display/en/Life+and+Documentation+Cycle)
+You can organize and edit the existing [states](../../basics/life-and-documentation-cycle.md) with the CMDB status feature. Furthermore, you can determine which status is assigned to an imported object and if the status filter should be displayed. →  [READMORE](../../basics/life-and-documentation-cycle.md)
 
 [![CMDB Status](../../assets/images/en/system-administration/administration/cmdb-settings/9-cmdb.png)](../../assets/images/en/system-administration/administration/cmdb-settings/9-cmdb.png)
 
 Dialog-Admin
 ------------
 
-With [Dialog-Admin](/display/en/Dialog-Admin) you can organize and edit the contents templates of all dialog-plus fields. Here you can also find the custom dialog-plus fields. → [READMORE](../../basics/dialog-admin.md)
+With [Dialog-Admin](cmdb-settings.md) you can organize and edit the contents templates of all dialog-plus fields. Here you can also find the custom dialog-plus fields. → [READMORE](../../basics/dialog-admin.md)
 
 [![Dialog-Admin](../../assets/images/en/system-administration/administration/cmdb-settings/10-cmdb.png)](../../assets/images/en/system-administration/administration/cmdb-settings/10-cmdb.png)
 

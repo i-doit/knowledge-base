@@ -2,11 +2,7 @@
 
 The object lists in i-doit do not only serve the purpose of listing [objects](./index.md), but also provide various features and they can be customized almost completely.
 
-<<<<<<< HEAD
-For each [object type](../../basics/structure-of-the-it-documentation.md) the object list shows all assigned objects in a table. Each line focuses on an object with its corresponding [attributes](../../basics/structure-of-the-it-documentation.md). You can [specify](/display/en/Configuration+of+the+List+View) which attributes you want to display.
-=======
-[![Object List](../../assets/images/en/basics/object-list/1-ol.png)](../../assets/images/en/basics/object-list/1-ol.png)
->>>>>>> main
+For each [object type](../../basics/structure-of-the-it-documentation.md) the object list shows all assigned objects in a table. Each line focuses on an object with its corresponding [attributes](../../basics/structure-of-the-it-documentation.md). You can [specify](configuration-of-the-list-view.md) which attributes you want to display.
 
 For each [object type](../structure-of-the-it-documentation.md) the object list shows all assigned objects in a table. Each line focuses on an object with its corresponding [attributes](../structure-of-the-it-documentation.md). You can [specify](./configuration-of-the-list-view.md) which attributes you want to display.
 

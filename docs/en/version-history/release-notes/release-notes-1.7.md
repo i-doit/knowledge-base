@@ -7,8 +7,7 @@
 > 
 > The system requirements have changed. i-doit now needs a MySQL 5.6 or MariaDB 10 databbase engine. **Please update your database platform before updating i-doit.**
 > 
-> A manual and Tips for updating your database platform can be found in our knowledgebase at:[  
-> https://i-doit.atlassian.net/wiki/display/KB/Upgrade+to+MySQL+5.6+or+MariaDB+10.0](https://i-doit.atlassian.net/wiki/display/KB/Upgrade+to+MySQL+5.6+or+MariaDB+10.0)
+> A manual and Tips for updating your database platform can be found at:[MariaDB](https://www.mariadb.org)
 > 
 > If you encounter any problems or difficulties, feel free to contact our support at [support@i-doit.com](mailto:support@i-doit.com). We are happy to assist you.
 > 

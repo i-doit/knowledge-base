@@ -1,7 +1,7 @@
 # Analysis
 !!! info "Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/ci-relationen-analysieren-mit-dem-i-doit-pro-add-on-analysis/)"
 
-Das [Add-on](/display/de/i-doit+pro+Add-ons) **Analyse** ermöglicht im Schwerpunkt zwei Anwendungen: Zum Einen untersucht es die Daten- und Dokumentationsqualität und liefert eine interaktive Ergebnisansicht mit dem ermittelten Status. Zum Anderen dient es der Simulation von Ausfällen. So können “Was passiert wenn”-Szenarien durchgespielt und in ihren Auswirkungen auf die Infrastruktur analysiert werden. Bei kombinierter Nutzung mit der Schnittstelle zur Monitoring-Lösung [Checkmk](/display/de/Checkmk) können auch Live-Ausfälle entsprechend ihrer Auswirkung direkt untersucht werden.
+Das [Add-on](index.md) **Analyse** ermöglicht im Schwerpunkt zwei Anwendungen: Zum Einen untersucht es die Daten- und Dokumentationsqualität und liefert eine interaktive Ergebnisansicht mit dem ermittelten Status. Zum Anderen dient es der Simulation von Ausfällen. So können “Was passiert wenn”-Szenarien durchgespielt und in ihren Auswirkungen auf die Infrastruktur analysiert werden. Bei kombinierter Nutzung mit der Schnittstelle zur Monitoring-Lösung [Checkmk](../i-doit-pro-add-ons/checkmk2/index.md) können auch Live-Ausfälle entsprechend ihrer Auswirkung direkt untersucht werden.
 
 Download und Installation
 -------------------------

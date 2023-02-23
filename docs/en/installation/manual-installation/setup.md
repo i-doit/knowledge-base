@@ -1,162 +1,125 @@
-**Inhaltsverzeichnis**
-
-*   1[Quickstart](#Setup-Quickstart)
-*   2[Download and Extract the Install Package](#Setup-DownloadandExtracttheInstallPackage)
-    *   2.1[Debian GNU/Linux or Ubuntu Linux](#Setup-DebianGNU/LinuxorUbuntuLinux)
-    *   2.2[Red Hat Enterprise Linux (RHEL)](#Setup-RedHatEnterpriseLinux(RHEL))
-    *   2.3[Suse Linux Enterprise Server (SLES)](#Setup-SuseLinuxEnterpriseServer(SLES))
-    *   2.4[Microsoft Windows Server](#Setup-MicrosoftWindowsServer)
-*   3[Run the Setup](#Setup-RuntheSetup)
-    *   3.1[Web GUI](#Setup-WebGUI)
-    *   3.2[Console](#Setup-Console)
-*   4[Further steps](#Setup-Furthersteps)
+# Manual installation
 
 Once the necessary preparations are made - for example the configuration of the underlying operation system - you can begin the setup of i-doit.
 
-Quickstart
-----------
+## Quickstart
 
 Extract the install package of i-doit in a folder the Apache Webserver can access. After that, open this folder in the browser and follow the setup instructions.
 
-Download and Extract the Install Package
-----------------------------------------
+## Download and Extract the Install Package
 
-The install package of the pro version is accessible for all customers in the [customer portal](/display/en/Customer+Portal); the installation package of the open version can be found at [i-doit.org](https://i-doit.org/). This package will be copied and extracted to the prepared server and the files and directories get the appropriate authorizations. The instructions vary according to the operating system.
+The install package of the pro version is accessible for all customers in the [customer portal](../../system-administration/customer-portal.md); the installation package of the open version can be found at [i-doit.org](https://i-doit.org/). This package will be copied and extracted to the prepared server and the files and directories get the appropriate authorizations. The instructions vary according to the operating system.
 
 ### Debian GNU/Linux or Ubuntu Linux
 
-The Apache Webserver runs with rights of the `**www-data**` user and the group of the same name `**www-data**`. The main directory of the Apache Webserver is `**/var/www/html/**`:
+The Apache Webserver runs with rights of the **www-data** user and the group of the same name **www-data**. The main directory of the Apache Webserver is **/var/www/html/**:
 
-[?](#)
-
-`sudo` `mkdir` `/var/www/html/i-doit`
-
-`sudo` `cp` `i-doit.zip` `/var/www/html/i-doit/`
-
-`cd` `/var/www/html/i-doit/`
-
-`sudo` `unzip i-doit.zip`
-
-`sudo` `rm` `i-doit.zip`
-
-`sudo` `chown` `www-data:www-data -R .`
-
-`sudo` `find` `. -``type` `d -name \* -``exec` `chmod` `775 {} \;`
-
-`sudo` `find` `. -``type` `f -``exec` `chmod` `664 {} \;`
-
-`sudo` `chmod` `774 controller *.sh setup/*.sh`
+```shell
+sudo mkdir /var/www/html/i-doit
+sudo cp i-doit.zip /var/www/html/i-doit/
+cd /var/www/html/i-doit/
+sudo unzip i-doit.zip
+sudo rm i-doit.zip
+sudo chown www-data:www-data -R .
+sudo find . -type d -name \* -exec chmod 775 {} \;
+sudo find . -type f -exec chmod 664 {} \;
+sudo chmod 774 controller *.sh setup/*.sh
+```
 
 ### Red Hat Enterprise Linux (RHEL)
 
-The Apache Webserver runs with rights of the ``**`**apache**`**`` user and the group of the same name `**apache**`. The main directory of the Apache Webserver is `**/var/www/html/**`:
+The Apache Webserver runs with rights of the **apache** user and the group of the same name **apache**. The main directory of the Apache Webserver is **/var/www/html/**:
 
-[?](#)
-
-`sudo` `mkdir` `/var/www/html/i-doit`
-
-`sudo` `cp` `i-doit.zip` `/var/www/html/i-doit/`
-
-`cd` `/var/www/html/i-doit/`
-
-`sudo` `unzip i-doit.zip`
-
-`sudo` `rm` `i-doit.zip`
-
-`sudo` `chown` `apache:apache -R .`
-
-`sudo` `find` `. -``type` `d -name \* -``exec` `chmod` `775 {} \;`
-
-`sudo` `find` `. -``type` `f -``exec` `chmod` `664 {} \;`
-
-`sudo` `chmod` `774 controller *.sh setup/*.sh`
+```shell
+sudo mkdir /var/www/html/i-doit
+sudo cp i-doit.zip /var/www/html/i-doit/
+cd /var/www/html/i-doit/
+sudo unzip i-doit.zip
+sudo rm i-doit.zip
+sudo chown apache:apache -R .
+sudo find . -type d -name \* -exec chmod 775 {} \;
+sudo find . -type f -exec chmod 664 {} \;
+sudo chmod 774 controller *.sh setup/*.sh
+```
 
 ### Suse Linux Enterprise Server (SLES)
 
-The Apache Webserver runs with rights of the `**wwwrun**` user and the group `**www**`. The main directory of the Apache Webserver is ``**`**/srv/www/htdocs/**`**``:
+The Apache Webserver runs with rights of the **wwwrun** user and the group **www**. The main directory of the Apache Webserver is **/srv/www/htdocs/**:
 
-Der Apache Webserver läuft mit den Rechten des Users `**wwwrun**` und der Gruppe `**www**`. Das Hauptverzeichnis vom Apache Webserver lautet `**/srv/www/htdocs/**`:
+Der Apache Webserver läuft mit den Rechten des Users **wwwrun** und der Gruppe **www**. Das Hauptverzeichnis vom Apache Webserver lautet **/srv/www/htdocs/**:
 
-[?](#)
-
-`sudo` `mkdir` `/srv/www/htdocs/i-doit`
-
-`sudo` `cp` `i-doit.zip` `/srv/www/htdocs/i-doit/`
-
-`cd` `/srv/www/htdocs/i-doit/`
-
-`sudo` `unzip i-doit.zip`
-
-`sudo` `rm` `i-doit.zip`
-
-`sudo` `chown` `wwwrun:www -R .`
-
-`sudo` `find` `. -``type` `d -name \* -``exec` `chmod` `775 {} \;`
-
-`sudo` `find` `. -``type` `f -``exec` `chmod` `664 {} \;`
-
-`sudo` `chmod` `774 controller *.sh setup/*.sh`
+```shell
+sudo mkdir /srv/www/htdocs/i-doit
+sudo cp i-doit.zip /srv/www/htdocs/i-doit/
+cd /srv/www/htdocs/i-doit/
+sudo unzip i-doit.zip
+sudo rm i-doit.zip
+sudo chown wwwrun:www -R .
+sudo find . -type d -name \* -exec chmod 775 {} \;
+sudo find . -type f -exec chmod 664 {} \;
+sudo chmod 774 controller *.sh setup/*.sh
+```
 
 ### Microsoft Windows Server
 
-The i-doit installation package is extracted in **`C:\xampp\htdocs`**. Generally it is not necessary to set specific file and folder permissions if the Apache Webserver that has been installed along with XAMPP uses the same user permissions.
+The i-doit installation package is extracted in **C:\xampp\htdocs**. Generally it is not necessary to set specific file and folder permissions if the Apache Webserver that has been installed along with XAMPP uses the same user permissions.
 
-Run the Setup
--------------
+## Run the Setup
 
 _i-doit_ can be installed in two ways: Using the web GUI in a comfortable way (recommended for beginners) or via the console (to automate the installation for example).
 
 ### Web GUI
 
-The setup is launched automatically as soon as i-doit is opened (example `http://i-doit-host/i-doit/`).
+The setup is launched automatically as soon as i-doit is opened (example http://i-doit-host/i-doit/).
 
 #### System check
 
 Important system settings are prompted in the first step. The user will be notified if something is not okay.
 
-![](/download/attachments/30441525/setup1.png?version=1&modificationDate=1465811918907&api=v2&effects=drop-shadow)
+[![System check](../assets/images/en/installation/manual-installation/setup/1-setup.png)](../assets/images/en/installation/manual-installation/setup/1-setup.png)]
 
 #### Directory Configuration
 
 Here the paths are requested where the installation files or user specific files are going to be stored. You can accept the suggested options.
 
-![](/download/attachments/30441525/setup2.png?version=1&modificationDate=1465811950998&api=v2&effects=drop-shadow)
-
+[![Directory configuration](../assets/images/en/installation/manual-installation/setup/1-setup.png)](../assets/images/en/installation/manual-installation/setup/1-setup.png)]
 #### Database Configuration
 
 Important credentials and settings need to be entered for the database connection. At least two databases and one special user are created for i-doit.
 
-![](/download/attachments/30441525/setup3.png?version=1&modificationDate=1465812005392&api=v2&effects=drop-shadow)
+[![Database configuration](../assets/images/en/installation/manual-installation/setup/1-setup.png)](../assets/images/en/installation/manual-installation/setup/1-setup.png)]
 
 *   **Connection settings**
-    *   **`Host`:** Generally the host itself, so `localhost` or 127.0.0.1
-    *   **`Port`:** Generally the default port of MySQL/MariaDB, so `3306`
-    *   **`Username`:** User name of the database system user, usually `root`
-    *   **`Password`:** Password of the user
+    *   **Host:** Generally the host itself, so localhost or 127.0.0.1
+    *   **Port:** Generally the default port of MySQL/MariaDB, so 3306
+    *   **Username:** User name of the database system user, usually root
+    *   **Password:** Password of the user
 *   **MySQL user settings**
-    *   **`Username`:** User name of the i-doit databases owner, usually `idoit`
-    *   **`Password`:** Password of the user
+    *   **Username:** User name of the i-doit databases owner, usually idoit
+    *   **Password:** Password of the user
 *   **Database settings**
-    *   **`System Database Name`:** Name of the system database, usually `idoit_system`
-    *   **`Mandator Database Name`:** Name of the database for the first tenant, usually `idoit_data`
-    *   **`Mandator title`:** Title of the tenant, usually the name of the organization that is focused on
-    *   **`Start value for object/configuration item IDs`:** Normally `1`
+    *   **System Database Name:** Name of the system database, usually idoit_system
+    *   **Mandator Database Name:** Name of the database for the first tenant, usually idoit_data
+    *   **Mandator title:** Title of the tenant, usually the name of the organization that is focused on
+    *   **Start value for object/configuration item IDs:** Normally 1
 
-Unix Socket vs. Network Port
+!!! tip "Unix Socket vs. Network Port"
 
-PHP is able to connect to MariaDB/MySQL in two ways: For one thing, per Unix Socket, and secondly via TCP/IP. For performance reasons we recommend using the Unix Socket. The use of the Unix Socket is enforced by entering the `**localhost**` value in the above mentioned host configuration. Other specifications (`**127.0.0.1**`, FQDN or the like) result in the use of TCP/IP.
+    PHP is able to connect to MariaDB/MySQL in two ways: For one thing, per Unix Socket, and secondly via TCP/IP. For performance reasons we recommend using the Unix Socket. The use of the Unix Socket is enforced by entering the **localhost** value in the above mentioned host configuration. Other specifications (**127.0.0.1**, FQDN or the like) result in the use of TCP/IP.
 
-Usually, MariaDB/MySQL opens a Unix Socket when a service is started. In the `**socket**` settings you specify the path, an example under [Debian GNU/Linux](/pages/viewpage.action?pageId=36864037) is `**/var/run/mysqld/mysqld.sock**`.  This value has to be known to PHP so that i-doit can establish a connection to MariaDB/MySQL. The corresponding PHP setting is `**mysqli.default_socket**`. When you have followed the installation instructions, you can supplement the created PHP configuration file by this setting, for example, **`**mysqli.default_socket = /var/run/mysqld/mysqld.sock**`**
+    Usually, MariaDB/MySQL opens a Unix Socket when a service is started. In the **socket** settings you specify the path, an example under [Debian GNU/Linux](/pages/viewpage.action?pageId=36864037) is **/var/run/mysqld/mysqld.sock**.  This value has to be known to PHP so that i-doit can establish a connection to MariaDB/MySQL. 
 
-Subsequent changes to the PHP settings will only become effective when the Apache Webserver service is restarted. Example for Debian GNU/Linux: `**sudo systemctl reload apache2.service**`
+    The corresponding PHP setting is **mysqli.default_socket**. When you have followed the installation instructions, you can supplement the created PHP configuration file by this setting, for example, **mysqli.default_socket = /var/run/mysqld/mysqld.sock**.
 
-This tip refers to Unix-like operating systems; it does not apply to Windows.
+    Subsequent changes to the PHP settings will only become effective when the Apache Webserver service is restarted. Example for Debian GNU/Linux: `sudo systemctl reload apache2.service`**`
 
-#### FrameworkConfiguration
+    This tip refers to Unix-like operating systems; it does not apply to Windows.
 
-There are separate credentials in i-doit to access the i-doit [**`Admin Center`**](/display/en/Admin+Center). They can be specified here and we recommend using this option.
+#### Framework Configuration
 
-![](/download/attachments/30441525/setup4.png?version=1&modificationDate=1465812033166&api=v2&effects=drop-shadow)
+There are separate credentials in i-doit to access the i-doit [**Admin Center**](../../system-administration/admin-center.md). They can be specified here and we recommend using this option.
+
+[![Framework configuration](../assets/images/en/installation/manual-installation/setup/1-setup.png)](../assets/images/en/installation/manual-installation/setup/1-setup.png)]
 
 #### Config Check
 
@@ -168,34 +131,33 @@ The installtion of i-doit on the system is carried out in this step. To shorten 
 
 ### Console
 
-i-doit can be installed in two ways via the console: through a guided assistant or by a single line, which is suitable for automated installations. Both ways are executed via the `setup` folder:
+i-doit can be installed in two ways via the console: through a guided assistant or by a single line, which is suitable for automated installations. Both ways are executed via the setup folder:
 
-[?](#)
+```shell
+cd setup/
+```
 
-`cd` `setup/`
-
-It is imperative to execute the following commands with the user who has the permissions to run the Webserver. For [Debian](/pages/viewpage.action?pageId=36864037)\-based operating systems this is **`www-data`**, with RHEL **`apache`** and with SLES **`**wwwrun**`.**
+It is imperative to execute the following commands with the user who has the permissions to run the Webserver. For [Debian](debian.md)\-based operating systems this is **www-data**, with RHEL **apache** and with SLES **wwwrun**.
 
 The options are similar to the setup via the web GUI.
 
 #### Guided installation
 
-[?](#)
-
-`sudo` `-u www-data` `bash` `install``.sh`
+```shell
+sudo -u www-data bash install.sh
+```
 
 The assistant requests some credentials and settings. The values in brackets are default values which are set by pressing return.
 
 #### Automated installation
 
-[?](#)
+```shell
+sudo -u www-data bash install.sh -m idoit_data -s idoit_system -n "Your company" -a "admincenterpw" -p "mysqlpw"
+```
 
-`sudo` `-u www-data` `bash` `install``.sh -m idoit_data -s idoit_system -n` `"Your company"` `-a` `"admincenterpw"` `-p` `"mysqlpw"`
+## Further steps
 
-Further steps
--------------
-
-*   [Download and Install a License](/display/en/Activate+License)
-*   [Set up backup](/display/en/Backup+and+Recovery)
-*   [Set up Cronjobs](/display/en/Cronjobs+Setup)
-*   [Initial Login](/display/en/Initial+Login)
+*   [Download and Install a License](../../maintenance-and-operation/activate-license.md)
+*   [Set up backup](../../maintenance-and-operation/backup-and-recovery/index.md)
+*   [Set up Cronjobs](../../maintenance-and-operation/cronjob-setup.md)
+*   [Initial Login](../../basics/initial-login.md)

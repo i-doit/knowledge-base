@@ -33,7 +33,7 @@ Category Check_MK Host provides several buttons which trigger idoitcmk in the ba
 
 Before you or any other user push one of these buttons, please run them manually on the command-line interface to make sure they do what they are intended to do.
 
-Configuration is done via Administration > Interfaces / external data > Monitoring > Check_MK. By setting Run idoitcmk app i-doit needs to know where idoitcmk is located. If you followed the [installation steps](/pages/viewpage.action?pageId=75989120) carefully use this:
+Configuration is done via Administration > Interfaces / external data > Monitoring > Check_MK. By setting Run idoitcmk app i-doit needs to know where idoitcmk is located. If you followed the [installation steps](../../installation/index.md) carefully use this:
 
     /usr/local/bin/idoitcmk
 

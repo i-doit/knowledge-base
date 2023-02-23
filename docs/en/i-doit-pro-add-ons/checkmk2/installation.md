@@ -2,7 +2,7 @@
 
 After you’ve met the [requirements](./requirements.md) download the latest stable version of the i-doit pro add-on from the [i-doit customer portal](https://portal.i-doit.com/).
 
-Install the downloaded ZIP file [like any other i-doit add-on](/display/en/Add-ons).
+Install the downloaded ZIP file [like any other i-doit add-on](../index.md).
 
 Adding the checkmk 2 add-on categories
 --------------------------------------

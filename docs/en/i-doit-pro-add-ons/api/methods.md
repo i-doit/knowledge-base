@@ -1411,7 +1411,7 @@ This namespace is reserved for common methods.
 
     **Limitations**
 
-    *   This only works with [multi-value categories](https://kb.i-doit.com/display/en/Structure+of+the+IT+Documentation) at the moment.
+    *   This only works with [multi-value categories](../../basics/structure-of-the-it-documentation.md) at the moment.
     *   You can recycle  category entries which have archived or deleted status.
 
     **Request parameters**
@@ -1419,7 +1419,7 @@ This namespace is reserved for common methods.
     | **Key** | **JSON data type** | **Required** | **Description** |
     | --- | --- | --- | --- |
     | **object** | Integer | Yes | Object identifier, for example: **456** |
-    | **category** | String | Yes | [Category constant](https://kb.i-doit.com/display/en/Category+Fields+for+Data+Arrays), for example: **"C\_\_CATG\_\_ACCESS"** |
+    | **category** | String | Yes | [Category constant](../../basics/categories-and-attributes.md), for example: **"C\_\_CATG\_\_ACCESS"** |
     | **entry** | Integer | Yes | Entry identifier, for example: **32** |
 
     **Response**

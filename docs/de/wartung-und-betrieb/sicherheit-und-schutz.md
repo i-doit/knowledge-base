@@ -144,7 +144,7 @@ Für PHP existiert die **Sicherheits-Erweiterung [Suhosin](https://suhosin.org/)
 
 ### Transportverschlüsselung
 
-i-doit ist eine Client-Server-Anwendung, dass heißt, es existiert eine Server-Instanz, die mit einer Client-Instanz über ein Netzwerk kommuniziert. Zudem kann i-doit über Schnittstellen mit weiteren Server-Instanzen kommunizieren, beispielsweise [LDAP zur Anmeldung von Benutzern](/pages/viewpage.action?pageId=9666615).
+i-doit ist eine Client-Server-Anwendung, dass heißt, es existiert eine Server-Instanz, die mit einer Client-Instanz über ein Netzwerk kommuniziert. Zudem kann i-doit über Schnittstellen mit weiteren Server-Instanzen kommunizieren, beispielsweise [LDAP zur Anmeldung von Benutzern](../automatisierung-und-integration/ldap-verzeichnis/index.md).
 
 Um diese Kommunikationsverbindungen abzusichern, bietet sich die Transportverschlüsselung via TLS an. Beispielsweise kann der Apache Webserver mit einem vertrauenswürdigen X.509-Zertifikat ausgestattet werden, damit ein Webbrowser **via HTTPS auf die IT-Dokumentation zugreifen** kann. Bei Zertifikaten sollten viele Dinge beachtet werden: u. a. Gültigkeitsdauer, Vertrauenskette, verwendete Ciphers und Hashes. Mozilla bietet einen passenden [Generator für die Apache-Konfiguration](https://mozilla.github.io/server-side-tls/ssl-config-generator/) an und liefert jede Menge [Hintergrundinformationen zu Server-seitigem TLS](https://wiki.mozilla.org/Security/Server_Side_TLS). Weitere gute Quellen sind die [SSL Labs von Qualys](https://www.ssllabs.com/ssltest/) und die Website [securityheaders.io](https://securityheaders.io/), die auch passende Tests der Konfiguration durchführen.
 
@@ -237,7 +237,7 @@ Lässt sich ein Dienst nicht durch die eigene Konfiguration einschränken, hilft
 
 Speziell an Webserver richtet sich eine **Web Application Firewall**. Eine sehr bekannte ist [mod\_security](https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_security-with-apache-on-debian-ubuntu), eine Erweiterung für Apache.
 
-Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe, **dedizierte Firewall**. i-doit sollte erlaubt sein, nach Updates suchen und auf Online Repositories (z. B. für [Reports](/display/de/Report+Manager) und [Vorlagen](/display/de/Documents)) zugreifen zu dürfen:
+Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe, **dedizierte Firewall**. i-doit sollte erlaubt sein, nach Updates suchen und auf Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md) und [Vorlagen](../i-doit-pro-add-ons/documents/dokumentenvorlagen.md) zugreifen zu dürfen:
 
 | Host | Protokoll | Port | Beschreibung |
 | --- | --- | --- | --- |
