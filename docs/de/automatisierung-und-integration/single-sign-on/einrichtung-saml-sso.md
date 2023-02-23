@@ -44,7 +44,9 @@ Mit folgendem Befehl erstellen wir unsere Mellon Metadaten “URLs bitte anpasse
 Dies erstellt nun folgende Dateien
 
 `https\_tu2\_samlsso.synetics.test\_.cert`
+
 `https\_tu2\_samlsso.synetics.test\_.key`
+
 `https\_tu2\_samlsso.synetics.test\_.xml`
 
 Nun müssen wir die AD-FS metadaten von unserem AD abholen “URLs bitte anpassen”
