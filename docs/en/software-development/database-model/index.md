@@ -1,19 +1,9 @@
-*   [Category Tables 1.10](/display/en/Category+Tables+1.10)
-*   [Category Tables 1.9](/display/en/Category+Tables+1.9)
+# Database Model
 
-**Contents**
+*   [Category Tables 1.10](./category-tables-1.10.md)
+*   [Category Tables 1.9](./category-tables-1.9.md)
 
-*   1[Basics](#DatabaseModel-Basics)
-*   2[References (Foreign Keys)](#DatabaseModel-References(ForeignKeys))
-*   3[Name Scheme](#DatabaseModel-NameScheme)
-*   4[Objects](#DatabaseModel-Objects)
-*   5[Global and Specific Categories](#DatabaseModel-GlobalandSpecificCategories)
-*   6[Users, Contacts, Persons, Person Groups](#DatabaseModel-Users,Contacts,Persons,PersonGroups)
-*   7[Logbook](#DatabaseModel-Logbook)
-*   8[Overview of the Table](#DatabaseModel-OverviewoftheTable)
-*   9[Dialog-Plus Tables](#DatabaseModel-Dialog-PlusTables)
-
-Most of the settings and contents are saved in a Database Management System (DBMS) by i-doit. [MySQL or MariaDB](/display/en/System+Requirements) are applied as DBMS. But how is the structure of the i-doit database model?
+Most of the settings and contents are saved in a Database Management System (DBMS) by i-doit. [MySQL or MariaDB](../../installation/system-requirements.md) are applied as DBMS. But how is the structure of the i-doit database model?
 
 Basics
 ------
@@ -32,32 +22,20 @@ Name Scheme
 
 Besides the designation of the single tables, there is a consistent concept for names which runs through all field designations of the i-doit tables. It starts with the name of the table, followed by the actual name of the column. For example, the id field of the table _isys\_catg\_cpu\_list_ is called:
 
-[?](#)
-
-`isys_catg_cpu_list__id`
-
-`/\              /\`
-
-`Table CPU            Column (ID)`
-
-`isys_catg_cpu_list__title`
-
-`/\               /\`
-
-`Table CPU            Column(title)`
+    isys_catg_cpu_list__id
+        /\              /\
+     Table CPU            Column (ID)
+    isys_catg_cpu_list__title
+        /\               /\
+     Table CPU            Column(title)
 
 Correspondingly, references to other fields (foreign keys) follow a similar principle. A reference always contains the complete name of the referenced column, so you can always see to which table column the reference points by means of the name.
 
 Example object reference of a category:   
-  
 
-[?](#)
-
-`isys_catg_cpu_list__isys_obj__id`
-
-`/\                 /\      /\`
-
-`Table CPU      Table Obj.    Column`
+    isys_catg_cpu_list__isys_obj__id
+    /\                 /\      /\
+    Table CPU      Table Obj.    Column
 
 Objects
 -------
@@ -76,70 +54,43 @@ _isys\_catg\_ip\_list_ contains the foreign key _isys\_catg\_ip\_list\_\_isys\_o
 
 This results in the following SQL statement for the determination of all objects, their graphic cards and IP details:
 
-[?](#)
-
-`SELECT`
-
-`isys_obj__title,`
-
-`isys_catg_graphic_list__title,`
-
-`isys_catg_graphic_list__memory,`
-
-`isys_memory_unit__title,`
-
-`isys_catg_ip_list__hostname,`
-
-`isys_catg_ip_list__address`
-
-`FROM` `isys_obj`
-
-`INNER` `JOIN` `isys_catg_graphic_list`
-
-`ON` `isys_catg_graphic_list__isys_obj__id = isys_obj__id`
-
-`INNER` `JOIN` `isys_memory_unit`
-
-`ON` `isys_catg_graphic_list__isys_memory_unit__id = isys_memory_unit__id`
-
-`INNER` `JOIN` `isys_catg_ip_list`
-
-`ON` `isys_catg_ip_list__isys_obj__id = isys_obj__id`
+    SELECT
+      isys_obj__title,
+      isys_catg_graphic_list__title,
+      isys_catg_graphic_list__memory,
+      isys_memory_unit__title,
+      isys_catg_ip_list__hostname,
+      isys_catg_ip_list__address
+    FROM isys_obj
+    INNER JOIN isys_catg_graphic_list
+    ON isys_catg_graphic_list__isys_obj__id = isys_obj__id
+    INNER JOIN isys_memory_unit
+    ON isys_catg_graphic_list__isys_memory_unit__id = isys_memory_unit__id
+    INNER JOIN isys_catg_ip_list
+    ON isys_catg_ip_list__isys_obj__id = isys_obj__id
 
 The same also applies to specific categories. A query for all net details of all net objects looks as follows:
 
-[?](#)
-
-`SELECT`
-
-`isys_obj__title,`
-
-`isys_cats_net_list__address,`
-
-`isys_cats_net_list__dhcp_range_from,`
-
-`isys_cats_net_list__dhcp_range_to,`
-
-`isys_cats_net_list__dhcp,`
-
-`isys_cats_net_list__def_gw`
-
-`FROM`
-
-`isys_cats_net_list`
-
-`INNER` `JOIN` `isys_obj`
-
-`ON` `isys_cats_net_list__isys_obj__id = isys_obj__id`
+    SELECT
+      isys_obj__title,
+      isys_cats_net_list__address,
+      isys_cats_net_list__dhcp_range_from,
+      isys_cats_net_list__dhcp_range_to,
+      isys_cats_net_list__dhcp,
+      isys_cats_net_list__def_gw
+    FROM
+    isys_cats_net_list
+    INNER JOIN isys_obj
+    ON isys_cats_net_list__isys_obj__id = isys_obj__id
 
 **Diagram: Relation between categories and objects**
 
-**![](/download/attachments/61015964/Screenshot%202016-06-03%20um%2010.40.12.png?version=1&modificationDate=1517578229521&api=v2)  
+[![Diagram: Relation between categories and objects](../../assets/images/en/software-development/database-model/1-dm.png)](../../assets/images/en/software-development/database-model/1-dm.png)
 **
 
 In the diagram you can see how an object is linked to the global category CPU. This category again accesses Dialog+ entries, such as manufacturer and type. The same happens with the global category Form factor which accesses the form factor type.
 
- ![](/download/attachments/61015964/Screenshot%202016-06-03%20um%2010.42.09.png?version=1&modificationDate=1517578229576&api=v2)
+[![Diagram: Relation between categories and objects](../../assets/images/en/software-development/database-model/1-dm.png)](../../assets/images/en/software-development/database-model/1-dm.png)
 
 This diagram illustrates the relations of an object to the category "Host address" (IP). The object (for example, Server1) is in the the table _isys\_obj_, the allocated IP addresses are in the table _isys\_catg\_ip\_list_. Because of the detailed level of characteristics of the host address three additional tables are referenced beside the basic details (hostname, address ...):
 
