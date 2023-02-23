@@ -9,4 +9,4 @@ services:
       dockerfile: Dockerfile
     restart: on-failure
     ports:
-      - 0.0.0.0:8001:80
+      - 8001:80
