@@ -1,32 +1,39 @@
-# Expert settings
-
 The expert settings are a kind of "registry" of i-doit. Here you can set a lot of options which you normally can't reach via the normal GUI.
 
-!!! attention "Caution"
+**Contents**
 
-    Usually it is not necessary to add or edit values in the expert settings. For normal use the Web GUI provides functions to control i-doit in all relevant cases.
+*   1[Configuration](#ExpertSettings-Configuration)
+*   2[List of Settings](#ExpertSettings-ListofSettings)
 
-    Should you plan to carry out changes in the expert settings, we **strongly recommend** to make a **[backup](../../maintenance-and-operation/backup-and-recovery/index.md)** beforehand. Some of the listed settings have a serious effect on the application. In case of doubt do not hesitate to ask for [support](../customer-portal.md).
+Caution
+
+Usually it is not necessary to add or edit values in the expert settings. For normal use the Web GUI provides functions to control i-doit in all relevant cases.
+
+Should you plan to carry out changes in the expert settings, we **strongly recommend** to make a **[backup](/display/en/Backup+and+Recovery)** beforehand. Some of the listed settings have a serious effect on the application. In case of doubt do not hesitate to ask for [support](/display/en/Customer+Portal).
 
 Configuration
 -------------
 
-You can reach the expert settings under **Administration → System settings → Expert settings**.
+You can reach the expert settings under `**Administration → System settings → Expert settings**`.
 
-[![Configuration](../../assets/images/en/system-administration/system-settings/expert-settings/1-es.png)](../../assets/images/en/system-administration/system-settings/expert-settings/1-es.png)
+![](/download/attachments/61014608/image2017-4-26%2011%3A39%3A30.png?version=1&modificationDate=1493199569731&api=v2&effects=drop-shadow)
 
 Each setting consists of three parts:
 
 | Key | Value | Type |
 | --- | --- | --- |
-| The **Key** assigns a unique name to the setting. If a key shouldn't exist yet, it can be added later. | The **Value** is usually a string or a longer text or an integer value. | With the **Type** you define the scope of the setting. A setting with the type **Tenant-wide** only affects the tenant with which the user is currently logged in. **System-wide** means that the setting affects the complete i-doit independent of the available tenants. |
+| Key | Value | Type |
+| --- | --- | --- |
+| The `**Key**` assigns a unique name to the setting. If a key shouldn't exist yet, it can be added later. | The `**Value**` is usually a string or a longer text or an integer value. | With the `**Type**` you define the scope of the setting. A setting with the type `**Tenant-wide**` only affects the tenant with which the user is currently logged in. `**System-wide**` means that the setting affects the complete i-doit independent of the available tenants. |
 
   
 
 List of Settings
 ----------------
 
-| Key | Default Value | Recommended Value | Type | Module<br><br>(Scope/[Add-on](../../i-doit-pro-add-ons/index.md) in i-doit) | Description |
+| Key | Default Value | Recommended Value | Type | Module<br><br>(Scope/[Add-on](/display/de/i-doit+pro+Add-ons) in i-doit) | Description |
+| --- | --- | --- | --- | --- | --- |
+| Key | Default Value | Recommended Value | Type | Module<br><br>(Scope/[Add-on](/display/de/i-doit+pro+Add-ons) in i-doit) | Description |
 | --- | --- | --- | --- | --- | --- |
 | api.authenticated-users-only | 0   |     | System-wide setting | PRO/CMDB | Enforces authentication for use of the API |
 | auth.active | 1   |     | System-wide setting | PRO/CMDB | Activation/ deactivation of the authorization system |

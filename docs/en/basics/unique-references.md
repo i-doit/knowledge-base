@@ -1,6 +1,6 @@
 # Unique References
 
-References are important to prevent a lack of clarity and unambiguousness within the [IT documentation](../glossary.md). If you want to reference [objects](structure-of-the-it-documentation.md) for third-party systems, for example, various [attributes](../glossary.md) can be used for this task.
+References are important to prevent a lack of clarity and unambiguousness within the [IT documentation](../glossary.md). If you want to reference [objects](./structure-of-the-it-documentation.md) for third-party systems, for example, various [attributes](../glossary.md) can be used for this task.
 
 !!! info "Data imports"
 
@@ -30,7 +30,7 @@ The **SYS-ID** attribute is unique within all tenants and installations. For thi
 
 [![SYS-ID](../assets/images/en/basics/unique-references/2-ur.png)](../assets/images/en/basics/unique-references/2-ur.png)
 
-You can specify a prefix for each [object type](structure-of-the-it-documentation.md), which precedes the automatically generated number. You can set the prefix at **Administration → CMDB settings → Object type configuration → [Object type group] → [Object type] → SYSID prefix**. If you do not specify your own prefix, the SYSID will begin with the SYSID_ prefix. When you set an alternative prefix, the generation of the number changes: The object ID is used instead of the UNIX timestamp.
+You can specify a prefix for each [object type](./structure-of-the-it-documentation.md), which precedes the automatically generated number. You can set the prefix at **Administration → CMDB settings → Object type configuration → [Object type group] → [Object type] → SYSID prefix**. If you do not specify your own prefix, the SYSID will begin with the SYSID_ prefix. When you set an alternative prefix, the generation of the number changes: The object ID is used instead of the UNIX timestamp.
 
 [![SYSID prefix](../assets/images/en/basics/unique-references/3-ur.png)](../assets/images/en/basics/unique-references/3-ur.png)
 

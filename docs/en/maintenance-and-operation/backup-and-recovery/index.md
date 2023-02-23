@@ -2,7 +2,7 @@
 
 Since the [IT-documentation](../../glossary.md) contains important data required for daily work, the backup and recovery of i-doit is essential. Therefore it is important to consider i-doit with regard to the existing backup strategy.
 
-In this context, the following three areas need to be covered: [databases](index.md), [files](index.md) of i-doit and the [system configuration](index.md).
+In this context, the following three areas need to be covered: [databases](./index.md), [files](./index.md) of i-doit and the [system configuration](./index.md).
 
 Backup and Recovery of Databases
 --------------------------------

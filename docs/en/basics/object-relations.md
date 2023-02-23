@@ -1,6 +1,6 @@
 # Object Relations
 
-[Objects](structure-of-the-it-documentation.md) generally do not exist separately in i-doit but are in relation to each other. The servers are contained in racks, admins maintain servers, an operating system with software is running on a server ... In this article we will elaborate on the basic concepts of object relations.
+[Objects](./structure-of-the-it-documentation.md) generally do not exist separately in i-doit but are in relation to each other. The servers are contained in racks, admins maintain servers, an operating system with software is running on a server ... In this article we will elaborate on the basic concepts of object relations.
 
 Relation Types
 --------------
@@ -68,7 +68,7 @@ Already documented object relations are listed in **Extras → CMDB → Relatio
 Relation Objects
 ----------------
 
-When creating a relation between two objects, a third object of the [type](structure-of-the-it-documentation.md) **Relations** is created in the background. The object title of this object consists of the object title of the master object, followed by the description and the object title of the slave object.
+When creating a relation between two objects, a third object of the [type](./structure-of-the-it-documentation.md) **Relations** is created in the background. The object title of this object consists of the object title of the master object, followed by the description and the object title of the slave object.
 
 Example:
 
@@ -76,7 +76,7 @@ Example:
 | --- | --- | --- |
 | PDU-HQ-Intern-01-A | **supplies power  <br>** | ESX1 |
 
-The relation object is required to save characteristics of the relation as [attributes](structure-of-the-it-documentation.md). This includes:
+The relation object is required to save characteristics of the relation as [attributes](./structure-of-the-it-documentation.md). This includes:
 
 *   **Relation type**: see above
 *   **Weighting**: see below
@@ -95,7 +95,7 @@ Relation objects do not require a [license](../maintenance-and-operation/activat
 Relations Category
 ------------------
 
-Relations to other objects are gathered in the **Relations** [category](structure-of-the-it-documentation.md) per object. This category is assigned to each object type in a fixed way and can be opened via the arrows icon.
+Relations to other objects are gathered in the **Relations** [category](./structure-of-the-it-documentation.md) per object. This category is assigned to each object type in a fixed way and can be opened via the arrows icon.
 
 [![Relations Category](../assets/images/en/basics/object-relations/5-or.png)](../assets/images/en/basics/object-relations/5-or.png)
 
@@ -130,7 +130,7 @@ Parallel Relations
 
 Besides the direction-based relations with master and slave objects there exist also parallel relations in i-doit. The parallel relations also set two objects in relation to each other, however, without expressing a dependency on each other.
 
-Example: When a web cluster with multiple nodes is documented in i-doit, the nodes act independently of each other. Only the functioning of the cluster depends on all nodes. The **Cluster members** category (or the [mirrored category](structure-of-the-it-documentation.md) **Cluster memberships**) creates parallel object relations between the cluster members in the background.
+Example: When a web cluster with multiple nodes is documented in i-doit, the nodes act independently of each other. Only the functioning of the cluster depends on all nodes. The **Cluster members** category (or the [mirrored category](./structure-of-the-it-documentation.md) **Cluster memberships**) creates parallel object relations between the cluster members in the background.
 
 A listing of all parallel relations can be found at **Extras → CMDB → Relations → Parallel relations**. They cannot be created by the user but are created implicitly and automatically in the background.
 
@@ -139,7 +139,7 @@ A listing of all parallel relations can be found at **Extras → CMDB → Relat
 Object Relation in a Custom Category
 ------------------------------------
 
-Object relations can be documented in [custom categories](custom-categories.md). You need to distinguish between two field types:
+Object relations can be documented in [custom categories](./custom-categories.md). You need to distinguish between two field types:
 
 *   **Object-Browser**: No relation object is created. The relation to be documented here between two objects is not listed in the **Relations** category and the [CMDB explorer](../evaluation/cmdb-explorer/index.md) does not process these relations.
 *   **Object-Relation**: Here only an implicit relation type can be given as **Addition**. Explicit relations are not shown.

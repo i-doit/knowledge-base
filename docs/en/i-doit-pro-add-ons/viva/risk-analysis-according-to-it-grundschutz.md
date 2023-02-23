@@ -1,5 +1,3 @@
-# Risk analysis according to IT-Grundschutz
-
 In part, the necessary information is based on additional data to be documented, in part on data already collected as part of the procedure with VIVA according to BSI Standard 100-2.
 
 Identifying hazards

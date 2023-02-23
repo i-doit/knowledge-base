@@ -1,6 +1,4 @@
-# Introduction to VIVA
-
-VIVA stands for availability, integrity, confidentiality, authenticity and is available as an [add-on](../index.md).
+VIVA stands for availability, integrity, confidentiality, authenticity and is available as an [add-on](/display/en/i-doit+pro+Add-ons).
 
 As an essential part of an information security management system (ISMS), VIVA supports the documentation of all IT security-relevant processes. The documentation is considered the basis for achieving the goals set in standards such as ISO 27001 or IT-Grundschutz. With the help of VIVA, all data required for the procedure according to IT-Grundschutz and a risk analysis are recorded. Thanks to the structured, partially automated preparation of data, continuous quality analysis and comprehensive reporting, VIVA accompanies the procedure from the very beginning.
 

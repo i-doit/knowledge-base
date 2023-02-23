@@ -2,15 +2,7 @@
 
 It's no big deal to navigate through an [object list](./index.md) and search for specific [objects](../structure-of-the-it-documentation.md). And yet it's worth taking a closer look.
 
-<<<<<<< HEAD
-  
-
-It's no big deal to navigate through an [object list](/display/en/Object+List) and search for specific [objects](../../basics/structure-of-the-it-documentation.md). And yet it's worth taking a closer look.
-
-![](/download/attachments/61014333/image2017-4-28%2013%3A21%3A52.png?version=1&modificationDate=1493378510580&api=v2&effects=drop-shadow)
-=======
 [![object list](../../assets/images/en/basics/object-list/navigation-and-filtering/1-naf.png)](../../assets/images/en/basics/object-list/navigation-and-filtering/1-naf.png)
->>>>>>> main
 
 Navigation
 ----------

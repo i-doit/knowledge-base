@@ -1,5 +1,3 @@
-# VIVA Assistants
-
 While the chapter on the procedure with VIVA describes a manual way to document all information relevant to IT-Grundschutz, the VIVA add-on includes a large number of wizards to make this way partially automated. The wizards analyze the data in VIVA and in i-doit's CMDB in advance to generate suggestions that the user can subsequently edit and/or adopt. Complex interrelationships within the information network thus become visible. The user thus has the possibility to document faster and more comfortably.
 
 The wizards can be found below each information network as buttons in the respective action and navigation bars. When a wizard is called up, a popup opens that fits seamlessly into the VIVA interface. The wizards all work according to a similar scheme:

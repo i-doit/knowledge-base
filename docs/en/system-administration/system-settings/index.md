@@ -1,8 +1,6 @@
-# System Settings (Administration)
-
-*   [Expert Settings](./expert-settings.md)
-*   [System-wide](./system-wide.md)
-*   [Tenantsettings](./tenantsettings.md)
+*   [Expert Settings](/display/en/Expert+Settings)
+*   [System-wide](/display/en/System-wide)
+*   [Tenantsettings](/display/en/Tenantsettings)
 
   
 

@@ -1,5 +1,3 @@
-# i-diary: Requirements
-
 The following requirements are necessary before installing or using the i-diary.
 
 *   A running instance of [i-doit](https://www.i-doit.com/en/i-doit/trial-version/) pro, version 1.14 or higher

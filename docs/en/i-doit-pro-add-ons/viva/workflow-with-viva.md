@@ -1,5 +1,3 @@
-# Workflow with VIVA
-
 The options for IT documentation are already diverse in i-doit and can be adapted to the specifications and needs of the respective (organizational) environment. The VIVA add-on is no exception: Even though the underlying standards of IT-Grundschutz provide many specifications, they are open to interpretation in numerous places. VIVA attempts to do justice to this. Despite all this, some work sequences have become established in practice and are described in more detail in this chapter. The example makes no claim to be complete or binding. Further (intermediate) steps such as adaptation of the documentation are probably necessary.
 
 The goal of this workflow is to create a solid documentation basis to later support auditing and certification according to ISO 27001 based on IT-Grundschutz.

@@ -1,5 +1,3 @@
-# Object category VIVA
-
 The VIVA add-on brings the VIVA category, which is globally available for all object types. Through it, the user gains a quick overview. The category lists the appropriate VIVA-specific properties. These include ...
 
 *   the information network,

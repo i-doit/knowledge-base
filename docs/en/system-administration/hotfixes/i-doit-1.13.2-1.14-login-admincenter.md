@@ -1,33 +1,38 @@
-# i-doit 1.13.2 & 1.14: Login to Admin Center no longer possible
+Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP file is unpacked in the i-doit installation directory. Confirm the question whether you want to overwrite files during unpacking (`**Y**` key for "yes" or `**A**` key for "all"). Here you can find an example:
 
-Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP file is unpacked in the i-doit installation directory. Confirm the question whether you want to overwrite files during unpacking (**Y** key for "yes" or **A** key for "all"). Here you can find an example:
+[?](#)
 
-    sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
-    cd /var/www/html/i-doit/
-    sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
-    sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+`sudo` `cp` `i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip` `/var/www/html/i-doit/`
 
-!!! attention "Please note"
+`cd` `/var/www/html/i-doit/`
 
-    Please use hotfixes exclusively with the specified version.
+`sudo` `-u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip`
 
-    Please ensure that you made a [backup of i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) before you use any hotfix.
+`sudo` `rm` `i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip`
 
-    Please inform us about the use of hotfixes should you contact our support team afterwards.
+Please note
 
-!!! danger "Updateing from i-doit 1.12.2 to 1.12.3 is not possible (Version 1.12.2 only!)"
+Please use hotfixes exclusively with the specified version.
 
-This hotfix corrects an error that prevents the update from continuing via the download function when version 1.12.2 is used.
+Please ensure that you made a [backup of i-doit](/display/en/Backup+and+Recovery) before you use any hotfix.
 
-!!! attention "Declaration of consent"
+Please inform us about the use of hotfixes should you contact our support team afterwards.
 
-    By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
+### Login to the Admin Center no longer possible (Version 1.13.2 and 1.14 only!)
 
-[![hotfix-1.13.2-admin-center-login](../../assets/downloads/hotfixes/i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip)](../../assets/downloads/hotfixes/i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip)
+Declaration of consent
 
-After implementation, this hotfix provides a new command for [console.php](../../automation-and-integration/cli/index.md) to issue a new encrypted password for the Admin Center.  
+By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
+
+### [![](/s/-rg4ht/8803/xi7l17/5.0.0/_/download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-small-zip.png)i-doit\_1.13.2\_hotfix\_ID-7224\_Admin-Center-Login.zip](/download/attachments/82576119/i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip?version=2&modificationDate=1582120247846&api=v2)
+
+  
+
+After implementation, this hotfix provides a new command for [console.php](/display/en/Console) to issue a new encrypted password for the Admin Center.  
 The following command must be executed to reset the password:
 
-    sudo -u www-data php console.php admin-center-password-reset --user User --password Password
+[?](#)
+
+`sudo` `-u www-data php console.php admin-center-password-reset --user User --password Password`
 
 The user www-data is the Apache user of a Debian system. This user has to be adapted to other systems. Furthermore in the sections --user and --password a user from i-doit is needed who has the permissions to use the console.

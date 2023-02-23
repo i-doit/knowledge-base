@@ -1,5 +1,3 @@
-# Fill out form
-
 We open the form via the link and fill it out.
 
-[![Fill out form](../../assets/images/en/i-doit-pro-add-ons/forms/fill-out-form/fill-in.gif)](../../assets/images/en/i-doit-pro-add-ons/forms/fill-out-form/fill-in.gif)
+![](/download/attachments/117801397/fill-in.gif?version=1&modificationDate=1645203935273&api=v2&effects=drop-shadow)

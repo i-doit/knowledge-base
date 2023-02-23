@@ -1,5 +1,3 @@
-# i-diary: Determine the author
-
 There are three ways to select an author:
 
 Automatically discover an author
@@ -11,7 +9,7 @@ This will be done through the following process:
 
 When a “user name” is specified in the settings, the application will check whether the person matches a person object in i-doit. If this is the case the ID will be saved.
 
-[![user name](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/1-dta.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/1-dta.png)
+![](/download/attachments/97288326/setting.PNG?version=1&modificationDate=1600688211825&api=v2&effects=drop-shadow)
 
 Set author manually
 -------------------
@@ -20,7 +18,7 @@ The user can manually select an author for a new entry with the following option
 
 *   The user can write the object ID of the author in the configuration file. This setting takes effect when the application is restarted.
 
-[![Set author manually](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/2-dta.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/2-dta.png)
+![](/download/attachments/97288326/config.PNG?version=1&modificationDate=1600688211823&api=v2&effects=drop-shadow)
 
 *   The user can select a person from a searchable list. This list is divided into “Contacts” (object relations from the category “Contact assignment”) and “Persons” (objects of the type “Persons”).
 
