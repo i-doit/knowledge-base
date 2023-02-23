@@ -1,13 +1,16 @@
-# Switch Stacking
+**Inhaltsverzeichnis**
 
-With the **Stacking** [object type](../glossary.md) you can define a stack group of several members which exchange information. Although you can use stacking for different object types, the original idea for this object type and the associated **Stack member** [category](../glossary.md) is based on Switch Stacking. From version 1.7 the object type can be found under the [object type group](../glossary.md) **Other**.
+*   1[Stack Members](#SwitchStacking-StackMembers)
+*   2[Logical Ports](#SwitchStacking-LogicalPorts)
+
+With the **`Stacking`** [object type](/display/de/Glossar) you can define a stack group of several members which exchange information. Although you can use stacking for different object types, the original idea for this object type and the associated **`Stack member`** [category](/display/de/Glossar) is based on Switch Stacking. From version 1.7 the object type can be found under the [object type group](/display/de/Glossar) `**Other**`.
 
 Stack Members
 -------------
 
-You can add [objects](../glossary.md) as members of the stack and specify them as "Active" or "Passive" in the **Stack member** category, which was especially created for stacking. Beside the corresponding display, this specification has no other effect  on the documentation.
+You can add [objects](/display/de/Glossar) as members of the stack and specify them as "Active" or "Passive" in the **`Stack member`** category, which was especially created for stacking. Beside the corresponding display, this specification has no other effect  on the documentation.
 
-[![switch-stacking](../assets/images/en/use-cases/switch-stacking/1-sws.png)](../assets/images/en/use-cases/switch-stacking/1-sws.png)
+![](/download/attachments/66355834/en_category_stack_member.png?version=1&modificationDate=1522317065352&api=v2&effects=drop-shadow)
 
 Logical Ports
 -------------

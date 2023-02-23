@@ -1,14 +1,11 @@
-**Contents**
-
-*   1[License Overview](#LicenseAdministration-LicenseOverview)
-*   2[Objects that are not subject to license and are not counted as such](#LicenseAdministration-Objectsthatarenotsubjecttolicenseandarenotcountedassuch)
+# License Administration
 
 License Overview
 ----------------
 
 The license overview outlines the current utilization of the i-doit license and indicates how many free objects are still available. You can also display a list according to object types.
 
-![](/download/attachments/61014482/lizenzuebersichtEN.png?version=1&modificationDate=1603709790867&api=v2&effects=drop-shadow)
+[![License Overview](../../assets/images/en/system-administration/administration/license-administration/1-la.png)](../../assets/images/en/system-administration/administration/license-administration/1-la.png)
 
 Objects that are not subject to license and are not counted as such
 -------------------------------------------------------------------
@@ -16,10 +13,6 @@ Objects that are not subject to license and are not counted as such
 Relationships are not subject to license and do not burden the license.  
 Furthermore, these objects are not deducted from the license;
 
-  
-
-| Object Constant | Object Title |
-| --- | --- |
 | Object Constant | Object Title |
 | --- | --- |
 | **C\_\_OBJ\_\_ROOT\_LOCATION** | Root location |

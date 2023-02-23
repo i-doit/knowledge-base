@@ -1,10 +1,12 @@
+# Row size too large
+
 Problem:
 --------
 
 I want to update i-doit. During the update, an error message appears, such as:  
-![](/download/attachments/127140054/row_size_personlist.png?version=1&modificationDate=1661268261628&api=v2&effects=drop-shadow)
+[![](../../assets/images/en/system-administration/troubleshooting/row-size-too-large/1-rstl.png)](../../assets/images/en/system-administration/troubleshooting/row-size-too-large/1-rstl.png)  
 
-![](/download/attachments/127140054/row_size_personlist2.png?version=1&modificationDate=1661268261612&api=v2&effects=drop-shadow)
+[![](../../assets/images/en/system-administration/troubleshooting/row-size-too-large/1-rstl.png)](../../assets/images/en/system-administration/troubleshooting/row-size-too-large/1-rstl.png)
 
   
 
@@ -16,21 +18,15 @@ A backup should already exist because of the update.
 We set the row size and run the update again:  
 First we log in to mysql:
 
-[?](#)
-
-`mysql -u root -p`
+    mysql -u root -p
 
 Now the affected database is selected.
 
-[?](#)
-
-`USE idoit_data;`
+    USE idoit_data;
 
 If the error occurs for multiple databases, this step must be performed for all affected databases.  
 This may be the case if there are multiple clients.
 
 Now we set the ROW\_FORMAT of the table from Fixed to Dynamic:
 
-[?](#)
-
-`ALTER TABLE isys_cats_person_list ROW_FORMAT=DYNAMIC;`
+    ALTER TABLE isys_cats_person_list ROW_FORMAT=DYNAMIC;

@@ -40,7 +40,11 @@ You have to define some options before the mapping process between the table col
 
 ### Object Type
 
+<<<<<<< HEAD
+When you select an [object type](../../basics/structure-of-the-it-documentation.md) via the drop-down menu `**Global object type**`, all objects in the `.CSV` file will be imported as this type of object. If you do not define a global object type, you require an additional field in the `.CSV` file to enter the [database constant](../../basics/structure-of-the-it-documentation.md). The object type to which the object will be associated is determined by this constant for every line. This allows you to import objects from different object types (client, printer, monitors ...) from one file. This information has to be maintained for all objects if no global object type is used. You can't use a mixed form.
+=======
 When you select an [object type](../../basics/structure-of-the-it-documentation.md) via the drop-down menu **Global object type**, all objects in the .CSV file will be imported as this type of object. If you do not define a global object type, you require an additional field in the .CSV file to enter the [database constant](../../basics/structure-of-the-it-documentation.md). The object type to which the object will be associated is determined by this constant for every line. This allows you to import objects from different object types (client, printer, monitors ...) from one file. This information has to be maintained for all objects if no global object type is used. You can't use a mixed form.
+>>>>>>> main
 
 ### Separators, Headers and Consider default template
 
@@ -59,7 +63,11 @@ If you want to update existing objects with CSV data import, you can decide how 
 
 ### Handling of Entries in List Categories (Multi-Valued)
 
+<<<<<<< HEAD
+Furthermore, you have to state in which form [list categories](../../basics/structure-of-the-it-documentation.md) (multi-valued) appear in the `.csv` file. If no categories of this type are involved in the data import, you can ignore the following options.
+=======
 Furthermore, you have to state in which form [list categories](../../basics/structure-of-the-it-documentation.md) (multi-valued) appear in the .csv file. If no categories of this type are involved in the data import, you can ignore the following options.
+>>>>>>> main
 
 What is striking in the example shown above is that “Client 02” appears multiple times. Since this client possesses two CPUs, two entries (one per CPU) need to be generated in the **CPU** list category. By using an additional  **line** the object receives both entries in the **CPU** category. It is not required to enter unvarying [attributes](../../glossary.md) multiple times ín further lines of the object. This means that you do not have to set inventory number “ABCD-2000” again.
 

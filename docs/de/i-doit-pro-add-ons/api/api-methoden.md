@@ -1,4 +1,4 @@
- API Methoden
+# API Methoden
 In diesem Artikel erläutern wir die i-doit [JSON-RPC API](./index.md) im Detail. Wenn Sie wissen wollen, welche Parameter für jede Methode gesetzt werden müssen/können und wie eine typische Antwort aussieht, ist dies die richtige Ressource.
 
 Namespace [idoit]
@@ -1384,7 +1384,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.category.purge
 
-??? exmple "cmdb.category.purge"
+??? example "cmdb.category.purge"
 
     Bereinigen eines Kategorieeintrags eines Objekts.  
     Es funktioniert bei multi-value Kategorien und single-value Kategorien.

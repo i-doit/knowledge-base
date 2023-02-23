@@ -1,13 +1,13 @@
-# i-doit with OpenID-Connect authentication explained with Google login
-
 **Requirements**
 ----------------
 
 *   Debian 10
 *   installed i-doit
 *   Server needs internet access  
+    
 *   Server needs a valid DNS name
 *   Server has to be reachable via SSL  
+    
 *   Access to Google **APIs & Dienste**
 
 Create OAuth login credentials  
@@ -17,21 +17,25 @@ Create OAuth login credentials
 Open [https://console.developers.google.com/](https://console.developers.google.com/)
 
 1.  Go the the home screen  
-2.  Select "Credentials"  
-3.  Select "Create Credentials"  
-4.  Select "OAuth client ID"  
     
-[![openid-connect](../assets/images/en/use-cases/open-id-connect/1-oidc.png)](../assets/images/en/use-cases/open-id-connect/1-oidc.png)
+2.  Select "`Credentials`"  
+    
+3.  Select "`Create Credentials`"  
+    
+4.  Select "`OAuth client ID`"  
+    
+
+![](/download/attachments/82575980/01b.png?version=1&modificationDate=1580129197293&api=v2)
 
   
 
-1.  Select "Web application"
+1.  Select "`Web application`"
 2.  Use a recognizable title for the name
 3.  Specify as Authorized Redirection URL a URL that is behind the web resource to be backed up but does not point to any content (!).  
     The URL specified here as an example should be secured with authentication from [https://gauth.i-doit.com/i-doit/](https://gauth.i-doit.com/i-doit/).  
     The attached resource **"redirect\_uri" does not exist** on the web server!
 
-[![openid-connect](../assets/images/en/use-cases/open-id-connect/2-oidc.png)](../assets/images/en/use-cases/open-id-connect/2-oidc.png)
+![](/download/thumbnails/82575980/02b.png?version=1&modificationDate=1580129197281&api=v2)
 
   
 
@@ -42,7 +46,7 @@ Open [https://console.developers.google.com/](https://console.developers.google.
 3.  Configure OAuth approval screen  
     (This is **not neccessary for a test** but will be needed on live systems)
 
-[![openid-connect](../assets/images/en/use-cases/open-id-connect/3-oidc.png)](../assets/images/en/use-cases/open-id-connect/3-oidc.png)
+![](/download/thumbnails/82575980/03b.png?version=1&modificationDate=1580129197265&api=v2)
 
 Configure webserver  
 
@@ -50,51 +54,77 @@ Configure webserver
 
 #### Install the Apache package **mod\_auth\_openidc** in your installation of **Debian 10**  
 
-    sudo apt install libapache2-mod-auth-openidc
+[?](#)
+
+`sudo` `apt` `install` `libapache2-mod-auth-openidc`
 
 #### Add the following code to your Apache configuration:  
 
-    OIDCProviderMetadataURL https://accounts.google.com/.well-known/openid-configuration
-    OIDCClientID <Client_ID_aus_der_Google_API_Console>
-    OIDCClientSecret <Client_Secret_aus_der_Google_API_Console>
+[?](#)
 
-    # OIDCRedirectURI ist die vorher angegebene Redirect URL, die auf einen nicht
-    # existierenden Content zeigt, der hinter der abgesicherten URL liegt
+`OIDCProviderMetadataURL https:``//accounts``.google.com/.well-known``/openid-configuration`
 
-    OIDCRedirectURI https://<SERVER-URL>/i-doit/redirect_uri
-    OIDCCryptoPassphrase <Irgendein_Passwort_definieren_für_die_Verschlüsselung>
+`OIDCClientID <Client_ID_aus_der_Google_API_Console>`
 
-    OIDCProviderIssuer accounts.google.com
-    OIDCProviderAuthorizationEndpoint https://accounts.google.com/o/oauth2/auth
-    OIDCProviderTokenEndpoint https://accounts.google.com/o/oauth2/token
-    OIDCProviderTokenEndpointAuth client_secret_post
-    OIDCProviderUserInfoEndpoint https://www.googleapis.com/plus/v1/people/me/openIdConnect
-    OIDCProviderJwksUri https://www.googleapis.com/oauth2/v2/certs
-    OIDCRemoteUserClaim email
-    OIDCScope "email"
+`OIDCClientSecret <Client_Secret_aus_der_Google_API_Console>`
 
-    <Location /i-doit/>
-        AuthType openid-connect
-        Require valid-user
-    </Location>
+`# OIDCRedirectURI ist die vorher angegebene Redirect URL, die auf einen nicht`
+
+`# existierenden Content zeigt, der hinter der abgesicherten URL liegt`
+
+`OIDCRedirectURI https:``//``<SERVER-URL>``/i-doit/redirect_uri`
+
+`OIDCCryptoPassphrase <Irgendein_Passwort_definieren_für_die_Verschlüsselung>`
+
+`OIDCProviderIssuer accounts.google.com`
+
+`OIDCProviderAuthorizationEndpoint https:``//accounts``.google.com``/o/oauth2/auth`
+
+`OIDCProviderTokenEndpoint https:``//accounts``.google.com``/o/oauth2/token`
+
+`OIDCProviderTokenEndpointAuth client_secret_post`
+
+`OIDCProviderUserInfoEndpoint https:``//www``.googleapis.com``/plus/v1/people/me/openIdConnect`
+
+`OIDCProviderJwksUri https:``//www``.googleapis.com``/oauth2/v2/certs`
+
+`OIDCRemoteUserClaim email`
+
+`OIDCScope` `"email"`
+
+`<Location` `/i-doit/``>`
+
+`AuthType openid-connect`
+
+`Require valid-user`
+
+`<``/Location``>`
 
 ##### This is how the configuration looks:  
 
-[![openid-connect](../assets/images/en/use-cases/open-id-connect/4-oidc.png)](../assets/images/en/use-cases/open-id-connect/4-oidc.png)
+![](/download/thumbnails/82575980/04.png?version=2&modificationDate=1580129197252&api=v2)
 
 #### Restart your webserver  
 
-    sudo systemctl restart apache2
+[?](#)
+
+`sudo` `systemctl restart apache2`
 
 Test authentication and finish last steps  
------------------------------------------
 
-Create the file identity.php. In our case it will be created at /var/www/html/i-doit/identity.php.
+--------------------------------------------
 
-    <?php
-    echo $_SERVER['REMOTE_USER'];
-    #print_r(array_map("htmlentities", apache_request_headers()));
-    ?>
+Create the file `identity.php`. In our case it will be created at `/var/www/html/i-doit/identity.php`.
+
+[?](#)
+
+`<?php`
+
+`echo` `$_SERVER[``'REMOTE_USER'``];`
+
+`#print_r(array_map("htmlentities", apache_request_headers()));`
+
+`?>`
 
   
 
@@ -102,7 +132,7 @@ Create the file identity.php. In our case it will be created at /var/www/html/i-
     
 2.  Login via Google
 
-[![openid-connect](../assets/images/en/use-cases/open-id-connect/5-oidc.png)](../assets/images/en/use-cases/open-id-connect/5-oidc.png)
+![](/download/attachments/82575980/05b.png?version=1&modificationDate=1580129197240&api=v2)
 
   
 
@@ -111,9 +141,9 @@ Create the file identity.php. In our case it will be created at /var/www/html/i-
 2.  Login into your i-doit and use this as the login name for the corresponding i-doit user  
     **(!) Important: The domain part of the address, beginning with @ is not used. The name has to be reduced to the first part:****“testaccount@i-doit.com” becomes “testaccount”.**
 
-[![openid-connect](../assets/images/en/use-cases/open-id-connect/6-oidc.png)](../assets/images/en/use-cases/open-id-connect/6-oidc.png)
+![](/download/attachments/82575980/06.png?version=2&modificationDate=1580129197225&api=v2)
 
-[![openid-connect](../assets/images/en/use-cases/open-id-connect/7-oidc.png)](../assets/images/en/use-cases/open-id-connect/7-oidc.png)
+![](/download/attachments/82575980/07.png?version=2&modificationDate=1580129197187&api=v2)
 
 Enable SSO in i-doit  
 
@@ -123,11 +153,11 @@ Enable SSO in i-doit
     
 2.  Select system settings  
     
-3.  Select "**yes**" at "**Single Sign on**" option "**Active**"  
+3.  Select "`**yes**`" at "**Single Sign on**" option "**`Active`**"  
     
 4.  Save
 
-[![openid-connect](../assets/images/en/use-cases/open-id-connect/8-oidc.png)](../assets/images/en/use-cases/open-id-connect/8-oidc.png)  
+![](/download/attachments/82575980/08.png?version=2&modificationDate=1580129197173&api=v2)  
   
 
 Done! If i-doit is now opened, the Google authentication appears first. After successful authentication, the user is directly logged in with the account linked to the user name.
