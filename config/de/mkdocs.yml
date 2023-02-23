@@ -362,6 +362,7 @@ nav:
       - Zammad: automatisierung-und-integration/service-desk/zammad.md
     - Single Sign On (SSO):
       - automatisierung-und-integration/single-sign-on/index.md
+      - Einrichtung von SAML-SSO: automatisierung-und-integration/single-sign-on/einrichtung-saml-sso.md
       - Single Sign on (SSO) via GSSAPI: automatisierung-und-integration/single-sign-on/single-sign-on-via-gssapi.md
     - SNMP: automatisierung-und-integration/snmp.md
   - Administration:
