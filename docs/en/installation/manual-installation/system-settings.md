@@ -1,4 +1,4 @@
-**Contents**
+# System settings
 
 For the configuration of the operating system we recommend a series of settings with regard to PHP, Apache Webserver and MySQL/MariaDB. These are based on the [system requirements](../system-requirements.md) for i-doit. The settings vary depending on the operating system therefore please refer to the corresponding articles for further information:
 

@@ -1,34 +1,26 @@
-**Inhaltsverzeichnis**
-
-*   1[System requirements](#RedHatEnterpriseLinux8(RHEL8)-Systemrequirements)
-*   2[Installation of the packages](#RedHatEnterpriseLinux8(RHEL8)-Installationofthepackages)
-*   3[Configuration](#RedHatEnterpriseLinux8(RHEL8)-Configuration)
-    *   3.1[PHP](#RedHatEnterpriseLinux8(RHEL8)-PHP)
-    *   3.2[Apache web server](#RedHatEnterpriseLinux8(RHEL8)-Apachewebserver)
-    *   3.3[MariaDB](#RedHatEnterpriseLinux8(RHEL8)-MariaDB)
-*   4[Next Step](#RedHatEnterpriseLinux8(RHEL8)-NextStep)
+# Red Hat Enterprise Linux 8 (RHEL 8)
 
 This article describes which packages need to be installed and configured. 
 
 System requirements
 -------------------
 
-The general [system requirements](/display/en/System+Requirements) apply.
+The general [system requirements](../../system-requirements.md) apply.
 
-This article refers to **RHEL in version 8.x**  
+This article refers to **RHEL in version 8.x**
 To determine which version is used, this command can be executed on the console:
 
-[?](#)
-
-`cat` `/etc/os-release`
+```shell
+cat /etc/os-release
+```
 
 As system architecture a x86 in 64bit should be used:
 
-[?](#)
+```shell
+uname -m
+```
 
-`uname` `-m`
-
-**`x86_64`** stands for 64bit, **`i386`** or **`i686`** only for 32bit.
+**x86_64** stands for 64bit, **i386** or **i686** only for 32bit.
 
 There are other operating systems that are closely related to RHEL, such as the open replica CentOS and Fedora, which is maintained by Red Hat. However, only RHEL is officially supported.
 
@@ -46,95 +38,79 @@ installed. However, the current **version 8.x of RHEL** only contains obsolete p
 
 At first the first packages are installed from the default repositories:
 
-[?](#)
-
-`sudo` `dnf update`
-
-`sudo` `dnf` `install` `httpd memcached unzip wget zip`
+```shell
+sudo dnf update
+sudo dnf install httpd memcached unzip wget zip
+```
 
 For PHP, the current Extra Packages for Enterprise Linux (EPEL) is included:
 
-[?](#)
-
-`sudo` `rpm --``import` `https:``//dl``.fedoraproject.org``/pub/epel/RPM-GPG-KEY-EPEL-8`
-
-`sudo` `rpm -Uvh https:``//dl``.fedoraproject.org``/pub/epel/epel-release-latest-8``.noarch.rpm`
+```shell
+sudo rpm --import https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-8
+sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+```
 
 After the repository has been included, the possible versions are initialized and then the desired version can be activated (we use PHP 7.3 here):
 
-[?](#)
-
-`sudo` `dnf module list php`
-
-`sudo` `dnf module` `install` `php:7.4 -y`
+```shell
+sudo dnf module list php
+sudo dnf module install php:7.4 -y
+```
 
 The PHP packages are then installed:
 
-[?](#)
-
-`sudo` `dnf` `install` `php php-bcmath php-cli php-common php-curl php-gd php-json php-ldap php-mysql php-pgsql php-soap php-xml php-zip`
+```shell
+sudo dnf install php php-bcmath php-cli php-common php-curl php-gd php-json php-ldap php-mysql php-pgsql php-soap php-xml php-zip
+```
 
 Furthermore, RHEL only offers outdated distribution packages for MariaDB. Therefore we use the official third party repository of MariaDB:
 
-[?](#)
-
-`sudo` `nano` `/etc/yum``.repos.d``/MariaDB``.repo`
+```shell
+sudo nano /etc/yum.repos.d/MariaDB.repo
+```
 
 Die Datei erhält folgenden Inhalt:
 
-[?](#)
-
-`# MariaDB 10.5 RHEL repository list`
-
-`# [http://downloads.mariadb.org/mariadb/repositories/](http://downloads.mariadb.org/mariadb/repositories/)`
-
-`[mariadb]`
-
-`name = MariaDB`
-
-`baseurl = http:``//yum``.mariadb.org``/10``.5``/rhel8-amd64`
-
-`module_hotfixes=1`
-
-`gpgkey=https:``//yum``.mariadb.org``/RPM-GPG-KEY-MariaDB`
-
-`gpgcheck=1`
+```shell
+# MariaDB 10.5 RHEL repository list
+# http://downloads.mariadb.org/mariadb/repositories/
+[mariadb]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.5/rhel8-amd64
+module_hotfixes=1
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1
+```
 
 After that the packages are installed (Note: MariaDB needs the additional package boost-program-options for a clean installation):
 
-[?](#)
-
-`sudo` `dnf` `install` `boost-program-options`
-
-`sudo` `dnf` `install` `MariaDB-server MariaDB-client --disablerepo=AppStream`
+```shell
+sudo dnf install boost-program-options
+sudo dnf install MariaDB-server MariaDB-client --disablerepo=AppStream
+```
 
 These commands are required to start the Apache web server and MariaDB at boot time:
 
-[?](#)
-
-`sudo` `systemctl` `enable` `httpd.service`
-
-`sudo` `systemctl` `enable` `mariadb.service`
-
-`sudo` `systemctl` `enable` `memcached.service`
+```shell
+sudo systemctl enable httpd.service
+sudo systemctl enable mariadb.service
+sudo systemctl enable memcached.service
+```
 
 Both services are then started:
 
-[?](#)
-
-`sudo` `systemctl start httpd.service`
-
-`sudo` `systemctl start mariadb.service`
-
-`sudo` `systemctl start memcached.service`
+```shell
+sudo systemctl start httpd.service
+sudo systemctl start mariadb.service
+sudo systemctl start memcached.service
+```
 
 Furthermore, the default port 80 of HTTP is allowed through the firewall. This must be restarted after the adjustment:
 
-[?](#)
-
-`sudo` `firewall-cmd --permanent --add-service=http`
-
-`sudo` `systemctl restart firewalld.service`
+```shell
+sudo firewall-cmd --permanent --add-service=http
+sudo systemctl restart firewalld.service
+```
 
 Configuration
 -------------
@@ -145,59 +121,37 @@ The installed packages for Apache Webserver, PHP and MariaDB already come with c
 
 First a new file is created and filled with the necessary settings:
 
-[?](#)
+```shell
 
-`sudo` `nano` `/etc/php``.d``/i-doit``.ini`
+sudo nano /etc/php.d/i-doit.ini
 
 This file receives the following content:
 
-[?](#)
-
-`allow_url_fopen = Yes`
-
-`file_uploads = On`
-
-`magic_quotes_gpc = Off`
-
-`max_execution_time = 300`
-
-`max_file_uploads = 42`
-
-`max_input_time = 60`
-
-`max_input_vars = 10000`
-
-`memory_limit = 256M`
-
-`post_max_size = 128M`
-
-`register_argc_argv = On`
-
-`register_globals = Off`
-
-`short_open_tag = On`
-
-`upload_max_filesize = 128M`
-
-`display_errors = Off`
-
-`display_startup_errors = Off`
-
-`error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT`
-
-`log_errors = On`
-
-`default_charset =` `"UTF-8"`
-
-`default_socket_timeout = 60`
-
-`date``.timezone = Europe``/Berlin`
-
-`session.gc_maxlifetime = 604800`
-
-`session.cookie_lifetime = 0`
-
-`mysqli.default_socket =` `/var/lib/mysql/mysql``.sock`
+```shell
+allow_url_fopen = Yes
+file_uploads = On
+magic_quotes_gpc = Off
+max_execution_time = 300
+max_file_uploads = 42
+max_input_time = 60
+max_input_vars = 10000
+memory_limit = 256M
+post_max_size = 128M
+register_argc_argv = On
+register_globals = Off
+short_open_tag = On
+upload_max_filesize = 128M
+display_errors = Off
+display_startup_errors = Off
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+log_errors = On
+default_charset = "UTF-8"
+default_socket_timeout = 60
+date.timezone = Europe/Berlin
+session.gc_maxlifetime = 604800
+session.cookie_lifetime = 0
+mysqli.default_socket = /var/lib/mysql/mysql.sock
+```
 
 The value (in seconds) of **session.gc\_maxlifetime** should be greater than or equal to the **session timeout** in the i-doit system settings.
 
@@ -205,175 +159,141 @@ The parameter **date.timezone** should be adjusted to the local time zone (see [
 
 The Apache Web server is then restarted:
 
-[?](#)
-
-`sudo` `systemctl restart httpd.service`
+```shell
+sudo systemctl restart httpd.service
+```
 
 ### Apache web server
 
 The default vhost is retained and added. A new file is created and edited:
 
-[?](#)
-
-`sudo` `nano` `/etc/httpd/conf``.d``/i-doit``.conf`
+```shell
+sudo nano /etc/httpd/conf.d/i-doit.conf
+```
 
 In this file the supplementary one is stored:
 
-[?](#)
-
-`DirectoryIndex index.php`
-
-`DocumentRoot` `/var/www/html/`
-
-`<Directory` `/var/www/html/``>`
-
-`AllowOverride All`
-
-`<``/Directory``>`
+```shell
+DirectoryIndex index.php
+DocumentRoot /var/www/html/
+<Directory /var/www/html/>
+    AllowOverride All
+</Directory>
+```
 
 i-doit provides different Apache settings in files named **.htaccess**. In order for these settings to be taken into account, the setting **AllowOverride All is required**.
 
 The next step is to restart the Apache web server:
 
-[?](#)
-
-`sudo` `systemctl restart httpd.service`
+```shell
+sudo systemctl restart httpd.service
+```
 
 For Apache to have read and write permissions in the future installation directory of i-doit, this must be allowed by **SELinux**:
 
-[?](#)
-
-`sudo` `chown` `apache:apache -R` `/var/www/html`
-
-`sudo` `chcon -t httpd_sys_content_t` `"/var/www/html/"` `-R`
-
-`sudo` `chcon -t httpd_sys_rw_content_t` `"/var/www/html/"` `-R`
+```shell
+sudo chown apache:apache -R /var/www/html
+sudo chcon -t httpd_sys_content_t "/var/www/html/" -R
+sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
+```
 
 ### MariaDB
 
 In order for MariaDB to perform well and run safely, there are a few steps that need to be done meticulously. This starts with a secure installation. The recommendations should be followed. The **root** user should be given a secure password:
 
-[?](#)
-
-`mysql_secure_installation`
+```shell
+mysql_secure_installation
+```
 
 To allow i-doit to use the **root** user during setup, call the shell of MariaDB:
 
-[?](#)
-
-`sudo` `mysql -uroot`
+```shell
+sudo mysql -uroot
+```
 
 The following SQL statements are now executed in the MariaDB shell
 
-[?](#)
-
-`ALTER` `USER` `root@localhost IDENTIFIED VIA mysql_native_password;`
-
-`FLUSH` `PRIVILEGES``;`
-
-`EXIT;`
+```shell
+ALTER USER root@localhost IDENTIFIED VIA mysql_native_password;
+FLUSH PRIVILEGES;
+EXIT;
+```
 
 MariaDB is then stopped. It is important to move unneeded files (otherwise you risk a significant performance loss):
 
-[?](#)
-
-`mysql -uroot -p -e``"SET GLOBAL innodb_fast_shutdown = 0"`
-
-`sudo` `systemctl stop mariadb.service`
-
-`sudo` `mv` `/var/lib/mysql/ib_logfile``[01]` `/tmp`
+```shell
+mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
+sudo systemctl stop mariadb.service
+sudo mv /var/lib/mysql/ib_logfile[01] /tmp
+```
 
 A new file is created for the different configuration settings:
 
-[?](#)
-
-`sudo` `nano` `/etc/my``.cnf.d``/99-i-doit``.cnf`
+```shell
+sudo nano /etc/my.cnf.d/99-i-doit.cnf
+```
 
 This file contains the new configuration settings. For optimal performance, these settings should be adapted to the (virtual) hardware:
 
-[?](#)
-
-`[mysqld]`
-
-`# This is the number 1 setting to look at for any performance optimization`
-
-`# It is where the data and indexes are cached: having it as large as possible will`
-
-`# ensure MySQL uses memory and not disks for most read operations.`
-
-`#`
-
-`# Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).`
-
-`innodb_buffer_pool_size = 1G`
-
-`# Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB`
-
-`innodb_buffer_pool_instances = 1`
-
-`# Redo log file size, the higher the better.`
-
-`# MySQL/MariaDB writes two of these log files in a default installation.`
-
-`innodb_log_file_size = 512M`
-
-`innodb_sort_buffer_size = 64M`
-
-`sort_buffer_size = 262144` `# default`
-
-`join_buffer_size = 262144` `# default`
-
-`max_allowed_packet = 128M`
-
-`max_heap_table_size = 32M`
-
-`query_cache_min_res_unit = 4096`
-
-`query_cache_type = 1`
-
-`query_cache_limit = 5M`
-
-`query_cache_size = 80M`
-
-`tmp_table_size = 32M`
-
-`max_connections = 200`
-
-`innodb_file_per_table = 1`
-
-`# Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.`
-
-`innodb_thread_concurrency = 0`
-
-`# Disable this (= 0) if you have slow harddisks`
-
-`innodb_flush_log_at_trx_commit = 1`
-
-`innodb_flush_method = O_DIRECT`
-
-`innodb_lru_scan_depth = 2048`
-
-`table_definition_cache = 1024`
-
-`table_open_cache = 2048`
-
-`# Only if your have MySQL 5.6 or higher, do not use with MariaDB!`
-
-`#table_open_cache_instances = 4`
-
-`innodb_stats_on_metadata = 0`
-
-`sql-mode =` `""`
+```shell
+[mysqld]
+  
+# This is the number 1 setting to look at for any performance optimization
+# It is where the data and indexes are cached: having it as large as possible will
+# ensure MySQL uses memory and not disks for most read operations.
+#
+# Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
+innodb_buffer_pool_size = 1G
+ 
+# Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
+innodb_buffer_pool_instances = 1
+ 
+# Redo log file size, the higher the better.
+# MySQL/MariaDB writes two of these log files in a default installation.
+innodb_log_file_size = 512M
+ 
+innodb_sort_buffer_size = 64M
+sort_buffer_size = 262144 # default
+join_buffer_size = 262144 # default
+ 
+max_allowed_packet = 128M
+max_heap_table_size = 32M
+query_cache_min_res_unit = 4096
+query_cache_type = 1
+query_cache_limit = 5M
+query_cache_size = 80M
+ 
+tmp_table_size = 32M
+max_connections = 200
+innodb_file_per_table = 1
+ 
+# Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
+innodb_thread_concurrency = 0
+ 
+# Disable this (= 0) if you have slow harddisks
+innodb_flush_log_at_trx_commit = 1
+innodb_flush_method = O_DIRECT
+ 
+innodb_lru_scan_depth = 2048
+table_definition_cache = 1024
+table_open_cache = 2048
+# Only if your have MySQL 5.6 or higher, do not use with MariaDB!
+#table_open_cache_instances = 4
+ 
+innodb_stats_on_metadata = 0
+ 
+sql-mode = ""
+```
 
 Finally, MariaDB is started:
 
-[?](#)
-
-`sudo` `systemctl start mariadb.service`
+```shell
+sudo systemctl start mariadb.service
+```
 
 Next Step
 ---------
 
 The operating system is now prepared so that i-doit can be installed:
 
-[Go to Setup ...](/display/en/Setup)
+[Go to Setup ...](../setup.md)

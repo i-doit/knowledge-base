@@ -84,24 +84,22 @@ Für die Datenbank-Anbindung sind wichtige Credentials und Einstellungen einzutr
 *   **Connection settings**
     *   **Host:** in der Regel der Host selbst, also localhost oder 127.0.0.1
     *   **Port:** in der Regel der Standard-Port von MySQL/MariaDB, also 3306
-    *   **Username:** Benutzername des Datenbank-Systembenutzers, meistens root  
-        
+    *   **Username:** Benutzername des Datenbank-Systembenutzers, meistens root
+
     *   **Password:** Passwort des Benutzers
 *   **MySQL user settings**
-    *   **Username****:** Benutzername des Besitzers der i-doit-Datenbanken, meistens idoit  
-        
-    *   **Password****:** Passwort des Benutzers  
-        
+    *   **Username**: Benutzername des Besitzers der i-doit-Datenbanken, meistens idoit
+
+    *   **Password**: Passwort des Benutzers
+
 *   **Database settings**
-    *   **System Database Name:** Name der Systemdatenbank, meistens idoit_system  
-        
-    *   **Mandator Database Name:** Name der Datenbank für den ersten Mandanten, meistens idoit_data  
-        
-    *   **Mandator title:** Titel des Mandanten, meistens der Name der Organisation, die im Fokus steht  
-        
-    *   **Start value for object/configuration item IDs:** in der Regel 1  
-          
-        
+    *   **System Database Name:** Name der Systemdatenbank, meistens idoit_system
+
+    *   **Mandator Database Name:** Name der Datenbank für den ersten Mandanten, meistens idoit_data
+
+    *   **Mandator title:** Titel des Mandanten, meistens der Name der Organisation, die im Fokus steht
+
+    *   **Start value for object/configuration item IDs:** in der Regel 
 
 !!! success "Unix Socket vs. Network Port"
 
@@ -121,7 +119,7 @@ Für den Zugang zum **[Admin-Center](../../administration/admin-center.md)** i
 
 #### Config Check
 
-In diesem Schritt werden alle vorherigen Schritte zusammengefasst und überprüft, ob das Setup vollzogen werden kann.  
+In diesem Schritt werden alle vorherigen Schritte zusammengefasst und überprüft, ob das Setup vollzogen werden kann.
 
 #### Installation
 
@@ -136,13 +134,13 @@ cd /var/www/html/i-doit/
 
 Es ist zwingend erforderlich, die folgenden Befehle mit dem Benutzer auszuführen, mit dessen Rechten der Webserver läuft. Bei [Debian](debian.md) basierten Betriebssystemen ist dies **www-data**, unter RHEL **apache** und SLES **wwwrun**.
 
-Die Optionen orientieren sich am Setup über die Web GUI.  
+Die Optionen orientieren sich am Setup über die Web GUI.
 
 #### Geführte Installation
 
     sudo -u www-data php console.php install
 
-Der Assistent fragt einige Credentials und Einstellungen ab. In Klammern angegebene Werte sind Standardwerte, die durch Druck auf **Enter** übernommen werden.  
+Der Assistent fragt einige Credentials und Einstellungen ab. In Klammern angegebene Werte sind Standardwerte, die durch Druck auf **Enter** übernommen werden.
 
 Anschließend kann ein [Mandant](../../administration/mandantenfaehigkeit.md) über das [Admin Center](../../administration/admin-center.md) oder über die [console.php](../../automatisierung-und-integration/cli/console/index.md) erstellt werden.
 
