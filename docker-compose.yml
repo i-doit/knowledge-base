@@ -7,6 +7,6 @@ services:
     build:
       context: "./"
       dockerfile: Dockerfile
-    restart: on-failure
+    restart: unless-stopped
     ports:
       - 8001:80
