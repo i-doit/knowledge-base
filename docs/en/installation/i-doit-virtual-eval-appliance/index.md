@@ -52,7 +52,7 @@ Configuration
 
 The configuration of the appliance can be carried out via the console. After logging in via SSH a menu appears:
 
- ![SSH menu](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)
+ [![SSH menu](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)
 
 | Shortcut | Menu item | Function |
 | --- | --- | --- |
