@@ -20,7 +20,7 @@ The download comes as a normal ZIP file which has to be extracted after download
 
 When importing, settings may be requested (name, CPU cores, memory). The presets can be taken over without problems. If they are changed, however, it is also probable that the [settings](../manual-installation/system-settings.md) of MariaDB and PHP have to be adjusted too. It's also important to meet the [system requirements](../system-requirements.md).
 
-[![Appliance config](../../assets/images/en/installation/manual-installation/virtual-appliance/1-va.png)(../../assets/images/en/installation/manual-installation/virtual-appliance/1-va.png)]
+[![Appliance config](../../assets/images/en/installation/manual-installation/virtual-appliance/1-va.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/1-va.png)]
 
 !!! note "Operating System"
 
@@ -52,7 +52,7 @@ Configuration
 
 The configuration of the appliance can be carried out via the console. After logging in via SSH a menu appears:
 
- ![SSH menu](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)(../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)]
+ ![SSH menu](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)]
 
 | Shortcut | Menu item | Function |
 | --- | --- | --- |
