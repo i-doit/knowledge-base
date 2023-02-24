@@ -236,4 +236,4 @@ Next Step
 
 Now the operating system is prepared and i-doit can be installed.
 
-Proceed with [**Setup** …](https://kb.i-doit.com/display/en/Setup)
+Proceed with [**Setup** …](../setup.md)

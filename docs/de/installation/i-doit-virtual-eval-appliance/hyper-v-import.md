@@ -1,3 +1,5 @@
+# i-doit Appliance in eine Hyper-V Umgebung importieren
+
 Wir liefern unsere Appliance im OVF Format zusammen mit einem virtuellen VMDK Festplatten Image aus. Um diese in eine Hyper-V Umgebung zu importieren muss die virtuelle Festplatte im ersten Schritt aus dem VMDK Format in das VHD Format umgewandelt werden.
 
 Hierfür können Sie das freie Tool „Starwind Converter“ verwenden welches Sie unter dem folgenden Download Link herunterladen können:

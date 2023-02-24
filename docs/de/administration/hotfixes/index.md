@@ -30,22 +30,37 @@ Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Date
 
     Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
 
-i-doit Core
------------
+
+### 500 Error with SSO login
+
+[i-doit_22_hotfix_ID-9158_4711443.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9158_4711443.zip)
+
+### Conditions might not be loaded correctly in the report manager
+
+[i-doit_22_hotfix_ID-9265_8a555cf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9265_8a555cf.zip)
+
+### Port allocation is deleted when saving in list edit
+
+[i-doit_22_hotfix_ID-9163_1efe827.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9163_1efe827.zip)
 
 ### JDisc Discovery does not work with HTTP/HTTPS
 
-[![](/s/-rg4ht/8803/xi7l17/5.0.0/_/download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-small-zip.png)i-doit\_22\_hotfix\_ID-9255\_9750ba4.zip](/download/attachments/127140823/i-doit_22_hotfix_ID-9255_9750ba4.zip?version=1&modificationDate=1675773513494&api=v2)
+[i-doit_22_hotfix_ID-9255_9750ba4.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9255_9750ba4.zip)
 
 ### h-inventory import error due to missing entries in constants cache
 
-[![](/s/-rg4ht/8803/xi7l17/5.0.0/_/download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-small-zip.png)i-doit\_22\_hotfix\_ID-9259\_feeeedf.zip](/download/attachments/127140823/i-doit_22_hotfix_ID-9259_feeeedf.zip?version=1&modificationDate=1675775882306&api=v2)
+![i-doit_22_hotfix_ID-9259_feeeedf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip)
+
+### Specific object type categories are missing in selection
+If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct [specific category](../../grundlagen/benutzerdefinierte-objekttypen.md).
+
+[i-doit_22_hotfix_ID-9281_f9f4e93.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip)
 
 Forms Add-on 1.1.0
 ------------------
 
 ### Object Data is not saved or Categories are not loaded
 
-It is necessary to re-index the category attributes via [Systemtools](../systemeinstellungen/index.md), after applying the hotfix
+It is necessary to re-index the category attributes via [Systemtools](../../administration/systemeinstellungen/index.md), after applying the hotfix
 
-[![](/s/-rg4ht/8803/xi7l17/5.0.0/_/download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-small-zip.png)aof-17-incompatible-function-declaration.zip](/download/attachments/127140823/aof-17-incompatible-function-declaration.zip?version=3&modificationDate=1671123399589&api=v2)
+[aof-17-incompatible-function-declaration.zip](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip)

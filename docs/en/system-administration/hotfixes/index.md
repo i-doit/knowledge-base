@@ -5,10 +5,12 @@ About
 
 Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP file is unpacked in the i-doit installation directory. Confirm the question whether you want to overwrite files during unpacking (**Y** key for "yes" or **A** key for "all"). Here you can find an example:
 
-    sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
-    cd /var/www/html/i-doit/
-    sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
-    sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+```shell
+sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
+cd /var/www/html/i-doit/
+sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+```
 
 !!! attention "Please note"
 
@@ -29,34 +31,36 @@ Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP fil
 i-doit Core
 -----------
 
-### Notifications do not only notificate groups if the stategy Groups if available, otherwise assigned persons is selected  
-Operator LIKE %...% is not working in reports for operating system>variant  
-ldap-sync caching prevents user from login  
-HTTP 500 Error with SSO login  
-Fatal error when displaying a specific category on the overview as standard page  
-settings.cache should always contain a array  
-All version numbers are displayed in list edit  
-JDisc Import logical Ports with a single IP Address  
-JDisc Import with PHP8.0 ends in error when Use simple database modelling is activated
+### 500 Error with SSO login
 
-[![](/s/-rg4ht/8803/xi7l17/5.0.0/_/download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-small-zip.png)i-doit\_21\_hotfix\_package.zip](/download/attachments/127140823/i-doit_21_hotfix_package.zip?version=1&modificationDate=1670941575713&api=v2)
+[i-doit_22_hotfix_ID-9158_4711443.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9158_4711443.zip)
 
-API Add-on 1.13
----------------
+### Conditions might not be loaded correctly in the report manager
 
-### Object creation fails, if inventory number of accounting category has specific validation
+[i-doit_22_hotfix_ID-9265_8a555cf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9265_8a555cf.zip)
 
-[![](/s/-rg4ht/8803/xi7l17/5.0.0/_/download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-small-zip.png)api\_1.13\_hotfix\_API-336\_0e10655.zip](/download/attachments/127140823/api_1.13_hotfix_API-336_0e10655.zip?version=1&modificationDate=1668089159405&api=v2)
+### Port allocation is deleted when saving in list edit
 
-### Error "f\_popup\_": "(unknown) Property 'f\_popup\_' is unknown."
+[i-doit_22_hotfix_ID-9163_1efe827.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9163_1efe827.zip)
 
-[![](/s/-rg4ht/8803/xi7l17/5.0.0/_/download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-small-zip.png)api\_1.13\_hotfix\_API-332.zip](/download/attachments/127140823/api_1.13_hotfix_API-332.zip?version=1&modificationDate=1669219021265&api=v2)
+### JDisc Discovery does not work with HTTP/HTTPS
+
+[i-doit_22_hotfix_ID-9255_9750ba4.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9255_9750ba4.zip)
+
+### h-inventory import error due to missing entries in constants cache
+
+[i-doit_22_hotfix_ID-9259_feeeedf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip)
+
+### Specific object type categories are missing in selection
+If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct [specific category](../../basics/custom-object-types.md).
+
+[i-doit_22_hotfix_ID-9281_f9f4e93.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip)
 
 Forms Add-on 1.1.0
 ------------------
 
 ### Object Data is not saved or Categories are not loaded
 
-It is necessary to re-index the category attributes via [Systemtools](/display/en/System+Tools), after applying the hotfix
+It is necessary to re-index the category attributes via [Systemtools](../../system-administration/system-settings/index.md), after applying the hotfix
 
-[![](/s/-rg4ht/8803/xi7l17/5.0.0/_/download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-small-zip.png)aof-17-incompatible-function-declaration.zip](/download/attachments/127140823/aof-17-incompatible-function-declaration.zip?version=3&modificationDate=1671123399589&api=v2)
+[aof-17-incompatible-function-declaration.zip](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip)
