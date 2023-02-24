@@ -16,23 +16,23 @@ Here the [System Requirements](../system-requirements.md) of the respective i-do
 
 At least the components **Apache**, **MySQL** and **PHP** must be installed.
 
-[[![Select components](../../assets/images/en/installation/manual-installation/microsoft-windows-server/1-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/1-mws.png)]
+[[![Select components](../../assets/images/en/installation/manual-installation/microsoft-windows-server/1-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/1-mws.png)
 
 The default folder is left as → **C:\xampp**
 
-[![Select install folder](../../assets/images/en/installation/manual-installation/microsoft-windows-server/2-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/2-mws.png)]
+[![Select install folder](../../assets/images/en/installation/manual-installation/microsoft-windows-server/2-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/2-mws.png)
 
 Then we select the language, I leave it at **English**.
 
-[![Select language](../../assets/images/en/installation/manual-installation/microsoft-windows-server/3-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/3-mws.png)]
+[![Select language](../../assets/images/en/installation/manual-installation/microsoft-windows-server/3-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/3-mws.png)
 
 The next few **Next** \> buttons should be self-explanatory.
 
-[![Completing](../../assets/images/en/installation/manual-installation/microsoft-windows-server/4-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/4-mws.png)]
+[![Completing](../../assets/images/en/installation/manual-installation/microsoft-windows-server/4-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/4-mws.png)
 
 Now the installation is finished and we start the control panel of XAMPP by clicking Finish.
 
-[![Control panel](../../assets/images/en/installation/manual-installation/microsoft-windows-server/5-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/5-mws.png)]
+[![Control panel](../../assets/images/en/installation/manual-installation/microsoft-windows-server/5-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/5-mws.png)
 
 Step 2: Configuration of XAMPP
 ------------------------------
@@ -41,7 +41,7 @@ Step 2: Configuration of XAMPP
 
 Now we configure PHP. For this we click on the button Config → PHP (php.ini) to open the php.ini.
 
-[![Configure php](../../assets/images/en/installation/manual-installation/microsoft-windows-server/6-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/6-mws.png)]
+[![Configure php](../../assets/images/en/installation/manual-installation/microsoft-windows-server/6-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/6-mws.png)
 
 Normally, the file should open automatically with the editor. We add the following settings at the end of the file and save:
 
@@ -81,7 +81,7 @@ Separate settings for the Apache web server are not necessary here.
 
 Now we configure MySQL/MariaDB. For this we click on the button Config → my.ini.
 
-[![Configure MariaDB](../../assets/images/en/installation/manual-installation/microsoft-windows-server/7-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/7-mws.png)]
+[![Configure MariaDB](../../assets/images/en/installation/manual-installation/microsoft-windows-server/7-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/7-mws.png)
 
 Normally, this file should also be opened automatically with the editor. We also add the following settings here at the end of the file and save:
 
@@ -138,17 +138,17 @@ sql-mode = ""
 Step 3: Start Apache and MySQL
 ------------------------------
 
-We click on the [![Start](../../assets/images/en/installation/manual-installation/microsoft-windows-server/8-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/8-mws.png)] button for Apache and MySQL. If necessary, a firewall popup will appear.
+We click on the [![Start](../../assets/images/en/installation/manual-installation/microsoft-windows-server/8-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/8-mws.png) button for Apache and MySQL. If necessary, a firewall popup will appear.
 Now both modules should be highlighted in green.
 
-[![Started modules](../../assets/images/en/installation/manual-installation/microsoft-windows-server/9-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/9-mws.png)]
+[![Started modules](../../assets/images/en/installation/manual-installation/microsoft-windows-server/9-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/9-mws.png)
 
 ### Password for the MySQL root
 
 Now we should set a password for the MySQL root user.
-For this we click on the [![shell](../../assets/images/en/installation/manual-installation/microsoft-windows-server/10-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/10-mws.png)] button.
+For this we click on the [![shell](../../assets/images/en/installation/manual-installation/microsoft-windows-server/10-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/10-mws.png) button.
 
-[![Shell and control panel](../../assets/images/en/installation/manual-installation/microsoft-windows-server/11-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/11-mws.png)]
+[![Shell and control panel](../../assets/images/en/installation/manual-installation/microsoft-windows-server/11-mws.png)](../../assets/images/en/installation/manual-installation/microsoft-windows-server/11-mws.png)
 
 First, we log in:
 
