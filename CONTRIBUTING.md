@@ -52,10 +52,6 @@ Before anything gets published we would like to introduce our Website platform: 
 
 MkDocs is a static site generator. Based on the [configuration](mkdocs.yml) it converts all markdown files to HTML and builds a Website around it. This results in a bunch of HTML pages, images, CSS style sheets and JavaScript files. There is neither any need of an application platform/a scripting language like JBoss, Python or PHP nor a running database like MariaDB in the background. This makes the Website pretty fast.
 
-### Continuous deployment (CD)
-
-To deploy from the `main` branch to production we also use Jenkins to do this job. In this step Jenkins acts as a continuous deployment (CD) tool. The final result (remember: a bunch of HTML/images/CSS/JS) will be transferred to our production environment and is live immediately.
-
 ## Hack on the documentation as an author
 
 Do you like to write new articles or edit existing ones? You have two options:
@@ -86,39 +82,25 @@ An own environment is useful to develop on new features, fix bugs, write documen
 Before you start make sure all required tools are installed and configured properly:
 
 -   [Git][git]
--   Python **3** (2 does not work) with [PIP][pip]
--   GCC to compile some required Python packages
--   [NPM](https://docs.npmjs.com/), version `>= 6.7.0`
--   [Node.js](https://nodejs.org/en/docs/), version `>= 14.16.0`
+-   [Docker](https://www.docker.com/)
 
 This works on a GNU/Linux or a MacOS host:
 
 ~~~ {.bash}
-git clone git@github.com:i-doit/kb.git
+git clone git@github.com:i-doit/knowledge-base.git
 cd kb
-npm install
-pip install -U -r requirements.txt
+docker-compose up -d
 ~~~
 
 ## Use a live system
 
-MkDocs has a built-in Web server which keeps track of your changes. Whenever you add a new file or update an existing one your Web browser reloads the current page automatically. Start the Web server:
+Our compose deployment builds and starts our knowledge-base containers based on the actual file state.
 
 ~~~ {.bash}
-npm run kb:serve
+docker-compose up -d
 ~~~
 
-Open `http://localhost:8000` in your Web browser. You should see the home page.
-
-## Build the site
-
-Build the static website:
-
-~~~ {.bash}
-npm run kb:build
-~~~
-
-The result will be located within the `site/` directory.
+Open `http://localhost:8001` in your Web browser. You should see the home page.
 
 ## Writing guidelines
 

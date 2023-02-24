@@ -80,7 +80,7 @@ All recordings are available on our [YouTube channel][youtube].
 [community]: https://community.i-doit.com/
 [comparison]: https://www.i-doit.org/cmdb-it-documentation/
 [contributing]: CONTRIBUTING.md
-[portal]: https://login.i-doit.com/
+[portal]: https://portal.i-doit.com/
 [demo]: https://demo.i-doit.com/
 [docs]: https://docs.i-doit.com
 [help]: https://help.i-doit.com/
