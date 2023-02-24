@@ -1,0 +1,3 @@
+Sitemap: https://kb.i-doit.com/de/sitemap.xml.gz
+User-agent: *
+Disallow:

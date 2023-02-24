@@ -2,7 +2,7 @@
 site_name: Knowledge Base
 docs_dir: '../../docs/en'
 site_dir: '../../generated/en'
-site_url: https://kb.i-doit.com/
+site_url: https://kb.i-doit.com/en/
 site_description: Knowledge Base
 site_author: synetics GmbH
 copyright: Copyright &copy; 2019-23 synetics GmbH
