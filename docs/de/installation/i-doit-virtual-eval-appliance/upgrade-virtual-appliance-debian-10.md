@@ -1,4 +1,5 @@
 # Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 10 "Buster"
+
 Neben der Wartung von i-doit sollte auch die Pflege des darunter liegenden Betriebssystems nicht außer Acht gelassen werden. Wir beschreiben das Upgrade von[Debian GNU/Linux](../manuelle-installation/debian.md) in Version 9 "Stretch" auf 10 "Buster". In einigen Schritten ist die[i-doit Eval Virtual Appliance](index.md)auf dem neuesten Stand.
 
 !!! info "Warum ein Upgrade?"
@@ -19,7 +20,7 @@ Einige Dinge müssen vor dem Upgrade bedacht werden:
 
 !!! info "Zu beachten bei Nutzung von VirtualBox"
 
-    Wählen Sie die entsprechende Virtuelle Maschine aus und öffnen Sie die Konfiguration der Maschine.  
+    Wählen Sie die entsprechende Virtuelle Maschine aus und öffnen Sie die Konfiguration der Maschine.
     Unter dem Reiter **System** muss die Checkbox für **Hardware-Uhr in UTC** aktiviert sein. Andernfalls hat der SQL-Server ein Problem mit der Zeiteinstellung.
 
 Tipps
@@ -72,13 +73,13 @@ Folgende Zeile wird am Ende ergänzt:
 
     deb http://deb.debian.org/debian/ buster main
     deb-src http://deb.debian.org/debian/ buster main
-    
+
     deb http://security.debian.org/debian-security buster/updates main
     deb-src http://security.debian.org/debian-security buster/updates main
-    
+
     deb http://deb.debian.org/debian/ buster-updates main
     deb-src http://deb.debian.org/debian/ buster-updates main
-    
+
     deb http://mirrors.kernel.org/debian buster main contrib
 
 Alle vorherigen Zeilen werden auskommentiert. Hierbei wird jeder Zeile ein **#** vorangestellt.
