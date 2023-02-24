@@ -29,7 +29,7 @@ When you want to use the default package repositories, use the following instruc
 *   the database management system **MariaDB** 10.5 and
 *   the caching server **memcached**
 
-However, **18.04 LTS "Bionic Beaver"** only has outdated packages that do not meet the [System Requirements](../../system-requirements.md).  
+However, **18.04 LTS "Bionic Beaver"** only has outdated packages that do not meet the [System Requirements](../../system-requirements.md).
 It is therefore necessary to install up-to-date packages via additional repositories. **Caution**: Third-party repositories can endanger the stability of the operating system.
 
 For PHP 7.4 we use the Personal Package Archive from ondrej:

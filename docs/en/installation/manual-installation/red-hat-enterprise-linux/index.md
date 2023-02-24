@@ -5,7 +5,7 @@ In this article we explain in just a few steps which packages need to be install
 System Requirements
 -------------------
 
-The general [system requirements](../../system-requirements.md) apply.  
+The general [system requirements](../../system-requirements.md) apply.
 
 This article refers to **[RHEL](https://www.redhat.com/en) in Version 7.x**. In order to find out which version is used you can carry out the following command:
 
@@ -152,7 +152,7 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 
-The value (in seconds) of **session.gc_maxlifetime** should be the same or greater than the **Session Timeout** in the [system settings](../../../system-administration/administration/system-settings.md) of i-doit.
+The value (in seconds) of **session.gc_maxlifetime** should be the same or greater than the **Session Timeout** in the [system settings](../system-settings.md) of i-doit.
 
 The **date.timezone** parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
 

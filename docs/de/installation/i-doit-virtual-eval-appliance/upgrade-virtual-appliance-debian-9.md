@@ -1,4 +1,5 @@
 # Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 9 "Stretch"
+
 Neben der Wartung von i-doit sollte auch die Pflege des darunter liegenden Betriebssystems nicht außer Acht gelassen werden. Wir beschreiben das Upgrade von [Debian GNU/Linux](../manuelle-installation/debian.md) in Version 8 "Jessie" auf 9 "Stretch". In einigen Schritten ist die [i-doit Eval Virtual Appliance](index.md) auf dem neuesten Stand.
 
 !!! info "Warum ein Upgrade?"

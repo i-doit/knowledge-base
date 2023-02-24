@@ -132,7 +132,7 @@ Solutions:
 
     By downloading a Hotfix you declare that you have read and understood the [above mentioned note](#update-guide-from-i-doit-174-to-119) completely.  
     
-    [![Click here for the Hotfix](../assets/downloads/hotfixes/ID-5843_b4159eb.zip)](../assets/downloads/hotfixes/ID-5843_b4159eb.zip)
+    [Click here for the Hotfix](../assets/downloads/upgrades-and-migrations/ID-5843_b4159eb.zip)
 
 Continue with the update
 
