@@ -73,9 +73,9 @@ Further requirements:
 
 ### File location
 
--   Image files are based in the `kb/img/` directory
+-   Image files are based in the `overrides/assets/images/` directory
 -   Image files are categorized by **high level topics** or **use cases**, for example: `login`, `dashboard`, `finder`, `document_locations`
--   Each category has its own sub-directory in `kb/img/`
+-   Each category has its own sub-directory in `overrides/assets/images/`
 -   Allowed characters for image file names (without file extension) and directory names: `[a-z0-9_]`
 -   Each topic, use case and image file name is self-explanatory and concise.
 
