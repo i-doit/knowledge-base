@@ -12,7 +12,7 @@ Supported Languages
 
 The localization refers to the [web GUI of i-doit](../basics/structure-of-the-it-documentation.md). [Login](../basics/initial-login.md), [Admin Center](./admin-center.md), [Setup](../installation/manual-installation/setup.md), [Update assistant](../maintenance-and-operation/update.md) as well as the [command line tool Controller](../automation-and-integration/cli/index.md) are in English.
 
-!!! info "Support new languages"<<<<<<< system-administration-en
+!!! info "Support new languages"
 
     i-doit can not be expanded with additional languages without getting into the source code. We would be pleased to hear from you if there are any efforts to translate i-doit into another language.
 
