@@ -49,7 +49,7 @@ Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Date
 
 ### h-inventory import error due to missing entries in constants cache
 
-![i-doit_22_hotfix_ID-9259_feeeedf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip)
+[i-doit_22_hotfix_ID-9259_feeeedf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip)
 
 ### Specific object type categories are missing in selection
 If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct [specific category](../../grundlagen/benutzerdefinierte-objekttypen.md).
