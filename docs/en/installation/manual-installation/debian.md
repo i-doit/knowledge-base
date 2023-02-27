@@ -154,7 +154,7 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-!!! info Use of MariaDB 10.3 and downwards
+!!! info "Use of MariaDB 10.3 and downwards"
 
     Up to MariaDB version 10.3, the UPDATE statement is supported in the user table.
     ```shell
