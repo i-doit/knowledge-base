@@ -124,7 +124,15 @@ Hier noch mal als Tabelle
 In der ldap.ini können feste Zuweisungen von Benutzern zu Räumen eingetragen werden.  
 Die Benutzer werden dann dem zugewiesenem Raum als Kontakt zugewiesen.  
 (Die Räume müssen vorher in i-doit existieren!)
-
+!!! warning Zugriff auf .ini Dateien
+    Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
+    Es sollte dieser code hinzugefügt werden:
+    ```shell
+    ## Deny access to all ini files…
+    <Files "*.ini">
+        Require all denied
+    </Files>
+    ```
     rooms["Raum A"]=["MichaelO","migel"]
 
 * * *
@@ -303,6 +311,16 @@ Diese Option entscheidet, ob geleerte Attribute aus dem AD mit i-doit synchronis
 * * *
 
 ### Die komplette ldap.ini
+
+!!! warning Zugriff auf .ini Dateien
+    Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
+    Es sollte dieser code hinzugefügt werden:
+    ```shell
+    ## Deny access to all ini files…
+    <Files "*.ini">
+        Require all denied
+    </Files>
+    ```
 
 Nun fügen wir alle Teile zusammen und erstellen unsere ldap.ini  
 Der erste Teil der ldap.ini wird von [Verwendung von Konfigurationsdateien für Console Commands](../cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md#beispiel-für-den-command-ldap-sync) bezogen.

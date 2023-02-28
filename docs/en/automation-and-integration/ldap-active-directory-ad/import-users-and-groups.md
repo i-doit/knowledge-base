@@ -307,6 +307,17 @@ This option decides whether empty or emptied attributes from AD should be synchr
 Now we put all the parts together and create our ldap.ini  
 The first part of the ldap.ini is obtained from [Using Configuration Files for Console Commands](../cli/console/using-configuration-files-for-console-cli.md).
 
+!!! warning Access to .ini files
+    If the configuration file is placed in the i-doit directory, the .htaccess must be modified.
+    This code should be added:
+    
+    ```shell
+    ## Deny access to all ini files…
+    <Files "*.ini">
+        Require all denied
+    </Files>
+    ```
+
     [commandArguments]
     [commandOptions]
     user=admin
