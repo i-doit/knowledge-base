@@ -3,11 +3,22 @@
 If you use a configuration file, you can specify the options for the console command directly.  
 You can then save these newly created files under /i-doit/src/handler/config/ for example.
 
+!!! warning Access to .ini files
+    If the configuration file is placed in the i-doit directory, the .htaccess must be modified.
+    This code should be added:
+    
+    ```shell
+    ## Deny access to all ini files…
+    <Files "*.ini">
+        Require all denied
+    </Files>
+    ```
+
 This saves you from typing the password in plain text. into the console.  
 The [Console Command](./options-and-parameters-cli.md) uses .ini files.  
 The [Controller Command](../../../automation-and-integration/cli/console/index.md) uses .inc.php files. However, this method is outdated and should not be used.
 
-The configuration file is used with --config /path/to/config.ini or with -c /path/to/config.ini
+The configuration file is used with `--config /path/to/config.ini or with -c /path/to/config.ini`
 
 The structure of the .ini
 -------------------------

@@ -3,11 +3,22 @@
 Wenn Sie eine Konfigurationsdateien verwenden, können Sie dort für die Console Command die Optionen unterbringen.  
 Speichern können Sie diese neu erstellten Dateien dann z.B. unter /i-doit/src/handler/config/.
 
+!!! warning Zugriff auf .ini Dateien
+    Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
+    Es sollte dieser code hinzugefügt werden:
+    
+    ```shell
+    ## Deny access to all ini files…
+    <Files "*.ini">
+        Require all denied
+    </Files>
+    ```
+
 Damit Sie z.B. Passwörter nicht im Klartext in die Console tippen müssen.  
 Der [Console Command](../console/optionen-und-parameter-der-console.md) verwendet .ini Dateien.  
 Der [Controller Command](../controller.md) verwendet .inc.php Dateien. Diese Methode ist allerdings veraltet und sollte nicht verwendet werden.
 
-Verwendet wird die Konfigurationsdatei mit --config /pfad/zur/config.ini oder mit -c /pfad/zur/config.ini
+Verwendet wird die Konfigurationsdatei mit `--config /pfad/zur/config.ini oder mit -c /pfad/zur/config.ini`
 
 Der Aufbau der .ini
 -------------------
