@@ -1,4 +1,4 @@
-FROM ubuntu:22.10
+FROM ubuntu:23.04
 
 LABEL org.opencontainers.image.vendor="synetics GmbH"
 LABEL org.opencontainers.image.title="i-doit knowledge base"
