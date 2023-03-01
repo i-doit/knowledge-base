@@ -10,7 +10,7 @@ The step from version 1.4.8 to version 1.8 entails many changes. Substantial cha
 Download
 --------
 
-[![You can download the update package here](../assets/downloads/idoit-open-1.8-update.zip)](../assets/downloads/idoit-open-1.8-update.zip)
+[You can download the update package here](../assets/downloads/idoit-open-1.8-update.zip)
 
 There are the following prequesites:
 
