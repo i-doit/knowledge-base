@@ -258,10 +258,10 @@ Damit ggf. Fehler abgefangen und an den zuständigen Systemadministrator gemelde
 
     Das Paket **moreutils** und somit das Tool **chronic** sind kein Bestandteil von [SLES](../installation/manuelle-installation/suse-linux-enterprise-server.md). Daher muss **chronic** manuell von der Website heruntergeladen werden:
 
-        get https://git.joeyh.name/index.cgi/moreutils.git/plain/chronic
-        hmod +x chronic
-        udo mv chronic /usr/bin/
-        get -O - https://cpanmin.us | perl - --sudo App::cpanminus
+        wget https://git.joeyh.name/index.cgi/moreutils.git/plain/chronic
+        chmod +x chronic
+        sudo mv chronic /usr/bin/
+        wget -O - https://cpanmin.us | perl - --sudo App::cpanminus
         sudo cpanm --notest --install IPC::Run
 
 ### Beispiel für Cron
