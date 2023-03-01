@@ -1,0 +1,58 @@
+---
+name: Lint on every push
+
+on:
+  push:
+
+jobs:
+  lint:
+    name: Lint
+    strategy:
+      fail-fast: false
+      matrix:
+        script:
+          - markdown
+          - ec
+          - json
+          - yaml
+          - cpd
+          - docker-compose
+          - dockerfile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Re-use NPM cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Pull container base image
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            pull
+      - name: Re-use container image layers
+        uses: jpribyl/action-docker-layer-caching@v0.1.1
+        continue-on-error: true
+      - name: Build container image
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            build \
+            --build-arg USER_ID="$(id -u)" \
+            --build-arg GROUP_ID="$(id -g)"
+      - name: Install toolchain
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            run docs \
+              npm ci
+      - name: Run script
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            run docs \
+              npm run test:${{ matrix.script }}
