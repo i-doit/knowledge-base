@@ -5,7 +5,7 @@ site_dir: '../../generated/en'
 site_url: https://kb.i-doit.com/en/
 site_description: Knowledge Base
 site_author: synetics GmbH
-copyright: Copyright &copy; 2019-23 synetics GmbH
+copyright: Copyright &copy; 2023 synetics GmbH
 repo_url: https://github.com/i-doit/knowledge-base
 edit_uri: edit/main/docs/en
 strict: true
