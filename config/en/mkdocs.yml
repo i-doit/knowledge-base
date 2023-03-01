@@ -116,118 +116,118 @@ nav:
   - Version History:
       - version-history/index.md
       - Release notes:
-        - version-history/release-notes/index.md
-        - Release notes 22: version-history/release-notes/release-notes-22.md
-        - Release notes 1.19: version-history/release-notes/release-notes-1.19.md
-        - Release notes 1.18:
-          - version-history/release-notes/release-notes-1.18/index.md
-          - version-history/release-notes/release-notes-1.18/release-notes-1.18.2.md
-        - Release notes 1.17: version-history/release-notes/release-notes-1.17.md
-        - Release notes 1.16: version-history/release-notes/release-notes-1.16.md
-        - Release notes 1.14: version-history/release-notes/release-notes-1.14.md
-        - Release notes 1.13: version-history/release-notes/release-notes-1.13.md
-        - Release notes 1.12: version-history/release-notes/release-notes-1.12.md
-        - Release notes 1.11: version-history/release-notes/release-notes-1.11.md
-        - Release notes 1.10: version-history/release-notes/release-notes-1.10.md
-        - Release notes 1.9: version-history/release-notes/release-notes-1.9.md
-        - Release notes 1.8: version-history/release-notes/release-notes-1.8.md
-        - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
+          - version-history/release-notes/index.md
+          - Release notes 22: version-history/release-notes/release-notes-22.md
+          - Release notes 1.19: version-history/release-notes/release-notes-1.19.md
+          - Release notes 1.18:
+              - version-history/release-notes/release-notes-1.18/index.md
+              - version-history/release-notes/release-notes-1.18/release-notes-1.18.2.md
+          - Release notes 1.17: version-history/release-notes/release-notes-1.17.md
+          - Release notes 1.16: version-history/release-notes/release-notes-1.16.md
+          - Release notes 1.14: version-history/release-notes/release-notes-1.14.md
+          - Release notes 1.13: version-history/release-notes/release-notes-1.13.md
+          - Release notes 1.12: version-history/release-notes/release-notes-1.12.md
+          - Release notes 1.11: version-history/release-notes/release-notes-1.11.md
+          - Release notes 1.10: version-history/release-notes/release-notes-1.10.md
+          - Release notes 1.9: version-history/release-notes/release-notes-1.9.md
+          - Release notes 1.8: version-history/release-notes/release-notes-1.8.md
+          - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
-        - version-history/changelogs/index.md
-        - Changelog 22: version-history/changelogs/changelog-22.md
-        - Changelog 21: version-history/changelogs/changelog-21.md
-        - Changelog 20: version-history/changelogs/changelog-20.md
-        - Changelogs 1.19.x:
-          - version-history/changelogs/changelog-1.19.x/index.md
-          - Changelog 1.19: version-history/changelogs/changelog-1.19.x/changelog-1.19.md
-        - Changelogs 1.18.x:
-          - version-history/changelogs/changelog-1.18.x/index.md
-          - Changelog 1.18.2: version-history/changelogs/changelog-1.18.x/changelog-1.18.2.md
-          - Changelog 1.18.1: version-history/changelogs/changelog-1.18.x/changelog-1.18.1.md
-          - Changelog 1.18: version-history/changelogs/changelog-1.18.x/changelog-1.18.md
-        - Changelogs 1.17.x:
-          - version-history/changelogs/changelog-1.17.x/index.md
-          - Changelog 1.17.2: version-history/changelogs/changelog-1.17.x/changelog-1.17.2.md
-          - Changelog 1.17.1: version-history/changelogs/changelog-1.17.x/changelog-1.17.1.md
-          - Changelog 1.17: version-history/changelogs/changelog-1.17.x/changelog-1.17.md
-        - Changelogs 1.16.x:
-          - version-history/changelogs/changelog-1.16.x/index.md
-          - Changelog 1.16.3: version-history/changelogs/changelog-1.16.x/changelog-1.16.3.md
-          - Changelog 1.16.2: version-history/changelogs/changelog-1.16.x/changelog-1.16.2.md
-          - Changelog 1.16.1: version-history/changelogs/changelog-1.16.x/changelog-1.16.1.md
-          - Changelog 1.16: version-history/changelogs/changelog-1.16.x/changelog-1.16.md
-        - Changelogs 1.15.x:
-          - version-history/changelogs/changelog-1.15.x/index.md
-          - Changelog 1.15.2: version-history/changelogs/changelog-1.15.x/changelog-1.15.2.md
-          - Changelog 1.15.1: version-history/changelogs/changelog-1.15.x/changelog-1.15.1.md
-          - Changelog 1.15: version-history/changelogs/changelog-1.15.x/changelog-1.15.md
-        - Changelogs 1.14.x:
-          - version-history/changelogs/changelog-1.14.x/index.md
-          - Changelog 1.14.2: version-history/changelogs/changelog-1.14.x/changelog-1.14.2.md
-          - Changelog 1.14.1: version-history/changelogs/changelog-1.14.x/changelog-1.14.1.md
-          - Changelog 1.14: version-history/changelogs/changelog-1.14.x/changelog-1.14.md
-        - Changelogs 1.13.x:
-          - version-history/changelogs/changelog-1.13.x/index.md
-          - Changelog 1.13.2: version-history/changelogs/changelog-1.13.x/changelog-1.13.2.md
-          - Changelog 1.13.1: version-history/changelogs/changelog-1.13.x/changelog-1.13.1.md
-          - Changelog 1.13: version-history/changelogs/changelog-1.13.x/changelog-1.13.md
-        - Changelogs 1.12.x:
-          - version-history/changelogs/changelog-1.12.x/index.md
-          - Changelog 1.12.4: version-history/changelogs/changelog-1.12.x/changelog-1.12.4.md
-          - Changelog 1.12.3: version-history/changelogs/changelog-1.12.x/changelog-1.12.3.md
-          - Changelog 1.12.2: version-history/changelogs/changelog-1.12.x/changelog-1.12.2.md
-          - Changelog 1.12.1: version-history/changelogs/changelog-1.12.x/changelog-1.12.1.md
-          - Changelog 1.12: version-history/changelogs/changelog-1.12.x/changelog-1.12.md
-        - Changelogs 1.11.x:
-          - version-history/changelogs/changelog-1.11.x/index.md
-          - Changelog 1.11.2: version-history/changelogs/changelog-1.11.x/changelog-1.11.2.md
-          - Changelog 1.11.1: version-history/changelogs/changelog-1.11.x/changelog-1.11.1.md
-          - Changelog 1.11: version-history/changelogs/changelog-1.11.x/changelog-1.11.md
-        - Changelogs 1.10.x:
-          - version-history/changelogs/changelog-1.10.x/index.md
-          - Changelog 1.10.3: version-history/changelogs/changelog-1.10.x/changelog-1.10.3.md
-          - Changelog 1.10.2: version-history/changelogs/changelog-1.10.x/changelog-1.10.2.md
-          - Changelog 1.10.1: version-history/changelogs/changelog-1.10.x/changelog-1.10.1.md
-          - Changelog 1.10: version-history/changelogs/changelog-1.10.x/changelog-1.10.md
-        - Changelogs 1.9.x:
-          - version-history/changelogs/changelog-1.9.x/index.md
-          - Changelog 1.9.4: version-history/changelogs/changelog-1.9.x/changelog-1.9.4.md
-          - Changelog 1.9.3: version-history/changelogs/changelog-1.9.x/changelog-1.9.3.md
-          - Changelog 1.9.2: version-history/changelogs/changelog-1.9.x/changelog-1.9.2.md
-          - Changelog 1.9.1: version-history/changelogs/changelog-1.9.x/changelog-1.9.1.md
-          - Changelog 1.9: version-history/changelogs/changelog-1.9.x/changelog-1.9.md
-        - Changelogs 1.8.x:
-          - version-history/changelogs/changelog-1.8.x/index.md
-          - Changelog 1.8.3.1: version-history/changelogs/changelog-1.8.x/changelog-1.8.3.1.md
-          - Changelog 1.8.3: version-history/changelogs/changelog-1.8.x/changelog-1.8.3.md
+          - version-history/changelogs/index.md
+          - Changelog 22: version-history/changelogs/changelog-22.md
+          - Changelog 21: version-history/changelogs/changelog-21.md
+          - Changelog 20: version-history/changelogs/changelog-20.md
+          - Changelogs 1.19.x:
+              - version-history/changelogs/changelog-1.19.x/index.md
+              - Changelog 1.19: version-history/changelogs/changelog-1.19.x/changelog-1.19.md
+          - Changelogs 1.18.x:
+              - version-history/changelogs/changelog-1.18.x/index.md
+              - Changelog 1.18.2: version-history/changelogs/changelog-1.18.x/changelog-1.18.2.md
+              - Changelog 1.18.1: version-history/changelogs/changelog-1.18.x/changelog-1.18.1.md
+              - Changelog 1.18: version-history/changelogs/changelog-1.18.x/changelog-1.18.md
+          - Changelogs 1.17.x:
+              - version-history/changelogs/changelog-1.17.x/index.md
+              - Changelog 1.17.2: version-history/changelogs/changelog-1.17.x/changelog-1.17.2.md
+              - Changelog 1.17.1: version-history/changelogs/changelog-1.17.x/changelog-1.17.1.md
+              - Changelog 1.17: version-history/changelogs/changelog-1.17.x/changelog-1.17.md
+          - Changelogs 1.16.x:
+              - version-history/changelogs/changelog-1.16.x/index.md
+              - Changelog 1.16.3: version-history/changelogs/changelog-1.16.x/changelog-1.16.3.md
+              - Changelog 1.16.2: version-history/changelogs/changelog-1.16.x/changelog-1.16.2.md
+              - Changelog 1.16.1: version-history/changelogs/changelog-1.16.x/changelog-1.16.1.md
+              - Changelog 1.16: version-history/changelogs/changelog-1.16.x/changelog-1.16.md
+          - Changelogs 1.15.x:
+              - version-history/changelogs/changelog-1.15.x/index.md
+              - Changelog 1.15.2: version-history/changelogs/changelog-1.15.x/changelog-1.15.2.md
+              - Changelog 1.15.1: version-history/changelogs/changelog-1.15.x/changelog-1.15.1.md
+              - Changelog 1.15: version-history/changelogs/changelog-1.15.x/changelog-1.15.md
+          - Changelogs 1.14.x:
+              - version-history/changelogs/changelog-1.14.x/index.md
+              - Changelog 1.14.2: version-history/changelogs/changelog-1.14.x/changelog-1.14.2.md
+              - Changelog 1.14.1: version-history/changelogs/changelog-1.14.x/changelog-1.14.1.md
+              - Changelog 1.14: version-history/changelogs/changelog-1.14.x/changelog-1.14.md
+          - Changelogs 1.13.x:
+              - version-history/changelogs/changelog-1.13.x/index.md
+              - Changelog 1.13.2: version-history/changelogs/changelog-1.13.x/changelog-1.13.2.md
+              - Changelog 1.13.1: version-history/changelogs/changelog-1.13.x/changelog-1.13.1.md
+              - Changelog 1.13: version-history/changelogs/changelog-1.13.x/changelog-1.13.md
+          - Changelogs 1.12.x:
+              - version-history/changelogs/changelog-1.12.x/index.md
+              - Changelog 1.12.4: version-history/changelogs/changelog-1.12.x/changelog-1.12.4.md
+              - Changelog 1.12.3: version-history/changelogs/changelog-1.12.x/changelog-1.12.3.md
+              - Changelog 1.12.2: version-history/changelogs/changelog-1.12.x/changelog-1.12.2.md
+              - Changelog 1.12.1: version-history/changelogs/changelog-1.12.x/changelog-1.12.1.md
+              - Changelog 1.12: version-history/changelogs/changelog-1.12.x/changelog-1.12.md
+          - Changelogs 1.11.x:
+              - version-history/changelogs/changelog-1.11.x/index.md
+              - Changelog 1.11.2: version-history/changelogs/changelog-1.11.x/changelog-1.11.2.md
+              - Changelog 1.11.1: version-history/changelogs/changelog-1.11.x/changelog-1.11.1.md
+              - Changelog 1.11: version-history/changelogs/changelog-1.11.x/changelog-1.11.md
+          - Changelogs 1.10.x:
+              - version-history/changelogs/changelog-1.10.x/index.md
+              - Changelog 1.10.3: version-history/changelogs/changelog-1.10.x/changelog-1.10.3.md
+              - Changelog 1.10.2: version-history/changelogs/changelog-1.10.x/changelog-1.10.2.md
+              - Changelog 1.10.1: version-history/changelogs/changelog-1.10.x/changelog-1.10.1.md
+              - Changelog 1.10: version-history/changelogs/changelog-1.10.x/changelog-1.10.md
+          - Changelogs 1.9.x:
+              - version-history/changelogs/changelog-1.9.x/index.md
+              - Changelog 1.9.4: version-history/changelogs/changelog-1.9.x/changelog-1.9.4.md
+              - Changelog 1.9.3: version-history/changelogs/changelog-1.9.x/changelog-1.9.3.md
+              - Changelog 1.9.2: version-history/changelogs/changelog-1.9.x/changelog-1.9.2.md
+              - Changelog 1.9.1: version-history/changelogs/changelog-1.9.x/changelog-1.9.1.md
+              - Changelog 1.9: version-history/changelogs/changelog-1.9.x/changelog-1.9.md
+          - Changelogs 1.8.x:
+              - version-history/changelogs/changelog-1.8.x/index.md
+              - Changelog 1.8.3.1: version-history/changelogs/changelog-1.8.x/changelog-1.8.3.1.md
+              - Changelog 1.8.3: version-history/changelogs/changelog-1.8.x/changelog-1.8.3.md
   - Installation:
       - installation/index.md
       - System Requirements: installation/system-requirements.md
       - Automatic Installation: installation/automatic-installation.md
       - Manual Installation:
-        - installation/manual-installation/index.md
-        - Debian GNU/Linux: installation/manual-installation/debian.md
-        - Red Hat Enterprise Linux (RHEL):
-          - installation/manual-installation/red-hat-enterprise-linux/index.md
-          - Red Hat Enterprise Linux 8.6 (RHEL 8): installation/manual-installation/red-hat-enterprise-linux/red-hat-enterprise-linux-8.6.md
-        - Suse Linux Enterprise Server (SLES): installation/manual-installation/suse-linux-enterprise-server.md
-        - Ubuntu GNU/Linux:
-          - installation/manual-installation/ubuntu-linux/index.md
-          - Ubuntu 20.04.1 LTS "Focal Fossa": installation/manual-installation/ubuntu-linux/ubuntu-20.04.1-lts.md
-        - Microsoft Windows Server: installation/manual-installation/microsoft-windows-server.md
-        - System Settings: installation/manual-installation/system-settings.md
-        - Setup: installation/manual-installation/setup.md
+          - installation/manual-installation/index.md
+          - Debian GNU/Linux: installation/manual-installation/debian.md
+          - Red Hat Enterprise Linux (RHEL):
+              - installation/manual-installation/red-hat-enterprise-linux/index.md
+              - Red Hat Enterprise Linux 8.6 (RHEL 8): installation/manual-installation/red-hat-enterprise-linux/red-hat-enterprise-linux-8.6.md
+          - Suse Linux Enterprise Server (SLES): installation/manual-installation/suse-linux-enterprise-server.md
+          - Ubuntu GNU/Linux:
+              - installation/manual-installation/ubuntu-linux/index.md
+              - Ubuntu 20.04.1 LTS "Focal Fossa": installation/manual-installation/ubuntu-linux/ubuntu-20.04.1-lts.md
+          - Microsoft Windows Server: installation/manual-installation/microsoft-windows-server.md
+          - System Settings: installation/manual-installation/system-settings.md
+          - Setup: installation/manual-installation/setup.md
       - i-doit Virtual Eval Appliance:
-        - installation/i-doit-virtual-eval-appliance/index.md
-        - Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 9 "Stretch": installation/i-doit-virtual-eval-appliance/upgrade-virtual-appliance-debian-9.md
-        - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
-        - Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 10 "Buster": installation/i-doit-virtual-eval-appliance/upgrade-virtual-appliance-debian-10.md
+          - installation/i-doit-virtual-eval-appliance/index.md
+          - Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 9 "Stretch": installation/i-doit-virtual-eval-appliance/upgrade-virtual-appliance-debian-9.md
+          - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
+          - Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 10 "Buster": installation/i-doit-virtual-eval-appliance/upgrade-virtual-appliance-debian-10.md
   - Maintenance and operation:
       - maintenance-and-operation/index.md
       - Activate license: maintenance-and-operation/activate-license.md
       - Backup and recovery:
-        - maintenance-and-operation/backup-and-recovery/index.md
-        - Backup script for data and files: maintenance-and-operation/backup-and-recovery/backup-script-for-data-and-files.md
+          - maintenance-and-operation/backup-and-recovery/index.md
+          - Backup script for data and files: maintenance-and-operation/backup-and-recovery/backup-script-for-data-and-files.md
       - Cronjobs setup: maintenance-and-operation/cronjob-setup.md
       - Security and protection: maintenance-and-operation/security-and-protection.md
       - Update: maintenance-and-operation/update.md
@@ -245,12 +245,12 @@ nav:
       - Structure of the IT documentation: basics/structure-of-the-it-documentation.md
       - Dashboard and widgets: basics/dashboard-and-widgets.md
       - Object list:
-        - basics/object-list/index.md
-        - Actions in object lists: basics/object-list/actions-in-object-lists.md
-        - Navigation and filtering: basics/object-list/navigation-and-filtering.md
-        - Configuration of the list view: basics/object-list/configuration-of-the-list-view.md
-        - Advanced settings: basics/object-list/advanced-settings.md
-        - Configure object lists: basics/object-list/configure-object-lists.md
+          - basics/object-list/index.md
+          - Actions in object lists: basics/object-list/actions-in-object-lists.md
+          - Navigation and filtering: basics/object-list/navigation-and-filtering.md
+          - Configuration of the list view: basics/object-list/configuration-of-the-list-view.md
+          - Advanced settings: basics/object-list/advanced-settings.md
+          - Configure object lists: basics/object-list/configure-object-lists.md
       - Attribute fields: basics/attribute-fields.md
       - Dialog-Admin: basics/dialog-admin.md
       - Object types: basics/object-types.md
@@ -273,216 +273,216 @@ nav:
       - Templates: efficient-documentation/templates.md
       - Validation and mandatory fields: efficient-documentation/validation-and-mandatory-fields.md
       - Rights management:
-        - efficient-documentation/rights-management/index.md
-        - CMDB (User Rights Management): efficient-documentation/rights-management/cmdb-right-management.md
-        - Rights management via roles: efficient-documentation/rights-management/user-right-management-via-roles.md
+          - efficient-documentation/rights-management/index.md
+          - CMDB (User Rights Management): efficient-documentation/rights-management/cmdb-right-management.md
+          - Rights management via roles: efficient-documentation/rights-management/user-right-management-via-roles.md
       - Search: efficient-documentation/search.md
       - Object lock: efficient-documentation/object-lock.md
   - Evaluation:
-    - evaluation/index.md
-    - Report manager: evaluation/report-manager.md
-    - Variable reports: evaluation/variable-reports.md
-    - Notifications: evaluation/notifications.md
-    - CMDB-Explorer:
-      - evaluation/cmdb-explorer/index.md
-      - Profiles in the CMDB Explorer: evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer.md
-    - Rack view: evaluation/rack-view.md
-    - IP list: evaluation/ip-list.md
+      - evaluation/index.md
+      - Report manager: evaluation/report-manager.md
+      - Variable reports: evaluation/variable-reports.md
+      - Notifications: evaluation/notifications.md
+      - CMDB-Explorer:
+          - evaluation/cmdb-explorer/index.md
+          - Profiles in the CMDB Explorer: evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer.md
+      - Rack view: evaluation/rack-view.md
+      - IP list: evaluation/ip-list.md
   - Consolidate data:
-    - consolidate-data/index.md
-    - CSV data import:
-      - consolidate-data/csv-data-import/index.md
-      - Example CSV import - Applications: consolidate-data/csv-data-import/example-csv-import-applications.md
-      - Example CSV import - Workplaces: consolidate-data/csv-data-import/example-csv-import-workplaces.md
-      - Example CSV import - Licenses: consolidate-data/csv-data-import/example-csv-import-licenses.md
-      - Example CSV import - Locations: consolidate-data/csv-data-import/example-csv-import-creating-locations.md
-    - CSV data export: consolidate-data/csv-data-export.md
-    - h-inventory: consolidate-data/h-inventory.md
-    - JDisc Discovery: consolidate-data/jdisc-discovery.md
-    - LOGINventory: consolidate-data/loginventory.md
-    - Object identification during imports: consolidate-data/object-identification-during-imports.md
+      - consolidate-data/index.md
+      - CSV data import:
+          - consolidate-data/csv-data-import/index.md
+          - Example CSV import - Applications: consolidate-data/csv-data-import/example-csv-import-applications.md
+          - Example CSV import - Workplaces: consolidate-data/csv-data-import/example-csv-import-workplaces.md
+          - Example CSV import - Licenses: consolidate-data/csv-data-import/example-csv-import-licenses.md
+          - Example CSV import - Locations: consolidate-data/csv-data-import/example-csv-import-creating-locations.md
+      - CSV data export: consolidate-data/csv-data-export.md
+      - h-inventory: consolidate-data/h-inventory.md
+      - JDisc Discovery: consolidate-data/jdisc-discovery.md
+      - LOGINventory: consolidate-data/loginventory.md
+      - Object identification during imports: consolidate-data/object-identification-during-imports.md
   - Automation and integration:
-    - automation-and-integration/index.md
-    - E-Mail (SMTP): automation-and-integration/e-mail.md
-    - CLI:
-      - automation-and-integration/cli/index.md
-      - Console:
-        - automation-and-integration/cli/console/index.md
-        - Options and parameters for the console: automation-and-integration/cli/console/options-and-parameters-cli.md
-        - Using configuration files for console commands: automation-and-integration/cli/console/using-configuration-files-for-console-cli.md
-      - Controller: automation-and-integration/cli/controller.md
-    - LDAP/Active Directory (AD):
-      - automation-and-integration/ldap-active-directory-ad/index.md
-      - How to import users and groups from AD/LDAP (advanced configuration): automation-and-integration/ldap-active-directory-ad/import-users-and-groups.md
-    - Network Monitoring:
-      - automation-and-integration/network-monitoring/index.md
-      - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md
-      - Nagios: automation-and-integration/network-monitoring/nagios.md
-    - Service Desk:
-      - automation-and-integration/service-desk/index.md
-      - Request Tracker (RT): automation-and-integration/service-desk/request-tracker.md
-      - OTRS Help Desk: automation-and-integration/service-desk/otrs-help-desk.md
-      - Zammad: automation-and-integration/service-desk/zammad.md
-    - Single Sign On (SSO):
-      - automation-and-integration/single-sign-on/index.md
-      - Single Sign on (SSO) via GSSAPI: automation-and-integration/single-sign-on/single-sign-on-via-gssapi.md
-    - SNMP: automation-and-integration/snmp.md
+      - automation-and-integration/index.md
+      - E-Mail (SMTP): automation-and-integration/e-mail.md
+      - CLI:
+          - automation-and-integration/cli/index.md
+          - Console:
+              - automation-and-integration/cli/console/index.md
+              - Options and parameters for the console: automation-and-integration/cli/console/options-and-parameters-cli.md
+              - Using configuration files for console commands: automation-and-integration/cli/console/using-configuration-files-for-console-cli.md
+          - Controller: automation-and-integration/cli/controller.md
+      - LDAP/Active Directory (AD):
+          - automation-and-integration/ldap-active-directory-ad/index.md
+          - How to import users and groups from AD/LDAP (advanced configuration): automation-and-integration/ldap-active-directory-ad/import-users-and-groups.md
+      - Network Monitoring:
+          - automation-and-integration/network-monitoring/index.md
+          - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md
+          - Nagios: automation-and-integration/network-monitoring/nagios.md
+      - Service Desk:
+          - automation-and-integration/service-desk/index.md
+          - Request Tracker (RT): automation-and-integration/service-desk/request-tracker.md
+          - OTRS Help Desk: automation-and-integration/service-desk/otrs-help-desk.md
+          - Zammad: automation-and-integration/service-desk/zammad.md
+      - Single Sign On (SSO):
+          - automation-and-integration/single-sign-on/index.md
+          - Single Sign on (SSO) via GSSAPI: automation-and-integration/single-sign-on/single-sign-on-via-gssapi.md
+      - SNMP: automation-and-integration/snmp.md
   - System Administration:
-    - system-administration/index.md
-    - Administration:
-      - system-administration/administration/index.md
-      - User settings: system-administration/administration/user-settings.md
-      - CMDB settings: system-administration/administration/cmdb-settings.md
-      - License administration: system-administration/administration/license-administration.md
-      - Authorization system: system-administration/administration/authorization-system.md
-      - Interfaces / external Data: system-administration/administration/interfaces.md
-      - System settings: system-administration/administration/system-settings.md
-      - System tools: system-administration/administration/system-tools.md
-    - Admin Center: system-administration/admin-center.md
-    - Localization: system-administration/localization.md
-    - Multi-Tenants: system-administration/multi-tenant.md
-    - Customer portal: system-administration/customer-portal.md
-    - Troubleshooting:
-      - system-administration/troubleshooting/index.md
-      - Lost link to database: system-administration/troubleshooting/lost-link-to-database.md
-      - MySQL-Server has gone away: system-administration/troubleshooting/mysql-server-has-gone-away.md
-      - Can not create table idoit_data.table_name: system-administration/troubleshooting/cant-create-table.md
-      - No login after changing the session timeout: system-administration/troubleshooting/no-login-after-changing-the-session-timeout.md
-      - LDAP via TLS: system-administration/troubleshooting/ldap-via-tls.md
-      - MySQL/MariaDB does not start after changing innodb_log_file_size: system-administration/troubleshooting/mysql-mariadb-does-not-start.md
-      - Row size too large: system-administration/troubleshooting/row-size-too-large.md
-      - Location cannot be saved: system-administration/troubleshooting/location-cannot-be-saved.md
-    - Hotfixes:
-      - system-administration/hotfixes/index.md
-      - i-doit 1.12.2 Update-Button funktionslos: system-administration/hotfixes/i-doit-1.12.2-update-button-does-not-work.md
-      - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
-    - System settings (Administration):
-      - system-administration/system-settings/index.md
-      - Expert settings: system-administration/system-settings/expert-settings.md
-      - Tenantsettings: system-administration/system-settings/tenantsettings.md
-      - System-wide: system-administration/system-settings/system-wide.md
+      - system-administration/index.md
+      - Administration:
+          - system-administration/administration/index.md
+          - User settings: system-administration/administration/user-settings.md
+          - CMDB settings: system-administration/administration/cmdb-settings.md
+          - License administration: system-administration/administration/license-administration.md
+          - Authorization system: system-administration/administration/authorization-system.md
+          - Interfaces / external Data: system-administration/administration/interfaces.md
+          - System settings: system-administration/administration/system-settings.md
+          - System tools: system-administration/administration/system-tools.md
+      - Admin Center: system-administration/admin-center.md
+      - Localization: system-administration/localization.md
+      - Multi-Tenants: system-administration/multi-tenant.md
+      - Customer portal: system-administration/customer-portal.md
+      - Troubleshooting:
+          - system-administration/troubleshooting/index.md
+          - Lost link to database: system-administration/troubleshooting/lost-link-to-database.md
+          - MySQL-Server has gone away: system-administration/troubleshooting/mysql-server-has-gone-away.md
+          - Can not create table idoit_data.table_name: system-administration/troubleshooting/cant-create-table.md
+          - No login after changing the session timeout: system-administration/troubleshooting/no-login-after-changing-the-session-timeout.md
+          - LDAP via TLS: system-administration/troubleshooting/ldap-via-tls.md
+          - MySQL/MariaDB does not start after changing innodb_log_file_size: system-administration/troubleshooting/mysql-mariadb-does-not-start.md
+          - Row size too large: system-administration/troubleshooting/row-size-too-large.md
+          - Location cannot be saved: system-administration/troubleshooting/location-cannot-be-saved.md
+      - Hotfixes:
+          - system-administration/hotfixes/index.md
+          - i-doit 1.12.2 Update-Button funktionslos: system-administration/hotfixes/i-doit-1.12.2-update-button-does-not-work.md
+          - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
+      - System settings (Administration):
+          - system-administration/system-settings/index.md
+          - Expert settings: system-administration/system-settings/expert-settings.md
+          - Tenantsettings: system-administration/system-settings/tenantsettings.md
+          - System-wide: system-administration/system-settings/system-wide.md
   - Use cases:
-    - use-cases/index.md
-    - Mapping of customer sites: use-cases/mapping-of-customer-sites.md
-    - Workplaces: use-cases/wokplaces.md
-    - Upload and link of files: use-cases/upload-and-link-files.md
-    - Documentation of databases: use-cases/documentation-of-databases.md
-    - Geo coordinates: use-cases/geo-coordinates.md
-    - IP address management (IPAM): use-cases/ip-adress-management.md
-    - Cable patches and paths: use-cases/cable-patches-and-path.md
-    - Complex reports: use-cases/complex-reports.md
-    - Creating a local user: use-cases/creating-a-local-user.md
-    - Manage passwords: use-cases/manage-password.md
-    - Location-based authorization: use-cases/location-bases-authorization.md
-    - Locations: use-cases/locations.md
-    - Switch Stacking: use-cases/switch-stacking.md
-    - i-doit with OpenID-Connect authentication explained with Google login: use-cases/i-doit-with-openid-connect-auth.md
-    - VM Provisioning: use-cases/vm-provisioning.md
-    - Custom translations: use-cases/custom-translation.md
+      - use-cases/index.md
+      - Mapping of customer sites: use-cases/mapping-of-customer-sites.md
+      - Workplaces: use-cases/wokplaces.md
+      - Upload and link of files: use-cases/upload-and-link-files.md
+      - Documentation of databases: use-cases/documentation-of-databases.md
+      - Geo coordinates: use-cases/geo-coordinates.md
+      - IP address management (IPAM): use-cases/ip-adress-management.md
+      - Cable patches and paths: use-cases/cable-patches-and-path.md
+      - Complex reports: use-cases/complex-reports.md
+      - Creating a local user: use-cases/creating-a-local-user.md
+      - Manage passwords: use-cases/manage-password.md
+      - Location-based authorization: use-cases/location-bases-authorization.md
+      - Locations: use-cases/locations.md
+      - Switch Stacking: use-cases/switch-stacking.md
+      - i-doit with OpenID-Connect authentication explained with Google login: use-cases/i-doit-with-openid-connect-auth.md
+      - VM Provisioning: use-cases/vm-provisioning.md
+      - Custom translations: use-cases/custom-translation.md
   - i-doit pro Add-ons:
-    - i-doit-pro-add-ons/index.md
-    - Active Directory Documentation: i-doit-pro-add-ons/active-directory-documentation.md
-    - Add-on Packager: i-doit-pro-add-ons/add-on-packager.md
-    - Analysis: i-doit-pro-add-ons/analysis.md
-    - API (JSON-RPC):
-      - i-doit-pro-add-ons/api/index.md
-      - Methods: i-doit-pro-add-ons/api/methods.md
-      - Examples for handling the API: i-doit-pro-add-ons/api/examples-for-handling-the-api.md
-      - Tips and tricks for working with the API: i-doit-pro-add-ons/api/tips-and-tricks-for-api.md
-      - Category fields for data arrays: i-doit-pro-add-ons/api/category-fields-for-data-arrays.md
-    - Cabling: i-doit-pro-add-ons/cabling.md
-    - CheckMK: i-doit-pro-add-ons/checkmk.md
-    - CheckMK2:
-      - i-doit-pro-add-ons/checkmk2/index.md
-      - First steps: i-doit-pro-add-ons/checkmk2/first-steps.md
-      - Requirements: i-doit-pro-add-ons/checkmk2/requirements.md
-      - Installation: i-doit-pro-add-ons/checkmk2/installation.md
-      - Configuration: i-doit-pro-add-ons/checkmk2/configuration.md
-      - Usage: i-doit-pro-add-ons/checkmk2/usage.md
-      - Import agents types from checkmk to i-doit: i-doit-pro-add-ons/checkmk2/sync-checkmk-agents.md
-      - Sync contact groups between checkmk and i-doit: i-doit-pro-add-ons/checkmk2/sync-contact-groups.md
-      - Sync WATO folders between checkmk and i-doit: i-doit-pro-add-ons/checkmk2/sync-wato-folder.md
-      - Import monitoring sites from checkmk to i-doit: i-doit-pro-add-ons/checkmk2/sync-checkmk-sites.md
-      - Sync host tags between checkmk and i-doit: i-doit-pro-add-ons/checkmk2/sync-host-tags.md
-      - Generate WATO configuration based on CMDB data: i-doit-pro-add-ons/checkmk2/generate-wato-configuration-base-on-cmdb-data.md
-      - Import inventory data into CMDB: i-doit-pro-add-ons/checkmk2/import-inventory-data-into-cmdb.md
-      - i-doit web GUI: i-doit-pro-add-ons/checkmk2/i-doit-web-gui.md
-      - Read information from i-doit and checkmk: i-doit-pro-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md
-      - Match objects from i-doit with hosts from checkmk: i-doit-pro-add-ons/checkmk2/match-objects-from-i-doit-with-hosts-from-checkmk.md
-      - requently asked questions (FAQ): i-doit-pro-add-ons/checkmk2/faq.md
-    - DNS Documentation: i-doit-pro-add-ons/dns-documentation.md
-    - Documents:
-      - i-doit-pro-add-ons/documents/index.md
-      - Preparation: i-doit-pro-add-ons/documents/preparation.md
-      - Document templates: i-doit-pro-add-ons/documents/document-templates.md
-      - Placeholder in the Documents add-on: i-doit-pro-add-ons/documents/placeholder-in-the-documens.md
-      - Document creation: i-doit-pro-add-ons/documents/document-creation.md
-    - Events: i-doit-pro-add-ons/events.md
-    - Floorplan: i-doit-pro-add-ons/floorplan.md
-    - Forms:
-      - i-doit-pro-add-ons/forms/index.md
-      - Install Forms Add-on: i-doit-pro-add-ons/forms/install-forms-addon.md
-      - Install MongoDB v5: i-doit-pro-add-ons/forms/install-mongodb.md
-      - Install NodeJS: i-doit-pro-add-ons/forms/install-nodejs.md
-      - Configure the Forms Backend: i-doit-pro-add-ons/forms/configure-forms-backend.md
-      - Configuration in i-doit: i-doit-pro-add-ons/forms/configuration-in-i-doit.md
-      - Use forms: i-doit-pro-add-ons/forms/use-forms.md
-      - Publish forms: i-doit-pro-add-ons/forms/publish-form.md
-      - Fill out form: i-doit-pro-add-ons/forms/fill-out-forms.md
-      - Using Forms Add-on API: i-doit-pro-add-ons/forms/using-forms-api.md
-    - i-diary:
-      - i-doit-pro-add-ons/i-diary/index.md
-      - i-diary Requirements: i-doit-pro-add-ons/i-diary/requirements.md
-      - i-diary Install: i-doit-pro-add-ons/i-diary/install.md
-      - i-diary Update: i-doit-pro-add-ons/i-diary/update.md
-      - i-diary Configuration: i-doit-pro-add-ons/i-diary/configuration.md
-      - i-diary Basic Usage: i-doit-pro-add-ons/i-diary/basic-usage.md
-      - i-diary Determine the author: i-doit-pro-add-ons/i-diary/determine-the-author.md
-      - i-diary Determine the host: i-doit-pro-add-ons/i-diary/determine-the-host.md
-    - ISMS: i-doit-pro-add-ons/isms.md
-    - i-doit QR-Code Printer: i-doit-pro-add-ons/i-doit-qr-code-printer.md
-    - Maintenance: i-doit-pro-add-ons/maintenance.md
-    - OCS Inventory NG: i-doit-pro-add-ons/ocs-inventory-ng.md
-    - Relocate-CI: i-doit-pro-add-ons/relocate-ci.md
-    - Replacement: i-doit-pro-add-ons/replacement.md
-    - VIVA:
-      - i-doit-pro-add-ons/viva/index.md
-      - Introduction to VIVA: i-doit-pro-add-ons/viva/introduction-to-viva.md
-      - Preparation of the VIVA installation: i-doit-pro-add-ons/viva/preparation-of-the-viva-installation.md
-      - Procedure with VIVA: i-doit-pro-add-ons/viva/procedure-with-viva.md
-      - Risk analysis according to IT-Grundschutz: i-doit-pro-add-ons/viva/risk-analysis-according-to-it-grundschutz.md
-      - Reports with VIVA: i-doit-pro-add-ons/viva/reports-with-viva.md
-      - Support audits with VIVA: i-doit-pro-add-ons/viva/support-audits-with-viva.md
-      - VIVA assistants: i-doit-pro-add-ons/viva/viva-assistants.md
-      - Object category VIVA: i-doit-pro-add-ons/viva/object-category-viva.md
-      - VIVA-Widget: i-doit-pro-add-ons/viva/viva-widget.md
-      - Workflow with VIVA: i-doit-pro-add-ons/viva/workflow-with-viva.md
-    - VIVA2: i-doit-pro-add-ons/viva2.md
-    - Workflow: i-doit-pro-add-ons/workflow.md
-    - Rights Documentation: i-doit-pro-add-ons/rights-documentation.md
+      - i-doit-pro-add-ons/index.md
+      - Active Directory Documentation: i-doit-pro-add-ons/active-directory-documentation.md
+      - Add-on Packager: i-doit-pro-add-ons/add-on-packager.md
+      - Analysis: i-doit-pro-add-ons/analysis.md
+      - API (JSON-RPC):
+          - i-doit-pro-add-ons/api/index.md
+          - Methods: i-doit-pro-add-ons/api/methods.md
+          - Examples for handling the API: i-doit-pro-add-ons/api/examples-for-handling-the-api.md
+          - Tips and tricks for working with the API: i-doit-pro-add-ons/api/tips-and-tricks-for-api.md
+          - Category fields for data arrays: i-doit-pro-add-ons/api/category-fields-for-data-arrays.md
+      - Cabling: i-doit-pro-add-ons/cabling.md
+      - CheckMK: i-doit-pro-add-ons/checkmk.md
+      - CheckMK2:
+          - i-doit-pro-add-ons/checkmk2/index.md
+          - First steps: i-doit-pro-add-ons/checkmk2/first-steps.md
+          - Requirements: i-doit-pro-add-ons/checkmk2/requirements.md
+          - Installation: i-doit-pro-add-ons/checkmk2/installation.md
+          - Configuration: i-doit-pro-add-ons/checkmk2/configuration.md
+          - Usage: i-doit-pro-add-ons/checkmk2/usage.md
+          - Import agents types from checkmk to i-doit: i-doit-pro-add-ons/checkmk2/sync-checkmk-agents.md
+          - Sync contact groups between checkmk and i-doit: i-doit-pro-add-ons/checkmk2/sync-contact-groups.md
+          - Sync WATO folders between checkmk and i-doit: i-doit-pro-add-ons/checkmk2/sync-wato-folder.md
+          - Import monitoring sites from checkmk to i-doit: i-doit-pro-add-ons/checkmk2/sync-checkmk-sites.md
+          - Sync host tags between checkmk and i-doit: i-doit-pro-add-ons/checkmk2/sync-host-tags.md
+          - Generate WATO configuration based on CMDB data: i-doit-pro-add-ons/checkmk2/generate-wato-configuration-base-on-cmdb-data.md
+          - Import inventory data into CMDB: i-doit-pro-add-ons/checkmk2/import-inventory-data-into-cmdb.md
+          - i-doit web GUI: i-doit-pro-add-ons/checkmk2/i-doit-web-gui.md
+          - Read information from i-doit and checkmk: i-doit-pro-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md
+          - Match objects from i-doit with hosts from checkmk: i-doit-pro-add-ons/checkmk2/match-objects-from-i-doit-with-hosts-from-checkmk.md
+          - requently asked questions (FAQ): i-doit-pro-add-ons/checkmk2/faq.md
+      - DNS Documentation: i-doit-pro-add-ons/dns-documentation.md
+      - Documents:
+          - i-doit-pro-add-ons/documents/index.md
+          - Preparation: i-doit-pro-add-ons/documents/preparation.md
+          - Document templates: i-doit-pro-add-ons/documents/document-templates.md
+          - Placeholder in the Documents add-on: i-doit-pro-add-ons/documents/placeholder-in-the-documens.md
+          - Document creation: i-doit-pro-add-ons/documents/document-creation.md
+      - Events: i-doit-pro-add-ons/events.md
+      - Floorplan: i-doit-pro-add-ons/floorplan.md
+      - Forms:
+          - i-doit-pro-add-ons/forms/index.md
+          - Install Forms Add-on: i-doit-pro-add-ons/forms/install-forms-addon.md
+          - Install MongoDB v5: i-doit-pro-add-ons/forms/install-mongodb.md
+          - Install NodeJS: i-doit-pro-add-ons/forms/install-nodejs.md
+          - Configure the Forms Backend: i-doit-pro-add-ons/forms/configure-forms-backend.md
+          - Configuration in i-doit: i-doit-pro-add-ons/forms/configuration-in-i-doit.md
+          - Use forms: i-doit-pro-add-ons/forms/use-forms.md
+          - Publish forms: i-doit-pro-add-ons/forms/publish-form.md
+          - Fill out form: i-doit-pro-add-ons/forms/fill-out-forms.md
+          - Using Forms Add-on API: i-doit-pro-add-ons/forms/using-forms-api.md
+      - i-diary:
+          - i-doit-pro-add-ons/i-diary/index.md
+          - i-diary Requirements: i-doit-pro-add-ons/i-diary/requirements.md
+          - i-diary Install: i-doit-pro-add-ons/i-diary/install.md
+          - i-diary Update: i-doit-pro-add-ons/i-diary/update.md
+          - i-diary Configuration: i-doit-pro-add-ons/i-diary/configuration.md
+          - i-diary Basic Usage: i-doit-pro-add-ons/i-diary/basic-usage.md
+          - i-diary Determine the author: i-doit-pro-add-ons/i-diary/determine-the-author.md
+          - i-diary Determine the host: i-doit-pro-add-ons/i-diary/determine-the-host.md
+      - ISMS: i-doit-pro-add-ons/isms.md
+      - i-doit QR-Code Printer: i-doit-pro-add-ons/i-doit-qr-code-printer.md
+      - Maintenance: i-doit-pro-add-ons/maintenance.md
+      - OCS Inventory NG: i-doit-pro-add-ons/ocs-inventory-ng.md
+      - Relocate-CI: i-doit-pro-add-ons/relocate-ci.md
+      - Replacement: i-doit-pro-add-ons/replacement.md
+      - VIVA:
+          - i-doit-pro-add-ons/viva/index.md
+          - Introduction to VIVA: i-doit-pro-add-ons/viva/introduction-to-viva.md
+          - Preparation of the VIVA installation: i-doit-pro-add-ons/viva/preparation-of-the-viva-installation.md
+          - Procedure with VIVA: i-doit-pro-add-ons/viva/procedure-with-viva.md
+          - Risk analysis according to IT-Grundschutz: i-doit-pro-add-ons/viva/risk-analysis-according-to-it-grundschutz.md
+          - Reports with VIVA: i-doit-pro-add-ons/viva/reports-with-viva.md
+          - Support audits with VIVA: i-doit-pro-add-ons/viva/support-audits-with-viva.md
+          - VIVA assistants: i-doit-pro-add-ons/viva/viva-assistants.md
+          - Object category VIVA: i-doit-pro-add-ons/viva/object-category-viva.md
+          - VIVA-Widget: i-doit-pro-add-ons/viva/viva-widget.md
+          - Workflow with VIVA: i-doit-pro-add-ons/viva/workflow-with-viva.md
+      - VIVA2: i-doit-pro-add-ons/viva2.md
+      - Workflow: i-doit-pro-add-ons/workflow.md
+      - Rights Documentation: i-doit-pro-add-ons/rights-documentation.md
   - Software Development:
-    - software-development/index.md
-    - Database Model:
-      - software-development/database-model/index.md
-      - Category Tables 1.10: software-development/database-model/category-tables-1.10.md
-      - Category Tables 1.9: software-development/database-model/category-tables-1.9.md
-    - Develop add-ons:
-      - software-development/software-development/index.md
-      - Install, update and activate add-ons: software-development/software-development/install-update-and-activate-add-ons.md
-      - File and folder structure of an add-on: software-development/software-development/file-and-folder-structure-of-an-add-on.md
-      - Bootstrapping an add-on (init.php): software-development/software-development/bootstrapping-an-add-on.md
-      - Metadata of an add-on (package.json): software-development/software-development/metadata-of-an-add-on.md
-      - Localization: software-development/software-development/localization.md
-      - Routing and MVC: software-development/software-development/routing-and-mvc.md
-      - Using user rights in the add-on: software-development/software-development/using-user-rights-in-the-add-on.md
-      - Using commands in the add-on: software-development/software-development/using-commands-in-the-add-on.md
-      - Extend system settings: software-development/software-development/extend-system-settings.md
-      - Extend API: software-development/software-development/extend-api.md
-      - Attribute-Definition: software-development/software-development/attribute-definitio.md
-      - Program categories: software-development/software-development/program-categories.md
-      - Report views: software-development/software-development/report-views.md
-      - Signal-Slot System: software-development/software-development/signal-slot-system.md
-      - DIY data import: software-development/software-development/diy-data-import.md
-      - Program Dashboard Widget: software-development/software-development/program-dashboard-widgets.md
+      - software-development/index.md
+      - Database Model:
+          - software-development/database-model/index.md
+          - Category Tables 1.10: software-development/database-model/category-tables-1.10.md
+          - Category Tables 1.9: software-development/database-model/category-tables-1.9.md
+      - Develop add-ons:
+          - software-development/software-development/index.md
+          - Install, update and activate add-ons: software-development/software-development/install-update-and-activate-add-ons.md
+          - File and folder structure of an add-on: software-development/software-development/file-and-folder-structure-of-an-add-on.md
+          - Bootstrapping an add-on (init.php): software-development/software-development/bootstrapping-an-add-on.md
+          - Metadata of an add-on (package.json): software-development/software-development/metadata-of-an-add-on.md
+          - Localization: software-development/software-development/localization.md
+          - Routing and MVC: software-development/software-development/routing-and-mvc.md
+          - Using user rights in the add-on: software-development/software-development/using-user-rights-in-the-add-on.md
+          - Using commands in the add-on: software-development/software-development/using-commands-in-the-add-on.md
+          - Extend system settings: software-development/software-development/extend-system-settings.md
+          - Extend API: software-development/software-development/extend-api.md
+          - Attribute-Definition: software-development/software-development/attribute-definitio.md
+          - Program categories: software-development/software-development/program-categories.md
+          - Report views: software-development/software-development/report-views.md
+          - Signal-Slot System: software-development/software-development/signal-slot-system.md
+          - DIY data import: software-development/software-development/diy-data-import.md
+          - Program Dashboard Widget: software-development/software-development/program-dashboard-widgets.md
   - Glossary: glossary.md
   - FAQ: faq.md
