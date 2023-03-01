@@ -117,10 +117,10 @@ The required configuration for this has already been made in the previous steps.
 The configuration must be done in the [handler configuration](../../automation-and-integration/cli/index.md). An example can be found [here](../cli/console/using-configuration-files-for-console-cli.md) (i-doit < 1.15. This file can be extended and customized with login data, tenant and attributes. The configuration file is then moved to /src/handler/config/.  
 So that this file is considered e.g. with the ldap-sync Command, this must be indicated with the sync over a further parameter (-c /path/) also (further information to the [Console](../../automation-and-integration/cli/index.md)).
 
-!!! warning Access to .ini files
+!!! warning "Access to .ini files"
     If the configuration file is placed in the i-doit directory, the .htaccess must be modified.
     This code should be added:
-    
+
     ```shell
     ## Deny access to all ini files…
     <Files "*.ini">
