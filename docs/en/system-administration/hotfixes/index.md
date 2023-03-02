@@ -16,8 +16,11 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
     Please use hotfixes exclusively with the specified version. Hotfixes will be included in newer versions so that a renewed installation is not necessary.
     Should you use an older i-doit version it is essential to make an update to the latest version first.
+
     If a hotfix is required to update an older version, it can be found in the hotfix subchapters here in the Knowledge Base.
+
     As these are hotfixes we recommend installing them only when the adjustments are necessary for a flawless operation of your installation or you are requested by the support team to use them. Please ensure that you made a [backup of i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) before you use any hotfix.
+
     Please inform us about the use of hotfixes should you contact our support team afterwards.
 
 !!! info "Current version"
@@ -33,28 +36,28 @@ i-doit Core
 
 ### 500 Error with SSO login
 
-[i-doit_22_hotfix_ID-9158_4711443.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9158_4711443.zip)
+[i-doit_22_hotfix_ID-9158_4711443.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9158_4711443.zip){ .md-button .md-button--primary }
 
 ### Conditions might not be loaded correctly in the report manager
 
-[i-doit_22_hotfix_ID-9265_8a555cf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9265_8a555cf.zip)
+[i-doit_22_hotfix_ID-9265_8a555cf.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9265_8a555cf.zip){ .md-button .md-button--primary }
 
 ### Port allocation is deleted when saving in list edit
 
-[i-doit_22_hotfix_ID-9163_1efe827.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9163_1efe827.zip)
+[i-doit_22_hotfix_ID-9163_1efe827.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9163_1efe827.zip){ .md-button .md-button--primary }
 
 ### JDisc Discovery does not work with HTTP/HTTPS
 
-[i-doit_22_hotfix_ID-9255_9750ba4.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9255_9750ba4.zip)
+[i-doit_22_hotfix_ID-9255_9750ba4.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9255_9750ba4.zip){ .md-button .md-button--primary }
 
 ### h-inventory import error due to missing entries in constants cache
 
-[i-doit_22_hotfix_ID-9259_feeeedf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip)
+[i-doit_22_hotfix_ID-9259_feeeedf.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip){ .md-button .md-button--primary }
 
 ### Specific object type categories are missing in selection
 If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct [specific category](../../basics/custom-object-types.md).
 
-[i-doit_22_hotfix_ID-9281_f9f4e93.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip)
+[i-doit_22_hotfix_ID-9281_f9f4e93.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip){ .md-button .md-button--primary }
 
 Forms Add-on 1.1.0
 ------------------
@@ -63,4 +66,4 @@ Forms Add-on 1.1.0
 
 It is necessary to re-index the category attributes via [Systemtools](../../system-administration/system-settings/index.md), after applying the hotfix
 
-[aof-17-incompatible-function-declaration.zip](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip)
+[aof-17-incompatible-function-declaration.zip :material-file-download:](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }

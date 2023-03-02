@@ -15,7 +15,7 @@ Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP fil
 
     Please inform us about the use of hotfixes should you contact our support team afterwards.
 
-!!! danger "Updateing from i-doit 1.12.2 to 1.12.3 is not possible (Version 1.12.2 only!)"
+!!! danger "Updating from i-doit 1.12.2 to 1.12.3 is not possible (Version 1.12.2 only!)"
 
 This hotfix corrects an error that prevents the update from continuing via the download function when version 1.12.2 is used.
 
@@ -23,6 +23,6 @@ This hotfix corrects an error that prevents the update from continuing via the d
 
     By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
 
-[![hotfix-1.12.2-update-button](../../assets/downloads/hotfixes/1.12.2-update-button-037c2ff396.zip)](../../assets/downloads/hotfixes/1.12.2-update-button-037c2ff396.zip)
+[1.12.2-update-button-037c2ff396.zip :material-file-download:](../../assets/downloads/hotfixes/1.12.2-update-button-037c2ff396.zip){ .md-button .md-button--primary }
 
 After applying the hotfix it is necessary to empty the i-doit cache (via the [administration](../administration/index.md)) as well as the browser cache (via the key combination **Ctrl + F5**). Afterwards, the update process can be called and executed as usual.
