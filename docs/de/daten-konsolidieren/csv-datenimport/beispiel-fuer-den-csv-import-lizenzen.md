@@ -6,15 +6,15 @@ In diesem Beispiel bauen wir auf den [CSV Import von Anwendungen](beispiel-fuer-
 
 Für den Import benötigen wir folgende Informationen:
 
-*   Objekttyp → Um welchen Objekttypen soll es sich Handeln
-*   Objektname → den Namen des Clients
-*   Lizenzzuweisung: Lizenzschlüssel - Lizenz Typ → Welcher Lizenz Typ wird importiert, Einzel- oder Volumen?
-*   Lizenzzuweisung: Lizenzschlüssel - Anzahl → Welche Anzahl an Lizenzen gibt es?
-*   Lizenzzuweisung: Lizenzschlüssel - Schlüssel→ Wie lautet der Lizenzschlüssel?
-*   Lizenzzuweisung: Lizenzschlüssel - Seriennummer → Welche Seriennummer soll zugeordnet werden?
-*   Lizenzzuweisung: Lizenzschlüssel - Startdatum → Ab wann kann die Lizenz verwendet werden?
-*   Lizenzzuweisung: Lizenzschlüssel - Ablaufdatum → Wann läuft die Lizenz ab?
-*   Lizenzzuweisung: Lizenzschlüssel - Einzelpreis → Was kostet eine Lizenz?
+-  Objekttyp → Um welchen Objekttypen soll es sich Handeln
+-  Objektname → den Namen des Clients
+-  Lizenzzuweisung: Lizenzschlüssel - Lizenz Typ → Welcher Lizenz Typ wird importiert, Einzel- oder Volumen?
+-  Lizenzzuweisung: Lizenzschlüssel - Anzahl → Welche Anzahl an Lizenzen gibt es?
+-  Lizenzzuweisung: Lizenzschlüssel - Schlüssel→ Wie lautet der Lizenzschlüssel?
+-  Lizenzzuweisung: Lizenzschlüssel - Seriennummer → Welche Seriennummer soll zugeordnet werden?
+-  Lizenzzuweisung: Lizenzschlüssel - Startdatum → Ab wann kann die Lizenz verwendet werden?
+-  Lizenzzuweisung: Lizenzschlüssel - Ablaufdatum → Wann läuft die Lizenz ab?
+-  Lizenzzuweisung: Lizenzschlüssel - Einzelpreis → Was kostet eine Lizenz?
 
 !!! note "Bei jedem Import muss auch die Darstellung der Daten beachtet werden."
 
@@ -31,10 +31,13 @@ Beispiel CSV Datei für diesen Import:
 [Import Lizenzen.csv](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/Import-Lizenzen.csv)
 
 ??? example "Import Lizenzen.csv"
+
+    ```text
     Objekttyp;ObjektName;Lizenzzuweisung: Lizenzschlüssel - Lizenz Typ;Lizenzzuweisung: Lizenzschlüssel - Anzahl;Lizenzzuweisung: Lizenzschlüssel - Schlüssel;Lizenzzuweisung: Lizenzschlüssel - Seriennummer;Lizenzzuweisung: Lizenzschlüssel - Startdatum;Lizenzzuweisung: Lizenzschlüssel - Ablaufdatum;Lizenzzuweisung: Lizenzschlüssel - Einzelpreis
     C__OBJTYPE__LICENCE;Lizenz-X;Volumen-Lizenz;1000;Lizenz-X-111-LASKDZHW;123456789;01.01.2021;31.12.2021;999.99
     C__OBJTYPE__LICENCE;Lizenz-Y;Einzel-Lizenz;1;Lizenz-Y-211-OIHUASFD;1123456789;01.06.2021;31.12.2021;1399.99
     C__OBJTYPE__LICENCE;Lizenz-Z;Volumen-Lizenz,Volumen-Lizenz;100,50;Lizenz-Z-311-IGUHOPSD,Lizenz-Z-322-IUHGASD;11123456789,11223456789;01.01.2021,01.05.2021;31.12.2021,30.04.2021;1000.99,500.99
+    ```
 
 Bei diesem Import werden keine Abhängigkeiten vorausgesetzt.
 

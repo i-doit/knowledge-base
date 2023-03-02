@@ -13,10 +13,10 @@ Our use case is the automatic creation of locations within i-doit using a CSV im
 
 We need the following information to create the individual objects:
 
-*   The self-created object type Floor/Basement with the object type constant →  C\_\_OBJECT\_TYPE\_\_FLOOR.
-*   Object name → the name of the building, floor or room
-*   Location → under which location the object should be located
-*   Object type → what type of object it should be
+-  The self-created object type Floor/Basement with the object type constant →  C\_\_OBJECT\_TYPE\_\_FLOOR.
+-  Object name → the name of the building, floor or room
+-  Location → under which location the object should be located
+-  Object type → what type of object it should be
 
 Example CSV file for this import:
 
@@ -26,6 +26,7 @@ The structure of the CSV looks as follows:
 
 ??? example "Import Location.csv"
 
+    ```text
     Object title;Location;Object type
     HEADQUARTER;Root location;C__OBJTYPE__BUILDING
     Basement;HEADQUARTER;C__OBJECT_TYPE__FLOOR
@@ -88,6 +89,7 @@ The structure of the CSV looks as follows:
     Room 3.012;Third Floor;C__OBJTYPE__ROOM
     Room 3.013;Third Floor;C__OBJTYPE__ROOM
     Room 3.014;Third Floor;C__OBJTYPE__ROOM
+    ```
 
 Since we want to set dependencies that build on each other, it is important to keep a corresponding order for the locations in the CSV file.  
 The root location is always the lowest level and already exists. In this location are the individual buildings, in the buildings the individual floors and in the floors the respective rooms:
