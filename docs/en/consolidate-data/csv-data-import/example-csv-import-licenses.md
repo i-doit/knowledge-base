@@ -2,9 +2,7 @@
 
 In this example we build on the [CSV import of applications](example-csv-import-applications.md) and want to import licenses.
 
-!!! info
-
-    his article was last checked for i-doit version 1.17.2
+!!! info "This article was last checked for i-doit version 1.17.2"
 
 For the import we need the following information:
 
@@ -18,9 +16,7 @@ For the import we need the following information:
 -  License assignment: License key - Expiration date → When does the license expire?
 -  License assignment: License key - Unit price → What does a license cost?
 
-!!! info
-
-    With each import, the representation of the data must also be taken into account.
+!!! info "With each import, the representation of the data must also be taken into account."
 
 For example:
 
@@ -32,7 +28,7 @@ And the numeric format: X,XXX,XX (1,111.11), because the comma is set by i-doit 
 
 Example CSV file for this import:
 
-[Import Licenses.csv](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/Import Licenses.csv)
+[Import-Licenses.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/Import-Licenses.csv){ .md-button .md-button--primary }
 
 ??? example "Import Licenses.csv"
 

@@ -4,7 +4,6 @@ In diesem Beispiel wollen wir Anwendungen importieren. Wir möchten so viele In
 
 !!! note "Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft"
 
-
 Für den Import können wir folgende Informationen importieren:
 
 -  Objekttyp → Um welchen Objekttypen soll es sich Handeln
@@ -23,7 +22,7 @@ Für den Import können wir folgende Informationen importieren:
 
 Beispiel CSV Datei für diesen Import:
 
-[Import Anwendungen](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/Import-Anwendungen.csv)
+[Import-Anwendungen.csv :material-file-download:](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/Import-Anwendungen.csv){ .md-button .md-button--primary }
 
 ??? example "Import-Anwendungen.csv"
 
