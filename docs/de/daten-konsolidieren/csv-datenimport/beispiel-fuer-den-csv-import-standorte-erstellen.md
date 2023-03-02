@@ -7,10 +7,10 @@ Unser Anwendungsfall ist das automatische erstellen der Standorte innerhalb von 
 
 Wir benötigen für das erstellen der einzelnen Objekte folgende Informationen:
 
-*   Den selbst erstellten Objekttyp Etage/Basement mit der Objekttyp Konstante - C__OBJECT_TYPE__FLOOR
-*   Objektname → den Namen des Gebäudes, der Etage oder des Raumes
-*   Standort → unterhalb welcher Lokation soll sich das Objekt befinden 
-*   Objekttyp → Um welchen Objekttypen soll es sich Handeln
+-  Den selbst erstellten Objekttyp Etage/Basement mit der Objekttyp Konstante - C__OBJECT_TYPE__FLOOR
+-  Objektname → den Namen des Gebäudes, der Etage oder des Raumes
+-  Standort → unterhalb welcher Lokation soll sich das Objekt befinden 
+-  Objekttyp → Um welchen Objekttypen soll es sich Handeln
 
 Beispiel CSV Datei für diesen Import:
 
@@ -19,6 +19,8 @@ Beispiel CSV Datei für diesen Import:
 Der Aufbau der CSV sieht wie folgt aus:
 
 ??? example "Import Standort.csv"
+
+    ```text
     ObjektName;Standort;Objekttyp
     HEADQUARTER;Root location;C__OBJTYPE__BUILDING
     Basement;HEADQUARTER;C__OBJECT_TYPE__FLOOR
@@ -81,6 +83,7 @@ Der Aufbau der CSV sieht wie folgt aus:
     RAUM 3.012;Third Floor;C__OBJTYPE__ROOM
     RAUM 3.013;Third Floor;C__OBJTYPE__ROOM
     RAUM 3.014;Third Floor;C__OBJTYPE__ROOM
+    ```
 
 Da wir Abhängigkeiten setzen wollen die aufeinander aufbauen, ist es wichtig in der CSV Datei eine entsprechende Reihenfolge bei den Standorten einzuhalten.
 Die Root Lokation ist immer die unterste Stufe und bereits vorhanden. In dieser befinden sich die einzelnen Gebäude, in den Gebäuden die einzelnen Etagen und in den Etagen die jeweiligen Räume:
