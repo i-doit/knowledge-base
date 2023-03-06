@@ -14,7 +14,7 @@ Für den Import benötigen wir folgende Informationen:
 
 Beispiel CSV Datei für diesen Import:
 
-[Import Anwendungen](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/Import-Arbeitsplaetze.csv)
+[Import-Arbeitsplaetze.csv :material-file-download:](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/Import-Arbeitsplaetze.csv){ .md-button .md-button--primary }
 
 ??? example "Import-Arbeitsplaetze.csv"
 

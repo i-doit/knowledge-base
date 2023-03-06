@@ -378,4 +378,4 @@ Auf der Console würde der Command so aussehen:
 
     sudo -u www-data php console.php ldap-sync -c /var/www/html/i-doit/src/handler/config/ldap-sync.ini
 
-[![ldap_personen-download](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/1-cmd.png)<br/>example-ldap.ini](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/example-ldap.ini)
+[example-ldap.ini :material-file-download:](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/example-ldap.ini){ .md-button .md-button--primary }

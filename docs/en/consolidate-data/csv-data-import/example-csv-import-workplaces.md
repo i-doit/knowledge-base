@@ -3,13 +3,7 @@
 In this example we build on the [CSV import of locations](example-csv-import-creating-locations.md) and want to import workplaces.  
 These are to be assigned to a room as a location and furthermore we want to assign clients, monitors and printers to the workplaces.
 
-!!! info
-
-    This article was last checked for i-doit version 1.17.1
-
-  
-
-  
+!!! info "This article was last checked for i-doit version 1.17.1"
 
 For the import we need the following information:
 
@@ -20,7 +14,7 @@ For the import we need the following information:
 
 Example CSV file for this import:
 
-[Import Workplaces.csv](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/Import Workplaces.csv)
+[Import-Workplaces.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/Import-Workplaces.csv){ .md-button .md-button--primary }
 
 ??? example "Import Workplaces.csv"
 

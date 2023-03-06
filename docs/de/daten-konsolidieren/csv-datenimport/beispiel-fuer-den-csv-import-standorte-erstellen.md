@@ -7,14 +7,14 @@ Unser Anwendungsfall ist das automatische erstellen der Standorte innerhalb von 
 
 Wir benötigen für das erstellen der einzelnen Objekte folgende Informationen:
 
--  Den selbst erstellten Objekttyp Etage/Basement mit der Objekttyp Konstante - C__OBJECT_TYPE__FLOOR
--  Objektname → den Namen des Gebäudes, der Etage oder des Raumes
--  Standort → unterhalb welcher Lokation soll sich das Objekt befinden 
--  Objekttyp → Um welchen Objekttypen soll es sich Handeln
+*   Den selbst erstellten Objekttyp Etage/Basement mit der Objekttyp Konstante - `C__OBJECT_TYPE__FLOOR`
+*   Objektname → den Namen des Gebäudes, der Etage oder des Raumes
+*   Standort → unterhalb welcher Lokation soll sich das Objekt befinden 
+*   Objekttyp → Um welchen Objekttypen soll es sich Handeln
 
 Beispiel CSV Datei für diesen Import:
 
-[Import Standorte.csv](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/Import-Standorte.csv)
+[Import-Standorte.csv :material-file-download:](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/Import-Standorte.csv){ .md-button .md-button--primary }
 
 Der Aufbau der CSV sieht wie folgt aus:
 

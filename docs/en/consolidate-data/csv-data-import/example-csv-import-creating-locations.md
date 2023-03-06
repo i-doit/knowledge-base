@@ -1,15 +1,9 @@
 # Example of CSV import - Creating Locations
 
-Today we will take a look at a practical example of CSV import.  
+Today we will take a look at a practical example of CSV import.
 Our use case is the automatic creation of locations within i-doit using a CSV import.
 
-!!! info
-
-    This article was last checked for i-doit version 1.17.1
-
-  
-
-  
+!!! info "This article was last checked for i-doit version 1.17.1"
 
 We need the following information to create the individual objects:
 
@@ -20,7 +14,7 @@ We need the following information to create the individual objects:
 
 Example CSV file for this import:
 
-[Import Location.csv](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/Import Location.csv)
+[Import-Location.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/Import-Location.csv){ .md-button .md-button--primary }
 
 The structure of the CSV looks as follows:
 

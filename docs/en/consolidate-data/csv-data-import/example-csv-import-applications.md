@@ -2,13 +2,7 @@
 
 In this example we want to import applications. We want to import as much information about an application as possible.
 
-!!! info
-
-    Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft
-
-  
-
-  
+!!! info "Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft"
 
 For the import we can import the following information:
 
@@ -28,7 +22,7 @@ For the import we can import the following information:
 
 Example CSV file for this import:
 
-[Import Applications.csv](../../assets/images/en/consolidate-data/csv-data-import/csv-import-applications/Import Applications.csv)
+[Import-Applications.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-applications/Import-Applications.csv){ .md-button .md-button--primary }
 
 ??? example "Import Applications.csv"
 

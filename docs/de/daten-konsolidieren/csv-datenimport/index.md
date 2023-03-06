@@ -104,7 +104,6 @@ Den Detailgrad des Loggings des CSV-Datenimports kann unterhalb des Mappings fes
 
 Nachdem der Import abgeschlossen wurde, werden die Informationen zum Import sowie eine Bestätigung über die Fertigstellung angezeigt. Die importierten oder aktualisierten Objekte sind direkt verlinkt. Die Inhalte dieser Objekte lassen sich bei Bedarf jederzeit manuell ändern.
 
-// TODO Bild ersetzen
 [![Liste der importierten Objekte](../../assets/images/de/daten-konsolidieren/csv-import/8-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/8-csvi.png)
 
 ## Import von Beziehungen (Verknüpfen von Objekten)

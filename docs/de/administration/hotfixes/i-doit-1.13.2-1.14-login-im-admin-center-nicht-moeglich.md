@@ -10,9 +10,7 @@ Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Date
 !!! attention "Bitte beachten"
 
     Bitte nutzen Sie Hotfixes ausschließlich mit der genannten Version.
-
     Bitte stellen Sie sicher, dass vor der Verwendung dieser Hotfixes ein [Backup von i-doit](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) erstellt wurde.
-
     Sollten Sie nach der Verwendung der Hotfixes mit dem Support in Kontakt treten, ergänzen Sie bitte den Hinweis auf dessen Verwendung.
 
 ### Anmeldung am Admin-Center funktioniert nicht mehr (Ausschließlich Version 1.13.2 und 1.14!)
@@ -21,7 +19,7 @@ Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Date
 
     Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben.
 
-[![Admin-Center neues Passwort vergeben](../../assets/downloads/hotfixes/i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip)](../../assets/downloads/hotfixes/i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip)
+[i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip :material-file-download:](../../assets/downloads/hotfixes/i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip){ .md-button .md-button--primary }
 
 Dieser Hotfix stellt nach der Implementierung einen neuen Befehl für die [console.php](../../automatisierung-und-integration/cli/console/index.md) bereit, um ein neues verschlüsseltes Passwort für das Admin-Center zu vergeben.  
 Folgender Befehl muss ausgeführt werden, um das Passwort neu zu vergeben:
