@@ -28,15 +28,22 @@ Datei Exportieren
 
 [![Fertigstellen es export Assistenten](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-6.png)](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-6.png)
 
-Das Zertifikat auf das i-doit System kopieren (Im Beispiel unter /tmp/). Anschließend openssl installieren und das Zertifikat in das PEM Format umwandeln:
+Das Zertifikat auf das i-doit System kopieren (Im Beispiel unter /tmp/). Anschließend openssl installieren
 
 ```shell
 apt install openssl
 ```
 
+und das Zertifikat in das PEM Format umwandeln:
+
 ```shell
 openssl x509 -inform der -outform pem -in /tmp/synetics.test.cer \
 -out /usr/local/share/ca-certificates/synetics.test.crt
+```
+
+Nun noch den Zertifikatsspeicher aktualisieren und den Apache neu starten:
+
+```shell
 update-ca-certificates
 service apache2 restart
 ```

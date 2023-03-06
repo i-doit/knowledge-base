@@ -314,6 +314,7 @@ nav:
       - LDAP/Active Directory (AD):
           - automation-and-integration/ldap-active-directory-ad/index.md
           - How to import users and groups from AD/LDAP (advanced configuration): automation-and-integration/ldap-active-directory-ad/import-users-and-groups.md
+          - Access to Microsoft LDAP server with TLS encryption: automation-and-integration/ldap-active-directory-ad/ldap-tls.md
       - Network Monitoring:
           - automation-and-integration/network-monitoring/index.md
           - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md
