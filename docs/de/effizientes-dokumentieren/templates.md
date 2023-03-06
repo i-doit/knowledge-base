@@ -12,7 +12,7 @@ Du findest die Template-Funktion in i-doit unter **Extras → CMDB → Templates
 Konfiguration
 -------------
 
-Unter **Verwaltung **→**** **Allgemeine Einstellungen** **→** **Template Konfiguration** können Einstellungen zu Templates getätigt werden. Mit der Aktivierung des Template-Filters ist es möglich, Templates in den [Objeklisten](../grundlagen/objekt-liste/index.md) anzuzeigen. Wenn du innerhalb einer Objektliste den Status-Filter auf Template stellst, werden dir hier alle Templates, die diesem [Objekttyp](../grundlagen/struktur-it-dokumentation.md) zugehörig sind, angezeigt.
+Unter **Verwaltung → Allgemeine Einstellungen → Template Konfiguration** können Einstellungen zu Templates getätigt werden. Mit der Aktivierung des Template-Filters ist es möglich, Templates in den [Objeklisten](../grundlagen/objekt-liste/index.md) anzuzeigen. Wenn du innerhalb einer Objektliste den Status-Filter auf Template stellst, werden dir hier alle Templates, die diesem [Objekttyp](../grundlagen/struktur-it-dokumentation.md) zugehörig sind, angezeigt.
 
 [![templates-anzeigen](../assets/images/de/effizientes-dokumentieren/templates/2-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/2-temp.png)
 

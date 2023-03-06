@@ -63,7 +63,7 @@ To use the configuration we execute the console command and specify the path to 
 
     sudo -u www-data php console.php search-index -c /var/www/html/i-doit/src/handler/config/examples/search-index.ini
 
-[example-seach_index.ini](../../../assets/images/en/automation-and-integration/cli/console/example-seach_index.ini)
+[example-seach_index.ini :material-file-download:](../../../assets/images/en/automation-and-integration/cli/console/example-seach_index.ini){ .md-button .md-button--primary }
 
 * * *
 
@@ -83,7 +83,7 @@ To use the configuration file we execute the console command and specify the pat
 
     sudo -u www-data php console.php notifications-send -c /var/www/html/i-doit/src/handler/config/examples/notifications-send.ini
 
-[example-notifications-send.ini](../../../assets/images/en/automation-and-integration/cli/console/example-notifications-send.ini)
+[example-notifications-send.ini :material-file-download:](../../../assets/images/en/automation-and-integration/cli/console/example-notifications-send.ini){ .md-button .md-button--primary }
 
 * * *
 
@@ -136,7 +136,7 @@ With [dumpConfig](./options-and-parameters-cli.md#ldap-sync) no synchronization 
     ignoreFunction=empty
     syncEmptyAttributes=true
 
-[example-ldap.ini](../../../assets/images/en/automation-and-integration/cli/console/example-ldap.ini)
+[example-ldap.ini :material-file-download:](../../../assets/images/en/automation-and-integration/cli/console/example-ldap.ini){ .md-button .md-button--primary }
 
 To use the configuration file we execute the console command and specify the path to the configuration file with --config or short with \-c.
 
