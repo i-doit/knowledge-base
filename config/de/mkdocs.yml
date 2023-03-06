@@ -351,6 +351,7 @@ nav:
       - LDAP-Verzeichnis/Active Directory (AD):
           - automatisierung-und-integration/ldap-verzeichnis/index.md
           - So werden Benutzer und Gruppen aus dem AD/LDAP importiert (erweiterte Konfiguration): automatisierung-und-integration/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
+          - Zugriff auf Microsoft LDAP Server mit TLS Verschlüsselung: automatisierung-und-integration/ldap-verzeichnis/ldap-tls.md
       - Network Monitoring:
           - automatisierung-und-integration/network-monitoring/index.md
           - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md
