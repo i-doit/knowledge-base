@@ -22,6 +22,7 @@ Folgende Handler stehen für die i-doit Console zur Verfügung:
 | [check\_mk-export](#check_mk-export) | Konfigurationsdaten für Check\_MK exportieren |
 | [check\_mk-livestatus](#check_mk-livestatus) | Ist-Zustand aus Check\_MK ins Logbuch schreiben |
 | [clear-credentials](#clear-credentials) | Entfernt die Anmeldeinformationen von Benutzern |
+| [extend-contracts](#extend-contracts) | Verlängert die Laufzeit eines Vertrags, wenn dessen letztmögliches Kündigungsdatum in der Vergangenheit liegt | 
 | [help](#help) | Zeigt die Hilfe zu einem Befehl an |
 | [import-csv](#import-csv) | Daten aus einer CSV-Datei importieren (Nutzt einen definiertes Import Profil aus der GUI) |
 | [import-csvprofiles](#import-csvprofiles) | Auflisten aller CSV-Importprofile |
@@ -341,6 +342,29 @@ Entfernt die Einträge der Attribute "username" und "password" von Benutzerlogin
 **Beispiel zur Verwendung**
 
     sudo -u www-data php console.php documents --user admin --password admin --create_revision
+
+### extend-contracts
+
+Verlängert die Laufzeit eines Vertrags, dessen letztmögliches Kündigungsdatum in der Vergangenheit liegt
+
+**Optionen:**
+
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
+| --- | --- | --- |
+|     | --simulate | Simuliert die Vertragserweiterung |
+| -u | --user=USER |  Username |
+| -p | --password=PASSWORD | Passwort |
+| -i | --tenantID=TENANTID | Tenant ID [default: 1] |
+| -h | --help | Zeigt Hilfe für den Befehl an |
+| -c | --config=CONFIG | Konfigurationsdatei |
+| -q | --quit | Es wird keine Nachricht angezeigt |
+| -v | --version | Zeigt die Version der Anwendung an |
+|        | --ansi / --no-ansi | Erzwingt ANSI Ausgabe / Deaktiviert ANSI Ausgabe |
+| -v / -vv / -vvv | --verbose | Erhöht die Ausführlichkeit der Nachricht [default: 1] |
+
+**Beispiel zur Verwendung**
+
+    sudo -u www-data php console.php extend-contracts --user admin --password admin
 
 ### help
 

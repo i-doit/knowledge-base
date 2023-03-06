@@ -43,6 +43,7 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
     clear-credentials                   It removes both attributes username and password from the users "login" category
     contracts-outdated                  Updates status of outdated contracts
     documents
+    extend-contracts                    Extends Contracts with last cancellation date in the past
     help                                Displays help for a command
     import-csv                          Imports CSV formatted files (Using a predefined CSV Import filter, defined in the GUI)
     import-csvprofiles                  List all available csv profiles
@@ -123,6 +124,7 @@ Commands
 | **check_mk-export** | ja  | ja  | Check\_MK 1 / 2 | Konfigurationsdaten für [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) exportieren |
 | **check_mk-livestatus** | ja  | ja  | Check\_MK 1 / 2 | Ist-Zustand aus [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) ins Logbuch schreiben |
 | **clear-credentials** | ja  | ja  | \-  | Entfernt die Anmeldeinformationen von Benutzern |
+| **extend-contracts** | ja | nein | \- | Erweitert die Laufzeit eines Vertrags, wenn dessen Kündigungsdatum in der Vergangenheit liegt
 | **help** | ja  | ja  | \-  | Zeigt die Hilfe zu einem Befehl an |
 | **import-csv** | ja  | nein | –   | Daten aus einer [CSV-Datei](../../../daten-konsolidieren/csv-datenimport/index.md) importieren |
 | **import-csvprofiles** | ja  | nein | –   | Auflisten aller [CSV-Importprofile](../../../daten-konsolidieren/csv-datenimport/index.md) |

@@ -363,6 +363,7 @@ nav:
       - System-wide: system-administration/system-settings/system-wide.md
   - Use cases:
     - use-cases/index.md
+    - Automated contract term extension: use-cases/automated-contract-term-extension.md
     - Mapping of customer sites: use-cases/mapping-of-customer-sites.md
     - Workplaces: use-cases/wokplaces.md
     - Upload and link of files: use-cases/upload-and-link-files.md
