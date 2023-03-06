@@ -12,7 +12,7 @@ Nach dem anfänglichen Schock, gilt es, die Situation zu bewerten und anschließ
 Fehler analysieren
 ------------------
 
-**Was passiert genau, wenn der Fehler auftritt? Welche Schritte wurden durchgeführt, um den Fehler zu provozieren? Gibt es eine Fehlermeldung? Lässt sich der Fehler reproduzieren?** – Dies sind wichtige Fragen, die beantwortet werden sollten, bevor es ins Detail geht.
+**Was passiert genau, wenn der Fehler auftritt? Welche Schritte wurden durchgeführt, um den Fehler zu provozieren? Gibt es eine Fehlermeldung? Lässt sich der Fehler reproduzieren?** - Dies sind wichtige Fragen, die beantwortet werden sollten, bevor es ins Detail geht.
 
 Hier ist eine kleine Checkliste, was du darüber hinaus recherchieren kannst:
 

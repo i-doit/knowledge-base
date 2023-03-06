@@ -10,9 +10,9 @@ Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Date
 !!! attention "Bitte beachten"
 
     Bitte nutzen Sie Hotfixes ausschließlich mit der genannten Version.
-    
+
     Bitte stellen Sie sicher, dass vor der Verwendung dieser Hotfixes ein [Backup von i-doit](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) erstellt wurde.
-    
+
     Sollten Sie nach der Verwendung der Hotfixes mit dem Support in Kontakt treten, ergänzen Sie bitte den Hinweis auf dessen Verwendung.
 
 ### Das Update von i-doit 1.12.2 auf 1.12.3 ist nicht möglich (Ausschließlich Version 1.12.2!)

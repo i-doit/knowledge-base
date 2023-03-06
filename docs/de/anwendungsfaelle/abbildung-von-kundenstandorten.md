@@ -14,7 +14,7 @@ Wir statten unsere Kunden mit Hard- und Software-Komponenten aus. Daher ist es e
 Konfiguration
 -------------
 
-Alles, was zur Konfiguration benötigt wird, befindet sich in der **Objekttyp-Konfiguration**, zu erreichen über **Verwaltung → CMDB-Einstellungen**. Kunden legen wir als eigenständigen Objekttyp **Kunde** ab. Der Objekttyp wird als **Standort** definiert. Zudem sollten mindestens die Kategorien **Standort** und **Räumlich zugeordnete Objekte** zugeordnet werden. Ggf. sind weitere Kategorien (**Organisation**, **Anschrift**, **E-Mail-Adressen**, **Kontaktzuweisung**, **Zugriff**) hilfreich, um die Kunden so detailliert wie nötig zu dokumentieren.
+Alles, was zur Konfiguration benötigt wird, befindet sich in der **Objekttyp-Konfiguration**, zu erreichen über **Verwaltung → CMDB-Einstellungen**. Kunden legen wir als eigenständigen Objekttyp **Kunde** ab. Der Objekttyp wird als **Standort** definiert. Zudem sollten mindestens die Kategorien **Standort** und **Räumlich zugeordnete Objekte** zugeordnet werden. Ggf. sind weitere Kategorien (**Organisation**, **Anschrift**, **E-Mail-Adressen**, **Kontaktzuweisung**, **Zugriff**) hilfreich, um die Kunden so detailliert wie nötig zu dokumentieren.
 
 [![Objekttyp-Konfiguration](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/3-avk.png)](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/3-avk.png)
 [![Objektsicht](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/4-avk.png)](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/4-avk.png)

@@ -23,7 +23,8 @@ Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Date
 
 [![Admin-Center neues Passwort vergeben](../../assets/downloads/hotfixes/i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip)](../../assets/downloads/hotfixes/i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip)
 
-Dieser Hotfix stellt nach der Implementierung einen neuen Befehl für die [console.php](../../automatisierung-und-integration/cli/console/index.md) bereit, um ein neues verschlüsseltes Passwort für das Admin-Center zu vergeben.  
+Dieser Hotfix stellt nach der Implementierung einen neuen Befehl für die [console.php](../../automatisierung-und-integration/cli/console/index.md) bereit, um ein neues verschlüsseltes Passwort für das Admin-Center zu vergeben.
+
 Folgender Befehl muss ausgeführt werden, um das Passwort neu zu vergeben:
 
     sudo -u www-data php console.php admin-center-password-reset --user Benutzer --password Passwort

@@ -1,6 +1,6 @@
 # Mehrsprachigkeit und Übersetzungen
 
-_Do you speak IT documentation?_ Englisch ist und bleibt die Standard-Sprache in der Informationstechnologie, doch Vielfalt belebt: Daher unterstützt i-doit mehrere Sprachen. In diesem Artikel zeigen wir unter anderem, wie sich bestehende Übersetzungen anpassen lassen.
+_Do you speak IT documentation?_ Englisch ist und bleibt die Standard-Sprache in der Informationstechnologie, doch Vielfalt belebt: Daher unterstützt i-doit mehrere Sprachen. In diesem Artikel zeigen wir unter anderem, wie sich bestehende Übersetzungen anpassen lassen.
 
 Unterstützte Sprachen
 ---------------------
@@ -19,7 +19,7 @@ Die Mehrsprachigkeit bezieht sich auf die [Web GUI von i-doit](../grundlagen/str
 Automatische Sprache je nach Browser-Einstellung
 ------------------------------------------------
 
-Webbrowser senden bei Anfragen an einen Webserver in der Regel die präferierten Sprachen des Benutzers mit. Diese werden von i-doit beim Login ausgewertet, sodass sich i-doit dem Benutzer automatisch in der passenden Sprache präsentiert. Dieses Verhalten kann unter **Verwaltung → Benutzereinstellungen → Darstellung → Sprache durch Browser wählen** beeinflusst werden.
+Webbrowser senden bei Anfragen an einen Webserver in der Regel die präferierten Sprachen des Benutzers mit. Diese werden von i-doit beim Login ausgewertet, sodass sich i-doit dem Benutzer automatisch in der passenden Sprache präsentiert. Dieses Verhalten kann unter **Verwaltung → Benutzereinstellungen → Darstellung → Sprache durch Browser wählen** beeinflusst werden.
 
 Sprachwechsel
 -------------
@@ -31,7 +31,7 @@ Jeder Benutzer ist in der Lage, während der Arbeit mit i-doit die Sprache zu we
 Sprache pro Benutzer
 --------------------
 
-[Beim ersten Anmelden in i-doit](../grundlagen/erstanmeldung.md) erhält der Benutzer automatisch die englische Oberfläche. Jeder Benutzer kann individuell einstellen, welche Sprache als Standard gesetzt werden soll. Dies geschieht unter **Verwaltung → Benutzereinstellungen → Darstellung → Sprache**. Hier den richtigen Wert einzustellen ist wichtig, um beispielsweise [E-Mail-Benachrichtigungen](../auswertungen/benachrichtigungen.md) in der gewünschten Sprache zu erhalten, da die E-Mail-Vorlagen mehrsprachig sind.
+[Beim ersten Anmelden in i-doit](../grundlagen/erstanmeldung.md) erhält der Benutzer automatisch die englische Oberfläche. Jeder Benutzer kann individuell einstellen, welche Sprache als Standard gesetzt werden soll. Dies geschieht unter **Verwaltung → Benutzereinstellungen → Darstellung → Sprache**. Hier den richtigen Wert einzustellen ist wichtig, um beispielsweise [E-Mail-Benachrichtigungen](../auswertungen/benachrichtigungen.md) in der gewünschten Sprache zu erhalten, da die E-Mail-Vorlagen mehrsprachig sind.
 
 Sprachkonstanten
 ----------------
@@ -73,7 +73,7 @@ Die custom\-Dateien eignen sich nicht nur dafür neue Übersetzungen einzuführe
         # Optional, wenn bereits Anpassungen vorgenommen wurden:
         #cp de_custom.inc.php de_custom.inc.php.bak
         #cp en_custom.inc.php de_custom.inc.php
-    
+
     Da diese Vorgehensweise nicht Update-sicher ist, sollte dies nach jedem Update wiederholt werden.
 
 Beispiele
@@ -87,7 +87,7 @@ In der Mandanten-Datenbank stehen in der Tabelle isys_obj_type_group in der Spal
 
 ### Mehrsprachige Objekttypen
 
-Unter **Verwaltung → CMDB Einstellungen → Objekttyp Konfiguration → [Objekttypgruppe] → [Objekttyp] →** **Sprachkonstante / Bezeichnung** kann ein [Objekttyp](../grundlagen/struktur-it-dokumentation.md) mehrsprachig angegeben werden. Dies gilt sowohl für Standard-, als auch für [benutzerdefinierte Objekttype](../grundlagen/benutzerdefinierte-objekttypen.md)n.
+Unter **Verwaltung → CMDB Einstellungen → Objekttyp Konfiguration → [Objekttypgruppe] → [Objekttyp] →** **Sprachkonstante / Bezeichnung** kann ein [Objekttyp](../grundlagen/struktur-it-dokumentation.md) mehrsprachig angegeben werden. Dies gilt sowohl für Standard-, als auch für [benutzerdefinierte Objekttype](../grundlagen/benutzerdefinierte-objekttypen.md)n.
 
 ### Mehrsprachige Objekt-Titel
 

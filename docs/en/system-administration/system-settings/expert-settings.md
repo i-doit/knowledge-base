@@ -19,9 +19,7 @@ Each setting consists of three parts:
 
 | Key | Value | Type |
 | --- | --- | --- |
-| The **Key** assigns a unique name to the setting. If a key shouldn't exist yet, it can be added later. | The **Value** is usually a string or a longer text or an integer value. | With the **Type** you define the scope of the setting. A setting with the type **Tenant-wide** only affects the tenant with which the user is currently logged in. **System-wide** means that the setting affects the complete i-doit independent of the available tenants. |
-
-  
+| The **Key** assigns a unique name to the setting. If a key shouldn't exist yet, it can be added later. | The **Value** is usually a string or a longer text or an integer value. | With the **Type** you define the scope of the setting. A setting with the type **Tenant-wide** only affects the tenant with which the user is currently logged in. **System-wide** means that the setting affects the complete i-doit independent of the available tenants. |
 
 List of Settings
 ----------------
@@ -38,7 +36,7 @@ List of Settings
 | barcode.type | qr  |     | Tenant-wide setting | PRO/CMDB | Type of the barcode |
 | check\_mk.controller.last\_log\_check | 0   |     | Tenant-wide setting | PRO/CMDB | Time of the latest run of the check\_mk controller |
 | ckeditor.font\_names | Arial;Courier New;Times New Roman;Helvetica |     | Tenant-wide setting | PRO/CMDB | Usable fonts in the WYSIWYG editor |
-| cmdb.connector.suffix-schema | isys\_format\_json::encode(array(  <br>    "##INPUT## - OUT",  <br>    "- ##INPUT##",  <br>    "(\*) ##INPUT##",  <br>) |     | System-wide setting | PRO/CMDB | Formatting scheme for the generation of TODO |
+| cmdb.connector.suffix-schema | ```isys\_format\_json::encode(array(  <br>    "##INPUT## - OUT",  <br>    "- ##INPUT##",  <br>    "(\*) ##INPUT##",  <br>)``` |     | System-wide setting | PRO/CMDB | Formatting scheme for the generation of TODO |
 | cmdb.limits.order-threshhold | 10000 | 1000 | Tenant-wide setting | PRO/CMDB | Limitation of lines for the TableComponent, threshold from where only indexed fields can be sorted and filtered |
 | cmdb.limits.obj-browser.objects-in-viewmode | 8   |     | Tenant-wide setting | PRO/CMDB | Maximum number of objects to be presented in view mode in the object browser |
 | cmdb.limits.port-lists-layer2 | 5   |     | Tenant-wide setting | PRO/CMDB | Limitation of the specified Layer2 nets in the port list |
@@ -52,8 +50,8 @@ List of Settings
 | cmdb.skip-unidirectional-connection-ranking | 0   | 0   | System-wide setting | PRO/CMDB | Option to specify whether links to an archived object should be displayed as archived or normal |
 | cmdb.unique.hostname |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique host names |
 | cmdb.unique.ip-address |     |     | System-wide setting | PRO/CMDB | Activation/ deactivation of unique IPs |
-| cmdb.unique.layer-2-net |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique Layer-2 IDs |
-| cmdb.unique.object-title |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique object titles |
+| cmdb.unique.layer-2-net |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique Layer-2 IDs |
+| cmdb.unique.object-title |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique object titles |
 | email.template.maintenance | "Your maintenance contract: %s timed out.\\n\\n" .  <br>"<strong>Contract information</strong>:\\n" .  <br>"Start: %s\\n" .  <br>"End: %s\\n" .  <br>"Support-Url: %s\\n" .  <br>"Contract-Number: %s\\n" .  <br>"Customer-Number: %s" |     | System-wide setting | PRO/CMDB |     |
 | email.template.password | "Hello %FIRSTNAME% %LASTNAME%, \\n\\n" .  <br>"Your password has been changed to: %PASSWORD%\\n" .  <br>"\\n\\n" .  <br>"Regards,\\n" .  <br>"i-doit system" |     | System-wide setting | PRO/CMDB | Applied e-mail template for password changes |
 | gui.empty\_value | \-  | \-  | Tenant-wide setting | Core | Specifies the presentation of an empty value in the GUI |

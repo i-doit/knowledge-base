@@ -2,10 +2,13 @@
 
 Beim wiederherstellen einen SQL Dumps kommt es zu folgender Fehlermeldung:
 
+```
     ERROR 1005 (HY000) at line 10381: Can't create table  idoit_data.table_name (errno: 140 "Wrong create options")
+```
 
 Der Dump an dieser Stelle sieht so aus:
 
+```sql
     DROP TABLE IF EXISTS isys_drive_list_2_stor_list;
     /*!40101 SET @saved_cs_client = @@character_set_client */;
     /*!40101 SET character_set_client = utf8 */;
@@ -18,13 +21,14 @@ Der Dump an dieser Stelle sieht so aus:
     KEY  isys_drive_list_2_stor_list_FKIndex2 (isys_drive_list_2_stor_list__isys_catg_stor_list__id)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED;
     /*!40101 SET character_set_client = @saved_cs_client */;
+```
 
 Die Lösung:
 
-Aus “ROW\_FORMAT=FIXED”
+Aus `ROW_FORMAT=FIXED`
 
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED;
 
-wird “ROW\_FORMAT=DYNAMIC”
+wird `ROW_FORMAT=DYNAMIC`
 
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;

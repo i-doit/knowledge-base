@@ -31,7 +31,7 @@ Als Beispiel dient ein Drucker, der in einem Büroraum steht, der wiederum einem
 2.  Erstelle einen Raum und ordne diesen über die **Standort**\-Kategorie dem Gebäude zu.
 3.  Erstelle einen Drucker und ordne diesen über die **Standort**\-Kategorie dem Raum zu.
 
-Dadurch entsteht ein sogenannter Standortpfad: **Root-Lokation → Gebäude → Raum → Drucker**.
+Dadurch entsteht ein sogenannter Standortpfad: **Root-Lokation → Gebäude → Raum → Drucker**.
 
 [![Standort-Pfad](../assets/images/de/anwendungsfaelle/standorte/1-stan.png)](../assets/images/de/anwendungsfaelle/standorte/1-stan.png)
 
@@ -42,7 +42,7 @@ Bei jedem Standort-Objekt wird das jeweils untergeordnete Objekt in der Kategori
 Objekt als Standort definieren
 ------------------------------
 
-Damit ein Objekt – beispielsweise ein Raum – als Standort für andere Objekte definiert werden kann, muss dessen Objekttyp dazu aktiviert werden. Dies geschieht unter **Verwaltung → CMDB Einstellungen → Objekttyp-Konfiguration → <Objekttypgruppe> → <Objekttyp> → Standort**. Bei den oben angegebenen Objekttypen steht die Option bereits auf **Ja**.
+Damit ein Objekt - beispielsweise ein Raum - als Standort für andere Objekte definiert werden kann, muss dessen Objekttyp dazu aktiviert werden. Dies geschieht unter **Verwaltung → CMDB Einstellungen → Objekttyp-Konfiguration → <Objekttypgruppe> → <Objekttyp> → Standort**. Bei den oben angegebenen Objekttypen steht die Option bereits auf **Ja**.
 
 Standort-Pfad konfigurieren
 ---------------------------
@@ -51,9 +51,9 @@ Der Standortpfad kann pro Mandant konfiguriert werden.
 
 | Option | Datentyp | Standardwert | Beschreibung |
 | --- | --- | --- | --- |
-| **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Oberflächendarstellung → String zur Separation von Standorten** | Zeichenkette | **>** | Durch welche Zeichenfolge sollen die Objekte eines Standortpfads voneinander separiert werden? |
-| **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Maximallänge von Zeichenfolgen → Objektbezeichnung im Standortpfad** | Positive Ganzzahl | **16** | Wie viele Zeichen darf der Objekt-Titel pro Objekt innerhalb eines Standortpfads haben? Zeichen darüber hinaus werden abgeschnitten. |
-| **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Maximallänge von Zeichenfolgen → Kompletter Standortpfad** | Positive Ganzzahl | **40** | Wie viele Zeichen darf der vollständige Standortpfad haben? Länge Zeichenketten werden beschnitten. |
+| **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Oberflächendarstellung → String zur Separation von Standorten** | Zeichenkette | **>** | Durch welche Zeichenfolge sollen die Objekte eines Standortpfads voneinander separiert werden? |
+| **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Maximallänge von Zeichenfolgen → Objektbezeichnung im Standortpfad** | Positive Ganzzahl | **16** | Wie viele Zeichen darf der Objekt-Titel pro Objekt innerhalb eines Standortpfads haben? Zeichen darüber hinaus werden abgeschnitten. |
+| **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Maximallänge von Zeichenfolgen → Kompletter Standortpfad** | Positive Ganzzahl | **40** | Wie viele Zeichen darf der vollständige Standortpfad haben? Länge Zeichenketten werden beschnitten. |
 
 Hardware in Rack positionieren
 ------------------------------

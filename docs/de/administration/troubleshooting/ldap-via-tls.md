@@ -1,6 +1,7 @@
 # LDAP via TLS
 
-Bei einigen Benutzern gibt es leider Probleme bei der LDAP Verbindung via TLS daher teilen wir die bisherigen Lösungen hier.  
+Bei einigen Benutzern gibt es leider Probleme bei der LDAP Verbindung via TLS daher teilen wir die bisherigen Lösungen hier.
+
 Leider gibt es da keine generelle Lösung.
 
 Zuerst mal die häufigsten Ursachen:
@@ -15,7 +16,7 @@ Bei LDAP gibt es seitens der Active Directory Domain Controller zunächst nicht 
 ================================================================================================
 
 *   Es wird ein Zertifikat benötigt, das bestimmte Anforderungen erfüllt ([https://support.microsoft.com/en-us/help/321051/how-to-enable-ldap-over-ssl-with-a-third-party-certification-authority](https://support.microsoft.com/en-us/help/321051/how-to-enable-ldap-over-ssl-with-a-third-party-certification-authority))
-*   Es sollte möglichst nur ein Zertifikat für diese Zwecke auf einem DC vorhanden sein (wird interessant, wenn bereits eins für Kerberos-Authentifizierung vorhanden ist – was unter Sicherheitsaspekten vermutlich überall der Fall ist
+*   Es sollte möglichst nur ein Zertifikat für diese Zwecke auf einem DC vorhanden sein (wird interessant, wenn bereits eins für Kerberos-Authentifizierung vorhanden ist - was unter Sicherheitsaspekten vermutlich überall der Fall ist
 *   Eine verschlüsselte Verbindung kann gegen AD per LDAPS (TLS/SSL schon bei Verbindungsaufbau) oder STARTTLS (explizites Kommando zum Anfang der Verbindung) erfolgen
 *   Es ist ein Gemenge von Client und Server-Einstellungen (Links weiter unten), wenn LDAP Channel Binding und LDAP Signing berücksichtigt wird; nicht jedes System (Linux) unterstützt out oft he box alle Optionen.
 
