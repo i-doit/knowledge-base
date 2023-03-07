@@ -364,7 +364,9 @@ Verlängert die Laufzeit eines Vertrags, dessen letztmögliches Kündigungsdatum
 
 **Beispiel zur Verwendung**
 
+```shell
     sudo -u www-data php console.php extend-contracts --user admin --password admin
+```
 
 ### help
 

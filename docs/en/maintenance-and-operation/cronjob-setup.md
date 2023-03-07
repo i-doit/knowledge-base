@@ -2,11 +2,9 @@
 
 Many tasks in i-doit can be automated with help of the CLI tool [controller](../automation-and-integration/cli/index.md). We use it to maintain the IT documentation on a regular basis.
 
-<<<<<<< HEAD
 The setup of cronjobs is optional. However, we definitely recommend using this option, at best directly after the [IT documentation](../glossary.md).
-=======
+
 !!! success "Cronjobs setup - yes or no?"
->>>>>>> main
 
     The setup of cronjobs is optional. However, we definitely recommend using this option, at best directly after the [installation](../installation/index.md).
 
@@ -252,7 +250,7 @@ Under Linux you can run automated commands on a regular basis. You could use [cr
 
 The scripts mentioned in this article do not work under Windows withour further ado and should be replaced by equivalent scripts. Windows tasks are suitable for the automation.
 
-### Problems  
+### Catch problems
 
 In order to intercept possible errors and to report them to the responsible system administrator, you can configure the operating system in such a way that e-mails are sent correspondingly. A simple mailer is **[**sSMTP**](https://wiki.debian.org/sSMTP)**. However, the **idoit-jobs** script creates a lot of output on the shell. You can apply the **chronic** tool to achieve that only errors are reported. This tool can be installed retroactively on many operating systems, often it is contained in the [**moreutils**](https://joeyh.name/code/moreutils/) distribution package.
 
@@ -278,6 +276,6 @@ The file obtains the following contents:
 
     MAILTO="sysadmin@i-doit.example.net"
 
-    5 5 * * *   www-data test -x /usr/local/bin/idoit-jobs && /usr/bin/chronic /usr/local/bin/idoit-jobs
+    5 5 * * *   www-data    test -x /usr/local/bin/idoit-jobs && /usr/bin/chronic /usr/local/bin/idoit-jobs
 
 Every day at 5:05 a.m. the **idoit-jobs** script is executed with the permissions of the Apacheuser **www-data**. To achieve that only errors are sent per mail, we use ****chronic****. The errors are sent via mail notifications.

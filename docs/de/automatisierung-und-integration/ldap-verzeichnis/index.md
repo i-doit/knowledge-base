@@ -129,6 +129,16 @@ Die dafür benötigte Konfiguration wurde in den vorherigen Schritten bereits vo
 
 Die Konfiguration muss in der [Handler-Konfiguration](../cli/index.md) vorgenommen werden. Ein Beispiel dazu ist [Hier](../cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden(i-doit < 1.15. Diese Datei kann mit Login-Daten, Tenant und Attributen erweitert und angepasst werden. Die Konfigurationsdatei wird dann nach i-doit/src/handler/config/ verschoben. Damit diese Datei z.B. beim ldap-sync Command berücksichtig wird, muss diese beim sync über einen weiteren Parameter (-c /pfad/) mit angegeben werden (weitere Informationen zur [Console](../cli/console/optionen-und-parameter-der-console.md)). 
 
+!!! warning Zugriff auf .ini Dateien
+    Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
+    Es sollte dieser code hinzugefügt werden:
+    ```shell
+    ## Deny access to all ini files…
+    <Files "*.ini">
+        Require all denied
+    </Files>
+    ```
+
 | Parameter | Zweck |
 | --- | --- |
 | **import_rooms** | Auf true gesetzt werden auch Räume mit der Synchronisation angelegt (Standard: false) |

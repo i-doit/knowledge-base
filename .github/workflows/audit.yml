@@ -1,0 +1,60 @@
+---
+name: Audit on merge to main branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  audit:
+    name: Audit
+    strategy:
+      fail-fast: false
+      matrix:
+        script:
+          - system:npm-audit
+          - system:npm-doctor
+          - system:npm-outdated
+          - system:pip-audit
+          - system:pip-outdated
+          - wtf
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Re-use NPM cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Pull container base image
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            pull
+      - name: Re-use container image layers
+        uses: jpribyl/action-docker-layer-caching@v0.1.1
+        continue-on-error: true
+      - name: Build container image
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            build \
+            --build-arg USER_ID="$(id -u)" \
+            --build-arg GROUP_ID="$(id -g)"
+      - name: Install toolchain
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            run docs \
+              npm ci
+      - name: Run script
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            run docs \
+              npm run ${{ matrix.script }}

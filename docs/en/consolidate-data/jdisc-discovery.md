@@ -155,7 +155,7 @@ Also the ID of the JDisc server to be used can be specified. This can be found i
 
   
 
-A jdisc.ini could look like this
+A jdisc.ini might look like this more information about .ini files can be found [here](../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md).
 
     [commandArguments]
     [commandOptions]

@@ -307,6 +307,17 @@ This option decides whether empty or emptied attributes from AD should be synchr
 Now we put all the parts together and create our ldap.ini  
 The first part of the ldap.ini is obtained from [Using Configuration Files for Console Commands](../cli/console/using-configuration-files-for-console-cli.md).
 
+!!! warning "Access to .ini files"
+    If the configuration file is placed in the i-doit directory, the .htaccess must be modified.
+    This code should be added:
+
+    ```shell
+    ## Deny access to all ini files…
+    <Files "*.ini">
+        Require all denied
+    </Files>
+    ```
+
     [commandArguments]
     [commandOptions]
     user=admin
@@ -360,4 +371,4 @@ On the console the command would look like this:
 
     sudo -u www-data php console.php ldap-sync -c /var/www/html/i-doit/src/handler/config/ldap-sync.ini
 
-[![example-ldap.ini](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/example-ldap.ini)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/example-ldap.ini)
+[example-ldap.ini :material-file-download:](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/example-ldap.ini){ .md-button .md-button--primary }

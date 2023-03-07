@@ -149,7 +149,7 @@ Ebenfalls kann die ID des zu verwendenden JDisc Servers angegeben werden. Diese 
 
 [![JDisc Konfiguration](../assets/images/de/daten-konsolidieren/jdisc/5-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/5-jdisc.jpg)
 
-Eine jdisc.ini könnte so aussehen
+Eine jdisc.ini könnte so aussehen mehr Informationen zu .ini Dateien sind [hier](../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden.
 
 ```ini
 ini
@@ -172,3 +172,4 @@ Wenn wir davon ausgehen, dass diese im i-doit root Verzeichnis liegt, dann wird 
 
 ```shell
 sudo -u www-data php console.php import -jdisc -c jdisc.ini
+```
