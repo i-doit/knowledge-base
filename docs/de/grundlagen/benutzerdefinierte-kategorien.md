@@ -4,7 +4,7 @@ Neben den Standard-Kategorien in i-doit können eigene (benutzerdefinierte) [Kat
 
 Konfiguration der Kategorie
 
-Die Konfiguration der benutzerdefinierten Kategorien ist unter **Verwaltung → CMDB Einstellungen →  Benutzerdefinierte Kategorien** zu finden.Über den Button **Neu** wird eine benutzerdefinierte Kategorie erzeugt. Existieren bereits benutzerdefinierte Kategorien, können diese nachträglich bearbeitet werden.
+Die Konfiguration der benutzerdefinierten Kategorien ist unter **Verwaltung → CMDB Einstellungen → Benutzerdefinierte Kategorien** zu finden.Über den Button **Neu** wird eine benutzerdefinierte Kategorie erzeugt. Existieren bereits benutzerdefinierte Kategorien, können diese nachträglich bearbeitet werden.
 
 [![benutzerdefinierte-kategorien](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/1-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/1-bk.png)
 
@@ -27,63 +27,61 @@ Um auf die Kategorie bei Abfragen (zum Beispiel in selbst geschriebenen [Reports
 Ausprägung der Kategorie
 ------------------------
 
-Um eine Kategorie auszuprägen, können beliebig viele Attribute über den Button **Mehrere Felder hinzufügen** hinzugefügt werden. Hier stehen folgende [Feldtypen](attributfelder.md) zur Auswahl:
+Um eine Kategorie auszuprägen, können beliebig viele Attribute über den Button **Mehrere Felder hinzufügen** hinzugefügt werden. Hier stehen folgende [Feldtypen](attributfelder.md) zur Auswahl:
 
-*   **Checkbox**  
+*   **Checkbox**
     Eine Checkbox die markiert werden kann
-*   **Dateibrowser**  
+*   **Dateibrowser**
     Eine Datei referenzieren
-*   **Datum und Uhrzeit**  
+*   **Datum und Uhrzeit**
     Ein Feld zum Eintragen eines Datums und/oder einer Uhrzeit; innerhalb der Kategorie steht hier ein Kalender zur Verfügung, mit dem die Auswahl ermöglicht wird.
-*   **Dialog+**  
+*   **Dialog+**
     [Dialog-Plus-Felder](dialog-admin.md), die mit eigenen Werten befüllt werden können, sodass diese wiederverwendbar sind. Über den Identifier im Feld **Zusatz** kann das Dialog-Plus-Feld auch in anderen Kategorien genutzt werden, sodass dort die bereits eingetragenen Werte zur Verfügung stehen. Hierfür ist es notwendig, denselben Identifier in beiden Kategorien einzutragen.
-*   **Dialog+ (Mehrfachauswahl)**  
+*   **Dialog+ (Mehrfachauswahl)**
     Wie **Dialog+**, nur mit beliebig vielen Werten
-*   **HTML-Editor**  
+*   **HTML-Editor**
     Ein Textfeld, das einfache Textformatierungen wie zum Beispiel kursive Schrift erlaubt
-*   **Ja-Nein-Feld**  
+*   **Ja-Nein-Feld**
     Eine einfache Ja-oder-Nein-Auswahl
-*   **Link**  
+*   **Link**
     Ein Feld zur Angabe eines Hyperlinks, der innerhalb der Kategorie angeklickt werden kann und dort weiterleitet
-*   **Nur Zahlen sind erlaubt**  
+*   **Nur Zahlen sind erlaubt**
     Ein Feld in dem nur Zahlen eingetragen werden können.
-*   **Objekt-Beziehung**  
+*   **Objekt-Beziehung**
     Bei der Verwendung einer [Objektbeziehung](objekt-beziehungen.md) wird eine vollwertige Beziehung erzeugt. Das Feld **Zusatz** erlaubt die Auswahl der Beziehungsart und den damit verbundenen Beziehungstext. Diese Beziehungen sind auch im CMDB Explorer aufzufinden. Wenn möglich, ist dieser Feldtyp dem oben genannten Objekt-Browser zu bevorzugen.
-*   **Objekt-Beziehung (Mehrere Objekte)**  
+*   **Objekt-Beziehung (Mehrere Objekte)**
     Wie **Objekt-Beziehung**, nur mit beliebig vielen Objekten
-*   **Objekt-Browser**  
+*   **Objekt-Browser**
     Ein Feld zur Erzeugung einer Verknüpfung mit einem anderen Objekt. Hierbei handelt es sich nur um eine Referenzierung und nicht um eine vollwertige Beziehung. Eine solche Referenzierung wird daher nicht im CMDB Explorer erscheinen.
-*   **Objekt-Browser (Mehrere Objekte)**  
+*   **Objekt-Browser (Mehrere Objekte)**
     Wie **Objekt-Browser**, nur mit beliebig vielen Objekten
-*   **Report**  
+*   **Report**
     Zeigt einen Report an, dazu muss die ID des Report in das Zusatz Feld eingetragen werden.
-*   **Textfeld**  
+*   **Textfeld**
     Ein einzeiliges Textfeld zur Eingabe von Freitext
-*   **Textfeld (maskiert)**  
+*   **Textfeld (maskiert)**
     Ein einzeiliges Textfeld zur Eingabe von maskiertem Freitext. Der Inhalt ist nur in der Datenbank sichtbar.
-*   **Textfeld (Mehrzeilig)**  
+*   **Textfeld (Mehrzeilig)**
     In diesem mehrzeiligen Textfeld können längere Texte hinterlegt werden.
-*   **Datum und Uhrzeit**  
+*   **Datum und Uhrzeit**
     Ein Feld für Datum oder für Datum + Uhrzeit
-*   **Zeit**  
+*   **Zeit**
     Hier kann eine Uhrzeit zwischen 00:00 und 23:59 angegeben werden
 
 Zusätzlich sind folgende Elemente verfügbar:
 
-*   **Horizontale Linie**  
+*   **Horizontale Linie**
     Eine Linie zur optischen Abgrenzung von Feldern und Inhalten
-*   **HTML**  
+*   **HTML**
     Die Möglichkeit in der Konfiguration der Kategorie HTML-Code zu hinterlegen, der in der Kategorie interpretiert wird. Der Quellcode wird in der Konfiguration der Kategorie eingetragen und kann nicht beim Aufruf der Kategorie in der Dokumentation durch die Anwender eingetragen werden.
-*   **Javascript**  
+*   **Javascript**
     Die Möglichkeit in der Konfiguration der Kategorie Javascript-Code zu hinterlegen, der in der Kategorie interpretiert wird. Der Quellcode wird in der Konfiguration der Kategorie eingetragen und kann nicht beim Aufruf der Kategorie in der Dokumentation durch die Anwender eingetragen werden.
 
-  
+Wie bei fast jeder anderen Kategorie wird bei einer benutzerdefinierten automatisch ein **Beschreibungsfeld** am Ende angehangen.
 
-Wie bei fast jeder anderen Kategorie wird bei einer benutzerdefinierten automatisch ein **Beschreibungsfeld** am Ende angehangen.  
-Die Reihenfolge der erstellten Attribute kann über die schraffierten Flächen am Anfang jeder Zeile per Drag'n'Drop verändert werden.  
+Die Reihenfolge der erstellten Attribute kann über die schraffierten Flächen am Anfang jeder Zeile per Drag'n'Drop verändert werden.
+
 [![benutzerdefinierte-kategorien-6](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/6-bk.gif)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/6-bk.gif)
-
-  
 
 Über den Button **Entfernen** können Attribute gelöscht werden.
 

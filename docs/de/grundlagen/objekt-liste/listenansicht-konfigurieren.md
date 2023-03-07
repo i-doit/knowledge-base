@@ -54,7 +54,8 @@ Ohne festgelegte Sortierung werden die Objekte nach deren [ID](../eindeutige-ref
 Filterung beeinflussen
 ----------------------
 
-Eine Objekt-Liste kann bereits beim Laden gefiltert werden. Hierzu wird im Drop-Down-Menü **Standardfilter** das Attribut ausgewählt und im Textfeld rechts daneben der Wert angegeben, nach dem gefiltert werden soll.  
+Eine Objekt-Liste kann bereits beim Laden gefiltert werden. Hierzu wird im Drop-Down-Menü **Standardfilter** das Attribut ausgewählt und im Textfeld rechts daneben der Wert angegeben, nach dem gefiltert werden soll.
+
 Wenn man in der Listenansicht nicht jedes mal ein zu filterndes Attribut auswählen möchte kann der Filter für alle Felder gesetzt werden.
 
 Arten, ein Objekt zu öffnen
@@ -65,7 +66,7 @@ Häufig genügt nicht der Blick auf die Objekt-Liste, um alle geforderten Attrib
 *   Objekt öffnen durch Klicken auf die entsprechende Zeile in der Objekt-Liste: Hierzu ist die Checkbox **Bei dieser Liste soll das Objekt über den Klick auf die Zeile geöffnet werden.** zu wählen.
 *   Über die Auswahl der Checkbox eines Objekts und den Button **Editieren** wird das Objekt geöffnet (und gleichzeitig editiert).
 
-Die erste Option kann für alle Benutzer und alle Objekt-Listen gleichzeitig aktiviert werden. Unter **Verwaltung → Systemtools → Cache / Datenbank → Datenbank** befindet sich der Button **Zeilenklick in Objektlisten aktivieren**.
+Die erste Option kann für alle Benutzer und alle Objekt-Listen gleichzeitig aktiviert werden. Unter **Verwaltung → Systemtools → Cache / Datenbank → Datenbank** befindet sich der Button **Zeilenklick in Objektlisten aktivieren**.
 
 Konfiguration zurücksetzen
 --------------------------

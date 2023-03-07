@@ -51,7 +51,6 @@ Weisen das entsprechende Netzwerk zu:
 Und verbinden in diesem Schritt das konvertierte Festplatten Image:
 
 [![Appliance-Image](../../assets/images/de/installation/virtual-appliance/hyper-v/11.png)](../../assets/images/de/installation/virtual-appliance/hyper-v/11.png)
-  
 
 Danach können wir die Einrichtung abschließen und die virtuelle Maschine starten:
 

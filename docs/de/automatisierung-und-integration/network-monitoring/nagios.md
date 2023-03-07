@@ -10,14 +10,14 @@ Grundkonfiguration
 ------------------
 
 
-Unter **Verwaltung → Schnittstellen / externe Daten → Monitoring → Exportkonfiguration** wird die Konfiguration hinterlegt. Der **Lokale Pfad** definiert einen absoluten oder relativen Pfad zur i-doit Installation im Dateisystem, in dem die von i-doit erzeugte Konfiguration abgelegt werden soll. Der **Link zum Monitoring Tool** gibt einen Basislink an, um aus i-doit heraus Links auf die Monitoring-Instanz zu generieren.
+Unter **Verwaltung → Schnittstellen / externe Daten → Monitoring → Exportkonfiguration** wird die Konfiguration hinterlegt. Der **Lokale Pfad** definiert einen absoluten oder relativen Pfad zur i-doit Installation im Dateisystem, in dem die von i-doit erzeugte Konfiguration abgelegt werden soll. Der **Link zum Monitoring Tool** gibt einen Basislink an, um aus i-doit heraus Links auf die Monitoring-Instanz zu generieren.
 
 [![nagios-verwalten](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/1-nag.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/1-nag.png)
 
 Basiskonfigurationen
 --------------------
 
-Unter **Extras → Nagios** werden die Basiskonfigurationen angelegt.
+Unter **Extras → Nagios** werden die Basiskonfigurationen angelegt.
 
 [![nagios-extras](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/2-nag.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/2-nag.png)
 
@@ -26,7 +26,7 @@ Dazu gehört die Hauptkonfiguration, Service- und Host-Templates sowie weitere g
 Konfiguration in Objekten
 -------------------------
 
-Alle weiteren Konfigurationen werden innerhalb der [Objekte](../../grundlagen/struktur-it-dokumentation.md) vorgenommen. Der einfachste Fall ist die Konfiguration von Hostparametern. Hierzu muss über den [**Quick Configuration Wizard**](../../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) der [Kategorie](../../grundlagen/struktur-it-dokumentation.md) Ordner **Nagios (Host)** zu den gewünschten [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) zugewiesen werden.
+Alle weiteren Konfigurationen werden innerhalb der [Objekte](../../grundlagen/struktur-it-dokumentation.md) vorgenommen. Der einfachste Fall ist die Konfiguration von Hostparametern. Hierzu muss über den [**Quick Configuration Wizard**](../../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) der [Kategorie](../../grundlagen/struktur-it-dokumentation.md) Ordner **Nagios (Host)** zu den gewünschten [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) zugewiesen werden.
 
 In der Kategorie **Host Definition** kann dann entweder über ein Nagios Template oder durch individuelle Konfiguration eine Hostdefinition für Nagios hinterlegt werden.
 
@@ -42,14 +42,13 @@ in einem Softwareobjekt in der Kategorie **Nagios (Anwendungen)** wird ein Servi
 
 Ist diese Anwendung nun über die Kategorie **Softwarezuweisung** auf einem Host installiert, wird der Servicecheck auf den Host automatisch vererbt.
 
-Weitere Nagios-Konfigurationen innerhalb von Objekten finden sich in Objekten vom Typ **Personen **sowie in **Personengruppen **und **Objektgruppen**.
+Weitere Nagios-Konfigurationen innerhalb von Objekten finden sich in Objekten vom Typ **Personen **sowie in **Personengruppen **und **Objektgruppen**.
 
-  
 
 Export der Nagios Konfiguration
 -------------------------------
 
-Unter **Verwaltung → Schnittstellen / externe Daten → Monitoring → Nagios Export** können die Nagios-Konfigurationen manuell exportiert werden. Dazu wird eine Exportkonfiguration ausgewählt und optional eine Validierung der Parameter angewählt.
+Unter **Verwaltung → Schnittstellen / externe Daten → Monitoring → Nagios Export** können die Nagios-Konfigurationen manuell exportiert werden. Dazu wird eine Exportkonfiguration ausgewählt und optional eine Validierung der Parameter angewählt.
 
 [![nagios-export](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/4-nag.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/4-nag.png)
 

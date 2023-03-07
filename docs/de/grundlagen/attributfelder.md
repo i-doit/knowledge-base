@@ -144,21 +144,21 @@ Im Log werden alle derzeitigen Änderungen aufgelistet.
 
 Aus Beispiel dient der **Kontakt-Browser**, der in der Kategorie **Buchhaltung** dem Attribut **Eingekauft bei** zur Verfügung steht.
 
-[![](../assets/images/de/grundlagen/attributfelder/15-af.png)](../assets/images/de/grundlagen/attributfelder/15-af.png)
+[![Kontakt Browser](../assets/images/de/grundlagen/attributfelder/15-af.png)](../assets/images/de/grundlagen/attributfelder/15-af.png)
 
 ### Standortauswahl
 
 Dieser Browser baut eine 1-zu-1-Beziehung der Art **Standort** zu einem Objekt auf, das als Standort definiert ist. Beim Klick auf das Lupen-Icon wird die **Standortauswahl** präsentiert, die der **Standortsicht** ähnelt (siehe oben). Dieser Browser erscheint in der Kategorie **Standort**.
 
-[![](../assets/images/de/grundlagen/attributfelder/16-af.png)](../assets/images/de/grundlagen/attributfelder/16-af.png)
+[![Standort](../assets/images/de/grundlagen/attributfelder/16-af.png)](../assets/images/de/grundlagen/attributfelder/16-af.png)
 
-[![](../assets/images/de/grundlagen/attributfelder/17-af.png)](../assets/images/de/grundlagen/attributfelder/17-af.png)
+[![Standortauswahl](../assets/images/de/grundlagen/attributfelder/17-af.png)](../assets/images/de/grundlagen/attributfelder/17-af.png)
 
 ### Browser mit Unterauswahl
 
 Teilweise ist es nötig, nicht nur das Objekt auszuwählen, sondern ein Attribut dieses Objekts. Beispiele sind das Attribut **Verbunden mit** in der Kategorie **Port (Netzwerk)**, wobei hier ein Ein- oder Ausgang aus der Kategorie **Anschluss** **(Verkabelung)** ausgewählt wird, und die Möglichkeit in der Kategorie **Service Komponenten**, Software-Beziehungen auszuwählen.
 
-[![](../assets/images/de/grundlagen/attributfelder/18-af.png)](../assets/images/de/grundlagen/attributfelder/18-af.png)
+[![Objekt Browser](../assets/images/de/grundlagen/attributfelder/18-af.png)](../assets/images/de/grundlagen/attributfelder/18-af.png)
 
 !!!info "Hinweis"
 

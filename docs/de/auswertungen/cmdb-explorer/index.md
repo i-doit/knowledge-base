@@ -16,11 +16,11 @@ Aufteilung des CMDB-Explorers
 
 Der CMDB-Explorer ist in drei Bereiche geteilt, die entsprechende Rollen übernehmen:
 
-*   **Inhaltsbereich**  
+*   **Inhaltsbereich**
     Dieser Bereich übernimmt die grafische Darstellung der Inhalte im Zentrum.
-*   **Informationsbereich**  
-    Weiterreichende Informationen kannst du diesem Bereich entnehmen, der sich links vom Inhaltsbereich befindet.
-*   **Funktionsleiste**  
+*   **Informationsbereich**
+    Weiterreichende Informationen kannst du diesem Bereich entnehmen, der sich links vom Inhaltsbereich befindet.
+*   **Funktionsleiste**
     Die Funktionsleiste wird zur Konfiguration der Ansicht genutzt. Diese befindet sich oberhalb des Inhaltsbereichs.
 
 Inhaltsbereich
@@ -44,7 +44,7 @@ Der Informationsbereich befindet sich am linken Rand des CMDB-Explorers und stel
 Funktionsleiste
 ---------------
 
-In der Funktionsleiste oberhalb des Inhaltsbereichs wird das Objekt ausgewählt, welches zentralisiert dargestellt wird und um das die Beziehungen aufgebaut werden. Zusätzlich ist es möglich, das [Profil](../../auswertungen/cmdb-explorer/profile-im-cmdb-explorer.md) zur Darstellung auszuwählen. Im Auslieferungszustand wird neben dem **Standard-Profil** ein **Mikro-Profil** angeboten, das die Darstellung von mehr Informationen auf kleinerer Fläche erlaubt. Weiterhin kann die Darstellung durch den **Service-Filter** beeinflusst werden. Hier können Bedingungen festgelegt werden, welche Objekte und Beziehungen berücksichtigt werden sollen. Die Service-Filter können unter **Extras → Services → Service Filter** konfiguriert werden. Neben dem Typ der Beziehung, deren Gewichtung und den angezeigten Objekttypen können die Tiefe der Darstellung und der CMDB-Status der Objekte als Bedingung festgelegt werden.
+In der Funktionsleiste oberhalb des Inhaltsbereichs wird das Objekt ausgewählt, welches zentralisiert dargestellt wird und um das die Beziehungen aufgebaut werden. Zusätzlich ist es möglich, das [Profil](../../auswertungen/cmdb-explorer/profile-im-cmdb-explorer.md) zur Darstellung auszuwählen. Im Auslieferungszustand wird neben dem **Standard-Profil** ein **Mikro-Profil** angeboten, das die Darstellung von mehr Informationen auf kleinerer Fläche erlaubt. Weiterhin kann die Darstellung durch den **Service-Filter** beeinflusst werden. Hier können Bedingungen festgelegt werden, welche Objekte und Beziehungen berücksichtigt werden sollen. Die Service-Filter können unter **Extras → Services → Service Filter** konfiguriert werden. Neben dem Typ der Beziehung, deren Gewichtung und den angezeigten Objekttypen können die Tiefe der Darstellung und der CMDB-Status der Objekte als Bedingung festgelegt werden.
 
 Über die Schaltfläche **Ausrichtung ändern** wird die Darstellungsrichtung angepasst. Hier ist es möglich, die Darstellung entweder von oben nach unten oder von links nach rechts erfolgen zu lassen. Bei umfangreichen Visualisierungen ist die Darstellung von links nach rechts zu empfehlen. Weiterhin ist es möglich, die Darstellungsart zu wählen. Über die Schaltfläche **Darstellungsart wechseln** kann von der **Baum-Ansicht** zu einer **Netz-Ansicht** gewechselt werden. In der Baum-Ansicht kann es vorkommen, dass Objekte mehrfach angezeigt werden, wenn Sie an unterschiedlichen Stellen über Beziehungen zu anderen Objekten verfügen. In der Netz-Ansicht wird ein Objekt genau einmal dargestellt und alle Beziehungen werden von dessen Kachel erzeugt. Bei komplexeren Beziehungsdarstellungen ist die Baum-Ansicht zu empfehlen.
 

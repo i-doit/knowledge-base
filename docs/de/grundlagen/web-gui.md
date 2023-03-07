@@ -11,8 +11,6 @@ Wird nach erfolgreicher Installation die Seite deiner i-doit Installation aufger
 
 Für die Anmeldung an i-doit greifen, sofern i-doit gerade frisch installiert wurde, hier noch unsere Standard Benutzer wie z.B Admin, Archivar, Author, Editor, oder Reader. Alle diese User haben als Passwort ihren Eigennamen. In diesem Falle kann sich z.B. mit Benutzernamen Admin und dem Passwort Admin angemeldet werden.
 
-  
-
 Sollten es sich um eine Mandanten Installation handeln kann nach der Anmeldung noch der jeweilige Mandant ausgewählt werden:
 
 [![anmeldemaske-tenant](../assets/images/de/grundlagen/web-gui/2-web-gui.png)](../assets/images/de/grundlagen/web-gui/2-web-gui.png)

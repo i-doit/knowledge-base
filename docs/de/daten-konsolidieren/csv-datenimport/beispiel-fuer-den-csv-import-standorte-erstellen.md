@@ -7,10 +7,10 @@ Unser Anwendungsfall ist das automatische erstellen der Standorte innerhalb von 
 
 Wir benötigen für das erstellen der einzelnen Objekte folgende Informationen:
 
--  Den selbst erstellten Objekttyp Etage/Basement mit der Objekttyp Konstante - C__OBJECT_TYPE__FLOOR
--  Objektname → den Namen des Gebäudes, der Etage oder des Raumes
--  Standort → unterhalb welcher Lokation soll sich das Objekt befinden 
--  Objekttyp → Um welchen Objekttypen soll es sich Handeln
+-  Den selbst erstellten Objekttyp Etage/Basement mit der Objekttyp Konstante - C__OBJECT_TYPE__FLOOR
+-  Objektname → den Namen des Gebäudes, der Etage oder des Raumes
+-  Standort → unterhalb welcher Lokation soll sich das Objekt befinden
+-  Objekttyp → Um welchen Objekttypen soll es sich Handeln
 
 Beispiel CSV Datei für diesen Import:
 
@@ -88,28 +88,28 @@ Der Aufbau der CSV sieht wie folgt aus:
 Da wir Abhängigkeiten setzen wollen die aufeinander aufbauen, ist es wichtig in der CSV Datei eine entsprechende Reihenfolge bei den Standorten einzuhalten.
 Die Root Lokation ist immer die unterste Stufe und bereits vorhanden. In dieser befinden sich die einzelnen Gebäude, in den Gebäuden die einzelnen Etagen und in den Etagen die jeweiligen Räume:
 
- Root Lokation → Gebäude → Etage → Raum
+ Root Lokation → Gebäude → Etage → Raum
 
 Also kommen in der CSV Datei auch die Gebäude als erstes, dann die Etagen und als letztes die Räume.
 
-[![](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/1-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/1-csv-standort.png)
+[![Standortsicht](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/1-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/1-csv-standort.png)
 
-Um zu definieren welcher Objekttyp jeweils angelegt werden soll, geben wir dem Import in jeder Zeile noch die Objekttyp Konstante mit auf den Weg, diese finden wir in der Objekttyp Konfiguration:
+Um zu definieren welcher Objekttyp jeweils angelegt werden soll, geben wir dem Import in jeder Zeile noch die Objekttyp Konstante mit auf den Weg, diese finden wir in der Objekttyp Konfiguration:
 
-[![](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/2-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/2-csv-standort.png)
+[![Objekttyp-Konfigurtion](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/2-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/2-csv-standort.png)
 
 Schauen wir uns nun die Konfiguration für den Import an, im oberen Bereich können wir die Einstellungen so lassen, wie sie sind:
 
-[![](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/3-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/3-csv-standort.png)
+[![CSV Import optionen](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/3-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/3-csv-standort.png)
 
 Jetzt auf Mapping vorbereiten klicken, danach können wir die Einstellungen wie folgt anpassen:
 
-[![](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/4-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/4-csv-standort.png)
+[![CSV Objekt Matching Profile](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/4-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/4-csv-standort.png)
 
 Nun sind wir soweit und können den Import starten, in der Standortansicht sollte sich danach folgendes Bild ergeben:
 
-[![](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/5-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/5-csv-standort.png)
+[![ Standortsicht](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/5-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/5-csv-standort.png)
 
 Die Konfiguration des neu erstellten Objekttyps Etage
 
-[![](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/6-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/6-csv-standort.png)
+[![Objekttyp-Konfigurtion](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/6-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/6-csv-standort.png)

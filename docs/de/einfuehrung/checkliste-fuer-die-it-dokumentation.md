@@ -1,7 +1,7 @@
 # Checkliste für die IT-Dokumentation
 Was macht gute [IT-Dokumentation](../glossar.md) aus? Um sich mit dem Thema ganzheitlich zu befassen, gibt es im Buchhandel umfangreiche Literatur.
 
-Unsere Antwort: Schnell Erfolge zeigen, dann kann man ganzheitlich werden. Für einen pragmatischen Zugang dient folgende Checkliste, um erste Erfolge zu erzielen. Die Literatur empfehlen wir trotzdem ;-)
+Unsere Antwort: Schnell Erfolge zeigen, dann kann man ganzheitlich werden. Für einen pragmatischen Zugang dient folgende Checkliste, um erste Erfolge zu erzielen. Die Literatur empfehlen wir trotzdem ;-)
 
 | #   | Prüffrage | Umgesetzt von | Datum der Umsetzung | Status |
 | --- | --- | --- | --- | --- |
@@ -13,7 +13,7 @@ Unsere Antwort: Schnell Erfolge zeigen, dann kann man ganzheitlich werden. Für
 | 1.5 | Ist geklärt worden, welche Dritt-Anwendungen in die IT-Dokumentation integriert werden? |     |     |     |
 | 1.6 | Sind Meilensteine definiert, wann welche Ziele erreicht und ab wann die IT-Dokumentation produktiv eingesetzt wird? |     |     |     |
 | **2.**  | **i-doit kennen lernen** |     |     |     |     |
-| 2.1 | Wurde  eine Testlizenz angefordert und i-doit anhand der Anforderungen evaluiert? |     |     |     |
+| 2.1 | Wurde  eine Testlizenz angefordert und i-doit anhand der Anforderungen evaluiert? |     |     |     |
 | 2.2 | Sind die Grundlagen von i-doit bekannt (Grundlagen-Webinar besucht, Knowledge Base gelesen)? |     |     |     |
 | 2.3 | Ist i-doit beschafft worden (Objektpaket subskribiert, Supportvertrag abgeschlossen)? |     |     |     |
 | **3.**  | **i-doit einführen** |     |     |     |     |

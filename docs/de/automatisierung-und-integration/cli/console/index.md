@@ -7,16 +7,21 @@ Erste Schritte
 
 Das CLI befindet sich im Installationsverzeichnis von i-doit, beispielsweise unter **/var/www/html/**. Es muss innerhalb dieses Verzeichnises mit denselben Rechten des Apache Webservers aufgerufen werden. Unter [Debian GNU/Linux](../../../installation/manuelle-installation/debian.md) ist dies der User **www-data**. Mittels **sudo** werden diese Rechte erlangt:
 
+```shell
     cd /var/www/html/
     sudo -u www-data php console.php
+```
 
 Unter Windows wechselt man ebenso in das Installationsverzeichnis. Da die Rechte des Webservers keine Rolle spielen, genügt der Aufruf von **php.exe**, welches im Pfad des Benutzers stehen muss.
 
+```shell
     cd C:\xampp\htdocs
     php.exe console.php
+```
 
 Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsentiert:
 
+```shell
     i-doit console utility 1.17.1
 
     Usage:
@@ -28,8 +33,8 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
         -V, --version         Display this application version
         --ansi            Force ANSI output
         --no-ansi         Disable ANSI output
-        -n, --no-interaction  Do not ask any interactive question
-        -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+        -n, --no-interaction Do not ask any interactive question
+        -v|vv|vvv, --verbose Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
     Available commands:
     CompileDocuments
@@ -85,14 +90,17 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
     tenant-remove                       Remove the i-doit Tenant
     uninstall                           Uninstall the i-doit application
     update                              Update the i-doit application
+```
 
 Authentifizierung
 -----------------
 
 Um über das CLI auf i-doit zugreifen zu können, ist für die meisten Commands eine Authentifizierung nötig. Dazu übergibt man einen Benutzernamen, das passende Passwort und die gewünschte [Tenant ID](../../../administration/mandantenfaehigkeit.md). Letztere ist bei einer Standardinstallation meistens die **1**.
 
+```shell
     cd /var/www/html/
     sudo -u www-data php console.php [COMMAND] --user admin --password admin --tenantId 1 [WEITERE OPTIONEN]
+```
 
 !!! check "Der Benutzer "controller""
 
@@ -103,8 +111,10 @@ Hilfe
 
 Commands werden oftmals von weiteren Argumenten begleitet. Daher liefert jedes Command eine Hilfe via **--help**:
 
+```shell
     cd /var/www/html/
     sudo -u www-data php console.php search --help
+```
 
 Darüber hinaus bieten einige Commands Beispielaufrufe via **--usage**.
 
@@ -117,51 +127,51 @@ Commands
 | **addon-deactivate** | ja  | ja  | \-  | Deaktivieren von Add-ons |
 | **addon-install** | ja  | ja  | \-  | Installieren von Add-ons |
 | **addon-list** | ja  | ja  | \-  | Zeigt eine Liste mit allen installierten Add-ons an |
-| **admin-center-cryptohash-reset** | ja  | ja  | \-  | Der Crypto-hash von i-doit wird geändert, wodurch die gesamte Verschlüsselung erneuert wird (ACHTUNG! Vor der Durchführung sollte ein [Backup](../../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) erstellt werden) |
+| **admin-center-cryptohash-reset** | ja  | ja  | \-  | Der Crypto-hash von i-doit wird geändert, wodurch die gesamte Verschlüsselung erneuert wird (ACHTUNG! Vor der Durchführung sollte ein [Backup](../../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) erstellt werden) |
 | **admin-center-password-reset** | ja  | ja  | \-  | Passwort für das Admin-Center zurücksetzen |
-| **auth-cleanup** | ja  | ja  | –   | [Rechtesystem](../../../effizientes-dokumentieren/rechteverwaltung/index.md) bereinigen |
+| **auth-cleanup** | ja  | ja  | -   | [Rechtesystem](../../../effizientes-dokumentieren/rechteverwaltung/index.md) bereinigen |
 | **check_mk-export** | ja  | ja  | Check\_MK 1 / 2 | Konfigurationsdaten für [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) exportieren |
 | **check_mk-livestatus** | ja  | ja  | Check\_MK 1 / 2 | Ist-Zustand aus [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) ins Logbuch schreiben |
 | **clear-credentials** | ja  | ja  | \-  | Entfernt die Anmeldeinformationen von Benutzern |
 | **help** | ja  | ja  | \-  | Zeigt die Hilfe zu einem Befehl an |
-| **import-csv** | ja  | nein | –   | Daten aus einer [CSV-Datei](../../../daten-konsolidieren/csv-datenimport/index.md) importieren |
-| **import-csvprofiles** | ja  | nein | –   | Auflisten aller [CSV-Importprofile](../../../daten-konsolidieren/csv-datenimport/index.md) |
-| **import-hinventory** | ja  | ja  | –   | Daten aus [h-inventory](../../../daten-konsolidieren/h-inventory.md) importieren |
-| **import-jdisc** | ja  | ja  | –   | Daten aus [JDisc Discovery](../../../daten-konsolidieren/jdisc-discovery.md) importieren |
-| **import-jdiscdiscovery** | ja  | ja  | –   | Einen Scan in [JDisc Discovery](../../../daten-konsolidieren/jdisc-discovery.md) starten |
-| **import-ocs** | ja  | ja  | –   | Daten aus [OCS Inventory NG](../../../i-doit-pro-add-ons/ocs-inventory-ng.md) importieren |
-| **import-syslog** | ja  | ja  | –   | Daten aus einem Syslog in das [Logbuch](../../../grundlagen/logbuch.md) von i-doit importieren |
-| **import-xml** | ja  | ja  | –   | Daten aus XML importieren |
-| **ldap-sync** | ja  | ja  | –   | Personen und Personengruppen aus einem [LDAP-Verzeichnis oder Active Directory (AD)](../../ldap-verzeichnis/index.md) importieren |
-| **ldap-syncdn** | ja  | ja  | –   | Synchronisiere aus einem [LDAP/AD](../../ldap-verzeichnis/index.md) den Distinguished Name (DN) der Benutzer (siehe Kategorie **LDAP**) |
+| **import-csv** | ja  | nein | -   | Daten aus einer [CSV-Datei](../../../daten-konsolidieren/csv-datenimport/index.md) importieren |
+| **import-csvprofiles** | ja  | nein | -   | Auflisten aller [CSV-Importprofile](../../../daten-konsolidieren/csv-datenimport/index.md) |
+| **import-hinventory** | ja  | ja  | -   | Daten aus [h-inventory](../../../daten-konsolidieren/h-inventory.md) importieren |
+| **import-jdisc** | ja  | ja  | -   | Daten aus [JDisc Discovery](../../../daten-konsolidieren/jdisc-discovery.md) importieren |
+| **import-jdiscdiscovery** | ja  | ja  | -   | Einen Scan in [JDisc Discovery](../../../daten-konsolidieren/jdisc-discovery.md) starten |
+| **import-ocs** | ja  | ja  | -   | Daten aus [OCS Inventory NG](../../../i-doit-pro-add-ons/ocs-inventory-ng.md) importieren |
+| **import-syslog** | ja  | ja  | -   | Daten aus einem Syslog in das [Logbuch](../../../grundlagen/logbuch.md) von i-doit importieren |
+| **import-xml** | ja  | ja  | -   | Daten aus XML importieren |
+| **ldap-sync** | ja  | ja  | -   | Personen und Personengruppen aus einem [LDAP-Verzeichnis oder Active Directory (AD)](../../ldap-verzeichnis/index.md) importieren |
+| **ldap-syncdn** | ja  | ja  | -   | Synchronisiere aus einem [LDAP/AD](../../ldap-verzeichnis/index.md) den Distinguished Name (DN) der Benutzer (siehe Kategorie **LDAP**) |
 | **license-add** | ja  | nein | \-  | Fügt eine Lizenz für i-doit hinzu (in Bearbeitung) |
-| **license-assign** | ja  | nein | \-  | Ordnet eine Hosting Lizenz einem Mandaten zu (in Bearbeitung) |
-| **license-import** | ja  | nein | \-  | Importiert Lizenzen vom i-doit Server (in Bearbeitung) |
-| **license-key** | ja  | nein | \-  | Setzt einen Lizenzschlüssel für i-doit (in Bearbeitung) |
+| **license-assign** | ja  | nein | \-  | Ordnet eine Hosting Lizenz einem Mandaten zu (in Bearbeitung) |
+| **license-import** | ja  | nein | \-  | Importiert Lizenzen vom i-doit Server (in Bearbeitung) |
+| **license-key** | ja  | nein | \-  | Setzt einen Lizenzschlüssel für i-doit (in Bearbeitung) |
 | **license-list** | ja  | nein | \-  | Listet alle Lizenzen mit allen Informationen auf (ID; Produkt; Typ; Startdatum; Enddatum; lizensierte Objekte; lizenzierte Mandanten; Umgebung) |
 | **license-remove** | ja  | nein | \-  | Entfernt Lizenzen von i-doit |
-| **logbook-ar****chive** | ja  | ja  | –   | [Logbuch-Einträge](../../../grundlagen/logbuch.md) archivieren |
+| **logbook-ar****chive** | ja  | ja  | -   | [Logbuch-Einträge](../../../grundlagen/logbuch.md) archivieren |
 | **maintenance** | ja  | ja  | Wartung | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs Add-on |
 | **nagios-export** | ja  | ja  | Nagios | [Nagios](../../network-monitoring/nagios.md)\-Konfiguration exportieren |
 | **nagios-ndoutils** | ja  | ja  | Nagios | Ist-Zustand aus [Nagios](../../network-monitoring/nagios.md) ins Logbuch schreiben |
-| **notifications-send** | ja  | ja  | –   | [Benachrichtigungen](../../../auswertungen/benachrichtigungen.md) per E-Mail versenden |
-| **report-export** | ja  | nein | –   | Einen [Report](../../../auswertungen/report-manager.md) als Datei exportieren |
-| **search** | ja  | ja  | –   | In i-doit [suchen](../../../effizientes-dokumentieren/suche.md) |
-| **search-index** | ja  | ja  | –   | [Suchindex](../../../effizientes-dokumentieren/suche.md) erstellen/erneuern |
-| **system-autoincrement** | ja  | ja  | –   | auto_increment von MariaDB-/MySQL-[Tabellen](../../../software-entwicklung/datenbank-modell/index.md) auf einen positiven Integer-Wert setzen |
-| **system-checkforupdates** | ja  | ja  | –   | Nach [Aktualisierungen](../../../wartung-und-betrieb/update-einspielen.md) für i-doit suchen |
+| **notifications-send** | ja  | ja  | -   | [Benachrichtigungen](../../../auswertungen/benachrichtigungen.md) per E-Mail versenden |
+| **report-export** | ja  | nein | -   | Einen [Report](../../../auswertungen/report-manager.md) als Datei exportieren |
+| **search** | ja  | ja  | -   | In i-doit [suchen](../../../effizientes-dokumentieren/suche.md) |
+| **search-index** | ja  | ja  | -   | [Suchindex](../../../effizientes-dokumentieren/suche.md) erstellen/erneuern |
+| **system-autoincrement** | ja  | ja  | -   | auto_increment von MariaDB-/MySQL-[Tabellen](../../../software-entwicklung/datenbank-modell/index.md) auf einen positiven Integer-Wert setzen |
+| **system-checkforupdates** | ja  | ja  | -   | Nach [Aktualisierungen](../../../wartung-und-betrieb/update-einspielen.md) für i-doit suchen |
 | **system-convert-non-innodb-tables** | ja  | ja  | \-  | Konvertiert alle Tabellen, welche nicht in INNODB sind zu INNODB (Betrifft die Datenbankkodierung. Mit Vorsicht zu nutzen!) |
 | **system-convert-non-utf8-tables** | ja  | ja  | \-  | Konvertiert alle non-UTF8-Tabellen in UTF8-Tabellen (Betrifft die Datenbankkodierung. Mit Vorsicht zu nutzen!) |
 | **system-location-fix** | ja  | ja  | \-  | Führt die Standortkorrektur aus der GUI auf der Konsole aus |
-| **system-maintenancecontract** | ja  | ja  | –   | E-Mail für Wartungsverträge senden |
-| **system-objectcleanup** | ja  | ja  | –   | [Objekte bereinigen](../../../grundlagen/lebens-und-dokumentationszyklus.md) |
-| **system-objectrelations** | ja  | ja  | –   | [Objekt-Beziehungen](../../../grundlagen/objekt-beziehungen.md) neu aufbauen |
+| **system-maintenancecontract** | ja  | ja  | -   | E-Mail für Wartungsverträge senden |
+| **system-objectcleanup** | ja  | ja  | -   | [Objekte bereinigen](../../../grundlagen/lebens-und-dokumentationszyklus.md) |
+| **system-objectrelations** | ja  | ja  | -   | [Objekt-Beziehungen](../../../grundlagen/objekt-beziehungen.md) neu aufbauen |
 | **system-refresh-table-configuration** | ja  | ja  | \-  | Erneuert alle verfügbaren Listenkonfigurationen (Objekttypen und Kategorien) |
-| **tenant-create** | ja  | nein | –   | Einen neuen [Mandanten](../../../administration/mandantenfaehigkeit.md) hinzufügen |
-| **tenant-disable** | ja  | nein | –   | Einen bestehenden [Mandanten](../../../administration/mandantenfaehigkeit.md) deaktivieren |
-| **tenant-enable** | ja  | nein | –   | Einen bestehenden [Mandanten](../../../administration/mandantenfaehigkeit.md) aktivieren |
-| **tenant-list** | ja  | nein | –   | Alle verfügbaren [Mandanten](../../../administration/mandantenfaehigkeit.md) auflisten |
+| **tenant-create** | ja  | nein | -   | Einen neuen [Mandanten](../../../administration/mandantenfaehigkeit.md) hinzufügen |
+| **tenant-disable** | ja  | nein | -   | Einen bestehenden [Mandanten](../../../administration/mandantenfaehigkeit.md) deaktivieren |
+| **tenant-enable** | ja  | nein | -   | Einen bestehenden [Mandanten](../../../administration/mandantenfaehigkeit.md) aktivieren |
+| **tenant-list** | ja  | nein | -   | Alle verfügbaren [Mandanten](../../../administration/mandantenfaehigkeit.md) auflisten |
 | **tenant-remove** | ja  | nein | \-  | Einen bestehenden [Mandanten](../../../administration/mandantenfaehigkeit.md) entfernen |
 | **uninstall** | ja  | ja  | \-  | Deinstalliert i-doit |
 | **update** | ja  | ja  | \-  | Update von i-doit installieren |
-| **workflows-process** | ja  | ja  | –   | Workflow-Benachrichtigungen per E-Mail versenden |
+| **workflows-process** | ja  | ja  | -   | Workflow-Benachrichtigungen per E-Mail versenden |

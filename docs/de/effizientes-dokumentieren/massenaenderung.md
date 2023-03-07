@@ -5,7 +5,8 @@ Die Massenänderung ist eine Funktion in i-doit, mit der auf Basis von Änderung
 Aufruf
 ------
 
-Du findest die Massenänderung unter **Extras → CMDB → Massenänderung**. Hier ist es möglich, vorhandene Änderungsvorlagen einzusehen und zu bearbeiten, neue Änderungsvorlagen anzulegen und Objekte gemäß der Vorlagen anzupassen.  
+Du findest die Massenänderung unter **Extras → CMDB → Massenänderung**. Hier ist es möglich, vorhandene Änderungsvorlagen einzusehen und zu bearbeiten, neue Änderungsvorlagen anzulegen und Objekte gemäß der Vorlagen anzupassen.
+
 [![massenaenderung-finden](../assets/images/de/effizientes-dokumentieren/massenaenderung/1-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/1-mae.png)
 
 Erstellen einer Änderungsvorlage
@@ -48,5 +49,6 @@ Multi-Value-Kategorien können auf drei Arten gehandhabt werden:
 
 Wenn du die Kategorien unangetastet lässt, werden unter keinen Umständen Inhalte in Multi-Value-Kategorien übertragen - unabhängig davon, ob diese bereits über Inhalte verfügen oder nicht. Die Option zum Hinzufügen von Kategorieeinträgen lässt deine bereits dokumentierten Inhalte bestehen und ergänzt alle Einträge deiner Vorlage. Beim Löschen bestehender Einträge werden alle bisher existierenden Multi-Value-Einträge gelöscht und durch die Inhalte der Änderungsvorlage ersetzt.
 
-Sobald alle Einstellungen deinen Anforderungen entsprechen kannst du die Änderungen mit der Schaltfläche **Massenänderung durchführen** auf die Objekte übertragen.  
+Sobald alle Einstellungen deinen Anforderungen entsprechen kannst du die Änderungen mit der Schaltfläche **Massenänderung durchführen** auf die Objekte übertragen.
+
 [![massenaenderung-durchfuehren](../assets/images/de/effizientes-dokumentieren/massenaenderung/4-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/4-mae.png)

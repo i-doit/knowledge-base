@@ -2,7 +2,7 @@
 
 Für die Authentifizierung/Autorisierung und Synchronisierung von Daten aus einem LDAP-Verzeichnis oder Active Directory (AD) bietet i-doit eine Schnittstelle.
 
-!!! info 
+!!! info ""
 
     Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/ldap-integration-mit-i-doit/)
 
@@ -16,8 +16,8 @@ i-doit unterstützt folgende Verzeichnisdienste:
 
 Die [PHP-Extension php_ldap](http://de.php.net/manual/de/ldap.setup.php) für die Kommunikation mit einem Active Directory (AD) bzw. LDAP-Verzeichnis muss installiert und aktiviert werden. Wer den Installationsanweisungen gefolgt ist, hat die Extension bereits auf dem System.
 
-Nicht vergessen, LDAP zu erlauben, wenn SELinux verwendet wird. Dazu _setsebool -P httpd_can_connect_ldap on_ verwenden. Das -P steht für Permanent  
-Überprüfen Sie dies mit _getsebool -a | grep httpd_
+Nicht vergessen, LDAP zu erlauben, wenn SELinux verwendet wird. Dazu `setsebool -P httpd_can_connect_ldap on` verwenden. Das -P steht für Permanent
+Überprüfen Sie dies mit `getsebool -a | grep httpd`
 
 ### Nachträgliche Installation unter [Debian GNU/Linux](../../installation/manuelle-installation/debian.md)
 
@@ -26,30 +26,31 @@ Nicht vergessen, LDAP zu erlauben, wenn SELinux verwendet wird. Dazu _setsebool
 
 ### Nachträgliche Installation unter [Windows](../../installation/manuelle-installation/microsoft-windows-server.md)
 
-Die Datei php.ini (in der Regel unter C:\xampp\php\php.ini) muss angepasst werden. In einem Texteditor aktiviert man das Laden der Extension php_ldap.  
+Die Datei php.ini (in der Regel unter `C:\xampp\php\php.ini`) muss angepasst werden. In einem Texteditor aktiviert man das Laden der Extension php_ldap.
 
 Aus der Zeile
 
+```
     ;extension=php_ldap.dll
+```
 
 wird das ";" entfernt und somit
 
+```
     extension=php_ldap.dll
-
-Manchmal kann es noch notwendig sein, die Dateien ssleay32.dll und libeay32.dll (von Version zu Version unterschiedlich, jedoch meist unter C:\xampp\apache\bin\ zu finden) in das Verzeichnis php\ zu kopieren. Danach muss noch der Apache Webserver neu gestartet werden.
+```
+Manchmal kann es noch notwendig sein, die Dateien `ssleay32.dll` und `libeay32.dll` (von Version zu Version unterschiedlich, jedoch meist unter `C:\xampp\apache\bin\` zu finden) in das Verzeichnis php\ zu kopieren. Danach muss noch der Apache Webserver neu gestartet werden.
 
 Konfiguration
 -------------
 
-Die Konfiguration befindet sich in i-doit unter **Verwaltung → Schnittstellen / externe Daten → LDAP**. Dort können unter **Server** zum Einen ein oder mehrere Instanzen konfiguriert und zum Anderen eine Zuweisung von Feldern zu Attributen vorgenommen werden.
+Die Konfiguration befindet sich in i-doit unter **Verwaltung → Schnittstellen / externe Daten → LDAP**. Dort können unter **Server** zum Einen ein oder mehrere Instanzen konfiguriert und zum Anderen eine Zuweisung von Feldern zu Attributen vorgenommen werden.
 
 ### Server
 
-Unter **Verwaltung → Schnittstellen / externe Daten → LDAP → Server** können ein oder mehrere Instanzen konfiguriert werden. Beim Login werden alle Server nacheinander abgefragt, bis ein Login gefunden wurde. Gibt es mehrere [Mandanten](../../administration/mandantenfaehigkeit.md), werden alle nacheinander abgefragt und die Datenbanken für den Login angeboten, wenn die Abfrage ein positives Ergebnis geliefert hat.
+Unter **Verwaltung → Schnittstellen / externe Daten → LDAP → Server** können ein oder mehrere Instanzen konfiguriert werden. Beim Login werden alle Server nacheinander abgefragt, bis ein Login gefunden wurde. Gibt es mehrere [Mandanten](../../administration/mandantenfaehigkeit.md), werden alle nacheinander abgefragt und die Datenbanken für den Login angeboten, wenn die Abfrage ein positives Ergebnis geliefert hat.
 
 ### LDAP Verbindung für Lookups (lesend)
-
-  
 
 | Feldname | Inhalt |
 | --- | --- |
@@ -66,72 +67,73 @@ Unter **Verwaltung → Schnittstellen / externe Daten → LDAP → Server** k
 | **Benutze Admin-Nutzer für alle lesenden Anfragen** | Wenn die Option "Benutze Admin-Nutzer für alle lesenden Anfragen" aktiviert ist, wird bei jeder LDAP-Server Abfrage mit dem Administrator Account aus der LDAP-Server Konfiguration geprüft |
 | **Timelimit** | Limit für die maximale Dauer der Abfrage. (Standard: 30) |
 
-_Bekannte Lösungen für Probleme bei der TLS Verbindung findet Ihr [HIER](../../administration/troubleshooting/ldap-via-tls.md)_
+_Bekannte Lösungen für Probleme bei der TLS Verbindung findet Ihr [HIER](../../administration/troubleshooting/ldap-via-tls.md)_
 
-  
 
 ### LDAP-Parameter für i-doit-Login
 
-Die hier angegebenen Parameter bestimmen, wo im Directory nach Benutzern gesucht werden soll. 
-
-  
+Die hier angegebenen Parameter bestimmen, wo im Directory nach Benutzern gesucht werden soll.
 
 | Feldname | Inhalt |
 | --- | --- |
-| **Eindeutige Kennung** | Es kommt bei der AD-Synchronisierung immer wieder dazu, dass geänderte Datensätze fälschlicherweise aufgrund eines geänderten Namens (Heirat o.Ä.) nicht mehr synchronisiert werden.  <br>Der "alte" Datensatz wird hier archiviert und ein neuer importiert.  <br>Daher kann als Eindeutige Kennung ein anderes Attribut ausgewählt werden. Siehe dazu **[Kategorieerweiterung](../../administration/verwaltung/cmdb-einstellungen.md#kategorieerweiterung)** |
+| **Eindeutige Kennung** | Es kommt bei der AD-Synchronisierung immer wieder dazu, dass geänderte Datensätze fälschlicherweise aufgrund eines geänderten Namens (Heirat o.Ä.) nicht mehr synchronisiert werden.  <br>Der "alte" Datensatz wird hier archiviert und ein neuer importiert.  <br>Daher kann als Eindeutige Kennung ein anderes Attribut ausgewählt werden. Siehe dazu **[Kategorieerweiterung](../../administration/verwaltung/cmdb-einstellungen.md#kategorieerweiterung)** |
 | **Filter** | Der Filter wird durch die im unteren Bereich definierten Werte automatisch gefüllt und kann nicht direkt über die Oberfläche abgeändert werden. |
 | **Nach Benutzern suchen in (OU)*** | Pflichtfeld: Der Pfad bis zur Organisationseinheit, in der die Benutzer im Directory abgelegt wurden.<br><br>(Beispiel: OU=tree,DC=synetics,DC=int) |
 | **Rekursive Suche** | Beim Aktivieren der rekursiven Suche werden auch die Verzeichnisse unterhalb der darüber angegebenen Organisationseinheit durchsucht. Bei großen Directories ist dies nicht empfehlenswert und sollte durch die Anlage von mehreren Servern umgangen werden. |
 
-Des Weiteren kann der Filter noch weiter definiert werden. Bei einer einzigen Filterzeile haben die Optionen dahinter noch keine Auswirkungen. Erst wenn über "Filter hinzufügen" die Abfrage erweitert wird, kommen die weiteren Optionen zur Geltung.
+Des Weiteren kann der Filter noch weiter definiert werden. Bei einer einzigen Filterzeile haben die Optionen dahinter noch keine Auswirkungen. Erst wenn über "Filter hinzufügen" die Abfrage erweitert wird, kommen die weiteren Optionen zur Geltung.
 
-  
 
 An letzten Filter anhängen:
 
+```shell
     (&(objectClass=user)(test=test))
+```
 
 Als neuen Filter anhängen:
 
+```shell
     (&(objectClass=user)(&(test=test)))
-
+```
 Neuen Term bilden:
 
+```shell
     (&(&(objectClass=user))(test=test))
+```
 
 Im untersten Bereich lässt sich dann die oben festgelegte Konfiguration testen. Bestenfalls erscheint die Meldung:
 
+```shell
     Connection OK!
     XX object(s) found in OU=tree,OU=synetics,DC=synetics,DC=int.
+```
 
-  
-Sollte bei Misserfolg die Fehlermeldung noch nicht eindeutig genug sein, kann das Debug-Level hochgesetzt werden, sodass weitere Ausgaben im Apache Error Log mitgeschrieben werden. Das Error Log ist unter [Debian](../../installation/manuelle-installation/debian.md)\-basierten Betriebssystemen unter /var/log/apache2/error.log zu finden.
+Sollte bei Misserfolg die Fehlermeldung noch nicht eindeutig genug sein, kann das Debug-Level hochgesetzt werden, sodass weitere Ausgaben im Apache Error Log mitgeschrieben werden. Das Error Log ist unter [Debian](../../installation/manuelle-installation/debian.md)\-basierten Betriebssystemen unter /var/log/apache2/error.log zu finden.
 
 ### Identifizierung von Objekten
 
-Ohne weitere Einstellung z.B. **Eindeutige Kennung** wird anhand des **Login** Attributes aus der **Kategorie Personen → Login** identifiziert**.**
-
-  
+Ohne weitere Einstellung z.B. **Eindeutige Kennung** wird anhand des **Login** Attributes aus der **Kategorie Personen → Login** identifiziert**.**
 
 ### Directories
 
-Über **Verwaltung → Schnittstellen / externe Daten → LDAP → Directories **lässt sich dann das Mapping einrichten. Es wird dafür genutzt, beim Login grundlegende Informationen zu dem einloggenden Benutzer abzufragen und in dem in i-doit zu erstellenden Benutzer abzulegen. Hier kann nach der Auswahl des zutreffenden Directories die Zuweisung vorgenommen werden. Standardmäßig sind die Felder jedoch schon gefüllt und brauchen in der Regel nicht verändert zu werden.
+Über **Verwaltung → Schnittstellen / externe Daten → LDAP → Directories **lässt sich dann das Mapping einrichten. Es wird dafür genutzt, beim Login grundlegende Informationen zu dem einloggenden Benutzer abzufragen und in dem in i-doit zu erstellenden Benutzer abzulegen. Hier kann nach der Auswahl des zutreffenden Directories die Zuweisung vorgenommen werden. Standardmäßig sind die Felder jedoch schon gefüllt und brauchen in der Regel nicht verändert zu werden.
 
 ### Import eigener LDAP-Attribute
 
-Es ist auch möglich, eigene Attribute aus dem LDAP über den Import von Personen in den Stammdaten zu hinterlegen. Dafür können weitere Felder für diese Kategorie unter **Verwaltung → CMDB-Einstellungen→ [Kategorieerweiterungen](../../administration/verwaltung/cmdb-einstellungen.md#kategorieerweiterung)** konfiguriert werden. Sobald ein Name definiert wurde, wird das Feld mit derselben Bezeichnung angezeigt. Die Befüllung findet dann über den zugehörigen Key statt.
+Es ist auch möglich, eigene Attribute aus dem LDAP über den Import von Personen in den Stammdaten zu hinterlegen. Dafür können weitere Felder für diese Kategorie unter **Verwaltung → CMDB-Einstellungen→ [Kategorieerweiterungen](../../administration/verwaltung/cmdb-einstellungen.md#kategorieerweiterung)** konfiguriert werden. Sobald ein Name definiert wurde, wird das Feld mit derselben Bezeichnung angezeigt. Die Befüllung findet dann über den zugehörigen Key statt.
 
 ### Regelmäßige Synchronisation
 
-Die dafür benötigte Konfiguration wurde in den vorherigen Schritten bereits vorgenommen. Für die Synchronisation muss nun noch der passende [Controller Handler](../cli/controller.md) eingerichtet werden. Außerdem können noch weitere zu synchronisierende Felder konfiguriert werden.
+Die dafür benötigte Konfiguration wurde in den vorherigen Schritten bereits vorgenommen. Für die Synchronisation muss nun noch der passende [Controller Handler](../cli/controller.md) eingerichtet werden. Außerdem können noch weitere zu synchronisierende Felder konfiguriert werden.
 
 ### Erweiterte Konfiguration
 
-Die Konfiguration muss in der [Handler-Konfiguration](../cli/index.md) vorgenommen werden. Ein Beispiel dazu ist [Hier](../cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden(i-doit < 1.15. Diese Datei kann mit Login-Daten, Tenant und Attributen erweitert und angepasst werden. Die Konfigurationsdatei wird dann nach i-doit/src/handler/config/ verschoben. Damit diese Datei z.B. beim ldap-sync Command berücksichtig wird, muss diese beim sync über einen weiteren Parameter (-c /pfad/) mit angegeben werden (weitere Informationen zur [Console](../cli/console/optionen-und-parameter-der-console.md)). 
+Die Konfiguration muss in der [Handler-Konfiguration](../cli/index.md) vorgenommen werden. Ein Beispiel dazu ist [Hier](../cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden i-doit < 1.15. Diese Datei kann mit Login-Daten, Tenant und Attributen erweitert und angepasst werden. Die Konfigurationsdatei wird dann nach i-doit/src/handler/config/ verschoben. Damit diese Datei z.B. beim ldap-sync Command berücksichtig wird, muss diese beim sync über einen weiteren Parameter (-c /pfad/) mit angegeben werden (weitere Informationen zur [Console](../cli/console/optionen-und-parameter-der-console.md)).
 
 !!! warning Zugriff auf .ini Dateien
     Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
     Es sollte dieser code hinzugefügt werden:
+
     ```shell
     ## Deny access to all ini files…
     <Files "*.ini">
@@ -142,17 +144,15 @@ Die Konfiguration muss in der [Handler-Konfiguration](../cli/index.md) vorgenom
 | Parameter | Zweck |
 | --- | --- |
 | **import_rooms** | Auf true gesetzt werden auch Räume mit der Synchronisation angelegt (Standard: false) |
-| **defaultCompany** | Hierdurch werden durch die LDAP-Synchronisation hinzugefügte Benutzer automatisch der konfigurierten<br><br>Organisation zugewiesen. (Standard: leer)<br><br>Bsp. <br><br>defaultCompany='i-doit' |
-| **deletedUsersBehaviour** | Kann auf **archive**, **delete** und **disable_login** gesetzt werden um Benutzer auf [archiviert bzw. gelöscht](../../grundlagen/lebens-und-dokumentationszyklus.md) zu setzen, die nicht mehr über die Synchronisation gefunden werden. Ein archivierter/gelöschter Benutzer kann sich nicht mehr in i-doit anmelden.<br><br>deletedUserBehavior=archive, setzt den Status des Benutzers auf archiviert  <br>deletedUserBehavior=delete, setzt den Status des Benutzers auf gelöscht  <br>deletedUserBehavior=disable\_login, setzt den Status des Benutzers auf normal und Deaktiviere Login auf Ja<br><br>(Standard: **archive)**<br><br>Bsp.<br><br>deletedUsersBehaviour=archive |
-| **disabledUsersBehaviour** | Kann auf **archive**, **delete** und **disable_login** gesetzt werden um Benutzer auf [archiviert bzw. gelöscht](../../grundlagen/lebens-und-dokumentationszyklus.md) zu setzen, die nicht mehr über die Synchronisation gefunden werden. Ein archivierter/gelöschter Benutzer kann sich nicht mehr in i-doit anmelden.<br><br>Oder man deaktiviert nur den Login für die User.<br><br>Bsp.<br><br>disabledUsersBehaviour=archive |
-| **rooms** | Wie in dem Beispiel kann hier eine Zuweisung von Benutzer zu einem Raum vordefiniert werden, die bei der Synchronisation vorgenommen wird. Die Zuweisung wird über die Kontaktzuweisung ohne eine Rolle realisiert.<br><br>Bsp. <br><br>rooms["Raum B"] = ["Person A", "Person C", "Person D"] |
+| **defaultCompany** | Hierdurch werden durch die LDAP-Synchronisation hinzugefügte Benutzer automatisch der konfigurierten<br><br>Organisation zugewiesen. (Standard: leer)<br><br>Bsp. <br><br>defaultCompany='i-doit' |
+| **deletedUsersBehaviour** | Kann auf **archive**, **delete** und **disable_login** gesetzt werden um Benutzer auf [archiviert bzw. gelöscht](../../grundlagen/lebens-und-dokumentationszyklus.md) zu setzen, die nicht mehr über die Synchronisation gefunden werden. Ein archivierter/gelöschter Benutzer kann sich nicht mehr in i-doit anmelden.<br><br>deletedUserBehavior=archive, setzt den Status des Benutzers auf archiviert  <br>deletedUserBehavior=delete, setzt den Status des Benutzers auf gelöscht  <br>deletedUserBehavior=disable\_login, setzt den Status des Benutzers auf normal und Deaktiviere Login auf Ja<br><br>(Standard: **archive)**<br><br>Bsp.<br><br>deletedUsersBehaviour=archive |
+| **disabledUsersBehaviour** | Kann auf **archive**, **delete** und **disable_login** gesetzt werden um Benutzer auf [archiviert bzw. gelöscht](../../grundlagen/lebens-und-dokumentationszyklus.md) zu setzen, die nicht mehr über die Synchronisation gefunden werden. Ein archivierter/gelöschter Benutzer kann sich nicht mehr in i-doit anmelden.<br><br>Oder man deaktiviert nur den Login für die User.<br><br>Bsp.<br><br>disabledUsersBehaviour=archive |
+| **rooms** | Wie in dem Beispiel kann hier eine Zuweisung von Benutzer zu einem Raum vordefiniert werden, die bei der Synchronisation vorgenommen wird. Die Zuweisung wird über die Kontaktzuweisung ohne eine Rolle realisiert.<br><br>Bsp. <br><br>rooms["Raum B"] = ["Person A", "Person C", "Person D"] |
 | **attributes** | Hiermit werden die jeweiligen Felder aus dem Directory mit Attributen in i-doit verknüpft. Diese ergänzen die zugewiesenen Attribute aus dem oberen Teil der Anleitung.<br><br>Bsp.<br><br>attributes[department]=department |
 | **autoReactivateUsers** | Ist nur für Novel Directory Services (NDS) und OpenLDAP relevant. Hierdurch werden bei der Synchronisation erst mal alle Benutzer wieder aktiviert und nach dem regulären Prinzip wieder deaktiviert, falls zutreffend.<br><br>Bsp.<br><br>autoReactivateUsers=false |
-| **ignoreUsersWithAttributes** | Diese Funktion hilft, eine Synchronisation unerwünschter Verzeichnisobjekte zu verhindern.<br><br>Der Benutzer wird nicht synchronisiert, wenn die ignoreFunctionfür alle ausgewählten Attribute fehlschlägt.<br><br>Bsp.<br><br>ignoreUsersWithAttributes\[\] = "samaccountname" |
+| **ignoreUsersWithAttributes** | Diese Funktion hilft, eine Synchronisation unerwünschter Verzeichnisobjekte zu verhindern.<br><br>Der Benutzer wird nicht synchronisiert, wenn die ignoreFunctionfür alle ausgewählten Attribute fehlschlägt.<br><br>Bsp.<br><br>ignoreUsersWithAttributes\[\] = "samaccountname" |
 | **ignoreFunction** | Dies kann ein beliebiger Funktionsname sein, der über call\_user\_func oder die definierten Funktionen aufrufbar ist.<br><br>Definierte Funktionen:<br><br>empty  <br>!empty  <br>isset  <br>!isset<br><br>Bsp,<br><br>ignoreFunction\=empty |
 | syncEmptyAttributes | Wurden Werte aus Feldern im AD gelöscht/geleert werden diese in i-doit übernommen<br><br>syncEmptyAttributes=true |
-
-  
 
 ### Automatische Zuweisung von Personen zu Personengruppen
 
@@ -160,22 +160,21 @@ Die automatische Zuweisung sorgt dafür, dass nach dem Login automatisch die fü
 
 [![ldap-autozuweis](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)
 
-  
-
 !!! info "memberOf bei OpenLDAP"
 
     Die automatische Zuweisung beruht auf der LDAP-Abfrage, in welchen Gruppen ein Benutzer ist. Hierbei spielt das Attribut memberOf eine wichtige Rolle. Dieses Attribut muss als Overlay verfügbar sein, was in vielen Standard-Installationen von OpenLDAP nicht der Fall ist. Gute Artikel für die nötige Konfiguration befinden sich [hier](http://www.adimian.com/blog/2014/10/how-to-enable-memberof-using-openldap/) und [hier](https://technicalnotes.wordpress.com/2014/04/19/openldap-setup-with-memberof-overlay/).
 
 ### Personen und Personengruppen Synchronisieren
 
-Seit Version 1.15 können Personen und Personengruppen aus dem LDAP/AD synchronisiert werden. Dabei werden die Personen Mitglied der Ihnen im LDAP zugewiesenen Gruppe. Solange die Gruppe auch mit dem eingestelltem Filter gefunden wird.  
-[HIER](../ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md) gehts es zum Artikel.  
-Voraussetzung ist, dass der Benutzer mit dem der Befehl ausgeführt wird auch die Supervisor Rechte auf die Kategorien ("Gruppenmitgliedschaft" und "Personengruppen > Mitglieder") sowie Supervisor Rechte auf die Objekttypen ("Personen" und "Personengruppen") besitzt.  
+Seit Version 1.15 können Personen und Personengruppen aus dem LDAP/AD synchronisiert werden. Dabei werden die Personen Mitglied der Ihnen im LDAP zugewiesenen Gruppe. Solange die Gruppe auch mit dem eingestelltem Filter gefunden wird.
+[HIER](../ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md) gehts es zum Artikel.
+
+Voraussetzung ist, dass der Benutzer mit dem der Befehl ausgeführt wird auch die Supervisor Rechte auf die Kategorien ("Gruppenmitgliedschaft" und "Personengruppen > Mitglieder") sowie Supervisor Rechte auf die Objekttypen ("Personen" und "Personengruppen") besitzt.
 [![ldap-sync](../../assets/images/de/automatisierung-und-integration/ldap/2-ldap.png)](../../assets/images/de/automatisierung-und-integration/ldap/2-ldap.png)
 
 ### Logging
 
-Unterhalb von log/ im Installationsverzeichnis von i-doit befindet sich ein Logfile mit dem Namen ldap_debug.txt. Das Logging lässt sich unter **Verwaltung →** **Systemeinstellungen → L****ogging → LDAP Debug** (de-)aktivieren.
+Unterhalb von log/ im Installationsverzeichnis von i-doit befindet sich ein Logfile mit dem Namen ldap_debug.txt. Das Logging lässt sich unter **Verwaltung →** **Systemeinstellungen → L****ogging → LDAP Debug** (de-)aktivieren.
 
 Den ldap-sync ausführen
 -----------------------

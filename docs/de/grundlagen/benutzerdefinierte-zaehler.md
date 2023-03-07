@@ -8,8 +8,10 @@ Oben in dieser Liste befindet sich eine Schaltfläche zum Hinzufügen von X neue
 
 Für jeden definierten Zähler gibt es eine eigene Zeile in dieser Liste.
 
-Jede Zeile hat eine vorangestellte Bezeichnung: **%COUNTER_**  
-Gefolgt von einem Textfeld **[_____________]**  
+Jede Zeile hat eine vorangestellte Bezeichnung: **%COUNTER_**
+
+Gefolgt von einem Textfeld **[_____________]**
+
 Gefolgt von einer weiteren Beschriftung: **%**
 Das bedeutet, dass der fertige Zähler wie folgt aussehen wird: **%COUNTER_CUSTOMTEXT%**
 
@@ -28,7 +30,8 @@ Die gesamte Konfiguration sieht wie folgt aus:
     Wenn man den Mauszeiger über das (Info-) Symbol bewegt, erscheint ein kleiner Text, der darauf hinweist, dass diese Funktion den Zähler auf 1 zurücksetzt und alle zukünftigen Verwendungen dieses Zählers diese neue Zählung verwenden werden.
     Es ist nicht möglich, zum aktuellen Stand zurückzukehren.
 
-Es ist nur erlaubt, A-Z, a-z, 0-9, - und \_ für den Namen des Zählers einzugeben. Wenn etwas anderes in das Feld eingegeben wird und der Benutzer versucht zu speichern, wird der Zähler nicht gespeichert.  
+Es ist nur erlaubt, A-Z, a-z, 0-9, - und \_ für den Namen des Zählers einzugeben. Wenn etwas anderes in das Feld eingegeben wird und der Benutzer versucht zu speichern, wird der Zähler nicht gespeichert.
+
 Er wird rot hervorgehoben und ein Infokasten weist darauf hin, dass nur "A-Z, a-z, 0-9, - und \_" verwendet werden dürfen. Nach dem Speichern werden alle Kleinbuchstaben in Großbuchstaben umgewandelt.
 
 Nach dem Speichern wird das Textfeld deaktiviert, so dass der ZÄHLER nicht mehr verändert werden kann. Dies soll Probleme vermeiden. Der Speicherknopf ist ganz oben in der Konfiguration allgemein platziert.
@@ -41,11 +44,14 @@ Der benutzerdefinierte Zähler kann auch für führende Nullen auf die gleiche W
 
 **%COUNTER_CUSTOMTEXT#3%** würde zu 001 führen.
 
-Zusätzlich gibt es eine [Experteneinstellung](../administration/systemeinstellungen/experteneinstellungen.md). Hier kann der Benutzer den Zähler bei Bedarf auf einen bestimmten Wert setzen.  
+Zusätzlich gibt es eine [Experteneinstellung](../administration/systemeinstellungen/experteneinstellungen.md). Hier kann der Benutzer den Zähler bei Bedarf auf einen bestimmten Wert setzen.
+
 Setzt man den Wert auf z.B. 1000 wird dieser Wert.
 
 [![Benutzerdefinierter-Zähler](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)
 
-Alle Zähler sind in der Listenbearbeitung, der Massenbearbeitung, den Vorlagen und der automatisch generierten Inventarnummer aus der Objekttypkonfiguration verfügbar/verwendbar.  
-Außerdem sind die Counter auch bei Textfeldern von benutzerdefinierten Kategorien verwendbar.  
-Diese Counter werden durch klick auf das  [![icon](../assets/images/de/grundlagen/icons/riddle.png)](../assets/images/de/grundlagen/icons/riddle.png) Fragenzeichen Symbol neben dem Feld aufgelistet.
+Alle Zähler sind in der Listenbearbeitung, der Massenbearbeitung, den Vorlagen und der automatisch generierten Inventarnummer aus der Objekttypkonfiguration verfügbar/verwendbar.
+
+Außerdem sind die Counter auch bei Textfeldern von benutzerdefinierten Kategorien verwendbar.
+
+Diese Counter werden durch klick auf das [![icon](../assets/images/de/grundlagen/icons/riddle.png)](../assets/images/de/grundlagen/icons/riddle.png) Fragenzeichen Symbol neben dem Feld aufgelistet.

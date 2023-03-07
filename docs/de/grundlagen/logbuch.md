@@ -72,11 +72,13 @@ Das Logbuch nimmt neue Einträge aus Dritt-Systemen entgegen, beispielsweise dur
 
 [![](../assets/images/de/grundlagen/logbuch/8-lb.png)](../assets/images/de/grundlagen/logbuch/8-lb.png)
 
-Über die [i-doit Console](../automatisierung-und-integration/cli/index.md) wird die Archivierung ausgeführt. Dieser Schritt kann daher auch automatisieren werden. Ein entsprechendes Beispiel für einen Aufruf sowie eine Auflistung der Parameter lässt sich im [zugehörigen Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#OptionenundParameterderConsole-logbook-archive) für die Option **logbook-archive** finden.
+Über die [i-doit Console](../automatisierung-und-integration/cli/index.md) wird die Archivierung ausgeführt. Dieser Schritt kann daher auch automatisieren werden. Ein entsprechendes Beispiel für einen Aufruf sowie eine Auflistung der Parameter lässt sich im [zugehörigen Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#OptionenundParameterderConsole-logbook-archive) für die Option **logbook-archive** finden.
 
 Beispiel:
 
+```shell
     sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
+```
 
 Archivierte Einträge lassen sich zur weiteren Auswertung wiederherstellen. Dieser Punkt befindet sich unter **Extras → CMDB → Logbuch → Wiederherstellen**.
 
@@ -85,7 +87,7 @@ Archivierte Einträge lassen sich zur weiteren Auswertung wiederherstellen. Dies
 Erstellungs- und Änderungsdatum
 -------------------------------
 
-Jegliche Änderung an Objekten ([Erstellen, Ändern, Archivieren, Löschen, Wiederherstellen](lebens-und-dokumentationszyklus.md) bewirkt nicht nur einen Eintrag im Logbuch, sondern auch an den [Attributen](../glossar.md) **Erstellungdatum** und **Änderungsdatum** in der Kategorie **Allgemein**, die jedem Objekttypen fest zugeordnet ist.
+Jegliche Änderung an Objekten [Erstellen, Ändern, Archivieren, Löschen, Wiederherstellen](lebens-und-dokumentationszyklus.md) bewirkt nicht nur einen Eintrag im Logbuch, sondern auch an den [Attributen](../glossar.md) **Erstellungdatum** und **Änderungsdatum** in der Kategorie **Allgemein**, die jedem Objekttypen fest zugeordnet ist.
 
 [![Änderungsdatum](../assets/images/de/grundlagen/logbuch/10-lb.png)](../assets/images/de/grundlagen/logbuch/10-lb.png)
 
