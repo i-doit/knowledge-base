@@ -30,15 +30,15 @@ Das Duplikat bearbeiten wir anschließend mit dem SQL-Editor und erweitern die W
     j2.isys_obj_type__title AS 'LC__REPORT__FORM__OBJECT_TYPE###1',
     obj_main.isys_obj__updated AS 'isys_cmdb_dao_category_g_global::dynamic_property_callback_changed::isys_obj__updated::LC__CMDB__LAST_CHANGE',
     obj_main.isys_obj__updated_by AS 'LC__CMDB__LAST_CHANGE_BY###1'
-    
+
     FROM isys_obj AS obj_main
     INNER JOIN isys_cmdb_status AS obj_main_status ON obj_main_status.isys_cmdb_status__id = obj_main.isys_obj__isys_cmdb_status__id
     LEFT JOIN isys_obj_type AS j2 ON j2.isys_obj_type__id = obj_main.isys_obj__isys_obj_type__id
     LEFT JOIN isys_catg_global_list AS j3 ON j3.isys_catg_global_list__isys_obj__id = obj_main.isys_obj__id
-    
+
     WHERE j2.isys_obj_type__const != 'C__OBJTYPE__RELATION' AND
     YEAR(obj_main.isys_obj__updated) = YEAR(NOW()) AND MONTH(obj_main.isys_obj__updated) = MONTH(NOW());
 
-Um _diesen_ Monat als Zeitintervall einzugrenzen, verwenden wir die SQL-Funktionen NOW(), YEAR() und MONTH(). Diese wenden wir auf das Änderungsdatum an, das in der Tabellen-Spalte obj_main.isys_obj__updated gespeichert wird. Zusätzlich schließen wir mit j2.isys_obj_type__const != 'C__OBJTYPE__RELATION' alle [Beziehungsobjekte](../grundlagen/objekt-beziehungen.md) aus.
+Um _diesen_ Monat als Zeitintervall einzugrenzen, verwenden wir die SQL-Funktionen `NOW()`, `YEAR()` und `MONTH()`. Diese wenden wir auf das Änderungsdatum an, das in der Tabellen-Spalte `obj_main.isys_obj__updated` gespeichert wird. Zusätzlich schließen wir mit `j2.isys_obj_type__const != 'C__OBJTYPE__RELATION'` alle [Beziehungsobjekte](../grundlagen/objekt-beziehungen.md) aus.
 
 [Dieses und weitere Beispiele, um Zeitintervalle abzufragen](http://stackoverflow.com/questions/5293189/select-records-from-today-this-week-this-month-php-mysql), bietet beispielsweise diese Frage bei Stackoverflow.

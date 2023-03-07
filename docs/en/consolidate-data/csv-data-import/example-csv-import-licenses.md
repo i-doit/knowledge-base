@@ -2,25 +2,21 @@
 
 In this example we build on the [CSV import of applications](example-csv-import-applications.md) and want to import licenses.
 
-!!! info
-
-    his article was last checked for i-doit version 1.17.2
+!!! info "This article was last checked for i-doit version 1.17.2"
 
 For the import we need the following information:
 
-*   Object type → what type of object it should be.
-*   Object title → the name of the client
-*   License Assignment: License Key - License Type → Which license type will be imported, single or volume?
-*   License Assignment: License Key - Number → What is the number of licenses?
-*   License Assignment: License Key - Key → What is the license key?
-*   License assignment: License key - Serial number → Which serial number should be assigned?
-*   License assignment: License key - Start date → From when can the license be used?
-*   License assignment: License key - Expiration date → When does the license expire?
-*   License assignment: License key - Unit price → What does a license cost?
+-  Object type → what type of object it should be.
+-  Object title → the name of the client
+-  License Assignment: License Key - License Type → Which license type will be imported, single or volume?
+-  License Assignment: License Key - Number → What is the number of licenses?
+-  License Assignment: License Key - Key → What is the license key?
+-  License assignment: License key - Serial number → Which serial number should be assigned?
+-  License assignment: License key - Start date → From when can the license be used?
+-  License assignment: License key - Expiration date → When does the license expire?
+-  License assignment: License key - Unit price → What does a license cost?
 
-!!! info
-
-    With each import, the representation of the data must also be taken into account.
+!!! info "With each import, the representation of the data must also be taken into account."
 
 For example:
 
@@ -32,14 +28,16 @@ And the numeric format: X,XXX,XX (1,111.11), because the comma is set by i-doit 
 
 Example CSV file for this import:
 
-[Import Licenses.csv](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/Import Licenses.csv)
+[Import-Licenses.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/Import-Licenses.csv){ .md-button .md-button--primary }
 
 ??? example "Import Licenses.csv"
 
+    ```text
     Object type;Object title;Licenses: License keys > License Type (Dialog);Licenses: License keys > Amount;Licenses: License keys > Key;Licenses: License keys > Serial;Licenses: License keys > Start Date (Date);Licenses: License keys > Expiration Date (Date);Licenses: License keys > Price Per Unit (Money)
     C__OBJTYPE__LICENCE;License-X;Volume license;1000;License-X-111-LASKDZHW;123456789;2021-01-01;2021-12-31;999.9
     C__OBJTYPE__LICENCE;License-Y;Single license;1;License-Y-211-OIHUASFD;1123456789;2021-06-01;2021-12-31;1399.9
     C__OBJTYPE__LICENCE;License-Z;Volume license,Volume license;100,50;License-Z-311-IGUHOPSD,License-Z-322-IUHGASD;11123456789,11223456789;2021-01-01,2021-05-01;2021-12-31,2021-04-30;10200.9,500.9
+    ```
 
 No dependencies are assumed for this import.
 

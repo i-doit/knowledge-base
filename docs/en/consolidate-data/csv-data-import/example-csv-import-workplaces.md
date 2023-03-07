@@ -3,27 +3,22 @@
 In this example we build on the [CSV import of locations](example-csv-import-creating-locations.md) and want to import workplaces.  
 These are to be assigned to a room as a location and furthermore we want to assign clients, monitors and printers to the workplaces.
 
-!!! info
-
-    This article was last checked for i-doit version 1.17.1
-
-  
-
-  
+!!! info "This article was last checked for i-doit version 1.17.1"
 
 For the import we need the following information:
 
-*   Object title → the name of the workstation, client, screen or printer.
-*   Location → under which location the object should be located
-*   Object type → what type of object it should be
-*   Workplaces assignment → to which workstation the component should be assigned
+-  Object title → the name of the workstation, client, screen or printer.
+-  Location → under which location the object should be located
+-  Object type → what type of object it should be
+-  Workplaces assignment → to which workstation the component should be assigned
 
 Example CSV file for this import:
 
-[Import Workplaces.csv](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/Import Workplaces.csv)
+[Import-Workplaces.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/Import-Workplaces.csv){ .md-button .md-button--primary }
 
 ??? example "Import Workplaces.csv"
 
+    ```text
     Object title;Location;Object type;Workplace assignment
     AP0001;Room 1.001;C__OBJTYPE__WORKSTATION;;
     AP0002;Room 1.002;C__OBJTYPE__WORKSTATION;;
@@ -104,7 +99,8 @@ Example CSV file for this import:
     PRNT017;;C__OBJTYPE__PRINTER;AP0017
     PRNT018;;C__OBJTYPE__PRINTER;AP0018
     PRNT019;;C__OBJTYPE__PRINTER;AP0019
-    PRNT020;;C__OBJTYPE__PRINTER;AP0020 
+    PRNT020;;C__OBJTYPE__PRINTER;AP0020
+    ```
 
 There are also dependencies in this example. The locations already exist, they were created via the [location creation example](example-csv-import-creating-locations.md).  
 Next come the workstations themselves, we must create these first, so that we can then directly assign the individual components such as clients, monitor and printer to them.  

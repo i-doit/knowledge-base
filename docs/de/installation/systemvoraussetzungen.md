@@ -3,7 +3,7 @@
 Um den Betrieb aller Funktionalitäten von i-doit zu gewährleisten, existieren für das darunter liegende System Voraussetzungen, die erfüllt sein müssen.
 
 !!! info "Aktualität"
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **21**. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **22**. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
     
 Mindestanforderungen an das System
 ----------------------------------
@@ -93,7 +93,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 Kompatibilitätsmatrix
 ---------------------
 
-| **i-doit Version** | 1.19, 20, 21 | 1.18 | 1.17 | 1.16 | 1.15 | 1.14 | 1.13 | 1.12 | 1.11 | 1.10 | 1.9 | 1.8 | 1.7 |
+| **i-doit Version** | 1.19, 20, 21, 22 | 1.18 | 1.17 | 1.16 | 1.15 | 1.14 | 1.13 | 1.12 | 1.11 | 1.10 | 1.9 | 1.8 | 1.7 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Release** | 2022-09 | 2022-01 | 2021-07 | 2021-01 | 2020-07 | 2020-01 | 2019-06 | 2018-12 | 2018-06 | 2017-12 | 2017-05 | 2016-10 | 2016-03 |
 | **Apache Webserver** | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.2, 2.4 |

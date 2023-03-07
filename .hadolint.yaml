@@ -1,0 +1,10 @@
+---
+ignored:
+  # Ignore version pinning in Debian's apt install:
+  - DL3008
+  # Ignore version pinning for pip packages:
+  - DL3013
+  # Ignore version pinning in alpine's apk add:
+  - DL3018
+  # Allow multiple consecutive RUN statements:
+  - DL3059

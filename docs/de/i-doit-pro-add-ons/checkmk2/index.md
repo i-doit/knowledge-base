@@ -1,5 +1,8 @@
 # Checkmk2
 
+!!! info ""
+    Als Gold-Partner von Tribe29 gilt das SHD – System-Haus-Dresden GmbH als ausgewiesener Spezialist für das Monitoring mit Checkmk. Mit der Übernahme und Weiterentwicklung des i-doit pro Add-Ons Checkmk 2 stellt SHD diese Expertise nun auch den i-doit Anwendern zur Verfügung.
+
 !!! attention ""
     Mit der [Checkmk Version 2.1.0b1](https://checkmk.com/werk/12389) wurde die Struktur der Inventory Daten verändert. Es ist aktuell mit der CheckMK 2 Add-on Version <=1.8 nicht möglich Inventory in i-doit zu übertragen.   
     Mit Version 1.8.1 muss die [Konfiguration](./checkmk2-konfiguration.md) angepasst werden.

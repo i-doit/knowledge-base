@@ -1,4 +1,4 @@
-!!! info 
+!!! info ""
     Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/validierung-von-daten-und-eingaben-in-i-doit/)
 
 # Validierung und Pflichtfelder
@@ -17,7 +17,7 @@ Folgende Anforderungen erfüllt die Validierung:
 Konfiguration
 -------------
 
-Du findest die Möglichkeit zur Festlegung dieser Einstellungen **Verwaltung → CMDB-Einstellungen → **Validierung****. Im Auslieferungszustand wirst du hier noch keine Konfiguration vorfinden. Die Konfiguration erfolgt pro Kategorie. Wähle die Kategorie, aus der du ein oder mehrere Attribute validieren möchtest.
+Du findest die Möglichkeit zur Festlegung dieser Einstellungen **Verwaltung → CMDB-Einstellungen → Validierung**. Im Auslieferungszustand wirst du hier noch keine Konfiguration vorfinden. Die Konfiguration erfolgt pro Kategorie. Wähle die Kategorie, aus der du ein oder mehrere Attribute validieren möchtest.
 
 [![validierung-validieren](../assets/images/de/effizientes-dokumentieren/validierung-und-pflichtfelder/1-vup.png)](../assets/images/de/effizientes-dokumentieren/validierung-und-pflichtfelder/1-vup.png)
 

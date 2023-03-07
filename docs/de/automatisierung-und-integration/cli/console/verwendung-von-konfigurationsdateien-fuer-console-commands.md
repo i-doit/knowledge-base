@@ -3,11 +3,22 @@
 Wenn Sie eine Konfigurationsdateien verwenden, können Sie dort für die Console Command die Optionen unterbringen.  
 Speichern können Sie diese neu erstellten Dateien dann z.B. unter /i-doit/src/handler/config/.
 
+!!! warning "Zugriff auf .ini Dateien"
+    Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
+    Es sollte dieser code hinzugefügt werden:
+
+    ```shell
+    ## Deny access to all ini files…
+    <Files "*.ini">
+        Require all denied
+    </Files>
+    ```
+
 Damit Sie z.B. Passwörter nicht im Klartext in die Console tippen müssen.  
 Der [Console Command](../console/optionen-und-parameter-der-console.md) verwendet .ini Dateien.  
 Der [Controller Command](../controller.md) verwendet .inc.php Dateien. Diese Methode ist allerdings veraltet und sollte nicht verwendet werden.
 
-Verwendet wird die Konfigurationsdatei mit --config /pfad/zur/config.ini oder mit -c /pfad/zur/config.ini
+Verwendet wird die Konfigurationsdatei mit `--config /pfad/zur/config.ini oder mit -c /pfad/zur/config.ini`
 
 Der Aufbau der .ini
 -------------------
@@ -51,7 +62,7 @@ Damit die Konfiguration auch verwendet wird führen wir den Console Command aus 
 
     sudo -u www-data php console.php search-index -c /var/www/html/i-doit/src/handler/config/examples/search-index.ini
 
-[![example-search-download example-search.ini](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/1-cmd.png)<br/> example-search.ini](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-seach_index.ini)
+[example-search.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-seach_index.ini){ .md-button .md-button--primary }
 
 * * *
 
@@ -71,7 +82,7 @@ Damit die Konfiguration auch verwendet wird führen wir den Console Command aus 
 
     sudo -u www-data php console.php notifications-send -c /var/www/html/i-doit/src/handler/config/examples/notifications-send.ini
 
-[![examplenoti-download_icon](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/1-cmd.png)<br/>example-notifications-send.ini](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-notifications-send.ini)
+[example-notifications-send.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-notifications-send.ini){ .md-button .md-button--primary }
 
 * * *
 
@@ -124,7 +135,7 @@ Mit [dumpConfig](../console/optionen-und-parameter-der-console.md#ldap-sync) wir
     ignoreFunction=empty
     syncEmptyAttributes=true
 
-[![example-ldap-downloadicon](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/1-cmd.png)<br/>example-ldap.ini](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-ldap.ini)
+[example-ldap.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-ldap.ini){ .md-button .md-button--primary }
 
 Damit die Konfiguration auch verwendet wird führen wir den Console Command aus und geben den Pfad zur Konfigurationsdatei mit --config oder -can.
 

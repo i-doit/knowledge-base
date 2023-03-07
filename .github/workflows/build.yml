@@ -1,0 +1,53 @@
+---
+name: Build on every push
+
+on:
+  push:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Re-use NPM cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Pull container base image
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            pull
+      - name: Re-use container image layers
+        uses: jpribyl/action-docker-layer-caching@v0.1.1
+        continue-on-error: true
+      - name: Build container image
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            build \
+            --build-arg USER_ID="$(id -u)" \
+            --build-arg GROUP_ID="$(id -g)"
+      - name: Install toolchain
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            run docs \
+              npm ci
+      - name: Build German language
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            run docs \
+              npm run docs:build:de
+      - name: Build English language
+        run: |
+          docker-compose \
+            -f docker-compose-ci.yml \
+            run docs \
+              npm run docs:build:en
