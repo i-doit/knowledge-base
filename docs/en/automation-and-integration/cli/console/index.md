@@ -42,6 +42,7 @@ When you execute the CLI without further arguments, the general help is displaye
     auth-cleanup                        Cleanup all auth paths
     clear-credentials                   It removes both attributes `username` and `password` from the users "login" category
     contracts-outdated                  Updates status of outdated contracts
+    extend-contracts                    Extends Contracts with last cancellation date in the past
     documents
     help                                Displays help for a command
     import-csv                          Imports CSV formatted files (Using a predefined CSV Import filter, defined in the GUI)
@@ -123,6 +124,7 @@ Commands
 | **check_mk-export** | yes | yes | Check\_MK 1 / 2 | Export of configuration files for [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) |
 | **check_mk-livestatus** | yes | yes | Check\_MK 1 / 2 | Write actual status from [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) into log book |
 | **clear-credentials** | yes | yes | \-  | Removes user credentials |
+| **extend-contracts** | yes | no | \- | Extends Contracts with last cancellation date in the past
 | **help** | yes | yes | \-  | Displays the help for a command |
 | **import-csv** | yes | no  | –   | Import data from a [CSV file](../../../consolidate-data/csv-data-import/index.md) |
 | **import-csvprofiles** | yes | no  | –   | List all [CSV import profiles](../../../consolidate-data/csv-data-import/index.md) |
