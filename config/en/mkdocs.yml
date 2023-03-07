@@ -364,24 +364,24 @@ nav:
           - Tenantsettings: system-administration/system-settings/tenantsettings.md
           - System-wide: system-administration/system-settings/system-wide.md
   - Use cases:
-    - use-cases/index.md
-    - Automated contract term extension: use-cases/automated-contract-term-extension.md
-    - Mapping of customer sites: use-cases/mapping-of-customer-sites.md
-    - Workplaces: use-cases/wokplaces.md
-    - Upload and link of files: use-cases/upload-and-link-files.md
-    - Documentation of databases: use-cases/documentation-of-databases.md
-    - Geo coordinates: use-cases/geo-coordinates.md
-    - IP address management (IPAM): use-cases/ip-adress-management.md
-    - Cable patches and paths: use-cases/cable-patches-and-path.md
-    - Complex reports: use-cases/complex-reports.md
-    - Creating a local user: use-cases/creating-a-local-user.md
-    - Manage passwords: use-cases/manage-password.md
-    - Location-based authorization: use-cases/location-bases-authorization.md
-    - Locations: use-cases/locations.md
-    - Switch Stacking: use-cases/switch-stacking.md
-    - i-doit with OpenID-Connect authentication explained with Google login: use-cases/i-doit-with-openid-connect-auth.md
-    - VM Provisioning: use-cases/vm-provisioning.md
-    - Custom translations: use-cases/custom-translation.md
+      - use-cases/index.md
+      - Automated contract term extension: use-cases/automated-contract-term-extension.md
+      - Mapping of customer sites: use-cases/mapping-of-customer-sites.md
+      - Workplaces: use-cases/wokplaces.md
+      - Upload and link of files: use-cases/upload-and-link-files.md
+      - Documentation of databases: use-cases/documentation-of-databases.md
+      - Geo coordinates: use-cases/geo-coordinates.md
+      - IP address management (IPAM): use-cases/ip-adress-management.md
+      - Cable patches and paths: use-cases/cable-patches-and-path.md
+      - Complex reports: use-cases/complex-reports.md
+      - Creating a local user: use-cases/creating-a-local-user.md
+      - Manage passwords: use-cases/manage-password.md
+      - Location-based authorization: use-cases/location-bases-authorization.md
+      - Locations: use-cases/locations.md
+      - Switch Stacking: use-cases/switch-stacking.md
+      - i-doit with OpenID-Connect authentication explained with Google login: use-cases/i-doit-with-openid-connect-auth.md
+      - VM Provisioning: use-cases/vm-provisioning.md
+      - Custom translations: use-cases/custom-translation.md
   - i-doit pro Add-ons:
       - i-doit-pro-add-ons/index.md
       - Active Directory Documentation: i-doit-pro-add-ons/active-directory-documentation.md
