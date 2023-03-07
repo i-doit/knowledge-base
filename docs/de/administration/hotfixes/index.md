@@ -48,6 +48,14 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_22_hotfix_ID-9255_9750ba4.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9255_9750ba4.zip){ .md-button .md-button--primary }
 
+### JDisc import via console removes categories and other configurations
+
+[i-doit_22_hotfix_ID-9316_b3150c0.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9316_b3150c0.zip){ .md-button .md-button--primary }
+
+### JDisc import error when "Use simple database modelling?" is activated
+
+[i-doit_22_hotfix_ID-9280_c88348d.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9280_c88348d.zip){ .md-button .md-button--primary }
+
 ### h-inventory import error due to missing entries in constants cache
 
 [i-doit_22_hotfix_ID-9259_feeeedf.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip){ .md-button .md-button--primary }
