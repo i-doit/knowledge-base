@@ -31,8 +31,7 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
     By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
 
-i-doit Core
------------
+## i-doit Core
 
 ### 500 Error with SSO login
 
@@ -45,6 +44,10 @@ i-doit Core
 ### Port allocation is deleted when saving in list edit
 
 [i-doit_22_hotfix_ID-9163_1efe827.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9163_1efe827.zip){ .md-button .md-button--primary }
+
+### JDisc Discovery does not work with HTTP/HTTPS
+
+[i-doit_22_hotfix_ID-9255_9750ba4.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9255_9750ba4.zip){ .md-button .md-button--primary }
 
 ### JDisc import via console removes categories and other configurations
 
@@ -59,12 +62,22 @@ i-doit Core
 [i-doit_22_hotfix_ID-9259_feeeedf.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip){ .md-button .md-button--primary }
 
 ### Specific object type categories are missing in selection
+
 If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct [specific category](../../basics/custom-object-types.md).
 
 [i-doit_22_hotfix_ID-9281_f9f4e93.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip){ .md-button .md-button--primary }
 
-Forms Add-on 1.1.0
-------------------
+### If a license > license key are assigned via the mass change the license key is duplicated
+
+[i-doit_22_hotfix_ID-8918.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-8918.zip){ .md-button .md-button--primary }
+
+## Analyze Add-on 1.3
+
+### Service assignment is not displayed in data quality
+
+[Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download:](../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
+
+## Forms Add-on 1.1.0
 
 ### Object Data is not saved or Categories are not loaded
 
