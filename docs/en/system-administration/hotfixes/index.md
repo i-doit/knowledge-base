@@ -63,7 +63,7 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ### Specific object type categories are missing in selection
 
-If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct [specific category](../../grundlagen/benutzerdefinierte-objekttypen.md).
+If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct [specific category](../../basics/custom-object-types.md).
 
 [i-doit_22_hotfix_ID-9281_f9f4e93.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip){ .md-button .md-button--primary }
 
@@ -81,6 +81,6 @@ If you have saved a obect type configuration before using the Hotfix you may nee
 
 ### Object Data is not saved or Categories are not loaded
 
-It is necessary to re-index the category attributes via [Systemtools](../../administration/systemeinstellungen/index.md), after applying the hotfix
+It is necessary to re-index the category attributes via [Systemtools](../../system-administration/system-settings/index.md), after applying the hotfix
 
 [aof-17-incompatible-function-declaration.zip :material-file-download:](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }
