@@ -25,12 +25,13 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 !!! info "Aktualität"
 
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **22\.** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **22\.** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 !!! attention "Einverständniserklärung"
 
     Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
 
+## i-doit Core
 
 ### 500 Error with SSO login
 
@@ -61,12 +62,22 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 [i-doit_22_hotfix_ID-9259_feeeedf.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip){ .md-button .md-button--primary }
 
 ### Specific object type categories are missing in selection
+
 If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct [specific category](../../grundlagen/benutzerdefinierte-objekttypen.md).
 
 [i-doit_22_hotfix_ID-9281_f9f4e93.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip){ .md-button .md-button--primary }
 
-Forms Add-on 1.1.0
-------------------
+### If a license > license key are assigned via the mass change the license key is duplicated
+
+[i-doit_22_hotfix_ID-8918.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-8918.zip){ .md-button .md-button--primary }
+
+## Analyze Add-on 1.3
+
+### Service assignment is not displayed in data quality
+
+[Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download:](../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
+
+## Forms Add-on 1.1.0
 
 ### Object Data is not saved or Categories are not loaded
 
