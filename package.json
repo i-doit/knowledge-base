@@ -26,7 +26,7 @@
     "author": "synetics GmbH <info@i-doit.com> (https://i-doit.com/)",
     "devDependencies": {
         "@cyclonedx/bom": "^4.0.3",
-        "cloc": "^2.8.0",
+        "cloc": "^2.11.0",
         "husky": "^8",
         "jscpd": "^3.5.3",
         "jsonlint": "^1.6.3",
