@@ -28,7 +28,7 @@
         "@cyclonedx/bom": "^4.0.3",
         "cloc": "^2.11.0",
         "husky": "^8",
-        "jscpd": "^3.5.3",
+        "jscpd": "^3.5.4",
         "jsonlint": "^1.6.3",
         "npm-run-all": "^4.1",
         "npm-scripts-info": "^0.3.9",
