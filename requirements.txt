@@ -8,7 +8,7 @@ mkdocs-macros-plugin ~= 0.7.0
 mkdocs-material == 9.1.3
 mkdocs-minify-plugin ~= 0.6.4
 mkdocs-video ~= 1.5.0
-pip-audit == 2.5.1
+pip-audit == 2.5.3
 Pygments ~= 2.14.0
 pymdown-extensions ~= 9.10
 PyOpenSSL ~= 23.0.0
