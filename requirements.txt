@@ -11,6 +11,6 @@ mkdocs-video ~= 1.5.0
 pip-audit == 2.5.3
 Pygments ~= 2.14.0
 pymdown-extensions ~= 9.10
-PyOpenSSL ~= 23.0.0
+PyOpenSSL ~= 23.1.0
 wheel ~= 0.40.0
 yamllint == 1.30.0
