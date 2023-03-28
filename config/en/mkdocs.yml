@@ -117,6 +117,7 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release notes 23: version-history/release-notes/release-notes-23.md
           - Release notes 22: version-history/release-notes/release-notes-22.md
           - Release notes 1.19: version-history/release-notes/release-notes-1.19.md
           - Release notes 1.18:
@@ -134,6 +135,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 23: version-history/changelogs/changelog-23.md
           - Changelog 22: version-history/changelogs/changelog-22.md
           - Changelog 21: version-history/changelogs/changelog-21.md
           - Changelog 20: version-history/changelogs/changelog-20.md
@@ -314,6 +316,7 @@ nav:
       - LDAP/Active Directory (AD):
           - automation-and-integration/ldap-active-directory-ad/index.md
           - How to import users and groups from AD/LDAP (advanced configuration): automation-and-integration/ldap-active-directory-ad/import-users-and-groups.md
+          - Access to Microsoft LDAP server with TLS encryption: automation-and-integration/ldap-active-directory-ad/ldap-tls.md
       - Network Monitoring:
           - automation-and-integration/network-monitoring/index.md
           - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md
@@ -364,6 +367,7 @@ nav:
           - System-wide: system-administration/system-settings/system-wide.md
   - Use cases:
       - use-cases/index.md
+      - Automated contract term extension: use-cases/automated-contract-term-extension.md
       - Mapping of customer sites: use-cases/mapping-of-customer-sites.md
       - Workplaces: use-cases/wokplaces.md
       - Upload and link of files: use-cases/upload-and-link-files.md

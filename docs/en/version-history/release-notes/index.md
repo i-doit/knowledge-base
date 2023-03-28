@@ -1,3 +1,4 @@
+*   [Release Notes 23](./release-notes-23.md)
 *   [Release Notes 22](./release-notes-22.md)
 *   [Release Notes 1.19](./release-notes-1.19.md)
 *   [Release Notes 1.18](./release-notes-1.18/index.md)

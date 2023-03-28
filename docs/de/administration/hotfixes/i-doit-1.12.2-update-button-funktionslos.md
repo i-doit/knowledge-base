@@ -21,6 +21,6 @@ Dieser Hotfix korrigiert einen Fehler der das Fortsetzen des Updates über die D
 
     Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben.
 
-[![hotfix-1.12.2-update-button](../../assets/downloads/hotfixes/1.12.2-update-button-037c2ff396.zip)](../../assets/downloads/hotfixes/1.12.2-update-button-037c2ff396.zip)
+[1.12.2-update-button-037c2ff396.zip :material-file-download:](../../assets/downloads/hotfixes/1.12.2-update-button-037c2ff396.zip){ .md-button .md-button--primary }
 
 Nach dem Einspielen des Hotfixes ist es nötig, den i-doit Cache (über die [Verwaltung](../../administration/verwaltung/index.md)) sowie den Cache des Browsers (über die Tastenkombination **Strg + F5**) zu leeren. Anschließend kann der Update-Prozess wie gewohnt aufgerufen und durchgeführt werden.

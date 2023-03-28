@@ -41,6 +41,6 @@ Das Duplikat bearbeiten wir anschließend mit dem SQL-Editor und erweitern die W
     YEAR(obj_main.isys_obj__updated) = YEAR(NOW()) AND MONTH(obj_main.isys_obj__updated) = MONTH(NOW());
 ```
 
-Um _diesen_ Monat als Zeitintervall einzugrenzen, verwenden wir die SQL-Funktionen NOW(), YEAR() und MONTH(). Diese wenden wir auf das Änderungsdatum an, das in der Tabellen-Spalte obj_main.isys_obj__updated gespeichert wird. Zusätzlich schließen wir mit j2.isys_obj_type__const != 'C__OBJTYPE__RELATION' alle [Beziehungsobjekte](../grundlagen/objekt-beziehungen.md) aus.
+Um _diesen_ Monat als Zeitintervall einzugrenzen, verwenden wir die SQL-Funktionen `NOW()`, `YEAR()` und `MONTH()`. Diese wenden wir auf das Änderungsdatum an, das in der Tabellen-Spalte `obj_main.isys_obj__updated` gespeichert wird. Zusätzlich schließen wir mit `j2.isys_obj_type__const != 'C__OBJTYPE__RELATION'` alle [Beziehungsobjekte](../grundlagen/objekt-beziehungen.md) aus.
 
 [Dieses und weitere Beispiele, um Zeitintervalle abzufragen](http://stackoverflow.com/questions/5293189/select-records-from-today-this-week-this-month-php-mysql), bietet beispielsweise diese Frage bei Stackoverflow.

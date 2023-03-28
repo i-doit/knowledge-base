@@ -5,15 +5,16 @@
 
 Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Datei zur Verfügung gestellt. Die ZIP-Datei wird im Installationsverzeichnis von i-doit entpackt. Die Abfrage, ob Dateien beim Entpacken überschrieben werden sollen, kann bestätigt werden (Taste **Y** für "yes" oder **A** für "all"). Hier ein Beispiel:
 
-    sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
-    cd /var/www/html/i-doit/
-    sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
-    sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+```shell
+sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
+cd /var/www/html/i-doit/
+sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+```
 
 !!! attention "Bitte beachten"
 
     Bitte nutzen Sie Hotfixes ausschließlich mit der genannten Version. In neueren Versionen werden diese bereits enthalten sein, sodass eine erneute Installation nicht notwendig ist.
-
     Sollten Sie eine ältere Version von i-doit nutzen, ist es notwendig, zuerst auf die aktuelle Version zu aktualisieren.
 
     Falls ein Hotfix zur Ausführung des Updates einer älteren Version notwendig ist, ist dieser in den Unterkapiteln zu den Hotfixes hier in der Knowledge Base zu finden.
@@ -24,40 +25,33 @@ Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Date
 
 !!! info "Aktualität"
 
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **22\.** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **23** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 !!! attention "Einverständniserklärung"
 
     Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
 
+## i-doit Core
 
-### 500 Error with SSO login
+### Adding a model in category model not possible
 
-[i-doit_22_hotfix_ID-9158_4711443.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9158_4711443.zip)
+[I-doit_23_hotfix_ID-9375_40177a3.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9375_40177a3.zip){ .md-button .md-button--primary }
 
-### Conditions might not be loaded correctly in the report manager
+### Better object browser performance
 
-[i-doit_22_hotfix_ID-9265_8a555cf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9265_8a555cf.zip)
+[I-doit_23_hotfix_ID-9376_2ce8a0d.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9376_2ce8a0d.zip){ .md-button .md-button--primary }
 
-### Port allocation is deleted when saving in list edit
+### 'type' option for cmdb.objects filter does not work with id
 
-[i-doit_22_hotfix_ID-9163_1efe827.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9163_1efe827.zip)
+[I-doit_23_hotfix_ID-9370_b8a4921.zip_1efe827.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9370_b8a4921.zip){ .md-button .md-button--primary }
 
-### JDisc Discovery does not work with HTTP/HTTPS
+## Analyze Add-on 1.3
 
-[i-doit_22_hotfix_ID-9255_9750ba4.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9255_9750ba4.zip)
+### Service assignment is not displayed in data quality
 
-### h-inventory import error due to missing entries in constants cache
+[Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download:](../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
 
-[i-doit_22_hotfix_ID-9259_feeeedf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip)
-
-### Specific object type categories are missing in selection
-If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct [specific category](../../grundlagen/benutzerdefinierte-objekttypen.md).
-
-[i-doit_22_hotfix_ID-9281_f9f4e93.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip)
-
-Forms Add-on 1.1.0
-------------------
+## Forms Add-on 1.1.0
 
 ### Object Data is not saved or Categories are not loaded
 

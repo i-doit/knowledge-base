@@ -16,51 +16,45 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
     Please use hotfixes exclusively with the specified version. Hotfixes will be included in newer versions so that a renewed installation is not necessary.
     Should you use an older i-doit version it is essential to make an update to the latest version first.
+
     If a hotfix is required to update an older version, it can be found in the hotfix subchapters here in the Knowledge Base.
+
     As these are hotfixes we recommend installing them only when the adjustments are necessary for a flawless operation of your installation or you are requested by the support team to use them. Please ensure that you made a [backup of i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) before you use any hotfix.
+
     Please inform us about the use of hotfixes should you contact our support team afterwards.
 
 !!! info "Current version"
 
-    The requirements shown below apply to the current version of i-doit, in this case **21\.** These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case **23** These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 !!! attention "Declaration of consent"
 
     By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
 
-i-doit Core
------------
+## i-doit Core
 
-### 500 Error with SSO login
+### Adding a model in category model not possible
 
-[i-doit_22_hotfix_ID-9158_4711443.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9158_4711443.zip)
+[I-doit_23_hotfix_ID-9375_40177a3.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9375_40177a3.zip){ .md-button .md-button--primary }
 
-### Conditions might not be loaded correctly in the report manager
+### Better object browser performance
 
-[i-doit_22_hotfix_ID-9265_8a555cf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9265_8a555cf.zip)
+[I-doit_23_hotfix_ID-9376_2ce8a0d.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9376_2ce8a0d.zip){ .md-button .md-button--primary }
 
-### Port allocation is deleted when saving in list edit
+### 'type' option for cmdb.objects filter does not work with id
 
-[i-doit_22_hotfix_ID-9163_1efe827.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9163_1efe827.zip)
+[I-doit_23_hotfix_ID-9370_b8a4921.zip_1efe827.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9370_b8a4921.zip){ .md-button .md-button--primary }
 
-### JDisc Discovery does not work with HTTP/HTTPS
+## Analyze Add-on 1.3
 
-[i-doit_22_hotfix_ID-9255_9750ba4.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9255_9750ba4.zip)
+### Service assignment is not displayed in data quality
 
-### h-inventory import error due to missing entries in constants cache
+[Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download:](../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
 
-[i-doit_22_hotfix_ID-9259_feeeedf.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip)
-
-### Specific object type categories are missing in selection
-If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct [specific category](../../basics/custom-object-types.md).
-
-[i-doit_22_hotfix_ID-9281_f9f4e93.zip](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip)
-
-Forms Add-on 1.1.0
-------------------
+## Forms Add-on 1.1.0
 
 ### Object Data is not saved or Categories are not loaded
 
 It is necessary to re-index the category attributes via [Systemtools](../../system-administration/system-settings/index.md), after applying the hotfix
 
-[aof-17-incompatible-function-declaration.zip](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip)
+[aof-17-incompatible-function-declaration.zip :material-file-download:](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }

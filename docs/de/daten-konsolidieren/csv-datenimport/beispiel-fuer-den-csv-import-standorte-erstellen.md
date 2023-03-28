@@ -14,7 +14,7 @@ Wir benötigen für das erstellen der einzelnen Objekte folgende Informationen:
 
 Beispiel CSV Datei für diesen Import:
 
-[Import Standorte.csv](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/Import-Standorte.csv)
+[Import-Standorte.csv :material-file-download:](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/Import-Standorte.csv){ .md-button .md-button--primary }
 
 Der Aufbau der CSV sieht wie folgt aus:
 

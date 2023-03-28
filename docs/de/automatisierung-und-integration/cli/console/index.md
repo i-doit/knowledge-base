@@ -90,7 +90,6 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
     tenant-remove                       Remove the i-doit Tenant
     uninstall                           Uninstall the i-doit application
     update                              Update the i-doit application
-```
 
 Authentifizierung
 -----------------
@@ -133,6 +132,7 @@ Commands
 | **check_mk-export** | ja  | ja  | Check\_MK 1 / 2 | Konfigurationsdaten für [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) exportieren |
 | **check_mk-livestatus** | ja  | ja  | Check\_MK 1 / 2 | Ist-Zustand aus [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) ins Logbuch schreiben |
 | **clear-credentials** | ja  | ja  | \-  | Entfernt die Anmeldeinformationen von Benutzern |
+| **extend-contracts** | ja | nein | \- | Erweitert die Laufzeit eines Vertrags, wenn dessen Kündigungsdatum in der Vergangenheit liegt
 | **help** | ja  | ja  | \-  | Zeigt die Hilfe zu einem Befehl an |
 | **import-csv** | ja  | nein | -   | Daten aus einer [CSV-Datei](../../../daten-konsolidieren/csv-datenimport/index.md) importieren |
 | **import-csvprofiles** | ja  | nein | -   | Auflisten aller [CSV-Importprofile](../../../daten-konsolidieren/csv-datenimport/index.md) |

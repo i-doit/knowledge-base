@@ -18,6 +18,7 @@ The following handlers are available for the i-doit Console
 | [check\_mk-export](#check_mk-export) | Export configuration data for Check\_MK |
 | [check\_mk-livestatus](#check_mk-livestatus) | Write actual state from Check\_MK to logbook |
 | [clear-credentials](#clear-credentials) | Removes user credentials |
+| [extend-contracts](#extend-contracts) | Extends Contracts with last cancellation date in the past |
 | [help](#help) | Displays the help for a command |
 | [import-csv](#import-csv) | Import data from a CSV file (uses a defined import profile from the GUI) |
 | [import-csvprofiles](#import-csvprofiles) | Listing all CSV Import Profiles |
@@ -305,6 +306,31 @@ Removes the entries of the attributes "username" and "password" from user logins
 **Example of use**
 
     sudo -u www-data php console.php clear-credentials --user admin --password admin --object ObjectID
+
+### extend-contracts
+
+Verlängert die Laufzeit eines Vertrags, dessen letztmögliches Kündigungsdatum in der Vergangenheit liegt
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+|     | --simulate | Simulates contract extension |
+| -u | --user=USER |  Username |
+| -p | --password=PASSWORD | Password |
+| -i | --tenantID=TENANTID | Tenant ID [default: 1] |
+| -h | --help | Help message for displaying further information |
+| -c | --config=CONFIG | Config file |
+| -q | --quit | Quiet-Mode to deactivate output |
+| -v | --version | Output of the i-doit Console version |
+|        | --ansi / --no-ansi | Forces the output in ANSI format / Disables the output in ANSI format |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+    sudo -u www-data php console.php extend-contracts --user admin --password admin
+```
 
 ### help
 

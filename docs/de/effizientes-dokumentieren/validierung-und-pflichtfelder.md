@@ -1,6 +1,4 @@
-# Validierung und Pflichtfelder
-
-!!! info ""
+!!! info 
     Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/validierung-von-daten-und-eingaben-in-i-doit/)
 
 Wer die Eindeutigkeit von [Attributen](../glossar.md) sicherstellen möchte oder bei der Pflege von bestimmten Feldern nur definierte Werte erwartet oder Felder zu Pflichtfeldern machen möchte, findet bei i-doit die entsprechenden Funktionen.
@@ -17,7 +15,7 @@ Folgende Anforderungen erfüllt die Validierung:
 Konfiguration
 -------------
 
-Du findest die Möglichkeit zur Festlegung dieser Einstellungen **Verwaltung → CMDB-Einstellungen → **Validierung****. Im Auslieferungszustand wirst du hier noch keine Konfiguration vorfinden. Die Konfiguration erfolgt pro Kategorie. Wähle die Kategorie, aus der du ein oder mehrere Attribute validieren möchtest.
+Du findest die Möglichkeit zur Festlegung dieser Einstellungen **Verwaltung → CMDB-Einstellungen → Validierung**. Im Auslieferungszustand wirst du hier noch keine Konfiguration vorfinden. Die Konfiguration erfolgt pro Kategorie. Wähle die Kategorie, aus der du ein oder mehrere Attribute validieren möchtest.
 
 [![validierung-validieren](../assets/images/de/effizientes-dokumentieren/validierung-und-pflichtfelder/1-vup.png)](../assets/images/de/effizientes-dokumentieren/validierung-und-pflichtfelder/1-vup.png)
 

@@ -30,15 +30,15 @@ Then we edit the duplicate with the SQL editor and extend the WHERE clause:
     j2.isys_obj_type__title AS 'LC__REPORT__FORM__OBJECT_TYPE###1',
     obj_main.isys_obj__updated AS 'isys_cmdb_dao_category_g_global::dynamic_property_callback_changed::isys_obj__updated::LC__CMDB__LAST_CHANGE',
     obj_main.isys_obj__updated_by AS 'LC__CMDB__LAST_CHANGE_BY###1'
-    
+
     FROM isys_obj AS obj_main
     INNER JOIN isys_cmdb_status AS obj_main_status ON obj_main_status.isys_cmdb_status__id = obj_main.isys_obj__isys_cmdb_status__id
     LEFT JOIN isys_obj_type AS j2 ON j2.isys_obj_type__id = obj_main.isys_obj__isys_obj_type__id
     LEFT JOIN isys_catg_global_list AS j3 ON j3.isys_catg_global_list__isys_obj__id = obj_main.isys_obj__id
-    
+
     WHERE j2.isys_obj_type__const != 'C__OBJTYPE__RELATION' AND
     YEAR(obj_main.isys_obj__updated) = YEAR(NOW()) AND MONTH(obj_main.isys_obj__updated) = MONTH(NOW());
 
-In order to narrow the time interval to _this_ month, we use the SQL functions NOW(), YEAR() and MONTH(). These are applied to the change date that is saved in the table column bj_main.isys_obj__updated. Additionally, we exclude all [relation objects](../basics/object-relations.md) with j2.isys_obj_type__const != 'C__OBJTYPE__RELATION'.
+In order to narrow the time interval to _this_ month, we use the SQL functions `NOW()`, `YEAR()` and `MONTH()`. These are applied to the change date that is saved in the table column `bj_main.isys_obj__updated`. Additionally, we exclude all [relation objects](../basics/object-relations.md) with `j2.isys_obj_type__const != 'C__OBJTYPE__RELATION'`.
 
 You can find [this and other examples regarding the query of time intervals](http://stackoverflow.com/questions/5293189/select-records-from-today-this-week-this-month-php-mysql) on the Stackoverflow website.

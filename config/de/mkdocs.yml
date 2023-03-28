@@ -117,6 +117,7 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 23: versionshistorie/release-notes/release-notes-23.md
           - Release Notes 22: versionshistorie/release-notes/release-notes-22.md
           - Release Notes 1.19: versionshistorie/release-notes/release-notes-1.19.md
           - Release Notes 1.18:
@@ -134,6 +135,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 23: versionshistorie/changelogs/changelog-23.md
           - Changelog 22: versionshistorie/changelogs/changelog-22.md
           - Changelog 21: versionshistorie/changelogs/changelog-21.md
           - Changelog 20: versionshistorie/changelogs/changelog-20.md
@@ -351,6 +353,7 @@ nav:
       - LDAP-Verzeichnis/Active Directory (AD):
           - automatisierung-und-integration/ldap-verzeichnis/index.md
           - So werden Benutzer und Gruppen aus dem AD/LDAP importiert (erweiterte Konfiguration): automatisierung-und-integration/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
+          - Zugriff auf Microsoft LDAP Server mit TLS Verschlüsselung: automatisierung-und-integration/ldap-verzeichnis/ldap-tls.md
       - Network Monitoring:
           - automatisierung-und-integration/network-monitoring/index.md
           - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md
@@ -403,6 +406,7 @@ nav:
       - anwendungsfaelle/index.md
       - Abbildung von Kundenstandorten: anwendungsfaelle/abbildung-von-kundenstandorten.md
       - Arbeitsplätze: anwendungsfaelle/arbeitsplaetze.md
+      - Automatisierte Vertragslaufzeit Verlängerung: anwendungsfaelle/automatisierte-vertragsverlaengerung.md
       - Dateien hochladen und verknüpfen: anwendungsfaelle/dateien-hochladen-und-verknuepfen.md
       - Dokumentation von Datenbanken: anwendungsfaelle/dokumentation-von-datenbanken.md
       - Excel-Tabelle mit Daten aus i-doit befüllen (veraltet): anwendungsfaelle/excel-tabelle-mit-daten-aus-i-doit-befuellen.md

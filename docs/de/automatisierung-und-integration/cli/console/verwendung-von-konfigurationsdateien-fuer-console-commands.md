@@ -3,9 +3,10 @@
 Wenn Sie eine Konfigurationsdateien verwenden, können Sie dort für die Console Command die Optionen unterbringen.
 Speichern können Sie diese neu erstellten Dateien dann z.B. unter /i-doit/src/handler/config/.
 
-!!! warning Zugriff auf .ini Dateien
+!!! warning "Zugriff auf .ini Dateien"
     Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
     Es sollte dieser code hinzugefügt werden:
+
 
     ```shell
     ## Deny access to all ini files…
@@ -72,7 +73,7 @@ Damit die Konfiguration auch verwendet wird führen wir den Console Command aus 
     sudo -u www-data php console.php search-index -c /var/www/html/i-doit/src/handler/config/examples/search-index.ini
 ```
 
-[![example-search-download example-search.ini](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/1-cmd.png)<br/> example-search.ini](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-seach_index.ini)
+[example-search.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-seach_index.ini){ .md-button .md-button--primary }
 
 * * *
 
@@ -96,7 +97,7 @@ Damit die Konfiguration auch verwendet wird führen wir den Console Command aus 
     sudo -u www-data php console.php notifications-send -c /var/www/html/i-doit/src/handler/config/examples/notifications-send.ini
 ```
 
-[![examplenoti-download_icon](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/1-cmd.png)<br/>example-notifications-send.ini](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-notifications-send.ini)
+[example-notifications-send.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-notifications-send.ini){ .md-button .md-button--primary }
 
 * * *
 
@@ -151,7 +152,7 @@ Mit [dumpConfig](../console/optionen-und-parameter-der-console.md#ldap-sync) wir
     syncEmptyAttributes=true
 ```
 
-[![example-ldap-downloadicon](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/1-cmd.png)<br/>example-ldap.ini](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-ldap.ini)
+[example-ldap.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-ldap.ini){ .md-button .md-button--primary }
 
 Damit die Konfiguration auch verwendet wird führen wir den Console Command aus und geben den Pfad zur Konfigurationsdatei mit --config oder -can.
 
@@ -191,11 +192,11 @@ Für diesen Command gibt es keine eigenen Optionen daher verwenden wir nur die b
     tenantId=1
     [additional]
     ; splits syslog-line in several parts
-    ; "/(^[a-zA-Z]{3}[ ]+[\d]+ [\d\:\d]+) " .  /* date / time */
-    ; "(([.\-0-9a-zA-Z]+)*" .                  /* hostname */
-    ; "(\b(?:\d{1,3}\.){3}\d{1,3}\b)*)+ " .    /* IP-Address */
-    ; "([a-zA-Z0-9-_\/\[\]:]+) " .             /* Processname */
-    ; "(.*)/";                                 /* Syslog-Message */
+    ; "/(^[a-zA-Z]{3}[ ]+[\d]+ [\d\:\d]+) " .  /* date / time */
+    ; "(([.\-0-9a-zA-Z]+)*" .                  /* hostname */
+    ; "(\b(?:\d{1,3}\.){3}\d{1,3}\b)*)+ " .    /* IP-Address */
+    ; "([a-zA-Z0-9-_\/\[\]:]+) " .             /* Processname */
+    ; "(.*)/";                                 /* Syslog-Message */
     regexSplitSyslogLine="/(^[a-zA-Z]{3}[ ]+[\d]+ [\d\:\d]+) (([.\-0-9a-zA-Z]+)*(\b(?:\d{1,3}\.){3}\d{1,3}\b)*)+ ([a-zA-Z0-9-_\/\[\]:]+) (.*)/";
     priorities[]=Emergency
     priorities[]=Alert
@@ -214,4 +215,3 @@ Für diesen Command gibt es keine eigenen Optionen daher verwenden wir nur die b
     alertlevels[] = 2
     alertlevels[] = 1
     alertlevels[] = 1
-```

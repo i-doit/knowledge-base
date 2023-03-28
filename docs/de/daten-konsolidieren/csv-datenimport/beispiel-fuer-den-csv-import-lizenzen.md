@@ -9,7 +9,7 @@ Für den Import benötigen wir folgende Informationen:
 -  Objekttyp → Um welchen Objekttypen soll es sich Handeln
 -  Objektname → den Namen des Clients
 -  Lizenzzuweisung: Lizenzschlüssel - Lizenz Typ → Welcher Lizenz Typ wird importiert, Einzel- oder Volumen?
--  Lizenzzuweisung: Lizenzschlüssel - Anzahl → Welche Anzahl an Lizenzen gibt es?
+-  Lizenzzuweisung: izenzschlüssel - Anzahl → Welche Anzahl an Lizenzen gibt es?
 -  Lizenzzuweisung: Lizenzschlüssel - Schlüssel→ Wie lautet der Lizenzschlüssel?
 -  Lizenzzuweisung: Lizenzschlüssel - Seriennummer → Welche Seriennummer soll zugeordnet werden?
 -  Lizenzzuweisung: Lizenzschlüssel - Startdatum → Ab wann kann die Lizenz verwendet werden?
@@ -28,7 +28,7 @@ Und das Numerische Format: X.XXX,XX (9.999,99) da wir allerdings Multi-Values Ko
 
 Beispiel CSV Datei für diesen Import:
 
-[Import Lizenzen.csv](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/Import-Lizenzen.csv)
+[Import-Lizenzen.csv :material-file-download:](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/Import-Lizenzen.csv){ .md-button .md-button--primary }
 
 ??? example "Import Lizenzen.csv"
 
