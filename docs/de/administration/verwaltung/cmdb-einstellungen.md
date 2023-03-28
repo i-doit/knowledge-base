@@ -8,16 +8,11 @@ Allgemeine Einstellungen
 
 [![Allgemeine Einstellungen](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/1-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/1-ce.png)
 
-MyDoIt Taskeinträge →  hier wird definiert wieviel Tasks aus dem Workflow System unter MyDoit angezeigt werden sollen
-
-"Änderungskommentar" deaktivieren →  Das Änderungskommentar fordert einen Benutzer nach jeder änderung auf, diese zu kommentieren. Hier kann diese global Ein oder Ausgeschaltet werden.
-
-SYS-ID readonly →  hier wird festgelegt ob das Attribut SYS-ID editierbar oder readonly ist
-
-Drag 'n' Drop von Objekten →  hier kann die Funktion Objekte mit der Maus zwischen Objekttyp Gruppen zu verschieben ein und aus geschaltet werden
-
-Objekttyp Sortierung →  hier wird festgelegt nach welchem Merkmal Objekttypen in der Listenansicht sortiert werden sollen
-
+MyDoIt Taskeinträge →  hier wird definiert wieviel Tasks aus dem Workflow System unter MyDoit angezeigt werden sollen<br>
+"Änderungskommentar" deaktivieren →  Das Änderungskommentar fordert einen Benutzer nach jeder änderung auf, diese zu kommentieren. Hier kann diese global Ein oder Ausgeschaltet werden.<br>
+SYS-ID readonly →  hier wird festgelegt ob das Attribut SYS-ID editierbar oder readonly ist<br>
+Drag 'n' Drop von Objekten →  hier kann die Funktion Objekte mit der Maus zwischen Objekttyp Gruppen zu verschieben ein und aus geschaltet werden<br>
+Objekttyp Sortierung →  hier wird festgelegt nach welchem Merkmal Objekttypen in der Listenansicht sortiert werden sollen<br>
 Währungsformat - hier kann der globale Standard für das Währungsformat festgelegt werden
 
 [![Währungsformat](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/2-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/2-ce.png)
@@ -39,12 +34,9 @@ Freigabe der IP-Adressen eines Objektes beim löschen oder archivieren → Wird 
 Template Konfiguration
 ----------------------
 
-Template Filter in den Objekten anzeigen → Hier kannst du die Template Filter in den Objekten an, bzw. ausschalten
-
-Verknüpfte/Referenzierte Templates in der CMDB anzeigen → Hier kannst du die Anzeige von verknüpften und referenzierten Template an, bzw. ausschalten
-
-Markiere Template Verknüpfungen/Referenzen farblich → Hier kannst du die farbliche Markierung von verknüpften und referenzierten Template an, bzw. ausschalten
-
+Template Filter in den Objekten anzeigen → Hier kannst du die Template Filter in den Objekten an, bzw. ausschalten<br>
+Verknüpfte/Referenzierte Templates in der CMDB anzeigen → Hier kannst du die Anzeige von verknüpften und referenzierten Template an, bzw. ausschalten<br>
+Markiere Template Verknüpfungen/Referenzen farblich → Hier kannst du die farbliche Markierung von verknüpften und referenzierten Template an, bzw. ausschalten<br>
 In folgender Farbe → Hier kann die Farbe festgelegt werden, mit der markiert werden soll
 
 [![Template Konfiguration](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/5-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/5-ce.png)
@@ -52,10 +44,8 @@ In folgender Farbe → Hier kann die Farbe festgelegt werden, mit der markiert w
 Objektsperrung
 --------------
 
-Aktiviere das Sperren von Objekten in Bearbeitung →  Hier kannst du die Objektsperre an, bzw. ausschalten
-
-Timeout → Hier definierst du die Zeit für die ein in Bearbeitung befindliches Objekt gesperrt werden soll in Sekunden.
-
+Aktiviere das Sperren von Objekten in Bearbeitung →  Hier kannst du die Objektsperre an, bzw. ausschalten<br>
+Timeout → Hier definierst du die Zeit für die ein in Bearbeitung befindliches Objekt gesperrt werden soll in Sekunden.<br>
 Momentan gesperrte Objekte → Hier bekommst du eine Auflistung von allen aktuell gesperrten Objekten.
 
 [![Objektsperrung](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/6-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/6-ce.png)
@@ -70,8 +60,7 @@ Hier können die [Benutzerdefinierten Kategorien](../../grundlagen/benutzerdefin
 Benutzerdefinierte Zähler
 -------------------------
 
-Hier werden alle persönlich konfigurierten Zähler in einer Liste dargestellt.
-
+Hier werden alle persönlich konfigurierten Zähler in einer Liste dargestellt.<br>
 Oben und unten in dieser Liste befindet sich eine Schaltfläche zum Hinzufügen von X neuen Zählern zu dieser Liste, ähnlich wie bei den benutzerdefinierten Kategorien.
 
 [![Benutzerdefinierte Zähler](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/8-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/8-ce.png)
@@ -114,10 +103,8 @@ In der Gerätetausch Konfiguration kannst du festlegen welche Objekttypen für d
 Kategorieerweiterung
 --------------------
 
-In der Kategorieerweiterung kannst du die Bezeichnung der Felder aus der LDAP Konfigurationsdatei anpassen. Dieser Kategorieerweiterung betrifft nur Personen.
-
-Die Felder sind dann bei Personen unter Stammdaten zu finden.
-
+In der Kategorieerweiterung kannst du die Bezeichnung der Felder aus der LDAP Konfigurationsdatei anpassen. Dieser Kategorieerweiterung betrifft nur Personen.<br>
+Die Felder sind dann bei Personen unter Stammdaten zu finden.<br>
 Die Feldnamen können von "Custom 1" auf beliebige Feldnamen geändert werden. Der Key kann nicht verändert werden.→ [READMORE](../../automatisierung-und-integration/ldap-verzeichnis/index.md)
 
 [![Kategorieerweiterung](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/14-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/14-ce.png)
@@ -156,8 +143,7 @@ Hier kannst du Einträge die Bereits Archiviert wurden wiederherstellen. → [RE
 Objekt-Browser
 --------------
 
-Im Objekt-Browser der jeweiligen Attribute werden nur bestimmte Objekttypen angezeigt. Dies geschieht durch interne Filter.
-
+Im Objekt-Browser der jeweiligen Attribute werden nur bestimmte Objekttypen angezeigt. Dies geschieht durch interne Filter.<br>
 Die Filter kann man sich anschauen und in gewissem Maße konfigurieren.
 
 [![Objekt-Browser](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/19-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/19-ce.png)
@@ -172,10 +158,8 @@ Hier können die jeweiligen Objekttypen und ihre Eigenschaften verwaltet und bea
 QR-Code
 -------
 
-Hier kann die Konfiguration für den QR-Code festgelegt werden. Es kann ausgewählt werden ob er als Inhalt die primäre Zugriffs URL von Objekten beinhalten soll oder eine Globale Definition verwendet werden soll. Außerdem kannst du auswählen was passiert wenn auf einen angezeigten QR-Code geklickt wird.
-
-Mit einem Klick auf das blau hinterlegte _\* Mögliche Platzhalter_ öffnest du die Liste der Platzhalter.
-
+Hier kann die Konfiguration für den QR-Code festgelegt werden. Es kann ausgewählt werden ob er als Inhalt die primäre Zugriffs URL von Objekten beinhalten soll oder eine Globale Definition verwendet werden soll. Außerdem kannst du auswählen was passiert wenn auf einen angezeigten QR-Code geklickt wird.<br>
+Mit einem Klick auf das blau hinterlegte _\* Mögliche Platzhalter_ öffnest du die Liste der Platzhalter.<br>
 Für Informationen zum QR-Code-Printer Tool hier entlang→ [READMORE](../../i-doit-pro-add-ons/i-doit-qr-code-printer.md)
 
 [![QR-Code](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/21-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/21-ce.png)

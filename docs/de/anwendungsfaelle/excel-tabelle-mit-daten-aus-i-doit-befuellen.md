@@ -79,10 +79,8 @@ Hier wird die Ziel URL der anzusprechenden API eingetragen
     URL = "[https://demo.i-doit.com/src/jsonrpc.php](https://demo.i-doit.com/src/jsonrpc.php)"
 ```
 
-Und nun wird der API Call vorbereitet. Es wird die Methode cmdb.reports aufgerufen und der Report mit der Nummer 2 abgefragt.
-
-Es wird keine Benutzer/Passwort-Authentifizierung verwendet, sondern nur der API-Key. Damit das funktioniert, müssen die unter 6.) gezeigten Einstellungen vorgenommen werden.
-
+Und nun wird der API Call vorbereitet. Es wird die Methode cmdb.reports aufgerufen und der Report mit der Nummer 2 abgefragt.<br>
+Es wird keine Benutzer/Passwort-Authentifizierung verwendet, sondern nur der API-Key. Damit das funktioniert, müssen die unter 6.) gezeigten Einstellungen vorgenommen werden.<br>
 Bei der Formatierung des JSON Strings müssen alle Anführungszeichen innerhalb des JSON Strings doppelt gesetzt werden.
 
 ```
@@ -141,9 +139,8 @@ Dieser Output lässt sich übrigens mit dem auskommentieren der Zeile
     Debug.Print http.responseText
 ```
 
-in dem Direktbereich des VBA Editors erzeugen.
-
-In der ersten Ebene, die wir garnicht zu Gesicht bekommen, stehen die Werte “jsonrpc”, “result” und “id”. Da wir uns nur für die Ergebnisse interessieren, werden die Werte aus der zweiten Ebene, die sich unterhalb von “result” befinden in eine Schleife genommen.
+in dem Direktbereich des VBA Editors erzeugen.<br>
+In der ersten Ebene, die wir garnicht zu Gesicht bekommen, stehen die Werte "jsonrpc", "result" und "id". Da wir uns nur für die Ergebnisse interessieren, werden die Werte aus der zweiten Ebene, die sich unterhalb von "result" befinden in eine Schleife genommen.
 
 ```
     For Each Item In JSON("result")

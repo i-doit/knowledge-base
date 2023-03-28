@@ -50,19 +50,12 @@ Hier können folgende System Parameter festgelegt werden:
 Standard [LDAP](../../automatisierung-und-integration/ldap-verzeichnis/index.md) Gruppe → Hier können Gruppen angegeben werden, in die LDAP Benutzer automatisch nach erfolgreicher Anmeldung aufgenommen werden
 
 PHP Zeitzone → Hier kann die Zeitzone für PHP definiert werden
-
-Rechtesystem → Hier kann das erweiterte [Rechtesystem](../verwaltung/rechtesystem.md) deaktiviert werden
-
-Datei Upload Ordner → Hier wird Ordner definiert, in dem hochgeladene Dateien abgelegt werden
-
-Bild Upload Ordner  → Hier wird Ordner definiert, in dem hochgeladene Bilder abgelegt werden
-
-[Request Tracker](../../automatisierung-und-integration/service-desk/request-tracker.md) queues → Hier können die queues von Request Tracker definiert werden
-
-[Quickpurge](../../grundlagen/objekt-liste/erweiterte-einstellungen.md)\-Button aktivieren →  Hier kann der Quick Purge Button an, bzw. ausgeschaltet werden.
-
-Präfix für automatische Benennung von Kabelobjekten → Hier kann ein spezieller Prefix für Kabelnamen festgelegt werden.
-
+Rechtesystem → Hier kann das erweiterte [Rechtesystem](../verwaltung/rechtesystem.md) deaktiviert werden<br>
+Datei Upload Ordner → Hier wird Ordner definiert, in dem hochgeladene Dateien abgelegt werden<br>
+Bild Upload Ordner  → Hier wird Ordner definiert, in dem hochgeladene Bilder abgelegt werden<br>
+[Request Tracker](../../automatisierung-und-integration/service-desk/request-tracker.md) queues → Hier können die queues von Request Tracker definiert werden<br>
+[Quickpurge](../../grundlagen/objekt-liste/erweiterte-einstellungen.md)\-Button aktivieren →  Hier kann der Quick Purge Button an, bzw. ausgeschaltet werden.<br>
+Präfix für automatische Benennung von Kabelobjekten → Hier kann ein spezieller Prefix für Kabelnamen festgelegt werden.<br>
 [Zustand](../../grundlagen/struktur-it-dokumentation.md) von importierten Objekten beibehalten? → Hier wird festgelegt ob Objekte bei einem Import ihren Zustand beibehalten oder in den normalen [Zustand](../../grundlagen/struktur-it-dokumentation.md) gesetzt werden.\*Nur für XML-Import, JDisc-Import, Massenänderungen und Templates\*
 
 [![System Parameters](../../assets/images/de/administration/systemeinstellungen/systemuebergreifende-einstellungen/7-sue.png)](../../assets/images/de/administration/systemeinstellungen/systemuebergreifende-einstellungen/7-sue.png)
@@ -72,12 +65,9 @@ User Interface
 
 Hier können folgende Parameter für das User Interface definiert werden:
 
-Wiki URL → URL der Wiki Seite die verwendet werden soll
-
-WYSIWYG Editor in Kategorien → Hier wird festgelegt ob innerhalb der Kategorien normal Textfelder , oder der WYSIWYG Editor Verwendung finden soll.
-
-Aktiviere alle WYSIWYG Editor Funktionen → Hier können die erweiterten Funktion des WYSIWYG Editors eingeschaltet werden.
-
+Wiki URL → URL der Wiki Seite die verwendet werden soll<br>
+WYSIWYG Editor in Kategorien → Hier wird festgelegt ob innerhalb der Kategorien normal Textfelder , oder der WYSIWYG Editor Verwendung finden soll.<br>
+Aktiviere alle WYSIWYG Editor Funktionen → Hier können die erweiterten Funktion des WYSIWYG Editors eingeschaltet werden.<br>
 Sortierfunktion der Mandantenliste beim Login → Hier wird festgelegt nach welchem Attribut die Mandantenliste bei der Anmeldung sortiert werden soll.
 
 [![User Interface](../../assets/images/de/administration/systemeinstellungen/systemuebergreifende-einstellungen/8-sue.png)](../../assets/images/de/administration/systemeinstellungen/systemuebergreifende-einstellungen/8-sue.png)

@@ -12,11 +12,11 @@ Hier kannst du verschiedene Reparatur Funktionen für die i-doit Datenbank ausf�
 
 | Button | Was passiert? |
 | --- | --- |
-| Kompletten Cache leeren | Leert den kompletten Cache und erstellt diesen neu  <br>Ordner unter i-doit/temp/cache\_Mandantenname |
-| System Cache leeren | Leert den system Cache und erstellt diesen neu  <br>Z.b. die Systemeinstellungen |
-| Template Cache leeren | Leert den template Cache und erstellt diesen neu  <br>Lädt Templates neu in den Cache |
-| Rechtesystem Cache leeren | Leert den Rechtesystem Cache und erstellt diesen neu  <br>Lädt die Rechte neu in den Cache |
-| Validierungscache erneuern | Leert den system Cache und erstellt diesen neu  <br>Erneuert den Validierungscache |
+| Kompletten Cache leeren | Leert den kompletten Cache und erstellt diesen neu<br>Ordner unter i-doit/temp/cache\_Mandantenname |
+| System Cache leeren | Leert den system Cache und erstellt diesen neu<br>Z.B. die Systemeinstellungen |
+| Template Cache leeren | Leert den template Cache und erstellt diesen neu<br>Lädt Templates neu in den Cache |
+| Rechtesystem Cache leeren | Leert den Rechtesystem Cache und erstellt diesen neu<br>Lädt die Rechte neu in den Cache |
+| Validierungscache erneuern | Leert den system Cache und erstellt diesen neu<br>Erneuert den Validierungscache |
 
 ### Datenbank
 
@@ -40,12 +40,9 @@ Hier kannst du verschiedene Reparatur Funktionen für die i-doit Datenbank ausf�
 
 | Button | Was passiert? |
 | --- | --- |
-| Unfertige Objekte entfernen | Objekte die keine Bezeichnung o.Ä haben werden aus der Datenbank entfernt  <br>Die Objekte können über den Button [![eye](../../assets/images/de/administration/verwaltung/systemtools/eye.png)](../../assets/images/de/administration/verwaltung/systemtools/eye.png)
- zuvor angezeigt werden |
-| Archivierte Objekte entfernen | Objekte die archiviert sind werden aus der Datenbank entfernt  <br>Die Objekte können über den Button [![eye](../../assets/images/de/administration/verwaltung/systemtools/eye.png)](../../assets/images/de/administration/verwaltung/systemtools/eye.png)
- zuvor angezeigt werden |
-| Gelöschte  Objekte entfernen | Gelöschte Objekte werden aus der Datenbank entfernt  <br>Die Objekte können über den Button [![eye](../../assets/images/de/administration/verwaltung/systemtools/eye.png)](../../assets/images/de/administration/verwaltung/systemtools/eye.png)
- zuvor angezeigt werden |
+| Unfertige Objekte entfernen | Objekte die keine Bezeichnung o.Ä haben werden aus der Datenbank entfernt  <br>Die Objekte können über den Button [![eye](../../assets/images/de/administration/verwaltung/systemtools/eye.png)](../../assets/images/de/administration/verwaltung/systemtools/eye.png) zuvor angezeigt werden |
+| Archivierte Objekte entfernen | Objekte die archiviert sind werden aus der Datenbank entfernt  <br>Die Objekte können über den Button [![eye](../../assets/images/de/administration/verwaltung/systemtools/eye.png)](../../assets/images/de/administration/verwaltung/systemtools/eye.png) zuvor angezeigt werden |
+| Gelöschte  Objekte entfernen | Gelöschte Objekte werden aus der Datenbank entfernt  <br>Die Objekte können über den Button [![eye](../../assets/images/de/administration/verwaltung/systemtools/eye.png)](../../assets/images/de/administration/verwaltung/systemtools/eye.png) zuvor angezeigt werden |
 
 ### Kategorien
 

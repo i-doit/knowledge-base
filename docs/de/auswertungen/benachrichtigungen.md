@@ -117,7 +117,6 @@ Bei den Empfängern kann ebenfalls gezielt oder gesammelt benachrichtigt werden.
 
     !!! info "Hier zugewiesene Kontakte werden immer und über alle Objekte benachrichtigt."
 
-
 *   **Strategie zur Berechnung der Empfänger**
     Genutzte Berechnungsstrategie der Empfänger bei der **Auflösung von Personengruppen** zu Personen. Diese Einstellung betrifft nur Personengruppen die als Kontakt zugewiesen sind.
 
