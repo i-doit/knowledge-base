@@ -23,13 +23,13 @@ Um Fehler zu vermeiden, ist es wichtig, den Controller mit dem selben Benutzer a
     Usage: controller.php [OPTION] [PARAMETERS]
     e.g.: controller.php -v -m workflow
     Options:
-        -m HANDLER   Load handler HANDLER module.
-        -u username  i-doit username
-        -p password  i-doit password
-        -i tenant    ID of tenant to connect to (use './tenants ls' for a list)
-        -h           This help text
-        -v           Verbose mode
-        -d           Displays ALL debug messages
+        -m HANDLER   Load handler HANDLER module.
+        -u username  i-doit username
+        -p password  i-doit password
+        -i tenant    ID of tenant to connect to (use './tenants ls' for a list)
+        -h           This help text
+        -v           Verbose mode
+        -d           Displays ALL debug messages
 ```
 
     HANDLER can be one of the following availlable handlers:

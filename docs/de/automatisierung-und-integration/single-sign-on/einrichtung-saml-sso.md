@@ -13,10 +13,8 @@ Wir nutzen für die Beispielkonfiguration zwei Server, einen Windows Server mit 
 
 ### Basis Konfiguration:
 
-✔ Beide Server müssen sich gegenseitig per FQDN auflösen können.
-
-✔ Der Windows-Server muss ein konfiguriertes AD haben, welches die Rolle AD-FS beinhaltet.
-
+✔ Beide Server müssen sich gegenseitig per FQDN auflösen können.<br>
+✔ Der Windows-Server muss ein konfiguriertes AD haben, welches die Rolle AD-FS beinhaltet.<br>
 ✔ I-doit ist bereits vorinstalliert und nutzbar.
 
 ### Pakete Installieren
@@ -41,6 +39,7 @@ Mit folgendem Befehl erstellen wir unsere Mellon Metadaten "URLs bitte anpassen"
 ```shell
 /usr/sbin/mellon_create_metadata https://tu2-samlsso.synetics.test/ "https://tu2-samlsso.synetics.test/mellon"
 ```
+
 Dies erstellt nun folgende Dateien
 
 `https\_tu2\_samlsso.synetics.test\_.cert`
@@ -177,8 +176,7 @@ An dieser Stelle sind wir vorerst mit der Konfiguration des Linux-Servers fertig
 
 ## Konfiguration AD-FS:
 
-Zuerst via z.B. WinSCP die `mellon_metadata.xml` vom Linuxserver herunterladen und speichern.
-
+Zuerst via z.B. WinSCP die `mellon_metadata.xml` vom Linuxserver herunterladen und speichern.<br>
 Anschließend öffnen wir das AD-FS Management und legen ein neuen Relying Party Trust an
 
 [![Add Relying Party Trust](../../assets/images/de/automatisierung-und-integration/single-sign-on/saml-sso/saml-1.png)](../../assets/images/de/automatisierung-und-integration/single-sign-on/saml-sso/saml-1.png)

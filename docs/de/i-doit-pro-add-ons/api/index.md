@@ -36,7 +36,6 @@ Die Konfiguration der API geschieht über die [Web GUI](../../grundlagen/web-gui
 
     Das Entfernen von HTML-Tags aus Beschreibungsfeldern ist erst ab i-doit Version 1.15.2 mit installierter API Version 1.11.3 möglich.
 
-
 Zu beachten ist, dass das Logging von API Requests bei jedem Request eine Datei im Installationsverzeichnis von i-doit unter log/ anlegt. Dies könnte bei massivem Gebrauch der API zu einem erhöhten Speicherplatzbedarf führen.
 
 Zugriff
