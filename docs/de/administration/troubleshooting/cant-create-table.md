@@ -13,9 +13,9 @@ Der Dump an dieser Stelle sieht so aus:
     /*!40101 SET @saved_cs_client = @@character_set_client */;
     /*!40101 SET character_set_client = utf8 */;
     CREATE TABLE  isys_drive_list_2_stor_list (
-     isys_drive_list_2_stor_list__id  int(10) unsigned NOT NULL AUTO_INCREMENT,
-     isys_drive_list_2_stor_list__isys_catg_drive_list__id  int(10) unsigned NOT NULL DEFAULT 0,
-     isys_drive_list_2_stor_list__isys_catg_stor_list__id  int(10) unsigned NOT NULL DEFAULT 0,
+    isys_drive_list_2_stor_list__id  int(10) unsigned NOT NULL AUTO_INCREMENT,
+    isys_drive_list_2_stor_list__isys_catg_drive_list__id  int(10) unsigned NOT NULL DEFAULT 0,
+    isys_drive_list_2_stor_list__isys_catg_stor_list__id  int(10) unsigned NOT NULL DEFAULT 0,
     PRIMARY KEY (isys_drive_list_2_stor_list__id),
     KEY  isys_drive_list_2_stor_list_FKIndex1 (isys_drive_list_2_stor_list__isys_catg_drive_list__id),
     KEY  isys_drive_list_2_stor_list_FKIndex2 (isys_drive_list_2_stor_list__isys_catg_stor_list__id)
