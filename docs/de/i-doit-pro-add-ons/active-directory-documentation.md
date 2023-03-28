@@ -1,10 +1,10 @@
 # Active Directory Documentation
 
 Das "Active Directory Dokumentation" Add-on wurde als erstes [Add-on](./index.md) mit dem [Add-on Packager](./add-on-packager.md) entworfen und erstellt. Mit dem "Active Directory Dokumentation" Add-on soll es Administratoren einfacher gemacht werden, Microsoft Umgebungen zu dokumentieren. Dabei werden durch das Add-on die nötigen Objekttypen und Kategorien erstellt.
-  
+
 Installation und Lizenz
 
-Das "Active Directory Dokumentation" Add-on wird wie jedes Add-on über das [Admin Center](../administration/admin-center.md) installiert. Das Add-on ist nicht lizenzpflichtig. Es kann allerdings nur mit der pro-Variante genutzt werden.
+Das "Active Directory Dokumentation" Add-on wird wie jedes Add-on über das [Admin Center](../administration/admin-center.md) installiert. Das Add-on ist nicht lizenzpflichtig. Es kann allerdings nur mit der pro-Variante genutzt werden.
 
 Inhalt des Add-ons
 ------------------
@@ -25,7 +25,7 @@ Im folgenden werden die einzelnen Objekttypen mit den neu ausgelieferten Kategor
 Domäne
 ------
 
-Der ausgelieferte Objekttyp "Domäne" ermöglicht es die gängigsten Informationen einer Domäne zu dokumentieren.   
+Der ausgelieferte Objekttyp "Domäne" ermöglicht es die gängigsten Informationen einer Domäne zu dokumentieren.   
 Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 
 | Kategorie |
@@ -59,7 +59,8 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 Zertifizierungsstelle
 ---------------------
 
-Die "Zertifizierungsstelle" ermöglicht die genaue Dokumentation von Zertifikaten. Hierbei ermöglicht der namengebende Objekttyp die ausstellende Zertifizierungsstelle, sowie die ausgestellten Zertifikate zu dokumentieren.  
+Die "Zertifizierungsstelle" ermöglicht die genaue Dokumentation von Zertifikaten. Hierbei ermöglicht der namengebende Objekttyp die ausstellende Zertifizierungsstelle, sowie die ausgestellten Zertifikate zu dokumentieren.
+
 Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 
 | Kategorie |
@@ -72,7 +73,8 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 Windows Server
 --------------
 
-Der neue Objekttyp "Windows Server" basiert grundlegend auf dem Objekttypen "Server". Hierbei wird jedoch verstärkt auf den Nutzen und dessen Beziehungen zum Active Directory gesetzt.  
+Der neue Objekttyp "Windows Server" basiert grundlegend auf dem Objekttypen "Server". Hierbei wird jedoch verstärkt auf den Nutzen und dessen Beziehungen zum Active Directory gesetzt.
+
 Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 
 | Kategorie |
@@ -95,7 +97,8 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 Windows Client
 --------------
 
-Der neue Objekttyp "Windows Client" basiert grundlegend auf dem Objekttypen "Client". Hierbei wird jedoch, wie beim Windows Server, verstärkt auf den Nutzen und dessen Beziehungen zum Active Directory gesetzt.  
+Der neue Objekttyp "Windows Client" basiert grundlegend auf dem Objekttypen "Client". Hierbei wird jedoch, wie beim Windows Server, verstärkt auf den Nutzen und dessen Beziehungen zum Active Directory gesetzt.
+
 Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 
 | Kategorie |
@@ -108,7 +111,8 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 DNS Server
 ----------
 
-Der Objekttyp "DNS Server" basiert grundlegend auf dem Objekttypen "Windows Server". Dieser ermöglicht eine separate Dokumentation von DNS Informationen. Für eine spezielle DNS Dokumentation steht das "DNS Dokumentation" DNS Add-on zur Verfügung.  
+Der Objekttyp "DNS Server" basiert grundlegend auf dem Objekttypen "Windows Server". Dieser ermöglicht eine separate Dokumentation von DNS Informationen. Für eine spezielle DNS Dokumentation steht das "DNS Dokumentation" DNS Add-on zur Verfügung.
+
 Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 
 | Kategorie |
@@ -121,7 +125,8 @@ Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 DHCP Server
 -----------
 
-Der Objekttyp "DHCP Server" basiert grundlegend auf dem Objekttypen "Windows Server". Dieser ermöglicht eine separate Dokumentation von DHCP Informationen.   
+Der Objekttyp "DHCP Server" basiert grundlegend auf dem Objekttypen "Windows Server". Dieser ermöglicht eine separate Dokumentation von DHCP Informationen.
+
 Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 
 | Kategorie |

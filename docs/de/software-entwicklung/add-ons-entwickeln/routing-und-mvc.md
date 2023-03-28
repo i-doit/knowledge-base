@@ -1,5 +1,5 @@
 # Routing und MVC
-
+"
 In diesem Artikel wird darauf eingegangen, wie die i-doit-interne MVC-Struktur funktioniert und wie damit eine eigene GUI realisiert werden kann.
 
 URL-Routing
@@ -15,33 +15,32 @@ Mit Hilfe der URL wird das eigene Add-on überhaupt erst angesprochen. Dies gesc
 
 Für Controller und Action existieren die definierten Standardwerte "Main" und "handle", sodass man nicht immer die komplette URL definieren muss.
 
-Die URL "/example" leitet also weiter in den "Main"-Controller und ruft die "handle"-Action auf. Es gibt ein Set an reservierten Wörtern, die nicht als Action verwendet werden können und Fehlermeldungen produzieren:
+Die URL "/example" leitet also weiter in den "Main"-Controller und ruft die "handle"-Action auf. Es gibt ein Set an reservierten Wörtern, die nicht als Action verwendet werden können und Fehlermeldungen produzieren:
 
-/example/main/handle  
-/example/main/dao  
+/example/main/handle
+/example/main/dao
 /example/main/tree
 
 Aufgrund der direkten Übersetzung von URL nach Klasse und Methode unterliegen die URL-Segmente bestimmten Bedingungen, die sich als regulärer Ausdruck formulieren lassen:
 
-### Controller ^[a-zA-Z][a-zA-Z0-9_-]*$
+### Controller ^[a-zA-Z][a-zA-Z0-9_-]*$
 
 Dieser Ausdruck besagt, dass das Controller-Segment der URL mit einem Buchstaben beginnen muss und weiterhin nur aus Buchstaben, Zahlen, Bindestrichen oder Unterstrichen bestehen darf. Bei der Übersetzung von Segment zu Klassenname werden Bindestriche entfernt:
 
-*   URL /main öffnet Controller Main  
-    
-*   URL /MAIN öffnet Controller MAIN
-*   URL /main-content öffnet Controller MainContent
-*   URL /main_content öffnet Controller Main_content
+*   URL /main öffnet Controller Main
+*   URL /MAIN öffnet Controller MAIN
+*   URL /main-content öffnet Controller MainContent
+*   URL /main_content öffnet Controller Main_content
 *   URL /mAIN_CONTENT öffnet Controller MAIN_CONTENT
 
-### Action ^[a-zA-Z]+$
+### Action ^[a-zA-Z]+$
 
 Die Namen von Actions sind im Gegensatz zu Controllern restriktiver und unterliegen keiner Logik zum Ändern der Groß- und Kleinschreibung:
 
-*   URL /main/firstpage öffnet Controller Main, Action firstpage
-*   URL /main/firstPage öffnet Controller Main, Action firstPage
-*   URL /main/first-page wird nicht gefunden werden
-*   URL /main/first_page wird nicht gefunden werden
+*   URL /main/firstpage öffnet Controller Main, Action firstpage
+*   URL /main/firstPage öffnet Controller Main, Action firstPage
+*   URL /main/first-page wird nicht gefunden werden
+*   URL /main/first_page wird nicht gefunden werden
 
 !!! info "Achtung bei Groß- und Kleinschreibung"
 
@@ -50,7 +49,7 @@ Die Namen von Actions sind im Gegensatz zu Controllern restriktiver und unterlie
 Eigene Routen definieren
 ------------------------
 
-Es ist innerhalb der init.php möglich, eigene Routen für das Add-on zu definieren. Der Code dazu sieht folgendermaßen aus:
+Es ist innerhalb der init.php möglich, eigene Routen für das Add-on zu definieren. Der Code dazu sieht folgendermaßen aus:
 
     // addModuleRoute('<Method>|...', '<URL>', '<add-on identifier>', '<controller>', '<actiob>');
 
@@ -74,11 +73,11 @@ Ein Controller besteht aus einigem Boilerplate-Code und optionalen eigenen Metho
     /**
     * Main controller
     *
-    * @package     modules
-    * @subpackage  example
-    * @author      Leonard Fischer <lfischer@i-doit.com>
-    * @copyright   synetics GmbH
-    * @license     [http://www.i-doit.com/license](http://www.i-doit.com/license)
+    * @package     modules
+    * @subpackage  example
+    * @author      Leonard Fischer <lfischer@i-doit.com>
+    * @copyright   synetics GmbH
+    * @license     [http://www.i-doit.com/license](http://www.i-doit.com/license)
     */
     class Main extends BaseController implements \isys_controller
     {
@@ -90,13 +89,13 @@ Ein Controller besteht aus einigem Boilerplate-Code und optionalen eigenen Metho
         * Default value for "controller" is "main".
         * Default value for "action" is "handle".
         *
-        * @param   \isys_register    $request
-        * @param   \isys_application $application
+        * @param   \isys_register    $request
+        * @param   \isys_application $application
         *
-        * @route   /example
-        * @route   /example/main
-        * @route   /example/main/handle  But will result in error, because different second parameter.
-        * @return  \idoit\View\Renderable
+        * @route   /example
+        * @route   /example/main
+        * @route   /example/main/handle  But will result in error, because different second parameter.
+        * @return  \idoit\View\Renderable
         */
         public function handle(\isys_register $request, \isys_application $application)
         {
@@ -105,9 +104,9 @@ Ein Controller besteht aus einigem Boilerplate-Code und optionalen eigenen Metho
         }
 
         /**
-        * @param   \isys_application $application
+        * @param   \isys_application $application
         *
-        * @return  \isys_component_dao
+        * @return  \isys_component_dao
         */
             public function dao(\isys_application $application)
             {
@@ -117,7 +116,7 @@ Ein Controller besteht aus einigem Boilerplate-Code und optionalen eigenen Metho
         /**
         * Constructor method.
         *
-        * @param  \isys_module $p_module
+        * @param  \isys_module $p_module
         */
         public function __construct(\isys_module $p_module)
         {
@@ -127,11 +126,11 @@ Ein Controller besteht aus einigem Boilerplate-Code und optionalen eigenen Metho
         /**
         * Build the left tree.
         *
-        * @param   \isys_register       $request
-        * @param   \isys_application    $application
-        * @param   \isys_component_tree $p_tree
+        * @param   \isys_register       $request
+        * @param   \isys_application    $application
+        * @param   \isys_component_tree $p_tree
         *
-        * @return  Node
+        * @return  Node
         */
         public function tree(\isys_register $request, \isys_application $application, \isys_component_tree $p_tree)
         {
@@ -153,10 +152,10 @@ In diesem Controller können nun beliebige Methoden ergänzt werden. Es ist alle
     * Default route is being used for this to work:
     * /<add-on identifier>/<controller>/<action>
     *
-    * @param   \isys_register $request
+    * @param   \isys_register $request
     *
-    * @route   /example/main/firstpage
-    * @return  \idoit\View\Renderable
+    * @route   /example/main/firstpage
+    * @return  \idoit\View\Renderable
     */
     public function firstpage(\isys_register $request)
     {
@@ -195,4 +194,4 @@ Das Template "main.tpl" muss natürlich im Add-on-Verzeichnis existieren und kö
     <h1>[{isys type="lang" ident="LC__EXAMPLE"}]</h1>
     <p>Example variable: [{$exampleVariable}]</p>
 
-Als Template-Engine verwenden wir Smarty mit den Delimitern "[{" und "}]".
+Als Template-Engine verwenden wir Smarty mit den Delimitern "[{" und "}]".

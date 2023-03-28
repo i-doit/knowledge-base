@@ -4,7 +4,7 @@ Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenige
 Systemvoraussetzungen
 ---------------------
 
-Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md).  
+Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md).
 
 Wenn [Ubuntu Linux](https://www.ubuntu.com/) als Betriebssystem eingesetzt werden soll, wird die Server-Variante von **18.04 LTS "Bionic Beaver"** empfohlen einzusetzen. Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
@@ -26,7 +26,7 @@ Sollen die Standard-Paket-Repositories genutzt werden, bieten sich folgende Stat
 *   das Datenbankmanagementsystem **MariaDB** 10.5 und
 *   den Caching-Server **memcached**
 
-...installiert. Allerdings verfügt **18.04 LTS "Bionic Beaver"** nur über veraltete Pakete, die den [Systemvoraussetzungen](../../systemvoraussetzungen.md) nicht entsprechen.  
+...installiert. Allerdings verfügt **18.04 LTS "Bionic Beaver"** nur über veraltete Pakete, die den [Systemvoraussetzungen](../../systemvoraussetzungen.md) nicht entsprechen.
 Es ist daher nötig, über weitere Repositories aktuelle Pakete zu installieren. **Vorsicht:** Dritt-Repositories können die Stabilität des Betriebssystems gefährden.
 
 Für PHP 7.4 verwenden wir das [Personal Package Archive](https://wiki.ubuntuusers.de/Paketquellen_freischalten/PPA/) von [ondrej](https://launchpad.net/~ondrej/+archive/ubuntu/php):
@@ -121,14 +121,14 @@ In dieser Datei wird die neue VHost-Konfiguration gespeichert:
 
     <VirtualHost *:80>
             ServerAdmin i-doit@example.net
-    
+
             DirectoryIndex index.php
             DocumentRoot /var/www/html/
             <Directory /var/www/html/>
                     AllowOverride All
                     Require all granted
             </Directory>
-    
+
             LogLevel warn
             ErrorLog ${APACHE_LOG_DIR}/error.log
             CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -136,7 +136,7 @@ In dieser Datei wird die neue VHost-Konfiguration gespeichert:
 
 i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Damit diese Einstellungen berücksichtigt werden, ist die Einstellung **AllowOverride All** nötig.
 
-Im nächsten Schritt werden der neue VHost und das nötige Apache-Modul **rewrite** aktiviert sowie der Apache Webserver neu gestartet:
+Im nächsten Schritt werden der neue VHost und das nötige Apache-Modul **rewrite** aktiviert sowie der Apache Webserver neu gestartet:
 
     sudo chown www-data:www-data -R /var/www/html/
     sudo chmod 755 /var/log/apache2
@@ -173,53 +173,55 @@ Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
 
 Diese Datei enthält die neuen Konfigurationseinstellungen. Für eine optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden:
 
+```shell
     [mysqld]
-    
+
     # This is the number 1 setting to look at for any performance optimization
     # It is where the data and indexes are cached: having it as large as possible will
     # ensure MySQL uses memory and not disks for most read operations.
     #
     # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
     innodb_buffer_pool_size = 1G
-    
+
     # Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
     innodb_buffer_pool_instances = 1
-    
+
     # Redo log file size, the higher the better.
     # MySQL/MariaDB writes two of these log files in a default installation.
     innodb_log_file_size = 512M
-    
+
     innodb_sort_buffer_size = 64M
     sort_buffer_size = 262144 # default
     join_buffer_size = 262144 # default
-    
+
     max_allowed_packet = 128M
     max_heap_table_size = 32M
     query_cache_min_res_unit = 4096
     query_cache_type = 1
     query_cache_limit = 5M
     query_cache_size = 80M
-    
+
     tmp_table_size = 32M
     max_connections = 200
     innodb_file_per_table = 1
-    
+
     # Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
     innodb_thread_concurrency = 0
-    
+
     # Disable this (= 0) if you have slow harddisks
     innodb_flush_log_at_trx_commit = 1
     innodb_flush_method = O_DIRECT
-    
+
     innodb_lru_scan_depth = 2048
     table_definition_cache = 1024
     table_open_cache = 2048
     # Only if your have MySQL 5.6 or higher, do not use with MariaDB!
     #table_open_cache_instances = 4
-    
+
     innodb_stats_on_metadata = 0
-    
+
     sql-mode = ""
+```
 
 Abschließend wird MariaDB gestartet:
 

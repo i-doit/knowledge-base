@@ -39,9 +39,9 @@ Für PHP-Klassen im Legacy-Format (wie z.B. die Rechtesystem- oder Kategorie-Kla
         /**
         * Add-on specific legacy autoloader.
         *
-        * @param   string $className
+        * @param   string $className
         *
-        * @return  boolean
+        * @return  boolean
         */
         public static function init($className)
         {
@@ -53,7 +53,7 @@ Für PHP-Klassen im Legacy-Format (wie z.B. die Rechtesystem- oder Kategorie-Kla
 
             if (isset($classList[$className]) && parent::include_file($base . $classList[$className])) {
                 isys_caching::factory('autoload')->set($className, $base . $classList[$className]);
-                
+
                 return true;
             }
 
@@ -61,7 +61,7 @@ Für PHP-Klassen im Legacy-Format (wie z.B. die Rechtesystem- oder Kategorie-Kla
         }
     }
 
-Der Legacy-Autoloader wird folgendermaßen in der init.php registriert:
+Der Legacy-Autoloader wird folgendermaßen in der init.php registriert:
 
     if (file_exists(__DIR__ . '/isys_module_example_autoload.class.php') && (include_once __DIR__ . '/isys_module_example_autoload.class.php'))
     {

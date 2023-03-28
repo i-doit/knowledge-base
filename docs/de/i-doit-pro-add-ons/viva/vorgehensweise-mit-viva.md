@@ -5,7 +5,7 @@ IT-Grundschutz-Kataloge verwalten
 
 ### Kataloge importieren
 
-Der erste Schritt hin zur Dokumentation ist der Import der aktuellen IT-Grundschutz-Kataloge. Dazu wird bereits beim ersten Aufruf von VIVA unter **Extras → VIVA** aufgefordert. Es stehen verschiedene Kataloge zur Auswahl:
+Der erste Schritt hin zur Dokumentation ist der Import der aktuellen IT-Grundschutz-Kataloge. Dazu wird bereits beim ersten Aufruf von VIVA unter **Extras → VIVA** aufgefordert. Es stehen verschiedene Kataloge zur Auswahl:
 
 *   Ergänzungslieferung (EL) 15 von 2016 in Deutsch
 *   EL 14 von 2014 in Deutsch

@@ -3,15 +3,14 @@
 Download Installation Forms Add-on
 --------
 
-Das aktuelle Installationspaket für das Add-on steht im i-doit [Kundenportal](../../administration/kundenportal.md) unter [https://portal.i-doit.com/](https://portal.i-doit.com/) nach dem Erwerb einer gültigen Lizenz zur Verfügung und kann dort heruntergeladen werden.  
-  
+Das aktuelle Installationspaket für das Add-on steht im i-doit [Kundenportal](../../administration/kundenportal.md) unter [https://portal.i-doit.com/](https://portal.i-doit.com/) nach dem Erwerb einer gültigen Lizenz zur Verfügung und kann dort heruntergeladen werden.
 
 Installation des Forms Add-on
 -----------------------------
 
-Die Installation selbst erfolgt im i-doit [Admin-Center](../../administration/admin-center.md) im Reiter "Add-ons". Hier wird das Paket vom lokalen System über die Schaltfläche "Durchsuchen" ausgewählt.
+Die Installation selbst erfolgt im i-doit[Admin-Center](../../administration/admin-center.md) im Reiter "Add-ons". Hier wird das Paket vom lokalen System über die Schaltfläche "Durchsuchen" ausgewählt.
 
-Nachdem festgelegt wurde, für welche(n) [Mandant(en)](../../administration/mandantenfaehigkeit.md) das Add-on verfügbar gemacht werden soll, kann die Installation über die Schaltfläche "Upload and install" fertiggestellt werden.Nach der Veröffentlichung einer neuen Version kann im Admin-Center auf demselben Weg das aktualisierte Paket, welches ebenfalls im i-doit Kundenportal verfügbar sein wird, hochgeladen und aktualisiert werden.
+Nachdem festgelegt wurde, für welche(n)[Mandant(en)](../../administration/mandantenfaehigkeit.md) das Add-on verfügbar gemacht werden soll, kann die Installation über die Schaltfläche "Upload and install" fertiggestellt werden.Nach der Veröffentlichung einer neuen Version kann im Admin-Center auf demselben Weg das aktualisierte Paket, welches ebenfalls im i-doit Kundenportal verfügbar sein wird, hochgeladen und aktualisiert werden.
 
 [![Installation des Forms Add-on](../../assets/images/de/i-doit-pro-add-ons/forms/installation/1-fi.png)](../../assets/images/de/i-doit-pro-add-ons/forms/installation/1-fi.png)
 

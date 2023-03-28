@@ -7,16 +7,16 @@ Echtzeit-Aufrufe aktivieren
 
 Lassen Sie i-doit den Status von Host- und Service-Checks über Livestatus in Echtzeit abrufen. Die Konfiguration erfolgt über Administration > Schnittstellen / externe Daten > Überwachung > Livestatus / NDO.
 
-Diese Statusabrufe können in jedem Objekt oder in den Objektlisten für jeden Typ angezeigt werden. Fügen Sie diesen Objekt-Typen die Kategorie “Monitoring” über “Verwaltung > CMDB-Einstellungen > Schnellkonfigurationsassistent” hinzu.
+Diese Statusabrufe können in jedem Objekt oder in den Objektlisten für jeden Typ angezeigt werden. Fügen Sie diesen Objekt-Typen die Kategorie "Monitoring" über "Verwaltung > CMDB-Einstellungen > Schnellkonfigurationsassistent" hinzu.
 
 Aktivieren Sie Statusaufrufe innerhalb dieser Kategorie manuell für jedes Objekt oder [idoitcmk pull](h./../checkmk2-bestandsdaten-in-die-cmdb-importieren.md) wird dies durch [Konfigurationseinstellung](./checkmk2-konfiguration.md) pull.enableLivestatus erledigen.
 
 Verwalten von Host-Tags
 -----------------------
 
-Mit i-doit können Sie Host-Tags verwalten. Es gibt “statische” und “dynamische” Host-Tags: - “static” means you manually create tags in Extras > Check_MK 2 > Tags (static) and add them to host in category Check_MK Tags. - “dynamic” means this is done automatically via rule sets in Extras > Check_MK 2 > Tags (dynamic).
+Mit i-doit können Sie Host-Tags verwalten. Es gibt "statische" und "dynamische" Host-Tags: - "static" means you manually create tags in Extras > Check_MK 2 > Tags (static) and add them to host in category Check_MK Tags. - "dynamic" means this is done automatically via rule sets in Extras > Check_MK 2 > Tags (dynamic).
 
-Sowohl “statische” als auch “dynamische” Host-Tags werden in der Kategorie Check_MK Tags angezeigt. Sie werden über [idoitcmk push](./checkmk2-wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md) nach checkmk exportiert.
+Sowohl "statische" als auch "dynamische" Host-Tags werden in der Kategorie Check_MK Tags angezeigt. Sie werden über [idoitcmk push](./checkmk2-wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md) nach checkmk exportiert.
 
 Aufruf von idoitcmk über Web GUI
 ----------------------------------
@@ -40,7 +40,7 @@ Tipp: Möglicherweise möchten Sie Standardoptionen hinzufügen, wenn eine der S
 
 Die Protokollierung ist standardmäßig aktiviert. Für die ersten Schritte ist es immer gut zu wissen, was gerade passiert.
 
-Um Benutzern/Benutzergruppen die Berechtigung zu erteilen, diese Schaltflächen auszulösen, gehen Sie zu “Verwaltung > Berechtigungssystem > Rechte > CMDB”, laden Sie einen Benutzer/eine Gruppe und aktivieren Sie das Recht “Ausführen” für eine oder mehrere Bedingungen:
+Um Benutzern/Benutzergruppen die Berechtigung zu erteilen, diese Schaltflächen auszulösen, gehen Sie zu "Verwaltung > Berechtigungssystem > Rechte > CMDB", laden Sie einen Benutzer/eine Gruppe und aktivieren Sie das Recht "Ausführen" für eine oder mehrere Bedingungen:
 
 *   Kategorie,
 *   Kategorie in Objekt-Typen,

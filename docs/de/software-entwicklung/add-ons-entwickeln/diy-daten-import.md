@@ -2,7 +2,7 @@
 
 Von Zeit zu Zeit kann es nötig sein große Datenmengen aus einem Fremd-System nach i-doit zu überführen - sowohl für eine Initiale Befüllung als auch für regelmäßige Synchronisationen und Updates. Zu diesem Zweck bietet i-doit einige Schnittstellen, sogenannte Imports an, um Daten aus externen Quellen in die CMDB zu übernehmen.
 
-Unter anderem bieten wir den CSV Import und die JSON-RPC API für generische Daten an. Auch für andere Tools, wie JDisc und OCS gibt es fertige Lösungen. Doch manchmal ist eine komplett neue bzw. eigene Lösung notwendig, um die Daten zuverlässig und ohne großen “Mehraufwand” nach i-doit zu überführen.
+Unter anderem bieten wir den CSV Import und die JSON-RPC API für generische Daten an. Auch für andere Tools, wie JDisc und OCS gibt es fertige Lösungen. Doch manchmal ist eine komplett neue bzw. eigene Lösung notwendig, um die Daten zuverlässig und ohne großen "Mehraufwand" nach i-doit zu überführen.
 
 Zu diesem Zweck ist es möglich einen eigenen Import schreiben.
 
@@ -11,7 +11,7 @@ Zu diesem Zweck ist es möglich einen eigenen Import schreiben.
 Technische Import Möglichkeiten
 ===============================
 
-Um Daten zu importieren gibt es mehrere Optionen. Von CSV-Import über JDisc, OCS und einige weitere… Wir konzentrieren uns in diesem Artikel allerdings nur auf die “technischen” Möglichkeiten einen Import zu entwickeln.
+Um Daten zu importieren gibt es mehrere Optionen. Von CSV-Import über JDisc, OCS und einige weitere… Wir konzentrieren uns in diesem Artikel allerdings nur auf die "technischen" Möglichkeiten einen Import zu entwickeln.
 
 Konkret gibt es hier zwei Optionen die sich anbieten:
 
@@ -23,7 +23,8 @@ Bevor wir uns in die Programmierung stürzen, möchte ich darauf hinweisen, dass
 Dialog, Dialog+ und Objektreferenzen
 ------------------------------------
 
-Von der API sind wir es gewöhnt, Daten in einer “lesbaren” Form übergeben zu können. Statt der ID “3” für einen Hersteller übergeben wir stattdessen den Namen im Klartext. Der API Code wird automatisch im entsprechenden Attribut bzw. der hinterlegten Datenbank-Tabelle nach diesem Namen suchen und die korrekte ID referenzieren.  
+Von der API sind wir es gewöhnt, Daten in einer "lesbaren" Form übergeben zu können. Statt der ID "3" für einen Hersteller übergeben wir stattdessen den Namen im Klartext. Der API Code wird automatisch im entsprechenden Attribut bzw. der hinterlegten Datenbank-Tabelle nach diesem Namen suchen und die korrekte ID referenzieren.
+
 Zusätzlich werden Dialoge mit Abhängigkeiten (wie z.B. zwischen Modell und Hersteller) intern verarbeitet, sodass es zu keinen falschen Referenzen kommt.
 
 Sollte ein übergebener Datensatz nicht gefunden werden, wird die API diesen für uns erzeugen und auch wieder entsprechend referenzieren.
@@ -36,17 +37,18 @@ Die API wird beim erstellen und aktualisieren von Kategoriedaten die konfigurier
 Prozessoren
 -----------
 
-Die API besitzt interne Helfer für einige Kategorien, die nicht ohne weiteres speicherbar sind - konkret geht es hierbei um Kategorien, die nur mittels “extra Logik” sinnvoll befüllt werden können, weil sie über spezifische Logik verfügen.
+Die API besitzt interne Helfer für einige Kategorien, die nicht ohne weiteres speicherbar sind - konkret geht es hierbei um Kategorien, die nur mittels "extra Logik" sinnvoll befüllt werden können, weil sie über spezifische Logik verfügen.
 
-Als Beispiel möchte ich die “Hostadresse” Kategorie aufführen. Hier gibt es indirekte Abhängigkeiten zwischen der eingegebenen IP-Adresse und dem hinterlegten Netz - IPv6 Adressen dürfen nicht in einem IPv4 Netz hinterlegt werden. Ebenso darf keine IP-Adresse gespeichert werden, wenn diese außerhalb des ausgewählten Netzesbereiches liegt.  
+Als Beispiel möchte ich die "Hostadresse" Kategorie aufführen. Hier gibt es indirekte Abhängigkeiten zwischen der eingegebenen IP-Adresse und dem hinterlegten Netz - IPv6 Adressen dürfen nicht in einem IPv4 Netz hinterlegt werden. Ebenso darf keine IP-Adresse gespeichert werden, wenn diese außerhalb des ausgewählten Netzesbereiches liegt.
+
 Der jeweilige Kategorie-Prozessor übernimmt eben diese Aufgabe.
 
-Ein weiteres Beispiel ist die “SLA” Kategorie, die eine sehr spezifische GUI und auch Daten besitzt, um die einzelnen Tage und Servicezeiten zu dokumentieren.
+Ein weiteres Beispiel ist die "SLA" Kategorie, die eine sehr spezifische GUI und auch Daten besitzt, um die einzelnen Tage und Servicezeiten zu dokumentieren.
 
-Import mit Hilfe der “sync” Methoden
+Import mit Hilfe der "sync" Methoden
 ====================================
 
-Entschließen wir uns dennoch dazu einen “eigenen” Import zu schreiben, werden wir diesen mit Hilfe der “sync”-Methoden unserer Kategorie-DAOs umsetzen.
+Entschließen wir uns dennoch dazu einen "eigenen" Import zu schreiben, werden wir diesen mit Hilfe der "sync"-Methoden unserer Kategorie-DAOs umsetzen.
 
 Im Gegensatz zum Import mittels API, müssen wir die folgenden notwendigen Prozeduren selbst implementieren:
 
@@ -54,7 +56,7 @@ Im Gegensatz zum Import mittels API, müssen wir die folgenden notwendigen Proze
 2.  Kategoriedaten auf Konsistenz prüfen und Referenzen auflösen
 3.  Kategorie-DAOs vorbereiten
 4.  Daten validieren und Struktur vorbereiten
-5.  Vorbereitete Daten an die “sync”-Methode übergeben
+5.  Vorbereitete Daten an die "sync"-Methode übergeben
 6.  Logbucheinträge schreiben
 
 Überblick der notwendigen Komponenten
@@ -94,14 +96,14 @@ Oder mit konkreten Daten:
         ]
     }
 
-Wir sehen hier eine Mischung aus ID-Referenzen und lesbaren Werten (siehe "frequency_unit": 3 und "manufacturer": "Intel"). Beim manuellen Import via Kategorie “sync” müssen wir alle Referenzen auflösen - i-doit kann intern nur mit ID-Referenzen arbeiten!
+Wir sehen hier eine Mischung aus ID-Referenzen und lesbaren Werten (siehe "frequency_unit": 3 und "manufacturer": "Intel"). Beim manuellen Import via Kategorie "sync" müssen wir alle Referenzen auflösen - i-doit kann intern nur mit ID-Referenzen arbeiten!
 
 Wie das funktioniert wird im nächsten Punkt erläutert. Der Artikel [Kategorien programmieren](./kategorien-programmieren.md) und [Attribut-Definition](./attribut-definition.md) werden uns beim Verständnis helfen!
 
 AttributeDataCollector
 ----------------------
 
-Diese Komponente kann genutzt werden, um Datenreferenzen, wie “Hersteller: Intel”, aufzulösen. Sie funktioniert auf Attribut-Basis und kümmert sich automatisch um die übergebenen Typen. Hierbei benötigen wir konkret das jeweilige Attribut:
+Diese Komponente kann genutzt werden, um Datenreferenzen, wie "Hersteller: Intel", aufzulösen. Sie funktioniert auf Attribut-Basis und kümmert sich automatisch um die übergebenen Typen. Hierbei benötigen wir konkret das jeweilige Attribut:
 
     use idoit\Component\Property\Property;
     use idoit\Module\Cmdb\Component\AttributeDataCollector\Collector;
@@ -110,7 +112,7 @@ Diese Komponente kann genutzt werden, um Datenreferenzen, wie “Hersteller: Int
     $data = null;
     $collector = new Collector();
 
-    // We need to check if we are handling a property in the “old” format.
+    // We need to check if we are handling a property in the "old" format.
     if (!$property instanceof Property) {
         $property = Property::createInstanceFromArray($property);
     }
@@ -120,12 +122,12 @@ Diese Komponente kann genutzt werden, um Datenreferenzen, wie “Hersteller: Int
         $data = $collector->getApplicableType()->collectData($property, false);
     }
 
-Am Ende wird in der $data Variable eine Liste der verfügbaren Daten existieren - diese kann nun auf passende Inhalte geprüft werden. Kann keine Übereinstimmung festgestellt  werden, muss individuell entschieden werden, ob ein Datensatz zur Laufzeit erzeugt werden soll.
+Am Ende wird in der $data Variable eine Liste der verfügbaren Daten existieren - diese kann nun auf passende Inhalte geprüft werden. Kann keine Übereinstimmung festgestellt werden, muss individuell entschieden werden, ob ein Datensatz zur Laufzeit erzeugt werden soll.
 
 CiMatcher
 ---------
 
-Der “CiMerger” ist eine Komponente zum finden von Objekten mittels verschiedener Attribute wie z.B. dem Hostnamen, Seriennummer, Mac Adresse etc. derzeit existieren 19 Identifikatoren zum finden von Objekten.
+Der "CiMerger" ist eine Komponente zum finden von Objekten mittels verschiedener Attribute wie z.B. dem Hostnamen, Seriennummer, Mac Adresse etc. derzeit existieren 19 Identifikatoren zum finden von Objekten.
 
 Die Nutzung ist sehr einfach gestaltet:
 
@@ -145,14 +147,15 @@ Sofern kein Objekt gefunden werden konnte wird getId() lediglich null zurücklie
 
 !!! info "Achtung!"
 
-    Aufgrund der PHP 8 kompatibilität wird der Methodenname “match” sich zukünftig ändern!
+    Aufgrund der PHP 8 kompatibilität wird der Methodenname "match" sich zukünftig ändern!
 
 Merger
 ------
 
-Der “Merger” hat nur eine einzige Aufgabe: übergebene Datensätze auf Vollständigkeit zu prüfen und ggf. mit vorhandenen Daten oder Standardwerten der CMDB zu ergänzen.
+Der "Merger" hat nur eine einzige Aufgabe: übergebene Datensätze auf Vollständigkeit zu prüfen und ggf. mit vorhandenen Daten oder Standardwerten der CMDB zu ergänzen.
 
-Und wieso brauchen wir so etwas? Die “sync”-Methode der Kategorie DAOs benötigt immer komplette Datensätze, um die jeweiligen Daten zu erstellen oder aktualisieren.  
+Und wieso brauchen wir so etwas? Die "sync"-Methode der Kategorie DAOs benötigt immer komplette Datensätze, um die jeweiligen Daten zu erstellen oder aktualisieren.
+
 Wenn ein oder mehrere Attribute nicht Bestandteil der Daten sind würden diese beim überführen in die Datenbank genullt werden.
 
 Object und Kategorie DAO
@@ -160,9 +163,9 @@ Object und Kategorie DAO
 
 Um Kategoriedaten tatsächlich in die Datenbank zu schreiben werden die verschiedenen Kategorie-DAO Klassen benötigt. Diese können wir mit Hilfe der Kategorie Konstanten aus unserer API-Ähnlichen Struktur finden und nutzen.
 
-Für Objektdaten kann die “CMDB DAO” verwendet werden - oder auch jede beliebige Kategorie-DAO, da diese von der CMDB-DAO erben.
+Für Objektdaten kann die "CMDB DAO" verwendet werden - oder auch jede beliebige Kategorie-DAO, da diese von der CMDB-DAO erben.
 
-Zum erstellen von Objekten gibt es eine Methode die genutzt werden muss: “isys_cmdb_dao->insert_new_obj()”. Objekte dürfen nicht mit eigenem SQL erzeugt werden, da sonst einige notwendige Prozeduren übersprungen werden, die vom System benötigt wird.
+Zum erstellen von Objekten gibt es eine Methode die genutzt werden muss: "isys_cmdb_dao->insert_new_obj()". Objekte dürfen nicht mit eigenem SQL erzeugt werden, da sonst einige notwendige Prozeduren übersprungen werden, die vom System benötigt wird.
 
 Gut zu Wissen!
 ==============
@@ -172,36 +175,36 @@ Bevor wir mit dem Import-Code beginnen, möchte ich zunächst auf ein paar Punkt
 Erstellen ist einfach, aktualisieren schwierig
 ----------------------------------------------
 
-Wenn lediglich neue Objekte und neue Kategorie Daten erstellt werden sollen ist der Import um ein vielfaches einfacher zu entwickeln, da hierbei keine Daten “zusammengeführt” werden müssen.
+Wenn lediglich neue Objekte und neue Kategorie Daten erstellt werden sollen ist der Import um ein vielfaches einfacher zu entwickeln, da hierbei keine Daten "zusammengeführt" werden müssen.
 
-Gerade bei Multi-Value Kategorien kann das “Erkennen” des zu aktualisierenden Datensatzes kompliziert und ressourcenaufwändig sein. Man kann diesen Schritt zwar stark vereinfachen indem man pro Kategorie eigenen Code schreibt, der den korrekten Datensatz “erkennt” - allerdings macht das nur Sinn, wenn der Import ein paar wenige Kategorien importiert.
+Gerade bei Multi-Value Kategorien kann das "Erkennen" des zu aktualisierenden Datensatzes kompliziert und ressourcenaufwändig sein. Man kann diesen Schritt zwar stark vereinfachen indem man pro Kategorie eigenen Code schreibt, der den korrekten Datensatz "erkennt" - allerdings macht das nur Sinn, wenn der Import ein paar wenige Kategorien importiert.
 
 Multivalue Kategorien importieren
 ---------------------------------
 
-Pro “sync” wird immer nur EIN Datensatz erstellt oder aktualisiert. Multiple Datensätze für Multivalue-Kategorien müssen demnach in einer Schleife durchlaufen werden.
+Pro "sync" wird immer nur EIN Datensatz erstellt oder aktualisiert. Multiple Datensätze für Multivalue-Kategorien müssen demnach in einer Schleife durchlaufen werden.
 
 Den Import / Code kapseln
 -------------------------
 
-Wenn der eigene Import bzw. dessen Code gekapselt wird sind wir als Entwickler in der Lage diesen an verschiedenen Stellen zu verwenden. Konkret  könnte der Import durch eine solche Architektur ohne großen Mehraufwand, sowohl für einen Konsolen Command, als auch innerhalb der GUI oder der API genutzt werden (genau wie es auch beim CSV Import der Fall ist).
+Wenn der eigene Import bzw. dessen Code gekapselt wird sind wir als Entwickler in der Lage diesen an verschiedenen Stellen zu verwenden. Konkret könnte der Import durch eine solche Architektur ohne großen Mehraufwand, sowohl für einen Konsolen Command, als auch innerhalb der GUI oder der API genutzt werden (genau wie es auch beim CSV Import der Fall ist).
 
 Konsistenzprüfung der Daten
 ---------------------------
 
-Wie zuvor erwähnt müssen zum Beispiel Dialog und Objekt Referenzen aufgelöst werden. Das heißt, Hersteller-Daten, wie “Intel” oder “Cisco”, müssen im System gefunden (oder erstellt) werden und der Code muss statt dieser String-Werte mit IDs arbeiten.
+Wie zuvor erwähnt müssen zum Beispiel Dialog und Objekt Referenzen aufgelöst werden. Das heißt, Hersteller-Daten, wie "Intel" oder "Cisco", müssen im System gefunden (oder erstellt) werden und der Code muss statt dieser String-Werte mit IDs arbeiten.
 
-Zu diesem Zweck gibt es eine “AttributeDataCollector” Komponente (siehe weiter oben).
+Zu diesem Zweck gibt es eine "AttributeDataCollector" Komponente (siehe weiter oben).
 
 Basis Import Code
 =================
 
-Der Import mit Hilfe der sync Methode ist relativ einfach gehalten und benötigt nur wenige Zeilen Code. Es muss hierbei unbedingt beachtet werden, dass dieser “einfache” Import nur die Basis darstellt - es folgt eine Beschreibung des Codes und eine Liste mit “fehlenden Features”, die bei Bedarf individuell entwickelt werden müssen.
+Der Import mit Hilfe der sync Methode ist relativ einfach gehalten und benötigt nur wenige Zeilen Code. Es muss hierbei unbedingt beachtet werden, dass dieser "einfache" Import nur die Basis darstellt - es folgt eine Beschreibung des Codes und eine Liste mit "fehlenden Features", die bei Bedarf individuell entwickelt werden müssen.
 
 Beispiel-Daten im JSON Format
 -----------------------------
 
-Diese Beispiel-Daten wurden im Vorfeld bereits in ein Format gebracht mit dem wir ohne weiteres arbeiten können - das heißt die Schritte zur Beschaffung und der “Mapping” Prozess sind hier bereits abgeschlossen.
+Diese Beispiel-Daten wurden im Vorfeld bereits in ein Format gebracht mit dem wir ohne weiteres arbeiten können - das heißt die Schritte zur Beschaffung und der "Mapping" Prozess sind hier bereits abgeschlossen.
 
     [
         {
@@ -275,41 +278,41 @@ Der folgende Code bietet eine funktionierende Grundlage zum erstellen eines eige
 
     use idoit\Module\Cmdb\Component\SyncMerger\Config;
     use idoit\Module\Cmdb\Component\SyncMerger\Merger;
-    
+
     $data = '{JSON Data}';
-    
+
     $dao = isys_application::instance()->container->get('cmdb_dao');
     $database = isys_application::instance()->container->get('database');
-    $objectTypeId = C__OBJTYPE__CLIENT; // ID of the “client” type (10)
-    
+    $objectTypeId = C__OBJTYPE__CLIENT; // ID of the "client" type (10)
+
     foreach ($data as $objectData) {
         $objectTitle = $objectData['C__CATG__GLOBAL'][0]['title'] ?: 'Created by import: ' . date('Y-m-d H:i:s');
-    
+
         $objectId = $dao->insert_new_obj($objectTypeId, null, $objectTitle, null, C__RECORD_STATUS__NORMAL);
-    
+
         foreach ($objectData as $categoryConst => $categoryData) {
             $category = $dao->get_cat_by_const($categoryConst);
-    
+
             if (!class_exists($category['class_name'])) {
                 continue;
             }
-    
+
             /** @var isys_cmdb_dao_category $categoryDao */
             $categoryDao = $category['class_name']::instance($database);
-    
+
             foreach ($categoryData as $entryData) {
                 // Will contain either 'true' or a associative array with 'key' => 'validation error message'
                 $validationResult = $categoryDao->validate($entryData);
-    
+
                 if ($validationResult === true) {
                     // Die Kategoriedaten müssen in ein bestimmtes Format gebracht werden damit der Merger damit arbeiten kann
                     $fakeEntry = [
                         Config::CONFIG_DATA_ID    => null,
                         Config::CONFIG_PROPERTIES => array_map(function ($prop) { return [C__DATA__VALUE => $prop]; }, $entryData)
                     ];
-                    
+
                     $syncData = Merger::instance(Config::instance($categoryDao, $objectId, $fakeEntry))->getDataForSync();
-                    
+
                     $categoryEntryId = $categoryDao->sync($syncData, $objectId, isys_import_handler_cmdb::C__CREATE);
                 }
             }
@@ -322,25 +325,28 @@ Erklärung des Code
 Den Code möchte ich gerne Schritt für Schritt erklären:
 
 *   Unser Import beginnt mit den übergebenen Daten - in welcher Form dies geschieht obliegt dem Rahmen des Import (Datenbankverbindung, Third-Party-API, Datei im Dateisystem, …). Diese sollten zu diesem Zeitpunkt (unmittelbar vor dem Import) bereits dem vorgeschlagenen Format entsprechen _(Zeile 4)_
-*   Anschließend holen wir uns die “CMDB DAO” und die Datenbank Komponente aus unserem Dependency Injection Container.  
+*   Anschließend holen wir uns die "CMDB DAO" und die Datenbank Komponente aus unserem Dependency Injection Container.  
     Zusätzlich definieren wir einen statischen Objekttypen, als was unsere Objekte importiert werden sollen (das könnte auch mittels eigenem Code oder Parametern verbessert werden) _(Zeilen 6-7)_
-*   Wir erzeugen eine “foreach” Schleife, die für jeden Eintrag ein Objekt importieren wird _(Zeilen 10+)_
-*   In den folgenden Zeilen wird ein Objekt erstellt mit dem Namen aus den übergebenen Daten - falls hier kein Name definiert wird verwenden wir einen Fallback String “Created by import: …” mit dem aktuellen Datum + Uhrzeit _(Zeile 11)_
+*   Wir erzeugen eine "foreach" Schleife, die für jeden Eintrag ein Objekt importieren wird _(Zeilen 10+)_
+*   In den folgenden Zeilen wird ein Objekt erstellt mit dem Namen aus den übergebenen Daten - falls hier kein Name definiert wird verwenden wir einen Fallback String "Created by import: …" mit dem aktuellen Datum + Uhrzeit _(Zeile 11)_
 *   Es wird also aktuell IMMER ein Objekt erzeugt - soll stattdessen ein vorhandenes Objekt GEFUNDEN und weiterverwendet werden, muss eine eigene Logik implementiert werden.  
     Für die folgenden Zeilen wird zwingend eine Objekt ID benötigt! _(Zeile 13)_
-*   Wir erzeugen eine weitere “foreach”-Schleife, die nun die Kategorien des Objekts verarbeiten wird - zunächst versuchen wir auf Basis der verwendeten Kategorie Konstante die DAO Klasse der gewünschten Kategorie zu instanzieren.  
+*   Wir erzeugen eine weitere "foreach"-Schleife, die nun die Kategorien des Objekts verarbeiten wird - zunächst versuchen wir auf Basis der verwendeten Kategorie Konstante die DAO Klasse der gewünschten Kategorie zu instanzieren.
+
     Schlägt dies fehl überspringen wir die Daten - solche Stellen sollten üblicherweise das Verhalten in einem Log festhalten, damit Fehler im nachhinein festgestellt werden können _(Zeilen 15+)_
-*   Wenn der Code eine Kategorie DAO gefunden hat erzeugen wir eine dritte “foreach” Schleife die nun durch die einzelnen Kategorie-Datensätze läuft _(Zeilen 16-25)_
-*   Auf den ersten Zeilen dieser Schleife rufen wir die “validate” Methode der DAO auf, die unsere eingegebenen Daten mit der Konfigurierten Validierung aus der Verwaltung abgleicht. Sollte es hier keine Probleme geben werden wir den Rückgabewert “true” erhalten - andernfalls ein Array mit Einträgen fehlgeschlagener Validierungen. _(Zeilen 27-29)_  
+*   Wenn der Code eine Kategorie DAO gefunden hat erzeugen wir eine dritte "foreach" Schleife die nun durch die einzelnen Kategorie-Datensätze läuft _(Zeilen 16-25)_
+*   Auf den ersten Zeilen dieser Schleife rufen wir die "validate" Methode der DAO auf, die unsere eingegebenen Daten mit der Konfigurierten Validierung aus der Verwaltung abgleicht. Sollte es hier keine Probleme geben werden wir den Rückgabewert "true" erhalten - andernfalls ein Array mit Einträgen fehlgeschlagener Validierungen. _(Zeilen 27-29)_
+
     **ACHTUNG** - die Validierung stellt keine Konsistenzprüfung der Daten dar!
-*   Auf den nächsten Zeilen werden die Daten mit Hilfe des “Merger” in ein Format gebracht, mit dem die “sync” Methode der DAO arbeiten kann.  
-    Wir nennen dies “fake entry” weil wir ohne Datensatz ID arbeiten und den Merger nur nutzen um die fehlenden Kategorie Daten mit Standardwerten zu vervollständigen _(Zeilen 31-36)_
-*   Wir übergeben die vorbereiteten Daten schließlich an die “sync” Methode und übergeben den “create” Modus um neue Datensätze zu erstellen _(Zeile 38)_
+*   Auf den nächsten Zeilen werden die Daten mit Hilfe des "Merger" in ein Format gebracht, mit dem die "sync" Methode der DAO arbeiten kann.
+
+    Wir nennen dies "fake entry" weil wir ohne Datensatz ID arbeiten und den Merger nur nutzen um die fehlenden Kategorie Daten mit Standardwerten zu vervollständigen _(Zeilen 31-36)_
+*   Wir übergeben die vorbereiteten Daten schließlich an die "sync" Methode und übergeben den "create" Modus um neue Datensätze zu erstellen _(Zeile 38)_
 
 Optionale Verbesserungen
 ------------------------
 
-Wie bereits geschrieben handelt es sich bei diesem Code um eine lauffähige “Basis” Version eines Imports - das heißt der Code ist in seiner aktuellen Form nutzbar und wird übergebene Daten importieren können!
+Wie bereits geschrieben handelt es sich bei diesem Code um eine lauffähige "Basis" Version eines Imports - das heißt der Code ist in seiner aktuellen Form nutzbar und wird übergebene Daten importieren können!
 
 Es fehlen allerdings einige (optionale) Funktionen die ein Import üblicherweise liefert. Diese Punkte möchte ich hier auflisten:
 
@@ -348,5 +354,5 @@ Es fehlen allerdings einige (optionale) Funktionen die ein Import üblicherweise
 *   Ein Import sollte seinen Fortschritt und auch unerwartete Probleme in Form eines Logs aufzeichnen. Um eine Logger Instanz zu erzeugen können wir zu Beginn des Imports folgende Zeile nutzen:  
     $logger = idoit\Component\Logger::factory('my-import', BASE_DIR . 'log/my-import_' . date('Y-m-d') . '.log');
 *   Die $entryData Daten müssen auf allgemeine Konsistenz geprüft werden - Objekte und Dialog-Felder benötigen immer Referenzen mittels IDs. Falls hier String-Werte übergeben werden wird der Import für den entsprechenden Wert fehlschlagen
-*   Bevor die Daten an den “Merger” übergeben werden sollte ein Kategorie Prozessor verwendet werden der die Daten für die entsprechende Kategorie vorbereitet
+*   Bevor die Daten an den "Merger" übergeben werden sollte ein Kategorie Prozessor verwendet werden der die Daten für die entsprechende Kategorie vorbereitet
 *   Aktuell schreibt der Import keinerlei Daten in das CMDB Logbuch, das muss sowohl für die Objekte als auch Kategorie Daten nachgeholt werden

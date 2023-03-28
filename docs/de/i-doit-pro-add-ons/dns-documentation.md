@@ -2,10 +2,9 @@
 
 Das "DNS Dokumentation" Add-on wurde als erstes [Add-on](./index.md) mit dem [Add-on Packager](./add-on-packager.md) entworfen und erstellt. Der Gedanke hinter der DNS Dokumentation ist, DNS-Einträge einfach in i-doit zu dokumentieren. Dabei werden über das Add-on die nötigen Objekttypen und Kategorien erstellt.
 
-  
 Installation und Lizenz
 
-Das "DNS Dokumentation" Add-on wird wie jedes Add-on über das [Admin Center](../administration/admin-center.md) installiert. Das Add-on ist nicht lizenzpflichtig. Es kann allerdings nur mit der pro-Variante genutzt werden.
+Das "DNS Dokumentation" Add-on wird wie jedes Add-on über das [Admin Center](../administration/admin-center.md) installiert. Das Add-on ist nicht lizenzpflichtig. Es kann allerdings nur mit der pro-Variante genutzt werden.
 
 **Inhaltsverzeichnis**
 
@@ -45,7 +44,7 @@ Das "DNS-Dokumentation" Add-on bringt die folgenden Objekttypen, Kategorien und 
 DNS Server
 ----------
 
-Der ausgelieferte Objekttyp "DNS Server" orientiert sich an einem normalen Server Objekt, wobei noch die zusätzliche Kategorie "DNS Zones" zugewiesen ist.   
+Der ausgelieferte Objekttyp "DNS Server" orientiert sich an einem normalen Server Objekt, wobei noch die zusätzliche Kategorie "DNS Zones" zugewiesen ist.
 In dem Add-on wird ein expliziter Objekttyp genutzt, damit eine problemlose Integration gewährleistet werden kann. Die automatisch zugewiesene Kategorie "DNS Zones" beinhaltet eine Übersicht aller zugewiesener DNS Zonen. (Hierbei handelt es sich um eine rückwärtige Kategorie, weswegen die Informationen hier nicht bearbeitet werden können!)
 
 [![DNS Server](../assets/images/de/i-doit-pro-add-ons/dns-documentation/1-dns.png)](../assets/images/de/i-doit-pro-add-ons/dns-documentation/1-dns.png)
@@ -53,16 +52,16 @@ In dem Add-on wird ein expliziter Objekttyp genutzt, damit eine problemlose Inte
 DNS Zone
 --------
 
-Im neuen Objekttypen "DNS Zone" werden alle Informationen zu den Zonen Einträgen dokumentiert.   
+Im neuen Objekttypen "DNS Zone" werden alle Informationen zu den Zonen Einträgen dokumentiert.
 Hier stehen drei zusätzliche Kategorien zur Verfügung:
 
-*   Autorisierende Namesserver → hier werden die zugehörigen Namesserver eingetragen und können zwischen "Primary" und "Secondary" unterschieden werden
-*   DNS Records → hier können die "einzelnen Zeilen" einer Zonendatei eingetragen werden. Diese können über die mitgelieferten "Types" passend erstellt werden
-*   SOA Record → hier kann der SOA-Record explizit dokumentiert werden.
+*   Autorisierende Namesserver → hier werden die zugehörigen Namesserver eingetragen und können zwischen "Primary" und "Secondary" unterschieden werden
+*   DNS Records → hier können die "einzelnen Zeilen" einer Zonendatei eingetragen werden. Diese können über die mitgelieferten "Types" passend erstellt werden
+*   SOA Record → hier kann der SOA-Record explizit dokumentiert werden.
 
 ### Autorisierende Namsserver
 
-Bei der Kategorie "Autorisierende Namesserver" handelt es sich um eine Multi-Value Kategorie.   
+Bei der Kategorie "Autorisierende Namesserver" handelt es sich um eine Multi-Value Kategorie.
 [![Autorisierende Namsserver](../assets/images/de/i-doit-pro-add-ons/dns-documentation/1-dns.png)](../assets/images/de/i-doit-pro-add-ons/dns-documentation/1-dns.png)
 
 In einem Eintrag werden zwei Informationen dokumentiert:
@@ -72,14 +71,14 @@ In einem Eintrag werden zwei Informationen dokumentiert:
 
 [![DNS Server Objekt](../assets/images/de/i-doit-pro-add-ons/dns-documentation/1-dns.png)](../assets/images/de/i-doit-pro-add-ons/dns-documentation/1-dns.png)
 
-Für das Attribut "DNS Server Objekt" steht ein Objektbrowser zur Verfügung. Hier kann dann der entsprechende DNS Server ausgewählt werden. Zusätzlich kann dann pro Sever auch die entsprechende "Rolle" angegeben werden. Zu Verfügung stehen hier → Primary und Secondary
+Für das Attribut "DNS Server Objekt" steht ein Objektbrowser zur Verfügung. Hier kann dann der entsprechende DNS Server ausgewählt werden. Zusätzlich kann dann pro Sever auch die entsprechende "Rolle" angegeben werden. Zu Verfügung stehen hier → Primary und Secondary
 
 ### DNS Records
 
-Auch bei der Kategorie "DNS Records" handelt es sich um eine Multi-Value Kategorie.  
+Auch bei der Kategorie "DNS Records" handelt es sich um eine Multi-Value Kategorie.
 [![DNS Records](../assets/images/de/i-doit-pro-add-ons/dns-documentation/1-dns.png)](../assets/images/de/i-doit-pro-add-ons/dns-documentation/1-dns.png)
 
-Die Kategorie wurde als Multi-Value Kategorie entworfen, damit eine DNS Datei "Zeile für Zeile" dokumentiert werden kann. Dies ermöglicht eine Übersicht aller Einträge. 
+Die Kategorie wurde als Multi-Value Kategorie entworfen, damit eine DNS Datei "Zeile für Zeile" dokumentiert werden kann. Dies ermöglicht eine Übersicht aller Einträge. 
 
 [![DNS Records](../assets/images/de/i-doit-pro-add-ons/dns-documentation/1-dns.png)](../assets/images/de/i-doit-pro-add-ons/dns-documentation/1-dns.png)
 

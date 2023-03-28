@@ -1,8 +1,10 @@
+# Kategorie felder für Datenarrays
+
 In diesem Artikel werden alle in i-doit verfügbaren [Kategorien und deren Attribute](../../grundlagen/struktur-it-dokumentation.md) aufgeführt. Dies kann sehr hilfreich sein, wenn die [programmierbare Schnittstelle (API)](./index.md) von i-doit eingesetzt wird.
 
 Diesen Inhalt automatisch erstellen
 
-Über den URL-Parameter load=api_properties werden die Kategorie-Tabellen für die derzeit installierte Version von i-doit erstellt. Es muss ein Benutzer angemeldet sein. Beispiel: [https://demo.i-doit.com/?load=api_properties](https://demo.i-doit.com/?load=api_properties)
+Über den URL-Parameter load=api_properties werden die Kategorie-Tabellen für die derzeit installierte Version von i-doit erstellt. Es muss ein Benutzer angemeldet sein. Beispiel:[https://demo.i-doit.com/?load=api_properties](https://demo.i-doit.com/?load=api_properties)
 
 Globale Kategorien (catg)
 -------------------------

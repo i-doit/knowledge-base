@@ -61,38 +61,38 @@ Konfigurieren Sie den Zugriff auf die JSON-RPC-API von i-doit:
 
 | Key | Type | Erforderlich | Erforderlich | Beschreibung |
 | --- | --- | --- | --- | --- |
-| i-doit.url | String | ja  | –   | Einstiegspunkt zur JSON-RPC-API von i-doit (Beispiel: http://demo.i-doit.com/src/jsonrpc.php) |
-| i-doit.key | String | ja  | –   | API key |
-| i-doit.username | String | nein | –   | Benutzername |
-| i-doit.password | String | nein | –   | Passwort |
+| i-doit.url | String | ja  | -   | Einstiegspunkt zur JSON-RPC-API von i-doit (Beispiel: http://demo.i-doit.com/src/jsonrpc.php) |
+| i-doit.key | String | ja  | -   | API key |
+| i-doit.username | String | nein | -   | Benutzername |
+| i-doit.password | String | nein | -   | Passwort |
 | i-doit.language | String | nein | en | Unterstützte Sprache en oder de |
 | i-doit.limitBatchRequests | String | nein | 500 | Wenn Sie Leistungs- oder Speicherprobleme in i-doit haben, verringern Sie diese Einstellung. Der Wert 100 ist ein guter Ausgangspunkt. 0 deaktiviert jede Einschränkung. |
-| i-doit.proxy.type | String | nein | –   | HTTP oder SOCKS5 |
-| i-doit.proxy.host | String | nein | –   | FQDN oder IP Adresse vom Proxy |
-| i-doit.proxy.port | Integer | nein | –   | TCP/IP port |
-| i-doit.proxy.username | String | nein | –   | Proxy Benutzername |
-| i-doit.proxy.password | String | nein | –   | Proxy Passwort |
+| i-doit.proxy.type | String | nein | -   | HTTP oder SOCKS5 |
+| i-doit.proxy.host | String | nein | -   | FQDN oder IP Adresse vom Proxy |
+| i-doit.proxy.port | Integer | nein | -   | TCP/IP port |
+| i-doit.proxy.username | String | nein | -   | Proxy Benutzername |
+| i-doit.proxy.password | String | nein | -   | Proxy Passwort |
 
-### Zugriff zu checkmk’s Web API und Livestatus
+### Zugriff zu checkmk's Web API und Livestatus
 
 Konfigurieren Sie den Zugriff auf die Web-API von checkmk:
 
 | Key | Type | Erforderlich | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
-| check_mk.webAPI.url | String | ja  | –   | Einstiegspunkt zur Web-API von Check\_MK (Beispiel: http://CheckMK-Server/site-name/check_mk/) |
+| check_mk.webAPI.url | String | ja  | -   | Einstiegspunkt zur Web-API von Check\_MK (Beispiel: http://CheckMK-Server/site-name/check_mk/) |
 | check_mk.webAPI.username | String | ja  | automation | Automation Benutzer |
-| check_mk.webAPI.secret | String | ja  | –   | Automation secret |
+| check_mk.webAPI.secret | String | ja  | -   | Automation secret |
 | check_mk.webAPI.effectiveAttributes | Boolean | ja  | true | Abrufen von geerbten Einstellungen aus Regelsätzen, Ordnern usw. |
-| check_mk.webAPI.proxy.type | String | nein | –   | HTTP oder SOCKS5 |
-| check_mk.webAPI.proxy.host | String | nein | –   | FQDN oder IP Adress vom Proxy |
-| check_mk.webAPI.proxy.port | String | nein | –   | TCP/IP port |
-| check_mk.webAPI.proxy.username | String | nein | –   | Benutzername |
-| check_mk.webAPI.proxy.password | String | nein | –   | Passwort |
+| check_mk.webAPI.proxy.type | String | nein | -   | HTTP oder SOCKS5 |
+| check_mk.webAPI.proxy.host | String | nein | -   | FQDN oder IP Adress vom Proxy |
+| check_mk.webAPI.proxy.port | String | nein | -   | TCP/IP port |
+| check_mk.webAPI.proxy.username | String | nein | -   | Benutzername |
+| check_mk.webAPI.proxy.password | String | nein | -   | Passwort |
 | check_mk.livestatus.type | String | nein | tcp | tcp oder socket |
 | check_mk.livestatus.title | String | nein | Check_MK | Eindeutiger Name für diese Livestatus-Instanz |
-| check_mk.livestatus.host | String | nein | –   | Hostname (type tcp only) |
+| check_mk.livestatus.host | String | nein | -   | Hostname (type tcp only) |
 | check_mk.livestatus.port | Integer | nein | 6557 | TCP/IP port (type tcp only) |
-| check_mk.livestatus.path | String | nein | –   | Pfad zum UNIX socket (type socket only) |
+| check_mk.livestatus.path | String | nein | -   | Pfad zum UNIX socket (type socket only) |
 
 Livestatus kann derzeit nicht über TLS verbunden werden.
 
@@ -100,7 +100,7 @@ Livestatus kann derzeit nicht über TLS verbunden werden.
 
 | Key | Type | Erforderlich | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
-| check_mk.version | String | No  | –   | Verwendete Checkmk-Version wird für das Inventory import benötigt Beispiel “2.1” |
+| check_mk.version | String | No  | -   | Verwendete Checkmk-Version wird für das Inventory import benötigt Beispiel "2.1" |
 
 ### Konfiguration command push
 
@@ -111,11 +111,11 @@ Konfigurieren Sie, wie [Daten von i-doit an checkmk übertragen werden sollen](.
 | push.activateChanges | Boolean | nein | false | Aktivieren Sie alle Änderungen mit Ausnahme der ausländischen Änderungen |
 | push.activateForeignChanges | Boolean | nein | false | Aktivieren Sie alle Änderungen, einschließlich fremder Änderungen; push.activateChanges muss true sein |
 | push.autoMatching | String | nein | all | Deaktiviere autoTagging (none), Suchen Sie einfach nach dem ersten Treffer (first) oder versuchen, alle Ausdrücke zu finden (all) |
-| push.autoSite | Boolean | nein | false | In einer Umgebung mit mehreren Standorten wird jeder Host von einem Standort überwacht. Mit dem Wert “location” kann ein Standort automatisch über den Pfad des Objekts location identifiziert werden. |
-| push.autoTagging | Object | nein | –   | Fügen Sie Host-Tags dynamisch auf der Grundlage von Objektinformationen hinzu, die regulären Ausdrücken entsprechen; siehe Abschnitt “Auto tagging” |
+| push.autoSite | Boolean | nein | false | In einer Umgebung mit mehreren Standorten wird jeder Host von einem Standort überwacht. Mit dem Wert "location" kann ein Standort automatisch über den Pfad des Objekts location identifiziert werden. |
+| push.autoTagging | Object | nein | -   | Fügen Sie Host-Tags dynamisch auf der Grundlage von Objektinformationen hinzu, die regulären Ausdrücken entsprechen; siehe Abschnitt "Auto tagging" |
 | push.bakeAgents | Boolean | nein | false | Automatisches Backen von Agenten; keine Verteilung von Agenten |
 | push.contactGroupIdentifier | String | nein | title | Sammeln von Kontaktgruppen nach ihren Objekttiteln (title) oder nach ihren LDAP-DNs (ldap) |
-| push.defaultWATOFolder | String | nein | –   | Hosts in diesen Ordner verschieben, falls nicht festgelegt; leerer Wert bedeutet Hauptordner |
+| push.defaultWATOFolder | String | nein | -   | Hosts in diesen Ordner verschieben, falls nicht festgelegt; leerer Wert bedeutet Hauptordner |
 | push.discoverServices | Boolean | nein | false | Suchen Sie nach Diensten auf neuen/geänderten Hosts |
 
 #### Auto tagging
@@ -164,10 +164,10 @@ Konfigurieren Sie, wie [Daten von Check\_MK zu i-doit ziehen](./checkmk2-bestand
 | pull.createObjects | Boolean | nein | true | Unbekannte Hosts werden als neue Objekte erstellt |
 | pull.createUnknownSoftwareApplications | Boolean | nein | true | Unbekannte Anwendungen werden als neue Objekte erstellt |
 | pull.objectType | String | nein | C__OBJTYPE__SERVER | Setzen der Objekttypkonstante für neue Objekte |
-| pull.updateObjects | String | nein | overwrite or merge | Wenn der Host in i-doit gefunden wird, werden bestehende Kategorieeinträge “überschrieben”, “zusammengelegt” oder “ignoriert” (nur Listenkategorien) |
-| pull.idenfifier | Array | nein | ["title", "hostname", "fqdn", "hostaddress", "alias", "user-defined", "serial"] | Suchen Sie nach diesen Identifiers, um Hosts mit Objekten abzugleichen; siehe Abschnitt “Identifiers”. |
+| pull.updateObjects | String | nein | overwrite or merge | Wenn der Host in i-doit gefunden wird, werden bestehende Kategorieeinträge "überschrieben", "zusammengelegt" oder "ignoriert" (nur Listenkategorien) |
+| pull.idenfifier | Array | nein | ["title", "hostname", "fqdn", "hostaddress", "alias", "user-defined", "serial"] | Suchen Sie nach diesen Identifiers, um Hosts mit Objekten abzugleichen; siehe Abschnitt "Identifiers". |
 | pull.minMatch | Integer | nein | 2 | Objekt und Host müssen sich eine Mindestmenge an identifiers |
-| pull.attributes | Array | nein | _See section “Attributes”_ | Liste der Kategorie Konstanten, die geändert werden sollen; siehe Abschnitt “Attribute”. |
+| pull.attributes | Array | nein | _See section "Attributes"_ | Liste der Kategorie Konstanten, die geändert werden sollen; siehe Abschnitt "Attribute". |
 | pull.enableExport | Boolean | nein | true | Host-Konfiguration in Kategorie schreiben Check_MK Host |
 | pull.enableLivestatus | Boolean | nein | true | Host-Konfiguration in Kategorie schreiben Monitoring |
 | pull.ports | String | nein | physical | Hinzufügen/Aktualisieren physical oder logical Netzwerk ports |
@@ -374,7 +374,7 @@ Sie möchten einige Einstellungen während der Laufzeit ändern? Das können Sie
     idoitcmk push --setting "push.activateChanges=true"
     idoitcmk pull -s ['pull.attributes={"C__CATG__ACCESS": true,"C__CATG__APPLICATION": true,"C__CATG__CONTACT": true,"C__CATG__CPU": true,"C__CATG__DRIVE": true,"C__CATG__GRAPHIC": true,"C__CATG__IP": true,"C__CATG__MEMORY": true,"C__CATG__MODEL": true,"C__CATG__OPERATING_SYSTEM": true,"C__CATG__NETWORK_LOG_PORT": true,"C__CATG__NETWORK_PORT": true}']
 
-Option “Wiederholen” für mehr als eine Einstellung.
+Option "Wiederholen" für mehr als eine Einstellung.
 
 Reihenfolge der Konfigurationseinstellungen ist wichtig
 -------------------------------------------------------

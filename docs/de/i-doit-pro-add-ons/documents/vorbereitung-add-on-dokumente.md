@@ -3,7 +3,8 @@
 Installation/Update
 ===================
 
-Das aktuelle Installationspaket für das Add-on steht im i-doit Kundenportal unter [https://portal.i-doit.com/](https://portal.i-doit.com/) nach dem Erwerb einer gültigen Lizenz zur Verfügung und kann dort heruntergeladen werden. Die Installation selbst erfolgt im i-doit [Admin-Center](../../administration/admin-center.md) im Reiter "Add-ons". Hier wird das Paket vom lokalen System über die Schaltfläche "Durchsuchen" ausgewählt. Nachdem festgelegt wurde, für welche(n) [Mandant(en)](../../administration/mandantenfaehigkeit.md) das Add-on verfügbar gemacht werden soll, kann die Installation über die Schaltfläche "Upload and install" fertiggestellt werden.  
+Das aktuelle Installationspaket für das Add-on steht im i-doit Kundenportal unter [https://portal.i-doit.com/](https://portal.i-doit.com/) nach dem Erwerb einer gültigen Lizenz zur Verfügung und kann dort heruntergeladen werden. Die Installation selbst erfolgt im i-doit [Admin-Center](../../administration/admin-center.md) im Reiter "Add-ons". Hier wird das Paket vom lokalen System über die Schaltfläche "Durchsuchen" ausgewählt. Nachdem festgelegt wurde, für welche(n) [Mandant(en)](../../administration/mandantenfaehigkeit.md) das Add-on verfügbar gemacht werden soll, kann die Installation über die Schaltfläche "Upload and install" fertiggestellt werden.
+
 Nach der Veröffentlichung einer neuen Version kann im Admin-Center auf demselben Weg das aktualisierte Paket, welches ebenfalls im i-doit Kundenportal verfügbar sein wird, hochgeladen und installiert werden.
 
 Rechtevergabe
@@ -33,7 +34,7 @@ Der Zugriff auf die Vorlagen kann mit "Vorlagen in Kategorien" auf Vorlagen aus 
 
 *   **Online Repository**
 
-Um Vorlagen aus dem Online Repository herunterladen zu können wird die Berechtigung “Online Repository” benötigt.
+Um Vorlagen aus dem Online Repository herunterladen zu können wird die Berechtigung "Online Repository" benötigt.
 
 Cache für das Rechtesystem leeren
 

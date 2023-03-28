@@ -18,12 +18,12 @@ QR-Code
 
 [![QR-Code](../assets/images/de/i-doit-pro-add-ons/qr-code-printer/3-qr.png)](../assets/images/de/i-doit-pro-add-ons/qr-code-printer/3-qr.png)
 
-Der QR-Code (englisch Quick Response, „schnelle Antwort“, als Markenbegriff „QR Code“) ist ein zweidimensionaler Code, der von der japanischen Firma Denso Wave im Jahr 1994 entwickelt wurde. Aufgrund einer automatischen Fehlerkorrektur ist dieses Verfahren sehr robust und daher weit verbreitet. Der Vorteil des QR-Code ist das relativ viele Informationen hinterlegt werden können.
+Der QR-Code (englisch Quick Response, "schnelle Antwort", als Markenbegriff "QR Code") ist ein zweidimensionaler Code, der von der japanischen Firma Denso Wave im Jahr 1994 entwickelt wurde. Aufgrund einer automatischen Fehlerkorrektur ist dieses Verfahren sehr robust und daher weit verbreitet. Der Vorteil des QR-Code ist das relativ viele Informationen hinterlegt werden können.
 
 Konfiguration QR-Code oder Barcode
 ----------------------------------
 
-Die Konfiguration innerhalb von i-doit findest du unter  Verwaltung → Systemeinstellungen → Mandanteneinstellungen → QR-Code
+Die Konfiguration innerhalb von i-doit findest du unter Verwaltung → Systemeinstellungen → Mandanteneinstellungen → QR-Code
 
 [![Konfiguration QR-Code oder Barcode](../assets/images/de/i-doit-pro-add-ons/qr-code-printer/4-qr.png)](../assets/images/de/i-doit-pro-add-ons/qr-code-printer/4-qr.png)
 
@@ -32,7 +32,7 @@ Hier kannst du die Anzeige der Codes komplett deaktivieren, aktivieren und wähl
 Konfiguration des QR-Code Inhaltes
 ----------------------------------
 
-Welche Informationen aus i-doit in den QR-Code hinterlegt werden sollen kannst du hier konfigurieren Verwaltung → CMDB Einstellungen → QR-Code
+Welche Informationen aus i-doit in den QR-Code hinterlegt werden sollen kannst du hier konfigurieren Verwaltung → CMDB Einstellungen → QR-Code
 
 [![Konfiguration des QR-Code Inhaltes](../assets/images/de/i-doit-pro-add-ons/qr-code-printer/5-qr.png)](../assets/images/de/i-doit-pro-add-ons/qr-code-printer/5-qr.png)
 
@@ -51,7 +51,7 @@ Wird primäre Zugriffs URL gewählt fließt die im Objekt hinterlegt URL als ein
 QR-Code Verlinkung
 ------------------
 
-Hier kann ausgewählt werden, welche Funktion ausgelöst wird sobald man auf den jeweiligen Code klickt.  
+Hier kann ausgewählt werden, welche Funktion ausgelöst wird sobald man auf den jeweiligen Code klickt.
 Zur Auswahl steht das i-doit [QR-Code Printer](./i-doit-qr-code-printer.md) Tool oder ein POP UP mit der standard Druck Funktion des jeweiligen Betriebssystems.
 
 Text Template
@@ -67,9 +67,9 @@ Hier kannst du eine Bild Datei hochladen und verknüpfen, diese wird dann automa
 i-doit QR-Code Printer
 ----------------------
 
-Mit dem i-doit QR-Code Printer ist es dir möglich, bequem Etiketten auf deinem Etikettendrucker auszudrucken.  
-Hierfür steht dir eine Konfiguration zur Verfügung, sodass die Formate genau deinen Vorgaben entsprechen.  
-Wird der QR-Code beispielsweise mit einem Smartphone oder Tablet gescannt, wirst du auf die Übersichtsseite des gelabelten [Objekts](../glossar.md) weitergeleitet.
+Mit dem i-doit QR-Code Printer ist es dir möglich, bequem Etiketten auf deinem Etikettendrucker auszudrucken.
+Hierfür steht dir eine Konfiguration zur Verfügung, sodass die Formate genau deinen Vorgaben entsprechen.
+Wird der QR-Code beispielsweise mit einem Smartphone oder Tablet gescannt, wirst du auf die Übersichtsseite des gelabelten [Objekts](../glossar.md) weitergeleitet.
 
 Start und Konfiguration
 -----------------------
@@ -80,28 +80,28 @@ Nach dem Start der Anwendung gilt es im ersten Schritt, die Verbindung zu deiner
 
 !!! info "Der i-doit API-Key"
 
-    Den API-Key deiner Installation findest du in i-doit unter **Verwaltung** **→** **Schnittstellen / externe Daten → JSON-RPC API →  Allgemeine Einstellungen**
+    Den API-Key deiner Installation findest du in i-doit unter **Verwaltung** **→** **Schnittstellen / externe Daten → JSON-RPC API →  Allgemeine Einstellungen**
 
 Konfiguration der Druck-Parameter
 ---------------------------------
 
-Unter **File → Options **findest du die Möglichkeit, sämtliche Einstellungen, die für deinen Drucker notwendig sind, durchzuführen.  
-Hier kannst du die Randabstände sowie die Größe des Labels angeben.  
-Weiterhin kannst du die Positionierung des QR-Codes über Abstände in Pixeln und die Größe des QR-Codes definieren.  
-Solltest du eine andere Schriftart, -größe und -ausrichtung verwenden wollen, kannst du die Werte unter **QR-Code Positioning** gemäß deiner Anforderungen anpassen.  
-Auch das Logo für deine Labels kannst du in den Optionen angeben.  
-Wähle unter **Path** das gewünschte Logo in einem üblichen Bildformat aus und positioniere es entsprechend über die Parameter.  
+Unter **File → Options **findest du die Möglichkeit, sämtliche Einstellungen, die für deinen Drucker notwendig sind, durchzuführen.
+Hier kannst du die Randabstände sowie die Größe des Labels angeben.
+Weiterhin kannst du die Positionierung des QR-Codes über Abstände in Pixeln und die Größe des QR-Codes definieren.
+Solltest du eine andere Schriftart, -größe und -ausrichtung verwenden wollen, kannst du die Werte unter **QR-Code Positioning** gemäß deiner Anforderungen anpassen.
+Auch das Logo für deine Labels kannst du in den Optionen angeben.
+Wähle unter **Path** das gewünschte Logo in einem üblichen Bildformat aus und positioniere es entsprechend über die Parameter.
 Weiterhin bietet es sich an den Dymo Label Writer als standard Drucker zu definieren und in diesem das standard Papier Format im Ausdruck auf horizontal umzustellen.
 
 Drucken von Etiketten
 ---------------------
 
-Sobald die Verbindung erfolgreich konfiguriert und die Einstellungen deinen Vorgaben entsprechen, kannst du mit dem Druck deiner Etiketten beginnen.  
-Trage hierzu die Objekt-ID des Objekts ein, zu dem du ein Etikett drucken möchtest.  
+Sobald die Verbindung erfolgreich konfiguriert und die Einstellungen deinen Vorgaben entsprechen, kannst du mit dem Druck deiner Etiketten beginnen.
+Trage hierzu die Objekt-ID des Objekts ein, zu dem du ein Etikett drucken möchtest.
 Nun werden die Inhalte der Barcode Informationen gemäß den Inhalten aus i-doit übernommen. Selbstverständlich kannst du diese Informationen auch jederzeit bearbeiten.
 
-Wenn die Informationen geladen wurden, kannst du den QR-Code über die Icons oder das Kontext-Menü um Punkt **File** entweder drucken, speichern oder exportieren.  
-Der Export erfolgt in das Bildformat .bmp.
+Wenn die Informationen geladen wurden, kannst du den QR-Code über die Icons oder das Kontext-Menü um Punkt **File** entweder drucken, speichern oder exportieren.
+Der Export erfolgt in das Bildformat .bmp.
 
 [![Drucken von Etiketten](../assets/images/de/i-doit-pro-add-ons/qr-code-printer/7-qr.png)](../assets/images/de/i-doit-pro-add-ons/qr-code-printer/7-qr.png)
 

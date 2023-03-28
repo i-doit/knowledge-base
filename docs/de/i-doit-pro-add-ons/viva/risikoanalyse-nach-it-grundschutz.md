@@ -12,6 +12,6 @@ Beim [Zuordnen von Bausteinen](./vorgehensweise-mit-viva.md#bausteine-zuordnen) 
 Gefährdungen bewerten
 ---------------------
 
-Die Bewertung von Gefährdungen (Siehe BSI-Standard 100-3, Kapitel 5.) wird innerhalb der verknüpften Gefährdungen dokumentiert – zu finden unter **Informationsverbund → Zielgruppe → Verknüpfter Baustein → Verknüpfte Gefährdung**.
+Die Bewertung von Gefährdungen (Siehe BSI-Standard 100-3, Kapitel 5.) wird innerhalb der verknüpften Gefährdungen dokumentiert - zu finden unter **Informationsverbund→ Zielgruppe→ Verknüpfter Baustein→ Verknüpfte Gefährdung**.
 
 [![Bewertung einer Gefährdung bearbeiten](../../assets/images/de/i-doit-pro-add-ons/viva/risikoanalyse/2-vra.png)](../../assets/images/de/i-doit-pro-add-ons/viva/risikoanalyse/2-vra.png)

@@ -15,8 +15,8 @@ Für checkmk benötigen Sie:
 
 idoitcmk kann auf jedem POSIX-Betriebssystem laufen. Die folgenden Betriebssysteme werden derzeit unterstützt:
 
-*   Debian GNU/Linux 10 “buster” und 11 “bullseye”
-*   Ubuntu Linux 18.04 LTS “bionic” und 20.04 LTS “focal fossa”
+*   Debian GNU/Linux 10 "buster" und 11 "bullseye"
+*   Ubuntu Linux 18.04 LTS "bionic" und 20.04 LTS "focal fossa"
 *   Red Hat Enterprise Linux (RHEL) 7 und 8
 *   Suse Linux Enterprise Server (SLES) 15, 15 SP1 und 15 SP2
 
@@ -34,13 +34,13 @@ Betriebssystemspezifische Anforderungen
 
 Basierend auf den oben genannten Anforderungen verwenden Sie diese Anweisungen für Ihr Betriebssystem. Für alle Befehle benötigen Sie Superuser-Rechte (root). Sie können sie mit sudo erlangen.
 
-Debian GNU/Linux 10 “buster” und 11 “bullseye”
+Debian GNU/Linux 10 "buster" und 11 "bullseye"
 ----------------------------------------------
 
     sudo apt update
     sudo apt install php7.4-cli php7.4-common php7.4-curl php7.4-json
 
-Ubuntu Linux 18.04 LTS “Bionic Beaver” und 20.04 LTS “focal fossa”
+Ubuntu Linux 18.04 LTS "Bionic Beaver" und 20.04 LTS "focal fossa"
 ------------------------------------------------------------------
 
     sudo apt update
@@ -54,7 +54,7 @@ Für RHEL wird ein 3rd-party repository benötigt [EPEL](https://www.redhat.com/
 Suse Linux Enterprise Server (SLES) 15 SP2
 ------------------------------------------
 
-Vergewissern Sie sich, dass Sie das “Web- und Scripting-Modul” aktiviert haben. Dann:
+Vergewissern Sie sich, dass Sie das "Web- und Scripting-Modul" aktiviert haben. Dann:
 
     zypper refresh
     zypper update

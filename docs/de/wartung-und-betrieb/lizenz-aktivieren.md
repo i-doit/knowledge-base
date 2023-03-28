@@ -12,7 +12,7 @@ Die Lizenzen für dein Unternehmen sind im [Kundenportal](../administration/kund
 
 !!! attention "Kompatibilität der Token"
 
-    License Token können ab **i-doit Version 1.12.2** verwendet werden  
+    License Token können ab **i-doit Version 1.12.2** verwendet werden
     Offline License Key kann erst mit **i-doit Version 1.15** verwendet werden
 
 !!! info "Neuanmeldung nötig"
@@ -24,17 +24,17 @@ Die Lizenzen für dein Unternehmen sind im [Kundenportal](../administration/kund
 
     Für i-doit _pro_ gibt es verschiedene Formen von Lizenzen:
 
-    *   Die **Subskriptionslizenz** für einen einzelnen Mandanten (Hierzu zählen auch **Test-Lizenzen**)  
-    Eine **Subskriptionslizenz** kannst du entweder über das [Admin Center](../administration/admin-center.md) oder über **Verwaltung → Lizenzverwaltung** aktivieren.
-    *   Die **Subskriptionslizenz** für mehrere **Mandanten**   
+    *   Die **Subskriptionslizenz** für einen einzelnen Mandanten (Hierzu zählen auch **Test-Lizenzen**)
+    Eine **Subskriptionslizenz** kannst du entweder über das [Admin Center](../administration/admin-center.md) oder über **Verwaltung → Lizenzverwaltung** aktivieren.
+    *   Die **Subskriptionslizenz** für mehrere **Mandanten**
     Wenn du eine Subskriptionslizenz für mehrere Mandanten verwenden möchtest, kann diese ausschließlich über das Admin Center installiert werden.
     *   Die **Kauflizenz** für einen einzelnen oder mehrere **Mandanten**
-    Die Installation erfolgt für beide Lizenzarten ebenfalls über das [Admin Center](../administration/admin-center.md).
+    Die Installation erfolgt für beide Lizenzarten ebenfalls über das [Admin Center](../administration/admin-center.md).
 
 Installation über das Admin-Center (License Token)
 --------------------------------------------------
 
-Seit März 2022 ist das neue Kundeportal in Betrieb. Dadurch hat sich die Lizenzierung verändert und es wurde ein Lizenz Server erstellt.  
+Seit März 2022 ist das neue Kundeportal in Betrieb. Dadurch hat sich die Lizenzierung verändert und es wurde ein Lizenz Server erstellt.
 Über diesen werden Token erstellt die nun die Lizenz Datei ersetzen.
 
 * * *
@@ -42,19 +42,17 @@ Seit März 2022 ist das neue Kundeportal in Betrieb. Dadurch hat sich die Lizenz
 Welche Methode eine Lizenz einzuspielen sollte ich verwenden?
 -------------------------------------------------------------
 
-*   Wenn Ihr Server, auf dem i-doit installiert ist, **eine** **Internetverbindung** hat, verwenden Sie den [License Token](lizenz-aktivieren.md#license-token-online-aktivieren).  
-    
-*   Wenn Ihr Server, auf dem i-doit installiert ist, **keine** **Internetverbindung** hat, verwenden Sie den License Token und den [Offline License Key](lizenz-aktivieren.md#offline-license-key-aktivieren).
+*   Wenn Ihr Server, auf dem i-doit installiert ist, **eine** **Internetverbindung** hat, verwenden Sie den [License Token](lizenz-aktivieren.md#license-token-online-aktivieren).
 
-  
+*   Wenn Ihr Server, auf dem i-doit installiert ist, **keine** **Internetverbindung** hat, verwenden Sie den License Token und den [Offline License Key](lizenz-aktivieren.md#offline-license-key-aktivieren).
 
 * * *
 
 Wie erhält man den Weblicense Token und wie den Offline License Key String?
 ---------------------------------------------------------------------------
 
-Der **License Token** ist im i-doit pro Kundenportal zu finden.  
-Den Offline License Key können wir abrufen, indem wir den Button “**Show Offline License**”, oben rechts klicken. Dies öffnet ein Popup mit den Offline License Key String.
+Der **License Token** ist im i-doit pro Kundenportal zu finden.
+Den Offline License Key können wir abrufen, indem wir den Button "**Show Offline License**", oben rechts klicken. Dies öffnet ein Popup mit den Offline License Key String.
 
 [![How-to-get-a-token](../assets/images/de/wartung-und-betrieb/activate-license/0.how-to-get-a-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/0.how-to-get-a-token.png)
 
@@ -71,7 +69,7 @@ Den Offline License Key können wir abrufen, indem wir den Button “**Show Offl
 
 [![Admin-Center-login](../assets/images/de/wartung-und-betrieb/activate-license/2.login_admin_center.png)](../assets/images/de/wartung-und-betrieb/activate-license/2.login_admin_center.png)
 
-**Schritt 3:** Nun sind wir im Admin-Center angemeldet und klicken auf den Reiter “Licenses”.
+**Schritt 3:** Nun sind wir im Admin-Center angemeldet und klicken auf den Reiter "Licenses".
 
 [![Admin-Center-home](../assets/images/de/wartung-und-betrieb/activate-license/3.admin-center-home.png)](../assets/images/de/wartung-und-betrieb/activate-license/3.admin-center-home.png)
 
@@ -81,15 +79,13 @@ Den Offline License Key können wir abrufen, indem wir den Button “**Show Offl
 
 \***ist hier noch eine Lizenz Datei eingespielt muss diese gelöscht werden.**
 
-Anschließend klicken wir auf den “**Save & Check**”-Button. Nun wird der License Token vom Lizenzserver geprüft.
+Anschließend klicken wir auf den "**Save & Check**"-Button. Nun wird der License Token vom Lizenzserver geprüft.
 
 **Schritt 5:** Der License Token wurde vom Lizenzserver verifiziert und es werden alle damit verbundenen Lizenzen angezeigt. Fertig.
 
 [![License-save](../assets/images/de/wartung-und-betrieb/activate-license/5.admin-center-licenses-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/5.admin-center-licenses-token.png)
 
 **_Hinweis_**_: Der Weblicense Token ist wie folgt aufgebaut:_ **_2e23aa70df492b7e7b8f321929gcfcde_**
-
-  
 
 * * *
 
@@ -98,7 +94,7 @@ Anschließend klicken wir auf den “**Save & Check**”-Button. Nun wird der Li
 
 Wir führen zuvor die [Schritte 1-4](#license-token-online-aktivieren) durch.
 
-**Schritt 5:** Nun fügen wir den License Token ein. Klicken auf den **“Save”**\-button. Klicken Sie **nicht** auf "Save and Check".
+**Schritt 5:** Nun fügen wir den License Token ein. Klicken auf den **"Save"**\-button. Klicken Sie **nicht** auf "Save and Check".
 
 [![offline-key](../assets/images/de/wartung-und-betrieb/activate-license/6-offline-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/6-offline-token.png)
 
@@ -112,15 +108,13 @@ Wir führen zuvor die [Schritte 1-4](#license-token-online-aktivieren) durch.
 
 [![license-file-insert](../assets/images/de/wartung-und-betrieb/activate-license/9.add-new-license-end.png)](../assets/images/de/wartung-und-betrieb/activate-license/9.add-new-license-end.png)
 
-**Schritt 8:** Klicken Sie nun auf den “**Add license**”-Button.
+**Schritt 8:** Klicken Sie nun auf den "**Add license**"-Button.
 
 [![license-file-add](../assets/images/de/wartung-und-betrieb/activate-license/10.add-new-license-save.png)](../assets/images/de/wartung-und-betrieb/activate-license/10.add-new-license-save.png)
 
 Der License Token wird mit dem Offline License Key verifiziert und es werden alle damit verbundenen Lizenzen angezeigt.
 
 [![license-overview](../assets/images/de/wartung-und-betrieb/activate-license/11.admin-center-licenses-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/11.admin-center-licenses-token.png)
-
-  
 
 * * *
 
@@ -146,12 +140,12 @@ Auf unserer Website kannst du die Ausstellung einer [Lizenz zum 30-tägigen Test
 
 !!! attention "Name der Test-Datenbank"
 
-    Die Test-Lizenz wird stets für den Datenbanknamen **idoit\_data** ausgestellt. Um eine einwandfreie Funktion in der Testperiode sicher zu stellen, darf der Datenbankname bei der Installation nicht geändert werden.
+    Die Test-Lizenz wird stets für den Datenbanknamen **idoit\_data** ausgestellt. Um eine einwandfreie Funktion in der Testperiode sicher zu stellen, darf der Datenbankname bei der Installation nicht geändert werden.
 
 FAQ
 ---
 
-### Die Lizenz ist gültig aber i-doit Zeigt an, dass es nicht lizenziert ist? 
+### Die Lizenz ist gültig aber i-doit Zeigt an, dass es nicht lizenziert ist?
 
 !!! success "Öffne den Reiter Tenant im Admin Center und klicke auf **Save license settings**."
 

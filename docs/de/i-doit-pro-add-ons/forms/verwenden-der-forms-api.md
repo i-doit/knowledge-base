@@ -317,7 +317,7 @@ Besonders wichtig hierbei ist der Knoten root. Dieser stellt den Einstiegspunkt 
                                                                         Text 2
 ```
 
-Im folgenden ist eine vollständige Struktur eines Forms, welches aus zwei Seiten (“SEITE\_1” und “SEITE\_2”) besteht. Dabei beinhaltet jede Seite eine Überschrift und eine
+Im folgenden ist eine vollständige Struktur eines Forms, welches aus zwei Seiten ("SEITE\_1" und "SEITE\_2") besteht. Dabei beinhaltet jede Seite eine Überschrift und eine
 
 Textbeschreibung.
 

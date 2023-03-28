@@ -176,7 +176,7 @@ Neues Objekt erstellen
 ----------------------
 ### cmdb.object.create
 ??? example "cmdb.object.create"
-    
+
     Methode: **cmdb.object.create**
 
     Beispiel
@@ -467,7 +467,7 @@ Datei hochladen und mit Objekt verknüpfen
 
     Kategorien: **Dateien → Dateiversionen** und **Dateien**
 
-    Ziel ist es eine bestehende Datei **test.txt** in i-doit hochzuladen und diese mit einem neuen Server-Objekt zu verknüpfen. Dateien sind in i-doit ebenfalls Objekte. Bevor die Datei hochgeladen werden kann, muss deren Inhalt in **BASE64** enkodiert werden, siehe Attribut **file_content** im 3. Request. Im Folgenden wird das Server-Objekt die ID **1000** und das Datei-Objekt die ID **1001** erhalten.
+    Ziel ist es eine bestehende Datei **test.txt** in i-doit hochzuladen und diese mit einem neuen Server-Objekt zu verknüpfen. Dateien sind in i-doit ebenfalls Objekte. Bevor die Datei hochgeladen werden kann, muss deren Inhalt in **BASE64** enkodiert werden, siehe Attribut **file_content** im 3. Request. Im Folgenden wird das Server-Objekt die ID **1000** und das Datei-Objekt die ID **1001** erhalten.
 
     Server-Objekt erstellen
 
@@ -651,7 +651,7 @@ Modellpflege einer Hardware
 ### cmdb.category.create
 ??? example "cmdb.category.create"
     Methode: **cmdb.category.create**
-    
+
     Kategorie: **Modell**
 
     Die Besonderheit hierbei ist das Attribut-Pärchen **Hersteller** und **Modell**, das sich gegenseitig bedingt. Da es sich bei beiden um [Dialog+-Felder](../../grundlagen/attributfelder.md) handelt, können die Namen als Strings übergeben werden. Existieren passende Einträge noch nicht, werden diese erstellt.

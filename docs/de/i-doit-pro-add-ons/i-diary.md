@@ -3,10 +3,11 @@
 [Über i-diary](#ueber-i-diary)
 =============================
 
-i-diary ist eine Anwendung für Microsoft Windows, die als Add-On für i-doit funktioniert.  
+i-diary ist eine Anwendung für Microsoft Windows, die als Add-On für i-doit funktioniert.
+
 Mit Hilfe des Add-ons sind Systemadministratoren in der Lage, sich einen Überblick über die Änderungen zu verschaffen, die auf dem Server stattgefunden haben.
 
-Dies ist möglich, indem sie die Anwendung “diary” direkt auf einem Windows-Server verwenden, ohne sich bei i-doit anmelden und nach den Informationen suchen zu müssen.
+Dies ist möglich, indem sie die Anwendung  diary  direkt auf einem Windows-Server verwenden, ohne sich bei i-doit anmelden und nach den Informationen suchen zu müssen.
 
 [Dokumentation](#dokumentation)
 ===============================
@@ -60,7 +61,7 @@ Die folgenden Anforderungen sind vor der Installation oder Verwendung des i-diar
 [Installation](#installation)
 =============================
 
-Das Add-on wird über das [Kundenportal](../administration/kundenportal.md) heruntergeladen  
+Das Add-on wird über das [Kundenportal](../administration/kundenportal.md) heruntergeladen
 Das Add-on muss zuvor über das [Admin Center](../administration/admin-center.md) installiert werden.
 
 * * *
@@ -68,9 +69,9 @@ Das Add-on muss zuvor über das [Admin Center](../administration/admin-center.md
 [Updates](#updates)
 ===================
 
-i-diary wird wie andere Add-on auch über das [Admin Center](../administration/admin-center.md) aktualisiert.  
-Die neue i-diary.exe muss dann durch die aktualisierte i-diary.exe ersetzt werden.  
-Diese befindet sich in der heruntergeladenen ZIP idoit-i_diary-x.x.x.zip im Pfad  
+i-diary wird wie andere Add-on auch über das [Admin Center](../administration/admin-center.md) aktualisiert.
+Die neue i-diary.exe muss dann durch die aktualisierte i-diary.exe ersetzt werden.
+Diese befindet sich in der heruntergeladenen ZIP idoit-i_diary-x.x.x.zip im Pfad
 \idoit-i-diary-1.1\src\classes\modules\syneticsgmbh_idoit\i-diary
 
 * * *
@@ -87,21 +88,18 @@ Dies sind die folgenden Fälle:
 
 *   Wenn die Konfigurationsdatei leer ist oder noch nicht existiert, wird die GUI-Konfiguration automatisch beim Start der Anwendung geöffnet.
 
-  
-
 [![Konfiguration](../assets/images/de/i-doit-pro-add-ons/i-diary/1-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/1-id.png)
 
 [![Konfiguration](../assets/images/de/i-doit-pro-add-ons/i-diary/2-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/2-id.png)
 
 
 *   Wenn der Benutzer etwas in der GUI-Konfiguration ändert, wird die Änderung sofort geprüft und gespeichert, wenn sie gültig ist.
-    
-*   Wenn der Benutzer nicht ‘[http://](http://)’ angibt, wird ‘[http://](http://)’ für die Prüfung verwendet und gespeichert.
-    
-*   Wenn der Benutzer ‘src/jsonrpc.php’ als Suffix im URL-Feld angibt, wird der Suffix für die Prüfung ignoriert und ohne diese gespeichert.
-    
-*   Der Benutzer kann die Verbindung manuell testen, indem er auf die Schaltfläche ‘Test the connection’ klickt.
-    
+
+*   Wenn der Benutzer nicht `[http://](http://)` angibt, wird `[http://](http://)` für die Prüfung verwendet und gespeichert.
+
+*   Wenn der Benutzer `src/jsonrpc.php` als Suffix im URL-Feld angibt, wird der Suffix für die Prüfung ignoriert und ohne diese gespeichert.
+
+*   Der Benutzer kann die Verbindung manuell testen, indem er auf die Schaltfläche `Test the connection` klickt.
 
 * * *
 
@@ -114,11 +112,10 @@ Dies sind die folgenden Fälle:
 Der Benutzer kann einen neuen Eintrag anlegen, dazu werden die folgenden Schritte durchgeführt:
 
 *   Autor, Datum und Eintrag müssen ausgefüllt und gültig sein.
-    
+
 *   Bei weiteren Einträgen bleibt die Auswahl von Autor und Datum bestehen, bis die Anwendung geschlossen wird.
-    
+
 *   Wenn der Benutzer einen Eintrag speichert, wird die Liste der Einträge aktualisiert.
-    
 
 Der Benutzer kann außerdem einen Eintrag aktualisieren. Dazu muss das Stift Icon neben dem jeweiligen Eintrag angeklickt werden. Nachdem der Eintrag bearbeitet wurde wird dieser durch den Klick auf Update aktualisiert.
 
@@ -140,11 +137,11 @@ Wenn in den Einstellungen kein Host gespeichert ist, sollte ein Host automatisch
 -----------------------------------------------------------------------------------------------------------------------
 
 *   Wenn genau ein Objekt gefunden wird, wird seine ID gespeichert.
-    
+
 *   Werden mehrere Objekte mit dem gleichen Namen gefunden, kann der Benutzer aus diesen Objekten auswählen.
-    
+
 *   Der Benutzer kann die Auswahl abbrechen, um den Host manuell auszuwählen.
-    
+
 
 [Host manuell auswählen](#host-manuell-auswaehlen)
 -------------------------------------------------
@@ -155,22 +152,20 @@ Wenn in den Einstellungen kein Host gespeichert ist, sollte ein Host automatisch
 
 [![Host manuell auswählen](../assets/images/de/i-doit-pro-add-ons/i-diary/5-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/5-id.png)
 
-*   Der Benutzer wählt einen Objekttitel aus einer Liste aus. Es werden nur Objekte angezeigt, deren Objekttypen der Kategorie “Diary” zugeordnet sind. Die Liste ist nach Objekttypen aufgeteilt. Als Listenüberschrift wird der übersetzte Titel des jeweiligen Objekttyps angezeigt. Wenn der Benutzer ein Objekt aus der Liste auswählt, wird dessen ID gespeichert.
-    
+*   Der Benutzer wählt einen Objekttitel aus einer Liste aus. Es werden nur Objekte angezeigt, deren Objekttypen der Kategorie  Diary  zugeordnet sind. Die Liste ist nach Objekttypen aufgeteilt. Als Listenüberschrift wird der übersetzte Titel des jeweiligen Objekttyps angezeigt. Wenn der Benutzer ein Objekt aus der Liste auswählt, wird dessen ID gespeichert.
+
 *   Der Benutzer gibt die Objekt-ID in eine Suchmaske ein. Die Anwendung gibt eine Rückmeldung, ob das Objekt gefunden wurde und speichert seine ID.
-    
+
 *   Der Benutzer gibt den Objekttitel in eine Suchmaske ein. Die Anwendung gibt eine Rückmeldung, ob das Objekt gefunden wurde und speichert seine ID.
-    
+
 *   Wenn mehrere Objekte mit demselben Namen gefunden werden, kann der Benutzer aus dieser Liste auswählen.
-    
 
 [Der Host wird in der Konfiguration gespeichert](#der-host-wird-in-der-konfiguration-gespeichert)
 -------------------------------------------------------------------------------------------------
 
 *   Wenn die Anwendung gestartet wird, wird die Konfigurationsdatei gelesen, wenn eine Konfigurationsdatei vorhanden ist.
-    
+
 *   Wenn eine Objekt-ID gespeichert ist, erhält die Anwendung den entsprechenden Titel, um sie anzuzeigen.
-    
 
 * * *
 
@@ -186,7 +181,7 @@ Wenn kein Autor gespeichert wurde und der Benutzer die Anwendung startet, versuc
 
 Dies geschieht durch den folgenden Prozess:
 
-Wenn in den Einstellungen ein “Benutzername” angegeben wird, prüft die Anwendung, ob die Person mit einem Personen-Objekt in i-doit übereinstimmt. Ist dies der Fall, wird die ID des Autors gespeichert.
+Wenn in den Einstellungen ein  Benutzername  angegeben wird, prüft die Anwendung, ob die Person mit einem Personen-Objekt in i-doit übereinstimmt. Ist dies der Fall, wird die ID des Autors gespeichert.
 
 [Den Autor manuell auswählen](#den-autor-manuell-auswaehlen)
 -----------------------------------------------------------
@@ -197,15 +192,15 @@ Der Benutzer kann einen Autor für einen neuen Eintrag mit den folgenden Optione
 
 [![Den Autor manuell auswählen](../assets/images/de/i-doit-pro-add-ons/i-diary/6-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/6-id.png)
 
-*   Der Benutzer kann eine Person als Autor aus einer durchsuchbaren Liste auswählen. Diese Liste ist unterteilt in “Kontakte” (Objektbeziehungen aus der Kategorie “Kontaktzuordnung”) und “Personen” (Objekte vom Typ “Personen”).
-    
+*   Der Benutzer kann eine Person als Autor aus einer durchsuchbaren Liste auswählen. Diese Liste ist unterteilt in  Kontakte  (Objektbeziehungen aus der Kategorie  Kontaktzuordnung ) und  Personen  (Objekte vom Typ  Personen ).
+
 *   Die Titel der Objekte werden in der Liste angezeigt. Wenn der Benutzer ein Objekt auswählt, wird dessen ID gespeichert.
 
 [Autor wird in der Konfiguration gespeichert](#autor-wird-in-der-konfiguration-gespeichert)
 -------------------------------------------------------------------------------------------
 
 *   Wenn der Benutzer die Anwendung startet, ist der bereits gespeicherte Autor für einen neuen Eintrag vorausgewählt.
-    
+
 *   Die Anwendung prüft, ob die Objekt-ID in der Konfigurationsdatei gültig ist. Anhand der ID ruft die Anwendung den Objekttitel ab, um ihn anzuzeigen.
 
 [Object Details](#object-details)
