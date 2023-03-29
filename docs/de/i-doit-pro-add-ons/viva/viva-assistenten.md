@@ -6,14 +6,14 @@ Während im Kapitel zur _[Vorgehensweise mit VIVA](./vorgehensweise-mit-viva.md)
 
 Zu finden sind die Assistenten unterhalb eines jeden Informationsverbunds als Buttons in den jeweiligen Aktions- und Navigationsleisten. Beim Aufruf eines Assistenten öffnet sich ein Popup, welches sich nahtlos in die Oberfläche von VIVA einfügt. Die Assistenten arbeiten allesamt nach einem ähnlichen Schema:
 
-1.  Daten aus VIVA und/oder der IT-Dokumentation von i-doit analysieren
+1.  Daten aus VIVA und/oder derIT-Dokumentation von i-doit analysieren
 2.  Vorschläge zusammenstellen und visuell aufbereiten
 3.  Vorschläge nachbearbeiten durch den Anwender
 4.  Vorschläge speichern oder verwerfen durch den Anwender
 
 Die Assistenten unterstützen einen umfangreichen Prozess, der sich durch einen wesentlichen Teil der Dokumentation hindurchzieht. Dieser Prozess wird als mögliche Vorgehensweise im Kapitel _[Beispiel eines möglichen Arbeitsablaufs](./arbeitsablauf-mit-viva.md)_ erläutert.
 
-Im Folgenden wird auf die spezifischen Eigenschaften der verschiedenen Assistenten eingegangen. Diese werden in [_Zielgruppen-Assistenten_](#zielgruppen-assistenten) und [_Schutzbedarfs-Assistenten_](#VIVAAssistenten-Schutzbedarfs-Assistenten) unterteilt.
+Im Folgenden wird auf die spezifischen Eigenschaften der verschiedenen Assistenten eingegangen. Diese werden in[_Zielgruppen-Assistenten_](#zielgruppen-assistenten) und [_Schutzbedarfs-Assistenten_](#VIVAAssistenten-Schutzbedarfs-Assistenten) unterteilt.
 
 Zielgruppen-Assistenten
 -----------------------
@@ -31,7 +31,7 @@ Diese Art von Assistenten schlägt geeignete [Zielgruppen](./vorgehensweise-mit-
 
 ### IT-Service-Assistent (Schicht 5 _Anwendungen_)
 
-Dieser Assistent analysiert die CIs vom Typ _Service_ in der IT-Dokumentation von i-doit, genauer: die Kategorie _Service-Komponenten_. Die Komponenten werden unter verschiedenen Gesichtspunkten analysiert und gegebenenfalls in die Liste der vorzuschlagenen Zielobjekte aufgenommen. Dabei wird rekursiv vorgegangen. Folgende CIs werden vorgeschlagen, wenn sie gefunden werden:
+Dieser Assistent analysiert die CIs vom Typ _Service_ in derIT-Dokumentation von i-doit, genauer: die Kategorie _Service-Komponenten_. Die Komponenten werden unter verschiedenen Gesichtspunkten analysiert und gegebenenfalls in die Liste der vorzuschlagenen Zielobjekte aufgenommen. Dabei wird rekursiv vorgegangen. Folgende CIs werden vorgeschlagen, wenn sie gefunden werden:
 
 *   Der Service selbst
 *   Untergeordnete Services; deren Komponenten werden wiederum analysiert
@@ -42,7 +42,7 @@ Dieser Assistent analysiert die CIs vom Typ _Service_ in der IT-Dokumentation v
 *   Mitglieder von Cluster
 *   Clusterdienste
 
-Auch wenn keine passenden CIs identifiziert werden, wird aus dem Service ein Vorschlag generiert. Das Gesamtergebnis der Analyse – und damit der Vorschlag – besteht aus einer Liste von Services, deren Namen (bestehend aus dem Objekt-Titel) für die Gruppen-Bezeichner verwendet werden, und dazu optional passende CIs, die den Kriterien der Schicht entsprechen sprich eine Anwendung im weiteren Sinne darstellen.
+Auch wenn keine passenden CIs identifiziert werden, wird aus dem Service ein Vorschlag generiert. Das Gesamtergebnis der Analyse - und damit der Vorschlag - besteht aus einer Liste von Services, deren Namen (bestehend aus dem Objekt-Titel) für die Gruppen-Bezeichner verwendet werden, und dazu optional passende CIs, die den Kriterien der Schicht entsprechen sprich eine Anwendung im weiteren Sinne darstellen.
 
 [![IT-Service-Assistent (Schicht 5 Anwendungen)](../../assets/images/de/i-doit-pro-add-ons/viva/assistenten/2-va.png)](../../assets/images/de/i-doit-pro-add-ons/viva/assistenten/2-va.png)
 

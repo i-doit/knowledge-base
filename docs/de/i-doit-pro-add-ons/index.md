@@ -39,8 +39,8 @@ Download
 
 Herunterladen
 
-Add-ons sind als installierbare ZIP-Dateien erhältlich. Diese werden über das [Admin Center](../administration/admin-center.md#add-ons) installiert.  
-Im [Kundenportal](../administration/kundenportal.md) können Kunden Add-ons herunterladen. Lizenzierungspflichtige Add-ons (siehe oben) werden im Kaufprozess in Ihrem Kundenkonto zum Download freigeschaltet.  
+Add-ons sind als installierbare ZIP-Dateien erhältlich. Diese werden über das [Admin Center](../administration/admin-center.md#add-ons) installiert.
+Im [Kundenportal](../administration/kundenportal.md) können Kunden Add-ons herunterladen. Lizenzierungspflichtige Add-ons (siehe oben) werden im Kaufprozess in Ihrem Kundenkonto zum Download freigeschaltet.
 Wenn Sie irgendwelche Add-ons vermissen, die Sie gekauft haben, kontaktieren Sie bitte [help@i-doit.com](mailto:help@i-doit.com) für Hilfe.
 
 Evaluierungsbenutzer können alle kostenlosen und kommerziellen Add-ons im Evaluierungsprozess herunterladen. Für alle Add-ons gibt es auf Ihrer persönlichen Evaluierungsseite ([https://portal.i-doit.com](https://portal.i-doit.com)) Download-Buttons. Alle lizenzpflichtigen Add-ons sind in der Evaluierungslizenz lizenziert.
@@ -52,7 +52,7 @@ Alle Module und Erweiterungen werden über das [Admin Center](../administration/
 
 [![Installation](../assets/images/de/i-doit-pro-add-ons/1-i-doit-add-ons.png)](../assets/images/de/i-doit-pro-add-ons/1-i-doit-add-ons.png)
 
-Der Button öffnet einen neuen Dialog. Unter **Tenant** wird festgelegt, ob das Add-on in allen [Mandanten](../administration/mandantenfaehigkeit.md) (**All tenants**) oder nur in einem einzelnen installiert werden soll. Über den Button **Durchsuchen…** unter **ZIP File** wird das Add-on ausgewählt. Nach einem Klick auf den Button **Upload and install** wird die ZIP-Datei auf den Host von i-doit hochgeladen und installiert.
+Der Button öffnet einen neuen Dialog. Unter **Tenant** wird festgelegt, ob das Add-on in allen [Mandanten](../administration/mandantenfaehigkeit.md) (**All tenants**) oder nur in einem einzelnen installiert werden soll. Über den Button **Durchsuchen…** unter **ZIP File** wird das Add-on ausgewählt. Nach einem Klick auf den Button **Upload and install** wird die ZIP-Datei auf den Host von i-doit hochgeladen und installiert.
 
 [![Upload and install](../assets/images/de/i-doit-pro-add-ons/2-i-doit-add-ons.png)](../assets/images/de/i-doit-pro-add-ons/2-i-doit-add-ons.png)
 

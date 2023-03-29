@@ -4,8 +4,10 @@
 
 [![Übersicht der Vorlagen](../../assets/images/de/i-doit-pro-add-ons/documents/vorlagen/0-vor.png)](../../assets/images/de/i-doit-pro-add-ons/documents/vorlagen/0-vor.png)
 
-Die Übersicht der Dokumentenvorlagen erlaubt die Verwaltung der bestehenden Vorlagen. Vorgänge wie das Erstellen, Bearbeiten, Löschen und das Importieren aus Dateien ist hier möglich.  
-Weiterhin ist es möglich, Dokumentenkategorien zu erzeugen um die einzelnen Dokumente und Vorlagen thematisch zu gruppieren. Die Schaltfläche “Kategorien bearbeiten” leitet weiter in den Dialog-Admin, wo die Kategorien der Auswahl hinzugefügt werden können.  
+Die Übersicht der Dokumentenvorlagen erlaubt die Verwaltung der bestehenden Vorlagen. Vorgänge wie das Erstellen, Bearbeiten, Löschen und das Importieren aus Dateien ist hier möglich.
+
+Weiterhin ist es möglich, Dokumentenkategorien zu erzeugen um die einzelnen Dokumente und Vorlagen thematisch zu gruppieren. Die Schaltfläche "Kategorien bearbeiten" leitet weiter in den Dialog-Admin, wo die Kategorien der Auswahl hinzugefügt werden können.
+
 Auf diesem Weg können Dokumente beispielsweise nach Art (Protokolle, Handbücher, …) Abteilung, Sprache oder eigenen Kriterien zusammengefasst werden.
 
 Neue Dokumentenvorlage erstellen
@@ -37,12 +39,14 @@ Die Fußzeile ist am Ende jeder Seite zu finden. Auch hier kann zusätzlicher In
 
 *   **Optionen**
 
-Die Optionen erlauben es festzulegen, ob ein Deckblatt, ein Inhaltsverzeichnis und (Kapitel-)Überschriften verwendet werden sollen. Außerdem ist es möglich Vorgaben zum Format von Überschriften zu machen.  
+Die Optionen erlauben es festzulegen, ob ein Deckblatt, ein Inhaltsverzeichnis und (Kapitel-)Überschriften verwendet werden sollen. Außerdem ist es möglich Vorgaben zum Format von Überschriften zu machen.
+
 Im unteren Bereich der Optionen können weitere Einstellungen für die PDF-Dokumente vorgenommen werden. Hierzu zählen unter anderem die Randabstände und die Seitenausrichtung. Falls nötig können ebenfalls eigene Schriftarten hochgeladen und hinzugefügt werden. Auch die Verwendung von Hintergrundbildern für das Deckblatt, das Inhaltsverzeichnis oder alle weiteren Seiten ist hier möglich.
 
 *   **Benutzerdefinierte Felder**
 
-Um das Dokument um weitere Felder zu erweitern ist es möglich unter "Benutzerdefinierte Felder" eigene Felder zu definieren, die später in das Dokument eingebunden werden können. Für diese Felder stehen einige Feldtypen zur Verfügung, die den Inhalt vorgeben. Über die Schaltfläche "Neues Feld hinzufügen" können die benötigten Felder ergänzt werden.  
+Um das Dokument um weitere Felder zu erweitern ist es möglich unter "Benutzerdefinierte Felder" eigene Felder zu definieren, die später in das Dokument eingebunden werden können. Für diese Felder stehen einige Feldtypen zur Verfügung, die den Inhalt vorgeben. Über die Schaltfläche "Neues Feld hinzufügen" können die benötigten Felder ergänzt werden.
+
 Um die benutzerdefinierten Felder im Dokument selbst einzubinden, muss dieses einmalig [erstellt werden](./dokumenterstellung.md). Anschließend stehen alle Felder in der Bearbeitungsansicht des Dokuments zur Verfügung und können dort befüllt werden. Damit die Angaben auch im Dokument (PDF/HTML) gefüllt werden, muss eine neue Revision erzeugt werden. Wenn die Angaben in den Feldern aktualisiert wurden ist es ebenfalls nötig, eine neue Revision zu erstellen.
 
 Kapitel im Dokument erstellen
@@ -76,8 +80,6 @@ Im Eingabefeld kann der Inhalt des Kapitels über den WYSIWYG Editor eingefügt 
 | [![icon](../../assets/images/de/i-doit-pro-add-ons/documents/vorlagen/10-vor.png)](../../assets/images/de/i-doit-pro-add-ons/documents/vorlagen/10-vor.png) | Auch eine farbliche Anpassung der des Texts sowie des Texthintergrunds ist über den WYSIWYG Editor möglich. |
 | [![icon](../../assets/images/de/i-doit-pro-add-ons/documents/vorlagen/11-vor.png)](../../assets/images/de/i-doit-pro-add-ons/documents/vorlagen/11-vor.png)| Inhalte aus der Dokumentation können dynamisch über die einzelnen [Platzhalter](./platzhalter-im-add-on-dokumente.md) eingebunden werden. Umfangreichere Details zu den Platzhaltern und wie diese verwendet werden können sind [im entsprechenden Kapitel](./platzhalter-im-add-on-dokumente.md) zu finden. |
 | [![icon](../../assets/images/de/i-doit-pro-add-ons/documents/vorlagen/12-vor.png)](../../assets/images/de/i-doit-pro-add-ons/documents/vorlagen/12-vor.png) | Zuletzt ist es noch möglich einen automatischen Zeilenumbruch über das hierfür vorgesehene Icon einzubringen. |
-
-  
 
 Vorlagen exportieren und importieren
 ------------------------------------

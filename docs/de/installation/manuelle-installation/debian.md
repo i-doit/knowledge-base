@@ -6,16 +6,16 @@
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
-Systemvoraussetzungen  
+Systemvoraussetzungen
 ------------------------
 
-Es gelten die allgemeinen [Systemvoraussetzungen](../systemvoraussetzungen.md).  
+Es gelten die allgemeinen [Systemvoraussetzungen](../systemvoraussetzungen.md).
 
 Dieser Artikel bezieht sich auf [**Debian GNU/Linux 11 "bullseye"**](https://debian.org/). Abweichende Installationsanweisungen für Version 8 "jessie" befinden sich unterhalb dieses Artikels. Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
     cat /etc/debian_version
 
-Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen:  
+Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen:
 
     uname -m
 
@@ -94,13 +94,13 @@ In dieser Datei wird die neue VHost-Konfiguration gespeichert:
 
     <VirtualHost *:80>
             ServerAdmin i-doit@example.net
-    
+
             DocumentRoot /var/www/html/
             <Directory /var/www/html/>
                     AllowOverride All
                     Require all granted
             </Directory>
-    
+
             LogLevel warn
             ErrorLog ${APACHE_LOG_DIR}/error.log
             CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -108,7 +108,7 @@ In dieser Datei wird die neue VHost-Konfiguration gespeichert:
 
 i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Damit diese Einstellungen berücksichtigt werden, ist die Einstellung **AllowOverride All** nötig.
 
-Im nächsten Schritt werden der neue VHost und das nötige Apache-Modul **rewrite** aktiviert sowie der Apache Webserver neu gestartet:
+Im nächsten Schritt werden der neue VHost und das nötige Apache-Modul **rewrite** aktiviert sowie der Apache Webserver neu gestartet:
 
     sudo a2ensite i-doit
     sudo a2enmod rewrite
@@ -141,7 +141,7 @@ Nutzung von MariaDB 10.3 und abwärts
 Bis MariaDB Version 10.3 wird das UPDATE-Statement in der user-Tabelle unterstützt.
 
     UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
-  
+
 Anschließend wird MariaDB gestoppt. Wichtig ist hierbei das Verschieben von nicht benötigten Dateien (andernfalls droht ein signifikanter Performance-Verlust):
 
     mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
@@ -199,7 +199,7 @@ Diese Datei enthält die neuen Konfigurationseinstellungen. Für eine optimale P
     #table_open_cache_instances = 4
 
     innodb_stats_on_metadata = 0
-    
+
     sql-mode = ""
 
 Abschließend wird MariaDB gestartet:
@@ -217,39 +217,39 @@ Das Betriebssystem ist nun vorbereitet, sodass i-doit installiert werden kann:
 
     Wer Version 8 "jessie" einsetzt, muss   einige Punkte beachten. Dies betrifft vor allem abweichende Paket-Namen und Dateipfade.
 
-    #### Installation der Pakete    
+    #### Installation der Pakete
 
-        sudo apt update 
+        sudo apt update
         sudo apt install apache2 libapache  2-mod-php5 php5 php5-cli php5-common php5-curl php5-gd php5-json php5-ldap php5-mbstring php5-mcrypt php5-mysqlnd php5-pgsql mariadb-server mariadb-client php5-memcache memcached unzip
 
-    #### PHP    
+    #### PHP
 
         sudo nano /etc/php5/mods-available  /i-doit.ini
 
-    # Einstellungen einfügen    
+    # Einstellungen einfügen
 
-        sudo php5enmod i-doit   
-        sudo php5enmod memcache 
+        sudo php5enmod i-doit
+        sudo php5enmod memcache
         sudo systemctl restart apache2.ser  vice
 
-    #### Apache Webserver   
+    #### Apache Webserver
 
-        sudo a2dissite 000-default  
+        sudo a2dissite 000-default
         sudo nano /etc/apache2/sites-avail  able/i-doit.conf
 
-    # Einstellungen einfügen    
+    # Einstellungen einfügen
 
-        sudo a2ensite i-doit    
-        sudo a2enmod rewrite    
+        sudo a2ensite i-doit
+        sudo a2enmod rewrite
         sudo systemctl restart apache2.ser  vice
 
-    #### MariaDB    
+    #### MariaDB
 
         mysql -uroot -p -e"SET GLOBAL inno  db_fast_shutdown = 0"
-        sudo systemctl stop mysql.service   
+        sudo systemctl stop mysql.service
         sudo mv /var/lib/mysql/ib_logfile[  01] /tmp
         sudo nano /etc/mysql/conf.d/i-doit  .cnf
 
-    # Einstellungen einfügen    
+    # Einstellungen einfügen
 
-        sudo systemctl start mysql.service  
+        sudo systemctl start mysql.service

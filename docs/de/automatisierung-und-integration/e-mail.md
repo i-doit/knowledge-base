@@ -6,7 +6,7 @@ _i-doit_ ist in der Lage, beim Eintreten verschiedener Events oder bei Abfragen 
 
     Die Konfiguration ist unbedingt notwendig, wenn der [CLI](../automatisierung-und-integration/cli/index.md) mit den [Benachrichtigungen](../auswertungen/benachrichtigungen.md) oder Workflows verwendet wird. Es können sonst keine E-Mails versandt werden!
 
-Die Einbindung eines Mailservers ist in der **Verwaltung** unter den **Systemeinstellungen** möglich. Dort steht eine Konfigurationsmaske mit folgenden Feldern zur Verfügung:
+Die Einbindung eines Mailservers ist in der **Verwaltung** unter den **Systemeinstellungen** möglich. Dort steht eine Konfigurationsmaske mit folgenden Feldern zur Verfügung:
 
 | Feld | Beschreibung |
 | --- | --- |

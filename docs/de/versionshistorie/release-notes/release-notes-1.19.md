@@ -38,26 +38,20 @@ Alongside i-doit pro 1.19, we will also release new versions of the following **
 Important update notes
 ----------------------
 
-*   With i-doit pro 1.19, **PHP 7.3** is **no longer supported**. Please ensure to upgrade to **PHP 7.4** first before updating to i-doit pro 1.19. Do **not** upgrade to **PHP 8.0** as long as you are using **i-doit pro < 1.19**.  
-    **After** the update of i-doit pro 1.19, you are free to upgrade PHP to 8.0 which is also **highly recommended**.  
-      
-    
-*   **Before activating** the feature to log the **last login of a user**, please check whether this is compatible with the **data protection agreements** of your company and country. Contact your data privacy expert first if you are not sure about this.  
-      
-    
-*   If you want to use the **new icons** for object types after updating to i-doit pro 1.19, you can activate them manually in your i-doit **administration** under System tools > Cache / Database.  
-      
-    
-*   The following **Partner Add-ons** need to be updated **before** the i-doit 1.19 update (If these version requirements are not matched, the i-doit update cannot be performed):  
+*   With i-doit pro 1.19, **PHP 7.3** is **no longer supported**. Please ensure to upgrade to **PHP 7.4** first before updating to i-doit pro 1.19. Do **not** upgrade to **PHP 8.0** as long as you are using **i-doit pro < 1.19**.
+    **After** the update of i-doit pro 1.19, you are free to upgrade PHP to 8.0 which is also **highly recommended**.
+
+*   **Before activating** the feature to log the **last login of a user**, please check whether this is compatible with the **data protection agreements** of your company and country. Contact your data privacy expert first if you are not sure about this.
+
+*   If you want to use the **new icons** for object types after updating to i-doit pro 1.19, you can activate them manually in your i-doit **administration** under System tools > Cache / Database.
+
+*   The following **Partner Add-ons** need to be updated **before** the i-doit 1.19 update (If these version requirements are not matched, the i-doit update cannot be performed):
     *   **[ISMS](../../i-doit-pro-add-ons/isms.md)** needs to be updated to version **1.5.2 or higher**
     *   **[VIVA 2](../../i-doit-pro-add-ons/viva2.md)** needs to be updated to version **3.2.1 or higher**
     *   **Privacy** needs to be updated to version **1.1 or higher**
-        
     *   **Label** needs to be updated to version **0**.5** or higher**
-    *   **Disposal** needs to be updated to version  **1.1.2** **or higher**
-        
+    *   **Disposal** needs to be updated to version **1.1.2** **or higher**
     *   **Inheritance** needs to be updated to version **1.3.7** **or higher**
-        
 
 System requirements
 -------------------

@@ -1,11 +1,12 @@
 # Attribut definition
 
-Die zentrale Funktion einer CMDB wie i-doit ist das Dokumentieren. Zusammenhängende Datensätze werden hierbei in Kategorien gruppiert. Jede Kategorie wird wiederum durch ihre Attribute ausgeprägt. Ein Attribut repräsentiert einen pflegbaren Datensatz, wie zum Beispiel ein Text-, Dialog- oder Objektbrowser-Feld. Diese Attribute werden üblicherweise über die Oberfläche im Browser eingetragen und gelesen. Darüber hinaus ist es möglich weitere i-doit Funktionen zu nutzen, um die Dokumentation in verschiedenster Form zu verwenden - sei es in Reports, der API, dem Dokumente Add-on oder sonstigen Exports.  
+Die zentrale Funktion einer CMDB wie i-doit ist das Dokumentieren. Zusammenhängende Datensätze werden hierbei in Kategorien gruppiert. Jede Kategorie wird wiederum durch ihre Attribute ausgeprägt. Ein Attribut repräsentiert einen pflegbaren Datensatz, wie zum Beispiel ein Text-, Dialog- oder Objektbrowser-Feld. Diese Attribute werden üblicherweise über die Oberfläche im Browser eingetragen und gelesen. Darüber hinaus ist es möglich weitere i-doit Funktionen zu nutzen, um die Dokumentation in verschiedenster Form zu verwenden - sei es in Reports, der API, dem Dokumente Add-on oder sonstigen Exports.
+
 Damit die Attribute und deren Daten in den verschiedenen Funktionen genutzt werden können, müssen diese technisch definiert sein. Die verschiedenen Optionen sind in diesem Artikel beschrieben.
 
 Die Definition eines Attributes wird vom i-doit System benötigt, um das entsprechende Attribut in die Kernfunktionen zu integrieren. Um ein Attribut zum Beispiel in der Listeneditierung, der API sowie unseren Importen zu nutzen ist eine korrekte und ausführliche Definition unerlässlich.
 
-In den meisten Fällen wird eine detaillierte Definition vollständig von den “Property Factory” Klassen übernommen und bedarf keiner weiteren Bearbeitung.
+In den meisten Fällen wird eine detaillierte Definition vollständig von den "Property Factory" Klassen übernommen und bedarf keiner weiteren Bearbeitung.
 
 Arten der Definition
 ====================
@@ -13,15 +14,15 @@ Arten der Definition
 Array-Notation (deprecated)
 ---------------------------
 
-**Achtung: Die veraltete Array-Notation sollte, nicht länger verwendet werden. Die “Property-Factory”-Klassen bieten eine komfortable und sichere Alternative.**
+**Achtung: Die veraltete Array-Notation sollte, nicht länger verwendet werden. Die "Property-Factory"-Klassen bieten eine komfortable und sichere Alternative.**
 
-Vor der Einführung der Property-Factories in i-doit v1.12.3, musste die Definition mittels verschachtelter Arrays stattfinden. Damit ständig wiederkehrende Strukturen nicht dupliziert werden mussten, wurden sogenannte “Patterns” eingeführt, welche die Basisdefinition eines Attributes darstellt.
+Vor der Einführung der Property-Factories in i-doit v1.12.3, musste die Definition mittels verschachtelter Arrays stattfinden. Damit ständig wiederkehrende Strukturen nicht dupliziert werden mussten, wurden sogenannte "Patterns" eingeführt, welche die Basisdefinition eines Attributes darstellt.
 
-Für die meisten Attributtypen gibt es ein entsprechendes Pattern in der PHP-Klasse isys_cmdb_dao_category_pattern. Jedes Pattern liefert die für den jeweiligen Typen zutreffende Definition, unter anderem die Datentypen, UI-Standards, verfügbare “Provides” und Validierungsmethoden.
+Für die meisten Attributtypen gibt es ein entsprechendes Pattern in der PHP-Klasse isys_cmdb_dao_category_pattern. Jedes Pattern liefert die für den jeweiligen Typen zutreffende Definition, unter anderem die Datentypen, UI-Standards, verfügbare "Provides" und Validierungsmethoden.
 
-In der DAO werden die entsprechenden Patterns mittels array_replace_recursive um spezifische Daten ergänzt, die für das jeweilige Attribut notwendig sind. Üblicherweise zählen dazu Übersetzungen, Datenbankfelder, Datenbankreferenzen, UI Parameter und ggf. “Callback” Methoden für bestimmte Datentypen.
+In der DAO werden die entsprechenden Patterns mittels array_replace_recursive um spezifische Daten ergänzt, die für das jeweilige Attribut notwendig sind. Üblicherweise zählen dazu Übersetzungen, Datenbankfelder, Datenbankreferenzen, UI Parameter und ggf. "Callback" Methoden für bestimmte Datentypen.
 
-Da diese Art der Definition sehr schnell unübersichtlich wird und viele redundanten Informationen enthält wurde das neue Format der “Property-Factory”-Klassen etabliert. Diese beinhalten letztlich die gleichen Informationen, verschlanken aber aufgrund der objektorientierten Programmierung die Nutzung und Redundanzen ganz enorm!
+Da diese Art der Definition sehr schnell unübersichtlich wird und viele redundanten Informationen enthält wurde das neue Format der "Property-Factory"-Klassen etabliert. Diese beinhalten letztlich die gleichen Informationen, verschlanken aber aufgrund der objektorientierten Programmierung die Nutzung und Redundanzen ganz enorm!
 
 Dies trägt außerdem dazu bei, den Code sicherer und robuster zu gestalten.
 
@@ -30,17 +31,17 @@ Beim Erstellen neuer Kategorien und Attribute gibt es keinen Grund mehr diese ve
 Property-Factories
 ------------------
 
-Diese Art der Definition ist der Arraynotation weit überlegen und kann enorm viel Code (und damit Fehlerpotential) einsparen. Wir empfehlen die “Property-Factory”-Klassen immer zu nutzen, wenn neue Attribute erzeugt werden.
+Diese Art der Definition ist der Arraynotation weit überlegen und kann enorm viel Code (und damit Fehlerpotential) einsparen. Wir empfehlen die "Property-Factory"-Klassen immer zu nutzen, wenn neue Attribute erzeugt werden.
 
 Dank der mitgelieferten mergeProperty*\-Methoden können alle Definitionen, je nach Bedarf, überschrieben werden.
 
 ### Ausprägungen
 
-Ähnlich wie bei den “Patterns” für die Array-Notation gibt es eine Reihe von vorgegebenen Property Factory Klassen, mit denen sich Attribute definieren lassen. Jede dieser Ausprägungen verfügt über die jeweils notwendigen Konstruktor-Parameter, um das Attribut funktionsfähig abzubilden.
+Ähnlich wie bei den "Patterns" für die Array-Notation gibt es eine Reihe von vorgegebenen Property Factory Klassen, mit denen sich Attribute definieren lassen. Jede dieser Ausprägungen verfügt über die jeweils notwendigen Konstruktor-Parameter, um das Attribut funktionsfähig abzubilden.
 
 Zusätzlich existieren Helper-Methoden, um einzelne Bereiche zu ergänzen oder zu ersetzen - das ist allerdings häufig gar nicht nötig und wird nur in speziellen Fällen angewandt, in denen keine passende Property-Factory existiert.
 
-Die am häufigsten genutzten Factories  sind:
+Die am häufigsten genutzten Factories  sind:
 
 *   TextProperty
 *   TextAreaProperty
@@ -64,7 +65,7 @@ Diese Funktionalität wurde ursprünglich bei den Reports genutzt und durch dyna
 
 ### Type
 
-Gibt Aufschluss über den Attribut-Typen - die verfügbaren findet man als Klassen-Konstanten mit dem Prefix “C__PROPERTY__INFO__TYPE__” in idoit\Component\Property\LegacyPropertyInterface.
+Gibt Aufschluss über den Attribut-Typen - die verfügbaren findet man als Klassen-Konstanten mit dem Prefix "C__PROPERTY__INFO__TYPE__" in idoit\Component\Property\LegacyPropertyInterface.
 
 ### Backward
 
@@ -75,7 +76,7 @@ Data
 
 ### Type
 
-Der Typ beschreibt den Datentyp auf Seite der Datenbank und wird verwendet um korrekte Formatierung zu gewährleisten. 
+Der Typ beschreibt den Datentyp auf Seite der Datenbank und wird verwendet um korrekte Formatierung zu gewährleisten. 
 
 ### Source table
 
@@ -87,7 +88,7 @@ Diese Referenz Definition muss ein Array mit zwei Werten beinhalten: Die referen
 
 ### Field
 
-Beinhaltet den Feldnamen der zuständigen Tabelle. Diese Information ist verpflichtend und wird verwendet beim “automatischen” lesen und schreiben von Daten.
+Beinhaltet den Feldnamen der zuständigen Tabelle. Diese Information ist verpflichtend und wird verwendet beim "automatischen" lesen und schreiben von Daten.
 
 ### Relation type
 
@@ -95,11 +96,11 @@ Sollte es sich bei dem Attribut um eine Referenz handeln, die eine implizite Bez
 
 ### Relation handler
 
-Der sogenannte “relation handler” wird während der erstellung impliziter Beziehungen benutzt und muss ein Array zurückliefern welches aufschluss darüber gibt welches Objekt der “Parent” und welches das “Child” ist.
+Der sogenannte "relation handler" wird während der erstellung impliziter Beziehungen benutzt und muss ein Array zurückliefern welches aufschluss darüber gibt welches Objekt der "Parent" und welches das "Child" ist.
 
 ### Readonly
 
-Diese Information gibt darüber aufschluss ob das Attribut schreibbar sein soll. Ein Beispiel hierfür wären die Felder “changed\_by” oder “changed” in der Allgemein Kategorie - diese sollen nicht verändert werden können.
+Diese Information gibt darüber aufschluss ob das Attribut schreibbar sein soll. Ein Beispiel hierfür wären die Felder "changed\_by" oder "changed" in der Allgemein Kategorie - diese sollen nicht verändert werden können.
 
 ### Select
 
@@ -129,15 +130,15 @@ Kann eine Sub-Query beinhalten nach deren Ergebnis die Datensätze der Kategorie
 
 ### Field alias
 
-Wird im Kontext von Referenzierten Werten verwendet, die ggf. den gleichen “Field” Wert haben. Der Alias unterstützt dabei um das Ergebnis auf einen anderen Namen zu mappen. Dies wird von mehreren Funktionen in i-doit verwendet.
+Wird im Kontext von Referenzierten Werten verwendet, die ggf. den gleichen "Field" Wert haben. Der Alias unterstützt dabei um das Ergebnis auf einen anderen Namen zu mappen. Dies wird von mehreren Funktionen in i-doit verwendet.
 
 ### Table alias
 
-Diese Konfiguration dient einem ähnlichen Zweck wie “Field alias” - um referenzierte Werte über eigene Namen lesen zu können.
+Diese Konfiguration dient einem ähnlichen Zweck wie "Field alias" - um referenzierte Werte über eigene Namen lesen zu können.
 
 ### Sort alias
 
-Übernimmt eine ähnliche Funktion wie “Field alias” und “Table alias” und wird im Kontext der Objekt- und Kategorielisten verwendet.
+Übernimmt eine ähnliche Funktion wie "Field alias" und "Table alias" und wird im Kontext der Objekt- und Kategorielisten verwendet.
 
 ### Encrypt
 
@@ -146,7 +147,7 @@ Beinhaltet die Information ob das Feld verschlüsselt wird oder nicht. Dies wird
 UI
 --
 
-Der UI-Bereich ist notwendig für die Darstellung der Attribute in “generischen Oberflächen”, wie zum Beispiel der Listeneditierung. Auch andere Bereiche von i-doit greifen auf diese Information zurück.
+Der UI-Bereich ist notwendig für die Darstellung der Attribute in "generischen Oberflächen", wie zum Beispiel der Listeneditierung. Auch andere Bereiche von i-doit greifen auf diese Information zurück.
 
 Vor allem die UI-Klasse der entsprechenden Kategorie wird diese Definition nutzen und die Daten an das [TOM (Template Object Model)](kategorien-programmieren.md#ubergabe-der-daten-an-smarty-plugins-mittels-tom-und-rules) übergeben. Dadurch brauchen Smarty- Parameter nicht an mehreren Stellen hinterlegt werden.
 
@@ -172,11 +173,11 @@ Beinhaltet den abstrahierten Formular-Typen. Hierfür werden die C__PROPERTY__UI
 
 Hierbei handelt es sich um die Parameter, die an das Smarty-Plugin übergeben werden. Diese Parameter steuern z.B. die Darstellung, verfügbare Inhalte als auch spezielle (plugin-spezifische) Funktionen.
 
-Sofern die Parameter an dieser Stelle definiert werden, brauchen sie nicht in der UI- Klasse oder dem Kategorie-Template hinterlegt werden. Auch “generische Oberflächen”, wie z.B. die Listeneditierung, werden diese Parameter nutzen.
+Sofern die Parameter an dieser Stelle definiert werden, brauchen sie nicht in der UI- Klasse oder dem Kategorie-Template hinterlegt werden. Auch "generische Oberflächen", wie z.B. die Listeneditierung, werden diese Parameter nutzen.
 
 ### Default
 
-Hier kann ein Standardwert für das jeweilige Attribut angegeben werden, welches im “Erstellen”-Kontext der Kategorie verwendet wird.
+Hier kann ein Standardwert für das jeweilige Attribut angegeben werden, welches im "Erstellen"-Kontext der Kategorie verwendet wird.
 
 ### Placeholder (Deprecated)
 
@@ -184,21 +185,21 @@ Der Placeholder wurde ursprünglich für das gleichnamige HTML-Attribut verwende
 
 ### Empty message (Deprecated)
 
-Diese Konfiguration wurde, wie auch der “Placeholder” Parameter, durch Smarty-Plugin Parameter setzt.
+Diese Konfiguration wurde, wie auch der "Placeholder" Parameter, durch Smarty-Plugin Parameter setzt.
 
 Format
 ------
 
-Der “Format”- der Definition wird für optionale Callback-Methoden genutzt, um attributspezifische Daten nachzuladen. Dies wird unter anderem beim Export benutzt,um hinterlegte Daten in ein “lesbares” Format zu konvertieren.
+Der "Format"- der Definition wird für optionale Callback-Methoden genutzt, um attributspezifische Daten nachzuladen. Dies wird unter anderem beim Export benutzt,um hinterlegte Daten in ein "lesbares" Format zu konvertieren.
 
-Damit diese Daten auch im Import verarbeitet werden können, muss eine zusätzliche Callback-Methode mit gleichem Namen + “\_import” suffix hinterlegt werden. In der Regel wird dieser Teil nicht benötigt, da die Property-Factories die entsprechenden Callbacks bereits mitliefern.
+Damit diese Daten auch im Import verarbeitet werden können, muss eine zusätzliche Callback-Methode mit gleichem Namen + "\_import" suffix hinterlegt werden. In der Regel wird dieser Teil nicht benötigt, da die Property-Factories die entsprechenden Callbacks bereits mitliefern.
 
 Auf der anderen Seite werden die Format-Callbacks genutzt, um spezifischen Code für virtuelle- oder dynamische Attribute auszuführen, welche dann wiederum den gewünschten Inhalt zurückliefern.
 
 Dependency
 ----------
 
-Die Dependency wird für einige Attribute verwendet, deren Daten von anderen Attributen beeinflusst werden. Ein Beispiel hierfür ist die Abhängigkeit zwischen “Hersteller” und “Modell”.
+Die Dependency wird für einige Attribute verwendet, deren Daten von anderen Attributen beeinflusst werden. Ein Beispiel hierfür ist die Abhängigkeit zwischen "Hersteller" und "Modell".
 
 ### Property key
 
@@ -211,7 +212,7 @@ Die Abhängigkeit wird im Frontend abgebildet und muss daher mittels Smarty-Para
 Provides
 --------
 
-Die “Provides” entscheiden darüber, welche i-doit Funktionen für dieses Attribut verfügbar sind. In den meisten Fällen werden die Property-Factories diese Option korrekt setzen.
+Die "Provides" entscheiden darüber, welche i-doit Funktionen für dieses Attribut verfügbar sind. In den meisten Fällen werden die Property-Factories diese Option korrekt setzen.
 
 Unter bestimmten Umständen kann es aber nötig sein ein Attribut für Im- und Export oder Listeneditierung zu sperren, zum Beispiel, wenn das Attribut im Kategorie-Template über benutzerdefinierte Logik verfügt, die sich nicht anders abbilden lässt.
 

@@ -1,6 +1,6 @@
 # Setup
 
-Wenn die nötigen Vorbereitungen getroffen sind – zum Beispiel [die Konfiguration des zugrunde liegenden Betriebssystems](../manuelle-installation/index.md), kann das Setup von i-doit beginnen.
+Wenn die nötigen Vorbereitungen getroffen sind - zum Beispiel [die Konfiguration des zugrunde liegenden Betriebssystems](../manuelle-installation/index.md), kann das Setup von i-doit beginnen.
 
 Schnellstart
 
@@ -9,11 +9,11 @@ In einem Verzeichnis, auf das der Apache Webserver Zugriff hat, entpackt man das
 Installationspaket herunterladen und entpacken
 ----------------------------------------------
 
-Das Installationspaket der pro-Variante ist für alle Kunden im [Kundenportal](../../administration/kundenportal.md) erreichbar, das der open-Variante unter [i-doit.org](https://i-doit.org/). Dieses Paket wird auf den vorbereiteten Server kopiert, entpackt und die Dateien sowie Verzeichnisse mit den passenden Rechten versehen. Diese Anweisungen unterscheiden sich je nach Betriebssystem.
+Das Installationspaket der pro-Variante ist für alle Kunden im [Kundenportal](../../administration/kundenportal.md) erreichbar, das der open-Variante unter [i-doit.org](https://i-doit.org/). Dieses Paket wird auf den vorbereiteten Server kopiert, entpackt und die Dateien sowie Verzeichnisse mit den passenden Rechten versehen. Diese Anweisungen unterscheiden sich je nach Betriebssystem.
 
 ### Debian GNU/Linux oder Ubuntu Linux
 
-Der Apache Webserver läuft mit den Rechten des Users **www-data** und der gleichnamigen Gruppe **www-data**. Das Hauptverzeichnis vom Apache Webserver lautet **/var/www/html/**:
+Der Apache Webserver läuft mit den Rechten des Users **www-data** und der gleichnamigen Gruppe **www-data**. Das Hauptverzeichnis vom Apache Webserver lautet **/var/www/html/**:
 
     sudo mkdir /var/www/html/i-doit
     sudo cp i-doit.zip /var/www/html/i-doit/
@@ -26,7 +26,7 @@ Der Apache Webserver läuft mit den Rechten des Users **www-data** und der gle
 
 ### Red Hat Enterprise Linux (RHEL)
 
-Der Apache Webserver läuft mit den Rechten des Users **apache** und der gleichnamigen Gruppe **apache**. Das Hauptverzeichnis vom Apache Webserver lautet **/var/www/html/**:
+Der Apache Webserver läuft mit den Rechten des Users **apache** und der gleichnamigen Gruppe **apache**. Das Hauptverzeichnis vom Apache Webserver lautet **/var/www/html/**:
 
 
     sudo mkdir /var/www/html/i-doit
@@ -40,7 +40,7 @@ Der Apache Webserver läuft mit den Rechten des Users **apache** und der gleic
 
 ### Suse Linux Enterprise Server (SLES)
 
-Der Apache Webserver läuft mit den Rechten des Users **wwwrun** und der Gruppe **www**. Das Hauptverzeichnis vom Apache Webserver lautet **/srv/www/htdocs/**:
+Der Apache Webserver läuft mit den Rechten des Users **wwwrun** und der Gruppe **www**. Das Hauptverzeichnis vom Apache Webserver lautet **/srv/www/htdocs/**:
 
     sudo mkdir /srv/www/htdocs/i-doit
     sudo cp i-doit.zip /srv/www/htdocs/i-doit/
@@ -61,7 +61,7 @@ i-doit lässt sich auf zwei Arten installieren: Bequem über die Web GUI (für E
 
 ### Web GUI
 
-Das Setup wird automatisch aufgerufen, wenn man mit dem Browser i-doit aufruft (Beispiel http://i-doit-host/i-doit/).
+Das Setup wird automatisch aufgerufen, wenn man mit dem Browser i-doit aufruft (Beispiel http://i-doit-host/i-doit/).
 
 #### System Check
 
@@ -82,38 +82,38 @@ Für die Datenbank-Anbindung sind wichtige Credentials und Einstellungen einzutr
 [![database-configuration](../../assets/images/de/installation/setup/i-doit_setup_03_database_configuration.png)](../../assets/images/de/installation/setup/i-doit_setup_03_database_configuration.png)
 
 *   **Connection settings**
-    *   **Host:** in der Regel der Host selbst, also localhost oder 127.0.0.1
-    *   **Port:** in der Regel der Standard-Port von MySQL/MariaDB, also 3306
-    *   **Username:** Benutzername des Datenbank-Systembenutzers, meistens root
+    *   **Host:** in der Regel der Host selbst, also localhost oder 127.0.0.1
+    *   **Port:** in der Regel der Standard-Port von MySQL/MariaDB, also 3306
+    *   **Username:** Benutzername des Datenbank-Systembenutzers, meistens root
 
-    *   **Password:** Passwort des Benutzers
+    *   **Password:** Passwort des Benutzers
 *   **MySQL user settings**
-    *   **Username**: Benutzername des Besitzers der i-doit-Datenbanken, meistens idoit
+    *   **Username**: Benutzername des Besitzers der i-doit-Datenbanken, meistens idoit
 
-    *   **Password**: Passwort des Benutzers
+    *   **Password**: Passwort des Benutzers
 
 *   **Database settings**
-    *   **System Database Name:** Name der Systemdatenbank, meistens idoit_system
+    *   **System Database Name:** Name der Systemdatenbank, meistens idoit_system
 
-    *   **Mandator Database Name:** Name der Datenbank für den ersten Mandanten, meistens idoit_data
+    *   **Mandator Database Name:** Name der Datenbank für den ersten Mandanten, meistens idoit_data
 
-    *   **Mandator title:** Titel des Mandanten, meistens der Name der Organisation, die im Fokus steht
+    *   **Mandator title:** Titel des Mandanten, meistens der Name der Organisation, die im Fokus steht
 
-    *   **Start value for object/configuration item IDs:** in der Regel 
+    *   **Start value for object/configuration item IDs:** in der Regel
 
 !!! success "Unix Socket vs. Network Port"
 
-    PHP kann sich auf zwei Arten mit MariaDB/MySQL verbinden: zum einen per Unix Socket, zum anderen über TCP/IP. Wir empfehlen, den performanteren Unix Socket zu verwenden. Die Verwendung des Unix Sockets wird erzwungen, wenn man in der oben genannten Konfiguration Host den Wert **localhost** einträgt. Eine andere Angabe (**127.0.0.1**, FQDN o. ä.) führt dazu, dass TCP/IP verwendet wird.
+    PHP kann sich auf zwei Arten mit MariaDB/MySQL verbinden: zum einen per Unix Socket, zum anderen über TCP/IP. Wir empfehlen, den performanteren Unix Socket zu verwenden. Die Verwendung des Unix Sockets wird erzwungen, wenn man in der oben genannten Konfiguration Host den Wert **localhost** einträgt. Eine andere Angabe (**127.0.0.1**, FQDN o. ä.) führt dazu, dass TCP/IP verwendet wird.
 
-    MariaDB/MySQL öffnet in der Regel beim Start des Dienstes einen Unix Socket. Der Pfad dorthin wird in der Einstellung **socket** angegeben und lautet beispielsweise unter [Debian GNU/Linux](debian.md) **/var/run/mysqld/mysqld.sock**. Dieser Wert muss PHP bekannt sein, damit i-doit eine Verbindung zu MariaDB/MySQL aufbauen kann. Die entsprechende PHP-Einstellung lautet **mysqli.default_socket**. Wer nach der Installationsanleitung vorgegangen ist, kann die selbst erstellte PHP-Konfigurationsdatei um diese Einstellung ergänzen, zum Beispiel: **mysqli.default_socket = /var/run/mysqld/mysqld.sock**
+    MariaDB/MySQL öffnet in der Regel beim Start des Dienstes einen Unix Socket. Der Pfad dorthin wird in der Einstellung **socket** angegeben und lautet beispielsweise unter [Debian GNU/Linux](debian.md) **/var/run/mysqld/mysqld.sock**. Dieser Wert muss PHP bekannt sein, damit i-doit eine Verbindung zu MariaDB/MySQL aufbauen kann. Die entsprechende PHP-Einstellung lautet **mysqli.default_socket**. Wer nach der Installationsanleitung vorgegangen ist, kann die selbst erstellte PHP-Konfigurationsdatei um diese Einstellung ergänzen, zum Beispiel: **mysqli.default_socket = /var/run/mysqld/mysqld.sock**
 
-    Nachträgliche Änderungen an den PHP-Einstellungen werden erst wirksam, wenn der Dienst des Apache Webservers neu geladen wird. Beispiel unter Debian GNU/Linux: **sudo systemctl reload apache2.service**
+    Nachträgliche Änderungen an den PHP-Einstellungen werden erst wirksam, wenn der Dienst des Apache Webservers neu geladen wird. Beispiel unter Debian GNU/Linux: **sudo systemctl reload apache2.service**
 
     Dieser Tipp bezieht sich auf Unix-artige Betriebssysteme. Windows ist davon ausgenommen.
 
 #### Framework Configuration
 
-Für den Zugang zum **[Admin-Center](../../administration/admin-center.md)** in i-doit gibt es gesonderte Credentials, die hier festgelegt werden können. Es wird empfohlen, dies auch zu tun.
+Für den Zugang zum **[Admin-Center](../../administration/admin-center.md)** in i-doit gibt es gesonderte Credentials, die hier festgelegt werden können. Es wird empfohlen, dies auch zu tun.
 
 [![framework-configuration](../../assets/images/de/installation/setup/i-doit_setup_04_framework_configuration.png)](../../assets/images/de/installation/setup/i-doit_setup_04_framework_configuration.png)
 

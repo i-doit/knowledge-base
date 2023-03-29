@@ -43,10 +43,10 @@ Diese [Einstellungen](./checkmk2-konfiguration.md) sind verfügbar:
 | pull.createObjects | Boolean | Nein | true | Unbekannte Hosts werden als neue Objekte erstellt |
 | pull.objectType | String | Nein | C__OBJTYPE__SERVER | Setzen der Objekttypkonstante für neue Objekte |
 | pull.updateObjects | String | Nein | overwrite | Wenn der Host in i-doit gefunden wird, werden vorhandene Kategorieeinträge überschrieben oder ignoriert. |
-| pull.idenfifier | Array | Nein | ["title", "hostname", "fqdn", "hostaddress", "alias"] | Suchen Sie nach diesen Identifier, um Hosts mit Objekten abzugleichen; siehe Abschnitt “Identifier”. |
+| pull.idenfifier | Array | Nein | ["title", "hostname", "fqdn", "hostaddress", "alias"] | Suchen Sie nach diesen Identifier, um Hosts mit Objekten abzugleichen; siehe Abschnitt "Identifier". |
 | pull.minMatch | Integer | Nein | 2 | Objekt und Host müssen sich eine Mindestmenge an identifiers teilen |
-| pull.attributes | Array | Nein | _See section “Attributes”_ | Liste der Kategoriekonstanten, die geändert werden sollen; siehe Abschnitt “Attribute”. |
+| pull.attributes | Array | Nein | _See section "Attributes"_ | Liste der Kategoriekonstanten, die geändert werden sollen; siehe Abschnitt "Attribute". |
 | pull.enableExport | Boolean | Nein | true | Host-Konfiguration in Kategorie schreiben Check_MK Host |
 | pull.enableLivestatus | Boolean | Nein | true | Host-Konfiguration in Kategorie schreiben Monitoring |
-| pull.ports | String | Nein | physical | Hinzufügen/Aktualisieren von “physischen” oder “logischen” Netzwerkanschlüssen |
+| pull.ports | String | Nein | physical | Hinzufügen/Aktualisieren von "physischen" oder "logischen" Netzwerkanschlüssen |
 | roles.monitoring | String | Nein | Monitoring | i-doit Rolle für Kontaktgruppen, die bei Kontaktzuweisungen verwendet werden |

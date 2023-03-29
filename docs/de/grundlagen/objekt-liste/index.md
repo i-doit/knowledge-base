@@ -10,7 +10,7 @@ Spalten lassen sich über einen Klick auf die Spaltenüberschriften auf- oder ab
 
 [![objekt-liste-2](../../assets/images/de/grundlagen/objekt-listen/2-ol.gif)](../../assets/images/de/grundlagen/objekt-listen/2-ol.gif)
 
-Über die schraffierte Fläche in jeder Zeile lässt sich ein Objekt einem anderen Objekttyp zuordnen: 
+Über die schraffierte Fläche in jeder Zeile lässt sich ein Objekt einem anderen Objekttyp zuordnen:
 Per Drag'n'Drop zieht man das Objekt zum gewünschten Objekttypen im linken Menübaum, der **Objektsicht**.
 
 [![objekt-liste-3](../../assets/images/de/grundlagen/objekt-listen/3-ol.gif)](../../assets/images/de/grundlagen/objekt-listen/3-ol.gif)

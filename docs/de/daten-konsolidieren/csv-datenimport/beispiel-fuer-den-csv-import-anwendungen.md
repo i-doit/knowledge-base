@@ -1,24 +1,24 @@
 # Beispiel Anwendungen
 
-In diesem Beispiel wollen wir Anwendungen importieren. Wir möchten so viele Informationen zu einer Anwendung importieren wie möglich.
+In diesem Beispiel wollen wir Anwendungen importieren. Wir möchten so viele Informationen zu einer Anwendung importieren wie möglich.
 
 !!! note "Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft"
 
 Für den Import können wir folgende Informationen importieren:
 
--  Objekttyp → Um welchen Objekttypen soll es sich Handeln
+-  Objekttyp → Um welchen Objekttypen soll es sich Handeln
 -  Objekt-Titel → Wie heißt die Anwendung
--  Anwendung - Spezifikation → Welche Spezifikation hat die Anwendung?
--  Anwendung - Hersteller → Wer hat die Anwendung hergestellt?
--  Anwendung - Installationsart → Wird die Anwendung automatisch oder manuell installiert?
--  Anwendung - Registrierungs-Key → Welcher Registrierungs-Key wurde verwendet?
--  Anwendung - Installationspfad → Wie lautet der Installationspfad?
--  Anwendung-Varianten - Bezeichnung → Wie soll die Variante bezeichnet werden?
--  Anwendung-Varianten - Variante → Wie wurde die Variante bezeichnet?
--  Anwendung-Version - Versionsnummer → Welche Versionsnummern gibt es?
--  Anwendung-Version - Servicepack → Welche Servicepacks gibt es?
--  Anwendung-Version - Kernel → Welche Kernel Versionen gibt es?
--  Anwendung-Version - Patchlevel → Welche Patchlevel gibt es?
+-  Anwendung - Spezifikation → Welche Spezifikation hat die Anwendung?
+-  Anwendung - Hersteller → Wer hat die Anwendung hergestellt?
+-  Anwendung - Installationsart → Wird die Anwendung automatisch oder manuell installiert?
+-  Anwendung - Registrierungs-Key → Welcher Registrierungs-Key wurde verwendet?
+-  Anwendung - Installationspfad → Wie lautet der Installationspfad?
+-  Anwendung-Varianten - Bezeichnung → Wie soll die Variante bezeichnet werden?
+-  Anwendung-Varianten - Variante → Wie wurde die Variante bezeichnet?
+-  Anwendung-Version - Versionsnummer → Welche Versionsnummern gibt es?
+-  Anwendung-Version - Servicepack → Welche Servicepacks gibt es?
+-  Anwendung-Version - Kernel → Welche Kernel Versionen gibt es?
+-  Anwendung-Version - Patchlevel → Welche Patchlevel gibt es?
 
 Beispiel CSV Datei für diesen Import:
 

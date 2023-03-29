@@ -29,7 +29,7 @@ Um die Freigabe für das Formular wieder zu entziehen verwenden wir den [![Unpub
 
 [![Unpublish](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/11-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/11-fp.png)
 
-Oder auf der Übersichtsseite der Formulare. Dort wird über Klick auf das [![More actions](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/12-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/12-fp.png) _More actions_ Menü auch der [![Unpublish](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/13-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/13-fp.png) Button dargestellt.
+Oder auf der Übersichtsseite der Formulare. Dort wird über Klick auf das [![More actions](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/12-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/12-fp.png) _More actions_ Menü auch der [![Unpublish](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/13-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/13-fp.png) Button dargestellt.
 
 [![Übersicht](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/14-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/14-fp.png)
 
@@ -40,7 +40,7 @@ Nach dem Klick wird ein Popup mit dem Hinweis, dass das Formular nicht mehr übe
 Wird das Formular über den [![](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/16-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/16-fp.png) Button gespeichert erscheint eine Erfolgsmeldung.
 
 [![Success](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/17-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/17-fp.png) 
-Konnte das Formular nicht gespeichert werden erhalten wir eine Fehlermeldung. 
+Konnte das Formular nicht gespeichert werden erhalten wir eine Fehlermeldung.
 
 [![Failed](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/18-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/18-fp.png)
 

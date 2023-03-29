@@ -1,11 +1,9 @@
 # Rechteverwaltung
 
-Wer darf was in i-doit sehen und bearbeiten?  
-Diese häufig gestellte Frage rührt daher, ein Rechtekonzept für die eigene IT-Dokumentation zu etablieren.  
-Nicht jede Person, die Login-berechtigt ist, darf sensible Daten sehen oder gar bearbeiten.  
+Wer darf was in i-doit sehen und bearbeiten?
+Diese häufig gestellte Frage rührt daher, ein Rechtekonzept für die eigene IT-Dokumentation zu etablieren.
+Nicht jede Person, die Login-berechtigt ist, darf sensible Daten sehen oder gar bearbeiten.
 i-doit verfügt über eine umfassende Rechteverwaltung, die die eigene IT-Dokumentation vor unbefugtem Zugriff schützt und die Integrität wahrt.
-
-  
 
 Personen und Personengruppen
 
@@ -56,7 +54,7 @@ Die Konfiguration in der Web GUI ist tabellarisch aufgebaut.
 
 | ![rechteverwaltung-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/1-rv.png) | ![rechteverwaltung-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/2-rv.png) | ![rechteverwaltung-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/3-rv.png) | ![rechteverwaltung-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/4-rv.png) | ![rechteverwaltung-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/5-rv.png) | ![rechteverwaltung-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/5-rv.png) | ![rechteverwaltung-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/7-rv.png) | Bedingung | Parameter | Aktion |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Erstellen | Ansehen | Bearbeiten | Archivieren | Löschen | Ausführen | Administrator | Um welchen Bereich geht es? | Optionale Parameter | ![rechteverwaltung-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/8-rv.png) Recht entfernen |
+| Erstellen | Ansehen | Bearbeiten | Archivieren | Löschen | Ausführen | Administrator | Um welchen Bereich geht es? | Optionale Parameter | ![rechteverwaltung-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/8-rv.png) Recht entfernen |
 
 Die Bedingung wird aus einem Drop-Down-Menü ausgewählt. Die ersten Spalten vergeben konkrete Rechte für diese Bedingung. Teilweise sind diese allerdings ausgegraut und können nicht aktiviert werden, weil es keinen Sinn macht, für ebendiese Bedingung diese Rechte zu vergeben. Ebenfalls abhängig von der Bedingung sind die optionalen Parameter. In der letzten Spalte können Aktionen durchgeführt werden (bisher: das Recht entfernen).
 
@@ -72,69 +70,68 @@ Sind alle Rechte wie gewünscht konfiguriert, sollten diese über den Button **S
 
 !!! warning "Cache erneuern"
 
-    Unter Umständen kann es vorkommen, dass Rechte nicht sofort greifen, beispielsweise weil die betroffenen Benutzer noch angemeldet sind. Um die neuen Rechte zu forcieren, muss der Rechte-Cache erneuert werden. Dies geschieht unter **Verwaltung → Systemtools → Cache / Datenbank → Cache → Rechtesystem Cache leeren**. Zudem ist es empfehlenswert, den Cache [automatisch regelmäßig per Cronjob](../../automatisierung-und-integration/cli/index.md) zu erneuern.
+    Unter Umständen kann es vorkommen, dass Rechte nicht sofort greifen, beispielsweise weil die betroffenen Benutzer noch angemeldet sind. Um die neuen Rechte zu forcieren, muss der Rechte-Cache erneuert werden. Dies geschieht unter **Verwaltung → Systemtools → Cache / Datenbank → Cache → Rechtesystem Cache leeren**. Zudem ist es empfehlenswert, den Cache [automatisch regelmäßig per Cronjob](../../automatisierung-und-integration/cli/index.md) zu erneuern.
 
 Module
 ------
 
-Damit die Rechteverwaltung nicht zu unübersichtlich wird, sind alle Rechte in Module aufgeteilt. Zu finden sind die Module unter **Verwaltung → Rechtesystem → Rechtevergabe**.
+Damit die Rechteverwaltung nicht zu unübersichtlich wird, sind alle Rechte in Module aufgeteilt. Zu finden sind die Module unter **Verwaltung → Rechtesystem → Rechtevergabe**.
 
 *   **Analyse**
-    
+
 *   **Benachrichtigungen**
-    
+
 *   **CI-Umzug**
-    
+
 *   **[CMDB](../../effizientes-dokumentieren/rechteverwaltung/cmdb.md)**
-    
+
 *   **Dashboard**
-    
+
 *   **Dialog-Admin**
-    
+
 *   **Dokumente**
-    
+
 *   **Events**
-    
+
 *   **Export**
-    
+
 *   **Gerätetausch**
-    
+
 *   **Import**
-    
+
 *   **Logbuch**
-    
+
 *   **Nagios**
-    
+
 *   **Raumplan**
-    
+
 *   **Rechtesystem**
-    
+
 *   **Report Manager**
-    
+
 *   **Services**
-    
+
 *   **Suche**
-    
+
 *   **Templates/Massenänderung**
-    
+
 *   **Verkabelungen**
-    
+
 *   **Verwaltung**
-    
+
 *   **VIVA**
-    
+
 *   **Wartung**
-    
 
 Rechte wiederherstellen
 -----------------------
 
-Über die **Verwaltung → Rechtesystem → Rechtesystem zurücksetzen** kann man für dem Benutzer, mit dem man derzeit angemeldet ist, alle Rechte zuordnen. Das heißt, dem Personenobjekt des Benutzers werden alle zur Verfügung stehenden Rechte zugeordnet. Um dies zu aktivieren, müssen die Credentials für das [Admin Center](../../administration/admin-center.md) eingegeben werden.
+Über die **Verwaltung → Rechtesystem → Rechtesystem zurücksetzen** kann man für dem Benutzer, mit dem man derzeit angemeldet ist, alle Rechte zuordnen. Das heißt, dem Personenobjekt des Benutzers werden alle zur Verfügung stehenden Rechte zugeordnet. Um dies zu aktivieren, müssen die Credentials für das [Admin Center](../../administration/admin-center.md) eingegeben werden.
 
 Rechteverwaltung deaktivieren
 -----------------------------
 
-Um allen Benutzern alle Rechte zu geben, kann die Rechteverwaltung deaktiviert werden. Erledigt wird dies unter **Verwaltung → Systemeinstellungen → System Parameters** **→ Rechtesystem**.
+Um allen Benutzern alle Rechte zu geben, kann die Rechteverwaltung deaktiviert werden. Erledigt wird dies unter **Verwaltung → Systemeinstellungen → System Parameters** **→ Rechtesystem**.
 
 Kategorie Rechtevergabe
 -----------------------

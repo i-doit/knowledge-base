@@ -1,6 +1,6 @@
 # Verwaltung
 
-Wer an jeder noch so kleinen Schraube drehen möchte, um noch das letzte Quäntchen aus der perfekten [IT-Dokumentation](../../glossar.md) herauszuholen, sollte sich mit der Verwaltung von i-doit genauer beschäftigen. Über die Web GUI lassen sich dadurch die meisten administrativen Tätigkeiten erledigen.
+Wer an jeder noch so kleinen Schraube drehen möchte, um noch das letzte Quäntchen aus der perfekten [IT-Dokumentation](../../glossar.md) herauszuholen, sollte sich mit der Verwaltung von i-doit genauer beschäftigen. Über die Web GUI lassen sich dadurch die meisten administrativen Tätigkeiten erledigen.
 
 Wo finde ich die Verwaltung?
 ----------------------------

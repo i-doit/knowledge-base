@@ -19,7 +19,7 @@ Siehe Artikel [i-doit pro Add-ons](../index.md).
 Rechteverwaltung
 ----------------
 
-_i-doit pro_ verfügt über eine fein-granulare [Rechteverwaltung](../../effizientes-dokumentieren/rechteverwaltung/index.md), die auch für VIVA genutzt wird. Die Rechte können pro Benutzer/Benutzergruppe unter **Verwaltung → Rechtesystem → VIVA** vergeben werden. Folgende Rechte sind verfügbar:
+_i-doit pro_ verfügt über eine fein-granulare [Rechteverwaltung](../../effizientes-dokumentieren/rechteverwaltung/index.md), die auch für VIVA genutzt wird. Die Rechte können pro Benutzer/Benutzergruppe unter **Verwaltung → Rechtesystem → VIVA** vergeben werden. Folgende Rechte sind verfügbar:
 
 *   Lesender Zugriff: Bearbeitung ist nicht möglich.
 *   Schreibender Zugriff: Lesen, Neuanlegen, Speichern und Löschen von Informationen
@@ -51,7 +51,7 @@ Um möglichst reibungslos die Daten aus dem Altbestand zu übernehmen, werden fo
 
 ### Migration durchführen
 
-Sind die [Voraussetzungen](#migrationvorbereiten) erfüllt und ist das alte Modul (noch) nicht gelöscht, kann die Migration über die Web-Oberfläche über **VIVA → Migration** gestartet werden. Dort kann zwischen zwei Aktionen gewählt werden:
+Sind die [Voraussetzungen](#migrationvorbereiten) erfüllt und ist das alte Modul (noch) nicht gelöscht, kann die Migration über die Web-Oberfläche über **VIVA → Migration** gestartet werden. Dort kann zwischen zwei Aktionen gewählt werden:
 
 *   **Migration starten _…_**
 *   **Altes Modul entfernen _…_**

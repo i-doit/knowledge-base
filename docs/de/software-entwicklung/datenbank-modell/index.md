@@ -5,14 +5,14 @@ i-doit speichert die meisten Inhalte und Einstellungen in einem Database Managem
 Grundsätzliches
 ---------------
 
-Einige der insgesamt über 400 Tabellen der Mandanten Datenbank sind über ein definiertes Namensschema aufgebaut. So haben beispielsweise alle i-doit Tabellen das Präfix „isys\_“.  
+Einige der insgesamt über 400 Tabellen der Mandanten Datenbank sind über ein definiertes Namensschema aufgebaut. So haben beispielsweise alle i-doit Tabellen das Präfix "isys\_".
   
-CMDB Kategorien folgen mit der Kennung „cats“ für spezifisch und „catg“ globale Kategorien und enden mit der englischen Bezeichnung der entsprechenden Kategorie und dem Suffix \_list (z.B. isys\_catg\_model\_list, isys\_catg\_memory\_list). Die Kategorie Tabellen machen 50% der gesamten Datenbank aus. Ein weiterer großer Teil der Tabellen sind Dialog Listen, mit denen Comboboxen gefüllt werden. Viele dieser speziellen Listen beinhalten Werte über Typ und Hersteller und sind somit durch Namen wie zum Beispiel „type“ oder „manufacturer“ erkenntlich.
+CMDB Kategorien folgen mit der Kennung "cats" für spezifisch und "catg" globale Kategorien und enden mit der englischen Bezeichnung der entsprechenden Kategorie und dem Suffix \_list (z.B. isys\_catg\_model\_list, isys\_catg\_memory\_list). Die Kategorie Tabellen machen 50% der gesamten Datenbank aus. Ein weiterer großer Teil der Tabellen sind Dialog Listen, mit denen Comboboxen gefüllt werden. Viele dieser speziellen Listen beinhalten Werte über Typ und Hersteller und sind somit durch Namen wie zum Beispiel "type" oder "manufacturer" erkenntlich.
 
 Referenzierungen (Foreign Keys)
 -------------------------------
 
-Zur Vermeidung von Redundanzen innerhalb des Datenschemas, sind die i-doit Datenbanken relational aufgebaut und nach dem Schema der 3. Normalform normalisiert. Fremdschlüssel haben eine einheitliche Benamung (siehe hierzu Abschnitt „Namensschema“), wodurch sie direkt ersichtlich werden.
+Zur Vermeidung von Redundanzen innerhalb des Datenschemas, sind die i-doit Datenbanken relational aufgebaut und nach dem Schema der 3. Normalform normalisiert. Fremdschlüssel haben eine einheitliche Benamung (siehe hierzu Abschnitt "Namensschema"), wodurch sie direkt ersichtlich werden.
 
 Namensschema
 ------------
@@ -20,26 +20,26 @@ Namensschema
 Neben der Benennung der einzelnen Tabellen, zieht sich ein konsequentes Namensschema durch alle Feldbezeichnungen der i-doit Tabellen, welches mit dem Namen der Tabelle beginnt, gefolgt von dem eigentlichen Namen der Spalte. Somit heisst das id Feld der Tabelle isys\_catg\_cpu\_list zum Beispiel:
 
     isys_catg_cpu_list__id
-    /\              /\
-    Tabelle CPU            Spalte (ID)
+    /\              /\
+    Tabelle CPU            Spalte (ID)
     isys_catg_cpu_list__title
-    /\               /\
-    Tabelle CPU            Spalte (Titel)
+    /\               /\
+    Tabelle CPU            Spalte (Titel)
 
-  
 
-Referenzen auf andere Felder (Fremdschlüssel) folgen analog hierzu einem ähnlichen Grundsatz. Eine Referenz beinhaltet immer den kompletten Namen der referenzierten Spalte, so ist anhand des Namens immer ersichtlich, auf welche Tabellenspalte die Referenz zeigt.   
-Beispiel Objektreferenz einer Kategorie:   
-  
+Referenzen auf andere Felder (Fremdschlüssel) folgen analog hierzu einem ähnlichen Grundsatz. Eine Referenz beinhaltet immer den kompletten Namen der referenzierten Spalte, so ist anhand des Namens immer ersichtlich, auf welche Tabellenspalte die Referenz zeigt.
+
+Beispiel Objektreferenz einer Kategorie:
+
 
     isys_catg_cpu_list__isys_obj__id
-    /\                 /\      /\
-    Tabelle CPU    Tabelle Obj.   Spalte
+    /\                 /\      /\
+    Tabelle CPU    Tabelle Obj.   Spalte
 
 Objekte
 -------
 
-Jedes Objekt ist jeweils ein Datensatz in der Tabelle _isys\_obj_. In dieser Tabelle werden Eigenschaften wie der Objekttyp (Server, Clients, Router, etc.), das Erstellungsdatum, der Status (Normal, Archiviert, Gelöscht) und einige zusätzliche Attribute festgehalten. Die Bestimmung des Objekttypen erfolgt durch die Referenzierung der Tabelle _isys\_obj\_type,_ in der sich die entsprechende Ausprägung und Lokation (Infrastruktur, Software etc.) befindet.
+Jedes Objekt ist jeweils ein Datensatz in der Tabelle _isys\_obj_. In dieser Tabelle werden Eigenschaften wie der Objekttyp (Server, Clients, Router, etc.), das Erstellungsdatum, der Status (Normal, Archiviert, Gelöscht) und einige zusätzliche Attribute festgehalten. Die Bestimmung des Objekttypen erfolgt durch die Referenzierung der Tabelle _isys\_obj\_type,_ in der sich die entsprechende Ausprägung und Lokation (Infrastruktur, Software etc.) befindet.
 
 Globale und spezifische Kategorien
 ----------------------------------
@@ -49,8 +49,8 @@ Jede Kategorie spiegelt sich in der Datenbank als eigene Tabelle wieder und steh
 Beispielaufbau globale Kategorie Grafikkarte und globale Kategoire IP Adressen:
 
 isys\_catg\_graphic\_list steht über den Fremdschlüssel isys\_catg\_graphic\_list\_\_isys\_obj\_\_id in Beziehnung zum Objekt. Über das gleiche Schema steht die IP Adresse in Verbindung zum Objekt:  
-isys\_catg\_ip\_list beinhaltet den Fremdschlüssel isys\_catg\_ip\_list\_\_isys\_obj\_\_id.  
-  
+isys\_catg\_ip\_list beinhaltet den Fremdschlüssel isys\_catg\_ip\_list\_\_isys\_obj\_\_id.
+
 Somit ergibt sich folgenes SQL Statement für die Ermittlung alle Objekte, dessen Grafikkarte und IP Infos:
 
     SELECT
@@ -82,22 +82,16 @@ Spezifische Kategorien verhalten sich gleich. Die Abfrage der Netzinformationen 
     INNER JOIN isys_obj
     ON isys_cats_net_list__isys_obj__id = isys_obj__id
 
-  
-
 **Diagramm: Beziehung zwischen Kategorien und Objekten**
-
-  
 
 **[![datenbankmodell-beziehungen](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)  
 **
 
-In der Grafik ist zu sehen wie ein Objekt mit der globalen Kategorie CPU verknüpft ist. Diese Kategorie greift wiederum auf  Dialog+ Einträge wie den Hersteller und den Typ zu. Das gleiche geschieht mit der globalen Kategorie Formfaktor, die auf den Formfaktor-Typ zugreift.
+In der Grafik ist zu sehen wie ein Objekt mit der globalen Kategorie CPU verknüpft ist. Diese Kategorie greift wiederum auf  Dialog+ Einträge wie den Hersteller und den Typ zu. Das gleiche geschieht mit der globalen Kategorie Formfaktor, die auf den Formfaktor-Typ zugreift.
 
 [![datenbankmodell-formfaktor](../../assets/images/de/software-entwicklung/datenbank-modell/2-dm.png)](../../assets/images/de/software-entwicklung/datenbank-modell/2-dm.png)
 
-  
-
-Diese Darstellung erläutert die Beziehungen eines Objektes zur Kategorie „Hostadresse“ (IP). Das Objekt selbst (z.B. Server1) befindet sich in der Tabelle isys\_obj. Die zugewiesenen IP Adressen in der Tabelle isys\_catg\_ip\_list. Bedingt durch die detailierte Ausprägungstiefe der Hostadresse, werden neben den Grundinformationen (hostname, address, ..) drei weitere Tabellen referenziert:
+Diese Darstellung erläutert die Beziehungen eines Objektes zur Kategorie "Hostadresse" (IP). Das Objekt selbst (z.B. Server1) befindet sich in der Tabelle isys\_obj. Die zugewiesenen IP Adressen in der Tabelle isys\_catg\_ip\_list. Bedingt durch die detailierte Ausprägungstiefe der Hostadresse, werden neben den Grundinformationen (hostname, address, ..) drei weitere Tabellen referenziert:
 
 *   isys\_connection, welche die Verbindung zum Netz-Objekt beinhaltet
 *   isys\_ip\_assignment, welche die Zuweisungsform der IP bestimmt (DHCP, statisch)
@@ -106,7 +100,7 @@ Diese Darstellung erläutert die Beziehungen eines Objektes zur Kategorie „Hos
 Benutzer, Kontakte, Personen, Personengruppen
 ---------------------------------------------
 
-Kontakte, welche in i-doit sowohl interne Benutzer, als auch externe Personen umfassen können, fliessen in die Tabelle _isys\_obj_ mit entsprechendem Objekttypen ein. Interne Benutzer unterscheiden sich von externen "Kontakten" lediglich durch die Befüllung der i-doit Authentifizierungs-Parametern (Konkret: Benutzername, Passwort) in der Tabelle _isys\_cats\_person\_list_. Gruppen (und Rechtegruppen) speichert das System in _isys\_obj._
+Kontakte, welche in i-doit sowohl interne Benutzer, als auch externe Personen umfassen können, fliessen in die Tabelle _isys\_obj_ mit entsprechendem Objekttypen ein. Interne Benutzer unterscheiden sich von externen "Kontakten" lediglich durch die Befüllung der i-doit Authentifizierungs-Parametern (Konkret: Benutzername, Passwort) in der Tabelle _isys\_cats\_person\_list_. Gruppen (und Rechtegruppen) speichert das System in _isys\_obj._
 
 Logbuch
 -------
@@ -273,7 +267,7 @@ Gruppenverwaltung
 
 *   isys\_group
 
-Verknüpfungstabelle der _Rechtegruppen_ zu Modulen, Objekten, Kontakten oder User-Sessions
+Verknüpfungstabelle der _Rechtegruppen_ zu Modulen, Objekten, Kontakten oder User-Sessions
 
 *   isys\_group\_2\_isys\_module
 *   isys\_group\_2\_isys\_obj

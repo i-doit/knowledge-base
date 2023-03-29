@@ -1,4 +1,4 @@
-# Unbuntu Linux
+# Ubuntu Linux
 
 In this article we explain in just a few steps which packages need to be installed and configured.
 
@@ -171,13 +171,13 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The **root**  user should receive a secure password:
+Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The **root** user should receive a secure password:
 
 ```shell
 mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the **root**  user during setup:
+Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
 
 ```shell
 sudo mysql -uroot

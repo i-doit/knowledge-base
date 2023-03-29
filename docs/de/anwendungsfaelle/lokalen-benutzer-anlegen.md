@@ -37,7 +37,7 @@ Für die Anmeldung benötigt der Benutzer einen Benutzernamen und ein Passwort. 
 
 [![Lokale Anmeldung](../assets/images/de/anwendungsfaelle/lokalen-benutzer-anlegen/4-lba.png)](../assets/images/de/anwendungsfaelle/lokalen-benutzer-anlegen/4-lba.png)
 
-Pro Mandant kann die minimale Länge eines Benutzerpassworts vorgegeben werden. Dies geschieht unter **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Sicherheit → Minimallänge Benutzerpasswort**. In diesem Feld wird eine positive Ganzzahl erwartet.
+Pro Mandant kann die minimale Länge eines Benutzerpassworts vorgegeben werden. Dies geschieht unter **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Sicherheit → Minimallänge Benutzerpasswort**. In diesem Feld wird eine positive Ganzzahl erwartet.
 
 Benutzereinstellungen
 ---------------------
@@ -46,12 +46,12 @@ Jeder Benutzer kann i-doit individuell anpassen. Viele dieser Einstellungen befi
 
 ### Anmeldedaten
 
-Auch wenn ein Benutzer kein Editier-Recht auf die oben genannte Kategorie **Personen → Login** hat, kann er über **Verwaltung → Benutzereinstellungen → Anmeldedaten** das eigene Passwort ändern.
+Auch wenn ein Benutzer kein Editier-Recht auf die oben genannte Kategorie **Personen → Login** hat, kann er über **Verwaltung → Benutzereinstellungen → Anmeldedaten** das eigene Passwort ändern.
 
 [![Anmeldedaten](../assets/images/de/anwendungsfaelle/lokalen-benutzer-anlegen/5-lba.png)](../assets/images/de/anwendungsfaelle/lokalen-benutzer-anlegen/5-lba.png)
 ### Darstellung
 
-Die Lokalisierung und weitere Einstellung kann jeder Benutzer über **Verwaltung → Benutzereinstellungen → Darstellung** vornehmen.
+Die Lokalisierung und weitere Einstellung kann jeder Benutzer über **Verwaltung → Benutzereinstellungen → Darstellung** vornehmen.
 
 | Option | Auswahl | Beschreibung |
 | --- | --- | --- |
@@ -66,15 +66,15 @@ Die Lokalisierung und weitere Einstellung kann jeder Benutzer über **Verwaltung
 
 ### Objekt-Listen
 
-Jeder Benutzer darf für jeden Objekttyp [die jeweilige Objekt-Liste individualisieren](../grundlagen/struktur-it-dokumentation.md). Dies geschieht **Verwaltung → Benutzereinstellungen → Objekt-Listen**.
+Jeder Benutzer darf für jeden Objekttyp [die jeweilige Objekt-Liste individualisieren](../grundlagen/struktur-it-dokumentation.md). Dies geschieht **Verwaltung → Benutzereinstellungen → Objekt-Listen**.
 
 ### Systemeinstellungen
 
-Unter **Verwaltung → Benutzereinstellungen → Systemeinstellungen** stehen dem Benutzer verschiedene Optionen zur Verfügung, die sich auf verschiedene Features beziehen.
+Unter **Verwaltung → Benutzereinstellungen → Systemeinstellungen** stehen dem Benutzer verschiedene Optionen zur Verfügung, die sich auf verschiedene Features beziehen.
 
 | Feature | Option | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| **Workflows** | **Maximalanzahl Einträge für Filteransicht** | Positive Ganzzahl | –   |
+| **Workflows** | **Maximalanzahl Einträge für Filteransicht** | Positive Ganzzahl | -   |
 | **Objekt-Listen** | **Zuletzt verwendeten Listen-Filter merken** | Positive Ganzzahl oder 0 | Für wie viele Sekunden sollen gefilterte Objekt-Listen im Cache verbleiben, bevor sie automatisch zurückgesetzt werden? Die Zahl 0 deaktiviert das Caching. |
 |     | **Einträge pro Seite in Objektlisten** | Positive Ganzzahl | Wie viele Objekte sollen in einer Objekt-Liste gleichzeitig pro Seite dargestellt werden? |
 | **Quickinfo** | **Aktiviert** | Ja/Nein | Fährt der Benutzer mit der Maus über ein Objekt, werden in einem Popup verschiedene Attribute des Objekts angezeigt. |
@@ -102,4 +102,4 @@ Der Benutzer hat in weiteren Bereichen individuelle Einstellungsmöglichkeiten:
 Benutzerrechte
 --------------
 
-[Rechte](../effizientes-dokumentieren/rechteverwaltung/index.md) innerhalb von i-doit können pro Benutzer oder – besser – pro Personengruppe vergeben werden. Dazu wird ein Benutzer der entsprechenden Gruppe zugeordnet. Diese verfügt dann über die entsprechenden Rechte, die dem Benutzer vererbt werden. Ein Benutzer kann mehreren Gruppen zugeordnet werden und erbt dadurch die jeweiligen Rechte.
+[Rechte](../effizientes-dokumentieren/rechteverwaltung/index.md) innerhalb von i-doit können pro Benutzer oder - besser - pro Personengruppe vergeben werden. Dazu wird ein Benutzer der entsprechenden Gruppe zugeordnet. Diese verfügt dann über die entsprechenden Rechte, die dem Benutzer vererbt werden. Ein Benutzer kann mehreren Gruppen zugeordnet werden und erbt dadurch die jeweiligen Rechte.

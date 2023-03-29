@@ -41,18 +41,24 @@ Wir verbinden uns via SSH und rufen im Menü den Punkt**0 Launch Shell**auf.
 
 Anschließend führen wir Updates durch:
 
+```shell
     sudo apt update
     sudo apt upgrade
     sudo apt-get autoremove
     sudo apt clean
+```
 
 Anschließend muss das System neugestartet werden. Aufgrund eines Fehlers muss der Linux-Kernel auf dem neusten Stand sein:
 
+```shell
     sudo systemctl reboot
+```
 
-Nach dem Neustart verbinden wir uns abermals via SSH und rufen die Shell im Menü auf. Nun stellen wir sicher, dass Version **9.x** im Einsatz ist:
+Nach dem Neustart verbinden wir uns abermals via SSH und rufen die Shell im Menü auf. Nun stellen wir sicher, dass Version **9.x** im Einsatz ist:
 
+```shell
     cat /etc/debian_release
+```
 
 Sollte dies nicht der Fall sein, wird das Upgrade fehlschlagen.
 
@@ -67,10 +73,13 @@ Upgrade durchführen
 
 Die Quellen für die Distributionspakete werden nun angepasst:
 
+```shell
     sudo nano /etc/apt/sources.list
+```
 
 Folgende Zeile wird am Ende ergänzt:
 
+```shell
     deb http://deb.debian.org/debian/ buster main
     deb-src http://deb.debian.org/debian/ buster main
 
@@ -81,13 +90,16 @@ Folgende Zeile wird am Ende ergänzt:
     deb-src http://deb.debian.org/debian/ buster-updates main
 
     deb http://mirrors.kernel.org/debian buster main contrib
+```
 
 Alle vorherigen Zeilen werden auskommentiert. Hierbei wird jeder Zeile ein **#** vorangestellt.
 
 Anschließend werden die Paketquellen aktualisiert und ein Update der Pakete durchgeführt:
 
+```shell
     sudo apt update
     sudo apt upgrade
+```
 
 Beim letzten Befehl werden mehrere Benutzer-Interaktionen nötig:
 
@@ -97,11 +109,15 @@ Beim letzten Befehl werden mehrere Benutzer-Interaktionen nötig:
 
 Nun folgt das eigentliche Upgrade der Pakete auf neue Versionen:
 
+```shell
     sudo apt dist-upgrade
+```
 
 Damit der neue Linux-Kernel aktiv wird, starten wir das System neu:
 
+```shell
     sudo systemctl reboot
+```
 
 Das Upgrade auf Version 10 "Buster" ist somit abgeschlossen.
 
@@ -112,24 +128,32 @@ Nach dem Neustart verbinden wir uns abermals via SSH mit dem System und rufen im
 
 Erst einmal räumen wir bei den Distributionspaketen auf:
 
+```shell
     sudo apt autoremove
     sudo apt clean
+```
 
 Nun müssen wir den Apache Webserver und PHP anpassen, weil statt PHP 7.0 nun 7.3 mitgeliefert wird:
 
+```shell
     sudo cp /etc/php/7.0/mods-available/i-doit.ini /etc/php/7.3/mods-available
     sudo phpenmod -v 7.3 i-doit
     sudo apt install php7.3-bcmath php7.3-cli php7.3-common php7.3-curl php7.3-gd php7.3-imagick php7.3-json php7.3-ldap php7.3-memcached php7.3-mysql php7.3-pgsql php7.3-xml php7.3-zip
     sudo a2dismod php7.0
     sudo a2enmod php7.3
     sudo systemctl restart apache2.service
+```
 
 Und zu guter Letzt die Versions-Nummer der Appliance:
 
+```shell
     sudo nano /etc/i-doit/appliance.conf
+```
 
 Inhalt:
 
+```shell
     APPLIANCE_VERSION="1.3.1"
+```
 
 Damit ist auch die Nachbereitung abgeschlossen. Nun können wieder alle Automatismen gestartet werden. Die Downtime ist beendet und i-doit kann wieder von den Benutzern wie gewohnt aufgerufen werden.

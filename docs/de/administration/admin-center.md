@@ -8,7 +8,7 @@ Zugangsdaten
 !!! attention "Achtung!"
 
     Bitte editieren Sie nicht das Passwort, falls eines bereits vergeben ist. Dies kann nur über die [CLI](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#admin-center-password-reset) geändert werden!
-  
+
 Für das Admin Center gelten **separate Zugangsdaten**. Diese können bei der [Installation von i-doit](../installation/manuelle-installation/setup.md) festgelegt werden. Sollte dieser Schritt übersprungen werden, ist erst einmal kein Zugang zum Admin Center möglich. Um **nachträglich** Zugangsdaten zu vergeben, wird die Datei src/config.inc.php im Installationsverzeichnis von i-doit durch den CLI Befehl [**admin-center-password-reset**](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#console-admin-center-password-reset) aktualisiert, wobei username und password durch durch die im Befehl mitgegebenen Werte ausgetauscht werden :
 
     $g_admin_auth = array(

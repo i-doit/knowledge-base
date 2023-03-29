@@ -7,7 +7,7 @@ Installieren Sie die heruntergeladene ZIP-Datei [wie jedes andere i-doit Add-on]
 Hinzufügen der checkmk 2 Add-on Kategorien
 ------------------------------------------
 
-Das Add-on macht zusätzlich die Kategorien “Checkmk Host” und “Checkmk Tags” für alle Objekttypen verfügbar. Die Kategorie kann über die Objekttypkonfiguration und den Quick Configuration Wizard mit den gewünschten Objekttypen verknüpft werden. Auf diese Weise erscheinen nur die Objekttypen, die vom Benutzer angegeben werden, um die Auswahlliste übersichtlich zu halten.
+Das Add-on macht zusätzlich die Kategorien "Checkmk Host" und "Checkmk Tags" für alle Objekttypen verfügbar. Die Kategorie kann über die Objekttypkonfiguration und den Quick Configuration Wizard mit den gewünschten Objekttypen verknüpft werden. Auf diese Weise erscheinen nur die Objekttypen, die vom Benutzer angegeben werden, um die Auswahlliste übersichtlich zu halten.
 
 Führen Sie idoitcmk dort aus, wo Sie wollen
 ---------------------------------------------

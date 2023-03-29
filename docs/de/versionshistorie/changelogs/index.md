@@ -2,7 +2,6 @@
 
 Welche Änderungen wurden pro Release von _i-doit pro_ veröffentlicht?
 
-  
 *   [Changelog 23](./changelog-23.md)
 *   [Changelog 22](./changelog-22.md)
 *   [Changelog 21](./changelog-21.md)

@@ -9,7 +9,7 @@ Viele Anwender haben bereits heute [benutzerdefinierte Kategorien](../grundlagen
 
 Nehmen wir an, in der Organisation sind Bereichsdrucker definiert. Die Räume **1.01** bis **1.07** verwenden **Drucker A**, die Räume **1.0****8** bis **1.11** den **Drucker B**.
 
-Dokumentiert wird das mit der benutzerdefinierten Kategorie **Bereichsdrucker**. Diese wird dem [Objekttyp](../grundlagen/struktur-it-dokumentation.md) **Drucker** zugeordnet und als [Single-Value-Kategorie](../grundlagen/struktur-it-dokumentation.md), nicht als [Listen-Kategorie (Multi-Value)](../grundlagen/struktur-it-dokumentation.md) definiert. Das [Attribut](../grundlagen/struktur-it-dokumentation.md) **Bereichsdrucker für** wird als **Objekt-Beziehung (Mehrfachauswahl)** mit **Zusatz Freigabenzugriff** hinzugefügt.  
+Dokumentiert wird das mit der benutzerdefinierten Kategorie **Bereichsdrucker**. Diese wird dem [Objekttyp](../grundlagen/struktur-it-dokumentation.md) **Drucker** zugeordnet und als [Single-Value-Kategorie](../grundlagen/struktur-it-dokumentation.md), nicht als [Listen-Kategorie (Multi-Value)](../grundlagen/struktur-it-dokumentation.md) definiert. Das [Attribut](../grundlagen/struktur-it-dokumentation.md) **Bereichsdrucker für** wird als **Objekt-Beziehung (Mehrfachauswahl)** mit **Zusatz Freigabenzugriff** hinzugefügt.
 
 [![benutzerdefinierte-kategorien](../assets/images/de/auswertungen/variable-reports/1-vr.png)](../assets/images/de/auswertungen/variable-reports/1-vr.png)
 
@@ -17,29 +17,29 @@ Danach wechselt man zum Objekt **Drucker A**. In der Kategorie **Bereichsdrucker
 
 [![objekt-browser](../assets/images/de/auswertungen/variable-reports/2-vr.png)](../assets/images/de/auswertungen/variable-reports/2-vr.png)
 
-Das Ergebnis sieht in der Kategorie dann so aus wie im nachfolgenden Bild.  
+Das Ergebnis sieht in der Kategorie dann so aus wie im nachfolgenden Bild.
 
 [![bereichsdrucker](../assets/images/de/auswertungen/variable-reports/3-vr.png)](../assets/images/de/auswertungen/variable-reports/3-vr.png)
 
-Dies lässt sich auch mit dem [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md) visualisieren.  
+Dies lässt sich auch mit dem [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md) visualisieren.
 
 [![cmdb-explorer](../assets/images/de/auswertungen/variable-reports/4-vr.png)](../assets/images/de/auswertungen/variable-reports/4-vr.png)
 
-Rückwärtige Ansicht für benutzerdefinierte Kategorie  
+Rückwärtige Ansicht für benutzerdefinierte Kategorie
 
 -------------------------------------------------------
 
 So weit so gut. Doch wie findet man heraus, wenn man sich den Raum **1.05** ansieht, welcher Bereichsdrucker für diesen Raum definiert ist? Dafür ist eine rückwärtige Ansicht nötig, mit der man feststellen kann, welcher Drucker in Beziehung zu diesem Raum steht. Mit den variablen Reports gibt für solche kontextabhängigen Abfragen eine Lösung.
 
-Dazu wird ein [Report](../auswertungen/report-manager.md) und eine weitere benutzerdefinierte Kategorie erstellt. Zunächst zum Report **Bereichsdrucker rückwärtig**. Dort wird die Checkbox **Variabler Report** angehakt und unter **Ausgabe** einige interessante Attribute zu den Druckern ausgewählt.  
+Dazu wird ein [Report](../auswertungen/report-manager.md) und eine weitere benutzerdefinierte Kategorie erstellt. Zunächst zum Report **Bereichsdrucker rückwärtig**. Dort wird die Checkbox **Variabler Report** angehakt und unter **Ausgabe** einige interessante Attribute zu den Druckern ausgewählt.
 
 [![abfrage-editor](../assets/images/de/auswertungen/variable-reports/5-vr.png)](../assets/images/de/auswertungen/variable-reports/5-vr.png)
 
 Im Abfrage-Editor gibt es die Möglichkeit, bei allen Verknüpfungen, die Beziehungen generieren, unter **Bedingungen** einen **Feldplatzhalter** zu setzen.
 
-Für diesen Anwendungsfall heißt das: Der Report “sucht” nach jenen Objekten, in denen in der benutzerdefinierten Kategorie **Bereichsdrucker** im Attribut **Bereichsdrucker für** die [Objekt-ID](../grundlagen/eindeutige-referenzierungen.md) des aktuell ausgewählten Objektes eingetragen ist. Doch was ist das ausgewählte Objekt? Im Kontext des Report Managers gibt es kein ausgewähltes Objekt.
+Für diesen Anwendungsfall heißt das: Der Report "sucht" nach jenen Objekten, in denen in der benutzerdefinierten Kategorie **Bereichsdrucker** im Attribut **Bereichsdrucker für** die [Objekt-ID](../grundlagen/eindeutige-referenzierungen.md) des aktuell ausgewählten Objektes eingetragen ist. Doch was ist das ausgewählte Objekt? Im Kontext des Report Managers gibt es kein ausgewähltes Objekt.
 
-Daher muss stets ein Objekt auswählt werden, um den Report ausfüllen zu können. Das geschieht dadurch, indem man zum Report eine Kategorie erstellt, die den Report innerhalb eines Objektes ausführt. Diese wird **Bereichsdrucker rückwärtig** genannt, dem Objekttyp **Raum** zugeordnet und als Single-Value-Kategorie definiert. Zudem erhält sich ein namenloses Attribut mit dem **Feldtyp Report**. Unter **Zusatz** wird die ID des oben erstellten Reports angegeben.  
+Daher muss stets ein Objekt auswählt werden, um den Report ausfüllen zu können. Das geschieht dadurch, indem man zum Report eine Kategorie erstellt, die den Report innerhalb eines Objektes ausführt. Diese wird **Bereichsdrucker rückwärtig** genannt, dem Objekttyp **Raum** zugeordnet und als Single-Value-Kategorie definiert. Zudem erhält sich ein namenloses Attribut mit dem **Feldtyp Report**. Unter **Zusatz** wird die ID des oben erstellten Reports angegeben.
 
 [![report-1](../assets/images/de/auswertungen/variable-reports/6-vr.png)](../assets/images/de/auswertungen/variable-reports/6-vr.png)
 

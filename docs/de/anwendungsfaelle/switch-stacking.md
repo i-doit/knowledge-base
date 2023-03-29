@@ -1,6 +1,6 @@
 # Switch Stacking
 
-Mit dem [Objekttypen](../glossar.md) **Stacking** ist es möglich, einen Stack-Verbund mit mehreren Mitgliedern zu definieren, die Informationen untereinander austauschen. Auch wenn Stacking für unterschiedliche Objekttypen genutzt werden kann, ist der ursprüngliche Gedanke für diesen Objekttypen und die dazugehörige [Kategorie](../glossar.md) **Stack Mitglieder** auf Switch Stacking zurückzuführen. Der Objekttyp ist ab Version 1.7 unter der [Objekttypgruppe](../glossar.md) **Andere** zu finden.
+Mit dem [Objekttypen](../glossar.md) **Stacking** ist es möglich, einen Stack-Verbund mit mehreren Mitgliedern zu definieren, die Informationen untereinander austauschen. Auch wenn Stacking für unterschiedliche Objekttypen genutzt werden kann, ist der ursprüngliche Gedanke für diesen Objekttypen und die dazugehörige [Kategorie](../glossar.md) **Stack Mitglieder** auf Switch Stacking zurückzuführen. Der Objekttyp ist ab Version 1.7 unter der [Objekttypgruppe](../glossar.md) **Andere** zu finden.
 
 Stack-Mitglieder
 ----------------

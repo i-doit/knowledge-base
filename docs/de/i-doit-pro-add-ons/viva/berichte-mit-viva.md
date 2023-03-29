@@ -4,7 +4,7 @@ Um eine kontinuierliche Qualitätssicherung zu gewährleisten, unterstützt das 
 
 Als Resultat dient wiederum der [Audit](./audits-mit-viva-unterstuetzen.md#audits-erstellen), der den Abschlussbericht des Projekts bildet und in eine mögliche Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz mündet.
 
-Zu jedem [Informationsverbund](./vorgehensweise-mit-viva.md#informationsverbünde-modellieren) stehen unterschiedliche Berichte zur Auswahl. Sie sind innerhalb von VIVA über den Menübaum unter **Informationsverbünde → Name des Informationsverbunds → Berichte** zu erreichen.
+Zu jedem [Informationsverbund](./vorgehensweise-mit-viva.md#informationsverbünde-modellieren) stehen unterschiedliche Berichte zur Auswahl. Sie sind innerhalb von VIVA über den Menübaum unter **Informationsverbünde → Name des Informationsverbunds → Berichte** zu erreichen.
 
 [![Berichte im Menübaum](../../assets/images/de/i-doit-pro-add-ons/viva/berichte/1-vb.png)](../../assets/images/de/i-doit-pro-add-ons/viva/berichte/1-vb.png)
 

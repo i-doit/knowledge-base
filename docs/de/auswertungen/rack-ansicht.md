@@ -71,7 +71,7 @@ Die Kategorie Schrank bringt eine vielfältige Auswertung über die zugeordneten
 
 [![Statistiken](../assets/images/de/auswertungen/rack-ansicht/9-ra.png)](../assets/images/de/auswertungen/rack-ansicht/9-ra.png)
 
-Die Statistiken setzen sich aus verschiedenen Attributen des  Racks und von zugeordneten Objekten zusammen:
+Die Statistiken setzen sich aus verschiedenen Attributen des Racks und von zugeordneten Objekten zusammen:
 
 | Statistik | Objekte | Kategorien | Attribute |
 | --- | --- | --- | --- |

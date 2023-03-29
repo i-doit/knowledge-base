@@ -120,7 +120,7 @@ Wichtig ist, dass der Dienst von außen nicht erreichbar ist. Meist läuft der D
 
 Wir schließen uns den üblichen Rants zu PHP keineswegs an, denn die Scriptsprache lässt sich für unsere Zwecke angemessen "härten". Eine wichtige Botschaft ist: **PHP sollte immer auf dem neusten Patch-Stand sein.** Hierbei ist zu beachten, welche Major-Versionen von PHP (5.x, 7.x) von den PHP-Entwicklern und welche PHP-Pakete von der genutzten Distribution unterstützt werden. Distributionen setzen oftmals nicht auf die neusten Major-Versionen, sondern pflegen ältere, eher stabilere Versionen. Diese werden mit Bug- und Security-Fixes gepatcht. Updates von PHP sollten also immer schnellstmöglich eingespielt werden.
 
-Für den Betrieb von i-doit erforderliche haben wir bereits in den [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) beschrieben. **Diese Einstellungen lassen sich durch zusätzliche erweitern.** Dafür erstellen wir eine neue .ini-Datei:
+Für den Betrieb von i-doit erforderliche haben wir bereits in den [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) beschrieben. **Diese Einstellungen lassen sich durch zusätzliche erweitern.** Dafür erstellen wir eine neue .ini-Datei:
 
     sudo editor /etc/php/7.2/mods-available/zz_security.ini
 
@@ -156,53 +156,53 @@ Hier ist ein Beispiel für Debian GNU/Linux 8.x, um verschiedene Sicherheitsmech
         Header always set X-Frame-Options "SAMEORIGIN"
         Header always set X-XSS-Protection "1; mode=block"
         Header always set X-Content-Type-Options "nosniff"
-    
+
         ## Avoid information about the Web server:
         Header unset Server
     </IfModule>
-    
+
     ## Avoid information about the Web server:
     ServerSignature Off
     ServerTokens    Prod
-    
+
     <IfModule mod_ssl.c>
             ## See <https://mozilla.github.io/server-side-tls/ssl-config-generator/>:
             SSLProtocol             all -SSLv3 -TLSv1 -TLSv1.1
             SSLCipherSuite          ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256
             SSLHonorCipherOrder     on
             SSLCompression          off
-    
+
             SSLUseStapling  on
             SSLStaplingResponderTimeout     5
             SSLStaplingReturnResponderErrors        off
             SSLStaplingCache        shmcb:/var/run/ocsp(128000)
-    
+
             Header always set Strict-Transport-Security "max-age=15768000; includeSubDomains"
     </IfModule>
-    
+
     <IfModule mod_ssl.c>
             <VirtualHost *:443>
                     ServerAdmin info@i-doit.example.net
                     Servername i-doit.example.net
-    
+
                     DocumentRoot /var/www/html/
-    
+
                     <Directory /var/www/html/>
                             Options FollowSymLinks
                             AllowOverride All
                     </Directory>
-    
+
                     CustomLog /var/log/apache2/access.log combined
                     ServerSignature Off
-    
+
                     LogLevel info ssl:warn
                     ErrorLog ${APACHE_LOG_DIR}/error.log
-    
+
                     SSLEngine on
 
                     SSLCertificateFile      /etc/ssl/i-doit.example.net.crt
                     SSLCertificateKeyFile   /etc/ssl/i-doit.example.net.key
-    
+
                     ## Let i-doit know about some SSL settings (see <https://httpd.apache.org/docs/2.4/mod/mod_ssl.html#ssloptions>):
                     <FilesMatch "\.(php)$">
                             SSLOptions +StdEnvVars
@@ -349,7 +349,7 @@ Dieser Benutzer wird ebenfalls beim Setup angelegt. Anschließend kann das Passw
 
 #### Standard-Benutzer in i-doit
 
-Die Benutzer admin, reader, author und editor werden bereits beim Setup angelegt. Best Practice ist es, diese Benutzer niemals zu verwenden, sondern für jeden Benutzer ein eigenes [Personenobjekt](../grundlagen/struktur-it-dokumentation.md) anzulegen. Die Personenobjekte für admin & Co. können nicht gelöscht, aber [archiviert](../grundlagen/struktur-it-dokumentation.md) werden. Dadurch wird die Anmeldung ausgeschlossen. Wer auf den Einsatz dieser Standard-Benutzer nicht verzichten möchte, sollte deren Passwörter dringend ändern, weil sie gleichlautend mit dem Benutzernamen sind. Erledigt wird dies im jeweiligen Personenobjekt in der Kategorie **Personen → Login**.
+Die Benutzer admin, reader, author und editor werden bereits beim Setup angelegt. Best Practice ist es, diese Benutzer niemals zu verwenden, sondern für jeden Benutzer ein eigenes [Personenobjekt](../grundlagen/struktur-it-dokumentation.md) anzulegen. Die Personenobjekte für admin & Co. können nicht gelöscht, aber [archiviert](../grundlagen/struktur-it-dokumentation.md) werden. Dadurch wird die Anmeldung ausgeschlossen. Wer auf den Einsatz dieser Standard-Benutzer nicht verzichten möchte, sollte deren Passwörter dringend ändern, weil sie gleichlautend mit dem Benutzernamen sind. Erledigt wird dies im jeweiligen Personenobjekt in der Kategorie **Personen → Login**.
 
 #### Standard-Benutzer unter Linux
 
@@ -359,7 +359,7 @@ Bereits bei der Installation des Betriebssystems wird ein Standard-Benutzer ange
 
 ### CSRF Tokens aktivieren
 
-i-doit bringt mehrere Maßnahmen mit, um Angriffe, die unter [**Cross-Site-Request-Forgery** (CSRF oder XSRF)](https://de.wikipedia.org/wiki/Cross-Site-Request-Forgery) firmieren, zu erschweren. Aktiviert werden die Maßnahmen unter **Verwaltung → Systemeinstellungen → Security → CSRF-Token** mit der Angabe **Ja**.
+i-doit bringt mehrere Maßnahmen mit, um Angriffe, die unter [**Cross-Site-Request-Forgery** (CSRF oder XSRF)](https://de.wikipedia.org/wiki/Cross-Site-Request-Forgery) firmieren, zu erschweren. Aktiviert werden die Maßnahmen unter **Verwaltung → Systemeinstellungen → Security → CSRF-Token** mit der Angabe **Ja**.
 
 ### Zwei-Faktor-Authentifizierung
 

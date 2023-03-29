@@ -61,7 +61,7 @@ Eine weitere Tabelle fasst wichtige Informationen des Netzes zusammen (Anzahl ve
 
 !!!info "Ping und NSLOOKUP"
 
-    Die Kategorie IP-Liste bietet eine Möglichkeit zum Abgleich zwischen Soll- und Ist-Zustand: Um zu prüfen, ob die dokumentierten IP-Adressen und Hostnames tatsächlich vergeben sind, kann i-doit ICMP-Pakete ("Pings") versenden und einen NSLOOKUP starten. Dazu benötigt die i-doit-Installation Zugriff auf das Netz. Es gibt die Möglichkeit, einzelne Einträge oder alle Einträge nacheinander prüfen zu lassen. Unter **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Optionen für IP-Liste** lässt sich einstellen, welche Kommandozeilen-Tools verwendet werden. Diese muss der Benutzer/die Gruppe des Apache Webservers aufrufen dürfen.
+    Die Kategorie IP-Liste bietet eine Möglichkeit zum Abgleich zwischen Soll- und Ist-Zustand: Um zu prüfen, ob die dokumentierten IP-Adressen und Hostnames tatsächlich vergeben sind, kann i-doit ICMP-Pakete ("Pings") versenden und einen NSLOOKUP starten. Dazu benötigt die i-doit-Installation Zugriff auf das Netz. Es gibt die Möglichkeit, einzelne Einträge oder alle Einträge nacheinander prüfen zu lassen. Unter **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Optionen für IP-Liste** lässt sich einstellen, welche Kommandozeilen-Tools verwendet werden. Diese muss der Benutzer/die Gruppe des Apache Webservers aufrufen dürfen.
 
 VLAN
 ----
@@ -115,7 +115,7 @@ Netzkomponenten können als Gateways agieren, um von einem Netz aus Verbindungen
 IPv4 versus IPv6
 ----------------
 
-Auch wenn die Verbreitung von IPv6 in vielen Unternehmens-LANs als eher gering geschätzt werden darf, bietet i-doit die Grundelemente zur Dokumentation von IPv6-Netzen. Dazu werden – wie bei IPv4 – Netze definiert und IP-Adressen zugeordnet. Lediglich die **Adressvergabe** unterscheidet sich (SLAAC, DHCPv6, usw.). Zudem kann der **Gültigkeitsbereich** (Global, Linklokal usw.) angegeben werden. Beide Attribute gehören zur Kategorie **Hostadresse**.
+Auch wenn die Verbreitung von IPv6 in vielen Unternehmens-LANs als eher gering geschätzt werden darf, bietet i-doit die Grundelemente zur Dokumentation von IPv6-Netzen. Dazu werden, wie bei IPv4, Netze definiert und IP-Adressen zugeordnet. Lediglich die **Adressvergabe** unterscheidet sich (SLAAC, DHCPv6, usw.). Zudem kann der **Gültigkeitsbereich** (Global, Linklokal usw.) angegeben werden. Beide Attribute gehören zur Kategorie **Hostadresse**.
 
 WLAN
 ----

@@ -3,12 +3,12 @@
 Da sich in der [IT-Dokumentation](../../glossar.md#Glossar-IT-Dokumentation) wichtige, für die tägliche Arbeit benötigte Daten befinden, ist ein Backup und Recovery von _i-doit_ unablässig. Daher sollte _i-doit_ bei der bereits bestehenden Backup-Strategie berücksichtigt werden.
 
 
-Hierbei müssen drei Bereiche abgedeckt werden: die [Datenbanken](#backup-und-recovery-der-datenbanken), die [Dateien](#backup-und-recovery-der-dateien) von _i-doit_ und die [Systemkonfiguration](#backup-und-recovery-der-systemkonfiguration).
+Hierbei müssen drei Bereiche abgedeckt werden: die [Datenbanken](#backup-und-recovery-der-datenbanken), die [Dateien](#backup-und-recovery-der-dateien) von _i-doit_ und die [Systemkonfiguration](#backup-und-recovery-der-systemkonfiguration).
 
 Backup und Recovery der Datenbanken
 -----------------------------------
 
-Hierzu kann das Kommandozeilen-Tool mysqldump verwendet werden. Ein einfaches Beispiel zum Sichern aller Daten:
+Hierzu kann das Kommandozeilen-Tool mysqldump verwendet werden. Ein einfaches Beispiel zum Sichern aller Daten:
 
     mysqldump -hlocalhost -uroot -p --all-databases > backup.sql
 
@@ -43,7 +43,7 @@ der Webserver wieder aktiviert werden. Sind [Cronjobs](../../automatisierung-und
 
     Dies liegt daran, dass die Daten und Strukturen nacheinander, d. h., Tabelle für Tabelle wiederhergestellt werden. Zwischenzeitlich existieren demnach alte neben neuen (wiederhergestellten) Daten. Das Datenbank-Modell von i-doit enthält sehr viele Verknüpfungen von Tabellen untereinander, für die Foreign Keys Contraints verwendet werden. Diese Referenzierung von beispielsweise einem Datensatz A in Tabelle 1 auf Datensatz B in Tabelle 2 unterliegt bestimmten Automatismen, wenn A oder B aktualisiert oder gar gelöscht werden. Die Reihenfolge spielt dabei eine wichtige Rolle, wann A und wann B wiederhergestellt werden. Alte und neue Referenzen können allerdings dieselben Indizes verwenden, auch wenn sie unterschiedliche Referenzierungen ausdrücken. Dadurch kann es zu oben genannten Fehlern kommen.
 
-    Als Workaround bietet es sich an, die Datenbanken vor der Wiederherstellung explizit zu löschen:
+    Als Workaround bietet es sich an, die Datenbanken vor der Wiederherstellung explizit zu löschen:
 
         -- Standard-Name der System-Datenbank:
         DROP DATABASE idoit_system;
@@ -82,4 +82,4 @@ Nach dem Snapshot wird das DBMS wieder gestartet:
 
     sudo service mysql start
 
-Sicherlich hinreichend bekannt, aber dennoch wichtig zu erwähnen: **Backups sollten niemals auf dem System verbleiben, das gesichert wird.**
+Sicherlich hinreichend bekannt, aber dennoch wichtig zu erwähnen: **Backups sollten niemals auf dem System verbleiben, das gesichert wird.**

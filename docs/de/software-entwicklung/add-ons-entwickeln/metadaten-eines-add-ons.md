@@ -1,6 +1,6 @@
 # Metadaten eines Add-ons
 
-Die package.json\-Datei kann in etwa mit einer composer.json verglichen werden. Der Inhalt dieser Datei gibt Aufschluss über die Inhalte des Add-ons, die Version und Abhängigkeiten. 
+Die package.json\-Datei kann in etwa mit einer composer.json verglichen werden. Der Inhalt dieser Datei gibt Aufschluss über die Inhalte des Add-ons, die Version und Abhängigkeiten. 
 
 Hier finden wir unter anderem den Add-on-Namen, Identifikator, Autor, Beschreibung und Version. Der Inhalt der Datei kann folgendermaßen aussehen:
 
@@ -44,7 +44,7 @@ Die hinterlegte Sprachkonstante wird als Name des Add-ons verwendet, wenn dieses
 Identifier
 ----------
 
-Der Identifier ist mit die wichtigste Information der package.json, da dieser für eine Menge interner Logik und für die Identifikation des Add-ons benötigt wird. Detaillierte Informationen befinden sich im Artikel [Add-ons entwickeln](index.md).
+Der Identifier ist mit die wichtigste Information der package.json, da dieser für eine Menge interner Logik und für die Identifikation des Add-ons benötigt wird. Detaillierte Informationen befinden sich im Artikel [Add-ons entwickeln](index.md).
 
 Author
 ------

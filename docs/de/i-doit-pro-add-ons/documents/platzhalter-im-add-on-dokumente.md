@@ -12,7 +12,8 @@ Ein eingebundener Platzhalter kann nachträglich bearbeitet werden, indem er per
 
 Der Platzhalter zur Einbindung von Informationen aus dem Hauptobjekt ermöglicht es, Inhalte die dem Objekt zugehörig sind, für das das Dokument erstellt wird, in das Dokument einzufügen.
 
-Hier können die einzelnen Attribute, die im Dokument ausgegeben werden sollen, gruppiert nach ihrer Kategorie, selektiert werden. Dies geschieht über das Plus-Symbol neben dem Attribut. Gewählte Attribute erscheinen auf der rechten Seite und können auch wieder entfernt werden, indem das Minus-Symbol genutzt wird.  
+Hier können die einzelnen Attribute, die im Dokument ausgegeben werden sollen, gruppiert nach ihrer Kategorie, selektiert werden. Dies geschieht über das Plus-Symbol neben dem Attribut. Gewählte Attribute erscheinen auf der rechten Seite und können auch wieder entfernt werden, indem das Minus-Symbol genutzt wird.
+
 Wenn eine Objektverknüpfung (Beziehung) ausgewählt wurde, erscheint in der Zeile des Attributs ein Lupen-Symbol. Dies erlaubt die Auswahl von Attributen des verknüpften Objekts in einem weiteren Bereich der unterhalb der Auswahl auftaucht.
 
 [![Hauptobjekt](../../assets/images/de/i-doit-pro-add-ons/documents/platzhalter/3-ph.png)](../../assets/images/de/i-doit-pro-add-ons/documents/platzhalter/3-ph.png)
@@ -31,7 +32,8 @@ Zuletzt ist es möglich, die Darstellung der Spaltenüberschriften, Gitternetzli
 
 Informationen eines fest definierten Objekts können über diesen Platzhalter eingebunden werden.
 
-Auch hier entspricht die Attributauswahl jener, die für das Hauptobjekt zur Verfügung steht. Die gewählten Attribute beziehen sich jedoch auf das gewählte Objekt.  
+Auch hier entspricht die Attributauswahl jener, die für das Hauptobjekt zur Verfügung steht. Die gewählten Attribute beziehen sich jedoch auf das gewählte Objekt.
+
 Auch die zusätzlichen Formatierungsmöglichkeiten sind identisch zu jenen in der Auswahl des Hauptobjekts.
 
 [![Platzhalter Externes Objekt](../../assets/images/de/i-doit-pro-add-ons/documents/platzhalter/6-ph.png)](../../assets/images/de/i-doit-pro-add-ons/documents/platzhalter/6-ph.png)
@@ -40,7 +42,8 @@ Auch die zusätzlichen Formatierungsmöglichkeiten sind identisch zu jenen in de
 
 [![Platzhalter Report](../../assets/images/de/i-doit-pro-add-ons/documents/platzhalter/7-ph.png)](../../assets/images/de/i-doit-pro-add-ons/documents/platzhalter/7-ph.png)
 
-Über die Schaltfläche "Report" is es möglich, Ergebnislisten aus zuvor erstellten [Reports](../../auswertungen/report-manager.md) einzubinden. Die Auswahl erfolgt über das Dropdown Feld im oberen Bereich, in dem der Report anhand seines Namens gewählt wird.  
+Über die Schaltfläche "Report" is es möglich, Ergebnislisten aus zuvor erstellten [Reports](../../auswertungen/report-manager.md) einzubinden. Die Auswahl erfolgt über das Dropdown Feld im oberen Bereich, in dem der Report anhand seines Namens gewählt wird.
+
 Die Ergebnisliste im Dokument entspricht immer der Reportausgabe bei der Dokumentenerstellung. Wenn zu erwarten ist, dass die Ergebnisse des Reports sich verändert/aktualisiert haben, muss eine neue Revision des Dokuments auf Basis der Vorlage erstellt werden.
 
 Zusätzlich ist es möglich, [Variable Reports](../../auswertungen/variable-reports.md) in das Dokument einzubinden. Die gewählten Platzhalter entsprechen hier dem Hauptobjekt und geben dynamisch die Inhalte für das Hauptobjekt aus.

@@ -4,11 +4,11 @@ Zuerst navigieren wir in den Form Backend Unterordner innerhalb der i-doit Insta
 
     cd /var/www/html/src/classes/modules/forms/backend/
 
-Wir erstellen eine Kopie des Konfigurationstemplates:  
+Wir erstellen eine Kopie des Konfigurationstemplates:
 
     sudo -u www-data cp .env.dist .env
 
-Mit einem Texteditor wie, vi oder nano, editieren wir nun die .env:  
+Mit einem Texteditor wie, vioder nano, editieren wir nun die .env:
 
     sudo nano .env
 
@@ -37,13 +37,12 @@ Jetzt können wir die run.sh ausführen:
     Die Daten müssen bei der Installation notiert werden, da sie später in der Konfiguration des Forms Add-on in der i-doit pro Oberfläche eingetragen werden müssen.
     Beispiel: sudo ./run.sh instance:create forms1 abDzfk74dsfi55FOS32
 
-  
-Um die forms-service.sh zu verwenden, müssen wir erst die Rechte zum Ausführen setzen:
+Um die forms-service.shzu verwenden, müssen wir erst die Rechte zum Ausführen setzen:
 
     sudo chmod +x forms-service.sh
 
-Wir lassen nun den systemd Service für das Forms-Backend erstellen.  
-Dieser wird aktiviert und gestartet: 
+Wir lassen nun den systemd Service für das Forms-Backend erstellen.
+Dieser wird aktiviert und gestartet:
 
     sudo ./forms-service.sh
 

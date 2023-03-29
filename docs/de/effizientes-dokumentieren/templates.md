@@ -1,6 +1,6 @@
 # Templates
 
-i-doit erlaubt das Erstellen von Objekten, welche als Vorlage für neue [Objekte](../grundlagen/struktur-it-dokumentation.md) dienen. Der Benutzer kann eine große Menge an Objekten, die identische [Attribute](../grundlagen/struktur-it-dokumentation.md) besitzen – zum Beispiel Server der gleichen Hardware – vereinfacht anlegen.
+i-doit erlaubt das Erstellen von Objekten, welche als Vorlage für neue [Objekte](../grundlagen/struktur-it-dokumentation.md) dienen. Der Benutzer kann eine große Menge an Objekten, die identische [Attribute](../grundlagen/struktur-it-dokumentation.md) besitzen - zum Beispiel Server der gleichen Hardware - vereinfacht anlegen.
 
 Aufruf
 ------
@@ -39,7 +39,8 @@ Verwende in der Template-Funktion **Objekt(e) anlegen**  im Baum-Menü auf der l
 
 Hier wirst du zuerst aufgefordert, grundlegende Informationen zu deinen neuen Objekten anzugeben. Im ersten Schritt gilt es den Objekt-Titel sowie Objektyp deiner Objekte anzugeben. Da die Template-Funktion die gleichzeitige Erzeugung mehrerer Objekte erlaubt, kannst du ebenfalls festlegen, wie viele (identische) Objekte erstellt werden sollen. Wenn du dich dazu entscheidest, mehr als ein Objekt zu generieren, öffnet sich ein zusätzlicher Bereich, der dich auswählen lässt, ob du ein Zähler-Suffix verwenden möchtest. Hierbei ist es ebenfalls möglich die führenden Nullstellen und den Wert, mit dem die Zählung begonnen werden soll, anzugeben. Weiterhin lassen sich die Attribute **Einsatzzweck** und **Kategorie** der neuen Objekte bereits vorab angeben.
 
-Im Abschnitt **Template(s) wählen** kannst du nun festlegen, welches Template oder welche Templates für die Erzeugung der Objekte verwendet werden sollen. Wähle die gewünschten Templates im Drop-Down-Menü aus und füge diese nacheinander über die Schaltfläche **Ausgewähltes Template verwenden** hinzu. Informationen mehrerer Templates werden in jedem Objekt kombiniert.  
+Im Abschnitt **Template(s) wählen** kannst du nun festlegen, welches Template oder welche Templates für die Erzeugung der Objekte verwendet werden sollen. Wähle die gewünschten Templates im Drop-Down-Menü aus und füge diese nacheinander über die Schaltfläche **Ausgewähltes Template verwenden** hinzu. Informationen mehrerer Templates werden in jedem Objekt kombiniert.
+
 [![templates-objerzeugen](../assets/images/de/effizientes-dokumentieren/templates/5-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/5-temp.png)
 
 Aufrufen der Template-Funktionen aus einer Objektliste

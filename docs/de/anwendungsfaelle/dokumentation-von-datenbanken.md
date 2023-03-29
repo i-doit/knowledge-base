@@ -14,7 +14,7 @@ Die beiden Modelle unterscheiden sich darin das wir beim alten Modell die folgen
 
 Am Beispiel von i-doit wäre hier MariaDB das DBMS, die Installation auf dem i-doit Server die Instanz und die idoit\_system und i-doit\_data wären die Datenbankschema.
 
-Im neuen Modell gehen wir hier einen etwas anderen Weg. Das Objekt DBMS behalten wir bei, ergänzen aber in der Listenansicht der  Kategorie DBMS - Datenbank Installation den Reiter Zugewiesene Datenbanken. Hierdurch ist direkt am DBMS Objekt ersichtlich welche Datenbanken durch die jeweilige Datenbank Software bereitgestellt wird. Um beim Beispiel von i-doit zu bleiben würde hier dann innerhalb des MariaDB DBMS Obketes die Installation auf dem jeweiligen Server und die Datenbanken idoit\_data und idoit\_system angezeigt.
+Im neuen Modell gehen wir hier einen etwas anderen Weg. Das Objekt DBMS behalten wir bei, ergänzen aber in der Listenansicht der Kategorie DBMS - Datenbank Installation den Reiter Zugewiesene Datenbanken. Hierdurch ist direkt am DBMS Objekt ersichtlich welche Datenbanken durch die jeweilige Datenbank Software bereitgestellt wird. Um beim Beispiel von i-doit zu bleiben würde hier dann innerhalb des MariaDB DBMS Obketes die Installation auf dem jeweiligen Server und die Datenbanken idoit\_data und idoit\_system angezeigt.
 
 Im neuen Modell entfallen die Objekttypen Datenbankschema und Datenbankinstanz und werden durch eine neue Kategorie Datenbanken ersetzt. Die Idee ist hier Datenbanken dort zu dokumentieren wo sie ausgeführt werden. Läuft also eine Datenbank auf einem Server, weisen wir dort die Kategorie zu und pflegen Sie direkt an der Ressource. Läuft die Datenbank auf einem Cluster, weisen wir die Kategorie den Cluster Objekten zu und dokumentieren dort.
 

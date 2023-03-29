@@ -1,6 +1,6 @@
 # Navigieren und filtern
 
-Durch eine [Objekt-Liste](index.md) zu navigieren und nach bestimmten [Objekten](../struktur-it-dokumentation.md) zu filtern ist keine große Kunst. Und trotzdem lohnt sich ein genauer Blick.
+Durch eine [Objekt-Liste](index.md) zu navigieren und nach bestimmten [Objekten](../struktur-it-dokumentation.md) zu filtern ist keine große Kunst. Und trotzdem lohnt sich ein genauer Blick.
 
 [![Alle-Felder](../../assets/images/de/grundlagen/navigation-und-filtern/1-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/1-nuf.png)
 

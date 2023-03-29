@@ -12,7 +12,7 @@ Damit die i-doit-API korrekt mit der Klasse umgeht, sollte folgendes Template ve
         * API router.
         *
         * @param string $method Data method
-        * @param array  $params Parameters (depends on data method)
+        * @param array  $params Parameters (depends on data method)
         *
         * @return $this
         */

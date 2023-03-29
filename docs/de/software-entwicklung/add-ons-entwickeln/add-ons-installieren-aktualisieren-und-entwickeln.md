@@ -1,6 +1,6 @@
 # Add-ons installieren, aktualisieren und aktivieren
 
-Damit ein Add-on in i-doit installiert, aktualisiert und aktiviert werden kann, ist eine bestimmte Ordnerhierarchie einzuhalten. Innerhalb des Add-on-Ordners werden Dateien, wie z.B. init.php, vorausgesetzt, um einen einheitlichen Programmablauf zu gewährleisten. 
+Damit ein Add-on in i-doit installiert, aktualisiert und aktiviert werden kann, ist eine bestimmte Ordnerhierarchie einzuhalten. Innerhalb des Add-on-Ordners werden Dateien, wie z.B. init.php, vorausgesetzt, um einen einheitlichen Programmablauf zu gewährleisten.
 
 Add-on installieren
 -------------------
@@ -9,7 +9,7 @@ Add-ons müssen als ZIP-Archiv vorliegen, um von i-doit installiert werden zu k�
 
 [![addonsaa-istallieren](../../assets/images/de/software-entwicklung/add-ons-entwickeln/installieren-aktualisieren/1-ia.png)](../../assets/images/de/software-entwicklung/add-ons-entwickeln/installieren-aktualisieren/1-ia.png)
 
-Im Archiv muss die package.json\-Datei auf oberster Ebene (wie auch src) liegen, damit diese von i-doit gefunden wird. Diese beinhaltet diverse wichtige Metadaten, die während der Installation benötigt werden. Weitere Informationen sind im Artikel [Metadaten eines Add-ons (package.json)](metadaten-eines-add-ons.md) nachzulesen.
+Im Archiv muss die package.json\-Datei auf oberster Ebene (wie auch src) liegen, damit diese von i-doit gefunden wird. Diese beinhaltet diverse wichtige Metadaten, die während der Installation benötigt werden. Weitere Informationen sind im Artikel [Metadaten eines Add-ons (package.json)](metadaten-eines-add-ons.md) nachzulesen.
 
 Die Datei wird nach erfolgreicher Installation automatisch in das Add-on-Verzeichnis verschoben.
 
@@ -21,7 +21,7 @@ Anders als beim i-doit-Kern gibt es bei Add-ons keinen Unterschied zwischen "ins
 System- und Mandanten-Datenbank erweitern
 -----------------------------------------
 
-Häufig erweitert ein Add-on die i-doit-Mandanten-Datenbank um eigene Tabellen und Inhalte. Zu diesem Zweck kann ein Add-on die Dateien update_data.xml und update_sys.xml mitbringen, die im Add-on-Verzeichnis unterhalb des "install"-Ordners liegen müssen. Hier werden unter definierten Bedingungen SQL-Queries ausgeführt, die sowohl zum Installieren als auch Aktualisieren von Datenbank-Tabellen und -Inhalten genutzt werden können. Die Datei update_data.xml wird für die gewählten Mandanten-Datenbanken verwendet, während update_sys.xml ausschließlich auf die System-Datenbank angewendet wird.
+Häufig erweitert ein Add-on die i-doit-Mandanten-Datenbank um eigene Tabellen und Inhalte. Zu diesem Zweck kann ein Add-on die Dateien update_data.xml und update_sys.xml mitbringen, die im Add-on-Verzeichnis unterhalb des "install"-Ordners liegen müssen. Hier werden unter definierten Bedingungen SQL-Queries ausgeführt, die sowohl zum Installieren als auch Aktualisieren von Datenbank-Tabellen und -Inhalten genutzt werden können. Die Datei update_data.xml wird für die gewählten Mandanten-Datenbanken verwendet, während update_sys.xml ausschließlich auf die System-Datenbank angewendet wird.
 
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE isys [
@@ -51,7 +51,7 @@ Häufig erweitert ein Add-on die i-doit-Mandanten-Datenbank um eigene Tabellen u
         </info>
         <queries>
 
-            <!-- Queries and conditions go here --> 
+            <!-- Queries and conditions go here -->
 
         </queries>
     </isys>
@@ -82,7 +82,7 @@ Solche Queries können folgendermaßen aussehen:
             </exec>
         </sql>
     </query>
-    
+
     <query>
         <id>2</id>
         <title>Setting title of object #1 to "Root-Location"</title>
@@ -110,20 +110,20 @@ Es ist möglich, für jeden Ausgang des Checks (true / false) eine SQL-Query zu 
 
 Folgende Checks und Bedingungen sind möglich:
 
-*   C_CREATE_TABLE (inkl. Alias "C_UPDATE", "C_INSERT_INTO", "C_ALTER_TABLE", "C_TABLE_EXISTS" und "C_DROP_TABLE")  
-    Bedingung: Tabellen-Name  
+*   C_CREATE_TABLE (inkl. Alias "C_UPDATE", "C_INSERT_INTO", "C_ALTER_TABLE", "C_TABLE_EXISTS" und "C_DROP_TABLE")
+    Bedingung: Tabellen-Name
     Prüft, ob die angegebene Tabelle existiert.
-*   C_VALUE_EXISTS  
-    Bedingung: SQL-Query  
+*   C_VALUE_EXISTS
+    Bedingung: SQL-Query
     Führt die angegebene Query aus und prüft, ob es eine Rückgabe gibt (gefundene Zeilen > 0).
-*   C_ADD_FIELD  
-    Bedingung: Tabelle und Spalte in folgender Form: <Tabelle>,<Spalte>  
+*   C_ADD_FIELD
+    Bedingung: Tabelle und Spalte in folgender Form: <Tabelle>,<Spalte>
     Prüft, ob das genannte Feld in der Tabelle existiert.
 
 Aktivieren und Deaktivieren
 ---------------------------
 
-Damit ein Add-on im Admin-Center aktiviert und deaktiviert werden kann, muss die isys_module_example\-Klasse das idoit\AddOn\ActivatableInterface\-Interface implementieren. Dieses setzt drei Methoden voraus, die bei den entsprechenden Aktionen ausgeführt werden:
+Damit ein Add-on im Admin-Center aktiviert und deaktiviert werden kann, muss die isys_module_example\-Klasse das idoit\AddOn\ActivatableInterface\-Interface implementieren. Dieses setzt drei Methoden voraus, die bei den entsprechenden Aktionen ausgeführt werden:
 
     /**
     * Checks if a module is active.
@@ -189,13 +189,13 @@ Installieren und Deinstallieren
     /**
     * Basic installation process for all mandators.
     *
-    * @param  isys_component_database $tenantDatabase
-    * @param  isys_component_database $systemDatabase
-    * @param  integer                 $moduleId
-    * @param  string                  $type
-    * @param  integer                 $tenantId
+    * @param  isys_component_database $tenantDatabase
+    * @param  isys_component_database $systemDatabase
+    * @param  integer                 $moduleId
+    * @param  string                  $type
+    * @param  integer                 $tenantId
     *
-    * @since  i-doit 1.12
+    * @since  i-doit 1.12
     * @return void
     */
     public static function install($tenantDatabase, $systemDatabase, $moduleId, $type, $tenantId)

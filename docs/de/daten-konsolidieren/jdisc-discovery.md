@@ -55,7 +55,7 @@ Damit die Verbindung zu JDisc Discovery funktioniert, muss auf dem Host von i-do
 
 ## Profile
 
-Die JDisc-Profile innerhalb von i-doit geben die Möglichkeit, die Verknüpfung von Objekttypen und ihren Attributen zwischen JDisc und i-doit zu definieren. Unter **Verwaltung → Schnittstellen / externe Daten → Import → JDISC → JDisc-Profile** kann festgelegt werden, in welcher Weise die durch JDisc gefundenen Objekte ihren Weg in die IT-Dokumentation finden.
+Die JDisc-Profile innerhalb von i-doit geben die Möglichkeit, die Verknüpfung von Objekttypen und ihren Attributen zwischen JDisc und i-doit zu definieren. Unter **Verwaltung → Schnittstellen / externe Daten → Import → JDISC → JDisc-Profile** kann festgelegt werden, in welcher Weise die durch JDisc gefundenen Objekte ihren Weg in die IT-Dokumentation finden.
 
 [![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.jpg)
 
@@ -76,7 +76,7 @@ Für jeden Typ in JDisc kann ein äquivalenter Objekttyp in i-doit ausgewählt w
 
 | JDisc-Typ | JDisc-Betriebssystem | Objektnamen modifizieren | FQDN Zusatz | Port Filter | Objekttyp | Standort | Aktionen |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Device Type aus JDisc, der beim Import berücksichtigt werden soll.<br><br>Die Liste wird aus der angegebenen JDisc-Instanz ausgelesen und zwischengespeichert. | Betriebssysteme, die JDisc bereits inventarisiert hat.<br><br>Oftmals reicht der Device Type für eine Zuweisung zu einem Objekttyp nicht aus, weswegen optional das Betriebssystem angegeben werden kann.<br><br>Das Feld kann mit Wildcards (*) versehen werden. | Wandelt den Objekttitel um.<br><br>**Unverändert**: Der Objektname wird nicht verändert<br><br>**Großbuchstaben**: Der komplette Objektname wird in Großbuchstaben geändert.<br><br>**Kleinbuchstaben**: Der komplette Objektname wird in Kleinbuchstaben geändert. | Hängt an den Objekttitel  einen FQDN Zusatz an. | Welche Netzwerk-Ports sollen importiert werden?<br><br>**Normaler Import**: Alle physikalischen und logischen Ports werden importiert.<br><br>**Kein Import**: Im Textfeld können Port-Namen angegeben werden, die ignoriert werden sollen.  <br>Das Feld kann mit Wildcards (*) genutzt werden. (Beispiel: Port-Name: Loopback → Ports mit dem Namen Loopback werden nicht importiert)<br><br>**Logischer Port**/**Physikalischer Port**/**FC-Port**: Es werden nur die Ports importiert, deren Name im Textfeld zu finden ist.<br><br>Die Kriterien können miteinander kombiniert werden, sodass nur bestimmte physikalische und nur bestimmte logische Ports berücksichtigt werden. | Diesem Objekttyp werden importierte Devices zugeordnet.<br><br>Wird kein Objekttyp ausgewählt, werden Devices diesen Types ignoriert. | Beim Import werden Objekte, die den hier genannten Kriterien entsprechen, einem bestimmten Standort zugeordnet. Dies geschieht über die Kategorie **Standort**. | Neue Zuweisung hinzufügen, eine bestehende duplizieren oder löschen. |
+| Device Type aus JDisc, der beim Import berücksichtigt werden soll.<br><br>Die Liste wird aus der angegebenen JDisc-Instanz ausgelesen und zwischengespeichert. | Betriebssysteme, die JDisc bereits inventarisiert hat.<br><br>Oftmals reicht der Device Type für eine Zuweisung zu einem Objekttyp nicht aus, weswegen optional das Betriebssystem angegeben werden kann.<br><br>Das Feld kann mit Wildcards (*) versehen werden. | Wandelt den Objekttitel um.<br><br>**Unverändert**: Der Objektname wird nicht verändert<br><br>**Großbuchstaben**: Der komplette Objektname wird in Großbuchstaben geändert.<br><br>**Kleinbuchstaben**: Der komplette Objektname wird in Kleinbuchstaben geändert. | Hängt an den Objekttitel  einen FQDN Zusatz an. | Welche Netzwerk-Ports sollen importiert werden?<br><br>**Normaler Import**: Alle physikalischen und logischen Ports werden importiert.<br><br>**Kein Import**: Im Textfeld können Port-Namen angegeben werden, die ignoriert werden sollen.  <br>Das Feld kann mit Wildcards (*) genutzt werden. (Beispiel: Port-Name: Loopback → Ports mit dem Namen Loopback werden nicht importiert)<br><br>**Logischer Port**/**Physikalischer Port**/**FC-Port**: Es werden nur die Ports importiert, deren Name im Textfeld zu finden ist.<br><br>Die Kriterien können miteinander kombiniert werden, sodass nur bestimmte physikalische und nur bestimmte logische Ports berücksichtigt werden. | Diesem Objekttyp werden importierte Devices zugeordnet.<br><br>Wird kein Objekttyp ausgewählt, werden Devices diesen Types ignoriert. | Beim Import werden Objekte, die den hier genannten Kriterien entsprechen, einem bestimmten Standort zugeordnet. Dies geschieht über die Kategorie **Standort**. | Neue Zuweisung hinzufügen, eine bestehende duplizieren oder löschen. |
 
 ### Zusätzliche Optionen
 
@@ -85,10 +85,10 @@ Für jeden Typ in JDisc kann ein äquivalenter Objekttyp in i-doit ausgewählt w
 | **Kategorien auswählen** | Welche [Kategorien](../grundlagen/struktur-it-dokumentation.md) sollen beim Import befüllt werden? Es werden nur Kategorien gelistet, die der Import behandeln kann. |
 | **Netzwerk Interfaces importieren als** | Inventarisierte Netzwerk-Schnittstellen können in unterschiedlichen Kategorien abgebildet werden. |
 | **Software beim Import berücksichtigen** | Soll inventarisierte Software als Objekttyp **Anwendungen** importiert werden? |
-| **Softwarelizenzen beim Import berücksichtigen** | Sollen inventarisierte Softwarelizenzen als Objekttyp **Lizenzen** importiert werden? |
-| **Systemdienste importieren** | Sollen inventarisierte Systemdienste als Objekttyp **Systemdienst** importiert werden? |
+| **Softwarelizenzen beim Import berücksichtigen** | Sollen inventarisierte Softwarelizenzen als Objekttyp **Lizenzen** importiert werden? |
+| **Systemdienste importieren** | Sollen inventarisierte Systemdienste als Objekttyp **Systemdienst** importiert werden? |
 | **Cloud Subscriptionen importieren** | Sollen Daten aus der JDisc Kategorie Cloud importiert werden? |
-| **Verbindungs Endpunkte importieren** | Die Verbindungen werden nicht in die Verkabelung, sondern in die Kategorie “Verbindungs Endpunkte” importiert. Das ermöglicht zwischen der manuellen Verkabelung und der automatischen Verkabelung durch JDisc zu unterscheiden. |
+| **Verbindungs Endpunkte importieren** | Die Verbindungen werden nicht in die Verkabelung, sondern in die Kategorie "Verbindungs Endpunkte" importiert. Das ermöglicht zwischen der manuellen Verkabelung und der automatischen Verkabelung durch JDisc zu unterscheiden. |
 | **Einfache Datenbank Modellierung verwenden?** | Soll die neue oder die alte [Datenbanklogik](../anwendungsfaelle/dokumentation-von-datenbanken.md) verwendet werden? |
 | **Layer-3-Netze beim Import berücksichtigen** | Sollen inventarisierte IP-Netze als Objekttyp **Layer-3-Netze** importiert werden? |
 | **IP Adressentypen beibehalten** | Sollen **IPv4 Adressen**, **IPv6 Adressen**, **Loopback Adressen**, **Virtuelle Adressen** importiert werden? |
@@ -102,23 +102,23 @@ Für jeden Typ in JDisc kann ein äquivalenter Objekttyp in i-doit ausgewählt w
 | **Standard Templates aus Objekttypen berücksichtigen (nur bei Neuanlage)** | Wird ein neues Objekt erstellt, kann automatisch ein [Template](../effizientes-dokumentieren/templates.md) berücksichtigt werden. Die Auswahl des Templates findet in der Objekttyp-Konfiguration statt. |
 | **CMDB-Status der Objekte ändern auf** | Bereits vorhandene Objekte können beim Aktualisieren einen bestimmten **[CMDB-Status](../grundlagen/lebens-und-dokumentationszyklus.md)** erhalten. Soll der **CMDB-Status** nicht geändert werden, ist in der Auswahl **CMDB-Status beibehalten** zu wählen. |
 | **Software Filter** | Entweder kann eine White- oder eine Blacklist an Software-Applikationen angegeben werden, welche importiert werden sollen (Whitelist) oder eben nicht (Blacklist). Es können Wildcards (\*) angegeben werden. Die Liste von Titeln wird durch Kommas separiert. |
-| **Filter als regexp gebrauchen** | Den Software Filter mit Strings oder mit Regulären Ausdrücken verwenden? Da das regex direkt an die JDisc Datenbank weitergeleitet wird, sollten die passenden regex paramter verwendet werden.  <br>Diese sind z.B. unter [h](https://www.postgresql.org/docs/9.3/functions-matching.html)[ttps://www.postgresql.org/docs/9.3/functions-matching.html](https://www.postgresql.org/docs/9.3/functions-matching.html) zu finden.<br><br>Hinweis eines Anwenders:<br><br>\s kann nicht verwendet werden. Hier wird mit Leerzeichen gearbeitet.  <br>\d kann nicht verwendet werden. Hier muss mit [a-zA-Z] gearbeitet werden. |
-| **Benutze OS-Familie (falls verfügbar) anstatt OS-Version als Objekttitel** | Für den Softwareimport anstatt der Softwareversion die Softwarefamilie als Objekttitel verwenden. Z.B. anstatt "Windows Server 2008 Standard" nur "Windows" mit "Server 2008 Standard" als Variante. |
+| **Filter als regexp gebrauchen** | Den Software Filter mit Strings oder mit Regulären Ausdrücken verwenden? Da das regex direkt an die JDisc Datenbank weitergeleitet wird, sollten die passenden regex paramter verwendet werden.  <br>Diese sind z.B. unter [h](https://www.postgresql.org/docs/9.3/functions-matching.html)[ttps://www.postgresql.org/docs/9.3/functions-matching.html](https://www.postgresql.org/docs/9.3/functions-matching.html) zu finden.<br><br>Hinweis eines Anwenders:<br><br>\s kann nicht verwendet werden. Hier wird mit Leerzeichen gearbeitet.  <br>\d kann nicht verwendet werden. Hier muss mit [a-zA-Z] gearbeitet werden. |
+| **Benutze OS-Familie (falls verfügbar) anstatt OS-Version als Objekttitel** | Für den Softwareimport anstatt der Softwareversion die Softwarefamilie als Objekttitel verwenden. Z.B. anstatt "Windows Server 2008 Standard" nur "Windows" mit "Server 2008 Standard" als Variante. |
 | **Objekt-Matching Profil** | [Welche Strategie soll erfolgen](objekt-identifizieren-bei-importen.md), um bereits in i-doit dokumentierte Objekte durch einen Import zu aktualisieren? |
 | **Objekttyp aktualisieren** | Ist das Device bereits als Objekt in i-doit vorhanden, kann hierüber bestimmt werden, ob der Objekttyp anhand der Zuweisung (siehe oben) aktualisiert werden soll oder nicht. |
 | **Objekt-Titel aktualisieren** | Soll der Objekttitel durch den Import aktualisiert werden? |
 
 Kategorien die für JDisc erstellt wurden sind:
-Support Entitlements, Custom Identifier, JDisc Custom Attributes, JDisc Discovery und Netzwerk > Verbindungs Endpunkte
+Support Entitlements, Custom Identifier, JDisc Custom Attributes, JDisc Discovery und Netzwerk > Verbindungs Endpunkte
 ## Import von Daten über die Web GUI
 
-Der Import von Inhalten aus JDisc erfolgt über **Extras → CMDB → Import → JDisc**.
+Der Import von Inhalten aus JDisc erfolgt über **Extras → CMDB → Import → JDisc**.
 
 [![JDisc Import GUI](../assets/images/de/daten-konsolidieren/jdisc/3-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/3-jdisc.jpg)
 
 Vor dem Ausführen des Imports müssen die Import-Parameter festlegt sein.
 
-Da es möglich ist, dass mehr als ein JDisc-Server eingesetzt wird, muss im ersten Schritt der JDisc-Server ausgewählt werden. Das Profil, welches zuvor definiert wurde, kann ebenfalls gewählt werden um die importierten Inhalte und deren Handhabung zu beeinflussen. Zusätzlich kann der Modus des Imports angegeben werden. Der Import-Modus **Erstellen** wird alle gefundenen Objekte erstellen, ohne zu prüfen, ob diese bereits existieren. Der Import-Modus **Aktualisieren** wird nur Objekte erstellen, die im i-doit-Datenbestand nicht gefunden werden. Kategorien von bereits existierenden Objekten werden (wenn nötig) um neue Daten ergänzt. Der Import-Modus **Überschreiben** verhält sich im Prinzip wie der Modus **Aktualisieren** mit dem Unterschied, dass Listen-Kategorien erst geleert und dann neu angelegt werden.
+Da es möglich ist, dass mehr als ein JDisc-Server eingesetzt wird, muss im ersten Schritt der JDisc-Server ausgewählt werden. Das Profil, welches zuvor definiert wurde, kann ebenfalls gewählt werden um die importierten Inhalte und deren Handhabung zu beeinflussen. Zusätzlich kann der Modus des Imports angegeben werden. Der Import-Modus **Erstellen** wird alle gefundenen Objekte erstellen, ohne zu prüfen, ob diese bereits existieren. Der Import-Modus **Aktualisieren** wird nur Objekte erstellen, die im i-doit-Datenbestand nicht gefunden werden. Kategorien von bereits existierenden Objekten werden (wenn nötig) um neue Daten ergänzt. Der Import-Modus **Überschreiben** verhält sich im Prinzip wie der Modus **Aktualisieren** mit dem Unterschied, dass Listen-Kategorien erst geleert und dann neu angelegt werden.
 
 | **Import Modus** | **Beschreibung** |
 | --- | --- |
@@ -131,9 +131,9 @@ Da es möglich ist, dass mehr als ein JDisc-Server eingesetzt wird, muss im erst
 
 In der Protokollierung kann der Umfang der geschriebenen Logs beeinflusst werden. Ein umfangreicheres Logging erhöht die Dauer des Imports.
 
-Wenn die Einstellungen vollständig vorgenommen wurden, kann der Import über **Importvorgang starten** angestoßen werden. Bitte beachte, dass die Dauer des Imports sowohl von der Größe der JDisc-Datenbank, als auch von der verwendeten Hardware abhängig ist.
+Wenn die Einstellungen vollständig vorgenommen wurden, kann der Import über **Importvorgang starten** angestoßen werden. Bitte beachte, dass die Dauer des Imports sowohl von der Größe der JDisc-Datenbank, als auch von der verwendeten Hardware abhängig ist.
 
-Wenn der Import abgeschlossen wurde, wird eine Zusammenfassung im Bereich **Ergebnis** angezeigt.
+Wenn der Import abgeschlossen wurde, wird eine Zusammenfassung im Bereich **Ergebnis** angezeigt.
 
 Beim Import erzeugte Logs findest du im i-doit-Verzeichnis log/.
 

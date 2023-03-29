@@ -23,7 +23,7 @@ Bevor wir ins Detail gehen, verschaffen wir uns einen kurzen Überblick, welche 
 Vorbereitung
 ------------
 
-Wichtig: Dieser Vorgang kann nicht rückgängig gemacht werden. Ein funktionierendes [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) ist daher unablässig.Nach dem Upgrade ist eine gültige [Lizenz für i-doit pro](../wartung-und-betrieb/lizenz-aktivieren.md)erforderlich. Ebenso müssen die [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) und [Einstellungen](../installation/manuelle-installation/systemeinstellungen.md) erfüllt sein.
+Wichtig: Dieser Vorgang kann nicht rückgängig gemacht werden. Ein funktionierendes [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) ist daher unablässig.Nach dem Upgrade ist eine gültige [Lizenz für i-doit pro](../wartung-und-betrieb/lizenz-aktivieren.md)erforderlich. Ebenso müssen die [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) und [Einstellungen](../installation/manuelle-installation/systemeinstellungen.md) erfüllt sein.
 
 Sollte es sich um eine ältere open-Installation handeln, müssen noch weitere Schritte befolgt werden:
 
@@ -53,7 +53,7 @@ Das eigentliche Upgrade ist nun vollendet und muss nur noch durch eine gültige 
 Caches leeren
 -------------
 
-Nun melden wir uns vom Admin Center ab und in i-doit an. Dort klicken wir uns über **Verwaltung → Systemtools → Cache / Datenbank** zur Schaltfläche **Kompletten Cache leeren**. Anschließend leeren wir den Browser-eigenen Cache mit der Tastenkombination **STRG+F5.**
+Nun melden wir uns vom Admin Center ab und in i-doit an. Dort klicken wir uns über **Verwaltung → Systemtools → Cache / Datenbank** zur Schaltfläche **Kompletten Cache leeren**. Anschließend leeren wir den Browser-eigenen Cache mit der Tastenkombination **STRG+F5.**
 
 Rechte konfigurieren
 --------------------
@@ -71,10 +71,9 @@ Falls noch nicht geschehen, sollten folgende Dinge nicht außer Acht gelassen we
 
 *   [Backup und Restore einrichten und testen](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
 *   [Cronjobs einrichten](../automatisierung-und-integration/cli/index.md) (mit dem Controller)
-*   [Optional Update auf aktuelle pro-Version durchführen:](../wartung-und-betrieb/update-einspielen.md) Mit einer gültigen Lizenz ist es möglich und auch sehr empfehlenswert, immer auf die neuste Version von i-doit pro zu aktualisieren.  
-    
+*   [Optional Update auf aktuelle pro-Version durchführen:](../wartung-und-betrieb/update-einspielen.md) Mit einer gültigen Lizenz ist es möglich und auch sehr empfehlenswert, immer auf die neuste Version von i-doit pro zu aktualisieren.
 
 Downgrade auf i-doit open?
 --------------------------
 
-Es ist nicht vorgesehen, auf niedrigere Versionen von i-doit zurückzukehren. Dies gilt auch für Downgrades von der _i-doit pro_ auf die _i-doit open_ Variante.
+Es ist nicht vorgesehen, auf niedrigere Versionen von i-doit zurückzukehren. Dies gilt auch für Downgrades von der _i-doit pro_ auf die _i-doit open_ Variante.

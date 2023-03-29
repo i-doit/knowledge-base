@@ -5,7 +5,7 @@ Damit du nach der Anmeldung in _i-doit_ deine wichtigsten Informationen auf eine
 Aufruf
 ------
 
-Das Dashboard erreichst du automatisch nach der Anmeldung in _i-doit_. Alternativ kannst du auf das ![](../assets/images/de/grundlagen/desktop-und-widgets/home_breadcrump.png)\-Symbol in der Brotkrumen-Navigation (Breadcrumb-Navigation) oder das _i-doit_\-Logo im oberen, linken Bereich klicken.
+Das Dashboard erreichst du automatisch nach der Anmeldung in _i-doit_. Alternativ kannst du auf das ![Haus](../assets/images/de/grundlagen/desktop-und-widgets/home_breadcrump.png)\-Symbol in der Brotkrumen-Navigation (Breadcrumb-Navigation) oder das _i-doit_\-Logo im oberen, linken Bereich klicken.
 
 Verfügbare Widgets
 ------------------
@@ -56,7 +56,7 @@ Hierfür können mit dem Stift neue Links hinzugefügt werden.
 
 ### Lizenz
 
-Im Lizenz-Widget kannst du den aktuellen Zustand deiner _i-doit__\-_Lizenz betrachten. Standardmäßig wird die horizontale Variante mit der beschreibenden Texten angezeigt. 
+Im Lizenz-Widget kannst du den aktuellen Zustand deiner _i-doit__\-_Lizenz betrachten. Standardmäßig wird die horizontale Variante mit der beschreibenden Texten angezeigt.
 
 [![lizenz](../assets/images/de/grundlagen/desktop-und-widgets/9-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/9-duw.png)
 
@@ -84,7 +84,7 @@ Mit den Notizen als Widget kannst du dir sämtliche Text-Notizen auf das Dashboa
 
 [![notizen](../assets/images/de/grundlagen/desktop-und-widgets/13-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/13-duw.png)
 
-Notizen werden einfach mit einem **Doppelklick** hinzugefügt bzw. bearbeitet. 
+Notizen werden einfach mit einem **Doppelklick** hinzugefügt bzw. bearbeitet.
 
 [![notizen-2](../assets/images/de/grundlagen/desktop-und-widgets/14-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/14-duw.png)
 
@@ -116,7 +116,7 @@ Das Widget ist eine Zusammenstellung aus häufig benötigten Funktionen.
 
 ### Rechner
 
-Möchtest du eine Leistung, die Bandbreite, eine RAID- oder Speicherkapazität berechnen, ist das Rechner-Widget ein passendes Werkzeug für dein Dashboard. 
+Möchtest du eine Leistung, die Bandbreite, eine RAID- oder Speicherkapazität berechnen, ist das Rechner-Widget ein passendes Werkzeug für dein Dashboard.
 
 [![rechner](../assets/images/de/grundlagen/desktop-und-widgets/21-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/21-duw.png)
 
@@ -132,7 +132,7 @@ Im Report-Widget lassen sich jegliche Reports anzeigen.
 
 ### RSS-Feed
 
-Mithilfe des RSS-Feed-Widget kann ein Feed im Dashboard integriert werden. 
+Mithilfe des RSS-Feed-Widget kann ein Feed im Dashboard integriert werden.
 
 [![rss-feed](../assets/images/de/grundlagen/desktop-und-widgets/24-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/24-duw.png)
 
@@ -188,7 +188,7 @@ Das Widget ist ein Browser im Browser.
 
 ### Willkommen Widget
 
-Das Widget begrüßt dich, je nachdem wie es über den Stift konfiguriert wurde, und gibt ein paar hilfreiche Informationen zur Gestaltung des Dashboards. Hier kann gut erkannt werden, wie die Widgets nach der Auswahl im Dashboard angeordnet sind. 
+Das Widget begrüßt dich, je nachdem wie es über den Stift konfiguriert wurde, und gibt ein paar hilfreiche Informationen zur Gestaltung des Dashboards. Hier kann gut erkannt werden, wie die Widgets nach der Auswahl im Dashboard angeordnet sind.
 
 [![willkommen-widget](../assets/images/de/grundlagen/desktop-und-widgets/35-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/35-duw.png)
 

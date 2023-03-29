@@ -1,7 +1,5 @@
-!!! info ""
+!!! info 
     Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/validierung-von-daten-und-eingaben-in-i-doit/)
-
-# Validierung und Pflichtfelder
 
 Wer die Eindeutigkeit von [Attributen](../glossar.md) sicherstellen möchte oder bei der Pflege von bestimmten Feldern nur definierte Werte erwartet oder Felder zu Pflichtfeldern machen möchte, findet bei i-doit die entsprechenden Funktionen.
 

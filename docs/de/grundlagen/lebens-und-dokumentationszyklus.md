@@ -5,7 +5,7 @@ IT-Komponenten kommen und gehen. Sie werden geplant, angeschafft, betrieben und 
 Lebenszyklus von IT-Komponenten
 -------------------------------
 
-Der Lebenszyklus einer IT-Komponente wird im **CMDB-Status** dokumentiert. Bei einer frischen Installation von _i-doit_ sind folgende **CMDB-Status **verfügbar:
+Der Lebenszyklus einer IT-Komponente wird im **CMDB-Status** dokumentiert. Bei einer frischen Installation von _i-doit_ sind folgende **CMDB-Status **verfügbar:
 
 *   **Geplant**
 *   **Bestellt**
@@ -28,17 +28,17 @@ Der **CMDB-Status** kann in den Objektlisten als Spalte dargestellt werden, um m
 
 !!! success "Planung"
 
-    Durch das Abbilden des Lebenszyklus ist es möglich, _i-doit_ für die Planung einzusetzen. Ob nun eine Anschaffung, ein größeres Update oder ein Umzug ansteht – die IT-Dokumentation ist immer mit dabei und bietet valide Aussagen.
+    Durch das Abbilden des Lebenszyklus ist es möglich, _i-doit_ für die Planung einzusetzen. Ob nun eine Anschaffung, ein größeres Update oder ein Umzug ansteht - die IT-Dokumentation ist immer mit dabei und bietet valide Aussagen.
 
 ### CMDB-Status pro Objekt angeben
 
-Um den gesamten Lebenszyklus eines Objekts abzubilden, wird pro [Objekt](../glossar.md) das [Attribut](../glossar.md) **CMDB-Status** in der [Kategorie](../glossar.md) **Allgemein** verwendet. Wird ein neues Objekt angelegt, erhält dies **In Betrieb** als **CMDB-Status**, solange nichts anderes explizit angegeben wurde.
+Um den gesamten Lebenszyklus eines Objekts abzubilden, wird pro [Objekt](../glossar.md) das [Attribut](../glossar.md) **CMDB-Status** in der [Kategorie](../glossar.md) **Allgemein** verwendet. Wird ein neues Objekt angelegt, erhält dies **In Betrieb** als **CMDB-Status**, solange nichts anderes explizit angegeben wurde.
 
 [![cmdb-status-pro-objekt](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/2-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/2-lud.png)
 
 ### CMDB-Status verwalten
 
-Das Hinzufügen, Ändern oder Löschen eines **CMDB-Status** erfolgt über **Verwaltung → CMDB Einstellungen → CMDB-Status**. Pro **CMDB-Status** werden folgende Angaben benötigt:
+Das Hinzufügen, Ändern oder Löschen eines **CMDB-Status** erfolgt über **Verwaltung → CMDB Einstellungen → CMDB-Status**. Pro **CMDB-Status** werden folgende Angaben benötigt:
 
 *   Eindeutige Bezeichnung bzw. [Sprachkonstante (zur Übersetzung)](../administration/mehrsprachigkeit-und-uebersetzungen.md)
 *   Eindeutige Konstante (beispielsweise für die Nutzung der [API](../i-doit-pro-add-ons/api/index.md) hilfreich)
@@ -57,7 +57,7 @@ Neben den zu dokumentierenden Objekten kann auch die Dokumentation an sich einem
 
 ### Zustände
 
-So gut wie alle Dokumentations-Artefakte (Objekte, Kategorie-Einträge, Werte in [**Dialog+**\-Feldern](dialog-admin.md) u.v.m.) erhalten einen Zustand:
+So gut wie alle Dokumentations-Artefakte (Objekte, Kategorie-Einträge, Werte in [**Dialog+**\-Feldern](dialog-admin.md) u.v.m.) erhalten einen Zustand:
 
 *   **Normal**: Beim gewöhnlichen Arbeiten (anlegen, ändern) erhält jedes Artefakt diesen Zustand und kann überall verwendet werden.
 *   **Archiviert**: Das Artefakt wird aus der IT-Dokumentation ausgeblendet. Die weitere Verwendung, beispielsweise Verknüpfungen sind nicht mehr möglich.
@@ -67,7 +67,7 @@ Der Zyklus sieht vor, dass jedes Dokumentations-Artefakt den Zustand **Normal** 
 
 Neben diesen drei Zuständen existieren bei Objekten Sonderfälle:
 
-*   **Unfertig**: Wird ein neues Objekt erstellt, aber nicht gespeichert, erhält es diesen Zustand. Dies passiert beispielsweise, wenn ein Objekt zwar neu angelegt, aber der Button **Speichern** nicht gedrückt wird. Diese Objekte lassen sich nur über einen Report aufspüren und dann weiter verwenden. Daher sollten diese regelmäßig gelöscht werden. Dies kann über **Verwaltung → Systemtools → Cache / Datenbank → Unfertige Objekte entfernen***gemacht werden. Alternativ kann dies auch automatisch geschehen. Mehr dazu finden Sie weiter unten in diesem Artikel.
+*   **Unfertig**: Wird ein neues Objekt erstellt, aber nicht gespeichert, erhält es diesen Zustand. Dies passiert beispielsweise, wenn ein Objekt zwar neu angelegt, aber der Button **Speichern** nicht gedrückt wird. Diese Objekte lassen sich nur über einen Report aufspüren und dann weiter verwenden. Daher sollten diese regelmäßig gelöscht werden. Dies kann über **Verwaltung → Systemtools → Cache / Datenbank → Unfertige Objekte entfernen***gemacht werden. Alternativ kann dies auch automatisch geschehen. Mehr dazu finden Sie weiter unten in diesem Artikel.
 *   **Template**: Ein Objekt kann als [Vorlage](../effizientes-dokumentieren/templates.md) für weitere Objekte fungieren.
 *   **Änderungsvorlage**: Ein Objekt kann als Änderungsvorlage für die [Massenänderung](../effizientes-dokumentieren/massenaenderung.md) fungieren.
 
@@ -80,8 +80,6 @@ Der Zustand eines Objekts ist in der **Allgemein**\-Kategorie sichtbar. Sollen e
 [![objekte-archivieren-oder-purgen](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)
 
 Es kann immer nur in den nächstmöglichen Zustand gewechselt werden. Ist ein Objekt im Status **Normal**, kann aus der Liste heraus nur der zum nächsten Zustand **archiviert** gewechselt werden. Gelöscht kann dann erst aus der oben rechts nach archivierten Objekten gefilterten Liste heraus werden. Zudem kann mit **Wiederherstellen** wieder auf den vorherigen Zustand gewechselt werden.
-
-  
 
 Beim unwiderruflichen Löschen (**Purge**) gibt es keine Rückfrage, außer es existieren Beziehungen zu anderen Objekten.
 
@@ -107,9 +105,11 @@ Fast immer sind unfertige Objekte unerwünscht, denn sie sind nicht sichtbar und
 
 #### Automatisches Löschen
 
-Die i-doit [Console](../automatisierung-und-integration/cli/index.md) bietet ebenfalls eine Möglichkeit, gewisse unerwünschte Objekte unwiderruflich zu löschen.  Ein Beispiel für einen Aufruf sowie die möglichen Parameter können im [dazugehörigen Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) für die Option **system-objectcleanup** eingesehen werden.
+Die i-doit [Console](../automatisierung-und-integration/cli/index.md) bietet ebenfalls eine Möglichkeit, gewisse unerwünschte Objekte unwiderruflich zu löschen.  Ein Beispiel für einen Aufruf sowie die möglichen Parameter können im [dazugehörigen Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) für die Option **system-objectcleanup** eingesehen werden.
 
+```shell
     sudo -u www-data console.php system-objectcleanup -u admin -p admin -i 1 --objectStatus 3
+```
 
 Der Automatismus besteht darin, den Aufruf per Cronjob regelmäßig auszuführen.
 

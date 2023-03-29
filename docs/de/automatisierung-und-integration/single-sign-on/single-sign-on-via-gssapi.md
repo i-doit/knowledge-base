@@ -1,6 +1,6 @@
 # Single Sign on (SSO) via GSSAPI
 
-Für die automatische Anmeldung an i-doit innerhalb eines Intranets bietet sich die Authentifizierung über Single Sign On (SSO) an.
+Für die automatische Anmeldung an i-doit innerhalb eines Intranets bietet sich die Authentifizierung über Single Sign On (SSO) an.
 
 Voraussetzungen und Annahmen
 ----------------------------
@@ -10,7 +10,7 @@ Folgende Bedingungen sind die Grundlage dieses Artikels:
 *   i-doit ist unter GNU/Linux [installiert](../../installation/manuelle-installation/index.md)
 *   Es wird ein Active Directory (AD) unter Windows Server 2008/2012 für die Authentifizierung eingesetzt.
 
-In diesem Artikel wird beschrieben, wie Single Sign On (SSO) unter Apache Webserver mit mod-auth-gssapi eingerichtet wird.
+In diesem Artikel wird beschrieben, wie Single Sign On (SSO) unter Apache Webserver mit mod-auth-gssapi eingerichtet wird.
 
 !!! warning Groß- und Kleinschreibung
 
@@ -64,21 +64,21 @@ In dieser Datei wird die neue VHost-Konfiguration anpassen:
 
 ```shell
 sudo nano /etc/apache2/sites-available/i-doit.conf
- 
+
 <Directory /var/www/html/>
- 
+
         AuthType GSSAPI
         AuthName "i-doit Kerberos auth"
         GssapiBasicAuth On
         GssapiCredStore keytab:/etc/apache2/apache_krb5.keytab
         GssapiLocalName On
- 
+
         Require valid-user
- 
+
 </Directory>
 ```
 
-Bitte nur den Teil in `<Directory>` `</Directory>` anpassen
+Bitte nur den Teil in `<Directory>` `</Directory>` anpassen
 
 Im Anschluss einmal den Apache neustarten damit die Änderungen wirksam werden
 
@@ -103,7 +103,7 @@ kann kontrolliert werden, ob ein gültiges Ticket existiert.
 i-doit konfigurieren
 --------------------
 
-Ab Version 1.5 kann SSO über die Web GUI von i-doit konfiguriert werden. Die entsprechende Einstellung befindet sich unter **Verwaltung → Systemeinstellungen**. Dort ist **SSO** zu aktivieren.
+Ab Version 1.5 kann SSO über die Web GUI von i-doit konfiguriert werden. Die entsprechende Einstellung befindet sich unter **Verwaltung → Systemeinstellungen**. Dort ist **SSO** zu aktivieren.
 
 Browser Client-seitig konfigurieren
 -----------------------------------
@@ -112,7 +112,7 @@ Zuletzt muss jeder Browser konfiguriert werden, damit SSO automatisch genutzt wi
 
 ### Microsoft Internet Explorer (IE)
 
-In den IE-Einstellungen muss man den i-doit-Server zu den lokalen Intranet Sites hinzufügen. Danach muss man unter **Stufe anpassen** den Punkt **Automatisches Anmelden mit aktuellem Benutzernamen und Kennwort** unter dem Eintrag **Benutzerauthentifizierung** anhaken. Zusätzlich muss noch sichergestellt werden, dass unter dem Reiter **Erweitert** der **Internetoptionen** der Haken **Integrierte Windows-Authentifizierung** aktiviert ist.
+In den IE-Einstellungen muss man den i-doit-Server zu den lokalen Intranet Sites hinzufügen. Danach muss man unter **Stufe anpassen** den Punkt **Automatisches Anmelden mit aktuellem Benutzernamen und Kennwort** unter dem Eintrag **Benutzerauthentifizierung** anhaken. Zusätzlich muss noch sichergestellt werden, dass unter dem Reiter **Erweitert** der **Internetoptionen** der Haken **Integrierte Windows-Authentifizierung** aktiviert ist.
 
 ### Mozilla Firefox und Google Chrome
 
@@ -124,13 +124,13 @@ Troubleshooting
 Falls ein Problem bei der Authentifizierung auftreten sollte, helfen eventuell folgende Fragen und Hinweise:
 
 *   Zeiteinstellungen auf Linux und Windows DC vergleichen: Sind diese gleich?
-    
+
 *   Der Server ist in den meisten Fällen nur über den vollen FQDN idoit.mydomain.local erreichbar
-    
+
 *   Hat der _i-doit_\-Server Zugriff auf den Domain Controller? Liegt eine Firewall dazwischen?
-    
+
 *   Ist der SSO Domain User entsperrt?
-    
+
 *   Kann der DC per DNS vom _i-doit_\-Server aus aufgelöst werden?
-    
+
 *   Hat der Webserver Leseberechtigung auf die Datei apache\_krb5.keytab?

@@ -57,4 +57,4 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 It is necessary to re-index the category attributes via [Systemtools](../../administration/systemeinstellungen/index.md), after applying the hotfix
 
-[aof-17-incompatible-function-declaration.zip :material-file-download:](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }
+[aof-17-incompatible-function-declaration.zip](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip)

@@ -1,6 +1,7 @@
 # Attributsichtbarkeit
 
-Die Sichtbarkeit von [Attributen](attributfelder.md) kann ab i-doit [Version 1.19](../versionshistorie/release-notes/release-notes-1.19.md) in den [CMDB Einstellungen](../administration/verwaltung/cmdb-einstellungen.md) konfiguriert werden.  
+Die Sichtbarkeit von [Attributen](attributfelder.md) kann ab i-doit [Version 1.19](../versionshistorie/release-notes/release-notes-1.19.md) in den [CMDB Einstellungen](../administration/verwaltung/cmdb-einstellungen.md) konfiguriert werden.
+
 Es ist damit möglich bestimmte Attribute in [Kategorien](kategorien-und-attribute.md) oder/und auf der [Übersichtsseite von Objekttypen](objekttypen.md) auszublenden.
 
 Die konfigurierte Sichtbarkeit wird für alle Benutzer übernommen.
@@ -21,13 +22,13 @@ Wenn die Attributsichtbarkeit im Editiermodus geöffnet wird, können alle Kateg
 
 Wenn diese Schaltfläche verwendet wird, wird die Kategorie als Block in die aktuelle Schnittstelle geladen
 
-Dieser Block enthält eine Liste aller Attribute, die in der Kategorie verwendet werden. In der Kopfzeile  dieses Blocks befinden sich Namen für Spalten: "Kategorie Bezeichnung", "Sichtbarkeit" und "Übersichtsseite".
+Dieser Block enthält eine Liste aller Attribute, die in der Kategorie verwendet werden. In der Kopfzeile  dieses Blocks befinden sich Namen für Spalten: "Kategorie Bezeichnung", "Sichtbarkeit" und "Übersichtsseite".
 
 Neben dem Namen der Kategorie befindet sich ein Dreieck, das nach unten im geöffnetem Zustand und nach rechts im geschlossenem Zustand zeigt , um den Block zu verdecken/zu verkleinern, so dass nur die Kopfzeile sichtbar bleibt.
 
 Ganz rechts in jedem Block befindet sich ein rotes X-Symbol , mit dem Sie die Konfiguration für diese Kategorie entfernen können. Wenn es verwendet wird, wird der Block entfernt.
 
-Standardmäßig ist die Sichtbarkeit für alle Attribute aktiviert "Angezeigt"[![button-angezeigt](../assets/images/de/grundlagen/attributsichtbarkeit/3-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/3-as.png). In diesem Zustand ist die Schaltfläche grün und mit "Angezeigt"  beschriftet. Wenn Sie darauf klicken, wird die Schaltfläche grau und mit "Ausgeblendet"[![button-ausgeblendet](../assets/images/de/grundlagen/attributsichtbarkeit/4-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/4-as.png)beschriftet.
+Standardmäßig ist die Sichtbarkeit für alle Attribute aktiviert "Angezeigt"[![button-angezeigt](../assets/images/de/grundlagen/attributsichtbarkeit/3-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/3-as.png). In diesem Zustand ist die Schaltfläche grün und mit "Angezeigt"  beschriftet. Wenn Sie darauf klicken, wird die Schaltfläche grau und mit "Ausgeblendet"[![button-ausgeblendet](../assets/images/de/grundlagen/attributsichtbarkeit/4-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/4-as.png)beschriftet.
 
 **Objekt Bezeichnung**, **Zustand** und **CMDB-Status** können **nicht** ausgeblendet werden. In den entsprechenden Spalten steht ein Hinweis "Kann nicht ausgeblendet werden".
 
