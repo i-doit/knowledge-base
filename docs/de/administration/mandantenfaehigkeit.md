@@ -41,7 +41,7 @@ Pro Mandant müssen verschiedene Eigenschaften angegeben werden (Pflichtfelder):
 Objektlimitierung pro Mandant
 -----------------------------
 
-Pro Mandant kann – sofern die Mandanten-Lizenz verwendet wird – eingestellt werden, wie viele lizenzpflichtige Objekte maximal dokumentiert werden dürfen. Dies geschieht im Admin Center unter **Licences**. Dort gibt es pro Mandant den Paramter **Object limit** (Ganzzahl).
+Pro Mandant kann, sofern die Mandanten-Lizenz verwendet wird, eingestellt werden, wie viele lizenzpflichtige Objekte maximal dokumentiert werden dürfen. Dies geschieht im Admin Center unter **Licences**. Dort gibt es pro Mandant den Paramter **Object limit** (Ganzzahl).
 
 [![Objektlimitierung pro Mandant](../assets/images/de/administration/mandantenfaehigkeit/3-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/3-mand.png)
 

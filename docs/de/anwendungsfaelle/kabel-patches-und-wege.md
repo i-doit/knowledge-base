@@ -5,9 +5,9 @@ Zu einer umfangreichen [IT-Dokumentation](../glossar.md) kommt man über kurz od
 Konzept
 -------
 
-Die Abbildung von Verkabelungen ist in i-doit vielfältig wie die Realität: Ethernet, Glasfaser, Stromversorgung, Anschluss von Peripherie – alles, was einen Anschluss hat und mit einem Kabel verbunden werden kann, findet seinen Platz in der IT-Dokumentation.
+Die Abbildung von Verkabelungen ist in i-doit vielfältig wie die Realität: Ethernet, Glasfaser, Stromversorgung, Anschluss von Peripherie - alles, was einen Anschluss hat und mit einem Kabel verbunden werden kann, findet seinen Platz in der IT-Dokumentation.
 
-i-doit sieht dabei eine **strikte Trennung zwischen der Dokumentation von Verbindungen und der physikalischen Verkabelung** vor. Ein gutes Beispiel ist die Netzwerkverkabelung über Ethernet. Zum Einen können die Verbindungen zwischen aktiven Netzwerkkomponenten (Switches, Router, Firewalls) in der [Kategorie](../grundlagen/struktur-it-dokumentation.md) **Netzwerk → Port** festgehalten werden. Somit ist zu erkennen, an welchem Switch welcher Server hängt. Verbindungswege über mehrere Komponenten hinweg werden sichtbar. Zum Anderen spielen oftmals passive Komponenten eine wichtige Rolle: Patchpanels und Patchdosen sorgen für Ordnung im regelrechten "Kabelwirrwarr". Doch wem die Verbindung zwischen aktiven Komponenten genügt, kann die passiven Komponenten und damit auch die Kabel selbst außen vor lassen. i-doit ist in der Lage, im Hintergrund die Dokumentation der Verkabelung vorzunehmen, ohne dass der Benutzer zusätzliche Schritte ergreifen muss. Wird zu einem späteren Zeitpunkt ein Detailwissen zur Verkabelung erforderlich, kann die bisherige Dokumentation ergänzt werden, ohne dass der Benutzer von vorne beginnen muss.
+i-doit sieht dabei eine **strikte Trennung zwischen der Dokumentation von Verbindungen und der physikalischen Verkabelung** vor. Ein gutes Beispiel ist die Netzwerkverkabelung über Ethernet. Zum Einen können die Verbindungen zwischen aktiven Netzwerkkomponenten (Switches, Router, Firewalls) in der [Kategorie](../grundlagen/struktur-it-dokumentation.md) **Netzwerk → Port** festgehalten werden. Somit ist zu erkennen, an welchem Switch welcher Server hängt. Verbindungswege über mehrere Komponenten hinweg werden sichtbar. Zum Anderen spielen oftmals passive Komponenten eine wichtige Rolle: Patchpanels und Patchdosen sorgen für Ordnung im regelrechten "Kabelwirrwarr". Doch wem die Verbindung zwischen aktiven Komponenten genügt, kann die passiven Komponenten und damit auch die Kabel selbst außen vor lassen. i-doit ist in der Lage, im Hintergrund die Dokumentation der Verkabelung vorzunehmen, ohne dass der Benutzer zusätzliche Schritte ergreifen muss. Wird zu einem späteren Zeitpunkt ein Detailwissen zur Verkabelung erforderlich, kann die bisherige Dokumentation ergänzt werden, ohne dass der Benutzer von vorne beginnen muss.
 
 Wie in i-doit üblich findet die Dokumentation der Verkabelung mittels Objekten und [Attributen](../grundlagen/struktur-it-dokumentation.md) statt. Neben zahlreichen Formularen stehen Funktionen zum Visualisieren, Auswertung und Importieren bereit. Darum geht es im Folgenden.
 
@@ -45,10 +45,10 @@ Diese Verbindung zwischen Ein- und Ausgang ist optional und nur unter bestimmten
 
 Die Kategorie **Anschlüsse** wird durch weitere Kategorien automatisch mit Einträgen versorgt:
 
-*   **Netzwerk → Port**: Wird ein neuer Port angelegt, wird dieser automatisch als neuer **Ausgang** definiert.
+*   **Netzwerk → Port**: Wird ein neuer Port angelegt, wird dieser automatisch als neuer **Ausgang** definiert.
 *   **Stromverbraucher**: Wird ein neues Netzteil angelegt, wird dessen Stromanschluss automatisch als neuer **Eingang** definiert.
-*   **Verkabelung → Schnittstelle**: Wird eine neue Schnittstelle angelegt, wird diese automatisch als neuer **Ausgang** definiert.
-*   **Speichernetze → FC-Port**: Wird ein neuer Fiber Channel Port angelegt, wird dieser automatisch als neuer **Ausgang** definiert.
+*   **Verkabelung → Schnittstelle**: Wird eine neue Schnittstelle angelegt, wird diese automatisch als neuer **Ausgang** definiert.
+*   **Speichernetze → FC-Port**: Wird ein neuer Fiber Channel Port angelegt, wird dieser automatisch als neuer **Ausgang** definiert.
 
 [![Anschlüsse](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/4-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/4-kpuw.png)
 
@@ -59,13 +59,13 @@ Die Kategorie Schnittstelle dient zum Anlegen weiterer Verbindungen, die nicht d
 Objekttyp **Kabel**
 ---------------------
 
-Der Objekttyp Kabel beinhaltet alle Objekte, die ein Kabel repräsentieren. Ein Kabel besteht in i-doit zwingend aus einem Anfang und einem Ende. Y-Kabel o. ä. werden nicht unterstützt. Hier muss sich der Benutzer mit einem Hilfsobjekt begnügen, dass unter **Verkablung → Anschlüsse** einen Eingang mit zwei Ausgängen, die untereinander verbunden sind, enthält (1-zu-2-Beziehung).
+Der Objekttyp Kabel beinhaltet alle Objekte, die ein Kabel repräsentieren. Ein Kabel besteht in i-doit zwingend aus einem Anfang und einem Ende. Y-Kabel o. ä. werden nicht unterstützt. Hier muss sich der Benutzer mit einem Hilfsobjekt begnügen, dass unter **Verkablung → Anschlüsse** einen Eingang mit zwei Ausgängen, die untereinander verbunden sind, enthält (1-zu-2-Beziehung).
 
 Die Eigenschaften eines Kabels werden in mehreren Kategorien definiert, die im Folgenden erläutert werden.
 
 [![Kabel](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/5-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/5-kpuw.png)
 
-### Kategorie-Ordner **Kabelverbindung**
+### Kategorie-Ordner **Kabelverbindung**
 
 Der Kategorie-Ordner **Kabelverbindung** enthält die Kategorie **Kabel** und wird daher typischerweise dem Objekttyp **Kabel** zugeordnet. Der Ordner selbst zeigt an, an was das Kabel angeschlossen ist.
 
@@ -73,12 +73,12 @@ Der Kategorie-Ordner **Kabelverbindung** enthält die Kategorie **Kabel** und wi
 
 ### Kategorie **Kabel**
 
-Die wesentlichen Eigenschaften eines Kabels werden in der Kategorie **Kabelverbindung → Kabel** festgehalten:
+Die wesentlichen Eigenschaften eines Kabels werden in der Kategorie **Kabelverbindung → Kabel** festgehalten:
 
 | Attribut | Beschreibung |
 | --- | --- |
 | **Art des Kabels** | Spezifikation des Kabels, beispielsweise "CAT7" oder "LWL" |
-| **Länge in CM** | Länge des Kabels – nicht nur in Zentimetern |
+| **Länge in CM** | Länge des Kabels - nicht nur in Zentimetern |
 | **Farbe** | Farbe der äußeren Ummantlung |
 | **Belegung** | Wie viele Adern/Fasern enthält das Kabel? |
 | **Maximale Anzahl an Fasern/Adern** | Wie viele Adern/Fasern dürfen maximal genutzt werden? |
@@ -103,7 +103,7 @@ Wer bis ins kleinste Detail dokumentieren möchte/muss, wird die Kategorie Faser
 Objekttyp **Patchfeld**
 -------------------------
 
-Patchpanels werden in i-doit als Objekte vom Typ **Patchfeld** dokumentiert. Dieser passiven Komponente ist typischerweise der Kategorie-Ordner **Verkabelung** zu geordnet. In der Kategorie **Verkabelung → Anschlüsse** werden die Ports definiert: Ein **Eingang** repräsentiert den Netzwerk-Port. Ein **Ausgang** repräsentiert das aufgelegte Kabel. Ein- und Ausgang werden miteinander verbunden.
+Patchpanels werden in i-doit als Objekte vom Typ **Patchfeld** dokumentiert. Dieser passiven Komponente ist typischerweise der Kategorie-Ordner **Verkabelung** zu geordnet. In der Kategorie **Verkabelung → Anschlüsse** werden die Ports definiert: Ein **Eingang** repräsentiert den Netzwerk-Port. Ein **Ausgang** repräsentiert das aufgelegte Kabel. Ein- und Ausgang werden miteinander verbunden.
 
 [![Patchfeld](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/9-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/9-kpuw.png)
 
@@ -126,7 +126,7 @@ Der Objekttyp **Leerrohr** verhält sich analog zur **Kabeltrasse** (siehe oben)
 Einzelverkabelungen
 -------------------
 
-Der Kategorie-Ordner Verkabelung enthält bereits mehrere Visualisierungen. Daneben befindet sich unter **Extras → CMDB → Verkabelungen → Einzelverkabelungen** eine weitere Ansicht mit zusätzlichen Funktionen. Nach Auswahl eines verkabelten Objekts werden alle ein- und abgehenden Verkabelungswege dargestellt. Zusätzlich können Namen der Anschlüsse und der Kabel ein- oder ausgeblendet werden. Über eine Filterung werden nur ausgewählte Wege dargestellt.
+Der Kategorie-Ordner Verkabelung enthält bereits mehrere Visualisierungen. Daneben befindet sich unter **Extras → CMDB → Verkabelungen → Einzelverkabelungen** eine weitere Ansicht mit zusätzlichen Funktionen. Nach Auswahl eines verkabelten Objekts werden alle ein- und abgehenden Verkabelungswege dargestellt. Zusätzlich können Namen der Anschlüsse und der Kabel ein- oder ausgeblendet werden. Über eine Filterung werden nur ausgewählte Wege dargestellt.
 
 Der Typ kann über Checkboxen bei mehreren Anschlüssen gleichzeitig geändert werden.
 
@@ -137,7 +137,7 @@ Die Verkabelungswege können im CSV-Format exportiert werden.
 Verkabelungsbrowser
 -------------------
 
-Diese Funktion erleichtert die schnelle Verbindung von zwei Objekten untereinander. Er ist in der Kategorie **Verkabelung → Anschlüsse** über den Button **Verkabelungsbrowser** zu erreichen. Vorausgesetzt werden bereits dokumentierte Anschlüsse bei beiden Objekten.
+Diese Funktion erleichtert die schnelle Verbindung von zwei Objekten untereinander. Er ist in der Kategorie **Verkabelung → Anschlüsse** über den Button **Verkabelungsbrowser** zu erreichen. Vorausgesetzt werden bereits dokumentierte Anschlüsse bei beiden Objekten.
 
 [![Verkabelungsbrowser](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/13-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/13-kpuw.png)
 
@@ -162,7 +162,7 @@ Der Button **Anschlüsse lösen** bewirkt, dass die Verbindung von den ausgewäh
 Verkabelungsimport
 ------------------
 
-Verkabelungswege können in i-doit über den Import einer Datei im CSV-Format erstellt werden. Die dazu nötigen Schritte sind unter **Extras → CMDB → Import → Verkabelung** zu finden.
+Verkabelungswege können in i-doit über den Import einer Datei im CSV-Format erstellt werden. Die dazu nötigen Schritte sind unter **Extras → CMDB → Import → Verkabelung** zu finden.
 
 Folgende Optionen stehen zur Verfügung:
 

@@ -117,6 +117,7 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 23: versionshistorie/release-notes/release-notes-23.md
           - Release Notes 22: versionshistorie/release-notes/release-notes-22.md
           - Release Notes 1.19: versionshistorie/release-notes/release-notes-1.19.md
           - Release Notes 1.18:
@@ -134,6 +135,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 23: versionshistorie/changelogs/changelog-23.md
           - Changelog 22: versionshistorie/changelogs/changelog-22.md
           - Changelog 21: versionshistorie/changelogs/changelog-21.md
           - Changelog 20: versionshistorie/changelogs/changelog-20.md
@@ -406,6 +408,7 @@ nav:
       - anwendungsfaelle/index.md
       - Abbildung von Kundenstandorten: anwendungsfaelle/abbildung-von-kundenstandorten.md
       - Arbeitsplätze: anwendungsfaelle/arbeitsplaetze.md
+      - Benutzerdefinierte Übersetzungen: anwendungsfaelle/benutzerdefinierte-uebersetzungen.md
       - Automatisierte Vertragslaufzeit Verlängerung: anwendungsfaelle/automatisierte-vertragsverlaengerung.md
       - Dateien hochladen und verknüpfen: anwendungsfaelle/dateien-hochladen-und-verknuepfen.md
       - Dokumentation von Datenbanken: anwendungsfaelle/dokumentation-von-datenbanken.md
@@ -422,7 +425,6 @@ nav:
       - Switch Stacking: anwendungsfaelle/switch-stacking.md
       - VM provisionieren (veraltet): anwendungsfaelle/vm-provisionieren.md
       - i-doit mit OpenID-Connect Authentifizierung am Beispiel Google Login: anwendungsfaelle/i-doit-mit-openid-connect.md
-      - Benutzerdefinierte Übersetzungen: anwendungsfaelle/benutzerdefinierte-uebersetzungen.md
   - i-doit pro Add-ons:
       - i-doit-pro-add-ons/index.md
       - Active Directory Documentation: i-doit-pro-add-ons/active-directory-documentation.md

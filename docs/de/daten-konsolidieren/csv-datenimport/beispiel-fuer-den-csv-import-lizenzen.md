@@ -6,15 +6,15 @@ In diesem Beispiel bauen wir auf den [CSV Import von Anwendungen](beispiel-fuer-
 
 Für den Import benötigen wir folgende Informationen:
 
-*   Objekttyp → Um welchen Objekttypen soll es sich Handeln
-*   Objektname → den Namen des Clients
-*   Lizenzzuweisung: Lizenzschlüssel - Lizenz Typ → Welcher Lizenz Typ wird importiert, Einzel- oder Volumen?
-*   Lizenzzuweisung: Lizenzschlüssel - Anzahl → Welche Anzahl an Lizenzen gibt es?
-*   Lizenzzuweisung: Lizenzschlüssel - Schlüssel→ Wie lautet der Lizenzschlüssel?
-*   Lizenzzuweisung: Lizenzschlüssel - Seriennummer → Welche Seriennummer soll zugeordnet werden?
-*   Lizenzzuweisung: Lizenzschlüssel - Startdatum → Ab wann kann die Lizenz verwendet werden?
-*   Lizenzzuweisung: Lizenzschlüssel - Ablaufdatum → Wann läuft die Lizenz ab?
-*   Lizenzzuweisung: Lizenzschlüssel - Einzelpreis → Was kostet eine Lizenz?
+-  Objekttyp → Um welchen Objekttypen soll es sich Handeln
+-  Objektname → den Namen des Clients
+-  Lizenzzuweisung: Lizenzschlüssel - Lizenz Typ → Welcher Lizenz Typ wird importiert, Einzel- oder Volumen?
+-  Lizenzzuweisung: izenzschlüssel - Anzahl → Welche Anzahl an Lizenzen gibt es?
+-  Lizenzzuweisung: Lizenzschlüssel - Schlüssel→ Wie lautet der Lizenzschlüssel?
+-  Lizenzzuweisung: Lizenzschlüssel - Seriennummer → Welche Seriennummer soll zugeordnet werden?
+-  Lizenzzuweisung: Lizenzschlüssel - Startdatum → Ab wann kann die Lizenz verwendet werden?
+-  Lizenzzuweisung: Lizenzschlüssel - Ablaufdatum → Wann läuft die Lizenz ab?
+-  Lizenzzuweisung: Lizenzschlüssel - Einzelpreis → Was kostet eine Lizenz?
 
 !!! note "Bei jedem Import muss auch die Darstellung der Daten beachtet werden."
 
@@ -53,7 +53,7 @@ Solltest du alles richtig gemacht haben, erscheinen nun die einzelnen Lizenzen i
 
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/4-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/4-csv-lic.png)
 
-Außerdem sind die KategorienLizenzzuweisungund Lizenzzuweisung: Lizenzschlüssel gefüllt.
+Außerdem sind die KategorienLizenzzuweisungund Lizenzzuweisung: Lizenzschlüssel gefüllt.
 
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/5-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/5-csv-lic.png)
 

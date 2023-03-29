@@ -19,7 +19,6 @@ Ein Datenaustausch zwischen dem genutzten Tool und i-doit findet nicht statt, so
 !!! attention "Dieser Artikel ist veraltet und nicht mehr aktuell"
     Bitte beachten Sie, dass das hier dargestellte vorgehen bereits veraltet sein kann.
 
-  
 
 Lösung
 ------
@@ -107,7 +106,7 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
 
     #!/usr/bin/php
     <?php
-    
+
     /**
      * Example script to privision a new virtual machine in vSphere with i-doit
      *
@@ -133,18 +132,18 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
      * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
      * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
      */
-    
+
     use idoit\Api\Client as ApiClient;
     use idoit\Api\CMDB\Object as CMDBObject;
     use idoit\Api\CMDB\Category;
     use idoit\Api\Connection as ApiConnection;
-    
+
     require_once('/usr/local/share/i-doit-api-clients/php/apiclient.php');
-    
+
     /**
      * Configuration
      */
-    
+
     $vSphereUsername = 'vmprovision';
     $vSpherePassword = 'vmprovision';
     $vSphereWebService = 'https://vc01.example.net:443/sdk/webService';
@@ -153,30 +152,30 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
     $api_entry_point = 'http://localhost/src/jsonrpc.php';
     $api_key = '2p1osbg427';
     \idoit\Api\Config::$jsonRpcDebug = false;
-    
+
     function filter_number($p_string)
     {
       // Check, if we got a positive or negative number.
       $l_sign = (substr(trim($p_string), 0, 1) === '-') ? '-' : '';
-    
+
       // First we strip the currency ("GHZ", "Euro", "$", ...) including spaces.
       $p_string = preg_replace('/([^,\.\d])*/i', '', $p_string);
-    
+
       // If the number is null
       if (is_null($p_string) || $p_string === '') return null;
-    
+
       // Check if someone wrote a string like "1.000.000".
       if (substr_count($p_string, '.') > 1)
       {
         $p_string = str_replace('.', '', $p_string);
       } // if
-    
+
       // Check if someone wrote a string like "1,000,000".
       if (substr_count($p_string, ',') > 1)
       {
         $p_string = str_replace(',', '', $p_string);
       } // if
-    
+
       // If we find a single point or a single comma, we use the last found one as decimal point.
       if (strpos($p_string, '.') !== false || strpos($p_string, ',') !== false)
       {
@@ -194,15 +193,14 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
           $p_string = str_replace(',', '.', $p_string);
         }
       } // if
-    
+
       // Finally check if number is not numeric then return null
       if (!is_numeric($p_string)) return null;
-    
+
       // Now we replace commas with dots: "1000,10" to "1000.10" and return the rounded value.
       return (float) round(str_replace(',', '.', $l_sign . $p_string), 4);
     } // function
-    
-    
+
     function to_kbytes($p_value)
     {
         if (is_null($p_value) || !is_numeric(substr($p_value, 0, -2)))
@@ -222,7 +220,7 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
         } // switch
         return $l_return;
     } // function
-    
+
     try
     {
         if (isset($argv[1]))
@@ -237,14 +235,14 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
                         {
                                   if ($params['postData']['C__OBJ__CMDB_STATUS'] == $objCMDBStatus)
                                   {
-                                
+
                               \idoit\Api\Config::$jsonRpcDebug = false;
                               $l_apiClient = new ApiClient(
                                 new ApiConnection(
                                   $api_entry_point, $api_key
                                 )
                               );
-    
+
                               // Get number of CPUs
                               $l_request = new \idoit\Api\Request($l_apiClient,
                                   'cmdb.category.read',
@@ -253,10 +251,10 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
                                   'category' => 'C__CATG__CPU'
                                 )
                               );
-    
+
                               $l_response = $l_request->send();
                               $cpuCount = count($l_response);
-    
+
                               // Get memory
                               $l_request = new \idoit\Api\Request($l_apiClient,
                                     'cmdb.category.read',
@@ -265,17 +263,17 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
                                     'category' => 'C__CATG__MEMORY'
                                   )
                                 );
-    
+
                               $all_memory = 0;
                               $l_response = $l_request->send();
                               for ( $x = 0; $x < count($l_response); $x++) {
-                            
+
                                 $memory_cleaned = filter_number($l_response[$x]['capacity']['title']);
                                 $memory = to_kbytes( $memory_cleaned . $l_response[$x]['unit']['title']);
                                 $all_memory = $all_memory + $memory;
                               }
                               $all_memory_mb = $all_memory / 1024;
-    
+
                               // Get HDD
                               $l_request = new \idoit\Api\Request($l_apiClient,
                                     'cmdb.category.read',
@@ -284,12 +282,12 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
                                     'category' => 'C__CMDB__SUBCAT__STORAGE__DEVICE'
                                   )
                                 );
-    
+
                               $l_response = $l_request->send();
                               $hdd_cleaned = filter_number($l_response[0]['capacity']['title']);
                               $hdd = to_kbytes( $hdd_cleaned . $l_response[0]['unit']['title']);
                               $hdd_mb = $hdd / 1024;
-    
+
                               // Get virtual host and cluster
                               $l_request = new \idoit\Api\Request($l_apiClient,
                                   'cmdb.category.read',
@@ -299,10 +297,10 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
                                 )
                               );
                               $l_response = $l_request->send();
-    
+
                               $datacenter = $l_response[0]['hosts']['title'];
                               $host = $l_response[0]['primary']['title'];
-    
+
                               //Get SAN LUN
                               $l_request = new \idoit\Api\Request($l_apiClient,
                                   'cmdb.category.read',
@@ -318,7 +316,7 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
                                   $lun = $l_response[$x]['host_ldev_client']['ref_title'];
                                 }
                               }
-    
+
                               //Get Network
                               $l_request = new \idoit\Api\Request($l_apiClient,
                                   'cmdb.category.read',
@@ -334,7 +332,7 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
                                   $network = $l_response[$x]['switch_port_group']['vs_port_group_title'];
                                 }
                               }
-    
+
                               $dom      = new DomDocument("1.0");
                               $dom->formatOutput = true;
                               $dom->preserveWhiteSpace = false;
@@ -352,12 +350,12 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
                               $VirtualMachine->appendChild( $dom->createElement('Nic-Network', $network) );
                               $VirtualMachine->appendChild( $dom->createElement('Nic-Poweron', '1') );
                               $dom->appendChild( $VirtualMachines );
-    
+
                               $dom->save("/tmp/i-doit-vm-provision.xml");
-    
+
                                     exec("/usr/src/vmware-vsphere-cli-distrib/apps/vm/vmcreate.pl --url $vSphereWebService --username $vSphereUsername --password $vSpherePassword --filename /tmp/i-doit-vm-provision.xml --schema /usr/src/vmware-vsphere-cli-distrib/apps/schema/vmcreate.xsd");
                               echo 'Provisioned machine ' . $params['postData']['C__CATG__GLOBAL_TITLE'] ;
-    
+
                               //Set CMDB Status to provisioned
                               $l_request = new \idoit\Api\Request($l_apiClient,
                                   'cmdb.category.update',
@@ -369,17 +367,17 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
                                     )
                                   )
                               );
-    
+
                               $l_response = $l_request->send();
-    
+
                           }
                            }
                     }
                     else throw new Exception('Event Error: Object id not existent.');
-    
+
                 }
                 else throw new Exception('Event Error: Script Parameters not json-encoded.');
-    
+
             }
             else throw new Exception('Event Error: Script Parameters not base64 encoded.');
         }

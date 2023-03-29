@@ -3,42 +3,50 @@
 Einführung
 ----------
 
-Das Forms-Addon besteht aus einem i-doit kompatiblen Addon und einer Backend-Applikation. Das Backend ist hierbei verantwortlich für die Datenhaltung und kann über eine  
-REST-API bedient werden. Es besteht weiterhin die Möglichkeit i-doit als Proxy zu verwenden, um mit dem Forms-Backend zu kommunizieren. Dies setzt jedoch eine valide  
+Das Forms-Addon besteht aus einem i-doit kompatiblen Addon und einer Backend-Applikation. Das Backend ist hierbei verantwortlich für die Datenhaltung und kann über eine
+
+REST-API bedient werden. Es besteht weiterhin die Möglichkeit i-doit als Proxy zu verwenden, um mit dem Forms-Backend zu kommunizieren. Dies setzt jedoch eine valide
 Benutzersession in i-doit voraus. Sofern dies nicht gegeben ist kann die Forms-Backend-API auch direkt angesprochen werden. Dieses Dokument geht von einer direkten Kommunikation aus.
 
-> Es ist zu beachten, dass das Backend keinerlei logische Validierungen enthält. Diese Aufgabe übernimmt ausschließlich das Frontend.  
-> Eine unmittelbare Nutzung der API bringt daher einen kompletten Verzicht auf Kontrollstrukturen mit sich.  
+> Es ist zu beachten, dass das Backend keinerlei logische Validierungen enthält. Diese Aufgabe übernimmt ausschließlich das Frontend.
+> Eine unmittelbare Nutzung der API bringt daher einen kompletten Verzicht auf Kontrollstrukturen mit sich.
 > Dies sollte bei einer derartigen Nutzung daher immer beachtet werden.
 
-Es muss ferner berücksichtigt werden, dass für die Nutzung von i-doit Attributen zusätzlich die Forms-Addon-API vorausgesetzt wird, um auf essentielle Attributinformationen  
+Es muss ferner berücksichtigt werden, dass für die Nutzung von i-doit Attributen zusätzlich die Forms-Addon-API vorausgesetzt wird, um auf essentielle Attributinformationen
 zuzugreifen.
 
 Authentifizierung
 -----------------
 
-Die Authentifizierung gegen das Forms-Backend erfolgt auf Basis von Benutzername und API Schlüssel. Bei diesen Informationen geht es um eben jene Konfigurationsparameter,  
+Die Authentifizierung gegen das Forms-Backend erfolgt auf Basis von Benutzername und API Schlüssel. Bei diesen Informationen geht es um eben jene Konfigurationsparameter,
 die auch schon in der i-doit Konfiguration hinterlegt wurden:
 
+```
      POST http://localhost:3000/login
      Content-Type: application/json
-     
+
      {
      "apikey": "APIKEY",
      "name": "USERNAME"
      }
+```
 
 Bei einer erfolgreichen Authentifizierung erhält man anschließend einen JSON Web Token:
 
+```
      {
      "access_token": "{JWT_TOKEN}"
      }
+```
 
-Der Token muss fortan in jedem Request angegeben werden, sofern Endpunkte angesprochen werden, die eine Authentifizierung voraussetzen. Dies erfolgt über den Authorization  
+Der Token muss fortan in jedem Request angegeben werden, sofern Endpunkte angesprochen werden, die eine Authentifizierung voraussetzen. Dies erfolgt über den Authorization
+
 \-Header. Im Folgenden ein Beispiel:
 
+```
      GET http://localhost:3000/api/form
      Authorization: bearer {JWT_TOKEN}
+```
 
 Standardmäßig hat ein Token nach seiner Erstellung eine Gültigkeit von 60 Minuten. Nach Ablauf dieser Zeit verliert es seine Gültigkeit und es muss ein erneutes Login  
 erfolgen.
@@ -50,19 +58,24 @@ Endpunkte
 
 Dieser Endpunkt gibt eine Liste aller verfügbaren Formulare zurück. Darüber hinaus verfügt es über die Möglichkeit der Filterung und Sortierung.
 
+```
      GET http://localhost:3000/api/form
      Accept: application/json
      Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU2YThlNmY1ZTMxYjI5NzAwOTMxOWEiLCJuYW1lIjoic2VsY3VrIiwic3ViIjoiJDJhJDEwJFJ4YlRybVpUVXlXc1NSQ2VZTFR6enVBZXJZTUF1dUlsNU5qOWt5RFN4WXlFL0NsdG1iLmY2IiwiaWF0IjoxNjU3MjkyNTAxLCJleHAiOjE2NTcyOTYxMDF9.yEZAjFAGpOCbDsJuI_vqot5J75MOE0bKPPn8osQS0Ik
+```
 
 ### GET /api/form/{ID}
 
-> Abruf von spezifischen Formularen
+Abruf von spezifischen Formularen
 
+```
      GET http://localhost:3000/api/form/6245bf4f36f695945b3df9be
      Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU2YThlNmY1ZTMxYjI5NzAwOTMxOWEiLCJuYW1lIjoic2VsY3VrIiwic3ViIjoiJDJhJDEwJFJ4YlRybVpUVXlXc1NSQ2VZTFR6enVBZXJZTUF1dUlsNU5qOWt5RFN4WXlFL0NsdG1iLmY2IiwiaWF0IjoxNjU3MjkyNTAxLCJleHAiOjE2NTcyOTYxMDF9.yEZAjFAGpOCbDsJuI_vqot5J75MOE0bKPPn8osQS0Ik
+```
 
 Die Rückgabe sieht beispielhaft, wie folgt aus:
 
+```
      {
      "_id": "62864bbe2eb3cb20879f9405",
      "data": [],
@@ -188,16 +201,16 @@ Die Rückgabe sieht beispielhaft, wie folgt aus:
      "__v": 0,
      "identifier": "form-with-dependency-62864bbe"
      }
+```
 
 ### DELETE /api/form/{ID}
 
 Über das DELETE Verb kann ein bestimmtes Form gelöscht werden. Die Rückgabe enthält die Formular-Daten.
 
+```
      DELETE http://localhost:3000/api/form/6245bf4f36f695945b3df9be
      Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU2YThlNmY1ZTMxYjI5NzAwOTMxOWEiLCJuYW1lIjoic2VsY3VrIiwic3ViIjoiJDJhJDEwJFJ4YlRybVpUVXlXc1NSQ2VZTFR6enVBZXJZTUF1dUlsNU5qOWt5RFN4WXlFL0NsdG1iLmY2IiwiaWF0IjoxNjU3MjkyNTAxLCJleHAiOjE2NTcyOTYxMDF9.yEZAjFAGpOCbDsJuI_vqot5J75MOE0bKPPn8osQS0Ik
-
-
-
+```
 
 ### PUT /api/form/{ID}
 
@@ -207,6 +220,7 @@ Dieser Endpunkt ermöglicht die Editierung eines Formulars. Hierbei müssen im J
 
 Zur Erstellung neuer Formulare muss dieser Endpunkt genutzt werden. Die Definition erfolgt über JSON und muss folgende Struktur aufweisen:
 
+```
      {
      // Name des Forms
      "name": "My Form",
@@ -217,12 +231,15 @@ Zur Erstellung neuer Formulare muss dieser Endpunkt genutzt werden. Die Definiti
      // Veröffentlichungsstatus
      "published": false
      }
+```
 
-Die Struktur des Forms wird unter shape angegeben. Generell wurde sie entworfen, um eine normalisierte und hierarchiesche Struktur abbilden zu können. Dazu enthält sie auf  
+Die Struktur des Forms wird unter shape angegeben. Generell wurde sie entworfen, um eine normalisierte und hierarchiesche Struktur abbilden zu können. Dazu enthält sie auf
+
 der ersten Ebene alle verfügbaren Knoten-Elemente. Hierzu zählen nicht nur Überschriften, Texte, Trennlinien, i-doit Kategorie-Attribute sondern auch Seiten.
 
 > Es ist sicherzustellen, dass die Knoten-IDs (root, SEITE\_1, SEITE\_2,…) einzigartig sind und keine Wiederholungen aufweisen.
 
+```
      {
      "shape": {
      // Einstiegsknoten
@@ -247,9 +264,11 @@ der ersten Ebene alle verfügbaren Knoten-Elemente. Hierzu zählen nicht nur Üb
      }
      }
      }
+```
 
 Die verfügbaren Konfigurationsparameter eines Knotens sind typen-abhängig. Generell kann folgende Datenstruktur ausgemacht werden:
 
+```
      {
      "KNOTEN_1": {
      // Welche Knoten sind in "KNOTEN_1" enthalten - Angabe der Knoten-ID
@@ -272,9 +291,11 @@ Die verfügbaren Konfigurationsparameter eines Knotens sind typen-abhängig. Gen
      }
      }
      }
+```
 
 Besonders wichtig hierbei ist der Knoten root. Dieser stellt den Einstiegspunkt dar auf deren Basis ein Form hierarchisch aufgebaut wird.
 
+```
                     ┌──────ROOT──────┐
                     │                │
                     │                │
@@ -294,10 +315,13 @@ Besonders wichtig hierbei ist der Knoten root. Dieser stellt den Einstiegspunkt 
                  Attribut 1                                                  │
                                                                              ▼
                                                                         Text 2
+```
 
-Im folgenden ist eine vollständige Struktur eines Forms, welches aus zwei Seiten (“SEITE\_1” und “SEITE\_2”) besteht. Dabei beinhaltet jede Seite eine Überschrift und eine  
+Im folgenden ist eine vollständige Struktur eines Forms, welches aus zwei Seiten ("SEITE\_1" und "SEITE\_2") besteht. Dabei beinhaltet jede Seite eine Überschrift und eine
+
 Textbeschreibung.
 
+```
      {
      "shape": {
      // Root-Knoten
@@ -396,6 +420,7 @@ Textbeschreibung.
      }
      }
      }
+```
 
 Typen
 -----
@@ -404,6 +429,7 @@ Im folgenden Abschnitt werden alle verfügbaren Knotentypen behandelt und deren 
 
 ### Trennlinie
 
+```
      {
      "Dividingline165731154526401147116484517714": {
      "children": [],
@@ -417,9 +443,11 @@ Im folgenden Abschnitt werden alle verfügbaren Knotentypen behandelt und deren 
      }
      }
      }
+```
 
 ### Text
 
+```
      {
      "Text165729439981501359363935038671": {
      "children": [],
@@ -437,9 +465,11 @@ Im folgenden Abschnitt werden alle verfügbaren Knotentypen behandelt und deren 
      }
      }
      }
+```
 
 ### Überschrift
 
+```
      {
      "Headline165729439333006517788648825422": {
      "children": [],
@@ -455,14 +485,17 @@ Im folgenden Abschnitt werden alle verfügbaren Knotentypen behandelt und deren 
      }
      }
      }
+```
 
 ### i-doit Kategorieattribute
 
-Dieser Typ ist im Vergleich zu den vorherigen Typen komplexer und enthält daher eine größere Anzahl an Konfigurationsparametern. Zu dem können sich eben diese Parameter je  
+Dieser Typ ist im Vergleich zu den vorherigen Typen komplexer und enthält daher eine größere Anzahl an Konfigurationsparametern. Zu dem können sich eben diese Parameter je
+
 nach Typ des Kategorieattributes noch weiter unterscheiden.
 
 Die grundlegende Datenstruktur wird im folgenden am Beispiel des Attributes Allgemein > Bezeichnung beschrieben:
 
+```
      {
      "Attribute165731273460305039947937820184": {
      "children": [],
@@ -492,6 +525,7 @@ Die grundlegende Datenstruktur wird im folgenden am Beispiel des Attributes Allg
      }
      }
      }
+```
 
 ### Metainformationen zu Attributen
 
@@ -505,18 +539,18 @@ Einige Konfiguratiosparameter werden von der Forms-Addon-API vorgegeben. Sie kö
 
 *   **defaultValue** : variabler Wert, wird vorausgefüllt, sofern der Objekttyp ein Default-Template adressiert, welches ein Wert für das Attribut definiert
 
-> Eine fehlerhafte Angabe von **isSystemRequired** wird zwangsläufig in einen Fehler beim Submit des Formulars  
+> Eine fehlerhafte Angabe von **isSystemRequired** wird zwangsläufig in einen Fehler beim Submit des Formulars
 > führen, sofern **required** nicht _true_ ist.
-> 
 > **defaultValue** ist nicht zwingend notwendig, sofern die Werte aus dem Default-Template nicht berücksichtigt werden sollen.
 
 All diese Informationen können, wie bereits erwähnt, über die Forms-Addon-API ermittelt werden:
 
      GET https://idoit-instance/forms/api/attribute?category=C__CATG__GLOBAL,C__CATG__ACCOUNTING&class=C__OBJTYPE__SERVER
 
-Hierbei enthält category eine kommaseparierte Liste an Kategoriekonstanten.  
+Hierbei enthält category eine kommaseparierte Liste an Kategoriekonstanten.
 class hingegen enthält die Objekttypkonstante und wird benötigt, um **defaultValue** zu ermitteln. Die Rückgabe sieht beispielhaft wie folgt aus:
 
+```
      [
      {
      "id": "C__CATG__GLOBAL.title",
@@ -582,19 +616,21 @@ class hingegen enthält die Objekttypkonstante und wird benötigt, um **defaultV
      "children": null
      }
      ]
+```
 
 ### Sonderfall: Feldabhängigkeiten
 
-i-doit verfügt über Attribute, welche eine Abhängigkeit zu einem anderen Attribut innerhalb der Kategorie aufweist. Ein sehr einfaches Beispiel ist hierbei das  
+i-doit verfügt über Attribute, welche eine Abhängigkeit zu einem anderen Attribut innerhalb der Kategorie aufweist. Ein sehr einfaches Beispiel ist hierbei das
 Attribut Modell > Modell, welches von Modell > Hersteller abhängt.
 
-Hierfür enthält das Forms-Addon Frontend Kontrollmechanismen, um beispielsweise die Nutzung von Modell > Modell (Child) ohne  
+Hierfür enthält das Forms-Addon Frontend Kontrollmechanismen, um beispielsweise die Nutzung von Modell > Modell (Child) ohne
 Modell > Hersteller erkennt und in diesem Fall das Parentattribut automatisch hinzufügt.
 
 Diese Attribute lassen sich aufgrund ihrer Metadaten identifizieren. Hierbei enthält das Childattribut eine **parent**\- und das Parentattribut eine **children**\-Information:
 
 GET https://idoit-instance/forms/api/attribute?category=C__CATG__MODEL&class=C__OBJTYPE__SERVER
- 
+
+```
      [
      {
      "id": "C__CATG__MODEL.manufacturer",
@@ -629,9 +665,11 @@ GET https://idoit-instance/forms/api/attribute?category=C__CATG__MODEL&class=C__
      },
      [...]
      ]
+```
 
 Die Definition der Knoten für solche Abhängigkeitsstrukturen sieht hingegen wie folgt aus:
 
+```
      {
      // Hersteller: Enthält keinerlei Informationen zur Abhängigkeit
      "Attribute165731798525604834639173302364": {
@@ -669,3 +707,4 @@ Die Definition der Knoten für solche Abhängigkeitsstrukturen sieht hingegen wi
      }
      }
      }
+```

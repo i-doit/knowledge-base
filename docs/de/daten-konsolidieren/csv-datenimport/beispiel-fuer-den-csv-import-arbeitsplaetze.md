@@ -7,10 +7,10 @@ Diese sollen einem Raum als Standort zugewiesen werden und weiterhin wollen wir 
 
 Für den Import benötigen wir folgende Informationen:
 
--  Objektname → den Namen des Arbeitsplatzes, des Clients, des Bildschirms  oder des Druckers
--  Standort → unterhalb welcher Lokation soll sich das Objekt befinden 
--  Objekttyp → Um welchen Objekttypen soll es sich Handeln
--  Arbeitsplatz Zuweisung → Welchem Arbeitsplatz soll die Komponente zugewiesen werden
+-  Objektname → den Namen des Arbeitsplatzes, des Clients, des Bildschirms  oder des Druckers
+-  Standort → unterhalb welcher Lokation soll sich das Objekt befinden
+-  Objekttyp → Um welchen Objekttypen soll es sich Handeln
+-  Arbeitsplatz Zuweisung → Welchem Arbeitsplatz soll die Komponente zugewiesen werden
 
 Beispiel CSV Datei für diesen Import:
 

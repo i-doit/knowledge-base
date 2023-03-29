@@ -18,8 +18,9 @@ Dafür wird das Objekt Hans Olo per Drag and Drop von seinem alten Standort auf 
 
 [![Objekt](../assets/images/de/i-doit-pro-add-ons/relocate-ci/4-rci.png)](../assets/images/de/i-doit-pro-add-ons/relocate-ci/4-rci.png)
 
-Nach dem Klicken auf Umzug Starten öffnet sich ein Umzugsdialog, der links den derzeitigen Standort und rechts den zukünftigen Standort anzeigt. Hier kann ausgewählt werden, welche Komponenten umgezogen werden und welche am alten Standort verbleiben.  
-Es werden alle Objekte angezeigt, die hierarchisch “unterhalb” des ausgewählten Objektes liegen, im konkreten Fall also alle Arbeitsplatzkomponenten von Hans Olo. Umgezogen wird sein PC und sein Monitor, das Telefon wird abgewählt, da es im alten Raum verbleibt.
+Nach dem Klicken auf Umzug Starten öffnet sich ein Umzugsdialog, der links den derzeitigen Standort und rechts den zukünftigen Standort anzeigt. Hier kann ausgewählt werden, welche Komponenten umgezogen werden und welche am alten Standort verbleiben.
+
+Es werden alle Objekte angezeigt, die hierarchisch "unterhalb" des ausgewählten Objektes liegen, im konkreten Fall also alle Arbeitsplatzkomponenten von Hans Olo. Umgezogen wird sein PC und sein Monitor, das Telefon wird abgewählt, da es im alten Raum verbleibt.
 
 [![Umzugsdialog](../assets/images/de/i-doit-pro-add-ons/relocate-ci/5-rci.png)](../assets/images/de/i-doit-pro-add-ons/relocate-ci/5-rci.png)
 
@@ -29,7 +30,7 @@ Ist der Umzug abgeschlossen, wird die Baumansicht aktualisiert.
 
 Der Umzug wird im [Logbuch](../grundlagen/logbuch.md) von i-doit vermerkt, allerdings nur im Objekt Hans Olo.
 
-Um im Nachhinein genauere Informationen über die einzelnen umgezogenen Komponenten zu bekommen, wird der Umzug zusätzlich im Detail im Umzugslogbuch unter **Extras → CI-Umzug → Logbuch** verzeichnet. Hier wird jede einzelne betroffenen Komponente aufgeführt.
+Um im Nachhinein genauere Informationen über die einzelnen umgezogenen Komponenten zu bekommen, wird der Umzug zusätzlich im Detail im Umzugslogbuch unter **Extras → CI-Umzug → Logbuch** verzeichnet. Hier wird jede einzelne betroffenen Komponente aufgeführt.
 
 [![Logbuch](../assets/images/de/i-doit-pro-add-ons/relocate-ci/7-rci.png)](../assets/images/de/i-doit-pro-add-ons/relocate-ci/7-rci.png)
 

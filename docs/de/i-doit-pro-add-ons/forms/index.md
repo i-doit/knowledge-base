@@ -21,20 +21,19 @@ Das Forms Add-on benötigt
 
 *   i-doit Version **\>=** v**1.18**
 *   MongoDB Server v**5**
-*   NodeJS **\>=** v**16.x**  
-    
+*   NodeJS **\>=** v**16.x**
 
-Hier müssen die Systemvoraussetzungen von [MongoDB](https://docs.mongodb.com/manual/administration/production-notes/#mongodb-binaries) beachtet werden.  
+Hier müssen die Systemvoraussetzungen von [MongoDB](https://docs.mongodb.com/manual/administration/production-notes/#mongodb-binaries) beachtet werden.
 Außerdem hat MongoDB eine [Checkliste für den Einsatz im Betrieb](https://docs.mongodb.com/manual/administration/production-checklist-operations/#operations-checklist).
 
-[NodeJS](https://nodejs.org/en/download/current/) hat seine [Abhängigkeiten hier Dokumentiert](https://nodejs.org/en/docs/meta/topics/dependencies/).  
+[NodeJS](https://nodejs.org/en/download/current/) hat seine [Abhängigkeiten hier Dokumentiert](https://nodejs.org/en/docs/meta/topics/dependencies/).
 
 Installation
 ------------
 
 *   Installieren des Forms Add-on über das [Admin Center](../../administration/admin-center.md).
 *   [MongoDB Server v5](https://docs.mongodb.com/manual/installation/) installation
-*   Anschließend wird [NodeJS](https://nodejs.org/en/download/current/) >= v16.x installiert.  via [Package Manager](https://nodejs.org/en/download/package-manager/).
+*   Anschließend wird [NodeJS](https://nodejs.org/en/download/current/) >= v16.x installiert. via [Package Manager](https://nodejs.org/en/download/package-manager/).
 *   Forms Backend konfigurieren
 *   Backend in i-doit konfigurieren
 
@@ -43,7 +42,7 @@ Installation
 Rechtevergabe
 -------------
 
-Damit Benutzer in der Lage sind, Formulare zu erstellen, ist es nötig entsprechende [Rechte](../../effizientes-dokumentieren/rechteverwaltung/index.md) zu vergeben.  
+Damit Benutzer in der Lage sind, Formulare zu erstellen, ist es nötig entsprechende [Rechte](../../effizientes-dokumentieren/rechteverwaltung/index.md) zu vergeben.
 Dies ist in der i-doit Verwaltung unterRechtesystem > Rechtevergabe > Forms möglich, wenn das Add-on installiert ist.
 
 [![Rechtevergabe](../../assets/images/de/i-doit-pro-add-ons/forms/2-forms.png)](../../assets/images/de/i-doit-pro-add-ons/forms/2-forms.png)
@@ -71,5 +70,5 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
-| 1.1.0 | 2022-06-27 | [Bug]  Allow all default characters to be used in Forms-secret key  <br>[Bug]  Do not show time selection in Start date for license keys  <br>[Bug]  Allow to publish form if load balancer and HTTP2 is used  <br>[Bug]  Save Form when publishing  <br>[Bug]  Create Logbook entries when creating an object and category data via "Forms" add-on  <br>[Bug]  Filter down connectable objects for custom categories with object relations in Forms  <br>[Bug]  Allow user to copy link in Forms table  <br>[Bug]  Allow user to select multiple objects in Forms object browser  <br>[Bug]  Inform user about required attributes in category  <br>[Task] Add tooltip to disabled state of copy link button in Forms add-on  <br>[Task] Allow to add child attribute only when parent dependent is added  <br>[Task] Change real text to placeholder text in text field in Forms add-on  <br>[Task] Do not allow to add same attribute multiple times in Forms  <br>[Task] Give user warning before publishing if form will be empty  <br>[Task] Add dependencies of object browser to Forms add-on  <br>[Task] Split hostaddress category into virtual IPv4 and IPv6 categories for Forms add-on  <br>[Task] Take default template values in consideration in Forms  <br>[Task] Update attribute name in pre-defined field in Forms add-on  <br>[Task] Disable child attribute until a value for parent is assigned  <br>[Task] Implement Pagination in Attribute Type Object Browser Single- and Multi-Selection |
+| 1.1.0 | 2022-06-27 | [Bug] Allow all default characters to be used in Forms-secret key  <br>[Bug] Do not show time selection in Start date for license keys  <br>[Bug] Allow to publish form if load balancer and HTTP2 is used  <br>[Bug] Save Form when publishing  <br>[Bug] Create Logbook entries when creating an object and category data via "Forms" add-on  <br>[Bug] Filter down connectable objects for custom categories with object relations in Forms  <br>[Bug] Allow user to copy link in Forms table  <br>[Bug] Allow user to select multiple objects in Forms object browser  <br>[Bug] Inform user about required attributes in category  <br>[Task] Add tooltip to disabled state of copy link button in Forms add-on  <br>[Task] Allow to add child attribute only when parent dependent is added  <br>[Task] Change real text to placeholder text in text field in Forms add-on  <br>[Task] Do not allow to add same attribute multiple times in Forms  <br>[Task] Give user warning before publishing if form will be empty  <br>[Task] Add dependencies of object browser to Forms add-on  <br>[Task] Split hostaddress category into virtual IPv4 and IPv6 categories for Forms add-on  <br>[Task] Take default template values in consideration in Forms  <br>[Task] Update attribute name in pre-defined field in Forms add-on  <br>[Task] Disable child attribute until a value for parent is assigned  <br>[Task] Implement Pagination in Attribute Type Object Browser Single- and Multi-Selection |
 | 1.0.0 | 2022-02-21 | Initial release |

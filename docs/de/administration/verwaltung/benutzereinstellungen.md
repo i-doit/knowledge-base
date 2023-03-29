@@ -24,7 +24,7 @@ Unter Darstellung kann der jeweilige angemeldete Benutzer seine Standardsprache,
 Objekt-Listen
 -------------
 
-Unter [Objekt-Liste](../../grundlagen/objekt-liste/index.md) hat der Benutzer die Möglichkeit Zentral die Anzeige Optionen für alle Objektlisten anzupassen
+Unter [Objekt-Liste](../../grundlagen/objekt-liste/index.md) hat der Benutzer die Möglichkeit Zentral die Anzeige Optionen für alle Objektlisten anzupassen
 
 [![Objekt-Listen](../../assets/images/de/administration/verwaltung/benutzereinstellungen/4-af.png)](../../assets/images/de/administration/verwaltung/benutzereinstellungen/4-af.png)
 

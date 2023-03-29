@@ -2,7 +2,7 @@
 
 Die SNMP-Kategorie erlaubt es, in Echtzeit SNMP Werte aus Objekten auszulesen und darzustellen. Anhand der beispielhaften Abfrage eines Switches gehen wir in diesem Artikel die Voraussetzungen und die Umsetzung durch.
 
-!!! info 
+!!! info ""
     Dieser Artikel wurde zuletzt für i-doit Version 1.18.2 geprüft
 
 Voraussetzungen
@@ -18,17 +18,16 @@ Wir benötigen weiterhin eine gültige Hostadresse, die selbstverständlich in d
 
 [![snmp-hostadresse](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)
 
-  
 
-Um unnötige Fehlersuche zu vermeiden begeben wir uns erst einmal per SSH auf die Konsole des Servers und testen die SNMP Verbindung “per Hand”. Dazu installieren wir das Paket “snmp” um den Befehl “snmpwalk” zur Verfügung zu bekommen. Anschließend rufen wir einen standard Aufruf an den Switch auf, der uns die Liste aller Interfaces geben soll.
 
+Um unnötige Fehlersuche zu vermeiden begeben wir uns erst einmal per SSH auf die Konsole des Servers und testen die SNMP Verbindung "per Hand". Dazu installieren wir das Paket "snmp" um den Befehl "snmpwalk" zur Verfügung zu bekommen. Anschließend rufen wir einen standard Aufruf an den Switch auf, der uns die Liste aller Interfaces geben soll.
+
+```shell
     snmpwalk -v 2c -c public 192.168.10.1 1.3.6.1.2.1.2.2.1.1
+```
 
-  
 !!! info
-    Die Details zum Thema SNMP und diesem Aufruf lassen wir an dieser Stelle weg. Informationen über die OID .1.3.6.1.2.1.2.2.1.1 gibt es beispielsweise hier: [http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1](http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1)
-
-  
+    Die Details zum Thema SNMP und diesem Aufruf lassen wir an dieser Stelle weg. Informationen über die OID .1.3.6.1.2.1.2.2.1.1 gibt es beispielsweise hier: [http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1](http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1)
 
 Das Ergebnis in unserem Falle sieht folgender massen aus:
 
@@ -46,7 +45,8 @@ Das Ergebnis in unserem Falle sieht folgender massen aus:
 
 Die Abfrage war also erfolgreich, wir habe es mit einem 11 Port Router zu tun. Sollten an dieser Stelle Timeouts o.Ä. Fehler auftreten, sollte die Netzwerk Konnektivität geprüft werden, ob SNMP in den Firewall Regeln erlaubt ist, ob der SNMP Server läuft und ob der i-doit Server Zugriffsberechtigung auf den SNMP Server hat. Selbstverständlich muss auch die gewählte SNMP Community (in unserem Beispiel public) verfügbar sein.
 
-Nun wechseln wir wieder in _i-doit_ in die SNMP Kategorie. Dort bekommen wir automatisch die primäre IP-Adresse des Switches angezeigt und die Standard-SNMP-Community public angeboten.  
+Nun wechseln wir wieder in _i-doit_ in die SNMP Kategorie. Dort bekommen wir automatisch die primäre IP-Adresse des Switches angezeigt und die Standard-SNMP-Community public angeboten.
+
 Da uns allerdings die Interface Indizes nicht interessieren, beschäftigen wir uns mit einer anderen OID und zwar der für die Liste der fehlerhaften Pakete je Interface. Diese hat die OID 1.3.6.1.2.1.2.2.1.1.14.x, wobei x für den Index des jeweiligen Interfaces steht.
 
 Mit dieser OID und weiteren bauen wir uns eine Liste:
@@ -55,8 +55,8 @@ Mit dieser OID und weiteren bauen wir uns eine Liste:
 
 und speichern die Kategorie ab.
 
-Wenn wir nun erneut auf die Kategorie klicken werden in Echtzeit die SNMP Werte ausgelesen und angezeigt. Glücklicherweise haben wir bei diesem Test festgestellt, dass wir keine Fehler bei den Paketen haben.  
-Damit beschließen wir das praktische Beispiel und suchen nun nach der Ursache für die Paket Fehler.  
+Wenn wir nun erneut auf die Kategorie klicken werden in Echtzeit die SNMP Werte ausgelesen und angezeigt. Glücklicherweise haben wir bei diesem Test festgestellt, dass wir keine Fehler bei den Paketen haben.
+Damit beschließen wir das praktische Beispiel und suchen nun nach der Ursache für die Paket Fehler.
 
 | OID URL | Beschreibung |
 | --- | --- |

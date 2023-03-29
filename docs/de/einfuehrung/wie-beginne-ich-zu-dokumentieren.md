@@ -8,8 +8,9 @@ Häufig erreichen uns diese oder ähnliche Fragen:
 *   Wie viele Kategorien _muss_ ich befüllen, damit ich einen guten Überblick habe?
 *   …
 
-Wer sich intensiv mit dem Thema [IT-Dokumentation](../glossar.md) beschäftigt, wird schnell erkennen, dass hier wie fast überall gilt: Aller Anfang ist schwer. In diesem Artikel möchten wir herausarbeiten, was die Ursachen für diese Fragen sind und wie wir diese im Optimalfall beantworten können.  
-Schauen Sie sich auch unsere [Whitepaper](https://www.i-doit.com/downloads/) an. 
+Wer sich intensiv mit dem Thema [IT-Dokumentation](../glossar.md) beschäftigt, wird schnell erkennen, dass hier wie fast überall gilt: Aller Anfang ist schwer. In diesem Artikel möchten wir herausarbeiten, was die Ursachen für diese Fragen sind und wie wir diese im Optimalfall beantworten können.
+
+Schauen Sie sich auch unsere [Whitepaper](https://www.i-doit.com/downloads/) an.
 
 Kenne Deine Anforderungen
 -------------------------

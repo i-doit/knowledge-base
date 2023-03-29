@@ -14,24 +14,32 @@ i-doit speichert in der [System-Datenbank](../../software-entwicklung/datenbank-
 
 Testen kann man dies auf der Kommandozeile:
 
+```sql
     mysql -hlocalhost -uidoit -p
+```
 
 Hier sind die Crentials für die gewünschte Mandanten-Datenbank anzugeben. Nach dem Ausführen des Befehls fragt mysql nach dem Passwort. Schlägt die Anmeldung fehl, sind die Credentials nicht gültig. Ist die Anmeldung erfolgreich, sollte zusätzlich geprüft werden, ob der User Leserechte auf die Mandanten-Datenbank hat:
 
+```sql
     mysql> USE idoit_data;
     mysql> SHOW TABLES;
+```
 
 Auch hier gilt wieder: Werden Fehlermeldungen ausgegeben, stimmt etwas nicht.
 
 Ein genauer Blick in die User-Tabelle von MySQL/MariaDB bringt Klarheit bzw. schafft Abhilfe. Hierzu sollte man sich als Datenbank-Administrator anmelden (oftmals root):
 
+```sql
     mysql -hlocalhost -uroot -p
     mysql> USE mysql;
     mysql> SELECT * FROM user;
+```
 
 Fehlt der User, kann man ihn beispielsweise mit diesem Befehl nachtragen:
 
+```sql
     mysql> GRANT ALL PRIVILEGES ON idoit_data TO 'idoit'@'localhost' IDENTIFIED BY 'idoit';
+```
 
 Bei diesem Beispiel ist unbedingt darauf zu achten, den Namen der Mandanten-Datenbank, den User und dessen Passwort durch die richtigen bzw. durch sichere Angaben zu ersetzen.
 

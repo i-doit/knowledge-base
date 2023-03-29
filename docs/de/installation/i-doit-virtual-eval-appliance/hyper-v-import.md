@@ -2,7 +2,7 @@
 
 Wir liefern unsere Appliance im OVF Format zusammen mit einem virtuellen VMDK Festplatten Image aus. Um diese in eine Hyper-V Umgebung zu importieren muss die virtuelle Festplatte im ersten Schritt aus dem VMDK Format in das VHD Format umgewandelt werden.
 
-Hierfür können Sie das freie Tool „Starwind Converter“ verwenden welches Sie unter dem folgenden Download Link herunterladen können:
+Hierfür können Sie das freie Tool "Starwind Converter" verwenden welches Sie unter dem folgenden Download Link herunterladen können:
 
 [https://www.starwindsoftware.com/tmplink/starwindconverter.exe](https://www.starwindsoftware.com/tmplink/starwindconverter.exe)
 
@@ -10,19 +10,19 @@ Wir haben die i-doit Appliance bereits heruntergeladen und unter c:\\i-doit\_app
 
 [![Appliance-Files](../../assets/images/de/installation/virtual-appliance/hyper-v/1.png)](../../assets/images/de/installation/virtual-appliance/hyper-v/1.png)
 
-Nach der Installation des Starwind Converters starten wir diesen und wählen wir als Quelle „Local File“ aus und gehen auf „Next“ :
+Nach der Installation des Starwind Converters starten wir diesen und wählen wir als Quelle "Local File" aus und gehen auf "Next" :
 
 [![Appliance-local-files](../../assets/images/de/installation/virtual-appliance/hyper-v/2.png)](../../assets/images/de/installation/virtual-appliance/hyper-v/2.png)
 
-Nun wählen wir das VMDK Image aus der ZIP Datei der i-doit Appliance aus und gehen auf „Next“:
+Nun wählen wir das VMDK Image aus der ZIP Datei der i-doit Appliance aus und gehen auf "Next":
 
 [![Appliance-Next](../../assets/images/de/installation/virtual-appliance/hyper-v/3.png)](../../assets/images/de/installation/virtual-appliance/hyper-v/3.png)
 
-Danach können wir das Zielformat für das Virtual Harddrive wählen und gehen auf „Next“:
+Danach können wir das Zielformat für das Virtual Harddrive wählen und gehen auf "Next":
 
 [![Appliance-Next-2](../../assets/images/de/installation/virtual-appliance/hyper-v/4.png)](../../assets/images/de/installation/virtual-appliance/hyper-v/4.png)
 
-Im nächsten Schritt können wir das Ziel für die neue VDH Festplatte und ihren Ordner auswählen und gehen auf „Next“:
+Im nächsten Schritt können wir das Ziel für die neue VDH Festplatte und ihren Ordner auswählen und gehen auf "Next":
 
 [![Appliance-Next-3](../../assets/images/de/installation/virtual-appliance/hyper-v/5.png)](../../assets/images/de/installation/virtual-appliance/hyper-v/5.png)
 
@@ -51,7 +51,6 @@ Weisen das entsprechende Netzwerk zu:
 Und verbinden in diesem Schritt das konvertierte Festplatten Image:
 
 [![Appliance-Image](../../assets/images/de/installation/virtual-appliance/hyper-v/11.png)](../../assets/images/de/installation/virtual-appliance/hyper-v/11.png)
-  
 
 Danach können wir die Einrichtung abschließen und die virtuelle Maschine starten:
 

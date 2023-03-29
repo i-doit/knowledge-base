@@ -25,51 +25,40 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 !!! info "Aktualität"
 
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **22\.** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **23** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 !!! attention "Einverständniserklärung"
 
     Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
 
+## i-doit Core
 
-### 500 Error with SSO login
+### Adding a model in category model not possible
 
-[i-doit_22_hotfix_ID-9158_4711443.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9158_4711443.zip){ .md-button .md-button--primary }
+[I-doit_23_hotfix_ID-9375_40177a3.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9375_40177a3.zip){ .md-button .md-button--primary }
 
-### Conditions might not be loaded correctly in the report manager
+### Better object browser performance
 
-[i-doit_22_hotfix_ID-9265_8a555cf.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9265_8a555cf.zip){ .md-button .md-button--primary }
+[I-doit_23_hotfix_ID-9376_2ce8a0d.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9376_2ce8a0d.zip){ .md-button .md-button--primary }
 
-### Port allocation is deleted when saving in list edit
+### 'type' option for cmdb.objects filter does not work with id
 
-[i-doit_22_hotfix_ID-9163_1efe827.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9163_1efe827.zip){ .md-button .md-button--primary }
+[I-doit_23_hotfix_ID-9370_b8a4921.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9370_b8a4921.zip){ .md-button .md-button--primary }
 
-### JDisc Discovery does not work with HTTP/HTTPS
+### JDisc Import - "Only create newly scanned devices" creates duplicates
 
-[i-doit_22_hotfix_ID-9255_9750ba4.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9255_9750ba4.zip){ .md-button .md-button--primary }
+[i-doit_23_hotfix_ID-9350.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9350.zip){ .md-button .md-button--primary }
 
-### JDisc import via console removes categories and other configurations
+## Analyze Add-on 1.3
 
-[i-doit_22_hotfix_ID-9316_b3150c0.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9316_b3150c0.zip){ .md-button .md-button--primary }
+### Service assignment is not displayed in data quality
 
-### JDisc import error when "Use simple database modelling?" is activated
+[Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download:](../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
 
-[i-doit_22_hotfix_ID-9280_c88348d.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9280_c88348d.zip){ .md-button .md-button--primary }
-
-### h-inventory import error due to missing entries in constants cache
-
-[i-doit_22_hotfix_ID-9259_feeeedf.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip){ .md-button .md-button--primary }
-
-### Specific object type categories are missing in selection
-If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct [specific category](../../grundlagen/benutzerdefinierte-objekttypen.md).
-
-[i-doit_22_hotfix_ID-9281_f9f4e93.zip :material-file-download:](../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip){ .md-button .md-button--primary }
-
-Forms Add-on 1.1.0
-------------------
+## Forms Add-on 1.1.0
 
 ### Object Data is not saved or Categories are not loaded
 
 It is necessary to re-index the category attributes via [Systemtools](../../administration/systemeinstellungen/index.md), after applying the hotfix
 
-[aof-17-incompatible-function-declaration.zip :material-file-download:](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }
+[aof-17-incompatible-function-declaration.zip](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip)

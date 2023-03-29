@@ -1,4 +1,4 @@
-# Report-Manager  
+# Report-Manager
 
 Das Berichtswesen ist ein geeignetes Mittel, um Daten zu verdichten, aufzubereiten und an Dritte weiterzugeben. _i-doit_ verfügt daher über einen Report Manager, der vollumfänglich Daten aus der [IT-Dokumentation](../glossar.md) verarbeiten kann.
 
@@ -91,7 +91,7 @@ Möchte man Bedingungen setzen, die auf Attribute von Objekten, die in Beziehung
 
 ### SQL-Editor
 
-Jeder Report lässt sich über den SQL-Editor erstellen oder bearbeiten – also auch diejenigen, die mit dem Abfrage-Editor erstellt worden sind. Auf der Übersichtsseite der **Reports** klickt man entweder das Drop-Down-Feld neben **Neu** oder selektiert einen bestehenden Report und klickt das Drop-Down-Feld neben **Bearbeiten** an und wählt den Punkt **SQL-Editor**.
+Jeder Report lässt sich über den SQL-Editor erstellen oder bearbeiten - also auch diejenigen, die mit dem Abfrage-Editor erstellt worden sind. Auf der Übersichtsseite der **Reports** klickt man entweder das Drop-Down-Feld neben **Neu** oder selektiert einen bestehenden Report und klickt das Drop-Down-Feld neben **Bearbeiten** an und wählt den Punkt **SQL-Editor**.
 
 !!! info "Wechsel zwischen Abfrage- und SQL-Editor"
 
@@ -109,7 +109,7 @@ Die Spalten-Namen können multilingual angegeben werden und werden von _i-doit_ 
 
 !!! success "Komplexe Reports gestalten"
 
-     Um komplexe Reports zu gestalten, die viele Features von SQL ausreizen, bietet sich folgende Vorgehensweise an:
+    Um komplexe Reports zu gestalten, die viele Features von SQL ausreizen, bietet sich folgende Vorgehensweise an:
 
     1.  Erstellen des Reports mit dem Abfrage-Editor (so weit es geht)
     2.  Report kopieren
@@ -140,7 +140,7 @@ Report Views
 
 Auswahl von nützlichen **Report Views**:
 
-*   **QR Codes**: Aufbereiten und Drucken von mehreren Labels gleichzeitig, die einen QR-Code sowie weitere Informationen und  ein Logo enthalten können.
+*   **QR Codes**: Aufbereiten und Drucken von mehreren Labels gleichzeitig, die einen QR-Code sowie weitere Informationen und ein Logo enthalten können.
 *   **Geräte in einem Standort (Listenformat)**
 *   **Netzwerkverbindungen**
 *   **Offene Kabelverbindungen**
@@ -152,6 +152,7 @@ Reports automatisiert exportieren
 
 Bestehende Reports können automatisiert als Datei exportiert werden, ohne das ein Benutzer manuell eingreifen muss. Dies geschieht über das Kommandozeilen-Werkzeug von _i-doit_, den [Command Line Interface](../automatisierung-und-integration/cli/index.md). Der passende Console Handler lautet report-export.
 
+```shell
     sudo -u www-data php console.php report-export --help
 
     Usage:
@@ -176,7 +177,7 @@ Bestehende Reports können automatisiert als Datei exportiert werden, ohne das e
 
     Help:
         Executes an i-doit report and saves it to a file as CSV, TXT, PDF or XML
- 
+```
 
 Die Automatisierung kann beispielsweise durch einen Cronjob erledigt werden.
 

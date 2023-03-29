@@ -41,7 +41,7 @@ Die Liste kann um weitere Objekte erweitert werden, ohne die Kategorie **Hostadr
 IP-Adressen überprüfen
 ----------------------
 
-Die Kategorie **IP-Liste** bietet eine Möglichkeit zum Abgleich zwischen Soll- und Ist-Zustand: Um zu prüfen, ob die dokumentierten IP-Adressen und Hostnames tatsächlich vergeben sind, kann i-doit ICMP-Pakete ("Pings") versenden und einen NSLOOKUP starten. Dazu benötigt die i-doit Zugriff auf das Netz. Es gibt die Möglichkeit, einzelne Einträge oder alle Einträge nacheinander prüfen zu lassen. Unter **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Optionen für IP-Liste** lässt sich einstellen, welche Kommandozeilen-Tools verwendet werden. Diese muss der Benutzer/die Gruppe des Apache Webservers aufrufen dürfen.
+Die Kategorie **IP-Liste** bietet eine Möglichkeit zum Abgleich zwischen Soll- und Ist-Zustand: Um zu prüfen, ob die dokumentierten IP-Adressen und Hostnames tatsächlich vergeben sind, kann i-doit ICMP-Pakete ("Pings") versenden und einen NSLOOKUP starten. Dazu benötigt die i-doit Zugriff auf das Netz. Es gibt die Möglichkeit, einzelne Einträge oder alle Einträge nacheinander prüfen zu lassen. Unter **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Optionen für IP-Liste** lässt sich einstellen, welche Kommandozeilen-Tools verwendet werden. Diese muss der Benutzer/die Gruppe des Apache Webservers aufrufen dürfen.
 
 *   **Ping**: ICMP-Paket an IP-Adresse schicken
 *   **NSLOOKUP**: IP-Adresse zum Hostname bestimmen

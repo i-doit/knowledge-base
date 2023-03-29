@@ -121,8 +121,8 @@ Globale Kategorien
 | **Service Typ** | **Typ** | Typisierung von Services; ist im Kategorie-Ordner **Service** enthalten |
 | **Service-Template definition** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Servicezuweisung** | \-  | Dient das Objekt als Komponente eines Services, kann es hierüber hinzugefügt werden. Ein Objekt kann mehreren Services zugewiesen werden. Rückwärtige Kategorie: **Service Komponenten** |
-| **SIM** | \-  | Angaben zu  einer **SIM-Karte** (Netzanbieter, Tarif, Telefonnummer usw.) |
-| **Karten** | \-  | Angaben zu einer SIM-Karte (Verknüpftes Mobiltelefon, Pin, Seriennummer); rückwärtige Kategorie: **Zugewiesene SIM-Karten** |
+| **SIM** | \-  | Angaben zu  einer **SIM-Karte** (Netzanbieter, Tarif, Telefonnummer usw.) |
+| **Karten** | \-  | Angaben zu einer SIM-Karte (Verknüpftes Mobiltelefon, Pin, Seriennummer); rückwärtige Kategorie: **Zugewiesene SIM-Karten** |
 | **SLA** | \-  | Angaben zu einem Service Level Agreement (SLA); häufig den Objekttypen **Service** und **Vertrag** zugeordnet |
 | **Smartcard Zertifikat** | \-  | Angaben zu einer Smartcard |
 | **SNMP** | \-  | Live-Abfrage von Informationen über das Protokoll SNMP; abgerufene Daten werden **nicht** gespeichert |
@@ -138,7 +138,7 @@ Globale Kategorien
 | **Status-Planung** [![status-planung](../assets/images/de/grundlagen/icons/calendar.png)](../assets/images/de/grundlagen/icons/calendar.png) | \-  | Angabe, wann welcher **CMDB-Status** (siehe Kategorie **Allgemein**) gültig ist |
 | **Stromlieferant** | \-  | Angaben zu einem Stromerzeuger |
 | **Stromverbraucher** | \-  | Liste von verbauten Netzteilen; bietet somit die Dokumentation einer redundanten Stromversorgung; befüllt automatisch die Kategorie **Verkablung → Anschlüsse**; ermöglicht die Angabe einer **BTU** (geeignet für die Berechnung der Kühlung/Klimatisierung) |
-| **Subskriptionen** | \-  | Angaben zu vorhandenen Subskriptionen, welche über die Kategorie **Zugewiesene Benutzer** zu **Personen** zugewiesen wird; Kann über **JDisc** importiert werden |
+| **Subskriptionen** | \-  | Angaben zu vorhandenen Subskriptionen, welche über die Kategorie **Zugewiesene Benutzer** zu **Personen** zugewiesen wird; Kann über **JDisc** importiert werden |
 | **Support Ansprüche** | \-  | **JDisc** ruft direkt von einigen Herstellern den Status von Support Ansprüchen ab und importiert diese in seine Datenbank. Diese Informationen können von JDisc nach i-doit importiert werden. |
 | **Telefon/Fax** | \-  | Angaben wie **Telefonnummer** oder **Faxnummer** |
 | **TSI-Service** |     | Angaben zu Telefonsystemen von Cisco |
@@ -162,7 +162,7 @@ Globale Kategorien
 | **Zertifikat** | \-  | Dokumentation von x.509-Zertifikaten |
 | **Zugewiesene Abonnente** | \-  | Rückwärtige Kategorie der Kategorie Zugewiesene Benutzer |
 | **Zugewiesene Arbeitsplätze** | \-  | Eine **Person** kann einem oder mehreren Objekten vom Typ **Arbeitsplatz** zugeordnet werden. Rückwärtige Kategorie: **Logischer Standort** |
-| **Zugewiesene Benutzer** | \-  | Zuordnung von Subskriptionen zu Personen; rückwärtige Kategorie: **Zugewiesene Abonnente** |
+| **Zugewiesene Benutzer** | \-  | Zuordnung von Subskriptionen zu Personen; rückwärtige Kategorie: **Zugewiesene Abonnente** |
 | **Zugewiesene Objekte** | \-  | Zuordnung von Objekten zu einer Datei; ist im Kategorie-Ordner **Dateien** enthalten; rückwärtige Kategorie: **Dateizuweisung** |
 | **Zugewiesener Arbeitsplatz** | \-  | Das Objekt mit dieser Kategorie wird hierüber einem **Arbeitsplatz** zugewiesen. Rückwärtige Kategorie: **Zugewiesene Endgeräte** |
 | **Zugewiesene Endgeräte** |     | Objekte, die einem Objekt vom Typ **Arbeitsplatz** zugewiesen werden. Rückwärtige Kategorie: **Zugewiesener Arbeitsplatz** |
@@ -234,14 +234,14 @@ Spezifische Kategorien
 | **Typ** | \-  | Definition, ob eine **Objektgruppe** dynamisch (per [Report](../auswertungen/report-manager.md)) oder statisch aufgebaut ist; ist im Kategorie-Ordner **Objektgruppe** enthalten |
 | **Übersicht** | \-  | 1.  Zusammenfassung von Angaben zu einer Lizenz; ist im Kategorie-Ordner Lizenzzuweisung enthalten<br>2.  Visuelle Darstellung und Statistiken von PDU Branches; ist im Kategorie-Ordner **PDU** enthalten |
 | **Unterbrechungsfreie Stromversorgung** | \-  | Angaben zu einer USV, daher häufig dem gleichnamigen Objekttypen **Unterbrechungsfreie Stromversorgung** zugeordnet |
-| **Varianten** | \-  | Liste von Varianten, zum Beispiel "Standard", "Enterprise", "Pro", "Open", einer Applikation; ist in den Kategorie-Ordnern **Anwendungen**, **DBMS** und **Dienste** enthalten; ergänzt die Kategorie **Installation** in diesen Kategorie-Ordnern |
+| **Varianten** | \-  | Liste von Varianten, zum Beispiel "Standard", "Enterprise", "Pro", "Open", einer Applikation; ist in den Kategorie-Ordnern **Anwendungen**, **DBMS** und **Dienste** enthalten; ergänzt die Kategorie **Installation** in diesen Kategorie-Ordnern |
 | **Verkabelung** | \-  | Interne Vernetzung innerhalb eines Chassis; ist im Kategorie-Ordner **Chassis** enthalten |
 | **Vertrag** | \-  | Kategorie-Ordner mit untergeordneten Kategorien **Vertragsinformationen** und **Zugeordnete Objekte**; häufig dem gleichnamigen Objekttypen **Vertrag** zugeordnet |
 | **Vertragsinformationen** | \-  | Angaben zu einem Vertrag; ist im Kategorie-Ordner **Vertrag** enthalten |
 | **WAN-Leitungen** | \-  | Angaben zu einer Internet-Anbindung (WAN, MAN, GAN o. ä.), daher häufig dem gleichnamigen Objekttypen **WAN-Leitungen** zugeordnet |
 | **WiFi-Gerät** | \-  | Angaben zu einem WLAN Access Point, daher häufig dem Objekttypen **Wireless Access Point** zugeordnet |
 | **Zugeordnete Cluster** | \-  | Liste von Objekten vom Typ **Cluster** mit weiteren Angaben, wie der Cluster definiert ist; ist im Kategorie-Ordner **DBMS** enthalten; rückwärtige Kategorie: **Clustermitgliedschaften** |
-| **Zugeordnete Objekte** | \-  | 1.  Liste von Objekten, die einem **Vertrag** zugeordnet sind; ist im Kategorie-Ordner **Vertrag** enthalten; rückwärtige Kategorie: **Vertragszuweisung**<br>2.  Liste von Objekten, die einem **Leitungsnetz** zugeordnet sind; ist im Kategorie-Ordner **Leitungsnetz** enthalten; rückwärtige Kategorie: **Verkabelung → Anschlüsse** (Attribut **Leitungsnetz**) |
+| **Zugeordnete Objekte** | \-  | 1.  Liste von Objekten, die einem **Vertrag** zugeordnet sind; ist im Kategorie-Ordner **Vertrag** enthalten; rückwärtige Kategorie: **Vertragszuweisung**<br>2.  Liste von Objekten, die einem **Leitungsnetz** zugeordnet sind; ist im Kategorie-Ordner **Leitungsnetz** enthalten; rückwärtige Kategorie: **Verkabelung → Anschlüsse** (Attribut **Leitungsnetz**) |
 | **Zugewiesene Geräte** | \-  | Liste von Hardware-Objekten (**Blade Server**, Switch-Module), die in einem Chassis eingesteckt sind; ist im Kategorie-Ordner **Chassis** enthalten; ergänzt die Kategorie **Räumlich zugeordnete Objekte** |
 | **Zugewiesene logische Ports** | \-  | Liste von zugeordneten Objekten mit ihren logischen Ports; ist im Kategorie-Ordner **Layer-2-Netz** enthalten; rückwärtige Kategorie: **Netzwerk → Logische Ports** |
 | **Zugewiesene Objekte** | \-  | 1.  Zuordnung von Objekten zu einem Kontakt; ist in den Kategorie-Ordnern **Personen**, **Personengruppen** und **Organisation** enthalten; rückwärtige Kategorie: **Kontaktzuweisung**<br>2.  Zuordnung von Objekten zu einem **Notfallplan**; ist im Kategorie-Ordner **Notfallplan** enthalten; rückwärtige Kategorie: **Notfallplanzuweisung** |

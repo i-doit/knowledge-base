@@ -1,6 +1,7 @@
 # Replacement
 
-Ein neuer Switch wird in Betrieb genommen, doch alle Verbindungen sollen erhalten bleiben. Wer hier nicht im Anschluss alle Anschlüsse neu dokumentieren will, nutzt das [Add-on](./index.md) **Gerätetausch**. Diese erlaubt den Austausch von [Objekten](../grundlagen/struktur-it-dokumentation.md) bei konfigurierbarer Übernahme der bestehenden Verbindungen.  
+Ein neuer Switch wird in Betrieb genommen, doch alle Verbindungen sollen erhalten bleiben. Wer hier nicht im Anschluss alle Anschlüsse neu dokumentieren will, nutzt das [Add-on](./index.md) **Gerätetausch**. Diese erlaubt den Austausch von [Objekten](../grundlagen/struktur-it-dokumentation.md) bei konfigurierbarer Übernahme der bestehenden Verbindungen.
+
 Das Add-on hieß zuvor SwapCI bis zur Version 1.3.1.
 
 Download und Installation
@@ -11,7 +12,7 @@ Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen
 Konfiguration
 -------------
 
-Die Konfiguration befindet sich unter **Verwaltung → CMDB Einstellungen → Gerätetausch → Konfiguration**. Sie dient größtenteils für die Definition von Standardwerten, um häufiges Tauschen zu standardisieren und zu beschleunigen.
+Die Konfiguration befindet sich unter **Verwaltung → CMDB Einstellungen → Gerätetausch → Konfiguration**. Sie dient größtenteils für die Definition von Standardwerten, um häufiges Tauschen zu standardisieren und zu beschleunigen.
 
 | Option | Beschreibung |
 | --- | --- |
@@ -24,7 +25,7 @@ Die Konfiguration befindet sich unter **Verwaltung → CMDB Einstellungen → G
 Rechtevergabe
 -------------
 
-Unter **Verwaltung → Rechtesystem → Rechtevergabe → Gerätetausch** können [Rechte für Personen und Personengruppen](../effizientes-dokumentieren/rechteverwaltung/index.md) angepasst werden.
+Unter **Verwaltung → Rechtesystem → Rechtevergabe → Gerätetausch** können [Rechte für Personen und Personengruppen](../effizientes-dokumentieren/rechteverwaltung/index.md) angepasst werden.
 
 | Bedingung | Beschreibung |
 | --- | --- |
@@ -49,7 +50,7 @@ Um ein Objekt gegen ein anderes zu tauschen, gibt es drei Wege:
 
 1.  Innerhalb einer [Objekt-Liste](../grundlagen/objekt-liste/index.md) beide Objekte auswählen und in der [Aktionsleiste](../grundlagen/objekt-liste/aktionsleiste.md) den Button **Tauschen** klicken
 2.  Innerhalb eines Objekts in der Aktionsleiste den Button **Tauschen** klicken und anschließend das Tauschgerät unter **Lagerndes Objekt** auswählen
-3.  Unter **Extras → Gerätetausch** die beiden Objekte unter **Zu tauschendes Objekt** und **Lagerndes Objekt** auswählen
+3.  Unter **Extras → Gerätetausch** die beiden Objekte unter **Zu tauschendes Objekt** und **Lagerndes Objekt** auswählen
 
 Über den Button **Umstellen** können die ausgewählten Objekte vertauscht werden.
 
@@ -73,14 +74,14 @@ Durch einen Klick auf den Button **Gerätetausch starten** wird der Tausch beide
 Tausch nach Arbeitsplatzsystemen
 --------------------------------
 
-Ein Vorauswahl für den Tausch kann über zugeordnete Arbeitsplätze erfolgen. Unter **Extras → Gerätetausch → Tausch nach Arbeitsplatzsystemen** wird zuerst ein Objekttyp ausgewählt. Danach erscheinen alle Objekte vom Typ **Arbeitsplatz**, in deren Kategorie **Arbeitsplatzkomponenten** Objekte diesen Typs zugeordnet sind. Von jeweils einem Arbeitsplatz wird ein Objekt zum Tauschen ausgewählt. Über den Button **Ausgewählte Objekte tauschen** gelangt man zur Oberfläche **Extras → Gerätetausch → Objekte tauschen**.
+Ein Vorauswahl für den Tausch kann über zugeordnete Arbeitsplätze erfolgen. Unter **Extras → Gerätetausch → Tausch nach Arbeitsplatzsystemen** wird zuerst ein Objekttyp ausgewählt. Danach erscheinen alle Objekte vom Typ **Arbeitsplatz**, in deren Kategorie **Arbeitsplatzkomponenten** Objekte diesen Typs zugeordnet sind. Von jeweils einem Arbeitsplatz wird ein Objekt zum Tauschen ausgewählt. Über den Button **Ausgewählte Objekte tauschen** gelangt man zur Oberfläche **Extras → Gerätetausch → Objekte tauschen**.
 
 [![Tausch nach Arbeitsplatzsystemen](../assets/images/de/i-doit-pro-add-ons/replacement/4-rp.png)](../assets/images/de/i-doit-pro-add-ons/replacement/4-rp.png)
 
 Tausch-Report
 -------------
 
-Ein Bericht über bisher durchgeführte Tauschaktionen wird unter **Extras → Gerätetausch → Tausch-Report** generiert. Die Oberfläche ist alternativ über **Extras → Report Manager → Views → Tausch-Report** zu erreichen.
+Ein Bericht über bisher durchgeführte Tauschaktionen wird unter **Extras → Gerätetausch → Tausch-Report** generiert. Die Oberfläche ist alternativ über **Extras → Report Manager → Views → Tausch-Report** zu erreichen.
 
 [![Tausch-Report](../assets/images/de/i-doit-pro-add-ons/replacement/5-rp.png)](../assets/images/de/i-doit-pro-add-ons/replacement/5-rp.png)
 
@@ -93,8 +94,8 @@ Releases
 | 1.3.2 | 21.02.2022 | [Bug] Use Of German Language in English Version Of Object Swap |
 | 1.3.1 | 10.08.2020 | [Bug] The location is lost during swap  <br>[Bug] Information is deleted when objects are exchanged |
 | 1.3 | 20.05.2019 | [Verbesserung] Attribute "Seriennummer" und "Modellbezeichnung" im Gerätetausch-Report<br>[Bug] Suchindex wird nach einem Gerätetausch nicht erneuert<br>[Bug] Gerätetausch verwendet Workflow Tabellen<br>[Bug] Tausch-Status im englischen als einziger CMDB-Status mit großem Anfangsbuchstaben<br>[Bug] Fehler beim Aufruf des Tausch-Reports (Gerätetausch)<br> |
-| 1.2.5 | 02.05.2017 | [Bug] Fehlermeldung im AdminCenter bei der De-Installation von SWAP_CI<br> |
-| 1.2.4 | 08.03.2017 | [Bug] Schaltfläche "Tauschen" aus Erweiterung "Gerätetausch" in Objektlisten hat keine Auswirkung<br>[Bug] PHP und i-doit Kompabilität verbessert<br> |
-| 1.2.3 | 08.10.2015 | [Verbesserung]  Attribute "Seriennummer" und "Modellbezeichnung" im Gerätetausch-Report<br>[Bug] Gerätetausch stellt Fehlermeldung dar, wenn man sich dessen Kontext einloggt.<br>[Bug] SQL Fehler verhindert das auswählen von Kategorien zum tausch<br> |
+| 1.2.5 | 02.05.2017 | [Bug] Fehlermeldung im AdminCenter bei der De-Installation von SWAP_CI<br> |
+| 1.2.4 | 08.03.2017 | [Bug] Schaltfläche "Tauschen" aus Erweiterung "Gerätetausch" in Objektlisten hat keine Auswirkung<br>[Bug] PHP und i-doit Kompabilität verbessert<br> |
+| 1.2.3 | 08.10.2015 | [Verbesserung]  Attribute "Seriennummer" und "Modellbezeichnung" im Gerätetausch-Report<br>[Bug] Gerätetausch stellt Fehlermeldung dar, wenn man sich dessen Kontext einloggt.<br>[Bug] SQL Fehler verhindert das auswählen von Kategorien zum tausch<br> |
 | 1.2.2 | 09.03.2015 | [Bug] SwapCI-Modul verursacht Fehler falls Mandant das Modul nicht installiert hat<br> |
 | 1.2.1 | 14.04.2014 | Initiales Release |

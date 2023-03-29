@@ -13,10 +13,8 @@ Wir nutzen für die Beispielkonfiguration zwei Server, einen Windows Server mit 
 
 ### Basis Konfiguration:
 
-✔ Beide Server müssen sich gegenseitig per FQDN auflösen können.
-
-✔ Der Windows-Server muss ein konfiguriertes AD haben, welches die Rolle AD-FS beinhaltet.
-
+✔ Beide Server müssen sich gegenseitig per FQDN auflösen können.<br>
+✔ Der Windows-Server muss ein konfiguriertes AD haben, welches die Rolle AD-FS beinhaltet.<br>
 ✔ I-doit ist bereits vorinstalliert und nutzbar.
 
 ### Pakete Installieren
@@ -36,11 +34,12 @@ sudo mkdir -p /etc/apache2/mellon
 cd /etc/apache2/mellon
 ```
 
-Mit folgendem Befehl erstellen wir unsere Mellon Metadaten “URLs bitte anpassen”
+Mit folgendem Befehl erstellen wir unsere Mellon Metadaten "URLs bitte anpassen"
 
 ```shell
 /usr/sbin/mellon_create_metadata https://tu2-samlsso.synetics.test/ "https://tu2-samlsso.synetics.test/mellon"
 ```
+
 Dies erstellt nun folgende Dateien
 
 `https\_tu2\_samlsso.synetics.test\_.cert`
@@ -49,10 +48,10 @@ Dies erstellt nun folgende Dateien
 
 `https\_tu2\_samlsso.synetics.test\_.xml`
 
-Nun müssen wir die AD-FS metadaten von unserem AD abholen “URLs bitte anpassen”
+Nun müssen wir die AD-FS metadaten von unserem AD abholen "URLs bitte anpassen"
 
 ```shell
-wget  https://tu2-dc2.tu-synetics.test/FederationMetadata/2007-06/FederationMetadata.xml%20-O%20/etc/apache2/mellon/FederationMetadata.xml -O /etc/apache2/mellon/FederationMetadata.xml --no-check-certificate
+wget https://tu2-dc2.tu-synetics.test/FederationMetadata/2007-06/FederationMetadata.xml%20-O%20/etc/apache2/mellon/FederationMetadata.xml -O /etc/apache2/mellon/FederationMetadata.xml --no-check-certificate
 ```
 
 Nun müssen wir unsere Mellon-Konfiguration anlegen.
@@ -76,7 +75,7 @@ Folgende Konfigurationsdirektiven anhand des Beispiel einfügen:
 
 ## Apache2 Konfiguration
 
-Zuerst erstellen wir ein selbst signiertes Zertifikat “Name kann individuell sein”
+Zuerst erstellen wir ein selbst signiertes Zertifikat "Name kann individuell sein"
 
 ```shell
 openssl req -newkey rsa:3072 -new -x509 -days 3652 -nodes -out /etc/ssl/certs/mywebserver.pem -keyout /etc/ssl/private/mywebserver.key
@@ -177,8 +176,7 @@ An dieser Stelle sind wir vorerst mit der Konfiguration des Linux-Servers fertig
 
 ## Konfiguration AD-FS:
 
-Zuerst via z.B. WinSCP die `mellon_metadata.xml` vom Linuxserver herunterladen und speichern.
-
+Zuerst via z.B. WinSCP die `mellon_metadata.xml` vom Linuxserver herunterladen und speichern.<br>
 Anschließend öffnen wir das AD-FS Management und legen ein neuen Relying Party Trust an
 
 [![Add Relying Party Trust](../../assets/images/de/automatisierung-und-integration/single-sign-on/saml-sso/saml-1.png)](../../assets/images/de/automatisierung-und-integration/single-sign-on/saml-sso/saml-1.png)
@@ -187,7 +185,7 @@ Claims aware bleibt aktiv und dann auf Start
 
 [![Welcome](../../assets/images/de/automatisierung-und-integration/single-sign-on/saml-sso/saml-2.png)](../../assets/images/de/automatisierung-und-integration/single-sign-on/saml-sso/saml-2.png)
 
-Im Nächsten Schritt wählen wir “import data ….” aus und navigieren zu unserer vorher gesicherten XML
+Im Nächsten Schritt wählen wir "import data …." aus und navigieren zu unserer vorher gesicherten XML
 
 [![Select data source](../../assets/images/de/automatisierung-und-integration/single-sign-on/saml-sso/saml-3.png)](../../assets/images/de/automatisierung-und-integration/single-sign-on/saml-sso/saml-3.png)
 
@@ -271,7 +269,7 @@ sudo a2dissite i-doit
 Am Anfang angelegten Mellon Vhost anpassen
 
 ```shell
-nano /etc/apache2/sites-enabled/tu2-samlsso.conf 
+nano /etc/apache2/sites-enabled/tu2-samlsso.conf
 ```
 
 Beispiel

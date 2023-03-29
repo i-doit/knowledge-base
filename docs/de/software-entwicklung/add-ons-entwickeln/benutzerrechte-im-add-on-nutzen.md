@@ -1,6 +1,6 @@
 # Benutzerrechte im add on nutzen
 
-Um das Rechtesystem im eigenen Add-on zu nutzen, muss nicht viel Logik geschrieben werden. Es ist lediglich eine "auth"-Klasse isys_auth_example mit etwas Boilerplate-Code nötig. Zusätzlich muss die Add-on-Basis Klasse das Interface "\idoit\AddOn\AuthableInterface" implementieren und die definierte Methode "getAuth" mitliefern.
+Um das Rechtesystem im eigenen Add-on zu nutzen, muss nicht viel Logik geschrieben werden. Es ist lediglich eine "auth"-Klasse isys_auth_example mit etwas Boilerplate-Code nötig. Zusätzlich muss die Add-on-Basis Klasse das Interface "\idoit\AddOn\AuthableInterface" implementieren und die definierte Methode "getAuth" mitliefern.
 
 Anpassung der Add-on-Basis Klasse
 ---------------------------------
@@ -12,7 +12,7 @@ Anpassung der Add-on-Basis Klasse
         /**
         * Get related auth class for module.
         *
-        * @return  isys_auth_example
+        * @return  isys_auth_example
         */
         public static function getAuth()
         {
@@ -30,14 +30,14 @@ Die im oberen Beispiel genannte Klasse isys_auth_example muss folgendermaßen au
         /**
         * Container for singleton instance
         *
-        * @var  isys_auth_example
+        * @var  isys_auth_example
         */
         private static $instance;
 
         /**
         * Method for returning the available auth-methods. This will be used for the GUI.
         *
-        * @return  array
+        * @return  array
         * @throws Exception
         */
         public function get_auth_methods()
@@ -48,7 +48,7 @@ Die im oberen Beispiel genannte Klasse isys_auth_example muss folgendermaßen au
         /**
         * Get ID of related module.
         *
-        * @return  integer
+        * @return  integer
         */
         public function get_module_id()
         {
@@ -58,7 +58,7 @@ Die im oberen Beispiel genannte Klasse isys_auth_example muss folgendermaßen au
         /**
         * Get title of related module.
         *
-        * @return  string
+        * @return  string
         */
         public function get_module_title()
         {
@@ -99,9 +99,9 @@ i-doit liefert einige Standard-Rechte-Typen, die wir in der "get_auth_methods"-M
     {
         return [
             'example_action' => [
-                'title'   => 'LC__EXAMPLE__AUTH__EXAMPLE_ACTION',
-                'type'    => 'boolean',
-                'rights'  => [isys_auth::VIEW, isys_auth::EDIT],
+                'title'   => 'LC__EXAMPLE__AUTH__EXAMPLE_ACTION',
+                'type'    => 'boolean',
+                'rights'  => [isys_auth::VIEW, isys_auth::EDIT],
                 'default' => [isys_auth::VIEW]
             ]
         ];
@@ -115,10 +115,10 @@ Die übrigen Parameter übernehmen folgende Rollen:
 *   "type": Definiert die darzustellenden Parameter innerhalb der GUI:
     *   boolean: Stellt keinen Parameter dar.
     *   object: Stellt einen Objektbrowser dar. Objekte können bei der Rechteprüfung als Parameter übergeben werden.
-    *   object_type: Stellt einen Dialog mit allen Objekt-Typen dar. Diese können bei der Rechteprüfung als Parameter übergeben werden.
-    *   category: Stellt einen Dialog mit allen Kategorien dar. Diese können bei der Rechteprüfung als Parameter übergeben werden.
-    *   dialog_tables: Stellt einen Dialog mit allen Dialogfeldern dar. Diese können bei der Rechteprüfung als Parameter übergeben werden.
-    *   custom_dialog_tables: Stellt einen Dialog mit allen benutzerdefinierten Dialogfeldern dar. Diese können bei der Rechteprüfung als Parameter übergeben werden.
+    *   object_type: Stellt einen Dialog mit allen Objekt-Typen dar. Diese können bei der Rechteprüfung als Parameter übergeben werden.
+    *   category: Stellt einen Dialog mit allen Kategorien dar. Diese können bei der Rechteprüfung als Parameter übergeben werden.
+    *   dialog_tables: Stellt einen Dialog mit allen Dialogfeldern dar. Diese können bei der Rechteprüfung als Parameter übergeben werden.
+    *   custom_dialog_tables: Stellt einen Dialog mit allen benutzerdefinierten Dialogfeldern dar. Diese können bei der Rechteprüfung als Parameter übergeben werden.
 *   "rights": Definiert, welche Rechte für diese Definition verfügbar sind:
     *   isys_auth::VIEW
     *   isys_auth::EDIT
@@ -134,9 +134,9 @@ Im Code auf definierte Rechte prüfen
 
 Wir können im Code über zwei Wege auf definierte Rechte prüfen:
 
-1.  isys_auth_example->is_allowed_to(<Recht>, '<Methode>')  
+1.  isys_auth_example->is_allowed_to(<Recht>, '<Methode>')
     Diese Methode liefert boolsches "true" oder "false" zurück und kann in Abfragen verwendet werden.
-2.  isys_auth_example->check(<Recht>, '<Methode>')  
+2.  isys_auth_example->check(<Recht>, '<Methode>')
     Diese Methode wird eine Exception (üblicherweise vom Typ "isys_exception_auth") werfen, sofern das Recht nicht existiert. Im Erfolgsfall wird boolesch "true" zurückgeliefert.
 
 Der Code für unser Beispiel-Recht kann folgendermaßen aussehen:
@@ -198,7 +198,7 @@ Um dieses Recht im Code zu prüfen, müsste die entsprechende Methode innerhalb 
             if (!in_array($right, $this->m_paths['example_action'][isys_auth::EMPTY_ID_PARAM])) {
             throw new isys_exception_auth('You missing the "' . self::get_right_name($right) . '" right for "example_action".');
         }
-        
+
         return true;
     }
 

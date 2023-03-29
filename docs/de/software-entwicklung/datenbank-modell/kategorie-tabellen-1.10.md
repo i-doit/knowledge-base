@@ -2,7 +2,7 @@
 
 !!! info "Diesen Inhalt automatisch erstellen"
 
-    Über den URL-Parameter load=property_infos werden die Kategorie-Tabellen für die derzeit installierte Version von i-doit erstellt. Es muss ein Benutzer angemeldet sein. Beispiel: [https://demo.i-doit.com/?load=property_infos](https://demo.i-doit.com/?load=property_infos)
+    Über den URL-Parameter load=property_infos werden die Kategorie-Tabellen für die derzeit installierte Version von i-doit erstellt. Es muss ein Benutzer angemeldet sein. Beispiel: [https://demo.i-doit.com/?load=property_infos](https://demo.i-doit.com/?load=property_infos)
 
 Globale Kategorien
 ------------------

@@ -1,4 +1,5 @@
 # Systemeinstellungen
+
 Für die Konfiguration des Betriebssystems empfehlen wir eine Reihe von Einstellungen bezogen auf PHP, Apache Webserver und MySQL/MariaDB. Diese fußen auf den [Systemvoraussetzungen](../systemvoraussetzungen.md) für i-doit. Die Einstellungen unterscheiden sich je nach Betriebssystem, weswegen auf die jeweiligen Artikel verwiesen wird:
 
 *   [Debian GNU/Linux](debian.md)

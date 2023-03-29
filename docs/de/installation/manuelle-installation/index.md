@@ -4,11 +4,11 @@ Dieser Artikel behandelt die manuelle [Installation](../index.md) von i-doit. Di
 Umfang
 ------
 
-✔ Software-Pakete installieren  
-✔ Software-Pakete konfigurieren  
-✔ i-doit installieren  
-✔ Cronjobs einrichten  
-✔ Backups einrichten  
+✔ Software-Pakete installieren
+✔ Software-Pakete konfigurieren
+✔ i-doit installieren
+✔ Cronjobs einrichten
+✔ Backups einrichten
 ✔ Restore einrichten
 
 Voraussetzungen

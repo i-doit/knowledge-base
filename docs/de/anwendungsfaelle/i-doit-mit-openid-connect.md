@@ -12,19 +12,17 @@ Gehe auf [https://console.developers.google.com/](https://console.developers.goo
 
 [![OAuth Anmeldedaten erstellen](../assets/images/de/anwendungsfaelle/open-id-connect/1-oid.png)](../assets/images/de/anwendungsfaelle/open-id-connect/1-oid.png)
 
-  
-
 1.  Webanwendung auswählen
 2.  Als Namen eine wiedererkennbare Bezeichnung eingeben
-3.  Als Autorisierte Weiterleitungs-URL eine URL angebe, die hinter der zu sichernden Webressource liegt, aber auf keinen Inhalt zeigt (!).  
-    Die hier exemplarisch angegebene URL soll ab [https://gauth.i-doit.com/i-doit/](https://gauth.i-doit.com/i-doit/) mit der Authentifizierung abgesichert werden.  
-    Die angehangene **Ressource “redirect\_uri” existiert nicht** auf dem Webserver!
+3.  Als Autorisierte Weiterleitungs-URL eine URL angebe, die hinter der zu sichernden Webressource liegt, aber auf keinen Inhalt zeigt (!).
+    Die hier exemplarisch angegebene URL soll ab [https://gauth.i-doit.com/i-doit/](https://gauth.i-doit.com/i-doit/) mit der Authentifizierung abgesichert werden.
+    Die angehangene **Ressource "redirect\_uri" existiert nicht** auf dem Webserver!
 
 [![OAuth Anmeldedaten erstellen](../assets/images/de/anwendungsfaelle/open-id-connect/2-oid.png)](../assets/images/de/anwendungsfaelle/open-id-connect/2-oid.png)
 
 1.  Client-ID kopieren, diese wird später benötigt
 2.  Client Secret kopieren, dieses wird später benötigt
-3.  Den OAuth Zustimmungsbildschirm konfigurieren  
+3.  Den OAuth Zustimmungsbildschirm konfigurieren
     (Dies ist **für einen ersten Test nicht notwendig**, aber für einen Produktionsbetrieb)
 
 [![OAuth Anmeldedaten erstellen](../assets/images/de/anwendungsfaelle/open-id-connect/3-oid.png)](../assets/images/de/anwendungsfaelle/open-id-connect/3-oid.png)
@@ -32,12 +30,15 @@ Gehe auf [https://console.developers.google.com/](https://console.developers.goo
 Webserver einrichten
 --------------------
 
-#### Unter **Debian 10** das Paket **mod\_auth\_openidc** für Apache installieren:  
+#### Unter **Debian 10** das Paket **mod\_auth\_openidc** für Apache installieren:
 
+```
     sudo apt install libapache2-mod-auth-openidc
+```
 
 #### In der Apache Config folgenden Code einfügen
 
+```
     OIDCProviderMetadataURL https://accounts.google.com/.well-known/openid-configuration
     OIDCClientID <Client_ID_aus_der_Google_API_Console>
     OIDCClientSecret <Client_Secret_aus_der_Google_API_Console>
@@ -62,6 +63,7 @@ Webserver einrichten
             AuthType openid-connect
             Require valid-user
     </Location>
+```
 
 ##### So sieht es im Test live aus:
 
@@ -76,23 +78,19 @@ Authentifizierung testen und finalisieren
 
 Eine Datei identity.php anlegen. In diesem Fall /var/www/html/i-doit/identity.php.
 
+```
     <?php
     echo $_SERVER['REMOTE_USER'];
     #print_r(array_map("htmlentities", apache_request_headers()));
     ?>
-
-  
+```
 
 1.  Die Datei im Browser aufrufen
-2.  Per Google anmelden  
-    [![Google anmelden](../assets/images/de/anwendungsfaelle/open-id-connect/5-oid.png)](../assets/images/de/anwendungsfaelle/open-id-connect/5-oid.png) 
-      
-    
+2.  Per Google anmelden
+    [![Google anmelden](../assets/images/de/anwendungsfaelle/open-id-connect/5-oid.png)](../assets/images/de/anwendungsfaelle/open-id-connect/5-oid.png)
 3.  Die erscheinende ID überprüfen (Es sollte der E-Mail entsprechen)
-4.  In i-doit einloggen und für den gewünschten i-doit User als Login Namen eintragen.  
-    **(!) Wichtig ist, dass der Domain Part ab dem @ Zeichen von i-doit nicht berücksichtigt wird. Daher muss der Name auf den vorderen Teil gekürzt werden:****Aus “testaccount@[i-doit.com](http://i-doit.com)” wird “testaccount”.**
-
-  
+4.  In i-doit einloggen und für den gewünschten i-doit User als Login Namen eintragen.
+    **(!) Wichtig ist, dass der Domain Part ab dem @ Zeichen von i-doit nicht berücksichtigt wird. Daher muss der Name auf den vorderen Teil gekürzt werden:****Aus "testaccount@[i-doit.com](http://i-doit.com)" wird "testaccount".**
 
 [![Google anmelden](../assets/images/de/anwendungsfaelle/open-id-connect/6-oid.png)](../assets/images/de/anwendungsfaelle/open-id-connect/6-oid.png)
 

@@ -1,16 +1,17 @@
 # Suse Linux Enterprise Server (SLES)
+
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
-Systemvoraussetzungen  
+Systemvoraussetzungen
 ------------------------
 
-Es gelten die allgemeinen [Systemvoraussetzungen](../systemvoraussetzungen.md).  
+Es gelten die allgemeinen [Systemvoraussetzungen](../systemvoraussetzungen.md).
 
 Dieser Artikel bezieht sich auf [**Suse Linux Enterprise Server 15**](https://www.suse.com/de-de/solutions/enterprise-linux/). Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
     cat /etc/os-release
 
-Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen:  
+Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen:
 
     uname -m
 
@@ -22,8 +23,8 @@ Installation der Pakete
 Die Standard-Repositories von Suse Linux Enterprise Server (SLES) bringen bereits alle nötigen Pakete mit, um
 
 *   den **Apache** Webserver 2.4,
-*   die Script-Sprache **PHP** 7.2 (ab SLES 15 SP 2: **PHP **7.4),
-*   das Datenbankmanagementsystem **MariaDB** 10.2  (ab SLES 15 SP 2: **MariaDB **10.4) und
+*   die Script-Sprache **PHP** 7.2 (ab SLES 15 SP 2: **PHP**7.4),
+*   das Datenbankmanagementsystem **MariaDB** 10.2 (ab SLES 15 SP 2: **MariaDB**10.4) und
 *   den Caching-Server **memcached**
 
 zu installieren.
@@ -121,13 +122,13 @@ In dieser Datei wird die VHost-Konfiguration angepasst und gespeichert:
 
     <VirtualHost *:80>
             ServerAdmin i-doit@example.net
-    
+
             DocumentRoot /srv/www/htdocs/
             <Directory /srv/www/htdocs/>
                     AllowOverride All
                     Require all granted
             </Directory>
-    
+
             LogLevel warn
             ErrorLog ${APACHE_LOG_DIR}/error.log
             CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -160,7 +161,7 @@ In der Shell von MariaDB werden nun folgende SQL-Statements ausgeführt:
 
 !!! info "Änderung ab MariaDB 10.4 und aufwärts"
 
-    Ab MariaDB Version 10.4 und aufwärts wird das UPDATE-Statement nicht mehr in der user-Tabelle unterstützt.  
+    Ab MariaDB Version 10.4 und aufwärts wird das UPDATE-Statement nicht mehr in der user-Tabelle unterstützt.
     Nun muss das Statement ALTER USER genutzt werden:
 
         ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('passwort');
@@ -178,51 +179,51 @@ Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
 Diese Datei enthält die neuen Konfigurationseinstellungen. Für eine optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden:
 
     [mysqld]
-    
+
     # This is the number 1 setting to look at for any performance optimization
     # It is where the data and indexes are cached: having it as large as possible will
     # ensure MySQL uses memory and not disks for most read operations.
     #
     # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
     innodb_buffer_pool_size = 1G
-    
+
     # Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
     innodb_buffer_pool_instances = 1
-    
+
     # Redo log file size, the higher the better.
     # MySQL/MariaDB writes two of these log files in a default installation.
     innodb_log_file_size = 512M
-    
+
     innodb_sort_buffer_size = 64M
     sort_buffer_size = 262144 # default
     join_buffer_size = 262144 # default
-    
+
     max_allowed_packet = 128M
     max_heap_table_size = 32M
     query_cache_min_res_unit = 4096
     query_cache_type = 1
     query_cache_limit = 5M
     query_cache_size = 80M
-    
+
     tmp_table_size = 32M
     max_connections = 200
     innodb_file_per_table = 1
-    
+
     # Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
     innodb_thread_concurrency = 0
-    
+
     # Disable this (= 0) if you have slow harddisks
     innodb_flush_log_at_trx_commit = 1
     innodb_flush_method = O_DIRECT
-    
+
     innodb_lru_scan_depth = 2048
     table_definition_cache = 1024
     table_open_cache = 2048
     # Only if your have MySQL 5.6 or higher, do not use with MariaDB!
     #table_open_cache_instances = 4
-    
+
     innodb_stats_on_metadata = 0
-    
+
     sql-mode = ""
 
 Abschließend wird MariaDB gestartet:

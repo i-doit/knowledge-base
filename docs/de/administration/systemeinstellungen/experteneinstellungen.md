@@ -11,7 +11,7 @@ Die Experteneinstellungen sind so etwas wie die "Registry" von i-doit. Hier kön
 Konfiguration
 -------------
 
-Zu erreichen sind die Einstellungen unter **Verwaltung → Systemeinstellungen → Experteneinstellungen**.
+Zu erreichen sind die Einstellungen unter **Verwaltung → Systemeinstellungen → Experteneinstellungen**.
 
 [![Experteneinstellungen](../../assets/images/de/administration/systemeinstellungen/experteneinstellungen/experteneinstellungen.png)](../../assets/images/de/administration/systemeinstellungen/experteneinstellungen/experteneinstellungen.png)
 Jede Einstellung besteht aus drei Teilen:
@@ -35,7 +35,7 @@ Liste der Einstellungen
 | barcode.type | qr  |     | Mandanteneinstellung | PRO/CMDB | Typ des Barcodes |
 | check\_mk.controller.last\_log\_check | 0   |     | Mandanteneinstellung | PRO/CMDB | Zeitpunkt des letzten Durchlaufs des check\_mk-Controllers |
 | ckeditor.font\_names | Arial;Courier New;Times New Roman;Helvetica |     | Mandanteneinstellung | PRO/CMDB | Verwendbare Schriftarten im WYSIWYG Editor |
-| cmdb.connector.suffix-schema | isys\_format\_json::encode(array(  <br>    "##INPUT## - OUT",  <br>    "- ##INPUT##",  <br>    "(\*) ##INPUT##",  <br>) |     | Systemweite Einstellung | PRO/CMDB | Formatierungsschema für die Generierung von TODO |
+| cmdb.connector.suffix-schema | ```isys\_format\_json::encode(array(  <br>    "##INPUT## - OUT",  <br>    "- ##INPUT##",  <br>    "(\*) ##INPUT##",  <br>)``` |     | Systemweite Einstellung | PRO/CMDB | Formatierungsschema für die Generierung von TODO |
 | cmdb.limits.order-threshhold | 10000 | 1000 | Mandanteneinstellung | PRO/CMDB | Limit an Zeilen für die TableComponent ab wann nur noch indexierte Felder sortiert und gefiltert werden können |
 | cmdb.limits.obj-browser.objects-in-viewmode | 8   |     | Mandanteneinstellung | PRO/CMDB | Maximale Anzahl darzustellender Objekte im Objektbrowser im Viewmode |
 | cmdb.limits.port-lists-layer2 | 5   |     | Mandanteneinstellung | PRO/CMDB | Limitierung der aufgeführten Layer2-Netze in der Portliste |

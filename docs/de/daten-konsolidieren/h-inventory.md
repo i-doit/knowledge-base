@@ -12,7 +12,7 @@ Vor einem Import muss i-doit entsprechend konfiguriert werden.
 
 ## Konfiguration
 
-Für einen manuellen Datenimport befindet sich die Konfiguration unter **Verwaltung → Schnittstellen / externe Daten → Import → H-Inventory → Konfiguration**. Dort wird lediglich im Parameter **Objekt-Matching Profil** angegeben, [wie bereits dokumentierte Objekte identifiziert werden sollen](objekt-identifizieren-bei-importen.md). Identifizierte Objekte werden beim Datenimport aktualisiert.
+Für einen manuellen Datenimport befindet sich die Konfiguration unter **Verwaltung → Schnittstellen / externe Daten → Import → H-Inventory → Konfiguration**. Dort wird lediglich im Parameter **Objekt-Matching Profil** angegeben, [wie bereits dokumentierte Objekte identifiziert werden sollen](objekt-identifizieren-bei-importen.md). Identifizierte Objekte werden beim Datenimport aktualisiert.
 
 ## Inventarisierung eines Microsoft Windows Clients via H-Inventory
 
@@ -22,7 +22,7 @@ Download des H-Inventory Pakets von **i-doit → Extras → Import → Scripts**
 
 Archiv entpacken.
 Zu scannende IP-Adresse(n) in **computer.txt** eintragen **scan.bat** ausführen.
-Nach erfolgreicher Abarbeitung des Scripts befindet sich der Export in der Datei „**computername-xx.xml**“ im selben Verzeichnis.
+Nach erfolgreicher Abarbeitung des Scripts befindet sich der Export in der Datei "**computername-xx.xml**" im selben Verzeichnis.
 
 ## Grafischer Import eines H-Inventory Exports
 
@@ -30,7 +30,7 @@ Nach erfolgreicher Abarbeitung des Scripts befindet sich der Export in der Datei
 2. XML Datei hochladen
 3. Datei aus der Liste der hochgeladenen Exports auswählen
 4. Entsprechenden Objekt-Typ und Import Verfahren auswählen - in diesem Fall Client und inventory (für H-Inventory)
-5. Importieren mit „Next »“
+5. Importieren mit "Next »"
 6. Der importierte Client ist nun verfügbar
 
 ## Import eines H-Inventory Exports per Console

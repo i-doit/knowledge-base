@@ -1,6 +1,6 @@
 # Add-on Packager
 
-Die Idee des Add-on Packagers ist es, dem Anwender die Möglichkeit zu eröffnen, eigene vollwertige [i-doit pro Add-ons](./index.md) zu bauen. Dabei wird der Add-on Packager komplett über die grafische Benutzeroberfläche von i-doit bedient und es werden keine Programmierkenntnisse benötigt.
+Die Idee des Add-on Packagers ist es, dem Anwender die Möglichkeit zu eröffnen, eigene vollwertige [i-doit pro Add-ons](./index.md) zu bauen. Dabei wird der Add-on Packager komplett über die grafische Benutzeroberfläche von i-doit bedient und es werden keine Programmierkenntnisse benötigt.
 
 Es können die Strukturen, die der Anwender beispielsweise über den [Quick Configuration Wizard](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) oder den [Report Manager](../auswertungen/report-manager.md) erstellen kann, als Add-on paketiert und weitergeben werden.
 
@@ -9,12 +9,12 @@ Allgemeine Hinweise
 
 **Bitte installieren und nutzen Sie den Add-on Packager nicht auf einer Produktionsumgebung!**
 
-Das Paketieren von Add-ons ist ein Entwicklungsprozess. Produktions- und Entwicklunsgumgebungen sollten immer getrennt werden.  
-Unter anderem, um Produktionsdaten vor Beschädigung oder leichtfertiger Veränderung zu schützen.  
-Weiterhin müssen sind Produktionsdaten hinsichtlich des Datenschutzes besonders schützenswert.  
-Werden Add-ons auf Produktionsumgebungen gepackt, besteht die Gefahr der versehentlichen Weitergabe von internen oder persönlichen Daten.  
-Gehen sie dieses Risiko nicht ein.  
-Nutzen Sie entweder eine dedizierte Installation oder erstellen Sie eine Kopie Ihrer Produktionsumgebung, wenn Sie Daten von dort paketieren möchten.  
+Das Paketieren von Add-ons ist ein Entwicklungsprozess. Produktions- und Entwicklunsgumgebungen sollten immer getrennt werden.
+Unter anderem, um Produktionsdaten vor Beschädigung oder leichtfertiger Veränderung zu schützen.
+Weiterhin müssen sind Produktionsdaten hinsichtlich des Datenschutzes besonders schützenswert.
+Werden Add-ons auf Produktionsumgebungen gepackt, besteht die Gefahr der versehentlichen Weitergabe von internen oder persönlichen Daten.
+Gehen sie dieses Risiko nicht ein.
+Nutzen Sie entweder eine dedizierte Installation oder erstellen Sie eine Kopie Ihrer Produktionsumgebung, wenn Sie Daten von dort paketieren möchten.
 Nutzen sie mindestens einen dedizierten Mandanten für ihre Entwicklungen.
 
 Im Rahmen der Entwicklungspartnerschaft wird eine kostenfreie Entwicklungslizenz bereitgestellt. Diese kann für die Entwicklung von Add-ons genutzt werden.
@@ -22,7 +22,7 @@ Im Rahmen der Entwicklungspartnerschaft wird eine kostenfreie Entwicklungslizenz
 Installation und Lizenz
 -----------------------
 
-Der Add-on Packager wird wie jedes Add-on über das Admin Center installiert. Der Add-on Packager ist nicht lizenzpflichtig. Er kann allerdings nur mit der pro-Variante genutzt werden.
+Der Add-on Packager wird wie jedes Add-on über das Admin Center installiert. Der Add-on Packager ist nicht lizenzpflichtig. Er kann allerdings nur mit der pro-Variante genutzt werden.
 
 Welche Strukturen können in ein Add-on gepackt werden?
 ------------------------------------------------------
@@ -41,7 +41,7 @@ Erstellen einer Add-on Strukturvorlage
 
 Den Add-on Packager erreicht man wie nahezu alle Add-ons über das Extras-Menü.
 
-Anschließend navigiert man auf den Bereich Add-ons und erstellt dort über den Button “Neu” eine neue Strukturvorlage.
+Anschließend navigiert man auf den Bereich Add-ons und erstellt dort über den Button "Neu" eine neue Strukturvorlage.
 
 Basis Informationen
 -------------------
@@ -97,7 +97,7 @@ Kategorien sind logischen Klammern um die einzelnen Attribute.
 
 [![Kategorien](../assets/images/de/i-doit-pro-add-ons/add-on-packager/6-aop.png)](../assets/images/de/i-doit-pro-add-ons/add-on-packager/6-aop.png)
 
-Eigene Kategorien können über die Verwaltung im Bereich “Benutzerdefinierte Kategorien” angelegt werden.
+Eigene Kategorien können über die Verwaltung im Bereich "Benutzerdefinierte Kategorien" angelegt werden.
 
 Es können nur benutzerdefinierte Kategorien ausgewählt werden.
 

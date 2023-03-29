@@ -16,18 +16,18 @@ Display Limits
 
 Hier können einige Anzeige Optionen für die GUI konfiguriert werden :
 
-Anzeigelimit verknüpfter Objekte in Objektbrowser → Maximale Anzahl der verknüpften Objekte die im Objektbrowser angezeigt werden  
-Anzeigeart verknüpfter Objekte in Objektbrowser → Sollen verknüpfte Objekte als Liste oder Kommmasepariert angezeigt werden  
-Anzahl vorgeladener Seiten in Report listen→ Anzahl der Seiten die bei der Ausführung eines Reports generiert werden  
-Anzeigelimit für Spalten in Multivalue Kategorien → Limitiert die dargestellten Werte auf die angegebene Länge  
-Objekt-Browser Ergebnislimit→  Maximal Anzahl der Ergebnisse im Objekt Browser  
-Anzeigelimit VLANs in Portlisten→ Maximal Anzahl an VLANs die in den Portlisten angezeigt werden  
-Anzeigelimit Layer-2 Netze in Portlisten→ Maximale Anzahl von Layer-2 Netzen die in Portlisten angezeigt werden  
-Nur Default VLAN in Portübersicht zeigen→ wenn nicht alle zugewiesenen VLANs angezeigt werden sollen, sondern nur das Default VLAN  
-Anzeigelimit von Verbundenen Anschlüssen in Anschlusslisten→ Maximale Anzahl von verbundenen Anschlüssen die in Anschlusslisten angezeigt werden sollen  
-Anzeigelimit von Hostadressen→ Maximale Anzahl von Hostadressen die angezeigt werden sollen  
-Anzeigelimit von Services im CMDB Explorer Popup → Wie viele Services sollen im CMDB Explorer maximal angezeigt werden  
-Limit der Tiefe des Standortpfades → Diese Einstellung erlaubt festzulegen, wie viele Schritte im Standort-Pfad angezeigt werden sollen. Wenn die Anzahl der Schritte im Pfad das Limit überschreitet, kürzt das System ab der Vorgabe die restlichen Schritte
+Anzeigelimit verknüpfter Objekte in Objektbrowser → Maximale Anzahl der verknüpften Objekte die im Objektbrowser angezeigt werden<br>
+Anzeigeart verknüpfter Objekte in Objektbrowser → Sollen verknüpfte Objekte als Liste oder Kommmasepariert angezeigt werden<br>
+Anzahl vorgeladener Seiten in Report listen → Anzahl der Seiten die bei der Ausführung eines Reports generiert werden<br>
+Anzeigelimit für Spalten in Multivalue Kategorien → Limitiert die dargestellten Werte auf die angegebene Länge<br>
+Objekt-Browser Ergebnislimit →  Maximal Anzahl der Ergebnisse im Objekt Browser<br>
+Anzeigelimit VLANs in Portlisten → Maximal Anzahl an VLANs die in den Portlisten angezeigt werden<br>
+Anzeigelimit Layer-2 Netze in Portlisten → Maximale Anzahl von Layer-2 Netzen die in Portlisten angezeigt werden<br>
+Nur Default VLAN in Portübersicht zeigen → wenn nicht alle zugewiesenen VLANs angezeigt werden sollen, sondern nur das Default VLAN<br>
+Anzeigelimit von Verbundenen Anschlüssen in Anschlusslisten→ Maximale Anzahl von verbundenen Anschlüssen die in Anschlusslisten angezeigt werden sollen<br>
+Anzeigelimit von Hostadressen → Maximale Anzahl von Hostadressen die angezeigt werden sollen<br>
+Anzeigelimit von Services im CMDB Explorer Popup → Wie viele Services sollen im CMDB Explorer maximal angezeigt werden<br>
+Limit der Tiefe des Standortpfades → Diese Einstellung erlaubt festzulegen, wie viele Schritte im Standort-Pfad angezeigt werden sollen. Wenn die Anzahl der Schritte im Pfad das Limit überschreitet, kürzt das System ab der Vorgabe die restlichen Schritte<br>
 
 [![Display Limits](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/3-me.png)](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/3-me.png)
 
@@ -36,16 +36,16 @@ Optionen für IP-Liste
 
 Hier kannst du Optionen für die IP-Listen definieren:
 
-Cache Zeitraum → Angabe in Sekunden, bis die Daten neu generiert werden  
-Ping Funktion → Definition des Tools, welches für die Ping Option innerhalb der IP-Listen eingesetzt werden soll  
-NMAP Parameter (für Ping) → Welche Ping Methode soll verwendet werden
+Cache Zeitraum → Angabe in Sekunden, bis die Daten neu generiert werden<br>
+Ping Funktion → Definition des Tools, welches für die Ping Option innerhalb der IP-Listen eingesetzt werden soll<br>
+NMAP Parameter (für Ping) → Welche Ping Methode soll verwendet werden<br>
 
 [![Optionen für IP-Liste](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/4-me.png)](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/4-me.png)
 
 Unique checks (Auswertung lediglich während Import/Export Vorgängen!)
 ---------------------------------------------------------------------
 
-Unique checks sorgen dafür, das ein Wert wie z.B. eine IP-Adresse nur einmal innerhalb des jeweiligen Mandanten verwendet werden kann.  
+Unique checks sorgen dafür, das ein Wert wie z.B. eine IP-Adresse nur einmal innerhalb des jeweiligen Mandanten verwendet werden kann.<br>
 Hier kannst du für Objekt-Titel, Layer-2-Netze, IP-Adressen und Hostnames festlegen ob diese nur einmalig verwendet werden dürfen.
 
 [![Unique checks (Auswertung lediglich während Import/Export Vorgängen!)](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/5-me.png)](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/5-me.png)
@@ -60,8 +60,7 @@ Hier kannst du die innerhalb der Objektansicht verfügbare Barcode Integration a
 Oberflächendarstellung
 ----------------------
 
-Hier kannst du definieren wie Lehrstellen innerhalb von Feldern, der Standortanzeige und der Separation von Anschlüssen angezeigt werden sollen.
-
+Hier kannst du definieren wie Lehrstellen innerhalb von Feldern, der Standortanzeige und der Separation von Anschlüssen angezeigt werden sollen.<br>
 Orientierung des Standortpfades → Diese Option gibt an, ob der Standort-Pfad rechts- oder linksbündig dargestellt wird. Eine Kürzung aus der oben genannten Einstellung findet dann somit auf der rechten oder linken Seite statt.
 
 [![Oberflächendarstellung](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/7-me.png)](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/7-me.png)
@@ -69,9 +68,8 @@ Orientierung des Standortpfades → Diese Option gibt an, ob der Standort-Pfad r
 Maximallänge von Zeichenfolgen
 ------------------------------
 
-Hier wird die maximale Zeichenlänge für Dialog-Plus Feld Inhalte, Objekttitel im Standortpfad und die Komplette Länge eines Standortpfades festgelegt.
-
-Objektbezeichnung im Standortpfad und Kompletter Standortpfad.  
+Hier wird die maximale Zeichenlänge für Dialog-Plus Feld Inhalte, Objekttitel im Standortpfad und die Komplette Länge eines Standortpfades festgelegt.<br>
+Objektbezeichnung im Standortpfad und Kompletter Standortpfad.<br>
 Diese geben an, aus wie vielen Zeichen der gesamte Pfad bzw. die einzelnen Objekte im Pfad bestehen dürfen. Sind Objekttitel oder der gesamte Pfad länger, werden diese durch "..." gekürzt.
 
 [![Maximallänge von Zeichenfolgen](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/8-me.png)](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/8-me.png)
@@ -142,7 +140,7 @@ Sprache (ab 1.19)
 [Maintenance](../../i-doit-pro-add-ons/maintenance.md) (Add-on)
 -----------------------------------------------
 
-Hier kann definiert werden ob bei einer e-mail Benachrichtigung eine mail an die mail Adresse der jeweiligen Gruppe , oder ob einzelne mails an die jeweiligen Mitglieder der Gruppe geschickt werden sollen.
+Hier kann definiert werden ob bei einer e-mail Benachrichtigung eine mail an die mail Adresse der jeweiligen Gruppe , oder ob einzelne mails an die jeweiligen Mitglieder der Gruppe geschickt werden sollen.
 
 [![Maintenance](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/19-me.png)](../../assets/images/de/administration/systemeinstellungen/mandanteneinstellungen/19-me.png)
 

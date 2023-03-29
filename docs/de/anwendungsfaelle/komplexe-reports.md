@@ -24,6 +24,7 @@ Diesen Report speichern wir ab. Anschließend duplizieren wir ihn und geben dem 
 
 Das Duplikat bearbeiten wir anschließend mit dem SQL-Editor und erweitern die WHERE\-Klausel:
 
+```sql
     SELECT
     obj_main.isys_obj__id AS '__id__',
     obj_main.isys_obj__title AS 'LC__UNIVERSAL__TITLE###1',
@@ -38,6 +39,7 @@ Das Duplikat bearbeiten wir anschließend mit dem SQL-Editor und erweitern die W
 
     WHERE j2.isys_obj_type__const != 'C__OBJTYPE__RELATION' AND
     YEAR(obj_main.isys_obj__updated) = YEAR(NOW()) AND MONTH(obj_main.isys_obj__updated) = MONTH(NOW());
+```
 
 Um _diesen_ Monat als Zeitintervall einzugrenzen, verwenden wir die SQL-Funktionen `NOW()`, `YEAR()` und `MONTH()`. Diese wenden wir auf das Änderungsdatum an, das in der Tabellen-Spalte `obj_main.isys_obj__updated` gespeichert wird. Zusätzlich schließen wir mit `j2.isys_obj_type__const != 'C__OBJTYPE__RELATION'` alle [Beziehungsobjekte](../grundlagen/objekt-beziehungen.md) aus.
 

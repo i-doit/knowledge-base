@@ -19,7 +19,7 @@ Beim [Setup von i-doit](../installation/manuelle-installation/setup.md) kann bes
 
 Die Objekt-ID findet in der Generierung der URIs eine hohe Bedeutung. Anhand der ID lassen sich Objekte eindeutig per Link aufrufen. Der Variablenname lautet objID. Das Namensschema:
 
-    http://i-doit.example.net/i-doit/?objID=1000
+    https://i-doit.example.net/i-doit/?objID=1000
 
 Objekt-IDs werden vor allem zu internen Zwecken verwendet, können aber auch dem Benutzer oder Dritt-Systemen sehr nützlich sein. Die IDs sind beispielsweise bei [API-Zugriffen](../i-doit-pro-add-ons/api/index.md) essentiell.
 
@@ -30,11 +30,11 @@ Das Attribut **SYS-ID** erhebt den Anspruch, Mandanten- und Installations-überg
 
 [![sysid](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)
 
-Pro [Objekttyp](struktur-it-dokumentation.md) kann ein Präfix angegeben werden, der der automatisch generierten Zahl voran gestellt wird. Konfiguriert wird der Präfix unter **Verwaltung → CMDB Einstellungen → Objekttyp-Konfiguration → [Objekttypgruppe] → [Objekttyp] → SYSID Präfix**. Wird dort nichts angegeben, beginnt eine SYS-ID mit dem Präfix SYSID_. Durch die Angabe eines alternativen Präfixes ändert sich die Generierung der Zahl: Statt des UNIX-Timestamps wird die Objekt-ID verwendet.
+Pro [Objekttyp](struktur-it-dokumentation.md) kann ein Präfix angegeben werden, der der automatisch generierten Zahl voran gestellt wird. Konfiguriert wird der Präfix unter **Verwaltung → CMDB Einstellungen → Objekttyp-Konfiguration → [Objekttypgruppe] → [Objekttyp] → SYSID Präfix**. Wird dort nichts angegeben, beginnt eine SYS-ID mit dem Präfix SYSID_. Durch die Angabe eines alternativen Präfixes ändert sich die Generierung der Zahl: Statt des UNIX-Timestamps wird die Objekt-ID verwendet.
 
 [![sysid-präfix](../assets/images/de/grundlagen/eindeutige-referenzierungen/3-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/3-er.png)
 
-Standardmäßig ist die SYS-ID vom Benutzer nachträglich nicht veränderbar. Sollen Änderungen möglich sein, wird dies unter **Verwaltung → CMDB Einstellungen → Allgemeine Einstellungen → SYS-ID readonly** aktiviert.
+Standardmäßig ist die SYS-ID vom Benutzer nachträglich nicht veränderbar. Sollen Änderungen möglich sein, wird dies unter **Verwaltung → CMDB Einstellungen → Allgemeine Einstellungen → SYS-ID readonly** aktiviert.
 
 Objekt-Titel
 ------------
@@ -62,7 +62,7 @@ IP-Adressen sind per se nicht eindeutig. Beispielsweise kehren dieselben Adresse
 Hostname und FQDN
 -----------------
 
-Der **Hostname** wird in der Kategorie **Hostadresse** vergeben. Auch wenn dieser in vielen Fällen pro Gerät (beispielsweise Server) eindeutig vergeben wird, können pro Objekt beliebig viele Hostnames dokumentiert werden. Pro Hostname wird – wie bei der IP-Adresse (siehe oben) – ein Kategorie-Eintrag erzeugt.
+Der **Hostname** wird in der Kategorie **Hostadresse** vergeben. Auch wenn dieser in vielen Fällen pro Gerät (beispielsweise Server) eindeutig vergeben wird, können pro Objekt beliebig viele Hostnames dokumentiert werden. Pro Hostname wird - wie bei der IP-Adresse (siehe oben) - ein Kategorie-Eintrag erzeugt.
 
 Wird pro Kategorie-Eintrag auch das Attribut **DNS Domäne** angegeben, ergibt sich dadurch automatisch der Fully Qualified Domain Name (**FQDN**). Dieser sollte, ähnlich wie IP-Adressen, eindeutig sein, kann aber aus verschiedenen Gründen wiederkehrend sein. Der FQDN wird häufig mit dem Objekt-Titel gleichgesetzt. Die Verwendung von Hostname bzw. FQDN zur Referenzierung sollte wohlüberlegt sein.
 
@@ -78,9 +78,9 @@ MAC-Adressen sind in der Regel weltweit eindeutig, weil sie von den Herstellern 
 Inventarnummer
 --------------
 
-Die Inventarisierung von Eigentümern erfolgt meist Organisations-übergreifend, ist also kein rein IT-bezogenes Thema (Asset Management). Jedes materielle Gut, das im Fokus der Inventarisierung steht, erhält eine eindeutige Nummer. Diese Nummer lässt sich in i-doit pro Objekt dokumentieren – und zwar in der Kategorie **Buchhaltung** im Attribut **Inventarnummer**.
+Die Inventarisierung von Eigentümern erfolgt meist Organisations-übergreifend, ist also kein rein IT-bezogenes Thema (Asset Management). Jedes materielle Gut, das im Fokus der Inventarisierung steht, erhält eine eindeutige Nummer. Diese Nummer lässt sich in i-doit pro Objekt dokumentieren - und zwar in der Kategorie **Buchhaltung** im Attribut **Inventarnummer**.
 
-Wenn Inventarnummern automatisch generiert werden sollen, kann dies unter **Verwaltung → CMDB Einstellungen → Objekttyp-Konfiguration → [Objekttypgruppe] → [Objekttyp]** konfiguriert werden. Hierbei stehen verschiedene Platzhalter zur Verfügung, um ein Namensschema pro Objekttyp zu erzeugen.
+Wenn Inventarnummern automatisch generiert werden sollen, kann dies unter **Verwaltung → CMDB Einstellungen → Objekttyp-Konfiguration → [Objekttypgruppe] → [Objekttyp]** konfiguriert werden. Hierbei stehen verschiedene Platzhalter zur Verfügung, um ein Namensschema pro Objekttyp zu erzeugen.
 
 [![inventarnummer](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)
 
@@ -109,5 +109,5 @@ In der Web GUI lassen sich diese Konstanten nicht betrachten, geschweige denn ed
 Weitere Eindeutigkeiten
 -----------------------
 
-*   Attribute können global, pro Objekttyp oder (bei Listen-Kategorien) pro Objekt [als eindeutig definiert werden](eindeutige-referenzierungen.md). Mehrfachvorkommen werden von i-doit beim Speichern moniert.
+*   Attribute können global, pro Objekttyp oder (bei Listen-Kategorien) pro Objekt [als eindeutig definiert werden](eindeutige-referenzierungen.md). Mehrfachvorkommen werden von i-doit beim Speichern moniert.
 *   Genügen die oben genannten Attribute nicht, können weitere [erzeugt](benutzerdefinierte-kategorien.md) werden.

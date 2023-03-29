@@ -1,6 +1,6 @@
 # Dialog-Admin
 
-In _i-doit_ kommt oftmals das [Attributfeld](../glossar.md#Glossar-Attributfeld) **Dialog+** zum Einsatz, ein Dropdown-Feld, dessen Werte sich bearbeiten lassen. Diese Felder verteilen sich auf viele [Kategorien](../glossar.md) in der [IT-Dokumentation](../glossar.md) oder andere Features von _i-doit_. Die zentrale Administration der Werte findet über den **Dialog-Admin** in der **Verwaltung** statt.
+In _i-doit_ kommt oftmals das [Attributfeld](../glossar.md#Glossar-Attributfeld) **Dialog+** zum Einsatz, ein Dropdown-Feld, dessen Werte sich bearbeiten lassen. Diese Felder verteilen sich auf viele [Kategorien](../glossar.md) in der [IT-Dokumentation](../glossar.md) oder andere Features von _i-doit_. Die zentrale Administration der Werte findet über den **Dialog-Admin** in der **Verwaltung** statt.
 
 Übersicht
 ---------
@@ -37,7 +37,7 @@ Zum Bearbeiten der Attributs klickt man in der Übersicht auf den Wert, der bear
 
 !!! info "Auswirkungen"
 
-    *   Das Ändern und Löschen von Werten wirkt sich unmittelbar auf die IT-Dokumentation aus: Wird ein Wert im **Dialog-Admin** geändert, ändert er sich überall automatisch. Ebenso wird beim Löschen des Wertes dieser auch überall dort gelöscht, wo er verwendet wurde. Vor dem Löschen empfiehlt es sich, über einen [Report](../auswertungen/report-manager.md) diejenigen Objekte zu suchen, bei denen dieser Wert verwendet wird. Mit Hilfe dieses Reports kann für alle aufgelisteten Objekte  – beispielsweise über die [Listeneditierung](../effizientes-dokumentieren/listeneditierung.md) – ein alternativer Wert ausgewählt werden.
+    *   Das Ändern und Löschen von Werten wirkt sich unmittelbar auf die IT-Dokumentation aus: Wird ein Wert im **Dialog-Admin** geändert, ändert er sich überall automatisch. Ebenso wird beim Löschen des Wertes dieser auch überall dort gelöscht, wo er verwendet wurde. Vor dem Löschen empfiehlt es sich, über einen [Report](../auswertungen/report-manager.md) diejenigen Objekte zu suchen, bei denen dieser Wert verwendet wird. Mit Hilfe dieses Reports kann für alle aufgelisteten Objekte  - beispielsweise über die [Listeneditierung](../effizientes-dokumentieren/listeneditierung.md) - ein alternativer Wert ausgewählt werden.
 
 Werte löschen
 -------------

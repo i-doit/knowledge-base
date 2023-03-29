@@ -18,9 +18,12 @@ Oben links markiert ein Kontrollkästchen die Option, dass ein Objekt durch Ankl
 Auswahl der angezeigten Attribute
 ---------------------------------
 
-Die in der Liste angezeigten [Attribute](../kategorien-und-attribute.md) können über die beiden Spalten eingestellt werden. Wählen Sie die [Kategorie](../kategorien-und-attribute.md) aus, deren Inhalt Sie in der Liste im linken Bereich sehen möchten.  
-Achten Sie bitte darauf, dass Sie zuerst auswählen, ob es sich um eine globale, spezifische oder benutzerdefinierte Kategorie handelt. Die Kategorie selbst wählen Sie über das Dropdown-Menü aus.  
-Nun werden alle Attribute, die zu dieser Kategorie gehören, angezeigt. Über das grüne Plus-Symbol können Sie die Attribute zu den ausgewählten Attributen hinzufügen, so dass sie auch in der rechten Spalte erscheinen.  
+Die in der Liste angezeigten [Attribute](../kategorien-und-attribute.md) können über die beiden Spalten eingestellt werden. Wählen Sie die [Kategorie](../kategorien-und-attribute.md) aus, deren Inhalt Sie in der Liste im linken Bereich sehen möchten.
+
+Achten Sie bitte darauf, dass Sie zuerst auswählen, ob es sich um eine globale, spezifische oder benutzerdefinierte Kategorie handelt. Die Kategorie selbst wählen Sie über das Dropdown-Menü aus.
+
+Nun werden alle Attribute, die zu dieser Kategorie gehören, angezeigt. Über das grüne Plus-Symbol können Sie die Attribute zu den ausgewählten Attributen hinzufügen, so dass sie auch in der rechten Spalte erscheinen.
+
 Mit dem roten Minus-Symbol können Sie bereits ausgewählte Attribute aus der Listenansicht entfernen. Die Hierarchie der Attribute in der rechten Spalte können Sie per Drag'n'Drop anpassen. Das oberste Attribut in dieser Ansicht finden Sie als erstes in Ihrer Liste.
 
 Standardsortierung einstellen
@@ -35,7 +38,8 @@ Im Bereich der ausgewählten Attribute für diese Liste finden Sie Optionsfelder
 Apply Configuration to other Users
 ----------------------------------
 
-Sofern Sie über die entsprechenden Rechte verfügen, ist es möglich, die aktuelle Konfiguration einer Liste anderen Benutzern Ihrer i-doit-Installation zuzuweisen, und zwar im Abschnitt Konfiguration anderen Benutzern zuweisen.  
+Sofern Sie über die entsprechenden Rechte verfügen, ist es möglich, die aktuelle Konfiguration einer Liste anderen Benutzern Ihrer i-doit-Installation zuzuweisen, und zwar im Abschnitt Konfiguration anderen Benutzern zuweisen.
+
 Wählen Sie dazu über den Objektbrowser den gewünschten Benutzer aus. Bitte beachten Sie, dass Ihre eigene Konfiguration dabei überschrieben werden kann.
 
 Konfiguration als Standard festlegen

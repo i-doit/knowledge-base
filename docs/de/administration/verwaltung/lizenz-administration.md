@@ -9,7 +9,8 @@ Die Lizenzübersicht gibt dir einen guten Überblick über die aktuelle Auslastu
 Objekte die nicht Lizenzpflichtig sind und nicht dazu gezählt werden
 --------------------------------------------------------------------
 
-Beziehungen sind nicht Lizenzpflichtig und belasten nicht die Lizenz.  
+Beziehungen sind nicht Lizenzpflichtig und belasten nicht die Lizenz.
+
 Außerdem werden diese Objekte nicht von der Lizenz abgezogen;
 
 | Objekt Konstante | Objekt Titel |

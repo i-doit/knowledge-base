@@ -118,7 +118,7 @@ Troubleshooting
 
         mysqli_connect(): (HY000/2002): Connection refused (/var/www/html/src/classes/components/isys_component_database_mysqli.class.php:16
 
-    ausgegeben, ist der MySQL-Dienst vermutlich nicht gestartet. Das hängt in der Regel damit zusammen, dass die virtuelle Hardware der Appliance verändert wurde, ohne die Konfigurationen anzupassen. Hier müssen entweder die Einstellungen der virtuellen Maschine zurück auf die mitgelieferten Werte gesetzt und die Maschine neu gestartet werden oder die Konfiguration unter **/etc/mysql/mariadb.conf.d/99-i-doit.cnf** angepasst werden, sodass die Hardware dafür ausreicht und der MySQL-Dienst wieder mit **systemctl start mysql** gestartet werden kann.
+    ausgegeben, ist der MySQL-Dienst vermutlich nicht gestartet. Das hängt in der Regel damit zusammen, dass die virtuelle Hardware der Appliance verändert wurde, ohne die Konfigurationen anzupassen. Hier müssen entweder die Einstellungen der virtuellen Maschine zurück auf die mitgelieferten Werte gesetzt und die Maschine neu gestartet werden oder die Konfiguration unter **/etc/mysql/mariadb.conf.d/99-i-doit.cnf** angepasst werden, sodass die Hardware dafür ausreicht und der MySQL-Dienst wieder mit **systemctl start mysql** gestartet werden kann.
 
 !!! attention "VM startet nicht"
 
@@ -140,7 +140,10 @@ Troubleshooting
 
 !!! attention "VSphere < 6.5.0"
 
-    Unsere Virtual Appliance wird aus Sicherheitsgründen mit einem SHA265 Hash verschlüsselt.  
-    Leider unterstützt vSphere dies erst ab der Version 6.5.0.  
-    [Hier](https://kb.vmware.com/s/article/2151537) finden Sie den offiziellen Eintrag von VMware.   
+    Unsere Virtual Appliance wird aus Sicherheitsgründen mit einem SHA265 Hash verschlüsselt.
+
+    Leider unterstützt vSphere dies erst ab der Version 6.5.0.
+
+    [Hier](https://kb.vmware.com/s/article/2151537) finden Sie den offiziellen Eintrag von VMware.
+
     Dort wird auch beschrieben, wie Sie bei Versionen vor vSphere Version 6.5.0 mit virtuelle Maschinen welche einen SHA265 Hash nutzen arbeiten können.
