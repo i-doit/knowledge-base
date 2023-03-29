@@ -43,7 +43,11 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ### 'type' option for cmdb.objects filter does not work with id
 
-[I-doit_23_hotfix_ID-9370_b8a4921.zip_1efe827.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9370_b8a4921.zip){ .md-button .md-button--primary }
+[I-doit_23_hotfix_ID-9370_b8a4921.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9370_b8a4921.zip){ .md-button .md-button--primary }
+
+### JDisc Import - "Only create newly scanned devices" creates duplicates
+
+[i-doit_23_hotfix_ID-9350.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9350.zip){ .md-button .md-button--primary }
 
 ## Analyze Add-on 1.3
 
