@@ -31,4 +31,4 @@ Die genauen Schritte sind abhängig vom gewählten Betriebssystem:
 *   [Red Hat Enterprise Linux (RHEL) oder CentOS](../manuelle-installation/red-hat-enterprise-linux/index.md)
 *   [Suse Linux Enterprise Server (SLES)](../manuelle-installation/suse-linux-enterprise-server.md)
 *   [Ubuntu Linux](../manuelle-installation/ubuntu-linux/index.md)
-*   [Microsoft Windows Server](../manuelle-installation/microsoft-windows-server.md)
+*   [Microsoft Windows Server](../manuelle-installation/microsoft-windows-server/index.md)

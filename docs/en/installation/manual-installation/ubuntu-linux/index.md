@@ -1,4 +1,4 @@
-# Unbuntu Linux
+# Ubuntu Linux
 
 In this article we explain in just a few steps which packages need to be installed and configured.
 

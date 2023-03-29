@@ -126,7 +126,7 @@ Version 12 von [SUSE Linux Enterprise Server (SLES)](../installation/manuelle-in
 Windows Server 2008/2012
 ------------------------
 
-Sollte [Windows Server 2008/2012](../installation/manuelle-installation/microsoft-windows-server.md) zum Einsatz kommen, empfiehlt sich der Einsatz von XAMPP. Diese von den [Apache Friends](https://www.apachefriends.org/) bereitgestellte Distribution enthält unter anderem den Apache Webserver, PHP und MariaDB. Es sollte darauf geachtet werden, dass stets die aktuelle Version zum Einsatz kommt.
+Sollte [Windows Server 2008/2012](../installation/manuelle-installation/microsoft-windows-server/index.md) zum Einsatz kommen, empfiehlt sich der Einsatz von XAMPP. Diese von den [Apache Friends](https://www.apachefriends.org/) bereitgestellte Distribution enthält unter anderem den Apache Webserver, PHP und MariaDB. Es sollte darauf geachtet werden, dass stets die aktuelle Version zum Einsatz kommt.
 
 !!!attention "Da XAMPP weder über eine offizielle Dokumentation, noch einen Update-Mechanismus verfügt, ist der Upgrade-Pfad unter Umständen sehr kompliziert und fehleranfällig. Ein **aktuelles [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)** **und ausführliches Testen** nach dem Upgrade sind daher unabdingbar."
 

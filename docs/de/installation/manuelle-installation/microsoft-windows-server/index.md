@@ -1,0 +1,76 @@
+# i-doit für Windows Server installieren
+
+Wie i-doit unter dem Betriebssystem Windows installiert wird, beschreiben wir in diesem Artikel.
+
+Das i-doit Installationspaket für Windows wird im **Kundenportal** zur Verfügung gestellt.
+
+Die Inhalte des Pakets sehen wie folgt aus:
+
+[![Ordner Content](../../../assets/images/de/installation/windows/win-doit/windoit-1.png)](../../../assets/images/de/installation/windows/win-doit/windoit-1.png)
+
+Im Installationspaket wird immer die aktuellste i-doit Version mitgeliefert. Ebenfalls wird durch den **src.zip** Ordner eine Installation ohne Internetverbindung ermöglicht.
+Da der i-doit Windows installer die **windowsdesktop-runtime-6.0.14** benötigt, wird diese ebenfalls zur Verfügung gestellt falls wärend der installation keine Internetverbindung vorhanden ist. 
+
+### Installation
+
+Nach dem ausführen der **i-doit Windows Installer.exe** bekommt man folgende GUI angezeigt:
+
+[![GUI](../../../assets/images/de/installation/windows/win-doit/windoit-2.png)](../../../assets/images/de/installation/windows/win-doit/windoit-2.png)
+
+Nach einem Klick auf **Installieren** werden im Hintergrund alle benötigten Elemente installiert.
+
+Es werden installiert:
+
+* **Apache2.4**
+* **PHP8.0**
+* **MariaDB10.5**
+* **i-doit-23**
+
+!!! info "Eventuell müssen für Apache Zugriffsrechte angenommen werden"
+
+Bei erfolgreicher Installation wird in einem kleinem Fenster **"i-doit has been installed successfully."** angezeigt. 
+Nach einem Klick auf **OK** wird automatisch ein neues Browsertab mit dem localhost geöffnet und man kann i-doit absofort im vollen Umfang nutzen.
+
+!!! info "Sollte bei der Installation ein Fehler unterlaufen sein, wird automatisch ein log im Ordner erstellt"
+
+### Konfiguration
+
+Um PHP, MariaDB oder Apache zu konfigurieren, findet man die jeweiligen Files in folgenden Verzeichnissen:
+
+* **PHP:** 
+    [Drive]:\i-doit\php\php.ini
+
+* **MariaDB:** 
+    [Drive]:\ProgramData\MariaDB\data\my.ini
+
+* **Apache:**
+    [Drive]:\i-doit\apache-2.4\conf\httpd.conf
+
+### Deinstallation
+
+Um i-doit wieder zu deinstallieren muss zu aller erst der Apache2 service gestoppt werden. 
+Dafür geben wir in der Eingabeaufforderung folgenden Befehl ein:
+
+    [Drive]:\i-doit\apache-2.4\bin\httpd.exe -k stop
+
+Ist der Apache2 Service gestoppt, kann Apache2 deinstalliert werden:
+
+    [Drive]:\i-doit\apache-2.4\bin\httpd.exe -k uninstall
+
+Anschließend wird MariaDB deinstalliert indem wir unter **Programme hinzufügen oder entfernen** MariaDB entfernen.
+
+[![Deinstallieren MariaDB](../../../assets/images/de/installation/windows/win-doit/windoit-3.png)](../../../assets/images/de/installation/windows/win-doit/windoit-3.png)
+
+Alternativ kann MariaDB auch über die Eingabeaufforderung deinstalliert werden:
+
+    msiexec.exe [Drive]:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL
+
+MariaDB deinstallieren ohne Data zu löschen:
+
+    msiexec.exe [Drive]:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL CLEANUPDATA=""
+
+Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP PATH muss aus den Umgebungsvariabeln entfernt werden:
+
+[![Deinstallieren PHP](../../../assets/images/de/installation/windows/win-doit/windoit-4.png)](../../../assets/images/de/installation/windows/win-doit/windoit-4.png)
+
+Damit ist i-doit erfolgreich deinstalliert!

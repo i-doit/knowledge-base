@@ -24,7 +24,7 @@ Nicht vergessen, LDAP zu erlauben, wenn SELinux verwendet wird. Dazu _setsebool
     sudo apt install php7-ldap
     sudo service apache2 restart
 
-### Nachträgliche Installation unter [Windows](../../installation/manuelle-installation/microsoft-windows-server.md)
+### Nachträgliche Installation unter [Windows](../../installation/manuelle-installation/microsoft-windows-server/index.md)
 
 Die Datei php.ini (in der Regel unter C:\xampp\php\php.ini) muss angepasst werden. In einem Texteditor aktiviert man das Laden der Extension php_ldap.  
 

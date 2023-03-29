@@ -31,7 +31,7 @@ Wir empfehlen den Einsatz einer dedizierten, virtuellen Maschine. Der tatsächli
     
 *   [Red Hat Enterprise Linux (RHEL)](manuelle-installation/red-hat-enterprise-linux/index.md) 7, 8  
     
-*   [Microsoft Windows Server](manuelle-installation/microsoft-windows-server.md) 2016, 2019  
+*   [Microsoft Windows Server](manuelle-installation/microsoft-windows-server/index.md) 2016, 2019  
     
 
 Wir empfehlen den Einsatz von [Debian GNU/Linux](manuelle-installation/debian.md) in der 64bit-Architektur (amd64) in Version 11 "bullseye".
