@@ -5,14 +5,17 @@ Das i-doit Installationspaket für Windows wird im [Kundenportal](../../../admin
 
 Die Inhalte des Pakets sehen wie folgt aus:
 
-[![Ordner Content](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/1-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/1-idw.png)
+- i-doit Windows Installer.exe
+- idoit-XX.zip
+- src.zip
+- windowsdesktop-runtime-6.0.14-win-x64.exe
 
 Im Installationspaket wird immer die aktuelle [i-doit Version](../../../versionshistorie/index.md) mitgeliefert. Ebenfalls wird durch den `src.zip` Ordner eine Installation ohne Internetverbindung ermöglicht.<br>
-Da der i-doit Windows installer die `windowsdesktop-runtime-6.0.14`**` benötigt, wird diese ebenfalls zur Verfügung gestellt falls wärend der installation keine Internetverbindung vorhanden ist.
+Da der i-doit Windows installer die `windowsdesktop-runtime-6.0.14` benötigt, wird diese ebenfalls zur Verfügung gestellt falls wärend der installation keine Internetverbindung vorhanden ist.
 
 ### Installation
 
-Nach dem ausführen der `i-doit Windows Installer.exe` bekommt man folgende GUI angezeigt:
+Nach dem Ausführen der `i-doit Windows Installer.exe` bekommt man folgende GUI angezeigt:
 
 [![GUI](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/2-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/2-idw.png)
 
@@ -20,17 +23,17 @@ Nach einem Klick auf **Installieren** werden im Hintergrund alle benötigten Ele
 
 Es werden installiert:
 
-* **Apache2.4**
-* **PHP8.0**
-* **MariaDB10.5**
+* **Apache 2.4**
+* **PHP 8.0**
+* **MariaDB 10.5**
 * **i-doit-23**
 
-!!! info "Eventuell müssen für Apache Zugriffsrechte angenommen werden"
+!!! info "Ist die Windows Firewall aktiviert wird abgefragt ob die Applikation freigegeben werden darf"
 
 Bei erfolgreicher Installation wird in einem kleinem Fenster **"i-doit has been installed successfully."** angezeigt.<br>
 Nach einem Klick auf **OK** wird automatisch ein neues Browsertab mit der `localhost` URL geöffnet und kann i-doit im vollen Umfang nutzen.
 
-!!! info "Sollte bei der Installation ein Fehler unterlaufen sein, wird automatisch ein log im Setup Ordner erstellt"
+!!! info "Sollte bei der Installation ein Fehler unterlaufen sein, wird automatisch ein log im i-doit Ordner erstellt"
 
 ### Konfiguration
 

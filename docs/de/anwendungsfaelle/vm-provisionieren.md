@@ -104,6 +104,7 @@ Der API-Client fragt bei make initialize die URL und den API Key der zu verwende
 
 Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
 
+```shell
     #!/usr/bin/php
     <?php
 
@@ -386,6 +387,7 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
         echo $e->getMessage();
         exit;
     }
+```
 
 Dieses kopieren wir in die Datei /usr/local/bin/i-doit_provision.php. Damit der Apache Webserver das Script ausführen kann, vergeben wir noch die entsprechenden Rechte:
 
@@ -449,7 +451,7 @@ Auf Storage-Seite sieht es dementsprechend aus. Die Kategorie **Logische Geräte
 
 ### Neue VM erstellen
 
-Der vSphere Cluster und das Storage sind nun laut IT-Dokumentation bereit. Es ist Zeit, VMs zu dokumentieren – und automatisch zu provisionieren.
+Der vSphere Cluster und das Storage sind nun laut IT-Dokumentation bereit. Es ist Zeit, VMs zu dokumentieren - und automatisch zu provisionieren.
 
 Zuerst legt man eine neue VM an (Objekttyp **Virtueller Server**) und setzt diese auf den CMDB-Status geplant (noch existiert sie ja nicht).
 
@@ -495,4 +497,4 @@ Ist die Provisionierung erfolgreich durchgelaufen, ändert sich der CMDB-Status 
 
 [![provisioned](../assets/images/de/anwendungsfaelle/vm-provisionieren-veraltet/18-vmpv.png)](../assets/images/de/anwendungsfaelle/vm-provisionieren-veraltet/18-vmpv.png)
 
-Die Kommunikation zwischen i-doit und vSphere wird unter **Verwaltung → CMDB Einstellungen → Events → Historie (Log)** angezeigt.
+Die Kommunikation zwischen i-doit und vSphere wird unter **Verwaltung → CMDB Einstellungen → Events → Historie (Log)** angezeigt.
