@@ -31,7 +31,6 @@ Alternativ kann im Browser die URL zum Admin Center eingegeben werden. Dabei wir
     https://i-doit.example.net/i-doit/admin/
 
 [![Anmeldung](../assets/images/de/administration/admin-center/2-ac.png)](../assets/images/de/administration/admin-center/2-ac.png)
-------------------------------------------------------------------------------------------------------------------------------
 
 !!! info "Englische Oberfläche"
 
