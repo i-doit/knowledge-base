@@ -35,7 +35,7 @@ Um Fehler zu vermeiden, ist es wichtig, den Controller mit dem selben Benutzer a
     HANDLER can be one of the following availlable handlers:
     addldapdn, archivelog, cleanup_auth, cleanup_objects, csv_import, import, isc_dhcpd, jdisc, jdisc_discovery, ldap, maintenance, nagios, nagios_export, notifications, ocs, regenerate_relations, report, syslog, tenants, updatecheck, workflow
 
-Da [Windows](../../installation/manuelle-installation/microsoft-windows-server.md)\-Betriebsysteme nicht mit dem Bash-Skript vom Controller umgehen können, ist dieser leicht abgewandelt in der Eingabeaufforderung aufzurufen:
+Da [Windows](../../installation/manuelle-installation/microsoft-windows-server/index.md)\-Betriebsysteme nicht mit dem Bash-Skript vom Controller umgehen können, ist dieser leicht abgewandelt in der Eingabeaufforderung aufzurufen:
 
     php.exe controller.php
 

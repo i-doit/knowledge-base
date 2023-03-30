@@ -3,7 +3,7 @@
 Um den Betrieb aller Funktionalitäten von i-doit zu gewährleisten, existieren für das darunter liegende System Voraussetzungen, die erfüllt sein müssen.
 
 !!! info "Aktualität"
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **22**. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **23**. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 Mindestanforderungen an das System
 ----------------------------------
@@ -13,9 +13,7 @@ Folgende Systemparameter sind Mindestanforderungen, um einen Betrieb von i-doit 
 ### Virtuelle Hardware
 
 *   2 vCPUs
-
 *   2 GB RAM
-
 *   10 GB freier Festplattenspeicher
 
 
@@ -24,14 +22,10 @@ Wir empfehlen den Einsatz einer dedizierten, virtuellen Maschine. Der tatsächli
 ### Betriebssystem
 
 *   [Debian GNU/Linux](manuelle-installation/debian.md) 10 "buster", 11 "bullseye"
-
 *   [Ubuntu](manuelle-installation/ubuntu-linux/index.md) 18.04 LTS "bionic", 20.04 LTS "focal fossa"
-
 *   [SUSE Linux Enterprise Server (SLES)](manuelle-installation/suse-linux-enterprise-server.md) 15, 15 SP1, 15 SP2, 15 SP3
-
 *   [Red Hat Enterprise Linux (RHEL)](manuelle-installation/red-hat-enterprise-linux/index.md) 7, 8
-
-*   [Microsoft Windows Server](manuelle-installation/microsoft-windows-server.md) 2016, 2019
+*   [Microsoft Windows Server](manuelle-installation/microsoft-windows-server/index.md) 2016, 2019
 
 
 Wir empfehlen den Einsatz von [Debian GNU/Linux](manuelle-installation/debian.md) in der 64bit-Architektur (amd64) in Version 11 "bullseye".
@@ -39,11 +33,8 @@ Wir empfehlen den Einsatz von [Debian GNU/Linux](manuelle-installation/debian.md
 ### LAMP Stack
 
 *   Apache Webserver 2.4
-
 *   MariaDB 10.2, 10.3, 10.4 10.5(empfohlen) oder MySQL 5.7._Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden.__Wenn die Version 10.6 als stabil eingestuft wird planen wir sie in einer späteren Version zu unterstützen._
-
 *   PHP 7.4 und 8.0 (empfohlen). _Im Moment wird PHP Version >= 8.1 nicht unterstützt. Wir planen die Unterstützung in einer späteren Version._
-
 *   PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
 
@@ -71,8 +62,8 @@ Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.0 und MariaDB 10.5**
 
     !!! info "Hinweis"
 
-i-doit ist eine Datenbankanwendung und daher intensiver Festplattennutzer. Ein schneller Festplattenspeicher wird empfohlen, da I/O-Verkehr maßgeblich die Performance bestimmt.
-        Die Festplattenbedarf kann sich bei intensiver Nutzung der Datei- oder Bildablage in i-doit erhöhen.
+        i-doit ist eine Datenbankanwendung und daher intensiver Festplattennutzer. Ein schneller Festplattenspeicher wird empfohlen, da I/O-Verkehr maßgeblich die Performance bestimmt.<br>
+        Die Festplattenbedarf kann sich bei intensiver Nutzung der Datei- oder Bildablage in i-doit erhöhen.<br>
         Der Wert von 50 GB orientiert sich nur an der maximalen Datenbankgröße, die bei voller Nutzung und bei Updates oder ähnlichen Operationen erreicht werden kann.
 
 
@@ -89,7 +80,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 Kompatibilitätsmatrix
 ---------------------
 
-| **i-doit Version** | 1.19, 20, 21, 22 | 1.18 | 1.17 | 1.16 | 1.15 | 1.14 | 1.13 | 1.12 | 1.11 | 1.10 | 1.9 | 1.8 | 1.7 |
+| **i-doit Version** | 1.19, 20, 21, 22, 23 | 1.18 | 1.17 | 1.16 | 1.15 | 1.14 | 1.13 | 1.12 | 1.11 | 1.10 | 1.9 | 1.8 | 1.7 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Release** | 2022-09 | 2022-01 | 2021-07 | 2021-01 | 2020-07 | 2020-01 | 2019-06 | 2018-12 | 2018-06 | 2017-12 | 2017-05 | 2016-10 | 2016-03 |
 | **Apache Webserver** | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.2, 2.4 |

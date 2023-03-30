@@ -4,11 +4,11 @@ Dieser Artikel behandelt die manuelle [Installation](../index.md) von i-doit. Di
 Umfang
 ------
 
-✔ Software-Pakete installieren
-✔ Software-Pakete konfigurieren
-✔ i-doit installieren
-✔ Cronjobs einrichten
-✔ Backups einrichten
+✔ Software-Pakete installieren<br>
+✔ Software-Pakete konfigurieren<br>
+✔ i-doit installieren<br>
+✔ Cronjobs einrichten<br>
+✔ Backups einrichten<br>
 ✔ Restore einrichten
 
 Voraussetzungen
@@ -31,4 +31,4 @@ Die genauen Schritte sind abhängig vom gewählten Betriebssystem:
 *   [Red Hat Enterprise Linux (RHEL) oder CentOS](../manuelle-installation/red-hat-enterprise-linux/index.md)
 *   [Suse Linux Enterprise Server (SLES)](../manuelle-installation/suse-linux-enterprise-server.md)
 *   [Ubuntu Linux](../manuelle-installation/ubuntu-linux/index.md)
-*   [Microsoft Windows Server](../manuelle-installation/microsoft-windows-server.md)
+*   [Microsoft Windows Server](../manuelle-installation/microsoft-windows-server/index.md)

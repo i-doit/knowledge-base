@@ -24,7 +24,7 @@ We recommend the use of a dedicated virtual machine. The actual demand for hardw
 *   [Ubuntu](manual-installation/ubuntu-linux/index.md) 18.04 LTS "bionic", 20.04 LTS "focal fossa"
 *   [SUSE Linux Enterprise Server (SLES)](manual-installation/suse-linux-enterprise-server.md) 15, 15 SP1, 15 SP2, 15 SP3
 *   [Red Hat Enterprise Linux (RHEL)](manual-installation/red-hat-enterprise-linux/index.md) 7, 8
-*   [Microsoft Windows Server](manual-installation/microsoft-windows-server.md)) 2016, 2019
+*   [Microsoft Windows Server](manual-installation/microsoft-windows-server.md) 2016, 2019
 
 
 We recommend the usage of [Debian GNU/Linux](manual-installation/debian.md) in 64bit architecture (amd64) in version 11 "bullseye".

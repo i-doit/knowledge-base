@@ -14,5 +14,5 @@ Natürlich sind wir an Feedback interessiert. Die Fortentwicklung einer professi
 
 Wir wünschen dir einen erfolgreichen Start mit i-doit!
 
-Herzlichen Gruß aus Düsseldorf
+Herzlichen Gruß aus Düsseldorf<br>
 Dein i-doit Team

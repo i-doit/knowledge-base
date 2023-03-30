@@ -19,9 +19,9 @@ Use command init to create your own configuration file:
 
     idoitcmk init
 
-This command will ask you several questions about all settings which are mentioned below. After that a configuration file will be written to ~/.idoitcmk/config.json.
+This command will ask you several questions about all settings which are mentioned below. After that a configuration file will be written to `~/.idoitcmk/config.json`.
 
-If you run this command with super-user rights (root) a configuration file will be written to /etc/idoitcmk/config.json instead.
+If you run this command with super-user rights (root) a configuration file will be written to `/etc/idoitcmk/config.json` instead.
 
 With this command you are even able to update your configuration settings. Before that a backup will be created in the background.
 
@@ -41,8 +41,8 @@ The configuration settings are separated by topics:
 
 | Topic | Description |
 | --- | --- |
-| i-doit | Configure how to access i-doit’s JSON-RPC API |
-| check_mk | Configure how to access checkmk’s Web API |
+| i-doit | Configure how to access i-doit's JSON-RPC API |
+| check_mk | Configure how to access checkmk's Web API |
 | push | Configure how to [push data from i-doit to checkmk](./generate-wato-configuration-base-on-cmdb-data.md) |
 | pull | Configure how to [pull data from checkmk to i-doit](./import-inventory-data-into-cmdb.md) |
 | objectTypes | Used object types identified by their constants |
@@ -51,48 +51,48 @@ The configuration settings are separated by topics:
 | blacklistedObjectTypes | Object types which will be completely ignored by all commands |
 | log | Log levels and colored output |
 
-Required topics are i-doit and check_mk, otherwise sharing information between them won’t work. All other topics may be altered optionally.
+Required topics are i-doit and check_mk, otherwise sharing information between them won't work. All other topics may be altered optionally.
 
 For almost each setting there is a pre-defined default value. You may remove unchanged settings from your local configuration files.
 
-### Access i-doit’s JSON-RPC API
+### Access i-doit's JSON-RPC API
 
-Configure how to access i-doit’s JSON-RPC API:
+Configure how to access i-doit's JSON-RPC API:
 
 | Key | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| i-doit.url | String | Yes | –   | Entry point to i-doit’s JSON-RPC API (Example: http://demo.i-doit.com/src/jsonrpc.php |
-| i-doit.key | String | Yes | –   | API key |
-| i-doit.username | String | No  | –   | Username |
-| i-doit.password | String | No  | –   | Password |
+| i-doit.url | String | Yes | -   | Entry point to i-doit's JSON-RPC API (Example: http://demo.i-doit.com/src/jsonrpc.php |
+| i-doit.key | String | Yes | -   | API key |
+| i-doit.username | String | No  | -   | Username |
+| i-doit.password | String | No  | -   | Password |
 | i-doit.language | String | No  | en | Supported languages are en or de |
 | i-doit.limitBatchRequests | String | No  | 500 | If you encounter performance or memory issues in i-doit decrease this setting. Value 100 is a good starting point. 0 disables any limitation. |
-| i-doit.proxy.type | String | No  | –   | HTTP or SOCKS5 |
-| i-doit.proxy.host | String | No  | –   | FQDN or IP address to proxy |
-| i-doit.proxy.port | Integer | No  | –   | TCP/IP port |
-| i-doit.proxy.username | String | No  | –   | Username |
-| i-doit.proxy.password | String | No  | –   | Password |
+| i-doit.proxy.type | String | No  | -   | HTTP or SOCKS5 |
+| i-doit.proxy.host | String | No  | -   | FQDN or IP address to proxy |
+| i-doit.proxy.port | Integer | No  | -   | TCP/IP port |
+| i-doit.proxy.username | String | No  | -   | Username |
+| i-doit.proxy.password | String | No  | -   | Password |
 
-### Access checkmk’s Web API and Livestatus
+### Access checkmk's Web API and Livestatus
 
-Configure how to access checkmk’s Web API:
+Configure how to access checkmk's Web API:
 
 | Key | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| check_mk.webAPI.url | String | Yes | –   | Entry point to checkmk’s Web API (Example: http://CheckMK-Server/site-name/check_mk/) |
+| check_mk.webAPI.url | String | Yes | -   | Entry point to checkmk's Web API (Example: http://CheckMK-Server/site-name/check_mk/) |
 | check_mk.webAPI.username | String | Yes | automation | Automation user |
-| check_mk.webAPI.secret | String | Yes | –   | Automation secret |
+| check_mk.webAPI.secret | String | Yes | -   | Automation secret |
 | check_mk.webAPI.effectiveAttributes | Boolean | Yes | true | Fetch inherited settings from rulesets, folders, etc. |
-| check_mk.webAPI.proxy.type | String | No  | –   | HTTP or SOCKS5 |
-| check_mk.webAPI.proxy.host | String | No  | –   | FQDN or IP address to proxy |
-| check_mk.webAPI.proxy.port | String | No  | –   | TCP/IP port |
-| check_mk.webAPI.proxy.username | String | No  | –   | Username |
-| check_mk.webAPI.proxy.password | String | No  | –   | Password |
+| check_mk.webAPI.proxy.type | String | No  | -   | HTTP or SOCKS5 |
+| check_mk.webAPI.proxy.host | String | No  | -   | FQDN or IP address to proxy |
+| check_mk.webAPI.proxy.port | String | No  | -   | TCP/IP port |
+| check_mk.webAPI.proxy.username | String | No  | -   | Username |
+| check_mk.webAPI.proxy.password | String | No  | -   | Password |
 | check_mk.livestatus.type | String | No  | tcp | tcp or socket |
 | check_mk.livestatus.title | String | No  | Check_MK | Unique name for this livestatus instance |
-| check_mk.livestatus.host | String | No  | –   | Hostname (type tcp only) |
+| check_mk.livestatus.host | String | No  | -   | Hostname (type tcp only) |
 | check_mk.livestatus.port | Integer | No  | 6557 | TCP/IP port (type tcp only) |
-| check_mk.livestatus.path | String | No  | –   | Path to UNIX socket (type socket only) |
+| check_mk.livestatus.path | String | No  | -   | Path to UNIX socket (type socket only) |
 
 Livestatus can currently not be connected via TLS.
 
@@ -102,7 +102,7 @@ Livestatus can currently not be connected via TLS.
 | --- | --- | --- | --- | --- |
 | Key | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| check_mk.version | String | No  | –   | Used Checkmk Version needed for inventory import e.g. “2.1” |
+| check_mk.version | String | No  | -   | Used Checkmk Version needed for inventory import e.g. "2.1" |
 
 ### Configure command push
 
@@ -113,13 +113,13 @@ Configure how to [push data from i-doit to checkmk](./generate-wato-configuratio
 | Key | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- | --- |
 | push.activateChanges | Boolean | No  | false | Activate all changes except foreign changes |
-| push.activateForeignChanges | Boolean | No  | false | Activate all changes including foreign changes; push.activateChanges must be true\ |
+| push.activateForeignChanges | Boolean | No  | false | Activate all changes including foreign changes; push.activateChanges must be true |
 | push.autoMatching | String | No  | all | Disable autoTagging (none), just look for the first match (first) or try to match all expressions (all) |
 | push.autoSite | Boolean | No  | false | In a multi-site environment each host is monitored by one site. With value location site can be identified automatically by the object location path. |
-| push.autoTagging | Object | No  | –   | Add host tags dynamically based on object information that matches regular expressions; see section “Auto tagging” |
+| push.autoTagging | Object | No  | -   | Add host tags dynamically based on object information that matches regular expressions; see section "Auto tagging" |
 | push.bakeAgents | Boolean | No  | false | Bake agents automatically; does not deploy agents |
 | push.contactGroupIdentifier | String | No  | title | Collect contact groups by their object titles (title) or by their LDAP DNs (ldap) |
-| push.defaultWATOFolder | String | No  | –   | Push hosts to this folder if not set; empty value means main folder |
+| push.defaultWATOFolder | String | No  | -   | Push hosts to this folder if not set; empty value means main folder |
 | push.discoverServices | Boolean | No  | false | Look for services on new/altered hosts |
 | push.location | Boolean | No  | true |     |     |
 
@@ -170,9 +170,9 @@ Configure how to [pull data from checkmk to i-doit](./import-inventory-data-into
 | pull.createUnknownSoftwareApplications | Boolean | No  | true | Unknown Applications will be created as new objects |
 | pull.objectType | String | No  | C__OBJTYPE__SERVER | Set the object type constant for new objects |
 | pull.updateObjects | String | No  | overwrite | If host is found in i-doit overwrite existing category entries, merge them or ignore them (list categories only) |
-| pull.idenfifier | Array | No  | ["title", "hostname", "fqdn", "hostaddress", "alias", "user-defined", "serial"] | Look for these identifiers to match hosts with objects; see section “Identifiers” |
+| pull.idenfifier | Array | No  | ["title", "hostname", "fqdn", "hostaddress", "alias", "user-defined", "serial"] | Look for these identifiers to match hosts with objects; see section "Identifiers" |
 | pull.minMatch | Integer | No  | 2 | Object and host must share a minimum amount of identifiers |
-| pull.attributes | Array | No  | _See section “Attributes”_ | List of category constants which will be altered; see section “Attributes” |
+| pull.attributes | Array | No  | _See section "Attributes"_ | List of category constants which will be altered; see section "Attributes" |
 | pull.enableExport | Boolean | No  | true | Write host configuration to category Check_MK Host |
 | pull.enableLivestatus | Boolean | No  | true | Write host configuration to category Monitoring |
 | pull.ports | String | No  | physical | Add/update physical or logical network ports |
@@ -358,9 +358,9 @@ The CLI tool idoitcmk has various log levels:
 | Info | 16 |
 | Debug | 32 |
 
-There is a configuration setting log.verbosity to adjust the default log level. This value will be used when neither runtime option -v|--verbose nor -q|--quiet are used. The current default value is 31. That means all log messages except debug messages are included.
+There is a configuration setting log.verbosity to adjust the default log level. This value will be used when neither runtime option `-v|--verbose` nor `-q|--quiet` are used. The current default value is 31. That means all log messages except debug messages are included.
 
-On the one side runtime option -v|--verbose sets this configuration setting temporarily to 63 which includes all log levels. On the other side runtime option -q|--quiet sets it temporarily to 3 (only fatals and errors).
+On the one side runtime option `-v|--verbose` sets this configuration setting temporarily to 63 which includes all log levels. On the other side runtime option `-q|--quiet` sets it temporarily to 3 (only fatals and errors).
 
 Additional configuration files
 ------------------------------
@@ -368,12 +368,12 @@ Additional configuration files
 Optionally, you may pass one or more additional JSON-formatted configuration files by using option -c or --config. Repeat option for more then one file. For example:
 
 
-idoitcmk push --config i-doit-testing.json --config check_mk-testing.json
+    idoitcmk push --config i-doit-testing.json --config check_mk-testing.json
 
 Runtime settings
 ----------------
 
-You would like to change some settings during runtime? You can do that with options -s and --setting. Separate nested keys with ., for example:
+You would like to change some settings during runtime? You can do that with options `-s` and `--setting`. Separate nested keys with ., for example:
 
     idoitcmk push --setting "push.activateChanges=true"
 
@@ -402,7 +402,7 @@ With command configtest you are able to perform a detailed validation of your co
 Print your config
 -----------------
 
-If you have a bunch of configuration files and runtime settings sometimes it’s good to know what are your compiled settings:
+If you have a bunch of configuration files and runtime settings sometimes it's good to know what are your compiled settings:
 
     idoitcmk print-config
 
