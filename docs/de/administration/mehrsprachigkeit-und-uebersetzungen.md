@@ -14,7 +14,7 @@ Die Mehrsprachigkeit bezieht sich auf die [Web GUI von i-doit](../grundlagen/str
 
 !!! info "Neue Sprachen unterstützen"
 
-    i-doit lässt sich nicht ohne Eingriff in den Quellcode durch weitere Sprachen erweitern. Gibt es Bestrebungen, i-doit in eine weitere Sprache zu übersetzen, freuen wir uns über eine Nachricht.
+    Wie Sie andere Sprachen hinzufügen können finden Sie [HIER](../anwendungsfaelle/benutzerdefinierte-uebersetzungen.md)
 
 Automatische Sprache je nach Browser-Einstellung
 ------------------------------------------------
@@ -54,11 +54,11 @@ Bei einem Server-Aufruf im Browser zieht i-doit Übersetzungstabellen heran. Die
 | en_custom.inc.php | Benutzerdefinierte Anpassungen an der englischen Sprache (optional) | ja  |
 | en.inc.php | Englisch Sprache | nein |
 
-Achtung: Die Änderungen an den Dateien src/lang/<Sprache>.inc.php werden bei einem [Update](../wartung-und-betrieb/update-einspielen.md) überschrieben und sollten daher nicht angepasst werden. Stattdessen sollten die entsprechenden custom\-Dateien angepasst werden. Alle Dateien enthalten PHP-Quellcode, der sich leicht anpassen lässt. Für jede Übersetzung schreibt man eine neue Zeile nach demselben Schema:
+Achtung: Die Änderungen an den Dateien src/lang/<Sprache>.inc.php werden bei einem [Update](../wartung-und-betrieb/update-einspielen.md) überschrieben und sollten daher nicht angepasst werden. Stattdessen sollten die entsprechenden Übersetzungen [HIER](../anwendungsfaelle/benutzerdefinierte-uebersetzungen.md) verwenden oder die custom\-Dateien angepasst werden. Alle Dateien enthalten PHP-Quellcode, der sich leicht anpassen lässt. Für jede Übersetzung schreibt man eine neue Zeile nach demselben Schema:
 
     $g_langcache['LC__EXAMPLE'] = 'Beispiel-Übersetzung';
 
-Aus der Sprachkonstante LC\_\_EXAMPLE wird somit "Beispiel-Übersetzung".
+Aus der Sprachkonstante `LC__EXAMPLE` wird somit `Beispiel-Übersetzung`.
 
 Die custom\-Dateien eignen sich nicht nur dafür neue Übersetzungen einzuführen, sondern auch bestehende zu überschreiben.
 

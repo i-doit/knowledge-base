@@ -25,6 +25,7 @@ Oberhalb der Auflistung stehen verschiedene Optionen zur Verfügung:
 *   **Activate**: ein bestehender Mandant wird aktiviert, falls dieser vorher deaktiviert war
 *   **Deactivate**: ein bestehender Mandant wird deaktiviert, falls dieser vorher aktiviert war
 *   **Remove**: ein bestehender Mandant wird **unwiderruflich** gelöscht
+*   **Save license settings**: die Verteilung der Lizenzobjekte wird gespeichert
 
 Zum Konfigurieren wird ein Mandant über die Checkboxen ausgewählt. Zum (De-)Aktivieren oder Löschen wird ein oder mehrere Mandanten ausgewählt.
 
@@ -41,7 +42,7 @@ Pro Mandant müssen verschiedene Eigenschaften angegeben werden (Pflichtfelder):
 Objektlimitierung pro Mandant
 -----------------------------
 
-Pro Mandant kann, sofern die Mandanten-Lizenz verwendet wird, eingestellt werden, wie viele lizenzpflichtige Objekte maximal dokumentiert werden dürfen. Dies geschieht im Admin Center unter **Licences**. Dort gibt es pro Mandant den Paramter **Object limit** (Ganzzahl).
+Pro Mandant kann eingestellt werden, wie viele lizenzpflichtige Objekte maximal dokumentiert werden dürfen. Dies geschieht im Admin Center unter **Tenants**. Dort gibt es pro Mandant den Paramter **Assigned object licenses** (Ganzzahl).
 
 [![Objektlimitierung pro Mandant](../assets/images/de/administration/mandantenfaehigkeit/3-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/3-mand.png)
 
