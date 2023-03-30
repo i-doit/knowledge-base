@@ -58,13 +58,7 @@ Lizenzen
 
 [![Lizenzen](../assets/images/de/administration/admin-center/5-ac.png)](../assets/images/de/administration/admin-center/5-ac.png)
 
-Seit Version 1.13 werden die Lizenzierten Add-ons so dargestellt.
-
-[![Lizenzen](../assets/images/de/administration/admin-center/6-ac.png)](../assets/images/de/administration/admin-center/6-ac.png)
-
-Im Ersten Schritt gilt es, die Lizenzdatei hochzuladen. Hierzu steht die Schaltfläche "Install new licence" zur Verfügung. Abhängig davon, ob es sich um eine Subskriptions-, Kauf-, Mandanten- oder Mandanten-Kauf-Lizenz handelt, muss die entsprechende Option im neu geöffneten Bereich gewählt werden. Bei einer Subskriptions- oder Kauflizenz ist es ausreichend, den zugehörigen Mandanten auszuwählen.
-
-Wenn eine Mandanten- oder eine Mandanten-Kauf-Lizenz eingesetzt wird, stehen die weiteren Optionen im Bereich "Multi-Tenant" zur Verfügung. In der Spalte "Multi-tenant options" können die zu lizenzierenden Mandanten gewählt werden. Nachdem ein Mandant lizenziert wurde, erhält dieser eine Zeile im oberen Bereich. Hier kann das Objekt-Limit für jeden lizenzierten Mandanten festgelegt werden. Nachdem das Limit eingegeben wurde, muss dieses über die Schaltfläche "Save changes" gespeichert werden.
+Wie Weblicense Token verwendet werden wird [HIER](../wartung-und-betrieb/lizenz-aktivieren.md) erklärt.
 
 Add-ons
 -------
@@ -76,16 +70,15 @@ Im Bereich **Modules** werden die [i-doit pro Add-ons](../i-doit-pro-add-ons/ind
 Support
 -------
 
-Über den Bereich **Support** wird das [Kundenportal](../administration/kundenportal.md) eingebettet. Darüber können beispielsweise Download-Pakete und Lizenzen heruntergeladen werden.
-
-[![Support](../assets/images/de/administration/admin-center/8-ac.png)](../assets/images/de/administration/admin-center/8-ac.png)
+Bei einem Klick auf den Bereich **Support** wird das [Kundenportal](../administration/kundenportal.md) in einem neuen Tab geöffnet. Darüber können beispielsweise Download-Pakete und Lizenzen heruntergeladen werden.
 
 Konfiguration
 -------------
 
-Im Bereich Config werden zwei Punkte konfiguriert:
+Im Bereich Config werden drei Punkte konfiguriert:
 
 *   Über **Admin-Center Credentials** können die Zugangsdaten zum Admin Center geändert werden (siehe oben).
+*   Über **Security configuration** kann die `Encryption method` ausgewählt werden.
 *   Über **Connection to i-doit System Database** kann der Zugang zur [System-Datenbank](../software-entwicklung/datenbank-modell/index.md) geändert werden.
 
 [![Konfiguration](../assets/images/de/administration/admin-center/9-ac.png)](../assets/images/de/administration/admin-center/9-ac.png)
