@@ -5,7 +5,7 @@ Das i-doit Installationspaket für Windows wird im [Kundenportal](../../../admin
 
 Die Inhalte des Pakets sehen wie folgt aus:
 
-[![Ordner Content](../../../assets/images/de/installation/windows/win-doit/windoit-1.png)](../../../assets/images/de/installation/windows/win-doit/windoit-1.png)
+[![Ordner Content](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/1-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/1-idw.png)
 
 Im Installationspaket wird immer die aktuelle [i-doit Version](../../../versionshistorie/index.md) mitgeliefert. Ebenfalls wird durch den `src.zip` Ordner eine Installation ohne Internetverbindung ermöglicht.<br>
 Da der i-doit Windows installer die `windowsdesktop-runtime-6.0.14`**` benötigt, wird diese ebenfalls zur Verfügung gestellt falls wärend der installation keine Internetverbindung vorhanden ist.
@@ -14,7 +14,7 @@ Da der i-doit Windows installer die `windowsdesktop-runtime-6.0.14`**` benötigt
 
 Nach dem ausführen der `i-doit Windows Installer.exe` bekommt man folgende GUI angezeigt:
 
-[![GUI](../../../assets/images/de/installation/windows/win-doit/windoit-2.png)](../../../assets/images/de/installation/windows/win-doit/windoit-2.png)
+[![GUI](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/2-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/2-idw.png)
 
 Nach einem Klick auf **Installieren** werden im Hintergrund alle benötigten Elemente installiert.
 
@@ -58,7 +58,7 @@ Ist der Apache2 Service gestoppt, kann Apache2 deinstalliert werden:
 
 Anschließend wird MariaDB deinstalliert indem wir unter **Programme hinzufügen oder entfernen** MariaDB entfernen.
 
-[![Deinstallieren MariaDB](../../../assets/images/de/installation/windows/win-doit/windoit-3.png)](../../../assets/images/de/installation/windows/win-doit/windoit-3.png)
+[![Deinstallieren MariaDB](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)
 
 Alternativ kann MariaDB auch über die Eingabeaufforderung deinstalliert werden:
 
@@ -70,4 +70,4 @@ MariaDB deinstallieren ohne Daten zu löschen:
 
 Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP `PATH` muss aus den Umgebungsvariabeln entfernt werden:
 
-[![Deinstallieren PHP](../../../assets/images/de/installation/windows/win-doit/windoit-4.png)](../../../assets/images/de/installation/windows/win-doit/windoit-4.png)
+[![Deinstallieren PHP](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)
