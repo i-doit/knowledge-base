@@ -1,7 +1,7 @@
 # Install i-doit for Windows Server
 
 How to install i-doit on Windows operating system is described in this article. <br>
-The i-doit installation package for Windows is provided in the [Customer Portal](../../../administration/customerportal.md).
+The i-doit installation package for Windows is provided in the [Customer Portal](../../../system-administration/customer-portal.md).
 
 The contents of the package are as follows:
 
@@ -15,7 +15,7 @@ Since the i-doit Windows installer requires **windowsdesktop-runtime-6.0.14**, t
 
 ### Installation
 
-After running the i-doit Windows `Installer.exe` you will see the following GUI:
+After running the `i-doit Windows Installer.exe` you will see the following GUI:
 
 [![GUI](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/1-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/1-idw.png)
 
