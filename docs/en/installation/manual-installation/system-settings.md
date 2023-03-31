@@ -6,7 +6,7 @@ For the configuration of the operating system we recommend a series of settings 
 *   [Red Hat Enterprise Linux (RHEL)](red-hat-enterprise-linux/index.md)
 *   [Suse Linux Enterprise Server (SLES)](suse-linux-enterprise-server.md)
 *   [Ubuntu Linux](ubuntu-linux/index.md)
-*   [Microsoft Windows Server](microsoft-windows-server.md)
+*   [Microsoft Windows Server](microsoft-windows-server/index.md)
 
 ## PHP
 

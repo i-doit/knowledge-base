@@ -126,7 +126,7 @@ Version 12 of [SUSE Linux Enterprise Server (SLES)](../installation/manual-insta
 Windows Server 2008/2012
 ------------------------
 
-XAMPP is recommended if [Windows Server 2008/2012](../installation/manual-installation/microsoft-windows-server.md) is in usage. The XAMPP distribution made available by [Apache Friends](https://www.apachefriends.org/) includes Apache Webserver, PHP and MariaDB. Care should be taken to always use the latest version.
+XAMPP is recommended if [Windows Server 2008/2012](../installation/manual-installation/microsoft-windows-server/index.md) is in usage. The XAMPP distribution made available by [Apache Friends](https://www.apachefriends.org/) includes Apache Webserver, PHP and MariaDB. Care should be taken to always use the latest version.
 
 !!! attention "Since there is neither an official documentation nor an update mechanism for XAMPP, the upgrade path for it may be complicated and prone to error. Therefore a **current [backup](../maintenance-and-operation/backup-and-recovery/index.md) and extensive testing** following the upgrade are mandatory."
 

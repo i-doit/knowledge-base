@@ -34,7 +34,7 @@ In order to avoid errors it is important to execute the controller with the same
     HANDLER can be one of the following availlable handlers:
     addldapdn, archivelog, cleanup_auth, cleanup_objects, csv_import, import, isc_dhcpd, jdisc, jdisc_discovery, ldap, maintenance, nagios, nagios_export, notifications, ocs, regenerate_relations, report, syslog, tenants, updatecheck, workflow
 
-This script has to be executed in a slightly different manner in [Windows](../../installation/manual-installation/microsoft-windows-server.md) operating systems since they cannot handle the bash script of the controller:
+This script has to be executed in a slightly different manner in [Windows](../../installation/manual-installation/microsoft-windows-server/index.md) operating systems since they cannot handle the bash script of the controller:
 
     php.exe controller.php
 

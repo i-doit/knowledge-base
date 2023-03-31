@@ -216,7 +216,9 @@ nav:
           - Ubuntu GNU/Linux:
               - installation/manual-installation/ubuntu-linux/index.md
               - Ubuntu 20.04.1 LTS "Focal Fossa": installation/manual-installation/ubuntu-linux/ubuntu-20.04.1-lts.md
-          - Microsoft Windows Server: installation/manual-installation/microsoft-windows-server.md
+          - Microsoft Windows Server: 
+              - installation/manual-installation/microsoft-windows-server/index.md
+              - i-doit via XAMPP: installation/manual-installation/microsoft-windows-server/i-doit-via-xampp.md
           - System Settings: installation/manual-installation/system-settings.md
           - Setup: installation/manual-installation/setup.md
       - i-doit Virtual Eval Appliance:
