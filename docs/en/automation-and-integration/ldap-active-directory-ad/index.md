@@ -21,7 +21,7 @@ Verify it via _getsebool -a | grep httpd_
     sudo apt install php7-ldap
     sudo service apache2 restart
 
-### Subsequent Installation under [Windows](../../installation/manual-installation/microsoft-windows-server.md)
+### Subsequent Installation under [Windows](../../installation/manual-installation/microsoft-windows-server/index.md)
 
 The file php.ini (usually at C:\xampp\php\php.ini) has to be modified. Activate loading of the php_ldap extension in a text editor.  
 
