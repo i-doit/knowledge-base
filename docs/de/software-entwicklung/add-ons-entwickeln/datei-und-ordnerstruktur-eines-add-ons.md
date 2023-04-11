@@ -6,11 +6,11 @@ Wie unter [Add-ons installieren, aktualisieren und aktivieren](add-ons-installie
 
 Grundsätzlich wird "PSR-4"-konformer PHP-Code unterhalb von "src" positioniert. "Legacy"-Klassen werden üblicherweise in jeweils eigenen Ordnern hinterlegt - bitte hierzu auch das Kapitel Autoloading beachten:
 
-*   **api/
-    **Legacy: Hier befinden sich die Model-Klassen für die API. Siehe auch [API erweitern](api-erweitern.md).
+*   **api/**
+    Legacy: Hier befinden sich die Model-Klassen für die API. Siehe auch [API erweitern](api-erweitern.md).
 
-*   **assets/
-    **Der "assets"-Ordner wird für Javascript, CSS und Bild-Dateien verwendet. Die Unterordner könnten demnach "js", "css" und "img" heißen.
+*   **assets/**
+    Der "assets"-Ordner wird für Javascript, CSS und Bild-Dateien verwendet. Die Unterordner könnten demnach "js", "css" und "img" heißen.
 
 *   **auth/**
     Legacy: Wird für sämtlichen Rechtesystem-Code verwendet. Siehe auch [Benutzerrechte im Add-on nutzen](benutzerrechte-im-add-on-nutzen.md).

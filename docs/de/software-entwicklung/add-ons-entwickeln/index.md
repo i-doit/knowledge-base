@@ -32,7 +32,7 @@ Der Identifier findet sich an vielen Stellen des Add-on-Quellcodes wieder:
 
 *   Der Add-on-Ordner muss gleich benannt sein.
 *   Die Add-on-Klasse (Code und Dateiname) beinhaltet den Identifier: isys_module_synetics_example
-*   Der Namespace muss den Identifier beinhalten (mit großem Anfangsbuchstaben), damit der PSR-4-Autoloader funktioniert: \idoit\Module\Synetics_example
+*   Der Namespace muss den Identifier beinhalten, damit der PSR-4-Autoloader funktioniert: \idoit\Module\SyneticsExample
 *   Der Autoloader für Klassen (Code und Dateiname) der Legacy-Struktur muss den Identifier beinhalten: isys_module_synetics_example_autoload
 
 Minimales Set an PHP-Dateien

@@ -57,6 +57,23 @@ Es ist innerhalb der init.php möglich, eigene Routen für das Add-on zu definie
         ->addModuleRoute('GET', '/example/self-defined-route', 'example', 'MyController', 'myGetAction')
         ->addModuleRoute('POST', '/example/self-defined-route', 'example', 'MyController', 'myPostAction');
 
+### Hinweis zu Namespaces
+
+Bei Add-ons mit Unterstrichen (`_`) im Identifier wird der Namespace für die Controller automatisch von i-doit gebildet:
+
+**Vor i-doit 23**
+
+Hier wurde aus einem Identifier wie zum Beispiel `example_addon` der Namespace `Exampleaddon` bzw. `idoit\Module\Exampleaddon\Controller` gebildet. 
+
+**Ab i-doit 23**
+
+Wir unterstützen ab i-doit 23 zwei Formate, sodass der Identifier `example_addon` in diesen beiden Namespaces nach einem passenden Controller suchen würde:
+
+- `Exampleaddon` (so wie füher)
+- `ExampleAddon` (neu)
+
+Der vollständige Namespace für die Controller würde also `idoit\Module\ExampleAddon\Controller` lauten, wobei auch der alte Namespace gültig wäre.
+
 Controller-Code
 ---------------
 
