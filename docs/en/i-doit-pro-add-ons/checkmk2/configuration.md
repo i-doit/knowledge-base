@@ -100,8 +100,6 @@ Livestatus can currently not be connected via TLS.
 
 | Key | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| Key | Type | Required | Default | Description |
-| --- | --- | --- | --- | --- |
 | check_mk.version | String | No  | -   | Used Checkmk Version needed for inventory import e.g. "2.1" |
 
 ### Configure command push
@@ -109,9 +107,7 @@ Livestatus can currently not be connected via TLS.
 Configure how to [push data from i-doit to checkmk](./generate-wato-configuration-base-on-cmdb-data.md):
 
 | Key | Type | Required | Default | Description |
-| --- | --- | --- | --- | --- | --- |
-| Key | Type | Required | Default | Description |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | push.activateChanges | Boolean | No  | false | Activate all changes except foreign changes |
 | push.activateForeignChanges | Boolean | No  | false | Activate all changes including foreign changes; push.activateChanges must be true |
 | push.autoMatching | String | No  | all | Disable autoTagging (none), just look for the first match (first) or try to match all expressions (all) |
@@ -121,7 +117,7 @@ Configure how to [push data from i-doit to checkmk](./generate-wato-configuratio
 | push.contactGroupIdentifier | String | No  | title | Collect contact groups by their object titles (title) or by their LDAP DNs (ldap) |
 | push.defaultWATOFolder | String | No  | -   | Push hosts to this folder if not set; empty value means main folder |
 | push.discoverServices | Boolean | No  | false | Look for services on new/altered hosts |
-| push.location | Boolean | No  | true |     |     |
+| push.location | Boolean | No  | true |     |
 
 #### Auto tagging
 
@@ -154,7 +150,7 @@ Example:
         }
     }
 
-*   Try to match all expressions:
+Try to match all expressions:
 *   Objects whose titles (title) begin with 00 will be checked by an agent and are tagged as productive.
 *   Objects whose titles (title) has mail in the middle are tagged as mail hosts.
 *   Objects whose hostnames ( hostname) begin with vm are assigned to the DMZ.
