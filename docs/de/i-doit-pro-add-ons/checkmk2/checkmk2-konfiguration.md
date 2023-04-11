@@ -151,6 +151,7 @@ Beispiel:
     }
 
 Versucht, alle Ausdrücke zu finden:
+
 *   Objekte, deren Titel (title) mit 00 beginnt, werden von einem Agenten geprüft und als produktiv eingestuft.
 *   Objekte, deren Titel (title) mit mail in der Mitte beginnt, werden als Mail-Hosts gekennzeichnet.
 *   Objekte, deren Hostnamen ( hostname) mit vm beginnen, werden der DMZ zugewiesen.

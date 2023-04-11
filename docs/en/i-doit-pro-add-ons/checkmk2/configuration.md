@@ -151,6 +151,7 @@ Example:
     }
 
 Try to match all expressions:
+
 *   Objects whose titles (title) begin with 00 will be checked by an agent and are tagged as productive.
 *   Objects whose titles (title) has mail in the middle are tagged as mail hosts.
 *   Objects whose hostnames ( hostname) begin with vm are assigned to the DMZ.
