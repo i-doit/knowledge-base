@@ -117,6 +117,7 @@ Konfigurieren Sie, wie [Daten von i-doit an checkmk übertragen werden sollen](.
 | push.contactGroupIdentifier | String | nein | title | Sammeln von Kontaktgruppen nach ihren Objekttiteln (title) oder nach ihren LDAP-DNs (ldap) |
 | push.defaultWATOFolder | String | nein | -   | Hosts in diesen Ordner verschieben, falls nicht festgelegt; leerer Wert bedeutet Hauptordner |
 | push.discoverServices | Boolean | nein | false | Suchen Sie nach Diensten auf neuen/geänderten Hosts |
+| push.location | Boolean | nein  | true |     |
 
 #### Auto tagging
 
@@ -149,7 +150,7 @@ Beispiel:
         }
     }
 
-*   Versucht, alle Ausdrücke zu finden:
+Versucht, alle Ausdrücke zu finden:
 *   Objekte, deren Titel (title) mit 00 beginnt, werden von einem Agenten geprüft und als produktiv eingestuft.
 *   Objekte, deren Titel (title) mit mail in der Mitte beginnt, werden als Mail-Hosts gekennzeichnet.
 *   Objekte, deren Hostnamen ( hostname) mit vm beginnen, werden der DMZ zugewiesen.
