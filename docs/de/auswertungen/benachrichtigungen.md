@@ -4,8 +4,7 @@ In diesem Artikel beschreiben wir das Benachrichtigungsmodul, das dafür gedacht
 
 !!! info "Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/benachrichtigungen-und-eskalationsstufen-mit-i-doit/)"
 
-Benachrichtigungsarten
-----------------------
+## Benachrichtigungsarten
 
 Die Konfiguration findet unter **Extras → CMDB → Benachrichtigungen** statt.
 
@@ -51,8 +50,7 @@ Als Benachrichtigungsarten stehen aktuell die folgenden zur Auswahl:
 
     Die Benachrichtigungsart "Reportbasierte Benachrichtigung" ist sehr flexibel einsetzbar und kann bei fast allen Events und Zuständen passende Benachrichtigungen versenden.
 
-Einrichtung
------------
+## Einrichtung
 
 Die Einrichtung der Benachrichtigungen folgt immer dem gleichen Schema. Es werden allgemeine Einstellungen, wie ein Schwellwert und ein Limit der Benachrichtigungen, Objekte, die überwacht werden sollen und Kontakte, die benachrichtigt werden sollen, eingerichtet.
 
@@ -82,10 +80,18 @@ Das \* stellt in _i-doit_ ein Pflichtfeld dar.
 *   **Datum des letzten Durchlaufs**
     Ebenfalls rein informativ. Zeigt, wann das letzte Mal geprüft wurde.
 
+*   **Startdatum des Intervall**
+    Bei diesem Feld kann ein Datum ausgewählt werden, das Datum ist das Startdatum für den Intervall
+
+*   **Intervallkonfiguration**
+    Dieses Feld dient zur Konfiguration des Intervalls, ist kein Intervall gesetzt wird dies im Feld mit "Kein Intervall definiert" daregestellt.
+    Intervalle lassen sich z.B. Täglich oder Wöchentlich wiederholen.
+    Außerdem lässt ein ende des Intervalls konfigurieren.
+
 *   **Beschreibung**
     Dieses Feld ist ein Freitextfeld für einen Beschreibungstext der Benachrichtigung.
 
-### Domänen
+## Domänen
 
 Unter den Domänen lassen sich gezielt Objekte oder nach einem Schema gesammelt auswählen, die von der Benachrichtigung überprüft werden sollen.
 
@@ -98,19 +104,20 @@ Unter den Domänen lassen sich gezielt Objekte oder nach einem Schema gesammelt 
 *   **Reports**
     Mit einem Report kann noch gezielter benachrichtigt werden. Beispiel: Es soll geprüft werden, ob es noch genug freie Lizenzen gibt, die mehr als 150€ pro Stück kosten, da dort ein längerer Prozess zu beachten ist, als bei günstigeren Lizenzen. Ein zweiter Report kann dann erstellt und in einer anderen Benachrichtigung verwendet werden, um die günstigeren abzufragen und zu einem anderen, vielleicht späteren Zeitpunkt, zu benachrichtigen. Bitte hier auch unbedingt auf die Domäne und die in den abgefragten Objekttypen zugewiesenen Kategorien achten!
 
+*   **Nur Objete mit Status "Normal"**
+    Ist diese Option auf Ja gestellt werden nur noch Objekte im Report dargestellt die den [Zustand](../grundlagen/lebens-und-dokumentationszyklus.md#zustände) Normal besitzen.
 !!! info "Hinweis"
 
     Je nach Benachrichtigungsart werden nur bestimmte Objekttypen unterstützt. Beispielsweise dürfen bei Prüfung von Verträgen nur Objekte vom Typ "Vertrag" und bei Prüfung von Lizenzen nur Objekte vom Typ "Lizenz" angegeben werden.
 
-Empfänger
----------
+## Empfänger
 
 Bei den Empfängern kann ebenfalls gezielt oder gesammelt benachrichtigt werden.
 
 *   **Zugewiesene Rollen**
     Wird ein Objekt mit der konfigurierten Benachrichtigung gefunden, kann hierüber der diesem Objekt zugewiesene Kontakt in der hier eingestellten Rolle benachrichtigt werden.
     Beispiel: Bei Verträgen kann der unter dem Vertrag über die Kategorie "Kontaktzuweisung" dokumentierte Kontakt mit der Rolle "Vertragspartner" benachrichtigt werden.
-    Kontaktpersonen die via Kontaktzuweisung > Rolle benachrichtigt werden erhalten auch nur die Informationen zu diesem Objekt.
+    Kontaktpersonen die via Kontaktzuweisung -> Rolle benachrichtigt werden erhalten auch nur die Informationen zu diesem Objekt.
 
 *   **Zugewiesene Kontakte**
     Es kann auch ein oder mehrere Kontakte bzw. ein oder mehrere Personengruppen oder Organisationen benachrichtigt werden. Wichtig hierbei ist eine zu jedem Kontaktobjekt hinterlegte E-Mail-Adresse.
@@ -120,18 +127,16 @@ Bei den Empfängern kann ebenfalls gezielt oder gesammelt benachrichtigt werden.
 *   **Strategie zur Berechnung der Empfänger**
     Genutzte Berechnungsstrategie der Empfänger bei der **Auflösung von Personengruppen** zu Personen. Diese Einstellung betrifft nur Personengruppen die als Kontakt zugewiesen sind.
 
-```
-    | Strategie | Beschreibung |
-    | --- | --- |
-    | \-  | Dies is der Standard = Gruppen falls E-Mail vorhanden, sonst zugewiesene Personen |
-    | Gruppen falls E-Mail vorhanden, sonst zugewiesene Personen | Wenn die Personengruppe eine primäre E-Mail Adresse hinterlegt hat wird diese benachrichtigt.  <br>Wenn die Personengruppe KEINE primäre E-Mail Adresse hinterlegt hat, werden die primären E-Mail Adressen der Personengruppen Mitglieder benachrichtigt. |
-    | Gruppen und Personen | Es werden die primären E-Mail Adressen der Personengruppen und der Personengruppen Mitglieder benachrichtigt. |
-    | Nur Gruppen | Personengruppen mit einer primären E-Mail Adresse werden benachrichtigt. |
-    | Nur Personen | Personengruppen Mitglieder mit einer primären E-Mail Adresse werden benachrichtigt. |
-```
 
-E-Mail-Vorlagen
----------------
+| Strategie | Beschreibung |
+| --- | --- |
+| \-  | Dies is der Standard = Gruppen falls E-Mail vorhanden, sonst zugewiesene Personen |
+| Gruppen falls E-Mail vorhanden, sonst zugewiesene Personen | Wenn die Personengruppe eine primäre E-Mail Adresse hinterlegt hat wird diese benachrichtigt.  <br>Wenn die Personengruppe KEINE primäre E-Mail Adresse hinterlegt hat, werden die primären E-Mail Adressen der Personengruppen Mitglieder benachrichtigt. |
+| Gruppen und Personen | Es werden die primären E-Mail Adressen der Personengruppen und der Personengruppen Mitglieder benachrichtigt. |
+| Nur Gruppen | Personengruppen mit einer primären E-Mail Adresse werden benachrichtigt. |
+| Nur Personen | Personengruppen Mitglieder mit einer primären E-Mail Adresse werden benachrichtigt. |
+
+## E-Mail-Vorlagen
 
 Im linken Navigationsbaum lassen sich die jeweiligen, zu den Benachrichtigungen passenden Vorlagen auswählen und für die deutsche und englische Sprache anpassen. Dies gilt immer global für alle Benutzer und sollte demnach nicht zu speziell angepasst werden. Die Möglichkeit, die Vorlage auf den Standard zurückzusetzen besteht nicht. Ob die deutsche oder englische Nachricht verschickt wird, hängt von der Benutzereinstellung des zu benachrichtigenden Kontakts zusammen. Hat dieser sich noch nie in i-doit angemeldet, wird in der Standard-Sprache von _i-doit_ benachrichtigt.
 
@@ -144,12 +149,11 @@ Im linken Navigationsbaum lassen sich die jeweiligen, zu den Benachrichtigungen 
 *   **Report**
     Ein Report kann hier definiert werden, mit dem in der E-Mail die in der Benachrichtigung gefundenen Objektinformationen aufbereitet verschickt werden.
 
-Konfiguration des Aufrufs mit der i-doit Console
-------------------------------------------------
+## Konfiguration des Aufrufs mit der i-doit Console
 
 Damit die eingerichteten Benachrichtigungen auch regelmäßig überprüft werden, muss die i-doit [Console](../automatisierung-und-integration/cli/index.md) mit dem Command **[notifications-send](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#OptionenundParameterderConsole-notifications-send)** zum Beispiel als Cronjob ausgeführt werden. Es lässt sich nicht jede Benachrichtigung einzeln abrufen, sondern es werden immer automatisch alle Benachrichtigungen nacheinander geprüft. Sinnvoll ist es, zu überlegen, wie oft maximal geprüft werden soll. Bewährt hat es sich unserer Erfahrung nach täglich kurz vor Arbeitsbeginn zu prüfen, damit morgens sofort klar ist, womit man sich den Tag über beschäftigen sollte.
 
-!!!info "Hinweis"
+!!! info "Hinweis"
 
     Ohne einen Aufruf des Commands über die i-doit Console findet **kein** Versand der Benachrichtigungen statt!
 
