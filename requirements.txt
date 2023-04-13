@@ -10,7 +10,7 @@ mkdocs-minify-plugin ~= 0.6.4
 mkdocs-video ~= 1.5.0
 pip-audit == 2.5.4
 Pygments ~= 2.14.0
-pymdown-extensions ~= 9.10
+pymdown-extensions ~= 9.11
 PyOpenSSL ~= 23.1.1
 wheel ~= 0.40.0
 yamllint == 1.30.0
