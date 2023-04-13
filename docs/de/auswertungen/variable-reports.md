@@ -2,18 +2,17 @@
 
 Die variablen Reports sind nützlich, um die eigene i-doit-Installation noch weiter auf den persönlichen Zuschnitt hin anzupassen.
 
-Benutzerdefinierte Kategorie
-----------------------------
+## Benutzerdefinierte Kategorie
 
 Viele Anwender haben bereits heute [benutzerdefinierte Kategorien](../grundlagen/benutzerdefinierte-kategorien.md) in Verwendung. Eine Sache, die benutzerdefinierte Kategorien auszeichnet, ist unter anderem die Möglichkeit zur Verknüpfung von [Objekten](../grundlagen/struktur-it-dokumentation.md).
 
-Nehmen wir an, in der Organisation sind Bereichsdrucker definiert. Die Räume **1.01** bis **1.07** verwenden **Drucker A**, die Räume **1.0****8** bis **1.11** den **Drucker B**.
+Nehmen wir an, in der Organisation sind Bereichsdrucker definiert. Die Räume **1.01** bis **1.07** verwenden **HQ Staff Printer 01**, die Räume **1.0****8** bis **1.11** den **HQ Staff Printer 02**.
 
 Dokumentiert wird das mit der benutzerdefinierten Kategorie **Bereichsdrucker**. Diese wird dem [Objekttyp](../grundlagen/struktur-it-dokumentation.md) **Drucker** zugeordnet und als [Single-Value-Kategorie](../grundlagen/struktur-it-dokumentation.md), nicht als [Listen-Kategorie (Multi-Value)](../grundlagen/struktur-it-dokumentation.md) definiert. Das [Attribut](../grundlagen/struktur-it-dokumentation.md) **Bereichsdrucker für** wird als **Objekt-Beziehung (Mehrfachauswahl)** mit **Zusatz Freigabenzugriff** hinzugefügt.
 
 [![benutzerdefinierte-kategorien](../assets/images/de/auswertungen/variable-reports/1-vr.png)](../assets/images/de/auswertungen/variable-reports/1-vr.png)
 
-Danach wechselt man zum Objekt **Drucker A**. In der Kategorie **Bereichsdrucker** wählt man nun in die zugeordneten Räume aus.
+Danach wechselt man zum Objekt **HQ Staff Printer 01**. In der Kategorie **Bereichsdrucker** wählt man nun in die zugeordneten Räume aus.
 
 [![objekt-browser](../assets/images/de/auswertungen/variable-reports/2-vr.png)](../assets/images/de/auswertungen/variable-reports/2-vr.png)
 
@@ -25,9 +24,7 @@ Dies lässt sich auch mit dem [CMDB-Explorer](../auswertungen/cmdb-explorer/inde
 
 [![cmdb-explorer](../assets/images/de/auswertungen/variable-reports/4-vr.png)](../assets/images/de/auswertungen/variable-reports/4-vr.png)
 
-Rückwärtige Ansicht für benutzerdefinierte Kategorie
-
--------------------------------------------------------
+## Rückwärtige Ansicht für benutzerdefinierte Kategorie
 
 So weit so gut. Doch wie findet man heraus, wenn man sich den Raum **1.05** ansieht, welcher Bereichsdrucker für diesen Raum definiert ist? Dafür ist eine rückwärtige Ansicht nötig, mit der man feststellen kann, welcher Drucker in Beziehung zu diesem Raum steht. Mit den variablen Reports gibt für solche kontextabhängigen Abfragen eine Lösung.
 
