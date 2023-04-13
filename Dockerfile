@@ -1,4 +1,4 @@
-FROM python:3.11-bullseye AS i-doit-kb-build
+FROM python:3.11.3-bullseye AS i-doit-kb-build
 
 RUN apt-get update && \
     apt-get full-upgrade -y && \
@@ -17,7 +17,7 @@ RUN pip install -U --no-cache-dir -r requirements.txt \
     && \
     mkdocs build -f config/de/mkdocs.yml \
     && \
-    mkdocs build -f config/en/mkdocs.yml 
+    mkdocs build -f config/en/mkdocs.yml
 
 FROM nginx:alpine AS i-doit-kb-web
 
