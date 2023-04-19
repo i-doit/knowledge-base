@@ -56,7 +56,7 @@ We recommend the usage of **Apache Webserver 2.4, PHP 8.0 and MariaDB 10.5**.
     ### LAMP Stack
 
     *   Apache 2.4.x (default package)
-    *   MariaDB 10.3.x (default package)
+    *   MariaDB 10.5.x (default package)
     *   PHP 8.0.x (default package)
 
     !!! note Note
@@ -89,7 +89,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 | **Debian GNU/Linux** | 11  | 10, 11 | 10  | 10  | 10  | 10  | 8, 9, 10 | 8, 9 | 8, 9 | 8, 9 | 8, 9 | 8   | 8   |
 | **Ubuntu** | 18.04, 20.04 | 18.04, 20.04 | 18.04, 20.04 | 18.04, 20.04 | 18.04, 20.04 | 18.04 | 16.04, 18.04 | 16.04, 18.04 | 16.04 | 16.04, 17.04 | 16.04 LTS, 16.10, 17.04 | 14.04¹ | 15.10, 14.04¹ |
 | **RHEL** | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7.3¹, 7.4¹, 7.5¹, 7.6¹ | 7.3¹, 7.4¹, 7.5¹ | 7.3¹, 7.4¹ | 7.3¹ | 7.3¹ | 7.2¹ |
-| **SLES** | 15 SP1, 15 SP 2, SP 3, SP4? | 15 SP1, 15 SP 2, SP 3 | 15, 15 SP1 | 15, 15 SP1 | 15, 15 SP1 | 15, 15 SP1 | 12 SP3, 12 SP4, 15, 15 SP1 | 12 SP3, 15 | 12 SP3 | 12 SP2, SP3 | 12, 12 SP2 | 12, 12 SP2 | 12  |
+| **SLES** | 15 SP1, 15 SP 2, SP 3 | 15 SP1, 15 SP 2, SP 3 | 15, 15 SP1 | 15, 15 SP1 | 15, 15 SP1 | 15, 15 SP1 | 12 SP3, 12 SP4, 15, 15 SP1 | 12 SP3, 15 | 12 SP3 | 12 SP2, SP3 | 12, 12 SP2 | 12, 12 SP2 | 12  |
 | **XAMPP for Windows²** | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2008 R2, 2012 R2, 2016, 2019 | 2008 R2, 2012 R2, 2016, 2019 | 2008 R2, 2012 R2, 2016 | 2008 R2, 2012 R2, 2016 | 2008, 2012 | 2008, 2012 | 2008, 2012 |
 
 |     |
