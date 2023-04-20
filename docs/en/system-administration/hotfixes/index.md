@@ -33,6 +33,11 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit Core
 
+### Images in fields which were inserted via URL or copy&paste are not displayed
+!!! warning "If this is the case and a category is saved again the images are lost"
+
+[i-doit_23_hotfix_ID-9435_2f70cd2.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9435_2f70cd2.zip){ .md-button .md-button--primary }
+
 ### Adding a model in category model not possible
 
 [I-doit_23_hotfix_ID-9375_40177a3.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9375_40177a3.zip){ .md-button .md-button--primary }
