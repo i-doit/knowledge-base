@@ -416,7 +416,7 @@ nav:
           - i-doit web GUI: i-doit-pro-add-ons/checkmk2/i-doit-web-gui.md
           - Read information from i-doit and checkmk: i-doit-pro-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md
           - Match objects from i-doit with hosts from checkmk: i-doit-pro-add-ons/checkmk2/match-objects-from-i-doit-with-hosts-from-checkmk.md
-          - requently asked questions (FAQ): i-doit-pro-add-ons/checkmk2/faq.md
+          - Frequently asked questions (FAQ): i-doit-pro-add-ons/checkmk2/faq.md
       - DNS Documentation: i-doit-pro-add-ons/dns-documentation.md
       - Documents:
           - i-doit-pro-add-ons/documents/index.md
