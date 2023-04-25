@@ -40,7 +40,7 @@ Um den Befehl `extend-contracts` anwenden zu können, müssen wir in die [Consol
 Der Befehl sieht wie folgt aus:
 
 ```shell
-    sudo -u www-data php console.php extend-contracs --user user --password password
+    sudo -u www-data php console.php extend-contracts --user user --password password
 ```
 
 Ist der Vertrag richtig konfiguriert, wird in der [Console](../automatisierung-und-integration/cli/console/index.md) angezeigt, dass der Vertrag um 1 Jahr verlängert wurde. 
@@ -64,5 +64,5 @@ In diesen Cronjob fügen wir folgenden Code ein:
     15 6 * * * www-data php /var/www/html/i-doit/console.php extend-contracts --user user --password password
 ```
 
-Mit diesem Code, wird der Cronjob jeden Tag um 6:15 Uhr ausgeführt und verlängert die Verträge automatisch, falls sie den Vorraussetzungen entsprechen.
+Mit diesem Code, wird der Cronjob jeden Tag um 6:15 Uhr ausgeführt und verlängert die Verträge automatisch, falls sie den Voraussetzungen entsprechen.
 Wichtig ist nur das der Pfad zur [Console](../automatisierung-und-integration/cli/console/index.md) richtig angegeben ist und das man den **Username** und das **Passwort** der Idoit-Instanz nutzt.

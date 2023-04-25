@@ -40,7 +40,7 @@ To be able to apply the `extend-contracts` command, we need to go to the [Consol
 The command should look like this:
 
 ```shell
-    sudo -u www-data php console.php extend-contracs --user user --password password
+    sudo -u www-data php console.php extend-contracts --user user --password password
 ```
 
 If the contract is configured correctly, the [Console](../automation-and-integration/cli/console/index.md) will show that the contract has been extended by 1 year. 
