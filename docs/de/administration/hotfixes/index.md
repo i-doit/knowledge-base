@@ -38,6 +38,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_23_hotfix_ID-9435_2f70cd2.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9435_2f70cd2.zip){ .md-button .md-button--primary }
 
+### Description field is limited to 65,535 characters
+
+[i-doit_23_hotfix_ID-9441_56d0fba.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9441_56d0fba.zip){ .md-button .md-button--primary }
+
 ### Adding a model in category model not possible
 
 [I-doit_23_hotfix_ID-9375_40177a3.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9375_40177a3.zip){ .md-button .md-button--primary }
@@ -66,4 +70,4 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 It is necessary to re-index the category attributes via [Systemtools](../../administration/systemeinstellungen/index.md), after applying the hotfix
 
-[aof-17-incompatible-function-declaration.zip](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip)
+[aof-17-incompatible-function-declaration.zip :material-file-download:](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }
