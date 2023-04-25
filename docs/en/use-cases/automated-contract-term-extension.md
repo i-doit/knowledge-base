@@ -9,7 +9,7 @@ To extend the contract we will use the command `extend-contracts`.
 ## Step 1: Make the contract `extend-contract` capable
 
 In order to extend a contract with the `extend-contracts` command, it must meet a few requirements.
-To achieve this we have to edit the existing contract first.
+To achieve this we have to edit the existing contract first.<br>
 
 The required settings can be found in the object view of the desired contract,
 
@@ -64,5 +64,5 @@ In this cronjob we add the following code:
     15 6 * * www-data php /var/www/html/i-doit/console.php extend-contracts --user user --password password
 ```
 
-With this code, the cronjob will run every day at 6:15 *am* and will automatically extend the contracts if they meet the requirements.
+With this code, the cronjob will run every day at 6:15 *am* and will automatically extend the contracts if they meet the requirements.<br>
 The only important thing is, that the path to the [Console](../automation-and-integration/cli/console/index.md) is correct and that you use the **username** and **password** of the idoit instance.
