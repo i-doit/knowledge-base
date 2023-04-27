@@ -1,6 +1,6 @@
 # Lokalen Benutzer anlegen
 
-i-doit bringt bereits bei der Standard-Installation einige lokale Benutzer mit, die für die [Erstanmeldung](../grundlagen/erstanmeldung.md) genutzt werden können. In diesem Artikel wird erklärt wie man einen weiteren lokalen Benutzer anlegt.
+i-doit pro bringt bereits bei der Standard-Installation einige lokale Benutzer mit, die für die [Erstanmeldung](../grundlagen/erstanmeldung.md) genutzt werden können. In diesem Artikel wird erklärt wie man einen weiteren lokalen Benutzer anlegt.
 
 LDAP/AD
 
@@ -13,7 +13,7 @@ Lokale Benutzer können auch dann verwendet werden, wenn externe Autorisierungss
 Neues Objekt erstellen
 ----------------------
 
-Benutzer in i-doit sind Teil der IT-Dokumentation. Daher sind alle Benutzer jeweils ein [Objekt](../grundlagen/struktur-it-dokumentation.md) vom Typ **Personen**. Um einen lokalen Benutzer anzulegen, wird daher zunächst ein neues **Personen**\-Objekt erstellt.
+Benutzer in i-doit pro sind Teil der IT-Dokumentation. Daher sind alle Benutzer jeweils ein [Objekt](../grundlagen/struktur-it-dokumentation.md) vom Typ **Personen**. Um einen lokalen Benutzer anzulegen, wird daher zunächst ein neues **Personen**\-Objekt erstellt.
 
 [![Personen-Objekt](../assets/images/de/anwendungsfaelle/lokalen-benutzer-anlegen/1-lba.png)](../assets/images/de/anwendungsfaelle/lokalen-benutzer-anlegen/1-lba.png)
 
@@ -42,7 +42,7 @@ Pro Mandant kann die minimale Länge eines Benutzerpassworts vorgegeben werden. 
 Benutzereinstellungen
 ---------------------
 
-Jeder Benutzer kann i-doit individuell anpassen. Viele dieser Einstellungen befinden sich unter **Verwaltung → Benutzereinstellungen**.
+Jeder Benutzer kann i-doit pro individuell anpassen. Viele dieser Einstellungen befinden sich unter **Verwaltung → Benutzereinstellungen**.
 
 ### Anmeldedaten
 
@@ -55,7 +55,7 @@ Die Lokalisierung und weitere Einstellung kann jeder Benutzer über **Verwaltung
 
 | Option | Auswahl | Beschreibung |
 | --- | --- | --- |
-| **Sprache durch Browser wählen** | **Ja**<br><br>**Nein** | So gut wie jeder Webbrowser sendet die vom Benutzer bevorzugten Sprachen mit. i-doit ist in der Lage, diese Einstellung auszuwerten und soweit möglich anzuwenden. |
+| **Sprache durch Browser wählen** | **Ja**<br><br>**Nein** | So gut wie jeder Webbrowser sendet die vom Benutzer bevorzugten Sprachen mit. i-doit pro ist in der Lage, diese Einstellung auszuwerten und soweit möglich anzuwenden. |
 | **Sprache** | **Deutsch**<br><br>**English** | Wird die Sprache nicht durch den Webbrowser bestimmt (siehe oben), kann die Sprache über diese Option fest vorgegeben werden. |
 | **Datumsformat** | **Deutsch**<br><br>**English** | Wie sollen Datumsangaben formatiert werden? **TT.MM.JJJJ** (deutsch) oder **YYYY-MM-DD** (englisch) |
 | **Numerisches Format** | **Deutsch**<br><br>**English** | In welchem Format sollen Zahlen formatiert werden? **x.xxx,xx** (deutsch) oder **x,xxx.xx** (englisch) |
@@ -102,4 +102,4 @@ Der Benutzer hat in weiteren Bereichen individuelle Einstellungsmöglichkeiten:
 Benutzerrechte
 --------------
 
-[Rechte](../effizientes-dokumentieren/rechteverwaltung/index.md) innerhalb von i-doit können pro Benutzer oder - besser - pro Personengruppe vergeben werden. Dazu wird ein Benutzer der entsprechenden Gruppe zugeordnet. Diese verfügt dann über die entsprechenden Rechte, die dem Benutzer vererbt werden. Ein Benutzer kann mehreren Gruppen zugeordnet werden und erbt dadurch die jeweiligen Rechte.
+[Rechte](../effizientes-dokumentieren/rechteverwaltung/index.md) innerhalb von i-doit pro können pro Benutzer oder - besser - pro Personengruppe vergeben werden. Dazu wird ein Benutzer der entsprechenden Gruppe zugeordnet. Diese verfügt dann über die entsprechenden Rechte, die dem Benutzer vererbt werden. Ein Benutzer kann mehreren Gruppen zugeordnet werden und erbt dadurch die jeweiligen Rechte.

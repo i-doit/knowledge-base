@@ -1,6 +1,6 @@
 # Mandantenfähigkeit
 
-i-doit ist mandantenfähig. Das bedeutet, dass über eine Installation ein oder mehrere eigenständige [IT-Dokumentationen](../glossar.md) abgebildet werden können. Die Anwendungsfälle sind vielfältig: von Sub-Organisationen, die getrennt voneinander dokumentieren sollen, über Systemhäuser, die Kunden-IT in dedizierten Instanzen dokumentieren, bis hin zu Hosting-Providern, die i-doit als Dienstleistung bereitstellen.
+i-doit pro ist mandantenfähig. Das bedeutet, dass über eine Installation ein oder mehrere eigenständige [IT-Dokumentationen](../glossar.md) abgebildet werden können. Die Anwendungsfälle sind vielfältig: von Sub-Organisationen, die getrennt voneinander dokumentieren sollen, über Systemhäuser, die Kunden-IT in dedizierten Instanzen dokumentieren, bis hin zu Hosting-Providern, die i-doit pro als Dienstleistung bereitstellen.
 
 !!! info "Lizenzierung"
 
@@ -9,7 +9,7 @@ i-doit ist mandantenfähig. Das bedeutet, dass über eine Installation ein oder 
 Hintergrund
 -----------
 
-Pro Mandant existiert in i-doit eine separate Datenbank. In dieser Datenbank werden alle Inhalte gespeichert, aber auch die Konfigurationen. So können über eine Instanz von i-doit völlig unterschiedliche IT-Dokumentationen gepflegt werden. Ein Austausch zwischen Mandanten ist nicht vorgesehen. Diese strikte Trennung ist auch ein Grund dafür, dass das [Admin Center](../administration/admin-center.md) als übergeordnete Verwaltungsinstanz zur Verfügung steht.
+Pro Mandant existiert in i-doit pro eine separate Datenbank. In dieser Datenbank werden alle Inhalte gespeichert, aber auch die Konfigurationen. So können über eine Instanz von i-doit pro völlig unterschiedliche IT-Dokumentationen gepflegt werden. Ein Austausch zwischen Mandanten ist nicht vorgesehen. Diese strikte Trennung ist auch ein Grund dafür, dass das [Admin Center](../administration/admin-center.md) als übergeordnete Verwaltungsinstanz zur Verfügung steht.
 
 Konfiguration
 -------------
@@ -36,7 +36,7 @@ Pro Mandant müssen verschiedene Eigenschaften angegeben werden (Pflichtfelder):
 *   **Tenant GUI title**: Name des Mandanten (wird unter anderem beim Login angezeigt)
 *   **Description**: Beschreibung (hat bis auf den informellen Charakter keine Auswirkung auf die Funktionalität)
 *   **Sort value**: Sortierreihenfolge als Ganzzahl angeben (je niedriger der Wert, desto höher steht der Mandant in der Reihenfolge)
-*   **Cache dir**: i-doit speichert aus Performance-Gründen viele Daten zwischen. Pro Mandant wird unterhalb des Verzeichnisses temp/ im Installationsverzeichnis von i-doit ein dediziertes Cache-Verzeichnis angelegt.
+*   **Cache dir**: i-doit pro speichert aus Performance-Gründen viele Daten zwischen. Pro Mandant wird unterhalb des Verzeichnisses temp/ im Installationsverzeichnis von i-doit pro ein dediziertes Cache-Verzeichnis angelegt.
 *   **MySQL settings**: Hierbei ist es von Vorteil, den Database Name mit Prefix idoit_ zu benennen. Der erste Mandant erhält bei der [Installation](../installation/manuelle-installation/setup.md) standardmäßig den Datenbanknamen idoit_data.
 
 Objektlimitierung pro Mandant
@@ -53,9 +53,9 @@ Bei der [Installation und beim Update von Add-ons](../i-doit-pro-add-ons/i-diary
 
 [![Add-ons pro Mandant](../assets/images/de/administration/mandantenfaehigkeit/4-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/4-mand.png)
 
-!!! attention "Update von i-doit"
+!!! attention "Update von i-doit pro"
 
-    Während des [Updates von i-doit](../wartung-und-betrieb/update-einspielen.md) wird abgefragt, welche Mandanten-Datenbanken aktualisiert werden sollen. Standardmäßig sind alle als ausgewählt markiert. Es wird dringend empfohlen, alle Mandanten-Datenbanken beim Update zu berücksichtigen. Eine Abweichung gilt nur in gut begründeten Ausnahmefällen (beispielsweise durch den [Support](../administration/troubleshooting/index.md)).
+    Während des [Updates von i-doit pro](../wartung-und-betrieb/update-einspielen.md) wird abgefragt, welche Mandanten-Datenbanken aktualisiert werden sollen. Standardmäßig sind alle als ausgewählt markiert. Es wird dringend empfohlen, alle Mandanten-Datenbanken beim Update zu berücksichtigen. Eine Abweichung gilt nur in gut begründeten Ausnahmefällen (beispielsweise durch den [Support](../administration/troubleshooting/index.md)).
 
 Benutzerverwaltung
 ------------------
@@ -68,7 +68,7 @@ Sind mehrere Mandanten aktiviert, wird beim Login abgefragt, in welchen Mandante
 
 Wird für die Authentifizierung und Autorisierung ein [LDAP-Verzeichnis/Active Directory (AD)](../automatisierung-und-integration/ldap-verzeichnis/index.md) angebunden, werden beim Login die konfigurierten Server nacheinander abgefragt, ob die Zugangsdaten gültig sind. Danach wird ermittelt, für welche Mandanten die Zugangsdaten gültig sind (siehe oben).
 
-Ist [Single Sign On (SSO)](../automatisierung-und-integration/single-sign-on/index.md) aktiv, kann ein zu nutzender Mandant als Standard gewählt werden. Dies geschieht unter **Verwaltung → Systemeinstellungen → Single Sign On → Standard Mandant**. Beim Aufruf von i-doit wird der Benutzer automatisch zu diesem Mandanten verbunden, falls die Zugangsdaten korrekt sind.
+Ist [Single Sign On (SSO)](../automatisierung-und-integration/single-sign-on/index.md) aktiv, kann ein zu nutzender Mandant als Standard gewählt werden. Dies geschieht unter **Verwaltung → Systemeinstellungen → Single Sign On → Standard Mandant**. Beim Aufruf von i-doit pro wird der Benutzer automatisch zu diesem Mandanten verbunden, falls die Zugangsdaten korrekt sind.
 
 Mandanten-Wechsel
 -----------------

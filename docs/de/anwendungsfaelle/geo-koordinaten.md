@@ -1,6 +1,6 @@
 # Geo-Koordinaten
 
-Jedes [Objekt](../grundlagen/struktur-it-dokumentation.md) in i-doit lässt sich mit geografischen Koordinaten in Form von Breiten- und Längengrad versehen.
+Jedes [Objekt](../grundlagen/struktur-it-dokumentation.md) in i-doit pro lässt sich mit geografischen Koordinaten in Form von Breiten- und Längengrad versehen.
 
 Geo-Koordinaten speichern
 -------------------------

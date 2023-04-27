@@ -1,6 +1,6 @@
 # Mehrsprachigkeit und Übersetzungen
 
-_Do you speak IT documentation?_ Englisch ist und bleibt die Standard-Sprache in der Informationstechnologie, doch Vielfalt belebt: Daher unterstützt i-doit mehrere Sprachen. In diesem Artikel zeigen wir unter anderem, wie sich bestehende Übersetzungen anpassen lassen.
+_Do you speak IT documentation?_ Englisch ist und bleibt die Standard-Sprache in der Informationstechnologie, doch Vielfalt belebt: Daher unterstützt i-doit pro mehrere Sprachen. In diesem Artikel zeigen wir unter anderem, wie sich bestehende Übersetzungen anpassen lassen.
 
 Unterstützte Sprachen
 ---------------------
@@ -10,7 +10,7 @@ Unterstützte Sprachen
 | Englisch | ja  | ja  |
 | Deutsch | nein | ja  |
 
-Die Mehrsprachigkeit bezieht sich auf die [Web GUI von i-doit](../grundlagen/struktur-it-dokumentation.md). In Englisch gehalten sind der [Login](../grundlagen/erstanmeldung.md), das [Admin Center](../administration/admin-center.md), das [Setup](../installation/manuelle-installation/setup.md), der [Update-Assistent](../wartung-und-betrieb/update-einspielen.md) und das [Kommandozeilen-Tool Controller](../automatisierung-und-integration/cli/index.md).
+Die Mehrsprachigkeit bezieht sich auf die [Web GUI von i-doit pro](../grundlagen/struktur-it-dokumentation.md). In Englisch gehalten sind der [Login](../grundlagen/erstanmeldung.md), das [Admin Center](../administration/admin-center.md), das [Setup](../installation/manuelle-installation/setup.md), der [Update-Assistent](../wartung-und-betrieb/update-einspielen.md) und das [Kommandozeilen-Tool Controller](../automatisierung-und-integration/cli/index.md).
 
 !!! info "Neue Sprachen unterstützen"
 
@@ -19,19 +19,19 @@ Die Mehrsprachigkeit bezieht sich auf die [Web GUI von i-doit](../grundlagen/str
 Automatische Sprache je nach Browser-Einstellung
 ------------------------------------------------
 
-Webbrowser senden bei Anfragen an einen Webserver in der Regel die präferierten Sprachen des Benutzers mit. Diese werden von i-doit beim Login ausgewertet, sodass sich i-doit dem Benutzer automatisch in der passenden Sprache präsentiert. Dieses Verhalten kann unter **Verwaltung → Benutzereinstellungen → Darstellung → Sprache durch Browser wählen** beeinflusst werden.
+Webbrowser senden bei Anfragen an einen Webserver in der Regel die präferierten Sprachen des Benutzers mit. Diese werden von i-doit pro beim Login ausgewertet, sodass sich i-doit pro dem Benutzer automatisch in der passenden Sprache präsentiert. Dieses Verhalten kann unter **Verwaltung → Benutzereinstellungen → Darstellung → Sprache durch Browser wählen** beeinflusst werden.
 
 Sprachwechsel
 -------------
 
-Jeder Benutzer ist in der Lage, während der Arbeit mit i-doit die Sprache zu wechseln. Dies geschieht in der Web GUI über die Länderflaggen, die oben rechts angezeigt werden.
+Jeder Benutzer ist in der Lage, während der Arbeit mit i-doit pro die Sprache zu wechseln. Dies geschieht in der Web GUI über die Länderflaggen, die oben rechts angezeigt werden.
 
 [![Sprachwechsel](../assets/images/de/administration/mehrsprachigkeit-und-uebersetzungen/sprachwechsel.png)](../assets/images/de/administration/mehrsprachigkeit-und-uebersetzungen/sprachwechsel.png)
 
 Sprache pro Benutzer
 --------------------
 
-[Beim ersten Anmelden in i-doit](../grundlagen/erstanmeldung.md) erhält der Benutzer automatisch die englische Oberfläche. Jeder Benutzer kann individuell einstellen, welche Sprache als Standard gesetzt werden soll. Dies geschieht unter **Verwaltung → Benutzereinstellungen → Darstellung → Sprache**. Hier den richtigen Wert einzustellen ist wichtig, um beispielsweise [E-Mail-Benachrichtigungen](../auswertungen/benachrichtigungen.md) in der gewünschten Sprache zu erhalten, da die E-Mail-Vorlagen mehrsprachig sind.
+[Beim ersten Anmelden in i-doit pro](../grundlagen/erstanmeldung.md) erhält der Benutzer automatisch die englische Oberfläche. Jeder Benutzer kann individuell einstellen, welche Sprache als Standard gesetzt werden soll. Dies geschieht unter **Verwaltung → Benutzereinstellungen → Darstellung → Sprache**. Hier den richtigen Wert einzustellen ist wichtig, um beispielsweise [E-Mail-Benachrichtigungen](../auswertungen/benachrichtigungen.md) in der gewünschten Sprache zu erhalten, da die E-Mail-Vorlagen mehrsprachig sind.
 
 Sprachkonstanten
 ----------------
@@ -42,9 +42,9 @@ Innerhalb des Quellcodes und der Datenbanken werden zu übersetzende Texte durch
 | --- | --- | --- |
 | LC__CMDB__OBJTYPE__ROOM | Room | Raum |
 
-Im Quellcode bzw. den Datenbanken steht lediglich die Sprachkonstante LC__CMDB__OBJTYPE__ROOM. Der Benutzer erhält allerdings in der Web GUI von i-doit die passende Übersetzung ("Room" oder "Raum"). Sprachkonstanten erkennt man daran, dass diese lediglich Großbuchstaben (A-Z), Unterstriche (_) und ggf. Zahlen (0-9) enthalten. Sie beginnen immer mit dem Prefix LC__.
+Im Quellcode bzw. den Datenbanken steht lediglich die Sprachkonstante LC__CMDB__OBJTYPE__ROOM. Der Benutzer erhält allerdings in der Web GUI von i-doit pro die passende Übersetzung ("Room" oder "Raum"). Sprachkonstanten erkennt man daran, dass diese lediglich Großbuchstaben (A-Z), Unterstriche (_) und ggf. Zahlen (0-9) enthalten. Sie beginnen immer mit dem Prefix LC__.
 
-Bei einem Server-Aufruf im Browser zieht i-doit Übersetzungstabellen heran. Diese befinden sich im Installationsverzeichnis von i-doit unter src/lang. Für jede Sprache existiert ein Kürzel (de für Deutsch, en für Englisch).
+Bei einem Server-Aufruf im Browser zieht i-doit pro Übersetzungstabellen heran. Diese befinden sich im Installationsverzeichnis von i-doit pro unter src/lang. Für jede Sprache existiert ein Kürzel (de für Deutsch, en für Englisch).
 
 | Datei | Bemerkung | Update-sicher? |
 | --- | --- | --- |
@@ -64,9 +64,9 @@ Die custom\-Dateien eignen sich nicht nur dafür neue Übersetzungen einzuführe
 
 !!! success "Sprachen ausschließen"
 
-    Damit i-doit lediglich in einer Sprache den Benutzern zur Verfügung steht, hilft es, die nicht benötigten Sprachdateien zu ersetzen. Um beispielsweise i-doit lediglich in Englisch anzubieten führt man folgende Aktionen auf der Kommandozeile aus:
+    Damit i-doit pro lediglich in einer Sprache den Benutzern zur Verfügung steht, hilft es, die nicht benötigten Sprachdateien zu ersetzen. Um beispielsweise i-doit pro lediglich in Englisch anzubieten führt man folgende Aktionen auf der Kommandozeile aus:
 
-        cd /var/www/html/i-doit # Wechsel in das Installationsverzeichnis von i-doit (ggf. anpassen)
+        cd /var/www/html/i-doit # Wechsel in das Installationsverzeichnis von i-doit pro (ggf. anpassen)
         cd src/lang/ # Wechsel in das Verzeichnis mit den Sprachdateien
         cp de.inc.php de.inc.php.bak # Man weiß ja nie ;-)
         cp en.inc.php de.inc.php # Deutsche durch englische Sprache ersetzen

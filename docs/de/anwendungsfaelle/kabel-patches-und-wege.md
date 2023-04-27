@@ -5,11 +5,11 @@ Zu einer umfangreichen [IT-Dokumentation](../glossar.md) kommt man über kurz od
 Konzept
 -------
 
-Die Abbildung von Verkabelungen ist in i-doit vielfältig wie die Realität: Ethernet, Glasfaser, Stromversorgung, Anschluss von Peripherie - alles, was einen Anschluss hat und mit einem Kabel verbunden werden kann, findet seinen Platz in der IT-Dokumentation.
+Die Abbildung von Verkabelungen ist in i-doit pro vielfältig wie die Realität: Ethernet, Glasfaser, Stromversorgung, Anschluss von Peripherie - alles, was einen Anschluss hat und mit einem Kabel verbunden werden kann, findet seinen Platz in der IT-Dokumentation.
 
-i-doit sieht dabei eine **strikte Trennung zwischen der Dokumentation von Verbindungen und der physikalischen Verkabelung** vor. Ein gutes Beispiel ist die Netzwerkverkabelung über Ethernet. Zum Einen können die Verbindungen zwischen aktiven Netzwerkkomponenten (Switches, Router, Firewalls) in der [Kategorie](../grundlagen/struktur-it-dokumentation.md) **Netzwerk → Port** festgehalten werden. Somit ist zu erkennen, an welchem Switch welcher Server hängt. Verbindungswege über mehrere Komponenten hinweg werden sichtbar. Zum Anderen spielen oftmals passive Komponenten eine wichtige Rolle: Patchpanels und Patchdosen sorgen für Ordnung im regelrechten "Kabelwirrwarr". Doch wem die Verbindung zwischen aktiven Komponenten genügt, kann die passiven Komponenten und damit auch die Kabel selbst außen vor lassen. i-doit ist in der Lage, im Hintergrund die Dokumentation der Verkabelung vorzunehmen, ohne dass der Benutzer zusätzliche Schritte ergreifen muss. Wird zu einem späteren Zeitpunkt ein Detailwissen zur Verkabelung erforderlich, kann die bisherige Dokumentation ergänzt werden, ohne dass der Benutzer von vorne beginnen muss.
+i-doit pro sieht dabei eine **strikte Trennung zwischen der Dokumentation von Verbindungen und der physikalischen Verkabelung** vor. Ein gutes Beispiel ist die Netzwerkverkabelung über Ethernet. Zum Einen können die Verbindungen zwischen aktiven Netzwerkkomponenten (Switches, Router, Firewalls) in der [Kategorie](../grundlagen/struktur-it-dokumentation.md) **Netzwerk → Port** festgehalten werden. Somit ist zu erkennen, an welchem Switch welcher Server hängt. Verbindungswege über mehrere Komponenten hinweg werden sichtbar. Zum Anderen spielen oftmals passive Komponenten eine wichtige Rolle: Patchpanels und Patchdosen sorgen für Ordnung im regelrechten "Kabelwirrwarr". Doch wem die Verbindung zwischen aktiven Komponenten genügt, kann die passiven Komponenten und damit auch die Kabel selbst außen vor lassen. i-doit pro ist in der Lage, im Hintergrund die Dokumentation der Verkabelung vorzunehmen, ohne dass der Benutzer zusätzliche Schritte ergreifen muss. Wird zu einem späteren Zeitpunkt ein Detailwissen zur Verkabelung erforderlich, kann die bisherige Dokumentation ergänzt werden, ohne dass der Benutzer von vorne beginnen muss.
 
-Wie in i-doit üblich findet die Dokumentation der Verkabelung mittels Objekten und [Attributen](../grundlagen/struktur-it-dokumentation.md) statt. Neben zahlreichen Formularen stehen Funktionen zum Visualisieren, Auswertung und Importieren bereit. Darum geht es im Folgenden.
+Wie in i-doit pro üblich findet die Dokumentation der Verkabelung mittels Objekten und [Attributen](../grundlagen/struktur-it-dokumentation.md) statt. Neben zahlreichen Formularen stehen Funktionen zum Visualisieren, Auswertung und Importieren bereit. Darum geht es im Folgenden.
 
 Kategorie-Ordner **Verkabelung**
 ----------------------------------
@@ -59,7 +59,7 @@ Die Kategorie Schnittstelle dient zum Anlegen weiterer Verbindungen, die nicht d
 Objekttyp **Kabel**
 ---------------------
 
-Der Objekttyp Kabel beinhaltet alle Objekte, die ein Kabel repräsentieren. Ein Kabel besteht in i-doit zwingend aus einem Anfang und einem Ende. Y-Kabel o. ä. werden nicht unterstützt. Hier muss sich der Benutzer mit einem Hilfsobjekt begnügen, dass unter **Verkablung → Anschlüsse** einen Eingang mit zwei Ausgängen, die untereinander verbunden sind, enthält (1-zu-2-Beziehung).
+Der Objekttyp Kabel beinhaltet alle Objekte, die ein Kabel repräsentieren. Ein Kabel besteht in i-doit pro zwingend aus einem Anfang und einem Ende. Y-Kabel o. ä. werden nicht unterstützt. Hier muss sich der Benutzer mit einem Hilfsobjekt begnügen, dass unter **Verkablung → Anschlüsse** einen Eingang mit zwei Ausgängen, die untereinander verbunden sind, enthält (1-zu-2-Beziehung).
 
 Die Eigenschaften eines Kabels werden in mehreren Kategorien definiert, die im Folgenden erläutert werden.
 
@@ -103,7 +103,7 @@ Wer bis ins kleinste Detail dokumentieren möchte/muss, wird die Kategorie Faser
 Objekttyp **Patchfeld**
 -------------------------
 
-Patchpanels werden in i-doit als Objekte vom Typ **Patchfeld** dokumentiert. Dieser passiven Komponente ist typischerweise der Kategorie-Ordner **Verkabelung** zu geordnet. In der Kategorie **Verkabelung → Anschlüsse** werden die Ports definiert: Ein **Eingang** repräsentiert den Netzwerk-Port. Ein **Ausgang** repräsentiert das aufgelegte Kabel. Ein- und Ausgang werden miteinander verbunden.
+Patchpanels werden in i-doit pro als Objekte vom Typ **Patchfeld** dokumentiert. Dieser passiven Komponente ist typischerweise der Kategorie-Ordner **Verkabelung** zu geordnet. In der Kategorie **Verkabelung → Anschlüsse** werden die Ports definiert: Ein **Eingang** repräsentiert den Netzwerk-Port. Ein **Ausgang** repräsentiert das aufgelegte Kabel. Ein- und Ausgang werden miteinander verbunden.
 
 [![Patchfeld](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/9-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/9-kpuw.png)
 
@@ -151,7 +151,7 @@ Zum Verbinden von je einem Anschluss zwischen den beiden Objekten wird die Check
 
 Über den Button **Anschlüsse verbinden** werden die ausgewählten Anschlüsse beider Objekte miteinander verbunden. Die Logik sieht vor, von oben nach unten die jeweils nächsten ausgewählten Anschlüsse zu verbinden, bis das Listenende unten erreicht ist.
 
-i-doit sieht bei jedem neu verbundenen Anschluss ein **Kabel**\-Objekt vor. Über die Checkbox **Automatische Verkabelung** werden neue **Kabel**\-Objekte ohne Rückfrage erstellt. Andernfalls ist für jede Verbindung ein bestehendes **Kabel**\-Objekt in einem neuen Fenster auszuwählen.
+i-doit pro sieht bei jedem neu verbundenen Anschluss ein **Kabel**\-Objekt vor. Über die Checkbox **Automatische Verkabelung** werden neue **Kabel**\-Objekte ohne Rückfrage erstellt. Andernfalls ist für jede Verbindung ein bestehendes **Kabel**\-Objekt in einem neuen Fenster auszuwählen.
 
 Über den Button **Kabel ändern** kann für die selektierten Anschlüsse jeweils ein alternatives Kabel-Objekt ausgewählt werden.
 
@@ -162,7 +162,7 @@ Der Button **Anschlüsse lösen** bewirkt, dass die Verbindung von den ausgewäh
 Verkabelungsimport
 ------------------
 
-Verkabelungswege können in i-doit über den Import einer Datei im CSV-Format erstellt werden. Die dazu nötigen Schritte sind unter **Extras → CMDB → Import → Verkabelung** zu finden.
+Verkabelungswege können in i-doit pro über den Import einer Datei im CSV-Format erstellt werden. Die dazu nötigen Schritte sind unter **Extras → CMDB → Import → Verkabelung** zu finden.
 
 Folgende Optionen stehen zur Verfügung:
 

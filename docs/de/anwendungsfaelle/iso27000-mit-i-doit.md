@@ -1,4 +1,4 @@
-# ISO 27000 mit i-doit
+# ISO 27000 mit i-doit pro
 
 !!! attention "Neues Add-on "ISMS""
 
@@ -45,7 +45,7 @@ Pflege von ISO27k-Dokumenten
 [![ISO27k-Dokumenten](../assets/images/de/anwendungsfaelle/iso-27000/2-iso.png)](../assets/images/de/anwendungsfaelle/iso-27000/2-iso.png)
 [![ISO27k-Dokumenten](../assets/images/de/anwendungsfaelle/iso-27000/3-iso.png)](../assets/images/de/anwendungsfaelle/iso-27000/3-iso.png)
 
-i-doit bietet zusätzlich zur IT-Dokumentation weitere Funktionalitäten, die von einem Tool-unterstützten ISMS erwartet werden. Beispielsweise lassen sich im Dokumente-Modul die meisten der von ISO27k geforderten Dokumente erzeugen. Hierzu werden die Texte um Daten aus der IT-Dokumentation ergänzt. Dies können einzelne Attribute sein, aber auch tabellarische Auflistungen ganzer Kategorien oder die Ergebnisse von zuvor erstellten Reports.
+i-doit pro bietet zusätzlich zur IT-Dokumentation weitere Funktionalitäten, die von einem Tool-unterstützten ISMS erwartet werden. Beispielsweise lassen sich im Dokumente-Modul die meisten der von ISO27k geforderten Dokumente erzeugen. Hierzu werden die Texte um Daten aus der IT-Dokumentation ergänzt. Dies können einzelne Attribute sein, aber auch tabellarische Auflistungen ganzer Kategorien oder die Ergebnisse von zuvor erstellten Reports.
 
 [![ISO27k-Dokumenten](../assets/images/de/anwendungsfaelle/iso-27000/4-iso.png)](../assets/images/de/anwendungsfaelle/iso-27000/4-iso.png)
 
@@ -66,7 +66,7 @@ umgesetzt werden sollen. Zudem ist es wichtig, wer eine Maßnahme wann und mit w
 [![Umsetzung von Maßnahmen](../assets/images/de/anwendungsfaelle/iso-27000/6-iso.png)](../assets/images/de/anwendungsfaelle/iso-27000/6-iso.png)
 [![Umsetzung von Maßnahmen](../assets/images/de/anwendungsfaelle/iso-27000/7-iso.png)](../assets/images/de/anwendungsfaelle/iso-27000/7-iso.png)
 
-All diese Daten lassen sich ebenso ein einer IT-Dokumentation abbilden. Allerdings ignorieren wir hier das "IT" im Namen und machen uns die Flexibilität von i-doit zu Nutze. Wir legen dazu die Objekttypen
+All diese Daten lassen sich ebenso ein einer IT-Dokumentation abbilden. Allerdings ignorieren wir hier das "IT" im Namen und machen uns die Flexibilität von i-doit pro zu Nutze. Wir legen dazu die Objekttypen
 
 *   Normen (z. B. ISO/IEC 27002) und
 *   Maßnahmen

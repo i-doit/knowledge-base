@@ -1,11 +1,11 @@
 # Dateien hochladen und verknüpfen
 
-Zu einer vollumfänglichen IT-Dokumentation gehören oftmals auch Dokumente in Form Dateien. Ob nun Betriebshandbücher, Notfallpläne, Verträge, Installationsprotokolle oder Treiber: Wichtige Dateien gehören mit [Objekten](../grundlagen/struktur-it-dokumentation.md) in i-doit verknüpft.
+Zu einer vollumfänglichen IT-Dokumentation gehören oftmals auch Dokumente in Form Dateien. Ob nun Betriebshandbücher, Notfallpläne, Verträge, Installationsprotokolle oder Treiber: Wichtige Dateien gehören mit [Objekten](../grundlagen/struktur-it-dokumentation.md) in i-doit pro verknüpft.
 
 Dateien sind Objekte
 --------------------
 
-Jede hochgeladene Datei in i-doit ist automatisch ein Objekt. Das hat den Vorteil, dass man diesen Dateien beliebige [Kategorien und Attribute](../grundlagen/struktur-it-dokumentation.md) zuschreiben und sie mit beliebigen anderen Objekten [verknüpfen](../grundlagen/objekt-beziehungen.md) kann. i-doit bringt in der Standardinstallation bereits passende [Objekttypen](../grundlagen/struktur-it-dokumentation.md) mit:
+Jede hochgeladene Datei in i-doit pro ist automatisch ein Objekt. Das hat den Vorteil, dass man diesen Dateien beliebige [Kategorien und Attribute](../grundlagen/struktur-it-dokumentation.md) zuschreiben und sie mit beliebigen anderen Objekten [verknüpfen](../grundlagen/objekt-beziehungen.md) kann. i-doit pro bringt in der Standardinstallation bereits passende [Objekttypen](../grundlagen/struktur-it-dokumentation.md) mit:
 
 *   **Dateien** und
 *   **Notfallplan**.
@@ -43,7 +43,7 @@ Dateien hochladen und mit Objekten verknüpfen
 
 Eine neue Datei kann über zwei Wege hochgeladen werden: Entweder erstellt man ein neues Objekt vom Typ **Dateien** und lädt anschließend in der Kategorie **Dateiversionen** die Datei hoch. Oder man geht den Weg über das Objekt, das mit der Datei verknüpft werden soll: Hierbei nutzt man die Kategorie **Dateizuweisung**.
 
-Für Dateien, die über die Kategorie Dateizuweisung hochgeladen werden, legt i-doit automatisch je ein Objekt an. Das spart einige Klicks.
+Für Dateien, die über die Kategorie Dateizuweisung hochgeladen werden, legt i-doit pro automatisch je ein Objekt an. Das spart einige Klicks.
 
 Das Attribut **Datei-Zuordnung (Objekt)** ist dabei recht flexibel:
 
@@ -60,8 +60,8 @@ Der **Datei-Browser** listet alle verfügbaren Dateien auf. Diese lassen sich ü
 Dateien in benutzerdefinierten Kategorien verknüpfen
 ----------------------------------------------------
 
-Um eine Datei mit einem Objekt zu verknüpfen, ist man nicht auf die Standard-Kategorien von i-doit angewiesen. In einer [benutzerdefinierten Kategorie](../grundlagen/benutzerdefinierte-kategorien.md) kann man Attribute vom Feldtyp **Datei Browser** hinzufügen.
+Um eine Datei mit einem Objekt zu verknüpfen, ist man nicht auf die Standard-Kategorien von i-doit pro angewiesen. In einer [benutzerdefinierten Kategorie](../grundlagen/benutzerdefinierte-kategorien.md) kann man Attribute vom Feldtyp **Datei Browser** hinzufügen.
 
 !!! success "Dokumente-Modul"
 
-    Wer Betriebshandbücher, Notfallpläne & Co. direkt aus der IT-Dokumentation generieren möchte, sollte den Einsatz des [Dokumente-Moduls](../i-doit-pro-add-ons/documents/index.md) für i-doit in Betracht ziehen. Hierüber lassen sich umfangreiche Textdokumente mit [Attributen](../grundlagen/struktur-it-dokumentation.md), Bildern und [Reports](../auswertungen/report-manager.md) aus i-doit anreichern.
+    Wer Betriebshandbücher, Notfallpläne & Co. direkt aus der IT-Dokumentation generieren möchte, sollte den Einsatz des [Dokumente-Moduls](../i-doit-pro-add-ons/documents/index.md) für i-doit pro in Betracht ziehen. Hierüber lassen sich umfangreiche Textdokumente mit [Attributen](../grundlagen/struktur-it-dokumentation.md), Bildern und [Reports](../auswertungen/report-manager.md) aus i-doit pro anreichern.
