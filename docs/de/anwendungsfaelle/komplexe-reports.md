@@ -5,12 +5,12 @@ Im Report Manager lassen sich über den Abfrage-Editor bereits viele, nützliche
 Vorbereitung
 ------------
 
-Das erforderliche Wissen rund ums [Reporting](../auswertungen/report-manager.md) mit und die [Datenbank-Struktur von i-doit pro](../software-entwicklung/datenbank-modell/index.md) befindet sich bereits in den entsprechenden Artikeln. Gute Kenntnisse in SQL beziehungsweise in SQL-Funktionen, die MySQL/MariaDB bieten, sind klar von Vorteil.
+Das erforderliche Wissen rund ums [Reporting](../auswertungen/report-manager.md) mit und die [Datenbank-Struktur von i-doit](../software-entwicklung/datenbank-modell/index.md) befindet sich bereits in den entsprechenden Artikeln. Gute Kenntnisse in SQL beziehungsweise in SQL-Funktionen, die MySQL/MariaDB bieten, sind klar von Vorteil.
 
 Zeitintervalle
 --------------
 
-Eine häufige Anforderung an einen Report ist, sich über einen bestimmten Zeitraum zu informieren. i-doit pro bringt hierzu bereits nötige Felder mit Datumsangaben mit, beispielsweise wann ein [Objekt](../grundlagen/struktur-it-dokumentation.md) zuletzt geändert wurde oder wann ein Wartungsvertrag ausläuft. Der Abfrage-Editor im Report Manager kann diese Felder zwar adressieren, aber nur mit festen Datumsangaben: Welche Objekte wurden seit dem 01.01.2016 geändert? Allerdings soll das Datum häufig in Relation zum jetzigen Zeitpunkt stehen: Welche Objekte wurden in diesem Monat geändert? Dabei wird nicht festgelegt, welcher Monat gemeint ist, sondern derjenige Monat, in dem der Report ausgeführt wird, wird angenommen.
+Eine häufige Anforderung an einen Report ist, sich über einen bestimmten Zeitraum zu informieren. i-doit bringt hierzu bereits nötige Felder mit Datumsangaben mit, beispielsweise wann ein [Objekt](../grundlagen/struktur-it-dokumentation.md) zuletzt geändert wurde oder wann ein Wartungsvertrag ausläuft. Der Abfrage-Editor im Report Manager kann diese Felder zwar adressieren, aber nur mit festen Datumsangaben: Welche Objekte wurden seit dem 01.01.2016 geändert? Allerdings soll das Datum häufig in Relation zum jetzigen Zeitpunkt stehen: Welche Objekte wurden in diesem Monat geändert? Dabei wird nicht festgelegt, welcher Monat gemeint ist, sondern derjenige Monat, in dem der Report ausgeführt wird, wird angenommen.
 
 Um so einen Report zu generieren, erstellen wir zunächst einen neuen Report mit dem Abfrage-Editor. Zur Ausgabe fügen wir beispielsweise [Objekt-Titel](../grundlagen/eindeutige-referenzierungen.md), [Objekttyp](../grundlagen/struktur-it-dokumentation.md), Datum der letzten Änderung und den Namen der bearbeitenden Person hinzu.
 

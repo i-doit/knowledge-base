@@ -10,7 +10,7 @@ Mithilfe der benutzerdefinierten Übersetzung, kann man innerhalb einiger Mauskl
 
 [![Erstellen einer Sprache](../assets/images/de/anwendungsfaelle/benutzerdefinierte-uebersetzungen/1-bue.png)](../assets/images/de/anwendungsfaelle/benutzerdefinierte-uebersetzungen/1-bue.png)
 
-Man kann die Sprache nun in i-doit pro auswählen, jedoch ist diese bisher noch identisch mit der deutschen Sprache.
+Man kann die Sprache nun in i-doit auswählen, jedoch ist diese bisher noch identisch mit der deutschen Sprache.
 
 Daher muss man nun die Felder übersetzen.
 

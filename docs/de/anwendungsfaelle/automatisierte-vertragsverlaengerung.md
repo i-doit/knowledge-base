@@ -1,6 +1,6 @@
 # Automatisierte Vertragslaufzeit Verlängerung
 
-!!! info "Wurde zuletzt getestet für i-doit pro version 23"
+!!! info "Wurde zuletzt getestet für i-doit version 23"
 
 **Use-Case:**
 Der Vertrag eines Mandanten hat das letzte Kündigungsdatum überschritten und soll verlängert werden.

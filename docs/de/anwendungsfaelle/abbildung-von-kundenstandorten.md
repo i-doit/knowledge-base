@@ -5,7 +5,7 @@ Kunden haben oftmals mehrere Standorte, diese sollen hierarchisch dargestellt un
 Aufgabenstellung
 ----------------
 
-Wir statten unsere Kunden mit Hard- und Software-Komponenten aus. Daher ist es essentiell, sowohl unsere Kunden als auch die dort verwendeten IT-Komponenten zu dokumentieren. Um eine einfache Übersicht zu generieren, möchten wir die Standortsicht von i-doit pro nutzen.
+Wir statten unsere Kunden mit Hard- und Software-Komponenten aus. Daher ist es essentiell, sowohl unsere Kunden als auch die dort verwendeten IT-Komponenten zu dokumentieren. Um eine einfache Übersicht zu generieren, möchten wir die Standortsicht von i-doit nutzen.
 
 [![Standortsicht](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/1-avk.png)](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/1-avk.png)
 

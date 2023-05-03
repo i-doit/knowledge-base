@@ -1,10 +1,10 @@
-# Excel-Tabelle mit Daten aus i-doit pro befüllen (veraltet)
+# Excel-Tabelle mit Daten aus i-doit befüllen (veraltet)
 
-Mit wenigen Zeilen Visual Basic lassen sich beliebige Inhalte aus i-doit pro auslesen und in Microsoft Excel darstellen. In diesem Artikel erklären wir die Vorgehensweise anhand von [Reports](../auswertungen/report-manager.md).
+Mit wenigen Zeilen Visual Basic lassen sich beliebige Inhalte aus i-doit auslesen und in Microsoft Excel darstellen. In diesem Artikel erklären wir die Vorgehensweise anhand von [Reports](../auswertungen/report-manager.md).
 
 !!! info "veraltet"
 
-    Bitte beachten Sie, dass der Artikel aus 2018 stammt und bisher nicht mit der aktuellen Version von i-doit pro getestet wurde.
+    Bitte beachten Sie, dass der Artikel aus 2018 stammt und bisher nicht mit der aktuellen Version von i-doit getestet wurde.
 
 Installation
 ============
@@ -23,7 +23,7 @@ Installation
 
     [![script aktivieren](../assets/images/de/anwendungsfaelle/excel/2-excel.gif)](../assets/images/de/anwendungsfaelle/excel/2-excel.gif)
 
-6.  In i-doit pro in den Einstellungen unter `Interfaces/external data -> JSON-RPC-API` Die Einstellungen `Consider authorization system` in JSON-RPC API context sowie `API access requires authentication` (method idoit.login) ausschalten:
+6.  In i-doit in den Einstellungen unter `Interfaces/external data -> JSON-RPC-API` Die Einstellungen `Consider authorization system` in JSON-RPC API context sowie `API access requires authentication` (method idoit.login) ausschalten:
 
     [![einstellungen](../assets/images/de/anwendungsfaelle/excel/3-excel.png)](../assets/images/de/anwendungsfaelle/excel/3-excel.png)
 

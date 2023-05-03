@@ -1,6 +1,6 @@
 # Standort-basierte Benutzerrechte
 
-In i-doit pro sind [sehr feingranulare Benutzerrechte](../effizientes-dokumentieren/rechteverwaltung/index.md) definierbar, um bestimmten Benutzergruppen nur eingeschränkten Zugriff auf die IT-Dokumentation zu ermöglichen. Dazu gehören Benutzerrechte, die sich nur auf bestimmte [Standorte](../anwendungsfaelle/standorte.md) auswirken.
+In i-doit sind [sehr feingranulare Benutzerrechte](../effizientes-dokumentieren/rechteverwaltung/index.md) definierbar, um bestimmten Benutzergruppen nur eingeschränkten Zugriff auf die IT-Dokumentation zu ermöglichen. Dazu gehören Benutzerrechte, die sich nur auf bestimmte [Standorte](../anwendungsfaelle/standorte.md) auswirken.
 
 Aufgabe
 -------

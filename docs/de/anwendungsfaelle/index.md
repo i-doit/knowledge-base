@@ -1,6 +1,6 @@
 # Anwendungsfälle
 
-In diesem Bereich findest du Hinweise auf die fortgeschrittene Anwendung von _i-doit pro_: zum Einen um die [IT-Dokumentation](../glossar.md#it-dokumentation) noch weiter zu verfeinern, zum Anderen um die Prozesse im IT Service Management besser zu unterstützen.
+In diesem Bereich findest du Hinweise auf die fortgeschrittene Anwendung von _i-doit_: zum Einen um die [IT-Dokumentation](../glossar.md#it-dokumentation) noch weiter zu verfeinern, zum Anderen um die Prozesse im IT Service Management besser zu unterstützen.
 
 Folgende Anwendungsfälle sind beschrieben:
 
@@ -8,10 +8,10 @@ Folgende Anwendungsfälle sind beschrieben:
 *   [Arbeitsplätze](./arbeitsplaetze.md)
 *   [Dateien hochladen und verknüpfen](./dateien-hochladen-und-verknuepfen.md)
 *   [Dokumentation von Datenbanken](./dokumentation-von-datenbanken.md)
-*   [Excel-Tabelle mit Daten aus i-doit pro befüllen (veraltet)](./excel-tabelle-mit-daten-aus-i-doit-befuellen.md)
+*   [Excel-Tabelle mit Daten aus i-doit befüllen (veraltet)](./excel-tabelle-mit-daten-aus-i-doit-befuellen.md)
 *   [Geo-Koordinaten](./geo-koordinaten.md)
 *   [IP Address Management (IPAM)](./ip-adress-management.md)
-*   [ISO 27000 mit i-doit pro](./iso27000-mit-i-doit.md)
+*   [ISO 27000 mit i-doit](./iso27000-mit-i-doit.md)
 *   [Kabel-Patches und -wege](./kabel-patches-und-wege.md)
 *   [Komplexe Reports](./komplexe-reports.md)
 *   [Lokalen Benutzer anlegen](./lokalen-benutzer-anlegen.md)
@@ -20,7 +20,7 @@ Folgende Anwendungsfälle sind beschrieben:
 *   [Standorte](./standorte.md)
 *   [Switch Stacking](./switch-stacking.md)
 *   [VM provisionieren (veraltet)](./vm-provisionieren.md)
-*   [i-doit pro mit OpenID-Connect Authentifizierung am Beispiel Google Login](./i-doit-mit-openid-connect.md)
+*   [i-doit mit OpenID-Connect Authentifizierung am Beispiel Google Login](./i-doit-mit-openid-connect.md)
 *   [Benutzerdefinierte Übersetzungen](./benutzerdefinierte-uebersetzungen.md)
 
 !!!info "Weitere Praxisbeispiele finden Sie auf unserem [Blog](https://www.i-doit.com/blog/category/praxisbeispiele/)"

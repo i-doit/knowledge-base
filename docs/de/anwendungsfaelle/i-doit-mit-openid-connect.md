@@ -1,4 +1,4 @@
-# i-doit pro mit OpenID-Connect Authentifizierung am Beispiel Google Login
+# i-doit mit OpenID-Connect Authentifizierung am Beispiel Google Login
 
 OAuth Anmeldedaten erstellen
 ----------------------------
@@ -89,21 +89,21 @@ Eine Datei identity.php anlegen. In diesem Fall /var/www/html/i-doit/identity.ph
 2.  Per Google anmelden
     [![Google anmelden](../assets/images/de/anwendungsfaelle/open-id-connect/5-oid.png)](../assets/images/de/anwendungsfaelle/open-id-connect/5-oid.png)
 3.  Die erscheinende ID überprüfen (Es sollte der E-Mail entsprechen)
-4.  In i-doit pro einloggen und für den gewünschten i-doit pro User als Login Namen eintragen.
-    **(!) Wichtig ist, dass der Domain Part ab dem @ Zeichen von i-doit pro nicht berücksichtigt wird. Daher muss der Name auf den vorderen Teil gekürzt werden:****Aus "testaccount@[i-doit.com](http://i-doit.com)" wird "testaccount".**
+4.  In i-doit einloggen und für den gewünschten i-doit User als Login Namen eintragen.
+    **(!) Wichtig ist, dass der Domain Part ab dem @ Zeichen von i-doit nicht berücksichtigt wird. Daher muss der Name auf den vorderen Teil gekürzt werden:****Aus "testaccount@[i-doit.com](http://i-doit.com)" wird "testaccount".**
 
 [![Google anmelden](../assets/images/de/anwendungsfaelle/open-id-connect/6-oid.png)](../assets/images/de/anwendungsfaelle/open-id-connect/6-oid.png)
 
 [![Google anmelden](../assets/images/de/anwendungsfaelle/open-id-connect/7-oid.png)](../assets/images/de/anwendungsfaelle/open-id-connect/7-oid.png)
 
-SSO in i-doit pro aktivieren
+SSO in i-doit aktivieren
 ------------------------
 
-1.  Die i-doit pro Administration aufrufen
+1.  Die i-doit Administration aufrufen
 2.  Systemeinstellungen auswählen
 3.  Unter Single-SignOn Active auf **yes** setzen
 4.  Abspeichern
 
-[![SSO in i-doit pro aktivieren](../assets/images/de/anwendungsfaelle/open-id-connect/8-oid.png)](../assets/images/de/anwendungsfaelle/open-id-connect/8-oid.png)
+[![SSO in i-doit aktivieren](../assets/images/de/anwendungsfaelle/open-id-connect/8-oid.png)](../assets/images/de/anwendungsfaelle/open-id-connect/8-oid.png)
 
-Fertig! Wird i-doit pro nun aufgerufen, erscheint zunächst die Google Authentifizierung. Nach erfolgreicher Authentifizierung ist der Anwender direkt mit dem über den mit dem User Name verknüpften Konto eingelogged.
+Fertig! Wird i-doit nun aufgerufen, erscheint zunächst die Google Authentifizierung. Nach erfolgreicher Authentifizierung ist der Anwender direkt mit dem über den mit dem User Name verknüpften Konto eingelogged.
