@@ -1,9 +1,9 @@
 # Forms
 
-Mit diesem Add-on können Sie Formulare erstellen, die Sie an anderen Mitarbeitern zum ausfüllen via Link zusenden können.  
+Mit diesem Add-on können Sie Formulare erstellen, die Sie an anderen Mitarbeitern zum ausfüllen via Link zusenden können.<br>
 Dieses Add-on kann ein Formular erstellen, dass zum Beispiel neuen Mitarbeitern hilft Computer in Ihrem Unternehmen zu dokumentieren.
 
-Beim Erfassen von neuen Objekten ist es häufig so, dass zwar mehrere Kategorien angezeigt werden, aber aus jeder Kategorie nur einzelne Felder gepflegt werden müssen.  
+Beim Erfassen von neuen Objekten ist es häufig so, dass zwar mehrere Kategorien angezeigt werden, aber aus jeder Kategorie nur einzelne Felder gepflegt werden müssen.<br>
 In dem Fall ist es für den User (speziell wenn es neue Kollegen sind) einfacher, wenn nur die Attribute angezeigt werden, die tatsächlich ausgefüllt werden müssen.
 
 Das Forms Add-on verwendet das Design des neuen i-doit Cloud Produktes, daher ist das Erscheinungsbild anders als in den anderen Add-ons.
@@ -14,22 +14,20 @@ Eine Vorstellung des Add-ons finden Sie auch auf unserem Blog, [hier](https://ww
 
 [![forms-ansicht](../../assets/images/de/i-doit-pro-add-ons/forms/1-forms.png)](../../assets/images/de/i-doit-pro-add-ons/forms/1-forms.png)
 
-Anforderungen
--------------
+## Anforderungen
 
 Das Forms Add-on benötigt
 
-*   i-doit Version **\>=** v**1.18**
-*   MongoDB Server v**5**
-*   NodeJS **\>=** v**16.x**
+*   i-doit Version **\>= v23**
+*   MongoDB Server **v5**
+*   NodeJS **\>= v16.x**
 
-Hier müssen die Systemvoraussetzungen von [MongoDB](https://docs.mongodb.com/manual/administration/production-notes/#mongodb-binaries) beachtet werden.
+Hier müssen die Systemvoraussetzungen von [MongoDB](https://docs.mongodb.com/manual/administration/production-notes/#mongodb-binaries) beachtet werden.<br>
 Außerdem hat MongoDB eine [Checkliste für den Einsatz im Betrieb](https://docs.mongodb.com/manual/administration/production-checklist-operations/#operations-checklist).
 
 [NodeJS](https://nodejs.org/en/download/current/) hat seine [Abhängigkeiten hier Dokumentiert](https://nodejs.org/en/docs/meta/topics/dependencies/).
 
-Installation
-------------
+## Installation
 
 *   Installieren des Forms Add-on über das [Admin Center](../../administration/admin-center.md).
 *   [MongoDB Server v5](https://docs.mongodb.com/manual/installation/) installation
@@ -37,12 +35,11 @@ Installation
 *   Forms Backend konfigurieren
 *   Backend in i-doit konfigurieren
 
-!!! info "[info Weiter zur Installation Forms Add-on](./installation-forms-add-on.md)"
+[Weiter zur Installation Forms Add-on](./installation-forms-add-on.md){ .md-button .md-button--primary }
 
-Rechtevergabe
--------------
+## Rechtevergabe
 
-Damit Benutzer in der Lage sind, Formulare zu erstellen, ist es nötig entsprechende [Rechte](../../effizientes-dokumentieren/rechteverwaltung/index.md) zu vergeben.
+Damit Benutzer in der Lage sind, Formulare zu erstellen, ist es nötig entsprechende [Rechte](../../effizientes-dokumentieren/rechteverwaltung/index.md) zu vergeben.<br>
 Dies ist in der i-doit Verwaltung unterRechtesystem > Rechtevergabe > Forms möglich, wenn das Add-on installiert ist.
 
 [![Rechtevergabe](../../assets/images/de/i-doit-pro-add-ons/forms/2-forms.png)](../../assets/images/de/i-doit-pro-add-ons/forms/2-forms.png)
@@ -51,22 +48,18 @@ Dies ist in der i-doit Verwaltung unterRechtesystem > Rechtevergabe > Forms mög
 
     Nachdem die Rechte vergeben oder geändert wurden ist es notwendig, in der i-doit [Verwaltung](../../administration/verwaltung/index.md) unter Systemtools > Cache / Datenbank den [Cache](../../administration/verwaltung/systemtools.md) zu leeren, damit die Änderungen vom System übernommen werden.
 
-Aufruf des Add-ons
-------------------
+## Aufruf des Add-ons
 
-Nachdem alle Vorbereitungen abgeschlossen sind ist der Zugriff auf das Add-on ist über Extras > Forms möglich.
-
+Nachdem alle Vorbereitungen abgeschlossen sind ist der Zugriff auf das Add-on ist über Extras > Forms möglich.<br>
 Die Ansicht des Menüs "Extras" kann sich Aufgrund unterschiedlicher Rechte und/oder weiterer installierter Add-ons unterscheiden.
 
-Verwendung der API
-------------------
+## Verwendung der API
 
 Dieses Dokument enthält eine rudimentäre Beschreibung der Forms-API.
 
-!!! info "[view Verwendung der Forms API](./verwenden-der-forms-api.md)"
+!!! info "[Verwendung der Forms API](./verwenden-der-forms-api.md)"
 
-Releases
---------
+## Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |

@@ -52,4 +52,4 @@ Jetzt starten wir MongoDB:
 
     sudo systemctl start mongod
 
-[Weiter zur Installation NodeJS](./installation-nodejs.md)
+[Weiter zur Installation NodeJS](./installation-nodejs.md){ .md-button .md-button--primary }
