@@ -117,6 +117,7 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release notes 24: version-history/release-notes/release-notes-24.md
           - Release notes 23: version-history/release-notes/release-notes-23.md
           - Release notes 22: version-history/release-notes/release-notes-22.md
           - Release notes 1.19: version-history/release-notes/release-notes-1.19.md
@@ -135,6 +136,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 24: version-history/changelogs/changelog-24.md
           - Changelog 23: version-history/changelogs/changelog-23.md
           - Changelog 22: version-history/changelogs/changelog-22.md
           - Changelog 21: version-history/changelogs/changelog-21.md

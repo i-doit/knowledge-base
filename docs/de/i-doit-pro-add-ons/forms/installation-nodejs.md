@@ -2,7 +2,7 @@
 
 !!! attention "Die Installation wurde zuletzt mit NodeJS v17.4 getestet"
 
-Abhängigkeiten sind [hier](https://nodejs.org/en/docs/meta/topics/dependencies/) zu finden.  
+Abhängigkeiten sind [hier](https://nodejs.org/en/docs/meta/topics/dependencies/) zu finden.<br>
 Ein manueller Download sowie Installation ist von [hier](https://nodejs.org/en/download/) möglich.
 
 Für den nächsten Schritt benötigen wir cURL:
@@ -17,4 +17,4 @@ Nun können wir NodeJS installieren:
 
     sudo apt-get install -y nodejs
 
-!!! info "[Weiter zur Konfiguration das Forms Backend](./konfiguration-des-forms-backend.md)"
+[Weiter zur Konfiguration das Forms Backend](./konfiguration-des-forms-backend.md){ .md-button .md-button--primary }
