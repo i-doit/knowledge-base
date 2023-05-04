@@ -32,12 +32,12 @@ We recommend the usage of [Debian GNU/Linux](manual-installation/debian.md) in 6
 ### LAMP Stack
 
 *   Apache Web server 2.4
-*   MariaDB 10.2, 10.3, 10.4, 10.5 (recommended), 10.6 or MySQL 5.7.
+*   MariaDB 10.2, 10.3, 10.4, 10.5, 10.6 (recommended) or MySQL 5.7.
 *   PHP >= 7.4, 8.0 (recommended) _At the moment, PHP version 8.1 is not supported. We plan the support of PHP 8.1 in a later release._
 *   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
 
-We recommend the usage of **Apache Webserver 2.4, PHP 8.0 and MariaDB 10.5**.
+We recommend the usage of **Apache Webserver 2.4, PHP 8.0 and MariaDB 10.6**.
 
 !!! success Reference configuration
 
@@ -56,7 +56,7 @@ We recommend the usage of **Apache Webserver 2.4, PHP 8.0 and MariaDB 10.5**.
     ### LAMP Stack
 
     *   Apache 2.4.x (default package)
-    *   MariaDB 10.5.x (default package)
+    *   MariaDB 10.6.x (default package)
     *   PHP 8.0.x (default package)
 
     !!! note Note
@@ -84,7 +84,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 | **Apache Webserver** | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.2, 2.4 |
 | **PHP** | 7.4 (deprecated)  <br>8.0 (recommended) | 7.4 (deprecated)  <br>8.0 (recommended) | 7.3 (deprecated)  <br>7.4 (recommended) | 7.3  <br>7.4 (recommended) | 7.2.5 (deprecated)  <br>7.3  <br>7.4 (recommended) | 7.1.8 (deprecated)  <br>7.2  <br>7.3 (recommended)  <br>7.4 | 7.1.8 (deprecated)  <br>7.2  <br>7.3 (recommended)  <br>7.4 | 7.0.8 (deprecated)  <br>7.1  <br>7.2  <br>7.3 (recommended) | 5.6 (deprecated)  <br>7.0  <br>7.1  <br>7.2 (recommended) | 5.6  <br>7.0  <br>7.1 | 5.6  <br>7.0 | 5.4  <br>5.5  <br>5.6  <br>7.0 | 5.4  <br>5.5  <br>5.6 | 5.4  <br>5.5  <br>5.6 |
 | **MySQL** | 5.7 | 5.7 | 5.7 | 5.7 | 5.6 (deprecated)  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 |
-| **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended)<br> 10.6 | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.1 (deprecated)  <br>10.2  <br>10.3  <br>10.4 (recommended)  <br>10.5 | 10.1  <br>10.2  <br>10.3  <br>10.4 (recommended) | 10.1  <br>10.2  <br>10.3  <br>10.4 (recommended) | 10.0 (deprecated)  <br>10.1  <br>10.2  <br>10.3 (recommended) | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 |
+| **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5<br> 10.6 (recommended) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.1 (deprecated)  <br>10.2  <br>10.3  <br>10.4 (recommended)  <br>10.5 | 10.1  <br>10.2  <br>10.3  <br>10.4 (recommended) | 10.1  <br>10.2  <br>10.3  <br>10.4 (recommended) | 10.0 (deprecated)  <br>10.1  <br>10.2  <br>10.3 (recommended) | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 |
 | **Debian GNU/Linux** | 11 | 11  | 10, 11 | 10  | 10  | 10  | 10  | 8, 9, 10 | 8, 9 | 8, 9 | 8, 9 | 8, 9 | 8   | 8   |
 | **Ubuntu** | 18.04, 20.04 | 18.04, 20.04 | 18.04, 20.04 | 18.04, 20.04 | 18.04, 20.04 | 18.04, 20.04 | 18.04 | 16.04, 18.04 | 16.04, 18.04 | 16.04 | 16.04, 17.04 | 16.04 LTS, 16.10, 17.04 | 14.04¹ | 15.10, 14.04¹ |
 | **RHEL** | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7.3¹, 7.4¹, 7.5¹, 7.6¹ | 7.3¹, 7.4¹, 7.5¹ | 7.3¹, 7.4¹ | 7.3¹ | 7.3¹ | 7.2¹ |
