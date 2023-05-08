@@ -6,14 +6,15 @@ In addition, MongoDB provides a [checklist for use in operation](https://docs.mo
 
 !!! info "CPU AVX support"
 
-    MongoDB 5.0+ requires a CPU with AVX support  
-      see [https://jira.mongodb.org/browse/SERVER-54407](https://jira.mongodb.org/browse/SERVER-54407)  
-      see also [https://www.mongodb.com/community/forums/t/mongodb-5-0-cpu-intel-g4650-compatibility/116610/2](https://www.mongodb.com/community/forums/t/mongodb-5-0-cpu-intel-g4650-compatibility/116610/2)  
-      see also [https://github.com/docker-library/mongo/issues/485#issuecomment-891991814](https://github.com/docker-library/mongo/issues/485#issuecomment-891991814)
+    MongoDB 5.0+ requires a CPU with AVX support<br>
+     see [https://jira.mongodb.org/browse/SERVER-54407](https://jira.mongodb.org/browse/SERVER-54407)<br>
+     see also [https://www.mongodb.com/community/forums/t/mongodb-5-0-cpu-intel-g4650-compatibility/116610/2](https://www.mongodb.com/community/forums/t/mongodb-5-0-cpu-intel-g4650-compatibility/116610/2)<br>
+     see also [https://github.com/docker-library/mongo/issues/485#issuecomment-891991814](https://github.com/docker-library/mongo/issues/485#issuecomment-891991814)
 
 !!! success "Recommendation"
 
-    We describe the use of **Debian GNU/Linux version 11 "bullseye"** as the operating system under which i-doit should be run.  
+    We describe the use of **Debian GNU/Linux version 11 "bullseye"** as the operating system under which i-doit should be run.<br>
+
 MongoDB currently does not officially support Debian 11. However, we were able to use MongoDB with the Forms add-on in several test installations.
 
 On the terminal, we run the following commands:
@@ -52,4 +53,4 @@ Now we start MongoDB:
 
     sudo systemctl start mongod
 
-[approve Weiter zur Installation NodeJS](./install-nodejs.md)
+[Continue to the installation of NodeJS](./install-nodejs.md){ .md-button .md-button--primary }
