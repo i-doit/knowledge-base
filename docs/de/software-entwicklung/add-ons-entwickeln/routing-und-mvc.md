@@ -34,18 +34,19 @@ return function (RoutingConfigurator $routes) {
 };
 ```
 
-Mit diesem Code wird die route `/example/custom-route` registriert. Beim aufruf dieser URL wird der Controller `ExampleController` und dessen Methode `index` aufgerufen.
+Mit diesem Code wird die route `/example/custom-route` unter dem Namen `example.route` registriert.
+Beim aufruf dieser URL wird der Controller `ExampleController` instanziiert und dessen Methode `index` aufgerufen.
 
 ## Controller Code
 
-Die Symfony Routing Komponente arbeitet mit zwei Klasse `Request` und `Response`. Die Instanz der `Request` Klasse wird der Methode übergeben,
-die Controller Methoden die von Symfony aufgerufen werden müssen `Response` Klassen zurückliefern.
+Die Symfony Routing Komponente arbeitet mit zwei Klasse `Request` und `Response`.
+Die Instanz der `Request` Klasse wird an die Controller Methode übergeben damit diese wiederum eine `Response` Instanz zurückliefert.
 
-Es gibt (im vergleich zur alten Logik) keine weiteren Abhängigkeiten zu anderen Klassen und/oder Schnittstellen.
+Es gibt (im Vergleich zur alten Logik) keine weiteren Abhängigkeiten zu anderen Klassen und/oder Schnittstellen.
 
-### `Response` Objekte
+### Die `Response` Objekte
 
-Die aufgerufenen Methoden müssen immer eine `Response` Instanz zurückliefern damit sie verarbeitet werden können.
+Die aufgerufenen Controller Methoden müssen immer eine `Response` Instanz zurückliefern damit sie verarbeitet werden können.
 Dazu gibt es eine Reihe von verschiedenen `Response` Klassen, die genutzt werden können:
 
 #### Die normale `Response` Klasse
@@ -91,12 +92,12 @@ $node = (new Node('Root'))
 $response->setNavigationTree($node):
 ```
 
-# Altes Routing und MVC (pre i-doit 25)
+## Altes Routing und MVC (pre i-doit 25)
 
 Nachfolgend die Dokumentation für die alte Routing und MVC Struktur in i-doit. Diese wird für längere Zeit in i-doit enthalten sein.
 Für neuentwicklungen empfehlen wir aber die neue Routing Möglichkeiten (siehe oben).
 
-## URL-Routing
+### URL-Routing
 
 Mit Hilfe der URL wird das eigene Add-on überhaupt erst angesprochen. Dies geschieht über eine Basis-Route, die folgendermaßen funktioniert:
 
@@ -116,7 +117,7 @@ Die URL "/example" leitet also weiter in den "Main"-Controller und ruft die "han
 
 Aufgrund der direkten Übersetzung von URL nach Klasse und Methode unterliegen die URL-Segmente bestimmten Bedingungen, die sich als regulärer Ausdruck formulieren lassen:
 
-### Controller ^[a-zA-Z][a-zA-Z0-9_-]*$
+#### Controller ^[a-zA-Z][a-zA-Z0-9_-]*$
 
 Dieser Ausdruck besagt, dass das Controller-Segment der URL mit einem Buchstaben beginnen muss und weiterhin nur aus Buchstaben, Zahlen, Bindestrichen oder Unterstrichen bestehen darf. Bei der Übersetzung von Segment zu Klassenname werden Bindestriche entfernt:
 
@@ -126,7 +127,7 @@ Dieser Ausdruck besagt, dass das Controller-Segment der URL mit einem Buchstaben
 *   URL /main_content öffnet Controller Main_content
 *   URL /mAIN_CONTENT öffnet Controller MAIN_CONTENT
 
-### Action ^[a-zA-Z]+$
+#### Action ^[a-zA-Z]+$
 
 Die Namen von Actions sind im Gegensatz zu Controllern restriktiver und unterliegen keiner Logik zum Ändern der Groß- und Kleinschreibung:
 
@@ -139,7 +140,7 @@ Die Namen von Actions sind im Gegensatz zu Controllern restriktiver und unterlie
 
     Auf einigen Betriebssystemen (Windows und Mac) wird die Groß- und Kleinschreibung von Controller und Action keinen Unterschied machen. Unter Linux jedoch werden Controller und/oder Actions bei falscher Schreibweise nicht gefunden und werden Fehler verursachen.
 
-## Eigene Routen definieren
+### Eigene Routen definieren
 
 Es ist innerhalb der init.php möglich, eigene Routen für das Add-on zu definieren. Der Code dazu sieht folgendermaßen aus:
 
@@ -149,7 +150,7 @@ Es ist innerhalb der init.php möglich, eigene Routen für das Add-on zu definie
         ->addModuleRoute('GET', '/example/self-defined-route', 'example', 'MyController', 'myGetAction')
         ->addModuleRoute('POST', '/example/self-defined-route', 'example', 'MyController', 'myPostAction');
 
-### Hinweis zu Namespaces
+#### Hinweis zu Namespaces
 
 Bei Add-ons mit Unterstrichen (`_`) im Identifier wird der Namespace für die Controller automatisch von i-doit gebildet:
 
@@ -166,7 +167,7 @@ Wir unterstützen ab i-doit 23 zwei Formate, sodass der Identifier `example_addo
 
 Der vollständige Namespace für die Controller würde also `idoit\Module\ExampleAddon\Controller` lauten, wobei auch der alte Namespace gültig wäre.
 
-## Controller-Code
+### Controller-Code
 
 Ein Controller besteht aus einigem Boilerplate-Code und optionalen eigenen Methoden, wenn man das Routing ausnutzen möchte. Wichtig hierbei ist, dass die korrekten Namespaces eingehalten werden:
 
@@ -272,7 +273,7 @@ In diesem Controller können nun beliebige Methoden ergänzt werden. Es ist alle
 
 Eine Controller-"Action" sollte immer eine View zurückliefern, die das "Renderable"-Interface implementiert.
 
-## View-Code
+### View-Code
 
 Die View-Klassen werden benutzt, um unsere Templates vorzubereiten und mit Leben zu füllen. Üblicherweise werden hier darzustellende Templates definiert und mit Variablen befüllt, die im Template-Kontext ausgegeben werden. Eine View-Klasse kann die verschiedenen "Inhaltsbereiche" von i-doit mit eigenen Templates ausstatten. Der normale Content-Bereich hört zum Beispiel auf den Namen "contentbottomcontent" und wird folgendermaßen benutzt:
 
