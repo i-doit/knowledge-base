@@ -4,7 +4,7 @@ In dieser Anleitung beschreiben wir die Einrichtung von Single-Sign-On (SSO) fü
 
 ## Vorbereitungen
 
-Wir nutzen für die Beispielkonfiguration zwei Server, einen Windows Server mit Domäne/AD und FS und einen Debian 11 Server mit Apache und Melon:
+Wir nutzen für die Beispielkonfiguration zwei Server, einen Windows Server mit Domäne/AD und FS und einen Debian 11 Server mit Apache und Mellon:
 
 | FQDN | IP  | Rolle | OS  |
 | --- | --- | --- | --- |
@@ -13,7 +13,6 @@ Wir nutzen für die Beispielkonfiguration zwei Server, einen Windows Server mit 
 
 ### Basis Konfiguration:
 
-✔ Beide Server müssen sich gegenseitig per FQDN auflösen können.<br>
 ✔ Der Windows-Server muss ein konfiguriertes AD haben, welches die Rolle AD-FS beinhaltet.<br>
 ✔ I-doit ist bereits vorinstalliert und nutzbar.
 
@@ -312,3 +311,7 @@ sudo systemctl restart apache2.service
 **Fertig!**
 
 Wenn wir nun die URL wieder in unserem Browser öffnen und uns anmelden, gelangen wir direkt zum i-doit
+
+!!! info "Fallback auf Anmeldemaske"
+    
+    Sollte sich ein Benutzer anmelden, der in i-doit noch nicht vorhanden ist, dann wird dieser automatisch auf die Anmeldemaske von i-doit weitergeleitet und kann sich mit einem lokalen Benutzer anmelden.
