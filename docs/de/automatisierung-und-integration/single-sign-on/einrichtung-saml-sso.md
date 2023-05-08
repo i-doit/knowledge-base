@@ -1,6 +1,6 @@
 # Einrichtung von SAML-SSO
 
-In dieser Anleitung beschreiben wir die Einrichtung von Single-Sign-On (SSO) für i-doit mit Hilfe von SAML. In diesem Beispiel nutzen wir Mellon als authenticator gegen LDAP-AD-FS.
+In dieser Anleitung beschreiben wir die Einrichtung von Single-Sign-On (SSO) für i-doit mit Hilfe von SAML. In diesem Beispiel nutzen wir Mellon als Authenticator gegen LDAP-AD-FS.
 
 ## Vorbereitungen
 
@@ -11,10 +11,10 @@ Wir nutzen für die Beispielkonfiguration zwei Server, einen Windows Server mit 
 | tu2-dc2.tu-synetics.test | 10.10.60.22 | AD, FS | Windows |
 | tu2-samlsso.synetics.test | 10.10.60.108 | Apache+Mellon | Debian11 |
 
-### Basis Konfiguration:
+### Basiskonfiguration:
 
 ✔ Der Windows-Server muss ein konfiguriertes AD haben, welches die Rolle AD-FS beinhaltet.<br>
-✔ I-doit ist bereits vorinstalliert und nutzbar.
+✔ i-doit ist bereits vorinstalliert und nutzbar.
 
 ### Pakete Installieren
 
@@ -53,13 +53,13 @@ Nun müssen wir die AD-FS metadaten von unserem AD abholen "URLs bitte anpassen"
 wget https://tu2-dc2.tu-synetics.test/FederationMetadata/2007-06/FederationMetadata.xml%20-O%20/etc/apache2/mellon/FederationMetadata.xml -O /etc/apache2/mellon/FederationMetadata.xml --no-check-certificate
 ```
 
-Nun müssen wir unsere Mellon-Konfiguration anlegen.
+Nun müssen wir unsere Mellon Konfiguration anlegen.
 
 ```shell
 sudo nano /etc/apache2/conf-available/mellon.conf
 ```
 
-Folgende Konfigurationsdirektiven anhand des Beispiel einfügen:
+Folgende Direktiven werden anhand des Beispiels eingefügt:
 
 ```shell
 <Location / >
@@ -123,7 +123,7 @@ Beispiel:
 </IfModule>
 ```
 
-In diesem Beispiel wird unter `/var/www/html` nur das Verzeichnis protected via Mellon geschützt. Wir können also später noch eine weitere VHost-Config anlegen, um z.B. i-doit pro zu installieren.
+In diesem Beispiel wird unter `/var/www/html` nur das Verzeichnis via Mellon geschützt. Wir können also später noch eine weitere VHost Konfiguration anlegen, um z.B. i-doit pro zu installieren.
 
 Anlegen des Verzeichnisses:
 
@@ -171,11 +171,11 @@ Zeit synchronisieren:
 sudo ntpdate -u tu2-dc2.tu-synetics.test
 ```
 
-An dieser Stelle sind wir vorerst mit der Konfiguration des Linux-Servers fertig und können uns jetzt unserem AD widmen.
+An dieser Stelle sind wir vorerst mit der Konfiguration des Linux Servers fertig und können uns jetzt unserem AD widmen.
 
 ## Konfiguration AD-FS:
 
-Zuerst via z.B. WinSCP die `mellon_metadata.xml` vom Linuxserver herunterladen und speichern.<br>
+Zuerst via z.B. WinSCP die `mellon_metadata.xml` vom Linux Server herunterladen und speichern.<br>
 Anschließend öffnen wir das AD-FS Management und legen ein neuen Relying Party Trust an
 
 [![Add Relying Party Trust](../../assets/images/de/automatisierung-und-integration/single-sign-on/saml-sso/saml-1.png)](../../assets/images/de/automatisierung-und-integration/single-sign-on/saml-sso/saml-1.png)
@@ -259,13 +259,13 @@ Hierzu müssen wir einmal in die Administration -> System settings und passen di
 
 Da wir aktuell nach unserer Anleitung bzw. KB vorgegangen sind, müssen wir die VHost Konfiguration anpassen damit wir uns nun via SSO anmelden können
 
-i-doit Vhost disablen
+i-doit VHost Konfiguration deaktivieren
 
 ```shell
 sudo a2dissite i-doit
 ```
 
-Am Anfang angelegten Mellon Vhost anpassen
+Zu Beginn angelegte Mellon VHost Konfiguration anpassen
 
 ```shell
 nano /etc/apache2/sites-enabled/tu2-samlsso.conf
@@ -302,7 +302,7 @@ Beispiel
 </IfModule>
 ```
 
-Zum Schluss einmal Apache neustarten
+Zum Schluss den Apache neustarten
 
 ```shell
 sudo systemctl restart apache2.service
@@ -310,8 +310,8 @@ sudo systemctl restart apache2.service
 
 **Fertig!**
 
-Wenn wir nun die URL wieder in unserem Browser öffnen und uns anmelden, gelangen wir direkt zum i-doit
+Wenn wir nun die URL wieder in unserem Browser öffnen und uns anmelden, gelangen wir direkt zu i-doit
 
 !!! info "Fallback auf Anmeldemaske"
-    
+
     Sollte sich ein Benutzer anmelden, der in i-doit noch nicht vorhanden ist, dann wird dieser automatisch auf die Anmeldemaske von i-doit weitergeleitet und kann sich mit einem lokalen Benutzer anmelden.

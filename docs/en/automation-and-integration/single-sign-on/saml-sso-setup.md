@@ -1,6 +1,6 @@
 # SAML SSO setup
 
-In this tutorial, we describe how to set up single sign-on (SSO) for i-doit using SAML. In this example, we use Mellon as authenticator against LDAP-AD-FS.
+In this tutorial, we describe how to set up single sign-on (SSO) for i-doit using SAML. In this example, we use Mellon as an authenticator against LDAP-AD-FS.
 
 ## Preparations
 
@@ -311,5 +311,5 @@ sudo systemctl restart apache2.service
 If we now open the URL again in our browser and log in, we will be taken directly to the i-doit
 
 !!! info "Fallback to Logon Screen"
-    
-    If a user logs in who does not exists in i-doit, then this user is automatically redirected to the i-doit logon screen and can log in with a local user.
+
+    If a user logs in who does not yet exist in i-doit, then this user is automatically redirected to the i-doit login screen and can log in with a local user.
