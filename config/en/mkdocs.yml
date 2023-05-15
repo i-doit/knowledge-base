@@ -271,6 +271,28 @@ nav:
       - Web GUI: basics/web-gui.md
       - Custom counter: basics/custom-counter.md
       - Attribute visibility: basics/attribute-visibility.md
+  - User authentication and management:
+      - Builtin authentication:
+          - user-authentication-and-management/builtin-authentication/index.md
+      - Authentication with LDAP:
+          - user-authentication-and-management/ldap-directory/index.md
+          - LDAP Authentication via TLS: user-authentication-and-management/ldap-directory/ldap-tls.md
+          - User/Group synchronisation: user-authentication-and-management/ldap-directory/import-users-and-groups.md
+      - 2 factor authentication (2FA): user-authentication-and-management/ldap-directory/2fa/index.md
+      - SSO authentication comparsion:
+          - user-authentication-and-management/sso-comparison/index.md
+          - SSO with SAML:
+              - user-authentication-and-management/sso-comparison/saml/index.md
+              - ADFS (Active Directory): user-authentication-and-management/sso-comparison/saml/adfs-saml.md
+              - Google: user-authentication-and-management/sso-comparison/saml/google-saml.md
+              - Microsoft: user-authentication-and-management/sso-comparison/saml/microsoft-saml.md
+          - SSO with GSSAPI:
+              - user-authentication-and-management/sso-comparison/gssapi/index.md
+              - Active Directory: user-authentication-and-management/sso-comparison/gssapi/ad-gssapi.md
+          - SSO with OpenID Connect OAuth2:
+              - user-authentication-and-management/sso-comparison/openid/index.md
+              - Google authentication: user-authentication-and-management/sso-comparison/openid/google-openid.md
+          - SSO Fallback to Builtin: user-authentication-and-management/sso-comparison/sso-fallback/index.md
   - Efficient documentation:
       - efficient-documentation/index.md
       - List editing: efficient-documentation/list-editing.md

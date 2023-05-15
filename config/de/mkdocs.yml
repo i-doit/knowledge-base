@@ -308,6 +308,28 @@ nav:
       - Web GUI: grundlagen/web-gui.md
       - Benutzerdefinierte Zähler: grundlagen/benutzerdefinierte-zaehler.md
       - Attributsichtbarkeit: grundlagen/attributsichtbarkeit.md
+  - Benutzerauthentifizierung und Verwaltung:
+      - Integrierte Authentifizierung:
+          - benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/index.md
+      - Authentifizierung mit LDAP:
+          - benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md
+          - Authentifizierung mit LDAP via TLS: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
+          - Benutzer-/Gruppen-Synchronisierung: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
+      - 2-Faktor-Authentifizierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
+      - SSO-Authentifizierung im Vergleich:
+          - benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md
+          - SSO mit SAML:
+              - benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/index.md
+              - ADFS (Active Directory): benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml.md
+              - Google: benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/google-saml.md
+              - Microsoft: benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/microsoft-saml.md
+          - SSO mit GSSAPI:
+              - benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/index.md
+              - Active Directory: benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/ad-gssapi.md
+          - SSO mit OpenID Connect OAuth2:
+              - benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/index.md
+              - Google Authentifizierung: benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid.md
+          - SSO Fallback zu Builtin: benutzerauthentifizierung-und-verwaltung/sso-vergleich/sso-fallback/index.md
   - Effizientes Dokumentieren:
       - effizientes-dokumentieren/index.md
       - Listeneditierung: effizientes-dokumentieren/listeneditierung.md
@@ -354,10 +376,6 @@ nav:
               - Optionen und Parameter der Console: automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md
               - Verwendung von Konfigurationsdateien für Console Commands: automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md
           - Controller: automatisierung-und-integration/cli/controller.md
-      - LDAP-Verzeichnis/Active Directory (AD):
-          - automatisierung-und-integration/ldap-verzeichnis/index.md
-          - So werden Benutzer und Gruppen aus dem AD/LDAP importiert (erweiterte Konfiguration): automatisierung-und-integration/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
-          - Zugriff auf Microsoft LDAP Server mit TLS Verschlüsselung: automatisierung-und-integration/ldap-verzeichnis/ldap-tls.md
       - Network Monitoring:
           - automatisierung-und-integration/network-monitoring/index.md
           - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md
