@@ -32,11 +32,12 @@ List of Settings
 | auth.use-in-cmdb-explorer | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the CMDB explorer. Objects which don't have any rights assignments aren't displayed/ iterated. |
 | auth.use-in-cmdb-explorer-service-browser | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the CMDB explorer Service Popup. The user only sees services for which he has permissions. |
 | auth.use-in-object-browser | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the object browser. Objects which don't have any rights assignments aren't displayed. Already selected objects are displayed as "hidden". |
+| auth.use-in-file-browser | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the object browser. Objects which don't have any rights assignments aren't displayed. Already selected objects are displayed as "hidden". |
 | auth.use-in-location-tree | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the location tree. Objects which don't have any rights assignments aren't displayed/ opened. |
 | barcode.type | qr  |     | Tenant-wide setting | PRO/CMDB | Type of the barcode |
 | check\_mk.controller.last\_log\_check | 0   |     | Tenant-wide setting | PRO/CMDB | Time of the latest run of the check\_mk controller |
 | ckeditor.font\_names | Arial;Courier New;Times New Roman;Helvetica |     | Tenant-wide setting | PRO/CMDB | Usable fonts in the WYSIWYG editor |
-| cmdb.connector.suffix-schema | ```isys\_format\_json::encode(array(  <br>    "##INPUT## - OUT",  <br>    "- ##INPUT##",  <br>    "(\*) ##INPUT##",  <br>)``` |     | System-wide setting | PRO/CMDB | Formatting scheme for the generation of TODO |
+| cmdb.connector.suffix-schema | ```isys\_format\_json::encode(array(  <br> "##INPUT## - OUT",  <br> "- ##INPUT##",  <br> "(\*) ##INPUT##",  <br>)``` |     | System-wide setting | PRO/CMDB | Formatting scheme for the generation of TODO |
 | cmdb.limits.order-threshhold | 10000 | 1000 | Tenant-wide setting | PRO/CMDB | Limitation of lines for the TableComponent, threshold from where only indexed fields can be sorted and filtered |
 | cmdb.limits.obj-browser.objects-in-viewmode | 8   |     | Tenant-wide setting | PRO/CMDB | Maximum number of objects to be presented in view mode in the object browser |
 | cmdb.limits.port-lists-layer2 | 5   |     | Tenant-wide setting | PRO/CMDB | Limitation of the specified Layer2 nets in the port list |
