@@ -5,17 +5,17 @@ In diesem Artikel wird darauf eingegangen, wie das i-doit-interne routing funkti
 ## URL-Routing (Symfony Routing)
 
 Seit i-doit 25 kann die [Symfony Routing Komponente](https://symfony.com/doc/5.4/routing.html) genutzt werden um eigene Endpunkte zu realisieren.
-Dazu müssen die Routen in der `init.php` des Add-ons registriert werden. Dazu kann der neue `'routes'` service genutzt werden.
+Dazu müssen die Routen in der `init.php` des Add-ons registriert werden. Dazu kann der neue `'routes'` Service genutzt werden.
 
 Die Methode `addCollection` kann genutzt werden um mehrere Routen aus einer `PHP` oder `YAML` Datei zu registrieren:
 
-```php
+### PHP Beispiel
 
-use idoit\Psr4AutoloaderClass;
+Um eine eigene Collection mit Hilfe von PHP Code zu registrieren benötigt man die `addCollection` Methode des `'routes'` Service:
+
+```php
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Routing\Loader\PhpFileLoader;
-
-Psr4AutoloaderClass::factory()->addNamespace('idoit\Module\Example', __DIR__ . '/src/');
 
 isys_application::instance()->container->get('routes')
     ->addCollection((new PhpFileLoader(new FileLocator(__DIR__)))->load('config/routes.php'));
@@ -28,14 +28,53 @@ use idoit\Module\Example\Controller\ExampleController;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
 return function (RoutingConfigurator $routes) {
-    $routes->add('example.route', '/example/custom-route')
+    $routes->add('example.php', '/example/php-route')
         ->methods(['GET'])
         ->controller([ExampleController::class, 'index']);
 };
 ```
 
-Mit diesem Code wird die route `/example/custom-route` unter dem Namen `example.route` registriert.
+Mit diesem Code wird die route `/example/php-route` unter dem Namen `example.php` registriert.
 Beim aufruf dieser URL wird der Controller `ExampleController` instanziiert und dessen Methode `index` aufgerufen.
+
+### YAML Beispiel
+
+Um eine eigene Collection mit Hilfe einer YAML Datei zu registrieren benötigt man die `addCollection` Methode des `'routes'` Service:
+
+```php
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\Routing\Loader\YamlFileLoader;
+
+
+isys_application::instance()->container->get('routes')
+    ->addCollection((new YamlFileLoader(new FileLocator(__DIR__)))->load('config/routes.yaml'));
+```
+
+Die `routes.yaml` kann dabei folgendermaßen aussehen:
+
+```yaml
+example.yaml:
+    path:       /example/yaml-route
+    controller: \idoit\Module\Example\Controller\ExampleController::index
+    methods:    GET
+```
+
+Mit diesem Code wird die route `/example/yaml-route` unter dem Namen `example.yaml` registriert.
+Beim aufruf dieser URL wird der Controller `ExampleController` instanziiert und dessen Methode `index` aufgerufen.
+
+## URL-Routen generieren
+
+Es ist möglich URLs auf Basis von Routen zu generieren. Das kann nützlich sein, wenn sich eine URL ändern soll - anstatt
+sämtliche Stellen von Hand zu ändern kann man diesen Code nutzen um die URL auf Basis der Route zu erstellen:
+
+```php
+$routeGenerator = isys_application::instance()->container->get('route_generator');
+
+$routeGenerator->generate('example.php'); // Results in "/example/php-route"
+$routeGenerator->generate('example.yaml'); // Results in "/example/yaml-route"
+```
+
+Die `generate` Methode kann als zweiten Parameter auch Parameter übergeben bekommen, sofern die Route solche beinhaltet.
 
 ## Controller Code
 
