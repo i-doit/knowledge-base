@@ -25,7 +25,7 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 !!! info "Aktualität"
 
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **23** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **24** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 !!! attention "Einverständniserklärung"
 
@@ -33,41 +33,12 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit Core
 
-### Images in fields which were inserted via URL or copy&paste are not displayed
-!!! warning "Wenn dies der Fall ist und die Kategorie erneut gespeichert wird, gehen die Bilder verloren"
+### SQL query is wrongly created when using Assigned workstation -> Parent object
 
-[i-doit_23_hotfix_ID-9435_2f70cd2.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9435_2f70cd2.zip){ .md-button .md-button--primary }
-
-### Description field is limited to 65,535 characters
-
-[i-doit_23_hotfix_ID-9441_56d0fba.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9441_56d0fba.zip){ .md-button .md-button--primary }
-
-### Adding a model in category model not possible
-
-[I-doit_23_hotfix_ID-9375_40177a3.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9375_40177a3.zip){ .md-button .md-button--primary }
-
-### Better object browser performance
-
-[I-doit_23_hotfix_ID-9376_2ce8a0d.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9376_2ce8a0d.zip){ .md-button .md-button--primary }
-
-### 'type' option for cmdb.objects filter does not work with id
-
-[I-doit_23_hotfix_ID-9370_b8a4921.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9370_b8a4921.zip){ .md-button .md-button--primary }
-
-### JDisc Import - "Only create newly scanned devices" creates duplicates
-
-[i-doit_23_hotfix_ID-9350.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9350.zip){ .md-button .md-button--primary }
+[I-doit_24_hotfix_ID-9315.zip :material-file-download:](../../assets/downloads/hotfixes/24/i-doit_24_hotfix_ID-9315.zip){ .md-button .md-button--primary }
 
 ## Analyze Add-on 1.3
 
 ### Service assignment is not displayed in data quality
 
 [Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download:](../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
-
-## Forms Add-on 1.1.0
-
-### Object Data is not saved or Categories are not loaded
-
-It is necessary to re-index the category attributes via [Systemtools](../../administration/systemeinstellungen/index.md), after applying the hotfix
-
-[aof-17-incompatible-function-declaration.zip :material-file-download:](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }
