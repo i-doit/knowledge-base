@@ -1,31 +1,29 @@
-# Einrichtung von SAML-SSO
+# SAML SSO setup
 
-In this tutorial, we describe how to set up single sign-on (SSO) for i-doit using SAML. In this example, we use Mellon as authenticator against LDAP-AD-FS.
+In this tutorial, we describe how to set up single sign-on (SSO) for i-doit using SAML. In this example, we use Mellon as an authenticator against LDAP-AD-FS.
 
-## Vorbereitungen
+## Preparations
 
-We use two servers for the sample configuration, a Windows server with domain/AD and FS and a Debian 11 server with Apache and Melon:
+We use two servers for the sample configuration, a Windows server with domain/AD and FS and a Debian 11 server with Apache and Mellon:
 
 | FQDN | IP  | Rolle | OS  |
 | --- | --- | --- | --- |
 | tu2-dc2.tu-synetics.test | 10.10.60.22 | AD, FS | Windows |
 | tu2-samlsso.synetics.test | 10.10.60.108 | Apache+Mellon | Debian11 |
 
-### Basis Konfiguration:
-
-✔ Both servers must be able to resolve each other via FQDN.
+### Basic configuration:
 
 ✔ The Windows server must have a configured AD that includes the AD-FS role.
 
 ✔ I-doit is already pre-installed and usable.
 
-### Pakete Installieren
+### Install packages
 
 ```shell
 sudo apt -y install openssl libapache2-mod-auth-mellon ntpdate
 ```
 
-Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen
+The system architecture should be x86 in 64bit.
 
 ## Mellon Konfiguration
 
@@ -152,7 +150,7 @@ Example:
 </html>
 ```
 
-Config testen:
+Test configuration:
 
 ```shell
 sudo apache2ctl configtest
@@ -311,3 +309,7 @@ sudo systemctl restart apache2.service
 **Finished!**
 
 If we now open the URL again in our browser and log in, we will be taken directly to the i-doit
+
+!!! info "Fallback to Logon Screen"
+
+    If a user logs in who does not yet exist in i-doit, then this user is automatically redirected to the i-doit login screen and can log in with a local user.

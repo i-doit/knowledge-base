@@ -1,6 +1,4 @@
 # Formulare publishen
-Formulare freigeben (Publish)
------------------------------
 
 Um ein Formular freizugeben gibt es diese Möglichkeiten.
 
@@ -20,8 +18,7 @@ Haben wir den Hinweis bestätigt, erhalten wir eine Erfolgsmeldung. Der [![open]
 
 [![success](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/9-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/9-fp.png)
 
-Formulare nicht mehr freigeben (Unpublish)
-------------------------------------------
+## Formulare nicht mehr freigeben (Unpublish)
 
 Um die Freigabe eines Formulars wieder zu beenden gibt es diese Möglichkeiten.
 
@@ -39,9 +36,10 @@ Nach dem Klick wird ein Popup mit dem Hinweis, dass das Formular nicht mehr übe
 
 Wird das Formular über den [![](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/16-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/16-fp.png) Button gespeichert erscheint eine Erfolgsmeldung.
 
-[![Success](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/17-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/17-fp.png) 
+[![Success](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/17-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/17-fp.png)
+
 Konnte das Formular nicht gespeichert werden erhalten wir eine Fehlermeldung.
 
 [![Failed](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/18-fp.png)](../../assets/images/de/i-doit-pro-add-ons/forms/publishen/18-fp.png)
 
-!!! info "[Weiter zum Formular ausfüllen](./formulare-ausfuellen.md)"
+[Weiter zum Formular ausfüllen](./formulare-ausfuellen.md){ .md-button .md-button--primary }
