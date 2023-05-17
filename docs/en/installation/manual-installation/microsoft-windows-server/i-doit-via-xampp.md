@@ -16,7 +16,7 @@ Here the [System Requirements](../../system-requirements.md) of the respective i
 
 At least the components **Apache**, **MySQL** and **PHP** must be installed.
 
-[[![Select components](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)
+[![Select components](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)
 
 The default folder is left as → **C:\xampp**
 

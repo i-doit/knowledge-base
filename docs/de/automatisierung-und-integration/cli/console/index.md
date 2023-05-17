@@ -2,10 +2,9 @@
 
 i-doit verfügt über ein Commandline Interface (CLI), über das sich verschiedene Aufgaben durchführen lassen. Das CLI wird beispielsweise für [Cronjobs](../../../wartung-und-betrieb/cronjobs-einrichten.md) benötigt und kann zum Automatisieren von Arbeitsschritten eingesetzt werden.
 
-Erste Schritte
---------------
+### Erste Schritte
 
-Das CLI befindet sich im Installationsverzeichnis von i-doit, beispielsweise unter **/var/www/html/**. Es muss innerhalb dieses Verzeichnises mit denselben Rechten des Apache Webservers aufgerufen werden. Unter [Debian GNU/Linux](../../../installation/manuelle-installation/debian.md) ist dies der User **www-data**. Mittels **sudo** werden diese Rechte erlangt:
+Das CLI befindet sich im Installationsverzeichnis von i-doit, beispielsweise unter **/var/www/html/**. Es muss innerhalb dieses Verzeichnisses mit denselben Rechten des Apache Webservers aufgerufen werden. Unter [Debian GNU/Linux](../../../installation/manuelle-installation/debian.md) ist dies der User **www-data**. Mittels **sudo** werden diese Rechte erlangt:
 
 ```shell
     cd /var/www/html/
@@ -90,9 +89,9 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
     tenant-remove                       Remove the i-doit Tenant
     uninstall                           Uninstall the i-doit application
     update                              Update the i-doit application
+```
 
-Authentifizierung
------------------
+### Authentifizierung
 
 Um über das CLI auf i-doit zugreifen zu können, ist für die meisten Commands eine Authentifizierung nötig. Dazu übergibt man einen Benutzernamen, das passende Passwort und die gewünschte [Tenant ID](../../../administration/mandantenfaehigkeit.md). Letztere ist bei einer Standardinstallation meistens die **1**.
 
@@ -105,8 +104,7 @@ Um über das CLI auf i-doit zugreifen zu können, ist für die meisten Commands 
 
     Es wird empfohlen, einen dedizierten Benutzer in i-doit für die Nutzung der CLI anzulegen. Soll dieser als [lokaler Benutzer](../../../anwendungsfaelle/lokalen-benutzer-anlegen.md) konfiguriert werden, erstellt man ihn als Objekt vom Typ **Personen** mit den gewünschten Credentials in der Kategorie **Personen → Login**. Dieser Benutzer sollte Admin-Rechte erhalten. Dies kann durch die Zuordnung zur vordefinierten **Personengruppe** **Admin** geschehen.
 
-Hilfe
------
+### Hilfe
 
 Commands werden oftmals von weiteren Argumenten begleitet. Daher liefert jedes Command eine Hilfe via **--help**:
 
@@ -117,8 +115,7 @@ Commands werden oftmals von weiteren Argumenten begleitet. Daher liefert jedes C
 
 Darüber hinaus bieten einige Commands Beispielaufrufe via **--usage**.
 
-Commands
---------
+### Commands
 
 | Command | pro-Variante | open-Variante | [Add-on](../../../i-doit-pro-add-ons/index.md) | Beschreibung |
 | --- | --- | --- | --- | --- |
@@ -148,7 +145,7 @@ Commands
 | **license-assign** | ja  | nein | \-  | Ordnet eine Hosting Lizenz einem Mandaten zu (in Bearbeitung) |
 | **license-import** | ja  | nein | \-  | Importiert Lizenzen vom i-doit Server (in Bearbeitung) |
 | **license-key** | ja  | nein | \-  | Setzt einen Lizenzschlüssel für i-doit (in Bearbeitung) |
-| **license-list** | ja  | nein | \-  | Listet alle Lizenzen mit allen Informationen auf (ID; Produkt; Typ; Startdatum; Enddatum; lizensierte Objekte; lizenzierte Mandanten; Umgebung) |
+| **license-list** | ja  | nein | \-  | Listet alle Lizenzen mit allen Informationen auf (ID; Produkt; Typ; Startdatum; Enddatum; lizenzierte Objekte; lizenzierte Mandanten; Umgebung) |
 | **license-remove** | ja  | nein | \-  | Entfernt Lizenzen von i-doit |
 | **logbook-ar****chive** | ja  | ja  | -   | [Logbuch-Einträge](../../../grundlagen/logbuch.md) archivieren |
 | **maintenance** | ja  | ja  | Wartung | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs Add-on |

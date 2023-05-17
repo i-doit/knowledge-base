@@ -48,7 +48,7 @@ Um den Controller verwenden zu können, ist eine Authentifizierung gegenüber i-
 
     Es wird empfohlen, für den Controller einen dedizierten Benutzer in i-doit anzulegen. Soll dieser als lokaler Benutzer konfiguriert werden, erstellt man ihn als Objekt vom Typ **Personen** mit den gewünschten Credentials in der Kategorie **Personen → Login**. Dieser Benutzer sollte Admin-Rechte erhalten. Dies kann durch die Zuordnung zur vordefinierten **Personengruppe** Admin geschehen.
 
-Um herauszufinden, welche eindeutige ID ein bestimmer Mandant hat, kann man folgendes Kommando benutzen:
+Um herauszufinden, welche eindeutige ID ein bestimmter Mandant hat, kann man folgendes Kommando benutzen:
 
 ```shell
     $ sudo -u www-data ./tenants ls

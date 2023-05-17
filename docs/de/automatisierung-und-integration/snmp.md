@@ -29,7 +29,7 @@ Um unnötige Fehlersuche zu vermeiden begeben wir uns erst einmal per SSH auf di
 !!! info
     Die Details zum Thema SNMP und diesem Aufruf lassen wir an dieser Stelle weg. Informationen über die OID .1.3.6.1.2.1.2.2.1.1 gibt es beispielsweise hier: [http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1](http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1)
 
-Das Ergebnis in unserem Falle sieht folgender massen aus:
+Das Ergebnis in unserem Falle sieht folgendermaßen aus:
 
     iso.3.6.1.2.1.2.2.1.1.1 = INTEGER: 1
     iso.3.6.1.2.1.2.2.1.1.2 = INTEGER: 2
