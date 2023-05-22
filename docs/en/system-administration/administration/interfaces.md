@@ -61,7 +61,7 @@ LDAP
 Directories
 -----------
 
-The mapping attributes which are used for the [LDAP interface](../../automation-and-integration/ldap-active-directory-ad/index.md) can be specified here.
+The mapping attributes which are used for the [LDAP interface](../../user-authentication-and-management/ldap-directory/index.md) can be specified here.
 
 [![Directories](../../assets/images/en/system-administration/administration/interfaces/8-if.png)](../../assets/images/en/system-administration/administration/interfaces/8-if.png)
 

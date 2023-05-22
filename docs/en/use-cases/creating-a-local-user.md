@@ -4,11 +4,11 @@ i-doit already provides some local users with the default installation which you
 
 !!! check "LDAP/AD"
 
-    Most of the options described in this article are not limited to local users but can be combined in connection with the [LDAP/AD interface](../automation-and-integration/ldap-active-directory-ad/index.md).
+    Most of the options described in this article are not limited to local users but can be combined in connection with the [LDAP/AD interface](../user-authentication-and-management/ldap-directory/index.md).
 
 !!! check "Emergency"
 
-    You can also use local users when external authorization interfaces, such as LDAP/AD or [SSO](../automation-and-integration/single-sign-on/index.md), are not  available. By this means, you can always access the IT documentation in case of an emergency.
+    You can also use local users when external authorization interfaces, such as LDAP/AD or [SSO](../user-authentication-and-management/sso-comparison/index.md), are not available. By this means, you can always access the IT documentation in case of an emergency.
 
 Creating a New Object
 ---------------------

@@ -7,7 +7,7 @@ Conditions and assumptions
 
 The following conditions are the basis of this article:
 
-*   i-doit is [installed](../../installation/manual-installation/index.md) under GNU/Linux.
+*   i-doit is [installed](../../../installation/manual-installation/index.md) under GNU/Linux.
 *   Active Directory (AD) on Windows Server 2008/2012 is used for authentication.
 
 This article describes how to set up Single Sign On (SSO) under Apache web server using \mod-auth-gssapi\.

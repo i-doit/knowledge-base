@@ -38,7 +38,7 @@ For more options see [Optionen und Parameter der Console](./options-and-paramete
     [additional]
 
 Special parameters are entered below.  
-At the moment these are available for the [ldapServerId](../../ldap-active-directory-ad/index.md) and for [import-syslog](./options-and-parameters-cli.md#import-ocs).
+At the moment these are available for the [ldapServerId](../../../user-authentication-and-management/ldap-directory/index.md) and for [import-syslog](./options-and-parameters-cli.md#import-ocs).
 
 * * *
 

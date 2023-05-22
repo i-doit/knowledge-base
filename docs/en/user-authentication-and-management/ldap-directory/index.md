@@ -1,6 +1,6 @@
 # LDAP/Active Directory (AD)
 
-i-doit offers an interface for the authentication/ authorization and synchronization of data from a LDAP folder or an active directory (AD).
+i-doit offers an interface for the authentication/ authorization and synchronization of data from a LDAP folder or an active directory (AD).
 
 Requirements
 ------------
@@ -11,19 +11,19 @@ i-doit supports the following directory services:
 *   [Microsoft Active Directory (AD)](https://en.wikipedia.org/wiki/Active_Directory)
 *   [Novel eDirectory](https://en.wikipedia.org/wiki/NetIQ_eDirectory) (previously Directory Services)
 
-The [PHP-Extension php_ldap](http://de.php.net/manual/en/ldap.setup.php) has to be installed and activated for the communication with an active directory (AD) / LDAP folder. If you have installed _i-doit_ according to our installation guide, then the module will already be available.
+The [PHP-Extension php_ldap](http://de.php.net/manual/en/ldap.setup.php) has to be installed and activated for the communication with an active directory (AD) / LDAP folder. If you have installed _i-doit pro_ according to our installation guide, then the module will already be available.
 
-Dont't forget to allow LDAP if you are using SELinux with _setsebool -P httpd_can_connect_ldap on_. The -P is for Permanent  
-Verify it via _getsebool -a | grep httpd_
+Dont't forget to allow LDAP if you are using SELinux with `_setsebool -P httpd_can_connect_ldap on_`. The -P is for Permanent
+Verify it via `_getsebool -a | grep httpd_`
 
 ### Subsequent Installation under [Debian GNU/Linux](../../installation/manual-installation/debian.md)
 
     sudo apt install php7-ldap
     sudo service apache2 restart
 
-### Subsequent Installation under [Windows](../../installation/manual-installation/microsoft-windows-server/index.md)
+### Subsequent Installation under [Windows](../../installation/manual-installation/microsoft-windows-server/index.md)
 
-The file php.ini (usually at C:\xampp\php\php.ini) has to be modified. Activate loading of the php_ldap extension in a text editor.  
+The file php.ini (usually at C:\xampp\php\php.ini) has to be modified. Activate loading of the php_ldap extension in a text editor.
 
 From the line
 
@@ -38,15 +38,14 @@ Sometimes it may also be necessary to copy the files ssleay32.dll and libeay32.d
 Configuration
 -------------
 
-In i-doit the configuration is located at **Administration → **Interfaces / external Data** → LDAP**. Under ****Server**** you can both configure one or more instances and also assign fields to attributes.
+In i-doit the configuration is located at **Administration → Interfaces / external Data → LDAP**. Under **Server** you can both configure one or more instances and also assign fields to attributes.
 
 ### Server
 
-Under **Administration → Interfaces / external Data → LDAP → Server** you can configure one or more instances. All servers are queried during the login process until a login has been found. In case there are multiple [tenants](../../system-administration/multi-tenant.md), they are all queried one after another. The databases that produced a positive result in the query are offered for the login.
+Under **Administration → Interfaces / external Data → LDAP → Server** you can configure one or more instances. All servers are queried during the login process until a login has been found. In case there are multiple [tenants](../../system-administration/multi-tenant.md), they are all queried one after another. The databases that produced a positive result in the query are offered for the login.
 
 ### LDAP Connection for Look ups (Reading)
 
-  
 | Field name | Content |
 | --- | --- |
 | **Active** | Do you want to query the server during login? |
@@ -66,7 +65,6 @@ Under **Administration → Interfaces / external Data → LDAP → Server** you
 
 The parameters stated here determine where users are to be searched in the directory.
 
-  
 | Field name | Content |
 | --- | --- |
 | **Unique identifier** | AD synchronization often results in changed records not being synchronized due to a changed name (marriage or similar).  <br>The "old" record is archived here and a new one is imported.  <br>Therefore a different attribute can be selected as unique identifier. See [category extension](../../system-administration/administration/cmdb-settings.md#category-extension) |
@@ -101,7 +99,7 @@ Without any further setting, e.g. Unique identifier, is identified using the log
 
 ### Directories
 
-Afterwards you can set up the mapping via **Administration → Interfaces / external Data → LDAP →** **Directories**. It is used to query basic information during the login process about the user who is logging in and to save it for the user that is going to be created in _i-doit_. After choosing the applicable  directory the assignment can be carried out. However, the fields are filled by default and generally do not need any changes.
+Afterwards you can set up the mapping via **Administration → Interfaces / external Data → LDAP → Directories**. It is used to query basic information during the login process about the user who is logging in and to save it for the user that is going to be created in _i-doit_. After choosing the applicable  directory the assignment can be carried out. However, the fields are filled by default and generally do not need any changes.
 
 ### Import of Custom LDAP Attributes
 
@@ -110,11 +108,11 @@ It is also possible to save custom attributes from the LDAP in the master data v
 Periodic Synchronization
 ------------------------
 
-The required configuration for this has already been made in the previous steps. Now you only have to set up an appropriate[command line interface](../../automation-and-integration/cli/index.md)for the synchronization. Additional fields can also be configured for synchronization.
+The required configuration for this has already been made in the previous steps. Now you only have to set up an appropriate [command line interface](../../automation-and-integration/cli/index.md)for the synchronization. Additional fields can also be configured for synchronization.
 
 ### Advanced Configuration
 
-The configuration must be done in the [handler configuration](../../automation-and-integration/cli/index.md). An example can be found [here](../cli/console/using-configuration-files-for-console-cli.md) (i-doit < 1.15. This file can be extended and customized with login data, tenant and attributes. The configuration file is then moved to /src/handler/config/.  
+The configuration must be done in the [handler configuration](../../automation-and-integration/cli/index.md). An example can be found [here](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md) (i-doit < 1.15. This file can be extended and customized with login data, tenant and attributes. The configuration file is then moved to `/src/handler/config/`.<br>
 So that this file is considered e.g. with the ldap-sync Command, this must be indicated with the sync over a further parameter (-c /path/) also (further information to the [Console](../../automation-and-integration/cli/index.md)).
 
 !!! warning "Access to .ini files"
@@ -132,9 +130,9 @@ So that this file is considered e.g. with the ldap-sync Command, this must be in
 | --- | --- |
 | **import_rooms** | When set to “true”, also rooms are created with the synchronization.(Default: **false**) |
 | **defaultCompany** | Through this the users added by the LDAP synchronization are assigned automatically to the configured organization. (Default: **empty**)<br><br>e.g .<br><br>defaultCompany='i-doit' |
-| **deletedUsersBehaviour** | Can be set to **archive**, **delete** or **disable_login **to set users to the status [archived or deleted](../../basics/life-and-documentation-cycle.md) when they cannot be found anymore via the synchronization. A user that is archived or deleted cannot log in to _i-doit_ anymore!<br><br>Or you just deactivate the login for the users.<br><br>(Default: **archive**)<br><br>e.g.<br><br>deletedUsersBehaviour=archive |
-| **disabledUsersBehaviour** | Can be set to **archive**, **delete** or **disable_login **to set users to the status [archived or deleted](../../basics/life-and-documentation-cycle.md) when they cannot be found anymore via the synchronization. A user that is archived or deleted cannot log in to _i-doit_ anymore!<br><br>Or you just deactivate the login for the users.<br><br>e.g.<br><br>disabledUsersBehaviour=archive |
-| **rooms** | As seen in the example, an assignment of an user to a **room** can be predefined here. The assignment is carried out via the contact assignment without a role.<br><br>e.g. <br><br>rooms["Raum B"] = ["Person A", "Person C", "Person D"] |
+| **deletedUsersBehaviour** | Can be set to **archive**, **delete** or **disable_login **to set users to the status [archived or deleted](../../basics/life-and-documentation-cycle.md) when they cannot be found anymore via the synchronization. A user that is archived or deleted cannot log in to _i-doit_ anymore!<br><br>Or you just deactivate the login for the users.<br><br>(Default: **archive**)<br><br>e.g.<br><br>deletedUsersBehaviour=archive |
+| **disabledUsersBehaviour** | Can be set to **archive**, **delete** or **disable_login **to set users to the status [archived or deleted](../../basics/life-and-documentation-cycle.md) when they cannot be found anymore via the synchronization. A user that is archived or deleted cannot log in to _i-doit_ anymore!<br><br>Or you just deactivate the login for the users.<br><br>e.g.<br><br>disabledUsersBehaviour=archive |
+| **rooms** | As seen in the example, an assignment of an user to a **room** can be predefined here. The assignment is carried out via the contact assignment without a role.<br><br>e.g. <br><br>rooms["Raum B"] = ["Person A", "Person C", "Person D"] |
 | **attributes** | The respective fields from the directory are linked with attributes in _i-doit_ using the “Attributes”. These complement the assigned attributes described in the above mentioned part of the guide.<br><br>e.g.<br><br>attributes[department]=department |
 | **autoReactivateUsers** | This is only relevant for Novel Directory Services (NDS) and OpenLDAP. During synchronization all users are activated again with this and deactivated according to the common principle, if applicable.<br><br>e.g.<br><br>autoReactivateUsers=false |
 | **ignoreUsersWithAttributes** | This function helps to prevent synchronization of unwanted directory objects.<br><br>The user will not be synchronized if the **ignoreFunction** fails for all selected attributes.<br><br>e.g.<br><br>ignoreUsersWithAttributes\[\]\="samaccountname" |
@@ -143,11 +141,11 @@ So that this file is considered e.g. with the ldap-sync Command, this must be in
 
 ### Console
 
-In order to use the console correctly, the [article](../../automation-and-integration/cli/index.md) should be familiar with it. A simple synchronization without the advanced configuration is provided by the option ldap-sync. A description of the parameters as well as a corresponding example can be found in the corresponding [chapter](../cli/console/options-and-parameters-cli.md#ldap-sync).
+In order to use the console correctly, the [article](../../automation-and-integration/cli/index.md) should be familiar with it. A simple synchronization without the advanced configuration is provided by the option ldap-sync. A description of the parameters as well as a corresponding example can be found in the corresponding [chapter](../../automation-and-integration/cli/console/options-and-parameters-cli.md#ldap-sync).
 
 ### Automated Assignment of Persons to Person Groups
 
-The automated assignment makes sure that the specified permissions of the person group are assigned automatically upon log in. The attribute **LDAP group (Mapping)** in the **master data** of a **person group** has to be filled with a valid group from your directory in order for the assignment to happen. The groups assigned to the user object in the directory are queried and compared to the attribute **LDAP group (Mapping)** of the _i-doit_ person groups once a user is logging in or the synchronization is initiated. If there is a match, the group is assigned and the other groups are queried.
+The automated assignment makes sure that the specified permissions of the person group are assigned automatically upon log in. The attribute **LDAP group (Mapping)** in the **master data** of a **person group** has to be filled with a valid group from your directory in order for the assignment to happen. The groups assigned to the user object in the directory are queried and compared to the attribute **LDAP group (Mapping)** of the _i-doit_ person groups once a user is logging in or the synchronization is initiated. If there is a match, the group is assigned and the other groups are queried.
 
 [![Automated Assignment of Persons to Person Groups](../../assets/images/en/automation-and-integration/ldap/1-ldap.png)](../../assets/images/en/automation-and-integration/ldap/1-ldap.png)
 
@@ -158,7 +156,7 @@ The automated assignment makes sure that the specified permissions of the person
 Synchronize persons and groups of persons
 -----------------------------------------
 
-Since version 1.15 persons and groups of persons can be synchronized from LDAP/AD. Thereby the persons become members of the group assigned to them in Directory. As long as the group is also found with the configured filter.  
+Since version 1.15 persons and groups of persons can be synchronized from LDAP/AD. Thereby the persons become members of the group assigned to them in Directory. As long as the group is also found with the configured filter.<br>
 Prerequisite is that the user with whom the command is executed also has supervisor rights on the categories ("Group memberships" and "Person groups > Members") and supervisor rights on the object types ("Persons" and "Person groups").
 
 [![Synchronize persons and groups of persons](../../assets/images/en/automation-and-integration/ldap/2-ldap.png)](../../assets/images/en/automation-and-integration/ldap/2-ldap.png)
@@ -166,12 +164,12 @@ Prerequisite is that the user with whom the command is executed also has supervi
 Logging
 -------
 
-A logfile named ldap_debug.txt can be found within log/ in the i-doit installation folder. The logging can be activated or deactivated under ****Administration → System Settings → Logging → LDAP Debug****.
+A logfile named ldap_debug.txt can be found within log/ in the i-doit installation folder. The logging can be activated or deactivated under **Administration → System Settings → Logging → LDAP Debug**.
 
 Running the ldap-sync
 ---------------------
 
-The ldap-sync can only be executed via the console of the server. To be able to use the console properly, you should know the [article](../cli/console/index.md) about it. A simple synchronization without the advanced configuration serves the option ldap-sync. A description of the parameters can be found in the [corresponding chapter](../cli/console/options-and-parameters-cli.md).
+The ldap-sync can only be executed via the console of the server. To be able to use the console properly, you should know the [article](../../automation-and-integration/cli/console/index.md) about it. A simple synchronization without the advanced configuration serves the option ldap-sync. A description of the parameters can be found in the [corresponding chapter](../../automation-and-integration/cli/console/options-and-parameters-cli.md).
 
 **Beispiel zur Verwendung**
 

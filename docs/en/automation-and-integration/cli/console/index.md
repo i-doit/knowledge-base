@@ -134,8 +134,8 @@ Commands
 | **import-ocs** | yes | yes | –   | Import data from [OCS Inventory NG](../../../i-doit-pro-add-ons/ocs-inventory-ng.md) |
 | **import-syslog** | yes | yes | –   | Import data from a Syslog into the i-doit [logbook](../../../basics/logbook.md) |
 | **import-xml** | yes | yes | –   | Import data from XML |
-| **ldap-sync** | yes | yes | –   | Import persons and person groups from an [LDAP directory or Active Directory (AD)](../../ldap-active-directory-ad/index.md) |
-| **ldap-syncdn** | yes | yes | –   | Synchronise the distinguished name (DN) of the users (see **LDAP** category) from an [LDAP/AD](../../ldap-active-directory-ad/index.md) |
+| **ldap-sync** | yes | yes | –   | Import persons and person groups from an [LDAP directory or Active Directory (AD)](../../../user-authentication-and-management/ldap-directory/index.md) |
+| **ldap-syncdn** | yes | yes | –   | Synchronise the distinguished name (DN) of the users (see **LDAP** category) from an [LDAP/AD](../../../user-authentication-and-management/ldap-directory/index.md) |
 | **license-add** | yes | no  | \-  | Adds a license for i-doit (in progress) |
 | **license-assign** | yes | no  | \-  | Assigns a hosting license to a client (in progress) |
 | **license-import** | yes | no  | \-  | Imports licenses from the i-doit Server (in progress) |

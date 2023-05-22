@@ -18,7 +18,7 @@ Open [https://console.developers.google.com/](https://console.developers.google.
 3.  Select "Create Credentials"
 4.  Select "OAuth client ID"
 
-[![openid-connect](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/1-oidc.png)](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/1-oidc.png)
+[![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/1-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/1-oidc.png)
 
 1.  Select "Web application"
 2.  Use a recognizable title for the name
@@ -26,14 +26,14 @@ Open [https://console.developers.google.com/](https://console.developers.google.
     The URL specified here as an example should be secured with authentication from [https://gauth.i-doit.com/i-doit/](https://gauth.i-doit.com/i-doit/).
     The attached resource **"redirect_uri" does not exist** on the web server!
 
-[![openid-connect](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/2-oidc.png)](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/2-oidc.png)
+[![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/2-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/2-oidc.png)
 
 1.  Copy Client ID (will be needed later)
 2.  Copy Client Secret (will be needed later)
 3.  Configure OAuth approval screen
     (This is **not neccessary for a test** but will be needed on live systems)
 
-[![openid-connect](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/3-oidc.png)](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/3-oidc.png)
+[![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/3-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/3-oidc.png)
 
 ## Configure webserver
 
@@ -73,7 +73,7 @@ Open [https://console.developers.google.com/](https://console.developers.google.
 
 ### This is how the configuration looks:
 
-[![openid-connect](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/4-oidc.png)](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/4-oidc.png)
+[![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/4-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/4-oidc.png)
 
 ### Restart your webserver
 
@@ -95,16 +95,16 @@ Create the file identity.php. In our case it will be created at /var/www/html/i-
 1.  Open the file in your browser
 2.  Login via Google
 
-[![openid-connect](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/5-oidc.png)](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/5-oidc.png)
+[![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/5-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/5-oidc.png)
 
 1.  Verify the displayed ID (This should be the ID from the e-mail address)
 2.  Login into your i-doit and use this as the login name for the corresponding i-doit user
 !!! warning ""
     The domain part of the address, beginning with @ is not used. The name has to be reduced to the first part:“testaccount@i-doit.com” becomes “testaccount”.
 
-[![openid-connect](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/6-oidc.png)](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/6-oidc.png)
+[![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/6-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/6-oidc.png)
 
-[![openid-connect](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/7-oidc.png)](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/7-oidc.png)
+[![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/7-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/7-oidc.png)
 
 ### Enable SSO in i-doit
 
@@ -113,6 +113,6 @@ Create the file identity.php. In our case it will be created at /var/www/html/i-
 3.  Select "**yes**" at "**Single Sign on**" option "**Active**"
 4.  Save
 
-[![openid-connect](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/8-oidc.png)](../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/8-oidc.png)
+[![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/8-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/8-oidc.png)
 
 Done! If i-doit is now opened, the Google authentication appears first. After successful authentication, the user is directly logged in with the account linked to the user name.

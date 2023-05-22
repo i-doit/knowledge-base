@@ -65,9 +65,9 @@ At the login screen you are asked which tenant you want to sign in if multiple t
 
 [![User Administration](../assets/images/en/system-administration/multi-tenants/5-mt.png)](../assets/images/en/system-administration/multi-tenants/5-mt.png)
 
-If a [LDAP folder/Active Directory (AD)](../automation-and-integration/ldap-active-directory-ad/index.md) is tied to the authentication and authorization, then the configured servers will be queried one after another while logging in, to check whether the credentials are valid. After this, the tenants for which these credentials are valid are determined (see above).
+If a [LDAP folder/Active Directory (AD)](../user-authentication-and-management/ldap-directory/index.md) is tied to the authentication and authorization, then the configured servers will be queried one after another while logging in, to check whether the credentials are valid. After this, the tenants for which these credentials are valid are determined (see above).
 
-If [Single Sign On (SSO)](../automation-and-integration/single-sign-on/index.md) is active, a tenant can be chosen as default. This is done at **Administration → System settings → Single Sign On → Default tenant**. When starting _i-doit_, the user is automatically tied to this tenant if the credentials are correct.
+If [Single Sign On (SSO)](../user-authentication-and-management/sso-comparison/index.md) is active, a tenant can be chosen as default. This is done at **Administration → System settings → Single Sign On → Default tenant**. When starting _i-doit_, the user is automatically tied to this tenant if the credentials are correct.
 
 Switch Tenants
 --------------

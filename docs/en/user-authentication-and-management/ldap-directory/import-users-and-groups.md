@@ -1,15 +1,15 @@
 # How To import users and groups from AD/LDAP (advanced configuration)
 
-Importing users and groups from Active Directory into i-doit always takes place via the [console.php](../cli/console/index.md) command. For this we use the [ldap-sync](./index.md) command.  
+Importing users and groups from Active Directory into i-doit always takes place via the [console.php](../../automation-and-integration/cli/console/index.md) command. For this we use the [ldap-sync](./index.md) command.  
 At the end of the article there is a complete example of the created advanced configuration.
 
-The article about configuration of [LDAP directory/Active Directory](./index.md) should be known to everyone before.  
-Here we will go through different LDAP filters and a complete [ldap.ini configuration](../cli/console/using-configuration-files-for-console-cli.md).  
+The article about configuration of [LDAP directory/Active Directory](../index.md) should be known to everyone before.<br>
+Here we will go through different LDAP filters and a complete [ldap.ini configuration](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md).  
 The goal is to synchronize all users and groups from AD/LDAP with i-doit, as well as their memberships.
 
-I assume a basic knowledge of AD/LDAP.  
-In these examples for persons the objectClass = user is used.  
-For groups the objectClass = group is used.  
+I assume a basic knowledge of AD/LDAP.<br>
+In these examples for persons the objectClass = user is used.<br>
+For groups the objectClass = group is used.<br>
 If you do not want to synchronize all users or groups of the domain, you have to enter the DN/CN of an OU or container under “Search for users in (OU)\*”.
 
 [![Access](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/1-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/1-htiuag.png)
@@ -32,7 +32,7 @@ Here only users are synchronized, which also means that no groups are created. S
 
 ### Import of users with specific attributes
 
-We want to filter on an attribute and synchronize only this user.  
+We want to filter on an attribute and synchronize only this user.<br>
 Only the user who has the value MichaelO in the attribute sAMAccountName should be synchronized.
 
 [![Import users with specific attributes](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/3-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/3-htiuag.png)
@@ -43,7 +43,7 @@ Only the user who has the value MichaelO in the attribute sAMAccountName should 
 
 ### Import from all users and all groups
 
-Here users and groups are created and the users are assigned to the respective groups.  
+Here users and groups are created and the users are assigned to the respective groups.<br>
 So that users and groups are synchronized the filter must look like this:
 
 [![Import of users and groups](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/4-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/4-htiuag.png)
@@ -96,7 +96,7 @@ For example, if the users differ by having two objectClass attributes (e.g. pers
 Which other attributes can be imported via ldap.ini
 ---------------------------------------------------
 
-*   The post [ldap.ini Configuration](../cli/console/options-and-parameters-cli.md#ldap-sync) should be known.
+*   The post [ldap.ini Configuration](../../automation-and-integration/cli/console/options-and-parameters-cli.md#ldap-sync) should be known.
 *   An .ini file can be created for the import, with this additional attributes can be imported.
 *   The [Category Extension](../../system-administration/administration/cmdb-settings.md#category-extension) should already be configured.
 *   We use the .ini section
@@ -122,8 +122,8 @@ Here again as a table
 
 ### Import assignments to rooms from AD/LDAP
 
-Fixed assignments of users to rooms can be entered in the ldap.ini.  
-The users are then assigned to the assigned room as a contact.  
+Fixed assignments of users to rooms can be entered in the ldap.ini.<br>
+The users are then assigned to the assigned room as a contact.<br>
 (The rooms must exist in i-doit before!).
 
     rooms["Room A"]=["MichaelO","migel"]
@@ -132,7 +132,7 @@ The users are then assigned to the assigned room as a contact.
 
 ### How to import attributes from LDAP
 
-I want to import more LDAP attributes to users and I have already configured the [category extension](../../system-administration/administration/cmdb-settings.md#category-extension).  
+I want to import more LDAP attributes to users and I have already configured the [category extension](../../system-administration/administration/cmdb-settings.md#category-extension).<br>
 Now I have to configure the LDAP sync configuration file (ldap.ini).
 
 If you have done an LDAP sync for users before, you will find an entry like this in the ldap log
@@ -198,7 +198,7 @@ If you have done an LDAP sync for users before, you will find an entry like this
     pager,
     dn
 
-From this I can search for the attributes that I want to synchronize additionally.  
+From this I can search for the attributes that I want to synchronize additionally.<br>
 Which attributes belong to which field can be found via Google.
 
 As an example I take the following attributes and add them to ldap.ini:
@@ -229,12 +229,11 @@ As an example I take the following attributes and add them to ldap.ini:
     attributes[custom_7]=company
     attributes[custom_8]=objectGUID
 
-As you can see here I mapped the master data attribute department with the LDAP attribute department.  
-Additionally I used the category extension.  
-The structure for e.g.  
-attributes[custom_1]=objectSid  
-would be as follows:  
-attributes tells the handler to synchronize the i-doit attribute [custom_1] with the LDAP attribute \objectSid.
+As you can see here I mapped the master data attribute department with the LDAP attribute department.<br>
+Additionally I used the category extension.<br>
+The structure for e.g.<br>
+    attributes[custom_1]=objectSid<br>
+would be as follows, attributes tells the handler to synchronize the i-doit attribute [custom_1] with the LDAP attribute `objectSid`.
 
 After synchronizing the users I find the following master data:
 
@@ -248,7 +247,7 @@ After synchronizing the users I find the following master data:
 
 To have a clean start, this setting automatically sets all users to the status normal before synchronization.
 
-This is helpful in case users were accidentally archived or deleted before.  
+This is helpful in case users were accidentally archived or deleted before.<br>
 Note that this only works with NDS & OpenLDAP, as it is always enabled in Active Directory!
 
 We should be aware that with NDS or OpenLDAP it is currently not possible to identify deleted users to archive them later. Users are then always activated!
@@ -261,12 +260,12 @@ We should be aware that with NDS or OpenLDAP it is currently not possible to ide
 
 Disable synchronization for users with attributes checked against ignoreFunction.
 
-This function helps to prevent synchronization of unwanted directory objects.  
+This function helps to prevent synchronization of unwanted directory objects.<br>
 The user will not be synchronized if ignoreFunction fails for ALL selected attributes.
 
 By default it says ignoreUsersWithAttributes=[] so nothing will be ignored.
 
-We only want to import users where the attributes samaccountname, sn, givenname and mail are not empty.  
+We only want to import users where the attributes samaccountname, sn, givenname and mail are not empty.<br>
 So the configuration for ignoreUsersWithAttributes should look like this:
 
     ignoreUsersWithAttributes[] = "samaccountname"
@@ -304,8 +303,8 @@ This option decides whether empty or emptied attributes from AD should be synchr
 
 ### The complete ldap.ini
 
-Now we put all the parts together and create our ldap.ini  
-The first part of the ldap.ini is obtained from [Using Configuration Files for Console Commands](../cli/console/using-configuration-files-for-console-cli.md).
+Now we put all the parts together and create our ldap.ini<br>
+The first part of the ldap.ini is obtained from [Using Configuration Files for Console Commands](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md).
 
 !!! warning "Access to .ini files"
     If the configuration file is placed in the i-doit directory, the .htaccess must be modified.
