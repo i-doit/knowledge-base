@@ -440,7 +440,6 @@ nav:
       - Standorte: anwendungsfaelle/standorte.md
       - Switch Stacking: anwendungsfaelle/switch-stacking.md
       - VM provisionieren (veraltet): anwendungsfaelle/vm-provisionieren.md
-      - i-doit mit OpenID-Connect Authentifizierung am Beispiel Google Login: anwendungsfaelle/i-doit-mit-openid-connect.md
   - i-doit pro Add-ons:
       - i-doit-pro-add-ons/index.md
       - Active Directory Documentation: i-doit-pro-add-ons/active-directory-documentation.md

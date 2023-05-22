@@ -124,11 +124,11 @@ Es ist auch möglich, eigene Attribute aus dem LDAP über den Import von Persone
 
 ### Regelmäßige Synchronisation
 
-Die dafür benötigte Konfiguration wurde in den vorherigen Schritten bereits vorgenommen. Für die Synchronisation muss nun noch der passende [Controller Handler](../cli/controller.md) eingerichtet werden. Außerdem können noch weitere zu synchronisierende Felder konfiguriert werden.
+Die dafür benötigte Konfiguration wurde in den vorherigen Schritten bereits vorgenommen. Für die Synchronisation muss nun noch der passende [Controller Handler](../../automatisierung-und-integration/cli/controller.md) eingerichtet werden. Außerdem können noch weitere zu synchronisierende Felder konfiguriert werden.
 
 ### Erweiterte Konfiguration
 
-Die Konfiguration muss in der [Handler-Konfiguration](../cli/index.md) vorgenommen werden. Ein Beispiel dazu ist [Hier](../cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden i-doit < 1.15. Diese Datei kann mit Login-Daten, Tenant und Attributen erweitert und angepasst werden. Die Konfigurationsdatei wird dann nach i-doit/src/handler/config/ verschoben. Damit diese Datei z.B. beim ldap-sync Command berücksichtig wird, muss diese beim sync über einen weiteren Parameter (-c /pfad/) mit angegeben werden (weitere Informationen zur [Console](../cli/console/optionen-und-parameter-der-console.md)).
+Die Konfiguration muss in der [Handler-Konfiguration](../../automatisierung-und-integration/index.md) vorgenommen werden. Ein Beispiel dazu ist [Hier](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden i-doit < 1.15. Diese Datei kann mit Login-Daten, Tenant und Attributen erweitert und angepasst werden. Die Konfigurationsdatei wird dann nach i-doit/src/handler/config/ verschoben. Damit diese Datei z.B. beim ldap-sync Command berücksichtig wird, muss diese beim sync über einen weiteren Parameter (-c /pfad/) mit angegeben werden (weitere Informationen zur [Console](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md)).
 
 !!! warning Zugriff auf .ini Dateien
     Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
@@ -175,12 +175,12 @@ Voraussetzung ist, dass der Benutzer mit dem der Befehl ausgeführt wird auch di
 
 ### Logging
 
-Unterhalb von log/ im Installationsverzeichnis von i-doit befindet sich ein Logfile mit dem Namen ldap_debug.txt. Das Logging lässt sich unter **Verwaltung →** **Systemeinstellungen → L****ogging → LDAP Debug** (de-)aktivieren.
+Unterhalb von log/ im Installationsverzeichnis von i-doit befindet sich ein Logfile mit dem Namen ldap_debug.txt. Das Logging lässt sich unter **Verwaltung → Systemeinstellungen → Logging → LDAP Debug** (de-)aktivieren.
 
 Den ldap-sync ausführen
 -----------------------
 
-Der ldap-sync lässt sich nur über die Console des Servers ausführen. Um die Console richtig bedienen zu können, sollte der [Artikel](../cli/console/index.md) dazu bekannt sein. Eine einfache Synchronisation ohne die erweiterte Konfiguration dient die Option **ldap-sync**. Eine Beschreibung der Parameter ist im entsprechenden [Kapitel](../cli/console/optionen-und-parameter-der-console.md) zu finden.
+Der ldap-sync lässt sich nur über die Console des Servers ausführen. Um die Console richtig bedienen zu können, sollte der [Artikel](../../automatisierung-und-integration/cli/console/index.md) dazu bekannt sein. Eine einfache Synchronisation ohne die erweiterte Konfiguration dient die Option **ldap-sync**. Eine Beschreibung der Parameter ist im entsprechenden [Kapitel](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) zu finden.
 
 **Beispiel zur Verwendung**
 

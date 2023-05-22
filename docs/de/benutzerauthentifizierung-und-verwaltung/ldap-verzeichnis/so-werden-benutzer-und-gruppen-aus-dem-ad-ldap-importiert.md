@@ -1,10 +1,10 @@
 # So werden Benutzer und Gruppen aus dem AD/LDAP importiert (erweiterte Konfiguration)
 
-Der Import von Benutzern und Gruppen aus dem Active Directory in i-doit findet immer über den [console.php](../cli/console/index.md) Befehl statt. Dazu benutzen wir das Kommando [ldap-sync](../cli/console/optionen-und-parameter-der-console.md#ldap-sync).<br>
+Der Import von Benutzern und Gruppen aus dem Active Directory in i-doit findet immer über den [console.php](../../automatisierung-und-integration/cli/console/index.md) Befehl statt. Dazu benutzen wir das Kommando [ldap-sync](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#ldap-sync).<br>
 Am Ende des Artikels ist ein komplettes Beispiel der erstellten erweiterten Konfiguration zu finden.
 
 Der Artikel zur Konfiguration vom [LDAP-Verzeichnis/Active Directory](../ldap-verzeichnis/index.md) sollte vorher jedem bekannt sein.<br>
-Wir werden hier verschiedene LDAP Filter und eine komplette [ldap.ini Konfiguration](../cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md#beispiel-für-den-command-ldap-sync) durchgehen.<br>
+Wir werden hier verschiedene LDAP Filter und eine komplette [ldap.ini Konfiguration](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md#beispiel-für-den-command-ldap-sync) durchgehen.<br>
 Ziel ist es alle Benutzer und Gruppen aus dem AD/LDAP mit i-doit zu synchronisieren, sowie deren Mitgliedschaften.
 
 Ich setzte Grundkenntnisse im Bezug auf AD/LDAP voraus.<br>
@@ -109,7 +109,7 @@ Wenn sich die Benutzer beispielsweise dadurch unterscheiden, dass sie zwei `obje
 Welche weiteren Attribute über die ldap.ini importiert werden können
 --------------------------------------------------------------------
 
-*   Der Beitrag [ldap.ini Konfiguration](../cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md#beispiel-für-den-command-ldap-sync) sollte bekannt sein.
+*   Der Beitrag [ldap.ini Konfiguration](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md#beispiel-für-den-command-ldap-sync) sollte bekannt sein.
 *   Es kann eine .ini Datei für den Import erstellt werden, mit dieser können weitere Attribute importiert werden.
 *   Die [Kategorieerweiterung](../../administration/verwaltung/cmdb-einstellungen.md#kategorieerweiterung) sollte bereits Konfiguriert sein.
 *   Wir verwenden den .ini Abschnitt "additional"
@@ -355,7 +355,7 @@ Diese Option entscheidet, ob geleerte Attribute aus dem AD mit i-doit synchronis
     ```
 
 Nun fügen wir alle Teile zusammen und erstellen unsere ldap.ini<br>
-Der erste Teil der ldap.ini wird von [Verwendung von Konfigurationsdateien für Console Commands](../cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md#beispiel-für-den-command-ldap-sync) bezogen.
+Der erste Teil der ldap.ini wird von [Verwendung von Konfigurationsdateien für Console Commands](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md#beispiel-für-den-command-ldap-sync) bezogen.
 
 ```ini
     [commandArguments]

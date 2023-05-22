@@ -4,11 +4,11 @@ i-doit bringt bereits bei der Standard-Installation einige lokale Benutzer mit, 
 
 LDAP/AD
 
-Die meisten der hier vorgestellten Optionen sind nicht auf lokale Benutzer beschränkt, sondern können im Zusammenhang mit der [LDAP-/AD-Schnittstelle](../automatisierung-und-integration/ldap-verzeichnis/index.md) kombiniert werden.
+Die meisten der hier vorgestellten Optionen sind nicht auf lokale Benutzer beschränkt, sondern können im Zusammenhang mit der [LDAP-/AD-Schnittstelle](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) kombiniert werden.
 
 Notfall
 
-Lokale Benutzer können auch dann verwendet werden, wenn externe Autorisierungsschnittstellen wie LDAP/AD oder [SSO](../automatisierung-und-integration/single-sign-on/index.md) nicht zur Verfügung stehen. Auf diese Weise kann man bei einem Notfall immer noch auf die IT-Dokumentation zugegriffen werden.
+Lokale Benutzer können auch dann verwendet werden, wenn externe Autorisierungsschnittstellen wie LDAP/AD oder [SSO](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md) nicht zur Verfügung stehen. Auf diese Weise kann man bei einem Notfall immer noch auf die IT-Dokumentation zugegriffen werden.
 
 Neues Objekt erstellen
 ----------------------

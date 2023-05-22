@@ -9,7 +9,6 @@ The following articles are already available online:
 *   [Creating a Local User](./creating-a-local-user.md)
 *   [Documentation of Databases](./documentation-of-databases.md)
 *   [Geo Coordinates](./geo-coordinates.md)
-*   [i-doit with OpenID-Connecht authentication explained with Google login](./i-doit-with-openid-connect-auth.md)
 *   [IP Address Management (IPAM)](./ip-adress-management.md)
 *   [Location-based Authorization](./location-bases-authorization.md)
 *   [Locations](./locations.md)

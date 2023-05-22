@@ -20,7 +20,6 @@ Folgende Anwendungsfälle sind beschrieben:
 *   [Standorte](./standorte.md)
 *   [Switch Stacking](./switch-stacking.md)
 *   [VM provisionieren (veraltet)](./vm-provisionieren.md)
-*   [i-doit mit OpenID-Connect Authentifizierung am Beispiel Google Login](./i-doit-mit-openid-connect.md)
 *   [Benutzerdefinierte Übersetzungen](./benutzerdefinierte-uebersetzungen.md)
 
 !!!info "Weitere Praxisbeispiele finden Sie auf unserem [Blog](https://www.i-doit.com/blog/category/praxisbeispiele/)"

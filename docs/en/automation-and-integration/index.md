@@ -5,9 +5,7 @@ Nobody is an island... Especially with the topic of IT documentation/ CMDB you a
 The described interfaces are already included in _i-doit pro_:
 
 *   [CLI](./cli/index.md)
-*   [LDAP/Active Directory (AD)](./ldap-active-directory-ad/index.md)
 *   [Network Monitoring](./network-monitoring/index.md)
 *   [Service Desk](./service-desk/index.md)
-*   [Single Sign On (SSO)](./single-sign-on/index.md)
 *   [Email (SMTP)](./e-mail.md)
 *   [SNMP](./snmp.md)

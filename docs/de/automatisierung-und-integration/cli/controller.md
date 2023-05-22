@@ -70,19 +70,19 @@ Der Controller ist in der Lage, verschiedene Aktionen auszuführen. Diese werden
 
 | Handler | pro-Variante | open-Variante | Add-on | Beschreibung |
 | --- | --- | --- | --- | --- |
-| **[addldapdn](../ldap-verzeichnis/index.md)** | ja  | ja  | -   | Synchronisiere aus einem LDAP/AD den Distinguished Name (DN) der Benutzer (siehe Kategorie **LDAP**) |
+| **[addldapdn](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md)** | ja  | ja  | -   | Synchronisiere aus einem LDAP/AD den Distinguished Name (DN) der Benutzer (siehe Kategorie **LDAP**) |
 | **[archivelog](../../grundlagen/logbuch.md)** | ja  | ja  | -   | Logbuch-Einträge archivieren |
 | **[check_mk](../network-monitoring/daten-abfragen-mit-livestatus.md)** | ja  | ja  | -   | Ist-Zustand aus dem Network Monitoring ins Logbuch schreiben |
 | **[cleanup_auth](../../effizientes-dokumentieren/rechteverwaltung/index.md)** | ja  | ja  | -   | Rechtesystem bereinigen |
 | **[cleanup_objects](../../grundlagen/lebens-und-dokumentationszyklus.md)** | ja  | ja  | -   | Objekte bereinigen |
 | **[csv_import](../../daten-konsolidieren/csv-datenimport/index.md)** | ja  | -   | -   | Daten aus einer CSV-Datei importieren |
-| [**document**](../../i-doit-pro-add-ons/documents/index.md) | -   | -   | **[Documents](../../i-doit-pro-add-ons/documents/index.md)** | Neue Revision eines Dokuments erstellen |
+| **[document](../../i-doit-pro-add-ons/documents/index.md)** | -   | -   | **[Documents](../../i-doit-pro-add-ons/documents/index.md)** | Neue Revision eines Dokuments erstellen |
 | **import** | ja  | ja  | -   | i-doit XML oder [h-inventory XML](../../daten-konsolidieren/h-inventory.md) importieren |
 | **increment_config** | ja  | ja  | -   | auto_increment von MariaDB-/MySQL-Tabellen auf einen positiven Integer-Wert setzen |
 | **isc_dhcpd** | ja  | ja  | -   | Konfiguration für ISC DHCPD exportieren |
 | **[jdisc](../../daten-konsolidieren/jdisc-discovery.md)** | ja  | ja  | -   | Daten aus JDisc importieren |
 | **[jdisc_discovery](../../daten-konsolidieren/jdisc-discovery.md)** | ja  | ja  | -   | Einen Discovery Job bei JDisc auslösen |
-| **[ldap](../ldap-verzeichnis/index.md)** | ja  | ja  | -   | Daten aus einem LDAP-Verzeichnis oder Active Directory (AD) importieren |
+| **[ldap](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md)** | ja  | ja  | -   | Daten aus einem LDAP-Verzeichnis oder Active Directory (AD) importieren |
 | **[maintenance](../../i-doit-pro-add-ons/maintenance.md)** | -   | -   | **[Maintenance](../../i-doit-pro-add-ons/maintenance.md)** | E-Mails bei geplanten Wartungen versenden |
 | **[nagios](../network-monitoring/daten-abfragen-mit-livestatus.md)** | ja  | ja  | -   | Ist-Zustand aus dem Network Monitoring ins Logbuch schreiben |
 | **[nagios_export](../network-monitoring/nagios.md)** | ja  | ja  | -   | Nagios-Konfiguration exportieren |

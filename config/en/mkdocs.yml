@@ -278,7 +278,7 @@ nav:
           - user-authentication-and-management/ldap-directory/index.md
           - LDAP Authentication via TLS: user-authentication-and-management/ldap-directory/ldap-tls.md
           - User/Group synchronisation: user-authentication-and-management/ldap-directory/import-users-and-groups.md
-      - 2 factor authentication (2FA): user-authentication-and-management/ldap-directory/2fa/index.md
+      - 2 factor authentication (2FA): user-authentication-and-management/2fa/index.md
       - SSO authentication comparsion:
           - user-authentication-and-management/sso-comparison/index.md
           - SSO with SAML:
@@ -392,7 +392,6 @@ nav:
       - Creating a local user: use-cases/creating-a-local-user.md
       - Documentation of databases: use-cases/documentation-of-databases.md
       - Geo coordinates: use-cases/geo-coordinates.md
-      - i-doit with OpenID-Connect authentication explained with Google login: use-cases/i-doit-with-openid-connect-auth.md
       - IP address management (IPAM): use-cases/ip-adress-management.md
       - Location-based authorization: use-cases/location-bases-authorization.md
       - Locations: use-cases/locations.md
