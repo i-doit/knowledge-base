@@ -309,6 +309,7 @@ nav:
       - Benutzerdefinierte Zähler: grundlagen/benutzerdefinierte-zaehler.md
       - Attributsichtbarkeit: grundlagen/attributsichtbarkeit.md
   - Benutzerauthentifizierung und Verwaltung:
+      - benutzerauthentifizierung-und-verwaltung/index.md
       - Integrierte Authentifizierung:
           - benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/index.md
       - Authentifizierung mit LDAP:

@@ -272,6 +272,7 @@ nav:
       - Custom counter: basics/custom-counter.md
       - Attribute visibility: basics/attribute-visibility.md
   - User authentication and management:
+      - user-authentication-and-management/index.md
       - Builtin authentication:
           - user-authentication-and-management/builtin-authentication/index.md
       - Authentication with LDAP:
