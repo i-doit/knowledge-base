@@ -1,4 +1,4 @@
-# ADFS (Active Directory) (SAML)
+# ADFS (Active Directory) (SAML and Mellon)
 
 In this tutorial, we describe how to set up single sign-on (SSO) for i-doit using SAML. In this example, we use Mellon as an authenticator against LDAP-AD-FS.
 

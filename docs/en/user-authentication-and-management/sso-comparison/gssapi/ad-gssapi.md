@@ -1,4 +1,4 @@
-# Active Directory mit GSSAPI SSO
+# Active Directory with GSSAPI SSO
 
 For automatic login to i-doit within an intranet, authentication via Single Sign On (SSO) is the best option.
 
