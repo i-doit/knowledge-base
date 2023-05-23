@@ -390,7 +390,6 @@ nav:
       - Cable patches and paths: use-cases/cable-patches-and-path.md
       - Complex reports: use-cases/complex-reports.md
       - Custom translations: use-cases/custom-translation.md
-      - Creating a local user: use-cases/creating-a-local-user.md
       - Documentation of databases: use-cases/documentation-of-databases.md
       - Geo coordinates: use-cases/geo-coordinates.md
       - IP address management (IPAM): use-cases/ip-adress-management.md
