@@ -7,14 +7,14 @@ Requirements
 
 i-doit supports the following directory services:
 
-*   [OpenLDAP](https://en.wikipedia.org/wiki/OpenLDAP)
-*   [Microsoft Active Directory (AD)](https://en.wikipedia.org/wiki/Active_Directory)
-*   [Novel eDirectory](https://en.wikipedia.org/wiki/NetIQ_eDirectory) (previously Directory Services)
+- [OpenLDAP](https://en.wikipedia.org/wiki/OpenLDAP)
+- [Microsoft Active Directory (AD)](https://en.wikipedia.org/wiki/Active_Directory)
+- [Novel eDirectory](https://en.wikipedia.org/wiki/NetIQ_eDirectory) (previously Directory Services)
 
 The [PHP-Extension php_ldap](http://de.php.net/manual/en/ldap.setup.php) has to be installed and activated for the communication with an active directory (AD) / LDAP folder. If you have installed _i-doit pro_ according to our installation guide, then the module will already be available.
 
-Dont't forget to allow LDAP if you are using SELinux with `_setsebool -P httpd_can_connect_ldap on_`. The -P is for Permanent
-Verify it via `_getsebool -a | grep httpd_`
+Dont't forget to allow LDAP connection if you are using **SELinux** with `setsebool -P httpd_can_connect_ldap on`. The -P is for Permanent
+Verify it via `getsebool -a | grep httpd`
 
 ### Subsequent Installation under [Debian GNU/Linux](../../installation/manual-installation/debian.md)
 
