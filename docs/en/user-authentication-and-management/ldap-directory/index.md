@@ -171,6 +171,6 @@ Running the ldap-sync
 
 The ldap-sync can only be executed via the console of the server. To be able to use the console properly, you should know the [article](../../automation-and-integration/cli/console/index.md) about it. A simple synchronization without the advanced configuration serves the option ldap-sync. A description of the parameters can be found in the [corresponding chapter](../../automation-and-integration/cli/console/options-and-parameters-cli.md).
 
-**Beispiel zur Verwendung**
+**Example**
 
     sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1

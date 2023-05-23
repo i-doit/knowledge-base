@@ -1,10 +1,10 @@
 # How To import users and groups from AD/LDAP (advanced configuration)
 
-Importing users and groups from Active Directory into i-doit always takes place via the [console.php](../../automation-and-integration/cli/console/index.md) command. For this we use the [ldap-sync](./index.md) command.  
+Importing users and groups from Active Directory into i-doit always takes place via the [console.php](../../automation-and-integration/cli/console/index.md) command. For this we use the [ldap-sync](./index.md) command.<br>
 At the end of the article there is a complete example of the created advanced configuration.
 
 The article about configuration of [LDAP directory/Active Directory](../index.md) should be known to everyone before.<br>
-Here we will go through different LDAP filters and a complete [ldap.ini configuration](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md).  
+Here we will go through different LDAP filters and a complete [ldap.ini configuration](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md).<br>
 The goal is to synchronize all users and groups from AD/LDAP with i-doit, as well as their memberships.
 
 I assume a basic knowledge of AD/LDAP.<br>
@@ -74,7 +74,7 @@ To synchronize only users who are members of the idoit-read group, the filter mu
 
 ### Import of users and groups that are below a nested group
 
-I have a group idoit in which the i-doit groups idoit-read and idoit-write are members. I want to synchronize these two groups. With this filter I can directly create the groups and the users.  
+I have a group idoit in which the i-doit groups idoit-read and idoit-write are members. I want to synchronize these two groups. With this filter I can directly create the groups and the users.<br>
 This will not create the idoit group, it will only create the groups below it. Also, the groups will not be linked, because groups cannot have a group as a member.
 
 [![Import of users who are members below the group idoit](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/7-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/7-htiuag.png)
@@ -232,7 +232,9 @@ As an example I take the following attributes and add them to ldap.ini:
 As you can see here I mapped the master data attribute department with the LDAP attribute department.<br>
 Additionally I used the category extension.<br>
 The structure for e.g.<br>
-    attributes[custom_1]=objectSid<br>
+
+    attributes[custom_1]=objectSid
+
 would be as follows, attributes tells the handler to synchronize the i-doit attribute [custom_1] with the LDAP attribute `objectSid`.
 
 After synchronizing the users I find the following master data:
@@ -277,7 +279,7 @@ So the configuration for ignoreUsersWithAttributes should look like this:
 
 #### ignoreFunction
 
-Is the check function to ignore users (see’ignoreUsersWithAttributes’)
+Is the check function to ignore users (see ’ignoreUsersWithAttributes’)
 
 This can be any function name callable via call_user_func or the defined functions.
 
