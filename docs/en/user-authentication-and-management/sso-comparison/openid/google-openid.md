@@ -40,35 +40,31 @@ Open [https://console.developers.google.com/](https://console.developers.google.
 ### Install the Apache package **mod_auth_openidc** in your installation of **Debian 10**
 
 ```shell
-    sudo apt install libapache2-mod-auth-openidc
+sudo apt install libapache2-mod-auth-openidc
 ```
 
 ### Add the following code to your Apache configuration:
 
 ```ini
-    OIDCProviderMetadataURL https://accounts.google.com/.well-known/openid-configuration
-    OIDCClientID <Client_ID_aus_der_Google_API_Console>
-    OIDCClientSecret <Client_Secret_aus_der_Google_API_Console>
-
-    # OIDCRedirectURI ist die vorher angegebene Redirect URL, die auf einen nicht
-    # existierenden Content zeigt, der hinter der abgesicherten URL liegt
-
-    OIDCRedirectURI https://<SERVER-URL>/i-doit/redirect_uri
-    OIDCCryptoPassphrase <Irgendein_Passwort_definieren_für_die_Verschlüsselung>
-
-    OIDCProviderIssuer accounts.google.com
-    OIDCProviderAuthorizationEndpoint https://accounts.google.com/o/oauth2/auth
-    OIDCProviderTokenEndpoint https://accounts.google.com/o/oauth2/token
-    OIDCProviderTokenEndpointAuth client_secret_post
-    OIDCProviderUserInfoEndpoint https://www.googleapis.com/plus/v1/people/me/openIdConnect
-    OIDCProviderJwksUri https://www.googleapis.com/oauth2/v2/certs
-    OIDCRemoteUserClaim email
-    OIDCScope "email"
-
-    <Location /i-doit/>
-        AuthType openid-connect
-        Require valid-user
-    </Location>
+OIDCProviderMetadataURL https://accounts.google.com/.well-known/openid-configuration
+OIDCClientID <Client_ID_aus_der_Google_API_Console>
+OIDCClientSecret <Client_Secret_aus_der_Google_API_Console>
+# OIDCRedirectURI ist die vorher angegebene Redirect URL, die auf einen nicht
+# existierenden Content zeigt, der hinter der abgesicherten URL liegt
+OIDCRedirectURI https://<SERVER-URL>/i-doit/redirect_uri
+OIDCCryptoPassphrase <Irgendein_Passwort_definieren_für_die_Verschlüsselung>
+OIDCProviderIssuer accounts.google.com
+OIDCProviderAuthorizationEndpoint https://accounts.google.com/o/oauth2/auth
+OIDCProviderTokenEndpoint https://accounts.google.com/o/oauth2/token
+OIDCProviderTokenEndpointAuth client_secret_post
+OIDCProviderUserInfoEndpoint https://www.googleapis.com/plus/v1/people/me/openIdConnect
+OIDCProviderJwksUri https://www.googleapis.com/oauth2/v2/certs
+OIDCRemoteUserClaim email
+OIDCScope "email"
+<Location /i-doit/>
+    AuthType openid-connect
+    Require valid-user
+</Location>
 ```
 
 ### This is how the configuration looks:
@@ -77,8 +73,8 @@ Open [https://console.developers.google.com/](https://console.developers.google.
 
 ### Restart your webserver
 
-```
-    sudo systemctl restart apache2
+```shell
+sudo systemctl restart apache2
 ```
 
 ### Test authentication and finish last steps
@@ -86,10 +82,10 @@ Open [https://console.developers.google.com/](https://console.developers.google.
 Create the file identity.php. In our case it will be created at /var/www/html/i-doit/identity.php.
 
 ```php
-    <?php
-    echo $_SERVER['REMOTE_USER'];
-    #print_r(array_map("htmlentities", apache_request_headers()));
-    ?>
+<?php
+echo $_SERVER['REMOTE_USER'];
+#print_r(array_map("htmlentities", apache_request_headers()));
+?>
 ```
 
 1.  Open the file in your browser
@@ -99,7 +95,8 @@ Create the file identity.php. In our case it will be created at /var/www/html/i-
 
 1.  Verify the displayed ID (This should be the ID from the e-mail address)
 2.  Login into your i-doit and use this as the login name for the corresponding i-doit user
-!!! warning ""
+
+!!! warning
     The domain part of the address, beginning with @ is not used. The name has to be reduced to the first part:“testaccount@i-doit.com” becomes “testaccount”.
 
 [![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/6-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/6-oidc.png)

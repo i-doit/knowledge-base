@@ -13,7 +13,6 @@ The following conditions are the basis of this article:
 This article describes how to set up Single Sign On (SSO) under Apache web server using \mod-auth-gssapi\.
 
 !!! attention "Upper and lower case"
-
     The configuration is exactly case sensitive.
 
 Configure Active Directory (AD)
@@ -31,36 +30,53 @@ Configuration of the i-doit server
 
 Installation of all required packages
 
-    # Debian GNU/Linux or Ubuntu Linux:
-    sudo apt install msktutil libapache2-mod-auth-gssapi kinit krb5-user
+Debian GNU/Linux or Ubuntu Linux:
 
-    Info:
-    Domain"REALM" angeben: addomain.local
-    Hostname"Passwortserver" mydomaincontroller
+```shell
+sudo apt install msktutil libapache2-mod-auth-gssapi kinit krb5-user
+```
 
-    # Apache neustarten:
-    sudo systemctl restart apache2.service
+Info:
+Domain"REALM" angeben: addomain.local
+Hostname"Passwortserver" mydomaincontroller
+
+Apache neustarten:
+
+```shell
+sudo systemctl restart apache2.service
+```
 
 Initial registration and creation of the keytab
 -----------------------------------------------
 
 
-    # Authentication of the server:
-    kinit <AD Administrator Account>
+Authentication of the server:
 
-    # Creating the keytab:
-    msktutil --server <AD Domain-Controller> --user-creds-only --update --use-service-account --service HTTP/idoit.mydomain.local --keytab /etc/apache2/apache_krb5.keytab --password <SERVICE ACCOUNT PASSWORD> --account-name ssouser
+```shell
+kinit <AD Administrator Account>
+```
 
-    # Assign permissions for Apache
-    chmod 644 /etc/apache2/apache_krb5.keytab
+Creating the keytab:
+```shell
+msktutil --server <AD Domain-Controller> --user-creds-only --update --use-service-account --service HTTP/idoit.mydomain.local --keytab /etc/apache2/apache_krb5.keytab --password <SERVICE ACCOUNT PASSWORD> --account-name ssouser
+```
+
+Assign permissions for Apache
+
+```shell
+chmod 644 /etc/apache2/apache_krb5.keytab
+```
 
 Configure Apache Web Server
 ---------------------------
 
 This file will customize the new VHost configuration:
 
-    sudo nano /etc/apache2/sites-available/i-doit.conf
+```shell
+sudo nano /etc/apache2/sites-available/i-doit.conf
+```
 
+```shell
     <Directory /var/www/html/>
 
             AuthType GSSAPI
@@ -72,11 +88,16 @@ This file will customize the new VHost configuration:
             Require valid-user
 
     </Directory>
+```
 
 Afterwards restart Apache once so that the changes take effect
 
-    sudo systemctl restart apache2.service
+```shell
+sudo systemctl restart apache2.service
+```
 
 To test the configuration, execute the following command:
 
-    kinit ssouser@ADDOMAIN.LOCAL
+```shell
+kinit ssouser@ADDOMAIN.LOCAL
+```

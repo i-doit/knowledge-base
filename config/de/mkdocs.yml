@@ -320,16 +320,17 @@ nav:
       - 2-Faktor-Authentifizierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
       - SSO-Authentifizierung im Vergleich:
           - benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md
-          - SSO mit SAML:
-              - benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/index.md
-              - ADFS (Active Directory): benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml.md
-          - SSO mit GSSAPI:
-              - benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/index.md
-              - Active Directory: benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/ad-gssapi.md
-          - SSO mit OpenID Connect OAuth2:
-              - benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/index.md
-              - Google Authentifizierung: benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid.md
-          - SSO Fallback zu Builtin: benutzerauthentifizierung-und-verwaltung/sso-vergleich/sso-fallback/index.md
+      - SSO mit SAML:
+          - benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/index.md
+          - ADFS (Active Directory): benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml.md
+      - SSO mit GSSAPI:
+          - benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/index.md
+          - Active Directory: benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/ad-gssapi.md
+      - SSO mit Kerberos: benutzerauthentifizierung-und-verwaltung/sso-vergleich/kerberos/index.md
+      - SSO mit OpenID Connect OAuth2:
+          - benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/index.md
+          - Google Authentifizierung: benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid.md
+      - SSO Fallback zu Builtin: benutzerauthentifizierung-und-verwaltung/sso-vergleich/sso-fallback/index.md
   - Effizientes Dokumentieren:
       - effizientes-dokumentieren/index.md
       - Listeneditierung: effizientes-dokumentieren/listeneditierung.md

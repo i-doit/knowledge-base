@@ -21,8 +21,10 @@ Nicht vergessen, LDAP zu erlauben, wenn SELinux verwendet wird. Dazu `setsebool 
 
 ### Nachträgliche Installation unter [Debian GNU/Linux](../../installation/manuelle-installation/debian.md)
 
-    sudo apt install php7-ldap
-    sudo service apache2 restart
+```shell
+sudo apt install php7-ldap
+sudo service apache2 restart
+```
 
 ### Nachträgliche Installation unter [Windows](../../installation/manuelle-installation/microsoft-windows-server/index.md)
 
@@ -30,14 +32,14 @@ Die Datei php.ini (in der Regel unter `C:\xampp\php\php.ini`) muss angepasst wer
 
 Aus der Zeile
 
-```
-    ;extension=php_ldap.dll
+```ini
+;extension=php_ldap.dll
 ```
 
 wird das ";" entfernt und somit
 
-```
-    extension=php_ldap.dll
+```ini
+extension=php_ldap.dll
 ```
 Manchmal kann es noch notwendig sein, die Dateien `ssleay32.dll` und `libeay32.dll` (von Version zu Version unterschiedlich, jedoch meist unter `C:\xampp\apache\bin\` zu finden) in das Verzeichnis php\ zu kopieren. Danach muss noch der Apache Webserver neu gestartet werden.
 
@@ -87,25 +89,25 @@ Des Weiteren kann der Filter noch weiter definiert werden. Bei einer einzigen Fi
 An letzten Filter anhängen:
 
 ```shell
-    (&(objectClass=user)(test=test))
+(&(objectClass=user)(test=test))
 ```
 
 Als neuen Filter anhängen:
 
 ```shell
-    (&(objectClass=user)(&(test=test)))
+(&(objectClass=user)(&(test=test)))
 ```
 Neuen Term bilden:
 
 ```shell
-    (&(&(objectClass=user))(test=test))
+(&(&(objectClass=user))(test=test))
 ```
 
 Im untersten Bereich lässt sich dann die oben festgelegte Konfiguration testen. Bestenfalls erscheint die Meldung:
 
 ```shell
-    Connection OK!
-    XX object(s) found in OU=tree,OU=synetics,DC=synetics,DC=int.
+Connection OK!
+XX object(s) found in OU=tree,OU=synetics,DC=synetics,DC=int.
 ```
 
 Sollte bei Misserfolg die Fehlermeldung noch nicht eindeutig genug sein, kann das Debug-Level hochgesetzt werden, sodass weitere Ausgaben im Apache Error Log mitgeschrieben werden. Das Error Log ist unter [Debian](../../installation/manuelle-installation/debian.md)\-basierten Betriebssystemen unter /var/log/apache2/error.log zu finden.
@@ -130,16 +132,14 @@ Die dafür benötigte Konfiguration wurde in den vorherigen Schritten bereits vo
 
 Die Konfiguration muss in der [Handler-Konfiguration](../../automatisierung-und-integration/index.md) vorgenommen werden. Ein Beispiel dazu ist [Hier](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden i-doit < 1.15. Diese Datei kann mit Login-Daten, Tenant und Attributen erweitert und angepasst werden. Die Konfigurationsdatei wird dann nach i-doit/src/handler/config/ verschoben. Damit diese Datei z.B. beim ldap-sync Command berücksichtig wird, muss diese beim sync über einen weiteren Parameter (-c /pfad/) mit angegeben werden (weitere Informationen zur [Console](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md)).
 
-!!! warning Zugriff auf .ini Dateien
+!!! warning "Zugriff auf .ini Dateien"
     Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
     Es sollte dieser code hinzugefügt werden:
-
-    ```shell
     ## Deny access to all ini files…
     <Files "*.ini">
         Require all denied
     </Files>
-    ```
+
 
 | Parameter | Zweck |
 | --- | --- |

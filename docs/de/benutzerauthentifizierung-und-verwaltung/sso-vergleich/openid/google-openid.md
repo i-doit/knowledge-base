@@ -30,37 +30,32 @@ Gehe auf [https://console.developers.google.com/](https://console.developers.goo
 
 ### Unter **Debian 10** das Paket **mod_auth_openidc** für Apache installieren:
 
-```
+```shell
     sudo apt install libapache2-mod-auth-openidc
 ```
 
 ### In der Apache Config folgenden Code einfügen
 
 ```ini
-    OIDCProviderMetadataURL https://accounts.google.com/.well-known/openid-configuration
-    OIDCClientID <Client_ID_aus_der_Google_API_Console>
-    OIDCClientSecret <Client_Secret_aus_der_Google_API_Console>
-
-    # OIDCRedirectURI ist die vorher angegebene Redirect URL, die auf einen nicht
-    # existierenden Content zeigt, der hinter der abgesicherten URL liegt
-
-    OIDCRedirectURI https://<SERVER-URL>/i-doit/redirect_uri
-    OIDCCryptoPassphrase <Irgendein_Passwort_definieren_für_die_Verschlüsselung>
-
-    OIDCProviderIssuer accounts.google.com
-    OIDCProviderAuthorizationEndpoint https://accounts.google.com/o/oauth2/auth
-    OIDCProviderTokenEndpoint https://accounts.google.com/o/oauth2/token
-    OIDCProviderTokenEndpointAuth client_secret_post
-    OIDCProviderUserInfoEndpoint https://www.googleapis.com/plus/v1/people/me/openIdConnect
-    OIDCProviderJwksUri https://www.googleapis.com/oauth2/v2/certs
-
-    OIDCRemoteUserClaim email
-    OIDCScope "email"
-
-    <Location /i-doit/>
-            AuthType openid-connect
-            Require valid-user
-    </Location>
+OIDCProviderMetadataURL https://accounts.google.com/.well-known/openid-configuration
+OIDCClientID <Client_ID_aus_der_Google_API_Console>
+OIDCClientSecret <Client_Secret_aus_der_Google_API_Console>
+# OIDCRedirectURI ist die vorher angegebene Redirect URL, die auf einen nicht
+# existierenden Content zeigt, der hinter der abgesicherten URL liegt
+OIDCRedirectURI https://<SERVER-URL>/i-doit/redirect_uri
+OIDCCryptoPassphrase <Irgendein_Passwort_definieren_für_die_Verschlüsselung>
+OIDCProviderIssuer accounts.google.com
+OIDCProviderAuthorizationEndpoint https://accounts.google.com/o/oauth2/auth
+OIDCProviderTokenEndpoint https://accounts.google.com/o/oauth2/token
+OIDCProviderTokenEndpointAuth client_secret_post
+OIDCProviderUserInfoEndpoint https://www.googleapis.com/plus/v1/people/me/openIdConnect
+OIDCProviderJwksUri https://www.googleapis.com/oauth2/v2/certs
+OIDCRemoteUserClaim email
+OIDCScope "email"
+<Location /i-doit/>
+        AuthType openid-connect
+        Require valid-user
+</Location>
 ```
 
 ### So sieht es im Test live aus:
@@ -69,17 +64,19 @@ Gehe auf [https://console.developers.google.com/](https://console.developers.goo
 
 ### Den Webserver neu starten
 
-    sudo systemctl restart apache2
+```shell
+sudo systemctl restart apache2
+```
 
 ### Authentifizierung testen und finalisieren
 
 Eine Datei identity.php anlegen. In diesem Fall /var/www/html/i-doit/identity.php.
 
 ```php
-    <?php
-    echo $_SERVER['REMOTE_USER'];
-    #print_r(array_map("htmlentities", apache_request_headers()));
-    ?>
+<?php
+echo $_SERVER['REMOTE_USER'];
+#print_r(array_map("htmlentities", apache_request_headers()));
+?>
 ```
 
 1.  Die Datei im Browser aufrufen
@@ -87,7 +84,8 @@ Eine Datei identity.php anlegen. In diesem Fall /var/www/html/i-doit/identity.ph
     [![Google anmelden](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/5-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/5-oid.png)
 3.  Die erscheinende ID überprüfen (Es sollte der E-Mail entsprechen)
 4.  In i-doit einloggen und für den gewünschten i-doit User als Login Namen eintragen.
-    !!! warning ""
+
+    !!! warning
          Wichtig ist, dass der Domain Part ab dem @ Zeichen von i-doit nicht berücksichtigt wird. Daher muss der Name auf den vorderen Teil gekürzt werden:Aus "testaccount@[i-doit.com](http://i-doit.com)" wird "testaccount".
 
 [![Google anmelden](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/6-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/6-oid.png)

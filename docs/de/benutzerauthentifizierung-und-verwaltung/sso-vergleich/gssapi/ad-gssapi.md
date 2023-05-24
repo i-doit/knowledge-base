@@ -31,29 +31,40 @@ Konfiguration des i-doit Servers
 
 Installation aller benötigten Pakete
 
+Debian GNU/Linux oder Ubuntu Linux:
+
 ```shell
-# Debian GNU/Linux oder Ubuntu Linux:
 sudo apt install msktutil libapache2-mod-auth-gssapi kinit krb5-user
+```
 
 Info:
 Domain"REALM" angeben: addomain.local
 Hostname"Passwortserver" mydomaincontroller
 
-# Apache neustarten:
+Apache neustarten:
+
+```shell
 sudo systemctl restart apache2.service
 ```
 
 Erstanmeldung und erstellen der Keytab
 --------------------------------------
 
+Authentifizierung des Servers:
+
 ```shell
-# Authentifizierung des Servers:
 kinit <AD Administrator Account>
+```
 
-# Erstellen der Keytab:
+Erstellen der Keytab:
+
+```shell
 msktutil --server <AD Domain-Controller> --user-creds-only --update --use-service-account --service HTTP/idoit.mydomain.local --keytab /etc/apache2/apache_krb5.keytab --password <SERVICE ACCOUNT PASSWORD> --account-name ssouser
+```
 
-# Berechtigungen für Apache vergeben
+Berechtigungen für Apache vergeben
+
+```shell
 chmod 644 /etc/apache2/apache_krb5.keytab
 ```
 
@@ -124,13 +135,8 @@ Troubleshooting
 Falls ein Problem bei der Authentifizierung auftreten sollte, helfen eventuell folgende Fragen und Hinweise:
 
 *   Zeiteinstellungen auf Linux und Windows DC vergleichen: Sind diese gleich?
-
 *   Der Server ist in den meisten Fällen nur über den vollen FQDN idoit.mydomain.local erreichbar
-
 *   Hat der _i-doit_\-Server Zugriff auf den Domain Controller? Liegt eine Firewall dazwischen?
-
 *   Ist der SSO Domain User entsperrt?
-
 *   Kann der DC per DNS vom _i-doit_\-Server aus aufgelöst werden?
-
 *   Hat der Webserver Leseberechtigung auf die Datei apache\_krb5.keytab?

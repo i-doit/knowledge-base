@@ -311,14 +311,12 @@ The first part of the ldap.ini is obtained from [Using Configuration Files for C
 !!! warning "Access to .ini files"
     If the configuration file is placed in the i-doit directory, the .htaccess must be modified.
     This code should be added:
-
-    ```shell
     ## Deny access to all ini files…
     <Files "*.ini">
         Require all denied
     </Files>
-    ```
 
+```ini
     [commandArguments]
     [commandOptions]
     user=admin
@@ -367,9 +365,12 @@ The first part of the ldap.ini is obtained from [Using Configuration Files for C
     ;The check function used for ignoring users (see 'ignoreUsersWithAttributes') empty - !empty - isset - !isset
     ignoreFunction=empty
     syncEmptyAttributes=true
+```
 
 On the console the command would look like this:
 
-    sudo -u www-data php console.php ldap-sync -c /var/www/html/i-doit/src/handler/config/ldap-sync.ini
+```shell
+sudo -u www-data php console.php ldap-sync -c /var/www/html/i-doit/src/handler/config/ldap-sync.ini
+```
 
 [example-ldap.ini :material-file-download:](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/example-ldap.ini){ .md-button .md-button--primary }
