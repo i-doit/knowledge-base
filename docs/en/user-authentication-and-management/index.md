@@ -1,6 +1,6 @@
 # User Authentication and Management
 
-In this chapter we will provide informations about the user athentication for i-doit.
+In this chapter we will provide informations about the user authentication for i-doit.
 
 - [Bultin Authentication](./builtin-authentication/index.md)
 - [Authentication with LDAP](./ldap-directory/index.md)
