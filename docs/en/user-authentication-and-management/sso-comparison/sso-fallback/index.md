@@ -1,3 +1,3 @@
-# SSO Fallback zu Builtin
+# SSO fallback to builtin
 
 !!! example "Work in Progress"

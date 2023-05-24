@@ -1,4 +1,4 @@
-# Google Authentifizierung (OPENID)
+# Google Authentifizierung via OpenID
 
 ## OAuth Anmeldedaten erstellen
 

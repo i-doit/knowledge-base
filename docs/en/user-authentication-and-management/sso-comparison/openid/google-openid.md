@@ -1,4 +1,4 @@
-# Google Authentifizierung (OPENID)
+# Google authentifizierung via OpenID
 
 ## Requirements
 

@@ -1,4 +1,4 @@
-# Builtin Authentication
+# Builtin authentication
 
 !!! example "Work in Progress"
 

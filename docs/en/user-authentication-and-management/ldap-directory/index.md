@@ -1,4 +1,4 @@
-# LDAP/Active Directory (AD)
+# LDAP / Active Directory (AD)
 
 i-doit offers an interface for the authentication/ authorization and synchronization of data from a LDAP folder or an active directory (AD).
 

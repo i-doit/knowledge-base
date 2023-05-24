@@ -1,3 +1,3 @@
-# SSO mit SAML
+# SSO with SAML
 
 - [ADFS Active Directory SAML with Mellon](adfs-saml.md)
