@@ -90,6 +90,7 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
     tenant-remove                       Remove the i-doit Tenant
     uninstall                           Uninstall the i-doit application
     update                              Update the i-doit application
+```
 
 Authentifizierung
 -----------------
@@ -103,7 +104,7 @@ Um über das CLI auf i-doit zugreifen zu können, ist für die meisten Commands 
 
 !!! check "Der Benutzer "console""
 
-    Es wird empfohlen, einen dedizierten Benutzer in i-doit für die Nutzung der CLI anzulegen. Soll dieser als [lokaler Benutzer](../../../anwendungsfaelle/lokalen-benutzer-anlegen.md) konfiguriert werden, erstellt man ihn als Objekt vom Typ **Personen** mit den gewünschten Credentials in der Kategorie **Personen → Login**. Dieser Benutzer sollte Admin-Rechte erhalten. Dies kann durch die Zuordnung zur vordefinierten **Personengruppe** **Admin** geschehen.
+    Es wird empfohlen, einen dedizierten Benutzer in i-doit für die Nutzung der CLI anzulegen. Soll dieser als [lokaler Benutzer](../../../benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen.md) konfiguriert werden, erstellt man ihn als Objekt vom Typ **Personen** mit den gewünschten Credentials in der Kategorie **Personen → Login**. Dieser Benutzer sollte Admin-Rechte erhalten. Dies kann durch die Zuordnung zur vordefinierten **Personengruppe** **Admin** geschehen.
 
 Hilfe
 -----

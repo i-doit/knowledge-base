@@ -7,21 +7,26 @@ First Steps
 
 The CLI can be found in the i-doit installation directory, for example at **/var/www/html/**. Within this directory the CLI has to be activated with the same permissions as the Apache webserver. Under [Debian GNU/Linux](../../../installation/manual-installation/debian.md) this is the user called **www-data**. You can achieve the permissions with **sudo**:
 
+```shell
     cd /var/www/html/
     sudo -u www-data php console.php
+```
 
 Under Windows you also have to change to the installation directory. As the permissions of the webserver are not an issue, the start of **php.exe**, which has to stand in the path of the user, is sufficient.
 
+```shell
     cd C:\xampp\htdocs
     php.exe console.php
+```
 
 When you execute the CLI without further arguments, the general help is displayed:
 
+```shell
     i-doit console utility 1.17.1
- 
+
     Usage:
     command [options] [arguments]
-    
+
     Options:
     -h, --help            Display this help message
     -q, --quiet           Do not output any message
@@ -30,7 +35,7 @@ When you execute the CLI without further arguments, the general help is displaye
         --no-ansi         Disable ANSI output
     -n, --no-interaction  Do not ask any interactive question
     -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
-    
+
     Available commands:
     CompileDocuments
     addon-activate                      Activate add-on
@@ -86,26 +91,31 @@ When you execute the CLI without further arguments, the general help is displaye
     tenant-remove                       Remove the i-doit Tenant
     uninstall                           Uninstall the i-doit application
     update                              Update the i-doit application
+```
 
 Authentication Process
 ----------------------
 
 In order to access i-doit via the CLI an authentication is required for most of the commands. For this purpose, you hand over a user name, the appropriate password and the desired [tenant ID](../../../system-administration/multi-tenant.md). With a default installation, in most cases the latter is **"1"**.
 
+```shell
     cd /var/www/html/
     sudo -u www-data php console.php [COMMAND] --user admin --password admin --tenantId 1 [FURTHER OPTIONs]
+```
 
 !!! success "The user "controller""
 
-    We recommend creating a dedicated user in i-doit for the application of the CLI. If this user is to be configured as [local user](../../../use-cases/creating-a-local-user.md), create it as object of the type **Persons** with the desired credentials in the **Persons → Login** category. This user should receive admin rights. The rights assignment can be carried out through allocation to the predefined **Person group** **Admin**.
+    We recommend creating a dedicated user in i-doit for the application of the CLI. If this user is to be configured as [local user](../../../user-authentication-and-management/builtin-authentication/creating-a-local-user.md), create it as object of the type **Persons** with the desired credentials in the **Persons → Login** category. This user should receive admin rights. The rights assignment can be carried out through allocation to the predefined **Person group** **Admin**.
 
 Help
 ----
 
 Often commands are accompanied by further arguments. Therefore each command provides a help via **--help**:
 
+```shell
     cd /var/www/html/
     sudo -u www-data php console.php search --help
+```
 
 Furthermore, some commands provide examples via **--usage**.
 

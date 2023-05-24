@@ -275,6 +275,7 @@ nav:
       - user-authentication-and-management/index.md
       - Builtin authentication:
           - user-authentication-and-management/builtin-authentication/index.md
+          - Creating a local user: user-authentication-and-management/builtin-authentication/creating-a-local-user.md
       - Authentication with LDAP:
           - user-authentication-and-management/ldap-directory/index.md
           - LDAP Authentication via TLS: user-authentication-and-management/ldap-directory/ldap-tls.md
@@ -285,8 +286,6 @@ nav:
           - SSO with SAML:
               - user-authentication-and-management/sso-comparison/saml/index.md
               - ADFS (Active Directory): user-authentication-and-management/sso-comparison/saml/adfs-saml.md
-              - Google: user-authentication-and-management/sso-comparison/saml/google-saml.md
-              - Microsoft: user-authentication-and-management/sso-comparison/saml/microsoft-saml.md
           - SSO with GSSAPI:
               - user-authentication-and-management/sso-comparison/gssapi/index.md
               - Active Directory: user-authentication-and-management/sso-comparison/gssapi/ad-gssapi.md

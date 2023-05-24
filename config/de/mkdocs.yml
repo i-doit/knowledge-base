@@ -312,6 +312,7 @@ nav:
       - benutzerauthentifizierung-und-verwaltung/index.md
       - Integrierte Authentifizierung:
           - benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/index.md
+          - Lokalen Benutzer anlegen: user-authentication-and-management/builtin-authentication/creating-a-local-user.md
       - Authentifizierung mit LDAP:
           - benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md
           - Authentifizierung mit LDAP via TLS: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
@@ -322,8 +323,6 @@ nav:
           - SSO mit SAML:
               - benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/index.md
               - ADFS (Active Directory): benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml.md
-              - Google: benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/google-saml.md
-              - Microsoft: benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/microsoft-saml.md
           - SSO mit GSSAPI:
               - benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/index.md
               - Active Directory: benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/ad-gssapi.md
@@ -435,7 +434,6 @@ nav:
       - ISO 27000 mit i-doit: anwendungsfaelle/iso27000-mit-i-doit.md
       - Kabel-Patches und -wege: anwendungsfaelle/kabel-patches-und-wege.md
       - Komplexe Reports: anwendungsfaelle/komplexe-reports.md
-      - Lokalen Benutzer anlegen: anwendungsfaelle/lokalen-benutzer-anlegen.md
       - Passwörter verwalten: anwendungsfaelle/passwoerter-verwalten.md
       - Standort-basierte Benutzerrechte: anwendungsfaelle/standort-basierte-benutzerrechte.md
       - Standorte: anwendungsfaelle/standorte.md

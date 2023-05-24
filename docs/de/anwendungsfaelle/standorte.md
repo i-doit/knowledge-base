@@ -85,7 +85,7 @@ Die Navigation durch alle Standortpfade ist innerhalb der linken Navigationsleis
 Logische Standorte
 ------------------
 
-Ein dokumentierter Arbeitsplatz erhält eine Person als logischen Standort. Zudem können Arbeitsplätze physikalischen Standorten zugeordnet werden. Die **Standortsicht** (siehe oben) kann entweder physikalische oder logische Standorte oder eine Kombination aus beiden darstellen. Diese Option ist [benutzerdefiniert](./lokalen-benutzer-anlegen.md).
+Ein dokumentierter Arbeitsplatz erhält eine Person als logischen Standort. Zudem können Arbeitsplätze physikalischen Standorten zugeordnet werden. Die **Standortsicht** (siehe oben) kann entweder physikalische oder logische Standorte oder eine Kombination aus beiden darstellen. Diese Option ist [benutzerdefiniert](../benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen.md).
 
 Raumplan
 --------
