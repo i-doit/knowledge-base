@@ -312,7 +312,7 @@ nav:
       - benutzerauthentifizierung-und-verwaltung/index.md
       - Integrierte Authentifizierung:
           - benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/index.md
-          - Lokalen Benutzer anlegen: user-authentication-and-management/builtin-authentication/creating-a-local-user.md
+          - Lokalen Benutzer anlegen: benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen.md
       - Authentifizierung mit LDAP:
           - benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md
           - Authentifizierung mit LDAP via TLS: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
