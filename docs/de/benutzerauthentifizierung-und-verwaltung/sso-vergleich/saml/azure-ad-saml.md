@@ -120,7 +120,10 @@ Beispiel:
 ## Anmeldung SSO für i-doit pro aktivieren
 
 Hierzu müssen wir einmal in die Administration -> System settings und passen die Konfiguration wie folgt an.
-**Wichtige Information zu Kontakten:****Es muss zwingend die E-Mail Adresse des jeweiligen Benutzers als Login im i-doit hinterlegt sein!**
+
+!!! attention "Wichtige Information zu Kontakten"
+    
+    Es muss zwingend die E-Mail Adresse des jeweiligen Benutzers als Login im i-doit hinterlegt sein!
 
 [![i-doit SSO setting](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-17.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-17.png)
 
@@ -175,7 +178,7 @@ Anschließend sehen wir im Hauptbereich `Attribute und Ansprüche` und bearbeite
 
 [![Azure-AD-Unternehmensanwendung-8](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-8.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-8.png)
 
-Nun Editieren wir unter `Erfolderlicher Anspruch` den ersten Anspruch der angezeigt wird.
+Nun Editieren wir unter `Erfolgerlicher Anspruch` den ersten Anspruch der angezeigt wird.
 
 [![Azure-AD-Unternehmensanwendung-9](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-9.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-9.png)
 
@@ -217,7 +220,7 @@ sudo systemctl restart apache2
 
 An dieser Stelle sind wir mit der Konfiguration des Linux Servers fertig.
 
-Wenn wir nun die URL wieder in unserem Browser öffnen `https://mywebserver.example` werden wir zur Azure AD Anmeldung weitergeleitet.
+Wenn wir nun die URL wieder in unserem Browser öffnen `https://tu2-samlsso.synetics.test` werden wir zur Azure AD Anmeldung weitergeleitet.
 Nach erfolgreicher Anmeldung werden wir dann wieder auf unser i-doit weitergeleitet und sind erfolgreich angemeldet
 
 !!! info "Fallback auf Anmeldemaske"
