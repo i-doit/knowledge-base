@@ -323,6 +323,7 @@ nav:
       - SSO mit SAML:
           - benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/index.md
           - ADFS (Active Directory): benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml.md
+          - Azure AD (SAML): benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad-saml.md
       - SSO mit GSSAPI:
           - benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/index.md
           - Active Directory: benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/ad-gssapi.md

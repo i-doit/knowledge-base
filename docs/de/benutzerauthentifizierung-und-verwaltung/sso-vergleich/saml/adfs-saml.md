@@ -93,7 +93,7 @@ Email Address []:your_email_address
 VHost erstellen:
 
 ```shell
-sudo nano /etc/apache2/sites-available/mywebserver.con
+sudo nano /etc/apache2/sites-available/mywebserver.conf
 ```
 
 Beispiel:
