@@ -124,9 +124,9 @@ $response->setTemplate('area', 'path/to/template.tpl');
 $response->showNavbar(false);
 
 // Render a navigation tree.
-$node = (new Node('Root'))
-    ->add(new Node('Sub Node #1'), 'url-1')
-    ->add(new Node('Sub Node #2'), 'url-2');
+$node = (new Node('Root', ''))
+    ->add(new Node('Sub Node #1', 'url-1'))
+    ->add(new Node('Sub Node #2', 'url-2'));
 
 $response->setNavigationTree($node):
 ```
