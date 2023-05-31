@@ -1,23 +1,27 @@
+# Options and parameters for the console
+
 !!! attention "Notes"
 
-    All examples on this page refer to the use of the i-doit user with the combination user name/password: **admin**/**admin**.
+    All examples on this page refer to the use of the i-doit user with the combination user name/password: **admin**/**admin**.<br>
     All parameters are case-sensitive, which means that upper and lower case must be followed exactly according to the examples and specifications.
 
-The following handlers are available for the i-doit Console
------------------------------------------------------------
+## The following handlers are available for the i-doit Console
 
 | Command | Internal system description |
 | --- | --- |
+| [CompileDocuments](#Compiledocuments) | Compile Documents |
 | [addon-activate](#addon-activate) | Activating Add-ons |
 | [addon-deactivate](#addon-deactivate) | Deactivating Add-ons |
 | [addon-install](#addon-install) | Installing Add-ons |
 | [addon-list](#addon-list) | Displays a list of all installed add-ons |
-| [admin-center-cryptohash-reset](#admin-center-cryptohash-reset) | The crypto-hash of i-doit is changed, which renews the entire encryption (ATTENTION! A backup should be created prior to execution) |
 | [admin-center-password-reset](#admin-center-password-reset) | Reset the password for the Admin Center |
 | [auth-cleanup](#auth-cleanup) | Clean up rights system |
-| [check\_mk-export](#check_mk-export) | Export configuration data for Check\_MK |
-| [check\_mk-livestatus](#check_mk-livestatus) | Write actual state from Check\_MK to logbook |
+| [check_mk-export](#check_mk-export) | Export configuration data for Check_MK |
+| [check_mk-livestatus](#check_mk-livestatus) | Write actual state from Check_MK to logbook |
 | [clear-credentials](#clear-credentials) | Removes user credentials |
+| completion | --- |
+| contracts-outdated | --- |
+| documents | --- |
 | [extend-contracts](#extend-contracts) | Extends Contracts with last cancellation date in the past |
 | [help](#help) | Displays the help for a command |
 | [import-csv](#import-csv) | Import data from a CSV file (uses a defined import profile from the GUI) |
@@ -25,35 +29,40 @@ The following handlers are available for the i-doit Console
 | [import-hinventory](#import-hinventory) | Import data from hinventory data from hinventory |
 | [import-jdisc](#import-jdisc) | Import data from JDisc Discovery (SQL Server access is configured via the GUI) |
 | [import-jdiscdiscovery](#import-jdiscdiscovery) | Start a scan in JDisc Discovery (API access is configured via the GUI) |
-| [import-ocs](#import-ocs) | Import data from OCS Inventory NG (SQL Server access is configured via GUI) |
 | [import-syslog](#import-ocs) | Import data from a syslog into the i-doit logbook |
 | [import-xml](#import-ocs) | Importing data from XML |
+| install | --- |
 | [ldap-sync](#ldap-sync) | Import persons and groups of persons from an LDAP directory or Active Directory (AD) |
 | [ldap-syncdn](#ldap-sync) | Synchronize from an LDAP/AD the Distinguished Name (DN) of the users (see category LDAP) |
-| [list](#list) | Lists all commands |
 | [license-add](#license-add) | Adds a license for i-doit (in progress) |
 | [license-assign](#license-assign) | Assigns a hosting license to a client (in progress) |
 | [license-import](#license-import) | Imports licenses from the i-doit Server (in progress) |
 | [license-key](#license-key) | Sets a license key for i-doit (in process) |
 | [license-list](#license-list) | Lists all licenses with all information (ID; product; type; start date; end date; licensed objects; licensed clients; environment) |
 | [license-remove](#license-remove) | Removes licenses from i-doit |
+| [list](#list) | Lists all commands |
 | [logbook-archive](#logbook-archive) | Archiving logbook entries |
 | [maintenance](#maintenance) | Sends notifications of scheduled maintenance from the Maintenance Add-on |
+| migrate-uploaded-files | --- |
 | [nagios-export](#nagios-export) | Export Nagios configuration |
 | [nagios-ndoutils](#nagios-ndoutils) | Write actual state from Nagios to logbook |
+| notifications-list | --- |
 | [notifications-send](#notifications-send) | Send notifications by e-mail (notifications are configured in the GUI) |
 | [report-export](#report-export) | Exporting a report as a file |
 | [search](#search) | Search in i-doit |
 | [search-index](#search-index) | Create/renew search index |
+| strip-description-html | --- |
 | [sync-dynamic-groups](#sync-dynamic-groups) | Resynchronizes dynamic group members |
 | [system-autoincrement](#system-autoincrement) | set auto\_increment of MariaDB/MySQL tables to a positive integer value (concerns the data structure! Use with caution!) |
+| system-categorycleanup | --- |
 | [system-checkforupdates](#system-checkforupdates) | Check for updates for i-doit |
 | [system-convert-non-innodb-tables](#system-convert-non-innodb-tables) | Converts all tables that are not in INNODB to INNODB (concerns the database coding. Use with caution!) |
 | [system-convert-non-utf8-tables](#system-convert-non-utf8-tables) | Converts all non-UTF8 tables to UTF8 tables (concerns database encoding. Use with caution!) |
 | [system-location-fix](#system-location-fix) | Executes the location correction from the GUI on the console |
-| [system-maintenancecontract](#system-maintenancecontract) | Send e-mail for maintenance contracts (Function deprecated. Please use [notifications-send](#notifications-send)) |
+| [system-maintenancecontract](#system-maintenancecontract) | Send e-mail for maintenance contracts (Function deprecated. Please use [notifications-send](#notifications-send)) |
 | [system-objectcleanup](#system-objectcleanup) | Clean up objects (objects with the status "unfinished", "archived" or "deleted" are permanently removed) |
 | [system-objectrelations](#system-objectrelations) | Recreate Object Relationships |
+| system-refresh-table-configuration | --- |
 | [tenant-create](#tenant-create) | Add a new tenant |
 | [tenant-disable](#tenant-disable) | Deactivate an existing tenant |
 | [tenant-enable](#tenant-enable) | Activate an existing tenant |
@@ -65,9 +74,32 @@ The following handlers are available for the i-doit Console
 
 !!! attention "Configuration file and parameters --config"
 
-    It is possible to pass additional content to the call via a configuration file. This file must be stored in the i-doit directory src/handler/config/. An example in the form of the file "isys\_handler\_ldap.ini" can be found in the directory src/handler/config/examples/.
-
+    It is possible to pass additional content to the call via a configuration file. This file must be stored in the i-doit directory src/handler/config/. An example in the form of the file "isys\_handler\_ldap.ini" can be found in the directory src/handler/config/examples/.<br>
     If this file is to be included in the process, it must be included using the --config or -c parameter.
+
+### CompileDocuments
+
+Compile Documents
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+| -t | --documentId=DOCUMENTID | Several document ids (multiple values allowed) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|    | --ansi | Forces the output in ANSI format |
+|    | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+    sudo -u www-data php console.php CompileDocuments --user admin --password admin --tenant 1 --documentId 123 --documentId 321
 
 ### addon-activate
 
@@ -77,17 +109,17 @@ Activates installed add-ons for the desired tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-t | \--tenant=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-a | \--addon=\[ADDON\] | Add-on identification |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -a | --addon=ADDON | Add-on identification |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|    | --ansi | Forces the output in ANSI format |
+|    | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -101,17 +133,17 @@ Disabled installed add-ons for the desired tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-t | \--tenant=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-a | \--addon=\[ADDON\] | Add-on identification |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -a | --addon=ADDON | Add-on identification |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -125,18 +157,18 @@ Installs add-ons for the desired tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-z | \--zip=\[ZIP\] | Path to add-on ZIP file |
-| \-t | \--tenant=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-a | \--addon=\[ADDON\] | Add-on identification |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -z | --zip=ZIP | Path to add-on ZIP file |
+| -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -a | --addon=ADDON | Add-on identification |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -150,15 +182,15 @@ Displays a list with all installed add-ons for the selected tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-t | \--tenant=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-a | \--addon=\[ADDON\] | Add-on identification |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -a | --addon=ADDON | Add-on identification |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -172,15 +204,15 @@ The crypto-hash of i-doit is changed, which renews the entire encryption (ATTENT
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USER\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USER | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -194,15 +226,15 @@ Reset the password for the Admin Center
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -216,43 +248,43 @@ Empties the cache of the rights system so that the currently configured rights a
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
     sudo -u www-data php console.php auth-cleanup --user admin --password admin --tenantId 1
 
-### check\_mk-export
+### check_mk-export
 
-Performs a Check\_MK export
+Performs a Check_MK export
 
 **Options:**
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-l | \--exportLanguage=EXPORTLANGUAGE | Definition of the language used for the export (default = 0) |
-| \-x | \--exportStructure=EXPORTSTRUCTURE | Definition of the structure used for the export (default = 0) |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -l | --exportLanguage=EXPORTLANGUAGE | Definition of the language used for the export (default = 0) |
+| -x | --exportStructure=EXPORTSTRUCTURE | Definition of the structure used for the export (default = 0) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -260,7 +292,7 @@ Performs a Check\_MK export
 
   
 
-### check\_mk-livestatus  
+### check_mk-livestatus  
 
 Imports the monitoring status changes from Livestatus to i-doit
 
@@ -268,17 +300,17 @@ Imports the monitoring status changes from Livestatus to i-doit
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -292,16 +324,16 @@ Removes the entries of the attributes "username" and "password" from user logins
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--object=\[OBJECT\] | Object ID of the user to be deactivated |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --object=OBJECT | Object ID of the user to be deactivated |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -318,7 +350,7 @@ Verlängert die Laufzeit eines Vertrags, dessen letztmögliches Kündigungsdatum
 |     | --simulate | Simulates contract extension |
 | -u | --user=USER |  Username |
 | -p | --password=PASSWORD | Password |
-| -i | --tenantID=TENANTID | Tenant ID [default: 1] |
+| -i | --tenantID=TENANTID | Tenant ID default: 1 |
 | -h | --help | Help message for displaying further information |
 | -c | --config=CONFIG | Config file |
 | -q | --quit | Quiet-Mode to deactivate output |
@@ -340,15 +372,15 @@ Used in conjunction with another command to display its usage, arguments and opt
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--format=\[FORMAT\] | Set the output format (txt, xml, json or md) \[Default: txt\] |
-|     | \--raw | Output of the command help |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --format=FORMAT | Set the output format (txt, xml, json or md) Default: txt |
+|     | --raw | Output of the command help |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -362,20 +394,20 @@ Performs the import of a CSV file with the desired import parameters
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--importFile=IMPORTFILE | Specifies the file and its path to be used for the import |
-|     | \--importProfileId=IMPORTPROFILEID | Defines the profile with which the import is to be performed |
-|     | \--csvSeparator=CSVSEPARATOR | Defines the separators for the import |
-|     | \--multiValueMode=MULTIVALUEMODE | Sets the mode for multi-value categories (possible values: "row", "column" or "comma") |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --importFile=IMPORTFILE | Specifies the file and its path to be used for the import |
+|     | --importProfileId=IMPORTPROFILEID | Defines the profile with which the import is to be performed |
+|     | --csvSeparator=CSVSEPARATOR | Defines the separators for the import |
+|     | --multiValueMode=MULTIVALUEMODE | Sets the mode for multi-value categories (possible values: "row", "column" or "comma") |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -389,16 +421,16 @@ Returns a list of the import profiles for the CSV import
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -412,21 +444,21 @@ Performs an h-inventory import of a compatible XML file
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--importFile=IMPORTFILE | Specifies the file and its path to be used for the import |
-|     | \--usage | Further detailed information on using the command |
-|     | \--objectType=OBJECTTYPE | Imports the specified object type |
-|     | \--objectId=OBJECTID | Imports only the specified object |
-| \-f | \--force | Forces existing objects to be updated but overwrites the imported categories |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --importFile=IMPORTFILE | Specifies the file and its path to be used for the import |
+|     | --usage | Further detailed information on using the command |
+|     | --objectType=OBJECTTYPE | Imports the specified object type |
+|     | --objectId=OBJECTID | Imports only the specified object |
+| -f | --force | Forces existing objects to be updated but overwrites the imported categories |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -441,25 +473,25 @@ Performs a JDisc import to i-doit.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-r | \--profile=PROFILE | Specify/select the JDisc profile to be used for the import |
-| \-g | \--group=GROUP | Specify/select the group ID to be used for the import |
-| \-x | \--mode=MODE | Select the import mode. The following IDs are available:<br><br>1: "Append": The import will only create new objects.<br><br>2: "Update": The import will try to update already existing objects.<br><br>3: "Overwrite": Existing objects are updated, new objects are created additionally. Contents from Multi-Value-Categories are first completely deleted and then newly created on the database.<br><br>4: "Update (newly discovered)": The mode corresponds to "Update", but all known links between i-doit and JDisc objects are removed and reconnected after a check.<br><br>5: "Overwrite (newly discovered)": The import clears all existing identification keys before the Overwrite mode is triggered. |
-| \-s | \--server=SERVER | Enter the Server-ID to select it |
-| \-o | \--overwriteHost | Specify whether to overwrite overlapping host addresses |
-| \-l | \--detailedLogging | Increases the logging level |
-| \-b | \--regenerateSearchIndex | Automatically renews the search index |
-|     | \--listProfiles | Creates a list of available profiles |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -r | --profile=PROFILE | Specify/select the JDisc profile to be used for the import |
+| -g | --group=GROUP | Specify/select the group ID to be used for the import |
+| -x | --mode=MODE | Select the import mode. The following IDs are available:<br><br>1: "Append": The import will only create new objects.<br><br>2: "Update": The import will try to update already existing objects.<br><br>3: "Overwrite": Existing objects are updated, new objects are created additionally. Contents from Multi-Value-Categories are first completely deleted and then newly created on the database.<br><br>4: "Update (newly discovered)": The mode corresponds to "Update", but all known links between i-doit and JDisc objects are removed and reconnected after a check.<br><br>5: "Overwrite (newly discovered)": The import clears all existing identification keys before the Overwrite mode is triggered. |
+| -s | --server=SERVER | Enter the Server-ID to select it |
+| -o | --overwriteHost | Specify whether to overwrite overlapping host addresses |
+| -l | --detailedLogging | Increases the logging level |
+| -b | --regenerateSearchIndex | Automatically renews the search index |
+|     | --listProfiles | Creates a list of available profiles |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -473,22 +505,22 @@ Triggers a JDisc Discovery job.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-s | \--server=SERVER | Selecting the JDisc Server |
-| \-j | \--discoveryJob=DISCOVERYJOB | Selection of the Discovery Job (Standard: "Discover all") |
-| \-d | \--deviceHostname=DEVICEHOSTNAME | Selecting the device by host name |
-| \-a | \--deviceHostAddress=DEVICEHOSTADDRESS | Selecting the device using the host address |
-| \-l | \--showLog | Displays the log during the Discoveries |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -s | --server=SERVER | Selecting the JDisc Server |
+| -j | --discoveryJob=DISCOVERYJOB | Selection of the Discovery Job (Standard: "Discover all") |
+| -d | --deviceHostname=DEVICEHOSTNAME | Selecting the device by host name |
+| -a | --deviceHostAddress=DEVICEHOSTADDRESS | Selecting the device using the host address |
+| -l | --showLog | Displays the log during the Discoveries |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -502,28 +534,28 @@ Performs an import of contents of an OCS database to i-doit
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--ipPortOverwrite=IPPORTOVERWRITE | Specifies whether host addresses and ports are cleared before import. Possible values: 1 = active, 0 = inactive |
-|     | \--databaseSchema=DATABASESCHEMA | Selection of the database schema used for the import |
-|     | \--objectType=OBJECTTYPE | Specifies the standard object type that is used for the import |
-|     | \--file=FILE | Specifying the file that contains the host names |
-|     | \--hosts=HOSTS | Comma-separated list of host names to be imported |
-|     | \--snmpDevices=SNMPDEVICES | Import of SNMP devices |
-|     | \--categories=CATEGORIES | Specifies the categories to import. Possible values:<br><br>_drive, ui, sound, application, memory, model, graphic, net, stor, operating\_system, cpu_ |
-|     | \--logging=LOGGING | Activation of logging (1= normal logging, 2= debug level, default = 0) |
-|     | \--listObjectTypes | Listing of all available object types |
-|     | \--listCategories | Listing of all available categories |
-|     | \--usage | Detailed information on using the command |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --ipPortOverwrite=IPPORTOVERWRITE | Specifies whether host addresses and ports are cleared before import. Possible values: 1 = active, 0 = inactive |
+|     | --databaseSchema=DATABASESCHEMA | Selection of the database schema used for the import |
+|     | --objectType=OBJECTTYPE | Specifies the standard object type that is used for the import |
+|     | --file=FILE | Specifying the file that contains the host names |
+|     | --hosts=HOSTS | Comma-separated list of host names to be imported |
+|     | --snmpDevices=SNMPDEVICES | Import of SNMP devices |
+|     | --categories=CATEGORIES | Specifies the categories to import. Possible values:<br><br>_drive, ui, sound, application, memory, model, graphic, net, stor, operating_system, cpu_ |
+|     | --logging=LOGGING | Activation of logging (1= normal logging, 2= debug level, default = 0) |
+|     | --listObjectTypes | Listing of all available object types |
+|     | --listCategories | Listing of all available categories |
+|     | --usage | Detailed information on using the command |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -537,17 +569,17 @@ Imports content from a Syslog Server text file into the i-doit logbook.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -563,19 +595,19 @@ Performs an import of an XML file into i-doit
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--importFile=IMPORTFILE | Specification of the import file and its path |
-|     | \--usage | Detailed information on using the command |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --importFile=IMPORTFILE | Specification of the import file and its path |
+|     | --usage | Detailed information on using the command |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -591,23 +623,23 @@ Synchronizes users from LDAP to i-doit and creates them as person objects. 
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-l | \--ldapServerId=LDAPSERVERID | Specifies the ID of the LDAP server from which the users are to be synchronized  <br>If no ldapServerId is specified, all active servers are synchronized |
-|     | \--dumpConfig | Outputs the current configuration from the configuration file |
-|     | \--connectionRankingActive\[=CONNECTIONRANKINGACTIVE\] | Configuration which reactivates all connections from all reactivated Users.  <br>Default configuration is expert setting 'ldap.connection-ranking-active' (Tenant-wide) with value '1'. |
-|     | \--dropExistingRelations\[=DROPEXISTINGRELATIONS\] | If an existing ldap group has group member users, outside of these synced users, those will be purged.  <br>1 = drop existing relations, 0 = ignore existing relations \[default: 0\] |
-|     | \--archiveDeletedGroups\[=ARCHIVEDELETEDGROUPS\] | If a deleted ldap group remains in i-doit, archive or delete it. \[default: false\] |
-|     | \--useDefaultTemplates | Use default templates, whenever object get created by this command (v1.18) |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -l | --ldapServerId=LDAPSERVERID | Specifies the ID of the LDAP server from which the users are to be synchronized  <br>If no ldapServerId is specified, all active servers are synchronized |
+|     | --dumpConfig | Outputs the current configuration from the configuration file |
+|     | --connectionRankingActive=CONNECTIONRANKINGACTIVE | Configuration which reactivates all connections from all reactivated Users.  <br>Default configuration is expert setting 'ldap.connection-ranking-active' (Tenant-wide) with value '1'. |
+|     | --dropExistingRelations=DROPEXISTINGRELATIONS | If an existing ldap group has group member users, outside of these synced users, those will be purged.  <br>1 = drop existing relations, 0 = ignore existing relations default: 0 |
+|     | --archiveDeletedGroups=ARCHIVEDELETEDGROUPS | If a deleted ldap group remains in i-doit, archive or delete it. default: false |
+|     | --useDefaultTemplates | Use default templates, whenever object get created by this command (v1.18) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -621,18 +653,18 @@ Synchronizes LDAP DNs with the i-doit users
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--ldapServerId=LDAPSERVERID | Specifying the LDAP server via the ID |
-| \-o | \--objectType=OBJECTTYPE | Specifying the object type as a constant (z.B. C\_\_OBJTYPE\_\_SERVER) |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --ldapServerId=LDAPSERVERID | Specifying the LDAP server via the ID |
+| -o | --objectType=OBJECTTYPE | Specifying the object type as a constant (z.B. C__OBJTYPE__SERVER) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -646,8 +678,8 @@ Lists all commands. Format of the output can be changed.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--format=\[FORMAT\] | Setting the output format (txt, xml, json or md) \[Default: txt\] |
-|     | \--raw | Output of the command help |
+|     | --format=FORMAT | Setting the output format (txt, xml, json or md) Default: txt |
+|     | --raw | Output of the command help |
 
 **Example of use**
 
@@ -661,17 +693,17 @@ Adds a license for i-doit
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-l | \--license=\[LICENSE\] | Path to the license file (/path/to/license/file.key) |
-| \-t | \--tenant=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -l | --license=LICENSE | Path to the license file (/path/to/license/file.key) |
+| -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -685,17 +717,17 @@ Assigns a hosting license to a tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--count=\[COUNT\] | Number of objects to be licensed \[Default: 0\] |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --count=COUNT | Number of objects to be licensed Default: 0 |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -709,16 +741,16 @@ Imports licenses from the i-doit license server
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-l | \--license-server=\[LICENSE-SERVER\] | Path to the i-doit license server \[Default: "https://lizenzen.i-doit.com"\] |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -l | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "https://lizenzen.i-doit.com" |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -732,17 +764,17 @@ Sets a license key for i-doit
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-l | \--license-server=\[LICENSE-SERVER\] | Path to the i-doit license server \[Default: "[https://lizenzen.i-doit.com](https://lizenzen.i-doit.com)"\] |
-| \-k | \--key=\[KEY\] | License key for i-doit |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -l | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "https://lizenzen.i-doit.com(https://lizenzen.i-doit.com)" |
+| -k | --key=KEY | License key for i-doit |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -758,14 +790,14 @@ Lists all installed licenses
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-t | \--tenant=\[TENANT\] | ID of the assigned tenant to filter (multiple values allowed) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -t | --tenant=TENANT | ID of the assigned tenant to filter (multiple values allowed) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -779,16 +811,16 @@ Deletes a license from i-doit
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-l | \--license=\[LICENSE\] | License ID for the license to be deleted |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -l | --license=LICENSE | License ID for the license to be deleted |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -802,17 +834,17 @@ Archives the logbook entries with a defined age, according to the settings on th
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -826,16 +858,16 @@ Sends e-mails with scheduled maintenance according to the time periods specified
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -849,19 +881,19 @@ Exports the Nagios settings and i-doit objects to Nagios configuration files
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--nagiosHostId=NAGIOSHOSTID | Specifies the Nagios host to be used for the export |
-|     | \--validate | Validates the export files |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --nagiosHostId=NAGIOSHOSTID | Specifies the Nagios host to be used for the export |
+|     | --validate | Validates the export files |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -875,17 +907,17 @@ Imports monitoring status changes from the NDOUtils into the i-doit logbook.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -899,19 +931,19 @@ Sends the notifications configured on the i-doit interface
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--notification-ids=NOTIFICATION-IDS | Pass specific notification IDs to be sent 1,2,3 |
-|     | \--notification-type-ids=NOTIFICATION-TYPE-IDS | Pass specific notification type IDs to be sent 1,2,3 |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --notification-ids=NOTIFICATION-IDS | Pass specific notification IDs to be sent 1,2,3 |
+|     | --notification-type-ids=NOTIFICATION-TYPE-IDS | Pass specific notification type IDs to be sent 1,2,3 |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -925,21 +957,21 @@ Exports a report to the desired file format.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-r | \--reportId=REPORTID | ID of the report to be exported |
-| \-d | \--exportPath=EXPORTPATH | Path to which the export should take place |
-| \-f | \--exportFilename=EXPORTFILENAME | File name of the export file without file extension |
-| \-t | \--exportFileType=EXPORTFILETYPE | File type of the export file. Possible values: csv, txt, pdf, xml (Default:  "csv") |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -r | --reportId=REPORTID | ID of the report to be exported |
+| -d | --exportPath=EXPORTPATH | Path to which the export should take place |
+| -f | --exportFilename=EXPORTFILENAME | File name of the export file without file extension |
+| -t | --exportFileType=EXPORTFILETYPE | File type of the export file. Possible values: csv, txt, pdf, xml (Default:  "csv") |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -953,18 +985,18 @@ Searches for content in the documentation
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--searchString=SEARCHSTRING | Content to be searched for |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --searchString=SEARCHSTRING | Content to be searched for |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -978,20 +1010,20 @@ Restores the search index by deleting and rewriting it.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--update | Instead of just creating a new index, the current index documents are overwritten |
-|     | \--category=CATEGORY | Whitelist of the categories |
-|     | \--dry-run | Run Reindex without saving |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --update | Instead of just creating a new index, the current index documents are overwritten |
+|     | --category=CATEGORY | Whitelist of the categories |
+|     | --dry-run | Run Reindex without saving |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1005,17 +1037,17 @@ Resynchronizes dynamic group members.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-g | \--groups=GROUPS | Comma-separated list of IDs of the dynamic groups |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -g | --groups=GROUPS | Comma-separated list of IDs of the dynamic groups |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1030,17 +1062,17 @@ Determines the value of the system's auto-increment. This affects object IDs, ca
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--autoIncrement=AUTOINCREMENT | Number to which the auto-increment should be set |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --autoIncrement=AUTOINCREMENT | Number to which the auto-increment should be set |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1054,13 +1086,13 @@ Checks if a new i-doit version is available.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1074,18 +1106,18 @@ Converts all non INNODB tables to INNODB
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--convert | Starts the process of converting all non-UTF-8 tables |
-|     | \--table=\[TABLE\] | Table to be checked and converted |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --convert | Starts the process of converting all non-UTF-8 tables |
+|     | --table=TABLE | Table to be checked and converted |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1101,17 +1133,17 @@ Converts all non-UTF-8 data types to UTF-8.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--convert | Starts the process of converting all non-UTF-8 tables |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --convert | Starts the process of converting all non-UTF-8 tables |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1127,17 +1159,17 @@ Executes the location correction from the GUI in the console
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1151,17 +1183,17 @@ Sends an e-mail notification for maintenance contacts.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1175,18 +1207,18 @@ Cleans all objects with a self-defined status.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--objectStatus=OBJECTSTATUS | Determines which status is to be cleaned up: 1: "unfinished"; 3: "archived"; 4: "deleted |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --objectStatus=OBJECTSTATUS | Determines which status is to be cleaned up: 1: "unfinished"; 3: "archived"; 4: "deleted |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1200,18 +1232,18 @@ Renews the names of all object relationships.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | \--categoryConstant=CATEGORYCONSTANT | constant of the category for which the operation is to be performed (z.B. C\_\_CATG\_\_IP) |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|     | --categoryConstant=CATEGORYCONSTANT | constant of the category for which the operation is to be performed (z.B. C__CATG__IP) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1225,19 +1257,19 @@ Creates a new tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--root-user=\[ROOT-USER\] | Database password of the new tenant |
-| \-p | \--root-password=\[ROOT-PASSWORD\] | Username of privileged DB User \[default: "root"\] |
-| \-U | \--user=\[USER\] | Username of DB for new tenant \[default: "idoit"\] |
-| \-P | \--password=\[PASSWORD\] | Password of DB for new tenant |
-| \-d | \--database=\[DATABASE\] | DB name for new tenant \[default: "idoit\_data"\] |
-| \-t | \--title=\[TITLE\] | Name of the new tenant \[default: "Your company name"\] |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --root-user=ROOT-USER | Database password of the new tenant |
+| -p | --root-password=ROOT-PASSWORD | Username of privileged DB User default: "root" |
+| -U | --user=USER | Username of DB for new tenant default: "idoit" |
+| -P | --password=PASSWORD | Password of DB for new tenant |
+| -d | --database=DATABASE | DB name for new tenant default: "idoit_data" |
+| -t | --title=TITLE | Name of the new tenant default: "Your company name" |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1251,16 +1283,16 @@ Deactivates an existing tenant.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1274,16 +1306,16 @@ Activates an existing tenant.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1297,13 +1329,13 @@ Lists all existing tenants.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-h | \--help | Hilfenachricht zur Einblendung weiterer Informationen |
-| \-q | \--quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| \-V | \--version | Ausgabe der Version der i-doit Console |
-|     | \--ansi | Erzwingt die Ausgabe im ANSI-Format |
-|     | \--no-ansi | Deaktiviert die Ausgabe im ANSI-Format |
-| \-n | \--no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
+| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
+| -V | --version | Ausgabe der Version der i-doit Console |
+|     | --ansi | Erzwingt die Ausgabe im ANSI-Format |
+|     | --no-ansi | Deaktiviert die Ausgabe im ANSI-Format |
+| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
+| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Example of use**
 
@@ -1319,16 +1351,16 @@ Removes an existing client
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1344,15 +1376,15 @@ Uninstalls the used i-doit installation
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1368,17 +1400,17 @@ Updates the i-doit installation
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-z | \--zip=\[ZIP\] | Specifying the path to the update packet |
-|     | \--v=V | Version to update to |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -z | --zip=ZIP | Specifying the path to the update packet |
+|     | --v=V | Version to update to |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -1394,18 +1426,18 @@ Sends emails about workflows and creates tasks from checklists.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| \-t | \--types=TYPES | Workflow types (multiple values allowed) |
-| \-u | \--user=\[USERNAME\] | Username of a user who is authorized to execute |
-| \-p | \--password=\[PASSWORD\] | Password for authentication of the previously specified user |
-| \-i | \--tenantId=\[TENANT-ID\] | Tenant ID of the tenant to be used (default: 1) |
-| \-c | \--config=\[CONFIG-FILE\] | Specifying the path to the configuration file |
-| \-h | \--help | Help message for displaying further information |
-| \-q | \--quiet | Quiet-Mode to deactivate output |
-| \-V | \--version | Output of the i-doit Console version |
-|     | \--ansi | Forces the output in ANSI format |
-|     | \--no-ansi | Disables the output in ANSI format |
-| \-n | \--no-interaction | Disables all interaction questions of the i-doit Console |
-| \-v / -vv / -vvv | \--verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -t | --types=TYPES | Workflow types (multiple values allowed) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi | Forces the output in ANSI format |
+|     | --no-ansi | Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
