@@ -20,7 +20,7 @@ php.exe console.php
 
 When you execute the CLI without further arguments, the general help is displayed:
 
-??? "Available commands"
+??? abstract "Available commands"
 
     ```sh
     i-doit console utility 24
@@ -98,12 +98,12 @@ When you execute the CLI without further arguments, the general help is displaye
 
 In order to access i-doit via the CLI an authentication is required for most of the commands. For this purpose, you hand over a user name, the appropriate password and the desired [tenant ID](../../../system-administration/multi-tenant.md). With a default installation, in most cases the latter is **"1"**.
 
-```sh
+```shell
 cd /var/www/html/
 sudo -u www-data php console.php [COMMAND] --user admin --password admin --tenantId 1 [FURTHER OPTIONs]
 ```
 
-!!! success "The user "controller"
+!!! success "The user "controller""
 
     We recommend creating a dedicated user in i-doit for the application of the CLI. If this user is to be configured as [local user](../../../use-cases/creating-a-local-user.md), create it as object of the type **Persons** with the desired credentials in the **Persons → Login** category. This user should receive admin rights. The rights assignment can be carried out through allocation to the predefined **Person group Admin**.
 
@@ -111,7 +111,7 @@ sudo -u www-data php console.php [COMMAND] --user admin --password admin --tenan
 
 Often commands are accompanied by further arguments. Therefore each command provides a help via **--help**:
 
-```sh
+```shell
 cd /var/www/html/
 sudo -u www-data php console.php search --help
 ```
@@ -122,19 +122,19 @@ Furthermore, some commands provide examples via **--usage**.
 
 | Command | pro Version | open Version | [Add-on](../../../i-doit-pro-add-ons/index.md) | Description |
 | --- | --- | --- | --- | --- |
-| **CompileDocuments** | yes | no | [Documents](../../../i-doit-pro-add-ons/documents/index.md) |  |
+| **CompileDocuments** | yes | no | [Documents](../../../i-doit-pro-add-ons/documents/index.md) | Compile Documents |
 | **addon-activate** | yes | yes | -  | Activate add-on |
 | **addon-deactivate** | yes | yes | -  | Deactivate add-on |
 | **addon-install** | yes | yes | -  | Install add-on |
 | **addon-list** | yes | yes | -  | Shows list of installed add-ons |
 | **admin-center-password-reset** | yes | yes | -  | Reset the password for the Admin Center |
 | **auth-cleanup** | yes | yes | -  | Clean up of [authorization system](../../../efficient-documentation/rights-management/index.md) |
-| **check_mk-export** | yes | no | Check_MK 1 | Export of configuration files for [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) |
-| **check_mk-livestatus** | yes | no | Check_MK 1 | Write actual status from [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) into log book |
+| **check_mk-export** | yes | no | [Check_MK 1](../../../i-doit-pro-add-ons/checkmk.md) | Export of configuration files for [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) |
+| **check_mk-livestatus** | yes | no | [Check_MK 1](../../../i-doit-pro-add-ons/checkmk.md) | Write actual status from [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) into log book |
 | **clear-credentials** | yes | yes | - | Removes user credentials |
 | **completion** | yes | yes | - | Dump the shell completion script |
 | **contracts-outdated** | yes | yes | - | Updates status of outdated contracts |
-| **documents** | yes | no | [Documents](../../../i-doit-pro-add-ons/documents/index.md) |  |
+| **documents** | yes | no | [Documents](../../../i-doit-pro-add-ons/documents/index.md) | Create and export documents |
 | **extend-contracts** | yes | no | - | Extends Contracts with last cancellation date in the past |
 | **help** | yes | yes | -  | Displays the help for a command |
 | **import-csv** | yes | no  | -   | Import data from a [CSV file](../../../consolidate-data/csv-data-import/index.md) |
@@ -155,10 +155,10 @@ Furthermore, some commands provide examples via **--usage**.
 | **license-remove** | yes | no  | -  | Removes licenses from i-doit |
 | **list** | yes | yes | - | List console commands |
 | **logbook-archive** | yes | yes | -  | Archive [logbook entries](../../../basics/logbook.md) |
-| **maintenance** | yes | no | Maintenance | Sends notifications of scheduled maintenance from the Maintenance Add-on |
-| **migrate-uploaded-files** | --- | --- | --- | --- |
-| **nagios-export** | yes | no | Nagios | Export [Nagios](../../network-monitoring/nagios.md) configuration |
-| **nagios-ndoutils** | yes | no | Nagios | Write actual status from [Nagios](../../network-monitoring/nagios.md) into logbook |
+| **maintenance** | yes | no | [Maintenance](../../../i-doit-pro-add-ons/maintenance.md) | Sends notifications of scheduled maintenance from the Maintenance Add-on |
+| **migrate-uploaded-files** | yes | yes | - | --- |
+| **nagios-export** | yes | no | [Nagios](../../network-monitoring/nagios.md) | Export [Nagios](../../network-monitoring/nagios.md) configuration |
+| **nagios-ndoutils** | yes | no | [Nagios](../../network-monitoring/nagios.md) | Write actual status from [Nagios](../../network-monitoring/nagios.md) into logbook |
 | **notifications-list** | yes | yes | -  | List all [notifications](../../../evaluation/notifications.md) types and notifications for later usage |
 | **notifications-send** | yes | yes | -  | Send [notifications](../../../evaluation/notifications.md) per e-mail |
 | **report-export** | yes | no  | -  | Export a [report](../../../evaluation/report-manager.md) as file |
@@ -183,4 +183,4 @@ Furthermore, some commands provide examples via **--usage**.
 | **tenant-remove** | yes | yes  | -  | Remove an existing [tenant](../../../system-administration/multi-tenant.md) |
 | **uninstall** | yes | yes | -  | Uninstalls i-doit |
 | **update** | yes | yes | -  | Installs i-doit updates |
-| **workflows-process** | yes | no | -  | Process all workflows, send e-mails and create new tasks from checklists |
+| **workflows-process** | yes | no | [Workfow](../../../i-doit-pro-add-ons/workflow.md) | Process all workflows, send e-mails and create new tasks from checklists |

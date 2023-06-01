@@ -9,7 +9,7 @@
 
 | Command | Internal system description |
 | --- | --- |
-| [CompileDocuments](#Compiledocuments) | Compile Documents |
+| [CompileDocuments](#compiledocuments) | Compile Documents |
 | [addon-activate](#addon-activate) | Activating Add-ons |
 | [addon-deactivate](#addon-deactivate) | Deactivating Add-ons |
 | [addon-install](#addon-install) | Installing Add-ons |
@@ -346,7 +346,7 @@ The completion command dumps the shell completion script required to use shell a
 **Example of use**
 
 ```shell
-    sudo -u www-data php console.php completion
+sudo -u www-data php console.php completion
 ```
 
 ### contracts-outdated
@@ -370,7 +370,7 @@ Updates status of outdated contracts
 **Example of use**
 
 ```shell
-    sudo -u www-data php console.php contracts-outdated --user admin --password admin
+sudo -u www-data php console.php contracts-outdated --user admin --password admin
 ```
 
 ### documents
@@ -404,7 +404,7 @@ Create and export Documents
 **Example of use**
 
 ```shell
-    sudo -u www-data php console.php extend-contracts --user admin --password admin
+sudo -u www-data php console.php documents --user admin --password admin
 ```
 
 ### extend-contracts
@@ -429,7 +429,7 @@ Automatically extend the runtime of not-cancelled contracts
 **Example of use**
 
 ```shell
-    sudo -u www-data php console.php extend-contracts --user admin --password admin
+sudo -u www-data php console.php extend-contracts --user admin --password admin
 ```
 
 ### help
@@ -451,7 +451,9 @@ Used in conjunction with another command to display its usage, arguments and opt
 
 **Example of use**
 
-    sudo -u www-data php console.php help --format=txt <command>
+```shell
+sudo -u www-data php console.php help --format=txt <command>
+```
 
 ### import-csv
 
@@ -477,7 +479,9 @@ Performs the import of a CSV file with the desired import parameters
 
 **Example of use**
 
-    sudo -u www-data php console.php import-csv --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-CSV-Import.csv --importProfileId 1 --csvSeparator ";" --multiValueMode column
+```shell
+sudo -u www-data php console.php import-csv --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-CSV-Import.csv --importProfileId 1 --csvSeparator ";" --multiValueMode column
+```
 
 ### import-csvprofiles
 
@@ -499,7 +503,9 @@ Returns a list of the import profiles for the CSV import
 
 **Example of use**
 
-    sudo -u www-data php console.php import-csvprofiles --user admin --password admin --tenantId 1
+```shell
+sudo -u www-data php console.php import-csvprofiles --user admin --password admin --tenantId 1
+```
 
 ### import-hinventory
 
@@ -526,8 +532,9 @@ Performs an h-inventory import of a compatible XML file
 
 **Example of use**
 
-    sudo -u www-data php console.php import-hinventory --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-h-inventory-import.xml
-
+```shell
+sudo -u www-data php console.php import-hinventory --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-h-inventory-import.xml
+```
 
 ### import-jdisc
 
@@ -539,12 +546,12 @@ Performs a JDisc import to i-doit.
 | --- | --- | --- |
 | -r | --profile=PROFILE | Specify/select the JDisc profile to be used for the import |
 | -g | --group=GROUP | Specify/select the group ID to be used for the import |
-| -x | --mode=MODE | Select the import mode. The following IDs are available:<br><br>1: "Append": The import will only create new objects.<br><br>2: "Update": The import will try to update already existing objects.<br><br>3: "Overwrite": Existing objects are updated, new objects are created additionally. Contents from Multi-Value-Categories are first completely deleted and then newly created on the database.<br><br>4: "Update (newly discovered)": The mode corresponds to "Update", but all known links between i-doit and JDisc objects are removed and reconnected after a check.<br><br>5: "Overwrite (newly discovered)": The import clears all existing identification keys before the Overwrite mode is triggered. |
+| -x | --mode=MODE | Select the import mode.<br>**1**: "Append": The import will only create new objects.<br>**2**: "Update": The import will try to update already existing objects.<br>**3**: "Overwrite": Existing objects are updated, new objects are created additionally. Contents from Multi-Value-Categories are first completely deleted and then newly created on the database.<br>**4**: "Update (newly discovered)": The mode corresponds to "Update", but all known links between i-doit and JDisc objects are removed and reconnected after a check.<br>**5**: "Overwrite (newly discovered)": The import clears all existing identification keys before the Overwrite mode is triggered.<br>**6**: Only create newly scanned devices - The import creates only newly scanned jdisc devices, existing ones are skipped.  |
 | -s | --server=SERVER | Enter the Server-ID to select it |
 | -o | --overwriteHost | Specify whether to overwrite overlapping host addresses |
-| -l | --detailedLogging | Increases the logging level |
+| -l | --detailedLogging[=DETAILEDLOGGING] | Increases the logging level:<br>**1**: low log level only notices and warnings are being logged<br>**2**: additionally to the low log level errors are being logged<br>**3**: additionally to the normal log level debug messages are being logged. (Memory intensive) |
 | -b | --regenerateSearchIndex | Automatically renews the search index |
-|     | --listProfiles | Creates a list of available profiles |
+|    | --listProfiles | Creates a list of available profiles |
 | -u | --user=USERNAME | Username of a user who is authorized to execute |
 | -p | --password=PASSWORD | Password for authentication of the previously specified user |
 | -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
@@ -558,7 +565,9 @@ Performs a JDisc import to i-doit.
 
 **Example of use**
 
-    sudo -u www-data php console.php import-jdisc --user admin --password admin --tenantId 1 --profile 3 --mode 4 --server 2 --detailedLogging --regenerateSearchIndex
+```shell
+sudo -u www-data php console.php import-jdisc --user admin --password admin --tenantId 1 --profile 3 --mode 4 --server 2 --detailedLogging 3 --regenerateSearchIndex
+```
 
 ### import-jdiscdiscovery
 
@@ -586,7 +595,9 @@ Triggers a JDisc Discovery job.
 
 **Example of use**
 
-    sudo -u www-data php console.php import-jdiscdiscovery --user admin --password admin --tenantId 1 --server 2
+```shell
+sudo -u www-data php console.php import-jdiscdiscovery --user admin --password admin --tenantId 1 --server 2
+```
 
 ### import-syslog
 
@@ -609,8 +620,9 @@ Imports content from a Syslog Server text file into the i-doit logbook.
 
 **Example of use**
 
-    sudo -u www-data php console.php import-syslog --user admin --password admin --tenantId 1
-
+```shell
+sudo -u www-data php console.php import-syslog --user admin --password admin --tenantId 1
+```
 
 ### import-xml
 
@@ -641,7 +653,7 @@ sudo -u www-data php console.php import-xml --user admin --password admin --tena
 
 ### install
 
-Performs an import of an XML file into i-doit
+Install the i-doit application
 
 **Options:**
 
@@ -651,8 +663,8 @@ Performs an import of an XML file into i-doit
 | -p | --root-password[=ROOT-PASSWORD] | Password for authentication of the previously specified user |
 |  | --host=HOST | Username of priviliged DB User [default: "root"] |
 |  | --port=PORT | Port for DB connection [default: 3306] |
-| -d | --database=DATABAS | i-doit System Database name [default: "idoit_system_temp"] |
-| -U | --user=USER | sername of i-doit system DB [default: "idoit"] |
+| -d | --database=DATABASE | i-doit System Database name [default: "idoit_system_temp"] |
+| -U | --user=USER | Username of i-doit system DB [default: "idoit"] |
 | -P | --password[=PASSWORD] | Password of i-doit system DB |
 |  | --admin-password[=ADMIN-PASSWORD] | Password for i-doit admin center |
 | -l | --license-server=LICENSE-SERVER | Path for the i-doit license server [default: "https://lizenzen.i-doit.com"] |
@@ -667,7 +679,7 @@ Performs an import of an XML file into i-doit
 **Example of use**
 
 ```shell
-sudo -u www-data php console.php import-xml --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-xml-import.xml
+sudo -u www-data php console.php install
 ```
 
 ### ldap-sync
@@ -956,7 +968,7 @@ Migrates uploaded files in i-doit <v1.13 to v.1.14>
 **Example of use**
 
 ```shell
-sudo -u www-data php migrate-uploaded-files
+sudo -u www-data php console.php migrate-uploaded-files
 ```
 
 ### nagios-export
@@ -1228,7 +1240,7 @@ Purges optionally category entries that are in the state unfinished, archived or
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | --categoryStatus=CATEGORYSTATUS | Use to start cleaning up the specified status: <br>1 for 'unfinished' category entries<br>3 for 'archived' category entries<br>4 for 'deleted' category entries |
+|     | --categoryStatus=CATEGORYSTATUS | Use to start cleaning up the specified status: <br>**1** for 'unfinished' category entries<br>**3** for 'archived' category entries<br>**4** for 'deleted' category entries |
 | -u | --user=USERNAME | Username of a user who is authorized to execute |
 | -p | --password=PASSWORD | Password for authentication of the previously specified user |
 | -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
@@ -1242,7 +1254,7 @@ Purges optionally category entries that are in the state unfinished, archived or
 **Example of use**
 
 ```shell
-sudo -u www-data php console.php system-autoincrement --user admin --password admin --tenantId 1 --autoIncrement 20
+sudo -u www-data php console.php system-categorycleanup --user admin --password admin --tenantId 1 --categoryStatus 3
 ```
 
 ### system-checkforupdates
