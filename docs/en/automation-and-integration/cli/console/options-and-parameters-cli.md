@@ -19,9 +19,9 @@
 | [check_mk-export](#check_mk-export) | Export configuration data for Check_MK |
 | [check_mk-livestatus](#check_mk-livestatus) | Write actual state from Check_MK to logbook |
 | [clear-credentials](#clear-credentials) | Removes user credentials |
-| completion | --- |
-| contracts-outdated | --- |
-| documents | --- |
+| [completion](#completion) | Dump the shell completion script |
+| [contracts-outdated](#contracts-outdated) | Updates status of outdated contracts |
+| [documents](#documents) | Create and export documents |
 | [extend-contracts](#extend-contracts) | Extends Contracts with last cancellation date in the past |
 | [help](#help) | Displays the help for a command |
 | [import-csv](#import-csv) | Import data from a CSV file (uses a defined import profile from the GUI) |
@@ -31,7 +31,7 @@
 | [import-jdiscdiscovery](#import-jdiscdiscovery) | Start a scan in JDisc Discovery (API access is configured via the GUI) |
 | [import-syslog](#import-ocs) | Import data from a syslog into the i-doit logbook |
 | [import-xml](#import-ocs) | Importing data from XML |
-| install | --- |
+| [install](#install) | Install the i-doit application |
 | [ldap-sync](#ldap-sync) | Import persons and groups of persons from an LDAP directory or Active Directory (AD) |
 | [ldap-syncdn](#ldap-sync) | Synchronize from an LDAP/AD the Distinguished Name (DN) of the users (see category LDAP) |
 | [license-add](#license-add) | Adds a license for i-doit (in progress) |
@@ -43,18 +43,18 @@
 | [list](#list) | Lists all commands |
 | [logbook-archive](#logbook-archive) | Archiving logbook entries |
 | [maintenance](#maintenance) | Sends notifications of scheduled maintenance from the Maintenance Add-on |
-| migrate-uploaded-files | --- |
+| [migrate-uploaded-files](#migrate-uploaded-files) | Migrates uploaded files in i-doit <v1.13 to v.1.14> |
 | [nagios-export](#nagios-export) | Export Nagios configuration |
 | [nagios-ndoutils](#nagios-ndoutils) | Write actual state from Nagios to logbook |
-| notifications-list | --- |
+| [notifications-list](#notifications-list) | Lists all notification types and notifications for later usage |
 | [notifications-send](#notifications-send) | Send notifications by e-mail (notifications are configured in the GUI) |
 | [report-export](#report-export) | Exporting a report as a file |
 | [search](#search) | Search in i-doit |
 | [search-index](#search-index) | Create/renew search index |
-| strip-description-html | --- |
+| [strip-description-html](#strip-description-html) | With this command you can strip html tags in description field of all categories and objects |
 | [sync-dynamic-groups](#sync-dynamic-groups) | Resynchronizes dynamic group members |
-| [system-autoincrement](#system-autoincrement) | set auto\_increment of MariaDB/MySQL tables to a positive integer value (concerns the data structure! Use with caution!) |
-| system-categorycleanup | --- |
+| [system-autoincrement](#system-autoincrement) | set auto_increment of MariaDB/MySQL tables to a positive integer value (concerns the data structure! Use with caution!) |
+| [system-categorycleanup](#system-categorycleanup) | Purges optionally category entries that are in the state unfinished, archived or deleted |
 | [system-checkforupdates](#system-checkforupdates) | Check for updates for i-doit |
 | [system-convert-non-innodb-tables](#system-convert-non-innodb-tables) | Converts all tables that are not in INNODB to INNODB (concerns the database coding. Use with caution!) |
 | [system-convert-non-utf8-tables](#system-convert-non-utf8-tables) | Converts all non-UTF8 tables to UTF8 tables (concerns database encoding. Use with caution!) |
@@ -62,7 +62,7 @@
 | [system-maintenancecontract](#system-maintenancecontract) | Send e-mail for maintenance contracts (Function deprecated. Please use [notifications-send](#notifications-send)) |
 | [system-objectcleanup](#system-objectcleanup) | Clean up objects (objects with the status "unfinished", "archived" or "deleted" are permanently removed) |
 | [system-objectrelations](#system-objectrelations) | Recreate Object Relationships |
-| system-refresh-table-configuration | --- |
+| [system-refresh-table-configuration](#system-refresh-table-configuration) | Refreshes all available list configurations (object types and categories) |
 | [tenant-create](#tenant-create) | Add a new tenant |
 | [tenant-disable](#tenant-disable) | Deactivate an existing tenant |
 | [tenant-enable](#tenant-enable) | Activate an existing tenant |
@@ -92,14 +92,15 @@ Compile Documents
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|    | --ansi | Forces the output in ANSI format |
-|    | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php CompileDocuments --user admin --password admin --tenant 1 --documentId 123 --documentId 321
+```shell
+sudo -u www-data php console.php CompileDocuments --user admin --password admin --tenant 1 --documentId 123 --documentId 321
+```
 
 ### addon-activate
 
@@ -109,21 +110,22 @@ Activates installed add-ons for the desired tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| -u | --user=USERNAME | Username of a user who is authorized to execute |
-| -p | --password=PASSWORD | Password for authentication of the previously specified user |
-| -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
-| -a | --addon=ADDON | Add-on identification |
+| -u | --user=USERNAME | i-doit Admin username |
+| -p | --password[=PASSWORD] | i-doit Admin password |
+| -a | --addon[=ADDON] | Add-on identifier (multiple values allowed) |
+| -t | --tenant[=TENANT] | Tenant id (multiple values allowed) |
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|    | --ansi | Forces the output in ANSI format |
-|    | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php addon-activate --user admin --password admin --tenant 1 --addon api
+```shell
+sudo -u www-data php console.php addon-activate --user admin --password admin --tenant 1 --addon api
+```
 
 ### addon-deactivate
 
@@ -133,21 +135,22 @@ Disabled installed add-ons for the desired tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| -u | --user=USERNAME | Username of a user who is authorized to execute |
-| -p | --password=PASSWORD | Password for authentication of the previously specified user |
-| -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
-| -a | --addon=ADDON | Add-on identification |
+| -u | --user=USERNAME | i-doit Admin username |
+| -p | --password[=PASSWORD] | i-doit Admin password |
+| -a | --addon[=ADDON] | Add-on identifier (multiple values allowed) |
+| -t | --tenant[=TENANT] | Tenant id (multiple values allowed) |
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php addon-deactivate --user admin --password admin --tenant 1 --addon api
+```shell
+sudo -u www-data php console.php addon-deactivate --user admin --password admin --tenant 1 --addon api
+```
 
 ### addon-install
 
@@ -157,22 +160,23 @@ Installs add-ons for the desired tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| -u | --user=USERNAME | Username of a user who is authorized to execute |
-| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -u | --user=USERNAME | i-doit Admin username |
+| -p | --password[=PASSWORD] | i-doit Admin password |
 | -z | --zip=ZIP | Path to add-on ZIP file |
-| -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
-| -a | --addon=ADDON | Add-on identification |
+| -a | --addon[=ADDON] | Add-on identifier (multiple values allowed) |
+| -t | --tenant[=TENANT] | Tenant id (multiple values allowed) |
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php addon-install --user admin --password admin --tenant 1 --addon api --zip /path/to/the/zip/file.zip
+```shell
+sudo -u www-data php console.php addon-install --user admin --password admin --tenant 1 --addon api --zip /path/to/the/zip/file.zip
+```
 
 ### addon-list
 
@@ -182,67 +186,24 @@ Displays a list with all installed add-ons for the selected tenant
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-| -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
 | -a | --addon=ADDON | Add-on identification |
+| -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php addon-list --tenant 1
-
-### admin-center-cryptohash-reset
-
-The crypto-hash of i-doit is changed, which renews the entire encryption (ATTENTION! A backup should be created prior to execution)
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
-| -u | --user=USER | Username of a user who is authorized to execute |
-| -p | --password=PASSWORD | Password for authentication of the previously specified user |
-| -h | --help | Help message for displaying further information |
-| -q | --quiet | Quiet-Mode to deactivate output |
-| -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
-| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
-| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-    sudo -u www-data php console.php admin-center-cryptohash-reset --user admin --password admin
+```shell
+sudo -u www-data php console.php addon-list --tenant 1
+```
 
 ### admin-center-password-reset
 
-Reset the password for the Admin Center
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
-| -u | --user=USERNAME | Username of a user who is authorized to execute |
-| -p | --password=PASSWORD | Password for authentication of the previously specified user |
-| -h | --help | Help message for displaying further information |
-| -q | --quiet | Quiet-Mode to deactivate output |
-| -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
-| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
-| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-    sudo -u www-data php console.php admin-center-password-reset --user admin --password admin
-
-### auth-cleanup
-
-Empties the cache of the rights system so that the currently configured rights are current or updated.
+With this command you can reset the Admin-Center password
 
 **Options:**
 
@@ -255,14 +216,40 @@ Empties the cache of the rights system so that the currently configured rights a
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php auth-cleanup --user admin --password admin --tenantId 1
+```shell
+sudo -u www-data php console.php admin-center-password-reset --user admin --password admin
+```
+
+### auth-cleanup
+
+Cleanup all auth paths
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php auth-cleanup --user admin --password admin --tenantId 1
+```
 
 ### check_mk-export
 
@@ -281,18 +268,17 @@ Performs a Check_MK export
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php check_mk-export --user admin --password admin --tenantId 1
+```shell
+sudo -u www-data php console.php check_mk-export --user admin --password admin --tenantId 1
+```
 
-  
-
-### check_mk-livestatus  
+### check_mk-livestatus
 
 Imports the monitoring status changes from Livestatus to i-doit
 
@@ -307,18 +293,19 @@ Imports the monitoring status changes from Livestatus to i-doit
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php check_mk-livestatus --user admin --password admin --tenantId 1
+```shell
+sudo -u www-data php console.php check_mk-livestatus --user admin --password admin --tenantId 1
+```
 
 ### clear-credentials
 
-Removes the entries of the attributes "username" and "password" from user logins
+It removes both attributes `username` and `password` from the users "login" category
 
 **Options:**
 
@@ -330,18 +317,99 @@ Removes the entries of the attributes "username" and "password" from user logins
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php clear-credentials --user admin --password admin --object ObjectID
+```shell
+sudo -u www-data php console.php clear-credentials --user admin --password admin --object ObjectID
+```
+
+### completion
+
+The completion command dumps the shell completion script required to use shell autocompletion (currently only bash completion is supported).
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+|  | --debug |  Tail the completion debug log |
+| -h | --help | Help message for displaying further information |
+| -q | --quit | Quiet-Mode to deactivate output |
+| -v | --version | Output of the i-doit Console version |
+|        | --ansi / --no-ansi | Forces the output in ANSI format / Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+    sudo -u www-data php console.php completion
+```
+
+### contracts-outdated
+
+Updates status of outdated contracts
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+| -u | --user=USER |  Username |
+| -p | --password=PASSWORD | Password |
+| -i | --tenantID=TENANTID | Tenant ID default: 1 |
+| -h | --help | Help message for displaying further information |
+| -q | --quit | Quiet-Mode to deactivate output |
+| -v | --version | Output of the i-doit Console version |
+|        | --ansi / --no-ansi | Forces the output in ANSI format / Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+    sudo -u www-data php console.php contracts-outdated --user admin --password admin
+```
+
+### documents
+
+Create and export Documents
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+|  | --create_revision | Creates one or more revisions for given documents |
+|  | --export | Exports one or more documents to a file |
+|  | --id=ID | Select one or more documents by id (multiple values allowed) |
+|  | --all_documents | Selects all documents |
+|  | --all_category=ALL_CATEGORY | Selects all documents in category |
+|  | --all_template=ALL_TEMPLATE | Selects all documents with template |
+|  | --all_object=ALL_OBJECT | Selects all documents with object |
+|  | --export_format=EXPORT_FORMAT | Export format: pdf or html |
+|  | --export_folder=EXPORT_FOLDER | Export folder [default: "/var/www/html/main/upload/files/"] |
+| -u | --user=USER |  Username |
+| -p | --password=PASSWORD | Password |
+| -i | --tenantID=TENANTID | Tenant ID default: 1 |
+| -h | --help | Help message for displaying further information |
+| -c | --config=CONFIG | Config file |
+| -q | --quit | Quiet-Mode to deactivate output |
+| -v | --version | Output of the i-doit Console version |
+|        | --ansi / --no-ansi | Forces the output in ANSI format / Disables the output in ANSI format |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+    sudo -u www-data php console.php extend-contracts --user admin --password admin
+```
 
 ### extend-contracts
 
-Verlängert die Laufzeit eines Vertrags, dessen letztmögliches Kündigungsdatum in der Vergangenheit liegt
+Automatically extend the runtime of not-cancelled contracts
 
 **Options:**
 
@@ -377,8 +445,7 @@ Used in conjunction with another command to display its usage, arguments and opt
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
@@ -390,7 +457,7 @@ Used in conjunction with another command to display its usage, arguments and opt
 
 Performs the import of a CSV file with the desired import parameters
 
- **Options:**
+**Options:**
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
@@ -404,8 +471,7 @@ Performs the import of a CSV file with the desired import parameters
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
@@ -427,8 +493,7 @@ Returns a list of the import profiles for the CSV import
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
@@ -455,8 +520,7 @@ Performs an h-inventory import of a compatible XML file
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
@@ -488,8 +552,7 @@ Performs a JDisc import to i-doit.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
@@ -506,7 +569,7 @@ Triggers a JDisc Discovery job.
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
 | -s | --server=SERVER | Selecting the JDisc Server |
-| -j | --discoveryJob=DISCOVERYJOB | Selection of the Discovery Job (Standard: "Discover all") |
+| -j | --discoveryJob=DISCOVERYJOB | Selection of the Discovery Job (Standard: "Discover all") |
 | -d | --deviceHostname=DEVICEHOSTNAME | Selecting the device by host name |
 | -a | --deviceHostAddress=DEVICEHOSTADDRESS | Selecting the device using the host address |
 | -l | --showLog | Displays the log during the Discoveries |
@@ -517,8 +580,7 @@ Triggers a JDisc Discovery job.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
@@ -526,42 +588,7 @@ Triggers a JDisc Discovery job.
 
     sudo -u www-data php console.php import-jdiscdiscovery --user admin --password admin --tenantId 1 --server 2
 
-### import-ocs  
-
-Performs an import of contents of an OCS database to i-doit
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description |
-| --- | --- | --- |
-|     | --ipPortOverwrite=IPPORTOVERWRITE | Specifies whether host addresses and ports are cleared before import. Possible values: 1 = active, 0 = inactive |
-|     | --databaseSchema=DATABASESCHEMA | Selection of the database schema used for the import |
-|     | --objectType=OBJECTTYPE | Specifies the standard object type that is used for the import |
-|     | --file=FILE | Specifying the file that contains the host names |
-|     | --hosts=HOSTS | Comma-separated list of host names to be imported |
-|     | --snmpDevices=SNMPDEVICES | Import of SNMP devices |
-|     | --categories=CATEGORIES | Specifies the categories to import. Possible values:<br><br>_drive, ui, sound, application, memory, model, graphic, net, stor, operating_system, cpu_ |
-|     | --logging=LOGGING | Activation of logging (1= normal logging, 2= debug level, default = 0) |
-|     | --listObjectTypes | Listing of all available object types |
-|     | --listCategories | Listing of all available categories |
-|     | --usage | Detailed information on using the command |
-| -u | --user=USERNAME | Username of a user who is authorized to execute |
-| -p | --password=PASSWORD | Password for authentication of the previously specified user |
-| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
-| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
-| -h | --help | Help message for displaying further information |
-| -q | --quiet | Quiet-Mode to deactivate output |
-| -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
-| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
-| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-    sudo -u www-data php console.php import-ocs --user admin --password admin --tenantId 1 --databaseSchema ocs --objectType C__OBJTYPE__CLIENT
-
-### import-syslog  
+### import-syslog
 
 Imports content from a Syslog Server text file into the i-doit logbook.
 
@@ -576,8 +603,7 @@ Imports content from a Syslog Server text file into the i-doit logbook.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
@@ -585,9 +611,8 @@ Imports content from a Syslog Server text file into the i-doit logbook.
 
     sudo -u www-data php console.php import-syslog --user admin --password admin --tenantId 1
 
-###   
 
-### import-xml  
+### import-xml
 
 Performs an import of an XML file into i-doit
 
@@ -604,20 +629,50 @@ Performs an import of an XML file into i-doit
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php import-xml --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-xml-import.xml
+```shell
+sudo -u www-data php console.php import-xml --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-xml-import.xml
+```
 
-###   
+### install
 
-### ldap-sync  
+Performs an import of an XML file into i-doit
 
-Synchronizes users from LDAP to i-doit and creates them as person objects. 
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+| -u | --root-user=ROOT-USER | Username of a user who is authorized to execute |
+| -p | --root-password[=ROOT-PASSWORD] | Password for authentication of the previously specified user |
+|  | --host=HOST | Username of priviliged DB User [default: "root"] |
+|  | --port=PORT | Port for DB connection [default: 3306] |
+| -d | --database=DATABAS | i-doit System Database name [default: "idoit_system_temp"] |
+| -U | --user=USER | sername of i-doit system DB [default: "idoit"] |
+| -P | --password[=PASSWORD] | Password of i-doit system DB |
+|  | --admin-password[=ADMIN-PASSWORD] | Password for i-doit admin center |
+| -l | --license-server=LICENSE-SERVER | Path for the i-doit license server [default: "https://lizenzen.i-doit.com"] |
+| -k | --key[=KEY] | License key for i-doit |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php import-xml --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-xml-import.xml
+```
+
+### ldap-sync
+
+Synchronizes users from LDAP to i-doit and creates them as person objects.
 
 **Options:**
 
@@ -636,16 +691,17 @@ Synchronizes users from LDAP to i-doit and creates them as person objects. 
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1
+```shell
+sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1
+```
 
-### ldap-syncdn  
+### ldap-syncdn
 
 Synchronizes LDAP DNs with the i-doit users
 
@@ -661,14 +717,15 @@ Synchronizes LDAP DNs with the i-doit users
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php ldap-syncdn --user admin --password admin --tenantId 1 --ldapServerId 1
+```shell
+sudo -u www-data php console.php ldap-syncdn --user admin --password admin --tenantId 1 --ldapServerId 1
+```
 
 ### list
 
@@ -678,12 +735,14 @@ Lists all commands. Format of the output can be changed.
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
-|     | --format=FORMAT | Setting the output format (txt, xml, json or md) Default: txt |
+|     | --format=FORMAT | Setting the output format (txt, xml, json or md) Default: txt |
 |     | --raw | Output of the command help |
 
 **Example of use**
 
-    sudo -u www-data php console.php list --format=txt
+```shell
+sudo -u www-data php console.php list --format=txt
+```
 
 ### license-add
 
@@ -695,19 +754,20 @@ Adds a license for i-doit
 | --- | --- | --- |
 | -u | --user=USERNAME | Username of a user who is authorized to execute |
 | -p | --password=PASSWORD | Password for authentication of the previously specified user |
-| -l | --license=LICENSE | Path to the license file (/path/to/license/file.key) |
+| -l | --license=LICENSE | Path to the license file (/path/to/license/file.key) |
 | -t | --tenant=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php license-add --user admin --password admin --tenantId 1 --license /path/to/license/file.key
+```shell
+sudo -u www-data php console.php license-add --user admin --password admin --tenantId 1 --license /path/to/license/file.key
+```
 
 ### license-assign
 
@@ -724,14 +784,15 @@ Assigns a hosting license to a tenant
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php license-assign --user admin --password admin --tenantId 1 --count 1000
+```shell
+sudo -u www-data php console.php license-assign --user admin --password admin --tenantId 1 --count 1000
+```
 
 ### license-import
 
@@ -743,18 +804,19 @@ Imports licenses from the i-doit license server
 | --- | --- | --- |
 | -u | --user=USERNAME | Username of a user who is authorized to execute |
 | -p | --password=PASSWORD | Password for authentication of the previously specified user |
-| -l | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "https://lizenzen.i-doit.com" |
+| -l | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "https://lizenzen.i-doit.com" |
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php license-import --user admin --password admin --license-server https://lizenzen.i-doit.com
+```shell
+sudo -u www-data php console.php license-import --user admin --password admin --license-server https://lizenzen.i-doit.com
+```
 
 ### license-key
 
@@ -766,21 +828,20 @@ Sets a license key for i-doit
 | --- | --- | --- |
 | -u | --user=USERNAME | Username of a user who is authorized to execute |
 | -p | --password=PASSWORD | Password for authentication of the previously specified user |
-| -l | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "https://lizenzen.i-doit.com(https://lizenzen.i-doit.com)" |
+| -l | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "https://lizenzen.i-doit.com(https://lizenzen.i-doit.com)" |
 | -k | --key=KEY | License key for i-doit |
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php license-key --user admin --password admin --license-server https://lizenzen.i-doit.com --key license
-
-###   
+```shell
+sudo -u www-data php console.php license-key --user admin --password admin --license-server https://lizenzen.i-doit.com --key license
+```
 
 ### license-list
 
@@ -794,14 +855,15 @@ Lists all installed licenses
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php license-list --tenant 1
+```shell
+sudo -u www-data php console.php license-list --tenant 1
+```
 
 ### license-remove
 
@@ -817,16 +879,17 @@ Deletes a license from i-doit
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php license-remove --user admin --password admin --license LicenseID
+```shell
+sudo -u www-data php console.php license-remove --user admin --password admin --license LicenseID
+```
 
-### logbook-archive  
+### logbook-archive
 
 Archives the logbook entries with a defined age, according to the settings on the i-doit interface.
 
@@ -841,18 +904,19 @@ Archives the logbook entries with a defined age, according to the settings on th
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
+```shell
+sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
+```
 
-### maintenance  
+### maintenance
 
-Sends e-mails with scheduled maintenance according to the time periods specified in the Maintenance add-on.
+Sends e-mails with scheduled maintenance according to the time periods specified in the [Maintenance add-on](../../../i-doit-pro-add-ons/maintenance.md).
 
 **Options:**
 
@@ -864,16 +928,38 @@ Sends e-mails with scheduled maintenance according to the time periods specified
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php maintenance --user admin --password admin --tenantId 1
+```shell
+sudo -u www-data php console.php maintenance --user admin --password admin --tenantId 1
+```
 
-### nagios-export  
+### migrate-uploaded-files
+
+Migrates uploaded files in i-doit <v1.13 to v.1.14>
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php migrate-uploaded-files
+```
+
+### nagios-export
 
 Exports the Nagios settings and i-doit objects to Nagios configuration files
 
@@ -890,16 +976,17 @@ Exports the Nagios settings and i-doit objects to Nagios configuration files
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php nagios-export --user admin --password admin --tenantId 1 --nagiosHostId 1
+```shell
+sudo -u www-data php console.php nagios-export --user admin --password admin --tenantId 1 --nagiosHostId 1
+```
 
-### nagios-ndoutils  
+### nagios-ndoutils
 
 Imports monitoring status changes from the NDOUtils into the i-doit logbook.
 
@@ -914,16 +1001,42 @@ Imports monitoring status changes from the NDOUtils into the i-doit logbook.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php nagios-ndoutils --user admin --password admin --tenantId 1
+```shell
+sudo -u www-data php console.php nagios-ndoutils --user admin --password admin --tenantId 1
+```
 
-### notifications-send  
+### notifications-list
+
+Lists all notification types and notifications for later usage
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php notifications-list --user admin --password admin --tenantId 1
+```
+
+### notifications-send
 
 Sends the notifications configured on the i-doit interface
 
@@ -940,16 +1053,17 @@ Sends the notifications configured on the i-doit interface
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php notifications-send --user admin --password admin --tenantId 1
+```shell
+sudo -u www-data php console.php notifications-send --user admin --password admin --tenantId 1
+```
 
-### report-export  
+### report-export
 
 Exports a report to the desired file format.
 
@@ -960,7 +1074,7 @@ Exports a report to the desired file format.
 | -r | --reportId=REPORTID | ID of the report to be exported |
 | -d | --exportPath=EXPORTPATH | Path to which the export should take place |
 | -f | --exportFilename=EXPORTFILENAME | File name of the export file without file extension |
-| -t | --exportFileType=EXPORTFILETYPE | File type of the export file. Possible values: csv, txt, pdf, xml (Default:  "csv") |
+| -t | --exportFileType=EXPORTFILETYPE | File type of the export file. Possible values: csv, txt, pdf, xml (Default: "csv") |
 | -u | --user=USERNAME | Username of a user who is authorized to execute |
 | -p | --password=PASSWORD | Password for authentication of the previously specified user |
 | -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
@@ -968,16 +1082,17 @@ Exports a report to the desired file format.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php report-export --user admin --password admin --tenantId 1 --reportId 27 --exportPath /var/www/exported-reports/ --exportFilename Report-Buchhaltung-November-2019 --exportFileType csv
+```shell
+sudo -u www-data php console.php report-export --user admin --password admin --tenantId 1 --reportId 27 --exportPath /var/www/exported-reports/ --exportFilename Report-Buchhaltung-November-2019 --exportFileType csv
+```
 
-### search  
+### search
 
 Searches for content in the documentation
 
@@ -993,16 +1108,17 @@ Searches for content in the documentation
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php search --user admin --password admin --tenantId 1 --searchString "Server001"
+```shell
+sudo -u www-data php console.php search --user admin --password admin --tenantId 1 --searchString "Server001"
+```
 
-### search-index  
+### search-index
 
 Restores the search index by deleting and rewriting it.
 
@@ -1020,16 +1136,42 @@ Restores the search index by deleting and rewriting it.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php search-index --user admin --password admin --tenantId 1
+```shell
+sudo -u www-data php console.php search-index --user admin --password admin --tenantId 1
+```
 
-### sync-dynamic-groups  
+### strip-description-html
+
+With this command you can strip html tags in description field of all categories and objects
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php strip-description-html --user admin --password admin --tenantId 1
+```
+
+### sync-dynamic-groups
 
 Resynchronizes dynamic group members.
 
@@ -1044,21 +1186,20 @@ Resynchronizes dynamic group members.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
+```shell
+sudo -u www-data php console.php sync-dynamic-groups --user admin --password admin --tenantId --groups 173,188,219
+```
 
-    sudo -u www-data php console.php sync-dynamic-groups --user admin --password admin --tenantId --groups 173,188,219
-
-### system-autoincrement  
+### system-autoincrement
 
 Determines the value of the system's auto-increment. This affects object IDs, category entries, and so on. When resetting the auto-increment, some content may no longer be accessible.
 
 **Options:**
-
 
 | Parameter (short version) | Parameter (long version) | Description |
 | --- | --- | --- |
@@ -1069,14 +1210,40 @@ Determines the value of the system's auto-increment. This affects object IDs, ca
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php system-autoincrement --user admin --password admin --tenantId 1 --autoIncrement 20
+```shell
+sudo -u www-data php console.php system-autoincrement --user admin --password admin --tenantId 1 --autoIncrement 20
+```
+
+### system-categorycleanup
+
+Purges optionally category entries that are in the state unfinished, archived or deleted
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+|     | --categoryStatus=CATEGORYSTATUS | Use to start cleaning up the specified status: <br>1 for 'unfinished' category entries<br>3 for 'archived' category entries<br>4 for 'deleted' category entries |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php system-autoincrement --user admin --password admin --tenantId 1 --autoIncrement 20
+```
 
 ### system-checkforupdates
 
@@ -1089,14 +1256,15 @@ Checks if a new i-doit version is available.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php system-checkforupdates
+```shell
+sudo -u www-data php console.php system-checkforupdates
+```
 
 ### system-convert-non-innodb-tables
 
@@ -1114,16 +1282,15 @@ Converts all non INNODB tables to INNODB
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php system-convert-non-innodb-tables --convert --table TABLE_NAME
-
-###   
+```shell
+sudo -u www-data php console.php system-convert-non-innodb-tables --convert --table TABLE_NAME
+```
 
 ### system-convert-non-utf8-tables
 
@@ -1140,16 +1307,15 @@ Converts all non-UTF-8 data types to UTF-8.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php system-convert-non-utf8-tables --convert
-
-###   
+```shell
+sudo -u www-data php console.php system-convert-non-utf8-tables --convert
+```
 
 ### system-location-fix
 
@@ -1166,16 +1332,17 @@ Executes the location correction from the GUI in the console
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php system-location-fix --user admin --password admin --tenantId 1 --config /path/to/config/file
+```shell
+sudo -u www-data php console.php system-location-fix --user admin --password admin --tenantId 1 --config /path/to/config/file
+```
 
-### system-maintenancecontract  
+### system-maintenancecontract
 
 Sends an e-mail notification for maintenance contacts.
 
@@ -1190,14 +1357,15 @@ Sends an e-mail notification for maintenance contacts.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php system-maintenancecontract --user admin --password admin --tenantId 1
+```shell
+sudo -u www-data php console.php system-maintenancecontract --user admin --password admin --tenantId 1
+```
 
 ### system-objectcleanup
 
@@ -1215,16 +1383,17 @@ Cleans all objects with a self-defined status.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php system-objectcleanup --user admin --password admin --tenantId 1 --objectStatus 1
+```shell
+sudo -u www-data php console.php system-objectcleanup --user admin --password admin --tenantId 1 --objectStatus 1
+```
 
-### system-objectrelations  
+### system-objectrelations
 
 Renews the names of all object relationships.
 
@@ -1240,16 +1409,44 @@ Renews the names of all object relationships.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php system-objectrelations --user admin --password admin --tenantId 1 --categoryConstant C__CATG__IP
+```shell
+sudo -u www-data php console.php system-objectrelations --user admin --password admin --tenantId 1 --categoryConstant C__CATG__IP
+```
 
-### tenant-create  
+### system-refresh-table-configuration
+
+Refreshes all available list configurations (object types and categories)
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description |
+| --- | --- | --- |
+| -a | --all | Will process all object type table configurations |
+| -o | --object-types=OBJECT-TYPES | Process only specific object type table configurations via their constant (it is possible to pass a comma separated list of constants) |
+| -u | --user=USERNAME | Username of a user who is authorized to execute |
+| -p | --password=PASSWORD | Password for authentication of the previously specified user |
+| -i | --tenantId=TENANT-ID | Tenant ID of the tenant to be used (default: 1) |
+| -c | --config=CONFIG-FILE | Specifying the path to the configuration file |
+| -h | --help | Help message for displaying further information |
+| -q | --quiet | Quiet-Mode to deactivate output |
+| -V | --version | Output of the i-doit Console version |
+|    | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
+| -n | --no-interaction | Disables all interaction questions of the i-doit Console |
+| -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php system-refresh-table-configuration --user admin --password admin --tenantId 1
+```
+
+### tenant-create
 
 Creates a new tenant
 
@@ -1266,16 +1463,17 @@ Creates a new tenant
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|    | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php tenant-create --title Musterfirma --user idoit --password idoitpassword -- enable --tenantId 3
+```shell
+sudo -u www-data php console.php tenant-create --title my-org --user idoit --password idoitpassword -- enable --tenantId 3
+```
 
-### tenant-disable  
+### tenant-disable
 
 Deactivates an existing tenant.
 
@@ -1289,16 +1487,17 @@ Deactivates an existing tenant.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php tenant-disable --tenantId 3
+```shell
+sudo -u www-data php console.php tenant-disable --tenantId 3
+```
 
-### tenant-enable  
+### tenant-enable
 
 Activates an existing tenant.
 
@@ -1312,16 +1511,17 @@ Activates an existing tenant.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php tenant-enable --tenantId 3
+```shell
+sudo -u www-data php console.php tenant-enable --tenantId 3
+```
 
-### tenant-list  
+### tenant-list
 
 Lists all existing tenants.
 
@@ -1339,10 +1539,9 @@ Lists all existing tenants.
 
 **Example of use**
 
-    sudo -u www-data php console.php tenant-list
-
-###   
-
+```shell
+sudo -u www-data php console.php tenant-list
+```
 ### tenant-remove
 
 Removes an existing client
@@ -1357,16 +1556,15 @@ Removes an existing client
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php tenant-remove --user admin --password admin --tenant 1
-
-###   
+```shell
+sudo -u www-data php console.php tenant-remove --user admin --password admin --tenant 1
+```
 
 ### uninstall
 
@@ -1381,16 +1579,15 @@ Uninstalls the used i-doit installation
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php uninstall --user admin --password admin
-
-###   
+```shell
+sudo -u www-data php console.php uninstall --user admin --password admin
+```
 
 ### update
 
@@ -1407,16 +1604,14 @@ Updates the i-doit installation
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
-
-    sudo -u www-data php console.php update --user admin --password admin --zip /path/to/zip/file.zip --v 1.14
-
-###   
+```shell
+sudo -u www-data php console.php update --user admin --password admin --zip /path/to/zip/file.zip --v 1.14
+```
 
 ### workflows-process
 
@@ -1434,11 +1629,12 @@ Sends emails about workflows and creates tasks from checklists.
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
-|     | --ansi | Forces the output in ANSI format |
-|     | --no-ansi | Disables the output in ANSI format |
+|     | --ansi|--no-ansi | Force (or disable --no-ansi) ANSI output |
 | -n | --no-interaction | Disables all interaction questions of the i-doit Console |
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
-    sudo -u www-data php console.php workflows-process --user admin --password admin --tenantId 1 --types task --types checklist
+```shell
+sudo -u www-data php console.php workflows-process --user admin --password admin --tenantId 1 --types task --types checklist
+```

@@ -153,7 +153,7 @@ Furthermore, some commands provide examples via **--usage**.
 | **license-key** | yes | no  | -  | Sets a license key for i-doit (in process) |
 | **license-list** | yes | no  | -  | Lists all licenses with all information (ID; product; type; start date; end date; licensed objects; licensed clients; environment) |
 | **license-remove** | yes | no  | -  | Removes licenses from i-doit |
-| **list** | --- | --- | --- | --- |
+| **list** | yes | yes | - | List console commands |
 | **logbook-archive** | yes | yes | -  | Archive [logbook entries](../../../basics/logbook.md) |
 | **maintenance** | yes | no | Maintenance | Sends notifications of scheduled maintenance from the Maintenance Add-on |
 | **migrate-uploaded-files** | --- | --- | --- | --- |
