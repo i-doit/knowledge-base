@@ -65,4 +65,4 @@ In diesen Cronjob fügen wir folgenden Code ein:
 ```
 
 Mit diesem Code, wird der Cronjob jeden Tag um 6:15 Uhr ausgeführt und verlängert die Verträge automatisch, falls sie den Voraussetzungen entsprechen.<br>
-Wichtig ist nur das der Pfad zur [Console](../automatisierung-und-integration/cli/console/index.md) richtig angegeben ist und das man den **Username** und das **Passwort** der I-doit-Instanz nutzt.
+Der Pfad zur [Console](../automatisierung-und-integration/cli/console/index.md) muss vollständig angegeben werden und der **Username** und das **Passwort** des Benutzer der i-doit Instanz.
