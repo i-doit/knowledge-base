@@ -22,7 +22,7 @@
 | [completion](#completion) | Das Shell-Vervollständigungsskript ausgeben |
 | [contracts-outdated](#contracts-outdated) | Aktualisiert den Status ausgelaufener Verträge |
 | [documents](#documents) | Dokumente und revisionen erzeugen und exportieren |
-| [extend-contracts](#extend-contracts) | Verlängert die Laufzeit eines Vertrags, wenn dessen letztmögliches Kündigungsdatum in der Vergangenheit liegt | 
+| [extend-contracts](#extend-contracts) | Verlängert die Laufzeit eines Vertrags, wenn dessen letztmögliches Kündigungsdatum in der Vergangenheit liegt |
 | [help](#help) | Zeigt die Hilfe zu einem Befehl an |
 | [import-csv](#import-csv) | Daten aus einer CSV-Datei importieren (Nutzt einen definiertes Import Profil aus der GUI) |
 | [import-csvprofiles](#import-csvprofiles) | Auflisten aller CSV-Importprofile |
@@ -34,7 +34,6 @@
 | [install](#install) | Installiert i-doit |
 | [ldap-sync](#ldap-sync) | IPersonen und Personengruppen aus einem [LDAP-Verzeichnis oder Active Directory (AD)](../../ldap-verzeichnis/index.md) importieren |
 | [ldap-syncdn](#ldap-sync) | Synchronisiere aus einem LDAP/AD den Distinguished Name (DN) der Benutzer (siehe Kategorie LDAP) |
-| [list](#list) | Listet alle Kommandos auf |
 | [license-add](#license-add) | Fügt eine Lizenz für i-doit hinzu (in Bearbeitung) |
 | [license-assign](#license-assign) | Ordnet eine Hosting Lizenz einem Mandaten zu (in Bearbeitung) |
 | [license-import](#license-import) | Importiert Lizenzen vom i-doit Server (in Bearbeitung) |
@@ -44,6 +43,7 @@
 | [list](#list) | Listet alle console Kommandos auf |
 | [logbook-archive](#logbook-archive) | Logbuch-Einträge archivieren |
 | [maintenance](#maintenance) | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs Add-on |
+| [migrate-uploaded-files](#migrate-uploaded-files) | Migriert hochgeladene Dateien von i-doit <v1.13 zu v.1.14> |
 | [nagios-export](#nagios-export) | Nagios-Konfiguration exportieren |
 | [nagios-ndoutils](#nagios-ndoutils) | Ist-Zustand aus Nagios ins Logbuch schreiben |
 | [notifications-list](#notifications-list) | Listet alle [Benachrichtigungen](../../../auswertungen/benachrichtigungen.md) auf |
