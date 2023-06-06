@@ -401,6 +401,10 @@ nav:
           - administration/hotfixes/index.md
           - i-doit 1.12.2 Update-Button funktionslos: administration/hotfixes/i-doit-1.12.2-update-button-funktionslos.md
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
+          - Hotfix Archiv:
+              - administration/hotfixes/hotfix-archiv/index.md
+              - Version 23: administration/hotfixes/hotfix-archiv/v23.md
+              - Version 22: administration/hotfixes/hotfix-archiv/v22.md
       - Systemeinstellungen (Verwaltung):
           - administration/systemeinstellungen/index.md
           - Experteneinstellungen: administration/systemeinstellungen/experteneinstellungen.md
