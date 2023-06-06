@@ -286,6 +286,7 @@ nav:
       - SSO with SAML:
           - user-authentication-and-management/sso-comparison/saml/index.md
           - ADFS (Active Directory): user-authentication-and-management/sso-comparison/saml/adfs-saml.md
+          - Azure AD (SAML): user-authentication-and-management/sso-comparison/saml/azure-ad-saml.md
       - SSO with GSSAPI:
           - user-authentication-and-management/sso-comparison/gssapi/index.md
           - Active Directory: user-authentication-and-management/sso-comparison/gssapi/ad-gssapi.md
