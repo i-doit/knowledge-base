@@ -1,0 +1,100 @@
+# Namespace cmdb.objects
+
+## cmdb.objects.read
+
+Fetch a list of [objects](../../../glossary.md)
+
+### Request parameters
+
+| Key | JSON data type | Required | Description |
+| --- | --- | --- | --- |
+| categories | Array | No  | Here you can filter by a list or a category, in the form of category constant/s.  <br>"categories": ["C__CATG__MY_CUSTOM_CATEGORY"]  <br>"categories": ["C__CATG__MY_CUSTOM_CATEGORY", "C__CATG__MY_SECOND_CATEGORY"] |
+| **filter** | Array | No  | Filter list of objects; see below for a full list of options |
+| **limit** | Mixed | No  | Maximum amount of objects (as integer), for example, fetch the first thousand of objects: **1000**<br><br>Combine this limit with an offset (as string), for example, fetch the next thousand of objects: **"1000,1000"** |
+| **order_by** | String | No  | Order result set by (see filter for more details what each value means):<br><br>*   **"isys_obj_type__id"**,<br>*   **"isys_obj__isys_obj_type__id"**,<br>*   **"type"**,<br>*   **"isys_obj__title"**,<br>*   **"title"**,<br>*   **"isys_obj_type__title"**,<br>*   **"type_title"**,<br>*   **"isys_obj__sysid"**,<br>*   **"sysid"**,<br>*   **"isys_cats_person_list__first_name"**,<br>*   **"first_name"**,<br>*   **"isys_cats_person_list__last_name"**,<br>*   **"last_name"**,<br>*   **"isys_cats_person_list__mail_address"**,<br>*   **"email"**,<br>*   **"isys_obj__id"**, or<br>*   **"id"** |
+| **sort** | String | No  | Only useful in combination with key **order_by**; allowed values are either **"ASC"** (ascending) or **"DESC"** (descending) |
+
+### Filter
+
+| Key | JSON data type | Required | Description |
+| --- | --- | --- | --- |
+| **ids** | Array | No  | List of object identifiers (as integers), for example: **[1, 2, 3]** |
+| **type** | Integer|String | No  | Object type identifier (as integer), for example: **5**<br><br>Alternatively, object type constant (as string), for example: **"C__OBJTYPE__SERVER"** |
+| **title** | String | No  | Object title (see attribute **Title** in category **Global**), for example: **"My little server"** |
+| **type_title** | String | No  | Translated name of object type, for example: **"Server"**<br><br>**Note:** Set a proper **language** in your request. |
+| **sysid** | String | No  | **SYSID** (see category **Global**), for example: **"SRV_101010"** |
+| **first_name** | String | No  | First name of an object of type **Persons** (see attribute **First name** in category **Persons → Master Data**), for example: **"John"** |
+| **last_name** | String | No  | Last name of an object of type **Persons** (see attribute **Last name** in category **Persons → Master Data**), for example: **"Doe"** |
+| **email** | String | No  | Primary e-mail address of an object of type **Persons**, **Person groups** or **Organization** (see attribute **E-mail address** in categories **Persons/Person groups/Organization → Master Data**), for example: **"john.doe@example.com"** |
+| **type_group** | String | No  | Filters by the object type group e.g. Infrastructure or Other:  <br>"**C__OBJTYPE_GROUP__INFRASTRUCTURE**" |
+| **status** | String | No  | Filter by status of the objects e.g. Normal or Archived:<br><br>*   **C__RECORD_STATUS__BIRTH**  <br>    **Status ID = 1**  <br>    **Description = Unfinished**<br>*   **C__RECORD_STATUS__NORMAL**  <br>    **Status ID = 2**  <br>    **Designation = Normal**<br>*   **C__RECORD_STATUS__ARCHIVED**  <br>    **Status ID = 3**  <br>    **Designation = Archived**<br>*   **C__RECORD_STATUS__DELETED**  <br>    **Status-ID = 4**  <br>    **Description = Deleted**<br>*   **C__RECORD_STATUS__TEMPLATE**  <br>    **Status-ID = 6**  <br>    **Description = Template**<br>*   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE**  <br>    **Status ID = 7**  <br>    **Description = Template for mass changes** |
+
+You can use any combination of filters. Filters are logically associated with AND. A valid combination could be: "Give me all servers which have the same hostname."
+
+### Response
+
+JSON key **result** contains an array of JSON objects. Each object contains a bunch of information about an i-doit object.
+
+| Key | JSON data type | Description |
+| --- | --- | --- |
+| **id** | String | Object identifier (as numeric string) |
+| **title** | String | Object title |
+| **sysid** | String | SYSID (see category **Global**) |
+| **type** | String | Object type identifier (as numeric string) |
+| **created** | String | Date of creation; format: **Y-m-d H:i:s** |
+| **updated** | String | Date of last update; format: **Y-m-d H:i:s**<br><br>**Note:** This key is optional because not every object has been updated before. |
+| **type_title** | String | Translated name of object type |
+| **type_group_title** | String | Translated name of object type group |
+| **status** | String | Object status:<br><br>*   **C__RECORD_STATUS__BIRTH  <br>    Status-ID = 1  <br>    Title = ****Unfinished**<br>*   **C__RECORD_STATUS__NORMAL  <br>    Status-ID = 2**  <br>    **Title = ****Normal**<br>*   **C__RECORD_STATUS__ARCHIVED  <br>    Status-ID = 3**  <br>    **Title =** **Archived**<br>*   **C__RECORD_STATUS__DELETED  <br>    Status-ID = 4**  <br>    **Title =** **Deleted**<br>*   **C__RECORD_STATUS__TEMPLATE  <br>    Status-ID = 6**  <br>    **Title =** **Template**<br>*   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE  <br>    Status-ID = 7**  <br>    **Title =** **Mass change template** |
+| **cmdb_status** | String | CMDB status (see category **Global**; as numeric string) |
+| **cmdb_status_title** | String | Translated CMDB status (see category **Global**) |
+| **image** | String | URL to object picture |
+| categories | Mixed | Optional attributes with values depending on the requested category |
+
+### Example
+
+#### Request body
+
+```json
+{
+    "version": "2.0",
+    "method": "cmdb.objects.read",
+    "params": {
+        "filter": {
+            "type": "C__OBJTYPE__SERVER",
+            "status": "C__RECORD_STATUS__ARCHIVED"
+        },
+        "limit": "0,10",
+        "order_by": "title",
+        "sort": "ASC",
+        "apikey": "xxx",
+        "language": "en"
+    },
+    "id": 1
+}
+```
+
+#### Response body
+
+```json
+{
+    "jsonrpc": "2.0",
+    "result": [
+        {
+            "id": "123",
+            "title": "My little server",
+            "sysid": "SRV_101010",
+            "type": "5",
+            "created": "2017-03-07 15:57:48",
+            "updated": "2017-05-10 15:40:27",
+            "type_title": "Server",
+            "type_group_title": "Hardware",
+            "status": "3",
+            "cmdb_status": "6",
+            "cmdb_status_title": "in operation",
+            "image": "https://demo.i-doit.com/images/objecttypes/empty.png"
+        },
+        […]
+    ]
+}
+```
