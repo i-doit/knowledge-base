@@ -3,15 +3,15 @@
 !!! info "Wurde zuletzt getestet für i-doit version 23"
 
 **Use-Case:**
-Der Vertrag eines Mandanten hat das letzte Kündigungsdatum überschritten und soll verlängert werden.
+Der Vertrag eines Mandanten hat das letzte Kündigungsdatum überschritten und soll verlängert werden.<br>
 Um den Vertrag zu verlängern, machen wir uns den Befehl `extend-contracts` zu nutze.
 
 ## Schritt 1: Den Vertrag `extend-contract` fähig machen
 
-Damit ein Vertrag mit dem Befehl `extend-contracts` verlängert werden kann, muss er ein paar Vorraussetzungen erfüllen.
-Dafür müssen wir den bestehenden Vertrag erstmal editieren.
+Damit ein Vertrag mit dem Befehl `extend-contracts` verlängert werden kann, muss er ein paar Voraussetzungen erfüllen.<br>
+Dafür müssen wir den bestehenden Vertrag erst mal editieren.<br>
 
-Die benötigten Einstellungen finden wir in der Objektansicht des gewüschten Vertrags,
+Die benötigten Einstellungen finden wir in der Objektansicht des gewünschten Vertrags,
 
 **Vertrag → Vertragsinformationen**
 
@@ -26,7 +26,7 @@ welche wir anschließend editieren:
 
 [![vertragsverlaengerung-config](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/2-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/2-avv-uc.png)
 
-!!! info "Die Vorraussetzungen um den Befehl ausführen zu können lauten wie folgt:"
+!!! info "Die Voraussetzungen um den Befehl ausführen zu können lauten wie folgt:"
 
     * **Vertragslaufzeitperiode** muss ausgefüllt sein
     * **Vertragsende durch** muss auf Kündigung gestellt sein
@@ -40,7 +40,7 @@ Um den Befehl `extend-contracts` anwenden zu können, müssen wir in die [Consol
 Der Befehl sieht wie folgt aus:
 
 ```shell
-    sudo -u www-data php console.php extend-contracs --user user --password password
+    sudo -u www-data php console.php extend-contracts --user user --password password
 ```
 
 Ist der Vertrag richtig konfiguriert, wird in der [Console](../automatisierung-und-integration/cli/console/index.md) angezeigt, dass der Vertrag um 1 Jahr verlängert wurde. 
@@ -64,5 +64,5 @@ In diesen Cronjob fügen wir folgenden Code ein:
     15 6 * * * www-data php /var/www/html/i-doit/console.php extend-contracts --user user --password password
 ```
 
-Mit diesem Code, wird der Cronjob jeden Tag um 6:15 Uhr ausgeführt und verlängert die Verträge automatisch, falls sie den Vorraussetzungen entsprechen.
-Wichtig ist nur das der Pfad zur [Console](../automatisierung-und-integration/cli/console/index.md) richtig angegeben ist und das man den **Username** und das **Passwort** der Idoit-Instanz nutzt.
+Mit diesem Code, wird der Cronjob jeden Tag um 6:15 Uhr ausgeführt und verlängert die Verträge automatisch, falls sie den Voraussetzungen entsprechen.<br>
+Der Pfad zur [Console](../automatisierung-und-integration/cli/console/index.md) muss vollständig angegeben werden und der **Username** und das **Passwort** des Benutzer der i-doit Instanz.

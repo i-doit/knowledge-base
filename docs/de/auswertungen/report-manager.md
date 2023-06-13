@@ -2,15 +2,13 @@
 
 Das Berichtswesen ist ein geeignetes Mittel, um Daten zu verdichten, aufzubereiten und an Dritte weiterzugeben. _i-doit_ verfügt daher über einen Report Manager, der vollumfänglich Daten aus der [IT-Dokumentation](../glossar.md) verarbeiten kann.
 
-Überblick
----------
+## Überblick
 
 Der Report Manager ist über die Hauptnavigationsleiste unter **Extras → Report Manager** zu erreichen. Im Navigationsbaum auf der linken Seite erscheinen die Punkte **Reports**, **Online Repository** und **Views**, auf die im folgenden eingegangen wird. Sollte der Report Manager bzw. die Punkte im Navigationsbaum nicht oder nur unvollständig erscheinen, liegt das an fehlenden Berechtigungen.
 
 [![Ueberblick](../assets/images/de/auswertungen/report-manager/1-rm.png)](../assets/images/de/auswertungen/report-manager/1-rm.png)
 
-Report auswerten
-----------------
+## Report auswerten
 
 Die selbst erstellten Reports befinden sich unter dem Punkt **Reports**. Nach dem [Setup von _i-doit_](../installation/manuelle-installation/setup.md) befinden sich daher noch keine Reports in diesem Bereich.
 
@@ -24,8 +22,7 @@ Die Tabelle bietet verschiedene Funktionalitäten (Spaltensortierung, nach einer
 
 Aus einem Report lässt sich ein Objekt vom Typ **Objektgruppe** generieren. Deren gleichnamige Kategorie sind die Objekte aus dem Report statisch zugeordnet. Alternativ ist es möglich, eine Objekt vom Typ **Objektgruppe** anzulegen, deren Objektzuweisung dynamisch sind. Dazu wählt man in der Kategorie **Typ** die entsprechende Einstellung aus und wählt einen Report. Von nun an enthält diese Objektgruppe immer die aktuelle Liste an Objekten, die der zugeordnetete Report als Ergebnis liefert. Dies geschieht also zur Laufzeit.
 
-Reports kategorisieren
-----------------------
+## Reports kategorisieren
 
 Reports können kategorisiert werden. Standardmäßig werden sie der Kategorie **Global** zugeordnet, die standardmäßig zur Verfügung steht und nicht gelöscht werden kann. Der Vorteil der Kategorisierung liegt im Berechtigungskonzept: Pro Katagorie kann angegeben werden, wer darauf zugreifen darf. Befindet man sich auf der Seite Reports, können über den Punkt **Kategorien** neue Kategorien erstellt oder bestehende bearbeitet werden. Hilfreich hierbei ist das optionale Beschreibungsfeld.
 
@@ -35,8 +32,7 @@ Reports können kategorisiert werden. Standardmäßig werden sie der Kategorie *
 
     Sollte es nicht möglich sein, Report-Kategorien zu erstellen und/oder zu bearbeiten, ist es ratsam, die Berechtigungen hierfür zu überprüfen und sicherzustellen, dass der aktuell eingeloggte User über die Berechtigungen hierfür verfügt.
 
-Report erstellen oder bearbeiten
---------------------------------
+## Report erstellen oder bearbeiten
 
 Reports können kopiert werden. Hierzu markiert man einen Report und klickt auf den Button **Duplizieren**. Gelöscht wird ein Report über den Button **Purge**. Dieser Schritt ist unwiderruflich.
 
@@ -52,7 +48,7 @@ Der Abfgrage-Editor bietet eine grafische Oberfläche, um einen neuen Report zu 
 
 Essentiell ist der Titel und die Kategorie. Zudem ist es oftmals hilfreich eine kurze Beschreibung zu hinterlegen.
 
-Über die Buttons **Prüfen** kann der Report getestet werden. In einem Popup werden maximal 25 Ergebnisse präsentiert.
+Über den Button **Prüfen** kann der Report getestet werden. In einem Popup werden maximal 25 Ergebnisse präsentiert.
 
 #### Erweiterte Optionen
 
@@ -117,22 +113,19 @@ Die Spalten-Namen können multilingual angegeben werden und werden von _i-doit_ 
 
     Vorteile sind, dass man nicht unbedingt die Datenbank-Struktur von i-doit kennen muss und dass man den vorbereiteten Report immer noch mit dem Abfrage-Editor bearbeiten kann.
 
-Report exportieren/importieren
-------------------------------
+## Report exportieren/importieren
 
 Reports können auch exportiert bzw. importiert werden. Wenn der gewünschte Report über die Checkbox gewählt wurde, kann er über die Schaltfläche oben in eine Datei exportiert werden. Diese Datei kann in einer anderen Instanz oder einem anderen Mandanten importiert werden, sodass der Report dort ebenfalls genutzt werden kann. Die Bearbeitung ist, wenn der Report ursprünglich über den Abfrage-Editor erstellt wurde, auch weiterhin über den Abfrage-Editor möglich.
 
 Beim Transfer eines Reports ist zu beachten, dass Bedingungen und Ausgaben, die sich auf individuelle Inhalte (z.B. eine Objekt-ID oder eine benutzerdefinierte Kategorie) beziehen, nachbearbeitet werden müssen, wenn diese nicht in der Ziel-Instanz identisch sind, da sie andernfalls ein Ergebnis liefern, das von der Erwartung abweicht.
 
-Online Repository
------------------
+## Online Repository
 
 Im Internet sind bereits einige vorgefertigte Reports zum Download verfügbar. Über den Punkt **Online Repository** kann man diese direkt ausführen oder erst lokal speichern. Eine bestehende Internetverbindung ist dazu nötig.
 
 [![online-repository](../assets/images/de/auswertungen/report-manager/11-rm.png)](../assets/images/de/auswertungen/report-manager/11-rm.png)
 
-Report Views
-------------
+## Report Views
 
 **Report Views** bieten über die oben genannten Reports zusätzliche Funktionen und Ansichten. Neue können nicht angelegt, bestehende nicht bearbeitet oder gelöscht werden.
 
@@ -140,17 +133,17 @@ Report Views
 
 Auswahl von nützlichen **Report Views**:
 
-*   **QR Codes**: Aufbereiten und Drucken von mehreren Labels gleichzeitig, die einen QR-Code sowie weitere Informationen und ein Logo enthalten können.
+*   **QR Codes**:<br>
+    Aufbereiten und Drucken von mehreren Labels gleichzeitig, die einen QR-Code sowie weitere Informationen und ein Logo enthalten können.
 *   **Geräte in einem Standort (Listenformat)**
 *   **Netzwerkverbindungen**
 *   **Offene Kabelverbindungen**
 
 [![report-views-2](../assets/images/de/auswertungen/report-manager/13-rm.png)](../assets/images/de/auswertungen/report-manager/13-rm.png)
 
-Reports automatisiert exportieren
----------------------------------
+## Reports automatisiert exportieren
 
-Bestehende Reports können automatisiert als Datei exportiert werden, ohne das ein Benutzer manuell eingreifen muss. Dies geschieht über das Kommandozeilen-Werkzeug von _i-doit_, den [Command Line Interface](../automatisierung-und-integration/cli/index.md). Der passende Console Handler lautet report-export.
+Bestehende Reports können automatisiert als Datei exportiert werden, ohne das ein Benutzer manuell eingreifen muss. Dies geschieht über das Kommandozeilen-Werkzeug von _i-doit_, der [console.php](../automatisierung-und-integration/cli/console/index.md) via [report-export](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#report-export).
 
 ```shell
     sudo -u www-data php console.php report-export --help
@@ -159,21 +152,21 @@ Bestehende Reports können automatisiert als Datei exportiert werden, ohne das e
         report-export [options]
 
     Options:
-    -r, --reportId=REPORTID              ID of the report
-    -d, --exportPath=EXPORTPATH          Path to export the report into
-    -f, --exportFilename=EXPORTFILENAME  File name of export file, without extension (e.g. .pdf). Default is the title of the report
-    -t, --exportFileType=EXPORTFILETYPE  File Type of the export. Possible options: csv, txt, pdf, xml [default: "csv"]
-    -u, --user=USER                      User
-    -p, --password=PASSWORD              Password
-    -i, --tenantId=TENANTID              Tenant ID [default: 1]
-    -c, --config=CONFIG                  Config File
-    -h, --help                           Display this help message
-    -q, --quiet                          Do not output any message
-    -V, --version                        Display this application version
-    --ansi                           Force ANSI output
-    --no-ansi                        Disable ANSI output
-    -n, --no-interaction                 Do not ask any interactive question
-    -v|vv|vvv, --verbose                 Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+    -r, --reportId=REPORTID              ID of the report
+    -d, --exportPath=EXPORTPATH          Path to export the report into
+    -f, --exportFilename=EXPORTFILENAME  File name of export file, without extension (e.g. .pdf). Default is the title of the report
+    -t, --exportFileType=EXPORTFILETYPE  File Type of the export. Possible options: csv, txt, pdf, xml [default: "csv"]
+    -u, --user=USER                      User
+    -p, --password=PASSWORD              Password
+    -i, --tenantId=TENANTID              Tenant ID [default: 1]
+    -c, --config=CONFIG                  Config File
+    -h, --help                           Display this help message
+    -q, --quiet                          Do not output any message
+    -V, --version                        Display this application version
+    --ansi                               Force ANSI output
+    --no-ansi                            Disable ANSI output
+    -n, --no-interaction                 Do not ask any interactive question
+    -v|vv|vvv, --verbose                 Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
     Help:
         Executes an i-doit report and saves it to a file as CSV, TXT, PDF or XML

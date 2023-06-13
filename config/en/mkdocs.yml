@@ -117,6 +117,7 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release notes 24: version-history/release-notes/release-notes-24.md
           - Release notes 23: version-history/release-notes/release-notes-23.md
           - Release notes 22: version-history/release-notes/release-notes-22.md
           - Release notes 1.19: version-history/release-notes/release-notes-1.19.md
@@ -135,6 +136,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 24: version-history/changelogs/changelog-24.md
           - Changelog 23: version-history/changelogs/changelog-23.md
           - Changelog 22: version-history/changelogs/changelog-22.md
           - Changelog 21: version-history/changelogs/changelog-21.md
@@ -362,6 +364,10 @@ nav:
           - system-administration/hotfixes/index.md
           - i-doit 1.12.2 Update-Button funktionslos: system-administration/hotfixes/i-doit-1.12.2-update-button-does-not-work.md
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
+          - Hotfix archive:
+              - system-administration/hotfixes/hotfix-archive/index.md
+              - Version 23: system-administration/hotfixes/hotfix-archive/v23.md
+              - Version 22: system-administration/hotfixes/hotfix-archive/v22.md
       - System settings (Administration):
           - system-administration/system-settings/index.md
           - Expert settings: system-administration/system-settings/expert-settings.md
@@ -416,7 +422,7 @@ nav:
           - i-doit web GUI: i-doit-pro-add-ons/checkmk2/i-doit-web-gui.md
           - Read information from i-doit and checkmk: i-doit-pro-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md
           - Match objects from i-doit with hosts from checkmk: i-doit-pro-add-ons/checkmk2/match-objects-from-i-doit-with-hosts-from-checkmk.md
-          - requently asked questions (FAQ): i-doit-pro-add-ons/checkmk2/faq.md
+          - Frequently asked questions (FAQ): i-doit-pro-add-ons/checkmk2/faq.md
       - DNS Documentation: i-doit-pro-add-ons/dns-documentation.md
       - Documents:
           - i-doit-pro-add-ons/documents/index.md

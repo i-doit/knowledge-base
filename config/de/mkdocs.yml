@@ -117,6 +117,7 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 24: versionshistorie/release-notes/release-notes-24.md
           - Release Notes 23: versionshistorie/release-notes/release-notes-23.md
           - Release Notes 22: versionshistorie/release-notes/release-notes-22.md
           - Release Notes 1.19: versionshistorie/release-notes/release-notes-1.19.md
@@ -135,6 +136,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 24: versionshistorie/changelogs/changelog-24.md
           - Changelog 23: versionshistorie/changelogs/changelog-23.md
           - Changelog 22: versionshistorie/changelogs/changelog-22.md
           - Changelog 21: versionshistorie/changelogs/changelog-21.md
@@ -399,6 +401,10 @@ nav:
           - administration/hotfixes/index.md
           - i-doit 1.12.2 Update-Button funktionslos: administration/hotfixes/i-doit-1.12.2-update-button-funktionslos.md
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
+          - Hotfix Archiv:
+              - administration/hotfixes/hotfix-archiv/index.md
+              - Version 23: administration/hotfixes/hotfix-archiv/v23.md
+              - Version 22: administration/hotfixes/hotfix-archiv/v22.md
       - Systemeinstellungen (Verwaltung):
           - administration/systemeinstellungen/index.md
           - Experteneinstellungen: administration/systemeinstellungen/experteneinstellungen.md

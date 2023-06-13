@@ -25,7 +25,7 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 !!! info "Current version"
 
-    The requirements shown below apply to the current version of i-doit, in this case **23** These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case **24** These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 !!! attention "Declaration of consent"
 
@@ -33,32 +33,12 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit Core
 
-### Adding a model in category model not possible
+### SQL query is wrongly created when using Assigned workstation -> Parent object
 
-[I-doit_23_hotfix_ID-9375_40177a3.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9375_40177a3.zip){ .md-button .md-button--primary }
-
-### Better object browser performance
-
-[I-doit_23_hotfix_ID-9376_2ce8a0d.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9376_2ce8a0d.zip){ .md-button .md-button--primary }
-
-### 'type' option for cmdb.objects filter does not work with id
-
-[I-doit_23_hotfix_ID-9370_b8a4921.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9370_b8a4921.zip){ .md-button .md-button--primary }
-
-### JDisc Import - "Only create newly scanned devices" creates duplicates
-
-[i-doit_23_hotfix_ID-9350.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9350.zip){ .md-button .md-button--primary }
+[I-doit_24_hotfix_ID-9315.zip :material-file-download:](../../assets/downloads/hotfixes/24/i-doit_24_hotfix_ID-9315.zip){ .md-button .md-button--primary }
 
 ## Analyze Add-on 1.3
 
 ### Service assignment is not displayed in data quality
 
 [Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download:](../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
-
-## Forms Add-on 1.1.0
-
-### Object Data is not saved or Categories are not loaded
-
-It is necessary to re-index the category attributes via [Systemtools](../../system-administration/system-settings/index.md), after applying the hotfix
-
-[aof-17-incompatible-function-declaration.zip :material-file-download:](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }

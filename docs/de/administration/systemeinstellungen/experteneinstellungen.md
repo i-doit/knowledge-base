@@ -31,11 +31,12 @@ Liste der Einstellungen
 | auth.use-in-cmdb-explorer | 0   | 0   | Mandanteneinstellung | PRO/CMDB | Aktiviert die Berücksichtigung von Rechten im CMDB-Explorer. Objekte auf die nicht verrechtet sind werden nicht dargestellt / weiter iteriert |
 | auth.use-in-cmdb-explorer-service-browser | 0   | 0   | Mandanteneinstellung | PRO/CMDB | Aktiviert die Berücksichtigung von Rechten im CMDB-Explorer Service Popup. Der User sieht nur die Services, auf die er Rechte hat. |
 | auth.use-in-object-browser | 0   | 0   | Mandanteneinstellung | PRO/CMDB | Aktiviert die Berücksichtigung von Rechten im Objekt Browser. Objekte die nicht verrechtet sind werden nicht dargestellt. Bereits ausgewählte Objekte werden mit "\[Ausgeblendet\]" dargestellt |
+| auth.use-in-file-browser | 0   | 0   | Mandanteneinstellung | PRO/CMDB | Aktiviert die Berücksichtigung von Rechten im File Browser. Objekte auf die nicht verrechtet sind werden nicht dargestellt. Bereits ausgewählte Objekte werden mit "\[Ausgeblendet\]" dargestellt |
 | auth.use-in-location-tree | 0   | 0   | Mandanteneinstellung | PRO/CMDB | Aktiviert die Berücksichtigung von Rechten im Standort Baum. Objekte die nicht verrechtet sind werden nicht dargestellt / aufgeklappt. |
 | barcode.type | qr  |     | Mandanteneinstellung | PRO/CMDB | Typ des Barcodes |
 | check\_mk.controller.last\_log\_check | 0   |     | Mandanteneinstellung | PRO/CMDB | Zeitpunkt des letzten Durchlaufs des check\_mk-Controllers |
 | ckeditor.font\_names | Arial;Courier New;Times New Roman;Helvetica |     | Mandanteneinstellung | PRO/CMDB | Verwendbare Schriftarten im WYSIWYG Editor |
-| cmdb.connector.suffix-schema | ```isys\_format\_json::encode(array(  <br>    "##INPUT## - OUT",  <br>    "- ##INPUT##",  <br>    "(\*) ##INPUT##",  <br>)``` |     | Systemweite Einstellung | PRO/CMDB | Formatierungsschema für die Generierung von TODO |
+| cmdb.connector.suffix-schema | ```isys\_format\_json::encode(array(  <br> "##INPUT## - OUT",  <br> "- ##INPUT##",  <br> "(\*) ##INPUT##",  <br>)``` |     | Systemweite Einstellung | PRO/CMDB | Formatierungsschema für die Generierung von TODO |
 | cmdb.limits.order-threshhold | 10000 | 1000 | Mandanteneinstellung | PRO/CMDB | Limit an Zeilen für die TableComponent ab wann nur noch indexierte Felder sortiert und gefiltert werden können |
 | cmdb.limits.obj-browser.objects-in-viewmode | 8   |     | Mandanteneinstellung | PRO/CMDB | Maximale Anzahl darzustellender Objekte im Objektbrowser im Viewmode |
 | cmdb.limits.port-lists-layer2 | 5   |     | Mandanteneinstellung | PRO/CMDB | Limitierung der aufgeführten Layer2-Netze in der Portliste |

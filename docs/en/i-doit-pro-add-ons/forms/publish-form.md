@@ -1,7 +1,5 @@
 # Publish Forms
 
-Publish forms 
-
 To publish a form there are these possibilities.
 
 Either the [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/1-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/1-pf.png) button in the form is clicked directly.
@@ -28,8 +26,7 @@ Once we have confirmed the hint, we receive a success message. The [![icon](../.
 
 [![publish](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/11-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/11-pf.png)
 
-Unpublish forms
----------------
+## Unpublish forms
 
 To cancel the release of a form we have these options.
 
@@ -49,8 +46,8 @@ If the form is saved using the [![icon](../../assets/images/en/i-doit-pro-add-on
 
 [![Unpublish forms](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/19-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/19-pf.png)
 
-If the form could not be saved, we receive an error message. 
+If the form could not be saved, we receive an error message.
 
 [![Unpublish forms](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/20-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/20-pf.png)
 
-[approve Continue to fill out form](./fill-out-forms.md)
+[Continue to fill out form](./fill-out-forms.md){ .md-button .md-button--primary }
