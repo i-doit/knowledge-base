@@ -1,5 +1,6 @@
 # Namespace cmdb.objects
 
+
 ## cmdb.objects.read
 
 Fetch a list of [objects](../../../glossary.md)

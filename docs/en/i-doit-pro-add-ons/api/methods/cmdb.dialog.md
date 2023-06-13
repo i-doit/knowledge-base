@@ -1,18 +1,18 @@
 # Namespace cmdb.dialog
 
 
-### cmdb.dialog.read
+## cmdb.dialog.read
 
 Read dialog informations.
 
-**Request parameters**
+### Request parameters
 
 | **Key** | **JSON data type** | **Required** | **Description** |
 | --- | --- | --- | --- |
 | **category** | String | Yes | [Category constant](../../api/category-fields-for-data-arrays.md), for example: **"C__CATG__CPU"** |
 | **property** | String |     | Attribute in the category, for example: "manufacturer" |
 
-**Response**
+### Response parameters
 
 JSON key **result** contains an array of JSON objects.
 
@@ -22,10 +22,11 @@ JSON key **result** contains an array of JSON objects.
 | **const** | String | **Constant of Dialog Attribute** |
 | **title** | String | Title of the Attribute |
 
-Example
+### Example
 
-#### Request body:
-```
+#### Request body
+
+```json
 {
     "version": "2.0",
     "method": "cmdb.dialog.read",
@@ -38,9 +39,10 @@ Example
     "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+
+#### Response body
+
+```json
 {
     "id": 1,
     "jsonrpc": "2.0",
@@ -60,11 +62,10 @@ Example
 ```
 
 ### cmdb.dialog.create
-??? example "cmdb.dialog.create"
 
 Created Dialogs.
 
-**Request parameters**
+## Request parameters
 
 | **Key** | **JSON data type** | **Required** | **Description** |
 | --- | --- | --- | --- |
@@ -72,7 +73,7 @@ Created Dialogs.
 | **property** | String | Yes | Attribute in the category, for example: "manufacturer" |
 | **value** | String | Yes | Value of the Attribute |
 
-**Response**
+### Response parameters
 
 JSON key **result** contains a JSON object.
 
@@ -81,11 +82,11 @@ JSON key **result** contains a JSON object.
 | **success** | Boolean | Should be **true** |
 | **entry_id** | Integer | Entry Identifier, for example: 3 |
 
-Example
+### Example
 
-**Request**
-<br>Body:
-```
+#### Request body
+
+```json
 {
     "version": "2.0",
     "method": "cmdb.dialog.create",
@@ -99,9 +100,10 @@ Example
     "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+
+#### Response body
+
+```json
 {
     "id": 1,
     "jsonrpc": "2.0",
@@ -112,12 +114,11 @@ Example
 }
 ```
 
-### cmdb.dialog.update
-??? example "cmdb.dialog.update"
+## cmdb.dialog.update
 
 Update a [dialog](../../../basics/dialog-admin.md#dialog-admin) entry.
 
-**Request parameters**
+## Request parameters
 
 | **Key** | **JSON data type** | **Required** | **Description** |
 | --- | --- | --- | --- |
@@ -126,7 +127,7 @@ Update a [dialog](../../../basics/dialog-admin.md#dialog-admin) entry.
 | **value** | String | Yes | Value of the Attribute |
 | **entry_id** | String | Yes | Entry Identifier, for example: 3 |
 
-**Response**
+### Response parameters
 
 JSON key **result** contains a JSON object.
 
@@ -135,11 +136,11 @@ JSON key **result** contains a JSON object.
 | **success** | Boolean | Should be **true** |
 | **entry_id** | Integer/String | Entry Identifier, for example: 3 |
 
-Example
+### Example
 
-**Request**
-<br>Body:
-```
+#### Request body
+
+```json
 {
     "version": "2.0",
     "method": "cmdb.dialog.update",
@@ -154,9 +155,10 @@ Example
     "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+
+#### Response body
+
+```json
 {
     "id": 1,
     "jsonrpc": "2.0",
@@ -167,12 +169,11 @@ Example
 }
 ```
 
-### cmdb.dialog.delete
-??? example "cmdb.dialog.delete"
+## cmdb.dialog.delete
 
 Deletes dialogs.
 
-**Request parameters**
+### Request parameters
 
 | **Key** | **JSON data type** | **Required** | **Description** |
 | --- | --- | --- | --- |
@@ -180,7 +181,7 @@ Deletes dialogs.
 | **property** | String | Yes | Attribute in the category, for example: "manufacturer" |
 | **entry_id** | String | Yes | Entry Identifier, for example: 3 |
 
-**Response**
+### Response parameters
 
 JSON key **result** contains a JSON object.
 
@@ -189,11 +190,11 @@ JSON key **result** contains a JSON object.
 | **success** | Boolean | Should be **true** |
 | **entry_id** | Integer/String | Entry Identifier, for example: 3 |
 
-Example
+### Example
 
-**Request**
-<br>Body:
-```
+#### Request body
+
+```json
 {
     "version": "2.0",
     "method": "cmdb.dialog.delete",
@@ -207,9 +208,10 @@ Example
     "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+
+#### Response body
+
+```json
 {
     "id": 1,
     "jsonrpc": "2.0",

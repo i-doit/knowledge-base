@@ -4,16 +4,20 @@
 
 Read one or more [category](../../../basics/structure-of-the-it-documentation.md) entries for an object
 
-Request parameters
+### Request parameters
 
 | Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
 | **objID** | Integer | Yes | Object identifier, for example: **42** |
 | **category** | String | Yes | Category constant, for example: **"C__CATG__MODEL"** |
 
-Response
+### Response parameters
 
-JSON key **result** contains an array of JSON objects. Each object contains [all available attributes](../category-fields-for-data-arrays.md) for the requested category. **Note:** Even if it is a [single-value category](../../../basics/structure-of-the-it-documentation.md) or a [multi-value category](../../../basics/structure-of-the-it-documentation.md) with only 1 entry, the JSON key **result** contains always an array of JSON objects.
+JSON key **result** contains an array of JSON objects. Each object contains [all available attributes](../category-fields-for-data-arrays.md) for the requested category.
+
+!!! note ""
+
+    Even if it is a [single-value category](../../../basics/structure-of-the-it-documentation.md) or a [multi-value category](../../../basics/structure-of-the-it-documentation.md) with only 1 entry, the JSON key **result** contains always an array of JSON objects.
 
 | Key | JSON data type | Description |
 | --- | --- | --- |
@@ -21,11 +25,11 @@ JSON key **result** contains an array of JSON objects. Each object contains [all
 | **objID** | String | Object identifier (as numeric string) |
 | …   | Mixed | Optional attributes with values depending on requested category |
 
-Example
+### Example
 
-### Request body
+#### Request body
 
-```
+```json
 {
 "version": "2.0",
 "method": "cmdb.category.read",
@@ -39,9 +43,9 @@ Example
 }
 ```
 
-**Response**
-<br>Body:
-```
+#### Response body
+
+```json
 {
 "jsonrpc": "2.0",
 "result": [
@@ -72,11 +76,10 @@ Example
 ```
 
 ## cmdb.category.update
-??? example "cmdb.category.update"
 
 Update [category](../../../basics/structure-of-the-it-documentation.md) entry of an object
 
-Request parameters
+### Request parameters
 
 | Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
@@ -85,7 +88,7 @@ Request parameters
 | **data** | Object | Yes | [Attributes](../category-fields-for-data-arrays.md) which will be updated |
 | **data.category_id** | Integer | No  | Entry identifier (only required for [multi-value categories](../../../basics/structure-of-the-it-documentation.md)) |
 
-Response
+### Request parameters
 
 JSON key **result** contains a JSON object.
 
@@ -94,11 +97,11 @@ JSON key **result** contains a JSON object.
 | **success** | Boolean | Should be **true** |
 | **message** | String | Should be **"Category entry successfully saved"** |
 
-Example
+### Example
 
-**Request**
-<br>Body:
-```
+#### Request body
+
+```json
 {
 "version": "2.0",
 "method": "cmdb.category.update",
@@ -114,9 +117,10 @@ Example
 "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+
+#### Response body
+
+```json
 {
 "jsonrpc": "2.0",
 "result": {
@@ -133,6 +137,12 @@ Example
 
 Limitations
 
+- This only works with multi-value categories at the moment.
+- You can only archive category entries which have a normal status.
+- You can only mark category entries as deleted which are archived.
+- You can only purge category entries from the database which are marked as deleted.
+
+```json
 {
 "id": 1,
 "jsonrpc": "2.0",
@@ -145,12 +155,12 @@ Limitations
 ```
 
 
-### cmdb.category.create
+## cmdb.category.create
 ??? example "cmdb.category.create"
 
 Create a new [category](../../../basics/structure-of-the-it-documentation.md) entry
 
-Request parameters
+### Request parameters
 
 | Key | JSON data type | Required |Description |
 | --- | --- | --- | --- |
@@ -158,7 +168,7 @@ Request parameters
 | **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **C__CATG__MODEL** |
 | **data** | Object | Yes | [Attributes](../category-fields-for-data-arrays.md) with their values, for example: <br>```{ "manufacturer": "Name of manufacturer", "title": "Name of model" }```|
 
-Response
+### Request parameters
 
 JSON key **result** contains a JSON object.
 
@@ -168,11 +178,11 @@ JSON key **result** contains a JSON object.
 | **message** | String | Some information |
 | **success** | Boolean | Should always be **true** |
 
-Example
+### Example
 
-**Request**
-<br>Body:
-```
+#### Request body
+
+```json
 {
 "version": "2.0",
 "method": "cmdb.category.create",
@@ -189,9 +199,9 @@ Example
 "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+#### Response body
+
+```json
 {
 "jsonrpc": "2.0",
 "result": {
@@ -209,7 +219,7 @@ Create or Update [category](../../../basics/structure-of-the-it-documentation.md
 
 It works for [multi-value categories](../../../basics/structure-of-the-it-documentation.md) and [single-value category](../../../basics/structure-of-the-it-documentation.md) .
 
-Request parameters
+### Request parameters
 
 | **Key** | **JSON data type** | **Required** | **Description** |
 | --- | --- | --- | --- |
@@ -217,7 +227,7 @@ Request parameters
 | **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
 | **data** | Object | Yes | ```{ "title":"Name of the access", "description": "description of the access" }``` |
 
-**Response**
+### Response body
 
 JSON key **result** contains a JSON object.
 
@@ -227,12 +237,13 @@ JSON key **result** contains a JSON object.
 | **message** | String | Some information |
 | **entry** | Integer | Entry identifier, for example: **35** |
 
-Example
+### Example
 
 <br>Create
-**Request**
-<br>Body:
-```
+
+#### Request body
+
+```json
 {
     "version": "2.0",
     "method": "cmdb.category.save",
@@ -249,9 +260,9 @@ Example
     "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+#### Response body
+
+```json
 {
     "id": 1,
     "jsonrpc": "2.0",
@@ -263,9 +274,10 @@ Example
 }
 ```
 <br>or update
-**Request**
-<br>Body:
-```
+
+#### Request body
+
+```json
 {
 "version": "2.0",
 "method": "cmdb.category.save",
@@ -283,16 +295,14 @@ Example
 "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+
 ### cmdb.category.save
 
 Create or Update [category](../../../basics/structure-of-the-it-documentation.md) entry of an object.
 
 It works for [multi-value categories](../../../basics/structure-of-the-it-documentation.md) and [single-value category](../../../basics/structure-of-the-it-documentation.md) .
 
-Request parameters
+### Request parameters:
 
 | **Key** | **JSON data type** | **Required** | **Description** |
 | --- | --- | --- | --- |
@@ -300,7 +310,7 @@ Request parameters
 | **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
 | **data** | Object | Yes | ```{ "title":"Name of the access", "description": "description of the access" }``` |
 
-**Response**
+### Response body
 
 JSON key **result** contains a JSON object.
 
@@ -310,12 +320,13 @@ JSON key **result** contains a JSON object.
 | **message** | String | Some information |
 | **entry** | Integer | Entry identifier, for example: **35** |
 
-Example
+### Example
 
 <br>Create
-**Request**
-<br>Body:
-```
+
+#### Request body
+
+```json
 {
 "version": "2.0",
 "method": "cmdb.category.save",
@@ -332,9 +343,9 @@ Example
 "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+#### Response body
+
+```json
 {
 "id": 1,
 "jsonrpc": "2.0",
@@ -346,9 +357,10 @@ Example
 }
 ```
 <br>or update
-**Request**
-<br>Body:
-```
+
+#### Request body
+
+```json
 {
 "version": "2.0",
 "method": "cmdb.category.save",
@@ -366,9 +378,10 @@ Example
 "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+
+#### Response body
+
+```json
 {
 "id": 1,
 "jsonrpc": "2.0",
@@ -380,13 +393,11 @@ Example
 }
 ```
 
-
-### cmdb.category.create
-??? example "cmdb.category.create"
+## cmdb.category.create
 
 Create a new [category](../../../basics/structure-of-the-it-documentation.md) entry
 
-Request parameters
+### Request parameters
 
 | Key | JSON data type | Required |Description |
 | --- | --- | --- | --- |
@@ -394,7 +405,7 @@ Request parameters
 | **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **C__CATG__MODEL** |
 | **data** | Object | Yes | [Attributes](../category-fields-for-data-arrays.md) with their values, for example: <br>```{ "manufacturer": "Name of manufacturer", "title": "Name of model" }```|
 
-Response
+### Request parameters:
 
 JSON key **result** contains a JSON object.
 
@@ -404,11 +415,11 @@ JSON key **result** contains a JSON object.
 | **message** | String | Some information |
 | **success** | Boolean | Should always be **true** |
 
-Example
+### Example
 
-**Request**
-<br>Body:
-```
+#### Request body
+
+```json
 {
 "version": "2.0",
 "method": "cmdb.category.create",
@@ -425,9 +436,9 @@ Example
 "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+#### Response body
+
+```json
 {
 "jsonrpc": "2.0",
 "result": {
@@ -443,21 +454,24 @@ Example
 
 #
 
-### cmdb.category.read
-??? example "cmdb.category.read"
+## cmdb.category.read
 
 Read one or more [category](../../../basics/structure-of-the-it-documentation.md) entries for an object
 
-Request parameters
+### Request parameters:
 
 | Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
 | **objID** | Integer | Yes | Object identifier, for example: **42** |
 | **category** | String | Yes | Category constant, for example: **"C__CATG__MODEL"** |
 
-Response
+### Request parameters:
 
-JSON key **result** contains an array of JSON objects. Each object contains [all available attributes](../category-fields-for-data-arrays.md) for the requested category. **Note:** Even if it is a [single-value category](../../../basics/structure-of-the-it-documentation.md) or a [multi-value category](../../../basics/structure-of-the-it-documentation.md) with only 1 entry, the JSON key **result** contains always an array of JSON objects.
+JSON key **result** contains an array of JSON objects. Each object contains [all available attributes](../category-fields-for-data-arrays.md) for the requested category.
+
+!!! ""
+    Even if it is a [single-value category](../../../basics/structure-of-the-it-documentation.md) or a [multi-value category](../../../basics/structure-of-the-it-documentation.md) with only 1 entry, the JSON key **result** contains always an array of JSON objects.
+
 
 | Key | JSON data type | Description |
 | --- | --- | --- |
@@ -465,11 +479,11 @@ JSON key **result** contains an array of JSON objects. Each object contains [all
 | **objID** | String | Object identifier (as numeric string) |
 | …   | Mixed | Optional attributes with values depending on requested category |
 
-Example
+### Example
 
-**Request**
-<br>Body:
-```
+#### Request body
+
+```json
 {
 "version": "2.0",
 "method": "cmdb.category.read",
@@ -482,9 +496,10 @@ Example
 "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+
+#### Response body
+
+```json
 {
 "jsonrpc": "2.0",
 "result": [
@@ -514,12 +529,12 @@ Example
 }
 ```
 
-### cmdb.category.update
-??? example "cmdb.category.update"
+## cmdb.category.update
+
 
 Update [category](../../../basics/structure-of-the-it-documentation.md) entry of an object
 
-Request parameters
+### Request parameters:
 
 | Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
@@ -528,7 +543,7 @@ Request parameters
 | **data** | Object | Yes | [Attributes](../category-fields-for-data-arrays.md) which will be updated |
 | **data.category_id** | Integer | No  | Entry identifier (only required for [multi-value categories](../../../basics/structure-of-the-it-documentation.md)) |
 
-Response
+### Request parameters:
 
 JSON key **result** contains a JSON object.
 
@@ -537,11 +552,11 @@ JSON key **result** contains a JSON object.
 | **success** | Boolean | Should be **true** |
 | **message** | String | Should be **"Category entry successfully saved"** |
 
-Example
+### Example
 
-**Request**
-<br>Body:
-```
+#### Request body
+
+```json
 {
 "version": "2.0",
 "method": "cmdb.category.update",
@@ -557,9 +572,9 @@ Example
 "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+#### Response body
+
+```json
 {
 "jsonrpc": "2.0",
 "result": {

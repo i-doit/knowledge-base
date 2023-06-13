@@ -2,13 +2,14 @@
 
 This namespace is reserved for common methods.
 
+
 ## idoit.addons
 
 ## idoit.constants
 
 Fetch defined constants from i-doit
 
-Request parameters
+### Request parameters
 
 None
 
@@ -73,7 +74,7 @@ Example
 
 Create new session
 
-Request parameters
+### Request parameters
 
 None
 
@@ -216,7 +217,7 @@ X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
 
 Close current session
 
-Request parameters
+### Request parameters
 
 None
 
@@ -238,7 +239,7 @@ See method **idoit.login**
 
 [Search](../../../efficient-documentation/search.md) in i-doit
 
-Request parameters
+### Request parameters
 
 | Key | JSON data typ | Required | Description |
 | --- | --- | --- | --- |
@@ -298,7 +299,7 @@ Example:
 
 Fetch information about i-doit and the current user
 
-Request parameters
+### Request parameters
 
 None
 

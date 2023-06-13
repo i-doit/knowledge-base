@@ -394,7 +394,7 @@ nav:
       - API (JSON-RPC):
           - i-doit-pro-add-ons/api/index.md
           - Methods:
-              - i-doit-pro-add-ons/api/index.md
+              - i-doit-pro-add-ons/api/methods/index.md
               - cmdb.category: i-doit-pro-add-ons/api/methods/cmdb.category.md
               - cmdb.condition: i-doit-pro-add-ons/api/methods/cmdb.condition.md
               - cmdb.contact: i-doit-pro-add-ons/api/methods/cmdb.contact.md
@@ -405,12 +405,13 @@ nav:
               - cmdb.logbook: i-doit-pro-add-ons/api/methods/cmdb.logbook.md
               - cmdb.object: i-doit-pro-add-ons/api/methods/cmdb.object.md
               - cmdb.objects: i-doit-pro-add-ons/api/methods/cmdb.objects.md
+              - cmdb.object_type: i-doit-pro-add-ons/api/methods/cmdb.object_type.md
               - cmdb.reports: i-doit-pro-add-ons/api/methods/cmdb.reports.md
               - cmdb.status: i-doit-pro-add-ons/api/methods/cmdb.status.md
               - cmdb.workstation_components: i-doit-pro-add-ons/api/methods/cmdb.workstation_components.md
               - console: i-doit-pro-add-ons/api/methods/console.md
               - idoit: i-doit-pro-add-ons/api/methods/idoit.md
-              - addons: -doit-pro-add-ons/api/methods/addons.md
+              - addons: i-doit-pro-add-ons/api/methods/addons.md
           - Examples for handling the API: i-doit-pro-add-ons/api/examples-for-handling-the-api.md
           - Tips and tricks for working with the API: i-doit-pro-add-ons/api/tips-and-tricks-for-api.md
           - Category fields for data arrays: i-doit-pro-add-ons/api/category-fields-for-data-arrays.md

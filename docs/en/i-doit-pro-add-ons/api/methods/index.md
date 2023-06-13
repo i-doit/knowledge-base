@@ -2,9 +2,8 @@
 
 In this article we explain the [i-doit JSON-RPC API](./index.md) in depth. If you want to know what parameters must/can be set for each method and what a typical response looks like, this will be the right resource.
 
-How to document API Methods.
-
 ----
+How to document API Methods.
 
 ## method.method
 
@@ -16,7 +15,7 @@ description
 | --- | --- | --- | --- |
 | **Key** | String | Yes | Query, for example: **"My little server"** |
 
-### Response
+### Response parameters
 
 JSON key **result** contains an array of JSON objects. Each object contains a search result.
 

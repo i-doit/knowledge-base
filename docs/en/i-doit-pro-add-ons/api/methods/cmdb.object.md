@@ -69,22 +69,23 @@ JSON key **result** contains a JSON object.
 }
 ```
 
-### cmdb.object.create
+## cmdb.object.create
 
 Create new [object](../../../basics/structure-of-the-it-documentation.md) with some optional information
 
-Request parameters
+### Request parameters
 
 | Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
 | **type** | String\|Integer | Yes | Object type constant as string, for example: **"C__OBJTYPE__SERVER"**<br><br>Alternatively, object type identifier as integer, for example: **5** |
 | **title** | String | Yes | Object title, for example: **"My little server"** |
 | **category** | String | No  | Attribute **Category** in category **Global** |
+| **categories** | Object with Array | No | Category constant, for example: **"C__CATG__MODEL"** with keys in a array |
 | **purpose** | String | No  | Attribute **Purpose** in category Global, for example: **"In production"** |
 | **cmdb_status** | String\|Integer | No  | Attribute **CMDB status** in category **Global** by its constant (string), for example: **"C__CMDB_STATUS__IN_OPERATION"**<br><br>Alternatively, by its identifier (integer), for example: **6** |
 | **description** | String | No  | Attribute **Description** in category **Global** |
 
-Response
+### Response
 
 JSON key **result** contains a JSON object.
 
@@ -94,11 +95,11 @@ JSON key **result** contains a JSON object.
 | **message** | String | Some information |
 | **success** | Boolean | Should always be **true** |
 
-Example
+### Example
 
-**Request**
-<br>Body:
-```
+#### Request body
+
+```json
 {
     "version": "2.0",
     "method": "cmdb.object.create",
@@ -111,9 +112,10 @@ Example
     "id": 1
 }
 ```
-**Response**
-<br>Body:
-```
+
+#### Response body
+
+```json
 {
     "jsonrpc": "2.0",
     "result": {
