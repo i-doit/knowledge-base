@@ -11,7 +11,7 @@ We encourage you to [update](../../wartung-und-betrieb/update-einspielen.md) to 
 -   Added a **search** bar for the menu of the i-doit pro **Administration**.
 -   Migrated general **system settings** to the i-doit pro **Admin Center**.
 -   New **Add-on** menu in the top bar for easier access to your i-doit pro **Add-ons**.
--   Definition of **custom attribute keys** for **custom categories**.
+-   Definition of **custom attribute keys** for [**custom categories**](../../grundlagen/benutzerdefinierte-kategorien.md).
 
 
 Please check the changelog for further details.
