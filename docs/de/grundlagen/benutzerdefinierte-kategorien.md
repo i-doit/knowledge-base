@@ -24,8 +24,7 @@ Um auf die Kategorie bei Abfragen (zum Beispiel in selbst geschriebenen [Reports
 
 [![benutzerdefinierte-kategorien-5](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/5-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/5-bk.png)
 
-Ausprägung der Kategorie
-------------------------
+## Ausprägung der Kategorie
 
 Um eine Kategorie auszuprägen, können beliebig viele Attribute über den Button **Mehrere Felder hinzufügen** hinzugefügt werden. Hier stehen folgende [Feldtypen](attributfelder.md) zur Auswahl:
 
@@ -78,7 +77,6 @@ Zusätzlich sind folgende Elemente verfügbar:
     Die Möglichkeit in der Konfiguration der Kategorie Javascript-Code zu hinterlegen, der in der Kategorie interpretiert wird. Der Quellcode wird in der Konfiguration der Kategorie eingetragen und kann nicht beim Aufruf der Kategorie in der Dokumentation durch die Anwender eingetragen werden.
 
 Wie bei fast jeder anderen Kategorie wird bei einer benutzerdefinierten automatisch ein **Beschreibungsfeld** am Ende angehangen.
-
 Die Reihenfolge der erstellten Attribute kann über die schraffierten Flächen am Anfang jeder Zeile per Drag'n'Drop verändert werden.
 
 [![benutzerdefinierte-kategorien-6](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/6-bk.gif)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/6-bk.gif)
@@ -89,10 +87,8 @@ Die Reihenfolge der erstellten Attribute kann über die schraffierten Flächen a
 
 !!! attention "Achtung!"
 
-    Sobald die Kategorie in Verwendung ist, ist das Ändern von bestehenden Feldtypen nicht mehr möglich, um Datenverlust zu vermeiden.
-
-    Sollten Felder in der Konfiguration entfernt werden, kann man auf deren Inhalte nicht mehr zugreifen.
-
+    Sobald die Kategorie in Verwendung ist, ist das Ändern von bestehenden Feldtypen nicht mehr möglich, um Datenverlust zu vermeiden.<br>
+    Sollten Felder in der Konfiguration entfernt werden, kann man auf deren Inhalte nicht mehr zugreifen.<br>
     Anschließend müssen die Attribute über die [Systemtools](../administration/verwaltung/systemtools.md) neu indiziert werden.
 
 Unterhalb der Konfiguration erfolgt eine Auswertung:
@@ -104,9 +100,26 @@ Unterhalb der Konfiguration erfolgt eine Auswertung:
 
 Sobald deine Kategorie konfiguriert und ausgeprägt wurde, kannst du die Schaltfläche **Speichern** verwenden, damit die Kategorie in den ausgewählten Objekttypen zur Verfügung steht.
 
-Technische Konfiguration
-------------------------
+## Technische Konfiguration
 
 Um die benutzerdefinierte Kategorie über die [API](../i-doit-pro-add-ons/api/index.md) nutzen zu können, hilft die technische Konfiguration. Diese ist über den Button **Technische Konfiguration anzeigen** erreichbar.
 
-[![benutzerdefinierte-kategorien-9](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/9-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/9-bk.png)
+Es ist möglich, die technischen Schlüssel für jedes Feld zu ändern, indem Sie auf **Technischen Schlüssel ändern** klicken.
+
+[![Technischen Schlüssel ändern](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/9-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/9-bk.png)
+
+Jetzt können Sie den Schlüssel ändern. Der Schlüssel wird automatisch überprüft, bevor Sie den neuen Wert speichern können.
+
+!!! warning "Achtung!"
+
+    Das ändern eines Schlüssels führt zu einer Migration der hinterlegten Daten zum neuen Schlüssel<br>
+    Der Schlüssel muss aus den Zeichen **a-z**, **0-9** und **_** bestehen.<br>
+    Der Schlüssel muss mindestens **einen Buchstaben beinhalten**.<br>
+    Der Schlüssel **darf nicht leer** oder **länger als 64 Zeichen sein**.<br>
+    Der Schlüssel **muss einzigartig sein**.<br>
+
+[![Technischen Schlüssel ändern](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/10-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/10-bk.png)
+
+Nachdem Sie die benutzerdefinierte Kategorie gespeichert haben, können Sie die neue technische Konfiguration anzeigen und verwenden.
+
+[![Technische Konfiguration](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/11-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/11-bk.png)
