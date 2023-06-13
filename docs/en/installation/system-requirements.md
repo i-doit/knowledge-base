@@ -4,7 +4,7 @@ In order to guarantee the operation of all functionalities of i-doit, some requi
 
 !!! info "Current version"
 
-    The requirements shown below apply to the current version of i-doit, in this case **24**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case **25**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 ## Minimum Requirements
 
