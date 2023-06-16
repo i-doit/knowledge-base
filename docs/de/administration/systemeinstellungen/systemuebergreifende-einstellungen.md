@@ -10,7 +10,7 @@ Hier kann der von i-doit verwendete Mail Server konfiguriert werden.
 Logging
 -------
 
-Hier können die Logbuch Funktionen für die API, den CMDB Import und das [LDAP](../../automatisierung-und-integration/ldap-verzeichnis/index.md) Debugging an und ausgeschaltet werden.
+Hier können die Logbuch Funktionen für die API, den CMDB Import und das [LDAP](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) Debugging an und ausgeschaltet werden.
 
 [![Logging](../../assets/images/de/administration/systemeinstellungen/systemuebergreifende-einstellungen/2-sue.png)](../../assets/images/de/administration/systemeinstellungen/systemuebergreifende-einstellungen/2-sue.png)
 
@@ -38,7 +38,7 @@ Hier kann definiert werden, nach welchem Zeitraum eine Beendigung der aktiven Se
 Single Sign On
 --------------
 
-Hier kann die [SSO](../../automatisierung-und-integration/single-sign-on/index.md) Funktion ein bzw. ausgeschaltet werden. Ist SSO aktiv erfolgt bei der Anmeldung keine Mandantenauswahl mehr, hier kann definiert werden, welcher Mandant als Standard bei der Anmeldung verwendet werden soll.
+Hier kann die [SSO](../../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md) Funktion ein bzw. ausgeschaltet werden. Ist SSO aktiv erfolgt bei der Anmeldung keine Mandantenauswahl mehr, hier kann definiert werden, welcher Mandant als Standard bei der Anmeldung verwendet werden soll.
 
 [![Single Sign On](../../assets/images/de/administration/systemeinstellungen/systemuebergreifende-einstellungen/6-sue.png)](../../assets/images/de/administration/systemeinstellungen/systemuebergreifende-einstellungen/6-sue.png)
 
@@ -47,7 +47,7 @@ System Parameters
 
 Hier können folgende System Parameter festgelegt werden:
 
-Standard [LDAP](../../automatisierung-und-integration/ldap-verzeichnis/index.md) Gruppe → Hier können Gruppen angegeben werden, in die LDAP Benutzer automatisch nach erfolgreicher Anmeldung aufgenommen werden
+Standard [LDAP](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) Gruppe → Hier können Gruppen angegeben werden, in die LDAP Benutzer automatisch nach erfolgreicher Anmeldung aufgenommen werden
 
 PHP Zeitzone → Hier kann die Zeitzone für PHP definiert werden
 Rechtesystem → Hier kann das erweiterte [Rechtesystem](../verwaltung/rechtesystem.md) deaktiviert werden<br>

@@ -141,7 +141,7 @@ The **security extension** **[Suhosin](https://suhosin.org/)** is available for 
 
 ### Transport Encryption
 
-i-doit is a client server application, in other words, there is a server instance which communicates with a client instance via a network. Furthermore, i-doit is able to communicate via interfaces with other server instances, for example, [LDAP](../automation-and-integration/ldap-active-directory-ad/index.md) for the registration of users.
+i-doit is a client server application, in other words, there is a server instance which communicates with a client instance via a network. Furthermore, i-doit is able to communicate via interfaces with other server instances, for example, [LDAP](../user-authentication-and-management/ldap-directory/index.md) for the registration of users.
 
 In order to secure these communication connections, you can use the transport encryption via TLS. For example, you can equip the Apache web server with a trustworthy X.509 certificate, so that a web browser can **access the IT documentation via HTTPS**. You should keep a lot of things in mind in connection with certificates, such as the period of validity, chain of trust, used ciphers and hashes. Mozilla offers a suitable [generator for the Apache configuration](https://mozilla.github.io/server-side-tls/ssl-config-generator/) and provides a lot of [background information about the TLS on the server side](https://wiki.mozilla.org/Security/Server_Side_TLS). Other good sources are the [SSL Labs by Qualys](https://www.ssllabs.com/ssltest/) and the website [securityheaders.io](http://securityheaders.io) which also carry out suitable tests of the configuration.
 
@@ -256,7 +256,7 @@ If one or more interfaces to third-party applications are configured, you also h
 | Interface | Protocol | Default port |
 | --- | --- | --- |
 | [Sending e-mails](../evaluation/notifications.md) | **SMTP** | **25/465/587** |
-| [LDAP/AD](../automation-and-integration/ldap-active-directory-ad/index.md) | **LDAP** | **389/636** |
+| [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md) | **LDAP** | **389/636** |
 | Livestatus | **Livestatus** | **6557** |
 | NDOUtils/IDOUtils | **MySQL** | **3306** |
 | [OTRS Help Desk](../automation-and-integration/service-desk/otrs-help-desk.md), [Request Tracker](../automation-and-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443** |
@@ -362,7 +362,7 @@ i-doit supplies several measures to impede attacks called [**Cross-Site-Request-
 
 Nowadays, a login with only user name and user password is regarded as outdated. **Additional authentication mechanisms provide a gain in security.** When one additional mechanism is applied, the method is referred to as two-factor authentication; when more than two factors are applied this is called multi-factor authentication. A common form of implementation is the application of a (USB) token.
 
-i-doit enables additional mechanisms through the underlying Apache web server. For example, the [**single-sign-on procedure**](../automation-and-integration/single-sign-on/index.md) is based on it. The procedure can be used to activate and to configure other mechanisms directly in the web server. As long as the procedure informs i-doit through relevant HTTP headers for which user the authentication was successful, the possibilities are virtually limitless.
+i-doit enables additional mechanisms through the underlying Apache web server. For example, the [**single-sign-on procedure**](../user-authentication-and-management/sso-comparison/index.md) is based on it. The procedure can be used to activate and to configure other mechanisms directly in the web server. As long as the procedure informs i-doit through relevant HTTP headers for which user the authentication was successful, the possibilities are virtually limitless.
 
 ### Monitoring and Logs
 

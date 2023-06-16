@@ -18,7 +18,6 @@ Währungsformat - hier kann der globale Standard für das Währungsformat festge
 [![Währungsformat](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/2-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/2-ce.png)
 
 Attributsichtbarkeit ([ab Version 1.19](../../versionshistorie/release-notes/release-notes-1.19.md))
-------------------------------------------------------------------------
 
 [![Attributsichtbarkeit](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/3-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/3-ce.png)
 
@@ -105,7 +104,7 @@ Kategorieerweiterung
 
 In der Kategorieerweiterung kannst du die Bezeichnung der Felder aus der LDAP Konfigurationsdatei anpassen. Dieser Kategorieerweiterung betrifft nur Personen.<br>
 Die Felder sind dann bei Personen unter Stammdaten zu finden.<br>
-Die Feldnamen können von "Custom 1" auf beliebige Feldnamen geändert werden. Der Key kann nicht verändert werden.→ [READMORE](../../automatisierung-und-integration/ldap-verzeichnis/index.md)
+Die Feldnamen können von "Custom 1" auf beliebige Feldnamen geändert werden. Der Key kann nicht verändert werden.→ [READMORE](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md)
 
 [![Kategorieerweiterung](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/14-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/14-ce.png)
 

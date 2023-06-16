@@ -66,9 +66,9 @@ Sind mehrere Mandanten aktiviert, wird beim Login abgefragt, in welchen Mandante
 
 [![Benutzerverwaltung](../assets/images/de/administration/mandantenfaehigkeit/5-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/5-mand.png)
 
-Wird für die Authentifizierung und Autorisierung ein [LDAP-Verzeichnis/Active Directory (AD)](../automatisierung-und-integration/ldap-verzeichnis/index.md) angebunden, werden beim Login die konfigurierten Server nacheinander abgefragt, ob die Zugangsdaten gültig sind. Danach wird ermittelt, für welche Mandanten die Zugangsdaten gültig sind (siehe oben).
+Wird für die Authentifizierung und Autorisierung ein [LDAP-Verzeichnis/Active Directory (AD)](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) angebunden, werden beim Login die konfigurierten Server nacheinander abgefragt, ob die Zugangsdaten gültig sind. Danach wird ermittelt, für welche Mandanten die Zugangsdaten gültig sind (siehe oben).
 
-Ist [Single Sign On (SSO)](../automatisierung-und-integration/single-sign-on/index.md) aktiv, kann ein zu nutzender Mandant als Standard gewählt werden. Dies geschieht unter **Verwaltung → Systemeinstellungen → Single Sign On → Standard Mandant**. Beim Aufruf von i-doit wird der Benutzer automatisch zu diesem Mandanten verbunden, falls die Zugangsdaten korrekt sind.
+Ist [Single Sign On (SSO)](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md) aktiv, kann ein zu nutzender Mandant als Standard gewählt werden. Dies geschieht unter **Verwaltung → Systemeinstellungen → Single Sign On → Standard Mandant**. Beim Aufruf von i-doit wird der Benutzer automatisch zu diesem Mandanten verbunden, falls die Zugangsdaten korrekt sind.
 
 Mandanten-Wechsel
 -----------------

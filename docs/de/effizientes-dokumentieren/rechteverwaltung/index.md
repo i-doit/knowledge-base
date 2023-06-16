@@ -27,7 +27,7 @@ Die aufgelisteten Benutzer erben ihre Rechte durch die gleichnamigen Gruppen.
 
 !!! success "Rechte an LDAP/AD koppeln"
 
-    Wie im Artikel zur [Erstanmeldung](../../grundlagen/erstanmeldung.md) beschrieben, ist es sinnvoll, Personen und Gruppenzugehörigkeiten durch die Anbindung an einen [LDAP-Verzeichnisserver/Active Directory (AD)](../../automatisierung-und-integration/ldap-verzeichnis/index.md) zu automatisieren.
+    Wie im Artikel zur [Erstanmeldung](../../grundlagen/erstanmeldung.md) beschrieben, ist es sinnvoll, Personen und Gruppenzugehörigkeiten durch die Anbindung an einen [LDAP-Verzeichnisserver/Active Directory (AD)](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) zu automatisieren.
 
 Positive Rechte
 ---------------
@@ -78,49 +78,27 @@ Module
 Damit die Rechteverwaltung nicht zu unübersichtlich wird, sind alle Rechte in Module aufgeteilt. Zu finden sind die Module unter **Verwaltung → Rechtesystem → Rechtevergabe**.
 
 *   **Analyse**
-
 *   **Benachrichtigungen**
-
 *   **CI-Umzug**
-
 *   **[CMDB](../../effizientes-dokumentieren/rechteverwaltung/cmdb.md)**
-
 *   **Dashboard**
-
 *   **Dialog-Admin**
-
 *   **Dokumente**
-
 *   **Events**
-
 *   **Export**
-
 *   **Gerätetausch**
-
 *   **Import**
-
 *   **Logbuch**
-
 *   **Nagios**
-
 *   **Raumplan**
-
 *   **Rechtesystem**
-
 *   **Report Manager**
-
 *   **Services**
-
 *   **Suche**
-
 *   **Templates/Massenänderung**
-
 *   **Verkabelungen**
-
 *   **Verwaltung**
-
 *   **VIVA**
-
 *   **Wartung**
 
 Rechte wiederherstellen

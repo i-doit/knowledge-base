@@ -273,6 +273,30 @@ nav:
       - Web GUI: basics/web-gui.md
       - Custom counter: basics/custom-counter.md
       - Attribute visibility: basics/attribute-visibility.md
+  - User authentication and management:
+      - user-authentication-and-management/index.md
+      - Builtin authentication:
+          - user-authentication-and-management/builtin-authentication/index.md
+          - Creating a local user: user-authentication-and-management/builtin-authentication/creating-a-local-user.md
+      - Authentication with LDAP:
+          - user-authentication-and-management/ldap-directory/index.md
+          - LDAP Authentication via TLS: user-authentication-and-management/ldap-directory/ldap-tls.md
+          - User/Group synchronisation: user-authentication-and-management/ldap-directory/import-users-and-groups.md
+      - 2 factor authentication (2FA): user-authentication-and-management/2fa/index.md
+      - SSO authentication comparsion:
+          - user-authentication-and-management/sso-comparison/index.md
+      - SSO with SAML:
+          - user-authentication-and-management/sso-comparison/saml/index.md
+          - ADFS (Active Directory): user-authentication-and-management/sso-comparison/saml/adfs-saml.md
+          - Azure AD (SAML): user-authentication-and-management/sso-comparison/saml/azure-ad-saml.md
+      - SSO with GSSAPI:
+          - user-authentication-and-management/sso-comparison/gssapi/index.md
+          - Active Directory: user-authentication-and-management/sso-comparison/gssapi/ad-gssapi.md
+      - SSO with Kerberos: user-authentication-and-management/sso-comparison/kerberos/index.md
+      - SSO with OpenID Connect OAuth2:
+          - user-authentication-and-management/sso-comparison/openid/index.md
+          - Google authentication: user-authentication-and-management/sso-comparison/openid/google-openid.md
+      - SSO Fallback to Builtin: user-authentication-and-management/sso-comparison/sso-fallback/index.md
   - Efficient documentation:
       - efficient-documentation/index.md
       - List editing: efficient-documentation/list-editing.md
@@ -319,10 +343,6 @@ nav:
               - Options and parameters for the console: automation-and-integration/cli/console/options-and-parameters-cli.md
               - Using configuration files for console commands: automation-and-integration/cli/console/using-configuration-files-for-console-cli.md
           - Controller: automation-and-integration/cli/controller.md
-      - LDAP/Active Directory (AD):
-          - automation-and-integration/ldap-active-directory-ad/index.md
-          - How to import users and groups from AD/LDAP (advanced configuration): automation-and-integration/ldap-active-directory-ad/import-users-and-groups.md
-          - Access to Microsoft LDAP server with TLS encryption: automation-and-integration/ldap-active-directory-ad/ldap-tls.md
       - Network Monitoring:
           - automation-and-integration/network-monitoring/index.md
           - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md
@@ -332,10 +352,6 @@ nav:
           - Request Tracker (RT): automation-and-integration/service-desk/request-tracker.md
           - OTRS Help Desk: automation-and-integration/service-desk/otrs-help-desk.md
           - Zammad: automation-and-integration/service-desk/zammad.md
-      - Single Sign On (SSO):
-          - automation-and-integration/single-sign-on/index.md
-          - SAML-SSO setup: automation-and-integration/single-sign-on/saml-sso-setup.md
-          - Single Sign on (SSO) via GSSAPI: automation-and-integration/single-sign-on/single-sign-on-via-gssapi.md
       - SNMP: automation-and-integration/snmp.md
   - System Administration:
       - system-administration/index.md
@@ -382,10 +398,8 @@ nav:
       - Cable patches and paths: use-cases/cable-patches-and-path.md
       - Complex reports: use-cases/complex-reports.md
       - Custom translations: use-cases/custom-translation.md
-      - Creating a local user: use-cases/creating-a-local-user.md
       - Documentation of databases: use-cases/documentation-of-databases.md
       - Geo coordinates: use-cases/geo-coordinates.md
-      - i-doit with OpenID-Connect authentication explained with Google login: use-cases/i-doit-with-openid-connect-auth.md
       - IP address management (IPAM): use-cases/ip-adress-management.md
       - Location-based authorization: use-cases/location-bases-authorization.md
       - Locations: use-cases/locations.md
