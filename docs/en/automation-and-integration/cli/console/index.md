@@ -105,7 +105,7 @@ sudo -u www-data php console.php [COMMAND] --user admin --password admin --tenan
 
 !!! success "The user "controller""
 
-    We recommend creating a dedicated user in i-doit for the application of the CLI. If this user is to be configured as [local user](../../../use-cases/creating-a-local-user.md), create it as object of the type **Persons** with the desired credentials in the **Persons → Login** category. This user should receive admin rights. The rights assignment can be carried out through allocation to the predefined **Person group Admin**.
+    We recommend creating a dedicated user in i-doit for the application of the CLI. If this user is to be configured as [local user](../../../user-authentication-and-management/builtin-authentication/creating-a-local-user.md), create it as object of the type **Persons** with the desired credentials in the **Persons → Login** category. This user should receive admin rights. The rights assignment can be carried out through allocation to the predefined **Person group Admin**.
 
 ## Help
 
@@ -145,8 +145,8 @@ Furthermore, some commands provide examples via **--usage**.
 | **import-syslog** | yes | yes | -  | Import data from a Syslog into the i-doit [logbook](../../../basics/logbook.md) |
 | **import-xml** | yes | yes | -  | Import data from XML |
 | **install** | yes | yes | - | Install the i-doit application |
-| **ldap-sync** | yes | yes | -  | Import persons and person groups from an [LDAP directory or Active Directory (AD)](../../ldap-active-directory-ad/index.md) |
-| **ldap-syncdn** | yes | yes | -  | Synchronise the distinguished name (DN) of the users (see **LDAP** category) from an [LDAP/AD](../../ldap-active-directory-ad/index.md) |
+| **ldap-sync** | yes | yes | -  | Import persons and person groups from an [LDAP directory or Active Directory (AD)](../../../user-authentication-and-management/ldap-directory/index.md) |
+| **ldap-syncdn** | yes | yes | -  | Synchronise the distinguished name (DN) of the users (see **LDAP** category) from an [LDAP/AD](../../../user-authentication-and-management/ldap-directory/index.md) |
 | **license-add** | yes | no  | -  | Adds a license for i-doit (in progress) |
 | **license-assign** | yes | no  | -  | Assigns a hosting license to a client (in progress) |
 | **license-import** | yes | no  | -  | Imports licenses from the i-doit Server (in progress) |
