@@ -11,30 +11,29 @@ Folgende Systemparameter sind Mindestanforderungen, um einen Betrieb von i-doit 
 
 ### Virtuelle Hardware
 
-*   2 vCPUs
-*   2 GB RAM
-*   10 GB freier Festplattenspeicher
-
+- 2 vCPUs
+- 2 GB RAM
+- 10 GB freier Festplattenspeicher
 
 Wir empfehlen den Einsatz einer dedizierten, virtuellen Maschine. Der tatsächlich Hardware-Bedarf richtet sich nach Umfang der [IT-Dokumentation](../glossar.md) und Anzahl gleichzeitiger Benutzer.
 
-### Betriebssystem
+### Installationsaleitungen für Betriebssysteme
 
-*   [Debian GNU/Linux](manuelle-installation/debian.md) 10 "buster", 11 "bullseye"
-*   [Ubuntu](manuelle-installation/ubuntu-linux/index.md) 18.04 LTS "bionic", 20.04 LTS "focal fossa"
-*   [SUSE Linux Enterprise Server (SLES)](manuelle-installation/suse-linux-enterprise-server.md) 15, 15 SP1, 15 SP2, 15 SP3
-*   [Red Hat Enterprise Linux (RHEL)](manuelle-installation/red-hat-enterprise-linux/index.md) 7, 8
-*   [Microsoft Windows Server](manuelle-installation/microsoft-windows-server/index.md) 2016, 2019
+- [Debian GNU/Linux](manuelle-installation/debian.md) 11 "bullseye"
+- [Ubuntu](manuelle-installation/ubuntu-linux/index.md) 20.04 LTS "focal fossa"
+- [SUSE Linux Enterprise Server (SLES)](manuelle-installation/suse-linux-enterprise-server.md) 15, 15 SP1, 15 SP2, 15 SP3
+- [Red Hat Enterprise Linux (RHEL)](manuelle-installation/red-hat-enterprise-linux/index.md) 7, 8
+- [Microsoft Windows Server](manuelle-installation/microsoft-windows-server/index.md) 2022
 
 
-Wir empfehlen den Einsatz von [Debian GNU/Linux](manuelle-installation/debian.md) in der 64bit-Architektur (amd64) in Version 11 "bullseye".
+Wir empfehlen ein auf GNU/Linux basiertes Betriebssystem in der 64bit-Architektur (amd64).
 
 ### LAMP Stack
 
-*   Apache Webserver 2.4
-*   MariaDB 10.2, 10.3, 10.4, 10.5, 10.6 (empfohlen) oder MySQL 5.7. _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
-*   PHP 7.4 und 8.0 (empfohlen). _Im Moment wird PHP Version >= 8.1 nicht unterstützt. Wir planen die Unterstützung in einer späteren Version._
-*   PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
+- Apache Webserver 2.4
+- MariaDB 10.2, 10.3, 10.4, 10.5, 10.6 (empfohlen) oder MySQL 5.7. _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
+- PHP 7.4 und 8.0 (empfohlen). _Im Moment wird PHP Version >= 8.1 nicht unterstützt. Wir planen die Unterstützung in einer späteren Version._
+- PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
 
 Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6**.
@@ -45,19 +44,19 @@ Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6**
 
     ### Virtuelle Hardware
 
-    *   2 vCPUs
-    *   8 GB RAM
-    *   50 GB freier Festplattenplatz
+    - 2 vCPUs
+    - 8 GB RAM
+    - 50 GB freier Festplattenplatz
 
     ### Betriebssystem
 
-    [Debian GNU/Linux](manuelle-installation/debian.md)10 "buster" (64bit)
+    Wir empfehlen ein auf GNU/Linux basiertes Betriebssystem
 
     ### LAMP Stack
 
-    *   Apache 2.4.x(Standardpaket)
-    *   MariaDB 10.6.x (Standardpaket)
-    *   PHP 8.0 (Standardpaket)
+    - Apache 2.4.x(Standardpaket)
+    - MariaDB 10.6.x (Standardpaket)
+    - PHP 8.0 (Standardpaket)
 
     !!! info "Hinweis"
 
@@ -70,12 +69,120 @@ Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6**
 
 Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugreifen zu können. Es wird die jeweils aktuelle Version und die Vorversion des Webbrowsers unterstützt:
 
-*   Mozilla Firefox (inkl. letzte ESR-Version)
-*   Google Chrome/Chromium
-*   Microsoft Internet Explorer/Edge (abgeschalteter Kompatibilitätsmodus)
-*   Apple Safari
+- Mozilla Firefox (inkl. letzte ESR-Version)
+- Google Chrome/Chromium
+- Microsoft Internet Explorer/Edge (abgeschalteter Kompatibilitätsmodus)
+- Apple Safari
 
 ## Kompatibilitätsmatrix
+
+
+=== "25"
+
+    | **i-doit Version** | 25 |
+    | --- | --- |
+    | **Release** | 2023-06 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.4 <br>8.0 (recommended) |
+    | **MySQL** | 5.7 <br>8.0 |
+    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 <br>10.6 (recommended) |
+    | **Debian GNU/Linux** | 11 |
+    | **Ubuntu** | 18.04¹<br> 20.04 |
+    | **RHEL** | 7¹<br> 8 |
+    | **SLES** | 15 SP1<br> 15 SP 2<br> SP 3 |
+    | **XAMPP for Windows²** | 2016<br> 2019 |
+
+=== "24"
+
+    | **i-doit Version** | 24 |
+    | --- | --- |
+    | **Release** | 2023-05 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.4 <br>8.0 (recommended) |
+    | **MySQL** | 5.7 |
+    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
+    | **Debian GNU/Linux** | 11 |
+    | **Ubuntu** | 18.04¹<br> 20.04 |
+    | **RHEL** | 7¹<br> 8 |
+    | **SLES** | 15 SP1<br> 15 SP 2<br> SP 3 |
+    | **XAMPP for Windows²** | 2016<br> 2019 |
+
+=== "23, 22, 21, 20, 1.19"
+
+    | **i-doit Version** | 23, 22, 21, 20, 1.19 |
+    | --- | --- |
+    | **Release** | 2023-06 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.4 <br>8.0 (recommended) |
+    | **MySQL** | 5.7 |
+    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
+    | **Debian GNU/Linux** | 11 |
+    | **Ubuntu** | 18.04¹<br> 20.04 |
+    | **RHEL** | 7¹<br> 8 |
+    | **SLES** | 15 SP1<br> 15 SP 2<br> SP 3 |
+    | **XAMPP for Windows²** | 2016<br> 2019 |
+
+=== "1.18"
+
+    | **i-doit Version** | 1.18 |
+    | --- | --- |
+    | **Release** | 2022-01 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.3 (deprecated) <br>7.4 (recommended) |
+    | **MySQL** | 5.7 |
+    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
+    | **Debian GNU/Linux** | 10, 11 |
+    | **Ubuntu** | 18.04¹<br> 20.04 |
+    | **RHEL** | 7¹<br> 8 |
+    | **SLES** | 15 SP1<br> 15 SP 2 |
+    | **XAMPP for Windows²** | 2016<br> 2019 |
+
+=== "1.17"
+
+    | **i-doit Version** | 1.17 |
+    | --- | --- |
+    | **Release** | 2021-07 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.3 <br>7.4 (recommended) |
+    | **MySQL** | 5.7 |
+    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
+    | **Debian GNU/Linux** | 10 |
+    | **Ubuntu** | 18.04¹<br> 20.04 |
+    | **RHEL** | 7¹<br> 8 |
+    | **SLES** | 15<br> 15 SP1 |
+    | **XAMPP for Windows²** | 2016<br> 2019 |
+
+=== "1.16"
+
+    | **i-doit Version** | 1.16 |
+    | --- | --- |
+    | **Release** | 2021-01 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.2.5 (deprecated)<br> 7.3, 7.4 (recommended) |
+    | **MySQL** | 5.6 (deprecated) <br>5.7 |
+    | **MariaDB** |  10.1 (deprecated)  <br>10.2  <br>10.3  <br>10.4 (recommended) <br>10.5 |
+    | **Debian GNU/Linux** | 10 |
+    | **Ubuntu** | 18.04¹<br> 20.04 |
+    | **RHEL** | 7¹<br> 8 |
+    | **SLES** | 15<br> 15 SP1 |
+    | **XAMPP for Windows²** | 2016<br> 2019 |
+
+=== "1.15"
+
+    | **i-doit Version** | 1.15 |
+    | --- | --- |
+    | **Release** | 2020-07 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.1.8 (deprecated)<br> 7.2<br> 7.3 (recommended)<br>7.4 |
+    | **MySQL** | 5.7 |
+    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 <br> 10.6 (recommended) |
+    | **Debian GNU/Linux** | 11 |
+    | **Ubuntu** | 18.04¹, 20.04 |
+    | **RHEL** | 7¹, 8 |
+    | **SLES** | 15 SP1, 15 SP 2, SP 3 |
+    | **XAMPP for Windows²** | 2016, 2019 |
+
+
 
 | **i-doit Version** | 24 | 1.19, 20, 21, 22, 23 | 1.18 | 1.17 | 1.16 | 1.15 | 1.14 | 1.13 | 1.12 | 1.11 | 1.10 | 1.9 | 1.8 | 1.7 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
