@@ -117,7 +117,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL** | 5.7 |
     | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
     | **Debian GNU/Linux** | 11 |
-    | **Ubuntu** | 18.04¹<br> 20.04 |
+    | **Ubuntu** | 18.04<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
     | **SLES** | 15 SP1<br> 15 SP 2<br> SP 3 |
     | **XAMPP for Windows²** | 2016<br> 2019 |
@@ -132,7 +132,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL** | 5.7 |
     | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
     | **Debian GNU/Linux** | 10, 11 |
-    | **Ubuntu** | 18.04¹<br> 20.04 |
+    | **Ubuntu** | 18.04<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
     | **SLES** | 15 SP1<br> 15 SP 2 |
     | **XAMPP for Windows²** | 2016<br> 2019 |
@@ -147,7 +147,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL** | 5.7 |
     | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
     | **Debian GNU/Linux** | 10 |
-    | **Ubuntu** | 18.04¹<br> 20.04 |
+    | **Ubuntu** | 18.04<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
     | **SLES** | 15<br> 15 SP1 |
     | **XAMPP for Windows²** | 2016<br> 2019 |
@@ -158,11 +158,11 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2021-01 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.2.5 (deprecated)<br> 7.3, 7.4 (recommended) |
+    | **PHP** | 7.2.5 (deprecated)<br> 7.3 <br> 7.4 (recommended) |
     | **MySQL** | 5.6 (deprecated) <br>5.7 |
     | **MariaDB** |  10.1 (deprecated)  <br>10.2  <br>10.3  <br>10.4 (recommended) <br>10.5 |
     | **Debian GNU/Linux** | 10 |
-    | **Ubuntu** | 18.04¹<br> 20.04 |
+    | **Ubuntu** | 18.04<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
     | **SLES** | 15<br> 15 SP1 |
     | **XAMPP for Windows²** | 2016<br> 2019 |
@@ -174,13 +174,119 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **Release** | 2020-07 |
     | **Apache Webserver** | 2.4 |
     | **PHP** | 7.1.8 (deprecated)<br> 7.2<br> 7.3 (recommended)<br>7.4 |
-    | **MySQL** | 5.7 |
-    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 <br> 10.6 (recommended) |
-    | **Debian GNU/Linux** | 11 |
-    | **Ubuntu** | 18.04¹, 20.04 |
-    | **RHEL** | 7¹, 8 |
-    | **SLES** | 15 SP1, 15 SP 2, SP 3 |
-    | **XAMPP for Windows²** | 2016, 2019 |
+    | **MySQL** | 5.6<br> 5.7 |
+    | **MariaDB** |  10.1 (deprecated)  <br>10.2  <br>10.3  <br>10.4 (recommended) |
+    | **Debian GNU/Linux** | 10 |
+    | **Ubuntu** | 18.04<br> 20.04 |
+    | **RHEL** | 7¹<br> 8 |
+    | **SLES** | 15<br> 15 SP1 |
+    | **XAMPP for Windows²** | 2016<br> 2019 |
+
+=== "1.14"
+
+    | **i-doit Version** | 	1.14 |
+    | --- | --- |
+    | **Release** | 2020-01 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.1.8 (deprecated)<br> 7.2<br> 7.3 (recommended)<br>7.4 |
+    | **MySQL** | 5.6<br> 5.7 |
+    | **MariaDB** |  10.1 (deprecated)  <br>10.2  <br>10.3  <br>10.4 (recommended) |
+    | **Debian GNU/Linux** | 10 |
+    | **Ubuntu** | 18.04 |
+    | **RHEL** | 7¹<br> 8 |
+    | **SLES** | 15<br> 15 SP1 |
+    | **XAMPP for Windows²** | 2016<br> 2019 |
+
+=== "1.13"
+
+    | **i-doit Version** | 	1.13 |
+    | --- | --- |
+    | **Release** | 2019-06 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.0.8 (deprecated)<br> 7.1<br> 7.2 <br>7.3 (recommended) |
+    | **MySQL** | 5.6<br> 5.7 |
+    | **MariaDB** |  10.0 (deprecated)  <br>10.1  <br>10.2  <br>10.3 (recommended) |
+    | **Debian GNU/Linux** | 10<br> 9<br> 8 |
+    | **Ubuntu** | 16.04<br> 18.04 |
+    | **RHEL** | 7¹<br> 8 |
+    | **SLES** | 12 SP3<br> 15 |
+    | **XAMPP for Windows²** | 2008 R2<br> 2012 R2<br> 2016<br> 2019 |
+
+=== "1.12"
+
+    | **i-doit Version** | 	1.12 |
+    | --- | --- |
+    | **Release** | 2018-12 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 5.6 (deprecated)<br> 7.0<br> 7.1 <br>7.2 (recommended) |
+    | **MySQL** | 5.6<br> 5.7 |
+    | **MariaDB** |  10.0 <br>10.1 |
+    | **Debian GNU/Linux** | 9<br> 8 |
+    | **Ubuntu** | 16.04<br> 18.04 |
+    | **RHEL** | 7.3¹<br> 7.4¹<br> 7.5¹<br> 7.6¹ |
+    | **SLES** | 12 SP3<br> 15 |
+    | **XAMPP for Windows²** | 2008 R2<br> 2012 R2<br> 2016<br> 2019 |
+
+=== "1.11"
+
+    | **i-doit Version** | 	1.11 |
+    | --- | --- |
+    | **Release** | 2018-06 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 5.6 <br> 7.0<br> 7.1 |
+    | **MySQL** | 5.6<br> 5.7 |
+    | **MariaDB** |  10.0 <br>10.1 |
+    | **Debian GNU/Linux** | 9<br> 8 |
+    | **Ubuntu** | 16.04 |
+    | **RHEL** | 7.3¹<br> 7.4¹<br> 7.5¹ |
+    | **SLES** | 12 SP3 |
+    | **XAMPP for Windows²** | 2008 R2<br> 2012 R2<br> 2016 |
+
+=== "1.10"
+
+    | **i-doit Version** | 	1.10 |
+    | --- | --- |
+    | **Release** | 2017-12 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 5.6 <br> 7.0 |
+    | **MySQL** | 5.6<br> 5.7 |
+    | **MariaDB** |  10.0 <br>10.1 |
+    | **Debian GNU/Linux** | 9<br> 8 |
+    | **Ubuntu** | 16.04<br> 17.04 |
+    | **RHEL** | 7.3¹<br> 7.4¹ |
+    | **SLES** | 12 SP2 <br> 12 SP3 |
+    | **XAMPP for Windows²** | 2008 R2<br> 2012 R2<br> 2016 |
+
+=== "1.9"
+
+    | **i-doit Version** | 	1.9 |
+    | --- | --- |
+    | **Release** | 2017-05 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 5.4<br> 5.5<br> 5.6<br> 7.0 |
+    | **MySQL** | 5.6<br> 5.7 |
+    | **MariaDB** |  10.0 <br>10.1 |
+    | **Debian GNU/Linux** | 9<br> 8 |
+    | **Ubuntu** | 16.04 LTS<br> 16.10<br> 17.04 |
+    | **RHEL** | 7.3¹ |
+    | **SLES** | 12<br> 12 SP2 |
+    | **XAMPP for Windows²** | 2008<br> 2012 |
+
+=== "1.8"
+
+    | **i-doit Version** | 	1.8 |
+    | --- | --- |
+    | **Release** | 2016-10 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 5.4<br> 5.5<br> 5.6 |
+    | **MySQL** | 5.6<br> 5.7 |
+    | **MariaDB** |  10.0 <br>10.1 |
+    | **Debian GNU/Linux** | 9<br> 8 |
+    | **Ubuntu** | 16.04 LTS<br> 16.10<br> 17.04 |
+    | **RHEL** | 7.3¹ |
+    | **SLES** | 12<br> 12 SP2 |
+    | **XAMPP for Windows²** | 2008<br> 2012 |
+
 
 
 
