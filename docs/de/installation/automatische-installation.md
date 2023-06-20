@@ -13,14 +13,13 @@ Dieser Artikel behandelt die automatische [Installation](index.md) von i-doit. A
 
 ## Voraussetzungen
 
-*   Die [Systemvoraussetzungen](systemvoraussetzungen.md) **müssen** erfüllt sein. Ausgenommen davon ist der genannte LAMP Stack (Apache Web Server, MariaDB/MySQL, PHP).
-*   Eines der [unterstützten](systemvoraussetzungen.md) GNU/Linux-Betriebssysteme ist frisch installiert.
-*   Das System kann über eine Internetanbindung auf Paket-Repositories und Web Services von i-doit zugreifen.
+- Die [Systemvoraussetzungen](systemvoraussetzungen.md) **müssen** erfüllt sein. Ausgenommen davon ist der genannte LAMP Stack (Apache Web Server, MariaDB/MySQL, PHP).
+- Eines der [unterstützten](systemvoraussetzungen.md) GNU/Linux-Betriebssysteme ist frisch installiert.
+- Das System kann über eine Internetanbindung auf Paket-Repositories und Web Services von i-doit zugreifen.
 
 ## Benutzung
 
-Die Installation übernimmt ein [Script](https://github.com/i-doit/scripts#install-i-doit-on-a-gnulinux-operating-system), das auf dem Betriebssystem ausgeführt wird.
-
+Die Installation übernimmt ein [Script](https://github.com/i-doit/scripts#install-i-doit-on-a-gnulinux-operating-system), das auf dem Betriebssystem ausgeführt wird. <br>
 Die folgenden Schritte finden auf der Kommandozeile statt. Dazu verbindet man sich beispielsweise via **SSH**. Anschließend lädt man das Script herunter und macht es ausführbar:
 
 ```shell
