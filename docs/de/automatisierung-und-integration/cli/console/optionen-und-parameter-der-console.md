@@ -32,7 +32,7 @@
 | [import-syslog](#import-syslog) | Daten aus einem Syslog in das Logbuch von i-doit importieren |
 | [import-xml](#import-ocs) | Daten aus XML importieren |
 | [install](#install) | Installiert i-doit |
-| [ldap-sync](#ldap-sync) | IPersonen und Personengruppen aus einem [LDAP-Verzeichnis oder Active Directory (AD)](../../ldap-verzeichnis/index.md) importieren |
+| [ldap-sync](#ldap-sync) | Personen und Personengruppen aus einem [LDAP-Verzeichnis oder Active Directory (AD)](../../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) importieren |
 | [ldap-syncdn](#ldap-sync) | Synchronisiere aus einem LDAP/AD den Distinguished Name (DN) der Benutzer (siehe Kategorie LDAP) |
 | [license-add](#license-add) | Fügt eine Lizenz für i-doit hinzu (in Bearbeitung) |
 | [license-assign](#license-assign) | Ordnet eine Hosting Lizenz einem Mandaten zu (in Bearbeitung) |

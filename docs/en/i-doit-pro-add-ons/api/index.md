@@ -43,7 +43,7 @@ Access
 
 You can access the API of i-doit by activating a special URL. Add  src/jsonrpc.php  to the basic URL:
 
-     https://demo.i-doit.com/src/jsonrpc.php 
+     https://demo.i-doit.com/src/jsonrpc.php
 
 Authentication and Authorization
 --------------------------------
@@ -53,8 +53,8 @@ You need an API key so that requests will be processed by the API. Additionally,
 It may prove useful to use the API method  idoit.login  for a single authentication if a lot of requests (meaning thousands) are sent from a client. Otherwise it is possible that too many sessions are created in a very small time frame but are not terminated. This could result in the fact that i-doit stops working until the sessions have been terminated.
 
 !!! attention ""
-    The default user used for API actions is "Api System". This can be found under "Contacts -> People" if required.  
-    This is only used if no username/password is used to connect to the API interface.  
+    The default user used for API actions is "Api System". This can be found under "Contacts -> People" if required.
+    This is only used if no username/password is used to connect to the API interface.
     If the person is archived/deleted the API can no longer be used without authentication.
 
 Methods

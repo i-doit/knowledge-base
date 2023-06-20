@@ -27,7 +27,7 @@ The listed users inherit their rights through the groups of the same name.
 
 !!! success "Connect rights to LDAP/AD"
 
-    As already described in the article for [Initial Login](../../basics/initial-login.md), it makes sense to automate assignments of persons and groups with the connection to an [LDAP folder/ Active Directory (AD)](../../automation-and-integration/ldap-active-directory-ad/index.md).
+    As already described in the article for [Initial Login](../../basics/initial-login.md), it makes sense to automate assignments of persons and groups with the connection to an [LDAP folder/ Active Directory (AD)](../../user-authentication-and-management/ldap-directory/index.md).
 
 Positive Rights
 ---------------

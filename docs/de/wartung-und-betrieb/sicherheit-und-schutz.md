@@ -144,7 +144,7 @@ Für PHP existiert die **Sicherheits-Erweiterung [Suhosin](https://suhosin.org/)
 
 ### Transportverschlüsselung
 
-i-doit ist eine Client-Server-Anwendung, dass heißt, es existiert eine Server-Instanz, die mit einer Client-Instanz über ein Netzwerk kommuniziert. Zudem kann i-doit über Schnittstellen mit weiteren Server-Instanzen kommunizieren, beispielsweise [LDAP zur Anmeldung von Benutzern](../automatisierung-und-integration/ldap-verzeichnis/index.md).
+i-doit ist eine Client-Server-Anwendung, dass heißt, es existiert eine Server-Instanz, die mit einer Client-Instanz über ein Netzwerk kommuniziert. Zudem kann i-doit über Schnittstellen mit weiteren Server-Instanzen kommunizieren, beispielsweise [LDAP zur Anmeldung von Benutzern](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md).
 
 Um diese Kommunikationsverbindungen abzusichern, bietet sich die Transportverschlüsselung via TLS an. Beispielsweise kann der Apache Webserver mit einem vertrauenswürdigen X.509-Zertifikat ausgestattet werden, damit ein Webbrowser **via HTTPS auf die IT-Dokumentation zugreifen** kann. Bei Zertifikaten sollten viele Dinge beachtet werden: u. a. Gültigkeitsdauer, Vertrauenskette, verwendete Ciphers und Hashes. Mozilla bietet einen passenden [Generator für die Apache-Konfiguration](https://mozilla.github.io/server-side-tls/ssl-config-generator/) an und liefert jede Menge [Hintergrundinformationen zu Server-seitigem TLS](https://wiki.mozilla.org/Security/Server_Side_TLS). Weitere gute Quellen sind die [SSL Labs von Qualys](https://www.ssllabs.com/ssltest/) und die Website [securityheaders.io](https://securityheaders.io/), die auch passende Tests der Konfiguration durchführen.
 
@@ -261,7 +261,7 @@ Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss 
 | Schnittstelle | Protokoll | Standard-Port |
 | --- | --- | --- |
 | [E-Mails senden](../auswertungen/benachrichtigungen.md) | **SMTP** | **25/465/587** |
-| [LDAP/AD](../automatisierung-und-integration/ldap-verzeichnis/index.md) | **LDAP** | **389/636** |
+| [LDAP/AD](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) | **LDAP** | **389/636** |
 | [Livestatus](../automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md) | **Livestatus** | **6557** |
 | [NDOUtils/IDOUtils](../automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md) | **MySQL** | **3306** |
 | [OTRS Help Desk](../automatisierung-und-integration/service-desk/otrs-help-desk.md), [Request Tracker](../automatisierung-und-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443** |
@@ -365,7 +365,7 @@ i-doit bringt mehrere Maßnahmen mit, um Angriffe, die unter [**Cross-Site-Reque
 
 Die Anmeldung via Benutzernamen und -passwort wird heutzutage als nicht mehr zeitgemäß angesehen. **Zusätzliche Authentifzierungsmechanismen bringen einen Zugewinn an Sicherheit.** Wenn ein weiterer Mechanismus hinzukommt, spricht man von Zwei-Faktor-Authentifizierung, bei mehr als zweien von Mehr-Faktor-Authentifizierung. Eine gängige Art der Umsetzung ist der Einsatz eines (USB-)Tokens.
 
-i-doit erlaubt zusätzliche Mechanismen durch den zugrunde liegenden Apache Webserver. Beispielsweise beruht die das **[Single-Sign-On-Verfahren](../automatisierung-und-integration/single-sign-on/index.md)** darauf. Dieses lässt sich dazu nutzen, weitere Mechanismen direkt im Webserver zu aktivieren und zu konfigurieren. Hier sind praktisch keine Grenzen gesetzt, solange das Verfahren i-doit über entsprechende HTTP-Header mitteilt, für welchen Benutzer die Authentifizierung erfolgreich ist.
+i-doit erlaubt zusätzliche Mechanismen durch den zugrunde liegenden Apache Webserver. Beispielsweise beruht die das **[Single-Sign-On-Verfahren](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md)** darauf. Dieses lässt sich dazu nutzen, weitere Mechanismen direkt im Webserver zu aktivieren und zu konfigurieren. Hier sind praktisch keine Grenzen gesetzt, solange das Verfahren i-doit über entsprechende HTTP-Header mitteilt, für welchen Benutzer die Authentifizierung erfolgreich ist.
 
 ### Monitoring und Logs
 
