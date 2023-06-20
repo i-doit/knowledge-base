@@ -88,7 +88,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **Ubuntu** | 18.04¹<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
     | **SLES** | 15 SP1<br> 15 SP 2<br> SP 3 |
-    | **XAMPP for Windows²** | 2016<br> 2019 |
+    | **XAMPP for Windows²** | 2022 |
 
 === "24"
 
