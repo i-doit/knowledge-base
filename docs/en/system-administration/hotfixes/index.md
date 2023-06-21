@@ -36,6 +36,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_25_hotfix_ID-9476.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9476.zip){ .md-button .md-button--primary }
 
+### Date field from custom categories not displayed in mapping of csv import
+
+[i-doit_25_hotfix_ID-9604.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9604.zip){ .md-button .md-button--primary }
+
 ## Analyze Add-on 1.3
 
 ### Service assignment is not displayed in data quality
