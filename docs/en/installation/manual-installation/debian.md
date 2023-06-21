@@ -48,7 +48,7 @@ sudo nano /etc/php/7.4/mods-available/i-doit.ini
 
 This file has the following contents:
 
-```shell
+```ini
 allow_url_fopen = Yes
 file_uploads = On
 magic_quotes_gpc = Off
@@ -224,4 +224,4 @@ sudo systemctl start mysql.service
 
 Now the operating system is prepared and i-doit can be installed.
 
-[Proceed with **Setup**](setup.md){ .md-button .md-button--primary }
+Proceed with [**Setup**](setup.md)

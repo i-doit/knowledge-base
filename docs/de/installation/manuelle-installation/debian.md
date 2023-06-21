@@ -6,7 +6,7 @@ Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenige
 
 Es gelten die allgemeinen [Systemvoraussetzungen](../systemvoraussetzungen.md).
 
-Dieser Artikel bezieht sich auf [**Debian GNU/Linux 11 "bullseye"**](https://debian.org/). Abweichende Installationsanweisungen für Version 8 "jessie" befinden sich unterhalb dieses Artikels. Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
+Dieser Artikel bezieht sich auf [**Debian GNU/Linux 11 "bullseye"**](https://debian.org/). Um zu bestimmen, welche Debian Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
 ```shell
 cat /etc/debian_version
@@ -24,10 +24,10 @@ uname -m
 
 Die Standard-Repositories von Debian GNU/Linux bringen bereits alle nötigen Pakete mit, um
 
-*   den **Apache** Webserver 2.4,
-*   die Script-Sprache **PHP** 7.4,
-*   das Datenbankmanagementsystem **MariaDB** 10.5 und
-*   den Caching-Server **memcached**
+- den **Apache** Webserver 2.4,
+- die Script-Sprache **PHP** 7.4,
+- das Datenbankmanagementsystem **MariaDB** 10.5 und
+- den Caching-Server **memcached**
 
 zu installieren:
 
@@ -99,7 +99,7 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
 
 In dieser Datei wird die neue VHost-Konfiguration gespeichert:
 
-```ini
+```shell
 <VirtualHost *:80>
         ServerAdmin i-doit@example.net
 
@@ -165,7 +165,7 @@ EXIT;
 
 Anschließend wird MariaDB gestoppt. Wichtig ist hierbei das Verschieben von nicht benötigten Dateien (andernfalls droht ein signifikanter Performance-Verlust):
 
-```sql
+```shell
 mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
 sudo systemctl stop mysql.service
 sudo mv /var/lib/mysql/ib_logfile[01] /tmp
@@ -181,51 +181,40 @@ Diese Datei enthält die neuen Konfigurationseinstellungen. Für eine optimale P
 
 ```ini
 [mysqld]
-
 # This is the number 1 setting to look at for any performance optimization
 # It is where the data and indexes are cached: having it as large as possible will
 # ensure MySQL uses memory and not disks for most read operations.
 #
 # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
 innodb_buffer_pool_size = 1G
-
 # Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
 innodb_buffer_pool_instances = 1
-
 # Redo log file size, the higher the better.
 # MySQL/MariaDB writes two of these log files in a default installation.
 innodb_log_file_size = 512M
-
 innodb_sort_buffer_size = 64M
 sort_buffer_size = 262144 # default
 join_buffer_size = 262144 # default
-
 max_allowed_packet = 128M
 max_heap_table_size = 32M
 query_cache_min_res_unit = 4096
 query_cache_type = 1
 query_cache_limit = 5M
 query_cache_size = 80M
-
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
-
 # Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
 innodb_thread_concurrency = 0
-
 # Disable this (= 0) if you have slow harddisks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
-
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
 # Only if your have MySQL 5.6 or higher, do not use with MariaDB!
 #table_open_cache_instances = 4
-
 innodb_stats_on_metadata = 0
-
 sql-mode = ""
 ```
 

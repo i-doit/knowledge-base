@@ -1,6 +1,6 @@
 # Manual installation
 
-Once the necessary preparations are made - for example the configuration of the underlying operation system - you can begin the setup of i-doit.
+Once the necessary preparations are made - for example the configuration of the underlying operation system - you can begin the setup of i-doit.
 
 ## Quickstart
 
@@ -131,7 +131,7 @@ The installtion of i-doit on the system is carried out in this step. To shorten 
 
 ### Console
 
-!!! Work in Progress
+!!! example "In Arbeit"
 
 ## Further steps
 
