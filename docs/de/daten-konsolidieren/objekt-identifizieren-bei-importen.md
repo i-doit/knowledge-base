@@ -57,7 +57,7 @@ Pro Profil sind mehrere Angaben zu machen:
 | **IMEI-Nummer** | Siehe Kategorie **Mobilfunk** | ja  | nein | nein | nein |
 | **Inventarnummer** | Siehe Kategorie **Buchhaltung** | ja  | nein | nein | nein |
 | **IP-Adresse** | Netzwerkfähiges Gerät importieren; siehe Kategorie **Hostadresse** | ja  | ja  | nein | nein |
-| **LDAP DN** | Werden Personen über [LDAP/AD](../automatisierung-und-integration/ldap-verzeichnis/index.md) synchronisiert, speichert i-doit im Hintergrund den jeweiligen DN. Dieses Attribut ist in i-doit nicht einsehbar, kann aber als Identifizierungsmerkmal genutzt werden. | ja  | nein | nein | nein |
+| **LDAP DN** | Werden Personen über [LDAP/AD](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) synchronisiert, speichert i-doit im Hintergrund den jeweiligen DN. Dieses Attribut ist in i-doit nicht einsehbar, kann aber als Identifizierungsmerkmal genutzt werden. | ja  | nein | nein | nein |
 | **MAC** | Netzwerkfähiges Gerät importieren; siehe Kategorie **Netzwerk → Port**, Attribut **MAC-Adresse** | ja  | ja  | ja  | ja  |
 | **Objekt-ID** | Siehe Kategorie **Allgemein**, Attribut **Objekt ID** | ja  | nein | nein | nein |
 | **Objekt-SYSID** | Siehe Kategorie **Allgemein**, Attribut **SYS-ID** | ja  | nein | nein | nein |

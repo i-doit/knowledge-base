@@ -1,4 +1,4 @@
-cryptography ~= 40.0.1
+cryptography ~= 41.0.1
 cyclonedx-bom == 3.11.0
 Jinja2 ~= 3.1.2
 Markdown ~= 3.3.7

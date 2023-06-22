@@ -105,7 +105,7 @@ sudo -u www-data php console.php [COMMAND] --user admin --password admin --tenan
 
 !!! check "Der Benutzer "controller""
 
-    Es wird empfohlen, einen dedizierten Benutzer in i-doit für die Nutzung der CLI anzulegen. Soll dieser als [lokaler Benutzer](../../../anwendungsfaelle/lokalen-benutzer-anlegen.md) konfiguriert werden, erstellt man ihn als Objekt vom Typ **Personen** mit den gewünschten Credentials in der Kategorie **Personen → Login**. Dieser Benutzer sollte Admin-Rechte erhalten. Dies kann durch die Zuordnung zur vordefinierten **Personengruppe** **Admin** geschehen.
+    Es wird empfohlen, einen dedizierten Benutzer in i-doit für die Nutzung der CLI anzulegen. Soll dieser als [lokaler Benutzer](../../../benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen.md) konfiguriert werden, erstellt man ihn als Objekt vom Typ **Personen** mit den gewünschten Credentials in der Kategorie **Personen → Login**. Dieser Benutzer sollte Admin-Rechte erhalten. Dies kann durch die Zuordnung zur vordefinierten **Personengruppe** **Admin** geschehen.
 
 ## Hilfe
 
@@ -145,8 +145,8 @@ Darüber hinaus bieten einige Commands Beispielaufrufe via **--usage**.
 | **import-syslog** | ja  | ja  | -   | Daten aus einem Syslog in das [Logbuch](../../../grundlagen/logbuch.md) von i-doit importieren |
 | **import-xml** | ja  | ja  | -   | Daten aus XML importieren |
 | **install** | ja | ja | - | Installiert i-doit |
-| **ldap-sync** | ja  | ja  | -   | Personen und Personengruppen aus einem [LDAP-Verzeichnis oder Active Directory (AD)](../../ldap-verzeichnis/index.md) importieren |
-| **ldap-syncdn** | ja  | ja  | -   | Synchronisiere aus einem [LDAP/AD](../../ldap-verzeichnis/index.md) den Distinguished Name (DN) der Benutzer (siehe Kategorie **LDAP**) |
+| **ldap-sync** | ja  | ja  | -   | Personen und Personengruppen aus einem [LDAP-Verzeichnis oder Active Directory (AD)](../../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) importieren |
+| **ldap-syncdn** | ja  | ja  | -   | Synchronisiere aus einem [LDAP/AD](../../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) den Distinguished Name (DN) der Benutzer (siehe Kategorie **LDAP**) |
 | **license-add** | ja  | nein | -  | Fügt eine Lizenz für i-doit hinzu (in Bearbeitung) |
 | **license-assign** | ja  | nein | -  | Ordnet eine Hosting Lizenz einem Mandaten zu (in Bearbeitung) |
 | **license-import** | ja  | nein | -  | Importiert Lizenzen vom i-doit Server (in Bearbeitung) |

@@ -1,7 +1,6 @@
 # Hotfixes
 
-Über
-----
+## Über
 
 Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Datei zur Verfügung gestellt. Die ZIP-Datei wird im Installationsverzeichnis von i-doit entpackt. Die Abfrage, ob Dateien beim Entpacken überschrieben werden sollen, kann bestätigt werden (Taste **Y** für "yes" oder **A** für "all"). Hier ein Beispiel:
 
@@ -25,7 +24,7 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 !!! info "Aktualität"
 
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **24** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **25** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 !!! attention "Einverständniserklärung"
 
@@ -33,9 +32,13 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit Core
 
-### SQL query is wrongly created when using Assigned workstation -> Parent object
+### Variable report on overview page causes 500 error
 
-[I-doit_24_hotfix_ID-9315.zip :material-file-download:](../../assets/downloads/hotfixes/24/i-doit_24_hotfix_ID-9315.zip){ .md-button .md-button--primary }
+[i-doit_25_hotfix_ID-9476.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9476.zip){ .md-button .md-button--primary }
+
+### Date field from custom categories not displayed in mapping of csv import
+
+[i-doit_25_hotfix_ID-9604.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9604.zip){ .md-button .md-button--primary }
 
 ## Analyze Add-on 1.3
 

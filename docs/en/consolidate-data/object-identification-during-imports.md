@@ -57,7 +57,7 @@ Possible Identifiers
 | **IMEI number** | See category **Mobile ratio**, **IMEI** attribute | yes | no  | no  | no  |
 | **Inventory number** | See category **Accounting**, **Inventory number** attribute | yes | no  | no  | no  |
 | **IP address** | Import of network-compatible device; see category **Host address** | yes | yes | no  | no  |
-| **LDAP DN** | When persons are synchronized via [LDAP/AD](../automation-and-integration/ldap-active-directory-ad/index.md), i-doit saves the corresponding DN in the background. You can't see this attribute in i-doit but you can use it as an identification | yes | no  | no  | no  |
+| **LDAP DN** | When persons are synchronized via [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md), i-doit saves the corresponding DN in the background. You can't see this attribute in i-doit but you can use it as an identification | yes | no  | no  | no  |
 | **MAC** | Import of network-compatible device; see category **Network → Port**,  **MAC address** attribute | yes | yes | yes | yes |
 | **Object ID** | See category **General**, **Object ID** attribute | yes | no  | no  | no  |
 | **Object SYSID** | See category **General**, **SYS-ID **attribute | yes | no  | no  | no  |

@@ -117,6 +117,7 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 25: versionshistorie/release-notes/release-notes-25.md
           - Release Notes 24: versionshistorie/release-notes/release-notes-24.md
           - Release Notes 23: versionshistorie/release-notes/release-notes-23.md
           - Release Notes 22: versionshistorie/release-notes/release-notes-22.md
@@ -136,6 +137,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 25: versionshistorie/changelogs/changelog-25.md
           - Changelog 24: versionshistorie/changelogs/changelog-24.md
           - Changelog 23: versionshistorie/changelogs/changelog-23.md
           - Changelog 22: versionshistorie/changelogs/changelog-22.md
@@ -308,6 +310,30 @@ nav:
       - Web GUI: grundlagen/web-gui.md
       - Benutzerdefinierte Zähler: grundlagen/benutzerdefinierte-zaehler.md
       - Attributsichtbarkeit: grundlagen/attributsichtbarkeit.md
+  - Benutzerauthentifizierung und Verwaltung:
+      - benutzerauthentifizierung-und-verwaltung/index.md
+      - Integrierte Authentifizierung:
+          - benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/index.md
+          - Lokalen Benutzer anlegen: benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen.md
+      - Authentifizierung mit LDAP:
+          - benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md
+          - Authentifizierung mit LDAP via TLS: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
+          - Benutzer-/Gruppen-Synchronisierung: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
+      - 2-Faktor-Authentifizierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
+      - SSO-Authentifizierung im Vergleich:
+          - benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md
+      - SSO mit SAML:
+          - benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/index.md
+          - ADFS (Active Directory): benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml.md
+          - Azure AD (SAML): benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad-saml.md
+      - SSO mit GSSAPI:
+          - benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/index.md
+          - Active Directory: benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/ad-gssapi.md
+      - SSO mit Kerberos: benutzerauthentifizierung-und-verwaltung/sso-vergleich/kerberos/index.md
+      - SSO mit OpenID Connect OAuth2:
+          - benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/index.md
+          - Google Authentifizierung: benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid.md
+      - SSO Fallback zu Builtin: benutzerauthentifizierung-und-verwaltung/sso-vergleich/sso-fallback/index.md
   - Effizientes Dokumentieren:
       - effizientes-dokumentieren/index.md
       - Listeneditierung: effizientes-dokumentieren/listeneditierung.md
@@ -354,10 +380,6 @@ nav:
               - Optionen und Parameter der Console: automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md
               - Verwendung von Konfigurationsdateien für Console Commands: automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md
           - Controller: automatisierung-und-integration/cli/controller.md
-      - LDAP-Verzeichnis/Active Directory (AD):
-          - automatisierung-und-integration/ldap-verzeichnis/index.md
-          - So werden Benutzer und Gruppen aus dem AD/LDAP importiert (erweiterte Konfiguration): automatisierung-und-integration/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
-          - Zugriff auf Microsoft LDAP Server mit TLS Verschlüsselung: automatisierung-und-integration/ldap-verzeichnis/ldap-tls.md
       - Network Monitoring:
           - automatisierung-und-integration/network-monitoring/index.md
           - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md
@@ -367,10 +389,6 @@ nav:
           - Request Tracker (RT): automatisierung-und-integration/service-desk/request-tracker.md
           - OTRS Help Desk: automatisierung-und-integration/service-desk/otrs-help-desk.md
           - Zammad: automatisierung-und-integration/service-desk/zammad.md
-      - Single Sign On (SSO):
-          - automatisierung-und-integration/single-sign-on/index.md
-          - Einrichtung von SAML-SSO: automatisierung-und-integration/single-sign-on/einrichtung-saml-sso.md
-          - Single Sign on (SSO) via GSSAPI: automatisierung-und-integration/single-sign-on/single-sign-on-via-gssapi.md
       - SNMP: automatisierung-und-integration/snmp.md
   - Administration:
       - administration/index.md
@@ -403,6 +421,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
           - Hotfix Archiv:
               - administration/hotfixes/hotfix-archiv/index.md
+              - Version 24: administration/hotfixes/hotfix-archiv/v24.md
               - Version 23: administration/hotfixes/hotfix-archiv/v23.md
               - Version 22: administration/hotfixes/hotfix-archiv/v22.md
       - Systemeinstellungen (Verwaltung):
@@ -424,13 +443,11 @@ nav:
       - ISO 27000 mit i-doit: anwendungsfaelle/iso27000-mit-i-doit.md
       - Kabel-Patches und -wege: anwendungsfaelle/kabel-patches-und-wege.md
       - Komplexe Reports: anwendungsfaelle/komplexe-reports.md
-      - Lokalen Benutzer anlegen: anwendungsfaelle/lokalen-benutzer-anlegen.md
       - Passwörter verwalten: anwendungsfaelle/passwoerter-verwalten.md
       - Standort-basierte Benutzerrechte: anwendungsfaelle/standort-basierte-benutzerrechte.md
       - Standorte: anwendungsfaelle/standorte.md
       - Switch Stacking: anwendungsfaelle/switch-stacking.md
       - VM provisionieren (veraltet): anwendungsfaelle/vm-provisionieren.md
-      - i-doit mit OpenID-Connect Authentifizierung am Beispiel Google Login: anwendungsfaelle/i-doit-mit-openid-connect.md
   - i-doit pro Add-ons:
       - i-doit-pro-add-ons/index.md
       - Active Directory Documentation: i-doit-pro-add-ons/active-directory-documentation.md

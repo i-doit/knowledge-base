@@ -60,7 +60,7 @@ LDAP
 Directories
 -----------
 
-Hier kannst du die Mapping Attribute festlegen die für die [LDAP Schnittstelle](../../automatisierung-und-integration/ldap-verzeichnis/index.md) verwendet werden.
+Hier kannst du die Mapping Attribute festlegen die für die [LDAP Schnittstelle](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) verwendet werden.
 
 [![LDAP - Directories](../../assets/images/de/administration/verwaltung/schnittstellen/8-s-s.png)](../../assets/images/de/administration/verwaltung/schnittstellen/8-s-s.png)
 

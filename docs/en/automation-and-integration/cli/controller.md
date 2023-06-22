@@ -69,7 +69,7 @@ The controller is capable of performing various actions. These in turn are repre
 
 | Handler | pro version | open version | Add-on | Description |
 | --- | --- | --- | --- | --- |
-| **[addldapdn](../ldap-active-directory-ad/index.md)** | yes | yes | –   | Synchronize the distinguished name (DN) of users from a LDAP/AD (see **LDAP** category) |
+| **[addldapdn](../../user-authentication-and-management/ldap-directory/index.md)** | yes | yes | –   | Synchronize the distinguished name (DN) of users from a LDAP/AD (see **LDAP** category) |
 | **[archivelog](../../basics/logbook.md)** | yes | yes | –   | Archive logbook entries |
 | **[check_mk](../../i-doit-pro-add-ons/checkmk.md)** | yes | yes | –   | Write the actual status from network monitoring into logbook |
 | **[cleanup_auth](../../efficient-documentation/rights-management/index.md)** | yes | yes | –   | Clean up the authorization system |
@@ -81,7 +81,7 @@ The controller is capable of performing various actions. These in turn are repre
 | **isc_dhcpd** | yes | yes | –   | Export configuration for ISC DHCPD |
 | **[jdisc](../../consolidate-data/jdisc-discovery.md)** | yes | yes | –   | Import files from JDisc |
 | **[jdisc_discovery](../../consolidate-data/jdisc-discovery.md)** | yes | yes | –   | Activate a discovery job at JDisc |
-| **[ldap](../ldap-active-directory-ad/index.md)** | yes | yes | –   | Import data from a LDAP directory or Active Directory (AD) |
+| **[ldap](../../user-authentication-and-management/ldap-directory/index.md)** | yes | yes | –   | Import data from a LDAP directory or Active Directory (AD) |
 | **[maintenance](../../i-doit-pro-add-ons/maintenance.md)** | –   | –   | **[Maintenance](../../i-doit-pro-add-ons/maintenance.md)** | Send e-mails with planned maintenance works |
 | **[nagios](../network-monitoring/nagios.md)**** | yes | yes | –   | Write the actual status from network monitoring into logbook |
 | **[nagios_export](../network-monitoring/nagios.md)** | yes | yes | –   | Export Nagios configuration |

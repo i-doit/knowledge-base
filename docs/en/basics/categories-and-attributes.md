@@ -70,7 +70,7 @@ Global Categories
 | **Cable** | \-  | Information about a **Cable**, for example, length and color |
 | **Contact assignment** | \-  | Assigns **Persons**, **Person groups**, **Organizations** etc. to an object; each allocation can be provided with a **Role**, for example, **Administrator**; backwards category: **Persons/Person groups/Organization → Assigned objects** |
 | **Drive** | \-  | Documentation of configured mount points or drive letters; supplements category folder **Direct Attached Storage**; see also categories **Share access** and **Storage Area Network → Logical devices(client)** |
-| **LDAP** | **Distinguished Name (DN)** | If a person or a person group is synchronized via  [LDAP/AD](../automation-and-integration/ldap-active-directory-ad/index.md), the related DN is stored here. |
+| **LDAP** | **Distinguished Name (DN)** | If a person or a person group is synchronized via  [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md), the related DN is stored here. |
 | **Last login user** | \-  | The user who was logged in last; can be imported by [JDisc Discovery](../consolidate-data/jdisc-discovery.md) |
 | **Listener** | \-  | If an installed application (see category **Software assignment**) opens a port (1-65535) via the IP protocol (see category **Host address**), that is via protocols such as TCP and UDP, you can document it here; is contained in the category folder **Network connections**; backwards category: **Connection** |
 | **Livestatus** | \-  | [Network Monitoring](../automation-and-integration/network-monitoring/index.md): shows current information about a host and its services which are available via the Livestatus interface; is contained in the category folder **Monitoring** and is configured there |

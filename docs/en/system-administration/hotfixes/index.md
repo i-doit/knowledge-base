@@ -1,7 +1,6 @@
 # Hotfixes
 
-About
------
+## About
 
 Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP file is unpacked in the i-doit installation directory. Confirm the question whether you want to overwrite files during unpacking (**Y** key for "yes" or **A** key for "all"). Here you can find an example:
 
@@ -25,7 +24,7 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 !!! info "Current version"
 
-    The requirements shown below apply to the current version of i-doit, in this case **24** These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case **25** These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 !!! attention "Declaration of consent"
 
@@ -33,9 +32,13 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit Core
 
-### SQL query is wrongly created when using Assigned workstation -> Parent object
+### Variable report on overview page causes 500 error
 
-[I-doit_24_hotfix_ID-9315.zip :material-file-download:](../../assets/downloads/hotfixes/24/i-doit_24_hotfix_ID-9315.zip){ .md-button .md-button--primary }
+[i-doit_25_hotfix_ID-9476.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9476.zip){ .md-button .md-button--primary }
+
+### Date field from custom categories not displayed in mapping of csv import
+
+[i-doit_25_hotfix_ID-9604.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9604.zip){ .md-button .md-button--primary }
 
 ## Analyze Add-on 1.3
 
