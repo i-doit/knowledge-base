@@ -19,12 +19,12 @@ Die [PHP-Extension php_ldap](http://de.php.net/manual/de/ldap.setup.php) für di
 Nicht vergessen, LDAP zu erlauben, wenn SELinux verwendet wird. Dazu `setsebool -P httpd_can_connect_ldap on` verwenden. Das -P steht für Permanent<br>
 Überprüfen Sie dies mit `getsebool -a | grep httpd`
 
-### Nachträgliche Installation unter [Debian GNU/Linux](../../installation/manuelle-installation/debian.md)
+## Nachträgliche Installation unter [Debian GNU/Linux](../../installation/manuelle-installation/debian.md)
 
     sudo apt install php7-ldap
     sudo service apache2 restart
 
-### Nachträgliche Installation unter [Windows](../../installation/manuelle-installation/microsoft-windows-server/index.md)
+## Nachträgliche Installation unter [Windows](../../installation/manuelle-installation/microsoft-windows-server/index.md)
 
 Die Datei php.ini (in der Regel unter `C:\xampp\php\php.ini`) muss angepasst werden. In einem Texteditor aktiviert man das Laden der Extension php_ldap.
 
@@ -41,8 +41,7 @@ wird das ";" entfernt und somit
 ```
 Manchmal kann es noch notwendig sein, die Dateien `ssleay32.dll` und `libeay32.dll` (von Version zu Version unterschiedlich, jedoch meist unter `C:\xampp\apache\bin\` zu finden) in das Verzeichnis php\ zu kopieren. Danach muss noch der Apache Webserver neu gestartet werden.
 
-Konfiguration
--------------
+## Konfiguration
 
 Die Konfiguration befindet sich in i-doit unter **Verwaltung → Schnittstellen / externe Daten → LDAP**. Dort können unter **Server** zum Einen ein oder mehrere Instanzen konfiguriert und zum Anderen eine Zuweisung von Feldern zu Attributen vorgenommen werden.
 
@@ -65,7 +64,7 @@ Unter **Verwaltung → Schnittstellen / externe Daten → LDAP → Server** kön
 | **Admin Benutzername (DN)*** | Pflichtfeld: Der Pfad bis zum Benutzerobjekt, das Leserechte auf das Directory hat.<br><br>(Beispiel: CN=idoit,OU=tree,DC=synetics,DC=int) |
 | **Passwort*** | Pflichtfeld: Das Passwort des darüber angegebenen Benutzers |
 | **Benutze Admin-Nutzer für alle lesenden Anfragen** | Wenn die Option "Benutze Admin-Nutzer für alle lesenden Anfragen" aktiviert ist, wird bei jeder LDAP-Server Abfrage mit dem Administrator Account aus der LDAP-Server Konfiguration geprüft |
-| **Timelimit** | Limit für die maximale Dauer der Abfrage. (Standard: 30) |
+| **Time limit** | Limit für die maximale Dauer der Abfrage. (Standard: 30) |
 
 _Bekannte Lösungen für Probleme bei der TLS Verbindung findet Ihr [HIER](../../administration/troubleshooting/ldap-via-tls.md)_
 
@@ -128,7 +127,7 @@ Die dafür benötigte Konfiguration wurde in den vorherigen Schritten bereits vo
 
 ### Erweiterte Konfiguration
 
-Die Konfiguration muss in der [Handler-Konfiguration](../cli/index.md) vorgenommen werden. Ein Beispiel dazu ist [Hier](../cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden i-doit < 1.15. Diese Datei kann mit Login-Daten, Tenant und Attributen erweitert und angepasst werden. Die Konfigurationsdatei wird dann nach i-doit/src/handler/config/ verschoben. Damit diese Datei z.B. beim ldap-sync Command berücksichtig wird, muss diese beim sync über einen weiteren Parameter (-c /pfad/) mit angegeben werden (weitere Informationen zur [Console](../cli/console/optionen-und-parameter-der-console.md)).
+Die Konfiguration muss in der [Handler-Konfiguration](../cli/index.md) vorgenommen werden. Ein Beispiel dazu ist [Hier](../cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden i-doit < 1.15. Diese Datei kann mit Login-Daten, Tenant und Attributen erweitert und angepasst werden. Die Konfigurationsdatei wird dann nach i-doit/src/handler/config/ verschoben. Damit diese Datei z.B. beim ldap-sync Command berücksichtigt wird, muss diese beim sync über einen weiteren Parameter (-c /pfad/) mit angegeben werden (weitere Informationen zur [Console](../cli/console/optionen-und-parameter-der-console.md)).
 
 !!! warning Zugriff auf .ini Dateien
     Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
@@ -167,7 +166,7 @@ Die automatische Zuweisung sorgt dafür, dass nach dem Login automatisch die fü
 ### Personen und Personengruppen Synchronisieren
 
 Seit Version 1.15 können Personen und Personengruppen aus dem LDAP/AD synchronisiert werden. Dabei werden die Personen Mitglied der Ihnen im LDAP zugewiesenen Gruppe. Solange die Gruppe auch mit dem eingestelltem Filter gefunden wird.<br>
-[HIER](../ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md) gehts es zum Artikel.
+[HIER](../ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md) geht es zum Artikel.
 
 Voraussetzung ist, dass der Benutzer mit dem der Befehl ausgeführt wird auch die Supervisor Rechte auf die Kategorien ("Gruppenmitgliedschaft" und "Personengruppen > Mitglieder") sowie Supervisor Rechte auf die Objekttypen ("Personen" und "Personengruppen") besitzt.
 
@@ -177,8 +176,8 @@ Voraussetzung ist, dass der Benutzer mit dem der Befehl ausgeführt wird auch di
 
 Unterhalb von log/ im Installationsverzeichnis von i-doit befindet sich ein Logfile mit dem Namen ldap_debug.txt. Das Logging lässt sich unter **Verwaltung →** **Systemeinstellungen → L****ogging → LDAP Debug** (de-)aktivieren.
 
-Den ldap-sync ausführen
------------------------
+## Den ldap-sync ausführen
+
 
 Der ldap-sync lässt sich nur über die Console des Servers ausführen. Um die Console richtig bedienen zu können, sollte der [Artikel](../cli/console/index.md) dazu bekannt sein. Eine einfache Synchronisation ohne die erweiterte Konfiguration dient die Option **ldap-sync**. Eine Beschreibung der Parameter ist im entsprechenden [Kapitel](../cli/console/optionen-und-parameter-der-console.md) zu finden.
 

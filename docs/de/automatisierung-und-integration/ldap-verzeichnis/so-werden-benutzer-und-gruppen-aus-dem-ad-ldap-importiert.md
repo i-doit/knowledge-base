@@ -10,12 +10,11 @@ Ziel ist es alle Benutzer und Gruppen aus dem AD/LDAP mit i-doit zu synchronisie
 Ich setzte Grundkenntnisse im Bezug auf AD/LDAP voraus.<br>
 In diesen Beispielen wird für Personen die `objectClass = user` verwendet.<br>
 Für Gruppen wird die `objectClass = group` verwendet.<br>
-Wenn man nicht alle Benutzer oder Gruppen der Domnäne synchronisieren will muss unter `Nach Benutzern suchen in (OU)\*` der DN/CN einer OU bzw. eines Containers eingetragen werden.
+Wenn man nicht alle Benutzer oder Gruppen der Domäne synchronisieren will muss unter `Nach Benutzern suchen in (OU)\*` der DN/CN einer OU bzw. eines Containers eingetragen werden.
 
 [![ldap_personen-suchen](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/1-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/1-ldap-bg.png)
 
-Konfiguration der Filter
-------------------------
+## Konfiguration der Filter
 
 * * *
 
@@ -106,8 +105,7 @@ Wenn sich die Benutzer beispielsweise dadurch unterscheiden, dass sie zwei `obje
 
 * * *
 
-Welche weiteren Attribute über die ldap.ini importiert werden können
---------------------------------------------------------------------
+## Welche weiteren Attribute über die ldap.ini importiert werden können
 
 *   Der Beitrag [ldap.ini Konfiguration](../cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md#beispiel-für-den-command-ldap-sync) sollte bekannt sein.
 *   Es kann eine .ini Datei für den Import erstellt werden, mit dieser können weitere Attribute importiert werden.
