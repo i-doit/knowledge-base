@@ -6,7 +6,7 @@ For each [object type](../../basics/structure-of-the-it-documentation.md#object-
 
 With a click on the column headers you can sort the columns in ascending or descending order. You can also set a [preliminary sorting](./configuration-of-the-list-view.md#presort-columns) or vary the width of the columns per user.
 
-[![sorting](../../assets/images/en/basics/object-list/2-ol.gif)](../../assets/images/en/basics/object-list/1-ol.png)
+[![sorting](../../assets/images/en/basics/object-list/1-ol.png)](../../assets/images/en/basics/object-list/1-ol.png)
 
 With the hatched area in each line you can assign an object to another object type. Via drag and drop you can drag the object to the desired object type in the menu tree on the left, called **object view**.
 

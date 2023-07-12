@@ -9,7 +9,7 @@ The administration is accessed via the gear wheel icon in the top right corner. 
 [![Where Can I Find the Administration](../../assets/images/en/system-administration/administration/1-admin.png)](../../assets/images/en/system-administration/administration/1-admin.png)
 
 ## The Administration is divided into the following sub-sections:
-
+TODO has to be renewed with actual menu tree
 - [Authorization System](./authorization-system.md)
 - [CMDB Settings](./cmdb-settings.md)
 - [Interfaces/ External Data](./interfaces.md)

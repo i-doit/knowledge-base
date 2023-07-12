@@ -358,12 +358,17 @@ nav:
       - Administration:
           - system-administration/administration/index.md
           - User settings: system-administration/administration/user-settings.md
-          - CMDB settings: system-administration/administration/cmdb-settings.md
-          - License administration: system-administration/administration/license-administration.md
-          - Authorization system: system-administration/administration/authorization-system.md
-          - Interfaces / external Data: system-administration/administration/interfaces.md
-          - System settings: system-administration/administration/system-settings.md
-          - System tools: system-administration/administration/system-tools.md
+          - Tenant management:
+              - system-administration/administration/tenant-management/index.md
+              - Settings for Tenant: system-administration/administration/tenant-management/settings-for-tenant.md
+              - Repair and clean up: system-administration/administration/tenant-management/repair-and-clean-up.md
+              - Expert settings: system-administration/administration/tenant-management/expert-settings.md
+          - Data structure: system-administration/administration/data-structure.md
+          - Data view: system-administration/administration/data-view.md
+          - Predefined content: system-administration/administration/predefined-content.md
+          - User permissions: system-administration/administration/user-permissions.md
+          - Logbook: system-administration/administration/logbook.md
+          - Import and interfaces: system-administration/administration/import-and-interfaces.md
       - Admin Center: system-administration/admin-center.md
       - Localization: system-administration/localization.md
       - Multi-Tenants: system-administration/multi-tenant.md

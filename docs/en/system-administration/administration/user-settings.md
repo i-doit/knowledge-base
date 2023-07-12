@@ -1,10 +1,10 @@
 # User Settings
 
+[![User Settings overview](../../assets/images/en/system-administration/administration/user-settings/1-us.png)](../../assets/images/en/system-administration/administration/user-settings/1-us.png)
+
 ## Login Credentials
 
 Logged-in users can change their credentials under Login Credentials.
-
-[![Login Credentials](../../assets/images/en/system-administration/administration/user-settings/1-us.png)](../../assets/images/en/system-administration/administration/user-settings/1-us.png)
 
 ## Data format
 
@@ -16,8 +16,6 @@ The user has the possibility to adapt the data format.
 | Numeric format | English/German or custom language |
 | Monetary format | `EUR;€` or `USD;$` or `GBP;£` or `CHF;Sfr.` |
 
-[![Category lists](../../assets/images/en/system-administration/administration/user-settings/2-us.png)](../../assets/images/en/system-administration/administration/user-settings/2-us.png)
-
 ## User language
 
 Under User language the logged-in user can define the desired language.
@@ -25,9 +23,7 @@ Under User language the logged-in user can define the desired language.
 | Option | Value |
 | - | - |
 | Choose language by browser | Yes or No |
-| Language | English/German or custom language |
-
-[![Presentation](../../assets/images/en/system-administration/administration/user-settings/3-us.png)](../../assets/images/en/system-administration/administration/user-settings/3-us.png)
+| Language | English<br>German<br>custom language |
 
 ## User interface
 
@@ -55,7 +51,7 @@ Under User language the logged-in user can define the desired language.
 
 | Option | Value |
 | - | - |
-| Default treeview | [Object view](../../basics/web-gui.md#object-view) or [Location view](../../basics/web-gui.md#location-view) |
+| Default treeview | [Object view](../../basics/web-gui.md#object-view)<br>[Location view](../../basics/web-gui.md#location-view) |
 | Treeview type | [Physical location or Logical location or Combined view](../../basics/web-gui.md#location-view) |
 | Hide empty object types | Yes or No |
 | Hide empty categories | Yes or No |
@@ -79,21 +75,19 @@ Under User language the logged-in user can define the desired language.
 
 The user has the possibility to adapt the viewing options for all category lists.
 
-[![Category Lists](../../assets/images/en/system-administration/administration/user-settings/5-us.png)](../../assets/images/en/system-administration/administration/user-settings/5-us.png)
+[![Category Lists](../../assets/images/en/system-administration/administration/user-settings/2-us.png)](../../assets/images/en/system-administration/administration/user-settings/2-us.png)
 
 #### Object Lists
 
 The user has the possibility to adapt the viewing options for all object lists under [Object List](../../basics/object-list/index.md).
 
-[![Object Lists](../../assets/images/en/system-administration/administration/user-settings/5-us.png)](../../assets/images/en/system-administration/administration/user-settings/5-us.png)
+[![Object Lists](../../assets/images/en/system-administration/administration/user-settings/3-us.png)](../../assets/images/en/system-administration/administration/user-settings/3-us.png)
 
 
 ## Editing lock
 
 The lock function for objects causes a lock for write accesses for the time of editing an object by any user.
 At this time, the object can not be edited by another session (login of another person). The lock remains until the edit procedure is completed or the timeout is reached.
-
-[![Editing lock](../../assets/images/en/system-administration/administration/user-settings/6-us.png)](../../assets/images/en/system-administration/administration/user-settings/6-us.png)
 
 TODO will be moved --->
 ## System Settings
