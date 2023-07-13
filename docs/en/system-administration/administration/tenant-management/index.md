@@ -86,7 +86,6 @@ In the license overview you will find informations about your license, documente
 | - | - |
 | mod_rewrite | Used for |
 
-
 ## Rights & Directories
 
 | Option | Value |
