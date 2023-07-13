@@ -59,9 +59,16 @@ plugins:
       minify_html: true
   - mkdocs-video
 markdown_extensions:
+  - abbr
   - admonition
   - attr_list
+  - md_in_html
   - meta
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
   - toc:
       permalink: "#"
   - pymdownx.emoji:
@@ -75,6 +82,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
+      auto_append:
+          - overrides/assets/glossary-en.md
   - pymdownx.details
 
 extra:
