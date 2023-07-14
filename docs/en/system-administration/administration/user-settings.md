@@ -12,8 +12,8 @@ The user has the possibility to adapt the data format.
 
 | Option | Value |
 | - | - |
-| Date format | English/German or custom language |
-| Numeric format | English/German or custom language |
+| Date format | English/German |
+| Numeric format | English/German |
 | Monetary format | `EUR;€` or `USD;$` or `GBP;£` or `CHF;Sfr.` |
 
 ## User language
@@ -23,7 +23,7 @@ Under User language the logged-in user can define the desired language.
 | Option | Value |
 | - | - |
 | Choose language by browser | Yes or No |
-| Language | English<br>German<br>custom language |
+| Language | English<br>German<br>Custom language |
 
 ## User interface
 
