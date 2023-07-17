@@ -12,7 +12,7 @@ The install package of the pro version is accessible for all customers in the [c
 
 ### Debian GNU/Linux or Ubuntu Linux
 
-The Apache Webserver runs with rights of the **www-data** user and the group of the same name **www-data**. The main directory of the Apache Webserver is **/var/www/html/**:
+The Apache Webserver runs with rights of the ==www-data== user and the group of the same name ==www-data==. The main directory of the Apache Webserver is ==/var/www/html/==:
 
 ```shell
 sudo mkdir /var/www/html/i-doit
@@ -28,7 +28,7 @@ sudo chmod 774 controller *.sh setup/*.sh
 
 ### Red Hat Enterprise Linux (RHEL)
 
-The Apache Webserver runs with rights of the **apache** user and the group of the same name **apache**. The main directory of the Apache Webserver is **/var/www/html/**:
+The Apache Webserver runs with rights of the ==apache== user and the group of the same name ==apache==. The main directory of the Apache Webserver is ==/var/www/html/==:
 
 ```shell
 sudo mkdir /var/www/html/i-doit
@@ -44,9 +44,9 @@ sudo chmod 774 controller *.sh setup/*.sh
 
 ### Suse Linux Enterprise Server (SLES)
 
-The Apache Webserver runs with rights of the **wwwrun** user and the group **www**. The main directory of the Apache Webserver is **/srv/www/htdocs/**:
+The Apache Webserver runs with rights of the ==wwwrun== user and the group ==www==. The main directory of the Apache Webserver is ==/srv/www/htdocs/==:
 
-Der Apache Webserver läuft mit den Rechten des Users **wwwrun** und der Gruppe **www**. Das Hauptverzeichnis vom Apache Webserver lautet **/srv/www/htdocs/**:
+Der Apache Webserver läuft mit den Rechten des Users ==wwwrun== und der Gruppe ==www==. Das Hauptverzeichnis vom Apache Webserver lautet ==/srv/www/htdocs/==:
 
 ```shell
 sudo mkdir /srv/www/htdocs/i-doit
@@ -62,7 +62,7 @@ sudo chmod 774 controller *.sh setup/*.sh
 
 ### Microsoft Windows Server
 
-The i-doit installation package is extracted in **C:\xampp\htdocs**. Generally it is not necessary to set specific file and folder permissions if the Apache Webserver that has been installed along with XAMPP uses the same user permissions.
+The i-doit installation package is extracted in `C:\xampp\htdocs`. Generally it is not necessary to set specific file and folder permissions if the Apache Webserver that has been installed along with XAMPP uses the same user permissions.
 
 ## Run the Setup
 
@@ -89,27 +89,27 @@ Important credentials and settings need to be entered for the database connectio
 
 [![Database configuration](../../assets/images/en/installation/manual-installation/setup/3-setup.png)](../../assets/images/en/installation/manual-installation/setup/3-setup.png)
 
-- **Connection settings**
-    - **Host:** Generally the host itself, so localhost or 127.0.0.1
-    - **Port:** Generally the default port of MySQL/MariaDB, so 3306
-    - **Username:** User name of the database system user, usually root
-    - **Password:** Password of the user
-- **MySQL user settings**
-    - **Username:** User name of the i-doit databases owner, usually idoit
-    - **Password:** Password of the user
-- **Database settings**
-    - **System Database Name:** Name of the system database, usually idoit_system
-    - **Mandator Database Name:** Name of the database for the first tenant, usually idoit_data
-    - **Mandator title:** Title of the tenant, usually the name of the organization that is focused on
-    - **Start value for object/configuration item IDs:** Normally 1
+- ==Connection settings==
+    - ==Host:== Generally the host itself, so localhost or 127.0.0.1
+    - ==Port:== Generally the default port of MySQL/MariaDB, so 3306
+    - ==Username:== User name of the database system user, usually root
+    - ==Password:== Password of the user
+- ==MySQL user settings==
+    - ==Username:== User name of the i-doit databases owner, usually idoit
+    - ==Password:== Password of the user
+- ==Database settings==
+    - ==System Database Name:== Name of the system database, usually idoit_system
+    - ==Mandator Database Name:== Name of the database for the first tenant, usually idoit_data
+    - ==Mandator title:== Title of the tenant, usually the name of the organization that is focused on
+    - ==Start value for object/configuration item IDs:== Normally 1
 
 !!! tip "Unix Socket vs. Network Port"
 
-    PHP is able to connect to MariaDB/MySQL in two ways: For one thing, per Unix Socket, and secondly via TCP/IP. For performance reasons we recommend using the Unix Socket. The use of the Unix Socket is enforced by entering the **localhost** value in the above mentioned host configuration. Other specifications (**127.0.0.1**, FQDN or the like) result in the use of TCP/IP.
+    PHP is able to connect to MariaDB/MySQL in two ways: For one thing, per Unix Socket, and secondly via TCP/IP. For performance reasons we recommend using the Unix Socket. The use of the Unix Socket is enforced by entering the ==localhost== value in the above mentioned host configuration. Other specifications (==127.0.0.1==, FQDN or the like) result in the use of TCP/IP.
 
-    Usually, MariaDB/MySQL opens a Unix Socket when a service is started. In the **socket** settings you specify the path, an example under [Debian GNU/Linux](/pages/viewpage.action?pageId=36864037) is **/var/run/mysqld/mysqld.sock**.  This value has to be known to PHP so that i-doit can establish a connection to MariaDB/MySQL.
+    Usually, MariaDB/MySQL opens a Unix Socket when a service is started. In the ==socket== settings you specify the path, an example under [Debian GNU/Linux](/pages/viewpage.action?pageId=36864037) is `/var/run/mysqld/mysqld.sock`.  This value has to be known to PHP so that i-doit can establish a connection to MariaDB/MySQL.
 
-    The corresponding PHP setting is **mysqli.default_socket**. When you have followed the installation instructions, you can supplement the created PHP configuration file by this setting, for example, **mysqli.default_socket = /var/run/mysqld/mysqld.sock**.
+    The corresponding PHP setting is `mysqli.default_socket`. When you have followed the installation instructions, you can supplement the created PHP configuration file by this setting, for example, `mysqli.default_socket = /var/run/mysqld/mysqld.sock`.
 
     Subsequent changes to the PHP settings will only become effective when the Apache Webserver service is restarted. Example for Debian GNU/Linux: `sudo systemctl reload apache2.service`
 
@@ -117,7 +117,7 @@ Important credentials and settings need to be entered for the database connectio
 
 #### Framework Configuration
 
-There are separate credentials in i-doit to access the i-doit [**Admin Center**](../../system-administration/admin-center.md). They can be specified here and we recommend using this option.
+There are separate credentials in i-doit to access the i-doit [==Admin Center==](../../system-administration/admin-center.md). They can be specified here and we recommend using this option.
 
 [![Framework configuration](../../assets/images/en/installation/manual-installation/setup/4-setup.png)](../../assets/images/en/installation/manual-installation/setup/4-setup.png)
 

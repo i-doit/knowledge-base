@@ -1,7 +1,7 @@
 # i-doit via XAMPP
 
 !!! note ""
-    This article was last checked for i-doit version **1.16.3**
+    This article was last checked for i-doit version ==1.16.3==
 
 !!! attention "Firewall"
 
@@ -12,21 +12,21 @@ Step 1: Installation of XAMPP
 
 First of all, download the XAMPP package at [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html). Here we use the installer (xampp-win32-XXX-installer.exe). Other packages are fine too. The compressed package (.zip), for example, can simply be extracted to C:\\. It is important to note that the installation path for XAMPP has to be "C:\\xampp" as "C:\\Program Files (x86)" has not enough permission rights, which most likely will result in a faulty installation. Bitnami is not needed and can be unchecked in the installation process.
 
-Here the [System Requirements](../../system-requirements.md) of the respective i-doit version must be considered. Therefore, in this example the installation package → xampp-windows-x64-7.4.20-0-VC15-installer.exe
+Here the [System Requirements](../../system-requirements.md) of the respective i-doit version must be considered. Therefore, in this example the installation package → `xampp-windows-x64-7.4.20-0-VC15-installer.exe`
 
-At least the components **Apache**, **MySQL** and **PHP** must be installed.
+At least the components ==Apache==, ==MySQL== and ==PHP== must be installed.
 
-[[![Select components](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)
+[![Select components](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)
 
-The default folder is left as → **C:\xampp**
+The default folder is left as → ==C:\xampp==
 
 [![Select install folder](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/2-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/2-mws.png)
 
-Then we select the language, I leave it at **English**.
+Then we select the language, I leave it at ==English==.
 
 [![Select language](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/3-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/3-mws.png)
 
-The next few **Next** \> buttons should be self-explanatory.
+The next few ==Next== \> buttons should be self-explanatory.
 
 [![Completing](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/4-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/4-mws.png)
 
@@ -174,13 +174,13 @@ Step 5: Checking the installation
 ---------------------------------
 
 With the previous configuration we have prepared the web server. Now, when we call the IP of the system or localhost in a browser, we should get the welcome page of Apache displayed.
-Under **PHPInfo** in the menu you can check if the values set in php.ini were taken over correctly.
+Under ==PHPInfo== in the menu you can check if the values set in php.ini were taken over correctly.
 
 Next Step
 
 Now the operating system is prepared and i-doit can be installed.
 
-Proceed to [**Setup** …](../setup.md)
+Proceed to [==Setup== …](../setup.md)
 
 ### FAQ
 
