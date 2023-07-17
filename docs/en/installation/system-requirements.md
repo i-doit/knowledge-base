@@ -4,7 +4,7 @@ In order to guarantee the operation of all functionalities of i-doit, some requi
 
 !!! info "Current version"
 
-    The requirements shown below apply to the current version of i-doit, in this case **25**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case ==25==. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 ## Minimum Requirements
 
@@ -28,14 +28,14 @@ We recommend the use of a dedicated virtual machine. The actual demand for hardw
 
 We recommend an operating system based on GNU/Linux in the 64bit architecture (amd64).
 
-### LAMP Stack
+### LAMP / WAMP Stack
 
-- Apache Web server **2.4**
-- MariaDB 10.2, 10.3, 10.4, 10.5, **10.6** (recommended) or MySQL 5.7 or 8.0.
-- PHP >= 7.4, **8.0** (recommended) _At the moment, PHP version 8.1 is not supported. We plan the support of PHP 8.1 in a later release._
+- Apache Web server ==2.4==
+- MariaDB 10.2, 10.3, 10.4, 10.5, ==10.6== (recommended) or MySQL 5.7 or 8.0.
+- PHP >= 7.4, ==8.0== (recommended) _At the moment, PHP version 8.1 is not supported. We plan the support of PHP 8.1 in a later release._
 - PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
-We recommend the usage of **Apache Webserver 2.4, PHP 8.0 and MariaDB 10.6**.
+We recommend the usage of ==Apache Webserver 2.4, PHP 8.0 and MariaDB 10.6==.
 
 !!! success Reference configuration
 

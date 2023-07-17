@@ -30,7 +30,7 @@ The following will be installed:
 
 !!! info "If the Windows Firewall is activated, you will be asked if want to trust the application"
 
-If the installation was successful, a small window with the message =="i-doit has been installed successfully."== will display. <br>
+If the installation was successful, a small window with the message "==i-doit has been installed successfully.==" will display.<br>
 After clicking ==OK== a new browser tab with the `localhost` URL will be opened automatically and you can use i-doit to the full extent.
 
 !!! info "If an error occurred during the installation, a log file is automatically created in the i-doit folder"

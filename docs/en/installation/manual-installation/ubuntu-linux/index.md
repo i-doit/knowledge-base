@@ -24,17 +24,17 @@ uname -m
 
 When you want to use the default package repositories, use the following instructions for installation of:
 
-*   the ==Apache== web server 2.4
-*   the script language ==PHP== 7.4
-*   the database management system ==MariaDB== 10.5 and
-*   the caching server ==memcached==
+- the ==Apache== web server 2.4
+- the script language ==PHP== 7.4
+- the database management system ==MariaDB== 10.5 and
+- the caching server ==memcached==
 
-However, ==18.04 LTS "Bionic Beaver"== only has outdated packages that do not meet the [System Requirements](../../system-requirements.md).
-It is therefore necessary to install up-to-date packages via additional repositories. ==Caution==: Third-party repositories can endanger the stability of the operating system.
+However, ==18.04 LTS "Bionic Beaver"== only has outdated packages that do not meet the [System Requirements](../../system-requirements.md).<br>
+It is therefore necessary to install up-to-date packages via additional repositories.
 
 For PHP 7.4 we use the Personal Package Archive from ondrej:
 
-!!! note "Notice"
+!!! note ""
 
     Additional [third-party sources](https://help.ubuntu.com/community/Repositories/Ubuntu) can endanger the system.
 

@@ -21,15 +21,15 @@ Before upgrading, you have to consider the following:
 
 You also should pay attention to the following issues before an upgrade:
 
-- Do you have [backups](../../maintenance-and-operation/backup-and-recovery/index.md)?
+- Do you have [==backups==](../../maintenance-and-operation/backup-and-recovery/index.md)?
 - You shoud inform i-doit users before downtime.
 - Automatisms, cronjobs and external access should be stopped during the upgrade.
 
-You can read many additional [hints regarding the upgrade of the operating system](https://www.debian.org/releases/stretch/amd64/release-notes/index.en.html) provided by the Debian Community.
+You can read many additional [==hints regarding the upgrade of the operating system==](https://www.debian.org/releases/stretch/amd64/release-notes/index.en.html) provided by the Debian Community.
 
 ## Preparing the Upgrade
 
-We connect via SSH and activate item ==0 Launch Shell== in the menu.
+We connect via ==SSH== and activate item ==0 Launch Shell== in the menu.
 
 Then we carry out updates:
 
@@ -52,8 +52,7 @@ After the restart, we connect again via SSH and activate the shell in the menu t
 cat /etc/debian_release
 ```
 
-If this is not the case, the upgrade will fail.
-
+If this is not the case, the upgrade will fail.<br>
 As a precautionary measure you should stop the webserver so that i-doit is not activated in the meantime:
 
 ```shell
@@ -76,8 +75,7 @@ The following line is supplemented at the end:
 deb http://mirrors.kernel.org/debian stretch main contrib
 ```
 
-All previous lines are commented out; a ==#== is used as a prefix for each line.
-
+All previous lines are commented out; a ==#== is used as a prefix for each line.<br>
 Then all package sources are updated and a package upgrade is carried out:
 
 ```shell
@@ -107,8 +105,7 @@ Thus the upgrade to version 9 is completed.
 
 ## Follow-up
 
-After the restart we connect to the system again vai SSH and activate the shell in the menu.
-
+After the restart we connect to the system again vai SSH and activate the shell in the menu.<br>
 Now we clear up the distribution packages:
 
 ```shell
@@ -127,8 +124,7 @@ sudo a2enmod php7.0
 sudo systemctl restart apache2.service
 ```
 
-Changes to the configuration files are not necessary.
-
+Changes to the configuration files are not necessary.<br>
 Also the DBMS MariaDB has to be adapted:
 
 ```shell

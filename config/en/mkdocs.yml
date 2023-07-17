@@ -83,7 +83,6 @@ markdown_extensions:
   - pymdownx.snippets:
       check_paths: true
       auto_append:
-        - overrides/assets/glossary-en.md
   - pymdownx.details
 
 extra:

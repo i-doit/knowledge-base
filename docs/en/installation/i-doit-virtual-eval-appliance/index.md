@@ -43,7 +43,7 @@ Additionally, there are some [pre-defined persons and person groups](../../basic
 
 ## Configuration
 
-The configuration of the appliance can be carried out via the console. After logging in via SSH a menu appears:
+The configuration of the appliance can be carried out via the console. After logging in via ==SSH== a menu appears:
 
 [![SSH menu](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)
 
@@ -93,10 +93,8 @@ The following overview shows you the purpose of the directories:
 
 ## Follow-up
 
-The appliance provides a "naked" installation of i-doit pro. This means that neither demo files nor additional [add-ons](../../i-doit-pro-add-ons/index.md) are included.
-
-When logging in the first time, i-doit requests a valid [license](../../maintenance-and-operation/activate-license.md) which needs to be activated in order to have all features available.
-
+The appliance provides a "naked" installation of i-doit pro. This means that neither demo files nor additional [add-ons](../../i-doit-pro-add-ons/index.md) are included.<br>
+When logging in the first time, i-doit requests a valid [license](../../maintenance-and-operation/activate-license.md) which needs to be activated in order to have all features available.<br>
 Further information for first steps with i-doit are also described in the knowledge base under [Basics](../../basics/index.md).
 
 ## Troubleshooting

@@ -46,8 +46,6 @@ sudo chmod 774 controller *.sh setup/*.sh
 
 The Apache Webserver runs with rights of the ==wwwrun== user and the group ==www==. The main directory of the Apache Webserver is ==/srv/www/htdocs/==:
 
-Der Apache Webserver läuft mit den Rechten des Users ==wwwrun== und der Gruppe ==www==. Das Hauptverzeichnis vom Apache Webserver lautet ==/srv/www/htdocs/==:
-
 ```shell
 sudo mkdir /srv/www/htdocs/i-doit
 sudo cp i-doit.zip /srv/www/htdocs/i-doit/
@@ -66,7 +64,7 @@ The i-doit installation package is extracted in `C:\xampp\htdocs`. Generally it 
 
 ## Run the Setup
 
-_i-doit_ can be installed in two ways: Using the web GUI in a comfortable way (recommended for beginners) or via the console (to automate the installation for example).
+_i-doit_ can be installed in two ways: Using the ==web GUI== in a comfortable way (recommended for beginners) or via the [Automatic installation]() (to automate the installation for example).
 
 ### Web GUI
 
@@ -89,19 +87,19 @@ Important credentials and settings need to be entered for the database connectio
 
 [![Database configuration](../../assets/images/en/installation/manual-installation/setup/3-setup.png)](../../assets/images/en/installation/manual-installation/setup/3-setup.png)
 
-- ==Connection settings==
-    - ==Host:== Generally the host itself, so localhost or 127.0.0.1
-    - ==Port:== Generally the default port of MySQL/MariaDB, so 3306
-    - ==Username:== User name of the database system user, usually root
-    - ==Password:== Password of the user
-- ==MySQL user settings==
-    - ==Username:== User name of the i-doit databases owner, usually idoit
-    - ==Password:== Password of the user
-- ==Database settings==
-    - ==System Database Name:== Name of the system database, usually idoit_system
-    - ==Mandator Database Name:== Name of the database for the first tenant, usually idoit_data
-    - ==Mandator title:== Title of the tenant, usually the name of the organization that is focused on
-    - ==Start value for object/configuration item IDs:== Normally 1
+- Connection settings
+    - **Host:** Generally the host itself, so localhost or 127.0.0.1
+    - **Port:** Generally the default port of MySQL/MariaDB, so 3306
+    - **Username:** User name of the database system user, usually root
+    - **Password:** Password of the user
+- MySQL user settings
+    - **Username:** User name of the i-doit databases owner, usually idoit
+    - **Password:** Password of the user
+- Database settings
+    - **System Database Name:** Name of the system database, usually idoit_system
+    - **Mandator Database Name:** Name of the database for the first tenant, usually idoit_data
+    - **Mandator title:** Title of the tenant, usually the name of the organization that is focused on
+    - **Start value for object/configuration item IDs:** Normally 1
 
 !!! tip "Unix Socket vs. Network Port"
 
@@ -131,7 +129,8 @@ The installtion of i-doit on the system is carried out in this step. To shorten 
 
 ### Console
 
-!!! example "In Arbeit"
+!!! example "TODO"
+    // TODO
 
 ## Further steps
 

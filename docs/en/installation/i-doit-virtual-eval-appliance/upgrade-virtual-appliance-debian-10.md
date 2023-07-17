@@ -74,12 +74,7 @@ The sources for the distribution packages are now adjusted:
 sudo nano /etc/apt/sources.list
 ```
 
-The following line is added at the end:sudo cp /etc/php/7.0/mods-available/i-doit.ini /etc/php/7.3/mods-available
-sudo phpenmod -v 7.3 i-doit
-sudo apt install php7.3-bcmath php7.3-cli php7.3-common php7.3-curl php7.3-gd php7.3-imagick php7.3-json php7.3-ldap php7.3-memcached php7.3-mysql php7.3-pgsql php7.3-xml php7.3-zip
-sudo a2dismod php7.0
-sudo a2enmod php7.3
-sudo systemctl restart apache2.service
+The following line is added at the end:
 
 ```shell
 deb http://deb.debian.org/debian/ buster main

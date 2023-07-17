@@ -4,12 +4,12 @@ This article describes the automatic [IT documentation](../glossary.md) of i-doi
 
 ## Scope
 
-:white_check_mark: Installation of software packages <br>
-:white_check_mark: Configuration of software packages<br>
-:white_check_mark: Installation of i-doit<br>
-:white_check_mark: Set-up of Cronjobs<br>
-:white_check_mark: Set-up of backups<br>
-:white_check_mark: Set-up of Restore
+:material-check: Installation of software packages <br>
+:material-check: Configuration of software packages<br>
+:material-check: Installation of i-doit<br>
+:material-check: Set-up of Cronjobs<br>
+:material-check: Set-up of backups<br>
+:material-check: Set-up of Restore
 
 ## Requirements
 

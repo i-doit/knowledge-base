@@ -2,8 +2,7 @@
 
 In this article we explain in just a few steps which packages need to be installed and configured.
 
-System Requirements
--------------------
+## System Requirements
 
 The general [system requirements](../../system-requirements.md) apply.
 
@@ -21,8 +20,7 @@ uname -m
 
 ==x86_64== means 64bit, ==i386== or ==i686== only 32bit.
 
-Installation of the Packages
-----------------------------
+## Installation of the Packages
 
 When you want to use the official package repositories, use the following instructions for installation of:
 
@@ -43,10 +41,10 @@ php-imagick php-memcached \
 memcached unzip moreutils
 ```
 
-Configuration
--------------
+## Configuration
 
-The installed packages for Apache web server, PHP and MariaDB already supply configuration files. It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
+The installed packages for Apache web server, PHP and MariaDB already supply configuration files.<br>
+It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
 
 ### PHP
 
@@ -84,11 +82,9 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
-The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](../system-settings.md) of i-doit.
-
-The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
-
-Afterwards, the required PHP modules are activated and the Apache web server is restarted:
+The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](../system-settings.md) of i-doit.<br>
+The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).<br>
+Afterwards, the required PHP modules are activated and the Apache web server is restarted:<br>
 
 ```shell
 sudo phpenmod i-doit
@@ -124,8 +120,7 @@ The new VHost configuration is saved in this file:
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.
-
+i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.<br>
 With the next step you activate the new VHost and the necessary Apache module ==rewrite== and the Apache web server is restarted:
 
 ```shell
@@ -139,7 +134,8 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The ==root== user should receive a secure password:
+Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly.<br>
+The ==root== user should receive a secure password:
 
 ```shell
 mysql_secure_installation
@@ -231,8 +227,7 @@ Finally, MariaDB is started:
 sudo systemctl start mysql.service
 ```
 
-Next Step
----------
+## Next Step
 
 Now the operating system is prepared and i-doit can be installed.
 
