@@ -18,7 +18,7 @@ für [Nagios](https://www.nagios.org/), [Check\_MK](https://mathias-kettner.de/c
 
 ## Grundkonfiguration
 
-Voraussetzung ist ein laufendes NDOUtils oder MK Livestatus auf dem Monitoring-System. In i-doit muss unter **Verwaltung → Schnittstellen → Monitoring → Livestatus/NDO** der Zugriff auf eine der Schnittstellen konfiguriert werden.
+Voraussetzung ist ein laufendes NDOUtils oder MK Livestatus auf dem Monitoring-System. In i-doit muss unter **Verwaltung → Import and Interfaces → Monitoring → Livestatus/NDO** der Zugriff auf eine der Schnittstellen konfiguriert werden.
 
 [![datenabfragenmls-access](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)
 

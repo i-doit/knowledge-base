@@ -83,7 +83,7 @@ Aktualisiert Dokumente
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -t | --documentId=DOCUMENTID | Mehrere Dokument-IDs (mehrere Werte zulässig) |
 | -u | --user=USERNAME | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -207,7 +207,7 @@ Passwort für das Admin-Center zurücksetzen
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -380,7 +380,7 @@ Dokumente erstellen und exportieren
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --create_revision | Erzeugt eine oder mehrere Revisionen für bestimmte Dokumente |
 |     | --export | Exportiert ein oder mehrere Dokumente in eine Datei |
@@ -838,7 +838,7 @@ Setzt einen Lizenzschlüssel für i-doit
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -958,7 +958,7 @@ Migriert hochgeladene Dateien in i-doit <v1.13 zu v.1.14>
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
 | -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
@@ -1031,7 +1031,7 @@ Listet alle [Benachrichtigungen](../../../auswertungen/benachrichtigungen.md) au
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1166,7 +1166,7 @@ Mit diesem Befehl können Sie html-Tags im Beschreibungsfeld aller Kategorien un
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1241,7 +1241,7 @@ Bereinigt optional Kategorieeinträge, die sich im Status unfertig, archiviert o
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --categoryStatus=CATEGORYSTATUS | Use to start cleaning up the specified status:<br>**1** für "unfertige" Kategorieeinträge<br>**3** für "archivierte" Kategorieeinträge<br>**4** für "gelöschte" Kategorieeinträge | |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -1289,7 +1289,7 @@ Konvertiert alle nicht INNODB Tabellen nach INNODB.
 
 | Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
-|     | --convert | Startet den Vorgan, alle nicht UTF-8-tables zu konvertieren |
+|     | --convert | Startet den Vorgang, alle nicht UTF-8-tables zu konvertieren |
 |     | --table=[TABLE] | Tabelle die überprüft und konvertiert werden soll |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1440,7 +1440,7 @@ Aktualisiert alle verfügbaren Listenkonfigurationen (Objekttypen und Kategorien
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -a  | --all | Verarbeitet alle Objekttyp-Tabellenkonfigurationen |
 | -o | --object-types=OBJECT-TYPES | Nur bestimmte Objekttyp-Tabellenkonfigurationen über ihre Konstante verarbeiten (es ist möglich, eine durch Komma getrennte Liste von Konstanten zu übergeben) |
