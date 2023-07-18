@@ -6,7 +6,7 @@ In this article we explain in just a few steps which packages need to be install
 
 The general [system requirements](../../system-requirements.md) apply.
 
-When you want to use [Ubuntu Linux](https://www.ubuntu.com/) as operating system, the server version **18.04 LTS "bionic"** is recommended. In order to find out which version is used you can carry out the following command:
+When you want to use [Ubuntu Linux](https://www.ubuntu.com/) as operating system, the server version ==18.04 LTS "bionic"== is recommended. In order to find out which version is used you can carry out the following command:
 
 ```shell
 cat /etc/os-release
@@ -18,23 +18,23 @@ As system architecture you should use a x86 in 64bit:
 uname -m
 ```
 
-**x86_64** means 64bit, **i386** or **i686** only 32bit.
+==x86_64== means 64bit, ==i386== or ==i686== only 32bit.
 
 ## Installation of the Packages
 
 When you want to use the default package repositories, use the following instructions for installation of:
 
-*   the **Apache** web server 2.4
-*   the script language **PHP** 7.4
-*   the database management system **MariaDB** 10.5 and
-*   the caching server **memcached**
+- the ==Apache== web server 2.4
+- the script language ==PHP== 7.4
+- the database management system ==MariaDB== 10.5 and
+- the caching server ==memcached==
 
-However, **18.04 LTS "Bionic Beaver"** only has outdated packages that do not meet the [System Requirements](../../system-requirements.md).
-It is therefore necessary to install up-to-date packages via additional repositories. **Caution**: Third-party repositories can endanger the stability of the operating system.
+However, ==18.04 LTS "Bionic Beaver"== only has outdated packages that do not meet the [System Requirements](../../system-requirements.md).<br>
+It is therefore necessary to install up-to-date packages via additional repositories.
 
 For PHP 7.4 we use the Personal Package Archive from ondrej:
 
-!!! note "Notice"
+!!! note ""
 
     Additional [third-party sources](https://help.ubuntu.com/community/Repositories/Ubuntu) can endanger the system.
 
@@ -116,9 +116,9 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
-The value (in seconds) of **session.gc_maxlifetime** should be the same or greater than the **Session Timeout** in the [system settings](../../../system-administration/administration/index.md) of i-doit.
+The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](../../../system-administration/administration/index.md) of i-doit.
 
-The **date.timezone** parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
+The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
 
 Afterwards, the required PHP modules are activated and the Apache web server is restarted:
 
@@ -156,9 +156,9 @@ The new VHost configuration is saved in this file:
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.
+i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.
 
-With the next step you activate the new VHost and the necessary Apache module **rewrite** and the Apache web server is restarted:
+With the next step you activate the new VHost and the necessary Apache module ==rewrite== and the Apache web server is restarted:
 
 ```shell
 sudo chown www-data:www-data -R /var/www/html/
@@ -171,13 +171,13 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The **root** user should receive a secure password:
+Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The ==root== user should receive a secure password:
 
 ```shell
 mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
+Activate the MariaDB shell so that i-doit is enabled to apply the ==root== user during setup:
 
 ```shell
 sudo mysql -uroot
@@ -269,4 +269,4 @@ sudo systemctl start mysql.service
 
 Now the operating system is prepared and i-doit can be installed.
 
-Proceed with [**Setup** …](../setup.md)
+Proceed with [==Setup== …](../setup.md)
