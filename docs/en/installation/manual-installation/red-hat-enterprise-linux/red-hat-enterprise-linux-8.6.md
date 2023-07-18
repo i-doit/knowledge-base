@@ -32,7 +32,10 @@ On a system that is up-to-date
 - the database management system ==MariaDB== 10.5
 - the caching server ==memcached==
 
-installed. However, the current ==version 8.x of RHEL== only contains obsolete packages that do not meet the system requirements. It is therefore necessary to install current packages from other repositories. Caution: Third-party repositories can endanger the stability of the operating system.
+However, the current ==version 8.x of RHEL== only contains obsolete packages that do not meet the system requirements.<br>
+It is therefore necessary to install current packages from other repositories.
+
+But be ==careful== as third-repositories could endanger the stability of the operating system!
 
 At first the first packages are installed from the default repositories:
 
@@ -119,8 +122,8 @@ The installed packages for Apache Webserver, PHP and MariaDB already come with c
 First a new file is created and filled with the necessary settings:
 
 ```shell
-
 sudo nano /etc/php.d/i-doit.ini
+```
 
 This file receives the following content:
 

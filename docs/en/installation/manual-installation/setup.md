@@ -125,12 +125,7 @@ In this step all prior steps are reviewed and checked to see if the setup can ta
 
 #### Installation
 
-The installtion of i-doit on the system is carried out in this step. To shorten the waiting time, a small game is offered. If you spend a lot of time with it, something in the background went wrong or your system is too slow. After the installation was competed successfully, a summary is displayed. Then i-doit can be launched and used.
-
-### Console
-
-!!! example "TODO"
-    // TODO
+The installtion of i-doit on the system is carried out in this step. After the installation was competed successfully, a summary is displayed. Then i-doit can be launched and used.
 
 ## Further steps
 
