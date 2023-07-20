@@ -372,10 +372,10 @@ nav:
               - Settings for Tenant: system-administration/administration/tenant-management/settings-for-tenant.md
               - Repair and clean up: system-administration/administration/tenant-management/repair-and-clean-up.md
               - Expert settings: system-administration/administration/tenant-management/expert-settings.md
-          - Data structure: system-administration/administration/data-structure.md
-          - Data view: system-administration/administration/data-view.md
-          - Predefined content: system-administration/administration/predefined-content.md
-          - User permissions: system-administration/administration/user-permissions.md
+          - Data structure: system-administration/administration/data-structure/data-structure.md
+          - Data view: system-administration/administration/date-view/data-view.md
+          - Predefined content: system-administration/administration/predefined-content/predefined-content.md
+          - User permissions: system-administration/administration/user-permissions/user-permissions.md
           - Logbook: system-administration/administration/logbook.md
           - Import and interfaces: system-administration/administration/import-and-interfaces.md
       - Admin Center: system-administration/admin-center.md
