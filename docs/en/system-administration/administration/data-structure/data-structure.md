@@ -6,14 +6,14 @@ Here you can find configurations to alter the data structure of your tenant.
 
 The configuration of assignments is carried out via a separation into three columns. These columns represent your ==Object type Groups==, ==Object types in== and ==Categories in==. In each column there is a ==dotted area== per line allowing you to change the order per drag and drop.
 
-[![Layout](../../assets/images/en/system-administration/administration/data-structure/1-ds.png)](../../assets/images/en/system-administration/administration/data-structure/1-ds.png)
+[![Layout](../../../assets/images/en/system-administration/administration/data-structure/1-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/1-ds.png)
 
 ### Adjusting Object Type Groups, Object Types and Categories
 
 In all three main fields you can change into the editing mode by pressing the ==Adjust button==.
 Here you can ==edit the assignments== of the respective object group, but you can also create and develop new groups, object types or categories.
 
-[![Ajusting](../../assets/images/en/system-administration/administration/data-structure/2-ds.png)](../../assets/images/en/system-administration/administration/data-structure/2-ds.png)
+[![Ajusting](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)
 
 ### Editing the Assignments
 
@@ -24,12 +24,13 @@ When a group has been selected and the middle column is active, you can determin
 
 You can ==add custom groups== at the bottom of the object group column. They have a pencil icon in their line so that you can edit or delete them at any time.
 
-The same applies to the object type column. Here you can create [custom object types](../../basics/custom-object-types.md). For an extensive configuration of an object type however, we recommend the use of the [object type configuration](../../basics/custom-object-types.md).
+The same applies to the object type column. Here you can create [custom object types](../../../basics/custom-object-types.md. For an extensive configuration of an object type however, we recommend the use of the [object type configuration](../../../basics/custom-object-types.md).
 
 When clicking on an object type in the middle column, the right column is activated. Here you can see the categories assigned to the selected object type and you can change or remove the assignments via the checkboxes.
 
-The ==Create custom categories== button will forward you directly to the function for creating [custom categories](../../basics/custom-categories.md).
+The ==Create custom categories== button will forward you directly to the function for creating [custom categories](../../../basics/custom-categories.md).
 
+TODO --->
 ### Profiles in the Quick Configuration Wizard
 
 You can save your current configuration in the form of a profile. For this purpose, enter a name for the profile at ==Save current profile==. The profile will then appear in the available profiles in the right column. Here it is possible to activate the profile, delete it or to download it. Activate the checkbox of the desired profile and click ==Load== to restore the assignment from the selected profile. By using the floppy disk icon you can save the profile as an XML file and upload it again by using the button ==Browse==, if required. With the red X icon you can delete the selected profile.
