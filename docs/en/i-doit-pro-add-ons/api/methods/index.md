@@ -30,37 +30,58 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
 
 ### Example:
 
-#### Request body
+=== "Request body"
 
-```json
-{
+    ```json
+    {
+        "version": "2.0",
+        "method": "idoit.search",
+        "params": {
+            "q": "My little server",
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
+    }
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "result": [
+            {
+                "documentId": "1000",
+                "key": "Virtual Host > Global > Title",
+                "value": "My little server",
+                "type": "cmdb",
+                "link": "/?objID=1000&catgID=1&cateID=1029&highlight=My%20little%20server",
+                "score": 0
+            },
+            […]
+        ],
+        "id": 1
+    }
+    ```
+
+=== "or update Request body"
+
+    ```json
+    {
     "version": "2.0",
-    "method": "idoit.search",
+    "method": "cmdb.category.save",
     "params": {
-        "q": "My little server",
+        "object": 456,
+        "data": {
+        "manufacturer": "Name of manufacturer",
+        "title": "Name of model"
+        },
+        "category": "C__CATG__MODEL",
+        "entry": 24,
         "apikey": "xxx",
         "language": "en"
     },
     "id": 1
-}
-```
-
-#### Response body
-
-```json
-{
-    "jsonrpc": "2.0",
-    "result": [
-        {
-            "documentId": "1000",
-            "key": "Virtual Host > Global > Title",
-            "value": "My little server",
-            "type": "cmdb",
-            "link": "/?objID=1000&catgID=1&cateID=1029&highlight=My%20little%20server",
-            "score": 0
-        },
-        […]
-    ],
-    "id": 1
-}
-```
+    }
+    ```

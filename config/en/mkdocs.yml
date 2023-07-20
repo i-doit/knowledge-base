@@ -60,6 +60,7 @@ plugins:
   - mkdocs-video
 markdown_extensions:
   - admonition
+  - abbr
   - attr_list
   - meta
   - toc:
@@ -102,6 +103,9 @@ extra:
     - name: Deutsch
       link: /de/
       lang: de
+  status:
+      new: Recently added
+      updated: Recently updated
 extra_css:
   - assets/custom.css
 use_directory_urls: false

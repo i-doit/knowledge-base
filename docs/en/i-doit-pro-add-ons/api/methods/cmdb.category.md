@@ -1,4 +1,70 @@
+---
+title: Namespace cmdb.category
+description: Read, create or update one or more category entries for an object.
+icon: material/api
+status: new
+lang: en
+---
+
 # Namespace cmdb.category
+
+## cmdb.category.create
+
+Create a new [category](../../../basics/structure-of-the-it-documentation.md) entry
+
+### Request parameters
+
+| Key | JSON data type | Required |Description |
+| --- | --- | --- | --- |
+| **objID** | Integer | Yes | Object identifier, for example: **42** |
+| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **C__CATG__MODEL** |
+| **data** | Object | Yes | [Attributes](../category-fields-for-data-arrays.md) with their values, for example: <br>```{ "manufacturer": "Name of manufacturer", "title": "Name of model" }```|
+
+### Response parameters
+
+JSON key **result** contains a JSON object.
+
+| Key | JSON data type | Description |
+| --- | --- | --- |
+| **id** | String | Entry identifier (as numeric string) |
+| **message** | String | Some information |
+| **success** | Boolean | Should always be **true** |
+
+### Example
+
+=== "Request body"
+
+    ```json
+    {
+    "version": "2.0",
+    "method": "cmdb.category.create",
+    "params": {
+        "objID": 42,
+        "data": {
+            "manufacturer": "Name of manufacturer",
+            "title": "Name of model"
+        },
+        "category": "C__CATG__MODEL",
+        "apikey": "xxx",
+        "language": "en"
+    },
+    "id": 1
+    }
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "id": "123",
+        "message": "Category entry successfully created. [This method is deprecated and will be removed in a feature release. Use 'cmdb.category.save' instead.]",
+        "success": true
+      }
+    }
+    ```
 
 ## cmdb.category.read
 
@@ -47,36 +113,37 @@ JSON key **result** contains an array of JSON objects. Each object contains [all
 
     ```json
     {
-    "jsonrpc": "2.0",
-    "result": [
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": [
         {
-            "id": "74",
-            "objID": "1000",
-            "manufacturer": {
-                "id": "2",
-                "title": "Lenovo",
-                "const": null,
-                "title_lang": "Lenovo"
-            },
-            "title": {
-                "id": "1",
-                "title": "ThinkServer RD350",
-                "const": null,
-                "title_lang": "ThinkServer RD350"
-            },
-            "productid": "",
-            "service_tag": "",
-            "serial": "123000999888",
-            "firmware": "",
-            "description": ""
+          "id": "74",
+          "objID": "1000",
+          "manufacturer": {
+            "id": "19",
+            "title": "Lenovo",
+            "const": null,
+            "title_lang": "Lenovo"
+          },
+          "title": {
+            "id": "38",
+            "title": "ThinkPad R61",
+            "const": null,
+            "title_lang": "ThinkPad R61"
+          },
+          "productid": "",
+          "service_tag": "WRT231",
+          "serial": "123000999888",
+          "firmware": "",
+          "description": ""
         }
-    ],
-    "id": 1
+      ]
     }
     ```
 
-
 ## cmdb.category.update
+
+!!! warning "This method is deprecated and will be removed in a feature release. Use [cmdb.category.save](#cmdbcategorysave) instead."
 
 ### Request parameters
 
@@ -121,12 +188,12 @@ JSON key **result** contains a JSON object.
 
     ```json
     {
-    "jsonrpc": "2.0",
-    "result": {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
         "success": true,
-        "message": "Category entry successfully saved"
-    },
-    "id": 1
+        "message": "Category entry successfully saved. [This method is deprecated and will be removed in a feature release. Use 'cmdb.category.save' instead.]"
+      }
     }
     ```
 
@@ -134,68 +201,47 @@ JSON key **result** contains a JSON object.
 
 [Archive a category entry for an object, mark it as deleted or purge it from database](../../../basics/life-and-documentation-cycle.md)
 
-Limitations
+**Limitations:**
 
-- This only works with multi-value categories at the moment.
-- You can only archive category entries which have a normal status.
-- You can only mark category entries as deleted which are archived.
-- You can only purge category entries from the database which are marked as deleted.
-
-```json
-{
-  "id": 1,
-  "jsonrpc": "2.0",
-  "result": {
-    "success": true,
-    "message": "Category entry successfully saved",
-    "entry": 24
-  }
-}
-```
-
-
-## cmdb.category.create
-??? example "cmdb.category.create"
-
-Create a new [category](../../../basics/structure-of-the-it-documentation.md) entry
+- This only works with ==multi-value categories== at the moment.
+- You can only ==archive category entries which have a normal status.
+- You can only ==mark== category entries ==as deleted== which are archived.
+- You can only ==purge== category entries from the database which are marked as deleted.
 
 ### Request parameters
 
-| Key | JSON data type | Required |Description |
+| Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
 | **objID** | Integer | Yes | Object identifier, for example: **42** |
-| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **C__CATG__MODEL** |
-| **data** | Object | Yes | [Attributes](../category-fields-for-data-arrays.md) with their values, for example: <br>```{ "manufacturer": "Name of manufacturer", "title": "Name of model" }```|
+| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__IP"** |
+| **cateID** or **id** | Integer | Yes | Entry identifier, for example: **3** |
 
-### Response parameters
+### Response
 
 JSON key **result** contains a JSON object.
 
 | Key | JSON data type | Description |
 | --- | --- | --- |
-| **id** | String | Entry identifier (as numeric string) |
+| **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
-| **success** | Boolean | Should always be **true** |
+
 
 ### Example
 
-=== "Request body"
+==="Delete Request body"
 
     ```json
     {
-    "version": "2.0",
-    "method": "cmdb.category.create",
-    "params": {
+      "version": "2.0",
+      "method": "cmdb.category.delete",
+      "params": {
         "objID": 42,
-        "data": {
-            "manufacturer": "Name of manufacturer",
-            "title": "Name of model"
-        },
-        "category": "C__CATG__MODEL",
+        "category": "C__CATG__IP",
+        "cateID": 3,
         "apikey": "xxx",
         "language": "en"
-    },
-    "id": 1
+      },
+      "id": 1
     }
     ```
 
@@ -203,13 +249,12 @@ JSON key **result** contains a JSON object.
 
     ```json
     {
-    "jsonrpc": "2.0",
-    "result": {
-        "id": "123",
-        "message": "Category entry successfully created.",
-        "success": true
-    },
-    "id": 1
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "success": true,
+        "message": "Category entry '3' successfully deleted"
+      }
     }
     ```
 
@@ -290,5 +335,223 @@ JSON key **result** contains a JSON object.
         "language": "en"
     },
     "id": 1
+    }
+    ```
+
+### cmdb.category.quickpurge
+
+If **Quickpurge** is [enabled](../../../basics/life-and-documentation-cycle.md), purge a category entry of an object directly from the database.
+
+### Request parameters
+
+| Key | JSON data type | Required | Description |
+| --- | --- | --- | --- |
+| **objID** | Integer | Yes | Object identifier, for example: **42** |
+| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__IP"** |
+| **cateID** or **id**  | Integer | Yes | Entry identifier, for example: **3** |
+
+### Response body
+
+JSON key **result** contains a JSON object.
+
+| Key | JSON data type | Description |
+| --- | --- | --- |
+| **success** | Boolean | Should be **true** |
+| **message** | String | Some information |
+
+### Example
+
+=== "Create Request body"
+
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.category.quickpurge",
+        "params": {
+            "objID": 42,
+            "category": "C__CATG__IP",
+            "cateID": 3,
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
+    }
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "success": true,
+        "message": "Category entry '3' successfully purged"
+      }
+    }
+    ```
+
+### cmdb.category.purge
+
+Purge a [category](../../../basics/structure-of-the-it-documentation.md) entry of an object.It works for [multi-value categories](../../../basics/structure-of-the-it-documentation.md#multi-value-category) and [single-value category](../../../basics/structure-of-the-it-documentation.md#single-value-category) .
+
+### Request parameters
+
+| **Key** | **JSON data type** | **Required** | **Description** |
+| --- | --- | --- | --- |
+| **object** | Integer | Yes | Object identifier, for example: **456** |
+| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
+| **entry** | Integer | Yes | Entry identifier, for example: **33** |
+
+### Response body
+
+JSON key **result** contains a JSON object.
+
+| **Key** | **JSON data type** | **Description** |
+| --- | --- | --- |
+| **success** | Boolean | Should be **true** |
+| **message** | String | Some information |
+
+### Example
+
+=== "Request body"
+
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.category.purge",
+        "params": {
+            "object": 456,
+            "category": "C__CATG__ACCESS",
+            "entry": 33,
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
+    }
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "success": true,
+        "message": "Entry 33 has been successfully purged from 2 to 5."
+      }
+    }
+    ```
+
+### cmdb.category.recycle
+
+**Limitations:**
+
+- This only works with [multi-value categories](../../../basics/structure-of-the-it-documentation.md).
+- You can recycle category entries which have archived or deleted status.
+
+### Request parameters
+
+| **Key** | **JSON data type** | **Required** | **Description** |
+| --- | --- | --- | --- |
+| **object** | Integer | Yes | Object identifier, for example: **456** |
+| **category** | String | Yes | [Category constant](../../../basics/categories-and-attributes.md), for example: **"C__CATG__ACCESS"** |
+| **entry** | Integer | Yes | Entry identifier, for example: **32** |
+
+### Response boday
+
+JSON key **result** contains a JSON object.
+
+| **Key** | **JSON data type** | **Description** |
+| --- | --- | --- |
+| **success** | Boolean | Should be **true** |
+| **message** | String | Some information |
+
+### Example
+
+=== "Request body"
+
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.category.recycle",
+        "params": {
+            "object": 456,
+            "category": "C__CATG__ACCESS",
+            "entry": 32,
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
+    }
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "success": true,
+        "message": "Entry 32 has been successfully recycled from 3 to 2."
+      }
+    }
+    ```
+
+### cmdb.category.archive
+
+**Limitations**
+
+- This only works with [multi-value categories](../../../basics/structure-of-the-it-documentation.md) at the moment.
+- You can only archive category entries which have a normal status.
+
+### Request parameters
+
+| **Key** | **JSON data type** | **Required** | **Description** |
+| --- | --- | --- | --- |
+| **object** | Integer | Yes | Object identifier, for example: **456** |
+| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
+| **entry** | Integer | Yes | Entry identifier, for example: **32** |
+
+### Response body
+
+JSON key **result** contains a JSON object.
+
+| **Key** | **JSON data type** | **Description** |
+| --- | --- | --- |
+| **success** | Boolean | Should be **true** |
+| **message** | String | Some information |
+
+### Example
+
+=== "Request body"
+
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.category.archive",
+        "params": {
+            "object": 456,
+            "category": "C__CATG__ACCESS",
+            "entry": 32,
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
+    }
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "success": true,
+        "message": "Entry 32 has been successfully archived from 2 to 3."
+      }
     }
     ```
