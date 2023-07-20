@@ -31,7 +31,7 @@ When clicking on an object type in the middle column, the right column is activa
 The ==Create custom categories== button will forward you directly to the function for creating [custom categories](../../../basics/custom-categories.md).
 
 TODO --->
-### Profiles in the Quick Configuration Wizard
+### Edit data structure Profiles
 
 You can save your current configuration in the form of a profile. For this purpose, enter a name for the profile at ==Save current profile==. The profile will then appear in the available profiles in the right column. Here it is possible to activate the profile, delete it or to download it. Activate the checkbox of the desired profile and click ==Load== to restore the assignment from the selected profile. By using the floppy disk icon you can save the profile as an XML file and upload it again by using the button ==Browse==, if required. With the red X icon you can delete the selected profile.
 
