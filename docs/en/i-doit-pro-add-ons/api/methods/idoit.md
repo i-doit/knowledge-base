@@ -1,7 +1,16 @@
+---
+title: Namespace cmdb.object
+description: cmdb.object
+icon: material/api
+status: new
+lang: en
+---
+
 # Namespace idoit
 
 This namespace is reserved for common methods.
 
+!!! example "Work in Progress
 
 ## idoit.addons
 

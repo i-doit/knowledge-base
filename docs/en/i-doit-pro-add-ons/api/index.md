@@ -41,7 +41,7 @@ Please note that the logging of API requests will create a file in the install p
 Access
 ------
 
-You can access the API of i-doit by activating a special URL. Add  src/jsonrpc.php  to the basic URL:
+You can access the API of i-doit by activating a special URL. Add `src/jsonrpc.php`  to the basic URL:
 
      https://demo.i-doit.com/src/jsonrpc.php
 
@@ -146,35 +146,41 @@ With a simple example we create a new object of the type  **Server**  with the o
 
 Request to server:
 
-    {
-        "jsonrpc": "2.0",
-        "method": "cmdb.object.create",
-        "params": {
-            "type": "C__OBJTYPE__SERVER",
-            "title": "My little server",
-            "apikey": "c1ia5q"
-        },
-        "id": 1
-    }
+```json
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.object.create",
+    "params": {
+        "type": "C__OBJTYPE__SERVER",
+        "title": "My little server",
+        "apikey": "c1ia5q"
+    },
+    "id": 1
+}
+```
 
 Via cURL you can send this request for test purposes:
 
-    curl \
-    --data '{"jsonrpc":"2.0","method":"cmdb.object.create","params":{"type":"C__OBJTYPE__SERVER","title":"My little server","apikey":"c1ia5q"},"id":1}' \
-    --header "Content-Type: application/json" \
-    https://demo.i-doit.com/src/jsonrpc.php
+```json
+curl \
+--data '{"jsonrpc":"2.0","method":"cmdb.object.create","params":{"type":"C__OBJTYPE__SERVER","title":"My little server","apikey":"c1ia5q"},"id":1}' \
+--header "Content-Type: application/json" \
+https://demo.i-doit.com/src/jsonrpc.php
+```
 
 Server response:
 
-    {
-        "jsonrpc": "2.0",
-        "result": {
-            "id": "3351",
-            "message": "Object was successfully created",
-            "success": true
-        },
-        "id": 1
-    }
+```json
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": {
+        "id": "3351",
+        "message": "Object was successfully created",
+        "success": true
+    },
+}
+```
 
 Categories in the IT Documentation
 ----------------------------------
@@ -207,7 +213,7 @@ There are numerous projects and products applying the API by i-doit. We would li
 Documentation for Download
 --------------------------
 
-You can download a [documentation maintained by the developers](../../assets/downloads/i-doit-JSON-RPC-1.8.3.pdf) as PDF file. (out-dated)
+You can download a [{--documentation maintained by the developers~--}](../../assets/downloads/i-doit-JSON-RPC-1.8.3.pdf) as PDF file. (==out-dated==)
 
 Since version 1.8.1 the API is released as an add-on. Pre-releases were [bundled with i-doit](../../version-history/index.md).
 
@@ -226,7 +232,7 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
-| 1.14 | 2023-03-21 |  [Improvement] New method "cmdb.ip_search.getNetworksByIp" returns all Layer3 obejcts a given IP is within the defined range (contributed by becon GmbH) <br>[Bug] Creating objects results in two entries in category 'Accounting' <br>[Bug] Category 'C__CATS__ORGANIZATION_CONTACT_ASSIGNMENT' can not be updated <br> [Bug] Translations for 'LC__CMDB__CATG__VD__HOST_RAID_ARRAY' is missing <br> [Bug] Add 'limit' and 'offset' options to endpoint 'cmdb.reports.read' <br>[Bug] SQL error when updating category 'network > port' <br>[Bug] Can't read type of layer2 net category <br>[Bug] Attribute "GPS" in category "C__CATG__LOCATION" is not writeable |
+| 1.14 | 2023-03-21 | [Improvement] New method "cmdb.ip_search.getNetworksByIp" returns all Layer3 obejcts a given IP is within the defined range (contributed by becon GmbH) <br>[Bug] Creating objects results in two entries in category 'Accounting' <br>[Bug] Category 'C__CATS__ORGANIZATION_CONTACT_ASSIGNMENT' can not be updated <br> [Bug] Translations for 'LC__CMDB__CATG__VD__HOST_RAID_ARRAY' is missing <br> [Bug] Add 'limit' and 'offset' options to endpoint 'cmdb.reports.read' <br>[Bug] SQL error when updating category 'network > port' <br>[Bug] Can't read type of layer2 net category <br>[Bug] Attribute "GPS" in category "C__CATG__LOCATION" is not writeable |
 | 1.13.1 | 2023-01-24 | [Bug] Some fields are not being validated  <br>[Bug] The Login method can use old session keys  <br>[Bug] Validation error f\_popup\_  <br>[Bug] Setting a Dialog Attribute via causes Fatal error  <br>[Bug] Failed validation breaks the response  <br>[Bug] installDate is always set to actual date/time  <br>[Bug] The addresses  attribute of the Network > Port category is incorrectly validated by API validation  <br>[Bug] Date of Change is not altered when archiving a object via API |
 | 1.13 | 2022-09-05 | [Task] PHP 8.0 compatibility  <br>[Bug]  Reports displayed via the API show language constants  <br>[Bug]  The Hostname field of the Monitoring category is incorrectly validated by API validation  <br>[Bug]  Changing the object type via the API via type: dialog constant is not possible  <br>[Bug]  An EntryID is needed to purge single-value entries  <br>[Bug]  The API shall be able to change passwords of users  <br>[Bug]  The Host address field of the Network > Port category is incorrectly validated by API validation  <br>[Bug]  The Latitude, Longitude and Position fields in the Location category cabinet are incorrectly validated by API validation  <br>[Bug]  The Type and Assigned license key fields of the Software Assignment category are incorrectly validated by API validation  <br>[Bug]  The Image attribute of the Object picture category is incorrectly validated by API validation |
 | 1.12.3 | 2022-02-21 | [Bug] Edit host address > primary\_fqdn sets field default gateway for the network to Yes  <br>[Bug] If you edit an entry in the host address category, the IP address is removed. |

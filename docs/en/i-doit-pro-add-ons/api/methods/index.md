@@ -1,5 +1,7 @@
 # Methods
 
+!!! example "Work in Progress
+
 In this article we explain the [i-doit JSON-RPC API](./index.md) in depth. If you want to know what parameters must/can be set for each method and what a typical response looks like, this will be the right resource.
 
 ----

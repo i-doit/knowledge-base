@@ -228,7 +228,7 @@ JSON key **result** contains a JSON object.
 
 ### Example
 
-==="Delete Request body"
+=== "Delete Request body"
 
     ```json
     {

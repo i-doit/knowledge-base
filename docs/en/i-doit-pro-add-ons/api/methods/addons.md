@@ -1,7 +1,16 @@
+---
+title: Namespace i-doit add-ons
+description: Here you find API methods from Add-ons
+icon: material/api
+status: new
+lang: en
+---
+
 # Namespace from idoit pro Add-ons
 
-## analysis.dataquality.read
+!!! example "Work in Progress
 
+## analysis.dataquality.read
 
 ### Request parameters
 

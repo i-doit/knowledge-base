@@ -1,5 +1,14 @@
+---
+title: Namespace cmdb.object
+description: cmdb.object
+icon: material/api
+status: new
+lang: en
+---
+
 # Namespace cmdb.objects
 
+!!! example "Work in Progress
 
 ## cmdb.objects.read
 

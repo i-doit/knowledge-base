@@ -415,7 +415,7 @@ nav:
               - cmdb.workstation_components: i-doit-pro-add-ons/api/methods/cmdb.workstation_components.md
               - console: i-doit-pro-add-ons/api/methods/console.md
               - idoit: i-doit-pro-add-ons/api/methods/idoit.md
-              - addons: i-doit-pro-add-ons/api/methods/addons.md
+              - Add-ons: i-doit-pro-add-ons/api/methods/addons.md
           - Examples for handling the API: i-doit-pro-add-ons/api/examples-for-handling-the-api.md
           - Tips and tricks for working with the API: i-doit-pro-add-ons/api/tips-and-tricks-for-api.md
           - Category fields for data arrays: i-doit-pro-add-ons/api/category-fields-for-data-arrays.md

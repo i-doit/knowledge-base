@@ -1,5 +1,14 @@
+---
+title: Namespace cmdb.dialog
+description: cmdb.dialog
+icon: material/api
+status: new
+lang: en
+---
+
 # Namespace cmdb.dialog
 
+!!! example "Work in Progress
 
 ## cmdb.dialog.read
 
