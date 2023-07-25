@@ -17,4 +17,4 @@ The administration is accessed via the gear wheel icon in the top right corner. 
 - [Predefined content](./system-settings.md)
 - [User persmissions](./user-permissions.md)
 - [Logbook](./logbook.md)
-- [Import and interfaces](./import-and-interfaces.md)
+- [Import and interfaces](./import-and-interfaces/import-and-interfaces.md)

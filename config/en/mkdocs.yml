@@ -366,7 +366,16 @@ nav:
       - system-administration/index.md
       - Administration:
           - system-administration/administration/index.md
-          - User settings: system-administration/administration/user-settings.md
+          - User settings:
+              - system-administration/administration/user-settings/index.md
+              - Change password: system-administration/administration/user-settings/change-password.md
+              - Data format: system-administration/administration/user-settings/data-format.md
+              - User language: system-administration/administration/user-settings/user-language.md
+              - User interface:
+                  - system-administration/administration/user-settings/user-interface/index.md
+                  - Category lists: system-administration/administration/user-settings/user-interface/category-lists.md
+                  - Object lists: system-administration/administration/user-settings/user-interface/object-lists.md
+              - Editing lock: system-administration/administration/user-settings/editing-lock.md
           - Tenant management:
               - system-administration/administration/tenant-management/index.md
               - Settings for Tenant: system-administration/administration/tenant-management/settings-for-tenant.md
@@ -393,7 +402,31 @@ nav:
               - QR Code: system-administration/administration/predefined-content/qr-code.md
           - User permissions: system-administration/administration/user-permissions.md
           - Logbook: system-administration/administration/logbook.md
-          - Import and interfaces: system-administration/administration/import-and-interfaces.md
+          - Import and interfaces:
+              - system-administration/administration/import-and-interfaces/index.md
+              - Import matching profiles: system-administration/administration/import-and-interfaces/import-matching-profiles.md
+              - h-inventory: system-administration/administration/import-and-interfaces/h-inventory.md
+              - SMTP configuration (E-Mail): system-administration/administration/import-and-interfaces/smtp.md
+              - JDIsc:
+                  - system-administration/administration/import-and-interfaces/jdisc/index.md
+                  - JDIsc Configuration: system-administration/administration/import-and-interfaces/jdisc/jdisc-configuration.md
+                  - JDisc profiles: system-administration/administration/import-and-interfaces/jdisc/jdisc-profiles.md
+              - LDAP:
+                  - system-administration/administration/import-and-interfaces/ldap/index.md
+                  - Server: system-administration/administration/import-and-interfaces/ldap/server.md
+                  - Directories: system-administration/administration/import-and-interfaces/ldap/directories.md
+                  - Attribute extension: system-administration/administration/import-and-interfaces/ldap/attribute-extension.md
+              - Trouble Ticket System (TTS): system-administration/administration/import-and-interfaces/tts.md
+              - Monitoring:
+                  - system-administration/administration/import-and-interfaces/monitoring/index.md
+                  - Livestatus / NDO: system-administration/administration/import-and-interfaces/monitoring/livestatus-ndo.md
+                  - Export Configuration: system-administration/administration/import-and-interfaces/monitoring/export-configuration.md
+          - Add-ons:
+              - JSON-RPC API:
+                  - Categories and attributes:
+              - Events:
+              - Replacement:
+                  - Configuration:
       - Admin Center: system-administration/admin-center.md
       - Localization: system-administration/localization.md
       - Multi-Tenants: system-administration/multi-tenant.md
