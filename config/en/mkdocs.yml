@@ -372,12 +372,18 @@ nav:
               - Settings for Tenant: system-administration/administration/tenant-management/settings-for-tenant.md
               - Repair and clean up: system-administration/administration/tenant-management/repair-and-clean-up.md
               - Expert settings: system-administration/administration/tenant-management/expert-settings.md
-          - Data structure: system-administration/administration/data-structure/data-structure.md
+          - Data structure:
+              - system-administration/administration/data-structure/index.md
+              - Edit data structure: system-administration/administration/data-structure/edit-data-structure.md
+              - Objects types: system-administration/administration/data-structure/object-types.md
+              - Custom categories: system-administration/administration/data-structure/custom-categories.md
           - Data view:
+              - system-administration/administration/data-view/index.md
               - Configure object browser: system-administration/administration/data-view/configure-object-browser.md
               - Hide attrubutes: system-administration/administration/data-view/hide-attributes.md
               - Language profiles: system-administration/administration/data-view/language-profiles.md
           - Predefined content:
+              - system-administration/administration/predefined-content/index.md
               - CMDB Status: system-administration/administration/predefined-content/cmdb-status.md
               - Contact assignment roles: system-administration/administration/predefined-content/contact-assignment-roles.md
               - Custom counter: system-administration/administration/predefined-content/custom-counter.md

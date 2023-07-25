@@ -9,11 +9,12 @@ The administration is accessed via the gear wheel icon in the top right corner. 
 [![Where Can I Find the Administration](../../assets/images/en/system-administration/administration/1-admin.png)](../../assets/images/en/system-administration/administration/1-admin.png)
 
 ## The Administration is divided into the following sub-sections:
-TODO has to be renewed with actual menu tree
-- [Authorization System](./authorization-system.md)
-- [CMDB Settings](./cmdb-settings.md)
-- [Interfaces/ External Data](./interfaces.md)
-- [License Administration](./license-administration.md)
-- [System Settings - Administration](./system-settings.md)
-- [System Tools](./system-tools.md)
-- [User Settings](./user-settings.md)
+
+- [User settings](./user-settings.md)
+- [Tenant settings](./tenant-management/index.md)
+- [Data structure](./data-structure/index.md)
+- [Data view](./data-view/index.md)
+- [Predefined content](./system-settings.md)
+- [User persmissions](./user-permissions.md)
+- [Logbook](./logbook.md)
+- [Import and interfaces](./import-and-interfaces.md)
