@@ -422,11 +422,14 @@ nav:
                   - Livestatus / NDO: system-administration/administration/import-and-interfaces/monitoring/livestatus-ndo.md
                   - Export Configuration: system-administration/administration/import-and-interfaces/monitoring/export-configuration.md
           - Add-ons:
+              - system-administration/administration/add-ons/index.md
               - JSON-RPC API:
-                  - Categories and attributes:
-              - Events:
+                  - system-administration/administration/add-ons/json-rpc-api/index.md
+                  - Categories and attributes: system-administration/administration/add-ons/json-rpc-api/categories-and-attributes.md
+              - Events: system-administration/administration/add-ons/events.md
               - Replacement:
-                  - Configuration:
+                  - system-administration/administration/add-ons/replacement/index.md
+                  - Configuration: system-administration/administration/add-ons/replacement/configuration/index.md
       - Admin Center: system-administration/admin-center.md
       - Localization: system-administration/localization.md
       - Multi-Tenants: system-administration/multi-tenant.md
