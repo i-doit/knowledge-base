@@ -1,6 +1,6 @@
 # User Settings
 
-[![User Settings overview](../../assets/images/en/system-administration/administration/user-settings/1-us.png)](../../assets/images/en/system-administration/administration/user-settings/1-us.png)
+[![User Settings overview](../../../assets/images/en/system-administration/administration/user-settings/1-us.png)](../../../assets/images/en/system-administration/administration/user-settings/1-us.png)
 
 ## Login Credentials
 
@@ -53,8 +53,8 @@ Here you find interface related configurations. Also from Add-ons.
 
 | Option | Value |
 | - | - |
-| Default treeview | [Object view](../../basics/web-gui.md#object-view)<br>[Location view](../../basics/web-gui.md#location-view) |
-| Treeview type | [Physical location or Logical location or Combined view](../../basics/web-gui.md#location-view) |
+| Default treeview | [Object view](../../../basics/web-gui.md#object-view)<br>[Location view](../../../basics/web-gui.md#location-view) |
+| Treeview type | [Physical location or Logical location or Combined view](../../../basics/web-gui.md#location-view) |
 | Hide empty object types | Yes or No |
 | Hide empty categories | Yes or No |
 
@@ -69,9 +69,9 @@ Here you find interface related configurations. Also from Add-ons.
 
 | Option | Value |
 | - | - |
-| Line spacing | [Small or Medium or Large](../../basics/web-gui.md#category-line-spacing) |
-| Spacing in menu trees | [Small or Medium or Large](../../basics/web-gui.md#spacing-in-menu-trees)  |
-| Display spacers | [Yes or No](../../basics/web-gui.md#display-spacers) |
+| Line spacing | [Small or Medium or Large](../../../basics/web-gui.md#category-line-spacing) |
+| Spacing in menu trees | [Small or Medium or Large](../../../basics/web-gui.md#spacing-in-menu-trees)  |
+| Display spacers | [Yes or No](../../../basics/web-gui.md#display-spacers) |
 
 ### Workflows (from Add-on)
 
@@ -83,14 +83,13 @@ Here you find interface related configurations. Also from Add-ons.
 
 The user has the possibility to adapt the viewing options for all category lists.
 
-[![Category Lists](../../assets/images/en/system-administration/administration/user-settings/2-us.png)](../../assets/images/en/system-administration/administration/user-settings/2-us.png)
+[![Category Lists](../../../assets/images/en/system-administration/administration/user-settings/2-us.png)](../../../assets/images/en/system-administration/administration/user-settings/2-us.png)
 
 #### Object Lists
 
-The user has the possibility to adapt the viewing options for all object lists under [Object List](../../basics/object-list/index.md).
+The user has the possibility to adapt the viewing options for all object lists under [Object List](../../../basics/object-list/index.md).
 
-[![Object Lists](../../assets/images/en/system-administration/administration/user-settings/3-us.png)](../../assets/images/en/system-administration/administration/user-settings/3-us.png)
-
+[![Object Lists](../../../assets/images/en/system-administration/administration/user-settings/3-us.png)](../../../assets/images/en/system-administration/administration/user-settings/3-us.png)
 
 ## Editing lock
 
