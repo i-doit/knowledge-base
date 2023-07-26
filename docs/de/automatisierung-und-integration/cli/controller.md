@@ -6,8 +6,7 @@ i-doit verfügt über ein Kommandozeilen-Werkzeug namens Controller.
 
     Der Controller ist seit Version 1.10 als veraltet markiert und wird in einer der nächsten Versionen entfernt werden. Als Alternative gilt die [Console](../cli/console/index.md).
 
-Erste Schritte
---------------
+## Erste Schritte
 
 Der Controller befindet sich im Hauptverzeichnis von i-doit. Wenn Du laut [Installationsanleitung](../../installation/manuelle-installation/setup.md) vorgegangen bist, befindet sich das Hauptverzeichnis bei [Debian](../../installation/manuelle-installation/debian.md)\-basierten Betriebssystemen unter **/var/www/html/i-doit/**:
 
@@ -39,8 +38,7 @@ Da [Windows](../../installation/manuelle-installation/microsoft-windows-server/i
 
     php.exe controller.php
 
-Mandant und Credentials
------------------------
+## Mandant und Credentials
 
 Um den Controller verwenden zu können, ist eine Authentifizierung gegenüber i-doit notwendig. Hierfür benötigt man Benutzername (**-u**), Passwort (**-p**) und die eindeutige ID des zu verwendenen Mandanten (**-i**).
 
@@ -61,8 +59,7 @@ Um herauszufinden, welche eindeutige ID ein bestimmter Mandant hat, kann man fol
 
 Bei i-doit-Installationen mit nur einem Mandanten lautet die ID in der Regel **1**.
 
-Handler
--------
+## Handler
 
 Der Controller ist in der Lage, verschiedene Aktionen auszuführen. Diese werden wiederum durch Handler repräsentiert. Um einen bestimmten Handler aufzurufen, wird der Parameter **-m** benötigt.
 

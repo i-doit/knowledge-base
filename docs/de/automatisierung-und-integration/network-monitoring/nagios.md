@@ -4,18 +4,17 @@ Nagios ist eine Software für [Network Monitoring](index.md), das aus den Daten 
 
 !!! info "Kompatibilität"
 
-    Der exportierten Daten sind mit der Version 3 von Nagios und Version 1 von Icinga kompatibel. Version 4 von Nagios ist nicht vollständig kompatibel. Weitere Derivate von Nagios werden nicht unterstützt.
+    Die exportierten Daten sind mit der Version 3 von Nagios und Version 1 von Icinga kompatibel. Version 4 von Nagios ist nicht vollständig kompatibel. Weitere Derivate von Nagios werden nicht unterstützt.
 
 ## Grundkonfiguration
 
-
-Unter **Verwaltung → Schnittstellen / externe Daten → Monitoring → Exportkonfiguration** wird die Konfiguration hinterlegt. Der **Lokale Pfad** definiert einen absoluten oder relativen Pfad zur i-doit Installation im Dateisystem, in dem die von i-doit erzeugte Konfiguration abgelegt werden soll. Der **Link zum Monitoring Tool** gibt einen Basislink an, um aus i-doit heraus Links auf die Monitoring-Instanz zu generieren.
+Unter **Verwaltung → Import und Schnittstellen → Monitoring → Exportkonfiguration** wird die Konfiguration hinterlegt. Der **Lokale Pfad** definiert einen absoluten oder relativen Pfad zur i-doit Installation im Dateisystem, in dem die von i-doit erzeugte Konfiguration abgelegt werden soll. Der **Link zum Monitoring Tool** gibt einen Basislink an, um aus i-doit heraus Links auf die Monitoring-Instanz zu generieren.
 
 [![nagios-verwalten](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/1-nag.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/1-nag.png)
 
 ## Basiskonfigurationen
 
-Unter **Extras → Nagios** werden die Basiskonfigurationen angelegt.
+Unter **Add-ons → Nagios** werden die Basiskonfigurationen angelegt.
 
 [![nagios-extras](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/2-nag.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/2-nag.png)
 
@@ -39,12 +38,12 @@ in einem Softwareobjekt in der Kategorie **Nagios (Anwendungen)** wird ein Servi
 
 Ist diese Anwendung nun über die Kategorie **Softwarezuweisung** auf einem Host installiert, wird der Servicecheck auf den Host automatisch vererbt.
 
-Weitere Nagios-Konfigurationen innerhalb von Objekten finden sich in Objekten vom Typ **Personen **sowie in **Personengruppen **und **Objektgruppen**.
+Weitere Nagios-Konfigurationen innerhalb von Objekten finden sich in Objekten vom Typ **Personen sowie in Personengruppen und Objektgruppen**.
 
 
 ## Export der Nagios Konfiguration
 
-Unter **Verwaltung → Schnittstellen / externe Daten → Monitoring → Nagios Export** können die Nagios-Konfigurationen manuell exportiert werden. Dazu wird eine Exportkonfiguration ausgewählt und optional eine Validierung der Parameter angewählt.
+Unter **Verwaltung → Import und Schnittstellen → Monitoring → Exportkonfiguration** können die Nagios-Konfigurationen manuell exportiert werden. Dazu wird eine Exportkonfiguration ausgewählt und optional eine Validierung der Parameter angewählt.
 
 [![nagios-export](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/4-nag.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/4-nag.png)
 
@@ -52,7 +51,7 @@ Die Validierung überprüft grundlegende Abhängigkeiten, ob beispielsweise eine
 
 Die Konfigurationsdateien werden gemäß dem konfigurierten Pfad auf dem Dateisystem abgelegt und entsprechen den in den Kategorien konfigurierten Werten.
 
-Selbstverständlich lässt sich der Export der Dateien auch über die i-doit [Console](../cli/console/index.md) automatisieren. Eine Beschreibung der einzelnen Parameter sowie ein Beispiel sind im [entsprechenden Artikel](../cli/console/optionen-und-parameter-der-console.md#nagios-export) für die Option **nagios-export** zu finden.
+Selbstverständlich lässt sich der Export der Dateien auch über die i-doit [Console](../cli/console/index.md) automatisieren. Eine Beschreibung der einzelnen Parameter sowie ein Beispiel sind im [entsprechenden Artikel](../cli/console/optionen-und-parameter-der-console.md#nagios-export) für die Option **Exportkonfiguration** zu finden.
 
 ## Changelog
 

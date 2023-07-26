@@ -16,7 +16,7 @@ Die konkrete Installation und Benutzung von Extensions (RT) und Modulen (OTRS) s
 
 ## Konfiguration
 
-Die Konfiguration zur Anbindung von den oben genannten Applikationen geschieht unter **Verwaltung → Schnittstellen / externe Daten → TroubleTicket-System (TTS) → Konfiguration**.
+Die Konfiguration zur Anbindung von den oben genannten Applikationen geschieht unter **Verwaltung → Import und Schnittstellen → TroubleTicket-System (TTS)**.
 
 [![servicedesk-konfigurieren](../../assets/images/de/automatisierung-und-integration/service-desk/1-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/1-sd.png)
 
@@ -40,7 +40,7 @@ Die Kategorie listet alle verknüpften Tickets auf und zeigt zu jedem Ticket wei
 
 Über die Kategorie Alle Ticket kann auch ein neues Ticket erstellt werden. Dazu dient der obere Bereich. Klickt man auf den Button Ticket erstellen, öffnet sich das Web-Formular der Service-Desk-Applikation und verknüpft bereits das Objekt, zu dem das Ticket erstellt werden soll.
 
-Kommt die Applikation [Request Tracker (RT)](../service-desk/request-tracker.md) zum Einsatz, muss zusätzlich die Queue ausgewählt werden, dem das Ticket zugeordnet wird. Die Konfiguration der voreingestellten Queues geschieht unter **Verwaltung → Systemeinstellungen → System Parameters → Request Tracker queues**. Hier werden die Queues kommasepariert angegeben.
+Kommt die Applikation [Request Tracker (RT)](../service-desk/request-tracker.md) zum Einsatz, muss zusätzlich die Queue ausgewählt werden, dem das Ticket zugeordnet wird. Die Konfiguration der voreingestellten Queues geschieht unter **Verwaltung → Import und Schnittstellen → TroubleTicket-System (TTS) → Request Tracker queues**. Hier werden die Queues kommasepariert angegeben.
 
 ## Logbuch-Einträge zu Tickets
 
