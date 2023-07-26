@@ -27,6 +27,8 @@ Under User language the logged-in user can define the desired language.
 
 ## User interface
 
+Here you find interface related configurations. Also from Add-ons.
+
 ### Categories
 
 | Option | Value |
@@ -71,6 +73,12 @@ Under User language the logged-in user can define the desired language.
 | Spacing in menu trees | [Small or Medium or Large](../../basics/web-gui.md#spacing-in-menu-trees)  |
 | Display spacers | [Yes or No](../../basics/web-gui.md#display-spacers) |
 
+### Workflows (from Add-on)
+
+| Option | Value |
+| - | - |
+| Entrylimit for filter view | Value |
+
 #### Category lists
 
 The user has the possibility to adapt the viewing options for all category lists.
@@ -89,9 +97,8 @@ The user has the possibility to adapt the viewing options for all object lists u
 The lock function for objects causes a lock for write accesses for the time of editing an object by any user.
 At this time, the object can not be edited by another session (login of another person). The lock remains until the edit procedure is completed or the timeout is reached.
 
-TODO will be moved --->
-## System Settings
-
-Here you can specify how many entries you want to have displayed in the filter view, how long (in seconds) a used list filter is to be cached, how many objects per page are to be shown in the list view and if you want to activate the quick info.
-
-[![System Settings](../../assets/images/en/system-administration/administration/user-settings/7-us.png)](../../assets/images/en/system-administration/administration/user-settings/7-us.png)
+| Option | Value |
+| - | - |
+| Activate locking of objects in edit mode | Yes or No |
+| Timeout | 120 Value in seconds |
+| Currently locked objects | List of objects or none |

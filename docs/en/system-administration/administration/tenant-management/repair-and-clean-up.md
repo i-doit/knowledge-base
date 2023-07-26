@@ -1,6 +1,7 @@
 # Repair and clean up
 
 !!! warning ""
+
     Note: Please make sure that you have created a backup of your database.<br>
     These functions will perform changes on your data. Please make sure you have an up-to-date backup of your database.<br>
     Any changes can't be reverted.
