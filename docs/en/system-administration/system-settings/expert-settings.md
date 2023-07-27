@@ -8,8 +8,7 @@ The expert settings are a kind of "registry" of i-doit. Here you can set a lot o
 
     Should you plan to carry out changes in the expert settings, we **strongly recommend** to make a **[backup](../../maintenance-and-operation/backup-and-recovery/index.md)** beforehand. Some of the listed settings have a serious effect on the application. In case of doubt do not hesitate to ask for [support](../customer-portal.md).
 
-Configuration
--------------
+## Configuration
 
 You can reach the expert settings under **Administration → System settings → Expert settings**.
 
@@ -21,8 +20,7 @@ Each setting consists of three parts:
 | --- | --- | --- |
 | The **Key** assigns a unique name to the setting. If a key shouldn't exist yet, it can be added later. | The **Value** is usually a string or a longer text or an integer value. | With the **Type** you define the scope of the setting. A setting with the type **Tenant-wide** only affects the tenant with which the user is currently logged in. **System-wide** means that the setting affects the complete i-doit independent of the available tenants. |
 
-List of Settings
-----------------
+## List of Settings
 
 | Key | Default Value | Recommended Value | Type | Module<br><br>(Scope/[Add-on](../../i-doit-pro-add-ons/index.md) in i-doit) | Description |
 | --- | --- | --- | --- | --- | --- |
@@ -35,9 +33,8 @@ List of Settings
 | auth.use-in-file-browser | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the object browser. Objects which don't have any rights assignments aren't displayed. Already selected objects are displayed as "hidden". |
 | auth.use-in-location-tree | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the location tree. Objects which don't have any rights assignments aren't displayed/ opened. |
 | barcode.type | qr  |     | Tenant-wide setting | PRO/CMDB | Type of the barcode |
-| check\_mk.controller.last\_log\_check | 0   |     | Tenant-wide setting | PRO/CMDB | Time of the latest run of the check\_mk controller |
-| ckeditor.font\_names | Arial;Courier New;Times New Roman;Helvetica |     | Tenant-wide setting | PRO/CMDB | Usable fonts in the WYSIWYG editor |
-| cmdb.connector.suffix-schema | ```isys\_format\_json::encode(array(  <br> "##INPUT## - OUT",  <br> "- ##INPUT##",  <br> "(\*) ##INPUT##",  <br>)``` |     | System-wide setting | PRO/CMDB | Formatting scheme for the generation of TODO |
+| check_mk.controller.last_log_check | 0   |     | Tenant-wide setting | PRO/CMDB | Time of the latest run of the check\_mk controller |
+| ckeditor.font_names | Arial;Courier New;Times New Roman;Helvetica |     | Tenant-wide setting | PRO/CMDB | Usable fonts in the WYSIWYG editor |
 | cmdb.limits.order-threshhold | 10000 | 1000 | Tenant-wide setting | PRO/CMDB | Limitation of lines for the TableComponent, threshold from where only indexed fields can be sorted and filtered |
 | cmdb.limits.obj-browser.objects-in-viewmode | 8   |     | Tenant-wide setting | PRO/CMDB | Maximum number of objects to be presented in view mode in the object browser |
 | cmdb.limits.port-lists-layer2 | 5   |     | Tenant-wide setting | PRO/CMDB | Limitation of the specified Layer2 nets in the port list |
@@ -53,9 +50,9 @@ List of Settings
 | cmdb.unique.ip-address |     |     | System-wide setting | PRO/CMDB | Activation/ deactivation of unique IPs |
 | cmdb.unique.layer-2-net |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique Layer-2 IDs |
 | cmdb.unique.object-title |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique object titles |
-| email.template.maintenance | "Your maintenance contract: %s timed out.\\n\\n" .  <br>"<strong>Contract information</strong>:\\n" .  <br>"Start: %s\\n" .  <br>"End: %s\\n" .  <br>"Support-Url: %s\\n" .  <br>"Contract-Number: %s\\n" .  <br>"Customer-Number: %s" |     | System-wide setting | PRO/CMDB |     |
-| email.template.password | "Hello %FIRSTNAME% %LASTNAME%, \\n\\n" .  <br>"Your password has been changed to: %PASSWORD%\\n" .  <br>"\\n\\n" .  <br>"Regards,\\n" .  <br>"i-doit system" |     | System-wide setting | PRO/CMDB | Applied e-mail template for password changes |
-| gui.empty\_value | \-  | \-  | Tenant-wide setting | Core | Specifies the presentation of an empty value in the GUI |
+| email.template.maintenance | "Your maintenance contract: %s timed out.\\n" .  <br>"<strong>Contract information</strong>:\\n" .  <br>"Start: %s\\n" .  <br>"End: %s\\n" .  <br>"Support-Url: %s\\n" .  <br>"Contract-Number: %s\\n" .  <br>"Customer-Number: %s" |     | System-wide setting | PRO/CMDB |     |
+| email.template.password | "Hello %FIRSTNAME% %LASTNAME%, \\n" .  <br>"Your password has been changed to: %PASSWORD%\\n" .  <br>"\\n" .  <br>"Regards,\\n" .  <br>"i-doit system" |     | System-wide setting | PRO/CMDB | Applied e-mail template for password changes |
+| gui.empty_value | -  | -  | Tenant-wide setting | Core | Specifies the presentation of an empty value in the GUI |
 | gui.forum-link | 0   |     | System-wide setting | Core | Link to forum |
 | gui.leftcontent.width | 235 | 350 | User setting | Core | Defines the width of the left tree area in pixels |
 | gui.mandator-switch.keep-url | 0   |     | System-wide setting | Core | Specifies whether the import process changes the object status or not. |
@@ -72,7 +69,7 @@ List of Settings
 | logging.cmdb.import | false |     | System-wide setting | Import | Activation/ deactivation of the logging for i-doit import processes |
 | logging.system.api | false |     | System-wide setting | Api | Activation/ deactivation of the logging of API calls |
 | login.tenantlist.sortby |     |     | System-wide setting | Core | Sorting of the tenant list on the login page |
-| maxlength.dialog\_plus | 110 |     | Tenant-wide setting | PRO/CMDB | Maximum length of characters for entries in dialog lists |
+| maxlength.dialog_plus | 110 |     | Tenant-wide setting | PRO/CMDB | Maximum length of characters for entries in dialog lists |
 | maxlength.location.objects | 16  |     | Tenant-wide setting | PRO/CMDB | Maximum number of objects to be displayed |
 | maxlength.location.path | 40  |     | Tenant-wide setting | PRO/CMDB | Maximum length of location paths |
 | maxlength.object.lists | 55  |     | Tenant-wide setting | PRO/CMDB | Maximum number of objects to be displayed in object lists |
@@ -94,13 +91,13 @@ List of Settings
 | system.devmode |     |     | System-wide setting | Core | Activation/ deactivation of the i-doit Devmode |
 | system.dir.file-upload | upload/files/ |     | System-wide setting | Core | Path to the directory for file uploads |
 | system.dir.image-upload | upload/images/ |     | System-wide setting | Core | Path to the directory for image uploads |
-| system.email.connection-timeout | 60  |     | System-wide setting | Core | E-mail: Connection timeout for connection establishment to mail server |
-| system.email.from | [i-doit@i-doit.com](mailto:i-doit@i-doit.com) |     | System-wide setting | Core | E-mail: Originator address |
-| [system.email.name](http://system.email.name) | I-doit |     | System-wide setting | Core | E-mail: Name of originator |
-| system.email.port | 25  |     | System-wide setting | Core | E-mail: Port |
-| system.email.smtp-host |     |     | System-wide setting | Core | E-mail: Host of the server |
-| system.email.smtpdebug | 0   |     | System-wide setting | Core | E-mail: SMTP debug |
-| system.email.subject-prefix |     |     | System-wide setting | Core | E-mail: Subject prefix for e-mails sent by i-doit |
+| system.email.connection-timeout | 60  |     | System-wide setting<br>Tenant-wide setting | Core | E-mail: Connection timeout for connection establishment to mail server |
+| system.email.from | [i-doit@i-doit.com](mailto:i-doit@i-doit.com) |     | System-wide setting<br>Tenant-wide setting | Core | E-mail: Originator address |
+| system.email.name | I-doit |     | System-wide setting<br>Tenant-wide setting | Core | E-mail: Name of originator |
+| system.email.port | 25  |     | System-wide setting<br>Tenant-wide setting | Core | E-mail: Port |
+| system.email.smtp-host |     |     | System-wide setting<br>Tenant-wide setting | Core | E-mail: Host of the server |
+| system.email.smtpdebug | 0   |     | System-wide setting<br>Tenant-wide setting | Core | E-mail: SMTP debug |
+| system.email.subject-prefix |     |     | System-wide setting<br>Tenant-wide setting | Core | E-mail: Subject prefix for e-mails sent by i-doit |
 | system.memory-limit.jdisc | 2G  | 2G  | System-wide setting | JDisc | RAM limit for Jdisc import |
 | system.memory-limit.object-lists | 768M | 768M | System-wide setting | CMDB | RAM limit for object lists |
 | system.memory-limit.relation-object-list | 1024M | 1024M | System-wide setting | CMDB | RAM limit for relation lists (increased memory requirements possible with larger environments) |
@@ -123,6 +120,6 @@ List of Settings
 | workflows.mail.hostname |     |     | System-wide setting | Workflows | Host name for use in Workflow e-mails |
 | cache.default-expiration-time | 86400 | 86400 | Tenant-wide setting | Caching | Determines the time (in seconds) for how long you want to preserve data in specific system-internal caches (for example, authorization system, analysis results) |
 | system.memory-limit.searchindex | 4096M | 4096M | System-wide setting | Search | Reserved memory for search indexes; indexation of 50,000 objects requires approximately 1.5GB RAM. |
-| gui.login.display | user-name |     | User setting | PRO/CMDB | Presentation of the name in the "logged in as" area:<br><br>*   user-name: lfischer<br>*   full-name: Dr. Leonard Fischer<br>*   full-name-plus: Dr. Leonard Fischer (lfischer)<br>*   first-last-name-abbreviation: L. Fischer |
+| gui.login.display | user-name |     | User setting | PRO/CMDB | Presentation of the name in the "logged in as" area:<br>user-name: lfischer<br>full-name: Dr. Leonard Fischer<br>full-name-plus: Dr. Leonard Fischer (lfischer)<br>first-last-name-abbreviation: L. Fischer |
 | system.security.csrf | 0   | 0   | System-wide setting | Core | Decides if a CSRF-Token is used during login, during saving of categories and XML export. |
 | cmdb.limits.object-table-columns | 10  | 10  | Tenant-wide setting | PRO/CMDB | Decides how many columns are allowed to be shown in the object lists. |
