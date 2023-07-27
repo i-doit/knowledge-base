@@ -10,7 +10,7 @@ The goal is to synchronize all users and groups from AD/LDAP with i-doit, as wel
 I assume a basic knowledge of AD/LDAP.<br>
 In these examples for persons the objectClass = user is used.<br>
 For groups the objectClass = group is used.<br>
-If you do not want to synchronize all users or groups of the domain, you have to enter the DN/CN of an OU or container under “Search for users in (OU)\*”.
+If you do not want to synchronize all users or groups of the domain, you have to enter the DN/CN of an OU or container under `Search for users in (OU) *`.
 
 [![Access](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/1-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/1-htiuag.png)
 
@@ -96,10 +96,10 @@ For example, if the users differ by having two objectClass attributes (e.g. pers
 Which other attributes can be imported via ldap.ini
 ---------------------------------------------------
 
-*   The post [ldap.ini Configuration](../../automation-and-integration/cli/console/options-and-parameters-cli.md#ldap-sync) should be known.
-*   An .ini file can be created for the import, with this additional attributes can be imported.
-*   The [Category Extension](../../system-administration/administration/cmdb-settings.md#category-extension) should already be configured.
-*   We use the .ini section
+- The post [ldap.ini Configuration](../../automation-and-integration/cli/console/options-and-parameters-cli.md#ldap-sync) should be known.
+- An .ini file can be created for the import, with this additional attributes can be imported.
+- The [Category Extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md) should already be configured.
+- We use the .ini section
 
 ### The configuration of the category extension
 
@@ -132,7 +132,7 @@ The users are then assigned to the assigned room as a contact.<br>
 
 ### How to import attributes from LDAP
 
-I want to import more LDAP attributes to users and I have already configured the [category extension](../../system-administration/administration/cmdb-settings.md#category-extension).<br>
+I want to import more LDAP attributes to users and I have already configured the [category extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md).<br>
 Now I have to configure the LDAP sync configuration file (ldap.ini).
 
 If you have done an LDAP sync for users before, you will find an entry like this in the ldap log

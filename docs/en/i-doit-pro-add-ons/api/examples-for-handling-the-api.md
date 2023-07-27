@@ -1,6 +1,6 @@
 # Examples for Handling the API
 
-To facilitate handling of the application [Programmierschnittstelle (API)](../../system-administration/administration/interfaces.md) of i-doit, we put together a few typical examples.
+To facilitate handling of the application [Application Programming Interfaces (API)](../../system-administration/administration/import-and-interfaces/index.md) of i-doit, we put together a few typical examples.
 
 Search
 ------

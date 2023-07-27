@@ -14,7 +14,7 @@ The administration is accessed via the gear wheel icon in the top right corner. 
 - [Tenant settings](./tenant-management/index.md)
 - [Data structure](./data-structure/index.md)
 - [Data view](./data-view/index.md)
-- [Predefined content](./system-settings.md)
+- [Predefined content](./predefined-content/index.md)
 - [User persmissions](./user-permissions.md)
 - [Logbook](./logbook.md)
 - [Import and interfaces](./import-and-interfaces/index.md)
