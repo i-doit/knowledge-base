@@ -29,15 +29,10 @@ In der Kategorie **Host Definition** kann dann entweder über ein Nagios Templat
 [![nagios-konfiguration](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/3-nag.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/3-nag.png)
 
 Das Prinzip der Host- und Service Templates ist mit der Nagios-Konfiguration deckungsgleich.
-
 Über die Kategorie **Servicezuweisung** werden in der Basiskonfiguration definierte Servicechecks einem Host zugewiesen.
-
-Als Ergebnis bildet sich später hieraus die Konfiguration einer klassischen Host-zu-Service-Zuweisung. Es gibt zusätzlich einen zweiten Weg, wie Services zu Hosts zugewiesen werden können. Dies geschieht über die Vererbung über ein Softwareobjekt.
-
+Als Ergebnis bildet sich später hieraus die Konfiguration einer klassischen Host-zu-Service-Zuweisung. Es gibt zusätzlich einen zweiten Weg, wie Services zu Hosts zugewiesen werden können. Dies geschieht über die Vererbung über ein Softwareobjekt.<br>
 in einem Softwareobjekt in der Kategorie **Nagios (Anwendungen)** wird ein Servicecheck zugewiesen, analog zu der Zuweisung zu einem Host.
-
 Ist diese Anwendung nun über die Kategorie **Softwarezuweisung** auf einem Host installiert, wird der Servicecheck auf den Host automatisch vererbt.
-
 Weitere Nagios-Konfigurationen innerhalb von Objekten finden sich in Objekten vom Typ **Personen sowie in Personengruppen und Objektgruppen**.
 
 
