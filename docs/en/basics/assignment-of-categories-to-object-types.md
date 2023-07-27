@@ -1,20 +1,20 @@
 # Assignment of Categories to Object Types
 
-The Quick Configuration Wizard (QCW) enables you to manage the assignments of [object type groups](../glossary.md), [object types](../glossary.md) and [categories](../glossary.md) comfortably and to adapt them to your requirements.
+Editing the data structure enables you to manage the assignments of [object type groups](../glossary.md), [object types](../glossary.md) and [categories](../glossary.md) comfortably and to adapt them to your requirements.
 
 Accessing the Quick Configuration Wizard
 ----------------------------------------
 
-You can find the Quick Configuration Wizard at **Administration → CMDB Settings → Quick Configuration Wizard**. All changes made in the Quick Configuration Wizard are applied immediately and don't have to be saved by pressing a button. No data is deleted when changes are made. The QCW is only relevant for the presentation of data.
+You can edit the data structure at **Administration → Data strcture → Edit data structure**. All changes made in the data structure, are applied immediately and don't have to be saved by pressing a button. No data is deleted when changes are made. The data structure is only relevant for the presentation of data.
 
 [![Quick Configuration Wizard](../assets/images/en/basics/assignment-of-categories-to-object-types/1-aoctot.png)](../assets/images/en/basics/assignment-of-categories-to-object-types/1-aoctot.png)
 
-Layout of the Quick Configuration Wizard
+Layout of the Data structure
 ----------------------------------------
 
 The configuration of assignments is carried out via a separation into three columns. These columns represent your object type groups, object types and categories. In each column there is a dotted area per line allowing you to change the order per drag and drop.
 
-[![Layout of the Quick Configuration Wizard](../assets/images/en/basics/assignment-of-categories-to-object-types/2-aoctot.png)](../assets/images/en/basics/assignment-of-categories-to-object-types/2-aoctot.png)
+[![Layout of the Data structure](../assets/images/en/basics/assignment-of-categories-to-object-types/2-aoctot.png)](../assets/images/en/basics/assignment-of-categories-to-object-types/2-aoctot.png)
 
 Adjusting Object Type Groups, Object Types and Categories
 ---------------------------------------------------------
