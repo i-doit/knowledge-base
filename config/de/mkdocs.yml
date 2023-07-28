@@ -394,7 +394,12 @@ nav:
       - administration/index.md
       - Verwaltung:
           - administration/verwaltung/index.md
-          - Benutzereinstellungen: administration/verwaltung/benutzereinstellungen.md
+          - Add-ons: 
+                - administration/verwaltung/add-ons/index.md
+                - Gerätetausch: 
+                    - administration/verwaltung/add-ons/geraetetausch/index.md
+          - Benutzereinstellungen: 
+                - administration/verwaltung/index.md
           - CMDB-Einstellungen: administration/verwaltung/cmdb-einstellungen.md
           - Lizenz-Administration: administration/verwaltung/lizenz-administration.md
           - Rechtesystem: administration/verwaltung/rechtesystem.md
