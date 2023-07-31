@@ -394,21 +394,21 @@ nav:
       - administration/index.md
       - Verwaltung:
           - administration/verwaltung/index.md
-          - Add-ons: 
+          - Add-ons:
               - administration/verwaltung/add-ons/index.md
-              - Gerätetausch: 
-                 - administration/verwaltung/add-ons/geraetetausch/index.md
-                 - Konfiguration: administration/verwaltung/add-ons/geraetetausch/konfiguration.md
+              - Gerätetausch:
+                  - administration/verwaltung/add-ons/geraetetausch/index.md
+                  - Konfiguration: administration/verwaltung/add-ons/geraetetausch/konfiguration.md
               - JSON-RPC-API:
-                 - administration/verwaltung/add-ons/json-rpc-api/index.md
-                 - Kategorien und Attribute: administration/verwaltung/add-ons/json-rpc-api/kategorien-und-attribute.md
+                  - administration/verwaltung/add-ons/json-rpc-api/index.md
+                  - Kategorien und Attribute: administration/verwaltung/add-ons/json-rpc-api/kategorien-und-attribute.md
               - Events: administration/verwaltung/add-ons/events.md
-          - Benutzereinstellungen: 
+          - Benutzereinstellungen:
               - administration/verwaltung/benutzereinstellungen/index.md
               - Benutzeroberfläche:
-                 - administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/index.md
-                 - Kategorie-Listen: administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/kategorie-listen.md
-                 - Objekt-Listen: administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/objekt-listen.md
+                  - administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/index.md
+                  - Kategorie-Listen: administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/kategorie-listen.md
+                  - Objekt-Listen: administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/objekt-listen.md
               - Bearbeitungssperre: administration/verwaltung/benutzereinstellungen/bearbeitungssperre.md
               - Benutzersprache: administration/verwaltung/benutzereinstellungen/benutzersprache.md
               - Datenformate: administration/verwaltung/benutzereinstellungen/datenformate.md
@@ -418,7 +418,7 @@ nav:
               - Attribute verstecken: administration/verwaltung/datenansicht/attribute-verstecken.md
               - Objekt Browser konfigurieren: administration/verwaltung/datenansicht/objekt-browser-konfigurieren.md
               - Sprachprofile: administration/verwaltung/datenansicht/sprachprofile.md
-          - Datenstruktur: 
+          - Datenstruktur:
               - administration/verwaltung/datenstruktur/index.md
               - Benutzerdefinierte Kategorien: administration/verwaltung/datenstruktur/benutzerdefinierte-kategorien.md
               - Datenstruktur bearbeiten: administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md
@@ -426,18 +426,18 @@ nav:
           - Import und Schnittstellen:
               - administration/verwaltung/import-und-schnittstellen/index.md
               - JDisc:
-                 - administration/verwaltung/import-und-schnittstellen/jdisc/index.md
-                 - JDisc Konfiguration: administration/verwaltung/import-und-schnittstellen/jdisc/jdisc-konfiguration.md
-                 - JDisc Profile: administration/verwaltung/import-und-schnittstellen/jdisc/jdisc-profile.md
-              - LDAP: 
-                 - administration/verwaltung/import-und-schnittstellen/ldap/index.md
-                 - Attributerweiterung: administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md
-                 - Directories: administration/verwaltung/import-und-schnittstellen/ldap/directories.md
-                 - Server: administration/verwaltung/import-und-schnittstellen/ldap/server.md
-              - Monitoring: 
-                 - administration/verwaltung/import-und-schnittstellen/monitoring/index.md
-                 - Exportkonfiguration: administration/verwaltung/import-und-schnittstellen/monitoring/exportkonfiguration.md
-                 - Livestatus-NDO: administration/verwaltung/import-und-schnittstellen/monitoring/livestatus-ndo.md
+                  - administration/verwaltung/import-und-schnittstellen/jdisc/index.md
+                  - JDisc Konfiguration: administration/verwaltung/import-und-schnittstellen/jdisc/jdisc-konfiguration.md
+                  - JDisc Profile: administration/verwaltung/import-und-schnittstellen/jdisc/jdisc-profile.md
+              - LDAP:
+                  - administration/verwaltung/import-und-schnittstellen/ldap/index.md
+                  - Attributerweiterung: administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md
+                  - Directories: administration/verwaltung/import-und-schnittstellen/ldap/directories.md
+                  - Server: administration/verwaltung/import-und-schnittstellen/ldap/server.md
+              - Monitoring:
+                  - administration/verwaltung/import-und-schnittstellen/monitoring/index.md
+                  - Exportkonfiguration: administration/verwaltung/import-und-schnittstellen/monitoring/exportkonfiguration.md
+                  - Livestatus-NDO: administration/verwaltung/import-und-schnittstellen/monitoring/livestatus-ndo.md
               - H-Inventory: administration/verwaltung/import-und-schnittstellen/h-inventory.md
               - Import Matching Profile: administration/verwaltung/import-und-schnittstellen/import-matching-profile.md
               - SMTP Konfiguration (E-Mail): administration/verwaltung/import-und-schnittstellen/smtp-konfiguration-email.md
