@@ -11,7 +11,7 @@ Each attribute which can be edited is represented by a form field. This applies 
 
 Attributes which can't be edited either have no attribute field in the editing view or they only have a field with a read-only option.
 
-An example for an attribute which was created dynamically without an attribute field is **FQDN** in the **Host address** category. **FQDN** is comprised of the attributes **Host name** and **DNS Domain**.
+An example for an attribute which was created dynamically without an attribute field is **Hostname(FQDN)** in the **Host address** category. **Hostname(FQDN)** is comprised of the attributes **Host name** and **DNS Domain**.
 
 [![FQDN](../assets/images/en/basics/attribute-fields/2-af.png)](../assets/images/en/basics/attribute-fields/2-af.png)
 
@@ -81,7 +81,7 @@ Date Field
 
 You can use the date field for date entries. When you click on the single-line text field, a calendar opens. With a click on the desired date, the date is copied into the text field. You can also enter the date manually in the format tt.mm.yyyy.
 
-Our example shows the **Date of Purchase** attribute in the **Acccounting** category.
+Our example shows the **Date of Invoice** attribute in the **Acccounting** category.
 
 [![Date Field](../assets/images/en/basics/attribute-fields/10-af.png)](../assets/images/en/basics/attribute-fields/10-af.png)
 
