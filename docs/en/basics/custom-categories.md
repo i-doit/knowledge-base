@@ -4,7 +4,7 @@ Besides having standard categories _i-doit_ makes it possible to create (custom)
 
 ## Configuration of the Category
 
-You can find the configuration of the custom categories in _i-doit_ at **Administration** **→** **CMDB settings** **→** **Custom categories**. The **New** button is used to create a custom category. If you already created some custom categories, you can also edit them here.
+You can find the configuration of the custom categories in _i-doit_ at **Administration** **→** **Data structure** **→** **Custom categories**. The **New** button is used to create a custom category. If you already created some custom categories, you can also edit them here.
 
 [![Configuration of the Category](../assets/images/en/basics/custom-categories/1-cc.png)](../assets/images/en/basics/custom-categories/1-cc.png)
 
