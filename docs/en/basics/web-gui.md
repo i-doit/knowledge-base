@@ -80,11 +80,11 @@ When you are in the object view mode, the corresponding tree view is shown. With
 
 From the objects in i-doit which present a location, the location view creates a hierarchical view based on their relations to each other. Here you can navigate to the respective locations and jump to the assigned objects.
 
-| Option | Description|
-| - | - |
-| Physical location | TODO |
-| Logical location | TODO |
-| Combined view | TODO |
+| Option            | Description                                                   |
+| ----------------- | ------------------------------------------------------------- |
+| Physical location | Displays objects with a physical location                     |
+| Logical location  | Displays objects with a logical location                      |
+| Combined view     | Displays objects with a physical location or logical location |
 
 [![Location View](../assets/images/en/basics/web-gui/11-gui.png)](../assets/images/en/basics/web-gui/11-gui.png)
 
