@@ -16,9 +16,9 @@ We have also a [Blog article](https://www.i-doit.com/en/blog/the-new-i-doit-pro-
 
 The Forms add-on requires:
 
-*   i-doit Version **\>=23**
-*   MongoDB Server Version **5**
-*   NodeJS Version **\>=16.x**
+- i-doit Version **>=23**
+- MongoDB Server Version **5**
+- NodeJS Version **>=16.x**
 
 Also the system requirements of [MongoDB](https://docs.mongodb.com/manual/administration/production-notes/#mongodb-binaries) must be observed.<br>
 Also, MongoDB has a [checklist for use in operations](https://docs.mongodb.com/manual/administration/production-checklist-operations/#operations-checklist).
@@ -27,11 +27,11 @@ Also, MongoDB has a [checklist for use in operations](https://docs.mongodb.com/m
 
 ## Installation
 
-*   Installing the Forms add-on via the [Admin Center](../../system-administration/admin-center.md).
-*   [MongoDB Server v5](https://docs.mongodb.com/manual/installation/) installation
-*   Then install [NodeJS](https://nodejs.org/en/download/current/) >= v16.x. via [Package Manager](https://nodejs.org/en/download/package-manager/).
-*   Configure Forms Backend
-*   Configure backend in i-doit
+- Installing the Forms add-on via the [Admin Center](../../system-administration/admin-center.md).
+- [MongoDB Server v5](https://docs.mongodb.com/manual/installation/) installation
+- Then install [NodeJS](https://nodejs.org/en/download/current/) >= v16.x. via [Package Manager](https://nodejs.org/en/download/package-manager/).
+- Configure Forms Backend
+- Configure backend in i-doit
 
 [Continue to the installation of the Forms add-on ](./install-forms-addon.md){ .md-button .md-button--primary }
 
@@ -44,7 +44,7 @@ This is possible in the i-doit administration under Authorization System > Right
 
 Clear cache for the rights system
 
-After the rights have been assigned or changed, it is necessary to clear the [cache](../../system-administration/administration/system-tools.md) in the i-doit [administration](../../system-administration/administration/index.md) under System Tools > Cache / Database so that the changes are adopted by the system.
+After the rights have been assigned or changed, it is necessary to clear the [cache](../../system-administration/administration/tenant-management/repair-and-clean-up.md) in the i-doit [administration](../../system-administration/administration/index.md) under `Tenant Management > Repair and clean up` so that the changes are adopted by the system.
 
 ## Calling the add-on
 
