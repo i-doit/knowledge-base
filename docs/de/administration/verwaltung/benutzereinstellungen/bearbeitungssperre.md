@@ -1,7 +1,7 @@
 # Bearbeitungssperre
 
-Die Sperrfunktion für Objekte bewirkt eine Sperre der Schreibzugriffe für die Zeit der Bearbeitung eines Objekts durch einen beliebigen Benutzer.
-In dieser Zeit kann das Objekt nicht von einer anderen Sitzung (Login einer anderen Person) bearbeitet werden. Die Sperre bleibt bestehen, bis der Bearbeitungsvorgang abgeschlossen ist oder der Timeout erreicht ist.
+Die Sperrfunktion für Objekte bewirkt, dass ein durch einen Benutzer editiertes Objekt für den Schreibzugriff gesperrt ist und dies solange bleibt, bis der Editiervorgang abgeschlossen oder der Timeout erreicht ist.
+Gesperrte Objekte können durch Benutzer aus einer anderen Session (Login durch andere Person) nicht bearbeitet werden.
 
 | Option | Wert |
 | - | - |
