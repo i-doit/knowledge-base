@@ -113,7 +113,7 @@ and here a example with a large configured menu tree spacing.
 
 ## Display spacers
 
-Here you are able to configure if line spacers are displayed in categories e.g. is display spacers set to yes, the spacers are displayed.
+Here, you are able to configure if line spacers are displayed in categories. For example, if 'display spacers' is set to yes, the spacers will be displayed.
 
 [![display spacers](../assets/images/en/basics/web-gui/16-gui.png)](../assets/images/en/basics/web-gui/16-gui.png)
 
