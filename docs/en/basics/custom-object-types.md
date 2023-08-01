@@ -5,7 +5,7 @@ A lot of [object types](../glossary.md) are provided by the standard installatio
 Access to the Configuration
 ---------------------------
 
-The possibility to create custom object types is found at **Administration**  **→ CMBD-Settings →** **Object type-Configuration** **→ [Object type-Group]**. Here it is possible to create new object types and edit existing ones.
+The possibility to create custom object types is found at **Administration**  **→ Data structure →** **Object types** **→ [Object type-Group]**. Here it is possible to create new object types and edit existing ones.
 
 As an alternative way you can also reach the object type configuration via the name of the [object type group](../glossary.md) above the [object type list](../glossary.md) in the [tree menu](../glossary.md) on the left side. Just click on the link and you will see the listing of objects types of this object type group and can edit them.
 
