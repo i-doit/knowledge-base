@@ -5,7 +5,7 @@ The i-doit GUI is a WEB application that can be used with the respective [suppor
 Logon Screen
 ------------
 
-When you activate i-doit after successful installation, the logon screen is displayed first. Here you can logon to i-doit directly or you can go to the [Admin Center](../system-administration/admin-center.md) by clicking the "Admin-Center" button in the lower area of the window.
+When you activate i-doit after successful installation, the logon screen is displayed first. Here you can logon to i-doit directly or you can go to the [Admin Center](../system-administration/admin-center.md) by clicking the "Admin-Center" button in the lower area of the window.
 
 [![Logon Screen](../assets/images/en/basics/web-gui/1-gui.png)](../assets/images/en/basics/web-gui/1-gui.png)
 
@@ -37,7 +37,7 @@ On the right of the i-doit button is your personal i-doit area called "my-doit".
 Objekt Type Group Selection
 ---------------------------
 
-In the central part of the upper task bar you can see the single [object type](./object-types.md) groups. You can adapt this area completely to your requirements and depending on your configuration it can look completely different. By selecting a single menu item, the respective object type groups are displayed within the tree view on the right-hand side of the i-doit user interface.
+In the central part of the upper task bar you can see the single [object type](./object-types.md) groups. You can adapt this area completely to your requirements and depending on your configuration it can look completely different. By selecting a single menu item, the respective object type groups are displayed within the tree view on the right-hand side of the i-doit user interface.
 
 [![Objekt Type Group Selection](../assets/images/en/basics/web-gui/5-gui.png)](../assets/images/en/basics/web-gui/5-gui.png)
 
@@ -51,7 +51,7 @@ A lot of special functions can be found under Extras. For example, there are CMD
 Global Search
 -------------
 
-You have direct acces to the i-doit full-text search with the [search field](../efficient-documentation/search.md) at the right upper margin. Here you can jump quickly to the found search results or display a list of results.
+You have direct acces to the i-doit full-text search with the [search field](../efficient-documentation/search.md) at the right upper margin. Here you can jump quickly to the found search results or display a list of results.
 
 [![Global Search](../assets/images/en/basics/web-gui/7-gui.png)](../assets/images/en/basics/web-gui/7-gui.png)
 
@@ -76,9 +76,43 @@ When you are in the object view mode, the corresponding tree view is shown. With
 
 [![Object View](../assets/images/en/basics/web-gui/10-gui.png)](../assets/images/en/basics/web-gui/10-gui.png)
 
-Location View
--------------
+## Location View
 
 From the objects in i-doit which present a location, the location view creates a hierarchical view based on their relations to each other. Here you can navigate to the respective locations and jump to the assigned objects.
 
+| Option | Description|
+| - | - |
+| Physical location | TODO |
+| Logical location | TODO |
+| Combined view | TODO |
+
 [![Location View](../assets/images/en/basics/web-gui/11-gui.png)](../assets/images/en/basics/web-gui/11-gui.png)
+
+## Category line spacing
+
+The line spacing of categories can be adjusted in the User settings.
+
+E.g. is the line spacing set to small, the lines are closer to each other.
+[![Line spacing small](../assets/images/en/basics/web-gui/12-gui.png)](../assets/images/en/basics/web-gui/12-gui.png)
+
+and here a example with a large configured line spacing.
+[![Line spacing large](../assets/images/en/basics/web-gui/13-gui.png)](../assets/images/en/basics/web-gui/13-gui.png)
+
+## Spacing in menu trees
+
+The menu tree spacing lets you adjust the spacing between the menu items.
+E.g. is the menu tree spacing set to small, the menu items are closer to each other.
+[![menu tree spacing small](../assets/images/en/basics/web-gui/14-gui.png)](../assets/images/en/basics/web-gui/14-gui.png)
+
+and here a example with a large configured menu tree spacing.
+[![menu tree spacing large](../assets/images/en/basics/web-gui/15-gui.png)](../assets/images/en/basics/web-gui/15-gui.png)
+
+## Display spacers
+
+Here you are able to configure if line spacers are displayed in categories
+E.g. is display spacers set to yes, the spacers are displayed.
+[![display spacers](../assets/images/en/basics/web-gui/16-gui.png)](../assets/images/en/basics/web-gui/16-gui.png)
+
+and here a example with disabled spacers.
+[![do not display spacers](../assets/images/en/basics/web-gui/17-gui.png)](../assets/images/en/basics/web-gui/17-gui.png)
+

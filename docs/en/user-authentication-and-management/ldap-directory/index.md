@@ -2,8 +2,7 @@
 
 i-doit offers an interface for the authentication/ authorization and synchronization of data from a LDAP folder or an active directory (AD).
 
-Requirements
-------------
+## Requirements
 
 i-doit supports the following directory services:
 
@@ -18,8 +17,10 @@ Verify it via `getsebool -a | grep httpd`
 
 ### Subsequent Installation under [Debian GNU/Linux](../../installation/manual-installation/debian.md)
 
-    sudo apt install php7-ldap
-    sudo service apache2 restart
+```shell
+sudo apt install php7-ldap
+sudo service apache2 restart
+```
 
 ### Subsequent Installation under [Windows](../../installation/manual-installation/microsoft-windows-server/index.md)
 
@@ -27,13 +28,17 @@ The file php.ini (usually at C:\xampp\php\php.ini) has to be modified. Activate 
 
 From the line
 
-    ;extension=php_ldap.dll
+```shell
+;extension=php_ldap.dll
+```
 
 the ";" is deleted, resulting in
 
-    extension=php_ldap.dll
+```shell
+extension=php_ldap.dll
+```
 
-Sometimes it may also be necessary to copy the files ssleay32.dll and libeay32.dll (in most cases they are located at C:\xampp\apache\bin\, however, this varies from version to version) to the php\ folder. The Apache web server has to be restarted afterwards.
+Sometimes it may also be necessary to copy the files ssleay32.dll and libeay32.dll (in most cases they are located at `C:\xampp\apache\bin\`, however, this varies from version to version) to the php\ folder. The Apache web server has to be restarted afterwards.
 
 Configuration
 -------------
@@ -67,7 +72,7 @@ The parameters stated here determine where users are to be searched in the direc
 
 | Field name | Content |
 | --- | --- |
-| **Unique identifier** | AD synchronization often results in changed records not being synchronized due to a changed name (marriage or similar).  <br>The "old" record is archived here and a new one is imported.  <br>Therefore a different attribute can be selected as unique identifier. See [category extension](../../system-administration/administration/cmdb-settings.md#category-extension) |
+| **Unique identifier** | AD synchronization often results in changed records not being synchronized due to a changed name (marriage or similar).  <br>The "old" record is archived here and a new one is imported.  <br>Therefore a different attribute can be selected as unique identifier. See [category extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md) |
 | **Filter** | The filter is filled automatically with the values defined in the lower area and cannot be changed directly via the user interface. |
 | **Search for users in (OU)*** | Mandatory field: The path to the organizational unit in which the users are stored in the directory.<br><br>(Example: **OU=tree,DC=synetics,DC=int**) |
 | **Recursive search** | When activating the recursive search, also the folders beneath the stated organizational units are searched. This is not recommended for large directories and should be bypassed by the creation of multiple servers. |
