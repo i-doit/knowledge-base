@@ -4,7 +4,7 @@ Each change to the [IT documentation](../glossary.md) is noted in the logbook by
 Global Logbook
 --------------
 
-The logbook in which all changes are incorporated is located at **Extras → CMDB → Logbook → List view logbook**. There you can filter the entries by various parameters. If possible, an entry also contains the specific changes (Which value was changed and in what respects?).
+The logbook in which all changes are incorporated is located at **Extras → CMDB → Logbook**. There you can filter the entries by various parameters. If possible, an entry also contains the specific changes (Which value was changed and in what respects?).
 
 [![Global Logbook](../assets/images/en/basics/logbook/1-lb.png)](../assets/images/en/basics/logbook/1-lb.png)
 
@@ -50,7 +50,7 @@ The option for the **Maximum amount of combined detailed changes** causes simult
 Activation/ Deactivation of the Logbook
 ---------------------------------------
 
-You can activate/ deactivate the logbook at **Administration → System settings → Tenant settings → Logbook → Log detailed CMDB changes**.
+You can activate/ deactivate the logbook at **Administration → Tenant management → Settings for tenant → Logbook → Log detailed CMDB changes**.
 
 Custom Entries
 --------------
