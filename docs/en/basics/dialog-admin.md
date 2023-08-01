@@ -5,7 +5,7 @@ The [attribute field](./attribute-fields.md) **Dialog+**, which is a dropdown fi
 Overview
 --------
 
-You can find an overview of all [attributes](../glossary.md) of the field type **Dialog+** under **Administration → CMDB settings → Dialog-Admin**. They are sorted alphabetically according to the associated categories in the left navigation tree. When you created a [custom category](./custom-categories.md) with an attribute of the field type **Dialog+**, this attribute and its related category is also displayed in the navigation tree under **Custom Dialog+**.
+You can find an overview of all [attributes](../glossary.md) of the field type **Dialog+** under **Administration → Predefined content → Dialog-Admin**. They are sorted alphabetically according to the associated categories in the left navigation tree. When you created a [custom category](./custom-categories.md) with an attribute of the field type **Dialog+**, this attribute and its related category is also displayed in the navigation tree under **Custom Dialog+**.
 
 [![Overview](../assets/images/en/basics/dialog-admin/1-da.png)](../assets/images/en/basics/dialog-admin/1-da.png)
 
