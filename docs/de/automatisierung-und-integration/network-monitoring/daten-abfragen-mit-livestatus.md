@@ -2,9 +2,7 @@
 
 Für einen Soll-/Ist-Vergleich zwischen der Soll-Dokumentation in i-doit und dem Ist-Zustand, den eine Software für [Network Monitoring](../network-monitoring/index.md) liefert, bietet sich eine passende Schnittstelle an. Mit dieser lassen sich Daten aus dem Network Monitoring in i-doit anzeigen und auswerten.
 
-Schnittstellen
-
------------------
+## Schnittstellen
 
 Es werden die Schnittstellen
 
@@ -18,10 +16,9 @@ für [Nagios](https://www.nagios.org/), [Check\_MK](https://mathias-kettner.de/c
 
     MK Livestatus bietet eine sehr performante Anbindung an das Network Monitoring. Daher ist es den NDOUtils zu bevorzugen.
 
-Grundkonfiguration
-------------------
+## Grundkonfiguration
 
-Voraussetzung ist ein laufendes NDOUtils oder MK Livestatus auf dem Monitoring-System. In i-doit muss unter **Verwaltung → Schnittstellen → Monitoring → Livestatus/NDO** der Zugriff auf eine der Schnittstellen konfiguriert werden.
+Voraussetzung ist ein laufendes NDOUtils oder MK Livestatus auf dem Monitoring-System. In i-doit muss unter **Verwaltung → Import und Schnittstellen → Monitoring → Livestatus/NDO** der Zugriff auf eine der Schnittstellen konfiguriert werden.
 
 [![datenabfragenmls-access](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)
 
@@ -36,8 +33,7 @@ Beispiel MK Livestatus:
 
 [![datenabfragenmls-example](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/3-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/3-nm.png)
 
-Kategorien
-----------
+## Kategorien
 
 Um die Daten auszulesen muss über den **[Quick Configuration Wizard](../../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md)** den [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) der [Kategorie-Ordner](../../grundlagen/struktur-it-dokumentation.md) **Monitoring** zugewiesen werden. In der Kategorie **Monitoring** muss jeweils für das [Objekt](../../grundlagen/struktur-it-dokumentation.md) der [Identifizierungsschlüssel](../../grundlagen/eindeutige-referenzierungen.md) für das Monitoring konfiguriert werden. Dazu kann entweder der Objekttitel, der Hostname mit oder ohne Domain Name oder ein frei gewählter Name genutzt werden. Dieser Eintrag bestimmt den Namen, der im Monitoring abgefragt wird.
 
@@ -53,7 +49,7 @@ Zusätzlich kann in der [Objektlistenkonfiguration](../../grundlagen/objekt-list
 
 [![datenabfragenmls-objlist](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/6-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/6-nm.png)
 
-Logbucheinträge aus dem Monitoring
-----------------------------------
+## Logbucheinträge aus dem Monitoring
+
 
 Über die [Console](../cli/console/index.md) können Statusmeldungen aus dem Monitoring in das [Logbuch](../../grundlagen/logbuch.md) von i-doit übertragen werden. Dazu muss der entsprechende Handler [nagios-ndoutils](../cli/console/optionen-und-parameter-der-console.md#nagios-ndoutils) aufgerufen werden und es werden automatisch alle Statusänderungen, die sich seit dem letzten Lauf geändert haben, in das Logbuch übertragen.

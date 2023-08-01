@@ -1,6 +1,6 @@
 # Automatisierung und Integration
 
-Niemand ist eine Insel ... Gerade mit dem Thema IT-Dokumentation/CMDB befindet man sich mitten in der IT-Abteilung und will sich natürlich die Arbeit möglichst erleichtern. Warum also Benutzer anlegen, wenn es eine LDAP-Schnittstelle gibt und warum nicht auch die automatische E-Mail-Benachrichtigung nutzen?
+Niemand ist eine Insel... Gerade mit dem Thema IT-Dokumentation/CMDB befindet man sich mitten in der IT-Abteilung und will sich natürlich die Arbeit möglichst erleichtern. Warum also Benutzer anlegen, wenn es eine LDAP-Schnittstelle gibt und warum nicht auch die automatische E-Mail-Benachrichtigung nutzen?
 
 Die beschriebenen Schnittstellen sind bereits in _i-doit pro_ enthalten:
 

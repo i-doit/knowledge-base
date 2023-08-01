@@ -21,8 +21,7 @@ Der [Controller Command](../controller.md) verwendet .inc.php Dateien. Diese Met
 
 Verwendet wird die Konfigurationsdatei mit `--config /pfad/zur/config.ini oder mit -c /pfad/zur/config.ini`
 
-Der Aufbau der .ini
--------------------
+### Der Aufbau der .ini
 
 ```ini
     [commandArguments]
@@ -49,8 +48,7 @@ Zur Zeit gibt es diese für den [ldapServerId](../console/optionen-und-parameter
 
 * * *
 
-Beispiel für den Command [search-index](../console/optionen-und-parameter-der-console.md#search-index)
---------------------------------------------------------------------------------------------------------------------------------------------------------
+### Beispiel für den Command [search-index](../console/optionen-und-parameter-der-console.md#search-index)
 
 Als erstes wird die .ini Datei erstellt.
 Wir verwenden hier zusätzlich [update](../console/optionen-und-parameter-der-console.md#search-index) damit wird der Suchindex überschrieben.
@@ -77,8 +75,7 @@ Damit die Konfiguration auch verwendet wird führen wir den Console Command aus 
 
 * * *
 
-Beispiel für den Command [notifications-send](../console/optionen-und-parameter-der-console.md#notifications-send)
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Beispiel für den Command [notifications-send](../console/optionen-und-parameter-der-console.md#notifications-send)
 
 Für diesen Command gibt es keine eigenen Optionen daher verwenden wir nur die benötigten Optionen [user](../console/optionen-und-parameter-der-console.md#notifications-send), [password](../console/optionen-und-parameter-der-console.md#notifications-send) und [tenantId](../console/optionen-und-parameter-der-console.md#notifications-send).
 
@@ -101,8 +98,7 @@ Damit die Konfiguration auch verwendet wird führen wir den Console Command aus 
 
 * * *
 
-Beispiel für den Command [ldap-sync](../console/optionen-und-parameter-der-console.md#ldap-sync)
---------------------------------------------------------------------------------------------------------------------------------------------------
+### Beispiel für den Command [ldap-sync](../console/optionen-und-parameter-der-console.md#ldap-sync)
 
 Dieser Command bietet folgende zusätzliche Optionen an: [ldapServerId](../console/optionen-und-parameter-der-console.md#ldap-sync) und [dumpConfig](../console/optionen-und-parameter-der-console.md#ldap-sync).
 Die Option [ldapServerId](../console/optionen-und-parameter-der-console.md#ldap-sync) gibt den zu verwenden ldap Server an. Hier muss die ID des Eintrages angegeben werden
@@ -169,18 +165,17 @@ Liste der Command Optionen und eine kurze Erklärung
 | deletedUsersBehaviour= | archive, delete oder disable\_login | Verhalten für gelöschte LDAP Benutzer. Sollen diese archiviert, gelöscht oder soll das Login deaktiviert werden |
 | disabledUsersBehaviour= | archive, delete oder disable\_login | Verhalten für deaktivierte LDAP Benutzer. Sollen diese archiviert, gelöscht oder soll das Login deaktiviert werden |
 | rooms\[\]="" | \["Raum 01"\]="userPrincipalName" | Hier wir dein Raum einem LDAP Benutzer statisch zugewiesen |
-| attributes\[\]= | attributes\[i-doit Feld\]=AD Attribut | Mögliche i-doit Felder: academic\_degree, function, service\_designation, street, city, zip\_code, phone\_company, phone\_home, phone\_mobile, fax, pager, personnel\_number, department, company, office, ldap\_id, ldap\_dn, description. Wenn hier benutzerdefinierte Informationen gespeichert werden sollen, kann die [Kategorieerweiterung](../../../administration/verwaltung/cmdb-einstellungen.md#kategorieerweiterung) aktiviert werden. Dann stehen noch die Felder: custom\_1 - custom\_8 zur verfügung |
-| autoReactivateUsers= | true oder false | Alle Benutzer automatisch auf den Status normal gesetzt bevor diese gesynct werden. Diese funktion ist nur für OpenLDAP und NDS notwendig, da diese im Active Directory immer aktiviert ist |
-| ignoreUsersWithAttributes\[\]= | ignoreUsersWithAttributes\[\]="sn" | Deaktiviert die Syncronisation von Benutzern bei denen z.B. der "sn"(Last Name) im AD leer ist. Hier können mehrere AD Attribute verwendet werden, siehe Beispiel |
-| ignoreFunction= | empty\*, !empty, isset\*, !isset | Die Prüffunktion für "ignoreUsersWithAttributes". Wird der Wert auf "empty" gesetzt, prüft die Funktion ob der angegebene "ignoreUsersWithAttributes" Wert leer ist. Trifft dies zu wird der User nicht Syncronisiert. |
+| attributes\[\]= | attributes\[i-doit Feld\]=AD Attribut | Mögliche i-doit Felder: academic\_degree, function, service\_designation, street, city, zip\_code, phone\_company, phone\_home, phone\_mobile, fax, pager, personnel\_number, department, company, office, ldap\_id, ldap\_dn, description. Wenn hier benutzerdefinierte Informationen gespeichert werden sollen, kann die [Kategorieerweiterung](../../../administration/verwaltung/cmdb-einstellungen.md#kategorieerweiterung) aktiviert werden. Dann stehen noch die Felder: custom\_1 - custom\_8 zur Verfügung |
+| autoReactivateUsers= | true oder false | Alle Benutzer automatisch auf den Status normal gesetzt bevor diese gesynct werden. Diese Funktion ist nur für OpenLDAP und NDS notwendig, da diese im Active Directory immer aktiviert ist |
+| ignoreUsersWithAttributes\[\]= | ignoreUsersWithAttributes\[\]="sn" | Deaktiviert die Synchronisation von Benutzern bei denen z.B. der "sn"(Last Name) im AD leer ist. Hier können mehrere AD Attribute verwendet werden, siehe Beispiel |
+| ignoreFunction= | empty\*, !empty, isset\*, !isset | Die Prüffunktion für "ignoreUsersWithAttributes". Wird der Wert auf "empty" gesetzt, prüft die Funktion ob der angegebene "ignoreUsersWithAttributes" Wert leer ist. Trifft dies zu wird der User nicht Synchronisiert. |
 
 \*empty - Prüft, ob eine Variable einen Wert enthält
 \*isset - Prüft, ob eine Variable existiert und ob sie nicht NULL ist
 
 * * *
 
-Beispiel für den Command [import-syslog](../console/optionen-und-parameter-der-console.md#import-syslog)
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+### Beispiel für den Command [import-syslog](../console/optionen-und-parameter-der-console.md#import-syslog)
 
 Für diesen Command gibt es keine eigenen Optionen daher verwenden wir nur die benötigten Optionen [user](../console/optionen-und-parameter-der-console.md#import-syslog), [password](../console/optionen-und-parameter-der-console.md#import-syslog) und [tenantId](../console/optionen-und-parameter-der-console.md#import-syslog).
 
@@ -215,3 +210,4 @@ Für diesen Command gibt es keine eigenen Optionen daher verwenden wir nur die b
     alertlevels[] = 2
     alertlevels[] = 1
     alertlevels[] = 1
+```
