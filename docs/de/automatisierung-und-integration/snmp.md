@@ -5,8 +5,8 @@ Die SNMP-Kategorie erlaubt es, in Echtzeit SNMP Werte aus Objekten auszulesen un
 !!! info ""
     Dieser Artikel wurde zuletzt für i-doit Version 1.18.2 geprüft
 
-Voraussetzungen
----------------
+## Voraussetzungen
+
 
 Um diese Kategorie nutzen zu können benötigt _i-doit_ das SNMP Modul von PHP. Unter Debian lässt sich dies installieren mit dem Befehl:
 
@@ -29,7 +29,7 @@ Um unnötige Fehlersuche zu vermeiden begeben wir uns erst einmal per SSH auf di
 !!! info
     Die Details zum Thema SNMP und diesem Aufruf lassen wir an dieser Stelle weg. Informationen über die OID .1.3.6.1.2.1.2.2.1.1 gibt es beispielsweise hier: [http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1](http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1)
 
-Das Ergebnis in unserem Falle sieht folgender massen aus:
+Das Ergebnis in unserem Falle sieht folgendermaßen aus:
 
     iso.3.6.1.2.1.2.2.1.1.1 = INTEGER: 1
     iso.3.6.1.2.1.2.2.1.1.2 = INTEGER: 2
@@ -61,7 +61,7 @@ Damit beschließen wir das praktische Beispiel und suchen nun nach der Ursache f
 | OID URL | Beschreibung |
 | --- | --- |
 | [http://oid-info.com/get/1.3.6.1.2.1.1.1](http://oid-info.com/get/1.3.6.1.2.1.1.1) | "A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software." |
-| [http://oid-info.com/get/1.3.6.1.2.1.2.2.1.2](http://oid-info.com/get/1.3.6.1.2.1.2.2.1.2) | "A textual string containing information about theinterface. This string should include the name of the manufacturer, the product name and the version of the interface hardware/software." |
+| [http://oid-info.com/get/1.3.6.1.2.1.2.2.1.2](http://oid-info.com/get/1.3.6.1.2.1.2.2.1.2) | "A textual string containing information about the interface. This string should include the name of the manufacturer, the product name and the version of the interface hardware/software." |
 | [http://oid-info.com/get/1.3.6.1.2.1.2.2.1.14](http://oid-info.com/get/1.3.6.1.2.1.2.2.1.14) | "For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character- oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them  <br>from being deliverable to a higher-layer protocol.  <br>Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime." |
 | [http://oid-info.com/get/1.3.6.1.2.1.1.4](http://oid-info.com/get/1.3.6.1.2.1.1.4) | "The textual identification of the contact person for  <br>this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string." |
 | [http://oid-info.com/get/1.3.6.1.2.1.1.3](http://oid-info.com/get/1.3.6.1.2.1.1.3) | "The time (in hundredths of a second) since the  <br>network management portion of the system was last re-initialized." |
