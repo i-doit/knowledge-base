@@ -93,26 +93,30 @@ From the objects in i-doit which present a location, the location view creates a
 The line spacing of categories can be adjusted in the User settings.
 
 E.g. is the line spacing set to small, the lines are closer to each other.
+
 [![Line spacing small](../assets/images/en/basics/web-gui/12-gui.png)](../assets/images/en/basics/web-gui/12-gui.png)
 
 and here a example with a large configured line spacing.
+
 [![Line spacing large](../assets/images/en/basics/web-gui/13-gui.png)](../assets/images/en/basics/web-gui/13-gui.png)
 
 ## Spacing in menu trees
 
-The menu tree spacing lets you adjust the spacing between the menu items.
+The menu tree spacing lets you adjust the spacing between the menu items.<br>
 E.g. is the menu tree spacing set to small, the menu items are closer to each other.
+
 [![menu tree spacing small](../assets/images/en/basics/web-gui/14-gui.png)](../assets/images/en/basics/web-gui/14-gui.png)
 
 and here a example with a large configured menu tree spacing.
+
 [![menu tree spacing large](../assets/images/en/basics/web-gui/15-gui.png)](../assets/images/en/basics/web-gui/15-gui.png)
 
 ## Display spacers
 
-Here you are able to configure if line spacers are displayed in categories
-E.g. is display spacers set to yes, the spacers are displayed.
+Here, you are able to configure if line spacers are displayed in categories. For example, if 'display spacers' is set to yes, the spacers will be displayed.
+
 [![display spacers](../assets/images/en/basics/web-gui/16-gui.png)](../assets/images/en/basics/web-gui/16-gui.png)
 
 and here a example with disabled spacers.
-[![do not display spacers](../assets/images/en/basics/web-gui/17-gui.png)](../assets/images/en/basics/web-gui/17-gui.png)
 
+[![do not display spacers](../assets/images/en/basics/web-gui/17-gui.png)](../assets/images/en/basics/web-gui/17-gui.png)
