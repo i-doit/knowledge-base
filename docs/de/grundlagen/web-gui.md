@@ -86,8 +86,8 @@ Die Zeilenabstände der Kategorien können in den Benutzereinstellungen angepass
 
 Ist der Zeilenabstand auf "Klein" gestellt, sind die Zeilen näher beieinander.
 
-[![zeilenabstand klein](../assets/images/en/basics/web-gui/12-gui.png)](../assets/images/en/basics/web-gui/12-gui.png)
+[![zeilenabstand klein](../assets/images/de/grundlagen/web-gui/14-gui.png)](../assets/images/de/grundlagen/web-gui/14-gui.png)
 
 Hier ein Beispiel für einen großen Zeilenabstand.
 
-[![zeilenabstand groß](../assets/images/en/basics/web-gui/13-gui.png)](../assets/images/en/basics/web-gui/13-gui.png)
+[![zeilenabstand groß](../assets/images/de/grundlagen/web-gui/15-gui.png)](../assets/images/de/grundlagen/web-gui/15-gui.png)

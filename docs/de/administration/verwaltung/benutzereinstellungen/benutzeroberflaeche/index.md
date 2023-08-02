@@ -7,8 +7,8 @@ Hier finden Sie die Einstellungen für die Benutzeroberfläche
 | Option | Wert |
 | - | - |
 | Zeilenabstände | [Klein oder Mittel oder Groß](../../../../grundlagen/web-gui.md) |
-| Abstände in Menübäumen | [Klein oder Mittel oder Groß](../../../../basics/web-gui.md#spacing-in-menu-trees)  |
-| Abstandhalter darstellen | [Ja oder Nein](../../../../basics/web-gui.md#display-spacers) |
+| Abstände in Menübäumen | [Klein oder Mittel oder Groß](../../../../grundlagen/web-gui.md)  |
+| Abstandhalter darstellen | [Ja oder Nein](../../../../grundlagen/web-gui.md) |
 
 ## Kategorien
 
@@ -16,9 +16,9 @@ Hier finden Sie die Einstellungen für die Benutzeroberfläche
 | - | - |
 | Kabelansicht direkt öffnen | Ja oder Nein |
 
-## Main menu
+## Hauptmenü
 
-| Option | Value |
+| Option | Wert |
 | - | - |
 | Show "my-doit" in the main menu | Yes or No |
 | Show object type group as dropdown | Yes or No |
@@ -34,8 +34,8 @@ Hier finden Sie die Einstellungen für die Benutzeroberfläche
 
 | Option | Value |
 | - | - |
-| Default treeview | [Object view](../../../../basics/web-gui.md#object-view)<br>[Location view](../../../../basics/web-gui.md#location-view) |
-| Treeview type | [Physical location or Logical location or Combined view](../../../../basics/web-gui.md#location-view) |
+| Default treeview | [Object view](../../../../grundlagen/web-gui.md)<br>[Location view](../../../../grundlagen/web-gui.md) |
+| Treeview type | [Physical location or Logical location or Combined view](../../../../grundlagen/web-gui.md) |
 | Hide empty object types | Yes or No |
 | Hide empty categories | Yes or No |
 
