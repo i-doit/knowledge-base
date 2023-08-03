@@ -14,21 +14,21 @@ Create a new [category](../../../basics/structure-of-the-it-documentation.md) en
 
 ### Request parameters
 
-| Key | JSON data type | Required |Description |
-| --- | --- | --- | --- |
-| **objID** | Integer | Yes | Object identifier, for example: **42** |
-| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **C__CATG__MODEL** |
-| **data** | Object | Yes | [Attributes](../category-fields-for-data-arrays.md) with their values, for example: <br>```{ "manufacturer": "Name of manufacturer", "title": "Name of model" }```|
+| Key          | JSON data type | Required | Description                                                                                                                                                        |
+| ------------ | -------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **objID**    | Integer        | Yes      | Object identifier, for example: **42**                                                                                                                             |
+| **category** | String         | Yes      | [Category constant](../category-fields-for-data-arrays.md), for example: **C__CATG__MODEL**                                                                        |
+| **data**     | Object         | Yes      | [Attributes](../category-fields-for-data-arrays.md) with their values, for example: <br>```{ "manufacturer": "Name of manufacturer", "title": "Name of model" }``` |
 
 ### Response parameters
 
 JSON key **result** contains a JSON object.
 
-| Key | JSON data type | Description |
-| --- | --- | --- |
-| **id** | String | Entry identifier (as numeric string) |
-| **message** | String | Some information |
-| **success** | Boolean | Should always be **true** |
+| Key         | JSON data type | Description                          |
+| ----------- | -------------- | ------------------------------------ |
+| **id**      | String         | Entry identifier (as numeric string) |
+| **message** | String         | Some information                     |
+| **success** | Boolean        | Should always be **true**            |
 
 ### Example
 
@@ -72,10 +72,10 @@ Read one or more [category](../../../basics/structure-of-the-it-documentation.md
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **objID** | Integer | Yes | Object identifier, for example: **42** |
-| **category** | String | Yes | Category constant, for example: **"C__CATG__MODEL"** |
+| Key          | JSON data type | Required | Description                                          |
+| ------------ | -------------- | -------- | ---------------------------------------------------- |
+| **objID**    | Integer        | Yes      | Object identifier, for example: **42**               |
+| **category** | String         | Yes      | Category constant, for example: **"C__CATG__MODEL"** |
 
 ### Response parameters
 
@@ -85,11 +85,11 @@ JSON key **result** contains an array of JSON objects. Each object contains [all
 
     Even if it is a [single-value category](../../../basics/structure-of-the-it-documentation.md) or a [multi-value category](../../../basics/structure-of-the-it-documentation.md) with only 1 entry, the JSON key **result** contains always an array of JSON objects.
 
-| Key | JSON data type | Description |
-| --- | --- | --- |
-| **id** | String | Entry identifier (as numeric string) |
-| **objID** | String | Object identifier (as numeric string) |
-| …   | Mixed | Optional attributes with values depending on requested category |
+| Key       | JSON data type | Description                                                     |
+| --------- | -------------- | --------------------------------------------------------------- |
+| **id**    | String         | Entry identifier (as numeric string)                            |
+| **objID** | String         | Object identifier (as numeric string)                           |
+| …         | Mixed          | Optional attributes with values depending on requested category |
 
 ### Example
 
@@ -147,21 +147,21 @@ JSON key **result** contains an array of JSON objects. Each object contains [all
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **objID** | Integer | Yes | Object identifier, for example: **42** |
-| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__MODEL"** |
-| **data** | Object | Yes | [Attributes](../category-fields-for-data-arrays.md) which will be updated |
-| **data.category_id** | Integer | No  | Entry identifier (only required for [multi-value categories](../../../basics/structure-of-the-it-documentation.md)) |
+| Key                  | JSON data type | Required | Description                                                                                                         |
+| -------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------------------------------- |
+| **objID**            | Integer        | Yes      | Object identifier, for example: **42**                                                                              |
+| **category**         | String         | Yes      | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__MODEL"**                       |
+| **data**             | Object         | Yes      | [Attributes](../category-fields-for-data-arrays.md) which will be updated                                           |
+| **data.category_id** | Integer        | No       | Entry identifier (only required for [multi-value categories](../../../basics/structure-of-the-it-documentation.md)) |
 
 ### Response parameters
 
 JSON key **result** contains a JSON object.
 
-| Key | JSON data type | Description |
-| --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Should be **"Category entry successfully saved"** |
+| Key         | JSON data type | Description                                       |
+| ----------- | -------------- | ------------------------------------------------- |
+| **success** | Boolean        | Should be **true**                                |
+| **message** | String         | Should be **"Category entry successfully saved"** |
 
 ### Example
 
@@ -210,20 +210,20 @@ JSON key **result** contains a JSON object.
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **objID** | Integer | Yes | Object identifier, for example: **42** |
-| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__IP"** |
-| **cateID** or **id** | Integer | Yes | Entry identifier, for example: **3** |
+| Key                  | JSON data type | Required | Description                                                                                |
+| -------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------ |
+| **objID**            | Integer        | Yes      | Object identifier, for example: **42**                                                     |
+| **category**         | String         | Yes      | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__IP"** |
+| **cateID** or **id** | Integer        | Yes      | Entry identifier, for example: **3**                                                       |
 
 ### Response
 
 JSON key **result** contains a JSON object.
 
-| Key | JSON data type | Description |
-| --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
+| Key         | JSON data type | Description        |
+| ----------- | -------------- | ------------------ |
+| **success** | Boolean        | Should be **true** |
+| **message** | String         | Some information   |
 
 
 ### Example
@@ -265,21 +265,21 @@ It works for [multi-value categories](../../../basics/structure-of-the-it-docume
 
 ### Request parameters
 
-| **Key** | **JSON data type** | **Required** | **Description** |
-| --- | --- | --- | --- |
-| **object** | Integer | Yes | Object identifier, for example: **456** |
-| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
-| **data** | Object | Yes | ```{ "title":"Name of the access", "description": "description of the access" }``` |
+| **Key**      | **JSON data type** | **Required** | **Description**                                                                                |
+| ------------ | ------------------ | ------------ | ---------------------------------------------------------------------------------------------- |
+| **object**   | Integer            | Yes          | Object identifier, for example: **456**                                                        |
+| **category** | String             | Yes          | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
+| **data**     | Object             | Yes          | ```{ "title":"Name of the access", "description": "description of the access" }```             |
 
 ### Response body
 
 JSON key **result** contains a JSON object.
 
-| **Key** | **JSON data type** | **Description** |
-| --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
-| **entry** | Integer | Entry identifier, for example: **35** |
+| **Key**     | **JSON data type** | **Description**                       |
+| ----------- | ------------------ | ------------------------------------- |
+| **success** | Boolean            | Should be **true**                    |
+| **message** | String             | Some information                      |
+| **entry**   | Integer            | Entry identifier, for example: **35** |
 
 ### Example
 
@@ -338,26 +338,26 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-### cmdb.category.quickpurge
+## cmdb.category.quickpurge
 
 If **Quickpurge** is [enabled](../../../basics/life-and-documentation-cycle.md), purge a category entry of an object directly from the database.
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **objID** | Integer | Yes | Object identifier, for example: **42** |
-| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__IP"** |
-| **cateID** or **id**  | Integer | Yes | Entry identifier, for example: **3** |
+| Key                  | JSON data type | Required | Description                                                                                |
+| -------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------ |
+| **objID**            | Integer        | Yes      | Object identifier, for example: **42**                                                     |
+| **category**         | String         | Yes      | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__IP"** |
+| **cateID** or **id** | Integer        | Yes      | Entry identifier, for example: **3**                                                       |
 
 ### Response body
 
 JSON key **result** contains a JSON object.
 
-| Key | JSON data type | Description |
-| --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
+| Key         | JSON data type | Description        |
+| ----------- | -------------- | ------------------ |
+| **success** | Boolean        | Should be **true** |
+| **message** | String         | Some information   |
 
 ### Example
 
@@ -391,26 +391,26 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-### cmdb.category.purge
+## cmdb.category.purge
 
 Purge a [category](../../../basics/structure-of-the-it-documentation.md) entry of an object.It works for [multi-value categories](../../../basics/structure-of-the-it-documentation.md#multi-value-category) and [single-value category](../../../basics/structure-of-the-it-documentation.md#single-value-category) .
 
 ### Request parameters
 
-| **Key** | **JSON data type** | **Required** | **Description** |
-| --- | --- | --- | --- |
-| **object** | Integer | Yes | Object identifier, for example: **456** |
-| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
-| **entry** | Integer | Yes | Entry identifier, for example: **33** |
+| **Key**      | **JSON data type** | **Required** | **Description**                                                                                |
+| ------------ | ------------------ | ------------ | ---------------------------------------------------------------------------------------------- |
+| **object**   | Integer            | Yes          | Object identifier, for example: **456**                                                        |
+| **category** | String             | Yes          | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
+| **entry**    | Integer            | Yes          | Entry identifier, for example: **33**                                                          |
 
 ### Response body
 
 JSON key **result** contains a JSON object.
 
-| **Key** | **JSON data type** | **Description** |
-| --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
+| **Key**     | **JSON data type** | **Description**    |
+| ----------- | ------------------ | ------------------ |
+| **success** | Boolean            | Should be **true** |
+| **message** | String             | Some information   |
 
 ### Example
 
@@ -444,7 +444,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-### cmdb.category.recycle
+## cmdb.category.recycle
 
 **Limitations:**
 
@@ -453,20 +453,20 @@ JSON key **result** contains a JSON object.
 
 ### Request parameters
 
-| **Key** | **JSON data type** | **Required** | **Description** |
-| --- | --- | --- | --- |
-| **object** | Integer | Yes | Object identifier, for example: **456** |
-| **category** | String | Yes | [Category constant](../../../basics/categories-and-attributes.md), for example: **"C__CATG__ACCESS"** |
-| **entry** | Integer | Yes | Entry identifier, for example: **32** |
+| **Key**      | **JSON data type** | **Required** | **Description**                                                                                       |
+| ------------ | ------------------ | ------------ | ----------------------------------------------------------------------------------------------------- |
+| **object**   | Integer            | Yes          | Object identifier, for example: **456**                                                               |
+| **category** | String             | Yes          | [Category constant](../../../basics/categories-and-attributes.md), for example: **"C__CATG__ACCESS"** |
+| **entry**    | Integer            | Yes          | Entry identifier, for example: **32**                                                                 |
 
 ### Response boday
 
 JSON key **result** contains a JSON object.
 
-| **Key** | **JSON data type** | **Description** |
-| --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
+| **Key**     | **JSON data type** | **Description**    |
+| ----------- | ------------------ | ------------------ |
+| **success** | Boolean            | Should be **true** |
+| **message** | String             | Some information   |
 
 ### Example
 
@@ -500,7 +500,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-### cmdb.category.archive
+## cmdb.category.archive
 
 **Limitations**
 
@@ -509,20 +509,20 @@ JSON key **result** contains a JSON object.
 
 ### Request parameters
 
-| **Key** | **JSON data type** | **Required** | **Description** |
-| --- | --- | --- | --- |
-| **object** | Integer | Yes | Object identifier, for example: **456** |
-| **category** | String | Yes | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
-| **entry** | Integer | Yes | Entry identifier, for example: **32** |
+| **Key**      | **JSON data type** | **Required** | **Description**                                                                                |
+| ------------ | ------------------ | ------------ | ---------------------------------------------------------------------------------------------- |
+| **object**   | Integer            | Yes          | Object identifier, for example: **456**                                                        |
+| **category** | String             | Yes          | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
+| **entry**    | Integer            | Yes          | Entry identifier, for example: **32**                                                          |
 
 ### Response body
 
 JSON key **result** contains a JSON object.
 
-| **Key** | **JSON data type** | **Description** |
-| --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
+| **Key**     | **JSON data type** | **Description**    |
+| ----------- | ------------------ | ------------------ |
+| **success** | Boolean            | Should be **true** |
+| **message** | String             | Some information   |
 
 ### Example
 
