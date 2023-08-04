@@ -35,11 +35,11 @@ Click on the respective value in the overview when you want to edit the attribut
 
 *   The changing and deleting of values has an immediate effect on the IT documentation: When you change a value in the **Dialog-Admin**, it changes automatically everywhere else. When you delete a value, it will be deleted everywhere else where it was used. We recommend searching for the objects which use the respective value via a [report](../evaluation/report-manager.md) before you delete it. With help of this report you can choose an alternative value for all the listed objects, for example via [list editing](../efficient-documentation/list-editing.md).
 
-!!! warning "Delete Values"
+!!! attention "Delete Values"
 
-When you want to delete a value, mark the checkbox of this value within the overview. Then click the **Purge** button and the value will be deleted irrevocably.
-
-For each value, the tabular overview shows whether the value can be deleted or not. The reason for this is that some values are required by necessity by i-doit to guarantee certain functionalities.
+    When you want to delete a vlaue, mark the checkbox of this value within the overview. Then click the **Purge** button and the value will be deleted irrevocably.
+    
+    For each  value, the tabular overview shows whether the value can be deleted or not. The reason for this is that some values are required by necessity by i-doit to guarantee certain functionalities.
 
 ## Set Permissions
 
