@@ -4,18 +4,18 @@ In many cases, the IT documentation encloses very sensitive data which have to b
 
 !!! info "Why is this article so extensive?"
 
-    Admittedly, this article is long. The subject “Information Security of Web Applications” is a very wide field which you can discuss at large.
+    Admittedly, this article is long. The subject "Information Security of Web Applications" is a very wide field which you can discuss at large.
 
     Nevertheless: On account of the quantity of sensible measures we merely scratch the surface and refer to further information wherever possible. Hence, this article is intended as a collection of ideas. The mentioned single measures should always be treated with a healthy common sense and the necessary know-how.
 
 !!! info "Why are these measurements not a part of the installation?"
 
-    The tips we describe in this article do not belong to the normal extent of an [i-doit installation](../installation/index.md) and are no necessary [system requirements](../installation/system-requirements.md). They are additional safety measures mainly concerning the operating system and the installed packages.
+    The tips we describe in this article do not belong to the normal extent of an [i-doit installation](../installation/index.md) and are no necessary [system requirements](../installation/system-requirements.md). They are additional safety measures mainly concerning the operating system and the installed packages.
 
 Before Installing i-doit
 ------------------------
 
-Before you [install](../installation/index.md) i-doit, you can already carry out some measures to strengthen the system on which i-doit is based. As an example, we use a [Debian GNU/Linux](../installation/manual-installation/debian.md) for an i-doit installation.
+Before you [install](../installation/index.md) i-doit, you can already carry out some measures to strengthen the system on which i-doit is based. As an example, we use a [Debian GNU/Linux](../installation/manual-installation/debian.md) for an i-doit installation.
 
 ### User Rights: Less is More
 
@@ -115,9 +115,9 @@ It is important that the service is not accessible from the outside. Often the s
 
 ### Securing PHP
 
-We do not join the usual ranting and raving relating to PHP because we can adequately “harden” the script language for our purposes. An important message is as follows: **PHP should always be up to date with the newest patch**. In this regard, you have to consider which major PHP versions (5.x, 7.x) are supported by PHP developers and which PHP packages are supported by the used distribution. Often distributions do not count on the latest major versions, but maintain older, more stable versions. These are patched with bug and security fixes. Therefore you should always download PHP updates as quickly as possible.
+We do not join the usual ranting and raving relating to PHP because we can adequately "harden" the script language for our purposes. An important message is as follows: **PHP should always be up to date with the newest patch**. In this regard, you have to consider which major PHP versions (5.x, 7.x) are supported by PHP developers and which PHP packages are supported by the used distribution. Often distributions do not count on the latest major versions, but maintain older, more stable versions. These are patched with bug and security fixes. Therefore you should always download PHP updates as quickly as possible.
 
-We already described the required settings for the operation of i-doit in the [system settings](../system-administration/system-settings/index.md). **You can supplement these settings by additional ones.** For this purpose, we create a new.ini file:
+We already described the required settings for the operation of i-doit in the [tenant mangement](../system-administration/administration/tenant-management/index.md). **You can supplement these settings by additional ones.** For this purpose, we create a new.ini file:
 
     sudo editor /etc/php/7.2/mods-available/zz_security.ini
 
@@ -143,7 +143,7 @@ The **security extension** **[Suhosin](https://suhosin.org/)** is available for 
 
 i-doit is a client server application, in other words, there is a server instance which communicates with a client instance via a network. Furthermore, i-doit is able to communicate via interfaces with other server instances, for example, [LDAP](../user-authentication-and-management/ldap-directory/index.md) for the registration of users.
 
-In order to secure these communication connections, you can use the transport encryption via TLS. For example, you can equip the Apache web server with a trustworthy X.509 certificate, so that a web browser can **access the IT documentation via HTTPS**. You should keep a lot of things in mind in connection with certificates, such as the period of validity, chain of trust, used ciphers and hashes. Mozilla offers a suitable [generator for the Apache configuration](https://mozilla.github.io/server-side-tls/ssl-config-generator/) and provides a lot of [background information about the TLS on the server side](https://wiki.mozilla.org/Security/Server_Side_TLS). Other good sources are the [SSL Labs by Qualys](https://www.ssllabs.com/ssltest/) and the website [securityheaders.io](http://securityheaders.io) which also carry out suitable tests of the configuration.
+In order to secure these communication connections, you can use the transport encryption via TLS. For example, you can equip the Apache web server with a trustworthy X.509 certificate, so that a web browser can **access the IT documentation via HTTPS**. You should keep a lot of things in mind in connection with certificates, such as the period of validity, chain of trust, used ciphers and hashes. Mozilla offers a suitable [generator for the Apache configuration](https://mozilla.github.io/server-side-tls/ssl-config-generator/) and provides a lot of [background information about the TLS on the server side](https://wiki.mozilla.org/Security/Server_Side_TLS). Other good sources are the [SSL Labs by Qualys](https://www.ssllabs.com/ssltest/) and the website [securityheaders.io](http://securityheaders.io) which also carry out suitable tests of the configuration.
 
 Here is an example for Debian GNU/Linux 8.x to establish different types of security mechanisms. You have to adjust the corresponding paths and domain names:
 
@@ -219,7 +219,7 @@ When you decide to encrypt your data, you have several possibilities: Under GNU/
 
 **Every port which is not open to the outside helps to reduce attack vectors.** As i-doit is a web application, the ports 80 and 443 are often sufficient. Apache can be limited with the Lists setting in the file /etc/apache2/ports.conf and a suitable VHost configuration. By no means should MariaDB/MySQL be accessible from the outside. To administer the system via SSH, a port has to be opened (default port: 22).
 
-**But beware of “Security by Obscurity” as this method is an extremely poor protective measure.** With this method you use non-default ports consisting of four or five figures. Apache often runs under port 8080 and SSH under port 8022. This method presents no big challenge for an attacker, because port scanners like nmap can find these open ports without any problems.
+**But beware of "Security by Obscurity" as this method is an extremely poor protective measure.** With this method you use non-default ports consisting of four or five figures. Apache often runs under port 8080 and SSH under port 8022. This method presents no big challenge for an attacker, because port scanners like nmap can find these open ports without any problems.
 
 Preventing the ICMP (for example, used by ping) is also [a bad idea](http://shouldiblockicmp.com/).
 
@@ -326,7 +326,7 @@ Those who want to just quickly set up i-doit for test purposes unfortunately oft
 
 #### MySQL User
 
-This user is already created during the [setup](../installation/manual-installation/setup.md). The password can be changed afterwards with a few SQL commands. We assume that the user is called idoit and that the name of the [system database](../software-development/database-model/index.md) is idoit_system. At first you log in:
+This user is already created during the [setup](../installation/manual-installation/setup.md). The password can be changed afterwards with a few SQL commands. We assume that the user is called idoit and that the name of the [system database](../software-development/database-model/index.md) is idoit_system. At first you log in:
 
     mysql -uroot -p -hlocalhost
 
@@ -334,11 +334,11 @@ Then you change the password:
 
     ALTER USER 'idoit'@'localhost' IDENTIFIED BY 'thisistotallysecure!!11';
 
-This password has also to be communicated to i-doit. First in the system database, so that the [tenants' databases](../software-development/database-model/index.md) can be accessed:
+This password has also to be communicated to i-doit. First in the system database, so that the [tenants' databases](../software-development/database-model/index.md) can be accessed:
 
     UPDATE idoit_system.isys_mandator SET isys_mandator__db_pass = 'thisistotallysecure!!11' WHERE isys_mandator__db_user = 'idoit';
 
-Lastly, the password has to be stored in the central configuration, so that the system database can be accessed. This can be made either under **Config** in the Admin Center or in the file src/config.inc.php in the installation directory of i-doit.
+Lastly, the password has to be stored in the central configuration, so that the system database can be accessed. This can be made either under **Config** in the Admin Center or in the file src/config.inc.php in the installation directory of i-doit.
 
 #### User for the Admin Center
 
@@ -356,7 +356,7 @@ A default user is created already during the installation of the operating syste
 
 ### Activation of CSRF Tokens
 
-i-doit supplies several measures to impede attacks called [**Cross-Site-Request-Forgery** (CSRF or XSRF)](https://en.wikipedia.org/wiki/Cross-site_request_forgery). You can activate these measures under **Administration → System settings → Security → CSRF-Token** by choosing **Yes**.
+i-doit supplies several measures to impede attacks called [**Cross-Site-Request-Forgery** (CSRF or XSRF)](https://en.wikipedia.org/wiki/Cross-site_request_forgery). You can activate these measures under **Administration → System settings → Security → CSRF-Token** by choosing **Yes**.
 
 ### Two-factor Authentication
 
@@ -378,7 +378,7 @@ After [Cronjobs](../automation-and-integration/cli/index.md) have been set up, n
 
 Speaking of e-mails: When you want the system to send e-mails (like Logwatch does on a daily basis), you should test the process beforehand. A suitable SMTP server should be accessible. Perhaps it helps to use a simple service, like [sSMTP](https://wiki.debian.org/sSMTP), as a relay server.
 
-Another possibility to check the system constantly for weak spots from the outside is the application of  a vulnerability scanner, like [OpenVAS](http://www.openvas.org/)[.](http://www.openvas.org/)
+Another possibility to check the system constantly for weak spots from the outside is the application of  a vulnerability scanner, like [OpenVAS](http://www.openvas.org/)[.](http://www.openvas.org/)
 
 Thinking Outside the Box
 ------------------------
@@ -403,7 +403,7 @@ You should also consider the network infrastructure in which the i-doit system r
 
 One method can be a direct separation of the internet. A **HTTP proxy** would permit the system to download updates.
 
-Another measure is the application of a **dedicated net for the administration**. Thus, you could take the open port for SSH out of the “line of fire”. Only the core function, the Apache web server, would be accessible. We leave it up to you to decide whether you achieve this by physically separating the subnets or by VLAN or VPN.
+Another measure is the application of a **dedicated net for the administration**. Thus, you could take the open port for SSH out of the "line of fire". Only the core function, the Apache web server, would be accessible. We leave it up to you to decide whether you achieve this by physically separating the subnets or by VLAN or VPN.
 
 ### IPv4 versus IPv6
 
@@ -416,6 +416,6 @@ Additional Links
 
 If you want to delve deeper into the matter (and who would not want to after studying this article?), you can find further information here:
 
-*   The blog article “[My First 10 Minutes On a Server - Primer for Securing Ubuntu](https://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/)“ is a good start for a (secure) administration of a Linux operating system.
+*   The blog article "[My First 10 Minutes On a Server - Primer for Securing Ubuntu](https://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/)" is a good start for a (secure) administration of a Linux operating system.
 *   In connection with the IT-Grundschutz standard (standard for basic IT protection) the German Federal Office for Information Security (BSI) issues [IT-Grundschutz catalogues](https://www.bsi.bund.de/EN/Topics/ITGrundschutz/ITGrundschutzCatalogues/itgrundschutzcatalogues_node.html) which list a lot of risks affecting IT in daily life. In addition, the BSI provides suitable measures to minimize the risks. In many cases, the catalogues serve as a source for other standards and norms, such as ISO27001. Particularly the following catalogue components are a good read for the safe operation of i-doit: B 3.101 General Server, B 3.102 Servers under Unix, B 3.304 Virtualisation, B 5.4 Web Servers, B 5.7 Datenbases, B 5.21 Web Applications, B 5.24 Web Services. You can download the latest catalogue from the [IT-Grundschutz International website](https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzInternational/international.html).
 *   The [Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page) is a non-profit NGO dedicated to ensure information security of web applications. They point out current attack scenarios, but also measures to minimize the risks.

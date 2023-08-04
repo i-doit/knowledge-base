@@ -6,8 +6,7 @@ i-doit verfügt über ein Kommandozeilen-Werkzeug namens Controller.
 
     Der Controller ist seit Version 1.10 als veraltet markiert und wird in einer der nächsten Versionen entfernt werden. Als Alternative gilt die [Console](../cli/console/index.md).
 
-Erste Schritte
---------------
+## Erste Schritte
 
 Der Controller befindet sich im Hauptverzeichnis von i-doit. Wenn Du laut [Installationsanleitung](../../installation/manuelle-installation/setup.md) vorgegangen bist, befindet sich das Hauptverzeichnis bei [Debian](../../installation/manuelle-installation/debian.md)\-basierten Betriebssystemen unter **/var/www/html/i-doit/**:
 
@@ -39,8 +38,7 @@ Da [Windows](../../installation/manuelle-installation/microsoft-windows-server/i
 
     php.exe controller.php
 
-Mandant und Credentials
------------------------
+## Mandant und Credentials
 
 Um den Controller verwenden zu können, ist eine Authentifizierung gegenüber i-doit notwendig. Hierfür benötigt man Benutzername (**-u**), Passwort (**-p**) und die eindeutige ID des zu verwendenen Mandanten (**-i**).
 
@@ -48,7 +46,7 @@ Um den Controller verwenden zu können, ist eine Authentifizierung gegenüber i-
 
     Es wird empfohlen, für den Controller einen dedizierten Benutzer in i-doit anzulegen. Soll dieser als lokaler Benutzer konfiguriert werden, erstellt man ihn als Objekt vom Typ **Personen** mit den gewünschten Credentials in der Kategorie **Personen → Login**. Dieser Benutzer sollte Admin-Rechte erhalten. Dies kann durch die Zuordnung zur vordefinierten **Personengruppe** Admin geschehen.
 
-Um herauszufinden, welche eindeutige ID ein bestimmer Mandant hat, kann man folgendes Kommando benutzen:
+Um herauszufinden, welche eindeutige ID ein bestimmter Mandant hat, kann man folgendes Kommando benutzen:
 
 ```shell
     $ sudo -u www-data ./tenants ls
@@ -61,8 +59,7 @@ Um herauszufinden, welche eindeutige ID ein bestimmer Mandant hat, kann man folg
 
 Bei i-doit-Installationen mit nur einem Mandanten lautet die ID in der Regel **1**.
 
-Handler
--------
+## Handler
 
 Der Controller ist in der Lage, verschiedene Aktionen auszuführen. Diese werden wiederum durch Handler repräsentiert. Um einen bestimmten Handler aufzurufen, wird der Parameter **-m** benötigt.
 
