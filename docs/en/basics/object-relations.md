@@ -58,7 +58,6 @@ Objects can be in various types of relations. To provide clarification each rela
 | **Share Access** | **share is used by  <br>** | **has share access to  <br>** |
 | **Software assignment  <br>** | **is running  <br>** | **runs on  <br>** |
 | **Stacking** | **is stack for  <br>** | **is stacked with** |
-| **Support** | **supports <br>** | **is supported by <br>** |
 | **VRRP** | **has VRRP member  <br>** | **is VRRP member of  <br>** |
 | **Virtual machine  <br>** | **is host for  <br>** | **runs on  <br>** |
 | **Virtual host  <br>** | **is administration instance for  <br>** | **is managed by  <br>** |
