@@ -42,7 +42,7 @@ Wenn der Bereich my-doit nicht verwendet werden soll, kann er in der Verwaltung 
 
 Im mittleren Bereich der oberen Taskleiste findest du die einzelnen [Objekttyp](zurodnung-von-kategorien-zu-objekttypen.md) Gruppen. Dieser Bereich ist natürlich komplett von dir anpassbar und kann je nach Konfiguration anders aussehen. Durch das auswählen eines einzelnen Menu Punktes erscheinen die jeweiligen Objekttyp Gruppen innerhalb der Baumansicht im rechten Bereich der i-doit Oberfläche.
 
-[![objekttyp-gruppebwahl](../assets/images/de/grundlagen/web-gui/7-web-gui.png)](../assets/images/de/grundlagen/web-gui/7-web-gui.png)
+[![objekttyp-gruppenwahl](../assets/images/de/grundlagen/web-gui/7-web-gui.png)](../assets/images/de/grundlagen/web-gui/7-web-gui.png)
 
 ## Extras
 
@@ -83,7 +83,6 @@ Die Standortsicht bildet aus den in i-doit befindlichen Objekten die einen Stand
 ## Zeilen Abstände
 
 Die Zeilenabstände der Kategorien können in den Benutzereinstellungen angepasst werden.
-
 Ist der Zeilenabstand auf "Klein" gestellt, sind die Zeilen näher beieinander.
 
 [![zeilenabstand klein](../assets/images/de/grundlagen/web-gui/14-gui.png)](../assets/images/de/grundlagen/web-gui/14-gui.png)
@@ -91,3 +90,23 @@ Ist der Zeilenabstand auf "Klein" gestellt, sind die Zeilen näher beieinander.
 Hier ein Beispiel für einen großen Zeilenabstand.
 
 [![zeilenabstand groß](../assets/images/de/grundlagen/web-gui/15-gui.png)](../assets/images/de/grundlagen/web-gui/15-gui.png)
+
+## Abstände in Menübäumen
+
+Die Abstände der Menüpunkte können mit der Option "Abstände in Menübäumen" angepasst werden.
+Ist z.B. der Abstand zwischen den Menüpunkten auf klein eingestellt, liegen die Menüpunkte näher beieinander.
+
+[![menübaum abstand klein](../assets/images/de/grundlagen/web-gui/16-gui.png)](../assets/images/de/grundlagen/web-gui/16-gui.png)
+
+Hier ein Beispiel für einen großen Menüpunkte Abstand.
+
+[![menübaum abstand groß](../assets/images/de/grundlagen/web-gui/17-gui.png)](../assets/images/de/grundlagen/web-gui/17-gui.png)
+
+## Abstandhalter darstellen
+
+"Abstandhalter darstellen" gibt an, ob in den Kategorien Abstandshalter angezeigt werden.
+Ist z. B. "Abstandhalter anzeigen" auf "Ja" eingestellt, werden die Abstandhalter angezeigt.
+[![display spacers](../assets/images/en/basics/web-gui/16-gui.png)](../assets/images/en/basics/web-gui/16-gui.png)
+
+and here a example with disabled spacers.
+[![do not display spacers](../assets/images/en/basics/web-gui/17-gui.png)](../assets/images/en/basics/web-gui/17-gui.png)
