@@ -2,8 +2,7 @@
 
 [Objects](structure-of-the-it-documentation.md) generally do not exist separately in i-doit but are in relation to each other. The servers are contained in racks, admins maintain servers, an operating system with software is running on a server ... In this article we will elaborate on the basic concepts of object relations.
 
-Relation Types
---------------
+## Relation Types
 
 Objects can be in various types of relations. To provide clarification each relation receives a type. Many pre-defined types of relations are already supplied by i-doit in the default installation. A listing of all these types can be found at **Administration → Predefined content → Object relation types**.
 
@@ -71,8 +70,7 @@ Already documented object relations are listed in **Extras → CMDB → Relatio
 
 [![object relations](../assets/images/en/basics/object-relations/3-or.png)](../assets/images/en/basics/object-relations/3-or.png)
 
-Relation Objects
-----------------
+## Relation Objects
 
 When creating a relation between two objects, a third object of the [type](structure-of-the-it-documentation.md) **Relations** is created in the background. The object title of this object consists of the object title of the master object, followed by the description and the object title of the slave object.
 
@@ -84,9 +82,9 @@ Example:
 
 The relation object is required to save characteristics of the relation as [attributes](structure-of-the-it-documentation.md). This includes:
 
-*   **Relation type**: see above
-*   **Weighting**: see below
-*   **Service** (optional): The object relation can be directly assigned to a service.
+- **Relation type**: see above
+- **Weighting**: see below
+- **Service** (optional): The object relation can be directly assigned to a service.
 
 As it is already obvious, an object relation consists of a master and a slave object. This is a weighted relation. The slave object is dependent on the master object.
 
@@ -98,15 +96,13 @@ License requirements for objects
 
 Relation objects do not require a [license](../maintenance-and-operation/activate-license.md).
 
-Relations Category
-------------------
+## Relations Category
 
 Relations to other objects are gathered in the **Relations** [category](structure-of-the-it-documentation.md) per object. This category is assigned to each object type in a fixed way and can be opened via the arrows icon.
 
 [![Relations Category](../assets/images/en/basics/object-relations/5-or.png)](../assets/images/en/basics/object-relations/5-or.png)
 
-Implicit versus Explicit Relations
-----------------------------------
+## Implicit versus Explicit Relations
 
 Relations do not only have different types (see above) but they are also being created implicitly or explicitly. Implicit relations originate from categories. If the **Location** category is edited, for example, and an object which is higher in the hierarchy is selected in the **Location** attribute, then the implicit relation of the type **Location** will be created automatically in the background. This implicit relation is also shown in the **Relations** category at **Extras → CMDB → Relations → Locations**.
 
@@ -122,8 +118,7 @@ Implicit or explicit?
 
 So what is better: Should you use implicit or explicit relations? The answer is: implicit relations. Categories and attributes are central elements for structuring the IT documentation. Users document in categories and that is also where users look for information. Therefore it is better to document unspecific relations of the type **Dependency** explicitly in a category in which implicit and explicit relations are varied. Both possibilities can be evaluated, but only the implicit relations are transparent.
 
-Weighting
----------
+## Weighting
 
 Each relation receives a weighting, as already mentioned above. The weighting is specified as attribute in the relation object. Values between **1** and **10** are possible as weighting. They express how dependent the slave object is on the master object. **1** means **very important**, while **10** means **unimportant. 5** is the golden mean, it stands for **important** and represents the default value.
 
@@ -131,8 +126,7 @@ Example: A power supply receives its power from an UPS, so the weighting could b
 
 The Analysis module uses this weighting in combination with services and [Network Monitoring](../automation-and-integration/network-monitoring/index.md) to evaluate which services are affected by malfunctions.
 
-Parallel Relations
-------------------
+## Parallel Relations
 
 Besides the direction-based relations with master and slave objects there exist also parallel relations in i-doit. The parallel relations also set two objects in relation to each other, however, without expressing a dependency on each other.
 
@@ -142,13 +136,12 @@ A listing of all parallel relations can be found at **Extras → CMDB → Relat
 
 [![Parallel Relations](../assets/images/en/basics/object-relations/8-or.png)](../assets/images/en/basics/object-relations/8-or.png)
 
-Object Relation in a Custom Category
-------------------------------------
+## Object Relation in a Custom Category
 
 Object relations can be documented in [custom categories](custom-categories.md). You need to distinguish between two field types:
 
-*   **Object-Browser**: No relation object is created. The relation to be documented here between two objects is not listed in the **Relations** category and the [CMDB explorer](../evaluation/cmdb-explorer/index.md) does not process these relations.
-*   **Object-Relation**: Here only an implicit relation type can be given as **Addition**. Explicit relations are not shown.
+- **Object-Browser**: No relation object is created. The relation to be documented here between two objects is not listed in the **Relations** category and the [CMDB explorer](../evaluation/cmdb-explorer/index.md) does not process these relations.
+- **Object-Relation**: Here only an implicit relation type can be given as **Addition**. Explicit relations are not shown.
 
 Object browser or object relation?
 
