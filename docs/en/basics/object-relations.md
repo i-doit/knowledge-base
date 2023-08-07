@@ -10,57 +10,57 @@ Objects can be in various types of relations. To provide clarification each rela
 
 | Relation title | Description from the point of view of the master object | Description from the point of view of the slave object |
 | --- | --- | --- |
-| **Administration service** | **is administration instance for  <br>** | **is managed by  <br>** |
-| **Assigned SIM cards** | **has card  <br>** | **is assigned to** |
-| **Assigned cards** | **has card  <br>** | **is card of** |
-| **Backup** | **saves** | **saved by  <br>** |
+| **Administration service** | **is administration instance for** | **is managed by** |
+| **Assigned SIM cards** | **has card  ** | **is assigned to** |
+| **Assigned cards** | **has card  ** | **is card of** |
+| **Backup** | **saves** | **saved by** |
 | **Chassis** | **includes** | **is inserted to** |
-| **Cluster memberships  <br>** | **is member of  <br>** | **has member  <br>** |
-| **Cluster service assignment** | **is host for on  <br>** | **runs on  <br>** |
-| **Connection endpoint** | **has connection to  <br>** | **is connected with  <br>** |
-| **Connectors** | **is connected to  <br>** | **is connected with  <br>** |
-| **Contact assignment (administrates)  <br>** | **administrates** | **is administered by  <br>** |
-| **Contact assignment (is used by)** | **is used by** | **uses  <br>** |
-| **Contract assignment  <br>** | **is contract of  <br>** | **has contract assignment  <br>** |
-| **DBMS** | **administrates** | **is configured in  <br>** |
-| **Database access  <br>** | **is used by  <br>** | **has database access  <br>** |
-| **Database gateway  <br>** | **has database gateway to  <br>** | **is database gateway  <br>** |
-| **Database instance  <br>** | **is host for  <br>** | **runs on  <br>** |
-| **Database links  <br>** | **has database link to  <br>** | **is database link of  <br>** |
-| **Dependency** | **has dependency to  <br>** | **depends on  <br>** |
-| **Emergency plan  <br>** | **has emergency plan assignment to  <br>** | **is emergency plan for  <br** |
-| **FC port  <br>** | **supplies network  <br>** | **network is supplied by  <br>** |
-| **Files** | **has file assignment to  <br>** | **is file for  <br>** |
-| **Group memberships  <br>** | **is member of  <br>** | **has member  <br>** |
-| **Headquarter (Organization)  <br>** | **is headquarter of  <br>** | **is branch of  <br>** |
-| **Host address  <br>** | **supplies network  <br>** | **network is supplied by  <br>** |
-| **Interface** | **has dependency to  <br>** | **depends on  <br>** |
-| **Layer 2 Transport  <br>** | **transports Layer 2 Net  <br>** | **is transported by  <br>** |
-| **Layer 2 net assignment  <br>** | **has layer 2 net assignment  <br>** | **is layer 2 net assignment for  <br>** |
-| **Location** | **is location of  <br>** | **is located at  <br>** |
-| **Logical devices (Client)  <br>** | **is connected to  <br>** | **is connected with  <br>** |
+| **Cluster memberships** | **is member of** | **has member** |
+| **Cluster service assignment** | **is host for on** | **runs on** |
+| **Connection endpoint** | **has connection to** | **is connected with** |
+| **Connectors** | **is connected to** | **is connected with** |
+| **Contact assignment (administrates)** | **administrates** | **is administered by** |
+| **Contact assignment (is used by)** | **is used by** | **uses** |
+| **Contract assignment** | **is contract of** | **has contract assignment** |
+| **DBMS** | **administrates** | **is configured in** |
+| **Database access** | **is used by** | **has database access** |
+| **Database gateway** | **has database gateway to** | **is database gateway** |
+| **Database instance** | **is host for** | **runs on** |
+| **Database links** | **has database link to** | **is database link of** |
+| **Dependency** | **has dependency to** | **depends on** |
+| **Emergency plan** | **has emergency plan assignment to** | **is emergency plan for<br** |
+| **FC port** | **supplies network** | **network is supplied by** |
+| **Files** | **has file assignment to** | **is file for** |
+| **Group memberships** | **is member of** | **has member** |
+| **Headquarter (Organization)** | **is headquarter of** | **is branch of** |
+| **Host address** | **supplies network** | **network is supplied by** |
+| **Interface** | **has dependency to** | **depends on** |
+| **Layer 2 Transport** | **transports Layer 2 Net** | **is transported by** |
+| **Layer 2 net assignment** | **has layer 2 net assignment** | **is layer 2 net assignment for** |
+| **Location** | **is location of** | **is located at** |
+| **Logical devices (Client)** | **is connected to** | **is connected with** |
 | **Logical location** | **is logical unit of** | **is assigned to** |
 | **Manual assignment** | **has manual assignment to** | **is manual for** |
-| **Network connections  <br>** | **is connected to  <br>** | **is connected with  <br>** |
-| **Operating system  <br>** | **has operating system  <br>** | **is installed on  <br>** |
-| **Organization (Organization)** | **has member  <br>** | **belongs to  <br>** |
-| **Organization (Persons)  <br>** | **has member  <br>** | **belongs to  <br>** |
-| **Person group memberships  <br>** | **has member  <br>** | **is member of  <br>** |
-| **Ports** | **supplies network  <br>** | **network is supplied by  <br>** |
-| **Power consumer  <br>** | **supplies power to  <br>** | **obtains power from  <br>** |
-| **Remote Management Controller  <br>** | **is remotely managed by  <br>** | **is management controller of  <br>** |
-| **Replication partner  <br>** | **is Replication partner of  <br>** | **has Replication partner  <br>** |
-| **SOA-Component** | **is SOA component of  <br>** | **has SOA component  <br>** |
-| **SOA-Stacks** | **has SOA Stack  <br>** | **is SOA Stack of  <br>** |
-| **Service component  <br>** | **is Service component of  <br>** | **has Service component  <br>** |
-| **Servicecheck assignment  <br>** | **is host for  <br>** | **runs on  <br>** |
-| **Share Access** | **share is used by  <br>** | **has share access to  <br>** |
-| **Software assignment  <br>** | **is running  <br>** | **runs on  <br>** |
-| **Stacking** | **is stack for  <br>** | **is stacked with** |
-| **VRRP** | **has VRRP member  <br>** | **is VRRP member of  <br>** |
-| **Virtual machine  <br>** | **is host for  <br>** | **runs on  <br>** |
-| **Virtual host  <br>** | **is administration instance for  <br>** | **is managed by  <br>** |
-| **WAN Connection  <br>** | **provides WAN connection to  <br>** | **is connected to WAN  <br>** |
+| **Network connections** | **is connected to** | **is connected with** |
+| **Operating system** | **has operating system** | **is installed on** |
+| **Organization (Organization)** | **has member** | **belongs to** |
+| **Organization (Persons)** | **has member** | **belongs to** |
+| **Person group memberships** | **has member** | **is member of** |
+| **Ports** | **supplies network** | **network is supplied by** |
+| **Power consumer** | **supplies power to** | **obtains power from** |
+| **Remote Management Controller** | **is remotely managed by** | **is management controller of** |
+| **Replication partner** | **is Replication partner of** | **has Replication partner** |
+| **SOA-Component** | **is SOA component of** | **has SOA component** |
+| **SOA-Stacks** | **has SOA Stack** | **is SOA Stack of** |
+| **Service component** | **is Service component of** | **has Service component** |
+| **Servicecheck assignment** | **is host for** | **runs on** |
+| **Share Access** | **share is used by** | **has share access to** |
+| **Software assignment** | **is running** | **runs on** |
+| **Stacking** | **is stack for** | **is stacked with** |
+| **VRRP** | **has VRRP member** | **is VRRP member of** |
+| **Virtual machine** | **is host for** | **runs on** |
+| **Virtual host** | **is administration instance for** | **is managed by** |
+| **WAN Connection** | **provides WAN connection to** | **is connected to WAN** |
 
 Below the list of relation types a new type can be created using the **Add new value** button. If you wish to use this relation in a custom category, you have to define it as "Implicit".
 
@@ -78,7 +78,7 @@ Example:
 
 | Master object | Description of the relation | Slave object |
 | --- | --- | --- |
-| PDU-HQ-Intern-01-A | **supplies power  <br>** | ESX1 |
+| PDU-HQ-Intern-01-A | **supplies power** | ESX1 |
 
 The relation object is required to save characteristics of the relation as [attributes](structure-of-the-it-documentation.md). This includes:
 
