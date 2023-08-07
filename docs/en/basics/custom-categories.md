@@ -90,6 +90,15 @@ You can delete attributes with the **Remove** button.
     As soon as the category is in use, existing field types cannot be changed anymore in order to avoid loss of data.
     If you remove fields in the configuration, you will not be able to access their contents anymore.
 
+An interpretation is carried out below the configuration:
+
+- **Total entry count:**:<br>
+    How often was this category saved? The entries are added up per object (once with single value, per entry with multi-value).
+- **Value count**:<br>
+    Each attribute which was filled and saved is added together.
+
+[![Custom category](../assets/images/en/basics/custom-categories/8-cc.png)](../assets/images/en/basics/custom-categories/8-cc.png)
+
 As soon as your category is configured and set up, you can use the **Save** button in order to make the category available in the chosen object types.
 
 ## Technical Configuration
