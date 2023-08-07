@@ -37,8 +37,7 @@ Click on the respective value in the overview when you want to edit the attribut
 
 !!! warning "Delete Values"
 
-    When you want to delete a vlaue, mark the checkbox of this value within the overview. Then click the **Purge** button and the value will be deleted irrevocably.
-    
+    When you want to delete a vlaue, mark the checkbox of this value within the overview. Then click the **Purge** button and the value will be deleted irrevocably.<br>
     For each  value, the tabular overview shows whether the value can be deleted or not. The reason for this is that some values are required by necessity by i-doit to guarantee certain functionalities.
 
 ## Set Permissions
