@@ -28,14 +28,14 @@
         "@cyclonedx/bom": "^4.0.3",
         "cloc": "^2.11.0",
         "husky": "^8",
-        "jscpd": "^3.5.9",
+        "jscpd": "^3.5.4",
         "jsonlint": "^1.6.3",
         "npm-run-all": "^4.1",
         "npm-scripts-info": "^0.3.9",
         "remark-cli": "^11.0",
         "remark-frontmatter": "^4",
         "remark-gfm": "^3",
-        "remark-lint": "^9.1",
+        "remark-lint": "^9.0",
         "remark-lint-match-punctuation": "^0.2.0",
         "remark-lint-no-dead-urls": "^1.1.0",
         "remark-lint-no-empty-sections": "^4.0.0",
@@ -43,8 +43,8 @@
         "remark-lint-no-repeat-punctuation": "^0.1.3",
         "remark-lint-no-trailing-spaces": "^2.0.1",
         "remark-normalize-headings": "^3",
-        "remark-preset-lint-consistent": "^5.1",
-        "remark-preset-lint-recommended": "^6.1"
+        "remark-preset-lint-consistent": "^5.0",
+        "remark-preset-lint-recommended": "^6.0"
     },
     "scripts": {
         "?docs:build": "Generate documentation as static Web site",

@@ -40,6 +40,26 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_25_hotfix_ID-9604.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9604.zip){ .md-button .md-button--primary }
 
+### Set database without overwriting service
+
+Use this if you get a error like:
+
+```
+PHP Fatal error:  Uncaught Error: Class 'isys_auth_document' not found in /var/www/html/i-doit/src/classes/modules/document/isys_module_document.class.php:2776
+```
+
+[i-doit_25_hotfix_ID-9729.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9729.zip){ .md-button .md-button--primary }
+
+### Reindex the Search is not working
+
+Use this if you get a error like:
+
+```
+PHP Fatal error:  Uncaught Error: Call to a member function getCollector() on null in /var/www/html/main/src/classes/modules/cmdb/src/Search/Index/Signals.php:185
+```
+
+[i-doit_25_hotfix_ID-9609.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9609.zip){ .md-button .md-button--primary }
+
 ## Analyze Add-on 1.3
 
 ### Service assignment is not displayed in data quality

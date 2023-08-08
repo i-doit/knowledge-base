@@ -1,6 +1,6 @@
 # Dialog-Admin
 
-The [attribute field](./attribute-fields.md) **Dialog+**, which is a dropdown field where you can edit values, is used quite often in i-doit. These attribute fields can be found in many [categories](../glossary.md) of the [IT documentation](../glossary.md) or in other features provided by i-doit. The central administration of the values is carried out via the **Dialog-Admin** in the **Administration**.
+The [attribute field](./attribute-fields.md) **Dialog+**, which is a dropdown field where you can edit values, is used quite often in i-doit. These attribute fields can be found in many [categories](../glossary.md) of the [IT documentation](../glossary.md) or in other features provided by i-doit. The central administration of the values is carried out via the **Dialog-Admin** in the **Administration**.
 
 ## Overview
 
@@ -18,10 +18,14 @@ An overview of the values which were documented so far (if existing) will be loa
 
 Click the **New** button above the overview when you want to create a new value. A form field opens and you can fill in the following details:
 
-- **ID**: Each value in a **Dialog+** attribute receives a unique identifier by i-doit. This is very helpful, for example, when working with the [API](../i-doit-pro-add-ons/api/index.md).
-- **Title**: Here you can enter the value you want to display in the i-doit Web GUI when you view or edit the **Dialog+** attribute.
-- **Constant**: Beside a unique identifier, a value can receive a unique constant. In contrast to the identifier it usually consists of a descriptive string which can be helpful when applying the API.
-- **Status**: Each value can have a status. You should select the status Normal (2)to apply it in the documentation.
+- **ID**:<br>
+    Each value in a **Dialog+** attribute receives a unique identifier by i-doit. This is very helpful, for example, when working with the [API](../i-doit-pro-add-ons/api/index.md).
+- **Title**:<br>
+    Here you can enter the value you want to display in the i-doit Web GUI when you view or edit the **Dialog+** attribute.
+- **Constant**:<br>
+    Beside a unique identifier, a value can receive a unique constant. In contrast to the identifier it usually consists of a descriptive string which can be helpful when applying the API.
+- **Status**:<br>
+    Each value can have a status. You should select the status Normal (2)to apply it in the documentation.
 
 You can save the value with the **Save** button.
 
@@ -37,8 +41,7 @@ Click on the respective value in the overview when you want to edit the attribut
 
 !!! warning "Delete Values"
 
-    When you want to delete a vlaue, mark the checkbox of this value within the overview. Then click the **Purge** button and the value will be deleted irrevocably.<br>
-    For each  value, the tabular overview shows whether the value can be deleted or not. The reason for this is that some values are required by necessity by i-doit to guarantee certain functionalities.
+When you want to delete a value, mark the checkbox of this value within the overview. Then click the **Purge** button and the value will be deleted irrevocably.
 
 ## Set Permissions
 
