@@ -1,6 +1,6 @@
 # Mandanten Verwaltung
 
-Hier können Sie Ihren Mandanten verwalten und systembezogene Konfigurationen einsehen.
+Hier kannst du deine Mandanten verwalten und systembezogene Konfigurationen einsehen.
 
 [![Mandanten übersicht](../../../assets/images/de/administration/verwaltung/mandanten-verwaltung/1-mv.png)](../../../assets/images/de/administration/verwaltung/mandanten-verwaltung/1-mv.png)
 
