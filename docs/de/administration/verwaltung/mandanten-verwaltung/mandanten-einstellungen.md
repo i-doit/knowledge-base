@@ -1,6 +1,6 @@
 # Mandanten Einstellungen
 
-Hier finden Sie mieterbezogene Einstellungen.
+Hier findest du Mandantenbezogene Einstellungen.
 
 ## URL Einstellungen
 
@@ -143,7 +143,7 @@ Hier finden Sie mieterbezogene Einstellungen.
 
 | Option               | Wert                                                                    |
 | -------------------- | ----------------------------------------------------------------------- |
-| Standard LDAP Gruppe | Comma-separated list of group ids                                       |
+| Standard LDAP Gruppe | omma-separierte Liste von Personengruppen IDs                           |
 | LDAP Config:         | JSON String                                                             |
 | Anrede Herr          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |
 | Anrede Frau          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |

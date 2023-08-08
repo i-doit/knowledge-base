@@ -2,7 +2,7 @@
 
 !!! warning ""
 
-    Bitte stellen Sie sicher, dass Sie eine Sicherungskopie Ihrer Datenbank erstellt haben, da diese Funktionen Änderungen an Ihren Daten vornehmen. Bitte vergewissern Sie sich, dass Sie eine aktuelle Sicherungskopie Ihrer Datenbank haben. Alle Änderungen können nicht rückgängig gemacht werden.
+    Bitte stelle sicher, dass du eine Sicherungskopie deiner Datenbank erstellt hast, da diese Funktionen Änderungen an deinen Daten vornehmen. Alle Änderungen können nicht rückgängig gemacht werden.
 
 ## Cache
 
