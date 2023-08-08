@@ -1,64 +1,70 @@
 # Experteneinstellungen
 
-The expert settings are a kind of "registry" of i-doit. Most settings are set via a option in the settings area. Also some option are only available when added here.
+Die Experteneinstellungen sind so etwas wie die "Registry" von i-doit. Hier können viele Einstellungen gesetzt werden, die teilweise nicht über die Web GUI erreichbar sind.
 
-!!! attention "Caution"
+!!! attention "Vorsicht"
 
-    Usually it is not necessary to add or edit values in the expert settings. For normal use the Web GUI provides functions to control i-doit in all relevant cases.<br>
-    Should you plan to carry out changes in the expert settings, we **strongly recommend** to make a **[backup](../../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)** beforehand. Some of the listed settings have a serious effect on the application. In case of doubt do not hesitate to ask for [support](../../kundenportal.md).
+    In der Regel ist es nicht nötig, in den Experteneinstellungen Werte hinzuzufügen oder zu verändern. Für den normalen Gebrauch bringt die Web GUI an den entsprechenden Stellen Funktionen mit, um das Verhalten von i-doit zu steuern.
 
-## Configuration
+    Vor der Änderung an den Experteneinstellungen sollte **unbedingt ein [Backup](../../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) angefertigt** werden. Einige der aufgelisteten Einstellungen haben einen gravierenden Einfluss auf die Applikation. Im Zweifel hilft der [Support](../../kundenportal.md) gerne weiter.
 
-[![Configuration]()]()
+## Konfiguration
 
-Each setting consists of three parts:
+Zu erreichen sind die Einstellungen unter **Verwaltung → Systemeinstellungen → Experteneinstellungen**.
 
-| Key | Value | Type |
-| --- | --- | --- |
-| The **Key** assigns a unique name to the setting. If a key shouldn't exist yet, it can be added later. | The **Value** is usually a string or a longer text or an integer value. | With the **Type** you define the scope of the setting. A setting with the type **Tenant-wide** only affects the tenant with which the user is currently logged in. **User** means that the setting affects the User. |
+[![Experteneinstellungen](../../../assets/images/de/administration/systemeinstellungen/experteneinstellungen/experteneinstellungen.png)](../../../assets/images/de/administration/systemeinstellungen/experteneinstellungen/experteneinstellungen.png)
 
-## List of Settings
+Jede Einstellung besteht aus drei Teilen:
 
-| Key | Default Value | Recommended Value | Type | Module<br>(Scope/[Add-on]() in i-doit) | Description |
-| --- | --- | --- | --- | --- | --- |
-| auth.logging | 1   | 1   | Tenant-wide setting | PRO/CMDB | Activates/ deactivates logging of authorization system notifications |
-| auth.use-in-cmdb-explorer | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the CMDB explorer. Objects which don't have any rights assignments aren't displayed/ iterated. |
-| auth.use-in-cmdb-explorer-service-browser | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the CMDB explorer Service Popup. The user only sees services for which he has permissions. |
-| auth.use-in-object-browser | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the object browser. Objects which don't have any rights assignments aren't displayed. Already selected objects are displayed as "hidden". |
-| auth.use-in-file-browser | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the object browser. Objects which don't have any rights assignments aren't displayed. Already selected objects are displayed as "hidden". |
-| auth.use-in-location-tree | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the location tree. Objects which don't have any rights assignments aren't displayed/ opened. |
-| cache.default-expiration-time | 86400 | 86400 | Tenant-wide setting | Caching | Determines the time (in seconds) for how long you want to preserve data in specific system-internal caches (for example, authorization system, analysis results) |
-| ckeditor.font_names | Arial;Courier New;Times New Roman;Helvetica |     | Tenant-wide setting | PRO/CMDB | Usable fonts in the WYSIWYG editor |
-| cmdb.limits.order-threshhold | 10000 | 1000 | Tenant-wide setting | PRO/CMDB | Limitation of lines for the TableComponent, threshold from where only indexed fields can be sorted and filtered |
-| cmdb.limits.obj-browser.objects-in-viewmode | 8   |     | Tenant-wide setting | PRO/CMDB | Maximum number of objects to be presented in view mode in the object browser |
-| cmdb.limits.object-table-columns | 10  | 10  | Tenant-wide setting | PRO/CMDB | Decides how many columns are allowed to be shown in the object lists. |
-| cmdb.limits.port-lists-layer2 | 5   |     | Tenant-wide setting | PRO/CMDB | Limitation of the specified Layer2 nets in the port list |
-| cmdb.limits.port-lists-vlans | 10  |     | Tenant-wide setting | PRO/CMDB | Limitation of the specified VLANs in the port list |
-| cmdb.limits.port-overview-default-vlan-only | 0   |     | Tenant-wide setting | PRO/CMDB | Only the default VLAN is to be displayed in the port overview |
-| cmdb.multiedit.text-size-in-px | 120 |     | Tenant-wide setting | PRO/CMDB | Size of the text in list editing |
-| cmdb.objtype.OBJECT\_TYPE\_ID.auto-inventory-no |     |     | Tenant-wide setting | PRO/CMDB | Pattern for the generation of automatic inventory numbers in the accounting category |
-| cmdb.only-show-ranked-entries-as-such | 0   | 0   | Tenant-wide setting | PRO/CMDB | Option to specify whether relationships to an archived object should be displayed as archived or normal |
-| cmdb.quickpurge |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of the quickpurge function |
-| cmdb.skip-unidirectional-connection-ranking | 0   | 0   | Tenant-wide setting | PRO/CMDB | Option to specify whether links to an archived object should be displayed as archived or normal |
-| cmdb.unique.hostname |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique host names |
-| cmdb.unique.ip-address |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique IPs |
-| cmdb.unique.layer-2-net |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique Layer-2 IDs |
-| cmdb.unique.object-title |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique object titles |
-| gui.empty\_value | \-  | \-  | Tenant-wide setting | Core | Specifies the presentation of an empty value in the GUI |
-| gui.nat-sort.port-list | 1   | 1   | Tenant-wide setting | PRO/CMDB | Lexicographical sorting of the port list |
-| jdisc.import-unidentified-devices | false |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of imports of unidentified JDISC objects |
-| maxlength.dialog\_plus | 110 |     | Tenant-wide setting | PRO/CMDB | Maximum length of characters for entries in dialog lists |
-| maxlength.location.objects | 16  |     | Tenant-wide setting | PRO/CMDB | Maximum number of objects to be displayed |
-| maxlength.location.path | 40  |     | Tenant-wide setting | PRO/CMDB | Maximum length of location paths |
-| maxlength.object.lists | 55  |     | Tenant-wide setting | PRO/CMDB | Maximum number of objects to be displayed in object lists |
-| search.global.autostart-deep-search | 0   |     | Tenant-wide setting | PRO/CMDB | Automatic deep search |
-| security.passwort.minlength | 4   |     | Tenant-wide setting | Core | Minimum length for user passwords |
-| qrcode.config |     |     | Tenant-wide setting | PRO/CMDB | QR code configuration |
+| Key                                                                                                                                                        | Standard Wert                                                                                                         | Description                                                                                                                                                                                                                                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Der Schlüssel (**Key**) gibt der Einstellung einen eindeutigen Namen. Sollte ein Schlüssel noch nicht existieren, kann er nachträglich hinzugefügt werden. | Der Wert (**Value**) ist in der Regel eine Zeichenkette bzw. ein längerer Text (String) oder eine Ganzzahl (Integer). | Über den Typ (**Type**) wird die Reichweite der Einstellung angegeben. Eine Einstellung mit dem Typ **Tenant-wide** wirkt sich nur auf denjenigen Mandanten aus, mit dem der Benutzer derzeit angemeldet ist. **System-wide** bedeutet, dass sich die Einstellung auf das gesamte i-doit auswirkt, also unabhängig von den verfügbaren Mandanten. |
 
-## Expert setting (User related)
+## Liste der Einstellungen
 
-| Key | Default Value | Recommended Value | Type | Module<br>(Scope/[Add-on]() in i-doit) | Description |
-| --- | --- | --- | --- | --- | --- |
-| gui.leftcontent.width | 235 | 350 | User setting | Core | Defines the width of the left tree area in pixels |
-| workflows.max-checklist-entries | 7   |     | User setting | Workflows | Maximum entries in check lists |
-| gui.login.display | user-name |     | User setting | PRO/CMDB | Presentation of the name in the "logged in as" area:<br><br>- user-name: lfischer<br>- full-name: Dr. Leonard Fischer<br>- full-name-plus: Dr. Leonard Fischer (lfischer)<br>- first-last-name-abbreviation: L. Fischer |
+| Key                                           | Standard Wert                               | Description                                                                                                                                                                                       |
+| --------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| api.authenticated-users-only                  | 1                                           | Erzwingt die Authentifizierung für die Verwendung der API                                                                                                                                         |
+| auth.active                                   | 1                                           | Aktivierung/Deaktivierung des Rechtesystems                                                                                                                                                       |
+| auth.logging                                  | 1                                           | Aktiviert/Deaktiviert das loggen von Rechtesystem-Meldungen                                                                                                                                       |
+| auth.use-in-cmdb-explorer                     | 0                                           | Aktiviert die Berücksichtigung von Rechten im CMDB-Explorer. Objekte auf die nicht verrechtet sind werden nicht dargestellt / weiter iteriert                                                     |
+| auth.use-in-cmdb-explorer-service-browser     | 0                                           | Aktiviert die Berücksichtigung von Rechten im CMDB-Explorer Service Popup. Der User sieht nur die Services, auf die er Rechte hat.                                                                |
+| auth.use-in-object-browser                    | 0                                           | Aktiviert die Berücksichtigung von Rechten im Objekt Browser. Objekte die nicht verrechtet sind werden nicht dargestellt. Bereits ausgewählte Objekte werden mit "\[Ausgeblendet\]" dargestellt   |
+| auth.use-in-file-browser                      | 0                                           | Aktiviert die Berücksichtigung von Rechten im File Browser. Objekte auf die nicht verrechtet sind werden nicht dargestellt. Bereits ausgewählte Objekte werden mit "\[Ausgeblendet\]" dargestellt |
+| auth.use-in-location-tree                     | 0                                           | Aktiviert die Berücksichtigung von Rechten im Standort Baum. Objekte die nicht verrechtet sind werden nicht dargestellt / aufgeklappt.                                                            |
+| cache.default-expiration-time                 | 86400                                       | Legt die Zeit in Sekunden fest, für welche bestimmte Systeminterne Caches behalten werden (z.B. Rechtesystem, Analyse Ergebnisse)                                                                 |
+| ckeditor.font_names                           | Arial;Courier New;Times New Roman;Helvetica | Verwendbare Schriftarten im WYSIWYG Editor                                                                                                                                                        |
+| cmdb.limits.order-threshhold                  | 10000                                       | Limit an Zeilen für die TableComponent ab wann nur noch indexierte Felder sortiert und gefiltert werden können                                                                                    |
+| cmdb.limits.obj-browser.objects-in-viewmode   | 8                                           | Maximale Anzahl darzustellender Objekte im Objektbrowser im Viewmode                                                                                                                              |
+| cmdb.limits.object-table-columns              | 10                                          | Legt fest, wie viele Spalten in den Objektlisten angezeigt werden dürfen.                                                                                                                         |
+| cmdb.limits.port-lists-layer2                 | 5                                           | Limitierung der aufgeführten Layer2-Netze in der Portliste                                                                                                                                        |
+| cmdb.limits.port-lists-vlans                  | 10                                          | Limitierung der aufgeführten VLANs in der Portliste                                                                                                                                               |
+| cmdb.limits.port-overview-default-vlan-only   | 0                                           | In der Portübersicht soll lediglich das Standard-VLAN angezeigt werden                                                                                                                            |
+| cmdb.multiedit.text-size-in-px                | 120                                         | Textgröße in der Listeneditierung                                                                                                                                                                 |
+| cmdb.objtype.OBJECT_TYPE_ID.auto-inventory-no | -                                           | Muster für die Generierung automatischer Inventarnummern in der Buchhaltungskategorie                                                                                                             |
+| cmdb.only-show-ranked-entries-as-such         | 0                                           | Option zur Festlegung, ob Beziehungen zu einem archivierten Objekt als archiviert oder normal angezeigt werden sollen                                                                             |
+| cmdb.quickpurge                               | -                                           | Aktivieren/Deaktivieren der Quickpurge-Funktionalität                                                                                                                                             |
+| cmdb.skip-unidirectional-connection-ranking   | 0                                           | Option um festzulegen, ob Verknüpfungen zu einem archivierten Objekt als archiviert oder normal dargestellt werden sollen                                                                         |
+| cmdb.unique.hostname                          | -                                           | Aktivieren/Deaktivieren von einzigartigen Hostnamen                                                                                                                                               |
+| cmdb.unique.ip-address                        | -                                           | Aktivieren/Deaktivieren von einzigartigen Ips                                                                                                                                                     |
+| cmdb.unique.layer-2-net                       | -                                           | Aktivieren/Deaktivieren von einzigartigen Layer-2 Ids                                                                                                                                             |
+| cmdb.unique.object-title                      | -                                           | Aktivieren/Deaktivieren von einzigartigen Objekt-Titel                                                                                                                                            |
+| gui.empty_value                               | -                                           | Definiert die Darstellung eines Leerwerts in der Oberfläche                                                                                                                                       |
+| gui.nat-sort.port-list                        | 1                                           | Lexikografische Sortierung der Portliste                                                                                                                                                          |
+| jdisc.import-unidentified-devices             | false                                       | Aktivieren/Deaktivieren von Imports unidentifizierter JDISC-Objekte                                                                                                                               |
+| maxlength.dialog_plus                         | 110                                         | Maximale Zeichlänge für Einträge in Dialoglisten                                                                                                                                                  |
+| maxlength.location.objects                    | 16                                          | Maximale Anzahl darzustellender Objekte                                                                                                                                                           |
+| maxlength.location.path                       | 40                                          | Maximale Länge von Standortpfaden                                                                                                                                                                 |
+| maxlength.object.lists                        | 55                                          | aximale Anzahl darzustellender Objekte in Objektlisten                                                                                                                                            |
+| search.global.autostart-deep-search           | 0                                           | Automatische Deep Search Suche                                                                                                                                                                    |
+| security.passwort.minlength                   | 4                                           | Mindestlänge für Benutzerpasswörter                                                                                                                                                               |
+| qrcode.config                                 |                                             | QR-Code Konfiguration                                                                                                                                                                             |
+
+
+## Expert setting (Bemutzer)
+
+| Key                             | Default Value | Description                                                                                                                                                                                                      |
+| ------------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| gui.leftcontent.width           | 235           | Definiert die Breite des linken Baumbereichs in Pixeln                                                                                                                                                           |
+| workflows.max-checklist-entries | 7             | Maximale Einträge in Checklisten                                                                                                                                                                                 |
+| gui.login.display               | user-name     | Darstellung des Namens im "logged in as" Bereich:<br>- user-name: lfischer<br>- full-name: Dr. Leonard Fischer<br>- full-name-plus: Dr. Leonard Fischer (lfischer)<br>- first-last-name-abbreviation: L. Fischer |

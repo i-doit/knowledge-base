@@ -6,7 +6,7 @@ Hier kannst du deine Mandanten verwalten und systembezogene Konfigurationen eins
 
 ## Lizenzübersicht
 
-In der Lizenzübersicht finden Sie Informationen über Ihre Lizenz, das dokumentierte Objekt, die Version und einen Objektzähler.
+In der Lizenzübersicht findest du Informationen über deine Lizenz, das dokumentierte Objekt, die Version und einen Objektzähler.
 
 | Option                      | Wert                                                       |
 | --------------------------- | ---------------------------------------------------------- |
@@ -99,3 +99,9 @@ In der Lizenzübersicht finden Sie Informationen über Ihre Lizenz, das dokument
 | Image Upload                 | Ordner Pfad |
 | Default Theme Template Cache | Ordner Pfad |
 | Default Theme Smarty Cache   | Ordner Pfad |
+
+## Unterseiten
+
+- [Mandanten Einstellungen](./mandanten-einstellungen.md)
+- [Systemreparatur und Bereinigung](systemreparatur-und-bereinigung.md)
+- [Experteneinstellungen](./experteneinstellungen.md)
