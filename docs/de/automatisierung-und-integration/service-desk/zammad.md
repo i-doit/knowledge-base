@@ -1,4 +1,4 @@
-## Zammad
+# Zammad
 
 [Zammad](https://zammad.com/) ist eine Web-Applikation für den Service Desk. Es ist in der Lage, auf Informationen zu Objekten aus i-doit zuzugreifen und diese mit Tickets zu verknüpfen. Für weitere Informationen zur Konfiguration und Nutzung von Zammad, hilft der Hersteller gerne weiter.
 
@@ -6,8 +6,7 @@ i-doit bringt bereits in der Standardinstallation alle Funktionen mit, um [auf T
 
 Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/zammad-intuitiver-service-desk-mit-anbindung-an-i-doit/)
 
-FAQ:
-----
+## FAQ:
 
 Eine wichtige Sache die häufig vergessen wird ist, dass elasticsearch auf dem Zammad Server installiert und funktionsfähig sein muss, ohne diesen Service kann i-doit die Tickets nicht abrufen.
 
