@@ -1,209 +1,210 @@
 # Mandanten Einstellungen
 
-Here you will find tenant related settings.
+Hier finden Sie mieterbezogene Einstellungen.
 
-## URL Settings
+## URL Einstellungen
 
-| Option | Wert |
-| - | - |
+| Option               | Wert                        |
+| -------------------- | --------------------------- |
 | i-doit Adresse (URL) | URL zur i-doit installation |
 
 ## CMDB
 
-| Option | Wert |
-| - | - |
-| CSV-Export Trennzeichen | Komma, Semikolon, Raute oder Tab |
-| One-Click-Edit | Ja oder Nein |
-| Globaler SYS-ID Präfix | String |
-| CMDB Status von Kabeln nach verkabelung "In Betrieb" setzen. | Ja oder Nein |
-| CMDB Status von Kabeln nach entkabelung "Außer Betrieb" setzen. | Ja oder Nein |
-| Objekttyp Konstante für Segmentierungs-Templates | String |
-| Nummerierung vertikaler Schrank-Einschübe | Standard<br>From top left to bottom right, both sides<br>From top left to bottom right, each side  |
-| Die vertikalen Schrank Einschübe auf der Rückseite spiegeln | Ja oder Nein |
-| Aufzählung von Schrank HEs | From top<br>From bottom |
-| Gelöste Segmentierungs Objekte... | should remain unchanged<br>should be archived<br>should be purged |
-| Detach objects when relocating from a chassis | Ja oder Nein |
-| Activate Interaction between "Logical location" and "Location"? | Ja oder Nein |
-| Activate object type filter on workstations? |  |
-| Remove object IDs from CSV exported lists. | Ja oder Nein |
-| Disable MAC address validation | Ja oder Nein |
-| SYS-ID read only | Ja oder Nein |
-| Releasing of ip-addresses when object gets archived oder deleted | Ja oder Nein |
-| Keep status of imported objects? | Ja oder Nein |
-| Prefix for auto-naming of cable objects | Empty oder String |
-| Activate quickpurge button | Ja oder Nein |
-| WYSIWYG editor in categories | Ja oder Nein |
-| Activate all WYSIWYG editor functions | Ja oder Nein |
-| Save my-doit CMDB-Status selection | Ja oder Nein |
+| Option                                                                | Wert                                                                                                      |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| CSV-Export Trennzeichen                                               | Komma, Semikolon, Raute oder Tab                                                                          |
+| One-Click-Edit                                                        | Ja oder Nein                                                                                              |
+| Globaler SYS-ID Präfix                                                | String                                                                                                    |
+| CMDB Status von Kabeln nach verkabelung "In Betrieb" setzen.          | Ja oder Nein                                                                                              |
+| CMDB Status von Kabeln nach entkabelung "Außer Betrieb" setzen.       | Ja oder Nein                                                                                              |
+| Objekttyp Konstante für Segmentierungs-Templates                      | String                                                                                                    |
+| Nummerierung vertikaler Schrank-Einschübe                             | Standard<br>Von oben links nach unten rechts, beide Seiten<br>Von oben links nach unten rechts, pro Seite |
+| Die vertikalen Schrank Einschübe auf der Rückseite spiegeln           | Ja oder Nein                                                                                              |
+| Aufzählung von Schrank HEs                                            | Von oben<br>Von unten                                                                                     |
+| Gelöste Segmentierungs Objekte...                                     | nicht verändern<br>archivieren<br>purgen                                                                  |
+| Objekte beim Umzug aus Chassis lösen                                  | Ja oder Nein                                                                                              |
+| Interaktion zwischen "Logischer Standort" und "Standort" aktivieren?  | Ja oder Nein                                                                                              |
+| Objekttyp-Filter bei Arbeitsplätzen aktivieren?                       | Ja oder Nein                                                                                              |
+| Bei CSV-Export von Listen Objekt-IDs entfernen.                       | Ja oder Nein                                                                                              |
+| Validierung für MAC-Adressen deaktivieren                             | Ja oder Nein                                                                                              |
+| SYS-ID nur lesbar                                                     | Ja oder Nein                                                                                              |
+| Freigabe der IP-Adressen eines Objektes beim Löschen oder Archivieren | Ja oder Nein                                                                                              |
+| Zustand von importierten Objekten beibehalten?                        | Ja oder Nein                                                                                              |
+| Präfix für automatische Bezeichnung von Kabelobjekten                 | Leer oder String                                                                                          |
+| Quickpurge-Button aktivieren                                          | Ja oder Nein                                                                                              |
+| WYSIWYG Editor in Kategorien                                          | Ja oder Nein                                                                                              |
+| Aktiviere alle WYSIWYG Editor Funktionen                              | Ja oder Nein                                                                                              |
+| my-doit CMDB-Status auswahl speichern                                 | Ja oder Nein                                                                                              |
 
 ## Display Limits
 
-| Option | Wert |
-| - | - |
-| Display limit for object browser objects | Wert |
-| Display style for object browser objects | Comma separated<br>As list |
-| Amount of preloaded pages in report lists | Wert |
-| Display limit of multi Wert category fields | Wert |
-| Object-Browser result limit | Wert |
-| Display limit of VLANs in port lists | Wert |
-| Display limit of Layer-2 networks in port lists | Wert |
-| Only show default VLAN in port overview | Ja oder Nein |
-| Display limit of assigned connectors in connector lists |  Wert|
-| Display limit of Host Addresses | Wert |
-| Display limit of services in the CMDB explorer popup | Wert |
-| Depth limit of the location path | Wert |
-| MyDoIt task entries | Wert |
+| Option                                                      | Wert                        |
+| ----------------------------------------------------------- | --------------------------- |
+| Anzeigelimit verknüpfter Objekte in Objektbrowser           | Wert                        |
+| Anzeigeart verknüpfter Objekte in Objektbrowsers            | Kommasepariert<br>Als Liste |
+| Anzahl vorgeladener Seiten in Report listen                 | Wert                        |
+| Anzeigelimit für Spalten in Multivalue Kategorien           | Wert                        |
+| Objekt-Browser Ergebnislimit                                | Wert                        |
+| Anzeigelimit VLANs in Portlisten                            | Wert                        |
+| Anzeigelimit Layer-2 Netze in Portlisten                    | Wert                        |
+| Nur Default VLAN in Portübersicht zeigen                    | Ja oder Nein                |
+| Anzeigelimit von Verbundenen Anschlüssen in Anschlusslisten | Wert                        |
+| Anzeigelimit von Hostadressen                               | Wert                        |
+| Anzeigelimit von Services im CMDB Explorer Popup            | Wert                        |
+| Limit der Tiefe des Standortpfades                          | Wert                        |
+| MyDoIt Taskeinträge                                         | Wert                        |
 
-## Options for the IP-List
+## Optionen für IP-Liste
 
-| Option | Wert |
-| - | - |
-| Cache lifetime (in seconds) | Wert |
-| Ping function | Ping via NMAP<br>Ping via FPING |
-| NMAP parameter (for ping) | PE/PP/PM: ICMP echo, timestamp, and netmask request discovery probes<br>sP: Ping Scan - go no further than determining if host is online<br>PR: ARP Scan<br>sT: TCP Connect Scan |
+| Option                       | Wert                                                                                                                                                                             |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cache Zeitraum (in Sekunden) | Wert                                                                                                                                                                             |
+| Ping Funktion                | Ping via NMAP<br>Ping via FPING                                                                                                                                                  |
+| NMAP Parameter (für Ping)    | PE/PP/PM: ICMP echo, timestamp, and netmask request discovery probes<br>sP: Ping Scan - go no further than determining if host is online<br>PR: ARP Scan<br>sT: TCP Connect Scan |
 
-## Unique checks (Used during import/export procedure only!)
+## Unique checks (Auswertung lediglich während Import/Export Vorgängen!)
 
-| Option | Wert |
-| - | - |
-| Object title | Ja oder Nein |
-| Layer2 nets | Ja oder Nein |
-| IP-addresses | Ja oder Nein |
-| Hostname | Ja oder Nein |
+| Option        | Wert         |
+| ------------- | ------------ |
+| Objekt-Titel  | Ja oder Nein |
+| Layer-2-Netze | Ja oder Nein |
+| IP-Adressen   | Ja oder Nein |
+| Hostname      | Ja oder Nein |
 
 ## Barcodes
 
-| Option | Wert |
-| - | - |
-| Display barcodes in i-doit | Ja oder Nein |
-| Barcode form | QR-Code<br>Code39 |
+| Option                        | Wert              |
+| ----------------------------- | ----------------- |
+| Barcodes in i-doit darstellen | Ja oder Nein      |
+| Barcode-Form                  | QR-Code<br>Code39 |
 
-## Graphical interface
+## Oberflächendarstellung
 
-| Option | Wert |
-| - | - |
-| Display empty Werts as | String |
-| String for separation of locations | String |
-| Location path orientation | left (default)<br>right |
-| String for separation of connectors | String |
-| Drag 'n' Drop of objects | Ja oder Nein |
-| Object type sorting | Alphabetically<br>Manual |
+| Option                                | Wert                                  |
+| ------------------------------------- | ------------------------------------- |
+| Leerwerte darstellen als              | String                                |
+| String zur Separation von Standorten  | String                                |
+| Orientierung des Standortpfades       | Linksbündig (default)<br>Rechtsbündig |
+| String zur Separation von Anschlüssen | String                                |
+| Drag 'n' Drop von Objekten            | Ja oder Nein                          |
+| Objekttyp Sortierung                  | Alphabetisch<br>Manuelle              |
 
-## Maximum lengths
+## Maximallänge von Zeichenfolgen
 
-| Option | Wert |
-| - | - |
-| Dialog-Plus | Wert |
-| Object title in location path | Wert |
-| Full Length location path | Wert |
+| Option                             | Wert |
+| ---------------------------------- | ---- |
+| Dialog-Plus                        | Wert |
+| Objektbezeichnung im Standortpfadh | Wert |
+| Kompletter Standortpfad            | Wert |
 
-## Logbook
+## Logbuch
 
-| Option | Wert |
-| - | - |
-| Log detailed CMDB changes | Ja oder Nein |
-| Disable logbook commentary | Ja oder Nein |
+| Option                                      | Wert         |
+| ------------------------------------------- | ------------ |
+| Detaillierte CMDB Änderungen protokollieren | Ja oder Nein |
+| "Änderungskommentar" deaktivieren           | Ja oder Nein |
 
 ## Templates
 
-| Option | Wert |
-| - | - |
-| Show template filter in object lists | Ja oder Nein |
-| Colorize template assignments/references | Ja oder Nein |
-| With color | Colorpicker<br>Hex |
+| Option                                              | Wert               |
+| --------------------------------------------------- | ------------------ |
+| Template Filter in den Objektlisten anzeigen        | Ja oder Nein       |
+| Markiere Template Verknüpfungen/Referenzen farblich | Ja oder Nein       |
+| In folgender Farbe                                  | Colorpicker<br>Hex |
 
-## Security
+## Sicherheit
 
-| Option | Wert |
-| - | - |
-| Permission system | Inactive<br>Active |
-| Minimum length of user passwords | Wert |
-| Display passwords | Ja oder Nein |
-| Information about last login | Inactive<br>Active |
-| Sanitize input data | Ja oder Nein |
+| Option                          | Wert             |
+| ------------------------------- | ---------------- |
+| Rechtesystem                    | Aktiv<br>Inaktiv |
+| Minimallänge Benutzerpasswort   | Wert             |
+| Passwörter im Klartext          | Ja oder Nein     |
+| Information about last login    | Aktiv<br>Inaktiv |
+| Informationen zum letzten Login | Ja oder Nein     |
+| Dateneingabe bereinigen         | Ja oder Nein     |
 
 ## Logging
 
-| Option | Wert |
-| - | - |
-| Right-system Log | Ja oder Nein |
-| Exception Log | Ja oder Nein |
-| CMDB Import | Ja oder Nein |
-| LDAP Debug | Ja oder Nein |
+| Option           | Wert         |
+| ---------------- | ------------ |
+| Rechtesystem Log | Ja oder Nein |
+| Exception Log    | Ja oder Nein |
+| CMDB Import      | Ja oder Nein |
+| LDAP Debug       | Ja oder Nein |
 
 ## Quickinfo (Link mouseover)
 
-| Option | Wert |
-| - | - |
-| Cache expiration | Minute<br>Hour<br>Day |
-| Rows per category | Wert |
+| Option               | Wert                    |
+| -------------------- | ----------------------- |
+| Cache-Laufzeit       | Minute<br>Stunde<br>Tag |
+| Zeilen pro Kategorie | Wert                    |
 
 ## LDAP
 
-| Option | Wert |
-| - | - |
-| Standard LDAP group | Comma-separated list of group ids |
-| LDAP Config: | JSON String |
-| Salutation Mister | Comma separated list with mapped Werts for LDAP salutation attribute |
-| Salutation Misses | Comma separated list with mapped Werts for LDAP salutation attribute |
+| Option               | Wert                                                                    |
+| -------------------- | ----------------------------------------------------------------------- |
+| Standard LDAP Gruppe | Comma-separated list of group ids                                       |
+| LDAP Config:         | JSON String                                                             |
+| Anrede Herr          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |
+| Anrede Frau          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |
 
 ## Report Manager
 
-| Option | Wert |
-| - | - |
-| Default filter | ID<br>Title<br>Category<br>Generated by query editor<br>Variable Report<br>Description |
+| Option         | Wert                                                                                             |
+| -------------- | ------------------------------------------------------------------------------------------------ |
+| Standardfilter | ID<br>Bezeichnung<br>Kategorie<br>Mit Abfrage-Editor erzeugt<br>Variabler Report<br>Beschreibung |
 
 ## Import
 
-| Option | Wert |
-| - | - |
-| Cancel process on validation error? | Ja oder Nein |
-| Empty only the affected attributes on validation errors? | Ja oder Nein |
-| The CSV Import can overwrite the objecttype? | Ja oder Nein |
-| Anount of rows to be imported in a batch | Wert |
+| Option                                                        | Wert         |
+| ------------------------------------------------------------- | ------------ |
+| Bei Validierungsfehlern Prozess abbrechen?                    | Ja oder Nein |
+| Nur die betroffenen Attribute leeren bei Validierungsfehlern? | Ja oder Nein |
+| Der CSV Import kann den Objekttyp überschreiben?              | Ja oder Nein |
+| Anzahl der Zeilen pro Import Batch                            | Wert         |
 
-## Search
+## Suche
 
-| Option | Wert |
-| - | - |
-| Default search mode | Normal<br>Deep Search |
-| Activate fuzzy search | Ja oder Nein |
-| Automatic DeepSearch | Active<br>Active when no results are found.<br>Deactivated |
-| Highlight the search string | Ja oder Nein |
-| Minimum search string length | Wert |
-| Show archived/deleted objects in search results | Ja oder Nein |
-| Show location paths in search results | Ja oder Nein |
+| Option                                                         | Wert                                                                  |
+| -------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Standard Such-Modus                                            | Normal<br>Deep Search                                                 |
+| Unscharfe Suche verwenden                                      | Ja oder Nein                                                          |
+| Automatische DeepSearch                                        | Aktiv<br>Aktiv, wenn keine Ergebnisse gefunden werden.<br>Deaktiviert |
+| Hervorhebung des Suchstrings                                   | Ja oder Nein                                                          |
+| Mindestlänge Suchwort                                          | Wert                                                                  |
+| Archivierte/Gelöschte Objekte mit in der Suche berücksichtigen | Ja oder Nein                                                          |
+| Standort Pfade mit in der Suche berücksichtigen                | Ja oder Nein                                                          |
 
-## Language
+## Sprache
 
-| Option | Wert |
-| - | - |
-| Default language for new users | German<br>English |
+| Option                             | Wert                |
+| ---------------------------------- | ------------------- |
+| Standard Sprache für neue Benutzer | Deutsch<br>Englisch |
 
-## Notifications
+## Benachrichtigungen
 
-| Option | Wert |
-| - | - |
-| Skip expired licenses | Ja oder Nein |
+| Option                            | Wert         |
+| --------------------------------- | ------------ |
+| Abgelaufene Lizenzen überspringen | Ja oder Nein |
 
 ## Installed Add-on related settings
 
-| Option | Wert |
-| - | - |
-| [ISMS](../../../i-doit-pro-add-ons/isms.md) Filter report views with location based rights | Ja oder Nein |
-| [ISMS](../../../i-doit-pro-add-ons/isms.md) Show risk flag | Ja oder Nein |
-| [ISMS](../../../i-doit-pro-add-ons/isms.md) Show risk title | Ja oder Nein |
-| [Documents](../../../i-doit-pro-add-ons/documents/index.md) Comment revisions | Ja oder Nein |
-| [Documents](../../../i-doit-pro-add-ons/documents/index.md) Cache generated documents | Ja oder Nein |
-| [Maintenance](../../../i-doit-pro-add-ons/maintenance.md) Get email addresses from | Resolve contact groups and notify each person individually<br>Simply use the selected contacts without resolving contact groups |
-| [Events](../../../i-doit-pro-add-ons/events.md) Base64 Decode Event Parameters | Ja oder Nein |
-| [Check_MK](../../../i-doit-pro-add-ons/checkmk.md) Tags may only consist of alphabetic characters, numbers, underscores and hyphens | Ja oder Nein |
-| [Workflows](../../../i-doit-pro-add-ons/workflow.md) Hide checklists in my-doit area | Ja oder Nein |
-| [IT-Grundschutz](../../../i-doit-pro-add-ons/viva/index.md) URL-Prefix to IT-Grundschutz Compendium | URL |
-| [IT-Grundschutz](../../../i-doit-pro-add-ons/viva/index.md) Upload folder for IT-Grundschutz Compendium | Directory path |
-| [Relocate-CI](../../../i-doit-pro-add-ons/relocate-ci.md) Remove the logical location after a object has been relocated physically. | Ja oder Nein |
-| [Relocate-CI](../../../i-doit-pro-add-ons/relocate-ci.md) Update the physical location after a object has been relocated logically. | Ja oder Nein |
-| [Relocate-CI](../../../i-doit-pro-add-ons/relocate-ci.md) Write logbook entries to all children of a relocated object. | Ja oder Nein |
-| [Forms](../../../i-doit-pro-add-ons/forms/index.md) Forms Server | URL |
-| [Forms](../../../i-doit-pro-add-ons/forms/index.md) User name | String |
-| [Forms](../../../i-doit-pro-add-ons/forms/index.md) API Key | String |
+| Option                                                                                                                                    | Wert                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| [ISMS](../../../i-doit-pro-add-ons/isms.md) Reportviews nach Standortrechten filtern                                                      | Ja oder Nein                                                                                                                         |
+| [ISMS](../../../i-doit-pro-add-ons/isms.md) Risikokennzeichnung anzeigen                                                                  | Ja oder Nein                                                                                                                         |
+| [ISMS](../../../i-doit-pro-add-ons/isms.md) Risikotitel anzeigen                                                                          | Ja oder Nein                                                                                                                         |
+| [Dokumente](../../../i-doit-pro-add-ons/documents/index.md) Revisionen kommentieren                                                       | Ja oder Nein                                                                                                                         |
+| [Dokumente](../../../i-doit-pro-add-ons/documents/index.md) Generierte Dokumente cachen                                                   | Ja oder Nein                                                                                                                         |
+| [Wartung](../../../i-doit-pro-add-ons/maintenance.md) E-Mail Adressen entnehmen aus                                                       | Kontaktgruppen auflösen und Mitglieder einzeln Benachrichtigen<br>E-Mail-Adressen der ausgewählten Kontakte ohne auflösung verwenden |
+| [Events](../../../i-doit-pro-add-ons/events.md) Base64 Decode Event Parameters                                                            | Ja oder Nein                                                                                                                         |
+| [Check_MK](../../../i-doit-pro-add-ons/checkmk.md) Tags dürfen beim Export nur aus Buchstaben, Zahlen, Binde- und Unterstrichen bestehen  | Ja oder Nein                                                                                                                         |
+| [Workflows](../../../i-doit-pro-add-ons/workflow.md) Checklisten im my-doit Bereich ausblenden                                            | Ja oder Nein                                                                                                                         |
+| [IT-Grundschutz](../../../i-doit-pro-add-ons/viva/index.md) URL-Prefix zum IT-Grundschutz Kompendium                                      | URL                                                                                                                                  |
+| [IT-Grundschutz](../../../i-doit-pro-add-ons/viva/index.md) Upload Verzeichnis des IT-Grundschutz Kompendiums                             | Directory path                                                                                                                       |
+| [CI-Umzug](../../../i-doit-pro-add-ons/relocate-ci.md) Nach einem physikalischen Umzug soll der logische Standort entfernt werden.        | Ja oder Nein                                                                                                                         |
+| [CI-Umzug](../../../i-doit-pro-add-ons/relocate-ci.md) Nach einem logischen Umzug soll der physische Standort aktualisiert werden.        | Ja oder Nein                                                                                                                         |
+| [CI-Umzug](../../../i-doit-pro-add-ons/relocate-ci.md) Schreibe Logbucheinträge in alle positionierten Objekte eines umgezogenen Objekts. | Ja oder Nein                                                                                                                         |
+| [Forms Add-on](../../../i-doit-pro-add-ons/forms/index.md) Forms Server                                                                   | URL                                                                                                                                  |
+| [Forms Add-on](../../../i-doit-pro-add-ons/forms/index.md) Benutzername                                                                   | String                                                                                                                               |
+| [Forms Add-on](../../../i-doit-pro-add-ons/forms/index.md) API Schlüssel                                                                  | String                                                                                                                               |
