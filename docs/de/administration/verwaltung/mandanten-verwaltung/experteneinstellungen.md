@@ -57,9 +57,8 @@ Each setting consists of three parts:
 
 ## Expert setting (User related)
 
-
 | Key | Default Value | Recommended Value | Type | Module<br>(Scope/[Add-on]() in i-doit) | Description |
 | --- | --- | --- | --- | --- | --- |
 | gui.leftcontent.width | 235 | 350 | User setting | Core | Defines the width of the left tree area in pixels |
 | workflows.max-checklist-entries | 7   |     | User setting | Workflows | Maximum entries in check lists |
-| gui.login.display | user-name |     | User setting | PRO/CMDB | Presentation of the name in the "logged in as" area:<br><br>*   user-name: lfischer<br>*   full-name: Dr. Leonard Fischer<br>*   full-name-plus: Dr. Leonard Fischer (lfischer)<br>*   first-last-name-abbreviation: L. Fischer |
+| gui.login.display | user-name |     | User setting | PRO/CMDB | Presentation of the name in the "logged in as" area:<br><br>- user-name: lfischer<br>- full-name: Dr. Leonard Fischer<br>- full-name-plus: Dr. Leonard Fischer (lfischer)<br>- first-last-name-abbreviation: L. Fischer |
