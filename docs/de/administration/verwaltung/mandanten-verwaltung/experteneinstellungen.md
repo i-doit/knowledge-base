@@ -10,9 +10,7 @@ Die Experteneinstellungen sind so etwas wie die "Registry" von i-doit. Hier kön
 
 ## Konfiguration
 
-Zu erreichen sind die Einstellungen unter **Verwaltung → Systemeinstellungen → Experteneinstellungen**.
-
-[![Experteneinstellungen](../../../assets/images/de/administration/systemeinstellungen/experteneinstellungen/experteneinstellungen.png)](../../../assets/images/de/administration/systemeinstellungen/experteneinstellungen/experteneinstellungen.png)
+Zu erreichen sind die Einstellungen unter **Verwaltung → Mandanten Verwaltung → Experteneinstellungen**.
 
 Jede Einstellung besteht aus drei Teilen:
 
@@ -61,7 +59,7 @@ Jede Einstellung besteht aus drei Teilen:
 | qrcode.config                                 |                                             | QR-Code Konfiguration                                                                                                                                                                             |
 
 
-## Expert setting (Bemutzer)
+## Liste der Einstellungen (Bemutzer)
 
 | Key                             | Default Value | Description                                                                                                                                                                                                      |
 | ------------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
