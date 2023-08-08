@@ -2,75 +2,73 @@
 
 !!! warning ""
 
-    Note: Please make sure that you have created a backup of your database.<br>
-    These functions will perform changes on your data. Please make sure you have an up-to-date backup of your database.<br>
-    Any changes can't be reverted.
+    Bitte stellen Sie sicher, dass Sie eine Sicherungskopie Ihrer Datenbank erstellt haben, da diese Funktionen Änderungen an Ihren Daten vornehmen. Bitte vergewissern Sie sich, dass Sie eine aktuelle Sicherungskopie Ihrer Datenbank haben. Alle Änderungen können nicht rückgängig gemacht werden.
 
 ## Cache
 
-| Button | Description |
-| - | - |
-| Clear complete Cache | Clear complete Cache |
-| Clear system cache | Clear system cache |
-| Clear template cache | Clear template cache |
-| Clear auth-system cache | Clear auth-system cache |
-| Clear quick info cache | Clear quick info cache |
-| Renew the validation cache | Renew the validation cache |
+| Button                     | Description                |
+| -------------------------- | -------------------------- |
+| Kompletten Cache leeren    | Kompletten Cache leeren    |
+| System Cache leeren        | System Cache leeren        |
+| Template Cache leeren      | Template Cache leeren      |
+| Rechtesystem Cache leeren  | Rechtesystem Cache leeren  |
+| Quickinfo Cache leeren     | Quickinfo Cache leeren     |
+| Validierungscache erneuern | Renew the validation cache |
 
-## Database
+## Datenbank
 
-| Button | Description |
-| - | - |
-| Optimize tables | Optimize tables |
-| Defragmentate tables | Defragmentate tables |
-| Correct locations | Correct locations |
-| Remove multiple assigned categories | Remove multiple assigned categories |
-| Re-index category attributes | Re-index category attributes |
-| Remove multiple entries in single-value categories | Remove multiple entries in single-value categories |
-| Delete unassigned relation objects | Delete unassigned relation objects |
-| Re-new titles of relation objects | Re-new titles of relation objects |
-| Fill up empty SYS-IDs | Fill up empty SYS-IDs |
-| Set weight of all relation types to default | Set weight of all relation types to default |
-| Re-new relation objects | Re-new relation objects |
-| Enable to click on rows in object lists | Enable to click on rows in object lists |
+| Button                                                | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- |
+| Tabellen optimieren                                   | Tabellen optimieren                                   |
+| Tabellen defragmentieren                              | Tabellen defragmentieren                              |
+| Standorte korrigieren                                 | Standorte korrigieren                                 |
+| Mehrfach zugewiesene Kategorien entfernen             | Mehrfach zugewiesene Kategorien entfernen             |
+| Kategorie-Attribute neu indizieren                    | Kategorie-Attribute neu indizieren                    |
+| Mehrfache Einträge Single-Value-Kategorien löschen    | Mehrfache Einträge Single-Value-Kategorien löschen    |
+| Nicht zugewiesene Beziehungen entfernen               | Nicht zugewiesene Beziehungen entfernen               |
+| Titel von Beziehungsobjekten erneuern                 | Titel von Beziehungsobjekten erneuern                 |
+| Leere SYS-IDs befüllen                                | Leere SYS-IDs befüllen                                |
+| Gewichtung aller Beziehungentypen auf Standard setzen | Gewichtung aller Beziehungentypen auf Standard setzen |
+| Beziehungsobjekte erneuern                            | Beziehungsobjekte erneuern                            |
+| Zeilenklick in Objektlisten aktivieren                | Zeilenklick in Objektlisten aktivieren                |
 
 ## Export
 
-| Button | Description |
-| - | - |
-| "mysqldump" Path | Directory path with selection of the exported Database |
+| Button           | Description                                            |
+| ---------------- | ------------------------------------------------------ |
+| "mysqldump" Pfad | Verzeichnispfad mit Auswahl der exportierten Datenbank |
 
-## Objects
+## Objekte
 
-| Button | Description |
-| - | - |
-| Remove unfinished objects | Remove unfinished objects |
-| Remove archived objects | Remove archived objects |
-| Remove deleted objects | Remove deleted objects |
+| Button                        | Description                   |
+| ----------------------------- | ----------------------------- |
+| Unfertige Objekte entfernen   | Unfertige Objekte entfernen   |
+| Archivierte Objekte entfernen | Archivierte Objekte entfernen |
+| Gelöschte Objekte entfernen   | Gelöschte Objekte entfernen   |
 
-## Categories
+## Kategorien
 
-| Button | Description |
-| - | - |
-| Remove unfinished category entries | Remove unfinished category entries |
-| Remove archived category entries | Remove archived category entries |
-| Remove deleted category entries | Remove deleted category entries |
+| Button                                   | Description                              |
+| ---------------------------------------- | ---------------------------------------- |
+| Unfertige Kategorie-Einträge entfernen   | Unfertige Kategorie-Einträge entfernen   |
+| Archivierte Kategorie-Einträge entfernen | Archivierte Kategorie-Einträge entfernen |
+| Gelöschte Kategorie-Einträge entfernen   | Gelöschte Kategorie-Einträge entfernen   |
 
 ## Dialog
 
-| Button | Description |
-| - | - |
-| Remove unfinished dialog entries | Remove unfinished dialog entries |
-| Remove archived dialog entries | Remove archived dialog entries |
-| Remove deleted dialog entries | Remove deleted dialog entries |
-| Set all dialog entries to normal | Set all dialog entries to normal |
+| Button                                | Description                           |
+| ------------------------------------- | ------------------------------------- |
+| Unfertige Dialog-Einträge entfernen   | Unfertige Dialog-Einträge entfernen   |
+| Archivierte Dialog-Einträge entfernen | Archivierte Dialog-Einträge entfernen |
+| Gelöschte Dialog-Einträge entfernen   | Gelöschte Dialog-Einträge entfernen   |
+| Setze alle Dialog-Einträge auf normal | Setze alle Dialog-Einträge auf normal |
 
-## Other
+## Andere
 
-| Button | Description |
-| - | - |
-| Re-new search index | Re-new search index |
-| Migrate database objects into categories | Migrate database objects into categories |
-| Enable search for substrings in object lists | Enable search for substrings in object lists |
-| Swap old object type icons with redesigned ones | Swap old object type icons with redesigned ones |
-| Remove orphaned entries in custom categories | Remove orphaned entries in custom categories |
+| Button                                                    | Description                                               |
+| --------------------------------------------------------- | --------------------------------------------------------- |
+| Migriere Datenbank Objekte in Kategorien                  | Migriere Datenbank Objekte in Kategorien                  |
+| MSuche nach Teil-Strings in Objektlisten aktivieren       | Suche nach Teil-Strings in Objektlisten aktivieren        |
+| Alte Objekttyp Icons gegen Redesign Icons tauschen        | Alte Objekttyp Icons gegen Redesign Icons tauschen        |
+| Exportierte Check_MK-Tags löschen                         | Exportierte Check_MK-Tags löschen                         |
+| Verwaiste Einträge benutzerdefinierter Kategorien löschen | Verwaiste Einträge benutzerdefinierter Kategorien löschen |
