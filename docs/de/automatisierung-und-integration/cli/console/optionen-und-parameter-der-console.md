@@ -38,7 +38,7 @@
 | [license-assign](#license-assign) | Ordnet eine Hosting Lizenz einem Mandaten zu (in Bearbeitung) |
 | [license-import](#license-import) | Importiert Lizenzen vom i-doit Server (in Bearbeitung) |
 | [license-key](#license-key) | Setzt einen Lizenzschlüssel für i-doit (in Bearbeitung) |
-| [license-list](#license-list) | Listet alle Lizenzen mit allen Informationen auf (ID; Produkt; Typ; Startdatum; Enddatum; lizensierte Objekte; lizenzierte Mandanten; Umgebung) |
+| [license-list](#license-list) | Listet alle Lizenzen mit allen Informationen auf (ID; Produkt; Typ; Startdatum; Enddatum; lizenzierte Objekte; lizenzierte Mandanten; Umgebung) |
 | [license-remove](#license-remove) | Entfernt Lizenzen von i-doit |
 | [list](#list) | Listet alle console Kommandos auf |
 | [logbook-archive](#logbook-archive) | Logbuch-Einträge archivieren |
@@ -83,7 +83,7 @@ Aktualisiert Dokumente
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -t | --documentId=DOCUMENTID | Mehrere Dokument-IDs (mehrere Werte zulässig) |
 | -u | --user=USERNAME | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -108,7 +108,7 @@ Aktiviert installierte Add-ons für den gewünschten Mandanten
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -133,7 +133,7 @@ Deaktiviert installierte Add-ons für den gewünschten Mandanten
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -158,7 +158,7 @@ Installiert Add-ons für den gewünschten Mandanten
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -184,7 +184,7 @@ Zeigt eine Liste mit allen installierten Add-ons zum ausgewählten Mandanten an
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -a | --addon=[ADDON] | Add-on-Kennung (mehrere Werte zulässig) |
 | -t | --tenant=[TENANT-ID] | Mandanten-ID (mehrere Werte zulässig) |
@@ -207,7 +207,7 @@ Passwort für das Admin-Center zurücksetzen
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -231,7 +231,7 @@ Leert den Cache des Rechtesystems, damit die derzeit konfigurierten Rechte aktue
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -256,7 +256,7 @@ Führt einen Check_MK Export durch
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -l | --exportLanguage=EXPORTLANGUAGE | Festlegung der für den Export verwendeten Sprache (Standard = 0) |
 | -x | --exportStructure=EXPORTSTRUCTURE | Festlegung der für den Export verwendeten Struktur (Standard = 0) |
@@ -283,7 +283,7 @@ Importiert die Änderungen am Monitoring-Status aus Livestatus nach i-doit
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -308,7 +308,7 @@ Entfernt die Einträge der Attribute `username` und `password` von Benutzerlogin
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --object=[OBJECT] | Objekt-ID des zu deaktivierenden Benutzers |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -332,7 +332,7 @@ Der Befehl completion gibt das Shell-Vervollständigungsskript aus, das für die
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --debug | Das Debug-Protokoll der Fertigstellung verfolgen |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -356,7 +356,7 @@ Aktualisiert den Status veralteter Verträge
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=USER | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=PASSWORD | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -380,7 +380,7 @@ Dokumente erstellen und exportieren
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --create_revision | Erzeugt eine oder mehrere Revisionen für bestimmte Dokumente |
 |     | --export | Exportiert ein oder mehrere Dokumente in eine Datei |
@@ -439,7 +439,7 @@ Zeigt in Verbindung mit einem anderen Befehl dessen Nutzung, Argumente und Optio
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --format=[FORMAT] | Format der Ausgabe festlegen (txt, xml, json or md) [Default: txt] |
 |     | --raw | Ausgabe der Befehls-Hilfe |
@@ -462,7 +462,7 @@ Führt den Import einer CSV-Datei mit den gewünschten Importparametern durch
 
  **Optionen**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --importFile=IMPORTFILE | Gibt die Datei und deren Pfad an, die für den Import verwendet werden soll |
 |     | --importProfileId=IMPORTPROFILEID | Legt fest, mit welchem Profil der Import ausgeführt werden soll |
@@ -490,7 +490,7 @@ Gibt eine Auflistung der Import-Profile für den CSV-Import zurück
 
 **Optionen**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -514,7 +514,7 @@ Führt einen h-inventory Import einer kompatiblen XML-Datei durch
 
 **Optionen**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --importFile=IMPORTFILE | Gibt die Datei und deren Pfad an, die für den Import verwendet werden soll |
 |     | --usage | Weitere detaillierte Informationen zur Verwendung des Commands |
@@ -543,7 +543,7 @@ Führt einen JDisc-Import nach i-doit durch.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -r | --profile=PROFILE | Angabe/Auswahl des JDisc-Profils, das für den Import verwendet werden soll |
 | -g | --group=GROUP | Angabe/Auswahl der Gruppen ID, die für den Import verwendet werden soll |
@@ -577,7 +577,7 @@ Löst einen JDisc Discovery Job aus.
 **Optionen:**
 
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -s | --server=SERVER | Auswahl des JDisc-Servers |
 | -j | --discoveryJob=DISCOVERYJOB | Auswahl des Discovery Jobs (Standard: "Discover all") |
@@ -607,7 +607,7 @@ Importiert Inhalte aus einer Syslog Server Textdatei in das i-doit Logbuch.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -632,7 +632,7 @@ Führt einen Import einer XML-Datei nach i-doit durch.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --importFile=IMPORTFILE | Angabe der Import-Datei sowie deren Pfad |
 |     | --usage | Detaillierte Informationen zur Verwendung des Commands |
@@ -659,7 +659,7 @@ Installieren Sie die i-doit Anwendung
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --root-user=ROOT-USER | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --root-password[=ROOT-PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -690,7 +690,7 @@ Synchronisiert Benutzer aus dem LDAP nach i-doit und legt diese als Personenobje
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -l | --ldapServerId=LDAPSERVERID | Gibt die ID des LDAP-Servers an, von dem die User synchronisiert werden sollen   <br>Wird keine ldapServerId angegeben werden alle Aktiven Server synchronisiert |
 |     | --dumpConfig | Gibt die derzeitige Konfiguration aus der Konfigurationsdatei aus |
@@ -721,7 +721,7 @@ Synchronisiert LDAP DNs mit den i-doit Usern.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --ldapServerId=LDAPSERVERID | Angabe des LDAP-Servers über die ID |
 | -o | --objectType=OBJECTTYPE | Angabe des Objekttyps als Konstante (z.B. C__OBJTYPE__SERVER) |
@@ -747,7 +747,7 @@ Listet alle Befehle auf. Format der Ausgabe kann geändert werden.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --format=[FORMAT] | Format der Ausgabe festlegen (txt, xml, json or md) [Default: txt] |
 |     | --raw | Ausgabe der Befehls-Hilfe |
@@ -764,7 +764,7 @@ Fügt eine Lizenz für i-doit hinzu
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -789,7 +789,7 @@ Ordnet eine Hosting Lizenz einem Mandaten zu
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -814,7 +814,7 @@ Importiert Lizenzen vom i-doit Lizenz-Server
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -838,7 +838,7 @@ Setzt einen Lizenzschlüssel für i-doit
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -863,7 +863,7 @@ Listet alle installierten Lizenzen
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -t | --tenant=[TENANT] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
 | -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
@@ -885,7 +885,7 @@ Löscht eine Lizenz aus i-doit
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -909,7 +909,7 @@ Archiviert die Logbucheinträge mit einem definierten Alter, gemäß den Einstel
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -934,7 +934,7 @@ Verschickt E-Mails mit geplanten Wartungen gemäß den im Add-on "Wartungen" fes
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -958,7 +958,7 @@ Migriert hochgeladene Dateien in i-doit <v1.13 zu v.1.14>
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
 | -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
@@ -979,7 +979,7 @@ Exportiert die Nagios-Einstellungen und i-doit Objekte in Nagios-Konfigurationsd
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --nagiosHostId=NAGIOSHOSTID | Angabe des Nagios-Hosts, der für den Export verwendet werden soll |
 |     | --validate | Validiert die Exportdateien |
@@ -1006,7 +1006,7 @@ Importiert Monitoring Statusänderungen aus den NDOUtils in das i-doit Logbuch.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1031,7 +1031,7 @@ Listet alle [Benachrichtigungen](../../../auswertungen/benachrichtigungen.md) au
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1056,7 +1056,7 @@ Verschickt die auf der i-doit Oberfläche konfigurierten Benachrichtigungen
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --notification-ids=NOTIFICATION-IDS | Übergabe bestimmter zu sendender Benachrichtigungs-IDs 1,2,3 |
 |     | --notification-type-ids=NOTIFICATION-TYPE-IDS | Übergeben Sie spezifische IDs für die zu sendenden Benachrichtigungen 1,2,3 |
@@ -1083,7 +1083,7 @@ Exportiert einen Report in das gewünschte Dateiformat.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -r | --reportId=REPORTID | ID des zu exportierenden Reports |
 | -d | --exportPath=EXPORTPATH | Pfad, zu dem der Export erfolgen soll |
@@ -1112,7 +1112,7 @@ Sucht nach Inhalten in der Dokumentation
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --searchString=SEARCHSTRING | Inhalt, nach dem gesucht werden soll |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -1138,7 +1138,7 @@ Erneuert den Suchindex, indem dieser gelöscht und neu geschrieben wird.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --update | Anstatt nur einen neuen Index zu erstellen, werden die aktuellen Index-Dokumente überschrieben |
 |     | --category=CATEGORY | Whitelist der Kategorien |
@@ -1166,7 +1166,7 @@ Mit diesem Befehl können Sie html-Tags im Beschreibungsfeld aller Kategorien un
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1191,7 +1191,7 @@ Synchronisiert dynamische Gruppenmitglieder neu.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -g | --groups=GROUPS | Kommaseparierte Liste von IDs der dynamischen Gruppen |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -1216,7 +1216,7 @@ Legt den Wert des Auto-Increment des Systems fest. Dies beeinflusst Objekt-IDs, 
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --autoIncrement=AUTOINCREMENT | Zahl, auf die das Auto-Increment festgelegt werden soll |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -1241,7 +1241,7 @@ Bereinigt optional Kategorieeinträge, die sich im Status unfertig, archiviert o
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --categoryStatus=CATEGORYSTATUS | Use to start cleaning up the specified status:<br>**1** für "unfertige" Kategorieeinträge<br>**3** für "archivierte" Kategorieeinträge<br>**4** für "gelöschte" Kategorieeinträge | |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -1266,7 +1266,7 @@ Prüft, ob eine neue i-doit Version verfügbar ist.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
 | -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
@@ -1287,9 +1287,9 @@ Konvertiert alle nicht INNODB Tabellen nach INNODB.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
-|     | --convert | Startet den Vorgan, alle nicht UTF-8-tables zu konvertieren |
+|     | --convert | Startet den Vorgang, alle nicht UTF-8-tables zu konvertieren |
 |     | --table=[TABLE] | Tabelle die überprüft und konvertiert werden soll |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1313,7 +1313,7 @@ Konvertiert alle nicht UTF-8 Datentypen nach UTF-8.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --convert | Startet den Vorgan, alle nicht UTF-8-tables zu konvertieren |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -1338,7 +1338,7 @@ Führt die Standortkorrektur aus der GUI in der Konsole aus
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1363,7 +1363,7 @@ Verschickt eine E-Mail Benachrichtigung für Wartungskontakte.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1388,7 +1388,7 @@ Bereinigt alle Objekte mit einem selbst definierbarem Status.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --objectStatus=OBJECTSTATUS | Legt fest, welcher Status bereinigt werden soll:  1: "unfertig"; 3: "archiviert"; 4: "gelöscht" |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -1414,7 +1414,7 @@ Erneuert die Bezeichnungen aller Objektbeziehungen.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 |     | --categoryConstant=CATEGORYCONSTANT | Konstante der Kategorie, für die der Vorgang ausgeführt werden soll (z.B. C__CATG__IP) |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
@@ -1440,7 +1440,7 @@ Aktualisiert alle verfügbaren Listenkonfigurationen (Objekttypen und Kategorien
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -a  | --all | Verarbeitet alle Objekttyp-Tabellenkonfigurationen |
 | -o | --object-types=OBJECT-TYPES | Nur bestimmte Objekttyp-Tabellenkonfigurationen über ihre Konstante verarbeiten (es ist möglich, eine durch Komma getrennte Liste von Konstanten zu übergeben) |
@@ -1467,7 +1467,7 @@ Erstellt einen neuen Mandanten
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --root-user=[ROOT-USER] | Benutzername des privilegierten DB-Benutzers [default: "root"] |
 | -p | --root-password=[ROOT-PASSWORD] | Passwort des privilegierten DB-Benutzers |
@@ -1494,7 +1494,7 @@ Deaktiviert einen existierenden Mandaten.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1518,7 +1518,7 @@ Aktiviert einen bestehenden Mandanten.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1542,7 +1542,7 @@ Listet alle bestehenden Mandanten auf.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
 | -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
@@ -1563,7 +1563,7 @@ Entfernt einen bestehenden Mandanten
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1587,7 +1587,7 @@ Deinstalliert die genutzte i-doit Installation
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1610,7 +1610,7 @@ Update von i-doit installieren.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
@@ -1635,7 +1635,7 @@ Sendet E-Mails zu Workflows und erstellt Aufgaben aus Checklisten.
 
 **Optionen:**
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
 | -t | --types=TYPES | Workflow-Typen (mehrere Werte sind möglich) |
 | -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |

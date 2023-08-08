@@ -1,6 +1,6 @@
 # Localization
 
-_Do you speak IT documentation? _English is and will remain the standard language in the domain of information technology. But as diversity enriches, i-doit supports several languages. Among other things, we will show you how to adjust existing translations in this article.
+_Do you speak IT documentation?_ English is and will remain the standard language in the domain of information technology. But as diversity enriches, i-doit supports several languages. Among other things, we will show you how to adjust existing translations in this article.
 
 Supported Languages
 -------------------
@@ -31,7 +31,8 @@ During working with i-doit it is possible for every user to switch to another la
 Language per User
 -----------------
 
-When the user logs in for the first time ([initial login](../basics/initial-login.md)) in i-doit, the English interface is displayed by default. Each user can set the language to be used as standard individually. This can be carried out under **Administration → User settings → Presentation → Language**. It is important to set the right value in order to receive, for example, [e-mail notifications](../evaluation/notifications.md) in the desired language since the e-mail templates are multilingual.
+When the user logs in for the first time ([initial login](../basics/initial-login.md)) in i-doit, the English interface is displayed by default. Each user can set the language to be used as standard individually. This can be carried out under **Administration → User settings → User language**.<br>
+It is important to set the right value in order to receive, for example, [e-mail notifications](../evaluation/notifications.md) in the desired language since the e-mail templates are multilingual.
 
 Language Constants
 ------------------
@@ -40,11 +41,11 @@ Texts to be translated are represented by so-called language constants within th
 
 | Language constant | English | German |
 | --- | --- | --- |
-| LC__CMDB__OBJTYPE__ROOM | Room | Raum |<<<<<<< system-administration-en
+| LC__CMDB__OBJTYPE__ROOM | Room | Raum |
 
 Only the language constant LC__CMDB__OBJTYPE__ROOM is in the source code/ in the databases. The user, however, receives the matching translation ("Room" or "Raum") in the web GUI of i-doit. Language constants can be identified by the fact that they only contain capital letters (A-Z), underscores (_) and in some cases numbers (0-9). They always begin with the LC__ prefix.
 
-With a server call in the browser i-doit uses translation tables. These are located in the installation path of i-doit at src/lang. There is an abbreviation for each language, for example, de for German, en for English).
+With a server call in the browser i-doit uses translation tables. These are located in the installation path of i-doit at `src/lang`. There is an abbreviation for each language, for example, de for German, en for English).
 
 | File | Comment | Update safe? |
 | --- | --- | --- |
@@ -54,12 +55,17 @@ With a server call in the browser i-doit uses translation tables. These are loca
 | en_custom.inc.php | Custom adjustments to the English language (optional) | yes |
 | en.inc.php | English language | no  |
 
-Caution: The changes to the files src/lang/<Language>.inc.php are overwritten when [updating](../maintenance-and-operation/update.md) and should therefore not be adjusted. The corresponding custom files should be adjusted instead. All files contain PHP source code which can be adjusted easily. For each translation a new line is written following the same scheme:
+!!! hint "Editing translation"
+    If you want to edit the translation then use ==Administration → Data view → [Language profiles](./administration/data-view/language-profiles.md)== configuration.
 
-    $g_langcache['LC__EXAMPLE'] = 'Example translation';
+!!! warning
+    The changes to the files src/lang/<Language>.inc.php are overwritten when [updating](../maintenance-and-operation/update.md) and should therefore not be adjusted. The corresponding custom files should be adjusted instead. All files contain PHP source code which can be adjusted easily. For each translation a new line is written following the same scheme:
 
-The language constant LC\_\_EXAMPLE becomes "Example translation".
+```conf
+$g_langcache['LC__EXAMPLE'] = 'Example translation';
+```
 
+The language constant LC\_\_EXAMPLE becomes "Example translation".<br>
 The custom files are not only suitable for new translations but also for overwriting existing ones.
 
 !!! success "Exclude languages"
@@ -83,11 +89,11 @@ Generally, any text of the web GUI can be translated. If you want to find out wh
 
 ### Multilingual Object Type Groups
 
-The language constants are located in the row named isys_obj_type_group__title of the table called isys_obj_type_group in the tenant database. If a new [object-type group](../basics/structure-of-the-it-documentation.md) is created, the value can be converted to a language constant in the database. An existing object-type group should not be renamed in the database. Instead the respective language constant should be translated anew in the custom files.
+The language constants are located in the row named isys_obj_type_group__title of the table called isys_obj_type_group in the tenant database. If a new [object-type group](../basics/structure-of-the-it-documentation.md) is created, the value can be converted to a language constant in the database. An existing object-type group should not be renamed in the database. Instead the respective language constant should be translated anew in the custom files.
 
 ### Multilingual Object Types
 
-An [object type](../basics/structure-of-the-it-documentation.md) can be set as localized at **Administration → CMDB settings → Object type configuration → [Object type group] → Language constant / Title**. This applies both to standard object types as well as [custom object types](../basics/custom-object-types.md).
+An [object type](../basics/structure-of-the-it-documentation.md) can be set as localized at **Administration → CMDB settings → Object type configuration → [Object type group] → Language constant / Title**. This applies both to standard object types as well as [custom object types](../basics/custom-object-types.md).
 
 ### Multilingual Object Titles
 
