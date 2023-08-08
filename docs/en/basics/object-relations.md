@@ -106,15 +106,13 @@ Relations to other objects are gathered in the **Relations** [category](structur
 
 Relations do not only have different types (see above) but they are also being created implicitly or explicitly. Implicit relations originate from categories. If the **Location** category is edited, for example, and an object which is higher in the hierarchy is selected in the **Location** attribute, then the implicit relation of the type **Location** will be created automatically in the background. This implicit relation is also shown in the **Relations** category at **Extras → CMDB → Relations → Locations**.
 
-If you want to build a relation between two objects independent of the categories and their attributes, an explicit relation will be created. This explicit relation is created in the **Relations** category. The object where you are during that moment is pre-selected as **Object 1**. The object with which **Object 1** is to be put into a relation has to be selected under **Object 2**. You also have to choose the direction between the two objects.  **Dependency** is selected as the default relation type, as it is already set as explicit at **Administration → CMDB Settings → Relation types**. But you can also easily define a new explicit relation and use it immediately. This can be carried out via the slips-icon, similar to the procedure with Dialog+ fields.
+If you want to build a relation between two objects independent of the categories and their attributes, an explicit relation will be created. This explicit relation is created in the **Relations** category. The object where you are during that moment is pre-selected as **Object 1**. The object with which **Object 1** is to be put into a relation has to be selected under **Object 2**. You also have to choose the direction between the two objects.  **Dependency** is selected as the default relation type, as it is already set as explicit at **Administration → Predefined content → Object relation types**. But you can also easily define a new explicit relation and use it immediately. This can be carried out via the slips-icon, similar to the procedure with Dialog+ fields.
 
 [![Implicit versus Explicit Relations](../assets/images/en/basics/object-relations/6-or.png)](../assets/images/en/basics/object-relations/6-or.png)
 
 When creating a new explicit relation type, the type and the descriptions can be defined from the corresponding object views.
 
-[![Implicit versus Explicit Relations](../assets/images/en/basics/object-relations/7-or.png)](../assets/images/en/basics/object-relations/7-or.png)
-
-Implicit or explicit?
+### Implicit or explicit?
 
 So what is better: Should you use implicit or explicit relations? The answer is: implicit relations. Categories and attributes are central elements for structuring the IT documentation. Users document in categories and that is also where users look for information. Therefore it is better to document unspecific relations of the type **Dependency** explicitly in a category in which implicit and explicit relations are varied. Both possibilities can be evaluated, but only the implicit relations are transparent.
 
@@ -134,7 +132,7 @@ Example: When a web cluster with multiple nodes is documented in i-doit, the nod
 
 A listing of all parallel relations can be found at **Extras → CMDB → Relations → Parallel relations**. They cannot be created by the user but are created implicitly and automatically in the background.
 
-[![Parallel Relations](../assets/images/en/basics/object-relations/8-or.png)](../assets/images/en/basics/object-relations/8-or.png)
+[![Parallel Relations](../assets/images/en/basics/object-relations/7-or.png)](../assets/images/en/basics/object-relations/7-or.png)
 
 ## Object Relation in a Custom Category
 
