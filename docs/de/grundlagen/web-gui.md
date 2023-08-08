@@ -106,7 +106,8 @@ Hier ein Beispiel für einen großen Menüpunkte Abstand.
 
 "Abstandhalter darstellen" gibt an, ob in den Kategorien Abstandshalter angezeigt werden.
 Ist z. B. "Abstandhalter anzeigen" auf "Ja" eingestellt, werden die Abstandhalter angezeigt.
-[![display spacers](../assets/images/en/basics/web-gui/16-gui.png)](../assets/images/en/basics/web-gui/16-gui.png)
+[![abstandhalter aktiviert](../assets/images/en/basics/web-gui/16-gui.png)](../assets/images/en/basics/web-gui/16-gui.png)
 
-and here a example with disabled spacers.
-[![do not display spacers](../assets/images/en/basics/web-gui/17-gui.png)](../assets/images/en/basics/web-gui/17-gui.png)
+Hier ein Beispiel wenn die Abstandhalter deaktiviert sind.
+
+[![abstandhalter deaktiviert](../assets/images/en/basics/web-gui/17-gui.png)](../assets/images/en/basics/web-gui/17-gui.png)

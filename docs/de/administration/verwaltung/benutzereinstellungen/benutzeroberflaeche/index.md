@@ -6,50 +6,48 @@ Hier finden Sie die Einstellungen für die Benutzeroberfläche
 
 | Option | Wert |
 | - | - |
-| Zeilenabstände | [Klein oder Mittel oder Groß](../../../../grundlagen/web-gui.md) |
-| Abstände in Menübäumen | [Klein oder Mittel oder Groß](../../../../grundlagen/web-gui.md)  |
-| Abstandhalter darstellen | [Ja oder Nein](../../../../grundlagen/web-gui.md) |
-
-## Kategorien
-
-| Option | Wort |
-| - | - |
-| Kabelansicht direkt öffnen | Ja oder Nein |
+| Zeilenabstände | [Klein oder Mittel oder Groß](../../../../grundlagen/web-gui.md#zeilen-abstände) |
+| Abstände in Menübäumen | [Klein oder Mittel oder Groß](../../../../grundlagen/web-gui.md#abstände-in-menübäumen)  |
+| Abstandhalter darstellen | [Ja oder Nein](../../../../grundlagen/web-gui.md#abstandhalter-darstellen) |
 
 ## Hauptmenü
 
 | Option | Wert |
 | - | - |
-| Show "my-doit" in the main menu | Yes or No |
-| Show object type group as dropdown | Yes or No |
+| "my-doit" im Hauptmenü darstellen | Ja oder Nein |
+| Objekttyp Gruppe als Dropdown darstellen | Ja oder Nein |
 
-## Object lists
+## Kategorien
 
-| Option | Value |
+| Option | Wert |
 | - | - |
-| Save last used list-filters | 300 Value in seconds (0 = do not save the filter) |
-| Entries per page in object lists | 50 |
+| Kabelansicht direkt öffnen | Ja oder Nein |
 
-## Object navigation
+## Objekt-Listen
 
-| Option | Value |
+| Option | Wert |
 | - | - |
-| Default treeview | [Object view](../../../../grundlagen/web-gui.md)<br>[Location view](../../../../grundlagen/web-gui.md) |
-| Treeview type | [Physical location or Logical location or Combined view](../../../../grundlagen/web-gui.md) |
-| Hide empty object types | Yes or No |
-| Hide empty categories | Yes or No |
+| Zuletzt verwendeten Listen-Filter merken	 | 300 In Sekunden (0 = Filter nicht merken) |
+| Einträge pro Seite in Objektlisten | 50 |
+
+## Objektnavigation
+
+| Option | Wert |
+| - | - |
+| Standard Baumansicht | [Objektsicht](../../../../grundlagen/web-gui.md#objektansicht)<br>[Standortsicht](../../../../grundlagen/web-gui.md#standortsicht) |
+| Baumansicht Typ | [Physischer Standort oder Logischer Standort oder Kombinierte Ansicht](../../../../grundlagen/web-gui.md#standortsicht) |
+| Leere Objekttypen ausblenden | Ja oder Nein |
+| Leere Kategorien ausblenden | Ja oder Nein |
 
 ## Quickinfo (Link mouseover)
 
-| Option | Value |
+| Option | Wert |
 | - | - |
-| Active | Yes or No |
-| Delay | 0.5 Value in seconds |
+| Aktiviert | Ja oder Nein |
+| Verzögerung | 0.5 Wert in Sekunden |
 
+## Workflows (Add-on)
 
-
-## Workflows (from Add-on)
-
-| Option | Value |
+| Option | Wert |
 | - | - |
-| Entrylimit for filter view | Value |
+| Maximalanzahl Einträge für Filteransicht | Wert |
