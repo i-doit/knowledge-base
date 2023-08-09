@@ -2,8 +2,7 @@
 
 The topic of this article is how i-doit structures the [IT documentation](../glossary.md). Here we focus especially on the vocabulary which is used in i-doit, how these terms are related to each other and how this is represented in the Web GUI.
 
-Navigation
-----------
+## Navigation
 
 Upon [logging in,](./initial-login.md) the [dashboard and widgets](./dashboard-and-widgets.md) are displayed. From here you can start to explore the IT documentation. Almost all functionalities of i-doit can be accessed from the main navigation bar (the black bar at the top).
 
@@ -13,8 +12,7 @@ For better orientation you can take a look at the bread crumb navigation. From h
 
 [![Navigation](../assets/images/en/basics/structure-of-the-it-documentation/2-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/2-sotitd.png)
 
-Groups, Types and Categorizations
----------------------------------
+## Groups, Types and Categorizations
 
 Object type groups comprise object types which instantiate objects, which in turn inherit categories, which then include attributes. Got it? Again from the start:
 
@@ -120,7 +118,7 @@ An attribute is a documented value belonging to an object. Attributes of the sam
 
 [![Attribute](../assets/images/en/basics/structure-of-the-it-documentation/14-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/14-sotitd.png)
 
-Important attributes of different categories are combined to one view, which is shown above each category. These primary attributes are **SYS-ID**, **Purpose** (both in the **General** category), **Relationship**, **Location**, **Contact assignment** and **Primary access URL** (**Access** category). Additionally, a QR code which contains the link to the overview page is shown next to them.
+Important attributes of different categories are combined to one view, which is shown above each category. These primary attributes are **SYS-ID**, **Purpose** (both in the **General** category), **Relationship**, **Location**, **Contact assignment** and **Primary access URL** (**Access** category). Additionally, a QR code which contains the link to the overview page is shown next to them. Pressing the arrow opens this view.
 
 [![Access](../assets/images/en/basics/structure-of-the-it-documentation/15-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/15-sotitd.png)
 
@@ -130,7 +128,6 @@ Attributes of objects are saved and edited via form fields in the web GUI of i-d
 
 [![### Attribute Field](../assets/images/en/basics/structure-of-the-it-documentation/16-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/16-sotitd.png)
 
-Relationships
--------------
+## Relationships
 
 IT components can not only be documented individually, but they can also be put in relation to each other. There are already various pre-configured types of relationships which can be adjusted and modified. Each relationship is a separate object (with no need for a license) which is automatically created, edited or deleted.
