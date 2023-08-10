@@ -6,4 +6,4 @@ Der Benutzer hat die Möglichkeit verschiedene Datenformate auszuwählen.
 | - | - |
 | Datumsformat | Englisch/Deutsch |
 | Numerisches Format | Englisch/Deutsch |
-| Währungsformat | `EUR;€` or `USD;$` or `GBP;£` or `CHF;Sfr.` |
+| Währungsformat | `EUR;€` oder `USD;$` oder `GBP;£` oder `CHF;Sfr.` |
