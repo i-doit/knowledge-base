@@ -131,7 +131,6 @@ The Expert settings for the System are located in the Admin Center. You can reac
 
 | Key                                             | Value                                                                                                                                               | Description       |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| system.email.password                           | -                                                                                                                                                    | system.email.port |
 | admin.active_license_distribution               | 1                                                                                                                                                    |                   |
 | api.authenticated-users-only                    | 1                                                                                                                                                    |                   |
 | api.status                                      | 1                                                                                                                                                   |                   |
@@ -188,6 +187,7 @@ The Expert settings for the System are located in the Admin Center. You can reac
 | system.email.connection-timeout                 | -                                                                                                                                                    |                   |
 | system.email.from                               | i-doit@example-domain.int                                                                                                                           |                   |
 | system.email.name                               | -                                                                                                                                                    |                   |
+| system.email.password                           | -                                                                                                                                                    | system.email.port |
 | system.email.smtp-auto-tls                      | 0                                                                                                                                                   |                   |
 | system.email.smtp-host                          | -                                                                                                                                                    |                   |
 | system.email.smtpdebug                          | 0                                                                                                                                                   |                   |

@@ -6,11 +6,11 @@ For this you can use the free tool "Starwind Converter" which you can download f
 
 [https://www.starwindsoftware.com/tmplink/starwindconverter.exe](https://www.starwindsoftware.com/tmplink/starwindconverter.exe)
 
-We have already downloaded the i-doit appliance and unpacked it under `c:\\i-doit_appliance`:
+We have already downloaded the i-doit appliance and unpacked it under c:\\i-doit\_appliance:
 
 [![Folder coontent](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/1-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/1-hvi.png)
 
-After installing the ==Starwind Converter==, we start it and select "Local File" as the source and go to "Next" :
+After installing the Starwind Converter, we start it and select "Local File" as the source and go to "Next" :
 
 [![Select dest image](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/2-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/2-hvi.png)
 
@@ -30,7 +30,8 @@ Now the conversion takes place and after completion we can exit the program:
 
 [![Completion](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/6-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/6-hvi.png)
 
-In the next step we can integrate the converted disk into a new Hyper-V machine.<br>
+In the next step we can integrate the converted disk into a new Hyper-V machine.
+
 To do this, we start the Hyper-V New Virtual Machine Wizard and specify the folder to the newly created VDH:
 
 [![Select Name and path](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/7-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/1-hvi.png)

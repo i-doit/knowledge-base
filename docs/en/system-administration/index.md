@@ -9,3 +9,4 @@ What can you do to finetune i-doit so that you can benefit fully from a maximum 
 - [Customer Portal](./customer-portal.md)
 - [Troubleshooting](./troubleshooting/index.md)
 - [Hotfixes](./hotfixes/index.md)
+- [System Settings (Administration)](./system-settings/index.md)

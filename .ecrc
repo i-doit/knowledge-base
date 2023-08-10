@@ -1,12 +1,6 @@
 {
     "Exclude": [
         "node_modules",
-        "LICENSE",
-        "\\.md$",
-        "\\.txt$",
-        "\\.css$",
-        "\\.conf$",
-        "\\.csv$",
-        "\\.ini$"
+        "LICENSE"
     ]
 }

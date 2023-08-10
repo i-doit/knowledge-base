@@ -4,7 +4,7 @@ Besides having standard categories _i-doit_ makes it possible to create (custom)
 
 ## Configuration of the Category
 
-You can find the configuration of the custom categories in _i-doit_ at **Administration → Data structure → Custom categories**. The **New** button is used to create a custom category. If you already created some custom categories, you can also edit them here.
+You can find the configuration of the custom categories in _i-doit_ at **Administration** **→** **Data structure** **→** **Custom categories**. The **New** button is used to create a custom category. If you already created some custom categories, you can also edit them here.
 
 [![Configuration of the Category](../assets/images/en/basics/custom-categories/1-cc.png)](../assets/images/en/basics/custom-categories/1-cc.png)
 
@@ -30,50 +30,52 @@ In order to customize your category you can add any number of attributes with th
 
 You can choose from the following [field types](./attribute-fields.md):
 
-- **Checkbox**<br>
+*   **Checkbox**<br>
     A checkbox that can be selected
-- **Date and Time**<br>
+*   **Date and Time**<br>
     A field for date or for date + time
-- **Dialog+**<br>
+*   **Dialog+**<br>
     [Dialog-Plus-Fields](./dialog-admin.md) are fields which can be filled with their own values to make them re-usable. The dialog-plus field can also be used in other categories via the identifier in the **Addition**field, so that the already entered values are available there. For this purpose, it is necessary to enter the same identifier in both categories.
-- **Dialog+ (multiple selection)**<br>
+*   **Dialog+ (multiple selection)**<br>
     Like **Dialog+**, only with any number of values.
-- **File Browser**<br>
+*   **File Browser**<br>
     Allows you to reference a file.
-- **HTML editor**<br>
+*   **HTML editor**<br>
     A text field which allows simple text formatting, such as italic letters.
-- **Link**<br>
+*   **Link**<br>
     A field to show a hyperlink which can be clicked within the category and forwards from there.
-- **Number only**<br>
+*   **Number only**<br>
     A field where only numbers can be entered.
-- **Object browser**<br>
+*   **Object browser**<br>
     A field for creating a link to another object. This link is a reference only and not a complete relationship. Therefore this kind of reference will not appear in the CMDB explorer.
-- **Object browser (multiple objects)**<br>
+*   **Object browser (multiple objects)**<br>
     Like **object browser**, only with any number of objects.
-- **Object relation**<br>
+*   **Object relation**<br>
     A complete relationship is generated when using an [object relation](./object-relations.md). The **Addition** field allows the selection of the kind of relation and the associated relation text. These relations can also be found in the CMDB explorer. Whenever possible, this field type is to be preferred over the object browser mentioned above.
-- **Object relation** (**multiple objects**)<br>
+*   **Object relation** (**multiple objects**)<br>
     Like **object relation**, only with any number of objects.
-- **Report**<br>
+*   **Report**<br>
     Displays a report, the ID of the report must be entered in the additional field.
-- **Text field**<br>
+*   **Text field**<br>
     A single-line text field for entering plain text.
-- **Text field (masked)**<br>
+*   **Text field (masked)**<br>
     A single-line text field for entering masked text. Content is only in the Database visible.
-- **Text field (multiple rows)**<br>
+*   **Text field (multiple rows)**<br>
     You can enter longer texts in this multi-line text field.
-- **Time**<br>
-    A time between 00:00 and 23:59 can be entered here
-- **Yes-no-field**<br>
+*   **Yes-no-field**<br>
     A simple yes-or-no selection.
+*   **Time**<br>
+    A time between 00:00 and 23:59 can be entered here
+*   **Date**<br>
+    You can enter a date in this field. This category provides a calendar which enables you to select the desired date.
 
 Additionally, the following design elements are available:
 
-- **Horizontal line**<br>
+*   **Horizontal line**<br>
     Separate fields and contents graphically with a line.
-- **HTML**<br>
+*   **HTML**<br>
     You can enter HTML code in the categories configuration which will be interpreted in the category. The source code will be entered in the configuration of the category and cannot be entered by the user when viewing the category in the documentation.
-- **Javascript**<br>
+*   **Javascript**<br>
     You can enter Javascript code in the categories configuration which will be interpreted in the category. The source code will be entered in the configuration of the category and cannot be entered by the user when viewing the category in the documentation.
 
 As with most of the other categories, custom categories also have a **Description field** attached at the end.<br>
@@ -92,10 +94,8 @@ You can delete attributes with the **Remove** button.
 
 An interpretation is carried out below the configuration:
 
-- **Total entry count:**:<br>
-    How often was this category saved? The entries are added up per object (once with single value, per entry with multi-value).
-- **Value count**:<br>
-    Each attribute which was filled and saved is added together.
+*   **Total of category entries**: How often was this category saved? The entries are added up per object (once with single value, per entry with multi-value).
+*   **Values mainained**: Each attribute which was filled and saved is added together.
 
 [![Custom category](../assets/images/en/basics/custom-categories/8-cc.png)](../assets/images/en/basics/custom-categories/8-cc.png)
 

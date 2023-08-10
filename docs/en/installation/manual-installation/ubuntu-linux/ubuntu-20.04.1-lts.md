@@ -2,11 +2,12 @@
 
 In this article we explain in just a few steps which packages need to be installed and configured.
 
-## System Requirements
+System Requirements
+-------------------
 
 The general [system requirements](../../system-requirements.md) apply.
 
-When you want to use [Ubuntu Linux](https://www.ubuntu.com/) as operating system, the server version ==20.04 LTS "focal fossa"== is recommended. In order to find out which version is used you can carry out the following command:
+When you want to use [Ubuntu Linux](https://www.ubuntu.com/) as operating system, the server version **20.04 LTS "focal fossa"** is recommended. In order to find out which version is used you can carry out the following command:
 
 ```shell
 cat /etc/os-release
@@ -18,16 +19,17 @@ As system architecture you should use a x86 in 64bit:
 uname -m
 ```
 
-==x86_64== means 64bit, ==i386== or ==i686== only 32bit.
+**x86_64** means 64bit, **i386** or **i686** only 32bit.
 
-## Installation of the Packages
+Installation of the Packages
+----------------------------
 
 When you want to use the official package repositories, use the following instructions for installation of:
 
-*   the ==Apache== web server 2.4
-*   the script language ==PHP== 7.4
-*   the database management system ==MariaDB== 10.3 and
-*   the caching server ==memcached==
+*   the **Apache** web server 2.4
+*   the script language **PHP** 7.4
+*   the database management system **MariaDB** 10.3 and
+*   the caching server **memcached**
 
 ```shell
 sudo apt update
@@ -41,10 +43,10 @@ php-imagick php-memcached \
 memcached unzip moreutils
 ```
 
-## Configuration
+Configuration
+-------------
 
-The installed packages for Apache web server, PHP and MariaDB already supply configuration files.<br>
-It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
+The installed packages for Apache web server, PHP and MariaDB already supply configuration files. It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
 
 ### PHP
 
@@ -82,9 +84,11 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
-The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](../system-settings.md) of i-doit.<br>
-The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).<br>
-Afterwards, the required PHP modules are activated and the Apache web server is restarted:<br>
+The value (in seconds) of **session.gc_maxlifetime** should be the same or greater than the **Session Timeout** in the [system settings](../system-settings.md) of i-doit.
+
+The **date.timezone** parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
+
+Afterwards, the required PHP modules are activated and the Apache web server is restarted:
 
 ```shell
 sudo phpenmod i-doit
@@ -120,8 +124,9 @@ The new VHost configuration is saved in this file:
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.<br>
-With the next step you activate the new VHost and the necessary Apache module ==rewrite== and the Apache web server is restarted:
+i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.
+
+With the next step you activate the new VHost and the necessary Apache module **rewrite** and the Apache web server is restarted:
 
 ```shell
 sudo chown www-data:www-data -R /var/www/html/
@@ -134,14 +139,13 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly.<br>
-The ==root== user should receive a secure password:
+Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The **root** user should receive a secure password:
 
 ```shell
 mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the ==root== user during setup:
+Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
 
 ```shell
 sudo mysql -uroot
@@ -227,8 +231,9 @@ Finally, MariaDB is started:
 sudo systemctl start mysql.service
 ```
 
-## Next Step
+Next Step
+---------
 
 Now the operating system is prepared and i-doit can be installed.
 
-Proceed with [==Setup== …](../setup.md)
+Proceed with [**Setup** …](../setup.md)

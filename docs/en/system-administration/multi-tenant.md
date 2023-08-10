@@ -20,11 +20,11 @@ The administration of tenants is done in the admin center. All presently created
 
 Above the listing various options are available:
 
-- **Add new tenant**: create a new tenant
-- **Edit**: configure an existing tenant
-- **Activate**: activate an existing tenant, if it was deactivated before
-- **Deactivate**: deactivate an existing tenant, if it was activated before
-- **Remove**: remove an existing tenant **irreversibly**
+*   **Add new tenant**: create a new tenant
+*   **Edit**: configure an existing tenant
+*   **Activate**: activate an existing tenant, if it was deactivated before
+*   **Deactivate**:  deactivate an existing tenant, if it was activated before
+*   **Remove**:  remove an existing tenant **irreversibly**
 
 A tenant is selected via the checkboxes for the configuration. For (de-)activating or removing one or more tenants are selected.
 
@@ -32,11 +32,11 @@ A tenant is selected via the checkboxes for the configuration. For (de-)activati
 
 For each tenant you need to set some properties (mandatory fields):
 
-- **Tenant GUI title**: name of the tenant (is shown at the login, for example)
-- **Description**: apart from its informal character this description has no effect on the functionality
-- **Sort value**: enter the sorting order as integer (the lower the value the higher is the tenant in the hierarchy)
-- **Cache dir**: much data is temporarily saved in _i-doit_ due to performance reasons. For each tenant a dedicated cache folder is created in the **temp/** folder in the installation path of _i-doit_.
-- **MySQL settings**: here it is useful to name the database name with the prefix **idoit_**. The first tenant receives the database name **idoit_data** in the [installation process](../installation/manual-installation/setup.md) by default.
+*   **Tenant GUI title**: name of the tenant (is shown at the login, for example)
+*   **Description**: apart from its informal character this description has no effect on the functionality
+*   **Sort value**: enter the sorting order as integer (the lower the value the higher is the tenant in the hierarchy)
+*   **Cache dir**: much data is temporarily saved in _i-doit_ due to performance reasons. For each tenant a dedicated cache folder is created in the **temp/** folder in the installation path of _i-doit_.
+*   **MySQL settings**: here it is useful to name the database name with the prefix **idoit_**. The first tenant receives the database name **idoit_data** in the [installation process](../installation/manual-installation/setup.md) by default.
 
 Object Limitation per Tenant
 ----------------------------
@@ -67,7 +67,7 @@ At the login screen you are asked which tenant you want to sign in if multiple t
 
 If a [LDAP folder/Active Directory (AD)](../user-authentication-and-management/ldap-directory/index.md) is tied to the authentication and authorization, then the configured servers will be queried one after another while logging in, to check whether the credentials are valid. After this, the tenants for which these credentials are valid are determined (see above).
 
-If [Single Sign On (SSO)](../user-authentication-and-management/sso-comparison/index.md) is active, a tenant can be chosen as default. This is done at **Administration → System settings → Single Sign On → Default tenant**. When starting _i-doit_, the user is automatically tied to this tenant if the credentials are correct.
+If [Single Sign On (SSO)](../user-authentication-and-management/sso-comparison/index.md) is active, a tenant can be chosen as default. This is done at **Administration → System settings → Single Sign On → Default tenant**. When starting _i-doit_, the user is automatically tied to this tenant if the credentials are correct.
 
 Switch Tenants
 --------------

@@ -1,12 +1,13 @@
 # Red Hat Enterprise Linux 8 (RHEL 8)
 
-This article describes which packages need to be installed and configured.
+This article describes which packages need to be installed and configured. 
 
-## System requirements
+System requirements
+-------------------
 
 The general [system requirements](../../system-requirements.md) apply.
 
-This article refers to ==RHEL in version 8.x==
+This article refers to **RHEL in version 8.x**
 To determine which version is used, this command can be executed on the console:
 
 ```shell
@@ -19,23 +20,21 @@ As system architecture a x86 in 64bit should be used:
 uname -m
 ```
 
-==x86_64== stands for 64bit, ==i386== or ==i686== only for 32bit.
+**x86_64** stands for 64bit, **i386** or **i686** only for 32bit.
 
 There are other operating systems that are closely related to RHEL, such as the open replica CentOS and Fedora, which is maintained by Red Hat. However, only RHEL is officially supported.
 
-## Installation of the packages
+Installation of the packages
+----------------------------
 
 On a system that is up-to-date
 
-- the ==Apache== web server 2.4,
-- the script language ==PHP== 7.4,
-- the database management system ==MariaDB== 10.5
-- the caching server ==memcached==
+*   the **Apache** web server 2.4,
+*   the script language **PHP** 7.4,
+*   **the database management system MariaDB** 10.5
+*   the caching server **memcached**
 
-However, the current ==version 8.x of RHEL== only contains obsolete packages that do not meet the system requirements.<br>
-It is therefore necessary to install current packages from other repositories.
-
-But be ==careful== as third-repositories could endanger the stability of the operating system!
+installed. However, the current **version 8.x of RHEL** only contains obsolete packages that do not meet the system requirements. It is therefore necessary to install current packages from other repositories. Caution: Third-party repositories can endanger the stability of the operating system.
 
 At first the first packages are installed from the default repositories:
 
@@ -113,7 +112,8 @@ sudo firewall-cmd --permanent --add-service=http
 sudo systemctl restart firewalld.service
 ```
 
-## Configuration
+Configuration
+-------------
 
 The installed packages for Apache Webserver, PHP and MariaDB already come with configuration files. It is recommended to store different settings in separate files instead of adapting the existing configuration files. Each time you upgrade the package, the different settings will be changed or overwritten. The settings of the standard configuration will be supplemented or overwritten by the user-defined ones.
 
@@ -122,8 +122,8 @@ The installed packages for Apache Webserver, PHP and MariaDB already come with c
 First a new file is created and filled with the necessary settings:
 
 ```shell
+
 sudo nano /etc/php.d/i-doit.ini
-```
 
 This file receives the following content:
 
@@ -153,9 +153,9 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 
-The value (in seconds) of `session.gc_maxlifetime` should be greater than or equal to the `session timeout` in the i-doit system settings.
+The value (in seconds) of **session.gc\_maxlifetime** should be greater than or equal to the **session timeout** in the i-doit system settings.
 
-The parameter `date.timezone` should be adjusted to the local time zone (see [list of supported time zones](http://php.net/manual/en/timezones.php)).
+The parameter **date.timezone** should be adjusted to the local time zone (see [list of supported time zones](http://php.net/manual/en/timezones.php)).
 
 The Apache Web server is then restarted:
 
@@ -181,7 +181,7 @@ DocumentRoot /var/www/html/
 </Directory>
 ```
 
-i-doit provides different Apache settings in files named ==.htaccess==. In order for these settings to be taken into account, the setting ==AllowOverride All is required==.
+i-doit provides different Apache settings in files named **.htaccess**. In order for these settings to be taken into account, the setting **AllowOverride All is required**.
 
 The next step is to restart the Apache web server:
 
@@ -189,7 +189,7 @@ The next step is to restart the Apache web server:
 sudo systemctl restart httpd.service
 ```
 
-For Apache to have read and write permissions in the future installation directory of i-doit, this must be allowed by ==SELinux==:
+For Apache to have read and write permissions in the future installation directory of i-doit, this must be allowed by **SELinux**:
 
 ```shell
 sudo chown apache:apache -R /var/www/html
@@ -199,13 +199,13 @@ sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 
 ### MariaDB
 
-In order for MariaDB to perform well and run safely, there are a few steps that need to be done meticulously. This starts with a secure installation. The recommendations should be followed. The ==root== user should be given a secure password:
+In order for MariaDB to perform well and run safely, there are a few steps that need to be done meticulously. This starts with a secure installation. The recommendations should be followed. The **root** user should be given a secure password:
 
 ```shell
 mysql_secure_installation
 ```
 
-To allow i-doit to use the ==root== user during setup, call the shell of MariaDB:
+To allow i-doit to use the **root** user during setup, call the shell of MariaDB:
 
 ```shell
 sudo mysql -uroot
@@ -291,7 +291,8 @@ Finally, MariaDB is started:
 sudo systemctl start mariadb.service
 ```
 
-## Next Step
+Next Step
+---------
 
 The operating system is now prepared so that i-doit can be installed:
 

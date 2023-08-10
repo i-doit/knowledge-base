@@ -2,11 +2,12 @@
 
 Wenn die nötigen Vorbereitungen getroffen sind - zum Beispiel [die Konfiguration des zugrunde liegenden Betriebssystems](../manuelle-installation/index.md), kann das Setup von i-doit beginnen.
 
-## Schnellstart
+Schnellstart
 
 In einem Verzeichnis, auf das der Apache Webserver Zugriff hat, entpackt man das Installationspaket von i-doit. Anschließend steuert man mit dem Browser dieses Verzeichnis an und folgt den Anweisungen des Setups.
 
-## Installationspaket herunterladen und entpacken
+Installationspaket herunterladen und entpacken
+----------------------------------------------
 
 Das Installationspaket der pro-Variante ist für alle Kunden im [Kundenportal](../../administration/kundenportal.md) erreichbar, das der open-Variante unter [i-doit.org](https://i-doit.org/). Dieses Paket wird auf den vorbereiteten Server kopiert, entpackt und die Dateien sowie Verzeichnisse mit den passenden Rechten versehen. Diese Anweisungen unterscheiden sich je nach Betriebssystem.
 
@@ -14,7 +15,6 @@ Das Installationspaket der pro-Variante ist für alle Kunden im [Kundenportal](.
 
 Der Apache Webserver läuft mit den Rechten des Users **www-data** und der gleichnamigen Gruppe **www-data**. Das Hauptverzeichnis vom Apache Webserver lautet **/var/www/html/**:
 
-```shell
     sudo mkdir /var/www/html/i-doit
     sudo cp i-doit.zip /var/www/html/i-doit/
     cd /var/www/html/i-doit/
@@ -23,13 +23,12 @@ Der Apache Webserver läuft mit den Rechten des Users **www-data** und der gleic
     sudo chown www-data:www-data -R .
     sudo find . -type d -name \* -exec chmod 775 {} \;
     sudo find . -type f -exec chmod 664 {} \;
-```
 
 ### Red Hat Enterprise Linux (RHEL)
 
 Der Apache Webserver läuft mit den Rechten des Users **apache** und der gleichnamigen Gruppe **apache**. Das Hauptverzeichnis vom Apache Webserver lautet **/var/www/html/**:
 
-```shell
+
     sudo mkdir /var/www/html/i-doit
     sudo cp i-doit.zip /var/www/html/i-doit/
     cd /var/www/html/i-doit/
@@ -38,13 +37,11 @@ Der Apache Webserver läuft mit den Rechten des Users **apache** und der gleichn
     sudo chown apache:apache -R .
     sudo find . -type d -name \* -exec chmod 775 {} \;
     sudo find . -type f -exec chmod 664 {} \;
-```
 
 ### Suse Linux Enterprise Server (SLES)
 
 Der Apache Webserver läuft mit den Rechten des Users **wwwrun** und der Gruppe **www**. Das Hauptverzeichnis vom Apache Webserver lautet **/srv/www/htdocs/**:
 
-```shell
     sudo mkdir /srv/www/htdocs/i-doit
     sudo cp i-doit.zip /srv/www/htdocs/i-doit/
     cd /srv/www/htdocs/i-doit/
@@ -53,13 +50,12 @@ Der Apache Webserver läuft mit den Rechten des Users **wwwrun** und der Gruppe 
     sudo chown wwwrun:www -R .
     sudo find . -type d -name \* -exec chmod 775 {} \;
     sudo find . -type f -exec chmod 664 {} \;
-```
 
 ### Microsoft Windows Server
 
 Spezifische Datei- und Verzeichnisrechte sind in der Regel nicht zu setzen, wenn der mit XAMPP installierte Apache Webserver mit denselben Nutzerrechten läuft.
 
-## Setup durchführen
+Setup durchführen
 
 i-doit lässt sich auf zwei Arten installieren: Bequem über die Web GUI (für Einsteiger empfohlen) oder über die Konsole (beispielsweise für die automatisierte Installation).
 
@@ -85,19 +81,25 @@ Für die Datenbank-Anbindung sind wichtige Credentials und Einstellungen einzutr
 
 [![database-configuration](../../assets/images/de/installation/setup/i-doit_setup_03_database_configuration.png)](../../assets/images/de/installation/setup/i-doit_setup_03_database_configuration.png)
 
-- **Connection settings**
-    - **Host:** in der Regel der Host selbst, also localhost oder 127.0.0.1
-    - **Port:** in der Regel der Standard-Port von MySQL/MariaDB, also 3306
-    - **Username:** Benutzername des Datenbank-Systembenutzers, meistens root
-    - **Password:** Passwort des Benutzers
-- **MySQL user settings**
-    - **Username**: Benutzername des Besitzers der i-doit-Datenbanken, meistens idoit
-    - **Password**: Passwort des Benutzers
-- **Database settings**
-    - **System Database Name:** Name der Systemdatenbank, meistens idoit_system
-    - **Mandator Database Name:** Name der Datenbank für den ersten Mandanten, meistens idoit_data
-    - **Mandator title:** Titel des Mandanten, meistens der Name der Organisation, die im Fokus steht
-    - **Start value for object/configuration item IDs:** in der Regel
+*   **Connection settings**
+    *   **Host:** in der Regel der Host selbst, also localhost oder 127.0.0.1
+    *   **Port:** in der Regel der Standard-Port von MySQL/MariaDB, also 3306
+    *   **Username:** Benutzername des Datenbank-Systembenutzers, meistens root
+
+    *   **Password:** Passwort des Benutzers
+*   **MySQL user settings**
+    *   **Username**: Benutzername des Besitzers der i-doit-Datenbanken, meistens idoit
+
+    *   **Password**: Passwort des Benutzers
+
+*   **Database settings**
+    *   **System Database Name:** Name der Systemdatenbank, meistens idoit_system
+
+    *   **Mandator Database Name:** Name der Datenbank für den ersten Mandanten, meistens idoit_data
+
+    *   **Mandator title:** Titel des Mandanten, meistens der Name der Organisation, die im Fokus steht
+
+    *   **Start value for object/configuration item IDs:** in der Regel
 
 !!! success "Unix Socket vs. Network Port"
 
@@ -105,7 +107,7 @@ Für die Datenbank-Anbindung sind wichtige Credentials und Einstellungen einzutr
 
     MariaDB/MySQL öffnet in der Regel beim Start des Dienstes einen Unix Socket. Der Pfad dorthin wird in der Einstellung **socket** angegeben und lautet beispielsweise unter [Debian GNU/Linux](debian.md) **/var/run/mysqld/mysqld.sock**. Dieser Wert muss PHP bekannt sein, damit i-doit eine Verbindung zu MariaDB/MySQL aufbauen kann. Die entsprechende PHP-Einstellung lautet **mysqli.default_socket**. Wer nach der Installationsanleitung vorgegangen ist, kann die selbst erstellte PHP-Konfigurationsdatei um diese Einstellung ergänzen, zum Beispiel: **mysqli.default_socket = /var/run/mysqld/mysqld.sock**
 
-    Nachträgliche Änderungen an den PHP-Einstellungen werden erst wirksam, wenn der Dienst des Apache Webservers neu geladen wird. Beispiel unter Debian GNU/Linux: `sudo systemctl reload apache2.service`
+    Nachträgliche Änderungen an den PHP-Einstellungen werden erst wirksam, wenn der Dienst des Apache Webservers neu geladen wird. Beispiel unter Debian GNU/Linux: **sudo systemctl reload apache2.service**
 
     Dieser Tipp bezieht sich auf Unix-artige Betriebssysteme. Windows ist davon ausgenommen.
 
@@ -147,20 +149,18 @@ sudo -u www-data php console.php create-tenant
 
 #### Automatisierte Installation
 
-```shell
+
 sudo -u www-data php console.php install --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --admin-password admincenterpw --no-interaction
-```
 
 Nun wurde i-doit installiert. Wir benötigen noch einen [Mandant](../../administration/mandantenfaehigkeit.md). Diesen erstellen wir auch über die [console.php](../../automatisierung-und-integration/cli/console/index.md):
 
-```shell
-sudo -u www-data php console.php tenant-create --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --admin-password admincenterpw --no-interaction
-```
+
+    sudo -u www-data php console.php tenant-create --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --admin-password admincenterpw --no-interaction
 
 Weitere Schritte
 ----------------
 
-- [Lizenz herunterladen und einspielen](../../wartung-und-betrieb/lizenz-aktivieren.md)
-- [Backup einrichten](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
-- [Cronjobs einrichten](../../wartung-und-betrieb/cronjobs-einrichten.md)
-- [Erstanmeldung](../../grundlagen/erstanmeldung.md)
+*   [Lizenz herunterladen und einspielen](../../wartung-und-betrieb/lizenz-aktivieren.md)
+*   [Backup einrichten](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
+*   [Cronjobs einrichten](../../wartung-und-betrieb/cronjobs-einrichten.md)
+*   [Erstanmeldung](../../grundlagen/erstanmeldung.md)

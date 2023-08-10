@@ -1,1 +1,0 @@
-# SMTP Konfiguration (E-Mail)
