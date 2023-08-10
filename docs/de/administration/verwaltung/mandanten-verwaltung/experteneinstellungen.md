@@ -59,7 +59,7 @@ Jede Einstellung besteht aus drei Teilen:
 | qrcode.config                                 |                                             | QR-Code Konfiguration                                                                                                                                                                             |
 
 
-## Liste der Einstellungen (Bemutzer)
+## Liste der Einstellungen (Benutzer)
 
 | Key                             | Default Value | Description                                                                                                                                                                                                      |
 | ------------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
