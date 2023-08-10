@@ -105,7 +105,7 @@ Important credentials and settings need to be entered for the database connectio
 
     PHP is able to connect to MariaDB/MySQL in two ways: For one thing, per Unix Socket, and secondly via TCP/IP. For performance reasons we recommend using the Unix Socket. The use of the Unix Socket is enforced by entering the ==localhost== value in the above mentioned host configuration. Other specifications (==127.0.0.1==, FQDN or the like) result in the use of TCP/IP.
 
-    Usually, MariaDB/MySQL opens a Unix Socket when a service is started. In the ==socket== settings you specify the path, an example under [Debian GNU/Linux](/pages/viewpage.action?pageId=36864037) is `/var/run/mysqld/mysqld.sock`.  This value has to be known to PHP so that i-doit can establish a connection to MariaDB/MySQL.
+    Usually, MariaDB/MySQL opens a Unix Socket when a service is started. In the ==socket== settings you specify the path, an example under [Debian GNU/Linux](./debian.md) is `/var/run/mysqld/mysqld.sock`.  This value has to be known to PHP so that i-doit can establish a connection to MariaDB/MySQL.
 
     The corresponding PHP setting is `mysqli.default_socket`. When you have followed the installation instructions, you can supplement the created PHP configuration file by this setting, for example, `mysqli.default_socket = /var/run/mysqld/mysqld.sock`.
 
