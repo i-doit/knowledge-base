@@ -204,7 +204,7 @@ JSON key **result** contains a JSON object.
 **Limitations:**
 
 - This only works with ==multi-value categories== at the moment.
-- You can only ==archive category entries which have a normal status.
+- You can only ==archive== category entries which have a normal status.
 - You can only ==mark== category entries ==as deleted== which are archived.
 - You can only ==purge== category entries from the database which are marked as deleted.
 

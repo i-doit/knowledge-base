@@ -34,9 +34,7 @@ averagePercent
 Integer
 Average Percent
 
-
-
-###Examples
+### Examples
 
 Request
 Response
