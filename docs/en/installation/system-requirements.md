@@ -69,7 +69,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 - Mozilla Firefox (including the last ESR version)
 - Google Chrome/Chromium
-- Microsoft Internet Explorer/Edge (disabled compatibility mode)
+- Microsoft Edge (disabled compatibility mode)
 - Apple Safari
 
 ## Compatibility matrix
