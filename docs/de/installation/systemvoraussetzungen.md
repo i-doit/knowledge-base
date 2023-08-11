@@ -68,7 +68,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 - Mozilla Firefox (inkl. letzte ESR-Version)
 - Google Chrome/Chromium
-- Microsoft Internet Explorer/Edge (abgeschalteter Kompatibilitätsmodus)
+- Microsoft Edge (abgeschalteter Kompatibilitätsmodus)
 - Apple Safari
 
 ## Kompatibilitätsmatrix
