@@ -65,7 +65,7 @@ Read access to the i-doit logbook.
           "logbook_id": "20",
           "logbook_catg_id": "17",
           "comment": "",
-          "description": "UPDATE isys_catg_global_list\n SET isys_catg_global_list__isys_purpose__id = NULL,\n            isys_catg_global_list__isys_catg_global_category__id = NULL,\n isys_catg_global_list__status = 2\n WHERE isys_catg_global_list__id = 31;",
+          "description": "UPDATE isys_catg_global_list\n SET isys_catg_global_list__isys_purpose__id = NULL,\n isys_catg_global_list__isys_catg_global_category__id = NULL,\n isys_catg_global_list__status = 2\n WHERE isys_catg_global_list__id = 31;",
           "changes": {
             "isys_cmdb_dao_category_g_global::title": {
               "from": "",
@@ -91,26 +91,27 @@ Write a entry to the i-doit logbook.
 
 ### Request parameters
 
-| Key             | JSON data type    | Required                                                           | Description                                                                                             |
-| --------------- | ----------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| **object_id**   | Integer           | No                                                                 | ID of the object                                                                                        |
-| **message**     | String            | No                                                                 | Message for the entry                                                                                   |
-| **description** | String            | No                                                                 | Description for the entry                                                                               |
-| **comment**     | String            | No                                                                 | Comment what has changed                                                                                |
-| **source**      | Integer or String | No                                                                 | Constant or ID of the source of the logbook entry from table `isys_logbook_source`, default is "EXTERN" |
-| **alert_level** | Integer or String | Constant or ID of the alert level, from table `isys_logbook_level` |                                                                                                         |
+| Key             | JSON data type    | Required | Description                                                                                                                     |
+| --------------- | ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **object_id**   | Integer           | Yes      | ID of the object                                                                                                                |
+| **object_ids**  | String or Array   | No       | List of object identifiers                                                                                                      |
+| **message**     | String            | Yes      | Message for the entry                                                                                                           |
+| **description** | String            | No       | Description for the entry                                                                                                       |
+| **comment**     | String            | No       | Comment what has changed                                                                                                        |
+| **source**      | String            | No       | Constant or ID of the source of the logbook entry from table `isys_logbook_source`.<br> Default is `C__LOGBOOK__ALERT_LEVEL__0` |
+| **alert_level** | Integer or String | No       | Constant or ID of the alert level, from table `isys_logbook_level`.<br> Default is `C__LOGBOOK__ALERT_LEVEL__0`                 |
 
 === "Source"
 
-    | Title                                     | ID   | Constant                    |
-    | ----------------------------------------- | ---- | --------------------------- |
-    | LC__CMDB__LOGBOOK__SOURCE__INTERNAL       | 1    | C__LOGBOOK_SOURCE__INTERNAL |
-    | LC__CMDB__LOGBOOK__SOURCE__EXTERNAL       | 2    | C__LOGBOOK_SOURCE__EXTERNAL |
-    | LC__CMDB__LOGBOOK__SOURCE__MANUAL_ENTRIES | 3    | C__LOGBOOK_SOURCE__USER     |
-    | LC__CMDB__LOGBOOK__SOURCE__ALL            | 4    | C__LOGBOOK_SOURCE__ALL      |
-    | RT Ticket                                 | 1001 | C__LOGBOOK_SOURCE__RT       |
-    | JDisc Import                              | 1004 | C__LOGBOOK_SOURCE__JDISC    |
-    | Import                                    | 1005 | C__LOGBOOK_SOURCE__IMPORT   |
+    | Title          | ID   | Constant                    |
+    | -------------- | ---- | --------------------------- |
+    | Internal       | 1    | C__LOGBOOK_SOURCE__INTERNAL |
+    | External       | 2    | C__LOGBOOK_SOURCE__EXTERNAL |
+    | Manual entries | 3    | C__LOGBOOK_SOURCE__USER     |
+    | All!           | 4    | C__LOGBOOK_SOURCE__ALL      |
+    | RT Ticket      | 1001 | C__LOGBOOK_SOURCE__RT       |
+    | JDisc Import   | 1004 | C__LOGBOOK_SOURCE__JDISC    |
+    | Import         | 1005 | C__LOGBOOK_SOURCE__IMPORT   |
 
 
 ==== "Alert level"
@@ -138,18 +139,33 @@ Write a entry to the i-doit logbook.
 === "Request body"
 
     ```json
-
+    {
+      "version": "2.0",
+      "method": "cmdb.logbook.create",
+      "params": {
+        "object_id": 31,
+        "message": "message",
+        "description": "SQL Description / Log",
+        "comment": "Revisional comment",
+        "source": "C__LOGBOOK_SOURCE__INTERNAL",
+        "alert_level": 1,
+        "apikey": "xxx",
+        "language": "en"
+      },
+      "id": 1
+    }
     ```
 
 === "Response body"
 
     ```json
-
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "success": true,
+        "id": 135,
+        "message": "Logbook entry/entries successfully created."
+      }
+    }
     ```
-
-=== "or update Request body"
-
-    ```json
-
-    ```
-
