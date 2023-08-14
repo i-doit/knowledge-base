@@ -16,9 +16,9 @@ This method can be used to build the location tree. Always exactly one level is 
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **id** | Integer | Yes | A location object, for example a City **31** |
+| Key    | JSON data type | Required | Description                                  |
+| ------ | -------------- | -------- | -------------------------------------------- |
+| **id** | Integer        | Yes      | A location object, for example a City **31** |
 
 !!! example "WIP"
 
@@ -26,10 +26,10 @@ This method can be used to build the location tree. Always exactly one level is 
 
     JSON key **result** contains an array of JSON objects. Each object contains a search result.
 
-    | Key | JSON data type | Description |
-    | --- | --- | --- |
-    | **Placeholder** | Placeholder | Placeholder |
-    | **Placeholder** | Placeholder | Placeholder |
+    | Key             | JSON data type | Description |
+    | --------------- | -------------- | ----------- |
+    | **Placeholder** | Placeholder    | Placeholder |
+    | **Placeholder** | Placeholder    | Placeholder |
 
 ### Example:
 

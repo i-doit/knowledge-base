@@ -17,18 +17,18 @@ For example, get all objects with {Attribute} and {Attribute} which where update
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **Key** | String | Yes | Query, for example: **"My little server"** |
+| Key     | JSON data type | Required | Description                                |
+| ------- | -------------- | -------- | ------------------------------------------ |
+| **Key** | String         | Yes      | Query, for example: **"My little server"** |
 
 ### Response parameters
 
 JSON key **result** contains an array of JSON objects. Each object contains a search result.
 
-| Key | JSON data type | Description |
-| --- | --- | --- |
-| **key** | String | Attribute which relates to query |
-| **value** | String | Value which relates to query |
+| Key       | JSON data type | Description                      |
+| --------- | -------------- | -------------------------------- |
+| **key**   | String         | Attribute which relates to query |
+| **value** | String         | Value which relates to query     |
 
 ### Example:
 

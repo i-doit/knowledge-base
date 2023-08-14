@@ -16,13 +16,13 @@ Read access to the i-doit logbook.
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **id** | Integer | No | ID of the global logbook entry from table isys_logbook |
-| **object_id** | Integer | No | ID of the object |
-| **catg_logbook_id** | Integer | No | ID of the logbook category entry from table sys_catg_logbook_list |
-| **since** | String | No | Date to filter for logbook changes since a certain date, for possible values see also [https://www.php.net/manual/de/function.strtotime.php](https://www.php.net/manual/de/function.strtotime.php){:target="_blank"} for example **1660203634** (2022-08-11 09:40:34) |
-| **status** | Integer | No | Filter by object status: 2 = Normal, 3 = Archived, 4 = Deleted |
+| Key                 | JSON data type | Required | Description                                                                                                                                                                                                                                                           |
+| ------------------- | -------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **id**              | Integer        | No       | ID of the global logbook entry from table isys_logbook                                                                                                                                                                                                                |
+| **object_id**       | Integer        | No       | ID of the object                                                                                                                                                                                                                                                      |
+| **catg_logbook_id** | Integer        | No       | ID of the logbook category entry from table sys_catg_logbook_list                                                                                                                                                                                                     |
+| **since**           | String         | No       | Date to filter for logbook changes since a certain date, for possible values see also [https://www.php.net/manual/de/function.strtotime.php](https://www.php.net/manual/de/function.strtotime.php){:target="_blank"} for example **1660203634** (2022-08-11 09:40:34) |
+| **status**          | Integer        | No       | Filter by object status: 2 = Normal, 3 = Archived, 4 = Deleted                                                                                                                                                                                                        |
 
 !!! example "WIP"
 
@@ -30,10 +30,10 @@ Read access to the i-doit logbook.
 
     JSON key **result** contains an array of JSON objects. Each object contains a search result.
 
-    | Key | JSON data type | Description |
-    | --- | --- | --- |
-    | **Placeholder** | Placeholder | Placeholder |
-    | **Placeholder** | Placeholder | Placeholder |
+    | Key             | JSON data type | Description |
+    | --------------- | -------------- | ----------- |
+    | **Placeholder** | Placeholder    | Placeholder |
+    | **Placeholder** | Placeholder    | Placeholder |
 
 ### Example:
 
@@ -91,36 +91,36 @@ Write a entry to the i-doit logbook.
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **object_id** | Integer | No | ID of the object |
-| **message** | String | No | Message for the entry |
-| **description** | String | No | Description for the entry |
-| **comment** | String | No | Comment what has changed |
-| **source** | Integer or String | No | Constant or ID of the source of the logbook entry from table `isys_logbook_source`, default is "EXTERN" |
-| **alert_level** | Integer or String | Constant or ID of the alert level, from table `isys_logbook_level` |
+| Key             | JSON data type    | Required                                                           | Description                                                                                             |
+| --------------- | ----------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| **object_id**   | Integer           | No                                                                 | ID of the object                                                                                        |
+| **message**     | String            | No                                                                 | Message for the entry                                                                                   |
+| **description** | String            | No                                                                 | Description for the entry                                                                               |
+| **comment**     | String            | No                                                                 | Comment what has changed                                                                                |
+| **source**      | Integer or String | No                                                                 | Constant or ID of the source of the logbook entry from table `isys_logbook_source`, default is "EXTERN" |
+| **alert_level** | Integer or String | Constant or ID of the alert level, from table `isys_logbook_level` |                                                                                                         |
 
-Source:
+=== "Source"
 
-| Title | ID | Constant |
-|-|-|-|
-| LC__CMDB__LOGBOOK__SOURCE__INTERNAL | 1 | C__LOGBOOK_SOURCE__INTERNAL |
-| LC__CMDB__LOGBOOK__SOURCE__EXTERNAL | 2 | C__LOGBOOK_SOURCE__EXTERNAL |
-| LC__CMDB__LOGBOOK__SOURCE__MANUAL_ENTRIES | 3 | C__LOGBOOK_SOURCE__USER |
-| LC__CMDB__LOGBOOK__SOURCE__ALL | 4 | C__LOGBOOK_SOURCE__ALL |
-| RT Ticket | 1001 | C__LOGBOOK_SOURCE__RT |
-| JDisc Import | 1004 | C__LOGBOOK_SOURCE__JDISC |
-| Import | 1005 | C__LOGBOOK_SOURCE__IMPORT |
+    | Title                                     | ID   | Constant                    |
+    | ----------------------------------------- | ---- | --------------------------- |
+    | LC__CMDB__LOGBOOK__SOURCE__INTERNAL       | 1    | C__LOGBOOK_SOURCE__INTERNAL |
+    | LC__CMDB__LOGBOOK__SOURCE__EXTERNAL       | 2    | C__LOGBOOK_SOURCE__EXTERNAL |
+    | LC__CMDB__LOGBOOK__SOURCE__MANUAL_ENTRIES | 3    | C__LOGBOOK_SOURCE__USER     |
+    | LC__CMDB__LOGBOOK__SOURCE__ALL            | 4    | C__LOGBOOK_SOURCE__ALL      |
+    | RT Ticket                                 | 1001 | C__LOGBOOK_SOURCE__RT       |
+    | JDisc Import                              | 1004 | C__LOGBOOK_SOURCE__JDISC    |
+    | Import                                    | 1005 | C__LOGBOOK_SOURCE__IMPORT   |
 
 
-Alert level:
+==== "Alert level"
 
-| Title| ID | Costant |
-|-|-|-|
-| 0 (information)| 1 | C__LOGBOOK__ALERT_LEVEL__0 |
-| 1 (low) | 2 | C__LOGBOOK__ALERT_LEVEL__1 |
-| 2 (middle) | 3 | C__LOGBOOK__ALERT_LEVEL__2 |
-| 3 (high) | 4 | C__LOGBOOK__ALERT_LEVEL__3 |
+    | Title           | ID  | Costant                    |
+    | --------------- | --- | -------------------------- |
+    | 0 (information) | 1   | C__LOGBOOK__ALERT_LEVEL__0 |
+    | 1 (low)         | 2   | C__LOGBOOK__ALERT_LEVEL__1 |
+    | 2 (middle)      | 3   | C__LOGBOOK__ALERT_LEVEL__2 |
+    | 3 (high)        | 4   | C__LOGBOOK__ALERT_LEVEL__3 |
 
 !!! example "WIP"
 
@@ -128,10 +128,10 @@ Alert level:
 
     JSON key **result** contains an array of JSON objects. Each object contains a search result.
 
-    | Key | JSON data type | Description |
-    | --- | --- | --- |
-    | **Placeholder** | Placeholder | Placeholder |
-    | **Placeholder** | Placeholder | Placeholder |
+    | Key             | JSON data type | Description |
+    | --------------- | -------------- | ----------- |
+    | **Placeholder** | Placeholder    | Placeholder |
+    | **Placeholder** | Placeholder    | Placeholder |
 
 ### Example:
 
