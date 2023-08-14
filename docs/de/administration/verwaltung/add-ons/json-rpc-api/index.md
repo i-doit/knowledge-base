@@ -1,6 +1,6 @@
 # JSON-RPC API
 
-i-doit ermöglicht den externen Zugriff auf die [IT-Dokumentation](../../../../glossary.md) über eine [application programming interface (API)](https://en.wikipedia.org/wiki/Application_programming_interface). Mit der API können Daten gelesen, erstellt, aktualisiert und gelöscht werden. Die API bietet also ähnliche Funktionen wie die Web-GUI, mit dem zusätzlichen Vorteil, dass man sie problemlos automatisieren kann.
+i-doit ermöglicht den externen Zugriff auf die [IT-Dokumentation](../../../../glossar.md) über eine [application programming interface (API)](https://en.wikipedia.org/wiki/Application_programming_interface). Mit der API können Daten gelesen, erstellt, aktualisiert und gelöscht werden. Die API bietet also ähnliche Funktionen wie die Web-GUI, mit dem zusätzlichen Vorteil, dass man sie problemlos automatisieren kann.
 
 ## Konfiguration
 
