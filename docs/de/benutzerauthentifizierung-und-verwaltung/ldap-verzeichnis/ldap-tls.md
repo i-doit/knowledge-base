@@ -1,9 +1,9 @@
 # Zugriff auf Microsoft LDAP Server mit TLS Verschlüsselung
 
 Um eine Verbindung zum Active Directory via LDAPS oder STARTTLS herzustellen wird das Zertifikat vom LDAP Server benötigt.
-Dieses exportieren wir und fügen es dem Zertifikatspeicher vom i-doit Server hinzu, damit eine Verschlüsselte kommunikation hergestellt werden kann.
+Dieses exportieren wir und fügen es dem Zertifikatsspeicher vom i-doit Server hinzu, damit eine Verschlüsselte Kommunikation hergestellt werden kann.
 
-Zuerst loggen wir uns auf dem LDAP Server ein, der in der Regel auch die Zertifizierungstelle beinhaltet.
+Zuerst loggen wir uns auf dem LDAP Server ein, der in der Regel auch die Zertifizierungsstelle beinhaltet.
 Dann das entsprechende MMC Snap-In öffnen oder via Server Manager -> Certificate Authority auswählen.
 
 [![Server Manager](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-1.png)](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-1.png)

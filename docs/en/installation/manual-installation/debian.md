@@ -1,15 +1,12 @@
 # Debian GNU/Linux
 
-!!! tip
-    For the operation of i-doit we [recommend](../system-requirements.md) the use of Debian GNU/Linux in Version 11 "bullseye" as operating system. 
-
 In this article we explain in just a few steps which packages need to be installed and configured.
 
 ## System Requirements
 
 The general [system requirements](../system-requirements.md) apply.
 
-This article refers to [**Debian GNU/Linux 11 "bullseye"**](https://www.debian.org/index.en.html). You can find differing installation instructions for version 8 "jessie" in the text below. In order to find out which version is used you can carry out the following command:
+This article refers to [==Debian GNU/Linux 11 "bullseye"==](https://www.debian.org/index.en.html). In order to find out which Debian version is used you can carry out the following command:
 
 ```shell
 cat /etc/debian_version
@@ -21,16 +18,16 @@ As system architecture you should use a x86 in 64bit:
 uname -m
 ```
 
-**x86_64** means 64bit, **i386** or **i686** only 32bit.
+==x86_64== means 64bit, ==i386== or ==i686== only 32bit.
 
 ## Installation of the Packages
 
 The default package repositories of Debian GNU/Linux already supply the necessary packages to install:
 
-*   the **Apache** web server 2.4
-*   the script language **PHP** 7.4
-*   the database management system **MariaDB** 10.5 and
-*   the caching server **memcached**
+- the ==Apache== web server 2.4
+- the script language ==PHP== 7.4
+- the database management system ==MariaDB== 10.5 and
+- the caching server ==memcached==
 
 ```shell
 sudo apt update
@@ -51,7 +48,7 @@ sudo nano /etc/php/7.4/mods-available/i-doit.ini
 
 This file has the following contents:
 
-```shell
+```ini
 allow_url_fopen = Yes
 file_uploads = On
 magic_quotes_gpc = Off
@@ -77,9 +74,9 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
-The value (in seconds) of **session.gc_maxlifetime** should be the same or greater than the **Session Timeout** in the [system settings](system-settings.md) of i-doit.
+The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](system-settings.md) of i-doit.
 
-The **date.timezone** parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
+The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
 
 Afterwards, the required PHP modules are activated and the Apache web server is restarted:
 
@@ -116,8 +113,8 @@ The new VHost configuration is saved in this file:
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.
-With the next step you activate the new VHost and the necessary Apache module **rewrite** and the Apache web server is restarted:
+i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.<br>
+With the next step you activate the new VHost and the necessary Apache module ==rewrite== and the Apache web server is restarted:
 
 ```shell
 sudo a2ensite i-doit
@@ -127,13 +124,13 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The **root**  user should receive a secure password:
+Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The ==root== user should receive a secure password:
 
 ```shell
 sudo mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the **root**  user during setup:
+Activate the MariaDB shell so that i-doit is enabled to apply the ==root== user during setup:
 
 ```shell
 sudo mysql -uroot
@@ -142,13 +139,13 @@ sudo mysql -uroot
 !!! warning "Password for MariaDB root user"
     If the MariaDB root user does not have a password yet, the database access will not work after executing the ALTER USER statement. Therefore, the MariaDB root user should be assigned a password beforehand:
 
-    ```shell
+    ```sql
     SET PASSWORD for 'root'@'localhost' = PASSWORD ('passwort');
     ```
 
 The following SQL statements are now carried out in the MariaDB shell (The 'password' must be replaced by the current password of the 'root' user):
 
-```shell
+```sql
 ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('password');
 FLUSH PRIVILEGES;
 EXIT;
@@ -157,7 +154,8 @@ EXIT;
 !!! info "Use of MariaDB 10.3 and downwards"
 
     Up to MariaDB version 10.3, the UPDATE statement is supported in the user table.
-    ```shell
+
+    ```sql
     UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
     ```
 
@@ -177,7 +175,7 @@ sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
 
 This file contains the new configuration settings. For an optimal performance you should adapt these settings to the (virtual) hardware:
 
-```shell
+```ini
 [mysqld]
 # This is the number 1 setting to look at for any performance optimization
 # It is where the data and indexes are cached: having it as large as possible will
@@ -188,7 +186,7 @@ innodb_buffer_pool_size = 1G
 # Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
 innodb_buffer_pool_instances = 1
 # Redo log file size, the higher the better.
-# MySQL/MariaDB writes two of these log files in a default installation.
+# MySQL/MariaDB writes two ofe these log files in a default installation.
 innodb_log_file_size = 512M
 innodb_sort_buffer_size = 64M
 sort_buffer_size = 262144 # default
@@ -226,47 +224,4 @@ sudo systemctl start mysql.service
 
 Now the operating system is prepared and i-doit can be installed.
 
-Proceed with [**Setup**](setup.md)
-
-!!! info "Debian GNU/Linux 8 "jessie""
-
-    If you use version 8 "jessie", there are some things to be observed. This especially includes differing package names and file paths.
-
-    ### Installation of the packages
-
-    ```shell
-    sudo apt update
-    sudo apt install apache2 libapache2-mod-php5 php5 php5-cli php5-common php5-curl php5-gd php5-json php5-ldap php5-mbstring php5-mcrypt php5-mysqlnd php5-pgsql mariadb-server mariadb-client php5-memcache memcached unzip
-    ```
-
-    ### PHP
-
-    ```shell
-    sudo nano /etc/php5/mods-available/i-doit.ini
-    # Insert settings
-    sudo php5enmod i-doit
-    sudo php5enmod memcache
-    sudo systemctl restart apache2.service
-    ```
-
-    ### Apache web server
-
-    ```shell
-    sudo a2dissite 000-default
-    sudo nano /etc/apache2/sites-available/i-doit.conf
-    # Insert settings
-    sudo a2ensite i-doit
-    sudo a2enmod rewrite
-    sudo systemctl restart apache2.service
-    ```
-
-    ### MariaDB
-
-    ```shell
-    mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
-    sudo systemctl stop mysql.service
-    sudo mv /var/lib/mysql/ib_logfile[01] /tmp
-    sudo nano /etc/mysql/conf.d/i-doit.cnf
-    # Insert settings
-    sudo systemctl start mysql.service
-    ```
+Proceed with [==Setup==](setup.md)

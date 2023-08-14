@@ -2,18 +2,18 @@
 
 i-doit verfügt über ein Commandline Interface (CLI), über das sich verschiedene Aufgaben durchführen lassen. Das CLI wird beispielsweise für [Cronjobs](../../../wartung-und-betrieb/cronjobs-einrichten.md) benötigt und kann zum Automatisieren von Arbeitsschritten eingesetzt werden.
 
-## Erste Schritte
+### Erste Schritte
 
-Das CLI befindet sich im Installationsverzeichnis von i-doit, beispielsweise unter **/var/www/html/**. Es muss innerhalb dieses Verzeichnises mit denselben Rechten des Apache Webservers aufgerufen werden. Unter [Debian GNU/Linux](../../../installation/manuelle-installation/debian.md) ist dies der User **www-data**. Mittels **sudo** werden diese Rechte erlangt:
+Das CLI befindet sich im Installationsverzeichnis von i-doit, beispielsweise unter **/var/www/html/**. Es muss innerhalb dieses Verzeichnisses mit denselben Rechten des Apache Webservers aufgerufen werden. Unter [Debian GNU/Linux](../../../installation/manuelle-installation/debian.md) ist dies der User **www-data**. Mittels **sudo** werden diese Rechte erlangt:
 
-```shell
+```
 cd /var/www/html/
 sudo -u www-data php console.php
 ```
 
 Unter Windows wechselt man ebenso in das Installationsverzeichnis. Da die Rechte des Webservers keine Rolle spielen, genügt der Aufruf von **php.exe**, welches im Pfad des Benutzers stehen muss.
 
-```shell
+```
 cd C:\xampp\htdocs
 php.exe console.php
 ```
@@ -23,7 +23,7 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
 ??? abstract "Verfügbare Kommandos"
 
     ```sh
-    i-doit console utility 24
+    i-doit console utility 25
 
     Usage:
       command [options] [arguments]

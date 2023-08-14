@@ -1,6 +1,6 @@
 # Update
 
-When working with i-doit, you should always use the newest version. Minor releases always contain numerous bug fixes, while major releases add new features and improve already existing functionalities. Minor updates are released approximately every four weeks and major updates every six months. The update can be [performed via the web interface of i-doit](./update.md), as long as an internet connection is available (and where applicable, via HTTP-proxy). Alternatively the update can be [prepared via console](./update.md) and then be continued in the web interface.
+When working with i-doit, you should always use the newest version. Minor releases always contain numerous bug fixes, while major releases add new features and improve already existing functionalities. Minor updates are released approximately every four weeks and major updates every six months. The update can be [performed via the web interface of i-doit](./update.md), as long as an internet connection is available (and where applicable, via HTTP-proxy). Alternatively the update can be [prepared via console](./update.md) and then be continued in the web interface.
 
 !!! attention "Skip releases"
 
@@ -17,11 +17,11 @@ When working with i-doit, you should always use the newest version. Minor releas
 Update via the Web Interface
 ----------------------------
 
-The update can be accessed either through **Administration → Systemtools → i-doit Update**, the quicklaunch widget in the dashboard or through the URL http://i-doit-host/i-doit/?load=update.
+The update can be accessed either through **Administration → Systemtools → i-doit Update**, the quicklaunch widget in the dashboard or through the URL http://i-doit-host/i-doit/?load=update.
 
 [![Update via the Web Interface](../assets/images/en/maintenance-and-operation/update/1-update.png)](../assets/images/en/maintenance-and-operation/update/1-update.png)
 
-Upon launching an interface appears in which the current status of the system is examined. We can see in our screenshot that the PHP-extension mcrypt has not been found. If such a status message is displayed, it is very important to adjust the system appropriately. For this you should look at our [system requirements](../installation/system-requirements.md) and [system settings](../system-administration/system-settings/index.md). After adjusting the environment, everything should be checked with a green mark or marked with an "OK".
+Upon launching an interface appears in which the current status of the system is examined. We can see in our screenshot that the PHP-extension mcrypt has not been found. If such a status message is displayed, it is very important to adjust the system appropriately. For this you should look at our [system requirements](../installation/system-requirements.md) and [tenant mangement](../system-administration/administration/tenant-management/index.md). After adjusting the environment, everything should be checked with a green mark or marked with an "OK".
 
 [![Update-Steps](../assets/images/en/maintenance-and-operation/update/2-update.png)](../assets/images/en/maintenance-and-operation/update/2-update.png)
 
@@ -67,7 +67,7 @@ Following the so called "Property Migration", everything should be marked green 
 
 [![Update-Steps](../assets/images/en/maintenance-and-operation/update/10-update.png)](../assets/images/en/maintenance-and-operation/update/10-update.png)
 
-Now the update is completed. More detailed information about the update can be found in the linked log-file. You can return to i-doit by clicking **Run i-doit v.<VERSION>**. It is recommended to clear both the browser and the i-doit-cache under **Administration → Systemtools → Cache / Database**.
+Now the update is completed. More detailed information about the update can be found in the linked log-file. You can return to i-doit by clicking **Run i-doit v.<VERSION>**. It is recommended to clear both the browser and the i-doit-cache under **Administration → Systemtools → Cache / Database**.
 
 [![Update-Steps](../assets/images/en/maintenance-and-operation/update/11-update.png)](../assets/images/en/maintenance-and-operation/update/11-update.png)
 
@@ -95,7 +95,7 @@ Now the file permissions are being adjusted in order to give the Webserver both 
     The user:group combination **www-data:www-data** used here refers to **Debian GNU/Linux or Ubuntu Linux**.  
     If another operating system is used, the used user:group combination must be adapted.
 
-```
+```shell
 cd /var/www/html/i-doit/
 sudo chown www-data:www-data -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
