@@ -1,20 +1,24 @@
 ---
-title: Namespace cmdb.object
-description: cmdb.object
+title: Namespace cmdb.status
+description: cmdb.status
 icon: material/api
 status: new
 lang: en
 ---
 
-# Namespace cmdb.ststus
+# Namespace cmdb.status
 
 !!! example "Work in Progress"
+
+## cmdb.status.read
+
+Read all available states
 
 ### Request parameters
 
 | Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
-| **Placeholder** | Placeholder | Yes | Placeholder |
+| - | - | - | - |
 
 !!! example "WIP"
 
@@ -34,9 +38,8 @@ lang: en
     ```json
     {
       "version": "2.0",
-      "method": "cmdb.status",
+      "method": "cmdb.status.read",
       "params": {
-        "id": 1,
         "apikey": "h3md6u3y",
         "language": "en"
       },
@@ -153,9 +156,87 @@ lang: en
     }
     ```
 
+## cmdb.status.save
+
+Create new or save existing state
+
+### Request parameters
+
+| Key | JSON data type | Required | Description |
+| --- | --- | --- | --- |
+| **status** | String | Yes | Placeholder |
+| **constant** | String | Yes | Placeholder |
+| **color** | Placeholder | Yes | Placeholder |
+| **status** | Placeholder | Yes | Placeholder |
+
+!!! example "WIP"
+
+    ### Response parameters
+
+    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+
+    | Key | JSON data type | Description |
+    | --- | --- | --- |
+    | **Placeholder** | Placeholder | Placeholder |
+    | **Placeholder** | Placeholder | Placeholder |
+
+### Example:
+
+=== "Request body"
+
+    ```json
+
+    ```
+
+=== "Response body"
+
+    ```json
+
+    ```
+
 === "or update Request body"
 
     ```json
 
     ```
 
+## cmdb.status.delete
+
+Purge a state
+
+### Request parameters
+
+| Key | JSON data type | Required | Description |
+| --- | --- | --- | --- |
+| **Placeholder** | Placeholder | Yes | Placeholder |
+
+!!! example "WIP"
+
+    ### Response parameters
+
+    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+
+    | Key | JSON data type | Description |
+    | --- | --- | --- |
+    | **Placeholder** | Placeholder | Placeholder |
+    | **Placeholder** | Placeholder | Placeholder |
+
+### Example:
+
+=== "Request body"
+
+    ```json
+
+    ```
+
+=== "Response body"
+
+    ```json
+
+    ```
+
+=== "or update Request body"
+
+    ```json
+
+    ```
