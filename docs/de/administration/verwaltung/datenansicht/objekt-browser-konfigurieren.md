@@ -4,6 +4,6 @@ Hier kann man den Objekt-Browser konfigurieren indem man die Attribute, welche m
 
 [![Language profiles](../../../assets/images/de/administration/verwaltung/datenansicht/objekt-browser-konfigurieren/1-obk.png)](../../../assets/images/de/administration/verwaltung/datenansicht/objekt-browser-konfigurieren/1-obk.png)
 
-Jetzt kann man Attribute zur Kategorie, welche man ausgewählt hat hinzufügen und sehen, welche Kategorie man zum Objekt hinzufügen muss, damit ein Objekt im Objekt-Browser für dieses Attribut angezeigt wird.
+Nun ist es möglich, Attribute zur ausgewählten Kategorie hinzuzufügen und festzustellen, welche Kategorie dem Objekt hinzugefügt werden muss, um sicherzustellen, dass es im Objekt-Browser für dieses spezifische Attribut angezeigt wird.
 
 [![Language profiles](../../../assets/images/de/administration/verwaltung/datenansicht/objekt-browser-konfigurieren/2-obk.png)](../../../assets/images/de/administration/verwaltung/datenansicht/objekt-browser-konfigurieren/2-obk.png)
