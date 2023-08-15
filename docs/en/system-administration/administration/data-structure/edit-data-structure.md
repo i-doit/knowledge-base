@@ -11,7 +11,7 @@ The configuration of assignments is carried out via a separation into three colu
 In all three main fields you can change into the editing mode by pressing the ==Adjust button==.
 Here you can ==edit the assignments== of the respective object group, but you can also create and develop new groups, object types or categories.
 
-[![Ajusting](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)
+[![Adjusting](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)
 
 ## Editing the Assignments
 
