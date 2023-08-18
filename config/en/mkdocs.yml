@@ -61,15 +61,10 @@ plugins:
 markdown_extensions:
   - abbr
   - admonition
-  - abbr
   - attr_list
   - md_in_html
   - meta
-  - pymdownx.caret
   - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.critic
   - toc:
       permalink: '#'
   - pymdownx.caret
@@ -88,7 +83,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
-  - tables
       auto_append:
         - overrides/assets/glossary-en.md
   - pymdownx.details

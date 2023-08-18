@@ -59,10 +59,12 @@ plugins:
       minify_html: true
   - mkdocs-video
 markdown_extensions:
-  - admonition
   - abbr
+  - admonition
   - attr_list
+  - md_in_html
   - meta
+  - pymdownx.keys
   - toc:
       permalink: '#'
   - pymdownx.caret
@@ -81,6 +83,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
+  - pymdownx.details
+
 extra:
   manifest: overrides/manifest.webmanifest
   social:
