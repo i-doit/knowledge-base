@@ -1,7 +1,6 @@
 # Hotfixes
 
-Über
-----
+## Über
 
 Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Datei zur Verfügung gestellt. Die ZIP-Datei wird im Installationsverzeichnis von i-doit entpackt. Die Abfrage, ob Dateien beim Entpacken überschrieben werden sollen, kann bestätigt werden (Taste **Y** für "yes" oder **A** für "all"). Hier ein Beispiel:
 
@@ -25,7 +24,7 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 !!! info "Aktualität"
 
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **23** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **25** Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 !!! attention "Einverständniserklärung"
 
@@ -33,32 +32,36 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit Core
 
-### Adding a model in category model not possible
+### Variable report on overview page causes 500 error
 
-[I-doit_23_hotfix_ID-9375_40177a3.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9375_40177a3.zip){ .md-button .md-button--primary }
+[i-doit_25_hotfix_ID-9476.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9476.zip){ .md-button .md-button--primary }
 
-### Better object browser performance
+### Date field from custom categories not displayed in mapping of csv import
 
-[I-doit_23_hotfix_ID-9376_2ce8a0d.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9376_2ce8a0d.zip){ .md-button .md-button--primary }
+[i-doit_25_hotfix_ID-9604.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9604.zip){ .md-button .md-button--primary }
 
-### 'type' option for cmdb.objects filter does not work with id
+### Set database without overwriting service
 
-[I-doit_23_hotfix_ID-9370_b8a4921.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9370_b8a4921.zip){ .md-button .md-button--primary }
+Use this if you get a error like:
 
-### JDisc Import - "Only create newly scanned devices" creates duplicates
+```
+PHP Fatal error:  Uncaught Error: Class 'isys_auth_document' not found in /var/www/html/i-doit/src/classes/modules/document/isys_module_document.class.php:2776
+```
 
-[i-doit_23_hotfix_ID-9350.zip :material-file-download:](../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9350.zip){ .md-button .md-button--primary }
+[i-doit_25_hotfix_ID-9729.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9729.zip){ .md-button .md-button--primary }
+
+### Reindex the Search is not working
+
+Use this if you get a error like:
+
+```
+PHP Fatal error:  Uncaught Error: Call to a member function getCollector() on null in /var/www/html/main/src/classes/modules/cmdb/src/Search/Index/Signals.php:185
+```
+
+[i-doit_25_hotfix_ID-9609.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9609.zip){ .md-button .md-button--primary }
 
 ## Analyze Add-on 1.3
 
 ### Service assignment is not displayed in data quality
 
 [Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download:](../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
-
-## Forms Add-on 1.1.0
-
-### Object Data is not saved or Categories are not loaded
-
-It is necessary to re-index the category attributes via [Systemtools](../../administration/systemeinstellungen/index.md), after applying the hotfix
-
-[aof-17-incompatible-function-declaration.zip](../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip)

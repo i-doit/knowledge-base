@@ -6,8 +6,7 @@ i-doit verfügt über ein Kommandozeilen-Werkzeug namens Controller.
 
     Der Controller ist seit Version 1.10 als veraltet markiert und wird in einer der nächsten Versionen entfernt werden. Als Alternative gilt die [Console](../cli/console/index.md).
 
-Erste Schritte
---------------
+## Erste Schritte
 
 Der Controller befindet sich im Hauptverzeichnis von i-doit. Wenn Du laut [Installationsanleitung](../../installation/manuelle-installation/setup.md) vorgegangen bist, befindet sich das Hauptverzeichnis bei [Debian](../../installation/manuelle-installation/debian.md)\-basierten Betriebssystemen unter **/var/www/html/i-doit/**:
 
@@ -39,8 +38,7 @@ Da [Windows](../../installation/manuelle-installation/microsoft-windows-server/i
 
     php.exe controller.php
 
-Mandant und Credentials
------------------------
+## Mandant und Credentials
 
 Um den Controller verwenden zu können, ist eine Authentifizierung gegenüber i-doit notwendig. Hierfür benötigt man Benutzername (**-u**), Passwort (**-p**) und die eindeutige ID des zu verwendenen Mandanten (**-i**).
 
@@ -48,7 +46,7 @@ Um den Controller verwenden zu können, ist eine Authentifizierung gegenüber i-
 
     Es wird empfohlen, für den Controller einen dedizierten Benutzer in i-doit anzulegen. Soll dieser als lokaler Benutzer konfiguriert werden, erstellt man ihn als Objekt vom Typ **Personen** mit den gewünschten Credentials in der Kategorie **Personen → Login**. Dieser Benutzer sollte Admin-Rechte erhalten. Dies kann durch die Zuordnung zur vordefinierten **Personengruppe** Admin geschehen.
 
-Um herauszufinden, welche eindeutige ID ein bestimmer Mandant hat, kann man folgendes Kommando benutzen:
+Um herauszufinden, welche eindeutige ID ein bestimmter Mandant hat, kann man folgendes Kommando benutzen:
 
 ```shell
     $ sudo -u www-data ./tenants ls
@@ -61,8 +59,7 @@ Um herauszufinden, welche eindeutige ID ein bestimmer Mandant hat, kann man folg
 
 Bei i-doit-Installationen mit nur einem Mandanten lautet die ID in der Regel **1**.
 
-Handler
--------
+## Handler
 
 Der Controller ist in der Lage, verschiedene Aktionen auszuführen. Diese werden wiederum durch Handler repräsentiert. Um einen bestimmten Handler aufzurufen, wird der Parameter **-m** benötigt.
 
@@ -70,19 +67,19 @@ Der Controller ist in der Lage, verschiedene Aktionen auszuführen. Diese werden
 
 | Handler | pro-Variante | open-Variante | Add-on | Beschreibung |
 | --- | --- | --- | --- | --- |
-| **[addldapdn](../ldap-verzeichnis/index.md)** | ja  | ja  | -   | Synchronisiere aus einem LDAP/AD den Distinguished Name (DN) der Benutzer (siehe Kategorie **LDAP**) |
+| **[addldapdn](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md)** | ja  | ja  | -   | Synchronisiere aus einem LDAP/AD den Distinguished Name (DN) der Benutzer (siehe Kategorie **LDAP**) |
 | **[archivelog](../../grundlagen/logbuch.md)** | ja  | ja  | -   | Logbuch-Einträge archivieren |
 | **[check_mk](../network-monitoring/daten-abfragen-mit-livestatus.md)** | ja  | ja  | -   | Ist-Zustand aus dem Network Monitoring ins Logbuch schreiben |
 | **[cleanup_auth](../../effizientes-dokumentieren/rechteverwaltung/index.md)** | ja  | ja  | -   | Rechtesystem bereinigen |
 | **[cleanup_objects](../../grundlagen/lebens-und-dokumentationszyklus.md)** | ja  | ja  | -   | Objekte bereinigen |
 | **[csv_import](../../daten-konsolidieren/csv-datenimport/index.md)** | ja  | -   | -   | Daten aus einer CSV-Datei importieren |
-| [**document**](../../i-doit-pro-add-ons/documents/index.md) | -   | -   | **[Documents](../../i-doit-pro-add-ons/documents/index.md)** | Neue Revision eines Dokuments erstellen |
+| **[document](../../i-doit-pro-add-ons/documents/index.md)** | -   | -   | **[Documents](../../i-doit-pro-add-ons/documents/index.md)** | Neue Revision eines Dokuments erstellen |
 | **import** | ja  | ja  | -   | i-doit XML oder [h-inventory XML](../../daten-konsolidieren/h-inventory.md) importieren |
 | **increment_config** | ja  | ja  | -   | auto_increment von MariaDB-/MySQL-Tabellen auf einen positiven Integer-Wert setzen |
 | **isc_dhcpd** | ja  | ja  | -   | Konfiguration für ISC DHCPD exportieren |
 | **[jdisc](../../daten-konsolidieren/jdisc-discovery.md)** | ja  | ja  | -   | Daten aus JDisc importieren |
 | **[jdisc_discovery](../../daten-konsolidieren/jdisc-discovery.md)** | ja  | ja  | -   | Einen Discovery Job bei JDisc auslösen |
-| **[ldap](../ldap-verzeichnis/index.md)** | ja  | ja  | -   | Daten aus einem LDAP-Verzeichnis oder Active Directory (AD) importieren |
+| **[ldap](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md)** | ja  | ja  | -   | Daten aus einem LDAP-Verzeichnis oder Active Directory (AD) importieren |
 | **[maintenance](../../i-doit-pro-add-ons/maintenance.md)** | -   | -   | **[Maintenance](../../i-doit-pro-add-ons/maintenance.md)** | E-Mails bei geplanten Wartungen versenden |
 | **[nagios](../network-monitoring/daten-abfragen-mit-livestatus.md)** | ja  | ja  | -   | Ist-Zustand aus dem Network Monitoring ins Logbuch schreiben |
 | **[nagios_export](../network-monitoring/nagios.md)** | ja  | ja  | -   | Nagios-Konfiguration exportieren |

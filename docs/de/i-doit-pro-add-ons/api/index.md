@@ -52,13 +52,15 @@ Damit Requests von der API verarbeitet werden, ist ein API Key erforderlich. Mit
 Zudem kann aktiviert werden, dass ein dedizierter Benutzer-Account für die Anmeldung verwendet wird. Für diesen können wie gewohnt Rechte vergeben werden. Andernfalls stehen über die API alle Rechte zur Verfügung.
 Zusätzlicher Vorteil ist, dass man pro Dritt-System/Script einen dedizierten Benutzer angeben kann, um einfach nachvollziehen zu können, welche Datenflüsse von wo nach wo stattfinden.
 
-!!! success "Werden sehr viele Requests von einem Client aus gesendet (wir sprechen hier von tausenden), lohnt es sich, die API-Methode idoit.login zu nutzen, um sich lediglich einmal zu authentifizieren.
-Andernfalls kann es passieren, dass in zu kurzer Zeit zu viele Sessions erstellt, aber nicht wieder beendet werden. Dies könnte dazu führen, dass i-doit unbenutzbar wird, bis die Sessions beendet wurden.
-Dies erhöht außerdem die Performance erheblich."
+!!! success "Senden vieler Requests"
+    Werden sehr viele Requests von einem Client aus gesendet (wir sprechen hier von tausenden), lohnt es sich, die API-Methode idoit.login zu nutzen, um sich lediglich einmal zu authentifizieren.<br>
+    Andernfalls kann es passieren, dass in zu kurzer Zeit zu viele Sessions erstellt, aber nicht wieder beendet werden. Dies könnte dazu führen, dass i-doit unbenutzbar wird, bis die Sessions beendet wurden.<br>
+    Dies erhöht außerdem die Performance erheblich.
 
-!!! attention "Der für API-Aktionen verwendete Standardbenutzer ist "Api System". Dieser kann bei Bedarf unter "Kontakte -> Personen" gefunden werden.
-Dieser wird nur verwendet wenn kein Benutzername/Passwort für die Verbindung zur API Schnittstelle verwendet wird.
-Wird die Person archiviert/gelöscht kann die API nicht mehr ohne Authentifizierung genutzt werden."
+!!! attention "Api Benutzer"
+    Der für API-Aktionen verwendete Standardbenutzer ist "Api System". Dieser kann bei Bedarf unter "Kontakte -> Personen" gefunden werden.<br>
+    Dieser wird nur verwendet wenn kein Benutzername/Passwort für die Verbindung zur API Schnittstelle verwendet wird.<br>
+    Wird die Person archiviert/gelöscht kann die API nicht mehr ohne Authentifizierung genutzt werden.<br>
 
 Methoden
 
@@ -93,7 +95,7 @@ Anhand eines simplen Beispiels wird ein neues Objekt vom Typ **Server** mit dem 
 
 Request an den Server:
 
-```shell
+```json
     {
         "jsonrpc": "2.0",
         "method": "cmdb.object.create",
@@ -117,7 +119,7 @@ Diesen Request kann man für Testzwecke via cURL absenden:
 
 Die Response vom Server:
 
-```shell
+```json
     {
         "jsonrpc": "2.0",
         "result": {
@@ -136,7 +138,8 @@ Eine hilfreiche Auflistung aller in i-doit verwendeten Kategorien und Attribute 
 
 [![Kategorien in der IT-Dokumentation](../../assets/images/de/i-doit-pro-add-ons/api/2-api.png)](../../assets/images/de/i-doit-pro-add-ons/api/2-api.png)
 
-Dort wird beispielsweise aufgelistet, unter welchem Namen Kategorien und Attribute angesprochen werden können und welche Datentypen die jeweiligen Attribute erwarten.
+Dort wird beispielsweise aufgelistet, unter welchem Namen Kategorien und Attribute angesprochen werden können und welche Datentypen die jeweiligen Attribute erwarten.<br>
+Für [benutzerdefinierte Kategorien](../../grundlagen/benutzerdefinierte-kategorien.md) bzw. Attribute finden Sie die technischen Schlüssel in der jeweiliges benutzerdefinierten Kategorie. Dort ist es möglich die technisches Schlüssel neu zu benennen.
 
 Clients und Libraries
 ---------------------
@@ -179,6 +182,7 @@ Releases
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.14.1 | 13.06.2023 | [Task] Use 'cmdb.quickpurge' setting from tenant-settings<br>[Bug]  Specific sub-categories can not be read via cmdb.objects.read<br>[Bug]  Wrong successful message when using id instead of assigned_object<br>[Bug]  The "Date for Notification" field in category "SIM" can not be emptied by the API<br>[Bug]  Category Application is not displayed in Categories and attributes<br>[Bug]  Set a Location in Rack is not correct if the Height unit sorting is Ascending<br>[Bug]  Validaton error for custom category field time<br>[Bug]  It is not possible to remove a Network -> Port  -> addresses value<br>[Bug]  It is not possible to assign a Host address  -> assigned_port value<br>[Bug]  Write data to  Network > logical Ports > ports display SQL error message<br>[Bug]  Layer 2 Net  -> Assigned logical ports is not Editable<br> [Bug]  Version of software assignment does not get assigned correctly<br>[Bug]  "Categories and attributes" contains empty categories like Document and Floorplan<br>[Bug]  Typo in response message idoit.logout |
 | 1.14 | 21.03.2023 |  [Improvement] New method "cmdb.ip_search.getNetworksByIp" returns all Layer3 obejcts a given IP is within the defined range (contributed by becon GmbH) <br>[Bug] Creating objects results in two entries in category 'Accounting' <br>[Bug] Category 'C__CATS__ORGANIZATION_CONTACT_ASSIGNMENT' can not be updated <br> [Bug] Translations for 'LC__CMDB__CATG__VD__HOST_RAID_ARRAY' is missing <br> [Bug] Add 'limit' and 'offset' options to endpoint 'cmdb.reports.read' <br>[Bug] SQL error when updating category 'network > port' <br>[Bug] Can't read type of layer2 net category <br>[Bug] Attribute "GPS" in category "C__CATG__LOCATION" is not writeable |
 | 1.13.1 | 24.01.2023 | [Bug] Some fields are not being validated  <br>[Bug] The Login method can use old session keys  <br>[Bug] Validation error f\_popup\_  <br>[Bug] Setting a Dialog Attribute via causes Fatal error  <br>[Bug] Failed validation breaks the response  <br>[Bug] installDate is always set to actual date/time  <br>[Bug] The addresses attribute of the Network > Port category is incorrectly validated by API validation  <br>[Bug] Date of Change is not altered when archiving a object via API |
 | 1.13 | 05.09.2022 | [Task] PHP 8.0 compatibility  <br>[Bug] Reports displayed via the API show language constants  <br>[Bug] The Hostname field of the Monitoring category is incorrectly validated by API validation  <br>[Bug] Changing the object type via the API via type: dialog constant is not possible  <br>[Bug] An EntryID is needed to purge single-value entries  <br>[Bug] The API shall be able to change passwords of users  <br>[Bug] The Host address field of the Network > Port category is incorrectly validated by API validation  <br>[Bug] The Latitude, Longitude and Position fields in the Location category cabinet are incorrectly validated by API validation  <br>[Bug] The Type and Assigned license key fields of the Software Assignment category are incorrectly validated by API validation  <br>[Bug] The Image attribute of the Object picture category is incorrectly validated by API validation |

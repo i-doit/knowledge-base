@@ -1,6 +1,6 @@
 # Using Configuration Files for Console Commands
 
-If you use a configuration file, you can specify the options for the console command directly.  
+If you use a configuration file, you can specify the options for the console command directly.<br>
 You can then save these newly created files under /i-doit/src/handler/config/ for example.
 
 !!! warning "Access to .ini files"
@@ -14,8 +14,8 @@ You can then save these newly created files under /i-doit/src/handler/config/ fo
     </Files>
     ```
 
-This saves you from typing the password in plain text. into the console.  
-The [Console Command](./options-and-parameters-cli.md) uses .ini files.  
+This saves you from typing the password in plain text. into the console.<br>
+The [Console Command](./options-and-parameters-cli.md) uses .ini files.<br>
 The [Controller Command](../../../automation-and-integration/cli/console/index.md) uses .inc.php files. However, this method is outdated and should not be used.
 
 The configuration file is used with `--config /path/to/config.ini or with -c /path/to/config.ini`
@@ -32,21 +32,21 @@ Currently none available.
     password=pass
     tenantId=1
 
-Here you can add the options of the Console Command. These options must be written in the “long form”.  
+Here you can add the options of the Console Command. These options must be written in the “long form”.<br>
 For more options see [Optionen und Parameter der Console](./options-and-parameters-cli.md).
 
     [additional]
 
-Special parameters are entered below.  
-At the moment these are available for the [ldapServerId](../../ldap-active-directory-ad/index.md) and for [import-syslog](./options-and-parameters-cli.md#import-ocs).
+Special parameters are entered below.<br>
+At the moment these are available for the [ldapServerId](../../../user-authentication-and-management/ldap-directory/index.md) and for [import-syslog](./options-and-parameters-cli.md#import-ocs).
 
 * * *
 
 Example for the command [search-index](./options-and-parameters-cli.md#search-index)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-First the .ini file has to be created.  
-We use here additionally [update](./options-and-parameters-cli.md#search-index) to overwrite and create the search index.  
+First the .ini file has to be created.<br>
+We use here additionally [update](./options-and-parameters-cli.md#search-index) to overwrite and create the search index.<br>
 Additionally we use [quiet](./options-and-parameters-cli.md#search-index) to shorten the output and save some memory, which can be used for indexing.
 
     [commandArguments]
@@ -90,8 +90,8 @@ To use the configuration file we execute the console command and specify the pat
 Example for the command [ldap-sync](./options-and-parameters-cli.md#ldap-sync)
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This command offers the following additional options: [ldapServerId](./options-and-parameters-cli.md#ldap-sync) and [dumpConfig](./options-and-parameters-cli.md#ldap-sync).  
-The [ldapServerId](./options-and-parameters-cli.md#ldap-sync) option specifies the ldap server to use. Here the ID of the entry must be specified.  
+This command offers the following additional options: [ldapServerId](./options-and-parameters-cli.md#ldap-sync) and [dumpConfig](./options-and-parameters-cli.md#ldap-sync).<br>
+The [ldapServerId](./options-and-parameters-cli.md#ldap-sync) option specifies the ldap server to use. Here the ID of the entry must be specified.<br>
 With [dumpConfig](./options-and-parameters-cli.md#ldap-sync) no synchronization is executed! Only the configuration is output. Should therefore only be used for debugging.
 
     [commandArguments]
@@ -151,12 +151,12 @@ List of command options and a short explanation
 | deletedUsersBehaviour= | archive, delete or disable\_login | Behavior for deleted LDAP users. Should these be archived, deleted or the login deactivated |
 | disabledUsersBehaviour= | archive, delete or disable\_login | Behavior for disabled LDAP users. Should these be archived, deleted or the login deactivated |
 | rooms\[\]="" | \[“Room 01”\]=“userPrincipalName” | Here your room is statically assigned to an LDAP user |
-| attributes\[\]= | attributes\[i-doit field\]=AD Attribute | Possible i-doit fields: academic\_degree, function, service\_designation, street, city, zip\_code, phone\_company, phone\_home, phone\_mobile, fax, pager, personnel\_number, department, company, office, ldap\_id, ldap\_dn, description. If user-defined information is to be stored here, the [Category extension](../../../system-administration/administration/cmdb-settings.md#category-extension) can be activated. Then the fields: custom\_1 - custom\_8 are available |
+| attributes\[\]= | attributes\[i-doit field\]=AD Attribute | Possible i-doit fields: academic\_degree, function, service\_designation, street, city, zip\_code, phone\_company, phone\_home, phone\_mobile, fax, pager, personnel\_number, department, company, office, ldap\_id, ldap\_dn, description. If user-defined information is to be stored here, the [Category extension](../../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md) can be activated. Then the fields: custom\_1 - custom\_8 are available |
 | autoReactivateUsers= | true or false | All users are automatically set to normal status before they are synced. This function is only necessary for OpenLDAP and NDS, because it is always enabled in the Active Directory |
 | ignoreUsersWithAttributes\[\]= | ignoreUsersWithAttributes\[\]=“sn” | Disables the synchronization of users where e.g. the sn(Last Name) in AD is empty. Several AD attributes can be used here, see example |
 | ignoreFunction= | empty\*, !empty, isset\*, !isset | The check function for “ignoreUsersWithAttributes”. If the value is set to “empty”, the function checks if the specified “ignoreUsersWithAttributes” value is empty. If this is the case the user will not be synchronized. |
 
-\*empty - Checks if a variable contains a value  
+\*empty - Checks if a variable contains a value<br>
 \*isset - Checks if a variable exists and if it is not NULL
 
 * * *

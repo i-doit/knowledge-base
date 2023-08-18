@@ -30,10 +30,10 @@ To use the run.sh, we must first set the rights to run:
 
 Now we can run the run.sh:
 
-    sudo ./run.sh instance:create {Benutzername} {Apikey}
+    sudo ./run.sh instance:create {Username} {Apikey}
 
 !!!info ""
-    Each Forms instance has its own API and gets its own {username} and {API Key}. These can be defined freely and have nothing in common with the i-doit pro API.
+    Each Forms instance has its own API and gets its own {Username} and {Apikey}. These can be defined freely and have nothing in common with the i-doit pro API.
 
     The data must be noted during the installation, because they must be entered later in the configuration of the Forms Add-on in the i-doit pro interface.
 
@@ -45,9 +45,9 @@ In order to use forms-service.sh, we must first set the rights to run it:
 
     sudo chmod +x forms-service.sh
 
-We now have the systemd service created for the Forms backend.  
-The Service will be activated and started: 
+We now have the systemd service created for the Forms backend.<br>
+The Service will be activated and started:
 
     sudo ./forms-service.sh
 
-[approve Continue to configuration in i-doit](./configuration-in-i-doit.md)
+[ Continue to configuration in i-doit](./configuration-in-i-doit.md){ .md-button .md-button--primary }

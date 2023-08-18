@@ -58,7 +58,7 @@ Now we log off from the Admin Center and log in again to _i-doit_. Now we click 
 Configure Permissions
 ---------------------
 
-In contrast to _i-doit open, i-doit pro_ does possess a free configurable [authorization system](../system-administration/administration/authorization-system.md). For this reason, the user who is logged in at this moment will not have all permissions.
+In contrast to _i-doit open, i-doit pro_ does possess a free configurable [authorization system](../system-administration/administration/user-permissions.md). For this reason, the user who is logged in at this moment will not have all permissions.
 
 To give your admin-user full access in a few steps, go to **Administration** → **Authorization system** → **Authorization system reset** and give your user full access to _i-doit_ by entering the credentials for the [Admin center](../system-administration/admin-center.md).
 

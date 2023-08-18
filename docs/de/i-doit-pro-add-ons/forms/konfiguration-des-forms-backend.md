@@ -41,9 +41,9 @@ Um die forms-service.shzu verwenden, müssen wir erst die Rechte zum Ausführen 
 
     sudo chmod +x forms-service.sh
 
-Wir lassen nun den systemd Service für das Forms-Backend erstellen.
+Wir lassen nun den systemd Service für das Forms-Backend erstellen.<br>
 Dieser wird aktiviert und gestartet:
 
     sudo ./forms-service.sh
 
-!!! info "[Weiter zur Konfiguration in i-doit](./konfiguration-in-i-doit.md)"
+[Weiter zur Konfiguration in i-doit](./konfiguration-in-i-doit.md){ .md-button .md-button--primary }

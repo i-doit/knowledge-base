@@ -1,3 +1,9 @@
+# Changelogs
+
+What changes were published per release of _i-doit pro_?
+
+*   [Changelog 25](./changelog-25.md)
+*   [Changelog 24](./changelog-24.md)
 *   [Changelog 23](./changelog-23.md)
 *   [Changelog 22](./changelog-22.md)
 *   [Changelog 21](./changelog-21.md)
