@@ -53,7 +53,7 @@ It is absolutely essential that each object receives a title. This title is docu
 
 You can assign as many IP addresses to each object as you wish. This is done in the **Hostaddress** category by creating a category entry for each IP address.
 
-IP addresses are not unique per se. For example, in private networks the same addresses (192.168.1.1 etc.) recur again and again. When **[**Layer-3 networks**](../use-cases/ip-adress-management.md)** with overlapping network areas are documented in i-doit, there often will be objects with ambiguous IP addresses. Due to technologies like DHCP it becomes even harder to identify objects by using dynamically assigned IP addresses. Hence, this attribute is **not suited** for unambiguous referencing in most cases.
+IP addresses are not unique per se. For example, in private networks the same addresses (192.168.1.1 etc.) recur again and again. When **[Layer-3 networks](../use-cases/ip-adress-management.md)** with overlapping network areas are documented in i-doit, there often will be objects with ambiguous IP addresses. Due to technologies like DHCP it becomes even harder to identify objects by using dynamically assigned IP addresses. Hence, this attribute is **not suited** for unambiguous referencing in most cases.
 
 ## Hostname and FQDN
 
