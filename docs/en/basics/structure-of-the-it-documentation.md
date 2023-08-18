@@ -126,7 +126,7 @@ Important attributes of different categories are combined to one view, which is 
 
 Attributes of objects are saved and edited via form fields in the web GUI of i-doit. Hence these fields are called attribute fields. They can vary: There are single-line and multi-line text fields, date fields, HTML editors, object browsers, [dialogue-plus fields](./dialog-admin.md) and many more.
 
-[![### Attribute Field](../assets/images/en/basics/structure-of-the-it-documentation/16-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/16-sotitd.png)
+[![Attribute Field](../assets/images/en/basics/structure-of-the-it-documentation/16-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/16-sotitd.png)
 
 ## Relationships
 
