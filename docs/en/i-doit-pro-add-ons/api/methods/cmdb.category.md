@@ -8,7 +8,11 @@ lang: en
 
 # Namespace cmdb.category
 
+!!! example "Work in Progress"
+
 ## cmdb.category.create
+
+!!! warning "This method is deprecated and will be removed in a feature release. Use [cmdb.category.save](#cmdbcategorysave) instead."
 
 Create a new [category](../../../basics/structure-of-the-it-documentation.md) entry
 

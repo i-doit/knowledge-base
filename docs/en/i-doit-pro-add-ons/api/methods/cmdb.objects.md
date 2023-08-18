@@ -1,14 +1,14 @@
 ---
-title: Namespace cmdb.object
+title: cmdb.object
 description: cmdb.object
 icon: material/api
 status: new
 lang: en
 ---
 
-# Namespace cmdb.objects
+# cmdb.objects
 
-!!! example "Work in Progress
+!!! example "Work in Progress"
 
 ## cmdb.objects.read
 
@@ -41,7 +41,7 @@ Fetch a list of [objects](../../../glossary.md)
 
 You can use any combination of filters. Filters are logically associated with AND. A valid combination could be: "Give me all servers which have the same hostname."
 
-### Response
+### Response parameters
 
 JSON key **result** contains an array of JSON objects. Each object contains a bunch of information about an i-doit object.
 
@@ -63,48 +63,48 @@ JSON key **result** contains an array of JSON objects. Each object contains a bu
 
 ### Example
 
-#### Request body
+=== "Request body"
 
-```json
-{
-    "version": "2.0",
-    "method": "cmdb.objects.read",
-    "params": {
-        "filter": {
-            "type": "C__OBJTYPE__SERVER",
-            "status": "C__RECORD_STATUS__ARCHIVED"
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.objects.read",
+        "params": {
+            "filter": {
+                "type": "C__OBJTYPE__SERVER",
+                "status": "C__RECORD_STATUS__ARCHIVED"
+            },
+            "limit": "0,10",
+            "order_by": "title",
+            "sort": "ASC",
+            "apikey": "xxx",
+            "language": "en"
         },
-        "limit": "0,10",
-        "order_by": "title",
-        "sort": "ASC",
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
+        "id": 1
+    }
+    ```
 
-#### Response body
+=== "Response body"
 
-```json
-{
-    "jsonrpc": "2.0",
-    "result": [
-        {
-            "id": "123",
-            "title": "My little server",
-            "sysid": "SRV_101010",
-            "type": "5",
-            "created": "2017-03-07 15:57:48",
-            "updated": "2017-05-10 15:40:27",
-            "type_title": "Server",
-            "type_group_title": "Hardware",
-            "status": "3",
-            "cmdb_status": "6",
-            "cmdb_status_title": "in operation",
-            "image": "https://demo.i-doit.com/images/objecttypes/empty.png"
-        },
-        […]
-    ]
-}
-```
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "result": [
+            {
+                "id": "123",
+                "title": "My little server",
+                "sysid": "SRV_101010",
+                "type": "5",
+                "created": "2017-03-07 15:57:48",
+                "updated": "2017-05-10 15:40:27",
+                "type_title": "Server",
+                "type_group_title": "Hardware",
+                "status": "3",
+                "cmdb_status": "6",
+                "cmdb_status_title": "in operation",
+                "image": "https://demo.i-doit.com/images/objecttypes/empty.png"
+            },
+            […]
+        ]
+    }
+    ```

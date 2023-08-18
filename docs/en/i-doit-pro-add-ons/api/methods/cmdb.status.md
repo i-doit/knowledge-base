@@ -12,13 +12,13 @@ lang: en
 
 ## cmdb.status.read
 
-Read all available states
+Read all available states.
 
 ### Request parameters
 
 | Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| - | - | - | - |
+| --- | -------------- | -------- | ----------- |
+| -   | -              | -        | -           |
 
 !!! example "WIP"
 
@@ -26,10 +26,10 @@ Read all available states
 
     JSON key **result** contains an array of JSON objects. Each object contains a search result.
 
-    | Key | JSON data type | Description |
-    | --- | --- | --- |
-    | **Placeholder** | Placeholder | Placeholder |
-    | **Placeholder** | Placeholder | Placeholder |
+    | Key             | JSON data type | Description |
+    | --------------- | -------------- | ----------- |
+    | **Placeholder** | Placeholder    | Placeholder |
+    | **Placeholder** | Placeholder    | Placeholder |
 
 ### Example:
 
@@ -40,7 +40,7 @@ Read all available states
       "version": "2.0",
       "method": "cmdb.status.read",
       "params": {
-        "apikey": "h3md6u3y",
+        "apikey": "xxx",
         "language": "en"
       },
       "id": 1
@@ -158,16 +158,15 @@ Read all available states
 
 ## cmdb.status.save
 
-Create new or save existing state
+Create new or save existing state.
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **status** | String | Yes | Placeholder |
-| **constant** | String | Yes | Placeholder |
-| **color** | Placeholder | Yes | Placeholder |
-| **status** | Placeholder | Yes | Placeholder |
+| Key          | JSON data type | Required | Description                                            |
+| ------------ | -------------- | -------- | ------------------------------------------------------ |
+| **title**    | String         | Yes      | Status title                                           |
+| **constant** | String         | Yes      | Status constant                                        |
+| **color**    | String         | Yes      | Color in hex without leading `#`, for example `FF0000` |
 
 !!! example "WIP"
 
@@ -175,40 +174,71 @@ Create new or save existing state
 
     JSON key **result** contains an array of JSON objects. Each object contains a search result.
 
-    | Key | JSON data type | Description |
-    | --- | --- | --- |
-    | **Placeholder** | Placeholder | Placeholder |
-    | **Placeholder** | Placeholder | Placeholder |
+    | Key             | JSON data type | Description |
+    | --------------- | -------------- | ----------- |
+    | **Placeholder** | Placeholder    | Placeholder |
+    | **Placeholder** | Placeholder    | Placeholder |
 
 ### Example:
 
 === "Request body"
 
     ```json
-
+    {
+      "version": "2.0",
+      "method": "cmdb.status.save",
+      "params": {
+        "title": "MyOwn",
+        "constant": "C__CMDB__STATUS__MYOWN",
+        "color": "FF0000",
+        "apikey": "xxx",
+        "language": "en"
+      },
+      "id": 1
+    }
     ```
 
 === "Response body"
 
     ```json
-
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "success": true,
+        "message": "Status created",
+        "id": 15
+      }
+    }
     ```
 
 === "or update Request body"
 
     ```json
-
+    {
+      "version": "2.0",
+      "method": "cmdb.status.save",
+      "params": {
+        "id": 15,
+        "title": "MyOwn",
+        "constant": "C__CMDB__STATUS__MYOWN",
+        "color": "0000ff",
+        "apikey": "xxx",
+        "language": "en"
+      },
+      "id": 1
+    }
     ```
 
 ## cmdb.status.delete
 
-Purge a state
+Purge a state.
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **Placeholder** | Placeholder | Yes | Placeholder |
+| Key    | JSON data type | Required | Description           |
+| ------ | -------------- | -------- | --------------------- |
+| **id** | Integer        | Yes      | ID of the CMDB Status |
 
 !!! example "WIP"
 
@@ -216,27 +246,37 @@ Purge a state
 
     JSON key **result** contains an array of JSON objects. Each object contains a search result.
 
-    | Key | JSON data type | Description |
-    | --- | --- | --- |
-    | **Placeholder** | Placeholder | Placeholder |
-    | **Placeholder** | Placeholder | Placeholder |
+    | Key             | JSON data type | Description |
+    | --------------- | -------------- | ----------- |
+    | **Placeholder** | Placeholder    | Placeholder |
+    | **Placeholder** | Placeholder    | Placeholder |
 
 ### Example:
 
 === "Request body"
 
     ```json
-
+    {
+      "version": "2.0",
+      "method": "cmdb.status.delete",
+      "params": {
+        "id": 15,
+        "apikey": "xxx",
+        "language": "en"
+      },
+      "id": 1
+    }
     ```
 
 === "Response body"
 
     ```json
-
-    ```
-
-=== "or update Request body"
-
-    ```json
-
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "success": true,
+        "message": "Status purged"
+      }
+    }
     ```

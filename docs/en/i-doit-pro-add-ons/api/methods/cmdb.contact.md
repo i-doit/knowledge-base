@@ -8,16 +8,18 @@ lang: en
 
 # Namespace cmdb.contact
 
+!!! example "Work in Progress"
+
 ## cmdb.contact.read
 
 Retrieves all assigned objects by contact.
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **method** | String | only "assigned_objects_by_contact" available|
-| **filter** | Object | Yes | By `email` String or `id` Integer |
+| Key        | JSON data type | Required                                     | Description                       |
+| ---------- | -------------- | -------------------------------------------- | --------------------------------- |
+| **method** | String         | only "assigned_objects_by_contact" available |                                   |
+| **filter** | Object         | Yes                                          | By `email` String or `id` Integer |
 
 !!! example "WIP"
 
@@ -25,10 +27,10 @@ Retrieves all assigned objects by contact.
 
     JSON key **result** contains an array of JSON objects. Each object contains a search result.
 
-    | Key | JSON data type | Description |
-    | --- | --- | --- |
-    | **key** | String | Attribute which relates to query |
-    | **value** | String | Value which relates to query |
+    | Key       | JSON data type | Description                      |
+    | --------- | -------------- | -------------------------------- |
+    | **key**   | String         | Attribute which relates to query |
+    | **value** | String         | Value which relates to query     |
 
 ### Example:
 

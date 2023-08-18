@@ -1,14 +1,14 @@
 ---
-title: Namespace cmdb.reports
+title: cmdb.reports
 description: cmdb.reports
 icon: material/api
 status: new
 lang: en
 ---
 
-# Namespace cmdb.reports
+# cmdb.reports
 
-!!! example "Work in Progress
+!!! example "Work in Progress"
 
 ### cmdb.reports.read
 

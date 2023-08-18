@@ -1,12 +1,12 @@
 ---
-title: Namespace cmdb.condition
+title: cmdb.condition
 description: cmdb.condition
 icon: material/api
 status: new
 lang: en
 ---
 
-# Namespace cmdb.condition
+# cmdb.condition
 
 !!! example "Work in Progress. **Alpha state**"
 
@@ -16,12 +16,12 @@ Give me all objects that have attribute Y = Z in category X. Like a report.
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **conditions** | Array | Yes | Consists of the category constant + the attribute name |
-| **property** | String | Yes | `=`, `!=`, `like`, `not like`, `>`, `>=`, `<`, `<=`, `<>` |
-| **comparison**| String | String or Integer | Exmaple, `C__OBJTYPE__SERVER`, `123` or `*server*` |
-| **operator** :material-flask: | Array | Yes | `AND` or `OR` |
+| Key                                                       | JSON data type | Required          | Description                                               |
+| --------------------------------------------------------- | -------------- | ----------------- | --------------------------------------------------------- |
+| **conditions**                                            | Array          | Yes               | Consists of the category constant + the attribute name    |
+| **property**                                              | String         | Yes               | `=`, `!=`, `like`, `not like`, `>`, `>=`, `<`, `<=`, `<>` |
+| **comparison**                                            | String         | String or Integer | Exmaple, `C__OBJTYPE__SERVER`, `123` or `*server*`        |
+| **operator** :material-flask:{ title="Work in progress" } | Array          | Yes               | `AND` or `OR`                                             |
 
 !!! example "WIP"
 
@@ -29,10 +29,10 @@ Give me all objects that have attribute Y = Z in category X. Like a report.
 
     JSON key **result** contains an array of JSON objects. Each object contains a search result.
 
-    | Key | JSON data type | Description |
-    | --- | --- | --- |
-    | **key** | String | Attribute which relates to query |
-    | **value** | String | Value which relates to query |
+    | Key       | JSON data type | Description                      |
+    | --------- | -------------- | -------------------------------- |
+    | **key**   | String         | Attribute which relates to query |
+    | **value** | String         | Value which relates to query     |
 
 ### Example:
 

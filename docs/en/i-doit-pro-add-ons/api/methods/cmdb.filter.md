@@ -9,7 +9,7 @@ lang: en
 
 # Namespace cmdb.filter
 
-!!! example "Work in Progress"
+!!! example "Work in Progress. **Alpha state**"
 
 ## cmdb.filter.read
 

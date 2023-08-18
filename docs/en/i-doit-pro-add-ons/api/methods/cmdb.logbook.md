@@ -1,12 +1,12 @@
 ---
-title: Namespace cmdb.category
+title: cmdb.logbook
 description: cmdb.logbook
 icon: material/api
 status: new
 lang: en
 ---
 
-# Namespace cmdb.logbook
+# cmdb.logbook
 
 !!! example "Work in Progress"
 
@@ -101,7 +101,7 @@ Write a entry to the i-doit logbook.
 | **source**      | String            | No       | Constant or ID of the source of the logbook entry from table `isys_logbook_source`.<br> Default is `C__LOGBOOK__ALERT_LEVEL__0` |
 | **alert_level** | Integer or String | No       | Constant or ID of the alert level, from table `isys_logbook_level`.<br> Default is `C__LOGBOOK__ALERT_LEVEL__0`                 |
 
-=== "Source"
+=== "Source list"
 
     | Title          | ID   | Constant                    |
     | -------------- | ---- | --------------------------- |
@@ -113,8 +113,7 @@ Write a entry to the i-doit logbook.
     | JDisc Import   | 1004 | C__LOGBOOK_SOURCE__JDISC    |
     | Import         | 1005 | C__LOGBOOK_SOURCE__IMPORT   |
 
-
-==== "Alert level"
+=== "Alert level list"
 
     | Title           | ID  | Costant                    |
     | --------------- | --- | -------------------------- |

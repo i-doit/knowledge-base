@@ -16,14 +16,14 @@ theme:
     - scheme: default
       primary: grey
       accent: red
-      media: "(prefers-color-scheme: light)"
+      media: '(prefers-color-scheme: light)'
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
     - scheme: slate
       primary: grey
       accent: red
-      media: "(prefers-color-scheme: dark)"
+      media: '(prefers-color-scheme: dark)'
       toggle:
         icon: material/weather-night
         name: Switch to light mode
@@ -64,7 +64,12 @@ markdown_extensions:
   - attr_list
   - meta
   - toc:
-      permalink: "#"
+      permalink: '#'
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -76,8 +81,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.details
-
+  - tables
 extra:
   manifest: overrides/manifest.webmanifest
   social:
@@ -104,8 +108,8 @@ extra:
       link: /de/
       lang: de
   status:
-      new: Recently added
-      updated: Recently updated
+    new: Recently added
+    updated: Recently updated
 extra_css:
   - assets/custom.css
 use_directory_urls: false
@@ -399,6 +403,8 @@ nav:
           - i-doit-pro-add-ons/api/index.md
           - Methods:
               - i-doit-pro-add-ons/api/methods/index.md
+              - cmdb.categories: i-doit-pro-add-ons/api/methods/cmdb.categories.md
+              - cmdb.category_info: i-doit-pro-add-ons/api/methods/cmdb.category_info.md
               - cmdb.category: i-doit-pro-add-ons/api/methods/cmdb.category.md
               - cmdb.condition: i-doit-pro-add-ons/api/methods/cmdb.condition.md
               - cmdb.contact: i-doit-pro-add-ons/api/methods/cmdb.contact.md
@@ -407,9 +413,12 @@ nav:
               - cmdb.impact: i-doit-pro-add-ons/api/methods/cmdb.impact.md
               - cmdb.location_tree: i-doit-pro-add-ons/api/methods/cmdb.location_tree.md
               - cmdb.logbook: i-doit-pro-add-ons/api/methods/cmdb.logbook.md
+              - cmdb.object_type_categories: i-doit-pro-add-ons/api/methods/cmdb.object_type_categories.md
+              - cmdb.object_type_groups: i-doit-pro-add-ons/api/methods/cmdb.object_type_groups.md
+              - cmdb.object_types: i-doit-pro-add-ons/api/methods/cmdb.object_types.md
               - cmdb.object: i-doit-pro-add-ons/api/methods/cmdb.object.md
+              - cmdb.objects_by_relation: i-doit-pro-add-ons/api/methods/cmdb.objects_by_relation.md
               - cmdb.objects: i-doit-pro-add-ons/api/methods/cmdb.objects.md
-              - cmdb.object_type: i-doit-pro-add-ons/api/methods/cmdb.object_type.md
               - cmdb.reports: i-doit-pro-add-ons/api/methods/cmdb.reports.md
               - cmdb.status: i-doit-pro-add-ons/api/methods/cmdb.status.md
               - cmdb.workstation_components: i-doit-pro-add-ons/api/methods/cmdb.workstation_components.md

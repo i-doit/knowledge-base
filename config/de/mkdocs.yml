@@ -16,14 +16,14 @@ theme:
     - scheme: default
       primary: grey
       accent: red
-      media: "(prefers-color-scheme: light)"
+      media: '(prefers-color-scheme: light)'
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
     - scheme: slate
       primary: grey
       accent: red
-      media: "(prefers-color-scheme: dark)"
+      media: '(prefers-color-scheme: dark)'
       toggle:
         icon: material/weather-night
         name: Switch to light mode
@@ -58,13 +58,17 @@ plugins:
   - minify:
       minify_html: true
   - mkdocs-video
-
 markdown_extensions:
   - admonition
+  - abbr
   - attr_list
   - meta
   - toc:
-      permalink: "#"
+      permalink: '#'
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -102,6 +106,9 @@ extra:
     - name: Deutsch
       link: /de/
       lang: de
+  status:
+    new: Recently added
+    updated: Recently updated
 extra_css:
   - assets/custom.css
 use_directory_urls: false

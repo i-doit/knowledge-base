@@ -1,14 +1,14 @@
 ---
-title: Namespace cmdb.object
-description: cmdb.object
+title: object
+description: object
 icon: material/api
 status: new
 lang: en
 ---
 
-# Namespace cmdb.object
+# cmdb.object
 
-!!! example "Work in Progress
+!!! example "Work in Progress"
 
 ## cmdb.object.read
 
@@ -20,7 +20,7 @@ Read common information about an [object](../../../basics/structure-of-the-it-do
 | --- | --- | --- | --- |
 | **id** | Integer | Yes | Object identifier; for example: **42** |
 
-### Response
+### Response paramters
 
 JSON key **result** contains a JSON object.
 
@@ -39,45 +39,45 @@ JSON key **result** contains a JSON object.
 | **cmdb_status_title** | String | Translated CMDB status (see category **Global**) |
 | **image** | String | URL to object picture |
 
-### Example
+### Example:
 
-#### Request body
+=== "Request body"
 
-```json
-{
-    "version": "2.0",
-    "method": "cmdb.object.read",
-    "params": {
-        "id": 1000,
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.object.read",
+        "params": {
+            "id": 1000,
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
+    }
+    ```
 
-#### Response body
+=== "Response body"
 
-```json
-{
-    "jsonrpc": "2.0",
-    "result": {
-        "id": "1000",
-        "title": "ESXi1",
-        "sysid": "VHOST_1426338622",
-        "objecttype": "58",
-        "type_title": "Virtual host",
-        "type_icon": "images/icons/silk/server_database.png",
-        "status": "2",
-        "cmdb_status": "6",
-        "cmdb_status_title": "in operation",
-        "created": "2015-03-14 14:10:22",
-        "updated": "2017-04-26 10:22:20",
-        "image": "http://demo.synetics.int/pro/images/objecttypes/server.png"
-    },
-    "id": 1
-}
-```
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "id": 1000,
+            "title": "ESXi1",
+            "sysid": "VHOST_1426338622",
+            "objecttype": 58,
+            "type_title": "Virtual host",
+            "type_icon": "images/icons/silk/server_database.png",
+            "status": 2,
+            "cmdb_status": 6,
+            "cmdb_status_title": "in operation",
+            "created": "2023-07-11 14:07:04",
+            "updated": "2023-07-11 14:07:04",
+            "image": "http://demo.synetics.int/pro/images/objecttypes/server.png"
+        }
+    }
+    ```
 
 ## cmdb.object.create
 
@@ -95,7 +95,7 @@ Create new [object](../../../basics/structure-of-the-it-documentation.md) with s
 | **cmdb_status** | String\|Integer | No  | Attribute **CMDB status** in category **Global** by its constant (string), for example: **"C__CMDB_STATUS__IN_OPERATION"**<br><br>Alternatively, by its identifier (integer), for example: **6** |
 | **description** | String | No  | Attribute **Description** in category **Global** |
 
-### Response
+### Response paramters
 
 JSON key **result** contains a JSON object.
 
@@ -105,42 +105,41 @@ JSON key **result** contains a JSON object.
 | **message** | String | Some information |
 | **success** | Boolean | Should always be **true** |
 
-### Example
+### Example:
 
-#### Request body
+=== "Request body"
 
-```json
-{
-    "version": "2.0",
-    "method": "cmdb.object.create",
-    "params": {
-        "type": "C__OBJTYPE__SERVER",
-        "title": "My little server",
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.object.create",
+        "params": {
+            "type": "C__OBJTYPE__SERVER",
+            "title": "My little server",
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
+    }
+    ```
 
-#### Response body
+=== "Response body"
 
-```json
-{
-    "jsonrpc": "2.0",
-    "result": {
-        "id": "42",
+    ```json
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "id": 28,
         "message": "Object was successfully created",
         "success": true
-    },
-    "id": 1
-}
-```
-
+      }
+    }
+    ```
 
 ## cmdb.object.update
 
-Change object e.g title of a object
+Change object e.g title of a object.
 
 ### Request parameters
 
@@ -149,7 +148,7 @@ Change object e.g title of a object
 | **id** | Integer | Yes | Object identifier, for example: **42** |
 | **title** | String | Yes | New object title, for example: **"Your little server"** |
 
-### Response
+### Response paramters
 
 JSON key **result** contains a JSON object.
 
@@ -158,40 +157,40 @@ JSON key **result** contains a JSON object.
 | **message** | String | Should be |
 | **success** | Boolean | Should be true |
 
-### Example
+### Example:
 
-#### Request body:
+=== "Request body"
 
-```json
-{
-    "version": "2.0",
-    "method": "cmdb.object.update",
-    "params": {
-        "id": 42,
-        "title": "Your little server",
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.object.update",
+        "params": {
+            "id": 42,
+            "title": "Your little server",
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
+    }
+    ```
 
-#### Response body:
+=== "Response body"
 
-```json
-{
-    "jsonrpc": "2.0",
-    "result": {
-        "message": "Object title was successfully updated",
-        "success": true
-    },
-    "id": 1
-}
-```
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "result": {
+            "message": "Object title was successfully updated",
+            "success": true
+        },
+        "id": 1
+    }
+    ```
 
 ## cmdb.object.delete
 
-[Deletes](../../../basics/life-and-documentation-cycle.md) a object
+[Deletes](../../../basics/life-and-documentation-cycle.md) a object also can set a specific record status like Archived.
 
 ### Request paramters
 
@@ -200,40 +199,44 @@ JSON key **result** contains a JSON object.
 | **id** | Integer | Yes | Object identifier, for example: **42** |
 | **status** | String | Yes | Status constant:<br> **C__RECORD_STATUS__ARCHIVED**<br> Archive object<br> **C__RECORD_STATUS__DELETED**<br> Mark object as deleted<br> **C__RECORD_STATUS__PURGE**<br> Purge object from database |
 
-### Response
+### Response paramters
 
 JSON key **result** contains a JSON object.
 
-### Example
+| Key | JSON data type | Description |
+| --- | --- | --- |
+| **success** | Boolean | Should be **true** |
+| **message** | String | Some information |
 
-#### Request body
+### Example:
 
-```json
-{
-    "version": "2.0",
-    "method": "cmdb.object.delete",
-    "params": {
-        "id": 42,
-        "status": "C__RECORD_STATUS__ARCHIVED",
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
+=== "Request body"
 
-#### Response body
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.object.delete",
+        "params": {
+            "id": 42,
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
+    }
+    ```
 
-```json
-{
-    "jsonrpc": "2.0",
-    "result": {
-        "message": "Object(s) successfully archived!",
-        "success": true
-    },
-    "id": 1
-}
-```
+=== "Response body"
+
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "result": {
+            "success": true,
+            "message": "Object 42 has been deleted."
+        },
+        "id": 1
+    }
+    ```
 
 ## cmdb.object.recycle
 
@@ -241,48 +244,49 @@ Recyles a object
 
 ### Request paramters
 
-| **Key** | **JSON data type** | **Required** | **Description** |
+| Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
 | **object** | Integer | Yes | Object identifier, for example: **464** |
 
-#### Response body
+### Response paramters
 
 JSON key **result** contains a JSON object.
 
-| **Key** | **JSON data type** | **Description** |
+| Key | JSON data type | Description |
 | --- | --- | --- |
 | **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
 
-### Example
+### Example:
 
-#### Request body
+=== "Request body"
 
-```json
-{
-    "version": "2.0",
-    "method": "cmdb.object.recycle",
-    "params": {
-        "object": 464,
+    ```json
+    {
+      "version": "2.0",
+      "method": "cmdb.object.recycle",
+      "params": {
+        "object": 28,
+        "status": "C__RECORD_STATUS__ARCHIVED",
         "apikey": "xxx",
         "language": "en"
-    },
-    "id": 1
-}
-```
-
-#### Response body
-
-```json
-{
-    "id": 1,
-    "jsonrpc": "2.0",
-    "result": {
-        "success": true,
-        "message": "Object 464 has been recycled."
+      },
+      "id": 1
     }
-}
-```
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "success": true,
+        "message": "Object 28 has been recycled."
+      }
+    }
+    ```
 
 ## cmdb.object.archive
 
@@ -290,97 +294,97 @@ JSON key **result** contains a JSON object.
 
 ### Request paramters
 
-| **Key** | **JSON data type** | **Required** | **Description** |
+| Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
 | **object** | Integer | Yes | Object identifier, for example: **464** |
 
-#### Response body
+### Response paramters
 
 JSON key **result** contains a JSON object.
 
-| **Key** | **JSON data type** | **Description** |
+| Key | JSON data type | Description |
 | --- | --- | --- |
 | **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
 
-### Example
+### Example:
 
-#### Request body
+=== "Request body"
 
-```json
-{
-    "version": "2.0",
-    "method": "cmdb.object.archive",
-    "params": {
-        "object": 464,
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
-
-#### Response body
-
-```json
-{
-    "id": 1,
-    "jsonrpc": "2.0",
-    "result": {
-        "success": true,
-        "message": "Object 464 has been archived."
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.object.archive",
+        "params": {
+            "object": 464,
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
     }
-}
-```
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "success": true,
+            "message": "Object 464 has been archived."
+        }
+    }
+    ```
 
 ## cmdb.object.purge
 
-[Purges](../../../basics/life-and-documentation-cycle.md#archive-category-entries-mark-them-as-deleted-or-purge-them) a object
+[Purges](../../../basics/life-and-documentation-cycle.md#archive-category-entries-mark-them-as-deleted-or-purge-them) a object when the status is deleted.
 
 ### Request paramters
 
-| **Key** | **JSON data type** | **Required** | **Description** |
+| Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
 | **object** | Integer | Yes | Object identifier, for example: **464** |
 
-#### Response body
+### Response paramters
 
 JSON key **result** contains a JSON object.
 
-| **Key** | **JSON data type** | **Description** |
+| Key | JSON data type | Description |
 | --- | --- | --- |
 | **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
 
-### Example
+### Example:
 
-#### Request body
+=== "Request body"
 
-```json
-{
-    "version": "2.0",
-    "method": "cmdb.object.purge",
-    "params": {
-        "object": 464,
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
-
-#### Response body
-
-```json
-{
-    "id": 1,
-    "jsonrpc": "2.0",
-    "result": {
-        "success": true,
-        "message": "Object 464 has been purged."
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.object.purge",
+        "params": {
+            "object": 464,
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
     }
-}
-```
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "success": true,
+            "message": "Object 464 has been purged."
+        }
+    }
+    ```
 
 ## cmdb.object.markAsTemplate
 
@@ -388,48 +392,48 @@ Set the Object condition as a [Template](../../../efficient-documentation/templa
 
 ### Request paramters
 
-| **Key** | **JSON data type** | **Required** | **Description** |
+| Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
 | **object** | Integer | Yes | Object identifier, for example: **465** |
 
-#### Response body
+### Response paramters
 
 JSON key **result** contains a JSON object.
 
-| **Key** | **JSON data type** | **Description** |
+| Key | JSON data type | Description |
 | --- | --- | --- |
 | **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
 
-### Example
+### Example:
 
-#### Request body
+=== "Request body"
 
-```json
-{
-    "version": "2.0",
-    "method": "cmdb.object.markAsTemplate",
-    "params": {
-        "object": 465,
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
-
-#### Response body
-
-```json
-{
-    "id": 1,
-    "jsonrpc": "2.0",
-    "result": {
-        "success": true,
-        "message": "Object 465 has been marked as template."
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.object.markAsTemplate",
+        "params": {
+            "object": 465,
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
     }
-}
-```
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "success": true,
+            "message": "Object 465 has been marked as template."
+        }
+    }
+    ```
 
 ## cmdb.object.markAsMassChangeTemplate
 
@@ -437,45 +441,45 @@ Set the Object condition as a [Mass Change](../../../efficient-documentation/mas
 
 ### Request paramters
 
-| **Key** | **JSON data type** | **Required** | **Description** |
+| Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
 | **object** | Integer | Yes | Object identifier, for example: **465** |
 
-#### Response body
+### Response paramters
 
 JSON key **result** contains a JSON object.
 
-| **Key** | **JSON data type** | **Description** |
+| Key | JSON data type | Description |
 | --- | --- | --- |
 | **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
 
-### Example
+### Example:
 
-#### Request body
+=== "Request body"
 
-```json
-{
-    "version": "2.0",
-    "method": "cmdb.object.markAsMassChangeTemplate",
-    "params": {
-        "object": 465,
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
-
-#### Response body
-
-```json
-{
-    "id": 1,
-    "jsonrpc": "2.0",
-    "result": {
-        "success": true,
-        "message": "Object 465 has been marked as mass change template."
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.object.markAsMassChangeTemplate",
+        "params": {
+            "object": 465,
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
     }
-}
-```
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "success": true,
+            "message": "Object 465 has been marked as mass change template."
+        }
+    }
+    ```
