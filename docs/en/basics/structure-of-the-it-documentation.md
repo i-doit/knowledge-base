@@ -34,7 +34,7 @@ We refer to the combination of all objects of the same type as object type. Exam
 
 i-doit already contains a lot of pre-configured object types in the default installation. If those are not enough, you can create your own [custom object types](./custom-object-types.md).
 
-An [object list](./object-list/index.md) exists for each object type. All objects that are associated with the selected object type are listed here, including some attributes. As an example we take a look at the object list for the object type "**Virtual host"**.
+An [object list](./object-list/index.md) exists for each object type. All objects that are associated with the selected object type are listed here, including some attributes. As an example we take a look at the object list for the object type **Virtual host**.
 
 [![Object Type](../assets/images/en/basics/structure-of-the-it-documentation/6-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/6-sotitd.png)
 
