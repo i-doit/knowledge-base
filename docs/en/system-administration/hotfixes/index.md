@@ -60,6 +60,18 @@ PHP Fatal error:  Uncaught Error: Call to a member function getCollector() on nu
 
 [i-doit_25_hotfix_ID-9609.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9609.zip){ .md-button .md-button--primary }
 
+## API Add-on 1.14.1
+
+### Using API after update to i-doit pro 25 displays license error message
+
+Use this if you get a error like:
+
+```text
+i-doit responded with an error: i-doit system error: Attention: Your "Checkmk 2" module is currently not licensed
+```
+
+[api_1.14.1_hotfix_API-429_fa3e703.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.14.1_hotfix_API-429_fa3e703.zip){ .md-button .md-button--primary }
+
 ## Analyze Add-on 1.3
 
 ### Service assignment is not displayed in data quality
