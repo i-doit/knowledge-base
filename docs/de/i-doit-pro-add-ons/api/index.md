@@ -146,7 +146,7 @@ Clients und Libraries
 
 Es gibt bereits zahlreiche Projekte und Produkte, die die API von i-doit benutzen. Einige Clients und Libraries stellen wir an dieser Stelle vor:
 
-| Name | Website | Programmiersprache | Lizenz |
+| Name | Website | Programming language | License |
 | --- | --- | --- | --- |
 | Idoit.API.Client | [https://github.com/OKT90/Idoit.API.Client](https://github.com/OKT90/Idoit.API.Client) | C#  | MIT |
 | i-doit API client | [https://github.com/bheisig/i-doit-api-client-php](https://github.com/bheisig/i-doit-api-client-php) | PHP | AGPLv3 |

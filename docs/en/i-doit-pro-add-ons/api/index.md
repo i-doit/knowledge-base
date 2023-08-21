@@ -7,10 +7,10 @@ Technical Background
 
 The API of i-doit provides typical [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) functionalities. With this, files can be
 
-*   **C**reated
+*   **C**reate
 *   **R**ead
-*   **U**pdated and
-*   **D**eleted.
+*   **U**pdate and
+*   **D**elete.
 
 For this, a client (for example, in the form of a script) sends a request to the server (i-doit) in order to execute a method on the server. This approach is called [Remote Procedure Call (RPC)](https://en.wikipedia.org/wiki/Remote_procedure_call). The result of the method is returned to the client as a response. In this communication the API of i-doit is based on the [JSON-RPC](http://www.jsonrpc.org/) protocol, version 2.0. HTTP is used as higher protocol and the [JavaScript Object Notation (JSON)](https://en.wikipedia.org/wiki/JSON) is used as exchange format. A request is send to the server in the JSON format per HTTP POST. The response is also made in JSON format.
 
@@ -41,7 +41,7 @@ Please note that the logging of API requests will create a file in the install p
 Access
 ------
 
-You can access the API of i-doit by activating a special URL. Add  src/jsonrpc.php  to the basic URL:
+You can access the API of i-doit by activating a special URL. Add `src/jsonrpc.php`  to the basic URL:
 
      https://demo.i-doit.com/src/jsonrpc.php
 
@@ -53,14 +53,17 @@ You need an API key so that requests will be processed by the API. Additionally,
 It may prove useful to use the API method  idoit.login  for a single authentication if a lot of requests (meaning thousands) are sent from a client. Otherwise it is possible that too many sessions are created in a very small time frame but are not terminated. This could result in the fact that i-doit stops working until the sessions have been terminated.
 
 !!! attention ""
-    The default user used for API actions is "Api System". This can be found under "Contacts -> People" if required.
-    This is only used if no username/password is used to connect to the API interface.
+
+    The default user used for API actions is "Api System". This can be found under "Contacts -> People" if required.<br>
+    This is only used if no username/password is used to connect to the API interface.<br>
     If the person is archived/deleted the API can no longer be used without authentication.
 
+
+## Types in the JSONRPC
 Methods
 -------
 
-Please see this [article for detailled information about each method](./methods.md).
+Please see this [article for detailled information about each method](./methods/index.md).
 
 | Method | Description |
 | --- | --- |
@@ -71,16 +74,16 @@ Please see this [article for detailled information about each method](./methods.
 |  idoit.logout  | [Logout](../../basics/initial-login.md) |
 |  idoit.search  | [Search](../../efficient-documentation/search.md) in i-doit |
 |  idoit.version  | Display the version of i-doit |
-|  cmdb.category.read  | Create a [category](../../basics/categories-and-attributes.md) entry |
-|  cmdb.category.update  | Update a [category](../../basics/categories-and-attributes.md) entry |
-|  cmdb.category.delete  | Delete a [category](../../basics/categories-and-attributes.md) entry |
-|  cmdb.category.quickpurge  | Quickpurge a [category](../../basics/categories-and-attributes.md) entry |
-|  cmdb.category.purge  | Purge a [category](../../basics/categories-and-attributes.md) entry |
-|  cmdb.category.recycle  | Recycle a [category](../../basics/categories-and-attributes.md) entry |
-|  cmdb.category.archive  | Archive a [category]( ../../basics/categories-and-attributes.md) entry |
+|  cmdb.category.read  | Create a [category](../../basics/categories-and-attributes.md) entry |
+|  cmdb.category.update  | Update a [category](../../basics/categories-and-attributes.md) entry |
+|  cmdb.category.delete  | Delete a [category](../../basics/categories-and-attributes.md) entry |
+|  cmdb.category.quickpurge  | Quickpurge a [category](../../basics/categories-and-attributes.md) entry |
+|  cmdb.category.purge  | Purge a [category](../../basics/categories-and-attributes.md) entry |
+|  cmdb.category.recycle  | Recycle a [category](../../basics/categories-and-attributes.md) entry |
+|  cmdb.category.archive  | Archive a [category]( ../../basics/categories-and-attributes.md) entry |
 |  cmdb.category.get_category_info  | Documentation follows |
-|  cmdb.category.save  | Create/Update a [category]( ../../basics/categories-and-attributes.md) entry |
-|  cmdb.category.create  | Create a [category]( ../../basics/categories-and-attributes.md) entry (deprecated) |
+|  cmdb.category.save  | Create/Update a [category]( ../../basics/categories-and-attributes.md) entry |
+|  cmdb.category.create  | Create a [category]( ../../basics/categories-and-attributes.md) entry (deprecated) |
 |  cmdb.category.get_category_id  | Documentation follows |
 |  cmdb.category.getCategoryProcessor  | Documentation follows |
 |  cmdb.category.validateRequest  | Documentation follows |
@@ -89,32 +92,32 @@ Please see this [article for detailled information about each method](./methods.
 |  cmdb.category_info  | Read the [attributes]( ../../basics/categories-and-attributes.md) of a [category](../../basics/structure-of-the-it-documentation.md#category) |
 |  cmdb.condition.read  | Documentation follows |
 |  cmdb.contact.read  | Documentation follows |
-|  cmdb.dialog.read  | Read the values of a [dialogue](../../basics/attribute-fields.md#dialog-field-drop-down) field |
-|  cmdb.dialog.create  | Create the values of a [dialogue](../../basics/attribute-fields.md#dialog-field-drop-down) field |
-|  cmdb.dialog.update  | Update the values of a [dialogue](../../basics/attribute-fields.md#dialog-field-drop-down) field |
-|  cmdb.dialog.delete  | Delete the values of a [dialogue](../../basics/attribute-fields.md#dialog-field-drop-down) field |
+|  cmdb.dialog.read  | Read the values of a [dialogue](../../basics/attribute-fields.md#dialog-field-drop-down) field |
+|  cmdb.dialog.create  | Create the values of a [dialogue](../../basics/attribute-fields.md#dialog-field-drop-down) field |
+|  cmdb.dialog.update  | Update the values of a [dialogue](../../basics/attribute-fields.md#dialog-field-drop-down) field |
+|  cmdb.dialog.delete  | Delete the values of a [dialogue](../../basics/attribute-fields.md#dialog-field-drop-down) field |
 |  cmdb.dialog.dialog_routine  | Documentation follows |
 |  cmdb.filter.read  | Documentation follows |
 |  cmdb.filter.getUpdatedIPs  | Documentation follows |
 |  cmdb.filter.getValidObjects  | Documentation follows |
 |  cmdb.impact.read  | Recursive query of all object [relations](../../basics/object-relations.md) |
 |  cmdb.location_tree.read  | Read [location](../../use-cases/locations.md) path |
-|  cmdb.logbook.read  | Read [logbook](../../basics/logbook.md) entry |
-|  cmdb.logbook.create  | Create [logbook](../../basics/logbook.md) entry |
-|  cmdb.object.read  | Read an [object](../../basics/structure-of-the-it-documentation.md#object) |
-|  cmdb.object.create  | Create [an](../../basics/life-and-documentation-cycle.md) [object](../../basics/structure-of-the-it-documentation.md#object) |
-|  cmdb.object.update  | Update an [object](../../basics/structure-of-the-it-documentation.md#object) |
-|  cmdb.object.quickpurge  | Quickpurge [an](../../basics/life-and-documentation-cycle.md) [object](../../basics/structure-of-the-it-documentation.md#object) |
-|  cmdb.object.recycle  | Recycle [an](../../basics/life-and-documentation-cycle.md) [object](../../basics/structure-of-the-it-documentation.md#object) |
-|  cmdb.object.archive  | Archive an [object](../../basics/structure-of-the-it-documentation.md#object) |
-|  cmdb.object.delete  | Delete [an](../../basics/life-and-documentation-cycle.md) [object](../../basics/structure-of-the-it-documentation.md#object) |
-|  cmdb.object.purge  | Purge an [object](../../basics/structure-of-the-it-documentation.md#object) |
+|  cmdb.logbook.read  | Read [logbook](../../basics/logbook.md) entry |
+|  cmdb.logbook.create  | Create [logbook](../../basics/logbook.md) entry |
+|  cmdb.object.read  | Read an [object](../../basics/structure-of-the-it-documentation.md#object) |
+|  cmdb.object.create  | Create [an](../../basics/life-and-documentation-cycle.md) [object](../../basics/structure-of-the-it-documentation.md#object) |
+|  cmdb.object.update  | Update an [object](../../basics/structure-of-the-it-documentation.md#object) |
+|  cmdb.object.quickpurge  | Quickpurge [an](../../basics/life-and-documentation-cycle.md) [object](../../basics/structure-of-the-it-documentation.md#object) |
+|  cmdb.object.recycle  | Recycle [an](../../basics/life-and-documentation-cycle.md) [object](../../basics/structure-of-the-it-documentation.md#object) |
+|  cmdb.object.archive  | Archive an [object](../../basics/structure-of-the-it-documentation.md#object) |
+|  cmdb.object.delete  | Delete [an](../../basics/life-and-documentation-cycle.md) [object](../../basics/structure-of-the-it-documentation.md#object) |
+|  cmdb.object.purge  | Purge an [object](../../basics/structure-of-the-it-documentation.md#object) |
 |  cmdb.object.markAsMassChangeTemplate  | Documentation follows |
 |  cmdb.object.markAsTemplate  | Documentation follows |
 |  cmdb.object_type_groups.read  | Read which object types are assigned to which [object type groups](../../basics/structure-of-the-it-documentation.md#objectTypeGroup) |
 |  cmdb.object_type_categories.read  | Read which categories are configured to which [object types](../../basics/structure-of-the-it-documentation.md#objectType) |
 |  cmdb.object_types.read  | Query [object types](../../basics/structure-of-the-it-documentation.md#objectType) |
-|  cmdb.objects.read  | Read [object](../../basics/structure-of-the-it-documentation.md#object) |
+|  cmdb.objects.read  | Read [object](../../basics/structure-of-the-it-documentation.md#object) |
 |  cmdb.objects.getCategoryData  | Documentation follows |
 |  cmdb.objects.getCategoryConstantsByObjectTypeId  | Documentation follows |
 |  cmdb.objects_by_relation.read  | Read objects by [relation type](../../basics/object-relations.md#relation-types) |
@@ -144,35 +147,41 @@ With a simple example we create a new object of the type  **Server**  with the o
 
 Request to server:
 
-    {
-        "jsonrpc": "2.0",
-        "method": "cmdb.object.create",
-        "params": {
-            "type": "C__OBJTYPE__SERVER",
-            "title": "My little server",
-            "apikey": "c1ia5q"
-        },
-        "id": 1
-    }
+```json
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.object.create",
+    "params": {
+        "type": "C__OBJTYPE__SERVER",
+        "title": "My little server",
+        "apikey": "c1ia5q"
+    },
+    "id": 1
+}
+```
 
 Via cURL you can send this request for test purposes:
 
-    curl \
-    --data '{"jsonrpc":"2.0","method":"cmdb.object.create","params":{"type":"C__OBJTYPE__SERVER","title":"My little server","apikey":"c1ia5q"},"id":1}' \
-    --header "Content-Type: application/json" \
-    https://demo.i-doit.com/src/jsonrpc.php
+```json
+curl \
+--data '{"jsonrpc":"2.0","method":"cmdb.object.create","params":{"type":"C__OBJTYPE__SERVER","title":"My little server","apikey":"c1ia5q"},"id":1}' \
+--header "Content-Type: application/json" \
+https://demo.i-doit.com/src/jsonrpc.php
+```
 
 Server response:
 
-    {
-        "jsonrpc": "2.0",
-        "result": {
-            "id": "3351",
-            "message": "Object was successfully created",
-            "success": true
-        },
-        "id": 1
-    }
+```json
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": {
+        "id": "3351",
+        "message": "Object was successfully created",
+        "success": true
+    },
+}
+```
 
 Categories in the IT Documentation
 ----------------------------------
@@ -206,9 +215,9 @@ There are numerous projects and products applying the API by i-doit. We would li
 Documentation for Download
 --------------------------
 
-You can download a [documentation maintained by the developers](../../assets/downloads/i-doit-JSON-RPC-1.8.3.pdf) as PDF file. (out-dated)
+You can download a [{--documentation maintained by the developers~--}](../../assets/downloads/i-doit-JSON-RPC-1.8.3.pdf) as PDF file. (==out-dated==)
 
-Since version 1.8.1 the API is released as an add-on. Pre-releases were [bundled with i-doit](../../version-history/index.md).  
+Since version 1.8.1 the API is released as an add-on. Pre-releases were [bundled with i-doit](../../version-history/index.md).
 
 FAQ
 ---
@@ -217,8 +226,8 @@ FAQ
 
 | Error Message | Problem |
 | --- | --- |
-| Usersettings are only available after logging in. (i-doit <= 21) | Api System Person is archived or deleted. <br>**Solution** is to recycle the Api System user or to use  a authentication method |
-| i-doit system error: Could not connect tenant database. (i-doit >=22) | Api System Person is archived or deleted.  <br>**Solution** is to recycle the Api System user or to use  a authentication method |
+| Usersettings are only available after logging in. (i-doit <= 21) | Api System Person is archived or deleted. <br>**Solution** is to recycle the Api System user or to use  a authentication method |
+| i-doit system error: Could not connect tenant database. (i-doit >=22) | Api System Person is archived or deleted.  <br>**Solution** is to recycle the Api System user or to use  a authentication method |
 
 Releases
 --------
@@ -230,7 +239,7 @@ Releases
 | 1.13.1 | 2023-01-24 | [Bug] Some fields are not being validated  <br>[Bug] The Login method can use old session keys  <br>[Bug] Validation error f\_popup\_  <br>[Bug] Setting a Dialog Attribute via causes Fatal error  <br>[Bug] Failed validation breaks the response  <br>[Bug] installDate is always set to actual date/time  <br>[Bug] The addresses  attribute of the Network > Port category is incorrectly validated by API validation  <br>[Bug] Date of Change is not altered when archiving a object via API |
 | 1.13 | 2022-09-05 | [Task] PHP 8.0 compatibility  <br>[Bug]  Reports displayed via the API show language constants  <br>[Bug]  The Hostname field of the Monitoring category is incorrectly validated by API validation  <br>[Bug]  Changing the object type via the API via type: dialog constant is not possible  <br>[Bug]  An EntryID is needed to purge single-value entries  <br>[Bug]  The API shall be able to change passwords of users  <br>[Bug]  The Host address field of the Network > Port category is incorrectly validated by API validation  <br>[Bug]  The Latitude, Longitude and Position fields in the Location category cabinet are incorrectly validated by API validation  <br>[Bug]  The Type and Assigned license key fields of the Software Assignment category are incorrectly validated by API validation  <br>[Bug]  The Image attribute of the Object picture category is incorrectly validated by API validation |
 | 1.12.3 | 2022-02-21 | [Bug] Edit host address > primary\_fqdn sets field default gateway for the network to Yes  <br>[Bug] If you edit an entry in the host address category, the IP address is removed. |
-| 1.12.2 | 2021-08-09 | [Improvement] New parameters "offset" and "limit" for the "cmdb.category.read" method  <br>[Bug] Virtual Switches > Creating Port Groups generates SQL error message  <br>[Bug]  Cluster members cannot be assigned via API using the category C\_\_CATG\_\_CLUSTER\_MEMBERSHIPS  <br>[Bug] The API can not create sub-categories in 'cmdb.object.create' context  <br>[Bug] Layer 3 nets cannot be assigned with API validation enabled in Layer 2 nets  <br>[Bug] When the layer 3 net is changed the layer 3 net is assigned to itself under layer 2 net assignment  <br>[Bug] The category SLA (C\_\_CATG\_\_SLA) cannot be described via the API / With API validation switched off the category is emptied  <br>[Bug] Dialog+ fields with 'PropertyFactory' definition can not be written |
+| 1.12.2 | 2021-08-09 | [Improvement] New parameters "offset" and "limit" for the "cmdb.category.read" method  <br>[Bug] Virtual Switches > Creating Port Groups generates SQL error message  <br>[Bug]  Cluster members cannot be assigned via API using the category C\_\_CATG\_\_CLUSTER\_MEMBERSHIPS  <br>[Bug] The API can not create sub-categories in 'cmdb.object.create' context  <br>[Bug] Layer 3 nets cannot be assigned with API validation enabled in Layer 2 nets  <br>[Bug] When the layer 3 net is changed the layer 3 net is assigned to itself under layer 2 net assignment  <br>[Bug] The category SLA (C\_\_CATG\_\_SLA) cannot be described via the API / With API validation switched off the category is emptied  <br>[Bug] Dialog+ fields with 'PropertyFactory' definition can not be written |
 | 1.12.1 | 2021-01-18 | [Bug] cmdb.category.quickpurge cannot be used with custom categories  <br>[Bug] API version 1.12 can no longer be used in the open variant of i-doit |
 | 1.12 | 2021-01-14 | [Bug] API: It is not possible to create a volume license via the API if "type": "volume license" is used  <br>[Bug] Saving the "Layer-2 Nets" category deletes ip helper  <br>[Bug] Contact assignment of a group of people will be deleted if it is updated via the API |
 | 1.11.3 | 2020-12-01 | [Bug] Assign cable with fibers/leads while saving connection  <br>[Bug] Limit assignment categories to one entry while creating  <br>[Bug] Do not connect root location while creating cluster membership  <br>[Bug] Do not create wrong output after removing cable connection  <br>[Bug] Cannot assign objects to category "locally assigned objects" (requires i-doit 1.15.1)  <br>[Bug] The category C\_\_CATG\_\_IMAGE is not read correctly via the API  <br>[Bug] The category C\_\_CATG\_\_IMAGE cannot be written correctly  <br>[Bug] The dates of the category contract information cannot be set via the API  <br>[Bug] Category > Assigned Subscriptions C\_\_CATG\_\_ASSIGNED\_SUBSCRIPTIONS key uuid cannot be set via string only via int  <br>[Bug] Read Methods: Do not output HTML tags in description fields  <br>[Bug] Objects can only be created via the API if the right to all object types is granted  <br>[Bug] Ports cannot be uniquely referenced via the API  <br>[Bug] Empty string supplied via API |

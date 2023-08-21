@@ -1,24 +1,22 @@
 # API Methoden
 In diesem Artikel erläutern wir die i-doit [JSON-RPC API](./index.md) im Detail. Wenn Sie wissen wollen, welche Parameter für jede Methode gesetzt werden müssen/können und wie eine typische Antwort aussieht, ist dies die richtige Ressource.
 
-Namespace [idoit]
------------------
+## Namespace [idoit]
 
 Dieser Namensraum ist für gängige Methoden reserviert.
 
 ### idoit.search
 ??? example "idoit.search"
 
-    Suchen in i-doit
+    Suchen in i-doit pro
 
-    Anfrage Parameter
+    **Anfrage Parameter**
 
     | Key | JSON Datentyp | Erforderlich | Beschreibung |
     | --- | --- | --- | --- |
     | **q** | String | Ja  | Abfrage, zum Beispiel: **"My little server"** |
-    | --- | --- | --- | --- |
 
-    Antwort
+    **Antwort**
 
     JSON-Schlüsselergebnis enthält ein Array von JSON-Objekten. Jedes Objekt enthält ein Suchergebnis.
 
@@ -32,11 +30,10 @@ Dieser Namensraum ist für gängige Methoden reserviert.
     | **link** | String | Relative URL, die direkt zum Suchergebnis führt |
     | **score** | Integer | Punktevergabe (veraltet) |
 
-    Beispiel
+    **Anfrage**<br>
+    Body:
 
-    **Anfrage**
-    <br>Body:
-    ```
+    ```json
     {
         "version": "2.0",
         "method": "idoit.search",
@@ -48,9 +45,11 @@ Dieser Namensraum ist für gängige Methoden reserviert.
         "id": 1
     }
     ```
-    **Antwort**
-    <br>Body:
-    ```
+
+    **Antwort**<br>
+    Body:
+
+    ```json
     {
         "jsonrpc": "2.0",
         "result": [
@@ -67,6 +66,7 @@ Dieser Namensraum ist für gängige Methoden reserviert.
         "id": 1
     }
     ```
+
 ### idoit.version
 ??? example "idoit.version"
 
@@ -96,9 +96,10 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
     Beispiel
 
-    **Anfrage**
-    <br>Body:
-    ```
+    **Anfrage**<br>
+    Body:
+
+    ```json
     {
         "version": "2.0",
         "method": "idoit.version",
@@ -109,9 +110,11 @@ Dieser Namensraum ist für gängige Methoden reserviert.
         "id": 1
     }
     ```
-    **Antwort**
-    <br>Body:
-    ```
+
+    **Antwort**<br>
+    Body:
+
+    ```json
     {
         "jsonrpc": "2.0",
         "result": {
@@ -130,6 +133,7 @@ Dieser Namensraum ist für gängige Methoden reserviert.
         "id": 1
     }
     ```
+
 ### idoit.constants
 ??? example "idoit.constants"
 
@@ -152,8 +156,8 @@ Dieser Namensraum ist für gängige Methoden reserviert.
     | **categories.s** | Object | Liste spezifischer Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
 
     Beispiel
-    **Anfrage**
-    <br>Body:
+    **Anfrage**<br>
+    Body:
     ```
     {
         "version": "2.0",
@@ -223,6 +227,7 @@ Dieser Namensraum ist für gängige Methoden reserviert.
     X-RPC-Auth-Password: admin
     ```
     <br>Body:
+
     ```
     {
         "version": "2.0",
@@ -234,6 +239,7 @@ Dieser Namensraum ist für gängige Methoden reserviert.
         "id": 1
     }
     ```
+
     **Antwort**
     <br>Header:
     ```
