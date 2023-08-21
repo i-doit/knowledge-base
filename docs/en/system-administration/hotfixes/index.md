@@ -52,7 +52,7 @@ PHP Fatal error:  Uncaught Error: Class 'isys_auth_document' not found in /var/w
 
 ### Reindex the Search is not working
 
-Use this if you get a error like:
+Use this when you receive an error message like:
 
 ```
 PHP Fatal error:  Uncaught Error: Call to a member function getCollector() on null in /var/www/html/main/src/classes/modules/cmdb/src/Search/Index/Signals.php:185
@@ -64,7 +64,7 @@ PHP Fatal error:  Uncaught Error: Call to a member function getCollector() on nu
 
 ### Using API after update to i-doit pro 25 displays license error message
 
-Use this if you get a error like:
+Use this when you receive an error message like:
 
 ```text
 i-doit responded with an error: i-doit system error: Attention: Your "Checkmk 2" module is currently not licensed
