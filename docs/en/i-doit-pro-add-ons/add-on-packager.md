@@ -137,13 +137,12 @@ The packages are the finished ZIP files of the add-ons. Each version of each add
 
 [![Packages](../assets/images/en/i-doit-pro-add-ons/add-on-packager/12-adp.png)](../assets/images/en/i-doit-pro-add-ons/add-on-packager/12-adp.png)
 
-  
-
 Releases
 --------
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.2.1 | 2023-08-22 | [Bug] The content buttons do not work in some browsers<br>[Bug] The User is not able to download the add on zip file |
 | 1.2 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
 | 1.1.1 | 2022-07-27 | [Bug] Packaging does not work with custom category dialog+ fields |
 | 1.1 | 2022-02-21 | Improvement] Add Report-Manager categories to the Add-On  <br>[Bug] Error message when creating a package with Dialog Plus Listener resources "Unknown column '\*\_\_sort' in 'field list'"  <br>[Bug] CSV import files are not being copied correctly |

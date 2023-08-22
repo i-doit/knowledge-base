@@ -98,6 +98,7 @@ Releases
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.3.1 | 22.08.2023 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Service assignment is not displayed in data quality<br>[Bug] It is not possible to remove categories in data-quality profiles |
 | 1.3 | 05.09.2022 | [Task] PHP 8.0 Compatibility <br/> [Task] Design Compatibility |
 | 1.2 | 21.02.2022 | [Improvement] Dataquality on a report basis <br/> [Improvement] Implement API methods for the data quality report <br/> [Improvement] English add-on renaming to Analysis <br/> [Bug] Result In Objectcatalog Is Incomplete And Partially Incorrect |
 | 1.1.4 | 20.10.2020 | [Bug] Missing option to add object types back into the data quality profiles after they were removed <br/> [Bug] Data quality is not evaluated correctly for user-defined categories |

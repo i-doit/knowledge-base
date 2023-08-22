@@ -61,6 +61,7 @@ Changelog
 
 | Version | Date | Changelog |
 | --- | --- | --- |
+| 1.1.1 | 2023-08-22 | [Improvement] PHP 8.1 Compatibility |
 | 1.1 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
 | 1.0.3 |     | [Improvement] Compatibility with i-doit 1.16 |
 | 1.0.2 |     | [Bug] The Nagios category cannot be opened among persons  <br>[Bug] Clicking on "Edit" after saving an object, navigates to object list  <br>[Bug] Click on "Edit" in object list should be only possible if object is selected |

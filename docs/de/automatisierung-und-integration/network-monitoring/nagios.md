@@ -52,8 +52,9 @@ Selbstverständlich lässt sich der Export der Dateien auch über die i-doit [Co
 
 | Version | Date | Changelog |
 | --- | --- | --- |
-| 1.1 | 05.09.2022 | \[Task\] PHP 8.0 compatibility  <br>\[Task\] Design Compatibility |
-| 1.0.3 |     | \[Improvement\] Compatibility with i-doit 1.16 |
-| 1.0.2 |     | \[Bug\] The Nagios category cannot be opened among persons  <br>\[Bug\] Clicking on "Edit" after saving an object, navigates to object list  <br>\[Bug\] Click on "Edit" in object list should be only possible if object is selected |
-| 1.0.1 |     | \[Bug\] Creation of Nagios tables is performed in the wrong order |
-| 1.0 |     | \[Change\] Add-onize Nagios |
+| 1.1.1 | 22.08.2023 | [Improvement] PHP 8.1 Compatibility |
+| 1.1 | 05.09.2022 | [Task] PHP 8.0 compatibility  <br>[Task] Design Compatibility |
+| 1.0.3 |     | [Improvement] Compatibility with i-doit 1.16 |
+| 1.0.2 |     | [Bug] The Nagios category cannot be opened among persons<br>[Bug] Clicking on "Edit" after saving an object, navigates to object list<br>[Bug] Click on "Edit" in object list should be only possible if object is selected |
+| 1.0.1 |     | [Bug] Creation of Nagios tables is performed in the wrong order |
+| 1.0 |     | [Change] Add-onize Nagios |
