@@ -96,16 +96,17 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
+| 1.3.1 | 2023-08.22 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Service assignment is not displayed in data quality<br>[Bug] It is not possible to remove categories in data-quality profiles |
 | 1.3 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
 | 1.2 | 2022-02-21 | [Improvement] Dataquality on a report basis  <br>[Improvement] Implement API methods for the data quality report  <br>[Improvement] English add-on renaming to Analysis  <br>[Bug] Result In Objectcatalog Is Incomplete And Partially Incorrect |
 | 1.1.4 | 2020-10-20 | [Bug] Missing option to add object types back into the data quality profiles after they were removed  <br>[Bug] Data quality is not evaluated correctly for user-defined categories |
 | 1.1.3 | 2020-05-04 | [Bug] The "Report object selection" under "Failure simulation" must change the source for the reports.  <br>[Bug] Empty object types generate an SQL error in the data quality.  <br>[Bug] When opening data quality an SQL error is output |
-| 1.1.2 | 2019-07-05 | [Bug] Impact simulation aborts with PHP fatal error<br> |
-| 1.1.1 | 2018-12-05 | [Verbesserung] PHP 7.2 Kompatibilität<br>[Verbesserung] Links im Ergebnis der Ausfallsimulation sollten in einem neuen Browser-Fenster geöffnet werden<br>[Bug] Objektkatalog: Anzeige der Attribute fehlerhaft<br>[Bug] Objekt "Personen" fehlende Zuordnung von Arbeitsplätzen in der Detailansicht<br>[Bug] Kein "Objektdaten laden" möglich, wenn bei Klick auf "Objektdaten laden" kein Objekt ausgewählt war<br> |
-| 1.1 | 2018-07-19 | [Improvement]   New visuals in the data quality report<br>[Change] Dataquality does not display object type cable<br>[Bug] "Display objects without data" for custom categories leads to SQL error<br>[Bug] Error displaying detailed information in custom categories<br>[Bug] Error Message After Click On Object Link In Data Quality<br> |
-| 1.0.5 | 2017-07-31 | [Improvement]   Increase the data quality performance<br>[Improvement]   New option for calculation of total costs<br>[Bug] Size of object icons does not scale in data quality overview<br>[Bug] Service costs use wrong currency<br>[Bug] User defined icons are wrong displayed<br> |
+| 1.1.2 | 2019-07-05 | [Bug] Impact simulation aborts with PHP fatal error |
+| 1.1.1 | 2018-12-05 | [Verbesserung] PHP 7.2 Kompatibilität<br>[Verbesserung] Links im Ergebnis der Ausfallsimulation sollten in einem neuen Browser-Fenster geöffnet werden<br>[Bug] Objektkatalog: Anzeige der Attribute fehlerhaft<br>[Bug] Objekt "Personen" fehlende Zuordnung von Arbeitsplätzen in der Detailansicht<br>[Bug] Kein "Objektdaten laden" möglich, wenn bei Klick auf "Objektdaten laden" kein Objekt ausgewählt war |
+| 1.1 | 2018-07-19 | [Improvement] New visuals in the data quality report<br>[Change] Dataquality does not display object type cable<br>[Bug] "Display objects without data" for custom categories leads to SQL error<br>[Bug] Error displaying detailed information in custom categories<br>[Bug] Error Message After Click On Object Link In Data Quality |
+| 1.0.5 | 2017-07-31 | [Improvement] Increase the data quality performance<br>[Improvement] New option for calculation of total costs<br>[Bug] Size of object icons does not scale in data quality overview<br>[Bug] Service costs use wrong currency<br>[Bug] User defined icons are wrong displayed |
 | 1.0.4 | 2017-05-02 | [Bug] When a impact simulation is executed, a timeout occurs depending on the size of the Database<br> |
-| 1.0.3 | 2017-03-08 | [Change] Improved stability and performance during the internal service tree evaluation<br>[Bug] Invoking service costs shows defect note<br>[Bug] Custom categories are not evaluated><br>[Bug] get_currency() Error executing report view "service costs"<br> |
+| 1.0.3 | 2017-03-08 | [Change] Improved stability and performance during the internal service tree evaluation<br>[Bug] Invoking service costs shows defect note<br>[Bug] Custom categories are not evaluated><br>[Bug] get_currency() Error executing report view "service costs" |
 | 1.0.2 | 2015-03-09 |     |
-| 1.0.1 | 2014-09-23 | [Bug] Changing the weight of a relationship has no impact on failure seriousness<br>[Bug] Category network connections shows a data quality of 0% at any time<br>[Bug] Category rack shows a data quality of 0% at any time<br> |
+| 1.0.1 | 2014-09-23 | [Bug] Changing the weight of a relationship has no impact on failure seriousness<br>[Bug] Category network connections shows a data quality of 0% at any time<br>[Bug] Category rack shows a data quality of 0% at any time |
 | 1.0 | 2014-08-20 | Initial release |

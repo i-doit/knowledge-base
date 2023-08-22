@@ -53,11 +53,12 @@ Releases
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.1.1 | 22.08.2023 | [Improvement] PHP 8.1 Compatibility |
 | 1.1 | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
 | 1.0.6 | 27.07.2022 | [Bug] Error message when a workflow is accepted  <br>[Bug] The frequency of checklists cannot be used because the value is not saved |
 | 1.0.5 | 18.01.2021 | [Improvement] Compatibility with i-doit 1.16 |
 | 1.0.4 | 10.08.2020 | [Bug] Only the creator of a checklist is able to edit it |
-| 1.0.3 | 05.07.2019 | [Bug] Error Update Workflow Add-on 1.0.2<br> |
-| 1.0.2 | 20.05.2019 | [Bug] I-doit is also displayed in the sidebar via My-doit link<br>[Bug] Console.php command workflows-process<br>[Bug] ModuleID is missing in the notification<br>[Bug] ModuleID is missing in the links of the Workflow category to the module<br> |
-| 1.0.1 | 08.01.2019 | [Bug] I-doit is also displayed in the sidebar<br> |
-| 1.0 | 17.12.2018 | [Improvement] Add-onizing the workflows<br> |
+| 1.0.3 | 05.07.2019 | [Bug] Error Update Workflow Add-on 1.0.2 |
+| 1.0.2 | 20.05.2019 | [Bug] I-doit is also displayed in the sidebar via My-doit link<br>[Bug] Console.php command workflows-process<br>[Bug] ModuleID is missing in the notification<br>[Bug] ModuleID is missing in the links of the Workflow category to the module |
+| 1.0.1 | 08.01.2019 | [Bug] I-doit is also displayed in the sidebar |
+| 1.0 | 17.12.2018 | [Improvement] Add-onizing the workflows |

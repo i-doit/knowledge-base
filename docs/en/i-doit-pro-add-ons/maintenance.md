@@ -140,11 +140,12 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
+| 1.2.2 | 2023-08-22 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Filter in list views not working<br>[Bug] Creating a new E-Mail template does not work when the objecttype constant of client,server or switch or not available |
 | 1.2.1 | 2023-01-24 | [Bug] Error when sending multiple mails |
-| 1.2 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Bug]  HTML code in browser message |
+| 1.2 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Bug] HTML code in browser message |
 | 1.1.4 | 2021-01-18 | [Improvement] Compatibility with i-doit 1.16 |
 | 1.1.3 | 2020-10-20 | [Bug] Maintenance without an object can be completed despite the error message  <br>[Bug] Keeping the filters in add-on "Maintenance"  <br>[Bug] Maintenance report shows the wrong period  <br>[Bug] Placeholder model>manufacturer is swapped with model>title  <br>[Bug] Email notification notifies archived contacts |
-| 1.1.2 | 2019-07-31 | [Bug] Column 'Person (Role)' is empty when exporting<br>[Bug] Maintenance report: periods underneath each other to save space[Bug] Export of corrects duplicates objects<br>[Bug] Double mailing possible for recurring maintenance<br>[Bug] Maintenance can not be completed<br> |
-| 1.1.1 | 2018-12-05 | [Bug] Export does not report assigned contacts in the report<br>[Bug] Object browser for recipients shows no results<br> |
-| 1.1 | 2018-04-16 | [Improvement] Multiple selection of types in the report view<br>[Improvement] Definition of times for beginning and end of maintenance<br>[Improvement] Recurring maintenances<br>[Improvement] Maintenance handler redirects to command and create command with logic from handler<br> |
+| 1.1.2 | 2019-07-31 | [Bug] Column 'Person (Role)' is empty when exporting<br>[Bug] Maintenance report: periods underneath each other to save space[Bug] Export of corrects duplicates objects<br>[Bug] Double mailing possible for recurring maintenance<br>[Bug] Maintenance can not be completed |
+| 1.1.1 | 2018-12-05 | [Bug] Export does not report assigned contacts in the report<br>[Bug] Object browser for recipients shows no results |
+| 1.1 | 2018-04-16 | [Improvement] Multiple selection of types in the report view<br>[Improvement] Definition of times for beginning and end of maintenance<br>[Improvement] Recurring maintenances<br>[Improvement] Maintenance handler redirects to command and create command with logic from handler |
 | 1.0.3 | 2017-12-18 | Initial release |

@@ -151,8 +151,9 @@ Releases
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.2.1 | 22.08.2023 | [Bug] The content buttons do not work in some browsers<br>[Bug] The User is not able to download the add on zip file |
 | 1.2 | 05.09.2022 | [Task] PHP 8.0 Compatibility <br/> [Task] Design Compatibility |
 | 1.1.1 | 27.07.2022 | [Bug] Packaging does not work with custom category dialog+ fields |
 | 1.1 | 21.02.2022 | [Improvement] Add Report-Manager categories to the Add-On <br/> [Bug] Error message when creating a package with Dialog Plus Listener resources "Unknown column '\*\_\_sort' in 'field list'" <br/> [Bug] CSV import files are not being copied correctly |
 | 1.0.1 | 04.05.2020 | [Bug] Packages with custom multi value categories become single value categories on import |
-| 1.0 | 21.10.2019 | ```Initial release``` |
+| 1.0 | 21.10.2019 | `Initial release` |

@@ -151,6 +151,7 @@ Releases
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.2.2 | 22.08.2023 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Filter in list views not working<br>[Bug] Creating a new E-Mail template does not work when the objecttype constant of client,server or switch or not available |
 | 1.2.1 | 24.01.2023 | [Bug] Error when sending multiple mails |
 | 1.2 | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Bug]  HTML code in browser message |
 | 1.1.4 | 18.01.2021 | [Improvement] Compatibility with i-doit 1.16 |
