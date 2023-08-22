@@ -52,13 +52,25 @@ PHP Fatal error:  Uncaught Error: Class 'isys_auth_document' not found in /var/w
 
 ### Reindex the Search is not working
 
-Use this if you get a error like:
+Use this when you receive an error message like:
 
 ```
 PHP Fatal error:  Uncaught Error: Call to a member function getCollector() on null in /var/www/html/main/src/classes/modules/cmdb/src/Search/Index/Signals.php:185
 ```
 
 [i-doit_25_hotfix_ID-9609.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9609.zip){ .md-button .md-button--primary }
+
+## API Add-on 1.14.1
+
+### Using API after update to i-doit pro 25 displays license error message
+
+Use this when you receive an error message like:
+
+```text
+i-doit responded with an error: i-doit system error: Achtung: das "Checkmk 2" Modul ist aktuell nicht lizenziert
+```
+
+[api_1.14.1_hotfix_API-429_fa3e703.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.14.1_hotfix_API-429_fa3e703.zip){ .md-button .md-button--primary }
 
 ## Analyze Add-on 1.3
 
