@@ -24,41 +24,11 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 !!! info "Current version"
 
-    The requirements shown below apply to the current version of i-doit, in this case **25** These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case ==26== These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 !!! attention "Declaration of consent"
 
     By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
-
-## i-doit Core
-
-### Variable report on overview page causes 500 error
-
-[i-doit_25_hotfix_ID-9476.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9476.zip){ .md-button .md-button--primary }
-
-### Date field from custom categories not displayed in mapping of csv import
-
-[i-doit_25_hotfix_ID-9604.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9604.zip){ .md-button .md-button--primary }
-
-### Set database without overwriting service
-
-Use this if you get a error like:
-
-```
-PHP Fatal error:  Uncaught Error: Class 'isys_auth_document' not found in /var/www/html/i-doit/src/classes/modules/document/isys_module_document.class.php:2776
-```
-
-[i-doit_25_hotfix_ID-9729.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9729.zip){ .md-button .md-button--primary }
-
-### Reindex the Search is not working
-
-Use this when you receive an error message like:
-
-```
-PHP Fatal error:  Uncaught Error: Call to a member function getCollector() on null in /var/www/html/main/src/classes/modules/cmdb/src/Search/Index/Signals.php:185
-```
-
-[i-doit_25_hotfix_ID-9609.zip :material-file-download:](../../assets/downloads/hotfixes/25/i-doit_25_hotfix_ID-9609.zip){ .md-button .md-button--primary }
 
 ## API Add-on 1.14.1
 
