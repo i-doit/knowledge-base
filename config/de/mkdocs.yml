@@ -434,6 +434,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
           - Hotfix Archiv:
               - administration/hotfixes/hotfix-archiv/index.md
+              - Version 25: administration/hotfixes/hotfix-archiv/v25.md
               - Version 24: administration/hotfixes/hotfix-archiv/v24.md
               - Version 23: administration/hotfixes/hotfix-archiv/v23.md
               - Version 22: administration/hotfixes/hotfix-archiv/v22.md

@@ -32,7 +32,7 @@ Wir empfehlen ein auf GNU/Linux basiertes Betriebssystem in der 64bit-Architektu
 
 - Apache Webserver ==2.4==
 - MariaDB 10.2, 10.3, 10.4, 10.5, ==10.6== (empfohlen) oder MySQL 5.7 oder 8.0. _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
-- PHP 7.4, {++8.0++} (empfohlen) und 8.1. _Im Moment wird PHP Version >= 8.2 nicht unterstützt. Wir planen die Unterstützung in einer späteren Version._
+- PHP 7.4, ==8.0== (empfohlen) und {++8.1++}. _Im Moment wird PHP Version >= 8.2 nicht unterstützt. Wir planen die Unterstützung in einer späteren Version._
 - PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
 Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6**.
@@ -80,7 +80,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2023-08 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.4 <br>{++8.0++} (recommended) <br>8.1 |
+    | **PHP** | 7.4 <br>==8.0== (recommended) <br>{++8.1++} |
     | **MySQL** | 5.7 <br>8.0 |
     | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>10.6 (recommended) |
     | **Debian GNU/Linux** | 11 |
