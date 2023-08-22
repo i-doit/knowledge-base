@@ -3,7 +3,8 @@
 Um den Betrieb aller Funktionalitäten von i-doit zu gewährleisten, existieren für das darunter liegende System Voraussetzungen, die erfüllt sein müssen.
 
 !!! info "Aktualität"
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **25**. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **26**. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 ## Mindestanforderungen an das System
 
@@ -29,9 +30,9 @@ Wir empfehlen ein auf GNU/Linux basiertes Betriebssystem in der 64bit-Architektu
 
 ### LAMP Stack
 
-- Apache Webserver 2.4
-- MariaDB 10.2, 10.3, 10.4, 10.5, 10.6 (empfohlen) oder MySQL 5.7 oder 8.0. _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
-- PHP 7.4 und 8.0 (empfohlen). _Im Moment wird PHP Version >= 8.1 nicht unterstützt. Wir planen die Unterstützung in einer späteren Version._
+- Apache Webserver ==2.4==
+- MariaDB 10.2, 10.3, 10.4, 10.5, ==10.6== (empfohlen) oder MySQL 5.7 oder 8.0. _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
+- PHP 7.4, {++8.0++} (empfohlen) und 8.1. _Im Moment wird PHP Version >= 8.2 nicht unterstützt. Wir planen die Unterstützung in einer späteren Version._
 - PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
 Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6**.
@@ -54,7 +55,7 @@ Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6**
 
     - Apache 2.4.x(Standardpaket)
     - MariaDB 10.6.x (Standardpaket)
-    - PHP 8.0 (Standardpaket)
+    - PHP 8.0.x (Standardpaket)
 
     !!! info "Hinweis"
 
@@ -72,6 +73,21 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 - Apple Safari
 
 ## Kompatibilitätsmatrix
+
+=== "26"
+
+    | **i-doit Version** | 26 |
+    | --- | --- |
+    | **Release** | 2023-08 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.4 <br>{++8.0++} (recommended) <br>8.1 |
+    | **MySQL** | 5.7 <br>8.0 |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>10.6 (recommended) |
+    | **Debian GNU/Linux** | 11 |
+    | **Ubuntu** | 18.04¹<br> 20.04 |
+    | **RHEL** | 7¹<br> 8 |
+    | **SLES** | 15 SP1<br> 15 SP 2<br> SP 3 |
+    | **XAMPP for Windows²** | 2022 |
 
 === "25"
 
