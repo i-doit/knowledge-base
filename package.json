@@ -44,7 +44,7 @@
         "remark-lint-no-trailing-spaces": "^2.0.1",
         "remark-normalize-headings": "^3",
         "remark-preset-lint-consistent": "^5.1",
-        "remark-preset-lint-recommended": "^6.0"
+        "remark-preset-lint-recommended": "^6.1"
     },
     "scripts": {
         "?docs:build": "Generate documentation as static Web site",
