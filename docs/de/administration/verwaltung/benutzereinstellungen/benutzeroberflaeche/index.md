@@ -1,6 +1,6 @@
 # Benutzeroberfläche
 
-Hier finden Sie die Einstellungen für die Benutzeroberfläche 
+Hier finden Sie die Einstellungen für die Benutzeroberfläche
 
 ## Abstände
 
@@ -51,3 +51,5 @@ Hier finden Sie die Einstellungen für die Benutzeroberfläche
 | Option | Wert |
 | - | - |
 | Maximalanzahl Einträge für Filteransicht | Wert |
+
+[![Benutzeroberfläche](../../../../assets/images/de/administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/1-b.png)](../../../../assets/images/de/administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/1-b.png)

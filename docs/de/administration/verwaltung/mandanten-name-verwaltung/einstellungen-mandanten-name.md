@@ -1,4 +1,4 @@
-# Mandanten Einstellungen
+# Einstellungen für [Mandanten-Name]
 
 Hier findest du Mandantenbezogene Einstellungen.
 

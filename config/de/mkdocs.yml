@@ -404,11 +404,11 @@ nav:
                   - Kategorie-Listen: administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/kategorie-listen.md
                   - Objekt-Listen: administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/objekt-listen.md
               - Bearbeitungssperre: administration/verwaltung/benutzereinstellungen/bearbeitungssperre.md
-          - Mandanten Verwaltung:
-              - administration/verwaltung/mandanten-verwaltung/index.md
-              - Mandanten Einstellungen: administration/verwaltung/mandanten-verwaltung/mandanten-einstellungen.md
-              - Systemreparatur und Bereinigung: administration/verwaltung/mandanten-verwaltung/systemreparatur-und-bereinigung.md
-              - Experteineinstellungen: administration/verwaltung/mandanten-verwaltung/experteneinstellungen.md
+          - '[Mandanten-Name] Verwaltung':
+              - administration/verwaltung/mandanten-name-verwaltung/index.md
+              - 'Einstellungen für [Mandanten-Name]': administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md
+              - Systemreparatur und Bereinigung: administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md
+              - Experteineinstellungen: administration/verwaltung/mandanten-name-verwaltung/experteneinstellungen.md
           - Datenstruktur:
               - administration/verwaltung/datenstruktur/index.md
               - Datenstruktur bearbeiten: administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md

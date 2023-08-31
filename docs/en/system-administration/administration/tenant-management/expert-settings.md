@@ -3,7 +3,6 @@
 The expert settings are a kind of "registry" of i-doit. Most settings are set via a option in the settings area. Also some option are only available when added here.
 
 !!! attention "Caution"
-
     Usually it is not necessary to add or edit values in the expert settings. For normal use the Web GUI provides functions to control i-doit in all relevant cases.<br>
     Should you plan to carry out changes in the expert settings, we **strongly recommend** to make a **[backup](../../../maintenance-and-operation/backup-and-recovery/index.md)** beforehand. Some of the listed settings have a serious effect on the application. In case of doubt do not hesitate to ask for [support](../../customer-portal.md).
 

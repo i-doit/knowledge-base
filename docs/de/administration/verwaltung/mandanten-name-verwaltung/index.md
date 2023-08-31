@@ -1,8 +1,8 @@
-# Mandanten Verwaltung
+# [Mandanten-Name] Verwaltung
 
 Hier kannst du deine Mandanten verwalten und systembezogene Konfigurationen einsehen.
 
-[![Mandanten übersicht](../../../assets/images/de/administration/verwaltung/mandanten-verwaltung/1-mv.png)](../../../assets/images/de/administration/verwaltung/mandanten-verwaltung/1-mv.png)
+[![Mandanten übersicht](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/1-mv.png)](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/1-mv.png)
 
 ## Lizenzübersicht
 
@@ -34,7 +34,6 @@ In der Lizenzübersicht findest du Informationen über deine Lizenz, das dokumen
 | Updates                              | Update verfügbar?         |
 | Browser (client)                     | Info Text und link zur kb |
 | Configuration examples               | Info Text und link zur kb |
-
 
 ## PHP.ini Settings
 
@@ -102,6 +101,6 @@ In der Lizenzübersicht findest du Informationen über deine Lizenz, das dokumen
 
 ## Unterseiten
 
-- [Mandanten Einstellungen](./mandanten-einstellungen.md)
-- [Systemreparatur und Bereinigung](systemreparatur-und-bereinigung.md)
-- [Experteneinstellungen](./experteneinstellungen.md)
+-   [Mandanten Einstellungen](einstellungen-mandanten-name.md)
+-   [Systemreparatur und Bereinigung](systemreparatur-und-bereinigung.md)
+-   [Experteneinstellungen](experteneinstellungen.md)

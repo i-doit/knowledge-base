@@ -1,4 +1,5 @@
 # User interface
+
 Here you find interface related configurations. Also from Add-ons.
 
 ## Categories

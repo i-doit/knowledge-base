@@ -3,7 +3,6 @@
 i-doit bringt bereits über 200 vordefinierte [Kategorien](struktur-it-dokumentation.md) mit. Daraus resultieren über 1000 [Attribute](struktur-it-dokumentation.md), die theoretisch pro [Objekt](struktur-it-dokumentation.md) dokumentiert werden können. Diese Fülle führt zwangsläufig zu der häufig gestellten Frage: "Wofür ist die Kategorie XY mit all ihren Attributen gedacht?" Es geht also darum, welche Konzepte hinter jeder einzelnen Kategorie und jedem einzelnen Attribut stecken.
 
 !!! info "Flexibilität vs. Vorgaben"
-
     Anhand der folgenden Tabellen starten wir den Versuch, einen allgemeinen Überblick zu verschaffen. "Versuch" deswegen aufgrund der schieren Masse an vordefinierten Kategorien und Attributen. Für viele Kategorien und Attribute gibt es keine strenge Vorgabe. Daher dienen die folgenden Beschreibungen lediglich als Empfehlung. Über Ergänzungen und Korrekturen, wie folgende Kategorien und Attribute in der Praxis genutzt werden, würden wir uns sehr freuen. Eine E-Mail an [feedback@i-doit.com](mailto:feedback@i-doit.com) genügt.
 
 Globale Kategorien
@@ -87,7 +86,7 @@ Globale Kategorien
 | **Nagios (Anwendungen)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Nagios (Host TPL)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Nagios (Host)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
-| **Nagios (Service TPL)** | \-  | [Network Monitoring](/../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
+| **Nagios (Service TPL)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Nagios (Service)** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Nagios Gruppe** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Nagios Service-Dependencies** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
@@ -115,7 +114,7 @@ Globale Kategorien
 | **Schnittstelle** | \-  | Weitere externe Schnittstellen einer Hardware, die über physikalische Netzwerkports (siehe Kategorie **Netzwerk → Port**) und Netzteile (siehe Kategorie **Stromverbraucher**) hinaus gehen, zum Beispiel Peripherie-Geräte über USB, HDMI, Display Port, VGA usw.; eignet sich damit zur Dokumentation eher "unwichtiger" Komponenten wie Mäuse und Tastaturen |
 | **Service** | \-  | Kategorie-Ordner mit den untergeordneten Kategorien **Service Beziehung**, **Service Komponenten**, **Service Logbuch** und **Service Typ**; enthält Angaben zum Service; ist meist dem gleichnamigen Objekttypen **Service** zugewiesen |
 | **Service Beziehung** | \-  | Wenn Komponenten eines Services untereinander abhängig sind, kann diese Abhängigkeit hier dokumentiert werden. Es werden nur Objekte, die in der Kategorie **Service Komponenten** hinzugefügt sind, aufgelistet. Ist im Kategorie-Ordner **Service** enthalten |
-| **Service definition** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md: Export von Konfigurationseinstellungen für Nagios |
+| **Service definition** | \-  | [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md): Export von Konfigurationseinstellungen für Nagios |
 | **Service Komponenten** | \-  | Auflistung von Objekten, die dem Service untergeordnet sind; ist im Kategorie-Ordner **Service** enthalten; rückwärtige Kategorie: **Servicezuweisung** |
 | **Service Logbuch** | \-  | Auflistung von [Logbuch](logbuch.md)\-Einträgen aus allen Objekten, die dem Service als Komponente hinzugefügt sind (siehe Kategorie **Service Komponenten**); ist im Kategorie-Ordner **Service** enthalten |
 | **Service Typ** | **Typ** | Typisierung von Services; ist im Kategorie-Ordner **Service** enthalten |

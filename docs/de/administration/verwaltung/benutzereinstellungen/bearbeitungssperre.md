@@ -8,3 +8,5 @@ Gesperrte Objekte können durch Benutzer aus einer anderen Session (Login durch 
 | Sperren von Objekten im Bearbeitungsmodus aktivieren | Ja oder Nein |
 | Timeout | 120 Wert in Sekunden |
 | Aktuell gesperrte Objekte | Liste der Objekte oder none |
+
+[![Passwort ändern](../../../assets/images/de/administration/verwaltung/benutzereinstellungen/bearbeitungssperre/1-b.png)](../../../assets/images/de/administration/verwaltung/benutzereinstellungen/bearbeitungssperre/1-b.png)
