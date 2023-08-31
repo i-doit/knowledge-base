@@ -24,11 +24,11 @@ The update can be accessed either through **Administration → [Tenant-Name] man
 
 Upon launching an interface appears in which the current status of the system is examined. We can see in our screenshot that the PHP-extension mcrypt has not been found. If such a status message is displayed, it is very important to adjust the system appropriately. For this you should look at our [system requirements](../installation/system-requirements.md) and [tenant mangement](../system-administration/administration/tenant-management/index.md). After adjusting the environment, everything should be checked with a green mark or marked with an "OK".
 
-### Step 1 i-doit update and compatibility check
+### Step 1: i-doit update and compatibility check
 
 [![i-doit update](../assets/images/en/maintenance-and-operation/update/2-update.png)](../assets/images/en/maintenance-and-operation/update/2-update.png)
 
-### Step 2 Available updates
+### Step 2: Available updates
 
 In the this step, all available update packages are displayed. In our example i-doit version 25 is installed and can therefore only be updated to the same version.
 
@@ -44,37 +44,37 @@ Now a new version is available for updating. The update can be started by clicki
 
 [![Available updates](../assets/images/en/maintenance-and-operation/update/5-update.png)](../assets/images/en/maintenance-and-operation/update/5-update.png)
 
-### Step 3 Database(s)
+### Step 3: Database(s)
 
 Usually, the boxes are checked like shown in the screenshot, so that both the system database and all associated mandator databases are selected for the update by default. If there is no reason not to update particular mandator databases, all selections should be kept.
 
 [![Databases](../assets/images/en/maintenance-and-operation/update/6-update.png)](../assets/images/en/maintenance-and-operation/update/6-update.png)
 
-### Step 4 File-Update
+### Step 4: File-Update
 
 Now at the very latest, a [backup](./backup-and-recovery/index.md) should be performed. As soon as there is a backup you can start the update by clicking the button **Yes, I did a backup! - Start the update**.
 
 [![File update](../assets/images/en/maintenance-and-operation/update/7-update.png)](../assets/images/en/maintenance-and-operation/update/7-update.png)
 
-## Step 5 Overview (Log)
+### Step 5: Overview (Log)
 
 Each change may have effects on files and databases. If something goes wrong (typically because of missing writing permissions) a red "ERROR" appears. If a green "DONE" is displayed for each change, you can go on to the next step by clicking **Next**.
 
 [![Overview](../assets/images/en/maintenance-and-operation/update/8-update.png)](../assets/images/en/maintenance-and-operation/update/8-update.png)
 
-## Step 6 Migration
+### Step 6: Migration
 
 Depending on the update, existing data will be changed. The "Migration" step executes these changes and reports whether these changes were successful or not.
 
 [![Migration](../assets/images/en/maintenance-and-operation/update/9-update.png)](../assets/images/en/maintenance-and-operation/update/9-update.png)
 
-### Step 7 Attribute migration
+### Step 7: Attribute migration
 
 Following the so called "Property Migration", everything should be marked green again.
 
 [![Attribute migration](../assets/images/en/maintenance-and-operation/update/10-update.png)](../assets/images/en/maintenance-and-operation/update/10-update.png)
 
-### Step 8 Completion
+### Step 8: Completion
 
 Now the update is completed. More detailed information about the update can be found in the linked log-file. You can return to i-doit by clicking **Run i-doit v.[VERSION]**. It is recommended to clear both the browser and the i-doit-cache under **Administration → [Tenant-Name] management → Repair and clean up**.
 
@@ -107,7 +107,6 @@ Now the file permissions are being adjusted in order to give the Webserver both 
     If another operating system is used, the used user:group combination must be adapted.
 
 ```shell
-cd /var/www/html/i-doit/
 sudo chown www-data:www-data -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
