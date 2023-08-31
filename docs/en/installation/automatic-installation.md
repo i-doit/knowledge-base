@@ -13,9 +13,9 @@ This article describes the automatic [IT documentation](../glossary.md) of i-doi
 
 ## Requirements
 
-- The [system requirements](system-requirements.md) ==have to be fulfilled==. An exception is the LAMP stack (Apache Web Server, MariaDB/MySQL, PHP).
-- One of the [supported](system-requirements.md) GNU/Linux operating systems is installed freshly. We recommend Debian GNU/Linux 10 "Buster".
-- The system can access i-doit packet repositories and web services via an internet connection.
+-   The [system requirements](system-requirements.md) ==have to be fulfilled==. An exception is the LAMP stack (Apache Web Server, MariaDB/MySQL, PHP).
+-   One of the [supported](system-requirements.md) GNU/Linux operating systems is installed freshly. We recommend Debian GNU/Linux 10 "Buster".
+-   The system can access i-doit packet repositories and web services via an internet connection.
 
 ## Use
 
@@ -44,6 +44,6 @@ The script asks several questions regarding the configuration. For all questions
 
 ## Next Steps
 
-- [Installation of a valid license (only i-doit pro)](../maintenance-and-operation/activate-license.md)
-- [Follow the tips regarding security and protection](../maintenance-and-operation/security-and-protection.md)
-- [First steps with i-doit](../basics/index.md)
+-   [Installation of a valid license (only i-doit pro)](../maintenance-and-operation/activate-license.md)
+-   [Follow the tips regarding security and protection](../maintenance-and-operation/security-and-protection.md)
+-   [First steps with i-doit](../basics/index.md)
