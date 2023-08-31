@@ -247,14 +247,18 @@ After synchronizing the users I find the following master data:
 
 #### autoReactivateUsers
 
-To have a clean start, this setting automatically sets all users to the status normal before synchronization.
+This option will set all synchronized persons to `Status = Normal`.
+It will overwrite any other settings like, `deletedUsersBehaviour` or `disabledUsersBehaviour`.
 
-This is helpful in case users were accidentally archived or deleted before.<br>
-Note that this only works with NDS & OpenLDAP, as it is always enabled in Active Directory!
+This is helpful in case users were accidentally archived or deleted before.
 
-We should be aware that with NDS or OpenLDAP it is currently not possible to identify deleted users to archive them later. Users are then always activated!
+!!! info
 
-    autoReactivateUsers=false
+    We should be aware that with NDS or OpenLDAP it is currently not possible to identify deleted users to archive them later. Users are then always activated! Manually performed changes will be overwritten.
+
+```ini
+autoReactivateUsers=false
+```
 
 * * *
 
