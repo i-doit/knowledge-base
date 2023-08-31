@@ -118,7 +118,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
     | **i-doit Version** | 23, 22, 21, 20, 1.19 |
     | --- | --- |
-    | **Release** | 2023-06 |
+    | **Release** | 2023-03 - 2022-09 |
     | **Apache Webserver** | 2.4 |
     | **PHP** | 7.4 <br>8.0 (recommended) |
     | **MySQL** | 5.7 |
@@ -133,7 +133,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
     | **i-doit Version** | 1.18 |
     | --- | --- |
-    | **Release** | 2022-01 |
+    | **Release** | 2022-02 |
     | **Apache Webserver** | 2.4 |
     | **PHP** | 7.3 (deprecated) <br>7.4 (recommended) |
     | **MySQL** | 5.7 |
@@ -191,7 +191,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 === "1.14"
 
-    | **i-doit Version** | 	1.14 |
+    | **i-doit Version** | 1.14 |
     | --- | --- |
     | **Release** | 2020-01 |
     | **Apache Webserver** | 2.4 |
@@ -206,7 +206,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 === "1.13"
 
-    | **i-doit Version** | 	1.13 |
+    | **i-doit Version** | 1.13 |
     | --- | --- |
     | **Release** | 2019-06 |
     | **Apache Webserver** | 2.4 |
@@ -221,7 +221,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 === "1.12"
 
-    | **i-doit Version** | 	1.12 |
+    | **i-doit Version** | 1.12 |
     | --- | --- |
     | **Release** | 2018-12 |
     | **Apache Webserver** | 2.4 |
@@ -236,7 +236,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 === "1.11"
 
-    | **i-doit Version** | 	1.11 |
+    | **i-doit Version** | 1.11 |
     | --- | --- |
     | **Release** | 2018-06 |
     | **Apache Webserver** | 2.4 |
@@ -251,7 +251,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 === "1.10"
 
-    | **i-doit Version** | 	1.10 |
+    | **i-doit Version** | 1.10 |
     | --- | --- |
     | **Release** | 2017-12 |
     | **Apache Webserver** | 2.4 |
@@ -266,7 +266,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 === "1.9"
 
-    | **i-doit Version** | 	1.9 |
+    | **i-doit Version** | 1.9 |
     | --- | --- |
     | **Release** | 2017-05 |
     | **Apache Webserver** | 2.4 |
@@ -281,7 +281,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 === "1.8"
 
-    | **i-doit Version** | 	1.8 |
+    | **i-doit Version** | 1.8 |
     | --- | --- |
     | **Release** | 2016-10 |
     | **Apache Webserver** | 2.4 |
@@ -296,7 +296,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 === "1.7"
 
-    | **i-doit Version** | 	1.7 |
+    | **i-doit Version** | 1.7 |
     | --- | --- |
     | **Release** | 2016-03 |
     | **Apache Webserver** | 2.2<br> 2.4 |
