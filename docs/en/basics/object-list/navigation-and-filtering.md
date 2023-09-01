@@ -4,8 +4,7 @@ It's no big deal to navigate through an [object list](./index.md) and search for
 
 [![object list](../../assets/images/en/basics/object-list/navigation-and-filtering/1-naf.png)](../../assets/images/en/basics/object-list/navigation-and-filtering/1-naf.png)
 
-Navigation
-----------
+## Navigation
 
 Longer object lists are distributed over several pages through which you can navigate specifically. With the ... button you can enter a particular page.
 
@@ -26,10 +25,9 @@ For each user you can determine [how many objects per page](./advanced-settings.
 
     [![Keyboard commands](../../assets/images/en/basics/object-list/navigation-and-filtering/2-naf.gif)](../../assets/images/en/basics/object-list/navigation-and-filtering/2-naf.gif)
 
-Filtering
----------
+## Filtering
 
-You can filter the lines of an object list by attributes. One of the displayed attributes is intended for the [default filter](./configuration-of-the-list-view.md). You can start filtering directly; search suggestions are generated when you enter **at** **least 3 characters**. When you select one of these suggestions, the object is loaded directly instead of filtering the list.
+You can filter the lines of an object list by attributes. One of the displayed attributes is intended for the [default filter](./configuration-of-the-list-view.md). You can start filtering directly; search suggestions are generated when you enter **at least 3 characters**. When you select one of these suggestions, the object is loaded directly instead of filtering the list.
 
 Additionally, you can filter for several attributes simultaneously via drop-down menu (And-operation). Confirm the filter by clicking the **Filter** button. The selected filter is also displayed in a text bar. You can reset the filter with the respective button.
 
@@ -37,13 +35,12 @@ Additionally, you can filter for several attributes simultaneously via drop-down
 
 You can [pre-filter](./configuration-of-the-list-view.md) the object list already during loading.
 
-Additional Functions
---------------------
+## Additional Functions
 
 Additional functions can be accessed via the navigation and filter bar:
 
 |   Icon  |   Function  |
 | --- | --- |
-| [![icon](../../assets/images/en/basics/object-list/navigation-and-filtering/4-naf.png)](../../assets/images/en/basics/object-list/navigation-and-filtering/4-naf.png) | The object list is reloaded. |
-| [![icon](../../assets/images/en/basics/object-list/navigation-and-filtering/5-naf.png)](../../assets/images/en/basics/object-list/navigation-and-filtering/5-naf.png) | The column width is set automatically. You can also vary the column width per user. |
-| [![icon](../../assets/images/en/basics/object-list/navigation-and-filtering/6-naf.png)](../../assets/images/en/basics/object-list/navigation-and-filtering/6-naf.png) | [Configuration of the list view](./configuration-of-the-list-view.md). |
+| [![fullscreen-window-filled.](../../assets/images/en/basics/object-list/navigation-and-filtering/fullscreen-window-filled.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/fullscreen-window-filled.svg) | Fit the column list to screen |
+| [![separator-vertical-filled](../../assets/images/en/basics/object-list/navigation-and-filtering/separator-vertical-filled.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/separator-vertical-filled.svg) | Restore default colimn width |
+| [![gear](../../assets/images/en/basics/object-list/navigation-and-filtering/gear.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/gear.svg) | [Configuration of the list view](./configuration-of-the-list-view.md). |
