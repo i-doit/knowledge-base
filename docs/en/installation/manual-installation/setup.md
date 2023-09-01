@@ -8,7 +8,7 @@ Extract the install package of i-doit in a folder the Apache Webserver can acces
 
 ## Download and Extract the Install Package
 
-The install package of the pro version is accessible for all customers in the [customer portal](../../system-administration/customer-portal.md); the installation package of the open version can be found at [i-doit.org](https://i-doit.org/). This package will be copied and extracted to the prepared server and the files and directories get the appropriate authorizations. The instructions vary according to the operating system.
+The install package of the pro version is accessible for all customers in the [customer portal](../../system-administration/customer-portal.md) the installation package of the open version can be found at [i-doit.org](https://i-doit.org/). This package will be copied and extracted to the prepared server and the files and directories get the appropriate authorizations. The instructions vary according to the operating system.
 
 ### Debian GNU/Linux or Ubuntu Linux
 
@@ -23,7 +23,6 @@ sudo rm i-doit.zip
 sudo chown www-data:www-data -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
-sudo chmod 774 controller *.sh setup/*.sh
 ```
 
 ### Red Hat Enterprise Linux (RHEL)
@@ -39,7 +38,6 @@ sudo rm i-doit.zip
 sudo chown apache:apache -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
-sudo chmod 774 controller *.sh setup/*.sh
 ```
 
 ### Suse Linux Enterprise Server (SLES)
@@ -55,7 +53,6 @@ sudo rm i-doit.zip
 sudo chown wwwrun:www -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
-sudo chmod 774 controller *.sh setup/*.sh
 ```
 
 ### Microsoft Windows Server
@@ -64,7 +61,7 @@ The i-doit installation package is extracted in `C:\xampp\htdocs`. Generally it 
 
 ## Run the Setup
 
-_i-doit_ can be installed in two ways: Using the ==web GUI== in a comfortable way (recommended for beginners) or via the [Automatic installation]() (to automate the installation for example).
+_i-doit_ can be installed in two ways: Using the ==web GUI== in a comfortable way (recommended for beginners) or via the [Automatic installation](../automatic-installation.md) (to automate the installation for example).
 
 ### Web GUI
 
@@ -81,25 +78,31 @@ Important system settings are prompted in the first step. The user will be notif
 Here the paths are requested where the installation files or user specific files are going to be stored. You can accept the suggested options.
 
 [![Directory configuration](../../assets/images/en/installation/manual-installation/setup/2-setup.png)](../../assets/images/en/installation/manual-installation/setup/2-setup.png)
+
 #### Database Configuration
 
 Important credentials and settings need to be entered for the database connection. At least two databases and one special user are created for i-doit.
 
 [![Database configuration](../../assets/images/en/installation/manual-installation/setup/3-setup.png)](../../assets/images/en/installation/manual-installation/setup/3-setup.png)
 
-- Connection settings
-    - **Host:** Generally the host itself, so localhost or 127.0.0.1
-    - **Port:** Generally the default port of MySQL/MariaDB, so 3306
-    - **Username:** User name of the database system user, usually root
-    - **Password:** Password of the user
-- MySQL user settings
-    - **Username:** User name of the i-doit databases owner, usually idoit
-    - **Password:** Password of the user
-- Database settings
-    - **System Database Name:** Name of the system database, usually idoit_system
-    - **Mandator Database Name:** Name of the database for the first tenant, usually idoit_data
-    - **Mandator title:** Title of the tenant, usually the name of the organization that is focused on
-    - **Start value for object/configuration item IDs:** Normally 1
+##### Connection settings
+
+-   **Host:** Generally the host itself, so localhost or 127.0.0.1
+-   **Port:** Generally the default port of MySQL/MariaDB, so 3306
+-   **Username:** User name of the database system user, usually root
+-   **Password:** Password of the user
+
+##### MySQL user settings
+
+-   **Username:** User name of the i-doit databases owner, usually idoit
+-   **Password:** Password of the user
+
+##### Database settings
+
+-   **System Database Name:** Name of the system database, usually idoit_system
+-   **Mandator Database Name:** Name of the database for the first tenant, usually idoit_data
+-   **Mandator title:** Title of the tenant, usually the name of the organization that is focused on
+-   **Start value for object/configuration item IDs:** Normally 1
 
 !!! tip "Unix Socket vs. Network Port"
 
@@ -129,7 +132,7 @@ The installtion of i-doit on the system is carried out in this step. After the i
 
 ## Further steps
 
-- [Download and Install a License](../../maintenance-and-operation/activate-license.md)
-- [Set up backup](../../maintenance-and-operation/backup-and-recovery/index.md)
-- [Set up Cronjobs](../../maintenance-and-operation/cronjob-setup.md)
-- [Initial Login](../../basics/initial-login.md)
+-   [Download and Install a License](../../maintenance-and-operation/activate-license.md)
+-   [Set up backup](../../maintenance-and-operation/backup-and-recovery/index.md)
+-   [Set up Cronjobs](../../maintenance-and-operation/cronjob-setup.md)
+-   [Initial Login](../../basics/initial-login.md)

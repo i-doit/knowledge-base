@@ -2,8 +2,7 @@
 
 In this article we explain in just a few steps which packages need to be installed and configured.
 
-System Requirements
-----------------------
+## System Requirements
 
 The general [system requirements](../system-requirements.md) apply.
 
@@ -25,14 +24,14 @@ uname -m
 
 The default package repositories of Suse Linux Enterprise Server (SLES) already supply the necessary packages to install:
 
-- he ==Apache== web server 2.4
-- the script language ==PHP== 7.2 (as of SLES 15 SP 2: ==PHP== 7.4)
-- the database management system ==MariaDB== 10.2 (as of SLES 15 SP 2: ==MariaDB== 10.4) and
-- the caching server ==memcached==
+-   he ==Apache== web server 2.4
+-   the script language ==PHP== 7.2 (as of SLES 15 SP 2: ==PHP== 7.4)
+-   the database management system ==MariaDB== 10.2 (as of SLES 15 SP 2: ==MariaDB== 10.4) and
+-   the caching server ==memcached==
 
 First of all, you have to activate additional add-ons in ==Yast==:
 
-- ==Web and Scripting Module==
+-   ==Web and Scripting Module==
 
 You can check with the following command if both add-ons are activated:
 
@@ -140,13 +139,13 @@ In this file the VHost configuration is modified and saved:
 ```shell
 <VirtualHost *:80>
         ServerAdmin i-doit@example.net
- 
+
         DocumentRoot /srv/www/htdocs/
         <Directory /srv/www/htdocs/>
                 AllowOverride All
                 Require all granted
         </Directory>
- 
+
         LogLevel warn
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -204,62 +203,56 @@ This file contains the new configuration settings. For an optimal performance yo
 
 ```shell
 [mysqld]
-  
+
 # This is the number 1 setting to look at for any performance optimization
 # It is where the data and indexes are cached: having it as large as possible will
 # ensure MySQL uses memory and not disks for most read operations.
 #
 # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
 innodb_buffer_pool_size = 1G
- 
+
 # Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
 innodb_buffer_pool_instances = 1
- 
+
 # Redo log file size, the higher the better.
 # MySQL/MariaDB writes two of these log files in a default installation.
 innodb_log_file_size = 512M
- 
 innodb_sort_buffer_size = 64M
 sort_buffer_size = 262144 # default
 join_buffer_size = 262144 # default
- 
 max_allowed_packet = 128M
 max_heap_table_size = 32M
 query_cache_min_res_unit = 4096
 query_cache_type = 1
 query_cache_limit = 5M
 query_cache_size = 80M
- 
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
- 
+
 # Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
 innodb_thread_concurrency = 0
- 
+
 # Disable this (= 0) if you have slow harddisks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
- 
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
 # Only if your have MySQL 5.6 or higher, do not use with MariaDB!
 #table_open_cache_instances = 4
- 
+
 innodb_stats_on_metadata = 0
- 
 sql-mode = ""
 ```
 
-Finally, MariaDB is started:
+Finally, MariaDB is started with:
 
 ```shell
 sudo systemctl start mysql.service
 ```
 
-Next Step
----------
+## Next Step
 
 Now the operating system is prepared and i-doit can be installed.
 

@@ -24,10 +24,10 @@ uname -m
 
 The default package repositories of Debian GNU/Linux already supply the necessary packages to install:
 
-- the ==Apache== web server 2.4
-- the script language ==PHP== 7.4
-- the database management system ==MariaDB== 10.5 and
-- the caching server ==memcached==
+-   the ==Apache== web server 2.4
+-   the script language ==PHP== 7.4
+-   the database management system ==MariaDB== 10.5 and
+-   the caching server ==memcached==
 
 ```shell
 sudo apt update
