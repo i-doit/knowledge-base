@@ -5,9 +5,9 @@ Hier können Sie den Mail Server konfigurieren, der von i-doit benutzt werden so
 | Option | Wert |
 | - | - |
 | SMTP Host | Hostname oder URL |
-| SMTP Port	| Port |
+| SMTP Port | Port |
 | SMTP Username | Username |
-| SMTP Password	| Password |
+| SMTP Password | Password |
 | SMTP TLS | Ja oder Nein |
 | Absender | E-Mail Adresse |
 | Name | Name |
