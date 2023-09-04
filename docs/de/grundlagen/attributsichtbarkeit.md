@@ -11,7 +11,7 @@ Die konfigurierte Sichtbarkeit wird für alle Benutzer übernommen.
 Rechte setzen
 -------------
 
-[Die Rechte](../administration/verwaltung/rechtesystem.md) zur Ansicht und zum Bearbeiten der Attributsichtbarkeit kann pro Benutzer(-gruppe) vergeben werden. So ist es beispielsweise möglich und oft auch ratsam, dass nur bestimmte Benutzergruppen Attribute ausblenden können.
+[Die Rechte](../administration/verwaltung/berechtigungen.md) zur Ansicht und zum Bearbeiten der Attributsichtbarkeit kann pro Benutzer(-gruppe) vergeben werden. So ist es beispielsweise möglich und oft auch ratsam, dass nur bestimmte Benutzergruppen Attribute ausblenden können.
 
 [![rechte-setzen](../assets/images/de/grundlagen/attributsichtbarkeit/2-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/2-as.png)
 

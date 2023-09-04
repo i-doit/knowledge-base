@@ -50,7 +50,7 @@ Hier können folgende System Parameter festgelegt werden:
 Standard [LDAP](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) Gruppe → Hier können Gruppen angegeben werden, in die LDAP Benutzer automatisch nach erfolgreicher Anmeldung aufgenommen werden
 
 PHP Zeitzone → Hier kann die Zeitzone für PHP definiert werden
-Rechtesystem → Hier kann das erweiterte [Rechtesystem](../verwaltung/rechtesystem.md) deaktiviert werden<br>
+Rechtesystem → Hier kann das erweiterte [Rechtesystem](../verwaltung/berechtigungen.md) deaktiviert werden<br>
 Datei Upload Ordner → Hier wird Ordner definiert, in dem hochgeladene Dateien abgelegt werden<br>
 Bild Upload Ordner  → Hier wird Ordner definiert, in dem hochgeladene Bilder abgelegt werden<br>
 [Request Tracker](../../automatisierung-und-integration/service-desk/request-tracker.md) queues → Hier können die queues von Request Tracker definiert werden<br>
