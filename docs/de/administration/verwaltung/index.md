@@ -16,6 +16,6 @@ Zu erreichen ist die Verwaltung über das Zahnrad-Icon in deinem User Bereich, d
 -   [Datenansicht](datenansicht/index.md)
 -   [Vordefinierte Inhalte](vordefinierte-inhalte/index.md)
 -   [Berechtigungen](berechtigungen.md)
--   [Logbuch](logbuch.md)
+-   [Logbuch](logbuch/index.md)
 -   [Import und Schnittstellen](import-und-schnittstellen/index.md)
 -   [Add-ons](add-ons/index.md)
