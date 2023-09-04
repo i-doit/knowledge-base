@@ -437,7 +437,7 @@ nav:
               - Objektbeziehungsarten: administration/verwaltung/vordefinierte-inhalte/objekt-beziehungsarten.md
               - QR Code: administration/verwaltung/vordefinierte-inhalte/qr-code.md
           - Berechtigungen: administration/verwaltung/berechtigungen.md
-          - Logbuch: administration/verwaltung/logbuch.md
+          - Logbuch: administration/verwaltung/logbuch/index.md
           - Import und Schnittstellen:
               - administration/verwaltung/import-und-schnittstellen/index.md
               - Import Matching Profile: administration/verwaltung/import-und-schnittstellen/import-matching-profile.md
