@@ -4,5 +4,4 @@ Ein neuer Switch wird in Betrieb genommen, aber Sie wollen alle Verbindungen bei
 
 ## Die Add-ons sind in die folgenden Unterabschnitte unterteilt:
 
-- [Konfiguration](./konfiguration.md)
-
+-   [Konfiguration](./konfiguration.md)

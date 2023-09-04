@@ -74,21 +74,21 @@ Unter [Beziehungsarten](../../grundlagen/objekt-beziehungen.md) können alle Bez
 CMDB-Status
 -----------
 
-Unter CMDB-Status können die vorhandenen [Status](../../grundlagen/lebens-und-dokumentationszyklus.md) verwaltet und bearbeitet werden. Weiterhin kannst du festlegen welchen Status ein importiertes Objekt bekommt und ob der Status Filter angezeigt werden soll. → [READMORE](../../grundlagen/lebens-und-dokumentationszyklus.md)
+Unter CMDB-Status können die vorhandenen [Status](../../grundlagen/lebens-und-dokumentationszyklus.md) verwaltet und bearbeitet werden. Weiterhin kannst du festlegen welchen Status ein importiertes Objekt bekommt und ob der Status Filter angezeigt werden soll. → [WEITERLESEN](../../grundlagen/lebens-und-dokumentationszyklus.md)
 
 [![CMDB-Status](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/10-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/10-ce.png)
 
 Dialog-Admin
 ------------
 
-Unter [Dialog-Admin](../../grundlagen/dialog-admin.md) können die Inhaltsvorlagen aller Dialog-Plus Felder verwaltet und bearbeitet werden. Hier befinden sich auch die benutzerdefinierten Dialog-Plus Felder. → [READMORE](../../grundlagen/dialog-admin.md)
+Unter [Dialog-Admin](../../grundlagen/dialog-admin.md) können die Inhaltsvorlagen aller Dialog-Plus Felder verwaltet und bearbeitet werden. Hier befinden sich auch die benutzerdefinierten Dialog-Plus Felder. → [WEITERLESEN](../../grundlagen/dialog-admin.md)
 
 [![Dialog-Admin](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/11-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/11-ce.png)
 
 Events
 ------
 
-Unter [Events](../../i-doit-pro-add-ons/events.md) kann das i-doit Event System verwaltet werden. → [READMORE](../../i-doit-pro-add-ons/events.md)
+Unter [Events](../../i-doit-pro-add-ons/events.md) kann das i-doit Event System verwaltet werden. → [WEITERLESEN](../../i-doit-pro-add-ons/events.md)
 
 [![Events](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/12-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/12-ce.png)
 
@@ -104,7 +104,7 @@ Kategorieerweiterung
 
 In der Kategorieerweiterung kannst du die Bezeichnung der Felder aus der LDAP Konfigurationsdatei anpassen. Dieser Kategorieerweiterung betrifft nur Personen.<br>
 Die Felder sind dann bei Personen unter Stammdaten zu finden.<br>
-Die Feldnamen können von "Custom 1" auf beliebige Feldnamen geändert werden. Der Key kann nicht verändert werden.→ [READMORE](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md)
+Die Feldnamen können von "Custom 1" auf beliebige Feldnamen geändert werden. Der Key kann nicht verändert werden.→ [WEITERLESEN](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md)
 
 [![Kategorieerweiterung](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/14-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/14-ce.png)
 
@@ -114,28 +114,28 @@ Logbuch
 Archivieren
 -----------
 
-Hier wird festgelegt für welchen Zeitraum Einträge im Logbuch vorgehalten werden bevor sie archiviert werden. → [READMORE](../../grundlagen/logbuch.md)
+Hier wird festgelegt für welchen Zeitraum Einträge im Logbuch vorgehalten werden bevor sie archiviert werden. → [WEITERLESEN](../../grundlagen/logbuch.md)
 
 [![Archivieren](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/15-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/15-ce.png)
 
 Listenansicht Logbuch
 ---------------------
 
-In der Listenansicht können Einträge nach verschiedenen Parametern gefiltert werden. Wenn möglich, enthält ein Eintrag zudem die genauen Änderungen (Welcher Wert wurde von was zu was geändert?). → [READMORE](../../grundlagen/logbuch.md)
+In der Listenansicht können Einträge nach verschiedenen Parametern gefiltert werden. Wenn möglich, enthält ein Eintrag zudem die genauen Änderungen (Welcher Wert wurde von was zu was geändert?). → [WEITERLESEN](../../grundlagen/logbuch.md)
 
 [![Listenansicht Logbuch](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/16-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/16-ce.png)
 
 Logbuch Konfiguration
 ---------------------
 
-Hier kann konfiguriert werden wieviele Änderungen maximal in einen Logbuch Eintrag kombiniert werden dürfen, ob der Benutzer nur mit seiner ID oder in erweiterter Form erscheinen soll und wenn ja wie diese aussieht. Zusätzlich kann noch festgelegt werden wie hoch die Anzahl der kombinierten Änderungen pro Logbuch Eintrag bei einem Import Vorgang ist. → [READMORE](../../grundlagen/logbuch.md)
+Hier kann konfiguriert werden wieviele Änderungen maximal in einen Logbuch Eintrag kombiniert werden dürfen, ob der Benutzer nur mit seiner ID oder in erweiterter Form erscheinen soll und wenn ja wie diese aussieht. Zusätzlich kann noch festgelegt werden wie hoch die Anzahl der kombinierten Änderungen pro Logbuch Eintrag bei einem Import Vorgang ist. → [WEITERLESEN](../../grundlagen/logbuch.md)
 
 [![Logbuch Konfiguration](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/17-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/17-ce.png)
 
 Wiederherstellen
 ----------------
 
-Hier kannst du Einträge die Bereits Archiviert wurden wiederherstellen. → [READMORE](../../grundlagen/logbuch.md)
+Hier kannst du Einträge die Bereits Archiviert wurden wiederherstellen. → [WEITERLESEN](../../grundlagen/logbuch.md)
 
 [![Wiederherstellen](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/18-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/18-ce.png)
 
@@ -150,7 +150,7 @@ Die Filter kann man sich anschauen und in gewissem Maße konfigurieren.
 Objekttyp-Konfiguration
 -----------------------
 
-Hier können die jeweiligen Objekttypen und ihre Eigenschaften verwaltet und bearbeitet werden. ->[READMORE](../../grundlagen/benutzerdefinierte-objekttypen.md)
+Hier können die jeweiligen Objekttypen und ihre Eigenschaften verwaltet und bearbeitet werden. ->[WEITERLESEN](../../grundlagen/benutzerdefinierte-objekttypen.md)
 
 [![Objekttyp-Konfiguration](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/20-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/20-ce.png)
 
@@ -159,7 +159,7 @@ QR-Code
 
 Hier kann die Konfiguration für den QR-Code festgelegt werden. Es kann ausgewählt werden ob er als Inhalt die primäre Zugriffs URL von Objekten beinhalten soll oder eine Globale Definition verwendet werden soll. Außerdem kannst du auswählen was passiert wenn auf einen angezeigten QR-Code geklickt wird.<br>
 Mit einem Klick auf das blau hinterlegte _\* Mögliche Platzhalter_ öffnest du die Liste der Platzhalter.<br>
-Für Informationen zum QR-Code-Printer Tool hier entlang→ [READMORE](../../i-doit-pro-add-ons/i-doit-qr-code-printer.md)
+Für Informationen zum QR-Code-Printer Tool hier entlang→ [WEITERLESEN](../../i-doit-pro-add-ons/i-doit-qr-code-printer.md)
 
 [![QR-Code](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/21-ce.png)](../../assets/images/de/administration/verwaltung/cmdb-einstellungen/21-ce.png)
 

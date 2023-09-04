@@ -2,7 +2,7 @@
 H-Inventory
 -----------
 
-Hier kannst du das Objekt Matching Profil auswählen. → [READMORE](../../daten-konsolidieren/h-inventory.md)
+Hier kannst du das Objekt Matching Profil auswählen. → [WEITERLESEN](../../daten-konsolidieren/h-inventory.md)
 
 [![H-Inventory](../../assets/images/de/administration/verwaltung/schnittstellen/1-s-s.png)](../../assets/images/de/administration/verwaltung/schnittstellen/1-s-s.png)
 
@@ -12,14 +12,14 @@ JDISC
 JDisc-Konfiguration
 -------------------
 
-Hier werden die Einstellungen hinterlegt um auf den JDisc Server zugreifen zu könnnen. → [READMORE](../../daten-konsolidieren/jdisc-discovery.md)
+Hier werden die Einstellungen hinterlegt um auf den JDisc Server zugreifen zu könnnen. → [WEITERLESEN](../../daten-konsolidieren/jdisc-discovery.md)
 
 [![JDisc-Konfiguration](../../assets/images/de/administration/verwaltung/schnittstellen/2-s-s.png)](../../assets/images/de/administration/verwaltung/schnittstellen/2-s-s.png)
 
 JDisc-Profile
 -------------
 
-Die JDisc Profile ermöglichen es dir Objekte und ihre Attribute aus der JDisc Datenbank mit denselbigen innerhalb von i-doit zu verbinden. → [READMORE](../../daten-konsolidieren/jdisc-discovery.md)
+Die JDisc Profile ermöglichen es dir Objekte und ihre Attribute aus der JDisc Datenbank mit denselbigen innerhalb von i-doit zu verbinden. → [WEITERLESEN](../../daten-konsolidieren/jdisc-discovery.md)
 
 [![JDisc-Profile](../../assets/images/de/administration/verwaltung/schnittstellen/3-s-s.png)](../../assets/images/de/administration/verwaltung/schnittstellen/3-s-s.png)
 

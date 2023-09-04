@@ -3,14 +3,12 @@
 Die Experteneinstellungen sind so etwas wie die "Registry" von i-doit. Hier können viele Einstellungen gesetzt werden, die teilweise nicht über die Web GUI erreichbar sind.
 
 !!! attention "Vorsicht"
-
     In der Regel ist es nicht nötig, in den Experteneinstellungen Werte hinzuzufügen oder zu verändern. Für den normalen Gebrauch bringt die Web GUI an den entsprechenden Stellen Funktionen mit, um das Verhalten von i-doit zu steuern.
-
     Vor der Änderung an den Experteneinstellungen sollte **unbedingt ein [Backup](../../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) angefertigt** werden. Einige der aufgelisteten Einstellungen haben einen gravierenden Einfluss auf die Applikation. Im Zweifel hilft der [Support](../../kundenportal.md) gerne weiter.
 
 ## Konfiguration
 
-Zu erreichen sind die Einstellungen unter **Verwaltung → Mandanten Verwaltung → Experteneinstellungen**.
+Zu erreichen sind die Einstellungen unter **Verwaltung → [Mandanten-Name] Verwaltung → Experteneinstellungen**.
 
 Jede Einstellung besteht aus drei Teilen:
 
@@ -50,14 +48,13 @@ Jede Einstellung besteht aus drei Teilen:
 | gui.empty_value                               | -                                           | Definiert die Darstellung eines Leerwerts in der Oberfläche                                                                                                                                       |
 | gui.nat-sort.port-list                        | 1                                           | Lexikografische Sortierung der Portliste                                                                                                                                                          |
 | jdisc.import-unidentified-devices             | false                                       | Aktivieren/Deaktivieren von Imports unidentifizierter JDISC-Objekte                                                                                                                               |
-| maxlength.dialog_plus                         | 110                                         | Maximale Zeichlänge für Einträge in Dialoglisten                                                                                                                                                  |
+| maxlength.dialog_plus                         | 110                                         | Maximale Zeichenlänge für Einträge in Dialoglisten                                                                                                                                                  |
 | maxlength.location.objects                    | 16                                          | Maximale Anzahl darzustellender Objekte                                                                                                                                                           |
 | maxlength.location.path                       | 40                                          | Maximale Länge von Standortpfaden                                                                                                                                                                 |
-| maxlength.object.lists                        | 55                                          | aximale Anzahl darzustellender Objekte in Objektlisten                                                                                                                                            |
+| maxlength.object.lists                        | 55                                          | Maximale Anzahl darzustellender Objekte in Objektlisten                                                                                                                                            |
 | search.global.autostart-deep-search           | 0                                           | Automatische Deep Search Suche                                                                                                                                                                    |
 | security.passwort.minlength                   | 4                                           | Mindestlänge für Benutzerpasswörter                                                                                                                                                               |
 | qrcode.config                                 |                                             | QR-Code Konfiguration                                                                                                                                                                             |
-
 
 ## Liste der Einstellungen (Benutzer)
 

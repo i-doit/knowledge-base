@@ -12,4 +12,4 @@ i-doit ermöglicht den externen Zugriff auf die [IT-Dokumentation](../../../../g
 | Entfernen von HTML-Tags aus Beschreibungsfeldern | Ja oder Nein |
 | Log Level | ERROR<br>WARNING<br>INFO<br>DEBUG |
 
-Für mehr Informationen -> [READMORE](../../../../i-doit-pro-add-ons/api/index.md)
+Für mehr Informationen -> [WEITERLESEN](../../../../i-doit-pro-add-ons/api/index.md)

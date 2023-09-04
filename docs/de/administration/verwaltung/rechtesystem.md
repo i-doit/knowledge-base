@@ -5,7 +5,7 @@ Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/das
 Rechtevergabe
 -------------
 
-Über die Rechtevergabe kannst du die Berechtigungen für die einzelnen i-doit Benutzer konfigurieren. → [READMORE](../../effizientes-dokumentieren/rechteverwaltung/index.md)
+Über die Rechtevergabe kannst du die Berechtigungen für die einzelnen i-doit Benutzer konfigurieren. → [WEITERLESEN](../../effizientes-dokumentieren/rechteverwaltung/index.md)
 
 [![Rechtevergabe](../../assets/images/de/administration/verwaltung/rechtesystem/1-rs.png)](../../assets/images/de/administration/verwaltung/rechtesystem/1-rs.png)
 

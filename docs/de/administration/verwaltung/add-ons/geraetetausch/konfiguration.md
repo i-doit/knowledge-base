@@ -9,4 +9,4 @@
 | SYS-ID ebenfalls tauschen? | Ja oder Nein |
 | Kategoriedaten getauschter Objekte beibehalten? | Ja oder Nein |
 
-Für weitere Informationen -> [READMORE](../../../../i-doit-pro-add-ons/replacement.md)
+Für weitere Informationen -> [WEITERLESEN](../../../../i-doit-pro-add-ons/replacement.md)

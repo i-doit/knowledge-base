@@ -1,6 +1,6 @@
 # Einstellungen für [Mandanten-Name]
 
-Hier findest du Mandantenbezogene Einstellungen.
+Hier findest du Einstellungen für den aktuellen Mandanten.
 
 ## URL Einstellungen
 
@@ -94,7 +94,7 @@ Hier findest du Mandantenbezogene Einstellungen.
 | Option                             | Wert |
 | ---------------------------------- | ---- |
 | Dialog-Plus                        | Wert |
-| Objektbezeichnung im Standortpfadh | Wert |
+| Objektbezeichnung im Standortpfad | Wert |
 | Kompletter Standortpfad            | Wert |
 
 ## Logbuch
@@ -143,7 +143,7 @@ Hier findest du Mandantenbezogene Einstellungen.
 
 | Option               | Wert                                                                    |
 | -------------------- | ----------------------------------------------------------------------- |
-| Standard LDAP Gruppe | omma-separierte Liste von Personengruppen IDs                           |
+| Standard LDAP Gruppe | Komma-separierte Liste von Personengruppen IDs                           |
 | LDAP Config:         | JSON String                                                             |
 | Anrede Herr          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |
 | Anrede Frau          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |

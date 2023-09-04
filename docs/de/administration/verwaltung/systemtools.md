@@ -65,7 +65,7 @@ Hier kannst du verschiedene Reparatur Funktionen für die i-doit Datenbank ausf�
 i-doit Update
 -------------
 
-Hier kommst du zur [Update](../../wartung-und-betrieb/update-einspielen.md) Funktion von i-doit. → [READMORE](../../wartung-und-betrieb/update-einspielen.md)
+Hier kommst du zur [Update](../../wartung-und-betrieb/update-einspielen.md) Funktion von i-doit. → [WEITERLESEN](../../wartung-und-betrieb/update-einspielen.md)
 
 [![i-doit Update](../../assets/images/de/administration/verwaltung/systemtools/2-st.png)](../../assets/images/de/administration/verwaltung/systemtools/2-st.png)
 

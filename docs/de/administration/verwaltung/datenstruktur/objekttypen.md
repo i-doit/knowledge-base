@@ -1,3 +1,3 @@
 # Objekttypen
 
-Mit dieser Funktion können Sie die jeweiligen Objekttypen und ihre Eigenschaften organisieren und bearbeiten. → [READMORE](../../../grundlagen/benutzerdefinierte-objekttypen.md)
+Mit dieser Funktion können Sie die jeweiligen Objekttypen und ihre Eigenschaften organisieren und bearbeiten. → [WEITERLESEN](../../../grundlagen/benutzerdefinierte-objekttypen.md)
