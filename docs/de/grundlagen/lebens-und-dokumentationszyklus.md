@@ -2,32 +2,30 @@
 
 IT-Komponenten kommen und gehen. Sie werden geplant, angeschafft, betrieben und irgendwann wieder ausgemustert. Bingo: Es geht um das Life Cycle Management. In der [IT-Dokumentation](../glossar.md) spielt dies eine wichtige Rolle, weil hierbei nachvollzogen werden kann, welchen Status eine Komponente haben soll bzw. hat. Zudem soll die IT-Dokumentation an sich archiviert und gelöscht werden können.
 
-Lebenszyklus von IT-Komponenten
--------------------------------
+## Lebenszyklus von IT-Komponenten
 
-Der Lebenszyklus einer IT-Komponente wird im **CMDB-Status** dokumentiert. Bei einer frischen Installation von _i-doit_ sind folgende **CMDB-Status **verfügbar:
+Der Lebenszyklus einer IT-Komponente wird im **CMDB-Status** dokumentiert. Bei einer frischen Installation von _i-doit_ sind folgende **CMDB-Status** verfügbar:
 
-*   **Geplant**
-*   **Bestellt**
-*   **Geliefert**
-*   **Montiert**
-*   **Getestet**
-*   **In Betrieb (nicht editierbar)**
-*   **Defekt**
-*   **Außer Betrieb (nicht editierbar)**
-*   **In Reparatur**
-*   **Aus Reparatur geliefert**
-*   **Gelagert**
-*   **Verschrottet**
-*   **i-doit Status (nicht editierbar)**
-*   **Template (nicht editierbar)**
+-   **Geplant**
+-   **Bestellt**
+-   **Geliefert**
+-   **Montiert**
+-   **Getestet**
+-   **In Betrieb (nicht editierbar)**
+-   **Defekt**
+-   **Außer Betrieb (nicht editierbar)**
+-   **In Reparatur**
+-   **Aus Reparatur geliefert**
+-   **Gelagert**
+-   **Verschrottet**
+-   **i-doit Status (nicht editierbar)**
+-   **Template (nicht editierbar)**
 
 Der **CMDB-Status** kann in den Objektlisten als Spalte dargestellt werden, um möglichst schnell den Soll-Zustand eines dokumentierten Objekts zu recherchieren.
 
 [![cmdb-status](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/1-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/1-lud.png)
 
 !!! success "Planung"
-
     Durch das Abbilden des Lebenszyklus ist es möglich, _i-doit_ für die Planung einzusetzen. Ob nun eine Anschaffung, ein größeres Update oder ein Umzug ansteht - die IT-Dokumentation ist immer mit dabei und bietet valide Aussagen.
 
 ### CMDB-Status pro Objekt angeben
@@ -38,38 +36,36 @@ Um den gesamten Lebenszyklus eines Objekts abzubilden, wird pro [Objekt](../glos
 
 ### CMDB-Status verwalten
 
-Das Hinzufügen, Ändern oder Löschen eines **CMDB-Status** erfolgt über **Verwaltung → CMDB Einstellungen → CMDB-Status**. Pro **CMDB-Status** werden folgende Angaben benötigt:
+Das Hinzufügen, Ändern oder Löschen eines **CMDB-Status** erfolgt über **Verwaltung → Vordefinierte Inhalte → CMDB-Status**. Pro **CMDB-Status** werden folgende Angaben benötigt:
 
-*   Eindeutige Bezeichnung bzw. [Sprachkonstante (zur Übersetzung)](../administration/mehrsprachigkeit-und-uebersetzungen.md)
-*   Eindeutige Konstante (beispielsweise für die Nutzung der [API](../i-doit-pro-add-ons/api/index.md) hilfreich)
-*   Farbe (wird in Objektlisten, der **Allgemein**\-Kategorie, im [**CMDB-Explorer**](../auswertungen/cmdb-explorer/index.md) und an vielen anderen Stellen verwendet)
+-   Eindeutige Bezeichnung bzw. [Sprachkonstante (zur Übersetzung)](../administration/mehrsprachigkeit-und-uebersetzungen.md)
+-   Eindeutige Konstante (beispielsweise für die Nutzung der [API](../i-doit-pro-add-ons/api/index.md) hilfreich)
+-   Farbe (wird in Objektlisten, der **Allgemein**\-Kategorie, im [**CMDB-Explorer**](../auswertungen/cmdb-explorer/index.md) und an vielen anderen Stellen verwendet)
 
 [![cmdb-status-verwalten](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)
 
-Lebenszyklus der IT-Dokumentation
----------------------------------
+## Lebenszyklus der IT-Dokumentation
 
 Neben den zu dokumentierenden Objekten kann auch die Dokumentation an sich einem Lebenszyklus unterstellt werden. Wird ein Dokumentations-Artefakt nicht mehr benötigt, kann es archiviert werden. Ebenso kann ein Artefakt als gelöscht markiert werden, damit eine für die IT-Dokumentation verantwortliche Person dieses Artefakt unwiderruflich über **Purge** löscht.
 
 !!! success "Lösch-Prozess"
-
     Für größere Umgebungen lohnt es sich, für das Archivieren und Löschen von Dokumentations-Artefakten die nötigen Prozesse zu etablieren. Wann wird archiviert? Wer darf die IT-Dokumentation bereinigen? Solche Fragen sollten im Team unbedingt geklärt werden. Um lediglich bestimmten Benutzern oder Benutzergruppen das Recht zum Archivieren oder unwiderruflichen Löschen einzuräumen, bietet das Rechtesystem von _i-doit_ die nötigen Einstellungen.
 
 ### Zustände
 
-So gut wie alle Dokumentations-Artefakte (Objekte, Kategorie-Einträge, Werte in [**Dialog+**\-Feldern](dialog-admin.md) u.v.m.) erhalten einen Zustand:
+So gut wie alle Dokumentations-Artefakte (Objekte, Kategorie-Einträge, Werte in [**Dialog+**-Feldern](dialog-admin.md) u.v.m.) erhalten einen Zustand:
 
-*   **Normal**: Beim gewöhnlichen Arbeiten (anlegen, ändern) erhält jedes Artefakt diesen Zustand und kann überall verwendet werden.
-*   **Archiviert**: Das Artefakt wird aus der IT-Dokumentation ausgeblendet. Die weitere Verwendung, beispielsweise Verknüpfungen sind nicht mehr möglich.
-*   **Gelöscht**: Das Artefakt soll unwiderruflich gelöscht (**Purge**) werden, existiert aber noch vollständig mit allen Beziehungen in der IT-Dokumentation. Ansonsten gleicht dieser Zustand dem von **Archiviert**.
+-   **Normal**: Beim gewöhnlichen Arbeiten (anlegen, ändern) erhält jedes Artefakt diesen Zustand und kann überall verwendet werden.
+-   **Archiviert**: Das Artefakt wird aus der IT-Dokumentation ausgeblendet. Die weitere Verwendung, beispielsweise Verknüpfungen sind nicht mehr möglich.
+-   **Gelöscht**: Das Artefakt soll unwiderruflich gelöscht (**Purge**) werden, existiert aber noch vollständig mit allen Beziehungen in der IT-Dokumentation. Ansonsten gleicht dieser Zustand dem von **Archiviert**.
 
 Der Zyklus sieht vor, dass jedes Dokumentations-Artefakt den Zustand **Normal** erhält. Später folgt **Archiviert**, danach **Gelöscht**. Eine Wiederherstellung in den vorherigen Zustand ist jederzeit möglich.
 
 Neben diesen drei Zuständen existieren bei Objekten Sonderfälle:
 
-*   **Unfertig**: Wird ein neues Objekt erstellt, aber nicht gespeichert, erhält es diesen Zustand. Dies passiert beispielsweise, wenn ein Objekt zwar neu angelegt, aber der Button **Speichern** nicht gedrückt wird. Diese Objekte lassen sich nur über einen Report aufspüren und dann weiter verwenden. Daher sollten diese regelmäßig gelöscht werden. Dies kann über **Verwaltung → Systemtools → Cache / Datenbank → Unfertige Objekte entfernen***gemacht werden. Alternativ kann dies auch automatisch geschehen. Mehr dazu finden Sie weiter unten in diesem Artikel.
-*   **Template**: Ein Objekt kann als [Vorlage](../effizientes-dokumentieren/templates.md) für weitere Objekte fungieren.
-*   **Änderungsvorlage**: Ein Objekt kann als Änderungsvorlage für die [Massenänderung](../effizientes-dokumentieren/massenaenderung.md) fungieren.
+-   **Unfertig**: Wird ein neues Objekt erstellt, aber nicht gespeichert, erhält es diesen Zustand. Dies passiert beispielsweise, wenn ein Objekt zwar neu angelegt, aber der Button **Speichern** nicht gedrückt wird. Diese Objekte lassen sich nur über einen Report aufspüren und dann weiter verwenden. Daher sollten diese regelmäßig gelöscht werden. Dies kann über **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung → Unfertige Objekte entfernen** gemacht werden. Alternativ kann dies auch automatisch geschehen. Mehr dazu finden Sie weiter unten in diesem Artikel.
+-   **Template**: Ein Objekt kann als [Vorlage](../effizientes-dokumentieren/templates.md) für weitere Objekte fungieren.
+-   **Änderungsvorlage**: Ein Objekt kann als Änderungsvorlage für die [Massenänderung](../effizientes-dokumentieren/massenaenderung.md) fungieren.
 
 Soll ein Dokumentations-Artefakt unwiderruflich gelöscht werden, folgt nach der Markierung als **Gelöscht** die Funktion **Purge**. Dies ist allerdings kein Zustand, denn alle Daten (auch der bisherige Zustand und jegliche Logbuch-Einträge) gehen dabei verloren, sodass nicht mehr nachvollzogen werden kann, dass dieses Objekt jemals existiert hat. Diese Funktion sollte also mit Bedacht verwendet werden.
 
@@ -101,14 +97,14 @@ Fast immer sind unfertige Objekte unerwünscht, denn sie sind nicht sichtbar und
 
 #### Manuelles Löschen
 
-Über die Web GUI lassen sich diese Artefakte löschen. Die entsprechende Funktionalität befindet sich unter **Verwaltung → Systemtools → Cache / Datenbank → Objekte** bzw. **Kategorien**. Nach dem Drücken eines der angebotenen Buttons wird eine Meldung mit der Anzahl der zu löschenden Objekte oder Kategorie-Einträge angezeigt und nach dem Löschen am unteren Ende der Seite eine Statistik angezeigt, wie viele Objekte bzw. Kategorie-Einträge gelöscht wurden.
+Über die Web GUI lassen sich diese Artefakte löschen. Die entsprechende Funktionalität befindet sich unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung → Objekte** bzw. **Kategorien**. Nach dem Drücken eines der angebotenen Buttons wird eine Meldung mit der Anzahl der zu löschenden Objekte oder Kategorie-Einträge angezeigt und nach dem Löschen am unteren Ende der Seite eine Statistik angezeigt, wie viele Objekte bzw. Kategorie-Einträge gelöscht wurden.
 
 #### Automatisches Löschen
 
 Die i-doit [Console](../automatisierung-und-integration/cli/index.md) bietet ebenfalls eine Möglichkeit, gewisse unerwünschte Objekte unwiderruflich zu löschen.  Ein Beispiel für einen Aufruf sowie die möglichen Parameter können im [dazugehörigen Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) für die Option **system-objectcleanup** eingesehen werden.
 
 ```shell
-    sudo -u www-data console.php system-objectcleanup -u admin -p admin -i 1 --objectStatus 3
+sudo -u www-data console.php system-objectcleanup -u admin -p admin -i 1 --objectStatus 3
 ```
 
 Der Automatismus besteht darin, den Aufruf per Cronjob regelmäßig auszuführen.
