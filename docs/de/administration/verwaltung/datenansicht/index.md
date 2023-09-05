@@ -1,6 +1,6 @@
 # Datenansicht
 
-## Die Datensicht ist aufgeteilt in folgende Unterpunkte
+## Die Datensicht ist in die folgenden Unterpunkte aufgeteilt:
 
 -   [Objekt browser konfigurieren](./objekt-browser-konfigurieren.md)
 -   [Attribute verstecken](./attribute-verstecken.md)
