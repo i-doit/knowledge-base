@@ -43,13 +43,15 @@ Damit ein Objekt - beispielsweise ein Raum - als Standort für andere Objekte de
 
 ## Standort-Pfad konfigurieren
 
-Der Standortpfad kann pro Mandant konfiguriert werden.
+Der Standortpfad kann unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name]** konfiguriert werden.
 
 | Option | Datentyp | Standardwert | Beschreibung |
 | --- | --- | --- | --- |
-| **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Oberflächendarstellung → String zur Separation von Standorten** | Zeichenkette | **>** | Durch welche Zeichenfolge sollen die Objekte eines Standortpfads voneinander separiert werden? |
-| **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Maximallänge von Zeichenfolgen → Objektbezeichnung im Standortpfad** | Positive Ganzzahl | **16** | Wie viele Zeichen darf der Objekt-Titel pro Objekt innerhalb eines Standortpfads haben? Zeichen darüber hinaus werden abgeschnitten. |
-| **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Maximallänge von Zeichenfolgen → Kompletter Standortpfad** | Positive Ganzzahl | **40** | Wie viele Zeichen darf der vollständige Standortpfad haben? Länge Zeichenketten werden beschnitten. |
+| **Oberflächendarstellung → String zur Separation von Standorten** | Zeichenkette | **>** | Durch welche Zeichenfolge sollen die Objekte eines Standortpfads voneinander separiert werden? |
+| **Maximallänge von Zeichenfolgen → Objektbezeichnung im Standortpfad** | Positive Ganzzahl | **16** | Wie viele Zeichen darf der Objekt-Titel pro Objekt innerhalb eines Standortpfads haben? Zeichen darüber hinaus werden abgeschnitten. |
+| **Maximallänge von Zeichenfolgen → Kompletter Standortpfad** | Positive Ganzzahl | **40** | Wie viele Zeichen darf der vollständige Standortpfad haben? Länge Zeichenketten werden beschnitten. |
+| **Display Limits -> Limit der Tiefe des Standortpfades** | Positive Ganzzahl | **5** | Wie viele Standorte im Standortpfad angezeigt werden sollen |
+| **Oberflächendarstellung → Orientierung des Standortpfades** | Dropdown | Linksbündig (default)<br>Rechtsbündig |
 
 ## Hardware in Rack positionieren
 

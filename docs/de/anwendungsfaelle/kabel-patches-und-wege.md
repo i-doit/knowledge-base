@@ -14,32 +14,19 @@ Wie in i-doit üblich findet die Dokumentation der Verkabelung mittels Objekten 
 
 Jeder [Objekttyp](../grundlagen/struktur-it-dokumentation.md) kann mit dem Kategorie-Ordner **Verkabelung** [konfiguriert](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) werden. Dadurch erhalten Objekte von diesen ausgewählten Typen die Kategorien **Anschlüsse** und **Schnittstelle**.
 
-Der Kategorie-Ordner fungiert nicht nur als Klammer für die genannten Unterkategorien, sondern bietet auch einige interessante Visualisierungen von Verkabelungen:
-
-| Tab | Beschreibung |
-| --- | --- |
-| **Verkabelungsweg: Liste** | Jeder Anschluss (siehe Kategorie **Anschlüsse**) mit einem vollständigen Verkabelungsweg wird aufgelistet. |
-| **Verkabelungsweg: Grafische Ansicht** | Im Gegensatz zur oben genannten Listenansicht werden bei allen Objekte zusätzlich deren Bilder angezeigt. |
-| **Verkabelungsweg: Baumansicht (Verschachtelung)** | Zu jedem Anschluss werden der Verkabelungsweg als Baumstruktur angezeigt. |
-
 Der Kategorie-Ordner eignet sich für alle Objekte, die einen aktiven oder passiven Part bei der Verkabelungen beitragen.
 
 [![Verkabelungsweg Liste](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/1-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/1-kpuw.png)
 
-[![Verkabelungsweg Grafische Ansicht](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/2-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/2-kpuw.png)
-
-[![Verkabelungsweg Baumansicht](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/3-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/3-kpuw.png)
-
-## Kategorie **Anschlüsse**
+### Kategorie **Anschlüsse**
 
 Verfügt das ausgewählte Objekt über einen physischen Anschluss jeglicher Art, kann dieser in der Kategorie **Anschlüsse** dokumentiert werden.
 
-Jeder Anschluss ist entweder als **Eingang** oder als **Ausgang** definiert. Zwischen Ein- und Ausgängen kann eine n-zu-n-Beziehung hergestellt werden:
+Jeder Anschluss ist entweder als **Eingang** oder als **Ausgang** definiert.
 
 -   Verbindung zwischen einem Eingang und einem Ausgang
--   Verbindung zwischen einem Eingang und mehreren Ausgängen
 
-Diese Verbindung zwischen Ein- und Ausgang ist optional und nur unter bestimmten Bedingungen sinnvoll. Beispielsweise hat ein Patchpanel die Möglichkeit zum Auflegen von Kabeln, die in Ports münden. Hier entsteht also eine 1-zu-1-Beziehung zwischen Ein- und Ausgang.
+Diese Verbindung zwischen Ein- und Ausgang ist optional und nur unter bestimmten Bedingungen sinnvoll. Beispielsweise hat ein Patchpanel die Möglichkeit zum Auflegen von Kabeln, die in Ports münden. Hier entsteht also eine Beziehung zwischen Ein- und Ausgang.
 
 Die Kategorie **Anschlüsse** wird durch weitere Kategorien automatisch mit Einträgen versorgt:
 
@@ -50,7 +37,7 @@ Die Kategorie **Anschlüsse** wird durch weitere Kategorien automatisch mit Eint
 
 [![Anschlüsse](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/4-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/4-kpuw.png)
 
-## Kategorie **Schnittstelle**
+### Kategorie **Schnittstelle**
 
 Die Kategorie Schnittstelle dient zum Anlegen weiterer Verbindungen, die nicht die Netzwerk- oder Stromverkabelung betreffen. Dies könnten Anschlüsse an Peripherie-Geräten wie Monitore über HDMI oder Drucker über USB sein.
 
@@ -62,13 +49,13 @@ Die Eigenschaften eines Kabels werden in mehreren Kategorien definiert, die im F
 
 [![Kabel](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/5-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/5-kpuw.png)
 
-## Kategorie-Ordner **Kabelverbindung**
+### Kategorie-Ordner **Kabelverbindung**
 
 Der Kategorie-Ordner **Kabelverbindung** enthält die Kategorie **Kabel** und wird daher typischerweise dem Objekttyp **Kabel** zugeordnet. Der Ordner selbst zeigt an, an was das Kabel angeschlossen ist.
 
 [![Kategorie-Ordner](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/6-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/6-kpuw.png)
 
-## Kategorie **Kabel**
+### Kategorie **Kabel**
 
 Die wesentlichen Eigenschaften eines Kabels werden in der Kategorie **Kabelverbindung → Kabel** festgehalten:
 
@@ -80,9 +67,7 @@ Die wesentlichen Eigenschaften eines Kabels werden in der Kategorie **Kabelverbi
 | **Belegung** | Wie viele Adern/Fasern enthält das Kabel? |
 | **Maximale Anzahl an Fasern/Adern** | Wie viele Adern/Fasern dürfen maximal genutzt werden? |
 
-[![Kategorie Kabel](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/7-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/7-kpuw.png)
-
-## Kategorie **Faser/Ader**
+### Kategorie **Faser/Ader**
 
 Wer bis ins kleinste Detail dokumentieren möchte/muss, wird die Kategorie Faser/Ader lieben. Für jede Faser eines Glasfaserkabels bzw. jede Ader eines Kupferkabels können weitere Eigenschaften hinterlegt werden:
 
@@ -95,37 +80,11 @@ Wer bis ins kleinste Detail dokumentieren möchte/muss, wird die Kategorie Faser
 | **RX** | Leitung zum Empfang von Daten |
 | **TX** | Leitung zum Senden von Daten |
 
-[![Kategorie Faser/Ader](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/8-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/8-kpuw.png)
-
 ## Objekttyp **Patchfeld**
 
-Patchpanels werden in i-doit als Objekte vom Typ **Patchfeld** dokumentiert. Dieser passiven Komponente ist typischerweise der Kategorie-Ordner **Verkabelung** zu geordnet. In der Kategorie **Verkabelung → Anschlüsse** werden die Ports definiert: Ein **Eingang** repräsentiert den Netzwerk-Port. Ein **Ausgang** repräsentiert das aufgelegte Kabel. Ein- und Ausgang werden miteinander verbunden.
+Patchpanel werden in i-doit als Objekte vom Typ **Patchfeld** dokumentiert. Dieser passiven Komponente ist typischerweise der Kategorie-Ordner **Verkabelung** zu geordnet. In der Kategorie **Verkabelung → Anschlüsse** werden die Ports definiert: Ein **Eingang** repräsentiert den Netzwerk-Port. Ein **Ausgang** repräsentiert das aufgelegte Kabel. Ein- und Ausgang werden miteinander verbunden.
 
-[![Patchfeld](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/9-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/9-kpuw.png)
-
-Zum schnellen Verbindung von Patchfeldern eignet sich der **Verkabelungsbrowser** (siehe unten).
-
-## Objekttyp **Kabeltrasse**
-
-Kabeltrassen sind in Server-Räumen und Rechenzentren üblich. Sie bündeln mehrere Kabel und sorgen für geordnete Wege. Der Objekttyp **Kabeltrasse** enthält daher die Kategorien **Standort** und **Räumlich zugeordnete Objekte**, um Kabel aufzunehmen. Den Objekten vom Typ **Kabel** wiederum ist die Kategorie **Standort** zugeordnet.
-
-[![Kabeltrasse](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/10-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/10-kpuw.png)
-
-## Objekttyp **Leerrohr**
-
-Der Objekttyp **Leerrohr** verhält sich analog zur **Kabeltrasse** (siehe oben).
-
-[![Leerrohr](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/11-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/11-kpuw.png)
-
-## Einzelverkabelungen
-
-Der Kategorie-Ordner Verkabelung enthält bereits mehrere Visualisierungen. Daneben befindet sich unter **Add-ons → Verkabelungsansicht** eine weitere Ansicht mit zusätzlichen Funktionen. Nach Auswahl eines verkabelten Objekts werden alle ein- und abgehenden Verkabelungswege dargestellt. Zusätzlich können Namen der Anschlüsse und der Kabel ein- oder ausgeblendet werden. Über eine Filterung werden nur ausgewählte Wege dargestellt.
-
-Der Typ kann über Checkboxen bei mehreren Anschlüssen gleichzeitig geändert werden.
-
-Die Verkabelungswege können im CSV-Format exportiert werden.
-
-[![Einzelverkabelungen](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/12-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/12-kpuw.png)
+Zum schnellen Verbinden von Patchfeldern eignet sich der [Verkabelungsbrowser](#Verkabelungsbrowser).
 
 ## Verkabelungsbrowser
 
@@ -139,17 +98,15 @@ Es können jeweils die rechts dargestellten Anschlüsse des ersten Objekts und d
 
 Über den Button **Nächstes Objekt laden** wird einem bestehender Verkabelungsweg nachgegangen.
 
-Zum Verbinden von je einem Anschluss zwischen den beiden Objekten wird die Checkboxen der Anschlüsse ausgewählt. Über die oberste Checkbox werden alle verfügbaren Anschlüsse ausgewählt. Ein Bereich von Anschlüssen kann mit der **Shift**\-Taste selektiert werden. Wichtig ist, dass die Anzahl der Anschlüsse des ersten Objekts mit der Anschluss der Anschlüsse des zweiten Objekts übereinstimmen.
+Zum Verbinden von je einem Anschluss zwischen den beiden Objekten wird die Checkboxen der Anschlüsse ausgewählt. Über die oberste Checkbox werden alle verfügbaren Anschlüsse ausgewählt. Ein Bereich von Anschlüssen kann mit der **Shift**-Taste selektiert werden. Wichtig ist, dass die Anzahl der Anschlüsse des ersten Objekts mit der Anschluss der Anschlüsse des zweiten Objekts übereinstimmen.
 
 Über den Button **Anschlüsse verbinden** werden die ausgewählten Anschlüsse beider Objekte miteinander verbunden. Die Logik sieht vor, von oben nach unten die jeweils nächsten ausgewählten Anschlüsse zu verbinden, bis das Listenende unten erreicht ist.
 
-i-doit sieht bei jedem neu verbundenen Anschluss ein **Kabel**\-Objekt vor. Über die Checkbox **Automatische Verkabelung** werden neue **Kabel**\-Objekte ohne Rückfrage erstellt. Andernfalls ist für jede Verbindung ein bestehendes **Kabel**-Objekt in einem neuen Fenster auszuwählen.
+i-doit sieht bei jedem neu verbundenen Anschluss ein **Kabel**-Objekt vor. Über die Checkbox **Automatische Verkabelung** werden neue **Kabel**-Objekte ohne Rückfrage erstellt. Andernfalls ist für jede Verbindung ein bestehendes **Kabel**-Objekt in einem neuen Fenster auszuwählen.
 
 Über den Button **Kabel ändern** kann für die selektierten Anschlüsse jeweils ein alternatives Kabel-Objekt ausgewählt werden.
 
 Der Button **Anschlüsse lösen** bewirkt, dass die Verbindung von den ausgewählten Anschlüssen unwiderruflich gelöscht werden.
-
-[![Verkabelungsbrowser](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/14-kpuw.png)](../assets/images/de/anwendungsfaelle/kabel-patches-und-wege/14-kpuw.png)
 
 ## Verkabelungsimport
 
