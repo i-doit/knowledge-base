@@ -5,7 +5,7 @@
 
 ## Cache
 
-| Button                     | Description                |
+| Button                     | Beschreibung               |
 | -------------------------- | -------------------------- |
 | Kompletten Cache leeren    | Kompletten Cache leeren    |
 | System Cache leeren        | System Cache leeren        |
@@ -16,7 +16,7 @@
 
 ## Datenbank
 
-| Button                                                | Description                                           |
+| Button                                                | Beschreibung                                          |
 | ----------------------------------------------------- | ----------------------------------------------------- |
 | Tabellen optimieren                                   | Tabellen optimieren                                   |
 | Tabellen defragmentieren                              | Tabellen defragmentieren                              |
@@ -33,13 +33,13 @@
 
 ## Export
 
-| Button           | Description                                            |
+| Button           | Beschreibung                                           |
 | ---------------- | ------------------------------------------------------ |
 | "mysqldump" Pfad | Verzeichnispfad mit Auswahl der exportierten Datenbank |
 
 ## Objekte
 
-| Button                        | Description                   |
+| Button                        | Beschreibung                  |
 | ----------------------------- | ----------------------------- |
 | Unfertige Objekte entfernen   | Unfertige Objekte entfernen   |
 | Archivierte Objekte entfernen | Archivierte Objekte entfernen |
@@ -47,7 +47,7 @@
 
 ## Kategorien
 
-| Button                                   | Description                              |
+| Button                                   | Beschreibung                             |
 | ---------------------------------------- | ---------------------------------------- |
 | Unfertige Kategorie-Einträge entfernen   | Unfertige Kategorie-Einträge entfernen   |
 | Archivierte Kategorie-Einträge entfernen | Archivierte Kategorie-Einträge entfernen |
@@ -55,7 +55,7 @@
 
 ## Dialog
 
-| Button                                | Description                           |
+| Button                                | Beschreibung                          |
 | ------------------------------------- | ------------------------------------- |
 | Unfertige Dialog-Einträge entfernen   | Unfertige Dialog-Einträge entfernen   |
 | Archivierte Dialog-Einträge entfernen | Archivierte Dialog-Einträge entfernen |
@@ -64,7 +64,7 @@
 
 ## Andere
 
-| Button                                                    | Description                                               |
+| Button                                                    | Beschreibung                                              |
 | --------------------------------------------------------- | --------------------------------------------------------- |
 | Migriere Datenbank Objekte in Kategorien                  | Migriere Datenbank Objekte in Kategorien                  |
 | MSuche nach Teil-Strings in Objektlisten aktivieren       | Suche nach Teil-Strings in Objektlisten aktivieren        |

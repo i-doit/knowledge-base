@@ -1,6 +1,6 @@
 # Vordefinierte Inhalte
 
-## Der vordefinierte Inhalt ist in folgende Unterpunkte gegliedert
+## Der vordefinierte Inhalt ist in die folgenden Unterpunkte aufgeteilt:
 
 -   [CMDB Status](./cmdb-status.md)
 -   [Kontaktzuweisungsrollen](./kontaktzuweisungsrollen.md)

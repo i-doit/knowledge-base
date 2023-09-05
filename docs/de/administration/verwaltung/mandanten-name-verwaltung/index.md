@@ -19,7 +19,7 @@ In der Lizenzübersicht findest du Informationen über deine Lizenz, das dokumen
 | Dokumentierte Objekte       | Wert                                                       |
 | Freie Objekte               | Wert                                                       |
 | CMDB Referenzen             | Wert                                                       |
-| Letztes i-doit Update       | Date time                                                  |
+| Letztes i-doit Update       | Datum Uhrzeit                                              |
 | Version                     | Wert                                                       |
 | Objektzähler nach Objekttyp | Wert                                                       |
 | Licensed Add-ons            | Titel der installierten Add-ons                            |

@@ -8,7 +8,7 @@ Zu erreichen ist die Verwaltung über das Zahnrad-Icon in deinem User Bereich, d
 
 [![Wo finde ich die Verwaltung](../../assets/images/de/administration/verwaltung/verwaltung.png)](../../assets/images/de/administration/verwaltung/verwaltung.png)
 
-## Die Verwaltung ist in die folgenden Unterbereiche unterteilt
+## Die Verwaltung ist in die folgenden Unterpunkte aufgeteilt:
 
 -   [Benutzereinstellungen](benutzereinstellungen/index.md)
 -   [\[Mandanten-Name\] Verwaltung](mandanten-name-verwaltung/index.md)
