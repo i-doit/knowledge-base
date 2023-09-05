@@ -2,9 +2,9 @@
 
 Neben den Standard-Kategorien in i-doit können eigene (benutzerdefinierte) [Kategorien](struktur-it-dokumentation.md) erstellt werden, um zusätzliche [Attribute](struktur-it-dokumentation.md) zu dokumentieren, die in den Standard-Kategorien nicht enthalten sind.
 
-Konfiguration der Kategorie
+## Konfiguration der Kategorie
 
-Die Konfiguration der benutzerdefinierten Kategorien ist unter **Verwaltung → CMDB Einstellungen → Benutzerdefinierte Kategorien** zu finden.Über den Button **Neu** wird eine benutzerdefinierte Kategorie erzeugt. Existieren bereits benutzerdefinierte Kategorien, können diese nachträglich bearbeitet werden.
+Die Konfiguration der benutzerdefinierten Kategorien ist unter **Verwaltung → Datenstruktur → Benutzerdefinierte Kategorien** zu finden.Über den Button **Neu** wird eine benutzerdefinierte Kategorie erzeugt. Existieren bereits benutzerdefinierte Kategorien, können diese nachträglich bearbeitet werden.
 
 [![benutzerdefinierte-kategorien](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/1-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/1-bk.png)
 
@@ -86,7 +86,6 @@ Die Reihenfolge der erstellten Attribute kann über die schraffierten Flächen a
 [![benutzerdefinierte-kategorien-7](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/7-bk.gif)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/7-bk.gif)
 
 !!! attention "Achtung!"
-
     Sobald die Kategorie in Verwendung ist, ist das Ändern von bestehenden Feldtypen nicht mehr möglich, um Datenverlust zu vermeiden.<br>
     Sollten Felder in der Konfiguration entfernt werden, kann man auf deren Inhalte nicht mehr zugreifen.<br>
     Anschließend müssen die Attribute über die [Systemtools](../administration/verwaltung/systemtools.md) neu indiziert werden.
@@ -111,7 +110,6 @@ Es ist möglich, die technischen Schlüssel für jedes Feld zu ändern, indem Si
 Jetzt können Sie den Schlüssel ändern. Der Schlüssel wird automatisch überprüft, bevor Sie den neuen Wert speichern können.
 
 !!! warning "Achtung!"
-
     Das ändern eines Schlüssels führt zu einer Migration der hinterlegten Daten zum neuen Schlüssel<br>
     Der Schlüssel muss aus den Zeichen **a-z**, **0-9** und **_** bestehen.<br>
     Der Schlüssel muss mindestens **einen Buchstaben beinhalten**.<br>
