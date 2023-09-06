@@ -9,4 +9,3 @@ An welchen Schrauben kann man drehen, um auch die letzten Feinheiten von i-doit 
 -   [Kundenportal](kundenportal.md)
 -   [Troubleshooting](troubleshooting/index.md)
 -   [Hotfixes](hotfixes/index.md)
--   [Systemeinstellungen (Verwaltung)](systemeinstellungen/index.md)
