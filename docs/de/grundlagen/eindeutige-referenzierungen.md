@@ -17,7 +17,7 @@ Beim [Setup von i-doit](../installation/manuelle-installation/setup.md) kann bes
 
 Die Objekt-ID findet in der Generierung der URIs eine hohe Bedeutung. Anhand der ID lassen sich Objekte eindeutig per Link aufrufen. Der Variablenname lautet objID. Das Namensschema:
 
-<https://i-doit.example.net/i-doit/?objID=1000>
+<https://demo.i-doit.com/?objID=9>
 
 Objekt-IDs werden vor allem zu internen Zwecken verwendet, können aber auch dem Benutzer oder Dritt-Systemen sehr nützlich sein. Die IDs sind beispielsweise bei [API-Zugriffen](../i-doit-pro-add-ons/api/index.md) essentiell.
 

@@ -1,6 +1,7 @@
 # Objekt-Beziehungen
 
-[Objekte](struktur-it-dokumentation.md) stehen in i-doit in der Regel nicht für sich allein, sondern in Relation zueinander. Server stehen in Racks, Admins betreuen Server, auf einem Server läuft ein Betriebssystem mit Software, … Die grundsätzlichen Konzepte der Objekt-Beziehungen erläutern wir in diesem Artikel.
+[Objekte](struktur-it-dokumentation.md) stehen in i-doit in der Regel nicht für sich allein, sondern in Relation zueinander.<br>
+Server stehen in Racks, Admins betreuen Server, auf einem Server läuft ein Betriebssystem mit Software, … Die grundsätzlichen Konzepte der Objekt-Beziehungen erläutern wir in diesem Artikel.
 
 ## Beziehungsarten
 
@@ -76,9 +77,9 @@ Beispiel:
 
 Das Beziehungs-Objekt ist nötig, um Eigenschaften der Beziehung als [Attribute](struktur-it-dokumentation.md) zu speichern. Dazu gehören unter anderem:
 
--   **Beziehungsart**: siehe oben
--   **Gewichtung**: siehe unten
--   **Service** (optional): Die Objekt-Beziehung kann direkt einem Service zugewiesen werden.
+-   **Beziehungsart**:<br> siehe oben
+-   **Gewichtung**:<br> siehe unten
+-   **Service** (optional):<br> Die Objekt-Beziehung kann direkt einem Service zugewiesen werden.
 
 Wie bereits ersichtlich besteht eine Objekt-Beziehung aus einem Master- und einem Slave-Objekt. Es handelt sich also um eine gerichtete Beziehung. Das Slave-Objekt ist abhängig vom Master-Objekt.
 
@@ -130,8 +131,8 @@ Eine Auflistung aller gleichgerichteter Beziehungen befindet sich unter **Extras
 
 In [benutzerdefinierten Kategorien](benutzerdefinierte-kategorien.md) können Objekt-Beziehungen dokumentiert werden. Hierbei ist zwischen zwei Feldtypen zu unterscheiden:
 
--   **Objekt-Browser**: Es wird kein Beziehungs-Objekt erzeugt. Die hier zu dokumentierende Beziehung zwischen zwischen zwei Objekten wird in der Kategorie Beziehungen nicht aufgelistet und der [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md) wertet diese Beziehung nicht aus.
--   **Objekt-Beziehung**: Als **Zusatz** kann hier nur eine implizite Beziehungsart angegeben werden. Explizite Beziehungen werden hier nicht angezeigt.
+-   **Objekt-Browser**:<br> Es wird kein Beziehungs-Objekt erzeugt. Die hier zu dokumentierende Beziehung zwischen zwischen zwei Objekten wird in der Kategorie Beziehungen nicht aufgelistet und der [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md) wertet diese Beziehung nicht aus.
+-   **Objekt-Beziehung**:<br> Als **Zusatz** kann hier nur eine implizite Beziehungsart angegeben werden. Explizite Beziehungen werden hier nicht angezeigt.
 
 !!! success "Objekt-Browser oder -Beziehung?"
     Wie bei den impliziten und expliziten Beziehungen stellt sich hier ebenfalls die Frage: Welcher Feldtyp ist besser? Auch hier fällt die Antwort wieder eindeutig aus: Die **Objekt-Beziehung** hat einen zusätzlichen Nutzen und ist daher dem Feldtyp **Objekt-Browser** zu bevorzugen.

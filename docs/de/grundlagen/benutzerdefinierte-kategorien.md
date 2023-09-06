@@ -28,52 +28,52 @@ Um auf die Kategorie bei Abfragen (zum Beispiel in selbst geschriebenen [Reports
 
 Um eine Kategorie auszuprägen, können beliebig viele Attribute über den Button **Mehrere Felder hinzufügen** hinzugefügt werden. Hier stehen folgende [Feldtypen](attributfelder.md) zur Auswahl:
 
-*   **Checkbox**
+-   **Checkbox**<br>
     Eine Checkbox die markiert werden kann
-*   **Dateibrowser**
+-   **Dateibrowser**<br>
     Eine Datei referenzieren
-*   **Datum und Uhrzeit**
+-   **Datum und Uhrzeit**<br>
     Ein Feld zum Eintragen eines Datums und/oder einer Uhrzeit; innerhalb der Kategorie steht hier ein Kalender zur Verfügung, mit dem die Auswahl ermöglicht wird.
-*   **Dialog+**
+-   **Dialog+**<br>
     [Dialog-Plus-Felder](dialog-admin.md), die mit eigenen Werten befüllt werden können, sodass diese wiederverwendbar sind. Über den Identifier im Feld **Zusatz** kann das Dialog-Plus-Feld auch in anderen Kategorien genutzt werden, sodass dort die bereits eingetragenen Werte zur Verfügung stehen. Hierfür ist es notwendig, denselben Identifier in beiden Kategorien einzutragen.
-*   **Dialog+ (Mehrfachauswahl)**
+-   **Dialog+ (Mehrfachauswahl)**<br>
     Wie **Dialog+**, nur mit beliebig vielen Werten
-*   **HTML-Editor**
+-   **HTML-Editor**<br>
     Ein Textfeld, das einfache Textformatierungen wie zum Beispiel kursive Schrift erlaubt
-*   **Ja-Nein-Feld**
+-   **Ja-Nein-Feld**<br>
     Eine einfache Ja-oder-Nein-Auswahl
-*   **Link**
+-   **Link**<br>
     Ein Feld zur Angabe eines Hyperlinks, der innerhalb der Kategorie angeklickt werden kann und dort weiterleitet
-*   **Nur Zahlen sind erlaubt**
+-   **Nur Zahlen sind erlaubt**<br>
     Ein Feld in dem nur Zahlen eingetragen werden können.
-*   **Objekt-Beziehung**
+-   **Objekt-Beziehung**<br>
     Bei der Verwendung einer [Objektbeziehung](objekt-beziehungen.md) wird eine vollwertige Beziehung erzeugt. Das Feld **Zusatz** erlaubt die Auswahl der Beziehungsart und den damit verbundenen Beziehungstext. Diese Beziehungen sind auch im CMDB Explorer aufzufinden. Wenn möglich, ist dieser Feldtyp dem oben genannten Objekt-Browser zu bevorzugen.
-*   **Objekt-Beziehung (Mehrere Objekte)**
+-   **Objekt-Beziehung (Mehrere Objekte)**<br>
     Wie **Objekt-Beziehung**, nur mit beliebig vielen Objekten
-*   **Objekt-Browser**
+-   **Objekt-Browser**<br>
     Ein Feld zur Erzeugung einer Verknüpfung mit einem anderen Objekt. Hierbei handelt es sich nur um eine Referenzierung und nicht um eine vollwertige Beziehung. Eine solche Referenzierung wird daher nicht im CMDB Explorer erscheinen.
-*   **Objekt-Browser (Mehrere Objekte)**
+-   **Objekt-Browser (Mehrere Objekte)**<br>
     Wie **Objekt-Browser**, nur mit beliebig vielen Objekten
-*   **Report**
+-   **Report**<br>
     Zeigt einen Report an, dazu muss die ID des Report in das Zusatz Feld eingetragen werden.
-*   **Textfeld**
+-   **Textfeld**<br>
     Ein einzeiliges Textfeld zur Eingabe von Freitext
-*   **Textfeld (maskiert)**
+-   **Textfeld (maskiert)**<br>
     Ein einzeiliges Textfeld zur Eingabe von maskiertem Freitext. Der Inhalt ist nur in der Datenbank sichtbar.
-*   **Textfeld (Mehrzeilig)**
+-   **Textfeld (Mehrzeilig)**<br>
     In diesem mehrzeiligen Textfeld können längere Texte hinterlegt werden.
-*   **Datum und Uhrzeit**
+-   **Datum und Uhrzeit**<br>
     Ein Feld für Datum oder für Datum + Uhrzeit
-*   **Zeit**
+-   **Zeit**<br>
     Hier kann eine Uhrzeit zwischen 00:00 und 23:59 angegeben werden
 
 Zusätzlich sind folgende Elemente verfügbar:
 
-*   **Horizontale Linie**
+-   **Horizontale Linie**<br>
     Eine Linie zur optischen Abgrenzung von Feldern und Inhalten
-*   **HTML**
+-   **HTML**<br>
     Die Möglichkeit in der Konfiguration der Kategorie HTML-Code zu hinterlegen, der in der Kategorie interpretiert wird. Der Quellcode wird in der Konfiguration der Kategorie eingetragen und kann nicht beim Aufruf der Kategorie in der Dokumentation durch die Anwender eingetragen werden.
-*   **Javascript**
+-   **Javascript**<br>
     Die Möglichkeit in der Konfiguration der Kategorie Javascript-Code zu hinterlegen, der in der Kategorie interpretiert wird. Der Quellcode wird in der Konfiguration der Kategorie eingetragen und kann nicht beim Aufruf der Kategorie in der Dokumentation durch die Anwender eingetragen werden.
 
 Wie bei fast jeder anderen Kategorie wird bei einer benutzerdefinierten automatisch ein **Beschreibungsfeld** am Ende angehangen.
@@ -92,8 +92,8 @@ Die Reihenfolge der erstellten Attribute kann über die schraffierten Flächen a
 
 Unterhalb der Konfiguration erfolgt eine Auswertung:
 
-*   **Kategorieeinträge gesamt**: Wie oft wurde die Kategorie gespeichert? Pro Objekt werden die Einträge (bei Single-Value also einmal, bei Multi-Value pro Eintrag) zusammen gerechnet.
-*   **Gepflegte Werte**: Jedes Attribut, das ausgefüllt und gespeichert wurde, wird Objekt-übergreifend zusammen gezählt.
+-   **Kategorieeinträge gesamt**:<br> Wie oft wurde die Kategorie gespeichert? Pro Objekt werden die Einträge (bei Single-Value also einmal, bei Multi-Value pro Eintrag) zusammen gerechnet.
+-   **Gepflegte Werte**:<br> Jedes Attribut, das ausgefüllt und gespeichert wurde, wird Objekt-übergreifend zusammen gezählt.
 
 [![benutzerdefinierte-kategorien-8](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/8-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/8-bk.png)
 
@@ -114,7 +114,7 @@ Jetzt können Sie den Schlüssel ändern. Der Schlüssel wird automatisch überp
     Der Schlüssel muss aus den Zeichen **a-z**, **0-9** und **_** bestehen.<br>
     Der Schlüssel muss mindestens **einen Buchstaben beinhalten**.<br>
     Der Schlüssel **darf nicht leer** oder **länger als 64 Zeichen sein**.<br>
-    Der Schlüssel **muss einzigartig sein**.<br>
+    Der Schlüssel **muss einzigartig sein**.
 
 [![Technischen Schlüssel ändern](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/10-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/10-bk.png)
 

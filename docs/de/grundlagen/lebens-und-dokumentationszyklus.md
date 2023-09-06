@@ -55,17 +55,17 @@ Neben den zu dokumentierenden Objekten kann auch die Dokumentation an sich einem
 
 So gut wie alle Dokumentations-Artefakte (Objekte, Kategorie-Einträge, Werte in [**Dialog+**-Feldern](dialog-admin.md) u.v.m.) erhalten einen Zustand:
 
--   **Normal**: Beim gewöhnlichen Arbeiten (anlegen, ändern) erhält jedes Artefakt diesen Zustand und kann überall verwendet werden.
--   **Archiviert**: Das Artefakt wird aus der IT-Dokumentation ausgeblendet. Die weitere Verwendung, beispielsweise Verknüpfungen sind nicht mehr möglich.
--   **Gelöscht**: Das Artefakt soll unwiderruflich gelöscht (**Purge**) werden, existiert aber noch vollständig mit allen Beziehungen in der IT-Dokumentation. Ansonsten gleicht dieser Zustand dem von **Archiviert**.
+-   **Normal**:<br> Beim gewöhnlichen Arbeiten (anlegen, ändern) erhält jedes Artefakt diesen Zustand und kann überall verwendet werden.
+-   **Archiviert**:<br> Das Artefakt wird aus der IT-Dokumentation ausgeblendet. Die weitere Verwendung, beispielsweise Verknüpfungen sind nicht mehr möglich.
+-   **Gelöscht**:<br> Das Artefakt soll unwiderruflich gelöscht (**Purge**) werden, existiert aber noch vollständig mit allen Beziehungen in der IT-Dokumentation. Ansonsten gleicht dieser Zustand dem von **Archiviert**.
 
 Der Zyklus sieht vor, dass jedes Dokumentations-Artefakt den Zustand **Normal** erhält. Später folgt **Archiviert**, danach **Gelöscht**. Eine Wiederherstellung in den vorherigen Zustand ist jederzeit möglich.
 
 Neben diesen drei Zuständen existieren bei Objekten Sonderfälle:
 
--   **Unfertig**: Wird ein neues Objekt erstellt, aber nicht gespeichert, erhält es diesen Zustand. Dies passiert beispielsweise, wenn ein Objekt zwar neu angelegt, aber der Button **Speichern** nicht gedrückt wird. Diese Objekte lassen sich nur über einen Report aufspüren und dann weiter verwenden. Daher sollten diese regelmäßig gelöscht werden. Dies kann über **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung → Unfertige Objekte entfernen** gemacht werden. Alternativ kann dies auch automatisch geschehen. Mehr dazu finden Sie weiter unten in diesem Artikel.
--   **Template**: Ein Objekt kann als [Vorlage](../effizientes-dokumentieren/templates.md) für weitere Objekte fungieren.
--   **Änderungsvorlage**: Ein Objekt kann als Änderungsvorlage für die [Massenänderung](../effizientes-dokumentieren/massenaenderung.md) fungieren.
+-   **Unfertig**:<br> Wird ein neues Objekt erstellt, aber nicht gespeichert, erhält es diesen Zustand. Dies passiert beispielsweise, wenn ein Objekt zwar neu angelegt, aber der Button **Speichern** nicht gedrückt wird. Diese Objekte lassen sich nur über einen Report aufspüren und dann weiter verwenden. Daher sollten diese regelmäßig gelöscht werden. Dies kann über **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung → Unfertige Objekte entfernen** gemacht werden. Alternativ kann dies auch automatisch geschehen. Mehr dazu finden Sie weiter unten in diesem Artikel.
+-   **Template**:<br> Ein Objekt kann als [Vorlage](../effizientes-dokumentieren/templates.md) für weitere Objekte fungieren.
+-   **Änderungsvorlage**:<br> Ein Objekt kann als Änderungsvorlage für die [Massenänderung](../effizientes-dokumentieren/massenaenderung.md) fungieren.
 
 Soll ein Dokumentations-Artefakt unwiderruflich gelöscht werden, folgt nach der Markierung als **Gelöscht** die Funktion **Purge**. Dies ist allerdings kein Zustand, denn alle Daten (auch der bisherige Zustand und jegliche Logbuch-Einträge) gehen dabei verloren, sodass nicht mehr nachvollzogen werden kann, dass dieses Objekt jemals existiert hat. Diese Funktion sollte also mit Bedacht verwendet werden.
 
@@ -85,7 +85,7 @@ Eine ähnliche Funktionalität wie bei Objekten existiert bei manchen [Listen-Ka
 
 ### Vereinfachtes Löschen (Quickpurge)
 
-Soll ein Dokumentations-Artefakt unwiderruflich gelöscht werden, muss es zuvor erst archiviert und dann als gelöscht markiert werden. Um diesen Zyklus abzukürzen, bietet sich an, den Button **Quickpurge** zu aktivieren. Dies geschieht unter **Verwaltung → Systemeinstellungen → System Parameters → Quickpurge-Button aktivieren**. Auf diese Weise kann ein Objekt oder ein Kategorie-Eintrag unabhängig vom Zustand unwiderruflich gelöscht werden.
+Soll ein Dokumentations-Artefakt unwiderruflich gelöscht werden, muss es zuvor erst archiviert und dann als gelöscht markiert werden. Um diesen Zyklus abzukürzen, bietet sich an, den Button **Quickpurge** zu aktivieren. Dies geschieht unter **Verwaltung → [Mandanten-Name] Verwaltung → CMDB → Quickpurge-Button aktivieren**. Auf diese Weise kann ein Objekt oder ein Kategorie-Eintrag unabhängig vom Zustand unwiderruflich gelöscht werden.
 
 ### Auflisten aller archivierten oder als gelöscht markierten Objekte
 

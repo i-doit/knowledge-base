@@ -18,10 +18,10 @@ Klickt man im linken Navigationsbaum innerhalb des Bereichs **Dialog-Admin** auf
 
 Um einen neuen Wert anzulegen klickt man oberhalb der Übersicht auf den Button **Neu**. Es öffnet sich ein Formularfeld, das ausgefüllt werden kann:
 
--   **ID**: Jeder Wert in einem **Dialog+**-Attribut erhält von _i-doit_ einen eindeutigen Identifier. Dieser ist beispielsweise beim Umgang mit der [API](../i-doit-pro-add-ons/api/index.md) hilfreich.
--   **Bezeichnung**: Hier wird der Wert angegeben, der in der Web GUI von _i-doit_ angezeigt werden soll, wenn man das **Dialog+**-Attribut betrachtet oder editiert.
--   **Konstante**: Neben einem eindeutigen Identifier kann ein Wert eine eindeutige Konstante erhalten. Im Gegensatz zum Identifier besteht dieser in der Regel aus einem aussagekräftigen String, der bei der Verwendung der API sehr hilfreich sein kann.
--   **Status**: Jeder Wert kann einen Zustand einnehmen. Um ihn bei der Dokumentation zu verwenden, sollte der Zustand Normal (2) gewählt werden.
+-   **ID**:<br> Jeder Wert in einem **Dialog+**-Attribut erhält von _i-doit_ einen eindeutigen Identifier. Dieser ist beispielsweise beim Umgang mit der [API](../i-doit-pro-add-ons/api/index.md) hilfreich.
+-   **Bezeichnung**:<br> Hier wird der Wert angegeben, der in der Web GUI von _i-doit_ angezeigt werden soll, wenn man das **Dialog+**-Attribut betrachtet oder editiert.
+-   **Konstante**:<br> Neben einem eindeutigen Identifier kann ein Wert eine eindeutige Konstante erhalten. Im Gegensatz zum Identifier besteht dieser in der Regel aus einem aussagekräftigen String, der bei der Verwendung der API sehr hilfreich sein kann.
+-   **Status**:<br> Jeder Wert kann einen Zustand einnehmen. Um ihn bei der Dokumentation zu verwenden, sollte der Zustand Normal (2) gewählt werden.
 
 Gespeichert wird der Wert, wie gewohnt, über den Button **Speichern**.
 
