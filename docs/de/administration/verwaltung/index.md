@@ -8,7 +8,7 @@ Zu erreichen ist die Verwaltung über das Zahnrad-Icon in deinem User Bereich, d
 
 [![Wo finde ich die Verwaltung](../../assets/images/de/administration/verwaltung/verwaltung.png)](../../assets/images/de/administration/verwaltung/verwaltung.png)
 
-## Die Verwaltung ist in die folgenden Unterpunkte aufgeteilt:
+## Die Verwaltung ist in die folgenden Unterpunkte aufgeteilt
 
 -   [Benutzereinstellungen](benutzereinstellungen/index.md)
 -   [\[Mandanten-Name\] Verwaltung](mandanten-name-verwaltung/index.md)
@@ -19,3 +19,5 @@ Zu erreichen ist die Verwaltung über das Zahnrad-Icon in deinem User Bereich, d
 -   [Logbuch](logbuch/index.md)
 -   [Import und Schnittstellen](import-und-schnittstellen/index.md)
 -   [Add-ons](add-ons/index.md)
+
+![Verwaltung Liste](../../assets/images/de/administration/verwaltung/verwaltung.png){ align=left }

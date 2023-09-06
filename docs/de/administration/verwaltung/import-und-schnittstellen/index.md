@@ -1,6 +1,6 @@
 # Import und Schnittstellen
 
-## Import und Schnittstellen ist in die folgenden Unterpunkte aufgeteilt:
+## Import und Schnittstellen ist in die folgenden Unterpunkte aufgeteilt
 
 -   [Import Matching Profile](./import-matching-profile.md)
 -   [h-inventory](h-inventory.md)
