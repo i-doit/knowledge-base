@@ -37,7 +37,7 @@ Für die Anmeldung benötigt der Benutzer einen Benutzernamen und ein Passwort. 
 
 [![Lokale Anmeldung](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/4-lba.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/4-lba.png)
 
-Pro Mandant kann die minimale Länge eines Benutzerpassworts vorgegeben werden. Dies geschieht unter **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Sicherheit → Minimallänge Benutzerpasswort**. In diesem Feld wird eine positive Ganzzahl erwartet.
+Pro Mandant kann die minimale Länge eines Benutzerpassworts vorgegeben werden. Dies geschieht unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Sicherheit → Minimallänge Benutzerpasswort**. In diesem Feld wird eine positive Ganzzahl erwartet.
 
 Benutzereinstellungen
 ---------------------
@@ -49,6 +49,7 @@ Jeder Benutzer kann i-doit individuell anpassen. Viele dieser Einstellungen befi
 Auch wenn ein Benutzer kein Editier-Recht auf die oben genannte Kategorie **Personen → Login** hat, kann er über **Verwaltung → Benutzereinstellungen → Anmeldedaten** das eigene Passwort ändern.
 
 [![Anmeldedaten](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/5-lba.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/5-lba.png)
+
 ### Darstellung
 
 Die Lokalisierung und weitere Einstellung kann jeder Benutzer über **Verwaltung → Benutzereinstellungen → Darstellung** vornehmen.
@@ -70,7 +71,7 @@ Jeder Benutzer darf für jeden Objekttyp [die jeweilige Objekt-Liste individuali
 
 ### Systemeinstellungen
 
-Unter **Verwaltung → Benutzereinstellungen → Systemeinstellungen** stehen dem Benutzer verschiedene Optionen zur Verfügung, die sich auf verschiedene Features beziehen.
+Unter **Verwaltung → Benutzereinstellungen → Benutzeroberfläche** stehen dem Benutzer verschiedene Optionen zur Verfügung, die sich auf verschiedene Features beziehen.
 
 | Feature | Option | Datentyp | Beschreibung |
 | --- | --- | --- | --- |

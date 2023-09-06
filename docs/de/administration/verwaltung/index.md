@@ -20,4 +20,4 @@ Zu erreichen ist die Verwaltung über das Zahnrad-Icon in deinem User Bereich, d
 -   [Import und Schnittstellen](import-und-schnittstellen/index.md)
 -   [Add-ons](add-ons/index.md)
 
-![Verwaltung Liste](../../assets/images/de/administration/verwaltung/verwaltung.png){ align=left }
+[![Verwaltung Liste](../../assets/images/de/administration/verwaltung/verwaltung-2.png)](../../assets/images/de/administration/verwaltung/verwaltung-2.png){ align=right }

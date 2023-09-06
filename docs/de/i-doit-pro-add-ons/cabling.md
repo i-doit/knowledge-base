@@ -11,7 +11,7 @@ Konfiguration
 -------------
 
 Eine technische Konfiguration des Add-ons ist nach der [Installation](../i-doit-pro-add-ons/index.md) nicht notwendig.
-Falls die Verkabelungsansicht immer direkt geöffnet werden soll kann dies unter **Verwaltung → Benutzereinstellungen → Systemeinstellungen** konfiguriert werden.
+Falls die Verkabelungsansicht immer direkt geöffnet werden soll kann dies unter **Verwaltung → Benutzereinstellungen → Benutzeroberfläche** konfiguriert werden.
 Die Verkabelungsansicht kann auch über die Kategorie Verkabelung in Objekten aufgerufen werden.
 
 Rechtevergabe

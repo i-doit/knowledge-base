@@ -22,7 +22,6 @@ Führen die oben genannte Suchvorschläge nicht zum gewünschten Ergebnis, wird 
 [![suche-wegdruecken](../assets/images/de/effizientes-dokumentieren/suche/2-suche.png)](../assets/images/de/effizientes-dokumentieren/suche/2-suche.png)
 
 !!! success "Lesezeichen/Favoriten setzen"
-
     Jede Suche kann über die URL referenziert werden. Wird nach dem Begriff "acme" gesucht, ergibt das die URL [http://i-doit/i-doit/search?q=acme](http://i-doit/i-doit/search?q=acme). So können Suchergebnisse als Lesezeichen/Favoriten im Webbrowser gespeichert werden, um sie schneller wieder aufzurufen.
 
 Such-Modus
@@ -33,12 +32,12 @@ Für die Suche kann aus zwei Modi ausgewählt werden, die zu unterschiedlichen E
 *   **Normal**: Für die Suche wird die Indexierung (siehe unten) verwendet. Dies ist die Standard-Einstellung.
 *   **Deep Search**: Es werden nacheinander Attribute durchsucht. Diese Suche nimmt mehr Zeit in Anspruch.
 
-Der Such-Modus kann unter **Extras → Suche** nach der ersten Suche ausgewählt werden. Um einen bestimmten Modus automatisch zu verwenden, kann dieser unter **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Suche → Standard Such-Modus** ausgewählt werden.
+Der Such-Modus kann unter **Extras → Suche** nach der ersten Suche ausgewählt werden. Um einen bestimmten Modus automatisch zu verwenden, kann dieser unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Suche → Standard Such-Modus** ausgewählt werden.
 
 Automatische Deep Search
 ------------------------
 
-Sollte die Suche im voreingestellten Modus (siehe oben) kein oder ein unzureichendes Ergebnis liefern, kann automatisch die **Deep Search** ausgeführt werden. Dieses Verhalten wird unter **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Suche → Automatische DeepSearch** konfiguriert:
+Sollte die Suche im voreingestellten Modus (siehe oben) kein oder ein unzureichendes Ergebnis liefern, kann automatisch die **Deep Search** ausgeführt werden. Dieses Verhalten wird unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Suche → Automatische DeepSearch** konfiguriert:
 
 | Option | Beschreibung |
 | --- | --- |
@@ -52,20 +51,18 @@ Indexierung
 Initial wird der Suchindex automatisch beim Update und der Installation erzeugt. Nur in sehr großen Datenbanken mit mehr als 500.000 Objekten muss dieser manuell erzeugt werden, damit die Suche performant läuft und gute Ergebnisse liefert. Der Index kann unabhängig von Benutzer-Interaktionen im Hintergrund erstellt bzw. aktualisiert werden. Angestoßen wird diese Aktion über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md). Ein Beispielaufruf sowie Erklärungen zu den möglichen Parametern können dem [entsprechenden Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) entnommen werden.
 
 ```shell
-    php console.php search-index -uadmin -padmin -i 1
+php console.php search-index -uadmin -padmin -i 1
 ```
 
 Alternativ kann der Reindex auch in der i-doit Verwaltung unter **Systemtools** -> **Cache / Datenbank** über die Schaltfläche **Suche-Index** erneuern ausgeführt werden.
 
 !!! info "Speicherbedarf"
-
     Auf einem Unix-artigen Betriebssystem wird der Index pro 1 Million indizierter Datensätze ca. 500 MByte groß. Die Dauer einer Suchabfrage wird durch große Indizes in der Regel nicht erhöht.
 
 Über die Konsole suchen
 -----------------------
 
 Die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) erlaubt auch das Suchen über die Kommandozeile. Die nötige Option heißt **search**. Ein Beispielaufruf ist im Artikel zu finden, der näher auf die [Optionen und Parameter](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) der i-doit Console eingeht.
-
 
 ```shell
     sudo -u www-data php console.php search -uadmin -padmin --searchString=acme
@@ -88,41 +85,41 @@ Die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) er
 
 Über die [programmierbare Schnittstelle (API)](../i-doit-pro-add-ons/api/index.md) von i-doit kann ebenfalls in der IT-Dokumentation gesucht werden. Die nötige Methode lautet idoit.search:
 
-```shell
-    {
-        "version": "2.0",
-        "method": "idoit.search",
-        "params": {
-            "q": "acme",
-            "apikey": "c1ia5q",
-            "language": "en"
-        },
-        "id": 1
-    }
+```json
+{
+    "version": "2.0",
+    "method": "idoit.search",
+    "params": {
+        "q": "acme",
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}
 ```
 
 Die Antwort vom Server sieht folgendermaßen aus:
 
 ```shell
-    {
-        "jsonrpc": "2.0",
-        "result": [
-            {
+{
+    "jsonrpc": "2.0",
+    "result": [
+        {
 
-                "documentId": "1412",
-                "key": "Client > Ip > Dns domain",
-                "value": "Laptop 001: intern.acme-it.example",
-                "type": "cmdb",
-                "link": "\/?objID=1412&catgID=47&cateID=47&highlight=acme",
-                "score": 0
+            "documentId": "1412",
+            "key": "Client > Ip > Dns domain",
+            "value": "Laptop 001: intern.acme-it.example",
+            "type": "cmdb",
+            "link": "\/?objID=1412&catgID=47&cateID=47&highlight=acme",
+            "score": 0
 
-            },
-            // […]
+        },
+        // […]
 
-        ],
-        "id": 1
+    ],
+    "id": 1
 
-    }
+}
 ```
 
 Indexierung anpassen
@@ -131,7 +128,7 @@ Indexierung anpassen
 Die Indexierung von i-doit beansprucht viele Funktionen, die von MySQL/MariaDB zur Verfügung gestellt werden. Diese lassen sich benutzerdefiniert anpassen. Für einige Einstellungen wird die [Konfigurationsdatei von MySQL/MariaDB](../installation/manuelle-installation/systemeinstellungen.md) angepasst (zum Beispiel unter /etc/mysql/conf.d/i-doit.cnf). Für andere ist das Ausführen von SQL-Statements erforderlich, wofür sich der Client auf der Kommandozeile eignet. Beispiel:
 
 ```shell
-    mysql -uroot -p -hlocalhost
+mysql -uroot -p -hlocalhost
 ```
 
 ### Wortlänge
@@ -139,7 +136,7 @@ Die Indexierung von i-doit beansprucht viele Funktionen, die von MySQL/MariaDB z
 Eine wichtige Frage lautet, [wie lang ein Wort mindestens sein muss](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size), damit es indexiert wird. Häufig steht dieser Wert auf 3 Zeichen. Begriffe wie "PC 01" werden hiermit nicht gefunden. Geeignet wäre die Angabe von 2 oder sogar 1 Zeichen.
 
 ```ini
-    innodb_ft_min_token_size = 2 # minimale Zeichenanzahl eines Suchbegriffes
+innodb_ft_min_token_size = 2 # minimale Zeichenanzahl eines Suchbegriffes
 ```
 
 Diese Einstellung könnte dazu führen, dass der Index um ein vielfaches größer wird.
@@ -152,29 +149,29 @@ Um Wörter voneinander zu unterscheiden, werden verschiedene Zeichen als Worttre
 
 Als [Stoppwörter](https://de.wikipedia.org/wiki/Stoppwort) gelten Begriffe, die bei einer Suche ignoriert werden. Daher sollte der Index diese nicht berücksichtigen. Zu diesen Wörtern zählen beispielswese "am", "dem" und "mit". MySQL bringt bereits eine Liste an Stoppwörtern mit, die allerdings relativ klein ausfällt und nur englische Begriffe beinhaltet. Diese lässt sich allerdings durch eine eigene Liste ersetzen. Dazu dienen die folgenden SQL Statements:
 
-    # System-Datenbank von i-doit angeben:
+System-Datenbank von i-doit angeben:
 
 ```sql
-    USE idoit_system;
+USE idoit_system;
 ```
 
     ## Falls die Tabelle noch nicht existiert, sollte sie erstellt werden:
 
 ```sql
-    CREATE TABLE IF NOT EXISTS isys_search_stopwords (value VARCHAR(18) NOT NULL DEFAULT '') ENGINE=INNODB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS isys_search_stopwords (value VARCHAR(18) NOT NULL DEFAULT '') ENGINE=INNODB DEFAULT CHARSET=latin1;
 ```
 
-    ## Tabelle leeren:
+Tabelle leeren:
 
 ```sql
-    TRUNCATE TABLE isys_search_stopwords;
+TRUNCATE TABLE isys_search_stopwords;
 ```
 
-    ## Liste von deutschen Stoppwörtern einfügen:
+Liste von deutschen Stoppwörtern einfügen:
 
 ```sql
-    INSERT INTO isys_search_stopwords (value)
-    VALUES ('aber'), ('als'), ('also'), ('am'), ('an'), ('auch'), ('auf'), ('aus'), ('bei'), ('bin'), ('bis'), ('bist'), ('da'), ('dadurch'), ('daher'), ('darum'), ('das'), ('daß'), ('dass'), ('dein'), ('deine'), ('dem'), ('den'), ('der'), ('des'), ('deshalb'), ('dessen'), ('die'), ('dies'), ('dieser'), ('dieses'), ('doch'), ('dort'), ('du'), ('durch'), ('ein'), ('eine'), ('einem'), ('einen'), ('einer'), ('eines'), ('er'), ('es'), ('euer'), ('eure'), ('für'), ('hatte'), ('hatten'), ('hattest'), ('hattet'), ('hier'), ('hinter'), ('ich'), ('ihr'), ('ihre'), ('im'), ('in'), ('ist'), ('ja'), ('jede'), ('jedem'), ('jeden'), ('jeder'), ('jedes'), ('jener'), ('jenes'), ('jetzt'), ('kann'), ('kannst'), ('können'), ('könnt'), ('machen'), ('mein'), ('meine'), ('mit'), ('muß'), ('müssen'), ('mußt'), ('musst'), ('müßt'), ('nach'), ('nachdem'), ('nein'), ('nicht'), ('nun'), ('oder'), ('seid'), ('sein'), ('seine'), ('sich'), ('sie'), ('sind'), ('soll'), ('sollen'), ('sollst'), ('sollt'), ('sonst'), ('soweit'), ('sowie'), ('über'), ('und'), ('unser'), ('unsere'), ('unter'), ('vom'), ('von'), ('vor'), ('wann'), ('warum'), ('was'), ('weiter'), ('weitere'), ('wenn'), ('wer'), ('werde'), ('werden'), ('werdet'), ('weshalb'), ('wie'), ('wieder'), ('wieso'), ('wir'), ('wird'), ('wirst'), ('wo'), ('woher'), ('wohin'), ('zu'), ('zum'), ('zur');
+INSERT INTO isys_search_stopwords (value)
+VALUES ('aber'), ('als'), ('also'), ('am'), ('an'), ('auch'), ('auf'), ('aus'), ('bei'), ('bin'), ('bis'), ('bist'), ('da'), ('dadurch'), ('daher'), ('darum'), ('das'), ('daß'), ('dass'), ('dein'), ('deine'), ('dem'), ('den'), ('der'), ('des'), ('deshalb'), ('dessen'), ('die'), ('dies'), ('dieser'), ('dieses'), ('doch'), ('dort'), ('du'), ('durch'), ('ein'), ('eine'), ('einem'), ('einen'), ('einer'), ('eines'), ('er'), ('es'), ('euer'), ('eure'), ('für'), ('hatte'), ('hatten'), ('hattest'), ('hattet'), ('hier'), ('hinter'), ('ich'), ('ihr'), ('ihre'), ('im'), ('in'), ('ist'), ('ja'), ('jede'), ('jedem'), ('jeden'), ('jeder'), ('jedes'), ('jener'), ('jenes'), ('jetzt'), ('kann'), ('kannst'), ('können'), ('könnt'), ('machen'), ('mein'), ('meine'), ('mit'), ('muß'), ('müssen'), ('mußt'), ('musst'), ('müßt'), ('nach'), ('nachdem'), ('nein'), ('nicht'), ('nun'), ('oder'), ('seid'), ('sein'), ('seine'), ('sich'), ('sie'), ('sind'), ('soll'), ('sollen'), ('sollst'), ('sollt'), ('sonst'), ('soweit'), ('sowie'), ('über'), ('und'), ('unser'), ('unsere'), ('unter'), ('vom'), ('von'), ('vor'), ('wann'), ('warum'), ('was'), ('weiter'), ('weitere'), ('wenn'), ('wer'), ('werde'), ('werden'), ('werdet'), ('weshalb'), ('wie'), ('wieder'), ('wieso'), ('wir'), ('wird'), ('wirst'), ('wo'), ('woher'), ('wohin'), ('zu'), ('zum'), ('zur');
 ```
 
 Eine Liste von Stoppwörtern in verschiedenen Sprachen können im Internet schnell recherchiert werden.
@@ -182,7 +179,7 @@ Eine Liste von Stoppwörtern in verschiedenen Sprachen können im Internet schne
 Damit diese Liste die von MySQL ersetzt, wird folgende Einstellungen nötig:
 
 ```ini
-    innodb_ft_server_stopword_table = 'idoit_system/isys_search_stopwords'
+innodb_ft_server_stopword_table = 'idoit_system/isys_search_stopwords'
 ```
 
 ### Änderungen am Index aktivieren
@@ -190,20 +187,20 @@ Damit diese Liste die von MySQL ersetzt, wird folgende Einstellungen nötig:
 Damit Änderungen am Index-Verhalten wirksam werden, sind drei Schritte erforderlich. Erst sollte der MySQL-Dienst neu gestartet werden. Unter Debian-basierten Betriebssystemen führt man folgenden Befehl aus:
 
 ```shell
-    sudo systemctl restart mysql.service
+sudo systemctl restart mysql.service
 ```
 
 Anschließend muss folgendes SQL Statement für jede Mandanten-Datenbank ausgeführt werden:
 
 ```sql
-    OPTIMIZE TABLE isys_search_idx;
+OPTIMIZE TABLE isys_search_idx;
 ```
 
 Vollständiges SQL Statement für den ersten Mandanten mit der Datenbank idoit_data:
 
 ```sql
-    USE idoit_data;
-    OPTIMIZE TABLE isys_search_idx;
+USE idoit_data;
+OPTIMIZE TABLE isys_search_idx;
 ```
 
 Zum Schluss muss eine Neu-Indexing über die i-doit Console oder die i-doit Verwaltung durchgeführt werden (siehe oben).

@@ -31,14 +31,12 @@ Jeder Benutzer in i-doit ist ein [Objekt](struktur-it-dokumentation.md) vom Typ 
 
 [![Benutzer-und-Gruppen](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)
 
-
 !!! success "Lokaler Administrator"
-
     Auch wenn ein [LDAP-Verzeichnisserver oder ein Active Directory (AD)](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) zum Einsatz kommt, bietet es sich an, trotzdem einen lokalen Benutzer mit allen Rechten anzulegen. Falls nämlich der externe Dienst nicht erreichbar sein sollte, kann man sich immer noch mit dem lokalen Benutzer anmelden.
 
 Begrüßungstext
 --------------
 
-Wer Benutzer direkt beim Login mit einem Text begrüßen möchte, kann dies tun: Der Text wird unter **Verwaltung → Systemeinstellungen → Login → Willkommensnachricht für Login** hinterlegt.
+Wer Benutzer direkt beim Login mit einem Text begrüßen möchte, kann dies tun: Der Text wird im Admin Center unter **System settings** hinterlegt.
 
 [![login-begruessungstext](../assets/images/de/grundlagen/erstanmeldung/3-erstanmeldung.png)](../assets/images/de/grundlagen/erstanmeldung/3-erstanmeldung.png)

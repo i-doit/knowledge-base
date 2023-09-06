@@ -171,7 +171,7 @@ Voraussetzung ist, dass der Benutzer mit dem der Befehl ausgeführt wird auch di
 
 ### Logging
 
-Unterhalb von log/ im Installationsverzeichnis von i-doit befindet sich ein Logfile mit dem Namen ldap_debug.txt. Das Logging lässt sich unter **Verwaltung → Systemeinstellungen → Logging → LDAP Debug** (de-)aktivieren.
+Unterhalb von log/ im Installationsverzeichnis von i-doit befindet sich ein Logfile mit dem Namen ldap_debug.txt. Das Logging lässt sich unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Logging → LDAP Debug** (de-)aktivieren.
 
 ## Den ldap-sync ausführen
 
