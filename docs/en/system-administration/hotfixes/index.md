@@ -12,23 +12,25 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 ```
 
 !!! attention "Please note"
-
     Please use hotfixes exclusively with the specified version. Hotfixes will be included in newer versions so that a renewed installation is not necessary.
-    Should you use an older i-doit version it is essential to make an update to the latest version first.
-
-    If a hotfix is required to update an older version, it can be found in the hotfix subchapters here in the Knowledge Base.
-
-    As these are hotfixes we recommend installing them only when the adjustments are necessary for a flawless operation of your installation or you are requested by the support team to use them. Please ensure that you made a [backup of i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) before you use any hotfix.
-
+    Should you use an older i-doit version it is essential to make an update to the latest version first.<br>
+    If a hotfix is required to update an older version, it can be found in the hotfix subchapters here in the Knowledge Base.<br>
+    As these are hotfixes we recommend installing them only when the adjustments are necessary for a flawless operation of your installation or you are requested by the support team to use them. Please ensure that you made a [backup of i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) before you use any hotfix.<br>
     Please inform us about the use of hotfixes should you contact our support team afterwards.
 
 !!! info "Current version"
-
     The requirements shown below apply to the current version of i-doit, in this case ==26== These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 !!! attention "Declaration of consent"
-
     By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
+
+## i-doit core
+
+### It is not possible to retrieve the next online i-doit update via button check while updating i-doit
+
+When you click on the **Check for a new version** button then version 26 is not displayed.
+
+[i-doit_26_hotfix_ID-9844.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9844.zip){ .md-button .md-button--primary }
 
 ## API Add-on 1.14.1
 
