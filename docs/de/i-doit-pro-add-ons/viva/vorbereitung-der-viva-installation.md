@@ -5,7 +5,7 @@ Vor der ersten Nutzung des [i-doit pro Add-ons](../index.md) **VIVA** steht die 
 Systemvoraussetzungen
 ---------------------
 
-Neben den für i-doit allgemeingültigen [Systemvoraussetzungen](../../installation/systemvoraussetzungen.md) und [Systemeinstellungen](../../administration/verwaltung/system-einstellungen.md) setzt dieses Add-on folgende Bedingungen an das System, auf dem es installiert wird, voraus:
+Neben den für i-doit allgemeingültigen [Systemvoraussetzungen](../../installation/systemvoraussetzungen.md) und Systemeinstellungen setzt dieses Add-on folgende Bedingungen an das System, auf dem es installiert wird, voraus:
 
 *   Ein lauffähiges _i-doit pro_ in den aktuell von Synetics unterstützten Versionen ist installiert.
 *   Die PHP-Einstellung short_open_tag ist aktiviert (On).

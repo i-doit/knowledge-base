@@ -8,9 +8,9 @@ Highlights in this release
 *   A complete **redesign** of the i-doit frontend to **improve the user experience**.
 *   Added **compatibility** for **PHP 8.0**.
 *   **New configuration** to **create custom translations** and **custom languages**.
-*   **Setting** to define a [**default language** for newly created users](../../administration/systemeinstellungen/mandanteneinstellungen.md#mandanteneinstellungen).
+*   **Setting** to define a [**default language** for newly created users](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#sprache).
 *   **New configuration** to **[hide attributes](../../grundlagen/attributsichtbarkeit.md)** from categories and/or overview pages.
-*   **Option** to **log** the **[last login](../../administration/systemeinstellungen/mandanteneinstellungen.md#sicherheit)** of a user.
+*   **Option** to **log** the **[last login](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#sicherheit)** of a user.
 *   [**Export** for **reports**](../../auswertungen/report-manager.md#report-exportierenimportieren) which have been created via **query builder**.
 
 Add-ons
@@ -49,7 +49,7 @@ Important update notes
     *   **[ISMS](../../i-doit-pro-add-ons/isms.md)** needs to be updated to version **1.5.2 or higher**
     *   **[VIVA 2](../../i-doit-pro-add-ons/viva2.md)** needs to be updated to version **3.2.1 or higher**
     *   **Privacy** needs to be updated to version **1.1 or higher**
-    *   **Label** needs to be updated to version **0**.5** or higher**
+    *   **Label** needs to be updated to version **0**.5**or higher**
     *   **Disposal** needs to be updated to version **1.1.2** **or higher**
     *   **Inheritance** needs to be updated to version **1.3.7** **or higher**
 

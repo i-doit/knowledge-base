@@ -24,7 +24,7 @@ Hier werden nur Benutzer synchronisiert, das bedeutet auch, dass keine Gruppen e
 
 [![ldap_personen-importb](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/2-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/2-ldap-bg.png)
 
-```
+```ini
 (objectClass=user)
 ```
 
@@ -37,7 +37,7 @@ Nur der Benutzer der im Attribut `sAMAccountName` den Wert `MichaelO` hat soll s
 
 [![ldap_personen-importba](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/3-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/3-ldap-bg.png)
 
-```
+```ini
 (&(objectClass=user)(sAMAccountName=MichaelO))
 ```
 
@@ -50,7 +50,7 @@ Damit Benutzer und Gruppen synchronisiert werden muss der Filter so aussehen:
 
 [![ldap_personen-importbg](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/4-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/4-ldap-bg.png)
 
-```
+```ini
 (|(objectClass=user)(objectClass=group))
 ```
 
@@ -62,7 +62,7 @@ Damit nur Benutzer die Mitglied der Gruppe `idoit-read` sind synchronisiert werd
 
 [![ldap_personen-importbmg](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/5-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/5-ldap-bg.png)
 
-```
+```ini
 (&(objectClass=user)(memberOf=CN=idoit-read,CN=Users,DC=synetics,DC=test))
 ```
 
@@ -74,7 +74,7 @@ Damit nur Benutzer die Mitglied der Gruppe `idoit-read` sind synchronisiert werd
 
 [![ldap_personen-importbmgrw](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/6-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/6-ldap-bg.png)
 
-```
+```ini
 (&(objectClass=user)(&(memberOf=CN=idoit-read,CN=Users,DC=synetics,DC=test)(memberOf=CN=idoit-write,CN=Users,DC=synetics,DC=test)))
 ```
 
@@ -87,7 +87,7 @@ Die Gruppe idoit wird dadurch nicht erstellt, es werden nur die Gruppen unterhal
 
 [![ldap_personen-importbgng](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/7-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/7-ldap-bg.png)
 
-```
+```ini
 (memberOf:1.2.840.113556.1.4.1941:=CN=idoit,CN=Users,DC=synetics,DC=test)
 ```
 
@@ -99,7 +99,7 @@ Wenn sich die Benutzer beispielsweise dadurch unterscheiden, dass sie zwei `obje
 
 [![ldap_personen-filter](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/8-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/8-ldap-bg.png)
 
-```
+```ini
 (&(objectClass=person)(objectClass=user))
 ```
 
@@ -109,10 +109,10 @@ Wenn sich die Benutzer beispielsweise dadurch unterscheiden, dass sie zwei `obje
 
 *   Der Beitrag [ldap.ini Konfiguration](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md#beispiel-für-den-command-ldap-sync) sollte bekannt sein.
 *   Es kann eine .ini Datei für den Import erstellt werden, mit dieser können weitere Attribute importiert werden.
-*   Die [Kategorieerweiterung](../../administration/verwaltung/cmdb-einstellungen.md#kategorieerweiterung) sollte bereits Konfiguriert sein.
+*   Die [Attributerweiterungen](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md) sollte bereits Konfiguriert sein.
 *   Wir verwenden den .ini Abschnitt "additional"
 
-### Die Konfiguration der Kategorieerweiterung
+### Die Konfiguration der Attributerweiterungen
 
 [![ldap_personen-config](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/9-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/9-ldap-bg.png)
 
@@ -137,28 +137,20 @@ In der `ldap.ini` können feste Zuweisungen von Benutzern zu Räumen eingetragen
 Die Benutzer werden dann dem zugewiesenem Raum als Kontakt zugewiesen.<br>
 (Die Räume müssen vorher in i-doit existieren!)
 
-```
+```ini
 rooms["Raum A"]=["MichaelO","migel"]
 ```
 
 * * *
 
-!!! warning "Zugriff auf .ini Dateien"
-    Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
-    Es sollte dieser code hinzugefügt werden:
-    ## Deny access to all ini files…
-    <Files "*.ini">
-        Require all denied
-    </Files>
-
 ### So importiere ich Attribute aus dem LDAP
 
-Ich möchte weitere LDAP Attribute zu Benutzern importieren und habe schon die [Kategorieerweiterung](../../administration/verwaltung/cmdb-einstellungen.md#kategorieerweiterung) Konfiguriert.<br>
+Ich möchte weitere LDAP Attribute zu Benutzern importieren und habe schon die [Attributerweiterungen](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md) Konfiguriert.<br>
 Nun muss ich noch die Konfigurationsdatei des LDAP-Sync konfigurieren (ldap.ini).
 
 Wenn man vorher schon mal einen LDAP-Sync für Benutzer durchgeführt hat, findet man im ldap Log einen Eintrag wie diesen
 
-```
+```ini
     Available attributes for this user:
     objectclass,
     cn,
@@ -243,7 +235,7 @@ attributes[zip_code]=postalCode
 attributes[function]=title
 attributes[service_designation]=title
 attributes[pager]=pager
-;Kategorieerweiterung nur für Personen
+;Attributerweiterung nur für Personen
 attributes[custom_1]=objectSid
 attributes[custom_2]=sn
 attributes[custom_3]=homePhone
@@ -255,7 +247,7 @@ attributes[custom_8]=objectGUID
 ```
 
 Wie man hier sieht habe ich z.B. das Stammdaten Attribut department mit dem LDAP Attribute department gemapped.<br>
-Zusätzlich habe ich die Kategorieerweiterung verwendet. Der Aufbau für z.B.<br>
+Zusätzlich habe ich die Attributerweiterung verwendet. Der Aufbau für z.B.<br>
 `attributes[custom_1]=objectSid`<br>
 wäre wie folgt:
 
@@ -273,11 +265,12 @@ Nachdem die Benutzer synchronisiert wurden finde ich folgende Stammdaten vor:
 Um einen sauberen Start zu haben, setzt diese Einstellung automatisch alle Benutzer vor der Synchronisierung auf den Status normal.
 
 Dies ist hilfreich, falls Benutzer versehentlich vorher archiviert oder gelöscht wurden.<br>
+
 !!! note "Beachten Sie, dass dies nur mit NDS & OpenLDAP funktioniert, da es in Active Directory immer aktiviert ist!"
 
 Wir sollten uns bewusst sein, dass es mit NDS oder OpenLDAP derzeit nicht möglich ist, gelöschte Benutzer zu identifizieren, um sie später zu archivieren. Benutzer sind dann immer aktiviert!
 
-```
+```ini
 autoReactivateUsers=false
 ```
 
@@ -295,7 +288,7 @@ Standardmäßig steht hier `ignoreUsersWithAttributes=[]` somit wird nichts igno
 Wir möchten nur Benutzer importieren bei denen die Attribute `samaccountname`, `sn`, `givenname` und `mail` nicht leer sind.<br>
 Somit müsste die Konfiguration für `ignoreUsersWithAttributes` so aussehen:
 
-```
+```ini
 ignoreUsersWithAttributes[] = "samaccountname"
 ignoreUsersWithAttributes[] = "sn"
 ignoreUsersWithAttributes[] = "givenname"
@@ -311,7 +304,7 @@ Dies kann ein beliebiger Funktionsname sein, der über `call_user_func` oder die
 
 definierte functions:
 
-```
+```ini
 empty
 !empty
 isset
@@ -322,7 +315,7 @@ Beispiel: `empty` würde als empty($value) ausgeführt werden
 
 Wir prüfen auf leere Attribute mit
 
-```
+```ini
 ignoreFunction=empty
 ```
 
@@ -330,21 +323,13 @@ ignoreFunction=empty
 
 Diese Option entscheidet, ob geleerte Attribute aus dem AD mit i-doit synchronisiert werden sollen oder nicht.
 
-```
+```ini
 syncEmptyAttributes=true
 ```
 
 * * *
 
 ### Die komplette ldap.ini
-
-!!! warning "Zugriff auf .ini Dateien"
-    Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
-    Es sollte dieser code hinzugefügt werden:
-    ## Deny access to all ini files…
-    <Files "*.ini">
-        Require all denied
-    </Files>
 
 Nun fügen wir alle Teile zusammen und erstellen unsere ldap.ini<br>
 Der erste Teil der ldap.ini wird von [Verwendung von Konfigurationsdateien für Console Commands](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md#beispiel-für-den-command-ldap-sync) bezogen.

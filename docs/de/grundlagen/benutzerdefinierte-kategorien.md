@@ -88,7 +88,7 @@ Die Reihenfolge der erstellten Attribute kann über die schraffierten Flächen a
 !!! attention "Achtung!"
     Sobald die Kategorie in Verwendung ist, ist das Ändern von bestehenden Feldtypen nicht mehr möglich, um Datenverlust zu vermeiden.<br>
     Sollten Felder in der Konfiguration entfernt werden, kann man auf deren Inhalte nicht mehr zugreifen.<br>
-    Anschließend müssen die Attribute über die [Systemtools](../administration/verwaltung/systemtools.md) neu indiziert werden.
+    Anschließend müssen die Attribute über die [Systemreparatur und Bereinigung](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) neu indiziert werden.
 
 Unterhalb der Konfiguration erfolgt eine Auswertung:
 

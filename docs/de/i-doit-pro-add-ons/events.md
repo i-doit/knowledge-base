@@ -17,7 +17,7 @@ Die Konfiguration wird über **Verwaltung → Add-ons → Events → Hooks** err
 [![Konfiguration](../assets/images/de/i-doit-pro-add-ons/events/2-eve.png)](../assets/images/de/i-doit-pro-add-ons/events/2-eve.png)
 
 !!! attention "404 Not Found"
-    Erscheint beim Aufruf der Event-Konfiguration lediglich eine Fehlermeldung, die Seite könne nicht gefunden werden, liegt das mit aller Wahrscheinlichkeit an einer fehlerhaften [Konfiguration des Webservers](../administration/systemeinstellungen/index.md). Sowohl das Apache-Modul rewrite muss aktiviert sein, als auch das Einlesen der .htaccess\-Datei im Installationsverzeichnis von i-doit muss erlaubt sein (AllowOverride All).
+    Erscheint beim Aufruf der Event-Konfiguration lediglich eine Fehlermeldung, die Seite könne nicht gefunden werden, liegt das mit aller Wahrscheinlichkeit an einer fehlerhaften [Konfiguration des Webservers](../administration/verwaltung/mandanten-name-verwaltung/index.md). Sowohl das Apache-Modul rewrite muss aktiviert sein, als auch das Einlesen der .htaccess\-Datei im Installationsverzeichnis von i-doit muss erlaubt sein (AllowOverride All).
 
 Es werden Events mit Befehlsaufrufen kombiniert. Ein Event wird durch einen Hook ausgelöst, also bei einer internen Routine in i-doit. Folgende Events stehen zur Verfügung:
 

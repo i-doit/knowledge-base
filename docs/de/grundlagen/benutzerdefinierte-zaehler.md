@@ -1,6 +1,6 @@
 # Benutzerdefinierte Zähler
 
-Hier werden alle konfigurierten Zähler in einer Liste dargestellt.
+Benutzerdefinierte Zähler sind unter **Verwaltung → Vordefinierte Inhalte → Benutzerdefinierte Zähler** zu finden. Hier werden alle konfigurierten Zähler in einer Liste dargestellt.
 
 Oben in dieser Liste befindet sich eine Schaltfläche zum Hinzufügen von X neuen Zählern zu dieser Liste.
 
@@ -17,7 +17,7 @@ Das bedeutet, dass der fertige Zähler wie folgt aussehen wird: **%COUNTER_CUSTO
 
 Neben der Namensdefinition haben Sie auch ein Informationsfeld, das Ihnen den aktuellen Status des Zählers anzeigt, welche Zahl dieser Zähler gerade erreicht hat.
 
-Neben der Information über die aktuelle Zahl, die der Zähler erreicht hat, befindet sich eine Schaltfläche **Zurücksetzen**. Damit wird der Zähler auf 1 zurückgesetzt.  
+Neben der Information über die aktuelle Zahl, die der Zähler erreicht hat, befindet sich eine Schaltfläche **Zurücksetzen**. Damit wird der Zähler auf 1 zurückgesetzt.<br>
 Wenn Sie auf die Schaltfläche "Zurücksetzen" klicken, wird der Benutzer darüber informiert, dass dies nicht rückgängig gemacht werden kann und der Zähler unwiderruflich auf 1 zurückgesetzt wird. Der Benutzer wird gefragt, ob er fortfahren möchte. (Auswahl Ja/Nein)
 
 Die letzte Spalte enthält eine Schaltfläche **Löschen**, um den Zähler dauerhaft aus der Konfiguration zu entfernen. Wenn der Benutzer darauf klickt, wird er gefragt, ob er diesen Zähler wirklich löschen möchte, da er dann nicht mehr verfügbar ist und nicht wiederhergestellt werden kann. (Auswahl Ja/Nein)
@@ -44,14 +44,11 @@ Der benutzerdefinierte Zähler kann auch für führende Nullen auf die gleiche W
 
 **%COUNTER_CUSTOMTEXT#3%** würde zu 001 führen.
 
-Zusätzlich gibt es eine [Experteneinstellung](../administration/systemeinstellungen/experteneinstellungen.md). Hier kann der Benutzer den Zähler bei Bedarf auf einen bestimmten Wert setzen.
+Zusätzlich gibt es eine [Experteneinstellung](../administration/verwaltung/mandanten-name-verwaltung/experteneinstellungen.md). Hier kann der Benutzer den Zähler bei Bedarf auf einen bestimmten Wert setzen.
+Diese Zähler können über die Suche via `cmdb.counter.counter_` dort gefunden werden.
 
-Setzt man den Wert auf z.B. 1000 wird dieser Wert.
-
-[![Benutzerdefinierter-Zähler](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)
-
-Alle Zähler sind in der Listenbearbeitung, der Massenbearbeitung, den Vorlagen und der automatisch generierten Inventarnummer aus der Objekttypkonfiguration verfügbar/verwendbar.
+Alle Zähler sind in der Listenbearbeitung, der Massenbearbeitung, den Vorlagen und der automatisch generierten Inventarnummer aus der Objekttyp Konfiguration verfügbar/verwendbar.
 
 Außerdem sind die Counter auch bei Textfeldern von benutzerdefinierten Kategorien verwendbar.
 
-Diese Counter werden durch klick auf das [![icon](../assets/images/de/grundlagen/icons/riddle.png)](../assets/images/de/grundlagen/icons/riddle.png) Fragenzeichen Symbol neben dem Feld aufgelistet.
+Diese Counter werden durch klick auf das [![icon](../assets/images/de/grundlagen/icons/riddle.png)](../assets/images/de/grundlagen/icons/riddle.png) Fragezeichen Symbol neben dem Feld aufgelistet.

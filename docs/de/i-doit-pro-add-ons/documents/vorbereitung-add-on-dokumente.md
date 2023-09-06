@@ -38,7 +38,7 @@ Um Vorlagen aus dem Online Repository herunterladen zu können wird die Berechti
 
 Cache für das Rechtesystem leeren
 
-Nachdem die Rechte vergeben wurden ist es ratsam, in der i-doit [Verwaltung](../../administration/verwaltung/index.md) unter Systemtools > Cache / Datenbank den [Cache](../../administration/verwaltung/systemtools.md) zu leeren, damit die Änderungen vom System übernommen werden.
+Nachdem die Rechte vergeben wurden ist es ratsam, in der i-doit [Verwaltung](../../administration/verwaltung/index.md) unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Berechtigung** den [Cache](../../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) zu leeren, damit die Änderungen vom System übernommen werden.
 
 Zusätzliche Konfiguration
 =========================

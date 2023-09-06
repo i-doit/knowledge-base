@@ -8,7 +8,7 @@ Highlights in this release
 --------------------------
 
 *   New **crypto hashing** for user passwords to **increase security**.
-*   A **configuration** for your own **[custom counter-placeholders](../../../administration/verwaltung/cmdb-einstellungen.md#benutzerdefinierte-zähler)** to gain control over multiple different counters at the same time.
+*   A **configuration** for your own **[custom counter-placeholders](../../../administration/verwaltung/vordefinierte-inhalte/benutzerdefinierte-zaehler.md)** to gain control over multiple different counters at the same time.
 *   Two **Dialog+ fields** in custom categories can now be **linked with a dependency**, so you will have different selections of values, based on the first picked value.
 
 Add-ons
