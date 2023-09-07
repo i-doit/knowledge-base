@@ -407,13 +407,70 @@ nav:
       - administration/index.md
       - Verwaltung:
           - administration/verwaltung/index.md
-          - Benutzereinstellungen: administration/verwaltung/benutzereinstellungen.md
-          - CMDB-Einstellungen: administration/verwaltung/cmdb-einstellungen.md
-          - Lizenz-Administration: administration/verwaltung/lizenz-administration.md
-          - Rechtesystem: administration/verwaltung/rechtesystem.md
-          - Schnittstellen / externe Daten: administration/verwaltung/schnittstellen.md
-          - System Einstellungen: administration/verwaltung/system-einstellungen.md
-          - Systemtools: administration/verwaltung/systemtools.md
+          - Benutzereinstellungen:
+              - administration/verwaltung/benutzereinstellungen/index.md
+              - Passwort ändern: administration/verwaltung/benutzereinstellungen/passwort-aendern.md
+              - Datenformate: administration/verwaltung/benutzereinstellungen/datenformate.md
+              - Benutzersprache: administration/verwaltung/benutzereinstellungen/benutzersprache.md
+              - Benutzeroberfläche:
+                  - administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/index.md
+                  - Kategorie-Listen: administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/kategorie-listen.md
+                  - Objekt-Listen: administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/objekt-listen.md
+              - Bearbeitungssperre: administration/verwaltung/benutzereinstellungen/bearbeitungssperre.md
+          - '[Mandanten-Name] Verwaltung':
+              - administration/verwaltung/mandanten-name-verwaltung/index.md
+              - 'Einstellungen für [Mandanten-Name]': administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md
+              - Systemreparatur und Bereinigung: administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md
+              - Experteineinstellungen: administration/verwaltung/mandanten-name-verwaltung/experteneinstellungen.md
+          - Datenstruktur:
+              - administration/verwaltung/datenstruktur/index.md
+              - Datenstruktur bearbeiten: administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md
+              - Objekttypen: administration/verwaltung/datenstruktur/objekttypen.md
+              - Benutzerdefinierte Kategorien: administration/verwaltung/datenstruktur/benutzerdefinierte-kategorien.md
+          - Datenansicht:
+              - administration/verwaltung/datenansicht/index.md
+              - Objekt-Browser konfigurieren: administration/verwaltung/datenansicht/objekt-browser-konfigurieren.md
+              - Attribute verstecken: administration/verwaltung/datenansicht/attribute-verstecken.md
+              - Sprachprofile: administration/verwaltung/datenansicht/sprachprofile.md
+          - Vordefinierte Inhalte:
+              - administration/verwaltung/vordefinierte-inhalte/index.md
+              - CMDB Status: administration/verwaltung/vordefinierte-inhalte/cmdb-status.md
+              - Kontaktzuweisungsrollen: administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen.md
+              - Benutzerdefinierte Zähler: administration/verwaltung/vordefinierte-inhalte/benutzerdefinierte-zaehler.md
+              - Daten Validierung: administration/verwaltung/vordefinierte-inhalte/daten-validierung.md
+              - Dialog admin: administration/verwaltung/vordefinierte-inhalte/dialog-admin.md
+              - Objektbeziehungsarten: administration/verwaltung/vordefinierte-inhalte/objekt-beziehungsarten.md
+              - QR Code: administration/verwaltung/vordefinierte-inhalte/qr-code.md
+          - Berechtigungen: administration/verwaltung/berechtigungen.md
+          - Logbuch: administration/verwaltung/logbuch/index.md
+          - Import und Schnittstellen:
+              - administration/verwaltung/import-und-schnittstellen/index.md
+              - Import Matching Profile: administration/verwaltung/import-und-schnittstellen/import-matching-profile.md
+              - h-inventory: administration/verwaltung/import-und-schnittstellen/h-inventory.md
+              - SMTP Konfiguration (E-Mail): administration/verwaltung/import-und-schnittstellen/smtp-konfiguration-email.md
+              - JDisc:
+                  - administration/verwaltung/import-und-schnittstellen/jdisc/index.md
+                  - JDIsc Konfiguration: administration/verwaltung/import-und-schnittstellen/jdisc/jdisc-konfiguration.md
+                  - JDisc Profile: administration/verwaltung/import-und-schnittstellen/jdisc/jdisc-profile.md
+              - LDAP:
+                  - administration/verwaltung/import-und-schnittstellen/ldap/index.md
+                  - Server: administration/verwaltung/import-und-schnittstellen/ldap/server.md
+                  - Directories: administration/verwaltung/import-und-schnittstellen/ldap/directories.md
+                  - Attributerweiterung: administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md
+              - Trouble Ticket System (TTS): administration/verwaltung/import-und-schnittstellen/troubleticket-system.md
+              - Monitoring:
+                  - administration/verwaltung/import-und-schnittstellen/monitoring/index.md
+                  - Livestatus / NDO: administration/verwaltung/import-und-schnittstellen/monitoring/livestatus-ndo.md
+                  - Exportkonfiguration: administration/verwaltung/import-und-schnittstellen/monitoring/exportkonfiguration.md
+          - Add-ons:
+              - administration/verwaltung/add-ons/index.md
+              - JSON-RPC API:
+                  - administration/verwaltung/add-ons/json-rpc-api/index.md
+                  - Kategorien und Attribute: administration/verwaltung/add-ons/json-rpc-api/kategorien-und-attribute.md
+              - Events: administration/verwaltung/add-ons/events.md
+              - Gerätetausch:
+                  - administration/verwaltung/add-ons/geraetetausch/index.md
+                  - Konfiguration: administration/verwaltung/add-ons/geraetetausch/konfiguration.md
       - Admin Center: administration/admin-center.md
       - Mehrsprachigkeit und Übersetzungen: administration/mehrsprachigkeit-und-uebersetzungen.md
       - Mandantenfähigkeit: administration/mandantenfaehigkeit.md
@@ -438,11 +495,6 @@ nav:
               - Version 24: administration/hotfixes/hotfix-archiv/v24.md
               - Version 23: administration/hotfixes/hotfix-archiv/v23.md
               - Version 22: administration/hotfixes/hotfix-archiv/v22.md
-      - Systemeinstellungen (Verwaltung):
-          - administration/systemeinstellungen/index.md
-          - Experteneinstellungen: administration/systemeinstellungen/experteneinstellungen.md
-          - Mandanteneinstellungen: administration/systemeinstellungen/mandanteneinstellungen.md
-          - Systemübergreifende Einstellungen: administration/systemeinstellungen/systemuebergreifende-einstellungen.md
   - Anwendungsfälle:
       - anwendungsfaelle/index.md
       - Abbildung von Kundenstandorten: anwendungsfaelle/abbildung-von-kundenstandorten.md

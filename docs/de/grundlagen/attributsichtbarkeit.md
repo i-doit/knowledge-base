@@ -1,22 +1,20 @@
 # Attributsichtbarkeit
 
-Die Sichtbarkeit von [Attributen](attributfelder.md) kann ab i-doit [Version 1.19](../versionshistorie/release-notes/release-notes-1.19.md) in den [CMDB Einstellungen](../administration/verwaltung/cmdb-einstellungen.md) konfiguriert werden.
+Die Sichtbarkeit von [Attributen](attributfelder.md) wird unter [Datenansicht](../administration/verwaltung/datenansicht/index.md) konfiguriert werden.
 
 Es ist damit möglich bestimmte Attribute in [Kategorien](kategorien-und-attribute.md) oder/und auf der [Übersichtsseite von Objekttypen](objekttypen.md) auszublenden.
 
 Die konfigurierte Sichtbarkeit wird für alle Benutzer übernommen.
 
-[![attributsichtbarkeit](../assets/images/de/grundlagen/attributsichtbarkeit/1-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/1-as.png)
+[![Attributsichtbarkeit](../assets/images/de/grundlagen/attributsichtbarkeit/1-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/1-as.png)
 
-Rechte setzen
--------------
+## Rechte setzen
 
-[Die Rechte](../administration/verwaltung/rechtesystem.md) zur Ansicht und zum Bearbeiten der Attributsichtbarkeit kann pro Benutzer(-gruppe) vergeben werden. So ist es beispielsweise möglich und oft auch ratsam, dass nur bestimmte Benutzergruppen Attribute ausblenden können.
+[Die Rechte](../administration/verwaltung/berechtigungen.md) zur Ansicht und zum Bearbeiten der Attributsichtbarkeit kann pro Benutzer(-gruppe) vergeben werden. So ist es beispielsweise möglich und oft auch ratsam, dass nur bestimmte Benutzergruppen Attribute ausblenden können.
 
 [![rechte-setzen](../assets/images/de/grundlagen/attributsichtbarkeit/2-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/2-as.png)
 
-Verwendung
-----------
+## Verwendung
 
 Wenn die Attributsichtbarkeit im Editiermodus geöffnet wird, können alle Kategorien (global, spezifisch und benutzerdefiniert) über ein Dropdown-Feld am oberen Rand ausgewählt werden. Neben diesem Drop-Down-Feld befindet sich die Schaltfläche "Konfiguration hinzufügen.
 
@@ -28,7 +26,7 @@ Neben dem Namen der Kategorie befindet sich ein Dreieck, das nach unten im geöf
 
 Ganz rechts in jedem Block befindet sich ein rotes X-Symbol , mit dem Sie die Konfiguration für diese Kategorie entfernen können. Wenn es verwendet wird, wird der Block entfernt.
 
-Standardmäßig ist die Sichtbarkeit für alle Attribute aktiviert "Angezeigt"[![button-angezeigt](../assets/images/de/grundlagen/attributsichtbarkeit/3-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/3-as.png). In diesem Zustand ist die Schaltfläche grün und mit "Angezeigt"  beschriftet. Wenn Sie darauf klicken, wird die Schaltfläche grau und mit "Ausgeblendet"[![button-ausgeblendet](../assets/images/de/grundlagen/attributsichtbarkeit/4-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/4-as.png)beschriftet.
+Standardmäßig ist die Sichtbarkeit für alle Attribute aktiviert "Angezeigt" [![button-angezeigt](../assets/images/de/grundlagen/attributsichtbarkeit/3-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/3-as.png). In diesem Zustand ist die Schaltfläche grün und mit "Angezeigt"  beschriftet. Wenn Sie darauf klicken, wird die Schaltfläche grau und mit "Ausgeblendet" [![button-ausgeblendet](../assets/images/de/grundlagen/attributsichtbarkeit/4-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/4-as.png) beschriftet.
 
 **Objekt Bezeichnung**, **Zustand** und **CMDB-Status** können **nicht** ausgeblendet werden. In den entsprechenden Spalten steht ein Hinweis "Kann nicht ausgeblendet werden".
 
@@ -37,7 +35,6 @@ Wenn ein Attribut ausgeblendet ist, wird es in der Kategorie für alle Objekte (
 Wenn ein Attribut ausgeblendet werden soll aber über die Validierungseinstellungen als Pflichtfeld definiert ist, erhält der Benutzer eine Information (Popup), wenn er auf die Schaltfläche "Speichern" klickt:
 
 !!! popup "Popup"
-
     _Die folgenden Attribute wurden zuvor als Pflichtfelder definiert:_
     [LISTE ALLER BETROFFENEN ATTRIBUTE]
     _Wenn Sie diese auf der Oberfläche verbergen wird die Pflichtfelddefinition für sie aufgehoben. Möchten Sie fortfahren?_

@@ -4,31 +4,31 @@
 
 Gehe auf [https://console.developers.google.com/](https://console.developers.google.com/)
 
-1.  Auf den Homebildschirm gehen
-2.  Anmeldedaten auswählen
-3.  Anmeldedaten erstellen
-4.  OAuth-Client-ID auswählen
+1. Auf den Homebildschirm gehen
+2. Anmeldedaten auswählen
+3. Anmeldedaten erstellen
+4. OAuth-Client-ID auswählen
 
 [![OAuth Anmeldedaten erstellen](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/1-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/1-oid.png)
 
-1.  Webanwendung auswählen
-2.  Als Namen eine wiedererkennbare Bezeichnung eingeben
-3.  Als Autorisierte Weiterleitungs-URL eine URL angebe, die hinter der zu sichernden Webressource liegt, aber auf keinen Inhalt zeigt (!).
+1. Webanwendung auswählen
+2. Als Namen eine wiedererkennbare Bezeichnung eingeben
+3. Als Autorisierte Weiterleitungs-URL eine URL angebe, die hinter der zu sichernden Webressource liegt, aber auf keinen Inhalt zeigt (!).
     Die hier exemplarisch angegebene URL soll ab [https://gauth.i-doit.com/i-doit/](https://gauth.i-doit.com/i-doit/) mit der Authentifizierung abgesichert werden.
     Die angehangene **Ressource "redirect_uri" existiert nicht** auf dem Webserver!
 
 [![OAuth Anmeldedaten erstellen](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/2-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/2-oid.png)
 
-1.  Client-ID kopieren, diese wird später benötigt
-2.  Client Secret kopieren, dieses wird später benötigt
-3.  Den OAuth Zustimmungsbildschirm konfigurieren
+1. Client-ID kopieren, diese wird später benötigt
+2. Client Secret kopieren, dieses wird später benötigt
+3. Den OAuth Zustimmungsbildschirm konfigurieren
     (Dies ist **für einen ersten Test nicht notwendig**, aber für einen Produktionsbetrieb)
 
 [![OAuth Anmeldedaten erstellen](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/3-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/3-oid.png)
 
 ## Webserver einrichten
 
-### Unter **Debian 10** das Paket **mod_auth_openidc** für Apache installieren:
+### Unter **Debian 10** das Paket **mod_auth_openidc** für Apache installieren
 
 ```shell
     sudo apt install libapache2-mod-auth-openidc
@@ -58,7 +58,7 @@ OIDCScope "email"
 </Location>
 ```
 
-### So sieht es im Test live aus:
+### So sieht es im Test live aus
 
 [![live](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/4-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/4-oid.png)
 
@@ -79,11 +79,11 @@ echo $_SERVER['REMOTE_USER'];
 ?>
 ```
 
-1.  Die Datei im Browser aufrufen
-2.  Per Google anmelden
+1. Die Datei im Browser aufrufen
+2. Per Google anmelden
     [![Google anmelden](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/5-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/5-oid.png)
-3.  Die erscheinende ID überprüfen (Es sollte der E-Mail entsprechen)
-4.  In i-doit einloggen und für den gewünschten i-doit User als Login Namen eintragen.
+3. Die erscheinende ID überprüfen (Es sollte der E-Mail entsprechen)
+4. In i-doit einloggen und für den gewünschten i-doit User als Login Namen eintragen.
 
     !!! warning
          Wichtig ist, dass der Domain Part ab dem @ Zeichen von i-doit nicht berücksichtigt wird. Daher muss der Name auf den vorderen Teil gekürzt werden:Aus "testaccount@[i-doit.com](http://i-doit.com)" wird "testaccount".
@@ -94,10 +94,10 @@ echo $_SERVER['REMOTE_USER'];
 
 ## SSO in i-doit aktivieren
 
-1.  Die i-doit Administration aufrufen
-2.  Systemeinstellungen auswählen
-3.  Unter Single-SignOn Active auf **yes** setzen
-4.  Abspeichern
+1. Die i-doit Administration aufrufen
+2. Systemeinstellungen auswählen
+3. Unter Single-SignOn Active auf **yes** setzen
+4. Abspeichern
 
 [![SSO in i-doit aktivieren](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/8-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/8-oid.png)
 

@@ -29,10 +29,10 @@ Die Konfiguration ist unter **Verwaltung → Rechtesystem → Rechtevergabe → 
 
 Anmerkungen:
 
-1.  Das Ansehen-Recht ist pro Bedingung immer angehakt und daher ausgegraut.
-2.  Einige Rechte können sich überschneiden. Hat man beispielsweise das Lese-Recht für alle Objekte, braucht man nicht zusätzlich das Lese-Recht auf Objekte aller Objekttypen.
-3.  Diese Funktion umgeht an anderer Stelle definierte Rechte. Um alle Rechte zu berücksichtigen, siehe erweiterte Einstellungen weiter unten.
-4.  Wird eine Person einer Personengruppe hinzugefügt, erbt diese Person die Rechte der Gruppe. Damit Benutzer sich dadurch nicht zusätzliche Rechte verschaffen, wird das Administrator-Recht für die entsprechenden Kategorien benötigt. Zusätzlich ist das Bearbeiten-Recht auf die Bedingung [Objekt-ID](../../grundlagen/eindeutige-referenzierungen.md) für ebendiese Objekte vom Typ **Personen** und **Personengruppe** erforderlich.
+1. Das Ansehen-Recht ist pro Bedingung immer angehakt und daher ausgegraut.
+2. Einige Rechte können sich überschneiden. Hat man beispielsweise das Lese-Recht für alle Objekte, braucht man nicht zusätzlich das Lese-Recht auf Objekte aller Objekttypen.
+3. Diese Funktion umgeht an anderer Stelle definierte Rechte. Um alle Rechte zu berücksichtigen, siehe erweiterte Einstellungen weiter unten.
+4. Wird eine Person einer Personengruppe hinzugefügt, erbt diese Person die Rechte der Gruppe. Damit Benutzer sich dadurch nicht zusätzliche Rechte verschaffen, wird das Administrator-Recht für die entsprechenden Kategorien benötigt. Zusätzlich ist das Bearbeiten-Recht auf die Bedingung [Objekt-ID](../../grundlagen/eindeutige-referenzierungen.md) für ebendiese Objekte vom Typ **Personen** und **Personengruppe** erforderlich.
 
 [![cmdb-personen](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/cmdb/8-cmdb.png)](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/cmdb/8-cmdb.png)
 
@@ -44,7 +44,7 @@ Hat ein Benutzer das Recht, ein neues Objekt zu erstellen und nutzt dies auch, e
 Erweiterte Einstellungen
 ------------------------
 
-Für das CMDB-Modul existieren erweiterte Einstellungen. Standardmäßig sind diese nicht aktiv, sondern müssen unter **Verwaltung → Systemeinstellungen → Experteneinstellungen** eingetragen werden. Folgend wird der jeweilige **Key** beschrieben. Aktiviert wird die Einstellung, wenn **Value** mit 1 angegeben wird. Deaktiviert wird die Einstellung mit **Value** 0. Alle genannten Einstellungen wirken sich nur auf den derzeit aktiven Mandanten aus und sind daher auf **Tenant-wide** zu stellen.
+Für das CMDB-Modul existieren erweiterte Einstellungen. Standardmäßig sind diese nicht aktiv, sondern müssen unter **Verwaltung → [Mandanten-Name] Verwaltung → Experteneinstellungen** eingetragen werden. Folgend wird der jeweilige **Key** beschrieben. Aktiviert wird die Einstellung, wenn **Value** mit 1 angegeben wird. Deaktiviert wird die Einstellung mit **Value** 0. Alle genannten Einstellungen wirken sich nur auf den derzeit aktiven Mandanten aus und sind daher auf **Tenant-wide** zu stellen.
 
 *   **auth.use-in-cmdb-explorer**: Im CMDB-Explorer werden alle an anderer Stelle getätigten Rechte berücksichtigt. Objekte, für die der Benutzer kein Lese-Recht hat, werden weder dargestellt noch weiter iteriert. Andernfalls werden alle Objekte ohne Prüfung dargestellt.
 *   **auth.use-in-cmdb-explorer-service-browser**: Im CMDB-Explorer stehen über den Button **Service Auswahl** alle Services zur Verfügung, für die der Benutzer das Lese-Recht besitzt. Anderfalls stehen alle Service-Objekte ohne Prüfung zur Auswahl.

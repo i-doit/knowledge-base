@@ -12,7 +12,6 @@ Die IT-Dokumentation umfasst in vielen Fällen sehr sensible Daten, die geschüt
 
     Die hier aufgeführten Tipps gehören nicht zum normalen Umfang einer [Installation von i-doit](../installation/index.md) und stellen keine [Systemanforderungen](../installation/systemvoraussetzungen.md) dar. Es handelt sich um zusätzliche Sicherheitsmaßnahmen, die überwiegend das Betriebssystem und die installierten Pakete betreffen.
 
-
 Vor der Installation von i-doit
 -------------------------------
 
@@ -60,8 +59,6 @@ Manuell Updates einspielen ist lästig. Wer keine zentrale Steuerung und Automat
 Ein minimales Betriebssystem zeichnet sich dadurch aus, dass nur Anwendungen und Dienste installiert sind, die wirklich essentiell für den Betrieb sind. **Es gilt, das gesamte System auf seine Kernfunktion (hier: i-doit) zu beschränken.** Dass heißt, wir benötigen im Grunde nur Apache, PHP und MariaDB/MySQL. Und ein paar zusätzliche Anwendungen und Dienste, die in diesem Artikel erwähnt werden. Auf alles andere wie eine grafische Oberfläche mit Desktop, einen Drucker-Dienst oder einen Minecraft-Server kann getrost verzichtet werden.
 
 Eine gewöhnliche Installation bringt teilweise unnötigen Ballast mit, von dem wir uns erst einmal befreien müssen. Dazu sollten wir uns die laufenden Prozesse und offenen Ports genauer anschauen:
-
-
 
     # Laufende Dienste, die von Systemd verwaltet werden:
     systemctl list-units
@@ -328,6 +325,7 @@ Ein i-doit wird für Testzwecke "schnell mal" aufgesetzt. Dieses "schnell mal" b
 *   Standard-Benutzer in i-doit (admin, reader, author, editor)
 
 #### MySQL-Benutzer
+
 --------------------------------
 Dieser Benutzer wird bereits beim [Setup](../installation/manuelle-installation/setup.md) angelegt. Das Passwort kann nachträglich mit wenigen SQL-Befehlen geändert werden. Es wird davon ausgegangen, dass der Benutzer idoit heißt und die [System-Datenbank](../software-entwicklung/datenbank-modell/index.md) idoit_system. Zuerst kommt die Anmeldung:
 
@@ -359,7 +357,7 @@ Bereits bei der Installation des Betriebssystems wird ein Standard-Benutzer ange
 
 ### CSRF Tokens aktivieren
 
-i-doit bringt mehrere Maßnahmen mit, um Angriffe, die unter [**Cross-Site-Request-Forgery** (CSRF oder XSRF)](https://de.wikipedia.org/wiki/Cross-Site-Request-Forgery) firmieren, zu erschweren. Aktiviert werden die Maßnahmen unter **Verwaltung → Systemeinstellungen → Security → CSRF-Token** mit der Angabe **Ja**.
+i-doit bringt mehrere Maßnahmen mit, um Angriffe, die unter [**Cross-Site-Request-Forgery** (CSRF oder XSRF)](https://de.wikipedia.org/wiki/Cross-Site-Request-Forgery) firmieren, zu erschweren. Aktiviert werden die Maßnahmen im Admin Center unter **System setting → Security → CSRF-Token** mit der Angabe **Ja**.
 
 ### Zwei-Faktor-Authentifizierung
 

@@ -1,8 +1,9 @@
 # Benutzereinstellungen
 
-## Die Benutzereinstellungen sind in folgende Kategorien unterteilt:
+## Die Benutzereinstellungen sind in die folgenden Unterpunkte aufgeteilt
 
-- [Bearbeitungssperre](./bearbeitungssperre.md)
-- [Benutzersprache](./benutzersprache.md)
-- [Datenformate](./datenformate.md)
-- [Passwort ändern](./passwort-aendern.md)
+-   [Passwort ändern](passwort-aendern.md)
+-   [Datenformate](datenformate.md)
+-   [Benutzersprache](benutzersprache.md)
+-   [Benutzeroberfläche](benutzeroberflaeche/index.md)
+-   [Bearbeitungssperre](bearbeitungssperre.md)

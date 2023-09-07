@@ -1,6 +1,8 @@
 # Benutzeroberfläche
 
-Hier finden Sie die Einstellungen für die Benutzeroberfläche 
+Hier finden Sie die Einstellungen für die Benutzeroberfläche
+
+[![Benutzeroberfläche](../../../../assets/images/de/administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/1-b.png)](../../../../assets/images/de/administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/1-b.png)
 
 ## Abstände
 
@@ -27,7 +29,7 @@ Hier finden Sie die Einstellungen für die Benutzeroberfläche
 
 | Option | Wert |
 | - | - |
-| Zuletzt verwendeten Listen-Filter merken	 | 300 In Sekunden (0 = Filter nicht merken) |
+| Zuletzt verwendeten Listen-Filter merken  | 300 In Sekunden (0 = Filter nicht merken) |
 | Einträge pro Seite in Objektlisten | 50 |
 
 ## Objektnavigation

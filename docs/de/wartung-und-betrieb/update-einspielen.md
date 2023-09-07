@@ -3,21 +3,18 @@
 _i-doit_ sollte immer in der aktuellsten Version betrieben werden. In Minor-Releases befinden sich immer zahlreiche Bugfixes, in Major-Releases dazu dann noch neue Funktionen und Verbesserungen von bestehenden Funktionen. Minor-Releases erscheinen ungefähr alle vier Wochen, Major-Releases alle sechs Monate. Das Update kann [über die Web-Oberfläche von i-doit durchgeführt werden](#update-uber-die-web-oberflache), setzt jedoch einen Internetzugang (gegebenenfalls über einen HTTP-Proxy) voraus. Alternativ kann das Update [über die Konsole vorbereitet](#update-uber-die-konsole-vorbereiten) und anschließend über die Web-Oberfläche fortgeführt werden.
 
 !!! attention "Releases überspringen"
-
     Wenn aktuell die Version 1.13.1 installiert und schon die Version 1.13.3 verfügbar ist, wird trotzdem nur die nächsthöhere Version - also 1.13.2 - angezeigt. Allerdings können Minor-Releases grundsätzlich übersprungen werden. Dennoch werden über diesen Weg trotzdem alle Minor-Releases einzeln installiert, bis die aktuellste Version erreicht ist. Wenn du direkt auf die Version 1.13.3 springen möchtest, kannst du das neueste Paket im [Kundenportal](../administration/kundenportal.md) herunterladen und auf dem _i-doit_\-Host entpacken. Die notwendigen Schritte dafür kannst du hier im unteren Teil des Artikels finden(#Updateeinspielen-UpdateüberdieKonsolevorbereiten).
 
 !!! info "Version 1.16.1"
-
     Das Update von Version 1.16 über die Version 1.16.1 zur 1.16.2 kann nicht übersprungen werden.
 
 !!! attention "Backup"
-
     Vor dem Update sollte unbedingt ein [Backup](daten-sichern-und-wiederherstellen/index.md) angefertigt werden.
 
 Update über die Web-Oberfläche
 ------------------------------
 
-Das Update erreichst du entweder unter **Verwaltung → Systemtools → i-doit Update**, über das Quicklaunch-Widget auf dem Dashboard oder über die URL http://i-doit-host/i-doit/?load=update
+Das Update erreichst du entweder unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → i-doit Update**, über das Quicklaunch-Widget auf dem Dashboard oder über die URL <http://i-doit-host/i-doit/?load=update>
 
 [![update-quicklaunch](../assets/images/de/wartung-und-betrieb/update/1-Update_Quicklaunch.png)](../assets/images/de/wartung-und-betrieb/update/1-Update_Quicklaunch.png)
 
@@ -37,7 +34,6 @@ Nach einem Klick auf "Check for a new version" wird im nach der nächsthöheren 
 Nach einem Klick auf **Download** wird das Update-Paket heruntergeladen und entpackt.
 
 !!!attention "Schreibrechte"
-
      Sollte es beim Herunterladen und Entpacken zu einer Fehlermeldung kommen, liegt dies in vielen Fällen daran, dass der Apache Webserver keine Schreibrechte auf das Verzeichnis hat, in dem i-doit installiert ist. Weitere Hinweise darauf befinden sich ebenfalls weiter unten.
 
 [![Update-Available-Download](../assets/images/de/wartung-und-betrieb/update/4-Update_Available_Download.png)](../assets/images/de/wartung-und-betrieb/update/4-Update_Available_Download.png)
@@ -72,7 +68,7 @@ Nach der sogenannten "Property Migration" sollte hier ebenfalls alles grün ange
 
 [![Update-Attributes](../assets/images/de/wartung-und-betrieb/update/10-Update_Attributes.png)](../assets/images/de/wartung-und-betrieb/update/10-Update_Attributes.png)
 
-Nun ist das Update abgeschlossen. Wer detaillierte Informationen zum Update nachlesen möchte, kann dies in der verlinkten Log-Datei tun. Über **Run i-doit v.<VERSION>** kann zu _i-doit_ zurückgekehrt werden. Es ist sehr zu empfehlen, den Browser und den _i-doit_\-Cache unter **Verwaltung → Systemtools → Cache / Datenbank** zu löschen.
+Nun ist das Update abgeschlossen. Wer detaillierte Informationen zum Update nachlesen möchte, kann dies in der verlinkten Log-Datei tun. Über **Run i-doit v.<VERSION>** kann zu _i-doit_ zurückgekehrt werden. Es ist sehr zu empfehlen, den Browser und den _i-doit_\-Cache unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung** zu löschen.
 
 [![Update-Complete](../assets/images/de/wartung-und-betrieb/update/11-Update_Complete.png)](../assets/images/de/wartung-und-betrieb/update/11-Update_Complete.png)
 
@@ -82,7 +78,6 @@ Update über die Konsole vorbereiten
 Das Update kann über die Konsole vorbereitet werden. Für die Vorbereitung muss aus dem [Kundenportal](../administration/kundenportal.md) das neuste Update-Paket heruntergeladen werden.
 
 !!! attention "Releases überspringen"
-
     Hier ist zu beachten, dass Minor-Releases übersprungen werden können, Major-Releases aber nicht.
 
 Das Update-Paket kann (beispielsweise per [WinSCP](https://winscp.net/eng/docs/lang:de)) auf dem Server abgelegt werden. Verschiebe danach das Paket in das Hauptverzeichnis von _i-doit_, wenn du es nicht schon direkt dort abgelegt hast.  Das geht mit diesem Befehl:
@@ -163,4 +158,4 @@ Die Ausgabe kann dann z.B. so aussehen:
 | Clear caches | OK  |
 
 Anschließend kann i-doit verwendet werden.
-Nach dem Update sollte der [Cache](../administration/verwaltung/systemtools.md) geleert und der [Suche-index](../administration/verwaltung/systemtools.md) erneuert werden.
+Nach dem Update sollte der [Cache](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) geleert und der [Suche-index](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) erneuert werden.

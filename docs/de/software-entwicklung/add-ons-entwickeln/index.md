@@ -6,9 +6,9 @@ Add-ons können den Funktionsumfang von i-doit nahezu beliebig erweitern. In die
 
 Folgende Dinge sind in erster Linie notwendig, um ein Add-on zu entwickeln:
 
-1.  Add-on-Identifier (in diesem Artikel verwenden wir "synetics_example")
-2.  Minimales Set an PHP-Dateien
-3.  package.json
+1. Add-on-Identifier (in diesem Artikel verwenden wir "synetics_example")
+2. Minimales Set an PHP-Dateien
+3. package.json
 
 Der Add-on-Identifier
 =====================
@@ -40,10 +40,10 @@ Minimales Set an PHP-Dateien
 
 Um ein lauffähiges Add-on zu entwickeln, sind einige PHP-Dateien notwendig:
 
-1.  init.php
-2.  isys_module_synetics_example.class.php
-3.  isys_module_synetics_example_autoload.class.php (optional, nur notwendig falls PHP Klassen in der Legacy-Struktur existieren)
-4.  Sprachdateien (optional)
+1. init.php
+2. isys_module_synetics_example.class.php
+3. isys_module_synetics_example_autoload.class.php (optional, nur notwendig falls PHP Klassen in der Legacy-Struktur existieren)
+4. Sprachdateien (optional)
 
 Initialisierung des Add-ons mit Hilfe der init.php
 ----------------------------------------------------
@@ -55,9 +55,9 @@ Basis Add-on-Klasse isys_module_synetics_example.class.php
 
 In der Add-on-Basis Klasse werden u.a. Definitionen für die Darstellung des Add-ons hinterlegt. Das wird über die Konstante DISPLAY_IN_MAIN_MENU geregelt. Ist diese auf den boolschen Wert "true" gesetzt, wird das Add-on im Extras-Menü dargestellt. Darüber hinaus gibt es die Konstante MAIN_MENU_REWRITE_LINK, die genutzt werden kann, um die Art der URL zu definieren:
 
-Ist MAIN_MENU_REWRITE_LINK auf false gesetzt, wird die URL in etwa so aussehen: https://i-doit.int/?moduleID=<module-id\>
+Ist MAIN_MENU_REWRITE_LINK auf false gesetzt, wird die URL in etwa so aussehen: <https://i-doit.int/?moduleID=><module-id\>
 
-Ist MAIN_MENU_REWRITE_LINK auf true gesetzt, sieht die URL dagegen in etwa so aus: https://i-doit.int/synetics_example
+Ist MAIN_MENU_REWRITE_LINK auf true gesetzt, sieht die URL dagegen in etwa so aus: <https://i-doit.int/synetics_example>
 
 Zusätzlich zur init.php muss die öffentliche Methode "init" definiert sein:
 
@@ -85,4 +85,4 @@ Wie auch andere Tools, definieren wir bestimmte Attribute oder Metadaten eines A
 Eigene Systemeinstellungen
 ==========================
 
-Ein Add-on kann die Systemeinstellungen unter **Verwaltung → Systemeinstellungen** nutzen und auch selbst erweitern. Weitere Informationen zu Datentypen, Art der Einstellung usw. sind im Artikel [Systemeinstellungen erweitern](./systemeinstellungen-erweitern.md) dokumentiert.
+Ein Add-on kann die Einstellungen für [Mandanten-Name] unter **Verwaltung → Einstellungen für [Mandanten-Name]** nutzen und auch selbst erweitern. Weitere Informationen zu Datentypen, Art der Einstellung usw. sind im Artikel [Systemeinstellungen erweitern](./systemeinstellungen-erweitern.md) dokumentiert.

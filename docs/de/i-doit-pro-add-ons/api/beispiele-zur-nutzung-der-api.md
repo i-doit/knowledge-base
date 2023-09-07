@@ -1,10 +1,11 @@
 # Beispiele zur Nutzung der API
 
-Um den Umgang mit der [Programmierschnittstelle (API)](../../administration/verwaltung/schnittstellen.md) von i-doit zu erleichtern, haben wir einige typische Beispiele zusammengetragen.
+Um den Umgang mit der [Programmierschnittstelle (API)](../../administration/verwaltung/add-ons/json-rpc-api/index.md) von i-doit zu erleichtern, haben wir einige typische Beispiele zusammengetragen.
 
 Suche
 -----
-###idoit.search
+
+### idoit.search
 
 ??? example "idoit.search"
     Methode: idoit.search
@@ -46,6 +47,7 @@ Suche
 
 Login und Logout
 ----------------
+
 ### idoit.login
 
 ??? example "idoit.login"
@@ -174,7 +176,9 @@ Login und Logout
 
 Neues Objekt erstellen
 ----------------------
+
 ### cmdb.object.create
+
 ??? example "cmdb.object.create"
 
     Methode: **cmdb.object.create**
@@ -212,7 +216,9 @@ Neues Objekt erstellen
 
 Allgemeine Informationen zu einem Objekt auslesen
 -------------------------------------------------
+
 ### cmdb.object.read
+
 ??? example "cmdb.object.read"
 
     Methode: **cmdb.object.read**
@@ -258,7 +264,9 @@ Allgemeine Informationen zu einem Objekt auslesen
 
 Objekt aktualisieren
 --------------------
+
 ### cmdb.object.update
+
 ??? example "cmdb.object.update"
     Methode: **cmdb.object.update**
 
@@ -294,7 +302,9 @@ Objekt aktualisieren
 
 Objekt archivieren/als gelöscht markieren/bereinigen
 ----------------------------------------------------
+
 ### cmdb.object.delete
+
 ??? example "cmdb.object.delete"
     Methode: **cmdb.object.delete**
 
@@ -384,7 +394,9 @@ Objekt archivieren/als gelöscht markieren/bereinigen
 
 Bild hoch- und herunterladen
 ----------------------------
+
 ### cmdb.category.create
+
 ??? example "cmdb.category.create"
 
     Methoden: **cmdb.category.create**, **cmdb.category.read**
@@ -461,7 +473,9 @@ Bild hoch- und herunterladen
 
 Datei hochladen und mit Objekt verknüpfen
 -----------------------------------------
+
 ### cmdb.object.create und cmdb.category.create
+
 ??? example "cmdb.object.create und cmdb.category.create"
     Methoden: **cmdb.object.create** und **cmdb.category.create**
 
@@ -606,6 +620,7 @@ Installation einer Software auf einer Hardware
 ----------------------------------------------
 
 ### cmdb.category.create
+
 ??? example "cmdb.category.create"
     Methode: **cmdb.category.create**
 
@@ -648,7 +663,9 @@ Installation einer Software auf einer Hardware
 
 Modellpflege einer Hardware
 ---------------------------
+
 ### cmdb.category.create
+
 ??? example "cmdb.category.create"
     Methode: **cmdb.category.create**
 

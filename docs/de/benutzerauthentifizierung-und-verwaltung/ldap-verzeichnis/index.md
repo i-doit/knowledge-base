@@ -3,7 +3,6 @@
 Für die Authentifizierung/Autorisierung und Synchronisierung von Daten aus einem LDAP-Verzeichnis oder Active Directory (AD) bietet i-doit eine Schnittstelle.
 
 !!! info ""
-
     Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/ldap-integration-mit-i-doit/)
 
 **Voraussetzungen**
@@ -41,6 +40,7 @@ wird das ";" entfernt und somit
 ```ini
 extension=php_ldap.dll
 ```
+
 Manchmal kann es noch notwendig sein, die Dateien `ssleay32.dll` und `libeay32.dll` (von Version zu Version unterschiedlich, jedoch meist unter `C:\xampp\apache\bin\` zu finden) in das Verzeichnis php\ zu kopieren. Danach muss noch der Apache Webserver neu gestartet werden.
 
 ## Konfiguration
@@ -70,20 +70,18 @@ Unter **Verwaltung → Schnittstellen / externe Daten → LDAP → Server** kön
 
 _Bekannte Lösungen für Probleme bei der TLS Verbindung findet Ihr [HIER](../../administration/troubleshooting/ldap-via-tls.md)_
 
-
 ### LDAP-Parameter für i-doit-Login
 
 Die hier angegebenen Parameter bestimmen, wo im Directory nach Benutzern gesucht werden soll.
 
 | Feldname | Inhalt |
 | --- | --- |
-| **Eindeutige Kennung** | Es kommt bei der AD-Synchronisierung immer wieder dazu, dass geänderte Datensätze fälschlicherweise aufgrund eines geänderten Namens (Heirat o.Ä.) nicht mehr synchronisiert werden.  <br>Der "alte" Datensatz wird hier archiviert und ein neuer importiert.  <br>Daher kann als Eindeutige Kennung ein anderes Attribut ausgewählt werden. Siehe dazu **[Kategorieerweiterung](../../administration/verwaltung/cmdb-einstellungen.md#kategorieerweiterung)** |
+| **Eindeutige Kennung** | Es kommt bei der AD-Synchronisierung immer wieder dazu, dass geänderte Datensätze fälschlicherweise aufgrund eines geänderten Namens (Heirat o.Ä.) nicht mehr synchronisiert werden.  <br>Der "alte" Datensatz wird hier archiviert und ein neuer importiert.  <br>Daher kann als Eindeutige Kennung ein anderes Attribut ausgewählt werden. Siehe dazu **[Attributerweiterung](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md)** |
 | **Filter** | Der Filter wird durch die im unteren Bereich definierten Werte automatisch gefüllt und kann nicht direkt über die Oberfläche abgeändert werden. |
 | **Nach Benutzern suchen in (OU)*** | Pflichtfeld: Der Pfad bis zur Organisationseinheit, in der die Benutzer im Directory abgelegt wurden.<br><br>(Beispiel: OU=tree,DC=synetics,DC=int) |
 | **Rekursive Suche** | Beim Aktivieren der rekursiven Suche werden auch die Verzeichnisse unterhalb der darüber angegebenen Organisationseinheit durchsucht. Bei großen Directories ist dies nicht empfehlenswert und sollte durch die Anlage von mehreren Servern umgangen werden. |
 
 Des Weiteren kann der Filter noch weiter definiert werden. Bei einer einzigen Filterzeile haben die Optionen dahinter noch keine Auswirkungen. Erst wenn über "Filter hinzufügen" die Abfrage erweitert wird, kommen die weiteren Optionen zur Geltung.
-
 
 An letzten Filter anhängen:
 
@@ -96,6 +94,7 @@ Als neuen Filter anhängen:
 ```shell
 (&(objectClass=user)(&(test=test)))
 ```
+
 Neuen Term bilden:
 
 ```shell
@@ -117,11 +116,11 @@ Ohne weitere Einstellung z.B. **Eindeutige Kennung** wird anhand des **Login** A
 
 ### Directories
 
-Über **Verwaltung → Schnittstellen / externe Daten → LDAP → Directories **lässt sich dann das Mapping einrichten. Es wird dafür genutzt, beim Login grundlegende Informationen zu dem einloggenden Benutzer abzufragen und in dem in i-doit zu erstellenden Benutzer abzulegen. Hier kann nach der Auswahl des zutreffenden Directories die Zuweisung vorgenommen werden. Standardmäßig sind die Felder jedoch schon gefüllt und brauchen in der Regel nicht verändert zu werden.
+Über **Verwaltung → Schnittstellen / externe Daten → LDAP → Directories**lässt sich dann das Mapping einrichten. Es wird dafür genutzt, beim Login grundlegende Informationen zu dem einloggenden Benutzer abzufragen und in dem in i-doit zu erstellenden Benutzer abzulegen. Hier kann nach der Auswahl des zutreffenden Directories die Zuweisung vorgenommen werden. Standardmäßig sind die Felder jedoch schon gefüllt und brauchen in der Regel nicht verändert zu werden.
 
 ### Import eigener LDAP-Attribute
 
-Es ist auch möglich, eigene Attribute aus dem LDAP über den Import von Personen in den Stammdaten zu hinterlegen. Dafür können weitere Felder für diese Kategorie unter **Verwaltung → CMDB-Einstellungen→ [Kategorieerweiterungen](../../administration/verwaltung/cmdb-einstellungen.md#kategorieerweiterung)** konfiguriert werden. Sobald ein Name definiert wurde, wird das Feld mit derselben Bezeichnung angezeigt. Die Befüllung findet dann über den zugehörigen Key statt.
+Es ist auch möglich, eigene Attribute aus dem LDAP über den Import von Personen in den Stammdaten zu hinterlegen. Dafür können weitere Felder für diese Kategorie unter **Verwaltung → CMDB-Einstellungen→ [Attributerweiterungen](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md)** konfiguriert werden. Sobald ein Name definiert wurde, wird das Feld mit derselben Bezeichnung angezeigt. Die Befüllung findet dann über den zugehörigen Key statt.
 
 ### Regelmäßige Synchronisation
 
@@ -138,7 +137,6 @@ Die Konfiguration muss in der [Handler-Konfiguration](../../automatisierung-und-
     <Files "*.ini">
         Require all denied
     </Files>
-
 
 | Parameter | Zweck |
 | --- | --- |
@@ -160,7 +158,6 @@ Die automatische Zuweisung sorgt dafür, dass nach dem Login automatisch die fü
 [![ldap-autozuweis](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)
 
 !!! info "memberOf bei OpenLDAP"
-
     Die automatische Zuweisung beruht auf der LDAP-Abfrage, in welchen Gruppen ein Benutzer ist. Hierbei spielt das Attribut memberOf eine wichtige Rolle. Dieses Attribut muss als Overlay verfügbar sein, was in vielen Standard-Installationen von OpenLDAP nicht der Fall ist. Gute Artikel für die nötige Konfiguration befinden sich [hier](http://www.adimian.com/blog/2014/10/how-to-enable-memberof-using-openldap/) und [hier](https://technicalnotes.wordpress.com/2014/04/19/openldap-setup-with-memberof-overlay/).
 
 ### Personen und Personengruppen Synchronisieren
@@ -174,13 +171,14 @@ Voraussetzung ist, dass der Benutzer mit dem der Befehl ausgeführt wird auch di
 
 ### Logging
 
-Unterhalb von log/ im Installationsverzeichnis von i-doit befindet sich ein Logfile mit dem Namen ldap_debug.txt. Das Logging lässt sich unter **Verwaltung → Systemeinstellungen → Logging → LDAP Debug** (de-)aktivieren.
+Unterhalb von log/ im Installationsverzeichnis von i-doit befindet sich ein Logfile mit dem Namen ldap_debug.txt. Das Logging lässt sich unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Logging → LDAP Debug** (de-)aktivieren.
 
 ## Den ldap-sync ausführen
-
 
 Der ldap-sync lässt sich nur über die Console des Servers ausführen. Um die Console richtig bedienen zu können, sollte der [Artikel](../../automatisierung-und-integration/cli/console/index.md) dazu bekannt sein. Eine einfache Synchronisation ohne die erweiterte Konfiguration dient die Option **ldap-sync**. Eine Beschreibung der Parameter ist im entsprechenden [Kapitel](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) zu finden.
 
 **Beispiel zur Verwendung**
 
-    sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1
+```shell
+sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1
+```

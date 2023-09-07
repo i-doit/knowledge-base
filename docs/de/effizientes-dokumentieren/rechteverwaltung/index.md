@@ -10,7 +10,6 @@ Personen und Personengruppen
 Rechte können an Personen und Personengruppen vergeben werden. Wird ein Recht an eine Gruppe vergeben, erben alle Personen, die dieser Gruppe angehören, dieses Recht. Login-berichtigte Benutzer werden als Objekt vom Typ Person in i-doit gespeichert. Die entsprechenden Gruppen sind vom Typ Personengruppe.
 
 !!! success "Gruppen bilden"
-
     In der IT hat sich bewährt, das Rollenkonzept nicht für einzelne Benutzer zu erstellen, sondern für Gruppen (oder oft auch Rollen genannt). Das macht die Handhabung eleganter, denn Benutzer können einer oder mehreren Gruppen zugeordnet werden. Rechte müssen demnach nur noch an wenigen Stellen konfiguriert werden.
 
 Bei der Standard-Installation von i-doit gibt es einige **Personen**\-Objekte, die **Personengruppen** zugewiesen sind und somit vordefinierte Rechte besitzen:
@@ -26,7 +25,6 @@ Bei der Standard-Installation von i-doit gibt es einige **Personen**\-Objekte, d
 Die aufgelisteten Benutzer erben ihre Rechte durch die gleichnamigen Gruppen.
 
 !!! success "Rechte an LDAP/AD koppeln"
-
     Wie im Artikel zur [Erstanmeldung](../../grundlagen/erstanmeldung.md) beschrieben, ist es sinnvoll, Personen und Gruppenzugehörigkeiten durch die Anbindung an einen [LDAP-Verzeichnisserver/Active Directory (AD)](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) zu automatisieren.
 
 Positive Rechte
@@ -63,13 +61,11 @@ Die Bedingung wird aus einem Drop-Down-Menü ausgewählt. Die ersten Spalten ver
 Ein Klick auf den Button **Neues Recht** fügt am Ende der Tabelle eine neue Zeile hinzu.
 
 !!! success "Rechte testen"
-
     Um die Auswirkungen an der Konfiguration direkt testen zu können, bietet es sich an, in einem zweiten Browser (bzw. einem "privaten" Tab) mit einem Benutzer angemeldet zu sein, der von den Konfigurationsänderungen betroffen ist. Sollte keiner vorhanden sein, kann ein Test-Benutzer angelegt werden und den zu testenden Gruppen zugeordnet werden.
 
 Sind alle Rechte wie gewünscht konfiguriert, sollten diese über den Button **Speichern** scharf geschaltet werden.
 
 !!! warning "Cache erneuern"
-
     Unter Umständen kann es vorkommen, dass Rechte nicht sofort greifen, beispielsweise weil die betroffenen Benutzer noch angemeldet sind. Um die neuen Rechte zu forcieren, muss der Rechte-Cache erneuert werden. Dies geschieht unter **Verwaltung → Systemtools → Cache / Datenbank → Cache → Rechtesystem Cache leeren**. Zudem ist es empfehlenswert, den Cache [automatisch regelmäßig per Cronjob](../../automatisierung-und-integration/cli/index.md) zu erneuern.
 
 Module
@@ -109,7 +105,7 @@ Rechte wiederherstellen
 Rechteverwaltung deaktivieren
 -----------------------------
 
-Um allen Benutzern alle Rechte zu geben, kann die Rechteverwaltung deaktiviert werden. Erledigt wird dies unter **Verwaltung → Systemeinstellungen → System Parameters** **→ Rechtesystem**.
+Um allen Benutzern alle Rechte zu geben, kann die Rechteverwaltung deaktiviert werden. Erledigt wird dies unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Sicherheit → Rechtesystem**.
 
 Kategorie Rechtevergabe
 -----------------------
@@ -119,5 +115,4 @@ Zu den Objekttypen **Personen** und **Personengruppen** gibt es die Kategorie **
 [![rechteverwaltung-dropdown](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/10-rv.png)](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/10-rv.png)
 
 !!! warning "Sinn und Zweck"
-
     Die Kategorie **Rechtevergabe** bot beim Einführen der damals neuen Rechteverwaltung den Benutzern der bisherigen Rechteverwaltung einen "sanften" Umstieg. Zum jetzigen Zeitpunkt hat diese Kategorie allerdings stark an Bedeutung verloren. Sie sollte daher nicht mehr verwendet werden. Keinesfalls sollten Rechte in den einzelnen Modulen gleichzeitig mit Konfigurationen in dieser Kategorie vermischt werden.

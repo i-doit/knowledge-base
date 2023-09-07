@@ -45,8 +45,7 @@ Dies ist in der i-doit Verwaltung unterRechtesystem > Rechtevergabe > Forms mög
 [![Rechtevergabe](../../assets/images/de/i-doit-pro-add-ons/forms/2-forms.png)](../../assets/images/de/i-doit-pro-add-ons/forms/2-forms.png)
 
 !!! attention "Cache für das Rechtesystem leeren"
-
-    Nachdem die Rechte vergeben oder geändert wurden ist es notwendig, in der i-doit [Verwaltung](../../administration/verwaltung/index.md) unter Systemtools > Cache / Datenbank den [Cache](../../administration/verwaltung/systemtools.md) zu leeren, damit die Änderungen vom System übernommen werden.
+    Nachdem die Rechte vergeben oder geändert wurden ist es notwendig, in der i-doit [Verwaltung](../../administration/verwaltung/index.md) unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Berechtigungen** [Cache](../../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) zu leeren, damit die Änderungen vom System übernommen werden.
 
 ## Aufruf des Add-ons
 

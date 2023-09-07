@@ -51,7 +51,7 @@ Die Einstellung für die **struktur-it-dokumentation.mdMaximalzahl kombinierter 
 Logbuch aktivieren/deaktivieren
 -------------------------------
 
-Unter **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Logbuch → Detaillierte CMDB Änderungen protokollieren** kann das Logbuch aktiviert bzw. deaktiviert werden.
+Unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Logbuch → Detaillierte CMDB Änderungen protokollieren** kann das Logbuch aktiviert bzw. deaktiviert werden.
 
 Eigene Einträge
 ---------------
