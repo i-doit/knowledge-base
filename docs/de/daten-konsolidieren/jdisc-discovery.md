@@ -20,7 +20,7 @@ Dieser Artikel widmet sich im Folgenden der Schnittstelle zwischen i-doit und JD
 
 ## Konfiguration
 
-Die Konfiguration der Schnittstelle befindet sich unter **Verwaltung → Schnittstellen / externe Daten → Import → JDISC → JDisc-Konfiguration**. Dort können beliebig viele Instanzen von JDisc Discovery angegeben werden. Dies ermöglicht komplexe Inventarisierungs-Szenarien mit voneinander getrennten Netzen.
+Die Konfiguration der Schnittstelle befindet sich unter **Verwaltung → Import und Schnittstellen → JDISC → JDisc-Konfiguration**. Dort können beliebig viele Instanzen von JDisc Discovery angegeben werden. Dies ermöglicht komplexe Inventarisierungs-Szenarien mit voneinander getrennten Netzen.
 
 [![JDisc Konfiguration](../assets/images/de/daten-konsolidieren/jdisc/1-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/1-jdisc.jpg)
 
@@ -38,7 +38,7 @@ Die Konfiguration der Schnittstelle befindet sich unter **Verwaltung → Schnitt
 
 Nach dem Speichern der Parameter kann die Verbindung zur JDisc-Datenbank über den Button **Verbindung prüfen** getestet werden.
 
-### Discovery Einstellungen#
+### Discovery Einstellungen
 
 Über i-doit kann der Benutzer einen Scan bei der konfigurierten JDisc-Instanz auslösen. Dazu wird der Web Service von JDisc Discovery verwendet, der installiert und aktiviert sein muss.
 
@@ -55,7 +55,7 @@ Damit die Verbindung zu JDisc Discovery funktioniert, muss auf dem Host von i-do
 
 ## Profile
 
-Die JDisc-Profile innerhalb von i-doit geben die Möglichkeit, die Verknüpfung von Objekttypen und ihren Attributen zwischen JDisc und i-doit zu definieren. Unter **Verwaltung → Schnittstellen / externe Daten → Import → JDISC → JDisc-Profile** kann festgelegt werden, in welcher Weise die durch JDisc gefundenen Objekte ihren Weg in die IT-Dokumentation finden.
+Die JDisc-Profile innerhalb von i-doit geben die Möglichkeit, die Verknüpfung von Objekttypen und ihren Attributen zwischen JDisc und i-doit zu definieren. Unter **Verwaltung → Import und Schnittstellen → JDISC → JDisc-Profile** kann festgelegt werden, in welcher Weise die durch JDisc gefundenen Objekte ihren Weg in die IT-Dokumentation finden.
 
 [![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.jpg)
 
@@ -110,6 +110,7 @@ Für jeden Typ in JDisc kann ein äquivalenter Objekttyp in i-doit ausgewählt w
 
 Kategorien die für JDisc erstellt wurden sind:
 Support Entitlements, Custom Identifier, JDisc Custom Attributes, JDisc Discovery und Netzwerk > Verbindungs Endpunkte
+
 ## Import von Daten über die Web GUI
 
 Der Import von Inhalten aus JDisc erfolgt über **Extras → CMDB → Import → JDisc**.

@@ -45,11 +45,11 @@ Manchmal kann es noch notwendig sein, die Dateien `ssleay32.dll` und `libeay32.d
 
 ## Konfiguration
 
-Die Konfiguration befindet sich in i-doit unter **Verwaltung → Schnittstellen / externe Daten → LDAP**. Dort können unter **Server** zum Einen ein oder mehrere Instanzen konfiguriert und zum Anderen eine Zuweisung von Feldern zu Attributen vorgenommen werden.
+Die Konfiguration befindet sich in i-doit unter **Verwaltung → Import und Schnittstellen → LDAP**. Dort können unter **Server** zum Einen ein oder mehrere Instanzen konfiguriert und zum Anderen eine Zuweisung von Feldern zu Attributen vorgenommen werden.
 
 ### Server
 
-Unter **Verwaltung → Schnittstellen / externe Daten → LDAP → Server** können ein oder mehrere Instanzen konfiguriert werden. Beim Login werden alle Server nacheinander abgefragt, bis ein Login gefunden wurde. Gibt es mehrere [Mandanten](../../administration/mandantenfaehigkeit.md), werden alle nacheinander abgefragt und die Datenbanken für den Login angeboten, wenn die Abfrage ein positives Ergebnis geliefert hat.
+Unter **Verwaltung → Import und Schnittstellen → LDAP → Server** können ein oder mehrere Instanzen konfiguriert werden. Beim Login werden alle Server nacheinander abgefragt, bis ein Login gefunden wurde. Gibt es mehrere [Mandanten](../../administration/mandantenfaehigkeit.md), werden alle nacheinander abgefragt und die Datenbanken für den Login angeboten, wenn die Abfrage ein positives Ergebnis geliefert hat.
 
 ### LDAP Verbindung für Lookups (lesend)
 
@@ -116,7 +116,7 @@ Ohne weitere Einstellung z.B. **Eindeutige Kennung** wird anhand des **Login** A
 
 ### Directories
 
-Über **Verwaltung → Schnittstellen / externe Daten → LDAP → Directories**lässt sich dann das Mapping einrichten. Es wird dafür genutzt, beim Login grundlegende Informationen zu dem einloggenden Benutzer abzufragen und in dem in i-doit zu erstellenden Benutzer abzulegen. Hier kann nach der Auswahl des zutreffenden Directories die Zuweisung vorgenommen werden. Standardmäßig sind die Felder jedoch schon gefüllt und brauchen in der Regel nicht verändert zu werden.
+Über **Verwaltung → Import und Schnittstellen → LDAP → Directories**lässt sich dann das Mapping einrichten. Es wird dafür genutzt, beim Login grundlegende Informationen zu dem einloggenden Benutzer abzufragen und in dem in i-doit zu erstellenden Benutzer abzulegen. Hier kann nach der Auswahl des zutreffenden Directories die Zuweisung vorgenommen werden. Standardmäßig sind die Felder jedoch schon gefüllt und brauchen in der Regel nicht verändert zu werden.
 
 ### Import eigener LDAP-Attribute
 

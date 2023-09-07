@@ -17,23 +17,21 @@ Ein Client (beispielsweise in Form eines Scripts) sendet dazu einen Request an d
 API-Aufrufe können asynchron erfolgen, ohne den Zusammenhang zwischen Requests und Responses zu verlieren. Die verwendete Programmiersprache kann frei gewählt werden.
 
 !!! success "API statt Datenbank"
-
     Es ist sehr zu empfehlen, die API immer Datenbank-Manipulationen vorzuziehen. SQL Statements umgehen allerlei interne Verarbeitungsschritte. Wird per INSERT, UPDATE oder DELETE ein Datensatz via SQL manipuliert, könnte das die Datenintegrität gefährden und i-doit unbrauchbar machen.
 
 Download
 --------
 
-Die API wird für die pro-Variante als kostenloses [Add-on](../index.md) im [Kundenportal](../../administration/kundenportal.md) zum Download angeboten. Benutzern der open-Variante steht es ebenfalls kostenlos über die Website [i-doit.org](https://i-doit.org/) zur Vergfügung. Die [Installation](../index.md) folgt demselben Prinzip der anderen Add-ons für i-doit.
+Die API wird für die pro-Variante als kostenloses [Add-on](../index.md) im [Kundenportal](../../administration/kundenportal.md) zum Download angeboten. Benutzern der open-Variante steht es ebenfalls kostenlos über die Website [i-doit.org](https://i-doit.org/) zur Verfügung. Die [Installation](../index.md) folgt demselben Prinzip der anderen Add-ons für i-doit.
 
 Konfiguration
 -------------
 
-Die Konfiguration der API geschieht über die [Web GUI](../../grundlagen/web-gui.md) von i-doit, zu finden unter **Verwaltung → Schnittstellen / externe Daten → JSON-RPC API → Allgemeine Einstellungen**.
+Die Konfiguration der API geschieht über die [Web GUI](../../grundlagen/web-gui.md) von i-doit, zu finden unter **Verwaltung → Add-ons → JSON-RPC API**.
 
 [![Konfiguration](../../assets/images/de/i-doit-pro-add-ons/api/1-api.png)](../../assets/images/de/i-doit-pro-add-ons/api/1-api.png)
 
 !!! info "Info"
-
     Das Entfernen von HTML-Tags aus Beschreibungsfeldern ist erst ab i-doit Version 1.15.2 mit installierter API Version 1.11.3 möglich.
 
 Zu beachten ist, dass das Logging von API Requests bei jedem Request eine Datei im Installationsverzeichnis von i-doit unter log/ anlegt. Dies könnte bei massivem Gebrauch der API zu einem erhöhten Speicherplatzbedarf führen.
@@ -41,7 +39,7 @@ Zu beachten ist, dass das Logging von API Requests bei jedem Request eine Datei 
 Zugriff
 -------
 
-Um die API von i-doit anzusprechen, gibt es eine spezielle URL. Der Basis-URL wird ein src/jsonrpc.php angehangen:
+Um die API von i-doit anzusprechen, gibt es eine spezielle URL. Der Basis-URL wird ein src/jsonrpc.php angehängt:
 
     https://demo.i-doit.com/src/jsonrpc.php
 
@@ -174,7 +172,7 @@ FAQ
 
 | Error Message | Problem |
 | --- | --- |
-| Usersettings are only available after logging in. (i-doit <= 21) | Die Api System Person wurde archiviert oder gelöscht.  <br>  <br>**Lösung:**  Die Api System Person muss wiederhergestellt werden oder es muss eine Authentifizierungsmethode genutzt werden. |
+| User settings are only available after logging in. (i-doit <= 21) | Die Api System Person wurde archiviert oder gelöscht.  <br>  <br>**Lösung:**  Die Api System Person muss wiederhergestellt werden oder es muss eine Authentifizierungsmethode genutzt werden. |
 | i-doit system error: Could not connect tenant database. (i-doit >=22) | Die Api System Person wurde archiviert oder gelöscht.  <br>  <br>**Lösung:**  Die Api System Person muss wiederhergestellt werden oder es muss eine Authentifizierungsmethode genutzt werden. |
 
 Releases
