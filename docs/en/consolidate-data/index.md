@@ -6,5 +6,4 @@ When you break down the [IT documentation](../glossary.md), you always end up wi
 *   [CSV Data Export](../consolidate-data/csv-data-export.md)
 *   [h-inventory](../consolidate-data/h-inventory.md)
 *   [JDisc Discovery](../consolidate-data/jdisc-discovery.md)
-*   [LOGINventory](../consolidate-data/loginventory.md)
 *   [Object Identification During Imports](../consolidate-data/object-identification-during-imports.md)

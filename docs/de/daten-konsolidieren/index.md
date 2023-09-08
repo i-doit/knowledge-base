@@ -6,5 +6,4 @@ Bricht man die [IT-Dokumentation](../glossar.md) herunter, so landet man immer b
 *   [CSV-Datenexport](csv-datenexport.md)
 *   [h-inventory](h-inventory.md)
 *   [JDisc Discovery](jdisc-discovery.md)
-*   [LOGINventory](loginventory.md)
 *   [Objekte identifizieren bei Importen](objekt-identifizieren-bei-importen.md)
