@@ -381,7 +381,6 @@ nav:
       - CSV-Datenexport: daten-konsolidieren/csv-datenexport.md
       - h-inventory: daten-konsolidieren/h-inventory.md
       - JDisc Discovery: daten-konsolidieren/jdisc-discovery.md
-      - LOGINventory: daten-konsolidieren/loginventory.md
       - Objekte identifizieren bei Importen: daten-konsolidieren/objekt-identifizieren-bei-importen.md
   - Automatisierung und Integration:
       - automatisierung-und-integration/index.md
