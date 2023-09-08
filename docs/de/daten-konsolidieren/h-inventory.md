@@ -12,11 +12,11 @@ Vor einem Import muss i-doit entsprechend konfiguriert werden.
 
 ## Konfiguration
 
-Für einen manuellen Datenimport befindet sich die Konfiguration unter **Verwaltung → Schnittstellen / externe Daten → Import → H-Inventory → Konfiguration**. Dort wird lediglich im Parameter **Objekt-Matching Profil** angegeben, [wie bereits dokumentierte Objekte identifiziert werden sollen](objekt-identifizieren-bei-importen.md). Identifizierte Objekte werden beim Datenimport aktualisiert.
+Für einen manuellen Datenimport befindet sich die Konfiguration unter **Verwaltung → Import und Schnittstellen → H-Inventory → Konfiguration**. Dort wird lediglich im Parameter **Objekt-Matching Profil** angegeben, [wie bereits dokumentierte Objekte identifiziert werden sollen](objekt-identifizieren-bei-importen.md). Identifizierte Objekte werden beim Datenimport aktualisiert.
 
 ## Inventarisierung eines Microsoft Windows Clients via H-Inventory
 
-Download des H-Inventory Pakets von **i-doit → Extras → Import → Scripts**
+Download des H-Inventory Pakets von **Extras → CMDB → Import → H-Inventory**
 
 [![XML Import](../assets/images/de/daten-konsolidieren/h-inventory/1-hinv.jpg)](../assets/images/de/daten-konsolidieren/h-inventory/1-hinv.jpg)
 

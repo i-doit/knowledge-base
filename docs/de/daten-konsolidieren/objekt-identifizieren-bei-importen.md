@@ -17,7 +17,7 @@ Weitere Datenimporte verfolgen mitunter andere Vorgehensweisen.
 
 Die Identifizierung von Objekten erfolgt zweistufig:
 
-1.  Die höchste Priorität genießen die eindeutigen Attribute der jeweiligen Datenquellen:
+1. Die höchste Priorität genießen die eindeutigen Attribute der jeweiligen Datenquellen:
 
     CSV-Datenimport: _nicht anwendbar_
     JDisc: Device ID
@@ -26,11 +26,11 @@ Die Identifizierung von Objekten erfolgt zweistufig:
 
     Diese Attribute werden beim ersten Datenimport gespeichert und können bei folgenden Datenimporten als Identifizierungsmerkmal verwendet werden. Falls diese Attribute nicht zur Verfügung stehen, folgt Schritt 2.
 
-2.  Anhand von Profilen erfolgt ein sogenanntes Objekt-Matching (siehe unten).
+2. Anhand von Profilen erfolgt ein sogenanntes Objekt-Matching (siehe unten).
 
 ## Profile bilden
 
-Einige Attribute sind geeignet, um Objekte [eindeutig zu referenzieren](../grundlagen/eindeutige-referenzierungen.md). Diesen Umstand kann man sich zu nutze machen, wenn es um den Import von Daten aus Drittapplikationen geht, wo ähnliche Eindeutigkeiten existieren. Um für verschiedene Import-Fälle gewappnet zu sein, können in i-doit sogenannte Objekt-Matching Profile gebildet werden, die beim Import berücksichtigt werden sollen. Die zentrale Konfiguration befindet sich unter **Verwaltung → Schnittstellen / externe Daten → Import → Objekt-Matching Profile**. Es können beliebig viele Profile erstellt werden.
+Einige Attribute sind geeignet, um Objekte [eindeutig zu referenzieren](../grundlagen/eindeutige-referenzierungen.md). Diesen Umstand kann man sich zu nutze machen, wenn es um den Import von Daten aus Drittapplikationen geht, wo ähnliche Eindeutigkeiten existieren. Um für verschiedene Import-Fälle gewappnet zu sein, können in i-doit sogenannte Objekt-Matching Profile gebildet werden, die beim Import berücksichtigt werden sollen. Die zentrale Konfiguration befindet sich unter **Verwaltung → Import und Schnittstellen → Objekt-Matching Profile**. Es können beliebig viele Profile erstellt werden.
 
 [![Objekt-Matching Profile Liste](../assets/images/de/daten-konsolidieren/objekt-import/1-obji.png)](../assets/images/de/daten-konsolidieren/objekt-import/1-obji.png)
 
