@@ -2,29 +2,24 @@
 
 IT components come and go. You plan, purchase and operate them and take them out of service eventually. Bingo: This article is about the lifecycle management. It plays an important role in the [IT documentation](../glossary.md), since it can be used to track the state that a component has or should have. Furthermore, it should be possible to archive or delete the [IT documentation](../glossary.md) itself.
 
-Lifecycle of IT Components
---------------------------
+## Lifecycle of IT Components
 
 The lifecycle of an IT component is documented in the CMDB status. The following CMD states are available with a fresh i-doit installation:
 
-*   **planned**
-*   **ordered**
-*   **delivered**
-*   **assembled**
-*   **tested**
-*   **in operation (not editable)  
-    **
-*   **defect**
-*   **inoperative (not editable)  
-    **
-*   **under repair  
-    **
-*   **delivered from repair  
-    **
-*   **stored**
-*   **scrapped**
-*   **i-doit Status (not editable)**
-*   **Template (not editable)**
+-   **planned**
+-   **ordered**
+-   **delivered**
+-   **assembled**
+-   **tested**
+-   **in operation (not editable)**
+-   **defect**
+-   **inoperative (not editable)**
+-   **under repair**
+-   **delivered from repair**
+-   **stored**
+-   **scrapped**
+-   **i-doit Status (not editable)**
+-   **Template (not editable)**
 
 The **CMDB status** can be displayed as a column in the object lists in order to see the target condition of a documented object as fast as possible.
 
@@ -42,16 +37,15 @@ To represent the complete lifecycle of an [object](../glossary.md), the CMDB sta
 
 ### Manage CMDB Status
 
-The adding, changing or deleting of a **CMDB status** is carried out via **Administration → CMDB settings → CMDB status**. For each **CMDB status** the following information is needed:
+The adding, changing or deleting of a **CMDB status** is carried out via **Administration → Predefined content → CMDB status**. For each **CMDB status** the following information is needed:
 
-*   Unique name/ [language constant (for translation)](../system-administration/localization.md)
-*   Unique constant (helpful for using the [API](../i-doit-pro-add-ons/api/index.md), for example)
-*   Color (is used in object lists, the **General** category, in the **CMDB-Explorer** and many other cases)
+-   Unique name/ [language constant (for translation)](../system-administration/localization.md)
+-   Unique constant (helpful for using the [API](../i-doit-pro-add-ons/api/index.md), for example)
+-   Color (is used in object lists, the **General** category, in the **CMDB-Explorer** and many other cases)
 
 [![Manage CMDB Status](../assets/images/en/basics/life-and-documentation-cycle/3-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/3-ladc.png)
 
-Lifecycle of the IT Documentation
----------------------------------
+## Lifecycle of the IT Documentation
 
 Apart from the objects that are to be documented, the documentation itself can also be subject to a lifecycle. A documentation artifact can be archived once it is not needed anymore. An artifact can also be marked as deleted, so that a person who is responsible for the IT documentation can irrevocably remove this artifact via the **Purge** function.
 
@@ -63,17 +57,17 @@ Apart from the objects that are to be documented, the documentation itself can a
 
 Almost all documentation artifacts (objects, category entries, values in [**Dialog+**\-fields](./dialog-admin.md) etc.) receive a state:
 
-*   **Normal**: When working normally (create, edit), each artifact receives this state and can be used anywhere.
-*   **Archived**: The artifact is hidden in the [IT documentation](../glossary.md). Further use, e.g. linking, is not possible anymore.
-*   **Deleted**: The artifact is supposed to be purged but still exists completely with all relations in the IT documentation. Apart from this, the state is similar to **Archived**.
+-   **Normal**: When working normally (create, edit), each artifact receives this state and can be used anywhere.
+-   **Archived**: The artifact is hidden in the [IT documentation](../glossary.md). Further use, e.g. linking, is not possible anymore.
+-   **Deleted**: The artifact is supposed to be purged but still exists completely with all relations in the IT documentation. Apart from this, the state is similar to **Archived**.
 
 The cycle provides that every documentation artifact receives the **Normal** status. Later on, the states will be **Archived** and then **Deleted**. A restoration to the respective previous state is possible at any time.
 
-in addition to these three states there are also special cases concerning objects:
+In addition to these three states there are also special cases concerning objects:
 
-*   **Unfinished**: This state is assigned to a new object that has been created but not saved. This happens, for example, when a new object is created but the **Save** button is not pressed. These objects can only be found via a report and can then be used. You should remove the unfinished objects on a regular basis via **Administration → Systemtools → Cache / Database → Remove unfinished objects**. As an alternative, the unfinished objects can be removed automatically. More details can be found further below.
-*   **Template**: An object can be used as a [template](../efficient-documentation/templates.md) for other objects.
-*   **Change template**: An object can be used as a change template for [mass changing](../efficient-documentation/mass-change.md).
+-   **Unfinished**: This state is assigned to a new object that has been created but not saved. This happens, for example, when a new object is created but the **Save** button is not pressed. These objects can only be found via a report and can then be used. You should remove the unfinished objects on a regular basis via **Administration → [Tenant Name] management → Repair and clean up → Remove unfinished objects**. As an alternative, the unfinished objects can be removed automatically. More details can be found further below.
+-   **Template**: An object can be used as a [template](../efficient-documentation/templates.md) for other objects.
+-   **Change template**: An object can be used as a change template for [mass changing](../efficient-documentation/mass-change.md).
 
 If you want to delete a documentation artifact irrevocably, mark it as as **Deleted** first and then use the **Purge** function. This, however, is not a state because all data (including the previous state and any logbook entries) will be deleted during the **Purge** process. This means that the object and its existence can't be traced anymore; thus you should use the function with particular caution.
 
@@ -93,7 +87,7 @@ A similar functionality as with the objects exists for some [list categories](..
 
 ### Simplified Deleting (Quickpurge)
 
-In order to purge a documentation artifact it first has to be archived and marked as deleted. To shorten this cycle, it is possible to activate the **Quickpurge** button. This is done via **Administration → System settings → System parameters → Activate Quickpurge button**. By this means you can purge an object or category entry regardless of its state.
+In order to purge a documentation artifact it first has to be archived and marked as deleted. To shorten this cycle, it is possible to activate the **Quickpurge** button. This is done via **Administration → [Tenant Name] management → Settings for CMDB → CMDB → Activate Quickpurge button**. By this means you can purge an object or category entry regardless of its state.
 
 ### Listing of all Objects that are Archived or Marked as Deleted
 
@@ -105,15 +99,15 @@ In almost all cases, unfinished objects are unwanted since they are not visible 
 
 #### Manual Deletion
 
-You can delete the artifacts via the web GUI. The respective function is located at **Administration → Systemtools → Cache / Database →** **Objects** or **Categories**. After using one of the provided buttons, a notification showing the amount of objects/ category entries which you are about to delete, will be displayed. After the deleting process it also shows statistics of the amount of objects/ category entries that have been deleted.
+You can delete the artifacts via the web GUI. The respective function is located at **Administration → [Tenant Name] management → Repair and clean up → Objects** or **Categories**. After using one of the provided buttons, a notification showing the amount of objects/ category entries which you are about to delete, will be displayed. After the deleting process it also shows statistics of the amount of objects/ category entries that have been deleted.
 
 #### Automated Deletion
 
 The [controller](../automation-and-integration/cli/index.md) also offers a possibility to delete undesired objects irrevocably. The corresponding handler is called cleanup_objects. The -t parameter determines the group of objects that are to be deleted based on their states:
 
-*   -t 1: delete unfinished objects
-*   -t 3: delete archived objects
-*   -t 4: delete objects that are marked as deleted
+-   -t 1: delete unfinished objects
+-   -t 3: delete archived objects
+-   -t 4: delete objects that are marked as deleted
 
 Example for the deletion of unfinished objects:
 
