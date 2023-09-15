@@ -26,6 +26,16 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
+### Disconnecting relation in custom category causes sql error
+
+When you get the following error when disconnecting a relation to a custom category:
+
+??? note "SQL Error:"
+
+    Database error : Query error: 'UPDATE isys_catg_relation_list SET isys_catg_relation_list__isys_obj__id__master = 222, isys_catg_relation_list__isys_obj__id__slave = NULL, isys_catg_relation_list__isys_obj__id__itservice = NULL, isys_catg_relation_list__isys_relation_type__id = 1, isys_catg_relation_list__status = 2, isys_catg_relation_list__description = '' WHERE isys_catg_relation_list__id = 799441;': Cannot add or update a child row: a foreign key constraint fails (`idoit_data`.`isys_catg_relation_list`, CONSTRAINT `isys_catg_relation_list_ibfk_2` FOREIGN KEY (`isys_catg_relation_list__isys_obj__id__slave`) REFERENCES `isys_obj` (`isys_obj__id`) ON DELET)"
+
+[i-doit_26_hotfix_ID-9477.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9477.zip){ .md-button .md-button--primary }
+
 ### It is not possible to retrieve the next online i-doit update via button check while updating i-doit
 
 When you click on the **Check for a new version** button then version 26 is not displayed.
