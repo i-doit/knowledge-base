@@ -1,12 +1,12 @@
 ---
-title: Namespace cmdb.object_type_groups
+title: cmdb.object_type_groups
 description: cmdb.object_type_groups
 icon: material/api
 status: new
 lang: en
 ---
 
-# Namespace cmdb.object_type_groups
+# cmdb.object_type_groups
 
 !!! example "Work in Progress"
 
@@ -28,10 +28,10 @@ Read object type groups.
 
 | Key         | JSON data type | Required | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------- | -------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **id**      | Integer        | No       | Object ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| **ids**     | Array          | No       | List of object identifiers (as integers), for example: **[1, 2, 3]**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| **title**   | String         | No       | Object title (see attribute **Title** in category **Global**), for example: **"My little server"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| **titles**  | Array          | No       | List of Object titles (see attribute **Title** in category **Global**), for example: **["My little server",My little horse]**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **id**      | Integer        | No       | Object type group ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **ids**     | Array          | No       | List of object type group identifiers (as integers), for example: **[1, 2, 3]**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **title**   | String         | No       | Object type group language constant, for example: `LC__CMDB__OBJTYPE_GROUP__INFRASTRUCTURE` for Server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **titles**  | Array          | No       | List of Object type group language constants, for example: `["LC__CMDB__OBJTYPE_GROUP__INFRASTRUCTURE","LC__CMDB__OBJTYPE_GROUP__SOFTWARE"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 You can use any combination of filters. Filters are logically associated with AND. A valid combination could be: "Give me all servers which have the same hostname."
 
@@ -46,10 +46,9 @@ You can use any combination of filters. Filters are logically associated with AN
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
-
     ```json
     {
       "version": "2.0",
@@ -67,7 +66,6 @@ You can use any combination of filters. Filters are logically associated with AN
     ```
 
 === "Response body"
-
     ```json
     {
       "id": 1,
