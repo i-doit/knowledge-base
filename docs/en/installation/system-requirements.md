@@ -18,18 +18,9 @@ The following system parameters are the minimum requirements to guarantee i-doit
 
 We recommend the use of a dedicated virtual machine. The actual demand for hardware is based on the scope of the [IT documentation](../glossary.md) and the amount of simultaneous users.
 
-### Installation guides for operating systems
-
--   [Debian GNU/Linux](manual-installation/debian.md) 11 "bullseye"
--   [Ubuntu](manual-installation/ubuntu-linux/index.md) 18.04 LTS "bionic", 20.04 LTS "focal fossa"
--   [SUSE Linux Enterprise Server (SLES)](manual-installation/suse-linux-enterprise-server.md) 15, 15 SP1, 15 SP2, 15 SP3
--   [Red Hat Enterprise Linux (RHEL)](manual-installation/red-hat-enterprise-linux/index.md) 7, 8
--   [Microsoft Windows Server](manual-installation/microsoft-windows-server/index.md) 2022
-
-We recommend an operating system based on GNU/Linux in the 64bit architecture (amd64).
-
 ### LAMP / WAMP Stack
 
+-   GNU/Linux in the 64bit variant (amd64) or Windows Server 2022 in the 64bit variant (amd64)
 -   Apache Webserver ==2.4==
 -   MariaDB 10.2, 10.3, 10.4, 10.5, ==10.6== (recommended) or MySQL 5.7 or 8.0.
 -   PHP 7.4, ==8.0== (recommended), {++8.1++}. _At the moment, PHP version >= 8.2 is not supported. We plan the support of PHP 8.2 in a later release._
