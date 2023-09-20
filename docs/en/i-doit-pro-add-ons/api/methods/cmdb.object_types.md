@@ -1,12 +1,12 @@
 ---
-title: Namespace cmdb.object_types
+title: cmdb.object_types
 description: cmdb.object_types
 icon: material/api
 status: new
 lang: en
 ---
 
-# Namespace cmdb.object_types
+# cmdb.object_types
 
 !!! example "Work in Progress"
 
@@ -29,10 +29,10 @@ Read objects type configurations.
 
 | Key         | JSON data type | Required | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------- | -------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **id**      | Integer        | No       | Object ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| **ids**     | Array          | No       | List of object identifiers (as integers), for example: **[1, 2, 3]**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| **title**   | String         | No       | Object title (see attribute **Title** in category **Global**), for example: **"My little server"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| **titles**  | Array          | No       | List of Object titles (see attribute **Title** in category **Global**), for example: **["My little server",My little horse]**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **id**      | Integer        | No       | Object type id or Object type constant                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **ids**     | Array          | No       | List of object type identifiers (as integers), for example: **[1, 2, 3]**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **title**   | String         | No       | Object type language constant, for example: `LC__CMDB__OBJTYPE__SERVER` for Server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **titles**  | Array          | No       | List of Object type language constants, for example: `["LC__CMDB__OBJTYPE__SERVER","LC__CMDB__OBJTYPE__CLIENT"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | **enabled** | Boolean        | No       | Show only object types enabled or disabled in GUI                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 You can use any combination of filters.
@@ -48,10 +48,9 @@ You can use any combination of filters.
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
-
     ```json
     {
       "version": "2.0",
@@ -69,7 +68,6 @@ You can use any combination of filters.
     ```
 
 === "Response body"
-
     ```json
     {
       "id": 1,
@@ -94,7 +92,6 @@ You can use any combination of filters.
     ```
 
 === "Response body with RAW"
-
     ```json
     {
       "id": 1,
@@ -136,4 +133,3 @@ You can use any combination of filters.
       ]
     }
     ```
-
