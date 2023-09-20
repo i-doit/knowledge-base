@@ -111,8 +111,8 @@ extra:
       link: /de/
       lang: de
   status:
-    new: Recently added
-    updated: Recently updated
+    new: Neu
+    updated: Aktualisiert
 extra_css:
   - assets/custom.css
 use_directory_urls: false

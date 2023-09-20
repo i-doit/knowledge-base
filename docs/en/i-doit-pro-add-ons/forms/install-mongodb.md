@@ -19,6 +19,8 @@ MongoDB currently does not officially support Debian 11. However, we were able t
 
 On the terminal, we run the following commands:
 
+!!! info "Ubuntu ships with gnupg, for Ubuntu users this step can be skipped."
+
 We install gnupg:
 
     sudo apt-get install gnupg
@@ -31,7 +33,15 @@ Now we create a sources file for MongoDB:
 
 !!! attention "This repo is to be used for Debian only!"
 
-    echo "deb [http://repo.mongodb.org/apt/debian](http://repo.mongodb.org/apt/debian) buster/mongodb-org/5.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+```shell
+echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/5.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list 
+```
+
+!!! attention "This repo is to be used for Ubuntu 20.04 only!"
+
+```shell
+echo "deb http://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list 
+```
 
 Now we update the local package database:
 
