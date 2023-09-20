@@ -33,7 +33,7 @@ Nun erstellen wir eine sources Datei für MongoDB
 !!! attention "Dieses Repo ist nur für Debian zu verwenden!"
 
  ```shell
- echo "deb [http://repo.mongodb.org/apt/debian](http://repo.mongodb.org/apt/debian) buster/mongodb-org/5.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+ echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/5.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
 ```
 
 !!! attention "Dieses Repo ist nur für Ubuntu 20.04 zu verwenden!"
