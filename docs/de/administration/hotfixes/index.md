@@ -73,3 +73,9 @@ i-doit responded with an error: i-doit system error: Achtung: das "Checkmk 2" Mo
 ### Object is not created when a attribute validation is used and no error is displayed
 
 [forms_1.2.0_hotfix_AOF-38_69144fc.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2.0_hotfix_AOF-38_69144fc.zip){ .md-button .md-button--primary }
+
+## Floorplan Add-on 1.6
+
+### MySQL8 causes database error "incorrect DATETIME" when opening Floorplan
+
+[floorplan_1.6_hotfix_FP-130_ef65ed4.zip :material-file-download:](../../assets/downloads/hotfixes/floorplan/floorplan_1.6_hotfix_FP-130_ef65ed4.zip){ .md-button .md-button--primary }
