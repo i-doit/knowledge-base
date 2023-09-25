@@ -1,47 +1,50 @@
 # VIVA
 
+!!! warning "Deprecated"
+    This add-on is no longer developed and was replaced by Viva 2
+
 The VIVA add-on is dedicated to the topic of information security based on IT-Grundschutz. It supports the user in the relevant documentation processes to establish an Information Security Management System (ISMS) in an organization.
 
 Table of contents
 -----------------
 
-1.  Introduction to VIVA
-    1.  IT-Grundschutz
-    2.  To whom this document is addressed
-    3.  Structure of this document
-2.  Preparation of the VIVA installation
-    1.  System requirements
-    2.  Download
-    3.  Install
-    4.  Update
-    5.  Activate/Deactivate
-    6.  Uninstall
-    7.  Rights management
-    8.  Migrate from previous ITGS module
-3.  Procedure with VIVA  
-    1.  Manage IT-Grundschutz catalogs
-    2.  Modeling information networks
-    3.  Create target groups
-    4.  Assign target objects
-    5.  Target group inheritance
-    6.  Define protection requirement categories
-    7.  Define protection needs
-    8.  Assign modules
-    9.  Implement measures
-    10.  Answer test questions
-    11.  Perform supplementary security analysis
-4.  Risk analysis according to IT-Grundschutz  
-    1.  Identify hazards
-    2.  Evaluate hazards
-5.  Reports with VIVA  
-    1.  Create audits
-    2.  Reference documents
-6.  Support audits with VIVA
-7.  VIVA Wizards  
-    1.  Target group wizards
-    2.  Protection needs wizards
-8.  Object Category VIVA
-9.  VIVA widget
+1. Introduction to VIVA
+    1. IT-Grundschutz
+    2. To whom this document is addressed
+    3. Structure of this document
+2. Preparation of the VIVA installation
+    1. System requirements
+    2. Download
+    3. Install
+    4. Update
+    5. Activate/Deactivate
+    6. Uninstall
+    7. Rights management
+    8. Migrate from previous ITGS module
+3. Procedure with VIVA  
+    1. Manage IT-Grundschutz catalogs
+    2. Modeling information networks
+    3. Create target groups
+    4. Assign target objects
+    5. Target group inheritance
+    6. Define protection requirement categories
+    7. Define protection needs
+    8. Assign modules
+    9. Implement measures
+    10. Answer test questions
+    11. Perform supplementary security analysis
+4. Risk analysis according to IT-Grundschutz  
+    1. Identify hazards
+    2. Evaluate hazards
+5. Reports with VIVA  
+    1. Create audits
+    2. Reference documents
+6. Support audits with VIVA
+7. VIVA Wizards  
+    1. Target group wizards
+    2. Protection needs wizards
+8. Object Category VIVA
+9. VIVA widget
 
 Anhang
 ------
