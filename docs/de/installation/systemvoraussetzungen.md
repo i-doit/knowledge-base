@@ -4,7 +4,7 @@ Um den Betrieb aller Funktionalitäten von i-doit zu gewährleisten, existieren 
 
 !!! info "Aktualität"
 
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **26**. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==26==. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 ## Mindestanforderungen an das System
 
@@ -12,30 +12,21 @@ Folgende Systemparameter sind Mindestanforderungen, um einen Betrieb von i-doit 
 
 ### Virtuelle Hardware
 
-- 2 vCPUs
-- 2 GB RAM
-- 10 GB freier Festplattenspeicher
+-   2 vCPUs
+-   2 GB RAM
+-   10 GB freier Festplattenspeicher
 
 Wir empfehlen den Einsatz einer dedizierten, virtuellen Maschine. Der tatsächlich Hardware-Bedarf richtet sich nach Umfang der [IT-Dokumentation](../glossar.md) und Anzahl gleichzeitiger Benutzer.
 
-### Installationsaleitungen für Betriebssysteme
+### LAMP / WAMP Stack
 
-- [Debian GNU/Linux](manuelle-installation/debian.md) 11 "bullseye"
-- [Ubuntu](manuelle-installation/ubuntu-linux/index.md) 20.04 LTS "focal fossa"
-- [SUSE Linux Enterprise Server (SLES)](manuelle-installation/suse-linux-enterprise-server.md) 15, 15 SP1, 15 SP2, 15 SP3
-- [Red Hat Enterprise Linux (RHEL)](manuelle-installation/red-hat-enterprise-linux/index.md) 7, 8
-- [Microsoft Windows Server](manuelle-installation/microsoft-windows-server/index.md) 2022
+-   GNU/Linux in der 64bit Variante(amd64) oder Windows Server 2022 in der 64bit Variante(amd64)
+-   Apache Webserver ==2.4==
+-   MariaDB 10.2, 10.3, 10.4, 10.5, ==10.6== (empfohlen) oder MySQL 5.7 oder 8.0. _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
+-   PHP 7.4, ==8.0== (empfohlen) und {++8.1++}. _Im Moment wird PHP Version >= 8.2 nicht unterstützt. Wir planen die Unterstützung in einer späteren Version._
+-   PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
-Wir empfehlen ein auf GNU/Linux basiertes Betriebssystem in der 64bit-Architektur (amd64).
-
-### LAMP Stack
-
-- Apache Webserver ==2.4==
-- MariaDB 10.2, 10.3, 10.4, 10.5, ==10.6== (empfohlen) oder MySQL 5.7 oder 8.0. _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
-- PHP 7.4, ==8.0== (empfohlen) und {++8.1++}. _Im Moment wird PHP Version >= 8.2 nicht unterstützt. Wir planen die Unterstützung in einer späteren Version._
-- PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
-
-Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6**.
+Wir empfehlen den Einsatz von ==Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6==.
 
 !!! Success "Referenzkonfiguration"
 
@@ -67,10 +58,10 @@ Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6**
 
 Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugreifen zu können. Es wird die jeweils aktuelle Version und die Vorversion des Webbrowsers unterstützt:
 
-- Mozilla Firefox (inkl. letzte ESR-Version)
-- Google Chrome/Chromium
-- Microsoft Edge (abgeschalteter Kompatibilitätsmodus)
-- Apple Safari
+-   Mozilla Firefox (inkl. letzte ESR-Version)
+-   Google Chrome/Chromium
+-   Microsoft Edge (abgeschalteter Kompatibilitätsmodus)
+-   Apple Safari
 
 ## Kompatibilitätsmatrix
 
@@ -82,12 +73,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **Apache Webserver** | 2.4 |
     | **PHP** | 7.4 <br>==8.0== (recommended) <br>{++8.1++} |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>10.6 (recommended) |
-    | **Debian GNU/Linux** | 11 |
-    | **Ubuntu** | 18.04¹<br> 20.04 |
-    | **RHEL** | 7¹<br> 8 |
-    | **SLES** | 15 SP1<br> 15 SP 2<br> SP 3 |
-    | **XAMPP for Windows²** | 2022 |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
 
 === "25"
 
@@ -196,7 +182,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 === "1.14"
 
-    | **i-doit Version** | 	1.14 |
+    | **i-doit Version** |  1.14 |
     | --- | --- |
     | **Release** | 2020-01 |
     | **Apache Webserver** | 2.4 |
@@ -211,7 +197,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 === "1.13"
 
-    | **i-doit Version** | 	1.13 |
+    | **i-doit Version** |  1.13 |
     | --- | --- |
     | **Release** | 2019-06 |
     | **Apache Webserver** | 2.4 |
@@ -226,7 +212,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 === "1.12"
 
-    | **i-doit Version** | 	1.12 |
+    | **i-doit Version** |  1.12 |
     | --- | --- |
     | **Release** | 2018-12 |
     | **Apache Webserver** | 2.4 |
@@ -241,7 +227,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 === "1.11"
 
-    | **i-doit Version** | 	1.11 |
+    | **i-doit Version** |  1.11 |
     | --- | --- |
     | **Release** | 2018-06 |
     | **Apache Webserver** | 2.4 |
@@ -256,7 +242,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 === "1.10"
 
-    | **i-doit Version** | 	1.10 |
+    | **i-doit Version** |  1.10 |
     | --- | --- |
     | **Release** | 2017-12 |
     | **Apache Webserver** | 2.4 |
@@ -271,7 +257,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 === "1.9"
 
-    | **i-doit Version** | 	1.9 |
+    | **i-doit Version** |  1.9 |
     | --- | --- |
     | **Release** | 2017-05 |
     | **Apache Webserver** | 2.4 |
@@ -286,7 +272,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 === "1.8"
 
-    | **i-doit Version** | 	1.8 |
+    | **i-doit Version** |  1.8 |
     | --- | --- |
     | **Release** | 2016-10 |
     | **Apache Webserver** | 2.4 |
@@ -301,7 +287,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 === "1.7"
 
-    | **i-doit Version** | 	1.7 |
+    | **i-doit Version** |  1.7 |
     | --- | --- |
     | **Release** | 2016-03 |
     | **Apache Webserver** | 2.2<br> 2.4 |
