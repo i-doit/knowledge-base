@@ -22,7 +22,7 @@ Dazu gehört die Hauptkonfiguration, Service- und Host-Templates sowie weitere g
 
 ## Konfiguration in Objekten
 
-Alle weiteren Konfigurationen werden innerhalb der [Objekte](../../grundlagen/struktur-it-dokumentation.md) vorgenommen. Der einfachste Fall ist die Konfiguration von Hostparametern. Hierzu muss über den [**Quick Configuration Wizard**](../../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) der [Kategorie](../../grundlagen/struktur-it-dokumentation.md) Ordner **Nagios (Host)** zu den gewünschten [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) zugewiesen werden.
+Alle weiteren Konfigurationen werden innerhalb der [Objekte](../../grundlagen/struktur-it-dokumentation.md) vorgenommen. Der einfachste Fall ist die Konfiguration von Hostparametern. Hierzu muss über [Datenstruktur bearbeiten](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) der [Kategorie](../../grundlagen/struktur-it-dokumentation.md) Ordner **Nagios (Host)** zu den gewünschten [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) zugewiesen werden.
 
 In der Kategorie **Host Definition** kann dann entweder über ein Nagios Template oder durch individuelle Konfiguration eine Hostdefinition für Nagios hinterlegt werden.
 
@@ -34,7 +34,6 @@ Als Ergebnis bildet sich später hieraus die Konfiguration einer klassischen Hos
 in einem Softwareobjekt in der Kategorie **Nagios (Anwendungen)** wird ein Servicecheck zugewiesen, analog zu der Zuweisung zu einem Host.
 Ist diese Anwendung nun über die Kategorie **Softwarezuweisung** auf einem Host installiert, wird der Servicecheck auf den Host automatisch vererbt.
 Weitere Nagios-Konfigurationen innerhalb von Objekten finden sich in Objekten vom Typ **Personen sowie in Personengruppen und Objektgruppen**.
-
 
 ## Export der Nagios Konfiguration
 
