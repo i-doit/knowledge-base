@@ -16,13 +16,13 @@ Read access to the i-doit logbook.
 
 ### Request parameters
 
-| Key                 | JSON data type | Required | Description                                                                                                                                                                                                                                                           |
-| ------------------- | -------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **id**              | Integer        | No       | ID of the global logbook entry from table isys_logbook                                                                                                                                                                                                                |
-| **object_id**       | Integer        | No       | ID of the object                                                                                                                                                                                                                                                      |
-| **catg_logbook_id** | Integer        | No       | ID of the logbook category entry from table sys_catg_logbook_list                                                                                                                                                                                                     |
-| **since**           | String         | No       | Date to filter for logbook changes since a certain date, for possible values see also [https://www.php.net/manual/de/function.strtotime.php](https://www.php.net/manual/de/function.strtotime.php){:target="_blank"} for example **1660203634** (2022-08-11 09:40:34) |
-| **status**          | Integer        | No       | Filter by object status: 2 = Normal, 3 = Archived, 4 = Deleted                                                                                                                                                                                                        |
+| Key                 | JSON data type | Required | Description                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **id**              | Integer        | No       | ID of the global logbook entry from table isys_logbook                                                                                                                                                                                                                                                                                                                                |
+| **object_id**       | Integer        | No       | ID of the object                                                                                                                                                                                                                                                                                                                                                                      |
+| **catg_logbook_id** | Integer        | No       | ID of the logbook category entry from table sys_catg_logbook_list                                                                                                                                                                                                                                                                                                                     |
+| **since**           | String         | No       | Date to filter for logbook changes since a certain date, for possible values see also [https://www.php.net/manual/de/function.strtotime.php](https://www.php.net/manual/de/function.strtotime.php){:target="_blank"} for example **1660203634** (2022-08-11 09:40:34)                                                                                                                 |
+| **status**          | String         | No       | Filter by status of the objects e.g. Normal or Archived:<br>-   **C__RECORD_STATUS__BIRTH** = Unfinished<br>-   **C__RECORD_STATUS__NORMAL** = Normal<br>-   **C__RECORD_STATUS__ARCHIVED** = Archived<br>-   **C__RECORD_STATUS__DELETED** = Deleted<br>-   **C__RECORD_STATUS__TEMPLATE** = Template<br>-   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE** = Template for mass changes |
 
 !!! example "WIP"
 
@@ -35,7 +35,7 @@ Read access to the i-doit logbook.
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -85,6 +85,7 @@ Read access to the i-doit logbook.
       ]
     }
     ```
+
 ## cmdb.logbook.create
 
 Write a entry to the i-doit logbook.
@@ -133,7 +134,7 @@ Write a entry to the i-doit logbook.
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 
