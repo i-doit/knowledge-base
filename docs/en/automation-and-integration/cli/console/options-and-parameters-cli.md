@@ -1000,6 +1000,9 @@ sudo -u www-data php console.php nagios-export --user admin --password admin --t
 
 ### nagios-ndoutils
 
+!!!info
+    This Command is only available if the Nagios Add-on is installed
+
 Imports monitoring status changes from the NDOUtils into the i-doit logbook.
 
 **Options:**
