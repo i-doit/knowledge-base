@@ -31,7 +31,7 @@ Als **Master Site** sind die Sites auswählbar, die über mehrere Exportkonfigur
 Kategorien
 ----------
 
-Grundsätzlich muss den zu nutzenden [Objekttypen](../grundlagen/struktur-it-dokumentation.md) über [Datenstruktur bearbeiten](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) der [Kategorie-Ordner](../grundlagen/struktur-it-dokumentation.md) **Check_Mk (Host)** zugeordnet werden.
+Grundsätzlich muss den zu nutzenden [Objekttypen](../grundlagen/struktur-it-dokumentation.md) über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) der [Kategorie-Ordner](../grundlagen/struktur-it-dokumentation.md) **Check_Mk (Host)** zugeordnet werden.
 
 In der Kategorie **Check_MK (Host)** wird eine Export-Konfiguration ausgewählt und ein zu nutzender Hostname bzw. eine zu nutzende Hostadresse definiert. Zudem kann verhindert werden, dass die IP-Adresse exportiert wird, beispielsweise wenn diese per DHCP geliefert wurde und sich ändert.
 
