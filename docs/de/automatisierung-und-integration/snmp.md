@@ -7,18 +7,15 @@ Die SNMP-Kategorie erlaubt es, in Echtzeit SNMP Werte aus Objekten auszulesen un
 
 ## Voraussetzungen
 
-
 Um diese Kategorie nutzen zu können benötigt _i-doit_ das SNMP Modul von PHP. Unter Debian lässt sich dies installieren mit dem Befehl:
 
     sudo apt-get install php-snmp
 
-Die SNMP Kategorie muss anschließend im **Quick Configuration Wizard** dem gewünschten Objekttyp zugewiesen werden. In unserem Beispiel haben wir uns auf den Objekttyp Router reduziert.
+Die SNMP Kategorie muss anschließend über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) dem gewünschten Objekttyp zugewiesen werden. In unserem Beispiel haben wir uns auf den Objekttyp Router reduziert.
 
 Wir benötigen weiterhin eine gültige Hostadresse, die selbstverständlich in der entsprechenden Kategorie dokumentiert sein muss.
 
 [![snmp-hostadresse](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)
-
-
 
 Um unnötige Fehlersuche zu vermeiden begeben wir uns erst einmal per SSH auf die Konsole des Servers und testen die SNMP Verbindung "per Hand". Dazu installieren wir das Paket "snmp" um den Befehl "snmpwalk" zur Verfügung zu bekommen. Anschließend rufen wir einen standard Aufruf an den Switch auf, der uns die Liste aller Interfaces geben soll.
 

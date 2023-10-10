@@ -22,7 +22,6 @@ Voraussetzung ist ein laufendes NDOUtils oder MK Livestatus auf dem Monitoring-S
 
 [![datenabfragenmls-access](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)
 
-
 Je nach Typ der Schnittstelle muss nun entweder ein TCP/UNIX Socket oder eine Datenbankkonfiguration mit entsprechenden Zugriffsberechtigungen angegeben werden.
 
 Beispiel NDOUtils:
@@ -35,7 +34,7 @@ Beispiel MK Livestatus:
 
 ## Kategorien
 
-Um die Daten auszulesen muss über den **[Quick Configuration Wizard](../../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md)** den [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) der [Kategorie-Ordner](../../grundlagen/struktur-it-dokumentation.md) **Monitoring** zugewiesen werden. In der Kategorie **Monitoring** muss jeweils für das [Objekt](../../grundlagen/struktur-it-dokumentation.md) der [Identifizierungsschlüssel](../../grundlagen/eindeutige-referenzierungen.md) für das Monitoring konfiguriert werden. Dazu kann entweder der Objekttitel, der Hostname mit oder ohne Domain Name oder ein frei gewählter Name genutzt werden. Dieser Eintrag bestimmt den Namen, der im Monitoring abgefragt wird.
+Um die Daten auszulesen muss über **[Datenstruktur bearbeiten](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md)** den [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) der [Kategorie-Ordner](../../grundlagen/struktur-it-dokumentation.md) **Monitoring** zugewiesen werden. In der Kategorie **Monitoring** muss jeweils für das [Objekt](../../grundlagen/struktur-it-dokumentation.md) der [Identifizierungsschlüssel](../../grundlagen/eindeutige-referenzierungen.md) für das Monitoring konfiguriert werden. Dazu kann entweder der Objekttitel, der Hostname mit oder ohne Domain Name oder ein frei gewählter Name genutzt werden. Dieser Eintrag bestimmt den Namen, der im Monitoring abgefragt wird.
 
 Falls mehrere Monitoring-Instanzen konfiguriert sind, wird die entsprechende Instanz ausgewählt.
 
@@ -50,6 +49,5 @@ Zusätzlich kann in der [Objektlistenkonfiguration](../../grundlagen/objekt-list
 [![datenabfragenmls-objlist](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/6-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/6-nm.png)
 
 ## Logbucheinträge aus dem Monitoring
-
 
 Über die [Console](../cli/console/index.md) können Statusmeldungen aus dem Monitoring in das [Logbuch](../../grundlagen/logbuch.md) von i-doit übertragen werden. Dazu muss der entsprechende Handler [nagios-ndoutils](../cli/console/optionen-und-parameter-der-console.md#nagios-ndoutils) aufgerufen werden und es werden automatisch alle Statusänderungen, die sich seit dem letzten Lauf geändert haben, in das Logbuch übertragen.

@@ -31,7 +31,7 @@ Als **Master Site** sind die Sites auswählbar, die über mehrere Exportkonfigur
 Kategorien
 ----------
 
-Grundsätzlich muss den zu nutzenden [Objekttypen](../grundlagen/struktur-it-dokumentation.md) über den [**Quick Configuration Wizard**](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) der [Kategorie-Ordner](../grundlagen/struktur-it-dokumentation.md) **Check_Mk (Host)** zugeordnet werden.
+Grundsätzlich muss den zu nutzenden [Objekttypen](../grundlagen/struktur-it-dokumentation.md) über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) der [Kategorie-Ordner](../grundlagen/struktur-it-dokumentation.md) **Check_Mk (Host)** zugeordnet werden.
 
 In der Kategorie **Check_MK (Host)** wird eine Export-Konfiguration ausgewählt und ein zu nutzender Hostname bzw. eine zu nutzende Hostadresse definiert. Zudem kann verhindert werden, dass die IP-Adresse exportiert wird, beispielsweise wenn diese per DHCP geliefert wurde und sich ändert.
 
@@ -47,7 +47,6 @@ Hostmerkmale
 *   **CMDB Merkmale**: Merkmale, die durch ein [Attribut](../grundlagen/struktur-it-dokumentation.md) aus der CMDB ausgeprägt werden
 
 *   **Dynamische Merkmale**: Hostmerkmale, die durch Regelungen generiert werden
-
 
 Alle Arten von Hostmerkmalen werden unter **Extras → Check_MK** konfiguriert.
 

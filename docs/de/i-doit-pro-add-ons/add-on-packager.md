@@ -2,7 +2,7 @@
 
 Die Idee des Add-on Packagers ist es, dem Anwender die Möglichkeit zu eröffnen, eigene vollwertige [i-doit pro Add-ons](./index.md) zu bauen. Dabei wird der Add-on Packager komplett über die grafische Benutzeroberfläche von i-doit bedient und es werden keine Programmierkenntnisse benötigt.
 
-Es können die Strukturen, die der Anwender beispielsweise über den [Quick Configuration Wizard](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) oder den [Report Manager](../auswertungen/report-manager.md) erstellen kann, als Add-on paketiert und weitergeben werden.
+Es können die Strukturen, die der Anwender beispielsweise über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) oder den [Report Manager](../auswertungen/report-manager.md) erstellen kann, als Add-on paketiert und weitergeben werden.
 
 Allgemeine Hinweise
 -------------------
@@ -68,9 +68,11 @@ Eingebundene Ressourcen
 
 Im Ressourcen Bereich der Strukturvorlage können die verfügbaren Strukturen ausgewählt werden. Diese sind im folgenden aufgeschlüsselt.
 
+<!---- TODO
 [![Quick Configuration Wizard](../assets/images/de/i-doit-pro-add-ons/add-on-packager/3-aop.png)](../assets/images/de/i-doit-pro-add-ons/add-on-packager/3-aop.png)
+-->
 
-Über den Quick Configuration Wizard können Objekttyp Gruppen und Objekttypen angelegt und zugewiesen werden.
+Über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) können Objekttyp Gruppen und Objekttypen angelegt und zugewiesen werden.
 
 Objekttypgruppen
 ----------------
