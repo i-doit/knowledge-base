@@ -973,6 +973,9 @@ sudo -u www-data php console.php migrate-uploaded-files
 
 ### nagios-export
 
+!!!info
+    This Command is only available if the Nagios Add-on is installed
+
 Exports the Nagios settings and i-doit objects to Nagios configuration files
 
 **Options:**
