@@ -76,6 +76,6 @@ i-doit responded with an error: i-doit system error: Achtung: das "Checkmk 2" Mo
 
 ## Floorplan Add-on 1.6
 
-### MySQL8 causes database error "incorrect DATETIME" when opening Floorplan
+### MySQL8 causes database error "incorrect DATETIME" when opening Floorplan AND Adding new Floorplan gives Error message and deletes existing objects added to floorplan
 
-[floorplan_1.6_hotfix_FP-130_ef65ed4.zip :material-file-download:](../../assets/downloads/hotfixes/floorplan/floorplan_1.6_hotfix_FP-130_ef65ed4.zip){ .md-button .md-button--primary }
+[floorplan_1.6_hotfix_FP-130_FP-131.zip :material-file-download:](../../assets/downloads/hotfixes/floorplan/floorplan_1.6_hotfix_FP-130_FP-131.zip){ .md-button .md-button--primary }
