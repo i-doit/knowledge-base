@@ -975,6 +975,9 @@ sudo -u www-data php console.php migrate-uploaded-files
 
 ### nagios-export
 
+!!!info
+    Dieser Befehl ist erst nach installation des Nagios Add-ons verfügbar.
+
 Exportiert die Nagios-Einstellungen und i-doit Objekte in Nagios-Konfigurationsdateien.
 
 **Optionen:**
@@ -1001,6 +1004,9 @@ sudo -u www-data php console.php nagios-export --user admin --password admin --t
 ```
 
 ### nagios-ndoutils
+
+!!!info
+    Dieser Befehl ist erst nach installation des Nagios Add-ons verfügbar.
 
 Importiert Monitoring Statusänderungen aus den NDOUtils in das i-doit Logbuch.
 
