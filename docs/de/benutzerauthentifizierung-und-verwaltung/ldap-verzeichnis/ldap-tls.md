@@ -2,7 +2,6 @@
 title: LDAPS Debian Konfiguration
 description: Anleitung zur Konfiguration einer LDAPS Verbindung mit i-doit für Debian
 icon: material/debian
-status: new
 lang: de
 ---
 
