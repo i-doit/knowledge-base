@@ -1,4 +1,10 @@
-# Zugriff auf Microsoft LDAP Server mit TLS Verschlüsselung
+---
+title: LDAPS Debian Konfiguration
+description: Anleitung zur Konfiguration einer LDAPS Verbindung mit i-doit für Debian
+icon: material/debian
+status: new
+lang: de
+---
 
 Um eine Verbindung zum Active Directory via LDAPS oder STARTTLS herzustellen wird das Zertifikat vom LDAP Server benötigt.
 Dieses exportieren wir und fügen es dem Zertifikatsspeicher vom i-doit Server hinzu, damit eine Verschlüsselte Kommunikation hergestellt werden kann.
@@ -49,5 +55,3 @@ service apache2 restart
 ```
 
 !!! warning "Das Output File muss die Dateiendung .crt haben, sonst wird es vom Befehl update-ca-certificates nicht berücksichtigt. Ist es korrekt übernommen, muss das Zertifikat unter /etc/ssl/certs/ zu sehen sein."
-
-
