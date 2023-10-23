@@ -219,7 +219,9 @@ Vorab benötigen Sie ein gültiges Zertifikat im .crt und .key Format.
 
 ##### Konfigurationsschritte
 
-1. **Erstellen der ssl.conf-Datei**: Navigieren Sie zu Ihrem i-doit-Ordner unter `/i-doit/apache-2.4/conf/extra/` und erstellen Sie die Datei `ssl.conf`. Die Datei sollte folgenden Inhalt haben:
+1. **Erstellen der ssl.conf-Datei**<br>
+
+Navigieren Sie zu Ihrem i-doit-Ordner unter `/i-doit/apache-2.4/conf/extra/` und erstellen Sie die Datei `ssl.conf`. Die Datei sollte folgenden Inhalt haben:
 
 ```apacheconf
 <VirtualHost *:443>
@@ -251,12 +253,14 @@ Vorab benötigen Sie ein gültiges Zertifikat im .crt und .key Format.
 </VirtualHost>
 ```
 
-2. **Anpassungen in der httpd.conf**: Bearbeiten Sie die `httpd.conf`-Datei, die sich unter `/i-doit/apache-2.4/conf/` befindet:
+2. **Anpassungen in der httpd.conf**<br>
+
+Bearbeiten Sie die `httpd.conf`-Datei, die sich unter `/i-doit/apache-2.4/conf/` befindet:
 
 - Fügen Sie `Listen 443` hinzu und kommentieren Sie `Listen 80` aus.
 - Stellen Sie sicher, dass das SSL-Modul geladen ist und die `ssl.conf` inkludiert wird.
 
-Die Datei sieht dann ungefähr so aus:
+Die ersten Zeilen der Datei sollten so aussehen, wenn Sie vorher nichts geändert haben:
 
 ```apacheconf
 Define SRVROOT "C:/i-doit/apache-2.4"
@@ -275,7 +279,7 @@ Include conf/extra/ssl.conf
 
 3. **Server-Neustart**: Starten Sie den Apache-Webserver neu. Öffnen Sie die Eingabeaufforderung:
 
-   - Drücken Sie `Win + R`, geben Sie `cmd` ein und drücken Sie Enter.
+   - Drücken Sie ++windows+R++, geben Sie `cmd` ein und drücken Sie Enter.
 
 Navigieren Sie zum Apache-Bin-Verzeichnis, z.B. `C:/i-doit/apache-2.4/bin`, und geben Sie den folgenden Befehl ein, um den Apache-Webserver neu zu starten:
 
