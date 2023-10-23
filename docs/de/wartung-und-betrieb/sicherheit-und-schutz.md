@@ -284,7 +284,7 @@ cd C:/i-doit/apache-2.4/bin
 httpd.exe -k restart
 ```
 
-Der Apache-Webserver wird neu gestartet. Speichern Sie Ihre Konfigurationsänderungen in der `httpd.conf`-Datei, bevor Sie den Befehl ausführen.
+Der Apache-Webserver wird neu gestartet. Speichern Sie Ihre Konfigurationsänderungen in der **httpd.conf**-Datei, bevor Sie den Befehl ausführen.
 
 Das war's! Ihre i-doit-Installation ist jetzt für SSL auf Windows konfiguriert.
 
