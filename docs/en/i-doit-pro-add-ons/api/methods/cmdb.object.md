@@ -34,12 +34,12 @@ JSON key **result** contains a JSON object.
 | **updated** | String | Date of last update; format: **Y-m-d H:i:s**<br>**Note:** This key is optional because not every object has been updated before. |
 | **type_title** | String | Translated name of object type |
 | **type_icon** | String | Relative URL to object type icon |
-| **status** | String | Object status:<br> **C__RECORD_STATUS__BIRTH**<br> Status-ID = 1  <br>Title = Unfinishedm <br> **C__RECORD_STATUS__NORMAL**<br> Status-ID = 2<br> Title = Normal<br> **C__RECORD_STATUS__ARCHIVED**<br> Status-ID = 3<br> Title   Archived <br>  **C__RECORD_STATUS__DELETED**<br> Status-ID = 4<br> Title = Deleted<br>  **C__RECORD_STATUS__TEMPLATE**<br> Status-ID = 6<br> Title = Template<br>   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE**<br> Status-ID = 7<br> Title = Mass change template |
+| **status**     | String   | Filter by status of the objects e.g. Normal or Archived:<br>-   **C__RECORD_STATUS__BIRTH** = Unfinished<br>-   **C__RECORD_STATUS__NORMAL** = Normal<br>-   **C__RECORD_STATUS__ARCHIVED** = Archived<br>-   **C__RECORD_STATUS__DELETED** = Deleted<br>-   **C__RECORD_STATUS__TEMPLATE** = Template<br>-   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE** = Template for mass changes |
 | **cmdb_status** | String | CMDB status (see category **Global**; as numeric string) |
 | **cmdb_status_title** | String | Translated CMDB status (see category **Global**) |
 | **image** | String | URL to object picture |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -105,7 +105,7 @@ JSON key **result** contains a JSON object.
 | **message** | String | Some information |
 | **success** | Boolean | Should always be **true** |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -157,7 +157,7 @@ JSON key **result** contains a JSON object.
 | **message** | String | Should be |
 | **success** | Boolean | Should be true |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -208,7 +208,7 @@ JSON key **result** contains a JSON object.
 | **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -240,7 +240,7 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.object.recycle
 
-Recyles a object
+Recycles a object
 
 ### Request paramters
 
@@ -257,7 +257,7 @@ JSON key **result** contains a JSON object.
 | **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -307,7 +307,7 @@ JSON key **result** contains a JSON object.
 | **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -356,7 +356,7 @@ JSON key **result** contains a JSON object.
 | **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -405,7 +405,7 @@ JSON key **result** contains a JSON object.
 | **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -454,7 +454,7 @@ JSON key **result** contains a JSON object.
 | **success** | Boolean | Should be **true** |
 | **message** | String | Some information |
 
-### Example:
+### Example
 
 === "Request body"
 
