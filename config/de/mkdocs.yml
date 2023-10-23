@@ -73,8 +73,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       linenums: true
       linenums_style: table
@@ -330,7 +330,8 @@ nav:
           - Lokalen Benutzer anlegen: benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen.md
       - Authentifizierung mit LDAP:
           - benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md
-          - Authentifizierung mit LDAP via TLS: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
+          - LDAPS Debian Konfiguration: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
+          - LDAPS i-doit für Windows: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/i-doit-win-ldaps.md
           - Benutzer-/Gruppen-Synchronisierung: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
       - 2-Faktor-Authentifizierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
       - SSO-Authentifizierung im Vergleich:
