@@ -43,7 +43,7 @@ Nachdem die Rechte vergeben wurden ist es ratsam, in der i-doit [Verwaltung](../
 Zusätzliche Konfiguration
 =========================
 
-Mit dem Add-on wird zusätzlich die [Kategorie](../../grundlagen/struktur-it-dokumentation.md) "Dokumente" für alle [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) verfügbar. Die Kategorie kann über die [Objekttyp-Konfiguration](../../grundlagen/benutzerdefinierte-objekttypen.md) und den [Quick Configuration Wizard](../../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) mit den gewünschten Objekttypen verknüpft werden. Auf diesem Weg tauchen nur jene Objekttypen bei der Objekterstellung auf, die vom Anwender vorgegeben sind um die Auswahlliste übersichtlich zu halten.
+Mit dem Add-on wird zusätzlich die [Kategorie](../../grundlagen/struktur-it-dokumentation.md) "Dokumente" für alle [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) verfügbar. Die Kategorie kann über die [Objekttyp-Konfiguration](../../grundlagen/benutzerdefinierte-objekttypen.md) und über [Datenstruktur bearbeiten](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) mit den gewünschten Objekttypen verknüpft werden. Auf diesem Weg tauchen nur jene Objekttypen bei der Objekterstellung auf, die vom Anwender vorgegeben sind um die Auswahlliste übersichtlich zu halten.
 
 Kategorie Dokumente
 

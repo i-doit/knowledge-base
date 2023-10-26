@@ -34,7 +34,7 @@ Before you start, you should use [cmdb.object_type_categories](cmdb.object_type_
     | **Placeholder** | Placeholder | Placeholder |
     | **Placeholder** | Placeholder | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -132,4 +132,3 @@ Before you start, you should use [cmdb.object_type_categories](cmdb.object_type_
       }
     }
     ```
-

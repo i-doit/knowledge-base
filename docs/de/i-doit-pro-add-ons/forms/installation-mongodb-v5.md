@@ -18,6 +18,8 @@ Außerdem stellt MongoDB eine [Checkliste für den Einsatz im Betrieb](https://d
 
 Auf dem Terminal führen wir folgende Befehle aus:
 
+!!! info "Ubuntu hat standardmäßig gnupg vorinstalliert, dieser Schritt kann von Ubuntu Benutzern übersprungen werden"
+
 Wir installieren gnupg:
 
     sudo apt-get install gnupg
@@ -28,9 +30,17 @@ Wir importieren den Public Key für das mongodb-org Repository:
 
 Nun erstellen wir eine sources Datei für MongoDB
 
-Dieses Repo ist nur für Debian zu verwenden!
+!!! attention "Dieses Repo ist nur für Debian zu verwenden!"
 
-    echo "deb [http://repo.mongodb.org/apt/debian](http://repo.mongodb.org/apt/debian) buster/mongodb-org/5.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+ ```shell
+ echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/5.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+```
+
+!!! attention "Dieses Repo ist nur für Ubuntu 20.04 zu verwenden!"
+
+```shell
+echo "deb http://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list 
+```
 
 Nun aktualisieren wir die lokale package database:
 

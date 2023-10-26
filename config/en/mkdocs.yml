@@ -73,8 +73,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       linenums: true
       linenums_style: table
@@ -92,7 +92,7 @@ extra:
   social:
     - name: i-doit on Twitter
       link: https://twitter.com/i_doit
-      icon: fontawesome/brands/twitter
+      icon: fontawesome/brands/x-twitter
     - name: i-doit on YouTube (English)
       link: https://www.youtube.com/channel/UC5wvDZjCslEWW2jE6R_5CUg
       icon: fontawesome/brands/youtube
@@ -295,7 +295,8 @@ nav:
           - Creating a local user: user-authentication-and-management/builtin-authentication/creating-a-local-user.md
       - Authentication with LDAP:
           - user-authentication-and-management/ldap-directory/index.md
-          - LDAP Authentication via TLS: user-authentication-and-management/ldap-directory/ldap-tls.md
+          - LDAPS Debian configuration: user-authentication-and-management/ldap-directory/ldap-tls.md
+          - LDAPS i-doit for Windows: user-authentication-and-management/ldap-directory/i-doit-win-ldaps.md
           - User/Group synchronisation: user-authentication-and-management/ldap-directory/import-users-and-groups.md
       - 2 factor authentication (2FA): user-authentication-and-management/2fa/index.md
       - SSO authentication comparsion:

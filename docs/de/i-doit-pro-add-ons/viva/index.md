@@ -1,47 +1,50 @@
 # VIVA
 
+!!! warning "Veraltet"
+    Dieses Add-on wird nicht mehr weiterentwickelt und wurde durch Viva 2 abgelöst
+
 Das [Add-on](../index.md) **VIVA** widmet sich dem Thema Informationssicherheit auf Basis von IT-Grundschutz. Es unterstützt den Benutzer bei den relevanten Dokumentationsprozessen, um ein Information Security Management System (ISMS) in einer Organisation zu etablieren.
 
 Inhaltsverzeichnis
 ------------------
 
-1.  [Einleitung zu VIVA](./einleitung-zu-viva.md)
-    1.  IT-Grundschutz
-    2.  An wen sich dieses Dokument richtet
-    3.  Aufbau dieses Dokuments
-2.  [Vorbereitung der VIVA-Installation](./vorbereitung-der-viva-installation.md)
-    1.  Systemvoraussetzungen
-    2.  Herunterladen
-    3.  Installieren
-    4.  Aktualisieren
-    5.  Aktivieren/Deaktivieren
-    6.  Deinstallieren
-    7.  Rechteverwaltung
-    8.  Migrieren vom bisherigen ITGS-Modul
-3.  [Vorgehensweise mit VIVA](./vorgehensweise-mit-viva.md)
-    1.  IT-Grundschutz-Kataloge verwalten
-    2.  Informationsverbünde modellieren
-    3.  Zielgruppen anlegen
-    4.  Zielobjekte zuordnen
-    5.  Zielgruppenvererbung
-    6.  Schutzbedarfskategorien definieren
-    7.  Schutzbedarf festlegen
-    8.  Bausteine zuordnen
-    9.  Maßnahmen umsetzen
-    10.  Prüffragen beantworten
-    11.  Ergänzende Sicherheitsanalyse durchführen
-4.  [Risikoanalyse nach IT-Grundschutz](./risikoanalyse-nach-it-grundschutz.md)
-    1.  Gefährdungen identifizieren
-    2.  Gefährdungen bewerten
-5.  [Berichte mit VIVA](./berichte-mit-viva.md)
-    1.  Audits erstellen
-    2.  Referenzdokumente
-6.  [Audits mit VIVA unterstützen](./audits-mit-viva-unterstuetzen.md)
-7.  [VIVA-Assistenten](./viva-assistenten.md)
-    1.  Zielgruppen-Assistenten
-    2.  Schutzbedarfs-Assistenten
-8.  [Objekt-Kategorie VIVA](./objekt-kategorie-viva.md)
-9.  [VIVA-Widget](./viva-widget.md)
+1. [Einleitung zu VIVA](./einleitung-zu-viva.md)
+    1. IT-Grundschutz
+    2. An wen sich dieses Dokument richtet
+    3. Aufbau dieses Dokuments
+2. [Vorbereitung der VIVA-Installation](./vorbereitung-der-viva-installation.md)
+    1. Systemvoraussetzungen
+    2. Herunterladen
+    3. Installieren
+    4. Aktualisieren
+    5. Aktivieren/Deaktivieren
+    6. Deinstallieren
+    7. Rechteverwaltung
+    8. Migrieren vom bisherigen ITGS-Modul
+3. [Vorgehensweise mit VIVA](./vorgehensweise-mit-viva.md)
+    1. IT-Grundschutz-Kataloge verwalten
+    2. Informationsverbünde modellieren
+    3. Zielgruppen anlegen
+    4. Zielobjekte zuordnen
+    5. Zielgruppenvererbung
+    6. Schutzbedarfskategorien definieren
+    7. Schutzbedarf festlegen
+    8. Bausteine zuordnen
+    9. Maßnahmen umsetzen
+    10. Prüffragen beantworten
+    11. Ergänzende Sicherheitsanalyse durchführen
+4. [Risikoanalyse nach IT-Grundschutz](./risikoanalyse-nach-it-grundschutz.md)
+    1. Gefährdungen identifizieren
+    2. Gefährdungen bewerten
+5. [Berichte mit VIVA](./berichte-mit-viva.md)
+    1. Audits erstellen
+    2. Referenzdokumente
+6. [Audits mit VIVA unterstützen](./audits-mit-viva-unterstuetzen.md)
+7. [VIVA-Assistenten](./viva-assistenten.md)
+    1. Zielgruppen-Assistenten
+    2. Schutzbedarfs-Assistenten
+8. [Objekt-Kategorie VIVA](./objekt-kategorie-viva.md)
+9. [VIVA-Widget](./viva-widget.md)
 
 Anhang
 ------
