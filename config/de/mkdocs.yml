@@ -90,7 +90,7 @@ extra:
   social:
     - name: i-doit on Twitter
       link: https://twitter.com/i_doit
-      icon: fontawesome/brands/twitter
+      icon: fontawesome/brands/x-twitter
     - name: i-doit on YouTube (English)
       link: https://www.youtube.com/channel/UC5wvDZjCslEWW2jE6R_5CUg
       icon: fontawesome/brands/youtube
