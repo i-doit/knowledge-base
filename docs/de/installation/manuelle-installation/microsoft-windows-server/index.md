@@ -54,21 +54,12 @@ Die folgende Anleitung zeigt, wie Sie SSL für Windows mit i-doit einrichten.
 
 #### Voraussetzungen
 
-```markdown
 Vorab benötigen Sie ein gültiges Zertifikat im .crt und .key Format. Dieses können Sie mit OpenSSL erstellen.
-
-Openssl können Sie hier herunterladen: [Win32 OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)
-
+Openssl können Sie hier herunterladen: [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)
 Sobald openssl installiert ist, können Sie Win64 OpenSSL Command Prompt über die Windows-Suchleiste öffnen, indem Sie nach "openssl" suchen.
-
 Hier geben Sie nun folgenden Befehl ein, um das Zertifikat zu erstellen:
-
-```
 openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt
-```
-
 Das Zertifikat und der Private Key wurden nun in dem Ordner erstellt, in dem der Befehl ausgeführt wurde. Kopieren Sie diese am besten in den i-doit Ordner.
-```
 
 #### Konfigurationsschritte
 
@@ -232,7 +223,7 @@ LogLevel warn
 
 3. **Apache-Webserver neustarten**:
 
-   - Drücken Sie ++windows+R++ , geben Sie `cmd` ein und drücken Sie Enter.
+   - Drücken Sie <kbd>Windows</kbd>+<kbd>R</kbd> , geben Sie `cmd` ein und drücken Sie Enter.
    - Oder geben Sie `cmd` in der Windows-Suchleiste ein und öffnen Sie die Eingabeaufforderung
 
 Navigieren Sie zum Apache-Bin-Verzeichnis, z.B. `C:/i-doit/apache-2.4/bin`, und geben Sie den folgenden Befehl ein, um den Apache-Webserver neu zu starten:
