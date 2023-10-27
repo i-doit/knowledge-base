@@ -43,6 +43,16 @@ When you click on the **Check for a new version** button then version 27 is not 
 
 [i-doit_26_hotfix_ID-9844.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9844.zip){ .md-button .md-button--primary }
 
+### Assigning a software via software assignment before assigning a operating system causes version number to disappear
+
+When assigning a Software before assigning a operating system, the version number of the operating system will disappear.
+
+[i-doit_26_hotfix_ID-9943_334f209.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9943_334f209.zip){ .md-button .md-button--primary }
+
+### Changing technical keys to only contain words causes entries to lose the values when filled with API (Number only) AND Changing technical keys to only contain words causes entries to lose the values when filled with API (Dialog+) AND Changing technical key in multi value category causes problems in listview
+
+[i-doit_26_hotfix_ID-9938_55eae80.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9938_55eae80.zip){ .md-button .md-button--primary }
+
 ## API Add-on 1.14.1
 
 ### Operating system > Version cannot be referenced via title, if a second operating system has the same version title
