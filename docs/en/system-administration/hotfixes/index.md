@@ -43,6 +43,26 @@ When you click on the **Check for a new version** button then version 27 is not 
 
 [i-doit_26_hotfix_ID-9844.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9844.zip){ .md-button .md-button--primary }
 
+### Wrong attribute name while reading through API
+
+When reading category C__CATG__IP hostname is the given attribute.
+
+[i-doit_26_hotfix_ID-9728_4e4abcf.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9728_4e4abcf.zip){ .md-button .md-button--primary }
+
+### Status filter for multi value categories in report manager is not working correctly for custom categories
+
+[i-doit_26_hotfix_ID-9846.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9846.zip){ .md-button .md-button--primary }
+
+### Using cmdb.category.save to assign a object to a contract only assigns root location
+
+[i-doit_26_hotfix_ID-9861_1f040a7.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9861_1f040a7.zip){ .md-button .md-button--primary }
+
+### Description fields yield validation errors on 32bit systems
+
+When using a 32bit system and saving a global or specific category causes validation error.
+
+[i-doit_26_hotfix_ID-9928_7dca69d.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9928_7dca69d.zip){ .md-button .md-button--primary }
+
 ### Assigning a software via software assignment before assigning a operating system causes version number to disappear
 
 When assigning a Software before assigning a operating system, the version number of the operating system will disappear.
