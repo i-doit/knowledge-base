@@ -1,4 +1,5 @@
 # Logbook
+
 Each change to the [IT documentation](../glossary.md) is noted in the logbook by i-doit. This way it is easy to keep track of the [lifecycle of the IT documentation](./life-and-documentation-cycle.md).
 
 ## Global Logbook
@@ -38,10 +39,17 @@ Changes do **not** affect existing entries.
 The **Username** that is shown in each entry can be changed in the configuration. The [object title](../glossary.md) of the person object is considered as default; in most cases it consists of first name and surname.
 
 !!! success "Anonymization"
-
     Is the **Username** changed to a fixed value, for example to "Anonymous", the logbook is anonymized. The result is that you can't retrace who made which changes anymore.
 
 The option for the **Maximum amount of combined detailed changes** causes simultaneous changes to be summarized. As a result the level of detail is decreased but on the other hand this effects an increase of performance for imports.
+
+### Delete Logbook entries from purged objects completely
+
+This configuration option for the logbook can be found under **Administration → Tenant management → Settings for Tenant → Logbook → Delete Logbook entries from purged objects completely**.
+
+[![logbook-entries-purge](../assets/images/en/basics/logbook/12-lb.png)](../assets/images/en/basics/logbook/12-lb.png)
+
+This setting is set to **No** by default. If you set this setting to **Yes**, the logbook entry of the object will also be deleted after purging the object itself.
 
 ## Activation/ Deactivation of the Logbook
 
@@ -54,7 +62,6 @@ You can generate a new entry in the logbook for each object. Activate the **Logb
 [![Custom Entries](../assets/images/en/basics/logbook/7-lb.png)](../assets/images/en/basics/logbook/7-lb.png)
 
 ## Entries from Third-Party Systems
-
 
 The logbook accepts new entries from third-party systems, for example through [imports](../consolidate-data/index.md), [service desks](../evaluation/cmdb-explorer/index.md), [network monitoring](../automation-and-integration/network-monitoring/index.md) and the [API](../i-doit-pro-add-ons/api/index.md).
 
