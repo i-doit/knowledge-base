@@ -103,6 +103,7 @@ Here you will find tenant related settings.
 | - | - |
 | Log detailed CMDB changes | Yes or No |
 | Disable logbook commentary | Yes or No |
+| Delete Logbook entries from purged objects completely | Yes or No |
 
 ## Templates
 
@@ -207,4 +208,3 @@ Here you will find tenant related settings.
 | [Forms](../../../i-doit-pro-add-ons/forms/index.md) Forms Server | URL |
 | [Forms](../../../i-doit-pro-add-ons/forms/index.md) User name | String |
 | [Forms](../../../i-doit-pro-add-ons/forms/index.md) API Key | String |
-
