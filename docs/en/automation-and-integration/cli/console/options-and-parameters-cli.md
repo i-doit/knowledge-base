@@ -375,7 +375,7 @@ sudo -u www-data php console.php contracts-outdated --user admin --password admi
 
 ### documents
 
-Create and export Documents
+Allows to create revisions or export one or multiple documents
 
 **Options:**
 
@@ -389,7 +389,7 @@ Create and export Documents
 |  | --all_template=ALL_TEMPLATE | Selects all documents with template |
 |  | --all_object=ALL_OBJECT | Selects all documents with object |
 |  | --export_format=EXPORT_FORMAT | Export format: pdf or html |
-|  | --export_folder=EXPORT_FOLDER | Export folder [default: "/var/www/html/main/upload/files/"] |
+|  | --export_folder=EXPORT_FOLDER | Where should the document be exported to? The folder needs to exist and be writable |
 | -u | --user=USER |  Username |
 | -p | --password=PASSWORD | Password |
 | -i | --tenantID=TENANTID | Tenant ID default: 1 |
@@ -816,7 +816,7 @@ Imports licenses from the i-doit license server
 | --- | --- | --- |
 | -u | --user=USERNAME | Username of a user who is authorized to execute |
 | -p | --password=PASSWORD | Password for authentication of the previously specified user |
-| -l | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "https://lizenzen.i-doit.com" |
+| -l | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "<https://lizenzen.i-doit.com>" |
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
 | -V | --version | Output of the i-doit Console version |
@@ -840,7 +840,7 @@ Sets a license key for i-doit
 | --- | --- | --- |
 | -u | --user=USERNAME | Username of a user who is authorized to execute |
 | -p | --password=PASSWORD | Password for authentication of the previously specified user |
-| -l | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "https://lizenzen.i-doit.com(https://lizenzen.i-doit.com)" |
+| -l | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "<https://lizenzen.i-doit.com(https://lizenzen.i-doit.com)>" |
 | -k | --key=KEY | License key for i-doit |
 | -h | --help | Help message for displaying further information |
 | -q | --quiet | Quiet-Mode to deactivate output |
@@ -1209,6 +1209,7 @@ Resynchronizes dynamic group members.
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
+
 ```shell
 sudo -u www-data php console.php sync-dynamic-groups --user admin --password admin --tenantId --groups 173,188,219
 ```
@@ -1560,6 +1561,7 @@ Lists all existing tenants.
 ```shell
 sudo -u www-data php console.php tenant-list
 ```
+
 ### tenant-remove
 
 Removes an existing client
@@ -1627,6 +1629,7 @@ Updates the i-doit installation
 | -v / -vv / -vvv | --verbose | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
+
 ```shell
 sudo -u www-data php console.php update --user admin --password admin --zip /path/to/zip/file.zip --v 1.14
 ```

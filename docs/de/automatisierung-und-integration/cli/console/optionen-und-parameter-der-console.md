@@ -5,7 +5,7 @@
     Sämtliche Beispiele auf dieser Seite beziehen sich auf die Verwendung des i-doit Benutzers mit der Kombination Benutzername/Passwort: **admin**/**admin**.<br>
     Alle Parameter sind case-sensitive, dies bedeutet, dass Groß- und Kleinschreibung gemäß den Beispielen und Vorgaben exakt einzuhalten sind.
 
-## Folgende Handler stehen für die i-doit Console zur Verfügung:
+## Folgende Handler stehen für die i-doit Console zur Verfügung
 
 | Command | Systeminterne Beschreibung (en) |
 | --- | --- |
@@ -376,7 +376,7 @@ sudo -u www-data php console.php contracts-outdated --user admin --password admi
 
 ### documents
 
-Dokumente erstellen und exportieren
+Ermöglicht die Erstellung von Revisionen oder den Export eines oder mehrerer Dokumente
 
 **Optionen:**
 
@@ -390,7 +390,7 @@ Dokumente erstellen und exportieren
 |     | --all_template=ALL_TEMPLATE | Selektiert alle Dokumente mit Vorlage |
 |     | --all_object=ALL_OBJECT | Selektiert alle Dokumente mit Objekt |
 |     | --export_format=EXPORT_FORMAT | Exportformat: PDF oder HTML |
-|     | --export_folder=EXPORT_FOLDER | Export in einen bestimmten Ordner [Standard: "/var/www/html/upload/files/"] |
+|     | --export_folder=EXPORT_FOLDER | Wohin soll das Dokument exportiert werden? Der Ordner muss existieren und beschreibbar sein |
 | -u | --user=USER | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=PASSWORD | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
 | -i | --tenantId=TENANTID | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
@@ -575,7 +575,6 @@ sudo -u www-data php console.php import-jdisc --user admin --password admin --te
 Löst einen JDisc Discovery Job aus.
 
 **Optionen:**
-
 
 | Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
