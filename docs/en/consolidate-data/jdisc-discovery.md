@@ -137,7 +137,7 @@ You can find the logs which are generated during import in the i-doit directory 
 
 You can update individual objects using the JDisc Discovery category.
 Here it is possible to scan the device using a specific identification (host address, FQDN and serial number).
-[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)
+[![JDisc Profile](../assets/images/en/daten-konsolidieren/jdisc/6-jdisc.jpg)](../assets/images/en/daten-konsolidieren/jdisc/6-jdisc.jpg)
 
 You can add the category via the object type configuration of the object type.
 
