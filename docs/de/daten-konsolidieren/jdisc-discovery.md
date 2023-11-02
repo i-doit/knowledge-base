@@ -139,6 +139,14 @@ Wenn der Import abgeschlossen wurde, wird eine Zusammenfassung im Bereich **Erge
 
 Beim Import erzeugte Logs findest du im i-doit-Verzeichnis log/.
 
+## Import über die Kategorie JDisc Discovery
+
+Über die Kategorie JDisc Discovery können Sie einzelne Objekte aktualisieren.
+Hier besteht die Möglichkeit, das Gerät über eine bestimmte Identifikation zu scannen (Hostadressse, FQDN und Seriennummer).
+[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)
+
+Die Kategorie können Sie über die Objekttypkonfiguration des Objekttyps hinzufügen.
+
 ## Import über die i-doit Console
 
 Der Import der Daten aus JDisc nach i-doit ist nicht nur manuell über die Oberfläche möglich. Er kann ebenfalls über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) ausgeführt und somit automatisiert werden. Wie der entsprechende Aufruf erzeugt wird, finden Sie im [zugehörigen Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#import-jdisc) mit einem Beispiel für die Option **import-jdisc**.

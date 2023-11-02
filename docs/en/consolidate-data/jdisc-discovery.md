@@ -133,6 +133,14 @@ When the import process is completed, a summary is displayed in the **Result** s
 
 You can find the logs which are generated during import in the i-doit directory called **log/**.
 
+## Import via JDisc Discovery category
+
+You can update individual objects using the JDisc Discovery category.
+Here it is possible to scan the device using a specific identification (host address, FQDN and serial number).
+[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)
+
+You can add the category via the object type configuration of the object type.
+
 ## Import via i-doit Console
 
 Importing data from JDisc to i-doit is not only possible manually via the user interface. It can also be executed via the i-doit [Console](../automation-and-integration/cli/console/index.md) and thus automated. How the corresponding call is generated can be found in the [corresponding article](../automation-and-integration/cli/console/options-and-parameters-cli.md) with an example for the import-jdisc option.
