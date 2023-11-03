@@ -2,16 +2,13 @@
 
 i-doit bringt bereits bei der Standard-Installation einige lokale Benutzer mit, die für die [Erstanmeldung](../../grundlagen/erstanmeldung.md) genutzt werden können. In diesem Artikel wird erklärt wie man einen weiteren lokalen Benutzer anlegt.
 
-LDAP/AD
+!!! check "LDAP/AD"
+    Die meisten der hier vorgestellten Optionen sind nicht auf lokale Benutzer beschränkt, sondern können im Zusammenhang mit der [LDAP-/AD-Schnittstelle](../ldap-verzeichnis/index.md) kombiniert werden.
 
-Die meisten der hier vorgestellten Optionen sind nicht auf lokale Benutzer beschränkt, sondern können im Zusammenhang mit der [LDAP-/AD-Schnittstelle](../ldap-verzeichnis/index.md) kombiniert werden.
+!!! check "Notfall"
+    Lokale Benutzer können auch dann verwendet werden, wenn externe Autorisierungsschnittstellen wie LDAP/AD oder [SSO](../sso-vergleich/index.md) nicht zur Verfügung stehen. Auf diese Weise kann man bei einem Notfall immer noch auf die IT-Dokumentation zugegriffen werden.
 
-Notfall
-
-Lokale Benutzer können auch dann verwendet werden, wenn externe Autorisierungsschnittstellen wie LDAP/AD oder [SSO](../sso-vergleich/index.md) nicht zur Verfügung stehen. Auf diese Weise kann man bei einem Notfall immer noch auf die IT-Dokumentation zugegriffen werden.
-
-Neues Objekt erstellen
-----------------------
+## Neues Objekt (Person) erstellen
 
 Benutzer in i-doit sind Teil der IT-Dokumentation. Daher sind alle Benutzer jeweils ein [Objekt](../../grundlagen/struktur-it-dokumentation.md) vom Typ **Personen**. Um einen lokalen Benutzer anzulegen, wird daher zunächst ein neues **Personen**\-Objekt erstellt.
 
@@ -21,8 +18,7 @@ Der Objekt-Titel (Attribut **Bezeichnung** in Kategorie **Allgemein**) sollte de
 
 [![Stammdaten](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/2-lba.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/2-lba.png)
 
-Kontaktdaten
-------------
+## Kontaktdaten
 
 Nützlich ist das Ausfüllen der Kategorie **Personen → Stammdaten**, vor allem die Attribute **E-Mail Adresse** und **Telefon Firma**. Wird diese Person einem weiteren Objekt zugeordnet (beispielsweise als Administrator eines Servers), werden diese beiden Attribute ebenfalls angezeigt und erlauben somit eine schnelle Kontaktaufnahme, ohne lange recherchieren zu müssen. Diese Verknüpfung zwischen Person und Server geschieht in der Kategorie **Personen → Zugewiesene Objekte** beziehungsweise innerhalb des Server-Objekts in der Kategorie **Kontaktzuweisung**.
 
@@ -30,8 +26,7 @@ Nützlich ist das Ausfüllen der Kategorie **Personen → Stammdaten**, vor alle
 
 Weitere E-Mail-Adressen können in der Kategorie **E-Mail Adressen** vergeben werden.
 
-Lokale Anmeldung
-----------------
+## Lokale Anmeldung
 
 Für die Anmeldung benötigt der Benutzer einen Benutzernamen und ein Passwort. Beides wird in der Kategorie **Personen → Login** vergeben.
 
