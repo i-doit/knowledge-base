@@ -34,68 +34,30 @@ Für die Anmeldung benötigt der Benutzer einen Benutzernamen und ein Passwort. 
 
 Pro Mandant kann die minimale Länge eines Benutzerpassworts vorgegeben werden. Dies geschieht unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Sicherheit → Minimallänge Benutzerpasswort**. In diesem Feld wird eine positive Ganzzahl erwartet.
 
-Benutzereinstellungen
----------------------
+## Benutzereinstellungen
 
-Jeder Benutzer kann i-doit individuell anpassen. Viele dieser Einstellungen befinden sich unter **Verwaltung → Benutzereinstellungen**.
+Jeder Benutzer kann i-doit individuell anpassen. Viele dieser Einstellungen befinden sich unter [**Verwaltung → Benutzereinstellungen**](../../administration/verwaltung/benutzereinstellungen/index.md).
 
-### Anmeldedaten
+## Anmeldedaten
 
 Auch wenn ein Benutzer kein Editier-Recht auf die oben genannte Kategorie **Personen → Login** hat, kann er über **Verwaltung → Benutzereinstellungen → Anmeldedaten** das eigene Passwort ändern.
 
 [![Anmeldedaten](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/5-lba.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/5-lba.png)
 
-### Darstellung
-
-Die Lokalisierung und weitere Einstellung kann jeder Benutzer über **Verwaltung → Benutzereinstellungen → Darstellung** vornehmen.
-
-| Option | Auswahl | Beschreibung |
-| --- | --- | --- |
-| **Sprache durch Browser wählen** | **Ja**<br><br>**Nein** | So gut wie jeder Webbrowser sendet die vom Benutzer bevorzugten Sprachen mit. i-doit ist in der Lage, diese Einstellung auszuwerten und soweit möglich anzuwenden. |
-| **Sprache** | **Deutsch**<br><br>**English** | Wird die Sprache nicht durch den Webbrowser bestimmt (siehe oben), kann die Sprache über diese Option fest vorgegeben werden. |
-| **Datumsformat** | **Deutsch**<br><br>**English** | Wie sollen Datumsangaben formatiert werden? **TT.MM.JJJJ** (deutsch) oder **YYYY-MM-DD** (englisch) |
-| **Numerisches Format** | **Deutsch**<br><br>**English** | In welchem Format sollen Zahlen formatiert werden? **x.xxx,xx** (deutsch) oder **x,xxx.xx** (englisch) |
-| **Standard Baumansicht** | **Objektsicht**<br><br>**Standortsicht** | Welche Ansicht soll nach der Anmeldung automatisch angezeigt werden? Ein Wechsel ist jederzeit möglich. |
-| **Baumansicht Typ** | **Kombinierte Ansicht**<br><br>**logischer Standort**<br><br>**physischer Standort** | Die Standortsicht kann nach physischen oder logischen Standorten getrennt werden. Physische Standorte werden über die Kategorien **Standort** und dessen rückwärtige Kategorie **Räumlich zugeordnete Objekte** miteinander zu einem Standortpfad verkettet. Ein logischer Standort bezieht sich auf **Arbeitsplätze**. Eine kombinierte Ansicht ist möglich. |
-
-[![Darstellung](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/6-lba.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/6-lba.png)
-
-### Objekt-Listen
-
-Jeder Benutzer darf für jeden Objekttyp [die jeweilige Objekt-Liste individualisieren](../../grundlagen/struktur-it-dokumentation.md). Dies geschieht **Verwaltung → Benutzereinstellungen → Objekt-Listen**.
-
-### Systemeinstellungen
-
-Unter **Verwaltung → Benutzereinstellungen → Benutzeroberfläche** stehen dem Benutzer verschiedene Optionen zur Verfügung, die sich auf verschiedene Features beziehen.
-
-| Feature | Option | Datentyp | Beschreibung |
-| --- | --- | --- | --- |
-| **Workflows** | **Maximalanzahl Einträge für Filteransicht** | Positive Ganzzahl | -   |
-| **Objekt-Listen** | **Zuletzt verwendeten Listen-Filter merken** | Positive Ganzzahl oder 0 | Für wie viele Sekunden sollen gefilterte Objekt-Listen im Cache verbleiben, bevor sie automatisch zurückgesetzt werden? Die Zahl 0 deaktiviert das Caching. |
-|     | **Einträge pro Seite in Objektlisten** | Positive Ganzzahl | Wie viele Objekte sollen in einer Objekt-Liste gleichzeitig pro Seite dargestellt werden? |
-| **Quickinfo** | **Aktiviert** | Ja/Nein | Fährt der Benutzer mit der Maus über ein Objekt, werden in einem Popup verschiedene Attribute des Objekts angezeigt. |
-|     | **Verzögerung** | Positive Fließkommazahl | Mit welcher Verzögerung soll das Popup angezeigt werden? |
-
-[![Systemeinstellungen](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/7-lba.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/7-lba.png)
-
-Profilbild
-----------
+## Profilbild
 
 Die Kategorie **Objektbild** eignet sich, um für den Benutzer ein Profilbild hochzuladen.
 
-[![Objektbild](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/8-lba.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/8-lba.png)
+[![Objektbild](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/6-lba.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen/6-lba.png)
 
-Weitere Einstellungen
----------------------
+## Weitere Einstellungen
 
 Der Benutzer hat in weiteren Bereichen individuelle Einstellungsmöglichkeiten:
 
 *   [Dashboard und Widgets konfigurieren](../../grundlagen/dashboard-und-widgets.md)
 *   [Profil im CMDB Explorer als Standard setzen](../../auswertungen/cmdb-explorer/profile-im-cmdb-explorer.md)
 *   [Aktivierte Filter in Objekt-Listen](../../grundlagen/objekt-liste/navigieren-und-filtern.md)
-*   my-doit
 
-Benutzerrechte
---------------
+## Benutzerrechte
 
 [Rechte](../../effizientes-dokumentieren/rechteverwaltung/index.md) innerhalb von i-doit können pro Benutzer oder - besser - pro Personengruppe vergeben werden. Dazu wird ein Benutzer der entsprechenden Gruppe zugeordnet. Diese verfügt dann über die entsprechenden Rechte, die dem Benutzer vererbt werden. Ein Benutzer kann mehreren Gruppen zugeordnet werden und erbt dadurch die jeweiligen Rechte.

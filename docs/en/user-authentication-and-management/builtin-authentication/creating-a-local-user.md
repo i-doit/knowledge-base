@@ -42,7 +42,7 @@ You can predefine the minimum length of a user password for each tenant. This ca
 
 Each user can adapt i-doit individually. Many of these settings can be found under [**Administration → User settings**](../../system-administration/administration/user-settings/index.md).
 
-### Login Credentials
+## Login Credentials
 
 Even if a user does not have the right to edit the above mentioned category **Persons → Login**, he or she can change their own password via **Administration → User settings → Login credentials**.
 
@@ -52,7 +52,7 @@ Even if a user does not have the right to edit the above mentioned category **Pe
 
 With the **Object picture** category you can upload a profile picture for each user.
 
-[![creating-a-local-user-person](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/8-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/6-calu.png)
+[![creating-a-local-user-person](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/6-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/6-calu.png)
 
 ## Additional Settings
 
