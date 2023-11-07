@@ -24,4 +24,3 @@ If you have been using one or more of these add-ons, you need to update them ==b
 - [Nagios 1.1.1](../../automation-and-integration/network-monitoring/nagios.md)
 - [Workflow 1.1.1](../../i-doit-pro-add-ons/workflow.md#releases)
 - [Packager 1.2.1](../../i-doit-pro-add-ons/add-on-packager.md#releases)
-

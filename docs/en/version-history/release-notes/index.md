@@ -2,6 +2,7 @@
 
 Which changes have been released with which versions?
 
+- [Release Notes 27](./release-notes-27.md)
 - [Release Notes 26](./release-notes-26.md)
 - [Release Notes 25](./release-notes-25.md)
 - [Release Notes 24](./release-notes-24.md)
