@@ -128,6 +128,7 @@ The packages are the finished ZIP files of the add-ons. Each version of each add
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.3 | 2023-11-07 | [Bug] Custom Object types are not replaced in report conditions<br/>[Bug] HTTP 500 while Add-on uninstall via Admin Center |
 | 1.2.1 | 2023-08-22 | [Bug] The content buttons do not work in some browsers<br>[Bug] The User is not able to download the add on zip file |
 | 1.2 | 2022-09-05 | [Task] PHP 8.0 Compatibility<br>[Task] Design Compatibility |
 | 1.1.1 | 2022-07-27 | [Bug] Packaging does not work with custom category dialog+ fields |

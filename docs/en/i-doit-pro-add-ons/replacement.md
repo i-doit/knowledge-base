@@ -90,6 +90,7 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
+| 1.5 | 2023-11-07 | [Bug] No changes are recorded in the logbook<br>[Bug] Signal error when downloading a document from the document repository |
 | 1.4 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Improvement] English add-on renaming to Replacement |
 | 1.3.2 | 2022-02-21 | [Bug] Use Of German Language in English Version Of Object Swap |
 | 1.3.1 | 2020-08-10 | [Bug] The location is lost during swap  <br>[Bug] Information is deleted when objects are exchanged |
