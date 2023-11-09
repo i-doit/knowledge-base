@@ -30,7 +30,7 @@ Unsere Services im Überblick:
 -   Nur ein einzelner Mandant möglich
 -   Bereitstellung innerhalb von 24 Stunden (Mo.-Fr.)
 -   Tägliches Backup bis 14 Tage in die Vergangenheit, wird um 02:30 Uhr ausgeführt
--   i-doit pro Add-ons zu einem großen Teil kompatibel, eine Liste finden Sie [hier]()
+-   i-doit pro Add-ons zu einem großen Teil kompatibel, eine Liste finden Sie [hier](https://www.i-doit.com/i-doit/add-ons/)
 -   Generell wird der Funktionsumfang nach und nach erweitert
 -   Der subdomain Name ist frei wählbar z.B. `name.i-doit.online`
 
@@ -55,4 +55,8 @@ Unsere Services im Überblick:
 
 ## Migration zu i-doit managed
 
-Eine Datenbank Migration ist aktuell nicht möglich.
+## FAQ
+
+-   Eine Datenbank Migration ist aktuell nicht möglich.
+-   SSH Zugriff ist nicht möglich.
+-   Die Server stehen in Deutschland.

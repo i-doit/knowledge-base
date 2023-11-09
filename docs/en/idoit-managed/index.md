@@ -30,7 +30,7 @@ Our services at a glance:
 -   Only one single client possible
 -   Provisioning within 24 hours (Mon.-Fri.)
 -   Daily backup up to 14 days in the past, executed at 02:30 a.m.
--   i-doit pro add-ons to a large extent compatible, a list can be found [here]()
+-   i-doit pro add-ons to a large extent compatible, a list can be found [here](https://www.i-doit.com/en/i-doit/add-ons/)
 -   In general, the range of functions will be extended gradually
 -   The subdomain name is freely selectable e.g. `name.i-doit.online`
 
@@ -55,4 +55,8 @@ Our services at a glance:
 
 ## Migration to i-doit managed
 
-A database migration is currently not possible.
+## FAQ
+
+-   A database migration is currently not possible.
+-   SSH access is not possible.
+-   The servers are located in Germany.
