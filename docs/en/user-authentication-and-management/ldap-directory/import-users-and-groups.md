@@ -9,13 +9,12 @@ The goal is to synchronize all users and groups from AD/LDAP with i-doit, as wel
 
 I assume a basic knowledge of AD/LDAP.<br>
 In these examples for persons the objectClass = user is used.<br>
-For groups the objectClass = group is used.<br>
+For groups the `objectClass = group` is used.<br>
 If you do not want to synchronize all users or groups of the domain, you have to enter the DN/CN of an OU or container under `Search for users in (OU) *`.
 
 [![Access](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/1-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/1-htiuag.png)
 
-Filter configuration
---------------------
+## Filter configuration
 
 * * *
 
@@ -23,10 +22,11 @@ Filter configuration
 
 Here only users are synchronized, which also means that no groups are created. So that only users are synchronized the filter must look like this:
 
-
 [![Import users](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/2-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/2-htiuag.png)
 
-    (objectClass=user)
+```ini
+(objectClass=user)
+```
 
 * * *
 
@@ -37,7 +37,9 @@ Only the user who has the value MichaelO in the attribute sAMAccountName should 
 
 [![Import users with specific attributes](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/3-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/3-htiuag.png)
 
-    (&(objectClass=user)(sAMAccountName=MichaelO))
+```ini
+(&(objectClass=user)(sAMAccountName=MichaelO))
+```
 
 * * *
 
@@ -48,7 +50,9 @@ So that users and groups are synchronized the filter must look like this:
 
 [![Import of users and groups](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/4-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/4-htiuag.png)
 
-    (|(objectClass=user)(objectClass=group))
+```ini
+(|(objectClass=user)(objectClass=group))
+```
 
 * * *
 
@@ -58,7 +62,9 @@ To synchronize only users who are members of the idoit-read group, the filter mu
 
 [![Import of users who are members of the idoit group](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/5-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/5-htiuag.png)
 
-    (&(objectClass=user)(memberOf=CN=idoit-read,CN=Users,DC=synetics,DC=test))
+```ini
+(&(objectClass=user)(memberOf=CN=idoit-read,CN=Users,DC=synetics,DC=test))
+```
 
 * * *
 
@@ -68,7 +74,9 @@ To synchronize only users who are members of the idoit-read group, the filter mu
 
 [![Import von Benutzer die Mitglied der Gruppe idoit-read and idoit-write sind](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/6-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/6-htiuag.png)
 
-    (&(objectClass=user)(&(memberOf=CN=idoit-read,CN=Users,DC=synetics,DC=test)(memberOf=CN=idoit-write,CN=Users,DC=synetics,DC=test)))
+```ini
+(&(objectClass=user)(&(memberOf=CN=idoit-read,CN=Users,DC=synetics,DC=test)(memberOf=CN=idoit-write,CN=Users,DC=synetics,DC=test)))
+```
 
 * * *
 
@@ -79,7 +87,9 @@ This will not create the idoit group, it will only create the groups below it. A
 
 [![Import of users who are members below the group idoit](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/7-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/7-htiuag.png)
 
-    (memberOf:1.2.840.113556.1.4.1941:=CN=idoit,CN=Users,DC=synetics,DC=test)
+```ini
+(memberOf:1.2.840.113556.1.4.1941:=CN=idoit,CN=Users,DC=synetics,DC=test)
+```
 
 * * *
 
@@ -89,17 +99,18 @@ For example, if the users differ by having two objectClass attributes (e.g. pers
 
 [![People and users](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/8-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/8-htiuag.png)
 
-    (&(objectClass=person)(objectClass=user))
+```ini
+(&(objectClass=person)(objectClass=user))
+```
 
 * * *
 
-Which other attributes can be imported via ldap.ini
----------------------------------------------------
+## Which other attributes can be imported via ldap.ini
 
-- The post [ldap.ini Configuration](../../automation-and-integration/cli/console/options-and-parameters-cli.md#ldap-sync) should be known.
-- An .ini file can be created for the import, with this additional attributes can be imported.
-- The [Category Extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md) should already be configured.
-- We use the .ini section
+-   The post [ldap.ini Configuration](../../automation-and-integration/cli/console/options-and-parameters-cli.md#ldap-sync) should be known.
+-   An .ini file can be created for the import, with this additional attributes can be imported.
+-   The [Category Extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md) should already be configured.
+-   We use the .ini section
 
 ### The configuration of the category extension
 
@@ -109,24 +120,44 @@ Here again as a table
 
 | Field title | Attribut | Mapping with |
 | --- | --- | --- |
-| Field title 1 | objectGUID | Key: custom\_1 |
-| Field title 2 | objectSid | Key: custom\_2 |
-| Field title 3 | initials | Key: custom\_3 |
-| Field title 4 | telephonenumber | Key: custom\_4 |
-| Field title 5 | title | Key: custom\_5 |
-| Field title 6 | pager | Key: custom\_6 |
-| Field title 7 | manager | Key: custom\_7 |
-| Field title 8 | info | Key: custom\_8 |
+| Field title 1 | objectSid | Key: custom_1 |
+| Field title 2 | objectGUID | Key: custom_2 |
+| Field title 3 | - | Key: custom_3 |
+| Field title 4 | - | Key: custom_4 |
+| Field title 5 | - | Key: custom_5 |
+| Field title 6 | - | Key: custom_6 |
+| Field title 7 | - | Key: custom_7 |
+| Field title 8 | - | Key: custom_8 |
 
 * * *
 
-### Import assignments to rooms from AD/LDAP
+### Attach users to Rooms statically
 
 Fixed assignments of users to rooms can be entered in the ldap.ini.<br>
 The users are then assigned to the assigned room as a contact.<br>
 (The rooms must exist in i-doit before!).
 
-    rooms["Room A"]=["MichaelO","migel"]
+```ini
+;Attach users to Rooms statically
+rooms["Room"]=["Username1","Username2"]
+```
+
+* * *
+
+### Assign user as contact to rooms
+
+It is possible to assign persons as contact to rooms via the `import_rooms` function.
+Therefore you need to set the option to `true`.
+Rooms are created automatically, but without a location.
+
+```ini
+;Import rooms from ldap
+import_rooms=true
+attributes[office]=physicalDeliveryOfficeName
+```
+
+!!! note "Bug"
+    Actually you will need to write this AD Attribute in lowercase `physicaldeliveryofficename`
 
 * * *
 
@@ -135,105 +166,47 @@ The users are then assigned to the assigned room as a contact.<br>
 I want to import more LDAP attributes to users and I have already configured the [category extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md).<br>
 Now I have to configure the LDAP sync configuration file (ldap.ini).
 
-If you have done an LDAP sync for users before, you will find an entry like this in the ldap log
-
-    Available attributes for this user:
-    objectclass,
-    cn,
-    sn,
-    c,
-    l,
-    st,
-    title,
-    description,
-    postalcode,
-    postofficebox,
-    physicaldeliveryofficename,
-    telephonenumber,
-    facsimiletelephonenumber,
-    givenname,
-    initials,
-    distinguishedname,
-    instancetype,
-    whencreated,
-    whenchanged,
-    displayname,
-    usncreated,
-    info,
-    memberof,
-    usnchanged,
-    co,
-    department,
-    company,
-    streetaddress,
-    directreports,
-    wwwhomepage,
-    name,
-    objectguid,
-    useraccountcontrol,
-    badpwdcount,
-    codepage,
-    countrycode,
-    badpasswordtime,
-    lastlogoff,
-    lastlogon,
-    pwdlastset,
-    primarygroupid,
-    userparameters,
-    objectsid,
-    admincount,
-    accountexpires,
-    logoncount,
-    samaccountname,
-    samaccounttype,
-    userprincipalname,
-    lockouttime,
-    ipphone,
-    objectcategory,
-    dscorepropagationdata,
-    lastlogontimestamp,
-    mail,
-    homephone,
-    mobile,
-    pager,
-    dn
-
+Available attributes can be found in your AD configuration.
 From this I can search for the attributes that I want to synchronize additionally.<br>
 Which attributes belong to which field can be found via Google.
 
 As an example I take the following attributes and add them to ldap.ini:
 
-    ;LDAP Attributes are individual. This default configuration is prepared for Active Directory:
-    attributes[department]=department
-    attributes[phone_company]=telephonenumber
-    attributes[phone_home]=homephone
-    attributes[phone_mobile]=mobile
-    attributes[fax]=facsimileTelephoneNumber
-    attributes[description]=info
-    attributes[personnel_number]=initials
-    attributes[organization]=company
-    attributes[location]=physicalDeliveryOfficeName
-    attributes[street]=streetAddress
-    attributes[city]=l
-    attributes[zip_code]=postalCode
-    attributes[function]=title
-    attributes[service_designation]=title
-    attributes[pager]=pager
-    ;Category extension for persons
-    attributes[custom_1]=objectSid
-    attributes[custom_2]=sn
-    attributes[custom_3]=homePhone
-    attributes[custom_4]=mobile
-    attributes[custom_5]=info
-    attributes[custom_6]=manager
-    attributes[custom_7]=company
-    attributes[custom_8]=objectGUID
+```ini
+;LDAP Attributes are individual. This default configuration is prepared for Active Directory:
+attributes[department]=department
+attributes[phone_company]=telephonenumber
+attributes[phone_home]=homephone
+attributes[phone_mobile]=mobile
+attributes[fax]=facsimileTelephoneNumber
+attributes[description]=info
+attributes[personnel_number]=employeeid
+attributes[organization]=company
+attributes[street]=streetAddress
+attributes[city]=l
+attributes[zip_code]=postalCode
+attributes[function]=title
+attributes[service_designation]=title
+attributes[pager]=pager
+
+;Category extension for persons. Only has a effect when activated
+attributes[custom_1]=objectSid
+attributes[custom_2]=objectGUID
+;attributes[custom_3]=
+;attributes[custom_4]=
+;attributes[custom_5]=
+;attributes[custom_6]=
+;attributes[custom_7]=
+;attributes[custom_8]=
+```
 
 As you can see here I mapped the master data attribute department with the LDAP attribute department.<br>
 Additionally I used the category extension.<br>
 The structure for e.g.<br>
 
-    attributes[custom_1]=objectSid
+```ini
+attributes[custom_1]=objectSid
+```
 
 would be as follows, attributes tells the handler to synchronize the i-doit attribute [custom_1] with the LDAP attribute `objectSid`.
 
@@ -253,7 +226,6 @@ It will overwrite any other settings like, `deletedUsersBehaviour` or `disabledU
 This is helpful in case users were accidentally archived or deleted before.
 
 !!! info
-
     We should be aware that with NDS or OpenLDAP it is currently not possible to identify deleted users to archive them later. Users are then always activated! Manually performed changes will be overwritten.
 
 ```ini
@@ -269,106 +241,117 @@ Disable synchronization for users with attributes checked against ignoreFunction
 This function helps to prevent synchronization of unwanted directory objects.<br>
 The user will not be synchronized if ignoreFunction fails for ALL selected attributes.
 
-By default it says ignoreUsersWithAttributes=[] so nothing will be ignored.
+By default it says `ignoreUsersWithAttributes=[]` so nothing will be ignored.
 
-We only want to import users where the attributes samaccountname, sn, givenname and mail are not empty.<br>
-So the configuration for ignoreUsersWithAttributes should look like this:
+We only want to import users where the attributes `samaccountname`, `sn`, `givenname` and mail are not empty.<br>
+So the configuration for `ignoreUsersWithAttributes` should look like this:
 
-    ignoreUsersWithAttributes[] = "samaccountname"
-    ignoreUsersWithAttributes[] = "sn"
-    ignoreUsersWithAttributes[] = "givenname"
-    ignoreUsersWithAttributes[] = "mail"
+```ini
+ignoreUsersWithAttributes[] = "samaccountname"
+ignoreUsersWithAttributes[] = "sn"
+ignoreUsersWithAttributes[] = "givenname"
+ignoreUsersWithAttributes[] = "mail"
+```
 
 * * *
 
 #### ignoreFunction
 
-Is the check function to ignore users (see ’ignoreUsersWithAttributes’)
+Is the check function to ignore users (see `ignoreUsersWithAttributes`)
 
-This can be any function name callable via call_user_func or the defined functions.
+This can be any function name callable via `call_user_func` or the defined functions.
 
-    definierte functions:
-    empty
-    !empty
-    isset
-    !isset
+```ini
+definierte functions:
+empty
+!empty
+isset
+!isset
+```
 
 Example: empty would be executed as empty($value)
 
 We check for empty attributes with
 
-    ignoreFunction=empty
+```ini
+ignoreFunction=empty
+```
 
 #### Synchronize empty attributes
 
 This option decides whether empty or emptied attributes from AD should be synchronized with i-doit or not.
 
-    syncEmptyAttributes=true
+```ini
+syncEmptyAttributes=true
+```
 
 * * *
 
 ### The complete ldap.ini
 
-Now we put all the parts together and create our ldap.ini<br>
+Here is a finished ini. file which can of course be edited.
 The first part of the ldap.ini is obtained from [Using Configuration Files for Console Commands](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md).
 
-!!! warning "Access to .ini files"
-    If the configuration file is placed in the i-doit directory, the .htaccess must be modified.
-    This code should be added:
-    ## Deny access to all ini files…
-    <Files "*.ini">
-        Require all denied
-    </Files>
-
 ```ini
-    [commandArguments]
-    [commandOptions]
-    user=admin
-    password=pass
-    tenantId=1
-    [additional]mobile
-    ;Import rooms from ldap
-    import_rooms=true
-    ;Automatically assign this company to every ldap user
-    defaultCompany='i-doit'
-    ;What to do with deleted users - archive, delete, purge
-    deletedUsersBehaviour=archive
-    ;What to do with disabled users - archive, delete, disable_login
-    disabledUsersBehaviour=disable_login
-    ;Attach users to Rooms statically
-    rooms["Room A"]=["MichaelO","migel"]
-    ;LDAP Attributes are individual. This default configuration is prepared for Active Directory:
-    attributes[department]=department
-    attributes[phone_company]=telephonenumber
-    attributes[phone_home]=homephone
-    attributes[phone_mobile]=mobile
-    attributes[fax]=facsimileTelephoneNumber
-    attributes[description]=info
-    attributes[personnel_number]=initials
-    attributes[organization]=company
-    attributes[location]=physicalDeliveryOfficeName
-    attributes[street]=streetAddress
-    attributes[city]=l
-    attributes[zip_code]=postalCode
-    attributes[function]=title
-    attributes[service_designation]=title
-    attributes[pager]=pager
-    ;Category extension for persons
-    attributes[custom_1]=objectSid
-    attributes[custom_2]=sn
-    attributes[custom_3]=homePhone
-    attributes[custom_4]=mobile
-    attributes[custom_5]=info
-    attributes[custom_6]=manager
-    attributes[custom_7]=company
-    attributes[custom_8]=objectGUID
-    ;Automatically sets all users to status normal NDS and OpenLDAP
-    autoReactivateUsers=false
-    ;Disable sync for users with Attributes checked against 'ignoreFunction'
-    ignoreUsersWithAttributes=[]
-    ;The check function used for ignoring users (see 'ignoreUsersWithAttributes') empty - !empty - isset - !isset
-    ignoreFunction=empty
-    syncEmptyAttributes=true
+[commandArguments]
+[commandOptions]
+user=admin
+password=admin
+tenantId=1
+[additional]
+;Import rooms from ldap
+import_rooms=false
+attributes[office]=physicalDeliveryOfficeName
+
+;Automatically assign this company to every ldap user
+defaultCompany=''
+
+;What to do with deleted users - archive, delete, purge
+deletedUsersBehaviour=archive
+
+;What to do with disabled users - archive, delete, disable_login
+disabledUsersBehaviour=disable_login
+
+;Attach users to Rooms statically
+;rooms["Room"]=["Username1","Username2"]
+
+;LDAP Attributes are individual. This default configuration is prepared for Active Directory:
+attributes[department]=department
+attributes[phone_company]=telephonenumber
+attributes[phone_home]=homephone
+attributes[phone_mobile]=mobile
+attributes[fax]=facsimileTelephoneNumber
+attributes[description]=info
+attributes[personnel_number]=employeeid
+attributes[organization]=company
+attributes[street]=streetAddress
+attributes[city]=l
+attributes[zip_code]=postalCode
+attributes[function]=title
+attributes[service_designation]=title
+attributes[pager]=pager
+
+;Category extension for persons. Only has a effect when activated
+attributes[custom_1]=objectSid
+attributes[custom_2]=objectGUID
+;attributes[custom_3]=
+;attributes[custom_4]=
+;attributes[custom_5]=
+;attributes[custom_6]=
+;attributes[custom_7]=
+;attributes[custom_8]=
+
+;Automatically sets all users to status normal NDS and OpenLDAP
+autoReactivateUsers=false
+
+;Disable sync for users with Attributes checked against 'ignoreFunction'
+ignoreUsersWithAttributes=[]
+
+;The check function used for ignoring users (see 'ignoreUsersWithAttributes') empty - !empty - isset - !isset
+ignoreFunction=empty
+
+;This option decides whether empty or emptied attributes from AD should be synchronized with i-doit or not.
+syncEmptyAttributes=true
 ```
 
 On the console the command would look like this:
