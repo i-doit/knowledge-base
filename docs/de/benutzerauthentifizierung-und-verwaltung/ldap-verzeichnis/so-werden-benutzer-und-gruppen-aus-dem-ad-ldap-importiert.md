@@ -344,7 +344,7 @@ attributes[custom_2]=objectGUID
 autoReactivateUsers=false
 
 ;Disable sync for users with Attributes checked against 'ignoreFunction'
-ignoreUsersWithAttributes=[]
+ignoreUsersWithAttributes[]="sn"
 
 ;The check function used for ignoring users (see 'ignoreUsersWithAttributes') empty - !empty - isset - !isset
 ignoreFunction=empty
