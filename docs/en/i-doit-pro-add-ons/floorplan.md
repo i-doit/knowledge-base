@@ -154,6 +154,7 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
+| 1.7 | 2023-11-07 | [Bug] MySQL8 causes database error "incorrect DATETIME" when opening Floorplan<br>[Bug] When turning an object, the text should also turn<br>[Bug] Language constant 'LC__CMDB__CATG__ACCOUNTING_ORDER_DATE' is not <br>eplaced<br>[Bug] Highlight 'add-on' instead of 'extras' menu |
 | 1.6 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
 | 1.5.1 | 2022-02-22 | [Bug] Floorplans cannot be opened |
 | 1.5 |     | [Improvement] It is possible to display a floorplan in a floorplan  <br>[Improvement] It is possible to remove a layout from the floorplan  <br>[Improvement] It is possible to remove the background from the floorplan  <br>[Improvement] Show the object name of the current floorplan in the breadcrumb  <br>[Bug] Function to inherit formfactor data scales dimensions wrong |

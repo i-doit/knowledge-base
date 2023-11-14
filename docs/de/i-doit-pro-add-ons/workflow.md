@@ -53,6 +53,7 @@ Releases
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.2 | 07.11.2023 | [Task] Use new routes to display object and object type images / move add-on related files |
 | 1.1.1 | 22.08.2023 | [Improvement] PHP 8.1 Compatibility |
 | 1.1 | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
 | 1.0.6 | 27.07.2022 | [Bug] Error message when a workflow is accepted  <br>[Bug] The frequency of checklists cannot be used because the value is not saved |

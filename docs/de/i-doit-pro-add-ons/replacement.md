@@ -82,6 +82,7 @@ Ein Bericht über bisher durchgeführte Tauschaktionen wird unter **Add-ons → 
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.5 | 07.11.2023 | [Bug] No changes are recorded in the logbook<br>[Bug] Signal error when downloading a document from the document repository |
 | 1.4 | 05.09.2022 | [Task] HP 8.0 Compatibility<br>[Task] Design Compatibility |
 | 1.3.2 | 21.02.2022 | [Bug] Use Of German Language in English Version Of Object Swap |
 | 1.3.1 | 10.08.2020 | [Bug] The location is lost during swap<br>[Bug] Information is deleted when objects are exchanged |
