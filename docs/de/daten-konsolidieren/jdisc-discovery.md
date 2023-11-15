@@ -126,6 +126,7 @@ Da es möglich ist, dass mehr als ein JDisc-Server eingesetzt wird, muss im erst
 | **Erstellen** | Der Import-Modus **"Erstellen"** wird alle gefundenen Objekte erstellen, ohne zu prüfen, ob diese bereits existieren. |
 | **Aktualisieren** | Der Import-Modus **"Aktualisieren"** wird nur Objekte erstellen, die in i-doit nicht gefunden werden konnten. Kategorien von bereits existierenden Objekten werden (wenn nötig) um neue Daten ergänzt. |
 | **Aktualisieren (Neu inventarisiert)** | Mit dem Zusatz **"(Neu inventarisiert)"** werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet. |
+| **Aktualisieren (Nur existierende Objekte)** | Mit dem Zusatz **"(Nur existierende Objekte)"** werden nur bestehende Objekte mit neuen Daten aktualisiert. Es werden keine neuen Objekte erstellt. |
 | **Erstelle nur neu gescannte Geräte** | Der Modus "**Erstelle nur neu gescannte Geräte**" erstellt nur Objekte die nicht in i-doit existieren. |
 | **Überschreiben** | Der Import-Modus **"Überschreiben"** verhält sich genauso wie der Modus "Aktualisieren" mit dem Unterschied, das Listen-Kategorien erst geleert und dann neu angelegt werden. |
 | **Überschreiben (Neu inventarisiert)** | Mit dem Zusatz **"(Neu inventarisiert)"** werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet. |

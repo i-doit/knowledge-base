@@ -22,12 +22,17 @@ A new template can be created via the "New" button. The add-on will continue to 
     The template can be assigned to a document category. Only categories that have been created in advance are available. The category of a document can be changed at any time later.
 *   **Title page**  
     The cover page can be designed according to your own specifications. It appears as the first page of the finished document.
+    In the Title page tab you can enable/disable the Title page.
 *   **Header**  
     The header represents the header area of each page of the document. The content is added to the top of each page.
+    In the Header tab you can enable/disable the header.
 *   **Footer**  
     The footer can be found at the bottom of each page. Additional content can be added here as well, similar to the header.
+    In the Footer tab you can enable/disable the Footer.
+*   **Table of contents**
+    In the Table of contents tab you can enable/disable the table of contents.
 *   **Options**  
-    The options allow to specify whether a cover page, a table of contents and (chapter) headings should be used. It is also possible to specify the format of headings.  
+    The options allow to specify which pages are used for page number counting and from which page number is counted. It is also possible to specify the format of headings.  
     In the lower area of the options further settings for the PDF documents can be made. These include margin spacing and page orientation. If necessary, you can also upload and add your own fonts. The use of background images for the cover page, the table of contents or all other pages is also possible here.
 *   **User-defined fields**  
     To add more fields to the document, it is possible to define your own fields under "Custom Fields", which can later be included in the document. For these fields some field types are available, which define the content. The required fields can be added using the "Add new field" button.  

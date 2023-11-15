@@ -43,7 +43,7 @@
 [Bug][LDAP]                                        Ldap-sync creates a duplicated logbook entries for a archived user<br>
 [Bug][LDAP]                                        Group Assignment is not removed for LDAP Users if the user was moved to another LDAP group<br>
 [Bug][LDAP]                                        Administration > Import and interfaces > LDAP > Attribute extension cannot be saved<br>
-[Bug][Logbook]                                     If a change in the administration with "logbook commentary" is saved a missleading information tells that a loogbook <br>entry has been created.
+[Bug][Logbook]                                     If a change in the administration with "logbook commentary" is saved a missleading information tells that a loogbook entry has been created.<br>
 [Bug][API]                                         Creating and setting a Dialog entry with a String which is only a number is not logged<br>
 [Bug][API]                                         PHP Error when posting a API request without installed i-doit pro add-on API<br>
 [Bug][List editing]                                Software not displayed in list view when assigned via list edit<br>
@@ -57,7 +57,7 @@
 [Bug][CMDB]                                        SQL error after double update of DBMS installation<br>
 [Bug][New cabling logic]                           Cabling Browser shows wrong assignment of input and output<br>
 [Bug][Report-Manager]                              Using software assignment in reports causes wrong number of matches<br>
-[Bug][Report-Manager]                              DNS Server is not shown in a report eventhough it is set in a Layer-3 Net<br>
+[Bug][Report-Manager]                              DNS Server is not shown in a report even though it is set in a Layer-3 Net<br>
 [Bug][Report-Manager]                              Assigned workstation-> Parent Object not working in report manager<br>
 [Bug][Report-Manager]                              Report does not display all possible results<br>
 [Bug][Report-Manager]                              CSV export of reports with grouped multivalue presentation may contain a lot of empty rows<br>
@@ -87,6 +87,6 @@
 [Bug][Console-base Installation/Update/Licensing]  sync-dynamic-groups command using wrong database table<br>
 [Bug][CMDB-Explorer]                               Language constants are displayed in the object info of the cmdb explorer<br>
 [Bug][i-doit Licensing 2.0]                        License expiration countdown is not displayed on the dashboard<br>
-[Bug][Authorization system]                        If "Location and all physically assigned objects" is used as a right the overview page can be seen although it is not <br>authorized
+[Bug][Authorization system]                        If "Location and all physically assigned objects" is used as a right the overview page can be seen although it is not authorized<br>
 [Bug][Relations]                                   Function to clear the password of users has no effect<br>
 [Bug][Single Sign On (SSO)]                        Language of default tenant overwrites languages of other tenants<br>

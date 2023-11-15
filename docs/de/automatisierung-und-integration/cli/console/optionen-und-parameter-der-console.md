@@ -5,7 +5,7 @@
     Sämtliche Beispiele auf dieser Seite beziehen sich auf die Verwendung des i-doit Benutzers mit der Kombination Benutzername/Passwort: **admin**/**admin**.<br>
     Alle Parameter sind case-sensitive, dies bedeutet, dass Groß- und Kleinschreibung gemäß den Beispielen und Vorgaben exakt einzuhalten sind.
 
-## Folgende Handler stehen für die i-doit Console zur Verfügung:
+## Folgende Handler stehen für die i-doit Console zur Verfügung
 
 | Command | Systeminterne Beschreibung (en) |
 | --- | --- |
@@ -376,7 +376,7 @@ sudo -u www-data php console.php contracts-outdated --user admin --password admi
 
 ### documents
 
-Dokumente erstellen und exportieren
+Ermöglicht die Erstellung von Revisionen oder den Export eines oder mehrerer Dokumente
 
 **Optionen:**
 
@@ -390,7 +390,7 @@ Dokumente erstellen und exportieren
 |     | --all_template=ALL_TEMPLATE | Selektiert alle Dokumente mit Vorlage |
 |     | --all_object=ALL_OBJECT | Selektiert alle Dokumente mit Objekt |
 |     | --export_format=EXPORT_FORMAT | Exportformat: PDF oder HTML |
-|     | --export_folder=EXPORT_FOLDER | Export in einen bestimmten Ordner [Standard: "/var/www/html/upload/files/"] |
+|     | --export_folder=EXPORT_FOLDER | Wohin soll das Dokument exportiert werden? Der Ordner muss existieren und beschreibbar sein |
 | -u | --user=USER | Username eines Benutzers, der zur Ausführung berechtigt ist |
 | -p | --password=PASSWORD | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
 | -i | --tenantId=TENANTID | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
@@ -547,7 +547,7 @@ Führt einen JDisc-Import nach i-doit durch.
 | --- | --- | --- |
 | -r | --profile=PROFILE | Angabe/Auswahl des JDisc-Profils, das für den Import verwendet werden soll |
 | -g | --group=GROUP | Angabe/Auswahl der Gruppen ID, die für den Import verwendet werden soll |
-| -x | --mode=MODE | Auswahl des Import-Modus. Folgende IDs stehen zur Verfügung:<br>**1**: "Erstellen": Der Import-Modus "Erstellen" wird alle gefundenen Objekte erstellen, ohne zu prüfen, ob diese bereits existieren.<br>**2**: "Aktualisieren": Der Import-Modus "Aktualisieren" wird nur Objekte erstellen, die in i-doit nicht gefunden werden konnten. Kategorien von bereits existierenden Objekten werden (wenn nötig) um neue Daten ergänzt.<br>**3**: "Überschreiben": Der Import-Modus "Überschreiben" verhält sich genauso wie der Modus "Aktualisieren" mit dem Unterschied, das Listen-Kategorien erst geleert und dann neu angelegt werden.<br>**4**: "Aktualisieren (Neu inventarisiert)": Mit dem Zusatz "(Neu inventarisiert)" werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet.<br>**5**: "Überschreiben (Neu inventarisiert)":  Mit dem Zusatz "(Neu inventarisiert)" werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet.<br>**6**: Der Import-Modus "Erstelle nur neu gescannte Geräte" erstellt nur neu gescannte Objekte, existierende werden übersprungen. |
+| -x | --mode=MODE | Auswahl des Import-Modus. Folgende IDs stehen zur Verfügung:<br>**1**: "Erstellen": Der Import-Modus "Erstellen" wird alle gefundenen Objekte erstellen, ohne zu prüfen, ob diese bereits existieren.<br>**2**: "Aktualisieren": Der Import-Modus "Aktualisieren" wird nur Objekte erstellen, die in i-doit nicht gefunden werden konnten. Kategorien von bereits existierenden Objekten werden (wenn nötig) um neue Daten ergänzt.<br>**3**: "Überschreiben": Der Import-Modus "Überschreiben" verhält sich genauso wie der Modus "Aktualisieren" mit dem Unterschied, das Listen-Kategorien erst geleert und dann neu angelegt werden.<br>**4**: "Aktualisieren (Neu inventarisiert)": Mit dem Zusatz "(Neu inventarisiert)" werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet.<br>**5**: "Überschreiben (Neu inventarisiert)":  Mit dem Zusatz "(Neu inventarisiert)" werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet.<br>**6**: Der Import-Modus "Erstelle nur neu gescannte Geräte" erstellt nur neu gescannte Objekte, existierende werden übersprungen.<br>**7**: Der Import-Modus "Aktualisieren (Nur existierende Objekte) erstellt nur bereits existierende Objekte. Es werden keine neuen Objekte erstellt. |
 | -s | --server=SERVER | Angabe der Server-ID um diesen auszuwählen |
 | -o | --overwriteHost | Festlegen, ob sich überschneidende Hostadressen überschrieben werden sollen |
 | -l | -detailedLogging[=DETAILEDLOGGING] | Erhöht die Protokollierungsstufe:<br>**1**: auf niedriger Log-Ebene werden nur Hinweise und Warnungen protokolliert<br>**2**: zusätzlich zur niedrigen Log-Ebene werden Fehler protokolliert<br>**3**: zusätzlich zur normalen Log-Ebene werden Debug-Meldungen protokolliert (speicherintensiv) |
@@ -575,7 +575,6 @@ sudo -u www-data php console.php import-jdisc --user admin --password admin --te
 Löst einen JDisc Discovery Job aus.
 
 **Optionen:**
-
 
 | Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
 | --- | --- | --- |
