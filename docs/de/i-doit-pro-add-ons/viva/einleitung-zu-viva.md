@@ -18,7 +18,7 @@ VIVA umfasst alle Themen aus den beiden BSI-Standards [100-2 "IT-Grundschutz-Vor
 An wen sich dieses Dokument richtet
 -----------------------------------
 
-Der Inhalt dieses Dokuments richtet sich an jene Personen, die in einer Organisation die Sicherheit der IT verantworten und/oder betreuen. In unserer Knowlede Base wird diese Rolle durchgehend Security Manager bezeichnet. Es wird der sichere Umgang mit i-doit vorausgesetzt.
+Der Inhalt dieses Dokuments richtet sich an jene Personen, die in einer Organisation die Sicherheit der IT verantworten und/oder betreuen. In unserer Knowledge Base wird diese Rolle durchgehend Security Manager bezeichnet. Es wird der sichere Umgang mit i-doit vorausgesetzt.
 
 Aufbau dieser Dokumentation
 ---------------------------

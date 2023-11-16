@@ -33,7 +33,7 @@ List of Available Add-ons
 | **VIVA ([GER](./viva/index.md/))** | yes | no  | yes |
 | **[Workflow](./workflow.md)** | yes | no  | no  |
 
-Beside these add-ons there are many others which are provided by our partners or external developers. You can find a detailed list at the i-doit website [i-doit.com under **Product → Add-ons**](https://www.i-doit.com/en/products/modules/).
+Beside these add-ons there are many others which are provided by our partners or external developers. You can find a detailed list at the i-doit website [i-doit.com under **Product → Add-ons**](https://www.i-doit.com/en/i-doit/add-ons/).
 
 Download
 --------
