@@ -11,9 +11,9 @@ Die folgenden Kapitel geben einen ausführlichen Einblick in die Funktionsweise 
 IT-Grundschutz
 --------------
 
-Eine ausführliche [Einführung in das Thema IT-Grundschutz](https://www.bsi.bund.de/DE/Themen/ITGrundschutz/itgrundschutz_node.html) bietet die Website vom Bundesamt für Sicherheit in der Informationstechnik (BSI). Dort stehen alle Informationen rund um die BSI-Standards 100-x, die IT-Grundschutz-Kataloge und Zertifizierungen nach ISO 27001 auf Basis von IT-Grundschutz bereit.
+Eine ausführliche [Einführung in das Thema IT-Grundschutz](https://www.bsi.bund.de/) bietet die Website vom Bundesamt für Sicherheit in der Informationstechnik (BSI). Dort stehen alle Informationen rund um die BSI-Standards 100-x, die IT-Grundschutz-Kataloge und Zertifizierungen nach ISO 27001 auf Basis von IT-Grundschutz bereit.
 
-VIVA umfasst alle Themen aus den beiden BSI-Standards [100-2 "IT-Grundschutz-Vorgehensweise"](https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzStandards/Standard02/ITGStandard02_node.html) und [100-3 "Risikoanalyse auf Basis von IT-Grundschutz"](https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzStandards/Standard03/ITGStandard03_node.html). Welche IT-Grundschutz-Kataloge unterstützt werden, steht im Artikel _[Kataloge importieren](./vorgehensweise-mit-viva.md)_.
+VIVA umfasst alle Themen aus den beiden BSI-Standards [100-2 "IT-Grundschutz-Vorgehensweise"](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/BSI-Standards/bsi-standards_node.html) und [100-3 "Risikoanalyse auf Basis von IT-Grundschutz"](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/BSI-Standards/bsi-standards_node.html). Welche IT-Grundschutz-Kataloge unterstützt werden, steht im Artikel _[Kataloge importieren](./vorgehensweise-mit-viva.md)_.
 
 An wen sich dieses Dokument richtet
 -----------------------------------
