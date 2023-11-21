@@ -120,26 +120,44 @@ Hier noch mal als Tabelle
 
 | Feldname | Attribut | Mapping mit |
 | --- | --- | --- |
-| Feldname 1 | objectGUID | Key: custom\_1 |
-| Feldname 2 | objectSid | Key: custom\_2 |
-| Feldname 3 | initials | Key: custom\_3 |
-| Feldname 4 | telephonenumber | Key: custom\_4 |
-| Feldname 5 | title | Key: custom\_5 |
-| Feldname 6 | pager | Key: custom\_6 |
-| Feldname 7 | manager | Key: custom\_7 |
-| Feldname 8 | info | Key: custom\_8 |
+| Feldname 1 | objectSid | Key: custom_1 |
+| Feldname 2 | objectGUID | Key: custom_2 |
+| Feldname 3 | - | Key: custom_3 |
+| Feldname 4 | - | Key: custom_4 |
+| Feldname 5 | - | Key: custom_5 |
+| Feldname 6 | - | Key: custom_6 |
+| Feldname 7 | - | Key: custom_7 |
+| Feldname 8 | - | Key: custom_8 |
 
 * * *
 
-### Importiere Zuweisungen zu Räumen aus dem AD/LDAP
+### Benutzer statisch Räumen zuordnen
 
 In der `ldap.ini` können feste Zuweisungen von Benutzern zu Räumen eingetragen werden.<br>
 Die Benutzer werden dann dem zugewiesenem Raum als Kontakt zugewiesen.<br>
 (Die Räume müssen vorher in i-doit existieren!)
 
 ```ini
-rooms["Raum A"]=["MichaelO","migel"]
+;Attach users to Rooms statically
+rooms["Room"]=["Username1","Username2"]
 ```
+
+* * *
+
+### Benutzer als Kontakt zu Räumen zuordnen
+
+Es ist möglich, über die Funktion `import_rooms` Personen als Kontakt zu Räumen zuzuordnen.
+Dazu muss die Option auf `true` gesetzt werden.
+Räume werden automatisch angelegt, allerdings ohne Standort.
+
+```ini
+;Import rooms from ldap
+import_rooms=true
+attributes[office]=physicalDeliveryOfficeName
+```
+
+!!! note "Bug"
+    Aktuell muss das AAttribut in Kleinbuchstaben geschrieben werden `physicaldeliveryofficename`
 
 * * *
 
@@ -148,71 +166,7 @@ rooms["Raum A"]=["MichaelO","migel"]
 Ich möchte weitere LDAP Attribute zu Benutzern importieren und habe schon die [Attributerweiterungen](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md) Konfiguriert.<br>
 Nun muss ich noch die Konfigurationsdatei des LDAP-Sync konfigurieren (ldap.ini).
 
-Wenn man vorher schon mal einen LDAP-Sync für Benutzer durchgeführt hat, findet man im ldap Log einen Eintrag wie diesen
-
-```ini
-    Available attributes for this user:
-    objectclass,
-    cn,
-    sn,
-    c,
-    l,
-    st,
-    title,
-    description,
-    postalcode,
-    postofficebox,
-    physicaldeliveryofficename,
-    telephonenumber,
-    facsimiletelephonenumber,
-    givenname,
-    initials,
-    distinguishedname,
-    instancetype,
-    whencreated,
-    whenchanged,
-    displayname,
-    usncreated,
-    info,
-    memberof,
-    usnchanged,
-    co,
-    department,
-    company,
-    streetaddress,
-    directreports,
-    wwwhomepage,
-    name,
-    objectguid,
-    useraccountcontrol,
-    badpwdcount,
-    codepage,
-    countrycode,
-    badpasswordtime,
-    lastlogoff,
-    lastlogon,
-    pwdlastset,
-    primarygroupid,
-    userparameters,
-    objectsid,
-    admincount,
-    accountexpires,
-    logoncount,
-    samaccountname,
-    samaccounttype,
-    userprincipalname,
-    lockouttime,
-    ipphone,
-    objectcategory,
-    dscorepropagationdata,
-    lastlogontimestamp,
-    mail,
-    homephone,
-    mobile,
-    pager,
-    dn
-```
-
+Die verfügbaren Attribute finden Sie in Ihrer AD-Konfiguration.
 Hieraus kann ich mir die Attribute suchen die ich zusätzlich Synchronisieren möchte.<br>
 Welche Attribute zu welchem Feld gehören kann man über Google finden oder z.B. hier [SelfADSI externer Link](http://www.selfadsi.de/user-attributes.htm).
 
@@ -226,29 +180,33 @@ attributes[phone_home]=homephone
 attributes[phone_mobile]=mobile
 attributes[fax]=facsimileTelephoneNumber
 attributes[description]=info
-attributes[personnel_number]=initials
+attributes[personnel_number]=employeeid
 attributes[organization]=company
-attributes[location]=physicalDeliveryOfficeName
 attributes[street]=streetAddress
 attributes[city]=l
 attributes[zip_code]=postalCode
 attributes[function]=title
 attributes[service_designation]=title
 attributes[pager]=pager
+
 ;Attributerweiterung nur für Personen
 attributes[custom_1]=objectSid
-attributes[custom_2]=sn
-attributes[custom_3]=homePhone
-attributes[custom_4]=mobile
-attributes[custom_5]=info
-attributes[custom_6]=manager
-attributes[custom_7]=company
-attributes[custom_8]=objectGUID
+attributes[custom_2]=objectGUID
+;attributes[custom_3]=
+;attributes[custom_4]=
+;attributes[custom_5]=
+;attributes[custom_6]=
+;attributes[custom_7]=
+;attributes[custom_8]=
 ```
 
 Wie man hier sieht habe ich z.B. das Stammdaten Attribut department mit dem LDAP Attribute department gemapped.<br>
 Zusätzlich habe ich die Attributerweiterung verwendet. Der Aufbau für z.B.<br>
-`attributes[custom_1]=objectSid`<br>
+
+```ini
+attributes[custom_1]=objectSid
+```
+
 wäre wie folgt:
 
 `attributes` sagt dem handler er soll das i-doit Attribut [custom_1] mit dem LDAP Attribut `objectSid` synchronisieren.<br>
@@ -266,9 +224,8 @@ Um einen sauberen Start zu haben, setzt diese Einstellung automatisch alle Benut
 
 Dies ist hilfreich, falls Benutzer versehentlich vorher archiviert oder gelöscht wurden.<br>
 
-!!! note "Beachten Sie, dass dies nur mit NDS & OpenLDAP funktioniert, da es in Active Directory immer aktiviert ist!"
-
-Wir sollten uns bewusst sein, dass es mit NDS oder OpenLDAP derzeit nicht möglich ist, gelöschte Benutzer zu identifizieren, um sie später zu archivieren. Benutzer sind dann immer aktiviert!
+!!! info
+    Wir sollten uns bewusst sein, dass es mit NDS oder OpenLDAP derzeit nicht möglich ist, gelöschte Benutzer zu identifizieren, um sie später zu archivieren. Benutzer sind dann immer aktiviert!
 
 ```ini
 autoReactivateUsers=false
@@ -331,26 +288,32 @@ syncEmptyAttributes=true
 
 ### Die komplette ldap.ini
 
-Nun fügen wir alle Teile zusammen und erstellen unsere ldap.ini<br>
+Hier eine fertige ini. Datei diese kann natürlich bearbeitet werden.<br>
 Der erste Teil der ldap.ini wird von [Verwendung von Konfigurationsdateien für Console Commands](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md#beispiel-für-den-command-ldap-sync) bezogen.
 
 ```ini
 [commandArguments]
 [commandOptions]
 user=admin
-password=pass
+password=admin
 tenantId=1
 [additional]
 ;Import rooms from ldap
-import_rooms=true
+import_rooms=false
+attributes[office]=physicalDeliveryOfficeName
+
 ;Automatically assign this company to every ldap user
-defaultCompany='i-doit'
+defaultCompany=''
+
 ;What to do with deleted users - archive, delete, purge
 deletedUsersBehaviour=archive
+
 ;What to do with disabled users - archive, delete, disable_login
 disabledUsersBehaviour=disable_login
+
 ;Attach users to Rooms statically
-rooms["Raum A"]=["MichaelO","migel"]
+;rooms["Room"]=["Username1","Username2"]
+
 ;LDAP Attributes are individual. This default configuration is prepared for Active Directory:
 attributes[department]=department
 attributes[phone_company]=telephonenumber
@@ -358,34 +321,39 @@ attributes[phone_home]=homephone
 attributes[phone_mobile]=mobile
 attributes[fax]=facsimileTelephoneNumber
 attributes[description]=info
-attributes[personnel_number]=initials
+attributes[personnel_number]=employeeid
 attributes[organization]=company
-attributes[location]=physicalDeliveryOfficeName
 attributes[street]=streetAddress
 attributes[city]=l
 attributes[zip_code]=postalCode
 attributes[function]=title
 attributes[service_designation]=title
 attributes[pager]=pager
-;Category extension for persons
+
+;Category extension for persons. Only has a effect when activated
 attributes[custom_1]=objectSid
-attributes[custom_2]=sn
-attributes[custom_3]=homePhone
-attributes[custom_4]=mobile
-attributes[custom_5]=info
-attributes[custom_6]=manager
-attributes[custom_7]=company
-attributes[custom_8]=objectGUID
+attributes[custom_2]=objectGUID
+;attributes[custom_3]=
+;attributes[custom_4]=
+;attributes[custom_5]=
+;attributes[custom_6]=
+;attributes[custom_7]=
+;attributes[custom_8]=
+
 ;Automatically sets all users to status normal NDS and OpenLDAP
 autoReactivateUsers=false
+
 ;Disable sync for users with Attributes checked against 'ignoreFunction'
-ignoreUsersWithAttributes=[]
+ignoreUsersWithAttributes[]="sn"
+
 ;The check function used for ignoring users (see 'ignoreUsersWithAttributes') empty - !empty - isset - !isset
 ignoreFunction=empty
+
+;This option decides whether empty or emptied attributes from AD should be synchronized with i-doit or not.
 syncEmptyAttributes=true
 ```
 
-Auf der Console würde der Command so aussehen:
+Damit die .ini Datei verwendet wird, muss diese mit dem `-c` parameter angegeben werden.
 
 ```shell
 sudo -u www-data php console.php ldap-sync -c /var/www/html/i-doit/src/handler/config/ldap-sync.ini
