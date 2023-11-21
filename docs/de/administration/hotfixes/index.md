@@ -25,11 +25,11 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
     Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
 
 ## i-doit core
-
+<!--
 ### The encoding of umlauts are displayed in report titles
 
 [i-doit_27_hotfix_ID-9971_d89f00f.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9971_d89f00f.zip){ .md-button .md-button--primary }
-
+-->
 ### Report objects adds `&nbsp;&nbsp;` after each column <br>Exported report displays \_\_id\_\_ column
 
 [i-doit_27_hotfix_ID-10016_ID-10021_e950b61.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-10016_ID-10021_e950b61.zip){ .md-button .md-button--primary }
