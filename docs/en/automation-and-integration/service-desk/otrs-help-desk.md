@@ -5,4 +5,4 @@
 OTRS-Modules
 ------------
 
-Currently there are several OTRS modules and you can find an up-to-date list of them on the i-doit [i-doit website](https://www.i-doit.com/en/products/modules/).
+Currently there are several OTRS modules and you can find an up-to-date list of them on the i-doit [i-doit website](https://www.i-doit.com/en/i-doit/add-ons/).

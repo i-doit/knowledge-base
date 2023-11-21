@@ -41,7 +41,7 @@ Supernetze, sprich die Zusammenfassung von mehreren Subnetzen zu einem Netz, kö
 
 ## IP-Adresse mit Hostname
 
-Die Dokumentation einzelner IP-Adressen geschieht in der Kategorie **Hostadresse**, die jedem Objekttypen zugeordnet werden kann. Da es sich um eine [Listen-Kategorie](../glossar.md) handelt, können beliebig viele IP-Adressen pro Objekt angegeben werden. Die Kategorie verfügt neben der reinen Datenpflege über einige Automatismen, die den Benutzer unterstützen. Zuerst sollte angegeben werden, welcher **Typ** (also welche IP-Version) verwendet wird. Danach sollte das zuvor angelegte Netz angegeben werden und die Art der **Adressvergabe** (z. B. statisch). i-doit schlägt nun die nächst freie IP-Adresse vor, welches übernommen oder abgeändert werden kann. Wichtig ist noch die Angabe des Hostnamens. Unter **DNS-Domäne** kann aus den Domains gewählt werden, die dem Netz zugeordnet sind, sodass entsprechende FQDNs (Fully Qualified Domain Name) aus Hostnamen und Domains gebildet werden können.
+Die Dokumentation einzelner IP-Adressen geschieht in der Kategorie **Hostadresse**, die jedem Objekttypen zugeordnet werden kann. Da es sich um eine [Listen-Kategorie](../glossar.md) handelt, können beliebig viele IP-Adressen pro Objekt angegeben werden. Die Kategorie verfügt neben der reinen Datenpflege über einige Automatismen, die den Benutzer unterstützen. Zuerst sollte angegeben werden, welcher **Typ** (also welche IP-Version) verwendet wird. Danach sollte das zuvor angelegte Netz angegeben werden und die Art der **Adressvergabe** (z. B. statisch). i-doit schlägt nun die nächst freie IP-Adresse vor, welches übernommen oder abgeändert werden kann. Wichtig ist noch die Angabe des Hostnamen. Unter **DNS-Domäne** kann aus den Domains gewählt werden, die dem Netz zugeordnet sind, sodass entsprechende FQDNs (Fully Qualified Domain Name) aus Hostnamen und Domains gebildet werden können.
 
 ## IP-Liste
 
@@ -89,7 +89,7 @@ Wer Angaben zum verwendeten Domain Name System (DNS) und/oder Fully Qualified Do
 [![Hostadresse](../assets/images/de/anwendungsfaelle/ipam/3-ipam.png)](../assets/images/de/anwendungsfaelle/ipam/3-ipam.png)
 
 !!! info "Konfigurationsdaten für DNS- und DHCP-Server"
-    Prinzipiell eignen sich die dokumentierten Daten, um DNS- oder DHCP-Server mit passenden Konfigurationsdaten auszustatten. i-doit enthält eine [Export-Funktion für den DNS-Server ISC DHCPD](../automatisierung-und-integration/cli/index.md).
+    Prinzipiell eignen sich die dokumentierten Daten, um DNS- oder DHCP-Server mit passenden Konfigurationsdaten auszustatten. i-doit enthält eine [Export-Funktion für den DNS-Server ISC DHCP](../automatisierung-und-integration/cli/index.md).
 
 !!! info "DNS-Zonen und -Records"
     Während sich DNS-Zonen aus der IT-Dokumentation mit Hausmitteln von i-doit problemlos ableiten lassen, sind DNS-Records (A, AAAA, MX usw.) derzeit kein Kernbestandteil. Es bietet sich an, eine benutzerdefinierte Listen-Kategorie anzulegen, die die entsprechenden Records enthält. Diese Kategorie lässt sich jedem Objekt zuordnen, für das Records hinterlegt werden soll. Reverse DNS wird in Objekten vom Typ **Layer-3-Netz** dokumentiert.
@@ -111,7 +111,7 @@ Die Dokumentation von WLANs unterscheidet sich nicht fundamental von den bereits
 
 ## WAN
 
-Um Außenverbindungen zu dokumentieren, eignet sich der Objekttyp **WAN-Leitungen**. Unter WAN versteht man Wide Area Network. Ähnliche Formen wie Metropol Area Network (MAN) oder Global Area Network (GAN) sollen von WAN mit abgedeckt sein.
+Um Außenverbindungen zu dokumentieren, eignet sich der Objekttyp **WAN-Leitungen**. Unter WAN versteht man Wide Area Network. Ähnliche Formen wie Metropolitan Area Network (MAN) oder Global Area Network (GAN) sollen von WAN mit abgedeckt sein.
 
 Angaben zu Up- und Downstream, zugewiesene LANs und VLANs u.v.m. können in der Kategorie **WAN-Leitungen** hinterlegt werden.
 
@@ -147,5 +147,5 @@ Analog zur Verkabelung lassen sich auch die oberen Schichten des TCP/IP-Referenz
 
 ## Weiterführende Links
 
-*   [doIT BETTER: IP Address Management (IPAM)](https://www.i-doit.com/ip-adressmanagement-mit-i-doit/), Blog-Artikel auf [i-doit.com](http://i-doit.com) mit Video
+*   [doIT BETTER: IP Address Management (IPAM)](https://www.i-doit.com/blog/ip-adress-management-mit-i-doit-pro/), Blog-Artikel auf [i-doit.com](http://i-doit.com) mit Video
 *   [Deutschsprachige Demo](http://ipamdemo.i-doit.com/) zum obigen "doIT BETTER"-Thema (Credentials: admin/admin)

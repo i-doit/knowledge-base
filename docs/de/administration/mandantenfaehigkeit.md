@@ -3,7 +3,7 @@
 i-doit ist mandantenfähig. Das bedeutet, dass über eine Installation ein oder mehrere eigenständige [IT-Dokumentationen](../glossar.md) abgebildet werden können. Die Anwendungsfälle sind vielfältig: von Sub-Organisationen, die getrennt voneinander dokumentieren sollen, über Systemhäuser, die Kunden-IT in dedizierten Instanzen dokumentieren, bis hin zu Hosting-Providern, die i-doit als Dienstleistung bereitstellen.
 
 !!! info "Lizenzierung"
-    Für die Fähigkeit, mehrere Mandanten mit einer Installation zu betreiben, ist eine spezielle Lizenz notwendig. Nähere Informationen sind [auf Anfrage](https://www.i-doit.com/ueber-uns/kontakt/) erhältlich.
+    Für die Fähigkeit, mehrere Mandanten mit einer Installation zu betreiben, ist eine spezielle Lizenz notwendig. Nähere Informationen sind [auf Anfrage](https://www.i-doit.com/kontakt/) erhältlich.
 
 ## Hintergrund
 

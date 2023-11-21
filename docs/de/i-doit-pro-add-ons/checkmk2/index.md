@@ -16,8 +16,6 @@
     Mit der [Checkmk Version 2.1.0b1](https://checkmk.com/werk/12389) wurde die Struktur der Inventory Daten verändert. Es ist aktuell mit der CheckMK 2 Add-on Version <=1.8 nicht möglich Inventory in i-doit zu übertragen.<br>
     Mit Version 1.8.1 muss die [Konfiguration](./checkmk2-konfiguration.md) angepasst werden.
 
-Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/monitoring-mit-check_mk-und-i-doit/)
-
 Austausch von Informationen zwischen i-doit und checkmk
 
 ## Über

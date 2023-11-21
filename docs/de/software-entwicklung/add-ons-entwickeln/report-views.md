@@ -10,9 +10,9 @@ Für eine Report View müssen drei Dinge gegeben sein:
 
 *   Eine "Report View" PHP Klasse mit der nötigen Logik
 *   Ein Template zum darstellen des Reports in der Web GUI
-*   Die registrierung der View
+*   Die Registrierung der View
 
-Dieser Artikel basiert auf dem existierenden Beispiel Add-on "[Report view example](https://bitbucket.org/synetics/addon-example-reportview/commits/)" - dieses ist für alle [Entwicklungspartner](https://www.i-doit.com/partner/developer/) frei zugänglich und bietet eine funktionsfähige Report View die zu Lernzwecken verwendet werden kann.
+Dieser Artikel basiert auf dem existierenden Beispiel Add-on "[Report view example](https://bitbucket.org/synetics/addon-example-reportview/commits/)" - dieses ist für alle [Entwicklungspartner](https://www.i-doit.com/partner/partner-werden/) frei zugänglich und bietet eine funktionsfähige Report View die zu Lernzwecken verwendet werden kann.
 
 Report PHP Klasse
 =================
@@ -28,7 +28,7 @@ Die PHP Klasse muss von isys_report_view erben und die nötigen Interface Klasse
 *   viewtype
     Diese Methode liefert den Typen der Report View zurück. Hierbei handelt es sich um einen einfach String.
 *   init
-    Hierbei handelt es sich um eine optionale Methode, die vor jeglicher verarbeitung aufgerufen wird.
+    Hierbei handelt es sich um eine optionale Methode, die vor jeglicher Verarbeitung aufgerufen wird.
 *   start
     Diese Methode wird von i-doit verwendet wenn die Report View aufgerufen wird. Hier muss die initiale Datenaufbereitung für das Frontend passieren, damit das Template darauf zugreifen kann.
     Dieser Prozess sollte möglichst schlank gehalten werden - jegliche "aufwändige" Report Logik sollte mittels Ajax Anfrage geschehen.
