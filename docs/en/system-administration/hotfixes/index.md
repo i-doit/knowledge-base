@@ -26,15 +26,28 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
-### Operators for some fields can not be selected - TypeError: equation.map is not a function
+### The encoding of umlauts are displayed in report titles
 
-### Creating a Report with General - Last change by as condition displays error message
+[i-doit_27_hotfix_ID-9971_d89f00f.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9971_d89f00f.zip){ .md-button .md-button--primary }
 
-Use if you get a error like:
+### Report objects adds `&nbsp;&nbsp;` after each column <br>Exported report displays \_\_id\_\_ column
 
-```text
-TypeError: equation.map is not a function
-```
+[i-doit_27_hotfix_ID-10016_ID-10021_e950b61.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-10016_ID-10021_e950b61.zip){ .md-button .md-button--primary }
+
+### Placeholder is not correctly replaced
+
+[i-doit_27_hotfix_ID-9994.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9994.zip){ .md-button .md-button--primary }
+
+### Status filter for multivalue categories in report manager is not working correctly for custom categories
+
+[i-doit_27_hotfix_ID-9846.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9846.zip){ .md-button .md-button--primary }
+
+### Operators for some fields can not be selected - TypeError: equation.map is not a function <br> Creating a Report with General - Last change by as condition displays error message
+
+??? note "Use if you get a error like"
+    ```log
+    TypeError: equation.map is not a function
+    ```
 
 [i-doit_27_hotfix_ID-9991-ID-9993_7a942de.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9991-ID-9993_7a942de.zip){ .md-button .md-button--primary }
 
@@ -56,24 +69,11 @@ If opening the administration area of i-doit and navigating to "[Tenant-name] ma
 
 [i-doit_27_hotfix_ID-9919_63ba178.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9919_63ba178.zip){ .md-button .md-button--primary }
 
-## API Add-on 1.14.1
+## API Add-on 1.15
 
-### Operating system > Version cannot be referenced via title, if a second operating system has the same version title
+### cmdb.reports.read attaches "&nbsp;&nbsp" to each value
 
-This effects you when you get this API error message:
-`i-doit system error: The specified version could not be assigned to this application"`
-
-[api_1.14.1_hotfix_API-400_b1aec14.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.14.1_hotfix_API-400_b1aec14.zip){ .md-button .md-button--primary }
-
-### Using API after update to i-doit pro 25 displays license error message
-
-Use this when you receive an error message like:
-
-```text
-i-doit responded with an error: i-doit system error: Achtung: das "Checkmk 2" Modul ist aktuell nicht lizenziert
-```
-
-[api_1.14.1_hotfix_API-429_fa3e703.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.14.1_hotfix_API-429_fa3e703.zip){ .md-button .md-button--primary }
+[api_1.15_hotfix_API-458_7e2ae2e.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.15_hotfix_API-458_7e2ae2e.zip){ .md-button .md-button--primary }
 
 ## Analyze Add-on 1.3
 
