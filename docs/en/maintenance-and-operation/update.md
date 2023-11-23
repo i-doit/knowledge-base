@@ -1,10 +1,11 @@
-# Update
+# Update i-doit
 
 When working with i-doit, you should always use the newest version. Minor releases always contain numerous bug fixes, while major releases add new features and improve already existing functionalities. Minor updates are released approximately every four weeks and major updates every six months. The update can be [performed via the web interface of i-doit](./update.md), as long as an internet connection is available (and where applicable, via HTTP-proxy). Alternatively the update can be [prepared via console](./update.md) and then be continued in the web interface.
 
 === "Skip releases version >=20"
     !!! attention "Skip releases >= version 20"
         If you want to jump directly to a newer version e.g. 26, you can download the latest update package from the [customer portal](../system-administration/customer-portal.md) and unpack it in the i-doit pro folder on the i-doit host. You can find the necessary steps [here](update.md#update-prepared-via-the-console).
+        From version **25** with [Hotfix](../system-administration/hotfixes/hotfix-archive/index.md), version 27 is also offered for download during the update check.
 
 === "Skip releases version <= 1.19"
     !!! attention "Skip releases version <= 1.19"
@@ -14,9 +15,9 @@ When working with i-doit, you should always use the newest version. Minor releas
     Before updating it is essential to create a [backup](./backup-and-recovery/index.md).
 
 !!! attention "Writing permissions"
-    If an error message appears while downloading and extracting, it is often the case that the Apache Webserver has no writing permissions for the path in which i-doit is installed. You will find more detailed information further below in this article.
+    If an error message appears while downloading and extracting, it is often the case that the Apache Webserver has no writing permissions for the path in which i-doit is installed. See [here](#update-prepared-via-the-console)
 
-## Update via the Web Interface
+## Update via the web interface
 
 The update can be accessed either through **Administration → [Tenant-Name] management** by clicking on the **i-doit update** button near the headline or via the quicklaunch widget in the dashboard or through the URL <http://i-doit-host/i-doit/?load=update>.
 
@@ -80,12 +81,9 @@ Now the update is completed. More detailed information about the update can be f
 
 [![Completion](../assets/images/en/maintenance-and-operation/update/11-update.png)](../assets/images/en/maintenance-and-operation/update/11-update.png)
 
-## Update Prepared via the Console
+## Update prepared via the console
 
 The update can be prepared, but not executed via the console. For the preparation, the latest update package has to be downloaded from the i-doit [customer portal](../system-administration/customer-portal.md).
-
-!!! attention "Skip releases"
-    It is important to note that minor releases can be skipped, however, major releases can not.
 
 The update package can be stored on the server (for example, via [WinSCP](https://winscp.net/eng/index.php)). Move the package to the main folder of i-doit afterwards, if you didn't already put it there. This can be carried out by using the following command:
 
@@ -107,6 +105,7 @@ Now the file permissions are being adjusted in order to give the Webserver both 
     If another operating system is used, the used user:group combination must be adapted.
 
 ```shell
+cd /var/www/html/i-doit/
 sudo chown www-data:www-data -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
