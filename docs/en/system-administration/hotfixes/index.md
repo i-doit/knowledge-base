@@ -36,7 +36,7 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ### Placeholder is not correctly replaced
 
-[i-doit_27_hotfix_ID-9994.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9994.zip){ .md-button .md-button--primary }
+[i-doit_27_hotfix_ID-9994_f035b7c.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9994_f035b7c.zip){ .md-button .md-button--primary }
 
 ### Status filter for multivalue categories in report manager is not working correctly for custom categories
 
