@@ -106,9 +106,8 @@ Bearbeiten Sie die `httpd.conf`-Datei, die sich unter `/i-doit/apache-2.4/conf/`
 - Fügen Sie `Listen 443` hinzu und kommentieren Sie `Listen 80` aus. Dadurch wird i-doit nicht mehr über http erreichbar sein.
 - Fügen Sie außerdem folgende Zeilen ein: `LoadModule ssl_module modules/mod_ssl.so` und `Include conf/extra/ssl.conf`
 
-Die Datei sollten dann so aussehen, wenn vorher nichts geändert wurde:
+Die Datei sollte dann so aussehen, wenn vorher nichts geändert wurde:
 
-???
 ```apacheconf
 Define SRVROOT "C:/i-doit/apache-2.4"
 
