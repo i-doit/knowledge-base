@@ -25,18 +25,13 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
     By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
 
 ## i-doit core
-<!--
-### The encoding of umlauts are displayed in report titles
 
-[i-doit_27_hotfix_ID-9971_d89f00f.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9971_d89f00f.zip){ .md-button .md-button--primary }
--->
-### Report objects adds `&nbsp;&nbsp;` after each column <br>Exported report displays \_\_id\_\_ column
+### Hotfix Package
 
-[i-doit_27_hotfix_ID-10016_ID-10021_e950b61.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-10016_ID-10021_e950b61.zip){ .md-button .md-button--primary }
+??? note "This Package includes the following Hotfixes"
+    **Placeholder is not correctly replaced <br> The encoding of umlauts are displayed in report titles <br> Report objects adds `&nbsp;&nbsp;` after each column <br> Exported report displays \_\_id\_\_ column <br> HTML is displayed in Report <br> Condition block location below any location outputs no results**
 
-### Placeholder is not correctly replaced
-
-[i-doit_27_hotfix_ID-9994_f035b7c.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9994_f035b7c.zip){ .md-button .md-button--primary }
+[i-doit_27_hotfix_ID-9994_ID-9971_ID-10021_ID-10016_ID-10024_ID-10035.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9994_ID-9971_ID-10021_ID-10016_ID-10024_ID-10035.zip){ .md-button .md-button--primary }
 
 ### Status filter for multivalue categories in report manager is not working correctly for custom categories
 
