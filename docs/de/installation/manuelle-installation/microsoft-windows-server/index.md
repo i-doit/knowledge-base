@@ -5,15 +5,15 @@ Das i-doit Installationspaket für Windows wird im [Kundenportal](../../../admin
 
 Die Inhalte des Pakets sehen wie folgt aus:
 
-- i-doit Windows Installer.exe
-- idoit-XX.zip
-- src.zip
-- windowsdesktop-runtime-6.0.14-win-x64.exe
+-   i-doit Windows Installer.exe
+-   idoit-XX.zip
+-   src.zip
+-   windowsdesktop-runtime-6.0.14-win-x64.exe
 
 Im Installationspaket wird immer die aktuelle [i-doit Version](../../../versionshistorie/index.md) mitgeliefert. Ebenfalls wird durch den `src.zip` Ordner eine Installation ohne Internetverbindung ermöglicht.<br>
-Da der i-doit Windows installer die `windowsdesktop-runtime-6.0.14` benötigt, wird diese ebenfalls zur Verfügung gestellt falls wärend der installation keine Internetverbindung vorhanden ist.
+Da der i-doit Windows installer die `windowsdesktop-runtime-6.0.14` benötigt, wird diese ebenfalls zur Verfügung gestellt falls während der installation keine Internetverbindung vorhanden ist.
 
-### Installation
+## Installation
 
 Nach dem Ausführen der `i-doit Windows Installer.exe` bekommt man folgende GUI angezeigt:
 
@@ -23,10 +23,10 @@ Nach einem Klick auf **Installieren** werden im Hintergrund alle benötigten Ele
 
 Es werden installiert:
 
-* **Apache 2.4**
-* **PHP 8.0**
-* **MariaDB 10.5**
-* **i-doit-23**
+-   **Apache 2.4**
+-   **PHP 8.0**
+-   **MariaDB 10.5**
+-   **i-doit**
 
 !!! info "Ist die Windows Firewall aktiviert wird abgefragt ob die Applikation freigegeben werden darf"
 
@@ -35,37 +35,43 @@ Nach einem Klick auf **OK** wird automatisch ein neues Browsertab mit der `local
 
 !!! info "Sollte bei der Installation ein Fehler unterlaufen sein, wird automatisch ein log im i-doit Ordner erstellt"
 
-### Konfiguration
+## Konfiguration
 
-Um PHP, MariaDB oder Apache zu konfigurieren, findet man die jeweiligen Files in folgenden Verzeichnissen:
+Der Speicherort der PHP, MariaDB oder Apache Konfiguration:
 
-* **PHP:**
+-   **PHP:**
     `C:\i-doit\php\php.ini`
 
-* **MariaDB:**
+-   **MariaDB:**
     `C:\ProgramData\MariaDB\data\my.ini`
 
-* **Apache:**
+-   **Apache:**
     `C:\i-doit\apache-2.4\conf\httpd.conf`
 
-### HTTPS einrichten
+## HTTPS einrichten (optional)
 
-Die folgende Anleitung zeigt, wie Sie SSL für Windows mit i-doit einrichten.
+Die folgende Anleitung zeigt, wie Sie SSL für Windows mit i-doit einrichten.<br>
+Es werden nur die notwendigen Schritte beschrieben, die benötigt werden um HTTPS zu konfigurieren.<br>
+Dieser Abschnitt kann übersprungen werden.
 
-#### Voraussetzungen
+### Voraussetzungen
 
-Vorab benötigen Sie ein gültiges Zertifikat im .crt und .key Format. Dieses können Sie mit OpenSSL erstellen.
-OpenSSL können Sie hier herunterladen: [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)<br>
+Vorab benötigen Sie ein gültiges Zertifikat im `.crt` und `.key` Format. Dieses können Sie mit OpenSSL erstellen.<br>
+OpenSSL können Sie z.B. hier herunterladen und installieren: [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)<br>
 Sobald OpenSSL installiert ist, können Sie Win64 OpenSSL Command Prompt über die Windows-Suchleiste öffnen, indem Sie nach "OpenSSL" suchen.
-Hier geben Sie nun folgenden Befehl ein, um das Zertifikat zu erstellen:<br>
-`OpenSSL req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt`<br>
-Das Zertifikat und der Private Key wurden nun in dem Ordner erstellt, in dem der Befehl ausgeführt wurde. Kopieren Sie diese am besten in den i-doit Ordner.
+Hier geben Sie nun folgenden Befehl ein, um das Zertifikat zu erstellen:
 
-#### Konfigurationsschritte
+```winbatch
+OpenSSL req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt
+```
+
+Das Zertifikat und der Private Key wurden nun in dem Ordner erstellt, in dem der Befehl ausgeführt wurde. Kopieren Sie diese z.B. in den Ordner `i-doit\apache-2.4\conf\extra\`.
+
+### Konfigurationsschritte
 
 1. **Erstellen der ssl.conf-Datei**<br>
 
-Navigieren Sie zu Ihrem i-doit-Ordner unter `/i-doit/apache-2.4/conf/extra/` und erstellen Sie die Datei `ssl.conf`. Die Datei sollte folgenden Inhalt haben:
+Navigieren Sie zu Ihrem i-doit-Ordner unter `i-doit\apache-2.4\conf\extra\` und erstellen Sie die Datei `ssl.conf`. Die Datei sollte folgenden Inhalt haben:
 
 ```apacheconf
 <VirtualHost *:443>
@@ -101,10 +107,10 @@ Navigieren Sie zu Ihrem i-doit-Ordner unter `/i-doit/apache-2.4/conf/extra/` und
 
 2. **Anpassungen in der httpd.conf**<br>
 
-Bearbeiten Sie die `httpd.conf`-Datei, die sich unter `/i-doit/apache-2.4/conf/` befindet:
+Bearbeiten Sie die `httpd.conf`-Datei, die sich unter `i-doit\apache-2.4\conf\` befindet:
 
-- Fügen Sie `Listen 443` hinzu und kommentieren Sie `Listen 80` aus. Dadurch wird i-doit nicht mehr über http erreichbar sein.
-- Fügen Sie außerdem folgende Zeilen ein: `LoadModule ssl_module modules/mod_ssl.so` und `Include conf/extra/ssl.conf`
+-   Fügen Sie `Listen 443` hinzu und kommentieren Sie `Listen 80` aus. Dadurch wird i-doit nicht mehr über http erreichbar sein.
+-   Fügen Sie außerdem folgende Zeilen ein: `LoadModule ssl_module modules/mod_ssl.so` und `Include conf/extra/ssl.conf`
 
 Die Datei sollte dann so aussehen, wenn vorher nichts geändert wurde:
 
@@ -222,30 +228,33 @@ LogLevel warn
 
 3. **Apache-Webserver neustarten**:
 
-   - Drücken Sie <kbd>&#x229E;</kbd>+<kbd>R</kbd> , geben Sie `cmd` ein und drücken Sie Enter.
-   - Oder geben Sie `cmd` in der Windows-Suchleiste ein und öffnen Sie die Eingabeaufforderung
+\- Drücken Sie ++windows+r++ , geben Sie `cmd` ein und drücken Sie Enter.<br>
+\- Oder geben Sie `cmd` in der Windows-Suchleiste ein, um die Eingabeaufforderung zu öffnen
 
-Navigieren Sie zum Apache-Bin-Verzeichnis, z.B. `C:/i-doit/apache-2.4/bin`, und geben Sie den folgenden Befehl ein, um den Apache-Webserver neu zu starten:
+Geben Sie den folgenden Befehl ein, um den Apache-Webserver neu zu starten:
 
-```bash
-cd C:/i-doit/apache-2.4/bin
-httpd.exe -k restart
+```winbatch
+C:\i-doit\apache-2.4\bin\httpd.exe -k restart
 ```
 
-Der Apache-Webserver wurde nun neu gestartet.
+Der Apache-Webserver wurde nun neu gestartet. Prüfen Sie die installation und ob i-doit über HTTPS erreichbar ist.
 
-Das war's! Ihre i-doit-Installation ist jetzt für SSL auf Windows konfiguriert.
+Das wars! Ihre i-doit-Installation ist jetzt für SSL auf Windows konfiguriert.
 
 ### Deinstallation
 
 Um i-doit wieder zu deinstallieren muss zuerst der Apache2 service gestoppt werden.<br>
 Dafür geben wir in der Eingabeaufforderung folgenden Befehl ein:
 
-    C:\i-doit\apache-2.4\bin\httpd.exe -k stop
+```winbatch
+C:\i-doit\apache-2.4\bin\httpd.exe -k stop
+```
 
 Ist der Apache2 Service gestoppt, kann Apache2 deinstalliert werden:
 
-    C:\i-doit\apache-2.4\bin\httpd.exe -k uninstall
+```winbatch
+C:\i-doit\apache-2.4\bin\httpd.exe -k uninstall
+```
 
 Anschließend wird MariaDB deinstalliert indem wir unter **Programme hinzufügen oder entfernen** MariaDB entfernen.
 
@@ -253,11 +262,15 @@ Anschließend wird MariaDB deinstalliert indem wir unter **Programme hinzufügen
 
 Alternativ kann MariaDB auch über die Eingabeaufforderung deinstalliert werden:
 
-    msiexec.exe C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL
+```winbatch
+msiexec.exe C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL
+```
 
 MariaDB deinstallieren ohne Daten zu löschen:
 
-    msiexec.exe C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL CLEANUPDATA=""
+```winbatch
+msiexec.exe C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL CLEANUPDATA=""
+```
 
 Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP `PATH` muss aus den Umgebungsvariabeln entfernt werden:
 
