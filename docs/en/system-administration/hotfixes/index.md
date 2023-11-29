@@ -26,29 +26,38 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
-### Hotfix Package
+### Hotfix release
 
-??? note "This Package includes the following Hotfixes"
-    **Placeholder is not correctly replaced <br> The encoding of umlauts are displayed in report titles <br> Report objects adds `&nbsp;&nbsp;` after each column <br> Exported report displays \_\_id\_\_ column <br> HTML is displayed in Report <br> Condition block location below any location outputs no results**
+If you downloaded i-doit 27 before the 28th of November, you should use the linked package to fix the problems listed below.<br>
 
-[i-doit_27_hotfix_ID-9994_ID-9971_ID-10021_ID-10016_ID-10024_ID-10035.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9994_ID-9971_ID-10021_ID-10016_ID-10024_ID-10035.zip){ .md-button .md-button--primary }
+=== "**Use the updater to download the package**"
+    -   Set file and folder rights, if needed<br>
+    -   Open the i-doit web update<br>
+    -   At **2. Available Updates** you copy and paste the **[LINK](https://login.i-doit.com/downloads/idoit-27-update.zip)** in to the corresponding URL field and click **Download and extract**<br>
+    -   Now do the update
 
-### Status filter for multivalue categories in report manager is not working correctly for custom categories
+=== "**Download and extract the package**"
+    -   Download the new package from the [customer portal](../../system-administration/customer-portal.md)<br>
+    -   Extract the package into the i-doit Folder, see [here](../../maintenance-and-operation/update.md#update-prepared-via-the-console)<br>
+    -   Set file and folder rights<br>
+    -   Use the i-doit web updater to update with the new package
 
-[i-doit_27_hotfix_ID-9846.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9846.zip){ .md-button .md-button--primary }
+=== "**This update Package includes the following Hotfixes**"
+    **Adding a condition block for location > below > X location outputs no results**<br>
+    **HTML is displayed in Report**<br>
+    **Exported report displays \_\_id\_\_ column**<br>
+    **Report objects adds `&nbsp;&nbsp;` after each column**<br>
+    **Placeholder is not correctly replaced**<br>
+    **Operators for some fields can not be selected - TypeError: equation.map is not a function**<br>
+    **The encoding of umlauts are displayed in report titles**<br>
+    **Status filter for multivalue categories in report manager is not working correctly for custom categories**
 
-### Operators for some fields can not be selected - TypeError: equation.map is not a function <br> Creating a Report with General - Last change by as condition displays error message
+<!---
+### Changing technical keys to only contain words causes entries to lose the values when filled with API (Number only)
 
-??? note "Use if you get a error like"
-    ```log
-    TypeError: equation.map is not a function
-    ```
-
-[i-doit_27_hotfix_ID-9991-ID-9993_7a942de.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9991-ID-9993_7a942de.zip){ .md-button .md-button--primary }
-
+[xxx.zip :material-file-download:](../../assets/downloads/hotfixes/27/xxx.zip){ .md-button .md-button--primary }
+--->
 ### Description fields yield validation errors on 32bit systems
-
-Use if you get a validation error, stating that the field content is invalid on 32bit system.
 
 [i-doit_27_hotfix_ID-9928_7dca69d.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9928_7dca69d.zip){ .md-button .md-button--primary }
 
@@ -64,6 +73,14 @@ If opening the administration area of i-doit and navigating to "[Tenant-name] ma
 
 [i-doit_27_hotfix_ID-9919_63ba178.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9919_63ba178.zip){ .md-button .md-button--primary }
 
+### Document does not exist error message when opening a document
+
+[i-doit_27_hotfix_ID-10086.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-10086.zip){ .md-button .md-button--primary }
+<!--
+### Report viewing DBMS version always shows the first entry
+
+[xxx.zip :material-file-download:](../../assets/downloads/hotfixes/27/xxx.zip){ .md-button .md-button--primary }
+--->
 ## API Add-on 1.15
 
 ### cmdb.reports.read attaches "&nbsp;&nbsp" to each value
