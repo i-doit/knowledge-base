@@ -26,31 +26,35 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
-### Hotfix release
+## i-doit core
 
-If you downloaded i-doit 27 before the 28th of November, you should use the linked package to fix the problems listed below.<br>
+!!! bug "Hotfix release"
+    If you downloaded i-doit 27 prior to November 28th, we've identified some issues that require attention.<br>
+    We have prepared a linked package that contains necessary fixes.
 
-=== "**Use the updater to download the package**"
-    -   Set file and folder rights, if needed<br>
-    -   Open the i-doit web update<br>
-    -   At **2. Available Updates** you copy and paste the **[LINK](https://login.i-doit.com/downloads/idoit-27-update.zip)** in to the corresponding URL field and click **Download and extract**<br>
-    -   Now do the update
+    Please refer to one of the guides below for assistance
 
-=== "**Download and extract the package**"
-    -   Download the new package from the [customer portal](../../system-administration/customer-portal.md)<br>
-    -   Extract the package into the i-doit Folder, see [here](../../maintenance-and-operation/update.md#update-prepared-via-the-console)<br>
-    -   Set file and folder rights<br>
-    -   Use the i-doit web updater to update with the new package
+    !!! example "**Use the updater to download the package**"
+        -   Set file and folder rights, either via `idoit-rights.sh` or [manual](../../installation/manual-installation/setup.md)
+        -   Open the i-doit web update
+        -   At **2. Available Updates** you copy and paste the **[LINK](https://login.i-doit.com/downloads/idoit-27-update.zip)** in to the corresponding URL field and click **Download and extract**
+        -   Now do the update
 
-=== "**This update Package includes the following Hotfixes**"
-    **Adding a condition block for location > below > X location outputs no results**<br>
-    **HTML is displayed in Report**<br>
-    **Exported report displays \_\_id\_\_ column**<br>
-    **Report objects adds `&nbsp;&nbsp;` after each column**<br>
-    **Placeholder is not correctly replaced**<br>
-    **Operators for some fields can not be selected - TypeError: equation.map is not a function**<br>
-    **The encoding of umlauts are displayed in report titles**<br>
-    **Status filter for multivalue categories in report manager is not working correctly for custom categories**
+    !!! example "**or download and extract the package**"
+        -   Download the new package from the [customer portal](../../system-administration/customer-portal.md)
+        -   Extract the package into the i-doit Folder, see [here](../../maintenance-and-operation/update.md#update-prepared-via-the-console)
+        -   Set file and folder rights, either via `idoit-rights.sh` or [manual](../../installation/manual-installation/setup.md)
+        -   Use the i-doit web updater to update with the new package
+
+    !!! note "**This update Package includes the following Hotfixes**"
+        **Adding a condition block for location > below > X location outputs no results**<br>
+        **HTML is displayed in Report**<br>
+        **Exported report displays \_\_id\_\_ column**<br>
+        **Report objects adds `&nbsp;&nbsp;` after each column**<br>
+        **Placeholder is not correctly replaced**<br>
+        **Operators for some fields can not be selected - TypeError: equation.map is not a function**<br>
+        **The encoding of umlauts are displayed in report titles**<br>
+        **Status filter for multivalue categories in report manager is not working correctly for custom categories**
 
 <!---
 ### Changing technical keys to only contain words causes entries to lose the values when filled with API (Number only)

@@ -26,31 +26,33 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
-### Hotfix release
+!!! bug "Hotfix release"
+    If you downloaded i-doit 27 prior to November 28th, we've identified some issues that require attention.<br>
+    We have prepared a linked package that contains necessary fixes.
 
-If you downloaded i-doit 27 before the 28th of November, you should use the linked package to fix the problems listed below.<br>
+    Please refer to one of the guides below for assistance
 
-=== "**Use the updater to download the package**"
-    -   Set file and folder rights
-    -   Open the i-doit web update<br>
-    -   At **2. Available Updates** you copy and paste the **[LINK](https://login.i-doit.com/downloads/idoit-27-update.zip)** in to the corresponding URL field and click **Download and extract**<br>
-    -   Now do the update
+    !!! example "**Use the updater to download the package**"
+        -   Set file and folder rights, either via `idoit-rights.sh` or [manual](../../installation/manuelle-installation/setup.md)
+        -   Open the i-doit web update
+        -   At **2. Available Updates** you copy and paste the **[LINK](https://login.i-doit.com/downloads/idoit-27-update.zip)** in to the corresponding URL field and click **Download and extract**
+        -   Now do the update
 
-=== "**Download and extract the package**"
-    -   Download the new package from the [customer portal](../../administration/kundenportal.md)<br>
-    -   Extract the package into the i-doit Folder, see [here](../../wartung-und-betrieb/update-einspielen.md#update-über-die-konsole-vorbereiten)<br>
-    -   Set file and folder rights<br>
-    -   Use the i-doit web updater to update with the new package
+    !!! example "**or download and extract the package**"
+        -   Download the new package from the [customer portal](../../administration/kundenportal.md)
+        -   Extract the package into the i-doit Folder, see [here](../../wartung-und-betrieb/update-einspielen.md#update-über-die-konsole-vorbereiten)
+        -   Set file and folder rights, either via `idoit-rights.sh` or [manual](../../installation/manuelle-installation/setup.md)
+        -   Use the i-doit web updater to update with the new package
 
-=== "**This update Package includes the following Hotfixes**"
-    **Adding a condition block for location > below > X location outputs no results**<br>
-    **HTML is displayed in Report**<br>
-    **Exported report displays \_\_id\_\_ column**<br>
-    **Report objects adds `&nbsp;&nbsp;` after each column**<br>
-    **Placeholder is not correctly replaced**<br>
-    **Operators for some fields can not be selected - TypeError: equation.map is not a function**<br>
-    **The encoding of umlauts are displayed in report titles**<br>
-    **Status filter for multivalue categories in report manager is not working correctly for custom categories**
+    !!! note "**This update Package includes the following Hotfixes**"
+        **Adding a condition block for location > below > X location outputs no results**<br>
+        **HTML is displayed in Report**<br>
+        **Exported report displays \_\_id\_\_ column**<br>
+        **Report objects adds `&nbsp;&nbsp;` after each column**<br>
+        **Placeholder is not correctly replaced**<br>
+        **Operators for some fields can not be selected - TypeError: equation.map is not a function**<br>
+        **The encoding of umlauts are displayed in report titles**<br>
+        **Status filter for multivalue categories in report manager is not working correctly for custom categories**
 
 <!---
 ### Changing technical keys to only contain words causes entries to lose the values when filled with API (Number only)
