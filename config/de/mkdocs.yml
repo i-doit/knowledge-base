@@ -587,8 +587,6 @@ nav:
       - VIVA2: i-doit-pro-add-ons/viva2.md
       - Workflow: i-doit-pro-add-ons/workflow.md
       - Rights Documentation: i-doit-pro-add-ons/rights-documentation.md
-  - i-doit pro managed:
-      - idoit-managed/index.md
   - Software Entwicklung:
       - software-entwicklung/index.md
       - Datenbank-Modell:
