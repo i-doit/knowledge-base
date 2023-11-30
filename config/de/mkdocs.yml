@@ -84,6 +84,8 @@ markdown_extensions:
   - pymdownx.snippets:
       check_paths: true
   - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 extra:
   manifest: overrides/manifest.webmanifest

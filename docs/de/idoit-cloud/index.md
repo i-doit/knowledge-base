@@ -1,8 +1,7 @@
 ---
 title: i-doit pro cloud
 description: i-doit pro cloud
-icon: material/cloud
-status: new
+#icon: material/cloud
 lang: de
 ---
 
@@ -10,15 +9,23 @@ lang: de
 
 Unsere Services im Überblick:
 
-1. **Datensicherheit an erster Stelle**:<br> Ihre Daten sind Ihr Kapital. Deshalb setzen wir modernste Sicherheitsmaßnahmen ein, um Ihre sensiblen Informationen zu schützen. Wir verwenden Verschlüsselungstechnologien und Sicherheitsprotokolle, um sicherzustellen, dass Ihre Daten vor unbefugtem Zugriff sicher sind.
-2. **Wartung und Aktualisierungen**:<br> Die digitale Landschaft entwickelt sich ständig weiter. Unsere Experten sorgen dafür, dass Ihre SaaS-Lösung stets auf dem neuesten Stand ist. Wir führen regelmäßige Wartungsarbeiten und Aktualisierungen durch, um eine optimale Leistung und Kompatibilität sicherzustellen.
-3. **Backup-Lösungen**:<br> Wir wissen, wie wertvoll Ihre Daten sind. Unsere professionellen Backup-Lösungen sichern Ihre Daten in regelmäßigen Intervallen, um im Falle eines unvorhergesehenen Ereignisses eine schnelle Wiederherstellung zu gewährleisten. Ihre Geschäftsdaten sind sicher und geschützt.
-4. **Erreichbarkeitsgarantie**:<br> Wir verstehen, wie wichtig es ist, dass Ihre SaaS-Anwendung stets verfügbar ist. Mit unserer Erreichbarkeitsgarantie können Sie sich darauf verlassen, dass Ihre Anwendung zuverlässig und stabil läuft. Unser engagiertes Support-Team steht Ihnen zur Verfügung, um eventuelle Störungen schnell zu beheben.
-5. **Performance-Optimierung**:<br> Wir analysieren kontinuierlich die Leistung Ihrer SaaS-Anwendung und bieten gezielte Empfehlungen zur Optimierung. Durch Überwachung, Diagnose und Feinabstimmung sorgen wir dafür, dass Ihre Anwendung schnell und reaktionsschnell bleibt.
-6. **Skalierbarkeit und Anpassung**:<br> Mit zunehmendem Erfolg Ihres Unternehmens benötigen Sie möglicherweise eine skalierbare Lösung. Unser Support hilft Ihnen bei der reibungslosen Skalierung Ihrer SaaS-Plattform, um mit steigenden Anforderungen Schritt zu halten. Wir passen die Lösung an Ihre sich verändernden Geschäftsbedürfnisse an.
-7. **Fehlerbehebung und Diagnose**:<br> Wenn Probleme auftreten, stehen unsere Fachleute bereit, um schnell und effizient Fehler zu beheben. Wir bieten eine gründliche Diagnose von Problemen und arbeiten daran, Lösungen zu finden, um Ausfallzeiten zu minimieren.
-8. **Kommunikation und Transparenz**:<br> Wir halten Sie stets auf dem Laufenden. Sie erhalten regelmäßige Updates über den Status Ihrer SaaS-Lösung, geplante Wartungsarbeiten und eventuelle Herausforderungen. Unsere offene Kommunikation gewährleistet, dass Sie stets über den Zustand Ihrer Anwendung informiert sind.
-9. **Feedback und Weiterentwicklung**:<br> Ihr Feedback ist wertvoll. Wir hören Ihnen zu und nutzen Ihr Feedback, um unsere Dienstleistungen kontinuierlich zu verbessern. Durch eine enge Zusammenarbeit möchten wir sicherstellen, dass Ihre Erfahrungen mit unserer SaaS-Unterstützung stets positiv sind.
+-   [x] **Datensicherheit an erster Stelle**:<br> Ihre Daten sind Ihr Kapital. Deshalb setzen wir modernste Sicherheitsmaßnahmen ein, um Ihre sensiblen Informationen zu schützen. Wir verwenden Verschlüsselungstechnologien und Sicherheitsprotokolle, um sicherzustellen, dass Ihre Daten vor unbefugtem Zugriff sicher sind.
+
+-   [x] **Wartung und Aktualisierungen**:<br> Die digitale Landschaft entwickelt sich ständig weiter. Unsere Experten sorgen dafür, dass Ihre SaaS-Lösung stets auf dem neuesten Stand ist. Wir führen regelmäßige Wartungsarbeiten und Aktualisierungen durch, um eine optimale Leistung und Kompatibilität sicherzustellen.
+
+-   [x] **Backup-Lösungen**:<br> Wir wissen, wie wertvoll Ihre Daten sind. Unsere professionellen Backup-Lösungen sichern Ihre Daten in regelmäßigen Intervallen, um im Falle eines unvorhergesehenen Ereignisses eine schnelle Wiederherstellung zu gewährleisten. Ihre Geschäftsdaten sind sicher und geschützt.
+
+-   [x] **Garantierte Erreichbarkeit**:<br> Wir verstehen, wie wichtig es ist, dass Ihre SaaS-Anwendung stets verfügbar ist. Mit unserer garantierten Erreichbarkeit können Sie sich darauf verlassen, dass Ihre Anwendung zuverlässig und stabil läuft. Unser engagiertes Support-Team steht Ihnen zur Verfügung, um eventuelle Störungen schnell zu beheben.
+
+-   [x] **Performance-Optimierung**:<br> Wir analysieren kontinuierlich die Leistung Ihrer SaaS-Anwendung und bieten gezielte Empfehlungen zur Optimierung. Durch Überwachung, Diagnose und Feinabstimmung sorgen wir dafür, dass Ihre Anwendung schnell und reaktionsschnell bleibt.
+
+-   [x] **Skalierbarkeit und Anpassung**:<br> Mit zunehmendem Erfolg Ihres Unternehmens benötigen Sie möglicherweise eine skalierbare Lösung. Unser Support hilft Ihnen bei der reibungslosen Skalierung Ihrer SaaS-Plattform, um mit steigenden Anforderungen Schritt zu halten. Wir passen die Lösung an Ihre sich verändernden Geschäftsbedürfnisse an.
+
+-   [x] **Fehlerbehebung und Diagnose**:<br> Wenn Probleme auftreten, stehen unsere Fachleute bereit, um schnell und effizient Fehler zu beheben. Wir bieten eine gründliche Diagnose von Problemen und arbeiten daran, Lösungen zu finden, um Ausfallzeiten zu minimieren.
+
+-   [x] **Kommunikation und Transparenz**:<br> Wir halten Sie stets auf dem Laufenden. Sie erhalten regelmäßige Updates über den Status Ihrer SaaS-Lösung, geplante Wartungsarbeiten und eventuelle Herausforderungen. Unsere offene Kommunikation gewährleistet, dass Sie stets über den Zustand Ihrer Anwendung informiert sind.
+
+-   [x] **Feedback und Weiterentwicklung**:<br> Ihr Feedback ist wertvoll. Wir hören Ihnen zu und nutzen Ihr Feedback, um unsere Dienstleistungen kontinuierlich zu verbessern. Durch eine enge Zusammenarbeit möchten wir sicherstellen, dass Ihre Erfahrungen mit unserer SaaS-Unterstützung stets positiv sind.
 
 ## Allgemeine Informationen
 
@@ -36,7 +43,7 @@ Unsere Services im Überblick:
 
 ## Support
 
--   Erreichbarkeit über <help@i-doit.com> oder <help.i-doit.com>
+-   Erreichbarkeit über <help@i-doit.com> oder [help.i-doit.com](https://help.i-doit.com)
 -   Service Level Agreement (SLA): 24 Stunden Reaktionszeit (verteilt auf die Service Zeiten)
 -   Service-Zeiten: Mo.-Fr. (ausgenommen deutschlandweite Feiertage) von 10:00 bis 16:00 Uhr
 -   Lizenz einspielen

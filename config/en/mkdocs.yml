@@ -86,6 +86,8 @@ markdown_extensions:
       auto_append:
         - overrides/assets/glossary-en.md
   - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 extra:
   manifest: overrides/manifest.webmanifest
