@@ -12,7 +12,7 @@ The licenses for your company are available at the [customer portal](../system-a
 
 !!! attention "Token compatibility"
 
-    License Token can be used starting with **i-doit version 1.12.2**  
+    License Token can be used starting with **i-doit version 1.12.2**  
     Offline License Key can be used only with **i-doit version 1.15**
 
 !!! info "Pre i-doit 1.12.2 behavior"
@@ -20,9 +20,9 @@ The licenses for your company are available at the [customer portal](../system-a
     Multiple types of licenses are available for i-doit pro:
 
     *   The **subscription** license for each single tenant (including **trial licenses**)  
-        You can load a subscription license via the [Admin center](../system-administration/admin-center.md) 
+        You can load a subscription license via the [Admin center](../system-administration/admin-center.md) 
     *   The **subscription** license for multiple **tenants**  
-        If you wish to use one subscription license for multiple tenants, you can only Activate this via the Admin center.
+        If you wish to use one subscription license for multiple tenants, you can only Activate this via the Admin center.
     *   The **buy** license for single or multiple **tenants**  
         The activation for both types is also carried out via the [Admin center](../system-administration/admin-center.md)
 
@@ -37,12 +37,12 @@ Which method of importing a license should I use?
 
 *   If your server, on which i-doit is installed, **has an internet connection**, use activate [License Token](#activate-license).
 *   If your server, on which i-doit is installed, **does not have an internet connection**, follow the Steps 1 to 5 and go on with the Steps from [Offline License Key](#activate-offline-license-key-offline).  
-      
+
 How to get the License Token and how to get the Offline License Key string?
 ---------------------------------------------------------------------------
 
-*   The **License Token** can be found in the customer portal.
-*   You can retrieve the license key string by clicking the “**Offline License Key**”-button, top right. This will open a popup with the Offline License.
+*   The **License Token** can be found in the customer portal.
+*   You can retrieve the license key string by clicking the **Offline License Key**-button, top right. This will open a popup with the Offline License.
 
 [![customer portal](../assets/images/en/maintenance-and-operation/activate-license/1-al.png)](../assets/images/en/maintenance-and-operation/activate-license/1-al.png)
 
@@ -57,7 +57,7 @@ Activate License Token Online
 
 [![admin center](../assets/images/en/maintenance-and-operation/activate-license/3-al.png)](../assets/images/en/maintenance-and-operation/activate-license/3-al.png)
 
-**Step 3:** Now you are logged into the Admin Center and click on the “Licenses” tab.
+**Step 3:** Now you are logged into the Admin Center and click on the "Licenses" tab.
 
 [![Admin Center](../assets/images/en/maintenance-and-operation/activate-license/4-al.png)](../assets/images/en/maintenance-and-operation/activate-license/4-al.png)
 
@@ -67,7 +67,7 @@ Activate License Token Online
 
 **\*If a license file is still installed here, it must be deleted.**
 
-Afterwards click on the “**Save & Check**”-button. Now the License Token will be checked by the license server.
+Afterwards click on the **Save & Check**-button. Now the License Token will be checked by the license server.
 
 **Step 5:** The License Token has been verified by the license server and all associated licenses are displayed.
 
@@ -75,14 +75,12 @@ Afterwards click on the “**Save & Check**”-button. Now the License Token wil
 
 **_Note_**: The License Token looks as follows: **2e23aa70df492b7e7b8f321929gcfcde**
 
-  
-
 Activate Offline License Key Offline
 ------------------------------------
 
-We perform [Steps 1-5](#activate-licenses-steps-1-5) beforehand. 
+We perform [Steps 1-5](#activate-licenses-steps-1-5) beforehand.
 
-**Step 5:** Insert **License Token**. Click the **“Save”**\-button. Do **not** click "Save and Check".
+**Step 5:** Insert **License Token**. Click the **Save**\-button. Do **not** click "Save and Check".
 
 [![License Token](../assets/images/en/maintenance-and-operation/activate-license/7-al.png)](../assets/images/en/maintenance-and-operation/activate-license/7-al.png)
 
@@ -98,19 +96,18 @@ We perform [Steps 1-5](#activate-licenses-steps-1-5) beforehand. 
 
 [![Note](../assets/images/en/maintenance-and-operation/activate-license/10-al.png)](../assets/images/en/maintenance-and-operation/activate-license/10-al.png)
 
-**Step 8:** Now click on the “**Add licence**”-button.
+**Step 8:** Now click on the **Add licence**-button.
 
 [![Add licence](../assets/images/en/maintenance-and-operation/activate-license/11-al.png)](../assets/images/en/maintenance-and-operation/activate-license/11-al.png)
 
 Now the License Token has been verified with the Offline License Key string and all associated licenses are displayed.
 
 [![Offline License Key](../assets/images/en/maintenance-and-operation/activate-license/12-al.png)](../assets/images/en/maintenance-and-operation/activate-license/12-al.png)
-  
 
 Activation via the Admin-Center (License file outdated)
 -------------------------------------------------------
 
-After logging in, the installation via the [Admin center](../system-administration/admin-center.md) is carried out in the **Licences** tab. Use the button **Install new licence** to open the expanded dialogue and select the downloaded License file.
+After logging in, the installation via the [Admin center](../system-administration/admin-center.md) is carried out in the **Licenses** tab. Use the button **Install new licence** to open the expanded dialogue and select the downloaded License file.
 
 New log-in may be required
 
@@ -125,7 +122,7 @@ Please note that in the **Tenants** tab you can configure how many object licens
 Trial Licenses
 --------------
 
-You can [apply for a license to test i-doit pro for 30-days](https://www.i-doit.com/en/trial-version/) on our website.
+You can [apply for a license to test i-doit pro for 30-days](https://www.i-doit.com/) on our website.
 
 Name of the test database
 

@@ -6,7 +6,9 @@ Neben den mitgelieferten Widgets kann theoretisch jedes Add-on eigene Widgets mi
 
 Ein Widget zu programmieren ist relativ einfach und benötigt nur zwei Dateien. Eine zusätzliche Datei wird vonnöten, wenn das Widget konfigurierbar sein soll. Ansonsten braucht das Widget nur einmalig im System registriert werden - ab diesem Zeitpunkt kann es von jedem Nutzer im Dashboard ausgewählt werden.
 
-Dieser Artikel basiert auf dem "[Example Dashboard](https://bitbucket.org/synetics/addon-example-dashboard)" Add-on und verwendet dies zur Erklärung verschiedener Technologien die wir einsetzen.
+<!---
+Dieser Artikel basiert auf dem "[Example Dashboard]()" Add-on und verwendet dies zur Erklärung verschiedener Technologien die wir einsetzen.
+-->
 
 Notwendige Dateien
 ==================
@@ -28,7 +30,9 @@ Registrierung des eigenen Widgets
 *   Nur Kleinbuchstaben und Unterstriche
 *   Keine Sonder-, Leerzeichen oder Umlaute
 
-Im "[Example Dashboard](https://bitbucket.org/synetics/addon-example-dashboard)" Add-on werden zwei Widgets registriert mit den Namen devday_widget_01 und devday_widget_02. Daraus ergeben sich die PHP Klassen Namen isys_dashboard_widgets_devday_widget_01 und isys_dashboard_widgets_devday_widget_02.
+<!---
+Im "[Example Dashboard]()" Add-on werden zwei Widgets registriert mit den Namen devday_widget_01 und devday_widget_02. Daraus ergeben sich die PHP Klassen Namen isys_dashboard_widgets_devday_widget_01 und isys_dashboard_widgets_devday_widget_02.
+-->
 
 Das heißt, der Klassen Name setzt sich zusammen aus "isys\_dashboard\_widgets\_" + Identifier. Um ein Widget zu registrieren kann die Dashboard DAO genutzt werden. Diese Klasse bietet Methoden zum Erstellen und Aktualisieren von Widgets.
 

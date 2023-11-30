@@ -21,4 +21,4 @@ Folgende Anwendungsfälle sind beschrieben:
 *   [VM provisionieren (veraltet)](./vm-provisionieren.md)
 *   [Benutzerdefinierte Übersetzungen](./benutzerdefinierte-uebersetzungen.md)
 
-!!! info "Weitere Praxisbeispiele finden Sie auf unserem [Blog](https://www.i-doit.com/blog/category/praxisbeispiele/)"
+!!! info "Weitere Praxisbeispiele finden Sie auf unserem [Blog](https://www.i-doit.com/doitbetter-blog/)"

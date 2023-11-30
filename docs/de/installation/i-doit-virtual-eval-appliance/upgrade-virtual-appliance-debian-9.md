@@ -26,7 +26,7 @@ Weiterhin sollte vor einem Upgrade Folgendes bedacht werden:
 *   Benutzer von i-doit sollten vor der Downtime informiert werden.
 *   Automatismen, Cronjobs und externe Zugriffe sollten für die Dauer des Upgrades gestoppt werden.
 
-Viele weitere [Hinweise zum Upgrade des Betriebssystems](https://www.debian.org/releases/stretch/amd64/release-notes/index.en.html) liefert die Debian Community.
+Viele weitere [Hinweise zum Upgrade des Betriebssystems](https://www.debian.org/releases/stretch/) liefert die Debian Community.
 
 Upgrade vorbereiten
 -------------------
@@ -90,9 +90,9 @@ Anschließend werden die Paketquellen aktualisiert und ein Update der Pakete dur
 
 Beim letzten Befehl werden mehrere Benutzer-Interaktionen nötig:
 
-1.  Die Frage **Restart services during package upgrades without asking?** ist mit **Yes** zu beantworten.
-2.  Das Überschreiben von **Configuration file '/etc/issue'** ist mit **N** zu beantworten.
-3.  Das Überschreiben von **Configuration file '/etc/issue.net'** ist ebenfalls mit **N** zu beantworten.
+1. Die Frage **Restart services during package upgrades without asking?** ist mit **Yes** zu beantworten.
+2. Das Überschreiben von **Configuration file '/etc/issue'** ist mit **N** zu beantworten.
+3. Das Überschreiben von **Configuration file '/etc/issue.net'** ist ebenfalls mit **N** zu beantworten.
 
 Nun folgt das eigentliche Upgrade der Pakete auf neue Versionen:
 

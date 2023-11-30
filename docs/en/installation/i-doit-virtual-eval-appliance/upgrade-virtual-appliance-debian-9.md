@@ -13,19 +13,19 @@ Besides the maintenance of i-doit you also have to keep the regular maintenance 
 
 Before upgrading, you have to consider the following:
 
-- The upgrade only describes the i-doit Virtual Eval Appliance in Version 1.2.x.
-- We assume that no changes of the system were carried out (except updates). We are not responsible for subsequent changes.
-- There has to be enough available memory. The update requires approximately 1 GByte free memory.
+-   The upgrade only describes the i-doit Virtual Eval Appliance in Version 1.2.x.
+-   We assume that no changes of the system were carried out (except updates). We are not responsible for subsequent changes.
+-   There has to be enough available memory. The update requires approximately 1 GByte free memory.
 
 ## Tips
 
 You also should pay attention to the following issues before an upgrade:
 
-- Do you have [==backups==](../../maintenance-and-operation/backup-and-recovery/index.md)?
-- You shoud inform i-doit users before downtime.
-- Automatisms, cronjobs and external access should be stopped during the upgrade.
+-   Do you have [==backups==](../../maintenance-and-operation/backup-and-recovery/index.md)?
+-   You shoud inform i-doit users before downtime.
+-   Automatisms, cronjobs and external access should be stopped during the upgrade.
 
-You can read many additional [==hints regarding the upgrade of the operating system==](https://www.debian.org/releases/stretch/amd64/release-notes/index.en.html) provided by the Debian Community.
+You can read many additional [==hints regarding the upgrade of the operating system==](https://www.debian.org/releases/stretch) provided by the Debian Community.
 
 ## Preparing the Upgrade
 
@@ -85,9 +85,9 @@ sudo apt upgrade
 
 For the last command some user interactions are required:
 
-1.  Answer the question ==Restart services during package upgrades without asking?== with "==Yes==".
-2.  Answer the question regarding the overwriting of ==Configuration file '/etc/issue'== with ==N==.
-3.  Answer the question regarding the overwriting of ==Configuration file '/etc/issue.net'== with ==N== as well.
+1. Answer the question ==Restart services during package upgrades without asking?== with "==Yes==".
+2. Answer the question regarding the overwriting of ==Configuration file '/etc/issue'== with ==N==.
+3. Answer the question regarding the overwriting of ==Configuration file '/etc/issue.net'== with ==N== as well.
 
 Now the actual upgrade of the packages to new versions is carried out:
 

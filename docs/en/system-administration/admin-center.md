@@ -95,7 +95,7 @@ Here you will find system related settings. Also here you will find the link to 
 | Option          | Value                             |
 | --------------- | --------------------------------- |
 | Active          | Yes or No                         |
-| Default tenant  | Selected Tenant name via dropdown |
+| Default tenant  | Select Tenants name via dropdown  (order can be altered in [expert settings](#expert-settings-system-related)) |
 | Use Domain Part | Yes or No                         |
 
 ### System Parameters
@@ -117,9 +117,9 @@ Here you will find system related settings. Also here you will find the link to 
 
 In the ==Config== tab three items can be configured:
 
-- Via ==Admin-Center Credentials== the credentials to the admin center can be changed.
-- Via ==Security configuration== the encryption method can be changed.
-- Via ==Connection to i-doit System Database== the access to the system database can be changed.
+-   Via ==Admin-Center Credentials== the credentials to the admin center can be changed.
+-   Via ==Security configuration== the encryption method can be changed.
+-   Via ==Connection to i-doit System Database== the access to the system database can be changed.
 
 [![Configuration](../assets/images/en/system-administration/admin-center/8-ac.png)](../assets/images/en/system-administration/admin-center/8-ac.png)
 
@@ -182,11 +182,11 @@ The Expert settings for the System are located in the Admin Center. You can reac
 | reports.browser-url                             | -                                                                                                                                                    |                   |
 | security.passwort.minlength                     | -                                                                                                                                                    |                   |
 | session.sso.active                              | 0                                                                                                                                                   |                   |
-| session.sso.mandator-id                         | 1                                                                                                                                                   |                   |
+| session.sso.mandator-id                         | 1,2                                                                                                                                                   | Order for login via sso                  |
 | session.time                                    | 3600                                                                                                                                                |                   |
 | system.devmode                                  | -                                                                                                                                                    |                   |
 | system.email.connection-timeout                 | -                                                                                                                                                    |                   |
-| system.email.from                               | i-doit@example-domain.int                                                                                                                           |                   |
+| system.email.from                               | <i-doit@example-domain.int>                                                                                                                           |                   |
 | system.email.name                               | -                                                                                                                                                    |                   |
 | system.email.smtp-auto-tls                      | 0                                                                                                                                                   |                   |
 | system.email.smtp-host                          | -                                                                                                                                                    |                   |

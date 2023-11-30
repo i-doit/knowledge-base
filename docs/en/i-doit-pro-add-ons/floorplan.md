@@ -42,9 +42,9 @@ In the left area you will find the option to further adjust and form objects. As
 
 [![objectform](../assets/images/en/i-doit-pro-add-ons/floorplan/16-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/16-fp.png) Choose / create objectform: The form of the object can be adjusted as desired. Custom forms can be saved.
 
-[![ Center](../assets/images/en/i-doit-pro-add-ons/floorplan/17-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/17-fp.png) Center on object: The selected object is centered in the middle of the screen.
+[![Center](../assets/images/en/i-doit-pro-add-ons/floorplan/17-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/17-fp.png) Center on object: The selected object is centered in the middle of the screen.
 
-[![ Rotate](../assets/images/en/i-doit-pro-add-ons/floorplan/18-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/18-fp.png) Rotate: The object can be rotated in any desired way.
+[![Rotate](../assets/images/en/i-doit-pro-add-ons/floorplan/18-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/18-fp.png) Rotate: The object can be rotated in any desired way.
 
 [![Unposition object](../assets/images/en/i-doit-pro-add-ons/floorplan/19-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/19-fp.png) Unposition object: The object disappears from the floorplan but can be added again using the object list.
 
@@ -57,6 +57,49 @@ In the left area you will find the option to further adjust and form objects. As
 When the object is selected in edit mode, it is highlighted by a blinking outline and further options are available for changing the shape and free rotation.
 
 [![Floorplan](../assets/images/en/i-doit-pro-add-ons/floorplan/23-fp.gif)](../assets/images/en/i-doit-pro-add-ons/floorplan/23-fp.gif)
+
+## Zusammenführung von Raumplänen
+
+It should be possible to add floorplans to a floorplan - let's think of a floor that contains several rooms. In this "floor" floorplan we want to position the "room" floorplan.
+We need to set some basic rules here - for example, we show only three levels of floorplan, that is:
+
+```text
+Base floorplan:
+-   obj A
+-   obj B
+-   floorplan A:
+    -   obj C
+    -   obj D
+-   floorplan B:
+    -   obj E
+    -   obj F
+    -   floorplan C (display as a empty block without its positioned objects)
+        -   obj G
+        -   obj H
+```
+
+Let us imagine we are currently viewing "main floorplan". We should be able to see the nested "floorplan A" and inside of that we should be able to see "floorplan B" (including "obj E" and "obj F"). But "floorplan C" will not be displayed as floorplan - instead it will look like a basic object, because we limit the nested floorplans to three levels (to prevent recursion, memory and performance issues).
+
+### How it works
+
+If you are viewing "main floorplan" you can move "floorplan A" and "floorplan B" like the other objects ("obj A" and "obj B") - you can not edit anything inside this imported
+
+### When can a nested floorplan be displayed?
+
+In order to display "floorplan A" as floorplan inside "main floorplan" it has to fulfill one of these conditions:
+
+-   Have a background image
+-   Have a layout
+
+If one of these conditions is met, you will see the following icon, when editing a floorplan object (inside another floorplan):
+
+[![icon](../assets/images/en/i-doit-pro-add-ons/floorplan/add-on-icon.svg)](../assets/images/en/i-doit-pro-add-ons/floorplan/add-on-icon.svg)
+
+Example
+
+[![example gif](../assets/images/en/i-doit-pro-add-ons/floorplan/floorplan-toggle.gif)](../assets/images/en/i-doit-pro-add-ons/floorplan/floorplan-toggle.gif)
+
+The floorplan should be scaled to the previous object size, the layout / background image will be used to determine the scale.
 
 Floorplan Profiles
 ------------------
@@ -78,14 +121,12 @@ whether "Double-click on object to open in new tab" should be activated.
 
 [![Highlight color](../assets/images/en/i-doit-pro-add-ons/floorplan/27-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/27-fp.png)
 
-*   Highlight color: Here you can select a color that outlines the object when it is clicked.  
+-   Highlight color: Here you can select a color that outlines the object when it is clicked.  
     With the selection of #FB481C this would look like this
 
 [![Show object radius](../assets/images/en/i-doit-pro-add-ons/floorplan/28-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/28-fp.png)
 
-*   Show object radius: This defines whether the object radius is displayed by default.
-
-  
+-   Show object radius: This defines whether the object radius is displayed by default.
 
 **In the Default values tab an object type filter can be configured.**
 
@@ -113,6 +154,7 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
+| 1.7 | 2023-11-07 | [Bug] MySQL8 causes database error "incorrect DATETIME" when opening Floorplan<br>[Bug] When turning an object, the text should also turn<br>[Bug] Language constant 'LC__CMDB__CATG__ACCOUNTING_ORDER_DATE' is not <br>eplaced<br>[Bug] Highlight 'add-on' instead of 'extras' menu |
 | 1.6 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
 | 1.5.1 | 2022-02-22 | [Bug] Floorplans cannot be opened |
 | 1.5 |     | [Improvement] It is possible to display a floorplan in a floorplan  <br>[Improvement] It is possible to remove a layout from the floorplan  <br>[Improvement] It is possible to remove the background from the floorplan  <br>[Improvement] Show the object name of the current floorplan in the breadcrumb  <br>[Bug] Function to inherit formfactor data scales dimensions wrong |

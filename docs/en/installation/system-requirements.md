@@ -3,8 +3,7 @@
 In order to guarantee the operation of all functionalities of i-doit, some requirements must be met by the underlying system.
 
 !!! info "Current version"
-
-    The requirements shown below apply to the current version of i-doit, in this case ==26==. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case ==27==. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 ## Minimum Requirements
 
@@ -23,13 +22,12 @@ We recommend the use of a dedicated virtual machine. The actual demand for hardw
 -   GNU/Linux in the 64bit variant (amd64) or Windows Server 2022 in the 64bit variant (amd64)
 -   Apache Webserver ==2.4==
 -   MariaDB 10.2, 10.3, 10.4, 10.5, ==10.6== (recommended) or MySQL 5.7 or 8.0.
--   PHP 7.4, ==8.0== (recommended), {++8.1++}. _At the moment, PHP version >= 8.2 is not supported. We plan the support of PHP 8.2 in a later release._
+-   PHP 7.4 (deprecated), ==8.0== (recommended), 8.1. _At the moment, PHP version >= 8.2 is not supported. We plan the support of PHP 8.2 in a later release._
 -   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
 We recommend the usage of ==Apache Webserver 2.4, PHP 8.0 and MariaDB 10.6==.
 
 !!! success Reference configuration
-
     The following system parameters comprise a configuration reference that is tested and recommended by us and guarantees high performance when used with up to 500,000 objects and a high number of simultaneously working users.
 
     ### Virtual Hardware
@@ -64,6 +62,16 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 -   Apple Safari
 
 ## Compatibility matrix
+
+=== "27"
+
+    | **i-doit Version** | 27 |
+    | --- | --- |
+    | **Release** | 2023-08 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1 |
+    | **MySQL** | 5.7 <br>8.0 |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
 
 === "26"
 

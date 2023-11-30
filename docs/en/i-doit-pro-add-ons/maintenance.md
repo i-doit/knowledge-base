@@ -140,6 +140,7 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
+| 1.3 | 2023-11-07 | [Task] Use new routes to display object and object type images / move add-on related files |
 | 1.2.2 | 2023-08-22 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Filter in list views not working<br>[Bug] Creating a new E-Mail template does not work when the objecttype constant of client,server or switch or not available |
 | 1.2.1 | 2023-01-24 | [Bug] Error when sending multiple mails |
 | 1.2 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Bug] HTML code in browser message |

@@ -2,8 +2,7 @@
 
 [JDisc Discovery](http://www.jdisc.com/en/) makes an inventory of whole networks and recognizes all important operating systems (including HP-UX, Solaris and AIX). It recognizes hardware and software, IP networks, Windows domains and Active Directory. In addition, JDisc Discovery identifies all important virtualization technologies, as well as many cluster environments.
 
-Installation
-------------
+## Installation
 
 The installation of JDisc server components on a Microsoft Windows system (preferably the server version) is required for its operation. The necessary installation files can be downloaded via the following web address:
 
@@ -17,8 +16,7 @@ Should you have questions regarding the installation or configuration of JDisc, 
 
 This article addresses the interface between i-doit and JDisc Discovery.
 
-Configuration
--------------
+## Configuration
 
 The configuration of the interface is under **Administration → Interfaces / external data → Import → JDISC → JDisc configuration**. You can define any number of instances of JDisc Discovery. This allows complex inventory scenarios with separated networks.
 
@@ -53,8 +51,7 @@ After saving the parameters, you can test whether the configuration was successf
 
 The PHP extension SOAP has to be installed on the i-doit host so that the connection to JDisc Discovery works. With a Debian-based operating system you already have this extension by having installed PHP. It is very likely that there are suitable distribution packets for other operating systems.
 
-Profiles
---------
+## Profiles
 
 The JDisc profiles of i-doit provide the possibility to define the connection of object types and their attributes between JDisc and i-doit. Under **Administration → Interfaces / external data → Import → JDISC → JDisc profiles** you can specify how the objects found by JDisc find their way into the IT documentation.
 
@@ -108,30 +105,26 @@ For each type in JDisc you can select an equivalent object type in i-doit. If no
 | **Update objecttype** | When the device already exists as an object in i-doit, you can determine whether the object type is to be updated with help of the assignment (see above) or not. |
 | **Update object title** | Should the object title be updated by the import? |
 
-Import of Data via the Web GUI
-------------------------------
+## Import of Data via the Web GUI
 
 The import of data contents from JDisc is carried out via **Extras → CMDB → Import → JDisc**.
 
 [![jdisc-discovery-import](../assets/images/en/consolidate-data/jdisc-discovery/3-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/3-jd.png)
 
-  
-
 Before you execute the import process, you have to define the import parameters.
 
-Because it is possible to apply more than one JDisc server, you have to select the JDisc server in the first step. The profile which you defined beforehand can be also selected to influence the imported contents and their use. In addition, you can set the import mode. The **Append** import mode creates all found objects without checking whether these already exist. The **Update** import mode creates only objects which can’t be found in the i-doit datapool. Categories of already existing objects are complemented (if necessary) with new data. The **Overwrite** import mode is, in principle, like the **Update** mode but with the difference that list categories are emptied first and are then recreated.  
-  
+Because it is possible to apply more than one JDisc server, you have to select the JDisc server in the first step. The profile which you defined beforehand can be also selected to influence the imported contents and their use. In addition, you can set the import mode. The **Append** import mode creates all found objects without checking whether these already exist. The **Update** import mode creates only objects which can’t be found in the i-doit datapool. Categories of already existing objects are complemented (if necessary) with new data. The **Overwrite** import mode is, in principle, like the **Update** mode but with the difference that list categories are emptied first and are then recreated.
 
 | **Import Mode** | **Description** |
 | --- | --- |
 | **Create** | The import mode **"Create"** will create all found objects without checking if they already exist. |
 | **Update** | The import mode **"Update"** will only create objects that could not be found in i-doit. Categories of already existing objects will be supplemented with new data (if necessary). |
 | **Update (New inventory)** | With the addition **"(New inventory)"** fixed idoit-to-jdisc-device links are discarded and the object associations are recalculated. |
+| **Update (Only existing objects)** | With the addition **"(Only existing objects)"** only existing objects are updated with new data. No new objects are created. |
 | **Only create newly scanned devices** | The "**Only create newly scanned devices" **Mode creates only objects that do not exist in i-doit. |
 | **Overwrite** | The **"Overwrite"** import mode behaves exactly like the "Update" mode with the difference that list categories are first emptied and then newly created. |
 | **Overwrite (New inventory)** | With the addition **"(New inventory)"** fixed idoit-to-jdisc-device links are discarded and the object associations are recalculated. |
 
-  
 With the logging function you can influence the extent of the written log. A more extensive logging increases the import duration.
 
 When you carried out the settings completely, you can activate the import with **Start the import**. Please, consider that the duration of the import process depends both on the size of the JDisc database and the utilized hardware.
@@ -140,20 +133,17 @@ When the import process is completed, a summary is displayed in the **Result** s
 
 You can find the logs which are generated during import in the i-doit directory called **log/**.
 
-Import via i-doit Console
--------------------------
+## Import via i-doit Console
 
 Importing data from JDisc to i-doit is not only possible manually via the user interface. It can also be executed via the i-doit [Console](../automation-and-integration/cli/console/index.md) and thus automated. How the corresponding call is generated can be found in the [corresponding article](../automation-and-integration/cli/console/options-and-parameters-cli.md) with an example for the import-jdisc option.
 
 For the import, the ID of the desired profile can be specified. The ID can be found in the list of profiles:
 
-[![jdisc-discovery-id](../assets/images/en/consolidate-data/jdisc-discovery/4-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/4-jd.png)  
+[![jdisc-discovery-id](../assets/images/en/consolidate-data/jdisc-discovery/4-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/4-jd.png)
 
 Also the ID of the JDisc server to be used can be specified. This can be found in the configuration:
 
 [![jdisc-discovery-serverid](../assets/images/en/consolidate-data/jdisc-discovery/5-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/5-jd.png)
-
-  
 
 A jdisc.ini might look like this more information about .ini files can be found [here](../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md).
 
@@ -170,8 +160,6 @@ A jdisc.ini might look like this more information about .ini files can be found 
     detailedLogging=3
     regenerateSearchIndex
     [additional]
-
-  
 
 If we assume that the jdisc.ini is located in the i-doit root directory, then the import is called with the ldap.ini from the i-doit root directory like this:
 

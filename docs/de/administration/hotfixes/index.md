@@ -19,48 +19,75 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
     Sollten Sie nach der Verwendung der Hotfixes mit dem Support in Kontakt treten, ergänzen Sie bitte den Hinweis auf dessen Verwendung.
 
 !!! info "Aktualität"
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==26== Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==27== Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 !!! attention "Einverständniserklärung"
     Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
 
 ## i-doit core
 
-### Disconnecting relation in custom category causes sql error
+!!! bug "Hotfix release"
+    If you downloaded i-doit 27 prior to November 28th, we've identified some issues that require attention.<br>
+    We have prepared a linked package that contains necessary fixes.
 
-When you get the following error when disconnecting a relation to a custom category:
+    Please refer to one of the guides below for assistance
 
-??? note "SQL Error:"
-    ```log
-    Database error : Query error: 'UPDATE isys_catg_relation_list SET isys_catg_relation_list__isys_obj__id__master = 222, isys_catg_relation_list__isys_obj__id__slave = NULL, isys_catg_relation_list__isys_obj__id__itservice = NULL, isys_catg_relation_list__isys_relation_type__id = 1, isys_catg_relation_list__status = 2, isys_catg_relation_list__description = '' WHERE isys_catg_relation_list__id = 799441;': Cannot add or update a child row: a foreign key constraint fails (`idoit_data`.`isys_catg_relation_list`, CONSTRAINT `isys_catg_relation_list_ibfk_2` FOREIGN KEY (`isys_catg_relation_list__isys_obj__id__slave`) REFERENCES `isys_obj` (`isys_obj__id`) ON DELET)"
-    ```
+    !!! example "**Use the updater to download the package**"
+        -   Set file and folder rights, either via `idoit-rights.sh` or [manual](../../installation/manuelle-installation/setup.md)
+        -   Open the i-doit web update
+        -   At **2. Available Updates** you copy and paste the **[LINK](https://login.i-doit.com/downloads/idoit-27-update.zip)** in to the corresponding URL field and click **Download and extract**
+        -   Now do the update
 
-[i-doit_26_hotfix_ID-9477.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9477.zip){ .md-button .md-button--primary }
+    !!! example "**or download and extract the package**"
+        -   Download the new package from the [customer portal](../../administration/kundenportal.md)
+        -   Extract the package into the i-doit Folder, see [here](../../wartung-und-betrieb/update-einspielen.md#update-über-die-konsole-vorbereiten)
+        -   Set file and folder rights, either via `idoit-rights.sh` or [manual](../../installation/manuelle-installation/setup.md)
+        -   Use the i-doit web updater to update with the new package
 
-### It is not possible to retrieve the next online i-doit update via button check while updating i-doit
+    !!! note "**This update Package includes the following Hotfixes**"
+        **Adding a condition block for location > below > X location outputs no results**<br>
+        **HTML is displayed in Report**<br>
+        **Exported report displays \_\_id\_\_ column**<br>
+        **Report objects adds `&nbsp;&nbsp;` after each column**<br>
+        **Placeholder is not correctly replaced**<br>
+        **Operators for some fields can not be selected - TypeError: equation.map is not a function**<br>
+        **The encoding of umlauts are displayed in report titles**<br>
+        **Status filter for multivalue categories in report manager is not working correctly for custom categories**
 
-When you click on the **Check for a new version** button then version 27 is not displayed, when available.
+<!---
+### Changing technical keys to only contain words causes entries to lose the values when filled with API (Number only)
 
-[i-doit_26_hotfix_ID-9844.zip :material-file-download:](../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9844.zip){ .md-button .md-button--primary }
+[xxx.zip :material-file-download:](../../assets/downloads/hotfixes/27/xxx.zip){ .md-button .md-button--primary }
+--->
+### Description fields yield validation errors on 32bit systems
 
-## API Add-on 1.14.1
+[i-doit_27_hotfix_ID-9928_7dca69d.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9928_7dca69d.zip){ .md-button .md-button--primary }
 
-### Operating system > Version cannot be referenced via title, if a second operating system has the same version title
+### Icon redirects are not cached
 
-This effects you when you get this API error message:
-`i-doit system error: The specified version could not be assigned to this application"`
+If loading takes too much time between switching from object type to object type.
 
-[api_1.14.1_hotfix_API-400_b1aec14.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.14.1_hotfix_API-400_b1aec14.zip){ .md-button .md-button--primary }
+[i-doit_27_hotfix_ID-9924_8c73a0f.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9924_8c73a0f.zip){ .md-button .md-button--primary }
 
-### Using API after update to i-doit pro 25 displays license error message
+### Refactor the automatic update-check to a separate (ajax) request
 
-Use this when you receive an error message like:
+If opening the administration area of i-doit and navigating to "[Tenant-name] management" the page will take quite some time to load.
 
-```text
-i-doit responded with an error: i-doit system error: Achtung: das "Checkmk 2" Modul ist aktuell nicht lizenziert
-```
+[i-doit_27_hotfix_ID-9919_63ba178.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9919_63ba178.zip){ .md-button .md-button--primary }
 
-[api_1.14.1_hotfix_API-429_fa3e703.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.14.1_hotfix_API-429_fa3e703.zip){ .md-button .md-button--primary }
+### Document does not exist error message when opening a document
+
+[i-doit_27_hotfix_ID-10086.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-10086.zip){ .md-button .md-button--primary }
+<!--
+### Report viewing DBMS version always shows the first entry
+
+[xxx.zip :material-file-download:](../../assets/downloads/hotfixes/27/xxx.zip){ .md-button .md-button--primary }
+--->
+## API Add-on 1.15
+
+### cmdb.reports.read attaches "&nbsp;&nbsp" to each value
+
+[api_1.15_hotfix_API-458_7e2ae2e.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.15_hotfix_API-458_7e2ae2e.zip){ .md-button .md-button--primary }
 
 ## Analyze Add-on 1.3
 

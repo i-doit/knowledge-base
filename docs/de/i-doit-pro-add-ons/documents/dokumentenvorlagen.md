@@ -1,4 +1,5 @@
 # Dokumentenvorlagen
+
 Übersicht der Vorlagen
 ======================
 
@@ -13,35 +14,34 @@ Auf diesem Weg können Dokumente beispielsweise nach Art (Protokolle, Handbüche
 Neue Dokumentenvorlage erstellen
 --------------------------------
 
-Über die Schaltfläche "Neu" kann eine neue Vorlage erstellt werden. Das Add-on leiet hier in die nächste Eingabemaske weiter. Zu Beginn können allgemeine und kapitelunabhängige Inhalte bearbeitet werden.
+Über die Schaltfläche "Neu" kann eine neue Vorlage erstellt werden. Das Add-on leitet hier in die nächste Eingabemaske weiter. Zu Beginn können allgemeine und kapitelunabhängige Inhalte bearbeitet werden.
 
 [![Neu](../../assets/images/de/i-doit-pro-add-ons/documents/vorlagen/1-vor.png)](../../assets/images/de/i-doit-pro-add-ons/documents/vorlagen/1-vor.png)
 
 *   **Bezeichnung**
-
-Die Bezeichnung legt den Namen der Vorlage fest, über den sie im System aufgefunden werden kann.
+    Die Bezeichnung legt den Namen der Vorlage fest, über den sie im System aufgefunden werden kann.
 
 *   **Kategorie**
-
-Die Vorlage kann einer Dokumenten-Kategorie zugeordnet werden. Es stehen ausschließlich Kategorien zur Verfügung, die vorab erstellt wurden. Die Kategorie eines Dokuments kann jederzeit nachträglich geändert werden.
+    Die Vorlage kann einer Dokumenten-Kategorie zugeordnet werden. Es stehen ausschließlich Kategorien zur Verfügung, die vorab erstellt wurden. Die Kategorie eines Dokuments kann jederzeit nachträglich geändert werden.
 
 *   **Deckblatt**
-
-Das Deckblatt kann nach eigenen Vorgaben gestaltet werden. Es erscheint als erste Seite des fertigen Dokuments.
+    Das Deckblatt kann nach eigenen Vorgaben gestaltet werden. Es erscheint als erste Seite des fertigen Dokuments.
+    Bei der Registerkarte Deckblatt können Sie die Deckblatt aktivieren/deaktivieren.
 
 *   **Kopfzeile**
-
-Die Kopfzeile stellt den Kopfbereich der einzelnen Seiten des Dokuments dar. Im oberen Bereich jeder Seite wird der Inhalt hinzugefügt.
+    Die Kopfzeile stellt den Kopfbereich der einzelnen Seiten des Dokuments dar. Im oberen Bereich jeder Seite wird der Inhalt hinzugefügt.
+    Bei der Registerkarte Kopfzeile können Sie die Kopfzeile aktivieren/deaktivieren.
 
 *   **Fußzeile**
+    Die Fußzeile ist am Ende jeder Seite zu finden. Auch hier kann zusätzlicher Inhalt, vergleichbar zur Kopfzeile, eingefügt werden.
+    Bei der Registerkarte Fußzeile können Sie die Fußzeile aktivieren/deaktivieren.
 
-Die Fußzeile ist am Ende jeder Seite zu finden. Auch hier kann zusätzlicher Inhalt, vergleichbar zur Kopfzeile, eingefügt werden.
+*   **Inhaltsverzeichnis**
+     Bei der Registerkarte Inhaltsverzeichnis können Sie die Inhaltsverzeichnis aktivieren/deaktivieren.
 
 *   **Optionen**
-
-Die Optionen erlauben es festzulegen, ob ein Deckblatt, ein Inhaltsverzeichnis und (Kapitel-)Überschriften verwendet werden sollen. Außerdem ist es möglich Vorgaben zum Format von Überschriften zu machen.
-
-Im unteren Bereich der Optionen können weitere Einstellungen für die PDF-Dokumente vorgenommen werden. Hierzu zählen unter anderem die Randabstände und die Seitenausrichtung. Falls nötig können ebenfalls eigene Schriftarten hochgeladen und hinzugefügt werden. Auch die Verwendung von Hintergrundbildern für das Deckblatt, das Inhaltsverzeichnis oder alle weiteren Seiten ist hier möglich.
+    Die Optionen erlauben es festzulegen, welche Seiten für die Seitenzahlen Zählung verwendet werden und ab welcher Seitenzahl gezählt wird. Außerdem ist es möglich Vorgaben zum Format von Überschriften zu machen.
+    Im unteren Bereich der Optionen können weitere Einstellungen für die PDF-Dokumente vorgenommen werden. Hierzu zählen unter anderem die Randabstände und die Seitenausrichtung. Falls nötig können ebenfalls eigene Schriftarten hochgeladen und hinzugefügt werden. Auch die Verwendung von Hintergrundbildern für das Deckblatt, das Inhaltsverzeichnis oder alle weiteren Seiten ist hier möglich.
 
 *   **Benutzerdefinierte Felder**
 

@@ -4,7 +4,7 @@ If you want to take advantage of each and every subtlety a perfect [IT documenta
 
 ## Where Can I Find the Administration?
 
-The administration is accessed via the gear wheel icon in the top right corner. The user area is diplayed as soon as you hover over you login name with the mouse.
+The administration is accessed via the gear wheel icon in the top right corner. The user area is displayed as soon as you hover over you login name with the mouse.
 
 [![Where Can I Find the Administration](../../assets/images/en/system-administration/administration/1-admin.png)](../../assets/images/en/system-administration/administration/1-admin.png)
 
