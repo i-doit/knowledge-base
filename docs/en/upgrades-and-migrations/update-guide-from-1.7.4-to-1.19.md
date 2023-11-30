@@ -51,11 +51,11 @@ This instructions are valid for **Debian** and the commands used differ in other
 Updating 1.7.4 to 1.8
 ---------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/ and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
     sudo -u www-data unzip idoit-1.8-update.zip
 
-If you are asked, overwrite everything by typing A.   
+If you are asked, overwrite everything by typing A.
 Now we open the Web Interface Updater and the Update to v1.8 is displayed and selected, do the update.
 
 [![Updating 1.7.4 to 1.8](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)
@@ -75,11 +75,11 @@ Now we open the Web Interface Updater and the Update to v1.8 is displayed and se
 Updating 1.8 to 1.9
 -------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/ and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
     sudo -u www-data unzip idoit-1.9-update.zip
 
-If you are asked, overwrite everything by typing A.   
+If you are asked, overwrite everything by typing A.
 Now we open the Web Interface Updater and the Update to v1.9 is displayed and selected, do the update.
 
 [![Updating 1.8 to 1.9](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)
@@ -93,7 +93,7 @@ Now we open the Web Interface Updater and the Update to v1.9 is displayed and se
 Updating 1.9 to 1.10
 --------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/ and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
     sudo -u www-data unzip idoit-1.10-update.zip
 
@@ -111,7 +111,7 @@ Now we open the Web Interface Updater and the Update to v1.10 is displayed and s
 Updating 1.10 to 1.11
 ---------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/ and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
     sudo -u www-data unzip idoit-1.11-update.zip
 
@@ -126,7 +126,6 @@ Solutions:
 
 *   Reload the page and go on.
 *   or use the following Hotfix if reloading do not work  
-      
 
 !!! attention "Declaration of consent"
 
@@ -145,7 +144,7 @@ Login and check your installation.
 Updating 1.11 to 1.12
 ---------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/ and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
     sudo -u www-data unzip idoit-1.12-update.zip
 
@@ -153,8 +152,6 @@ If you are asked, overwrite everything by typing A.
 Now we open the Web Interface Updater and the Update to v1.12 is displayed and selected, do the update.
 
 [![Updating 1.11 to 1.12](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)
-
-  
 
 !!! success "**Check the update Logs**"
 
@@ -168,10 +165,10 @@ Upgrade Debian 8 to 9
 !!! attention "**Warning**"
 
     Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!  
-    Read the Update Instructions for Debian 8 to 9 [here](https://www.debian.org/releases/stretch/amd64/release-notes/ch-upgrading.en.html)
+    Read the Update Instructions for Debian 8 to 9 [here](https://www.debian.org/releases/stretch)
 
 ??? example "I have a working full Backup"
- 
+
     Free up some space with  
         ```
         sudo apt-get autoremove
@@ -209,7 +206,7 @@ Upgrade Debian 8 to 9
         ```
         sudo systemctl start mysql cron
         ```
-    Errors? [Read here](https://www.debian.org/releases/stretch/amd64/release-notes/ch-upgrading.en.html#trouble)  
+    Errors? [Read here](https://www.debian.org/releases/stretch/)  
     
     !!! success "**Check the System and i-doit**"
 
@@ -325,7 +322,7 @@ Activate changes
     sudo phpenmod memcached
     sudo systemctl restart apache2.service
 
-i-doit should now display via Administration > System tools > System overview the new PHP Verison 7.3.31-1~deb10u1
+i-doit should now display via Administration > System tools > System overview the new PHP Version 7.3.31-1~deb10u1
 
 Create MariaDB config file if not exist
 ---------------------------------------
@@ -370,7 +367,7 @@ insert or update your MariaDB configuration
     # Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
     innodb_thread_concurrency = 0
     
-    # Disable this (= 0) if you have slow harddisks
+    # Disable this (= 0) if you have slow hard disks
     innodb_flush_log_at_trx_commit = 1
     innodb_flush_method = O_DIRECT
     
@@ -391,7 +388,7 @@ Restart MariaDB afterwards
 Updating 1.12 to 1.13
 ---------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
     sudo -u www-data unzip idoit-1.13-update.zip
 
@@ -417,7 +414,7 @@ If you now get a HTTP 500, do the update again.
 Updating 1.13 to 1.14
 ---------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
     sudo -u www-data unzip idoit-1.14-update.zip
 
@@ -446,7 +443,7 @@ The Solution is documented [here](../system-administration/troubleshooting/row-s
 Updating 1.14 to 1.15
 ---------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
     sudo -u www-data unzip idoit-1.15-update.zip
 
@@ -463,7 +460,7 @@ Now we open the Web Interface Updater and the Update to v1.15 is displayed and s
 Updating 1.15 to 1.16
 ---------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
     sudo -u www-data unzip idoit-1.16-update.zip
 
@@ -497,7 +494,7 @@ Now we open the Web Interface Updater and the Update to v1.17 is displayed and s
 Updating 1.17 to 1.18
 ---------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
     sudo -u www-data unzip idoit-1.18-update.zip
 
@@ -567,8 +564,6 @@ Upgrade Debian 10 to 11
 Configure PHP 7.4
 -----------------
 
-  
-
 Create PHP config file
 
     sudo nano /etc/php/7.4/mods-available/i-doit.ini
@@ -613,8 +608,7 @@ Activate changes
 
 If the apache2 is not restarting and you get the above error, restart the server.
 
-i-doit should now display via Administration > System tools > System overview the new PHP Verison 7.4.30
-
+i-doit should now display via Administration > System tools > System overview the new PHP Version 7.4.30
 
 Updating 1.18 to 1.19
 ---------------------
@@ -642,7 +636,7 @@ Check your system. Check i-doit!
 Sources
 -------
 
-*   MariaDB upgrade Informations [https://mariadb.com/kb/en/upgrading/](https://mariadb.com/kb/en/upgrading/)
-*   Debian 9 upgrade [https://www.debian.org/releases/stretch/amd64/release-notes/ch-upgrading.en.html](https://www.debian.org/releases/stretch/amd64/release-notes/ch-upgrading.en.html)
-*   Debian 10 upgrade [https://www.debian.org/releases/buster/amd64/release-notes/ch-upgrading.en.html](https://www.debian.org/releases/buster/amd64/release-notes/ch-upgrading.en.html)
-*   Debian 11 upgrade [https://www.debian.org/releases/bullseye/amd64/release-notes/ch-upgrading.en.html](https://www.debian.org/releases/bullseye/amd64/release-notes/ch-upgrading.en.html)
+*   MariaDB upgrade Information [https://mariadb.com/kb/en/upgrading/](https://mariadb.com/kb/en/upgrading/)
+*   Debian 9 upgrade [https://www.debian.org/releases/stretch/](https://www.debian.org/releases/stretch/)
+*   Debian 10 upgrade [https://www.debian.org/releases/buster/](https://www.debian.org/releases/buster/)
+*   Debian 11 upgrade [https://www.debian.org/releases/bullseye/](https://www.debian.org/releases/bullseye/)

@@ -39,6 +39,7 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
+| 1.3 | 2023-11-07 | [Bug] Deselected Objects are moved anyway |
 | 1.2 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
 | 1.1.1 | 2022-07-27 | [Bug] Relocate-CI: Subordinate objects of persons are also moved when moving a person  <br>[Bug] Truck in location view causes wrong links  <br>[Bug] Relocation of workstation to person causes wrong location in workplace components |
 | 1.1 | 2021-10-25 | [Improvement] Function to relocate multiple objects from the same location to another location  <br>[Bug] PHP warning because of different method declarations (e.g. in Report-Browser)  <br>[Bug] Add a dynamic property to the logbook of the Relocate-CI add-on  <br>[Bug] No logs are created by the add-on  <br>[Bug] Logical locations is no longer displayed on the right side |

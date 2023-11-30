@@ -103,6 +103,7 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | ------------------------------------------- | ------------ |
 | Detaillierte CMDB Änderungen protokollieren | Ja oder Nein |
 | "Änderungskommentar" deaktivieren           | Ja oder Nein |
+| Logbucheinträge zu bereinigten Objekten vollständig löschen | Ja oder Nein |
 
 ## Templates
 

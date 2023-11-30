@@ -47,12 +47,14 @@ RUN groupadd -g "${GROUP_ID}" docs; \
 WORKDIR /tmp/
 
 # Node.js and NPM:
-RUN curl -OfsSL \
-        https://raw.githubusercontent.com/tj/n/master/bin/n; \
-    install -m 0755 -o root -g root n /usr/local/bin/; \
-    rm n; \
-    n lts; \
-    npm install -g npm@latest
+ARG NODE_VERSION=20.9.0
+ARG NPM_VERSION=10.2.3
+RUN curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n \
+    -o /usr/local/bin/n; \
+    chmod 0755 /usr/local/bin/n; \
+    n "$NODE_VERSION"; \
+    npm install -g "npm@$NPM_VERSION"; \
+    npm completion > /etc/bash_completion.d/npm
 
 # hadolint:
 ARG HADOLINT_VERSION=2.12.0
@@ -95,7 +97,7 @@ RUN groupadd -g "${DOCKER_GROUP_ID}" docker; \
     chown root:docker /var/run/docker.sock
 
 # Docker Compose:
-ARG DOCKER_COMPOSE_VERSION=2.16.0
+ARG DOCKER_COMPOSE_VERSION=2.23.0
 RUN curl -OfsSL \
         "https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-linux-x86_64"; \
     curl -OfsSL \
@@ -110,7 +112,7 @@ RUN curl -OfsSL \
         checksums.txt
 
 # editorconfig-checker (ec):
-ARG EC_VERSION=2.7.0
+ARG EC_VERSION=2.7.2
 RUN curl -OfsSL \
         "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/${EC_VERSION}/ec-linux-amd64.tar.gz"; \
     tar -xzf ec-linux-amd64.tar.gz; \

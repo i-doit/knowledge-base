@@ -153,6 +153,7 @@ Releases
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.3 | 07.11.2023 | [Bug] Custom Object types are not replaced in report conditions<br/>[Bug] HTTP 500 while Add-on uninstall via Admin Center |
 | 1.2.1 | 22.08.2023 | [Bug] The content buttons do not work in some browsers<br>[Bug] The User is not able to download the add on zip file |
 | 1.2 | 05.09.2022 | [Task] PHP 8.0 Compatibility <br/> [Task] Design Compatibility |
 | 1.1.1 | 27.07.2022 | [Bug] Packaging does not work with custom category dialog+ fields |

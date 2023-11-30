@@ -1,5 +1,4 @@
 # Analysis
-!!! info "Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/ci-relationen-analysieren-mit-dem-i-doit-pro-add-on-analysis/)"
 
 Das [Add-on](index.md) **Analyse** ermöglicht im Schwerpunkt zwei Anwendungen: Zum Einen untersucht es die Daten- und Dokumentationsqualität und liefert eine interaktive Ergebnisansicht mit dem ermittelten Status. Zum Anderen dient es der Simulation von Ausfällen. So können "Was passiert wenn"-Szenarien durchgespielt und in ihren Auswirkungen auf die Infrastruktur analysiert werden. Bei kombinierter Nutzung mit der Schnittstelle zur Monitoring-Lösung [Checkmk](../i-doit-pro-add-ons/checkmk2/index.md) können auch Live-Ausfälle entsprechend ihrer Auswirkung direkt untersucht werden.
 
@@ -98,6 +97,7 @@ Releases
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.4 | 07.11.2023 | [Task] Use new routes to display object and object type images / move add-on related files |
 | 1.3.1 | 22.08.2023 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Service assignment is not displayed in data quality<br>[Bug] It is not possible to remove categories in data-quality profiles |
 | 1.3 | 05.09.2022 | [Task] PHP 8.0 Compatibility <br/> [Task] Design Compatibility |
 | 1.2 | 21.02.2022 | [Improvement] Dataquality on a report basis <br/> [Improvement] Implement API methods for the data quality report <br/> [Improvement] English add-on renaming to Analysis <br/> [Bug] Result In Objectcatalog Is Incomplete And Partially Incorrect |

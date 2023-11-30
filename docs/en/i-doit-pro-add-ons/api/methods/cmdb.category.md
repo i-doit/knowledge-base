@@ -80,6 +80,7 @@ Read one or more [category](../../../basics/structure-of-the-it-documentation.md
 | ------------ | -------------- | -------- | ---------------------------------------------------- |
 | **objID**    | Integer        | Yes      | Object identifier, for example: **42**               |
 | **category** | String         | Yes      | Category constant, for example: **"C__CATG__MODEL"** |
+| **status**   | Integer        | Yes      | ID of the status, for example **2** for **normal** <br> If the status parameter is not specified, the status must be set to **2** (normal). This corresponds to the previous behavior. |
 
 ### Response parameters
 

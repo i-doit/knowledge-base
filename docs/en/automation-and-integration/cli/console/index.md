@@ -47,7 +47,7 @@ When you execute the CLI without further arguments, the general help is displaye
       clear-credentials                   It removes both attributes `username` and `password` from the users "login" category
       completion                          Dump the shell completion script
       contracts-outdated                  Updates status of outdated contracts
-      documents
+      documents                           Allows to create revisions or export one or multiple documents
       extend-contracts                    Automatically extend the runtime of not-cancelled contracts
       help                                Display help for a command
       import-csv                          Imports CSV formatted files (Using a predefined CSV Import filter, defined in the GUI)

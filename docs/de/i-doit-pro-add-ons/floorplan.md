@@ -22,7 +22,8 @@ Raumplan erstellen
 
 [![Raumplan erstellen](../assets/images/de/i-doit-pro-add-ons/floorplan/4-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/4-fp.png)
 
-Um einen Raumplan zu erstellen klickst du in der Standortsicht auf das [![Standortsicht](../assets/images/de/i-doit-pro-add-ons/floorplan/5-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/5-fp.png)  bei dem jeweiligen Standortobjekt. Über die Schaltfläche [![Schaltfläche ](../assets/images/de/i-doit-pro-add-ons/floorplan/6-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/6-fp.png) lassen sich Grafiken wie zum Beispiel der Grundriss eines Raumes in den Hintergrund des Raumplanes legen.  
+Um einen Raumplan zu erstellen klickst du in der Standortsicht auf das [![Standortsicht](../assets/images/de/i-doit-pro-add-ons/floorplan/5-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/5-fp.png)  bei dem jeweiligen Standortobjekt. Über die Schaltfläche [Schaltfläche](../assets/images/de/i-doit-pro-add-ons/floorplan/6-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/6-fp.png) lassen sich Grafiken wie zum Beispiel der Grundriss eines Raumes in den Hintergrund des Raumplanes legen.
+
 Mit der Schaltfläche[![Schaltfläche](../assets/images/de/i-doit-pro-add-ons/floorplan/7-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/7-fp.png) kann dieser Grafik ein Maßstab hinzugefügt werden. Die Bemaßung des Raumes hilft für das spätere Positionieren von Objekten, dass diese entsprechend ihres definierten Formfaktors maßstabsgerecht dargestellt werden können.
 
 Für den Raumplan werden die folgenden Grafikformate unterstützt : bmp, png, jpg, jpeg, gif. Die maximale Dateigröße ist auf 5 MB beschränkt.
@@ -53,7 +54,7 @@ Ausrichtung: Hier kann eine Ausrichtung definiert werden. Oben, unten, rechts un
 
 [![icon](../assets/images/de/i-doit-pro-add-ons/floorplan/18-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/18-fp.png) Positionierung lösen: Das Objekt verschwindet wieder aus dem Raumplan, kann aber über die Objektliste erneut hinzugefügt werden.
 
-[![icon](../assets/images/de/i-doit-pro-add-ons/floorplan/19-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/19-fp.png) Über diese Sschaltfläche öffnet sich ein Popup bei dem Sie den Objektradius definieren können. Der Raidus kann eingefärb, tranparent dargestellt sowie in verschiedenen Maßeinheiten konfiguriert werden.
+[![icon](../assets/images/de/i-doit-pro-add-ons/floorplan/19-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/19-fp.png) Über diese Schaltfläche öffnet sich ein Popup bei dem Sie den Objektradius definieren können. Der Radius kann eingefärbt, transparent dargestellt sowie in verschiedenen Maßeinheiten konfiguriert werden.
 
 [![icon](../assets/images/de/i-doit-pro-add-ons/floorplan/20-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/20-fp.png)Über diese Schaltfläche werden die Daten des Objektes übernommen, die dort unter der [Kategorie](../grundlagen/struktur-it-dokumentation.md) **Formfaktor** angegeben sind. Das Objekt wird entsprechend des gesetzten Maßstabes des Raumplanes in seiner Größe skaliert und abgebildet.
 
@@ -61,9 +62,52 @@ Ausrichtung: Hier kann eine Ausrichtung definiert werden. Oben, unten, rechts un
 
 [![icon](../assets/images/de/i-doit-pro-add-ons/floorplan/22-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/22-fp.png)Über diese Schaltfläche wird das innerhalb des Raumplanes ausgewählte Objekt in einem neuen Tab des Browsers geöffnet.
 
-Wenn das Objekt im Editiermodus ausgewählt wird es durch einen blinkenden Umriss hervorgehoben und es stehen weitere Optionen zum verändern der Form sowie freies drehen zur verfügung.
+Wenn das Objekt im Editiermodus ausgewählt wird es durch einen blinkenden Umriss hervorgehoben und es stehen weitere Optionen zum verändern der Form sowie freies drehen zur Verfügung.
 
 [![Editiermodus](../assets/images/de/i-doit-pro-add-ons/floorplan/23-fp.gif)](../assets/images/de/i-doit-pro-add-ons/floorplan/23-fp.gif)
+
+## Zusammenführung von Raumplänen
+
+Es sollte möglich sein, Raumpläne zu einem Raumplan hinzuzufügen - denken wir an ein Stockwerk, das mehrere Räume enthält. In diesem "Stockwerk"-Raumplan wollen wir die "Raum"-Pläne positionieren.
+Wir müssen hier einige Grundregeln festlegen - zum Beispiel zeigen wir nur drei Ebenen von Grundrissen an, das heißt:
+
+```text
+Base Raumplan:
+-   obj A
+-   obj B
+-   Raumplan A:
+    -   obj C
+    -   obj D
+-   Raumplan B:
+    -   obj E
+    -   obj F
+    -   Raumplan C (Anzeige als leerer Block ohne seine positionierten Objekte)
+        -   obj G
+        -   obj H
+```
+
+Nehmen wir an, wir sehen gerade den "Base" Raumplan. Wir sollten in der Lage sein, den verschachtelten "Raumplan A" zu sehen, und innerhalb dieses Raumplan sollten wir "Raumplan B" sehen können (einschließlich "obj E" und "obj F"). Der "Raumplan C" wird jedoch nicht als Raumplan angezeigt, sondern sieht wie ein Basisobjekt aus, da wir die verschachtelten Raumplan auf drei Ebenen beschränken (um Rekursionen, Speicher- und Leistungsprobleme zu vermeiden).
+
+### Wie es funktioniert
+
+Wenn Sie den "Base"-Raumplan" betrachten, können Sie "Raumplan A" und "Raumplan B" wie die anderen Objekte ("obj A" und "obj B") verschieben - Sie können nichts innerhalb dieses importierten Objekts bearbeiten.
+
+### Wann kann ein verschachtelter Raumplan angezeigt werden?
+
+Um "Raumplan A" als Raumplan innerhalb des "Base"-Raumplan anzuzeigen, muss er eine der folgenden Bedingungen erfüllen:
+
+-   ein Hintergrundbild haben
+-   ein Layout haben
+
+Wenn eine dieser Bedingungen erfüllt ist, sehen Sie beim Bearbeiten eines Grundrissobjekts (innerhalb eines anderen Grundrisses) das folgende Symbol:
+
+[![icon](../assets/images/de/i-doit-pro-add-ons/floorplan/add-on-icon.svg)](../assets/images/de/i-doit-pro-add-ons/floorplan/add-on-icon.svg)
+
+Beispiel:
+
+[![Beispiel gif](../assets/images/de/i-doit-pro-add-ons/floorplan/floorplan-toggle.gif)](../assets/images/de/i-doit-pro-add-ons/floorplan/floorplan-toggle.gif)
+
+Der Raumplan sollte auf die vorherige Objektgröße skaliert werden, das Layout/Hintergrundbild wird zur Bestimmung des Maßstabs verwendet.
 
 Raumplan Profile
 ----------------
@@ -76,10 +120,11 @@ Es wird ein Profil mitgeliefert. Natürlich kann man auch eigene Profile anlegen
 
 Um ein neue Profil zu erstellen klickst du auf [![](../assets/images/de/i-doit-pro-add-ons/floorplan/25-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/25-fp.png).
 
-Dadurch öffnet sich ein popup Fenster in dem die Porile verwaltet werden.
+Dadurch öffnet sich ein popup Fenster in dem die Profile verwaltet werden.
+
 [![](../assets/images/de/i-doit-pro-add-ons/floorplan/26-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/26-fp.png)
 
-Nach dem klicken auf "Neues Profil anlegen" gelangen wir in die bearbeitungsansicht. Hier vergeben wir als erstes die Bezeichnung des Profiles. Dann können wir noch wählen ob "Bei klick auf Objekt Objektsicht öffnen" aktivert sein soll und
+Nach dem klicken auf "Neues Profil anlegen" gelangen wir in die bearbeitungsansicht. Hier vergeben wir als erstes die Bezeichnung des Profiles. Dann können wir noch wählen ob "Bei klick auf Objekt Objektsicht öffnen" aktiviert sein soll und
 
 ob "Doppelklick auf Objekt öffnet dies in neuem Tab" aktiviert sein soll.
 
@@ -91,7 +136,7 @@ _Highlight-Farbe_: Hier können Sie per klick eine Farbe wählen die das Objekt 
 
 Bei der Auswahl von #FB481C würde dies so aussehen [![](../assets/images/de/i-doit-pro-add-ons/floorplan/28-fp.png)](../assets/images/de/i-doit-pro-add-ons/floorplan/28-fp.png)
 
-_Objektradius darstelle_n: Hier wird definiert ob der Objektradius standardmäßig angezeigt wird.
+_Objektradius darstellen_: Hier wird definiert ob der Objektradius standardmäßig angezeigt wird.
 
 **Im Reiter Standardwerte kann ein Objekttyp Filter konfiguriert werden.**
 
@@ -119,6 +164,7 @@ Releases
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.7 | 07.11.2023 | [Bug] MySQL8 causes database error "incorrect DATETIME" when opening Floorplan<br>[Bug] When turning an object, the text should also turn<br>[Bug] Language constant 'LC__CMDB__CATG__ACCOUNTING_ORDER_DATE' is not <br>eplaced<br>[Bug] Highlight 'add-on' instead of 'extras' menu |
 | 1.6 | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
 | 1.5.1 | 21.02.2022 | [Bug] Floorplans cannot be opened |
 | 1.5 |     | [Improvement] It is possible to display a floorplan in a floorplan  <br>[Improvement] It is possible to remove a layout from the floorplan  <br>[Improvement] It is possible to remove the background from the floorplan  <br>[Improvement] Show the object name of the current floorplan in the breadcrumb  <br>[Bug] Function to inherit formfactor data scales dimensions wrong |

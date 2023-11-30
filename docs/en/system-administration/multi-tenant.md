@@ -4,7 +4,7 @@ _i-doit_ is capable of managing multiple tenants. This means that one installati
 
 !!! info "Licensing"
 
-    For the capability to operate one installation with multiple tenants a special license is required. More information is available [on request](https://www.i-doit.com/en/company/contact/).
+    For the capability to operate one installation with multiple tenants a special license is required. More information is available [on request](https://www.i-doit.com/en/contact/).
 
 Background
 ----------
@@ -20,11 +20,11 @@ The administration of tenants is done in the admin center. All presently created
 
 Above the listing various options are available:
 
-- **Add new tenant**: create a new tenant
-- **Edit**: configure an existing tenant
-- **Activate**: activate an existing tenant, if it was deactivated before
-- **Deactivate**: deactivate an existing tenant, if it was activated before
-- **Remove**: remove an existing tenant **irreversibly**
+-   **Add new tenant**: create a new tenant
+-   **Edit**: configure an existing tenant
+-   **Activate**: activate an existing tenant, if it was deactivated before
+-   **Deactivate**: deactivate an existing tenant, if it was activated before
+-   **Remove**: remove an existing tenant **irreversibly**
 
 A tenant is selected via the checkboxes for the configuration. For (de-)activating or removing one or more tenants are selected.
 
@@ -32,11 +32,11 @@ A tenant is selected via the checkboxes for the configuration. For (de-)activati
 
 For each tenant you need to set some properties (mandatory fields):
 
-- **Tenant GUI title**: name of the tenant (is shown at the login, for example)
-- **Description**: apart from its informal character this description has no effect on the functionality
-- **Sort value**: enter the sorting order as integer (the lower the value the higher is the tenant in the hierarchy)
-- **Cache dir**: much data is temporarily saved in _i-doit_ due to performance reasons. For each tenant a dedicated cache folder is created in the **temp/** folder in the installation path of _i-doit_.
-- **MySQL settings**: here it is useful to name the database name with the prefix **idoit_**. The first tenant receives the database name **idoit_data** in the [installation process](../installation/manual-installation/setup.md) by default.
+-   **Tenant GUI title**: name of the tenant (is shown at the login, for example)
+-   **Description**: apart from its informal character this description has no effect on the functionality
+-   **Sort value**: enter the sorting order as integer (the lower the value the higher is the tenant in the hierarchy)
+-   **Cache dir**: much data is temporarily saved in _i-doit_ due to performance reasons. For each tenant a dedicated cache folder is created in the **temp/** folder in the installation path of _i-doit_.
+-   **MySQL settings**: here it is useful to name the database name with the prefix **idoit_**. The first tenant receives the database name **idoit_data** in the [installation process](../installation/manual-installation/setup.md) by default.
 
 Object Limitation per Tenant
 ----------------------------

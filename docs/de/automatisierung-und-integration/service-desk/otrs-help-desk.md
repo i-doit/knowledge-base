@@ -4,4 +4,4 @@
 
 ## OTRS-Module
 
-Derzeit existieren mehrere aktiv gepflegte OTRS-Module. [Eine Liste befindet sich auf der Website i-doit.com.](https://www.i-doit.com/produkte/add-ons/)
+Derzeit existieren mehrere aktiv gepflegte OTRS-Module. [Eine Liste befindet sich auf der Website i-doit.com.](https://www.i-doit.com/i-doit/add-ons/)

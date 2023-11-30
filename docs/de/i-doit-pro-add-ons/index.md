@@ -32,7 +32,7 @@ Liste von verfügbaren Add-ons
 | **[VIVA](./viva/index.md)** | ja  | nein | ja  |
 | **[Workflow](./workflow.md)** | ja  | nein | nein |
 
-Neben diesen Add-ons existieren viele weitere, die von unseren Partnern und externen Entwicklern zur Verfügung gestellt werden. Eine umfangreiche Auflistung befindet sich [auf der Website i-doit.com unter **Produkt → Add-ons**](https://www.i-doit.com/produkte/add-ons/).
+Neben diesen Add-ons existieren viele weitere, die von unseren Partnern und externen Entwicklern zur Verfügung gestellt werden. Eine umfangreiche Auflistung befindet sich [auf der Website i-doit.com unter **Produkt → Add-ons**](https://www.i-doit.com/i-doit/add-ons/).
 
 Download
 --------
