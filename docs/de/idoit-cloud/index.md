@@ -1,12 +1,12 @@
 ---
-title: i-doit pro managed
-description: i-doit pro managed
+title: i-doit pro cloud
+description: i-doit pro cloud
 icon: material/cloud
 status: new
 lang: de
 ---
 
-# i-doit pro managed
+# i-doit pro cloud
 
 Unsere Services im Überblick:
 
@@ -22,7 +22,7 @@ Unsere Services im Überblick:
 
 ## Allgemeine Informationen
 
--   Eigene i-doit pro managed Instanz für bis zu 50.000 Objekte
+-   Eigene i-doit pro cloud Instanz für bis zu 50.000 Objekte
 -   1 GB Datenspeicherplatz
 -   5 gleichzeitige Anwender
 -   10.000 API Calls pro Tag, aktuell nicht limitiert
@@ -46,15 +46,15 @@ Unsere Services im Überblick:
 -   Software Updates (inklusive Add-ons)
 -   Bug Meldungen
 -   Einreichen von Wünschen zur Funktionsverbesserung
-
+<!--
 ## Hotfixes
 
 ## PHP Version
 
 ## i-doit Update
 
-## Migration zu i-doit managed
-
+## Migration zu i-doit cloud
+-->
 ## FAQ
 
 -   Eine Datenbank Migration ist aktuell nicht möglich.
