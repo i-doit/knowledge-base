@@ -56,14 +56,13 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
         **The encoding of umlauts are displayed in report titles**<br>
         **Status filter for multivalue categories in report manager is not working correctly for custom categories**
 
-<!---
-### Changing technical keys to only contain words causes entries to lose the values when filled with API (Number only)
-
-[xxx.zip :material-file-download:](../../assets/downloads/hotfixes/27/xxx.zip){ .md-button .md-button--primary }
---->
 ### Description fields yield validation errors on 32bit systems
 
 [i-doit_27_hotfix_ID-9928_7dca69d.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9928_7dca69d.zip){ .md-button .md-button--primary }
+
+### Changing technical keys to only contain words causes entries to lose the values when filled with API (Number only)
+
+[i-doit_27_hotfix_ID-9938.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9938.zip){ .md-button .md-button--primary }
 
 ### Icon redirects are not cached
 
