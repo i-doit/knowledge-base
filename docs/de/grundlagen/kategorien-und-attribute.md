@@ -51,7 +51,7 @@ i-doit bringt bereits über 200 vordefinierte [Kategorien](struktur-it-dokumenta
 | **Freigabenzugriff** | \-  | Dieses Objekt greift auf eine bestehende Freigabe (Samba, CIFS, NFS usw.) eines anderen Objekts zu. Rückwärtige Kategorie: **Freigabe** |
 | **Grafikkarte** | \-  | Liste von eingebauten Grafikkarten |
 | **Gruppenmitgliedschaft** | \-  | Zuordnung des Objekts zu einer dynamischen oder statischen Gruppe; siehe Objekttyp **Objektgruppe**; rückwärtige Kategorie: **Objektgruppe** |
-| **Handbuchzuweisung** | \-  | Zuweisung von Dateien, die wiederum als Objekte vom Typ **Dateien** abgelegt werden; per Drag'n'Drop können neue Dateien hochgeladen werden; ähnelt den Kategorien **Dateizuweisung** und **Notfallplanzuweisung**; rückwärtige Kategorie: **Dateien → Zugewiesene Objekte** |
+| **Handbuchzuweisung** | \-  | Zuweisung von Dateien, die wiederum als Objekte vom Typ **Dateien** abgelegt werden; per Drag'n'Drop können neue Dateien hochgeladen werden; ähnelt den Kategorien **Dateizuweisung** und **Notfallplanzuweisung**; rückwärtige Kategorie: **Dateien → Zugewiesene Objekte (Dateien)** |
 | **Hostadresse** | \-  | [IPAM](../anwendungsfaelle/ip-adress-management.md): Liste von konfigurierten IP-Adressen (IPv4/IPv6); zusätzliche Zuordnung von **Hostname**, **Domain**, Netzwerkanschlüssen (siehe Kategorie **Netzwerk** **→ Port**) und Subnetzen (siehe Objekttyp **Layer-3-Netz**); rückwärtige Kategorie: **IP-Liste** |
 | **JDisc Custom Attributes** | \-  | Benutzerdefinierte Attribute, die aus [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) importiert worden sind, anzeigen und bearbeiten |
 | **JDisc Discovery** | \-  | Import aus [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) für dieses Objekt durchführen |
@@ -59,7 +59,7 @@ i-doit bringt bereits über 200 vordefinierte [Kategorien](struktur-it-dokumenta
 | **Kabelverbindung** | \-  | Kategorie-Ordner mit den untergeordneten Kategorien **Kabelverbindung** und **Kabel**. |
 | **Kabelverbindung -> Kabel** | \-  | Angaben zu einem **Kabel**, zum Beispiel Länge und Farbe |
 | **Kabelverbindung -> Kabelverbindung** | \-  | Zeigt die Kabelverbindung an |
-| **Karten** | \-  | Angaben zu einer SIM-Karte (Verknüpftes Mobiltelefon, Pin, Seriennummer); rückwärtige Kategorie: **Zugewiesene SIM-Karten** |
+| **Karten** | \-  | Angaben zu einer **SIM-Karte** (Verknüpftes Mobiltelefon, Pin, Seriennummer); rückwärtige Kategorie: **Verknüpfte Karten** |
 | **Kontaktzuweisung** | \-  | Ordnet **Personen**, **Personengruppen**, **Organisationen** o. ä. einem Objekt zu; jede Zuordnung kann mit einer **Rolle** versehen werden, z. B. **Administrator**; rückwärtige Kategorie: **Personen/Personengruppen/Organisation → Zugewiesene Objekte** |
 | **Laufwerk** | \-  | Dokumentation von konfigurierten Mount Points oder Laufwerksbuchstaben; ergänzt Kategorie-Ordner **Lokaler Massenspeicher**; siehe auch Kategorien **Freigabenzugriff** und **Speichernetze → Logische Geräte (Client)** |
 | **LDAP** | **Distinguished Name (DN)** | Wird eine Person oder eine Personengruppe über [LDAP/AD](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) synchronisiert, wird hier der zugehörige DN hinterlegt. |
@@ -82,10 +82,9 @@ i-doit bringt bereits über 200 vordefinierte [Kategorien](struktur-it-dokumenta
 | **Netzwerk -> Netzwerk-Endpunkte** | \- | Ist die zugehörige Option im JDisc Profil aktiviert, werden die Verbindungen werden nicht in die Verkabelung, sondern in die Kategorie "Netzwerk-Endpunkte" importiert. Das ermöglicht zwischen der manuellen Verkabelung und der automatischen Verkabelung durch JDisc zu unterscheiden.
 | **Netzwerk -> Netzwerk-Interface** | \-  | Zuweisung von physikalischen Netzwerkanschlüssen (siehe Kategorie **Netzwerk → Netzwerkport**) zu internen Anschlüssen eines Geräts, zum Beispiel Onboard oder PCIe-Steckkarte; ist im Kategorie-Ordner **Netzwerk** enthalten |
 | **Netzwerk -> Netzwerkport** | \-  | Liste von physikalischen Netzwerkanschlüssen (Ethernet); enthält Attribute zur MAC-Adresse, zugeordnete VLANs (siehe Objekttyp **Layer-2-Netz**), zugeordnete IP-Adressen (siehe Kategorie **Hostadresse**) und angeschlossenen Geräten; ist im Kategorie-Ordner **Netzwerk** enthalten; befüllt automatisch die Kategorie **Verkabelung → Anschlüsse** |
-| **Netzwerk -> Übersicht der Netzwerkports** | \- | TODO
+| **Netzwerk -> Übersicht der Netzwerkports** | \- | Zeigt die Ports gebündelt an. |
 | **Netzwerk -> VRRP Mitgliedschaft** | \-  | Liste aller logischen Ports (siehe Kategorie **Netzwerk → Logische Netzwerkports**), die einem VRRP-/HSRP-/CARP-Cluster zugeordnet sind; ist im Kategorie-Ordner **Netzwerk** enthalten; rückwärtige Kategorie: **VRRP → Mitglieder** |
 | **Netzwerk-Listener** | \-  | Kategorie-Ordner mit den untergeordneten Kategorien **Listener**, **Netzwerk-Listener** und **Netzwerkverbindungen**; ermöglicht das Dokumentieren von Netzwerkkommunikation zwischen Applikationen; wird häufig (virtueller) Hardware wie Server, VMs oder Clients zugeordnet, auf denen Applikationen installiert sind (siehe Kategorie **Softwarezuweisung**); benötigt zudem IP-Adressen (siehe Kategorie **Hostadresse**) |
-| **Netzwerk-Listener -> Listener** | \-  | Öffnet eine installierte Applikation (siehe Kategorie **Softwarezuweisung**) einen Port (1-65535) über das IP-Protokoll (siehe Kategorie **Hostadresse**), sprich über Protokolle wie TCP und UDP, kann dies hier dokumentiert werden; ist im Kategorie-Ordner **Netzwerk-Listener** enthalten; rückwärtige Kategorie: **Verbindung** |
 | **Netzwerk-Listener -> Netzwerkverbindungen** | \-  | Greift eine installierte Applikation (siehe Kategorie **Softwarezuweisung**) über eine IP-basierte Netzwerkverbindung (siehe Kategorie **Hostadresse**) auf eine andere Applikation zu, kann dies hier dokumentiert werden; ist im Kategorie-Ordner **Netzwerk-Listener** enthalten; rückwärtige Kategorie: **Listener** |
 | **Notfallplanzuweisung** | \-  | Zuweisung von Dateien, die wiederum als Objekte vom Typ **Dateien** abgelegt werden; per Drag'n'Drop können neue Dateien hochgeladen werden; ähnelt den Kategorien **Dateizuweisung** und **Handbuchzuweisung**; rückwärtige Kategorie: **Notfallplan → Notfallplan Komponenten** |
 | **Objektbild** | \-  | Ändert das Standardbild eines Objekts, das auf jeder Seite dargestellt wird; da das Bild lediglich 150x150 Pixel groß sein darf, ist die Kategorie **Bilder** oftmals besser geeignet |
@@ -107,7 +106,7 @@ i-doit bringt bereits über 200 vordefinierte [Kategorien](struktur-it-dokumenta
 | **Service Typ** | **Typ** | Typisierung von Services; ist im Kategorie-Ordner **Service** enthalten |
 | **Servicezuweisung** | \-  | Dient das Objekt als Komponente eines Services, kann es hierüber hinzugefügt werden. Ein Objekt kann mehreren Services zugewiesen werden. Rückwärtige Kategorie: **Service Komponenten** |
 | **SIM** | \-  | Angaben zu  einer **SIM-Karte** (Netzanbieter, Tarif, Telefonnummer usw.) |
-| **SIM-Karte** _alt_ | \-  | Angaben zu  einer **SIM-Karte** (Netzanbieter, Tarif, Telefonnummer usw.) |
+| **SIM-Karte** | \-  | Angaben zu  einer **SIM-Karte** und Zuweisung zu einem Mobiltelefon (Netzanbieter, Tarif, Telefonnummer usw.) |
 | **SLA** | \-  | Angaben zu einem Service Level Agreement (SLA); häufig den Objekttypen **Service** und **Vertrag** zugeordnet |
 | **Smartcard Zertifikat** | \-  | Angaben zu einer Smartcard |
 | **SNMP** | \-  | Live-Abfrage von Informationen über das Protokoll SNMP; abgerufene Daten werden **nicht** gespeichert |
@@ -156,7 +155,7 @@ i-doit bringt bereits über 200 vordefinierte [Kategorien](struktur-it-dokumenta
 | **Zugewiesene Arbeitsplätze** | \-  | Eine **Person** kann einem oder mehreren Objekten vom Typ **Arbeitsplatz** zugeordnet werden. Rückwärtige Kategorie: **Logischer Standort** |
 | **Zugewiesene Benutzer** | \-  | Zuordnung von Subskriptionen zu Personen; rückwärtige Kategorie: **Zugewiesene Abonnente** |
 | **Zugewiesene Endgeräte** |     | Objekte, die einem Objekt vom Typ **Arbeitsplatz** zugewiesen werden. Rückwärtige Kategorie: **Zugewiesener Arbeitsplatz** |
-| **Zugewiesene Objekte (Dateien)** | \-  | Zuordnung von Objekten zu einer Datei; ist im Kategorie-Ordner **Dateien** enthalten; rückwärtige Kategorie: **Dateizuweisung** |
+| **Zugewiesene Objekte (Dateien)** | \-  | Zuordnung von Objekten zu einer Datei; ist im Kategorie-Ordner **Dateien** enthalten; rückwärtige Kategorie: **Dateien → Zugewiesene Objekte (Dateien)** |
 | **Zugewiesene SIM-Karten** | \-  | Liste von SIM-Karten (siehe Objekttyp **SIM-Karte**); rückwärtige Kategorie: **Karten** |
 | **Zugewiesener Arbeitsplatz** | \-  | Das Objekt mit dieser Kategorie wird hierüber einem **Arbeitsplatz** zugewiesen. Rückwärtige Kategorie: **Zugewiesene Endgeräte** |
 | **Zugriff** | \-  | Setzen von beliebigen Links; bietet eine einfache, aber schnelle Verknüpfung zwischen verschiedenen Applikationen; das in der URL verwendete Protokoll ist beliebig, muss aber dem Web Browser bekannt sein |
@@ -169,12 +168,12 @@ i-doit bringt bereits über 200 vordefinierte [Kategorien](struktur-it-dokumenta
 | **Betriebssysteme** | \- | Kategorie-Order mit untergeordneten Kategorien **Betriebssysteme**, **Installation** und **Varianten**; enthält Angaben zum Betriebssystem |
 | **Arbeitsplatzsystem** | \-  | Angaben zu einem Computer, zum Beispiel **Typ des Clients** (Laptop, Desktop usw.) oder **Tastatur-Layout**; häufig dem Objekttyp **Client** zugeordnet |
 | **Beziehungsdetails** | \-  | Angaben zu einer [Objekt-Beziehung](objekt-beziehungen.md) |
-| **Chassis** | \-  | Kategorie-Ordner mit untergeordneten Kategorien **Chassis Ansicht**, **Slots**, **Verkabelung** und **Zugewiesene Geräte**; häufig den Objekttypen **Blade Chassis** und **Switch Chassis** zugeordnet |
+| **Chassis** | \-  | Kategorie-Ordner mit untergeordneten Kategorien **Chassis Ansicht**, **Slots**, **Chassis Verkabelung** und **Zugewiesene Geräte**; häufig den Objekttypen **Blade Chassis** und **Switch Chassis** zugeordnet |
 | **Chassis -> Chassis Ansicht**  | Visuelle Darstellung eines Blade oder Switch Chassis; ist im Kategorie-Ordner **Chassis** enthalten |
 | **Chassis -> Chassis Verkabelung** | \-  | Interne Vernetzung innerhalb eines Chassis; ist im Kategorie-Ordner **Chassis** enthalten |
 | **Chassis -> Slots** | \-  | Liste von verfügbaren Slots in einem Blade oder Switch Chassis; ist im Kategorie-Ordner **Chassis** enthalten |
 | **Chassis -> Zugewiesene Geräte** | \-  | Liste von Hardware-Objekten (**Blade Server**, Switch-Module), die in einem Chassis eingesteckt sind; ist im Kategorie-Ordner **Chassis** enthalten; ergänzt die Kategorie **Räumlich zugeordnete Objekte** |
-| **DBMS** | **DBMS** | Kategorie-Ordner mit untergeordneten Kategorien **Anwendungen**, **Clusterinstallation**, **Installation**, **Varianten** und **Zugeordnete Cluster** |
+| **DBMS** | - | Kategorie-Ordner mit untergeordneten Kategorien **Anwendungen**, **Clusterinstallation**, **Installation**, **Varianten** und **Zugeordnete Cluster** |
 | **DBMS -> Anwendungen** | \- | Angaben zur Applikation, beispielsweise den **Hersteller**; ist im Kategorie-Ordner **DBMS** enthalten
 | **DBMS -> Clusterinstallation**  | Liste von zugeordneten Clustern; ist im Kategorie-Ordner **DBMS** enthalten; speist sich aus Daten der Kategorie **DBMS → Zugeordnete Cluster** |
 | **DBMS -> Zugeordnete Cluster** | \-  | Liste von Objekten vom Typ **Cluster** mit weiteren Angaben, wie der Cluster definiert ist; ist im Kategorie-Ordner **DBMS** enthalten; rückwärtige Kategorie: **Clustermitgliedschaften** |
@@ -210,7 +209,7 @@ i-doit bringt bereits über 200 vordefinierte [Kategorien](struktur-it-dokumenta
 | **Netz -> IP-Liste** | \-  | Visuelle Darstellung eines Subnets mit weiteren Funktionen und Statistiken; ist im Kategorie-Ordner **Netz** enthalten; rückwärtige Kategorie: **Hostadresse** |
 | **Netz -> Netzbereiche** | \-  | Angaben zur Segmentierung von Subnetzen; ist im Kategorie-Ordner **Netz** enthalten; rückwärtige Kategorie: **Netzbereich → Bereiche** |
 | **Netzersatzanlage** | \-  | Angaben zu einem Stromgenerator, zum Beispiel Dieselaggregat; häufig dem gleichnamigen Objekttypen **Netzersatzanlage** zugeordnet |
-| **Notfallplan** | \-  | Kategorie-Ordner mit untergeordneten Kategorien **Notfallplan Eigenschaften** und **Zugewiesene Objekte**; häufig dem gleichnamigen Objekttypen **Notfallplan** zugeordnet |
+| **Notfallplan** | \-  | Kategorie-Ordner mit untergeordneten Kategorien **Notfallplan Eigenschaften** und **Notfallplan Komponenten**; häufig dem gleichnamigen Objekttypen **Notfallplan** zugeordnet |
 | **Notfallplan -> Notfallplan Eigenschaften** | \-  | Angaben zu einem Notfallplan: **Zeitbedarf** und **Datum Notfallübung**; ist im Kategorie-Ordner **Notfallplan** enthalten |
 | **Objektgruppe** | \-  | Liste von zugeordneten Objekten (siehe gleichnamigen Objekttyp **Objektgruppe**); ist Kategorie-Ordner mit der untergeordneten Kategorie **Typ**; rückwärtige Kategorie: **Gruppenmitgliedschaft** |
 | **Objektgruppe -> Typ** | \-  | Definition, ob eine **Objektgruppe** dynamisch (per [Report](../auswertungen/report-manager.md)) oder statisch aufgebaut ist; ist im Kategorie-Ordner **Objektgruppe** enthalten |
@@ -237,6 +236,6 @@ i-doit bringt bereits über 200 vordefinierte [Kategorien](struktur-it-dokumenta
 | **Vertrag** | \-  | Kategorie-Ordner mit untergeordneten Kategorien **Vertragsinformationen** und **Vertrags Objekte**; häufig dem gleichnamigen Objekttypen **Vertrag** zugeordnet |
 | **Vertrag -> Vertrags Objekte** | \-  | 1.  Liste von Objekten, die einem **Vertrag** zugeordnet sind; ist im Kategorie-Ordner **Vertrag** enthalten; rückwärtige Kategorie: **Vertragszuweisung**<br>2.  Liste von Objekten, die einem **Leitungsnetz** zugeordnet sind; ist im Kategorie-Ordner **Leitungsnetz** enthalten; rückwärtige Kategorie: **Verkabelung → Anschlüsse** (Attribut **Leitungsnetz**) |
 | **Vertrag -> Vertragsinformationen** | \-  | Angaben zu einem Vertrag; ist im Kategorie-Ordner **Vertrag** enthalten |
-| **WAN-Verbindung** | \-  | Angaben zu einer Internet-Anbindung (WAN, MAN, GAN o. ä.), daher häufig dem Objekttypen **WAN-Leitungen** zugeordnet |
+| **WAN** | \-  | Angaben zu einer Internet-Anbindung (WAN, MAN, GAN o. ä.), daher häufig dem Objekttypen **WAN-Leitungen** zugeordnet |
 | **WiFi-Gerät** | \-  | Angaben zu einem WLAN Access Point, daher häufig dem Objekttypen **Wireless Access Point** zugeordnet |
 | **Zugewiesene Objekte** | \-  | 1.  Zuordnung von Objekten zu einem Kontakt; ist in den Kategorie-Ordnern **Personen**, **Personengruppen** und **Organisation** enthalten; rückwärtige Kategorie: **Kontaktzuweisung**<br>2.  Zuordnung von Objekten zu einem **Notfallplan**; ist im Kategorie-Ordner **Notfallplan** enthalten; rückwärtige Kategorie: **Notfallplanzuweisung** |
