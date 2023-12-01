@@ -90,6 +90,10 @@ If opening the administration area of i-doit and navigating to "[Tenant-name] ma
 
 [api_1.15_hotfix_API-458_7e2ae2e.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.15_hotfix_API-458_7e2ae2e.zip){ .md-button .md-button--primary }
 
+### When using cmdb.objects.read it should be possible to use 'categories' without an array
+
+[api_1.15_hotfix_API-415.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.15_hotfix_API-415.zip){ .md-button .md-button--primary }
+
 ## Analyze Add-on 1.3
 
 ### Service assignment is not displayed in data quality
