@@ -331,8 +331,8 @@ JSON key **result** contains a JSON object.
     "params": {
         "object": 456,
         "data": {
-        "manufacturer": "Name of manufacturer",
-        "title": "Name of model"
+            "manufacturer": "Name of manufacturer",
+            "title": "Name of model"
         },
         "category": "C__CATG__MODEL",
         "entry": 24,
@@ -464,7 +464,7 @@ JSON key **result** contains a JSON object.
 | **category** | String             | Yes          | [Category constant](../../../basics/categories-and-attributes.md), for example: **"C__CATG__ACCESS"** |
 | **entry**    | Integer            | Yes          | Entry identifier, for example: **32**                                                                 |
 
-### Response boday
+### Response body
 
 JSON key **result** contains a JSON object.
 
