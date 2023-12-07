@@ -102,7 +102,7 @@ Für jeden Typ in JDisc kann ein äquivalenter Objekttyp in i-doit ausgewählt w
 | **Standard Templates aus Objekttypen berücksichtigen (nur bei Neuanlage)** | Wird ein neues Objekt erstellt, kann automatisch ein [Template](../effizientes-dokumentieren/templates.md) berücksichtigt werden. Die Auswahl des Templates findet in der Objekttyp-Konfiguration statt. |
 | **CMDB-Status der Objekte ändern auf** | Bereits vorhandene Objekte können beim Aktualisieren einen bestimmten **[CMDB-Status](../grundlagen/lebens-und-dokumentationszyklus.md)** erhalten. Soll der **CMDB-Status** nicht geändert werden, ist in der Auswahl **CMDB-Status beibehalten** zu wählen. |
 | **Software Filter** | Entweder kann eine White- oder eine Blacklist an Software-Applikationen angegeben werden, welche importiert werden sollen (Whitelist) oder eben nicht (Blacklist). Es können Wildcards (\*) angegeben werden. Die Liste von Titeln wird durch Kommas separiert. |
-| **Filter als regexp gebrauchen** | Den Software Filter mit Strings oder mit Regulären Ausdrücken verwenden? Da das regex direkt an die JDisc Datenbank weitergeleitet wird, sollten die passenden regex paramter verwendet werden.  <br>Diese sind z.B. unter [h](https://www.postgresql.org/docs/9.3/functions-matching.html)[ttps://www.postgresql.org/docs/9.3/functions-matching.html](https://www.postgresql.org/docs/9.3/functions-matching.html) zu finden.<br><br>Hinweis eines Anwenders:<br><br>\s kann nicht verwendet werden. Hier wird mit Leerzeichen gearbeitet.  <br>\d kann nicht verwendet werden. Hier muss mit [a-zA-Z] gearbeitet werden. |
+| **Filter als regexp gebrauchen** | Den Software Filter mit Strings oder mit Regulären Ausdrücken verwenden? Da das regex direkt an die JDisc Datenbank weitergeleitet wird, sollten die passenden regex parameter verwendet werden.  <br>Diese sind z.B. unter [h](https://www.postgresql.org/docs/9.3/functions-matching.html)[ttps://www.postgresql.org/docs/9.3/functions-matching.html](https://www.postgresql.org/docs/9.3/functions-matching.html) zu finden.<br><br>Hinweis eines Anwenders:<br><br>\s kann nicht verwendet werden. Hier wird mit Leerzeichen gearbeitet.  <br>\d kann nicht verwendet werden. Hier muss mit [a-zA-Z] gearbeitet werden. |
 | **Benutze OS-Familie (falls verfügbar) anstatt OS-Version als Objekttitel** | Für den Softwareimport anstatt der Softwareversion die Softwarefamilie als Objekttitel verwenden. Z.B. anstatt "Windows Server 2008 Standard" nur "Windows" mit "Server 2008 Standard" als Variante. |
 | **Objekt-Matching Profil** | [Welche Strategie soll erfolgen](objekt-identifizieren-bei-importen.md), um bereits in i-doit dokumentierte Objekte durch einen Import zu aktualisieren? |
 | **Objekttyp aktualisieren** | Ist das Device bereits als Objekt in i-doit vorhanden, kann hierüber bestimmt werden, ob der Objekttyp anhand der Zuweisung (siehe oben) aktualisiert werden soll oder nicht. |
@@ -123,13 +123,13 @@ Da es möglich ist, dass mehr als ein JDisc-Server eingesetzt wird, muss im erst
 
 | **Import Modus** | **Beschreibung** |
 | --- | --- |
-| **Erstellen** | Der Import-Modus **"Erstellen"** wird alle gefundenen Objekte erstellen, ohne zu prüfen, ob diese bereits existieren. |
 | **Aktualisieren** | Der Import-Modus **"Aktualisieren"** wird nur Objekte erstellen, die in i-doit nicht gefunden werden konnten. Kategorien von bereits existierenden Objekten werden (wenn nötig) um neue Daten ergänzt. |
-| **Aktualisieren (Neu inventarisiert)** | Mit dem Zusatz **"(Neu inventarisiert)"** werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet. |
-| **Aktualisieren (Nur existierende Objekte)** | Mit dem Zusatz **"(Nur existierende Objekte)"** werden nur bestehende Objekte mit neuen Daten aktualisiert. Es werden keine neuen Objekte erstellt. |
+<!--| **Aktualisieren (Bestehende)** | Mit dem Zusatz **"(Bestehende)"** werden nur vorhandene Objekte aktualisiert, es werden keine neuen Objekte erstellt. |-->
+| **Aktualisieren (Neu inventarisiert)** | Mit dem Zusatz **"(Neu inventarisiert)"** werden feste i-doit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet. |
+| **Erstellen** | Der Import-Modus **"Erstellen"** wird alle gefundenen Objekte erstellen, ohne zu prüfen, ob diese bereits existieren. |
 | **Erstelle nur neu gescannte Geräte** | Der Modus "**Erstelle nur neu gescannte Geräte**" erstellt nur Objekte die nicht in i-doit existieren. |
 | **Überschreiben** | Der Import-Modus **"Überschreiben"** verhält sich genauso wie der Modus "Aktualisieren" mit dem Unterschied, das Listen-Kategorien erst geleert und dann neu angelegt werden. |
-| **Überschreiben (Neu inventarisiert)** | Mit dem Zusatz **"(Neu inventarisiert)"** werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet. |
+| **Überschreiben (Neu inventarisiert)** | Mit dem Zusatz **"(Neu inventarisiert)"** werden feste i-doit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet. |
 
 In der Protokollierung kann der Umfang der geschriebenen Logs beeinflusst werden. Ein umfangreicheres Logging erhöht die Dauer des Imports.
 
@@ -138,6 +138,14 @@ Wenn die Einstellungen vollständig vorgenommen wurden, kann der Import über **
 Wenn der Import abgeschlossen wurde, wird eine Zusammenfassung im Bereich **Ergebnis** angezeigt.
 
 Beim Import erzeugte Logs findest du im i-doit-Verzeichnis log/.
+
+## Import über die Kategorie JDisc Discovery
+
+Über die Kategorie JDisc Discovery können Sie einzelne Objekte aktualisieren.
+Hier besteht die Möglichkeit, das Gerät über eine bestimmte Identifikation zu scannen (Hostadresse, FQDN und Seriennummer).
+[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)
+
+Die Kategorie können Sie über die Objekttyp Konfiguration des Objekttyps hinzufügen.
 
 ## Import über die i-doit Console
 
