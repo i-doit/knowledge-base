@@ -123,7 +123,7 @@ Because it is possible to apply more than one JDisc server, you have to select t
 | **Overwrite (New inventory)** | With the addition **(New inventory)** fixed i-doit-to-jdisc-device links are discarded and the object associations are recalculated. |
 | **Update** | The import mode **Update** will only create objects that could not be found in i-doit. Categories of already existing objects will be supplemented with new data (if necessary). |
 | **Update (New inventory)** | With the addition **(New inventory)** fixed i-doit-to-jdisc-device links are discarded and the object associations are recalculated. |
-| **Update ()** | With the addition **(Existing Only)** only existing objects are updated with new data. No new objects are created. |
+<!--| **Update (Existing Only)** | With the addition **(Existing Only)** only existing objects are updated with new data. No new objects are created. |-->
 
 With the logging function you can influence the extent of the written log. A more extensive logging increases the import duration.
 
