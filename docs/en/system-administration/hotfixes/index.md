@@ -85,11 +85,11 @@ If opening the administration area of i-doit and navigating to "[Tenant-name] ma
 ### Document does not exist error message when opening a document
 
 [i-doit_27_hotfix_ID-10086.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-10086.zip){ .md-button .md-button--primary }
-<!--
+
 ### Report viewing DBMS version always shows the first entry
 
-[xxx.zip :material-file-download:](../../assets/downloads/hotfixes/27/xxx.zip){ .md-button .md-button--primary }
---->
+[i-doit_27_hotfix_ID-10083_801ae6b.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-10083_801ae6b.zip){ .md-button .md-button--primary }
+
 ## API Add-on 1.15
 
 ### cmdb.reports.read attaches "&nbsp;&nbsp" to each value
