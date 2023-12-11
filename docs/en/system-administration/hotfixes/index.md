@@ -54,6 +54,12 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
         **The encoding of umlauts are displayed in report titles**<br>
         **Status filter for multivalue categories in report manager is not working correctly for custom categories**
 
+### Assigned clusters are removed after saving the object type configuration
+
+Use this if you need to assign the specific category **Assigned Clusters**.
+
+[i-doit_27_hotfix_ID-9977_eb1035c.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9977_eb1035c.zip){ .md-button .md-button--primary }
+
 ### JDisc mapping error with MAC address
 
 Hotfix for the JDisc import error `Duplicate entry 'object-56-ABCDEF123-aa:aa:aa:aa:aa:aa,aa:aa:aa:aa:aa:aa,aa:aa:a...' for key 'isys_jdisc_mapping__type_device_serial_mac'.`
