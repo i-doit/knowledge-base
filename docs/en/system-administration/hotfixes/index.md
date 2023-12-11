@@ -26,8 +26,6 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
-## i-doit core
-
 !!! bug "Hotfix release"
     If you downloaded i-doit 27 prior to November 28th, we've identified some issues that require attention.<br>
     We have prepared a linked package that contains necessary fixes.
@@ -99,6 +97,10 @@ If opening the administration area of i-doit and navigating to "[Tenant-name] ma
 ### When using cmdb.objects.read it should be possible to use 'categories' without an array
 
 [api_1.15_hotfix_API-415.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.15_hotfix_API-415.zip){ .md-button .md-button--primary }
+
+### cmdb.objects.read gives empty/nameless object with error message as a result when reading objects with the category licenses
+
+[api_1.15_hotfix_API-462.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.15_hotfix_API-462.zip){ .md-button .md-button--primary }
 
 ## Analyze Add-on 1.3
 
