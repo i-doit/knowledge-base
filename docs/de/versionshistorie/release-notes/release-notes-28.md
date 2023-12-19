@@ -20,4 +20,4 @@ CVE-2023-49310
 
 Furthermore, we have taken feedback from our customers to further improve the previously released feature to create custom **category folders** for a more intuitive configuration and folder creation. Last but not least, we added a lot of bug fixes for a general improvement of your experience which can be found in detail in our changelog.
 
-We highly encourage you to [update](../../maintenance-and-operation/update.md) your installation of i-doit pro to version 28 as soon as possible to benefit from all of the contained improvements.
+We highly encourage you to [update](../../wartung-und-betrieb/update-einspielen.md) your installation of i-doit pro to version 28 as soon as possible to benefit from all of the contained improvements.
