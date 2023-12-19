@@ -19,80 +19,12 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
     Please inform us about the use of hotfixes should you contact our support team afterwards.
 
 !!! info "Current version"
-    The requirements shown below apply to the current version of i-doit, in this case ==27== These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case ==28== These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 !!! attention "Declaration of consent"
     By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
 
-## i-doit core
-
-!!! bug "Hotfix release"
-    If you downloaded i-doit 27 prior to November 28th, we've identified some issues that require attention.<br>
-    We have prepared a linked package that contains necessary fixes.
-
-    Please refer to one of the guides below for assistance
-
-    !!! example "**Use the updater to download the package**"
-        -   Set file and folder rights, either via `idoit-rights.sh` or [manual](../../installation/manual-installation/setup.md)
-        -   Open the i-doit web update
-        -   At **2. Available Updates** you copy and paste the **[LINK](https://login.i-doit.com/downloads/idoit-27-update.zip)** in to the corresponding URL field and click **Download and extract**
-        -   Now do the update
-
-    !!! example "**or download and extract the package**"
-        -   Download the new package from the [customer portal](../../system-administration/customer-portal.md)
-        -   Extract the package into the i-doit Folder, see [here](../../maintenance-and-operation/update.md#update-prepared-via-the-console)
-        -   Set file and folder rights, either via `idoit-rights.sh` or [manual](../../installation/manual-installation/setup.md)
-        -   Use the i-doit web updater to update with the new package
-
-    !!! note "**This update Package includes the following Hotfixes**"
-        **Adding a condition block for location > below > X location outputs no results**<br>
-        **HTML is displayed in Report**<br>
-        **Exported report displays \_\_id\_\_ column**<br>
-        **Report objects adds `&nbsp;&nbsp;` after each column**<br>
-        **Placeholder is not correctly replaced**<br>
-        **Operators for some fields can not be selected - TypeError: equation.map is not a function**<br>
-        **The encoding of umlauts are displayed in report titles**<br>
-        **Status filter for multivalue categories in report manager is not working correctly for custom categories**
-
-### Assigned clusters are removed after saving the object type configuration
-
-Use this if you need to assign the specific category **Assigned Clusters**.
-
-[i-doit_27_hotfix_ID-9977_eb1035c.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9977_eb1035c.zip){ .md-button .md-button--primary }
-
-### JDisc mapping error with MAC address
-
-Hotfix for the JDisc import error `Duplicate entry 'object-56-ABCDEF123-aa:aa:aa:aa:aa:aa,aa:aa:aa:aa:aa:aa,aa:aa:a...' for key 'isys_jdisc_mapping__type_device_serial_mac'.`
-
-[i-doit_27_hotfix_ID-10098.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-10098.zip){ .md-button .md-button--primary }
-
-### Description fields yield validation errors on 32bit systems
-
-[i-doit_27_hotfix_ID-9928_7dca69d.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9928_7dca69d.zip){ .md-button .md-button--primary }
-
-### Changing technical keys to only contain words causes entries to lose the values when filled with API (Number only)
-
-[i-doit_27_hotfix_ID-9938.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9938.zip){ .md-button .md-button--primary }
-
-### Icon redirects are not cached
-
-If loading takes too much time between switching from object type to object type.
-
-[i-doit_27_hotfix_ID-9924_8c73a0f.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9924_8c73a0f.zip){ .md-button .md-button--primary }
-
-### Refactor the automatic update-check to a separate (ajax) request
-
-If opening the administration area of i-doit and navigating to "[Tenant-name] management" the page will take quite some time to load.
-
-[i-doit_27_hotfix_ID-9919_63ba178.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-9919_63ba178.zip){ .md-button .md-button--primary }
-
-### Document does not exist error message when opening a document
-
-[i-doit_27_hotfix_ID-10086.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-10086.zip){ .md-button .md-button--primary }
-
-### Report viewing DBMS version always shows the first entry
-
-[i-doit_27_hotfix_ID-10083_801ae6b.zip :material-file-download:](../../assets/downloads/hotfixes/27/i-doit_27_hotfix_ID-10083_801ae6b.zip){ .md-button .md-button--primary }
+<!-- ## i-doit core -->
 
 ## API Add-on 1.15
 
