@@ -63,6 +63,16 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 ## Compatibility matrix
 
+=== "28"
+
+    | **i-doit Version** | 28 |
+    | --- | --- |
+    | **Release** | 2023-12 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1 |
+    | **MySQL** | 5.7 <br>8.0 |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
+
 === "27"
 
     | **i-doit Version** | 27 |
