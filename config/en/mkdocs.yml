@@ -372,7 +372,7 @@ nav:
       - Service Desk:
           - automation-and-integration/service-desk/index.md
           - Request Tracker (RT): automation-and-integration/service-desk/request-tracker.md
-          - OTRS Help Desk: automation-and-integration/service-desk/otrs-help-desk.md
+          - ((OTRS)) Community Edition Help Desk: automation-and-integration/service-desk/otrscommunity-help-desk.md
           - Zammad: automation-and-integration/service-desk/zammad.md
       - SNMP: automation-and-integration/snmp.md
   - System Administration:

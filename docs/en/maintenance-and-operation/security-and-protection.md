@@ -259,7 +259,7 @@ If one or more interfaces to third-party applications are configured, you also h
 | [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md) | **LDAP** | **389/636** |
 | Livestatus | **Livestatus** | **6557** |
 | NDOUtils/IDOUtils | **MySQL** | **3306** |
-| [OTRS Help Desk](../automation-and-integration/service-desk/otrs-help-desk.md), [Request Tracker](../automation-and-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443** |
+| [((OTRS)) Community Edition Help Desk](../automation-and-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automation-and-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443** |
 | [JDisc Discovery](../consolidate-data/jdisc-discovery.md) | **PostgreSQL** | **25321** |
 | [JDisc Discovery](../consolidate-data/jdisc-discovery.md) | **HTTP** | **9000** |
 | OCS Inventory NG | **MySQL** | **3306** |

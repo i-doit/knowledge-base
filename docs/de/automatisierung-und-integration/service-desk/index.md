@@ -6,13 +6,13 @@ Unterstützte Applikationen
 
 i-doit bietet in der Standard-Installationen Schnittstellen zu mehreren Applikationen aus dem Bereich Service Desk:
 
-*   [OTRS Help Desk](../service-desk/otrs-help-desk.md)
+*   [((OTRS)) Community Edition](../service-desk/otrscommunity-help-desk.md)
 *   [Request Tracker (RT)](../service-desk/request-tracker.md)
 *   [Zammad](../service-desk/zammad.md)
 
 … und iTop.
 
-Die konkrete Installation und Benutzung von Extensions (RT) und Modulen (OTRS) sind in den jeweiligen Artikeln beschrieben beziehungsweise verlinkt. Im Folgenden konzentrieren wir uns auf die Konfiguration und Funktionen von i-doit.
+Die konkrete Installation und Benutzung von Extensions (RT) und Modulen (((OTRS)) Community Edition) sind in den jeweiligen Artikeln beschrieben beziehungsweise verlinkt. Im Folgenden konzentrieren wir uns auf die Konfiguration und Funktionen von i-doit.
 
 ## Konfiguration
 
