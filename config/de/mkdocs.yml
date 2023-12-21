@@ -406,7 +406,7 @@ nav:
       - Service Desk:
           - automatisierung-und-integration/service-desk/index.md
           - Request Tracker (RT): automatisierung-und-integration/service-desk/request-tracker.md
-          - OTRS Help Desk: automatisierung-und-integration/service-desk/otrs-help-desk.md
+          - ((OTRS)) Community Edition Help Desk: automatisierung-und-integration/service-desk/otrscommunity-help-desk.md
           - Zammad: automatisierung-und-integration/service-desk/zammad.md
       - SNMP: automatisierung-und-integration/snmp.md
   - Administration:

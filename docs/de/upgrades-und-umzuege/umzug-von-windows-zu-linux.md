@@ -2,23 +2,21 @@
 
 Es mag gute Gründe geben, i-doit unter [Windows](../installation/manuelle-installation/microsoft-windows-server/index.md) zu betreiben. Aus diversen Gründen empfehlen wir allerdings den Betrieb unter [Linux](../installation/manuelle-installation/debian.md). Doch wie bekommt man die gut befüllte [IT-Dokumentation](../glossar.md#Glossar-IT-Dokumentation) im laufenden Betrieb möglichst reibungslos von einem System zum anderen?
 
-Vorbereitungen und Annahmen
----------------------------
+## Vorbereitungen und Annahmen
 
 Bevor es los geht, sollten ein paar Dinge beachtet werden. Ziel soll sein, ohne lange Downtime und vor allem ohne Datenverlust den Umzug zu wagen.
 
 Jeder, der mit den Daten von i-doit arbeitet, sollte rechtzeitig über den Umzug informiert werden. Nichts ist schlimmer als wütende Kollegen, deren Arbeit unterbrochen wurde.
 
-Zudem sollte identifiziert werden, welche Schnittstellen von i-doit genutzt werden. Konkret: Welche Drittsysteme wie [Nagios](../automatisierung-und-integration/network-monitoring/nagios.md), [OTRS](../automatisierung-und-integration/service-desk/otrs-help-desk.md) & [Co.](../daten-konsolidieren/index.md) greifen aufi-doit zu? Während des Umzugs sollte der Datenzugriff abgeschaltet werden. Ähnliches gilt für laufende [Tasks](../automatisierung-und-integration/cli/index.md), [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) und das Monitoring, welches überwacht, dass auf dem Windows-System auf Port 80/443 ein laufender Webserver HTTP-Anfragen beantwortet.
+Zudem sollte identifiziert werden, welche Schnittstellen von i-doit genutzt werden. Konkret: Welche Drittsysteme wie [Nagios](../automatisierung-und-integration/network-monitoring/nagios.md), [((OTRS)) Community Edition](../automatisierung-und-integration/service-desk/otrscommunity-help-desk.md) & [Co.](../daten-konsolidieren/index.md) greifen auf i-doit zu? Während des Umzugs sollte der Datenzugriff abgeschaltet werden. Ähnliches gilt für laufende [Tasks](../automatisierung-und-integration/cli/index.md), [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) und das Monitoring, welches überwacht, dass auf dem Windows-System auf Port 80/443 ein laufender Webserver HTTP-Anfragen beantwortet.
 
-Wir nehmen an, unter Windows wird ein nicht bis minimal angepasstes XAMP verwendet, beispielsweise eine neuere Version von den [Apache Friends](https://www.apachefriends.org/). Über diese Distribution wird der Apache Webserver, das DBMS MySQL oder MariaDB und die Scriptsprache PHP auf dem System installiert. Im Folgenden sprechen wir nur noch von MySQL, auch wenn MariaDB zum Einsatz kommt. Wenn Änderungen an der Konfiguration vorgenommen worden sind, sollten diese eventuell auch auf dem neuen System bedacht werden.
+Wir nehmen an, unter Windows wird ein nicht bis minimal angepasstes XAMPP verwendet, beispielsweise eine neuere Version von den [Apache Friends](https://www.apachefriends.org/). Über diese Distribution wird der Apache Webserver, das DBMS MySQL oder MariaDB und die Scriptsprache PHP auf dem System installiert. Im Folgenden sprechen wir nur noch von MySQL, auch wenn MariaDB zum Einsatz kommt. Wenn Änderungen an der Konfiguration vorgenommen worden sind, sollten diese eventuell auch auf dem neuen System bedacht werden.
 
 Zu guter Letzt gehen wir davon aus, dass das neue Heimatsystem von i-doit bereits [vorbereitet](../installation/manuelle-installation/index.md) wurde sowie sämtliche [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) und [\-einstellungen](../installation/manuelle-installation/systemeinstellungen.md) getroffen sind. Auf dem neuen System sollten alle Dienste erreichbar sein, die i-doit erwartet: DNS, SMTP, LDAP/AD. Funktioniert alles? Okay, es kann losgehen.
 
 Eines noch: Wir sollten alle System-Benutzerkonten und deren Passwörter parat haben, die auf dem alten und neuen System verwendet werden. Dazu zählen MySQL-Systembenutzer (root) und der i-doit-Benutzer für MySQL (standardmäßig idoit).
 
-Daten aus Windows exportieren
------------------------------
+## Daten aus Windows exportieren
 
 Zuallererst kümmern wir uns darum, die Daten aus dem alten System zu sichern, um sie anschließend auf das neue System zu übertragen:
 
@@ -32,8 +30,7 @@ Zuallererst kümmern wir uns darum, die Daten aus dem alten System zu sichern, u
 
 4.  Nun stoppen wir den MySQL-Prozess und hoffen, dass wir weder MySQL noch den Apache Webserver jemals wieder unter Windows benötigen werden.
 
-Daten nach GNU/Linux umziehen
------------------------------
+## Daten nach GNU/Linux umziehen
 
 Nachdem wir sowohl die ZIP-Datei mit dem i-doit-Verzeichnis als auch die SQL-Datei mit den Datenbankinhalten auf den neuen Server kopiert haben (gute Dienste leistet hier [WinSCP](http://winscp.net/eng/docs/lang:de)), verbinden wir uns via SSH (beispielsweise via [Putty](http://www.putty.org/)) und agieren fortan auf der Kommandozeile. Der Apache Webserver, MySQL und PHP sind fertig konfiguriert und alle benötigten Pakete sind ordnungsgemäß [installiert](../installation/index.md). Fehlt nur noch i-doit:
 
@@ -96,8 +93,7 @@ Jetzt wird es Zeit für einen ersten großen Test: Lässt sich über den Browser
 
 Was noch fehlt, ist die Übertragung der Windows-Tasks zu Cronjobs. Zumeist geht es um wiederkehrende Aufgaben, die der [CLI](../automatisierung-und-integration/cli/index.md) erledigen soll. Wer bisher keine Tasks/Cronjobs für i-doit eingerichtet hatte, sollte dies spätestens jetzt tun.
 
-Nacharbeiten
-------------
+### Nacharbeiten
 
 Nach diesem Umzug sollten verschiedene Tests durchgeführt werden und die Schnittstellen zwischen i-doit und Dritt-Tools wieder aktiviert werden. Auch ganz wichtig ist, dass die [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) laufen. Sollten alle Tests erfolgreich sein (davon ist hoffentlich auszugehen), kann der Wartungsmodus beendet und alle Kollegen benachrichtigt werden, dass die IT-Dokumentation wieder verfügbar ist.
 

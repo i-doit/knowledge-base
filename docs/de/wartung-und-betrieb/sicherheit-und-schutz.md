@@ -261,7 +261,7 @@ Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss 
 | [LDAP/AD](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) | **LDAP** | **389/636** |
 | [Livestatus](../automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md) | **Livestatus** | **6557** |
 | [NDOUtils/IDOUtils](../automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md) | **MySQL** | **3306** |
-| [OTRS Help Desk](../automatisierung-und-integration/service-desk/otrs-help-desk.md), [Request Tracker](../automatisierung-und-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443** |
+| [((OTRS)) Community Edition Help Desk](../automatisierung-und-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automatisierung-und-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443** |
 | [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) | **PostgreSQL** | **25321** |
 | [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) | **HTTP** | **9000** |
 | [OCS Inventory NG](../i-doit-pro-add-ons/ocs-inventory-ng.md) | **MySQL** | **3306** |
