@@ -49,7 +49,6 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **CUCM VoIP Phone** | -  | Information about Cisco Unified Call Manager (CUCM) |
 | **Database assignment** | -  | If an installed application (see object types **Applications** and **System service**) accesses one or more databases, it can be documented here; supplements the **Installation** category in the category folders **Applications** and **Services** |
 | **Database hierarchy** | \-  | Category folder with subordinate categories **Database hierarchy**, **Databases**, **Database tables** and **DBMS information** |
-<!-- todo add sub categories --->
 | **Data Source** | -  | Information about the [data import](../consolidate-data/index.md) which provided the attributes of this object |
 | **Direct Attached Storage** | -  | Category folder with the subordinate categories **Controller**, **Device** and **Raid-Array**; evaluation of these categories; supplements the category **Drive**; for access to shares see category **Share access** and for LUNs the category **Storage Area Network** **→ Logical Devices (Client)** |
 | **Direct Attached Storage -> Controller** | -  | Built-in onboard or PCIe plug-in cards for the connection of storages drives; is contained in the category folder **Direct Attached Storage** |
@@ -105,7 +104,7 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **Net zone -> Net zone options** | -  | Details about a net zone; is contained in the category folder **Net zone** |
 | **Net zone -> Net zone scopes** | - | Use of a net zone; is contained in the category folder **Net zone**; Backwards category: **Net → Net zone** |
 | **Object picture** | -  | Changes the default image of an object which is depicted on each page; as only 150 x 150 pixels are allowed, the **Images** category is more suitable in most cases |
-| **Object vitality** | -  | Indicates the target system utilization; for this purpose the categories **CPU**, **Memory**, **Network → Port**, ****Direct Attached Storage**** and **Software assignment** are assessed and compared to the category **Computing resources**, which is assigned to the allocated applications; has only little informative value as it is just a simple addition of values |
+| **Object vitality** | -  | Indicates the target system utilization; for this purpose the categories **CPU**, **Memory**, **Network → Port**, **Direct Attached Storage** and **Software assignment** are assessed and compared to the category **Computing resources**, which is assigned to the allocated applications; has only little informative value as it is just a simple addition of values |
 | **Operating system** | - | Here you can record the primal operating system; this information complements the category **Software assignment** |
 | **Passwords** | -  | List of passwords |
 | **Port Overview (Stacking)** | \- | Shows the ports of all stack members bundled together. Click on a port to open it |
@@ -138,7 +137,7 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **Storage Area Network** | -  | Category folder with subordinated categories **FC port**,  **Host bus adapter (HBA)**, **Logical devices (Client)** and **Logical devices (LDEV Server)**; for the documentation of Storage Area Networks (SANs) and LUNs |
 | **Storage Area Network -> FC port** | -  | List of fiber channel ports; serves the documentation of storage area networks (SANs) and is often assigned to the object types **Storage system** and **FC switch**; is contained in the category folder **Storage Area Network**; automatically fills in the **Cabling → Connectors** category |
 | **Storage Area Network -> Host Bus Adapter (HBA)** | -  | List of HBAs which provide fiber channel ports (see **Storage Area Network → FC port**); serves the documentation of storage area networks (SANs); is contained in the category folder **Storage Area Network** |
-| **Storage Area Network -> Logical devices (Client)** | -  | If an object accesses LUNs of a SAN, this is documented here; is contained in the category folder ****Storage Area Network****; backwards category: **Logical devices (LDEV Server)** |
+| **Storage Area Network -> Logical devices (Client)** | -  | If an object accesses LUNs of a SAN, this is documented here; is contained in the category folder **Storage Area Network**; backwards category: **Logical devices (LDEV Server)** |
 | **Storage Area Network -> Logical devices (LDEV Server)**| -  | If an object, for example, a SAN, offers LUNs to other objects, this is documented here; is contained in the category folder **Storage Area Network**; backwards category: **Logical devices (Client)** |
 | **Subscriptions** | -  | Information on existing subscriptions, which is assigned to **persons** via the category **Assigned Users**; can be imported via **JDisc** |
 | **Supernet** | \- | List of supernetworks and subnetworks |
@@ -167,10 +166,8 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **Air conditioning** | -  | Details of **Air conditioning** |
 | **Applications** | -  | 1.  Category folder with subordinated categories **Installation** and **Variants**; contains information about the application, such as the **Manufacturer**<br>2.  Details about the application, such as the **Manufacturer**; is contained in the category folder **DBMS** |
 | **Assigned logical ports** | -  | List of assigned objects with their logical ports; is contained in the category folder **Layer 2 Net**; backwards category: **Network → Logical ports** |
-
 | **Assigned objects** | -  | 1.  List of objects which are allocated to a **Contract**; is contained in the category folder **Contract**; backwards category: **Contract assignment  <br>**<br>2.  List of objects which are allocated to a **Wiring system**; is contained in the category folder **Wiring system**; backwards category: **Cabling → Connectors** (**Wiring System** attribute) |
 | **Assigned objects** | -  | 1.  Assignment of objects to a contact; is contained in the category folders **Persons**, **Person groups** and **Organization**; backwards category: **Contact assignment**<br>2.  Assignment of objects to an **Emergency plan**; is contained in the category folder **Emergency plan**; backwards category: **Emergency plan** assignment  <br>** |
-
 | **Chassis** | -  | Category folder with subordinated categories **Chassis view**, **Slots**, **Cabling** and **Assigned devices**; often assigned to the object types **Blade Chassis** and **Switch Chassis** |
 | **Chassis -> Assigned devices** | -  | List of hardware objects (**Blade Server**, switch modules) in a chassis; is contained in the category folder **Chassis**; supplements the category **locally assigned objects** |
 | **Chassis -> Chassis Cabling** | -  | Interconnection within a chassis; is contained in the category folder **Chassis** |
@@ -182,14 +179,14 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **DBMS** | - | Category folder with subordinated categories **Applications**, **Cluster installation**, **Installation**, **Variants** and **Assigned clusters** |
 | **DBMS -> Assigned clusters** | -  | List of objects of the type **Cluster** with additional details about how the cluster is defined; is contained in the category folder **DBMS**; backwards category: **Cluster memberships** |
 | **DBMS -> Cluster installation** | -  | List of allocated clusters; is contained in the category folder **DBMS**; is based on data of the category **DBMS → Assigned clusters** |
-| **Database schema** | -  | Category folder with subordinated categories **Database Gateway**, **Database links**, ****Database** objects** and ****Database access****; often assigned to the object type of the same name **Database schema** |
+| **Database schema** | -  | Category folder with subordinated categories **Database Gateway**, **Database links**, **Database objects** and **Database access**; often assigned to the object type of the same name **Database schema** |
 | **Database schema -> Database access** | -  | List of installed applications which access this database; is contained in the category folder **Database schema**; backwards category: **Software assignment** |
 | **Database schema -> Database gateway** | -  | List of possibilities to access this database; is contained in the category folder **Database schema** |
 | **Database schema -> Database links** | -  | Link between databases; is contained in category folder **Database schema** |
 | **Database schema -> Database objects** | -  | Details about the structure of the database, for example, lists of tables; is contained in the category folder **Database schema** |
 | **Desktop** | -  | Information about a computer, for example **Client type** (laptop, desktop etc.) or **Keyboard Layout**; often assigned to the object type **Client** |
 | **Emergency plan** | -  | Category folder with subordinated categories **Emergency plan properties** and **Assigned objects**; often assigned to the object type of the same name **Emergency plan** |
-| **Emergency plan -> Emergency plan properties** | -  | Details of an emergency plan: **Time need** and **Date of emergency practice**; is contained in the category folder ****Emergency plan**** |
+| **Emergency plan -> Emergency plan properties** | -  | Details of an emergency plan: **Time need** and **Date of emergency practice**; is contained in the category folder **Emergency plan** |
 | **Emergency plan -> Emergency power supply** | -  | Details about a power generator, for example a diesel generator set; often assigned to the object type of the same name **Emergency power supply** |
 | **FC switch** | -  | Information about a fiber channel switch: **Title** and **Active**; often assigned to the object type of the same name **FC switch** |
 | **Files** | -  | Category folder with subordinated categories **Current file**, **File versions** and **Assigned objects  <br>** |
@@ -215,7 +212,7 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **PDU** | -  | Category folder with subordinated categories **View** and **Branch**; contains information about a power distribution unit; often assigned to the object type **Power distribution unit** |
 | **PDU -> Branch** | -  | List of branches; is contained in the category folder **PDU** |
 | **Parallel relations** | -  | Information about a parallel [object relation](./object-relations.md) |
-| **Person groups** | -  | Category folder with the subordinated categories **Member**, **Nagios**, ****Rights****, ******Master data ******and ******Assigned objects****** |
+| **Person groups** | -  | Category folder with the subordinated categories **Member**, **Nagios**, *Rights**, **Master data** and **Assigned objects** |
 | **Person groups -> Members** | -  | List of persons which are allocated to the person group; is contained in the category folder **Person group**; backwards category: **Persons → Person group memberships** |
 | **Persons** | -  | 1.  Category folder with subordinated categories **Login**, **Nagios**, **Person group memberships**, **Rights**, **Master data** and **Assigned objects**<br>2.  List of assigned objects of the type **Persons**; is contained in the category folder **Organization**; backwards category: **Persons → Master data** (attribute **Organization**) |
 | **Persons -> Login** | -  | Credentials for local i-doit user consisting of **User name** and **Password** |
@@ -232,9 +229,9 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **Switch** | -  | Details about a **Switch**; based on information from the categories **Host address** and **Network → Port** |
 | **System Services** | -  | Category folder with subordinated categories **Installation**, **System Services** and **Variants**; contains information about the application, such as the **Manufacturer** |
 | **Uninterruptible power supply** | -  | Details of an uninterruptible power supply (USP), thus often assigned to the object type **Uninterruptible power supply** of the same name |
+| **Variants** | -  | List of variants of an application, for example, "Standard", "Enterprise", "Pro", "Open"; is contained in the category folders **Applications**, **DBMS** and **Services**; supplements the category **Installation** in these category folders |
 | **WAN Connection** | -  | Information about an internet connection (WAN, MAN, GAN etc.), thus often assigned to the object type **WAN Connection** of the same name |
 | **WAN** | \-  | Information on an Internet connection (WAN, MAN, GAN or similar), therefore often assigned to the **WAN Connection** object type |
-| **Variants** | -  | List of variants of an application, for example, "Standard", "Enterprise", "Pro", "Open"; is contained in the category folders **Applications**, **DBMS** and **Services**; supplements the category **Installation** in these category folders |
 | **WiFi device** | -  | Information about a WLAN access point, thus often assigned to the object type **Wireless Access Point** |
-| **Wiring System** | | **Logbook** [![Logbook](../assets/images/en/basics/categories-and-attributes/5-caa.png)](../assets/images/en/basics/categories-and-attributes/5-caa.png) | -  | [Changes of an object](./logbook.md) |
+| **Logbook** [![Logbook](../assets/images/en/basics/categories-and-attributes/5-caa.png)](../assets/images/en/basics/categories-and-attributes/5-caa.png) | -  | [Changes of an object](./logbook.md) |
 | **Wiring System -> Net type** | **Net type** | Information about a **Wiring System**, for example, "Electricity", "Water", "Gas"; is contained in the category folder **Wiring System** |
