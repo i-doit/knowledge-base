@@ -24,7 +24,15 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 !!! attention "Declaration of consent"
     By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
 
-<!-- ## i-doit core -->
+## i-doit core
+
+### Notifications based on reports will not get send even though the report has results
+
+[i-doit_28_hotfix_ID-10131.zip :material-file-download:](../../assets/downloads/hotfixes/28/i-doit_28_hotfix_ID-10131.zip){ .md-button .md-button--primary }
+
+### CSV import creates object with wrong object type
+
+[i-doit_28_hotfix_ID-10126_b932dd4.zip :material-file-download:](../../assets/downloads/hotfixes/28/i-doit_28_hotfix_ID-10126_b932dd4.zip){ .md-button .md-button--primary }
 
 ## API Add-on 1.15
 
