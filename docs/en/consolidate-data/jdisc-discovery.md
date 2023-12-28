@@ -47,6 +47,13 @@ The configuration of the interface is under **Administration → Import and inte
 
 After the parameters are saved, you can test the connection to the JDisc database with the **Check connection** button.
 
+To archive objects that have not been seen by JDisc for a certain number of days, the threshold value and the threshold value unit must be set under **Administration → [Tenant name] management → Settings for [Tenant name] → JDisc**.
+
+| Parameter | Anmerkung |
+| --- | --- |
+| **Threshold** | Eine Zahl einfügen. When the setting is defined, the objects have not been seen by JDisc within this time period will be archived on import. |
+| **Threshold unit** | Days, Weeks oder Month |
+
 ### Discovery Settings
 
 The user can activate a scan with the configured JDisc instance with i-doit. For this purpose, the JDisc Discovery web service is used, provided it is installed and activated.
@@ -96,7 +103,7 @@ For each type in JDisc you can select an equivalent object type in i-doit. If no
 | **Include software** | Do you want to import inventoried software as object type **Applications**? |
 | **Include software licences** | Do you want to import inventoried licenses as object type **Licenses**? |
 | **Import system services** | Do you want to import inventoried Services as object type **System Services**? |
-| **Import cloud subscriptions** | Do you want to import inventoried Cloud data?<br> Data is imported to the category **Assigned subscriptions**. The backward category **Subscriptions** is is assigned to License objcts. |
+| **Import cloud subscriptions** | Do you want to import inventoried Cloud data?<br> Data is imported to the category **Assigned subscriptions**. The backward category **Subscriptions** is is assigned to License objects. |
 | **Import connection endpoints** | The connections are not imported into the cabling category, but into the category "Connection endpoints". This allows to distinguish between manual cabling and automatic cabling by JDisc. |
 | **Use simple database modelling?** | Should the new or the old database logic be used? |
 | **Include layer 3 nets** | Do you want to import inventoried IP nets as object type **Layer 3 nets**? |
@@ -119,10 +126,18 @@ For each type in JDisc you can select an equivalent object type in i-doit. If no
 
 Categories which are JDisc specific:
 
--   [Assigned Subscriptions]()
--   [Subscriptions]()
--   [Data source]()
--   [Support Entitlements]()
+-   [Assigned Subscriptions](../basics/categories-and-attributes.md)
+-   [Subscriptions](../basics/categories-and-attributes.md)
+-   [Data source](../basics/categories-and-attributes.md)
+-   [Support Entitlements](../basics/categories-and-attributes.md)
+
+### Custom identifier
+
+!!! attention "Matching rule"
+    The `devideid` from JDisc is always used to identify objects.
+
+JDisc device ids should be assigned with type JDisc when the object is created in the **Custom identifier** category. The objects should then also be identified here later.
+If no data is available, the object matching profile is used.
 
 ## Import of Data via the Web GUI
 
@@ -132,16 +147,16 @@ The import of data contents from JDisc is carried out via **Extras → CMDB → 
 
 Before you execute the import process, you have to define the import parameters.
 
-Because it is possible to apply more than one JDisc server, you have to select the JDisc server in the first step. The profile which you defined beforehand can be also selected to influence the imported contents and their use. In addition, you can set the import mode. The **Append** import mode creates all found objects without checking whether these already exist. The **Update** import mode creates only objects which can't be found in the i-doit datapool. Categories of already existing objects are complemented (if necessary) with new data. The **Overwrite** import mode is, in principle, like the **Update** mode but with the difference that list categories are emptied first and are then recreated.
+Because it is possible to apply more than one JDisc server, you have to select the JDisc server in the first step. The profile which you defined beforehand can be also selected to influence the imported contents and their use. In addition, you can set the import mode. The **Append** import mode creates all found objects without checking whether these already exist. The **Update** import mode creates only objects which can't be found in the i-doit data pool. Categories of already existing objects are complemented (if necessary) with new data. The **Overwrite** import mode is, in principle, like the **Update** mode but with the difference that list categories are emptied first and are then recreated.
 
 | **Import Mode** | **Description** |
 | --- | --- |
 | **Create** | The import mode **"Create"** will create all found objects without checking if they already exist. |
 | **Update** | The import mode **"Update"** will only create objects that could not be found in i-doit. Categories of already existing objects will be supplemented with new data (if necessary). |
-| **Update (New inventory)** | With the addition **"(New inventory)"** fixed idoit-to-jdisc-device links are discarded and the object associations are recalculated. |
+| **Update (New inventory)** | With the addition **"(New inventory)"** fixed i-doit-to-jdisc-device links are discarded and the object associations are recalculated. |
 | **Only create newly scanned devices** | The "**Only create newly scanned devices"** Mode creates only objects that do not exist in i-doit. |
 | **Overwrite** | The **"Overwrite"** import mode behaves exactly like the "Update" mode with the difference that list categories are first emptied and then newly created. |
-| **Overwrite (New inventory)** | With the addition **"(New inventory)"** fixed idoit-to-jdisc-device links are discarded and the object associations are recalculated. |
+| **Overwrite (New inventory)** To archive objects that have not been seen by JDisc for a certain number of days, the threshold value and the threshold value unit must be set under **Administration → Settings for [Tenant name ] → JDisc**.| With the addition **"(New inventory)"** fixed i-doit-to-jdisc-device links are discarded and the object associations are recalculated. |
 
 With the logging function you can influence the extent of the written log. A more extensive logging increases the import duration.
 
@@ -155,6 +170,7 @@ You can find the logs which are generated during import in the i-doit directory 
 
 You can update individual objects using the JDisc Discovery category.
 Here it is possible to scan the device using a specific identification (host address, FQDN and serial number).
+
 [![JDisc Profile](../assets/images/en/consolidate-data/jdisc-discovery/6-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/6-jd.png)
 
 You can add the category via the object type configuration of the object type.

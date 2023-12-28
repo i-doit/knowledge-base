@@ -49,6 +49,13 @@ Die Konfiguration der Schnittstelle befindet sich unter **Verwaltung → Import 
 
 Nach dem Speichern der Parameter kann die Verbindung zur JDisc-Datenbank über den Button **Verbindung prüfen** getestet werden.
 
+Um Objekte zu archivieren, die von JDisc seit einer bestimmten Anzahl von Tagen nicht mehr gesehen wurden muss unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → JDisc** der Schwellwert und die Schwellwert Einheit gesetzt werden.
+
+| Parameter | Anmerkung |
+| --- | --- |
+| **Schwellwert** | Eine Zahl. Wenn die Einstellung definiert ist, werden die Objekte, die JDisc innerhalb dieses Zeitraums nicht gesehen hat, beim Import archiviert. |
+| **Schwellwert Einheit** | Tage, Wochen oder Monate |
+
 ### Discovery Einstellungen
 
 Über i-doit kann der Benutzer einen Scan bei der konfigurierten JDisc-Instanz auslösen. Dazu wird der [WebService](#installation) von JDisc Discovery verwendet, der installiert und aktiviert sein muss.
@@ -157,13 +164,13 @@ Da es möglich ist, dass mehr als ein JDisc-Server eingesetzt wird, muss im erst
 In der Protokollierung kann der Umfang der geschriebenen Logs beeinflusst werden. Ein umfangreicheres Logging erhöht die Dauer des Imports.<br>
 Wenn die Einstellungen vollständig vorgenommen wurden, kann der Import über **Importvorgang starten** angestoßen werden. Bitte beachte, dass die Dauer des Imports sowohl von der Größe der JDisc-Datenbank, als auch von der verwendeten Hardware abhängig ist.<br>
 Wenn der Import abgeschlossen wurde, wird eine Zusammenfassung im Bereich **Ergebnis** angezeigt.<br>
-
-Beim Import erzeugte Logs findest du im i-doit-Verzeichnis log/.
+Beim Import erzeugte Logs findest du im i-doit-Verzeichnis `log/`.
 
 ## Import über die Kategorie JDisc Discovery
 
 Über die Kategorie JDisc Discovery können Sie einzelne Objekte aktualisieren.
 Hier besteht die Möglichkeit, das Gerät über eine bestimmte Identifikation zu scannen (Hostadresse, FQDN und Seriennummer).
+
 [![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)
 
 Die Kategorie können Sie über die Objekttyp Konfiguration des Objekttyps hinzufügen.
