@@ -1,4 +1,4 @@
-# Settings for Tenant
+# Settings for [Tenant name]
 
 Here you will find tenant related settings.
 
@@ -160,8 +160,8 @@ Here you will find tenant related settings.
 | - | - |
 | Cancel process on validation error? | Yes or No |
 | Empty only the affected attributes on validation errors? | Yes or No |
-| The CSV Import can overwrite the objecttype? | Yes or No |
-| Anount of rows to be imported in a batch | Value |
+| The CSV Import can overwrite the object type? | Yes or No |
+| Amount of rows to be imported in a batch | Value |
 
 ## Search
 
