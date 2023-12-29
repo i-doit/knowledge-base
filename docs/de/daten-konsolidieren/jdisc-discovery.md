@@ -128,11 +128,13 @@ Für jeden Typ in JDisc kann ein äquivalenter Objekttyp in i-doit ausgewählt w
 
 Kategorien die für JDisc erstellt wurden sind:
 
--   [Support Entitlements](../grundlagen/kategorien-und-attribute.md)
 -   [Custom Identifier](../grundlagen/kategorien-und-attribute.md)
 -   [JDisc Custom Attributes](../grundlagen/kategorien-und-attribute.md)
 -   [JDisc Discovery](../grundlagen/kategorien-und-attribute.md)
--   [Netzwerk > Verbindungs Endpunkte](../grundlagen/kategorien-und-attribute.md)
+-   [JDisc Geräte Informationen](../grundlagen/kategorien-und-attribute.md)
+-   [Netzwerk → Verbindungs Endpunkte](../grundlagen/kategorien-und-attribute.md)
+-   [Subscriptions](../grundlagen/kategorien-und-attribute.md)
+-   [Support Entitlements](../grundlagen/kategorien-und-attribute.md)
 -   [Zugewiesene Abonnente](../grundlagen/kategorien-und-attribute.md)
 
 ### Custom identifier

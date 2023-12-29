@@ -104,7 +104,7 @@ For each type in JDisc you can select an equivalent object type in i-doit. If no
 | **Include software licences** | Do you want to import inventoried licenses as object type **Licenses**? |
 | **Import system services** | Do you want to import inventoried Services as object type **System Services**? |
 | **Import cloud subscriptions** | Do you want to import inventoried Cloud data?<br> Data is imported to the category **Assigned subscriptions**. The backward category **Subscriptions** is is assigned to License objects. |
-| **Import connection endpoints** | The connections are not imported into the cabling category, but into the category "Connection endpoints". This allows to distinguish between manual cabling and automatic cabling by JDisc. |
+| **Import connection endpoints** | The connections are not imported into the cabling category, but into the category "Connection endpoint". This allows to distinguish between manual cabling and automatic cabling by JDisc. |
 | **Use simple database modelling?** | Should the new or the old database logic be used? |
 | **Include layer 3 nets** | Do you want to import inventoried IP nets as object type **Layer 3 nets**? |
 | **Keep IP address types** | Should IPv4 addresses, IPv6 addresses, loopback addresses, virtual addresses be imported? |
@@ -124,11 +124,15 @@ For each type in JDisc you can select an equivalent object type in i-doit. If no
 | **Update object type** | When the device already exists as an object in i-doit, you can determine whether the object type is to be updated with help of the assignment (see above) or not. |
 | **Update object title** | Should the object title be updated by the import? |
 
-Categories which are JDisc specific:
+Categories which are JDisc specific or have related information:
 
 -   [Assigned Subscriptions](../basics/categories-and-attributes.md)
--   [Subscriptions](../basics/categories-and-attributes.md)
 -   [Data source](../basics/categories-and-attributes.md)
+-   [JDisc Custom Attributes](.../basics/categories-and-attributes.md)
+-   [JDisc Device Information](.../basics/categories-and-attributes.md)
+-   [JDisc Discovery](.../basics/categories-and-attributes.md)
+-   [Network → Connection endpoint](.../basics/categories-and-attributes.md)
+-   [Subscriptions](../basics/categories-and-attributes.md)
 -   [Support Entitlements](../basics/categories-and-attributes.md)
 
 ### Custom identifier
