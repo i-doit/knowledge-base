@@ -26,6 +26,13 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
+### When opening a object overview page a HTTP 500 error appears
+
+??? note "Related error message"
+    PHP Fatal error: Uncaught Error: Class "isys_cmdb_dao_category_s_person_nagios" not found in /var/www/html/i-doit/src/classes/modules/cmdb/dao/isys_cmdb_dao_distributor.class.php:164\nStack trace:\n#0 /var/www/html/i-doit/src/classes/modules/cmdb/ui/global/isys_cmdb_ui_category_g_overview.class.php(64): isys_cmdb_dao_distributor->__construct()\n#1 /var/www/html/i-doit/src/classes/modules/cmdb/view/isys_cmdb_view_category.class.php(894): isys_cmdb_ui_category_g_overview->process()\n#2 /var/www/html/i-doit/src/classes/modules/cmdb/view/isys_cmdb_view_category.class.php(650): isys_cmdb_view_category->category_process()\n#3 /var/www/html/i-doit/src/classes/modules/cmdb/isys_module_cmdb.class.php(942): isys_cmdb_view_category->process()\n#4 /var/www/html/i-doit/src/classes/modules/manager/isys_module_manager.class.php(1040): isys_module_cmdb->start()\n#5 /var/www/html/i-doit/src/idoit/Legacy/ModuleLoader.php(37): isys_module_manager->load()\n#6 /var/www/html/i-doit/src/classes/core/isys_application.class.php(109): idoit\\Legacy\\ModuleLoader->boot()\n#7 /var/www/html/i-doit/src/application.inc.php(42): isys_application::run()\n#8 /var/www/html/i-doit/src/i-doit.inc.php(137): include_once('...')\n#9 /var/www/html/i-doit/src/hypergate.inc.php(227): include_once('...')\n#10 /var/www/html/i-doit/src/ajax.inc.php(100): include_once('...')\n#11 /var/www/html/i-doit/index.php(155): require_once('...')\n#12 {main}\n thrown in /var/www/html/i-doit/src/classes/modules/cmdb/dao/isys_cmdb_dao_distributor.class.php on line 164
+
+[i-doit_28_hotfix_ID-10362.zip :material-file-download:](../../assets/downloads/hotfixes/28/i-doit_28_hotfix_ID-10362.zip){ .md-button .md-button--primary }
+
 ### Notifications based on reports will not get send even though the report has results
 
 [i-doit_28_hotfix_ID-10131.zip :material-file-download:](../../assets/downloads/hotfixes/28/i-doit_28_hotfix_ID-10131.zip){ .md-button .md-button--primary }
