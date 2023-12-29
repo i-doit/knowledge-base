@@ -47,7 +47,7 @@ The configuration of the interface is under **Administration → Import and inte
 
 After the parameters are saved, you can test the connection to the JDisc database with the **Check connection** button.
 
-To archive objects that have not been seen by JDisc for a certain number of days, the threshold value and the threshold value unit must be set under **Administration → [Tenant name] management → Settings for [Tenant name] → JDisc**.
+To archive objects that have not been seen by JDisc for a certain number of  e.g. X days, the threshold value and the threshold value unit must be set under **Administration → [Tenant name] management → Settings for [Tenant name] → JDisc**.
 
 | Parameter | Anmerkung |
 | --- | --- |
@@ -136,7 +136,7 @@ Categories which are JDisc specific:
 !!! attention "Matching rule"
     The `devideid` from JDisc is always used to identify objects.
 
-JDisc device ids should be assigned with type JDisc when the object is created in the **Custom identifier** category. The objects should then also be identified here later.
+JDisc `deviceid` should be assigned with type JDisc when the object is created in the **Custom identifier** category. The objects should then also be identified here later.
 If no data is available, the object matching profile is used.
 
 ## Import of Data via the Web GUI
@@ -164,7 +164,7 @@ When you carried out the settings completely, you can activate the import with *
 
 When the import process is completed, a summary is displayed in the **Result** section.
 
-You can find the logs which are generated during import in the i-doit directory called **log/**.
+You can find the logs which are generated during import in the i-doit directory called `log/`.
 
 ## Import via JDisc Discovery category
 

@@ -49,7 +49,7 @@ Die Konfiguration der Schnittstelle befindet sich unter **Verwaltung → Import 
 
 Nach dem Speichern der Parameter kann die Verbindung zur JDisc-Datenbank über den Button **Verbindung prüfen** getestet werden.
 
-Um Objekte zu archivieren, die von JDisc seit einer bestimmten Anzahl von Tagen nicht mehr gesehen wurden muss unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → JDisc** der Schwellwert und die Schwellwert Einheit gesetzt werden.
+Um Objekte zu archivieren, die von JDisc seit einer bestimmten Anzahl von z.B. X Tagen nicht mehr gesehen wurden, muss unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → JDisc** der Schwellwert und die Schwellwert Einheit gesetzt werden.
 
 | Parameter | Anmerkung |
 | --- | --- |
@@ -140,7 +140,7 @@ Kategorien die für JDisc erstellt wurden sind:
 !!! attention "Matching Regel"
     Die `devideid` aus JDisc wird immer für die Identifizierung von Objekten verwendet.
 
-JDisc device ids sollen bei Anlage des Objekts in der **Custom identifier** Kategorie mit type JDisc zugeordnet werden. Hierher sollen die Objekte im nach hinein dann auch identifiziert werden.
+JDisc `deviceid` soll bei Anlage des Objekts in der **Custom identifier** Kategorie mit type JDisc zugeordnet werden. Hierher sollen die Objekte im nach hinein dann auch identifiziert werden.
 Wenn keine Daten vorhanden sind wird auf das Objekt-Matching Profil zurück gegriffen.
 
 ## Import von Daten über die Web GUI
@@ -190,7 +190,6 @@ Ebenfalls kann die ID des zu verwendenden JDisc Servers angegeben werden. Diese 
 Eine jdisc.ini könnte so aussehen mehr Informationen zu .ini Dateien sind [hier](../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden.
 
 ```ini
-ini
 [commandArguments]
 [commandOptions]
 user=admin
@@ -209,5 +208,5 @@ regenerateSearchIndex
 Aufruf aus dem i-doit Verzeichnis:
 
 ```shell
-sudo -u www-data php console.php import -jdisc -c jdisc.ini
+sudo -u www-data php console.php import-jdisc -c jdisc.ini
 ```
