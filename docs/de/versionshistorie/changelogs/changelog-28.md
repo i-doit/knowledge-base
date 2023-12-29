@@ -20,7 +20,6 @@
 [Improvement][JDisc]             JDisc Import: Importiere SNMP Attribute<br>
 [Improvement][JDisc]             Comparison of available objects from i-doit and JDisc<br>
 [Improvement][JDisc]             Archive objects, that have not been seen by JDisc for a defined set of days<br>
-[Improvement][Code (Internal)]   Purge all objects in i-doit via command<br>
 [Bug][Code (Internal)]           Refactor the automatic update-check to a separate (ajax) request<br>
 [Bug][Code (Internal)]           Installation of different Add-on Versions does not replace old files<br>
 [Bug][Code (Internal)]           Changes in SMTP configuration encrypt the password<br>
