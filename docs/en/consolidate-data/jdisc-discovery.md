@@ -128,10 +128,10 @@ Categories which are JDisc specific or have related information:
 
 -   [Assigned Subscriptions](../basics/categories-and-attributes.md)
 -   [Data source](../basics/categories-and-attributes.md)
--   [JDisc Custom Attributes](.../basics/categories-and-attributes.md)
--   [JDisc Device Information](.../basics/categories-and-attributes.md)
--   [JDisc Discovery](.../basics/categories-and-attributes.md)
--   [Network → Connection endpoint](.../basics/categories-and-attributes.md)
+-   [JDisc Custom Attributes](../basics/categories-and-attributes.md)
+-   [JDisc Device Information](../basics/categories-and-attributes.md)
+-   [JDisc Discovery](../basics/categories-and-attributes.md)
+-   [Network → Connection endpoint](../basics/categories-and-attributes.md)
 -   [Subscriptions](../basics/categories-and-attributes.md)
 -   [Support Entitlements](../basics/categories-and-attributes.md)
 
