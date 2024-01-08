@@ -1,12 +1,18 @@
-# Tenant management
+# [Tenant name] management
 
 Here you can mange your tenant and view system related configurations.
 
-[![Tenant management overview](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)
+[![[Tenant name] management overview](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)
+
+## The [Tenant name] management is divided into the following sub-sections
+
+-   [Settings for [Tenant name]](settings-for-tenant.md)
+-   [Repair and clean up](repair-and-clean-up.md)
+-   [Expert settings](expert-settings.md)
 
 ## License overview
 
-In the license overview you will find informations about your license, documented object, version and a object counter.
+In the license overview you will find information about your license, documented object, version and a object counter.
 
 | Option | Value |
 |-|-|
@@ -28,13 +34,12 @@ In the license overview you will find informations about your license, documente
 | Operating System | Linux or Windows |
 | PHP Version |  PHP Version |
 | i-doit Code Version | i-doit Version |
-| MariaDB Version | MariaDB Version	|
+| MariaDB Version | MariaDB Version |
 | i-doit Database Version | i-doit Database Version |
 | Database size | Size in MB |
 | Updates | Next Version available? |
 | Browser (client) | Info text and link to kb |
 | Configuration examples | Info text and link to kb |
-
 
 ## PHP.ini Settings
 
@@ -60,7 +65,7 @@ In the license overview you will find informations about your license, documente
 | sort_buffer_size | Size in bytes |
 | innodb_sort_buffer_size | Size in MB |
 | innodb_log_file_size | Size in MB |
-| datadir | Datadir of MySQL |
+| datadir | Data directory of MySQL |
 
 ## PHP Extensions
 

@@ -11,10 +11,11 @@ The administration is accessed via the gear wheel icon in the top right corner. 
 ## The Administration is divided into the following sub-sections
 
 -   [User settings](./user-settings/index.md)
--   [Tenant settings](./tenant-management/index.md)
+-   [[Tenant name] management](./tenant-management/index.md)
 -   [Data structure](./data-structure/index.md)
 -   [Data view](./data-view/index.md)
 -   [Predefined content](./predefined-content/index.md)
--   [User persmissions](./user-permissions.md)
+-   [User permissions](./user-permissions.md)
 -   [Logbook](./logbook.md)
 -   [Import and interfaces](./import-and-interfaces/index.md)
+-   [Add-ons](add-ons/index.md)

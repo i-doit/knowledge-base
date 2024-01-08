@@ -389,9 +389,9 @@ nav:
                   - Category lists: system-administration/administration/user-settings/user-interface/category-lists.md
                   - Object lists: system-administration/administration/user-settings/user-interface/object-lists.md
               - Editing lock: system-administration/administration/user-settings/editing-lock.md
-          - Tenant management:
+          - '[Tenant name] management':
               - system-administration/administration/tenant-management/index.md
-              - Settings for Tenant: system-administration/administration/tenant-management/settings-for-tenant.md
+              - 'Settings for [Tenant name]': system-administration/administration/tenant-management/settings-for-tenant.md
               - Repair and clean up: system-administration/administration/tenant-management/repair-and-clean-up.md
               - Expert settings: system-administration/administration/tenant-management/expert-settings.md
           - Data structure:
