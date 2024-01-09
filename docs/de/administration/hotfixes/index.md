@@ -26,6 +26,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
+### Existing models not displayed when selecting manufacturer
+
+[i-doit_28_hotfix_ID-9762_bcce7cb4.zip :material-file-download:](../../assets/downloads/hotfixes/28/i-doit_28_hotfix_ID-9762_bcce7cb4.zip){ .md-button .md-button--primary }
+
 ### When opening a object overview page a HTTP 500 error appears
 
 ??? note "Related error message"
