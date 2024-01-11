@@ -275,7 +275,6 @@ nav:
           - Suse Linux Enterprise Server (SLES): installation/manuelle-installation/suse-linux-enterprise-server.md
           - Ubuntu GNU/Linux:
               - installation/manuelle-installation/ubuntu-linux/index.md
-              - Ubuntu 20.04.1 LTS "Focal Fossa": installation/manuelle-installation/ubuntu-linux/ubuntu-20.04.1-lts.md
           - Microsoft Windows Server:
               - installation/manuelle-installation/microsoft-windows-server/index.md
               - i-doit via XAMPP: installation/manuelle-installation/microsoft-windows-server/idoit-via-XAMPP.md

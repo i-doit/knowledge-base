@@ -1,12 +1,12 @@
 # Ubuntu Linux
+
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
-Systemvoraussetzungen
----------------------
+## Systemvoraussetzungen
 
 Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md).
 
-Wenn [Ubuntu Linux](https://www.ubuntu.com/) als Betriebssystem eingesetzt werden soll, wird die Server-Variante von **18.04 LTS "Bionic Beaver"** empfohlen einzusetzen. Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
+Wenn [Ubuntu Linux](https://www.ubuntu.com/) als Betriebssystem eingesetzt werden soll, wird die Server-Variante von **20.04 LTS "focal fossa"** empfohlen einzusetzen. Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
     cat /etc/os-release
 
@@ -16,54 +16,28 @@ Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen:
 
 **x86_64** bedeutet 64bit, **i386** oder **i686** lediglich 32bit.
 
-Installation der Pakete
------------------------
+## Installation der Pakete
 
-Sollen die Standard-Paket-Repositories genutzt werden, bieten sich folgende Statements an, um
+Sollen die offiziellen Paket-Repositorys genutzt werden, bieten sich folgende Statements an, um
 
 *   den **Apache** Webserver 2.4,
 *   die Script-Sprache **PHP** 7.4,
-*   das Datenbankmanagementsystem **MariaDB** 10.5 und
+*   das Datenbankmanagementsystem **MariaDB** 10.3 und
 *   den Caching-Server **memcached**
 
-...installiert. Allerdings verfügt **18.04 LTS "Bionic Beaver"** nur über veraltete Pakete, die den [Systemvoraussetzungen](../../systemvoraussetzungen.md) nicht entsprechen.
-Es ist daher nötig, über weitere Repositories aktuelle Pakete zu installieren. **Vorsicht:** Dritt-Repositories können die Stabilität des Betriebssystems gefährden.
+zu installieren:
 
-Für PHP 7.4 verwenden wir das [Personal Package Archive](https://wiki.ubuntuusers.de/Paketquellen_freischalten/PPA/) von [ondrej](https://launchpad.net/~ondrej/+archive/ubuntu/php):
-
-!!!info "Hinweis!"
-
-    Zusätzliche [Fremdquellen](https://wiki.ubuntuusers.de/Fremdquellen/) können das System gefährden.
-    * * *
-    Ein PPA unterstützt nicht zwangsläufig alle Ubuntu-Versionen. Weitere Informationen sind der [PPA-Beschreibung](https://launchpad.net/~ondrej/+archive/ubuntu/php) des Eigentümers/Teams [ondrej](https://launchpad.net/~ondrej) zu entnehmen.
-
-Zum hinzufügen des Repository verwenden wir:
-
-    sudo add-apt-repository ppa:ondrej/php
     sudo apt update
-
-Die Installation der PHP-Pakete erfolgt danach:
-
     sudo apt-get install \
-    apache2 libapache2-mod-php7.4 \
+    apache2 libapache2-mod-php \
+    mariadb-client mariadb-server \
     php7.4-bcmath php7.4-cli php7.4-common php7.4-curl php7.4-gd php7.4-json \
     php7.4-ldap php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-pgsql \
     php7.4-soap php7.4-xml php7.4-zip \
-    php7.4-imagick php7.4-memcached \
+    php-imagick php-memcached \
     memcached unzip moreutils
 
-Weiterhin bietet Ubuntu 18.04 nur veraltete Distributionspakete für MariaDB. Wir greifen daher auf das offizielle [Dritt-Repository von MariaDB](https://mariadb.org/download/?t=repo-config&d=18.04+LTS+%22bionic%22&v=10.5&r_m=timo) zurück:
-
-    sudo apt-get install software-properties-common dirmngr apt-transport-https
-    sudo apt-key adv --fetch-keys '[https://mariadb.org/mariadb_release_signing_key.asc'](https://mariadb.org/mariadb_release_signing_key.asc')
-    sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] [https://mirror.dogado.de/mariadb/repo/10.5/ubuntu](https://mirror.dogado.de/mariadb/repo/10.5/ubuntu) bionic main'
-
-Sobald der Schlüssel importiert und das Repository hinzugefügt ist, können Sie MariaDB 10.5 aus dem MariaDB-Repository mit installieren:
-
-    sudo apt update
-    sudo apt-get install mariadb-server
-
-Konfiguration
+## Konfiguration
 
 Die installierten Pakete für Apache Webserver, PHP und MariaDB bringen bereits Konfigurationsdateien mit. Es empfiehlt sich, abweichende Einstellungen in gesonderten Dateien zu speichern, anstatt die vorhandenen Konfigurationsdateien anzupassen. Bei jedem Paket-Upgrade würden die abweichenden Einstellungen bemängelt oder überschrieben werden. Die Einstellungen der Standardkonfiguration werden durch die benutzerdefinierten ergänzt bzw. überschrieben.
 
@@ -118,7 +92,6 @@ Der Default-VHost wird deaktiviert und ein neuer angelegt:
 
 In dieser Datei wird die neue VHost-Konfiguration gespeichert:
 
-
     <VirtualHost *:80>
             ServerAdmin i-doit@example.net
 
@@ -153,11 +126,18 @@ Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, si
 
 Damit i-doit beim Setup den Benutzer **root** verwenden darf, ruft man die Shell von MariaDB auf:
 
-    sudo mysql -uroot
+    sudo mysql -uroot -p
+
+In der Shell von MariaDB werden nun folgende SQL-Statements ausgeführt:
+
+    UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
+    FLUSH PRIVILEGES;
+    EXIT;
 
 !!! info "Änderung ab MariaDB 10.4 und aufwärts"
-    Ab MariaDB Version 10.4 und aufwärts wird das UPDATE-Statement nicht mehr in der user-Tabelle unterstützt.
-    In der Shell von MariaDB werden nun folgende SQL-Statements ausgeführt:
+
+    Ab MariaDB Version 10.4 und aufwärts wird das UPDATE-Statement nicht mehr in der user-Tabelle unterstützt.  
+    Nun muss das Statement ALTER USER genutzt werden:
 
         ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('passwort');
 
@@ -171,7 +151,7 @@ Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
 
     sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
 
-Diese Datei enthält die neuen Konfigurationseinstellungen. Für eine optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden:
+Diese Datei enthält die neuen Konfigurationseinstellungen. **Für eine optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden**:
 
 ```shell
     [mysqld]
@@ -227,9 +207,8 @@ Abschließend wird MariaDB gestartet:
 
     sudo systemctl start mysql.service
 
-Nächster Schritt
-----------------
+## Nächster Schritt
 
 Das Betriebssystem ist nun vorbereitet, sodass i-doit installiert werden kann:
 
-[Weiter zu *Setup* …](../setup.md)
+Weiter zu [*Setup*](../setup.md)
