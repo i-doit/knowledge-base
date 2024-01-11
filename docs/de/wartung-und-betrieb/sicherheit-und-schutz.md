@@ -238,20 +238,14 @@ Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe,
 
 | Host | Protokoll | Port | Beschreibung |
 | --- | --- | --- | --- |
-| **login.i-doit.com** | **HTTP** | **80** | Updates für i-doit und dessen Add-ons herunterladen |
-| **login.i-doit.com** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
-| **reports-ng.i-doit.org** | **HTTP** | **80** | Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md)) |
-| **reports-ng.i-doit.org** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
-| **r.i-doit.com** | **HTTP** | **80** | Online Repositories (z. B. für [Vorlagen](../i-doit-pro-add-ons/documents/index.md)) |
-| **r.i-doit.com** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
-| **news.i-doit.com** | **HTTP** | **80** | Neuigkeiten zu i-doit im Dashboard (open-Variante) |
-| **news.i-doit.com** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
-| **i-doit.com** | **HTTP** | **80** | Nach Updates der pro-Variante suchen |
-| **i-doit.com** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
-| **i-doit.org** | **HTTP** | **80** | Nach Updates der open-Variante suchen |
-| **i-doit.org** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
-| **lizenzen.i-doit.com** | **HTTP** | **80** | Lizenzen über Token abrufen |
-| **lizenzen.i-doit.com** | **HTTPS** | **443** | Siehe oben (TLS-verschlüsselt) |
+| **[login.i-doit.com](https://login.i-doit.com)** | **HTTPS** | **443** | Updates für i-doit und dessen Add-ons herunterladen |
+| **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)** | **HTTPS** | **443** | Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md)) |
+| **[r.i-doit.com](https://r.i-doit.com)** | **HTTPS** | **443** | Online Repositories (z. B. für [Vorlagen](../i-doit-pro-add-ons/documents/index.md)) |
+| **[news.i-doit.com](<https://news.i-doit.com>)** | **HTTPS** | **443** | Neuigkeiten zu i-doit im Dashboard (open-Variante) |
+| **[i-doit.com](https://www.i-doit.com/en/)** | **HTTPS** | **443** | Nach Updates der pro-Variante suchen |
+| **[i-doit.org](https://i-doit.org)** | **HTTPS** | **443** | Nach Updates der open-Variante suchen |
+| **[lizenzen.i-doit.com](lizenzen.i-doit.com)** | **HTTPS** | **443** | Lizenzen über Token abrufen |
+| **[crm-gateway.i-doit.com](crm-gateway.i-doit.com)** | **HTTPS** | **443** | Ruft über den Lizenz Token verfügbare Downloads ab |
 
 Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss der jeweilige Zugriff ebenfalls erlaubt sein:
 

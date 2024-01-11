@@ -238,18 +238,13 @@ An external **dedicated firewall** is very useful, but of course its implementat
 
 | Host | Protocol | Port | Description |
 | --- | --- | --- | --- |
-| **[login.i-doit.com](https://login.i-doit.com/?lang=us)** | **HTTP** | **80** | Download of updates for i-doit and its add-ons |
-| **[login.i-doit.com](http://login.i-doit.com)** | **HTTPS** | **443** | See above (TLS-encrypted) |
-| **[reports-ng.i-doit.org](http://reports-ng.i-doit.org)** | **HTTP** | **80** | Online repositories (for example, for [reports](../evaluation/report-manager.md)) |
-| **[reports-ng.i-doit.org](http://reports-ng.i-doit.org)** | **HTTPS** | **443** | See above (TLS-encrypted) |
-| **[r.i-doit.com](http://r.i-doit.com)** | **HTTP** | **80** | Online Repositories (for example, for [templates](../i-doit-pro-add-ons/documents/index.md)) |
-| **[r.i-doit.com](http://r.i-doit.com)** | **HTTPS** | **443** | See above (TLS-encrypted) |
-| **[news.i-doit.com](http://news.i-doit.com)** | **HTTP** | **80** | News about i-doit in the dashboard (open version) |
-| **[news.i-doit.com](http://news.i-doit.com)** | **HTTPS** | **443** | See above (TLS-encrypted) |
-| **[i-doit.com](https://www.i-doit.com/en/)** | **HTTP** | **80** | Search for updates of the pro version |
-| **[i-doit.com](https://www.i-doit.com/en/)** | **HTTPS** | **443** | See above (TLS-encrypted) |
-| **[i-doit.org](http://i-doit.org)** | **HTTP** | **80** | Search for updates of the pro version |
-| **[i-doit.org](http://i-doit.org)** | **HTTPS** | **443** | See above (TLS-encrypted) |
+| **[login.i-doit.com](https://login.i-doit.com)** | **HTTPS** | **443** | Download of updates for i-doit and its add-ons |
+| **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)** | **HTTPS** | **443** | Online repositories (for example, for [reports](../evaluation/report-manager.md)) |
+| **[r.i-doit.com](https://r.i-doit.com)** | **HTTPS** | **443** | Online Repositories (for example, for [templates](../i-doit-pro-add-ons/documents/index.md)) |
+| **[news.i-doit.com](https://news.i-doit.com)** | **HTTPS** | **443** | News about i-doit in the dashboard (open version) |
+| **[i-doit.com](https://www.i-doit.com/en/)** | **HTTPS** | **443** | Search for updates of the pro version |
+| **[i-doit.org](https://i-doit.org)** | **HTTPS** | **443** | Search for updates of the pro version |
+| **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)** | **HTTPS** | **443** | Retrieves available downloads via the license token |
 
 If one or more interfaces to third-party applications are configured, you also have to enable access respectively:
 
