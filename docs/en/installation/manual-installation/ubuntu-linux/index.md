@@ -2,11 +2,11 @@
 
 In this article we explain in just a few steps which packages need to be installed and configured.
 
-### System Requirements
+## System Requirements
 
 The general [system requirements](../../system-requirements.md) apply.
 
-When you want to use [Ubuntu Linux](https://www.ubuntu.com/) as operating system, the server version ==18.04 LTS "bionic"== is recommended. In order to find out which version is used you can carry out the following command:
+When you want to use [Ubuntu Linux](https://www.ubuntu.com/) as operating system, the server version ==20.04 LTS "focal fossa"== is recommended. In order to find out which version is used you can carry out the following command:
 
 ```shell
 cat /etc/os-release
@@ -22,63 +22,29 @@ uname -m
 
 ## Installation of the Packages
 
-When you want to use the default package repositories, use the following instructions for installation of:
+When you want to use the official package repositories, use the following instructions for installation of:
 
-- the ==Apache== web server 2.4
-- the script language ==PHP== 7.4
-- the database management system ==MariaDB== 10.5 and
-- the caching server ==memcached==
-
-However, ==18.04 LTS "Bionic Beaver"== only has outdated packages that do not meet the [System Requirements](../../system-requirements.md).<br>
-It is therefore necessary to install up-to-date packages via additional repositories.
-
-For PHP 7.4 we use the Personal Package Archive from ondrej:
-
-!!! note ""
-
-    Additional [third-party sources](https://help.ubuntu.com/community/Repositories/Ubuntu) can endanger the system.
-
-    * * *
-
-    A PPA does not necessarily support all Ubuntu versions. For more information, see the [PPA description](https://launchpad.net/~ondrej/+archive/ubuntu/php) of the owner/team [ondrej](https://launchpad.net/~ondrej).
-
-To add the repository we use:
+*   the ==Apache== web server 2.4
+*   the script language ==PHP== 7.4
+*   the database management system ==MariaDB== 10.3 and
+*   the caching server ==memcached==
 
 ```shell
-sudo add-apt-repository ppa:ondrej/php
 sudo apt update
-```
-
-The installation of the PHP packages is done afterwards:
-
-```shell
 sudo apt-get install \
-apache2 libapache2-mod-php7.4 \
+apache2 libapache2-mod-php \
+mariadb-client mariadb-server \
 php7.4-bcmath php7.4-cli php7.4-common php7.4-curl php7.4-gd php7.4-json \
 php7.4-ldap php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-pgsql \
 php7.4-soap php7.4-xml php7.4-zip \
-php7.4-imagick php7.4-memcached \
+php-imagick php-memcached \
 memcached unzip moreutils
-```
-
-Furthermore, Ubuntu 18.04 only provides outdated distribution packages for MariaDB. We therefore resort to the [official third-party repository of MariaDB](https://mariadb.org/download/?t=repo-config&d=18.04+LTS+%22bionic%22&v=10.5&r_m=timo):
-
-```shell
-sudo apt-get install software-properties-common dirmngr apt-transport-https
-sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
-sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] https://mirror.dogado.de/mariadb/repo/10.5/ubuntu bionic main'
-```
-
-Once the key is imported and the repository is added, you can install MariaDB 10.5 from the MariaDB repository as well:
-
-```shell
-sudo apt update
-sudo apt-get install mariadb-server
 ```
 
 ## Configuration
 
-The installed packages for Apache web server, PHP and MariaDB already supply configuration files. It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
+The installed packages for Apache web server, PHP and MariaDB already supply configuration files.<br>
+It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
 
 ### PHP
 
@@ -116,11 +82,9 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
-The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](../../../system-administration/administration/index.md) of i-doit.
-
-The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
-
-Afterwards, the required PHP modules are activated and the Apache web server is restarted:
+The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](../system-settings.md) of i-doit.<br>
+The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).<br>
+Afterwards, the required PHP modules are activated and the Apache web server is restarted:<br>
 
 ```shell
 sudo phpenmod i-doit
@@ -142,22 +106,21 @@ The new VHost configuration is saved in this file:
 ```shell
 <VirtualHost *:80>
         ServerAdmin i-doit@example.net
-
+ 
         DirectoryIndex index.php
         DocumentRoot /var/www/html/
         <Directory /var/www/html/>
                 AllowOverride All
                 Require all granted
         </Directory>
-
+ 
         LogLevel warn
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.
-
+i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.<br>
 With the next step you activate the new VHost and the necessary Apache module ==rewrite== and the Apache web server is restarted:
 
 ```shell
@@ -171,7 +134,8 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The ==root== user should receive a secure password:
+Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly.<br>
+The ==root== user should receive a secure password:
 
 ```shell
 mysql_secure_installation
@@ -183,20 +147,18 @@ Activate the MariaDB shell so that i-doit is enabled to apply the ==root== user 
 sudo mysql -uroot
 ```
 
-Change from MariaDB 10.4 and upwards
-
-From MariaDB version 10.4 and up, the UPDATE statement is no longer supported in the user table.
-
 The following SQL statements are now carried out in the MariaDB shell:
 
 ```shell
-ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('passwort');
+UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
+FLUSH PRIVILEGES;
+EXIT;
 ```
 
 Afterwards, MariaDB is stopped. Now it is important to move files which are not required, otherwise the result would be a significant loss of performance:
 
 ```shell
-mysql -uroot -p -e "SET GLOBAL innodb_fast_shutdown = 0"
+mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
 sudo systemctl stop mysql.service
 sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
@@ -269,4 +231,4 @@ sudo systemctl start mysql.service
 
 Now the operating system is prepared and i-doit can be installed.
 
-Proceed with [==Setup== …](../setup.md)
+Proceed with [*Setup*](../setup.md)
