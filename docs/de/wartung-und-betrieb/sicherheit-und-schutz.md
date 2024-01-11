@@ -244,8 +244,8 @@ Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe,
 | **[news.i-doit.com](<https://news.i-doit.com>)** | **HTTPS** | **443** | Neuigkeiten zu i-doit im Dashboard (open-Variante) |
 | **[i-doit.com](https://www.i-doit.com/en/)** | **HTTPS** | **443** | Nach Updates der pro-Variante suchen |
 | **[i-doit.org](https://i-doit.org)** | **HTTPS** | **443** | Nach Updates der open-Variante suchen |
-| **[lizenzen.i-doit.com](lizenzen.i-doit.com)** | **HTTPS** | **443** | Lizenzen über Token abrufen |
-| **[crm-gateway.i-doit.com](crm-gateway.i-doit.com)** | **HTTPS** | **443** | Ruft über den Lizenz Token verfügbare Downloads ab |
+| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)** | **HTTPS** | **443** | Lizenzen über Token abrufen |
+| **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)** | **HTTPS** | **443** | Ruft über den Lizenz Token verfügbare Downloads ab |
 
 Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss der jeweilige Zugriff ebenfalls erlaubt sein:
 
