@@ -45,6 +45,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_28_hotfix_ID-10126_b932dd4.zip :material-file-download:](../../assets/downloads/hotfixes/28/i-doit_28_hotfix_ID-10126_b932dd4.zip){ .md-button .md-button--primary }
 
+### Document does not exist error message when opening a document
+
+[i-doit_28_hotfix_ID-10086.zip :material-file-download:](../../assets/downloads/hotfixes/28/i-doit_28_hotfix_ID-10086.zip){ .md-button .md-button--primary }
+
 ## API Add-on 1.15
 
 ### cmdb.reports.read attaches "&nbsp;&nbsp" to each value
