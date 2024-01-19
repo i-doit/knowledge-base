@@ -2,8 +2,9 @@
 
 In diesem Artikel beschreiben wir die generelle Vorgehensweise, um eine Installation von i-doit von einem GNU/Linux zu einem anderen umzuziehen. Der Umzug umfasst sowohl die Datenbanken, als auch die Dateien und Verzeichnisse.
 
-Vorbereitungen und Annahmen
----------------------------
+## Vorbereitungen und Annahmen
+
+!!! warning "Beide Systeme müssen auf der gleichen i-doit Version sein!"
 
 Es sind ein paar Dinge zu beachten, um einen möglichst reibungslosen Umzug zu gewährleisten:
 
@@ -11,8 +12,7 @@ Es sind ein paar Dinge zu beachten, um einen möglichst reibungslosen Umzug zu g
 2.  Wir verändern das alte System nicht, um im Fall der Fälle schnell wieder in den Ursprungszustand zurückkehren zu können.
 3.  Die gezeigten Befehle passen zu einem aktuellen [Debian GNU/Linux](../installation/manuelle-installation/debian.md) und sollten an die entsprechende Umgebung angepasst werden. Blindes Ausführen der Befehle sollten vermieden werden.
 
-Neues System vorbereiten
-------------------------
+## Neues System vorbereiten
 
 Zunächst gilt es, das neue System so weit wie möglich vorzubereiten:
 
@@ -20,8 +20,7 @@ Zunächst gilt es, das neue System so weit wie möglich vorzubereiten:
 2.  Auf dem neuen Betriebssystem sind die [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) konfiguriert worden.
 3.  Gängige [Sicherheitsmaßnahmen](../wartung-und-betrieb/sicherheit-und-schutz.md) wurden durchgeführt.
 
-Altes System außer Betrieb nehmen
----------------------------------
+## Altes System außer Betrieb nehmen
 
 Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwendet werden:
 
@@ -32,8 +31,7 @@ Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwende
 
         sudo systemctl stop apache2.service
 
-Dateien und Verzeichnisse umziehen
-----------------------------------
+## Dateien und Verzeichnisse umziehen
 
 1.  Wir kopieren das gesamte Installationsverzeichnis von i-doit vom alten auf das neue System. Das Verzeichnis befindet sich in vielen Fällen unter /var/www/html/. Beispiel mit SSH, wobei i-doit im Verzeichnis /var/www/html/i-doit/ zu finden ist:
 
@@ -58,8 +56,7 @@ Dateien und Verzeichnisse umziehen
         ls -lha /var/www/html/i-doit/.htaccess
 
 
-Datenbanken umziehen
---------------------
+## Datenbanken umziehen
 
 1.  i-doit benötigt mindestens 2 [Datenbanken](../software-entwicklung/datenbank-modell/index.md). Von jeder einzelnen sollte auf dem alten System ein Dump erstellt werden:
 
@@ -105,8 +102,8 @@ Datenbanken umziehen
 
     Das obige Passwort für den Benutzer idoit sollte deckungsgleich mit den Angaben in der Datei /var/www/html/i-doit/src/config.inc.php sein.
 
-Nachbereitung
--------------
+## Nachbereitung
+
 
 1.  DNS-Einträge, IP-Adressen, Hostnames etc. sollten im Nachgang angepasst werden, damit i-doit wie gewohnt erreichbar ist.
 2.  Schnittstellen zu Drittsystemen können nun wieder aktiviert werden. Die Funktionen sollten geprüft werden.
