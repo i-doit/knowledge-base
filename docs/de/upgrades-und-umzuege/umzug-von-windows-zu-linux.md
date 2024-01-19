@@ -4,7 +4,7 @@ Es mag gute Gründe geben, i-doit unter [Windows](../installation/manuelle-insta
 
 ## Vorbereitungen und Annahmen
 
-??? warning "Beide Systeme müssen auf der gleichen i-doit Version sein!"
+!!! warning "Beide Systeme müssen auf der gleichen i-doit Version sein!"
 
 Bevor es los geht, sollten ein paar Dinge beachtet werden. Ziel soll sein, ohne lange Downtime und vor allem ohne Datenverlust den Umzug zu wagen.
 

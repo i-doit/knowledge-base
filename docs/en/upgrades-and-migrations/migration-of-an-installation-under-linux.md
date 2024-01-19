@@ -4,7 +4,7 @@ This article focuses on the general procedure to migrate an i-doit installation 
 
 ## Preparation and Assumptions
 
-??? warning "Both systems have to be on the same i-doit version"
+!!! warning "Both systems have to be on the same i-doit version"
 
 You have to observe a few things to guarantee a smooth migration:
 

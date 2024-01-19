@@ -4,7 +4,7 @@ In diesem Artikel beschreiben wir die generelle Vorgehensweise, um eine Installa
 
 ## Vorbereitungen und Annahmen
 
-??? warning "Beide Systeme müssen auf der gleichen i-doit Version sein!"
+!!! warning "Beide Systeme müssen auf der gleichen i-doit Version sein!"
 
 Es sind ein paar Dinge zu beachten, um einen möglichst reibungslosen Umzug zu gewährleisten:
 

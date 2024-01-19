@@ -4,7 +4,7 @@ There may be good reasons to operate i-doit in [Windows](../installation/manual-
 
 ## Preparation and Assumptions
 
-??? warning "Both systems have to be on the same i-doit version"
+!!! warning "Both systems have to be on the same i-doit version"
 
 Before starting, a few things should be kept in mind. The objective is to migrate without a long downtime and especially without data loss.
 
