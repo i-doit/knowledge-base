@@ -2,8 +2,9 @@
 
 There may be good reasons to operate i-doit in [Windows](../installation/manual-installation/microsoft-windows-server/index.md). However, due to various reasons we recommend the use of [Linux](../installation/manual-installation/debian.md). But how do we transfer the well-established [IT-documentation](../glossary.md) in an ongoing operation from one system to another as smooth as possible?
 
-Preparation and Assumptions
----------------------------
+## Preparation and Assumptions
+
+??? warning "Both systems have to be on the same i-doit version"
 
 Before starting, a few things should be kept in mind. The objective is to migrate without a long downtime and especially without data loss.
 
@@ -17,8 +18,7 @@ Finally, we assume the new home system of i-doit is already prepared, all [syste
 
 One more thing: You should have all system accounts and passwords ready, which are used on the old as well as on the new system. These include MySQL system users (root) and the i-doit user for MySQL (by default i-doit).
 
-Export Data from Windows
-------------------------
+## Export Data from Windows
 
 First and foremost we take care of securing the data of the old system in order to transfer them to the new system:
 
@@ -35,8 +35,7 @@ First and foremost we take care of securing the data of the old system in order 
 4.  Now we stop the MySQL process and hope that neither MySQL nor the Apache Webserver are needed ever again in Windows.
     
 
-Migrate Data to GNU/Linux
--------------------------
+## Migrate Data to GNU/Linux
 
 After copying both the ZIP file, including the i-doit folder, and the SQL file, including the database contents, onto the new server ([WinSCP](http://winscp.net/eng/index.php) serves this purpose well), we connect via SSH (for example via [Putty](http://www.putty.org/)) and operate in the command line from now on. The Apache Webserver, MySQL and PHP are fully configured and all needed packages are properly [installed](../installation/index.md). The only thing missing is i-doit:
 
@@ -75,8 +74,7 @@ After copying both the ZIP file, including the i-doit folder, and the SQL file, 
 5.  We close the MySQL client with the exit; command or by pressing CTRL+D .
     
 
-Files
------
+## Files
 
 1.  We extract the ZIP file in the desired location. In [Debian GNU/Linux](../installation/manual-installation/debian.md) this would be in /var/www/html/:
     
@@ -99,8 +97,7 @@ Now it is time for a first big test: Can the new home of i-doit be opened via th
 
 What is left is the transfer of the Windows tasks to Cronjobs. Most of the time the [i-doit controller (CLI)](../automation-and-integration/cli/index.md) has to do recurring tasks. If you didn't set up any Tasks/Cronjobs for i-doit yet, then you should do it now.
 
-Follow-up Work
---------------
+## Follow-up Work
 
 Following this migration, you should run various tests and reactivate the interfaces between i-doit and third-party tools. It is also important to have the [backups](../maintenance-and-operation/backup-and-recovery/index.md) running. If all tests are successful (which can hopefully be presumed), the maintenance mode can be concluded and all colleagues be informed that the IT-documentation is available again.
 

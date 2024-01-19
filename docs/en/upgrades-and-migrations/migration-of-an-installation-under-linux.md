@@ -2,8 +2,9 @@
 
 This article focuses on the general procedure to migrate an i-doit installation from one GNU/Linux to another one. The migration includes databases as well as files and directories.
 
-Preparation and Assumptions
----------------------------
+## Preparation and Assumptions
+
+??? warning "Both systems have to be on the same i-doit version"
 
 You have to observe a few things to guarantee a smooth migration:
 
@@ -11,8 +12,7 @@ You have to observe a few things to guarantee a smooth migration:
 2.  No changes should be made to the old system, so that we are able to return quickly to the original status when trouble strikes.
 3.  The commands shown here apply to a current [Debian GNU/Linux](../installation/manual-installation/debian.md) and should be modified in correspondence with the environment. Avoid a blind approach regarding the execution of commands.
 
-Preparation of the New System
------------------------------
+## Preparation of the New System
 
 First of all, it is necessary to prepare the new systems as far as possible by observing the following:
 
@@ -20,8 +20,7 @@ First of all, it is necessary to prepare the new systems as far as possible by o
 2.  The [system settings](../installation/manual-installation/system-settings.md) have been configured on the new operating system.
 3.  The usual [security measures](../maintenance-and-operation/security-and-protection.md) have been carried out.
 
-Closing Down the Old System
----------------------------
+## Closing Down the Old System
 
 The old system should not be used productively during the migration process anymore:
 
@@ -33,8 +32,7 @@ The old system should not be used productively during the migration process anym
         sudo systemctl stop apache2.service
     
 
-Migration of Files and Directories
-----------------------------------
+## Migration of Files and Directories
 
 1.  We copy the complete i-doit installation directory from the old system to the new system. In many cases, the directory is located under /var/www/html/. Here is an example with SSH, where i-doit can be found in the directory /var/www/html/i-doit/.
     
@@ -59,8 +57,7 @@ Migration of Files and Directories
         ls -lha /var/www/html/i-doit/.htaccess
     
 
-Migration of Databases
-----------------------
+## Migration of Databases
 
 1.  i-doit requires at least two [databases](../software-development/database-model/index.md). You should create a dump of each database on the old system:
     
@@ -107,8 +104,7 @@ Migration of Databases
     The above password for the idoit user should be identical with the details in the file /var/www/html/i-doit/src/config.inc.php.
     
 
-Follow-up Work
---------------
+## Follow-up Work
 
 1.  Afterwards, you should adapt DNS entries, IP addresses, host names etc., so that i-doit can be accessed as usual.
 2.  Now interfaces to third-party systems can be reactivated. The functions should be checked.
