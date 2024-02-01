@@ -1,4 +1,4 @@
-# i-doit für Windows Server installieren
+# i-doit für Windows installieren
 
 Wie i-doit unter dem Betriebssystem Windows installiert wird, beschreiben wir in diesem Artikel.<br>
 Das i-doit Installationspaket für Windows wird im [Kundenportal](../../../administration/kundenportal.md) zur Verfügung gestellt.
@@ -47,6 +47,29 @@ Der Speicherort der PHP, MariaDB oder Apache Konfiguration:
 
 -   **Apache:**
     `C:\i-doit\apache-2.4\conf\httpd.conf`
+
+### Zugangsdaten
+
+Die folgenden Zugangsdaten werden durch den installer gesetzt.
+
+Installationsordner: `C:\i-doit-Discovery`
+
+**i-doit Discovery**
+
+| Software | Benutzername | Passwort |
+| --- | --- | --- |
+| **JDisc Discovery Datenbank** | postgres | idoitdiscovery |
+| **JDisc Discovery Datenbank (read only)** | postgresro | idoit |
+
+**i-doit**
+
+| Software | Benutzername | Passwort |
+| --- | --- | --- |
+| **i-doit MariaDB (Admin User)** | root | idoit |
+| **i-doit MariaDB** | idoit | idoit |
+| **Admin Center** | admin | admin |
+
+Die i-doit initialen Zugangsdaten finden Sie [hier](../../../grundlagen/erstanmeldung.md).
 
 ## HTTPS einrichten (optional)
 
