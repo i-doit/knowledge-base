@@ -24,15 +24,15 @@ Object IDs are especially used for internal purposes, but they can also be helpf
 
 ## SYS-ID
 
-The **SYS-ID** attribute is unique within all tenants and installations. For this purpose, a 10-digits (being the minimum) positive number is generated from the [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time). This number is displayed in the **General** category. It is synonymously used unhyphenated as **SYSID**.
+The **SYS-ID** attribute does not provide unique referencing when automated imports are used. When a new object is created, a positive number with at least 10 digits is generated for the **SYS-ID**, which is derived from the [UNIX timestamp](https://de.wikipedia.org/wiki/Unixzeit). It is displayed in the **General** category. Synonymously, **SYSID** is also used without a hyphen.
 
 [![SYS-ID](../assets/images/en/basics/unique-references/2-ur.png)](../assets/images/en/basics/unique-references/2-ur.png)
 
-You can specify a prefix for each [object type](structure-of-the-it-documentation.md), which precedes the automatically generated number. You can set the prefix at **Administration → Data structure → Object types → [Object type group] → [Object type] → SYSID prefix**. If you do not specify your own prefix, the SYSID will begin with the SYSID_ prefix. When you set an alternative prefix, the generation of the number changes: The object ID is used instead of the UNIX timestamp.
+You can specify a prefix for each [object type](structure-of-the-it-documentation.md), which precedes the automatically generated number. You can set the prefix at **Administration → Data structure → Object types → [Object type group] → [Object type] → SYSID prefix**. If you do not specify your own prefix, the SYSID will begin with the SYSID_ prefix. When you set an alternative prefix, the generation of the number changes: The object ID is used instead of the UNIX timestamp.
 
 [![SYSID prefix](../assets/images/en/basics/unique-references/3-ur.png)](../assets/images/en/basics/unique-references/3-ur.png)
 
-By default, the SYSID cannot be changed retroactively by the user. However, you can enable changes by activating the corresponding function at **Administration → Tenant management → Settings for tenant → CMDB → SYS-ID readonly**.
+By default, the SYSID cannot be changed retroactively by the user. However, you can enable changes by activating the corresponding function at **Administration → Tenant management → Settings for tenant → CMDB → SYS-ID readonly**.
 
 ## Object Title
 
@@ -101,5 +101,5 @@ These constants cannot be viewed or even edited in the web GUI. For this reason,
 
 ## Further Unique Attributes
 
-- Attributes can be [defined as unique](../efficient-documentation/validation-and-mandatory-fields.md) globally, per object type or (for list categories) per object. In case of multiple occurrences a notification window by i-doit is displayed when you try to save your entries.
-- If the attributes mentioned above do not suffice, additional ones can be [created](./custom-categories.md).
+-   Attributes can be [defined as unique](../efficient-documentation/validation-and-mandatory-fields.md) globally, per object type or (for list categories) per object. In case of multiple occurrences a notification window by i-doit is displayed when you try to save your entries.
+-   If the attributes mentioned above do not suffice, additional ones can be [created](./custom-categories.md).

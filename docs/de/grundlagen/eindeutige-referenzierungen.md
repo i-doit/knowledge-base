@@ -23,7 +23,7 @@ Objekt-IDs werden vor allem zu internen Zwecken verwendet, können aber auch dem
 
 ## SYS-ID
 
-Das Attribut **SYS-ID** erhebt den Anspruch, Mandanten- und Installations-übergreifend eindeutig zu sein. Hierzu wird beim Erstellen eines neuen Objekts eine mindestens 10-stellige, positive Zahl erzeugt, die sich vom [UNIX-Timestamp](https://de.wikipedia.org/wiki/Unixzeit) ableitet. Dargestellt wird sie in der Kategorie **Allgemein**. Synonym wird auch **SYSID** ohne Bindestrich verwendet.
+Das Attribut **SYS-ID** ermöglicht keine eindeutige Referenzierung, wenn automatisierte Importe verwendet werden. Für die **SYS-ID** wird beim Anlegen eines neuen Objekts eine mindestens 10-stellige, positive Zahl generiert, die sich aus dem [UNIX-Timestamp](https://de.wikipedia.org/wiki/Unixzeit) ableitet. Dargestellt wird sie in der Kategorie **Allgemein**. Synonym wird auch **SYSID** ohne Bindestrich verwendet.
 
 [![sysid](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)
 
