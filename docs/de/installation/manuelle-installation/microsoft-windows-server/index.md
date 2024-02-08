@@ -263,13 +263,13 @@ Anschließend wird MariaDB deinstalliert indem wir unter **Programme hinzufügen
 Alternativ kann MariaDB auch über die Eingabeaufforderung deinstalliert werden:
 
 ```winbatch
-msiexec.exe C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL
+msiexec.exe /i C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL
 ```
 
 MariaDB deinstallieren ohne Daten zu löschen:
 
 ```winbatch
-msiexec.exe C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL CLEANUPDATA=""
+msiexec.exe /i C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL CLEANUPDATA=""
 ```
 
 Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP `PATH` muss aus den Umgebungsvariabeln entfernt werden:
