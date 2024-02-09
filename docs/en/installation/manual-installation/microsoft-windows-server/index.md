@@ -82,13 +82,13 @@ Afterwards MariaDB is uninstalled by removing MariaDB under ==Add or Remove Prog
 Alternatively, MariaDB can also be uninstalled via the command prompt:
 
 ```
-msiexec.exe C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL
+msiexec.exe /i C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL
 ```
 
 Uninstall MariaDB without deleting data:
 
 ```
-msiexec.exe C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL CLEANUPDATA=""
+msiexec.exe /i C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL CLEANUPDATA=""
 ```
 
 Now the i-doit folder must be deleted and the PHP `PATH` must be removed from the environment variables:
