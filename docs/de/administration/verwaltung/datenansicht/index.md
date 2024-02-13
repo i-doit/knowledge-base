@@ -5,3 +5,4 @@
 -   [Objekt browser konfigurieren](./objekt-browser-konfigurieren.md)
 -   [Attribute verstecken](./attribute-verstecken.md)
 -   [Sprachprofile](./sprachprofile.md)
+-   [Kategorieordner](kategorieordner.md)
