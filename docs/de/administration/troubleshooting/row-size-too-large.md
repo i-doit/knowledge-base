@@ -1,7 +1,6 @@
 # Row size too large
 
-Problem:
---------
+## Problem
 
 Ich möchte i-doit Updaten. Während des Update erscheint eine Fehlermeldung, wie z.B.:
 
@@ -9,8 +8,7 @@ Ich möchte i-doit Updaten. Während des Update erscheint eine Fehlermeldung, wi
 
 [![Problem](../../assets/images/de/administration/troubleshooting/row-size-too-large/2-rstl.png)](../../assets/images/de/administration/troubleshooting/row-size-too-large/2-rstl.png)
 
-Lösung:
--------
+## Lösung
 
 Ein Backup sollte wegen dem Update schon vorhanden sein.
 

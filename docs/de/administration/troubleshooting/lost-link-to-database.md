@@ -1,12 +1,10 @@
 # "Lost link to database"
 
-Problem
--------
+## Problem
 
 In der Login-Maske erscheint nach Angabe der Credentials die Fehlermeldung **Lost link to database**. Der Login schlägt fehl.
 
-Lösung
-------
+## Lösung
 
 i-doit ist nicht in der Lage, auf die gewünschte [Mandanten-Datenbank](../../software-entwicklung/datenbank-modell/index.md) zuzugreifen. Schnell kann dieser Fehler passieren, wenn die Installation von i-doit auf ein anderes System umzieht und die User für MySQL/MariaDB auf dem neuen System nicht existieren.
 
