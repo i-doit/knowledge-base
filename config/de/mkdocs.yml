@@ -278,6 +278,7 @@ nav:
           - Microsoft Windows Server:
               - installation/manuelle-installation/microsoft-windows-server/index.md
               - i-doit via XAMPP: installation/manuelle-installation/microsoft-windows-server/idoit-via-XAMPP.md
+              - i-doit Discovery Installer: installation/manuelle-installation/microsoft-windows-server/i-doit-eval-discovery-installer.md
           - Systemeinstellungen: installation/manuelle-installation/systemeinstellungen.md
           - Setup: installation/manuelle-installation/setup.md
       - i-doit Virtual Eval Appliance:
