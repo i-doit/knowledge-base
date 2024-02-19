@@ -1,4 +1,4 @@
-# Install i-doit for Windows Server
+# Install i-doit for Windows
 
 How to install i-doit on Windows operating system is described in this article.<br>
 The i-doit installation package for Windows is provided in the [Customer Portal](../../../system-administration/customer-portal.md).
