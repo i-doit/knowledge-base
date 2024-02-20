@@ -1,6 +1,6 @@
 # Console
 
-i-doit has a Commandline Interface (CLI) with which you can carry out various tasks. For example, the CLI is required for [Cronjobs](../../../maintenance-and-operation/cronjob-setup.md) and can be applied for the automation of work steps.
+i-doit has a Command Line Interface (CLI) with which you can carry out various tasks. For example, the CLI is required for [Cronjobs](../../../maintenance-and-operation/cronjob-setup.md) and can be applied for the automation of work steps.
 
 ## First Steps
 
@@ -13,7 +13,7 @@ sudo -u www-data php console.php
 
 Under Windows you also have to change to the installation directory. As the permissions of the webserver are not an issue, the start of **php.exe**, which has to stand in the path of the user, is sufficient.
 
-```sh
+```cmd
 cd C:\xampp\htdocs
 php.exe console.php
 ```
@@ -22,7 +22,7 @@ When you execute the CLI without further arguments, the general help is displaye
 
 ??? abstract "Available commands"
 
-    ```sh
+```sh
     i-doit console utility 29
 
     Usage:
@@ -63,7 +63,7 @@ When you execute the CLI without further arguments, the general help is displaye
     license-assign                      Assign hosting license to i-doit tenant
     license-import                      Import licenses from the i-doit server
     license-key                         Set license key for i-doit
-    license-list                        List of the licenses:  id, type of license, assigned tenant, organisation, valid from, expire date, amount of licensed objects, amount of used objects, licensed add-ons
+    license-list                        List of the licenses:  id, type of license, assigned tenant, organization, valid from, expire date, amount of licensed objects, amount of used objects, licensed add-ons
     license-remove                      Remove license from i-doit
     list                                List commands
     logbook-archive                     Archives Logbook entries (Settings are defined in the GUI)
@@ -74,7 +74,7 @@ When you execute the CLI without further arguments, the general help is displaye
     search                              Triggers a search and gives the results as formatted text table
     search-index                        Deletes current search index and create it
     strip-description-html              With this command you can strip html tags in description field of all categories and objects
-    sync-dynamic-groups                 Syncronize dynamic group members
+    sync-dynamic-groups                 Synchronize dynamic group members
     system-autoincrement                Changes the initial autoincrement value for all i-doit database tables (Affects everything, Object-IDs, category entries, etc. Use with caution!)
     system-categorycleanup              Purges optionally category entries that are in the state unfinished, archived or deleted
     system-checkforupdates              Checks for i-doit core updates
@@ -91,7 +91,7 @@ When you execute the CLI without further arguments, the general help is displaye
     tenant-remove                       Remove the i-doit Tenant
     uninstall                           Uninstall the i-doit application
     update                              Update the i-doit application
-    ```
+```
 
 ## Authentication Process
 
@@ -103,7 +103,6 @@ sudo -u www-data php console.php [COMMAND] --user admin --password admin --tenan
 ```
 
 !!! success "The user "controller""
-
     We recommend creating a dedicated user in i-doit for the application of the CLI. If this user is to be configured as [local user](../../../user-authentication-and-management/builtin-authentication/creating-a-local-user.md), create it as object of the type **Persons** with the desired credentials in the **Persons → Login** category. This user should receive admin rights. The rights assignment can be carried out through allocation to the predefined **Person group Admin**.
 
 ## Help
@@ -145,7 +144,7 @@ Furthermore, some commands provide examples via **--usage**.
 | **import-xml** | yes | yes | -  | Import data from XML |
 | **install** | yes | yes | - | Install the i-doit application |
 | **ldap-sync** | yes | yes | -  | Import persons and person groups from an [LDAP directory or Active Directory (AD)](../../../user-authentication-and-management/ldap-directory/index.md) |
-| **ldap-syncdn** | yes | yes | -  | Synchronise the distinguished name (DN) of the users (see **LDAP** category) from an [LDAP/AD](../../../user-authentication-and-management/ldap-directory/index.md) |
+| **ldap-syncdn** | yes | yes | -  | Synchronize the distinguished name (DN) of the users (see **LDAP** category) from an [LDAP/AD](../../../user-authentication-and-management/ldap-directory/index.md) |
 | **license-add** | yes | no  | -  | Adds a license for i-doit (in progress) |
 | **license-assign** | yes | no  | -  | Assigns a hosting license to a client (in progress) |
 | **license-import** | yes | no  | -  | Imports licenses from the i-doit Server (in progress) |
@@ -164,7 +163,7 @@ Furthermore, some commands provide examples via **--usage**.
 | **search** | yes | yes | -   | [Search](../../../efficient-documentation/search.md) in i-doit |
 | **search-index** | yes | yes | -  | Create/ renew [search index](../../../efficient-documentation/search.md) |
 | **strip-description-html** | yes | yes | - | With this command you can strip html tags in description field of all categories and objects |
-| **sync-dynamic-groups** | yes | yes | - | Syncronize dynamic group members |
+| **sync-dynamic-groups** | yes | yes | - | Synchronize dynamic group members |
 | **system-autoincrement** | yes | yes | -  | Set auto_increment of MariaDB-/MySQL [tables](../../../software-development/database-model/index.md) to a positive integer value |
 | **system-categorycleanup** | yes | yes | - | Purges optionally category entries that are in the state unfinished, archived or deleted |
 | **system-checkforupdates** | yes | yes | -   | Search for i-doit [updates](../../../maintenance-and-operation/update.md) |
@@ -181,4 +180,4 @@ Furthermore, some commands provide examples via **--usage**.
 | **tenant-remove** | yes | yes  | -  | Remove an existing [tenant](../../../system-administration/multi-tenant.md) |
 | **uninstall** | yes | yes | -  | Uninstalls i-doit |
 | **update** | yes | yes | -  | Installs i-doit updates |
-| **workflows-process** | yes | no | [Workfow](../../../i-doit-pro-add-ons/workflow.md) | Process all workflows, send e-mails and create new tasks from checklists |
+| **workflows-process** | yes | no | [Workflow](../../../i-doit-pro-add-ons/workflow.md) | Process all workflows, send e-mails and create new tasks from checklists |

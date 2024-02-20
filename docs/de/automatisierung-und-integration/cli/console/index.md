@@ -1,6 +1,6 @@
 # Console
 
-i-doit verfügt über ein Commandline Interface (CLI), über das sich verschiedene Aufgaben durchführen lassen. Das CLI wird beispielsweise für [Cronjobs](../../../wartung-und-betrieb/cronjobs-einrichten.md) benötigt und kann zum Automatisieren von Arbeitsschritten eingesetzt werden.
+i-doit verfügt über ein Befehlszeilenschnittstelle (CLI), über das sich verschiedene Aufgaben durchführen lassen. Das CLI wird beispielsweise für [Cronjobs](../../../wartung-und-betrieb/cronjobs-einrichten.md) benötigt und kann zum Automatisieren von Arbeitsschritten eingesetzt werden.
 
 ## Erste Schritte
 
@@ -13,8 +13,8 @@ sudo -u www-data php console.php
 
 Unter Windows wechselt man ebenso in das Installationsverzeichnis. Da die Rechte des Webservers keine Rolle spielen, genügt der Aufruf von **php.exe**, welches im Pfad des Benutzers stehen muss.
 
-```sh
-cd C:/xampp/htdocs
+```cmd
+cd C:\xampp\htdocs
 php.exe console.php
 ```
 
@@ -22,7 +22,7 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
 
 ??? abstract "Verfügbare Kommandos"
 
-    ```sh
+```sh
     i-doit console utility 29
 
     Usage:
@@ -63,7 +63,7 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
     license-assign                      Assign hosting license to i-doit tenant
     license-import                      Import licenses from the i-doit server
     license-key                         Set license key for i-doit
-    license-list                        List of the licenses:  id, type of license, assigned tenant, organisation, valid from, expire date, amount of licensed objects, amount of used objects, licensed add-ons
+    license-list                        List of the licenses:  id, type of license, assigned tenant, organization, valid from, expire date, amount of licensed objects, amount of used objects, licensed add-ons
     license-remove                      Remove license from i-doit
     list                                List commands
     logbook-archive                     Archives Logbook entries (Settings are defined in the GUI)
@@ -74,7 +74,7 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
     search                              Triggers a search and gives the results as formatted text table
     search-index                        Deletes current search index and create it
     strip-description-html              With this command you can strip html tags in description field of all categories and objects
-    sync-dynamic-groups                 Syncronize dynamic group members
+    sync-dynamic-groups                 Synchronize dynamic group members
     system-autoincrement                Changes the initial autoincrement value for all i-doit database tables (Affects everything, Object-IDs, category entries, etc. Use with caution!)
     system-categorycleanup              Purges optionally category entries that are in the state unfinished, archived or deleted
     system-checkforupdates              Checks for i-doit core updates
@@ -91,7 +91,7 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
     tenant-remove                       Remove the i-doit Tenant
     uninstall                           Uninstall the i-doit application
     update                              Update the i-doit application
-    ```
+```
 
 ## Authentifizierung
 
@@ -103,7 +103,6 @@ sudo -u www-data php console.php [COMMAND] --user admin --password admin --tenan
 ```
 
 !!! check "Der Benutzer "controller""
-
     Es wird empfohlen, einen dedizierten Benutzer in i-doit für die Nutzung der CLI anzulegen. Soll dieser als [lokaler Benutzer](../../../benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen.md) konfiguriert werden, erstellt man ihn als Objekt vom Typ **Personen** mit den gewünschten Credentials in der Kategorie **Personen → Login**. Dieser Benutzer sollte Admin-Rechte erhalten. Dies kann durch die Zuordnung zur vordefinierten **Personengruppe** **Admin** geschehen.
 
 ## Hilfe
@@ -121,7 +120,6 @@ Darüber hinaus bieten einige Commands Beispielaufrufe via **--usage**.
 
 | Command | pro-Variante | open-Variante | [Add-on](../../../i-doit-pro-add-ons/index.md) | Beschreibung |
 | --- | --- | --- | --- | --- |
-| **CompileDocuments** | ja | nein | [Documents](../../../i-doit-pro-add-ons/documents/index.md) | Aktualisiert Dokumente |
 | **addon-activate** | ja  | ja  | -  | Aktivieren von Add-ons |
 | **addon-deactivate** | ja  | ja  | -  | Deaktivieren von Add-ons |
 | **addon-install** | ja  | ja  | -  | Installieren von Add-ons |
@@ -131,6 +129,7 @@ Darüber hinaus bieten einige Commands Beispielaufrufe via **--usage**.
 | **check_mk-export** | ja  | nein  | [Check_MK](../../../i-doit-pro-add-ons/checkmk.md)  | Konfigurationsdaten für [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) exportieren |
 | **check_mk-livestatus** | ja  | nein  | [Check_MK](../../../i-doit-pro-add-ons/checkmk.md) | Ist-Zustand aus [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) ins Logbuch schreiben |
 | **clear-credentials** | ja  | ja  | -  | Entfernt die Anmeldeinformationen von Benutzern |
+| **CompileDocuments** | ja | nein | [Documents](../../../i-doit-pro-add-ons/documents/index.md) | Aktualisiert Dokumente |
 | **completion** | ja | ja | - | Das Shell-Vervollständigungsskript ausgeben |
 | **contracts-outdated** | ja | ja | - | Aktualisiert den Status ausgelaufener Verträge |
 | **documents** | ja | nein | [Documents](../../../i-doit-pro-add-ons/documents/index.md) | Dokumente erstellen und exportieren |
@@ -150,11 +149,11 @@ Darüber hinaus bieten einige Commands Beispielaufrufe via **--usage**.
 | **license-assign** | ja  | nein | -  | Ordnet eine Hosting Lizenz einem Mandaten zu (in Bearbeitung) |
 | **license-import** | ja  | nein | -  | Importiert Lizenzen vom i-doit Server (in Bearbeitung) |
 | **license-key** | ja  | nein | -  | Setzt einen Lizenzschlüssel für i-doit (in Bearbeitung) |
-| **license-list** | ja  | nein | -  | Listet alle Lizenzen mit allen Informationen auf (ID; Produkt; Typ; Startdatum; Enddatum; lizensierte Objekte; lizenzierte Mandanten; Umgebung) |
+| **license-list** | ja  | nein | -  | Listet alle Lizenzen mit allen Informationen auf (ID; Produkt; Typ; Startdatum; Enddatum; lizenzierte Objekte; lizenzierte Mandanten; Umgebung) |
 | **license-remove** | ja  | nein | -  | Entfernt Lizenzen von i-doit |
 | **list** | ja | ja | - | Listet alle console Kommandos auf |
 | **logbook-archive** | ja  | ja  | -   | [Logbuch-Einträge](../../../grundlagen/logbuch.md) archivieren |
-| **maintenance** | ja  | nein  | [Maintenance](../../../i-doit-pro-add-ons/maintenance.md) | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs Add-on |
+| **maintenance** | ja  | nein  | [Maintenance](../../../i-doit-pro-add-ons/maintenance.md) | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Maintenance Add-on |
 | **migrate-uploaded-files** | ja | ja | - | Migriert hochgeladene Dateien in i-doit <v1.13 zu v.1.14> |
 | **nagios-export** | ja  | nein  | [Nagios](../../network-monitoring/nagios.md) | [Nagios](../../network-monitoring/nagios.md)-Konfiguration exportieren |
 | **nagios-ndoutils** | ja  | nein  | [Nagios](../../network-monitoring/nagios.md) | Ist-Zustand aus [Nagios](../../network-monitoring/nagios.md) ins Logbuch schreiben |
@@ -164,7 +163,7 @@ Darüber hinaus bieten einige Commands Beispielaufrufe via **--usage**.
 | **search** | ja  | ja  | -   | In i-doit [suchen](../../../effizientes-dokumentieren/suche.md) |
 | **search-index** | ja  | ja  | -   | [Suchindex](../../../effizientes-dokumentieren/suche.md) erstellen/erneuern |
 | **strip-description-html** | ja | ja | - | Mit diesem Befehl können Sie html-Tags im Beschreibungsfeld aller Kategorien und Objekte entfernen |
-| **sync-dynamic-groups** | ja | ja | - | Syncronisieren Sie dynamische Gruppenmitglieder |
+| **sync-dynamic-groups** | ja | ja | - | Synchronisieren Sie dynamische Gruppenmitglieder |
 | **system-autoincrement** | ja  | ja  | -  | auto_increment von MariaDB-/MySQL-[Tabellen](../../../software-entwicklung/datenbank-modell/index.md) auf einen positiven Integer-Wert setzen |
 | **system-categorycleanup** | ja | ja | - | Bereinigt optional Kategorieeinträge, die sich im Status unfertig, archiviert oder gelöscht befinden |
 | **system-checkforupdates** | ja  | ja  | -  | Nach [Aktualisierungen](../../../wartung-und-betrieb/update-einspielen.md) für i-doit suchen |
