@@ -36,7 +36,7 @@ The configuration of the interface is under **Administration → Import and inte
 !!! info "Archive outdated objects"
     To archive objects that have not been seen by JDisc for a certain number of days, the threshold value and the threshold value unit must be set at **Administration → [Tenant name] management → Settings for [Tenant name] → JDisc**.
 
-### Common Settings
+### JDisc configuration
 
 | Parameter                                | Comment                                                                                                                                                                             |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -50,14 +50,14 @@ The configuration of the interface is under **Administration → Import and inte
 
 After the parameters are saved, you can test the connection to the JDisc database with the **Check connection** button.
 
-To archive objects that have not been seen by JDisc for a certain number of  e.g. X days, the threshold value and the threshold value unit must be set under **Administration → [Tenant name] management → Settings for [Tenant name] → JDisc**.
+To archive objects that have not been seen by JDisc for a certain number of e.g. X days, the threshold value and the threshold value unit must be set under **Administration → [Tenant name] management → Settings for [Tenant name] → JDisc**.
 
 | Parameter          | Anmerkung                                                                                                                                    |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Threshold**      | Eine Zahl einfügen. When the setting is defined, the objects have not been seen by JDisc within this time period will be archived on import. |
 | **Threshold unit** | Days, Weeks oder Month                                                                                                                       |
 
-### Discovery Settings
+### Discovery settings
 
 The user can activate a scan with the configured JDisc instance with i-doit. For this purpose, the JDisc Discovery web service is used, provided it is installed and activated.
 
@@ -65,12 +65,12 @@ The user can activate a scan with the configured JDisc instance with i-doit. For
 | ------------ | ------------------------------------------- |
 | **Username** | The account to be used for the web service. |
 | **Password** | Password for the account                    |
-| **Port**     | Default: **9000**                           |
-| **Protocol** | Default: **http**                           |
+| **Port**     | Use **443** for GraphQL                     |
+| **Protocol** | Use: **https** for GraphQL                  |
 
 After saving the parameters, you can test whether the configuration was successful with the **Check connection** button.
 
-## Profiles
+## JDisc profiles
 
 The JDisc profiles of i-doit provide the possibility to define the connection of object types and their attributes between JDisc and i-doit. Under **Administration → Import and interfaces → JDISC → JDisc profiles** you can specify how the objects found by JDisc find their way into the IT documentation.
 
@@ -81,7 +81,7 @@ The i-doit default installation already provides predefined profiles. Among thes
 !!! note ""
     Keep in mind that you would need to alter these profiles to fit your installation and available types of objects from JDisc mapped to i-doit object types.
 
-### General Configuration
+### General configuration
 
 | Option           | Description                                                                                               |
 | ---------------- | --------------------------------------------------------------------------------------------------------- |
@@ -107,9 +107,11 @@ For each type in JDisc you can select an equivalent object type in i-doit. If no
 | **Include software licences**                                                     | Do you want to import inventoried licenses as object type **Licenses**?                                                                                                                                                                    |
 | **Import system services**                                                        | Do you want to import inventoried Services as object type **System Services**?                                                                                                                                                             |
 | **Import cloud subscriptions**                                                    | Do you want to import inventoried Cloud data?<br> Data is imported to the category **Assigned subscriptions**. The backward category **Subscriptions** is is assigned to License objects.                                                  |
+| **Import unknown cloud users**                                                    | Only used if the "Import cloud subscriptions" option is active.                                                                                                                                                                            |
 | **Import connection endpoints**                                                   | The connections are not imported into the cabling category, but into the category "Connection endpoint". This allows to distinguish between manual cabling and automatic cabling by JDisc.                                                 |
 | **Use simple database modelling?**                                                | Should the new or the old database logic be used?                                                                                                                                                                                          |
 | **Include layer 3 nets**                                                          | Do you want to import inventoried IP nets as object type **Layer 3 nets**?                                                                                                                                                                 |
+| **Layer 3 filter**                                                                | Specify the range in the following formats: 127.0.0.1-127.0.10.255 or 10.40.55.0/24 or 10.40.55.7. One rule per line.                                                                                                                      |
 | **Keep IP address types**                                                         | Should IPv4 addresses, IPv6 addresses, loopback addresses, virtual addresses be imported?                                                                                                                                                  |
 | **Import type for DHCP IP addresses**                                             | Should addresses assigned via DHCP be overwritten?                                                                                                                                                                                         |
 | **Include VLans**                                                                 | Do you want to import inventoried VLans as object type **Layer 2 nets**?                                                                                                                                                                   |
@@ -126,6 +128,8 @@ For each type in JDisc you can select an equivalent object type in i-doit. If no
 | **Object matching profile**                                                       | [Which strategy do you want to use](object-identification-during-imports.md) to update objects which are already documented in i-doit with an import?                                                                                      |
 | **Update object type**                                                            | When the device already exists as an object in i-doit, you can determine whether the object type is to be updated with help of the assignment (see above) or not.                                                                          |
 | **Update object title**                                                           | Should the object title be updated by the import?                                                                                                                                                                                          |
+| **Use hostname as object title instead of FQDN?**                                 | If devices have an FQDN, they are resolved up to the host name.                                                                                                                                                                            |
+| **Inherit location of parent Object**                                             | Devices that are physically connected to another device automatically receive the location of the connected device.                                                                                                                        |
 
 Categories which are JDisc specific or have related information:
 
@@ -141,7 +145,7 @@ Categories which are JDisc specific or have related information:
 ### Custom identifier
 
 !!! attention "Matching rule"
-    The `devideid` from JDisc is always used to identify objects.
+    The `deviceid` from JDisc is always used to identify objects.
 
 JDisc `deviceid` should be assigned with type JDisc when the object is created in the **Custom identifier** category. The objects should then also be identified here later.
 If no data is available, the object matching profile is used.
