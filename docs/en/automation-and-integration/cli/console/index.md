@@ -23,75 +23,74 @@ When you execute the CLI without further arguments, the general help is displaye
 ??? abstract "Available commands"
 
     ```sh
-    i-doit console utility 24
+    i-doit console utility 29
 
     Usage:
-      command [options] [arguments]
+    command [options] [arguments]
 
     Options:
-      -h, --help            Display help for the given command. When no command is given display help for the list command
-      -q, --quiet           Do not output any message
-      -V, --version         Display this application version
-          --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
-      -n, --no-interaction  Do not ask any interactive question
-      -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+    -h, --help            Display help for the given command. When no command is given display help for the list command
+    -q, --quiet           Do not output any message
+    -V, --version         Display this application version
+        --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+    -n, --no-interaction  Do not ask any interactive question
+    -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
     Available commands:
-      CompileDocuments
-      addon-activate                      Activate add-on
-      addon-deactivate                    Deactivate add-on
-      addon-install                       Install add-on
-      addon-list                          Shows list of installed addons
-      admin-center-password-reset         With this command you can reset the Admin-Center password
-      auth-cleanup                        Cleanup all auth paths
-      clear-credentials                   It removes both attributes `username` and `password` from the users "login" category
-      completion                          Dump the shell completion script
-      contracts-outdated                  Updates status of outdated contracts
-      documents                           Allows to create revisions or export one or multiple documents
-      extend-contracts                    Automatically extend the runtime of not-cancelled contracts
-      help                                Display help for a command
-      import-csv                          Imports CSV formatted files (Using a predefined CSV Import filter, defined in the GUI)
-      import-csvprofiles                  List all available csv profiles
-      import-hinventory                   Imports files formatted in the hInventory XML syntax
-      import-jdisc                        Imports data from a JDisc server (SQL server access is defined in the GUI)
-      import-jdiscdiscovery               Triggers a JDisc discovery (API Access to the JDisc server is defined in the GUI)
-      import-syslog                       Imports data from a Syslog server textfile to the i-doit Logbook
-      import-xml                          Imports files formatted in the i-doit XML syntax
-      install                             Install the i-doit application
-      ldap-sync                           Synchronizes LDAP user accounts with i-doit user objects
-      ldap-syncdn                         Synchronizes LDAP user DN attributes with i-doit user objects (Only needs to be run when migrating between different LDAP sources)
-      license-add                         Add license into i-doit
-      license-assign                      Assign hosting license to i-doit tenant
-      license-import                      Import licenses from the i-doit server
-      license-key                         Set license key for i-doit
-      license-list                        List of the licenses:  id, type of license, assigned tenant, organisation, valid from, expire date, amount of licensed objects, amount of used objects, licensed add-ons
-      license-remove                      Remove license from i-doit
-      list                                List commands
-      logbook-archive                     Archives Logbook entries (Settings are defined in the GUI)
-      migrate-uploaded-files              Migrates uploaded files in i-doit <v1.13 to v.1.14>
-      notifications-list                  Lists all notification types and notifications for later usage
-      notifications-send                  Sends out e-mails for notifications defined in the notification add-on
-      report-export                       Executes an i-doit report and saves it to a file as CSV, TXT, PDF or XML
-      search                              Triggers a search and gives the results as formatted text table
-      search-index                        Deletes current search index and create it
-      strip-description-html              With this command you can strip html tags in description field of all categories and objects
-      sync-dynamic-groups                 Syncronize dynamic group members
-      system-autoincrement                Changes the initial autoincrement value for all i-doit database tables (Affects everything, Object-IDs, category entries, etc. Use with caution!)
-      system-categorycleanup              Purges optionally category entries that are in the state unfinished, archived or deleted
-      system-checkforupdates              Checks for i-doit core updates
-      system-convert-non-innodb-tables    Converts all tables which are not in INNODB to INNODB (Affects database encoding. Use with caution!)
-      system-convert-non-utf8-tables      Changes all non-UTF8-tables to UTF8 (Affects database encoding. Use with caution!)
-      system-location-fix                 Performs the location fix from the systemtools GUI
-      system-objectcleanup                Purges optionally objects that are in the state unfinished, archived or deleted
-      system-objectrelations              Regenerates all object relation names
-      system-refresh-table-configuration  Refreshes all available list configurations (object types and categories)
-      tenant-create                       Create tenant in i-doit
-      tenant-disable                      Disables the tenant with specific id
-      tenant-enable                       Enables the tenant with specific id
-      tenant-list                         Shows list of available tenants
-      tenant-remove                       Remove the i-doit Tenant
-      uninstall                           Uninstall the i-doit application
-      update                              Update the i-doit application
+    addon-activate                      Activate add-on
+    addon-deactivate                    Deactivate add-on
+    addon-install                       Install add-on
+    addon-list                          Shows list of installed addons
+    admin-center-password-reset         With this command you can reset the Admin-Center password
+    auth-cleanup                        Cleanup all auth paths
+    clear-credentials                   It removes both attributes username and password from the users "login" category
+    completion                          Dump the shell completion script
+    contracts-outdated                  Updates status of outdated contracts
+    extend-contracts                    Automatically extend the runtime of not-cancelled contracts
+    help                                Display help for a command
+    import-csv                          Imports CSV formatted files (Using a predefined CSV Import filter, defined in the GUI)
+    import-csvprofiles                  List all available csv profiles
+    import-hinventory                   Imports files formatted in the hInventory XML syntax
+    import-jdisc                        Imports data from a JDisc server (SQL server access is defined in the GUI)
+    import-jdiscdiscovery               Triggers a JDisc discovery (API Access to the JDisc server is defined in the GUI)
+    import-syslog                       Imports data from a Syslog server textfile to the i-doit Logbook
+    import-xml                          Imports files formatted in the i-doit XML syntax
+    install                             Install the i-doit application
+    jdisc-create-server                 Creates a JDisc server, based on given input
+    ldap-sync                           Synchronizes LDAP user accounts with i-doit user objects
+    ldap-syncdn                         Synchronizes LDAP user DN attributes with i-doit user objects (Only needs to be run when migrating between different LDAP sources)
+    license-add                         Add license into i-doit
+    license-assign                      Assign hosting license to i-doit tenant
+    license-import                      Import licenses from the i-doit server
+    license-key                         Set license key for i-doit
+    license-list                        List of the licenses:  id, type of license, assigned tenant, organisation, valid from, expire date, amount of licensed objects, amount of used objects, licensed add-ons
+    license-remove                      Remove license from i-doit
+    list                                List commands
+    logbook-archive                     Archives Logbook entries (Settings are defined in the GUI)
+    migrate-uploaded-files              Migrates uploaded files in i-doit <v1.13 to v.1.14>
+    notifications-list                  Lists all notification types and notifications for later usage
+    notifications-send                  Sends out e-mails for notifications defined in the notification add-on
+    report-export                       Executes an i-doit report and saves it to a file as CSV, TXT, PDF or XML
+    search                              Triggers a search and gives the results as formatted text table
+    search-index                        Deletes current search index and create it
+    strip-description-html              With this command you can strip html tags in description field of all categories and objects
+    sync-dynamic-groups                 Syncronize dynamic group members
+    system-autoincrement                Changes the initial autoincrement value for all i-doit database tables (Affects everything, Object-IDs, category entries, etc. Use with caution!)
+    system-categorycleanup              Purges optionally category entries that are in the state unfinished, archived or deleted
+    system-checkforupdates              Checks for i-doit core updates
+    system-convert-non-innodb-tables    Converts all tables which are not in INNODB to INNODB (Affects database encoding. Use with caution!)
+    system-convert-non-utf8-tables      Changes all non-UTF8-tables to UTF8 (Affects database encoding. Use with caution!)
+    system-location-fix                 Performs the location fix from the systemtools GUI
+    system-objectcleanup                Purges optionally objects that are in the state unfinished, archived or deleted
+    system-objectrelations              Regenerates all object relation names
+    system-refresh-table-configuration  Refreshes all available list configurations (object types and categories)
+    tenant-create                       Create tenant in i-doit
+    tenant-disable                      Disables the tenant with specific id
+    tenant-enable                       Enables the tenant with specific id
+    tenant-list                         Shows list of available tenants
+    tenant-remove                       Remove the i-doit Tenant
+    uninstall                           Uninstall the i-doit application
+    update                              Update the i-doit application
     ```
 
 ## Authentication Process
@@ -122,7 +121,6 @@ Furthermore, some commands provide examples via **--usage**.
 
 | Command | pro Version | open Version | [Add-on](../../../i-doit-pro-add-ons/index.md) | Description |
 | --- | --- | --- | --- | --- |
-| **CompileDocuments** | yes | no | [Documents](../../../i-doit-pro-add-ons/documents/index.md) | Compile Documents |
 | **addon-activate** | yes | yes | -  | Activate add-on |
 | **addon-deactivate** | yes | yes | -  | Deactivate add-on |
 | **addon-install** | yes | yes | -  | Install add-on |
@@ -132,6 +130,7 @@ Furthermore, some commands provide examples via **--usage**.
 | **check_mk-export** | yes | no | [Check_MK 1](../../../i-doit-pro-add-ons/checkmk.md) | Export of configuration files for [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) |
 | **check_mk-livestatus** | yes | no | [Check_MK 1](../../../i-doit-pro-add-ons/checkmk.md) | Write actual status from [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) into log book |
 | **clear-credentials** | yes | yes | - | Removes user credentials |
+| **CompileDocuments** | yes | no | [Documents](../../../i-doit-pro-add-ons/documents/index.md) | Compile Documents |
 | **completion** | yes | yes | - | Dump the shell completion script |
 | **contracts-outdated** | yes | yes | - | Updates status of outdated contracts |
 | **documents** | yes | no | [Documents](../../../i-doit-pro-add-ons/documents/index.md) | Create and export documents |
@@ -172,7 +171,6 @@ Furthermore, some commands provide examples via **--usage**.
 | **system-convert-non-innodb-tables** | yes | yes | - | Converts all tables that are not in INNODB to INNODB (Affects the database coding. Use with caution!) |
 | **system-convert-non-utf8-tables** | yes | yes | -  | Converts all non-UTF8 tables to UTF8 tables (Affects database encoding. Use with caution!) |
 | **system-location-fix** | yes | yes | -  | Executes the location correction from the GUI on the console |
-| **system-maintenancecontract** | yes | no | -  | Sends e-mail notifications for maintenance contracts (Function is **deprecated**, please use the [Notification](../../../evaluation/notifications.md)) |
 | **system-objectcleanup** | yes | yes | -  | [Clean up objects](../../../basics/life-and-documentation-cycle.md) |
 | **system-objectrelations** | yes | yes | -  | Recreate [object relations](../../../basics/object-relations.md) |
 | **system-refresh-table-configuration** | yes | yes | -  | Refresh all available list configurations (object types and categories) |
