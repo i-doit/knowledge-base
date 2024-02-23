@@ -49,6 +49,28 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_28_hotfix_ID-10086.zip :material-file-download:](../../assets/downloads/hotfixes/28/i-doit_28_hotfix_ID-10086.zip){ .md-button .md-button--primary }
 
+### XML Import runs into php error
+
+??? note "Related error message"
+    PHP Fatal error: Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, null given in /var/www/html/src/classes/export/isys_specific_application_assigned_obj_export_helper.class.php:105
+    Stack trace:
+    #0 /var/www/html/src/classes/import/handler/isys_import_handler_cmdb.class.php(3214): isys_specific_application_assigned_obj_export_helper->applicationAssignedVersion_import()
+    #1 /var/www/html/src/classes/import/handler/isys_import_handler_cmdb.class.php(1514): isys_import_handler_cmdb->import_categories()
+    #2 /var/www/html/src/idoit/Console/Command/Import/AbstractImportCommand.php(207): isys_import_handler_cmdb->import()
+    #3 /var/www/html/vendor/symfony/console/Command/Command.php(298): idoit\\Console\\Command\\Import\\AbstractImportCommand->execute()
+    #4 /var/www/html/vendor/symfony/console/Application.php(1040): Symfony\\Component\\Console\\Command\\Command->run()
+    #5 /var/www/html/vendor/symfony/console/Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand()
+    #6 /var/www/html/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+    #7 /var/www/html/src/classes/ajax/handler/isys_ajax_handler_import.class.php(92): Symfony\\Component\\Console\\Application->run()
+    #8 /var/www/html/src/classes/ajax/isys_ajax.class.php(137): isys_ajax_handler_import->init()
+    #9 /var/www/html/src/classes/ajax/isys_ajax.class.php(99): isys_ajax->call()
+    #10 /var/www/html/src/ajax.inc.php(111): isys_ajax->init()
+    #11 /var/www/html/index.php(155): require_once('...')
+    #12 {main}
+    thrown in /var/www/html/src/classes/export/isys_specific_application_assigned_obj_export_helper.class.php on line 105
+
+[i-doit_28_hotfix_ID-10512_46e26be.zip :material-file-download:](../../assets/downloads/hotfixes/28/i-doit_28_hotfix_ID-10512_46e26be.zip){ .md-button .md-button--primary }
+
 ## API Add-on 1.15
 
 ### cmdb.reports.read attaches "`&nbsp;&nbsp`" to each value
