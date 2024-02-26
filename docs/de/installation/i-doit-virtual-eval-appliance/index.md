@@ -20,7 +20,7 @@ Beim Importieren werden eventuell Einstellungen abgefragt (Name, CPU-Kerne, Arbe
 [![Appliance-Einstellungen](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)
 
 !!! info "Betriebssystem"
-    Beim installierten Betriebssystem handelt es sich um **[Debian GNU/Linux](../manuelle-installation/debian.md)** **10 "****buster****" in der 64-bit-Variante**. Wenn der Virtualisierer dies nicht automatisch erkennt, sollte dies unbedingt manuell angegeben werden. Andernfalls kann es zu Problemen beim Start und Ausführen der VM kommen.
+    Beim installierten Betriebssystem handelt es sich um **[Debian GNU/Linux](../manuelle-installation/debian.md)** **10 buster** in der 64-bit-Variante. Wenn der Virtualisierer dies nicht automatisch erkennt, sollte dies unbedingt manuell angegeben werden. Andernfalls kann es zu Problemen beim Start und Ausführen der VM kommen.
 
 ## i-doit aufrufen
 
@@ -104,7 +104,7 @@ Weitere erste Schritte mit i-doit sind ebenfalls in der Knowledge Base unter [Gr
 !!! attention "Connection refused"
     Wird beim Aufruf von i-doit die Fehlermeldung
     ```
-        mysqli_connect(): (HY000/2002): Connection refused (/var/www/html/src/classes/components/isys_component_database_mysqli.class.php:16
+    mysqli_connect(): (HY000/2002): Connection refused (/var/www/html/src/classes/components/isys_component_database_mysqli.class.php:16)
     ```
     ausgegeben, ist der MySQL-Dienst vermutlich nicht gestartet. Das hängt in der Regel damit zusammen, dass die virtuelle Hardware der Appliance verändert wurde, ohne die Konfigurationen anzupassen. Hier müssen entweder die Einstellungen der virtuellen Maschine zurück auf die mitgelieferten Werte gesetzt und die Maschine neu gestartet werden oder die Konfiguration unter **/etc/mysql/mariadb.conf.d/99-i-doit.cnf** angepasst werden, sodass die Hardware dafür ausreicht und der MySQL-Dienst wieder mit **systemctl start mysql** gestartet werden kann.
 
@@ -114,15 +114,15 @@ Weitere erste Schritte mit i-doit sind ebenfalls in der Knowledge Base unter [Gr
 !!! attention "Unsupported hardware family"
     Wenn die eingesetzte VMware-Umgebung nicht aktuell ist, erscheint beim Import die Fehlermeldung **line 25 unsupported hardware family 'vmx-10'**. Um dennoch importieren zu können, muss die Datei **i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf** editiert werden. In der Zeile
     ```
-        <vssd:VirtualSystemType>vmx-10</vssd:VirtualSystemType>
+    <vssd:VirtualSystemType>vmx-10</vssd:VirtualSystemType>
     ```
     muss eine niedrigere Version gewählt werden. Für ESXi 5.1 passt der Wert **vmx-9**:
     ```
-        <vssd:VirtualSystemType>vmx-9</vssd:VirtualSystemType>
+    <vssd:VirtualSystemType>vmx-9</vssd:VirtualSystemType>
     ```
     Nach dem Speichern muss der Hash-Wert (SHA1) der geänderten Datei in der Datei **i-doit Eval Appliance 1.x.x i-doit 1.x.x.mf** aktualisiert werden. Unter GNU/Linux kann der Befehl **sha1sum** verwendet werden:
     ```
-        sha1sum i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf
+    sha1sum i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf
     ```
 
 !!! attention "VSphere < 6.5.0"
