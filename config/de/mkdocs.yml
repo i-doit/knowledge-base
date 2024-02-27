@@ -439,7 +439,7 @@ nav:
               - Objekt-Browser konfigurieren: administration/verwaltung/datenansicht/objekt-browser-konfigurieren.md
               - Attribute verstecken: administration/verwaltung/datenansicht/attribute-verstecken.md
               - Sprachprofile: administration/verwaltung/datenansicht/sprachprofile.md
-              - Kategorieordner: docs/de/administration/verwaltung/datenansicht/kategorieordner.md
+              - Kategorieordner: administration/verwaltung/datenansicht/kategorieordner.md
           - Vordefinierte Inhalte:
               - administration/verwaltung/vordefinierte-inhalte/index.md
               - CMDB Status: administration/verwaltung/vordefinierte-inhalte/cmdb-status.md
