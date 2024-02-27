@@ -71,6 +71,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_28_hotfix_ID-10512_46e26be.zip :material-file-download:](../../assets/downloads/hotfixes/28/i-doit_28_hotfix_ID-10512_46e26be.zip){ .md-button .md-button--primary }
 
+### Do not use MAC address for matching if it is null (JDisc)
+
+[i-doit_28_hotfix_ID-10521.zip :material-file-download:](../../assets/downloads/hotfixes/28/i-doit_28_hotfix_ID-10521.zip){ .md-button .md-button--primary }
+
 ## API Add-on 1.15
 
 ### cmdb.reports.read attaches "`&nbsp;&nbsp`" to each value
