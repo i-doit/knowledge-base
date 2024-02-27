@@ -2,6 +2,7 @@
 
 Here we find the archive of old hotfix pages.
 
+-   [Version 28](v28.md)
 -   [Version 27](v27.md)
 -   [Version 26](v26.md)
 -   [Version 25](v25.md)
