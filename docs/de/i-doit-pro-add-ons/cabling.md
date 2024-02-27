@@ -33,6 +33,7 @@ Releases
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.4 | 27.02.2024 | [Task] PHP 8.2 compatibility, cleaned up color usage |
 | 1.3 | 07.11.2023 | [Bug]  Setting to display cable names is not saved.<br>[Bug]  Highlight 'add-on' instead of 'extras' menu<br>[Bug] Overlap objects in the wiring view |
 | 1.2 | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br> [Task] Design Compatibility |
 | 1.1.1 |     | [Bug] Connections are not shown in add-on "cabling" |

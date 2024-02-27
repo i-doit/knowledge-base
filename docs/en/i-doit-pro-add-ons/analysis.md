@@ -71,7 +71,7 @@ You can create a list showing you which objects belong to a service. With ****E
 
 Service Costs
 
-What are the costs for the performance of a given service? This question can be answered with **Extras → Analyse → Servicecosts** on basis of the IT documentation. At first you select an object of the type **Service** under **Object selection.** Then you limit the analysis optionally via the **Servicefilter**. By clicking the **Calculate servicecosts** button the data will be analyzed and prepared. The result is featured in a compressed overview via the **Cost overview ** item.
+What are the costs for the performance of a given service? This question can be answered with **Extras → Analyse → Servicecosts** on basis of the IT documentation. At first you select an object of the type **Service** under **Object selection.** Then you limit the analysis optionally via the **Servicefilter**. By clicking the **Calculate servicecosts** button the data will be analyzed and prepared. The result is featured in a compressed overview via the **Cost overview** item.
 
 | Category | Description |
 | --- | --- |
@@ -96,6 +96,7 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
+| 1.5 | 2024-02-27 | [Task] PHP 8.2 compatibility, cleaned up color usage |
 | 1.4 | 2023-11-07 | [Task] Use new routes to display object and object type images / move add-on related files |
 | 1.3.1 | 2023-08.22 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Service assignment is not displayed in data quality<br>[Bug] It is not possible to remove categories in data-quality profiles |
 | 1.3 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |

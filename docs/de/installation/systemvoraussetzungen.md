@@ -3,7 +3,7 @@
 Um den Betrieb aller Funktionalitäten von i-doit zu gewährleisten, existieren für das darunter liegende System Voraussetzungen, die erfüllt sein müssen.
 
 !!! info "Aktualität"
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==27==. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==29==. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 ## Mindestanforderungen an das System
 
@@ -22,7 +22,7 @@ Wir empfehlen den Einsatz einer dedizierten, virtuellen Maschine. Der tatsächli
 -   GNU/Linux in der 64bit Variante(amd64) oder Windows Server 2022 in der 64bit Variante(amd64)
 -   Apache Webserver ==2.4==
 -   MariaDB 10.2, 10.3, 10.4, 10.5, ==10.6== (empfohlen) oder MySQL 5.7 oder 8.0. _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
--   PHP 7.4 (veraltet), ==8.0== (empfohlen) und 8.1. _Im Moment wird PHP Version >= 8.2 nicht unterstützt. Wir planen die Unterstützung in einer späteren Version._
+-   PHP 7.4 (veraltet), ==8.0== (empfohlen), 8.1 und {++8.2++}.
 -   PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
 Wir empfehlen den Einsatz von ==Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6==.
@@ -62,6 +62,16 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 -   Apple Safari
 
 ## Kompatibilitätsmatrix
+
+=== "29"
+
+    | **i-doit Version** | 29 |
+    | --- | --- |
+    | **Release** | 2024-02 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1<br>8.2 |
+    | **MySQL** | 5.7 <br>8.0 |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
 
 === "28"
 

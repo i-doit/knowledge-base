@@ -28,7 +28,7 @@ In the [customer portal](../../system-administration/customer-portal.md) you can
 Configuration
 -------------
 
-The API is configured via the [Web GUI](../../basics/web-gui.md) of i-doit and can be found at ** Administration → Interfaces / external data → JSON-RPC API **.
+The API is configured via the [Web GUI](../../basics/web-gui.md) of i-doit and can be found at **Administration → Interfaces / external data → JSON-RPC API**.
 
 [![Configuration](../../assets/images/en/i-doit-pro-add-ons/api/1-api.png)](../../assets/images/en/i-doit-pro-add-ons/api/1-api.png)
 
@@ -58,8 +58,8 @@ It may prove useful to use the API method  idoit.login  for a single authenticat
     This is only used if no username/password is used to connect to the API interface.<br>
     If the person is archived/deleted the API can no longer be used without authentication.
 
-
 ## Types in the JSONRPC
+
 Methods
 -------
 
@@ -234,6 +234,7 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
+| 1.16 | 2024-02-27 | [Bug] Dialog plus entry is not resolved via string<br>[Bug] cmdb.reports.read attaches "  " to each value<br>[Bug] Reading a object via cmdb.object.read results in "0" for status and cmdb_status<br>[Bug] API System setting overwrites tenant setting<br>[Bug] PHP error when reading category C__CATG_GENERAL<br>[Bug] cmdb.logbook.create with using a string for alert_level the field is empty<br>[Bug] cmdb.logbook.create with using a interger for source will cause a php error<br>[Bug] cmdb.object.purge does not work because it checks quickpurge option<br>[Bug] cmdb.object_types filter for title/titles needs to be a constant<br>[Bug] Save buttons do not display a success notification<br>[Bug] "cmdb.objects.read" endpoint does not work correctly with "type_title" filter and limit<br>[Bug] When using cmdb.dialog.read for category = C__CATG__CLUSTER_ROOT and property = quorum, one level too much is output<br> |
 | 1.15 | 2023-11-07 | [Bug]  Using API after update to i-doit pro 25 displays license error message<br>[Bug]  Positioning an object in a rack misinterprets the rack unit position<br>[Bug]  The new cryptography method significantly extends API  equests when no login has occurred previously<br>[Bug]  The overview of the API categories and attributes also shows virtual properties<br>[Bug]  Operating system > Version cannot be referenced via title, if a second operating system has the  ame version title<br>[Bug]  Cannot create a dialog entry with value "0"<br>[Bug]  API Categories and attributes not working<br>[Bug]  C__CATG__NETWORK_PORT attribute default_vlan is not saveable |
 | 1.14.1 | 2023-06-13 | [Task] Use 'cmdb.quickpurge' setting from tenant-settings<br>[Bug]  Specific sub-categories can not be read via cmdb.objects.read<br>[Bug]  Wrong successful message when using id instead of assigned_object<br>[Bug]  The "Date for Notification" field in category "SIM" can not be emptied by the API<br>[Bug]  Category Application is not displayed in Categories and attributes<br>[Bug]  Set a Location in Rack is not correct if the Height unit sorting is Ascending<br>[Bug]  Validaton error for custom category field time<br>[Bug]  It is not possible to remove a Network -> Port  -> addresses value<br>[Bug]  It is not possible to assign a Host address  -> assigned_port value<br>[Bug]  Write data to  Network > logical Ports > ports display SQL error message<br>[Bug]  Layer 2 Net  -> Assigned logical ports is not Editable<br> [Bug]  Version of software assignment does not get assigned correctly<br>[Bug]  "Categories and attributes" contains empty categories like Document and Floorplan<br>[Bug]  Typo in response message idoit.logout |
 | 1.14 | 2023-03-21 |  [Improvement] New method "cmdb.ip_search.getNetworksByIp" returns all Layer3 obejcts a given IP is within the defined range (contributed by becon GmbH) <br>[Bug] Creating objects results in two entries in category 'Accounting' <br>[Bug] Category 'C__CATS__ORGANIZATION_CONTACT_ASSIGNMENT' can not be updated <br> [Bug] Translations for 'LC__CMDB__CATG__VD__HOST_RAID_ARRAY' is missing <br> [Bug] Add 'limit' and 'offset' options to endpoint 'cmdb.reports.read' <br>[Bug] SQL error when updating category 'network > port' <br>[Bug] Can't read type of layer2 net category <br>[Bug] Attribute "GPS" in category "C__CATG__LOCATION" is not writeable |
