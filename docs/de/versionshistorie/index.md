@@ -4,6 +4,8 @@ Wann erschien welches Release von i-doit pro?
 
 | Version | Datum | Release Notes | Changelog |
 | --- | --- | --- | --- |
+| 2024<br>---- |     |     |     |
+| **29** | **27.02.2024** | **[Release Notes](./release-notes/release-notes-29.md)** | **[Changelog](./changelogs/changelog-29.md)** |
 | 2023<br>---- |     |     |     |
 | **28** | **19.12.2023** | **[Release Notes](./release-notes/release-notes-28.md)** | **[Changelog](./changelogs/changelog-28.md)** |
 | **27** | **07.11.2023** | **[Release Notes](./release-notes/release-notes-27.md)** | **[Changelog](./changelogs/changelog-27.md)** |
