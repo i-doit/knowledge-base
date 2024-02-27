@@ -69,7 +69,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2024-02 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1<br>8.2 |
+    | **PHP** | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1<br>{++8.2++} |
     | **MySQL** | 5.7 <br>8.0 |
     | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
 
