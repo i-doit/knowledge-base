@@ -403,8 +403,9 @@ nav:
           - Data view:
               - system-administration/administration/data-view/index.md
               - Configure object browser: system-administration/administration/data-view/configure-object-browser.md
-              - Hide attrubutes: system-administration/administration/data-view/hide-attributes.md
+              - Hide attributes: system-administration/administration/data-view/hide-attributes.md
               - Language profiles: system-administration/administration/data-view/language-profiles.md
+              - Category folders: system-administration/administration/data-view/category-folders.md
           - Predefined content:
               - system-administration/administration/predefined-content/index.md
               - CMDB Status: system-administration/administration/predefined-content/cmdb-status.md
