@@ -164,6 +164,7 @@ Releases
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.8 | 27.02.2024 | [Task] Compatibility to i-doit 29, Colorpicker and PHP 8.2 |
 | 1.7 | 07.11.2023 | [Bug] MySQL8 causes database error "incorrect DATETIME" when opening Floorplan<br>[Bug] When turning an object, the text should also turn<br>[Bug] Language constant 'LC__CMDB__CATG__ACCOUNTING_ORDER_DATE' is not <br>eplaced<br>[Bug] Highlight 'add-on' instead of 'extras' menu |
 | 1.6 | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
 | 1.5.1 | 21.02.2022 | [Bug] Floorplans cannot be opened |
