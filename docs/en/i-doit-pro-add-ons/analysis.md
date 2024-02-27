@@ -96,7 +96,7 @@ Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
-| 1.5 | 20224-02-27 | [Task] PHP 8.2 compatibility, cleaned up color usage |
+| 1.5 | 2024-02-27 | [Task] PHP 8.2 compatibility, cleaned up color usage |
 | 1.4 | 2023-11-07 | [Task] Use new routes to display object and object type images / move add-on related files |
 | 1.3.1 | 2023-08.22 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Service assignment is not displayed in data quality<br>[Bug] It is not possible to remove categories in data-quality profiles |
 | 1.3 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
