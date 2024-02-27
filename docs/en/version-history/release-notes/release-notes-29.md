@@ -10,7 +10,7 @@ We also improved the **object matching** for the **JDisc import**. You are able 
 
 During the update process, i-doit will check for users with non-unique usernames and let you know about them. Please make sure to adjust any found usernames before version 31.
 To further increase the overall experience, we added an optional survey which you can take any time to send your feedback. The link to the survey is found in the context menu at the top right.
-You will find a detailed list of the changes in the [changelog](../changelogs/changelog-29.md). We encourage you to [update](../../wartung-und-betrieb/update-einspielen.md) to this release as soon as possible to benefit from all of these improvements.
+You will find a detailed list of the changes in the [changelog](../changelogs/changelog-29.md). We encourage you to [update](../../maintenance-and-operation/index.md) to this release as soon as possible to benefit from all of these improvements.
 
 **Highlights in this release**
 
