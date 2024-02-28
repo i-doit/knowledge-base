@@ -217,3 +217,7 @@ If we assume that the jdisc.ini is located in the i-doit root directory, then th
 ```shell
 sudo -u www-data php console.php import-jdisc -c jdisc.ini
 ```
+
+### JDisc availability Report
+
+At **Report Manager -> Views** is a report with the name **JDisc availability**, which compares i-doit objects with JDisc objects.
