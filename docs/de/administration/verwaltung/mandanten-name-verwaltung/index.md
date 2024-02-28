@@ -27,19 +27,21 @@ In der Lizenzübersicht findest du Informationen über deine Lizenz, das dokumen
 
 ## System Config Check
 
-| Option                               | Wert                      |
-| ------------------------------------ | ------------------------- |
-| Zeitunterschied PHP/MySQL            | Datum Uhrzeit             |
-| Anzahl von Objekten in Mandantenname | Wert                      |
-| Operating System                     | Linux oder Windows        |
-| PHP Version                          | PHP Version               |
-| i-doit Code Version                  | i-doit Version            |
-| MariaDB Version                      | MariaDB Version           |
-| i-doit Database Version              | i-doit Database Version   |
-| Database size                        | Größe in MB               |
-| Updates                              | Update verfügbar?         |
-| Browser (client)                     | Info Text und link zur kb |
-| Configuration examples               | Info Text und link zur kb |
+| Option                                  | Wert                                                              |
+| --------------------------------------- | ----------------------------------------------------------------- |
+| Zeitunterschied PHP/MySQL               | Datum Uhrzeit                                                     |
+| Anzahl von Objekten in [Mandanten-Name] | Wert                                                              |
+| Operating System                        | Linux oder Windows                                                |
+| Architecture                            | Architektur des Prozessors                                        |
+| PHP Version                             | PHP Version                                                       |
+| i-doit Code Version                     | i-doit Version                                                    |
+| MariaDB Version                         | MariaDB Version                                                   |
+| i-doit Database Version                 | i-doit Database Version                                           |
+| Database size                           | Größe in MB                                                       |
+| Updates                                 | Update verfügbar?                                                 |
+| Browser (client)                        | Info Text und link zur kb                                         |
+| Configuration examples                  | Info Text und link zur kb                                         |
+| Duplicated usernames                    | Button der ein Popup öffnet und duplizierte Benutzernamen anzeigt |
 
 ## PHP.ini Settings
 
