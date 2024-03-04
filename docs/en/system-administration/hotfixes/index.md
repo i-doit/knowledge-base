@@ -26,6 +26,17 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
+### JDisc mapping error
+
+??? note "Related error message"
+    Duplicate entry 'object-55-4052-80:aa:aa:aa:aa:aa,aa:aa:aa:aa:aa:aa,' for key 'isys_jdisc_mapping__type_device_serial_mac'. File: /data/www/idoit/src/classes/modules/jdisc/isys_module_jdisc.class.php Line: 4378
+
+[i-doit_29_hotfix_ID-10424.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10424.zip){ .md-button .md-button--primary }
+
+### Templates are not displayed when the for e.g. Nagios Add-on is installed
+
+[i-doit_29_hotfix_ID-10534.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10534.zip){ .md-button .md-button--primary }
+
 ## Forms Add-on 1.2.0
 
 ### Object is not created when a attribute validation is used and no error is displayed
