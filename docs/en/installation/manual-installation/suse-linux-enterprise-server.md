@@ -2,6 +2,9 @@
 
 In this article we explain in just a few steps which packages need to be installed and configured.
 
+!!! failure "Guide is outdated and will be renewed"
+    For more information see <https://github.com/i-doit/knowledge-base/issues/423>
+
 ## System Requirements
 
 The general [system requirements](../system-requirements.md) apply.
