@@ -2,6 +2,9 @@
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
+!!! failure "Die Installationsanleitung ist nicht mehr so nutzbar"
+    Für mehr Informationen bitte hier schauen <https://github.com/i-doit/knowledge-base/issues/423>
+
 Systemvoraussetzungen
 ------------------------
 
