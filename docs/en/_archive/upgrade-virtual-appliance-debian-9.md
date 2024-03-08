@@ -1,12 +1,12 @@
 # Upgrade of i-doit Virtual Eval Appliance to Debian GNU/Linux 9 "Stretch"
 
-Besides the maintenance of i-doit you also have to keep the regular maintenance of the operating system in mind. This article explains the upgrade of [Debian GNU/Linux](../manual-installation/debian.md) in version 8 "Jessie" to version 9 "Stretch". It takes just a few steps and the [i-doit Eval Virtual Appliance](index.md) will be up to date.
+Besides the maintenance of i-doit you also have to keep the regular maintenance of the operating system in mind. This article explains the upgrade of [Debian GNU/Linux] in version 8 "Jessie" to version 9 "Stretch". It takes just a few steps and the [i-doit Eval Virtual Appliance](will be up to date.
 
 !!! note "Why should I upgrade?"
 
     Why should you upgrade your operating system to the latest version? There are good reasons for this:
 
-    1.  The IT documentation contains [sensitiva data which need to be protected](../../maintenance-and-operation/security-and-protection.md). This can only be guaranteed when all system compontents are up to date.
+    1.  The IT documentation contains [sensitiva data which need to be protected]. This can only be guaranteed when all system compontents are up to date.
     2.  The change from PHP 5.6 to 7.0 results in a measurable improvement in performance.
 
 ## Requirements
@@ -21,11 +21,11 @@ Before upgrading, you have to consider the following:
 
 You also should pay attention to the following issues before an upgrade:
 
--   Do you have [==backups==](../../maintenance-and-operation/backup-and-recovery/index.md)?
+-   Do you have [==backups==]?
 -   You shoud inform i-doit users before downtime.
 -   Automatisms, cronjobs and external access should be stopped during the upgrade.
 
-You can read many additional [==hints regarding the upgrade of the operating system==](https://www.debian.org/releases/stretch) provided by the Debian Community.
+You can read many additional [==hints regarding the upgrade of the operating system==] provided by the Debian Community.
 
 ## Preparing the Upgrade
 
@@ -142,7 +142,7 @@ The contents is replaced by the following:
 
 ```shell
 #!/bin/bash
-/bin/hostname -I | awk -F: '{ print "                                "$1 }'
+/bin/hostname -I | awk -F: '{ print " "$1 }'
 ```
 
 Also:
@@ -155,7 +155,7 @@ Contents:
 
 ```shell
 #!/bin/bash
-echo "                                         /bin/hostname -I"
+echo " /bin/hostname -I"
 ```
 
 And finally the version number of the appliance:
@@ -170,4 +170,4 @@ Contents:
 APPLIANCE_VERSION="1.3.0"
 ```
 
-Now also the follow-up works are completed. You can now restart all automatisms. The downtime is over and users can work with i-doit as usual.
+Now also the follow-up works are completed. You can now restart all automatism. The downtime is over and users can work with i-doit as usual.
