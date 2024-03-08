@@ -1,20 +1,20 @@
 # Upgrade of the i-doit Virtual Eval Appliance to Debian GNU/Linux 10 "Buster"
 
-In addition to the maintenance of i-doit, the maintenance of the underlying operating system should not be ignored. We describe the upgrade from Debian GNU/Linux in version 9 "Stretch" to 10 "Buster". In some steps the [i-doit Eval Virtual Appliance](index.md) is up to date.
+In addition to the maintenance of i-doit, the maintenance of the underlying operating system should not be ignored. We describe the upgrade from Debian GNU/Linux in version 9 "Stretch" to 10 "Buster". In some steps the [i-doit Eval Virtual Appliance] is up to date.
 
 !!! note ""
      Why is it worth the effort to upgrade the operating system to the latest version? There are very good reasons:
 
-1.  The IT documentation contains sensitive data that must be protected. This can only be guaranteed if all system components are up to date.
-2.  The switch from PHP 7.0 to 7.3 brings a measurable performance boost.
+1. The IT documentation contains sensitive data that must be protected. This can only be guaranteed if all system components are up to date.
+2. The switch from PHP 7.0 to 7.3 brings a measurable performance boost.
 
 ## Prerequisites
 
 Some things need to be considered before upgrading:
 
-- The upgrade only describes the i-doit Virtual Eval Appliance version 1.3.x.
-- It is assumed that no changes (except updates) have been made to the system. Subsequent changes are not our responsibility.
-- Sufficient free memory is available. In the meantime, the update requires approx. 1 GByte of memory.
+-   The upgrade only describes the i-doit Virtual Eval Appliance version 1.3.x.
+-   It is assumed that no changes (except updates) have been made to the system. Subsequent changes are not our responsibility.
+-   Sufficient free memory is available. In the meantime, the update requires approx. 1 GByte of memory.
 
 !!! note "To note when using VirtualBox"
 
@@ -25,9 +25,9 @@ Some things need to be considered before upgrading:
 
 Furthermore the following should be considered before an upgrade:
 
-- [Backups](../../maintenance-and-operation/backup-and-recovery/index.md) should be available.
-- Users of i-doit should be informed before the downtime.
-- Automatisms, cronjobs and external access should be stopped for the duration of the upgrade.
+-   [Backups] should be available.
+-   Users of i-doit should be informed before the downtime.
+-   Automatism, cronjobs and external access should be stopped for the duration of the upgrade.
 
 The [Debian Community](https://www.debian.org/releases/buster/amd64/release-notes/index.en.html) provides many more hints for upgrading the operating system.
 
@@ -102,9 +102,9 @@ sudo apt upgrade
 
 The last command requires multiple user interactions:
 
-1.  The question ==Restart services during package upgrades without asking?== have to be answered =="Yes"==.
-2.  Overwriting ==Configuration file '/etc/issue'== have to be answered with ==N==.
-3.  Overwriting ==Configuration file '/etc/issue.net'== have to be answered with ==N==.
+1. The question ==Restart services during package upgrades without asking?== have to be answered =="Yes"==.
+2. Overwriting ==Configuration file '/etc/issue'== have to be answered with ==N==.
+3. Overwriting ==Configuration file '/etc/issue.net'== have to be answered with ==N==.
 
 Now follows the actual upgrade of the packages to new versions:
 
@@ -154,4 +154,4 @@ Content:
 APPLIANCE_VERSION="1.3.1"
 ```
 
-This also concludes the postprocessing. Now all automatisms can be started again. The downtime is finished and i-doit can be called again by the users as usual.
+This also concludes the postprocessing. Now all automatism can be started again. The downtime is finished and i-doit can be called again by the users as usual.
