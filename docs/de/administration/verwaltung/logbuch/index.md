@@ -16,6 +16,8 @@ In der Listenansicht können Einträge nach verschiedenen Parametern gefiltert w
 
 [![Listenansicht Logbuch](../../../assets/images/de/administration/verwaltung/logbuch/2-l.png)](../../../assets/images/de/administration/verwaltung/logbuch/2-l.png)
 
+Damit das das Logbuch archiviert wird, muss der [logbook-archive](../../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.html#logbook-archive) CLI Befehl ausgeführt werden.
+
 ## Logbuch Konfiguration
 
 Hier kann konfiguriert werden wie viele Änderungen maximal in einen Logbuch Eintrag kombiniert werden dürfen, ob der Benutzer nur mit seiner ID oder in erweiterter Form erscheinen soll und wenn ja wie diese aussieht. Zusätzlich kann noch festgelegt werden wie hoch die Anzahl der kombinierten Änderungen pro Logbuch Eintrag bei einem Import Vorgang ist.
