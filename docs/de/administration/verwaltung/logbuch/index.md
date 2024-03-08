@@ -10,13 +10,13 @@ Hier wird festgelegt für welchen Zeitraum Einträge im Logbuch vorgehalten werd
 
 [![Archivieren](../../../assets/images/de/administration/verwaltung/logbuch/2-l.png)](../../../assets/images/de/administration/verwaltung/logbuch/2-l.png)
 
+Damit das das Logbuch archiviert wird, muss der [logbook-archive](../../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#logbook-archive) CLI Befehl ausgeführt werden.
+
 ## Listenansicht Logbuch
 
 In der Listenansicht können Einträge nach verschiedenen Parametern gefiltert werden. Wenn möglich, enthält ein Eintrag zudem die genauen Änderungen (Welcher Wert wurde von was zu was geändert?).
 
 [![Listenansicht Logbuch](../../../assets/images/de/administration/verwaltung/logbuch/2-l.png)](../../../assets/images/de/administration/verwaltung/logbuch/2-l.png)
-
-Damit das das Logbuch archiviert wird, muss der [logbook-archive](../../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.html#logbook-archive) CLI Befehl ausgeführt werden.
 
 ## Logbuch Konfiguration
 
