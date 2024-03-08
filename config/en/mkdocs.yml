@@ -247,9 +247,7 @@ nav:
           - Setup: installation/manual-installation/setup.md
       - i-doit Virtual Eval Appliance:
           - installation/i-doit-virtual-eval-appliance/index.md
-          - Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 9 "Stretch": installation/i-doit-virtual-eval-appliance/upgrade-virtual-appliance-debian-9.md
           - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
-          - Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 10 "Buster": installation/i-doit-virtual-eval-appliance/upgrade-virtual-appliance-debian-10.md
   - Maintenance and operation:
       - maintenance-and-operation/index.md
       - Activate license: maintenance-and-operation/activate-license.md
