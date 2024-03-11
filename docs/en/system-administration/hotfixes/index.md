@@ -26,6 +26,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
+### The encoding of umlauts are displayed in report titles at the database
+
+[i-doit_29_hotfix_ID-10403_873029a.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10403_873029a.zip){ .md-button .md-button--primary }
+
 ### JDisc mapping error
 
 ??? note "Related error message"
