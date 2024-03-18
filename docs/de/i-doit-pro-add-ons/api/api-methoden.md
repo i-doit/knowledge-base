@@ -1109,7 +1109,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     | Wert | Beschreibung |
     | --- | --- |
-    | 1 | Lese alle Einträge mit dem Status **normal**, **archiviert** oder **gelöscht** |
+    | -1   | Lese alle Einträge mit dem Status **normal**, **archiviert** oder **gelöscht** |
     | 2   | Lese alle Einträge mit dem Status **normal** (default) |
     | 3   | Lese alle Einträge mit dem Status **archiviert** |
     | 4   | Lese alle Einträge mit dem Status **gelöscht** |
