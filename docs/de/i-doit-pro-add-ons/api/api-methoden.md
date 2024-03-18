@@ -976,7 +976,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
                 "title":"Name of the access",
                 "description":"description of the access"
             },
-            "category": "C__CATG__ACCESS"
+            "category": "C__CATG__ACCESS",
             "apikey": "xxx",
             "language": "en"
         },
