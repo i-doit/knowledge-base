@@ -1,0 +1,22 @@
+<!-- TRANSLATED by md-translate -->
+# Installation
+
+# Installation
+
+Die [IT-Dokumentation](../glossar.md) sollte auf einem soliden Fundament fußen - auch technisch. Es stehen drei Arten der Installation von i-doit zur Verfügung.
+
+La [documentation informatique](../glossaire.md) doit reposer sur des bases solides, y compris sur le plan technique. Trois types d'installation d'i-doit sont disponibles.
+
+|     | [Automatische Installation](automatische-installation.md) | [Manuelle Installation](manuelle-installation/index.md) | [i-doit Virtual Eval Appliance](i-doit-virtual-eval-appliance/index.md) |
+| --- | --- | --- | --- |
+| Worum geht es? | Auf einem frisch installierten GNU/Linux-Betriebssystem werden alle nötigen Konfigurationsschritte durchgeführt und i-doit installiert. Zusätzlich werden Cronjobs, Backups und weitere nützliche CLI-Werkzeuge mitgeliefert. Dazu wird lediglich ein Script ausgeführt. | Die nötigen Software-Pakete werden selbstständig installiert und konfiguriert. Danach wird i-doit heruntergeladen und installiert. Die nötigen Schritte für Cronjobs und Backups obliegen ebenfalls dem Benutzer. | Benutzern von i-doit pro steht in der Evaluierungsphase eine VM zur Verfügung, auf der ein aktuelles i-doit bereits vorinstalliert ist. Als Betriebssystem kommt Debian GNU/Linux zum Einsatz. |
+| Umfang | ✔ Software-Pakete installieren  <br>✔ Software-Pakete konfigurieren  <br>✔ i-doit installieren  <br>✔ Cronjobs einrichten  <br>✔ Backups einrichten  <br>✔ Restore einrichten | ✔ Software-Pakete installieren  <br>✔ Software-Pakete konfigurieren  <br>✔ i-doit installieren  <br>✔ Cronjobs einrichten  <br>✔ Backups einrichten  <br>✔ Restore einrichten | ✔ Software-Pakete installieren  <br>✔ Software-Pakete konfigurieren  <br>✔ i-doit installieren  <br>✔ Cronjobs einrichten  <br>✔ Backups einrichten  <br>✔ Restore einrichten |
+| Für wen geeignet? | - Basis-Kenntnisse im Umgang mit GNU/Linux | - Gute Kenntnisse in der Administration von GNU/Linux<br>- Alternativ: Wenn Microsoft Windows Server verwendet wird | - Keine Kenntnisse im Umfang mit GNU/Linux<br>- Appliance wird nur während der Evaluierungsphase vom Support abgedeckt |
+| Anleitung | [Weiter zur automatischen Installation](automatische-installation.md) | [Weiter zur manuellen Installation](manuelle-installation/index.md) | [Weiter zur i-doit Virtual Eval Appliance](i-doit-virtual-eval-appliance/index.md) |
+
+| [Installation automatique](automatic-installation.md) | [Installation manuelle](manual-installation/index.md) | [i-doit Virtual Eval Appliance](i-doit-virtual-eval-appliance/index.md) |
+| --- | --- | --- | --- |
+| De quoi s'agit-il ? | Sur un système d'exploitation GNU/Linux fraîchement installé, toutes les étapes de configuration nécessaires sont effectuées et i-doit est installé. De plus, des cronjobs, des sauvegardes et d'autres outils CLI utiles sont fournis. Pour cela, il suffit d'exécuter un script. | Les paquets logiciels nécessaires sont installés et configurés de manière autonome. Ensuite, i-doit est téléchargé et installé. Les étapes nécessaires pour les tâches cron et les sauvegardes incombent également à l'utilisateur. | Pendant la phase d'évaluation, les utilisateurs d'i-doit pro disposent d'une VM sur laquelle un i-doit actuel est préinstallé. Le système d'exploitation utilisé est Debian GNU/Linux. |
+| Portée | ✔ Installer les progiciels <br>✔ Configurer les progiciels <br>✔ Installer i-doit <br>✔ Configurer les cronjobs <br>✔ Configurer les sauvegardes <br>✔ Configurer la restauration | ✔ Installer les progiciels <br>✔ Configurer les progiciels <br>✔ i-doit installer <br>✔ Configurer les cronjobs <br>✔ Configurer les sauvegardes <br>✔ Configurer la restauration | ✔ Installer les progiciels <br>✔ Configurer les progiciels <br>✔ Installer i-doit <br>✔ Configurer les cronjobs <br>✔ Configurer les sauvegardes <br>✔ Configurer la restauration |
+| A qui s'adresse cette formation ? | - Connaissance de base de GNU/Linux | - Bonne connaissance de l'administration de GNU/Linux<br>- Alternative : si Microsoft Windows Server est utilisé | - Aucune connaissance de l'étendue de GNU/Linux<br>- Appliance couverte par le support uniquement pendant la phase d'évaluation |
+| Instructions | [Continuer vers l'installation automatique](automatic-installation.md) | [Continuer vers l'installation manuelle](manual-installation/index.md) | [Continuer vers l'appliance d'évaluation virtuelle i-doit](i-doit-virtual-eval-appliance/index.md) |

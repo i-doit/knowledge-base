@@ -1,0 +1,134 @@
+<!-- TRANSLATED by md-translate -->
+# Version 23
+
+# Version 23
+
+## Über
+
+## À propos de
+
+Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Datei zur Verfügung gestellt. Die ZIP-Datei wird im Installationsverzeichnis von i-doit entpackt. Die Abfrage, ob Dateien beim Entpacken überschrieben werden sollen, kann bestätigt werden (Taste **Y** für "yes" oder **A** für "all"). Hier ein Beispiel:
+
+Les hotfixes éliminent une erreur spécifique et sont généralement mis à disposition sous forme de fichier ZIP. Le fichier ZIP est décompressé dans le répertoire d'installation d'i-doit. La demande si les fichiers doivent être écrasés lors de la décompression peut être confirmée (touche **Y** pour "yes" ou **A** pour "all"). Voici un exemple :
+
+```shell
+sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
+cd /var/www/html/i-doit/
+sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+```
+
+!!! attention "Bitte beachten"
+
+! !! attention "A noter"
+
+```
+Bitte nutzen Sie Hotfixes ausschließlich mit der genannten Version. In neueren Versionen werden diese bereits enthalten sein, sodass eine erneute Installation nicht notwendig ist.
+Sollten Sie eine ältere Version von i-doit nutzen, ist es notwendig, zuerst auf die aktuelle Version zu aktualisieren.
+
+Falls ein Hotfix zur Ausführung des Updates einer älteren Version notwendig ist, ist dieser in den Unterkapiteln zu den Hotfixes hier in der Knowledge Base zu finden.
+
+Da es sich hierbei um Hotfixes handelt, empfehlen wir, diese nur einzuspielen, wenn diese für den sauberen Betrieb Ihrer Installation notwendig sind oder Sie durch den Support zur Verwendung aufgefordert werden. Bitte stellen Sie sicher, dass vor der Verwendung dieser Hotfixes ein [Backup von i-doit](../../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) erstellt wurde.
+
+Sollten Sie nach der Verwendung der Hotfixes mit dem Support in Kontakt treten, ergänzen Sie bitte den Hinweis auf dessen Verwendung.
+```
+
+!!! info "Aktualität"
+
+! !! info "Actualité
+
+```
+Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **23**. Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+```
+
+!!! attention "Einverständniserklärung"
+
+! !! attention "Déclaration de consentement"
+
+```
+Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
+```
+
+## i-doit Core
+
+## i-doit Core
+
+### Images in fields which were inserted via URL or copy&paste are not displayed
+
+### Les images dans les champs insérés via URL ou copier-coller ne s'affichent pas
+
+!!! warning "Wenn dies der Fall ist und die Kategorie erneut gespeichert wird, gehen die Bilder verloren"
+
+! !! warning "Si c'est le cas et que la catégorie est enregistrée à nouveau, les images seront perdues".
+
+[i-doit_23_hotfix_ID-9435_2f70cd2.zip :material-file-download:](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9435_2f70cd2.zip){ .md-button .md-button--primary }
+
+[i-doit_23_hotfix_ID-9435_2f70cd2.zip :material-file-download :](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9435_2f70cd2.zip){ .md-button .md-button--primary }
+
+### Description field is limited to 65,535 characters
+
+### Le champ de description est limité à 65,535 caractères
+
+[i-doit_23_hotfix_ID-9441_56d0fba.zip :material-file-download:](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9441_56d0fba.zip){ .md-button .md-button--primary }
+
+[i-doit_23_hotfix_ID-9441_56d0fba.zip :material-file-download :](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9441_56d0fba.zip){ .md-button .md-button--primary }
+
+### Adding a model in category model not possible
+
+### Ajouter un modèle dans la catégorie Modèle non possible
+
+[I-doit_23_hotfix_ID-9375_40177a3.zip :material-file-download:](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9375_40177a3.zip){ .md-button .md-button--primary }
+
+[I-doit_23_hotfix_ID-9375_40177a3.zip :material-file-download :](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9375_40177a3.zip){ .md-button .md-button--primary }
+
+### Better object browser performance
+
+### Meilleure performance du navigateur d'objets
+
+[I-doit_23_hotfix_ID-9376_2ce8a0d.zip :material-file-download:](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9376_2ce8a0d.zip){ .md-button .md-button--primary }
+
+[I-doit_23_hotfix_ID-9376_2ce8a0d.zip :material-file-download :](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9376_2ce8a0d.zip){ .md-button .md-button--primary }
+
+### 'type' option for cmdb.objects filter does not work with id
+
+### L'option 'type' pour le filtre cmdb.objects ne fonctionne pas avec l'id
+
+[I-doit_23_hotfix_ID-9370_b8a4921.zip :material-file-download:](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9370_b8a4921.zip){ .md-button .md-button--primary }
+
+[I-doit_23_hotfix_ID-9370_b8a4921.zip :material-file-download :](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9370_b8a4921.zip){ .md-button .md-button--primary }
+
+### JDisc Import - "Only create newly scanned devices" creates duplicates
+
+### JDisc Import - "Only create newly scanned devices" creates duplicates
+
+[i-doit_23_hotfix_ID-9350.zip :material-file-download:](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9350.zip){ .md-button .md-button--primary }
+
+[i-doit_23_hotfix_ID-9350.zip :material-file-download :](../../../assets/downloads/hotfixes/23/i-doit_23_hotfix_ID-9350.zip){ .md-button .md-button--primary }
+
+## Analyze Add-on 1.3
+
+## Analyze Add-on 1.3
+
+### Service assignment is not displayed in data quality
+
+### L'affectation de service n'est pas affichée dans la qualité des données
+
+[Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download:](../../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
+
+[Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download :](../../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
+
+## Forms Add-on 1.1.0
+
+## Forms Add-on 1.1.0
+
+### Object Data is not saved or Categories are not loaded
+
+### Les données de l'objet ne sont pas sauvegardées ou les catégories ne sont pas chargées
+
+It is necessary to re-index the category attributes via Systemtools, after applying the hotfix
+
+Il est nécessaire de réindexer les attributs de catégorie via Systemtools, après avoir appliqué le hotfix
+
+[aof-17-incompatible-function-declaration.zip :material-file-download:](../../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }
+
+[aof-17-incompatible-function-declaration.zip :material-file-download :](../../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }

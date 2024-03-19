@@ -1,0 +1,118 @@
+<!-- TRANSLATED by md-translate -->
+# Version 22
+
+# Version 22
+
+## Über
+
+## À propos de
+
+Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Datei zur Verfügung gestellt. Die ZIP-Datei wird im Installationsverzeichnis von i-doit entpackt. Die Abfrage, ob Dateien beim Entpacken überschrieben werden sollen, kann bestätigt werden (Taste **Y** für "yes" oder **A** für "all"). Hier ein Beispiel:
+
+Les hotfixes éliminent une erreur spécifique et sont généralement mis à disposition sous forme de fichier ZIP. Le fichier ZIP est décompressé dans le répertoire d'installation d'i-doit. La demande si les fichiers doivent être écrasés lors de la décompression peut être confirmée (touche **Y** pour "yes" ou **A** pour "all"). Voici un exemple :
+
+```shell
+sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
+cd /var/www/html/i-doit/
+sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+```
+
+!!! attention "Bitte beachten"
+
+! !! attention "A noter"
+
+```
+Bitte nutzen Sie Hotfixes ausschließlich mit der genannten Version. In neueren Versionen werden diese bereits enthalten sein, sodass eine erneute Installation nicht notwendig ist.
+Sollten Sie eine ältere Version von i-doit nutzen, ist es notwendig, zuerst auf die aktuelle Version zu aktualisieren.
+
+Falls ein Hotfix zur Ausführung des Updates einer älteren Version notwendig ist, ist dieser in den Unterkapiteln zu den Hotfixes hier in der Knowledge Base zu finden.
+
+Da es sich hierbei um Hotfixes handelt, empfehlen wir, diese nur einzuspielen, wenn diese für den sauberen Betrieb Ihrer Installation notwendig sind oder Sie durch den Support zur Verwendung aufgefordert werden. Bitte stellen Sie sicher, dass vor der Verwendung dieser Hotfixes ein [Backup von i-doit](../../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) erstellt wurde.
+
+Sollten Sie nach der Verwendung der Hotfixes mit dem Support in Kontakt treten, ergänzen Sie bitte den Hinweis auf dessen Verwendung.
+```
+
+!!! info "Aktualität"
+
+! !! info "Actualité
+
+```
+Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **22**. Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+```
+
+!!! attention "Einverständniserklärung"
+
+! !! attention "Déclaration de consentement"
+
+```
+Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
+```
+
+### 500 Error with SSO login
+
+### 500 Erreur de connexion SSO
+
+[i-doit_22_hotfix_ID-9158_4711443.zip :material-file-download:](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9158_4711443.zip){ .md-button .md-button--primary }
+
+[i-doit_22_hotfix_ID-9158_4711443.zip :material-file-download:](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9158_4711443.zip){ .md-button .md-button--primary }
+
+### Conditions might not be loaded correctly in the report manager
+
+### Les conditions peuvent ne pas être chargées correctement dans le gestionnaire de rapports
+
+[i-doit_22_hotfix_ID-9265_8a555cf.zip :material-file-download:](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9265_8a555cf.zip){ .md-button .md-button--primary }
+
+[i-doit_22_hotfix_ID-9265_8a555cf.zip :material-file-download :](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9265_8a555cf.zip){ .md-button .md-button--primary }
+
+### Port allocation is deleted when saving in list edit
+
+### L'allocation de port est supprimée lors de la sauvegarde dans l'édition de la liste
+
+[i-doit_22_hotfix_ID-9163_1efe827.zip :material-file-download:](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9163_1efe827.zip){ .md-button .md-button--primary }
+
+[i-doit_22_hotfix_ID-9163_1efe827.zip :material-file-download :](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9163_1efe827.zip){ .md-button .md-button--primary }
+
+### JDisc Discovery does not work with HTTP/HTTPS
+
+### JDisc Discovery ne fonctionne pas avec HTTP/HTTPS
+
+[i-doit_22_hotfix_ID-9255_9750ba4.zip :material-file-download:](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9255_9750ba4.zip){ .md-button .md-button--primary }
+
+[i-doit_22_hotfix_ID-9255_9750ba4.zip :material-file-download :](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9255_9750ba4.zip){ .md-button .md-button--primary }
+
+### h-inventory import error due to missing entries in constants cache
+
+### h-inventory import error due to missing entries in constants cache
+
+[i-doit_22_hotfix_ID-9259_feeeedf.zip :material-file-download:](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip){ .md-button .md-button--primary }
+
+[i-doit_22_hotfix_ID-9259_feeeedf.zip :material-file-download :](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9259_feeeedf.zip){ .md-button .md-button--primary }
+
+### Specific object type categories are missing in selection
+
+### Des catégories spécifiques de type d'objet sont manquantes dans la sélection
+
+If you have saved a obect type configuration before using the Hotfix you may need to edit the object type again and set the correct specific category.
+
+Si vous avez sauvegardé une configuration de type d'objet avant d'utiliser le correctif, vous devrez peut-être éditer à nouveau le type d'objet et définir la catégorie spécifique correcte.
+
+[i-doit_22_hotfix_ID-9281_f9f4e93.zip :material-file-download:](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip){ .md-button .md-button--primary }
+
+[i-doit_22_hotfix_ID-9281_f9f4e93.zip :material-file-download :](../../../assets/downloads/hotfixes/22/i-doit_22_hotfix_ID-9281_f9f4e93.zip){ .md-button .md-button--primary }
+
+## Forms Add-on 1.1.0
+
+## Forms Add-on 1.1.0
+
+### Object Data is not saved or Categories are not loaded
+
+### Les données de l'objet ne sont pas sauvegardées ou les catégories ne sont pas chargées
+
+It is necessary to re-index the category attributes via Systemtools, after applying the hotfix
+
+Il est nécessaire de réindexer les attributs de catégorie via Systemtools, après avoir appliqué le hotfix
+
+[aof-17-incompatible-function-declaration.zip :material-file-download:](../../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }
+
+[aof-17-incompatible-function-declaration.zip :material-file-download :](../../../assets/downloads/hotfixes/forms/aof-17-incompatible-function-declaration.zip){ .md-button .md-button--primary }

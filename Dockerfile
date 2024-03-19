@@ -17,7 +17,9 @@ RUN pip install -U --no-cache-dir -r requirements.txt \
     && \
     mkdocs build -f config/de/mkdocs.yml \
     && \
-    mkdocs build -f config/en/mkdocs.yml
+    mkdocs build -f config/en/mkdocs.yml \
+    && \
+    mkdocs build -f config/fr/mkdocs.yml
 
 FROM nginx:alpine AS i-doit-kb-web
 

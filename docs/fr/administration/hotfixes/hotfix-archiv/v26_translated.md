@@ -1,0 +1,223 @@
+<!-- TRANSLATED by md-translate -->
+# Version 26
+
+# Version 26
+
+## Über
+
+## À propos de
+
+Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Datei zur Verfügung gestellt. Die ZIP-Datei wird im Installationsverzeichnis von i-doit entpackt. Die Abfrage, ob Dateien beim Entpacken überschrieben werden sollen, kann bestätigt werden (Taste **Y** für "yes" oder **A** für "all"). Hier ein Beispiel:
+
+Les hotfixes éliminent une erreur spécifique et sont généralement mis à disposition sous forme de fichier ZIP. Le fichier ZIP est décompressé dans le répertoire d'installation d'i-doit. La demande si les fichiers doivent être écrasés lors de la décompression peut être confirmée (touche **Y** pour "yes" ou **A** pour "all"). Voici un exemple :
+
+```shell
+sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
+cd /var/www/html/i-doit/
+sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+```
+
+!!! attention "Bitte beachten"
+    Bitte nutzen Sie Hotfixes ausschließlich mit der genannten Version. In neueren Versionen werden diese bereits enthalten sein, sodass eine erneute Installation nicht notwendig ist.
+    Sollten Sie eine ältere Version von i-doit nutzen, ist es notwendig, zuerst auf die aktuelle Version zu aktualisieren.<br>
+    Falls ein Hotfix zur Ausführung des Updates einer älteren Version notwendig ist, ist dieser in den Unterkapiteln zu den Hotfixes hier in der Knowledge Base zu finden.<br>
+    Da es sich hierbei um Hotfixes handelt, empfehlen wir, diese nur einzuspielen, wenn diese für den sauberen Betrieb Ihrer Installation notwendig sind oder Sie durch den Support zur Verwendung aufgefordert werden. Bitte stellen Sie sicher, dass vor der Verwendung dieser Hotfixes ein [Backup von i-doit](../../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) erstellt wurde.<br>
+    Sollten Sie nach der Verwendung der Hotfixes mit dem Support in Kontakt treten, ergänzen Sie bitte den Hinweis auf dessen Verwendung.
+
+! !! attention "A noter".
+    Veuillez utiliser les hotfixes uniquement avec la version mentionnée. Les versions plus récentes les contiendront déjà, il n'est donc pas nécessaire de les installer à nouveau.
+    Si vous utilisez une version plus ancienne d'i-doit, il est nécessaire d'effectuer d'abord une mise à jour vers la version actuelle.<br>
+    Si un hotfix est nécessaire pour effectuer la mise à jour d'une ancienne version, vous le trouverez dans les sous-chapitres sur les hotfixes ici dans la base de connaissances.<br>
+    Comme il s'agit de hotfixes, nous vous recommandons de ne les appliquer que s'ils sont nécessaires au bon fonctionnement de votre installation ou si le support vous demande de les utiliser. Veuillez vous assurer qu'une [sauvegarde d'i-doit](../../../maintenance-et-exploitation/sauvegarde-et-restauration-de-données/index.md) a été effectuée avant d'utiliser ces hotfixes.<br>
+    Si vous contactez le support après avoir utilisé les hotfixes, veuillez ajouter la mention de leur utilisation.
+
+!!! info "Aktualität"
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==26== Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+
+! !! info "Actualité"
+    La configuration requise ci-dessous se réfère à la version actuelle d'i-doit, en l'occurrence ==26== À chaque version d'i-doit, ces indications sont adaptées. Ceux qui ont besoin des indications pour les anciennes versions d'i-doit peuvent suivre l'historique des modifications de cette page.
+
+!!! attention "Einverständniserklärung"
+    Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
+
+! !! attention "Déclaration de consentement"
+    En téléchargeant un hotfix, vous déclarez avoir lu et compris l'intégralité des remarques ci-dessus.
+
+## i-doit core
+
+## i-doit core
+
+### JDisc import via console stops with error
+
+### JDisc import via console s'arrête avec erreur
+
+??? note "Related error message"
+    `shell PHP Fatal error: Uncaught TypeError: Cannot access offset of type string on string in /srv/www/html/i-doit/src/classes/export/isys_global_ip_export_helper.class.php:192 Stack trace: # 0 /srv/www/html/i-doit/src/classes/import/handler/isys_import_handler_cmdb.class.php(4574): isys_global_ip_export_helper->exportHostaddressAliases_import() # 1 /srv/www/html/i-doit/src/classes/import/handler/isys_import_handler_cmdb.class.php(3399): isys_import_handler_cmdb->merge_missing_data() # 2 /srv/www/html/i-doit/src/classes/import/handler/isys_import_handler_cmdb.class.php(1515): isys_import_handler_cmdb->import_categories() # 3 /srv/www/html/i-doit/src/classes/modules/jdisc/src/Console/Command/JDiscImportCommand.php(337): isys_import_handler_cmdb->import() # 4 /srv/www/html/i-doit/vendor/symfony/console/Command/Command.php(298): i-doit\Module\JDisc\Console\Command\JDiscImportCommand->execute() # 5 /srv/www/html/i-doit/vendor/symfony/console/Application.php(1046): Symfony\Component\Console\Command\Command->run() # 6 /srv/www/html/i-doit/vendor/symfony/console/Application.php(299): Symfony\Component\Console\Application->doRunCommand() # 7 /srv/www/html/i-doit/vendor/symfony/console/Application.php(171): Symfony\Component\Console\Application->doRun() # 8 /srv/www/html/i-doit/console.php(26): Symfony\Component\Console\Application->run() # 9 {main} thrown in /srv/www/html/i-doit/src/classes/export/isys_global_ip_export_helper.class.php on line 192`
+
+? ?? note "Message d'erreur connexe"
+    `shell PHP Fatal error : Uncaught TypeError : Cannot access offset of type string on string in /srv/www/html/i-doit/src/classes/export/isys_global_ip_export_helper.class.php:192 Pile trace : # 0 /srv/www/html/i-doit/src/classes/import/handler/isys_import_handler_cmdb.class.php(4574) : isys_global_ip_export_helper->exportHostaddressAliases_import() # 1 /srv/www/html/i-doit/src/classes/import/handler/isys_import_handler_cmdb.class.php(3399) : isys_import_handler_cmdb->merge_missing_data() # 2 /srv/www/html/i-doit/src/classes/import/handler/isys_import_handler_cmdb.class.php(1515) : isys_import_handler_cmdb->import_categories() # 3 /srv/www/html/i-doit/src/classes/modules/jdisc/src/Console/Command/JDiscImportCommand.php(337) : isys_import_handler_cmdb->import() # 4 /srv/www/html/i-doit/vendor/symfony/console/Command/Command.php(298) : i-doit\Module\JDisc\Console\Command\JDiscImportCommand->execute() # 5 /srv/www/html/i-doit/vendor/symfony/console/Application.php(1046) : Symfony\Component\Console\Command\Command->run() # 6 /srv/www/html/i-doit/vendor/symfony/console/Application.php(299) : Symfony\Component\Console\Application->doRunCommand() # 7 /srv/www/html/i-doit/vendor/symfony/console/Application.php(171) : Symfony\Component\Console\Application->doRun() # 8 /srv/www/html/i-doit/console.php(26) : Symfony\Component\Console\Application->run() # 9 {main} thrown in /srv/www/html/i-doit/src/classes/export/isys_global_ip_export_helper.class.php on line 192`
+
+[i-doit_ip-export-helper-patch.zip :material-file-download:](../../../assets/downloads/hotfixes/26/i-doit_ip-export-helper-patch.zip){ .md-button .md-button--primary }
+
+[i-doit_ip-export-helper-patch.zip :material-file-download :](../../../assets/downloads/hotfixes/26/i-doit_ip-export-helper-patch.zip){ .md-button .md-button--primary }
+
+### Disconnecting relation in custom category causes sql error
+
+### Disconnecting relation in custom category causes sql error
+
+When you get the following error when disconnecting a relation to a custom category:
+
+Lorsque vous obtenez l'erreur suivante lors de la déconnexion d'une relation à une catégorie personnalisée :
+
+??? note "SQL Error:"
+    ``log Database error : Query error: 'UPDATE isys_catg_relation_list SET isys_catg_relation_list__isys_obj__id__master = 222, isys_catg_relation_list__isys_obj__id__slave = NULL, isys_catg_relation_list__isys_obj__id__itservice = NULL, isys_catg_relation_list__isys_relation_type__id = 1, isys_catg_relation_list__status = 2, isys_catg_relation_list__description = '' WHERE isys_catg_relation_list__id = 799441;': Cannot add or update a child row: a foreign key constraint fails (`idoit_data`.`isys_catg_relation_list`, CONSTRAINT `isys_catg_relation_list_ibfk_2` FOREIGN KEY (`isys_catg_relation_list__isys_obj__id__slave`) REFERENCES `isys_obj` (`isys_obj__id`) ON DELET)"``
+
+? ?? note "SQL Error :"
+    ``log Erreur base de données : Erreur requête : 'UPDATE isys_catg_relation_list SET isys_catg_relation_list__isys_obj__id__master = 222, isys_catg_relation_list__isys_obj__id__slave = NULL, isys_catg_relation_list__isys_obj__id__itservice = NULL, isys_catg_relation_list__isys_relation_type__id = 1, isys_catg_relation_list__status = 2, isys_catg_relation_list__description = '' WHERE isys_catg_relation_list__id = 799441 ;' : Impossible d'ajouter ou de mettre à jour une ligne enfant : une contrainte de clé étrangère échoue (`idoit_data`.`isys_catg_relation_list`, CONSTRAINT `isys_catg_relation_list_ibfk_2` FOREIGN KEY (`isys_catg_relation_list__isys_obj__id__slave`) REFERENCES `isys_obj` (`isys_obj__id`) ON DELET)"``
+
+[i-doit_26_hotfix_ID-9477.zip :material-file-download:](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9477.zip){ .md-button .md-button--primary }
+
+[i-doit_26_hotfix_ID-9477.zip :material-file-download :](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9477.zip){ .md-button .md-button--primary }
+
+### It is not possible to retrieve the next online i-doit update via button check while updating i-doit
+
+### Il n'est pas possible de récupérer la prochaine mise à jour en ligne d'i-doit via le bouton check lors de la mise à jour d'i-doit
+
+When you click on the **Check for a new version** button then version 27 is not displayed, when available.
+
+Lorsque vous cliquez sur le bouton **Check for a new version**, la version 27 n'est pas affichée lorsqu'elle est disponible.
+
+[i-doit_26_hotfix_ID-9844.zip :material-file-download:](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9844.zip){ .md-button .md-button--primary }
+
+[i-doit_26_hotfix_ID-9844.zip :material-file-download :](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9844.zip){ .md-button .md-button--primary }
+
+### Wrong attribute name while reading through API
+
+### Mauvais nom d'attribut lors de la lecture par l'API
+
+When reading category C__CATG__IP hostname is the given attribute.
+
+When reading category C__CATG__IP hostname is the given attribute.
+
+[i-doit_26_hotfix_ID-9728_4e4abcf.zip :material-file-download:](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9728_4e4abcf.zip){ .md-button .md-button--primary }
+
+[i-doit_26_hotfix_ID-9728_4e4abcf.zip :material-file-download :](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9728_4e4abcf.zip){ .md-button .md-button--primary }
+
+### Status filter for multi value categories in report manager is not working correctly for custom categories
+
+### Le filtre d'état pour les catégories multi-valeurs dans le gestionnaire de rapports ne fonctionne pas correctement pour les catégories personnalisées
+
+[i-doit_26_hotfix_ID-9846.zip :material-file-download:](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9846.zip){ .md-button .md-button--primary }
+
+[i-doit_26_hotfix_ID-9846.zip :material-file-download :](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9846.zip){ .md-button .md-button--primary }
+
+### Using cmdb.category.save to assign a object to a contract only assigns root location
+
+### Utiliser cmdb.category.save pour assigner un objet à un contrat assigne seulement l'emplacement racine
+
+[i-doit_26_hotfix_ID-9861_1f040a7.zip :material-file-download:](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9861_1f040a7.zip){ .md-button .md-button--primary }
+
+[i-doit_26_hotfix_ID-9861_1f040a7.zip :material-file-download :](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9861_1f040a7.zip){ .md-button .md-button--primary }
+
+### Description fields yield validation errors on 32bit systems
+
+### Description fields yield validation errors on 32bit systems
+
+When using a 32bit system and saving a global or specific category causes validation error.
+
+L'utilisation d'un système 32bit et l'enregistrement d'une catégorie globale ou spécifique provoque une erreur de validation.
+
+[i-doit_26_hotfix_ID-9928_7dca69d.zip :material-file-download:](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9928_7dca69d.zip){ .md-button .md-button--primary }
+
+[i-doit_26_hotfix_ID-9928_7dca69d.zip :material-file-download :](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9928_7dca69d.zip){ .md-button .md-button--primary }
+
+### Assigning a software via software assignment before assigning a operating system causes version number to disappear
+
+### L'attribution d'un logiciel via l'affectation de logiciel avant l'attribution d'un système d'exploitation provoque la disparition du numéro de version
+
+When assigning a Software before assigning a operating system, the version number of the operating system will disappear.
+
+Lorsque vous attribuez un logiciel avant d'attribuer un système d'exploitation, le numéro de version du système d'exploitation disparaît.
+
+[i-doit_26_hotfix_ID-9943_334f209.zip :material-file-download:](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9943_334f209.zip){ .md-button .md-button--primary }
+
+[i-doit_26_hotfix_ID-9943_334f209.zip :material-file-download :](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9943_334f209.zip){ .md-button .md-button--primary }
+
+### Changing technical keys to only contain words causes entries to lose the values when filled with API (Number only) AND Changing technical keys to only contain words causes entries to lose the values when filled with API (Dialog+) AND Changing technical key in multi value category causes problems in listview
+
+### Changer les clés techniques pour ne contenir que des mots provoque la perte des valeurs quand elles sont remplies avec l'API (Number only) AND Changer les clés techniques pour ne contenir que des mots provoque la perte des valeurs quand elles sont remplies avec l'API (Dialog+) AND Changer la clé technique dans la catégorie multi-valeurs provoque des problèmes dans listview
+
+[i-doit_26_hotfix_ID-9938_55eae80.zip :material-file-download:](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9938_55eae80.zip){ .md-button .md-button--primary }
+
+[i-doit_26_hotfix_ID-9938_55eae80.zip :material-file-download :](../../../assets/downloads/hotfixes/26/i-doit_26_hotfix_ID-9938_55eae80.zip){ .md-button .md-button--primary }
+
+## API Add-on 1.14.1
+
+## API Add-on 1.14.1
+
+### Operating system > Version cannot be referenced via title, if a second operating system has the same version title
+
+### Système d'exploitation > Version ne peut pas être référencé via le titre si un second système d'exploitation a le même titre de version
+
+This effects you when you get this API error message:
+`i-doit system error: The specified version could not be assigned to this application"`
+
+Cela vous affecte lorsque vous recevez ce message d'erreur API :
+`i-doit system error : The specified version could not be assigned to this application"`.
+
+[api_1.14.1_hotfix_API-400_b1aec14.zip :material-file-download:](../../../assets/downloads/hotfixes/api/api_1.14.1_hotfix_API-400_b1aec14.zip){ .md-button .md-button--primary }
+
+[api_1.14.1_hotfix_API-400_b1aec14.zip :material-file-download :](../../../assets/downloads/hotfixes/api/api_1.14.1_hotfix_API-400_b1aec14.zip){ .md-button .md-button--primary }
+
+### Using API after update to i-doit pro 25 displays license error message
+
+### Using API after update to i-doit pro 25 displays license error message
+
+Use this when you receive an error message like:
+
+Utilise cette option lorsque tu reçois un message d'erreur tel que :
+
+```text
+i-doit responded with an error: i-doit system error: Achtung: das "Checkmk 2" Modul ist aktuell nicht lizenziert
+```
+
+[api_1.14.1_hotfix_API-429_fa3e703.zip :material-file-download:](../../../assets/downloads/hotfixes/api/api_1.14.1_hotfix_API-429_fa3e703.zip){ .md-button .md-button--primary }
+
+[api_1.14.1_hotfix_API-429_fa3e703.zip :material-file-download :](../../../assets/downloads/hotfixes/api/api_1.14.1_hotfix_API-429_fa3e703.zip){ .md-button .md-button--primary }
+
+## Analyze Add-on 1.3
+
+## Analyze Add-on 1.3
+
+### Service assignment is not displayed in data quality
+
+### L'affectation de service n'est pas affichée dans la qualité des données
+
+[Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download:](../../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
+
+[Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download :](../../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
+
+## Forms Add-on 1.2.0
+
+## Forms Add-on 1.2.0
+
+### Object is not created when a attribute validation is used and no error is displayed
+
+### L'objet n'est pas créé lorsqu'une validation d'attribut est utilisée et qu'aucune erreur n'est affichée
+
+[forms_1.2.0_hotfix_AOF-38_69144fc.zip :material-file-download:](../../../assets/downloads/hotfixes/forms/forms_1.2.0_hotfix_AOF-38_69144fc.zip){ .md-button .md-button--primary }
+
+[forms_1.2.0_hotfix_AOF-38_69144fc.zip :material-file-download :](../../../assets/downloads/hotfixes/forms/forms_1.2.0_hotfix_AOF-38_69144fc.zip){ .md-button .md-button--primary }
+
+## Floorplan Add-on 1.6
+
+## Floorplan Add-on 1.6
+
+### MySQL8 causes database error "incorrect DATETIME" when opening Floorplan AND Adding new Floorplan gives Error message and deletes existing objects added to floorplan
+
+### MySQL8 provoque une erreur de base de données "DATETIME incorrecte" lors de l'ouverture de Floorplan AND Adding new Floorplan gives Error message and deletes existing objects added to floorplan
+
+[floorplan_1.6_hotfix_FP-130_FP-131.zip :material-file-download:](../../../assets/downloads/hotfixes/floorplan/floorplan_1.6_hotfix_FP-130_FP-131.zip){ .md-button .md-button--primary }
+
+[floorplan_1.6_hotfix_FP-130_FP-131.zip :material-file-download :](../../../assets/downloads/hotfixes/floorplan/floorplan_1.6_hotfix_FP-130_FP-131.zip){ .md-button .md-button--primary }
