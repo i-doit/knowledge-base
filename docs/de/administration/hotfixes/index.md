@@ -46,3 +46,9 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 ### Object is not created when a attribute validation is used and no error is displayed
 
 [forms_1.2.0_hotfix_AOF-38_69144fc.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2.0_hotfix_AOF-38_69144fc.zip){ .md-button .md-button--primary }
+
+## Workflow Add-on 1.2
+
+### Workflow Add-on User Permissions are not available
+
+[workflow_1.2_workflow-51_b54b344.zip :material-file-download:](../../assets/downloads/hotfixes/workflow/workflow_1.2_workflow-51_b54b344.zip){ .md-button .md-button--primary }
