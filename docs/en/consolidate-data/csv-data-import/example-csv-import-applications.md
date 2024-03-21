@@ -2,7 +2,7 @@
 
 In this example we want to import applications. We want to import as much information about an application as possible.
 
-!!! info "Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft"
+!!! info "This article was last checked for i-doit version 1.16.2"
 
 For the import we can import the following information:
 
