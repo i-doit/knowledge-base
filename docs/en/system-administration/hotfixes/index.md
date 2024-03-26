@@ -41,6 +41,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_29_hotfix_ID-10534.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10534.zip){ .md-button .md-button--primary }
 
+### Counter are not counting
+
+[i-doit_29_hotfix_ID-10582_27e6249.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10582_27e6249.zip){ .md-button .md-button--primary }
+
 ## Forms Add-on 1.2.0
 
 ### Object is not created when a attribute validation is used and no error is displayed
