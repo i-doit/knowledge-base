@@ -48,6 +48,14 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_29_hotfix-ID-10576.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix-ID-10576.zip){ .md-button .md-button--primary }
 
+### Counter are not counting
+
+[i-doit_29_hotfix_ID-10582_27e6249.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10582_27e6249.zip){ .md-button .md-button--primary }
+
+### Person without rights can view object lists when using direct link
+
+[i-doit_29_hotfix-ID-10590_186ba09.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix-ID-10590_186ba09.zip){ .md-button .md-button--primary }
+
 ## Forms Add-on 1.2.0
 
 ### Object is not created when a attribute validation is used and no error is displayed
