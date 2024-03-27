@@ -37,6 +37,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_29_hotfix_ID-10424.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10424.zip){ .md-button .md-button--primary }
 
+### Counter are not counting
+
+[i-doit_29_hotfix_ID-10582_27e6249.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10582_27e6249.zip){ .md-button .md-button--primary }
+
 ### Templates are not displayed when the for e.g. Nagios Add-on is installed
 
 [i-doit_29_hotfix_ID-10534.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10534.zip){ .md-button .md-button--primary }
