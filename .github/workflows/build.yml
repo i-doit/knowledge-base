@@ -35,26 +35,26 @@ jobs:
         continue-on-error: true
       - name: Build container image
         run: |
-          docker-compose \
+          docker compose \
             -f docker-compose-ci.yml \
             build \
             --build-arg USER_ID="$(id -u)" \
             --build-arg GROUP_ID="$(id -g)"
       - name: Install toolchain
         run: |
-          docker-compose \
+          docker compose \
             -f docker-compose-ci.yml \
             run docs \
               npm ci
       - name: Build German language
         run: |
-          docker-compose \
+          docker compose \
             -f docker-compose-ci.yml \
             run docs \
               npm run docs:build:de
       - name: Build English language
         run: |
-          docker-compose \
+          docker compose \
             -f docker-compose-ci.yml \
             run docs \
               npm run docs:build:en
