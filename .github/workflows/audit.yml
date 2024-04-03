@@ -33,7 +33,7 @@ jobs:
             ${{ runner.os }}-node-
       - name: Pull container base image
         run: |
-          docker-compose \
+          docker compose \
             -f docker-compose-ci.yml \
             pull
       - name: Re-use container image layers
@@ -41,20 +41,20 @@ jobs:
         continue-on-error: true
       - name: Build container image
         run: |
-          docker-compose \
+          docker compose \
             -f docker-compose-ci.yml \
             build \
             --build-arg USER_ID="$(id -u)" \
             --build-arg GROUP_ID="$(id -g)"
       - name: Install toolchain
         run: |
-          docker-compose \
+          docker compose \
             -f docker-compose-ci.yml \
             run docs \
               npm ci
       - name: Run script
         run: |
-          docker-compose \
+          docker compose \
             -f docker-compose-ci.yml \
             run docs \
               npm run ${{ matrix.script }}
