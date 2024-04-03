@@ -27,7 +27,7 @@ jobs:
           df -h
       - name: Pull container base image
         run: |
-          docker-compose \
+          docker compose \
             -f docker-compose-ci.yml \
             pull
       - name: Re-use container image layers
