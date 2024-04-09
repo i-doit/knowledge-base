@@ -9,13 +9,17 @@ Um den Betrieb aller Funktionalitäten von i-doit zu gewährleisten, existieren 
 
 Folgende Systemparameter sind Mindestanforderungen, um einen Betrieb von i-doit mit bis zu ca. 10.000 Objekten und bis zu 10 gleichzeitig arbeitenden Benutzern zu gewährleisten.
 
-### Virtuelle Hardware
+### Virtuelle Hardware (GNU/Linux)
 
 -   2 vCPUs
 -   2 GB RAM
 -   10 GB freier Festplattenspeicher
 
 Wir empfehlen den Einsatz einer dedizierten, virtuellen Maschine. Der tatsächlich Hardware-Bedarf richtet sich nach Umfang der [IT-Dokumentation](../glossar.md) und Anzahl gleichzeitiger Benutzer.
+
+### Virtuelle Hardware (Windows)
+
+Für Windows sind die [generellen Windows Systemvoraussetzungen](https://learn.microsoft.com/en-us/windows-server/get-started/hardware-requirements) zu beachten. 
 
 ### LAMP / WAMP Stack
 
@@ -27,7 +31,7 @@ Wir empfehlen den Einsatz einer dedizierten, virtuellen Maschine. Der tatsächli
 
 Wir empfehlen den Einsatz von ==Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6==.
 
-!!! Success "Referenzkonfiguration"
+!!! Success "Referenzkonfiguration (GNU/Linux)"
     Folgende Systemparameter bilden eine von uns getestete und empfohlene Referenzkonfiguration, welche eine hohe Performance bei bis zu 500.000 Objekten und einer hohen Anzahl von gleichzeitig arbeitenden Benutzern gewährleistet.
 
     ### Virtuelle Hardware
