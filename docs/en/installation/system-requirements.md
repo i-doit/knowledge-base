@@ -9,13 +9,17 @@ In order to guarantee the operation of all functionalities of i-doit, some requi
 
 The following system parameters are the minimum requirements to guarantee i-doit to work with up to around 10,000 objects and up to 10 users working simultaneously.
 
-### Virtual Hardware
+### Virtual Hardware (GNU/Linux)
 
 -   2 vCPUs
 -   2 GB RAM
 -   10 GB free disc space
 
 We recommend the use of a dedicated virtual machine. The actual demand for hardware is based on the scope of the [IT documentation](../glossary.md) and the amount of simultaneous users.
+
+### Virtuelle Hardware (Windows)
+
+For Windows, the [general Windows system requirements](https://learn.microsoft.com/en-us/windows-server/get-started/hardware-requirements) must be observed.
 
 ### LAMP / WAMP Stack
 
@@ -27,7 +31,7 @@ We recommend the use of a dedicated virtual machine. The actual demand for hardw
 
 We recommend the usage of ==Apache Webserver 2.4, PHP 8.0 and MariaDB 10.6==.
 
-!!! success Reference configuration
+!!! success "Reference configuration (GNU/Linux)"
     The following system parameters comprise a configuration reference that is tested and recommended by us and guarantees high performance when used with up to 500,000 objects and a high number of simultaneously working users.
 
     ### Virtual Hardware

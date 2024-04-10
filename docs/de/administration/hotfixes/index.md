@@ -41,8 +41,29 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_29_hotfix_ID-10534.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10534.zip){ .md-button .md-button--primary }
 
+### JDisc matches non existent object id
+
+??? note "Related error message"
+    Database error : Query error: 'INSERT INTO isys_cmdb_status_changes SET isys_cmdb_status_changes__isys_obj__id = 111222, isys_cmdb_status_changes__isys_cmdb_status__id = 6;': Cannot add or update a child row: a foreign key constraint fails (`idoit_data`.`isys_cmdb_status_changes`, CONSTRAINT `isys_cmdb_status_changes_ibfk1` FOREIGN KEY (`isys_cmdb_status_changes__isys_obj__id`) REFERENCES `isys_obj` (`isys_obj__id`) ON DELETE CAS) . File: /srv/www/idoit.pmd5.org/src/classes/components/isys_component_database_mysqli.class.php Line: 574
+
+[i-doit_29_hotfix-ID-10576.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix-ID-10576.zip){ .md-button .md-button--primary }
+
+### Counter are not counting
+
+[i-doit_29_hotfix_ID-10582_27e6249.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10582_27e6249.zip){ .md-button .md-button--primary }
+
+### Person without rights can view object lists when using direct link
+
+[i-doit_29_hotfix-ID-10590_186ba09.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix-ID-10590_186ba09.zip){ .md-button .md-button--primary }
+
 ## Forms Add-on 1.2.0
 
 ### Object is not created when a attribute validation is used and no error is displayed
 
 [forms_1.2.0_hotfix_AOF-38_69144fc.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2.0_hotfix_AOF-38_69144fc.zip){ .md-button .md-button--primary }
+
+## Workflow Add-on 1.2
+
+### Workflow Add-on User Permissions are not available
+
+[workflow_1.2_workflow-51_b54b344.zip :material-file-download:](../../assets/downloads/hotfixes/workflow/workflow_1.2_workflow-51_b54b344.zip){ .md-button .md-button--primary }
