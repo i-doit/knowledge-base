@@ -2,7 +2,7 @@
 title: Namespace cmdb.category
 description: Read, create or update one or more category entries for an object.
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -208,10 +208,10 @@ JSON key **result** contains a JSON object.
 
 **Limitations:**
 
-- This only works with ==multi-value categories== at the moment.
-- You can only ==archive== category entries which have a normal status.
-- You can only ==mark== category entries ==as deleted== which are archived.
-- You can only ==purge== category entries from the database which are marked as deleted.
+-   This only works with ==multi-value categories== at the moment.
+-   You can only ==archive== category entries which have a normal status.
+-   You can only ==mark== category entries ==as deleted== which are archived.
+-   You can only ==purge== category entries from the database which are marked as deleted.
 
 ### Request parameters
 
@@ -229,7 +229,6 @@ JSON key **result** contains a JSON object.
 | ----------- | -------------- | ------------------ |
 | **success** | Boolean        | Should be **true** |
 | **message** | String         | Some information   |
-
 
 ### Example
 
@@ -453,8 +452,8 @@ JSON key **result** contains a JSON object.
 
 **Limitations:**
 
-- This only works with [multi-value categories](../../../basics/structure-of-the-it-documentation.md).
-- You can recycle category entries which have archived or deleted status.
+-   This only works with [multi-value categories](../../../basics/structure-of-the-it-documentation.md).
+-   You can recycle category entries which have archived or deleted status.
 
 ### Request parameters
 
@@ -509,8 +508,8 @@ JSON key **result** contains a JSON object.
 
 **Limitations**
 
-- This only works with [multi-value categories](../../../basics/structure-of-the-it-documentation.md) at the moment.
-- You can only archive category entries which have a normal status.
+-   This only works with [multi-value categories](../../../basics/structure-of-the-it-documentation.md) at the moment.
+-   You can only archive category entries which have a normal status.
 
 ### Request parameters
 

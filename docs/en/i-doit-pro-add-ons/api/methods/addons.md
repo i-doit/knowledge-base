@@ -2,7 +2,7 @@
 title: addons
 description: Here you find API methods from Add-ons
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -29,7 +29,7 @@ lang: en
     | **Placeholder** | Placeholder | Placeholder |
     | **Placeholder** | Placeholder | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 

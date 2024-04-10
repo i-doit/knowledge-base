@@ -2,8 +2,7 @@
 title: Namespace cmdb.filter
 description: cmdb.filter
 icon: material/api
-status: new
-Bugreport: API-423
+#status: updated
 lang: en
 ---
 
@@ -30,7 +29,7 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
 | **key**   | String         | Attribute which relates to query |
 | **value** | String         | Value which relates to query     |
 
-### Example:
+### Example
 
 === "Request body"
 

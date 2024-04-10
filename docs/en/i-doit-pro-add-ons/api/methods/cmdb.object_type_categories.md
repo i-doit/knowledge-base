@@ -2,7 +2,7 @@
 title: Namespace cmdb.object_type_categories
 description: cmdb.object_type_categories
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -32,7 +32,7 @@ Read categories assigned to a object type.
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -163,4 +163,3 @@ Read categories assigned to a object type.
       }
     }
     ```
-

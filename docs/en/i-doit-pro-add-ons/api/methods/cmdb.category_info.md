@@ -2,7 +2,7 @@
 title: cmdb.category_info
 description: cmdb.category_info
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -34,7 +34,7 @@ description
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body catgID"
 

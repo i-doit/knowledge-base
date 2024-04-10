@@ -2,7 +2,7 @@
 title: cmdb.logbook
 description: cmdb.logbook
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 

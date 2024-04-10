@@ -83,10 +83,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.details
   - pymdownx.tasklist:
       custom_checkbox: true
-
 extra:
   manifest: overrides/manifest.webmanifest
   social:
@@ -531,6 +529,8 @@ nav:
       - Analysis: i-doit-pro-add-ons/analysis.md
       - API (JSON-RPC):
           - i-doit-pro-add-ons/api/index.md
+          - Methoden:
+              - cmdb.external: i-doit-pro-add-ons/api/methoden/cmdb.external.md
           - API Methoden: i-doit-pro-add-ons/api/api-methoden.md
           - Beispiele zur Nutzung der API: i-doit-pro-add-ons/api/beispiele-zur-nutzung-der-api.md
           - Tipps und Tricks zur API: i-doit-pro-add-ons/api/tipps-und-tricks-zur-nutzung-der-api.md
