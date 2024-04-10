@@ -9,7 +9,7 @@ Alongside i-doit 30 we will also launch **API version 2.0**. You will find more 
 **Highlights in this release**
 
 -   New **MariaDB 10.11** compatibility. (please check compatibility for older versions)
--   Optional **two-factor authentication (TFA)** for i-doit login process.
+-   **Optional** [two-factor authentication (TFA)](../../benutzerauthentifizierung-und-verwaltung/2fa/index.md) for i-doit login process.
 -   **Combined** configuration page for **validation** and **attribute visibility**.
 -   Simplified **Extras** menu to provide **quicker access**.
 

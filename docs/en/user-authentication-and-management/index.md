@@ -1,8 +1,8 @@
 # User Authentication and Management
 
-In this chapter we will provide informations about the user authentication for i-doit.
+In this chapter we will provide information about the user authentication for i-doit.
 
-- [Bultin Authentication](./builtin-authentication/index.md)
-- [Authentication with LDAP](./ldap-directory/index.md)
-- [2 factor authentication](./2fa/index.md)
-- [SSO authentication comparison](./sso-comparison/index.md)
+-   [Builtin Authentication](./builtin-authentication/index.md)
+-   [Authentication with LDAP](./ldap-directory/index.md)
+-   [Two-factor Authentication (2FA)](./2fa/index.md)
+-   [SSO authentication comparison](./sso-comparison/index.md)
