@@ -85,10 +85,8 @@ markdown_extensions:
       check_paths: true
       auto_append:
         - overrides/assets/glossary-en.md
-  - pymdownx.details
   - pymdownx.tasklist:
       custom_checkbox: true
-
 extra:
   manifest: overrides/manifest.webmanifest
   social:
@@ -502,6 +500,7 @@ nav:
               - cmdb.condition: i-doit-pro-add-ons/api/methods/cmdb.condition.md
               - cmdb.contact: i-doit-pro-add-ons/api/methods/cmdb.contact.md
               - cmdb.dialog: i-doit-pro-add-ons/api/methods/cmdb.dialog.md
+              - cmdb.external: i-doit-pro-add-ons/api/methods/cmdb.external.md
               - cmdb.filter: i-doit-pro-add-ons/api/methods/cmdb.filter.md
               - cmdb.impact: i-doit-pro-add-ons/api/methods/cmdb.impact.md
               - cmdb.location_tree: i-doit-pro-add-ons/api/methods/cmdb.location_tree.md

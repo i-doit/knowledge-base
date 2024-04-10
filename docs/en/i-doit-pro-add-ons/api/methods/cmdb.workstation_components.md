@@ -2,7 +2,7 @@
 title: Namespace cmdb.object
 description: cmdb.object
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -19,7 +19,7 @@ Fetches workplace components for a Person.
 | Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
 | **id** | Integer | No | ID of a object |
-| **ids** | Array with Interger | No | ID of objects |
+| **ids** | Array with integer | No | ID of objects |
 | **email** | String | No | Person email address |
 | **emails** | String | No | Person email addresses |
 
@@ -34,7 +34,7 @@ Fetches workplace components for a Person.
     | **Placeholder** | Placeholder | Placeholder |
     | **Placeholder** | Placeholder | Placeholder |
 
-### Example:
+### Example
 
 === "Request body with email"
 

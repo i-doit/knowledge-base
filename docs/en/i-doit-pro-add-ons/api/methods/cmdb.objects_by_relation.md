@@ -2,7 +2,7 @@
 title: Namespace cmdb.objects_by_relation
 description: cmdb.objects_by_relation
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -64,7 +64,7 @@ Default relation types are:
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 

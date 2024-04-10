@@ -2,7 +2,7 @@
 title: cmdb.condition
 description: cmdb.condition
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -34,7 +34,7 @@ Give me all objects that have attribute Y = Z in category X. Like a report.
     | **key**   | String         | Attribute which relates to query |
     | **value** | String         | Value which relates to query     |
 
-### Example:
+### Example
 
 === "Request body"
 
