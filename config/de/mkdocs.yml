@@ -128,6 +128,7 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 30: versionshistorie/release-notes/release-notes-30.md
           - Release Notes 29: versionshistorie/release-notes/release-notes-29.md
           - Release Notes 28: versionshistorie/release-notes/release-notes-28.md
           - Release Notes 27: versionshistorie/release-notes/release-notes-27.md
@@ -152,6 +153,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 30: versionshistorie/changelogs/changelog-30.md
           - Changelog 29: versionshistorie/changelogs/changelog-29.md
           - Changelog 28: versionshistorie/changelogs/changelog-28.md
           - Changelog 27: versionshistorie/changelogs/changelog-27.md
@@ -282,7 +284,7 @@ nav:
           - Setup: installation/manuelle-installation/setup.md
       - i-doit Virtual Eval Appliance:
           - installation/i-doit-virtual-eval-appliance/index.md
-          - i-doit Appliance in VirtualBox importieren: installation/i-doit-virtual-eval-appliance/virtual-box.md
+          - i-doit Appliance in VirtualBox impo29rtieren: installation/i-doit-virtual-eval-appliance/virtual-box.md
           - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
   - Wartung und Betrieb:
       - wartung-und-betrieb/index.md
