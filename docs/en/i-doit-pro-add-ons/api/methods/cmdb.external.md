@@ -37,9 +37,9 @@ For example `my_vendor_id / my_object_id`.
 Examples of this would be:
 
 -   External identifier for an **object**
-    -   `source-1 / windows-server100`
+    -   `data-source-1 / windows-server100`
 -   External identifier for each **category entry**
-    -   `source-1 / windows-server100 / C__CATG__CPU / intel-1`
+    -   `data-source-1 / windows-server100 / C__CATG__CPU / intel-1`
 
 The object is located on the first level. Here we define the **extType** on the one hand and the **extId** on the other. Both together form the complete identifier and uniquely identify the created object.
 On the next level, however, we have our **category level**. Each category starts with the corresponding constant and receives a unique ID on the level below.
@@ -55,7 +55,7 @@ Here is an example of a push request to create an object via the new endpoint.
         ...
         "apikey": "{{API_KEY}}",
         <--- object level
-        "extType": "source-1",
+        "extType": "data-source-1",
         "extId": "windows-server100",
         "title": "Server 100",
         "class": "C__OBJTYPE__SERVER",
@@ -89,15 +89,11 @@ Here is an example of a push request to create an object via the new endpoint.
 
 and records the whole thing in an internal mapping table.
 
-[![Mapping table](../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/mapping-table.png)](../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/mapping-table.png)
-
 ### Scoping
 
 Scoping should ensure that two data sources do not get in each other's way, as we assume the following:
 
 !!! note "If different data sources feed their data into i-doit at the same time, we assume that each data source is leading in its own right and can be regarded as a single source of truth. Conversely, this means that an object can never appear in several data sources at the same time."
-
-[![Scoping](../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/scoping.png)](../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/scoping.png)
 
 Based on this assumption, i-doit therefore implements the following safety net:
 
@@ -112,7 +108,7 @@ We have similar handling at **category level**:
 -   A special feature of MV: **MV entries can be edited manually even if they come from a data source**
 -   The other way round, however, i.e. manually created multi-value category entries remain protected from access by the data source
 -   But there is also an exception here, namely for single-value categories: **Manually created single-value category entries can be manipulated by data sources**
--   There is also an unauthorized and unmappable case at the bottom right: The data source **"source-2"** cannot have a CPU entry in an object that is managed by **"source-1"**
+-   There is also an unauthorized and unmappable case: The data source **"data-source-2"** cannot have a CPU entry in an object that is managed by **"data-source-1"**
 
 ## cmdb.external.push.v2
 
@@ -136,7 +132,7 @@ And very importantly:
 
 | Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
-| **extType** | String | Yes | Data source, for example: **source-1** |
+| **extType** | String | Yes | Data source, for example: **data-source-1** |
 | **extId** | String | Yes | Object, for example: **windows-server100** |
 | **class** | String | Yes | Object type, for example: **C__OBJTYPE__SERVER** |
 | **title** | String | Yes | Object designation, for example: **Server 100** |
@@ -152,7 +148,7 @@ And very importantly:
         "method": "cmdb.external.push.v2",
         "params": {
             "apikey": "a9d55pg9yts88488",
-            "extType": "source-1",
+            "extType": "data-source-1",
             "extId": "windows-server100",
             "class": "C__OBJTYPE__SERVER",
             "title": "Server 100",
@@ -199,7 +195,7 @@ And very importantly:
                                 "parent": {
                                     "title": "Düsseldorf",
                                     "class": "C__OBJTYPE__CITY",
-                                    "extType": "source-1",
+                                    "extType": "data-source-1",
                                     "extId": "CITY_OBJECT_DUESSELDORF"
                             }
                         }
@@ -219,7 +215,7 @@ And very importantly:
         "result": {
             "messages": [
                 {
-                    "message": "External id source-1/windows-server100 not found. Object with id 774 created.",
+                    "message": "External id data-source-1/windows-server100 not found. Object with id 774 created.",
                     "level": 200,
                     "datetime": "2024-04-10T09:46:11.173494+02:00"
                 },
@@ -319,7 +315,7 @@ And very importantly:
                     "datetime": "2024-04-10T09:46:11.209471+02:00"
                 },
                 {
-                    "message":"Original: {\"parent\":{\"title\":\"D\üsseldorf\",\"class\":\"C__OBJTYPE__CITY\",\"extType\":\"source-1\",\"extId\":\"CITY_OBJECT_DUESSELDORF\"}}",
+                    "message":"Original: {\"parent\":{\"title\":\"D\üsseldorf\",\"class\":\"C__OBJTYPE__CITY\",\"extType\":\"data-source-1\",\"extId\":\"CITY_OBJECT_DUESSELDORF\"}}",
                     "level": 100,
                     "datetime": "2024-04-10T09:46:11.210140+02:00"
                 },
@@ -366,16 +362,16 @@ When pulling, the external identifier determines the queried data, for example:
 
 | extType | extId | Aktion |
 | --- | --- | --- |
-| source-1 | null | Reads all objects and any category data |
-| source-1 | windows-server100 | Reads windows100 and any category data |
-| source-1 / windows-server100 / C__CATG__CPU | null | Reads windows100 and all CPU entries |
-| source-1 / windows-server100 / C__CATG__CPU | intel-1 | Reads windows100 and only the CPU entry intel-1 |
+| data-source-1 | null | Reads all objects and any category data |
+| data-source-1 | windows-server100 | Reads windows100 and any category data |
+| data-source-1 / windows-server100 / C__CATG__CPU | null | Reads windows100 and all CPU entries |
+| data-source-1 / windows-server100 / C__CATG__CPU | intel-1 | Reads windows100 and only the CPU entry intel-1 |
 
 ### Request parameters
 
 | Key | JSON data type | Required | Description |
 | --- | --- | --- | --- |
-| **extType** | String | Yes | Source, for example: **source-1** |
+| **extType** | String | Yes | Data source, for example: **data-source-1** |
 | **extId** | String | Yes | Object, for example: **windows-server100** |
 
 ### Example
@@ -389,7 +385,7 @@ When pulling, the external identifier determines the queried data, for example:
         "method": "cmdb.external.pull.v2",
         "params": {
             "apikey": "a9d55pg9yts88488",
-            "extType": "source-1",
+            "extType": "data-source-1",
             "extId": "windows-server100"
         }
     }
@@ -404,7 +400,7 @@ When pulling, the external identifier determines the queried data, for example:
         "result": [
             {
                 "extId": "windows-server100",
-                "extType": "source-1",
+                "extType": "data-source-1",
                 "id": 780,
                 "title": "Server 100",
                 "sysid": "SYSID_1712739589",
@@ -417,7 +413,7 @@ When pulling, the external identifier determines the queried data, for example:
                     "C__CATG__CPU": [
                         {
                             "extId": "intel-1",
-                            "extType": "source-1/windows-server100/C__CATG__CPU",
+                            "extType": "data-source-1/windows-server100/C__CATG__CPU",
                             "id": "110",
                             "objID": "780",
                             "title": "5th Generation Intel® Xeon® Scalable Processors #1",
@@ -447,7 +443,7 @@ When pulling, the external identifier determines the queried data, for example:
                         },
                         {
                             "extId": "intel-2",
-                            "extType": "source-1/windows-server100/C__CATG__CPU",
+                            "extType": "data-source-1/windows-server100/C__CATG__CPU",
                             "id": "110",
                             "objID": "780",
                             "title": "5th Generation Intel® Xeon® Scalable Processors #1",
@@ -479,7 +475,7 @@ When pulling, the external identifier determines the queried data, for example:
                     "C__CATG__GLOBAL": [
                         {
                             "extId": "windows-server1001_TAGS",
-                            "extType": "source-1/windows-server100/C__CATG__GLOBAL",
+                            "extType": "data-source-1/windows-server100/C__CATG__GLOBAL",
                             "id": "780",
                             "objID": "780",
                             "title": "Server 100",
@@ -533,7 +529,7 @@ When pulling, the external identifier determines the queried data, for example:
                     "C__CATG__LOCATION": [
                         {
                             "extId": "CITY_OBJECT_DUESSELDORF",
-                            "extType": "source-1/windows-server100/C__CATG__LOCATION",
+                            "extType": "data-source-1/windows-server100/C__CATG__LOCATION",
                             "id": "170",
                             "objID": "780",
                             "location_path": "781",
