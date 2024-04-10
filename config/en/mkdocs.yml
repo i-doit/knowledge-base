@@ -85,10 +85,8 @@ markdown_extensions:
       check_paths: true
       auto_append:
         - overrides/assets/glossary-en.md
-  - pymdownx.details
   - pymdownx.tasklist:
       custom_checkbox: true
-
 extra:
   manifest: overrides/manifest.webmanifest
   social:
@@ -132,6 +130,7 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release Notes 30: version-history/release-notes/release-notes-30.md
           - Release Notes 29: version-history/release-notes/release-notes-29.md
           - Release Notes 28: version-history/release-notes/release-notes-28.md
           - Release Notes 27: version-history/release-notes/release-notes-27.md
@@ -156,6 +155,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 30: version-history/changelogs/changelog-30.md
           - Changelog 29: version-history/changelogs/changelog-29.md
           - Changelog 28: version-history/changelogs/changelog-28.md
           - Changelog 27: version-history/changelogs/changelog-27.md
