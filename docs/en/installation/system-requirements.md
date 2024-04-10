@@ -25,7 +25,7 @@ For Windows, the [general Windows system requirements](https://learn.microsoft.c
 
 -   GNU/Linux in the 64bit variant (amd64) or Windows Server 2022 in the 64bit variant (amd64)
 -   Apache Webserver ==2.4==
--   MariaDB 10.4, 10.5, ==10.6== (recommended), {++10.11++} or MySQL 5.7 or 8.0.
+-   MariaDB 10.4 (deprecated), 10.5 (deprecated), ==10.6== (recommended), {++10.11++} or MySQL 5.7 or 8.0.
 -   PHP 7.4 (deprecated), 8.0, ==8.1== (recommended) and 8.2.
 -   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
@@ -75,7 +75,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **Apache Webserver** | 2.4 |
     | **PHP** | 7.4 (deprecated) <br>8.0<br>==8.1== (recommended)<br>8.2 |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** | 10.5 <br>==10.6== (recommended)<br>{++10.11++} |
+    | **MariaDB** | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>{++10.11++} |
 
 === "29"
 
