@@ -2,7 +2,7 @@
 title: Namespace cmdb.impact
 description: cmdb.impact
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -69,7 +69,7 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
 | **objectType**  | String         | Placeholder |
 | **objID**       | String         | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 

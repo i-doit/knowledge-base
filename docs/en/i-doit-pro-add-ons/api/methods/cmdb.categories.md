@@ -2,7 +2,7 @@
 title: cmdb.categories
 description: cmdb.categories
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 

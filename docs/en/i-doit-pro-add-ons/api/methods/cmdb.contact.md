@@ -2,7 +2,7 @@
 title: Namespace cmdb.contact
 description: cmdb.contact
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -32,7 +32,7 @@ Retrieves all assigned objects by contact.
     | **key**   | String         | Attribute which relates to query |
     | **value** | String         | Value which relates to query     |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -71,4 +71,3 @@ Retrieves all assigned objects by contact.
         }
     }
     ```
-

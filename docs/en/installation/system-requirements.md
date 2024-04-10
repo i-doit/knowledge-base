@@ -3,7 +3,7 @@
 In order to guarantee the operation of all functionalities of i-doit, some requirements must be met by the underlying system.
 
 !!! info "Current version"
-    The requirements shown below apply to the current version of i-doit, in this case ==29==. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case ==30==. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 ## Minimum Requirements
 
@@ -25,11 +25,11 @@ For Windows, the [general Windows system requirements](https://learn.microsoft.c
 
 -   GNU/Linux in the 64bit variant (amd64) or Windows Server 2022 in the 64bit variant (amd64)
 -   Apache Webserver ==2.4==
--   MariaDB 10.2, 10.3, 10.4, 10.5, ==10.6== (recommended) or MySQL 5.7 or 8.0.
--   PHP 7.4 (deprecated), ==8.0== (recommended), 8.1 and {++8.2++}.
+-   MariaDB 10.4 (deprecated), 10.5 (deprecated), ==10.6== (recommended), {++10.11++} or MySQL 5.7 or 8.0.
+-   PHP 7.4 (deprecated), 8.0, ==8.1== (recommended) and 8.2.
 -   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
-We recommend the usage of ==Apache Webserver 2.4, PHP 8.0 and MariaDB 10.6==.
+We recommend the usage of ==Apache Webserver 2.4, PHP 8.1 and MariaDB 10.6==.
 
 !!! success "Reference configuration (GNU/Linux)"
     The following system parameters comprise a configuration reference that is tested and recommended by us and guarantees high performance when used with up to 500,000 objects and a high number of simultaneously working users.
@@ -48,7 +48,7 @@ We recommend the usage of ==Apache Webserver 2.4, PHP 8.0 and MariaDB 10.6==.
 
     -   Apache 2.4.x (default package)
     -   MariaDB 10.6.x (default package)
-    -   PHP 8.0.x (default package)
+    -   PHP 8.1.x (default package)
 
     !!! note Note
 
@@ -66,6 +66,16 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 -   Apple Safari
 
 ## Compatibility matrix
+
+=== "30"
+
+    | **i-doit Version** | 30 |
+    | --- | --- |
+    | **Release** | 2024-04 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.4 (deprecated) <br>8.0<br>==8.1== (recommended)<br>8.2 |
+    | **MySQL** | 5.7 <br>8.0 |
+    | **MariaDB** | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>{++10.11++} |
 
 === "29"
 

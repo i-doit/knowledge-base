@@ -2,7 +2,7 @@
 title: cmdb.reports
 description: cmdb.reports
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -10,9 +10,10 @@ lang: en
 
 !!! example "Work in Progress"
 
-### cmdb.reports.read
+## cmdb.reports.read
 
 Display the result of a report.
+
 ### Request parameters
 
 | Key        | JSON data type | Required | Description                                  |
@@ -25,7 +26,7 @@ Display the result of a report.
 
 JSON key **result** contains the Report result.
 
-### Example:
+### Example
 
 === "Request body"
 

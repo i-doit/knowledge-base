@@ -19,42 +19,12 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
     Please inform us about the use of hotfixes should you contact our support team afterwards.
 
 !!! info "Current version"
-    The requirements shown below apply to the current version of i-doit, in this case ==29== These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case ==30== These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 !!! attention "Declaration of consent"
     By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
 
 ## i-doit core
-
-### The encoding of umlauts are displayed in report titles at the database
-
-[i-doit_29_hotfix_ID-10403_873029a.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10403_873029a.zip){ .md-button .md-button--primary }
-
-### JDisc mapping error
-
-??? note "Related error message"
-    Duplicate entry 'object-55-4052-80:aa:aa:aa:aa:aa,aa:aa:aa:aa:aa:aa,' for key 'isys_jdisc_mapping__type_device_serial_mac'. File: /data/www/idoit/src/classes/modules/jdisc/isys_module_jdisc.class.php Line: 4378
-
-[i-doit_29_hotfix_ID-10424.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10424.zip){ .md-button .md-button--primary }
-
-### Templates are not displayed when the for e.g. Nagios Add-on is installed
-
-[i-doit_29_hotfix_ID-10534.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10534.zip){ .md-button .md-button--primary }
-
-### JDisc matches non existent object id
-
-??? note "Related error message"
-    Database error : Query error: 'INSERT INTO isys_cmdb_status_changes SET isys_cmdb_status_changes__isys_obj__id = 111222, isys_cmdb_status_changes__isys_cmdb_status__id = 6;': Cannot add or update a child row: a foreign key constraint fails (`idoit_data`.`isys_cmdb_status_changes`, CONSTRAINT `isys_cmdb_status_changes_ibfk1` FOREIGN KEY (`isys_cmdb_status_changes__isys_obj__id`) REFERENCES `isys_obj` (`isys_obj__id`) ON DELETE CAS) . File: /srv/www/idoit.pmd5.org/src/classes/components/isys_component_database_mysqli.class.php Line: 574
-
-[i-doit_29_hotfix-ID-10576.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix-ID-10576.zip){ .md-button .md-button--primary }
-
-### Counter are not counting
-
-[i-doit_29_hotfix_ID-10582_27e6249.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix_ID-10582_27e6249.zip){ .md-button .md-button--primary }
-
-### Person without rights can view object lists when using direct link
-
-[i-doit_29_hotfix-ID-10590_186ba09.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29_hotfix-ID-10590_186ba09.zip){ .md-button .md-button--primary }
 
 ## Forms Add-on 1.2.0
 

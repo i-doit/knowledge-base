@@ -2,7 +2,7 @@
 title: Namespace cmdb.status
 description: cmdb.status
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -31,7 +31,7 @@ Read all available states.
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -179,7 +179,7 @@ Create new or save existing state.
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -251,7 +251,7 @@ Purge a state.
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 

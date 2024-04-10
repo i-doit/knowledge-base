@@ -2,7 +2,7 @@
 title: console
 description: cobject
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -31,7 +31,7 @@ Get a list of the tenants.
     | **Placeholder** | Placeholder | Placeholder |
     | **Placeholder** | Placeholder | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 
