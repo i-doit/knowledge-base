@@ -55,7 +55,7 @@ Hier ein beispielhafter Push-Request zur Erstellung eines Objektes über den neu
     "id": 1,
     "params": {
         ...
-        "apikey": "{{API_KEY}}",
+        "apikey": "xxx",
         <--- Objekt Ebene
         "extType": "datenquelle-1",
         "extId": "windows-server100",
@@ -153,7 +153,7 @@ Und ganz wichtig:
         "id": 1,
         "method": "cmdb.external.push.v2",
         "params": {
-            "apikey": "a9d55pg9yts88488",
+            "apikey": "xxx",
             "extType": "datenquelle-1",
             "extId": "windows-server100",
             "class": "C__OBJTYPE__SERVER",
