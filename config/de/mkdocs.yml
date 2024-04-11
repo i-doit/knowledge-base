@@ -478,6 +478,9 @@ nav:
               - Gerätetausch:
                   - administration/verwaltung/add-ons/geraetetausch/index.md
                   - Konfiguration: administration/verwaltung/add-ons/geraetetausch/konfiguration.md
+          - Zwei-Faktor-Authentisierung: administration/verwaltung/zwei-faktor-authentisierung.md
+          - Download Center: administration/verwaltung/download-center.md
+          - Vertragsdaten: administration/verwaltung/vertragsdaten.md
       - Admin Center: administration/admin-center.md
       - Mehrsprachigkeit und Übersetzungen: administration/mehrsprachigkeit-und-uebersetzungen.md
       - Mandantenfähigkeit: administration/mandantenfaehigkeit.md

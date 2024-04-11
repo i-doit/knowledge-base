@@ -12,15 +12,17 @@ lang: en
 
 ### Activate 2FA
 
-To activate 2FA you need to access the **Two-factor Authentication** setting at **User settings** → **Password and login**.
+To activate 2FA you need to access the **Two-factor Authentication** setting at **User settings** → **Password and login**.<br>
 Click `Edit` and now click `Activate`, after entering the 6-digit authentication code the 2FA authentication is enabled.
 
 The next time you log in, you will be asked for the 6-digit authentication code.
 
 ### Deactivate 2FA
 
-To deactivate 2FA you need to access the **Two-factor Authentication** setting at **User settings** → **Password and login**.
+To deactivate 2FA you need to access the **Two-factor Authentication** setting at **User settings** → **Password and login**.<br>
 Click `Edit` and now click `Deactivate`, after entering the 6-digit authentication code the 2FA authentication is disabled.
+
+!!! "An administrator has the option of deactivating 2FA for users via the [administration](../../system-administration/administration/two-factor-authentication.md)."
 
 ## External Two-factor Authentication
 

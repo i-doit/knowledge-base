@@ -443,6 +443,9 @@ nav:
               - Replacement:
                   - system-administration/administration/add-ons/replacement/index.md
                   - Configuration: system-administration/administration/add-ons/replacement/configuration/index.md
+          - Two-factor Authentication: system-administration/administration/two-factor-authentication.md
+          - Download Center: system-administration/administration/download-center.md
+          - Contract details: system-administration/administration/contract-details.md
       - Admin Center: system-administration/admin-center.md
       - Localization: system-administration/localization.md
       - Multi-Tenants: system-administration/multi-tenant.md
