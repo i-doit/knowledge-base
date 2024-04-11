@@ -1,7 +1,9 @@
 ---
-title: external
-description: cmdb.external endpunkt
-icon: material/api
+title: Vertragsdaten
+description: Vertragsdaten
+#icon: material/
 status: new
 lang: de
 ---
+
+# Vertragsdaten

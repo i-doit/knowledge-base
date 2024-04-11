@@ -5,3 +5,5 @@ description: Contract details
 status: new
 lang: en
 ---
+
+# Contract details
