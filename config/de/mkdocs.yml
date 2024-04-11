@@ -320,7 +320,7 @@ nav:
       - Objekttypen: grundlagen/objekttypen.md
       - Zuordnung von Kategorien zu Objekttypen: grundlagen/zurodnung-von-kategorien-zu-objekttypen.md
       - Kategorien und Attribute: grundlagen/kategorien-und-attribute.md
-      - Benutzerdefinierte Objektentypen: grundlagen/benutzerdefinierte-objekttypen.md
+      - Benutzerdefinierte Objekttypen: grundlagen/benutzerdefinierte-objekttypen.md
       - Benutzerdefinierte Kategorien: grundlagen/benutzerdefinierte-kategorien.md
       - Logbuch: grundlagen/logbuch.md
       - Objekt-Beziehungen: grundlagen/objekt-beziehungen.md
@@ -339,7 +339,7 @@ nav:
           - LDAPS Debian Konfiguration: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
           - LDAPS i-doit für Windows: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/i-doit-win-ldaps.md
           - Benutzer-/Gruppen-Synchronisierung: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
-      - 2-Faktor-Authentifizierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
+      - Zwei-Faktor-Authentisierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
       - SSO-Authentifizierung im Vergleich:
           - benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md
       - SSO mit SAML:

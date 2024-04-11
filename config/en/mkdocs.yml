@@ -302,9 +302,9 @@ nav:
           - user-authentication-and-management/ldap-directory/index.md
           - LDAPS Debian configuration: user-authentication-and-management/ldap-directory/ldap-tls.md
           - LDAPS i-doit for Windows: user-authentication-and-management/ldap-directory/i-doit-win-ldaps.md
-          - User/Group synchronisation: user-authentication-and-management/ldap-directory/import-users-and-groups.md
-      - 2 factor authentication (2FA): user-authentication-and-management/2fa/index.md
-      - SSO authentication comparsion:
+          - User/Group synchronization: user-authentication-and-management/ldap-directory/import-users-and-groups.md
+      - Two-factor Authentication (2FA): user-authentication-and-management/2fa/index.md
+      - SSO authentication comparison:
           - user-authentication-and-management/sso-comparison/index.md
       - SSO with SAML:
           - user-authentication-and-management/sso-comparison/saml/index.md
