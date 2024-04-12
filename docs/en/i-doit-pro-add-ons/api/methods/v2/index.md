@@ -1,12 +1,10 @@
 ---
 title: API v2 endpoints
 description: API v2 endpoints
-icon: material/api
+#icon: material/api
 status: new
 lang: en
 ---
-
-## API v2 endpoints
 
 The new structure is much more rigorous and allows for better validation of passed parameters and it is now possible to create much more structured and simple endpoints. The new structure will use a new service, i.e. the v2 API will use an internal (i-doit core) v2 API.
 

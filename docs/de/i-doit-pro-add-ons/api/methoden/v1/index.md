@@ -1,11 +1,13 @@
 # API Methoden
-In diesem Artikel erläutern wir die i-doit [JSON-RPC API](./index.md) im Detail. Wenn Sie wissen wollen, welche Parameter für jede Methode gesetzt werden müssen/können und wie eine typische Antwort aussieht, ist dies die richtige Ressource.
+
+In diesem Artikel erläutern wir die i-doit [JSON-RPC API](../../index.md) im Detail. Wenn Sie wissen wollen, welche Parameter für jede Methode gesetzt werden müssen/können und wie eine typische Antwort aussieht, ist dies die richtige Ressource.
 
 ## Namespace [idoit]
 
 Dieser Namensraum ist für gängige Methoden reserviert.
 
 ### idoit.search
+
 ??? example "idoit.search"
 
     Suchen in i-doit pro
@@ -25,7 +27,7 @@ Dieser Namensraum ist für gängige Methoden reserviert.
     | **documentID** | String | Identifikationsnummer |
     | **key** | String | Attribut, das sich auf die Abfrage bezieht |
     | **value** | String | Wert, der sich auf die Abfrage bezieht |
-    | **type** | String | [Add-on](../index.md) oder Kernfunktionalität |
+    | **type** | String | [Add-on](../../index.md) oder Kernfunktionalität |
     | **link** | String | Relative URL, die direkt zum Suchergebnis führt |
     | **score** | Integer | Punktevergabe (veraltet) |
 
@@ -67,6 +69,7 @@ Dieser Namensraum ist für gängige Methoden reserviert.
     ```
 
 ### idoit.version
+
 ??? example "idoit.version"
 
     Informationen über i-doit und den aktuellen Benutzer abrufen
@@ -133,6 +136,7 @@ Dieser Namensraum ist für gängige Methoden reserviert.
     ```
 
 ### idoit.constants
+
 ??? example "idoit.constants"
 
     Abrufen definierter Konstanten aus i-doit
@@ -191,7 +195,9 @@ Dieser Namensraum ist für gängige Methoden reserviert.
         "id": 1
     }
     ```
+
 ### idoit.login
+
 ??? example "idoit.login"
 
     Neue Sitzung erstellen
@@ -333,7 +339,9 @@ Dieser Namensraum ist für gängige Methoden reserviert.
         "id": 3
     }
     ```
+
 ### idoit.logout
+
 ??? example "idoit.logout"
     Aktuelle Sitzung schließen
 
@@ -354,13 +362,13 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
     Siehe Methode idoit.login
 
-
 Namespace [cmdb]
 ----------------
 
 Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behandlung von Objekten und Kategorien.
 
 ### cmdb.object.create
+
 ??? example "cmdb.object.create"
 
     Erstelle ein neues Objekt mit einigen optionalen Informationen
@@ -640,7 +648,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ??? example "cmdb.object.archive"
 
-    [Archiviert](../../grundlagen/lebens-und-dokumentationszyklus.md) ein Objekt
+    [Archiviert](../../../../grundlagen/lebens-und-dokumentationszyklus.md) ein Objekt
 
      Anfrage Parameter
 
@@ -689,7 +697,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ??? example "cmdb.object.purge"
 
-    [Löscht](../../grundlagen/lebens-und-dokumentationszyklus.md) ein Objekt
+    [Löscht](../../../../grundlagen/lebens-und-dokumentationszyklus.md) ein Objekt
 
      Anfrage Parameter
 
@@ -739,7 +747,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ??? example "cmdb.object.markAsTemplate"
 
-    Setze den Objekt Zustand auf [Vorlage](../../effizientes-dokumentieren/templates.md)
+    Setze den Objekt Zustand auf [Vorlage](../../../../effizientes-dokumentieren/templates.md)
 
     Anfrage Parameter
 
@@ -789,7 +797,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ??? example "cmdb.object.markAsMassChangeTemplate"
 
-    Setze den Objekt Zustand auf [Massenänderung](../../effizientes-dokumentieren/massenaenderung.md) [Template](../../effizientes-dokumentieren/templates.md)
+    Setze den Objekt Zustand auf [Massenänderung](../../../../effizientes-dokumentieren/massenaenderung.md) [Template](../../../../effizientes-dokumentieren/templates.md)
 
     Anfrage Parameter
 
@@ -948,7 +956,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
     | --- | --- | --- | --- |
     | **object** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **456** |
-    | **category** | String | Ja  | [Kategoriekonstante](../../grundlagen/kategorien-und-attribute.md), zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
+    | **category** | String | Ja  | [Kategoriekonstante](../../../../grundlagen/kategorien-und-attribute.md), zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
     | **data** | Object | Ja  | {<br><br> "title":"Name of the access",<br><br>  "description":"description of the access"<br><br>} |
 
     Antwort
@@ -1042,7 +1050,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     | Key | JSON Datentyp | Erforderlich | Beschreibung |
     | --- | --- | --- | --- |
     | **objID** | Integer | ja | Objekt-Identifikator, zum Beispiel: **42** |
-    | **category** | String | ja | [Kategoriekonstante](../../grundlagen/kategorien-und-attribute.md), zum Beispiel: **C__CATG__MODEL** |
+    | **category** | String | ja | [Kategoriekonstante](../../../../grundlagen/kategorien-und-attribute.md), zum Beispiel: **C__CATG__MODEL** |
     | **data** | Object | ja | Attribute mit ihren Werten, zum Beispiel: <br>``` { "manufacturer": "Name of manufacturer", "title": "Name of model" } ``` |
 
 
@@ -1300,7 +1308,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ??? example "cmdb.category.quickpurge"
 
-    Wenn [Quickpurge](../../grundlagen/objekt-liste/erweiterte-einstellungen.md) aktiviert ist, bereinigen Sie einen Kategorieeintrag eines Objekts direkt aus der Datenbank.
+    Wenn [Quickpurge](../../../../grundlagen/objekt-liste/erweiterte-einstellungen.md) aktiviert ist, bereinigen Sie einen Kategorieeintrag eines Objekts direkt aus der Datenbank.
 
     Anfrage Parameter
 
@@ -1669,7 +1677,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ??? example "cmdb.dialog.update"
 
-    Einen [Dialogeintrag](../../grundlagen/dialog-admin.md) aktualisieren
+    Einen [Dialogeintrag](../../../../grundlagen/dialog-admin.md) aktualisieren
 
     Anfrage Parameter
 

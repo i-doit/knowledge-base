@@ -499,30 +499,33 @@ nav:
       - API (JSON-RPC):
           - i-doit-pro-add-ons/api/index.md
           - Methods:
-              - i-doit-pro-add-ons/api/methods/index.md
-              - cmdb.categories: i-doit-pro-add-ons/api/methods/cmdb.categories.md
-              - cmdb.category_info: i-doit-pro-add-ons/api/methods/cmdb.category_info.md
-              - cmdb.category: i-doit-pro-add-ons/api/methods/cmdb.category.md
-              - cmdb.condition: i-doit-pro-add-ons/api/methods/cmdb.condition.md
-              - cmdb.contact: i-doit-pro-add-ons/api/methods/cmdb.contact.md
-              - cmdb.dialog: i-doit-pro-add-ons/api/methods/cmdb.dialog.md
-              - cmdb.external: i-doit-pro-add-ons/api/methods/cmdb.external.md
-              - cmdb.filter: i-doit-pro-add-ons/api/methods/cmdb.filter.md
-              - cmdb.impact: i-doit-pro-add-ons/api/methods/cmdb.impact.md
-              - cmdb.location_tree: i-doit-pro-add-ons/api/methods/cmdb.location_tree.md
-              - cmdb.logbook: i-doit-pro-add-ons/api/methods/cmdb.logbook.md
-              - cmdb.object_type_categories: i-doit-pro-add-ons/api/methods/cmdb.object_type_categories.md
-              - cmdb.object_type_groups: i-doit-pro-add-ons/api/methods/cmdb.object_type_groups.md
-              - cmdb.object_types: i-doit-pro-add-ons/api/methods/cmdb.object_types.md
-              - cmdb.object: i-doit-pro-add-ons/api/methods/cmdb.object.md
-              - cmdb.objects_by_relation: i-doit-pro-add-ons/api/methods/cmdb.objects_by_relation.md
-              - cmdb.objects: i-doit-pro-add-ons/api/methods/cmdb.objects.md
-              - cmdb.reports: i-doit-pro-add-ons/api/methods/cmdb.reports.md
-              - cmdb.status: i-doit-pro-add-ons/api/methods/cmdb.status.md
-              - cmdb.workstation_components: i-doit-pro-add-ons/api/methods/cmdb.workstation_components.md
-              - console: i-doit-pro-add-ons/api/methods/console.md
-              - idoit: i-doit-pro-add-ons/api/methods/idoit.md
-              - Add-ons: i-doit-pro-add-ons/api/methods/addons.md
+              - v1:
+                  - i-doit-pro-add-ons/api/methods/index.md
+                  - cmdb.categories: i-doit-pro-add-ons/api/methods/cmdb.categories.md
+                  - cmdb.category_info: i-doit-pro-add-ons/api/methods/cmdb.category_info.md
+                  - cmdb.category: i-doit-pro-add-ons/api/methods/cmdb.category.md
+                  - cmdb.condition: i-doit-pro-add-ons/api/methods/cmdb.condition.md
+                  - cmdb.contact: i-doit-pro-add-ons/api/methods/cmdb.contact.md
+                  - cmdb.dialog: i-doit-pro-add-ons/api/methods/cmdb.dialog.md
+                  - cmdb.filter: i-doit-pro-add-ons/api/methods/cmdb.filter.md
+                  - cmdb.impact: i-doit-pro-add-ons/api/methods/cmdb.impact.md
+                  - cmdb.location_tree: i-doit-pro-add-ons/api/methods/cmdb.location_tree.md
+                  - cmdb.logbook: i-doit-pro-add-ons/api/methods/cmdb.logbook.md
+                  - cmdb.object_type_categories: i-doit-pro-add-ons/api/methods/cmdb.object_type_categories.md
+                  - cmdb.object_type_groups: i-doit-pro-add-ons/api/methods/cmdb.object_type_groups.md
+                  - cmdb.object_types: i-doit-pro-add-ons/api/methods/cmdb.object_types.md
+                  - cmdb.object: i-doit-pro-add-ons/api/methods/cmdb.object.md
+                  - cmdb.objects_by_relation: i-doit-pro-add-ons/api/methods/cmdb.objects_by_relation.md
+                  - cmdb.objects: i-doit-pro-add-ons/api/methods/cmdb.objects.md
+                  - cmdb.reports: i-doit-pro-add-ons/api/methods/cmdb.reports.md
+                  - cmdb.status: i-doit-pro-add-ons/api/methods/cmdb.status.md
+                  - cmdb.workstation_components: i-doit-pro-add-ons/api/methods/cmdb.workstation_components.md
+                  - console: i-doit-pro-add-ons/api/methods/console.md
+                  - idoit: i-doit-pro-add-ons/api/methods/idoit.md
+                  - Add-ons: i-doit-pro-add-ons/api/methods/addons.md
+              - v2:
+                  - i-doit-pro-add-ons/api/methods/v2/index.md
+                  - cmdb.external: i-doit-pro-add-ons/api/methods/v2/cmdb.external.md
           - Examples for handling the API: i-doit-pro-add-ons/api/examples-for-handling-the-api.md
           - Tips and tricks for working with the API: i-doit-pro-add-ons/api/tips-and-tricks-for-api.md
           - Category fields for data arrays: i-doit-pro-add-ons/api/category-fields-for-data-arrays.md

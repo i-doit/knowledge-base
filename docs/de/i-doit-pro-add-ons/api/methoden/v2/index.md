@@ -1,12 +1,10 @@
 ---
 title: API v2 Endpunkte
 description: API v2 Endpunkte
-icon: material/api
+#icon: material/api
 status: new
 lang: de
 ---
-
-## API v2 Endpunkte
 
 Die neue Struktur ist viel strenger und erlaubt eine bessere Validierung der übergebenen Parameter und es ist nun möglich, deutlich strukturiertere und einfacher Endpunkte zu erstellen. Die neue Struktur wird einen neuen Service verwenden, d.h. die v2 API wird eine interne (i-doit Kern) v2 API verwenden.
 

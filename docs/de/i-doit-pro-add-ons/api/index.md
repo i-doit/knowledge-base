@@ -57,31 +57,6 @@ Zusätzlicher Vorteil ist, dass man pro Dritt-System/Script einen dedizierten Be
     Dieser wird nur verwendet wenn kein Benutzername/Passwort für die Verbindung zur API Schnittstelle verwendet wird.<br>
     **Wird dieses Personen Objekt archiviert/gelöscht, kann die API nicht mehr ohne Authentifizierung genutzt werden.**<br>
 
-### Methoden
-
-| Methode | Beschreibung |
-| --- | --- |
-| idoit.version | Version von i-doit abfragen |
-| idoit.login | [Login](../../grundlagen/erstanmeldung.md) |
-| idoit.logout | [Logout](../../grundlagen/erstanmeldung.md) |
-| idoit.constants | [Konstanten](../../glossar.md) abfragen |
-| idoit.search | In i-doit [suchen](../../effizientes-dokumentieren/suche.md) |
-| cmdb.objects | [Objekte](../../glossar.md) auslesen |
-| cmdb.object.{create, read, update, delete} | Ein Objekt erstellen, auslesen, aktualisieren, [archivieren/als gelöscht markieren/unwiderruflich löschen](../../grundlagen/lebens-und-dokumentationszyklus.md) |
-| cmdb.object_types | [Objekttypen](../../glossar.md) abfragen |
-| cmdb.category_info | [Attribute](../../glossar.md) zu einer [Kategorie](../../grundlagen/struktur-it-dokumentation.md) auslesen |
-| cmdb.category.{create, read, update, delete} | Einen Kategorie-Eintrag erstellen, lesen, aktualisieren, löschen |
-| cmdb.dialog.{create, read}  <br> | Werte eines [Dialog](../../glossar.md)\-Feldes erstellen oder auslesen |
-| cmdb.reports | Einen [Report](../../auswertungen/report-manager.md) ausführen |
-| cmdb.objects_by_relation | Objekte nach Beziehungsart auslesen |
-| cmdb.location_tree | Standort\-Pfad auslesen |
-| cmdb.workstation_components | Arbeitsplatzkomponenten auslesen |
-| cmdb.object_type_categories | Auslesen, welche Kategorien zu welchen Objekttypen konfiguriert sind |
-| cmdb.object_type_groups | Auslesen, welche Objekttypen welchen [Objekttypgruppen](../../glossar.md) zugeordnet sind |
-| cmdb.logbook.{create, read} | Einen Logbuch-Eintrag erstellen, auslesen |
-| cmdb.impact | Rekursive Abfrage aller Objektbeziehungen |
-| [cmdb.external](methoden/cmdb.external.md) | Erlaubt das Lesen/Schreiben von CMDB-Daten von externen Datenquellen |
-
 ### Beispiel
 
 Anhand eines simplen Beispiels wird ein neues Objekt vom Typ **Server** mit dem Objekt-Titel "My little server" über die API erstellt.
