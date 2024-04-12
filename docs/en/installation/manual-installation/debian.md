@@ -211,6 +211,10 @@ Finally, MariaDB is started:
 sudo systemctl start mysql.service
 ```
 
+!!! bug "[Warning] You need to use --log-bin to make --expire-logs-days or --binlog-expire-logs-seconds work."
+    If this message appears in the log, simply comment out `expire_logs_days = 10` in the file `/etc/mysql/mariadb.conf.d/50-server.cnf`.
+    Bug report for Debian -> <https://salsa.debian.org/mariadb-team/mariadb-server/-/merge_requests/61>
+
 ## Next Step
 
 Now the operating system is prepared and i-doit can be installed.

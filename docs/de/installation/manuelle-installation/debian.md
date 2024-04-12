@@ -6,8 +6,6 @@ status: updated
 lang: de
 ---
 
-# Debian GNU/Linux
-
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel. Wir verwenden eine Umgebung ohne **Desktop**.
 
 !!! warning ""
@@ -207,6 +205,10 @@ Abschließend wird MariaDB gestartet:
 ```shell
 sudo systemctl start mysql.service
 ```
+
+!!! bug "[Warning] You need to use --log-bin to make --expire-logs-days or --binlog-expire-logs-seconds work."
+    Taucht diese Meldung im Log auf, dann einfach `expire_logs_days = 10` in der Datei `/etc/mysql/mariadb.conf.d/50-server.cnf` auskommentieren.
+    Bug Report bei Debian -> <https://salsa.debian.org/mariadb-team/mariadb-server/-/merge_requests/61>
 
 ## Nächster Schritt
 
