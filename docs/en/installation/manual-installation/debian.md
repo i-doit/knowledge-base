@@ -8,7 +8,12 @@ lang: en
 
 # Debian GNU/Linux
 
-In this article we explain in just a few steps which packages need to be installed and configured.
+In this article we explain in just a few steps which packages need to be installed and configured. We use a environment without **desktop** .
+
+!!! warning ""
+    When you install Debian, you eventually reach a "Software selection" dialog which has a list of checkboxes to choose the software you want to install initially. This has a "Debian desktop environment" checkbox, pre-ticked; de-selecting that, and leaving all the other desktop environment checkboxes un-ticked (GNOME, Xfce, etc.), will result in a GUI-less installation:
+
+    [![Software selection](../../assets/images/en/installation/manual-installation/debian/gui.png)](../../assets/images/en/installation/manual-installation/debian/gui.png)
 
 ## System Requirements
 
