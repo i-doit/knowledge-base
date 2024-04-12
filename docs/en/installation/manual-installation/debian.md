@@ -1,3 +1,11 @@
+---
+title: Debian GNU/Linux
+description: i-doit installation on Debian
+icon: material/debian
+status: updated
+lang: en
+---
+
 # Debian GNU/Linux
 
 In this article we explain in just a few steps which packages need to be installed and configured.
@@ -6,7 +14,7 @@ In this article we explain in just a few steps which packages need to be install
 
 The general [system requirements](../system-requirements.md) apply.
 
-This article refers to [==Debian GNU/Linux 11 "bullseye"==](https://www.debian.org/index.en.html). In order to find out which Debian version is used you can carry out the following command:
+This article refers to [**Debian GNU/Linux 12 "bookworm"**](https://www.debian.org/index.en.html). In order to find out which Debian version is used you can carry out the following command:
 
 ```shell
 cat /etc/debian_version
@@ -18,20 +26,20 @@ As system architecture you should use a x86 in 64bit:
 uname -m
 ```
 
-==x86_64== means 64bit, ==i386== or ==i686== only 32bit.
+**x86_64** means 64bit, **i386** or **i686** only 32bit.
 
 ## Installation of the Packages
 
 The default package repositories of Debian GNU/Linux already supply the necessary packages to install:
 
--   the ==Apache== web server 2.4
--   the script language ==PHP== 7.4
--   the database management system ==MariaDB== 10.5 and
--   the caching server ==memcached==
+-   the **Apache** web server 2.4
+-   the script language **PHP** 8.2
+-   the database management system **MariaDB** 10.11 and
+-   the caching server **memcached**
 
 ```shell
-sudo apt update
-sudo apt install apache2 libapache2-mod-php mariadb-client mariadb-server php php-bcmath php-cli php-common php-curl php-gd php-imagick php-json php-ldap php-mbstring php-memcached php-mysql php-pgsql php-soap php-xml php-zip memcached unzip sudo moreutils
+apt update
+apt install apache2 libapache2-mod-php mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,gd,imagick,json,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
 ```
 
 ## Configuration
@@ -43,10 +51,10 @@ The installed packages for Apache web server, PHP and MariaDB already supply con
 First of all, a new file is created and filled with the required settings:
 
 ```shell
-sudo nano /etc/php/7.4/mods-available/i-doit.ini
+sudo nano /etc/php/8.2/mods-available/i-doit.ini
 ```
 
-This file has the following contents:
+!!! example "This file contains the following content specified by us. For more information about the parameters, have a look at [PHP.net](https://www.php.net/manual/de/ini.core.php)"
 
 ```ini
 allow_url_fopen = Yes
@@ -74,15 +82,13 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
-The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](system-settings.md) of i-doit.
-
-The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
-
+The `memory_limit` must be increased if necessary, e.g. for very large reports or extensive documents.<br>
+The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](system-settings.md) of i-doit.<br>
+The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).<br>
 Afterwards, the required PHP modules are activated and the Apache web server is restarted:
 
 ```shell
-sudo phpenmod i-doit
-sudo phpenmod memcached
+sudo phpenmod i-doit memcached
 sudo systemctl restart apache2.service
 ```
 
@@ -95,7 +101,7 @@ sudo a2dissite 000-default
 sudo nano /etc/apache2/sites-available/i-doit.conf
 ```
 
-The new VHost configuration is saved in this file:
+!!! example "This file contains the following content specified by us. For more information about the parameters, see [httpd.apache.org](https://httpd.apache.org/docs/2.4/en/mod/core.html)"
 
 ```shell
 <VirtualHost *:80>
@@ -113,8 +119,8 @@ The new VHost configuration is saved in this file:
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.<br>
-With the next step you activate the new VHost and the necessary Apache module ==rewrite== and the Apache web server is restarted:
+i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.<br>
+With the next step you activate the new VHost and the necessary Apache module **rewrite** and the Apache web server is restarted:
 
 ```shell
 sudo a2ensite i-doit
@@ -124,69 +130,49 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The ==root== user should receive a secure password:
+To ensure that MariaDB delivers good performance and can be operated securely, you should not only follow our instructions, but also inform yourself further. Starting with a secure installation where the recommendations should be followed. In addition, the user **root** should be given a secure password.
 
 ```shell
 sudo mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the ==root== user during setup:
+Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
 
 ```shell
 sudo mysql -uroot
 ```
 
-!!! warning "Password for MariaDB root user"
-    If the MariaDB root user does not have a password yet, the database access will not work after executing the ALTER USER statement. Therefore, the MariaDB root user should be assigned a password beforehand:
-
+!!! attention annotate "If the MariaDB installation has already been carried out without setting the password, log in via `mysql -u root` and set a password via (1)"
     ```sql
-    SET PASSWORD for 'root'@'localhost' = PASSWORD ('passwort');
+    ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('YOUR_PASSWORD');
     ```
 
-The following SQL statements are now carried out in the MariaDB shell (The 'password' must be replaced by the current password of the 'root' user):
+1. Für mehr Informationen zum Befehl schauen Sie hier -> <https://mariadb.com/kb/en/alter-user/>
 
-```sql
-ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('password');
-FLUSH PRIVILEGES;
-EXIT;
-```
-
-!!! info "Use of MariaDB 10.3 and downwards"
-
-    Up to MariaDB version 10.3, the UPDATE statement is supported in the user table.
-
-    ```sql
-    UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
-    ```
-
-Afterwards, MariaDB is stopped. Now it is important to move files which are not required, otherwise the result would be a significant loss of performance:
+The mode for shutting down InnoDB still needs to be changed. The value `0` causes a complete cleanup and a merge of the change buffers to be performed before MariaDB is shut down:
 
 ```shell
 mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
-sudo systemctl stop mysql.service
-sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
 
-A new file is created for the deviating settings:
+A new file is created for the different configuration settings and our standard configuration is inserted:
 
 ```shell
 sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
 ```
 
-This file contains the new configuration settings. For an optimal performance you should adapt these settings to the (virtual) hardware:
+!!! example "This file contains the new configuration settings. For **optimal performance, these settings should be adapted to the (virtual) hardware**. For optimal settings, please refer to [mariadb.com](https://mariadb.com/kb/en/optimization-and-tuning/)"
 
 ```ini
 [mysqld]
 # This is the number 1 setting to look at for any performance optimization
 # It is where the data and indexes are cached: having it as large as possible will
 # ensure MySQL uses memory and not disks for most read operations.
-#
+# See https://mariadb.com/kb/en/innodb-buffer-pool/
 # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
 innodb_buffer_pool_size = 1G
-# Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
-innodb_buffer_pool_instances = 1
 # Redo log file size, the higher the better.
-# MySQL/MariaDB writes two ofe these log files in a default installation.
+# MySQL/MariaDB writes one of these log files in a default installation.
 innodb_log_file_size = 512M
 innodb_sort_buffer_size = 64M
 sort_buffer_size = 262144 # default
@@ -200,16 +186,16 @@ query_cache_size = 80M
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
-# Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
-innodb_thread_concurrency = 0
-# Disable this (= 0) if you have slow harddisks
+# Disable this (= 0) if you have slow hard disks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
-# Only if your have MySQL 5.6 or higher, do not use with MariaDB!
-#table_open_cache_instances = 4
+# The maximum number of instances is defined by the table_open_cache_instances system variable.
+# The default value of the table_open_cache_instances system variable is 8, which is expected to handle up to 100 CPU cores.
+# If your system is larger than this, then you may benefit from increasing the value of this system variable.
+table_open_cache_instances = 8
 innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
@@ -224,4 +210,4 @@ sudo systemctl start mysql.service
 
 Now the operating system is prepared and i-doit can be installed.
 
-Proceed with [==Setup==](setup.md)
+[Proceed with **Setup**](setup.md){ .md-button .md-button--primary }

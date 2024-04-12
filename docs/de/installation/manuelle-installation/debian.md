@@ -1,3 +1,11 @@
+---
+title: Debian GNU/Linux
+description: i-doit installation auf Debian
+icon: material/debian
+status: updated
+lang: de
+---
+
 # Debian GNU/Linux
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
@@ -6,7 +14,7 @@ Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenige
 
 Es gelten die allgemeinen [Systemvoraussetzungen](../systemvoraussetzungen.md).
 
-Dieser Artikel bezieht sich auf [**Debian GNU/Linux 11 "bullseye"**](https://debian.org/). Um zu bestimmen, welche Debian Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
+Dieser Artikel bezieht sich auf [**Debian GNU/Linux 12 "bookworm"**](https://debian.org/). Um zu bestimmen, welche Debian Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
 ```shell
 cat /etc/debian_version
@@ -24,16 +32,16 @@ uname -m
 
 Die Standard-Repositories von Debian GNU/Linux bringen bereits alle nötigen Pakete mit, um
 
-- den **Apache** Webserver 2.4,
-- die Script-Sprache **PHP** 7.4,
-- das Datenbankmanagementsystem **MariaDB** 10.5 und
-- den Caching-Server **memcached**
+-   den **Apache** Webserver 2.4,
+-   die Script-Sprache **PHP** 8.2,
+-   das Datenbankmanagementsystem **MariaDB** 10.11 und
+-   den Caching-Server **memcached**
 
 zu installieren:
 
 ```shell
-sudo apt update
-sudo apt install apache2 libapache2-mod-php mariadb-client mariadb-server php php-bcmath php-cli php-common php-curl php-gd php-imagick php-json php-ldap php-mbstring php-memcached php-mysql php-pgsql php-soap php-xml php-zip memcached unzip sudo moreutils
+apt update
+apt install apache2 libapache2-mod-php mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,gd,imagick,json,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
 ```
 
 ## Konfiguration
@@ -45,10 +53,10 @@ Die installierten Pakete für Apache Webserver, PHP und MariaDB bringen bereits 
 Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befüllt:
 
 ```shell
-sudo nano /etc/php/7.4/mods-available/i-doit.ini
+sudo nano /etc/php/8.2/mods-available/i-doit.ini
 ```
 
-Diese Datei erhält folgenden Inhalt:
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/de/ini.core.php) vorbei"
 
 ```ini
 allow_url_fopen = Yes
@@ -76,15 +84,14 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
-Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer gleich dem **Session Timeout** in den [Systemeinstellungen](systemeinstellungen.md) von i-doit sein.
-
+Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.<br>
+Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](systemeinstellungen.md) von i-doit sein.<br>
 Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
 Anschließend werden die benötigten PHP-Module aktiviert und der Apache Webserver neu gestartet:
 
 ```shell
-sudo phpenmod i-doit
-sudo phpenmod memcached
+sudo phpenmod i-doit memcached
 sudo systemctl restart apache2.service
 ```
 
@@ -97,7 +104,7 @@ sudo a2dissite 000-default
 sudo nano /etc/apache2/sites-available/i-doit.conf
 ```
 
-In dieser Datei wird die neue VHost-Konfiguration gespeichert:
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [httpd.apache.org](https://httpd.apache.org/docs/2.4/de/mod/core.html) vorbei"
 
 ```shell
 <VirtualHost *:80>
@@ -115,8 +122,7 @@ In dieser Datei wird die neue VHost-Konfiguration gespeichert:
 </VirtualHost>
 ```
 
-i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Damit diese Einstellungen berücksichtigt werden, ist die Einstellung **AllowOverride All** nötig.
-
+i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Damit diese Einstellungen berücksichtigt werden, ist die Einstellung **AllowOverride All** nötig.<br>
 Im nächsten Schritt werden der neue VHost und das nötige Apache-Modul **rewrite** aktiviert sowie der Apache Webserver neu gestartet:
 
 ```shell
@@ -127,70 +133,43 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. Den Empfehlungen sollte gefolgt werden. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
+Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sollten Sie nicht nur unserer Anleitung folgen, sondern sich auch weiter Informieren. Angefangen, mit einer sicheren Installation bei der den Empfehlungen gefolgt werden sollte. Außerdem sollte der Benutzer **root** ein sicheres Passwort erhalten.
 
 ```shell
 sudo mysql_secure_installation
 ```
 
-Damit i-doit beim Setup den Benutzer **root** verwenden darf, ruft man die Shell von MariaDB auf:
-
-```shell
-sudo mysql -uroot
-```
-
-!!! attention "Passwort für den MariaDB root-benutzer"
-
-    Sollte der MariaDB root-Benutzer noch kein Passwort besitzen, wird der Datenbankzugriff nach der Ausführung des ALTER USER Statements nicht mehr funktionieren. Daher sollte dem MariaDB root-Benutzer zuvor ein Passwort vergeben werden:
-
-        ```sql
-        SET PASSWORD for 'root'@'localhost' = PASSWORD ('passwort)';
-        ```
-
-In der Shell von MariaDB werden nun folgende SQL-Statements ausgeführt (Das 'passwort' muss durch das aktuelle Passwort des Benutzers 'root' ersetzt werden) :
-
-```sql
-ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('passwort');
-FLUSH PRIVILEGES;
-EXIT;
-```
-
-!!! note "Nutzung von MariaDB 10.3 und abwärts"
-
-    Bis MariaDB Version 10.3 wird das UPDATE-Statement in der user-Tabelle unterstützt.
-
+!!! attention annotate "Sollte die MariaDB Installation bereits, ohne setzen des Passwortes, durchgeführt sein, loggen Sie sich via `mysql -u root` ein und setzen Sie ein Passwort über (1)"
     ```sql
-    UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
+    ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('YOUR_PASSWORD');
     ```
 
-Anschließend wird MariaDB gestoppt. Wichtig ist hierbei das Verschieben von nicht benötigten Dateien (andernfalls droht ein signifikanter Performance-Verlust):
+1. Für mehr Informationen zum Befehl schauen Sie hier -> <https://mariadb.com/kb/en/alter-user/>
+
+Der Modus für das Herunterfahren von InnoDB muss noch geändert werden. Der Wert `0` führt dazu, dass eine vollständige Bereinigung und eine Zusammenführung der Änderungspuffer durchgeführt wird, bevor MariaDB heruntergefahren wird:
 
 ```shell
-mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
-sudo systemctl stop mysql.service
-sudo mv /var/lib/mysql/ib_logfile[01] /tmp
+mysql -u root -p -e "SET GLOBAL innodb_fast_shutdown = 0"
 ```
 
-Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
+Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt und unsere standard Konfiguration eingefügt:
 
 ```shell
 sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
 ```
 
-Diese Datei enthält die neuen Konfigurationseinstellungen. Für eine optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden:
+!!! example "Diese Datei enthält die neuen Konfigurationseinstellungen. Für eine **optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden**. Für optimale Einstellungen bitte unter [mariadb.com](https://mariadb.com/kb/en/optimization-and-tuning/) schauen"
 
 ```ini
 [mysqld]
 # This is the number 1 setting to look at for any performance optimization
 # It is where the data and indexes are cached: having it as large as possible will
 # ensure MySQL uses memory and not disks for most read operations.
-#
+# See https://mariadb.com/kb/en/innodb-buffer-pool/
 # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
 innodb_buffer_pool_size = 1G
-# Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
-innodb_buffer_pool_instances = 1
 # Redo log file size, the higher the better.
-# MySQL/MariaDB writes two of these log files in a default installation.
+# MySQL/MariaDB writes one of these log files in a default installation.
 innodb_log_file_size = 512M
 innodb_sort_buffer_size = 64M
 sort_buffer_size = 262144 # default
@@ -204,16 +183,16 @@ query_cache_size = 80M
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
-# Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
-innodb_thread_concurrency = 0
-# Disable this (= 0) if you have slow harddisks
+# Disable this (= 0) if you have slow hard disks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
-# Only if your have MySQL 5.6 or higher, do not use with MariaDB!
-#table_open_cache_instances = 4
+# The maximum number of instances is defined by the table_open_cache_instances system variable.
+# The default value of the table_open_cache_instances system variable is 8, which is expected to handle up to 100 CPU cores.
+# If your system is larger than this, then you may benefit from increasing the value of this system variable.
+table_open_cache_instances = 8
 innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
