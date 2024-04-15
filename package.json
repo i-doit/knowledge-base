@@ -42,7 +42,7 @@
         "remark-lint-no-repeat-punctuation": "^0.1.3",
         "remark-lint-no-trailing-spaces": "^2.0.1",
         "remark-normalize-headings": "^4",
-        "remark-preset-lint-consistent": "^5.1",
+        "remark-preset-lint-consistent": "^6.0",
         "remark-preset-lint-recommended": "^6.1"
     },
     "scripts": {
