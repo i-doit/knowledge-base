@@ -91,7 +91,7 @@ Hier ein beispielhafter Push-Request zur Erstellung eines Objektes über den neu
 
 und erfasst das ganze in einer internen Mapping Tabelle.
 
-[![Mapping Tabelle](../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/mapping-table.png)](../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/mapping-table.png)
+[![Mapping Tabelle](../../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/mapping-table.png)](../../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/mapping-table.png)
 
 ### Scoping
 
@@ -99,7 +99,7 @@ Das Scoping soll sicherstellen, dass sich zwei Datenquellen nicht in die Quere k
 
 !!! note "Wenn unterschiedliche Datenquellen zugleich ihre Daten in i-doit einspeisen, so nehmen wir an, dass jede Datenquelle für sich genommen führend ist und als Single-Source-of-Truth betrachtet werden kann. Das heisst im Umkehrschluss, dass ein Objekt niemals zugleich in mehreren Datenquellen auftauchen kann."
 
-[![Scoping](../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/scoping.png)](../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/scoping.png)
+[![Scoping](../../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/scoping.png)](../../../../assets/images/de/i-doit-pro-add-ons/api/methods/cmdb.external/scoping.png)
 
 Basierend auf dieser Annahme implementiert i-doit daher folgendes Sicherheitsnetz:
 
