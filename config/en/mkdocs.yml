@@ -235,7 +235,9 @@ nav:
       - Automatic Installation: installation/automatic-installation.md
       - Manual Installation:
           - installation/manual-installation/index.md
-          - Debian GNU/Linux: installation/manual-installation/debian.md
+          - Debian GNU/Linux:
+              - Debian 12: installation/manual-installation/debian12.md
+              - Debian 11: installation/manual-installation/debian11.md
           - Red Hat Enterprise Linux (RHEL):
               - installation/manual-installation/red-hat-enterprise-linux/index.md
               - Red Hat Enterprise Linux 8.6 (RHEL 8): installation/manual-installation/red-hat-enterprise-linux/red-hat-enterprise-linux-8.6.md

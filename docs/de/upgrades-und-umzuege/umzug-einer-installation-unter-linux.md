@@ -8,71 +8,70 @@ In diesem Artikel beschreiben wir die generelle Vorgehensweise, um eine Installa
 
 Es sind ein paar Dinge zu beachten, um einen möglichst reibungslosen Umzug zu gewährleisten:
 
-1.  i-doit und optional installierte [i-doit pro Add-ons](../i-doit-pro-add-ons/index.md) sollten auf einem [aktuellen Stand](../wartung-und-betrieb/update-einspielen.md) sein.
-2.  Wir verändern das alte System nicht, um im Fall der Fälle schnell wieder in den Ursprungszustand zurückkehren zu können.
-3.  Die gezeigten Befehle passen zu einem aktuellen [Debian GNU/Linux](../installation/manuelle-installation/debian.md) und sollten an die entsprechende Umgebung angepasst werden. Blindes Ausführen der Befehle sollten vermieden werden.
+1. i-doit und optional installierte [i-doit pro Add-ons](../i-doit-pro-add-ons/index.md) sollten auf einem [aktuellen Stand](../wartung-und-betrieb/update-einspielen.md) sein.
+2. Wir verändern das alte System nicht, um im Fall der Fälle schnell wieder in den Ursprungszustand zurückkehren zu können.
+3. Die gezeigten Befehle passen zu einem aktuellen Debian GNU/Linux und sollten an die entsprechende Umgebung angepasst werden. Blindes Ausführen der Befehle sollten vermieden werden.
 
 ## Neues System vorbereiten
 
 Zunächst gilt es, das neue System so weit wie möglich vorzubereiten:
 
-1.  Das neue Betriebssystem entspricht den [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) und ist auf einem aktuellen Stand.
-2.  Auf dem neuen Betriebssystem sind die [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) konfiguriert worden.
-3.  Gängige [Sicherheitsmaßnahmen](../wartung-und-betrieb/sicherheit-und-schutz.md) wurden durchgeführt.
+1. Das neue Betriebssystem entspricht den [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) und ist auf einem aktuellen Stand.
+2. Auf dem neuen Betriebssystem sind die [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) konfiguriert worden.
+3. Gängige [Sicherheitsmaßnahmen](../wartung-und-betrieb/sicherheit-und-schutz.md) wurden durchgeführt.
 
 ## Altes System außer Betrieb nehmen
 
 Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwendet werden:
 
-1.  Downtimes sind nervig - vor allem unerwartete. Die Benutzer von i-doit sollten vorab informiert worden sein, dass die Installation umzieht und in welchem Zeitraum sie nicht erreichbar ist.
-2.  [Automatisierte Zugriffe von Drittsystemen](../automatisierung-und-integration/index.md) sollten deaktiviert werden.
-3.  [Cronjobs](../automatisierung-und-integration/cli/index.md) sollten ebenfalls deaktiviert werden. Hierzu reicht es meist, die Befehlszeilen auszukommentieren.
-4.  Nach Sicherstellung der obigen Punkte sollte der Apache Webserver gestoppt werden:
+1. Downtimes sind nervig - vor allem unerwartete. Die Benutzer von i-doit sollten vorab informiert worden sein, dass die Installation umzieht und in welchem Zeitraum sie nicht erreichbar ist.
+2. [Automatisierte Zugriffe von Drittsystemen](../automatisierung-und-integration/index.md) sollten deaktiviert werden.
+3. [Cronjobs](../automatisierung-und-integration/cli/index.md) sollten ebenfalls deaktiviert werden. Hierzu reicht es meist, die Befehlszeilen auszukommentieren.
+4. Nach Sicherstellung der obigen Punkte sollte der Apache Webserver gestoppt werden:
 
         sudo systemctl stop apache2.service
 
 ## Dateien und Verzeichnisse umziehen
 
-1.  Wir kopieren das gesamte Installationsverzeichnis von i-doit vom alten auf das neue System. Das Verzeichnis befindet sich in vielen Fällen unter /var/www/html/. Beispiel mit SSH, wobei i-doit im Verzeichnis /var/www/html/i-doit/ zu finden ist:
+1. Wir kopieren das gesamte Installationsverzeichnis von i-doit vom alten auf das neue System. Das Verzeichnis befindet sich in vielen Fällen unter /var/www/html/. Beispiel mit SSH, wobei i-doit im Verzeichnis /var/www/html/i-doit/ zu finden ist:
 
         scp -r user@oldsystem:/var/www/html/i-doit/ /tmp/
         scp -r /tmp/i-doit/ user@newsystem:/tmp/
         ssh user@newsystem
         sudo -u www-data cp -r /tmp/i-doit/ /var/www/html/
 
-2.  Nach dem Kopieren sollte sichergestellt werden, dass die Dateisystemrechte richtig gesetzt sind. Der Apache Webserver benötigt Lese- und Schreibrechte auf das vollständige Installationsverzeichnis. Weitere Hinweise gibt der Artikel "[Setup](../installation/manuelle-installation/setup.md)". Beispiel:
+2. Nach dem Kopieren sollte sichergestellt werden, dass die Dateisystemrechte richtig gesetzt sind. Der Apache Webserver benötigt Lese- und Schreibrechte auf das vollständige Installationsverzeichnis. Weitere Hinweise gibt der Artikel "[Setup](../installation/manuelle-installation/setup.md)". Beispiel:
 
         cd /var/www/html/i-doit/
         sudo chown www-data:www-data -R .
         sudo find . -type d -name \* -exec chmod 775 {} \;
         sudo find . -type f -exec chmod 664 {} \;
 
-3.  Interne Caches speichert i-doit unterhalb des temp/\-Verzeichnisses. Die Inhalte sollten komplett entfernt werden. Bei der ersten Verwendung von i-doit werden die Caches automatisch erstellt:
+3. Interne Caches speichert i-doit unterhalb des temp/\-Verzeichnisses. Die Inhalte sollten komplett entfernt werden. Bei der ersten Verwendung von i-doit werden die Caches automatisch erstellt:
 
         sudo rm -r temp/*
 
-4.  Es sollte kontrolliert werden, ob die Datei .htaccess kopiert wurde:
+4. Es sollte kontrolliert werden, ob die Datei .htaccess kopiert wurde:
 
         ls -lha /var/www/html/i-doit/.htaccess
 
-
 ## Datenbanken umziehen
 
-1.  i-doit benötigt mindestens 2 [Datenbanken](../software-entwicklung/datenbank-modell/index.md). Von jeder einzelnen sollte auf dem alten System ein Dump erstellt werden:
+1. i-doit benötigt mindestens 2 [Datenbanken](../software-entwicklung/datenbank-modell/index.md). Von jeder einzelnen sollte auf dem alten System ein Dump erstellt werden:
 
         mysqldump -uroot -p idoit_system > /tmp/idoit_system.sql
         mysqldump -uroot -p idoit_data > /tmp/idoit_data.sql
 
-    ###### Wenn beim einspielen der Datenbank diese Fehlermeldung erscheint "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". Ist die Lösung dazu [HIER](../administration/troubleshooting/cant-create-table.md) zu finden.
+*Wenn beim einspielen der Datenbank diese Fehlermeldung erscheint "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". Ist die Lösung dazu [HIER](../administration/troubleshooting/cant-create-table.md) zu finden
 
-2.  Diese Dumps kopieren wir auf das neue System:
+2. Diese Dumps kopieren wir auf das neue System:
 
         scp user@oldsystem:/tmp/idoit_system.sql /tmp/
         scp user@oldsystem:/tmp/idoit_data.sql /tmp/
         scp /tmp/idoit_system.sql user@newsystem:/tmp/
         scp /tmp/idoit_data.sql user@newsystem:/tmp/
 
-3.  Diese Dumps spielen wir im neuen System ein:
+3. Diese Dumps spielen wir im neuen System ein:
 
         mysql -uroot -p
         CREATE DATABASE idoit_system;
@@ -81,7 +80,7 @@ Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwende
         mysql -uroot -p idoit_system < /tmp/idoit_system.sql
         mysql -uroot -p idoit_data < /tmp/idoit_data.sql
 
-4.  Beim ursprünglichen [Setup](../installation/manuelle-installation/setup.md) von i-doit wurde ein MySQL-Benutzer erstellt (Standard: idoit). Dieser muss mit denselben Berechtigungen und demselben Passwort auf dem neuen System vorhanden sein. Dazu melden wir uns mit dem Superuser von MySQL an:
+4. Beim ursprünglichen [Setup](../installation/manuelle-installation/setup.md) von i-doit wurde ein MySQL-Benutzer erstellt (Standard: idoit). Dieser muss mit denselben Berechtigungen und demselben Passwort auf dem neuen System vorhanden sein. Dazu melden wir uns mit dem Superuser von MySQL an:
 
         mysql -uroot -p
 
@@ -104,9 +103,8 @@ Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwende
 
 ## Nachbereitung
 
-
-1.  DNS-Einträge, IP-Adressen, Hostnames etc. sollten im Nachgang angepasst werden, damit i-doit wie gewohnt erreichbar ist.
-2.  Schnittstellen zu Drittsystemen können nun wieder aktiviert werden. Die Funktionen sollten geprüft werden.
-3.  Cronjobs sollten wieder aktiviert und getestet werden.
-4.  [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) sollten eingerichtet und getestet werden.
-5.  Wenn auch die WebGUI wie gewohnt reagiert und alle Daten in i-doit augenscheinlich vorhanden sind, ist der Umzug erfolgreich verlaufen.
+1. DNS-Einträge, IP-Adressen, Hostnames etc. sollten im Nachgang angepasst werden, damit i-doit wie gewohnt erreichbar ist.
+2. Schnittstellen zu Drittsystemen können nun wieder aktiviert werden. Die Funktionen sollten geprüft werden.
+3. Cronjobs sollten wieder aktiviert und getestet werden.
+4. [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) sollten eingerichtet und getestet werden.
+5. Wenn auch die WebGUI wie gewohnt reagiert und alle Daten in i-doit augenscheinlich vorhanden sind, ist der Umzug erfolgreich verlaufen.

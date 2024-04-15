@@ -15,7 +15,7 @@ In many cases, the IT documentation encloses very sensitive data which have to b
 Before Installing i-doit
 ------------------------
 
-Before you [install](../installation/index.md) i-doit, you can already carry out some measures to strengthen the system on which i-doit is based. As an example, we use a [Debian GNU/Linux](../installation/manual-installation/debian.md) for an i-doit installation.
+Before you [install](../installation/index.md) i-doit, you can already carry out some measures to strengthen the system on which i-doit is based. As an example, we use a Debian GNU/Linux for an i-doit installation.
 
 ### User Rights: Less is More
 
@@ -69,7 +69,7 @@ To some extent, a usual installation involves unnecessary baggage and first of a
     # Currently open ports:
     sudo netstat -tulpen
 
-Unnecessary components can be deactivated, stopped, or even deleted from the system.  
+Unnecessary components can be deactivated, stopped, or even deleted from the system.
 Here you can see an example:
 
     # Beispiel: Deactivate and stop CUPS printer service:
@@ -78,7 +78,7 @@ Here you can see an example:
 
     # Delete CUPS printer service:
     sudo apt remove cups
-    
+
     # Delete CUPS printer service including configuration:
     sudo apt purge cups
 
@@ -125,10 +125,10 @@ Carry out the following settings:
 
     ;; Restriction to directories which PHP may access:
     open_basedir = "/var/www/html/i-doit/:/tmp/"
-    
+
     ;; Disable unnecessary methods:
     disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,
-    
+
     ;; Do not send used PHP version in HTTP headers:
     expose_php = Off
 
@@ -153,53 +153,53 @@ Here is an example for Debian GNU/Linux 8.x to establish different types of secu
         Header always set X-Frame-Options "SAMEORIGIN"
         Header always set X-XSS-Protection "1; mode=block"
         Header always set X-Content-Type-Options "nosniff"
-    
+
         ## Avoid information about the Web server:
         Header unset Server
     </IfModule>
-    
+
     ## Avoid information about the Web server:
     ServerSignature Off
     ServerTokens    Prod
-    
+
     <IfModule mod_ssl.c>
             ## See <https://mozilla.github.io/server-side-tls/ssl-config-generator/>:
             SSLProtocol             all -SSLv3 -TLSv1 -TLSv1.1
             SSLCipherSuite          ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256
             SSLHonorCipherOrder     on
             SSLCompression          off
-    
+
             SSLUseStapling  on
             SSLStaplingResponderTimeout     5
             SSLStaplingReturnResponderErrors        off
             SSLStaplingCache        shmcb:/var/run/ocsp(128000)
-    
+
             Header always set Strict-Transport-Security "max-age=15768000; includeSubDomains"
     </IfModule>
-    
+
     <IfModule mod_ssl.c>
             <VirtualHost *:443>
                     ServerAdmin info@i-doit.example.net
                     Servername i-doit.example.net
-    
+
                     DocumentRoot /var/www/html/
-    
+
                     <Directory /var/www/html/>
                             Options FollowSymLinks
                             AllowOverride All
                     </Directory>
-    
+
                     CustomLog /var/log/apache2/access.log combined
                     ServerSignature Off
-    
+
                     LogLevel info ssl:warn
                     ErrorLog ${APACHE_LOG_DIR}/error.log
-    
+
                     SSLEngine on
-                    
+
                     SSLCertificateFile      /etc/ssl/i-doit.example.net.crt
                     SSLCertificateKeyFile   /etc/ssl/i-doit.example.net.key
-    
+
                     ## Let i-doit know about some SSL settings (see <https://httpd.apache.org/docs/2.4/mod/mod_ssl.html#ssloptions>):
                     <FilesMatch "\.(php)$">
                             SSLOptions +StdEnvVars

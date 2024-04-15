@@ -11,7 +11,7 @@ We use two servers for the sample configuration, a Windows server with domain/AD
 | tu2-dc2.tu-synetics.test | 10.10.60.22 | AD, FS | Windows |
 | tu2-samlsso.synetics.test | 10.10.60.108 | Apache+Mellon | Debian11 |
 
-### Basic configuration:
+### Basic configuration
 
 ✔ The Windows server must have a configured AD that includes the AD-FS role.<br>
 ✔ I-doit is already pre-installed and usable.
@@ -33,18 +33,19 @@ sudo mkdir -p /etc/apache2/mellon
 cd /etc/apache2/mellon
 ```
 
-With the following command we create our Mellon metadata “Please adjust URLs”
+With the following command we create our Mellon metadata "Please adjust URLs"
 
 ```shell
 /usr/sbin/mellon_create_metadata https://tu2-samlsso.synetics.test/ "https://tu2-samlsso.synetics.test/mellon"
 ```
+
 This now creates the following files
 
-`https\_tu2\_samlsso.synetics.test\_.cert` <br>
-`https\_tu2\_samlsso.synetics.test\_.key` <br>
+`https\_tu2\_samlsso.synetics.test\_.cert`<br>
+`https\_tu2\_samlsso.synetics.test\_.key`<br>
 `https\_tu2\_samlsso.synetics.test\_.xml`
 
-Now we need to fetch the AD-FS metadata from our AD “Please adjust URLs”
+Now we need to fetch the AD-FS metadata from our AD "Please adjust URLs"
 
 ```shell
 wget https://tu2-dc2.tu-synetics.test/FederationMetadata/2007-06/FederationMetadata.xml%20-O%20/etc/apache2/mellon/FederationMetadata.xml -O /etc/apache2/mellon/FederationMetadata.xml --no-check-certificate
@@ -170,7 +171,7 @@ sudo ntpdate -u tu2-dc2.tu-synetics.test
 
 At this point, we are done with the configuration of the Linux server for the time being and can now turn our attention to our AD.
 
-## Konfiguration AD-FS:
+## Konfiguration AD-FS
 
 First download the file `mellon_metadata.xml` from the Linux server e.g. via WinSCP and save it.
 
@@ -242,9 +243,9 @@ After successful registration, we should receive the following output.
 
 [![Auth users only]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-16.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-16.png)
 
-## Installation i-doit pro:
+## Installation i-doit pro
 
-The installation can be installed as described in the KB article for [Debian](../../../installation/manual-installation/debian.md).
+The installation can be installed as described in the KB article for [Debian](../../../installation/manual-installation/debian12.md).
 
 ## SSO login for i-doit pro
 
@@ -264,10 +265,11 @@ sudo a2dissite i-doit
 Customize Mellon Vhost created at the beginning
 
 ```shell
-nano /etc/apache2/sites-enabled/tu2-samlsso.conf 
+nano /etc/apache2/sites-enabled/tu2-samlsso.conf
 ```
 
 Example:
+
 ```shell
 <IfModule mod_ssl.c>
     <VirtualHost _default_:443>
@@ -308,5 +310,4 @@ sudo systemctl restart apache2.service
 If we now open the URL again in our browser and log in, we will be taken directly to the i-doit
 
 !!! info "Fallback to Logon Screen"
-
     If a user logs in who does not yet exist in i-doit, then this user is automatically redirected to the i-doit login screen and can log in with a local user.

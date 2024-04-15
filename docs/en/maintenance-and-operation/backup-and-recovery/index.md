@@ -15,7 +15,7 @@ The corresponding recovery is this:
 
     mysql -hlocalhost -uroot -p < backup.sql
 
-You should not use i-doit during the backup process in order not to corrupt the backup. The Webserver can be deactivated for the time of the backup/recovery. On [Debian](../../installation/manual-installation/debian.md)\-based Linux distributions the command
+You should not use i-doit during the backup process in order not to corrupt the backup. The Webserver can be deactivated for the time of the backup/recovery. On Debian-based Linux distributions the command
 
     sudo service apache2 stop
 
@@ -72,7 +72,7 @@ Backup via VM-Snapshots
 
 i-doit is often installed on a virtual machine (VM). However, for backup and recovery purposes it does not suffice to simply make snapshots of the VM during operation. The problem is the consistency of the databases: The data may be stored in the working memory but is not (yet) located in the non-volatile memory. Therefore it may be the case that data is not covered by the backup and thus lost if the backup is needed.
 
-If you still do not want to do without snapshots, the DBMS MySQL/MariaDB needs to be stopped beforehand. On [Debian](../../installation/manual-installation/debian.md)\-based operating systems this is carried out via the following command:
+If you still do not want to do without snapshots, the DBMS MySQL/MariaDB needs to be stopped beforehand. On Debian-based operating systems this is carried out via the following command:
 
     sudo service mysql stop
 

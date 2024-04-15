@@ -18,10 +18,10 @@ Die [PHP-Extension php_ldap](http://de.php.net/manual/de/ldap.setup.php) für di
 Nicht vergessen, LDAP zu erlauben, wenn SELinux verwendet wird. Dazu `setsebool -P httpd_can_connect_ldap on` verwenden. Das -P steht für Permanent<br>
 Überprüfen Sie dies mit `getsebool -a | grep httpd`
 
-## Nachträgliche Installation unter [Debian GNU/Linux](../../installation/manuelle-installation/debian.md)
+## Nachträgliche Installation unter Debian GNU/Linux
 
 ```shell
-sudo apt install php7-ldap
+sudo apt install php-ldap
 sudo service apache2 restart
 ```
 
@@ -62,7 +62,7 @@ Unter **Verwaltung → Import und Schnittstellen → LDAP → Server** können e
 | **LDAP Page Limit** | Wie viele Ergebnisse sollen pro "Päckchen" zurückgeliefert werden? |
 | **IP / Hostname*** | Pflichtfeld: Die IP oder der Hostname des Servers |
 | **Port*** | Pflichtfeld: Über welchen Port wird die Abfrage durchgeführt? (Standard: 389) |
-| **TLS** | Soll die Abfrage verschlüsselt werden? Achtung: Bei selbst-signierten Zertifikaten oder welchen, deren Zertifikat der Root CA nicht dem Betriebssystem, unter dem i-doit installiert ist, bekannt sind, wird die Authentifizierung fehlschlagen. Wie das Zertifikat akzeptiert werden kann, ist den jeweiligen Anleitungen der Betriebssysteme zu entnehmen. Unter [Debian](../../installation/manuelle-installation/debian.md)\-basierten Betriebssystemen wird das Zertifikat der Root CA in das Verzeichnis /usr/local/share/ca-certificates/ kopiert und anschließend mit sudo update-ca-certificates aktiviert. |
+| **TLS** | Soll die Abfrage verschlüsselt werden? Achtung: Bei selbst-signierten Zertifikaten oder welchen, deren Zertifikat der Root CA nicht dem Betriebssystem, unter dem i-doit installiert ist, bekannt sind, wird die Authentifizierung fehlschlagen. Wie das Zertifikat akzeptiert werden kann, ist den jeweiligen Anleitungen der Betriebssysteme zu entnehmen. Unter Debian-basierten Betriebssystemen wird das Zertifikat der Root CA in das Verzeichnis /usr/local/share/ca-certificates/ kopiert und anschließend mit sudo update-ca-certificates aktiviert. |
 | **Admin Benutzername (DN)*** | Pflichtfeld: Der Pfad bis zum Benutzerobjekt, das Leserechte auf das Directory hat.<br><br>(Beispiel: CN=idoit,OU=tree,DC=synetics,DC=int) |
 | **Passwort*** | Pflichtfeld: Das Passwort des darüber angegebenen Benutzers |
 | **Benutze Admin-Nutzer für alle lesenden Anfragen** | Wenn die Option "Benutze Admin-Nutzer für alle lesenden Anfragen" aktiviert ist, wird bei jeder LDAP-Server Abfrage mit dem Administrator Account aus der LDAP-Server Konfiguration geprüft |
@@ -108,7 +108,7 @@ Connection OK!
 XX object(s) found in OU=tree,OU=synetics,DC=synetics,DC=int.
 ```
 
-Sollte bei Misserfolg die Fehlermeldung noch nicht eindeutig genug sein, kann das Debug-Level hochgesetzt werden, sodass weitere Ausgaben im Apache Error Log mitgeschrieben werden. Das Error Log ist unter [Debian](../../installation/manuelle-installation/debian.md)\-basierten Betriebssystemen unter /var/log/apache2/error.log zu finden.
+Sollte bei Misserfolg die Fehlermeldung noch nicht eindeutig genug sein, kann das Debug-Level hochgesetzt werden, sodass weitere Ausgaben im Apache Error Log mitgeschrieben werden. Das Error Log ist unter Debian-basierten Betriebssystemen unter /var/log/apache2/error.log zu finden.
 
 ### Identifizierung von Objekten
 

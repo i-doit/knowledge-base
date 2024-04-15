@@ -1,8 +1,8 @@
 ---
-title: Debian GNU/Linux
-description: i-doit installation auf Debian
+title: Debian 12 GNU/Linux
+description: i-doit installation auf Debian 12
 icon: material/debian
-status: updated
+status: new
 lang: de
 ---
 
@@ -192,11 +192,11 @@ innodb_flush_method = O_DIRECT
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
+innodb_stats_on_metadata = 0
 # The maximum number of instances is defined by the table_open_cache_instances system variable.
 # The default value of the table_open_cache_instances system variable is 8, which is expected to handle up to 100 CPU cores.
 # If your system is larger than this, then you may benefit from increasing the value of this system variable.
 table_open_cache_instances = 8
-innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
 

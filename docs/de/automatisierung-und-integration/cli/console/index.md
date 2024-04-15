@@ -4,7 +4,7 @@ i-doit verfügt über ein Befehlszeilenschnittstelle (CLI), über das sich versc
 
 ## Erste Schritte
 
-Das CLI befindet sich im Installationsverzeichnis von i-doit, beispielsweise unter **/var/www/html/**. Es muss innerhalb dieses Verzeichnisses mit denselben Rechten des Apache Webservers aufgerufen werden. Unter [Debian GNU/Linux](../../../installation/manuelle-installation/debian.md) ist dies der User **www-data**. Mittels **sudo** werden diese Rechte erlangt:
+Das CLI befindet sich im Installationsverzeichnis von i-doit, beispielsweise unter **/var/www/html/**. Es muss innerhalb dieses Verzeichnisses mit denselben Rechten des Apache Webservers aufgerufen werden. Unter Debian GNU/Linux ist dies der User **www-data**. Mittels **sudo** werden diese Rechte erlangt:
 
 ```sh
 cd /var/www/html/
