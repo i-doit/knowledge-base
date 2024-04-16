@@ -1,6 +1,17 @@
-# Debian GNU/Linux
+---
+title: Debian 11 GNU/Linux
+description: i-doit installation auf Debian 11
+icon: material/debian
+#status: updated
+lang: de
+---
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
+
+!!! warning ""
+    Wenn Sie Debian installieren, gelangen Sie schließlich zu einem "Softwareauswahl"-Dialog, der eine Liste von Kontrollkästchen enthält, um die Software auszuwählen, die Sie zunächst installieren möchten. Hier ist das Kontrollkästchen "Debian-Desktop-Umgebung" bereits angekreuzt. Wenn Sie dieses Kontrollkästchen deaktivieren und alle anderen Kontrollkästchen für die Desktop-Umgebung (GNOME, Xfce usw.) nicht ankreuzen, führt dies zu einer GUI-losen Installation:
+
+    [![Software selection](../../assets/images/de/installation/manuelle-installation/debian/gui.png)](../../assets/images/de/installation/manuelle-installation/debian/gui.png)
 
 ## Systemvoraussetzungen
 
@@ -24,10 +35,10 @@ uname -m
 
 Die Standard-Repositories von Debian GNU/Linux bringen bereits alle nötigen Pakete mit, um
 
-- den **Apache** Webserver 2.4,
-- die Script-Sprache **PHP** 7.4,
-- das Datenbankmanagementsystem **MariaDB** 10.5 und
-- den Caching-Server **memcached**
+-   den **Apache** Webserver 2.4,
+-   die Script-Sprache **PHP** 7.4,
+-   das Datenbankmanagementsystem **MariaDB** 10.5 und
+-   den Caching-Server **memcached**
 
 zu installieren:
 

@@ -1,12 +1,23 @@
-# Debian GNU/Linux
+---
+title: Debian 11 GNU/Linux
+description: i-doit installation on Debian 11
+icon: material/debian
+#status: updated
+lang: en
+---
 
-In this article we explain in just a few steps which packages need to be installed and configured.
+In this article we explain in just a few steps which packages need to be installed and configured. We use a environment without **desktop** .
+
+!!! warning ""
+    When you install Debian, you eventually reach a "Software selection" dialog which has a list of checkboxes to choose the software you want to install initially. This has a "Debian desktop environment" checkbox, pre-ticked; de-selecting that, and leaving all the other desktop environment checkboxes un-ticked (GNOME, Xfce, etc.), will result in a GUI-less installation:
+
+    [![Software selection](../../assets/images/en/installation/manual-installation/debian/gui.png)](../../assets/images/en/installation/manual-installation/debian/gui.png)
 
 ## System Requirements
 
 The general [system requirements](../system-requirements.md) apply.
 
-This article refers to [==Debian GNU/Linux 11 "bullseye"==](https://www.debian.org/index.en.html). In order to find out which Debian version is used you can carry out the following command:
+This article refers to [**Debian GNU/Linux 11 "bullseye"**](https://www.debian.org/index.en.html). In order to find out which Debian version is used you can carry out the following command:
 
 ```shell
 cat /etc/debian_version
@@ -18,20 +29,20 @@ As system architecture you should use a x86 in 64bit:
 uname -m
 ```
 
-==x86_64== means 64bit, ==i386== or ==i686== only 32bit.
+**x86_64** means 64bit, **i386** or **i686** only 32bit.
 
 ## Installation of the Packages
 
 The default package repositories of Debian GNU/Linux already supply the necessary packages to install:
 
--   the ==Apache== web server 2.4
--   the script language ==PHP== 7.4
--   the database management system ==MariaDB== 10.5 and
--   the caching server ==memcached==
+-   the **Apache** web server 2.4
+-   the script language **PHP** 7.4
+-   the database management system **MariaDB** 10.5 and
+-   the caching server **memcached**
 
 ```shell
-sudo apt update
-sudo apt install apache2 libapache2-mod-php mariadb-client mariadb-server php php-bcmath php-cli php-common php-curl php-gd php-imagick php-json php-ldap php-mbstring php-memcached php-mysql php-pgsql php-soap php-xml php-zip memcached unzip sudo moreutils
+apt update
+apt install apache2 libapache2-mod-php mariadb-client mariadb-server php php-bcmath php-cli php-common php-curl php-gd php-imagick php-json php-ldap php-mbstring php-memcached php-mysql php-pgsql php-soap php-xml php-zip memcached unzip sudo moreutils
 ```
 
 ## Configuration
@@ -113,8 +124,8 @@ The new VHost configuration is saved in this file:
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.<br>
-With the next step you activate the new VHost and the necessary Apache module ==rewrite== and the Apache web server is restarted:
+i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.<br>
+With the next step you activate the new VHost and the necessary Apache module **rewrite** and the Apache web server is restarted:
 
 ```shell
 sudo a2ensite i-doit
@@ -124,13 +135,13 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The ==root== user should receive a secure password:
+Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The **root** user should receive a secure password:
 
 ```shell
 sudo mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the ==root== user during setup:
+Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
 
 ```shell
 sudo mysql -uroot
@@ -224,4 +235,4 @@ sudo systemctl start mysql.service
 
 Now the operating system is prepared and i-doit can be installed.
 
-Proceed with [==Setup==](setup.md)
+Proceed with [**Setup**](setup.md)

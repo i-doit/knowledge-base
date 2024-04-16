@@ -24,7 +24,7 @@ Es existieren pro Betriebssystem teilweise mehrere Upgrade-Pfade. Wir empfehlen 
 Debian GNU/Linux 8
 ------------------
 
-Version 8 von [Debian GNU/Linux](../installation/manuelle-installation/debian.md) enthält in den Standardpaketen MySQL 5.5 und MariaDB 10.0. Sollte MySQL installiert sein, genügt es, das Paket für MariaDB zu installieren. Dadurch wird MySQL durch MariaDB ersetzt:
+Version 8 von Debian GNU/Linux enthält in den Standardpaketen MySQL 5.5 und MariaDB 10.0. Sollte MySQL installiert sein, genügt es, das Paket für MariaDB zu installieren. Dadurch wird MySQL durch MariaDB ersetzt:
 
     sudo apt-get update
     sudo apt-get install mariadb-server php5-mysqlnd
@@ -32,7 +32,7 @@ Version 8 von [Debian GNU/Linux](../installation/manuelle-installation/debian.md
 Debian GNU/Linux 7.8
 --------------------
 
-Version 7.8 von [Debian GNU/Linux](../installation/manuelle-installation/debian.md) enthält in den Standardpaketen MySQL 5.5 und kein MariaDB. Um MariaDB einzusetzen, kann das [offizielle Repository von MariaDB eingebunden](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=Debian&distro_release=wheezy--wheezy&version=10.0) werden. Vorsicht: Dritt-Repositories können das System beeinträchtigen. Durch die Installation von MariaDB wird MySQL ersetzt:
+Version 7.8 von Debian GNU/Linux enthält in den Standardpaketen MySQL 5.5 und kein MariaDB. Um MariaDB einzusetzen, kann das [offizielle Repository von MariaDB eingebunden](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=Debian&distro_release=wheezy--wheezy&version=10.0) werden. Vorsicht: Dritt-Repositories können das System beeinträchtigen. Durch die Installation von MariaDB wird MySQL ersetzt:
 
     sudo apt-get update
     sudo apt-get install python-software-properties
@@ -132,15 +132,15 @@ Sollte [Windows Server 2008/2012](../installation/manuelle-installation/microsof
 
 Sollte nicht bereits eine XAMPP-Version mit MariaDB 10.0 zum Einsatz kommen, sind folgende Schritte nötig:
 
-1.  Kopieren des XAMPP-Verzeichnisses, meist unter C:\xampp\
-2.  Aktuelle Version von XAMPP auf der [offiziellen Seite](https://www.apachefriends.org/) herunterladen
-3.  Bisherige XAMPP-Version deinstallieren
-4.  XAMPP-Verzeichnis löschen
-5.  Neue XAMPP-Version in dasselbe Verzeichnis installieren
-6.  Verzeichnisse htdocs und mysql\data aus der Kopie des XAMPP-Verzeichnisses wiederherstellen, vorhandene Dateien dabei nicht überschreiben
-7.  Konfigurations-Dateien anpassen, sodass sie den [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) genügen
-8.  Apache Webserver und MariaDB starten
-9.  Tests durchführen
+1. Kopieren des XAMPP-Verzeichnisses, meist unter C:\xampp\
+2. Aktuelle Version von XAMPP auf der [offiziellen Seite](https://www.apachefriends.org/) herunterladen
+3. Bisherige XAMPP-Version deinstallieren
+4. XAMPP-Verzeichnis löschen
+5. Neue XAMPP-Version in dasselbe Verzeichnis installieren
+6. Verzeichnisse htdocs und mysql\data aus der Kopie des XAMPP-Verzeichnisses wiederherstellen, vorhandene Dateien dabei nicht überschreiben
+7. Konfigurations-Dateien anpassen, sodass sie den [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) genügen
+8. Apache Webserver und MariaDB starten
+9. Tests durchführen
 
 Troubleshooting
 ---------------

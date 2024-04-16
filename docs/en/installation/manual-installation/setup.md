@@ -12,7 +12,7 @@ The install package of the pro version is accessible for all customers in the [c
 
 ### Debian GNU/Linux or Ubuntu Linux
 
-The Apache Webserver runs with rights of the ==www-data== user and the group of the same name ==www-data==. The main directory of the Apache Webserver is ==/var/www/html/==:
+The Apache Webserver runs with rights of the **www-data** user and the group of the same name **www-data**. The main directory of the Apache Webserver is **/var/www/html/**:
 
 ```shell
 sudo mkdir /var/www/html/i-doit
@@ -27,7 +27,7 @@ sudo find . -type f -exec chmod 664 {} \;
 
 ### Red Hat Enterprise Linux (RHEL)
 
-The Apache Webserver runs with rights of the ==apache== user and the group of the same name ==apache==. The main directory of the Apache Webserver is ==/var/www/html/==:
+The Apache Webserver runs with rights of the **apache** user and the group of the same name **apache**. The main directory of the Apache Webserver is **/var/www/html/**:
 
 ```shell
 sudo mkdir /var/www/html/i-doit
@@ -42,7 +42,7 @@ sudo find . -type f -exec chmod 664 {} \;
 
 ### Suse Linux Enterprise Server (SLES)
 
-The Apache Webserver runs with rights of the ==wwwrun== user and the group ==www==. The main directory of the Apache Webserver is ==/srv/www/htdocs/==:
+The Apache Webserver runs with rights of the **wwwrun** user and the group **www**. The main directory of the Apache Webserver is **/srv/www/htdocs/**:
 
 ```shell
 sudo mkdir /srv/www/htdocs/i-doit
@@ -61,11 +61,11 @@ The i-doit installation package is extracted in `C:\xampp\htdocs`. Generally it 
 
 ## Run the Setup
 
-_i-doit_ can be installed in two ways: Using the ==web GUI== in a comfortable way (recommended for beginners) or via the [Automatic installation](../automatic-installation.md) (to automate the installation for example).
+_i-doit_ can be installed in two ways: Using the **web GUI** in a comfortable way (recommended for beginners) or via the [Automatic installation](../automatic-installation.md) (to automate the installation for example).
 
 ### Web GUI
 
-The setup is launched automatically as soon as i-doit is opened (example http://i-doit-host/i-doit/).
+The setup is launched automatically as soon as i-doit is opened (example <http://i-doit-host/i-doit/>).
 
 #### System check
 
@@ -106,9 +106,9 @@ Important credentials and settings need to be entered for the database connectio
 
 !!! tip "Unix Socket vs. Network Port"
 
-    PHP is able to connect to MariaDB/MySQL in two ways: For one thing, per Unix Socket, and secondly via TCP/IP. For performance reasons we recommend using the Unix Socket. The use of the Unix Socket is enforced by entering the ==localhost== value in the above mentioned host configuration. Other specifications (==127.0.0.1==, FQDN or the like) result in the use of TCP/IP.
+    PHP is able to connect to MariaDB/MySQL in two ways: For one thing, per Unix Socket, and secondly via TCP/IP. For performance reasons we recommend using the Unix Socket. The use of the Unix Socket is enforced by entering the **localhost** value in the above mentioned host configuration. Other specifications (**127.0.0.1**, FQDN or the like) result in the use of TCP/IP.
 
-    Usually, MariaDB/MySQL opens a Unix Socket when a service is started. In the ==socket== settings you specify the path, an example under [Debian GNU/Linux](./debian.md) is `/var/run/mysqld/mysqld.sock`.  This value has to be known to PHP so that i-doit can establish a connection to MariaDB/MySQL.
+    Usually, MariaDB/MySQL opens a Unix Socket when a service is started. In the **socket** settings you specify the path, an example under Debian GNU/Linux is `/var/run/mysqld/mysqld.sock`.  This value has to be known to PHP so that i-doit can establish a connection to MariaDB/MySQL.
 
     The corresponding PHP setting is `mysqli.default_socket`. When you have followed the installation instructions, you can supplement the created PHP configuration file by this setting, for example, `mysqli.default_socket = /var/run/mysqld/mysqld.sock`.
 
@@ -118,7 +118,7 @@ Important credentials and settings need to be entered for the database connectio
 
 #### Framework Configuration
 
-There are separate credentials in i-doit to access the i-doit [==Admin Center==](../../system-administration/admin-center.md). They can be specified here and we recommend using this option.
+There are separate credentials in i-doit to access the i-doit [**Admin Center**](../../system-administration/admin-center.md). They can be specified here and we recommend using this option.
 
 [![Framework configuration](../../assets/images/en/installation/manual-installation/setup/4-setup.png)](../../assets/images/en/installation/manual-installation/setup/4-setup.png)
 

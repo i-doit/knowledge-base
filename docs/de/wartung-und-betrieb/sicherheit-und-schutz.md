@@ -15,7 +15,7 @@ Die IT-Dokumentation umfasst in vielen Fällen sehr sensible Daten, die geschüt
 Vor der Installation von i-doit
 -------------------------------
 
-Bevor i-doit [installiert](../installation/index.md) wird, können wir bereits einige Maßnahmen durchführen, um das System, auf dem i-doit fußt, zu härten. Als Beispiel dient ein [Debian GNU/Linux](../installation/manuelle-installation/debian.md), auf dem i-doit installiert ist bzw. werden soll.
+Bevor i-doit [installiert](../installation/index.md) wird, können wir bereits einige Maßnahmen durchführen, um das System, auf dem i-doit fußt, zu härten. Als Beispiel dient ein **Debian GNU/Linux**, auf dem i-doit installiert ist bzw. werden soll.
 
 ### Weniger Rechte ist mehr
 
@@ -63,7 +63,7 @@ Eine gewöhnliche Installation bringt teilweise unnötigen Ballast mit, von dem 
     # Laufende Dienste, die von Systemd verwaltet werden:
     systemctl list-units
 
-    # Laufende Prozesse und Systemresourcen übersichtlich anzeigen lassen:
+    # Laufende Prozesse und Systemressourcen übersichtlich anzeigen lassen:
     htop
 
     # Derzeit offene Ports:
@@ -115,7 +115,7 @@ Wichtig ist, dass der Dienst von außen nicht erreichbar ist. Meist läuft der D
 
 ### PHP absichern
 
-Wir schließen uns den üblichen Rants zu PHP keineswegs an, denn die Scriptsprache lässt sich für unsere Zwecke angemessen "härten". Eine wichtige Botschaft ist: **PHP sollte immer auf dem neusten Patch-Stand sein.** Hierbei ist zu beachten, welche Major-Versionen von PHP (5.x, 7.x) von den PHP-Entwicklern und welche PHP-Pakete von der genutzten Distribution unterstützt werden. Distributionen setzen oftmals nicht auf die neusten Major-Versionen, sondern pflegen ältere, eher stabilere Versionen. Diese werden mit Bug- und Security-Fixes gepatcht. Updates von PHP sollten also immer schnellstmöglich eingespielt werden.
+Wir schließen uns den üblichen Rants zu PHP keineswegs an, denn die Skriptsprache lässt sich für unsere Zwecke angemessen "härten". Eine wichtige Botschaft ist: **PHP sollte immer auf dem neusten Patch-Stand sein.** Hierbei ist zu beachten, welche Major-Versionen von PHP (5.x, 7.x) von den PHP-Entwicklern und welche PHP-Pakete von der genutzten Distribution unterstützt werden. Distributionen setzen oftmals nicht auf die neusten Major-Versionen, sondern pflegen ältere, eher stabilere Versionen. Diese werden mit Bug- und Security-Fixes gepatcht. Updates von PHP sollten also immer schnellstmöglich eingespielt werden.
 
 Für den Betrieb von i-doit erforderliche haben wir bereits in den [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) beschrieben. **Diese Einstellungen lassen sich durch zusätzliche erweitern.** Dafür erstellen wir eine neue .ini-Datei:
 
@@ -355,7 +355,7 @@ i-doit bringt mehrere Maßnahmen mit, um Angriffe, die unter [**Cross-Site-Reque
 
 ### Zwei-Faktor-Authentifizierung
 
-Die Anmeldung via Benutzernamen und -passwort wird heutzutage als nicht mehr zeitgemäß angesehen. **Zusätzliche Authentifzierungsmechanismen bringen einen Zugewinn an Sicherheit.** Wenn ein weiterer Mechanismus hinzukommt, spricht man von Zwei-Faktor-Authentifizierung, bei mehr als zweien von Mehr-Faktor-Authentifizierung. Eine gängige Art der Umsetzung ist der Einsatz eines (USB-)Tokens.
+Die Anmeldung via Benutzernamen und -passwort wird heutzutage als nicht mehr zeitgemäß angesehen. **Zusätzliche Authentifzierungsmechanismen bringen einen Zugewinn an Sicherheit.** Wenn ein weiterer Mechanismus hinzukommt, spricht man von Zwei-Faktor-Authentifizierung, bei mehr als zwei Faktoren von Mehr-Faktor-Authentifizierung. Eine gängige Art der Umsetzung ist der Einsatz eines (USB-)Tokens.
 
 i-doit erlaubt zusätzliche Mechanismen durch den zugrunde liegenden Apache Webserver. Beispielsweise beruht die das **[Single-Sign-On-Verfahren](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md)** darauf. Dieses lässt sich dazu nutzen, weitere Mechanismen direkt im Webserver zu aktivieren und zu konfigurieren. Hier sind praktisch keine Grenzen gesetzt, solange das Verfahren i-doit über entsprechende HTTP-Header mitteilt, für welchen Benutzer die Authentifizierung erfolgreich ist.
 

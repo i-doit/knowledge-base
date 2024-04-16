@@ -4,7 +4,7 @@ i-doit has a Command Line Interface (CLI) with which you can carry out various t
 
 ## First Steps
 
-The CLI can be found in the i-doit installation directory, for example at **/var/www/html/**. Within this directory the CLI has to be activated with the same permissions as the Apache webserver. Under [Debian GNU/Linux](../../../installation/manual-installation/debian.md) this is the user called **www-data**. You can achieve the permissions with **sudo**:
+The CLI can be found in the i-doit installation directory, for example at **/var/www/html/**. Within this directory the CLI has to be activated with the same permissions as the Apache webserver. Under **Debian GNU/Linux** this is the user called **www-data**. You can achieve the permissions with **sudo**:
 
 ```sh
 cd /var/www/html/

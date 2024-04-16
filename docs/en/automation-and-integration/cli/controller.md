@@ -9,8 +9,7 @@ i-doit possesses a command line tool called controller.
 First Steps
 -----------
 
-The controller is located in the main folder of _i-doit_. If you have followed the [installation guide,](../../installation/manual-installation/setup.md) then the main folder will be located at /var/www/html/i-doit/ for [Debian](../../installation/manual-installation/debian.md)\-based operating systems:
-
+The controller is located in the main folder of _i-doit_. If you have followed the [installation guide,](../../installation/manual-installation/setup.md) then the main folder will be located at /var/www/html/i-doit/ for Debian-based operating systems:
 
     $ ll /var/www/html/i-doit/controller
     -rwxrwxr-- 1 www-data www-data 314 Jul  7 14:23 /var/www/html/i-doit/controller
