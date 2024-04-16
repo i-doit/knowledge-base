@@ -30,6 +30,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_30_hotfix_ID-10683.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10683.zip){ .md-button .md-button--primary }
 
+### Cannot access offset of type string on string when importing from JDisc (ID-10699)
+
+[i-doit_30_hotfix_ID-10699.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10699.zip){ .md-button .md-button--primary }
+
 ## Forms Add-on 1.2.0
 
 ### Object is not created when a attribute validation is used and no error is displayed
