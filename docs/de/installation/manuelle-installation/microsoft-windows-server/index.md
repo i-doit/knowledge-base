@@ -40,13 +40,13 @@ Nach einem Klick auf **OK** wird automatisch ein neues Browsertab mit der `local
 Der Speicherort der PHP, MariaDB oder Apache Konfiguration:
 
 -   **PHP:**
-    `C:\i-doit\php\php.ini`
+    `C:\ProgramData\i-doit\php\php.ini`
 
 -   **MariaDB:**
     `C:\ProgramData\MariaDB\data\my.ini`
 
 -   **Apache:**
-    `C:\i-doit\apache-2.4\conf\httpd.conf`
+    `C:\ProgramData\i-doit\apache-2.4\conf\httpd.conf`
 
 ## HTTPS einrichten (optional)
 
@@ -65,13 +65,13 @@ Hier geben Sie nun folgenden Befehl ein, um das Zertifikat zu erstellen:
 OpenSSL req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt
 ```
 
-Das Zertifikat und der Private Key wurden nun in dem Ordner erstellt, in dem der Befehl ausgeführt wurde. Kopieren Sie diese z.B. in den Ordner `i-doit\apache-2.4\conf\extra\`.
+Das Zertifikat und der Private Key wurden nun in dem Ordner erstellt, in dem der Befehl ausgeführt wurde. Kopieren Sie diese z.B. in den Ordner `ProgramData\i-doit\apache-2.4\conf\extra\`.
 
 ### Konfigurationsschritte
 
 1. **Erstellen der ssl.conf-Datei**<br>
 
-Navigieren Sie zu Ihrem i-doit-Ordner unter `i-doit\apache-2.4\conf\extra\` und erstellen Sie die Datei `ssl.conf`. Die Datei sollte folgenden Inhalt haben:
+Navigieren Sie zu Ihrem i-doit-Ordner unter `ProgramData\i-doit\apache-2.4\conf\extra\` und erstellen Sie die Datei `ssl.conf`. Die Datei sollte folgenden Inhalt haben:
 
 ```apacheconf
 <VirtualHost *:443>
@@ -115,7 +115,7 @@ Bearbeiten Sie die `httpd.conf`-Datei, die sich unter `i-doit\apache-2.4\conf\` 
 Die Datei sollte dann so aussehen, wenn vorher nichts geändert wurde:
 
 ```apacheconf
-Define SRVROOT "C:/i-doit/apache-2.4"
+Define SRVROOT "C:/ProgramData/i-doit/apache-2.4"
 
 ServerRoot "${SRVROOT}"
 #Listen 80
@@ -146,7 +146,7 @@ LoadModule mime_magic_module modules/mod_mime_magic.so
 LoadModule negotiation_module modules/mod_negotiation.so
 LoadModule rewrite_module modules/mod_rewrite.so
 LoadModule setenvif_module modules/mod_setenvif.so
-LoadModule php_module "C:/i-doit/php/php8apache2_4.dll"
+LoadModule php_module "C:/ProgramData/i-doit/php/php8apache2_4.dll"
 LoadModule ssl_module modules/mod_ssl.so
 Include conf/extra/ssl.conf
 
@@ -234,7 +234,7 @@ LogLevel warn
 Geben Sie den folgenden Befehl ein, um den Apache-Webserver neu zu starten:
 
 ```winbatch
-C:\i-doit\apache-2.4\bin\httpd.exe -k restart
+C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k restart
 ```
 
 Der Apache-Webserver wurde nun neu gestartet. Prüfen Sie die installation und ob i-doit über HTTPS erreichbar ist.
@@ -247,30 +247,18 @@ Um i-doit wieder zu deinstallieren muss zuerst der Apache2 service gestoppt werd
 Dafür geben wir in der Eingabeaufforderung folgenden Befehl ein:
 
 ```winbatch
-C:\i-doit\apache-2.4\bin\httpd.exe -k stop
+C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k stop
 ```
 
 Ist der Apache2 Service gestoppt, kann Apache2 deinstalliert werden:
 
 ```winbatch
-C:\i-doit\apache-2.4\bin\httpd.exe -k uninstall
+C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
 Anschließend wird MariaDB deinstalliert indem wir unter **Programme hinzufügen oder entfernen** MariaDB entfernen.
 
 [![Deinstallieren MariaDB](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)
-
-Alternativ kann MariaDB auch über die Eingabeaufforderung deinstalliert werden:
-
-```winbatch
-msiexec.exe /i C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL
-```
-
-MariaDB deinstallieren ohne Daten zu löschen:
-
-```winbatch
-msiexec.exe /i C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL CLEANUPDATA=""
-```
 
 Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP `PATH` muss aus den Umgebungsvariabeln entfernt werden:
 

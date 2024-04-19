@@ -40,13 +40,13 @@ After clicking ==OK== a new browser tab with the `localhost` URL will be opened 
 To configure PHP, MariaDB or Apache, you can find the respective config files in the following directories:
 
 - ==PHP:==<br>
-    `C:/i-doit\php\php.ini`
+    `C:\ProgramData\i-doit\php\php.ini`
 
 - ==MariaDB:==<br>
     `C:\ProgramData\MariaDB\data\my.ini`
 
 - ==Apache:==<br>
-    `C:\i-doit\apache-2.4\conf\httpd.conf`
+    `C:\ProgramData\i-doit\apache-2.4\conf\httpd.conf`
 
 ## Credentials
 
@@ -66,30 +66,18 @@ To uninstall i-doit, the Apache2 service must be stopped first.<br>
 For this we enter the following command in the command prompt:
 
 ```
-C:\i-doit\apache-2.4\bin\httpd.exe -k stop
+C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k stop
 ```
 
 Once the Apache2 service is stopped, Apache2 can be uninstalled:
 
 ```
-C:\i-doit\apache-2.4\bin\httpd.exe -k uninstall
+C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
 Afterwards MariaDB is uninstalled by removing MariaDB under ==Add or Remove Programs==.
 
 [![Uninstall MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
-
-Alternatively, MariaDB can also be uninstalled via the command prompt:
-
-```
-msiexec.exe /i C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL
-```
-
-Uninstall MariaDB without deleting data:
-
-```
-msiexec.exe /i C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL CLEANUPDATA=""
-```
 
 Now the i-doit folder must be deleted and the PHP `PATH` must be removed from the environment variables:
 
