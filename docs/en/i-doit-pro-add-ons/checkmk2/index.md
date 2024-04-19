@@ -1,8 +1,16 @@
 # Checkmk2
 
-## Checkmk 2 v1.8.2
+## What is new (v1.8.5)
 
-### What is new
+### Dynamic Filtering Using Whitelist and Blacklist
+
+With the latest software update, users now have the ability to precisely control the import and synchronization process of software applications. By using regular expressions, users can define exactly which applications should be included or excluded during the process. A whitelist allows users to selectively choose specific software applications for processing. For example, the regular expression `^Windows Update.*$` ensures that all Windows updates are included in the process, while `^python[0-9.]+$` captures all Python versions.
+Complementary to the whitelist, the blacklist provides a function to explicitly exclude applications from the import and synchronization process.
+
+Additionally, an important change has been made to the configuration structure in this version: The parameter `createUnknownSoftwareApplications,` which was previously located in the main "pull" section, has been moved to the newly created `softwareApplications` subsection. This restructuring improves the clarity and modularity of the configuration settings.
+For users who want to familiarize themselves with the new configuration structure, the command `./idoitcmk print-example-config`provides a convenient way to view an example of the new parameter arrangement.
+
+## What is new (v1.8.2)
 
 -   With version 1.8.2 CMK2 now supports Checkmk version 2.2.
 -   If the config parameter check_mk.version is set to "2.2", the REST API is automatically accessed instead of the Web API.
@@ -59,11 +67,44 @@ We know each (IT) organization has different requirements and various processes.
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)  
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-[1.8.2] - 2023-08-18
----------------------------
+### [1.8.5] - 2024-04-16
+
+### Added
+
+-   Adding software application white- and blacklist
+-   Moving config parameter pull.createUnknownSoftwareApplications to pull.softwareApplications.createUnknownSoftwareApplications
+-   PHP 8.1 Compatibility
+-   Improved log messages
+-   Removed Checkmk 1.5 from list of supported versions
+-   Extend status command to print the used config files
+
+### Fixes
+
+-   CMK2-99 fix creation of hosts in other folder than main
+-   CMK2-88 fix crash with inventory api and config param i-doit.limitBatchRequests
+-   CMK2-68 fix error at static tag sync
+-   CMK2-67 fix crash when importing drives
+
+### [1.8.4] - 2023-11-17
+
+### Fixes
+
+-   CMK2-49 error when calling cmdb.category.save
+-   CMK2-50 unify folder and host responses
+-   CMK2-51 fix inventory for checkmk <2.1
+-   CMK2-53 fix include tags
+-   CMK2-53 remove obsolete dynamic attributes
+-   CMK2-55 correct handling of empty attributes in HW/SW Inventory
+-   CMK2-56 fix errors during sync-sites
+-   CMK2-57 fix errors during sync-tags
+-   CMK2-61 fix errors during saving of contact-groups
+-   CMK2-62 validfation error during pull
+-   CMK2-63 fix undefined index mac
+
+### [1.8.3] - 2023-09-07
 
 ### Fixes
 
@@ -73,8 +114,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   CMK2-45 REST-API: sync-folders crashes when creating nested folders
 -   CMK2-46 CONFIG: only require a rest configuration if Checkmk Version >= 2.2
 
-[1.8.2] - 2023-08-18
----------------------------
+### [1.8.2] - 2023-08-18
+
+### Fixes
+
+-   CMK2-41 REST-API: pull crashes when certain host or folder attributes are sets
+-   CMK2-42 REST-API: match crashes
+-   CMK2-44 REST-API: read nested folders correct
+-   CMK2-45 REST-API: sync-folders crashes when creating nested folders
+-   CMK2-46 CONFIG: only require a rest configuration if Checkmk Version >= 2.2
+
+### [1.8.2] - 2023-08-18
 
 ### Added
 
@@ -84,15 +134,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   CMK2-38 prevent arbitrary code execution on the idoit host via command injection in the hostname field of the ajax call
 
-[1.8.1] - 2022-11-21
----------------------------
+### [1.8.1] - 2022-11-21
 
 ### Fixes
 
 -   Adding compatibility to checkmk 2.1
 
-[1.8.0] - 2022-09-05
----------------------------
+### [1.8.0] - 2022-09-05
 
 ### Added
 
@@ -104,8 +152,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Error message when synchronizing tags
 -   Synchronizing IPv6 IPs and networks generates an error message
 
-[1.7.1] - 2021-10-18
----------------------------
+### [1.7.1] - 2021-10-18
 
 ### Added
 
@@ -116,8 +163,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Add/fix CPU attributes from checkmk to i-doit
 -   Add/fix operating system attributes from checkmk to i-doit
 
-[1.7.0] - 2021-08-09
----------------------------
+### [1.7.0] - 2021-08-09
 
 ### Added
 
@@ -128,8 +174,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Tags (static) Dropdown ‘Tag group’ attributes cannot be deleted
 -   CheckMK 2: Tags are not displayed with the tag group in reports
 
-[1.6.1] – 2021-06-15
----------------------------
+### [1.6.1] – 2021-06-15
 
 ### Fixed
 
@@ -145,8 +190,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   No attributes are imported for applications
 -   Pull with the same Host as parent ends in a loop
 
-[1.6.0] – 2019-12-06
----------------------------
+### [1.6.0] – 2019-12-06
 
 ### Added
 
@@ -155,8 +199,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   pull: New configuration setting pull.attributes.C__CATG__APPLICATION
 -   pull: New configuration setting objectTypes.softwareApplication
 -   pull/match: Match objects and hosts by serial number configured by new item serial in pull.attributes
--   fetch-hosts: Add new option --select to select one or multiple attributes, ignore everything else (works only in  
-    verbose mode)
+-   fetch-hosts: Add new option --select to select one or multiple attributes, ignore everything else (works only in verbose mode)
 -   push: Print last request to Checkmk API on failure as debug message
 
 ### Changed
@@ -176,8 +219,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
--   fetch-hosts/pull: Fetch HW/SW inventory data for all hosts if configuration setting i-doit.limitBatchRequests is  
-    smaller than the number of hosts.
+-   fetch-hosts/pull: Fetch HW/SW inventory data for all hosts if configuration setting i-doit.limitBatchRequests is smaller than the number of hosts.
 -   match/pull/push: Use primary category entry from category hostadress to determine hostname used by Checkmk
 -   pull: Do not import empty MAC addresses
 -   pull: Prevent validation error caused by unknown property entry
@@ -189,25 +231,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   push: Use IPv4 address which is explicitly marked as primary
 -   Web GUI: Add missing translations in English
 
-[1.5.1] – 2019-05-08
----------------------------
+### [1.5.1] – 2019-05-08
 
 This is a bug fix release after we received tons of useful feedback from our users.
 
 **Important notices:**
 
--   Before installing/updating this add-on, please update to the latest version of i-doit (at least 1.12.2) and the API  
-    add-on (at least 1.10.2).
--   Before using any other commands, run sync-agents first and check your i-doit objects for missing values in  
-    category Check_MK Host, attribute Agent.
+-   Before installing/updating this add-on, please update to the latest version of i-doit (at least 1.12.2) and the API add-on (at least 1.10.2).
+-   Before using any other commands, run sync-agents first and check your i-doit objects for missing values in category Check_MK Host, attribute Agent.
 
 ### Added
 
 -   status: Check installed versions of Check\_MK 2 and API add-on
 -   sync-agents: Cleanup agent types in i-doit which aren’t available in Check\_MK
 -   sync-tags: Validate tags in i-doit before pushing them to Check\_MK
--   pull/push: Add new configuration settings to identify required object types by their constants and objects by  
-    their titles
+-   pull/push: Add new configuration settings to identify required object types by their constants and objects by their titles
 -   pull: Print links to i-doit and Check\_MK for each object (only in debug mode)
 
 ### Changed
@@ -249,8 +287,7 @@ This is a bug fix release after we received tons of useful feedback from our use
 -   push: Do not push any object with option --include-ids which is disabled for export
 -   push: Add parents to existing host or overwrite current parents or remove them properly
 -   push: Add or remove alias to/from host properly
--   push/fetch-objects: Prevent error “Found invalid result for request in batch” if --include-ids filters by  
-    unknown objects
+-   push/fetch-objects: Prevent error “Found invalid result for request in batch” if --include-ids filters by unknown objects
 -   sync-tags: Do not forget to strip HTML tags from tag group title before syncing to Check\_MK
 -   Installation/update: Grant “Admin” group access to Extras > Check_MK 2 in Web GUI
 -   Extras > Check_MK 2 > Tags (static): Edit/delete/sort static host tags in i-doit
@@ -260,8 +297,7 @@ This is a bug fix release after we received tons of useful feedback from our use
 -   Category Check_MK Host: Write full command output incl. STDERR to log file
 -   Category Check_MK Tags: Make “dynamic tags” and “CMDB tags” available in reports
 
-[1.5.0] – 2018-12-18
----------------------------
+### [1.5.0] – 2018-12-18
 
 First public release 🎉
 
@@ -287,10 +323,8 @@ First public release 🎉
 -   Migrate category Check_MK (Host) > Host tags to Check_MK Tags
 -   Re-name category constant C__CATG__CMK_DEF to C__CATG__CMK2
 -   Re-name category constant C__CATG__CMK_TAG to C__CATG__CMK2_TAG
--   Re-name category constant C__CMDB__SUBCAT__NETWORK_PORT to C__CATG__NETWORK_PORT in configuration  
-    setting pull.attributes
--   Re-name category constant C__CMDB__SUBCAT__NETWORK_INTERFACE_L to C__CATG__NETWORK_LOG_PORT in configuration  
-    setting pull.attributes
+-   Re-name category constant C__CMDB__SUBCAT__NETWORK_PORT to C__CATG__NETWORK_PORT in configuration setting pull.attributes
+-   Re-name category constant C__CMDB__SUBCAT__NETWORK_INTERFACE_L to C__CATG__NETWORK_LOG_PORT in configuration setting pull.attributes
 
 ### Fixed
 
@@ -298,8 +332,7 @@ First public release 🎉
 -   sync-folders: Fix typos
 -   pull: Accept only EUI-48 MAC addresses (48-bit)
 
-[1.4.0] – 2018-11-05
----------------------------
+### [1.4.0] – 2018-11-05
 
 Remember, remember, the fifth of November… 🎃
 
@@ -316,8 +349,7 @@ Remember, remember, the fifth of November… 🎃
 -   Fix error when installing add-on in i-doit admin center without parallel login to i-doit tenant
 -   fetch-objects: Print URL without PHP notice
 
-[1.3.0] – 2018-09-10
----------------------------
+### [1.3.0] – 2018-09-10
 
 **Important note:** There are changes in the configuration settings. Re-configure your application with idoitcmk init.
 
@@ -343,11 +375,9 @@ Remember, remember, the fifth of November… 🎃
 -   Configure individual proxy hosts for both i-doit JSON-RPC API and Check\_MK Web API
 -   Verbose mode: Do not print that no objects have been found by blacklisted object types
 
-[1.2.0] – 2018-07-09
----------------------------
+### [1.2.0] – 2018-07-09
 
-**Important notice:** Before installing/updating this add-on, please update your i-doit instance to the latest version (  
-currently 1.11).
+**Important notice:** Before installing/updating this add-on, please update your i-doit instance to the latest version (currently 1.11).
 
 ### Added
 
@@ -364,10 +394,9 @@ currently 1.11).
 -   push, fetch-objects: Increase performance when using option --include-type
 -   push, fetch-objects: Include dynamic host tags
 
-[1.1.0] – 2018-05-24
----------------------------
+### [1.1.0] – 2018-05-24
 
-**Important notice:** Default configuration has changed. Setting pull.identifier has new value user-defined.  
+**Important notice:** Default configuration has changed. Setting pull.identifier has new value user-defined.
 
 ### Added
 
@@ -375,15 +404,13 @@ currently 1.11).
 -   pull: Add speed to network ports
 -   -v|--verbose: Print number of API requests
 -   match: Match objects from i-doit with hosts from Check\_MK
--   pull: Match object with host by user-defined value for attribute Hostname in  
-    category Check_MK (Host) > Export parameter
+-   pull: Match object with host by user-defined value for attribute Hostname in category Check_MK (Host) > Export parameter
 
 ### Fixed
 
 -   pull: Import right amount of CPU cores
 
-[1.0.0] – 2018-04-30
----------------------------
+### [1.0.0] – 2018-04-30
 
 ### Added
 
@@ -397,8 +424,7 @@ currently 1.11).
 
 -   pull: Prevent PHP warnings while accessing unknown information
 
-[0.10] – 2018-04-27
--------------------------
+### [0.10] – 2018-04-27
 
 **Important note:** There are changes in the configuration settings. Re-configure your application with idoitcmk init.
 
@@ -417,8 +443,7 @@ currently 1.11).
 -   sync-tags: Incomplete host group tags may cause errors
 -   Configuration setting push.autoTagging: Missing slashes in regular expressions
 
-[0.9] – 2018-04-25
------------------------
+### [0.9] – 2018-04-25
 
 **Important note:** There are changes in the configuration settings. Re-configure your application with idoitcmk init.
 
@@ -439,8 +464,7 @@ currently 1.11).
 -   Let user overwrite (not merge) configuration settings pull.identifier and blacklistedObjectTypes
 -   pull: Do not ignore RAM, CPU sockets and cores
 
-[0.8] – 2018-04-19
------------------------
+### [0.8] – 2018-04-19
 
 ### Added
 
@@ -452,8 +476,7 @@ currently 1.11).
 -   pull: Prevent mismatches for i-doit objects and Check\_MK hosts
 -   pull: Handle i-doit objects with missing attributes properly
 
-[0.7] – 2018-04-19
------------------------
+### [0.7] – 2018-04-19
 
 **Important notes:**
 
@@ -476,8 +499,7 @@ currently 1.11).
 -   pull: Respect ignore mode
 -   init: Ask for configuration setting pull.updateObjects
 
-[0.6] – 2018-04-13
------------------------
+### [0.6] – 2018-04-13
 
 ### Added
 
@@ -489,8 +511,7 @@ currently 1.11).
 -   push: PHP warning is thrown while fetching a contact without specified role
 -   pull/fetch-hosts: Prevent HTTP error code 414 URI Too Long while fetching hw/sw inventory data from Check\_MK
 
-[0.5] – 2018-04-12
------------------------
+### [0.5] – 2018-04-12
 
 This release fixes several issues in required packages.
 
@@ -505,8 +526,7 @@ This release fixes several issues in required packages.
 -   Remove backslashes from configuration settings
 -   Fix several problems while parsing responses from Check\_MK Web API
 
-[0.4] – 2018-04-05
------------------------
+### [0.4] – 2018-04-05
 
 ### Added
 
@@ -517,24 +537,20 @@ This release fixes several issues in required packages.
 
 -   Decreased binary file size
 
-[0.3] – 2018-03-09
------------------------
+### [0.3] – 2018-03-09
 
 ### Fixed
 
--   help/init/configtest/print-example-config/print-config/list: Validation error for missing/invalid  
-    configuration settings
+-   help/init/configtest/print-example-config/print-config/list: Validation error for missing/invalid configuration settings
 
-[0.2] – 2018-03-08
------------------------
+### [0.2] – 2018-03-08
 
 This release is dedicated to all women.
 
 ### Added
 
 -   push: Use primary IP address if no other is given
--   push/pull: Print more information what is going on when there is a huge amount of objects to be fetched from  
-    i-doit
+-   push/pull: Print more information what is going on when there is a huge amount of objects to be fetched from i-doit
 -   Print current configuration settings with command print-config
 -   Validate configuration settings before any command is executed
 
@@ -548,8 +564,7 @@ This release is dedicated to all women.
 -   sync-folders: Keep in mind WATO folders “/” and "" (empty string) are the same
 -   sync-folders: PHP error when WATO folder is copied from i-doit to Check\_MK
 
-0.1 – 2018-03-05
-----------------
+### [0.1] – 2018-03-05
 
 First release!
 
