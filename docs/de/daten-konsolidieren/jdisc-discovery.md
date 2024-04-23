@@ -4,6 +4,8 @@
 
 Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/it-service-management-mit-dem-discovery-tool-jdisc-und-i-doit/)
 
+Dieser Artikel widmet sich im Folgenden der Schnittstelle zwischen i-doit und JDisc Discovery.
+
 ## Installation
 
 Für den Betrieb ist die Installation der JDisc-Server-Komponenten auf einem Microsoft Windows (bestenfalls in der Server-Variante) erforderlich Die Installationsdateien hierfür können unter folgender Adresse heruntergeladen werden:
@@ -12,11 +14,8 @@ Für den Betrieb ist die Installation der JDisc-Server-Komponenten auf einem Mic
 
 Während des Setups wird abgefragt, welche Passwörter für das im Hintergrund verwendete PostgreSQL-DBMS verwendet werden sollen. Dies betrifft den administrativen Account **postgres** und den Account **postgresro**, der lediglich über Leserechte auf die JDisc-Datenbank verfügt. Letztere Account wird für die Schnittstelle zu i-doit benötigt. Zudem muss beim Setup angegeben werden, dass die PostgreSQL-Instanz nach außen hin erreichbar sein soll. Diese hört standardmäßig auf den Port **25321**. Der Port ist in der Windows Firewall freizuschalten.
 
-Bei Fragen zur Installation oder Konfiguration von JDisc hilft der Support des Herstellers:
-
-[https://jdisc.com/support/](https://jdisc.com/support/)
-
-Dieser Artikel widmet sich im Folgenden der Schnittstelle zwischen i-doit und JDisc Discovery.
+Die Dokumentation ist unter [https://jdisc.com/support/documentation/](https://jdisc.com/support/documentation/) zu finden.
+Bei Fragen zur Installation oder Konfiguration von JDisc hilft der Support des Herstellers [https://jdisc.com/support/](https://jdisc.com/support/).
 
 !!! info "JDisc WebService  mit GraphQL, Quelle [JDisc FAQ](https://jdisc.com/support/faq/)"
     > Der WebService ist ein SOAP basierter Service, mit dem man einzelne Aktivitäten in JDisc fernsteuern kann. Der SOAP Service läuft normalerweise auf Port 9000. Wir haben allerdings für unser neues WEB UI eine moderne GraphQL Schnittstelle implementiert, die den SOAP Service komplett ersetzt! I-Doit kann unser neues GraphQL API ab Version i-doit Release 22 verwenden!
