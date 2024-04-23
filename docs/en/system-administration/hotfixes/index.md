@@ -46,6 +46,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_30_hotfix_ID-10717.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10717.zip){ .md-button .md-button--primary }
 
+### Cannot access offset of type string on string when importing from JDisc (ID-10699)
+
+[i-doit_30_hotfix_ID-10699.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10699.zip){ .md-button .md-button--primary }
+
 ## API
 
 ### API is using report query from db instead of creating the query new which leads to wrong results (API-496)
