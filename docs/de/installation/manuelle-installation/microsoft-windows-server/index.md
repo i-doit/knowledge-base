@@ -48,6 +48,18 @@ Der Speicherort der PHP, MariaDB oder Apache Konfiguration:
 -   **Apache:**
     `C:\ProgramData\i-doit\apache-2.4\conf\httpd.conf`
 
+## Credentials
+
+Hier finden Sie die Login Daten für den .
+
+| Plattform | Benutzername | Password |
+|-|-|-|
+| MariaDB root | root | idoit |
+| MariaDB i-doit | idoit | idoit |
+| i-doit Admin Center | - | admin |
+
+Die i-doit Login Daten finden Sie [hier](../../../grundlagen/erstanmeldung.md).
+
 ## HTTPS einrichten (optional)
 
 Die folgende Anleitung zeigt, wie Sie SSL für Windows mit i-doit einrichten.<br>
