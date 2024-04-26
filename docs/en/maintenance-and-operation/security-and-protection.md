@@ -245,6 +245,8 @@ An external **dedicated firewall** is very useful, but of course its implementat
 | **[i-doit.com](https://www.i-doit.com/en/)** | **HTTPS** | **443** | Search for updates of the pro version |
 | **[i-doit.org](https://i-doit.org)** | **HTTPS** | **443** | Search for updates of the pro version |
 | **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)** | **HTTPS** | **443** | Retrieves available downloads via the license token |
+| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)**  | **HTTPS** | **443** | Retrieve licenses via token
+
 
 If one or more interfaces to third-party applications are configured, you also have to enable access respectively:
 
@@ -256,6 +258,7 @@ If one or more interfaces to third-party applications are configured, you also h
 | NDOUtils/IDOUtils | **MySQL** | **3306** |
 | [((OTRS)) Community Edition Help Desk](../automation-and-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automation-and-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443** |
 | [JDisc Discovery](../consolidate-data/jdisc-discovery.md) | **PostgreSQL** | **25321** |
+| [JDisc Discovery graphQL](../consolidate-data/jdisc-discovery.md) | **HTTPS** | **443** |
 | [JDisc Discovery](../consolidate-data/jdisc-discovery.md) | **HTTP** | **9000** |
 | OCS Inventory NG | **MySQL** | **3306** |
 
