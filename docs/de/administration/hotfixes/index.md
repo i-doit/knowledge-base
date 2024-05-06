@@ -30,6 +30,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_30_hotfix_ID-10683.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10683.zip){ .md-button .md-button--primary }
 
+### Empty Person group assignments after openLDAP login (ID-10717)
+
+[i-doit_30_hotfix_ID-10717.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10717.zip){ .md-button .md-button--primary }
+
 ### Show icons in attribute settings (ID-10702)
 
 [i-doit_30_hotfix_ID-10702_a970825.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10702_a970825.zip){ .md-button .md-button--primary }
@@ -52,14 +56,13 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [api_2.0_hotfix_API-496.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0_hotfix_API-496.zip){ .md-button .md-button--primary } [api_1.16_hotfix_API-496.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.16_hotfix_API-496.zip){ .md-button .md-button--primary }
 
-
 ### No categories in the result when using cmdb.objects.read with key categories (API-505)
 
 [api_2.0_hotfix_API-505_d05e977.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0_hotfix_API-505_d05e977.zip){ .md-button .md-button--primary }
 
-### Empty Person group assignments after openLDAP login (ID-10717)
+### Too many connections when using batch requests (API-509)
 
-[i-doit_30_hotfix_ID-10717.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10717.zip){ .md-button .md-button--primary }
+[api_2.0_hotfix_API-509.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0_hotfix_API-509.zip){ .md-button .md-button--primary }
 
 ## Forms Add-on 1.2.0
 
