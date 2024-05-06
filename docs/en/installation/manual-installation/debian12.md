@@ -55,7 +55,7 @@ First of all, a new file is created and filled with the required settings:
 
 ```shell
 sudo nano /etc/php/8.2/mods-available/i-doit.ini
-```
+```System Requirements#
 
 !!! example "This file contains the following content specified by us. For more information about the parameters, have a look at [PHP.net](https://www.php.net/manual/de/ini.core.php)"
 
@@ -206,7 +206,7 @@ sql-mode = ""
 Finally, MariaDB is started:
 
 ```shell
-sudo systemctl start mysql.service
+sudo systemctl restart mysql.service
 ```
 
 !!! bug "[Warning] You need to use --log-bin to make --expire-logs-days or --binlog-expire-logs-seconds work."
