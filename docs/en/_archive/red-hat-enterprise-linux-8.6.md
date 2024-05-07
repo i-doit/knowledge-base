@@ -4,7 +4,7 @@ This article describes which packages need to be installed and configured.
 
 ## System requirements
 
-The general [system requirements](../../system-requirements.md) apply.
+The general [system requirements]() apply.
 
 This article refers to ==RHEL in version 8.x==
 To determine which version is used, this command can be executed on the console:
@@ -295,4 +295,4 @@ sudo systemctl start mariadb.service
 
 The operating system is now prepared so that i-doit can be installed:
 
-[Go to Setup ...](../setup.md)
+[Go to Setup ...]()
