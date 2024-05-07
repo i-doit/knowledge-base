@@ -206,7 +206,7 @@ sql-mode = ""
 Finally, MariaDB is started:
 
 ```shell
-sudo systemctl start mysql.service
+sudo systemctl restart mysql.service
 ```
 
 !!! bug "[Warning] You need to use --log-bin to make --expire-logs-days or --binlog-expire-logs-seconds work."
