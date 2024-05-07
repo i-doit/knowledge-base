@@ -11,11 +11,11 @@ In this article we explain in just a few steps which packages need to be install
 !!! warning ""
     When you install Debian, you eventually reach a "Software selection" dialog which has a list of checkboxes to choose the software you want to install initially. This has a "Debian desktop environment" checkbox, pre-ticked; de-selecting that, and leaving all the other desktop environment checkboxes un-ticked (GNOME, Xfce, etc.), will result in a GUI-less installation:
 
-    [![Software selection](../../assets/images/en/installation/manual-installation/debian/gui.png)](../../assets/images/en/installation/manual-installation/debian/gui.png)
+    [![Software selection]()]()
 
 ## System Requirements
 
-The general [system requirements](../system-requirements.md) apply.
+The general [system requirements]() apply.
 
 This article refers to [**Debian GNU/Linux 11 "bullseye"**](https://www.debian.org/index.en.html). In order to find out which Debian version is used you can carry out the following command:
 
@@ -85,7 +85,7 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
-The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](system-settings.md) of i-doit.
+The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings]() of i-doit.
 
 The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
 
@@ -235,4 +235,4 @@ sudo systemctl start mysql.service
 
 Now the operating system is prepared and i-doit can be installed.
 
-Proceed with [**Setup**](setup.md)
+Proceed with [**Setup**]()

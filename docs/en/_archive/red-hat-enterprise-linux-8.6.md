@@ -27,10 +27,10 @@ There are other operating systems that are closely related to RHEL, such as the 
 
 On a system that is up-to-date
 
-- the ==Apache== web server 2.4,
-- the script language ==PHP== 7.4,
-- the database management system ==MariaDB== 10.5
-- the caching server ==memcached==
+-   the ==Apache== web server 2.4,
+-   the script language ==PHP== 7.4,
+-   the database management system ==MariaDB== 10.5
+-   the caching server ==memcached==
 
 However, the current ==version 8.x of RHEL== only contains obsolete packages that do not meet the system requirements.<br>
 It is therefore necessary to install current packages from other repositories.

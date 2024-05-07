@@ -92,7 +92,6 @@ Afterwards, the required PHP modules are activated and the Apache web server is 
 
 ```shell
 sudo phpenmod i-doit memcached
-sudo systemctl restart apache2
 ```
 
 ### Apache Webserver
@@ -128,7 +127,7 @@ With the next step you activate the new VHost and the necessary Apache module **
 ```shell
 sudo a2ensite i-doit
 sudo a2enmod rewrite
-sudo systemctl restart apache2.service
+sudo systemctl restart apache2
 ```
 
 ### MariaDB
@@ -203,7 +202,7 @@ table_open_cache_instances = 8
 sql-mode = ""
 ```
 
-Finally, MariaDB is started:
+Finally, MariaDB is restarted:
 
 ```shell
 sudo systemctl restart mysql.service

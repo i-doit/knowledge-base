@@ -1,94 +1,96 @@
-# Red Hat Enterprise Linux (RHEL)
+# Red Hat Enterprise Linux 8 (RHEL 8)
 
-In this article we explain in just a few steps which packages need to be installed and configured.
+This article describes which packages need to be installed and configured.
 
-System Requirements
--------------------
+## System requirements
 
-The general [system requirements](../../system-requirements.md) apply.
+The general [system requirements](../installation/system-requirements.md) apply.
 
-This article refers to ==[RHEL](https://www.redhat.com/en) in Version 7.x==. In order to find out which version is used you can carry out the following command:
+This article refers to ==RHEL in version 8.x==
+To determine which version is used, this command can be executed on the console:
 
 ```shell
 cat /etc/os-release
 ```
 
-As system architecture you should use a x86 in 64bit:
+As system architecture a x86 in 64bit should be used:
 
 ```shell
 uname -m
 ```
 
-==x86_64== means 64bit, ==i386== or ==i686== only 32bit.
+==x86_64== stands for 64bit, ==i386== or ==i686== only for 32bit.
 
-There are other operating systems which are closely related to RHEL, for example  ==Fedora==, which is maintained by Red Hat, and ==CentOS==. But only RHEL is supported officially.
+There are other operating systems that are closely related to RHEL, such as the open replica CentOS and Fedora, which is maintained by Red Hat. However, only RHEL is officially supported.
 
-Installation of the Packages
-----------------------------
+## Installation of the packages
 
-The following packages are to be installed on a constantly updated system:
+On a system that is up-to-date
 
-- the ==Apache== web server 2.4
-- the script language ==PHP== 7.4
-- the database management system ==MariaDB== 10.5 and
-- the caching server ==memcached==
+-   the ==Apache== web server 2.4,
+-   the script language ==PHP== 7.4,
+-   the database management system ==MariaDB== 10.5
+-   the caching server ==memcached==
 
-However, in the latest version 7.x RHEL only has outdated packages, which do not comply with the [system requirements](../../system-requirements.md). For this reason, it is required to install current packages via further repositories.
+However, the current ==version 8.x of RHEL== only contains obsolete packages that do not meet the system requirements.<br>
+It is therefore necessary to install current packages from other repositories.
 
 But be ==careful== as third-repositories could endanger the stability of the operating system!
 
-For a start, the first packages are installed from the default repositories:
+At first the first packages are installed from the default repositories:
 
 ```shell
-sudo yum update
-sudo yum install httpd memcached unzip wget zip
+sudo dnf update
+sudo dnf install httpd memcached unzip wget zip
 ```
 
-The [REMI Repository](https://rpms.remirepo.net/) repository is recommended for PHP as it is very popular in the community and kept up to date on a regular basis. If you don't want to risk the Red Hat warranty, you can use EPEL (Extra Packages for Enterprise Linux) as an alternative, this is also pointed out in the [Red Hat KB](https://access.redhat.com/solutions/92263). In this article we show how it works via [REMI Repository](https://rpms.remirepo.net/) and install PHP 7.4:
+For PHP, the current Extra Packages for Enterprise Linux (EPEL) is included:
 
 ```shell
-sudo rpm --import https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
-sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-sudo rpm --import https://rpms.remirepo.net/RPM-GPG-KEY-remi
-sudo rpm -Uvh https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+sudo rpm --import https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-8
+sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ```
 
-Afterwards, the installation of the PHP packages is carried out:
+After the repository has been included, the possible versions are initialized and then the desired version can be activated (we use PHP 7.3 here):
 
 ```shell
-sudo yum --enablerepo remi-php74 install \
-php-bcmath php-cli php-common php-fpm php-gd php-ldap \
-php-mbstring php-mysqlnd php-opcache php-pdo \
-php-pecl-memcached php-pgsql php-soap php-xml php-zip
+sudo dnf module list php
+sudo dnf module install php:7.4 -y
 ```
 
-RHEL provides only outdated distribution packages for MariaDB. Therefore we refer to the official third-repository of MariaDB:
+The PHP packages are then installed:
+
+```shell
+sudo dnf install php php-bcmath php-cli php-common php-curl php-gd php-json php-ldap php-mysql php-pgsql php-soap php-xml php-zip
+```
+
+Furthermore, RHEL only offers outdated distribution packages for MariaDB. Therefore we use the official third party repository of MariaDB:
 
 ```shell
 sudo nano /etc/yum.repos.d/MariaDB.repo
 ```
 
-This file has the following contents:
+Die Datei erhält folgenden Inhalt:
 
 ```shell
 # MariaDB 10.5 RHEL repository list
-# [http://downloads.mariadb.org/mariadb/repositories/](http://downloads.mariadb.org/mariadb/repositories/)
+# http://downloads.mariadb.org/mariadb/repositories/
 [mariadb]
 name = MariaDB
-baseurl = http://yum.mariadb.org/10.5/rhel7-amd64
+baseurl = http://yum.mariadb.org/10.5/rhel8-amd64
 module_hotfixes=1
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
 
-Afterwards, the packages are installed:
+After that the packages are installed (Note: MariaDB needs the additional package boost-program-options for a clean installation):
 
 ```shell
-sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-sudo yum install MariaDB-server MariaDB-client
+sudo dnf install boost-program-options
+sudo dnf install MariaDB-server MariaDB-client --disablerepo=AppStream
 ```
 
-In order to start Apache Webserver and MariaDB during the boot process, the following commands are necessary:
+These commands are required to start the Apache web server and MariaDB at boot time:
 
 ```shell
 sudo systemctl enable httpd.service
@@ -96,7 +98,7 @@ sudo systemctl enable mariadb.service
 sudo systemctl enable memcached.service
 ```
 
-Then both services are started:
+Both services are then started:
 
 ```shell
 sudo systemctl start httpd.service
@@ -104,27 +106,26 @@ sudo systemctl start mariadb.service
 sudo systemctl start memcached.service
 ```
 
-The HTTP default port 80 is authorized via the firewall. The firewall has to be restarted after the adjustments have been carried out:
+Furthermore, the default port 80 of HTTP is allowed through the firewall. This must be restarted after the adjustment:
 
 ```shell
 sudo firewall-cmd --permanent --add-service=http
 sudo systemctl restart firewalld.service
 ```
 
-Configuration
--------------
+## Configuration
 
-The installed packages for Apache web server, PHP and MariaDB already supply configuration files. It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
+The installed packages for Apache Webserver, PHP and MariaDB already come with configuration files. It is recommended to store different settings in separate files instead of adapting the existing configuration files. Each time you upgrade the package, the different settings will be changed or overwritten. The settings of the standard configuration will be supplemented or overwritten by the user-defined ones.
 
 ### PHP
 
-First of all, a new file is created and filled with the required settings:
+First a new file is created and filled with the necessary settings:
 
 ```shell
 sudo nano /etc/php.d/i-doit.ini
 ```
 
-This file has the following contents:
+This file receives the following content:
 
 ```shell
 allow_url_fopen = Yes
@@ -152,25 +153,25 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 
-The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](../system-settings.md) of i-doit.
+The value (in seconds) of `session.gc_maxlifetime` should be greater than or equal to the `session timeout` in the i-doit system settings.
 
-The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
+The parameter `date.timezone` should be adjusted to the local time zone (see [list of supported time zones](http://php.net/manual/en/timezones.php)).
 
-Afterwards, the Apache web server is restarted:
+The Apache Web server is then restarted:
 
 ```shell
 sudo systemctl restart httpd.service
 ```
 
-### Apache Webserver
+### Apache web server
 
-The default VHost is maintained and complemented. For this purpose, a new file is created and adjusted:
+The default vhost is retained and added. A new file is created and edited:
 
 ```shell
 sudo nano /etc/httpd/conf.d/i-doit.conf
 ```
 
-The supplementary file is stored in this file:
+In this file the supplementary one is stored:
 
 ```shell
 DirectoryIndex index.php
@@ -180,58 +181,59 @@ DocumentRoot /var/www/html/
 </Directory>
 ```
 
-i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.
+i-doit provides different Apache settings in files named ==.htaccess==. In order for these settings to be taken into account, the setting ==AllowOverride All is required==.
 
-With the next step you restart the Apache web server:
+The next step is to restart the Apache web server:
 
 ```shell
 sudo systemctl restart httpd.service
 ```
 
-==SELinux== has to grant read and write permissions for Apache in the future i-doit installation directory:
+For Apache to have read and write permissions in the future installation directory of i-doit, this must be allowed by ==SELinux==:
 
 ```shell
 sudo chown apache:apache -R /var/www/html
 sudo chcon -t httpd_sys_content_t "/var/www/html/" -R
 sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 ```
+
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The ==root== user should receive a secure password:
+In order for MariaDB to perform well and run safely, there are a few steps that need to be done meticulously. This starts with a secure installation. The recommendations should be followed. The ==root== user should be given a secure password:
 
 ```shell
 mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the ==root== user during setup:
+To allow i-doit to use the ==root== user during setup, call the shell of MariaDB:
 
 ```shell
 sudo mysql -uroot
 ```
 
-The following SQL statements are now carried out in the MariaDB shell:
+The following SQL statements are now executed in the MariaDB shell
 
 ```shell
-ALTER USER root@localhost IDENTIFIED VIA mysql_native_password USING PASSWORD('passwort');
+ALTER USER root@localhost IDENTIFIED VIA mysql_native_password;
 FLUSH PRIVILEGES;
 EXIT;
 ```
 
-Afterwards, MariaDB is stopped. Now it is important to move files which are not required, otherwise the result would be a significant loss of performance:
+MariaDB is then stopped. It is important to move unneeded files (otherwise you risk a significant performance loss):
 
 ```shell
-mysql -uroot -p -e "SET GLOBAL innodb_fast_shutdown = 0"
+mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
 sudo systemctl stop mariadb.service
 sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
 
-A new file is created for the deviating settings:
+A new file is created for the different configuration settings:
 
 ```shell
 sudo nano /etc/my.cnf.d/99-i-doit.cnf
 ```
 
-This file contains the new configuration settings. For an optimal performance you should adapt these settings to the (virtual) hardware:
+This file contains the new configuration settings. For optimal performance, these settings should be adapted to the (virtual) hardware:
 
 ```shell
 [mysqld]
@@ -289,9 +291,8 @@ Finally, MariaDB is started:
 sudo systemctl start mariadb.service
 ```
 
-Next Step
----------
+## Next Step
 
-Now the operating system is prepared and i-doit can be installed.
+The operating system is now prepared so that i-doit can be installed:
 
-Proceed with [==Setup== …](../setup.md)
+[Go to Setup ...](../installation/manual-installation/setup.md)
