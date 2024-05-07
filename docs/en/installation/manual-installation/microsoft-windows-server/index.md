@@ -5,10 +5,10 @@ The i-doit installation package for Windows is provided in the [Customer Portal]
 
 The contents of the package are as follows:
 
-- i-doit Windows Installer.exe
-- idoit-XX.zip
-- src.zip
-- windowsdesktop-runtime-6.0.14-win-x64.exe
+-   i-doit Windows Installer.exe
+-   idoit-XX.zip
+-   src.zip
+-   windowsdesktop-runtime-6.0.14-win-x64.exe
 
 The installation package will always include the latest [i-doit version](../../../version-history/index.md). Also the `src.zip` folder allows for an installation without internet connection.<br>
 Since the i-doit Windows installer requires ==windowsdesktop-runtime-6.0.14==, this is also provided in case there is no internet connection available.
@@ -23,10 +23,10 @@ After clicking Install, all the required items will be installed in the backgrou
 
 The following will be installed:
 
-- ==Apache 2.4==
-- ==PHP 8.0==
-- ==MariaDB 10.5==
-- ==i-doit-24==
+-   ==Apache 2.4==
+-   ==PHP 8.X==
+-   ==MariaDB 10.X==
+-   ==i-doit==
 
 !!! info "If the Windows Firewall is activated, you will be asked if want to trust the application"
 
@@ -39,13 +39,13 @@ After clicking ==OK== a new browser tab with the `localhost` URL will be opened 
 
 To configure PHP, MariaDB or Apache, you can find the respective config files in the following directories:
 
-- ==PHP:==<br>
+-   ==PHP:==<br>
     `C:\ProgramData\i-doit\php\php.ini`
 
-- ==MariaDB:==<br>
+-   ==MariaDB:==<br>
     `C:\ProgramData\MariaDB\data\my.ini`
 
-- ==Apache:==<br>
+-   ==Apache:==<br>
     `C:\ProgramData\i-doit\apache-2.4\conf\httpd.conf`
 
 ## Credentials
@@ -120,8 +120,8 @@ Navigate to your i-doit folder under `ProgramData\i-doit\apache-2.4\conf\extra\`
 
 Edit the `httpd.conf` file located under `i-doit\apache-2.4\conf\` and add the following:
 
-- Add `lists 443` and comment out `lists 80`. As a result, i-doit will no longer be accessible via http.
-- Also add the following lines: `LoadModule ssl_module modules/mod_ssl.so` and `Include conf/extra/ssl.conf`
+-   Add `lists 443` and comment out `lists 80`. As a result, i-doit will no longer be accessible via http.
+-   Also add the following lines: `LoadModule ssl_module modules/mod_ssl.so` and `Include conf/extra/ssl.conf`
 
 The file should then look like this if nothing has been changed beforehand:
 
@@ -272,5 +272,103 @@ Afterwards MariaDB is uninstalled by removing MariaDB under ==Add or Remove Prog
 [![Uninstall MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
 
 Now the i-doit folder must be deleted and the PHP `PATH` must be removed from the environment variables:
+
+[![Uninstall PHP](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)
+
+## install i-doit Discovery for Windows server
+
+In this section we describe how to install idoit Discovery.<br >
+The i-doit Discovery Package can be found on our [website](https://www.i-doit.com/en/i-doit-discovery/).
+
+The contents of the package are as follows:
+
+-   i-doit Discovery Installer.exe
+-   idoit-XX.zip
+-   src.zip
+-   windowsdesktop-runtime-6.0.14-win-x64.exe
+
+The installation package will always include the latest [i-doit version](../../../version-history/index.md) as well as JDisc 5.0 and multiple JDisc add-ons. Also the `src.zip` folder allows for an installation without internet connection.<br>
+Since the i-doit Windows installer requires ==windowsdesktop-runtime-6.0.14==, this is also provided in case there is no internet connection available.
+
+### installation
+
+After running the `i-doit Discovery Installer.exe` you will see the following GUI:
+
+[![GUI Discovery](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/4-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/4-idw.png)
+
+After clicking Install, all the required items will be installed in the background.
+
+The following will be installed:
+
+-   ==Apache 2.4==
+-   ==PHP 8.X==
+-   ==MariaDB 10.X==
+-   ==i-doit==
+-   ==JDisc 5.X==
+-   ==JDisc JDisc Discovery Dependency Mapping 5.X(Add-on)==
+-   ==JDisc Discovery Device History 5.X(Add-on)==
+-   ==JDisc Discovery Measurement 5.X(Add-on)==
+-   ==JDisc Discovery Measurement 5.X(Add-on)==
+-   ==JDisc Discovery Security 5.X(Add-on)==
+-   ==JDisc Discovery WEB UI 5.X(Add-on)==
+
+!!! info "If the Windows Firewall is activated, you will be asked if want to trust the application"
+
+If the installation was successful, a small window with the message "==i-doit Discovery has been installed successfully.==" will display.<br>
+After clicking ==OK== a new browser tab with the `localhost` URL will be opened automatically and you can use i-doit to the full extent.
+
+!!! info "If an error occurred during the installation, a log file is automatically created in the i-doit folder"
+
+### Configuration
+
+To configure PHP, MariaDB or Apache, you can find the respective config files in the following directories:
+
+-   ==PHP:==<br>
+    `C:\ProgramData\i-doit-discovery\php\php.ini`
+
+-   ==MariaDB:==<br>
+    `C:\ProgramData\MariaDB\data\my.ini`
+
+-   ==Apache:==<br>
+    `C:\ProgramData\i-doit-discovery\apache-2.4\conf\httpd.conf`
+
+## Credentials
+
+The following credentials are set by the installer.
+
+| What | Username | Password |
+|-|-|-|
+| MariaDB root | root | idoit |
+| MariaDB i-doit | idoit | idoit |
+| i-doit Admin Center | - | admin |
+
+For i-doit Login credentials see [here](../../../basics/initial-login.md).
+
+### Uninstallation
+
+To uninstall i-doit-discovery, the Apache2 service must be stopped first.<br>
+For this we enter the following command in the command prompt:
+
+```
+C:\ProgramData\i-doit-discovery\apache-2.4\bin\httpd.exe -k stop
+```
+
+Once the Apache2 service is stopped, Apache2 can be uninstalled:
+
+```
+C:\ProgramData\i-doit-discovery\apache-2.4\bin\httpd.exe -k uninstall
+```
+
+Afterwards MariaDB is uninstalled by removing MariaDB under ==Add or Remove Programs==.
+
+[![Uninstall MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
+
+Additionally JDisc and it's respective add-ons need to be removed under ==Add or Remove Programs==.
+
+!!! warning "The JDisc add-ons need to be removed before removing JDisc itself!"
+
+[![Uninstall JDisc](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/5-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/5-idw.png)
+
+Now the i-doit-discovery folder must be deleted and the PHP `PATH` must be removed from the environment variables:
 
 [![Uninstall PHP](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)
