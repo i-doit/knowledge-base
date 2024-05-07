@@ -19,40 +19,20 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
     Sollten Sie nach der Verwendung der Hotfixes mit dem Support in Kontakt treten, ergänzen Sie bitte den Hinweis auf dessen Verwendung.
 
 !!! info "Aktualität"
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==30== Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==31== Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 !!! attention "Einverständniserklärung"
     Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
 
 ## i-doit core
 
-### Writing a dialog_plus value via integer or string is not possible
-
-[i-doit_30_hotfix_ID-10683.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10683.zip){ .md-button .md-button--primary }
-
-### Empty Person group assignments after openLDAP login (ID-10717)
-
-[i-doit_30_hotfix_ID-10717.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10717.zip){ .md-button .md-button--primary }
-
-### Show icons in attribute settings (ID-10702)
-
-[i-doit_30_hotfix_ID-10702_a970825.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10702_a970825.zip){ .md-button .md-button--primary }
-
-### JDisc discovery needs IP address for matching
-
-[i-doit_30_hotfix_ID-10544.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10544.zip){ .md-button .md-button--primary }
-
 ### Counter skips a number when duplicating objects (ID-10763)
 
-[i-doit_30_hotfix_ID-10763.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10763.zip){ .md-button .md-button--primary }
-
-### Cannot access offset of type string on string when importing from JDisc (ID-10699)
-
-[i-doit_30_hotfix_ID-10699.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10699.zip){ .md-button .md-button--primary }
+[i-doit_31_hotfix_ID-10763.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10763.zip){ .md-button .md-button--primary }
 
 ### List editing Ports does not select Default VLAN (ID-10762)
 
-[i-doit_30_hotfix_ID-10762.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10762.zip){ .md-button .md-button--primary }
+[i-doit_31_hotfix_ID-10762.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10762.zip){ .md-button .md-button--primary }
 
 ## API
 
