@@ -50,6 +50,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [i-doit_30_hotfix_ID-10699.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10699.zip){ .md-button .md-button--primary }
 
+### List editing Ports does not select Default VLAN (ID-10762)
+
+[i-doit_30_hotfix_ID-10762.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10762.zip){ .md-button .md-button--primary }
+
 ## API
 
 ### API is using report query from db instead of creating the query new which leads to wrong results (API-496)
