@@ -24,8 +24,8 @@ Nach einem Klick auf **Installieren** werden im Hintergrund alle benötigten Ele
 Es werden installiert:
 
 -   **Apache 2.4**
--   **PHP 8.0**
--   **MariaDB 10.5**
+-   **PHP 8.X**
+-   **MariaDB 10.X**
 -   **i-doit**
 
 !!! info "Ist die Windows Firewall aktiviert wird abgefragt ob die Applikation freigegeben werden darf"
@@ -40,13 +40,25 @@ Nach einem Klick auf **OK** wird automatisch ein neues Browsertab mit der `local
 Der Speicherort der PHP, MariaDB oder Apache Konfiguration:
 
 -   **PHP:**
-    `C:\i-doit\php\php.ini`
+    `C:\ProgramData\i-doit\php\php.ini`
 
 -   **MariaDB:**
     `C:\ProgramData\MariaDB\data\my.ini`
 
 -   **Apache:**
-    `C:\i-doit\apache-2.4\conf\httpd.conf`
+    `C:\ProgramData\i-doit\apache-2.4\conf\httpd.conf`
+
+## Credentials
+
+Hier finden Sie die Login Daten für den i-doit Windows installer:
+
+| Plattform | Benutzername | Password |
+|-|-|-|
+| MariaDB root | root | idoit |
+| MariaDB i-doit | idoit | idoit |
+| i-doit Admin Center | - | admin |
+
+Die i-doit Login Daten finden Sie [hier](../../../grundlagen/erstanmeldung.md).
 
 ## HTTPS einrichten (optional)
 
@@ -65,13 +77,13 @@ Hier geben Sie nun folgenden Befehl ein, um das Zertifikat zu erstellen:
 OpenSSL req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt
 ```
 
-Das Zertifikat und der Private Key wurden nun in dem Ordner erstellt, in dem der Befehl ausgeführt wurde. Kopieren Sie diese z.B. in den Ordner `i-doit\apache-2.4\conf\extra\`.
+Das Zertifikat und der Private Key wurden nun in dem Ordner erstellt, in dem der Befehl ausgeführt wurde. Kopieren Sie diese z.B. in den Ordner `ProgramData\i-doit\apache-2.4\conf\extra\`.
 
 ### Konfigurationsschritte
 
 1. **Erstellen der ssl.conf-Datei**<br>
 
-Navigieren Sie zu Ihrem i-doit-Ordner unter `i-doit\apache-2.4\conf\extra\` und erstellen Sie die Datei `ssl.conf`. Die Datei sollte folgenden Inhalt haben:
+Navigieren Sie zu Ihrem i-doit-Ordner unter `ProgramData\i-doit\apache-2.4\conf\extra\` und erstellen Sie die Datei `ssl.conf`. Die Datei sollte folgenden Inhalt haben:
 
 ```apacheconf
 <VirtualHost *:443>
@@ -115,7 +127,7 @@ Bearbeiten Sie die `httpd.conf`-Datei, die sich unter `i-doit\apache-2.4\conf\` 
 Die Datei sollte dann so aussehen, wenn vorher nichts geändert wurde:
 
 ```apacheconf
-Define SRVROOT "C:/i-doit/apache-2.4"
+Define SRVROOT "C:/ProgramData/i-doit/apache-2.4"
 
 ServerRoot "${SRVROOT}"
 #Listen 80
@@ -146,7 +158,7 @@ LoadModule mime_magic_module modules/mod_mime_magic.so
 LoadModule negotiation_module modules/mod_negotiation.so
 LoadModule rewrite_module modules/mod_rewrite.so
 LoadModule setenvif_module modules/mod_setenvif.so
-LoadModule php_module "C:/i-doit/php/php8apache2_4.dll"
+LoadModule php_module "C:/ProgramData/i-doit/php/php8apache2_4.dll"
 LoadModule ssl_module modules/mod_ssl.so
 Include conf/extra/ssl.conf
 
@@ -234,7 +246,7 @@ LogLevel warn
 Geben Sie den folgenden Befehl ein, um den Apache-Webserver neu zu starten:
 
 ```winbatch
-C:\i-doit\apache-2.4\bin\httpd.exe -k restart
+C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k restart
 ```
 
 Der Apache-Webserver wurde nun neu gestartet. Prüfen Sie die installation und ob i-doit über HTTPS erreichbar ist.
@@ -247,30 +259,116 @@ Um i-doit wieder zu deinstallieren muss zuerst der Apache2 service gestoppt werd
 Dafür geben wir in der Eingabeaufforderung folgenden Befehl ein:
 
 ```winbatch
-C:\i-doit\apache-2.4\bin\httpd.exe -k stop
+C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k stop
 ```
 
 Ist der Apache2 Service gestoppt, kann Apache2 deinstalliert werden:
 
 ```winbatch
-C:\i-doit\apache-2.4\bin\httpd.exe -k uninstall
+C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
 Anschließend wird MariaDB deinstalliert indem wir unter **Programme hinzufügen oder entfernen** MariaDB entfernen.
 
 [![Deinstallieren MariaDB](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)
 
-Alternativ kann MariaDB auch über die Eingabeaufforderung deinstalliert werden:
+Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP `PATH` muss aus den Umgebungsvariabeln entfernt werden:
+
+[![Deinstallieren PHP](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)
+
+## i-doit Discovery für Windows Server installieren
+
+In diesem Abschnitt wird beschrieben, wie man i-doit Discovery installiert.<br>
+Das i-doit Discovery Paket finden Sie auf unserer [Website](https://www.i-doit.com/en/i-doit-discovery/).
+
+Der Inhalt des Pakets ist wie folgt:
+
+-   i-doit Discovery Installer.exe
+-   idoit-XX.zip
+-   src.zip
+-   windowsdesktop-runtime-6.0.14-win-x64.exe
+
+Das Installationspaket enthält immer die neueste [i-doit Version](../../../versionshistorie/index.md) sowie JDisc 5.0 und mehrere JDisc Add-ons. Auch der Ordner `src.zip` ermöglicht eine Installation ohne Internetverbindung.<br>
+Da der i-doit-Windows-Installer ==windowsdesktop-runtime-6.0.14== benötigt, wird dieser auch mitgeliefert, falls keine Internetverbindung vorhanden ist.
+
+### Installation
+
+Nach dem Ausführen des `i-doit Discovery Installer.exe` sehen Sie die folgende GUI:
+
+[![GUI Discovery](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/5-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/5-idw.png)
+
+Nachdem Sie auf Installieren geklickt haben, werden alle erforderlichen Elemente im Hintergrund installiert.
+
+Es werden die folgenden Inhalte installiert:
+
+-   ==Apache 2.4==
+-   ==PHP 8.X==
+-   ==MariaDB 10.X==
+-   ==i-doit==
+-   ==JDisc 5.X==
+-   ==JDisc JDisc Discovery Dependency Mapping 5.X(Add-on)==
+-   ==JDisc Discovery Device History 5.X(Add-on)==
+-   ==JDisc Discovery Measurement 5.X(Add-on)==
+-   ==JDisc Discovery Measurement 5.X(Add-on)==
+-   ==JDisc Discovery Security 5.X(Add-on)==
+-   ==JDisc Discovery WEB UI 5.X(Add-on)==
+
+!!! info "Wenn die Firewall aktiviert ist, werden Sie gefragt ob Sie der Software vertrauen"
+
+Nachdem die Installation erfolgreich war, erscheint eine kleines Fenster mit folgender Nachricht: "==i-doit Discovery wurde erfolgreich installiert.==".<br>
+Nachdem Sie ==OK== geklickt haben öffnet sich ein neues Fenster in Ihrem Browser in welchem die `localhost` URL automatisch geöffnet wird. Jetzt können Sie i-doit Discovery im vollen Umfang benutzen.
+
+!!! info "Wenn während der Installation ein Fehler auftreten sollte, wird im i-doit Discovery Ordner eine Log Datei erstellt."
+
+### Konfiguration
+
+Die Konfigurationsdateien von PHP, MariaDB oder Apache finden Sie in den folgenden Verzeichnissen:
+
+-   ==PHP:==<br>
+    `C:\ProgramData\i-doit-discovery\php\php.ini`
+
+-   ==MariaDB:==<br>
+    `C:\ProgramData\MariaDB\data\my.ini`
+
+-   ==Apache:==<br>
+    `C:\ProgramData\i-doit-discovery\apache-2.4\conf\httpd.conf`
+
+## Credentials
+
+Hier finden Sie die Login Daten für den i-doit Windows installer:
+
+| Plattform | Benutzername | Password |
+|-|-|-|
+| MariaDB root | root | idoit |
+| MariaDB i-doit | idoit | idoit |
+| i-doit Admin Center | - | admin |
+
+Die i-doit Login Daten finden Sie [hier](../../../grundlagen/erstanmeldung.md).
+
+### Deinstallation
+
+Um i-doit wieder zu deinstallieren muss zuerst der Apache2 service gestoppt werden.<br>
+Dafür geben wir in der Eingabeaufforderung folgenden Befehl ein:
 
 ```winbatch
-msiexec.exe /i C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL
+C:\ProgramData\i-doit-Discovery\apache-2.4\bin\httpd.exe -k stop
 ```
 
-MariaDB deinstallieren ohne Daten zu löschen:
+Ist der Apache2 Service gestoppt, kann Apache2 deinstalliert werden:
 
 ```winbatch
-msiexec.exe /i C:\i-doit\mariadb-10.5\mariadb-10.5.19-winx64.msi /qn REMOVE=ALL CLEANUPDATA=""
+C:\ProgramData\i-doit-Discovery\apache-2.4\bin\httpd.exe -k uninstall
 ```
+
+Anschließend wird MariaDB deinstalliert indem wir unter **Programme hinzufügen oder entfernen** MariaDB entfernen.
+
+[![Deinstallieren MariaDB](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)
+
+Zusätzlich müssen JDisc und seine Add-ons unter ==Programme hinzufügen oder entfernen== entfernt werden.
+
+!!! warning "Die JDisc Add-ons müssen vor JDisc deinstalliert werden!"
+
+[![Uninstall JDisc](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/6-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/6-idw.png)
 
 Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP `PATH` muss aus den Umgebungsvariabeln entfernt werden:
 
