@@ -77,7 +77,7 @@ Die hier angegebenen Parameter bestimmen, wo im Directory nach Benutzern gesucht
 | Feldname | Inhalt |
 | --- | --- |
 | **Eindeutige Kennung** | Es kommt bei der AD-Synchronisierung immer wieder dazu, dass geänderte Datensätze fälschlicherweise aufgrund eines geänderten Namens (Heirat o.Ä.) nicht mehr synchronisiert werden.  <br>Der "alte" Datensatz wird hier archiviert und ein neuer importiert.  <br>Daher kann als Eindeutige Kennung ein anderes Attribut ausgewählt werden. Siehe dazu **[Attributerweiterung](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md)** |
-| **Filter** | Der Filter wird durch die im unteren Bereich definierten Werte automatisch gefüllt und kann nicht direkt über die Oberfläche abgeändert werden. |
+| **Filter** | Der Filter wird durch die im unteren Bereich definierten Werte automatisch gefüllt. Es is außerdem möglich den Filter **manuell** einzufügen. Dazu auf den Button **Manuell bearbeiten** anklicken. |
 | **Nach Benutzern suchen in (OU)*** | Pflichtfeld: Der Pfad bis zur Organisationseinheit, in der die Benutzer im Directory abgelegt wurden.<br><br>(Beispiel: OU=tree,DC=synetics,DC=int) |
 | **Rekursive Suche** | Beim Aktivieren der rekursiven Suche werden auch die Verzeichnisse unterhalb der darüber angegebenen Organisationseinheit durchsucht. Bei großen Directories ist dies nicht empfehlenswert und sollte durch die Anlage von mehreren Servern umgangen werden. |
 
@@ -129,14 +129,6 @@ Die dafür benötigte Konfiguration wurde in den vorherigen Schritten bereits vo
 ### Erweiterte Konfiguration
 
 Die Konfiguration muss in der [Handler-Konfiguration](../../automatisierung-und-integration/index.md) vorgenommen werden. Ein Beispiel dazu ist [Hier](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden i-doit < 1.15. Diese Datei kann mit Login-Daten, Tenant und Attributen erweitert und angepasst werden. Die Konfigurationsdatei wird dann nach i-doit/src/handler/config/ verschoben. Damit diese Datei z.B. beim ldap-sync Command berücksichtig wird, muss diese beim sync über einen weiteren Parameter (-c /pfad/) mit angegeben werden (weitere Informationen zur [Console](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md)).
-
-!!! warning "Zugriff auf .ini Dateien"
-    Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
-    Es sollte dieser code hinzugefügt werden:
-    ## Deny access to all ini files…
-    <Files "*.ini">
-        Require all denied
-    </Files>
 
 | Parameter | Zweck |
 | --- | --- |
