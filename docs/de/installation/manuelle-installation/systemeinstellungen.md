@@ -25,7 +25,7 @@ Der Einsatz von _entweder_ **memcached** _oder_ **APC/APCu** wird empfohlen. Wir
 Der Apache Webserver sollte nach der Installation neu gestartet werden, damit die Änderungen an PHP aktiv werden:
 
 ```shell
-    sudo systemctl restart apache2.service
+sudo systemctl restart apache2.service
 ```
 
 ### Suhosin

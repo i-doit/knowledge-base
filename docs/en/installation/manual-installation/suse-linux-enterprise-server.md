@@ -1,5 +1,7 @@
 # Suse Linux Enterprise Server (SLES)
 
+!!! alert "OUTDATED"
+
 In this article we explain in just a few steps which packages need to be installed and configured.
 
 !!! failure "Guide is outdated and will be renewed"
@@ -9,7 +11,7 @@ In this article we explain in just a few steps which packages need to be install
 
 The general [system requirements](../system-requirements.md) apply.
 
-This article refers to [==Suse Linux Enterprise Server 15==](https://www.suse.com/solutions/enterprise-linux/). In order to find out which version is used you can carry out the following command:
+This article refers to [**Suse Linux Enterprise Server 15**](https://www.suse.com/solutions/enterprise-linux/). In order to find out which version is used you can carry out the following command:
 
 ```shell
 cat /etc/os-release
@@ -21,20 +23,20 @@ As system architecture you should use a x86 in 64bit:
 uname -m
 ```
 
-==x86_64== means 64bit, ==i386== or ==i686== only 32bit.
+**x86_64** means 64bit, **i386** or **i686** only 32bit.
 
 ## Installation of the Packages
 
 The default package repositories of Suse Linux Enterprise Server (SLES) already supply the necessary packages to install:
 
--   he ==Apache== web server 2.4
--   the script language ==PHP== 7.2 (as of SLES 15 SP 2: ==PHP== 7.4)
--   the database management system ==MariaDB== 10.2 (as of SLES 15 SP 2: ==MariaDB== 10.4) and
--   the caching server ==memcached==
+-   he **Apache** web server 2.4
+-   the script language **PHP** 7.2 (as of SLES 15 SP 2: **PHP** 7.4)
+-   the database management system **MariaDB** 10.2 (as of SLES 15 SP 2: **MariaDB** 10.4) and
+-   the caching server **memcached**
 
-First of all, you have to activate additional add-ons in ==Yast==:
+First of all, you have to activate additional add-ons in **Yast**:
 
--   ==Web and Scripting Module==
+-   **Web and Scripting Module**
 
 You can check with the following command if both add-ons are activated:
 
@@ -131,7 +133,7 @@ sudo systemctl restart apache2.service
 
 ### Apache Webserver
 
-A new VHost configuration is created from the existing template ==vhost.template==:
+A new VHost configuration is created from the existing template **vhost.template**:
 
 ```shell
 sudo nano /etc/apache2/vhosts.d/i-doit.conf
@@ -155,9 +157,9 @@ In this file the VHost configuration is modified and saved:
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.
+i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.
 
-With the next step you activate the necessary Apache modules ==php7==, ==rewrite== and ==mod_access_compat== and the Apache web server is restarted:
+With the next step you activate the necessary Apache modules **php7**, **rewrite** and **mod_access_compat** and the Apache web server is restarted:
 
 ```shell
 sudo a2enmod php7
@@ -168,13 +170,13 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The ==root== user should receive a secure password:
+Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The **root** user should receive a secure password:
 
 ```shell
 mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the ==root== user during setup:
+Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
 
 ```shell
 sudo mysql -uroot
@@ -259,4 +261,4 @@ sudo systemctl start mysql.service
 
 Now the operating system is prepared and i-doit can be installed.
 
-Proceed with [==Setup== …](setup.md)
+Proceed with [**Setup** …](setup.md)

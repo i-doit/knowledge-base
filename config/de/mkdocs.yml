@@ -128,6 +128,7 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 31: versionshistorie/release-notes/release-notes-31.md
           - Release Notes 30: versionshistorie/release-notes/release-notes-30.md
           - Release Notes 29: versionshistorie/release-notes/release-notes-29.md
           - Release Notes 28: versionshistorie/release-notes/release-notes-28.md
@@ -153,6 +154,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 31: versionshistorie/changelogs/changelog-31.md
           - Changelog 30: versionshistorie/changelogs/changelog-30.md
           - Changelog 29: versionshistorie/changelogs/changelog-29.md
           - Changelog 28: versionshistorie/changelogs/changelog-28.md
@@ -272,10 +274,8 @@ nav:
           - installation/manuelle-installation/index.md
           - Debian GNU/Linux:
               - Debian 12: installation/manuelle-installation/debian12.md
-              - Debian 11: installation/manuelle-installation/debian11.md
           - Red Hat Enterprise Linux (RHEL):
               - installation/manuelle-installation/red-hat-enterprise-linux/index.md
-              - Red Hat Enterprise Linux 8.6 (RHEL 8): installation/manuelle-installation/red-hat-enterprise-linux/red-hat-enterprise-linux-8.6.md
           - Suse Linux Enterprise Server (SLES): installation/manuelle-installation/suse-linux-enterprise-server.md
           - Ubuntu GNU/Linux:
               - installation/manuelle-installation/ubuntu-linux/index.md
@@ -503,6 +503,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
           - Hotfix Archiv:
               - administration/hotfixes/hotfix-archiv/index.md
+              - Version 30: administration/hotfixes/hotfix-archiv/v30.md
               - Version 29: administration/hotfixes/hotfix-archiv/v29.md
               - Version 28: administration/hotfixes/hotfix-archiv/v28.md
               - Version 27: administration/hotfixes/hotfix-archiv/v27.md

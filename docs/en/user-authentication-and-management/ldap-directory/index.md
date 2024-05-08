@@ -15,7 +15,7 @@ The [PHP-Extension php_ldap](http://de.php.net/manual/en/ldap.setup.php) has to 
 Don't forget to allow LDAP connection if you are using **SELinux** with `setsebool -P httpd_can_connect_ldap on`. The -P is for Permanent
 Verify it via `getsebool -a | grep httpd`
 
-### Subsequent Installation under [Debian GNU/Linux](../../installation/manual-installation/debian11.md)
+### Subsequent Installation under [Debian GNU/Linux](../../installation/manual-installation/debian12.md)
 
 ```shell
 sudo apt install php7-ldap
@@ -60,7 +60,7 @@ Under **Administration → Interfaces / external Data → LDAP → Server** you 
 | **LDAP Page Limit** | How many results should be returned per "packet"? |
 | **IP / Host name*** | Mandatory field: The IP or the host name of the server. |
 | **Port*** | Mandatory field: Via which port is the query carried out? (Default: **389**) |
-| **TLS** | Do you want to encrypt the login query? Attention: The authentication will fail in case of self-signed certificates or certificates whose root CA are not known to the operating system on which _i-doit_ is installed. The respective manual of the oprating system explains how the certificate can be accepted. In [Debian](../../installation/manual-installation/debian11.md)\-based operating systems the certificate of the root CA is copied to the /usr/local/share/ca-certificates/ folder and then activated with sudo update-ca-certificates. |
+| **TLS** | Do you want to encrypt the login query? Attention: The authentication will fail in case of self-signed certificates or certificates whose root CA are not known to the operating system on which _i-doit_ is installed. The respective manual of the oprating system explains how the certificate can be accepted. In [Debian](../../installation/manual-installation/debian12.md)\-based operating systems the certificate of the root CA is copied to the /usr/local/share/ca-certificates/ folder and then activated with sudo update-ca-certificates. |
 | **Admin username (DN)*** | Mandatory field: The path to the user object which has reading permissions for the directory.<br><br>(Example: **CN=idoit,OU=tree,DC=synetics,DC=int**) |
 | **Password*** | Mandatory field: The password of the user stated above. |
 | **Use admin user for all read operations** | If the option "Use admin user for all read requests" is activated, each LDAP server query is checked with the administrator account from the LDAP server configuration |
@@ -73,7 +73,7 @@ The parameters stated here determine where users are to be searched in the direc
 | Field name | Content |
 | --- | --- |
 | **Unique identifier** | AD synchronization often results in changed records not being synchronized due to a changed name (marriage or similar).  <br>The "old" record is archived here and a new one is imported.  <br>Therefore a different attribute can be selected as unique identifier. See [category extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md) |
-| **Filter** | The filter is filled automatically with the values defined in the lower area and cannot be changed directly via the user interface. |
+| **Filter** | The filter is automatically filled by the values defined in the lower area. It is also possible to insert the filter **manually**. To do this, click on the **Manually edit** button. |
 | **Search for users in (OU)*** | Mandatory field: The path to the organizational unit in which the users are stored in the directory.<br><br>(Example: **OU=tree,DC=synetics,DC=int**) |
 | **Recursive search** | When activating the recursive search, also the folders beneath the stated organizational units are searched. This is not recommended for large directories and should be bypassed by the creation of multiple servers. |
 
@@ -119,17 +119,6 @@ The required configuration for this has already been made in the previous steps.
 
 The configuration must be done in the [handler configuration](../../automation-and-integration/cli/index.md). An example can be found [here](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md) (i-doit < 1.15. This file can be extended and customized with login data, tenant and attributes. The configuration file is then moved to `/src/handler/config/`.<br>
 So that this file is considered e.g. with the ldap-sync Command, this must be indicated with the sync over a further parameter (-c /path/) also (further information to the [Console](../../automation-and-integration/cli/index.md)).
-
-!!! warning "Access to .ini files"
-    If the configuration file is placed in the i-doit directory, the .htaccess must be modified.
-    This code should be added:
-
-    ```shell
-    ## Deny access to all ini files…
-    <Files "*.ini">
-        Require all denied
-    </Files>
-    ```
 
 | Parameter | Purpose |
 | --- | --- |
