@@ -73,7 +73,7 @@ The parameters stated here determine where users are to be searched in the direc
 | Field name | Content |
 | --- | --- |
 | **Unique identifier** | AD synchronization often results in changed records not being synchronized due to a changed name (marriage or similar).  <br>The "old" record is archived here and a new one is imported.  <br>Therefore a different attribute can be selected as unique identifier. See [category extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md) |
-| **Filter** | The filter is filled automatically with the values defined in the lower area and cannot be changed directly via the user interface. |
+| **Filter** | The filter is automatically filled by the values defined in the lower area. It is also possible to insert the filter **manually**. To do this, click on the **Manually edit** button. |
 | **Search for users in (OU)*** | Mandatory field: The path to the organizational unit in which the users are stored in the directory.<br><br>(Example: **OU=tree,DC=synetics,DC=int**) |
 | **Recursive search** | When activating the recursive search, also the folders beneath the stated organizational units are searched. This is not recommended for large directories and should be bypassed by the creation of multiple servers. |
 
@@ -119,17 +119,6 @@ The required configuration for this has already been made in the previous steps.
 
 The configuration must be done in the [handler configuration](../../automation-and-integration/cli/index.md). An example can be found [here](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md) (i-doit < 1.15. This file can be extended and customized with login data, tenant and attributes. The configuration file is then moved to `/src/handler/config/`.<br>
 So that this file is considered e.g. with the ldap-sync Command, this must be indicated with the sync over a further parameter (-c /path/) also (further information to the [Console](../../automation-and-integration/cli/index.md)).
-
-!!! warning "Access to .ini files"
-    If the configuration file is placed in the i-doit directory, the .htaccess must be modified.
-    This code should be added:
-
-    ```shell
-    ## Deny access to all ini files…
-    <Files "*.ini">
-        Require all denied
-    </Files>
-    ```
 
 | Parameter | Purpose |
 | --- | --- |
