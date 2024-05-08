@@ -1,4 +1,10 @@
-# Ubuntu Linux
+---
+title: Ubuntu 22.04 GNU/Linux
+description: i-doit installation auf Ubuntu 22.04
+icon: material/ubuntu
+#status: new
+lang: de
+---
 
 In this article we explain in just a few steps which packages need to be installed and configured.
 
@@ -6,7 +12,7 @@ In this article we explain in just a few steps which packages need to be install
 
 The general [system requirements](../../system-requirements.md) apply.
 
-When you want to use [Ubuntu Linux](https://www.ubuntu.com/) as operating system, the server version ==20.04 LTS "focal fossa"== is recommended. In order to find out which version is used you can carry out the following command:
+When you want to use [Ubuntu Linux](https://www.ubuntu.com/) as operating system, the server version **22.04 LTS "Jammy Jellyfish"** is recommended. In order to find out which version is used you can carry out the following command:
 
 ```shell
 cat /etc/os-release
@@ -18,27 +24,20 @@ As system architecture you should use a x86 in 64bit:
 uname -m
 ```
 
-==x86_64== means 64bit, ==i386== or ==i686== only 32bit.
+**x86_64** means 64bit, **i386** or **i686** only 32bit.
 
 ## Installation of the Packages
 
 When you want to use the official package repositories, use the following instructions for installation of:
 
-*   the ==Apache== web server 2.4
-*   the script language ==PHP== 7.4
-*   the database management system ==MariaDB== 10.3 and
-*   the caching server ==memcached==
+*   the **Apache** web server 2.4
+*   the script language **PHP** 8.1
+*   the database management system **MariaDB** 10.6 and
+*   the caching server **memcached**
 
 ```shell
-sudo apt update
-sudo apt-get install \
-apache2 libapache2-mod-php \
-mariadb-client mariadb-server \
-php7.4-bcmath php7.4-cli php7.4-common php7.4-curl php7.4-gd php7.4-json \
-php7.4-ldap php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-pgsql \
-php7.4-soap php7.4-xml php7.4-zip \
-php-imagick php-memcached \
-memcached unzip moreutils
+apt update
+apt install apache2 libapache2-mod-php mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,gd,imagick,json,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
 ```
 
 ## Configuration
@@ -51,12 +50,12 @@ It is recommended to save changed settings in separate files instead of adjustin
 First of all, a new file is created and filled with the required settings:
 
 ```shell
-sudo nano /etc/php/7.4/mods-available/i-doit.ini
+sudo nano /etc/php/8.1/mods-available/i-doit.ini
 ```
 
-This file has the following contents:
+!!! example "This file contains the following content specified by us. For more information about the parameters, have a look at [PHP.net](https://www.php.net/manual/de/ini.core.php)"
 
-```shell
+```ini
 allow_url_fopen = Yes
 file_uploads = On
 magic_quotes_gpc = Off
@@ -82,14 +81,13 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
+The `memory_limit` must be increased if necessary, e.g. for very large reports or extensive documents.<br>
 The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](../system-settings.md) of i-doit.<br>
 The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).<br>
 Afterwards, the required PHP modules are activated and the Apache web server is restarted:<br>
 
 ```shell
-sudo phpenmod i-doit
-sudo phpenmod memcached
-sudo systemctl restart apache2.service
+sudo phpenmod i-doit memcached
 ```
 
 ### Apache Webserver
@@ -106,56 +104,53 @@ The new VHost configuration is saved in this file:
 ```shell
 <VirtualHost *:80>
         ServerAdmin i-doit@example.net
- 
+
         DirectoryIndex index.php
         DocumentRoot /var/www/html/
         <Directory /var/www/html/>
                 AllowOverride All
                 Require all granted
         </Directory>
- 
+
         LogLevel warn
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name ==.htaccess==. The setting ==AllowOverride All== is required so that these settings are taken into account.<br>
-With the next step you activate the new VHost and the necessary Apache module ==rewrite== and the Apache web server is restarted:
+i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.<br>
+With the next step you activate the new VHost and the necessary Apache module **rewrite** and the Apache web server is restarted:
 
 ```shell
-sudo chown www-data:www-data -R /var/www/html/
-sudo chmod 755 /var/log/apache2
-sudo chmod 664 /var/log/apache2/*
 sudo a2ensite i-doit
 sudo a2enmod rewrite
-sudo systemctl restart apache2.service
+sudo systemctl restart apache2
 ```
 
 ### MariaDB
 
 Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly.<br>
-The ==root== user should receive a secure password:
+The **root** user should receive a secure password:
 
 ```shell
 mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the ==root== user during setup:
+Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
 
 ```shell
 sudo mysql -uroot
 ```
 
-The following SQL statements are now carried out in the MariaDB shell:
+The following SQL statements are now carried out in the MariaDB shell (The 'password' must be replaced by the current password of the 'root' user):
 
-```shell
-UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('password');
 FLUSH PRIVILEGES;
 EXIT;
 ```
 
-Afterwards, MariaDB is stopped. Now it is important to move files which are not required, otherwise the result would be a significant loss of performance:
+Afterwards, MariaDB **10.6** is stopped. Now it is important to move files which are not required, otherwise the result would be a significant loss of performance:
 
 ```shell
 mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
@@ -173,62 +168,61 @@ This file contains the new configuration settings. For an optimal performance yo
 
 ```shell
 [mysqld]
-  
 # This is the number 1 setting to look at for any performance optimization
 # It is where the data and indexes are cached: having it as large as possible will
 # ensure MySQL uses memory and not disks for most read operations.
 #
 # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
 innodb_buffer_pool_size = 1G
- 
+
 # Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
 innodb_buffer_pool_instances = 1
- 
+
 # Redo log file size, the higher the better.
 # MySQL/MariaDB writes two of these log files in a default installation.
 innodb_log_file_size = 512M
- 
+
 innodb_sort_buffer_size = 64M
 sort_buffer_size = 262144 # default
 join_buffer_size = 262144 # default
- 
+
 max_allowed_packet = 128M
 max_heap_table_size = 32M
 query_cache_min_res_unit = 4096
 query_cache_type = 1
 query_cache_limit = 5M
 query_cache_size = 80M
- 
+
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
- 
+
 # Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
 innodb_thread_concurrency = 0
- 
+
 # Disable this (= 0) if you have slow harddisks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
- 
+
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
 # Only if your have MySQL 5.6 or higher, do not use with MariaDB!
 #table_open_cache_instances = 4
- 
+
 innodb_stats_on_metadata = 0
- 
+
 sql-mode = ""
 ```
 
-Finally, MariaDB is started:
+Finally, MariaDB is restarted:
 
 ```shell
-sudo systemctl start mysql.service
+sudo systemctl restart mysql.service
 ```
 
 ## Next Step
 
 Now the operating system is prepared and i-doit can be installed.
 
-Proceed with [*Setup*](../setup.md)
+[Proceed with **Setup**](../setup.md){ .md-button .md-button--primary }

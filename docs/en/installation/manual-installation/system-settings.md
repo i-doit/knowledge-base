@@ -20,7 +20,7 @@ i-doit possesses its own caching strategies to answer requests as fast as possib
 2. APC(u)
 3. Filesystem
 
-We recommend the use of _either_ ==memcached== _or_ ==APC/APCu==. We lean towards the usage of ==memcached==. Instructions for the installation (except for Windows) can be found in the above mentioned articles.
+We recommend the use of _either_ **memcached** _or_ **APC/APCu**. We lean towards the usage of **memcached**. Instructions for the installation (except for Windows) can be found in the above mentioned articles.
 
 The Apache webserver should be reset after being installed, so that the changes to PHP can become active:
 

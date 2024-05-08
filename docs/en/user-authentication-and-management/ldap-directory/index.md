@@ -15,7 +15,7 @@ The [PHP-Extension php_ldap](http://de.php.net/manual/en/ldap.setup.php) has to 
 Don't forget to allow LDAP connection if you are using **SELinux** with `setsebool -P httpd_can_connect_ldap on`. The -P is for Permanent
 Verify it via `getsebool -a | grep httpd`
 
-### Subsequent Installation under [Debian GNU/Linux](../../installation/manual-installation/debian11.md)
+### Subsequent Installation under [Debian GNU/Linux](../../installation/manual-installation/debian12.md)
 
 ```shell
 sudo apt install php7-ldap
@@ -60,7 +60,7 @@ Under **Administration → Interfaces / external Data → LDAP → Server** you 
 | **LDAP Page Limit** | How many results should be returned per "packet"? |
 | **IP / Host name*** | Mandatory field: The IP or the host name of the server. |
 | **Port*** | Mandatory field: Via which port is the query carried out? (Default: **389**) |
-| **TLS** | Do you want to encrypt the login query? Attention: The authentication will fail in case of self-signed certificates or certificates whose root CA are not known to the operating system on which _i-doit_ is installed. The respective manual of the oprating system explains how the certificate can be accepted. In [Debian](../../installation/manual-installation/debian11.md)\-based operating systems the certificate of the root CA is copied to the /usr/local/share/ca-certificates/ folder and then activated with sudo update-ca-certificates. |
+| **TLS** | Do you want to encrypt the login query? Attention: The authentication will fail in case of self-signed certificates or certificates whose root CA are not known to the operating system on which _i-doit_ is installed. The respective manual of the oprating system explains how the certificate can be accepted. In [Debian](../../installation/manual-installation/debian12.md)\-based operating systems the certificate of the root CA is copied to the /usr/local/share/ca-certificates/ folder and then activated with sudo update-ca-certificates. |
 | **Admin username (DN)*** | Mandatory field: The path to the user object which has reading permissions for the directory.<br><br>(Example: **CN=idoit,OU=tree,DC=synetics,DC=int**) |
 | **Password*** | Mandatory field: The password of the user stated above. |
 | **Use admin user for all read operations** | If the option "Use admin user for all read requests" is activated, each LDAP server query is checked with the administrator account from the LDAP server configuration |

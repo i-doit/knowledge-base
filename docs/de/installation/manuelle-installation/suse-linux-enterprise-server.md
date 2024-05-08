@@ -1,5 +1,7 @@
 # Suse Linux Enterprise Server (SLES)
 
+!!! alert "VERALTET"
+
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
 !!! failure "Die Installationsanleitung ist nicht mehr so nutzbar"
