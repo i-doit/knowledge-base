@@ -68,7 +68,7 @@ Unter **Verwaltung → Import und Schnittstellen → LDAP → Server** können e
 | **Benutze Admin-Nutzer für alle lesenden Anfragen** | Wenn die Option "Benutze Admin-Nutzer für alle lesenden Anfragen" aktiviert ist, wird bei jeder LDAP-Server Abfrage mit dem Administrator Account aus der LDAP-Server Konfiguration geprüft |
 | **Time limit** | Limit für die maximale Dauer der Abfrage. (Standard: 30) |
 
-_Bekannte Lösungen für Probleme bei der TLS Verbindung findet Ihr [HIER](../../administration/troubleshooting/ldap-via-tls.md)_
+_Bekannte Lösungen für Probleme bei der TLS Verbindung findet Ihr [LDAP via TLS](../../administration/troubleshooting/ldap-via-tls.md)_
 
 ### LDAP-Parameter für i-doit-Login
 
@@ -108,7 +108,7 @@ Connection OK!
 XX object(s) found in OU=tree,OU=synetics,DC=synetics,DC=int.
 ```
 
-Sollte bei Misserfolg die Fehlermeldung noch nicht eindeutig genug sein, kann das Debug-Level hochgesetzt werden, sodass weitere Ausgaben im Apache Error Log mitgeschrieben werden. Das Error Log ist unter Debian-basierten Betriebssystemen unter /var/log/apache2/error.log zu finden.
+Sollte bei Misserfolg die Fehlermeldung noch nicht eindeutig genug sein, kann das Debug-Level erhöht werden, sodass weitere Ausgaben im Apache Error Log mitgeschrieben werden. Das Error Log ist unter Debian-basierten Betriebssystemen unter /var/log/apache2/error.log zu finden.
 
 ### Identifizierung von Objekten
 

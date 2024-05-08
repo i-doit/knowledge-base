@@ -3,7 +3,7 @@
 In order to guarantee the operation of all functionalities of i-doit, some requirements must be met by the underlying system.
 
 !!! info "Current version"
-    The requirements shown below apply to the current version of i-doit, in this case ==31==. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case **31**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 ## Minimum Requirements
 
@@ -17,19 +17,19 @@ The following system parameters are the minimum requirements to guarantee i-doit
 
 We recommend the use of a dedicated virtual machine. The actual demand for hardware is based on the scope of the [IT documentation](../glossary.md) and the amount of simultaneous users.
 
-### Virtuelle Hardware (Windows)
+### Virtual Hardware (Windows)
 
 For Windows, the [general Windows system requirements](https://learn.microsoft.com/en-us/windows-server/get-started/hardware-requirements) must be observed.
 
 ### LAMP / WAMP Stack
 
 -   GNU/Linux in the 64bit variant (amd64) or Windows Server 2022 in the 64bit variant (amd64)
--   Apache Webserver ==2.4==
--   MariaDB 10.4 (deprecated), 10.5 (deprecated), ==10.6== (recommended), {++10.11++} or MySQL 5.7 or 8.0.
--   PHP 8.0, ==8.1== (recommended) and 8.2.
+-   Apache Webserver **2.4**
+-   MariaDB 10.4 (deprecated), 10.5 (deprecated), **10.6** (recommended), 10.11 or MySQL 5.7 or 8.0.
+-   PHP 8.0, **8.1** (recommended) and 8.2.
 -   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
-We recommend the usage of ==Apache Webserver 2.4, PHP 8.1 and MariaDB 10.6==.
+We recommend the usage of **Apache Webserver 2.4, PHP 8.1 and MariaDB 10.6**.
 
 !!! success "Reference configuration (GNU/Linux)"
     The following system parameters comprise a configuration reference that is tested and recommended by us and guarantees high performance when used with up to 500,000 objects and a high number of simultaneously working users.
@@ -75,7 +75,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **Apache Webserver** | 2.4 |
     | **PHP** | 8.0<br>==8.1== (recommended)<br>8.2 |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>{++10.11++} |
+    | **MariaDB** | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
 
 === "30"
 

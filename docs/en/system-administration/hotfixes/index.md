@@ -19,7 +19,7 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
     Please inform us about the use of hotfixes should you contact our support team afterwards.
 
 !!! info "Current version"
-    The requirements shown below apply to the current version of i-doit, in this case ==30== These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case ==31== These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 !!! attention "Declaration of consent"
     By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.

@@ -8,14 +8,14 @@ lang: de
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel. Wir verwenden eine Umgebung ohne **Desktop**.
 
-!!! warning ""
-    Wenn Sie Debian installieren, gelangen Sie schließlich zu einem "Softwareauswahl"-Dialog, der eine Liste von Kontrollkästchen enthält, um die Software auszuwählen, die Sie zunächst installieren möchten. Hier ist das Kontrollkästchen "Debian-Desktop-Umgebung" bereits angekreuzt. Wenn Sie dieses Kontrollkästchen deaktivieren und alle anderen Kontrollkästchen für die Desktop-Umgebung (GNOME, Xfce usw.) nicht ankreuzen, führt dies zu einer GUI-losen Installation:
+!!! note ""
+    Wenn Sie Ubuntu installieren, gelangen Sie schließlich zu einem "Softwareauswahl"-Dialog, der eine Liste von Kontrollkästchen enthält, um die Software auszuwählen, die Sie zunächst installieren möchten. Hier ist das Kontrollkästchen "Ubuntu-Desktop-Umgebung" bereits angekreuzt. Wenn Sie dieses Kontrollkästchen deaktivieren und alle anderen Kontrollkästchen für die Desktop-Umgebung (GNOME, Xfce usw.) nicht ankreuzen, führt dies zu einer GUI-losen Installation:
 
 ## Systemvoraussetzungen
 
 Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md).
 
-Dieser Artikel bezieht sich auf [**Ubuntu 22.04 "Jammy Jellyfish"**](https://ubuntu.com/). Um zu bestimmen, welche Debian Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
+Dieser Artikel bezieht sich auf **Ubuntu 22.04 "Jammy Jellyfish"**. Um zu bestimmen, welche Ubuntu Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
 ```shell
 cat /etc/os-release
@@ -31,7 +31,7 @@ uname -m
 
 ## Installation der Pakete
 
-Die Standard-Repositories von Debian GNU/Linux bringen bereits alle nötigen Pakete mit, um
+Die Standard-Repositories von Ubuntu GNU/Linux bringen bereits alle nötigen Pakete mit, um
 
 -   den **Apache** Webserver 2.4,
 -   die Script-Sprache **PHP** 8.1,

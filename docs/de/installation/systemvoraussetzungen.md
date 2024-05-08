@@ -3,7 +3,7 @@
 Um den Betrieb aller Funktionalitäten von i-doit zu gewährleisten, existieren für das darunter liegende System Voraussetzungen, die erfüllt sein müssen.
 
 !!! info "Aktualität"
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==31==. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **31**. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 ## Mindestanforderungen an das System
 
@@ -24,12 +24,12 @@ Für Windows sind die [generellen Windows Systemvoraussetzungen](https://learn.m
 ### LAMP / WAMP Stack
 
 -   GNU/Linux in der 64bit Variante(amd64) oder Windows Server 2022 in der 64bit Variante(amd64)
--   Apache Webserver ==2.4==
--   MariaDB 10.4 (veraltet), 10.5 (veraltet), ==10.6== (empfohlen), {++10.11++} oder MySQL 5.7 oder 8.0 _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
--   PHP 8.0, ==8.1== (empfohlen) und 8.2
+-   Apache Webserver **2.4**
+-   MariaDB 10.4 (veraltet), 10.5 (veraltet), **10.6** (empfohlen), 10.11 oder MySQL 5.7 oder 8.0 _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
+-   PHP 8.0, **8.1** (empfohlen) und 8.2
 -   PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
-Wir empfehlen den Einsatz von ==Apache Webserver 2.4, PHP 8.1 und MariaDB 10.6==.
+Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.1 und MariaDB 10.6**.
 
 !!! Success "Referenzkonfiguration (GNU/Linux)"
     Folgende Systemparameter bilden eine von uns getestete und empfohlene Referenzkonfiguration, welche eine hohe Performance bei bis zu 500.000 Objekten und einer hohen Anzahl von gleichzeitig arbeitenden Benutzern gewährleistet.
@@ -75,7 +75,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **Apache Webserver** | 2.4 |
     | **PHP** | 8.0<br>==8.1== (empfohlen)<br>8.2 |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>{++10.11++} |
+    | **MariaDB** | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
 
 === "30"
 

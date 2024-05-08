@@ -31,7 +31,7 @@ Es werden installiert:
 !!! info "Ist die Windows Firewall aktiviert wird abgefragt ob die Applikation freigegeben werden darf"
 
 Bei erfolgreicher Installation wird in einem kleinem Fenster **"i-doit has been installed successfully."** angezeigt.<br>
-Nach einem Klick auf **OK** wird automatisch ein neues Browsertab mit der `localhost` URL geöffnet und kann i-doit im vollen Umfang nutzen.
+Nach einem Klick auf **OK** wird automatisch ein neues Browser tab mit der `localhost` URL geöffnet und kann i-doit im vollen Umfang nutzen.
 
 !!! info "Sollte bei der Installation ein Fehler unterlaufen sein, wird automatisch ein log im i-doit Ordner erstellt"
 
@@ -81,11 +81,11 @@ Das Zertifikat und der Private Key wurden nun in dem Ordner erstellt, in dem der
 
 ### Konfigurationsschritte
 
-1. **Erstellen der ssl.conf-Datei**<br>
+#### 1. **Erstellen der ssl.conf-Datei**
 
 Navigieren Sie zu Ihrem i-doit-Ordner unter `ProgramData\i-doit\apache-2.4\conf\extra\` und erstellen Sie die Datei `ssl.conf`. Die Datei sollte folgenden Inhalt haben:
 
-```apacheconf
+```conf
 <VirtualHost *:443>
    DocumentRoot "${SRVROOT}/htdocs"
    ServerName localhost
@@ -117,7 +117,7 @@ Navigieren Sie zu Ihrem i-doit-Ordner unter `ProgramData\i-doit\apache-2.4\conf\
 
 **Hinweis:** Passen Sie die Pfade und Konfigurationseinstellungen entsprechend Ihrer eigenen Umgebung an und stellen Sie sicher, dass Ihr Zertifikat und privater Schlüssel in den angegebenen Pfaden vorhanden sind.
 
-2. **Anpassungen in der httpd.conf**<br>
+#### 2. **Anpassungen in der httpd.conf**
 
 Bearbeiten Sie die `httpd.conf`-Datei, die sich unter `i-doit\apache-2.4\conf\` befindet:
 
@@ -126,7 +126,7 @@ Bearbeiten Sie die `httpd.conf`-Datei, die sich unter `i-doit\apache-2.4\conf\` 
 
 Die Datei sollte dann so aussehen, wenn vorher nichts geändert wurde:
 
-```apacheconf
+```conf
 Define SRVROOT "C:/ProgramData/i-doit/apache-2.4"
 
 ServerRoot "${SRVROOT}"
@@ -176,7 +176,6 @@ ServerName localhost:80
     AllowOverride all
     Require all granted
 </Directory>
-
 
 DocumentRoot "${SRVROOT}/htdocs"
 <Directory "${SRVROOT}/htdocs">
@@ -238,10 +237,10 @@ LogLevel warn
 </IfModule>
 ```
 
-3. **Apache-Webserver neustarten**:
+#### 3. **Apache-Webserver neustarten**
 
-\- Drücken Sie ++windows+r++ , geben Sie `cmd` ein und drücken Sie Enter.<br>
-\- Oder geben Sie `cmd` in der Windows-Suchleiste ein, um die Eingabeaufforderung zu öffnen
+-   Drücken Sie ++windows+r++ , geben Sie `cmd` ein und drücken Sie Enter.<br>
+-   Oder geben Sie `cmd` in der Windows-Suchleiste ein, um die Eingabeaufforderung zu öffnen
 
 Geben Sie den folgenden Befehl ein, um den Apache-Webserver neu zu starten:
 
@@ -272,7 +271,7 @@ Anschließend wird MariaDB deinstalliert indem wir unter **Programme hinzufügen
 
 [![Deinstallieren MariaDB](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)
 
-Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP `PATH` muss aus den Umgebungsvariabeln entfernt werden:
+Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP `PATH` muss aus den Umgebungsvariablen entfernt werden:
 
 [![Deinstallieren PHP](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)
 
@@ -341,7 +340,7 @@ Hier finden Sie die Login Daten für den i-doit Windows installer:
 |-|-|-|
 | MariaDB root | root | idoit |
 | MariaDB i-doit | idoit | idoit |
-| i-doit Admin Center | - | admin |
+| i-doit Admin Center | admin | admin |
 
 Die i-doit Login Daten finden Sie [hier](../../../grundlagen/erstanmeldung.md).
 
@@ -370,6 +369,6 @@ Zusätzlich müssen JDisc und seine Add-ons unter ==Programme hinzufügen oder e
 
 [![Uninstall JDisc](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/6-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/6-idw.png)
 
-Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP `PATH` muss aus den Umgebungsvariabeln entfernt werden:
+Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP `PATH` muss aus den Umgebungsvariablen entfernt werden:
 
 [![Deinstallieren PHP](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)

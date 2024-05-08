@@ -13,7 +13,7 @@ The contents of the package are as follows:
 The installation package will always include the latest [i-doit version](../../../version-history/index.md). Also the `src.zip` folder allows for an installation without internet connection.<br>
 Since the i-doit Windows installer requires ==windowsdesktop-runtime-6.0.14==, this is also provided in case there is no internet connection available.
 
-## Installation
+## i-doit Windows installation
 
 After running the `i-doit Windows Installer.exe` you will see the following GUI:
 
@@ -35,7 +35,7 @@ After clicking ==OK== a new browser tab with the `localhost` URL will be opened 
 
 !!! info "If an error occurred during the installation, a log file is automatically created in the i-doit folder"
 
-## Configuration
+### Configuration
 
 To configure PHP, MariaDB or Apache, you can find the respective config files in the following directories:
 
@@ -48,7 +48,7 @@ To configure PHP, MariaDB or Apache, you can find the respective config files in
 -   ==Apache:==<br>
     `C:\ProgramData\i-doit\apache-2.4\conf\httpd.conf`
 
-## Credentials
+### Credentials
 
 The following credentials are set by the installer.
 
@@ -56,17 +56,17 @@ The following credentials are set by the installer.
 |-|-|-|
 | MariaDB root | root | idoit |
 | MariaDB i-doit | idoit | idoit |
-| i-doit Admin Center | - | admin |
+| i-doit Admin Center | admin | admin |
 
 For i-doit Login credentials see [here](../../../basics/initial-login.md).
 
-## Setting up HTTPS (optional)
+### Setting up HTTPS (optional)
 
 The following instructions show you how to set up SSL for Windows with i-doit.<br>
 Only the steps required to configure HTTPS are described.<br>
 This section can be skipped.
 
-### Prerequisites
+#### Prerequisites
 
 First you need a valid certificate in `.crt` and `.key` format. You can create this with OpenSSL.<br>
 You can download and install OpenSSL here: [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)<br>
@@ -76,15 +76,16 @@ Now enter the following command to create the certificate:
 ```winbatch
 OpenSSL req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt
 ```
+
 The certificate and the private key have now been created in the folder in which the command was executed. Copy these, for example, to the folder `ProgramData\i-doit\apache-2.4\conf\extra\`.
 
 ### Configuration steps
 
-1. **Creating the ssl.conf file**<br>
+#### 1. **Creating the ssl.conf file**
 
 Navigate to your i-doit folder under `ProgramData\i-doit\apache-2.4\conf\extra\` and create the file `ssl.conf`. The file should have the following content:
 
-```apacheconf
+```conf
 <VirtualHost *:443>
    DocumentRoot "${SRVROOT}/htdocs"
    ServerName localhost
@@ -116,7 +117,7 @@ Navigate to your i-doit folder under `ProgramData\i-doit\apache-2.4\conf\extra\`
 
 **Note:** Customize the paths and configuration settings according to your own environment and make sure that your certificate and private key are located in the specified paths.
 
-2. **Adjustments in the httpd.conf**<br>
+#### 2. **Adjustments in the httpd.conf**
 
 Edit the `httpd.conf` file located under `i-doit\apache-2.4\conf\` and add the following:
 
@@ -125,7 +126,7 @@ Edit the `httpd.conf` file located under `i-doit\apache-2.4\conf\` and add the f
 
 The file should then look like this if nothing has been changed beforehand:
 
-```apacheconf
+```conf
 Define SRVROOT "C:/ProgramData/i-doit/apache-2.4"
 
 ServerRoot "${SRVROOT}"
@@ -237,10 +238,10 @@ LogLevel warn
 </IfModule>
 ```
 
-3. **Restart Apache-Webserver**:
+#### 3. **Restart Apache-Webserver**
 
-\- Press ++windows+r++ , type `cmd` and press Enter.<br>
-\- Or type `cmd` in the Windows search bar to open the command prompt
+-   Press ++windows+r++ , type `cmd` and press Enter.<br>
+-   Or type `cmd` in the Windows search bar to open the command prompt
 
 Enter the following command to restart the Apache web server:
 
@@ -252,18 +253,18 @@ The Apache web server has now been restarted. Check the installation and whether
 
 That's it! Your i-doit installation is now configured for SSL on Windows.
 
-## Uninstallation
+### Uninstallation
 
 To uninstall i-doit, the Apache2 service must be stopped first.<br>
 For this we enter the following command in the command prompt:
 
-```
+```winbatch
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k stop
 ```
 
 Once the Apache2 service is stopped, Apache2 can be uninstalled:
 
-```
+```winbatch
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
@@ -275,7 +276,7 @@ Now the i-doit folder must be deleted and the PHP `PATH` must be removed from th
 
 [![Uninstall PHP](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)
 
-## install i-doit Discovery for Windows server
+## Discovery for Windows server
 
 In this section we describe how to install idoit Discovery.<br >
 The i-doit Discovery Package can be found on our [website](https://www.i-doit.com/en/i-doit-discovery/).
@@ -349,13 +350,13 @@ For i-doit Login credentials see [here](../../../basics/initial-login.md).
 To uninstall i-doit-discovery, the Apache2 service must be stopped first.<br>
 For this we enter the following command in the command prompt:
 
-```
+```winbatch
 C:\ProgramData\i-doit-discovery\apache-2.4\bin\httpd.exe -k stop
 ```
 
 Once the Apache2 service is stopped, Apache2 can be uninstalled:
 
-```
+```winbatch
 C:\ProgramData\i-doit-discovery\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
