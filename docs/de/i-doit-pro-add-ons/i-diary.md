@@ -92,7 +92,6 @@ Dies sind die folgenden Fälle:
 
 [![Konfiguration](../assets/images/de/i-doit-pro-add-ons/i-diary/2-id.png)](../assets/images/de/i-doit-pro-add-ons/i-diary/2-id.png)
 
-
 *   Wenn der Benutzer etwas in der GUI-Konfiguration ändert, wird die Änderung sofort geprüft und gespeichert, wenn sie gültig ist.
 
 *   Wenn der Benutzer nicht `[http://](http://)` angibt, wird `[http://](http://)` für die Prüfung verwendet und gespeichert.
@@ -141,7 +140,6 @@ Wenn in den Einstellungen kein Host gespeichert ist, sollte ein Host automatisch
 *   Werden mehrere Objekte mit dem gleichen Namen gefunden, kann der Benutzer aus diesen Objekten auswählen.
 
 *   Der Benutzer kann die Auswahl abbrechen, um den Host manuell auszuwählen.
-
 
 [Host manuell auswählen](#host-manuell-auswaehlen)
 -------------------------------------------------
@@ -236,9 +234,8 @@ Bekannte Fehlermeldungen und deren Bedeutung:
 
 | Version | Release | Changelog |
 | --- | --- | --- |
-| Version | Release | Changelog |
-| --- | --- | --- |
-| 1.2 | 23.01.2023 | \- Primary IP address is shown empty  <br>Clicking on the info icon crashes i-diary  <br>Contact assignment does not show the Primary contact |
+| 1.3 | 08.05.2024 | Used "idoit_i_diary" as new identifier<br> Objects are not loaded after second start<br> Starting i-diary needs a lot of time<br> i-diary does not recognize diary category<br>Author is not loaded |
+| 1.2 | 23.01.2023 | Primary IP address is shown empty  <br>Clicking on the info icon crashes i-diary  <br>Contact assignment does not show the Primary contact |
 | 1.1 | 04.01.2022 | Show all details about the host  <br>Update entries in i-diary  <br>Automatic recognition of object types  <br>Provide all Changelogs in CHANGELOG file |
 | 1.0.2 | 09.11.2021 | Make connection using HTTPS  <br>Configuration of a proxy server |
 | 1.0.1 | 06.11.2020 | Change the position of the buttons in the settings window  <br>Change the title of the settings window  <br>Log in without authentication  <br>Writing a log file to check the connection  <br>The comboboxes should display more lines |

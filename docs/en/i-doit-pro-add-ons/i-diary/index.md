@@ -67,6 +67,7 @@ The add-on is downloaded via the [customer portal](../../system-administration/c
 The add-on must first be installed via the [Admin Center](../../system-administration/admin-center.md#add-ons).
 
 * * *
+
 [Update](#update)
 =================
 
@@ -90,7 +91,6 @@ These are the following cases:
 
 [![Change and save settings via GUI](../../assets/images/en/i-doit-pro-add-ons/i-diary/4-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/4-i-diary.png)
 
-
 *   If the user changes something in the GUI setting, the change is immediately checked and saved if it is valid.  
 *   When the user does not specify ‘[http://](http://)’, ‘[http://](http://)’ is used for the check and saved.
 *   When the user does specify ‘rc/jsonrpc.php’ as a suffix in the URL field, it will be ignored for the check and saved without it.
@@ -109,7 +109,7 @@ The user can create a new entry, for this purpose the following steps are taken:
 *   The author, date, and entry must be filled in and valid.
 *   For further entries, the selection of author and date persists until the application is closed.
 *   When the user saves an entry, the list of entries is updated.
-    
+
 * * *
 
 [Determine the host](#determine-the-host)
@@ -138,7 +138,7 @@ If no object is stored in the settings, an object should be determined automatic
 
 [![Set host manually](../../assets/images/en/i-doit-pro-add-ons/i-diary/6-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/6-i-diary.png)
 
-*   The user selects an object title from a searchable list. Only objects whose object types are assigned to the category “Diary” are displayed. The list is divided into the respective object types. The translated title of the respective object type is displayed as the list heading. If the user selects an object from the list, its ID is saved. 
+*   The user selects an object title from a searchable list. Only objects whose object types are assigned to the category “Diary” are displayed. The list is divided into the respective object types. The translated title of the respective object type is displayed as the list heading. If the user selects an object from the list, its ID is saved.
 *   The user types the Object ID into a search mask. The application gives feedback whether the object was found and saves its ID.
 *   The user enters the Object Title in a search mask. The application gives feedback if the object was found and saves its ID.
 *   If several objects with the same name are found, the user can choose from this list.
@@ -207,6 +207,7 @@ Known error messages and their meaning:
 
 | Version | Release | Changelog |
 | --- | --- | --- |
+| 1.3 | 08.05.2024 | Used "idoit_i_diary" as new identifier<br> Objects are not loaded after second start<br> Starting i-diary needs a lot of time<br> i-diary does not recognize diary category<br>Author is not loaded |
 | 1.2 | 23.01.2023 | Primary IP address is shown empty  <br>Clicking on the info icon crashes i-diary  <br>Contact assignment does not show the Primary contact |
 | 1.0.2 | 09.11.2021 | Make connection using HTTPS  <br>Configuration of a proxy server |
 | 1.0.1 | 06.11.2020 | Change the position of the buttons in the settings window  <br>Change the title of the settings window  <br>Log in without authentication  <br>Writing a log file to check the connection  <br>The comboboxes should display more lines |
