@@ -1,79 +1,79 @@
 # Optionen und Parameter der Console
 
 !!! attention "Hinweise"
-
     Sämtliche Beispiele auf dieser Seite beziehen sich auf die Verwendung des i-doit Benutzers mit der Kombination Benutzername/Passwort: **admin**/**admin**.<br>
     Alle Parameter sind case-sensitive, dies bedeutet, dass Groß- und Kleinschreibung gemäß den Beispielen und Vorgaben exakt einzuhalten sind.
 
 ## Folgende Handler stehen für die i-doit Console zur Verfügung
 
-| Command | Systeminterne Beschreibung (en) |
-| --- | --- |
-| [CompileDocuments](#compiledocuments) | Compile Documents |
-| [addon-activate](#addon-activate) | Aktivieren von Add-ons |
-| [addon-deactivate](#addon-deactivate) | Deaktivieren von Add-ons |
-| [addon-install](#addon-install) | Installieren von Add-ons |
-| [addon-list](#addon-list) | Zeigt eine Liste mit allen installierten Add-ons an |
-| [admin-center-password-reset](#admin-center-password-reset) | Passwort für das Admin-Center zurücksetzen |
-| [auth-cleanup](#auth-cleanup) | Rechtesystem bereinigen |
-| [check_mk-export](#check_mk-export) | Konfigurationsdaten für Check_MK exportieren |
-| [check_mk-livestatus](#check_mk-livestatus) | Ist-Zustand aus Check_MK ins Logbuch schreiben |
-| [clear-credentials](#clear-credentials) | Entfernt die Anmeldeinformationen von Benutzern |
-| [completion](#completion) | Das Shell-Vervollständigungsskript ausgeben |
-| [contracts-outdated](#contracts-outdated) | Aktualisiert den Status ausgelaufener Verträge |
-| [documents](#documents) | Dokumente und revisionen erzeugen und exportieren |
-| [extend-contracts](#extend-contracts) | Verlängert die Laufzeit eines Vertrags, wenn dessen letztmögliches Kündigungsdatum in der Vergangenheit liegt |
-| [help](#help) | Zeigt die Hilfe zu einem Befehl an |
-| [import-csv](#import-csv) | Daten aus einer CSV-Datei importieren (Nutzt einen definiertes Import Profil aus der GUI) |
-| [import-csvprofiles](#import-csvprofiles) | Auflisten aller CSV-Importprofile |
-| [import-hinventory](#import-hinventory) | Daten aus h-inventory importieren |
-| [import-jdisc](#import-jdisc) | Daten aus JDisc Discovery importieren (SQL Server Zugriff wird über die GUI konfiguriert) |
-| [import-jdiscdiscovery](#import-jdiscdiscovery) | Einen Scan in JDisc Discovery starten (API Zugriff wird über die GUI konfiguriert) |
-| [import-syslog](#import-syslog) | Daten aus einem Syslog in das Logbuch von i-doit importieren |
-| [import-xml](#import-ocs) | Daten aus XML importieren |
-| [install](#install) | Installiert i-doit |
-| [ldap-sync](#ldap-sync) | Personen und Personengruppen aus einem [LDAP-Verzeichnis oder Active Directory (AD)](../../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) importieren |
-| [ldap-syncdn](#ldap-sync) | Synchronisiere aus einem LDAP/AD den Distinguished Name (DN) der Benutzer (siehe Kategorie LDAP) |
-| [license-add](#license-add) | Fügt eine Lizenz für i-doit hinzu (in Bearbeitung) |
-| [license-assign](#license-assign) | Ordnet eine Hosting Lizenz einem Mandaten zu (in Bearbeitung) |
-| [license-import](#license-import) | Importiert Lizenzen vom i-doit Server (in Bearbeitung) |
-| [license-key](#license-key) | Setzt einen Lizenzschlüssel für i-doit (in Bearbeitung) |
-| [license-list](#license-list) | Listet alle Lizenzen mit allen Informationen auf (ID; Produkt; Typ; Startdatum; Enddatum; lizenzierte Objekte; lizenzierte Mandanten; Umgebung) |
-| [license-remove](#license-remove) | Entfernt Lizenzen von i-doit |
-| [list](#list) | Listet alle console Kommandos auf |
-| [logbook-archive](#logbook-archive) | Logbuch-Einträge archivieren |
-| [maintenance](#maintenance) | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs Add-on |
-| [migrate-uploaded-files](#migrate-uploaded-files) | Migriert hochgeladene Dateien von i-doit <v1.13 zu v.1.14> |
-| [nagios-export](#nagios-export) | Nagios-Konfiguration exportieren |
-| [nagios-ndoutils](#nagios-ndoutils) | Ist-Zustand aus Nagios ins Logbuch schreiben |
-| [notifications-list](#notifications-list) | Listet alle [Benachrichtigungen](../../../auswertungen/benachrichtigungen.md) auf |
-| [notifications-send](#notifications-send) | Benachrichtigungen per E-Mail versenden (Benachrichtigungen werden in der GUI konfiguriert) |
-| [report-export](#report-export) | Einen Report als Datei exportieren |
-| [search](#search) | In i-doit suchen |
-| [search-index](#search-index) | Suchindex erstellen/erneuern |
-| [strip-description-html](#strip-description-html) | Mit diesem Befehl können Sie html-Tags im Beschreibungsfeld aller Kategorien und Objekte entfernen |
-| [sync-dynamic-groups](#sync-dynamic-groups) | Synchronisiert dynamische Gruppenmitglieder neu |
-| [system-autoincrement](#system-autoincrement) | auto_increment von MariaDB-/MySQL-Tabellen auf einen positiven Integer-Wert setzen (Betrifft die Datenstruktur! Mit Vorsicht zu nutzen!) |
-| [system-categorycleanup](#system-categorycleanup) | Bereinigt optional Kategorieeinträge, die sich im Status unfertig, archiviert oder gelöscht befinden |
-| [system-checkforupdates](#system-checkforupdates) | Nach Aktualisierungen für i-doit suchen |
-| [system-convert-non-innodb-tables](#system-convert-non-innodb-tables) | Konvertiert alle Tabellen, welche nicht in INNODB sind zu INNODB (Betrifft die Datenbankkodierung. Mit Vorsicht zu nutzen!) |
-| [system-convert-non-utf8-tables](#system-convert-non-utf8-tables) | Konvertiert alle non-UTF8-Tabellen in UTF8-Tabellen (Betrifft die Datenbankkodierung. Mit Vorsicht zu nutzen!) |
-| [system-location-fix](#system-location-fix) | Führt die Standortkorrektur aus der GUI auf der Konsole aus |
-| [system-maintenancecontract](#system-maintenancecontract) | E-Mail für Wartungsverträge senden (Funktion veraltet. Bitte<br>[notifications-send](#notifications-send) nutzen) |
-| [system-objectcleanup](#system-objectcleanup) | Objekte bereinigen (Objekte mit dem Status "unfertig", "archiviert" oder "gelöscht" werden endgültig entfernt) |
-| [system-objectrelations](#system-objectrelations) | Objekt-Beziehungen neu aufbauen |
-| [system-refresh-table-configuration](#system-refresh-table-configuration) |Erneuert alle verfügbaren Listenkonfigurationen (Objekttypen und Kategorien) |
-| [tenant-create](#tenant-create) | Einen neuen Mandanten hinzufügen |
-| [tenant-disable](#tenant-disable) | Einen bestehenden Mandanten deaktivieren |
-| [tenant-enable](#tenant-enable) | Einen bestehenden Mandanten aktivieren |
-| [tenant-list](#tenant-list) | Alle verfügbaren Mandanten auflisten |
-| [tenant-remove](#tenant-remove) | Einen bestehenden Mandanten entfernen |
-| [uninstall](#uninstall) | Deinstalliert i-doit |
-| [update](#update) | Update von i-doit installieren |
-| [workflows-process](#workflows-process) | Verarbeitet alle Arbeitsabläufe, versendet E-Mails und erstellt neue Aufgaben aus Checklisten |
+| Command                                                                   | Beschreibung (en)                                                                                                                                                             |
+| ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [CompileDocuments](#compiledocuments)                                     | Compile Documents                                                                                                                                                             |
+| [addon-activate](#addon-activate)                                         | Aktivieren von Add-ons                                                                                                                                                        |
+| [addon-deactivate](#addon-deactivate)                                     | Deaktivieren von Add-ons                                                                                                                                                      |
+| [addon-install](#addon-install)                                           | Installieren von Add-ons                                                                                                                                                      |
+| [addon-list](#addon-list)                                                 | Zeigt eine Liste mit allen installierten Add-ons an                                                                                                                           |
+| [admin-center-password-reset](#admin-center-password-reset)               | Passwort für das Admin-Center zurücksetzen                                                                                                                                    |
+| [auth-cleanup](#auth-cleanup)                                             | Rechtesystem bereinigen                                                                                                                                                       |
+| [check_mk-export](#check_mk-export)                                       | Konfigurationsdaten für Check_MK exportieren                                                                                                                                  |
+| [check_mk-livestatus](#check_mk-livestatus)                               | Ist-Zustand aus Check_MK ins Logbuch schreiben                                                                                                                                |
+| [clear-credentials](#clear-credentials)                                   | Entfernt die Anmeldeinformationen von Benutzern                                                                                                                               |
+| [completion](#completion)                                                 | Das Shell-Vervollständigungsskript ausgeben                                                                                                                                   |
+| [contracts-outdated](#contracts-outdated)                                 | Aktualisiert den Status ausgelaufener Verträge                                                                                                                                |
+| [documents](#documents)                                                   | Dokumente und Revisionen erzeugen und exportieren                                                                                                                             |
+| [extend-contracts](#extend-contracts)                                     | Verlängert die Laufzeit eines Vertrags, wenn dessen letztmögliches Kündigungsdatum in der Vergangenheit liegt                                                                 |
+| [help](#help)                                                             | Zeigt die Hilfe zu einem Befehl an                                                                                                                                            |
+| [import-csv](#import-csv)                                                 | Daten aus einer CSV-Datei importieren (Nutzt einen definiertes Import Profil aus der GUI)                                                                                     |
+| [import-csvprofiles](#import-csvprofiles)                                 | Auflisten aller CSV-Importprofile                                                                                                                                             |
+| [import-hinventory](#import-hinventory)                                   | Daten aus h-inventory importieren                                                                                                                                             |
+| [import-jdisc](#import-jdisc)                                             | Daten aus JDisc Discovery importieren (SQL Server Zugriff wird über die GUI konfiguriert)                                                                                     |
+| [import-jdiscdiscovery](#import-jdiscdiscovery)                           | Einen Scan in JDisc Discovery starten (API Zugriff wird über die GUI konfiguriert)                                                                                            |
+| [import-syslog](#import-syslog)                                           | Daten aus einem Syslog in das Logbuch von i-doit importieren                                                                                                                  |
+| [import-xml](#import-ocs)                                                 | Daten aus XML importieren                                                                                                                                                     |
+| [install](#install)                                                       | Installiert i-doit                                                                                                                                                            |
+| [jdisc-create-server](#jdisc-create-server)                               | Creates a JDisc server, based on given input                                                                                                                                  |
+| [ldap-sync](#ldap-sync)                                                   | Personen und Personengruppen aus einem [LDAP-Verzeichnis oder Active Directory (AD)](../../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) importieren |
+| [ldap-syncdn](#ldap-sync)                                                 | Synchronisiere aus einem LDAP/AD den Distinguished Name (DN) der Benutzer (siehe Kategorie LDAP)                                                                              |
+| [license-add](#license-add)                                               | Fügt eine Lizenz für i-doit hinzu (in Bearbeitung)                                                                                                                            |
+| [license-assign](#license-assign)                                         | Ordnet eine Hosting Lizenz einem Mandaten zu (in Bearbeitung)                                                                                                                 |
+| [license-import](#license-import)                                         | Importiert Lizenzen vom i-doit Server (in Bearbeitung)                                                                                                                        |
+| [license-key](#license-key)                                               | Setzt einen Lizenzschlüssel für i-doit (in Bearbeitung)                                                                                                                       |
+| [license-list](#license-list)                                             | Listet alle Lizenzen mit allen Informationen auf (ID; Produkt; Typ; Startdatum; Enddatum; lizenzierte Objekte; lizenzierte Mandanten; Umgebung)                               |
+| [license-remove](#license-remove)                                         | Entfernt Lizenzen von i-doit                                                                                                                                                  |
+| [list](#list)                                                             | Listet alle console Kommandos auf                                                                                                                                             |
+| [logbook-archive](#logbook-archive)                                       | Logbuch-Einträge archivieren                                                                                                                                                  |
+| [maintenance](#maintenance)                                               | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs Add-on                                                                                                      |
+| [migrate-uploaded-files](#migrate-uploaded-files)                         | Migriert hochgeladene Dateien von i-doit <v1.13 zu v.1.14>                                                                                                                    |
+| [nagios-export](#nagios-export)                                           | Nagios-Konfiguration exportieren                                                                                                                                              |
+| [nagios-ndoutils](#nagios-ndoutils)                                       | Ist-Zustand aus Nagios ins Logbuch schreiben                                                                                                                                  |
+| [notifications-list](#notifications-list)                                 | Listet alle [Benachrichtigungen](../../../auswertungen/benachrichtigungen.md) auf                                                                                             |
+| [notifications-send](#notifications-send)                                 | Benachrichtigungen per E-Mail versenden (Benachrichtigungen werden in der GUI konfiguriert)                                                                                   |
+| [report-export](#report-export)                                           | Einen Report als Datei exportieren                                                                                                                                            |
+| [search](#search)                                                         | In i-doit suchen                                                                                                                                                              |
+| [search-index](#search-index)                                             | Suchindex erstellen/erneuern                                                                                                                                                  |
+| [strip-description-html](#strip-description-html)                         | Mit diesem Befehl können Sie html-Tags im Beschreibungsfeld aller Kategorien und Objekte entfernen                                                                            |
+| [sync-dynamic-groups](#sync-dynamic-groups)                               | Synchronisiert dynamische Gruppenmitglieder neu                                                                                                                               |
+| [system-autoincrement](#system-autoincrement)                             | auto_increment von MariaDB-/MySQL-Tabellen auf einen positiven Integer-Wert setzen (Betrifft die Datenstruktur! Mit Vorsicht zu nutzen!)                                      |
+| [system-categorycleanup](#system-categorycleanup)                         | Bereinigt optional Kategorieeinträge, die sich im Status unfertig, archiviert oder gelöscht befinden                                                                          |
+| [system-checkforupdates](#system-checkforupdates)                         | Nach Aktualisierungen für i-doit suchen                                                                                                                                       |
+| [system-convert-non-innodb-tables](#system-convert-non-innodb-tables)     | Konvertiert alle Tabellen, welche nicht in INNODB sind zu INNODB (Betrifft die Datenbankkodierung. Mit Vorsicht zu nutzen!)                                                   |
+| [system-convert-non-utf8-tables](#system-convert-non-utf8-tables)         | Konvertiert alle non-UTF8-Tabellen in UTF8-Tabellen (Betrifft die Datenbankkodierung. Mit Vorsicht zu nutzen!)                                                                |
+| [system-location-fix](#system-location-fix)                               | Führt die Standortkorrektur aus der GUI auf der Konsole aus                                                                                                                   |
+| [system-maintenancecontract](#system-maintenancecontract)                 | E-Mail für Wartungsverträge senden (Funktion veraltet. Bitte<br>[notifications-send](#notifications-send) nutzen)                                                             |
+| [system-objectcleanup](#system-objectcleanup)                             | Objekte bereinigen (Objekte mit dem Status "unfertig", "archiviert" oder "gelöscht" werden endgültig entfernt)                                                                |
+| [system-objectrelations](#system-objectrelations)                         | Objekt-Beziehungen neu aufbauen                                                                                                                                               |
+| [system-refresh-table-configuration](#system-refresh-table-configuration) | Erneuert alle verfügbaren Listenkonfigurationen (Objekttypen und Kategorien)                                                                                                  |
+| [system-set-settings](#system-set-settings)                               | Ermöglicht das setzen von Admin Center Einstellungen über die CLI                                                                                                             |
+| [tenant-create](#tenant-create)                                           | Einen neuen Mandanten hinzufügen                                                                                                                                              |
+| [tenant-disable](#tenant-disable)                                         | Einen bestehenden Mandanten deaktivieren                                                                                                                                      |
+| [tenant-enable](#tenant-enable)                                           | Einen bestehenden Mandanten aktivieren                                                                                                                                        |
+| [tenant-list](#tenant-list)                                               | Alle verfügbaren Mandanten auflisten                                                                                                                                          |
+| [tenant-remove](#tenant-remove)                                           | Einen bestehenden Mandanten entfernen                                                                                                                                         |
+| [uninstall](#uninstall)                                                   | Deinstalliert i-doit                                                                                                                                                          |
+| [update](#update)                                                         | Update von i-doit installieren                                                                                                                                                |
+| [workflows-process](#workflows-process)                                   | Verarbeitet alle Arbeitsabläufe, versendet E-Mails und erstellt neue Aufgaben aus Checklisten                                                                                 |
 
 !!! attention "Konfigurationsdatei und Parameter --config"
-
     Es ist möglich dem Aufruf zusätzliche Inhalte über eine Konfigurationsdatei zu übergeben. Diese Datei muss im i-doit Verzeichnis src/handler/config/ abgelegt werden. Ein Beispiel in Form der Datei "isys_handler_ldap.ini" ist im Verzeichnis src/handler/config/examples/ zu finden.<br>
     Wenn diese Datei beim Vorgang berücksichtigt werden soll, muss sie über den Parameter --config bzw. -c eingebunden werden.
 
@@ -83,18 +83,18 @@ Aktualisiert Dokumente
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -t | --documentId=DOCUMENTID | Mehrere Dokument-IDs (mehrere Werte zulässig) |
-| -u | --user=USERNAME | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=PASSWORD | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -t | --tenant=TENANT-ID | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)    | Beschreibung                                                                                     |
+| -------------------- | ----------------------- | ------------------------------------------------------------------------------------------------ |
+| -t                   | --documentId=DOCUMENTID | Mehrere Dokument-IDs (mehrere Werte zulässig)                                                    |
+| -u                   | --user=USERNAME         | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=PASSWORD     | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -t                   | --tenant=TENANT-ID      | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                  | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                 | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version               | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction        | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose               | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -108,18 +108,18 @@ Aktiviert installierte Add-ons für den gewünschten Mandanten
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -a | --addon=[ADDON] | Add-on-Kennung (mehrere Werte zulässig) |
-| -t | --tenant=[TENANT-ID] | Mandanten-ID (mehrere Werte zulässig) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -a                   | --addon=[ADDON]       | Add-on-Kennung (mehrere Werte zulässig)                                                          |
+| -t                   | --tenant=[TENANT-ID]  | Mandanten-ID (mehrere Werte zulässig)                                                            |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -133,18 +133,18 @@ Deaktiviert installierte Add-ons für den gewünschten Mandanten
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -a | --addon=[ADDON] | Add-on-Kennung (mehrere Werte zulässig) |
-| -t | --tenant=[TENANT-ID] | Mandanten-ID (mehrere Werte zulässig) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -a                   | --addon=[ADDON]       | Add-on-Kennung (mehrere Werte zulässig)                                                          |
+| -t                   | --tenant=[TENANT-ID]  | Mandanten-ID (mehrere Werte zulässig)                                                            |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -158,19 +158,19 @@ Installiert Add-ons für den gewünschten Mandanten
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -z | --zip=[ZIP] | Pfad zur Add-on ZIP-Datei |
-| -a | --addon=[ADDON] | Add-on-Kennung (mehrere Werte zulässig) |
-| -t | --tenant=[TENANT-ID] | Mandanten-ID (mehrere Werte zulässig) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -z                   | --zip=[ZIP]           | Pfad zur Add-on ZIP-Datei                                                                        |
+| -a                   | --addon=[ADDON]       | Add-on-Kennung (mehrere Werte zulässig)                                                          |
+| -t                   | --tenant=[TENANT-ID]  | Mandanten-ID (mehrere Werte zulässig)                                                            |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -184,16 +184,16 @@ Zeigt eine Liste mit allen installierten Add-ons zum ausgewählten Mandanten an
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -a | --addon=[ADDON] | Add-on-Kennung (mehrere Werte zulässig) |
-| -t | --tenant=[TENANT-ID] | Mandanten-ID (mehrere Werte zulässig) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung                                                                                     |
+| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------ |
+| -a                   | --addon=[ADDON]      | Add-on-Kennung (mehrere Werte zulässig)                                                          |
+| -t                   | --tenant=[TENANT-ID] | Mandanten-ID (mehrere Werte zulässig)                                                            |
+| -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -207,17 +207,17 @@ Passwort für das Admin-Center zurücksetzen
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -231,18 +231,18 @@ Leert den Cache des Rechtesystems, damit die derzeit konfigurierten Rechte aktue
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -256,20 +256,20 @@ Führt einen Check_MK Export durch
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -l | --exportLanguage=EXPORTLANGUAGE | Festlegung der für den Export verwendeten Sprache (Standard = 0) |
-| -x | --exportStructure=EXPORTSTRUCTURE | Festlegung der für den Export verwendeten Struktur (Standard = 0) |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)              | Beschreibung                                                                                     |
+| -------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------ |
+| -l                   | --exportLanguage=EXPORTLANGUAGE   | Festlegung der für den Export verwendeten Sprache (Standard = 0)                                 |
+| -x                   | --exportStructure=EXPORTSTRUCTURE | Festlegung der für den Export verwendeten Struktur (Standard = 0)                                |
+| -u                   | --user=[USERNAME]                 | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]             | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]            | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE]            | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                         | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -283,18 +283,18 @@ Importiert die Änderungen am Monitoring-Status aus Livestatus nach i-doit
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -308,17 +308,17 @@ Entfernt die Einträge der Attribute `username` und `password` von Benutzerlogin
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --object=[OBJECT] | Objekt-ID des zu deaktivierenden Benutzers |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --object=[OBJECT]     | Objekt-ID des zu deaktivierenden Benutzers                                                       |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -332,17 +332,17 @@ Der Befehl completion gibt das Shell-Vervollständigungsskript aus, das für die
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --debug | Das Debug-Protokoll der Fertigstellung verfolgen |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --debug               | Das Debug-Protokoll der Fertigstellung verfolgen                                                 |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -356,17 +356,17 @@ Aktualisiert den Status veralteter Verträge
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=USER | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=PASSWORD | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=TENANTID | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung                                                                                     |
+| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=USER          | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=PASSWORD  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=TENANTID  | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -380,27 +380,27 @@ Ermöglicht die Erstellung von Revisionen oder den Export eines oder mehrerer Do
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --create_revision | Erzeugt eine oder mehrere Revisionen für bestimmte Dokumente |
-|     | --export | Exportiert ein oder mehrere Dokumente in eine Datei |
-|     | --id=ID | Ein oder mehrere Dokumente nach ID auswählen (mehrere Werte zulässig) |
-|     | --all_documents | Selektiert alle Dokumente |
-|     | --all_category=ALL_CATEGORY | Wählt alle Dokumente in der Kategorie aus |
-|     | --all_template=ALL_TEMPLATE | Selektiert alle Dokumente mit Vorlage |
-|     | --all_object=ALL_OBJECT | Selektiert alle Dokumente mit Objekt |
-|     | --export_format=EXPORT_FORMAT | Exportformat: PDF oder HTML |
-|     | --export_folder=EXPORT_FOLDER | Wohin soll das Dokument exportiert werden? Der Ordner muss existieren und beschreibbar sein |
-| -u | --user=USER | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=PASSWORD | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=TENANTID | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -c | --config=CONFIG | Konfigurationsdatei |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v\|vv\|vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)          | Beschreibung                                                                                     |
+| -------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --create_revision             | Erzeugt eine oder mehrere Revisionen für bestimmte Dokumente                                     |
+|                      | --export                      | Exportiert ein oder mehrere Dokumente in eine Datei                                              |
+|                      | --id=ID                       | Ein oder mehrere Dokumente nach ID auswählen (mehrere Werte zulässig)                            |
+|                      | --all_documents               | Selektiert alle Dokumente                                                                        |
+|                      | --all_category=ALL_CATEGORY   | Wählt alle Dokumente in der Kategorie aus                                                        |
+|                      | --all_template=ALL_TEMPLATE   | Selektiert alle Dokumente mit Vorlage                                                            |
+|                      | --all_object=ALL_OBJECT       | Selektiert alle Dokumente mit Objekt                                                             |
+|                      | --export_format=EXPORT_FORMAT | Exportformat: PDF oder HTML                                                                      |
+|                      | --export_folder=EXPORT_FOLDER | Wohin soll das Dokument exportiert werden? Der Ordner muss existieren und beschreibbar sein      |
+| -u                   | --user=USER                   | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=PASSWORD           | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=TENANTID           | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                        | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -c                   | --config=CONFIG               | Konfigurationsdatei                                                                              |
+| -q                   | --quiet                       | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                     | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction              | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v\|vv\|vvv          | --verbose                     | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -414,18 +414,18 @@ Verlängert die Laufzeit eines Vertrags, dessen letztmögliches Kündigungsdatum
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --simulate | Simuliert die Vertragserweiterung |
-| -u | --user=USER |  Username |
-| -p | --password=PASSWORD | Passwort |
-| -i | --tenantID=TENANTID | Tenant ID [default: 1] |
-| -h | --help | Zeigt Hilfe für den Befehl an |
-| -c | --config=CONFIG | Konfigurationsdatei |
-| -q | --quit | Es wird keine Nachricht angezeigt |
-| -v | --version | Zeigt die Version der Anwendung an |
-|        | --ansi / --no-ansi | Erzwingt ANSI Ausgabe / Deaktiviert ANSI Ausgabe |
-| -v / -vv / -vvv | --verbose | Erhöht die Ausführlichkeit der Nachricht [default: 1] |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung                                          |
+| -------------------- | -------------------- | ----------------------------------------------------- |
+|                      | --simulate           | Simuliert die Vertragserweiterung                     |
+| -u                   | --user=USER          | Username                                              |
+| -p                   | --password=PASSWORD  | Passwort                                              |
+| -i                   | --tenantID=TENANTID  | Tenant ID [default: 1]                                |
+| -h                   | --help               | Zeigt Hilfe für den Befehl an                         |
+| -c                   | --config=CONFIG      | Konfigurationsdatei                                   |
+| -q                   | --quit               | Es wird keine Nachricht angezeigt                     |
+| -v                   | --version            | Zeigt die Version der Anwendung an                    |
+|                      | --ansi<br>--no-ansi   | Erzwingt ANSI Ausgabe / Deaktiviert ANSI Ausgabe      |
+| -v / -vv / -vvv      | --verbose            | Erhöht die Ausführlichkeit der Nachricht [default: 1] |
 
 **Beispiel zur Verwendung**
 
@@ -439,16 +439,16 @@ Zeigt in Verbindung mit einem anderen Befehl dessen Nutzung, Argumente und Optio
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --format=[FORMAT] | Format der Ausgabe festlegen (txt, xml, json or md) [Default: txt] |
-|     | --raw | Ausgabe der Befehls-Hilfe |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung                                                                                     |
+| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --format=[FORMAT]    | Format der Ausgabe festlegen (txt, xml, json or md) [Default: txt]                               |
+|                      | --raw                | Ausgabe der Befehls-Hilfe                                                                        |
+| -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -462,21 +462,21 @@ Führt den Import einer CSV-Datei mit den gewünschten Importparametern durch
 
  **Optionen**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --importFile=IMPORTFILE | Gibt die Datei und deren Pfad an, die für den Import verwendet werden soll |
-|     | --importProfileId=IMPORTPROFILEID | Legt fest, mit welchem Profil der Import ausgeführt werden soll |
-|     | --csvSeparator=CSVSEPARATOR | Definiert die Trennzeichen für den Import |
-|     | --multiValueMode=MULTIVALUEMODE | Legt den Modus für Multi-Value-Kategorien fest (Mögliche Werte: "row", "column" oder "comma") |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)              | Beschreibung                                                                                     |
+| -------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --importFile=IMPORTFILE           | Gibt die Datei und deren Pfad an, die für den Import verwendet werden soll                       |
+|                      | --importProfileId=IMPORTPROFILEID | Legt fest, mit welchem Profil der Import ausgeführt werden soll                                  |
+|                      | --csvSeparator=CSVSEPARATOR       | Definiert die Trennzeichen für den Import                                                        |
+|                      | --multiValueMode=MULTIVALUEMODE   | Legt den Modus für Multi-Value-Kategorien fest (Mögliche Werte: "row", "column" oder "comma")    |
+| -u                   | --user=[USERNAME]                 | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]             | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]            | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                         | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -490,17 +490,17 @@ Gibt eine Auflistung der Import-Profile für den CSV-Import zurück
 
 **Optionen**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -514,22 +514,22 @@ Führt einen h-inventory Import einer kompatiblen XML-Datei durch
 
 **Optionen**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --importFile=IMPORTFILE | Gibt die Datei und deren Pfad an, die für den Import verwendet werden soll |
-|     | --usage | Weitere detaillierte Informationen zur Verwendung des Commands |
-|     | --objectType=OBJECTTYPE | Importiert den angegebenen Objekttypen |
-|     | --objectId=OBJECTID | Importiert ausschließlich das angegebene Objekt |
-| -f | --force | Erzwingt das Aktualisieren bestehender Objekte aber überschreibt die importierten Kategorien |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)    | Beschreibung                                                                                     |
+| -------------------- | ----------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --importFile=IMPORTFILE | Gibt die Datei und deren Pfad an, die für den Import verwendet werden soll                       |
+|                      | --usage                 | Weitere detaillierte Informationen zur Verwendung des Commands                                   |
+|                      | --objectType=OBJECTTYPE | Importiert den angegebenen Objekttypen                                                           |
+|                      | --objectId=OBJECTID     | Importiert ausschließlich das angegebene Objekt                                                  |
+| -f                   | --force                 | Erzwingt das Aktualisieren bestehender Objekte aber überschreibt die importierten Kategorien     |
+| -u                   | --user=[USERNAME]       | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]   | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]  | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                  | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                 | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version               | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction        | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose               | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -543,26 +543,26 @@ Führt einen JDisc-Import nach i-doit durch.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -r | --profile=PROFILE | Angabe/Auswahl des JDisc-Profils, das für den Import verwendet werden soll |
-| -g | --group=GROUP | Angabe/Auswahl der Gruppen ID, die für den Import verwendet werden soll |
-| -x | --mode=MODE | Auswahl des Import-Modus. Folgende IDs stehen zur Verfügung:<br>**1**: "Erstellen": Der Import-Modus "Erstellen" wird alle gefundenen Objekte erstellen, ohne zu prüfen, ob diese bereits existieren.<br>**2**: "Aktualisieren": Der Import-Modus "Aktualisieren" wird nur Objekte erstellen, die in i-doit nicht gefunden werden konnten. Kategorien von bereits existierenden Objekten werden (wenn nötig) um neue Daten ergänzt.<br>**3**: "Überschreiben": Der Import-Modus "Überschreiben" verhält sich genauso wie der Modus "Aktualisieren" mit dem Unterschied, das Listen-Kategorien erst geleert und dann neu angelegt werden.<br>**4**: "Aktualisieren (Neu inventarisiert)": Mit dem Zusatz "(Neu inventarisiert)" werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet.<br>**5**: "Überschreiben (Neu inventarisiert)":  Mit dem Zusatz "(Neu inventarisiert)" werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet.<br>**6**: Der Import-Modus "Erstelle nur neu gescannte Geräte" erstellt nur neu gescannte Objekte, existierende werden übersprungen.<br>**7**: Der Import-Modus "Aktualisieren (Nur existierende Objekte) erstellt nur bereits existierende Objekte. Es werden keine neuen Objekte erstellt. |
-| -s | --server=SERVER | Angabe der Server-ID um diesen auszuwählen |
-| -o | --overwriteHost | Festlegen, ob sich überschneidende Hostadressen überschrieben werden sollen |
-| -l | -detailedLogging[=DETAILEDLOGGING] | Erhöht die Protokollierungsstufe:<br>**1**: auf niedriger Log-Ebene werden nur Hinweise und Warnungen protokolliert<br>**2**: zusätzlich zur niedrigen Log-Ebene werden Fehler protokolliert<br>**3**: zusätzlich zur normalen Log-Ebene werden Debug-Meldungen protokolliert (speicherintensiv) |
-| -b | --regenerateSearchIndex | Führt automatisch die Erneuerung des Suchindex aus |
-|    | --listProfiles | Erzeugt eine Liste der verfügbaren Profile |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)               | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| -------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -r                   | --profile=PROFILE                  | Angabe/Auswahl des JDisc-Profils, das für den Import verwendet werden soll                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -g                   | --group=GROUP                      | Angabe/Auswahl der Gruppen ID, die für den Import verwendet werden soll                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| -x                   | --mode=MODE                        | Auswahl des Import-Modus. Folgende IDs stehen zur Verfügung:<br>**1**: "Erstellen": Der Import-Modus "Erstellen" wird alle gefundenen Objekte erstellen, ohne zu prüfen, ob diese bereits existieren.<br>**2**: "Aktualisieren": Der Import-Modus "Aktualisieren" wird nur Objekte erstellen, die in i-doit nicht gefunden werden konnten. Kategorien von bereits existierenden Objekten werden (wenn nötig) um neue Daten ergänzt.<br>**3**: "Überschreiben": Der Import-Modus "Überschreiben" verhält sich genauso wie der Modus "Aktualisieren" mit dem Unterschied, das Listen-Kategorien erst geleert und dann neu angelegt werden.<br>**4**: "Aktualisieren (Neu inventarisiert)": Mit dem Zusatz "(Neu inventarisiert)" werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet.<br>**5**: "Überschreiben (Neu inventarisiert)":  Mit dem Zusatz "(Neu inventarisiert)" werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet.<br>**6**: Der Import-Modus "Erstelle nur neu gescannte Geräte" erstellt nur neu gescannte Objekte, existierende werden übersprungen.<br>**7**: Der Import-Modus "Aktualisieren (Nur existierende Objekte) erstellt nur bereits existierende Objekte. Es werden keine neuen Objekte erstellt. |
+| -s                   | --server=SERVER                    | Angabe der Server-ID um diesen auszuwählen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -o                   | --overwriteHost                    | Festlegen, ob sich überschneidende Hostadressen überschrieben werden sollen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| -l                   | -detailedLogging[=DETAILEDLOGGING] | Erhöht die Protokollierungsstufe:<br>**1**: auf niedriger Log-Ebene werden nur Hinweise und Warnungen protokolliert<br>**2**: zusätzlich zur niedrigen Log-Ebene werden Fehler protokolliert<br>**3**: zusätzlich zur normalen Log-Ebene werden Debug-Meldungen protokolliert (speicherintensiv)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| -b                   | --regenerateSearchIndex            | Führt automatisch die Erneuerung des Suchindex aus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|                      | --listProfiles                     | Erzeugt eine Liste der verfügbaren Profile                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -u                   | --user=[USERNAME]                  | Username eines Benutzers, der zur Ausführung berechtigt ist                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| -p                   | --password=[PASSWORD]              | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| -i                   | --tenantId=[TENANT-ID]             | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| -c                   | --config=[CONFIG-FILE]             | Angabe des Pfades zur Konfigurationsdatei                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| -h                   | --help                             | Hilfenachricht zur Einblendung weiterer Informationen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| -q                   | --quiet                            | Quiet-Mode um die Rückgabe zu deaktivieren                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -V                   | --version                          | Ausgabe der Version der i-doit Console                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                      | --ansi<br>--no-ansi                | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -n                   | --no-interaction                   | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| -v / -vv / -vvv      | --verbose                          | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 **Beispiel zur Verwendung**
 
@@ -576,23 +576,23 @@ Löst einen JDisc Discovery Job aus.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -s | --server=SERVER | Auswahl des JDisc-Servers |
-| -j | --discoveryJob=DISCOVERYJOB | Auswahl des Discovery Jobs (Standard: "Discover all") |
-| -d | --deviceHostname=DEVICEHOSTNAME | Auswahl des Geräts anhand des Hostnames |
-| -a | --deviceHostAddress=DEVICEHOSTADDRESS | Auswahl des Geräts anhand der Hostadresse |
-| -l | --showLog | Zeigt das Log während des Discoveries an |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)                  | Beschreibung                                                                                     |
+| -------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| -s                   | --server=SERVER                       | Auswahl des JDisc-Servers                                                                        |
+| -j                   | --discoveryJob=DISCOVERYJOB           | Auswahl des Discovery Jobs (Standard: "Discover all")                                            |
+| -d                   | --deviceHostname=DEVICEHOSTNAME       | Auswahl des Geräts anhand des Hostnames                                                          |
+| -a                   | --deviceHostAddress=DEVICEHOSTADDRESS | Auswahl des Geräts anhand der Hostadresse                                                        |
+| -l                   | --showLog                             | Zeigt das Log während des Discoveries an                                                         |
+| -u                   | --user=[USERNAME]                     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]                 | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]                | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE]                | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi                   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -606,18 +606,18 @@ Importiert Inhalte aus einer Syslog Server Textdatei in das i-doit Logbuch.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -631,20 +631,20 @@ Führt einen Import einer XML-Datei nach i-doit durch.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --importFile=IMPORTFILE | Angabe der Import-Datei sowie deren Pfad |
-|     | --usage | Detaillierte Informationen zur Verwendung des Commands |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)    | Beschreibung                                                                                     |
+| -------------------- | ----------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --importFile=IMPORTFILE | Angabe der Import-Datei sowie deren Pfad                                                         |
+|                      | --usage                 | Detaillierte Informationen zur Verwendung des Commands                                           |
+| -u                   | --user=[USERNAME]       | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]   | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]  | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE]  | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                  | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                 | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version               | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction        | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose               | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -658,29 +658,61 @@ Installieren Sie die i-doit Anwendung
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --root-user=ROOT-USER | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --root-password[=ROOT-PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-|  | --host=HOST | Benutzername des privilegierten DB-Benutzers [Standard: "root"] |
-|  | --port=PORT | Port für DB-Verbindung [standardmäßig: 3306] |
-| -d | --database=DATABASE | i-doit System Datenbankname [Standard: "idoit_system_temp"] |
-| -U | --user=USER | Benutzername der i-doit-System-DB [Standard: "idoit"] |
-| -P | --password[=PASSWORD] | Passwort für i-doit system DB |
-|  | --admin-password[=ADMIN-PASSWORD] | Passwort für i-doit admin center |
-| -l | --license-server=LICENSE-SERVER | Pfad für den i-doit Lizenzserver [Standard: "https://lizenzen.i-doit.com"] |
-| -k | --key[=KEY] | Lizenzschlüssel für i-doit |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)              | Beschreibung                                                                                     |
+| -------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --root-user=ROOT-USER             | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --root-password[=ROOT-PASSWORD]   | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+|                      | --host=HOST                       | Benutzername des privilegierten DB-Benutzers [Standard: "root"]                                  |
+|                      | --port=PORT                       | Port für DB-Verbindung [standardmäßig: 3306]                                                     |
+| -d                   | --database=DATABASE               | i-doit System Datenbankname [Standard: "idoit_system_temp"]                                      |
+| -U                   | --user=USER                       | Benutzername der i-doit-System-DB [Standard: "idoit"]                                            |
+| -P                   | --password[=PASSWORD]             | Passwort für i-doit system DB                                                                    |
+|                      | --admin-password[=ADMIN-PASSWORD] | Passwort für i-doit admin center                                                                 |
+| -l                   | --license-server=LICENSE-SERVER   | Pfad für den i-doit Lizenzserver [Standard: "https://lizenzen.i-doit.com"]                       |
+| -k                   | --key[=KEY]                       | Lizenzschlüssel für i-doit                                                                       |
+| -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                         | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
 ```shell
 sudo -u www-data php console.php install
+```
+
+### jdisc-create-server
+
+Erzeugt einen JDisc Server.
+
+**Optionen:**
+
+| Parameter (Kurzform) | Parameter (Langform)              | Beschreibung                                                                                     |
+| -------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --default                         | Als Standardserver festlegen                                                                     |
+|                      | --title=[TITLE]                   | Name für die JDisc-Server-Konfiguration [Standard: JDisc Server]                                 |
+|                      | --jdisc-host=[JDISC-HOST]         | JDisc Hostname oder IP [Standard: localhost]                                                     |
+|                      | --jdisc-port=[JDISC-PORT]         | JDisc Port [Standard: 25321]                                                                     |
+|                      | --jdisc-database=[JDISC-DATABASE] | JDisc Datenbankname [Standard: inventory]                                                        |
+|                      | --jdisc-username=[JDISC-USERNAME] | JDisc Datenbank Benutzername [Standard: postgresro]                                              |
+|                      | --jdisc-password=[JDISC-PASSWORD] | JDisc Datenbank Passwort                                                                         |
+|                      | --allow-older-imports             | Import älterer JDisc-Versionen zulassen [Standard: Nein]                                         |
+| -u                   | --user=USER                       | Benutzername der i-doit-System-DB [Standard: "idoit"]                                            |
+| -p                   | --password[=PASSWORD]             | Passwort für i-doit system DB                                                                    |
+| -i                   | --tenantId=[TENANT-ID]            | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                         | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+
+**Beispiel zur Verwendung**
+
+```shell
+sudo -u www-data php console.php jdisc-create-server -u admin -p admin --default --title JDisc Server --jdisc-host localhost --jdisc-port 25321
 ```
 
 ### ldap-sync
@@ -689,24 +721,24 @@ Synchronisiert Benutzer aus dem LDAP nach i-doit und legt diese als Personenobje
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -l | --ldapServerId=LDAPSERVERID | Gibt die ID des LDAP-Servers an, von dem die User synchronisiert werden sollen   <br>Wird keine ldapServerId angegeben werden alle Aktiven Server synchronisiert |
-|     | --dumpConfig | Gibt die derzeitige Konfiguration aus der Konfigurationsdatei aus |
-|     | --connectionRankingActive[=CONNECTIONRANKINGACTIVE] | Option, die alle Verbindungen von allen reaktivierten Benutzern reaktiviert.  <br>Standardkonfiguration ist die Experteneinstellung 'ldap.connection-ranking-active' (Tenant-wide) mit dem Wert '1'. |
-|     | --dropExistingRelations[=DROPEXISTINGRELATIONS] | Wenn eine bestehende ldap-Gruppe Gruppenmitglied-Benutzer hat, die nicht zu diesen synchronisierten Benutzern gehören,  <br>werden diese gelöscht.  <br>1 = bestehende Beziehungen löschen, 0 = bestehende Beziehungen ignorieren [Standard: 0]. |
-|     | --archiveDeletedGroups | Wenn eine gelöschte ldap-Gruppe in i-doit verbleibt, dann archiviere oder lösche sie.  <br>Standard = false  <br>Mögliche Werte sind archive oder delete |
-|     | --useDefaultTemplates | Verwende das standard Template wenn ein Objekt über dieses Kommando erstellt wird (v1.18) |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)                                | Beschreibung                                                                                                                                                                                                                                     |
+| -------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| -l                   | --ldapServerId=LDAPSERVERID                         | Gibt die ID des LDAP-Servers an, von dem die User synchronisiert werden sollen   <br>Wird keine ldapServerId angegeben werden alle Aktiven Server synchronisiert                                                                                 |
+|                      | --dumpConfig                                        | Gibt die derzeitige Konfiguration aus der Konfigurationsdatei aus                                                                                                                                                                                |
+|                      | --connectionRankingActive[=CONNECTIONRANKINGACTIVE] | Option, die alle Verbindungen von allen reaktivierten Benutzern reaktiviert.  <br>Standardkonfiguration ist die Experteneinstellung 'ldap.connection-ranking-active' (Tenant-wide) mit dem Wert '1'.                                             |
+|                      | --dropExistingRelations[=DROPEXISTINGRELATIONS]     | Wenn eine bestehende ldap-Gruppe Gruppenmitglied-Benutzer hat, die nicht zu diesen synchronisierten Benutzern gehören,  <br>werden diese gelöscht.  <br>1 = bestehende Beziehungen löschen, 0 = bestehende Beziehungen ignorieren [Standard: 0]. |
+|                      | --archiveDeletedGroups                              | Wenn eine gelöschte ldap-Gruppe in i-doit verbleibt, dann archiviere oder lösche sie.  <br>Standard = false  <br>Mögliche Werte sind archive oder delete                                                                                         |
+|                      | --useDefaultTemplates                               | Verwende das standard Template wenn ein Objekt über dieses Kommando erstellt wird (v1.18)                                                                                                                                                        |
+| -u                   | --user=[USERNAME]                                   | Username eines Benutzers, der zur Ausführung berechtigt ist                                                                                                                                                                                      |
+| -p                   | --password=[PASSWORD]                               | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                                                                                                                                                                   |
+| -i                   | --tenantId=[TENANT-ID]                              | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                                                                                                                                                                              |
+| -c                   | --config=[CONFIG-FILE]                              | Angabe des Pfades zur Konfigurationsdatei                                                                                                                                                                                                        |
+| -h                   | --help                                              | Hilfenachricht zur Einblendung weiterer Informationen                                                                                                                                                                                            |
+| -q                   | --quiet                                             | Quiet-Mode um die Rückgabe zu deaktivieren                                                                                                                                                                                                       |
+| -V                   | --version                                           | Ausgabe der Version der i-doit Console                                                                                                                                                                                                           |
+|                      | --ansi<br>--no-ansi                                 | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                                                                                                             |
+| -n                   | --no-interaction                                    | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                                                                                                                                                                      |
+| -v / -vv / -vvv      | --verbose                                           | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)                                                                                                                                                 |
 
 **Beispiel zur Verwendung**
 
@@ -720,19 +752,19 @@ Synchronisiert LDAP DNs mit den i-doit Usern.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --ldapServerId=LDAPSERVERID | Angabe des LDAP-Servers über die ID |
-| -o | --objectType=OBJECTTYPE | Angabe des Objekttyps als Konstante (z.B. C__OBJTYPE__SERVER) |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)        | Beschreibung                                                                                     |
+| -------------------- | --------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --ldapServerId=LDAPSERVERID | Angabe des LDAP-Servers über die ID                                                              |
+| -o                   | --objectType=OBJECTTYPE     | Angabe des Objekttyps als Konstante (z.B. C__OBJTYPE__SERVER)                                    |
+| -u                   | --user=[USERNAME]           | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]       | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]      | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                      | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                     | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                   | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -746,10 +778,10 @@ Listet alle Befehle auf. Format der Ausgabe kann geändert werden.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --format=[FORMAT] | Format der Ausgabe festlegen (txt, xml, json or md) [Default: txt] |
-|     | --raw | Ausgabe der Befehls-Hilfe |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung                                                       |
+| -------------------- | -------------------- | ------------------------------------------------------------------ |
+|                      | --format=[FORMAT]    | Format der Ausgabe festlegen (txt, xml, json or md) [Default: txt] |
+|                      | --raw                | Ausgabe der Befehls-Hilfe                                          |
 
 **Beispiel zur Verwendung**
 
@@ -763,18 +795,18 @@ Fügt eine Lizenz für i-doit hinzu
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -l | --license=[LICENSE] | Pfadangabe zur Lizenzdatei (/path/to/license/file.key) |
-| -t | --tenant=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -l                   | --license=[LICENSE]   | Pfadangabe zur Lizenzdatei (/path/to/license/file.key)                                           |
+| -t                   | --tenant=[TENANT-ID]  | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -788,18 +820,18 @@ Ordnet eine Hosting Lizenz einem Mandaten zu
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --count=[COUNT] | Anzahl zu lizenzierender Objekte [Default: 0] |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --count=[COUNT]        | Anzahl zu lizenzierender Objekte [Default: 0]                                                    |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -813,17 +845,17 @@ Importiert Lizenzen vom i-doit Lizenz-Server
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -l | --license-server=[LICENSE-SERVER] | Pfad zum i-doit Lizenz-Server [Default: "https://lizenzen.i-doit.com"] |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)              | Beschreibung                                                                                     |
+| -------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]                 | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]             | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -l                   | --license-server=[LICENSE-SERVER] | Pfad zum i-doit Lizenz-Server [Default: "https://lizenzen.i-doit.com"]                           |
+| -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                         | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -837,18 +869,18 @@ Setzt einen Lizenzschlüssel für i-doit
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -l | --license-server=[LICENSE-SERVER] | Pfad zum i-doit Lizenz-Server [Default: "[https://lizenzen.i-doit.com](https://lizenzen.i-doit.com)"] |
-| -k | --key=[KEY] | Lizenzschlüssel für i-doit |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)              | Beschreibung                                                                                          |
+| -------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| -u                   | --user=[USERNAME]                 | Username eines Benutzers, der zur Ausführung berechtigt ist                                           |
+| -p                   | --password=[PASSWORD]             | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                        |
+| -l                   | --license-server=[LICENSE-SERVER] | Pfad zum i-doit Lizenz-Server [Default: "[https://lizenzen.i-doit.com](https://lizenzen.i-doit.com)"] |
+| -k                   | --key=[KEY]                       | Lizenzschlüssel für i-doit                                                                            |
+| -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                                 |
+| -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                            |
+| -V                   | --version                         | Ausgabe der Version der i-doit Console                                                                |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                  |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                           |
+| -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)      |
 
 **Beispiel zur Verwendung**
 
@@ -862,15 +894,15 @@ Listet alle installierten Lizenzen
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -t | --tenant=[TENANT] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung                                                                                     |
+| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------ |
+| -t                   | --tenant=[TENANT]    | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -884,17 +916,17 @@ Löscht eine Lizenz aus i-doit
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -l | --license=[LICENSE] | Lizenz-ID zu der zu löschenden Lizenz |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -l                   | --license=[LICENSE]   | Lizenz-ID zu der zu löschenden Lizenz                                                            |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -908,18 +940,18 @@ Archiviert die Logbucheinträge mit einem definierten Alter, gemäß den Einstel
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -933,17 +965,17 @@ Verschickt E-Mails mit geplanten Wartungen gemäß den im Add-on "Wartungen" fes
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -957,14 +989,14 @@ Migriert hochgeladene Dateien in i-doit <v1.13 zu v.1.14>
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung                                                                                     |
+| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------ |
+| -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -981,20 +1013,20 @@ Exportiert die Nagios-Einstellungen und i-doit Objekte in Nagios-Konfigurationsd
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --nagiosHostId=NAGIOSHOSTID | Angabe des Nagios-Hosts, der für den Export verwendet werden soll |
-|     | --validate | Validiert die Exportdateien |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)        | Beschreibung                                                                                     |
+| -------------------- | --------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --nagiosHostId=NAGIOSHOSTID | Angabe des Nagios-Hosts, der für den Export verwendet werden soll                                |
+|                      | --validate                  | Validiert die Exportdateien                                                                      |
+| -u                   | --user=[USERNAME]           | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]       | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]      | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE]      | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                      | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                     | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                   | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1011,18 +1043,18 @@ Importiert Monitoring Statusänderungen aus den NDOUtils in das i-doit Logbuch.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1036,18 +1068,18 @@ Listet alle [Benachrichtigungen](../../../auswertungen/benachrichtigungen.md) au
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1061,20 +1093,20 @@ Verschickt die auf der i-doit Oberfläche konfigurierten Benachrichtigungen
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --notification-ids=NOTIFICATION-IDS | Übergabe bestimmter zu sendender Benachrichtigungs-IDs 1,2,3 |
-|     | --notification-type-ids=NOTIFICATION-TYPE-IDS | Übergeben Sie spezifische IDs für die zu sendenden Benachrichtigungen 1,2,3 |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)                          | Beschreibung                                                                                     |
+| -------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --notification-ids=NOTIFICATION-IDS           | Übergabe bestimmter zu sendender Benachrichtigungs-IDs 1,2,3                                     |
+|                      | --notification-type-ids=NOTIFICATION-TYPE-IDS | Übergeben Sie spezifische IDs für die zu sendenden Benachrichtigungen 1,2,3                      |
+| -u                   | --user=[USERNAME]                             | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]                         | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]                        | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE]                        | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                                        | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                                       | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                                     | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi                           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                              | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                                     | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1088,22 +1120,22 @@ Exportiert einen Report in das gewünschte Dateiformat.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -r | --reportId=REPORTID | ID des zu exportierenden Reports |
-| -d | --exportPath=EXPORTPATH | Pfad, zu dem der Export erfolgen soll |
-| -f | --exportFilename=EXPORTFILENAME | Dateiname der Exportdatei ohne Dateiendung |
-| -t | --exportFileType=EXPORTFILETYPE | Dateityp der Exportdatei. Mögliche Werte: csv, txt, pdf, xml (Standard:  "csv") |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)            | Beschreibung                                                                                     |
+| -------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------ |
+| -r                   | --reportId=REPORTID             | ID des zu exportierenden Reports                                                                 |
+| -d                   | --exportPath=EXPORTPATH         | Pfad, zu dem der Export erfolgen soll                                                            |
+| -f                   | --exportFilename=EXPORTFILENAME | Dateiname der Exportdatei ohne Dateiendung                                                       |
+| -t                   | --exportFileType=EXPORTFILETYPE | Dateityp der Exportdatei. Mögliche Werte: csv, txt, pdf, xml (Standard:  "csv")                  |
+| -u                   | --user=[USERNAME]               | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]           | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]          | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE]          | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                          | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                         | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                       | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi             | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                       | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1117,19 +1149,19 @@ Sucht nach Inhalten in der Dokumentation
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --searchString=SEARCHSTRING | Inhalt, nach dem gesucht werden soll |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)        | Beschreibung                                                                                     |
+| -------------------- | --------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --searchString=SEARCHSTRING | Inhalt, nach dem gesucht werden soll                                                             |
+| -u                   | --user=[USERNAME]           | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]       | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]      | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE]      | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                      | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                     | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                   | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1143,21 +1175,21 @@ Erneuert den Suchindex, indem dieser gelöscht und neu geschrieben wird.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --update | Anstatt nur einen neuen Index zu erstellen, werden die aktuellen Index-Dokumente überschrieben |
-|     | --category=CATEGORY | Whitelist der Kategorien |
-|     | --dry-run | Reindex ausführen, ohne zu speichern |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --update               | Anstatt nur einen neuen Index zu erstellen, werden die aktuellen Index-Dokumente überschrieben   |
+|                      | --category=CATEGORY    | Whitelist der Kategorien                                                                         |
+|                      | --dry-run              | Reindex ausführen, ohne zu speichern                                                             |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1171,18 +1203,18 @@ Mit diesem Befehl können Sie html-Tags im Beschreibungsfeld aller Kategorien un
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1196,18 +1228,18 @@ Synchronisiert dynamische Gruppenmitglieder neu.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -g | --groups=GROUPS | Kommaseparierte Liste von IDs der dynamischen Gruppen |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -g                   | --groups=GROUPS        | Kommaseparierte Liste von IDs der dynamischen Gruppen                                            |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1221,18 +1253,18 @@ Legt den Wert des Auto-Increment des Systems fest. Dies beeinflusst Objekt-IDs, 
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --autoIncrement=AUTOINCREMENT | Zahl, auf die das Auto-Increment festgelegt werden soll |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)          | Beschreibung                                                                                     |
+| -------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --autoIncrement=AUTOINCREMENT | Zahl, auf die das Auto-Increment festgelegt werden soll                                          |
+| -u                   | --user=[USERNAME]             | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]         | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]        | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                        | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                       | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                     | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction              | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                     | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1246,18 +1278,18 @@ Bereinigt optional Kategorieeinträge, die sich im Status unfertig, archiviert o
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --categoryStatus=CATEGORYSTATUS | Use to start cleaning up the specified status:<br>**1** für "unfertige" Kategorieeinträge<br>**3** für "archivierte" Kategorieeinträge<br>**4** für "gelöschte" Kategorieeinträge | |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)            | Beschreibung                                                                                                                                                                      |
+| -------------------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                      | --categoryStatus=CATEGORYSTATUS | Use to start cleaning up the specified status:<br>**1** für "unfertige" Kategorieeinträge<br>**3** für "archivierte" Kategorieeinträge<br>**4** für "gelöschte" Kategorieeinträge |
+| -u                   | --user=[USERNAME]               | Username eines Benutzers, der zur Ausführung berechtigt ist                                                                                                                       |
+| -p                   | --password=[PASSWORD]           | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                                                                                                    |
+| -i                   | --tenantId=[TENANT-ID]          | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                                                                                                               |
+| -h                   | --help                          | Hilfenachricht zur Einblendung weiterer Informationen                                                                                                                             |
+| -q                   | --quiet                         | Quiet-Mode um die Rückgabe zu deaktivieren                                                                                                                                        |
+| -V                   | --version                       | Ausgabe der Version der i-doit Console                                                                                                                                            |
+|                      | --ansi<br>--no-ansi             | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                                              |
+| -n                   | --no-interaction                | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                                                                                                       |
+| -v / -vv / -vvv      | --verbose                       | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)                                                                                  |
 
 **Beispiel zur Verwendung**
 
@@ -1271,14 +1303,14 @@ Prüft, ob eine neue i-doit Version verfügbar ist.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung                                                                                     |
+| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------ |
+| -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1292,19 +1324,19 @@ Konvertiert alle nicht INNODB Tabellen nach INNODB.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --convert | Startet den Vorgang, alle nicht UTF-8-tables zu konvertieren |
-|     | --table=[TABLE] | Tabelle die überprüft und konvertiert werden soll |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --convert              | Startet den Vorgang, alle nicht UTF-8-tables zu konvertieren                                     |
+|                      | --table=[TABLE]        | Tabelle die überprüft und konvertiert werden soll                                                |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1318,18 +1350,18 @@ Konvertiert alle nicht UTF-8 Datentypen nach UTF-8.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --convert | Startet den Vorgan, alle nicht UTF-8-tables zu konvertieren |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --convert              | Startet den Vorgang, alle nicht UTF-8-tables zu konvertieren                                     |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1343,18 +1375,18 @@ Führt die Standortkorrektur aus der GUI in der Konsole aus
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1368,18 +1400,18 @@ Verschickt eine E-Mail Benachrichtigung für Wartungskontakte.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1393,19 +1425,19 @@ Bereinigt alle Objekte mit einem selbst definierbarem Status.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --objectStatus=OBJECTSTATUS | Legt fest, welcher Status bereinigt werden soll:  1: "unfertig"; 3: "archiviert"; 4: "gelöscht" |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)        | Beschreibung                                                                                     |
+| -------------------- | --------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --objectStatus=OBJECTSTATUS | Legt fest, welcher Status bereinigt werden soll:  1: "unfertig"; 3: "archiviert"; 4: "gelöscht"  |
+| -u                   | --user=[USERNAME]           | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]       | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]      | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE]      | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                      | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                     | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                   | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1419,19 +1451,19 @@ Erneuert die Bezeichnungen aller Objektbeziehungen.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-|     | --categoryConstant=CATEGORYCONSTANT | Konstante der Kategorie, für die der Vorgang ausgeführt werden soll (z.B. C__CATG__IP) |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)                | Beschreibung                                                                                     |
+| -------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --categoryConstant=CATEGORYCONSTANT | Konstante der Kategorie, für die der Vorgang ausgeführt werden soll (z.B. C__CATG__IP)           |
+| -u                   | --user=[USERNAME]                   | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]               | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]              | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE]              | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                              | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                             | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                           | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi                 | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                    | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                           | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1445,25 +1477,49 @@ Aktualisiert alle verfügbaren Listenkonfigurationen (Objekttypen und Kategorien
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -a  | --all | Verarbeitet alle Objekttyp-Tabellenkonfigurationen |
-| -o | --object-types=OBJECT-TYPES | Nur bestimmte Objekttyp-Tabellenkonfigurationen über ihre Konstante verarbeiten (es ist möglich, eine durch Komma getrennte Liste von Konstanten zu übergeben) |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)        | Beschreibung                                                                                                                                                   |
+| -------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -a                   | --all                       | Verarbeitet alle Objekttyp-Tabellenkonfigurationen                                                                                                             |
+| -o                   | --object-types=OBJECT-TYPES | Nur bestimmte Objekttyp-Tabellenkonfigurationen über ihre Konstante verarbeiten (es ist möglich, eine durch Komma getrennte Liste von Konstanten zu übergeben) |
+| -u                   | --user=[USERNAME]           | Username eines Benutzers, der zur Ausführung berechtigt ist                                                                                                    |
+| -p                   | --password=[PASSWORD]       | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                                                                                 |
+| -i                   | --tenantId=[TENANT-ID]      | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                                                                                            |
+| -c                   | --config=[CONFIG-FILE]      | Angabe des Pfades zur Konfigurationsdatei                                                                                                                      |
+| -h                   | --help                      | Hilfenachricht zur Einblendung weiterer Informationen                                                                                                          |
+| -q                   | --quiet                     | Quiet-Mode um die Rückgabe zu deaktivieren                                                                                                                     |
+| -V                   | --version                   | Ausgabe der Version der i-doit Console                                                                                                                         |
+|                      | --ansi<br>--no-ansi         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                           |
+| -n                   | --no-interaction            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                                                                                    |
+| -v / -vv / -vvv      | --verbose                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)                                                               |
 
 **Beispiel zur Verwendung**
 
 ```shell
 sudo -u www-data php console.php system-refresh-table-configuration --user admin --password admin --tenantId 1
+```
+
+### system-set-settings
+
+Ermöglicht das setzen von Admin Center Einstellungen über die CLI
+
+**Optionen:**
+
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -s                   | --settings=[SETTINGS] | JSON mit Key = Values z.B.: {"proxy.active": 1, [...]}                                           |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+
+**Beispiel zur Verwendung**
+
+```shell
+sudo -u www-data php system-set-settings -u admin -p admin --settings="{\"proxy.active\":1,\"proxy.host\":\"http://myproxy.net\",\"unknown-setting\": 4}" -n
 ```
 
 ### tenant-create
@@ -1472,20 +1528,20 @@ Erstellt einen neuen Mandanten
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --root-user=[ROOT-USER] | Benutzername des privilegierten DB-Benutzers [default: "root"] |
-| -p | --root-password=[ROOT-PASSWORD] | Passwort des privilegierten DB-Benutzers |
-| -U | --user=[USER] | Benutzername der DB für neuen Mandanten [default: "idoit"] |
-| -P | --password=[PASSWORD] | Password der DB für den neuen Mandanten |
-| -d | --database=[DATABASE] | DB Name für den neuen Mandanten [default: "idoit_data"] |
-| -t | --title=[TITLE] | Name des neuen Mandanten[default: "Your company name"] |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)            | Beschreibung                                                                                     |
+| -------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --root-user=[ROOT-USER]         | Benutzername des privilegierten DB-Benutzers [default: "root"]                                   |
+| -p                   | --root-password=[ROOT-PASSWORD] | Passwort des privilegierten DB-Benutzers                                                         |
+| -U                   | --user=[USER]                   | Benutzername der DB für neuen Mandanten [default: "idoit"]                                       |
+| -P                   | --password=[PASSWORD]           | Password der DB für den neuen Mandanten                                                          |
+| -d                   | --database=[DATABASE]           | DB Name für den neuen Mandanten [default: "idoit_data"]                                          |
+| -t                   | --title=[TITLE]                 | Name des neuen Mandanten[default: "Your company name"]                                           |
+| -h                   | --help                          | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                         | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                       | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi             | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                       | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1499,17 +1555,17 @@ Deaktiviert einen existierenden Mandaten.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1523,17 +1579,17 @@ Aktiviert einen bestehenden Mandanten.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1547,14 +1603,14 @@ Listet alle bestehenden Mandanten auf.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung                                                                                     |
+| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------ |
+| -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1568,17 +1624,17 @@ Entfernt einen bestehenden Mandanten
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenant=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenant=[TENANT-ID]  | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1592,16 +1648,16 @@ Deinstalliert die genutzte i-doit Installation
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1615,18 +1671,18 @@ Update von i-doit installieren.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -z | --zip=[ZIP] | Angabe des Pfades zum Update-Paket |
-|     | --v=V | Zu installierende Version |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -z                   | --zip=[ZIP]           | Angabe des Pfades zum Update-Paket                                                               |
+|                      | --v=V                 | Zu installierende Version                                                                        |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1640,19 +1696,19 @@ Sendet E-Mails zu Workflows und erstellt Aufgaben aus Checklisten.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung |
-| --- | --- | --- |
-| -t | --types=TYPES | Workflow-Typen (mehrere Werte sind möglich) |
-| -u | --user=[USERNAME] | Username eines Benutzers, der zur Ausführung berechtigt ist |
-| -p | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers |
-| -i | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1) |
-| -c | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei |
-| -h | --help | Hilfenachricht zur Einblendung weiterer Informationen |
-| -q | --quiet | Quiet-Mode um die Rückgabe zu deaktivieren |
-| -V | --version | Ausgabe der Version der i-doit Console |
-|     | --ansi|--no-ansi | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren) |
-| -n | --no-interaction | Deaktiviert sämtliche Interaktionsfragen der i-doit Console |
-| -v / -vv / -vvv | --verbose | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -t                   | --types=TYPES          | Workflow-Typen (mehrere Werte sind möglich)                                                      |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
