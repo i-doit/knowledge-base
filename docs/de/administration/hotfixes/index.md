@@ -19,32 +19,24 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
     Sollten Sie nach der Verwendung der Hotfixes mit dem Support in Kontakt treten, ergänzen Sie bitte den Hinweis auf dessen Verwendung.
 
 !!! info "Aktualität"
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==30== Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==31== Zu jedem Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 !!! attention "Einverständniserklärung"
     Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
 
 ## i-doit core
 
-### Writing a dialog_plus value via integer or string is not possible
+### Counter skips a number when duplicating objects (ID-10763)
 
-[i-doit_30_hotfix_ID-10683.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10683.zip){ .md-button .md-button--primary }
+[i-doit_31_hotfix_ID-10763.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10763.zip){ .md-button .md-button--primary }
 
-### Show icons in attribute settings (ID-10702)
+### List editing Ports does not select Default VLAN (ID-10762)
 
-[i-doit_30_hotfix_ID-10702_a970825.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10702_a970825.zip){ .md-button .md-button--primary }
+[i-doit_31_hotfix_ID-10762.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10762.zip){ .md-button .md-button--primary }
 
-### JDisc discovery needs IP address for matching
+### Exporting a object list via csv has no results (ID-10798)
 
-[i-doit_30_hotfix_ID-10544.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10544.zip){ .md-button .md-button--primary }
-
-### Empty Person group assignments after openLDAP login (ID-10717)
-
-[i-doit_30_hotfix_ID-10717.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10717.zip){ .md-button .md-button--primary }
-
-### Cannot access offset of type string on string when importing from JDisc (ID-10699)
-
-[i-doit_30_hotfix_ID-10699.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10699.zip){ .md-button .md-button--primary }
+[i-doit_31_hotfix_ID-10798.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10798.zip){ .md-button .md-button--primary }
 
 ## API
 
@@ -52,14 +44,13 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 [api_2.0_hotfix_API-496.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0_hotfix_API-496.zip){ .md-button .md-button--primary } [api_1.16_hotfix_API-496.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.16_hotfix_API-496.zip){ .md-button .md-button--primary }
 
-
 ### No categories in the result when using cmdb.objects.read with key categories (API-505)
 
 [api_2.0_hotfix_API-505_d05e977.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0_hotfix_API-505_d05e977.zip){ .md-button .md-button--primary }
 
-### Empty Person group assignments after openLDAP login (ID-10717)
+### Too many connections when using batch requests (API-509)
 
-[i-doit_30_hotfix_ID-10717.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30_hotfix_ID-10717.zip){ .md-button .md-button--primary }
+[api_2.0_hotfix_API-509.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0_hotfix_API-509.zip){ .md-button .md-button--primary }
 
 ## Forms Add-on 1.2.0
 

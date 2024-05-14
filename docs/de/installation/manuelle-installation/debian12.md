@@ -142,13 +142,6 @@ Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, so
 sudo mysql_secure_installation
 ```
 
-!!! attention annotate "Sollte die MariaDB Installation bereits, ohne setzen des Passwortes, durchgeführt sein, loggen Sie sich via `mysql -u root` ein und setzen Sie ein Passwort über (1)"
-    ```sql
-    ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('YOUR_PASSWORD');
-    ```
-
-1. Für mehr Informationen zum Befehl schauen Sie hier -> <https://mariadb.com/kb/en/alter-user/>
-
 Der Modus für das Herunterfahren von InnoDB muss noch geändert werden. Der Wert `0` führt dazu, dass eine vollständige Bereinigung und eine Zusammenführung der Änderungspuffer durchgeführt wird, bevor MariaDB heruntergefahren wird:
 
 ```shell
@@ -203,7 +196,7 @@ sql-mode = ""
 Abschließend wird MariaDB gestartet:
 
 ```shell
-sudo systemctl start mysql.service
+sudo systemctl restart mysql.service
 ```
 
 !!! bug "[Warning] You need to use --log-bin to make --expire-logs-days or --binlog-expire-logs-seconds work."
@@ -214,4 +207,4 @@ sudo systemctl start mysql.service
 
 Das Betriebssystem ist nun vorbereitet, sodass i-doit installiert werden kann:
 
-[Weiter zu *Setup*](setup.md){ .md-button .md-button--primary }
+[Weiter zu **Setup**](setup.md){ .md-button .md-button--primary }

@@ -1,4 +1,5 @@
 # Installation
+
 Die [IT-Dokumentation](../glossar.md) sollte auf einem soliden Fundament fußen - auch technisch. Es stehen drei Arten der Installation von i-doit zur Verfügung.
 
 |     | [Automatische Installation](automatische-installation.md) | [Manuelle Installation](manuelle-installation/index.md) | [i-doit Virtual Eval Appliance](i-doit-virtual-eval-appliance/index.md) |

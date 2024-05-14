@@ -13,9 +13,9 @@ Dieser Artikel behandelt die automatische [Installation](index.md) von i-doit. A
 
 ## Voraussetzungen
 
-- Die [Systemvoraussetzungen](systemvoraussetzungen.md) **müssen** erfüllt sein. Ausgenommen davon ist der genannte LAMP Stack (Apache Web Server, MariaDB/MySQL, PHP).
-- Eines der [unterstützten](systemvoraussetzungen.md) GNU/Linux-Betriebssysteme ist frisch installiert.
-- Das System kann über eine Internetanbindung auf Paket-Repositories und Web Services von i-doit zugreifen.
+-   Die [Systemvoraussetzungen](systemvoraussetzungen.md) **müssen** erfüllt sein. Ausgenommen davon ist der genannte LAMP Stack (Apache Web Server, MariaDB/MySQL, PHP).
+-   Eines der [unterstützten](systemvoraussetzungen.md) GNU/Linux-Betriebssysteme ist frisch installiert.
+-   Das System kann über eine Internetanbindung auf Paket-Repositories und Web Services von i-doit zugreifen.
 
 ## Benutzung
 
@@ -44,6 +44,6 @@ Das Script stellt mehrere Fragen zur Konfiguration. Für alle Fragen gibt es vor
 
 ## Nächste Schritte
 
-- [Eine gültige Lizenz einspielen (nur i-doit pro)](../wartung-und-betrieb/lizenz-aktivieren.md)
-- [Tipps zur Sicherheit und zum Schutz beachten](../wartung-und-betrieb/sicherheit-und-schutz.md)
-- [Erste Schritte mit i-doit](../grundlagen/index.md)
+-   [Eine gültige Lizenz einspielen (nur i-doit pro)](../wartung-und-betrieb/lizenz-aktivieren.md)
+-   [Tipps zur Sicherheit und zum Schutz beachten](../wartung-und-betrieb/sicherheit-und-schutz.md)
+-   [Erste Schritte mit i-doit](../grundlagen/index.md)

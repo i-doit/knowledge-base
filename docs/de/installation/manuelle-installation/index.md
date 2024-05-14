@@ -26,7 +26,7 @@ Dieser Artikel behandelt die manuelle [Installation](../index.md) von i-doit. Di
 Die genauen Schritte sind abhängig vom gewählten Betriebssystem:
 
 -   [Debian 12 GNU/Linux](./debian12.md)
--   [Red Hat Enterprise Linux (RHEL) oder CentOS](../manuelle-installation/red-hat-enterprise-linux/index.md)
+-   [Red Hat Enterprise Linux (RHEL)](../manuelle-installation/red-hat-enterprise-linux/index.md)
 -   [Suse Linux Enterprise Server (SLES)](../manuelle-installation/suse-linux-enterprise-server.md)
 -   [Ubuntu Linux](../manuelle-installation/ubuntu-linux/index.md)
 -   [Microsoft Windows Server](../manuelle-installation/microsoft-windows-server/index.md)
