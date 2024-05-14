@@ -74,7 +74,6 @@
 | [workflows-process](#workflows-process)                                   | Processes all workflows, sends e-mails and creates new tasks from checklists                                                       |
 
 !!! attention "Configuration file and parameters --config"
-
     It is possible to pass additional content to the call via a configuration file. This file must be stored in the i-doit directory src/handler/config/. An example in the form of the file "isys\_handler\_ldap.ini" can be found in the directory src/handler/config/examples/.<br>
     If this file is to be included in the process, it must be included using the --config or -c parameter.
 
@@ -778,6 +777,10 @@ Lists all commands. Format of the output can be changed.
 
 **Options:**
 
+| Parameter (short version) | Parameter (long version) | Description                                                   |
+| ------------------------- | ------------------------ | ------------------------------------------------------------- |
+|                           | --format=FORMAT          | Setting the output format (txt, xml, json or md) Default: txt |
+|                           | --raw                    | Output of the command help                                    |
 | Parameter (short version) | Parameter (long version) | Description                                                   |
 | ------------------------- | ------------------------ | ------------------------------------------------------------- |
 |                           | --format=FORMAT          | Setting the output format (txt, xml, json or md) Default: txt |

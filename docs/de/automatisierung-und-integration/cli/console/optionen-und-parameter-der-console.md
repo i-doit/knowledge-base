@@ -782,6 +782,10 @@ Listet alle Befehle auf. Format der Ausgabe kann geändert werden.
 | -------------------- | -------------------- | ------------------------------------------------------------------ |
 |                      | --format=[FORMAT]    | Format der Ausgabe festlegen (txt, xml, json or md) [Default: txt] |
 |                      | --raw                | Ausgabe der Befehls-Hilfe                                          |
+| Parameter (Kurzform) | Parameter (Langform) | Beschreibung                                                       |
+| -------------------- | -------------------- | ------------------------------------------------------------------ |
+|                      | --format=[FORMAT]    | Format der Ausgabe festlegen (txt, xml, json or md) [Default: txt] |
+|                      | --raw                | Ausgabe der Befehls-Hilfe                                          |
 
 **Beispiel zur Verwendung**
 

@@ -4,7 +4,7 @@ i-doit has a Command line Interface (CLI) with which you can carry out various t
 
 ## First Steps
 
-The CLI can be found in the i-doit installation directory, for example at **/var/www/html/**. Within this directory the CLI has to be activated with the same permissions as the Apache webserver. Under [Debian GNU/Linux](../../../installation/manual-installation/debian.md) this is the user called **www-data**. You can achieve the permissions with **sudo**:
+The CLI can be found in the i-doit installation directory, for example at **/var/www/html/**. Within this directory the CLI has to be activated with the same permissions as the Apache webserver. Under **Debian GNU/Linux** this is the user called **www-data**. You can achieve the permissions with **sudo**:
 
 ```sh
 cd /var/www/html/
@@ -13,7 +13,7 @@ sudo -u www-data php console.php
 
 Under Windows you also have to change to the installation directory. As the permissions of the webserver are not an issue, the start of **php.exe**, which has to stand in the path of the user, is sufficient.
 
-```sh
+```cmd
 cd C:\xampp\htdocs
 php.exe console.php
 ```
@@ -22,18 +22,18 @@ When you execute the CLI without further arguments, the general help is displaye
 
 ??? abstract "Available commands without add-ons"
     ```sh
-    i-doit console utility 24
+    i-doit console utility 31
 
     Usage:
-      command [options] [arguments]
+    command [options] [arguments]
 
     Options:
-      -h, --help            Display help for the given command. When no command is given display help for the list command
-      -q, --quiet           Do not output any message
-      -V, --version         Display this application version
-          --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
-      -n, --no-interaction  Do not ask any interactive question
-      -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+    -h, --help            Display help for the given command. When no command is given display help for the list command
+    -q, --quiet           Do not output any message
+    -V, --version         Display this application version
+        --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+    -n, --no-interaction  Do not ask any interactive question
+    -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
     Available commands:
       addon-activate                      Activate add-on
@@ -101,7 +101,6 @@ sudo -u www-data php console.php [COMMAND] --user admin --password admin --tenan
 ```
 
 !!! success "The user "controller""
-
     We recommend creating a dedicated user in i-doit for the application of the CLI. If this user is to be configured as [local user](../../../user-authentication-and-management/builtin-authentication/creating-a-local-user.md), create it as object of the type **Persons** with the desired credentials in the **Persons → Login** category. This user should receive admin rights. The rights assignment can be carried out through allocation to the predefined **Person group Admin**.
 
 ## Help

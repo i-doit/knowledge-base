@@ -2,18 +2,18 @@
 
 i-doit verfügt über ein Command line Interface (CLI), über das sich verschiedene Aufgaben durchführen lassen. Das CLI wird beispielsweise für [Cronjobs](../../../wartung-und-betrieb/cronjobs-einrichten.md) benötigt und kann zum Automatisieren von Arbeitsschritten eingesetzt werden.
 
-### Erste Schritte
+## Erste Schritte
 
-Das CLI befindet sich im Installationsverzeichnis von i-doit, beispielsweise unter **/var/www/html/**. Es muss innerhalb dieses Verzeichnisses mit denselben Rechten des Apache Webservers aufgerufen werden. Unter [Debian GNU/Linux](../../../installation/manuelle-installation/debian.md) ist dies der User **www-data**. Mittels **sudo** werden diese Rechte erlangt:
+Das CLI befindet sich im Installationsverzeichnis von i-doit, beispielsweise unter **/var/www/html/**. Es muss innerhalb dieses Verzeichnisses mit denselben Rechten des Apache Webservers aufgerufen werden. Unter Debian GNU/Linux ist dies der User **www-data**. Mittels **sudo** werden diese Rechte erlangt:
 
-```
+```sh
 cd /var/www/html/
 sudo -u www-data php console.php
 ```
 
 Unter Windows wechselt man ebenso in das Installationsverzeichnis. Da die Rechte des Webservers keine Rolle spielen, genügt der Aufruf von **php.exe**, welches im Pfad des Benutzers stehen muss.
 
-```
+```cmd
 cd C:\xampp\htdocs
 php.exe console.php
 ```
@@ -22,18 +22,18 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
 
 ??? abstract "Verfügbare Kommandos ohne Add-ons"
     ```sh
-    i-doit console utility 25
+    i-doit console utility 31
 
     Usage:
-      command [options] [arguments]
+    command [options] [arguments]
 
     Options:
-      -h, --help            Display help for the given command. When no command is given display help for the list command
-      -q, --quiet           Do not output any message
-      -V, --version         Display this application version
-          --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
-      -n, --no-interaction  Do not ask any interactive question
-      -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+    -h, --help            Display help for the given command. When no command is given display help for the list command
+    -q, --quiet           Do not output any message
+    -V, --version         Display this application version
+        --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+    -n, --no-interaction  Do not ask any interactive question
+    -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
     Available commands:
       addon-activate                      Activate add-on
@@ -103,7 +103,6 @@ sudo -u www-data php console.php [COMMAND] --user admin --password admin --tenan
 ```
 
 !!! check "Der Benutzer "controller""
-
     Es wird empfohlen, einen dedizierten Benutzer in i-doit für die Nutzung der CLI anzulegen. Soll dieser als [lokaler Benutzer](../../../benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen.md) konfiguriert werden, erstellt man ihn als Objekt vom Typ **Personen** mit den gewünschten Credentials in der Kategorie **Personen → Login**. Dieser Benutzer sollte Admin-Rechte erhalten. Dies kann durch die Zuordnung zur vordefinierten **Personengruppe** **Admin** geschehen.
 
 ## Hilfe
