@@ -13,7 +13,5 @@ services:
       - home:/home/docs
     cap_drop:
       - ALL
-    tmpfs:
-      - /tmp
 volumes:
   home:

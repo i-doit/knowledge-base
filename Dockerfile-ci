@@ -51,7 +51,7 @@ RUN touch /var/mail/ubuntu; \
 WORKDIR /tmp/
 
 # Node.js and NPM:
-ARG NODE_VERSION=20.12.0
+ARG NODE_VERSION=20.13.1
 ARG NPM_VERSION=10.7.0
 RUN curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n \
     -o /usr/local/bin/n; \
