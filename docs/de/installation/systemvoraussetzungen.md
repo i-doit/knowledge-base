@@ -3,13 +3,13 @@
 Um den Betrieb aller Funktionalitäten von i-doit zu gewährleisten, existieren für das darunter liegende System Voraussetzungen, die erfüllt sein müssen.
 
 !!! info "Aktualität"
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall ==29==. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **31**. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 ## Mindestanforderungen an das System
 
 Folgende Systemparameter sind Mindestanforderungen, um einen Betrieb von i-doit mit bis zu ca. 10.000 Objekten und bis zu 10 gleichzeitig arbeitenden Benutzern zu gewährleisten.
 
-### Virtuelle Hardware
+### Virtuelle Hardware (GNU/Linux)
 
 -   2 vCPUs
 -   2 GB RAM
@@ -17,17 +17,21 @@ Folgende Systemparameter sind Mindestanforderungen, um einen Betrieb von i-doit 
 
 Wir empfehlen den Einsatz einer dedizierten, virtuellen Maschine. Der tatsächlich Hardware-Bedarf richtet sich nach Umfang der [IT-Dokumentation](../glossar.md) und Anzahl gleichzeitiger Benutzer.
 
+### Virtuelle Hardware (Windows)
+
+Für Windows sind die [generellen Windows Systemvoraussetzungen](https://learn.microsoft.com/en-us/windows-server/get-started/hardware-requirements) zu beachten.
+
 ### LAMP / WAMP Stack
 
 -   GNU/Linux in der 64bit Variante(amd64) oder Windows Server 2022 in der 64bit Variante(amd64)
--   Apache Webserver ==2.4==
--   MariaDB 10.2, 10.3, 10.4, 10.5, ==10.6== (empfohlen) oder MySQL 5.7 oder 8.0. _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
--   PHP 7.4 (veraltet), ==8.0== (empfohlen), 8.1 und {++8.2++}.
+-   Apache Webserver **2.4**
+-   MariaDB 10.4 (veraltet), 10.5 (veraltet), **10.6** (empfohlen), 10.11 oder MySQL 5.7 oder 8.0 _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
+-   PHP 8.0, **8.1** (empfohlen) und 8.2
 -   PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
 
-Wir empfehlen den Einsatz von ==Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6==.
+Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.1 und MariaDB 10.6**.
 
-!!! Success "Referenzkonfiguration"
+!!! Success "Referenzkonfiguration (GNU/Linux)"
     Folgende Systemparameter bilden eine von uns getestete und empfohlene Referenzkonfiguration, welche eine hohe Performance bei bis zu 500.000 Objekten und einer hohen Anzahl von gleichzeitig arbeitenden Benutzern gewährleistet.
 
     ### Virtuelle Hardware
@@ -44,7 +48,7 @@ Wir empfehlen den Einsatz von ==Apache Webserver 2.4, PHP 8.0 und MariaDB 10.6==
 
     - Apache 2.4.x(Standardpaket)
     - MariaDB 10.6.x (Standardpaket)
-    - PHP 8.0.x (Standardpaket)
+    - PHP 8.1.x (Standardpaket)
 
     !!! info "Hinweis"
 
@@ -63,15 +67,35 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 ## Kompatibilitätsmatrix
 
+=== "31"
+
+    | **i-doit Version** | 31 |
+    | --- | --- |
+    | **Release** | 2024-05 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 8.0<br>==8.1== (empfohlen)<br>8.2 |
+    | **MySQL** | 5.7 <br>8.0 |
+    | **MariaDB** | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
+
+=== "30"
+
+    | **i-doit Version** | 30 |
+    | --- | --- |
+    | **Release** | 2024-04 |
+    | **Apache Webserver** | 2.4 |
+    | **PHP** | 7.4 (veraltet) <br>8.0<br>==8.1== (empfohlen)<br>8.2 |
+    | **MySQL** | 5.7 <br>8.0 |
+    | **MariaDB** | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>{++10.11++} |
+
 === "29"
 
     | **i-doit Version** | 29 |
     | --- | --- |
     | **Release** | 2024-02 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1<br>{++8.2++} |
+    | **PHP** | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1<br>{++8.2++} |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
 
 === "28"
 
@@ -79,9 +103,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2023-12 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1 |
+    | **PHP** | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1 |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
 
 === "27"
 
@@ -89,9 +113,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2023-08 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1 |
+    | **PHP** | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1 |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
 
 === "26"
 
@@ -99,9 +123,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2023-08 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.4 <br>==8.0== (recommended) <br>{++8.1++} |
+    | **PHP** | 7.4 <br>==8.0== (empfohlen) <br>{++8.1++} |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
 
 === "25"
 
@@ -109,9 +133,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2023-06 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.4 <br>8.0 (recommended) |
+    | **PHP** | 7.4 <br>8.0 (empfohlen) |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 <br>10.6 (recommended) |
+    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 <br>10.6 (empfohlen) |
     | **Debian GNU/Linux** | 11 |
     | **Ubuntu** | 18.04¹<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
@@ -124,9 +148,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2023-05 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.4 <br>8.0 (recommended) |
+    | **PHP** | 7.4 <br>8.0 (empfohlen) |
     | **MySQL** | 5.7 |
-    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
+    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (empfohlen) |
     | **Debian GNU/Linux** | 11 |
     | **Ubuntu** | 18.04¹<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
@@ -139,9 +163,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2023-06 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.4 <br>8.0 (recommended) |
+    | **PHP** | 7.4 <br>8.0 (empfohlen) |
     | **MySQL** | 5.7 |
-    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
+    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (empfohlen) |
     | **Debian GNU/Linux** | 11 |
     | **Ubuntu** | 18.04<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
@@ -154,9 +178,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2022-01 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.3 (deprecated) <br>7.4 (recommended) |
+    | **PHP** | 7.3 (veraltet) <br>7.4 (empfohlen) |
     | **MySQL** | 5.7 |
-    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
+    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (empfohlen) |
     | **Debian GNU/Linux** | 10, 11 |
     | **Ubuntu** | 18.04<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
@@ -169,9 +193,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2021-07 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.3 <br>7.4 (recommended) |
+    | **PHP** | 7.3 <br>7.4 (empfohlen) |
     | **MySQL** | 5.7 |
-    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
+    | **MariaDB** |  10.2  <br>10.3  <br>10.4  <br>10.5 (empfohlen) |
     | **Debian GNU/Linux** | 10 |
     | **Ubuntu** | 18.04<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
@@ -184,9 +208,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2021-01 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.2.5 (deprecated)<br> 7.3 <br> 7.4 (recommended) |
-    | **MySQL** | 5.6 (deprecated) <br>5.7 |
-    | **MariaDB** |  10.1 (deprecated)  <br>10.2  <br>10.3  <br>10.4 (recommended) <br>10.5 |
+    | **PHP** | 7.2.5 (veraltet)<br> 7.3 <br> 7.4 (empfohlen) |
+    | **MySQL** | 5.6 (veraltet) <br>5.7 |
+    | **MariaDB** |  10.1 (veraltet)  <br>10.2  <br>10.3  <br>10.4 (empfohlen) <br>10.5 |
     | **Debian GNU/Linux** | 10 |
     | **Ubuntu** | 18.04<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
@@ -199,9 +223,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2020-07 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.1.8 (deprecated)<br> 7.2<br> 7.3 (recommended)<br>7.4 |
+    | **PHP** | 7.1.8 (veraltet)<br> 7.2<br> 7.3 (empfohlen)<br>7.4 |
     | **MySQL** | 5.6<br> 5.7 |
-    | **MariaDB** |  10.1 (deprecated)  <br>10.2  <br>10.3  <br>10.4 (recommended) |
+    | **MariaDB** |  10.1 (veraltet)  <br>10.2  <br>10.3  <br>10.4 (empfohlen) |
     | **Debian GNU/Linux** | 10 |
     | **Ubuntu** | 18.04<br> 20.04 |
     | **RHEL** | 7¹<br> 8 |
@@ -214,9 +238,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2020-01 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.1.8 (deprecated)<br> 7.2<br> 7.3 (recommended)<br>7.4 |
+    | **PHP** | 7.1.8 (veraltet)<br> 7.2<br> 7.3 (empfohlen)<br>7.4 |
     | **MySQL** | 5.6<br> 5.7 |
-    | **MariaDB** |  10.1 (deprecated)  <br>10.2  <br>10.3  <br>10.4 (recommended) |
+    | **MariaDB** |  10.1 (veraltet)  <br>10.2  <br>10.3  <br>10.4 (empfohlen) |
     | **Debian GNU/Linux** | 10 |
     | **Ubuntu** | 18.04 |
     | **RHEL** | 7¹<br> 8 |
@@ -229,9 +253,9 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2019-06 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 7.0.8 (deprecated)<br> 7.1<br> 7.2 <br>7.3 (recommended) |
+    | **PHP** | 7.0.8 (veraltet)<br> 7.1<br> 7.2 <br>7.3 (empfohlen) |
     | **MySQL** | 5.6<br> 5.7 |
-    | **MariaDB** |  10.0 (deprecated)  <br>10.1  <br>10.2  <br>10.3 (recommended) |
+    | **MariaDB** |  10.0 (veraltet)  <br>10.1  <br>10.2  <br>10.3 (empfohlen) |
     | **Debian GNU/Linux** | 10<br> 9<br> 8 |
     | **Ubuntu** | 16.04<br> 18.04 |
     | **RHEL** | 7¹<br> 8 |
@@ -244,7 +268,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | --- | --- |
     | **Release** | 2018-12 |
     | **Apache Webserver** | 2.4 |
-    | **PHP** | 5.6 (deprecated)<br> 7.0<br> 7.1 <br>7.2 (recommended) |
+    | **PHP** | 5.6 (veraltet)<br> 7.0<br> 7.1 <br>7.2 (empfohlen) |
     | **MySQL** | 5.6<br> 5.7 |
     | **MariaDB** |  10.0 <br>10.1 |
     | **Debian GNU/Linux** | 9<br> 8 |
@@ -331,4 +355,4 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 | Legend |
 | --- |
 | ¹ With the help of third-party repositories |
-| ² Not recommended for productive use |
+| ² Not empfohlen for productive use |

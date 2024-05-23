@@ -85,10 +85,8 @@ markdown_extensions:
       check_paths: true
       auto_append:
         - overrides/assets/glossary-en.md
-  - pymdownx.details
   - pymdownx.tasklist:
       custom_checkbox: true
-
 extra:
   manifest: overrides/manifest.webmanifest
   social:
@@ -132,6 +130,8 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release Notes 31: version-history/release-notes/release-notes-31.md
+          - Release Notes 30: version-history/release-notes/release-notes-30.md
           - Release Notes 29: version-history/release-notes/release-notes-29.md
           - Release Notes 28: version-history/release-notes/release-notes-28.md
           - Release Notes 27: version-history/release-notes/release-notes-27.md
@@ -156,6 +156,8 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 31: version-history/changelogs/changelog-31.md
+          - Changelog 30: version-history/changelogs/changelog-30.md
           - Changelog 29: version-history/changelogs/changelog-29.md
           - Changelog 28: version-history/changelogs/changelog-28.md
           - Changelog 27: version-history/changelogs/changelog-27.md
@@ -235,10 +237,10 @@ nav:
       - Automatic Installation: installation/automatic-installation.md
       - Manual Installation:
           - installation/manual-installation/index.md
-          - Debian GNU/Linux: installation/manual-installation/debian.md
+          - Debian GNU/Linux:
+              - Debian 12: installation/manual-installation/debian12.md
           - Red Hat Enterprise Linux (RHEL):
               - installation/manual-installation/red-hat-enterprise-linux/index.md
-              - Red Hat Enterprise Linux 8.6 (RHEL 8): installation/manual-installation/red-hat-enterprise-linux/red-hat-enterprise-linux-8.6.md
           - Suse Linux Enterprise Server (SLES): installation/manual-installation/suse-linux-enterprise-server.md
           - Ubuntu GNU/Linux:
               - installation/manual-installation/ubuntu-linux/index.md
@@ -302,9 +304,9 @@ nav:
           - user-authentication-and-management/ldap-directory/index.md
           - LDAPS Debian configuration: user-authentication-and-management/ldap-directory/ldap-tls.md
           - LDAPS i-doit for Windows: user-authentication-and-management/ldap-directory/i-doit-win-ldaps.md
-          - User/Group synchronisation: user-authentication-and-management/ldap-directory/import-users-and-groups.md
-      - 2 factor authentication (2FA): user-authentication-and-management/2fa/index.md
-      - SSO authentication comparsion:
+          - User/Group synchronization: user-authentication-and-management/ldap-directory/import-users-and-groups.md
+      - Two-factor Authentication (2FA): user-authentication-and-management/2fa/index.md
+      - SSO authentication comparison:
           - user-authentication-and-management/sso-comparison/index.md
       - SSO with SAML:
           - user-authentication-and-management/sso-comparison/saml/index.md
@@ -443,6 +445,9 @@ nav:
               - Replacement:
                   - system-administration/administration/add-ons/replacement/index.md
                   - Configuration: system-administration/administration/add-ons/replacement/configuration/index.md
+          - Two-factor Authentication: system-administration/administration/two-factor-authentication.md
+          - Download Center: system-administration/administration/download-center.md
+          - Contract details: system-administration/administration/contract-details.md
       - Admin Center: system-administration/admin-center.md
       - Localization: system-administration/localization.md
       - Multi-Tenants: system-administration/multi-tenant.md
@@ -463,6 +468,8 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
           - Hotfix archive:
               - system-administration/hotfixes/hotfix-archive/index.md
+              - Version 30: system-administration/hotfixes/hotfix-archive/v30.md
+              - Version 29: system-administration/hotfixes/hotfix-archive/v29.md
               - Version 28: system-administration/hotfixes/hotfix-archive/v28.md
               - Version 27: system-administration/hotfixes/hotfix-archive/v27.md
               - Version 26: system-administration/hotfixes/hotfix-archive/v26.md
@@ -495,29 +502,33 @@ nav:
       - API (JSON-RPC):
           - i-doit-pro-add-ons/api/index.md
           - Methods:
-              - i-doit-pro-add-ons/api/methods/index.md
-              - cmdb.categories: i-doit-pro-add-ons/api/methods/cmdb.categories.md
-              - cmdb.category_info: i-doit-pro-add-ons/api/methods/cmdb.category_info.md
-              - cmdb.category: i-doit-pro-add-ons/api/methods/cmdb.category.md
-              - cmdb.condition: i-doit-pro-add-ons/api/methods/cmdb.condition.md
-              - cmdb.contact: i-doit-pro-add-ons/api/methods/cmdb.contact.md
-              - cmdb.dialog: i-doit-pro-add-ons/api/methods/cmdb.dialog.md
-              - cmdb.filter: i-doit-pro-add-ons/api/methods/cmdb.filter.md
-              - cmdb.impact: i-doit-pro-add-ons/api/methods/cmdb.impact.md
-              - cmdb.location_tree: i-doit-pro-add-ons/api/methods/cmdb.location_tree.md
-              - cmdb.logbook: i-doit-pro-add-ons/api/methods/cmdb.logbook.md
-              - cmdb.object_type_categories: i-doit-pro-add-ons/api/methods/cmdb.object_type_categories.md
-              - cmdb.object_type_groups: i-doit-pro-add-ons/api/methods/cmdb.object_type_groups.md
-              - cmdb.object_types: i-doit-pro-add-ons/api/methods/cmdb.object_types.md
-              - cmdb.object: i-doit-pro-add-ons/api/methods/cmdb.object.md
-              - cmdb.objects_by_relation: i-doit-pro-add-ons/api/methods/cmdb.objects_by_relation.md
-              - cmdb.objects: i-doit-pro-add-ons/api/methods/cmdb.objects.md
-              - cmdb.reports: i-doit-pro-add-ons/api/methods/cmdb.reports.md
-              - cmdb.status: i-doit-pro-add-ons/api/methods/cmdb.status.md
-              - cmdb.workstation_components: i-doit-pro-add-ons/api/methods/cmdb.workstation_components.md
-              - console: i-doit-pro-add-ons/api/methods/console.md
-              - idoit: i-doit-pro-add-ons/api/methods/idoit.md
-              - Add-ons: i-doit-pro-add-ons/api/methods/addons.md
+              - v1:
+                  - i-doit-pro-add-ons/api/methods/index.md
+                  - cmdb.categories: i-doit-pro-add-ons/api/methods/cmdb.categories.md
+                  - cmdb.category_info: i-doit-pro-add-ons/api/methods/cmdb.category_info.md
+                  - cmdb.category: i-doit-pro-add-ons/api/methods/cmdb.category.md
+                  - cmdb.condition: i-doit-pro-add-ons/api/methods/cmdb.condition.md
+                  - cmdb.contact: i-doit-pro-add-ons/api/methods/cmdb.contact.md
+                  - cmdb.dialog: i-doit-pro-add-ons/api/methods/cmdb.dialog.md
+                  - cmdb.filter: i-doit-pro-add-ons/api/methods/cmdb.filter.md
+                  - cmdb.impact: i-doit-pro-add-ons/api/methods/cmdb.impact.md
+                  - cmdb.location_tree: i-doit-pro-add-ons/api/methods/cmdb.location_tree.md
+                  - cmdb.logbook: i-doit-pro-add-ons/api/methods/cmdb.logbook.md
+                  - cmdb.object_type_categories: i-doit-pro-add-ons/api/methods/cmdb.object_type_categories.md
+                  - cmdb.object_type_groups: i-doit-pro-add-ons/api/methods/cmdb.object_type_groups.md
+                  - cmdb.object_types: i-doit-pro-add-ons/api/methods/cmdb.object_types.md
+                  - cmdb.object: i-doit-pro-add-ons/api/methods/cmdb.object.md
+                  - cmdb.objects_by_relation: i-doit-pro-add-ons/api/methods/cmdb.objects_by_relation.md
+                  - cmdb.objects: i-doit-pro-add-ons/api/methods/cmdb.objects.md
+                  - cmdb.reports: i-doit-pro-add-ons/api/methods/cmdb.reports.md
+                  - cmdb.status: i-doit-pro-add-ons/api/methods/cmdb.status.md
+                  - cmdb.workstation_components: i-doit-pro-add-ons/api/methods/cmdb.workstation_components.md
+                  - console: i-doit-pro-add-ons/api/methods/console.md
+                  - idoit: i-doit-pro-add-ons/api/methods/idoit.md
+                  - Add-ons: i-doit-pro-add-ons/api/methods/addons.md
+              - v2:
+                  - i-doit-pro-add-ons/api/methods/v2/index.md
+                  - cmdb.external: i-doit-pro-add-ons/api/methods/v2/cmdb.external.md
           - Examples for handling the API: i-doit-pro-add-ons/api/examples-for-handling-the-api.md
           - Tips and tricks for working with the API: i-doit-pro-add-ons/api/tips-and-tricks-for-api.md
           - Category fields for data arrays: i-doit-pro-add-ons/api/category-fields-for-data-arrays.md

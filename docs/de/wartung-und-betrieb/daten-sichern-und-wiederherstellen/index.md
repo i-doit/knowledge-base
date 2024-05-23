@@ -2,7 +2,6 @@
 
 Da sich in der [IT-Dokumentation](../../glossar.md#Glossar-IT-Dokumentation) wichtige, für die tägliche Arbeit benötigte Daten befinden, ist ein Backup und Recovery von _i-doit_ unablässig. Daher sollte _i-doit_ bei der bereits bestehenden Backup-Strategie berücksichtigt werden.
 
-
 Hierbei müssen drei Bereiche abgedeckt werden: die [Datenbanken](#backup-und-recovery-der-datenbanken), die [Dateien](#backup-und-recovery-der-dateien) von _i-doit_ und die [Systemkonfiguration](#backup-und-recovery-der-systemkonfiguration).
 
 Backup und Recovery der Datenbanken
@@ -14,10 +13,9 @@ Hierzu kann das Kommandozeilen-Tool mysqldump verwendet werden. Ein einfaches Be
 
 Das entsprechende Recovery:
 
-
     mysql -hlocalhost -uroot -p < backup.sql
 
-Während eines Backups sollte _i-doit_ nicht verwendet werden, um die Backups nicht zu korrumpieren. Für die Zeit des Backups bzw. des Recoverys kann der Webserver deaktiviert werden. Auf [Debian](../../installation/manuelle-installation/debian.md)\-basierten Linux-Distributionen führt man
+Während eines Backups sollte _i-doit_ nicht verwendet werden, um die Backups nicht zu korrumpieren. Für die Zeit des Backups bzw. des Recoverys kann der Webserver deaktiviert werden. Auf Debian-basierten Linux-Distributionen führt man
 
     sudo service apache2 stop
 
@@ -74,7 +72,7 @@ Backup mittels VM-Snapshots
 
 Häufig wird _i-doit_ auf einer virtuellen Maschine (VM) installiert. Für ein Backup und Recovery reicht es allerdings nicht aus, schlicht Snapshots der VMs im laufenden Betrieb zu erstellen. Das Problem liegt in der Konsistenz der Datenbanken: Die Daten liegen eventuell im Arbeitsspeicher und befinden sich (noch) nicht im nichtflüchtigen Speicher. Sie werden demnach durch die Sicherung oftmals nicht erfasst und gingen im Fall des Falles verloren.
 
-Soll auf Snapshosts dennoch nicht verzichtet werden, muss vorher das DBMS MySQL/MariaDB gestoppt werden. Auf [Debian](../../installation/manuelle-installation/debian.md)\-basierten Linux-Betriebssystemen erledigt dies der Befehl:
+Soll auf Snapshosts dennoch nicht verzichtet werden, muss vorher das DBMS MySQL/MariaDB gestoppt werden. Auf Debian-basierten Linux-Betriebssystemen erledigt dies der Befehl:
 
     sudo service mysql stop
 

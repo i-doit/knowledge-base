@@ -83,10 +83,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.details
   - pymdownx.tasklist:
       custom_checkbox: true
-
 extra:
   manifest: overrides/manifest.webmanifest
   social:
@@ -130,6 +128,8 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 31: versionshistorie/release-notes/release-notes-31.md
+          - Release Notes 30: versionshistorie/release-notes/release-notes-30.md
           - Release Notes 29: versionshistorie/release-notes/release-notes-29.md
           - Release Notes 28: versionshistorie/release-notes/release-notes-28.md
           - Release Notes 27: versionshistorie/release-notes/release-notes-27.md
@@ -154,6 +154,8 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 31: versionshistorie/changelogs/changelog-31.md
+          - Changelog 30: versionshistorie/changelogs/changelog-30.md
           - Changelog 29: versionshistorie/changelogs/changelog-29.md
           - Changelog 28: versionshistorie/changelogs/changelog-28.md
           - Changelog 27: versionshistorie/changelogs/changelog-27.md
@@ -270,10 +272,10 @@ nav:
       - Automatische Installation: installation/automatische-installation.md
       - Manuelle Installation:
           - installation/manuelle-installation/index.md
-          - Debian GNU/Linux: installation/manuelle-installation/debian.md
+          - Debian GNU/Linux:
+              - Debian 12: installation/manuelle-installation/debian12.md
           - Red Hat Enterprise Linux (RHEL):
               - installation/manuelle-installation/red-hat-enterprise-linux/index.md
-              - Red Hat Enterprise Linux 8.6 (RHEL 8): installation/manuelle-installation/red-hat-enterprise-linux/red-hat-enterprise-linux-8.6.md
           - Suse Linux Enterprise Server (SLES): installation/manuelle-installation/suse-linux-enterprise-server.md
           - Ubuntu GNU/Linux:
               - installation/manuelle-installation/ubuntu-linux/index.md
@@ -284,7 +286,7 @@ nav:
           - Setup: installation/manuelle-installation/setup.md
       - i-doit Virtual Eval Appliance:
           - installation/i-doit-virtual-eval-appliance/index.md
-          - i-doit Appliance in VirtualBox importieren: installation/i-doit-virtual-eval-appliance/virtual-box.md
+          - i-doit Appliance in VirtualBox impo29rtieren: installation/i-doit-virtual-eval-appliance/virtual-box.md
           - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
   - Wartung und Betrieb:
       - wartung-und-betrieb/index.md
@@ -320,7 +322,7 @@ nav:
       - Objekttypen: grundlagen/objekttypen.md
       - Zuordnung von Kategorien zu Objekttypen: grundlagen/zurodnung-von-kategorien-zu-objekttypen.md
       - Kategorien und Attribute: grundlagen/kategorien-und-attribute.md
-      - Benutzerdefinierte Objektentypen: grundlagen/benutzerdefinierte-objekttypen.md
+      - Benutzerdefinierte Objekttypen: grundlagen/benutzerdefinierte-objekttypen.md
       - Benutzerdefinierte Kategorien: grundlagen/benutzerdefinierte-kategorien.md
       - Logbuch: grundlagen/logbuch.md
       - Objekt-Beziehungen: grundlagen/objekt-beziehungen.md
@@ -339,7 +341,7 @@ nav:
           - LDAPS Debian Konfiguration: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
           - LDAPS i-doit für Windows: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/i-doit-win-ldaps.md
           - Benutzer-/Gruppen-Synchronisierung: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
-      - 2-Faktor-Authentifizierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
+      - Zwei-Faktor-Authentisierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
       - SSO-Authentifizierung im Vergleich:
           - benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md
       - SSO mit SAML:
@@ -478,6 +480,9 @@ nav:
               - Gerätetausch:
                   - administration/verwaltung/add-ons/geraetetausch/index.md
                   - Konfiguration: administration/verwaltung/add-ons/geraetetausch/konfiguration.md
+          - Zwei-Faktor-Authentisierung: administration/verwaltung/zwei-faktor-authentisierung.md
+          - Download Center: administration/verwaltung/download-center.md
+          - Vertragsdaten: administration/verwaltung/vertragsdaten.md
       - Admin Center: administration/admin-center.md
       - Mehrsprachigkeit und Übersetzungen: administration/mehrsprachigkeit-und-uebersetzungen.md
       - Mandantenfähigkeit: administration/mandantenfaehigkeit.md
@@ -498,6 +503,8 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
           - Hotfix Archiv:
               - administration/hotfixes/hotfix-archiv/index.md
+              - Version 30: administration/hotfixes/hotfix-archiv/v30.md
+              - Version 29: administration/hotfixes/hotfix-archiv/v29.md
               - Version 28: administration/hotfixes/hotfix-archiv/v28.md
               - Version 27: administration/hotfixes/hotfix-archiv/v27.md
               - Version 26: administration/hotfixes/hotfix-archiv/v26.md
@@ -531,7 +538,12 @@ nav:
       - Analysis: i-doit-pro-add-ons/analysis.md
       - API (JSON-RPC):
           - i-doit-pro-add-ons/api/index.md
-          - API Methoden: i-doit-pro-add-ons/api/api-methoden.md
+          - Methoden:
+              - v1:
+                  - i-doit-pro-add-ons/api/methoden/v1/index.md
+              - v2:
+                  - i-doit-pro-add-ons/api/methoden/v2/index.md
+                  - cmdb.external: i-doit-pro-add-ons/api/methoden/v2/cmdb.external.md
           - Beispiele zur Nutzung der API: i-doit-pro-add-ons/api/beispiele-zur-nutzung-der-api.md
           - Tipps und Tricks zur API: i-doit-pro-add-ons/api/tipps-und-tricks-zur-nutzung-der-api.md
           - Kategorie-Felder für Datenarrays: i-doit-pro-add-ons/api/kategorie-felder-fuer-datenarrays.md

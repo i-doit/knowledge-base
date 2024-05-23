@@ -20,7 +20,7 @@ Beim Importieren werden eventuell Einstellungen abgefragt (Name, CPU-Kerne, Arbe
 [![Appliance-Einstellungen](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)
 
 !!! info "Betriebssystem"
-    Beim installierten Betriebssystem handelt es sich um **[Debian GNU/Linux](../manuelle-installation/debian.md)** **10 buster** in der 64-bit-Variante. Wenn der Virtualisierer dies nicht automatisch erkennt, sollte dies unbedingt manuell angegeben werden. Andernfalls kann es zu Problemen beim Start und Ausführen der VM kommen.
+    Beim installierten Betriebssystem handelt es sich um **[Debian GNU/Linux](../manuelle-installation/debian12.md)** **10 buster** in der 64-bit-Variante. Wenn der Virtualisierer dies nicht automatisch erkennt, sollte dies unbedingt manuell angegeben werden. Andernfalls kann es zu Problemen beim Start und Ausführen der VM kommen.
 
 ## i-doit aufrufen
 

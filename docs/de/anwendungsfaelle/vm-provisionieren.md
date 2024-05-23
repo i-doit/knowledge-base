@@ -35,7 +35,7 @@ Aus 4 manuellen Schritten werden 2. Der dritte Schritt geschieht automatisiert i
 Diesen Anwendungsfall spielen wir einmal komplett an einem Beispiel durch. Es soll das prinzipielle Vorgehen darstellen und lässt sich problemlos auf andere Umgebungen übertragen. Für den Lösungsweg nehmen wir an:
 
 1. Der Virtualisierungs-Cluster basiert auf [VMware vSphere](https://de.wikipedia.org/wiki/VMware_vSphere) in Version 5.
-2. i-doit ist auf [Debian GNU/Linux](../installation/manuelle-installation/debian.md) 8.5 installiert. Hierzu bedienen wir uns der der [Eval Appliance](../installation/i-doit-virtual-eval-appliance/index.md). Die Distributionspakete sollten mit apt auf den neusten Stand gebracht werden.
+2. i-doit ist auf Debian GNU/Linux 8.5 installiert. Hierzu bedienen wir uns der der [Eval Appliance](../installation/i-doit-virtual-eval-appliance/index.md). Die Distributionspakete sollten mit apt auf den neusten Stand gebracht werden.
 3. Die Version von i-doit beträgt mindestens Version [1.7.1](../versionshistorie/index.md). Der i-doit Host ist über den FQDN i-doit.example.net erreichbar.
 4. Zum Kontrollieren der Automatisierung nutzen wir den VMware vSphere Client.
 5. Es existiert ein User in VMware vSphere, der VMs provisionieren darf. Dieser User heißt in diesem Beispiel vmprovision mit dem Passwort vmprovision.
@@ -428,7 +428,7 @@ Schauen wir uns nach der ausgiebigen, zum Glück einmaligen Konfiguration an, wi
 
 ### Virtuelle Umgebung in i-doit dokumentieren
 
-Es exisitiert bereits ein vSphere Cluster (Objekttyp **Cluster**) mit einigen ESX-Hosts (Objekttyp **Virtueller Host**). Der Objekt-Titel des Clusters entspricht dem des Datencenters in vSphere. Die Objekt-Titel der ESX-Hosts sind die Hostnamen, die auch in vSphere angezeigt werden.
+Es existiert bereits ein vSphere Cluster (Objekttyp **Cluster**) mit einigen ESX-Hosts (Objekttyp **Virtueller Host**). Der Objekt-Titel des Clusters entspricht dem des Datencenters in vSphere. Die Objekt-Titel der ESX-Hosts sind die Hostnamen, die auch in vSphere angezeigt werden.
 
 [![Cluster](../assets/images/de/anwendungsfaelle/vm-provisionieren-veraltet/5-vmpv.png)](../assets/images/de/anwendungsfaelle/vm-provisionieren-veraltet/5-vmpv.png)
 

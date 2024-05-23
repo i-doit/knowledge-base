@@ -15,7 +15,7 @@ Die IT-Dokumentation umfasst in vielen Fällen sehr sensible Daten, die geschüt
 Vor der Installation von i-doit
 -------------------------------
 
-Bevor i-doit [installiert](../installation/index.md) wird, können wir bereits einige Maßnahmen durchführen, um das System, auf dem i-doit fußt, zu härten. Als Beispiel dient ein [Debian GNU/Linux](../installation/manuelle-installation/debian.md), auf dem i-doit installiert ist bzw. werden soll.
+Bevor i-doit [installiert](../installation/index.md) wird, können wir bereits einige Maßnahmen durchführen, um das System, auf dem i-doit fußt, zu härten. Als Beispiel dient ein **Debian GNU/Linux**, auf dem i-doit installiert ist bzw. werden soll.
 
 ### Weniger Rechte ist mehr
 
@@ -63,7 +63,7 @@ Eine gewöhnliche Installation bringt teilweise unnötigen Ballast mit, von dem 
     # Laufende Dienste, die von Systemd verwaltet werden:
     systemctl list-units
 
-    # Laufende Prozesse und Systemresourcen übersichtlich anzeigen lassen:
+    # Laufende Prozesse und Systemressourcen übersichtlich anzeigen lassen:
     htop
 
     # Derzeit offene Ports:
@@ -115,7 +115,7 @@ Wichtig ist, dass der Dienst von außen nicht erreichbar ist. Meist läuft der D
 
 ### PHP absichern
 
-Wir schließen uns den üblichen Rants zu PHP keineswegs an, denn die Scriptsprache lässt sich für unsere Zwecke angemessen "härten". Eine wichtige Botschaft ist: **PHP sollte immer auf dem neusten Patch-Stand sein.** Hierbei ist zu beachten, welche Major-Versionen von PHP (5.x, 7.x) von den PHP-Entwicklern und welche PHP-Pakete von der genutzten Distribution unterstützt werden. Distributionen setzen oftmals nicht auf die neusten Major-Versionen, sondern pflegen ältere, eher stabilere Versionen. Diese werden mit Bug- und Security-Fixes gepatcht. Updates von PHP sollten also immer schnellstmöglich eingespielt werden.
+Wir schließen uns den üblichen Rants zu PHP keineswegs an, denn die Skriptsprache lässt sich für unsere Zwecke angemessen "härten". Eine wichtige Botschaft ist: **PHP sollte immer auf dem neusten Patch-Stand sein.** Hierbei ist zu beachten, welche Major-Versionen von PHP (5.x, 7.x) von den PHP-Entwicklern und welche PHP-Pakete von der genutzten Distribution unterstützt werden. Distributionen setzen oftmals nicht auf die neusten Major-Versionen, sondern pflegen ältere, eher stabilere Versionen. Diese werden mit Bug- und Security-Fixes gepatcht. Updates von PHP sollten also immer schnellstmöglich eingespielt werden.
 
 Für den Betrieb von i-doit erforderliche haben wir bereits in den [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) beschrieben. **Diese Einstellungen lassen sich durch zusätzliche erweitern.** Dafür erstellen wir eine neue .ini-Datei:
 
@@ -246,6 +246,7 @@ Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe,
 | **[i-doit.org](https://i-doit.org)** | **HTTPS** | **443** | Nach Updates der open-Variante suchen |
 | **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)** | **HTTPS** | **443** | Lizenzen über Token abrufen |
 | **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)** | **HTTPS** | **443** | Ruft über den Lizenz Token verfügbare Downloads ab |
+| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)** | **HTTPS** | **443** | Lizenzen über Token abrufen | 
 
 Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss der jeweilige Zugriff ebenfalls erlaubt sein:
 
@@ -258,6 +259,7 @@ Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss 
 | [((OTRS)) Community Edition Help Desk](../automatisierung-und-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automatisierung-und-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443** |
 | [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) | **PostgreSQL** | **25321** |
 | [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) | **HTTP** | **9000** |
+| [JDisc Discovery GraphQL](../daten-konsolidieren/jdisc-discovery.md) | **HTTPs** | **443** |
 | [OCS Inventory NG](../i-doit-pro-add-ons/ocs-inventory-ng.md) | **MySQL** | **3306** |
 
 ### Sicherheits-Frameworks
@@ -355,7 +357,7 @@ i-doit bringt mehrere Maßnahmen mit, um Angriffe, die unter [**Cross-Site-Reque
 
 ### Zwei-Faktor-Authentifizierung
 
-Die Anmeldung via Benutzernamen und -passwort wird heutzutage als nicht mehr zeitgemäß angesehen. **Zusätzliche Authentifzierungsmechanismen bringen einen Zugewinn an Sicherheit.** Wenn ein weiterer Mechanismus hinzukommt, spricht man von Zwei-Faktor-Authentifizierung, bei mehr als zweien von Mehr-Faktor-Authentifizierung. Eine gängige Art der Umsetzung ist der Einsatz eines (USB-)Tokens.
+Die Anmeldung via Benutzernamen und -passwort wird heutzutage als nicht mehr zeitgemäß angesehen. **Zusätzliche Authentifzierungsmechanismen bringen einen Zugewinn an Sicherheit.** Wenn ein weiterer Mechanismus hinzukommt, spricht man von Zwei-Faktor-Authentifizierung, bei mehr als zwei Faktoren von Mehr-Faktor-Authentifizierung. Eine gängige Art der Umsetzung ist der Einsatz eines (USB-)Tokens.
 
 i-doit erlaubt zusätzliche Mechanismen durch den zugrunde liegenden Apache Webserver. Beispielsweise beruht die das **[Single-Sign-On-Verfahren](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md)** darauf. Dieses lässt sich dazu nutzen, weitere Mechanismen direkt im Webserver zu aktivieren und zu konfigurieren. Hier sind praktisch keine Grenzen gesetzt, solange das Verfahren i-doit über entsprechende HTTP-Header mitteilt, für welchen Benutzer die Authentifizierung erfolgreich ist.
 
