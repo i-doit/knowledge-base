@@ -110,6 +110,9 @@ extra:
     - name: Deutsch
       link: /de/
       lang: de
+    - name: Francais
+      link: /fr/
+      lang: fr
   status:
     new: Neu
     updated: Aktualisiert

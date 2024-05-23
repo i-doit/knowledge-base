@@ -1,11 +1,11 @@
 ---
-site_name: Knowledge Base
+site_name: Base de connaissances
 docs_dir: '../../docs/fr'
 site_dir: '../../generated/fr'
 site_url: https://kb.i-doit.com/fr/
-site_description: Knowledge Base
+site_description: Base de connaissances
 site_author: synetics GmbH
-copyright: Copyright &copy; 2023 synetics GmbH
+copyright: Droit d'auteur et copie; 2023 synetics GmbH
 repo_url: https://github.com/i-doit/knowledge-base
 edit_uri: edit/main/docs/fr
 strict: true

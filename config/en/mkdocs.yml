@@ -112,6 +112,9 @@ extra:
     - name: Deutsch
       link: /de/
       lang: de
+    - name: Francais
+      link: /fr/
+      lang: fr
   status:
     new: Recently added
     updated: Recently updated
