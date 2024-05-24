@@ -174,7 +174,7 @@ Upgrade Debian 8 to 9
         sudo apt-get autoremove
         sudo apt-get clean
         ```
-    Alter the sources.list with your favorite editor  
+    Alter the sources.list with your favorite editor<br>
         ```
         sudo nano /etc/apt/sources.list
         ```
@@ -183,7 +183,7 @@ Upgrade Debian 8 to 9
         deb http://deb.debian.org/debian stretch main
         deb http://deb.debian.org/debian stretch contrib
         ```
-    Now update the packages again  
+    Now update the packages again<br>
         ```
         sudo apt-get update
         ```
