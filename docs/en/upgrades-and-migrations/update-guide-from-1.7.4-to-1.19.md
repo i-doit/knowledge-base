@@ -1,12 +1,12 @@
 # Update Guide from i-doit 1.7.4 to 1.19
 
-Here we you will find short instruction to Update your i-doit up to i-doit 1.19.  
-You may need to Upgrade your Operating System.  
+Here we you will find short instruction to Update your i-doit up to i-doit 1.19.<br>
+You may need to Upgrade your Operating System.<br>
 This instructions are valid for **Debian** and the commands used differ in other OS.Before you start, Download all updates you need to do and copy them in the i-doit root Folder.
 
 !!! danger "**Important things to note before hand**"
 
-    This Guide do not come with any warranty and may not work in your specific use case.  
+    This Guide do not come with any warranty and may not work in your specific use case.<br>
     This depends on the configuration and installation type of your instance.
 
     Also needed **Add-on** updates are not mentioned.
@@ -97,7 +97,7 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 
     sudo -u www-data unzip idoit-1.10-update.zip
 
-If you are asked, overwrite everything by typing A.  
+If you are asked, overwrite everything by typing A.<br>
 Now we open the Web Interface Updater and the Update to v1.10 is displayed and selected, do the update.
 
 [![Updating 1.9 to 1.10](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)
@@ -115,8 +115,8 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 
     sudo -u www-data unzip idoit-1.11-update.zip
 
-If you are asked, overwrite everything by typing A.  
-Now we open the Web Interface Updater and the Update to v1.11 is displayed and selected, do the update.  
+If you are asked, overwrite everything by typing A.<br>
+Now we open the Web Interface Updater and the Update to v1.11 is displayed and selected, do the update.<br>
 
 !!! attention "**Possible error**"
 
@@ -129,7 +129,7 @@ Solutions:
 
 !!! attention "Declaration of consent"
 
-    By downloading a Hotfix you declare that you have read and understood the [above mentioned note](#update-guide-from-i-doit-174-to-119) completely.  
+    By downloading a Hotfix you declare that you have read and understood the [above mentioned note](#update-guide-from-i-doit-174-to-119) completely.<br>
     
     [Click here for the Hotfix](../assets/downloads/upgrades-and-migrations/ID-5843_b4159eb.zip)
 
@@ -148,7 +148,7 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 
     sudo -u www-data unzip idoit-1.12-update.zip
 
-If you are asked, overwrite everything by typing A.  
+If you are asked, overwrite everything by typing A.<br>
 Now we open the Web Interface Updater and the Update to v1.12 is displayed and selected, do the update.
 
 [![Updating 1.11 to 1.12](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)
@@ -178,7 +178,7 @@ Upgrade Debian 8 to 9
         ```
         sudo nano /etc/apt/sources.list
         ```
-    Alter all entries to 'stretch' or delete all entries and insert  
+    Alter all entries to 'stretch' or delete all entries and insert<br>
         ```
         deb http://deb.debian.org/debian stretch main
         deb http://deb.debian.org/debian stretch contrib
@@ -187,7 +187,7 @@ Upgrade Debian 8 to 9
         ```
         sudo apt-get update
         ```
-    If you get a message like this, you can ignore it or read [here](https://stackoverflow.com/a/70795162).  
+    If you get a message like this, you can ignore it or read [here](https://stackoverflow.com/a/70795162).<br>
         ```
         There is no public key available for the following key IDs:
         112695A0E562B32A
@@ -404,7 +404,7 @@ Probably you will get this error:
 
     Fatal error: Uncaught Error: Class 'idoit\\Module\\License\\LicenseServiceFactory' not found in /var/www/html/updates/versions/v1.13/migration/license\_migration.php:50 Stack trace: #0 /var/www/html/updates/classes/isys\_update\_migration.class.php(98): include() #1 /var/www/html/updates/update.inc.php(911): isys\_update\_migration->migrate('/var/www/html/u...') #2 /var/www/html/src/hypergate.inc.php(152): include\_once('/var/www/html/u...') #3 /var/www/html/index.php(231): include\_once('/var/www/html/s...') #4 {main} thrown in /var/www/html/updates/versions/v1.13/migration/license\_migration.php on line 50
 
-Then you need to restart the update again.  
+Then you need to restart the update again.<br>
 If you now get a HTTP 500, do the update again.
 
 !!! success "**Check the System and i-doit**"
