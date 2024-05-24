@@ -5,6 +5,8 @@
     "MD007": {
         "indent": 4
     },
+    "MD009": true,
+    "MD012": true,
     "MD013": false,
     "MD024": false,
     "MD022": true,
