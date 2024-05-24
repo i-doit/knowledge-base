@@ -26,6 +26,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
+### HTTP 500 error when creating a document or a revision (ID-10831)
+
+[i-doit_31_hotfix_ID-10831.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10831.zip){ .md-button .md-button--primary }
+
 ### Counter skips a number when duplicating objects (ID-10763)
 
 [i-doit_31_hotfix_ID-10763.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10763.zip){ .md-button .md-button--primary }
