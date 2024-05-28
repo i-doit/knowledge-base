@@ -660,6 +660,7 @@ Now we open the Web Interface Updater and the Update to v1.19 is displayed and s
 
 ## Updating 1.19 to 20
 
+First open the Web Interface Updater.<br>
 By clicking **Check for a new version** you can check whether a newer package is available. For this purpose, you require an internet connection.<br>
 If a new version is available the update package can be downloaded and extracted with a click on **Download**
 
@@ -671,9 +672,28 @@ sudo -u www-data unzip idoit-20-update.zip
 
 If you are asked, overwrite everything by typing A.
 
-Now we open the Web Interface Updater and the Update to v20 is displayed and selected, do the update.
+In the Web Interface check if the Update to Version 20 is displayed and selected, then do the update.
 
 [![Updating 1.19 to 20](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/12-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/12-u18-119.png)
+
+!!! success "**Check the update Logs**"
+    Please take the time to Scroll down the logs and check if a error occurred
+
+!!! success "**Check the System and i-doit**"
+
+## Updating 20 to 29
+
+First, you need to prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+
+```sh
+sudo -u www-data unzip idoit-29-update.zip
+```
+
+If you are asked, overwrite everything by typing A.
+
+In the Web Interface Updater check if the Update to Version 29 is displayed and selected, then do the update.
+
+[![Updating 20 to 29](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/13-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/13-u18-119.png)
 
 !!! success "**Check the update Logs**"
     Please take the time to Scroll down the logs and check if a error occurred
