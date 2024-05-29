@@ -540,44 +540,43 @@ Now we open the Web Interface Updater and the Update to v1.18 is displayed and s
 ??? example "I have a working full Backup"
 
     Free up some space with<br>
-        ```sh
-        sudo apt-get autoremove
-        sudo apt-get clean
-        ```
+    ```sh
+    sudo apt-get autoremove
+    sudo apt-get clean
+    ```
     Alter the sources.list with your favorite editor<br>
-        ```sh
-        sudo nano /etc/apt/sources.list
-        ```
+    ```sh
+    sudo nano /etc/apt/sources.list
+    ```
     Alter all entries to 'buster' or delete all entries and insert<br>
-        ```sh
+    ```sh
     deb http://deb.debian.org/debian bullseye main
     deb http://deb.debian.org/debian bullseye contrib
-        ```
+    ```
     Now stop mysql and cron<br>
-        ```sh
-        sudo systemctl stop mysql cron
-        ```
+    ```sh
+    sudo systemctl stop mysql cron
+    ```
     Do the update to Debian 11<br>
-        ```sh
-        sudo apt-get update
-        sudo apt-get upgrade
-        sudo apt-get full-upgrade
-        ```
+    ```sh
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get full-upgrade
+    ```
     Start the Services we stopped<br>
-        ```sh
-        sudo systemctl start mysql cron
-        ```
+    ```sh
+    sudo systemctl start mysql cron
+    ```
     Errors? [Read here](https://www.debian.org/releases/bullseye/amd64/release-notes/ch-upgrading.en.html#trouble)<br>
 
     !!! success "**Check the System and i-doit**"
-
         Check your system. Check i-doit!
 
     Free up some space again<br>
-        ```sh
-        sudo apt-get autoremove
-        sudo apt-get clean
-        ```
+    ```sh
+    sudo apt-get autoremove
+    sudo apt-get clean
+    ```
     Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)<br>
 
     You are now at Debian 11 with PHP 7.4.30 and MariaDB 10.5.
@@ -699,6 +698,115 @@ In the Web Interface Updater check if the Update to Version 29 is displayed and 
     Please take the time to Scroll down the logs and check if a error occurred
 
 !!! success "**Check the System and i-doit**"
+
+## Upgrade Debian 11 to 12
+
+!!! attention "**Warning**"
+
+    Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!<br>
+    Read the Update Instructions for Debian 11 to 12 [here](https://www.debian.org/releases/bookworm/amd64/release-notes/ch-upgrading.en.html)
+
+??? example "I have a working full Backup"
+
+    Free up some space with<br>
+    ```sh
+    sudo apt-get autoremove
+    sudo apt-get clean
+    ```
+    Alter the sources.list with your favorite editor<br>
+    ```sh
+    sudo nano /etc/apt/sources.list
+    ```
+    Alter all entries to 'bookworm' or delete all entries and insert<br>
+    ```sh
+    deb http://deb.debian.org/debian bookworm main
+    deb http://deb.debian.org/debian bookworm contrib
+    ```
+    Now stop mysql and cron<br>
+    ```sh
+    sudo systemctl stop mysql cron
+    ```
+    Do the update to Debian 12<br>
+    ```sh
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get full-upgrade
+    ```
+    Start the Services we stopped<br>
+    ```sh
+    sudo systemctl start mysql cron
+    ```
+    Errors? [Read here](https://www.debian.org/releases/bookworm/amd64/release-notes/ch-upgrading.en.html#trouble)<br>
+
+    !!! success "**Check the System and i-doit**"
+        Check your system. Check i-doit!
+
+    Free up some space again<br>
+    ```sh
+    sudo apt-get autoremove
+    sudo apt-get clean
+    ```
+    Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)<br>
+
+    You are now at Debian 12 with PHP 7.4.30 and MariaDB 10.5.
+
+## Update PHP 5.6 to PHP 7.3
+
+!!! attention "Backup"
+    Create a Backup or Snapshot!
+
+Update packages and install all needed packages
+
+```sh
+sudo apt update
+sudo apt install apache2 libapache2-mod-php mariadb-client mariadb-server php php-bcmath php-cli php-common php-curl php-gd php-imagick php-json php-ldap php-mbstring php-memcached php-mysql php-pgsql php-soap php-xml php-zip memcached unzip sudo moreutils
+```
+
+Create PHP config file
+
+```sh
+sudo nano /etc/php/7.3/mods-available/i-doit.ini
+```
+
+insert
+
+```ini
+allow_url_fopen = Yes
+file_uploads = On
+magic_quotes_gpc = Off
+max_execution_time = 300
+max_file_uploads = 42
+max_input_time = 60
+max_input_vars = 10000
+memory_limit = 256M
+post_max_size = 128M
+register_argc_argv = On
+register_globals = Off
+short_open_tag = On
+upload_max_filesize = 128M
+display_errors = Off
+display_startup_errors = Off
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+log_errors = On
+default_charset = "UTF-8"
+default_socket_timeout = 60
+date.timezone = Europe/Berlin
+session.gc_maxlifetime = 604800
+session.cookie_lifetime = 0
+mysqli.default_socket = /var/run/mysqld/mysqld.sock
+```
+
+Activate changes
+
+```sh
+sudo a2dismod php5
+sudo a2enmod php7.3
+sudo phpenmod i-doit
+sudo phpenmod memcached
+sudo systemctl restart apache2.service
+```
+
+i-doit should now display via Administration > System tools > System overview the new PHP Version 7.3.31-1~deb10u1
 
 ## Sources
 
