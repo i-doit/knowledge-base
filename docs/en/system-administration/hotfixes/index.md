@@ -26,6 +26,10 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ## i-doit core
 
+### Migration error when updating (ID-10808)
+
+[i-doit_31_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10808.zip){ .md-button .md-button--primary }
+
 ### HTTP 500 error when creating a document or a revision (ID-10831)
 
 [i-doit_31_hotfix_ID-10831.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10831.zip){ .md-button .md-button--primary }
