@@ -46,15 +46,7 @@ sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 
 ### API is using report query from db instead of creating the query new which leads to wrong results (API-496)
 
-[api_2.0_hotfix_API-496.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0_hotfix_API-496.zip){ .md-button .md-button--primary } [api_1.16_hotfix_API-496.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_1.16_hotfix_API-496.zip){ .md-button .md-button--primary }
-
-### No categories in the result when using cmdb.objects.read with key categories (API-505)
-
-[api_2.0_hotfix_API-505_d05e977.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0_hotfix_API-505_d05e977.zip){ .md-button .md-button--primary }
-
-### Too many connections when using batch requests (API-509)
-
-[api_2.0_hotfix_API-509.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0_hotfix_API-509.zip){ .md-button .md-button--primary }
+[api_2.0.1_hotfix_API-496.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0.1_hotfix_API-496.zip)
 
 ## Forms Add-on 1.2.0
 
