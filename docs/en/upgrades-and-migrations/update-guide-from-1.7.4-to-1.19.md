@@ -748,24 +748,14 @@ In the Web Interface Updater check if the Update to Version 29 is displayed and 
     ```
     Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)<br>
 
-    You are now at Debian 12 with PHP 7.4.30 and MariaDB 10.5.
+    You are now at Debian 12 with PHP 8.2.18 and MariaDB 10.11.
 
-## Update PHP 5.6 to PHP 7.3
-
-!!! attention "Backup"
-    Create a Backup or Snapshot!
-
-Update packages and install all needed packages
-
-```sh
-sudo apt update
-sudo apt install apache2 libapache2-mod-php mariadb-client mariadb-server php php-bcmath php-cli php-common php-curl php-gd php-imagick php-json php-ldap php-mbstring php-memcached php-mysql php-pgsql php-soap php-xml php-zip memcached unzip sudo moreutils
-```
+## Configure PHP 8.2
 
 Create PHP config file
 
 ```sh
-sudo nano /etc/php/7.3/mods-available/i-doit.ini
+sudo nano /etc/php/8.2/mods-available/i-doit.ini
 ```
 
 insert
@@ -799,14 +789,55 @@ mysqli.default_socket = /var/run/mysqld/mysqld.sock
 Activate changes
 
 ```sh
-sudo a2dismod php5
-sudo a2enmod php7.3
+sudo a2dismod php7.4
+sudo a2enmod php8.2
 sudo phpenmod i-doit
 sudo phpenmod memcached
 sudo systemctl restart apache2.service
 ```
 
-i-doit should now display via Administration > System tools > System overview the new PHP Version 7.3.31-1~deb10u1
+If the apache2 is not restarting, restart the server.
+
+i-doit should now display via Administration > System tools > System overview the new PHP Version 8.2.18
+
+## MariaDB 10.11 Upgrade
+
+Now we need to check and update the tables to the last version using
+
+```sh
+sudo mariadb-upgrade -p
+```
+
+Enter your password and check if everything went well
+
+Restart MariaDB afterwards
+
+```sh
+sudo systemctl start mysql.service
+```
+
+## Updating 29 to 30
+
+First open the Web Interface Updater.<br>
+By clicking **Check for a new version** you can check whether a newer package is available. For this purpose, you require an internet connection.<br>
+If a new version is available the update package can be downloaded and extracted with a click on **Download**
+
+If you're not connected to the internet, you can prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+
+```sh
+sudo -u www-data unzip idoit-30-update.zip
+```
+
+If you are asked, overwrite everything by typing A.
+
+In the Web Interface Updater check if the Update to Version 30 is displayed and selected, then do the update.
+
+[![Updating 29 to 30](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)
+
+!!! success "**Check the update Logs**"
+    Please take the time to Scroll down the logs and check if a error occurred
+
+!!! success "**Check the System and i-doit**"
 
 ## Sources
 
@@ -814,3 +845,4 @@ i-doit should now display via Administration > System tools > System overview th
 *   Debian 9 upgrade [https://www.debian.org/releases/stretch/](https://www.debian.org/releases/stretch/)
 *   Debian 10 upgrade [https://www.debian.org/releases/buster/](https://www.debian.org/releases/buster/)
 *   Debian 11 upgrade [https://www.debian.org/releases/bullseye/](https://www.debian.org/releases/bullseye/)
+*   Debian 12 upgrade [https://www.debian.org/releases/bookworm/](https://www.debian.org/releases/bookworm/)
