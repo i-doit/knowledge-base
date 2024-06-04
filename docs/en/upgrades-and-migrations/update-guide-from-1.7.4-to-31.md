@@ -1,10 +1,12 @@
 ---
 title: Update Guide from i-doit 1.7.4 to 31
 description: i-doit update guide
-icon: 
+icon:
 status: new
 lang: en
 ---
+
+## Important information before you start
 
 Here we you will find short instruction to Update your i-doit up to i-doit 1.19.<br>
 You may need to Upgrade your Operating System.<br>
@@ -26,15 +28,10 @@ This instructions are valid for **Debian** and the commands used differ in other
     Read the [Release Notes](../version-history/index.md) before you Update to a new Version
 
 !!! attention "Hotfix note"
-
     Please use Hotfixes exclusively with the specified version. Hotfixes will be included in newer versions so that a renewed installation is not necessary.
-
     Should you use an older i-doit version it is essential to make an update to the latest version first.
-
     If a Hotfix is required to update an older version, it can be found in the Hotfix subchapters here in the Knowledge Base.
-
-    As these are Hotfixes we recommend installing them only when the adjustments are necessary for a flawless operation of your installation or you are requested by the support team to use them. Please ensure that you made a [backup of i-doit](../maintenance-and-operation/backup-and-recovery/index.md) before you use any Hotfix.
-
+    As these are Hotfixes we recommend installing them only when the adjustments are necessary for a flawless operation of your installation or you are requested by the support team to use the. Please ensure that you made a [backup of i-doit](../maintenance-and-operation/backup-and-recovery/index.md) before you use any Hotfix.
     Please inform us about the use of Hotfixes, should you contact our support team afterwards.
 
 | <!-- -->                                    | <!-- -->                                                                 | <!-- -->                                                                 | <!-- -->                                                | <!-- -->                                               | <!-- -->                                               | <!-- -->                                               | <!-- -->                                               | <!-- -->                                      | <!-- -->                                      | <!-- -->                                         | <!-- -->                                         | <!-- -->                                         | <!-- -->                                                                | <!-- -->                                                    | <!-- -->                                                    | <!-- -->                                                      | <!-- -->                                                  | <!-- -->               | <!-- -->               | <!-- -->                       | <!-- -->              | <!-- -->              |
@@ -45,11 +42,6 @@ This instructions are valid for **Debian** and the commands used differ in other
 | PHP                                         | 8.0 <br>8.1 (recommended) <br> 8.2                                       | 7.4 (deprecated) <br>8.0 <br>8.1 (recommended) <br> 8.2                  | 7.4 (deprecated) <br>8.0 (recommended) <br>8.1 <br> 8.2 | 7.4 (deprecated) <br>8.0 (recommended) <br>8.1         | 7.4 (deprecated) <br>8.0 (recommended) <br>8.1         | 7.4 <br>8.0 (recommended) <br>8.1                      | 7.4 <br>8.0 (recommended)                              | 7.4 <br>8.0 (recommended)                     | 7.4 (deprecated)  <br>8.0 (recommended)       | 7.4 (deprecated)  <br>8.0 (recommended)          | 7.3 (deprecated)  <br>7.4 (recommended)          | 7.3  <br>7.4 (recommended)                       | 7.2.5 (deprecated)  <br>7.3  <br>7.4 (recommended)                      | 7.1.8 (deprecated)  <br>7.2  <br>7.3 (recommended)  <br>7.4 | 7.1.8 (deprecated)  <br>7.2  <br>7.3 (recommended)  <br>7.4 | 7.0.8 (deprecated)  <br>7.1  <br>7.2  <br>7.3 (recommended)   | 5.6 (deprecated)  <br>7.0  <br>7.1  <br>7.2 (recommended) | 5.6  <br>7.0  <br>7.1  | 5.6  <br>7.0           | 5.4  <br>5.5  <br>5.6  <br>7.0 | 5.4  <br>5.5  <br>5.6 | 5.4  <br>5.5  <br>5.6 |
 | MySQL                                       | 5.7 <br>8.0                                                              | 5.7 <br>8.0                                                              | 5.7 <br>8.0                                             | 5.7 <br>8.0                                            | 5.7 <br>8.0                                            | 5.7 <br>8.0                                            | 5.7 <br>8.0                                            | 5.7                                           | 5.7                                           | 5.7                                              | 5.7                                              | 5.7                                              | 5.6 (deprecated)  <br>5.7                                               | 5.6  <br>5.7                                                | 5.6  <br>5.7                                                | 5.6  <br>5.7                                                  | 5.6  <br>5.7                                              | 5.6  <br>5.7           | 5.6  <br>5.7           | 5.6  <br>5.7                   | 5.6  <br>5.7          | 5.6  <br>5.7          |
 | MariaDB                                     | 10.4 (deprecated) <br>10.5 (deprecated) <br>10.6 (recommended) <br>10.11 | 10.4 (deprecated) <br>10.5 (deprecated) <br>10.6 (recommended) <br>10.11 | 10.2 <br>10.3 <br>10.4 <br>10.5 <br>10.6 (recommended)  | 10.2 <br>10.3 <br>10.4 <br>10.5 <br>10.6 (recommended) | 10.2 <br>10.3 <br>10.4 <br>10.5 <br>10.6 (recommended) | 10.2 <br>10.3 <br>10.4 <br>10.5 <br>10.6 (recommended) | 10.2 <br>10.3 <br>10.4 <br>10.5 <br>10.6 (recommended) | 10.2 <br>10.3 <br>10.4 <br>10.5 (recommended) | 10.2 <br>10.3 <br>10.4 <br>10.5 (recommended) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.1 (deprecated)  <br>10.2  <br>10.3  <br>10.4 (recommended)  <br>10.5 | 10.1  <br>10.2  <br>10.3  <br>10.4 (recommended)            | 10.1  <br>10.2  <br>10.3  <br>10.4 (recommended)            | 10.0 (deprecated)  <br>10.1  <br>10.2  <br>10.3 (recommended) | 10.0  <br>10.1                                            | 10.0  <br>10.1         | 10.0  <br>10.1         | 10.0  <br>10.1                 | 10.0  <br>10.1        | 10.0  <br>10.1        |
-| Debian GNU/Linux                            |                                                                          |                                                                          |                                                         |                                                        |                                                        |                                                        | 11                                                     | 11                                            | 11                                            | 11                                               | 10, 11                                           | 10                                               | 10                                                                      | 10                                                          | 10                                                          | 8, 9, 10                                                      | 8, 9                                                      | 8, 9                   | 8, 9                   | 8, 9                           | 8                     | 8                     |
-| Ubuntu                                      |                                                                          |                                                                          |                                                         |                                                        |                                                        |                                                        | 18.04¹, 20.04                                          | 18.04¹, 20.04                                 | 18.04, 20.04                                  | 18.04, 20.04                                     | 18.04, 20.04                                     | 18.04, 20.04                                     | 18.04, 20.04                                                            | 18.04, 20.04                                                | 18.04                                                       | 16.04, 18.04                                                  | 16.04, 18.04                                              | 16.04                  | 16.04, 17.04           | 16.04 LTS, 16.10, 17.04        | 14.04¹                | 15.10, 14.04¹         |
-| Red Hat Enterprise Linux (RHEL)             |                                                                          |                                                                          |                                                         |                                                        |                                                        |                                                        | 7¹, 8                                                  | 7¹, 8                                         | 7¹, 8                                         | 7¹, 8                                            | 7¹, 8                                            | 7¹, 8                                            | 7¹, 8                                                                   | 7¹, 8                                                       | 7¹, 8                                                       | 7¹, 8                                                         | 7.3¹, 7.4¹, 7.5¹, 7.6¹                                    | 7.3¹, 7.4¹, 7.5¹       | 7.3¹, 7.4¹             | 7.3¹                           | 7.3¹                  | 7.2¹                  |
-| SUSE Linux Enterprise Server (SLES)         |                                                                          |                                                                          |                                                         |                                                        |                                                        |                                                        | 15 SP 1, 15 SP 2, SP 3                                 | 15 SP 1, 15 SP 2, SP 3                        | 15 SP 1, 15 SP 2, SP 3                        | 15 SP1, 15 SP 2, SP 3                            | 15 SP1, 15 SP 2, SP 3                            | 15, 15 SP1                                       | 15, 15 SP1                                                              | 15, 15 SP1                                                  | 15, 15 SP1                                                  | 12 SP3, 12 SP4, 15, 15 SP1                                    | 12 SP3, 15                                                | 12 SP3                 | 12 SP2, SP3            | 12, 12 SP2                     | 12, 12 SP2            | 12                    |
-| XAMPP for Windows²                          |                                                                          |                                                                          |                                                         |                                                        |                                                        |                                                        | 2022                                                   | 2016, 2019                                    | 2016, 2019                                    | 2016, 2019                                       | 2016, 2019                                       | 2016, 2019                                       | 2016, 2019                                                              | 2016, 2019                                                  | 2016, 2019                                                  | 2008 R2, 2012 R2, 2016, 2019                                  | 2008 R2, 2012 R2, 2016, 2019                              | 2008 R2, 2012 R2, 2016 | 2008 R2, 2012 R2, 2016 | 2008, 2012                     | 2008, 2012            | 2008, 2012            |
 
 | Legend |
 | --- |
@@ -64,21 +56,18 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.8-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.
+If you are asked, overwrite everything by typing **A**.
+
 Now we open the Web Interface Updater and the Update to v1.8 is displayed and selected, do the update.
 
 [![Updating 1.7.4 to 1.8](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)
 
 !!! attention "**Possible error**"
-
     PHP Fatal error: Call to undefined method idoit\Component\ContainerFacade::has() in /var/www/html/src/idoit/Model/Summary/SystemSummary.php on line 185
-
     Solution is to reload the page and go on.
 
 !!! success "**Check the update Logs**"
-
     Please take the time to Scroll down the logs and check if a error occurred
-
     Login and check your installation.
 
 ## Updating 1.8 to 1.9
@@ -106,8 +95,7 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.10-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.<br>
-Now we open the Web Interface Updater and the Update to v1.10 is displayed and selected, do the update.
+If you are asked, overwrite everything by typing A.<br> Now we open the Web Interface Updater and the Update to v1.10 is displayed and selected, do the update.
 
 [![Updating 1.9 to 1.10](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)
 
@@ -123,8 +111,7 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.11-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.<br>
-Now we open the Web Interface Updater and the Update to v1.11 is displayed and selected, do the update.<br>
+If you are asked, overwrite everything by typing A.<br> Now we open the Web Interface Updater and the Update to v1.11 is displayed and selected, do the update.
 
 !!! attention "**Possible error**"
 
@@ -133,18 +120,15 @@ Now we open the Web Interface Updater and the Update to v1.11 is displayed and s
 Solutions:
 
 *   Reload the page and go on.
-*   or use the following Hotfix if reloading do not work<br>
+*   or use the following Hotfix if reloading do not work
 
 !!! attention "Declaration of consent"
-
-    By downloading a Hotfix you declare that you have read and understood the [above mentioned note](#update-guide-from-i-doit-174-to-119) completely.<br>
-
+    By downloading a Hotfix you declare that you have read and understood the [above mentioned note](#update-guide-from-i-doit-174-to-119) completely.
     [Click here for the Hotfix](../assets/downloads/upgrades-and-migrations/ID-5843_b4159eb.zip)
 
 Continue with the update
 
 !!! success "**Check the update Logs**"
-
     Please take the time to Scroll down the logs and check if a error occurred
 
 Login and check your installation.
@@ -157,131 +141,157 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.12-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.<br>
-Now we open the Web Interface Updater and the Update to v1.12 is displayed and selected, do the update.
+If you are asked, overwrite everything by typing A.<br> Now we open the Web Interface Updater and the Update to v1.12 is displayed and selected, do the update.
 
 [![Updating 1.11 to 1.12](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)
 
 !!! success "**Check the update Logs**"
-
     Please take the time to Scroll down the logs and check if a error occurred
-
     Login and check your installation.
 
 ## Upgrade Debian 8 to 9
 
 !!! attention "**Warning**"
-
-    Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!<br>
+    Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!
     Read the Update Instructions for Debian 8 to 9 [here](https://www.debian.org/releases/stretch)
 
 ??? example "I have a working full Backup"
 
-    Free up some space with<br>
-        ```sh
-        sudo apt-get autoremove
-        sudo apt-get clean
-        ```
-    Alter the sources.list with your favorite editor<br>
-        ```sh
-        sudo nano /etc/apt/sources.list
-        ```
-    Alter all entries to 'stretch' or delete all entries and insert<br>
-        ```sh
-        deb http://deb.debian.org/debian stretch main
-        deb http://deb.debian.org/debian stretch contrib
-        ```
-    Now update the packages again<br>
-        ```sh
-        sudo apt-get update
-        ```
-    If you get a message like this, you can ignore it or read [here](https://stackoverflow.com/a/70795162).<br>
-        ```sh
-        There is no public key available for the following key IDs:
-        112695A0E562B32A
-        ```
-    Now stop mysql and cron<br>
-        ```sh
-        sudo systemctl stop mysql cron<br>
-        ```
-    Do the update to Debian 9<br>
-        ```sh
-        sudo apt-get upgrade
-        sudo apt-get full-upgrade
-        ```
-    If you are asked 'Restart services during package upgrades without asking?' select 'Yes' and hit enter<br>
-    Start the Services we stopped
-        ```sh
-        sudo systemctl start mysql cron
-        ```
-    Errors? [Read here](https://www.debian.org/releases/stretch/)<br>
-    !!! success "**Check the System and i-doit**"
+    Free up some space with
 
+    ```sh
+    sudo apt-get autoremove
+    sudo apt-get clean
+    ```
+
+    Alter the sources.list with your favorite editor
+
+    ```sh
+    sudo nano /etc/apt/sources.list
+    ```
+
+    Alter all entries to 'stretch' or delete all entries and insert
+
+    ```sh
+    deb http://deb.debian.org/debian stretch main
+    deb http://deb.debian.org/debian stretch contrib
+    ```
+
+    Now update the packages again
+
+    ```sh
+    sudo apt-get update
+    ```
+
+    If you get a message like this, you can ignore it or read [here](https://stackoverflow.com/a/70795162).
+
+    ```sh
+    There is no public key available for the following key IDs:
+    112695A0E562B32A
+    ```
+
+    Now stop mysql and cron
+
+    ```sh
+    sudo systemctl stop mysql cron
+    ```
+
+    Do the update to Debian 9
+
+    ```sh
+    sudo apt-get upgrade
+    sudo apt-get full-upgrade
+    ```
+
+    If you are asked 'Restart services during package upgrades without asking?' select 'Yes' and hit enter
+
+    Start the Services we stopped:
+
+    ```sh
+    sudo systemctl start mysql cron
+    ```
+
+    Errors? [Read here](https://www.debian.org/releases/stretch/)
+
+    !!! success "**Check the System and i-doit**"
         Check your system. Check i-doit!
 
-    Free up some space again<br>
-        ```sh
-        sudo apt-get autoremove
-        sudo apt-get clean
-        ```
+    Free up some space again
+
+    ```sh
+    sudo apt-get autoremove
+    sudo apt-get clean
+    ```
+
     Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)<br>
     You are now at Debian 9 with PHP 5.6 and MariaDB 10.
 
 ## Upgrade Debian 9 to 10
 
 !!! attention "**Warning**"
-
-    Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!<br>
-    Read the Update Instructions for Debian 9 to 10 [here](https://www.debian.org/releases/buster/amd64/release-notes/ch-upgrading.en.html)
+    Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!
+    Read the Update Instructions for Debian 9 to 10 [here](https://wiki.debian.org/DebianUpgrade)
 
 ??? example "I have a working full Backup"
 
-    Free up some space with<br>
-        ```sh
-        sudo apt-get autoremove
-        sudo apt-get clean
-        ```
-    Alter the sources.list with your favorite editor<br>
-        ```sh
-        sudo nano /etc/apt/sources.list
-        ```
-    Alter all entries to 'buster' or delete all entries and insert<br>
-        ```sh
-        deb http://deb.debian.org/debian buster main
-        deb http://deb.debian.org/debian buster contrib
-        ```
-    Now stop mysql and cron<br>
-        ```sh
-        sudo systemctl stop mysql cron
-        ```
-    Do the update to Debian 10<br>
-        ```sh
-        sudo apt-get update
-        sudo apt-get upgrade
-        sudo apt-get full-upgrade
-        ```
-    Start the Services we stopped<br>
-        ```sh
-        sudo systemctl start mysql cron<br>
-        ```
-    Errors? [Read here](https://www.debian.org/releases/buster/amd64/release-notes/ch-upgrading.en.html#trouble)<br>
+    Free up some space with
+
+    ```sh
+    sudo apt-get autoremove
+    sudo apt-get clean
+    ```
+
+    Alter the sources.list with your favorite editor
+
+    ```sh
+    sudo nano /etc/apt/sources.list
+    ```
+
+    Alter all entries to 'buster' or delete all entries and insert
+
+    ```sh
+    deb http://deb.debian.org/debian buster main
+    deb http://deb.debian.org/debian buster contrib
+    ```
+
+    Now stop mysql and cron
+
+    ```sh
+    sudo systemctl stop mysql cron
+    ```
+
+    Do the update to Debian 10
+
+    ```sh
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get full-upgrade
+    ```
+
+    Start the Services we stopped
+
+    ```sh
+    sudo systemctl start mysql cron
+    ```
+
+    Errors? [Check Debian Website](https://www.debian.org/releases/buster/)
 
     !!! success "**Check the System and i-doit**"
+        Check your system. Check i-doit!
 
-        Check your system. Check i-doit!<br>
+    Free up some space again
 
-    Free up some space again<br>
-        ```sh
-        sudo apt-get autoremove
-        sudo apt-get clean
-        ```
+    ```sh
+    sudo apt-get autoremove
+    sudo apt-get clean
+    ```
+
     Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)<br>
     You are now at Debian 10 with PHP 5.6 and MariaDB 10.3.
 
 ## Update PHP 5.6 to PHP 7.3
 
 !!! attention "Backup"
-
     Create a Backup or Snapshot!
 
 Update packages and install all needed packages
@@ -411,7 +421,7 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.13-update.zip
 ```
 
-If you are asked, overwrite everything by typingA.
+If you are asked, overwrite everything by typing **A**.
 
 Now we open the Web Interface Updater and the Update to v1.13 is displayed and selected, do the update.
 
@@ -420,14 +430,11 @@ Now we open the Web Interface Updater and the Update to v1.13 is displayed and s
 Probably you will get this error:
 
 !!! attention "**Possible error**"
-
     Fatal error: Uncaught Error: Class 'idoit\\Module\\License\\LicenseServiceFactory' not found in /var/www/html/updates/versions/v1.13/migration/license\_migration.php:50 Stack trace: #0 /var/www/html/updates/classes/isys\_update\_migration.class.php(98): include() #1 /var/www/html/updates/update.inc.php(911): isys\_update\_migration->migrate('/var/www/html/u...') #2 /var/www/html/src/hypergate.inc.php(152): include\_once('/var/www/html/u...') #3 /var/www/html/index.php(231): include\_once('/var/www/html/s...') #4 {main} thrown in /var/www/html/updates/versions/v1.13/migration/license\_migration.php on line 50
 
-Then you need to restart the update again.<br>
-If you now get a HTTP 500, do the update again.
+Then you need to restart the update again.<br> If you now get a HTTP 500, do the update again.
 
 !!! success "**Check the System and i-doit**"
-
     Check your system. Check i-doit!
 
 ## Updating 1.13 to 1.14
@@ -438,26 +445,23 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.14-update.zip
 ```
 
-If you are asked, overwrite everything by typingA.
+If you are asked, overwrite everything by typing **A**.
 
 Now we open the Web Interface Updater and the Update to v1.14 is displayed and selected, do the update.
 
 [![Updating 1.13 to 1.14](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/6-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/6-u18-119.png)
 
 !!! success "**Check the update Logs**"
-
     Please take the time to Scroll down the logs and check if a error occurred
 
 If you see this error:
 
 !!! attention "**Possible error**"
-
     Database error : Query error: 'ALTER TABLE isys\_cats\_person\_list ADD isys\_cats\_person\_list\_\_disabled\_login TINYINT(1) UNSIGNED DEFAULT 0':Row size too large. The maximum row size for the used table type, not counting BLOBs, is 8126. This includes storage overhead, check the manual. You have to change some columns to TEXT or BLOBs
 
 The Solution is documented [here](../system-administration/troubleshooting/row-size-too-large.md)
 
 !!! success "**Check the System and i-doit**"
-
     Check your system. Check i-doit!
 
 ## Updating 1.14 to 1.15
@@ -468,14 +472,13 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.15-update.zip
 ```
 
-If you are asked, overwrite everything by typingA.
+If you are asked, overwrite everything by typing **A**.
 
 Now we open the Web Interface Updater and the Update to v1.15 is displayed and selected, do the update.
 
 [![Updating 1.14 to 1.15](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)
 
 !!! success "**Check the System and i-doit**"
-
     Check your system. Check i-doit!
 
 ## Updating 1.15 to 1.16
@@ -486,14 +489,13 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.16-update.zip
 ```
 
-If you are asked, overwrite everything by typingA.
+If you are asked, overwrite everything by typing **A**.
 
 Now we open the Web Interface Updater and the Update to v1.16 is displayed and selected, do the update.
 
 [![Updating 1.15 to 1.16](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)
 
 !!! success "**Check the System and i-doit**"
-
     Check your system. Check i-doit!
 
 ## Updating 1.16 to 1.17
@@ -504,14 +506,13 @@ First, we prepare the update via CLI by open the i-doit Folder at /var/www/html
 sudo -u www-data unzip idoit-1.17-update.zip
 ```
 
-If you are asked, overwrite everything by typingA.
+If you are asked, overwrite everything by typing **A**.
 
 Now we open the Web Interface Updater and the Update to v1.17 is displayed and selected, do the update.
 
 [![Updating 1.16 to 1.17](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)
 
 !!! success "**Check the System and i-doit**"
-
     Check your system. Check i-doit!
 
 ## Updating 1.17 to 1.18
@@ -522,64 +523,76 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.18-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.
+If you are asked, overwrite everything by typing **A**.
 
 Now we open the Web Interface Updater and the Update to v1.18 is displayed and selected, do the update.
 
 [![Updating 1.17 to 1.18](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)
 
 !!! success "**Check the System and i-doit**"
-
     Check your system. Check i-doit!
 
 ## Upgrade Debian 10 to 11
 
 !!! attention "**Warning**"
-
     Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!<br>
     Read the Update Instructions for Debian 10 to 11 [here](https://www.debian.org/releases/bullseye/amd64/release-notes/ch-upgrading.en.html)
 
 ??? example "I have a working full Backup"
 
-    Free up some space with<br>
+    Free up some space with
+
     ```sh
     sudo apt-get autoremove
     sudo apt-get clean
     ```
-    Alter the sources.list with your favorite editor<br>
+
+    Alter the sources.list with your favorite editor
+
     ```sh
     sudo nano /etc/apt/sources.list
     ```
-    Alter all entries to 'buster' or delete all entries and insert<br>
+
+    Alter all entries to 'buster' or delete all entries and insert
+
     ```sh
     deb http://deb.debian.org/debian bullseye main
     deb http://deb.debian.org/debian bullseye contrib
     ```
-    Now stop mysql and cron<br>
+
+    Now stop mysql and cron
+
     ```sh
     sudo systemctl stop mysql cron
     ```
-    Do the update to Debian 11<br>
+
+    Do the update to Debian 11
+
     ```sh
     sudo apt-get update
     sudo apt-get upgrade
     sudo apt-get full-upgrade
     ```
-    Start the Services we stopped<br>
+
+    Start the Services we stopped
+
     ```sh
     sudo systemctl start mysql cron
     ```
-    Errors? [Read here](https://www.debian.org/releases/bullseye/amd64/release-notes/ch-upgrading.en.html#trouble)<br>
+
+    Errors? [Check Debian Website](https://www.debian.org/releases/bullseye/)
 
     !!! success "**Check the System and i-doit**"
         Check your system. Check i-doit!
 
-    Free up some space again<br>
+    Free up some space again
+
     ```sh
     sudo apt-get autoremove
     sudo apt-get clean
     ```
-    Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)<br>
+
+    Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)
 
     You are now at Debian 11 with PHP 7.4.30 and MariaDB 10.5.
 
@@ -630,7 +643,6 @@ sudo systemctl restart apache2.service
 ```
 
 !!! attention "**Possible error**"
-
     (38)Function not implemented: AH00141: Could not initialize random number generator
 
 If the apache2 is not restarting and you get the above error, restart the server.
@@ -645,12 +657,11 @@ First, we prepare the update via CLI by open the i-doit Folder at /var/www/html
 sudo -u www-data unzip idoit-1.19-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.
+If you are asked, overwrite everything by typing **A**.
 
 If you try the update without PHP 7.3 you will see this message:
 
 !!! attention "**Possible error**"
-
     You have PHP 7.3.31. For updating i-doit to the next version you need at least PHP 7.4!
 
 Now we open the Web Interface Updater and the Update to v1.19 is displayed and selected, do the update.
@@ -671,7 +682,7 @@ If you're not connected to the internet, you can prepare the update via CLI by o
 sudo -u www-data unzip idoit-20-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.
+If you are asked, overwrite everything by typing **A**.
 
 In the Web Interface check if the Update to Version 20 is displayed and selected, then do the update.
 
@@ -690,7 +701,7 @@ First, you need to prepare the update via CLI by open the i-doit Folder at `/var
 sudo -u www-data unzip idoit-29-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.
+If you are asked, overwrite everything by typing **A**.
 
 In the Web Interface Updater check if the Update to Version 29 is displayed and selected, then do the update.
 
@@ -704,51 +715,64 @@ In the Web Interface Updater check if the Update to Version 29 is displayed and 
 ## Upgrade Debian 11 to 12
 
 !!! attention "**Warning**"
-
-    Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!<br>
+    Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!
     Read the Update Instructions for Debian 11 to 12 [here](https://www.debian.org/releases/bookworm/amd64/release-notes/ch-upgrading.en.html)
 
 ??? example "I have a working full Backup"
 
-    Free up some space with<br>
+    Free up some space with
+
     ```sh
     sudo apt-get autoremove
     sudo apt-get clean
     ```
-    Alter the sources.list with your favorite editor<br>
+
+    Alter the sources.list with your favorite editor
+
     ```sh
     sudo nano /etc/apt/sources.list
     ```
-    Alter all entries to 'bookworm' or delete all entries and insert<br>
+
+    Alter all entries to 'bookworm' or delete all entries and insert
+
     ```sh
     deb http://deb.debian.org/debian bookworm main
     deb http://deb.debian.org/debian bookworm contrib
     ```
-    Now stop mysql and cron<br>
+
+    Now stop mysql and cron
+
     ```sh
     sudo systemctl stop mysql cron
     ```
-    Do the update to Debian 12<br>
+
+    Do the update to Debian 12
+
     ```sh
     sudo apt-get update
     sudo apt-get upgrade
     sudo apt-get full-upgrade
     ```
-    Start the Services we stopped<br>
+
+    Start the Services we stopped
+
     ```sh
     sudo systemctl start mysql cron
     ```
+
     Errors? [Read here](https://www.debian.org/releases/bookworm/amd64/release-notes/ch-upgrading.en.html#trouble)<br>
 
     !!! success "**Check the System and i-doit**"
         Check your system. Check i-doit!
 
-    Free up some space again<br>
+    Free up some space again
+
     ```sh
     sudo apt-get autoremove
     sudo apt-get clean
     ```
-    Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)<br>
+
+    Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)
 
     You are now at Debian 12 with PHP 8.2.18 and MariaDB 10.11.
 
@@ -830,7 +854,7 @@ If you're not connected to the internet, you can prepare the update via CLI by o
 sudo -u www-data unzip idoit-30-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.
+If you are asked, overwrite everything by typing **A**.
 
 In the Web Interface Updater check if the Update to Version 30 is displayed and selected, then do the update.
 
