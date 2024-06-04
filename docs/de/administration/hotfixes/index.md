@@ -1,10 +1,8 @@
 # Hotfixes
 
-## Über
-
 !!! success "Hotfixes für Version **31**"
 
-Hotfixes beseitigen einen bestimmten Fehler und werden in der Regel als ZIP-Datei zur Verfügung gestellt. Die ZIP-Datei wird im **Installationsverzeichnis** von i-doit entpackt. Die Abfrage, ob Dateien beim Entpacken überschrieben werden sollen, muss bestätigt werden.
+Ein Hotfix beseitigt einen bestimmten Fehler und werden in der Regel als ZIP-Datei zur Verfügung gestellt. Die ZIP-Datei wird im **Installationsverzeichnis** von i-doit entpackt. Die Abfrage, ob Dateien beim Entpacken überschrieben werden sollen, muss bestätigt werden.
 
 Falls ein Hotfix zur Ausführung des Updates einer älteren Version notwendig ist, ist dieser im [Hotfix Archiv](hotfix-archiv/index.md) zu finden.
 
@@ -12,19 +10,19 @@ Da es sich hierbei um Hotfixes handelt, empfehlen wir, diese nur einzuspielen, w
 
 Sollten Sie nach der Verwendung der Hotfixes mit dem Support in Kontakt treten, ergänzen Sie bitte den Hinweis auf dessen Verwendung.
 
-!!! attention "**Einverständniserklärung**"
-    Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben
+!!! warning "**Einverständniserklärung**"
+    Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben.
 
-### Beispiel GNU/Linux
+## Anwendung bei GNU/Linux
 
-```shell
+```sh
 sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
 cd /var/www/html/i-doit/
 sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 ```
 
-### Beispiel Windows
+## Anwendung bei Windows
 
 [![Entpacken](../../assets/images/de/administration/hotfixes/example-windows-zip.png)](../../assets/images/de/administration/hotfixes/example-windows-zip.png)
 
@@ -47,7 +45,7 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 Is used for doing the update from 29 or 30 to 31. Unzip File and do the Update again.
 Do not download the update package again, this would override the Hotfix.
 
-??? "Error message found in the Webserver logs"
+??? info "Error message found in the Webserver logs"
     ```log
     Fatal error: Uncaught TypeError: getDefaultConfiguration(): Argument #1 ($className) must be of type string, null given, called in
     ```
@@ -56,7 +54,7 @@ Do not download the update package again, this would override the Hotfix.
 
 ### HTTP 500 error when creating a document or a revision (ID-10831)
 
-??? "Error message found in the Webserver logs"
+??? info "Error message found in the Webserver logs"
     ```log
     Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: isys_cmdb_dao_category_property::getConstantFromRange(): Argument #1 ($constant) must be of type string, null given
     ```

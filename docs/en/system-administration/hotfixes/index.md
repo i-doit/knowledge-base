@@ -1,10 +1,8 @@
 # Hotfixes
 
-## About
-
 !!! success "Hotfixes for version **31**"
 
-Hotfixes eliminate a specific error and are usually made available as a ZIP file. The ZIP file is unpacked in the **installation directory** of i-doit. The query as to whether files should be overwritten when unpacking must be confirmed.
+A hotfix fixes a specific error and is usually made available as a ZIP file. The ZIP file is extracted in the **installation directory** of i-doit. The prompt asking whether files should be overwritten when unpacking must be confirmed.
 
 If a hotfix is required to update an older version, this can be found in the [Hotfix archive](hotfix-archive/index.md).
 
@@ -12,19 +10,19 @@ As these are hotfixes, we recommend that you only install them if they are neces
 
 If you contact support after using the hotfixes, please add the reference to their use.
 
-!!! attention "Declaration of consent"
+!!! warning "**Declaration of consent**"
     By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
 
-### Example GNU/Linux
+## Application with GNU/Linux
 
-```shell
+```sh
 sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
 cd /var/www/html/i-doit/
 sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 ```
 
-### Example Windows
+## Application with Windows
 
 [![Extract](../../assets/images/en/system-administration/hotfixes/example-windows-zip.png)](../../assets/images/en/system-administration/hotfixes/example-windows-zip.png)
 
@@ -47,7 +45,7 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 Is used for doing the update from 29 or 30 to 31. Unzip File and do the Update again.
 Do not download the update package again, this would override the Hotfix.
 
-??? "Error message found in the Webserver logs"
+??? info "Error message found in the Webserver logs"
     ```log
     Fatal error: Uncaught TypeError: getDefaultConfiguration(): Argument #1 ($className) must be of type string, null given, called in
     ```
@@ -56,7 +54,7 @@ Do not download the update package again, this would override the Hotfix.
 
 ### HTTP 500 error when creating a document or a revision (ID-10831)
 
-??? "Error message found in the Webserver logs"
+??? info "Error message found in the Webserver logs"
     ```log
     Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: isys_cmdb_dao_category_property::getConstantFromRange(): Argument #1 ($constant) must be of type string, null given
     ```
