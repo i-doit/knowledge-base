@@ -842,23 +842,19 @@ Restart MariaDB afterwards
 sudo systemctl start mysql.service
 ```
 
-## Updating 29 to 30
+## Updating 29 to 31
 
-First open the Web Interface Updater.<br>
-By clicking **Check for a new version** you can check whether a newer package is available. For this purpose, you require an internet connection.<br>
-If a new version is available the update package can be downloaded and extracted with a click on **Download**
-
-If you're not connected to the internet, you can prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+First, you need to prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
 ```sh
-sudo -u www-data unzip idoit-30-update.zip
+sudo -u www-data unzip idoit-31-update.zip
 ```
 
 If you are asked, overwrite everything by typing **A**.
 
-In the Web Interface Updater check if the Update to Version 30 is displayed and selected, then do the update.
+In the Web Interface Updater check if the Update to Version 31 is displayed and selected, then do the update.
 
-[![Updating 29 to 30](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)
+[![Updating 29 to 31](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)
 
 !!! success "**Check the update Logs**"
     Please take the time to Scroll down the logs and check if a error occurred
