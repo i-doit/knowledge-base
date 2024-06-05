@@ -2,7 +2,7 @@
 title: Update Guide from i-doit 1.7.4 to 31
 description: i-doit update guide
 icon:
-status: new
+status:
 lang: en
 ---
 
@@ -16,15 +16,12 @@ This instructions are valid for **Debian** and the commands used differ in other
 
     This Guide do not come with any warranty and may not work in your specific use case.<br>
     This depends on the configuration and installation type of your instance.
-
     Also needed **Add-on** updates are not mentioned.
 
 !!! attention "Backup"
-
     Do a Backup or Snapshot **before each Update** step!
 
 !!! attention "Release Notes"
-
     Read the [Release Notes](../version-history/index.md) before you Update to a new Version
 
 !!! attention "Hotfix note"
@@ -114,7 +111,6 @@ sudo -u www-data unzip idoit-1.11-update.zip
 If you are asked, overwrite everything by typing A.<br> Now we open the Web Interface Updater and the Update to v1.11 is displayed and selected, do the update.
 
 !!! attention "**Possible error**"
-
     Call of unknown method '_realpath'.
 
 Solutions:
@@ -824,7 +820,7 @@ sudo systemctl restart apache2.service
 
 If the apache2 is not restarting, restart the server.
 
-i-doit should now display via Administration > System tools > System overview the new PHP Version 8.2.18
+i-doit should now display the new PHP Version 8.2.18 at Administration → [Tenant-Name] management → System Config Check.
 
 ## MariaDB 10.11 Upgrade
 
