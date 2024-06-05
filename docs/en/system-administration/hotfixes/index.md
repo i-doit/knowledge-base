@@ -44,6 +44,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_31_hotfix_ID-10853_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10853_b9ee2aa.zip){ .md-button .md-button--primary }
 
+### Creating a new connection at category Network listener does not create a new connection (ID-10884)
+
+[i-doit_31_hotfix_ID-10884_ddb80db.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10884_ddb80db.zip){ .md-button .md-button--primary }
+
 ### Migration error when updating (ID-10808)
 
 Is used for doing the update from 29 or 30 to 31. Unzip File and do the Update again.
