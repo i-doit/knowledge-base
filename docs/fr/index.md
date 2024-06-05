@@ -1,18 +1,18 @@
-# Technical user documentation, CMDB and ITSM tool integration using i-doit
+# Documentation technique utilisateur, intégration de l'outil CMDB et ITSM en utilisant i-doit
 
 -------------------------------------------------------------------------
 
-By choosing i-doit, you've selected a solution that you can tailor to your individual documentation needs. At the same time, our knowledge base provides you with everything you need to know about i-doit - both for new users starting out, as well as for professional use of the software.
+En choisissant i-doit, vous avez opté pour une solution que vous pouvez personnaliser selon vos besoins en matière de documentation individuelle. En même temps, notre base de connaissances vous fournit tout ce que vous devez savoir sur i-doit - à la fois pour les nouveaux utilisateurs débutants, ainsi que pour une utilisation professionnelle du logiciel.
 
-This knowledge base should help you to gain a quick understanding of the software. Please pay particular attention to the setup and to populating the [CMDB](glossary.md) as this is the central element for managing ICT environments. Equally, the CMDB is the basis for integrating data from other ITSM tools, for instance, for inventory, monitoring or ticketing.
+Cette base de connaissances devrait vous aider à comprendre rapidement le logiciel. Veuillez accorder une attention particulière à la configuration et au peuplement de la [CMDB](glossary.md) car c'est l'élément central pour la gestion des environnements ICT. De même, la CMDB est la base pour l'intégration des données provenant d'autres outils ITSM, par exemple, pour l'inventaire, la surveillance ou la gestion des tickets.
 
-How you benefit: i-doit, acting as both mediator and director of the ITIL discipline, ensures that the specialised tools transfer your data and give you an increasingly closed view of your ITSM.
+Comment vous en bénéficiez : i-doit, agissant à la fois comme médiateur et directeur de la discipline ITIL, garantit que les outils spécialisés transfèrent vos données et vous offrent une vue de plus en plus complète de votre ITSM.
 
-We trust that this knowledge base can help to clarify some of your open questions and make your workflow with the programme still simpler and more useful, so that you will quickly be able to apply the functions that are most useful for your particular needs.
+Nous sommes convaincus que cette base de connaissances peut vous aider à clarifier certaines de vos questions en suspens et à rendre votre flux de travail avec le programme encore plus simple et plus utile, de sorte que vous puissiez rapidement appliquer les fonctions les plus utiles pour vos besoins particuliers.
 
-Naturally, we welcome any feedback. The continuing development of a professional [IT documentation](glossary.md) system, of course, depends on requests and requirements from "out in the field", where it is used on a daily basis. We welcome your feedback to: **[feedback@i-doit.com](mailto:feedback@i-doit.com)**.
+Naturellement, nous apprécions tout retour d'information. Le développement continu d'un système professionnel de [documentation IT](glossary.md) dépend bien sûr des demandes et des exigences "sur le terrain", là où il est utilisé quotidiennement. Nous accueillons vos retours à : **[feedback@i-doit.com](mailto:feedback@i-doit.com)**.
 
-We wish you a successful start with i-doit.
+Nous vous souhaitons un démarrage réussi avec i-doit.
 
-Kind regards from Düsseldorf<br>
-Your i-doit team
+Cordialement de Düsseldorf<br>
+Votre équipe i-doit
