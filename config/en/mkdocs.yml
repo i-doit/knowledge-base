@@ -57,13 +57,11 @@ plugins:
       lang: en
   - minify:
       minify_html: true
-  - mkdocs-video
 markdown_extensions:
   - abbr
   - admonition
   - attr_list
   - md_in_html
-  - meta
   - pymdownx.keys
   - toc:
       permalink: '#'
@@ -557,7 +555,7 @@ nav:
           - i-doit-pro-add-ons/documents/index.md
           - Preparation: i-doit-pro-add-ons/documents/preparation.md
           - Document templates: i-doit-pro-add-ons/documents/document-templates.md
-          - Placeholder in the Documents add-on: i-doit-pro-add-ons/documents/placeholder-in-the-documens.md
+          - Placeholder in the Documents add-on: i-doit-pro-add-ons/documents/placeholder-in-the-documents.md
           - Document creation: i-doit-pro-add-ons/documents/document-creation.md
       - Events: i-doit-pro-add-ons/events.md
       - Floorplan: i-doit-pro-add-ons/floorplan.md
@@ -622,7 +620,7 @@ nav:
           - Using commands in the add-on: software-development/software-development/using-commands-in-the-add-on.md
           - Extend system settings: software-development/software-development/extend-system-settings.md
           - Extend API: software-development/software-development/extend-api.md
-          - Attribute-Definition: software-development/software-development/attribute-definitio.md
+          - Attribute-Definition: software-development/software-development/attribute-definition.md
           - Program categories: software-development/software-development/program-categories.md
           - Report views: software-development/software-development/report-views.md
           - Signal-Slot System: software-development/software-development/signal-slot-system.md
