@@ -2,9 +2,6 @@
 
 [Task][Import]                       Improve CSV-Import to not block the current user-session<br>
 [Task][Code (Internal)]              Allow API parameters to have multiple types<br>
-[Task][Validation]                   Add object type selector to attribute settings<br>
-[Task][Validation]                   Attribute validation per object type<br>
-[Task][Validation]                   Attribute visibility per object type<br>
 [Task][JDisc]                        Refactor "Data source" usage in JDisc code<br>
 [Task][JDisc]                        Create a tooltip info for importing connection endpoints<br>
 [Task][CMDB]                         Rename Remainder warranty to Remaining warranty<br>

@@ -22,7 +22,7 @@ Beim nächstem Login wird nun der 6 stellige Authenticator-Code abgefragt.
 Um 2FA zu deaktivieren, müssen Sie die **Zwei-Faktor-Authentifizierung** Einstellung unter **Benutzereinstellungen** → **Passwort und Login** aufrufen.<br>
 Klicken Sie auf **Bearbeiten** und anschließend auf **Deaktivieren**. Nach Eingabe des 6-stelligen Authentifizierungscodes ist die 2FA-Authentifizierung deaktiviert.
 
-!!! "Ein Administrator hat die Möglichkeit die 2FA über die [Verwaltung](../../administration/verwaltung/zwei-faktor-authentisierung.md) für Benutzer zu deaktivieren."
+!!! note "Ein Administrator hat die Möglichkeit die 2FA über die [Verwaltung](../../administration/verwaltung/zwei-faktor-authentisierung.md) für Benutzer zu deaktivieren."
 
 ## Externe Zwei-Faktor-Authentisierung
 
