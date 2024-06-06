@@ -40,6 +40,13 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
+### JDisc updates archived objects (ID-10889)
+
+[i-doit_31_hotfix_ID-10889.zip_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10889.zip){ .md-button .md-button--primary }
+<!---- for i-doit 32 release
+[i-doit_32_hotfix_ID-10889.zip_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10889.zip){ .md-button .md-button--primary }
+-->
+
 ### Altering data in Network > Port entry which has a Interface assigned are not saved (ID-10853)
 
 [i-doit_31_hotfix_ID-10853_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10853_b9ee2aa.zip){ .md-button .md-button--primary }

@@ -40,6 +40,13 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
+### JDisc updates archived objects (ID-10889)
+
+[i-doit_31_hotfix_ID-10889.zip_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10889.zip){ .md-button .md-button--primary }
+<!---- for i-doit 32 release
+[i-doit_32_hotfix_ID-10889.zip_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10889.zip){ .md-button .md-button--primary }
+-->
+
 ### Altering data in Network > Port entry which has a Interface assigned are not saved (ID-10853)
 
 [i-doit_31_hotfix_ID-10853_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10853_b9ee2aa.zip){ .md-button .md-button--primary }
@@ -60,8 +67,6 @@ Do **not** download the update package again, this would override the Hotfix.
 
 [i-doit_29-30_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29-30_hotfix_ID-10808.zip){ .md-button .md-button--primary }
 [i-doit_30-31_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30-31_hotfix_ID-10808.zip){ .md-button .md-button--primary }
-
-[i-doit_31_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10808.zip){ .md-button .md-button--primary }
 
 ### HTTP 500 error when creating a document or a revision (ID-10831)
 
