@@ -50,13 +50,16 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ### Migration error when updating (ID-10808)
 
-Is used for doing the update from 29 or 30 to 31. Unzip File and do the Update again.
-Do not download the update package again, this would override the Hotfix.
+Is used for doing the update from 29 or 30 to 31. Unzip File and do the Update.
+Do **not** download the update package again, this would override the Hotfix.
 
 ??? info "Error message found in the Webserver logs"
     ```log
     Fatal error: Uncaught TypeError: getDefaultConfiguration(): Argument #1 ($className) must be of type string, null given, called in
     ```
+
+[i-doit_29-30_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29-30_hotfix_ID-10808.zip){ .md-button .md-button--primary }
+[i-doit_30-31_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30-31_hotfix_ID-10808.zip){ .md-button .md-button--primary }
 
 [i-doit_31_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10808.zip){ .md-button .md-button--primary }
 
