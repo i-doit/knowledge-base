@@ -62,6 +62,14 @@ The i-doit Support can be found here [help.i-doit.com](https://help.i-doit.com).
 
 Here you will find system related settings. Also here you will find the link to the [Expert settings](#expert-settings-system-related) on the right side.
 
+### LDAP Debug settings
+
+| Option                    | Value  |
+| ------------------------- | ------ |
+| LDAP Debug | Yes or No |
+
+Setting can also be toggled via [Expert settings](#expert-settings-system-related). It is called `ldap.debug`.
+
 ### Login
 
 | Option                    | Value  |
@@ -156,7 +164,7 @@ The Expert settings for the System are located in the Admin Center. You can reac
 | cmdb.unique.object-title                        | 0                                                                                                                                                   |                   |
 | debug_bar.storeDirectory                        | /tmp/idoit_debugbar                                                                                                                                 |                   |
 | debug-bar.enabled                               | 1                                                                                                                                                   |                   |
-| email.template.maintenance                      | Your maintenance contract: %s timed out.\n<strong>Contract information</strong>:\nStart: %s\nEnd: %s\nSupport-Url: %s\nContract-Number: %s\nCustomer-Number: %s |                   |
+| email.template.maintenance                      | `Your maintenance contract: %s timed out.\n<strong>Contract information</strong>:\nStart: %s\nEnd: %s\nSupport-Url: %s\nContract-Number: %s\nCustomer-Number: %s` |                   |
 | email.template.password                         | Ihr Passwort lautet:                                                                                                                                |                   |
 | gui.empty_value                                 | -                                                                                                                                                   |                   |
 | gui.empty_values                                | -                                                                                                                                                   |                   |

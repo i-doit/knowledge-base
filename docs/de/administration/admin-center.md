@@ -67,6 +67,14 @@ Bei einem Klick auf den Bereich **Support** wird das [Kundenportal](../administr
 
 Hier finden Sie die systembezogenen Einstellungen. Auch finden Sie hier den Link zu den [Experteneinstellungen](#expert-settings-system-related) auf der rechten Seite.
 
+### LDAP Debug settings
+
+| Option     | Wert         |
+| ---------- | ------------ |
+| LDAP Debug | Ja oder Nein |
+
+Einstellung kann auch via [Expert settings](#expert-settings-system-related) geändert werden. Die Option heißt `ldap.debug`.
+
 ### Login
 
 | Option                    | Wert   |
