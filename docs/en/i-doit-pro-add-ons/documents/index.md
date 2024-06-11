@@ -13,7 +13,7 @@ The preparation describes how to install and update the add-on. Also, all the co
 
 Document templates are the central element on the basis of which documents are created. Here we describe how to create, edit and reuse these templates. All parameters of the templates, the possibilities of the WYSIWYG editor are discussed.
 
-*   [Placeholders in the Documents add-on](./placeholder-in-the-documens.md)
+*   [Placeholders in the Documents add-on](./placeholder-in-the-documents.md)
 
 The integration of dynamic contents of the documentation is done with placeholders. All available placeholders and how to use them are described in detail here.
 

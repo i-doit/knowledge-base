@@ -57,13 +57,11 @@ plugins:
       lang: en
   - minify:
       minify_html: true
-  - mkdocs-video
 markdown_extensions:
   - abbr
   - admonition
   - attr_list
   - md_in_html
-  - meta
   - pymdownx.keys
   - toc:
       permalink: '#'
@@ -268,7 +266,7 @@ nav:
       - upgrades-and-migrations/index.md
       - Migration from Windows to Linux: upgrades-and-migrations/migration-from-windows-to-linux.md
       - Migration of an Installation under GNU/Linux: upgrades-and-migrations/migration-of-an-installation-under-linux.md
-      - Update guide from i-doit 1.7.4 to 1.19: upgrades-and-migrations/update-guide-from-1.7.4-to-1.19.md
+      - Update guide from i-doit 1.7.4 to 31: upgrades-and-migrations/update-guide-from-1.7.4-to-31.md
       - Update of i-doit open 1.4.8 to 1.8: upgrades-and-migrations/update-of-i-doit-open-1.4.8-to-1.8.md
       - Upgrade from i-doit open to i-doit pro: upgrades-and-migrations/upgrade-from-open-to-pro.md
       - Upgrade to MySQL 5.6 or MariaDB 10.0: upgrades-and-migrations/upgrade-to-mysql-5.6-or-mariadb-10.0.md
@@ -560,7 +558,7 @@ nav:
           - i-doit-pro-add-ons/documents/index.md
           - Preparation: i-doit-pro-add-ons/documents/preparation.md
           - Document templates: i-doit-pro-add-ons/documents/document-templates.md
-          - Placeholder in the Documents add-on: i-doit-pro-add-ons/documents/placeholder-in-the-documens.md
+          - Placeholder in the Documents add-on: i-doit-pro-add-ons/documents/placeholder-in-the-documents.md
           - Document creation: i-doit-pro-add-ons/documents/document-creation.md
       - Events: i-doit-pro-add-ons/events.md
       - Floorplan: i-doit-pro-add-ons/floorplan.md
@@ -584,12 +582,15 @@ nav:
           - i-diary Basic Usage: i-doit-pro-add-ons/i-diary/basic-usage.md
           - i-diary Determine the author: i-doit-pro-add-ons/i-diary/determine-the-author.md
           - i-diary Determine the host: i-doit-pro-add-ons/i-diary/determine-the-host.md
-      - ISMS: i-doit-pro-add-ons/isms.md
       - i-doit QR-Code Printer: i-doit-pro-add-ons/i-doit-qr-code-printer.md
+      - ISMS: i-doit-pro-add-ons/isms.md
       - Maintenance: i-doit-pro-add-ons/maintenance.md
       - OCS Inventory NG: i-doit-pro-add-ons/ocs-inventory-ng.md
       - Relocate-CI: i-doit-pro-add-ons/relocate-ci.md
       - Replacement: i-doit-pro-add-ons/replacement.md
+      - SHD SM-VIEW Connect:
+          - i-doit-pro-add-ons/sm-view-connect/index.md
+          - SHD SM-VIEW Connect - Telekom Adapter: i-doit-pro-add-ons/sm-view-connect/telekom-adapter.md
       - VIVA:
           - i-doit-pro-add-ons/viva/index.md
           - Introduction to VIVA: i-doit-pro-add-ons/viva/introduction-to-viva.md
@@ -625,7 +626,7 @@ nav:
           - Using commands in the add-on: software-development/software-development/using-commands-in-the-add-on.md
           - Extend system settings: software-development/software-development/extend-system-settings.md
           - Extend API: software-development/software-development/extend-api.md
-          - Attribute-Definition: software-development/software-development/attribute-definitio.md
+          - Attribute-Definition: software-development/software-development/attribute-definition.md
           - Program categories: software-development/software-development/program-categories.md
           - Report views: software-development/software-development/report-views.md
           - Signal-Slot System: software-development/software-development/signal-slot-system.md
