@@ -63,7 +63,6 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
-  - meta
   - pymdownx.keys
   - toc:
       permalink: '#'
@@ -588,12 +587,15 @@ nav:
           - Formular ausfuellen: i-doit-pro-add-ons/forms/formulare-ausfuellen.md
           - Verwendung der Forms API: i-doit-pro-add-ons/forms/verwenden-der-forms-api.md
       - i-diary: i-doit-pro-add-ons/i-diary.md
-      - ISMS: i-doit-pro-add-ons/isms.md
       - i-doit QR-Code Printer: i-doit-pro-add-ons/i-doit-qr-code-printer.md
+      - ISMS: i-doit-pro-add-ons/isms.md
       - Maintenance: i-doit-pro-add-ons/maintenance.md
       - OCS Inventory NG: i-doit-pro-add-ons/ocs-inventory-ng.md
       - Relocate-CI: i-doit-pro-add-ons/relocate-ci.md
       - Replacement: i-doit-pro-add-ons/replacement.md
+      - SHD SM-VIEW Connect:
+          - i-doit-pro-add-ons/sm-view-connect/index.md
+          - SHD SM-VIEW Connect - Telekom Adapter: i-doit-pro-add-ons/sm-view-connect/telekom-adapter.md
       - VIVA:
           - i-doit-pro-add-ons/viva/index.md
           - Einleitung zu VIVA: i-doit-pro-add-ons/viva/einleitung-zu-viva.md
