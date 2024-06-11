@@ -1,63 +1,63 @@
 ---
 title: Debian 12 GNU/Linux
-description: i-doit installation on Debian 12
+description: Installation de i-doit sur Debian 12
 icon: material/debian
 status: new
-lang: en
+lang: fr
 ---
 
-In this article we explain in just a few steps which packages need to be installed and configured. We use a environment without **desktop** .
+Dans cet article, nous expliquons en quelques étapes les paquets qui doivent être installés et configurés. Nous utilisons un environnement sans **bureau**.
 
 !!! warning ""
-    When you install Debian, you eventually reach a "Software selection" dialog which has a list of checkboxes to choose the software you want to install initially. This has a "Debian desktop environment" checkbox, pre-ticked; de-selecting that, and leaving all the other desktop environment checkboxes un-ticked (GNOME, Xfce, etc.), will result in a GUI-less installation:
+    Lorsque vous installez Debian, vous atteignez éventuellement un dialogue de "Sélection de logiciels" qui comporte une liste de cases à cocher pour choisir les logiciels que vous souhaitez installer initialement. Il y a une case à cocher "Environnement de bureau Debian", pré-cochée ; en la décochant, et en laissant toutes les autres cases de l'environnement de bureau non cochées (GNOME, Xfce, etc.), cela entraînera une installation sans interface graphique :
 
-    [![Software selection](../../assets/images/en/installation/manual-installation/debian/gui.png)](../../assets/images/en/installation/manual-installation/debian/gui.png)
+    [![Sélection de logiciels](../../assets/images/en/installation/manual-installation/debian/gui.png)](../../assets/images/en/installation/manual-installation/debian/gui.png)
 
-## System Requirements
+## Configuration requise du système {/examples}
 
-The general [system requirements](../system-requirements.md) apply.
+Les [exigences système](../system-requirements.md) générales s'appliquent.
 
-This article refers to [**Debian GNU/Linux 12 "bookworm"**](https://www.debian.org/index.en.html). In order to find out which Debian version is used you can carry out the following command:
+Cet article se réfère à [**Debian GNU/Linux 12 "bookworm"**](https://www.debian.org/index.en.html). Pour savoir quelle version de Debian est utilisée, vous pouvez exécuter la commande suivante :
 
 ```shell
 cat /etc/debian_version
 ```
 
-As system architecture you should use a x86 in 64bit:
+En tant qu'architecture système, vous devriez utiliser un x86 en 64 bits :
 
 ```shell
 uname -m
 ```
 
-**x86_64** means 64bit, **i386** or **i686** only 32bit.
+**x86_64** signifie 64 bits, **i386** ou **i686** seulement 32 bits.
 
-## Installation of the Packages
+## Installation des paquets {/examples}
 
-The default package repositories of Debian GNU/Linux already supply the necessary packages to install:
+Les dépôts de paquets par défaut de Debian GNU/Linux fournissent déjà les paquets nécessaires à l'installation :
 
--   the **Apache** web server 2.4
--   the script language **PHP** 8.2
--   the database management system **MariaDB** 10.11 and
--   the caching server **memcached**
+-   le serveur web **Apache** 2.4
+-   le langage de script **PHP** 8.2
+-   le système de gestion de base de données **MariaDB** 10.11 et
+-   le serveur de mise en cache **memcached**
 
 ```shell
 apt update
 apt install apache2 libapache2-mod-php mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,gd,imagick,json,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
 ```
 
-## Configuration
+## Configuration {/examples}
 
-The installed packages for Apache web server, PHP and MariaDB already supply configuration files. It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
+Les paquets installés pour le serveur web Apache, PHP et MariaDB fournissent déjà des fichiers de configuration. Il est recommandé de sauvegarder les paramètres modifiés dans des fichiers séparés au lieu d'ajuster les fichiers de configuration déjà existants. Sinon, toutes les différences par rapport aux fichiers existants seraient signalées voire écrasées lors de chaque mise à jour du paquet. Les paramètres de la configuration par défaut sont complétés ou écrasés par des paramètres définis par l'utilisateur.
 
-### PHP
+### PHP {#php}
 
-First of all, a new file is created and filled with the required settings:
+Tout d'abord, un nouveau fichier est créé et rempli avec les paramètres requis :
 
 ```shell
 sudo nano /etc/php/8.2/mods-available/i-doit.ini
 ```
 
-!!! example "This file contains the following content specified by us. For more information about the parameters, have a look at [PHP.net](https://www.php.net/manual/de/ini.core.php)"
+!!! example "Ce fichier contient le contenu suivant spécifié par nous. Pour plus d'informations sur les paramètres, consultez [PHP.net](https://www.php.net/manual/de/ini.core.php)"
 
 ```ini
 allow_url_fopen = Yes
@@ -85,25 +85,25 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
-The `memory_limit` must be increased if necessary, e.g. for very large reports or extensive documents.<br>
-The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](system-settings.md) of i-doit.<br>
-The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).<br>
-Afterwards, the required PHP modules are activated and the Apache web server is restarted:
+La valeur de `memory_limit` doit être augmentée si nécessaire, par exemple pour de très grands rapports ou des documents étendus.<br>
+La valeur (en secondes) de `session.gc_maxlifetime` doit être égale ou supérieure à celle de `Session Timeout` dans les [paramètres système](system-settings.md) de i-doit.<br>
+Le paramètre `date.timezone` doit être ajusté à la zone horaire locale (voir [Liste des fuseaux horaires supportés](http://php.net/manual/en/timezones.php)).<br>
+Ensuite, les modules PHP requis sont activés et le serveur web Apache est redémarré :
 
 ```shell
 sudo phpenmod i-doit memcached
 ```
 
-### Apache Webserver
+### Serveur Web Apache {#apache}
 
-The default VHost is deactivated and a new one is created:
+Le VHost par défaut est désactivé et un nouveau est créé :
 
 ```shell
 sudo a2dissite 000-default
 sudo nano /etc/apache2/sites-available/i-doit.conf
 ```
 
-!!! example "This file contains the following content specified by us. For more information about the parameters, see [httpd.apache.org](https://httpd.apache.org/docs/2.4/en/mod/core.html)"
+!!! example "Ce fichier contient le contenu suivant spécifié par nous. Pour plus d'informations sur les paramètres, consultez [httpd.apache.org](https://httpd.apache.org/docs/2.4/en/mod/core.html)"
 
 ```shell
 <VirtualHost *:80>
@@ -121,8 +121,8 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.<br>
-With the next step you activate the new VHost and the necessary Apache module **rewrite** and the Apache web server is restarted:
+i-doit inclut des paramètres Apache différents dans des fichiers portant le nom **.htaccess**. Le paramètre **AllowOverride All** est requis pour que ces paramètres soient pris en compte.<br>
+Avec l'étape suivante, vous activez le nouveau VHost et le module Apache nécessaire **rewrite** et le serveur web Apache est redémarré :
 
 ```shell
 sudo a2ensite i-doit
@@ -132,38 +132,38 @@ sudo systemctl restart apache2
 
 ### MariaDB
 
-To ensure that MariaDB delivers good performance and can be operated securely, you should not only follow our instructions, but also inform yourself further. Starting with a secure installation where the recommendations should be followed. In addition, the user **root** should be given a secure password.
+Pour garantir que MariaDB offre de bonnes performances et peut être utilisé de manière sécurisée, vous ne devez pas seulement suivre nos instructions, mais aussi vous informer davantage. Commencez par une installation sécurisée où les recommandations doivent être suivies. De plus, l'utilisateur **root** devrait se voir attribuer un mot de passe sécurisé.
 
 ```shell
 sudo mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
+Activez le shell MariaDB afin que i-doit soit autorisé à appliquer l'utilisateur **root** lors de la configuration :
 
 ```shell
 sudo mysql -uroot
 ```
 
-!!! attention annotate "If the MariaDB installation has already been carried out without setting the password, log in via `mysql -u root` and set a password via (1)"
+!!! attention Annoter "Si l'installation de MariaDB a déjà été effectuée sans définir de mot de passe, connectez-vous via `mysql -u root` et définissez un mot de passe via (1)"
     ```sql
-    ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('YOUR_PASSWORD');
+    ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('VOTRE_MOT_DE_PASSE');
     ```
 
-1. Für mehr Informationen zum Befehl schauen Sie hier -> <https://mariadb.com/kb/en/alter-user/>
+1. Pour plus d'informations sur la commande, consultez ici -> <https://mariadb.com/kb/en/alter-user/>
 
-The mode for shutting down InnoDB still needs to be changed. The value `0` causes a complete cleanup and a merge of the change buffers to be performed before MariaDB is shut down:
+Le mode d'arrêt d'InnoDB doit encore être modifié. La valeur `0` provoque un nettoyage complet et une fusion des tampons de modification avant l'arrêt de MariaDB :
 
 ```shell
 mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
 ```
 
-A new file is created for the different configuration settings and our standard configuration is inserted:
+Un nouveau fichier est créé pour les différents paramètres de configuration et notre configuration standard est insérée :
 
 ```shell
 sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
 ```
 
-!!! example "This file contains the new configuration settings. For **optimal performance, these settings should be adapted to the (virtual) hardware**. For optimal settings, please refer to [mariadb.com](https://mariadb.com/kb/en/optimization-and-tuning/)"
+!!! example "Ce fichier contient les nouveaux paramètres de configuration. Pour une **performance optimale, ces paramètres doivent être adaptés au matériel (virtuel)**. Pour des réglages optimaux, veuillez vous référer à [mariadb.com](https://mariadb.com/kb/en/optimization-and-tuning/)"
 
 ```ini
 [mysqld]
@@ -202,19 +202,19 @@ table_open_cache_instances = 8
 sql-mode = ""
 ```
 
-Finally, MariaDB is restarted:
+Enfin, MariaDB est redémarré :
 
 ```shell
 sudo systemctl restart mysql.service
 ```
 
-!!! bug "[Warning] You need to use --log-bin to make --expire-logs-days or --binlog-expire-logs-seconds work."
-    If this message appears in the log, simply comment out `expire_logs_days = 10` in the file `/etc/mysql/mariadb.conf.d/50-server.cnf`.
-    Bug report for Debian -> <https://salsa.debian.org/mariadb-team/mariadb-server/-/merge_requests/61>
+!!! bug "[Avertissement] Vous devez utiliser --log-bin pour que --expire-logs-days ou --binlog-expire-logs-seconds fonctionne."
+    Si ce message apparaît dans le journal, commentez simplement `expire_logs_days = 10` dans le fichier `/etc/mysql/mariadb.conf.d/50-server.cnf`.
+    Rapport de bug pour Debian -> <https://salsa.debian.org/mariadb-team/mariadb-server/-/merge_requests/61>
 
-## Next Step
+## Étape suivante { /*examples*/ }
 
 setup.md
-Now the operating system is prepared and i-doit can be installed.
+Maintenant que le système d'exploitation est prêt, i-doit peut être installé.
 
-[Proceed with **Setup**](setup.md){ .md-button .md-button--primary }
+[Procéder à la **Configuration**](setup.md){ .md-button .md-button--primary }

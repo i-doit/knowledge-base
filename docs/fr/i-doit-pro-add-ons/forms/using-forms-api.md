@@ -1,22 +1,22 @@
-# Using Forms API
+# Utilisation de l'API de Formulaires
 
 Introduction
 ------------
 
-The Forms addon consists of an i-doit compatible addon and a backend application. The backend is responsible for data management and can be controlled by a
-REST API. It is still possible to use i-doit as a proxy to communicate with the Forms backend. However, this requires a valid user session in i-doit. If this is not the case, the Forms backend API can also be addressed directly. This document assumes direct communication.
+L'addon Forms se compose d'un addon compatible avec i-doit et d'une application backend. Le backend est responsable de la gestion des données et peut être contrôlé par une
+API REST. Il est toujours possible d'utiliser i-doit comme proxy pour communiquer avec le backend des Formulaires. Cependant, cela nécessite une session utilisateur valide dans i-doit. Si tel n'est pas le cas, l'API backend des Formulaires peut également être adressée directement. Ce document suppose une communication directe.
 
-> It should be noted that the backend does not contain any logical validations. This task is exclusively performed by the frontend.
-> Direct use of the API therefore entails a complete waiver of control structures.
-> This should therefore always be taken into account when used in this way.
+> Il convient de noter que le backend ne contient aucune validation logique. Cette tâche est exclusivement effectuée par le frontend.
+> L'utilisation directe de l'API entraîne donc une renonciation complète aux structures de contrôle.
+> Cela doit donc toujours être pris en compte lorsqu'il est utilisé de cette manière.
 
-It must also be considered that for the use of i-doit attributes, the Forms addon API is also required to access essential attribute information.
+Il convient également de noter que pour l'utilisation des attributs i-doit, l'API de l'addon Forms est également nécessaire pour accéder aux informations essentielles des attributs.
 
-Authentication
+Authentification
 --------------
 
-The authentication against the forms backend is based on username and API key. This information is about those configuration parameters
-which have already been stored in the i-doit configuration:
+L'authentification auprès du backend des formulaires est basée sur le nom d'utilisateur et la clé API. Ces informations concernent les paramètres de configuration
+qui ont déjà été enregistrés dans la configuration i-doit:
 
 ```
     POST http://localhost:3000/login
@@ -28,7 +28,7 @@ which have already been stored in the i-doit configuration:
     }
 ```
 
-If the authentication is successful, you will then receive a JSON web token:
+Si l'authentification réussit, vous recevrez alors un jeton web JSON :
 
 ```
     {
@@ -36,22 +36,21 @@ If the authentication is successful, you will then receive a JSON web token:
     }
 ```
 
-From now on, the token must be specified in every request if endpoints that require authentication are addressed. This is done via the Authorization
-\-Header. Below is an example:
+Désormais, le jeton doit être spécifié dans chaque requête si des points de terminaison nécessitant une authentification sont adressés. Cela se fait via l'en-tête Authorization. Voici un exemple :
 
 ```
     GET http://localhost:3000/api/form
     Authorization: bearer {JWT_TOKEN}
 ```
 
-By default, a token is valid for 60 minutes after it is created. After this time it loses its validity and you have to ‘login’ again.
+Par défaut, un jeton est valide pendant 60 minutes après sa création. Après ce délai, il perd sa validité et vous devez vous 'connecter' à nouveau.
 
-Endpoints
+Points de terminaison
 ---------
 
 ### GET /api/form
 
-This endpoint returns a list of all available forms. In addition, it has the possibility of filtering and sorting.
+Ce point de terminaison renvoie une liste de tous les formulaires disponibles. De plus, il offre la possibilité de filtrer et de trier.
 
 ```
     GET http://localhost:3000/api/form
@@ -59,16 +58,16 @@ This endpoint returns a list of all available forms. In addition, it has the pos
     Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU2YThlNmY1ZTMxYjI5NzAwOTMxOWEiLCJuYW1lIjoic2VsY3VrIiwic3ViIjoiJDJhJDEwJFJ4YlRybVpUVXlXc1NSQ2VZTFR6enVBZXJZTUF1dUlsNU5qOWt5RFN4WXlFL0NsdG1iLmY2IiwiaWF0IjoxNjU3MjkyNTAxLCJleHAiOjE2NTcyOTYxMDF9.yEZAjFAGpOCbDsJuI_vqot5J75MOE0bKPPn8osQS0Ik
 ```
 
-### GET /api/form/{ID}
+### GET /api/form/{ID}{/*examples*/}
 
-> Retrieval of specific forms
+> Récupération de formulaires spécifiques
 
 ```
     GET http://localhost:3000/api/form/6245bf4f36f695945b3df9be
-    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU2YThlNmY1ZTMxYjI5NzAwOTMxOWEiLCJuYW1lIjoic2VsY3VrIiwic3ViIjoiJDJhJDEwJFJ4YlRybVpUVXlXc1NSQ2VZTFR6enVBZXJZTUF1dUlsNU5qOWt5RFN4WXlFL0NsdG1iLmY2IiwiaWF0IjoxNjU3MjkyNTAxLCJleHAiOjE2NTcyOTYxMDF9.yEZAjFAGpOCbDsJuI_vqot5J75MOE0bKPPn8osQS0Ik
+    Autorisation: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU2YThlNmY1ZTMxYjI5NzAwOTMxOWEiLCJuYW1lIjoic2VsY3VrIiwic3ViIjoiJDJhJDEwJFJ4YlRybVpUVXlXc1NSQ2VZTFR6enVBZXJZTUF1dUlsNU5qOWt5RFN4WXlFL0NsdG1iLmY2IiwiaWF0IjoxNjU3MjkyNTAxLCJleHAiOjE2NTcyOTYxMDF9.yEZAjFAGpOCbDsJuI_vqot5J75MOE0bKPPn8osQS0Ik
 ```
 
-The return looks like this:
+Le retour ressemble à ceci :
 
 ```
     {
@@ -198,22 +197,24 @@ The return looks like this:
     }
 ```
 
-### DELETE /api/form/{ID}
+### DELETE /api/form/{ID}{/*examples*/}
 
-A specific form can be deleted using the DELETE verb. The return contains the form data.
+Un formulaire spécifique peut être supprimé en utilisant le verbe DELETE. Le retour contient les données du formulaire.
 
 ```
     DELETE http://localhost:3000/api/form/6245bf4f36f695945b3df9be
-    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU2YThlNmY1ZTMxYjI5NzAwOTMxOWEiLCJuYW1lIjoic2VsY3VrIiwic3ViIjoiJDJhJDEwJFJ4YlRybVpUVXlXc1NSQ2VZTFR6enVBZXJZTUF1dUlsNU5qOWt5RFN4WXlFL0NsdG1iLmY2IiwiaWF0IjoxNjU3MjkyNTAxLCJleHAiOjE2NTcyOTYxMDF9.yEZAjFAGpOCbDsJuI_vqot5J75MOE0bKPPn8osQS0Ik
+    Autorisation: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU2YThlNmY1ZTMxYjI5NzAwOTMxOWEiLCJuYW1lIjoic2VsY3VrIiwic3ViIjoiJDJhJDEwJFJ4YlRybVpUVXlXc1NSQ2VZTFR6enVBZXJZTUF1dUlsNU5qOWt5RFN4WXlFL0NsdG1iLmY2IiwiaWF0IjoxNjU3MjkyNTAxLCJleHAiOjE2NTcyOTYxMDF9.yEZAjFAGpOCbDsJuI_vqot5J75MOE0bKPPn8osQS0Ik
 ```
 
-### PUT /api/form/{ID}
+### PUT /api/form/{ID}{/*examples*/}
 
-This endpoint allows editing of a form. Only the attributes that need to be changed have to be specified in the JSON body.
+### POST /api/form {/ * examples * /}
 
-### POST /api/form
+Cet endpoint permet de modifier un formulaire. Seuls les attributs qui doivent être modifiés doivent être spécifiés dans le corps JSON.
 
-This endpoint must be used to create new forms. The definition is made by using JSON and must have the following structure:
+### POST /api/form {/ * exemples * /}
+
+Cet endpoint doit être utilisé pour créer de nouveaux formulaires. La définition est faite en utilisant JSON et doit avoir la structure suivante:
 
 ```
     {
@@ -228,10 +229,10 @@ This endpoint must be used to create new forms. The definition is made by using 
     }
 ```
 
-The structure of the form is specified under shape. In general, it was designed to represent a normalized and hierarchical structure. For this it contains  
-all available node elements on the first level. This includes not only headings, texts, dividing lines, i-doit category attributes, but also pages.
+La structure du formulaire est spécifiée sous forme. En général, il a été conçu pour représenter une structure normalisée et hiérarchique. Pour cela, il contient
+tous les éléments de nœud disponibles sur le premier niveau. Cela inclut non seulement les en-têtes, les textes, les lignes de division, les attributs de catégorie i-doit, mais aussi les pages.
 
-> It must be ensured that the node IDs (root, PAGE\_1, PAGE\_2,…) are unique and not repeated.
+> Il faut s'assurer que les IDs de nœud (root, PAGE\_1, PAGE\_2,…) sont uniques et non répétés.
 
 ```json
     {
@@ -260,7 +261,7 @@ all available node elements on the first level. This includes not only headings,
     }
 ```
 
-The available configuration parameters of a node are type-dependent. In general, the following data structure can be identified:
+Les paramètres de configuration disponibles d'un nœud dépendent du type. En général, la structure de données suivante peut être identifiée:
 
 ```json
      {
@@ -287,7 +288,7 @@ The available configuration parameters of a node are type-dependent. In general,
      }
 ```
 
-The root node is particularly important here. This represents the entry point on the basis of which a form is built up hierarchically.
+Le nœud racine est particulièrement important ici. Il représente le point d'entrée sur la base duquel un formulaire est construit de manière hiérarchique.
 
 ```
                     ┌──────ROOT──────┐
@@ -311,8 +312,7 @@ The root node is particularly important here. This represents the entry point on
                                                                          Text 2
 ```
 
-The following is a complete structure of a form consisting of two pages (“PAGE\_1” and “PAGE\_2”). Each page has a heading and a  
-text description.
+Voici une structure complète d'un formulaire composé de deux pages ("PAGE\_1" et "PAGE\_2"). Chaque page a un titre et une description textuelle.
 
 ```
      {
@@ -418,9 +418,9 @@ text description.
 Types
 -----
 
-The following section covers all available node types and describes their configurations.
+La section suivante couvre tous les types de nœuds disponibles et décrit leurs configurations.
 
-### Dividing Line
+### Ligne de division
 
 ```
      {
@@ -438,7 +438,7 @@ The following section covers all available node types and describes their config
      }
 ```
 
-### Text
+### Texte
 
 ```
     {
@@ -460,7 +460,7 @@ The following section covers all available node types and describes their config
     }
 ```
 
-### Heading
+### Titre
 
 ```
      {
@@ -480,12 +480,12 @@ The following section covers all available node types and describes their config
      }
 ```
 
-### i-doit category attributes
+### Attributs de catégorie i-doit
 
-Compared to the previous types, this type is more complex and therefore contains a greater number of configuration parameters. To which these parameters can change  
-differentiate further by type of category attribute.
+Comparé aux types précédents, ce type est plus complexe et contient donc un plus grand nombre de paramètres de configuration. Ces paramètres peuvent changer  
+différents selon le type d'attribut de catégorie.
 
-The basic data structure is described below using the example of the attribute General > Title:
+La structure de données de base est décrite ci-dessous en utilisant l'exemple de l'attribut Général > Titre :
 
 ```
      {
@@ -519,28 +519,28 @@ The basic data structure is described below using the example of the attribute G
      }
 ```
 
-### Meta information about attributes
+### Informations métadonnées sur les attributs
 
-Some configuration parameters are dictated by the Forms addon API. They can consist of both static and dynamic values:
+Certains paramètres de configuration sont dictés par l'API de l'addon Forms. Ils peuvent être composés de valeurs statiques et dynamiques :
 
-*   **attribute**\*: static value
-*   **type**\* : static value, reflects the attribute type
-*   **isSystemRequired** : variable value, calculated based on validation or natively
+*   **attribut**\* : valeur statique
+*   **type**\* : valeur statique, reflète le type d'attribut
+*   **isSystemRequired** : valeur variable, calculée en fonction de la validation ou nativement
 
-> This parameter overwrites **required** if the attribute is required on the system side.
+> Ce paramètre remplace **required** si l'attribut est requis du côté du système.
 
-*   **defaultValue** : variable value, is pre-filled if the object type addresses a default template that defines a value for the attribute
+*   **defaultValue** : valeur de la variable, est préremplie si le type d'objet fait référence à un modèle par défaut qui définit une valeur pour l'attribut
 
-> An incorrect specification of **isSystemRequired** will inevitably result in an error when submitting the form
-> unless **required** is _true_.
-> **defaultValue** is not absolutely necessary if the values ​​from the default template are not to be taken into account.
+> Une spécification incorrecte de **isSystemRequired** entraînera inévitablement une erreur lors de la soumission du formulaire
+> à moins que **required** ne soit _true_.
+> **defaultValue** n'est pas absolument nécessaire si les valeurs du modèle par défaut ne doivent pas être prises en compte.
 
-All of this information can be obtained via the Forms addon API, as mentioned earlier:
+Toutes ces informations peuvent être obtenues via l'API de l'addon Forms, comme mentionné précédemment :
 
      GET https://idoit-instance/forms/api/attribute?category=C__CATG__GLOBAL,C__CATG__ACCOUNTING&class=C__OBJTYPE__SERVER
 
-Here, category contains a comma-separated list of category constants.
-class on the other hand contains the object type constant and is needed to determine **defaultValue**. The return looks like this:
+Ici, la catégorie contient une liste de constantes de catégorie séparées par des virgules.
+d'autre part, la classe contient la constante du type d'objet et est nécessaire pour déterminer **defaultValue**. Le retour ressemble à ceci :
 
 ```
      [
@@ -610,15 +610,13 @@ class on the other hand contains the object type constant and is needed to deter
      ]
 ```
 
-### Special case: Field Dependencies
+### Cas spécial : Dépendances de champ
 
-i-doit has attributes that depend on another attribute within the category. A very simple example is the
-attribute Model > Model, which depends on Model > Manufacturer.
+i-doit possède des attributs qui dépendent d'un autre attribut dans la catégorie. Un exemple très simple est l'attribut Modèle > Modèle, qui dépend de Modèle > Fabricant.
 
-For this purpose, the Forms addon contains frontend control mechanisms, for example to recognizes the use of Model > Model (Child) without
-Model > Manufacturer and in this case adds the parent attribute automatically.
+À cette fin, l'addon Forms contient des mécanismes de contrôle frontend, par exemple pour reconnaître l'utilisation de Modèle > Modèle (Enfant) sans Modèle > Fabricant et dans ce cas ajoute automatiquement l'attribut parent.
 
-These attributes can be identified based on their metadata. The child attribute contains **parent** information and the parent attribute **children** information:
+Ces attributs peuvent être identifiés en fonction de leurs métadonnées. L'attribut enfant contient les informations **parent** et l'attribut parent contient les informations **enfants** :
 
 GET https://idoit-instance/forms/api/attribute?category=C__CATG__MODEL&class=C__OBJTYPE__SERVER
 
@@ -659,7 +657,7 @@ GET https://idoit-instance/forms/api/attribute?category=C__CATG__MODEL&class=C__
      ]
 ```
 
-The definition of the nodes for such dependency structures, on the other hand, looks as follows:
+La définition des nœuds pour de telles structures de dépendance, quant à elle, se présente comme suit :
 
 ```
      {

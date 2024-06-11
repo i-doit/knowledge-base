@@ -1,6 +1,6 @@
-# Hotfix archive
+# Archive des correctifs d'urgence
 
-Here we find the archive of old hotfix pages.
+Ici, nous trouvons l'archive des anciennes pages de correctifs d'urgence.
 
 -   [Version 30](v30.md)
 -   [Version 29](v29.md)

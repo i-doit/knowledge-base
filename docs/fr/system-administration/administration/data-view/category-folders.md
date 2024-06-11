@@ -1,27 +1,43 @@
-# Category folders
+# Dossiers de catégorie
 
-The Category Folders feature allows you to create your own category folders and store categories in them for each object type. You can also edit existing category folders and move any category to any folder.
+La fonctionnalité des Dossiers de catégorie vous permet de créer vos propres dossiers de catégorie et d'y stocker des catégories pour chaque type d'objet. Vous pouvez également modifier les dossiers de catégorie existants et déplacer n'importe quelle catégorie vers n'importe quel dossier.
 
-## Rights
+{/*examples*/}
 
-To view or edit the category folders, you need the **Category folders** permissions in the **Administration** section. As usual, the admin Persongroup will have the permissions added by default.
+## Droits
 
-## How do I use the category folders feature
+Pour afficher ou modifier les dossiers de catégorie, vous avez besoin des autorisations **Dossiers de catégorie** dans la section **Administration**. Comme d'habitude, le groupe de personnes administrateur aura les autorisations ajoutées par défaut.
 
-First you need to select an object type and after that you have the option to either use the **Reorder** button where you can **drag&drop** each category where you want it or when you hover over a category you can use the **Move element** button. The **Move element** button opens a popup where you can choose a place to move the selected category.
-The **Add** button allows you to create a category folder with a custom folder name. This folder can be placed directly into another category folder.
+{/*examples*/}
 
-!!! tip "Reorder button"
-    The **Reorder button** allows you quickly **drag&drop** categories or folders to any position. You can also the **Move** button to open the **Move element** function.
+## Comment utiliser la fonctionnalité des dossiers de catégorie
 
-!!! tip "Move element"
-    The **Move element** function is preferred if you want to move a category into a folder. It also offers a search.
+Tout d'abord, vous devez sélectionner un type d'objet, puis vous avez la possibilité d'utiliser le bouton **Réorganiser** où vous pouvez **glisser-déposer** chaque catégorie où vous le souhaitez ou lorsque vous survolez une catégorie, vous pouvez utiliser le bouton **Déplacer l'élément**. Le bouton **Déplacer l'élément** ouvre une fenêtre contextuelle où vous pouvez choisir un endroit où déplacer la catégorie sélectionnée.
+Le bouton **Ajouter** vous permet de créer un dossier de catégorie avec un nom de dossier personnalisé. Ce dossier peut être placé directement dans un autre dossier de catégorie.
 
-!!! tip "Add a category folder"
-    Click the **Add** button to create a category folder and specify the folder location.
+{/*examples*/}
 
-!!! note "Sorting"
-    The sorting of categories is disabled if you have edited an object type with the Category folders function. Because you can create your own order.
+!!! tip "Bouton Réorganiser"
+    Le **bouton Réorganiser** vous permet de **glisser-déposer** rapidement des catégories ou des dossiers à n'importe quelle position. Vous pouvez également utiliser le bouton **Déplacer** pour ouvrir la fonction **Déplacer l'élément**.
 
-!!! abstract "Resetting Category folders for an Object type"
-    If you reset the folder configuration, the changes will be undone and created category folder will be deleted.
+{/*examples*/}
+
+!!! tip "Déplacer l'élément"
+    La fonction **Déplacer l'élément** est préférée si vous souhaitez déplacer une catégorie dans un dossier. Elle offre également une fonction de recherche.
+
+{/*examples*/}
+
+!!! tip "Ajouter un dossier de catégorie"
+    Cliquez sur le bouton **Ajouter** pour créer un dossier de catégorie et spécifiez l'emplacement du dossier.
+
+{/*examples*/}
+
+!!! note "Tri"
+    Le tri des catégories est désactivé si vous avez modifié un type d'objet avec la fonctionnalité des Dossiers de catégorie. Car vous pouvez créer votre propre ordre.
+
+{/*examples*/}
+
+!!! abstract "Réinitialisation des dossiers de catégorie pour un type d'objet"
+    Si vous réinitialisez la configuration du dossier, les modifications seront annulées et le dossier de catégorie créé sera supprimé.
+
+{/*examples*/}

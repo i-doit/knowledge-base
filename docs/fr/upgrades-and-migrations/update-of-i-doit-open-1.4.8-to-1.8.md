@@ -1,53 +1,55 @@
-# Update of i-doit open 1.4.8 to 1.8
+# Mise à jour de i-doit open 1.4.8 à 1.8
 
-This article explains particularities which have to be considered with an update of the open version status 1.4.8 to 1.8.
+Cet article explique les particularités à prendre en compte lors d'une mise à jour de la version ouverte 1.4.8 à 1.8.
 
-Preparation
+Préparation
 -----------
 
-The step from version 1.4.8 to version 1.8 entails many changes. Substantial changes of the Web GUI and the database model were carried out. The API has considerably more functions and is offered as a separate module free of charge.
+Le passage de la version 1.4.8 à la version 1.8 entraîne de nombreux changements. Des changements substantiels de l'interface Web et du modèle de base de données ont été effectués. L'API propose considérablement plus de fonctions et est proposée en tant que module séparé et gratuit.
 
-Download
---------
+Téléchargement
+--------------
 
-[You can download the update package here](../assets/downloads/idoit-open-1.8-update.zip)
+[Vous pouvez télécharger le package de mise à jour ici](../assets/downloads/idoit-open-1.8-update.zip)
 
-There are the following prequesites:
+Voici les prérequis suivants :
 
-*   The installation used so far is version 1.4.8. Should you use a previous version you have to update the installation to version status 1.4.8.
-*   First, an update to version 1.8 is carried out. You cannot update to newer versions before you executed the update to version 1.8.
+*   L'installation utilisée jusqu'à présent est la version 1.4.8. Si vous utilisez une version antérieure, vous devez mettre à jour l'installation vers la version 1.4.8.
+*   Tout d'abord, une mise à jour vers la version 1.8 est effectuée. Vous ne pouvez pas mettre à jour vers des versions plus récentes avant d'avoir exécuté la mise à jour vers la version 1.8.
 
-Execution
+Exécution
 ---------
 
-After download, you copy and unzip the update package in the i-doit installation directory. Here is an example for a Debian-based operating system:
+Après le téléchargement, vous copiez et décompressez le package de mise à jour dans le répertoire d'installation de i-doit. Voici un exemple pour un système d'exploitation basé sur Debian :
 
     sudo -u www-data cp idoit-open-1.8-update.zip /var/www/html/i-doit/
     cd /var/www/html/i-doit/
     sudo -u www-data unzip idoit-open-1.8-update.zip
 
-You have to adapt the path accordingly. Copy and unzip the package with the user of the Apache Webserver so that the update is carried out with this user's rights without problems.
+{/*examples*/}
 
-In principle, the subsequent update procedure does not differ from a normal [update via the Web GUI](../maintenance-and-operation/update.md). As version 1.8 is a major update you must not skip previous major updates. The updates are loaded one after the other. When the first update has been carried out, you are prompted to load the next update. This procedure repeats itself until the update for version 1.8 is loaded. This results in the following update path:
+Vous devez adapter le chemin en conséquence. Copiez et décompressez le package avec l'utilisateur du serveur Web Apache afin que la mise à jour soit effectuée avec les droits de cet utilisateur sans problèmes.
 
-1.  Update from version 1.4.8 to version 1.5
-2.  Update from version 1.5 to version 1.6
-3.  Update from version 1.6 to version 1.7
-4.  Update from version 1.7 to version 1.8
+En principe, la procédure de mise à jour ultérieure ne diffère pas d'une mise à jour normale [via l'interface Web](../maintenance-and-operation/update.md). Comme la version 1.8 est une mise à jour majeure, vous ne devez pas sauter les mises à jour majeures précédentes. Les mises à jour sont chargées les unes après les autres. Lorsque la première mise à jour a été effectuée, vous êtes invité à charger la mise à jour suivante. Cette procédure se répète jusqu'à ce que la mise à jour pour la version 1.8 soit chargée. Cela donne le chemin de mise à jour suivant :
 
-When all steps have been finished successfully, the update to version 1.8 is completed. Now the Web GUI displays the version number 1.8.
+1.  Mise à jour de la version 1.4.8 à la version 1.5
+2.  Mise à jour de la version 1.5 à la version 1.6
+3.  Mise à jour de la version 1.6 à la version 1.7
+4.  Mise à jour de la version 1.7 à la version 1.8
 
-Follow-up Work
+Une fois que toutes les étapes ont été terminées avec succès, la mise à jour vers la version 1.8 est terminée. Maintenant, l'interface Web affiche le numéro de version 1.8.
+
+Travaux de suivi
 --------------
 
-It is worth following further steps after the update:
+Il est utile de suivre d'autres étapes après la mise à jour :
 
-*   [Backup configuration](../maintenance-and-operation/backup-and-recovery/index.md)
-*   [Cronjobs setup](../automation-and-integration/cli/index.md)
+*   [Configuration de sauvegarde](../maintenance-and-operation/backup-and-recovery/index.md)
+*   [Configuration des tâches Cron](../automation-and-integration/cli/index.md)
 
-Troubleshooting
+Dépannage
 ---------------
 
-With each step a log file is created in the log/ directory. If a step cannot be completed due to an error, this will be recorded in the log. Then you should refrain from executing further update steps to avoid subsequent errors. You can always get help from the [open-Forum](https://forum.i-doit.org/).
+À chaque étape, un fichier journal est créé dans le répertoire log/. Si une étape ne peut pas être complétée en raison d'une erreur, cela sera enregistré dans le journal. Ensuite, vous devriez vous abstenir d'exécuter d'autres étapes de mise à jour pour éviter des erreurs ultérieures. Vous pouvez toujours obtenir de l'aide sur le [Forum ouvert](https://forum.i-doit.org/).
 
-Further tips regarding [troubleshooting](../system-administration/troubleshooting/index.md) can be found in the Knowledge Base.
+D'autres conseils concernant le [dépannage](../system-administration/troubleshooting/index.md) peuvent être trouvés dans la base de connaissances.

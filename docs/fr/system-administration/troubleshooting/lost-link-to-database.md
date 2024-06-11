@@ -1,38 +1,38 @@
-# "Lost Link to Database"
+# "Lien perdu vers la base de données"
 
-Problem
--------
+Problème
+--------
 
-The error message **Lost link to database** appears in the login form after entering the credentials. The login fails.
+Le message d'erreur **Lien perdu vers la base de données** apparaît dans le formulaire de connexion après avoir saisi les informations d'identification. La connexion échoue.
 
 Solution
 --------
 
-i-doit is not capable of accessing the desired tenant database. This error can occur quickly once the i-doit installation has been moved to another system and the MySQL/MariaDB users do not exist on the new system.
+i-doit n'est pas capable d'accéder à la base de données du locataire souhaité. Cette erreur peut survenir rapidement une fois que l'installation de i-doit a été déplacée vers un autre système et que les utilisateurs MySQL/MariaDB n'existent pas sur le nouveau système.
 
-i-doit saves all configured tenants in the system database (idoit_system for [default installations](../../installation/manual-installation/setup.md)) in the isys_mandator table. Each tenant receives a database separate from the others (idoit_data for the first tenant for default installations). Dedicated credentials can be assigned to access this database. These are located in the columns isys_mandator__db_user and isys_mandator__db_pass. These should be checked for validity. It also does not hurt to check the other details.
+i-doit enregistre tous les locataires configurés dans la base de données système (idoit_system pour les [installations par défaut](../../installation/manual-installation/setup.md)) dans la table isys_mandator. Chaque locataire reçoit une base de données distincte des autres (idoit_data pour le premier locataire pour les installations par défaut). Des informations d'identification dédiées peuvent être attribuées pour accéder à cette base de données. Elles se trouvent dans les colonnes isys_mandator__db_user et isys_mandator__db_pass. Il convient de vérifier leur validité. Il ne faut pas non plus négliger de vérifier les autres détails.
 
-This can be tested via the command line:
+Cela peut être testé via la ligne de commande :
 
     mysql -hlocalhost -uidoit -p
 
-Here the credentials for the desired tenant database need to be entered. After executing the command mysql will ask for the password. If the login fails, the credentials are not valid. If the login is successful an additional check should be performed to see whether the user has reading permissions for the tenant database:
+Ici, les informations d'identification pour la base de données du locataire souhaité doivent être saisies. Après l'exécution de la commande, mysql demandera le mot de passe. Si la connexion échoue, les informations d'identification ne sont pas valides. Si la connexion réussit, une vérification supplémentaire doit être effectuée pour voir si l'utilisateur dispose des autorisations de lecture pour la base de données du locataire :
 
     mysql> USE idoit_data;
     mysql> SHOW TABLES;
 
-Again: If error messages are displayed, then something is wrong.
+Encore une fois : Si des messages d'erreur s'affichent, quelque chose ne va pas.
 
-A closer look at the user table of MySQL/MariaDB will clarify/solve the issue. For this you should be logged in as database administrator (typically root):
+Un examen plus approfondi de la table des utilisateurs de MySQL/MariaDB clarifiera/résoudra le problème. Pour cela, vous devez être connecté en tant qu'administrateur de base de données (généralement root) :
 
     mysql -hlocalhost -uroot -p
     mysql> USE mysql;
     mysql> SELECT * FROM user;
 
-The user can be added with this command if he is missing:
+L'utilisateur peut être ajouté avec cette commande s'il est manquant :
 
     mysql> GRANT ALL PRIVILEGES ON idoit_data TO 'idoit'@'localhost' IDENTIFIED BY 'idoit';
 
-In this example special attention should be given to replacing the name of the tenant database, the user and its password by the right/safe values.
+Dans cet exemple, une attention particulière doit être accordée au remplacement du nom de la base de données du locataire, de l'utilisateur et de son mot de passe par les valeurs correctes/sécurisées.
 
-If you are reluctant to use the command line, administration tools for MySQL/MariaDB as for example [phpMyAdmin](https://en.wikipedia.org/wiki/PhpMyAdmin) can be used as an alternative.
+Si vous hésitez à utiliser la ligne de commande, des outils d'administration pour MySQL/MariaDB comme par exemple [phpMyAdmin](https://fr.wikipedia.org/wiki/PhpMyAdmin) peuvent être utilisés en alternative.

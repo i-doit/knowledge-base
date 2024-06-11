@@ -1,9 +1,11 @@
-# checkmk 2: Sync WATO folders
+# checkmk 2: Synchroniser les dossiers WATO
 
-Hosts can be hierarchical ordered in folders. These folders can be synced to i-doit and additional folders in i-doit can be used to generate new folders in checkmk. Just run:
+Les hôtes peuvent être organisés de manière hiérarchique dans des dossiers. Ces dossiers peuvent être synchronisés avec i-doit et des dossiers supplémentaires dans i-doit peuvent être utilisés pour générer de nouveaux dossiers dans checkmk. Il suffit d'exécuter :
 
     idoitcmk sync-folders
 
-In i-doit these WATO folders are stored in the dialog+ attribute WATO folder in category Check_MK Host.
+Dans i-doit, ces dossiers WATO sont stockés dans l'attribut de dialogue+ Dossier WATO de la catégorie Hôte Check_MK.
 
-**Recommendation:** Run this command every time you add a new folder in checkmk or i-doit.
+**Recommandation :** Exécutez cette commande chaque fois que vous ajoutez un nouveau dossier dans checkmk ou i-doit. 
+
+{ /* examples */ }

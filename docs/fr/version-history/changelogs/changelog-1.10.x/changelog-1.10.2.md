@@ -1,110 +1,110 @@
-# Changelog 1.10.2
+# Journal des modifications 1.10.2
 
-[Improvement][Systemtools]               Object counter in system overview for current tenant   
-[Improvement][Report-Manager]            Addition of the attributes CPU cores and sockets in the report manager   
-[Improvement][API]                       API: Read, create, update and delete monitoring instances   
-[Improvement][API]                       Create, read, update and delete static host tags via API   
-[Bug][Custom categories]                 Constants of custom categories receive hardcoded prefix   
-[Bug][Custom categories]                 Different rendering of HTML editor fields in view and edit mode   
-[Bug][Custom categories]                 Dialog + field can only be saved once in the dialog admin   
-[Bug][Custom categories]                 Wrong cleanup of HTML field in custom categories   
-[Bug][Custom categories]                 When duplicating objects, all empty Dialog + fields within all custom categories a value were set   
-[Bug][Categories]                        The "All tickets" category now has an intuitive link to the referenced ticket   
-[Bug][Categories]                        Rack statistics do not show all available results   
-[Bug][Categories]                        Content of categorie extensions for personens are deleted, when categorie "Master Data" is edited   
-[Bug][Categories]                        Deleting location assignments when editing categorie with insufficient permissions   
-[Bug][Categories]                        No clickable relation to the database instance in the database schema   
-[Bug][Categories]                        (Source) IP address assignment incorrect   
-[Bug][Categories]                        Unwanted default values   
-[Bug][Categories]                        Wrong RAID information when duplicating   
-[Bug][Categories]                        Category crypto card stays gray despite filled attributes   
-[Bug][Categories]                        Connecting a VM with a cluster is not possible without host selection   
-[Bug][Categories]                        Check the inputs of attributes volts, watts and ampere   
-[Bug][Categories]                        Ampere displays many decimal places   
-[Bug][Categories]                        Length of cables is not duplicated   
-[Bug][Categories]                        Cannot save half hours in reaction time   
-[Bug][Categories]                        Type of connector is not duplicated   
-[Bug][Categories]                        Removing linked database instance under some circumstances not possible   
-[Bug][CMDB]                              Database instance shows archived and deleted schemas   
-[Bug][CMDB]                              Not possible to put a zero in dialog admin   
-[Bug][CMDB]                              Missing translation at tenant selection   
-[Bug][CMDB]                              Login View of i-doit Wrong After too early Timeout   
-[Bug][Lists]                             Cannot sort after category or purpose in lists   
-[Bug][Lists]                             Cannot show database instances in the list of database schemas   
-[Bug][Lists]                             Cannot show database schemas in the list of database instances   
-[Bug][Lists]                             Sorting by tags in object lists not possible   
-[Bug][Lists]                             Object lists do not save the default filter   
-[Bug][Lists]                             Not possible to assign the attribute "Assignes devices (Logical devices (LDEV server))" to lists   
-[Bug][Lists]                             Filtering attribute "tags" does not work   
-[Bug][Lists]                             Incorrect sorting of costs in the list view of contracts   
-[Bug][Lists]                             Allocated IP addresses are not being sorted correctly   
-[Bug][OCS]                               Import of CPU cores from OCS Inventory   
-[Bug][OCS]                               OCS import delivers titles with curly braces instead of actual names   
-[Bug][OCS]                               OCS: IP-Adress/Subnet is not updated during import   
-[Bug][API]                               API: API creates unused cable while creating a new physical network port   
-[Bug][API]                               API: Headers not RFC 2616 compliant   
-[Bug][API]                               Missing logbook entries after creation of content via the API   
-[Bug][API]                               API responded with wrong session ID after successful login   
-[Bug][API]                               API: Enter IP addresses via API results in errors when a validation of category "host address" is set   
-[Bug][API]                               API: cmdb.category.create does not create a value in a custom dialog+ field (multiple)   
-[Bug][API]                               API: Batch request with cmdb.category.create or .update throws SQL error for category model   
-[Bug][QR-Codes]                          QR-Code: Font is always centered   
-[Bug][Templates]                         Default template will not be processed if overview page is active   
-[Bug][Templates]                         Predefined templates can be cleaned up, but appear again   
-[Bug][Templates]                         Default template is not used during object creation   
-[Bug][Notifications]                     Notifications also use archived and deleted contacts   
-[Bug][Notifications]                     Misspelling in the configuration of notifications of unchanged objects   
-[Bug][Notifications]                     License expiration notifications apply only to the first license key   
-[Bug][Relations]                         Software: Number of installations does not take into account the condition   
-[Bug][Relations]                         Archived relationship "linked cards" persists in the SIM card   
-[Bug][Logbook]                           Logbook: Changes in the category "contract assignment" on the attribute "Leistungsschein" are not written   
-[Bug][Logbook]                           Editing the general category on the overview page cretaes logbook entries for the location category   
-[Bug][Logbook]                           Editing category general does not create logbook entries   
-[Bug][Logbook]                           Wrong information in logbook for categories with default values   
-[Bug][Logbook]                           Wrong logbook content for locations   
-[Bug][CMDB-Explorer]                     No conclusive sorting of objects in the CMDB Explorer   
-[Bug][CMDB-Explorer]                     CMDB Explorer - Missing attributes on custom profiles   
-[Bug][Report-Manager]                    Report Manager: Category "Password" is missing   
-[Bug][Report-Manager]                    "Condition" and "status" are being mixed up sometimes   
-[Bug][Report-Manager]                    Attribute "standard gateway for net" can not be used in report manager   
-[Bug][Report-Manager]                    DB Error Message Appears Executing A Report With More Than One Condition   
-[Bug][Report-Manager]                    Option to hide objects with empty relations does not work in report manager for custom categories   
-[Bug][Report-Manager]                    Categorie "Virtual devices" is not available in report manager   
-[Bug][Report-Manager]                    Report Manager: Purge button is displayed despite missing rights   
-[Bug][Objects]                           Print Preview gives passwords in the "Password" category encrypted   
-[Bug][Objects]                           Deleting system users possible   
-[Bug][Objects]                           Object type is not displayed in the Browser object of the Service Assignment category   
-[Bug][Objects]                           Mouseover in list view disappears from the visible area   
-[Bug][Objects]                           Archiving within an object is not possible   
-[Bug][JDisc]                             Manually documented locations are overwritten when importing sysLocation via JDisc   
-[Bug][JDisc]                             Incorrect import of chassis view via JDisc   
-[Bug][JDisc]                             Import Filter JDisc for Hostadresses   
-[Bug][Documents]                         Wrong format for date contents   
-[Bug][List editing]                      Entering money values only possible with dots instead of commas   
-[Bug][List editing]                      List Editing: Deleting e-mail addresses leads to incorrect entries   
-[Bug][List editing]                      Multi value categories can not be edited via list edit   
-[Bug][List editing]                      List edit: Validation of attributes that are not being displayed   
-[Bug][List editing]                      "Description" is being validated in List Edit   
-[Bug][List editing]                      Inkonsistancy Behaviour Of DialoguePlus DropDowns Under List Edit   
-[Bug][CSV]                               Attribute "Patchlevel" is not filled via CSV import   
-[Bug][CSV]                               Special assignment of room numbers does not work in the CSV import   
-[Bug][CSV]                               CSV import: Room number is not recognized / found   
-[Bug][CSV]                               Import of CMDB status with CSV import by using the console not possible   
-[Bug][Check_MK]                          Check_MK transfer script fails, because no 'idoit_hosttags.mk' file is being created   
-[Bug][Check_MK]                          Dynamic Check_MK host tags can not be deleted   
-[Bug][Monitoring]                        FQDN not correct in monitoring   
-[Bug][CMDB settings]                     Multi select in list of object type configuration without any function   
-[Bug][CMDB settings]                     Wrong selection in objecttype configuration when selecting more than one checkbox   
-[Bug][CMDB settings]                     Missing request for change comment   
-[Bug][Update]                            Wrong translation of "tenant" (mandator) during i-doit update process   
-[Bug][Admincenter]                       Error Tracker slows down the system massively   
-[Bug][LDAP]                              Console: User, Password on Report via CLI Console are not transferred   
-[Bug][LDAP]                              Open LDAP Sync: UID / login name is not accepted   
-[Bug][Console]                           Console: Output of archived user in ldap-sync failed   
-[Bug][System settings]                   System setting "Display limit of host addresses" does not work in lists   
-[Bug][System settings]                   SSO: Deep links always lead to the dashboard   
-[Bug][Import]                            Error of i-doit controller being deprecated when importing XML files or content from OCS   
-[Bug][Systemtools]                       Online Repositories via HTTPS   
-[Bug][Validation]                        Automaticly generated inventory number deactivates validation of this attribute   
-[Bug][Search]                            Not able to switch between search modes when specific are in the result list   
-[Change][CMDB]                           Unifying connectors in the quickinfo  
+[Amélioration][Outils système]               Compteur d'objets dans la vue d'ensemble du système pour le locataire actuel   
+[Amélioration][Gestionnaire de rapports]     Ajout des attributs cœurs de CPU et sockets dans le gestionnaire de rapports   
+[Amélioration][API]                         API : Lire, créer, mettre à jour et supprimer des instances de surveillance   
+[Amélioration][API]                         Créer, lire, mettre à jour et supprimer des balises d'hôte statiques via l'API   
+[Erreur][Catégories personnalisées]          Les constantes des catégories personnalisées reçoivent un préfixe codé en dur   
+[Erreur][Catégories personnalisées]          Rendu différent des champs de l'éditeur HTML en mode vue et édition   
+[Erreur][Catégories personnalisées]          Le dialogue + champ ne peut être enregistré qu'une seule fois dans l'administration des dialogues   
+[Erreur][Catégories personnalisées]          Mauvais nettoyage du champ HTML dans les catégories personnalisées   
+[Erreur][Catégories personnalisées]          Lors de la duplication d'objets, toutes les champs de dialogue + vides dans toutes les catégories personnalisées reçoivent une valeur   
+[Erreur][Catégories]                        La catégorie "Tous les tickets" a maintenant un lien intuitif vers le ticket référencé   
+[Erreur][Catégories]                        Les statistiques de rack ne montrent pas tous les résultats disponibles   
+[Erreur][Catégories]                        Le contenu des extensions de catégorie pour les personnes est supprimé lors de la modification de la catégorie "Données principales"   
+[Erreur][Catégories]                        Suppression des affectations de localisation lors de la modification de la catégorie avec des autorisations insuffisantes   
+[Erreur][Catégories]                        Aucun lien cliquable vers l'instance de base de données dans le schéma de base de données   
+[Erreur][Catégégories]                        Affectation incorrecte de l'adresse IP (source)   
+[Erreur][Catégories]                        Valeurs par défaut non désirées   
+[Erreur][Catégégories]                        Mauvaise information RAID lors de la duplication   
+[Erreur][Catégories]                        La carte crypto de la catégorie reste grise malgré les attributs remplis   
+[Erreur][Catégégories]                        Il n'est pas possible de connecter une VM à un cluster sans sélection d'hôte   
+[Erreur][Catégégories]                        Vérifier les entrées des attributs volts, watts et ampère   
+[Erreur][Catégégories]                        Les ampères affichent de nombreuses décimales   
+[Erreur][Catégégories]                        La longueur des câbles n'est pas dupliquée   
+[Erreur][Catégégories]                        Impossible d'enregistrer des demi-heures dans le temps de réaction   
+[Erreur][Catégégories]                        Le type de connecteur n'est pas dupliqué   
+[Erreur][Catégories]                        Il n'est pas possible de supprimer une instance de base de données liée dans certaines circonstances   
+[Erreur][CMDB]                              L'instance de base de données affiche des schémas archivés et supprimés   
+[Erreur][CMDB]                              Impossible de mettre un zéro dans l'administration des dialogues   
+[Erreur][CMDB]                              Traduction manquante lors de la sélection du locataire   
+[Erreur][CMDB]                              Vue de connexion de i-doit incorrecte après une déconnexion trop précoce   
+[Erreur][Listes]                             Impossible de trier par catégorie ou objectif dans les listes   
+[Erreur][Listes]                             Impossible d'afficher les instances de base de données dans la liste des schémas de base de données   
+[Erreur][Listes]                             Impossible d'afficher les schémas de base de données dans la liste des instances de base de données   
+[Erreur][Listes]                             Le tri par tags dans les listes d'objets n'est pas possible   
+[Erreur][Listes]                             Les listes d'objets ne sauvegardent pas le filtre par défaut   
+[Erreur][Listes]                             Impossible d'attribuer l'attribut "Appareils assignés (Appareils logiques (serveur LDEV))" aux listes   
+[Erreur][Listes]                             Le filtrage de l'attribut "tags" ne fonctionne pas   
+[Erreur][Listes]                             Tri incorrect des coûts dans la vue en liste des contrats   
+[Erreur][Listes]                             Les adresses IP allouées ne sont pas triées correctement   
+[Erreur][OCS]                               Importation des cœurs de CPU depuis OCS Inventory   
+[Erreur][OCS]                               L'importation OCS fournit des titres avec des accolades au lieu de noms réels   
+[Erreur][OCS]                               OCS : L'adresse IP/masque de sous-réseau n'est pas mise à jour lors de l'importation   
+[Erreur][API]                               API : L'API crée un câble inutilisé lors de la création d'un nouveau port réseau physique   
+[Erreur][API]                               API : Les en-têtes ne sont pas conformes à la RFC 2616   
+[Erreur][API]                               Entrées de journal manquantes après la création de contenu via l'API   
+[Erreur][API]                               L'API a renvoyé un mauvais ID de session après une connexion réussie   
+[Erreur][API]                               API : Saisir des adresses IP via l'API entraîne des erreurs lorsqu'une validation de la catégorie "adresse hôte" est définie   
+[Erreur][API]                               API : cmdb.category.create ne crée pas de valeur dans un champ de dialogue+ personnalisé (multiple)   
+[Erreur][API]                               API : La requête groupée avec cmdb.category.create ou .update génère une erreur SQL pour le modèle de catégorie   
+[Erreur][Codes QR]                          Code QR : La police est toujours centrée   
+[Erreur][Modèles]                           Le modèle par défaut ne sera pas traité si la page d'aperçu est active   
+[Erreur][Modèles]                           Les modèles prédéfinis peuvent être nettoyés, mais réapparaissent   
+[Erreur][Modèles]                           Le modèle par défaut n'est pas utilisé lors de la création d'objets   
+[Erreur][Notifications]                     Les notifications utilisent également des contacts archivés et supprimés   
+[Erreur][Notifications]                     Faute d'orthographe dans la configuration des notifications des objets inchangés   
+[Erreur][Notifications]                     Les notifications d'expiration de licence s'appliquent uniquement à la première clé de licence   
+[Erreur][Relations]                         Logiciel : Le nombre d'installations ne prend pas en compte la condition   
+[Erreur][Relations]                         La relation archivée "cartes liées" persiste dans la carte SIM   
+[Erreur][Journal]                           Journal : Les modifications de la catégorie "attribution de contrat" sur l'attribut "Leistungsschein" ne sont pas enregistrées   
+[Erreur][Journal]                           La modification de la catégorie générale sur la page d'aperçu crée des entrées de journal pour la catégorie de localisation   
+[Erreur][Journal]                           La modification de la catégorie générale ne crée pas d'entrées de journal   
+[Erreur][Journal]                           Mauvaise information dans le journal pour les catégories avec des valeurs par défaut   
+[Erreur][Journal]                           Contenu de journal incorrect pour les emplacements   
+[Erreur][Explorateur CMDB]                  Aucun tri concluant des objets dans l'explorateur CMDB   
+[Erreur][Explorateur CMDB]                  Explorateur CMDB - Attributs manquants sur les profils personnalisés   
+[Erreur][Gestionnaire de rapports]          Gestionnaire de rapports : La catégorie "Mot de passe" est manquante   
+[Erreur][Gestionnaire de rapports]          "Condition" et "statut" sont parfois mélangés   
+[Erreur][Gestionnaire de rapports]          L'attribut "passerelle standard pour le réseau" ne peut pas être utilisé dans le gestionnaire de rapports   
+[Erreur][Gestionnaire de rapports]          Un message d'erreur de base de données apparaît lors de l'exécution d'un rapport avec plus d'une condition   
+[Erreur][Gestionnaire de rapports]          L'option pour masquer les objets avec des relations vides ne fonctionne pas dans le gestionnaire de rapports pour les catégories personnalisées   
+[Erreur][Gestionnaire de rapports]          La catégorie "Appareils virtuels" n'est pas disponible dans le gestionnaire de rapports   
+[Erreur][Gestionnaire de rapports]          Gestionnaire de rapports : Le bouton de purge est affiché malgré des droits manquants   
+[Erreur][Objets]                           L'aperçu avant impression affiche les mots de passe dans la catégorie "Mot de passe" cryptés   
+[Erreur][Objets]                           Suppression des utilisateurs système possible   
+[Erreur][Objets]                           Le type d'objet n'est pas affiché dans l'objet du navigateur de la catégorie d'attribution de service   
+[Erreur][Objets]                           Le survol dans la vue en liste disparaît de la zone visible   
+[Erreur][Objets]                           L'archivage dans un objet n'est pas possible   
+[Erreur][JDisc]                             Les emplacements documentés manuellement sont écrasés lors de l'importation de sysLocation via JDisc   
+[Erreur][JDisc]                             Importation incorrecte de la vue du châssis via JDisc   
+[Erreur][JDisc]                             Filtre d'importation JDisc pour les adresses hôtes   
+[Erreur][Documents]                         Mauvais format pour les contenus de date   
+[Erreur][Édition de liste]                  Saisir des valeurs monétaires possible uniquement avec des points au lieu de virgules   
+[Erreur][Édition de liste]                  Édition de liste : La suppression des adresses e-mail entraîne des entrées incorrectes   
+[Erreur][Édition de liste]                  Les catégories à valeurs multiples ne peuvent pas être éditées via l'édition de liste   
+[Erreur][Édition de liste]                  Édition de liste : Validation des attributs qui ne sont pas affichés   
+[Erreur][Édition de liste]                  "Description" est validée dans l'édition de liste   
+[Erreur][Édition de liste]                  Comportement incohérent des listes déroulantes DialoguePlus sous l'édition de liste   
+[Erreur][CSV]                               L'attribut "Niveau de correctif" n'est pas rempli via l'importation CSV   
+[Erreur][CSV]                               L'attribution spéciale des numéros de salle ne fonctionne pas dans l'importation CSV   
+[Erreur][CSV]                               Importation CSV : Le numéro de salle n'est pas reconnu / trouvé   
+[Erreur][CSV]                               Importation de l'état CMDB avec l'importation CSV en utilisant la console non possible   
+[Erreur][Check_MK]                          L'échec du script de transfert Check_MK, car aucun fichier 'idoit_hosttags.mk' n'est créé   
+[Erreur][Check_MK]                          Les balises d'hôte Check_MK dynamiques ne peuvent pas être supprimées   
+[Erreur][Surveillance]                      FQDN incorrect en surveillance   
+[Erreur][Paramètres CMDB]                   Sélection multiple dans la liste de configuration du type d'objet sans aucune fonction   
+[Erreur][Paramètres CMDB]                   Sélection incorrecte dans la configuration du type d'objet lors de la sélection de plus d'une case à cocher   
+[Erreur][Paramètres CMDB]                   Demande manquante pour le commentaire de modification   
+[Erreur][Mise à jour]                       Mauvaise traduction de "locataire" (mandant) pendant le processus de mise à jour de i-doit   
+[Erreur][Centre d'administration]           Le suivi des erreurs ralentit considérablement le système   
+[Erreur][LDAP]                              Console : Utilisateur, mot de passe sur le rapport via la console CLI ne sont pas transférés   
+[Erreur][LDAP]                              Synchronisation Open LDAP : L'UID / nom de connexion n'est pas accepté   
+[Erreur][Console]                           Console : La sortie de l'utilisateur archivé dans la synchronisation LDAP a échoué   
+[Erreur][Paramètres système]                Le paramètre système "Limite d'affichage des adresses hôtes" ne fonctionne pas dans les listes   
+[Erreur][Paramètres système]                SSO : Les liens profonds mènent toujours au tableau de bord   
+[Erreur][Importation]                      Erreur du contrôleur i-doit étant obsolète lors de l'importation de fichiers XML ou de contenu depuis OCS   
+[Erreur][Outils système]                    Dépôts en ligne via HTTPS   
+[Erreur][Validation]                       Le numéro d'inventaire généré automatiquement désactive la validation de cet attribut   
+[Erreur][Recherche]                         Impossible de basculer entre les modes de recherche lorsque des spécifiques sont dans la liste de résultats   
+[Changement][CMDB]                         Unification des connecteurs dans les informations rapides  

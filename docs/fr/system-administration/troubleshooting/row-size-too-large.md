@@ -1,28 +1,27 @@
-# Row size too large
+# Taille de ligne trop grande {/examples}
 
-## Problem
+## Problème
 
-
-I want to update i-doit. During the update, an error message appears, such as:  
+Je veux mettre à jour i-doit. Pendant la mise à jour, un message d'erreur apparaît, tel que :  
 [![](../../assets/images/en/system-administration/troubleshooting/row-size-too-large/1-rstl.png)](../../assets/images/en/system-administration/troubleshooting/row-size-too-large/1-rstl.png)    
 
 ## Solution
 
-A backup should already exist because of the update.<br>
-We set the row size and run the update again, first we log in to mysql:
+Une sauvegarde devrait déjà exister en raison de la mise à jour.<br>
+Nous définissons la taille de ligne et relançons la mise à jour, d'abord nous nous connectons à mysql :
 
 ```bash
 mysql -u root -p
 ```
 
-Now the affected database is selected.
+Maintenant, la base de données affectée est sélectionnée.
 ```sql
 USE idoit_data;
 ```
-If the error occurs for multiple databases, this step must be performed for all affected databases.<br>
-This may be the case if there are multiple clients.
+Si l'erreur se produit pour plusieurs bases de données, cette étape doit être effectuée pour toutes les bases de données affectées.<br>
+Cela peut être le cas s'il y a plusieurs clients.
 
-Now we set the ROW\_FORMAT of the table from Fixed to Dynamic:
+Maintenant, nous définissons le ROW\_FORMAT de la table de Fixe à Dynamique :
 
 ```sql
 ALTER TABLE isys_cats_person_list ROW_FORMAT=DYNAMIC;

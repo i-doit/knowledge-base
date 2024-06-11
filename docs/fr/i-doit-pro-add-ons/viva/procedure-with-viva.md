@@ -1,121 +1,119 @@
-# Procedure with VIVA
+# Procédure avec VIVA {/examples}
 
-Manage IT-Grundschutz catalogs
+Gérer les catalogues IT-Grundschutz
 
-Import catalogs
----------------
+Importer des catalogues
+-----------------------
 
-The first step towards documentation is to import the current IT-Grundschutz catalogs. You will be prompted to do this the first time you start VIVA under Extras → VIVA. Various catalogs are available for selection:
+La première étape vers la documentation consiste à importer les catalogues actuels d'IT-Grundschutz. Vous serez invité à le faire la première fois que vous démarrez VIVA sous Extras → VIVA. Divers catalogues sont disponibles pour la sélection :
 
-*   Supplementary delivery (EL) 15 from 2016 in German.
-*   EL 14 from 2014 in German
-*   EL 13 from 2013 in German
-*   EL 13 from 2013 in English
-*   EL 12 from 2011 in German and
-*   EL 11 of 2009 in German.
+*   Livraison supplémentaire (EL) 15 de 2016 en allemand.
+*   EL 14 de 2014 en allemand
+*   EL 13 de 2013 en allemand
+*   EL 13 de 2013 en anglais
+*   EL 12 de 2011 en allemand et
+*   EL 11 de 2009 en allemand.
 
-The catalogs are available for download on the BSI website. Depending on the EL, minor intermediate steps may be required to convert the catalogs to the correct file format.
+Les catalogues sont disponibles en téléchargement sur le site web du BSI. Selon l'EL, des étapes intermédiaires mineures peuvent être nécessaires pour convertir les catalogues dans le bon format de fichier.
 
-Intermediate steps are necessary for the import because the format offered by the BSI cannot be processed directly by VIVA. The catalogs are available for download on the BSI website. The further steps:
+Des étapes intermédiaires sont nécessaires pour l'importation car le format proposé par le BSI ne peut pas être traité directement par VIVA. Les catalogues sont disponibles en téléchargement sur le site web du BSI. Les étapes supplémentaires :
 
-1.  After download: Unzip ZIP file
-2.  Unpack self-extracting archive (.exe)
-3.  Change to folder GSHB; there is a subfolder DE available
-4.  Rename folder DE to el15de
-5.  Pack folder el15de in ZIP format  
-      
-    
+1.  Après le téléchargement : Dézipper le fichier ZIP
+2.  Décompresser l'archive auto-extractible (.exe)
+3.  Aller dans le dossier GSHB; il y a un sous-dossier DE disponible
+4.  Renommer le dossier DE en el15de
+5.  Compresser le dossier el15de au format ZIP  
 
-The ZIP file can now be processed by VIVA. In the menu item Catalogs the button Import has to be clicked. A dialog box appears in which the desired EL and the corresponding ZIP file are to be selected. The selection is confirmed by clicking on Start import. The import can take several minutes and should not be interrupted.
+Le fichier ZIP peut maintenant être traité par VIVA. Dans le menu Catalogues, il faut cliquer sur le bouton Importer. Une boîte de dialogue apparaît dans laquelle l'EL souhaité et le fichier ZIP correspondant doivent être sélectionnés. La sélection est confirmée en cliquant sur Démarrer l'importation. L'importation peut prendre plusieurs minutes et ne doit pas être interrompue.
 
-After the successful import the EL appears on the loaded page and can be used. If further ELs are to be used, the last steps must be repeated.
+Après l'importation réussie, l'EL apparaît sur la page chargée et peut être utilisé. Si d'autres EL doivent être utilisés, les dernières étapes doivent être répétées.
 
-Customize catalogs
-------------------
+Personnaliser les catalogues
+---------------------------
 
-IT-Grundschutz catalogs can be customized individually. This means that new modules, hazards and measures can be created, existing ones adapted or deleted.
+Les catalogues IT-Grundschutz peuvent être personnalisés individuellement. Cela signifie que de nouveaux modules, dangers et mesures peuvent être créés, que les existants peuvent être adaptés ou supprimés.
 
-It is also possible to assign hazards and measures to modules. The specification of a qualification level for an assigned measure is taken into account. Furthermore, you can view, add to, and edit the test questions that match the respective measures.
+Il est également possible d'attribuer des dangers et des mesures à des modules. La spécification d'un niveau de qualification pour une mesure attribuée est prise en compte. De plus, vous pouvez consulter, ajouter et modifier les questions de test qui correspondent aux mesures respectives.
 
-Model Information domains
--------------------------
+Domaines d'information du modèle
+--------------------------------
 
-One or more information networks can be created under the menu item Information networks. They represent the starting point for more in-depth documentation. When creating an information network, it is important to specify which IT-Grundschutz catalogs are to be applied to the information network.
+Un ou plusieurs réseaux d'information peuvent être créés sous l'élément de menu Réseaux d'information. Ils représentent le point de départ pour une documentation plus approfondie. Lors de la création d'un réseau d'information, il est important de spécifier quels catalogues IT-Grundschutz doivent être appliqués au réseau d'information.
 
-When a new information network is created, a target group with the same name and a suitable target object is automatically created. The building blocks of layer 1 Cross-cutting aspects are applied to this target group. Likewise, the protection requirement categories are filled in with the examples from BSI Standard 100-2.
+Lorsqu'un nouveau réseau d'informations est créé, un groupe cible portant le même nom et un objet cible approprié sont automatiquement créés. Les éléments constitutifs des aspects transversaux de la couche 1 sont appliqués à ce groupe cible. De même, les catégories d'exigences de protection sont remplies avec les exemples de la norme BSI 100-2.
 
-Create target groups
---------------------
-
-In target groups, similar target objects are combined into groups. This process is part of the structure analysis (see BSI standard 100-2, chapter 4.2.). Target groups appear in the menu tree below the five layers of an information network. Each target group is initially assigned to one of the following layers when it is created:
-
-1.  Overarching aspects,
-2.  Infrastructure,
-3.  IT systems,
-4.  Networks and
-5.  Applications.
-6.  Create target group
-
-The layer affiliation can be extended by assigning building blocks from other layers. The information group itself is assigned to the 1st layer, which happens automatically when a new information group is created. An exception is the change from the old module (migration): Here, the layer assignment is made on the basis of the assigned modules.
-
-Target groups of layers 4 Networks and 5 Applications behave differently from those of the other layers: Target groups of layer 4 do not contain any target objects, but consist of the linkage from two target groups, which is documented in the item Communication link. Instead of linking two target groups, a group can alternatively be linked to something outside the information network. Example: The target group is linked to the Internet.
-
-Layer 5 target groups are extended by the type of information they process. VIVA already brings some types that can (and should) be post-processed. It is important to specify here whether personal data is processed, because this information will be used again and again in the further process. This type is therefore also not removable.
-
-Assign target objects
----------------------
-
-Target objects are determined within target groups. The target groups of layer 4 networks are an exception. This is part of the structural analysis. VIVA is closely interlocked with the CMDB data from i-doit at this point. New target objects are selected using the object browser familiar from i-doit.
-
-The interlocking with the CMDB data is reflected in other places. For example, contacts (persons, groups of persons, organizations) can be linked wherever it makes sense.
-
-Target group inheritance
+Créer des groupes cibles
 ------------------------
 
-Target objects automatically inherit the properties of their target group, so no further customization is necessary. So much for the theory. However, practice has shown that some properties do not always synchronously fit all target objects at the same time.
+Dans les groupes cibles, des objets cibles similaires sont regroupés. Ce processus fait partie de l'analyse de la structure (voir norme BSI 100-2, chapitre 4.2). Les groupes cibles apparaissent dans l'arborescence du menu sous les cinq couches d'un réseau d'informations. Chaque groupe cible est initialement assigné à l'une des couches suivantes lors de sa création :
 
-This is especially true for the implementation of measures. Therefore, a few properties that differ from the target group can be recorded within a target object, for example, to document the date of implementation, which may differ if necessary.
+1. Aspects transversaux,
+2. Infrastructure,
+3. Systèmes informatiques,
+4. Réseaux et
+5. Applications.
+6. Créer un groupe cible
 
-!!! attention "The reference documents do not respect inheritance, but draw the information from the target groups and not from the target objects."
+L'appartenance à la couche peut être étendue en assignant des éléments constitutifs d'autres couches. Le groupe d'informations lui-même est assigné à la 1ère couche, ce qui se fait automatiquement lorsqu'un nouveau groupe d'informations est créé. Une exception est le changement du module ancien (migration) : ici, l'assignation de la couche se fait sur la base des modules assignés.
 
-Define protection requirement categories
+Les groupes cibles des couches 4 Réseaux et 5 Applications se comportent différemment de ceux des autres couches : Les groupes cibles de la couche 4 ne contiennent aucun objet cible, mais consistent en la liaison de deux groupes cibles, qui est documentée dans l'élément Lien de communication. Au lieu de lier deux groupes cibles, un groupe peut alternativement être lié à quelque chose en dehors du réseau d'information. Exemple : Le groupe cible est lié à Internet.
+
+Les groupes cibles de la couche 5 sont étendus par le type d'informations qu'ils traitent. VIVA apporte déjà certains types qui peuvent (et doivent) être post-traités. Il est important de spécifier ici si des données personnelles sont traitées, car cette information sera utilisée à plusieurs reprises dans le processus ultérieur. Ce type n'est donc pas non plus supprimable.
+
+Attribuer des objets cibles
+---------------------------
+
+Les objets cibles sont déterminés au sein des groupes cibles. Les groupes cibles des réseaux de la couche 4 sont une exception. Cela fait partie de l'analyse structurelle. VIVA est étroitement lié aux données CMDB d'i-doit à ce stade. Les nouveaux objets cibles sont sélectionnés à l'aide du navigateur d'objets familier d'i-doit.
+
+L'interconnexion avec les données de la CMDB se reflète ailleurs. Par exemple, les contacts (personnes, groupes de personnes, organisations) peuvent être liés partout où cela a du sens.
+
+Héritage du groupe cible
+------------------------
+
+Les objets cibles héritent automatiquement des propriétés de leur groupe cible, donc aucune personnalisation supplémentaire n'est nécessaire. C'est la théorie. Cependant, la pratique a montré que certaines propriétés ne correspondent pas toujours de manière synchrone à tous les objets cibles en même temps.
+
+Cela est particulièrement vrai pour la mise en œuvre des mesures. Par conséquent, quelques propriétés qui diffèrent du groupe cible peuvent être enregistrées au sein d'un objet cible, par exemple, pour documenter la date de mise en œuvre, qui peut différer si nécessaire.
+
+!!! attention "Les documents de référence ne respectent pas l'héritage, mais tirent les informations des groupes cibles et non des objets cibles."
+
+Définir les catégories de besoins de protection
 ----------------------------------------
 
-The item Protection requirement categories appears below an information network in the menu tree. According to BSI Standard 100-2, Chapter 4.3.1, the damage scenarios are defined here with the help of the protection requirement categories. When creating an information network, the examples given in the standard are adopted and should be adapted to your own organization.
+L'élément Catégories de besoins de protection apparaît sous un réseau d'informations dans l'arborescence du menu. Selon la norme BSI 100-2, Chapitre 4.3.1, les scénarios de dommages sont définis ici à l'aide des catégories de besoins de protection. Lors de la création d'un réseau d'informations, les exemples donnés dans la norme sont adoptés et doivent être adaptés à votre propre organisation.
 
-Determine protection needs
---------------------------
+Déterminer les besoins en protection
+--------------------------------------
 
-As part of the protection requirement determination, the protection requirement of the individual target groups is determined. (See BSI Standard 100-2, chapters 4.3.2 to 4.3.5.) Therefore, the corresponding form fields can be found within a target group.
+Dans le cadre de la détermination des besoins en protection, les besoins en protection des groupes cibles individuels sont déterminés. (Voir la norme BSI 100-2, chapitres 4.3.2 à 4.3.5.) Par conséquent, les champs de formulaire correspondants peuvent être trouvés au sein d'un groupe cible.
 
-A special feature applies in layer 4 networks: The protection requirement of the communication links is based on the assigned criticality.
+Une caractéristique spéciale s'applique dans les réseaux de couche 4 : Le besoin en protection des liens de communication est basé sur la criticité attribuée.
 
-Assigning modules
------------------
-
-Modules from the IT-Grundschutz catalogs are assigned to the target groups. (See BSI Standard 100-2, Chapter 4.4.) Modules contain hazards and measures including their qualification levels, which VIVA automatically takes into account when assigning a module.
-
-If modules from a layer other than the layer assigned to the target group are selected, this results in this target group also being assigned to this other layer. In the menu tree, this group thus appears in several layers at the same time.
-
-When creating a new information network, all modules of layer 1 General aspects are assigned to the automatically created target group.
-
-Implementing measures
----------------------
-
-Measures are by definition designed to be implemented to counteract identified hazards. Prioritization is possible based on the qualification level assigned to each linked measure. (See BSI Standard 100-2, Chapters 4.4 and 4.5.).
-
-By clicking on a linked measure below a module assigned to a target group, the status of its implementation can be documented in detail.
-
-Answer check questions
+Attribution de modules
 ----------------------
 
-As a rule, measures are accompanied by a series of check questions that can be understood as a checklist to be ticked off. All questions can be answered either with "yes" or with "no".
+Les modules des catalogues IT-Grundschutz sont attribués aux groupes cibles. (Voir la norme BSI 100-2, Chapitre 4.4.) Les modules contiennent des dangers et des mesures incluant leurs niveaux de qualification, que VIVA prend automatiquement en compte lors de l'attribution d'un module.
 
-The check questions provided in the catalogs are already taken into account during import and are displayed within the measures. In addition, these can be edited, deleted or supplemented with new ones.
+Si des modules d'une couche autre que celle attribuée au groupe cible sont sélectionnés, cela entraîne également l'attribution de ce groupe cible à cette autre couche. Dans l'arborescence du menu, ce groupe apparaît donc simultanément dans plusieurs couches.
 
-The checklists, which are composed of the check questions, are available within measures assigned to target groups.
+Lors de la création d'un nouveau réseau d'informations, tous les modules de la couche 1 Aspects généraux sont attribués au groupe cible créé automatiquement.
 
-Perform supplementary security analysis
----------------------------------------
+Implémentation des mesures
+---------------------------
 
-The supplementary security analysis (see BSI Standard 100-2, Chapter 4.6.) is performed for each target group. VIVA automatically detects whether this step is necessary at all based on the data from the protection requirements assessment (of the communication connections) and whether a supplementary security analysis is necessary in addition to this information.
+Les mesures sont, par définition, conçues pour être mises en œuvre afin de contrer les dangers identifiés. La priorisation est possible en fonction du niveau de qualification attribué à chaque mesure liée. (Voir la norme BSI 100-2, chapitres 4.4 et 4.5.).
+
+En cliquant sur une mesure liée ci-dessous un module attribué à un groupe cible, le statut de sa mise en œuvre peut être documenté en détail.
+
+Vérification des réponses aux questions
+----------------------------------------
+
+En règle générale, les mesures sont accompagnées d'une série de questions de vérification qui peuvent être comprises comme une liste de contrôle à cocher. Toutes les questions peuvent être répondues soit par "oui" soit par "non".
+
+Les questions de vérification fournies dans les catalogues sont déjà prises en compte lors de l'importation et sont affichées au sein des mesures. De plus, celles-ci peuvent être modifiées, supprimées ou complétées par de nouvelles.
+
+Les listes de contrôle, composées des questions de vérification, sont disponibles au sein des mesures attribuées aux groupes cibles.
+
+Réaliser une analyse de sécurité supplémentaire
+----------------------------------------------
+
+L'analyse de sécurité supplémentaire (voir Norme BSI 100-2, Chapitre 4.6.) est effectuée pour chaque groupe cible. VIVA détecte automatiquement si cette étape est nécessaire en se basant sur les données de l'évaluation des exigences de protection (des connexions de communication) et si une analyse de sécurité supplémentaire est nécessaire en plus de ces informations.

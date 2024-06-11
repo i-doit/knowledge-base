@@ -1,9 +1,9 @@
-# Add-ons
+# Extensions
 
-Here you will find configurations for Add-ons.
+Ici, vous trouverez des configurations pour les extensions.
 
-## The Add-ons is divided into the following sub-sections:
+## Les extensions sont divisées en sous-sections suivantes :
 
-- [JSON-RPC API](./json-rpc-api/index.md)
-- [Events](./events.md)
-- [Replacement](./replacement/index.md)
+- [API JSON-RPC](./json-rpc-api/index.md)
+- [Événements](./events.md)
+- [Remplacement](./replacement/index.md) {/examples}

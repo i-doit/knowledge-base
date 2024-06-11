@@ -1,7 +1,7 @@
-# Language profiles
+# Profils linguistiques
 
-Using the user-defined translation, you can change the name of the desired fields or add new languages within a few mouse clicks.
+En utilisant la traduction définie par l'utilisateur, vous pouvez modifier le nom des champs souhaités ou ajouter de nouvelles langues en quelques clics.
 
-[![Language profiles](../../../assets/images/en/system-administration/administration/data-view/language-profiles/1-lp.png)](../../../assets/images/en/system-administration/administration/data-view/language-profiles/1-lp.png)
+[![Profils linguistiques](../../../assets/images/en/system-administration/administration/data-view/language-profiles/1-lp.png)](../../../assets/images/en/system-administration/administration/data-view/language-profiles/1-lp.png)
 
-See also available [use-case](../../../use-cases/custom-translation.md)
+Voir également le [cas d'utilisation](../../../use-cases/custom-translation.md) disponible.

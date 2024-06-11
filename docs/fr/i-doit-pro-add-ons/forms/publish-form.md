@@ -1,53 +1,54 @@
-# Publish Forms
+# Publier des formulaires
 
-To publish a form there are these possibilities.
+Pour publier un formulaire, il existe ces possibilités.
 
-Either the [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/1-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/1-pf.png) button in the form is clicked directly.
+Soit le bouton [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/1-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/1-pf.png) dans le formulaire est cliqué directement.
 
 [![](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/2-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/2-pf.png)
 
-The publish status is also displayed.
+Le statut de publication est également affiché.
 
-[![publish status](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/3-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/3-pf.png)
+[![statut de publication](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/3-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/3-pf.png)
 
-Or on the overview page of the forms. The [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/4-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/4-pf.png) button is also displayed there by clicking on the [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/5-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/5-pf.png) More actions menu.
+Ou sur la page d'aperçu des formulaires. Le bouton [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/4-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/4-pf.png) est également affiché en cliquant sur le menu [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/5-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/5-pf.png) Plus d'actions.
 
-[![publish status](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/6-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/6-pf.png)
 
-Also here is the status displayed
+[![état de publication](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/6-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/6-pf.png)
 
-[![publish status](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/7-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/7-pf.png)
+Voici également l'état affiché
 
-After the click, a popup will appear with the indication that anyone with the link of the form has access to it.
+[![état de publication](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/7-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/7-pf.png)
 
-[![popup](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/8-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/8-pf.png)
+Après avoir cliqué, une fenêtre contextuelle apparaîtra avec l'indication que toute personne possédant le lien du formulaire y a accès.
 
-Once we have confirmed the hint, we receive a success message. The [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/9-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/9-pf.png) button opens the form in the browser and the [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/10-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/10-pf.png) button copies the link to the form to the clipboard.
+[![fenêtre contextuelle](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/8-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/8-pf.png)
 
-[![publish](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/11-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/11-pf.png)
+Une fois que nous avons confirmé l'indication, nous recevons un message de succès. Le bouton [![icône](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/9-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/9-pf.png) ouvre le formulaire dans le navigateur et le bouton [![icône](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/10-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/10-pf.png) copie le lien du formulaire dans le presse-papiers.
 
-## Unpublish forms
+[![publier](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/11-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/11-pf.png)
 
-To cancel the release of a form we have these options.
+## Annuler la publication des formulaires
 
-To cancel the release of the form we use the [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/12-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/12-pf.png) button in the form.
+Pour annuler la publication d'un formulaire, nous avons ces options.
 
-[![cancel](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/13-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/13-pf.png)
+Pour annuler la publication du formulaire, nous utilisons le bouton [![icône](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/12-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/12-pf.png) dans le formulaire.
 
-Or on the overview page of the forms. The [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/14-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/14-pf.png) button is also displayed there by clicking on the [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/15-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/15-pf.png) More actions menu.
+[![annuler](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/13-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/13-pf.png)
 
-[![Unpublish forms](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/16-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/16-pf.png)
+Ou sur la page d'aperçu des formulaires. Le bouton [![icône](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/14-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/14-pf.png) est également affiché là en cliquant sur le menu [![icône](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/15-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/15-pf.png) Plus d'actions.
 
-After the click, a popup appears with a notice that the form is no longer accessible via the link.
+[![Désactiver les formulaires](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/16-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/16-pf.png)
 
-[![Unpublish forms](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/17-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/17-pf.png)
+Après avoir cliqué, une fenêtre contextuelle apparaît avec un avis indiquant que le formulaire n'est plus accessible via le lien.
 
-If the form is saved using the [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/18-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/18-pf.png) button, a success message appears.
+[![Désactiver les formulaires](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/17-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/17-pf.png)
 
-[![Unpublish forms](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/19-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/19-pf.png)
+Si le formulaire est enregistré en utilisant le [![icône](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/18-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/18-pf.png) bouton, un message de succès apparaît.
 
-If the form could not be saved, we receive an error message.
+[![Désactiver les formulaires](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/19-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/19-pf.png)
 
-[![Unpublish forms](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/20-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/20-pf.png)
+Si le formulaire n'a pas pu être enregistré, nous recevons un message d'erreur.
 
-[Continue to fill out form](./fill-out-forms.md){ .md-button .md-button--primary }
+[![Désactiver les formulaires](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/20-pf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/publish-forms/20-pf.png)
+
+[Continuer à remplir le formulaire](./fill-out-forms.md){ .md-button .md-button--primary }

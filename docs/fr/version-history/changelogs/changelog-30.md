@@ -1,100 +1,102 @@
-# Changelog 30
+# Journal des modifications 30
 
-[Task][Update]                        i-doit 30 is only updateable from i-doit 29<br>
-[Task][Two-Factor Authentication]     Make TFA only available in i-doit pro<br>
-[Task][Code (Internal)]               Replace all places where the old replace_placeholder method is being used with the new Replacer Component<br>
-[Task][Code (Internal)]               Deprecate WYSIWYG Smarty plugin parameter "p_image_upload_handler", please use "fileUploadUrl"<br>
-[Task][Code (Internal)]               Deprecate WYSIWYG Smarty plugin parameter "p_image_browser_handler", please use "fileBrowseUrl"<br>
-[Task][Code (Internal)]               Update WYSIWYG editor to use proper upload and browse URLs<br>
-[Task][CMDB]                          Restructure nested 'Extras' menu<br>
-[Task][Console]                       Add additional way to perform i-doit update with admin center credentials<br>
-[Task][Validation]                    Add checkbox to attribute settings to delete multiple attributes at once<br>
-[Task][CMDB settings]                 Make object type sorting alphabetically for new installations<br>
-[Task][License installation (i-doit)] Notification when license is successfully installed<br>
-[Improvement][Code (Internal)]        Support MariaDB 10.11<br>
-[Improvement][CMDB]                   Add object type to list of "Assigned Objects (person groups)" (in Organization)<br>
-[Improvement][Validation]             Create a configuration page to combine validation and attribute visibility<br>
-[Improvement][JDisc]                  JDisc - AccessPoint Filter<br>
-[Improvement][JDisc]                  Import of power state from JDisc<br>
-[Improvement][JDisc]                  Ignore default MAC addresses<br>
-[Improvement][JDisc]                  More information about the reason for a failed connection to the JDisc Server<br>
-[Bug][Lists]                          Date field info when searching with all field option<br>
-[Bug][Lists]                          Filter for reports is not properly removed<br>
-[Bug][Lists]                          Cannot edit list view for assigned clusters<br>
-[Bug][Report-Manager]                 Dates in reports are not sorted correct for german language<br>
-[Bug][Report-Manager]                 Using != operator for dialog+ fields does not include empty(Null) objects<br>
-[Bug][Report-Manager]                 500error when selecting certain report in object browser<br>
-[Bug][Report-Manager]                 Location path LIKE %...% not working correctly<br>
-[Bug][Report-Manager]                 CSV or TXT file from report displaying breaks<br>
-[Bug][Report-Manager]                 Duplicating reports causes umlaut at title to be displayed as HTML<br>
-[Bug][Report-Manager]                 Report for contact assignment shows 0 matches but actually has matches<br>
-[Bug][Report-Manager]                 Report Manager - Service Relation (description) causes sql error<br>
-[Bug][Report-Manager]                 Templates are not displayed when the for e.g. Nagios Add-on is installed<br>
-[Bug][Report-Manager]                 The encoding of umlauts are displayed in report titles at the database<br>
-[Bug][Code (Internal)]                Counter are not counting<br>
-[Bug][Code (Internal)]                After importing a custom language a login is no longer possible<br>
-[Bug][Code (Internal)]                Object type icons are not loaded<br>
-[Bug][Code (Internal)]                Wrong date format popup is displayed for every date attribute in the object list<br>
-[Bug][Code (Internal)]                Installing an add-on displays a unhelpful error message when the rights are not set correct<br>
-[Bug][Code (Internal)]                Date of change not updated for contact assignment(role/primary)<br>
-[Bug][Code (Internal)]                FQDN Objekt Matching Key finds duplicate entries<br>
-[Bug][Code (Internal)]                Javascript rounding error in 'Memory' category<br>
-[Bug][Code (Internal)]                Existing templates takes a long time to load<br>
-[Bug][Code (Internal)]                Wiki-URL icon messes up field width at accounting<br>
-[Bug][Code (Internal)]                Correctly display changed logbook values<br>
-[Bug][API]                            SQL error when reading dialog via API<br>
-[Bug][API]                            Enable user to fill custom dialog+ fields via push api<br>
-[Bug][API]                            When using cmdb.dialog.read for category = C__CATG__IP and property = zone, one level too much and a empty entry is output<br>
-[Bug][API]                            Do not re-create already existing multi dialog+ values<br>
-[Bug][CMDB]                           Properties "Size" and "Max size" in category "Databases" contain unrounded values<br>
-[Bug][CMDB]                           Saving tags in the general category via api does not create a logbook entry<br>
-[Bug][CMDB]                           Segmented slots are not displayed correctly in the rack<br>
-[Bug][CMDB]                           Segment does not provide slots for the back<br>
-[Bug][CMDB]                           Syntax error when loading a ip network in the host address category<br>
-[Bug][CMDB]                           Saving ip address with space at the end api<br>
-[Bug][CMDB]                           Creating CPU with frequency 3.5 and no unit via API leads to wrong data<br>
-[Bug][CMDB]                           Allow user to access person group objects<br>
-[Bug][CMDB]                           The end of a contract field can not be emptied<br>
-[Bug][CMDB]                           Cluster service assignment throws TypeError<br>
-[Bug][CMDB]                           It is not possible to save memory values above 90.95 TB<br>
-[Bug][CMDB]                           Network - Port entries are not displayed on overview page<br>
-[Bug][CMDB]                           Category 'Certificate' does not use labels<br>
-[Bug][Security]                       Cache rights after a change<br>
-[Bug][CSV Import]                     Assigning a Layer 3-Net to a Layer 2 Net via Layer-3-net assignment leads to general error<br>
-[Bug][CSV Import]                     Setting "Multi-valued categories" to row for CSV Import causes some data to not get imported<br>
-[Bug][CSV Import]                     Umlauts and special characters are not processed correctly in the csv export of the list view when in the description field<br>
-[Bug][CSV Import]                     CSV-Import does not count objects correctly<br>
-[Bug][System settings]                The expert settings show some internal settings<br>
-[Bug][LDAP]                           Cant login via ldap when ldap.default-group has a string value<br>
-[Bug][LDAP]                           LDAP sync groupsynchronisation fills up log without any changes<br>
-[Bug][LDAP]                           Import_rooms via ldap-sync does not work with camelCase<br>
-[Bug][JDisc]                          Import objects from JDisc objects via file with IPv6 addresses<br>
-[Bug][JDisc]                          Importing a JDisc profile leads to foreign key constraint fails error message which is not logged<br>
-[Bug][JDisc]                          Import does not include all IPv4 addresses when Import type for DHCP IP addresses is set to with update<br>
-[Bug][JDisc]                          JDisc mapping error<br>
-[Bug][JDisc]                          default cmdb status is not set during jdisc import<br>
-[Bug][JDisc]                          JDISC Profile Setting "Include Clusters" does have no affect<br>
-[Bug][Import]                         A duplicate is created despite the error message from validation<br>
-[Bug][Import]                         XML Import runs into php error<br>
-[Bug][Custom categories]              Custom categories are viewed as empty in the category tree when newly filled and when hide button is active<br>
-[Bug][Custom categories]              Show html code from html editor correctly<br>
-[Bug][Validation]                     Textarea in 'Address' category can not save multiline content<br>
-[Bug][Validation]                     Categories and attributes missing for cluster when hiding attributes<br>
-[Bug][Validation]                     Do not allow user to resize attribute settings table<br>
-[Bug][Validation]                     Validate entries for standard LDAP group -> Only numbers and commas<br>
-[Bug][Validation]                     Reset attribute settings filter correctly<br>
-[Bug][Console]                        PHP error when command configuration is malformed<br>
-[Bug][Console]                        Adjust result status of tenant creation command<br>
-[Bug][Notifications]                  Some placeholder not working in notifications<br>
-[Bug][Notifications]                  Use default value if setSortDirection is not set<br>
-[Bug][List editing]                   TypeError when list editing objects<br>
-[Bug][QR-Codes]                       Using report for a QR Code template not possible at object browser<br>
-[Bug][QR-Codes]                       HTML in QR-Code templates not saved<br>
-[Bug][Categories]                     There are two Specific categories Installation available<br>
-[Bug][Categories]                     Rename category "Chassis cabeling" to "Chassis cabling"<br>
-[Bug][Categories]                     Rename category and folder "Database hierachy" to "Database hierarchy"<br>
-[Bug][CMDB settings]                  Allow user to use breadcrumb when editing object types<br>
-[Bug][CMDB settings]                  The description of "Display passwords" setting is incorrect<br>
-[Bug][Templates]                      Mass change template information can be dragged vertically<br>
-[Bug][Dashboard]                      Info popups when removing widgets is not going away<br>
-[Bug][CMDB-Explorer]                  Image file in the CMDB-Explorer is not loaded<br>
+[Tâche][Mise à jour]                        i-doit 30 n'est mise à jour que depuis i-doit 29<br>
+[Tâche][Authentification à deux facteurs]     Rendre TFA uniquement disponible dans i-doit pro<br>
+[Tâche][Code (Interne)]               Remplacer tous les endroits où l'ancienne méthode replace_placeholder est utilisée par le nouveau composant Replacer<br>
+[Tâche][Code (Interne)]               Déprécier le paramètre du plugin Smarty WYSIWYG "p_image_upload_handler", veuillez utiliser "fileUploadUrl"<br>
+[Tâche][Code (Interne)]               Déprécier le paramètre du plugin Smarty WYSIWYG "p_image_browser_handler", veuillez utiliser "fileBrowseUrl"<br>
+[Tâche][Code (Interne)]               Mettre à jour l'éditeur WYSIWYG pour utiliser les URL de téléchargement et de navigation appropriées<br>
+[Tâche][CMDB]                          Restructurer le menu 'Extras' imbriqué<br>
+[Tâche][Console]                       Ajouter un moyen supplémentaire pour effectuer la mise à jour d'i-doit avec les identifiants du centre d'administration<br>
+[Tâche][Validation]                    Ajouter une case à cocher aux paramètres d'attribut pour supprimer plusieurs attributs à la fois<br>
+[Tâche][Paramètres CMDB]                 Rendre le tri des types d'objet alphabétique pour les nouvelles installations<br>
+[Tâche][Installation de licence (i-doit)] Notification lorsque la licence est installée avec succès<br>
+[Amélioration][Code (Interne)]        Support de MariaDB 10.11<br>
+[Amélioration][CMDB]                   Ajouter le type d'objet à la liste des "Objets attribués (groupes de personnes)" (dans Organisation)<br>
+[Amélioration][Validation]             Créer une page de configuration pour combiner la validation et la visibilité des attributs<br>
+[Amélioration][JDisc]                  JDisc - Filtre Point d'accès<br>
+[Amélioration][JDisc]                  Importer l'état de l'alimentation depuis JDisc<br>
+[Amélioration][JDisc]                  Ignorer les adresses MAC par défaut<br>
+[Amélioration][JDisc]                  Plus d'informations sur la raison d'une connexion échouée au serveur JDisc<br>
+[Bug][Listes]                          Info champ de date lors de la recherche avec l'option de tous les champs<br>
+[Bug][Listes]                          Le filtre des rapports n'est pas correctement supprimé<br>
+[Bug][Listes]                          Impossible de modifier la vue en liste pour les clusters attribués<br>
+[Bug][Gestionnaire de rapports]                 Les dates dans les rapports ne sont pas triées correctement pour la langue allemande<br>
+[Bug][Gestionnaire de rapports]                 L'utilisation de l'opérateur != pour les champs dialog+ n'inclut pas les objets vides (Null)<br>
+[Bug][Gestionnaire de rapports]                 Erreur 500 lors de la sélection de certains rapports dans le navigateur d'objets<br>
+[Bug][Gestionnaire de rapports]                 Le chemin de localisation LIKE %...% ne fonctionne pas correctement<br>
+[Bug][Gestionnaire de rapports]                 Le fichier CSV ou TXT du rapport affiche des sauts de ligne<br>
+[Bug][Gestionnaire de rapports]                 La duplication des rapports provoque l'affichage d'umlauts dans le titre en HTML<br>
+[Bug][Gestionnaire de rapports]                 Le rapport pour l'attribution de contact affiche 0 correspondances mais en a réellement<br>
+[Bug][Gestionnaire de rapports]                 Gestionnaire de rapports - Relation de service (description) provoque une erreur SQL<br>
+[Bug][Gestionnaire de rapports]                 Les modèles ne sont pas affichés lorsque par exemple l'extension Nagios est installée<br>
+[Bug][Gestionnaire de rapports]                 L'encodage des umlauts est affiché dans les titres de rapport dans la base de données<br>
+[Bug][Code (Interne)]                Les compteurs ne comptent pas<br>
+[Bug][Code (Interne)]                Après l'importation d'une langue personnalisée, une connexion n'est plus possible<br>
+[Bug][Code (Interne)]                Les icônes de type d'objet ne se chargent pas<br>
+[Bug][Code (Interne)]                Un format de date incorrect s'affiche pour chaque attribut de date dans la liste d'objets<br>
+[Bug][Code (Interne)]                L'installation d'une extension affiche un message d'erreur peu utile lorsque les droits ne sont pas correctement définis<br>
+[Bug][Code (Interne)]                La date de modification n'est pas mise à jour pour l'attribution de contact (rôle/primaire)<br>
+[Bug][Code (Interne)]                La clé de correspondance de l'objet FQDN trouve des entrées en double<br>
+[Bug][Code (Interne)]                Erreur d'arrondi JavaScript dans la catégorie 'Mémoire'<br>
+[Bug][Code (Interne)]                Les modèles existants prennent beaucoup de temps à charger<br>
+[Bug][Code (Interne)]                L'icône d'URL Wiki perturbe la largeur du champ à la comptabilité<br>
+[Bug][Code (Interne)]                Afficher correctement les valeurs modifiées du journal des valeurs<br>
+[Bug][API]                            Erreur SQL lors de la lecture du dialogue via l'API<br>
+[Bug][API]                            Autoriser l'utilisateur à remplir les champs de dialogue+ personnalisés via l'API push<br>
+[Bug][API]                            Lors de l'utilisation de cmdb.dialog.read pour la catégorie = C__CATG__IP et la propriété = zone, un niveau de trop et une entrée vide sont renvoyés<br>
+[Bug][API]                            Ne recréer pas les valeurs de dialogue+ multiples déjà existantes<br>
+[Bug][CMDB]                           Les propriétés "Taille" et "Taille maximale" dans la catégorie "Bases de données" contiennent des valeurs non arrondies<br>
+[Bug][CMDB]                           Enregistrer des balises dans la catégorie générale via l'API ne crée pas d'entrée de journal<br>
+[Bug][CMDB]                           Les emplacements segmentés ne sont pas affichés correctement dans le rack<br>
+[Bug][CMDB]                           Le segment ne fournit pas de slots pour l'arrière<br>
+[Bug][CMDB]                           Erreur de syntaxe lors du chargement d'un réseau IP dans la catégorie d'adresse hôte<br>
+[Bug][CMDB]                           Enregistrement d'une adresse IP avec un espace à la fin de l'API<br>
+[Bug][CMDB]                           Créer un CPU avec une fréquence de 3,5 et aucune unité via l'API conduit à des données incorrectes<br>
+[Bug][CMDB]                           Autoriser l'utilisateur à accéder aux objets de groupe de personnes<br>
+[Bug][CMDB]                           La fin d'un champ de contrat ne peut pas être vidée<br>
+[Bug][CMDB]                           L'attribution de service de cluster génère une erreur de type<br>
+[Bug][CMDB]                           Il n'est pas possible d'enregistrer des valeurs de mémoire supérieures à 90,95 To<br>
+[Bug][CMDB]                           Les entrées de port réseau ne sont pas affichées sur la page d'aperçu<br>
+[Bug][CMDB]                           La catégorie 'Certificat' n'utilise pas d'étiquettes<br>
+[Bug][Sécurité]                       Mettre en cache les droits après une modification<br>
+[Bug][Import CSV]                     L'attribution d'un réseau Layer 3 à un réseau Layer 2 via l'attribution de Layer-3-net entraîne une erreur générale<br>
+[Bug][Import CSV]                     Le paramètre "Catégories à valeurs multiples" défini sur ligne pour l'importation CSV entraîne l'absence de certaines données importées<br>
+[Bug][Import CSV]                     Les umlauts et les caractères spéciaux ne sont pas traités correctement dans l'exportation CSV de la vue en liste lorsque dans le champ de description<br>
+[Bug][Import CSV]                     L'importation CSV ne compte pas correctement les objets<br>
+[Bug][Paramètres système]                Les paramètres experts affichent certains paramètres internes<br>
+[Bug][LDAP]                           Impossible de se connecter via ldap lorsque ldap.default-group a une valeur de chaîne<br>
+[Bug][LDAP]                           La synchronisation des groupes LDAP remplit le journal sans aucun changement<br>
+[Bug][LDAP]                           Import_rooms via la synchronisation ldap ne fonctionne pas avec camelCase<br>
+[Bug][JDisc]                          Importer des objets à partir d'objets JDisc via un fichier avec des adresses IPv6<br>
+[Bug][JDisc]                          L'importation d'un profil JDisc entraîne un message d'erreur d'échec de contrainte de clé étrangère qui n'est pas journalisé<br>
+[Bug][JDisc]                          L'importation n'inclut pas toutes les adresses IPv4 lorsque le type d'importation pour les adresses IP DHCP est défini sur avec mise à jour<br>
+[Bug][JDisc]                          Erreur de mappage JDisc<br>
+[Bug][JDisc]                          Le statut cmdb par défaut n'est pas défini lors de l'importation jdisc<br>
+[Bug][JDisc]                          Le paramètre de profil JDISC "Inclure les clusters" n'a aucun effet<br>
+[Bug][Import]                         Un doublon est créé malgré le message d'erreur de validation<br>
+[Bug][Import]                         L'importation XML rencontre une erreur php<br>
+[Bug][Catégories personnalisées]              Les catégories personnalisées sont vues comme vides dans l'arborescence des catégories lorsqu'elles sont nouvellement remplies et lorsque le bouton de masquage est actif<br>
+[Bug][Catégories personnalisées]              Afficher correctement le code html de l'éditeur html<br>
+[Bug][Validation]                     Le champ de texte dans la catégorie 'Adresse' ne peut pas enregistrer de contenu multiligne<br>
+[Bug][Validation]                     Catégories et attributs manquants pour le cluster lors de la masquage des attributs<br>
+[Bug][Validation]                     Ne pas autoriser l'utilisateur à redimensionner le tableau des paramètres d'attribut<br>
+[Bug][Validation]                     Valider les entrées pour le groupe LDAP standard -> Seuls les chiffres et les virgules<br>
+[Bug][Validation]                     Réinitialiser correctement le filtre des paramètres d'attribut<br>
+[Bug][Console]                        Erreur PHP lorsque la configuration de la commande est mal formée<br>
+[Bug][Console]                        Ajuster le statut du résultat de la commande de création de locataire<br>
+[Bug][Notifications]                  Certains espaces réservés ne fonctionnent pas dans les notifications<br>
+[Bug][Notifications]                  Utiliser la valeur par défaut si setSortDirection n'est pas défini<br>
+[Bug][Édition de liste]                   TypeError lors de l'édition de listes d'objets<br>
+[Bug][Codes QR]                       Utilisation d'un rapport pour un modèle de code QR non possible dans le navigateur d'objets<br>
+[Bug][Codes QR]                       Le code HTML dans les modèles de code QR n'est pas enregistré<br>
+[Bug][Catégories]                     Il existe deux catégories spécifiques Installation disponibles<br>
+[Bug][Catégories]                     Renommer la catégorie "Câblage du châssis" en "Câblage du châssis"<br>
+[Bug][Catégories]                     Renommer la catégorie et le dossier "Hiérarchie de base de données" en "Hiérarchie de base de données"<br>
+[Bug][Paramètres CMDB]                  Autoriser l'utilisateur à utiliser le fil d'Ariane lors de l'édition des types d'objets<br>
+[Bug][Paramètres CMDB]                  La description du paramètre "Afficher les mots de passe" est incorrecte<br>
+[Bug][Modèles]                      Les informations de changement de masse du modèle peuvent être déplacées verticalement<br>
+[Bug][Tableau de bord]                      Les popups d'information lors de la suppression des widgets ne disparaissent pas<br>
+[Bug][Explorateur CMDB]                  Le fichier image dans l'Explorateur CMDB n'est pas chargé<br>
+
+I am ready to translate the Markdown content you will provide. Please paste the content here for translation into French.

@@ -1,146 +1,147 @@
-# Object Relations
+# Relations d'Objets {/examples}
 
-[Objects](structure-of-the-it-documentation.md) generally do not exist separately in i-doit but are in relation to each other. The servers are contained in racks, admins maintain servers, an operating system with software is running on a server ... In this article we will elaborate on the basic concepts of object relations.
+[Les objets](structure-of-the-it-documentation.md) n'existent généralement pas séparément dans i-doit mais sont en relation les uns avec les autres. Les serveurs sont contenus dans des racks, les administrateurs maintiennent les serveurs, un système d'exploitation avec des logiciels s'exécute sur un serveur... Dans cet article, nous allons élaborer sur les concepts de base des relations d'objets.
 
-## Relation Types
+## Types de Relations {/examples}
 
-Objects can be in various types of relations. To provide clarification each relation receives a type. Many pre-defined types of relations are already supplied by i-doit in the default installation. A listing of all these types can be found at **Administration → Predefined content → Object relation types**.
+Les objets peuvent être dans différents types de relations. Pour clarifier, chaque relation reçoit un type. De nombreux types de relations prédéfinis sont déjà fournis par i-doit dans l'installation par défaut. Une liste de tous ces types peut être trouvée à **Administration → Contenu prédéfini → Types de relation d'objet**.
 
-[![Relation Types](../assets/images/en/basics/object-relations/1-or.png)](../assets/images/en/basics/object-relations/1-or.png)
+[![Types de Relations](../assets/images/en/basics/object-relations/1-or.png)](../assets/images/en/basics/object-relations/1-or.png)
 
-| Relation title                         | Description from the point of view of the master object | Description from the point of view of the slave object |
-| -------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------ |
-| **Administration service**             | **is administration instance for**                      | **is managed by**                                      |
-| **Assigned SIM cards**                 | **has card**                                          | **is assigned to**                                     |
-| **Assigned cards**                     | **has card**                                          | **is card of**                                         |
-| **Backup**                             | **saves**                                               | **saved by**                                           |
-| **Chassis**                            | **includes**                                            | **is inserted to**                                     |
-| **Cluster memberships**                | **is member of**                                        | **has member**                                         |
-| **Cluster service assignment**         | **is host for on**                                      | **runs on**                                            |
-| **Connection endpoint**                | **has connection to**                                   | **is connected with**                                  |
-| **Connectors**                         | **is connected to**                                     | **is connected with**                                  |
-| **Contact assignment (administrates)** | **administrates**                                       | **is administered by**                                 |
-| **Contact assignment (is used by)**    | **is used by**                                          | **uses**                                               |
-| **Contract assignment**                | **is contract of**                                      | **has contract assignment**                            |
-| **DBMS**                               | **administrates**                                       | **is configured in**                                   |
-| **Database access**                    | **is used by**                                          | **has database access**                                |
-| **Database gateway**                   | **has database gateway to**                             | **is database gateway**                                |
-| **Database instance**                  | **is host for**                                         | **runs on**                                            |
-| **Database links**                     | **has database link to**                                | **is database link of**                                |
-| **Dependency**                         | **has dependency to**                                   | **depends on**                                         |
-| **Emergency plan**                     | **has emergency plan assignment to**                    | **is emergency plan for<br**                           |
-| **FC port**                            | **supplies network**                                    | **network is supplied by**                             |
-| **Files**                              | **has file assignment to**                              | **is file for**                                        |
-| **Group memberships**                  | **is member of**                                        | **has member**                                         |
-| **Headquarter (Organization)**         | **is headquarter of**                                   | **is branch of**                                       |
-| **Host address**                       | **supplies network**                                    | **network is supplied by**                             |
-| **Interface**                          | **has dependency to**                                   | **depends on**                                         |
-| **Layer 2 Transport**                  | **transports Layer 2 Net**                              | **is transported by**                                  |
-| **Layer 2 net assignment**             | **has layer 2 net assignment**                          | **is layer 2 net assignment for**                      |
-| **Location**                           | **is location of**                                      | **is located at**                                      |
-| **Logical devices (Client)**           | **is connected to**                                     | **is connected with**                                  |
-| **Logical location**                   | **is logical unit of**                                  | **is assigned to**                                     |
-| **Manual assignment**                  | **has manual assignment to**                            | **is manual for**                                      |
-| **Network connections**                | **is connected to**                                     | **is connected with**                                  |
-| **Operating system**                   | **has operating system**                                | **is installed on**                                    |
-| **Organization (Organization)**        | **has member**                                          | **belongs to**                                         |
-| **Organization (Persons)**             | **has member**                                          | **belongs to**                                         |
-| **Person group memberships**           | **has member**                                          | **is member of**                                       |
-| **Ports**                              | **supplies network**                                    | **network is supplied by**                             |
-| **Power consumer**                     | **supplies power to**                                   | **obtains power from**                                 |
-| **Remote Management Controller**       | **is remotely managed by**                              | **is management controller of**                        |
-| **Replication partner**                | **is Replication partner of**                           | **has Replication partner**                            |
-| **SOA-Component**                      | **is SOA component of**                                 | **has SOA component**                                  |
-| **SOA-Stacks**                         | **has SOA Stack**                                       | **is SOA Stack of**                                    |
-| **Service component**                  | **is Service component of**                             | **has Service component**                              |
-| **Servicecheck assignment**            | **is host for**                                         | **runs on**                                            |
-| **Share Access**                       | **share is used by**                                    | **has share access to**                                |
-| **Software assignment**                | **is running**                                          | **runs on**                                            |
-| **Stacking**                           | **is stack for**                                        | **is stacked with**                                    |
-| **VRRP**                               | **has VRRP member**                                     | **is VRRP member of**                                  |
-| **Virtual machine**                    | **is host for**                                         | **runs on**                                            |
-| **Virtual host**                       | **is administration instance for**                      | **is managed by**                                      |
-| **WAN Connection**                     | **provides WAN connection to**                          | **is connected to WAN**                                |
+| Titre de la relation                 | Description du point de vue de l'objet maître | Description du point de vue de l'objet esclave |
+| ------------------------------------ | --------------------------------------------- | ---------------------------------------------- |
+| **Service d'administration**          | **est une instance d'administration pour**    | **est géré par**                               |
+| **Cartes SIM attribuées**             | **a une carte**                              | **est attribué à**                             |
+| **Cartes attribuées**                 | **a une carte**                              | **est la carte de**                            |
+| **Sauvegarde**                        | **sauvegarde**                               | **sauvegardé par**                             |
+| **Châssis**                           | **inclut**                                   | **est inséré dans**                            |
+| **Appartenances à un cluster**        | **est membre de**                            | **a pour membre**                              |
+| **Affectation de service de cluster** | **est hôte pour sur**                        | **fonctionne sur**                             |
+| **Point de connexion**                | **a une connexion à**                        | **est connecté avec**                          |
+| **Connecteurs**                       | **est connecté à**                           | **est connecté avec**                          |
+| **Affectation de contact (administre)** | **administre**                              | **est administré par**                         |
+| **Affectation de contact (utilisé par)** | **est utilisé par**                         | **utilise**                                    |
+| **Affectation de contrat**            | **est le contrat de**                        | **a une affectation de contrat**               |
+| **SGBD**                              | **administre**                               | **est configuré dans**                         |
+| **Accès à la base de données**        | **est utilisé par**                          | **a accès à la base de données**               |
+| **Passerelle de base de données**     | **a une passerelle de base de données vers** | **est une passerelle de base de données**       |
+| **Instance de base de données**       | **est hôte pour**                            | **fonctionne sur**                             |
+| **Liens de base de données**          | **a un lien de base de données vers**        | **est un lien de base de données de**           |
+| **Dépendance**                        | **a une dépendance à**                       | **dépend de**                                 |
+| **Plan d'urgence**                    | **a une affectation de plan d'urgence à**    | **est un plan d'urgence pour**                 |
+| **Port FC**                           | **fournit un réseau**                        | **le réseau est fourni par**                   |
+| **Fichiers**                          | **a une affectation de fichier à**           | **est un fichier pour**                        |
+| **Appartenances à un groupe**         | **est membre de**                            | **a pour membre**                              |
+| **Siège social (Organisation)**       | **est le siège social de**                   | **est une succursale de**                      |
+| **Adresse de l'hôte**                 | **fournit un réseau**                        | **le réseau est fourni par**                   |
+| **Interface**                         | **a une dépendance à**                       | **dépend de**                                 |
+| **Transport de couche 2**             | **transporte le réseau de couche 2**         | **est transporté par**                         |
+| **Affectation de réseau de couche 2** | **a une affectation de réseau de couche 2**  | **est une affectation de réseau de couche 2 pour** |
+| **Emplacement**                       | **est l'emplacement de**                     | **est situé à**                                |
+| **Appareils logiques (Client)**       | **est connecté à**                           | **est connecté avec**                          |
+| **Emplacement logique**               | **est une unité logique de**                 | **est attribué à**                             |
+| **Affectation manuelle**              | **a une affectation manuelle à**             | **est manuel pour**                            |
+| **Connexions réseau**                 | **est connecté à**                           | **est connecté avec**                          |
+| **Système d'exploitation**            | **a un système d'exploitation**              | **est installé sur**                          |
+| **Organisation (Organisation)**       | **a pour membre**                           | **appartient à**                               |
+| **Organisation (Personnes)**          | **a pour membre**                           | **appartient à**                               |
+| **Appartenances à un groupe de personnes** | **a pour membre**                        | **est membre de**                             |
+| **Ports**                             | **fournit un réseau**                        | **le réseau est fourni par**                   |
+| **Consommateur d'énergie**            | **fournit de l'énergie à**                   | **obtient de l'énergie de**                    |
+| **Contrôleur de gestion à distance**  | **est géré à distance par**                  | **est le contrôleur de gestion de**            |
+| **Partenaire de réplication**         | **est partenaire de réplication de**          | **a pour partenaire de réplication**           |
+| **Composant SOA**                     | **est un composant SOA de**                  | **a un composant SOA**                         |
+| **Piles SOA**                         | **a une pile SOA**                          | **est une pile SOA de**                       |
+| **Composant de service**              | **est un composant de service de**            | **a un composant de service**                  |
+| **Affectation de vérification de service** | **est hôte pour**                         | **fonctionne sur**                             |
+| **Accès au partage**                  | **le partage est utilisé par**               | **a un accès au partage de**                   |
+| **Affectation de logiciel**           | **est en cours d'exécution**                 | **fonctionne sur**                             |
+| **Empilement**                        | **est une pile pour**                        | **est empilé avec**                            |
+| **VRRP**                             | **a un membre VRRP**                         | **est un membre VRRP de**                      |
+| **Machine virtuelle**                 | **est hôte pour**                           | **fonctionne sur**                             |
+| **Hôte virtuel**                      | **est une instance d'administration pour**    | **est géré par**                               |
+| **Connexion WAN**                     | **fournit une connexion WAN à**              | **est connecté à WAN**                        |
 
-Below the list of relation types a new type can be created using the **Add new value** button. If you wish to use this relation in a custom category, you have to define it as "Implicit".
+Ci-dessous la liste des types de relations, un nouveau type peut être créé en utilisant le bouton **Ajouter une nouvelle valeur**. Si vous souhaitez utiliser cette relation dans une catégorie personnalisée, vous devez la définir comme "Implicite".
 
-[![Add new value](../assets/images/en/basics/object-relations/2-or.png)](../assets/images/en/basics/object-relations/2-or.png)
+[![Ajouter une nouvelle valeur](../assets/images/en/basics/object-relations/2-or.png)](../assets/images/en/basics/object-relations/2-or.png)
 
-Already documented object relations are listed in **Extras → CMDB → Relations** according to their respective type. When you click on **All** in the navigation tree to the left, all object relations are loaded regardless of their type. With large IT documentations it may take a while to load the list.
+Les relations d'objets déjà documentées sont répertoriées dans **Extras → CMDB → Relations** selon leur type respectif. Lorsque vous cliquez sur **Tous** dans l'arborescence de navigation à gauche, toutes les relations d'objets sont chargées indépendamment de leur type. Avec de grandes documentations informatiques, cela peut prendre un certain temps pour charger la liste.
 
-[![object relations](../assets/images/en/basics/object-relations/3-or.png)](../assets/images/en/basics/object-relations/3-or.png)
+[![relations d'objets](../assets/images/en/basics/object-relations/3-or.png)](../assets/images/en/basics/object-relations/3-or.png)
 
-## Relation Objects
+## Objets de Relation
 
-When creating a relation between two objects, a third object of the [type](structure-of-the-it-documentation.md) **Relations** is created in the background. The object title of this object consists of the object title of the master object, followed by the description and the object title of the slave object.
+Lors de la création d'une relation entre deux objets, un troisième objet du [type](structure-of-the-it-documentation.md) **Relations** est créé en arrière-plan. Le titre de cet objet se compose du titre de l'objet maître, suivi de la description et du titre de l'objet esclave.
 
-Example:
-
-| Master object      | Description of the relation | Slave object |
+| Objet maître        | Description de la relation | Objet esclave |
 | ------------------ | --------------------------- | ------------ |
-| PDU-HQ-Intern-01-A | **supplies power**          | ESX1         |
+| PDU-HQ-Intern-01-A | **fournit de l'énergie**    | ESX1         |
 
-The relation object is required to save characteristics of the relation as [attributes](structure-of-the-it-documentation.md). This includes:
+L'objet de relation est requis pour enregistrer les caractéristiques de la relation en tant qu'[attributs](structure-of-the-it-documentation.md). Cela inclut :
 
--   **Relation type**: see above
--   **Weighting**: see below
--   **Service** (optional): The object relation can be directly assigned to a service.
+-   **Type de relation** : voir ci-dessus
+-   **Pondération** : voir ci-dessous
+-   **Service** (optionnel) : L'objet de relation peut être directement attribué à un service.
 
-As it is already obvious, an object relation consists of a master and a slave object. This is a weighted relation. The slave object is dependent on the master object.
+Comme il est déjà évident, une relation d'objet se compose d'un objet maître et d'un objet esclave. Il s'agit d'une relation pondérée. L'objet esclave dépend de l'objet maître.
 
-[![Relation Objects](../assets/images/en/basics/object-relations/4-or.png)](../assets/images/en/basics/object-relations/4-or.png)
+[![Objets de relation](../assets/images/en/basics/object-relations/4-or.png)](../assets/images/en/basics/object-relations/4-or.png)
 
-The direction of the relation (which object is the master and which one is the slave) has consequences for the [CMDB explorer](../evaluation/cmdb-explorer/index.md). Object relations are displayed recursively either upwards or downwards in the tree view. Master objects are below the slave objects in the [standard profile](../evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer.md).
+La direction de la relation (quel objet est le maître et lequel est l'esclave) a des conséquences pour l'[explorateur CMDB](../evaluation/cmdb-explorer/index.md). Les relations d'objet sont affichées de manière récursive soit vers le haut, soit vers le bas dans la vue arborescente. Les objets maîtres se trouvent en dessous des objets esclaves dans le [profil standard](../evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer.md).
 
-## License requirements for objects
+## Exigences de licence pour les objets {/ * exemples * /}
 
-Relation objects do not require a [license](../maintenance-and-operation/activate-license.md).
+Les objets de relation ne nécessitent pas de [licence](../maintenance-and-operation/activate-license.md).
 
-## Relations Category
+## Catégorie des relations {/ * exemples * /}
 
-Relations to other objects are gathered in the **Relations** [category](structure-of-the-it-documentation.md) per object. This category is assigned to each object type in a fixed way and can be opened via the arrows icon.
+Les relations avec d'autres objets sont regroupées dans la catégorie **Relations** [category](structure-of-the-it-documentation.md) par objet. Cette catégorie est attribuée à chaque type d'objet de manière fixe et peut être ouverte via l'icône des flèches.
 
-[![Relations Category](../assets/images/en/basics/object-relations/5-or.png)](../assets/images/en/basics/object-relations/5-or.png)
+[![Catégorie des relations](../assets/images/en/basics/object-relations/5-or.png)](../assets/images/en/basics/object-relations/5-or.png)
 
-## Implicit versus Explicit Relations
+## Relations implicites versus explicites {/ * exemples * /}
 
-Relations do not only have different types (see above) but they are also being created implicitly or explicitly. Implicit relations originate from categories. If the **Location** category is edited, for example, and an object which is higher in the hierarchy is selected in the **Location** attribute, then the implicit relation of the type **Location** will be created automatically in the background. This implicit relation is also shown in the **Relations** category at **Extras → CMDB → Relations → Locations**.
+Les relations n'ont pas seulement différents types (voir ci-dessus) mais elles sont également créées de manière implicite ou explicite. Les relations implicites proviennent des catégories. Si la catégorie **Emplacement** est modifiée, par exemple, et qu'un objet qui se trouve plus haut dans la hiérarchie est sélectionné dans l'attribut **Emplacement**, alors la relation implicite de type **Emplacement** sera créée automatiquement en arrière-plan. Cette relation implicite est également affichée dans la catégorie **Relations** à **Extras → CMDB → Relations → Emplacements**.
 
-If you want to build a relation between two objects independent of the categories and their attributes, an explicit relation will be created. This explicit relation is created in the **Relations** category. The object where you are during that moment is pre-selected as **Object 1**. The object with which **Object 1** is to be put into a relation has to be selected under **Object 2**. You also have to choose the direction between the two objects. **Dependency** is selected as the default relation type, as it is already set as explicit at **Administration → Predefined content → Object relation types**. But you can also easily define a new explicit relation and use it immediately. This can be carried out via the slips-icon, similar to the procedure with Dialog+ fields.
+Si vous souhaitez établir une relation entre deux objets indépendamment des catégories et de leurs attributs, une relation explicite sera créée. Cette relation explicite est créée dans la catégorie **Relations**. L'objet sur lequel vous vous trouvez à ce moment-là est présélectionné en tant qu'**Objet 1**. L'objet avec lequel **Objet 1** doit être mis en relation doit être sélectionné sous **Objet 2**. Vous devez également choisir la direction entre les deux objets. **Dépendance** est sélectionnée comme type de relation par défaut, car elle est déjà définie de manière explicite dans **Administration → Contenu prédéfini → Types de relation d'objet**. Mais vous pouvez également facilement définir une nouvelle relation explicite et l'utiliser immédiatement. Cela peut être effectué via l'icône de feuille, de manière similaire à la procédure avec les champs Dialog+.
 
-[![Implicit versus Explicit Relations](../assets/images/en/basics/object-relations/6-or.png)](../assets/images/en/basics/object-relations/6-or.png)
+[![Relations implicites versus explicites](../assets/images/en/basics/object-relations/6-or.png)](../assets/images/en/basics/object-relations/6-or.png)
 
-When creating a new explicit relation type, the type and the descriptions can be defined from the corresponding object views.
+Lors de la création d'un nouveau type de relation explicite, le type et les descriptions peuvent être définis à partir des vues d'objet correspondantes.
 
-### Implicit or explicit?
+### Implicite ou explicite?
 
-So what is better: Should you use implicit or explicit relations? The answer is: implicit relations. Categories and attributes are central elements for structuring the IT documentation. Users document in categories and that is also where users look for information. Therefore it is better to document unspecific relations of the type **Dependency** explicitly in a category in which implicit and explicit relations are varied. Both possibilities can be evaluated, but only the implicit relations are transparent.
+Alors, que vaut-il mieux : devriez-vous utiliser des relations implicites ou explicites ? La réponse est : les relations implicites. Les catégories et les attributs sont des éléments centraux pour structurer la documentation informatique. Les utilisateurs documentent dans les catégories et c'est également là que les utilisateurs cherchent des informations. Il est donc préférable de documenter les relations non spécifiques du type **Dépendance** de manière explicite dans une catégorie où les relations implicites et explicites sont variées. Les deux possibilités peuvent être évaluées, mais seules les relations implicites sont transparentes. {/ * exemples *}
 
-## Weighting
+## Pondération
 
-Each relation receives a weighting, as already mentioned above. The weighting is specified as attribute in the relation object. Values between **1** and **10** are possible as weighting. They express how dependent the slave object is on the master object. **1** means **very important**, while **10** means **unimportant. 5** is the golden mean, it stands for **important** and represents the default value.
+Chaque relation reçoit une pondération, comme mentionné ci-dessus. La pondération est spécifiée en tant qu'attribut dans l'objet relation. Des valeurs entre **1** et **10** sont possibles en tant que pondération. Elles expriment à quel point l'objet esclave dépend de l'objet maître. **1** signifie **très important**, tandis que **10** signifie **peu important**. **5** est le juste milieu, il représente **important** et correspond à la valeur par défaut.
 
-Example: A power supply receives its power from an UPS, so the weighting could be **1 (very important)** as the power supply could not function without a usable UPS. However, if a node fails within the web cluster, other nodes take on its job. This means that the dependency to higher-level services is not as strong and could lie somewhere between **5 (important)** and **10 (unimportant)**.
+Exemple : Une alimentation reçoit son énergie d'un UPS, donc la pondération pourrait être **1 (très important)** car l'alimentation ne pourrait pas fonctionner sans un UPS utilisable. Cependant, si un nœud échoue au sein du cluster web, d'autres nœuds reprennent son travail. Cela signifie que la dépendance aux services de niveau supérieur n'est pas aussi forte et pourrait se situer entre **5 (important)** et **10 (peu important)**. {/ * exemples *}
 
-The Analysis module uses this weighting in combination with services and [Network Monitoring](../automation-and-integration/network-monitoring/index.md) to evaluate which services are affected by malfunctions.
+Le module d'analyse utilise cette pondération en combinaison avec les services et la [Surveillance du Réseau](../automation-and-integration/network-monitoring/index.md) pour évaluer quels services sont affectés par des dysfonctionnements.
 
-## Parallel Relations
+## Relations Parallèles
 
-Besides the direction-based relations with master and slave objects there exist also parallel relations in i-doit. The parallel relations also set two objects in relation to each other, however, without expressing a dependency on each other.
+Outre les relations basées sur la direction avec des objets maîtres et esclaves, il existe également des relations parallèles dans i-doit. Les relations parallèles établissent également un lien entre deux objets, sans exprimer de dépendance mutuelle.
 
-Example: When a web cluster with multiple nodes is documented in i-doit, the nodes act independently of each other. Only the functioning of the cluster depends on all nodes. The **Cluster members** category (or the [mirrored category](structure-of-the-it-documentation.md) **Cluster memberships**) creates parallel object relations between the cluster members in the background.
+Exemple : Lorsqu'un cluster web avec plusieurs nœuds est documenté dans i-doit, les nœuds agissent de manière indépendante les uns des autres. Seule la fonctionnalité du cluster dépend de tous les nœuds. La catégorie **Membres du Cluster** (ou la [catégorie en miroir](structure-of-the-it-documentation.md) **Appartenances au Cluster**) crée des relations d'objet parallèles entre les membres du cluster en arrière-plan.
 
-A listing of all parallel relations can be found at **Extras → CMDB → Relations → Parallel relations**. They cannot be created by the user but are created implicitly and automatically in the background.
+Une liste de toutes les relations parallèles se trouve dans **Extras → CMDB → Relations → Relations parallèles**. Elles ne peuvent pas être créées par l'utilisateur, mais sont créées implicitement et automatiquement en arrière-plan.
 
-[![Parallel Relations](../assets/images/en/basics/object-relations/7-or.png)](../assets/images/en/basics/object-relations/7-or.png)
 
-## Object Relation in a Custom Category
+[![Relations Parallèles](../assets/images/en/basics/object-relations/7-or.png)](../assets/images/en/basics/object-relations/7-or.png)
 
-Object relations can be documented in [custom categories](custom-categories.md). You need to distinguish between two field types:
+## Relation d'Objet dans une Catégorie Personnalisée
 
--   **Object-Browser**: No relation object is created. The relation to be documented here between two objects is not listed in the **Relations** category and the [CMDB explorer](../evaluation/cmdb-explorer/index.md) does not process these relations.
--   **Object-Relation**: Here only an implicit relation type can be given as **Addition**. Explicit relations are not shown.
+Les relations d'objets peuvent être documentées dans les [catégories personnalisées](custom-categories.md). Vous devez distinguer entre deux types de champs :
 
-## Object browser or object relation?
+-   **Navigateur d'Objets** : Aucun objet de relation n'est créé. La relation à documenter ici entre deux objets n'est pas répertoriée dans la catégorie **Relations** et l'[explorateur CMDB](../evaluation/cmdb-explorer/index.md) ne traite pas ces relations.
+-   **Relation d'Objet** : Ici, seul un type de relation implicite peut être donné comme **Ajout**. Les relations explicites ne sont pas affichées.
 
-As for implicit and explicit relations the same question arises: Which field type is better? Here the answer is clear as well: The **Object-Relation** has additional uses and should therefore be preferred to the **Object-Browser.**
+## Navigateur d'objets ou relation d'objets ?
+
+Pour les relations implicites et explicites, la même question se pose : quel type de champ est préférable ? Ici, la réponse est également claire : la **Relation d'Objet** a des utilisations supplémentaires et devrait donc être préférée au **Navigateur d'Objets.**
+
+{/*examples*/}

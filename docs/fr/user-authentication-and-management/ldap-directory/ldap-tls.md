@@ -1,56 +1,57 @@
 ---
-title: LDAPS Debian configuration
-description: Guide for configuring an LDAPS connection with i-doit for debian
+title: Configuration LDAPS Debian
+description: Guide pour configurer une connexion LDAPS avec i-doit pour debian
 icon: material/debian
-lang: en
+lang: fr
 ---
 
-To establish a connection to the Active Directory via LDAPS or STARTTLS, the certificate from the LDAP server is required.
-We export this and add it to the certificate store of the i-doit server so that an encrypted communication can be established.
+Pour établir une connexion à l'Active Directory via LDAPS ou STARTTLS, le certificat du serveur LDAP est requis.
+Nous l'exportons et l'ajoutons au magasin de certificats du serveur i-doit afin qu'une communication chiffrée puisse être établie.
 
-First we log in to the LDAP server, which usually also contains the certification authority.
-Then open the corresponding MMC snap-in or select via Server Manager -> Certificate Authority.
+Tout d'abord, nous nous connectons au serveur LDAP, qui contient généralement également l'autorité de certification.
+Ensuite, ouvrez le snap-in MMC correspondant ou sélectionnez via Gestionnaire de serveur -> Autorité de certification.
 
-[![Server Manager](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-1.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-1.png)
+[![Gestionnaire de serveur](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-1.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-1.png)
 
-Select the properties of the certification body
+Sélectionnez les propriétés de l'autorité de certification
 
-[![Select properties](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-2.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-2.png)
+[![Sélectionner les propriétés](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-2.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-2.png)
 
-Display the certificate (1), select details (2) and then copy it to a file (3).
+Affichez le certificat (1), sélectionnez les détails (2) et copiez-le dans un fichier (3).
 
-[![Display and copy certificate](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-3.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-3.png)
 
-DER Leave format selected
+[![Afficher et copier le certificat](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-3.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-3.png)
 
-[![DER Leave format selected](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-4.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-4.png)
+Format DER Leave sélectionné
 
-Select file name and directory
+[![Format DER Leave sélectionné](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-4.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-4.png)
 
-[![Select name and directory](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-5.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-5.png)
+Sélectionner le nom du fichier et le répertoire
 
-Export file
+[![Sélectionner le nom et le répertoire](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-5.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-5.png)
 
-[![Finish it export assistant](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-6.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-6.png)
+Exporter le fichier
 
-Copy the certificate to the i-doit system (in the example under /tmp/). Then install openssl
+[![Terminer l'assistant d'exportation](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-6.png)](../../assets/images/en/automation-and-integration/ldap/ldap-tls/ldap-tls-6.png)
+
+Copiez le certificat dans le système i-doit (dans l'exemple sous /tmp/). Ensuite, installez openssl
 
 ```shell
 apt install openssl
 ```
 
-and convert the certificate into the PEM format:
+et convertissez le certificat au format PEM :
 
 ```shell
 openssl x509 -inform der -outform pem -in /tmp/synetics.test.cer \
 -out /usr/local/share/ca-certificates/synetics.test.crt
 ```
 
-Now update the certificate store and restart Apache:
+Maintenant mettez à jour le magasin de certificats et redémarrez Apache :
 
 ```shell
 update-ca-certificates
 service apache2 restart
 ```
 
-!!! warning "The output file must have the file extension .crt, otherwise it will not be taken into account by the update-ca-certificates command. If it is transferred correctly, the certificate must be visible under /etc/ssl/certs/."
+!!! warning "Le fichier de sortie doit avoir l'extension de fichier .crt, sinon il ne sera pas pris en compte par la commande update-ca-certificates. S'il est transféré correctement, le certificat doit être visible sous /etc/ssl/certs/."

@@ -1,25 +1,25 @@
-# MySQL/MariaDB Does Not Start After Changing innodb_log_file_size
+# MySQL/MariaDB Ne Démarre Pas Après Avoir Modifié innodb_log_file_size
 
-Problem
--------
+Problème
+--------
 
-It is [recommended](../../installation/manual-installation/system-settings.md) to increase the value of innodb_log_file_size (depending on RAM) for a better performance of MySQL/MariaDB. After this change the service is restarted but only an error message appears:
+Il est [recommandé](../../installation/manual-installation/system-settings.md) d'augmenter la valeur de innodb_log_file_size (en fonction de la RAM) pour une meilleure performance de MySQL/MariaDB. Après ce changement, le service est redémarré mais seul un message d'erreur apparaît :
 
-    110216  9:48:41  InnoDB: Initializing buffer pool, size = 128.0M
-    110216  9:48:41  InnoDB: Completed initialization of buffer pool
-    InnoDB: Error: log file ./ib_logfile0 is of different size 0 5242880 bytes
-    InnoDB: than specified in the .cnf file 0 33554432 bytes!
-    110216  9:48:41 [ERROR] Plugin 'InnoDB' init function returned error.
-    110216  9:48:41 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+    110216  9:48:41  InnoDB: Initialisation du pool de mémoires tampons, taille = 128.0M
+    110216  9:48:41  InnoDB: Initialisation du pool de mémoires tampons terminée
+    InnoDB: Erreur : le fichier journal ./ib_logfile0 a une taille différente de 0 5242880 octets
+    InnoDB: de celle spécifiée dans le fichier .cnf 0 33554432 octets !
+    110216  9:48:41 [ERREUR] La fonction d'initialisation du plugin 'InnoDB' a retourné une erreur.
+    110216  9:48:41 [ERREUR] L'enregistrement du plugin 'InnoDB' en tant que MOTEUR DE STOCKAGE a échoué.
 
 Solution
 --------
 
-Terminate the service in a clean manner and remove all existing logs when changing this option, as described in a more comprehensive [answer at StackExchange](http://dba.stackexchange.com/questions/1261/how-to-safely-change-mysql-innodb-variable-innodb-log-file-size):
+Arrêtez le service de manière propre et supprimez tous les journaux existants lors du changement de cette option, comme décrit de manière plus détaillée dans une [réponse sur StackExchange](http://dba.stackexchange.com/questions/1261/how-to-safely-change-mysql-innodb-variable-innodb-log-file-size) :
 
     mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
     sudo service mysql stop
     sudo mv /var/lib/mysql/ib_logfile[01] /tmp
     sudo service mysql start
 
-MySQL/MariaDB creates the logs again automatically. This can take some time in bigger databases. The new value for innodb_log_file_size is now active.
+MySQL/MariaDB recrée automatiquement les journaux. Cela peut prendre du temps dans de plus grandes bases de données. La nouvelle valeur pour innodb_log_file_size est maintenant active.

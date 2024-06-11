@@ -1,112 +1,112 @@
-# Web GUI
+# Interface Web
 
-The i-doit GUI is a WEB application that can be used with the respective [supported browser](../installation/system-requirements.md). This Knowledge Base article describes the various features and functions of the Web GUI.
+L'interface utilisateur (GUI) d'i-doit est une application WEB qui peut être utilisée avec le [navigateur pris en charge](../installation/system-requirements.md) respectif. Cet article de la base de connaissances décrit les différentes fonctionnalités et fonctions de l'interface Web.
 
-## Logon Screen
+## Écran de connexion
 
-When you activate i-doit after successful installation, the logon screen is displayed first. Here you can logon to i-doit directly or you can go to the [Admin Center](../system-administration/admin-center.md) by clicking the "Admin-Center" button in the lower area of the window.
+Lorsque vous activez i-doit après une installation réussie, l'écran de connexion s'affiche en premier. Ici, vous pouvez vous connecter à i-doit directement ou vous pouvez accéder au [Centre d'administration](../system-administration/admin-center.md) en cliquant sur le bouton "Centre d'administration" dans la partie inférieure de la fenêtre.
 
-[![Logon Screen](../assets/images/en/basics/web-gui/1-gui.png)](../assets/images/en/basics/web-gui/1-gui.png)
+[![Écran de connexion](../assets/images/en/basics/web-gui/1-gui.png)](../assets/images/en/basics/web-gui/1-gui.png)
 
-For log-in to i-doit our default users apply, such as Admin, Archivist, Author, Editor or Reader, provided that i-doit was installed only just. All these users have their name as password, for example, you can log-in with the user name "Admin" and the corresponding password "Admin".
+Pour vous connecter à i-doit, nos utilisateurs par défaut s'appliquent, tels que Admin, Archiviste, Auteur, Éditeur ou Lecteur, à condition que i-doit ait été installé juste avant. Tous ces utilisateurs ont leur nom comme mot de passe, par exemple, vous pouvez vous connecter avec le nom d'utilisateur "Admin" et le mot de passe correspondant "Admin".
 
-## Start Screen, Dashboard and Widgets
+## Écran de démarrage, Tableau de bord et Widgets
 
-After successful log-in, the start screen with the [dashboard](./dashboard-and-widgets.md) and its [widgets](./dashboard-and-widgets.md) is opened.
+Après une connexion réussie, l'écran de démarrage avec le [tableau de bord](./dashboard-and-widgets.md) et ses [widgets](./dashboard-and-widgets.md) est ouvert.
 
-[![Start Screen, Dashboard and Widgets](../assets/images/en/basics/web-gui/2-gui.png)](../assets/images/en/basics/web-gui/2-gui.png)
+[![Écran de démarrage, tableau de bord et widgets](../assets/images/en/basics/web-gui/2-gui.png)](../assets/images/en/basics/web-gui/2-gui.png)
 
-The switch panel in the horizontal area at the top is divided into the following sections:
+Le panneau de commutation dans la zone horizontale en haut est divisé en les sections suivantes :
 
-## i-doit Button
+## Bouton i-doit
 
-In the upper left corner you can find the i-doit button. A click on this button will always bring you back to the homepage.
+Dans le coin supérieur gauche, vous pouvez trouver le bouton i-doit. Un clic sur ce bouton vous ramènera toujours à la page d'accueil.
 
-[![i-doit Button](../assets/images/en/basics/web-gui/3-gui.png)](../assets/images/en/basics/web-gui/3-gui.png)
+[![Bouton i-doit](../assets/images/en/basics/web-gui/3-gui.png)](../assets/images/en/basics/web-gui/3-gui.png)
 
 ## my-doit
 
-On the right of the i-doit button is your personal i-doit area called "my-doit". Here you can set various CMDB status filters, bookmarks for i-doit objects or areas and you get an overview of your tasks from the workflow system. You can activate this in **Administration → User settings → User interface → Main menu**.
+À droite du bouton i-doit se trouve votre espace personnel i-doit appelé "my-doit". Ici, vous pouvez définir divers filtres d'état CMDB, des signets pour les objets ou les zones i-doit et obtenir un aperçu de vos tâches à partir du système de workflow. Vous pouvez activer cela dans **Administration → Paramètres utilisateur → Interface utilisateur → Menu principal**.
 
 [![my-doit](../assets/images/en/basics/web-gui/4-gui.png)](../assets/images/en/basics/web-gui/4-gui.png)
 
-## Objekt Type Group Selection
+## Sélection de groupe de types d'objets
 
-In the central part of the upper task bar you can see the single [object type](./object-types.md) groups. You can adapt this area completely to your requirements and depending on your configuration it can look completely different. By selecting a single menu item, the respective object type groups are displayed within the tree view on the right-hand side of the i-doit user interface.
+Dans la partie centrale de la barre de tâches supérieure, vous pouvez voir les différents groupes de types d'objets. Vous pouvez adapter cette zone complètement à vos besoins et en fonction de votre configuration, elle peut avoir un aspect complètement différent. En sélectionnant un élément de menu unique, les groupes de types d'objets respectifs sont affichés dans la vue arborescente du côté droit de l'interface utilisateur i-doit.
 
-[![Objekt Type Group Selection](../assets/images/en/basics/web-gui/5-gui.png)](../assets/images/en/basics/web-gui/5-gui.png)
+[![Sélection du groupe de types d'objets](../assets/images/en/basics/web-gui/5-gui.png)](../assets/images/en/basics/web-gui/5-gui.png)
 
 ## Extras
 
-A lot of special functions can be found under Extras. For example, there are CMDB features which help you to work more efficiently with i-doit and you have access to the respective installed i-doit [add-ons](../i-doit-pro-add-ons/index.md).
+De nombreuses fonctions spéciales se trouvent sous Extras. Par exemple, il existe des fonctionnalités CMDB qui vous aident à travailler plus efficacement avec i-doit et vous avez accès aux [extensions](../i-doit-pro-add-ons/index.md) i-doit respectivement installées.
 
 [![Extras](../assets/images/en/basics/web-gui/6-gui.png)](../assets/images/en/basics/web-gui/6-gui.png)
 
-## Global Search
+## Recherche globale
 
-You have direct acces to the i-doit full-text search with the [search field](../efficient-documentation/search.md) at the right upper margin. Here you can jump quickly to the found search results or display a list of results.
+Vous avez un accès direct à la recherche plein texte de i-doit avec le [champ de recherche](../efficient-documentation/search.md) en haut à droite. Ici, vous pouvez rapidement accéder aux résultats de recherche trouvés ou afficher une liste de résultats.
 
-[![Global Search](../assets/images/en/basics/web-gui/7-gui.png)](../assets/images/en/basics/web-gui/7-gui.png)
+[![Recherche globale](../assets/images/en/basics/web-gui/7-gui.png)](../assets/images/en/basics/web-gui/7-gui.png)
 
-## User Info/Language and Administration
+## Infos utilisateur/Langue et Administration
 
-Below the search field the currently logged-in user is shown. As soon as you hover the mouse over this section you can see additional information within a window. Here you can switch to other available languages, log-out or change to the i-doit administration.
+En dessous du champ de recherche, l'utilisateur actuellement connecté est affiché. Dès que vous survolez cette section avec la souris, vous pouvez voir des informations supplémentaires dans une fenêtre. Ici, vous pouvez passer à d'autres langues disponibles, vous déconnecter ou passer à l'administration de i-doit.
 
-[![User Info/Language and Administration](../assets/images/en/basics/web-gui/8-gui.png)](../assets/images/en/basics/web-gui/8-gui.png)
+[![Informations Utilisateur/Langue et Administration](../assets/images/en/basics/web-gui/8-gui.png)](../assets/images/en/basics/web-gui/8-gui.png)
 
-## Bread Crumb Navigation
+## Navigation par Fil d'Ariane
 
-The bread crumb navigation is below the black task bar. Here you can always see where exactly you are in i-doit and from here you can also jump to the features which are below the hierarchy.
+La navigation par fil d'Ariane se trouve en dessous de la barre des tâches noire. Ici, vous pouvez toujours voir exactement où vous vous trouvez dans i-doit et à partir de là, vous pouvez également accéder aux fonctionnalités qui se trouvent en dessous de la hiérarchie.
 
-[![Bread Crumb Navigation](../assets/images/en/basics/web-gui/9-gui.png)](../assets/images/en/basics/web-gui/9-gui.png)
+[![Navigation par Fil d'Ariane](../assets/images/en/basics/web-gui/9-gui.png)](../assets/images/en/basics/web-gui/9-gui.png)
 
-## Object View
+## Vue Objet
 
-When you are in the object view mode, the corresponding tree view is shown. With this view you can, for example, display all object types of the selected object type groups or when you are within an object, you can see the categories assigned to this object.
+Lorsque vous êtes en mode vue objet, l'arborescence correspondante est affichée. Avec cette vue, vous pouvez, par exemple, afficher tous les types d'objets des groupes de types d'objets sélectionnés ou lorsque vous êtes dans un objet, vous pouvez voir les catégories attribuées à cet objet.
 
-[![Object View](../assets/images/en/basics/web-gui/10-gui.png)](../assets/images/en/basics/web-gui/10-gui.png)
+[![Vue Objet](../assets/images/en/basics/web-gui/10-gui.png)](../assets/images/en/basics/web-gui/10-gui.png)
 
-## Location View
+## Vue Emplacement
 
-From the objects in i-doit which present a location, the location view creates a hierarchical view based on their relations to each other. Here you can navigate to the respective locations and jump to the assigned objects.
+Pour les objets dans i-doit qui représentent un emplacement, la vue emplacement crée une vue hiérarchique basée sur leurs relations les uns avec les autres. Ici, vous pouvez naviguer vers les emplacements respectifs et accéder aux objets assignés.
 
 | Option            | Description                                                   |
 | ----------------- | ------------------------------------------------------------- |
-| Physical location | Displays objects with a physical location                     |
-| Logical location  | Displays objects with a logical location                      |
-| Combined view     | Displays objects with a physical location or logical location |
+| Emplacement physique | Affiche les objets avec un emplacement physique                     |
+| Emplacement logique  | Affiche les objets avec un emplacement logique                      |
+| Vue combinée     | Affiche les objets avec un emplacement physique ou un emplacement logique |
 
-[![Location View](../assets/images/en/basics/web-gui/11-gui.png)](../assets/images/en/basics/web-gui/11-gui.png)
+[![Vue de l'emplacement](../assets/images/en/basics/web-gui/11-gui.png)](../assets/images/en/basics/web-gui/11-gui.png)
 
-## Category line spacing
+## Espacement des lignes de catégorie
 
-The line spacing of categories can be adjusted in the User settings.
+L'espacement des lignes des catégories peut être ajusté dans les paramètres utilisateur.
 
-E.g. is the line spacing set to small, the lines are closer to each other.
+Par exemple, si l'espacement des lignes est réglé sur petit, les lignes sont plus proches les unes des autres.
 
-[![Line spacing small](../assets/images/en/basics/web-gui/12-gui.png)](../assets/images/en/basics/web-gui/12-gui.png)
+[![Espacement des lignes petit](../assets/images/en/basics/web-gui/12-gui.png)](../assets/images/en/basics/web-gui/12-gui.png)
 
-and here a example with a large configured line spacing.
+et voici un exemple avec un espacement des lignes configuré sur grand.
 
-[![Line spacing large](../assets/images/en/basics/web-gui/13-gui.png)](../assets/images/en/basics/web-gui/13-gui.png)
+[![Espacement des lignes grand](../assets/images/en/basics/web-gui/13-gui.png)](../assets/images/en/basics/web-gui/13-gui.png)
 
-## Spacing in menu trees
+## Espacement dans les arbres de menu
 
-The menu tree spacing lets you adjust the spacing between the menu items.<br>
-E.g. is the menu tree spacing set to small, the menu items are closer to each other.
+Le menu arborescent permet d'ajuster l'espacement entre les éléments du menu.<br>
+Par exemple, si l'espacement du menu arborescent est réglé sur petit, les éléments du menu sont plus proches les uns des autres.
 
-[![menu tree spacing small](../assets/images/en/basics/web-gui/14-gui.png)](../assets/images/en/basics/web-gui/14-gui.png)
+[![menu arborescent petit](../assets/images/en/basics/web-gui/14-gui.png)](../assets/images/en/basics/web-gui/14-gui.png)
 
-and here a example with a large configured menu tree spacing.
+et voici un exemple avec un espacement du menu arborescent configuré sur grand.
 
-[![menu tree spacing large](../assets/images/en/basics/web-gui/15-gui.png)](../assets/images/en/basics/web-gui/15-gui.png)
+[![menu arborescent grand](../assets/images/en/basics/web-gui/15-gui.png)](../assets/images/en/basics/web-gui/15-gui.png)
 
-## Display spacers
+## Afficher les espaces
 
-Here, you are able to configure if line spacers are displayed in categories. For example, if 'display spacers' is set to yes, the spacers will be displayed.
+Ici, vous pouvez configurer si les espaces de ligne sont affichés dans les catégories. Par exemple, si "afficher les espaces" est réglé sur oui, les espaces seront affichés.
 
-[![display spacers](../assets/images/en/basics/web-gui/16-gui.png)](../assets/images/en/basics/web-gui/16-gui.png)
+[![afficher les espaces](../assets/images/en/basics/web-gui/16-gui.png)](../assets/images/en/basics/web-gui/16-gui.png)
 
-and here a example with disabled spacers.
+et voici un exemple avec les espaces désactivés.
 
-[![do not display spacers](../assets/images/en/basics/web-gui/17-gui.png)](../assets/images/en/basics/web-gui/17-gui.png)
+[![ne pas afficher les espaces](../assets/images/en/basics/web-gui/17-gui.png)](../assets/images/en/basics/web-gui/17-gui.png)

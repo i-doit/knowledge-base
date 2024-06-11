@@ -1,85 +1,85 @@
-# Changelog 1.12
+# Journal des modifications 1.12
 
-[Task][Export]                               Caching in "isys_export_helper" should be switchable  
-[Improvement][Check_MK]                      Add-onize Check_MK  
-[Improvement][Update]                        PHP warning when updating  
-[Improvement][JDisc]                         JDisc: Optional device scan via "IP/FQDN"  
-[Improvement][Configure Apache HTTPD, PHP & Co.]Remove out-dated URL rewrite rules  
-[Improvement][Configure Apache HTTPD, PHP & Co.]Remove Apache 2.2 related settings from .htaccess files  
-[Improvement][Configure Apache HTTPD, PHP & Co.]Remove PHP settings from .htaccess file  
-[Improvement][Configure Apache HTTPD, PHP & Co.]Remove setting "FollowSymlinks" from .htaccess file  
-[Improvement][Configure Apache HTTPD, PHP & Co.]Combine all .htaccess files to one  
-[Improvement][Custom categories]             Attributes  should be changeable by api only over new option "ApiOnly"  
-[Improvement][Custom categories]             New field type for custom categories  
-[Improvement][LDAP]                          LDAP: Login-Sync optionally by sync user instead of i-doit user  
-[Improvement][API]                           Embedding of "?load=api_properties" into i-doit configuration  
-[Improvement][Search]                        Renewing search index via user interface  
-[Improvement][Console]                       Command for filling dynamic groups  
-[Improvement][Code (internal)]               Compatibility with PHP 7.2  
-[Improvement][List editing]                  List edit - category 'Operating system': Cannot select variants  
-[Improvement][CMDB]                          Category hostaddress: objectbrowser should show either IPv4 or IPv6 networks  
-[Improvement][Nagios]                        Add-onize Nagios  
-[Bug][List editing]                          List edit for category host address misses the attribute "address allocation"  
-[Bug][List editing]                          List edit: Enable category file assignment  
-[Bug][List editing]                          Apply values for categories of all objects that already contain data in that particular category  
-[Bug][List editing]                          List editing is not available anymore  
-[Bug][List editing]                          List edit is reset when clicking on Object type configuration  
-[Bug][List editing]                          the Location Suggestion in the List edit are hidden behind  Element  
-[Bug][List editing]                          Fix icons in list editing  
-[Bug][List editing]                          When editing lists you MUST make a selection at Yes/No Fields  
-[Bug][List editing]                          Attribute Address allocation (Category Host address) not available in list edit  
-[Bug][List editing]                          Attribute 'Version number (patchlevel)' not available in list edit of category 'Software assignment'  
-[Bug][List editing]                          List edit: Category "Local mass storage" and subcategories are missing  
-[Bug][List editing]                          Cannot use the list edit on category "SLA"  
-[Bug][Check_MK]                              Separation of Check_MK and Check_MK 2.0 content  
-[Bug][Lists]                                 Attributes from category "storage" can not be selected for view in object lists  
-[Bug][Lists]                                 Implement consistent behaviour for filter suggestions in object lists  
-[Bug][Lists]                                 Multi value categories claim a bigger amount of space than needed, even if there is only one entry  
-[Bug][Lists]                                 Edit button is missing in the templates of mass changes  
-[Bug][JDisc]                                 Problems using the JDisc webservice  
-[Bug][JDisc]                                 JDISC: Filtering for logical ports failed  
-[Bug][JDisc]                                 JDisc: Bad cluster assignment on guest systems  
-[Bug][JDisc]                                 JDisc Import: Operating system licenses are not assigned during an import  
-[Bug][Workflows]                             Empty page is shown after accessing the workflow add-on in i-doit 1.12  
-[Bug][Objects]                               When new clients are created, a memory module is first created when category memory is shown on overview  
-[Bug][Objects]                               Subcategory "guest systems" of category "virtual host" performs a mixed assignment to inconsistent view  
-[Bug][CMDB settings]                         General settings: Default value "Disable logbook commentary"  
-[Bug][CMDB settings]                         Sorting in dialogue admin after editing not possible  
-[Bug][Export]                                Export Wizard generates broken XML export that cannot be displayed  
-[Bug][Relations]                             Fix database error when choosing a relationship  
-[Bug][Relations]                             Object type as relationship master only sets relations that do not have a fixed direction  
-[Bug][Update]                                i-doit update should only be accessible for members of admin group  
-[Bug][Update]                                Fix warnings about unexpected parameters during an update  
-[Bug][Import]                                CSV-Import: Writing empty values into date fields not possible  
-[Bug][CMDB]                                  "Counter" placeholder is not available for title definition while creation of connectors  
-[Bug][CSV]                                   CSV-Import: Multiple contact assignments in mode "row" with different object types leads to errors  
-[Bug][Code (internal)]                       Save passwords without cleanup  
-[Bug][Code (internal)]                       Compatibility with Mobile Browser  
-[Bug][Categories]                            Creation of entry in "Operating system" category creates two entries  
-[Bug][Categories]                            Wrong property type for attribute "Persons > Master data > Salutation"  
-[Bug][Categories]                            Wrong information in print view of IP lists  
-[Bug][Categories]                            Print view for ip list not sorted correctly  
-[Bug][Categories]                            Persons: company isn't visible in core data after saving  
-[Bug][Categories]                            Attribute Search Domain from the Host Address category is not included while duplicating an object  
-[Bug][Categories]                            Sorting in the site tree and site requester  
-[Bug][Categories]                            add role by person group assigned objects  
-[Bug][Categories]                            Object browser lists objects, created in object browser, only after refres/change of view  
-[Bug][Categories]                            Rack view in category racks buggy  
-[Bug][Categories]                            Creating connectors not possible when change comment is active  
-[Bug][Categories]                            Wrong sorting in category "assigned objects"  
-[Bug][Installation]                          Path "/upload/files/" is not created during the installation  
-[Bug][Installation]                          Extend recommendation for PHP version to  include 7.2  
-[Bug][LDAP]                                  LDAP: wrong check of functions  
-[Bug][LDAP]                                  LDAP: TLS- and STARTTLS ignores user defined port  
-[Bug][Report-Manager]                        Missing formatation in report output  
-[Bug][Report-Manager]                        Usage of name in Reports leads to an error  
-[Bug][System settings]                       System Tools: You can delete the Admin etc. Delete groups using the system tools  
-[Bug][System settings]                       Icons are not loaded when a proxy server is used  
-[Bug][Search]                                Search: Templated objects are not indexed  
-[Bug][Validation]                            Validation for object-title and use of templates produce display errors  
-[Bug][Dashboard]                             Widget: Appearance of many bookmarks leads to a corrupt view  
-[Bug][Custom categories]                     Performance of category lists drops with many Dialog-Plus entries  
-[Bug][Configure Apache HTTPD, PHP & Co.]     Deny access to log files via Web server  
-[Bug][User settings]                         Button to reset settings of category list does always reset configuration to default settings from rollout  
-[Bug][API]                                   API: Providing ID`s as string leads to wrong identification of dialog entry  
-[Change][Performance]                        Improved performance for category tree when displaying custom categories with reports  
+[Tâche][Export]                               La mise en cache dans "isys_export_helper" devrait être commutable  
+[Amélioration][Check_MK]                      Add-oniser Check_MK  
+[Amélioration][Mise à jour]                   Avertissement PHP lors de la mise à jour  
+[Amélioration][JDisc]                         JDisc : Balayage facultatif des périphériques via "IP/FQDN"  
+[Amélioration][Configurer Apache HTTPD, PHP & Co.]Supprimer les règles de réécriture d'URL obsolètes  
+[Amélioration][Configurer Apache HTTPD, PHP & Co.]Supprimer les paramètres liés à Apache 2.2 des fichiers .htaccess  
+[Amélioration][Configurer Apache HTTPD, PHP & Co.]Supprimer les paramètres PHP du fichier .htaccess  
+[Amélioration][Configurer Apache HTTPD, PHP & Co.]Supprimer le paramètre "FollowSymlinks" du fichier .htaccess  
+[Amélioration][Configurer Apache HTTPD, PHP & Co.]Regrouper tous les fichiers .htaccess en un seul  
+[Amélioration][Catégories personnalisées]      Les attributs devraient être modifiables uniquement via l'API avec la nouvelle option "ApiOnly"  
+[Amélioration][Catégories personnalisées]      Nouveau type de champ pour les catégories personnalisées  
+[Amélioration][LDAP]                          LDAP : Synchronisation de la connexion en option par l'utilisateur de synchronisation au lieu de l'utilisateur i-doit  
+[Amélioration][API]                           Intégration de "?load=api_properties" dans la configuration i-doit  
+[Amélioration][Recherche]                      Renouvellement de l'index de recherche via l'interface utilisateur  
+[Amélioration][Console]                       Commande pour remplir les groupes dynamiques  
+[Amélioration][Code (interne)]                Compatibilité avec PHP 7.2  
+[Amélioration][Édition de liste]              Édition de liste - catégorie 'Système d'exploitation' : Impossible de sélectionner des variantes  
+[Amélioration][CMDB]                          Catégorie adresse hôte : l'explorateur d'objets devrait afficher soit des réseaux IPv4, soit IPv6  
+[Amélioration][Nagios]                        Add-oniser Nagios  
+[Bogue][Édition de liste]                     L'édition de liste pour la catégorie adresse hôte manque de l'attribut "allocation d'adresse"  
+[Bogue][Édition de liste]                     Édition de liste : Activer l'attribution de fichiers de catégorie  
+[Bogue][Édition de liste]                     Appliquer des valeurs pour les catégories de tous les objets qui contiennent déjà des données dans cette catégorie particulière  
+[Bogue][Édition de liste]                     L'édition de liste n'est plus disponible  
+[Bogue][Édition de liste]                     L'édition de liste est réinitialisée en cliquant sur la configuration du type d'objet  
+[Bogue][Édition de liste]                     La suggestion de localisation dans l'édition de liste est cachée derrière l'élément  
+[Bogue][Édition de liste]                     Corriger les icônes dans l'édition de liste  
+[Bogue][Édition de liste]                     Lors de l'édition de listes, VOUS DEVEZ faire une sélection dans les champs Oui/Non  
+[Bogue][Édition de liste]                     L'attribut Allocation d'adresse (Catégorie Adresse hôte) n'est pas disponible dans l'édition de liste  
+[Bogue][Édition de liste]                     L'attribut 'Numéro de version (niveau de correctif)' n'est pas disponible dans l'édition de liste de la catégorie 'Affectation de logiciel'  
+[Bogue][Édition de liste]                     Édition de liste : La catégorie "Stockage de masse local" et les sous-catégories manquent  
+[Bogue][Édition de liste]                     Impossible d'utiliser l'édition de liste sur la catégorie "SLA"  
+[Bogue][Check_MK]                             Séparation du contenu Check_MK et Check_MK 2.0  
+[Bogue][Listes]                               Les attributs de la catégorie "stockage" ne peuvent pas être sélectionnés pour l'affichage dans les listes d'objets  
+[Bogue][Listes]                               Implémenter un comportement cohérent pour les suggestions de filtre dans les listes d'objets  
+[Bogue][Listes]                               Les catégories à valeurs multiples occupent un espace plus important que nécessaire, même s'il n'y a qu'une seule entrée  
+[Bogue][Listes]                               Le bouton d'édition est manquant dans les modèles de modifications en masse  
+[Bogue][JDisc]                                Problèmes d'utilisation du service web JDisc  
+[Bogue][JDisc]                                JDISC : Le filtrage des ports logiques a échoué  
+[Bogue][JDisc]                                JDisc : Mauvaise attribution de cluster sur les systèmes invités  
+[Bogue][JDisc]                                Importation JDisc : Les licences de système d'exploitation ne sont pas attribuées lors d'une importation  
+[Bogue][Workflows]                            Une page vide s'affiche après l'accès à l'extension de workflow dans i-doit 1.12  
+[Bogue][Objets]                              Lorsque de nouveaux clients sont créés, un module de mémoire est d'abord créé lorsque la catégorie mémoire est affichée dans l'aperçu  
+[Bogue][Objets]                              La sous-catégorie "systèmes invités" de la catégorie "hôte virtuel" effectue une attribution mixte à une vue incohérente  
+[Bogue][Paramètres CMDB]                      Paramètres généraux : Valeur par défaut "Désactiver les commentaires du journal"  
+[Bogue][Paramètres CMDB]                      Le tri dans le dialogue d'administration après modification n'est pas possible  
+[Bogue][Export]                              L'assistant d'exportation génère un export XML corrompu qui ne peut pas être affiché  
+[Bogue][Relations]                           Correction de l'erreur de base de données lors du choix d'une relation  
+[Bogue][Relations]                           Le type d'objet en tant que maître de relation ne définit que des relations qui n'ont pas de direction fixe  
+[Bogue][Mise à jour]                          La mise à jour i-doit ne devrait être accessible que pour les membres du groupe admin  
+[Bogue][Mise à jour]                          Corriger les avertissements concernant des paramètres inattendus lors d'une mise à jour  
+[Bogue][Import]                              Import CSV : Écriture de valeurs vides dans les champs de date non possible  
+[Bogue][CMDB]                                Le placeholder "Compteur" n'est pas disponible pour la définition de titre lors de la création de connecteurs  
+[Bogue][CSV]                                 Import CSV : Plusieurs affectations de contact en mode "ligne" avec différents types d'objets entraînent des erreurs  
+[Bogue][Code (interne)]                      Enregistrer les mots de passe sans nettoyage  
+[Bogue][Code (interne)]                      Compatibilité avec le navigateur mobile  
+[Bogue][Catégories]                           La création d'une entrée dans la catégorie "Système d'exploitation" crée deux entrées  
+[Bogue][Catégories]                           Mauvais type de propriété pour l'attribut "Personnes > Données maîtres > Civilité"  
+[Bogue][Catégories]                           Mauvaise information dans la vue d'impression des listes IP  
+[Bogue][Catégories]                           La vue d'impression pour la liste IP n'est pas triée correctement  
+[Bogue][Catégories]                           Personnes : l'entreprise n'est pas visible dans les données de base après l'enregistrement  
+[Bogue][Catégories]                           L'attribut Domaine de recherche de la catégorie Adresse hôte n'est pas inclus lors de la duplication d'un objet  
+[Bogue][Catégories]                           Tri dans l'arborescence du site et le demandeur de site  
+[Bogue][Catégories]                           Ajouter un rôle par groupe de personnes aux objets assignés  
+[Bogue][Catégories]                           L'explorateur d'objets répertorie les objets créés dans l'explorateur d'objets uniquement après un rafraîchissement/changement de vue  
+[Bogue][Catégories]                           Vue rack dans la catégorie racks boguée  
+[Bogue][Catégories]                           La création de connecteurs n'est pas possible lorsque le commentaire de modification est actif  
+[Bogue][Catégories]                           Mauvais tri dans la catégorie "objets assignés"  
+[Bogue][Installation]                        Le chemin "/upload/files/" n'est pas créé lors de l'installation  
+[Bogue][Installation]                        Étendre la recommandation de version PHP pour inclure la version 7.2  
+[Bogue][LDAP]                                LDAP : mauvaise vérification des fonctions  
+[Bogue][LDAP]                                LDAP : TLS et STARTTLS ignorent le port défini par l'utilisateur  
+[Bogue][Gestionnaire de rapports]             Formatage manquant dans la sortie du rapport  
+[Bogue][Gestionnaire de rapports]             L'utilisation du nom dans les rapports entraîne une erreur  
+[Bogue][Paramètres système]                   Outils système : Vous pouvez supprimer les groupes Admin, etc. en utilisant les outils système  
+[Bogue][Paramètres système]                   Les icônes ne se chargent pas lorsqu'un serveur proxy est utilisé  
+[Bogue][Recherche]                            Recherche : Les objets modélisés ne sont pas indexés  
+[Bogue][Validation]                          La validation du titre de l'objet et l'utilisation de modèles produisent des erreurs d'affichage  
+[Bogue][Tableau de bord]                     Widget : L'apparence de nombreux signets entraîne une vue corrompue  
+[Bogue][Catégories personnalisées]            Les performances des listes de catégories chutent avec de nombreuses entrées Dialog-Plus  
+[Bogue][Configurer Apache HTTPD, PHP & Co.]  Interdire l'accès aux fichiers journaux via le serveur Web  
+[Bogue][Paramètres utilisateur]               Le bouton de réinitialisation des paramètres de la liste de catégories réinitialise toujours la configuration aux paramètres par défaut du déploiement  
+[Bogue][API]                                 API : Fournir des ID en tant que chaîne entraîne une mauvaise identification de l'entrée de dialogue  
+[Changement][Performance]                    Amélioration des performances pour l'arborescence de catégories lors de l'affichage de catégories personnalisées avec des rapports  

@@ -1,93 +1,96 @@
-# Configuration of the List View
+# Configuration de la vue en liste
 
-You can configure the view of the [object lists](./index.md) individually per list and per user.
+Vous pouvez configurer la vue des [listes d'objets](./index.md) individuellement par liste et par utilisateur.
 
-## Accessing the Configuration
+## Accès à la configuration
 
-You can reach the configuration for the corresponding object list with the [![Gear](../../assets/images/en/basics/object-list/configuration-of-the-list-view/1-cotlv.svg)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/1-cotlv.svg) button in the [navigation and filter bar](./navigation-and-filtering.md). Another possibility is the activation via **Administration → User settings → Object lists →[Object type]**.
+Vous pouvez accéder à la configuration de la liste d'objets correspondante avec le bouton [![Gear](../../assets/images/en/basics/object-list/configuration-of-the-list-view/1-cotlv.svg)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/1-cotlv.svg) dans la [barre de navigation et de filtre](./navigation-and-filtering.md). Une autre possibilité est l'activation via **Administration → Paramètres utilisateur → Listes d'objets → [Type d'objet]**.
 
-[![Accessing the Configuration](../../assets/images/en/basics/object-list/configuration-of-the-list-view/2-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/2-cotlv.png)
+[![Accès à la configuration](../../assets/images/en/basics/object-list/configuration-of-the-list-view/2-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/2-cotlv.png)
 
-## Attribute selection
+## Sélection des attributs
 
-Similar to the [report manager](../../evaluation/report-manager.md) you can define the columns via the selection of the category and the included attribute.
+Tout comme le [gestionnaire de rapports](../../evaluation/report-manager.md), vous pouvez définir les colonnes via la sélection de la catégorie et de l'attribut inclus.
 
-First you select a [global, specific](../../basics/structure-of-the-it-documentation.md) or [custom](../custom-categories.md) category in the drop-down menu. You can filter the list of categories with a text field.
+Tout d'abord, vous sélectionnez une catégorie [globale, spécifique](../../basics/structure-of-the-it-documentation.md) ou [personnalisée](../custom-categories.md) dans le menu déroulant. Vous pouvez filtrer la liste des catégories avec un champ de texte.
 
-When selecting a category, the attributes which can be defined as a column are displayed. Add an attribute to the selected attributes with a click on the [![button-add](../../assets/images/en/basics/object-list/configuration-of-the-list-view/3-cotlv.svg)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/3-cotlv.svg) button .
+Lorsque vous sélectionnez une catégorie, les attributs pouvant être définis comme une colonne sont affichés. Ajoutez un attribut aux attributs sélectionnés en cliquant sur le [![button-add](../../assets/images/en/basics/object-list/configuration-of-the-list-view/3-cotlv.svg)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/3-cotlv.svg) bouton.
 
-You can manipulate the list of selected attributes and change their order per drag and drop. The higher the object is in the selection, the further it is shown on the left of the object list. Remove an attribute with the [![button-cancel](../../assets/images/en/basics/object-list/configuration-of-the-list-view/4-cotlv.svg)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/4-cotlv.svg) button.
+Vous pouvez manipuler la liste des attributs sélectionnés et changer leur ordre par glisser-déposer. Plus l'objet est haut dans la sélection, plus il est affiché à gauche de la liste d'objets. Supprimez un attribut avec le [![button-cancel](../../assets/images/en/basics/object-list/configuration-of-the-list-view/4-cotlv.svg)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/4-cotlv.svg) bouton.
 
 !!! info "Restrictions"
 
-    The following restrictions apply to the selection of attributes:
+    Les restrictions suivantes s'appliquent à la sélection des attributs :
 
-    -   Not all attributes of all categories are available.
-    -   The number of attributes is limited to **10**.
+    -   Tous les attributs de toutes les catégories ne sont pas disponibles.
+    -   Le nombre d'attributs est limité à **10**.
 
-Attributes originating from [list categories (multi-valued)](../../basics/structure-of-the-it-documentation.md) can be presented in different ways. With the drop-down menu for the presentation of grouped data you can display the attributes either comma-separated in parallel or as a list one below each other. An example is the `Host addresses` attribute of the `Host address` category.
+Les attributs provenant des [catégories de listes (à valeurs multiples)](../../basics/structure-of-the-it-documentation.md) peuvent être présentés de différentes manières. Avec le menu déroulant pour la présentation des données groupées, vous pouvez afficher les attributs soit séparés par des virgules en parallèle, soit sous forme de liste les uns en dessous des autres. Un exemple est l'attribut `Adresses hôtes` de la catégorie `Adresse hôte`.
 
-!!! success "Tip"
+!!! success "Conseil"
 
-    In the default installation of i-doit the [ID](../unique-references.md) is displayed in each object list. As it is not relevant for conventional use, you can remove the corresponding column from the lists. This makes also sense for reasons of clarity.
+    Dans l'installation par défaut de i-doit, l'[ID](../unique-references.md) est affiché dans chaque liste d'objets. Comme il n'est pas pertinent pour une utilisation conventionnelle, vous pouvez supprimer la colonne correspondante des listes. Cela a également du sens pour des raisons de clarté.
 
 !!! info "Performance"
 
-    Object lists with a great number of attributes may lead to a reduced performance. Should you observe a loss of performance, decrease the number of selected attributes or expand your [system resources](../../installation/system-requirements.md).
+    Les listes d'objets avec un grand nombre d'attributs peuvent entraîner une réduction des performances. Si vous observez une perte de performances, réduisez le nombre d'attributs sélectionnés ou augmentez vos [ressources système](../../installation/system-requirements.md).
 
-[![Attribute selection](../../assets/images/en/basics/object-list/configuration-of-the-list-view/7-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/7-cotlv.png)
+[![Sélection d'attributs](../../assets/images/en/basics/object-list/configuration-of-the-list-view/7-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/7-cotlv.png)
 
-## Presort Columns
+## Présélection des colonnes
 
-You can also specify with which sorting the object list is to be loaded. Beside some attributes you can also click a selection button. Determine if the selected attribute should be sorted in an ascending or descending order in the **Sorting** drop-down menu.
+Vous pouvez également spécifier avec quel tri la liste d'objets doit être chargée. En plus de certains attributs, vous pouvez également cliquer sur un bouton de sélection. Déterminez si l'attribut sélectionné doit être trié par ordre croissant ou décroissant dans le menu déroulant **Tri**.
 
-Without defined sorting the objects are sorted by their [ID](../unique-references.md).
+Sans définir de tri, les objets sont triés par leur [ID](../unique-references.md).
+
+<Notes>
 
 !!! info "Restrictions"
 
-    The following restrictions apply to the sorting of attributes:
+    Les restrictions suivantes s'appliquent au tri des attributs :
 
-    -   Not all attributes can be sorted.
-    -   Subsequent sorting with the column headers is not possible with an object list with more than **10.000** objects. You can modify this [restriction](./advanced-settings.md).
+    -   Tous les attributs ne peuvent pas être triés.
+    -   Un tri ultérieur avec les en-têtes de colonnes n'est pas possible avec une liste d'objets de plus de **10 000** objets. Vous pouvez modifier cette [restriction](./advanced-settings.md).
 
-## Affecting Filtering
+## Affectation de Filtres
 
-You can prefilter an object list already during loading. Select the attribute in the drop-down menu for **Default filter** and enter the value for filtering in the text field on the right.<br>
-If you do not want to select an attribute to be filtered each time in the list view, the filter can be set for all fields.
+Vous pouvez préfiltrer une liste d'objets déjà pendant le chargement. Sélectionnez l'attribut dans le menu déroulant pour le **Filtre par défaut** et saisissez la valeur de filtrage dans le champ de texte à droite.<br>
+Si vous ne souhaitez pas sélectionner un attribut à filtrer à chaque fois dans la vue de liste, le filtre peut être défini pour tous les champs.
 
-## Different Ways to Open an Object
+## Différentes Manières d'Ouvrir un Objet
 
-Often a look at the object list is not enough to retrieve all required attributes. Therefore you can open an object via the list. You have two options:
+Souvent, un simple regard sur la liste d'objets ne suffit pas pour récupérer tous les attributs requis. Vous pouvez donc ouvrir un objet via la liste. Vous avez deux options :
 
--   Open the object by clicking the respective row in the object list. For this purpose, select the checkbox **Activate, if you want to click the row, instead of the "objectlink", to open the object**.
--   Open (and edit) the object with the selection of the checkbox of an object and the **Edit** button.
+-   Ouvrir l'objet en cliquant sur la ligne respective dans la liste d'objets. À cette fin, sélectionnez la case à cocher **Activer, si vous souhaitez cliquer sur la ligne, au lieu du "lien d'objet", pour ouvrir l'objet**.
+-   Ouvrir (et éditer) l'objet en sélectionnant la case à cocher d'un objet et le bouton **Éditer**.
 
-You can activate the first option for all users and all object lists simultaneously. The button **Activate rowclick for object lists** is under **Administration → System tools → Cache / Database → Database.**
+Vous pouvez activer la première option pour tous les utilisateurs et toutes les listes d'objets simultanément. Le bouton **Activer le clic sur la ligne pour les listes d'objets** se trouve sous **Administration → Outils système → Cache / Base de données → Base de données.**
 
-## Reset Configuration
+## Réinitialiser la Configuration
 
-Each object list has a default configuration. If you want to reset the object list to its default settings, click the **Restore default list configuration** button.
+Chaque liste d'objets a une configuration par défaut. Si vous souhaitez réinitialiser la liste d'objets à ses paramètres par défaut, cliquez sur le bouton **Restaurer la configuration par défaut de la liste**.
 
-## Set Configuration as Default
+## Définir la Configuration comme Standard
 
-When you want an object list to become the default list, click the **Define as standard** button in the field **Define configuration as standard.** Object lists which have already been changed by users are not affected. Consequently, this change concerns new users and users who still haven't changed an object list.
+Lorsque vous souhaitez qu'une liste d'objets devienne la liste par défaut, cliquez sur le bouton **Définir comme standard** dans le champ **Définir la configuration comme standard.** Les listes d'objets qui ont déjà été modifiées par les utilisateurs ne sont pas affectées. Par conséquent, ce changement concerne les nouveaux utilisateurs et les utilisateurs qui n'ont pas encore modifié une liste d'objets.
 
-[![Set Configuration as Default](../../assets/images/en/basics/object-list/configuration-of-the-list-view/5-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/5-cotlv.png)
+[![Définir la Configuration comme Standard](../../assets/images/en/basics/object-list/configuration-of-the-list-view/5-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/5-cotlv.png)
 
-## Assign the Configuration to Other Users
+## Assigner la Configuration à d'Autres Utilisateurs
 
-If you want to predefine a specific object list for other users, select it in the field **Set configuration for other users** via an object browser. Afterwards, the selection is confirmed with the **Define** **configuration** button.
+Si vous souhaitez prédéfinir une liste d'objets spécifique pour d'autres utilisateurs, sélectionnez-la dans le champ **Définir la configuration pour d'autres utilisateurs** via un navigateur d'objets. Ensuite, la sélection est confirmée avec le bouton **Définir la configuration**.
 
-[![Assign the Configuration to Other Users](../../assets/images/en/basics/object-list/configuration-of-the-list-view/6-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/6-cotlv.png)
 
-## Saving the Configuration
+[![Attribuer la Configuration à d'Autres Utilisateurs](../../assets/images/en/basics/object-list/configuration-of-the-list-view/6-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/6-cotlv.png)
 
-All changes of the configuration are accepted with the **Save** button.
+## Sauvegarde de la Configuration {/examples}
 
-!!! info "Browser Cache"
+Toutes les modifications de la configuration sont acceptées avec le bouton **Enregistrer**.
 
-    Should the list view not correspond to the configuration when activating the object list, it helps to empty the cache of the web browser.
+!!! info "Cache du Navigateur"
 
-## Authorization to Edit the List View
+    Si la vue de liste ne correspond pas à la configuration lors de l'activation de la liste d'objets, il est utile de vider le cache du navigateur web.
 
-With the [user rights management](../../efficient-documentation/rights-management/index.md) you can assign rights and determine which persons or person groups will be authorized to configure the list view and preset it for other users.
+## Autorisation de Modifier la Vue de Liste {/examples}
+
+Avec la [gestion des droits des utilisateurs](../../efficient-documentation/rights-management/index.md), vous pouvez attribuer des droits et déterminer quelles personnes ou groupes de personnes seront autorisés à configurer la vue de liste et la préconfigurer pour d'autres utilisateurs.

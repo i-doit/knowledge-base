@@ -1,101 +1,108 @@
 # CheckMK
 
-[![Logo von Check_MK](../assets/images/en/i-doit-pro-add-ons/checkmk/1-cmk.gif)](../assets/images/en/i-doit-pro-add-ons/checkmk/1-cmk.gif)
+[![Logo de Check_MK](../assets/images/en/i-doit-pro-add-ons/checkmk/1-cmk.gif)](../assets/images/en/i-doit-pro-add-ons/checkmk/1-cmk.gif){/*examples*/}
 
-Check_MK is a software for [Network Monitoring](../automation-and-integration/network-monitoring/index.md) which can be configured from i-doit.
+Check_MK est un logiciel de [Surveillance Réseau](../automation-and-integration/network-monitoring/index.md) qui peut être configuré depuis i-doit.
 
-The export supplies Check_MK with WATO configuration files. WATO is the configuration interface of Check_MK managing changes of the monitoring configuration and checking their validity. The configurations contain IP addresses or the DNS name of hosts and/or clusters and their members that are to be exported as well as associated host properties (tags) and linked contacts. Further monitoring specific configurations remain in Check_MK.
+L'exportation fournit à Check_MK des fichiers de configuration WATO. WATO est l'interface de configuration de Check_MK qui gère les modifications de la configuration de surveillance et vérifie leur validité. Les configurations contiennent les adresses IP ou le nom DNS des hôtes et/ou des clusters et de leurs membres à exporter, ainsi que les propriétés des hôtes associées (tags) et les contacts liés. D'autres configurations spécifiques à la surveillance restent dans Check_MK.
 
-The advantage of filling it with i-doit is that you don't have to take care of data maintenance twice and that the host properties, which determine the monitoring in Check_MK based on rules, can be generated automatically through CMD information, as for example the location of an object.
+L'avantage de le remplir avec i-doit est que vous n'avez pas à vous soucier de la maintenance des données deux fois et que les propriétés des hôtes, qui déterminent la surveillance dans Check_MK en fonction de règles, peuvent être générées automatiquement grâce aux informations CMD, comme par exemple l'emplacement d'un objet.
 
 !!! attention "Attention"
-    The Interface officially only supports Check_MK up to version 1.4, all newer versions will be supported by the [Check_MK 2 add-on](./checkmk2/index.md).
-    It is therefore unclear which functions/areas of the interface will work correctly with Check_MK versions > 1.4.
+    L'interface prend en charge officiellement Check_MK jusqu'à la version 1.4, toutes les versions plus récentes seront prises en charge par le [module complémentaire Check_MK 2](./checkmk2/index.md).
+    Il est donc incertain quelles fonctions/zones de l'interface fonctionneront correctement avec les versions de Check_MK > 1.4.
 
-## Basic Configuration
+## Configuration de base
 
-For Check_MK a configuration has to be saved at **Administration → Monitoring and interfaces → Monitoring → Export configuration** in i-doit. The local path defines an absolute or a relative path (for the installation of i-doit, for example) in the file system in which the configuration generated in i-doit is to be deposited. The link to the monitoring tool gives a basic link to generate links from i-doit to the monitoring instance.
+Pour Check_MK, une configuration doit être enregistrée dans **Administration → Surveillance et interfaces → Surveillance → Exporter la configuration** dans i-doit. Le chemin local définit un chemin absolu ou relatif (par exemple, pour l'installation de i-doit) dans le système de fichiers dans lequel la configuration générée dans i-doit doit être déposée. Le lien vers l'outil de surveillance donne un lien de base pour générer des liens à partir de i-doit vers l'instance de surveillance.
 
-Further configuration parameters are opened after selecting Check_MK as the type.
+D'autres paramètres de configuration sont ouverts après avoir sélectionné Check_MK comme type.
 
-**Export assigned contacts** allows the storing of contacts which were assigned to the corresponding [objects](../basics/structure-of-the-it-documentation.md) in this role in the exported configuration of the object. In this connection the [object title](../basics/unique-references.md) of the contacts is also exported
+**Exporter les contacts assignés** permet de stocker les contacts qui ont été assignés aux [objets](../basics/structure-of-the-it-documentation.md) correspondants à ce rôle dans la configuration exportée de l'objet. Dans ce contexte, le [titre de l'objet](../basics/unique-references.md) des contacts est également exporté.
 
-In the plain text field **Site** you can define a site to which the exported configuration is forwarded to. For this **Multisite (Distributed Monitoring)** has to be set to "**Yes**".
+Dans le champ de texte brut **Site**, vous pouvez définir un site vers lequel la configuration exportée est transmise. Pour cela, **Multisite (Surveillance distribuée)** doit être réglé sur "**Oui**". 
 
-When locking hosts or folders, the exported configuration cannot be edited anymore in Check_MK. This is useful to prevent Check_MK of making changes that would be overwritten again with the next export.
+{ /* examples */ }
 
-The sites that are selectable as **Master Site** are the ones that were added through multiple export configurations. This entry can be left empty if there is only one configuration.
+Lorsque vous verrouillez des hôtes ou des dossiers, la configuration exportée ne peut plus être modifiée dans Check_MK. Cela est utile pour empêcher Check_MK de faire des modifications qui seraient écrasées à nouveau lors de la prochaine exportation.
 
-[![Basic Configuration](../assets/images/en/i-doit-pro-add-ons/checkmk/2-cmk.png)](../assets/images/en/i-doit-pro-add-ons/checkmk/2-cmk.png)
+Les sites qui sont sélectionnables comme **Site principal** sont ceux qui ont été ajoutés via plusieurs configurations d'exportation. Cette entrée peut être laissée vide s'il n'y a qu'une seule configuration.
 
-## Categories
+[![Configuration de base](../assets/images/en/i-doit-pro-add-ons/checkmk/2-cmk.png)](../assets/images/en/i-doit-pro-add-ons/checkmk/2-cmk.png)
 
-Generally, the [category folder](../basics/structure-of-the-it-documentation.md) **Check_MK (Host)** needs to be assigned to the [object types](../basics/structure-of-the-it-documentation.md) that are going to be used via **[Edit data structure](../basics/assignment-of-categories-to-object-types.md)**.
+## Catégories
 
-An export configuration has to be chosen and a host name / host address have to be defined in the category **Check_MK (HOST)**. Additionally, the export of the IP address can be prevented, for example, if it was supplied by the DHCP and changes.
+En général, le [dossier de catégorie](../basics/structure-of-the-it-documentation.md) **Check_MK (Hôte)** doit être attribué aux [types d'objet](../basics/structure-of-the-it-documentation.md) qui vont être utilisés via **[Modifier la structure des données](../basics/assignment-of-categories-to-object-types.md)**.
 
-[![Categories](../assets/images/en/i-doit-pro-add-ons/checkmk/3-cmk.png)](../assets/images/en/i-doit-pro-add-ons/checkmk/3-cmk.png)
+Une configuration d'exportation doit être choisie et un nom d'hôte / une adresse d'hôte doit être défini dans la catégorie **Check_MK (HÔTE)**. De plus, l'exportation de l'adresse IP peut être empêchée, par exemple, si elle a été fournie par le DHCP et change.
 
-## Host Tags
 
-The **Host tags** are assigned and shown via the category of the same name. They are distinguished as follows:
+[![Catégories](../assets/images/en/i-doit-pro-add-ons/checkmk/3-cmk.png)](../assets/images/en/i-doit-pro-add-ons/checkmk/3-cmk.png)
 
--   **Host tags** - simple and manual assignment of tags (and thus statically)
--   **CMDB tags** - tags that are defined by an [attribute](../basics/structure-of-the-it-documentation.md) from the CMDB
--   **Dynamic tags** - host tags which are generated through rules
+## Balises d'hôte
 
-All kinds of host properties are configured via the **Extras** menu of **Check_MK**.
+Les **Balises d'hôte** sont attribuées et affichées via la catégorie du même nom. Elles sont distinguées comme suit :
+
+-   **Balises d'hôte** - attribution simple et manuelle de balises (et donc statiquement)
+-   **Balises CMDB** - balises définies par un [attribut](../basics/structure-of-the-it-documentation.md) de la CMDB
+-   **Balises dynamiques** - balises d'hôte générées par des règles
+
+Tous les types de propriétés d'hôte sont configurés via le menu **Extras** de **Check_MK**.
 
 [![Extras Check_MK](../assets/images/en/i-doit-pro-add-ons/checkmk/4-cmk.png)](../assets/images/en/i-doit-pro-add-ons/checkmk/4-cmk.png)
 
-The static host properties are managed manually. The default properties of Check_MK are already delivered in a predefined way.
+Les propriétés d'hôte statiques sont gérées manuellement. Les propriétés par défaut de Check_MK sont déjà livrées de manière prédéfinie.
 
-The CMDB properties make use of the contents from the CMDB. Only object types that are assigned to the category folder Check_MK are shown in the configuration. Single attributes can be selected here. You can set up a global definition which applies to all listed object types, which are not associated to any special configuration that ignores the global definition. The object title of the location of an object can be added as a tag to the host properties via the **Export generic location property** item.
+Les propriétés CMDB utilisent le contenu de la CMDB. Seuls les types d'objets assignés au dossier de catégorie Check_MK sont affichés dans la configuration. Des attributs individuels peuvent être sélectionnés ici. Vous pouvez configurer une définition globale qui s'applique à tous les types d'objets répertoriés, qui ne sont pas associés à une configuration spéciale qui ignore la définition globale. Le titre d'objet de l'emplacement d'un objet peut être ajouté en tant que balise aux propriétés d'hôte via l'élément **Exporter la propriété d'emplacement générique**.
 
-In the following example the **Operating system** attribute from the CDMB is converted to a host property.
+Dans l'exemple suivant, l'attribut **Système d'exploitation** du CDMB est converti en une propriété d'hôte.
 
-[![Operating system](../assets/images/en/i-doit-pro-add-ons/checkmk/5-cmk.png)](../assets/images/en/i-doit-pro-add-ons/checkmk/5-cmk.png)
+[![Système d'exploitation](../assets/images/en/i-doit-pro-add-ons/checkmk/5-cmk.png)](../assets/images/en/i-doit-pro-add-ons/checkmk/5-cmk.png)
 
-The example server is assigned to the operating system Debian GNU/Linux. This value is transferred to the corresponding host property when exporting the configuration.
+Le serveur d'exemple est assigné au système d'exploitation Debian GNU/Linux. Cette valeur est transférée à la propriété d'hôte correspondante lors de l'exportation de la configuration.
 
-[![example server ](../assets/images/en/i-doit-pro-add-ons/checkmk/6-cmk.png)](../assets/images/en/i-doit-pro-add-ons/checkmk/6-cmk.png)
+[![serveur d'exemple](../assets/images/en/i-doit-pro-add-ons/checkmk/6-cmk.png)](../assets/images/en/i-doit-pro-add-ons/checkmk/6-cmk.png)
 
-The dynamic properties function in a similar way with the exception of being based on rules. In the following example the type of an object is evaluated and passed on when exporting the configuration. If the object is a server, then it receives the host tags Local network and DMZ in this specific example.
+Les propriétés dynamiques fonctionnent de manière similaire à l'exception qu'elles sont basées sur des règles. Dans l'exemple suivant, le type d'un objet est évalué et transmis lors de l'exportation de la configuration. Si l'objet est un serveur, il reçoit les balises d'hôte Réseau local et DMZ dans cet exemple spécifique.
 
-[![specific example](../assets/images/en/i-doit-pro-add-ons/checkmk/7-cmk.png)](../assets/images/en/i-doit-pro-add-ons/checkmk/7-cmk.png)
+[![exemple spécifique](../assets/images/en/i-doit-pro-add-ons/checkmk/7-cmk.png)](../assets/images/en/i-doit-pro-add-ons/checkmk/7-cmk.png)
 
-## Host Properties Category
+## Catégorie des Propriétés de l'Hôte
 
-The dynamic host properties are displayed and the manual, static host properties are assigned in the **Host properties** category of an object.
+{/*examples*/}
 
-## Service Assignment Category
+Les propriétés d'hôte dynamiques sont affichées et les propriétés d'hôte statiques manuelles sont attribuées dans la catégorie **Propriétés d'hôte** d'un objet.
 
-!!! info "Analysis Module"
-    This category can only be used when the Analysis module is installed.
+## Catégorie d'attribution de service
 
-The **Service assignment** is used to assign installed software to service checks which are read out per [Livestatus](../automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md). This is applied to calculate the affected IT services using the Analysis module and the failures reported by the monitoring. In this category, a monitoring check is "married" to a software installed on the system, so to speak. This way, the IT services which are affected directly or indirectly by the technical failure can be detected in the Analysis module.
+!!! info "Module d'analyse"
+    Cette catégorie ne peut être utilisée que lorsque le module d'analyse est installé.
 
-## Export of the Configuration
+L'**attribution de service** est utilisée pour assigner des logiciels installés à des vérifications de service qui sont lues via [Livestatus](../automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md). Cela est appliqué pour calculer les services informatiques affectés en utilisant le module d'analyse et les pannes signalées par la surveillance. Dans cette catégorie, une vérification de surveillance est "mariée" à un logiciel installé sur le système, pour ainsi dire. De cette manière, les services informatiques affectés directement ou indirectement par la défaillance technique peuvent être détectés dans le module d'analyse.
 
-With **Extras → Check_MK→ Check_MK Export** you can manually initiate the export of the WATO configuration.
+## Export de la configuration
 
-Files are generated in the .mk format which can be transferred to the Check_MK instance. First, they are saved in the folder which was entered in the export configuration. For an easy transfer to the OMD site the data are also _compressed_ to .zip and as tarball files.
+Avec **Extras → Check_MK → Export Check_MK**, vous pouvez initier manuellement l'exportation de la configuration WATO.
 
-The definition of the export structure allows for transferring the exported objects in a folder structure to the Check_MK. Here you can choose whether the locations or the object types are to be saved as folders.
+Des fichiers sont générés au format .mk qui peuvent être transférés vers l'instance Check_MK. Tout d'abord, ils sont enregistrés dans le dossier qui a été saisi dans la configuration d'exportation. Pour un transfert facile vers le site OMD, les données sont également _compressées_ en fichiers .zip et en tarball.
 
-## Transfer Script
+La définition de la structure d'export permet de transférer les objets exportés dans une structure de dossiers vers Check_MK. Ici, vous pouvez choisir si les emplacements ou les types d'objets doivent être enregistrés sous forme de dossiers.
 
-A shellscript named **checkmk_transfer.sh** is located in the root path of the i-doit installation. This is configured with the corresponding accesses to the OMD site and then transfers the i-doit configuration to the WATO in an automated way.
+## Script de transfert
 
-For this purpose it uses the [i-doit Controller](../automation-and-integration/cli/index.md) and builds up a SSH connection to the Check_MK instance. It transfers the files to the OMD site and extracts them automatically. Afterwards, it notifies WATO that changes have been made.
+Un script shell nommé **checkmk_transfer.sh** est situé dans le chemin racine de l'installation d'i-doit. Il est configuré avec les accès correspondants au site OMD, puis transfère la configuration d'i-doit vers le WATO de manière automatisée.
 
-A public key authentication between the i-doit instance and the Check_MK OMD site is required for the transfer via SSH. A detailled guide for this is available in the i-doit installation directory under ** docs/checkmk/README.**
+À cette fin, il utilise le [Contrôleur i-doit](../automation-and-integration/cli/index.md) et établit une connexion SSH avec l'instance Check_MK. Il transfère les fichiers vers le site OMD et les extrait automatiquement. Ensuite, il notifie à WATO que des modifications ont été apportées.
 
-## Releases
+Une authentification par clé publique entre l'instance i-doit et le site OMD de Check_MK est requise pour le transfert via SSH. Un guide détaillé à ce sujet est disponible dans le répertoire d'installation d'i-doit sous **docs/checkmk/README**.
 
-| Version | Date | Changelog |
+## Versions
+
+| Version | Date | Journal des modifications |
 | --- | --- | --- |
-| 1.1 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
-| 1.0.2 |     | [Improvement] Compatibility with i-doit 1.16 |
-| 1.0.1 | 2019-10-14 | [Bug] List editing of Check_MK categories<br>[Bug] Create new category entries in the list editing category "Export Parameter (subcategory of Check_MK (Host))"<br>[Bug] Add more dynamic CMDB-tags<br>[Bug] Export of dynamic host tags with special characters<br> |
-| 1.0 | 2018-12-17 | [Improvement] Add-on is installable<br>[Improvement] Add-on is uninstallable<br>[Improvement] Add-on is activatable<br>[Improvement] Add-on is deactivatable<br>[Change] Add-onize Check_MK<br> |
+| 1.1 | 2022-09-05 | [Tâche] Compatibilité PHP 8.0  <br>[Tâche] Compatibilité de conception |
+| 1.0.2 |     | [Amélioration] Compatibilité avec i-doit 1.16 |
+| 1.0.1 | 2019-10-14 | [Bogue] Édition de liste des catégories Check_MK<br>[Bogue] Créer de nouvelles entrées de catégorie dans la catégorie d'édition de liste "Paramètre d'exportation (sous-catégorie de Check_MK (Hôte))"<br>[Bogue] Ajouter plus de balises CMDB dynamiques<br>[Bogue] Exporter des balises d'hôte dynamiques avec des caractères spéciaux<br> |
+| 1.0 | 2018-12-17 | [Amélioration] L'extension est installable<br>[Amélioration] L'extension est désinstallable<br>[Amélioration] L'extension est activable<br>[Amélioration] L'extension est désactivable<br>[Changement] Extension de Check_MK<br> |
+
+Please provide the Markdown content you would like me to translate into French.

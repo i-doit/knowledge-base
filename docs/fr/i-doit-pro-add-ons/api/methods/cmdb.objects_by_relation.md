@@ -1,72 +1,70 @@
 ---
-title: Namespace cmdb.objects_by_relation
+title: Espace de noms cmdb.objects_by_relation
 description: cmdb.objects_by_relation
 icon: material/api
 #status: updated
-lang: en
+lang: fr
 ---
 
-# Namespace cmdb.objects_by_relation
+# Espace de noms cmdb.objects_by_relation
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## cmdb.objects_by_relation.read
 
-Return objects by relation.
+Renvoie des objets par relation.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key               | JSON data type    | Required | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------- | ----------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **id**            | Integer           | Yes      | Object identifier                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| **relation_type** | String or Integer | No       | Constant of the relationship type or ID of the relationship type, for example **4**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **status**        | String            | No       | Filter by status of the objects e.g. Normal or Archived:<br><br>- **C__RECORD_STATUS__NORMAL**  <br>    **Status ID = 2**  <br>    **Designation = Normal**<br>- **C__RECORD_STATUS__ARCHIVED**  <br>    **Status ID = 3**  <br>    **Designation = Archived**<br>- **C__RECORD_STATUS__DELETED**  <br>    **Status-ID = 4**  <br>    **Description = Deleted**<br>- **C__RECORD_STATUS__TEMPLATE**  <br>    **Status-ID = 6**  <br>    **Description = Template**<br>- **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE**  <br>    **Status ID = 7**  <br>    **Description = Template for mass changes** |
-| **raw**           | Boolean           | No       | Displayed raw formatting, see example.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Clé               | Type de données JSON | Requis   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ----------------- | --------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **id**            | Entier               | Oui      | Identifiant de l'objet                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **relation_type** | Chaîne de caractères ou Entier | Non       | Constante du type de relation ou ID du type de relation, par exemple **4**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **status**        | Chaîne de caractères  | Non       | Filtrer par statut des objets, par exemple Normal ou Archivé:<br><br>- **C__RECORD_STATUS__NORMAL**  <br>    **ID de statut = 2**  <br>    **Désignation = Normal**<br>- **C__RECORD_STATUS__ARCHIVED**  <br>    **ID de statut = 3**  <br>    **Désignation = Archivé**<br>- **C__RECORD_STATUS__DELETED**  <br>    **ID de statut = 4**  <br>    **Description = Supprimé**<br>- **C__RECORD_STATUS__TEMPLATE**  <br>    **ID de statut = 6**  <br>    **Description = Modèle**<br>- **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE**  <br>    **ID de statut = 7**  <br>    **Description = Modèle pour les changements massifs** |
+| **raw**           | Booléen              | Non       | Affichage du format brut, voir exemple.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-Default relation types are:
+Les types de relations par défaut sont les suivants :
 
-| Title                      | ID  | Constant                                 |
-| -------------------------- | --- | ---------------------------------------- |
-| Software assignment        | 1   | C__RELATION_TYPE__SOFTWARE               |
-| Cluster service assignment | 2   | C__RELATION_TYPE__CLUSTER_SERVICE        |
-| Backup                     | 3   | C__RELATION_TYPE__BACKUP                 |
-| Contact assignment         | 4   | C__RELATION_TYPE__ADMIN                  |
-| Contact assignment         | 5   | C__RELATION_TYPE__USER                   |
-| Cluster memberships        | 6   | C__RELATION_TYPE__CLUSTER_MEMBERSHIPS    |
-| Power consumer             | 7   | C__RELATION_TYPE__POWER_CONSUMER         |
+| Titre                      | ID  | Constante                                |
+| -------------------------- | --- | ----------------------------------------- |
+| Attribution de logiciel     | 1   | C__RELATION_TYPE__SOFTWARE               |
+| Attribution de service de cluster | 2   | C__RELATION_TYPE__CLUSTER_SERVICE        |
+| Sauvegarde                 | 3   | C__RELATION_TYPE__BACKUP                 |
+| Attribution de contact      | 4   | C__RELATION_TYPE__ADMIN                  |
+| Attribution de contact      | 5   | C__RELATION_TYPE__USER                   |
+| Adhésions de cluster       | 6   | C__RELATION_TYPE__CLUSTER_MEMBERSHIPS    |
+| Consommateur d'énergie     | 7   | C__RELATION_TYPE__POWER_CONSUMER         |
 | Ports                      | 8   | C__RELATION_TYPE__NETWORK_PORT           |
-| Virtual machine            | 9   | C__RELATION_TYPE__VIRTUAL_MACHINE        |
-| Location                   | 10  | C__RELATION_TYPE__LOCATION               |
+| Machine virtuelle          | 9   | C__RELATION_TYPE__VIRTUAL_MACHINE        |
+| Emplacement                | 10  | C__RELATION_TYPE__LOCATION               |
 | Interface                  | 11  | C__RELATION_TYPE__UNIVERSAL_INTERFACE    |
-| Host address               | 12  | C__RELATION_TYPE__IP_ADDRESS             |
-| FC port                    | 13  | C__RELATION_TYPE__CONTROLLER_FC_PORT     |
-| Connectors                 | 14  | C__RELATION_TYPE__CONNECTORS             |
-| Logical devices (Client)   | 15  | C__RELATION_TYPE__LDEV_CLIENT            |
-| Group memberships          | 16  | C__RELATION_TYPE__GROUP_MEMBERSHIPS      |
-| Person group memberships   | 17  | C__RELATION_TYPE__PERSON_ASSIGNED_GROUPS |
-| Dependency                 | 18  | C__RELATION_TYPE__DEFAULT                |
-| Database access            | 19  | C__RELATION_TYPE__DATABASE_ACCESS        |
-| Database links             | 20  | C__RELATION_TYPE__DATABASE_LINK          |
-| Database gateway           | 21  | C__RELATION_TYPE__DATABASE_GATEWAY       |
-| Database instance          | 22  | C__RELATION_TYPE__DATABASE_INSTANCE      |
-| Service component          | 23  | C__RELATION_TYPE__IT_SERVICE_COMPONENT   |
-| Replication partner        | 24  | C__RELATION_TYPE__REPLICATION_PARTNER    |
-| SOA-Component              | 25  | C__RELATION_TYPE__SOA_COMPONENTS         |
+| Adresse hôte               | 12  | C__RELATION_TYPE__IP_ADDRESS             |
+| Port FC                    | 13  | C__RELATION_TYPE__CONTROLLER_FC_PORT     |
+| Connecteurs                | 14  | C__RELATION_TYPE__CONNECTORS             |
+| Appareils logiques (Client) | 15  | C__RELATION_TYPE__LDEV_CLIENT            |
+| Adhésions de groupe        | 16  | C__RELATION_TYPE__GROUP_MEMBERSHIPS      |
+| Adhésions de groupe de personnes | 17  | C__RELATION_TYPE__PERSON_ASSIGNED_GROUPS |
+| Dépendance                 | 18  | C__RELATION_TYPE__DEFAULT                |
+| Accès à la base de données | 19  | C__RELATION_TYPE__DATABASE_ACCESS        |
+| Liens de base de données   | 20  | C__RELATION_TYPE__DATABASE_LINK          |
+| Passerelle de base de données | 21  | C__RELATION_TYPE__DATABASE_GATEWAY       |
+| Instance de base de données | 22  | C__RELATION_TYPE__DATABASE_INSTANCE      |
+| Composant de service       | 23  | C__RELATION_TYPE__IT_SERVICE_COMPONENT   |
+| Partenaire de réplication  | 24  | C__RELATION_TYPE__REPLICATION_PARTNER    |
+| Composant SOA              | 25  | C__RELATION_TYPE__SOA_COMPONENTS         |
 
-!!! example "WIP"
+### Paramètres de réponse {/examples}
 
-    ### Response parameters
+Clé JSON **résultat** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Clé             | Type de données JSON | Description |
+| --------------- | -------------------- | ----------- |
+| **Placeholder** | Placeholder           | Placeholder |
+| **Placeholder** | Placeholder           | Placeholder |
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+### Exemple {/examples}
 
-### Example
-
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -83,7 +81,7 @@ Default relation types are:
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -162,7 +160,7 @@ Default relation types are:
     }
     ```
 
-=== "Request body with relation_type"
+=== "Corps de la requête avec relation_type"
 
     ```json
     {
@@ -180,7 +178,7 @@ Default relation types are:
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {

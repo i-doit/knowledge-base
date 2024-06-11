@@ -1,50 +1,50 @@
 # Suse Linux Enterprise Server (SLES)
 
-!!! alert "OUTDATED"
+!!! alert "OBSOLETE"
 
-In this article we explain in just a few steps which packages need to be installed and configured.
+Dans cet article, nous expliquons en quelques étapes quelles sont les packages qui doivent être installés et configurés.
 
-!!! failure "Guide is outdated and will be renewed"
-    For more information see <https://github.com/i-doit/knowledge-base/issues/423>
+!!! failure "Le guide est obsolète et sera renouvelé"
+    Pour plus d'informations, consultez <https://github.com/i-doit/knowledge-base/issues/423>
 
-## System Requirements
+## Configuration système
 
-The general [system requirements](../system-requirements.md) apply.
+Les [exigences système générales](../system-requirements.md) s'appliquent.
 
-This article refers to [**Suse Linux Enterprise Server 15**](https://www.suse.com/solutions/enterprise-linux/). In order to find out which version is used you can carry out the following command:
+Cet article concerne [**Suse Linux Enterprise Server 15**](https://www.suse.com/solutions/enterprise-linux/). Pour savoir quelle version est utilisée, vous pouvez exécuter la commande suivante :
 
 ```shell
 cat /etc/os-release
 ```
 
-As system architecture you should use a x86 in 64bit:
+En tant qu'architecture système, vous devriez utiliser un x86 en 64 bits :
 
 ```shell
 uname -m
 ```
 
-**x86_64** means 64bit, **i386** or **i686** only 32bit.
+**x86_64** signifie 64 bits, **i386** ou **i686** seulement 32 bits.
 
-## Installation of the Packages
+## Installation des packages
 
-The default package repositories of Suse Linux Enterprise Server (SLES) already supply the necessary packages to install:
+Les dépôts de packages par défaut de Suse Linux Enterprise Server (SLES) fournissent déjà les packages nécessaires à l'installation :
 
--   he **Apache** web server 2.4
--   the script language **PHP** 7.2 (as of SLES 15 SP 2: **PHP** 7.4)
--   the database management system **MariaDB** 10.2 (as of SLES 15 SP 2: **MariaDB** 10.4) and
--   the caching server **memcached**
+-   le serveur web **Apache** 2.4
+-   le langage de script **PHP** 7.2 (à partir de SLES 15 SP 2 : **PHP** 7.4)
+-   le système de gestion de base de données **MariaDB** 10.2 (à partir de SLES 15 SP 2 : **MariaDB** 10.4) et
+-   le serveur de mise en cache **memcached**
 
-First of all, you have to activate additional add-ons in **Yast**:
+Tout d'abord, vous devez activer des modules complémentaires supplémentaires dans **Yast** :
 
--   **Web and Scripting Module**
+-   **Module Web et Scripting**
 
-You can check with the following command if both add-ons are activated:
+Vous pouvez vérifier avec la commande suivante si les deux modules complémentaires sont activés :
 
 ```shell
 sudo zypper repos -E
 ```
 
-Afterwards the required packages are installed with zypper:
+Ensuite, les packages requis sont installés avec zypper :
 
 ```shell
 sudo zypper refresh
@@ -59,7 +59,7 @@ php7-openssl php7-pdo php7-pgsql php7-phar php7-posix php7-soap php7-sockets php
 php7-xsl php7-zip php7-zlib
 ```
 
-In order to start Apache Webserver and MariaDB during the boot process, the following commands are necessary:
+Pour démarrer Apache Webserver et MariaDB lors du processus de démarrage, les commandes suivantes sont nécessaires :
 
 ```shell
 sudo systemctl enable apache2.service
@@ -67,7 +67,7 @@ sudo systemctl enable mysql.service
 sudo systemctl enable memcached.service
 ```
 
-Then both services are started:
+Ensuite, les deux services sont démarrés :
 
 ```shell
 sudo systemctl start apache2.service
@@ -75,7 +75,7 @@ sudo systemctl start mysql.service
 sudo systemctl start memcached.service
 ```
 
-The HTTP default port 80 is authorized via the firewall. The firewall has to be restarted after the adjustments have been carried out:
+Le port par défaut HTTP 80 est autorisé via le pare-feu. Le pare-feu doit être redémarré après que les ajustements ont été effectués :
 
 ```shell
 sudo firewall-cmd -zone=public -add-port=80/tcp --permanent
@@ -83,17 +83,17 @@ sudo firewall-cmd -zone=public -add-port=80/tcp --permanent
 
 ## Configuration
 
-The installed packages for Apache web server, PHP and MariaDB already supply configuration files. It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
+Les packages installés pour le serveur web Apache, PHP et MariaDB fournissent déjà des fichiers de configuration. Il est recommandé de sauvegarder les paramètres modifiés dans des fichiers séparés au lieu d'ajuster les fichiers de configuration déjà existants. Sinon, toutes les différences par rapport aux fichiers existants seraient signalées voire écrasées lors de chaque mise à jour du package. Les paramètres de la configuration par défaut sont complétés ou écrasés par des paramètres définis par l'utilisateur.
 
 ### PHP
 
-First of all, a new file is created and filled with the required settings:
+Tout d'abord, un nouveau fichier est créé et rempli avec les paramètres requis :
 
 ```shell
 sudo nano /etc/php7/conf.d/i-doit.ini
 ```
 
-This file has the following contents:
+Ce fichier contient les éléments suivants :
 
 ```shell
 allow_url_fopen = Yes
@@ -121,25 +121,25 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysql/mysql.sock
 ```
 
-The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](system-settings.md) of i-doit.
+La valeur (en secondes) de `session.gc_maxlifetime` doit être la même ou supérieure à la `Durée de la session` dans les [paramètres du système](system-settings.md) de i-doit.
 
-The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
+Le paramètre `date.timezone` doit être ajusté au fuseau horaire local (voir [Liste des fuseaux horaires supportés](http://php.net/manual/en/timezones.php)).
 
-Afterwards, the Apache web server is restarted:
+Ensuite, le serveur web Apache est redémarré :
 
 ```shell
 sudo systemctl restart apache2.service
 ```
 
-### Apache Webserver
+### Serveur Web Apache
 
-A new VHost configuration is created from the existing template **vhost.template**:
+Une nouvelle configuration VHost est créée à partir du modèle existant **vhost.template** :
 
 ```shell
 sudo nano /etc/apache2/vhosts.d/i-doit.conf
 ```
 
-In this file the VHost configuration is modified and saved:
+Dans ce fichier, la configuration VHost est modifiée et enregistrée :
 
 ```shell
 <VirtualHost *:80>
@@ -157,9 +157,9 @@ In this file the VHost configuration is modified and saved:
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.
+i-doit inclut des paramètres Apache différents dans des fichiers portant le nom **.htaccess**. Le paramètre **AllowOverride All** est requis pour que ces paramètres soient pris en compte.
 
-With the next step you activate the necessary Apache modules **php7**, **rewrite** and **mod_access_compat** and the Apache web server is restarted:
+À l'étape suivante, vous activez les modules Apache nécessaires **php7**, **rewrite** et **mod_access_compat** et le serveur web Apache est redémarré :
 
 ```shell
 sudo a2enmod php7
@@ -170,19 +170,19 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The **root** user should receive a secure password:
+Seules quelques étapes sont nécessaires pour garantir que MariaDB offre de bonnes performances et un fonctionnement sûr. Cependant, vous devez porter une attention méticuleuse aux détails et effectuer ces étapes avec précision. Cela commence par une installation sécurisée et vous devriez suivre les recommandations en conséquence. L'utilisateur **root** devrait recevoir un mot de passe sécurisé :
 
 ```shell
 mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
+Activez le shell MariaDB afin que i-doit soit autorisé à appliquer l'utilisateur **root** lors de la configuration :
 
 ```shell
 sudo mysql -uroot
 ```
 
-The following SQL statements are now carried out in the MariaDB shell:
+Les déclarations SQL suivantes sont maintenant exécutées dans le shell MariaDB :
 
 ```shell
 UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
@@ -190,7 +190,7 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-Afterwards, MariaDB is stopped. Now it is important to move files which are not required, otherwise the result would be a significant loss of performance:
+Ensuite, MariaDB est arrêté. Il est maintenant important de déplacer les fichiers qui ne sont pas nécessaires, sinon le résultat serait une perte significative de performances :
 
 ```shell
 mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
@@ -198,13 +198,13 @@ sudo systemctl stop mysql.service
 sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
 
-A new file is created for the deviating configuration settings:
+Un nouveau fichier est créé pour les paramètres de configuration déviants :
 
 ```shell
 sudo nano /etc/my.cnf.d/99-i-doit.cnf
 ```
 
-This file contains the new configuration settings. For an optimal performance you should adapt these settings to the (virtual) hardware:
+Ce fichier contient les nouveaux paramètres de configuration. Pour des performances optimales, vous devriez adapter ces paramètres au matériel (virtuel) :
 
 ```shell
 [mysqld]
@@ -251,14 +251,15 @@ innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
 
-Finally, MariaDB is started with:
+Enfin, MariaDB est démarré avec :
 
 ```shell
 sudo systemctl start mysql.service
 ```
 
-## Next Step
+## Étape suivante
 
-Now the operating system is prepared and i-doit can be installed.
+Maintenant que le système d'exploitation est prêt, i-doit peut être installé.
 
-Proceed with [**Setup** …](setup.md)
+Poursuivez avec [**Configuration** …](setup.md)
+```

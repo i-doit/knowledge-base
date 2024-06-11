@@ -1,53 +1,53 @@
-# User interface
+# Interface utilisateur {/ * exemples * /}
 
-Here you find interface related configurations. Also from Add-ons.
+Ici, vous trouverez les configurations liées à l'interface. Également des modules complémentaires.
 
-## Categories
+## Catégories
 
-| Option | Value |
+| Option | Valeur |
 | - | - |
-| Always directly open in Cabling-View | Yes or No |
+| Ouvrir directement dans la vue de câblage | Oui ou Non |
 
-## Main menu
+## Menu principal
 
-| Option | Value |
+| Option | Valeur |
 | - | - |
-| Show "my-doit" in the main menu | Yes or No |
-| Show object type group as dropdown | Yes or No |
+| Afficher "my-doit" dans le menu principal | Oui ou Non |
+| Afficher le groupe de type d'objet comme menu déroulant | Oui ou Non |
 
-## Object lists
+## Listes d'objets
 
-| Option | Value |
+| Option | Valeur |
 | - | - |
-| Save last used list-filters | 300 Value in seconds (0 = do not save the filter) |
-| Entries per page in object lists | 50 |
+| Enregistrer les derniers filtres utilisés | 300 Valeur en secondes (0 = ne pas enregistrer le filtre) |
+| Entrées par page dans les listes d'objets | 50 |
 
-## Object navigation
+## Navigation d'objets
 
-| Option | Value |
+| Option | Valeur |
 | - | - |
-| Default treeview | [Object view](../../../../basics/web-gui.md#object-view)<br>[Location view](../../../../basics/web-gui.md#location-view) |
-| Treeview type | [Physical location or Logical location or Combined view](../../../../basics/web-gui.md#location-view) |
-| Hide empty object types | Yes or No |
-| Hide empty categories | Yes or No |
+| Vue arborescente par défaut | [Vue objet](../../../../basics/web-gui.md#object-view)<br>[Vue emplacement](../../../../basics/web-gui.md#location-view) |
+| Type de vue arborescente | [Emplacement physique ou Emplacement logique ou Vue combinée](../../../../basics/web-gui.md#location-view) |
+| Masquer les types d'objets vides | Oui ou Non |
+| Masquer les catégories vides | Oui ou Non |
 
-## Quickinfo (Link mouseover)
+## Informations rapides (survol de la souris)
 
-| Option | Value |
+| Option | Valeur |
 | - | - |
-| Active | Yes or No |
-| Delay | 0.5 Value in seconds |
+| Actif | Oui ou Non |
+| Délai | 0.5 Valeur en secondes |
 
-## Spacing
+## Espacement
 
-| Option | Value |
+| Option | Valeur |
 | - | - |
-| Line spacing | [Small or Medium or Large](../../../../basics/web-gui.md#category-line-spacing) |
-| Spacing in menu trees | [Small or Medium or Large](../../../../basics/web-gui.md#spacing-in-menu-trees)  |
-| Display spacers | [Yes or No](../../../../basics/web-gui.md#display-spacers) |
+| Espacement des lignes | [Petit ou Moyen ou Grand](../../../../basics/web-gui.md#category-line-spacing) |
+| Espacement dans les arbres de menu | [Petit ou Moyen ou Grand](../../../../basics/web-gui.md#spacing-in-menu-trees)  |
+| Afficher les espaces | [Oui ou Non](../../../../basics/web-gui.md#display-spacers) |
 
-## Workflows (from Add-on)
+## Workflows (de l'extension)
 
-| Option | Value |
+| Option | Valeur |
 | - | - |
-| Entrylimit for filter view | Value |
+| Limite d'entrée pour la vue du filtre | Valeur |

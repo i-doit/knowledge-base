@@ -1,108 +1,109 @@
-# Update i-doit
+# Mettre à jour i-doit
 
-When working with i-doit, you should always use the newest version. Minor releases always contain numerous bug fixes, while major releases add new features and improve already existing functionalities. Minor updates are released approximately every four weeks and major updates every six months. The update can be [performed via the web interface of i-doit](./update.md), as long as an internet connection is available (and where applicable, via HTTP-proxy). Alternatively the update can be [prepared via console](./update.md) and then be continued in the web interface.
+Lorsque vous travaillez avec i-doit, vous devriez toujours utiliser la version la plus récente. Les versions mineures contiennent toujours de nombreuses corrections de bugs, tandis que les versions majeures ajoutent de nouvelles fonctionnalités et améliorent les fonctionnalités déjà existantes. Les mises à jour mineures sont publiées environ toutes les quatre semaines et les mises à jour majeures tous les six mois. La mise à jour peut être [effectuée via l'interface web d'i-doit](./update.md), tant qu'une connexion internet est disponible (et le cas échéant, via un proxy HTTP). Alternativement, la mise à jour peut être [préparée via la console](./update.md) puis être poursuivie dans l'interface web.
 
-=== "Skip releases version >=20"
-    !!! attention "Skip releases >= version 20"
-        If you want to jump directly to a newer version e.g. 26, you can download the latest update package from the [customer portal](../system-administration/customer-portal.md) and unpack it in the i-doit pro folder on the i-doit host. You can find the necessary steps [here](update.md#update-prepared-via-the-console).
-        From version **25** with [Hotfix](../system-administration/hotfixes/hotfix-archive/index.md), version 27 is also offered for download during the update check.
+=== "Ignorer les versions >=20"
+    !!! attention "Ignorer les versions >= 20"
+        Si vous souhaitez passer directement à une version plus récente, par exemple 26, vous pouvez télécharger le dernier package de mise à jour depuis le [portail client](../system-administration/customer-portal.md) et le décompresser dans le dossier i-doit pro sur l'hôte i-doit. Vous pouvez trouver les étapes nécessaires [ici](update.md#update-prepared-via-the-console).
+        À partir de la version **25** avec le [correctif](../system-administration/hotfixes/hotfix-archive/index.md), la version 27 est également proposée au téléchargement lors de la vérification de la mise à jour.
 
-=== "Skip releases version <= 1.19"
-    !!! attention "Skip releases version <= 1.19"
-        If version 1.13.1 is currently installed and version 1.13.3 is already available, only the next higher version - i.e. 1.13.2 - will still be displayed. However, minor releases can generally be skipped. Nevertheless, all minor releases will be installed one by one until the latest version is reached. If you want to jump directly to version 1.13.3, you can download the latest package from the customer portal and unpack it on the i-doit host. You can find the necessary steps here in the lower part of the article.
+=== "Ignorer les versions de publication <= 1.19"
+    !!! attention "Ignorer les versions de publication <= 1.19"
+        Si la version 1.13.1 est actuellement installée et que la version 1.13.3 est déjà disponible, seule la version suivante la plus élevée - c'est-à-dire 1.13.2 - sera affichée. Cependant, les versions mineures peuvent généralement être ignorées. Néanmoins, toutes les versions mineures seront installées une par une jusqu'à ce que la dernière version soit atteinte. Si vous souhaitez passer directement à la version 1.13.3, vous pouvez télécharger le dernier package depuis le portail client et le décompresser sur l'hôte i-doit. Vous trouverez les étapes nécessaires ici dans la partie inférieure de l'article.
 
-!!! warning "Backup"
-    Before updating it is essential to create a [backup](./backup-and-recovery/index.md).
+!!! warning "Sauvegarde"
+    Avant de procéder à la mise à jour, il est essentiel de créer une [sauvegarde](./backup-and-recovery/index.md).
 
-!!! attention "Writing permissions"
-    If an error message appears while downloading and extracting, it is often the case that the Apache Webserver has no writing permissions for the path in which i-doit is installed. See [here](#update-prepared-via-the-console)
+!!! attention "Permissions d'écriture"
+    Si un message d'erreur apparaît lors du téléchargement et de l'extraction, il arrive souvent que le serveur Web Apache n'ait pas les permissions d'écriture pour le chemin dans lequel i-doit est installé. Voir [ici](#update-prepared-via-the-console)
 
-## Update via the web interface
+## Mise à jour via l'interface web
 
-The update can be accessed either through **Administration → [Tenant-Name] management** by clicking on the **i-doit update** button near the headline or via the quicklaunch widget in the dashboard or through the URL <http://i-doit-host/i-doit/?load=update>.
+La mise à jour peut être effectuée soit via **Administration → gestion du [Nom-du-locataire]** en cliquant sur le bouton **mise à jour i-doit** près du titre ou via le widget de lancement rapide dans le tableau de bord ou via l'URL <http://i-doit-host/i-doit/?load=update>.
 
-[![Update via Dashboard](../assets/images/en/maintenance-and-operation/update/1-update.png)](../assets/images/en/maintenance-and-operation/update/1-update.png)
 
-Upon launching an interface appears in which the current status of the system is examined. We can see in our screenshot that the PHP-extension mcrypt has not been found. If such a status message is displayed, it is very important to adjust the system appropriately. For this you should look at our [system requirements](../installation/system-requirements.md) and [tenant mangement](../system-administration/administration/tenant-management/index.md). After adjusting the environment, everything should be checked with a green mark or marked with an "OK".
+[![Mise à jour via le tableau de bord](../assets/images/en/maintenance-and-operation/update/1-update.png)](../assets/images/en/maintenance-and-operation/update/1-update.png)
 
-### Step 1: i-doit update and compatibility check
+Lors du lancement, une interface apparaît dans laquelle l'état actuel du système est examiné. Nous pouvons voir dans notre capture d'écran que l'extension PHP mcrypt n'a pas été trouvée. Si un tel message d'état est affiché, il est très important d'ajuster le système de manière appropriée. Pour cela, vous devriez consulter nos [exigences système](../installation/system-requirements.md) et [gestion des locataires](../system-administration/administration/tenant-management/index.md). Après avoir ajusté l'environnement, tout devrait être vérifié avec une marque verte ou marqué d'un "OK".
 
-[![i-doit update](../assets/images/en/maintenance-and-operation/update/2-update.png)](../assets/images/en/maintenance-and-operation/update/2-update.png)
+### Étape 1 : Mise à jour d'i-doit et vérification de compatibilité
 
-### Step 2: Available updates
+[![Mise à jour d'i-doit](../assets/images/en/maintenance-and-operation/update/2-update.png)](../assets/images/en/maintenance-and-operation/update/2-update.png)
 
-In the this step, all available update packages are displayed. In our example i-doit version 25 is installed and can therefore only be updated to the same version.
+### Étape 2 : Mises à jour disponibles
 
-[![Available updates](../assets/images/en/maintenance-and-operation/update/3-update.png)](../assets/images/en/maintenance-and-operation/update/3-update.png)
+À cette étape, tous les packages de mise à jour disponibles sont affichés. Dans notre exemple, la version 25 d'i-doit est installée et ne peut donc être mise à jour qu'à la même version.
 
-By clicking **Check for a new version** you can check whether a newer package is available. For this purpose, you require an internet connection.<br>
-If a new version is available the update package can be downloaded and extracted with a click on **Download**.<br>
-If the you have a URL for the update package, you can insert the Link and click on **Download and extract**.
+[![Mises à jour disponibles](../assets/images/en/maintenance-and-operation/update/3-update.png)](../assets/images/en/maintenance-and-operation/update/3-update.png)
 
-[![Available updates](../assets/images/en/maintenance-and-operation/update/4-update.png)](../assets/images/en/maintenance-and-operation/update/4-update.png)
+En cliquant sur **Vérifier une nouvelle version**, vous pouvez vérifier si un package plus récent est disponible. Pour cela, vous avez besoin d'une connexion internet.<br>
+Si une nouvelle version est disponible, le package de mise à jour peut être téléchargé et extrait en cliquant sur **Télécharger**.<br>
+Si vous avez une URL pour le package de mise à jour, vous pouvez insérer le lien et cliquer sur **Télécharger et extraire**.
 
-Now a new version is available for updating. The update can be started by clicking **Next**. To see all notable changes for this package you can find a list under **see changelog**.
+[![Mises à jour disponibles](../assets/images/en/maintenance-and-operation/update/4-update.png)](../assets/images/en/maintenance-and-operation/update/4-update.png)
 
-[![Available updates](../assets/images/en/maintenance-and-operation/update/5-update.png)](../assets/images/en/maintenance-and-operation/update/5-update.png)
+Maintenant, une nouvelle version est disponible pour la mise à jour. La mise à jour peut être lancée en cliquant sur **Suivant**. Pour voir tous les changements notables pour ce package, vous pouvez trouver une liste sous **voir le journal des modifications**.
 
-### Step 3: Database(s)
+[![Mises à jour disponibles](../assets/images/en/maintenance-and-operation/update/5-update.png)](../assets/images/en/maintenance-and-operation/update/5-update.png)
 
-Usually, the boxes are checked like shown in the screenshot, so that both the system database and all associated mandator databases are selected for the update by default. If there is no reason not to update particular mandator databases, all selections should be kept.
+### Étape 3: Base de données
 
-[![Databases](../assets/images/en/maintenance-and-operation/update/6-update.png)](../assets/images/en/maintenance-and-operation/update/6-update.png)
+Généralement, les cases sont cochées comme indiqué dans la capture d'écran, de sorte que la base de données système et toutes les bases de données mandataires associées sont sélectionnées pour la mise à jour par défaut. S'il n'y a aucune raison de ne pas mettre à jour des bases de données mandataires particulières, toutes les sélections doivent être conservées.
 
-### Step 4: File-Update
+[![Bases de données](../assets/images/en/maintenance-and-operation/update/6-update.png)](../assets/images/en/maintenance-and-operation/update/6-update.png)
 
-Now at the very latest, a [backup](./backup-and-recovery/index.md) should be performed. As soon as there is a backup you can start the update by clicking the button **Yes, I did a backup! - Start the update**.
+### Étape 4: Mise à jour des fichiers
 
-[![File update](../assets/images/en/maintenance-and-operation/update/7-update.png)](../assets/images/en/maintenance-and-operation/update/7-update.png)
+Maintenant, au plus tard, une [sauvegarde](./backup-and-recovery/index.md) doit être effectuée. Dès qu'une sauvegarde est effectuée, vous pouvez démarrer la mise à jour en cliquant sur le bouton **Oui, j'ai fait une sauvegarde ! - Démarrer la mise à jour**.
 
-### Step 5: Overview (Log)
+[![Mise à jour des fichiers](../assets/images/en/maintenance-and-operation/update/7-update.png)](../assets/images/en/maintenance-and-operation/update/7-update.png)
 
-Each change may have effects on files and databases. If something goes wrong (typically because of missing writing permissions) a red "ERROR" appears. If a green "DONE" is displayed for each change, you can go on to the next step by clicking **Next**.
+### Étape 5: Aperçu (Journal)
 
-[![Overview](../assets/images/en/maintenance-and-operation/update/8-update.png)](../assets/images/en/maintenance-and-operation/update/8-update.png)
+Chaque changement peut avoir des effets sur les fichiers et les bases de données. Si quelque chose ne va pas (typiquement en raison de permissions d'écriture manquantes), une erreur rouge "ERREUR" apparaît. Si un "TERMINÉ" vert est affiché pour chaque changement, vous pouvez passer à l'étape suivante en cliquant sur **Suivant**.
 
-### Step 6: Migration
+[![Aperçu](../assets/images/en/maintenance-and-operation/update/8-update.png)](../assets/images/en/maintenance-and-operation/update/8-update.png)
 
-Depending on the update, existing data will be changed. The "Migration" step executes these changes and reports whether these changes were successful or not.
+### Étape 6: Migration
+
+Selon la mise à jour, les données existantes seront modifiées. L'étape de "Migration" exécute ces changements et indique si ces changements ont été effectués avec succès ou non.
 
 [![Migration](../assets/images/en/maintenance-and-operation/update/9-update.png)](../assets/images/en/maintenance-and-operation/update/9-update.png)
 
-### Step 7: Attribute migration
+### Étape 7: Migration des attributs
 
-Following the so called "Property Migration", everything should be marked green again.
+Suite à la soi-disant "Migration des propriétés", tout devrait être à nouveau marqué en vert.
 
-[![Attribute migration](../assets/images/en/maintenance-and-operation/update/10-update.png)](../assets/images/en/maintenance-and-operation/update/10-update.png)
+[![Migration des attributs](../assets/images/en/maintenance-and-operation/update/10-update.png)](../assets/images/en/maintenance-and-operation/update/10-update.png)
 
-### Step 8: Completion
+### Étape 8: Achèvement
 
-Now the update is completed. More detailed information about the update can be found in the linked log-file. You can return to i-doit by clicking **Run i-doit v.[VERSION]**. It is recommended to clear both the browser and the i-doit-cache under **Administration → [Tenant-Name] management → Repair and clean up**.
+Maintenant, la mise à jour est terminée. Des informations plus détaillées sur la mise à jour peuvent être trouvées dans le fichier journal lié. Vous pouvez revenir à i-doit en cliquant sur **Exécuter i-doit v.[VERSION]**. Il est recommandé de vider à la fois le cache du navigateur et le cache i-doit sous **Administration → Gestion du [Nom-du-locataire] → Réparation et nettoyage**.
 
-[![Completion](../assets/images/en/maintenance-and-operation/update/11-update.png)](../assets/images/en/maintenance-and-operation/update/11-update.png)
+[![Complétion](../assets/images/en/maintenance-and-operation/update/11-update.png)](../assets/images/en/maintenance-and-operation/update/11-update.png)
 
-## Update prepared via the console
+## Mise à jour préparée via la console {/examples}
 
-The update can be prepared, but not executed via the console. For the preparation, the latest update package has to be downloaded from the i-doit [customer portal](../system-administration/customer-portal.md).
+La mise à jour peut être préparée, mais pas exécutée via la console. Pour la préparation, le dernier package de mise à jour doit être téléchargé depuis le [portail client i-doit](../system-administration/customer-portal.md).
 
-The update package can be stored on the server (for example, via [WinSCP](https://winscp.net/eng/index.php)). Move the package to the main folder of i-doit afterwards, if you didn't already put it there. This can be carried out by using the following command:
+Le package de mise à jour peut être stocké sur le serveur (par exemple, via [WinSCP](https://winscp.net/eng/index.php)). Déplacez le package dans le dossier principal de i-doit par la suite, si vous ne l'avez pas déjà mis là. Cela peut être effectué en utilisant la commande suivante :
 
 ```shell
 mv idoit-26-update.zip /var/www/html/i-doit/
 ```
 
-Then the package needs to be extracted and all existing files need to be overwritten.
+Ensuite, le package doit être extrait et tous les fichiers existants doivent être écrasés.
 
 ```shell
 cd /var/www/html/i-doit
 unzip idoit-26-update.zip
 ```
 
-Now the file permissions are being adjusted in order to give the Webserver both reading access as well as writing access to i-doit.
+Maintenant, les autorisations des fichiers sont ajustées afin de donner au serveur Web à la fois un accès en lecture et un accès en écriture à i-doit.
 
 !!! info ""
-    The user:group combination **www-data:www-data** used here refers to **Debian GNU/Linux or Ubuntu Linux**.<br>
-    If another operating system is used, the used user:group combination must be adapted.
+    La combinaison utilisateur:groupe **www-data:www-data** utilisée ici fait référence à **Debian GNU/Linux ou Ubuntu Linux**.<br>
+    Si un autre système d'exploitation est utilisé, la combinaison utilisateur:groupe utilisée doit être adaptée.
 
 ```shell
 cd /var/www/html/i-doit/
@@ -111,4 +112,5 @@ sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
 ```
 
-Now you can have a look at our instructions for the [update via the web interface](./update.md) and skip the steps regarding the download of the newest package.
+Maintenant, vous pouvez consulter nos instructions pour la [mise à jour via l'interface web](./update.md) et sauter les étapes concernant le téléchargement du dernier package.
+```

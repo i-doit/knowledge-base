@@ -1,34 +1,34 @@
-**Contents**
+**Contenu**
 
-*   1 [Preconfigured Profiles](./profiles-in-the-cmdb-explorer.md)
-*   2 [Creating and Editing a Profile](./profiles-in-the-cmdb-explorer.md)
+*   1 [Profils préconfigurés](./profiles-in-the-cmdb-explorer.md)
+*   2 [Création et modification d'un profil](./profiles-in-the-cmdb-explorer.md)
 
-In order to customize the view, profiles can be created in the [CMDB explorer](./index.md), which offer the best possible overview of the dependencies in your [IT documentation](../../glossary.md).
+Pour personnaliser la vue, des profils peuvent être créés dans l'[explorateur CMDB](./index.md), offrant ainsi un aperçu optimal des dépendances dans votre [documentation informatique](../../glossary.md).
 
-Preconfigured Profiles
+Profils préconfigurés
 ----------------------
 
-_i-doit_ provides preconfigured profiles. These cannot directly be edited, but copies can be made and edited.
+_i-doit_ propose des profils préconfigurés. Ceux-ci ne peuvent pas être édités directement, mais des copies peuvent être créées et modifiées.
 
-*   **Standard profile**: All relationships are visualized. No filter is applied. Various pieces of information are displayed for each object.
-*   **Micro profile**: The representation is reduced to object type icons.
-*   **Network profil**e: This profile is used for the diagram view and is therefore not available for the tree view.
+*   **Profil standard** : Toutes les relations sont visualisées. Aucun filtre n'est appliqué. Diverses informations sont affichées pour chaque objet.
+*   **Micro profil** : La représentation est réduite aux icônes de type d'objet.
+*   **Profil réseau** : Ce profil est utilisé pour la vue en diagramme et n'est donc pas disponible pour la vue en arborescence.
 
-Creating and Editing a Profile
+Création et modification d'un profil
 ------------------------------
 
-Existing profiles can be edited or copied and new profiles can be added via the pencil icon next to the selection field of the active profile in the [toolbar](./index.md). The button next to each profile lets you set that profile as default, so its settings are immediately used when opening an [object](../../glossary.md) in the CMDB explorer. A green dot indicates that the profile is the activated default profile.
+Les profils existants peuvent être modifiés ou copiés, et de nouveaux profils peuvent être ajoutés via l'icône de crayon à côté du champ de sélection du profil actif dans la [barre d'outils](./index.md). Le bouton à côté de chaque profil vous permet de définir ce profil comme par défaut, de sorte que ses paramètres soient immédiatement utilisés lors de l'ouverture d'un [objet](../../glossary.md) dans l'explorateur CMDB. Un point vert indique que le profil est le profil par défaut activé.
 
-General settings are set in the upper area of the edit view. This view is opened via a click on the pencil icon in the line of the desired profile. Next to the title of the profile you can determine whether the representation of the path to the root object will be activated, whether the tooltip is to be displayed and what orientation will be used. A preview of the configuration is shown on the right side of the general settings.
+Les paramètres généraux sont définis dans la partie supérieure de la vue d'édition. Cette vue s'ouvre en cliquant sur l'icône du crayon dans la ligne du profil souhaité. À côté du titre du profil, vous pouvez déterminer si la représentation du chemin vers l'objet racine sera activée, si l'info-bulle doit être affichée et quelle orientation sera utilisée. Un aperçu de la configuration est affiché sur le côté droit des paramètres généraux.
 
-[![Manage Profiles](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/1-pitce.png)](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/1-pitce.png)
+[![Gérer les profils](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/1-pitce.png)](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/1-pitce.png)
 
-The graphical representation of the tiles is defined in the **Visual options** tab. The highlight color and the width are set there. The lines to be used are activated by ticking the checkboxes. Each object can have up to eight lines. The configuration is identical in each line. The content of the line is selected in the drop-down menu. Here some predefined attributes are available for selection. The background can either match the object color so that it is independent from the [object type](../../glossary.md) or you can use a custom-defined color. You can determine the font color as well as the character formatting. The formatting options are defined via the buttons.
+La représentation graphique des tuiles est définie dans l'onglet **Options visuelles**. La couleur de mise en évidence et la largeur sont définies là-bas. Les lignes à utiliser sont activées en cochant les cases à cocher. Chaque objet peut avoir jusqu'à huit lignes. La configuration est identique dans chaque ligne. Le contenu de la ligne est sélectionné dans le menu déroulant. Ici, quelques attributs prédéfinis sont disponibles pour la sélection. L'arrière-plan peut correspondre à la couleur de l'objet afin qu'il soit indépendant du [type d'objet](../../glossary.md) ou vous pouvez utiliser une couleur définie personnalisée. Vous pouvez déterminer la couleur de la police ainsi que la mise en forme des caractères. Les options de mise en forme sont définies via les boutons.
 
-[![Visual options](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/2-pitce.png)](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/2-pitce.png)
+[![Options visuelles](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/2-pitce.png)](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/2-pitce.png)
 
-The **Default values** tab allows you to set values which can also be adjusted during application. Here you can set the direction and the standard service filter as well as define the object type filter. The object type filter limits the view to the selected object types.
+L'onglet **Valeurs par défaut** vous permet de définir des valeurs qui peuvent également être ajustées lors de l'application. Ici, vous pouvez définir la direction et le filtre de service standard ainsi que définir le filtre de type d'objet. Le filtre de type d'objet limite la vue aux types d'objets sélectionnés.
 
-[![Default values](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/3-pitce.png)](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/3-pitce.png)
+[![Valeurs par défaut](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/3-pitce.png)](../../assets/images/en/evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer/3-pitce.png)
 
-The object information, which is displayed in the information area upon activating an object, is selected in the **Object information** tab. The selection is done via the [category](../../glossary.md) in the drop down menu and then using the plus icon next to the desired [attribute](../../glossary.md) you want to display. Selected attributes can be removed again using the minus icon in the **Selected attributes** column.
+Les informations sur l'objet, qui sont affichées dans la zone d'informations lors de l'activation d'un objet, sont sélectionnées dans l'onglet **Informations sur l'objet**. La sélection se fait via la [catégorie](../../glossary.md) dans le menu déroulant, puis en utilisant l'icône plus à côté de l' [attribut](../../glossary.md) souhaité que vous souhaitez afficher. Les attributs sélectionnés peuvent être supprimés en utilisant à nouveau l'icône moins dans la colonne **Attributs sélectionnés**.

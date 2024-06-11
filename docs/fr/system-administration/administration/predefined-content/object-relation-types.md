@@ -1,5 +1,5 @@
-# Object relation types
+# Types de relations d'objet
 
-With the [object relations](../../../basics/object-relations.md) feature you can organize and edit all relations within i-doit.
+Avec la fonctionnalité de [relations d'objet](../../../basics/object-relations.md), vous pouvez organiser et éditer toutes les relations au sein de i-doit.
 
-[![Object Relation Types](../../../assets/images/en/system-administration/administration/predefined-content/object-relation-types/1-ort.png)](../../../assets/images/en/system-administration/administration/predefined-content/object-relation-types/1-ort.png)
+[![Types de relations d'objet](../../../assets/images/en/system-administration/administration/predefined-content/object-relation-types/1-ort.png)](../../../assets/images/en/system-administration/administration/predefined-content/object-relation-types/1-ort.png){/*examples*/}

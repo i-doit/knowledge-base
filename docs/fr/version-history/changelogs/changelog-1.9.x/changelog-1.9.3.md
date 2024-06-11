@@ -1,75 +1,77 @@
-# Changelog 1.9.3
+# Journal des modifications 1.9.3
 
-[Improvement]   Option to utf8 decode exported Check_MK files  
-[Improvement]   New configuration for dealing with validation errors during duplication of objects  
-[Improvement]   Improving the search index to increase performance  
-[Improvement]   New System setting added "Activate Interaction between 'Logical location' and 'Location'?"  
-[Improvement]   Improving category "certificate"  
-[Bug]           Stacking: Stacks with only one member cannot be read  
-[Bug]           Object list: The attribute "Runs on" from the category "Cluster service assignment" causes an error message  
-[Bug]           Date fields can not be saved if no date format is defined in the user settings  
-[Bug]           Incorrect sorting of servers in a rack  
-[Bug]           Heading of data fields in a user-defined categories are not given correctly during an export  
-[Bug]           Detaching the DNS server attribute in the net category causes MySQL syntax error in the Object Browser  
-[Bug]           Layer-3 net, static IP-Address allocation incorrect if a reserved DHCP-area is configured  
-[Bug]           Lists: Archived users shown in contact assignments  
-[Bug]           Sorting model in object lists not possible  
-[Bug]           OCS-Import: Import fails after first invalid object  
-[Bug]           Error when importing an IP-address via csv while using a leading zero within any octet  
-[Bug]           Authorization system: The category field for the authorizations category in object, object-type and in objects underneath a location was not enabled on edit  
-[Bug]           Category "LDAP" is shown as inactive in the left menu tree despite existing data  
-[Bug]           Automatic delete of physical location when assigning a logical location  
-[Bug]           Category accounting: Replacing the Automatic Inventory Number for multiple object types does not work correctly when importing  
-[Bug]           Category Cluster Memberships: If an assignment is removed, the corresponding relation object is not removed  
-[Bug]           Admin Center: Umlauts are not displayed correctly, if a new tenant has been added  
-[Bug]           Contents of logbook are found via search after performing a mass change  
-[Bug]           Configured prefix for automatically created cables is being ignored  
-[Bug]           CSV Import: Import of category contact assignment creates an empty entry if this is not set in the CSV file  
-[Bug]           Validation: If validation exists for the category Master Data (Persons), it only affects the folder category persons  
-[Bug]           LDAP-sync sets all found users to state "normal" for a short period during the synchronisation  
-[Bug]           Error when giving rights for category "guest systems"  
-[Bug]           Moving object type cable to another object type group causes cables to disappear from the cable browser selection  
-[Bug]           Import of all ports via JDisc import, even with set port filter  
-[Bug]           Error when using a port filter in JDisc profile  
-[Bug]           Footer of Admin-Center differ before and after login  
-[Bug]           Category "Password" is not encypted after duplicating an object  
-[Bug]           Object should be shown as positionable in a rack  
-[Bug]           All WYSIWYG-features are only available on overview page  
-[Bug]           Custom categories: Field type 'file browser' does not work  
-[Bug]           Report Manager: No results were shown for certain character arrangements within the attribute "Location path"  
-[Bug]           Inconsistencies displaying entries and selections of search results  
-[Bug]           Wrong count in object list for used numer of IPs  
-[Bug]           Using content with [...]LC_[...] not possible  
-[Bug]           Notifications: Licenses still shown in email, even with archived or deleted license key  
-[Bug]           Logbook: List does not show alarms with high (3) priority  
-[Bug]           CSV Import: Import via controller does not work if MultiValue option 'comma' is being used  
-[Bug]           Deleting a shared Dialog+ in custom categories deletes all entries for other categories, using it  
-[Bug]           Backslash in obect titles is often not shown correctly  
-[Bug]           Object list: Error when sorting attribute "category"  
-[Bug]           An error message is displayed on Extras > CMDB > Import  
-[Bug]           Report manager creates broken requests for object relations  
-[Bug]           Object browser opens an inactive tab under certain conditions  
-[Bug]           Using existing cables for cabling-import not possible  
-[Bug]           Error when downloading an online report onto multiple tenants  
-[Bug]           Format of descriptions are not correctly saved, despite the use of the WYSIWYG editor  
-[Bug]           List edit: category 'Port': Cable-ID can not be changed  
-[Bug]           Empty selection of HU in a rack via location not possible  
-[Bug]           Wrong mask for contact assignment after click on accept button  
-[Bug]           Editing of host address not possible via list edit  
-[Bug]           Validation: Multiple inventory numbers after duplicating objects  
-[Bug]           Field type of assignment/relations to slect several objects in custom categories is not transfered correctly with the xml-export  
-[Bug]           Icon to visualize success of ping is shown in object column  
-[Bug]           Category DBMS-Assigned Clusters Does Not Contain Button And Attribute List  
-[Bug]           The "Notes" widget loses format while editing  
-[Bug]           Matching for system services does not work with JDisc import  
-[Bug]           Logical location is not shown in object list, if an object of another objecttype than "person" is selected  
-[Bug]           CSV import: Import of dates in custom categories is always being imported with time stamps  
-[Bug]           Logbook configuration: Using the plus and minus buttons only change the upper value  
-[Bug]           Logbook configuration: Removed duplicate attribute "Maximum amount of combined detailed changes (per category)"  
-[Bug]           Highlighting of found keywords in description fields are not visible  
-[Bug]           Custom language constants are not being used  
-[Bug]           Show purchase date without time in lists  
-[Bug]           Event log does not show the used command but the currently configured command  
-[Bug]           Remaining resources in cluster vitality are not calculated correctly  
-[Bug]           Dialog Admin: Removed "deletable" column for custom dialog+ fields  
-[Bug]           Category relationships: When creating an explicit relationship, the direction between master and slave object is not taken into account  
+[Amélioration] Option pour décoder en UTF-8 les fichiers exportés de Check_MK  
+[Amélioration] Nouvelle configuration pour gérer les erreurs de validation lors de la duplication d'objets  
+[Amélioration] Amélioration de l'index de recherche pour augmenter les performances  
+[Amélioration] Nouveau paramètre système ajouté "Activer l'interaction entre 'Emplacement logique' et 'Emplacement'?"  
+[Amélioration] Amélioration de la catégorie "certificat"  
+[Bogue] Empilement : Les piles avec un seul membre ne peuvent pas être lues  
+[Bogue] Liste d'objets : L'attribut "Fonctionne sur" de la catégorie "Affectation de service de cluster" provoque un message d'erreur  
+[Bogue] Les champs de date ne peuvent pas être enregistrés si aucun format de date n'est défini dans les paramètres de l'utilisateur  
+[Bogue] Tri incorrect des serveurs dans un rack  
+[Bogue] En-tête des champs de données dans des catégories définies par l'utilisateur ne sont pas correctement donnés lors d'une exportation  
+[Bogue] Détacher l'attribut du serveur DNS dans la catégorie réseau provoque une erreur de syntaxe MySQL dans le navigateur d'objets  
+[Bogue] Réseau de couche 3, allocation d'adresse IP statique incorrecte si une zone DHCP réservée est configurée  
+[Bogue] Listes : Les utilisateurs archivés sont affichés dans les affectations de contacts  
+[Bogue] Le modèle de tri dans les listes d'objets n'est pas possible  
+[Bogue] Import OCS : L'importation échoue après le premier objet invalide  
+[Bogue] Erreur lors de l'importation d'une adresse IP via CSV en utilisant un zéro initial dans n'importe quel octet  
+[Bogue] Système d'autorisation : Le champ de catégorie pour la catégorie d'autorisations dans l'objet, le type d'objet et dans les objets sous un emplacement n'était pas activé en mode édition  
+[Bogue] La catégorie "LDAP" est affichée comme inactive dans l'arborescence du menu de gauche malgré l'existence de données  
+[Bogue] Suppression automatique de l'emplacement physique lors de l'attribution d'un emplacement logique  
+[Bogue] Catégorie comptabilité : Le remplacement du numéro d'inventaire automatique pour plusieurs types d'objets ne fonctionne pas correctement lors de l'importation  
+[Bogue] Catégorie Adhésions aux clusters : Si une affectation est supprimée, l'objet de relation correspondant n'est pas supprimé  
+[Bogue] Centre d'administration : Les umlauts ne sont pas affichés correctement, si un nouveau locataire a été ajouté  
+[Bogue] Les contenus du journal sont trouvés via la recherche après avoir effectué un changement massif  
+[Bogue] Préfixe configuré pour les câbles créés automatiquement est ignoré  
+[Bogue] Import CSV : L'importation de l'affectation de contact de catégorie crée une entrée vide si elle n'est pas définie dans le fichier CSV  
+[Bogue] Validation : Si une validation existe pour la catégorie Données principales (Personnes), elle n'affecte que la catégorie de dossier personnes  
+[Bogue] La synchronisation LDAP définit tous les utilisateurs trouvés à l'état "normal" pendant une courte période pendant la synchronisation  
+[Bogue] Erreur lors de l'attribution de droits pour la catégorie "systèmes invités"  
+[Bogue] Déplacer le type d'objet câble vers un autre groupe de types d'objets fait disparaître les câbles de la sélection du navigateur de câbles  
+[Bogue] Import de tous les ports via l'importation JDisc, même avec un filtre de port défini  
+[Bogue] Erreur lors de l'utilisation d'un filtre de port dans le profil JDisc  
+[Bogue] Le pied de page du Centre d'administration diffère avant et après la connexion  
+[Bogue] La catégorie "Mot de passe" n'est pas chiffrée après la duplication d'un objet  
+[Bogue] L'objet doit être affiché comme positionnable dans un rack  
+[Bogue] Toutes les fonctionnalités WYSIWYG ne sont disponibles que sur la page d'aperçu  
+[Bogue] Catégories personnalisées : Le type de champ 'navigateur de fichiers' ne fonctionne pas  
+[Bogue] Gestionnaire de rapports : Aucun résultat n'était affiché pour certaines combinaisons de caractères dans l'attribut "Chemin d'emplacement"  
+[Bogue] Incohérences dans l'affichage des entrées et des sélections des résultats de recherche  
+[Bogue] Comptage incorrect dans la liste d'objets pour le nombre d'IP utilisées  
+[Bogue] Utilisation du contenu avec [...]LC_[...] non possible  
+[Bogue] Notifications : Les licences sont toujours affichées dans les e-mails, même avec une clé de licence archivée ou supprimée  
+[Bogue] Le journal ne montre pas les alarmes de haute (3) priorité  
+[Bogue] Import CSV : L'importation via le contrôleur ne fonctionne pas si l'option MultiValue 'virgule' est utilisée  
+[Bogue] Supprimer un Dialog+ partagé dans des catégories personnalisées supprime toutes les entrées pour les autres catégories l'utilisant  
+[Bogue] Le backslash dans les titres d'objets n'est souvent pas affiché correctement  
+[Bogue] Liste d'objets : Erreur lors du tri de l'attribut "catégorie"  
+[Bogue] Un message d'erreur s'affiche sur Extras > CMDB > Import  
+[Bogue] Le gestionnaire de rapports crée des requêtes erronées pour les relations d'objets  
+[Bogue] Le navigateur d'objets ouvre un onglet inactif dans certaines conditions  
+[Bogue] Utilisation de câbles existants pour l'importation de câblage n'est pas possible  
+[Bogue] Erreur lors du téléchargement d'un rapport en ligne sur plusieurs locataires  
+[Bogue] Le format des descriptions n'est pas correctement enregistré, malgré l'utilisation de l'éditeur WYSIWYG  
+[Bogue] Édition de liste : catégorie 'Port' : L'ID du câble ne peut pas être modifié  
+[Bogue] Sélection vide de HU dans un rack via l'emplacement n'est pas possible  
+[Bogue] Masque incorrect pour l'affectation de contact après avoir cliqué sur le bouton d'acceptation  
+[Bogue] L'édition de l'adresse de l'hôte n'est pas possible via l'édition de liste  
+[Bogue] Validation : Multiples numéros d'inventaire après la duplication d'objets  
+[Bogue] Le type de champ d'affectation/de relations pour sélectionner plusieurs objets dans des catégories personnalisées n'est pas correctement transféré avec l'exportation XML  
+[Bogue] Icône pour visualiser le succès du ping est affichée dans la colonne d'objet  
+[Bogue] La catégorie Clusters attribués à DBMS ne contient pas de bouton et de liste d'attributs  
+[Bogue] Le widget "Notes" perd le format lors de l'édition  
+[Bogue] La correspondance pour les services système ne fonctionne pas avec l'importation JDisc  
+[Bogue] L'emplacement logique n'est pas affiché dans la liste d'objets, si un objet d'un autre type d'objet que "personne" est sélectionné  
+[Bogue] Import CSV : L'importation des dates dans des catégories personnalisées est toujours importée avec des horodatages  
+[Bogue] Configuration du journal : L'utilisation des boutons plus et moins ne change que la valeur supérieure  
+[Bogue] Configuration du journal : Suppression de l'attribut en double "Quantité maximale de modifications détaillées combinées (par catégorie)"  
+[Bogue] La mise en évidence des mots-clés trouvés dans les champs de description n'est pas visible  
+[Bogue] Les constantes de langue personnalisées ne sont pas utilisées  
+[Bogue] Afficher la date d'achat sans heure dans les listes  
+[Bogue] Le journal des événements ne montre pas la commande utilisée mais la commande actuellement configurée  
+[Bogue] Les ressources restantes dans la vitalité du cluster ne sont pas calculées correctement  
+[Bogue] Dialog Admin : Suppression de la colonne "supprimable" pour les champs de dialog+ personnalisés  
+[Bogue] Relations de catégorie : Lors de la création d'une relation explicite, la direction entre l'objet maître et l'objet esclave n'est pas prise en compte  
+
+I am ready to start translating the Markdown content into French. Please paste the content you would like me to translate.

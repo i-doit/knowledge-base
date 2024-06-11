@@ -1,338 +1,326 @@
 # checkmk 2: Configuration
 
-This application is highly-customizable via configuration files and runtime settings.
+Cette application est hautement personnalisable via des fichiers de configuration et des paramètres d'exécution.
 
-Configuration files
--------------------
+Fichiers de configuration
+-------------------------
 
-On startup it try to load the following files:
+Au démarrage, il essaie de charger les fichiers suivants :
 
-*   /etc/idoitcmk/config.json (system-wide) and
-*   ~/.idoitcmk/config.json (user-defined)
+*   /etc/idoitcmk/config.json (au niveau du système) et
+*   ~/.idoitcmk/config.json (défini par l'utilisateur)
 
-Configuration files are formatted as JSON (JavaScript Object Notation), an easily-readable format for both humans and robots.
+Les fichiers de configuration sont formatés en JSON (JavaScript Object Notation), un format facilement lisible pour les humains et les robots.
 
-Create configuration file automatically
----------------------------------------
+Créer automatiquement un fichier de configuration
+------------------------------------------------
 
-Use command init to create your own configuration file:
+Utilisez la commande init pour créer votre propre fichier de configuration :
 
     idoitcmk init
 
-This command will ask you several questions about all settings which are mentioned below. After that a configuration file will be written to `~/.idoitcmk/config.json`.
+Cette commande vous posera plusieurs questions sur tous les paramètres qui sont mentionnés ci-dessous. Ensuite, un fichier de configuration sera écrit dans `~/.idoitcmk/config.json`.
 
-If you run this command with super-user rights (root) a configuration file will be written to `/etc/idoitcmk/config.json` instead.
+Si vous exécutez cette commande avec des droits de super-utilisateur (root), un fichier de configuration sera écrit dans `/etc/idoitcmk/config.json` à la place.
 
-With this command you are even able to update your configuration settings. Before that a backup will be created in the background.
+Avec cette commande, vous pouvez même mettre à jour vos paramètres de configuration. Avant cela, une sauvegarde sera créée en arrière-plan.
 
-Create configuration files manually
------------------------------------
+Créer des fichiers de configuration manuellement
 
-For a good start print the example configuration and edit it locally:
+{/*examples*/}
 
-    mkdir ~/.idoitcmk
-    idoitcmk print-example-config > ~/.idoitcmk/config.json
-    editor ~/.idoitcmk/config.json
+Pour bien commencer, imprimez la configuration d'exemple et éditez-la localement :
 
-Available settings
+```bash
+mkdir ~/.idoitcmk
+idoitcmk print-example-config > ~/.idoitcmk/config.json
+editor ~/.idoitcmk/config.json
+```
+
+Paramètres disponibles
 ------------------
 
-The configuration settings are separated by topics:
+Les paramètres de configuration sont séparés par thèmes :
 
-| Topic | Description |
+| Thème | Description |
 | --- | --- |
-| i-doit | Configure how to access i-doit's JSON-RPC API |
-| check_mk | Configure how to access checkmk's Web API |
-| push | Configure how to [push data from i-doit to checkmk](./generate-wato-configuration-base-on-cmdb-data.md) |
-| pull | Configure how to [pull data from checkmk to i-doit](./import-inventory-data-into-cmdb.md) |
-| objectTypes | Used object types identified by their constants |
-| objectTitles | Used objects identified by their titles |
-| roles | i-doit roles for contact groups used in contact assignments |
-| blacklistedObjectTypes | Object types which will be completely ignored by all commands |
-| log | Log levels and colored output |
+| i-doit | Configurez comment accéder à l'API JSON-RPC de i-doit |
+| check_mk | Configurez comment accéder à l'API Web de checkmk |
+| push | Configurez comment [envoyer des données de i-doit à checkmk](./generate-wato-configuration-base-on-cmdb-data.md) |
+| pull | Configurez comment [récupérer des données de checkmk vers i-doit](./import-inventory-data-into-cmdb.md) |
+| objectTypes | Types d'objets utilisés identifiés par leurs constantes |
+| objectTitles | Objets utilisés identifiés par leurs titres |
+| rôles | Rôles i-doit pour les groupes de contacts utilisés dans les affectations de contacts |
+| blacklistedObjectTypes | Types d'objets qui seront complètement ignorés par toutes les commandes |
+| log | Niveaux de journalisation et sortie colorée |
 
-Required topics are i-doit and check_mk, otherwise sharing information between them won't work. All other topics may be altered optionally.
+Les thèmes requis sont i-doit et check_mk, sinon le partage d'informations entre eux ne fonctionnera pas. Tous les autres thèmes peuvent être modifiés facultativement. 
 
-For almost each setting there is a pre-defined default value. You may remove unchanged settings from your local configuration files.
+{ /* examples */ }
 
-### Access i-doit's JSON-RPC API
+Pour presque chaque paramètre, il existe une valeur par défaut prédéfinie. Vous pouvez supprimer les paramètres inchangés de vos fichiers de configuration locaux.
 
-Configure how to access i-doit's JSON-RPC API:
+### Accéder à l'API JSON-RPC d'i-doit
 
-| Key | Type | Required | Default | Description |
+Configurer comment accéder à l'API JSON-RPC d'i-doit :
+
+| Clé | Type | Requis | Par défaut | Description |
 | --- | --- | --- | --- | --- |
-| i-doit.url | String | Yes | -   | Entry point to i-doit's JSON-RPC API (Example: http://demo.i-doit.com/src/jsonrpc.php |
-| i-doit.key | String | Yes | -   | API key |
-| i-doit.username | String | No  | -   | Username |
-| i-doit.password | String | No  | -   | Password |
-| i-doit.language | String | No  | en | Supported languages are en or de |
-| i-doit.limitBatchRequests | String | No  | 500 | If you encounter performance or memory issues in i-doit decrease this setting. Value 100 is a good starting point. 0 disables any limitation. |
-| i-doit.proxy.type | String | No  | -   | HTTP or SOCKS5 |
-| i-doit.proxy.host | String | No  | -   | FQDN or IP address to proxy |
-| i-doit.proxy.port | Integer | No  | -   | TCP/IP port |
-| i-doit.proxy.username | String | No  | -   | Username |
-| i-doit.proxy.password | String | No  | -   | Password |
+| i-doit.url | Chaîne | Oui | -   | Point d'entrée de l'API JSON-RPC d'i-doit (Exemple : http://demo.i-doit.com/src/jsonrpc.php) |
+| i-doit.key | Chaîne | Oui | -   | Clé API |
+| i-doit.username | Chaîne | Non  | -   | Nom d'utilisateur |
+| i-doit.password | Chaîne | Non  | -   | Mot de passe |
+| i-doit.language | Chaîne | Non  | en | Les langues supportées sont en ou de |
+| i-doit.limitBatchRequests | Chaîne | Non  | 500 | Si vous rencontrez des problèmes de performances ou de mémoire dans i-doit, diminuez ce paramètre. La valeur 100 est un bon point de départ. 0 désactive toute limitation. |
+| i-doit.proxy.type | Chaîne | Non  | -   | HTTP ou SOCKS5 |
+| i-doit.proxy.host | Chaîne | Non  | -   | Nom de domaine complet ou adresse IP du proxy |
+| i-doit.proxy.port | Entier | Non  | -   | Port TCP/IP |
+| i-doit.proxy.username | Chaîne | Non  | -   | Nom d'utilisateur |
+| i-doit.proxy.password | Chaîne | Non  | -   | Mot de passe |
 
-### Access checkmk's Web API and Livestatus
+### Accéder à l'API Web de checkmk et à Livestatus
 
-Configure how to access checkmk's Web API:
+Configurer comment accéder à l'API Web de checkmk :
 
-| Key | Type | Required | Default | Description |
+| Clé | Type | Requis | Par défaut | Description |
 | --- | --- | --- | --- | --- |
-| check_mk.webAPI.url | String | Yes | -   | Entry point to checkmk's Web API (Example: http://CheckMK-Server/site-name/check_mk/) |
-| check_mk.webAPI.username | String | Yes | automation | Automation user |
-| check_mk.webAPI.secret | String | Yes | -   | Automation secret |
-| check_mk.webAPI.effectiveAttributes | Boolean | Yes | true | Fetch inherited settings from rulesets, folders, etc. |
-| check_mk.webAPI.proxy.type | String | No  | -   | HTTP or SOCKS5 |
-| check_mk.webAPI.proxy.host | String | No  | -   | FQDN or IP address to proxy |
-| check_mk.webAPI.proxy.port | String | No  | -   | TCP/IP port |
-| check_mk.webAPI.proxy.username | String | No  | -   | Username |
-| check_mk.webAPI.proxy.password | String | No  | -   | Password |
-| check_mk.livestatus.type | String | No  | tcp | tcp or socket |
-| check_mk.livestatus.title | String | No  | Check_MK | Unique name for this livestatus instance |
-| check_mk.livestatus.host | String | No  | -   | Hostname (type tcp only) |
-| check_mk.livestatus.port | Integer | No  | 6557 | TCP/IP port (type tcp only) |
-| check_mk.livestatus.path | String | No  | -   | Path to UNIX socket (type socket only) |
+| check_mk.webAPI.url | Chaîne | Oui | -   | Point d'entrée de l'API Web de checkmk (Exemple : http://ServeurCheckMK/nom-du-site/check_mk/) |
+| check_mk.webAPI.username | Chaîne | Oui | automation | Utilisateur d'automatisation |
+| check_mk.webAPI.secret | Chaîne | Oui | -   | Secret d'automatisation |
+| check_mk.webAPI.effectiveAttributes | Booléen | Oui | true | Récupérer les paramètres hérités des ensembles de règles, des dossiers, etc. |
+| check_mk.webAPI.proxy.type | Chaîne | Non  | -   | HTTP ou SOCKS5 |
+| check_mk.webAPI.proxy.host | Chaîne | Non  | -   | Nom de domaine complet ou adresse IP du proxy |
+| check_mk.webAPI.proxy.port | Chaîne | Non  | -   | Port TCP/IP |
+| check_mk.webAPI.proxy.username | Chaîne | Non  | -   | Nom d'utilisateur |
+| check_mk.webAPI.proxy.password | Chaîne | Non  | -   | Mot de passe |
+| check_mk.livestatus.type | Chaîne | Non  | tcp | tcp ou socket |
+| check_mk.livestatus.title | Chaîne | Non  | Check_MK | Nom unique pour cette instance Livestatus |
+| check_mk.livestatus.host | Chaîne | Non  | -   | Nom d'hôte (type tcp uniquement) |
+| check_mk.livestatus.port | Entier | Non  | 6557 | Port TCP/IP (type tcp uniquement) |
+| check_mk.livestatus.path | Chaîne | Non  | -   | Chemin vers le socket UNIX (type socket uniquement) |
 
-Livestatus can currently not be connected via TLS.
+Livestatus ne peut actuellement pas être connecté via TLS.
 
-### Configure the used Checkmk Version
+### Configurer la version de Checkmk utilisée
 
-| Key | Type | Required | Default | Description |
+| Clé | Type | Requis | Par défaut | Description |
 | --- | --- | --- | --- | --- |
-| check_mk.version | String | No  | -   | Used Checkmk Version needed for inventory import e.g. "2.1" |
+| check_mk.version | Chaîne | Non  | -   | Version de Checkmk utilisée nécessaire pour l'importation de l'inventaire, par exemple "2.1" |
 
-### Configure command push
+### Configurer la commande de push
 
-Configure how to [push data from i-doit to checkmk](./generate-wato-configuration-base-on-cmdb-data.md):
+Configurer comment [envoyer des données de i-doit à checkmk](./generate-wato-configuration-base-on-cmdb-data.md) :
 
-| Key | Type | Required | Default | Description |
+| Clé | Type | Requis | Par défaut | Description |
 | --- | --- | --- | --- | --- |
-| push.activateChanges | Boolean | No  | false | Activate all changes except foreign changes |
-| push.activateForeignChanges | Boolean | No  | false | Activate all changes including foreign changes; push.activateChanges must be true |
-| push.autoMatching | String | No  | all | Disable autoTagging (none), just look for the first match (first) or try to match all expressions (all) |
-| push.autoSite | Boolean | No  | false | In a multi-site environment each host is monitored by one site. With value location site can be identified automatically by the object location path. |
-| push.autoTagging | Object | No  | -   | Add host tags dynamically based on object information that matches regular expressions; see section "Auto tagging" |
-| push.bakeAgents | Boolean | No  | false | Bake agents automatically; does not deploy agents |
-| push.contactGroupIdentifier | String | No  | title | Collect contact groups by their object titles (title) or by their LDAP DNs (ldap) |
-| push.defaultWATOFolder | String | No  | -   | Push hosts to this folder if not set; empty value means main folder |
-| push.discoverServices | Boolean | No  | false | Look for services on new/altered hosts |
-| push.location | Boolean | No  | true |     |
+| push.activateChanges | Booléen | Non  | false | Activer tous les changements sauf les changements étrangers |
+| push.activateForeignChanges | Booléen | Non  | false | Activer tous les changements y compris les changements étrangers ; push.activateChanges doit être vrai |
+| push.autoMatching | Chaîne | Non  | all | Désactiver l'auto-étiquetage (none), rechercher simplement la première correspondance (first) ou essayer de faire correspondre toutes les expressions (all) |
+| push.autoSite | Booléen | Non  | false | Dans un environnement multi-site, chaque hôte est surveillé par un site. Avec la valeur location, le site peut être identifié automatiquement par le chemin d'emplacement de l'objet. |
+| push.autoTagging | Objet | Non  | -   | Ajouter des balises d'hôte dynamiquement en fonction des informations d'objet qui correspondent à des expressions régulières ; voir la section "Auto-étiquetage" |
+| push.bakeAgents | Booléen | Non  | false | Cuire automatiquement les agents ; ne déploie pas les agents |
+| push.contactGroupIdentifier | Chaîne | Non  | title | Collecter les groupes de contacts par leurs titres d'objet (title) ou par leurs DNs LDAP (ldap) |
+| push.defaultWATOFolder | Chaîne | Non  | -   | Envoyer les hôtes vers ce dossier s'il n'est pas défini ; une valeur vide signifie le dossier principal |
+| push.discoverServices | Booléen | Non  | false | Rechercher des services sur les hôtes nouveaux/modifiés |
+| push.location | Booléen | Non  | true |     |
 
-#### Auto tagging
+#### Balisage automatique {/ * exemples * /}
 
-Example:
+Exemple :
 
-    {
-        "push": {
-            "autoTagging": {
-                "title": {
-                    "/^00/": {
-                        "tag_agent": "cmk-agent",
-                        "tag_criticality": "prod"
-                    },
-                    "/mail/": {
-                        "tag_system": "mail"
-                    }
+```json
+{
+    "push": {
+        "autoTagging": {
+            "title": {
+                "/^00/": {
+                    "tag_agent": "cmk-agent",
+                    "tag_criticality": "prod"
                 },
-                "hostname": {
-                    "/^vm/": {
-                        "tag_networking": "dmz"
-                    }
-                },
-                "fqdn": {
-                    "/test\\.local$/": {
-                        "tag_criticality": "test"
-                    }
+                "/mail/": {
+                    "tag_system": "mail"
                 }
             },
-            "autoMatching": "all"
-        }
+            "hostname": {
+                "/^vm/": {
+                    "tag_networking": "dmz"
+                }
+            },
+            "fqdn": {
+                "/test\\.local$/": {
+                    "tag_criticality": "test"
+                }
+            }
+        },
+        "autoMatching": "all"
     }
+}
+```
 
-Try to match all expressions:
+Essayez de faire correspondre toutes les expressions :
 
-*   Objects whose titles (title) begin with 00 will be checked by an agent and are tagged as productive.
-*   Objects whose titles (title) has mail in the middle are tagged as mail hosts.
-*   Objects whose hostnames ( hostname) begin with vm are assigned to the DMZ.
-*   Objects whose fully qualified domain names (fqdn) end with test.local are tagged as test
+- Les objets dont les titres (title) commencent par 00 seront vérifiés par un agent et seront balisés comme productifs.
+- Les objets dont les titres (title) contiennent mail au milieu seront balisés comme hôtes de messagerie.
+- Les objets dont les noms d'hôtes (hostname) commencent par vm seront assignés à la DMZ.
+- Les objets dont les noms de domaine complets (fqdn) se terminent par test.local seront balisés comme test.
 
-### Configure command pull
+### Configurer la commande pull {/examples}
 
-Configure how to [pull data from checkmk to i-doit](./import-inventory-data-into-cmdb.md):
+Configurer comment [extraire des données de checkmk vers i-doit](./import-inventory-data-into-cmdb.md) :
 
-| Key | Type | Required | Default | Description |
+| Clé | Type | Requis | Par défaut | Description |
 | --- | --- | --- | --- | --- |
-| pull.createObjects | Boolean | No  | true | Unknown hosts will be created as new objects |
-| pull.createUnknownSoftwareApplications | Boolean | No  | true | Unknown Applications will be created as new objects |
-| pull.objectType | String | No  | C__OBJTYPE__SERVER | Set the object type constant for new objects |
-| pull.updateObjects | String | No  | overwrite | If host is found in i-doit overwrite existing category entries, merge them or ignore them (list categories only) |
-| pull.idenfifier | Array | No  | ["title", "hostname", "fqdn", "hostaddress", "alias", "user-defined", "serial"] | Look for these identifiers to match hosts with objects; see section "Identifiers" |
-| pull.minMatch | Integer | No  | 2 | Object and host must share a minimum amount of identifiers |
-| pull.attributes | Array | No  | _See section "Attributes"_ | List of category constants which will be altered; see section "Attributes" |
-| pull.enableExport | Boolean | No  | true | Write host configuration to category Check_MK Host |
-| pull.enableLivestatus | Boolean | No  | true | Write host configuration to category Monitoring |
-| pull.ports | String | No  | physical | Add/update physical or logical network ports |
+| pull.createObjects | Booléen | Non  | true | Les hôtes inconnus seront créés en tant que nouveaux objets |
+| pull.createUnknownSoftwareApplications | Booléen | Non  | true | Les applications inconnues seront créées en tant que nouveaux objets |
+| pull.objectType | Chaîne | Non  | C__OBJTYPE__SERVEUR | Définir la constante de type d'objet pour les nouveaux objets |
+| pull.updateObjects | Chaîne | Non  | écraser | Si l'hôte est trouvé dans i-doit, écraser les entrées de catégorie existantes, les fusionner ou les ignorer (liste des catégories uniquement) |
+| pull.idenfifier | Tableau | Non  | ["titre", "nom d'hôte", "fqdn", "adresse de l'hôte", "alias", "défini par l'utilisateur", "numéro de série"] | Rechercher ces identifiants pour faire correspondre les hôtes avec des objets ; voir la section "Identifiants" |
+| pull.minMatch | Entier | Non  | 2 | L'objet et l'hôte doivent partager un nombre minimum d'identifiants |
+| pull.attributes | Tableau | Non  | _Voir la section "Attributs"_ | Liste des constantes de catégorie qui seront modifiées ; voir la section "Attributs" |
+| pull.enableExport | Booléen | Non  | true | Écrire la configuration de l'hôte dans la catégorie Check_MK Host |
+| pull.enableLivestatus | Booléen | Non  | true | Écrire la configuration de l'hôte dans la catégorie Monitoring |
+| pull.ports | Chaîne | Non  | physique | Ajouter/mettre à jour des ports réseau physiques ou logiques |
 
-#### Identifiers
+#### Identifiants {/ * exemples * /}
 
-In i-doit there are several attributes which are suitable as unique identifiers to match them with hosts in checkmk:
+Dans i-doit, il existe plusieurs attributs qui conviennent en tant qu'identifiants uniques pour les associer à des hôtes dans checkmk:
 
-| Identifier | Category | Description |
+| Identifiant | Catégorie | Description |
 | --- | --- | --- |
-| title | General | Object title |
-| hostname | Host address | Hostname |
-| fqdn | Host address | Fully qualified domain name |
-| hostaddress | Host address | Primary IPv4 or IPv6 address |
-| alias | Check_MK Host | Host alias |
-| user-defined | Check_MK Host | User-defined value for attribute hostname |
-| serial | Model | Serial number in the model category |
+| titre | Général | Titre de l'objet |
+| nom d'hôte | Adresse de l'hôte | Nom d'hôte |
+| fqdn | Adresse de l'hôte | Nom de domaine pleinement qualifié |
+| adresse de l'hôte | Adresse de l'hôte | Adresse IPv4 ou IPv6 principale |
+| alias | Hôte Check_MK | Alias de l'hôte |
+| défini par l'utilisateur | Hôte Check_MK | Valeur définie par l'utilisateur pour l'attribut nom d'hôte |
+| numéro de série | Modèle | Numéro de série dans la catégorie du modèle |
 
-Example:
+Exemple:
 
     {
         "pull": {
             "identifier": [
-                "title",
-                "hostname",
+                "titre",
+                "nom d'hôte",
                 "fqdn",
-                "hostaddress",
+                "adresse de l'hôte",
                 "alias",
-                "user-defined"
+                "défini par l'utilisateur"
             ],
             "minMatch": 2
         }
     }
 
-#### Attributes
+#### Attributs {/ * exemples * /}
 
-In i-doit each object attribute is bound to a so-called category. These categories can be altered:
+Dans i-doit, chaque attribut d'objet est lié à une catégorie appelée catégorie. Ces catégories peuvent être modifiées:
 
-| Category | Constant | Default | Description |
+| Catégorie | Constante | Par défaut | Description |
 | --- | --- | --- | --- |
-| Access | C__CATG__ACCESS | true | Link to host in checkmk |
-| Application | C__CATG__APPLICATION | false | Software assignments |
-| Contact assignment | C__CATG__CONTACT | true | Contact groups with role roles.monitoring |
-| CPU | C__CATG__CPU | true | CPU cores |
-| Drive | C__CATG__DRIVE | true | Mount points |
-| Graphic card | C__CATG__GRAPHIC | true | (Virtual) Graphic cards |
-| Host address | C__CATG__IP | true | IP addresses and hostname |
-| Memory | C__CATG__MEMORY | true | Total memory |
-| Model | C__CATG__MODEL | true | Manufacturer, model name and serial number |
-| Operating system | C__CATG__OPERATING_SYSTEM | true | Operating system |
-| Network > logical Ports | C__CATG__NETWORK_LOG_PORT | true | Active logical ports with MAC address |
-| Network > Port | C__CATG__NETWORK_PORT | true | Active physical ports with MAC address |
+| Accès | C__CATG__ACCESS | vrai | Lien vers l'hôte dans checkmk |
+| Application | C__CATG__APPLICATION | faux | Affectations logicielles |
+| Attribution de contact | C__CATG__CONTACT | vrai | Groupes de contacts avec rôles.roles.monitoring |
+| CPU | C__CATG__CPU | vrai | Cœurs de CPU |
+| Disque | C__CATG__DRIVE | vrai | Points de montage |
+| Carte graphique | C__CATG__GRAPHIC | vrai | Cartes graphiques (virtuelles) |
+| Adresse de l'hôte | C__CATG__IP | vrai | Adresses IP et nom d'hôte |
+| Mémoire | C__CATG__MEMORY | vrai | Mémoire totale |
+| Modèle | C__CATG__MODEL | vrai | Fabricant, nom du modèle et numéro de série |
+| Système d'exploitation | C__CATG__OPERATING_SYSTEM | vrai | Système d'exploitation |
+| Réseau > Ports logiques | C__CATG__NETWORK_LOG_PORT | vrai | Ports logiques actifs avec adresse MAC |
+| Réseau > Port | C__CATG__NETWORK_PORT | vrai | Ports physiques actifs avec adresse MAC |
 
-Example:
+```markdown
+### Types d'objet
 
-    {
-        "pull": {
-            "attributes": {
-                "C__CATG__ACCESS": true,
-                "C__CATG__APPLICATION": true,
-                "C__CATG__CONTACT": true,
-                "C__CATG__CPU": true,
-                "C__CATG__DRIVE": true,
-                "C__CATG__GRAPHIC": true,
-                "C__CATG__IP": true,
-                "C__CATG__MEMORY": true,
-                "C__CATG__MODEL": true,
-                "C__CATG__OPERATING_SYSTEM": true,
-                "C__CATG__NETWORK_LOG_PORT": true,
-                "C__CATG__NETWORK_PORT": true
-            }
-        }
-    }
+Types d'objet utilisés identifiés par leurs constantes :
 
-### Object types
-
-Used object types identified by their constants:
-
-| Key | Type | Required | Default | Description |
+| Clé | Type | Requis | Par défaut | Description |
 | --- | --- | --- | --- | --- |
-| objectTypes.contactGroup | String | No  | C__OBJTYPE__PERSON_GROUP | Contact groups |
-| objectTypes.operatingSystem | String | No  | C__OBJTYPE__OPERATING_SYSTEM | Operating systems |
-| objectTypes.subnetwork | String | No  | C__OBJTYPE__LAYER3_NET | Subnetworks |
-| objectTypes.remoteManagementController | String | No  | C__OBJTYPE__RM_CONTROLLER | Remote management controllers |
+| objectTypes.contactGroup | Chaîne de caractères | Non | C__OBJTYPE__PERSON_GROUP | Groupes de contact |
+| objectTypes.operatingSystem | Chaîne de caractères | Non | C__OBJTYPE__OPERATING_SYSTEM | Systèmes d'exploitation |
+| objectTypes.subnetwork | Chaîne de caractères | Non | C__OBJTYPE__LAYER3_NET | Sous-réseaux |
+| objectTypes.remoteManagementController | Chaîne de caractères | Non | C__OBJTYPE__RM_CONTROLLER | Contrôleurs de gestion à distance |
+```
 
-### Object titles
+### Titres d'objet
 
-Used objects identified by their titles:
+Les objets utilisés sont identifiés par leurs titres :
 
-| Key | Type | Required | Default | Description |
+| Clé | Type | Requis | Par défaut | Description |
 | --- | --- | --- | --- | --- |
-| IPv4 subnetwork | String | No  | Global v4 | Default subnetwork for IPv4 addresses |
-| IPv6 subnetwork | String | No  | Global v6 | Default subnetwork for IPv6 addresses |
+| Sous-réseau IPv4 | Chaîne de caractères | Non | v4 global | Sous-réseau par défaut pour les adresses IPv4 |
+| Sous-réseau IPv6 | Chaîne de caractères | Non | v6 global | Sous-réseau par défaut pour les adresses IPv6 |
 
-### Roles
+### Rôles
 
-This is a list of i-doit roles for contact groups used in contact assignments:
+Il s'agit d'une liste des rôles i-doit pour les groupes de contacts utilisés dans les affectations de contact :
 
-| Key | Type | Required | Default | Description |
+| Clé | Type | Requis | Par défaut | Description |
 | --- | --- | --- | --- | --- |
-| roles.monitoring | String | No  | Monitoring | i-doit role for contact groups used in contact assignments |
+| roles.monitoring | Chaîne de caractères | Non | Monitoring | Rôle i-doit pour les groupes de contacts utilisés dans les affectations de contact |
 
-### Blocklist object types
+### Types d'objets en liste noire
 
-This list of object types will be completely ignored by default:
+Cette liste de types d'objets sera complètement ignorée par défaut :
 
-| Object type | Constant |
+| Type d'objet | Constante |
 | --- | --- |
-| Cable tray | C__CMDB__OBJTYPE__CABLE_TRAY |
+| Chemin de câbles | C__CMDB__OBJTYPE__CABLE_TRAY |
 | Conduit | C__CMDB__OBJTYPE__CONDUIT |
-| Object group | C__OBJECT_TYPE__GROUP |
-| Aircraft | C__OBJTYPE__AIRCRAFT |
+| Groupe d'objets | C__OBJECT_TYPE__GROUP |
+| Avion | C__OBJTYPE__AIRCRAFT |
 | Application | C__OBJTYPE__APPLICATION |
-| Building | C__OBJTYPE__BUILDING |
-| Cable | C__OBJTYPE__CABLE |
-| Cell phone contract | C__OBJTYPE__CELL_PHONE_CONTRACT |
-| City | C__OBJTYPE__CITY |
-| Country | C__OBJTYPE__COUNTRY |
-| Database instance | C__OBJTYPE__DATABASE_INSTANCE |
-| Database schema | C__OBJTYPE__DATABASE_SCHEMA |
-| DBMS | C__OBJTYPE__DBMS |
-| Emergency plan | C__OBJTYPE__EMERGENCY_PLAN |
-| Rack | C__OBJTYPE__ENCLOSURE |
-| File | C__OBJTYPE__FILE |
-| Generic template | C__OBJTYPE__GENERIC_TEMPLATE |
-| Information domain | C__OBJTYPE__INFORMATION_DOMAIN |
-| Service | C__OBJTYPE__IT_SERVICE |
-| Crypto card | C__OBJTYPE__KRYPTO_CARD |
-| Layer 2 Net | C__OBJTYPE__LAYER2_NET |
-| Layer 3-Net | C__OBJTYPE__LAYER3_NET |
-| Licenses | C__OBJTYPE__LICENCE |
-| Generic location | C__OBJTYPE__LOCATION_GENERIC |
-| Contract | C__OBJTYPE__MAINTENANCE |
+| Bâtiment | C__OBJTYPE__BUILDING |
+| Câble | C__OBJTYPE__CABLE |
+| Contrat de téléphone portable | C__OBJTYPE__CELL_PHONE_CONTRACT |
+| Ville | C__OBJTYPE__CITY |
+| Pays | C__OBJTYPE__COUNTRY |
+| Instance de base de données | C__OBJTYPE__DATABASE_INSTANCE |
+| Schéma de base de données | C__OBJTYPE__DATABASE_SCHEMA |
+| SGBD | C__OBJTYPE__DBMS |
+| Plan d'urgence | C__OBJTYPE__EMERGENCY_PLAN |
+| Baie | C__OBJTYPE__ENCLOSURE |
+| Fichier | C__OBJTYPE__FILE |
+| Modèle générique | C__OBJTYPE__GENERIC_TEMPLATE |
+| Domaine d'information | C__OBJTYPE__INFORMATION_DOMAIN |
+| Service IT | C__OBJTYPE__IT_SERVICE |
+| Carte cryptographique | C__OBJTYPE__KRYPTO_CARD |
+| Réseau de couche 2 | C__OBJTYPE__LAYER2_NET |
+| Réseau de couche 3 | C__OBJTYPE__LAYER3_NET |
+| Licences | C__OBJTYPE__LICENCE |
+| Emplacement générique | C__OBJTYPE__LOCATION_GENERIC |
+| Contrat | C__OBJTYPE__MAINTENANCE |
 | Middleware | C__OBJTYPE__MIDDLEWARE |
-| Migration objects | C__OBJTYPE__MIGRATION_OBJECT |
-| Nagios host-template | C__OBJTYPE__NAGIOS_HOST_TPL |
-| Nagios service | C__OBJTYPE__NAGIOS_SERVICE |
-| Nagios service-template | C__OBJTYPE__NAGIOS_SERVICE_TPL |
-| Net zone | C__OBJTYPE__NET_ZONE |
-| Operating system | C__OBJTYPE__OPERATING_SYSTEM |
-| Organization | C__OBJTYPE__ORGANIZATION |
-| Parallel relation | C__OBJTYPE__PARALLEL_RELATION |
-| Patch Panel | C__OBJTYPE__PATCH_PANEL |
-| Persons | C__OBJTYPE__PERSON |
-| Person groups | C__OBJTYPE__PERSON_GROUP |
-| Rack segment | C__OBJTYPE__RACK_SEGMENT |
+| Objets de migration | C__OBJTYPE__MIGRATION_OBJECT |
+| Modèle d'hôte Nagios | C__OBJTYPE__NAGIOS_HOST_TPL |
+| Service Nagios | C__OBJTYPE__NAGIOS_SERVICE |
+| Modèle de service Nagios | C__OBJTYPE__NAGIOS_SERVICE_TPL |
+| Zone réseau | C__OBJTYPE__NET_ZONE |
+| Système d'exploitation | C__OBJTYPE__OPERATING_SYSTEM |
+| Organisation | C__OBJTYPE__ORGANIZATION |
+| Relation parallèle | C__OBJTYPE__PARALLEL_RELATION |
+| Panneau de brassage | C__OBJTYPE__PATCH_PANEL |
+| Personnes | C__OBJTYPE__PERSON |
+| Groupes de personnes | C__OBJTYPE__PERSON_GROUP |
+| Segment de baie | C__OBJTYPE__RACK_SEGMENT |
 | Relation | C__OBJTYPE__RELATION |
-| Replication object | C__OBJTYPE__REPLICATION |
-| Room | C__OBJTYPE__ROOM |
-| SAN Zoning | C__OBJTYPE__SAN_ZONING |
-| System service | C__OBJTYPE__SERVICE |
-| SIM card | C__OBJTYPE__SIM_CARD |
-| SOA stack | C__OBJTYPE__SOA_STACK |
-| Supernet | C__OBJTYPE__SUPERNET |
-| Vehicle | C__OBJTYPE__VEHICLE |
+| Objet de réplication | C__OBJTYPE__REPLICATION |
+| Salle | C__OBJTYPE__ROOM |
+| Zonage SAN | C__OBJTYPE__SAN_ZONING |
+| Service système | C__OBJTYPE__SERVICE |
+| Carte SIM | C__OBJTYPE__SIM_CARD |
+| Pile SOA | C__OBJTYPE__SOA_STACK |
+| Super-réseau | C__OBJTYPE__SUPERNET |
+| Véhicule | C__OBJTYPE__VEHICLE |
 | VRRP | C__OBJTYPE__VRRP |
 | WAN | C__OBJTYPE__WAN |
-| Wiring System | C__OBJTYPE__WIRING_SYSTEM |
-| Workplace | C__OBJTYPE__WORKSTATION |
+| Système de câblage | C__OBJTYPE__WIRING_SYSTEM |
+| Poste de travail | C__OBJTYPE__WORKSTATION |
 
-You are not able to remove object types from this list (please raise an issue if you want to anyway). But you can expand this list by other object types.
+Vous ne pouvez pas supprimer les types d'objets de cette liste (veuillez signaler un problème si vous le souhaitez quand même). Mais vous pouvez étendre cette liste avec d'autres types d'objets.
 
-In the next example all objects by type Client will be ignored, too. To identify this object type use its constant instead of its (English or German) title:
+Dans l'exemple suivant, tous les objets de type Client seront également ignorés. Pour identifier ce type d'objet, utilisez sa constante au lieu de son titre (anglais ou allemand) :
 
     {
         "blacklistedObjectTypes": [
@@ -340,67 +328,65 @@ In the next example all objects by type Client will be ignored, too. To identify
         ]
     }
 
-### Log levels
+### Niveaux de journalisation
 
-The CLI tool idoitcmk has various log levels:
+L'outil CLI idoitcmk dispose de différents niveaux de journalisation :
 
-| Level | Value |
-| --- | --- |
-| Level | Value |
+| Niveau | Valeur |
 | --- | --- |
 | Fatal | 1 |
-| Error | 2 |
-| Warning | 4 |
-| Notice | 8 |
+| Erreur | 2 |
+| Avertissement | 4 |
+| Notification | 8 |
 | Info | 16 |
-| Debug | 32 |
+| Débogage | 32 |
 
-There is a configuration setting log.verbosity to adjust the default log level. This value will be used when neither runtime option `-v|--verbose` nor `-q|--quiet` are used. The current default value is 31. That means all log messages except debug messages are included.
+Il existe un paramètre de configuration log.verbosity pour ajuster le niveau de journalisation par défaut. Cette valeur sera utilisée lorsque ni l'option d'exécution `-v|--verbose` ni `-q|--quiet` ne sont utilisées. La valeur par défaut actuelle est 31. Cela signifie que tous les messages de journal sauf les messages de débogage sont inclus.
 
-On the one side runtime option `-v|--verbose` sets this configuration setting temporarily to 63 which includes all log levels. On the other side runtime option `-q|--quiet` sets it temporarily to 3 (only fatals and errors).
+D'un côté, l'option d'exécution `-v|--verbose` définit temporairement ce paramètre de configuration à 63, ce qui inclut tous les niveaux de journalisation. D'un autre côté, l'option d'exécution `-q|--quiet` le définit temporairement à 3 (uniquement les erreurs fatales et les erreurs).
 
-Additional configuration files
+Fichiers de configuration supplémentaires
 ------------------------------
 
-Optionally, you may pass one or more additional JSON-formatted configuration files by using option -c or --config. Repeat option for more then one file. For example:
+Optionnellement, vous pouvez passer un ou plusieurs fichiers de configuration au format JSON en utilisant l'option -c ou --config. Répétez l'option pour plus d'un fichier. Par exemple:
 
 
     idoitcmk push --config i-doit-testing.json --config check_mk-testing.json
 
-Runtime settings
+Paramètres d'exécution
 ----------------
 
-You would like to change some settings during runtime? You can do that with options `-s` and `--setting`. Separate nested keys with ., for example:
+Vous souhaitez modifier certains paramètres pendant l'exécution ? Vous pouvez le faire avec les options `-s` et `--setting`. Séparez les clés imbriquées avec ., par exemple:
 
     idoitcmk push --setting "push.activateChanges=true"
 
     idoitcmk pull -s ['pull.attributes={"C__CATG__ACCESS": true,"C__CATG__APPLICATION": true,"C__CATG__CONTACT": true,"C__CATG__CPU": true,"C__CATG__DRIVE": true,"C__CATG__GRAPHIC": true,"C__CATG__IP": true,"C__CATG__MEMORY": true,"C__CATG__MODEL": true,"C__CATG__OPERATING_SYSTEM": true,"C__CATG__NETWORK_LOG_PORT": true,"C__CATG__NETWORK_PORT": true}']
 
-Repeat option for more than one setting.
+Répétez l'option pour plus d'un paramètre.
 
-Order of configuration settings matters
+L'ordre des paramètres de configuration est important
 ---------------------------------------
 
-As you already read you have various options to pass your preferred settings to this application. This application follows this order:
+Comme vous l'avez déjà lu, vous avez plusieurs options pour transmettre vos paramètres préférés à cette application. Cette application suit cet ordre :
 
-1.  Default settings will be overwritten by
-2.  System-wide settings (/etc/idoitcmk/config.json) will be overwritten by
-3.  User-defined settings (~/.idoitcmk/config.json) will be overwritten by
-4.  Additional configuration files (options -c FILE or --config FILE) will be overwritten by
-5.  Runtime settings (options -s KEY=VALUE or --setting KEY=VALUE)
+1. Les paramètres par défaut seront écrasés par
+2. Les paramètres système (situés dans /etc/idoitcmk/config.json) seront écrasés par
+3. Les paramètres définis par l'utilisateur (situés dans ~/.idoitcmk/config.json) seront écrasés par
+4. Les fichiers de configuration supplémentaires (options -c FICHIER ou --config FICHIER) seront écrasés par
+5. Les paramètres d'exécution (options -s CLÉ=VALEUR ou --setting CLÉ=VALEUR)
 
-Test your config
-----------------
+Tester votre configuration
+--------------------------
 
-With command configtest you are able to perform a detailed validation of your configuration settings. This is very useful after you create or change your settings:
+Avec la commande configtest, vous pouvez effectuer une validation détaillée de vos paramètres de configuration. C'est très utile après avoir créé ou modifié vos paramètres :
 
     idoitcmk configtest
 
-Print your config
------------------
+Afficher votre configuration
+----------------------------
 
-If you have a bunch of configuration files and runtime settings sometimes it's good to know what are your compiled settings:
+Si vous avez plusieurs fichiers de configuration et des paramètres d'exécution, il est parfois utile de savoir quels sont vos paramètres compilés :
 
     idoitcmk print-config
 
-This will print your current configuration settings JSON-formatted to STDOUT.
+Cela affichera vos paramètres de configuration actuels au format JSON sur STDOUT.

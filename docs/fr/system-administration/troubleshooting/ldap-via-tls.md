@@ -1,39 +1,41 @@
 # LDAP via TLS
 
-Some users unfortunately have problems with LDAP connection via TLS so we share the previous solutions here.  
-Unfortunately there is no general solution.
+Certains utilisateurs ont malheureusement des problèmes avec la connexion LDAP via TLS, nous partageons donc ici les solutions précédentes.  
+Malheureusement, il n'y a pas de solution générale.
 
-First of all, the most common causes:
-=====================================
+Tout d'abord, les causes les plus courantes:
+=============================================
 
-*   The certificate was not imported or not imported correctly.
-*   The LDAP server host name was not used in the LDAP configuration.
-*   The hostname of the LDAP server cannot be resolved.
-*   With IPv4 the certificate check worked, with IPv6 it did not. After disabling IPv6 on Linux the problem was solved.
+*   Le certificat n'a pas été importé ou n'a pas été importé correctement.
+*   Le nom d'hôte du serveur LDAP n'a pas été utilisé dans la configuration LDAP.
+*   Le nom d'hôte du serveur LDAP ne peut pas être résolu.
+*   Avec IPv4, la vérification du certificat a fonctionné, avec IPv6 non. Après avoir désactivé IPv6 sur Linux, le problème a été résolu.
 
-With LDAP, there is not much to consider on the part of Active Directory Domain Controllers at first:
-=====================================================================================================
+Avec LDAP, il n'y a pas grand-chose à considérer du côté des contrôleurs de domaine Active Directory au départ:
+=============================================================================================================
 
-*   A certificate is needed that meets certain requirements ([https://support.microsoft.com/en-us/help/321051/how-to-enable-ldap-over-ssl-with-a-third-party-certification-authority](https://support.microsoft.com/en-us/help/321051/how-to-enable-ldap-over-ssl-with-a-third-party-certification-authority)).
-*   If possible there should be only one certificate for this purpose on a DC (becomes interesting if there is already one for Kerberos authentication - which is probably the case everywhere from a security point of view).
-*   An encrypted connection can be made against AD via LDAPS (TLS/SSL already at connection establishment) or STARTTLS (explicit command at the beginning of the connection)
-*   It is a mixture of client and server settings (links below) when LDAP Channel Binding and LDAP Signing is considered; not every system (Linux) supports out oft he box all options.
+*   Un certificat est nécessaire qui répond à certaines exigences ([https://support.microsoft.com/en-us/help/321051/how-to-enable-ldap-over-ssl-with-a-third-party-certification-authority](https://support.microsoft.com/en-us/help/321051/how-to-enable-ldap-over-ssl-with-a-third-party-certification-authority)).
+*   S'il est possible, il devrait y avoir un seul certificat à cette fin sur un DC (devient intéressant s'il y en a déjà un pour l'authentification Kerberos - ce qui est probablement le cas partout d'un point de vue sécurité).
+*   Une connexion chiffrée peut être établie contre AD via LDAPS (TLS/SSL déjà à l'établissement de la connexion) ou STARTTLS (commande explicite au début de la connexion)
+*   Il s'agit d'un mélange de paramètres client et serveur (liens ci-dessous) lorsque la liaison de canal LDAP et la signature LDAP sont considérées; tous les systèmes (Linux) ne prennent pas en charge toutes les options par défaut.
 
-Linkservice:
-============
+Service de liens:
+=================
 
 [https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows)
 
-[https://support.microsoft.com/en-us/help/935834/how-to-enable-ldap-signing-in-windows-server](https://support.microsoft.com/en-us/help/935834/how-to-enable-ldap-signing-in-windows-server)
+[https://support.microsoft.com/en-us/help/935834/how-to-enable-ldap-signing-in-windows-server](https://support.microsoft.com/en-us/help/935834/how-to-enable-ldap-signing-in-windows-server) 
+
+{/*examples*/}
 
 [https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ldap-channel-binding-and-ldap-signing-requirements-march-2020/ba-p/921536#](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ldap-channel-binding-and-ldap-signing-requirements-march-2020/ba-p/921536#)
 
 [https://support.microsoft.com/en-in/help/4034879/how-to-add-the-ldapenforcechannelbinding-registry-entry](https://support.microsoft.com/en-in/help/4034879/how-to-add-the-ldapenforcechannelbinding-registry-entry)
 
-Maybe the steps MS recommends to solve the problem could help?
+Peut-être que les étapes recommandées par MS pour résoudre le problème pourraient aider?
 ==============================================================
 
 *   [https://support.microsoft.com/en-us/help/938703/how-to-troubleshoot-ldap-over-ssl-connection-problems](https://support.microsoft.com/en-us/help/938703/how-to-troubleshoot-ldap-over-ssl-connection-problems)
 
-If you found the problem it would help to share the information with us. Feel free to email us at [help@i-doit.com](mailto:help@i-doit.com)
+Si vous avez trouvé le problème, il serait utile de partager l'information avec nous. N'hésitez pas à nous envoyer un e-mail à [help@i-doit.com](mailto:help@i-doit.com)
 ===========================================================================================================================================

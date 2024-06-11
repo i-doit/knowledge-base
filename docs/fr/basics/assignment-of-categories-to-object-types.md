@@ -1,48 +1,50 @@
-# Assignment of Categories to Object Types
+# Attribution des Catégories aux Types d'Objets
 
-Editing the data structure enables you to manage the assignments of [object type groups](../glossary.md), [object types](../glossary.md) and [categories](../glossary.md) comfortably and to adapt them to your requirements.
+La modification de la structure de données vous permet de gérer confortablement les attributions des [groupes de types d'objets](../glossary.md), des [types d'objets](../glossary.md) et des [catégories](../glossary.md) et de les adapter à vos besoins.
 
-## Accessing Edit data structure
+## Accès à la modification de la structure de données
 
-You can edit the data structure at **Administration → Data structure → Edit data structure**. No data is deleted when changes are made. The data structure is only relevant for the presentation of data.
+Vous pouvez modifier la structure de données à **Administration → Structure de données → Modifier la structure de données**. Aucune donnée n'est supprimée lors des modifications. La structure de données est uniquement pertinente pour la présentation des données.
 
-[![Edit data structure](../assets/images/en/basics/assignment-of-categories-to-object-types/1-aoctot.png)](../assets/images/en/basics/assignment-of-categories-to-object-types/1-aoctot.png)
+[![Modifier la structure de données](../assets/images/en/basics/assignment-of-categories-to-object-types/1-aoctot.png)](../assets/images/en/basics/assignment-of-categories-to-object-types/1-aoctot.png)
 
-## Layout of the Data structure
+## Mise en page de la structure de données
 
-The configuration of assignments is carried out via a separation into three columns. These columns represent your ==Object type-Groups==, ==Object types== and ==Categories==. In each column there is a dotted area per line allowing you to change the order per drag and drop.
+La configuration des attributions se fait via une séparation en trois colonnes. Ces colonnes représentent vos ==Groupes de Types d'Objets==, ==Types d'Objets== et ==Catégories==. Dans chaque colonne, il y a une zone en pointillés par ligne vous permettant de changer l'ordre par glisser-déposer.
 
-[![Layout of the Data structure](../assets/images/en/basics/assignment-of-categories-to-object-types/2-aoctot.png)](../assets/images/en/basics/assignment-of-categories-to-object-types/2-aoctot.png)
+[![Mise en page de la structure de données](../assets/images/en/basics/assignment-of-categories-to-object-types/2-aoctot.png)](../assets/images/en/basics/assignment-of-categories-to-object-types/2-aoctot.png)
 
-## Adjusting Object type-Groups, Object types and Categories
+## Ajustement des groupes de types d'objets, des types d'objets et des catégories
 
-In all three main fields you can change into the editing mode by pressing the :octicons-pencil-24: Adjust button for adjustments.<br>
-Here you can edit the assignments of the respective object group, but you can also create and develop new groups, object types or categories.
+Dans les trois principaux champs, vous pouvez passer en mode édition en appuyant sur le bouton :octicons-pencil-24: Ajuster pour effectuer des ajustements.<br>
+Ici, vous pouvez modifier les affectations du groupe d'objets respectif, mais vous pouvez également créer et développer de nouveaux groupes, types d'objets ou catégories.
 
-[![Adjusting Object type-Groups, Object Types and Categories](../assets/images/en/basics/assignment-of-categories-to-object-types/4-aoctot.png)](../assets/images/en/basics/assignment-of-categories-to-object-types/4-aoctot.png)
+[![Ajustement des groupes de types d'objets, des types d'objets et des catégories](../assets/images/en/basics/assignment-of-categories-to-object-types/4-aoctot.png)](../assets/images/en/basics/assignment-of-categories-to-object-types/4-aoctot.png)
 
-## Editing the Assignments
+## Édition des affectations
 
-You start editing in the left column, which is the column for object type-Groups. Here you can select the object type-Groups for which you want to adjust the object type assignment. Click on the corresponding group so that the middle column is activated. In case you don't need the groups, you can hide them by using the checkboxes.<br>
-When a group has been selected and the middle column is active, you can determine which object types are assigned to the corresponding group. Object types that are grayed out are already assigned to other groups, but can still be reassigned.<br>
-You can add custom groups at the bottom of the object group column. They have a pencil icon in their line so that you can edit or delete them at any time.<br>
-The same applies to the object type column. Here you can create [custom object types](./custom-object-types.md). For an extensive configuration of an object type however, we recommend the use of the object type configuration.<br>
-When clicking on an object type in the middle column, the right column is activated. Here you can see the categories assigned to the selected object type and you can change or remove the assignments via the checkboxes.<br>
-The **Create custom categories** button will forward you directly to the function for creating [custom categories](./custom-categories.md).
+Vous commencez l'édition dans la colonne de gauche, qui est la colonne des groupes de types d'objets. Ici, vous pouvez sélectionner les groupes de types d'objets pour lesquels vous souhaitez ajuster l'affectation des types d'objets. Cliquez sur le groupe correspondant pour activer la colonne du milieu. Si vous n'avez pas besoin des groupes, vous pouvez les masquer en utilisant les cases à cocher.<br>
+Lorsqu'un groupe est sélectionné et que la colonne du milieu est active, vous pouvez déterminer quels types d'objets sont assignés au groupe correspondant. Les types d'objets qui sont grisés sont déjà assignés à d'autres groupes, mais peuvent toujours être réaffectés.<br>
+Vous pouvez ajouter des groupes personnalisés en bas de la colonne des groupes d'objets. Ils ont une icône de crayon sur leur ligne afin que vous puissiez les éditer ou les supprimer à tout moment.<br>
+Il en va de même pour la colonne des types d'objets. Ici, vous pouvez créer [des types d'objets personnalisés](./custom-object-types.md). Pour une configuration approfondie d'un type d'objet, cependant, nous recommandons l'utilisation de la configuration du type d'objet.<br>
+En cliquant sur un type d'objet dans la colonne du milieu, la colonne de droite est activée. Ici, vous pouvez voir les catégories assignées au type d'objet sélectionné et vous pouvez modifier ou supprimer les affectations via les cases à cocher.<br>
+Le bouton **Créer des catégories personnalisées** vous dirigera directement vers la fonction de création de [catégories personnalisées](./custom-categories.md). 
 
-## Edit data structure Profiles
+{ /* examples */ }
 
-You can save your current configuration in the form of a profile. For this purpose, enter a name for the profile at **Save current profile**. The profile will then appear in the available profiles. Here it is possible to activate a profile, delete it or to download it. Activate the checkbox of the desired profile and click **Load selected profile** to restore the assignment from the selected profile. By using the Download button you can save the profile as an XML file and upload it again by using the button **Choose file**, if required.
+## Modifier la structure de données Profils {/ * exemples * /}
 
-This feature is suitable to exchange configuration data between multiple _i-doit_ installations. A profile contains the following settings:
+Vous pouvez enregistrer votre configuration actuelle sous forme de profil. À cette fin, saisissez un nom pour le profil dans **Enregistrer le profil actuel**. Le profil apparaîtra alors dans les profils disponibles. Il est possible d'activer un profil, de le supprimer ou de le télécharger. Activez la case à cocher du profil souhaité et cliquez sur **Charger le profil sélectionné** pour restaurer l'attribution à partir du profil sélectionné. En utilisant le bouton de téléchargement, vous pouvez enregistrer le profil sous forme de fichier XML et le télécharger à nouveau en utilisant le bouton **Choisir un fichier**, si nécessaire.
 
--   Object type-Groups with names, order and further attributes
--   Objekt types with names, assignments to Object type-Groups and other attributes from the object type configuration
--   Global, specific and custom categories assigned to each object type
--   Configuration of each custom category which is assigned to at least one object type
+Cette fonctionnalité est adaptée pour échanger des données de configuration entre plusieurs installations _i-doit_. Un profil contient les paramètres suivants :
 
-Accordingly, a profile contains the configuration of the IT documentation but no contents. Neither objects, category entries nor filled-in dialog fields are saved.
+- Groupes de types d'objets avec des noms, un ordre et d'autres attributs
+- Types d'objets avec des noms, des affectations à des groupes de types d'objets et d'autres attributs de la configuration des types d'objets
+- Catégories globales, spécifiques et personnalisées attribuées à chaque type d'objet
+- Configuration de chaque catégorie personnalisée qui est attribuée à au moins un type d'objet
 
-## Clear Configuration
+En conséquence, un profil contient la configuration de la documentation informatique mais aucun contenu. Ni les objets, ni les entrées de catégorie, ni les champs de dialogue remplis ne sont enregistrés.
 
-If you wish to have a clear state to carry out the assignments from scratch, you can reset all assignments via the **Clear** button.
+## Configuration Claire
+
+Si vous souhaitez avoir un état clair pour effectuer les affectations à partir de zéro, vous pouvez réinitialiser toutes les affectations via le bouton **Effacer**.

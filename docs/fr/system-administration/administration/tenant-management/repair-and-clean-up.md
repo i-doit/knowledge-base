@@ -1,78 +1,78 @@
-# Repair and clean up
+# Réparation et nettoyage
 
 !!! warning ""
 
-    Note: Please make sure that you have created a backup of your database.<br>
-    These functions will perform changes on your data. Please make sure you have an up-to-date backup of your database.<br>
-    Any changes can't be reverted.
+    Note: Assurez-vous d'avoir créé une sauvegarde de votre base de données.<br>
+    Ces fonctions effectueront des modifications sur vos données. Assurez-vous d'avoir une sauvegarde à jour de votre base de données.<br>
+    Toute modification ne peut pas être annulée.
 
 ## Cache
 
-| Button | Description |
+| Bouton | Description |
 | - | - |
-| Clear complete Cache | Clear complete Cache |
-| Clear system cache | Clear system cache |
-| Clear template cache | Clear template cache |
-| Clear auth-system cache | Clear auth-system cache |
-| Clear quick info cache | Clear quick info cache |
-| Renew the validation cache | Renew the validation cache |
+| Vider le cache complet | Vider le cache complet |
+| Vider le cache système | Vider le cache système |
+| Vider le cache des modèles | Vider le cache des modèles |
+| Vider le cache du système d'authentification | Vider le cache du système d'authentification |
+| Vider le cache des informations rapides | Vider le cache des informations rapides |
+| Renouveler le cache de validation | Renouveler le cache de validation |
 
 
-## Database
+## Base de données
 
-| Button | Description |
+| Bouton | Description |
 | - | - |
-| Optimize tables | Optimize tables |
-| Defragmentate tables | Defragmentate tables |
-| Correct locations | Correct locations |
-| Remove multiple assigned categories | Remove multiple assigned categories |
-| Re-index category attributes | Re-index category attributes |
-| Remove multiple entries in single-value categories | Remove multiple entries in single-value categories |
-| Delete unassigned relation objects | Delete unassigned relation objects |
-| Re-new titles of relation objects | Re-new titles of relation objects |
-| Fill up empty SYS-IDs | Fill up empty SYS-IDs |
-| Set weight of all relation types to default | Set weight of all relation types to default |
-| Re-new relation objects | Re-new relation objects |
-| Enable to click on rows in object lists | Enable to click on rows in object lists |
+| Optimiser les tables | Optimiser les tables |
+| Défragmenter les tables | Défragmenter les tables |
+| Corriger les emplacements | Corriger les emplacements |
+| Supprimer les catégories assignées multiples | Supprimer les catégories assignées multiples |
+| Réindexer les attributs de catégorie | Réindexer les attributs de catégorie |
+| Supprimer les entrées multiples dans les catégories à valeur unique | Supprimer les entrées multiples dans les catégories à valeur unique |
+| Supprimer les objets de relation non assignés | Supprimer les objets de relation non assignés |
+| Renouveler les titres des objets de relation | Renouveler les titres des objets de relation |
+| Remplir les ID SYS vides | Remplir les ID SYS vides |
+| Définir le poids de tous les types de relation par défaut | Définir le poids de tous les types de relation par défaut |
+| Renouveler les objets de relation | Renouveler les objets de relation |
+| Autoriser le clic sur les lignes dans les listes d'objets | Autoriser le clic sur les lignes dans les listes d'objets |
 
 ## Export
 
-| Button | Description |
+| Bouton | Description |
 | - | - |
-| "mysqldump" Path | Directory path with selection of the exported Database |
+| Chemin "mysqldump" | Chemin du répertoire avec sélection de la base de données exportée |
 
-## Objects
+## Objets
 
-| Button | Description |
+| Bouton | Description |
 | - | - |
-| Remove unfinished objects | Remove unfinished objects |
-| Remove archived objects | Remove archived objects |
-| Remove deleted objects | Remove deleted objects |
+| Supprimer les objets inachevés | Supprimer les objets inachevés |
+| Supprimer les objets archivés | Supprimer les objets archivés |
+| Supprimer les objets supprimés | Supprimer les objets supprimés |
 
 
-## Categories
+## Catégories
 
-| Button | Description |
+| Bouton | Description |
 | - | - |
-| Remove unfinished category entries | Remove unfinished category entries |
-| Remove archived category entries | Remove archived category entries |
-| Remove deleted category entries | Remove deleted category entries |
+| Supprimer les entrées de catégorie inachevées | Supprimer les entrées de catégorie inachevées |
+| Supprimer les entrées de catégorie archivées | Supprimer les entrées de catégorie archivées |
+| Supprimer les entrées de catégorie supprimées | Supprimer les entrées de catégorie supprimées |
 
-## Dialog
+## Dialogue
 
-| Button | Description |
+| Bouton | Description |
 | - | - |
-| Remove unfinished dialog entries | Remove unfinished dialog entries |
-| Remove archived dialog entries | Remove archived dialog entries |
-| Remove deleted dialog entries | Remove deleted dialog entries |
-| Set all dialog entries to normal | Set all dialog entries to normal |
+| Supprimer les entrées de dialogue inachevées | Supprimer les entrées de dialogue inachevées |
+| Supprimer les entrées de dialogue archivées | Supprimer les entrées de dialogue archivées |
+| Supprimer les entrées de dialogue supprimées | Supprimer les entrées de dialogue supprimées |
+| Définir toutes les entrées de dialogue en normal | Définir toutes les entrées de dialogue en normal |
 
-## Other
+## Autre
 
-| Button | Description |
+| Bouton | Description |
 | - | - |
-| Re-new search index | Re-new search index |
-| Migrate database objects into categories | Migrate database objects into categories |
-| Enable search for substrings in object lists | Enable search for substrings in object lists |
-| Swap old object type icons with redesigned ones | Swap old object type icons with redesigned ones |
-| Remove orphaned entries in custom categories | Remove orphaned entries in custom categories |
+| Renouveler l'index de recherche | Renouveler l'index de recherche |
+| Migrer les objets de la base de données en catégories | Migrer les objets de la base de données en catégories |
+| Activer la recherche de sous-chaînes dans les listes d'objets | Activer la recherche de sous-chaînes dans les listes d'objets |
+| Échanger les anciennes icônes de type d'objet par celles redessinées | Échanger les anciennes icônes de type d'objet par celles redessinées |
+| Supprimer les entrées orphelines dans les catégories personnalisées | Supprimer les entrées orphelines dans les catégories personnalisées |

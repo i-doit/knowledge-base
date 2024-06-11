@@ -1,33 +1,33 @@
-# Release Notes 29
+# Notes de version 29 {/ * exemples * /}
 
-We're happy to announce i-doit pro 29. This version will get a lot of tweaks and improvements under the hood.
-This i-doit version will add support for **PHP 8.2**. This means PHP versions from 7.4 to 8.2 can be used so you can perform an update without having to worry about compatibility. Please note that **PHP 7.4** will **no longer** be supported with upcoming releases of i-doit.
+Nous sommes heureux d'annoncer i-doit pro 29. Cette version apportera de nombreuses améliorations sous le capot.
+Cette version d'i-doit ajoutera la prise en charge de **PHP 8.2**. Cela signifie que les versions de PHP de 7.4 à 8.2 peuvent être utilisées afin que vous puissiez effectuer une mise à jour sans vous soucier de la compatibilité. Veuillez noter que **PHP 7.4** ne sera **plus** pris en charge avec les prochaines versions d'i-doit.
 
-Users of **SSO** will also experience a change. The login does no longer happen automatically. Instead there will be an option to use SSO on your login screen so you are able to logout properly, if needed. To perform an automated login, you can use the parameter "?use-sso=1" in your URL.
+Les utilisateurs de **SSO** verront également un changement. La connexion ne se fera plus automatiquement. Au lieu de cela, il y aura une option pour utiliser SSO sur votre écran de connexion afin que vous puissiez vous déconnecter correctement, si nécessaire. Pour effectuer une connexion automatique, vous pouvez utiliser le paramètre "?use-sso=1" dans votre URL.
 
-To provide more comfort, we added some features directly into i-doit. Now you can see **license details** and **download add-ons** directly within your administration if you are using a single tenant license.
-We also improved the **object matching** for the **JDisc import**. You are able to use different matching profiles for each mapped object type. This will ^^_replace_^^ the previous setting regarding the matching profile. The new configuration can be found in your mapping list. ^^Please check the selected matching profile before your next import.^^
+Pour plus de confort, nous avons ajouté quelques fonctionnalités directement dans i-doit. Maintenant, vous pouvez voir les **détails de la licence** et **télécharger des modules complémentaires** directement dans votre administration si vous utilisez une licence mono-locataire.
+Nous avons également amélioré la **correspondance des objets** pour l'**importation JDisc**. Vous pouvez utiliser différents profils de correspondance pour chaque type d'objet mappé. Cela ^^_remplacera_^^ le paramètre précédent concernant le profil de correspondance. La nouvelle configuration se trouve dans votre liste de mappage. ^^Veuillez vérifier le profil de correspondance sélectionné avant votre prochaine importation.^^
 
-During the update process, i-doit will check for users with non-unique usernames and let you know about them. Please make sure to adjust any found usernames before version 31.
-To further increase the overall experience, we added an optional survey which you can take any time to send your feedback. The link to the survey is found in the context menu at the top right.
-You will find a detailed list of the changes in the [changelog](../changelogs/changelog-29.md). We encourage you to [update](../../maintenance-and-operation/index.md) to this release as soon as possible to benefit from all of these improvements.
+Pendant le processus de mise à jour, i-doit vérifiera les utilisateurs ayant des noms d'utilisateur non uniques et vous en informera. Assurez-vous d'ajuster tout nom d'utilisateur trouvé avant la version 31.
+Pour améliorer encore l'expérience globale, nous avons ajouté une enquête facultative que vous pouvez remplir à tout moment pour nous envoyer vos commentaires. Le lien vers l'enquête se trouve dans le menu contextuel en haut à droite.
+Vous trouverez une liste détaillée des changements dans le [journal des modifications](../changelogs/changelog-29.md). Nous vous encourageons à [mettre à jour](../../maintenance-and-operation/index.md) vers cette version dès que possible pour bénéficier de toutes ces améliorations.
 
-**Highlights in this release**
+**Points forts de cette version**
 
--   New **PHP 8.2** compatibility.
--   Improved **object matching** for **JDisc import**.
--   New **overviews** (license and add-on) in the administration for single tenant installations.
--   Information on non-unique **usernames** during the update process.
--   New link to **optional survey** link to send your feedback.
+-   Nouvelle compatibilité avec **PHP 8.2**.
+-   Amélioration de la **correspondance des objets** pour l'**importation JDisc**.
+-   Nouvelles **vues d'ensemble** (licence et complément) dans l'administration pour les installations mono-locataires.
+-   Informations sur les **noms d'utilisateur** non uniques pendant le processus de mise à jour.
+-   Nouveau lien vers l'**enquête facultative** pour envoyer vos commentaires.
 
-**Add-ons**
+**Compléments**
 
-We also release new versions of the following add-ons:
+Nous publions également de nouvelles versions des compléments suivants:
 
--   [Analysis](../../i-doit-pro-add-ons/analysis.md) 1.5
+-   [Analyse](../../i-doit-pro-add-ons/analysis.md) 1.5
 -   [API](../../i-doit-pro-add-ons/api/index.md) 1.16
--   [Cabling](../../i-doit-pro-add-ons/cabling.md) 1.4
+-   [Câblage](../../i-doit-pro-add-ons/cabling.md) 1.4
 -   [Documents](../../i-doit-pro-add-ons/documents/index.md) 1.7
--   [Floorplan](../../i-doit-pro-add-ons/floorplan.md) 1.8
+-   [Plan d'étage](../../i-doit-pro-add-ons/floorplan.md) 1.8
 
-Please make sure that you fulfill all the requirements before installing these new versions.
+Assurez-vous de respecter toutes les exigences avant d'installer ces nouvelles versions.

@@ -1,23 +1,22 @@
-System requirements
+Exigences système
 -------------------
 
-*   i-doit 1.12 supports PHP 5.6, 7.0, 7.1 and 7.2.
+*   i-doit 1.12 prend en charge PHP 5.6, 7.0, 7.1 et 7.2.
     
-*   The use of PHP 5.6 is deprecated in i-doit 1.12 and will be unsupported starting with i-doit 1.13.
-    
-
-Notes
------
-
-*   The Check\_MK, Nagios export and Workflow features are now available as separate (free to use) add-ons.
+*   L'utilisation de PHP 5.6 est déconseillée dans i-doit 1.12 et ne sera plus prise en charge à partir de i-doit 1.13.
     
 
-*   When starting with a fresh installation, they need to be installed via the Admin Center.
-    
-*   When updating i-doit, you do not need to do anything. They will show up as add-ons in the Admin-Center automatically.
+<Notes>
+
+*   Les fonctionnalités Check\_MK, exportation Nagios et Workflow sont désormais disponibles en tant que modules complémentaires séparés (gratuits à utiliser).
     
 
-*   Category-constants containing the string “SUBCAT” will be renamed (Beware if you are using the i-doit API)  
+*   Lors d'une nouvelle installation, ils doivent être installés via le Centre d'administration.
+    
+*   Lors de la mise à jour de i-doit, vous n'avez rien à faire. Ils apparaîtront automatiquement en tant que modules complémentaires dans le Centre d'administration.
+    
+
+*   Les constantes de catégorie contenant la chaîne "SUBCAT" seront renommées (Attention si vous utilisez l'API i-doit)  
       
     
 
@@ -37,4 +36,4 @@ Notes
 | C\_\_CMDB\_\_SUBCAT\_\_FILE\_VERSIONS | C\_\_CATS\_\_FILE\_VERSIONS |
 | C\_\_CMDB\_\_SUBCAT\_\_FILE\_ACTUAL | C\_\_CATS\_\_FILE\_ACTUAL |
 
-For any questions do not hesitate to contact our support at [https://help.i-doit.com](https://help.i-doit.com)
+Pour toute question, n'hésitez pas à contacter notre support à [https://help.i-doit.com](https://help.i-doit.com)

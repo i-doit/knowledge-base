@@ -1,67 +1,70 @@
-# Floorplan
+# Plan d'étage {/examples}
 
-Via the **Floorplan** [add-on](./index.md) it is possible for you to assign graphical plans to all [objects](../basics/structure-of-the-it-documentation.md) which are location objects, to match them with measurements and to position the locally assigned objects in this plan.
+Via l'**extension** **Plan d'étage** [add-on](./index.md), il est possible de vous attribuer des plans graphiques à tous les [objets](../basics/structure-of-the-it-documentation.md) qui sont des objets de localisation, de les assortir de mesures et de positionner les objets attribués localement dans ce plan.
 
-[![Floorplan](../assets/images/en/i-doit-pro-add-ons/floorplan/1-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/1-fp.png)
+[![Plan d'étage](../assets/images/en/i-doit-pro-add-ons/floorplan/1-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/1-fp.png)
 
-This add-on is [installed via the admin center](./index.md). Afterwards you will find it at **Extras → Floorplan**.
+Cette extension est [installée via le centre d'administration](./index.md). Ensuite, vous la trouverez dans **Extras → Plan d'étage**.
 
-[![Access](../assets/images/en/i-doit-pro-add-ons/floorplan/2-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/2-fp.png)
+[![Accès](../assets/images/en/i-doit-pro-add-ons/floorplan/2-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/2-fp.png)
 
-Rights assignment
------------------
+Attribution des droits
+----------------------
 
-Under **Administration → Authorization system → Rights → Floorplan**, rights for persons and groups of persons can be adjusted.
+Sous **Administration → Système d'autorisation → Droits → Plan d'étage**, les droits des personnes et des groupes de personnes peuvent être ajustés.
 
-[![Rights assignment](../assets/images/en/i-doit-pro-add-ons/floorplan/3-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/3-fp.png)
+[![Attribution des droits](../assets/images/en/i-doit-pro-add-ons/floorplan/3-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/3-fp.png)
 ------------------------------------------------------------------------------------------------------------------------------------
 
-Create a Floorplan
-------------------
+Créer un plan d'étage
+-----------------------
 
-The objects for which you wish to create a floorplan can be selected via the magnifier [![icon](../assets/images/en/i-doit-pro-add-ons/floorplan/4-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/4-fp.png) at the top of the screen. All [object types](../basics/structure-of-the-it-documentation.md) that can serve as locations are available for this. If floorplans have been created already, these can be selected and opened via the multicolored table [![icon](../assets/images/en/i-doit-pro-add-ons/floorplan/5-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/5-fp.png) next to the magnifier. Graphics as for example the layout of a room can be put in the background via the [![icon](../assets/images/en/i-doit-pro-add-ons/floorplan/6-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/6-fp.png) button. A scale can be added to this graphic using the [![icon](../assets/images/en/i-doit-pro-add-ons/floorplan/7-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/7-fp.png) button. The measuring of the room helps for the positioning of objects later on so that these can be represented true to their scale and their defined formfactor.
+Les objets pour lesquels vous souhaitez créer un plan d'étage peuvent être sélectionnés via la loupe [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/4-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/4-fp.png) en haut de l'écran. Tous les [types d'objets](../basics/structure-of-the-it-documentation.md) pouvant servir de lieux sont disponibles à cet effet. Si des plans d'étage ont déjà été créés, ceux-ci peuvent être sélectionnés et ouverts via le tableau multicolore [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/5-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/5-fp.png) à côté de la loupe. Des graphiques tels que la disposition d'une pièce peuvent être placés en arrière-plan via le bouton [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/6-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/6-fp.png). Une échelle peut être ajoutée à ce graphique en utilisant le bouton [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/7-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/7-fp.png). La mesure de la pièce aide à positionner les objets plus tard afin qu'ils puissent être représentés à l'échelle et selon leur facteur de forme défini. 
 
-The following graphic formats are supported for the floorplan: bmp, png, jpg, jpeg, gif. The maximum file size is limited to 5mb.
+{/*examples*/}
+
+
+Les formats graphiques suivants sont pris en charge pour le plan d'étage : bmp, png, jpg, jpeg, gif. La taille maximale du fichier est limitée à 5 Mo.
 
 [![formats](../assets/images/en/i-doit-pro-add-ons/floorplan/8-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/8-fp.png)
 
-Assign and Place Objects
+Attribuer et Placer des Objets
 
-Via the [![Assign Objects](../assets/images/en/i-doit-pro-add-ons/floorplan/9-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/9-fp.png) button you can access an overview list of all objects which are locally assigned.
+Via le bouton [![Attribuer des Objets](../assets/images/en/i-doit-pro-add-ons/floorplan/9-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/9-fp.png), vous pouvez accéder à une liste d'aperçu de tous les objets qui sont attribués localement.
 
-[![Place Objects](../assets/images/en/i-doit-pro-add-ons/floorplan/10-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/10-fp.png)
+[![Placer des Objets](../assets/images/en/i-doit-pro-add-ons/floorplan/10-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/10-fp.png)
 
-All objects that are displayed with a green [![icon](../assets/images/en/i-doit-pro-add-ons/floorplan/11-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/11-fp.png) are not yet assigned within the plan. You can either do this for each single object using the [![icon](../assets/images/en/i-doit-pro-add-ons/floorplan/12-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/12-fp.png) button or you can put all objects on the plan at once by using the [![icon](../assets/images/en/i-doit-pro-add-ons/floorplan/13-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/13-fp.png) button. Objects that have not yet been locally assigned to this object can be assigned using the [![icon](../assets/images/en/i-doit-pro-add-ons/floorplan/14-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/14-fp.png) button which makes those objects available for positioning. Once the objects are on the plan they can be moved and selected via double click.
+Tous les objets affichés avec un [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/11-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/11-fp.png) vert ne sont pas encore attribués dans le plan. Vous pouvez le faire pour chaque objet individuel en utilisant le bouton [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/12-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/12-fp.png) ou vous pouvez placer tous les objets sur le plan en une seule fois en utilisant le bouton [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/13-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/13-fp.png). Les objets qui n'ont pas encore été attribués localement à cet objet peuvent être attribués en utilisant le bouton [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/14-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/14-fp.png), ce qui rend ces objets disponibles pour le positionnement. Une fois les objets sur le plan, ils peuvent être déplacés et sélectionnés en double-cliquant.
 
-Adjust and Form Objects on the Floorplan
+Ajuster et Former des Objets sur le Plan d'Étage
 ----------------------------------------
 
-In the left area you will find the option to further adjust and form objects. As soon as an object is selected it can be edited:
+Dans la zone de gauche, vous trouverez l'option pour ajuster et former davantage les objets. Dès qu'un objet est sélectionné, il peut être édité :
 
-[![Change position](../assets/images/en/i-doit-pro-add-ons/floorplan/15-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/15-fp.png) Change position: This selects the object and it can be positioned immediately (same function as double clicking the object).
+[![Changer la position](../assets/images/en/i-doit-pro-add-ons/floorplan/15-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/15-fp.png) Changer la position : Cela sélectionne l'objet et il peut être positionné immédiatement (même fonction que double-cliquer sur l'objet).
 
-[![objectform](../assets/images/en/i-doit-pro-add-ons/floorplan/16-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/16-fp.png) Choose / create objectform: The form of the object can be adjusted as desired. Custom forms can be saved.
+[![Forme de l'objet](../assets/images/en/i-doit-pro-add-ons/floorplan/16-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/16-fp.png) Choisir / créer une forme d'objet : La forme de l'objet peut être ajustée selon vos souhaits. Des formes personnalisées peuvent être enregistrées.
 
-[![Center](../assets/images/en/i-doit-pro-add-ons/floorplan/17-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/17-fp.png) Center on object: The selected object is centered in the middle of the screen.
+[![Centrer](../assets/images/en/i-doit-pro-add-ons/floorplan/17-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/17-fp.png) Centrer sur l'objet : L'objet sélectionné est centré au milieu de l'écran.
 
-[![Rotate](../assets/images/en/i-doit-pro-add-ons/floorplan/18-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/18-fp.png) Rotate: The object can be rotated in any desired way.
+[![Rotation](../assets/images/en/i-doit-pro-add-ons/floorplan/18-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/18-fp.png) Rotation : L'objet peut être tourné de la manière souhaitée.
 
-[![Unposition object](../assets/images/en/i-doit-pro-add-ons/floorplan/19-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/19-fp.png) Unposition object: The object disappears from the floorplan but can be added again using the object list.
+[![Objet déplacé](../assets/images/en/i-doit-pro-add-ons/floorplan/19-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/19-fp.png) Objet déplacé : L'objet disparaît du plan d'étage mais peut être ajouté à nouveau en utilisant la liste des objets.
 
-[![Formfactor](../assets/images/en/i-doit-pro-add-ons/floorplan/20-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/20-fp.png) The objects data from the **Formfactor** [category](../basics/structure-of-the-it-documentation.md) are applied via this button. The object will be scaled and displayed accordingly to the set scale of the floorplan.
+[![Facteur de forme](../assets/images/en/i-doit-pro-add-ons/floorplan/20-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/20-fp.png) Les données des objets de la **catégorie Formfactor** [sont appliquées via ce bouton](../basics/structure-of-the-it-documentation.md). L'objet sera mis à l'échelle et affiché en fonction de l'échelle définie du plan d'étage.
 
-[![selection list](../assets/images/en/i-doit-pro-add-ons/floorplan/21-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/21-fp.png) Certain object types can be shown or hidden within the floorplan using this selection list in the lower area.
+[![Liste de sélection](../assets/images/en/i-doit-pro-add-ons/floorplan/21-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/21-fp.png) Certains types d'objets peuvent être affichés ou masqués dans le plan d'étage en utilisant cette liste de sélection dans la zone inférieure.
 
-[![The selected](../assets/images/en/i-doit-pro-add-ons/floorplan/22-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/22-fp.png) The selected object within the floorplan will be opened in a new tab inside the browser when you click this button.
+[![L'objet sélectionné](../assets/images/en/i-doit-pro-add-ons/floorplan/22-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/22-fp.png) L'objet sélectionné dans le plan d'étage sera ouvert dans un nouvel onglet à l'intérieur du navigateur lorsque vous cliquez sur ce bouton.
 
-When the object is selected in edit mode, it is highlighted by a blinking outline and further options are available for changing the shape and free rotation.
+Lorsque l'objet est sélectionné en mode édition, il est mis en surbrillance par un contour clignotant et d'autres options sont disponibles pour changer la forme et la rotation libre.
 
-[![Floorplan](../assets/images/en/i-doit-pro-add-ons/floorplan/23-fp.gif)](../assets/images/en/i-doit-pro-add-ons/floorplan/23-fp.gif)
+[![Plan d'étage](../assets/images/en/i-doit-pro-add-ons/floorplan/23-fp.gif)](../assets/images/en/i-doit-pro-add-ons/floorplan/23-fp.gif)
 
-## Zusammenführung von Raumplänen
+## Fusion de plans de salles
 
-It should be possible to add floorplans to a floorplan - let's think of a floor that contains several rooms. In this "floor" floorplan we want to position the "room" floorplan.
-We need to set some basic rules here - for example, we show only three levels of floorplan, that is:
+Il devrait être possible d'ajouter des plans de salles à un plan de salles - imaginons un étage qui contient plusieurs pièces. Dans ce plan d'étage "étage", nous voulons positionner le plan d'étage "pièce".
+Nous devons définir quelques règles de base ici - par exemple, nous ne montrons que trois niveaux de plan d'étage, c'est-à-dire :
 
 ```text
 Base floorplan:
@@ -78,103 +81,106 @@ Base floorplan:
         -   obj H
 ```
 
-Let us imagine we are currently viewing "main floorplan". We should be able to see the nested "floorplan A" and inside of that we should be able to see "floorplan B" (including "obj E" and "obj F"). But "floorplan C" will not be displayed as floorplan - instead it will look like a basic object, because we limit the nested floorplans to three levels (to prevent recursion, memory and performance issues).
+Imaginons que nous visualisons actuellement le "plan d'étage principal". Nous devrions pouvoir voir le plan d'étage imbriqué "A" et à l'intérieur de celui-ci, nous devrions pouvoir voir le plan d'étage "B" (comprenant "obj E" et "obj F"). Mais le "plan d'étage C" ne sera pas affiché en tant que plan d'étage - à la place, il ressemblera à un objet de base, car nous limitons les plans d'étage imbriqués à trois niveaux (pour éviter les problèmes de récursion, de mémoire et de performances).
 
-### How it works
+### Comment ça fonctionne {/examples}
 
-If you are viewing "main floorplan" you can move "floorplan A" and "floorplan B" like the other objects ("obj A" and "obj B") - you can not edit anything inside this imported
+Si vous consultez le "plan d'étage principal", vous pouvez déplacer "le plan d'étage A" et "le plan d'étage B" comme les autres objets ("obj A" et "obj B") - vous ne pouvez pas modifier quoi que ce soit à l'intérieur de celui-ci.
 
-### When can a nested floorplan be displayed?
+### Quand un plan d'étage imbriqué peut-il être affiché?
 
-In order to display "floorplan A" as floorplan inside "main floorplan" it has to fulfill one of these conditions:
+Pour afficher "le plan d'étage A" en tant que plan d'étage à l'intérieur du "plan d'étage principal", il doit remplir l'une de ces conditions :
 
--   Have a background image
--   Have a layout
+-   Avoir une image de fond
+-   Avoir une mise en page
 
-If one of these conditions is met, you will see the following icon, when editing a floorplan object (inside another floorplan):
+Si l'une de ces conditions est remplie, vous verrez l'icône suivante lorsque vous modifiez un objet de plan d'étage (à l'intérieur d'un autre plan d'étage) :
 
-[![icon](../assets/images/en/i-doit-pro-add-ons/floorplan/add-on-icon.svg)](../assets/images/en/i-doit-pro-add-ons/floorplan/add-on-icon.svg)
+[![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/add-on-icon.svg)](../assets/images/en/i-doit-pro-add-ons/floorplan/add-on-icon.svg)
 
-Example
+Exemple
 
-[![example gif](../assets/images/en/i-doit-pro-add-ons/floorplan/floorplan-toggle.gif)](../assets/images/en/i-doit-pro-add-ons/floorplan/floorplan-toggle.gif)
+[![exemple gif](../assets/images/en/i-doit-pro-add-ons/floorplan/floorplan-toggle.gif)](../assets/images/en/i-doit-pro-add-ons/floorplan/floorplan-toggle.gif)
 
-The floorplan should be scaled to the previous object size, the layout / background image will be used to determine the scale.
+Le plan d'étage doit être mis à l'échelle par rapport à la taille de l'objet précédent, la mise en page / l'image de fond sera utilisée pour déterminer l'échelle.
 
-Floorplan Profiles
-------------------
+Profils de plan d'étage
+-----------------------
 
-Profiles can be created so that only certain objects or attributes of the objects are displayed.  
-A profile is supplied with the program. Of course, you can also create your own profiles.
+Des profils peuvent être créés afin que seuls certains objets ou attributs des objets soient affichés.  
+Un profil est fourni avec le programme. Bien sûr, vous pouvez également créer vos propres profils.
 
-[![Floorplan Profiles](../assets/images/en/i-doit-pro-add-ons/floorplan/24-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/24-fp.png)
+[![Profils du plan d'étage](../assets/images/en/i-doit-pro-add-ons/floorplan/24-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/24-fp.png)
 
-To create a new profile click on [![profiles](../assets/images/en/i-doit-pro-add-ons/floorplan/25-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/25-fp.png).  
-This opens a popup window in which the profiles are managed.
+Pour créer un nouveau profil, cliquez sur [![profils](../assets/images/en/i-doit-pro-add-ons/floorplan/25-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/25-fp.png).  
+Cela ouvre une fenêtre contextuelle dans laquelle les profils sont gérés.
 
-[![profiles](../assets/images/en/i-doit-pro-add-ons/floorplan/26-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/26-fp.png)
+[![profils](../assets/images/en/i-doit-pro-add-ons/floorplan/26-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/26-fp.png)
 
-After clicking on "Create new profile" we get to the editing view. Here we first assign the name of the profile. Then we can choose whether "Open object view when clicking on object" should be activated and whether  
-whether "Double-click on object to open in new tab" should be activated.
+Après avoir cliqué sur "Créer un nouveau profil", nous arrivons à la vue d'édition. Ici, nous attribuons d'abord le nom du profil. Ensuite, nous pouvons choisir si "Ouvrir la vue objet en cliquant sur l'objet" doit être activé et si  
+si "Double-cliquer sur l'objet pour l'ouvrir dans un nouvel onglet" doit être activé.
 
-**In the Visualization Options tab we have a choice:**
+**Dans l'onglet Options de visualisation, nous avons le choix :**
 
-[![Highlight color](../assets/images/en/i-doit-pro-add-ons/floorplan/27-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/27-fp.png)
+[![Couleur de mise en évidence](../assets/images/en/i-doit-pro-add-ons/floorplan/27-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/27-fp.png)
 
--   Highlight color: Here you can select a color that outlines the object when it is clicked.  
-    With the selection of #FB481C this would look like this
+-   Couleur de mise en évidence : Ici, vous pouvez sélectionner une couleur qui contourne l'objet lorsqu'il est cliqué.  
+    Avec la sélection de #FB481C, cela ressemblerait à cela
 
-[![Show object radius](../assets/images/en/i-doit-pro-add-ons/floorplan/28-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/28-fp.png)
+[![Afficher le rayon de l'objet](../assets/images/en/i-doit-pro-add-ons/floorplan/28-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/28-fp.png)
 
--   Show object radius: This defines whether the object radius is displayed by default.
+-   Afficher le rayon de l'objet : Cela définit si le rayon de l'objet est affiché par défaut.
 
-**In the Default values tab an object type filter can be configured.**
+**Dans l'onglet Valeurs par défaut, un filtre de type d'objet peut être configuré.**
 
-[![filter](../assets/images/en/i-doit-pro-add-ons/floorplan/29-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/29-fp.png)
+[![filtre](../assets/images/en/i-doit-pro-add-ons/floorplan/29-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/29-fp.png)
 
-**In the Object Information tab, attributes can be selected from various categories.**
+**Dans l'onglet Informations sur l'objet, des attributs peuvent être sélectionnés dans différentes catégories.**
 
-[![attributes](../assets/images/en/i-doit-pro-add-ons/floorplan/30-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/30-fp.png)
+[![attributs](../assets/images/en/i-doit-pro-add-ons/floorplan/30-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/30-fp.png)
 
-This object information is then displayed in the object view under object information.
+Ces informations sur l'objet sont ensuite affichées dans la vue de l'objet sous les informations sur l'objet.
 
-[![object information](../assets/images/en/i-doit-pro-add-ons/floorplan/31-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/31-fp.png)
+[![informations sur l'objet](../assets/images/en/i-doit-pro-add-ons/floorplan/31-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/31-fp.png)
 
-**In the Settings tab you can define the profile, globally or for users as default.**
+**Dans l'onglet Paramètres, vous pouvez définir le profil, globalement ou par défaut pour les utilisateurs.**
 
-[![defaults](../assets/images/en/i-doit-pro-add-ons/floorplan/32-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/32-fp.png)
+[![par défaut](../assets/images/en/i-doit-pro-add-ons/floorplan/32-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/32-fp.png)
+
 
 Export
 ------
 
-Floorplans can be exported as SVG or PNG file using the button [![Export](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.png).
+Les plans d'étage peuvent être exportés sous forme de fichier SVG ou PNG en utilisant le bouton [![Export](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.png). {/ * exemples *}
 
-Releases
+Versions
 --------
 
-| Version | Date | Changelog |
+| Version | Date | Journal des modifications |
 | --- | --- | --- |
-| 1.8 | 2024-02-27 | [Task] Compatibility to i-doit 29, Colorpicker and PHP 8.2 |
-| 1.7 | 2023-11-07 | [Bug] MySQL8 causes database error "incorrect DATETIME" when opening Floorplan<br>[Bug] When turning an object, the text should also turn<br>[Bug] Language constant 'LC__CMDB__CATG__ACCOUNTING_ORDER_DATE' is not replaced<br>[Bug] Highlight 'add-on' instead of 'extras' menu |
-| 1.6 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
-| 1.5.1 | 2022-02-22 | [Bug] Floorplans cannot be opened |
-| 1.5 |     | [Improvement] It is possible to display a floorplan in a floorplan  <br>[Improvement] It is possible to remove a layout from the floorplan  <br>[Improvement] It is possible to remove the background from the floorplan  <br>[Improvement] Show the object name of the current floorplan in the breadcrumb  <br>[Bug] Function to inherit formfactor data scales dimensions wrong |
-| 1.4.4 |     | [Bug] Customizable header size  <br>[Bug] Option to start chapter on new page is ignored  <br>[Bug] When saving the contents of a subchapter, new subchapters are always created  <br>[Bug] External Object function does not work in the Documents Add on  <br>[Bug] Permissions for the document add-on are incorrect (Save Template)  <br>[Bug] Creating documents always shows warning, empty templates exist  <br>[Bug] Output of the primary contact is not possible  <br>[Bug] Main object can no longer be edited in the Documents add-on when the grid is disabled  <br>[Bug] Nach dem Speichern einer Dokumentvorlage werden die Einstellungen auf der Registerkarte Optionen falsch angezeigt  <br>[Bug] Chapters from other document templates are not referenced correctly |
-| 1.4.3 |     | [Improvement] Compatibility with i-doit 1.16 |
-| 1.4.2 |     | [Bug] Permissions for the document add-on are incorrect (Save Template)  <br>[Bug] Authorizations for the document add-on are incorrect (Templates Visible)  <br>[Bug] Headers are only displayed on the first page  <br>[Bug] Attributes of SIM cards assigned to mobile phones cannot be displayed  <br>[Bug] The output of a yes/no field with nothing selected "-" is not correct  <br>[Bug] New revision of a document cannot be created if the list has been filtered |
-| 1.4.1 |     | [Improvement] Create a document for multiple objects  <br>[Improvement] Make floor plan available in the documents add-on  <br>[Bug] Tables corruptedly displayed in PDF format  <br>[Bug] The location path is displayed unsightly  <br>[Bug] Selected attributes of master object are deleted when reopened |
-| 1.4 |     | [Improvement] The size of the headings cannot be adjusted.  <br>[Improvement] Images cannot be displayed over the entire header line  <br>[Improvement] Remove requirement for PHPs "bcmath" extension  <br>[Improvement] IF Queries in User-Defined Categories  <br>[Bug] Placeholder represents only sub-request with one recursion depth  <br>[Bug] Output of the primary contact is not possible  <br>[Bug] Doku: Assigned objects from emergency plan delivers only first object  <br>[Bug] Archived contacts of the category "contact assignment" are output  <br>[Bug] Document templates cannot be sorted by creation date/change date  <br>[Bug] PDF documents do not display the formatting correctly  <br>[Bug] Image in footer is displayed in different sizes  <br>[Bug] Tables were not properly truncated when this goes over two pages  <br>[Bug] lines are unnecessarily high/wide in HTML documents |
-| 1.3.3 |     | [Bug] Category "e-mail" description field no outpot in a table  <br>[Bug] Placeholder for creation date/revision date also contains time of creation  <br>[Bug] Export of enumerated fields from the wysiwyg editor is not possible |
-| 1.3.2 |     | [Bug] Bad behavior with add-on license |
-| 1.3.1 |     | [Bug] Empty table columns can trigger PHP warnings during revision creation  <br>[Bug] Fix permission to import template from repository |
-| 1.3 |     | [Improvement] Delete a room plan  <br>[Improvement] Layers and transparency  <br>[Improvement] Floorplans can now be deleted  <br>[Improvement] Improve export options  <br>[Improvement] Provide floorplan screenshots (e.g. documents add-on)  <br>[Bug] The field label of the date field of self created categories is not displayed correctly |
-| 1.2.3 |     | [Bug] Room plan can not be used with only "see" right |
-| 1.2.2 | 2019-07-05 | [Bug] Buttons in navigation tree are not clickable<br>[Bug] Clicking a unpositioned object inside the navigation tree triggers a JS error<br>[Bug] Edit and save on the "splash screen" causes a SQL error<br> |
-| 1.2.1 | 2019-05-20 | [Bug] Creating a new room is not possible<br>[Bug] Defined i-doit address (URL) is ignored and the host name is used instead<br>[Bug] Profiles are not saved with references<br>[Bug] Cannot save profiles[Bug] Long object titles don't look good in the location tree<br> |
-| 1.2 | 2018-12-05 | [Improvement] Rotate objects freely instead of 90° steps<br>[Improvement] Export the floorplan as PNG<br>[Improvement] New function to open a selected object<br>[Improvement] GUI Update: display location tree<br>[Improvement] Rotate objects 45 instead of 90 degrees<br>[Improvement] A object-polygon can consist of 20 instead of 10 points<br>[Improvement] Make the polygon-editor more intuitive<br>[Improvement] Implement view and edit mode<br>[Improvement] Improve editing and positioning of objects<br>[Improvement] Objects can display an own radius<br>[Improvement] Splashscreen with the five last updated/created floorplans<br>[Improvement] Make floorplan category more dynamic<br>[Improvement] Navigation tree displays positioned objects<br>[Improvement] New profiles analog to the CMDB-Explorer<br>[Improvement] Clicked objects should be displayed more prominently<br>[Bug] Update floorplan category with useful functions<br>[Bug] Font color is too dark for some object type colors<br>[Change] Replace object browser with location tree<br> |
-| 1.1 | 2018-04-16 | [Improvement]   The scale will now be displayed dynamically<br>[Improvement]   Smoother zoom<br>[Bug] Background image won't be displayed after uploading<br>[Bug] Misspelling of formfactor in the English version of the floorplan<br> |
-| 1.0.5 | 2017-10-02 | [Bug] Object list won't be displayed properly<br>[Bug] Background image won't be displayed after moving the installation<br>[Bug] Floorplan shows objects with non-"normal" status<br> |
-| 1.0.4 | 2017-05-02 | [Bug] Self added icons do not scale in the floorplan extension<br>[Bug] Scale is not set, "form factor data" button is disabled<br> |
-| 1.0.3 | 2016-10-24 | [Improvement] Failure while uploading a background image<br> |
-| 1.0.2 |     | [Change] Compatibility with i-doit 1.8<br>[Bug] Object link is malformed when Wiki-URL is configured<br>[Bug] Read right is enough to make changes in Floorplan<br> |
-| 1.0.1 | 2016-03-23 | Initial release |
+| 1.8 | 2024-02-27 | [Tâche] Compatibilité avec i-doit 29, Colorpicker et PHP 8.2 |
+| 1.7 | 2023-11-07 | [Bogue] MySQL8 provoque une erreur de base de données "DATETIME incorrect" lors de l'ouverture du plan d'étage<br>[Bogue] Lors de la rotation d'un objet, le texte devrait également tourner<br>[Bogue] La constante de langue 'LC__CMDB__CATG__ACCOUNTING_ORDER_DATE' n'est pas remplacée<br>[Bogue] Mettre en évidence 'add-on' au lieu de 'extras' dans le menu |
+| 1.6 | 2022-09-05 | [Tâche] Compatibilité avec PHP 8.0  <br>[Tâche] Compatibilité de conception |
+| 1.5.1 | 2022-02-22 | [Bogue] Les plans d'étage ne peuvent pas être ouverts |
+| 1.5 |     | [Amélioration] Il est possible d'afficher un plan d'étage dans un plan d'étage  <br>[Amélioration] Il est possible de supprimer une mise en page du plan d'étage  <br>[Amélioration] Il est possible de supprimer l'arrière-plan du plan d'étage  <br>[Amélioration] Afficher le nom de l'objet du plan d'étage actuel dans le fil d'Ariane  <br>[Bogue] La fonction pour hériter des données de format de formulaire échoue à dimensionner correctement |
+| 1.4.4 |     | [Bogue] Taille d'en-tête personnalisable  <br>[Bogue] Option pour commencer un chapitre sur une nouvelle page est ignorée  <br>[Bogue] Lors de l'enregistrement du contenu d'un sous-chapitre, de nouveaux sous-chapitres sont toujours créés  <br>[Bogue] La fonction d'objet externe ne fonctionne pas dans l'add-on Documents  <br>[Bogue] Les autorisations pour l'add-on document sont incorrectes (Enregistrer le modèle)  <br>[Bogue] La création de documents affiche toujours un avertissement, des modèles vides existent  <br>[Bogue] La sortie du contact principal n'est pas possible  <br>[Bogue] L'objet principal ne peut plus être édité dans l'add-on Documents lorsque la grille est désactivée  <br>[Bogue] Après avoir enregistré un modèle de document, les paramètres dans l'onglet Options sont affichés de manière incorrecte  <br>[Bogue] Les chapitres d'autres modèles de documents ne sont pas référencés correctement |
+| 1.4.3 |     | [Amélioration] Compatibilité avec i-doit 1.16 |
+| 1.4.2 |     | [Bogue] Les autorisations pour l'add-on document sont incorrectes (Enregistrer le modèle)  <br>[Bogue] Les autorisations pour l'add-on document sont incorrectes (Modèles visibles)  <br>[Bogue] Les en-têtes ne sont affichés que sur la première page  <br>[Bogue] Les attributs des cartes SIM assignées aux téléphones mobiles ne peuvent pas être affichés  <br>[Bogue] La sortie d'un champ oui/non avec rien de sélectionné "-" n'est pas correcte  <br>[Bogue] Une nouvelle révision d'un document ne peut pas être créée si la liste a été filtrée |
+| 1.4.1 |     | [Amélioration] Créer un document pour plusieurs objets  <br>[Amélioration] Rendre le plan d'étage disponible dans l'add-on Documents  <br>[Bogue] Tables affichées de manière corrompue au format PDF  <br>[Bogue] Le chemin d'accès est affiché de manière peu attrayante  <br>[Bogue] Les attributs sélectionnés de l'objet principal sont supprimés lors de la réouverture |
+| 1.4 |     | [Amélioration] La taille des en-têtes ne peut pas être ajustée.  <br>[Amélioration] Les images ne peuvent pas être affichées sur toute la ligne d'en-tête  <br>[Amélioration] Supprimer l'exigence de l'extension "bcmath" de PHP  <br>[Amélioration] Requêtes IF dans les catégories définies par l'utilisateur  <br>[Bogue] Le placeholder ne représente qu'une sous-requête avec une profondeur de récursion  <br>[Bogue] La sortie du contact principal n'est pas possible  <br>[Bogue] Doku: Les objets assignés du plan d'urgence ne livrent que le premier objet  <br>[Bogue] Les contacts archivés de la catégorie "affectation de contact" sont affichés  <br>[Bogue] Les modèles de documents ne peuvent pas être triés par date de création/date de modification  <br>[Bogue] Les documents PDF n'affichent pas correctement la mise en forme  <br>[Bogue] L'image dans le pied de page est affichée dans des tailles différentes  <br>[Bogue] Les tables n'étaient pas correctement tronquées lorsqu'elles dépassent deux pages  <br>[Bogue] Les lignes sont inutilement hautes/larges dans les documents HTML |
+| 1.3.3 |     | [Bogue] Le champ de description de la catégorie "e-mail" ne s'affiche pas dans un tableau  <br>[Bogue] Le placeholder pour la date de création/date de révision contient également l'heure de création  <br>[Bogue] L'exportation des champs énumérés depuis l'éditeur wysiwyg n'est pas possible |
+| 1.3.2 |     | [Bogue] Mauvais comportement avec la licence d'add-on |
+| 1.3.1 |     | [Bogue] Les colonnes de tableau vides peuvent déclencher des avertissements PHP lors de la création de révisions  <br>[Bogue] Corriger l'autorisation d'importer un modèle depuis le référentiel |
+| 1.3 |     | [Amélioration] Supprimer un plan de pièce  <br>[Amélioration] Couches et transparence  <br>[Amélioration] Les plans d'étage peuvent maintenant être supprimés  <br>[Amélioration] Améliorer les options d'exportation  <br>[Amélioration] Fournir des captures d'écran de plan d'étage (par ex. add-on documents)  <br>[Bogue] Le libellé de champ du champ de date des catégories créées par l'utilisateur n'est pas affiché correctement |
+| 1.2.3 |     | [Bogue] Le plan de pièce ne peut pas être utilisé avec seulement le droit "voir" |
+| 1.2.2 | 2019-07-05 | [Bogue] Les boutons dans l'arborescence de navigation ne sont pas cliquables<br>[Bogue] Cliquer sur un objet non positionné à l'intérieur de l'arborescence de navigation déclenche une erreur JS<br>[Bogue] Éditer et enregistrer sur l'écran de démarrage provoque une erreur SQL<br> |
+| 1.2.1 | 2019-05-20 | [Bogue] Créer une nouvelle pièce n'est pas possible<br>[Bogue] L'adresse i-doit définie (URL) est ignorée et le nom d'hôte est utilisé à la place<br>[Bogue] Les profils ne sont pas enregistrés avec des références<br>[Bogue] Impossible d'enregistrer les profils[Bogue] Les longs titres d'objet ne sont pas beaux dans l'arborescence de localisation<br> |
+| 1.2 | 2018-12-05 | [Amélioration] Faire pivoter librement les objets au lieu de pas de 90°<br>[Amélioration] Exporter le plan d'étage en tant que PNG<br>[Amélioration] Nouvelle fonction pour ouvrir un objet sélectionné<br>[Amélioration] Mise à jour de l'interface utilisateur : afficher l'arborescence de localisation<br>[Amélioration] Faire pivoter les objets de 45 au lieu de 90 degrés<br>[Amélioration] Un polygone d'objet peut être composé de 20 au lieu de 10 points<br>[Amélioration] Rendre l'éditeur de polygones plus intuitif<br>[Amélioration] Implémenter le mode vue et édition<br>[Amélioration] Améliorer l'édition et le positionnement des objets<br>[Amélioration] Les objets peuvent afficher un rayon propre<br>[Amélioration] Écran de démarrage avec les cinq derniers plans d'étage mis à jour/créés<br>[Amélioration] Rendre la catégorie de plan d'étage plus dynamique<br>[Amélioration] L'arborescence de navigation affiche les objets positionnés<br>[Amélioration] Nouveaux profils analogues à l'explorateur CMDB<br>[Amélioration] Les objets cliqués devraient être affichés de manière plus visible<br>[Bogue] Mettre à jour la catégorie de plan d'étage avec des fonctions utiles<br>[Bogue] La couleur de police est trop sombre pour certaines couleurs de type d'objet<br>[Changement] Remplacer le navigateur d'objets par l'arborescence de localisation<br> |
+| 1.1 | 2018-04-16 | [Amélioration]   L'échelle sera désormais affichée dynamiquement<br>[Amélioration]   Zoom plus fluide<br>[Bogue] L'image d'arrière-plan ne sera pas affichée après le téléchargement<br>[Bogue] Faute d'orthographe de formfactor dans la version anglaise du plan d'étage<br> |
+| 1.0.5 | 2017-10-02 | [Bogue] La liste des objets ne sera pas affichée correctement<br>[Bogue] L'image d'arrière-plan ne sera pas affichée après le déplacement de l'installation<br>[Bogue] Le plan d'étage montre des objets avec un statut non-"normal"<br> |
+| 1.0.4 | 2017-05-02 | [Bogue] Les icônes ajoutées par l'utilisateur ne se mettent pas à l'échelle dans l'extension du plan d'étage<br>[Bogue] L'échelle n'est pas définie, le bouton "données de facteur de forme" est désactivé<br> |
+| 1.0.3 | 2016-10-24 | [Amélioration] Échec lors du téléchargement d'une image d'arrière-plan<br> |
+| 1.0.2 |     | [Changement] Compatibilité avec i-doit 1.8<br>[Bogue] Le lien d'objet est mal formé lorsque l'URL Wiki est configurée<br>[Bogue] Le droit de lecture est suffisant pour apporter des modifications dans le plan d'étage<br> |
+| 1.0.1 | 2016-03-23 | Version initiale |
+
+I am ready to translate the Markdown content into French. Please paste the content you would like me to translate.

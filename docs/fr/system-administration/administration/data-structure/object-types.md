@@ -1,3 +1,3 @@
-# Object types
+# Types d'objets
 
-With this feature you can organize and edit the respective Object Types and their characteristics. → [READMORE](../../../basics/custom-object-types.md)
+Avec cette fonctionnalité, vous pouvez organiser et modifier les Types d'Objets respectifs et leurs caractéristiques. → [EN SAVOIR PLUS](../../../basics/custom-object-types.md){/*examples*/}

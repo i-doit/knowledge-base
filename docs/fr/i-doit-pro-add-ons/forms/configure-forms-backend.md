@@ -1,53 +1,62 @@
-# Configure the Forms Backend
+# Configurer le Backend des Formulaires
 
-First, we navigate to the Form Backend subfolder within the i-doit installation:
+Tout d'abord, nous naviguons vers le sous-dossier Form Backend dans l'installation de i-doit :
 
     cd /var/www/html/src/classes/modules/forms/backend/
 
-We create a copy of the configuration template:
+Nous créons une copie du modèle de configuration :
 
     sudo -u www-data cp .env.dist .env
 
-Using a text editor like, vi or nano, we now edit the .env:
+En utilisant un éditeur de texte comme vi ou nano, nous éditons maintenant le fichier .env :
 
     sudo nano .env
 
-!!! attention "The 'FORMS\_SECRET' must not be empty. The key can consist of alphanumeric and special characters."
+!!! attention "Le 'FORMS\_SECRET' ne doit pas être vide. La clé peut être composée de caractères alphanumériques et spéciaux."
 
-We now set a FORMS\_SECRET and save the file.
+Nous définissons maintenant un FORMS\_SECRET et enregistrons le fichier.
 
-| Key | Value | Description |
+| Clé | Valeur | Description |
 | --- | --- | --- |
-| FORMS\_SECRET | 'g87z$t2r346aSdas%&f52458g724g875!' | Key for encrypting the data in the database.  <br>Must not be empty!  <br>Example: FORMS_SECRET='h982t)24/(&%houaq3ho4' |
-| FORMS\_PORT | '3000' | Port for connections  <br>Example: FORMS_PORT='3000' |
-| FORMS\_MONGO\_DB\_SERVER | 'mongodb://127.0.0.1:27017/forms' | URL and port to connect to the MongoDB server  <br>Example: FORMS_MONGO_DB_SERVER='mongodb://127.0.0.1:27017/forms' |
+| FORMS\_SECRET | 'g87z$t2r346aSdas%&f52458g724g875!' | Clé pour crypter les données dans la base de données.  <br>Ne doit pas être vide !  <br>Exemple : FORMS_SECRET='h982t)24/(&%houaq3ho4' |
+| FORMS\_PORT | '3000' | Port pour les connexions  <br>Exemple : FORMS_PORT='3000' |
+| FORMS\_MONGO\_DB\_SERVER | 'mongodb://127.0.0.1:27017/forms' | URL et port pour se connecter au serveur MongoDB  <br>Exemple : FORMS_MONGO_DB_SERVER='mongodb://127.0.0.1:27017/forms' |
 
-Next, we create an instance.
+Ensuite, nous créons une instance.
 
-To use the run.sh, we must first set the rights to run:
+Pour utiliser run.sh, nous devons d'abord définir les droits d'exécution :
 
-    sudo chmod +x run.sh
+```bash
+sudo chmod +x run.sh
+```
 
-Now we can run the run.sh:
+Maintenant, nous pouvons exécuter run.sh :
 
-    sudo ./run.sh instance:create {Username} {Apikey}
+```bash
+sudo ./run.sh instance:create {Nom d'utilisateur} {Clé API}
+```
 
 !!!info ""
-    Each Forms instance has its own API and gets its own {Username} and {Apikey}. These can be defined freely and have nothing in common with the i-doit pro API.
+    Chaque instance de Forms a son propre API et obtient son propre {Nom d'utilisateur} et {Clé API}. Ceux-ci peuvent être définis librement et n'ont rien en commun avec l'API i-doit pro.
 
-    The data must be noted during the installation, because they must be entered later in the configuration of the Forms Add-on in the i-doit pro interface.
+    Les données doivent être notées lors de l'installation, car elles doivent être saisies ultérieurement dans la configuration de l'extension Forms dans l'interface i-doit pro.
 
-    Example: sudo ./run.sh instance:create forms1 abDzfk74dsfi55FOS32
+    Exemple : sudo ./run.sh instance:create forms1 abDzfk74dsfi55FOS32
 
-We have to create a Service for the Forms backend, so it runs in the Background
+Nous devons créer un service pour le backend Forms, afin qu'il s'exécute en arrière-plan.
 
-In order to use forms-service.sh, we must first set the rights to run it:
+Pour utiliser forms-service.sh, nous devons d'abord définir les droits pour l'exécuter :
 
-    sudo chmod +x forms-service.sh
+```bash
+sudo chmod +x forms-service.sh
+```
 
-We now have the systemd service created for the Forms backend.<br>
-The Service will be activated and started:
+Nous avons maintenant créé le service systemd pour le backend Forms.<br>
+Le service sera activé et démarré :
 
-    sudo ./forms-service.sh
+```bash
+sudo ./forms-service.sh
+```
 
-[ Continue to configuration in i-doit](./configuration-in-i-doit.md){ .md-button .md-button--primary }
+[ Continuer la configuration dans i-doit](./configuration-in-i-doit.md){ .md-button .md-button--primary }
+```

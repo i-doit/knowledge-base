@@ -1,4 +1,4 @@
-# CLI
+# Interface en ligne de commande
 
 *   [Console](./console/index.md)
-*   [Controller](./controller.md)
+*   [Contrôleur](./controller.md)

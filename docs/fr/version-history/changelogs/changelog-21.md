@@ -1,37 +1,37 @@
-# Changelog 21
+# Journal des modifications 21 {/ * exemples *}
 
-[Task][Admincenter]          Replace iFrame from Admin Center > Support Tab with open link in a new browser tab  
-[Task][System settings]      Change operator for recommended php version in system overview  
-[Improvement][Notifications] Add new parameters for the notifications-send option of the i-doit console  
-[Improvement][Notifications] Add an interval function to the notifications configuration so notifications are sent in a defined interval  
-[Improvement][Console]       Add a new console command to list notification types and notification IDs  
-[Bug][CSV Import]            CSV-Import causes error  
-[Bug][API]                   Improve (API-) request runtime in comparison to 1.18.*  
-[Bug][QR-Codes]              File browsers submit the page, when trying to open the popup  
-[Bug][Validation]            Validation for a category also validates text fields from any custom categories  
-[Bug][CMDB]                  When using wiki links, fields are smaller than intended  
-[Bug][CMDB]                  Person group membership not displayed in archived contacts  
-[Bug][Search]                Related special characters are no longer found via search  
-[Bug][Custom categories]     Custom category with umlaut or special characters in title are not createable  
-[Bug][Custom categories]     User defined Category does not work with Attribute visibility  
-[Bug][Report-Manager]        Creating a report with Assigned Object fails  
-[Bug][Report-Manager]        Multi-value entries are only displayed once  
-[Bug][Report-Manager]        Attribute Object (Workplace components) does not work when adding parent location  
-[Bug][Report-Manager]        The connection endpoint > title does not show the name of the linked object  
-[Bug][Report-Manager]        Dialog+ multiple selection field entries are separated in Reports  
-[Bug][Report-Manager]        Contact assignment causes error in Report Manager  
-[Bug][Report-Manager]        Version number is not displayed correctly.  
-[Bug][Report-Manager]        Error when using location attribute in reports without linked attributes  
-[Bug][Report-Manager]        Filtering for dialog+ entries does not work correctly  
-[Bug][Report-Manager]        Creating report with Person(Person (Organisation)) causes error  
-[Bug][Report-Manager]        Assigned objects of persons is not displayed  
-[Bug][Update]                i-doit is updateable to Version 1.19 with outdated add-ons  
-[Bug][LDAP]                  If a Person attribute is emptied in the AD and the option to sync empty attributes is not set the logbook logs this not applied change  
-[Bug][LDAP]                  Ldap-sync database error  
-[Bug][Code (Internal)]       Defining a default dashboard is not possible  
-[Bug][Code (Internal)]       If a hostname of an object is changed by the reverse-nslookup the object type LC constant is stored as object type  
-[Bug][Lists]                 If the last object of a page >=2 is deleted an error message appears  
-[Bug][System settings]       Hiding description via hiding attributes feature does not work for custom categories  
-[Bug][List editing]          All interfaces are displayed in list edit of Ports  
-[Bug][Dashboard]             Correct the text displayed on the dashboard  
-[Bug][Print view]            Not translated language constants in print preview  
+[Tâche][Centre d'administration] Remplacer l'iFrame du Centre d'administration > Onglet Support par un lien ouvert dans un nouvel onglet du navigateur  
+[Tâche][Paramètres système] Changer l'opérateur pour la version PHP recommandée dans l'aperçu du système  
+[Amélioration][Notifications] Ajouter de nouveaux paramètres pour l'option d'envoi de notifications de la console i-doit  
+[Amélioration][Notifications] Ajouter une fonction d'intervalle à la configuration des notifications pour envoyer des notifications à un intervalle défini  
+[Amélioration][Console] Ajouter une nouvelle commande console pour lister les types de notifications et les identifiants de notification  
+[Bogue][Importation CSV] L'importation CSV provoque une erreur  
+[Bogue][API] Améliorer le temps d'exécution de la requête (API) par rapport à 1.18.*  
+[Bogue][Codes QR] Les navigateurs de fichiers soumettent la page lors de la tentative d'ouverture de la fenêtre contextuelle  
+[Bogue][Validation] La validation d'une catégorie valide également les champs de texte de toutes les catégories personnalisées  
+[Bogue][CMDB] Lors de l'utilisation de liens wiki, les champs sont plus petits que prévu  
+[Bogue][CMDB] L'appartenance à un groupe de personnes n'est pas affichée dans les contacts archivés  
+[Bogue][Recherche] Les caractères spéciaux associés ne sont plus trouvés via la recherche  
+[Bogue][Catégories personnalisées] Les catégories personnalisées avec des caractères spéciaux ou des umlauts dans le titre ne sont pas créables  
+[Bogue][Catégories personnalisées] La catégorie définie par l'utilisateur ne fonctionne pas avec la visibilité des attributs  
+[Bogue][Gestionnaire de rapports] La création d'un rapport avec un objet attribué échoue  
+[Bogue][Gestionnaire de rapports] Les entrées à valeurs multiples ne sont affichées qu'une seule fois  
+[Bogue][Gestionnaire de rapports] L'objet attribut (composants du lieu de travail) ne fonctionne pas lors de l'ajout de l'emplacement parent  
+[Bogue][Gestionnaire de rapports] Le point de connexion > le titre ne montre pas le nom de l'objet lié  
+[Bogue][Gestionnaire de rapports] Les entrées de champ de sélection multiple Dialog+ sont séparées dans les rapports  
+[Bogue][Gestionnaire de rapports] L'attribution de contact provoque une erreur dans le gestionnaire de rapports  
+[Bogue][Gestionnaire de rapports] Le numéro de version n'est pas affiché correctement.  
+[Bogue][Gestionnaire de rapports] Erreur lors de l'utilisation de l'attribut d'emplacement dans les rapports sans attributs liés  
+[Bogue][Gestionnaire de rapports] Le filtrage des entrées Dialog+ ne fonctionne pas correctement  
+[Bogue][Gestionnaire de rapports] La création d'un rapport avec Personne (Personne (Organisation)) provoque une erreur  
+[Bogue][Gestionnaire de rapports] Les objets attribués aux personnes ne sont pas affichés  
+[Bogue][Mise à jour] i-doit est mis à jour vers la version 1.19 avec des modules complémentaires obsolètes  
+[Bogue][LDAP] Si un attribut de personne est vidé dans l'AD et que l'option de synchronisation des attributs vides n'est pas définie, le journal enregistre ce changement non appliqué  
+[Bogue][LDAP] Erreur de base de données de synchronisation LDAP  
+[Bogue][Code (Interne)] Il n'est pas possible de définir un tableau de bord par défaut  
+[Bogue][Code (Interne)] Si le nom d'hôte d'un objet est modifié par la recherche inverse de NS, le type d'objet LC constant est stocké en tant que type d'objet  
+[Bogue][Listes] Si le dernier objet d'une page >=2 est supprimé, un message d'erreur apparaît  
+[Bogue][Paramètres système] Masquer la description via la fonction de masquage des attributs ne fonctionne pas pour les catégories personnalisées  
+[Bogue][Édition de liste] Toutes les interfaces sont affichées dans l'édition de liste des ports  
+[Bogue][Tableau de bord] Corriger le texte affiché sur le tableau de bord  
+[Bogue][Aperçu d'impression] Constantes de langue non traduites dans l'aperçu d'impression

@@ -1,105 +1,105 @@
-# Controller
+# Contrôleur
 
-i-doit possesses a command line tool called controller.
+i-doit possède un outil en ligne de commande appelé contrôleur.
 
-!!! attention "Deprecated"
+!!! attention "Obsolète"
 
-    Since version 1.10 the controller is marked as outdated and will be removed in one of the next releases. The [console](../cli/index.md) is the alternative choice.
+    Depuis la version 1.10, le contrôleur est marqué comme obsolète et sera supprimé dans l'une des prochaines versions. La [console](../cli/index.md) est le choix alternatif.
 
-First Steps
+Premiers Pas
 -----------
 
-The controller is located in the main folder of _i-doit_. If you have followed the [installation guide,](../../installation/manual-installation/setup.md) then the main folder will be located at /var/www/html/i-doit/ for Debian-based operating systems:
+Le contrôleur est situé dans le dossier principal de _i-doit_. Si vous avez suivi le [guide d'installation,](../../installation/manual-installation/setup.md) alors le dossier principal sera situé à /var/www/html/i-doit/ pour les systèmes d'exploitation basés sur Debian :
 
     $ ll /var/www/html/i-doit/controller
     -rwxrwxr-- 1 www-data www-data 314 Jul  7 14:23 /var/www/html/i-doit/controller
 
-In order to avoid errors it is important to execute the controller with the same user who uses the web server. In the example this is **www-data**. It's also important to change to the main folder of i-doit prior to executing the controller:
+Pour éviter les erreurs, il est important d'exécuter le contrôleur avec le même utilisateur qui utilise le serveur web. Dans l'exemple, il s'agit de **www-data**. Il est également important de changer vers le dossier principal de i-doit avant d'exécuter le contrôleur :
 
     $ cd /var/www/html/i-doit/
     $ sudo -u www-data ./controller
     
-    Usage: controller.php [OPTION] [PARAMETERS]
-    e.g.:  controller.php -v -m workflow
-    Options:
-    -m HANDLER   Load handler HANDLER module.
-    -u username  i-doit username
-    -p password  i-doit password
-    -i tenant    ID of tenant to connect to (use './tenants ls' for a list)
-    -h           This help text
-    -v           Verbose mode
-    -d           Displays ALL debug messages
+    Utilisation : controller.php [OPTION] [PARAMÈTRES]
+    par exemple :  controller.php -v -m workflow
+    Options :
+    -m HANDLER   Charger le module HANDLER.
+    -u nom_utilisateur  nom d'utilisateur i-doit
+    -p mot_de_passe  mot de passe i-doit
+    -i locataire    ID du locataire auquel se connecter (utilisez './tenants ls' pour obtenir une liste)
+    -h           Ce texte d'aide
+    -v           Mode verbeux
+    -d           Affiche TOUS les messages de débogage
     
-    HANDLER can be one of the following availlable handlers:
+    HANDLER peut être l'un des gestionnaires disponibles suivants :
     addldapdn, archivelog, cleanup_auth, cleanup_objects, csv_import, import, isc_dhcpd, jdisc, jdisc_discovery, ldap, maintenance, nagios, nagios_export, notifications, ocs, regenerate_relations, report, syslog, tenants, updatecheck, workflow
 
-This script has to be executed in a slightly different manner in [Windows](../../installation/manual-installation/microsoft-windows-server/index.md) operating systems since they cannot handle the bash script of the controller:
+Ce script doit être exécuté d'une manière légèrement différente dans les systèmes d'exploitation [Windows](../../installation/manual-installation/microsoft-windows-server/index.md) car ils ne peuvent pas gérer le script bash du contrôleur :
 
     php.exe controller.php
 
-Client and Credentials
+Client et Informations d'identification
 ----------------------
 
-To use the controller, an authentication for i-doit is needed. For this a username (-u), password (-p) and the unique ID of the client to be used (-i) are required.
+Pour utiliser le contrôleur, une authentification pour i-doit est nécessaire. Pour cela, un nom d'utilisateur (-u), un mot de passe (-p) et l'ID unique du client à utiliser (-i) sont requis.
 
-!!! success "The user "controller""
+!!! success "L'utilisateur "contrôleur""
 
-    It is recommended to create a dedicated user for the controller in i-doit. If the user is to be configured as local user, create an object of the type **Persons ** with the desired credentials in the **Persons → Login** category. This user should receive administrator rights. This can be achieved by an assignment to the predefined **Person group** Admin.
+    Il est recommandé de créer un utilisateur dédié pour le contrôleur dans i-doit. Si l'utilisateur doit être configuré en tant qu'utilisateur local, créez un objet de type **Personnes** avec les informations souhaitées dans la catégorie **Personnes → Connexion**. Cet utilisateur devrait recevoir des droits d'administrateur. Cela peut être réalisé en l'assignant au groupe prédéfini **Groupe de personnes** Admin.
 
-In order to find out which unique ID belongs to a specific client, the following command can be used:
+Pour savoir à quel client spécifique appartient un ID unique, la commande suivante peut être utilisée :
 
     $ sudo -u www-data ./tenants ls
-    Mandator-Handler initialized (2015-07-22 10:32:42)
-    Availlable Mandators:
-    ID: Title (Language) (host:port) [status]
-    1 : ACME IT Solutions (localhost:3306) [active]
-    2 : Schulz GmbH (localhost:3306) [active]
+    Gestionnaire de locataires initialisé (2015-07-22 10:32:42)
+    Locataires disponibles :
+    ID: Titre (Langue) (hôte:port) [statut]
+    1 : Solutions ACME IT (localhost:3306) [actif]
+    2 : Schulz GmbH (localhost:3306) [actif]
 
-The ID is generally 1 for i-doit installations with just one client.
+L'ID est généralement 1 pour les installations i-doit avec un seul client.
 
-Handler
+Gestionnaire
 -------
 
-The controller is capable of performing various actions. These in turn are represented by the handler. To call up a specific handler the parameter -m is required.
+Le contrôleur est capable d'effectuer diverses actions. Celles-ci sont représentées par le gestionnaire. Pour appeler un gestionnaire spécifique, le paramètre -m est requis.
 
-### List of Handlers
+### Liste des Gestionnaires
 
 [**Documents**](../../i-doit-pro-add-ons/documents/index.md)
 
-| Handler | pro version | open version | Add-on | Description |
+| Gestionnaire | version pro | version open | Add-on | Description |
 | --- | --- | --- | --- | --- |
-| **[addldapdn](../../user-authentication-and-management/ldap-directory/index.md)** | yes | yes | –   | Synchronize the distinguished name (DN) of users from a LDAP/AD (see **LDAP** category) |
-| **[archivelog](../../basics/logbook.md)** | yes | yes | –   | Archive logbook entries |
-| **[check_mk](../../i-doit-pro-add-ons/checkmk.md)** | yes | yes | –   | Write the actual status from network monitoring into logbook |
-| **[cleanup_auth](../../efficient-documentation/rights-management/index.md)** | yes | yes | –   | Clean up the authorization system |
-| **[cleanup_objects](../../basics/life-and-documentation-cycle.md)** | yes | yes | –   | Clean up objects |
-| **[csv_import](../../consolidate-data/csv-data-import/index.md)** | yes | –   | –   | Import data from a CSV file |
-| [**document**](../../i-doit-pro-add-ons/documents/index.md) | –   | –   | **[Documents](../../i-doit-pro-add-ons/documents/index.md)** | Create a new revision of a document |
-| **import** | yes | yes | –   | Import i-doit XML or [h-inventory XML](../../consolidate-data/h-inventory.md) |
-| **increment_config** | yes | yes | –   | Set auto_increment of MariaDB / MySQL tables to a positive integer value |
-| **isc_dhcpd** | yes | yes | –   | Export configuration for ISC DHCPD |
-| **[jdisc](../../consolidate-data/jdisc-discovery.md)** | yes | yes | –   | Import files from JDisc |
-| **[jdisc_discovery](../../consolidate-data/jdisc-discovery.md)** | yes | yes | –   | Activate a discovery job at JDisc |
-| **[ldap](../../user-authentication-and-management/ldap-directory/index.md)** | yes | yes | –   | Import data from a LDAP directory or Active Directory (AD) |
-| **[maintenance](../../i-doit-pro-add-ons/maintenance.md)** | –   | –   | **[Maintenance](../../i-doit-pro-add-ons/maintenance.md)** | Send e-mails with planned maintenance works |
-| **[nagios](../network-monitoring/nagios.md)**** | yes | yes | –   | Write the actual status from network monitoring into logbook |
-| **[nagios_export](../network-monitoring/nagios.md)** | yes | yes | –   | Export Nagios configuration |
-| **[notifications](../../evaluation/notifications.md)** | yes | yes | –   | Send notifications per e-mail |
-| **[ocs](../../i-doit-pro-add-ons/ocs-inventory-ng.md)** | yes | yes | –   | Import data from OCS Inventory NG |
-| **[regenerate_relations](../../basics/object-relations.md)** | yes | yes | –   | Recreate object relations |
-| **[report](../../evaluation/report-manager.md)** | yes | –   | –   | Export a report as file |
-| **[search_index](../../efficient-documentation/search.md)** | yes | yes | –   | Search in i-doit or create/renew search index |
-| **syslog** | yes | yes | –   | Import data from Syslog in i-doit logbook |
-| **[tenants](#mandantund-credentials)** | yes | yes | –   | List, activate and deactivate tenants |
-| **[updatecheck](../../maintenance-and-operation/update.md)** | yes | yes | –   | Search for updates in i-doit |
-| **workflow** | yes | yes | –   | Send Workflow notifications per e-mail |
+| **[addldapdn](../../user-authentication-and-management/ldap-directory/index.md)** | oui | oui | –   | Synchroniser le nom distinctif (DN) des utilisateurs à partir d'un LDAP/AD (voir la catégorie **LDAP**) |
+| **[archivelog](../../basics/logbook.md)** | oui | oui | –   | Archiver les entrées du journal |
+| **[check_mk](../../i-doit-pro-add-ons/checkmk.md)** | oui | oui | –   | Écrire le statut actuel de la surveillance réseau dans le journal |
+| **[cleanup_auth](../../efficient-documentation/rights-management/index.md)** | oui | oui | –   | Nettoyer le système d'autorisation |
+| **[cleanup_objects](../../basics/life-and-documentation-cycle.md)** | oui | oui | –   | Nettoyer les objets |
+| **[csv_import](../../consolidate-data/csv-data-import/index.md)** | oui | –   | –   | Importer des données à partir d'un fichier CSV |
+| [**document**](../../i-doit-pro-add-ons/documents/index.md) | –   | –   | **[Documents](../../i-doit-pro-add-ons/documents/index.md)** | Créer une nouvelle révision d'un document |
+| **import** | oui | oui | –   | Importer un XML i-doit ou [XML h-inventory](../../consolidate-data/h-inventory.md) |
+| **increment_config** | oui | oui | –   | Définir l'auto-incrément des tables MariaDB / MySQL sur une valeur entière positive |
+| **isc_dhcpd** | oui | oui | –   | Exporter la configuration pour ISC DHCPD |
+| **[jdisc](../../consolidate-data/jdisc-discovery.md)** | oui | oui | –   | Importer des fichiers de JDisc |
+| **[jdisc_discovery](../../consolidate-data/jdisc-discovery.md)** | oui | oui | –   | Activer une tâche de découverte chez JDisc |
+| **[ldap](../../user-authentication-and-management/ldap-directory/index.md)** | oui | oui | –   | Importer des données à partir d'un annuaire LDAP ou Active Directory (AD) |
+| **[maintenance](../../i-doit-pro-add-ons/maintenance.md)** | –   | –   | **[Maintenance](../../i-doit-pro-add-ons/maintenance.md)** | Envoyer des e-mails avec des travaux de maintenance planifiés |
+| **[nagios](../network-monitoring/nagios.md)**** | oui | oui | –   | Écrire le statut actuel de la surveillance réseau dans le journal |
+| **[nagios_export](../network-monitoring/nagios.md)** | oui | oui | –   | Exporter la configuration Nagios |
+| **[notifications](../../evaluation/notifications.md)** | oui | oui | –   | Envoyer des notifications par e-mail |
+| **[ocs](../../i-doit-pro-add-ons/ocs-inventory-ng.md)** | oui | oui | –   | Importer des données depuis OCS Inventory NG |
+| **[regenerate_relations](../../basics/object-relations.md)** | oui | oui | –   | Recréer les relations d'objets |
+| **[report](../../evaluation/report-manager.md)** | oui | –   | –   | Exporter un rapport sous forme de fichier |
+| **[search_index](../../efficient-documentation/search.md)** | oui | oui | –   | Rechercher dans i-doit ou créer / renouveler l'index de recherche |
+| **syslog** | oui | oui | –   | Importer des données de Syslog dans le journal i-doit |
+| **[tenants](#mandantund-credentials)** | oui | oui | –   | Liste, activer et désactiver les locataires |
+| **[updatecheck](../../maintenance-and-operation/update.md)** | oui | oui | –   | Rechercher des mises à jour dans i-doit |
+| **workflow** | oui | oui | –   | Envoyer des notifications de workflow par e-mail |
 
-### Configuration of Handlers
+### Configuration des Gestionnaires
 
-#### Set Additional Parameters
+#### Définir des Paramètres Additionnels
 
-Some handlers require further options which can be given directly to the controller via specific parameters. To see which parameters these are, click on the links in the handler list.
+Certains gestionnaires nécessitent d'autres options qui peuvent être données directement au contrôleur via des paramètres spécifiques. Pour voir quels sont ces paramètres, cliquez sur les liens dans la liste des gestionnaires.
 
-#### Adjust the Configuration File
+#### Ajuster le Fichier de Configuration
 
-For some handlers a respective configuration file exists. Examples can be found beneath the main folder of i-doit in **src/handler/config/examples/**. In order for a configuration file to be in effect, it has to be available in the s**rc/handler/config/** folder.
+Pour certains gestionnaires, un fichier de configuration respectif existe. Des exemples peuvent être trouvés sous le dossier principal de i-doit dans **src/handler/config/examples/**. Pour qu'un fichier de configuration soit effectif, il doit être disponible dans le dossier **src/handler/config/**.

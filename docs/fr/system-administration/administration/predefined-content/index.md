@@ -1,11 +1,11 @@
-# Predefined content
+# Contenu prédéfini
 
-## The Predefined content is divided into the following sub-sections:
+## Le contenu prédéfini est divisé en les sous-sections suivantes:
 
-- [CMDB Status](./cmdb-status.md)
-- [Custom counter](./custom-counter.md)
-- [Dialog admin](./dialog-admin.md)
-- [Object relation types](./object-relation-types.md)
-- [Data validation](./data-validation.md)
-- [Contact assignment roles](./contact-assignment-roles.md)
+- [Statut CMDB](./cmdb-status.md)
+- [Compteur personnalisé](./custom-counter.md)
+- [Administration de dialogue](./dialog-admin.md)
+- [Types de relation d'objet](./object-relation-types.md)
+- [Validation des données](./data-validation.md)
+- [Rôles d'attribution de contact](./contact-assignment-roles.md)
 - [QR-Code](./qr-code.md)

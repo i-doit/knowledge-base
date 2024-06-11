@@ -1,36 +1,36 @@
-# Example of CSV import - Licenses
+# Exemple d'importation CSV - Licences
 
-In this example we build on the [CSV import of applications](example-csv-import-applications.md) and want to import licenses.
+Dans cet exemple, nous nous appuyons sur l'[importation CSV des applications](example-csv-import-applications.md) et souhaitons importer des licences.
 
-!!! info "This article was last checked for i-doit version 1.17.2"
+!!! info "Cet article a été vérifié pour la version 1.17.2 d'i-doit"
 
-For the import we need the following information:
+Pour l'importation, nous avons besoin des informations suivantes :
 
--  Object type → what type of object it should be.
--  Object title → the name of the client
--  License Assignment: License Key - License Type → Which license type will be imported, single or volume?
--  License Assignment: License Key - Number → What is the number of licenses?
--  License Assignment: License Key - Key → What is the license key?
--  License assignment: License key - Serial number → Which serial number should be assigned?
--  License assignment: License key - Start date → From when can the license be used?
--  License assignment: License key - Expiration date → When does the license expire?
--  License assignment: License key - Unit price → What does a license cost?
+- Type d'objet → quel type d'objet doit-il être.
+- Titre de l'objet → le nom du client
+- Attribution de licence : Clé de licence - Type de licence → Quel type de licence sera importé, individuel ou en volume ?
+- Attribution de licence : Clé de licence - Nombre → Quel est le nombre de licences ?
+- Attribution de licence : Clé de licence - Clé → Quelle est la clé de licence ?
+- Attribution de licence : Clé de licence - Numéro de série → Quel numéro de série doit être attribué ?
+- Attribution de licence : Clé de licence - Date de début → À partir de quand la licence peut-elle être utilisée ?
+- Attribution de licence : Clé de licence - Date d'expiration → Quand la licence expire-t-elle ?
+- Attribution de licence : Clé de licence - Prix unitaire → Combien coûte une licence ?
 
-!!! info "With each import, the representation of the data must also be taken into account."
+!!! info "À chaque importation, la représentation des données doit également être prise en compte."
 
-For example:
+Par exemple:
 
-[![example](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/1-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/1-csv-i-l.png)
+[![exemple](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/1-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/1-csv-i-l.png)
 
-Dialog titles in English are expected, for example: single-license.  
-Here the date format YYYY-MM-DD (2021-11-26) is expected.  
-And the numeric format: X,XXX,XX (1,111.11), because the comma is set by i-doit we only insert values like 12999.99.
+Les titres des dialogues en anglais sont attendus, par exemple: single-license.  
+Ici, le format de date YYYY-MM-DD (2021-11-26) est attendu.  
+Et le format numérique: X,XXX,XX (1,111.11), car la virgule est définie par i-doit, nous n'insérons que des valeurs comme 12999.99.
 
-Example CSV file for this import:
+Exemple de fichier CSV pour cette importation:
 
-[Import-Licenses.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/Import-Licenses.csv){ .md-button .md-button--primary }
+[Télécharger le fichier Import-Licenses.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/Import-Licenses.csv){ .md-button .md-button--primary }
 
-??? example "Import Licenses.csv"
+??? exemple "Import Licenses.csv"
 
     ```text
     Object type;Object title;Licenses: License keys > License Type (Dialog);Licenses: License keys > Amount;Licenses: License keys > Key;Licenses: License keys > Serial;Licenses: License keys > Start Date (Date);Licenses: License keys > Expiration Date (Date);Licenses: License keys > Price Per Unit (Money)
@@ -39,22 +39,24 @@ Example CSV file for this import:
     C__OBJTYPE__LICENCE;License-Z;Volume license,Volume license;100,50;License-Z-311-IGUHOPSD,License-Z-322-IUHGASD;11123456789,11223456789;2021-01-01,2021-05-01;2021-12-31,2021-04-30;10200.9,500.9
     ```
 
-No dependencies are assumed for this import.
+Aucune dépendance n'est supposée pour cette importation.
 
-For the import we go back to the CSV import area. We set "Multi-valued categories" to "Comma-separated".
+Pour l'importation, nous retournons à la zone d'importation CSV. Nous définissons "Catégories à valeurs multiples" sur "Séparées par des virgules".
 
-[![import](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/2-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/2-csv-i-l.png)
+[![importation](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/2-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/2-csv-i-l.png)
 
-Now we can make the import configuration in the lower area as follows and then start the import process::
+Maintenant, nous pouvons effectuer la configuration de l'importation dans la zone inférieure comme suit, puis démarrer le processus d'importation::
 
-[![import-start](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/3-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/3-csv-i-l.png)
+[![démarrer-importation](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/3-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/3-csv-i-l.png)
 
-If you have done everything correctly, the licenses will now appear in the list view.
+Si vous avez tout fait correctement, les licences apparaîtront maintenant dans la vue de liste.
 
-[![licenses](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/4-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/4-csv-i-l.png)
+[![licences](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/4-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/4-csv-i-l.png)
 
-Also, the License Assignment and License Assignment: License Key categories are filled.
+De plus, les catégories Affectation de licence et Affectation de licence: Clé de licence sont remplies.
 
-[![license-key](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/5-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/5-csv-i-l.png)
+[![clé-de-licence](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/5-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/5-csv-i-l.png)
 
-[![licese-key](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)
+[![clé-de-licence](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)
+
+I am ready to start the translation once you provide me with the Markdown content.

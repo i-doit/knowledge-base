@@ -1,24 +1,24 @@
-# Release Notes 30
+# Notes de version 30 {/ * exemples * /}
 
-We're happy to announce i-doit pro 30. This version will bring a bunch of new features and improvements to enhance your i-doit experience. First of all we happily announce that **MariaDB 10.11** is officially supported with i-doit 30. Paired with **PHP 8.2** you are now able to update your operating system without having to worry about i-doit's compatibility.
-This also means that i-doit 30 will be the ^^last version supporting PHP 7.4^^.
-We also added a new feature to use **two-factor authentication (TFA)** for user's login. This can be paired with all common authenticators (for example as a browser extension or as an app on your mobile phone). To further improve your experience we cleaned up the settings area by combining the attribute settings for **validation** and **visibility** into **one single configuration**. This allows you to perform these settings much quicker and increases the clarity of the existing settings. To further improve the experience we cleaned up the menu for **Extras** to give quick access to all features below without nested menus.
+Nous sommes heureux d'annoncer i-doit pro 30. Cette version apportera une multitude de nouvelles fonctionnalités et améliorations pour améliorer votre expérience i-doit. Tout d'abord, nous sommes heureux d'annoncer que **MariaDB 10.11** est officiellement pris en charge avec i-doit 30. Associé à **PHP 8.2**, vous pouvez désormais mettre à jour votre système d'exploitation sans vous soucier de la compatibilité avec i-doit.
+Cela signifie également que i-doit 30 sera la ^^dernière version prenant en charge PHP 7.4^^.
+Nous avons également ajouté une nouvelle fonctionnalité pour utiliser **l'authentification à deux facteurs (TFA)** pour la connexion de l'utilisateur. Cela peut être associé à tous les authentificateurs courants (par exemple, en tant qu'extension de navigateur ou en tant qu'application sur votre téléphone portable). Pour améliorer encore votre expérience, nous avons nettoyé la zone des paramètres en combinant les paramètres d'attribut pour la **validation** et la **visibilité** en **une seule configuration**. Cela vous permet d'effectuer ces réglages beaucoup plus rapidement et augmente la clarté des paramètres existants. Pour améliorer encore l'expérience, nous avons nettoyé le menu des **Extras** pour donner un accès rapide à toutes les fonctionnalités ci-dessous sans menus imbriqués.
 
-Alongside i-doit 30 we will also launch **API version 2.0**. You will find more information below in the add-on section of our release notes.
+À côté de i-doit 30, nous lancerons également **la version 2.0 de l'API**. Vous trouverez plus d'informations ci-dessous dans la section des modules complémentaires de nos notes de version.
 
-**Highlights in this release**
+**Points forts de cette version**
 
--   New **MariaDB 10.11** compatibility. (please check compatibility for older versions)
--   **Optional** [two-factor authentication (TFA)](../../user-authentication-and-management/2fa/index.md) for i-doit login process.
--   **Combined** configuration page for **validation** and **attribute visibility**.
--   Simplified **Extras** menu to provide **quicker access**.
+-   Nouvelle compatibilité avec **MariaDB 10.11**. (veuillez vérifier la compatibilité avec les anciennes versions)
+-   **Authentification à deux facteurs (TFA)** [optionnelle](../../user-authentication-and-management/2fa/index.md) pour le processus de connexion à i-doit.
+-   Page de configuration **combinée** pour la **validation** et la **visibilité des attributs**.
+-   Menu **Extras** simplifié pour offrir un **accès plus rapide**.
 
-**Add-ons**
+**Modules complémentaires**
 
-As mentioned above we will also release a new version 2.0 of the i-doit API. This version will clean up a lot in the backend of the add-on as well as introduce new pull and push endpoints. This is the **first step** of a completely **reworked API** for i-doit.
+Comme mentionné ci-dessus, nous publierons également une nouvelle version 2.0 de l'API i-doit. Cette version nettoiera beaucoup de choses dans le backend du module complémentaire et introduira de nouveaux points de terminaison de tirage et de poussée. Il s'agit du **premier pas** vers une **API entièrement retravaillée** pour i-doit.
 
 -   [API 2.0](../../i-doit-pro-add-ons/api/index.md)
 
-Please make sure that you fulfill all the [requirements](../../installation/system-requirements.md) before installing these new versions. MariaDB 10.2 and MariaDB 10.3 will no longer be supported with i-doit 30.
+Assurez-vous de remplir toutes les [exigences](../../installation/system-requirements.md) avant d'installer ces nouvelles versions. MariaDB 10.2 et MariaDB 10.3 ne seront plus pris en charge avec i-doit 30.
 
-If you have further questions about this release, please don't hesitate to contact our support team at <https://help.i-doit.com>.
+Si vous avez d'autres questions sur cette version, n'hésitez pas à contacter notre équipe de support à l'adresse suivante : <https://help.i-doit.com>.

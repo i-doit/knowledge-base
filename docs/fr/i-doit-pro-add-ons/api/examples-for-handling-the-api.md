@@ -1,18 +1,18 @@
-# Examples for Handling the API
+# Exemples de Gestion de l'API
 
-To facilitate handling of the application [Application Programming Interfaces (API)](../../system-administration/administration/import-and-interfaces/index.md) of i-doit, we put together a few typical examples.
+Pour faciliter la gestion des [Interfaces de Programmation d'Applications (API)](../../system-administration/administration/import-and-interfaces/index.md) de i-doit, nous avons rassemblé quelques exemples typiques.
 
-Search
-------
-###idoit.search
+Recherche
+---------
+### idoit.search
 
 ??? example "idoit.search"
-    Method: idoit.search
+    Méthode : idoit.search
 
-    Example
+    Exemple
 
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps :
     ```
     {
         "version": "2.0",
@@ -25,8 +25,8 @@ Search
         "id": 1
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps :
     ```
     {
         "jsonrpc": "2.0",
@@ -44,23 +44,23 @@ Search
     }
     ```
 
-Login and Logout
-----------------
+Connexion et Déconnexion
+------------------------
 ### idoit.login
 
 ??? example "idoit.login"
 
-    Method: **idoit.login**, **idoit.version** (als Example für beliebige Requests), **idoit.logout**
+    Méthode : **idoit.login**, **idoit.version** (comme exemple pour des requêtes quelconques), **idoit.logout**
 
-    Example
+    Exemple
 
-    **Request**
-    <br>Header:
+    **Requête**
+    <br>En-tête :
     ```
     X-RPC-Auth-Username: admin
     X-RPC-Auth-Password: admin
     ```
-    <br>Body:
+    <br>Corps :
     ```
     {
         "version": "2.0",
@@ -72,12 +72,12 @@ Login and Logout
         "id": 1
     }
     ```
-    **Response**
-    <br>Header:
+    **Réponse**
+    <br>En-tête :
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
     ```
-    <br>Body:
+    <br>Corps :
     ```
     {
         "jsonrpc": "2.0",
@@ -95,12 +95,12 @@ Login and Logout
     }
     ```
 
-    **Request**
-    <br>Header:
+    **Requête**
+    <br>En-tête :
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
     ```
-    <br>Body:
+    <br>Corps :
     ```
     {
         "version": "2.0",
@@ -112,12 +112,12 @@ Login and Logout
         "id": 2
     }
     ```
-    **Response**
-    <br>Header:
+    **Réponse**
+    <br>En-tête :
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
     ```
-    <br>Body:
+    <br>Corps :
     ```
     {
         "jsonrpc": "2.0",
@@ -138,12 +138,12 @@ Login and Logout
     }
     ```
 
-    **Request**
-    <br>Header:
+    **Requête**
+    <br>En-tête:
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
     ```
-    <br>Body:
+    <br>Corps:
     ```
     {
         "version": "2.0",
@@ -155,12 +155,12 @@ Login and Logout
         "id": 3
     }
     ```
-    **Response**
-    <br>Header:
+    **Réponse**
+    <br>En-tête:
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
     ```
-    <br>Body:
+    <br>Corps:
     ```
     {
         "jsonrpc": "2.0",
@@ -172,17 +172,17 @@ Login and Logout
     }
     ```
 
-Creating a New Object
----------------------
+Création d'un nouvel objet
+--------------------------
 ### cmdb.object.create
 ??? example "cmdb.object.create"
     
-    Method: **cmdb.object.create**
+    Méthode: **cmdb.object.create**
 
-    Example
+    Exemple
 
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps:
     ```
     {
         "version": "2.0",
@@ -196,8 +196,8 @@ Creating a New Object
         "id": 1
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps:
     ```
     {
         "jsonrpc": "2.0",
@@ -210,17 +210,17 @@ Creating a New Object
     }
     ```
 
-Reading out General Information about an Object
+Lecture des informations générales sur un objet
 -----------------------------------------------
 ### cmdb.object.read
 ??? example "cmdb.object.read"
 
-    Method: **cmdb.object.read**
+    Méthode: **cmdb.object.read**
 
-    Example
+    Exemple
 
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps:
     ```
     {
         "version": "2.0",
@@ -233,8 +233,8 @@ Reading out General Information about an Object
         "id": 1
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps:
     ```
     {
         "jsonrpc": "2.0",
@@ -256,16 +256,15 @@ Reading out General Information about an Object
     }
     ```
 
-Update of an Object
--------------------
+Mise à jour d'un objet
+----------------------
 ### cmdb.object.update
 ??? example "cmdb.object.update"
-    Method: **cmdb.object.update**
 
-    Example
+    Exemple
 
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps :
     ```
     {
         "version": "2.0",
@@ -279,8 +278,8 @@ Update of an Object
         "id": 1
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps :
     ```
     {
         "jsonrpc": "2.0",
@@ -292,16 +291,16 @@ Update of an Object
     }
     ```
 
-Archiving an Object/ Mark it as Deleted/ Purge
+Archivage d'un objet/ Marquer comme supprimé/ Purger
 ----------------------------------------------
 ### cmdb.object.delete
 ??? example "cmdb.object.delete"
-    Method: **cmdb.object.delete**
+    Méthode : **cmdb.object.delete**
 
-    Example
+    Exemple
 
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps :
     ```
     {
         "version": "2.0",
@@ -315,8 +314,8 @@ Archiving an Object/ Mark it as Deleted/ Purge
         "id": 1
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps :
     ```
     {
         "jsonrpc": "2.0",
@@ -327,8 +326,8 @@ Archiving an Object/ Mark it as Deleted/ Purge
         "id": 1
     }
     ```
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps :
     ```
     {
         "version": "2.0",
@@ -342,8 +341,8 @@ Archiving an Object/ Mark it as Deleted/ Purge
         "id": 1
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps :
     ```
     {
         "jsonrpc": "2.0",
@@ -354,8 +353,8 @@ Archiving an Object/ Mark it as Deleted/ Purge
         "id": 1
     }
     ```
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps :
     ```
     {
         "version": "2.0",
@@ -369,8 +368,8 @@ Archiving an Object/ Mark it as Deleted/ Purge
         "id": 1
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps :
     ```
     {
         "jsonrpc": "2.0",
@@ -382,21 +381,21 @@ Archiving an Object/ Mark it as Deleted/ Purge
     }
     ```
 
-Upload or Download of a Picture
+Téléchargement ou Téléversement d'une image
 -------------------------------
 ### cmdb.category.create
 ??? example "cmdb.category.create"
 
-    Method: **cmdb.category.create**, **cmdb.category.read**
+    Méthode : **cmdb.category.create**, **cmdb.category.read**
 
-    Category: **Pictures**
+    Catégorie : **Images**
 
-    Before uploading, you have to encode the file of the picture in BASE64. Also for downloading the picture has to be encoded in BASE64. For the sake of brevity, the strings encoded in BASE64 are replaced by wildcards in the examples.
+    Avant de télécharger, vous devez encoder le fichier de l'image en BASE64. De même, pour télécharger l'image, elle doit être encodée en BASE64. Pour des raisons de concision, les chaînes encodées en BASE64 sont remplacées par des jokers dans les exemples.
 
-    Example
+    Exemple
 
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps :
     ```
     {
         "version": "2.0",
@@ -414,8 +413,8 @@ Upload or Download of a Picture
         "id": 1
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps :
     ```
     {
         "jsonrpc": "2.0",
@@ -427,8 +426,8 @@ Upload or Download of a Picture
         "id": 1
     }
     ```
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps :
     ```
     {
         "version": "2.0",
@@ -442,8 +441,8 @@ Upload or Download of a Picture
         "id": 2
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps :
     ```
     {
         "jsonrpc": "2.0",
@@ -459,20 +458,22 @@ Upload or Download of a Picture
     }
     ```
 
-Upload a File and Assign It to an Object
+Télécharger un fichier et l'attribuer à un objet
 -----------------------------------------
-### cmdb.object.create and cmdb.category.create
-??? example "cmdb.object.create and cmdb.category.create"
-    Method: **cmdb.object.create** and **cmdb.category.create**
+### cmdb.object.create et cmdb.category.create
+??? example "cmdb.object.create et cmdb.category.create"
+    Méthode : **cmdb.object.create** et **cmdb.category.create**
 
-    Categories: **Files → File versions and Files**
+    Catégories : **Fichiers → Versions de fichiers et Fichiers**
 
-    We want to upload the existing file **test.txt** to i-doit and assign it to a new server object. In i-doit files are objects, too. Before uploading the file its content have to be **BASE64** encoded, see attribute file_content in the 3rd request. As you can see the server object gets the ID **1000** and the file object the ID **1001**.
+    Nous voulons télécharger le fichier existant **test.txt** dans i-doit et l'attribuer à un nouvel objet serveur. Dans i-doit, les fichiers sont également des objets. Avant de télécharger le fichier, son contenu doit être encodé en **BASE64**, voir l'attribut file_content dans la 3ème requête. Comme vous pouvez le voir, l'objet serveur reçoit l'ID **1000** et l'objet fichier l'ID **1001**. 
 
-    Create server object
+{ /* examples */ }
 
-    **Request**
-    <br>Body:
+    Créer un objet serveur
+
+    **Requête**
+    <br>Corps:
     ```
     {
         "version": "2.0",
@@ -486,8 +487,8 @@ Upload a File and Assign It to an Object
         "id": 1
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps:
     ```
     {
         "jsonrpc": "2.0",
@@ -500,10 +501,10 @@ Upload a File and Assign It to an Object
     }
     ```
 
-    Create file object
+    Créer un objet fichier
 
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps:
     ```
     {
         "version": "2.0",
@@ -517,8 +518,8 @@ Upload a File and Assign It to an Object
         "id": 2
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps:
     ```
     {
         "jsonrpc": "2.0",
@@ -531,10 +532,10 @@ Upload a File and Assign It to an Object
     }
     ```
 
-     Upload file by category **Files → File versions**
+    Télécharger un fichier par catégorie **Fichiers → Versions de fichiers**
 
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps:
     ```
     {
         "version": "2.0",
@@ -554,8 +555,8 @@ Upload a File and Assign It to an Object
         "id": 3
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps:
     ```
     {
         "jsonrpc": "2.0",
@@ -568,10 +569,10 @@ Upload a File and Assign It to an Object
     }
     ```
 
-    Assign file object to server object by category **Files**
+    Assigner un objet fichier à un objet serveur par catégorie **Fichiers**
 
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps:
     ```
     {
         "version": "2.0",
@@ -588,8 +589,8 @@ Upload a File and Assign It to an Object
         "id": 4
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps:
     ```
     {
         "jsonrpc": "2.0",
@@ -602,19 +603,19 @@ Upload a File and Assign It to an Object
     }
     ```
 
-Installation of Software on Hardware
+Installation de logiciel sur du matériel
 ------------------------------------
 
 ### cmdb.category.create
 ??? example "cmdb.category.create"
-    Method: **cmdb.category.create**
+    Méthode: **cmdb.category.create**
 
-    Category: **Software allocation**
+    Catégorie: **Allocation de logiciel**
 
-    Example
+    Exemple
 
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps:
     ```
     {
         "version": "2.0",
@@ -631,9 +632,9 @@ Installation of Software on Hardware
         "id": 1
     }
     ```
-    In this example, the hardware has the object ID 123 and the software has the object ID 456.
-    **Response**
-    <br>Body:
+    Dans cet exemple, le matériel a l'ID d'objet 123 et le logiciel a l'ID d'objet 456.
+    **Réponse**
+    <br>Corps:
     ```
     {
         "jsonrpc": "2.0",
@@ -646,20 +647,20 @@ Installation of Software on Hardware
     }
     ```
 
-Document Model-specific Data of an Hardware Compoment
------------------------------------------------------
+### Données spécifiques au modèle d'un composant matériel {/examples}
+
 ### cmdb.category.create
 ??? example "cmdb.category.create"
-    Method: **cmdb.category.create**
+    Méthode: **cmdb.category.create**
     
-    Category: **Model**
+    Catégorie: **Modèle**
 
-    One specialty about this topic is that the attributes **Manufacturer** and **Model** are related to each other. In an API request you can set their names as strings because both are [dialog+ fields](../../basics/attribute-fields.md). If one of these values does not exist it will be created automatically.
+    Une particularité concernant ce sujet est que les attributs **Fabricant** et **Modèle** sont liés entre eux. Dans une requête API, vous pouvez définir leurs noms en tant que chaînes de caractères car tous deux sont des [champs de dialogue](../../basics/attribute-fields.md). Si l'une de ces valeurs n'existe pas, elle sera créée automatiquement.
 
-    Example
+    Exemple
 
-    **Request**
-    <br>Body:
+    **Requête**
+    <br>Corps:
     ```
     {
         "version": "2.0",
@@ -677,8 +678,8 @@ Document Model-specific Data of an Hardware Compoment
         "id": 1
     }
     ```
-    **Response**
-    <br>Body:
+    **Réponse**
+    <br>Corps:
     ```
     {
         "jsonrpc": "2.0",

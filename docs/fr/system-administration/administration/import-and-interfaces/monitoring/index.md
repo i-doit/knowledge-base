@@ -1,6 +1,6 @@
-# Monitoring
+# Surveillance
 
-## Monitoring is devided into the following sub-sections:
+## La surveillance est divisée en les sous-sections suivantes :
 
 -   [Livestatus / NDO](livestatus-ndo.md)
--   [Export configuration](export-configuration.md)
+-   [Configuration d'exportation](export-configuration.md) {/examples}

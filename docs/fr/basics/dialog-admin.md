@@ -1,49 +1,52 @@
-# Dialog-Admin
+# Dialog-Admin {/%%examples%%}
 
-The [attribute field](./attribute-fields.md) **Dialog+**, which is a dropdown field where you can edit values, is used quite often in i-doit. These attribute fields can be found in many [categories](../glossary.md) of the [IT documentation](../glossary.md) or in other features provided by i-doit. The central administration of the values is carried out via the **Dialog-Admin** in the **Administration**.
+Le [champ d'attribut](./attribute-fields.md) **Dialog+**, qui est un champ déroulant où vous pouvez modifier les valeurs, est souvent utilisé dans i-doit. Ces champs d'attribut peuvent être trouvés dans de nombreuses [catégories](../glossary.md) de la [documentation IT](../glossary.md) ou dans d'autres fonctionnalités fournies par i-doit. L'administration centrale des valeurs est effectuée via le **Dialog-Admin** dans l'**Administration**.
 
-## Overview
+## Aperçu
 
-You can find an overview of all [attributes](../glossary.md) of the field type **Dialog+** under **Administration → Predefined content → Dialog-Admin**. They are sorted alphabetically according to the associated categories in the left navigation tree. When you created a [custom category](./custom-categories.md) with an attribute of the field type **Dialog+**, this attribute and its related category is also displayed in the navigation tree under **Custom Dialog+**.
+Vous pouvez trouver un aperçu de tous les [attributs](../glossary.md) du type de champ **Dialog+** sous **Administration → Contenu prédéfini → Dialog-Admin**. Ils sont triés alphabétiquement selon les catégories associées dans l'arborescence de navigation de gauche. Lorsque vous avez créé une [catégorie personnalisée](././custom-categories.md) avec un attribut du type de champ **Dialog+**, cet attribut et sa catégorie associée sont également affichés dans l'arborescence de navigation sous **Dialog+ personnalisé**.
 
-[![Overview](../assets/images/en/basics/dialog-admin/1-da.png)](../assets/images/en/basics/dialog-admin/1-da.png)
+[![Aperçu](../assets/images/en/basics/dialog-admin/1-da.png)](../assets/images/en/basics/dialog-admin/1-da.png)
 
-## Show Values
+## Afficher les valeurs
 
-An overview of the values which were documented so far (if existing) will be loaded in the main area when you click on an attribute in the left navigation tree within the **Dialog-Admin** area.
+Une vue d'ensemble des valeurs qui ont été documentées jusqu'à présent (si elles existent) sera chargée dans la zone principale lorsque vous cliquez sur un attribut dans l'arborescence de navigation de gauche dans la zone **Dialog-Admin**.
 
-[![Show Values](../assets/images/en/basics/dialog-admin/2-da.png)](../assets/images/en/basics/dialog-admin/2-da.png)
+[![Afficher les valeurs](../assets/images/en/basics/dialog-admin/2-da.png)](../assets/images/en/basics/dialog-admin/2-da.png)
 
-## Create Values
+## Créer des Valeurs
 
-Click the **New** button above the overview when you want to create a new value. A form field opens and you can fill in the following details:
+Cliquez sur le bouton **Nouveau** au-dessus de l'aperçu lorsque vous souhaitez créer une nouvelle valeur. Un champ de formulaire s'ouvre et vous pouvez remplir les détails suivants :
 
 - **ID**:<br>
-    Each value in a **Dialog+** attribute receives a unique identifier by i-doit. This is very helpful, for example, when working with the [API](../i-doit-pro-add-ons/api/index.md).
-- **Title**:<br>
-    Here you can enter the value you want to display in the i-doit Web GUI when you view or edit the **Dialog+** attribute.
-- **Constant**:<br>
-    Beside a unique identifier, a value can receive a unique constant. In contrast to the identifier it usually consists of a descriptive string which can be helpful when applying the API.
-- **Status**:<br>
-    Each value can have a status. You should select the status Normal (2)to apply it in the documentation.
+    Chaque valeur dans un attribut **Dialog+** reçoit un identifiant unique par i-doit. Cela est très utile, par exemple, lors de travaux avec l'[API](../i-doit-pro-add-ons/api/index.md).
+- **Titre**:<br>
+    Ici, vous pouvez saisir la valeur que vous souhaitez afficher dans l'interface Web i-doit lorsque vous consultez ou modifiez l'attribut **Dialog+**.
+- **Constante**:<br>
+    En plus d'un identifiant unique, une valeur peut recevoir une constante unique. Contrairement à l'identifiant, elle se compose généralement d'une chaîne descriptive qui peut être utile lors de l'application de l'API.
+- **Statut**:<br>
+    Chaque valeur peut avoir un statut. Vous devriez sélectionner le statut Normal (2) pour l'appliquer dans la documentation. 
 
-You can save the value with the **Save** button.
+{/*examples*/}
 
-[![Create Values](../assets/images/en/basics/dialog-admin/3-da.png)](../assets/images/en/basics/dialog-admin/3-da.png)
 
-## Edit Values
+Vous pouvez enregistrer la valeur avec le bouton **Enregistrer**.
 
-Click on the respective value in the overview when you want to edit the attribute. The form which opens corresponds to the form field which was described above regarding the creation of a new value.
+[![Créer des valeurs](../assets/images/en/basics/dialog-admin/3-da.png)](../assets/images/en/basics/dialog-admin/3-da.png)
+
+## Modifier les valeurs
+
+Cliquez sur la valeur respective dans l'aperçu lorsque vous souhaitez modifier l'attribut. Le formulaire qui s'ouvre correspond au champ de formulaire qui a été décrit ci-dessus concernant la création d'une nouvelle valeur.
 
 ### Impact
 
-The changing and deleting of values has an immediate effect on the IT documentation: When you change a value in the **Dialog-Admin**, it changes automatically everywhere else. When you delete a value, it will be deleted everywhere else where it was used. We recommend searching for the objects which use the respective value via a [report](../evaluation/report-manager.md) before you delete it. With help of this report you can choose an alternative value for all the listed objects, for example via [list editing](../efficient-documentation/list-editing.md).
+Le changement et la suppression des valeurs ont un effet immédiat sur la documentation informatique : lorsque vous modifiez une valeur dans le **Dialog-Admin**, elle change automatiquement partout ailleurs. Lorsque vous supprimez une valeur, elle sera supprimée partout ailleurs où elle a été utilisée. Nous vous recommandons de rechercher les objets qui utilisent la valeur respective via un [rapport](../evaluation/report-manager.md) avant de la supprimer. À l'aide de ce rapport, vous pouvez choisir une valeur alternative pour tous les objets répertoriés, par exemple via [édition de liste](../efficient-documentation/list-editing.md).
 
-!!! warning "Delete Values"
+!!! warning "Supprimer des valeurs"
 
-    When you want to delete a value, mark the checkbox of this value within the overview. Then click the **Purge** button and the value will be deleted irrevocably.<br>
-    For each  value, the tabular overview shows whether the value can be deleted or not. The reason for this is that some values are required by necessity by i-doit to guarantee certain functionalities.
+    Lorsque vous souhaitez supprimer une valeur, cochez la case de cette valeur dans l'aperçu. Ensuite, cliquez sur le bouton **Purger** et la valeur sera supprimée de manière irrévocable.<br>
+    Pour chaque valeur, l'aperçu tabulaire montre si la valeur peut être supprimée ou non. La raison en est que certaines valeurs sont nécessaires par nécessité par i-doit pour garantir certaines fonctionnalités.
 
-## Set Permissions
+## Définir les autorisations
 
-For each **Dialog+** attribute you can assign rights for each person or person group. For example, it is possible and often also advisable that only certain person groups may create, edit or delete values while other person groups are only allowed to use them.
+Pour chaque attribut **Dialog+**, vous pouvez attribuer des droits à chaque personne ou groupe de personnes. Par exemple, il est possible et souvent également conseillé que seuls certains groupes de personnes puissent créer, modifier ou supprimer des valeurs, tandis que d'autres groupes de personnes ne sont autorisés qu'à les utiliser. { /*examples*/ }

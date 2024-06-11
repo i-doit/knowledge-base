@@ -1,5 +1,5 @@
-# Software Development
+# Développement logiciel
 
-How does development for, with or in i-doit work? i-doit is a web application which is based on the PHP script language and the MySQL/MariaDB database. The Web GUI is realized in HTML/CSS/JS. We let you see behind the curtains of the software. That is not only useful to expand i-doit functions but also helpful when you want to address the [API](../i-doit-pro-add-ons/api/index.md) or read data directly from the database.
+Comment fonctionne le développement pour, avec ou dans i-doit ? i-doit est une application web basée sur le langage de script PHP et la base de données MySQL/MariaDB. L'interface utilisateur Web est réalisée en HTML/CSS/JS. Nous vous laissons voir ce qui se passe en coulisses du logiciel. Cela est non seulement utile pour étendre les fonctions de i-doit, mais aussi lorsque vous souhaitez accéder à l'[API](../i-doit-pro-add-ons/api/index.md) ou lire directement des données depuis la base de données.
 
-*   [Database Model](./database-model/index.md)
+*   [Modèle de base de données](./database-model/index.md)

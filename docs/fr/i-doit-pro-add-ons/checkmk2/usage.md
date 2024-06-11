@@ -1,82 +1,102 @@
-# checkmk 2: Usage
+# checkmk 2: Utilisation
 
-Just run the application to print some basic information:
+Il suffit d'exécuter l'application pour afficher quelques informations de base :
 
-
+```bash
 idoitcmk
+```
+{ /*examples*/ }
 
-Help
+Aide
 ----
 
-Each command has its own usage. Either run
+Chaque commande a sa propre utilisation. Exécutez soit
 
-    idoitcmk help COMMAND
+```bash
+idoitcmk help COMMANDE
+```
 
-or
+ou
 
-    idoitcmk COMMAND --help
+```bash
+idoitcmk COMMANDE --help
+```
+{ /*examples*/ }
 
-Version information
--------------------
+Informations sur la version
+---------------------------
 
-Which version of idoitcmk are the using? Just run
+Quelle version de idoitcmk utilisez-vous ? Il suffit d'exécuter
 
-    idoitcmk --version
+```bash
+idoitcmk --version
+```
+{ /*examples*/ }
 
-List all commands
------------------
+Lister toutes les commandes
+---------------------------
 
-If you want to know which commands are available you can get a complete list with:
+Si vous souhaitez savoir quelles commandes sont disponibles, vous pouvez obtenir une liste complète avec :
 
-    idoitcmk list
+```bash
+idoitcmk list
+```
+{ /*examples*/ }
 
-User interaction
-----------------
+Interaction avec l'utilisateur
+-----------------------------
 
-Before this application will ever alter data it will asked the user for permission. For example:
+Avant que cette application ne modifie jamais des données, elle demandera la permission de l'utilisateur. Par exemple :
 
-17 hosts in Check_MK will be updated
-Do you like to proceed? [Y|n]:
+17 hôtes dans Check_MK seront mis à jour
+Souhaitez-vous continuer ? [O|n] :
 
-Default value is highlighted in upper-case (Y) so you can just hit enter to proceed.
+La valeur par défaut est mise en évidence en majuscules (O), vous pouvez simplement appuyer sur Entrée pour continuer.
 
-If you like to automate execution without any user interaction use option -y or --yes:
+Si vous souhaitez automatiser l'exécution sans aucune interaction utilisateur, utilisez l'option -y ou --yes :
 
-    idoitcmk push --yes
+```bash
+idoitcmk push --yes
+```
+{ /*examples*/ }
 
-Fetch status information
-------------------------
+Récupérer des informations sur l'état
+-------------------------------------
 
-If you want to make sure everything is alright perform various tests:
+Si vous voulez vous assurer que tout va bien, effectuez divers tests :
 
-    idoitcmk status
+```bash
+idoitcmk status
+```
+{ /*examples*/ }
 
-The following tests are included:
+*   Environnement PHP
+*   Connexion à l'API JSON-RPC i-doit
+*   Connexion à l'API Web Check\_MK
+*   Connexion à l'API Livestatus Check\_MK
 
-*   PHP environment
-*   Connection to i-doit JSON-RPC API
-*   Connection to Check\_MK Web API
-*   Connection to Check\_MK Livestatus API
-
-Verbosity
+Verbosité
 ---------
 
-During execution this application will print out more or less useful information. You can set the preferred level of verbosity with two options. Increase verbosity with -v or --verbose, decrease it with -q or --quiet. These log levels are available:
+Pendant l'exécution de cette application, elle affichera des informations plus ou moins utiles. Vous pouvez définir le niveau de verbosité préféré avec deux options. Augmentez la verbosité avec -v ou --verbose, diminuez-la avec -q ou --quiet. Ces niveaux de journalisation sont disponibles :
 
-| Level | Color | Option | Description |
+| Niveau | Couleur | Option | Description |
 | --- | --- | --- | --- |
-| Fatal error | Red | Always on | Abort execution immediately |
-| Error | Red | Always on | Something important went wrong |
-| Warning | Yellow | Always on | Skip a step due to lack of information |
-| Notice | Yellow | Disable with -q/--quiet | Everything is alright but you should notice this |
-| Info | Green | Disable with -q/--quiet | Just a information what is going on |
-| Debug | Grey | Enable with -v/--verbose | Print out everything you got |
+| Erreur fatale | Rouge | Toujours activé | Interrompre immédiatement l'exécution |
+| Erreur | Rouge | Toujours activé | Quelque chose d'important s'est mal passé |
+| Avertissement | Jaune | Toujours activé | Ignorer une étape en raison d'un manque d'informations |
+| Avis | Jaune | Désactivé avec -q/--quiet | Tout va bien mais vous devriez remarquer ceci |
+| Info | Vert | Désactivé avec -q/--quiet | Juste une information sur ce qui se passe |
+| Débogage | Gris | Activé avec -v/--verbose | Afficher tout ce que vous avez |
 
-Disable colored output with option --no-colors. This is very useful for logging purposes, for example:
+Désactivez la sortie colorée avec l'option --no-colors. Cela est très utile à des fins de journalisation, par exemple :
 
-    idoitcmk push --verbose --no-colors --yes > idoitcmk.log
+```bash
+idoitcmk push --verbose --no-colors --yes > idoitcmk.log
+```
 
-Super-user rights
+Super-utilisateur
 -----------------
 
-!!! info "Notice: There is no need to run this script in a production environment with super-user rights like root."
+!!! info "Remarque : Il n'est pas nécessaire d'exécuter ce script dans un environnement de production avec des droits de super-utilisateur comme root."
+```

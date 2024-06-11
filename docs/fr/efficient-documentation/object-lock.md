@@ -1,32 +1,32 @@
-# Object Lock
+# Verrouillage d'Objet
 
-Collaborating on the IT documentation also has its pitfalls. Therefore i-doit provides a function to prevent that users who make changes overwrite changes which were made by other users. With the object lock function a specific user gets exclusive writing permissions. All other users only have reading permissions while the lock is active.
+Collaborer à la documentation informatique a aussi ses pièges. C'est pourquoi i-doit propose une fonction pour empêcher que les utilisateurs qui apportent des modifications écrasent les modifications effectuées par d'autres utilisateurs. Avec la fonction de verrouillage d'objet, un utilisateur spécifique obtient des permissions d'écriture exclusives. Tous les autres utilisateurs n'ont que des permissions de lecture tant que le verrou est actif.
 
-Functionality
+Fonctionnalité
 -------------
 
-When a user edits an [object](../basics/structure-of-the-it-documentation.md), it will be locked for a certain period of time for other users. Even though other users can view the object, they cannot edit it. A big red reference is displayed on the [overview page](../basics/structure-of-the-it-documentation.md) and in each [category](../basics/structure-of-the-it-documentation.md) of the object indicating that this object is locked and also stating by whom: **- LOCKED ([User]) -**
+Lorsqu'un utilisateur modifie un [objet](../basics/structure-of-the-it-documentation.md), celui-ci est verrouillé pendant une certaine période de temps pour les autres utilisateurs. Même si les autres utilisateurs peuvent consulter l'objet, ils ne peuvent pas le modifier. Une référence en rouge vif est affichée sur la [page d'aperçu](../basics/structure-of-the-it-documentation.md) et dans chaque [catégorie](../basics/structure-of-the-it-documentation.md) de l'objet, indiquant que cet objet est verrouillé et précisant par qui : **- VERROUILLÉ ([Utilisateur]) -**
 
-As soon as the object lock is activated, a counter starts. When the countdown is finished, the object is unlocked again. During this period the user should have saved his changes in order to avoid the risk of other users overwriting the changes (or the other way around).
+Dès que le verrouillage de l'objet est activé, un compteur démarre. Lorsque le décompte est terminé, l'objet est à nouveau déverrouillé. Pendant cette période, l'utilisateur devrait avoir enregistré ses modifications afin d'éviter le risque que d'autres utilisateurs écrasent les modifications (ou vice versa).
 
-The object will be unlocked prematurely once the user saved his changes.
+L'objet sera déverrouillé prématurément une fois que l'utilisateur aura enregistré ses modifications.
 
-[![Functionality](../assets/images/en/efficient-documentation/object-lock/1-ol.png)](../assets/images/en/efficient-documentation/object-lock/1-ol.png)
-[![Functionality](../assets/images/en/efficient-documentation/object-lock/2-ol.png)](../assets/images/en/efficient-documentation/object-lock/2-ol.png)
+[![Fonctionnalité](../assets/images/en/efficient-documentation/object-lock/1-ol.png)](../assets/images/en/efficient-documentation/object-lock/1-ol.png)
+[![Fonctionnalité](../assets/images/en/efficient-documentation/object-lock/2-ol.png)](../assets/images/en/efficient-documentation/object-lock/2-ol.png)
 
 Configuration
 -------------
 
-The object lock is active for 120 seconds in the default installation of i-doit. This can be configured at **Administration → CMDB Settings → General configuration → Object lock**:
+Le verrouillage de l'objet est actif pendant 120 secondes dans l'installation par défaut d'i-doit. Cela peut être configuré à **Administration → Paramètres CMDB → Configuration générale → Verrouillage d'objet** :
 
-*   **Activate locking of objects in edit mode:** Do you want the object lock to be activated?
-*   **Timeout:** Time in seconds for the countdown.
+*   **Activer le verrouillage des objets en mode édition :** Voulez-vous activer le verrouillage de l'objet ?
+*   **Délai d'attente :** Temps en secondes pour le compte à rebours.
 
 [![Configuration](../assets/images/en/efficient-documentation/object-lock/3-ol.png)](../assets/images/en/efficient-documentation/object-lock/3-ol.png)
 
-List of Locked Objects
+Liste des objets verrouillés
 ----------------------
 
-All currently locked objects are displayed in a list below the configuration (**Administration → CMDB Settings → General configuration → Object lock**). All locked objects can be unlocked prematurely via the **Delete** button.
+Tous les objets actuellement verrouillés sont affichés dans une liste en dessous de la configuration (**Administration → Paramètres CMDB → Configuration générale → Verrouillage d'objet**). Tous les objets verrouillés peuvent être déverrouillés prématurément via le bouton **Supprimer**.
 
-[![List of Locked Objects](../assets/images/en/efficient-documentation/object-lock/4-ol.png)](../assets/images/en/efficient-documentation/object-lock/4-ol.png)
+[![Liste des objets verrouillés](../assets/images/en/efficient-documentation/object-lock/4-ol.png)](../assets/images/en/efficient-documentation/object-lock/4-ol.png)

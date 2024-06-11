@@ -1,32 +1,32 @@
 ---
-title: Two-factor Authentication (2FA)
-description: Two-factor authentication options for i-doit
+title: Authentification à deux facteurs (2FA)
+description: Options d'authentification à deux facteurs pour i-doit
 icon: material/two-factor-authentication
 status: new
-lang: en
+lang: fr
 ---
 
-# Two-factor Authentication (2FA)
+# Authentification à deux facteurs (2FA)
 
-## Integrated Two-factor Authentication
+## Authentification à deux facteurs intégrée
 
-### Activate 2FA
+### Activer le 2FA
 
-To activate 2FA you need to access the **Two-factor Authentication** setting at **User settings** → **Password and login**.<br>
-Click `Edit` and now click `Activate`, after entering the 6-digit authentication code the 2FA authentication is enabled.
+Pour activer le 2FA, vous devez accéder au paramètre **Authentification à deux facteurs** dans **Paramètres utilisateur** → **Mot de passe et connexion**.<br>
+Cliquez sur `Modifier` puis sur `Activer`, après avoir saisi le code d'authentification à 6 chiffres, l'authentification 2FA est activée.
 
-The next time you log in, you will be asked for the 6-digit authentication code.
+La prochaine fois que vous vous connecterez, on vous demandera le code d'authentification à 6 chiffres.
 
-### Deactivate 2FA
+### Désactiver le 2FA
 
-To deactivate 2FA you need to access the **Two-factor Authentication** setting at **User settings** → **Password and login**.<br>
-Click `Edit` and now click `Deactivate`, after entering the 6-digit authentication code the 2FA authentication is disabled.
+Pour désactiver le 2FA, vous devez accéder au paramètre **Authentification à deux facteurs** dans **Paramètres utilisateur** → **Mot de passe et connexion**.<br>
+Cliquez sur `Modifier` puis sur `Désactiver`, après avoir saisi le code d'authentification à 6 chiffres, l'authentification 2FA est désactivée.
 
-!!! note "An administrator has the option of deactivating 2FA for users via the [administration](../../system-administration/administration/two-factor-authentication.md)."
+!!! note "Un administrateur a la possibilité de désactiver le 2FA pour les utilisateurs via l'[administration](../../system-administration/administration/two-factor-authentication.md)."
 
-## External Two-factor Authentication
+## Authentification à deux facteurs externe {/ * exemples * /}
 
-Here we will provide links to external 2FA authentication methods
+Ici, nous fournirons des liens vers des méthodes d'authentification 2FA externes
 
 -   [Google](https://code.google.com/archive/p/google-authenticator-apache-module/wikis/GoogleAuthenticatorApacheModule.wiki)
 -   [Apache Guacamole](https://guacamole.apache.org/doc/gug/totp-auth.html)

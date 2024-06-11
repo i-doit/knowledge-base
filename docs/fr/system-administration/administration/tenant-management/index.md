@@ -1,108 +1,108 @@
-# [Tenant name] management
+# Gestion du nom du locataire
 
-Here you can mange your tenant and view system related configurations.
+Ici, vous pouvez gérer votre locataire et consulter les configurations liées au système.
 
-[![[Tenant name] management overview](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)
+[![Aperçu de la gestion du nom du locataire](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png){/*examples*/}
 
-## The [Tenant name] management is divided into the following sub-sections
+## La gestion du nom du locataire est divisée en les sous-sections suivantes
 
--   [Settings for [Tenant name]](settings-for-tenant.md)
--   [Repair and clean up](repair-and-clean-up.md)
--   [Expert settings](expert-settings.md)
+-   [Paramètres pour le nom du locataire](settings-for-tenant.md){/*examples*/}
+-   [Réparation et nettoyage](repair-and-clean-up.md){/*examples*/}
+-   [Paramètres experts](expert-settings.md){/*examples*/}
 
-## License overview
+## Aperçu de la licence
 
-In the license overview you will find information about your license, documented object, version and a object counter.
+Dans l'aperçu de la licence, vous trouverez des informations sur votre licence, les objets documentés, la version et un compteur d'objets.
 
-| Option                        | Value                                                      |
+| Option                        | Valeur                                                     |
 | ----------------------------- | ---------------------------------------------------------- |
-| Documented objects            | Value                                                      |
-| Free objects                  | Value                                                      |
-| CMDB references               | Value                                                      |
-| Last i-doit update            | Date time                                                  |
-| Version                       | Value                                                      |
-| Object counter by object type | Value                                                      |
-| Licensed Add-ons              | Titles of installed add-ons                                |
-| License runtime               | Creation and expire date as well as runtime of the license |
+| Objets documentés             | Valeur                                                     |
+| Objets gratuits               | Valeur                                                     |
+| Références CMDB               | Valeur                                                     |
+| Dernière mise à jour i-doit   | Date et heure                                              |
+| Version                       | Valeur                                                     |
+| Compteur d'objets par type d'objet | Valeur                                                     |
+| Add-ons sous licence          | Titres des add-ons installés                               |
+| Durée de la licence           | Date de création et d'expiration ainsi que durée de la licence |
 
-## System Config Check
+## Vérification de la configuration du système
 
-| Option                             | Value                                                       |
+| Option                             | Valeur                                                       |
 | ---------------------------------- | ----------------------------------------------------------- |
-| Time difference PHP/MySQL          | Date Time                                                   |
-| Count of objects for [Tenant name] | Value                                                       |
-| Operating System                   | Linux or Windows                                            |
-| Architecture                       | Processor architecture                                      |
-| PHP Version                        | PHP Version                                                 |
-| i-doit Code Version                | i-doit Version                                              |
-| MariaDB Version                    | MariaDB Version                                             |
-| i-doit Database Version            | i-doit Database Version                                     |
-| Database size                      | Size in MB                                                  |
-| Updates                            | Next Version available?                                     |
-| Browser (client)                   | Info text and link to kb                                    |
-| Configuration examples             | Info text and link to kb                                    |
-| Duplicated usernames               | Button that opens a popup and displays duplicated usernames |
+| Différence de temps PHP/MySQL      | Date et heure                                                |
+| Nombre d'objets pour le nom du locataire | Valeur                                                       |
+| Système d'exploitation             | Linux ou Windows                                             |
+| Architecture                       | Architecture du processeur                                   |
+| Version PHP                        | Version PHP                                                  |
+| Version du code i-doit             | Version i-doit                                               |
+| Version MariaDB                    | Version MariaDB                                              |
+| Version de la base de données i-doit | Version de la base de données i-doit                        |
+| Taille de la base de données       | Taille en Mo                                                 |
+| Mises à jour                       | Prochaine version disponible ?                               |
+| Navigateur (client)                | Texte d'information et lien vers kb                          |
+| Exemples de configuration          | Texte d'information et lien vers kb                          |
+| Noms d'utilisateur dupliqués       | Bouton qui ouvre une fenêtre contextuelle et affiche les noms d'utilisateur dupliqués |
 
-## PHP.ini Settings
+## Paramètres PHP.ini
 
-| Option              | Value      |
+| Option              | Valeur     |
 | ------------------- | ---------- |
-| max_execution_time  | Time in s  |
-| upload_max_filesize | Size in MB |
-| post_max_size       | Size in MB |
-| allow_url_fopen     | 1 or 0     |
-| max_input_vars      | Value      |
-| file_uploads        | 1 or 0     |
-| memory_limit        | Size in MB |
+| max_execution_time  | Temps en s |
+| upload_max_filesize | Taille en Mo |
+| post_max_size       | Taille en Mo |
+| allow_url_fopen     | 1 ou 0     |
+| max_input_vars      | Valeur     |
+| file_uploads        | 1 ou 0     |
+| memory_limit        | Taille en Mo |
 
-## MySQL Settings
+## Paramètres MySQL
 
-| Option                  | Value                   |
+| Option                  | Valeur                   |
 | ----------------------- | ----------------------- |
-| innodb_buffer_pool_size | Size in MB              |
-| max_allowed_packet      | Size in MB              |
-| tmp_table_size          | Size in MB              |
-| max_heap_table_size     | Size in MB              |
-| join_buffer_size        | Size in bytes           |
-| sort_buffer_size        | Size in bytes           |
-| innodb_sort_buffer_size | Size in MB              |
-| innodb_log_file_size    | Size in MB              |
-| datadir                 | Data directory of MySQL |
+| innodb_buffer_pool_size | Taille en Mo              |
+| max_allowed_packet      | Taille en Mo              |
+| tmp_table_size          | Taille en Mo              |
+| max_heap_table_size     | Taille en Mo              |
+| join_buffer_size        | Taille en octets           |
+| sort_buffer_size        | Taille en octets           |
+| innodb_sort_buffer_size | Taille en Mo              |
+| innodb_log_file_size    | Taille en Mo              |
+| datadir                 | Répertoire de données de MySQL |
 
-## PHP Extensions
+## Extensions PHP
 
-| Option   | Value    |
+| Option   | Valeur    |
 | -------- | -------- |
-| curl     | Used for |
-| gd       | Used for |
-| json     | Used for |
-| ldap     | Used for |
-| mbstring | Used for |
-| mysqli   | Used for |
-| pcre     | Used for |
-| session  | Used for |
-| sockets  | Used for |
-| spl      | Used for |
-| xml      | Used for |
-| zlib     | Used for |
-| SNMP     | Used for |
+| curl     | Utilisé pour |
+| gd       | Utilisé pour |
+| json     | Utilisé pour |
+| ldap     | Utilisé pour |
+| mbstring | Utilisé pour |
+| mysqli   | Utilisé pour |
+| pcre     | Utilisé pour |
+| session  | Utilisé pour |
+| sockets  | Utilisé pour |
+| spl      | Utilisé pour |
+| xml      | Utilisé pour |
+| zlib     | Utilisé pour |
+| SNMP     | Utilisé pour |
 
-## Apache Modules
+## Modules Apache
 
-| Option      | Value    |
+| Option      | Valeur    |
 | ----------- | -------- |
-| mod_rewrite | Used for |
+| mod_rewrite | Utilisé pour |
 
-## Rights & Directories
+## Droits & Répertoires
 
-| Option                       | Value          |
+| Option                       | Valeur          |
 | ---------------------------- | -------------- |
-| Source Directory             | Directory path |
-| i-doit Directory             | Directory path |
-| Temp                         | Directory path |
-| Css                          | Directory path |
-| Javascript                   | Directory path |
-| File Upload                  | Directory path |
-| Image Upload                 | Directory path |
-| Default Theme Template Cache | Directory path |
-| Default Theme Smarty Cache   | Directory path |
+| Répertoire Source             | Chemin du répertoire |
+| Répertoire i-doit             | Chemin du répertoire |
+| Temp                         | Chemin du répertoire |
+| Css                          | Chemin du répertoire |
+| Javascript                   | Chemin du répertoire |
+| Téléchargement de fichiers                  | Chemin du répertoire |
+| Téléchargement d'images                 | Chemin du répertoire |
+| Cache du modèle de thème par défaut | Chemin du répertoire |
+| Cache Smarty du thème par défaut   | Chemin du répertoire |

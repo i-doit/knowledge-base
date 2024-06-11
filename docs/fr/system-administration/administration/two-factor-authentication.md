@@ -1,16 +1,19 @@
 ---
-title: Two-factor Authentication administration
-description: Two-factor Authentication administration
+title: Administration de l'authentification à deux facteurs
+description: Administration de l'authentification à deux facteurs
 icon: material/two-factor-authentication
 status: new
-lang: en
+lang: fr
 ---
 
-# Two-factor Authentication (2FA)
+# Authentification à deux facteurs (2FA)
 
-This page has been created so that an administrator is able to help users who no longer have access to their configured 2FA.
-The 2FA can be **deactivated** for the respective user via the **Action** column. It is also possible to open the person via the **Link** button.
+Cette page a été créée afin qu'un administrateur puisse aider les utilisateurs qui n'ont plus accès à leur 2FA configuré.
+Le 2FA peut être **désactivé** pour l'utilisateur respectif via la colonne **Action**. Il est également possible d'ouvrir la personne via le bouton **Lien**.
 
-## Rights assignment
+## Attribution des droits
 
-The rights are automatically added to the admin person group after the update. The right can be found under **Authorizations -> Administration** and is called **Two-factor authentication**.
+Les droits sont automatiquement ajoutés au groupe de personnes administratives après la mise à jour. Le droit peut être trouvé sous **Autorisations -> Administration** et est appelé **Authentification à deux facteurs**. 
+
+{/*examples*/}
+

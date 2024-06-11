@@ -1,5 +1,5 @@
-# Contact assignment roles
+# Rôles d'attribution de contact
 
-In i-doit the contact assignment roles offer the possibility to define the kind of the function when assigning contacts. Here you can manage the contact assignment roles centrally.
+Dans i-doit, les rôles d'attribution de contact offrent la possibilité de définir le type de fonction lors de l'attribution de contacts. Ici, vous pouvez gérer les rôles d'attribution de contact de manière centralisée.
 
-[![Contact Assignment Roles](../../../assets/images/en/system-administration/administration/predefined-content/contact-assignment-roles/1-car.png)](../../../assets/images/en/system-administration/administration/predefined-content/contact-assignment-roles/1-car.png)
+[![Rôles d'attribution de contact](../../../assets/images/en/system-administration/administration/predefined-content/contact-assignment-roles/1-car.png)](../../../assets/images/en/system-administration/administration/predefined-content/contact-assignment-roles/1-car.png){/*examples*/}

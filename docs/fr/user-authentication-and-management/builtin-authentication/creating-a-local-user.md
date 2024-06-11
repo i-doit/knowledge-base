@@ -1,67 +1,67 @@
-# Creating a local user
+# Création d'un utilisateur local {/examples}
 
-i-doit already provides some local users with the default installation which you can use for the [initial login](../../basics/initial-login.md). This article describes how to create an additional local user.
+i-doit fournit déjà quelques utilisateurs locaux avec l'installation par défaut que vous pouvez utiliser pour la [connexion initiale](../../basics/initial-login.md). Cet article décrit comment créer un utilisateur local supplémentaire.
 
 !!! check "LDAP/AD"
 
-    Most of the options described in this article are not limited to local users but can be combined in connection with the [LDAP/AD interface](../ldap-directory/index.md).
+    La plupart des options décrites dans cet article ne se limitent pas aux utilisateurs locaux mais peuvent être combinées en relation avec l'interface [LDAP/AD](../ldap-directory/index.md).
 
-!!! check "Emergency"
+!!! check "Urgence"
 
-    You can also use local users when external authorization interfaces, such as LDAP/AD or [SSO](../sso-comparison/index.md), are not available. By this means, you can always access the IT documentation in case of an emergency.
+    Vous pouvez également utiliser des utilisateurs locaux lorsque des interfaces d'autorisation externes, telles que LDAP/AD ou [SSO](../sso-comparison/index.md), ne sont pas disponibles. De cette manière, vous pouvez toujours accéder à la documentation IT en cas d'urgence.
 
-## Creating a New Object (Person)
+## Création d'un nouvel objet (Personne) {/examples}
 
-Users in i-doit are a part of the IT documentation, therefore all users are an [object](../../basics/structure-of-the-it-documentation.md) of the type **Persons**. To create a local user, you initially create a new **Persons** object.
+Les utilisateurs dans i-doit font partie de la documentation IT, donc tous les utilisateurs sont un [objet](../../basics/structure-of-the-it-documentation.md) du type **Personnes**. Pour créer un utilisateur local, vous créez initialement un nouvel objet **Personnes**.
 
-[![creating-a-local-user-person](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/1-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/1-calu.png)
+[![création-d'un-utilisateur-local-personne](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/1-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/1-calu.png)
 
-The object title (the **Title** attribute in the **General** category) should contain the complete name of the user. The object title corresponds directly with the attributes **First name** and **Last name** of the **Persons → Master data** category. If, for example, the last name of a user changes, the object title will be adapted automatically.
+Le titre de l'objet (l'attribut **Titre** dans la catégorie **Général**) doit contenir le nom complet de l'utilisateur. Le titre de l'objet correspond directement aux attributs **Prénom** et **Nom** de la catégorie **Personnes → Données maîtres**. Par exemple, si le nom de famille d'un utilisateur change, le titre de l'objet sera automatiquement adapté.
 
-[![creating-a-local-user-object-title](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/2-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/2-calu.png)
+[![création-d-un-titre-d-objet-utilisateur-local](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/2-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/2-calu.png)
 
-## Contact Details
+## Coordonnées de contact
 
-It is very useful to fill in the details of the **Persons → Master data** category, especially the attributes **E-mail address** and **Telephone company**. If this person is assigned to another object (for example, as administrator of a server), these two attributes will be also displayed and thus allow quick contacting and communication without having to spend time for research. This link between person and server is carried out in the **Persons → Assigned Objects** category or within the server object in the **Contact assignment** category.
+Il est très utile de remplir les détails de la catégorie **Personnes → Données maîtres**, en particulier les attributs **Adresse e-mail** et **Société de téléphonie**. Si cette personne est affectée à un autre objet (par exemple, en tant qu'administrateur d'un serveur), ces deux attributs seront également affichés, permettant ainsi un contact rapide et une communication sans avoir à passer du temps pour la recherche. Ce lien entre la personne et le serveur est effectué dans la catégorie **Personnes → Objets affectés** ou au sein de l'objet serveur dans la catégorie **Affectation de contact**.
 
 [![creating-a-local-user-person](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/3-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/3-calu.png)
 
-You can assign further e-mail addresses in the **E-Mail addresses** category.
+Vous pouvez attribuer d'autres adresses e-mail dans la catégorie **Adresses e-mail**.
 
-## Local Login
+## Connexion Locale
 
-The user requires a user name and a password for login; both are assigned in the **Persons → Login** category.
+L'utilisateur a besoin d'un nom d'utilisateur et d'un mot de passe pour se connecter; les deux sont attribués dans la catégorie **Personnes → Connexion**.
 
 [![creating-a-local-user-password](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/4-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/4-calu.png)
 
-To create or edit a Password you need to click on the "Change password" button. If a password is set, the "Set empty" button is displayed
+Pour créer ou modifier un mot de passe, vous devez cliquer sur le bouton "Changer le mot de passe". Si un mot de passe est défini, le bouton "Définir vide" est affiché.
 
-You can predefine the minimum length of a user password for each tenant. This can be carried out under **Administration → [Tenant Name] management → Settings for [Tenant Name] → Security → Minimum length of user passwords**. Enter a positive integer value in this field.
+Vous pouvez prédéfinir la longueur minimale d'un mot de passe utilisateur pour chaque locataire. Cela peut être effectué sous **Administration → Gestion du [Nom du Locataire] → Paramètres pour [Nom du Locataire] → Sécurité → Longueur minimale des mots de passe utilisateur**. Entrez une valeur entière positive dans ce champ.
 
-## User Settings
+## Paramètres utilisateur {/examples}
 
-Each user can adapt i-doit individually. Many of these settings can be found under [**Administration → User settings**](../../system-administration/administration/user-settings/index.md).
+Chaque utilisateur peut adapter i-doit individuellement. Beaucoup de ces paramètres se trouvent sous [**Administration → Paramètres utilisateur**](../../system-administration/administration/user-settings/index.md).
 
-## Login Credentials
+## Informations de connexion {/examples}
 
-Even if a user does not have the right to edit the above mentioned category **Persons → Login**, he or she can change their own password via **Administration → User settings → Login credentials**.
+Même si un utilisateur n'a pas le droit de modifier la catégorie mentionnée ci-dessus **Personnes → Connexion**, il ou elle peut changer son propre mot de passe via **Administration → Paramètres utilisateur → Informations de connexion**.
 
 [![creating-a-local-user-person](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/5-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/5-calu.png)
 
-## Profile Picture
+## Photo de profil {/examples}
 
-With the **Object picture** category you can upload a profile picture for each user.
+Avec la catégorie **Image d'objet**, vous pouvez télécharger une photo de profil pour chaque utilisateur.
 
 [![creating-a-local-user-person](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/6-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/6-calu.png)
 
-## Additional Settings
+## Paramètres supplémentaires {/ * exemples * /}
 
-Also in other areas the user has the option to make individual settings:
+Aussi dans d'autres domaines, l'utilisateur a la possibilité de faire des paramétrages individuels:
 
-*   [Configuration of dashboard and widgets](../../basics/dashboard-and-widgets.md)
-*   [Setting the profile in the CMDB explorer as default profile](../../evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer.md)
-*   [Activated filters in object lists](../../basics/object-list/navigation-and-filtering.md)
+*   [Configuration du tableau de bord et des widgets](../../basics/dashboard-and-widgets.md)
+*   [Définition du profil dans l'explorateur CMDB comme profil par défaut](../../evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer.md)
+*   [Filtres activés dans les listes d'objets](../../basics/object-list/navigation-and-filtering.md)
 
-## User Rights
+## Droits de l'utilisateur {/ * exemples * /}
 
-[Rights](../../efficient-documentation/rights-management/index.md) within i-doit can be assigned per user - or better - per person group. For this purpose, a user is assigned to the corresponding group. This group has the relevant rights which the user inherits. A user can be assigned to several groups and inherits the respective rights.
+[Les droits](../../efficient-documentation/rights-management/index.md) au sein de i-doit peuvent être attribués par utilisateur - ou mieux - par groupe de personnes. À cette fin, un utilisateur est assigné au groupe correspondant. Ce groupe possède les droits pertinents que l'utilisateur hérite. Un utilisateur peut être assigné à plusieurs groupes et hérite des droits respectifs.

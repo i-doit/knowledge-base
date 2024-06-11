@@ -1,138 +1,138 @@
-# Active Directory Documentation
+# Documentation Active Directory
 
-The "Active Directory Documentation" add-on was designed and created as the first add-on with the Add-on Packager. The Active Directory Documentation add-on is designed to make it easier for administrators to document Microsoft environments. The add-on creates the necessary object types and categories.
+L'extension "Documentation Active Directory" a été conçue et créée comme la première extension avec le Packageur d'Extensions. L'extension Documentation Active Directory est conçue pour faciliter la documentation des environnements Microsoft par les administrateurs. L'extension crée les types d'objets et catégories nécessaires.
 
-Installation and License
+Installation et Licence
 
-The "Active Directory Documentation" add-on is installed like any other add-on via the Admin Center. The add-on does not require a license. However, it can only be used with the pro variant.
+L'extension "Documentation Active Directory" est installée comme toute autre extension via le Centre d'Administration. L'extension ne nécessite pas de licence. Cependant, elle ne peut être utilisée qu'avec la variante pro.
 
-Contents of the add-on
+Contenu de l'extension
 ----------------------
 
-The "Active Directory Documentation" add-on brings a collection of object types, categories and Dialog+ entries.
+L'extension "Documentation Active Directory" apporte une collection de types d'objets, de catégories et d'entrées Dialog+.
 
-Two new object type groups "Active Directory" and "Windows Systems" are created with the new object types:
+Deux nouveaux groupes de types d'objets "Active Directory" et "Systèmes Windows" sont créés avec les nouveaux types d'objets :
 
-| Active directory | Windows Systems |
+| Active directory | Systèmes Windows |
 | --- | --- |
-| Domain | DHCP Server |
-| Forest | DNS Server |
-| Site | Windows client |
-| Certificate authority | Window server |
+| Domaine | Serveur DHCP |
+| Forêt | Serveur DNS |
+| Site | Client Windows |
+| Autorité de certification | Serveur Windows |
 
-In the following, the individual object types with the newly delivered categories are briefly explained.
+Dans ce qui suit, les types d'objets individuels avec les catégories nouvellement livrées sont brièvement expliqués.
 
 Domain
 ------
 
-The delivered object type "Domain" allows to document the most common information of a domain.   
-The following categories are delivered with the object type:
+L'objet livré de type "Domaine" permet de documenter les informations les plus courantes d'un domaine.  
+Les catégories suivantes sont livrées avec le type d'objet :
 
-| Category |
+| Catégorie |
 | --- |
-| Domain information |
-| Domain schema |
-| Domain structure |
-| FSMO roles |
-| Domain trusts |
-| Assigned domain controller |
-| Directory partitions |
-| Assigned sites |
+| Informations sur le domaine |
+| Schéma du domaine |
+| Structure du domaine |
+| Rôles FSMO |
+| Confiances du domaine |
+| Contrôleur de domaine assigné |
+| Partitions de l'annuaire |
+| Sites assignés |
 
-[![Domain](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/1-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/1-adc.png)
+[![Domaine](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/1-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/1-adc.png)
 
   
 
-Forest
+Forêt
 ------
 
-The new object type makes it possible with the supplied categories to document all necessary information of a structure.  
-The following categories are delivered with the object type:
+Le nouveau type d'objet permet, avec les catégories fournies, de documenter toutes les informations nécessaires d'une structure.  
+Les catégories suivantes sont livrées avec le type d'objet :
 
-| Category |
+| Catégorie |
 | --- |
-| FSMO roles |
-| Forest information |
-| Forest trusts |
-| Assigned catalogue server |
+| Rôles FSMO |
+| Informations sur la forêt |
+| Confiances de la forêt |
+| Serveur de catalogue assigné |
 
-[![Forest](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/2-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/2-adc.png)
+[![Forêt](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/2-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/2-adc.png)
 
-Certificate authority
----------------------
+Autorité de certification
+--------------------------
 
-The "Certificate authority" enables the exact documentation of certificates. Here the name-giving object type makes possible to document the issuing certification authority, as well as the issued certificates.  
-The following categories are delivered with the object type:
+L'« Autorité de certification » permet la documentation précise des certificats. Ici, le type d'objet qui donne son nom permet de documenter l'autorité de certification émettrice, ainsi que les certificats émis.  
+Les catégories suivantes sont livrées avec le type d'objet :
 
-| Category |
+| Catégorie |
 | --- |
-| Issued certificates |
+| Certificats émis |
 | Zertifizierungsstelle |
 
-[![Certificate authority](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/3-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/3-adc.png)
+[![Autorité de certification](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/3-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/3-adc.png)
 
-Windows server
---------------
+Serveur Windows
+---------------
 
-The new object type "Windows Server" is fundamentally based on the object type "Server". Here, however, increased emphasis is placed on the benefit and its relationships to the Active Directory.  
-The following categories are delivered with the object type:
+Le nouveau type d'objet « Serveur Windows » est fondamentalement basé sur le type d'objet « Serveur ». Cependant, ici, l'accent est davantage mis sur l'avantage et ses relations avec l'Active Directory.  
+Les catégories suivantes sont livrées avec le type d'objet :
 
-| Category |
+| Catégorie |
 | --- |
-| Domain controller |
-| FSMO information |
-| Global catalogue |
+| Contrôleur de domaine |
+| Informations FSMO |
+| Catalogue global |
 | LDAP |
-| NTFS shares |
-| Server roles |
-| Windows services |
-| Windows events |
-| Windows features |
-| Windows information |
-| Windows server group |
-| Windows update |
+| Partages NTFS |
+| Rôles de serveur |
+| Services Windows |
+| Événements Windows |
+| Fonctionnalités Windows |
+| Informations Windows |
+| Groupe de serveurs Windows |
+| Mise à jour Windows |
 
-Windows client
+Client Windows
 --------------
 
-The new object type "Windows client" is fundamentally based on the object type "Client". Here, however, as with the Windows Server, increased emphasis is placed on the benefit and its relationships to the Active Directory.  
-The following categories are delivered with the object type:
+Le nouveau type d'objet "Client Windows" est fondamentalement basé sur le type d'objet "Client". Ici, cependant, tout comme avec le serveur Windows, un accent accru est mis sur l'avantage et ses relations avec l'Active Directory.  
+Les catégories suivantes sont livrées avec le type d'objet :
 
-| Category |
+| Catégorie |
 | --- |
-| RDP settings |
-| Windows information |
+| Paramètres RDP |
+| Informations Windows |
 
-[![Windows client](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/4-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/4-adc.png)
+[![Client Windows](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/4-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/4-adc.png)
 
-DNS server
+Serveur DNS
 ----------
 
-The "DNS Server" object type is fundamentally based on the "Windows Server" object type. This enables separate documentation of DNS information. The "DNS Documentation" DNS add-on is available for special DNS documentation.  
-The following categories are delivered with the object type:
+Le type d'objet "Serveur DNS" est fondamentalement basé sur le type d'objet "Serveur Windows". Cela permet une documentation séparée des informations DNS. L'add-on "Documentation DNS" est disponible pour une documentation DNS spéciale.  
+Les catégories suivantes sont livrées avec le type d'objet :
 
-| Kategorie |
+| Catégorie |
 | --- |
-| DNS zone entries |
-| Assigned DNS server |
+| Entrées de zone DNS |
+| Serveur DNS assigné |
 
-[![DNS server](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/5-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/5-adc.png)
+[![Serveur DNS](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/5-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/5-adc.png)
 
-DHCP server
------------
+Serveur DHCP
+------------
 
-The "DHCP server" object type is fundamentally based on the "Windows Server" object type. This enables separate documentation of DHCP information.   
-The following categories are delivered with the object type:
+Le type d'objet "Serveur DHCP" est fondamentalement basé sur le type d'objet "Serveur Windows". Cela permet une documentation séparée des informations DHCP.  
+Les catégories suivantes sont livrées avec le type d'objet :
 
-| Category |
+| Catégorie |
 | --- |
-| DHCP zones |
-| Assigned DHCP server |
+| Zones DHCP |
+| Serveur DHCP attribué |
 
-[![DHCP server](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/6-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/6-adc.png)
+[![Serveur DHCP](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/6-adc.png)](../assets/images/en/i-doit-pro-add-ons/active-directory-documentation/6-adc.png)
 
-Changelog
+Journal des modifications
 
-| Version | Date | Changelog |
+| Version | Date | Journal des modifications |
 | --- | --- | --- |
-| 0.1 | 26.01.2021 | Initial Release |
+| 0.1 | 26.01.2021 | Version initiale |

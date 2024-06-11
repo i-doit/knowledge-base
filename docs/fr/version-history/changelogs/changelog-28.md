@@ -1,114 +1,116 @@
-# Changelog 28
+# Journal des modifications 28 {/examples/}
 
-[Task][Category folders]         Streamline wording of move browser in Category Tree<br>
-[Task][Category folders]         Streamline wording of reorder modal in category tree feature<br>
-[Task][Category folders]         Rename message when folder is empty<br>
-[Task][Category folders]         Reset category list when the search is deleted<br>
-[Task][Category folders]         Improve category folders drag and drop<br>
-[Task][Category folders]         Add option to select and move multiple items<br>
-[Task][Category folders]         Rename GERMAN Expand Button<br>
-[Task][Category folders]         Add info to empty state of category folders feature<br>
-[Task][Category folders]         Disable move button when nothing is selected<br>
-[Task][Category folders]         Add information about the use of language constants to add a modal folder<br>
-[Task][Code (Internal)]          Remove global $g_convert variable<br>
-[Task][Code (Internal)]          Show architecture in system-overview<br>
-[Task][List editing]             The text with leading zeros needs to be written more clearly.<br>
-[Improvement][Import]            Allow user to import "input" of the first object in cabling import<br>
-[Improvement][JDisc]             JDisc: It should be possible to import more information (SLOT) regarding hard disc<br>
-[Improvement][JDisc]             Import von einzelnen Geräten aus JDisc anhand der IP über die Console / IP filter for JDisc import console command<br>
-[Improvement][JDisc]             New JDisc Import Mode: "Update (Existing)"<br>
-[Improvement][JDisc]             JDisc Import: Importiere SNMP Attribute<br>
-[Improvement][JDisc]             Comparison of available objects from i-doit and JDisc<br>
-[Improvement][JDisc]             Archive objects, that have not been seen by JDisc for a defined set of days<br>
-[Bug][Code (Internal)]           Refactor the automatic update-check to a separate (ajax) request<br>
-[Bug][Code (Internal)]           Installation of different Add-on Versions does not replace old files<br>
-[Bug][Code (Internal)]           Changes in SMTP configuration encrypt the password<br>
-[Bug][Code (Internal)]           Assigned clusters are removed after saving the object type configuration<br>
-[Bug][Code (Internal)]           de-humanize the login page<br>
-[Bug][Code (Internal)]           Mouseover at object placed in rack shows html character instead of "ß" if language is german<br>
-[Bug][Code (Internal)]           Wrong translation of Editing lock<br>
-[Bug][Code (Internal)]           Creating a object-type at "edit-datastructure" causes error because of https<br>
-[Bug][Code (Internal)]           Fix object ID reset in URL in "Configurate object browser" after canceling an edit<br>
-[Bug][Code (Internal)]           Icon redirects are not cached<br>
-[Bug][Code (Internal)]           Changing technical key in multi value category causes problems in listview<br>
-[Bug][Code (Internal)]           Too small resolution does not display object titles in search bar<br>
-[Bug][CMDB]                      TypeError when assigning a Software<br>
-[Bug][CMDB]                      JDisc Import date is imported as string and not as date<br>
-[Bug][CMDB]                      Location is not selectable in object browser<br>
-[Bug][CMDB]                      Removing 'end of contract' of a contract makes it reappear after saving even though the runtime is now 0<br>
-[Bug][CMDB]                      Language constant overwrites another attribute<br>
-[Bug][CMDB]                      Date fields in category SIM are prefilled with character '-'<br>
-[Bug][LDAP]                      Creating an LDAP/AD filter that includes multiple filters<br>
-[Bug][Custom categories]         Changing technical keys to only contain words causes entries to lose the values when filled with API (Number only)<br>
-[Bug][JDisc]                     JDisc mapping error with MAC address<br>
-[Bug][JDisc]                     Saving a JDisc profile with a empty categories selection displays malformed JSON warning<br>
-[Bug][Category folders]          It is possible to select disabled folders as target<br>
-[Bug][Category folders]          Translations should not be overwritten after opening the category folders for the first time<br>
-[Bug][Category folders]          Fix move of categories when search is used<br>
-[Bug][Category folders]          Fix jumping view port when searching and selecting items<br>
-[Bug][Category folders]          After using search and delete the string via the X it is not possible to select category/folder container<br>
-[Bug][Category folders]          Security issue category folders prevent XSS usage in folder names<br>
-[Bug][Category folders]          Show root folder categories in move folder modal<br>
-[Bug][Category folders]          Correct sorting of category folders and categories<br>
-[Bug][Category folders]          Remove leftover categories<br>
-[Bug][Category folders]          Show language constants in edit folder modals<br>
-[Bug][Category folders]          Do not collapse category folders automatically<br>
-[Bug][Category folders]          Do not show language constant in add folder modal<br>
-[Bug][Category folders]          Do not show "no content" text when category is moved in empty folder<br>
-[Bug][Security]                  Prevent SQL-Injection in combobox endpoints (solves: CVE-2023-46856 & CVE-2023-49303)<br>
-[Bug][Security]                  Prevent loading "isys_cats_person_list" data over combobox "load" endpoint<br>
-[Bug][Security]                  Escape config values before writing them into config.inc.php (solves: CVE-2023-49300)<br>
-[Bug][Security]                  Remove option to download other files than i-doit update files via atomatic updater (solves: CVE-2023-49307)<br>
-[Bug][Security]                  Remove possibility to execute mysqldump over the UI<br>
-[Bug][Security]                  Prevent XSS in "qr.php" (solves: CVE-2023-49301)<br>
-[Bug][Security]                  Prevent XSS in category update for "File Links" (solves: CVE-2023-49302)<br>
-[Bug][Security]                  Prevent XSS in IT-Service Filter (solves: CVE-2023-49304)<br>
-[Bug][Security]                  Prevent XSS in Logbook entries through category data (solves: CVE-2023-49305)<br>
-[Bug][Security]                  Prevent XSS in usage of "proxy.php" (solves: CVE-2023-49306)<br>
-[Bug][Security]                  Prevent Path Traversal in Filemanager endpoint (solves: CVE-2023-49308)<br>
-[Bug][Security]                  Prevent Path Traversal in Filemanager "Image" in CMDB (solves: CVE-2023-49309)<br>
-[Bug][Security]                  Prevent Path Traversal in Import Module which allows to delete files (solves: CVE-2023-49311)<br>
-[Bug][Security]                  Disallow file urls in "reports.browser-url" to prevent exposing sensitive file contents (solves: CVE-2023-49310)<br>
-[Bug][Security]                  Add rights guard to isys_ajax_handler_logbook.class.php<br>
-[Bug][Security]                  Add guard by right-checking to "isys_ajax_handler_json.class.php"<br>
-[Bug][Report-Manager]            Report objects adds    after each column<br>
-[Bug][Report-Manager]            Exported report displays __id__ column<br>
-[Bug][Report-Manager]            HTML is displayed in Report<br>
-[Bug][Report-Manager]            Adding a condition block for location > below > X location outputs no results<br>
-[Bug][Report-Manager]            Status filter for multivalue categories in report manager is not working correctly for custom categories<br>
-[Bug][Report-Manager]            Status filter for multivalue categories is not working for CPU cores<br>
-[Bug][Report-Manager]            Operators for some fields can not be selected - TypeError: equation.map is not a function<br>
-[Bug][Report-Manager]            Placeholder is not correctly replaced<br>
-[Bug][Report-Manager]            SQL error in report manager for Wiring System > Assigned objects categories<br>
-[Bug][Report-Manager]            %LIKE% Operator for guarantee date is not working correctly<br>
-[Bug][Report-Manager]            '=' operator does not work correctly for custom categories<br>
-[Bug][Report-Manager]            The encoding of umlauts are displayed in report titles<br>
-[Bug][API]                       Can not use API when the API System Person is deleted<br>
-[Bug][API]                       Contact roles can not be authorized for API<br>
-[Bug][API]                       SQL error when using order_by<br>
-[Bug][Categories]                Reordering category folders causes visibility "eye" to disappear<br>
-[Bug][Categories]                'Edit' button disappears after 'purging' single value categories<br>
-[Bug][Categories]                Vertical slots for rack backside are mirrored<br>
-[Bug][Categories]                Deselecting a stack member sets it to generic location<br>
-[Bug][Categories]                Typo in category "Remote Management Controller" attribute "Primäre ZugriffsURL"<br>
-[Bug][System settings]           Not setting SMTP Timeout leads to SMTP Error<br>
-[Bug][System settings]           Save buttons do not display a success notification<br>
-[Bug][System settings]           Create Ticket button does not use the configured URL with PORT<br>
-[Bug][System settings]           API System setting overwrites tenant setting<br>
-[Bug][System settings]           System settings are not set through expert settings<br>
-[Bug][Validation]                Enable user to filter for attribute settings<br>
-[Bug][Validation]                Show empty attribute settings table to user<br>
-[Bug][Validation]                Do not show error message in tooltip while hovering over validation error in custom fields<br>
-[Bug][Validation]                Description fields yield validation errors on 32bit systems<br>
-[Bug][Notifications]             Group and User receive notification if receive strategy (-) is selected and both user & group have primary emails<br>
-[Bug][Notifications]             Neither group nor user receive notification if receive strategy (Groups if available, else assigned persons) is selected and only group member has primary email<br>
-[Bug][Notifications]             Notifications interval does sent E-Mails also a day after interval date<br>
-[Bug][List editing]              Can't create Model in list edit<br>
-[Bug][Search]                    Minimum search string error message should match setting<br>
-[Bug][Logging]                   Show detailed log does not work<br>
-[Bug][Lists]                     Sorting numbers in multi value category<br>
-[Bug][CMDB-Explorer]             SQL Error in CMDB Explorer<br>
-[Bug][Monitoring]                Monitoring - Livestatus add KeepAlive for checkmk<br>
-[Bug][Object type configuration] Assigned SIM cards can not be displayed on the Overview page<br>
-[Bug][Installation]              mod_rewrite test button is not working<br>
-[Bug][Admincenter]               A tenant can be over-licensed when deactivated<br>
+[Tâche][Dossiers de catégorie]         Simplifier la formulation de déplacer le navigateur dans l'arborescence des catégories<br>
+[Tâche][Dossiers de catégorie]         Simplifier la formulation de la boîte de dialogue de réorganisation dans la fonctionnalité de l'arborescence des catégories<br>
+[Tâche][Dossiers de catégorie]         Renommer le message lorsque le dossier est vide<br>
+[Tâche][Dossiers de catégorie]         Réinitialiser la liste des catégories lorsque la recherche est supprimée<br>
+[Tâche][Dossiers de catégorie]         Améliorer le glisser-déposer des dossiers de catégorie<br>
+[Tâche][Dossiers de catégorie]         Ajouter une option pour sélectionner et déplacer plusieurs éléments<br>
+[Tâche][Dossiers de catégorie]         Renommer le bouton d'extension allemand<br>
+[Tâche][Dossiers de catégorie]         Ajouter des informations à l'état vide de la fonctionnalité des dossiers de catégorie<br>
+[Tâche][Dossiers de catégorie]         Désactiver le bouton de déplacement lorsque rien n'est sélectionné<br>
+[Tâche][Dossiers de catégorie]         Ajouter des informations sur l'utilisation des constantes de langage pour ajouter un dossier modal<br>
+[Tâche][Code (Interne)]          Supprimer la variable globale $g_convert<br>
+[Tâche][Code (Interne)]          Afficher l'architecture dans la vue d'ensemble du système<br>
+[Tâche][Édition de liste]             Le texte avec des zéros en tête doit être écrit de manière plus claire.<br>
+[Amélioration][Importation]            Permettre à l'utilisateur d'importer "input" du premier objet dans l'importation de câblage<br>
+[Amélioration][JDisc]             JDisc : Il devrait être possible d'importer plus d'informations (SLOT) concernant le disque dur<br>
+[Amélioration][JDisc]             Importer des dispositifs individuels de JDisc en fonction de l'adresse IP via la console / Filtre IP pour la commande de console d'importation JDisc<br>
+[Amélioration][JDisc]             Nouveau mode d'importation JDisc : "Mise à jour (Existante)"<br>
+[Amélioration][JDisc]             Import JDisc : Importer les attributs SNMP<br>
+[Amélioration][JDisc]             Comparaison des objets disponibles d'i-doit et de JDisc<br>
+[Amélioration][JDisc]             Archiver les objets qui n'ont pas été vus par JDisc pendant un ensemble de jours défini<br>
+[Bogue][Code (Interne)]           Refactoriser la vérification automatique de mise à jour en une requête séparée (ajax)<br>
+[Bogue][Code (Interne)]           L'installation de différentes versions d'extension ne remplace pas les anciens fichiers<br>
+[Bogue][Code (Interne)]           Les modifications dans la configuration SMTP cryptent le mot de passe<br>
+[Bogue][Code (Interne)]           Les clusters assignés sont supprimés après avoir enregistré la configuration du type d'objet<br>
+[Bogue][Code (Interne)]           Déshumaniser la page de connexion<br>
+[Bogue][Code (Interne)]           Le survol de l'objet placé dans le rack affiche un caractère HTML au lieu de "ß" si la langue est l'allemande<br>
+[Bogue][Code (Interne)]           Mauvaise traduction de Verrouillage de l'édition<br>
+[Bogue][Code (Interne)]           La création d'un type d'objet à "éditer-structure de données" provoque une erreur en raison de https<br>
+[Bogue][Code (Interne)]           Corriger la réinitialisation de l'ID d'objet dans l'URL dans "Configurer le navigateur d'objets" après avoir annulé une édition<br>
+[Bogue][Code (Interne)]           Les redirections d'icônes ne sont pas mises en cache<br>
+[Bogue][Code (Interne)]           Changer la clé technique dans la catégorie à valeurs multiples cause des problèmes dans la vue en liste<br>
+[Bogue][Code (Interne)]           Une résolution trop petite n'affiche pas les titres d'objets dans la barre de recherche<br>
+[Bogue][CMDB]                      TypeError lors de l'attribution d'un logiciel<br>
+[Bogue][CMDB]                      La date d'importation JDisc est importée en tant que chaîne et non en tant que date<br>
+[Bogue][CMDB]                      L'emplacement n'est pas sélectionnable dans le navigateur d'objets<br>
+[Bogue][CMDB]                      Supprimer la 'fin du contrat' d'un contrat le fait réapparaître après l'enregistrement même si la durée de vie est maintenant de 0<br>
+[Bogue][CMDB]                      La constante de langage écrase un autre attribut<br>
+[Bogue][CMDB]                      Les champs de date dans la catégorie SIM sont préremplis avec le caractère '-'<br>
+[Bogue][LDAP]                      Créer un filtre LDAP/AD qui inclut plusieurs filtres<br>
+[Bogue][Catégories personnalisées]         Changer les clés techniques pour ne contenir que des mots fait perdre les valeurs lorsqu'elles sont remplies avec l'API (Numéro uniquement)<br>
+[Bogue][JDisc]                     Erreur de mappage JDisc avec l'adresse MAC<br>
+[Bogue][JDisc]                     Enregistrer un profil JDisc avec une sélection de catégories vide affiche un avertissement JSON mal formé<br>
+[Bogue][Dossiers de catégorie]          Il est possible de sélectionner des dossiers désactivés comme cible<br>
+[Bogue][Dossiers de catégorie]          Les traductions ne doivent pas être écrasées après avoir ouvert les dossiers de catégorie pour la première fois<br>
+[Bogue][Dossiers de catégorie]          Corriger le déplacement des catégories lorsque la recherche est utilisée<br>
+[Bogue][Dossiers de catégorie]          Corriger le saut de la vue lors de la recherche et de la sélection d'éléments<br>
+[Bogue][Dossiers de catégorie]          Après avoir utilisé la recherche et supprimé la chaîne via le X, il n'est pas possible de sélectionner le conteneur de catégorie/dossier<br>
+[Bogue][Dossiers de catégorie]          Problème de sécurité, les dossiers de catégorie empêchent l'utilisation de XSS dans les noms de dossier<br>
+[Bogue][Dossiers de catégorie]          Afficher les catégories de dossiers racine dans la boîte de dialogue de déplacement de dossier<br>
+[Bogue][Dossiers de catégorie]          Tri correct des dossiers de catégorie et des catégories<br>
+[Bogue][Dossiers de catégorie]          Supprimer les catégories restantes<br>
+[Bogue][Dossiers de catégorie]          Afficher les constantes de langage dans les modales d'édition de dossier<br>
+[Bogue][Dossiers de catégorie]          Ne pas replier automatiquement les dossiers de catégorie<br>
+[Bogue][Dossiers de catégorie]          Ne pas afficher la constante de langage dans la modale d'ajout de dossier<br>
+[Bogue][Dossiers de catégorie]          Ne pas afficher le texte "pas de contenu" lorsque la catégorie est déplacée dans un dossier vide<br>
+[Bogue][Sécurité]                  Empêcher les injections SQL dans les points de terminaison de la combobox (résout : CVE-2023-46856 & CVE-2023-49303)<br>
+[Bogue][Sécurité]                  Empêcher le chargement des données "isys_cats_person_list" via le point de terminaison "load" de la combobox<br>
+[Bogue][Sécurité]                  Échapper aux valeurs de configuration avant de les écrire dans config.inc.php (résout : CVE-2023-49300)<br>
+[Bogue][Sécurité]                  Supprimer l'option de télécharger d'autres fichiers que les fichiers de mise à jour d'i-doit via le programme de mise à jour automatique (résout : CVE-2023-49307)<br>
+[Bogue][Sécurité]                  Supprimer la possibilité d'exécuter mysqldump via l'interface utilisateur<br>
+[Bogue][Sécurité]                  Empêcher XSS dans "qr.php" (résout : CVE-2023-49301)<br>
+[Bogue][Sécurité]                  Empêcher XSS dans la mise à jour de catégorie pour les "Liens de fichiers" (résout : CVE-2023-49302)<br>
+[Bogue][Sécurité]                  Empêcher XSS dans le filtre de service IT (résout : CVE-2023-49304)<br>
+[Bogue][Sécurité]                  Empêcher XSS dans les entrées de journal via les données de catégorie (résout : CVE-2023-49305)<br>
+[Bogue][Sécurité]                  Empêcher XSS dans l'utilisation de "proxy.php" (résout : CVE-2023-49306)<br>
+[Bogue][Sécurité]                  Empêcher la Traversée de Chemin dans le point de terminaison du gestionnaire de fichiers (résout : CVE-2023-49308)<br>
+[Bogue][Sécurité]                  Empêcher la Traversée de Chemin dans le "Image" du gestionnaire de fichiers de la CMDB (résout : CVE-2023-49309)<br>
+[Bogue][Sécurité]                  Empêcher la Traversée de Chemin dans le module d'importation qui permet de supprimer des fichiers (résout : CVE-2023-49311)<br>
+[Bogue][Sécurité]                  Interdire les URL de fichiers dans "reports.browser-url" pour éviter d'exposer le contenu sensible des fichiers (résout : CVE-2023-49310)<br>
+[Bogue][Sécurité]                  Ajouter une protection des droits à isys_ajax_handler_logbook.class.php<br>
+[Bogue][Sécurité]                  Ajouter une protection en vérifiant les droits à "isys_ajax_handler_json.class.php"<br>
+[Bogue][Gestionnaire de rapports]            Les objets de rapport ajoutent    après chaque colonne<br>
+[Bogue][Gestionnaire de rapports]            Le rapport exporté affiche la colonne __id__<br>
+[Bogue][Gestionnaire de rapports]            HTML est affiché dans le rapport<br>
+[Bogue][Gestionnaire de rapports]            Ajouter un bloc de condition pour l'emplacement > en dessous > X emplacement ne donne aucun résultat<br>
+[Bogue][Gestionnaire de rapports]            Le filtre d'état pour les catégories à valeurs multiples dans le gestionnaire de rapports ne fonctionne pas correctement pour les catégories personnalisées<br>
+[Bogue][Gestionnaire de rapports]            Le filtre d'état pour les catégories à valeurs multiples ne fonctionne pas pour les cœurs de CPU<br>
+[Bogue][Gestionnaire de rapports]            Les opérateurs pour certains champs ne peuvent pas être sélectionnés - TypeError : equation.map n'est pas une fonction<br>
+[Bogue][Gestionnaire de rapports]            Le placeholder n'est pas correctement remplacé<br>
+[Bogue][Gestionnaire de rapports]            Erreur SQL dans le gestionnaire de rapports pour les catégories d'objets assignés du système de câblage<br>
+[Bogue][Gestionnaire de rapports]            L'opérateur %LIKE% pour la date de garantie ne fonctionne pas correctement<br>
+[Bogue][Gestionnaire de rapports]            L'opérateur '=' ne fonctionne pas correctement pour les catégories personnalisées<br>
+[Bogue][Gestionnaire de rapports]            L'encodage des umlauts est affiché dans les titres de rapport<br>
+[Bogue][API]                       Impossible d'utiliser l'API lorsque le système API Personne est supprimé<br>
+[Bogue][API]                       Les rôles de contact ne peuvent pas être autorisés pour l'API<br>
+[Bogue][API]                       Erreur SQL lors de l'utilisation de order_by<br>
+[Bogue][Catégories]                Réorganiser les dossiers de catégorie fait disparaître la visibilité "œil"<br>
+[Bogue][Catégories]                Le bouton 'Éditer' disparaît après 'purger' les catégories à valeur unique<br>
+[Bogue][Catégories]                Les emplacements verticaux pour le dos du rack sont inversés<br>
+[Bogue][Catégories]                Désélectionner un membre de la pile le définit comme emplacement générique<br>
+[Bogue][Catégories]                Faute de frappe dans l'attribut "URL d'accès primaire" de la catégorie "Contrôleur de gestion à distance"<br>
+[Bogue][Paramètres système]           Ne pas définir le délai d'attente SMTP entraîne une erreur SMTP<br>
+[Bogue][Paramètres système]           Les boutons de sauvegarde ne affichent pas de notification de succès<br>
+[Bogue][Paramètres système]           Le bouton Créer un ticket n'utilise pas l'URL configurée avec le PORT<br>
+[Bogue][Paramètres système]           Le paramètre système API écrase le paramètre du locataire<br>
+[Bogue][Paramètres système]           Les paramètres système ne sont pas définis via les paramètres experts<br>
+[Bogue][Validation]                Permettre à l'utilisateur de filtrer les paramètres d'attribut<br>
+[Bogue][Validation]                Afficher un tableau de paramètres d'attribut vide à l'utilisateur<br>
+[Bogue][Validation]                Ne pas afficher de message d'erreur dans l'infobulle lors du survol d'une erreur de validation dans les champs personnalisés<br>
+[Bogue][Validation]                Les champs de description génèrent des erreurs de validation sur les systèmes 32 bits<br>
+[Bogue][Notifications]             Le groupe et l'utilisateur reçoivent une notification si la stratégie de réception (-) est sélectionnée et que l'utilisateur et le groupe ont des e-mails principaux<br>
+[Bogue][Notifications]             Ni le groupe ni l'utilisateur ne reçoivent de notification si la stratégie de réception (Groupes si disponibles, sinon personnes assignées) est sélectionnée et que seul le membre du groupe a un e-mail principal<br>
+[Bogue][Notifications]             L'intervalle de notifications envoie également des e-mails un jour après la date de l'intervalle<br>
+[Bogue][Édition de liste]              Impossible de créer un modèle dans l'édition de liste<br>
+[Bogue][Recherche]                    Le message d'erreur de chaîne de recherche minimale doit correspondre au paramètre<br>
+[Bogue][Journalisation]                   L'affichage du journal détaillé ne fonctionne pas<br>
+[Bogue][Listes]                     Tri des nombres dans la catégorie à valeurs multiples<br>
+[Bogue][Explorateur CMDB]             Erreur SQL dans l'explorateur CMDB<br>
+[Bogue][Surveillance]                Surveillance - Livestatus ajoute KeepAlive pour checkmk<br>
+[Bogue][Configuration du type d'objet] Les cartes SIM assignées ne peuvent pas être affichées sur la page d'aperçu<br>
+[Bogue][Installation]              Le bouton de test mod_rewrite ne fonctionne pas<br>
+[Bogue][Centre d'administration]               Un locataire peut être sur-licencié lorsqu'il est désactivé<br>
+
+I am ready to start translating the Markdown content into French. Please go ahead and paste the content you would like me to translate.

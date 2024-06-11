@@ -1,20 +1,20 @@
-# Install NodeJS
+# Installer NodeJS
 
-!!! attention "The installation was last tested with NodeJS v17.4"
+!!! attention "L'installation a été testée pour la dernière fois avec NodeJS v17.4"
 
-Dependencies can be found [here](https://nodejs.org/en/docs/meta/topics/dependencies/).<br>
-A manual download as well as installation is possible from [here](https://nodejs.org/en/download/).
+Les dépendances peuvent être trouvées [ici](https://nodejs.org/en/docs/meta/topics/dependencies/).<br>
+Un téléchargement manuel ainsi qu'une installation sont possibles à partir de [ici](https://nodejs.org/en/download/).
 
-For the next step we need cURL:
+Pour l'étape suivante, nous avons besoin de cURL :
 
     sudo apt-get install curl
 
-NodeJS 16.x is installed automatically via package manager for this we use [nodesource](https://github.com/nodesource/distributions/blob/master/README.md):
+NodeJS 16.x est installé automatiquement via le gestionnaire de paquets, pour cela nous utilisons [nodesource](https://github.com/nodesource/distributions/blob/master/README.md) :
 
     curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 
-Now we can install NodeJS:
+Maintenant nous pouvons installer NodeJS :
 
     sudo apt-get install -y nodejs
 
-[Continue to the configuration of the Forms backend](./configure-forms-backend.md){ .md-button .md-button--primary }
+[Continuer avec la configuration du backend des formulaires](./configure-forms-backend.md){ .md-button .md-button--primary }

@@ -1,9 +1,9 @@
-# Configure object browser
+# Configurer le navigateur d'objets
 
-Here you can configure the object browser by adding the attributes that you want to see. For that you need to navigate to the category/attribute that you want to configure the object browser for.
+Ici, vous pouvez configurer le navigateur d'objets en ajoutant les attributs que vous souhaitez voir. Pour cela, vous devez naviguer vers la catégorie/l'attribut que vous souhaitez configurer pour le navigateur d'objets.
 
-[![Language profiles](../../../assets/images/en/system-administration/administration/data-view/configure-object-browser/1-cob.png)](../../../assets/images/en/system-administration/administration/data-view/configure-object-browser/1-cob.png)
+[![Profils de langues](../../../assets/images/en/system-administration/administration/data-view/configure-object-browser/1-cob.png)](../../../assets/images/en/system-administration/administration/data-view/configure-object-browser/1-cob.png)
 
-Now you can add attributes to the category that you selected and also see, what category you need to add to an object, for it to be displayed in the object browser for that attribute.
+Maintenant, vous pouvez ajouter des attributs à la catégorie que vous avez sélectionnée et également voir quelle catégorie vous devez ajouter à un objet pour qu'il soit affiché dans le navigateur d'objets pour cet attribut.
 
-[![Language profiles](../../../assets/images/en/system-administration/administration/data-view/configure-object-browser/2-cob.png)](../../../assets/images/en/system-administration/administration/data-view/configure-object-browser/2-cob.png)
+[![Profils de langues](../../../assets/images/en/system-administration/administration/data-view/configure-object-browser/2-cob.png)](../../../assets/images/en/system-administration/administration/data-view/configure-object-browser/2-cob.png)

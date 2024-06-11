@@ -1,20 +1,20 @@
-# checkmk 2: Sync contact groups
+# checkmk 2: Synchroniser les groupes de contacts {/examples/}
 
-Check\_MK notifies contact groups on every event if properly configured. Within i-doit each contact group can be documented as an object. To share contact groups between both run:
+Check_MK notifie les groupes de contacts à chaque événement s'ils sont correctement configurés. Dans i-doit, chaque groupe de contacts peut être documenté en tant qu'objet. Pour partager les groupes de contacts entre les deux, exécutez :
 
     idoitcmk sync-contact-groups
 
-This command will generate new objects in i-doit based on Check\_MK’s contact groups. Additionally, objects in i-doit can be used to generate new contact groups.
+Cette commande générera de nouveaux objets dans i-doit basés sur les groupes de contacts de Check_MK. De plus, les objets dans i-doit peuvent être utilisés pour générer de nouveaux groupes de contacts.
 
-By default, contact groups are stored as person groups in i-doit. You can simply add person objects to those groups and assign the groups to any other objects with the category contact assignment and the role monitoring.
+Par défaut, les groupes de contacts sont stockés en tant que groupes de personnes dans i-doit. Vous pouvez simplement ajouter des objets de personne à ces groupes et attribuer les groupes à d'autres objets avec la catégorie attribution de contact et le rôle de surveillance.
 
-**Recommendation:** Run this command every time you add a new contact group in Check\_MK or i-doit.
+**Recommandation :** Exécutez cette commande chaque fois que vous ajoutez un nouveau groupe de contacts dans Check_MK ou i-doit.
 
 Configuration
 -------------
 
-These [configuration settings](./configuration.md) are available:
+Ces [paramètres de configuration](./configuration.md) sont disponibles :
 
-| Key | Type | Required | Default | Description |
+| Clé | Type | Requis | Par défaut | Description |
 | --- | --- | --- | --- | --- |
-| objectTypes.contactGroup | String | No  | C__OBJTYPE__PERSON_GROUP | Contact groups are marked by this type (use constant!) |
+| objectTypes.contactGroup | Chaîne | Non | C__OBJTYPE__PERSON_GROUP | Les groupes de contacts sont marqués par ce type (utilisez une constante !) |

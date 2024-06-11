@@ -1,74 +1,76 @@
-# Changelog 1.15.1
+# Journal des modifications 1.15.1
 
-[Improvement][LDAP] If a user logs in via LDAP the Auth Cache should also be cleared  
-[Improvement][Export] XML-Export: extend selection of custom categories for the export  
-[Improvement][OCS] OCS-Import Recalculate object type of CIs based on tag configuration  
-[Bug][JDisc] Filtering by host address not possible for JDisc import with IPv6  
-[Bug][JDisc] The correct Layer 3 net is not assigned during JDisc import.  
-[Bug][JDisc] The time/date at "Last updated" in the category "Custom Identifier" should only be updated by the JDISC import  
-[Bug][Systemtools] XAMPP: System Tools > Cache / Database the mysqldump.exe path is not found  
-[Bug][Report-Manager] Error when using variable reports in custom categories  
-[Bug][Report-Manager] Attribute Assigned SIM Cards (Assigned SIM cards) cannot reference objects  
-[Bug][Report-Manager] Report: For the category files the attribute assigned objects is missing  
-[Bug][Report-Manager] The IS NULL condition for location > location is missing from the report  
-[Bug][Report-Manager] The Report Manager does not display all objects with empty operating systems  
-[Bug][Report-Manager] Report Manager: Attribute "Connected to port (Network -> Logical ports)" generates SQL error  
-[Bug][Report-Manager] Reports are no longer displayed after moving to a new instance  
-[Bug][Report-Manager] Only links using http/https are generated as hyperlink in reports  
-[Bug][Report-Manager] The text for the output is available under the item Advanced Options  
-[Bug][Logbook] The logbook cannot be archived to a remote database  
-[Bug][Logbook] When purging assignments, no object information is created in back categories  
-[Bug][Logbook] The log book does not store the object name  
-[Bug][Logbook] Show more details while the logbook is archiving  
-[Bug][CSV Import] Password of category passwords can not be imported via CSV import  
-[Bug][CSV Import] Error during import of storage information (device) - Assignment of manufacturers -> model  
-[Bug][CSV Import] Error when importing information into custom categories via CSV import  
-[Bug][CSV Import] Changing global object type in csv import clears the whole mapping  
-[Bug][LDAP] Open LDAP / Novell Directory Service sync does not work  
-[Bug][Categories] The category Racks in rooms cannot show racks if there are switch/blade chassis with slots  
-[Bug][Categories] In the object list Application the field Title of the specific category Applications>Variant is missing  
-[Bug][Categories] The output of a yes/no field with nothing selected "-" is not correct  
-[Bug][Categories] Archived installations are displayed in the Application > Installation category  
-[Bug][Categories] The property “category” from the category “Logbook” is not selectable in the condition and selection while creating a new report  
-[Bug][Categories] Content from the category "Passwords" is not indexed during the search  
-[Bug][Categories] In the list view of Layer-3 networks, IP addresses of archived objects under assigned addresses are counted  
-[Bug][Categories] Sorting of ports in selection within category "hostaddress" not alphabetical  
-[Bug][Categories] Linking in category "logical ports" not working  
-[Bug][Code (internal)] Retrieving the logbook is extremely slow using sql_calc_found_rows when there are many records  
-[Bug][Code (internal)] Some links lead to the logout of the user  
-[Bug][Code (internal)] The inventory.zip cannot be downloaded via the i-doit web interface  
-[Bug][Code (internal)] No forwarding when clicking the Cancel button - Button without function  
-[Bug][Code (internal)] Alphanumeric sorting does not sort correctly  
-[Bug][Code (internal)] LC__UNIVERSAL__OTHER is not translated  
-[Bug][Code (internal)] Object list: Abbreviation HE (height units) is not translated  
-[Bug][Objects] Files were not completely migrated 1.13.x > 1.14  
-[Bug][User settings] Sorting in configuration of category lists not possible  
-[Bug][Authorization system] Objects of type workplace are displayed as locations in the authorization system  
-[Bug][Authorization system] Line for last change also shows last change to users without rights  
-[Bug][Authorization system] Users with read rights can execute reports in the Object Browser  
-[Bug][H-Inventory] Error when importing h-inventory XML-files  
-[Bug][Documents] SQL error message after calling the documents Preview  
-[Bug][List editing] List edit for category "Port" not accessable within the category  
-[Bug][List editing] Group Membership cannot be detached via list edit  
-[Bug][List editing] Error when assigning a Layer-2-Net to a port in list edit  
-[Bug][Object type configuration] Icons are scaled incorrectly in the object type configuration  
-[Bug][Object type configuration] The color palette of the object color in the object type configuration cannot be used after creation via QCW  
-[Bug][Templates] Template: Time specifications of the SLA category are not correctly transferred to objects created from template  
-[Bug][Import] The assignment of "Assigned SIM cards > Linked SIM cards" to Cellular Phones during CSV import does not work  
-[Bug][Lists] Object list crashes when HTML editor of a custom category is displayed in the object list  
-[Bug][Lists] Members of person groups can not be selected for being shown in object lists  
-[Bug][Lists] Changes to column widths in object lists are not saved  
-[Bug][Lists] Width of columns is reset when navigating through the pages of objects  
-[Bug][Lists] Layer 3 network object list "Filter in all fields" shows empty list after emptying the filter  
-[Bug][API] Incorrect reference for service assignment via API  
-[Bug][API] Attribte "model" of category "Storage" is not included in the results  
-[Bug][Admincenter] Editing a tenant in the Admin Center resets the assigned object licenses  
-[Bug][Custom categories] Report Manager: The filter for checkboxes filter not correct  
-[Bug][Custom categories] HTML-content from custom categories is shown twice on overview page  
-[Bug][Notifications] Notification about stored objects is not sent with a threshold value of 0 or -1  
-[Bug][Notifications] Formatting of info text in description of a notification is faulty  
-[Bug][OCS] OCS Import logging logs even when logging is switched off  
-[Bug][Search] Search: Only 0 or 1 is displayed as score  
-[Bug][CMDB] Do not connect root location while creating cluster membership  
-[Bug][CMDB] Language constant for the root location does not work everywhere  
-[Bug][Connector Cabling] Sorting in cabling browser not correct  
+[Amélioration][LDAP] Si un utilisateur se connecte via LDAP, le cache d'authentification doit également être effacé  
+[Amélioration][Export] Export XML : étendre la sélection des catégories personnalisées pour l'exportation  
+[Amélioration][OCS] Importation OCS : recalculer le type d'objet des CI en fonction de la configuration des balises  
+[Erreur][JDisc] Filtrage par adresse hôte impossible pour l'importation JDisc avec IPv6  
+[Erreur][JDisc] Le bon réseau de niveau 3 n'est pas attribué lors de l'importation JDisc.  
+[Erreur][JDisc] La date/heure de "Dernière mise à jour" dans la catégorie "Identifiant personnalisé" ne doit être mise à jour que par l'importation JDISC  
+[Erreur][Outils système] XAMPP : Outils système > Cache / Base de données le chemin de mysqldump.exe n'est pas trouvé  
+[Erreur][Gestionnaire de rapports] Erreur lors de l'utilisation de rapports variables dans des catégories personnalisées  
+[Erreur][Gestionnaire de rapports] L'attribut Cartes SIM attribuées (Cartes SIM attribuées) ne peut pas référencer des objets  
+[Erreur][Gestionnaire de rapports] Rapport : Pour la catégorie fichiers, l'attribut objets attribués est manquant  
+[Erreur][Gestionnaire de rapports] La condition EST NULL pour l'emplacement > l'emplacement est manquante dans le rapport  
+[Erreur][Gestionnaire de rapports] Le Gestionnaire de rapports n'affiche pas tous les objets avec des systèmes d'exploitation vides  
+[Erreur][Gestionnaire de rapports] Gestionnaire de rapports : L'attribut "Connecté au port (Réseau -> Ports logiques)" génère une erreur SQL  
+[Erreur][Gestionnaire de rapports] Les rapports ne sont plus affichés après le transfert vers une nouvelle instance  
+[Erreur][Gestionnaire de rapports] Seuls les liens utilisant http/https sont générés comme hyperlien dans les rapports  
+[Erreur][Gestionnaire de rapports] Le texte de la sortie est disponible sous l'élément Options avancées  
+[Erreur][Journal] Le journal ne peut pas être archivé dans une base de données distante  
+[Erreur][Journal] Lors de la suppression des affectations, aucune information d'objet n'est créée dans les catégories arrière  
+[Erreur][Journal] Le journal ne stocke pas le nom de l'objet  
+[Erreur][Journal] Afficher plus de détails pendant l'archivage du journal  
+[Erreur][Importation CSV] Le mot de passe des catégories de mots de passe ne peut pas être importé via l'importation CSV  
+[Erreur][Importation CSV] Erreur lors de l'importation des informations de stockage (appareil) - Attribution des fabricants -> modèle  
+[Erreur][Importation CSV] Erreur lors de l'importation d'informations dans des catégories personnalisées via l'importation CSV  
+[Erreur][Importation CSV] Changer le type d'objet global dans l'importation csv efface tout le mappage  
+[Erreur][LDAP] La synchronisation Open LDAP / Novell Directory Service ne fonctionne pas  
+[Erreur][Catégories] La catégorie Racks dans les salles ne peut pas afficher les racks s'il y a des châssis de commutation/lame avec des emplacements  
+[Erreur][Catégories] Dans la liste d'objets Application, le champ Titre de la catégorie spécifique Applications>Variante est manquant  
+[Erreur][Catégories] La sortie d'un champ oui/non avec rien sélectionné "-" n'est pas correcte  
+[Erreur][Catégories] Les installations archivées sont affichées dans la catégorie Application > Installation  
+[Erreur][Catégories] La propriété "catégorie" de la catégorie "Journal" n'est pas sélectionnable dans la condition et la sélection lors de la création d'un nouveau rapport  
+[Erreur][Catégories] Le contenu de la catégorie "Mots de passe" n'est pas indexé lors de la recherche  
+[Erreur][Catégories] Dans la vue en liste des réseaux de niveau 3, les adresses IP des objets archivés sous les adresses attribuées sont comptées  
+[Erreur][Catégories] Le tri des ports dans la sélection dans la catégorie "adresse hôte" n'est pas alphabétique  
+[Erreur][Catégories] Le lien dans la catégorie "ports logiques" ne fonctionne pas  
+[Erreur][Code (interne)] La récupération du journal est extrêmement lente en utilisant sql_calc_found_rows lorsqu'il y a de nombreux enregistrements  
+[Erreur][Code (interne)] Certains liens conduisent à la déconnexion de l'utilisateur  
+[Erreur][Code (interne)] Le fichier inventory.zip ne peut pas être téléchargé via l'interface web i-doit  
+[Erreur][Code (interne)] Pas de redirection en cliquant sur le bouton Annuler - Bouton sans fonction  
+[Erreur][Code (interne)] Le tri alphanumérique ne trie pas correctement  
+[Erreur][Code (interne)] LC__UNIVERSAL__OTHER n'est pas traduit  
+[Erreur][Code (interne)] Liste d'objets : L'abréviation HE (unités de hauteur) n'est pas traduite  
+[Erreur][Objets] Les fichiers n'ont pas été entièrement migrés 1.13.x > 1.14  
+[Erreur][Paramètres utilisateur] Le tri dans la configuration des listes de catégories n'est pas possible  
+[Erreur][Système d'autorisation] Les objets de type poste de travail sont affichés comme des emplacements dans le système d'autorisation  
+[Erreur][Système d'autorisation] La ligne de dernière modification montre également la dernière modification aux utilisateurs sans droits  
+[Erreur][Système d'autorisation] Les utilisateurs avec des droits de lecture peuvent exécuter des rapports dans le navigateur d'objets  
+[Erreur][H-Inventory] Erreur lors de l'importation de fichiers XML d'inventaire h  
+[Erreur][Documents] Message d'erreur SQL après l'appel de l'aperçu des documents  
+[Erreur][Édition de liste] Édition de liste pour la catégorie "Port" non accessible dans la catégorie  
+[Erreur][Édition de liste] L'appartenance à un groupe ne peut pas être détachée via l'édition de liste  
+[Erreur][Édition de liste] Erreur lors de l'attribution d'un réseau de niveau 2 à un port en édition de liste  
+[Erreur][Configuration du type d'objet] Les icônes sont mal dimensionnées dans la configuration du type d'objet  
+[Erreur][Configuration du type d'objet] La palette de couleurs de la couleur d'objet dans la configuration du type d'objet ne peut pas être utilisée après la création via QCW  
+[Erreur][Modèles] Modèle : Les spécifications de temps de la catégorie SLA ne sont pas correctement transférées aux objets créés à partir du modèle  
+[Erreur][Importation] L'attribution de "Cartes SIM attribuées > Cartes SIM liées" aux téléphones cellulaires lors de l'importation CSV ne fonctionne pas  
+[Erreur][Listes] La liste d'objets plante lorsque l'éditeur HTML d'une catégorie personnalisée est affiché dans la liste d'objets  
+[Erreur][Listes] Les membres des groupes de personnes ne peuvent pas être sélectionnés pour être affichés dans les listes d'objets  
+[Erreur][Listes] Les modifications des largeurs de colonnes dans les listes d'objets ne sont pas enregistrées  
+[Erreur][Listes] La largeur des colonnes est réinitialisée lors de la navigation à travers les pages d'objets  
+[Erreur][Listes] La liste d'objets du réseau de niveau 3 "Filtrer dans tous les champs" affiche une liste vide après avoir vidé le filtre  
+[Erreur][API] Référence incorrecte pour l'attribution de service via API  
+[Erreur][API] L'attribut "modèle" de la catégorie "Stockage" n'est pas inclus dans les résultats  
+[Erreur][Centre d'administration] L'édition d'un locataire dans le Centre d'administration réinitialise les licences d'objets attribués  
+[Erreur][Catégories personnalisées] Gestionnaire de rapports : Le filtre pour les filtres de cases à cocher n'est pas correct  
+[Erreur][Catégories personnalisées] Le contenu HTML des catégories personnalisées est affiché deux fois sur la page de présentation  
+[Erreur][Notifications] La notification sur les objets stockés n'est pas envoyée avec une valeur de seuil de 0 ou -1  
+[Erreur][Notifications] La mise en forme du texte d'information dans la description d'une notification est défectueuse  
+[Erreur][OCS] L'enregistrement de l'importation OCS est enregistré même lorsque la journalisation est désactivée  
+[Erreur][Recherche] Recherche : Seuls 0 ou 1 sont affichés comme score  
+[Erreur][CMDB] Ne pas connecter l'emplacement racine lors de la création de l'appartenance à un cluster  
+[Erreur][CMDB] La constante de langue pour l'emplacement racine ne fonctionne pas partout  
+[Erreur][Connecteur de câblage] Le tri dans le navigateur de câblage n'est pas correct  
+
+I am ready to start the translation once you provide the Markdown content.

@@ -1,51 +1,51 @@
 ---
-title: external
-description: cmdb.external endpoint
+title: externe
+description: Point de terminaison cmdb.external
 icon: material/api
-status: new
-lang: en
+status: nouveau
+lang: fr
 ---
 
 # cmdb.external
 
-The integration of external data sources into the Configuration Management Database (CMDB) can be simplified by various measures. First of all, it is important that the data is available in a standardized, easy-to-process format to make it easier to read and transfer to the CMDB. In addition, functions should be implemented that enable a complete, one-time data transfer as well as regular, automated synchronizations. It is crucial that each data element in the CMDB is linked to its origin in order to ensure the identifiability of the data sources. At the same time, clear rules and guidelines must be defined in order to delimit the scope of the data from the individual sources. The simultaneous integration of multiple data sources should also be supported, whereby conflicts and inconsistencies must be recognized and resolved. Finally, single-request operations should be implemented to allow users to perform data imports, synchronizations and queries through a single interface to increase usability and efficiency.
+L'intégration de sources de données externes dans la base de données de gestion de la configuration (CMDB) peut être simplifiée par diverses mesures. Tout d'abord, il est important que les données soient disponibles dans un format standardisé, facile à traiter pour faciliter la lecture et le transfert vers la CMDB. De plus, des fonctions doivent être mises en œuvre pour permettre un transfert de données complet et ponctuel ainsi que des synchronisations régulières et automatisées. Il est crucial que chaque élément de données dans la CMDB soit lié à son origine afin de garantir l'identifiabilité des sources de données. En même temps, des règles claires et des directives doivent être définies pour délimiter la portée des données des sources individuelles. L'intégration simultanée de plusieurs sources de données devrait également être prise en charge, les conflits et les incohérences devant être reconnus et résolus. Enfin, des opérations de demande unique devraient être mises en œuvre pour permettre aux utilisateurs d'effectuer des importations de données, des synchronisations et des requêtes via une interface unique afin d'augmenter la convivialité et l'efficacité.
 
 ## cmdb.external
 
-### What are external identifiers?
+### Quels sont les identifiants externes?
 
--   User-defined string-based stable and unique IDs
--   Composed of a **"type"** and a **"id"**
+- Identifiants uniques et stables basés sur des chaînes définies par l'utilisateur
+- Composés d'un **"type"** et d'un **"id"**
 
-For example `my_vendor_id / my_object_id`.
+Par exemple `mon_id_fournisseur / mon_id_objet`.
 
-### Why do we need external identifiers?
+### Pourquoi avons-nous besoin d'identifiants externes?
 
--   Clear identification of object and category data records
--   Scoping: Completed data areas
--   Caller does not need to know internal record IDs
+- Identification claire des enregistrements de données d'objet et de catégorie
+- Délimitation : Zones de données complétées
+- L'appelant n'a pas besoin de connaître les identifiants d'enregistrement internes
 
-### How do external identifiers work?
+### Comment fonctionnent les identifiants externes?
 
--   Hierarchical approach
--   User defines an external identifier for the object
-    -   **extType**: Identifier for the data source/vendor
-    -   **extId**: Identifier for the object
--   **User also defines an identifier (without extType) for each category entry**
--   API creates a mapping between identifiers and internal IDs
+- Approche hiérarchique
+- L'utilisateur définit un identifiant externe pour l'objet
+    - **extType** : Identifiant pour la source de données/fournisseur
+    - **extId** : Identifiant pour l'objet
+- **L'utilisateur définit également un identifiant (sans extType) pour chaque entrée de catégorie**
+- L'API crée une correspondance entre les identifiants et les identifiants internes
 
-Examples of this would be:
+Des exemples seraient :
 
--   External identifier for an **object**
-    -   `data-source-1 / windows-server100`
--   External identifier for each **category entry**
-    -   `data-source-1 / windows-server100 / C__CATG__CPU / intel-1`
+- Identifiant externe pour un **objet**
+    - `source-de-données-1 / serveur-windows100`
+- Identifiant externe pour chaque **entrée de catégorie**
+    - `source-de-données-1 / serveur-windows100 / C__CATG__CPU / intel-1`
 
-The object is located on the first level. Here we define the **extType** on the one hand and the **extId** on the other. Both together form the complete identifier and uniquely identify the created object.
-On the next level, however, we have our **category level**. Each category starts with the corresponding constant and receives a unique ID on the level below.
+L'objet se trouve au premier niveau. Ici, nous définissons le **extType** d'une part et le **extId** de l'autre. Ensemble, ils forment l'identifiant complet et identifient de manière unique l'objet créé.
+Au niveau suivant, cependant, nous avons notre **niveau de catégorie**. Chaque catégorie commence par la constante correspondante et reçoit un identifiant unique au niveau inférieur.
 
-From this structure, i-doit then automatically determines the final identifier, illustrated here using the example of **intel-1** and **intel-2**.
-Here is an example of a push request to create an object via the new endpoint.
+Dans cette structure, i-doit détermine ensuite automatiquement l'identifiant final, illustré ici à l'aide de l'exemple de **intel-1** et **intel-2**.
+Voici un exemple de requête push pour créer un objet via le nouveau point de terminaison.
 
 ```json
 {
@@ -87,59 +87,61 @@ Here is an example of a push request to create an object via the new endpoint.
 }
 ```
 
-and records the whole thing in an internal mapping table.
+et enregistre le tout dans une table de correspondance interne.
 
-### Scoping
+### Délimitation
 
-Scoping should ensure that two data sources do not get in each other's way, as we assume the following:
+La délimitation devrait garantir que deux sources de données ne se gênent pas mutuellement, car nous supposons ce qui suit:
 
-!!! note "If different data sources feed their data into i-doit at the same time, we assume that each data source is leading in its own right and can be regarded as a single source of truth. Conversely, this means that an object can never appear in several data sources at the same time."
+!!! note "Si différentes sources de données alimentent leurs données dans i-doit en même temps, nous supposons que chaque source de données est prépondérante en son propre droit et peut être considérée comme une seule source de vérité. En d'autres termes, cela signifie qu'un objet ne peut jamais apparaître dans plusieurs sources de données en même temps."
 
-Based on this assumption, i-doit therefore implements the following safety net:
+Sur la base de cette hypothèse, i-doit met en œuvre le filet de sécurité suivant:
 
--   Objects are clearly assigned to data sources
-    -   An object can only be assigned to one data source
-        -   A data source object cannot be managed by multiple data sources
-    -   A further refinement: Existing objects cannot be manually assigned to a data source
+-   Les objets sont clairement attribués à des sources de données
+    -   Un objet ne peut être attribué qu'à une seule source de données
+        -   Un objet de source de données ne peut pas être géré par plusieurs sources de données
+    -   Une autre précision: les objets existants ne peuvent pas être attribués manuellement à une source de données
 
-We have similar handling at **category level**:
+{ /*examples*/ }
 
--   Clear assignment of category entries to data sources
--   A special feature of MV: **MV entries can be edited manually even if they come from a data source**
--   The other way round, however, i.e. manually created multi-value category entries remain protected from access by the data source
--   But there is also an exception here, namely for single-value categories: **Manually created single-value category entries can be manipulated by data sources**
--   There is also an unauthorized and unmappable case: The data source **"data-source-2"** cannot have a CPU entry in an object that is managed by **"data-source-1"**
+Nous avons un traitement similaire au niveau de la **catégorie** :
+
+-   Attribution claire des entrées de catégorie aux sources de données
+-   Une caractéristique spéciale de MV : **les entrées MV peuvent être éditées manuellement même si elles proviennent d'une source de données**
+-   Dans l'autre sens, cependant, c'est-à-dire que les entrées de catégorie à valeurs multiples créées manuellement restent protégées contre l'accès par la source de données
+-   Mais il y a aussi une exception ici, à savoir pour les catégories à valeur unique : **les entrées de catégorie à valeur unique créées manuellement peuvent être manipulées par les sources de données**
+-   Il existe également un cas non autorisé et non mappable : La source de données **"data-source-2"** ne peut pas avoir une entrée de CPU dans un objet géré par **"data-source-1"**
 
 ## cmdb.external.push.v2
 
-Creation and updating of objects and category entries by a single request.
-In addition, various **"strategies "** allow us to map different use cases, although it should be mentioned that these are only located on the category layer.
+Création et mise à jour d'objets et d'entrées de catégorie par une seule requête.
+De plus, diverses **"stratégies "** nous permettent de mapper différents cas d'utilisation, bien qu'il soit à noter qu'elles se trouvent uniquement au niveau de la catégorie.
 
-The Push API also has procedures for converting human-readable values into their technical representation, for example dialog+, object references or category references.
-And very importantly:
+L'API Push dispose également de procédures pour convertir des valeurs lisibles par l'homme en leur représentation technique, par exemple dialog+, références d'objets ou références de catégories.
+Et très important :
 
-!!! note "By using the Push API, you do not have to do without general CMDB structures, such as the rights system, validation rule or logbook. Everything works as before!"
+!!! note "En utilisant l'API Push, vous n'avez pas à vous passer des structures CMDB générales, telles que le système de droits, la règle de validation ou le journal. Tout fonctionne comme avant!"
 
-| Strategy | Entry exists single-value | Entry exists multi-value | Entry does not exist single-value | Entry does not exist multi-value |
+| Stratégie | Entrée existe en valeur unique | Entrée existe en valeur multiple | Entrée n'existe pas en valeur unique | Entrée n'existe pas en valeur multiple |
 | --- | --- | --- | --- | --- |
-| **create** | :material-close: will be skipped | :material-close: will be skipped | :material-plus: is created | :material-plus: is created |
-| **update** | :material-pencil: will be updated | :material-pencil: will be updated | :material-plus: is created | :material-plus: is created |
-| **overwrite** | :material-pencil: will be updated | :material-pencil: will be updated | :material-plus: is created | :material-plus: is created |
+| **créer** | :material-close: sera ignoré | :material-close: sera ignoré | :material-plus: est créée | :material-plus: est créée |
+| **mettre à jour** | :material-pencil: sera mis à jour | :material-pencil: sera mis à jour | :material-plus: est créée | :material-plus: est créée |
+| **écraser** | :material-pencil: sera mis à jour | :material-pencil: sera mis à jour | :material-plus: est créée | :material-plus: est créée |
 
-!!! warning "**overwrite** deletes all multi-value entries from i-doit that are not included in the request. Existing ones are updated or created"
+!!! warning "**écraser** supprime toutes les entrées en valeur multiple de i-doit qui ne sont pas incluses dans la demande. Les existantes sont mises à jour ou créées"
 
-### Request parameters
+### Paramètres de la demande
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **extType** | String | Yes | Data source, for example: **data-source-1** |
-| **extId** | String | Yes | Object, for example: **windows-server100** |
-| **class** | String | Yes | Object type, for example: **C__OBJTYPE__SERVER** |
-| **title** | String | Yes | Object designation, for example: **Server 100** |
+| **extType** | Chaîne | Oui | Source de données, par exemple : **source-de-données-1** |
+| **extId** | Chaîne | Oui | Objet, par exemple : **serveur-windows100** |
+| **classe** | Chaîne | Oui | Type d'objet, par exemple : **C__OBJTYPE__SERVEUR** |
+| **titre** | Chaîne | Oui | Désignation de l'objet, par exemple : **Serveur 100** |
 
-### Example
+### Exemple
 
-=== "Request"
+=== "Requête"
 
     ```json
     {
@@ -206,7 +208,7 @@ And very importantly:
     }
     ```
 
-=== "Response"
+=== "Réponse"
 
     ```json
     {
@@ -357,26 +359,26 @@ And very importantly:
 
 ## cmdb.external.pull.v2
 
-Reading CMDB data based on the **"External Identifier"**.
-When pulling, the external identifier determines the queried data, for example:
+Lecture des données CMDB basée sur l'**"Identifiant Externe"**.
+Lors de la récupération, l'identifiant externe détermine les données interrogées, par exemple :
 
-| extType | extId | Aktion |
+| extType | extId | Action |
 | --- | --- | --- |
-| data-source-1 | null | Reads all objects and any category data |
-| data-source-1 | windows-server100 | Reads windows100 and any category data |
-| data-source-1 / windows-server100 / C__CATG__CPU | null | Reads windows100 and all CPU entries |
-| data-source-1 / windows-server100 / C__CATG__CPU | intel-1 | Reads windows100 and only the CPU entry intel-1 |
+| data-source-1 | null | Lit tous les objets et toutes les données de catégorie |
+| data-source-1 | windows-server100 | Lit windows100 et toutes les données de catégorie |
+| data-source-1 / windows-server100 / C__CATG__CPU | null | Lit windows100 et toutes les entrées CPU |
+| data-source-1 / windows-server100 / C__CATG__CPU | intel-1 | Lit windows100 et seulement l'entrée CPU intel-1 |
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **extType** | String | Yes | Data source, for example: **data-source-1** |
-| **extId** | String | Yes | Object, for example: **windows-server100** |
+| **extType** | Chaîne | Oui | Source de données, par exemple : **data-source-1** |
+| **extId** | Chaîne | Oui | Objet, par exemple : **windows-server100** |
 
-### Example
+### Exemple
 
-=== "Request"
+=== "Requête"
 
     ```json
     {
@@ -391,173 +393,8 @@ When pulling, the external identifier determines the queried data, for example:
     }
     ```
 
-=== "Response"
+=== "Réponse"
 
-    ```json
-    {
-        "id": 1,
-        "jsonrpc": "2.0",
-        "result": [
-            {
-                "extId": "windows-server100",
-                "extType": "data-source-1",
-                "id": 780,
-                "title": "Server 100",
-                "sysid": "SYSID_1712739589",
-                "objecttype": 5,
-                "type_title": "Server",
-                "type_icon": "images/axialis/hardware-network/server-single.svg",
-                "status": 0,
-                "cmdb_status": 0,
-                "data": {
-                    "C__CATG__CPU": [
-                        {
-                            "extId": "intel-1",
-                            "extType": "data-source-1/windows-server100/C__CATG__CPU",
-                            "id": "110",
-                            "objID": "780",
-                            "title": "5th Generation Intel® Xeon® Scalable Processors #1",
-                            "manufacturer": {
-                                "id": "2",
-                                "title": "Intel",
-                                "const": null,
-                                "title_lang": "Intel"
-                            },
-                            "type": {
-                                "id": "33",
-                                "title": "8571N",
-                                "const": null,
-                                "title_lang": "8571N"
-                            },
-                            "frequency": {
-                                "title": 2.4
-                            },
-                            "frequency_unit": {
-                                "id": "3",
-                                "title": "GHz",
-                                "const": "C__FREQUENCY_UNIT__GHZ",
-                                "title_lang": "GHz"
-                            },
-                            "cores": "52",
-                            "description": ""
-                        },
-                        {
-                            "extId": "intel-2",
-                            "extType": "data-source-1/windows-server100/C__CATG__CPU",
-                            "id": "110",
-                            "objID": "780",
-                            "title": "5th Generation Intel® Xeon® Scalable Processors #1",
-                            "manufacturer": {
-                                "id": "2",
-                                "title": "Intel",
-                                "const": null,
-                                "title_lang": "Intel"
-                            },
-                            "type": {
-                                "id": "33",
-                                "title": "8571N",
-                                "const": null,
-                                "title_lang": "8571N"
-                            },
-                            "frequency": {
-                                "title": 2.4
-                            },
-                            "frequency_unit": {
-                                "id": "3",
-                                "title": "GHz",
-                                "const": "C__FREQUENCY_UNIT__GHZ",
-                                "title_lang": "GHz"
-                            },
-                            "cores": "52",
-                            "description": ""
-                        }
-                    ],
-                    "C__CATG__GLOBAL": [
-                        {
-                            "extId": "windows-server1001_TAGS",
-                            "extType": "data-source-1/windows-server100/C__CATG__GLOBAL",
-                            "id": "780",
-                            "objID": "780",
-                            "title": "Server 100",
-                            "status": {
-                                "id": "2",
-                                "title": "Normal",
-                                "const": "",
-                                "title_lang": "LC__CMDB__RECORD_STATUS__NORMAL"
-                            },
-                            "created": "2024-04-10 10:46:49",
-                            "created_by": "admin",
-                            "changed": "2024-04-10 10:46:49",
-                            "changed_by": "admin",
-                            "purpose": {
-                                "id": "6",
-                                "title": "Docu",
-                                "const": null,
-                                "title_lang": "Docu"
-                            },
-                            "category": null,
-                            "sysid": "SYSID_1712739589",
-                            "cmdb_status": {
-                                "id": "6",
-                                "title": "in operation",
-                                "const": "C__CMDB_STATUS__IN_OPERATION",
-                                "title_lang": "LC__CMDB_STATUS__IN_OPERATION"
-                            },
-                            "type": {
-                                "id": "5",
-                                "title": "Server",
-                                "const": "C__OBJTYPE__SERVER",
-                                "title_lang": "LC__CMDB__OBJTYPE__SERVER"
-                            },
-                            "tag": [
-                                {
-                                    "id": "1",
-                                    "title": "server"
-                                },
-                                {
-                                    "id": "4",
-                                    "title": "monitoring"
-                                },
-                                {
-                                    "id": "8",
-                                    "title": "api2.0"
-                                }
-                            ],
-                            "description": ""
-                        }
-                    ],
-                    "C__CATG__LOCATION": [
-                        {
-                            "extId": "CITY_OBJECT_DUESSELDORF",
-                            "extType": "data-source-1/windows-server100/C__CATG__LOCATION",
-                            "id": "170",
-                            "objID": "780",
-                            "location_path": "781",
-                            "parent": {
-                                "id": "781",
-                                "title": "Düsseldorf",
-                                "sysid": "SYSID_1712739590",
-                                "type": "C__OBJTYPE__CITY",
-                                "type_title": "City",
-                                "location_path": "Düsseldorf"
-                            },
-                            "option": null,
-                            "insertion": null,
-                            "pos": null,
-                            "gps": {
-                                "0": null,
-                                "1": null,
-                                "latitude": null,
-                                "longitude": null
-                            },
-                            "latitude": null,
-                            "longitude": null,
-                            "snmp_syslocation": "",
-                            "description": ""
-                        }
-                    ]
-                }
-            }
-        ]
-    }
-    ```
+```json
+((((5cd36d184cf9fbe3))))
+```

@@ -1,35 +1,35 @@
-# Release Notes 1.8
+# Notes de version 1.8 {/ * exemples *}
 
-> System Requirements
+> Exigences système
 > -------------------
 > 
-> i-doit 1.8 has no changes in its system requirements.
+> i-doit 1.8 n'a aucun changement dans ses exigences système.
 > 
 > Migrations
 > ----------
 > 
-> User-defined list views will be migrated when upgrading.
+> Les vues de liste définies par l'utilisateur seront migrées lors de la mise à niveau.
 > 
-> Standard Lists
+> Listes standard
 > --------------
 > 
-> Starting with i-doit 1.8 all standard, non customized object lists are redefined with new columns. These columns fit better into the object type context. If you want to use the old columns, please customize yourself an object list matching the old style.
+> À partir de i-doit 1.8, toutes les listes d'objets standard, non personnalisées, sont redéfinies avec de nouvelles colonnes. Ces colonnes s'intègrent mieux dans le contexte du type d'objet. Si vous souhaitez utiliser les anciennes colonnes, veuillez personnaliser vous-même une liste d'objets correspondant à l'ancien style.
 > 
-> Object matching
+> Correspondance d'objets
 > ---------------
 > 
-> Starting from i-doit 1.8 imports functions now match existing objects against imported objects with a new function. The feature comes with default settings that comply with the existing behaviour.
+> À partir de i-doit 1.8, les fonctions d'importation correspondent désormais aux objets existants par rapport aux objets importés avec une nouvelle fonction. La fonction est livrée avec des paramètres par défaut qui respectent le comportement existant.
 > 
-> Please check the settings before the next import at **Administration → Interfaces → Import → Object-Matching Profiles**.
+> Veuillez vérifier les paramètres avant la prochaine importation à **Administration → Interfaces → Importation → Profils de correspondance d'objets**.
 > 
 > API
 > ---
 > 
-> The api is not longer part of our official package and is separately released as a module.
+> L'API ne fait plus partie de notre package officiel et est publiée séparément en tant que module.
 > 
 > 
 > 
-> Floorplan Extension
+> Extension de plan d'étage
 > -------------------
 > 
-> The Floorplan extension has to be updated in order to work with i-doit version 1.8. Please download the floorplan extension separately.
+> L'extension de plan d'étage doit être mise à jour pour fonctionner avec la version 1.8 de i-doit. Veuillez télécharger séparément l'extension de plan d'étage.

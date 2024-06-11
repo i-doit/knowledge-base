@@ -1,9 +1,9 @@
 ---
-title: Download Center
-description: Download Center
+title: Centre de téléchargement
+description: Centre de téléchargement
 #icon: material/
 status: new
-lang: en
+lang: fr
 ---
 
-# Download Center
+# Centre de téléchargement

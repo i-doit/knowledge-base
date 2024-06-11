@@ -1,5 +1,5 @@
-# Categories and Attributes
+# Catégories et Attributs {/examples/}
 
-This lists all available [attributes for the selected category](../../../../basics/structure-of-the-it-documentation.md) of i-doit.
+Cela répertorie tous les [attributs disponibles pour la catégorie sélectionnée](../../../../basics/structure-of-the-it-documentation.md) d'i-doit.
 
-For more Information -> [READMORE](../../../../i-doit-pro-add-ons/api/index.md)
+Pour plus d'informations -> [EN SAVOIR PLUS](../../../../i-doit-pro-add-ons/api/index.md)

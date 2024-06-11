@@ -1,52 +1,54 @@
-# Changelog 26
+# Journal des modifications 26 {/examples/}
 
-[Task][Code (Internal)]        Security - Path traversal<br>
-[Task][Code (Internal)]        Security - Stored XSS<br>
-[Task][Code (Internal)]        Integrate/Reintegrate static php code analysis tools to identify logical errors<br>
-[Task][Console]                Remove old 'controller' code in favor of 'Commands'<br>
-[Task][Console]                Remove usages of old 'interfaces'<br>
-[Improvement][Code (Internal)] PHP 8.1 Compatibility<br>
-[Bug][JDisc]                   Exported JDisc profile should have the title in its filename<br>
-[Bug][JDisc]                   Error when importing logbook with jdisc<br>
-[Bug][JDisc]                   Do not remove export/import buttons when deleting jdisc profile<br>
-[Bug][Code (Internal)]         Allow user to update custom object types<br>
-[Bug][Code (Internal)]         XSS Javascript vulnerability<br>
-[Bug][Code (Internal)]         Allow user to change custom category attributes<br>
-[Bug][Code (Internal)]         Update description length validation<br>
-[Bug][Code (Internal)]         Formfactor in overview causes data sanitation warning when empty<br>
-[Bug][Code (Internal)]         Correct re-direction of quicklinks in dashboard<br>
-[Bug][Code (Internal)]         LC__UNIVERSAL__MONTS is displayed for Month value in Accounting > Remainder warranty<br>
-[Bug][Code (Internal)]         Set default Objecttype sorting to Alphabetically<br>
-[Bug][Code (Internal)]         "Remainder warranty" not translating "months" properly from language constant<br>
-[Bug][Code (Internal)]         404 Error when opening notifications menu<br>
-[Bug][Code (Internal)]         i-doit is misspelled in Administration > tenant management > Rights & Directories<br>
-[Bug][Code (Internal)]         Wrong translation for hash for CSV-export delimiter<br>
-[Bug][Code (Internal)]         Exported Filename is FQFN when downloading file in object picture category<br>
-[Bug][Code (Internal)]         The filemanager can no longer download specific files<br>
-[Bug][Code (Internal)]         Set database without overwriting service<br>
-[Bug][Custom categories]       Key constraint fails when detaching a contact in a custom category with a object relation field<br>
-[Bug][System settings]         Make MySQL 8.0 compatible in the gui<br>
-[Bug][API]                     cmdb.category.purge does not work with C__CATG__LOCATION<br>
-[Bug][Categories]              Variable report on overview page causes 500 error<br>
-[Bug][Categories]              Rearranging racks is not possible when scrolling down<br>
-[Bug][Categories]              Path to save is deleted when editing from Backup (assigned Objects)<br>
-[Bug][Categories]              If entries in subcategory DBMS from category databases are archived the corresponding entries in the software assignment category are not being archived<br>
-[Bug][Categories]              Saving of MedTec category produces "CSRF-Mismatch" error<br>
-[Bug][Categories]              500 Error when adding variable report to overview page of an object
-[Bug][Categories]              Wrong versions are loaded when multiple Operating systems are assigned
-[Bug][Categories]              Change property type of category "Telphone/Fax" from Dialog to Dialog Plus<br>
-[Bug][LDAP]                    OpenLDAP search for groups in OU is overwritten by search for users in OU<br>
-[Bug][LDAP]                    Allow user to check LDAP connection when editing via list table<br>
-[Bug][Logbook]                 The Primary attribute in Contact assignment is not written to the logbook<br>
-[Bug][Logbook]                 Multiple entries in Logbook when adding/changing assignments in category "group memberships"<br>
-[Bug][Admincenter]             Support button in Admin Center leads to customer portal<br>
-[Bug][CSV Import]              The csv import takes a long time because the location fix is executed<br>
-[Bug][CSV Import]              Date field from custom categories not displayed in mapping of csv import<br>
-[Bug][CMDB]                    Placeholder helper does not display object specific placeholders when category is not saved<br>
-[Bug][CMDB]                    The user is not able to create a "Software assignment" without filling in the "Installed at" field<br>
-[Bug][CMDB]                    CSRF Error while saving custom category<br>
-[Bug][Lists]                   Allow user to filter for custom date fields<br>
-[Bug][Application Redesign]    Rights for locations not readable<br>
-[Bug][Templates]               using a template with categorie password with a empty password prevents objects to be created from the template<br>
-[Bug][List editing]            Do not replace version/variant with -1 when software assignment is updated<br>
-[Bug][i-doit Licensing 2.0]    A Buyers license is not displayed with no expiration date<br>
+[Tâche][Code (Interne)]        Sécurité - Traversée de chemin<br>
+[Tâche][Code (Interne)]        Sécurité - XSS stocké<br>
+[Tâche][Code (Interne)]        Intégrer/Réintégrer des outils d'analyse statique du code php pour identifier les erreurs logiques<br>
+[Tâche][Console]               Supprimer l'ancien code 'controller' en faveur des 'Commandes'<br>
+[Tâche][Console]               Supprimer les utilisations des anciennes 'interfaces'<br>
+[Amélioration][Code (Interne)] Compatibilité PHP 8.1<br>
+[Bogue][JDisc]                 Le profil JDisc exporté doit avoir le titre dans son nom de fichier<br>
+[Bogue][JDisc]                 Erreur lors de l'importation du journal avec jdisc<br>
+[Bogue][JDisc]                 Ne pas supprimer les boutons d'exportation/importation lors de la suppression du profil jdisc<br>
+[Bogue][Code (Interne)]        Autoriser l'utilisateur à mettre à jour les types d'objets personnalisés<br>
+[Bogue][Code (Interne)]        Vulnérabilité XSS Javascript<br>
+[Bogue][Code (Interne)]        Autoriser l'utilisateur à modifier les attributs de catégorie personnalisés<br>
+[Bogue][Code (Interne)]        Mettre à jour la validation de la longueur de la description<br>
+[Bogue][Code (Interne)]        Le facteur de forme dans l'aperçu provoque un avertissement de désinfection des données lorsqu'il est vide<br>
+[Bogue][Code (Interne)]        Redirection correcte des liens rapides dans le tableau de bord<br>
+[Bogue][Code (Interne)]        LC__UNIVERSAL__MONTS est affiché pour la valeur du mois dans Comptabilité > Garantie restante<br>
+[Bogue][Code (Interne)]        Définir le tri par défaut des types d'objets par ordre alphabétique<br>
+[Bogue][Code (Interne)]        "Garantie restante" ne traduit pas correctement "mois" à partir de la constante de langue<br>
+[Bogue][Code (Interne)]        Erreur 404 lors de l'ouverture du menu des notifications<br>
+[Bogue][Code (Interne)]        i-doit est mal orthographié dans Administration > gestion des locataires > Droits & Répertoires<br>
+[Bogue][Code (Interne)]        Mauvaise traduction pour le hash du délimiteur d'exportation CSV<br>
+[Bogue][Code (Interne)]        Le nom de fichier exporté est FQFN lors du téléchargement du fichier dans la catégorie image d'objet<br>
+[Bogue][Code (Interne)]        Le gestionnaire de fichiers ne peut plus télécharger de fichiers spécifiques<br>
+[Bogue][Code (Interne)]        Définir la base de données sans écraser le service<br>
+[Bogue][Catégories personnalisées] Contrainte de clé échoue lors du détachement d'un contact dans une catégorie personnalisée avec un champ de relation d'objet<br>
+[Bogue][Paramètres système]    Rendre MySQL 8.0 compatible dans l'interface graphique<br>
+[Bogue][API]                   cmdb.category.purge ne fonctionne pas avec C__CATG__LOCATION<br>
+[Bogue][Catégories]            Le rapport variable sur la page d'aperçu provoque une erreur 500<br>
+[Bogue][Catégories]            Il n'est pas possible de réorganiser les racks en faisant défiler vers le bas<br>
+[Bogue][Catégories]            Le chemin pour enregistrer est supprimé lors de la modification à partir de la sauvegarde (objets attribués)<br>
+[Bogue][Catégories]            Si les entrées de la sous-catégorie DBMS de la catégorie bases de données sont archivées, les entrées correspondantes de la catégorie d'attribution de logiciel ne sont pas archivées<br>
+[Bogue][Catégories]            L'enregistrement de la catégorie MedTec produit une erreur "CSRF-Mismatch"<br>
+[Bogue][Catégories]            Erreur 500 lors de l'ajout d'un rapport variable à la page d'aperçu d'un objet<br>
+[Bogue][Catégories]            Les mauvaises versions sont chargées lorsque plusieurs systèmes d'exploitation sont attribués<br>
+[Bogue][Catégories]            Changer le type de propriété de la catégorie "Téléphone/Fax" de Dialog à Dialog Plus<br>
+[Bogue][LDAP]                  La recherche OpenLDAP des groupes dans l'OU est écrasée par la recherche des utilisateurs dans l'OU<br>
+[Bogue][LDAP]                  Autoriser l'utilisateur à vérifier la connexion LDAP lors de la modification via le tableau de liste<br>
+[Bogue][Journal]               L'attribut principal dans l'attribution de contact n'est pas écrit dans le journal<br>
+[Bogue][Journal]               Entrées multiples dans le journal lors de l'ajout/changement d'attributions dans la catégorie "appartenances à des groupes"<br>
+[Bogue][Centre d'administration] Le bouton de support dans le Centre d'administration mène au portail client<br>
+[Bogue][Importation CSV]       L'importation csv prend du temps car la correction de l'emplacement est exécutée<br>
+[Bogue][Importation CSV]       Le champ de date des catégories personnalisées n'est pas affiché dans la correspondance de l'importation csv<br>
+[Bogue][CMDB]                  L'assistant de substitution n'affiche pas les espaces réservés spécifiques à l'objet lorsque la catégorie n'est pas enregistrée<br>
+[Bogue][CMDB]                  L'utilisateur n'est pas en mesure de créer une "attribution de logiciel" sans remplir le champ "Installé à"<br>
+[Bogue][CMDB]                  Erreur CSRF lors de l'enregistrement de la catégorie personnalisée<br>
+[Bogue][Listes]                Autoriser l'utilisateur à filtrer les champs de date personnalisés<br>
+[Bogue][Refonte de l'application] Droits pour les emplacements non lisibles<br>
+[Bogue][Modèles]               Utiliser un modèle avec une catégorie de mot de passe avec un mot de passe vide empêche la création d'objets à partir du modèle<br>
+[Bogue][Édition de liste]       Ne pas remplacer la version/la variante par -1 lorsque l'attribution de logiciel est mise à jour<br>
+[Bogue][Licence i-doit 2.0]     Une licence d'acheteur n'est pas affichée sans date d'expiration<br>
+
+Please provide the Markdown content you would like me to translate into French.

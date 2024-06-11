@@ -1,30 +1,30 @@
-# Install Forms Add-on
+# Installer l'extension Forms
 
-## Download
+## Téléchargement
 
-The current installation package for the add-on can be downloaded from the i-doit customer portal at [customer portal](../../system-administration/customer-portal.md) after purchasing a valid license.
+Le package d'installation actuel pour l'extension peut être téléchargé depuis le portail client i-doit sur [portail client](../../system-administration/customer-portal.md) après l'achat d'une licence valide.
 
-## Installation of the Forms add-on
+## Installation de l'extension Forms
 
-The installation itself is done in the i-doit [Admin Center](../../system-administration/admin-center.md) in the "Add-ons" tab. Here, the package is selected from the local system via the "Browse" button.
+L'installation elle-même se fait dans le [Centre d'administration](../../system-administration/admin-center.md) i-doit dans l'onglet "Extensions". Ici, le package est sélectionné depuis le système local via le bouton "Parcourir".
 
-After specifying for which tenant(s) the add-on should be made available, the installation can be completed via the "Upload and install" button.<br>
-After the release of a new version, the same way can be used in the [Admin Center](../../system-administration/admin-center.md) to upload and update the installed package, which will also be available in the i-doit [customer portal](../../system-administration/customer-portal.md).
+Après avoir spécifié pour quel(s) locataire(s) l'extension doit être rendue disponible, l'installation peut être complétée via le bouton "Télécharger et installer".<br>
+Après la sortie d'une nouvelle version, la même méthode peut être utilisée dans le [Centre d'administration](../../system-administration/admin-center.md) pour télécharger et mettre à jour le package installé, qui sera également disponible dans le portail client i-doit [customer portal](../../system-administration/customer-portal.md).
 
-[![Installation of the Forms add-on](../../assets/images/en/i-doit-pro-add-ons/forms/install/1-fi.png)](../../assets/images/en/i-doit-pro-add-ons/forms/install/1-fi.png)
+[![Installation de l'extension Forms](../../assets/images/en/i-doit-pro-add-ons/forms/install/1-fi.png)](../../assets/images/en/i-doit-pro-add-ons/forms/install/1-fi.png)
 
-## Installing the license
+## Installation de la licence {#installation-de-la-licence}
 
-The installation via the [Admin Center](../../system-administration/admin-center.md) is done after login in the Licences tab. Use the Install new license button here to open the advanced dialog and select the license downloaded from the [customer portal](../../system-administration/customer-portal.md).
+L'installation via le [Centre d'administration](../../system-administration/admin-center.md) se fait après s'être connecté à l'onglet Licences. Utilisez le bouton Installer une nouvelle licence ici pour ouvrir la boîte de dialogue avancée et sélectionnez la licence téléchargée depuis le [portail client](../../system-administration/customer-portal.md).
 
-New login may be necessary
+Une nouvelle connexion peut être nécessaire
 
-If a license is successfully imported, it can still happen that a message appears when continuing to work with i-doit that no valid license is activated. In this case, it helps to log out with the current user and log in again. The message should then not appear again.
+Si une licence est importée avec succès, il peut arriver qu'un message apparaisse lors de la poursuite du travail avec i-doit indiquant qu'aucune licence valide n'est activée. Dans ce cas, il suffit de se déconnecter avec l'utilisateur actuel et de se reconnecter. Le message ne devrait alors plus apparaître.
 
-[![Installing the license](../../assets/images/en/i-doit-pro-add-ons/forms/install/2-fi.png)](../../assets/images/en/i-doit-pro-add-ons/forms/install/2-fi.png)
+[![Installation de la licence](../../assets/images/en/i-doit-pro-add-ons/forms/install/2-fi.png)](../../assets/images/en/i-doit-pro-add-ons/forms/install/2-fi.png)
 
-!!! info "Automatic license distribution"
+!!! info "Distribution automatique de licences"
 
-Please note that in the **Tenants** tab you can configure how many object licenses are assigned to a client. Even if only a single client exists, a switched off automatic license distribution can ensure that not all object licenses are used. If this is the case, it can simply be activated and applied with a click on Save.
+Veuillez noter que dans l'onglet **Locataires**, vous pouvez configurer le nombre de licences d'objets attribuées à un client. Même s'il n'existe qu'un seul client, une distribution automatique de licences désactivée peut garantir que toutes les licences d'objets ne sont pas utilisées. Si tel est le cas, il suffit de l'activer et de l'appliquer en cliquant sur Enregistrer.
 
-[Continue to the installation of MongoDB v5](./install-mongodb.md){ .md-button .md-button--primary }
+[Continuer avec l'installation de MongoDB v5](./install-mongodb.md){ .md-button .md-button--primary }

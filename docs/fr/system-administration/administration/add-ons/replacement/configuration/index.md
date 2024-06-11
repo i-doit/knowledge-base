@@ -2,11 +2,11 @@
 
 | Option | Value |
 | - | - |
-| Selectable object-types | Categories |
-| CMDB status for storing objects | CMDB status |
-| Consider the "swap" status? | Yes or No |
-| Archive swapped objects? | Yes or No |
-| Also swap the SYS-ID? | Yes or No |
-| Keep swapped object categories data? | Yes or No |
+| Types d'objets sélectionnables | Catégories |
+| Statut CMDB pour stocker des objets | Statut CMDB |
+| Tenir compte du statut "swap" ? | Oui ou Non |
+| Archiver les objets échangés ? | Oui ou Non |
+| Échanger également le SYS-ID ? | Oui ou Non |
+| Conserver les données des catégories d'objets échangés ? | Oui ou Non |
 
-For more Information -> [READMORE](../../../../../i-doit-pro-add-ons/replacement.md)
+Pour plus d'informations -> [EN SAVOIR PLUS](../../../../../i-doit-pro-add-ons/replacement.md) { /*examples*/ }

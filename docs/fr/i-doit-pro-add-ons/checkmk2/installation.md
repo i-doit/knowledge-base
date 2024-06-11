@@ -1,16 +1,16 @@
-# checkmk 2: Installation
+# checkmk 2: Installation {/examples}
 
-After you’ve met the [requirements](./requirements.md) download the latest stable version of the i-doit pro add-on from the [i-doit customer portal](https://portal.i-doit.com/).
+Après avoir satisfait aux [exigences](./requirements.md), téléchargez la dernière version stable de l'extension i-doit pro depuis le [portail client i-doit](https://portal.i-doit.com/).
 
-Install the downloaded ZIP file [like any other i-doit add-on](../index.md).
+Installez le fichier ZIP téléchargé [comme toute autre extension i-doit](../index.md).
 
-## Adding the checkmk 2 add-on categories
+## Ajout des catégories de l'extension checkmk 2
 
-The add-on additionally makes the "Checkmk Host" and "Checkmk Tags" category available for all object types. The category can be linked to the desired object types via the object type configuration and [Edit data structure](../../system-administration/administration/data-structure/edit-data-structure.md). In this way, only those object types appear that are specified by the user in order to keep the selection list clear.
+L'extension rend également disponibles les catégories "Hôte Checkmk" et "Balises Checkmk" pour tous les types d'objets. La catégorie peut être liée aux types d'objets souhaités via la configuration du type d'objet et [Modifier la structure des données](../../system-administration/administration/data-structure/edit-data-structure.md). De cette manière, seuls les types d'objets spécifiés par l'utilisateur apparaissent afin de maintenir la liste de sélection claire.
 
-## Run idoitcmk where you want
+## Exécutez idoitcmk où vous le souhaitez
 
-The ZIP file includes the binary idoitcmk which you can install on any other computer beneath the i-doit host. Make it executable and move it to a directory within your PATH so you can run it inside your terminal. For example, execute on a GNU/Linux or MacOS host:
+Le fichier ZIP contient le binaire idoitcmk que vous pouvez installer sur n'importe quel autre ordinateur sous l'hôte i-doit. Rendez-le exécutable et déplacez-le dans un répertoire de votre PATH afin de pouvoir l'exécuter dans votre terminal. Par exemple, exécutez sur un hôte GNU/Linux ou MacOS:
 
 ```shell
 unzip idoit-cmk2-*.zip
@@ -18,15 +18,16 @@ chmod 755 idoitcmk
 sudo mv idoitcmk /usr/local/bin/
 ```
 
-To be up-to-date you need to repeat those steps.
+Pour être à jour, vous devez répéter ces étapes.
 
-## Run idoitcmk on the same host as i-doit
+## Exécuter idoitcmk sur le même hôte que i-doit
 
-On a GNU/Linux host the following steps are not quite different than the ones above. Make the binary executable and create a symbolic link to a directory within your PATH. In this example i-doit is installed at /var/www/html:
+Sur un hôte GNU/Linux, les étapes suivantes ne sont pas très différentes de celles ci-dessus. Rendez le binaire exécutable et créez un lien symbolique vers un répertoire dans votre PATH. Dans cet exemple, i-doit est installé à /var/www/html :
 
 ```shell
 chmod 755 /var/www/html/idoitcmk
 sudo ln -s /var/www/html/idoitcmk /usr/local/bin/
 ```
 
-To be up-to-date you need to download and install the ZIP file.
+Pour être à jour, vous devez télécharger et installer le fichier ZIP.
+```

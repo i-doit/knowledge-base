@@ -1,38 +1,38 @@
-# checkmk 2: Read information from i-doit and checkmk
+# checkmk 2: Lire les informations depuis i-doit et checkmk
 
-The following commands will give you a fast overview about your i-doit and checkmk configuration. They are very useful for debugging and testing purposes without altering your data.
+Les commandes suivantes vous donneront un aperçu rapide de votre configuration i-doit et checkmk. Elles sont très utiles à des fins de débogage et de test sans altérer vos données.
 
-i-doit objects
---------------
+Objets i-doit
+-------------
 
-List i-doit objects with command fetch-objects:
+Listez les objets i-doit avec la commande fetch-objects :
 
     idoitcmk fetch-objects
 
-Fetch all available information about i-doit objects:
+Récupérez toutes les informations disponibles sur les objets i-doit :
 
     idoitcmk fetch-objects -v
 
-Type --help for command-line options to filter these objects.
+Tapez --help pour voir les options en ligne de commande pour filtrer ces objets.
 
-checkmk hosts
+Hôtes checkmk
 -------------
 
-List checkmk hosts with command fetch-hosts:
+Listez les hôtes checkmk avec la commande fetch-hosts :
 
     idoitcmk fetch-hosts
 
-Fetch all available information about checkmk hosts:
+Récupérez toutes les informations disponibles sur les hôtes checkmk :
 
     idoitcmk fetch-hosts -v
 
-Type --help for command-line options to filter these hosts.
+Tapez --help pour voir les options en ligne de commande pour filtrer ces hôtes.
 
-Fetch all hosts, but without “effective” attributes which are inherited from rulesets, folders, etc.:
+Récupérez tous les hôtes, mais sans les attributs "effectifs" qui sont hérités des ensembles de règles, des dossiers, etc. :
 
     idoitcmk fetch-hosts -v -s check_mk.webAPI.effectiveAttributes=false
 
-Compare objects and hosts
+Comparer les objets et les hôtes
 -------------------------
 
-The command [match](./match-objects-from-i-doit-with-hosts-from-checkmk.md) matches objects from i-doit with hosts from checkmk and prints detailed reports.
+La commande [match](./match-objects-from-i-doit-with-hosts-from-checkmk.md) associe les objets de i-doit aux hôtes de checkmk et affiche des rapports détaillés.

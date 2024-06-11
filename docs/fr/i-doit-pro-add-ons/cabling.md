@@ -1,43 +1,45 @@
-# Cabling
+# Câblage {/examples}
 
-The Cabling add-on gives you a detailed display of cabling. Whether you want to trace a cable route or print patch jobs.
+L'extension Câblage vous offre un affichage détaillé du câblage. Que vous souhaitiez suivre un itinéraire de câble ou imprimer des travaux de raccordement.
 
-Download and installation
--------------------------
+Téléchargement et installation
+------------------------------
 
-This add-on can be installed later. Detailed descriptions regarding download, installation, updates, etc. are provided in the "[Add-ons](./index.md)" article.
+Cette extension peut être installée ultérieurement. Des descriptions détaillées concernant le téléchargement, l'installation, les mises à jour, etc. sont fournies dans l'article "[Extensions](./index.md)".
 
 Configuration
 -------------
 
-A technical configuration of the add-on is not necessary after [installation](./index.md).  
-If the cabling view should always be opened directly, this can be configured under **Administration → User settings → System settings**.  
-The cabling view can also be opened via the category Cabling in objects.
+Une configuration technique de l'extension n'est pas nécessaire après [l'installation](./index.md).  
+Si la vue du câblage doit toujours s'ouvrir directement, cela peut être configuré sous **Administration → Paramètres utilisateur → Paramètres système**.  
+La vue du câblage peut également être ouverte via la catégorie Câblage dans les objets.
 
-Rights assignment
------------------
+Attribution des droits
+----------------------
 
-Under **Administration → Authorization system → Rights → Cabling view**, [rights for persons and groups of persons](../efficient-documentation/rights-management/index.md) can be adjusted.
+Sous **Administration → Système d'autorisation → Droits → Vue du câblage**, les [droits pour les personnes et les groupes de personnes](../efficient-documentation/rights-management/index.md) peuvent être ajustés.
 
-[![Rights assignment](../assets/images/en/i-doit-pro-add-ons/cabling/1-cab.png)](../assets/images/en/i-doit-pro-add-ons/cabling/1-cab.png)
+[![Attribution des droits](../assets/images/en/i-doit-pro-add-ons/cabling/1-cab.png)](../assets/images/en/i-doit-pro-add-ons/cabling/1-cab.png)
 
 Usage
 -----
 
-After installing and configuring the rights, the add-on is available under **Extras → CMDB → Cabling View**.
+Après avoir installé et configuré les droits, l'extension est disponible sous **Extras → CMDB → Vue du câblage**.
 
-[![Usage](../assets/images/en/i-doit-pro-add-ons/cabling/2-cab.png)](../assets/images/en/i-doit-pro-add-ons/cabling/2-cab.png)
+[![Utilisation](../assets/images/en/i-doit-pro-add-ons/cabling/2-cab.png)](../assets/images/en/i-doit-pro-add-ons/cabling/2-cab.png)
 
-Releases
+Versions
 --------
 
-| Version | Date | Changelog |
+| Version | Date | Journal des modifications |
 | --- | --- | --- |
-| 1.4 | 2024-02-27 | [Task] PHP 8.2 compatibility, cleaned up color usage |
-| 1.3 | 2023-11-07 | [Bug]  Setting to display cable names is not saved.<br>[Bug]  Highlight 'add-on' instead of 'extras' menu<br>[Bug] Overlap objects in the wiring view |
-| 1.2 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
-| 1.1.1 |     | [Bug] Connections are not shown in add-on "cabling" |
-| 1.1 | 2022-02-21 | [Improvement] Improve export options  <br>[Bug] Remove "print" button in the CMDB-Explorer  <br>[Bug] Visualization of cabling pathts, connecting an object with itself (two ports)  <br>[Bug] Sorting of connections in the wiring view is confusing  <br>[Bug] The visualization object browser should only provide objects that contain wiring |
-| 1.0.4 | 2019-05-20 | [Bug] Wrong sorting of cabling<br>[Bug] Incorrect display of vitrification in IE11<br> |
-| 1.0.3 | 2018-12-18 | [Bug] Error prevents creation of PDF documents when using SSL<br>[Bug] Images won't be displayed<br> |
-| 1.0.2 | 2017-12-18 | [Improvement] Cabling Printview<br>[Improvement] Add the cabling browser as function<br>[Improvement] Changing the connector types will now be documented<br>[Improvement] Display the object that is about to be exported<br>[Bug] PDF export does not work when an other object than the root object is selected<br> |
+| 1.4 | 2024-02-27 | [Tâche] Compatibilité PHP 8.2, nettoyage de l'utilisation des couleurs |
+| 1.3 | 2023-11-07 | [Bug] Le paramètre pour afficher les noms des câbles n'est pas enregistré.<br>[Bug] Surligner 'add-on' au lieu de 'extras' dans le menu<br>[Bug] Chevauchement des objets dans la vue du câblage |
+| 1.2 | 2022-09-05 | [Tâche] Compatibilité PHP 8.0  <br>[Tâche] Compatibilité de conception |
+| 1.1.1 |     | [Bug] Les connexions ne sont pas affichées dans l'extension "câblage" |
+| 1.1 | 2022-02-21 | [Amélioration] Améliorer les options d'exportation  <br>[Bug] Supprimer le bouton "imprimer" dans l'Explorateur CMDB  <br>[Bug] Visualisation des chemins de câblage, connexion d'un objet avec lui-même (deux ports)  <br>[Bug] Le tri des connexions dans la vue du câblage est déroutant  <br>[Bug] Le navigateur d'objets de visualisation ne doit fournir que des objets contenant du câblage |
+| 1.0.4 | 2019-05-20 | [Bug] Tri incorrect du câblage<br>[Bug] Affichage incorrect de la vitrification dans IE11<br> |
+| 1.0.3 | 2018-12-18 | [Bug] Une erreur empêche la création de documents PDF lors de l'utilisation de SSL<br>[Bug] Les images ne s'affichent pas<br> |
+| 1.0.2 | 2017-12-18 | [Amélioration] Vue d'impression du câblage<br>[Amélioration] Ajouter le navigateur de câblage en tant que fonction<br>[Amélioration] Le changement des types de connecteurs sera désormais documenté<br>[Amélioration] Afficher l'objet à exporter<br>[Bug] L'exportation PDF ne fonctionne pas lorsqu'un autre objet que l'objet racine est sélectionné<br> |
+
+I'm ready to start translating the Markdown content into French. Please paste the content here for me to begin the translation.

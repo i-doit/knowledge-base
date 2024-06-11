@@ -1,18 +1,18 @@
-# Manual installation
+# Installation manuelle {/examples}
 
-Once the necessary preparations are made - for example the configuration of the underlying operation system - you can begin the setup of i-doit.
+Une fois que les préparatifs nécessaires sont faits - par exemple la configuration du système d'exploitation sous-jacent - vous pouvez commencer la configuration de i-doit.
 
-## Quickstart
+## Démarrage rapide {/examples}
 
-Extract the install package of i-doit in a folder the Apache Webserver can access. After that, open this folder in the browser and follow the setup instructions.
+Extrayez le package d'installation de i-doit dans un dossier auquel le serveur Web Apache peut accéder. Ensuite, ouvrez ce dossier dans le navigateur et suivez les instructions de configuration.
 
-## Download and Extract the Install Package
+## Téléchargement et Extraction du Package d'Installation
 
-The install package of the pro version is accessible for all customers in the [customer portal](../../system-administration/customer-portal.md) the installation package of the open version can be found at [i-doit.org](https://i-doit.org/). This package will be copied and extracted to the prepared server and the files and directories get the appropriate authorizations. The instructions vary according to the operating system.
+Le package d'installation de la version pro est accessible pour tous les clients dans le [portail client](../../system-administration/customer-portal.md) le package d'installation de la version open peut être trouvé sur [i-doit.org](https://i-doit.org/). Ce package sera copié et extrait sur le serveur préparé et les fichiers et répertoires obtiendront les autorisations appropriées. Les instructions varient en fonction du système d'exploitation.
 
-### Debian GNU/Linux or Ubuntu Linux
+### Debian GNU/Linux ou Ubuntu Linux
 
-The Apache Webserver runs with rights of the **www-data** user and the group of the same name **www-data**. The main directory of the Apache Webserver is **/var/www/html/**:
+Le serveur Web Apache fonctionne avec les droits de l'utilisateur **www-data** et le groupe du même nom **www-data**. Le répertoire principal du serveur Web Apache est **/var/www/html/**:
 
 ```shell
 sudo mkdir /var/www/html/i-doit
@@ -27,7 +27,7 @@ sudo find . -type f -exec chmod 664 {} \;
 
 ### Red Hat Enterprise Linux (RHEL)
 
-The Apache Webserver runs with rights of the **apache** user and the group of the same name **apache**. The main directory of the Apache Webserver is **/var/www/html/**:
+Le serveur Web Apache fonctionne avec les droits de l'utilisateur **apache** et le groupe du même nom **apache**. Le répertoire principal du serveur Web Apache est **/var/www/html/**:
 
 ```shell
 sudo mkdir /var/www/html/i-doit
@@ -42,7 +42,7 @@ sudo find . -type f -exec chmod 664 {} \;
 
 ### Suse Linux Enterprise Server (SLES)
 
-The Apache Webserver runs with rights of the **wwwrun** user and the group **www**. The main directory of the Apache Webserver is **/srv/www/htdocs/**:
+Le serveur Web Apache fonctionne avec les droits de l'utilisateur **wwwrun** et le groupe **www**. Le répertoire principal du serveur Web Apache est **/srv/www/htdocs/**:
 
 ```shell
 sudo mkdir /srv/www/htdocs/i-doit
@@ -57,82 +57,82 @@ sudo find . -type f -exec chmod 664 {} \;
 
 ### Microsoft Windows Server
 
-The i-doit installation package is extracted in `C:\xampp\htdocs`. Generally it is not necessary to set specific file and folder permissions if the Apache Webserver that has been installed along with XAMPP uses the same user permissions.
+Le package d'installation de i-doit est extrait dans `C:\xampp\htdocs`. En général, il n'est pas nécessaire de définir des autorisations spécifiques pour les fichiers et dossiers si le serveur Web Apache installé avec XAMPP utilise les mêmes autorisations utilisateur.
 
-## Run the Setup
+## Exécuter la Configuration
 
-_i-doit_ can be installed in two ways: Using the **web GUI** in a comfortable way (recommended for beginners) or via the [Automatic installation](../automatic-installation.md) (to automate the installation for example).
+_i-doit_ peut être installé de deux manières : en utilisant l'**interface graphique Web** de manière confortable (recommandé pour les débutants) ou via l'[Installation automatique](../automatic-installation.md) (pour automatiser l'installation par exemple). {/examples}
 
-### Web GUI
+### Interface Web {/examples}
 
-The setup is launched automatically as soon as i-doit is opened (example <http://i-doit-host/i-doit/>).
+La configuration est lancée automatiquement dès l'ouverture de i-doit (exemple <http://i-doit-host/i-doit/>). {/examples}
 
-#### System check
+#### Vérification du système {/examples}
 
-Important system settings are prompted in the first step. The user will be notified if something is not okay.
+Les paramètres système importants sont demandés dès le premier pas. L'utilisateur sera notifié si quelque chose ne va pas. {/examples}
 
-[![System check](../../assets/images/en/installation/manual-installation/setup/1-setup.png)](../../assets/images/en/installation/manual-installation/setup/1-setup.png)
+[![Vérification du système](../../assets/images/en/installation/manual-installation/setup/1-setup.png)](../../assets/images/en/installation/manual-installation/setup/1-setup.png) {/examples}
 
-#### Directory Configuration
+#### Configuration du répertoire {/examples}
 
-Here the paths are requested where the installation files or user specific files are going to be stored. You can accept the suggested options.
+Ici, les chemins où les fichiers d'installation ou les fichiers spécifiques à l'utilisateur vont être stockés sont demandés. Vous pouvez accepter les options suggérées. {/examples}
 
-[![Directory configuration](../../assets/images/en/installation/manual-installation/setup/2-setup.png)](../../assets/images/en/installation/manual-installation/setup/2-setup.png)
+[![Configuration du répertoire](../../assets/images/en/installation/manual-installation/setup/2-setup.png)](../../assets/images/en/installation/manual-installation/setup/2-setup.png) {/examples}
 
-#### Database Configuration
+#### Configuration de la base de données {/examples}
 
-Important credentials and settings need to be entered for the database connection. At least two databases and one special user are created for i-doit.
+Des informations et des paramètres importants doivent être saisis pour la connexion à la base de données. Au moins deux bases de données et un utilisateur spécial sont créés pour i-doit. {/examples}
 
-[![Database configuration](../../assets/images/en/installation/manual-installation/setup/3-setup.png)](../../assets/images/en/installation/manual-installation/setup/3-setup.png)
+[![Configuration de la base de données](../../assets/images/en/installation/manual-installation/setup/3-setup.png)](../../assets/images/en/installation/manual-installation/setup/3-setup.png) {/examples}
 
-##### Connection settings
+##### Paramètres de connexion {/examples}
 
--   **Host:** Generally the host itself, so localhost or 127.0.0.1
--   **Port:** Generally the default port of MySQL/MariaDB, so 3306
--   **Username:** User name of the database system user, usually root
--   **Password:** Password of the user
+-   **Hôte :** Généralement l'hôte lui-même, donc localhost ou 127.0.0.1
+-   **Port :** Généralement le port par défaut de MySQL/MariaDB, donc 3306
+-   **Nom d'utilisateur :** Nom d'utilisateur du système de base de données, généralement root
+-   **Mot de passe :** Mot de passe de l'utilisateur {/examples}
 
-##### MySQL user settings
+##### Paramètres de l'utilisateur MySQL {/examples}
 
--   **Username:** User name of the i-doit databases owner, usually idoit
--   **Password:** Password of the user
+-   **Nom d'utilisateur :** Nom d'utilisateur du propriétaire des bases de données i-doit, généralement idoit
+-   **Mot de passe :** Mot de passe de l'utilisateur {/examples}
 
-##### Database settings
+##### Paramètres de la base de données {/%%/}
 
--   **System Database Name:** Name of the system database, usually idoit_system
--   **Mandator Database Name:** Name of the database for the first tenant, usually idoit_data
--   **Mandator title:** Title of the tenant, usually the name of the organization that is focused on
--   **Start value for object/configuration item IDs:** Normally 1
+-   **Nom de la base de données système :** Nom de la base de données système, généralement idoit_system
+-   **Nom de la base de données du mandataire :** Nom de la base de données pour le premier locataire, généralement idoit_data
+-   **Titre du mandataire :** Titre du locataire, généralement le nom de l'organisation sur laquelle il se concentre
+-   **Valeur de départ pour les IDs d'objet/configuration :** Normalement 1
 
-!!! tip "Unix Socket vs. Network Port"
+!!! tip "Socket Unix vs. Port réseau"
 
-    PHP is able to connect to MariaDB/MySQL in two ways: For one thing, per Unix Socket, and secondly via TCP/IP. For performance reasons we recommend using the Unix Socket. The use of the Unix Socket is enforced by entering the **localhost** value in the above mentioned host configuration. Other specifications (**127.0.0.1**, FQDN or the like) result in the use of TCP/IP.
+    PHP peut se connecter à MariaDB/MySQL de deux manières : d'une part, via un Socket Unix, et d'autre part via TCP/IP. Pour des raisons de performance, nous recommandons d'utiliser le Socket Unix. L'utilisation du Socket Unix est obligatoire en entrant la valeur **localhost** dans la configuration d'hôte mentionnée ci-dessus. D'autres spécifications (**127.0.0.1**, FQDN ou similaire) entraînent l'utilisation de TCP/IP.
 
-    Usually, MariaDB/MySQL opens a Unix Socket when a service is started. In the **socket** settings you specify the path, an example under Debian GNU/Linux is `/var/run/mysqld/mysqld.sock`.  This value has to be known to PHP so that i-doit can establish a connection to MariaDB/MySQL.
+ Habituellement, MariaDB/MySQL ouvre un Socket Unix lorsqu'un service est démarré. Dans les paramètres du **socket**, vous spécifiez le chemin, un exemple sous Debian GNU/Linux est `/var/run/mysqld/mysqld.sock`. Cette valeur doit être connue de PHP afin que i-doit puisse établir une connexion avec MariaDB/MySQL.
 
-    The corresponding PHP setting is `mysqli.default_socket`. When you have followed the installation instructions, you can supplement the created PHP configuration file by this setting, for example, `mysqli.default_socket = /var/run/mysqld/mysqld.sock`.
+Le paramètre PHP correspondant est `mysqli.default_socket`. Lorsque vous avez suivi les instructions d'installation, vous pouvez compléter le fichier de configuration PHP créé par ce paramètre, par exemple, `mysqli.default_socket = /var/run/mysqld/mysqld.sock`.
 
-    Subsequent changes to the PHP settings will only become effective when the Apache Webserver service is restarted. Example for Debian GNU/Linux: `sudo systemctl reload apache2.service`
+Les modifications ultérieures des paramètres PHP ne prendront effet qu'après le redémarrage du service Apache Webserver. Exemple pour Debian GNU/Linux : `sudo systemctl reload apache2.service`
 
-    This tip refers to Unix-like operating systems; it does not apply to Windows.
+Cette astuce concerne les systèmes d'exploitation de type Unix ; elle ne s'applique pas à Windows.
 
-#### Framework Configuration
+#### Configuration du Framework {/%%/}
 
-There are separate credentials in i-doit to access the i-doit [**Admin Center**](../../system-administration/admin-center.md). They can be specified here and we recommend using this option.
+Il existe des identifiants distincts dans i-doit pour accéder au [**Centre d'administration**](../../system-administration/admin-center.md) i-doit. Ils peuvent être spécifiés ici et nous recommandons d'utiliser cette option.
 
-[![Framework configuration](../../assets/images/en/installation/manual-installation/setup/4-setup.png)](../../assets/images/en/installation/manual-installation/setup/4-setup.png)
+[![Configuration du framework](../../assets/images/en/installation/manual-installation/setup/4-setup.png)](../../assets/images/en/installation/manual-installation/setup/4-setup.png)
 
-#### Config Check
+#### Vérification de la configuration {/ * exemples * /}
 
-In this step all prior steps are reviewed and checked to see if the setup can take place.
+À cette étape, toutes les étapes précédentes sont examinées et vérifiées pour voir si la configuration peut avoir lieu.
 
-#### Installation
+#### Installation {/ * exemples * /}
 
-The installtion of i-doit on the system is carried out in this step. After the installation was competed successfully, a summary is displayed. Then i-doit can be launched and used.
+L'installation de i-doit sur le système est effectuée à cette étape. Après que l'installation a été terminée avec succès, un résumé est affiché. Ensuite, i-doit peut être lancé et utilisé.
 
-## Further steps
+## Étapes supplémentaires {/ * exemples * /}
 
--   [Download and Install a License](../../maintenance-and-operation/activate-license.md)
--   [Set up backup](../../maintenance-and-operation/backup-and-recovery/index.md)
--   [Set up Cronjobs](../../maintenance-and-operation/cronjob-setup.md)
--   [Initial Login](../../basics/initial-login.md)
+- [Télécharger et installer une licence](../../maintenance-and-operation/activate-license.md)
+- [Configurer la sauvegarde](../../maintenance-and-operation/backup-and-recovery/index.md)
+- [Configurer les tâches Cron](../../maintenance-and-operation/cronjob-setup.md)
+- [Connexion initiale](../../basics/initial-login.md)

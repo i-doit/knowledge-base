@@ -1,64 +1,63 @@
-# Expert settings (Tenant related)
+# Paramètres experts (liés au locataire)
 
-The expert settings are a kind of "registry" of i-doit. Most settings are set via a option in the settings area. Also some option are only available when added here.
+Les paramètres experts sont une sorte de "registre" d'i-doit. La plupart des paramètres sont définis via une option dans la zone des paramètres. Certains paramètres ne sont disponibles que s'ils sont ajoutés ici.
 
-!!! attention "Caution"
-    Usually it is not necessary to add or edit values in the expert settings. For normal use the Web GUI provides functions to control i-doit in all relevant cases.<br>
-    Should you plan to carry out changes in the expert settings, we **strongly recommend** to make a **[backup](../../../maintenance-and-operation/backup-and-recovery/index.md)** beforehand. Some of the listed settings have a serious effect on the application. In case of doubt do not hesitate to ask for [support](../../customer-portal.md).
+!!! attention "Attention"
+    Il n'est généralement pas nécessaire d'ajouter ou de modifier des valeurs dans les paramètres experts. Pour une utilisation normale, l'interface Web fournit des fonctions pour contrôler i-doit dans tous les cas pertinents.<br>
+    Si vous envisagez d'apporter des modifications aux paramètres experts, nous vous recommandons vivement de faire une **[sauvegarde](../../../maintenance-and-operation/backup-and-recovery/index.md)** au préalable. Certains des paramètres répertoriés ont un effet sérieux sur l'application. En cas de doute, n'hésitez pas à demander [de l'aide](../../customer-portal.md).
 
 ## Configuration
 
 [![Configuration](../../../assets/images/en/system-administration/administration/tenant-mangement/expert-settings/1-es.png)](../../../assets/images/en/system-administration/administration/tenant-mangement/expert-settings/1-es.png)
 
-Each setting consists of three parts:
+Chaque paramètre se compose de trois parties :
 
-| Key | Value | Type |
+| Clé | Valeur | Type |
 | --- | --- | --- |
-| The **Key** assigns a unique name to the setting. If a key shouldn't exist yet, it can be added later. | The **Value** is usually a string or a longer text or an integer value. | With the **Type** you define the scope of the setting. A setting with the type **Tenant-wide** only affects the tenant with which the user is currently logged in. **User** means that the setting affects the User. |
+| La **Clé** attribue un nom unique au paramètre. Si une clé n'existe pas encore, elle peut être ajoutée ultérieurement. | La **Valeur** est généralement une chaîne de caractères ou un texte plus long ou une valeur entière. | Avec le **Type**, vous définissez la portée du paramètre. Un paramètre avec le type **Étendue du locataire** n'affecte que le locataire avec lequel l'utilisateur est actuellement connecté. **Utilisateur** signifie que le paramètre affecte l'utilisateur. |
 
-## List of Settings
+## Liste des paramètres
 
-| Key | Default Value | Recommended Value | Type | Module<br>(Scope/[Add-on](../../../i-doit-pro-add-ons/index.md) in i-doit) | Description |
+| Clé | Valeur par défaut | Valeur recommandée | Type | Module<br>(Portée/[Module complémentaire](../../../i-doit-pro-add-ons/index.md) dans i-doit) | Description |
 | --- | --- | --- | --- | --- | --- |
-| auth.logging | 1   | 1   | Tenant-wide setting | PRO/CMDB | Activates/ deactivates logging of authorization system notifications |
-| auth.use-in-cmdb-explorer | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the CMDB explorer. Objects which don't have any rights assignments aren't displayed/ iterated. |
-| auth.use-in-cmdb-explorer-service-browser | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the CMDB explorer Service Popup. The user only sees services for which he has permissions. |
-| auth.use-in-object-browser | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the object browser. Objects which don't have any rights assignments aren't displayed. Already selected objects are displayed as "hidden". |
-| auth.use-in-file-browser | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the object browser. Objects which don't have any rights assignments aren't displayed. Already selected objects are displayed as "hidden". |
-| auth.use-in-location-tree | 0   | 0   | Tenant-wide setting | PRO/CMDB | Activates considering of permissions in the location tree. Objects which don't have any rights assignments aren't displayed/ opened. |
-| cache.default-expiration-time | 86400 | 86400 | Tenant-wide setting | Caching | Determines the time (in seconds) for how long you want to preserve data in specific system-internal caches (for example, authorization system, analysis results) |
-| ckeditor.font_names | Arial;Courier New;Times New Roman;Helvetica |     | Tenant-wide setting | PRO/CMDB | Usable fonts in the WYSIWYG editor |
-| cmdb.limits.order-threshhold | 10000 | 1000 | Tenant-wide setting | PRO/CMDB | Limitation of lines for the TableComponent, threshold from where only indexed fields can be sorted and filtered |
-| cmdb.limits.obj-browser.objects-in-viewmode | 8   |     | Tenant-wide setting | PRO/CMDB | Maximum number of objects to be presented in view mode in the object browser |
-| cmdb.limits.object-table-columns | 10  | 10  | Tenant-wide setting | PRO/CMDB | Decides how many columns are allowed to be shown in the object lists. |
-| cmdb.limits.port-lists-layer2 | 5   |     | Tenant-wide setting | PRO/CMDB | Limitation of the specified Layer2 nets in the port list |
-| cmdb.limits.port-lists-vlans | 10  |     | Tenant-wide setting | PRO/CMDB | Limitation of the specified VLANs in the port list |
-| cmdb.limits.port-overview-default-vlan-only | 0   |     | Tenant-wide setting | PRO/CMDB | Only the default VLAN is to be displayed in the port overview |
-| cmdb.multiedit.text-size-in-px | 120 |     | Tenant-wide setting | PRO/CMDB | Size of the text in list editing |
-| cmdb.objtype.OBJECT\_TYPE\_ID.auto-inventory-no |     |     | Tenant-wide setting | PRO/CMDB | Pattern for the generation of automatic inventory numbers in the accounting category |
-| cmdb.only-show-ranked-entries-as-such | 0   | 0   | Tenant-wide setting | PRO/CMDB | Option to specify whether relationships to an archived object should be displayed as archived or normal |
-| cmdb.quickpurge |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of the quickpurge function |
-| cmdb.skip-unidirectional-connection-ranking | 0   | 0   | Tenant-wide setting | PRO/CMDB | Option to specify whether links to an archived object should be displayed as archived or normal |
-| cmdb.unique.hostname |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique host names |
-| cmdb.unique.ip-address |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique IPs |
-| cmdb.unique.layer-2-net |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique Layer-2 IDs |
-| cmdb.unique.object-title |     |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of unique object titles |
-| gui.empty\_value | \-  | \-  | Tenant-wide setting | Core | Specifies the presentation of an empty value in the GUI |
-| gui.nat-sort.port-list | 1   | 1   | Tenant-wide setting | PRO/CMDB | Lexicographical sorting of the port list |
-| jdisc.import-unidentified-devices | false |     | Tenant-wide setting | PRO/CMDB | Activation/ deactivation of imports of unidentified JDISC objects |
-| maxlength.dialog\_plus | 110 |     | Tenant-wide setting | PRO/CMDB | Maximum length of characters for entries in dialog lists |
-| maxlength.location.objects | 16  |     | Tenant-wide setting | PRO/CMDB | Maximum number of objects to be displayed |
-| maxlength.location.path | 40  |     | Tenant-wide setting | PRO/CMDB | Maximum length of location paths |
-| maxlength.object.lists | 55  |     | Tenant-wide setting | PRO/CMDB | Maximum number of objects to be displayed in object lists |
-| search.global.autostart-deep-search | 0   |     | Tenant-wide setting | PRO/CMDB | Automatic deep search |
-| security.passwort.minlength | 4   |     | Tenant-wide setting | Core | Minimum length for user passwords |
-| qrcode.config |     |     | Tenant-wide setting | PRO/CMDB | QR code configuration |
+| auth.logging | 1   | 1   | Paramètre de portée locataire | PRO/CMDB | Active/désactive l'enregistrement des notifications du système d'autorisation |
+| auth.use-in-cmdb-explorer | 0   | 0   | Paramètre de portée locataire | PRO/CMDB | Active la prise en compte des autorisations dans l'explorateur CMDB. Les objets qui n'ont aucune affectation de droits ne sont pas affichés/itérés. |
+| auth.use-in-cmdb-explorer-service-browser | 0   | 0   | Paramètre de portée locataire | PRO/CMDB | Active la prise en compte des autorisations dans la fenêtre contextuelle de service de l'explorateur CMDB. L'utilisateur ne voit que les services pour lesquels il a des autorisations. |
+| auth.use-in-object-browser | 0   | 0   | Paramètre de portée locataire | PRO/CMDB | Active la prise en compte des autorisations dans l'explorateur d'objets. Les objets qui n'ont aucune affectation de droits ne sont pas affichés. Les objets déjà sélectionnés sont affichés comme "masqués". |
+| auth.use-in-file-browser | 0   | 0   | Paramètre de portée locataire | PRO/CMDB | Active la prise en compte des autorisations dans l'explorateur d'objets. Les objets qui n'ont aucune affectation de droits ne sont pas affichés. Les objets déjà sélectionnés sont affichés comme "masqués". |
+| auth.use-in-location-tree | 0   | 0   | Paramètre de portée locataire | PRO/CMDB | Active la prise en compte des autorisations dans l'arborescence des emplacements. Les objets qui n'ont aucune affectation de droits ne sont pas affichés/ouverts. |
+| cache.default-expiration-time | 86400 | 86400 | Paramètre de portée locataire | Mise en cache | Détermine le temps (en secondes) pendant lequel vous souhaitez conserver les données dans des caches internes spécifiques au système (par exemple, système d'autorisation, résultats d'analyse) |
+| ckeditor.font_names | Arial;Courier New;Times New Roman;Helvetica |     | Paramètre de portée locataire | PRO/CMDB | Polices utilisables dans l'éditeur WYSIWYG |
+| cmdb.limits.order-threshhold | 10000 | 1000 | Paramètre de portée locataire | PRO/CMDB | Limitation des lignes pour le TableComponent, seuil à partir duquel seuls les champs indexés peuvent être triés et filtrés |
+| cmdb.limits.obj-browser.objects-in-viewmode | 8   |     | Paramètre de portée locataire | PRO/CMDB | Nombre maximal d'objets à présenter en mode affichage dans l'explorateur d'objets |
+| cmdb.limits.object-table-columns | 10  | 10  | Paramètre de portée locataire | PRO/CMDB | Détermine combien de colonnes sont autorisées à être affichées dans les listes d'objets. |
+| cmdb.limits.port-lists-layer2 | 5   |     | Paramètre de portée locataire | PRO/CMDB | Limitation des réseaux Layer2 spécifiés dans la liste de ports |
+| cmdb.limits.port-lists-vlans | 10  |     | Paramètre de portée locataire | PRO/CMDB | Limitation des VLAN spécifiés dans la liste de ports |
+| cmdb.limits.port-overview-default-vlan-only | 0   |     | Paramètre de portée locataire | PRO/CMDB | Seul le VLAN par défaut doit être affiché dans l'aperçu des ports |
+| cmdb.multiedit.text-size-in-px | 120 |     | Paramètre de portée locataire | PRO/CMDB | Taille du texte en édition de liste |
+| cmdb.objtype.OBJECT\_TYPE\_ID.auto-inventory-no |     |     | Paramètre de portée locataire | PRO/CMDB | Modèle pour la génération de numéros d'inventaire automatiques dans la catégorie de comptabilité |
+| cmdb.only-show-ranked-entries-as-such | 0   | 0   | Paramètre de portée locataire | PRO/CMDB | Option pour spécifier si les relations avec un objet archivé doivent être affichées comme archivées ou normales |
+| cmdb.quickpurge |     |     | Paramètre de portée locataire | PRO/CMDB | Activation/désactivation de la fonction de purge rapide |
+| cmdb.skip-unidirectional-connection-ranking | 0   | 0   | Paramètre de portée locataire | PRO/CMDB | Option pour spécifier si les liens vers un objet archivé doivent être affichés comme archivés ou normaux |
+| cmdb.unique.hostname |     |     | Paramètre de portée locataire | PRO/CMDB | Activation/désactivation des noms d'hôte uniques |
+| cmdb.unique.ip-address |     |     | Paramètre de portée locataire | PRO/CMDB | Activation/désactivation des adresses IP uniques |
+| cmdb.unique.layer-2-net |     |     | Paramètre de portée locataire | PRO/CMDB | Activation/désactivation des identifiants Layer-2 uniques |
+| cmdb.unique.object-title |     |     | Paramètre de portée locataire | PRO/CMDB | Activation/désactivation des titres d'objets uniques |
+| gui.empty\_value | \-  | \-  | Paramètre de portée locataire | Core | Spécifie la présentation d'une valeur vide dans l'interface graphique |
+| gui.nat-sort.port-list | 1   | 1   | Paramètre de portée locataire | PRO/CMDB | Tri lexicographique de la liste de ports |
+| jdisc.import-unidentified-devices | false |     | Paramètre de portée locataire | PRO/CMDB | Activation/désactivation des importations d'objets JDISC non identifiés |
+| maxlength.dialog\_plus | 110 |     | Paramètre de portée locataire | PRO/CMDB | Longueur maximale des caractères pour les entrées dans les listes de dialogues |
+| maxlength.location.objects | 16  |     | Paramètre de portée locataire | PRO/CMDB | Nombre maximal d'objets à afficher |
+| maxlength.location.path | 40  |     | Paramètre de portée locataire | PRO/CMDB | Longueur maximale des chemins d'emplacement |
+| maxlength.object.lists | 55  |     | Paramètre de portée locataire | PRO/CMDB | Nombre maximal d'objets à afficher dans les listes d'objets |
+| search.global.autostart-deep-search | 0   |     | Paramètre de portée locataire | PRO/CMDB | Recherche approfondie automatique |
+| security.passwort.minlength | 4   |     | Paramètre de portée locataire | Core | Longueur minimale des mots de passe utilisateur |
+| qrcode.config |     |     | Paramètre de portée locataire | PRO/CMDB | Configuration du code QR |
 
-## Expert setting (User related)
+## Paramètre Expert (Lié à l'utilisateur)
 
-
-| Key | Default Value | Recommended Value | Type | Module<br>(Scope/[Add-on](../../../i-doit-pro-add-ons/index.md) in i-doit) | Description |
+| Clé | Valeur par défaut | Valeur recommandée | Type | Module<br>(Portée/[Module complémentaire](../../../i-doit-pro-add-ons/index.md) dans i-doit) | Description |
 | --- | --- | --- | --- | --- | --- |
-| gui.leftcontent.width | 235 | 350 | User setting | Core | Defines the width of the left tree area in pixels |
-| workflows.max-checklist-entries | 7   |     | User setting | Workflows | Maximum entries in check lists |
-| gui.login.display | user-name |     | User setting | PRO/CMDB | Presentation of the name in the "logged in as" area:<br><br>*   user-name: lfischer<br>*   full-name: Dr. Leonard Fischer<br>*   full-name-plus: Dr. Leonard Fischer (lfischer)<br>*   first-last-name-abbreviation: L. Fischer |
+| gui.leftcontent.width | 235 | 350 | Paramètre utilisateur | Noyau | Définit la largeur de la zone de l'arborescence de gauche en pixels |
+| workflows.max-checklist-entries | 7 | | Paramètre utilisateur | Workflows | Nombre maximal d'entrées dans les listes de contrôle |
+| gui.login.display | nom-utilisateur | | Paramètre utilisateur | PRO/CMDB | Présentation du nom dans la zone "connecté en tant que":<br><br>* nom-utilisateur: lfischer<br>* nom-complet: Dr. Leonard Fischer<br>* nom-complet-plus: Dr. Leonard Fischer (lfischer)<br>* abréviation-premier-nom-nom: L. Fischer |

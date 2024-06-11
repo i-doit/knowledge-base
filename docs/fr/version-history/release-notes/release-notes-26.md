@@ -1,25 +1,25 @@
-# Release Notes 26
+# Notes de version 26 {/ * exemples * /}
 
-We're happy to announce i-doit pro 26. This version will start the introduction to new PHP versions by officially supporting PHP 8.1. Don't worry, if your operating system requires you to use PHP 7.4. This version will still be compatible with i-doit until the end of 2023, so you have a bit more time to prepare your system.
+Nous sommes heureux d'annoncer i-doit pro 26. Cette version marquera le début de l'introduction des nouvelles versions de PHP en prenant en charge officiellement PHP 8.1. Ne vous inquiétez pas si votre système d'exploitation vous oblige à utiliser PHP 7.4. Cette version restera compatible avec i-doit jusqu'à la fin de 2023, vous avez donc un peu plus de temps pour préparer votre système.
 
-We have done some cleanup by removing the old "Controller" functions which have been replaced by the [Console](../../automation-and-integration/cli/console/index.md)-Commands in 2017. Alongside this removal, we have also removed code from unused interfaces and updated our template engine to improve the overall performance and user experience.
+Nous avons effectué un nettoyage en supprimant les anciennes fonctions "Controller" qui ont été remplacées par les [Commandes de console](../../automation-and-integration/cli/console/index.md) en 2017. En plus de cette suppression, nous avons également supprimé du code des interfaces inutilisées et mis à jour notre moteur de modèle pour améliorer les performances globales et l'expérience utilisateur.
 
-We encourage you to [update](../../maintenance-and-operation/update.md) to this release as soon as possible to benefit from all of these improvements.
+Nous vous encourageons à [mettre à jour](../../maintenance-and-operation/update.md) vers cette version dès que possible pour bénéficier de toutes ces améliorations.
 
-## Highlights in this release
+## Points forts de cette version
 
--   {++PHP 8.1++} is officially supported with i-doit 26.
--   Removed deprecated i-doit pro ==controller==.
--   ==Clean up== outdated interfaces.
--   Update of the ==Smarty== template engine.
+-   {++PHP 8.1++} est officiellement pris en charge avec i-doit 26.
+-   Suppression du contrôleur i-doit pro obsolète.
+-   Nettoyage des interfaces obsolètes.
+-   Mise à jour du moteur de modèle ==Smarty==.
 
-## Add-ons
+## Extensions
 
-Alongside i-doit pro 26, we will be releasing new and improved add-on versions with compatibility changes.<br>
-If you have been using one or more of these add-ons, you need to update them ==before== applying the i-doit pro update.
+Aux côtés de i-doit pro 26, nous publierons de nouvelles versions améliorées des extensions avec des modifications de compatibilité.<br>
+Si vous utilisez une ou plusieurs de ces extensions, vous devez les mettre à jour ==avant== d'appliquer la mise à jour de i-doit pro.
 
--   [Analysis 1.3.1](../../i-doit-pro-add-ons/analysis.md#releases)
--   [Maintenance 1.2.2](../../i-doit-pro-add-ons/maintenance.md#releases)
+-   [Analyse 1.3.1](../../i-doit-pro-add-ons/analysis.md)
+-   [Maintenance 1.2.2](../../i-doit-pro-add-ons/maintenance.md)
 -   [Nagios 1.1.1](../../automation-and-integration/network-monitoring/nagios.md)
--   [Workflow 1.1.1](../../i-doit-pro-add-ons/workflow.md#releases)
--   [Packager 1.2.1](../../i-doit-pro-add-ons/add-on-packager.md#releases)
+-   [Workflow 1.1.1](../../i-doit-pro-add-ons/workflow.md)
+-   [Packager 1.2.1](../../i-doit-pro-add-ons/add-on-packager.md)

@@ -1,24 +1,21 @@
-# Release Notes 25
+# Notes de version 25 {/ * exemples * /}
 
-We’re happy to announce i-doit pro 25. With the latest version we release the next big change to improve i-doit’s interface: A complete rework of the i-doit [Administration](../../system-administration/administration/index.md). The structure will help long term users and new users alike to navigate to the desired configuration with ease. We also added a search function for this menu structure. Furthermore, settings that affect the whole installation (and not only the current tenant) have been moved to the [Admin Center](../../system-administration/admin-center.md).
+Nous sommes heureux d'annoncer i-doit pro 25. Avec la dernière version, nous publions le prochain grand changement pour améliorer l'interface d'i-doit : Une refonte complète de l' [Administration](../../system-administration/administration/index.md) d'i-doit. La structure aidera les utilisateurs de longue date et les nouveaux utilisateurs à naviguer facilement vers la configuration souhaitée. Nous avons également ajouté une fonction de recherche pour cette structure de menu. De plus, les paramètres qui affectent l'ensemble de l'installation (et non seulement le locataire actuel) ont été déplacés vers le [Centre d'administration](../../system-administration/admin-center.md).
 
-We encourage you to [update](../../maintenance-and-operation/update.md) to this release as soon as possible to benefit from all these contents.
+Nous vous encourageons à [mettre à jour](../../maintenance-and-operation/update.md) vers cette version dès que possible pour bénéficier de tout ce contenu.
 
-## Highlights in this release
+## Points forts de cette version
 
--   **MySQL 8.0** is officially supported with i-doit 25.
--   Improved **structure** for the i-doit pro **Administration**.
--   Added a **search** bar for the menu of the i-doit pro **Administration**.
--   Migrated general **system settings** to the i-doit pro **Admin Center**.
--   New **Add-on** menu in the top bar for easier access to your i-doit pro **Add-ons**.
--   Definition of **custom attribute keys** for [**custom categories**](../../basics/custom-categories.md).
+-   **MySQL 8.0** est officiellement pris en charge avec i-doit 25.
+-   Structure améliorée pour l' **Administration** d'i-doit pro.
+-   Ajout d'une barre de **recherche** pour le menu de l' **Administration** d'i-doit pro.
+-   Migration des paramètres système généraux vers l' **Admin Center** d'i-doit pro.
+-   Nouveau menu **Add-on** dans la barre supérieure pour un accès plus facile à vos **Add-ons** d'i-doit pro.
+-   Définition des **clés d'attributs personnalisés** pour les [**catégories personnalisées**](../../basics/custom-categories.md).
 
+## Modules complémentaires {/ *examples*}
 
-Please check the changelog for further details.
+Avec i-doit pro 25, nous fournissons également une nouvelle version de l'API des modules complémentaires et des Documents qui contiennent de nombreuses corrections de bugs pour améliorer l'expérience utilisateur. Pour utiliser la dernière version de ces modules complémentaires, assurez-vous de mettre à jour vers i-doit pro 25, ce qui est nécessaire.
 
-## Add-ons
-
-Together with i-doit pro 25, we also provide a new version of the add-ons API and Documents which contain many bugfixes to improve the user experience. To use the latest version of these add-ons, please make sure to update to i-doit pro 25, which is required.
-
--   [API 1.14.1](../../i-doit-pro-add-ons/api/index.md)
--   [Documents 1.5.2](../../i-doit-pro-add-ons/documents/index.md)
+- [API 1.14.1](../../i-doit-pro-add-ons/api/index.md)
+- [Documents 1.5.2](../../i-doit-pro-add-ons/documents/index.md)

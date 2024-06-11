@@ -1,43 +1,43 @@
-# Changelog 1.10
+# Journal des modifications 1.10
 
-[Task]          Remove maintenance Add-on from the core  
-[Task]          Improve dashboard charts with new javascript library  
-[Improvement]   CMDB-Explorer: Object information header scrolls away when scrolling down in object information  
-[Improvement]   CMDB-Explorer: Option for setting the service filter on any step  
-[Improvement]   Report manager: condition with placeholder for object-id  
-[Improvement]   Replaced INSTALL and UPDATE with README.md  
-[Improvement]   Allow cabling loops  
-[Improvement]   Old cabling views are replaced  
-[Improvement]   Cabling Printview  
-[Improvement]   New cabling view  
-[Improvement]   New console interface as replacement for the "controller"  
-[Bug]           Incorrect display in query editor  
-[Bug]           File / Uploaded Images Is Missing In Validation In Kategorie Object Picture  
-[Bug]           Right "Create" does not work with report categories  
-[Bug]           Checkboxes in the auth system GUI remain enabled even though they should not be  
-[Bug]           QR Code Printer 1.2.4 Incorrect URL in the QR Code Value field  
-[Bug]           Events are not triggered when saving with list edit  
-[Bug]           Dialog + fields can not be added to the administration  
-[Bug]           Logbook: Due to changes to ports, the destination is no longer displayed correctly  
-[Bug]           CMDB Explorer - No virtual server connection to their ESX hosts  
-[Bug]           Members are not assigned to a group of people when duplicated  
-[Bug]           Invalid XML files are uploaded but no error shows up  
-[Bug]           Object database schema is already filled with incorrect data  
-[Bug]           List editing Sim card status Twin card is displayed incorrectly  
-[Bug]           List editing in the category "Veträge" erroneous  
-[Bug]           With Category Persons - Authorization Config Created Rights Are Not Correct And Displayed Contradictive In Rightsystem  
-[Bug]           Formatting the description changed for duplicate objects  
-[Bug]           Incorrect sorting in multi value categories  
-[Bug]           List editing in custom categories is not possible  
-[Bug]           Archived/Deleted contacts (objects) do not appear in contact assignment (category) but the relation still existis  
-[Bug]           Global search: Workload of a 100% and increased duration  
-[Bug]           After Deletion of Licence Files The Save Button Is MIssing  
-[Bug]           Multi Tenant Buyers Licence Without Expiration Date Displays Current Date In Administration Instead  
-[Bug]           Mass changes always change the object type group to "infrastructure"  
-[Bug]           The number of notifications sent is not reset  
-[Bug]           File temp/.htaccess will not be created during update  
-[Bug]           Apache configuration in src/.htaccess not suitable for version 2.4  
-[Bug]           Authorization error message refers to object type and not object type configuration  
-[Bug]           Livestatus-Check will only be refreshed after deleting the cache  
-[Bug]           Improved performance when creating PDFs  
-[Bug]           Add-on handling not understandable and to few notices  
+[Tâche]          Supprimer l'Add-on de maintenance du noyau  
+[Tâche]          Améliorer les graphiques du tableau de bord avec une nouvelle bibliothèque JavaScript  
+[Amélioration]   Explorateur CMDB : L'en-tête des informations sur l'objet disparaît en faisant défiler vers le bas dans les informations sur l'objet  
+[Amélioration]   Explorateur CMDB : Option pour définir le filtre de service à n'importe quelle étape  
+[Amélioration]   Gestionnaire de rapports : Condition avec espace réservé pour l'identifiant d'objet  
+[Amélioration]   Remplacement de INSTALL et UPDATE par README.md  
+[Amélioration]   Autoriser les boucles de câblage  
+[Amélioration]   Les anciennes vues de câblage sont remplacées  
+[Amélioration]   Vue d'impression de câblage  
+[Amélioration]   Nouvelle vue de câblage  
+[Amélioration]   Nouvelle interface de console en remplacement du "contrôleur"  
+[Bogue]          Affichage incorrect dans l'éditeur de requêtes  
+[Bogue]          Fichier / Images téléchargées manquantes dans la validation dans la catégorie Image d'objet  
+[Bogue]          Le bouton "Créer" ne fonctionne pas avec les catégories de rapports  
+[Bogue]          Les cases à cocher dans l'interface du système d'authentification restent activées alors qu'elles ne devraient pas l'être  
+[Bogue]          Imprimante de codes QR 1.2.4 URL incorrecte dans le champ de valeur de code QR  
+[Bogue]          Les événements ne sont pas déclenchés lors de l'enregistrement avec l'édition de liste  
+[Bogue]          Dialogue + champs ne peuvent pas être ajoutés à l'administration  
+[Bogue]          Journal : En raison de modifications apportées aux ports, la destination n'est plus affichée correctement  
+[Bogue]          Explorateur CMDB - Aucune connexion de serveur virtuel à leurs hôtes ESX  
+[Bogue]          Les membres ne sont pas assignés à un groupe de personnes lorsqu'ils sont dupliqués  
+[Bogue]          Les fichiers XML invalides sont téléchargés mais aucune erreur n'apparaît  
+[Bogue]          Le schéma de base de données d'objet est déjà rempli de données incorrectes  
+[Bogue]          L'édition de liste de l'état de la carte SIM Twin est affichée de manière incorrecte  
+[Bogue]          L'édition de liste dans la catégorie "Veträge" est erronée  
+[Bogue]          Avec la catégorie Personnes - La configuration d'autorisation créée n'est pas correcte et est affichée de manière contradictoire dans le système de droits  
+[Bogue]          La mise en forme de la description a changé pour les objets en double  
+[Bogue]          Tri incorrect dans les catégories à valeurs multiples  
+[Bogue]          L'édition de liste dans les catégories personnalisées n'est pas possible  
+[Bogue]          Les contacts archivés/supprimés (objets) n'apparaissent pas dans l'attribution de contact (catégorie) mais la relation existe toujours  
+[Bogue]          Recherche globale : Charge de travail de 100 % et durée augmentée  
+[Bogue]          Après la suppression des fichiers de licence, le bouton Enregistrer est manquant  
+[Bogue]          Licence d'acheteur multi-locataire sans date d'expiration affiche la date actuelle dans l'administration à la place  
+[Bogue]          Les modifications en masse changent toujours le groupe de type d'objet en "infrastructure"  
+[Bogue]          Le nombre de notifications envoyées n'est pas réinitialisé  
+[Bogue]          Le fichier temp/.htaccess ne sera pas créé lors de la mise à jour  
+[Bogue]          La configuration Apache dans src/.htaccess n'est pas adaptée à la version 2.4  
+[Bogue]          Le message d'erreur d'autorisation fait référence au type d'objet et non à la configuration du type d'objet  
+[Bogue]          La vérification de Livestatus ne sera actualisée qu'après la suppression du cache  
+[Bogue]          Amélioration des performances lors de la création de PDF  
+[Bogue]          La gestion des Add-ons n'est pas compréhensible et comporte trop peu de notifications  

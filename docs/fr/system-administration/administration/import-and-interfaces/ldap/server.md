@@ -1,5 +1,5 @@
-# Server
+# Serveur
 
-Specify your LDAP servers and test the connection.
+Spécifiez vos serveurs LDAP et testez la connexion.
 
-[![ldap server](../../../../assets/images/en/system-administration/administration/interfaces/ldap/2-ldap.png)](../../../../assets/images/en/system-administration/administration/interfaces/ldap/2-ldap.png)
+[![serveur LDAP](../../../../assets/images/en/system-administration/administration/interfaces/ldap/2-ldap.png)](../../../../assets/images/en/system-administration/administration/interfaces/ldap/2-ldap.png){/*examples*/}

@@ -1,70 +1,71 @@
-# Validation and Mandatory Fields
+# Validation et Champs Obligatoires
 
-If you want to ensure the uniqueness of [attributes](../glossary.md) or if you expect only defined values when maintaining particular fields or if you wish to make certain fields mandatory, then i-doit will provide the corresponding features.
+Si vous souhaitez garantir l'unicité des [attributs](../glossary.md) ou si vous attendez uniquement des valeurs définies lors de la maintenance de champs particuliers ou si vous souhaitez rendre certains champs obligatoires, alors i-doit fournira les fonctionnalités correspondantes.
 
-Overview
+Aperçu
 --------
 
-The validation meets the following requirements:
+La validation répond aux exigences suivantes :
 
-*   Determination of specified values for particular fields
-*   Determination of an uniqueness of the field value per [object](../glossary.md) ([multi-value category](../basics/structure-of-the-it-documentation.md))/ [object type](../glossary.md)/ [client](../glossary.md) (global)
-*   Definition of the field as mandatory when creating a new object or editing the information
+*   Détermination des valeurs spécifiées pour des champs particuliers
+*   Détermination de l'unicité de la valeur du champ par [objet](../glossary.md) (catégorie à valeurs multiples)/ [type d'objet](../glossary.md)/ [client](../glossary.md) (global)
+*   Définition du champ comme obligatoire lors de la création d'un nouvel objet ou de la modification des informations
 
 Configuration
 -------------
 
-You can find the possibility to specify these settings at **Administration** **→ CMDB-settings → Validation**. You will not find any configuration here in the delivery state. The configuration is made per category. Choose a category from which you want to validate one or more attributes.
+Vous pouvez trouver la possibilité de spécifier ces paramètres dans **Administration** **→ Paramètres CMDB → Validation**. Vous ne trouverez aucune configuration ici à l'état de livraison. La configuration est effectuée par catégorie. Choisissez une catégorie pour laquelle vous souhaitez valider un ou plusieurs attributs.
 
 [![Configuration](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/1-vamv.png)](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/1-vamv.png)
 
-Now the attributes of the category are ready for configuration of the validation. Using the **Mandatory field** button will make the users' input in this field mandatory. It is not possible to save the category if this field is empty. The indication for this in the category is a red asterisk (\*) next to the attribute name.
+Maintenant, les attributs de la catégorie sont prêts pour la configuration de la validation. En utilisant le bouton **Champ obligatoire**, l'entrée des utilisateurs dans ce champ devient obligatoire. Il n'est pas possible de sauvegarder la catégorie si ce champ est vide. L'indication pour cela dans la catégorie est un astérisque rouge (\*) à côté du nom de l'attribut.
 
-Additionally, you can state whether or not the attribute has to be unique in your [IT documentation](../basics/structure-of-the-it-documentation.md) and thus may exist only once. This happens via the following buttons:
+De plus, vous pouvez indiquer si l'attribut doit être unique ou non dans votre [documentation informatique](../basics/structure-of-the-it-documentation.md) et donc ne peut exister qu'une seule fois. Cela se fait via les boutons suivants :
 
-*   **Unique (per object):** This option is only available in multi-value categories. When activated, it is not possible for this object to use the same value repeatedly in two entries of this category. It is possible, however, to use the entered value in other objects.
+*   **Unique (par objet) :** Cette option n'est disponible que dans les catégories à valeurs multiples. Lorsqu'elle est activée, il n'est pas possible pour cet objet d'utiliser la même valeur de manière répétée dans deux entrées de cette catégorie. Il est cependant possible d'utiliser la valeur saisie dans d'autres objets.
     
-*   **Unique (per Objecttype):** The same value may not exist in another object of this type when you activate this option per object type.
-    
-*   **Unique (global):** The entered value is unique for the whole tenant and cannot be used in this attribute for any other object.
-    
+*   **Unique (par type d'objet) :** La même valeur ne peut pas exister dans un autre objet de ce type lorsque vous activez cette option par type d'objet.
 
-If a value is already in use for a field but the user tries to save the entry, a notice will inform him that the repeated usage of this value is not possible.
+*   **Unique (global):** La valeur saisie est unique pour l'ensemble du locataire et ne peut pas être utilisée pour cet attribut sur un autre objet.
+
+    Si une valeur est déjà utilisée pour un champ mais que l'utilisateur essaie de sauvegarder l'entrée, un avis l'informera que l'utilisation répétée de cette valeur n'est pas possible.
 
 [![values](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/2-vamv.png)](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/2-vamv.png)
 
-The selection **Attribute needs to be** is only available where an internal category validation does not already take place. A date field, for example, is only able to receive a date and save it. [Dialog plus fields](../basics/attribute-fields.md) only allow you to select defined values. Such fields can therefore not be limited to specific field values.
+La sélection **L'attribut doit être** n'est disponible que lorsque aucune validation de catégorie interne n'a déjà lieu. Un champ de date, par exemple, est uniquement capable de recevoir une date et de la sauvegarder. Les [champs de dialogue plus](../basics/attribute-fields.md) vous permettent uniquement de sélectionner des valeurs définies. Par conséquent, ces champs ne peuvent pas être limités à des valeurs de champ spécifiques.
 
-As long as no validation exists in the category, you can either determine specific content types which the value has to match or you can state custom text values from which the user can choose.
+Tant qu'aucune validation n'existe dans la catégorie, vous pouvez soit déterminer des types de contenu spécifiques auxquels la valeur doit correspondre, soit indiquer des valeurs textuelles personnalisées parmi lesquelles l'utilisateur peut choisir.
 
-!!! info "Special cases"
+!!! info "Cas spéciaux"
 
-    There are some categories which already have an internal validation which can neither be deactivated nor be adjusted. In the “Host address” category, for example, there is a examination whether an entered IP address corresponds to the standards for IPv4 or IPv6.
+    Il existe certaines catégories qui ont déjà une validation interne qui ne peut ni être désactivée ni ajustée. Dans la catégorie "Adresse hôte", par exemple, il y a une vérification pour savoir si une adresse IP saisie correspond aux normes pour IPv4 ou IPv6.
 
-If you specify custom values for the users, you can optionally create a drop-down list from which users can select the values. This way, the values for the field can only be chosen from a list and this list content again can only be changed in the configuration of the validation in the administration section.
+Si vous spécifiez des valeurs personnalisées pour les utilisateurs, vous pouvez éventuellement créer une liste déroulante à partir de laquelle les utilisateurs peuvent sélectionner les valeurs. De cette manière, les valeurs pour le champ ne peuvent être choisies que dans une liste et le contenu de cette liste ne peut être modifié que dans la configuration de la validation dans la section d'administration.
 
-[![administration section](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/3-vamv.png)](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/3-vamv.png)
+[![section d'administration](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/3-vamv.png)](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/3-vamv.png)
 
-Save the settings via the **Save** button, once you configured all fields of the category according to your demands. Repeat this step for all categories in which you want to validate values and/ or declare fields as mandatory.
+Enregistrez les paramètres via le bouton **Enregistrer**, une fois que vous avez configuré tous les champs de la catégorie selon vos exigences. Répétez cette étape pour toutes les catégories dans lesquelles vous souhaitez valider des valeurs et/ou déclarer des champs comme obligatoires.
 
-A section will be created in the configuration for each category for which you create a validation. To improve the transparency, these sections can be expanded or closed again by clicking their headers which contain the title of the category. If you do not need a configuration of a category anymore, you can delete it completely via the X at the end of the line.
+Une section sera créée dans la configuration pour chaque catégorie pour laquelle vous créez une validation. Pour améliorer la transparence, ces sections peuvent être développées ou refermées en cliquant sur leurs en-têtes qui contiennent le titre de la catégorie. Si vous n'avez plus besoin d'une configuration d'une catégorie, vous pouvez la supprimer complètement via le X à la fin de la ligne.
 
-[![category](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/4-vamv.png)](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/4-vamv.png)
+[![catégorie](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/4-vamv.png)](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/4-vamv.png)
 
-!!! info "Caution when removing"
+!!! info "Attention lors de la suppression"
 
-    When removing the configuration of a category, all validation configurations will be lost irreversibly.
+    Lors de la suppression de la configuration d'une catégorie, toutes les configurations de validation seront perdues de manière irréversible.
 
-Renew Validation Cache
-----------------------
+Renouveler le Cache de Validation
+---------------------------------
 
-It is also possible to renew the validation cache in the upper area of the configuration. When creating a new configuration, the cache will be generally cleared automatically. It may happen in rare cases that the system does not perform this task. If you find that your validation configuration does not take effect in a category, or a removed validation seems to be still active, clear the cache so that the system recognizes the changed settings.
+Il est également possible de renouveler le cache de validation dans la zone supérieure de la configuration. Lors de la création d'une nouvelle configuration, le cache sera généralement effacé automatiquement. Il peut arriver dans de rares cas que le système n'effectue pas cette tâche. Si vous constatez que votre configuration de validation n'a pas d'effet dans une catégorie, ou qu'une validation supprimée semble toujours être active, effacez le cache afin que le système reconnaisse les paramètres modifiés. 
 
-[![Renew Validation Cache](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/5-vamv.png)](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/5-vamv.png)
+{ /* examples */ }
 
-Test Regular Expressions
+[![Renouveler le cache de validation](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/5-vamv.png)](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/5-vamv.png)
+
+Tester les expressions régulières
 ------------------------
 
-In this section, regular expressions can be entered and tested to see whether your expected input was accepted in this field or not. This is useful in case you wish some fields to match regular expressions and you are unsure whether the regular expression you used is correct.
+Dans cette section, les expressions régulières peuvent être saisies et testées pour voir si votre saisie attendue a été acceptée dans ce champ ou non. Cela est utile si vous souhaitez que certains champs correspondent à des expressions régulières et que vous n'êtes pas sûr que l'expression régulière que vous avez utilisée soit correcte.
 
-[![Test Regular Expressions](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/6-vamv.png)](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/6-vamv.png)
+[![Tester les expressions régulières](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/6-vamv.png)](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/6-vamv.png)

@@ -1,5 +1,5 @@
-# Fill out form
+# Remplir le formulaire
 
-We open the form via the link and fill it out.
+Nous ouvrons le formulaire via le lien et le remplissons.
 
-[![Fill out form](../../assets/images/en/i-doit-pro-add-ons/forms/fill-out-form/fill-in.gif)](../../assets/images/en/i-doit-pro-add-ons/forms/fill-out-form/fill-in.gif)
+[![Remplir le formulaire](../../assets/images/en/i-doit-pro-add-ons/forms/fill-out-form/fill-in.gif)](../../assets/images/en/i-doit-pro-add-ons/forms/fill-out-form/fill-in.gif){/*examples*/}

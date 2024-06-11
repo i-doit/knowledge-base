@@ -1,64 +1,67 @@
-# Support audits with VIVA
+# Soutenir les audits avec VIVA {/examples}
 
-Audits are the reports needed for a possible certification according to ISO 27001 based on IT-Grundschutz. Audits can be created and managed with the VIVA add-on. In addition to audits, VIVA has other reports that serve continuous quality assurance.
+Les audits sont les rapports nécessaires pour une éventuelle certification selon l'ISO 27001 basée sur l'IT-Grundschutz. Les audits peuvent être créés et gérés avec l'extension VIVA. En plus des audits, VIVA propose d'autres rapports qui servent à l'assurance qualité continue.
 
-Create audits
+Créer des audits
 -------------
 
-  
-Once all information has been gathered and documented within VIVA, audits can be created. These are based on the selected information network and the type of certification sought (initial certification, surveillance audit, etc.). In terms of content and formatting, they are based on the specifications made in the BSI standards. The audits can be found under the item of the same name in the menu tree.
+Une fois que toutes les informations ont été rassemblées et documentées dans VIVA, les audits peuvent être créés. Ils sont basés sur le réseau d'informations sélectionné et le type de certification recherché (certification initiale, audit de surveillance, etc.). En termes de contenu et de format, ils sont basés sur les spécifications établies dans les normes du BSI. Les audits peuvent être trouvés sous l'élément du même nom dans l'arborescence du menu.
 
-The following output formats are available for selection:
+Les formats de sortie suivants sont disponibles pour la sélection :
 
 *   PDF
-*   HTML (including head area and stylesheet)
-*   HTML-Body (without head area and stylesheet)
+*   HTML (y compris la zone d'en-tête et la feuille de style)
+*   HTML-Body (sans la zone d'en-tête et la feuille de style)
 
-The generated HTML documents contain all information necessary for further processing in other applications. They can be easily imported into a word processor and adapted there to your own specifications (for example, to the corporate design).
+Les documents HTML générés contiennent toutes les informations nécessaires pour un traitement ultérieur dans d'autres applications. Ils peuvent être facilement importés dans un traitement de texte et adaptés là-bas à vos propres spécifications (par exemple, au design d'entreprise).
 
-Reference documents
+Documents de référence
 -------------------
 
-The individual reference documents are discussed below.
+Les documents de référence individuels sont discutés ci-dessous.
 
-Reference document A.0 IT security guidelines
+Document de référence A.0 Lignes directrices en matière de sécurité informatique
 ---------------------------------------------
 
-The first reference document contains some overarching information that can be documented directly in the respective audit.
+Le premier document de référence contient des informations générales qui peuvent être documentées directement dans l'audit respectif.
 
-Reference document A.1 IT structure analysis
+Document de référence A.1 Analyse de la structure informatique
 --------------------------------------------
 
-The second reference document is fed on the one hand by the data documented within the selected information network (see Creating Target Groups and Assigning Target Objects\], and on the other hand by additional data that can be stored directly in the respective audit.
+Le deuxième document de référence est alimenté d'une part par les données documentées dans le réseau d'informations sélectionné (voir Création de groupes cibles et Attribution d'objets cibles\], et d'autre part par des données supplémentaires qui peuvent être stockées directement dans l'audit respectif.
 
-Reference document A.1 IT structure analysis The second reference document is fed, on the one hand, by the data documented within the selected information network. The reference document contains, among other things, an adjusted network diagram (see BSI Standard 100-2, chapters 4.2.3 and 4.3.5.). This can either be referenced textually via the corresponding form field or - if the field is left blank - an automatically generated diagram is used to represent the network plan. The generated diagram contains all information needed for a cleaned up network plan and available through the current documentation: This includes the individual target groups, their communication links to each other, and the associated criticalities. This is supplemented by a color scheme, which is composed of the object type configuration:
+Document de référence A.1 Analyse de la structure informatique Le deuxième document de référence est alimenté, d'une part, par les données documentées dans le réseau d'informations sélectionné. Le document de référence contient, entre autres, un diagramme de réseau ajusté (voir Norme BSI 100-2, chapitres 4.2.3 et 4.3.5.). Cela peut être référencé textuellement via le champ de formulaire correspondant ou - si le champ est laissé vide - un diagramme généré automatiquement est utilisé pour représenter le plan du réseau. Le diagramme généré contient toutes les informations nécessaires pour un plan de réseau nettoyé et disponibles à travers la documentation actuelle : Cela inclut les groupes cibles individuels, leurs liens de communication entre eux, et les criticités associées. Cela est complété par un code couleur, qui est composé de la configuration du type d'objet :
 
-Reference document A.2 Identification of protection requirements
+Document de référence A.2 Identification des exigences de protection
 ----------------------------------------------------------------
 
-This reference document contains only data that has already been documented within the selected information network. See Defining protection requirement categories and Defining protection requirements.
+Ce document de référence ne contient que des données qui ont déjà été documentées au sein du réseau d'information sélectionné. Voir Définition des catégories d'exigences de protection et Définition des exigences de protection.
+{/*examples*/}
 
-Reference document A.3 Modeling of the IT network
+Document de référence A.3 Modélisation du réseau informatique
 -------------------------------------------------
 
-This reference document contains only data that has already been documented within the selected information federation. See Modeling information networks.
+Ce document de référence ne contient que des données qui ont déjà été documentées au sein de la fédération d'informations sélectionnée. Voir Modélisation des réseaux d'information.
+{/*examples*/}
 
-Reference document A.4 Result of the basic security check
+Document de référence A.4 Résultat du contrôle de sécurité de base
 ---------------------------------------------------------
 
-This reference document only contains data that has already been documented within the selected information network. See Implementing measures.
+Ce document de référence ne contient que des données qui ont déjà été documentées au sein du réseau d'information sélectionné. Voir Mise en œuvre de mesures.
+{/*examples*/}
 
-Reference document A.5 Supplementary safety analysis
+Document de référence A.5 Analyse de sécurité supplémentaire
 ----------------------------------------------------
 
-This reference document contains only data that has already been documented within the selected information network. See Performing a Supplementary Security Analysis.
+Ce document de référence ne contient que des données qui ont déjà été documentées au sein du réseau d'information sélectionné. Voir Réalisation d'une Analyse de Sécurité Supplémentaire.
+{/*examples*/}
 
-Reference Document A.6 Risk Analysis
+Document de référence A.6 Analyse des risques
 ------------------------------------
 
-This reference document compiles information to cover a risk analysis according to BSI Standard 100-3. See risk analysis according to IT-Grundschutz.
+Ce document de référence compile des informations pour couvrir une analyse des risques selon la norme BSI 100-3. Voir l'analyse des risques selon l'IT-Grundschutz. {/ * exemples *}
 
-Reference document A.7 Risk treatment plan
+Document de référence A.7 Plan de traitement des risques
 ------------------------------------------
 
-This reference document is not currently generated.
+Ce document de référence n'est actuellement pas généré. {/ * exemples *}

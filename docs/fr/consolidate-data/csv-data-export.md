@@ -1,43 +1,42 @@
-# CSV Data Export
+# Exportation de données CSV
 
-Many data can be exported directly from the [IT documentation](../glossary.md) in CSV format in order to be processed, for example, with a spreadsheet.
+De nombreuses données peuvent être exportées directement depuis la [documentation informatique](../glossary.md) au format CSV afin d'être traitées, par exemple, avec un tableur.
 
-Object List
+Liste d'objets
 -----------
 
-Objects and their attributes can be exported via the [object list](../basics/object-list/index.md) by clicking the **Export as CSV**  button in the action bar. The columns correspond to the attributes [configured in the list view](../basics/object-list/configuration-of-the-list-view.md). Active [filtering of the object list](../basics/object-list/navigation-and-filtering.md) is **not** observed during export.
+Les objets et leurs attributs peuvent être exportés via la [liste d'objets](../basics/object-list/index.md) en cliquant sur le bouton **Exporter en CSV** dans la barre d'actions. Les colonnes correspondent aux attributs [configurés dans la vue de liste](../basics/object-list/configuration-of-the-list-view.md). La [filtration active de la liste d'objets](../basics/object-list/navigation-and-filtering.md) n'est **pas** observée lors de l'exportation.
 
-[![object-list](../assets/images/en/consolidate-data/csv-data-export/1-csv-de.png)](../assets/images/en/consolidate-data/csv-data-export/1-csv-de.png)
+[![liste-d-objets](../assets/images/en/consolidate-data/csv-data-export/1-csv-de.png)](../assets/images/en/consolidate-data/csv-data-export/1-csv-de.png)
 
-List Categories
+Catégories de liste
 ---------------
 
-The CSV export currently supports many [list categories](../glossary.md) (multi value). The entries and [attributes](../glossary.md) that are shown in their list are offered as download when pressing the **Export as CSV** button. The attribute names are used as column titles.
+L'exportation CSV prend actuellement en charge de nombreuses [catégories de liste](../glossary.md) (multivaluées). Les entrées et les [attributs](../glossary.md) qui sont affichés dans leur liste sont proposés en téléchargement en appuyant sur le bouton **Exporter en CSV**. Les noms des attributs sont utilisés comme titres de colonne.
 
 [![list-categories](../assets/images/en/consolidate-data/csv-data-export/2-csv-de.png)](../assets/images/en/consolidate-data/csv-data-export/2-csv-de.png)
 
-Reports
--------
+Rapports
+--------
 
-Also the [report manager](../evaluation/report-manager.md) provides the function for export into CSV format. Use the **CSV** button in a report to activate the function.
+Également le [gestionnaire de rapports](../evaluation/report-manager.md) offre la fonction d'exportation au format CSV. Utilisez le bouton **CSV** dans un rapport pour activer la fonction.
 
-[![reports](../assets/images/en/consolidate-data/csv-data-export/3-csv-de.png)](../assets/images/en/consolidate-data/csv-data-export/3-csv-de.png)
+[![rapports](../assets/images/en/consolidate-data/csv-data-export/3-csv-de.png)](../assets/images/en/consolidate-data/csv-data-export/3-csv-de.png)
 
-CSV-Format
+Format CSV
 ----------
 
-CSV files are simple text files in which comma-separated columns are stored in each row. In this case a semicolon is used as the column separator. The data are encoded in Unicode (UTF-8).
+Les fichiers CSV sont des fichiers texte simples dans lesquels des colonnes séparées par des virgules sont stockées dans chaque ligne. Dans ce cas, un point-virgule est utilisé comme séparateur de colonnes. Les données sont encodées en Unicode (UTF-8).
 
 Microsoft Excel
 
-In some cases it may happen that Microsoft Excel doesn't display the data in the exported CSV file correctly. Especially encoding errors can be noticed. In order to prevent this, the CSV file shouldn't be opened directly but imported first:
+Dans certains cas, il peut arriver que Microsoft Excel n'affiche pas correctement les données du fichier CSV exporté. En particulier, des erreurs d'encodage peuvent être remarquées. Pour éviter cela, le fichier CSV ne doit pas être ouvert directement mais importé d'abord :
 
-1.  Export and save CSV file
-2.  Open Excel
-3.  Click on **From text** in the **Data** tab
-4.  Open CSV file
-5.  Set the source of the file to **65001 : Unicode (UTF-8)** in the dialog of the **Text conversion wizard  
-    **
-6.  Click **Next**
-7.  Select the **Semikolon** checkbox to choose a separator
-8.  Click **Complete**
+1.  Exporter et enregistrer le fichier CSV
+2.  Ouvrir Excel
+3.  Cliquez sur **À partir du texte** dans l'onglet **Données**
+4.  Ouvrir le fichier CSV
+5.  Définir la source du fichier sur **65001 : Unicode (UTF-8)** dans la boîte de dialogue de l'**Assistant d'importation de texte**
+6.  Cliquez sur **Suivant**
+7.  Sélectionnez la case à cocher **Point-virgule** pour choisir un séparateur
+8.  Cliquez sur **Terminer**

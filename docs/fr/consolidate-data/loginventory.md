@@ -1,38 +1,38 @@
-# LOGINventory
+# LOGINventory {/%%/}
 
 !!! danger ""
     
-    With i-doit version 1.11 LOGINventory was removed
+    Avec la version 1.11 de i-doit, LOGINventory a été supprimé
 
   
 
-Using this import, information from LOGINventory can be imported to _i-doit_ and used there.
+En utilisant cette importation, les informations de LOGINventory peuvent être importées dans _i-doit_ et utilisées là-bas.
 
-Requirements
+Exigences
 ------------
 
-*   The import only supports LOGINventory up to and including version 5. At the moment version 6 and following versions are not supported.
-*   PDO needs to be installed.
-*   PDO driver dblib has to be installed.
-*   The global setting tds version needs to be set to 7.0 in the freetds.conf file.
+*   L'importation prend en charge uniquement LOGINventory jusqu'à la version 5 incluse. Pour le moment, la version 6 et les versions ultérieures ne sont pas prises en charge.
+*   PDO doit être installé.
+*   Le pilote PDO dblib doit être installé.
+*   Le paramètre global tds version doit être défini sur 7.0 dans le fichier freetds.conf.
 
-Settings in i-doit
+Paramètres dans i-doit
 ------------------
 
-The settings for LOGINventory can be found at **Administration → Interfaces → external data → Loginventory**.
+Les paramètres pour LOGINventory se trouvent à **Administration → Interfaces → données externes → Loginventory**.
 
-Configuration of the Database
+Configuration de la base de données
 -----------------------------
 
-**IP:** server on which the database is located.
+**IP :** serveur sur lequel se trouve la base de données.
 
-**Port:** the IP port for communication (default 3108).
+**Port :** le port IP pour la communication (par défaut 3108).
 
-**Database / Schema:** database description (default **loginventory**).
+**Base de données / Schéma :** description de la base de données (par défaut **loginventory**).
 
-**Username:** user name for logging in to the database.
+**Nom d'utilisateur :** nom d'utilisateur pour se connecter à la base de données.
 
-**Password:** self explanatory.
+**Mot de passe :** auto-explicatif.
 
   
 
@@ -40,17 +40,20 @@ Configuration of the Database
 
   
 
-Configuration of the Interface
+Configuration de l'Interface
 ------------------------------
 
-Here you can set the default behavior of the import for the LOGINventory.
+Ici, vous pouvez définir le comportement par défaut de l'importation pour le LOGINventory.
 
-**Default import object type:** All imported objects in the LOGINventory are created with the selected object type.
+**Type d'objet d'importation par défaut :** Tous les objets importés dans le LOGINventory sont créés avec le type d'objet sélectionné.
 
-**Default database:** One database can be chosen as default which will be loaded as soon as someone is on the import page.
+**Base de données par défaut :** Une base de données peut être choisie comme base par défaut qui sera chargée dès que quelqu'un se trouve sur la page d'importation.
 
-**Connect only known applications:** With this option you can determine if only connections are created for software which already exists in the _i-doit_ system or if software connections also create additional applications in _i-doit_.
+**Connecter uniquement les applications connues :** Avec cette option, vous pouvez déterminer si seules les connexions sont créées pour les logiciels qui existent déjà dans le système _i-doit_ ou si les connexions de logiciels créent également des applications supplémentaires dans _i-doit_.
 
-**Logbook active while importing:** With this option you can determine whether or not logbook entries are created during the import. The import will be slower when activating this option due to the creation of logbook entries. This option should still be activated though.
+**Journal d'activité actif pendant l'importation :** Avec cette option, vous pouvez déterminer si des entrées de journal d'activité sont créées pendant l'importation ou non. L'importation sera plus lente lors de l'activation de cette option en raison de la création d'entrées de journal. Cette option devrait tout de même être activée.
 
-**Import:** The databases which were added in the configuration can be selected on the import page. It is also possible to change the default object type for the current import if needed.
+**Importation :** Les bases de données qui ont été ajoutées dans la configuration peuvent être sélectionnées sur la page d'importation. Il est également possible de modifier le type d'objet par défaut pour l'importation en cours si nécessaire.
+
+{/*examples*/}
+

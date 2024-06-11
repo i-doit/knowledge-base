@@ -1,13 +1,13 @@
-# User permissions
+# Permissions utilisateur {/ * exemples *}
 
-## Rights
+## Droits
 
-With the user permission you can configure the permissions for the individual i-doit users. [READMORE](../../efficient-documentation/rights-management/index.md)
+Avec la permission utilisateur, vous pouvez configurer les autorisations pour les utilisateurs individuels d'i-doit. [EN SAVOIR PLUS](../../efficient-documentation/rights-management/index.md)
 
-[![Rights](../../assets/images/en/system-administration/administration/user-permissions/1-up.png)](../../assets/images/en/system-administration/administration/user-permissions/1-up.png)
+[![Droits](../../assets/images/en/system-administration/administration/user-permissions/1-up.png)](../../assets/images/en/system-administration/administration/user-permissions/1-up.png)
 
-## Debug permission system
+## Système de débogage des autorisations
 
-You can apply this function to reset the permissions for the Admin User to the default settings of the delivery condition. It was created to regain access to the system in case of a faulty configuration.
+Vous pouvez appliquer cette fonction pour réinitialiser les autorisations de l'utilisateur Admin aux paramètres par défaut de l'état de livraison. Il a été créé pour retrouver l'accès au système en cas de configuration défectueuse.
 
-[![Authorization System Reset](../../assets/images/en/system-administration/administration/user-permissions/2-up.png)](../../assets/images/en/system-administration/administration/user-permissions/2-up.png)
+[![Réinitialisation du système d'autorisation](../../assets/images/en/system-administration/administration/user-permissions/2-up.png)](../../assets/images/en/system-administration/administration/user-permissions/2-up.png)

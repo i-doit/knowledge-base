@@ -1,68 +1,76 @@
-#  checkmk 2: Requirements
+#  checkmk 2: Exigences {/ * exemples *}
 
-idoitcmk is a command-line tool which uses the APIs of both i-doit and Check\_MK. Please, meet the following requirements:
+idoitcmk est un outil en ligne de commande qui utilise les API à la fois d'i-doit et de Check\_MK. Veuillez respecter les exigences suivantes :
 
-For i-doit you need:
+Pour i-doit, vous avez besoin de :
 
-*   One working copy of i-doit pro, version 1.12.2 or higher
-*   Enabled API add-on, version 1.10.2 or higher
+*   Une copie de travail d'i-doit pro, version 1.12.2 ou supérieure
+*   Module complémentaire API activé, version 1.10.2 ou supérieure
 
-For Check\_MK you need:
+Pour Check\_MK, vous avez besoin de :
 
-*   One or more sites of Check\_MK, version 1.5 or higher
-*   Enabled Web API
-*   Enabled Livestatus
+*   Un ou plusieurs sites de Check\_MK, version 1.5 ou supérieure
+*   API Web activée
+*   Livestatus activé
 
-idoitcmk may run on any POSIX operating system. These operating systems are currently supported:
+idoitcmk peut s'exécuter sur n'importe quel système d'exploitation POSIX. Les systèmes d'exploitation suivants sont actuellement pris en charge :
 
-*   Debian GNU/Linux 10 “buster” and 11 “bullseye”
-*   Ubuntu Linux 18.04 LTS “bionic” and 20.04 LTS “focal fossa”
-*   Red Hat Enterprise Linux (RHEL) 7 and 8
-*   Suse Linux Enterprise Server (SLES) 15, 15 SP1 and SP2
+*   Debian GNU/Linux 10 “buster” et 11 “bullseye”
+*   Ubuntu Linux 18.04 LTS “bionic” et 20.04 LTS “focal fossa”
+*   Red Hat Enterprise Linux (RHEL) 7 et 8
+*   Suse Linux Enterprise Server (SLES) 15, 15 SP1 et SP2
 
-Other OSs should work, for example macOS, CentOS and many more. MS Windows may work but is completely untested.
+D'autres systèmes d'exploitation devraient fonctionner, par exemple macOS, CentOS et bien d'autres. MS Windows peut fonctionner mais n'a pas été testé du tout.
 
-Before installing idoitcmk make sure you have installed:
+Avant d'installer idoitcmk, assurez-vous d'avoir installé :
 
-*   PHP, version 5.6 or higher (7.2 is recommended) and
-*   PHP modules bz2, calendar, curl, date, filter json and Phar
+*   PHP, version 5.6 ou supérieure (7.2 est recommandé) et
+*   Modules PHP bz2, calendar, curl, date, filter json et Phar
 
-To make it clear, you are not forced to run this application on the same systems for i-doit or Check\_MK.
+Pour être clair, vous n'êtes pas obligé d'exécuter cette application sur les mêmes systèmes pour i-doit ou Check\_MK.
 
-OS-specific requirements
-------------------------
+Exigences spécifiques au système d'exploitation
+-------------------------------------------------
 
-Based on the requirements specified above use these instructions for your operating system. For all commands you need superuser rights (root). You may gain them with sudo.
+Basé sur les exigences spécifiées ci-dessus, utilisez ces instructions pour votre système d'exploitation. Pour toutes les commandes, vous avez besoin de droits superutilisateur (root). Vous pouvez les obtenir avec sudo.
 
-Debian GNU/Linux 10 “buster” und 11 “bullseye”
+Debian GNU/Linux 10 "buster" et 11 "bullseye"
 ----------------------------------------------
 
-    sudo apt update
-    sudo apt install php7.4-cli php7.4-common php7.4-curl php7.4-json
+```bash
+sudo apt update
+sudo apt install php7.4-cli php7.4-common php7.4-curl php7.4-json
+```
 
-Ubuntu Linux 18.04 LTS “Bionic Beaver” and 20.04 LTS “focal fossa”
+Ubuntu Linux 18.04 LTS "Bionic Beaver" et 20.04 LTS "focal fossa"
 ------------------------------------------------------------------
 
-    sudo apt update
-    sudo apt install  php7.4-cli php7.4-common php7.4-curl php7.4-jso
+```bash
+sudo apt update
+sudo apt install php7.4-cli php7.4-common php7.4-curl php7.4-json
+```
 
 Red Hat Enterprise Linux (RHEL) 7
 ---------------------------------
 
-For RHEL you need the 3rd-party repository [Webtatic](https://webtatic.com/packages/php72/).
+Pour RHEL, vous avez besoin du dépôt tiers [Webtatic](https://webtatic.com/packages/php72/).
 
-    rpm --import https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
-    rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-    rpm --import https://mirror.webtatic.com/yum/RPM-GPG-KEY-webtatic-el7
-    rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
-    yum update
-    yum install php74w php74w-cli php74w-common
+```bash
+rpm --import https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm --import https://mirror.webtatic.com/yum/RPM-GPG-KEY-webtatic-el7
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+yum update
+yum install php74w php74w-cli php74w-common
+```
 
 Suse Linux Enterprise Server (SLES) 15 SP2
 ------------------------------------------
 
-Make sure you have enabled the “Web and Scripting Module 12”. Then:
+Assurez-vous d'avoir activé le module "Web and Scripting Module 12". Ensuite :
 
     zypper refresh
     zypper update
     zypper install php7 php7-bz2 php7-curl php7-json php7-phar
+
+{/*examples*/}

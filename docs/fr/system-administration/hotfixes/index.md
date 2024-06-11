@@ -1,19 +1,19 @@
-# Hotfixes
+# Correctifs
 
-!!! success "Hotfixes for version **31**"
+!!! success "Correctifs pour la version **31**"
 
-A hotfix fixes a specific error and is usually made available as a ZIP file. The ZIP file is extracted in the **installation directory** of i-doit. The prompt asking whether files should be overwritten when unpacking must be confirmed.
+Un correctif corrige une erreur spécifique et est généralement disponible sous forme de fichier ZIP. Le fichier ZIP est extrait dans le **répertoire d'installation** de i-doit. La demande demandant si les fichiers doivent être écrasés lors du déballage doit être confirmée.
 
-If a hotfix is required to update an older version, this can be found in the [Hotfix archive](hotfix-archive/index.md).
+Si un correctif est nécessaire pour mettre à jour une ancienne version, vous pouvez le trouver dans les [Archives des correctifs](hotfix-archive/index.md).
 
-As these are hotfixes, we recommend that you only install them if they are necessary for the proper operation of your installation or if you are requested to do so by support. Please ensure that a [backup of i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) has been created before using these hotfixes.
+Comme il s'agit de correctifs, nous vous recommandons de les installer uniquement s'ils sont nécessaires au bon fonctionnement de votre installation ou si vous êtes invité à le faire par le support. Veuillez vous assurer qu'une [sauvegarde de i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) a été créée avant d'utiliser ces correctifs.
 
-If you contact support after using the hotfixes, please add the reference to their use.
+Si vous contactez le support après avoir utilisé les correctifs, veuillez ajouter la référence à leur utilisation.
 
-!!! warning "**Declaration of consent**"
-    By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
+!!! warning "**Déclaration de consentement**"
+    En téléchargeant un correctif, vous déclarez avoir lu et compris complètement les notes mentionnées ci-dessus.
 
-## Application with GNU/Linux
+## Application avec GNU/Linux
 
 ```sh
 sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
@@ -22,71 +22,73 @@ sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.z
 sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 ```
 
-## Application with Windows
+## Application avec Windows
 
-[![Extract](../../assets/images/en/system-administration/hotfixes/example-windows-zip.png)](../../assets/images/en/system-administration/hotfixes/example-windows-zip.png)
+[![Extraire](../../assets/images/en/system-administration/hotfixes/example-windows-zip.png)](../../assets/images/en/system-administration/hotfixes/example-windows-zip.png)
 
-Path for the **i-doit Windows installer**:
+Chemin pour l'**installateur Windows de i-doit**:
 
 ```txt
 C:\ProgramData\i-doit\apache-2.4\htdocs
 ```
 
-Path for the **i-doit Discovery installer**:
+Chemin pour l'**installateur de découverte de i-doit**:
 
 ```txt
 C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 ```
 
-## i-doit core
+## Noyau i-doit
 
-### Migration error when updating (ID-10808)
+### Erreur de migration lors de la mise à jour (ID-10808)
 
-Is used for doing the update from 29 or 30 to 31. Unzip File and do the Update again.
-Do not download the update package again, this would override the Hotfix.
+Est utilisé pour effectuer la mise à jour de 29 ou 30 à 31. Décompressez le fichier et refaites la mise à jour.
+Ne téléchargez pas à nouveau le package de mise à jour, cela écraserait le correctif.
 
-??? info "Error message found in the Webserver logs"
+??? info "Message d'erreur trouvé dans les journaux du serveur Web"
     ```log
-    Fatal error: Uncaught TypeError: getDefaultConfiguration(): Argument #1 ($className) must be of type string, null given, called in
+    Erreur fatale: TypeError non capturée: getDefaultConfiguration(): L'argument #1 ($className) doit être de type chaîne, null donné, appelé dans
     ```
 
 [i-doit_31_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10808.zip){ .md-button .md-button--primary }
 
-### HTTP 500 error when creating a document or a revision (ID-10831)
+### Erreur HTTP 500 lors de la création d'un document ou d'une révision (ID-10831)
 
-??? info "Error message found in the Webserver logs"
+```markdown
+??? info "Message d'erreur trouvé dans les journaux du serveur Web"
     ```log
     Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: isys_cmdb_dao_category_property::getConstantFromRange(): Argument #1 ($constant) must be of type string, null given
     ```
 
 [i-doit_31_hotfix_ID-10831.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10831.zip){ .md-button .md-button--primary }
 
-### Counter skips a number when duplicating objects (ID-10763)
+### Le compteur saute un nombre lors de la duplication d'objets (ID-10763)
 
 [i-doit_31_hotfix_ID-10763.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10763.zip){ .md-button .md-button--primary }
 
-### List editing Ports does not select Default VLAN (ID-10762)
+### L'édition de la liste des ports ne sélectionne pas le VLAN par défaut (ID-10762)
 
 [i-doit_31_hotfix_ID-10762.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10762.zip){ .md-button .md-button--primary }
 
-### Exporting a object list via csv has no results (ID-10798)
+### L'exportation d'une liste d'objets via csv n'a pas de résultats (ID-10798)
 
 [i-doit_31_hotfix_ID-10798.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10798.zip){ .md-button .md-button--primary }
 
 ## API
 
-### API is using report query from db instead of creating the query new which leads to wrong results (API-496)
+### L'API utilise une requête de rapport de la base de données au lieu de créer une nouvelle requête ce qui conduit à des résultats incorrects (API-496)
 
 [api_2.0.1_hotfix_API-496.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0.1_hotfix_API-496.zip){ .md-button .md-button--primary }
 
-## Forms Add-on 1.2.0
+## Add-on Forms 1.2.0
 
-### Object is not created when a attribute validation is used and no error is displayed
+### L'objet n'est pas créé lorsqu'une validation d'attribut est utilisée et aucune erreur n'est affichée
 
 [forms_1.2.0_hotfix_AOF-38_69144fc.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2.0_hotfix_AOF-38_69144fc.zip){ .md-button .md-button--primary }
 
-## Workflow Add-on 1.2
+## Add-on Workflow 1.2
 
-### Workflow Add-on User Permissions are not available
+### Les autorisations utilisateur de l'Add-on Workflow ne sont pas disponibles
 
 [workflow_1.2_workflow-51_b54b344.zip :material-file-download:](../../assets/downloads/hotfixes/workflow/workflow_1.2_workflow-51_b54b344.zip){ .md-button .md-button--primary }
+```

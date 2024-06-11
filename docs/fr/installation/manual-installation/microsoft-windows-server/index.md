@@ -1,43 +1,43 @@
-# Install i-doit for Windows Server
+# Installation de i-doit pour Windows
 
-How to install i-doit on Windows operating system is described in this article.<br>
-The i-doit installation package for Windows is provided in the [Customer Portal](../../../system-administration/customer-portal.md).
+La procédure d'installation de i-doit sur le système d'exploitation Windows est décrite dans cet article.<br>
+Le package d'installation de i-doit pour Windows est fourni dans le [Portail Client](../../../system-administration/customer-portal.md).
 
-The contents of the package are as follows:
+Le contenu du package est le suivant :
 
 -   i-doit Windows Installer.exe
 -   idoit-XX.zip
 -   src.zip
 -   windowsdesktop-runtime-6.0.14-win-x64.exe
 
-The installation package will always include the latest [i-doit version](../../../version-history/index.md). Also the `src.zip` folder allows for an installation without internet connection.<br>
-Since the i-doit Windows installer requires ==windowsdesktop-runtime-6.0.14==, this is also provided in case there is no internet connection available.
+Le package d'installation inclura toujours la dernière [version de i-doit](../../../version-history/index.md). De plus, le dossier `src.zip` permet une installation sans connexion internet.<br>
+Puisque l'installateur Windows de i-doit nécessite ==windowsdesktop-runtime-6.0.14==, cela est également fourni au cas où aucune connexion internet n'est disponible.
 
-## i-doit Windows installation
+## Installation de i-doit pour Windows
 
-After running the `i-doit Windows Installer.exe` you will see the following GUI:
+Après avoir exécuté `i-doit Windows Installer.exe`, vous verrez l'interface graphique suivante :
 
 [![GUI](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/1-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/1-idw.png)
 
-After clicking Install, all the required items will be installed in the background.
+Après avoir cliqué sur Installer, tous les éléments requis seront installés en arrière-plan.
 
-The following will be installed:
+Les éléments suivants seront installés :
 
 -   ==Apache 2.4==
 -   ==PHP 8.X==
 -   ==MariaDB 10.X==
 -   ==i-doit==
 
-!!! info "If the Windows Firewall is activated, you will be asked if want to trust the application"
+!!! info "Si le pare-feu Windows est activé, vous serez invité à faire confiance à l'application"
 
-If the installation was successful, a small window with the message "==i-doit has been installed successfully.==" will display.<br>
-After clicking ==OK== a new browser tab with the `localhost` URL will be opened automatically and you can use i-doit to the full extent.
+Si l'installation a réussi, une petite fenêtre avec le message "==i-doit a été installé avec succès.==" s'affichera.<br>
+Après avoir cliqué sur ==OK==, un nouvel onglet de navigateur avec l'URL `localhost` s'ouvrira automatiquement et vous pourrez utiliser i-doit pleinement.
 
-!!! info "If an error occurred during the installation, a log file is automatically created in the i-doit folder"
+!!! info "Si une erreur s'est produite pendant l'installation, un fichier journal est automatiquement créé dans le dossier i-doit"
 
 ### Configuration
 
-To configure PHP, MariaDB or Apache, you can find the respective config files in the following directories:
+Pour configurer PHP, MariaDB ou Apache, vous pouvez trouver les fichiers de configuration respectifs dans les répertoires suivants :
 
 -   ==PHP:==<br>
     `C:\ProgramData\i-doit\php\php.ini`
@@ -48,42 +48,42 @@ To configure PHP, MariaDB or Apache, you can find the respective config files in
 -   ==Apache:==<br>
     `C:\ProgramData\i-doit\apache-2.4\conf\httpd.conf`
 
-### Credentials
+### Informations d'identification {/ * exemples *}
 
-The following credentials are set by the installer.
+Les informations d'identification suivantes sont définies par l'installateur.
 
-| What | Username | Password |
+| Quoi | Nom d'utilisateur | Mot de passe |
 |-|-|-|
 | MariaDB root | root | idoit |
 | MariaDB i-doit | idoit | idoit |
-| i-doit Admin Center | admin | admin |
+| Centre d'administration i-doit | admin | admin |
 
-For i-doit Login credentials see [here](../../../basics/initial-login.md).
+Pour les informations d'identification de connexion à i-doit, consultez [ici](../../../basics/initial-login.md).
 
-### Setting up HTTPS (optional)
+### Configuration de HTTPS (optionnel) {/ * exemples *}
 
-The following instructions show you how to set up SSL for Windows with i-doit.<br>
-Only the steps required to configure HTTPS are described.<br>
-This section can be skipped.
+Les instructions suivantes vous montrent comment configurer SSL pour Windows avec i-doit.<br>
+Seules les étapes nécessaires pour configurer HTTPS sont décrites.<br>
+Cette section peut être ignorée.
 
-#### Prerequisites
+#### Prérequis {/ * exemples *}
 
-First you need a valid certificate in `.crt` and `.key` format. You can create this with OpenSSL.<br>
-You can download and install OpenSSL here: [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)<br>
-Once OpenSSL is installed, you can open Win64 OpenSSL Command Prompt via the Windows search bar by searching for "OpenSSL".
-Now enter the following command to create the certificate:
+Tout d'abord, vous avez besoin d'un certificat valide au format `.crt` et `.key`. Vous pouvez le créer avec OpenSSL.<br>
+Vous pouvez télécharger et installer OpenSSL ici : [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)<br>
+Une fois OpenSSL installé, vous pouvez ouvrir l'invite de commandes Win64 OpenSSL via la barre de recherche de Windows en recherchant "OpenSSL".
+Maintenant, saisissez la commande suivante pour créer le certificat :
 
 ```winbatch
 OpenSSL req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt
 ```
 
-The certificate and the private key have now been created in the folder in which the command was executed. Copy these, for example, to the folder `ProgramData\i-doit\apache-2.4\conf\extra\`.
+Le certificat et la clé privée ont maintenant été créés dans le dossier où la commande a été exécutée. Copiez-les, par exemple, dans le dossier `ProgramData\i-doit\apache-2.4\conf\extra\`.
 
-### Configuration steps
+### Étapes de configuration {/ * exemples *}
 
-#### 1. **Creating the ssl.conf file**
+#### 1. **Création du fichier ssl.conf**
 
-Navigate to your i-doit folder under `ProgramData\i-doit\apache-2.4\conf\extra\` and create the file `ssl.conf`. The file should have the following content:
+Accédez à votre dossier i-doit sous `ProgramData\i-doit\apache-2.4\conf\extra\` et créez le fichier `ssl.conf`. Le fichier devrait avoir le contenu suivant :
 
 ```conf
 <VirtualHost *:443>
@@ -115,16 +115,16 @@ Navigate to your i-doit folder under `ProgramData\i-doit\apache-2.4\conf\extra\`
 </VirtualHost>
 ```
 
-**Note:** Customize the paths and configuration settings according to your own environment and make sure that your certificate and private key are located in the specified paths.
+**Remarque :** Personnalisez les chemins et les paramètres de configuration selon votre environnement et assurez-vous que votre certificat et votre clé privée sont situés dans les chemins spécifiés.
 
-#### 2. **Adjustments in the httpd.conf**
+#### 2. **Ajustements dans le fichier httpd.conf**{/*examples*/}
 
-Edit the `httpd.conf` file located under `i-doit\apache-2.4\conf\` and add the following:
+Modifiez le fichier `httpd.conf` situé sous `i-doit\apache-2.4\conf\` et ajoutez ce qui suit :
 
--   Add `lists 443` and comment out `lists 80`. As a result, i-doit will no longer be accessible via http.
--   Also add the following lines: `LoadModule ssl_module modules/mod_ssl.so` and `Include conf/extra/ssl.conf`
+-   Ajoutez `lists 443` et commentez `lists 80`. En conséquence, i-doit ne sera plus accessible via http.
+-   Ajoutez également les lignes suivantes : `LoadModule ssl_module modules/mod_ssl.so` et `Include conf/extra/ssl.conf`
 
-The file should then look like this if nothing has been changed beforehand:
+Le fichier devrait alors ressembler à ceci si rien n'a été modifié auparavant :
 
 ```conf
 Define SRVROOT "C:/ProgramData/i-doit/apache-2.4"
@@ -238,68 +238,68 @@ LogLevel warn
 </IfModule>
 ```
 
-#### 3. **Restart Apache-Webserver**
+#### 3. **Redémarrer le serveur Web Apache**{/*examples*/}
 
--   Press ++windows+r++ , type `cmd` and press Enter.<br>
--   Or type `cmd` in the Windows search bar to open the command prompt
+- Appuyez sur ++windows+r++, tapez `cmd` et appuyez sur Entrée.<br>
+- Ou tapez `cmd` dans la barre de recherche de Windows pour ouvrir l'invite de commandes
 
-Enter the following command to restart the Apache web server:
+Entrez la commande suivante pour redémarrer le serveur web Apache :
 
 ```winbatch
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k restart
 ```
 
-The Apache web server has now been restarted. Check the installation and whether i-doit is accessible via HTTPS.
+Le serveur web Apache a maintenant été redémarré. Vérifiez l'installation et si i-doit est accessible via HTTPS.
 
-That's it! Your i-doit installation is now configured for SSL on Windows.
+C'est tout ! Votre installation i-doit est maintenant configurée pour SSL sur Windows.
 
-### Uninstallation
+### Désinstallation{/*examples*/}
 
-To uninstall i-doit, the Apache2 service must be stopped first.<br>
-For this we enter the following command in the command prompt:
+Pour désinstaller i-doit, le service Apache2 doit d'abord être arrêté.<br>
+Pour cela, nous saisissons la commande suivante dans l'invite de commandes :
 
 ```winbatch
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k stop
 ```
 
-Once the Apache2 service is stopped, Apache2 can be uninstalled:
+Une fois le service Apache2 arrêté, Apache2 peut être désinstallé :
 
 ```winbatch
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
-Afterwards MariaDB is uninstalled by removing MariaDB under ==Add or Remove Programs==.
+Ensuite, MariaDB est désinstallé en supprimant MariaDB sous ==Ajouter ou supprimer des programmes==.
 
-[![Uninstall MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
+[![Désinstaller MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
 
-Now the i-doit folder must be deleted and the PHP `PATH` must be removed from the environment variables:
+Maintenant, le dossier i-doit doit être supprimé et le `PATH` PHP doit être supprimé des variables d'environnement :
 
-[![Uninstall PHP](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)
+[![Désinstaller PHP](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)
 
-## Discovery for Windows server
+## Découverte pour le serveur Windows
 
-In this section we describe how to install idoit Discovery.<br >
-The i-doit Discovery Package can be found on our [website](https://www.i-doit.com/en/i-doit-discovery/).
+Dans cette section, nous décrivons comment installer la découverte d'i-doit.<br >
+Le package de découverte i-doit peut être trouvé sur notre [site Web](https://www.i-doit.com/en/i-doit-discovery/).
 
-The contents of the package are as follows:
+Le contenu du package est le suivant :
 
 -   i-doit Discovery Installer.exe
 -   idoit-XX.zip
 -   src.zip
 -   windowsdesktop-runtime-6.0.14-win-x64.exe
 
-The installation package will always include the latest [i-doit version](../../../version-history/index.md) as well as JDisc 5.0 and multiple JDisc add-ons. Also the `src.zip` folder allows for an installation without internet connection.<br>
-Since the i-doit Windows installer requires ==windowsdesktop-runtime-6.0.14==, this is also provided in case there is no internet connection available.
+Le package d'installation inclura toujours la dernière [version d'i-doit](../../../version-history/index.md) ainsi que JDisc 5.0 et plusieurs add-ons JDisc. De plus, le dossier `src.zip` permet une installation sans connexion Internet.<br>
+Comme l'installateur Windows i-doit nécessite ==windowsdesktop-runtime-6.0.14==, il est également fourni au cas où aucune connexion Internet n'est disponible.
 
-### installation
+### Installation {/examples}
 
-After running the `i-doit Discovery Installer.exe` you will see the following GUI:
+Après avoir exécuté le `i-doit Discovery Installer.exe`, vous verrez l'interface graphique suivante :
 
 [![GUI Discovery](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/4-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/4-idw.png)
 
-After clicking Install, all the required items will be installed in the background.
+Après avoir cliqué sur Installer, tous les éléments requis seront installés en arrière-plan.
 
-The following will be installed:
+Les éléments suivants seront installés :
 
 -   ==Apache 2.4==
 -   ==PHP 8.X==
@@ -313,16 +313,17 @@ The following will be installed:
 -   ==JDisc Discovery Security 5.X(Add-on)==
 -   ==JDisc Discovery WEB UI 5.X(Add-on)==
 
-!!! info "If the Windows Firewall is activated, you will be asked if want to trust the application"
+!!! info "Si le pare-feu Windows est activé, vous serez invité à faire confiance à l'application"
 
-If the installation was successful, a small window with the message "==i-doit Discovery has been installed successfully.==" will display.<br>
-After clicking ==OK== a new browser tab with the `localhost` URL will be opened automatically and you can use i-doit to the full extent.
+Si l'installation a réussi, une petite fenêtre avec le message "==i-doit Discovery a été installé avec succès.==" s'affichera.<br>
+Après avoir cliqué sur ==OK==, un nouvel onglet de navigateur avec l'URL `localhost` s'ouvrira automatiquement et vous pourrez utiliser i-doit pleinement.
 
-!!! info "If an error occurred during the installation, a log file is automatically created in the i-doit folder"
+```markdown
+!!! info "Si une erreur s'est produite pendant l'installation, un fichier journal est automatiquement créé dans le dossier i-doit"
 
-### Configuration
+### Configuration {/examples}
 
-To configure PHP, MariaDB or Apache, you can find the respective config files in the following directories:
+Pour configurer PHP, MariaDB ou Apache, vous pouvez trouver les fichiers de configuration respectifs dans les répertoires suivants :
 
 -   ==PHP:==<br>
     `C:\ProgramData\i-doit-discovery\php\php.ini`
@@ -333,43 +334,45 @@ To configure PHP, MariaDB or Apache, you can find the respective config files in
 -   ==Apache:==<br>
     `C:\ProgramData\i-doit-discovery\apache-2.4\conf\httpd.conf`
 
-## Credentials
+## Informations d'identification {/examples}
 
-The following credentials are set by the installer.
+Les informations d'identification suivantes sont définies par l'installateur.
 
-| What | Username | Password |
+| Quoi | Nom d'utilisateur | Mot de passe |
 |-|-|-|
-| MariaDB root | root | idoit |
-| MariaDB i-doit | idoit | idoit |
-| i-doit Admin Center | - | admin |
+| Racine MariaDB | root | idoit |
+| i-doit MariaDB | idoit | idoit |
+| Centre d'administration i-doit | - | admin |
 
-For i-doit Login credentials see [here](../../../basics/initial-login.md).
+Pour les informations d'identification de connexion à i-doit, voir [ici](../../../basics/initial-login.md).
 
-### Uninstallation
+### Désinstallation {/examples}
 
-To uninstall i-doit-discovery, the Apache2 service must be stopped first.<br>
-For this we enter the following command in the command prompt:
+Pour désinstaller i-doit-discovery, le service Apache2 doit d'abord être arrêté.<br>
+Pour cela, nous saisissons la commande suivante dans l'invite de commandes :
 
 ```winbatch
 C:\ProgramData\i-doit-discovery\apache-2.4\bin\httpd.exe -k stop
 ```
 
-Once the Apache2 service is stopped, Apache2 can be uninstalled:
+Une fois le service Apache2 est arrêté, Apache2 peut être désinstallé :
 
 ```winbatch
 C:\ProgramData\i-doit-discovery\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
-Afterwards MariaDB is uninstalled by removing MariaDB under ==Add or Remove Programs==.
+Ensuite, MariaDB est désinstallé en supprimant MariaDB sous ==Ajouter ou supprimer des programmes==.
 
-[![Uninstall MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
+[![Désinstaller MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
 
-Additionally JDisc and it's respective add-ons need to be removed under ==Add or Remove Programs==.
+De plus, JDisc et ses add-ons respectifs doivent être supprimés sous ==Ajouter ou supprimer des programmes==.
 
-!!! warning "The JDisc add-ons need to be removed before removing JDisc itself!"
+!!! warning "Les add-ons JDisc doivent être supprimés avant de supprimer JDisc lui-même !"
 
-[![Uninstall JDisc](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/5-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/5-idw.png)
+[![Désinstaller JDisc](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/5-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/5-idw.png)
+```
 
-Now the i-doit-discovery folder must be deleted and the PHP `PATH` must be removed from the environment variables:
+Maintenant, le dossier i-doit-discovery doit être supprimé et le `PATH` PHP doit être supprimé des variables d'environnement :
 
-[![Uninstall PHP](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)
+[![Désinstaller PHP](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)
+```

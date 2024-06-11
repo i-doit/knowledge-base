@@ -1,18 +1,18 @@
-# checkmk 2: Match objects from i-doit with hosts from checkmk
+# checkmk 2: Associer des objets de i-doit avec des hôtes de checkmk {/examples}
 
-Before running [push](./generate-wato-configuration-base-on-cmdb-data.md) or [pull](./import-inventory-data-into-cmdb.md) you like to take a deeper look how your infrastructure looks like in both tools i-doit and checkmk. The commands [fetch-objects and fetch-hosts](./read-information-from-i-doit-and-checkmk.md) gives you detailed information about your documented objects in i-doit or your monitored hosts in checkmk. But both don’t match them against each other. This is done by the command match:
+Avant d'exécuter [push](./generate-wato-configuration-base-on-cmdb-data.md) ou [pull](./import-inventory-data-into-cmdb.md), vous souhaitez jeter un coup d'œil approfondi sur l'apparence de votre infrastructure dans les deux outils i-doit et checkmk. Les commandes [fetch-objects et fetch-hosts](./read-information-from-i-doit-and-checkmk.md) vous fournissent des informations détaillées sur vos objets documentés dans i-doit ou vos hôtes surveillés dans checkmk. Mais ils ne les mettent pas en correspondance les uns avec les autres. Cela est fait par la commande match :
 
     idoitcmk match
 
-After comparing each object with each host some detailed reports will be printed:
+Après avoir comparé chaque objet avec chaque hôte, des rapports détaillés seront imprimés :
 
-*   Objects in i-doit which can be updated by hosts in checkmk
-*   Hosts in checkmk which are not available as objects in i-doit
-*   Hosts in checkmk which can be updated by objects in i-doit
-*   Objects in i-doit which are not available as hosts in checkmk
+*   Objets dans i-doit qui peuvent être mis à jour par des hôtes dans checkmk
+*   Hôtes dans checkmk qui ne sont pas disponibles en tant qu'objets dans i-doit
+*   Hôtes dans checkmk qui peuvent être mis à jour par des objets dans i-doit
+*   Objets dans i-doit qui ne sont pas disponibles en tant qu'hôtes dans checkmk
 
-None of your data will be altered.
+Aucune de vos données ne sera modifiée.
 
-If you increase verbosity this command will give you hints what to do next:
+Si vous augmentez la verbosité, cette commande vous donnera des indications sur ce qu'il faut faire ensuite:
 
     idoitcmk match -v

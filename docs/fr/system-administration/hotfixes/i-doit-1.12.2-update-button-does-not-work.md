@@ -1,28 +1,30 @@
-# i-doit 1.12.2: Update Button does not work
+# i-doit 1.12.2: Le bouton de mise à jour ne fonctionne pas { /*examples*/ }
 
-Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP file is unpacked in the i-doit installation directory. Confirm the question whether you want to overwrite files during unpacking (**Y** key for "yes" or **A** key for "all"). Here you can find an example:
+Les correctifs résolvent une erreur spécifique et sont généralement fournis sous forme de fichier ZIP. Le fichier ZIP est décompressé dans le répertoire d'installation de i-doit. Confirmez la question de savoir si vous souhaitez écraser les fichiers lors de la décompression (touche **Y** pour "oui" ou **A** pour "tous"). Voici un exemple :
 
-    sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
-    cd /var/www/html/i-doit/
-    sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
-    sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+```bash
+sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
+cd /var/www/html/i-doit/
+sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+```
 
-!!! attention "Please note"
+!!! attention "Veuillez noter"
 
-    Please use hotfixes exclusively with the specified version.
+    Veuillez utiliser les correctifs exclusivement avec la version spécifiée.
 
-    Please ensure that you made a [backup of i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) before you use any hotfix.
+    Assurez-vous d'avoir effectué une [sauvegarde de i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) avant d'utiliser un correctif.
 
-    Please inform us about the use of hotfixes should you contact our support team afterwards.
+    Veuillez nous informer de l'utilisation des correctifs si vous contactez notre équipe de support par la suite.
 
-!!! danger "Updating from i-doit 1.12.2 to 1.12.3 is not possible (Version 1.12.2 only!)"
+!!! danger "La mise à jour de i-doit 1.12.2 à 1.12.3 n'est pas possible (Version 1.12.2 uniquement !)"
 
-This hotfix corrects an error that prevents the update from continuing via the download function when version 1.12.2 is used.
+Ce correctif corrige une erreur qui empêche la mise à jour de se poursuivre via la fonction de téléchargement lorsque la version 1.12.2 est utilisée.
 
-!!! attention "Declaration of consent"
+!!! attention "Déclaration de consentement"
 
-    By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
+    En téléchargeant un correctif, vous déclarez avoir lu et compris complètement les notes mentionnées ci-dessus.
 
 [1.12.2-update-button-037c2ff396.zip :material-file-download:](../../assets/downloads/hotfixes/1.12.2-update-button-037c2ff396.zip){ .md-button .md-button--primary }
 
-After applying the hotfix it is necessary to empty the i-doit cache (via the [administration](../administration/index.md)) as well as the browser cache (via the key combination **Ctrl + F5**). Afterwards, the update process can be called and executed as usual.
+Après l'application du correctif, il est nécessaire de vider le cache de i-doit (via l'[administration](../administration/index.md)) ainsi que le cache du navigateur (via la combinaison de touches **Ctrl + F5**). Ensuite, le processus de mise à jour peut être appelé et exécuté comme d'habitude.

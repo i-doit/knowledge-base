@@ -1,7 +1,7 @@
-# Data structure
+# Structure de données
 
-## The Data structure is divided into the following sub-sections:
+## La structure de données est divisée en les sous-sections suivantes :
 
-- [Edit data structure](./edit-data-structure.md)
-- [Object types](./object-types.md)
-- [Custom categories](./custom-categories.md)
+- [Modifier la structure de données](./edit-data-structure.md)
+- [Types d'objets](./object-types.md)
+- [Catégories personnalisées](./custom-categories.md)

@@ -1,53 +1,54 @@
-# checkmk 2: i-doit Web GUI
+# checkmk 2: i-doit Web GUI {/examples}
 
-Most user interactions are based on i-doit’s [legacy Check\_MK add-on](../checkmk.md) which is currently shipped with i-doit pro/open. This legacy add-on must be enabled [via the i-doit Admin Center](../index.md) (it’s enabled by default).
+La plupart des interactions utilisateur sont basées sur le [module complémentaire Check\_MK hérité](../checkmk.md) d'i-doit qui est actuellement livré avec i-doit pro/open. Ce module complémentaire hérité doit être activé [via le Centre d'administration i-doit](../index.md) (il est activé par défaut).
 
-## Enable real-time calls
+## Activer les appels en temps réel
 
-Let i-doit fetch the status of host and service checks via Livestatus in real-time. Configuration is done via Administration > Interfaces / external data > Monitoring > Livestatus / NDO.
+Permettez à i-doit de récupérer l'état des vérifications d'hôtes et de services via Livestatus en temps réel. La configuration se fait via Administration > Interfaces / données externes > Surveillance > Livestatus / NDO.
 
-These status calls may be displayed within any object or in the object lists for each type. Add the Monitoring category to these object types via **Administration > Data structure > Edit data structure**.
+Ces appels d'état peuvent être affichés dans n'importe quel objet ou dans les listes d'objets pour chaque type. Ajoutez la catégorie Surveillance à ces types d'objets via **Administration > Structure des données > Modifier la structure des données**.
 
-Manually enable status calls within this category for each object or [idoitcmk pull](./import-inventory-data-into-cmdb.md) will handle this by [configuration setting](./configuration.md) pull.enableLivestatus.
+Activez manuellement les appels d'état dans cette catégorie pour chaque objet ou [idoitcmk pull](./import-inventory-data-into-cmdb.md) s'en chargera via le paramètre de configuration pull.enableLivestatus dans [configuration setting](./configuration.md).
 
-## Manage host tags
+## Gérer les balises d'hôtes
 
-i-doit let you manage host tags. There are "static" and "dynamic" host tags:
+i-doit vous permet de gérer les balises d'hôtes. Il existe des balises d'hôtes "statiques" et "dynamiques" :
 
--   "static" means you manually create tags in Extras > Check_MK 2 > Tags (static) and add them to host in category Check_MK Tags.
--   "dynamic" means this is done automatically via rule sets in Extras > Check_MK 2 > Tags (dynamic).
+-   "statiques" signifie que vous créez manuellement des balises dans Extras > Check_MK 2 > Balises (statiques) et les ajoutez à l'hôte dans la catégorie Balises Check_MK.
+-   "dynamiques" signifie que cela se fait automatiquement via des ensembles de règles dans Extras > Check_MK 2 > Balises (dynamiques).
 
-Both "static" and "dynamic" host tags will be displayed in category Check_MK Tags. They will be exported to Check\_MK via [idoitcmk push](./generate-wato-configuration-base-on-cmdb-data.md).
+Les balises d'hôte "statique" et "dynamique" seront affichées dans la catégorie Tags Check_MK. Elles seront exportées vers Check\_MK via [idoitcmk push](./generate-wato-configuration-base-on-cmdb-data.md).
 
-## Call idoitcmk via Web GUI
+## Appeler idoitcmk via l'interface Web
 
-Category Check_MK Host provides several buttons which trigger idoitcmk in the background:
+La catégorie Hôte Check_MK propose plusieurs boutons qui déclenchent idoitcmk en arrière-plan :
 
--   Does host exist in checkmk?: Identify host in checkmk by its hostname
--   Update object from checkmk: Pull data from checkmk host to update this object.
--   Create/update host in checkmk: Object data will be pushed to checkmk. Either a new host will be created in checkmk or an existing one will be updated.
--   Delete host in checkmk: If this object exists as host in checkmk it will be deleted.
+-   L'hôte existe-t-il dans checkmk ? : Identifier l'hôte dans checkmk par son nom d'hôte
+-   Mettre à jour l'objet depuis checkmk : Extraire les données de l'hôte checkmk pour mettre à jour cet objet.
+-   Créer/mettre à jour l'hôte dans checkmk : Les données de l'objet seront poussées vers checkmk. Soit un nouvel hôte sera créé dans checkmk, soit un existant sera mis à jour.
+-   Supprimer l'hôte dans checkmk : Si cet objet existe en tant qu'hôte dans checkmk, il sera supprimé.
 
-Before you or any other user push one of these buttons, please run them manually on the command-line interface to make sure they do what they are intended to do.
+Avant que vous ou tout autre utilisateur n'appuyiez sur l'un de ces boutons, veuillez les exécuter manuellement sur l'interface de ligne de commande pour vous assurer qu'ils font ce qu'ils sont censés faire.
 
-Configuration is done via Administration > Interfaces / external data > Monitoring > Check_MK. By setting Run idoitcmk app i-doit needs to know where idoitcmk is located. If you followed the [installation steps](../../installation/index.md) carefully use this:
+La configuration se fait via Administration > Interfaces / données externes > Surveillance > Check_MK. En définissant l'application Run idoitcmk, i-doit doit savoir où idoitcmk est situé. Si vous avez suivi attentivement les [étapes d'installation](../../installation/index.md), utilisez ceci :
 
 ```shell
 /usr/local/bin/idoitcmk
 ```
 
-Tip: You may want to add default options whenever one of the buttons are triggered. For example, in a multi-tenant environment provide tenant-specific configuration settings:
+Astuce : Vous voudrez peut-être ajouter des options par défaut chaque fois qu'un des boutons est déclenché. Par exemple, dans un environnement multi-locataire, fournissez des paramètres de configuration spécifiques au locataire :
 
 ```shell
 /usr/local/bin/idoitcmk -c /etc/idoitcmk/tenant-one.json
 ```
 
-Logging is enabled by default. For the first steps it’s always a good thing to know what is happening.
+La journalisation est activée par défaut. Pour les premières étapes, il est toujours bon de savoir ce qui se passe.
 
-To authorize users/user groups to trigger these buttons go to Administration > Authorization system > Rights > CMDB, load a user/group and enable the Execute right for one or more conditions:
+Pour autoriser les utilisateurs/groupes d'utilisateurs à déclencher ces boutons, accédez à Administration > Système d'autorisation > Droits > CMDB, chargez un utilisateur/groupe et activez le droit d'exécution pour une ou plusieurs conditions :
 
--   Category,
--   Category in object-type,
--   Category in Object,
--   Category in Objects underneath a location and/or
--   Categories in my created objects
+-   Catégorie,
+-   Catégorie dans le type d'objet,
+-   Catégorie dans l'objet,
+-   Catégorie dans les objets sous un emplacement et/ou
+-   Catégories dans mes objets créés
+```

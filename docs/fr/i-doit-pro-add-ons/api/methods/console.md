@@ -8,32 +8,32 @@ lang: en
 
 # console
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## console.tenant.list
 
-Get a list of the tenants.
+Obtenez une liste des locataires.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
 | - | - | - | - |
 
 !!! example "WIP"
 
-    ### Response parameters
+    ### Paramètres de réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key | JSON data type | Description |
+    | Clé | Type de données JSON | Description |
     | --- | --- | --- |
     | **Placeholder** | Placeholder | Placeholder |
     | **Placeholder** | Placeholder | Placeholder |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -47,7 +47,7 @@ Get a list of the tenants.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -67,3 +67,4 @@ Get a list of the tenants.
       }
     }
     ```
+

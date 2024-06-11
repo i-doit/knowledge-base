@@ -1,3 +1,4 @@
-# Changelog 1.16.2
+# Journal des modifications 1.16.2
 
-[Bug][CMDB] Detach connections under Cabling -> Connectors deletes all connections  
+[Bug][CMDB] Détacher les connexions sous Câblage -> Connecteurs supprime toutes les connexions  
+{/*examples*/}

@@ -1,25 +1,27 @@
-# Release Notes 1.9
+# Notes de version 1.9
 
-> System requirements
+> Configuration requise
 > -------------------
 > 
-> i-doit 1.9 is PHP Version 7.0 compatible
+> i-doit 1.9 est compatible avec la version 7.0 de PHP.
 > 
-> You can still use PHP 5.4 and following.
+> Vous pouvez toujours utiliser PHP 5.4 et les versions suivantes.
 > 
-> Before updating
+> Avant la mise à jour
 > ---------------
 > 
-> Before updating you should update all installed Add-ons. All modules are being released with newer versions parallel to the i-doit release.
+> Avant de procéder à la mise à jour, vous devez mettre à jour tous les modules installés. Tous les modules sont publiés avec des versions plus récentes en parallèle avec la version i-doit.
 > 
-> If you switch to PHP 7.0 the Add-on update is mandatory (also before updating i-doit).
+> Si vous passez à PHP 7.0, la mise à jour des modules est obligatoire (également avant la mise à jour d'i-doit).
 > 
-> Attention! Users of the RFC add-on have to be patient. The i-doit 1.9 update does not support the current RFC add-on version. You will be informed as soon as the new RFC add-on version is available.
+> Attention ! Les utilisateurs de l'add-on RFC doivent faire preuve de patience. La mise à jour vers i-doit 1.9 ne prend pas en charge la version actuelle de l'add-on RFC. Vous serez informé dès que la nouvelle version de l'add-on RFC sera disponible.
 > 
 > Migrations
 > ----------
 > 
-> *   Each object list gets a standard filter
-> *   In the category hostaddress the field “DNS Domain gets renamed to “Search Domain”. Each domain listed gets a Hostname / Domain FQDN pair.
-> *   Fonts get copied from the vendor directory to upload/fonts
-> *   All saved interface passwords (LDAP, OCS-Inventory, JDisc, etc.) within the database get rehashed. mcrypt, which is deprecated with PHP 7 will be replaced with phpseclib. phpseclib checks if OpenSSL is available. If not, it uses native encryption. If you change your system after an update to i-doit 1.9, you have to make sure that the chosen encryption method is available.
+> *   Chaque liste d'objets reçoit un filtre standard.
+> *   Dans la catégorie adressehôte, le champ "Domaine DNS" est renommé en "Domaine de recherche". Chaque domaine répertorié reçoit une paire Nom d'hôte / Domaine FQDN.
+> *   Les polices sont copiées du répertoire du fournisseur vers upload/fonts.
+> *   Tous les mots de passe d'interface enregistrés (LDAP, OCS-Inventory, JDisc, etc.) dans la base de données sont rehashés. mcrypt, qui est obsolète avec PHP 7, sera remplacé par phpseclib. phpseclib vérifie si OpenSSL est disponible. Sinon, il utilise le cryptage natif. Si vous modifiez votre système après une mise à jour vers i-doit 1.9, vous devez vous assurer que la méthode de cryptage choisie est disponible.
+
+{/*examples*/}

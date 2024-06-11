@@ -1,66 +1,72 @@
-# Install MongoDB v5
+# Installer MongoDB v5
 
-The system requirements of MongoDB can be found [here](https://docs.mongodb.com/manual/administration/production-notes/).
+Les exigences système de MongoDB peuvent être trouvées [ici](https://docs.mongodb.com/manual/administration/production-notes/).
 
-In addition, MongoDB provides a [checklist for use in operation](https://docs.mongodb.com/manual/administration/production-checklist-operations/#operations-checklist).
+De plus, MongoDB fournit une [liste de contrôle à utiliser en opération](https://docs.mongodb.com/manual/administration/production-checklist-operations/#operations-checklist).
 
-!!! info "CPU AVX support"
+!!! info "Support CPU AVX"
 
-    MongoDB 5.0+ requires a CPU with AVX support<br>
-     see [https://jira.mongodb.org/browse/SERVER-54407](https://jira.mongodb.org/browse/SERVER-54407)<br>
-     see also [https://www.mongodb.com/community/forums/t/mongodb-5-0-cpu-intel-g4650-compatibility/116610/2](https://www.mongodb.com/community/forums/t/mongodb-5-0-cpu-intel-g4650-compatibility/116610/2)<br>
-     see also [https://github.com/docker-library/mongo/issues/485#issuecomment-891991814](https://github.com/docker-library/mongo/issues/485#issuecomment-891991814)
+    MongoDB 5.0+ nécessite un CPU avec le support AVX<br>
+     voir [https://jira.mongodb.org/browse/SERVER-54407](https://jira.mongodb.org/browse/SERVER-54407)<br>
+     voir aussi [https://www.mongodb.com/community/forums/t/mongodb-5-0-cpu-intel-g4650-compatibility/116610/2](https://www.mongodb.com/community/forums/t/mongodb-5-0-cpu-intel-g4650-compatibility/116610/2)<br>
+     voir aussi [https://github.com/docker-library/mongo/issues/485#issuecomment-891991814](https://github.com/docker-library/mongo/issues/485#issuecomment-891991814)
 
-!!! success "Recommendation"
+!!! success "Recommandation"
 
-    We describe the use of **Debian GNU/Linux version 11 "bullseye"** as the operating system under which i-doit should be run.<br>
+    Nous décrivons l'utilisation de **Debian GNU/Linux version 11 "bullseye"** comme le système d'exploitation sous lequel i-doit devrait être exécuté.<br>
 
-MongoDB currently does not officially support Debian 11. However, we were able to use MongoDB with the Forms add-on in several test installations.
+MongoDB ne prend actuellement pas en charge officiellement Debian 11. Cependant, nous avons pu utiliser MongoDB avec l'add-on Forms dans plusieurs installations de test.
 
-On the terminal, we run the following commands:
+Dans le terminal, nous exécutons les commandes suivantes :
 
-!!! info "Ubuntu ships with gnupg, for Ubuntu users this step can be skipped."
+!!! info "Ubuntu est livré avec gnupg, pour les utilisateurs d'Ubuntu, cette étape peut être ignorée."
 
-We install gnupg:
+Nous installons gnupg :
 
     sudo apt-get install gnupg
 
-We import the public key for the mongodb-org repository:
+Nous importons la clé publique du dépôt mongodb-org :
 
     wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
 
-Now we create a sources file for MongoDB:
+Maintenant, nous créons un fichier sources pour MongoDB :
 
-!!! attention "This repo is to be used for Debian only!"
+!!! attention "Ce dépôt est destiné à être utilisé uniquement pour Debian !"
 
 ```shell
 echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/5.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list 
 ```
 
-!!! attention "This repo is to be used for Ubuntu 20.04 only!"
+!!! attention "Ce dépôt est destiné à être utilisé uniquement pour Ubuntu 20.04 !"
 
 ```shell
 echo "deb http://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list 
 ```
 
-Now we update the local package database:
+Maintenant, nous mettons à jour la base de données locale des paquets :
 
     sudo apt-get update
 
-Now we can install MongoDB:
+Maintenant, nous pouvons installer MongoDB :
 
     sudo apt-get install -y mongodb-org
 
-Next, we reload the services:
+Ensuite, nous rechargeons les services :
 
-    sudo systemctl daemon-reload
+```bash
+sudo systemctl daemon-reload
+```
 
-So that MongoDB is started at the next system start:
+Afin que MongoDB démarre au prochain démarrage du système :
 
-    sudo systemctl enable mongod
+```bash
+sudo systemctl enable mongod
+```
 
-Now we start MongoDB:
+Maintenant, nous démarrons MongoDB :
 
-    sudo systemctl start mongod
+```bash
+sudo systemctl start mongod
+```
 
-[Continue to the installation of NodeJS](./install-nodejs.md){ .md-button .md-button--primary }
+[Continuer avec l'installation de NodeJS](./install-nodejs.md){ .md-button .md-button--primary }

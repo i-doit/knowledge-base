@@ -1,135 +1,135 @@
-# Admin Center
+# Centre d'administration
 
-The admin center is a separate administration interface integrated in i-doit. Here the settings shared by all tenants are configured.
+Le centre d'administration est une interface d'administration distincte intégrée dans i-doit. Ici, les paramètres partagés par tous les locataires sont configurés.
 
-## Credentials
+## Identifiants
 
 !!! attention "Attention!"
 
-    Please do not edit the password if one is already assigned. This can only be changed via the [CLI!](../automation-and-integration/cli/index.md)
+    Veuillez ne pas modifier le mot de passe s'il en existe déjà un. Cela ne peut être modifié que via la [CLI!](../automation-and-integration/cli/index.md)
 
-For the admin center there are ==separate credentials==. These can be specified during the [installation of i-doit](../installation/manual-installation/setup.md). If this step was skipped, then there is no access to the admin center possible at first.
+Pour le centre d'administration, il existe des ==identifiants distincts==. Ceux-ci peuvent être spécifiés lors de l'[installation de i-doit](../installation/manual-installation/setup.md). Si cette étape a été sautée, alors il n'y a pas d'accès possible au centre d'administration au départ.
 
-## Signing in
+## Connexion
 
-The admin center can be accessed via the [login screen of i-doit](../basics/initial-login.md). The ==Admin-Center== link is located beneath the login screen.
+Le centre d'administration peut être accédé via l'[écran de connexion de i-doit](../basics/initial-login.md). Le lien ==Admin-Center== est situé sous l'écran de connexion.
 
-[![Signing In](../assets/images/en/system-administration/admin-center/1-ac.png)](../assets/images/en/system-administration/admin-center/1-ac.png)
+[![Connexion](../assets/images/en/system-administration/admin-center/1-ac.png)](../assets/images/en/system-administration/admin-center/1-ac.png)
 
-!!! info "Assign credentials"
+!!! info "Attribuer des identifiants"
 
-    This link is only available if the credentials for the admin center have been configured (see above).
+    Ce lien n'est disponible que si les identifiants pour le centre d'administration ont été configurés (voir ci-dessus).
 
-As an alternative, the URL to the admin center can be entered in the browser. For this purpose, /admin/ is added to the link to i-doit :
+En alternative, l'URL vers le centre d'administration peut être entrée dans le navigateur. À cette fin, /admin/ est ajouté au lien vers i-doit :
 
     https://i-doit.example.net/i-doit/admin/
 
-[![Assign credentials](../assets/images/en/system-administration/admin-center/2-ac.png)](../assets/images/en/system-administration/admin-center/2-ac.png)
+[![Attribuer des identifiants](../assets/images/en/system-administration/admin-center/2-ac.png)](../assets/images/en/system-administration/admin-center/2-ac.png)
 
-## Overview
+## Aperçu
 
-In the ==Home== section the currently installed version of _i-doit_ is displayed. In the ==Actions== item the ==i-doit environment info file== can be downloaded. This is a XML file with important system settings which can be very helpful for [troubleshooting](./troubleshooting/index.md).
+Dans la section ==Accueil==, la version actuellement installée de _i-doit_ est affichée. Dans l'élément ==Actions==, le fichier d'informations sur l'environnement de _i-doit_ peut être téléchargé. Il s'agit d'un fichier XML avec des paramètres système importants qui peuvent être très utiles pour le [dépannage](./troubleshooting/index.md).
 
-[![Overview](../assets/images/en/system-administration/admin-center/3-ac.png)](../assets/images/en/system-administration/admin-center/3-ac.png)
+[![Aperçu](../assets/images/en/system-administration/admin-center/3-ac.png)](../assets/images/en/system-administration/admin-center/3-ac.png)
 
-## Tenants
+## Locataires
 
-Tenants are administrated in the ==Tenants== section. This, however, is only relevant for a multi-tenant license of _i-doit_. New tenants can be generated using the ==Add new tenant== button. Existing tenants can also be edited, (de)activated or deleted completely. A deleted tenant can only be restored via a [back up](../maintenance-and-operation/backup-and-recovery/index.md).
+Les locataires sont administrés dans la section ==Locataires==. Cependant, cela n'est pertinent que pour une licence multi-locataire de _i-doit_. De nouveaux locataires peuvent être générés en utilisant le bouton ==Ajouter un nouveau locataire==. Les locataires existants peuvent également être édités, (dés)activés ou supprimés complètement. Un locataire supprimé ne peut être restauré que via une [sauvegarde](../maintenance-and-operation/backup-and-recovery/index.md).
 
-[![Tenants](../assets/images/en/system-administration/admin-center/4-ac.png)](../assets/images/en/system-administration/admin-center/4-ac.png)
+[![Locataires](../assets/images/en/system-administration/admin-center/4-ac.png)](../assets/images/en/system-administration/admin-center/4-ac.png)
 
-## Licenses
+## Licences
 
-[Licenses for i-doit can be installed](../maintenance-and-operation/activate-license.md) via the ==Licenses== section.
+[Les licences pour i-doit peuvent être installées](../maintenance-and-operation/activate-license.md) via la ==section Licences==.
 
-[![Licenses](../assets/images/en/system-administration/admin-center/5-ac.png)](../assets/images/en/system-administration/admin-center/5-ac.png)
+[![Licences](../assets/images/en/system-administration/admin-center/5-ac.png)](../assets/images/en/system-administration/admin-center/5-ac.png)
 
-## Add-ons
+## Modules complémentaires
 
-In the ==Add-ons== section the [Add-ons](../i-doit-pro-add-ons/index.md) are managed. Each feature of _i-doit_ is encapsulated in a Add-on.
+Dans la ==section Modules complémentaires==, les [Modules complémentaires](../i-doit-pro-add-ons/index.md) sont gérés. Chaque fonctionnalité d'_i-doit_ est encapsulée dans un module complémentaire.
 
-[![Add-ons](../assets/images/en/system-administration/admin-center/6-ac.png)](../assets/images/en/system-administration/admin-center/6-ac.png)
+[![Modules complémentaires](../assets/images/en/system-administration/admin-center/6-ac.png)](../assets/images/en/system-administration/admin-center/6-ac.png)
 
 ## Support
 
-The [customer portal](../system-administration/customer-portal.md) is embedded in the ==Support== section. Download packages and licenses can be downloaded here among other things.
+Le [portail client](../system-administration/customer-portal.md) est intégré dans la ==section Support==. Vous pouvez y télécharger des packages et des licences, entre autres.
 
 [![Support](../assets/images/en/system-administration/admin-center/7-ac.png)](../assets/images/en/system-administration/admin-center/7-ac.png)
 
-The i-doit Support can be found here [help.i-doit.com](https://help.i-doit.com).
+Le support i-doit est disponible ici [help.i-doit.com](https://help.i-doit.com).
 
-## System settings
+## Paramètres système
 
-Here you will find system related settings. Also here you will find the link to the [Expert settings](#expert-settings-system-related) on the right side.
+Vous trouverez ici les paramètres liés au système. Vous trouverez également le lien vers les [Paramètres experts](#expert-settings-system-related) sur le côté droit.
 
-### Login
+### Connexion
 
-| Option                    | Value  |
-| ------------------------- | ------ |
-| Welcome message for login | String |
+| Option                        | Valeur  |
+| ----------------------------- | ------- |
+| Message de bienvenue pour la connexion | Chaîne |
 
 ### Proxy
 
-| Option          | Value              |
+| Option          | Valeur              |
 | --------------- | ------------------ |
-| Active          | Yes or No          |
-| Host/IP-Address | Host or IP address |
+| Actif          | Oui ou Non          |
+| Hôte/Adresse IP | Hôte ou adresse IP |
 | Port            | Port               |
-| Username        | Username           |
-| Password        | Password           |
+| Nom d'utilisateur        | Nom d'utilisateur           |
+| Mot de passe        | Mot de passe           |
 
-### Security
+### Sécurité
 
-| Option     | Value     |
+| Option     | Valeur     |
 | ---------- | --------- |
-| CSRF-Token | Yes or No |
+| Jeton CSRF | Oui ou Non |
 
 ### Session
 
-| Option          | Value            |
+| Option          | Valeur            |
 | --------------- | ---------------- |
-| Session timeout | Value in seconds |
+| Délai de session | Valeur en secondes |
 
-### Single Sign On
+### Authentification unique
 
-| Option          | Value                             |
+| Option          | Valeur                             |
 | --------------- | --------------------------------- |
-| Active          | Yes or No                         |
-| Default tenant  | Select Tenants name via dropdown  (order can be altered in [expert settings](#expert-settings-system-related)) |
-| Use Domain Part | Yes or No                         |
+| Actif          | Oui ou Non                         |
+| Locataire par défaut  | Sélectionnez le nom du locataire via le menu déroulant  (l'ordre peut être modifié dans les [paramètres experts](#expert-settings-system-related)) |
+| Utiliser la partie de domaine | Oui ou Non                         |
 
-### System Parameters
+### Paramètres du système {/ * exemples *}
 
-| Option                 | Value              |
+| Option                 | Valeur              |
 | ---------------------- | ------------------ |
-| PHP Timezone           | Timezone           |
-| File upload directory  | Path on Filesystem |
-| Image upload directory | Path on Filesystem |
+| Fuseau horaire PHP     | Fuseau horaire      |
+| Répertoire de téléchargement de fichiers | Chemin sur le système de fichiers |
+| Répertoire de téléchargement d'images | Chemin sur le système de fichiers |
 
-### User interface
+### Interface utilisateur {/ * exemples *}
 
-| Option                            | Value                                          |
+| Option                            | Valeur                                          |
 | --------------------------------- | ---------------------------------------------- |
-| Wiki URL                          | URL                                            |
-| Sortfunction for login tenantlist | Title<br>Custom (configurable in Admin-Center) |
+| URL du Wiki                          | URL                                            |
+| Fonction de tri pour la liste des locataires connectés | Titre<br>Personnalisé (configurable dans le Centre d'administration) |
 
-## Config
+## Configuration
 
-In the ==Config== tab three items can be configured:
+Dans l'onglet ==Configuration==, trois éléments peuvent être configurés :
 
--   Via ==Admin-Center Credentials== the credentials to the admin center can be changed.
--   Via ==Security configuration== the encryption method can be changed.
--   Via ==Connection to i-doit System Database== the access to the system database can be changed.
+-   Via ==Identifiants du Centre d'administration==, les identifiants du centre d'administration peuvent être modifiés.
+-   Via ==Configuration de sécurité==, la méthode de chiffrement peut être modifiée.
+-   Via ==Connexion à la base de données du système i-doit==, l'accès à la base de données du système peut être modifié.
 
 [![Configuration](../assets/images/en/system-administration/admin-center/8-ac.png)](../assets/images/en/system-administration/admin-center/8-ac.png)
 
-The settings will be save in `i-doit/src/config.inc.php` file. This file is created during the [installation process of i-doit](../installation/manual-installation/setup.md). If an [update of i-doit](../maintenance-and-operation/update.md) is installed, a backup of the file is created automatically. The date of the update is stated in the file name.
+Les paramètres seront enregistrés dans le fichier `i-doit/src/config.inc.php`. Ce fichier est créé lors du [processus d'installation de i-doit](../installation/manual-installation/setup.md). Si une [mise à jour de i-doit](../maintenance-and-operation/update.md) est installée, une sauvegarde du fichier est créée automatiquement. La date de la mise à jour est indiquée dans le nom du fichier.
 
-## Expert settings (System related)
+## Paramètres experts (liés au système)
 
-The Expert settings for the System are located in the Admin Center. You can reach them via the [System settings](#system-settings)
+Les paramètres experts pour le système se trouvent dans le Centre d'administration. Vous pouvez y accéder via les [Paramètres système](#system-settings)
 
-| Key                                             | Value                                                                                                                                               | Description       |
+| Clé                                             | Valeur                                                                                                                                               | Description       |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | system.email.password                           | -                                                                                                                                                    | system.email.port |
 | admin.active_license_distribution               | 1                                                                                                                                                    |                   |
@@ -156,8 +156,8 @@ The Expert settings for the System are located in the Admin Center. You can reac
 | cmdb.unique.object-title                        | 0                                                                                                                                                   |                   |
 | debug_bar.storeDirectory                        | /tmp/idoit_debugbar                                                                                                                                 |                   |
 | debug-bar.enabled                               | 1                                                                                                                                                   |                   |
-| email.template.maintenance                      | Your maintenance contract: %s timed out.\n<strong>Contract information</strong>:\nStart: %s\nEnd: %s\nSupport-Url: %s\nContract-Number: %s\nCustomer-Number: %s |                   |
-| email.template.password                         | Ihr Passwort lautet:                                                                                                                                |                   |
+| email.template.maintenance                      | Votre contrat de maintenance : %s a expiré.\n<strong>Informations sur le contrat</strong>:\nDébut : %s\nFin : %s\nURL de support : %s\nNuméro de contrat : %s\nNuméro de client : %s |                   |
+| email.template.password                         | Votre mot de passe est :                                                                                                                                |                   |
 | gui.empty_value                                 | -                                                                                                                                                   |                   |
 | gui.empty_values                                | -                                                                                                                                                   |                   |
 | gui.forum-link                                  | 0                                                                                                                                                   |                   |
@@ -182,7 +182,7 @@ The Expert settings for the System are located in the Admin Center. You can reac
 | reports.browser-url                             | -                                                                                                                                                    |                   |
 | security.passwort.minlength                     | -                                                                                                                                                    |                   |
 | session.sso.active                              | 0                                                                                                                                                   |                   |
-| session.sso.mandator-id                         | 1,2                                                                                                                                                   | Order for login via sso                  |
+| session.sso.mandator-id                         | 1,2                                                                                                                                                   | Ordre de connexion via sso                  |
 | session.time                                    | 3600                                                                                                                                                |                   |
 | system.devmode                                  | -                                                                                                                                                    |                   |
 | system.email.connection-timeout                 | -                                                                                                                                                    |                   |
@@ -197,3 +197,5 @@ The Expert settings for the System are located in the Admin Center. You can reac
 | system.login.welcome-message                    | -                                                                                                                                                    |                   |
 | system.security.csrf                            | 1                                                                                                                                                   |                   |
 | system.show-proc-time                           | 0                                                                                                                                                   |                   |
+
+Please provide the Markdown content you would like me to translate into French.

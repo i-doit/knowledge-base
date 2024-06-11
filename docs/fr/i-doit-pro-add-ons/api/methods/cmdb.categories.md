@@ -6,37 +6,37 @@ icon: material/api
 lang: en
 ---
 
-# Namespace cmdb.categories
+# Espace de noms cmdb.categories {/examples}
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
-## cmdb.categories.read
+## cmdb.categories.read {/examples}
 
-Retrieve multiple categories by one request.<br>
-Before you start, you should use [cmdb.object_type_categories](cmdb.object_type_categories.md#cmdbobject_type_categories) to get available categories and the cats/catg id.
+Récupérer plusieurs catégories en une seule requête.<br>
+Avant de commencer, vous devez utiliser [cmdb.object_type_categories](cmdb.object_type_categories.md#cmdbobject_type_categories) pour obtenir les catégories disponibles et les identifiants cats/catg.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **objID** | Integer | Yes | ID of the object |
-| **catgID** | Integer | No | catgid of a category, can be retrieved via [cmdb.object_type_categories](cmdb.object_type_categories.md#cmdbobject_type_categories) |
-| **catsID** | Integer | No | catsid of a category, can be retrieved via [cmdb.object_type_categories](cmdb.object_type_categories.md#cmdbobject_type_categories) |
+| **objID** | Entier | Oui | ID de l'objet |
+| **catgID** | Entier | Non | catgid d'une catégorie, peut être récupéré via [cmdb.object_type_categories](cmdb.object_type_categories.md#cmdbobject_type_categories) |
+| **catsID** | Entier | Non | catsid d'une catégorie, peut être récupéré via [cmdb.object_type_categories](cmdb.object_type_categories.md#cmdbobject_type_categories) |
 
-!!! example "WIP"
+!!! example "Travail en cours"
 
-    ### Response parameters
+    ### Paramètres de réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key | JSON data type | Description |
+    | Clé | Type de données JSON | Description |
     | --- | --- | --- |
     | **Placeholder** | Placeholder | Placeholder |
     | **Placeholder** | Placeholder | Placeholder |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -53,7 +53,7 @@ Before you start, you should use [cmdb.object_type_categories](cmdb.object_type_
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {

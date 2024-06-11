@@ -1,58 +1,58 @@
-# Templates
+# Modèles
 
-i-doit allows you to create objects that can serve as templates for the creation of new [objects](../glossary.md). You can create a great amount of objects with identical [attributes](../glossary.md), for example servers using the same hardware, in a simplified procedure.
+i-doit vous permet de créer des objets pouvant servir de modèles pour la création de nouveaux [objets](../glossary.md). Vous pouvez créer un grand nombre d'objets avec des [attributs](../glossary.md) identiques, par exemple des serveurs utilisant le même matériel, selon une procédure simplifiée.
 
-Usage
------
+Utilisation
+----------
 
-You will find the template function in i-doit at **Extras → CMDB → Templates**. Here it is possible to view and edit existing templates as well as to create new templates and generate objects via templates.
+Vous trouverez la fonction de modèle dans i-doit à **Extras → CMDB → Modèles**. Ici, il est possible de visualiser et modifier les modèles existants, ainsi que de créer de nouveaux modèles et de générer des objets via des modèles.
 
-[![Usage](../assets/images/en/efficient-documentation/templates/1-te.png)](../assets/images/en/efficient-documentation/templates/1-te.png)
+[![Utilisation](../assets/images/en/efficient-documentation/templates/1-te.png)](../assets/images/en/efficient-documentation/templates/1-te.png)
 
 Configuration
 -------------
 
-The settings for templates can be configured at **Administration → General settings → Template configuration**. It is possible to display templates in the [object lists](../basics/object-list/index.md) by activating the template filter. When you set the status filter within an object list to "Template", all templates associated with this [object type](../basics/structure-of-the-it-documentation.md) will be shown.
+Les paramètres des modèles peuvent être configurés à **Administration → Paramètres généraux → Configuration du modèle**. Il est possible d'afficher les modèles dans les [listes d'objets](../basics/object-list/index.md) en activant le filtre de modèle. Lorsque vous définissez le filtre d'état dans une liste d'objets sur "Modèle", tous les modèles associés à ce [type d'objet](../basics/structure-of-the-it-documentation.md) seront affichés.
 
 [![Configuration](../assets/images/en/efficient-documentation/templates/2-te.png)](../assets/images/en/efficient-documentation/templates/2-te.png)
 
-Creating a Template
+Création d'un modèle
 -------------------
 
-Once the template function is opened, a new template can be created via **Generate new template** on the left side of the tree menu. First you will be prompted to set the object type associated with the template. Choose the object type in the drop-down menu and confirm by clicking **Create new template**. The following configuration for a template is identical to the creation of a regular object. Enter all content you want to transfer to the objects later on and save your entries.
+Une fois la fonction de modèle ouverte, un nouveau modèle peut être créé via **Générer un nouveau modèle** sur le côté gauche du menu arborescent. Tout d'abord, vous serez invité à définir le type d'objet associé au modèle. Choisissez le type d'objet dans le menu déroulant et confirmez en cliquant sur **Créer un nouveau modèle**. La configuration suivante pour un modèle est identique à la création d'un objet régulier. Saisissez tout le contenu que vous souhaitez transférer aux objets ultérieurement et enregistrez vos saisies.
 
-Alternatively, you can open the configuration for creating a template via the arrow icon next to the **New** button in an object list.
+Alternativement, vous pouvez ouvrir la configuration pour créer un modèle via l'icône de flèche à côté du bouton **Nouveau** dans une liste d'objets.
 
-[![Creating a Template](../assets/images/en/efficient-documentation/templates/3-te.png)](../assets/images/en/efficient-documentation/templates/3-te.png)
+[![Création d'un modèle](../assets/images/en/efficient-documentation/templates/3-te.png)](../assets/images/en/efficient-documentation/templates/3-te.png)
 
-View, Edit and Delete Existing Templates
+Afficher, Modifier et Supprimer les Modèles Existants
+-----------------------------------------------------
+
+Tous les modèles précédemment créés peuvent être affichés via **Présentation des modèles** dans le menu arborescent sur le côté gauche de la fonction de modèle. Cliquez sur l'un des modèles pour le modifier. En activant la case à cocher d'un ou de plusieurs modèles et en utilisant le bouton **Purger**, vous supprimerez ces modèles du système. Assurez-vous de vouloir purger les modèles sélectionnés car les modèles purgés ne peuvent pas être restaurés.
+
+[![Voir, Modifier et Supprimer les Modèles Existants](../assets/images/en/efficient-documentation/templates/4-te.png)](../assets/images/en/efficient-documentation/templates/4-te.png)
+
+Génération d'Objets à partir de Modèles
 ----------------------------------------
 
-All previously created templates can be shown via **Present templates** in the tree menu on the left side in the template function. Click one of the templates to edit it. Activating the checkbox of one or more templates and using the **Purge** button will remove these templates from the system. Please be sure you want to purge the selected templates since purged templates cannot be restored.
+Utilisez **Créer des objets** dans le menu arborescent sur le côté gauche de la fonction de modèle pour créer des objets sur la base de vos modèles.
 
-[![View, Edit and Delete Existing Templates](../assets/images/en/efficient-documentation/templates/4-te.png)](../assets/images/en/efficient-documentation/templates/4-te.png)
+Ici, vous serez invité à saisir des informations de base sur vos nouveaux objets. Dans la première étape, le titre de l'objet ainsi que le type d'objet de vos objets doivent être définis. Comme la fonction de modèle vous permet de créer plusieurs objets en même temps, vous pouvez également définir le nombre d'objets (identiques) qui seront créés. Vous pouvez choisir d'utiliser un suffixe de compteur dans une zone supplémentaire qui s'ouvre si vous décidez de générer plus d'un objet. Il est également possible de définir les zéros de tête et la valeur à partir de laquelle vous souhaitez que le compteur démarre. De plus, les attributs **But de l'application** et **Catégorie** peuvent déjà être définis à l'avance.
 
-Generating Objects from Templates
----------------------------------
+Vous pouvez maintenant déterminer quel(s) modèle(s) utiliser pour la création d'objets dans la section **Choisir le(s) modèle(s)**. Sélectionnez les modèles souhaités dans le menu déroulant et ajoutez-les un par un via le bouton **Utiliser le modèle sélectionné**. Les informations de plusieurs modèles seront combinées dans chaque objet.
 
-Use **Create object(s)** in the tree menu on the left side within the template function to create objects on the basis of your templates.
+[![Générer des objets à partir de modèles](../assets/images/en/efficient-documentation/templates/5-te.png)](../assets/images/en/efficient-documentation/templates/5-te.png)
 
-Here you will be asked to enter basic information about your new objects. In the first step, the object title as well as the object type of your objects need to be set. Since the template function allows you to create multiple objects at the same time you can also set the number of (identical) objects that will be created. You can choose to use a counter suffix in an additional area that is opened if you decide to generate more than one object. Here it is also possible to set the leading zeros and the value from which you want the counter to start. Furthermore, the attributes **Application purpose** and **Category** can already be set in advance.
+Ouvrir la fonction de modèle à partir d'une liste d'objets
+-----------------------------------------------------------
 
-You can now determine which template(s) are to be used for the creation of objects in the section **Choose template(s)**. Select the desired templates in the drop-down menu and add these one after another via the **Use selected template** button. Information of multiple templates will be combined in each object.
+Les fonctions pour la création de nouveaux modèles ou la création d'objets via des modèles sont également disponibles à travers les listes d'objets. Utilisez la flèche pointant vers le bas à côté du bouton **Nouveau** pour ouvrir le menu contextuel. Celui-ci contient les éléments pertinents pour accéder directement au processus souhaité.
 
-[![Generating Objects from Templates](../assets/images/en/efficient-documentation/templates/5-te.png)](../assets/images/en/efficient-documentation/templates/5-te.png)
+[![Ouvrir la fonction de modèle à partir d'une liste d'objets](../assets/images/en/efficient-documentation/templates/6-te.png)](../assets/images/en/efficient-documentation/templates/6-te.png)
 
-Open the Template Function from an Object List
-----------------------------------------------
-
-The functions for the creation of new templates or the creation of objects via templates are also available through object lists. Use the arrow pointing downward next to the **New** button to open the context menu. This contains the relevant items to get directly to the desired process.
-
-[![Open the Template Function from an Object List](../assets/images/en/efficient-documentation/templates/6-te.png)](../assets/images/en/efficient-documentation/templates/6-te.png)
-
-Default Template in the Object Type Configuration
+Modèle par défaut dans la Configuration du Type d'Objet
 -------------------------------------------------
 
-You can choose a default template in the [object type configuration](../basics/custom-object-types.md). Each template that you created can be used here. If you set a default template, any newly created objects will be filled in according to this template. Of course you can adjust the objects you created in this way at any time and change their prefilled values.
+Vous pouvez choisir un modèle par défaut dans la [configuration du type d'objet](../basics/custom-object-types.md). Chaque modèle que vous avez créé peut être utilisé ici. Si vous définissez un modèle par défaut, tous les nouveaux objets créés seront remplis selon ce modèle. Bien sûr, vous pouvez ajuster les objets que vous avez créés de cette manière à tout moment et modifier leurs valeurs préremplies.
 
-[![Default Template in the Object Type Configuration](../assets/images/en/efficient-documentation/templates/7-te.png)](../assets/images/en/efficient-documentation/templates/7-te.png)
+[![Modèle par défaut dans la Configuration du Type d'Objet](../assets/images/en/efficient-documentation/templates/7-te.png)](../assets/images/en/efficient-documentation/templates/7-te.png)

@@ -1,128 +1,132 @@
-# CSV Data Import
+# Importation de données CSV
 
-Many organizations use spreadsheet software for their [IT documentation](index.md) to view information in form of tables. This is not only confusing, but requires also a lot work for maintenance and updating. Using the CSV import allows you to import data comfortably, for example, from Microsoft Excel, OpenOffice or LibreOffice Calc, to _i-doit_.
+De nombreuses organisations utilisent des logiciels de tableur pour leur [documentation informatique](index.md) afin de visualiser des informations sous forme de tableaux. Cela n'est pas seulement confus, mais nécessite également beaucoup de travail pour la maintenance et la mise à jour. L'utilisation de l'importation CSV vous permet d'importer des données confortablement, par exemple, depuis Microsoft Excel, OpenOffice ou LibreOffice Calc, vers _i-doit_.
 
-## Requirements
+## Exigences
 
-To be able to use your data for CSV import it is important to save them in **.csv** format with **UTF-8** encoding. Some spreadsheet applications are not able to set the encoding when saving. In this case you can use a text editor which has a conversion function after you exported your data to .CSV format. In the following screenshot you can see the **Convert to UTF-8** function in [Notepad++](https://notepad-plus-plus.org/):
+Pour pouvoir utiliser vos données pour l'importation CSV, il est important de les enregistrer au format **.csv** avec un encodage **UTF-8**. Certaines applications de tableur ne sont pas capables de définir l'encodage lors de l'enregistrement. Dans ce cas, vous pouvez utiliser un éditeur de texte qui possède une fonction de conversion après avoir exporté vos données au format .CSV. Sur la capture d'écran suivante, vous pouvez voir la fonction **Convertir en UTF-8** dans [Notepad++](https://notepad-plus-plus.org/):
 
-[![Coding in Notepad++](../../assets/images/en/consolidate-data/csv-data-import/1-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/1-csvi.png)
+[![Codage dans Notepad++](../../assets/images/en/consolidate-data/csv-data-import/1-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/1-csvi.png)
 
-The structure of a suitable .CSV file is approximately as shown in the following example:
+La structure d'un fichier .CSV approprié est approximativement comme indiqué dans l'exemple suivant:
 
 [![structure-csv](../../assets/images/en/consolidate-data/csv-data-import/2-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/2-csvi.png)
 
-The first line is used as a header and serves as the identification of the [attribute](../../basics/structure-of-the-it-documentation.md). Each successive line represents an individual [object](../../glossary.md) of your IT documentation.<br>
-You can also use your favorite text editor to create csv files.
+La première ligne est utilisée comme en-tête et sert d'identification de l'[attribut](../../basics/structure-of-the-it-documentation.md). Chaque ligne successive représente un [objet](../../glossary.md) individuel de votre documentation informatique.<br>
+Vous pouvez également utiliser votre éditeur de texte préféré pour créer des fichiers csv.
 
-[![new-csv-file](../../assets/images/en/consolidate-data/csv-data-import/3-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/3-csvi.png)
+[![nouveau-fichier-csv](../../assets/images/en/consolidate-data/csv-data-import/3-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/3-csvi.png)
 
-Once the .CSV file has been prepared to this point, you can begin the import.
+Une fois que le fichier .CSV a été préparé jusqu'à ce point, vous pouvez commencer l'importation.
 
-## Upload File
+## Télécharger le fichier
 
-Under **Extras → CMDB → Import → CSV Import** you can find the CSV import. You don't need to configure it in advance.
+Sous **Extras → CMDB → Importation → Importation CSV**, vous pouvez trouver l'importation CSV. Vous n'avez pas besoin de le configurer à l'avance.
 
-Choose your .csv file in the first step by using the **Browse...** button and upload the file from your system. Now the file is shown in the list and you can choose the actions **Use for import**, **Download file** and **Delete file** when hovering over the row of the file with the mouse cursor.
+Choisissez votre fichier .csv dans la première étape en utilisant le bouton **Parcourir...** et téléchargez le fichier depuis votre système. Maintenant, le fichier est affiché dans la liste et vous pouvez choisir les actions **Utiliser pour l'importation**, **Télécharger le fichier** et **Supprimer le fichier** en survolant la ligne du fichier avec le curseur de la souris.
 
 [![upload-file](../../assets/images/en/consolidate-data/csv-data-import/4-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/4-csvi.png)
 
-To get to the next step of the import you need to click **Use for import**.
+Pour passer à l'étape suivante de l'importation, vous devez cliquer sur **Utiliser pour l'importation**.
 
-## Set Options
+## Définir les options {/examples}
 
-You have to define some options before the mapping process between the table columns and attributes in i-doit can begin.
+Vous devez définir certaines options avant que le processus de mappage entre les colonnes de la table et les attributs dans i-doit puisse commencer.
 
 [![mapping](../../assets/images/en/consolidate-data/csv-data-import/5-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/5-csvi.png)
 
-### Object Type
+### Type d'objet {/examples}
 
-When you select an [object type](../../basics/structure-of-the-it-documentation.md) via the drop-down menu **Global object type**, all objects in the `.CSV` file will be imported as this type of object. If you do not define a global object type, you require an additional field in the `.CSV` file to enter the [database constant](../../basics/structure-of-the-it-documentation.md). The object type to which the object will be associated is determined by this constant for every line. This allows you to import objects from different object types (client, printer, monitors ...) from one file. This information has to be maintained for all objects if no global object type is used. You can't use a mixed form.
+Lorsque vous sélectionnez un [type d'objet](../../basics/structure-of-the-it-documentation.md) via le menu déroulant **Type d'objet global**, tous les objets dans le fichier `.CSV` seront importés en tant que ce type d'objet. Si vous ne définissez pas de type d'objet global, vous aurez besoin d'un champ supplémentaire dans le fichier `.CSV` pour entrer la [constante de base de données](../../basics/structure-of-the-it-documentation.md). Le type d'objet auquel l'objet sera associé est déterminé par cette constante pour chaque ligne. Cela vous permet d'importer des objets de différents types d'objets (client, imprimante, moniteurs...) à partir d'un seul fichier. Cette information doit être maintenue pour tous les objets si aucun type d'objet global n'est utilisé. Vous ne pouvez pas utiliser une forme mixte.
 
-### Separators, Headers and Consider default template
+### Séparateurs, En-têtes et Considérer le modèle par défaut {/examples/}
 
-If you use a different **separator** than the semicolon (;), it is possible to specify the used separator.
+Si vous utilisez un **séparateur** différent du point-virgule (;), il est possible de spécifier le séparateur utilisé.
 
-If you do not use a header line, you can deactivate the header so that the first line in the .csv file will be interpreted as the first object.
+Si vous n'utilisez pas de ligne d'en-tête, vous pouvez désactiver l'en-tête pour que la première ligne du fichier .csv soit interprétée comme le premier objet.
 
-The objects are created with the data from the [default template](../../efficient-documentation/templates.md).
+Les objets sont créés avec les données du [modèle par défaut](../../efficient-documentation/templates.md).
 
-### Empty Values
+### Valeurs Vides {/examples/}
 
-If you want to update existing objects with CSV data import, you can decide how you want to handle blank cells in the .CSV file. With the item **Adopt empty values** you have the option to choose either **Yes** or **No:**
+Si vous souhaitez mettre à jour des objets existants avec l'importation de données CSV, vous pouvez décider comment gérer les cellules vides dans le fichier .CSV. Avec l'option **Adopter les valeurs vides**, vous avez la possibilité de choisir entre **Oui** ou **Non** :
 
--   **Yes**: Blank cells mean that existing attributes (if available) are overwritten.
--   **No**: Blank cells are ignored so that existing attributes (if available) are preserved.
+-   **Oui** : Les cellules vides signifient que les attributs existants (s'ils existent) sont écrasés.
+-   **Non** : Les cellules vides sont ignorées de sorte que les attributs existants (s'ils existent) sont préservés.
 
-### Handling of Entries in List Categories (Multi-Valued)
+### Gestion des Entrées dans les Catégories de Liste (Multivaluées) {/examples/}
 
-Furthermore, you have to state in which form [list categories](../../basics/structure-of-the-it-documentation.md) (multi-valued) appear in the `.csv` file. If no categories of this type are involved in the data import, you can ignore the following options.
+De plus, vous devez indiquer sous quelle forme les [catégories de liste](../../basics/structure-of-the-it-documentation.md) (multivaluées) apparaissent dans le fichier `.csv`. Si aucune catégorie de ce type n'est impliquée dans l'importation des données, vous pouvez ignorer les options suivantes.
 
-What is striking in the example shown above is that "Client 02" appears multiple times. Since this client possesses two CPUs, two entries (one per CPU) need to be generated in the **CPU** list category. By using an additional  **line** the object receives both entries in the **CPU** category. It is not required to enter unvarying [attributes](../../glossary.md) multiple times ín further lines of the object. This means that you do not have to set inventory number "ABCD-2000" again.
+Ce qui est frappant dans l'exemple ci-dessus, c'est que "Client 02" apparaît plusieurs fois. Étant donné que ce client possède deux CPU, deux entrées (une par CPU) doivent être générées dans la catégorie de liste **CPU**. En utilisant une ligne supplémentaire, l'objet reçoit les deux entrées dans la catégorie **CPU**. Il n'est pas nécessaire d'entrer des [attributs](../../glossary.md) invariables plusieurs fois dans les lignes suivantes de l'objet. Cela signifie que vous n'avez pas à définir à nouveau le numéro d'inventaire "ABCD-2000".
 
-Alternatively, it is possible to store the single entries of list categories either in a **column** or in a field as **comma-separated** list.
+Alternativement, il est possible de stocker les entrées uniques des catégories de liste soit dans une **colonne** soit dans un champ sous forme de liste **séparée par des virgules**.
 
-If category entries are already present, you have some more options:
+Si des entrées de catégorie sont déjà présentes, vous avez plusieurs options supplémentaires :
 
--   **Create category entries only if the category is empty (create if empty)**
--   **Create category entries and keep existing ones (add)**
--   **Create category entries and replace existing ones (replace)**
+- **Créer des entrées de catégorie uniquement si la catégorie est vide (créer si vide)**
+- **Créer des entrées de catégorie et conserver celles existantes (ajouter)**
+- **Créer des entrées de catégorie et remplacer celles existantes (remplacer)**
 
-By clicking the **Prepare mapping** button you can reach the next step.
+En cliquant sur le bouton **Préparer la correspondance**, vous pouvez passer à l'étape suivante.
 
-## Define Identifying Features
+## Définir les caractéristiques d'identification
 
-As soon as you have adjusted the options you can start with mapping. First of all you can select an [**object-matching profile**](../object-identification-during-imports.md) if you want to update existing objects. You can edit this profile at a later time.
+Dès que vous avez ajusté les options, vous pouvez commencer le mappage. Tout d'abord, vous pouvez sélectionner un [**profil de correspondance d'objets**](../object-identification-during-imports.md) si vous souhaitez mettre à jour des objets existants. Vous pouvez modifier ce profil ultérieurement. 
+
+{ /* examples */ }
+
 
 [![update](../../assets/images/en/consolidate-data/csv-data-import/6-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/6-csvi.png)
 
-## Assignment of Columns to Attributes
+## Attribution des Colonnes aux Attributs {/ * exemples * /}
 
-Each column receives its own row in the mapping. This way you can link each row of the .CSV file with an attribute from _i-doit_. Click the pencil icon of the row in order to activate the input field for selecting the associated attribute. The right attribute can now be selected from the drop-down field or you can enter its name directly in the field to use the suggest feature. The input will be confirmed using the **Apply** button. Link each column this way until all allocations are complete. You can remove allocations subsequently. Columns without an allocation will be ignored during data import.
+Chaque colonne reçoit sa propre ligne dans la correspondance. De cette manière, vous pouvez lier chaque ligne du fichier .CSV à un attribut de _i-doit_. Cliquez sur l'icône du crayon de la ligne pour activer le champ de saisie permettant de sélectionner l'attribut associé. L'attribut correct peut maintenant être sélectionné dans le champ déroulant ou vous pouvez saisir son nom directement dans le champ pour utiliser la fonction de suggestion. La saisie sera confirmée en utilisant le bouton **Appliquer**. Liez chaque colonne de cette manière jusqu'à ce que toutes les allocations soient terminées. Vous pouvez supprimer des allocations ultérieurement. Les colonnes sans allocation seront ignorées lors de l'importation des données.
 
 [![attributes](../../assets/images/en/consolidate-data/csv-data-import/7-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/7-csvi.png)
 
-!!! info Mandatory details
-    Stating the object title _and_ the object type is both _mandatory_. If you defined a global object type in the data import options, you just have to link the object title with a column in the mapping. If you did not set a global object type, then a link to a column as object type will also be required. Otherwise it is not possible to start the import function. Setting the object type is carried out via its database constant (for example **C_OBJTYPE_SERVER**). Setting the name of the object type (e.g. **Server**) is **not** sufficient.
+!!! info Détails Obligatoires
+    Indiquer le titre de l'objet _et_ le type d'objet est à la fois _obligatoire_. Si vous avez défini un type d'objet global dans les options d'importation de données, vous n'avez qu'à lier le titre de l'objet à une colonne dans la correspondance. Si vous n'avez pas défini de type d'objet global, alors un lien vers une colonne en tant que type d'objet sera également requis. Sinon, il ne sera pas possible de démarrer la fonction d'importation. Le réglage du type d'objet est effectué via sa constante de base de données (par exemple **C_OBJTYPE_SERVER**). Définir le nom du type d'objet (par exemple **Serveur**) n'est **pas** suffisant.
 
-## Creating a Profile
+## Création d'un Profil {/examples}
 
-If you wish to import further .CSV files with an identical structure regarding the column allocation, you can save the configuration of the current mapping as a profile. The same applies to updating the currently used file later on and then importing it. Thus you can avoid recurrent work steps. A saved profile can be selected and loaded or be deleted in the upper area of the options.
+Si vous souhaitez importer d'autres fichiers .CSV avec une structure identique en ce qui concerne l'allocation des colonnes, vous pouvez enregistrer la configuration de la correspondance actuelle en tant que profil. Il en va de même pour la mise à jour du fichier actuellement utilisé et son import ultérieur. Ainsi, vous pouvez éviter des étapes de travail récurrentes. Un profil enregistré peut être sélectionné et chargé ou supprimé dans la partie supérieure des options.
 
-If there is an already matching profile, you can overwrite it without specifying a name.
+S'il existe déjà un profil correspondant, vous pouvez le remplacer sans spécifier de nom.
 
-## Start of Data Import
+## Début de l'Importation des Données {/examples}
 
-The level of detail for logging the CSV import can be set beneath the mapping. The more extensive the logging is, the more time and resources are needed for the import. The logging of debug messages can be helpful for possibly required troubleshooting.
+Le niveau de détail pour le journal d'importation CSV peut être défini sous la correspondance. Plus le journal est détaillé, plus de temps et de ressources sont nécessaires pour l'importation. Le journal des messages de débogage peut être utile pour le dépannage éventuellement requis.
 
-Use the **Import** button beneath the mapping to start the import. The time needed for the import depends on the extent of the information you wish to import as well as the selected level of logging.
+Utilisez le bouton **Importer** sous la correspondance pour démarrer l'importation. Le temps nécessaire pour l'importation dépend de l'étendue des informations que vous souhaitez importer ainsi que du niveau de journalisation sélectionné.
 
-Once the import has been completed, information regarding the import as well as a confirmation of its completion will be indicated. The imported or updated objects are linked directly. The content of these objects can be changed manually anytime, if needed.
+Une fois l'importation terminée, des informations concernant l'importation ainsi qu'une confirmation de son achèvement seront indiquées. Les objets importés ou mis à jour sont directement liés. Le contenu de ces objets peut être modifié manuellement à tout moment, si nécessaire.
+
 
 [![import-complete](../../assets/images/en/consolidate-data/csv-data-import/8-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/8-csvi.png)
 
-## Import of Relations (Linking of Objects)
+## Import des Relations (Liaison d'Objets)
 
-The CSV import is capable of creating links between objects ([relations](../../basics/object-relations.md)) if these are set via a category. The object that is to be linked can also be put in a column of the .CSV file while the field for linking can be set as attribute which is to be assigned. An example of a statement of the physical location in column H:
+L'importation CSV est capable de créer des liens entre des objets ([relations](../../basics/object-relations.md)) s'ils sont définis via une catégorie. L'objet à lier peut également être placé dans une colonne du fichier .CSV tandis que le champ de liaison peut être défini comme attribut à attribuer. Un exemple d'une déclaration de l'emplacement physique dans la colonne H :
 
 [![physical-location](../../assets/images/en/consolidate-data/csv-data-import/9-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/9-csvi.png)
-After selecting the field during the mapping, you can decide whether the selection of the object you are going to link is made in an unrestricted way or if there will be a restriction to an object type of your choice. Furthermore, objects which could not be found can be created automatically. Setting the object type of the linked objects is required in this case so that an object of this type will be created. For some types of links, it is possible to set the attributes in the special assignment by which the identification is made for the objects that are going to be linked. As a standard, the object title is used.
+Après avoir sélectionné le champ lors du mappage, vous pouvez décider si la sélection de l'objet que vous allez lier se fait de manière non restreinte ou s'il y aura une restriction à un type d'objet de votre choix. De plus, les objets qui n'ont pas pu être trouvés peuvent être créés automatiquement. La définition du type d'objet des objets liés est requise dans ce cas pour qu'un objet de ce type soit créé. Pour certains types de liens, il est possible de définir les attributs dans l'attribution spéciale par lesquels l'identification est faite pour les objets qui vont être liés. En standard, le titre de l'objet est utilisé.
 
 !!! info "Note"
-    The special assignment cannot be found in all linking fields. If it is not available, only the object title is used for the identification of the object that is to be updated.
+    L'attribution spéciale ne peut pas être trouvée dans tous les champs de liaison. Si elle n'est pas disponible, seul le titre de l'objet est utilisé pour l'identification de l'objet à mettre à jour.
 
 [![identification-object](../../assets/images/en/consolidate-data/csv-data-import/10-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/10-csvi.png)
 
-## Import of Values with Units
+## Importation de valeurs avec unités
 
-Some attributes contain values and units. You have to enter them separately in the corresponding forms of the Web GUI. For example, in the category **Monitor** the **Display** attribute consists of the field for the value and the field for the unit (inch, cm etc.). In order to import this attribute analogous via CSV file import, value and unit have to be together in one cell. Examples:
+Certains attributs contiennent des valeurs et des unités. Vous devez les saisir séparément dans les formulaires correspondants de l'interface Web. Par exemple, dans la catégorie **Moniteur**, l'attribut **Affichage** se compose du champ pour la valeur et du champ pour l'unité (pouce, cm, etc.). Afin d'importer cet attribut de manière analogue via l'importation de fichiers CSV, la valeur et l'unité doivent être ensemble dans une seule cellule. Exemples :
 
-| Category | Attribute | Assignment with CSV file import | Cell in CSV file |
+| Catégorie | Attribut | Attribution avec l'importation de fichiers CSV | Cellule dans le fichier CSV |
 | --- | --- | --- | --- |
-| **CPU** | **CPU frequency** | **CPU frequency (unit)** | 2.5 GHz |
-| **Local mass storage → Device** | **Capacity** | **Capacity (unit)** | 4 TB |
-| **Monitor** | **Display** | **Display (unit)** | 24 Inch |
+| **CPU** | **Fréquence du CPU** | **Fréquence du CPU (unité)** | 2,5 GHz |
+| **Stockage de masse local → Appareil** | **Capacité** | **Capacité (unité)** | 4 To |
+| **Moniteur** | **Affichage** | **Affichage (unité)** | 24 pouces |
 
-## Automated Import of CSV Files
+## Import Automatisé de Fichiers CSV
 
-Importing CSV files is not only possible manually via the user interface, but can also be implemented using the i-doit Console. This allows automating the import, which can be used to update information on a regular basis. A description of all parameters can be found in the corresponding article including an example under the [import-csv](../../automation-and-integration/cli/console/options-and-parameters-cli.md#import-csv) option. Furthermore, the ID of a previously created import profile can be specified in the call. These ID can be read out with the [import-csvprofiles](../../automation-and-integration/cli/console/options-and-parameters-cli.md#import-csvprofiles) option. The use of this option is also described in the mentioned article.
+L'importation de fichiers CSV n'est pas seulement possible manuellement via l'interface utilisateur, mais peut également être mise en œuvre en utilisant la Console i-doit. Cela permet d'automatiser l'importation, ce qui peut être utilisé pour mettre à jour les informations régulièrement. Une description de tous les paramètres peut être trouvée dans l'article correspondant, y compris un exemple sous l'option [import-csv](../../automation-and-integration/cli/console/options-and-parameters-cli.md#import-csv). De plus, l'ID d'un profil d'importation précédemment créé peut être spécifié dans l'appel. Ces ID peuvent être lus avec l'option [import-csvprofiles](../../automation-and-integration/cli/console/options-and-parameters-cli.md#import-csvprofiles). L'utilisation de cette option est également décrite dans l'article mentionné. {/examples}

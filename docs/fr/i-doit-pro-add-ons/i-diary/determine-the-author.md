@@ -1,34 +1,34 @@
-# i-diary: Determine the author
+# i-diary: Déterminer l'auteur
 
-There are three ways to select an author:
+Il existe trois façons de sélectionner un auteur :
 
-Automatically discover an author
---------------------------------
+Découverte automatique d'un auteur
+----------------------------------
 
-If no author has been saved and the user starts the application, the application tries to recognize the author automatically.
+Si aucun auteur n'a été enregistré et que l'utilisateur lance l'application, l'application tentera de reconnaître automatiquement l'auteur.
 
-This will be done through the following process:
+Cela se fera selon le processus suivant :
 
-When a “user name” is specified in the settings, the application will check whether the person matches a person object in i-doit. If this is the case the ID will be saved.
+Lorsqu'un "nom d'utilisateur" est spécifié dans les paramètres, l'application vérifiera si la personne correspond à un objet personne dans i-doit. Si tel est le cas, l'ID sera enregistré.
 
-[![user name](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/1-dta.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/1-dta.png)
+[![nom d'utilisateur](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/1-dta.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/1-dta.png)
 
-Set author manually
--------------------
+Définir l'auteur manuellement
+-----------------------------
 
-The user can manually select an author for a new entry with the following options:
+L'utilisateur peut sélectionner manuellement un auteur pour une nouvelle entrée avec les options suivantes :
 
-*   The user can write the object ID of the author in the configuration file. This setting takes effect when the application is restarted.
+*   L'utilisateur peut écrire l'ID de l'objet de l'auteur dans le fichier de configuration. Ce paramètre prend effet lorsque l'application est redémarrée.
 
-[![Set author manually](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/2-dta.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/2-dta.png)
+[![Définir l'auteur manuellement](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/2-dta.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-author/2-dta.png)
 
-*   The user can select a person from a searchable list. This list is divided into “Contacts” (object relations from the category “Contact assignment”) and “Persons” (objects of the type “Persons”).
+*   L'utilisateur peut sélectionner une personne dans une liste consultable. Cette liste est divisée en "Contacts" (relations d'objet de la catégorie "Affectation de contact") et "Personnes" (objets de type "Personnes").
 
-The titles of the objects are displayed in the list. When the user selects an object, its ID is saved.
+Les titres des objets sont affichés dans la liste. Lorsque l'utilisateur sélectionne un objet, son ID est enregistré.
 
-Reuse author
-------------
+Réutilisation de l'auteur
+-------------------------
 
-When the user starts the application, the already saved author is preselected for a new entry.
+Lorsque l'utilisateur démarre l'application, l'auteur déjà enregistré est présélectionné pour une nouvelle entrée.
 
-The application checks whether the object ID in the configuration file is valid, based on the ID, the application retrieves the object title to display it.
+L'application vérifie si l'ID de l'objet dans le fichier de configuration est valide, en fonction de l'ID, l'application récupère le titre de l'objet pour l'afficher.

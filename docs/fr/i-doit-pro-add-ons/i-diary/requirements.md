@@ -1,8 +1,10 @@
-# i-diary: Requirements
+# i-diary: Exigences
 
-The following requirements are necessary before installing or using the i-diary.
+Les exigences suivantes sont nécessaires avant d'installer ou d'utiliser i-diary.
 
-*   A running instance of [i-doit](https://www.i-doit.com/) pro, version 1.14 or higher
-*   i-doit [API add-on](https://www.i-doit.com/en/i-doit/add-ons/api-add-on/), version 1.10.4 or higher
-*   Windows 7 or 10
-*   .Net framework version 4.6.2 or higher
+*   Une instance en cours d'exécution de [i-doit](https://www.i-doit.com/) pro, version 1.14 ou supérieure
+*   Add-on [API i-doit](https://www.i-doit.com/en/i-doit/add-ons/api-add-on/), version 1.10.4 ou supérieure
+*   Windows 7 ou 10
+*   Version du framework .Net 4.6.2 ou supérieure
+
+{/*examples*/}

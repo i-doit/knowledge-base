@@ -1,65 +1,67 @@
-# Import i-doit Appliance into a Hyper-V Environment
+# Importez l'appliance i-doit dans un environnement Hyper-V
 
-We deliver our appliance in OVF format together with a virtual VMDK hard disk image. To import this into a Hyper-V environment, the virtual hard disk must be converted from the VMDK format into the VHD format in the first step.
+Nous livrons notre appliance au format OVF avec une image de disque dur virtuel VMDK. Pour importer ceci dans un environnement Hyper-V, le disque dur virtuel doit être converti du format VMDK au format VHD en première étape.
 
-For this you can use the free tool "Starwind Converter" which you can download from the following download link:
+Pour cela, vous pouvez utiliser l'outil gratuit "Starwind Converter" que vous pouvez télécharger depuis le lien de téléchargement suivant :
 
 [https://www.starwindsoftware.com/tmplink/starwindconverter.exe](https://www.starwindsoftware.com/tmplink/starwindconverter.exe)
 
-We have already downloaded the i-doit appliance and unpacked it under `c:\\i-doit_appliance`:
+Nous avons déjà téléchargé l'appliance i-doit et l'avons décompressée sous `c:\\i-doit_appliance` :
 
-[![Folder coontent](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/1-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/1-hvi.png)
+[![Contenu du dossier](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/1-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/1-hvi.png)
 
-After installing the ==Starwind Converter==, we start it and select "Local File" as the source and go to "Next" :
+Après avoir installé le ==Starwind Converter==, nous le démarrons et sélectionnons "Fichier local" comme source et allons sur "Suivant" :
 
-[![Select dest image](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/2-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/2-hvi.png)
+[![Sélectionner l'image de destination](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/2-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/2-hvi.png)
 
-Now we select the VMDK image from the ZIP file of the i-doit appliance and go to "Next":
+Maintenant, nous sélectionnons l'image VMDK du fichier ZIP de l'appliance i-doit et allons sur "Suivant" :
 
-[![Select zip](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/3-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/3-hvi.png)
+[![Sélectionner le fichier ZIP](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/3-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/3-hvi.png)
 
-After that we can choose the destination format for the Virtual Harddrive and go to "Next":
+Ensuite, nous pouvons choisir le format de destination pour le disque dur virtuel et allons sur "Suivant" :
 
-[![Select destination format](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/4-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/4-hvi.png)
+[![Sélectionner le format de destination](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/4-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/4-hvi.png)
 
-In the next step we can select the destination for the new VDH disk and its folder and go to "Next":
+À l'étape suivante, nous pouvons sélectionner la destination pour le nouveau disque VDH et son dossier et allons sur "Suivant" :
 
-[![Select vhd](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/5-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/5-hvi.png)
+[![Sélectionner vhd](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/5-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/5-hvi.png)
 
-Now the conversion takes place and after completion we can exit the program:
+Maintenant la conversion a lieu et après achèvement, nous pouvons quitter le programme :
 
-[![Completion](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/6-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/6-hvi.png)
+[![Achèvement](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/6-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/6-hvi.png)
 
-In the next step we can integrate the converted disk into a new Hyper-V machine.<br>
-To do this, we start the Hyper-V New Virtual Machine Wizard and specify the folder to the newly created VDH:
+À l'étape suivante, nous pouvons intégrer le disque converti dans une nouvelle machine Hyper-V.<br>
+Pour ce faire, nous lançons l'Assistant Nouvelle Machine Virtuelle Hyper-V et spécifions le dossier du VDH nouvellement créé :
 
-[![Select Name and path](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/7-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/1-hvi.png)
+[![Sélectionner le nom et le chemin](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/7-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/1-hvi.png)
 
-After that we choose the generation for the new virtual machine:
+Ensuite, nous choisissons la génération pour la nouvelle machine virtuelle :
 
-[![Select generation](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/8-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/8-hvi.png)
+[![Sélectionner la génération](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/8-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/8-hvi.png)
 
-Give this Sufficient memory ([System Requirements](../system-requirements.md)) :
+Attribuez une mémoire suffisante ([Configuration système](../system-requirements.md)) :
 
-[![Configure memory](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/9-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/9-hvi.png)
+[![Configurer la mémoire](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/9-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/9-hvi.png)
 
-Assign the corresponding network:
+Attribuez le réseau correspondant :
 
-[![Network assignment](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/10-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/10-hvi.png)
+[![Attribution du réseau](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/10-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/10-hvi.png)
 
-And in this step connect the converted hard disk image:
+Et à cette étape, connectez l'image du disque dur converti :
 
-[![Virtual hdd configuration](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/11-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/11-hvi.png)
+[![Configuration du disque dur virtuel](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/11-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/11-hvi.png)
 
-After that we can finish the setup and start the virtual machine:
+Après cela, nous pouvons terminer la configuration et démarrer la machine virtuelle :
 
-[![Finish](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/12-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/12-hvi.png)
+[![Terminer](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/12-hvi.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/appliance-hyper-v-import/12-hvi.png)
 
-The virtual machine should now start properly and you should be able to log in with the supplied user data:
+La machine virtuelle devrait maintenant démarrer correctement et vous devriez pouvoir vous connecter avec les données utilisateur fournies :
 
 |     |     |     |
 | --- | --- | --- |
-| **Login** | **Username** | **Passwort** |
-| Console Login | idoitadm | idoit |
-| i-doit Login | admin | admin |
-| Admin Center Login | admin | idoit |
+| **Connexion** | **Nom d'utilisateur** | **Mot de passe** |
+| Connexion Console | idoitadm | idoit |
+| Connexion i-doit | admin | admin |
+| Connexion Centre d'administration | admin | idoit |
+
+{/*examples*/}

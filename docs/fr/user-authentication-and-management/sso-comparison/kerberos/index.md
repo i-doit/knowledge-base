@@ -1,51 +1,53 @@
-# Single Sign On (SSO)
+# Authentification unique (SSO)
 
-The authentication via Single Sign On (SSO) is well suited for an automated sign on to i-doit within an intranet.
+L'authentification via l'Authentification unique (SSO) est bien adaptée pour une connexion automatisée à i-doit au sein d'un intranet.
 
-!!! info "This article was last checked for i-doit version 1.17.2"
+!!! info "Cet article a été vérifié pour la version 1.17.2 de i-doit"
 
-!!! info "This tutorial does not work anymore with Debian 11 because the Apache2 module mod_auth_kerb is not available anymore."
+!!! info "Ce tutoriel ne fonctionne plus avec Debian 11 car le module Apache2 mod_auth_kerb n'est plus disponible."
 
-    You should use [GSSAPI](../gssapi/index.md) instead.
+    Vous devriez utiliser [GSSAPI](../gssapi/index.md) à la place.
 
-Requirements and Assumptions
+Exigences et hypothèses
 
-The following conditions are the basis of this article:
+Les conditions suivantes sont à la base de cet article :
 
-*   i-doit is [installed](../../../installation/manual-installation/setup.md) on a GNU/Linux system
-*   An [Active Directory (AD)](../../ldap-directory/index.md) on Windows Server 2008/2012 is used for the authentication.
+*   i-doit est [installé](../../../installation/manual-installation/setup.md) sur un système GNU/Linux
+*   Un [Active Directory (AD)](../../ldap-directory/index.md) sur Windows Server 2008/2012 est utilisé pour l'authentification.
 
-This article describes how Single Sign On (SSO) is set up in an Apache web server with auth_kerb.
+Cet article décrit comment configurer l'Authentification unique (SSO) dans un serveur web Apache avec auth_kerb.
 
-!!! attention "Case sensitivity"
-    Special attention needs to be paid to upper and lower case letters in the configuration.
+!!! attention "Sensibilité à la casse"
+    Une attention particulière doit être portée aux lettres majuscules et minuscules dans la configuration.
 
-Configure Active Directory (AD)
+Configurer Active Directory (AD)
 -------------------------------
 
-In AD a user is generated for the SSO access. Example:
+Dans AD, un utilisateur est généré pour l'accès SSO. Exemple : 
 
-*   Server name of i-doit: **idoit.mydomain.local**
-*   AD domain: **addomain.local**
-*   SSO user: **ssouser**
-*   Password: **password**
+{ /* examples */ }
 
-A keytab file is generated on an AD domain controller using the admin user with help of the ktpass utilities.
+*   Nom du serveur i-doit : **idoit.mydomain.local**
+*   Domaine AD : **addomain.local**
+*   Utilisateur SSO : **ssouser**
+*   Mot de passe : **password**
+
+Un fichier keytab est généré sur un contrôleur de domaine AD en utilisant l'utilisateur admin avec l'aide des utilitaires ktpass.
 
 ```shell
 ktpass -princ HTTP/idoit.mydomain.local@ADDOMAIN.LOCAL -mapuser ssouser@ADDOMAIN.LOCAL -crypto RC4-HMAC-NT -ptype KRB5_NT_PRINCIPAL -pass passwort -out c:\krb5.keytab
 ```
 
-The generated krb5.keytab file is then copied to the _i-doit_ server at /etc/krb5.keytab.
+Le fichier krb5.keytab généré est ensuite copié sur le serveur _i-doit_ à /etc/krb5.keytab.
 
-Afterwards, **Active Directory Users and Computers** is opened (adsiedit.msc). At **View** the **Advanced Features** option is activated. Now the SSO user object is opened. Search for the values **userPrincipalName** and servicePrincipalName in the **Attribute Editor** tab. In both cases **exactly one entry** with the value **HTTP/idoit.mydomain.local** needs to be set.
+Ensuite, ouvrez **Utilisateurs et ordinateurs Active Directory** (adsiedit.msc). Dans **Affichage**, activez l'option **Fonctionnalités avancées**. Maintenant, ouvrez l'objet utilisateur SSO. Recherchez les valeurs **userPrincipalName** et servicePrincipalName dans l'onglet **Éditeur d'attributs**. Dans les deux cas, **exactement une entrée** avec la valeur **HTTP/idoit.mydomain.local** doit être définie.
 
-Configure Apache Webserver
---------------------------
+Configurer le serveur Web Apache
+-------------------------------
 
-The module auth_kerb is required for the Apache web server.
+Le module auth_kerb est requis pour le serveur web Apache.
 
-Debian GNU/Linux or Ubuntu Linux:
+Debian GNU/Linux ou Ubuntu Linux:
 
 ```shell
 sudo apt install libapache2-mod-auth-kerb
@@ -57,13 +59,13 @@ Suse Linux Enterprise Server (SLES):
 sudo zypper in apache2-mod_auth_kerb
 ```
 
-Activate the module:
+Activer le module:
 
 ```shell
 sudo a2enmod auth_kerb
 ```
 
-Now the configuration for Kerberos will be written (replace dc.mydomain.local by the domain controller):
+Maintenant, la configuration pour Kerberos sera écrite (remplacez dc.mydomain.local par le contrôleur de domaine):
 
 ```shell
     # cat /etc/krb5.conf
@@ -82,20 +84,20 @@ Now the configuration for Kerberos will be written (replace dc.mydomain.local by
     mydomain.local = ADDOMAIN.LOCAL
 ```
 
-Execute the following command to test the configuration:
+Exécutez la commande suivante pour tester la configuration:
 
 ```shell
 kinit ssouser@ADDOMAIN.LOCAL
 ```
 
-The password of the SSO user is requested. With the command
+Le mot de passe de l'utilisateur SSO est demandé. Avec la commande
 
 ```shell
 klist
 ```
-you can check whether or not a valid ticket exists.
+vous pouvez vérifier si un ticket valide existe ou non.
 
-Subsequently, the Apache configuration for the VHost at which _i-doit_ is accessible is supplemented within the Directory directive:
+Ensuite, la configuration Apache pour le VHost auquel _i-doit_ est accessible est complétée dans la directive Directory:
 
 ```shell
     <Directory "/path/to/i-doit/">
@@ -109,40 +111,42 @@ Subsequently, the Apache configuration for the VHost at which _i-doit_ is access
     </Directory>
 ```
 
-In order to apply the changes the Apache web server needs to be restarted:
+Pour appliquer les modifications, le serveur web Apache doit être redémarré:
 
-### Debian GNU/Linux or Ubuntu or Suse Linux Enterprise Server (SLES):
+### Debian GNU/Linux ou Ubuntu ou Suse Linux Enterprise Server (SLES):
 
 ```shell
 sudo systemctl restart apache2.service
 ```
 
-Configure i-doit
+Configurer i-doit
 ----------------
 
-From version 1.5 on SSO can be configured via the web GUI of i-doit. The corresponding settings can be found at **Administration → System settings**. There **SSO** needs to be activated.
+À partir de la version 1.5, le SSO peut être configuré via l'interface web d'i-doit. Les paramètres correspondants se trouvent dans **Administration → Paramètres système**. **SSO** doit être activé ici.
 
-Browser Client-side Configuration
----------------------------------
+Configuration côté client du navigateur
+-------------------------------------------
 
-Lastly, each browser needs to be configured to automatically use SSO.
+Enfin, chaque navigateur doit être configuré pour utiliser automatiquement le SSO.
 
-### Microsoft Internet Explorer (IE)
+### Microsoft Internet Explorer (IE) {/ * exemples * /}
 
-The _i-doit_ server needs to be added to the local intranet sites in the IE settings. After this, the item **Automatic logon with current username and password** has to be enabled under **User Authentication** within the **Custom level** option. Furthermore, make sure that you activate the option **Integrated Windowa authentication** in the **Advanced** tab of the **Internet options**.
+Le serveur _i-doit_ doit être ajouté aux sites intranet locaux dans les paramètres d'IE. Après cela, l'élément **Connexion automatique avec le nom d'utilisateur et le mot de passe actuels** doit être activé sous **Authentification de l'utilisateur** dans l'option **Niveau personnalisé**. De plus, assurez-vous d'activer l'option **Authentification Windows intégrée** dans l'onglet **Avancé** des **Options Internet**.
 
-### Mozilla Firefox and Google Chrome
+### Mozilla Firefox et Google Chrome {/ * exemples * /}
 
-SSO is also possible for these browsers. Extensive information about the configuration can be found on the internet. You can find an example for Firefox [here](https://superuser.com/questions/664656/how-to-configure-firefox-for-ntlm-sso-single-sign-on).
+Le SSO est également possible pour ces navigateurs. Des informations détaillées sur la configuration peuvent être trouvées sur Internet. Vous pouvez trouver un exemple pour Firefox [ici](https://superuser.com/questions/664656/how-to-configure-firefox-for-ntlm-sso-single-sign-on).
 
-Troubleshooting
----------------
+Dépannage
+----------
 
-Should you have problems regarding the authentication the following questions and hints may be of help:
+Si vous rencontrez des problèmes concernant l'authentification, les questions et les indications suivantes peuvent vous aider :
 
-*   Compare the time settings in Linux and Windows DC. Are they the same?
-*   In most cases the server is only accessible via the full FQDN i-doit.mydomain.local.
-*   Does the _i-doit_ server have access to the domain controller? Is there a firewall between these two?
-*   Is the SSO domain user unlocked?
-*   Can the DC be resolved per DNS from the _i-doit_ server?
-*   Does the web server have read permission for the krb5.keytab file?
+*   Comparez les paramètres de temps dans Linux et Windows DC. Sont-ils les mêmes ?
+*   Dans la plupart des cas, le serveur n'est accessible que via le FQDN complet i-doit.mydomain.local.
+*   Le serveur _i-doit_ a-t-il accès au contrôleur de domaine ? Y a-t-il un pare-feu entre ces deux éléments ?
+*   L'utilisateur de domaine SSO est-il déverrouillé ?
+*   Le DC peut-il être résolu par DNS à partir du serveur _i-doit_ ?
+*   Le serveur web a-t-il l'autorisation de lecture pour le fichier krb5.keytab ?
+
+I am ready to start translating the Markdown content into French. Please paste the content you would like me to translate.

@@ -1,77 +1,77 @@
-# Multi-Tenants
+# Multi-Locataires {/examples}
 
-_i-doit_ is capable of managing multiple tenants. This means that one installation can map one or more independent [IT documentations](../glossary.md). The use cases are diverse: from sub-organizations which need to document separately of each other to system houses, which document customer IT in dedicated instances, to hosting providers which provide _i-doit_ as a service.
+_i-doit_ est capable de gérer plusieurs locataires. Cela signifie qu'une installation peut mapper une ou plusieurs [documentations informatiques](../glossary.md) indépendantes. Les cas d'utilisation sont divers : des sous-organisations qui ont besoin de documenter séparément les unes des autres aux sociétés de services informatiques, qui documentent l'informatique client dans des instances dédiées, aux fournisseurs d'hébergement qui fournissent _i-doit_ en tant que service.
 
-!!! info "Licensing"
+!!! info "Licence"
 
-    For the capability to operate one installation with multiple tenants a special license is required. More information is available [on request](https://www.i-doit.com/en/contact/).
+    Pour la capacité de faire fonctionner une installation avec plusieurs locataires, une licence spéciale est requise. Plus d'informations sont disponibles [sur demande](https://www.i-doit.com/en/contact/).
 
-Background
+Contexte
 ----------
 
-A separate database exists in _i-doit_ for each tenant. In this database all contents as well as configurations are saved. This way, various completely different IT documentations can be maintained in one instance of _i-doit_. An exchange between tenants is not intended. This strict separation is also the reason for the [admin center](./admin-center.md) being available as a higher level administration instance.
+Une base de données distincte existe dans _i-doit_ pour chaque locataire. Dans cette base de données, tous les contenus ainsi que les configurations sont enregistrés. De cette manière, diverses documentations informatiques complètement différentes peuvent être maintenues dans une seule instance de _i-doit_. Un échange entre locataires n'est pas prévu. Cette séparation stricte est également la raison pour laquelle le [centre d'administration](./admin-center.md) est disponible en tant qu'instance d'administration de plus haut niveau.
 
 Configuration
 -------------
 
-The administration of tenants is done in the admin center. All presently created tenants are listed in the **Tenants** section.
+L'administration des locataires se fait dans le centre d'administration. Tous les locataires actuellement créés sont répertoriés dans la section **Locataires**.
 
 [![Configuration](../assets/images/en/system-administration/multi-tenants/1-mt.png)](../assets/images/en/system-administration/multi-tenants/1-mt.png)
 
-Above the listing various options are available:
+Au-dessus de la liste, diverses options sont disponibles :
 
--   **Add new tenant**: create a new tenant
--   **Edit**: configure an existing tenant
--   **Activate**: activate an existing tenant, if it was deactivated before
--   **Deactivate**: deactivate an existing tenant, if it was activated before
--   **Remove**: remove an existing tenant **irreversibly**
+-   **Ajouter un nouveau locataire** : créer un nouveau locataire
+-   **Éditer** : configurer un locataire existant
+-   **Activer** : activer un locataire existant, s'il était désactivé auparavant
+-   **Désactiver** : désactiver un locataire existant, s'il était activé auparavant
+-   **Supprimer** : supprimer un locataire existant de manière **irréversible**
 
-A tenant is selected via the checkboxes for the configuration. For (de-)activating or removing one or more tenants are selected.
+Un locataire est sélectionné via les cases à cocher pour la configuration. Pour activer ou désactiver ou supprimer un ou plusieurs locataires, ils sont sélectionnés.
 
 [![Configuration](../assets/images/en/system-administration/multi-tenants/2-mt.png)](../assets/images/en/system-administration/multi-tenants/2-mt.png)
 
-For each tenant you need to set some properties (mandatory fields):
+Pour chaque locataire, vous devez définir certaines propriétés (champs obligatoires):
 
--   **Tenant GUI title**: name of the tenant (is shown at the login, for example)
--   **Description**: apart from its informal character this description has no effect on the functionality
--   **Sort value**: enter the sorting order as integer (the lower the value the higher is the tenant in the hierarchy)
--   **Cache dir**: much data is temporarily saved in _i-doit_ due to performance reasons. For each tenant a dedicated cache folder is created in the **temp/** folder in the installation path of _i-doit_.
--   **MySQL settings**: here it is useful to name the database name with the prefix **idoit_**. The first tenant receives the database name **idoit_data** in the [installation process](../installation/manual-installation/setup.md) by default.
+-   **Titre de l'interface utilisateur du locataire**: nom du locataire (est affiché lors de la connexion, par exemple)
+-   **Description**: en dehors de son caractère informel, cette description n'a aucun effet sur la fonctionnalité
+-   **Valeur de tri**: entrez l'ordre de tri en tant qu'entier (plus la valeur est basse, plus le locataire est élevé dans la hiérarchie)
+-   **Répertoire de cache**: de nombreuses données sont temporairement enregistrées dans _i-doit_ pour des raisons de performance. Pour chaque locataire, un dossier de cache dédié est créé dans le dossier **temp/** dans le chemin d'installation d'_i-doit_.
+-   **Paramètres MySQL**: il est utile de nommer la base de données avec le préfixe **idoit_**. Le premier locataire reçoit par défaut le nom de base de données **idoit_data** dans le [processus d'installation](../installation/manual-installation/setup.md).
 
-Object Limitation per Tenant
+Limitation d'objets par locataire
 ----------------------------
 
-Provided you use a multi-tenant license, you can set the maximum number of license required objects that are allowed to be documented for each tenant. This is done in the admin center at **Licenses**. The parameter **Object limit** (integer) exists there for each tenant.
+Si vous utilisez une licence multi-locataire, vous pouvez définir le nombre maximum d'objets nécessaires sous licence qui sont autorisés à être documentés pour chaque locataire. Cela se fait dans le centre d'administration à **Licences**. Le paramètre **Limite d'objets** (entier) existe là pour chaque locataire.
 
-[![Object Limitation per Tenant](../assets/images/en/system-administration/multi-tenants/3-mt.png)](../assets/images/en/system-administration/multi-tenants/3-mt.png)
+[![Limitation d'objets par locataire](../assets/images/en/system-administration/multi-tenants/3-mt.png)](../assets/images/en/system-administration/multi-tenants/3-mt.png)
 
-Add-ons per Tenant
+Extensions par locataire
 ------------------
 
-In the installation/update process of [add-ons](../i-doit-pro-add-ons/index.md) you can choose whether this action shall be carried out for a single tenant or for all tenants. All installed add-ons are displayed per tenant in the Admin Center in **Modules**. They can be (de-)activated per tenant. The deletion of add-ons takes place for all tenants.
+Dans le processus d'installation/mise à jour des [extensions](../i-doit-pro-add-ons/index.md) vous pouvez choisir si cette action doit être effectuée pour un seul locataire ou pour tous les locataires. Toutes les extensions installées sont affichées par locataire dans le Centre d'administration dans **Modules**. Elles peuvent être (dés)activées par locataire. La suppression des extensions se fait pour tous les locataires.
 
-[![Add-ons per Tenant](../assets/images/en/system-administration/multi-tenants/4-mt.png)](../assets/images/en/system-administration/multi-tenants/4-mt.png)
+[![Extensions par locataire](../assets/images/en/system-administration/multi-tenants/4-mt.png)](../assets/images/en/system-administration/multi-tenants/4-mt.png)
 
-!!! attention "i-doit update"
+!!! attention "Mise à jour d'i-doit"
 
-    In the [update process of i-doit](../maintenance-and-operation/update.md) a prompt will ask which tenant databases shall be updated. All of them are marked as selected by default. It is strongly recommended to take all tenant databases into account when updating. A deviation only applies in specific and well justified cases (by the support, for example).
+    Dans le [processus de mise à jour d'i-doit](../maintenance-and-operation/update.md) une invite demandera quelles bases de données de locataires doivent être mises à jour. Toutes sont marquées comme sélectionnées par défaut. Il est fortement recommandé de prendre en compte toutes les bases de données de locataires lors de la mise à jour. Une déviation s'applique uniquement dans des cas spécifiques et bien justifiés (par le support, par exemple).
 
-User Administration
+Administration des utilisateurs
 -------------------
 
-The [user administration](../basics/initial-login.md) is configured per tenant, which means that person objects with login data can vary depending on the tenant.
+L'[administration des utilisateurs](../basics/initial-login.md) est configurée par locataire, ce qui signifie que les objets de personne avec des données de connexion peuvent varier en fonction du locataire.
 
-At the login screen you are asked which tenant you want to sign in if multiple tenants are active. However, this only happens if the credentials of the user are the same for multiple tenants. Otherwise, the tenant for which the credentials are valid is loaded automatically .
+À l'écran de connexion, on vous demande dans quel locataire vous souhaitez vous connecter si plusieurs locataires sont actifs. Cependant, cela se produit uniquement si les informations d'identification de l'utilisateur sont les mêmes pour plusieurs locataires. Sinon, le locataire pour lequel les informations d'identification sont valides est chargé automatiquement.
 
-[![User Administration](../assets/images/en/system-administration/multi-tenants/5-mt.png)](../assets/images/en/system-administration/multi-tenants/5-mt.png)
+[![Administration des utilisateurs](../assets/images/en/system-administration/multi-tenants/5-mt.png)](../assets/images/en/system-administration/multi-tenants/5-mt.png)
 
-If a [LDAP folder/Active Directory (AD)](../user-authentication-and-management/ldap-directory/index.md) is tied to the authentication and authorization, then the configured servers will be queried one after another while logging in, to check whether the credentials are valid. After this, the tenants for which these credentials are valid are determined (see above).
+Si un [dossier LDAP/Active Directory (AD)](../user-authentication-and-management/ldap-directory/index.md) est lié à l'authentification et à l'autorisation, alors les serveurs configurés seront interrogés les uns après les autres lors de la connexion, pour vérifier si les informations d'identification sont valides. Ensuite, les locataires pour lesquels ces informations d'identification sont valides sont déterminés (voir ci-dessus).
 
-If [Single Sign On (SSO)](../user-authentication-and-management/sso-comparison/index.md) is active, a tenant can be chosen as default. This is done at **Administration → System settings → Single Sign On → Default tenant**. When starting _i-doit_, the user is automatically tied to this tenant if the credentials are correct.
+Si [l'authentification unique (SSO)](../user-authentication-and-management/sso-comparison/index.md) est active, un locataire peut être choisi par défaut. Cela se fait à **Administration → Paramètres système → Authentification unique → Locataire par défaut**. Lors du démarrage d'_i-doit_, l'utilisateur est automatiquement lié à ce locataire si les informations d'identification sont correctes.
 
-Switch Tenants
+Changer de locataire
 --------------
 
-You can switch between tenants without having to log out first. The [main navigation bar](../basics/structure-of-the-it-documentation.md) displays the user and the tenant you are currently using. Hovering above the tenant name with your cursor shows a drop-down menu. Here the other tenants are selectable. Clicking on one will sign off the user from the current tenant and sign him in automatically to the new one. This however only works if the credentials of the user are the same in both tenants.
+Vous pouvez passer d'un locataire à un autre sans avoir à vous déconnecter au préalable. La [barre de navigation principale](../basics/structure-of-the-it-documentation.md) affiche l'utilisateur et le locataire que vous utilisez actuellement. En survolant le nom du locataire avec votre curseur, un menu déroulant s'affiche. Ici, les autres locataires sont sélectionnables. En cliquant sur l'un d'eux, l'utilisateur est déconnecté du locataire actuel et connecté automatiquement au nouveau. Cependant, cela ne fonctionne que si les informations d'identification de l'utilisateur sont les mêmes dans les deux locataires.
 
-[![Switch Tenants](../assets/images/en/system-administration/multi-tenants/6-mt.png)](../assets/images/en/system-administration/multi-tenants/6-mt.png)
+[![Changer de locataire](../assets/images/en/system-administration/multi-tenants/6-mt.png)](../assets/images/en/system-administration/multi-tenants/6-mt.png)

@@ -1,10 +1,10 @@
-# i-diary: Basic Usage
+# i-diary: Utilisation de base
 
-Creating a new entry
+Création d'une nouvelle entrée
 --------------------
 
-The user can create a new entry, for this purpose the following steps are taken:
+L'utilisateur peut créer une nouvelle entrée, pour cela les étapes suivantes sont effectuées :
 
-*   The author, date, and entry must be filled in and valid.
-*   For further entries, the selection of author and date persists until the application is closed.
-*   When the user saves an entry, the list of entries is updated.
+*   L'auteur, la date et l'entrée doivent être remplis et valides.
+*   Pour les entrées ultérieures, la sélection de l'auteur et de la date persiste jusqu'à ce que l'application soit fermée.
+*   Lorsque l'utilisateur enregistre une entrée, la liste des entrées est mise à jour.

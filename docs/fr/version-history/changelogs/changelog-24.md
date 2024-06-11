@@ -1,76 +1,78 @@
-# Changelog 24
+# Journal des modifications 24
 
-[Task][Code (Internal)]                                 Unify uploaded file-paths for windows and other operating systems<br> 
-[Task][Relations]                                       Improve field size in "Administration > User settings > Presentation"<br> 
-[Task][LDAP]                                            Trim LDAP configuration inputs to prevent errors<br> 
-[Task][JDisc]                                           Implement new JDisc profile option to use hostname as object title (instead of FQDN)<br> 
-[Improvement][JDisc]                                    JDISC Profile Ex and Import<br> 
-[Improvement][Code (Internal)]                          Support MariaDB 10.6.X<br> 
-[Bug][List editing]                                     Improved layout for list edit to view more entries at the same time on the screen<br> 
-[Bug][List editing]                                     Sorting Cabling > Connectors in Listedit<br> 
-[Bug][List editing]                                     Position in rack is not editable by the list edit<br> 
-[Bug][List editing]                                     List Edit should add entries and values when values for all is added<br> 
-[Bug][List editing]                                     Positioning objects in a rack via multiedit shows different results<br> 
-[Bug][Report-Manager]                                   Attributes "target schema" and "software runs on" is not displayable in report context<br> 
-[Bug][Report-Manager]                                   subcnd for Service assignment category attribute Service is missing<br> 
-[Bug][Report-Manager]                                   Operators missing for operating system>version number in report conditions<br> 
-[Bug][Report-Manager]                                   Enter button causes unpredictable events<br> 
-[Bug][Categories]                                       Adding a model in category model not possible<br> 
-[Bug][Categories]                                       Free IPv6 addresses are not shown correctly<br> 
-[Bug][Categories]                                       Filter in object lists is not fully shown and cut off<br> 
-[Bug][Categories]                                       Custom category on overview page causes the last category to disappear from the overview page<br> 
-[Bug][Categories]                                       Category lists - Make all attributes selectable (part 2)<br> 
-[Bug][Categories]                                       Reminder warranty not displayed when almost running out<br> 
-[Bug][Categories]                                       Duplicate of workplace has identical workplace components<br> 
-[Bug][Categories]                                       Assigned clusters displays empty site<br> 
-[Bug][Categories]                                       Placeholder %OBJTITLE% is not working in category accounting > Inventory number<br> 
-[Bug][Categories]                                       Placeholder insert wrong data when used in template as title<br> 
-[Bug][Categories]                                       Attribute visibility not working for General > Description in overview<br> 
-[Bug][Categories]                                       Attribute visibility not working for Masterdata > Description<br> 
-[Bug][Categories]                                       No selection possible for no selection in the category Monitor (Pivot and Speaker)<br> 
-[Bug][Categories]                                       Image order cannot be saved<br> 
-[Bug][Categories]                                       Object counter %COUNTER% not counting per object type<br> 
-[Bug][Code (Internal)]                                  Data leak when using SQL Injection to manipulate cmdb.status (contributed by Roberto Dagostino)<br> 
-[Bug][Code (Internal)]                                  Images in a description fields which were inserted via URL or copy&paste are not displayed<br> 
-[Bug][Code (Internal)]                                  Archive and delete buttons is missing in Relations category<br> 
-[Bug][Code (Internal)]                                  In a XAMPP installation images are not previewed and inserted in documents<br> 
-[Bug][Code (Internal)]                                  XML Import language constant LC__MODULE__IMPORT__IMPORTED_AT is displayed<br> 
-[Bug][Code (Internal)]                                  First location in locations tree is clickable<br> 
-[Bug][Code (Internal)]                                  Better object browser performance<br> 
-[Bug][Code (Internal)]                                  Sanitize input data deletes wysiwyg editor tags<br> 
-[Bug][Code (Internal)]                                  Description field is limited to 65,535 characters<br> 
-[Bug][Notifications]                                    Interval does not work for notifications<br> 
-[Bug][Notifications]                                    E-Mail Template with any property from cagegory (License keys) will result in an empty E-Mail<br> 
-[Bug][Notifications]                                    Notification about stored objects is not possible when the CMDB Status is altered<br> 
-[Bug][Import]                                           Error when duplicating a object with Color / wave lenghts selected in a Cabling -> Connectors entry<br> 
-[Bug][JDisc]                                            Some JDisc changes are declared as source internal<br> 
-[Bug][JDisc]                                            JDisc Import - "Only create newly scanned devices" creates duplicates<br> 
-[Bug][Lists]                                            Filtering virtual host > yes/no does not work in object lists<br> 
-[Bug][Lists]                                            Sorting of IPv6 addresses<br> 
-[Bug][Lists]                                            Filter custom fields with date without time in object lists not possible<br> 
-[Bug][Lists]                                            Person not displayed in preview when filtering<br> 
-[Bug][Lists]                                            Fields that allow only numbers from custom categories are not sorted properly<br> 
-[Bug][Lists]                                            Description field in software assignment not displayed in list view<br> 
-[Bug][API]                                              Error message when system api user is archived/deleted<br> 
-[Bug][API]                                              Creating a location entry via API sets latitude and longitude to 0<br> 
-[Bug][API]                                              'type' option for cmdb.objects filter does not work with id<br> 
-[Bug][API]                                              "Categories and attributes" contains empty categories like Document and Floorplan<br> 
-[Bug][Dashboard]                                        Reports in dashboard cause error when empty<br> 
-[Bug][Dashboard]                                        Dashboard "jumps" to the report widget<br> 
-[Bug][CMDB settings]                                    Default translation is overwritten<br> 
-[Bug][CMDB settings]                                    Translation is empty when deleting a translation<br> 
-[Bug][CMDB settings]                                    Custom translation - Changes only visible after reloading the site<br> 
-[Bug][Custom categories]                                Wrong sorting for dialog+ field in custom categories<br> 
-[Bug][Custom categories]                                Custom category not editable when adding report as a field<br> 
-[Bug][Application Redesign]                             Long titles are cut off<br> 
-[Bug][Authorization system]                             Date of change is updated without rights via overview<br> 
-[Bug][Templates]                                        Counter %OBJID% not working for templates<br> 
-[Bug][Templates]                                        Automatic inventory number does not work if objects are created via template.<br> 
-[Bug][LDAP]                                             An empty ldap password does not give an error message when tested<br> 
-[Bug][LDAP]                                             The ldap-sync import objects with no title<br> 
-[Bug][LDAP]                                             Ldap-sync creates a log for every archived user for every sync<br> 
-[Bug][Relations]                                        Grouping object type as dropdown does not work correctly<br> 
-[Bug][Logbook]                                          SQL Error in logbook when displaying archived view<br> 
-[Bug][Migration of all report views in other functions] 500 Error when downloading report view as csv<br> 
-[Bug][CSV Import]                                       Description of assigned workstation not imported via CSV<br> 
-[Bug][Search]                                           Tenant setting for search is not working
+[Tâche][Code (Interne)]                                 Unifier les chemins de fichiers téléchargés pour Windows et d'autres systèmes d'exploitation<br> 
+[Tâche][Relations]                                     Améliorer la taille du champ dans "Administration > Paramètres utilisateur > Présentation"<br> 
+[Tâche][LDAP]                                          Tronquer les entrées de configuration LDAP pour éviter les erreurs<br> 
+[Tâche][JDisc]                                         Implémenter une nouvelle option de profil JDisc pour utiliser le nom d'hôte comme titre d'objet (au lieu du FQDN)<br> 
+[Amélioration][JDisc]                                  Profil JDISC Ex et Import<br> 
+[Amélioration][Code (Interne)]                         Support de MariaDB 10.6.X<br> 
+[Bogue][Édition de liste]                               Mise en page améliorée pour l'édition de liste pour afficher plus d'entrées en même temps à l'écran<br> 
+[Bogue][Édition de liste]                               Tri de Câblage > Connecteurs dans Listedit<br> 
+[Bogue][Édition de liste]                               La position dans le rack n'est pas modifiable par l'édition de liste<br> 
+[Bogue][Édition de liste]                               L'édition de liste devrait ajouter des entrées et des valeurs lorsque des valeurs pour tous sont ajoutées<br> 
+[Bogue][Édition de liste]                               Le positionnement des objets dans un rack via multiedit montre des résultats différents<br> 
+[Bogue][Gestionnaire de rapports]                       Les attributs "schéma cible" et "le logiciel s'exécute sur" ne sont pas affichables dans le contexte du rapport<br> 
+[Bogue][Gestionnaire de rapports]                       subcnd pour l'attribut de catégorie d'attribution de service Service est manquant<br> 
+[Bogue][Gestionnaire de rapports]                       Opérateurs manquants pour le numéro de version du système d'exploitation dans les conditions de rapport<br> 
+[Bogue][Gestionnaire de rapports]                       Le bouton Entrée provoque des événements imprévisibles<br> 
+[Bogue][Catégories]                                    Ajouter un modèle dans la catégorie modèle n'est pas possible<br> 
+[Bogue][Catégories]                                    Les adresses IPv6 libres ne sont pas affichées correctement<br> 
+[Bogue][Catégories]                                    Le filtre dans les listes d'objets n'est pas entièrement affiché et est coupé<br> 
+[Bogue][Catégories]                                    La catégorie personnalisée sur la page d'aperçu fait disparaître la dernière catégorie de la page d'aperçu<br> 
+[Bogue][Catégories]                                    Listes de catégories - Rendre tous les attributs sélectionnables (partie 2)<br> 
+[Bogue][Catégories]                                    La garantie de rappel n'est pas affichée lorsqu'elle est presque épuisée<br> 
+[Bogue][Catégories]                                    Le doublon du lieu de travail a des composants de lieu de travail identiques<br> 
+[Bogue][Catégories]                                    Les clusters assignés affichent un site vide<br> 
+[Bogue][Catégories]                                    Le placeholder %OBJTITLE% ne fonctionne pas dans la catégorie comptabilité > Numéro d'inventaire<br> 
+[Bogue][Catégories]                                    Le placeholder insère des données incorrectes lorsqu'il est utilisé dans un modèle comme titre<br> 
+[Bogue][Catégories]                                    La visibilité de l'attribut ne fonctionne pas pour Général > Description dans l'aperçu<br> 
+[Bogue][Catégories]                                    La visibilité de l'attribut ne fonctionne pas pour Masterdata > Description<br> 
+[Bogue][Catégories]                                    Aucune sélection possible pour aucune sélection dans la catégorie Moniteur (Pivot et Haut-parleur)<br> 
+[Bogue][Catégories]                                    L'ordre des images ne peut pas être enregistré<br> 
+[Bogue][Catégories]                                    Le compteur d'objets %COUNTER% ne compte pas par type d'objet<br> 
+[Bogue][Code (Interne)]                               Fuite de données lors de l'utilisation de l'injection SQL pour manipuler cmdb.status (contribué par Roberto Dagostino)<br> 
+[Bogue][Code (Interne)]                               Les images dans les champs de description insérées via URL ou copier-coller ne sont pas affichées<br> 
+[Bogue][Code (Interne)]                               Les boutons d'archivage et de suppression sont manquants dans la catégorie Relations<br> 
+[Bogue][Code (Interne)]                               Dans une installation XAMPP, les images ne sont pas prévisualisées et insérées dans les documents<br> 
+[Bogue][Code (Interne)]                               La constante de langue d'importation XML LC__MODULE__IMPORT__IMPORTED_AT est affichée<br> 
+[Bogue][Code (Interne)]                               Le premier emplacement dans l'arborescence des emplacements est cliquable<br> 
+[Bogue][Code (Interne)]                               Meilleures performances du navigateur d'objets<br> 
+[Bogue][Code (Interne)]                               La désinfection des données d'entrée supprime les balises de l'éditeur wysiwyg<br> 
+[Bogue][Code (Interne)]                               Le champ de description est limité à 65 535 caractères<br> 
+[Bogue][Notifications]                                 L'intervalle ne fonctionne pas pour les notifications<br> 
+[Bogue][Notifications]                                 Le modèle d'e-mail avec une propriété de cagegory (clés de licence) aboutira à un e-mail vide<br> 
+[Bogue][Notifications]                                 La notification sur les objets stockés n'est pas possible lorsque le statut CMDB est modifié<br> 
+[Bogue][Import]                                        Erreur lors de la duplication d'un objet avec des longueurs d'onde de couleur sélectionnées dans une entrée Câblage -> Connecteurs<br> 
+[Bogue][JDisc]                                         Certains changements JDisc sont déclarés comme internes à la source<br> 
+[Bogue][JDisc]                                         Importation JDisc - "Créer uniquement des appareils nouvellement scannés" crée des doublons<br> 
+[Bogue][Listes]                                       Le filtrage de l'hôte virtuel > oui/non ne fonctionne pas dans les listes d'objets<br> 
+[Bogue][Listes]                                       Tri des adresses IPv6<br> 
+[Bogue][Listes]                                       Filtrer les champs personnalisés avec date sans heure dans les listes d'objets n'est pas possible<br> 
+[Bogue][Listes]                                       La personne n'est pas affichée en prévisualisation lors du filtrage<br> 
+[Bogue][Listes]                                       Les champs qui n'acceptent que des chiffres des catégories personnalisées ne sont pas triés correctement<br> 
+[Bogue][Listes]                                       Le champ de description dans l'attribution de logiciel n'est pas affiché en vue liste<br> 
+[Bogue][API]                                          Message d'erreur lorsque l'utilisateur api système est archivé/supprimé<br> 
+[Bogue][API]                                          La création d'une entrée de lieu via API définit la latitude et la longitude à 0<br> 
+[Bogue][API]                                          L'option 'type' pour le filtre cmdb.objects ne fonctionne pas avec l'id<br> 
+[Bogue][API]                                          "Catégories et attributs" contient des catégories vides comme Document et Plan d'étage<br> 
+[Bogue][Tableau de bord]                              Les rapports dans le tableau de bord provoquent une erreur lorsqu'ils sont vides<br> 
+[Bogue][Tableau de bord]                              Le tableau de bord "saute" vers le widget de rapport<br> 
+[Bogue][Paramètres CMDB]                              La traduction par défaut est écrasée<br> 
+[Bogue][Paramètres CMDB]                              La traduction est vide lors de la suppression d'une traduction<br> 
+[Bogue][Paramètres CMDB]                              Traduction personnalisée - Les changements ne sont visibles qu'après le rechargement du site<br> 
+[Bogue][Catégories personnalisées]                     Tri incorrect pour le champ de dialogue+ dans les catégories personnalisées<br> 
+[Bogue][Catégories personnalisées]                     La catégorie personnalisée n'est pas modifiable lors de l'ajout d'un rapport en tant que champ<br> 
+[Bogue][Refonte de l'application]                      Les titres longs sont tronqués<br> 
+[Bogue][Système d'autorisation]                       La date de modification est mise à jour sans droits via l'aperçu<br> 
+[Bogue][Modèles]                                      Le compteur %OBJID% ne fonctionne pas pour les modèles<br> 
+[Bogue][Modèles]                                      Le numéro d'inventaire automatique ne fonctionne pas si les objets sont créés via un modèle.<br> 
+[Bogue][LDAP]                                        Un mot de passe ldap vide ne génère pas de message d'erreur lorsqu'il est testé<br> 
+[Bogue][LDAP]                                        L'importation ldap-sync importe des objets sans titre<br> 
+[Bogue][LDAP]                                        Ldap-sync crée un journal pour chaque utilisateur archivé pour chaque synchronisation<br> 
+[Bogue][Relations]                                   Le regroupement du type d'objet en tant que menu déroulant ne fonctionne pas correctement<br> 
+[Bogue][Journal]                                     Erreur SQL dans le journal lors de l'affichage de la vue archivée<br> 
+[Bogue][Migration de toutes les vues de rapport dans d'autres fonctions] Erreur 500 lors du téléchargement de la vue de rapport au format csv<br> 
+[Bogue][Import CSV]                                  La description de la station de travail assignée n'est pas importée via CSV<br> 
+[Bogue][Recherche]                                   Le paramètre de locataire pour la recherche ne fonctionne pas
+
+Please provide the Markdown content you would like me to translate into French.

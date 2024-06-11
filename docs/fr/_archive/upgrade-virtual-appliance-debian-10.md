@@ -1,41 +1,43 @@
-# Upgrade of the i-doit Virtual Eval Appliance to Debian GNU/Linux 10 "Buster"
+# Mise à niveau de l'Appliance Virtuelle d'Évaluation i-doit vers Debian GNU/Linux 10 "Buster"
 
-In addition to the maintenance of i-doit, the maintenance of the underlying operating system should not be ignored. We describe the upgrade from Debian GNU/Linux in version 9 "Stretch" to 10 "Buster". In some steps the [i-doit Eval Virtual Appliance] is up to date.
+En plus de la maintenance de i-doit, la maintenance du système d'exploitation sous-jacent ne doit pas être négligée. Nous décrivons la mise à niveau de Debian GNU/Linux de la version 9 "Stretch" à la version 10 "Buster". À certains moments, l'[Appliance Virtuelle d'Évaluation i-doit] est à jour.
 
 !!! note ""
-     Why is it worth the effort to upgrade the operating system to the latest version? There are very good reasons:
+     Pourquoi vaut-il la peine de faire l'effort de mettre à jour le système d'exploitation vers la dernière version ? Il existe de très bonnes raisons :
 
-1. The IT documentation contains sensitive data that must be protected. This can only be guaranteed if all system components are up to date.
-2. The switch from PHP 7.0 to 7.3 brings a measurable performance boost.
+1. La documentation informatique contient des données sensibles qui doivent être protégées. Cela ne peut être garanti que si tous les composants du système sont à jour.
+2. Le passage de PHP 7.0 à 7.3 apporte un gain de performance mesurable.
 
-## Prerequisites
+## Prérequis
 
-Some things need to be considered before upgrading:
+Certains éléments doivent être pris en compte avant la mise à niveau :
 
--   The upgrade only describes the i-doit Virtual Eval Appliance version 1.3.x.
--   It is assumed that no changes (except updates) have been made to the system. Subsequent changes are not our responsibility.
--   Sufficient free memory is available. In the meantime, the update requires approx. 1 GByte of memory.
+-   La mise à niveau ne concerne que la version 1.3.x de l'Appliance Virtuelle d'Évaluation i-doit.
+-   Il est supposé qu'aucun changement (sauf les mises à jour) n'a été apporté au système. Les changements ultérieurs ne relèvent pas de notre responsabilité.
+-   Une mémoire suffisamment libre est disponible. Entre-temps, la mise à jour nécessite environ 1 Go de mémoire. 
 
-!!! note "To note when using VirtualBox"
+{ /*examples*/ }
 
-    Select the appropriate virtual machine and open the machine configuration.
-    Under the ==System== tab, the checkbox for ==Hardware Clock in UTC== must be activated. Otherwise the SQL server has a problem with the time setting.
+!!! note "À noter lors de l'utilisation de VirtualBox"
 
-## Tips
+    Sélectionnez la machine virtuelle appropriée et ouvrez la configuration de la machine.
+    Sous l'onglet ==Système==, la case à cocher pour ==Horloge matérielle en UTC== doit être activée. Sinon, le serveur SQL aura un problème avec le réglage de l'heure.
 
-Furthermore the following should be considered before an upgrade:
+## Conseils
 
--   [Backups] should be available.
--   Users of i-doit should be informed before the downtime.
--   Automatism, cronjobs and external access should be stopped for the duration of the upgrade.
+De plus, les éléments suivants doivent être pris en compte avant une mise à niveau :
 
-The [Debian Community](https://www.debian.org/releases/buster/amd64/release-notes/index.en.html) provides many more hints for upgrading the operating system.
+-   Les [sauvegardes] doivent être disponibles.
+-   Les utilisateurs d'i-doit doivent être informés avant l'arrêt.
+-   Les automatismes, les tâches cron et l'accès externe doivent être arrêtés pendant la durée de la mise à niveau.
 
-## Prepare Upgrade
+La [Communauté Debian](https://www.debian.org/releases/buster/amd64/release-notes/index.en.html) fournit de nombreux autres conseils pour la mise à niveau du système d'exploitation.
 
-We connect via SSH and call the menu item ==0 Launch Shell==.
+## Préparer la mise à niveau
 
-Afterwards we carry out updates:
+Nous nous connectons via SSH et appelons l'élément de menu ==0 Lancer Shell==.
+
+Ensuite, nous effectuons les mises à jour :
 
 ```shell
 sudo apt update
@@ -44,37 +46,37 @@ sudo apt-get autoremove
 sudo apt clean
 ```
 
-The system must then be restarted. Due to a bug, the Linux kernel must be up to date:
+Le système doit ensuite être redémarré. En raison d'un bogue, le noyau Linux doit être à jour :
 
 ```shell
 sudo systemctl reboot
 ```
 
-After the restart we connect again via SSH and call the shell in the menu. Now we make sure that version ==9.x== is in use:
+Après le redémarrage, nous nous connectons à nouveau via SSH et appelons le shell dans le menu. Maintenant, nous nous assurons que la version ==9.x== est utilisée:
 
 ```shell
 cat /etc/debian_release
 ```
 
-If this is not the case, the upgrade will fail.
+Si ce n'est pas le cas, la mise à niveau échouera.
 
-As a precaution, the web server should be stopped so that i-doit is not called in the meantime:
+Par précaution, le serveur web doit être arrêté afin que i-doit ne soit pas appelé entre-temps:
 
 ```shell
 sudo systemctl stop apache2.service
 ```
 
-Thus everything is prepared for the upgrade.
+Ainsi, tout est prêt pour la mise à niveau.
 
-## Upgrade
+## Mise à niveau
 
-The sources for the distribution packages are now adjusted:
+Les sources des paquets de distribution sont maintenant ajustées:
 
 ```shell
 sudo nano /etc/apt/sources.list
 ```
 
-The following line is added at the end:
+La ligne suivante est ajoutée à la fin:
 
 ```shell
 deb http://deb.debian.org/debian/ buster main
@@ -91,47 +93,47 @@ deb http://mirrors.kernel.org/debian buster main contrib
 deb http://mirrors.kernel.org/debian buster main contrib
 ```
 
-All previous lines are commented out. Each line is preceded by a ==#==.
+Toutes les lignes précédentes sont commentées. Chaque ligne est précédée de ==#==.
 
-Then the package sources are updated and the packages are updated:
+Ensuite, les sources des paquets sont mises à jour et les paquets sont mis à jour:
 
 ```shell
 sudo apt update
 sudo apt upgrade
 ```
 
-The last command requires multiple user interactions:
+La dernière commande nécessite plusieurs interactions utilisateur:
 
-1. The question ==Restart services during package upgrades without asking?== have to be answered =="Yes"==.
-2. Overwriting ==Configuration file '/etc/issue'== have to be answered with ==N==.
-3. Overwriting ==Configuration file '/etc/issue.net'== have to be answered with ==N==.
+1. La question ==Redémarrer les services pendant les mises à niveau des paquets sans demander?== doit être répondue par =="Oui"==.
+2. L'écrasement de ==Fichier de configuration '/etc/issue'== doit être répondu par ==N==.
+3. L'écrasement de ==Fichier de configuration '/etc/issue.net'== doit être répondu par ==N==.
 
-Now follows the actual upgrade of the packages to new versions:
+Maintenant, la mise à niveau réelle des paquets vers de nouvelles versions suit:
 
 ```shell
 sudo apt dist-upgrade
 ```
 
-So that the new Linux kernel becomes active, we restart the system:
+Afin que le nouveau noyau Linux devienne actif, nous redémarrons le système :
 
 ```shell
 sudo systemctl reboot
 ```
 
-The upgrade to version 10 "Buster" is now complete.
+La mise à niveau vers la version 10 "Buster" est maintenant terminée.
 
-## Follow-up
+## Suivi
 
-After the reboot we connect to the system via SSH again and call the shell in the menu.
+Après le redémarrage, nous nous connectons à nouveau au système via SSH et appelons le shell dans le menu.
 
-First we clean up the distribution packages:
+Tout d'abord, nous nettoyons les paquets de distribution :
 
 ```shell
 sudo apt autoremove
 sudo apt clean
 ```
 
-Now we have to adapt the Apache webserver and PHP, because instead of PHP 7.0 now 7.3 is included:
+Maintenant, nous devons adapter le serveur web Apache et PHP, car au lieu de PHP 7.0, c'est maintenant la version 7.3 qui est incluse :
 
 ```shell
 sudo cp /etc/php/7.0/mods-available/i-doit.ini /etc/php/7.3/mods-available
@@ -142,16 +144,16 @@ sudo a2enmod php7.3
 sudo systemctl restart apache2.service
 ```
 
-And last but not least the version number of the appliance:
+Et enfin, le numéro de version de l'appliance :
 
 ```shell
 sudo nano /etc/i-doit/appliance.conf
 ```
 
-Content:
+Contenu :
 
 ```shell
 APPLIANCE_VERSION="1.3.1"
 ```
 
-This also concludes the postprocessing. Now all automatism can be started again. The downtime is finished and i-doit can be called again by the users as usual.
+Cela conclut également le post-traitement. Maintenant, tous les automatismes peuvent être relancés. La période d'indisponibilité est terminée et i-doit peut de nouveau être utilisé par les utilisateurs comme d'habitude.

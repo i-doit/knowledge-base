@@ -2,213 +2,213 @@
 
 [![i-diary](../../assets/images/en/i-doit-pro-add-ons/i-diary/1-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/1-i-diary.png)
 
-About i-diary
--------------
+À propos de i-diary
+---------------------
 
-i-diary is an application for Microsoft Windows, which works as an add-on for i-doit. With the help of the add-on, system administrators are able to get an overview of the changes that have occurred on the server.
+i-diary est une application pour Microsoft Windows, qui fonctionne comme un module complémentaire pour i-doit. Avec l'aide du module complémentaire, les administrateurs système peuvent obtenir un aperçu des modifications qui ont eu lieu sur le serveur.
 
-This will be possible by using the application “diary” directly on a Windows server, without having to log in to i-doit and search for the information.
+Cela sera possible en utilisant l'application "journal" directement sur un serveur Windows, sans avoir à se connecter à i-doit et rechercher les informations.
 
-[![search for the information](../../assets/images/en/i-doit-pro-add-ons/i-diary/2-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/2-i-diary.png)
+[![rechercher les informations](../../assets/images/en/i-doit-pro-add-ons/i-diary/2-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/2-i-diary.png)
 
 Documentation
 -------------
 
-*   [Requirements](./requirements.md)
-*   [Install](./install.md)
-*   [Update](./update.md)
+*   [Exigences](./requirements.md)
+*   [Installer](./install.md)
+*   [Mettre à jour](./update.md)
 *   [Configuration](./configuration.md)
-*   [Basic Usage](./basic-usage.md)
-*   [Determine the host](./determine-the-host.md)
-*   [Determine the author](./determine-the-author.md)
+*   [Utilisation de base](./basic-usage.md)
+*   [Déterminer l'hôte](./determine-the-host.md)
+*   [Déterminer l'auteur](./determine-the-author.md)
 
-Copyright & License
--------------------
+Droits d'auteur & Licence
+-------------------------
 
 Copyright (C) 2020 [synetics GmbH](https://i-doit.com/en)
 
-[Requirements](#requirements)
-=============================
+[Exigences](#exigences)
+=======================
 
-The following requirements are necessary before installing or using the i-diary.
+Les exigences suivantes sont nécessaires avant d'installer ou d'utiliser l'i-diary.
 
-[For i-Diary Version 1.1](#for-i-diary-version-11)
---------------------------------------------------
+[Pour la version i-Diary 1.1](#pour-la-version-i-diary-11)
+-----------------------------------------------------------
 
-*   Show all details about the host
-*   Update entries in i-diary
-*   Automatic recognition of object types
-*   Provide all Changelogs in CHANGELOG file
+*   Afficher tous les détails sur l'hôte
+*   Mettre à jour les entrées dans l'i-diary
+*   Reconnaissance automatique des types d'objets
+*   Fournir tous les journaux de modifications dans le fichier CHANGELOG
 
-[For i-Diary Version <= 1.0.1](#for-i-diary-version-101)
---------------------------------------------------------
+[Pour la version i-Diary <= 1.0.1](#pour-la-version-i-diary-101)
+---------------------------------------------------------------
 
-*   Required i-doit >= 1.14
-*   Required i-doit-API add-on >= 1.10.4
-*   Executable:
-*   Windows 7 or 10
-*   .Net framework version >= 4.6.2
+*   i-doit requis >= 1.14
+*   i-doit-API add-on requis >= 1.10.4
+*   Exécutable :
+*   Windows 7 ou 10
+*   Version du framework .Net >= 4.6.2
 
-[For i-Diary Version 1.0.2](#for-i-diary-version-102)
------------------------------------------------------
+[Pour la version i-Diary 1.0.2](#pour-la-version-i-diary-102)
+-------------------------------------------------------------
 
-*   Required i-doit >= 1.17
-*   Required i-doit API add-on >= 1.12.1
-*   Executable:
-*   Windows 7 or 10
-*   .Net framework version >= 4.8
-
-* * *
-
-[Install](#install)
-===================
-
-The add-on is downloaded via the [customer portal](../../system-administration/customer-portal.md)  
-The add-on must first be installed via the [Admin Center](../../system-administration/admin-center.md#add-ons).
+*   i-doit requis >= 1.17
+*   i-doit API add-on requis >= 1.12.1
+*   Exécutable :
+*   Windows 7 ou 10
+*   Version du framework .Net >= 4.8
 
 * * *
 
-[Update](#update)
+[Installer](#installer)
+=======================
+
+L'add-on est téléchargé via le [portail client](../../system-administration/customer-portal.md)  
+L'add-on doit d'abord être installé via le [Centre d'administration](../../system-administration/admin-center.md#add-ons).
+
+* * *
+
+[Met à jour](#update)
 =================
 
-i-diary is updated like other add-ons via the [Admin Center](../../system-administration/admin-center.md#add-ons).  
-The new i-diary.exe must then be replaced by the updated i-diary.exe.  
-This can be found in the downloaded ZIP idoit-i_diary-x.x.x.zip in path  
+i-diary est mis à jour comme les autres modules complémentaires via le [Centre d'administration](../../system-administration/admin-center.md#add-ons).  
+Le nouveau i-diary.exe doit ensuite être remplacé par le i-diary.exe mis à jour.  
+Cela peut être trouvé dans le fichier ZIP téléchargé idoit-i_diary-x.x.x.zip dans le chemin  
 \idoit-i_diary-1.0.1\src\classes\modules\idoit-i_diary\i-diary\
 
 * * *
 
-[Change and save settings via GUI](#change-and-save-settings-via-gui)
+[Changer et enregistrer les paramètres via l'interface graphique (GUI)](#change-and-save-settings-via-gui)
 ---------------------------------------------------------------------
 
-The user has the possibility to create and modify the configuration file via the application.
+L'utilisateur a la possibilité de créer et modifier le fichier de configuration via l'application.
 
-These are the following cases:
+Voici les cas suivants :
 
-*   If the configuration file is empty or does not exist yet or if it the configuration file empty, the GUI setting is opened automatically when the application is started.
+*   Si le fichier de configuration est vide ou n'existe pas encore, ou s'il est vide, les paramètres de l'interface graphique s'ouvrent automatiquement lorsque l'application est lancée.
 
-[![Change and save settings via GUI](../../assets/images/en/i-doit-pro-add-ons/i-diary/3-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/3-i-diary.png)
+[![Changer et enregistrer les paramètres via l'interface graphique (GUI)](../../assets/images/en/i-doit-pro-add-ons/i-diary/3-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/3-i-diary.png)
 
-[![Change and save settings via GUI](../../assets/images/en/i-doit-pro-add-ons/i-diary/4-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/4-i-diary.png)
+[![Changer et enregistrer les paramètres via l'interface graphique (GUI)](../../assets/images/en/i-doit-pro-add-ons/i-diary/4-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/4-i-diary.png)
 
-*   If the user changes something in the GUI setting, the change is immediately checked and saved if it is valid.  
-*   When the user does not specify ‘[http://](http://)’, ‘[http://](http://)’ is used for the check and saved.
-*   When the user does specify ‘rc/jsonrpc.php’ as a suffix in the URL field, it will be ignored for the check and saved without it.
-*   The user can test the connection manually by clicking the button ‘Test the connection’.
+*   Si l'utilisateur modifie quelque chose dans le paramétrage de l'interface graphique, la modification est immédiatement vérifiée et enregistrée si elle est valide.  
+*   Lorsque l'utilisateur ne spécifie pas ‘[http://](http://)’, ‘[http://](http://)’ est utilisé pour la vérification et l'enregistrement.
+*   Lorsque l'utilisateur spécifie ‘rc/jsonrpc.php’ comme suffixe dans le champ URL, il sera ignoré pour la vérification et enregistré sans lui.
+*   L'utilisateur peut tester la connexion manuellement en cliquant sur le bouton ‘Tester la connexion’.
 
 * * *  
 
-[Basic Usage](#basic-usage)
+[Utilisation de base](#basic-usage)
 ===========================
 
-[Creating a new entry](#creating-a-new-entry)
+[Création d'une nouvelle entrée](#creating-a-new-entry)
 ---------------------------------------------
 
-The user can create a new entry, for this purpose the following steps are taken:
+L'utilisateur peut créer une nouvelle entrée, pour cela les étapes suivantes sont prises :
 
-*   The author, date, and entry must be filled in and valid.
-*   For further entries, the selection of author and date persists until the application is closed.
-*   When the user saves an entry, the list of entries is updated.
+*   L'auteur, la date et l'entrée doivent être remplis et valides.
+*   Pour les entrées ultérieures, la sélection de l'auteur et de la date persiste jusqu'à ce que l'application soit fermée.
+*   Lorsque l'utilisateur enregistre une entrée, la liste des entrées est mise à jour.
 
 * * *
 
-[Determine the host](#determine-the-host)
+[Déterminer l'hôte](#determine-the-host)
 =========================================
 
-There are three ways to select a host:
+Il existe trois façons de sélectionner un hôte :
 
 [Automatically select a host](#automatically-select-a-host)
 -----------------------------------------------------------
 
-If no object is stored in the settings, an object should be determined automatically and proposed to the user. The name of the application host is determined for this purpose.
+Si aucun objet n'est stocké dans les paramètres, un objet doit être déterminé automatiquement et proposé à l'utilisateur. Le nom de l'hôte de l'application est déterminé à cette fin.
 
-[![Automatically select a host](../../assets/images/en/i-doit-pro-add-ons/i-diary/5-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/5-i-diary.png)
+[![Sélection automatique d'un hôte](../../assets/images/en/i-doit-pro-add-ons/i-diary/5-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/5-i-diary.png)
 
-[The hostname is searched for as the object title in i-doit](#the-hostname-is-searched-for-as-the-object-title-in-i-doit)
+[Le nom d'hôte est recherché en tant que titre de l'objet dans i-doit](#the-hostname-is-searched-for-as-the-object-title-in-i-doit)
 -------------------------------------------------------------------------------------------------------------------------
 
-*   If exactly one object is found, its ID is saved.
-*   If several objects with the same name are found, the user can choose from these objects.
-*   The user can cancel the selection to manually select the host.
+*   Si un seul objet est trouvé, son ID est enregistré.
+*   Si plusieurs objets portant le même nom sont trouvés, l'utilisateur peut choisir parmi ces objets.
+*   L'utilisateur peut annuler la sélection pour sélectionner manuellement l'hôte.
 
-[Set host manually](#set-host-manually)
+[Définir manuellement l'hôte](#set-host-manually)
 ---------------------------------------
 
-*   The user sets the Object ID in the configuration file. After restarting the application the setting takes effect.
+*   L'utilisateur définit l'ID de l'objet dans le fichier de configuration. Après le redémarrage de l'application, le paramètre prend effet.
 
-[![Set host manually](../../assets/images/en/i-doit-pro-add-ons/i-diary/6-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/6-i-diary.png)
+[![Définir manuellement l'hôte](../../assets/images/en/i-doit-pro-add-ons/i-diary/6-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/6-i-diary.png)
 
-*   The user selects an object title from a searchable list. Only objects whose object types are assigned to the category “Diary” are displayed. The list is divided into the respective object types. The translated title of the respective object type is displayed as the list heading. If the user selects an object from the list, its ID is saved.
-*   The user types the Object ID into a search mask. The application gives feedback whether the object was found and saves its ID.
-*   The user enters the Object Title in a search mask. The application gives feedback if the object was found and saves its ID.
-*   If several objects with the same name are found, the user can choose from this list.
+*   L'utilisateur sélectionne un titre d'objet dans une liste consultable. Seuls les objets dont les types d'objet sont attribués à la catégorie "Journal" sont affichés. La liste est divisée en fonction des types d'objets respectifs. Le titre traduit du type d'objet respectif est affiché en tant qu'en-tête de liste. Si l'utilisateur sélectionne un objet dans la liste, son ID est enregistré.
+*   L'utilisateur saisit l'ID de l'objet dans un masque de recherche. L'application donne un retour d'information si l'objet a été trouvé et enregistre son ID.
+*   L'utilisateur saisit le titre de l'objet dans un masque de recherche. L'application donne un retour d'information si l'objet a été trouvé et enregistre son ID.
+*   Si plusieurs objets portant le même nom sont trouvés, l'utilisateur peut choisir dans cette liste.
 
-[Reuse host](#reuse-host)
+[Réutiliser l'hôte](#reuse-host)
 -------------------------
 
-When the application is started, the configuration file is read if the configuration file exists.
+Lorsque l'application est lancée, le fichier de configuration est lu s'il existe.
 
-If an object ID is saved, the application gets the respective title to display it.
+Si un ID d'objet est enregistré, l'application récupère le titre respectif pour l'afficher.
 
 * * *
 
-There are three ways to select an author:
+Il existe trois façons de sélectionner un auteur :
 
-[Automatically discover an author](#automatically-discover-an-author)
+[Automatiquement découvrir un auteur](#automatically-discover-an-author)
 ---------------------------------------------------------------------
 
-If no author has been saved and the user starts the application, the application tries to recognize the author automatically.
+Si aucun auteur n'a été enregistré et que l'utilisateur lance l'application, l'application essaie de reconnaître l'auteur automatiquement.
 
-This will be done through the following process:
+Cela se fera à travers le processus suivant :
 
-When a “user name” is specified in the settings, the application will check whether the person matches a person object in i-doit. If this is the case the ID will be saved.
+Lorsqu'un "nom d'utilisateur" est spécifié dans les paramètres, l'application vérifiera si la personne correspond à un objet personne dans i-doit. Si tel est le cas, l'ID sera enregistré.
 
-[![Automatically discover an author](../../assets/images/en/i-doit-pro-add-ons/i-diary/7-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/7-i-diary.png)
+[![Automatiquement découvrir un auteur](../../assets/images/en/i-doit-pro-add-ons/i-diary/7-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/7-i-diary.png)
 
-[Set author manually](#set-author-manually)
+[Sélectionner l'auteur manuellement](#set-author-manually)
 -------------------------------------------
 
-The user can manually select an author for a new entry with the following options:
+L'utilisateur peut sélectionner manuellement un auteur pour une nouvelle entrée avec les options suivantes :
 
-*   The user can write the object ID of the author in the configuration file. This setting takes effect when the application is restarted.
+*   L'utilisateur peut écrire l'ID de l'objet de l'auteur dans le fichier de configuration. Ce paramètre prend effet lorsque l'application est redémarrée.
 
-[![Set author manually](../../assets/images/en/i-doit-pro-add-ons/i-diary/8-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/8-i-diary.png)
+[![Sélectionner l'auteur manuellement](../../assets/images/en/i-doit-pro-add-ons/i-diary/8-i-diary.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/8-i-diary.png)
 
-*   The user can select a person from a searchable list. This list is divided into “Contacts” (object relations from the category “Contact assignment”) and “Persons” (objects of the type “Persons”).
+*   L'utilisateur peut sélectionner une personne dans une liste consultable. Cette liste est divisée en "Contacts" (relations d'objet de la catégorie "Affectation de contact") et "Personnes" (objets de type "Personnes").
 
-The titles of the objects are displayed in the list. When the user selects an object, its ID is saved.
+Les titres des objets sont affichés dans la liste. Lorsque l'utilisateur sélectionne un objet, son ID est enregistré.
 
 [Reuse author](#reuse-author)
 -----------------------------
 
-When the user starts the application, the already saved author is preselected for a new entry.
+Lorsque l'utilisateur démarre l'application, l'auteur déjà enregistré est présélectionné pour une nouvelle entrée.
 
-The application checks whether the object ID in the configuration file is valid, based on the ID, the application retrieves the object title to display it.
+L'application vérifie si l'ID d'objet dans le fichier de configuration est valide, en fonction de l'ID, l'application récupère le titre de l'objet pour l'afficher.
 
 * * *
 
 [FAQ](#faq)
 ===========
 
-Known error messages and their meaning:
+Messages d'erreur connus et leur signification :
 
-| Error Message | Possible cause |
+| Message d'erreur | Cause possible |
 | --- | --- |
-| The HTTP response status code does not indicate a successful service response | URL incorrect |
-| i-doit system error: Unable to retrieve mandator | API Key wrong |
-| The service response is invalid | Wrong username or password. API add-on version is too old |
-| Fehler beim Senden der Anforderung/Error while sending the request | Host address incorrect |
-| The HTTP response has invalid Content-Type header value | API add-on is not installed |
+| Le code d'état de réponse HTTP ne reflète pas une réponse de service réussie | URL incorrecte |
+| Erreur système i-doit : Impossible de récupérer le mandataire | Clé API incorrecte |
+| La réponse du service est invalide | Nom d'utilisateur ou mot de passe incorrect. La version de l'extension API est trop ancienne |
+| Fehler beim Senden der Anforderung/Error while sending the request | Adresse de l'hôte incorrecte |
+| La réponse HTTP a une valeur d'en-tête Content-Type invalide | L'extension API n'est pas installée |
 
 * * *
 
-[Changelog](#changelog)
+[Journal des modifications](#changelog)
 =======================
 
-| Version | Release | Changelog |
+| Version | Publication | Journal des modifications |
 | --- | --- | --- |
-| 1.3 | 08.05.2024 | Used "idoit_i_diary" as new identifier<br> Objects are not loaded after second start<br> Starting i-diary needs a lot of time<br> i-diary does not recognize diary category<br>Author is not loaded |
-| 1.2 | 23.01.2023 | Primary IP address is shown empty  <br>Clicking on the info icon crashes i-diary  <br>Contact assignment does not show the Primary contact |
-| 1.0.2 | 09.11.2021 | Make connection using HTTPS  <br>Configuration of a proxy server |
-| 1.0.1 | 06.11.2020 | Change the position of the buttons in the settings window  <br>Change the title of the settings window  <br>Log in without authentication  <br>Writing a log file to check the connection  <br>The comboboxes should display more lines |
-| 1.0.0 | 21.09.2020 | This is the first release of i-diary |
+| 1.3 | 08.05.2024 | Utilisé "idoit_i_diary" comme nouvel identifiant<br> Les objets ne se chargent pas après le deuxième démarrage<br> Démarrer i-diary prend beaucoup de temps<br> i-diary ne reconnaît pas la catégorie du journal<br> L'auteur n'est pas chargé |
+| 1.2 | 23.01.2023 | L'adresse IP principale est affichée vide  <br> Cliquer sur l'icône d'info fait planter i-diary  <br> L'attribution de contact ne montre pas le contact principal |
+| 1.0.2 | 09.11.2021 | Établir une connexion en utilisant HTTPS  <br> Configuration d'un serveur proxy |
+| 1.0.1 | 06.11.2020 | Changer la position des boutons dans la fenêtre des paramètres  <br> Changer le titre de la fenêtre des paramètres  <br> Connexion sans authentification  <br> Écrire un fichier journal pour vérifier la connexion  <br> Les comboboxes devraient afficher plus de lignes |
+| 1.0.0 | 21.09.2020 | Il s'agit de la première version de i-diary |

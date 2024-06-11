@@ -1,28 +1,28 @@
-# List Editing
+# Édition de Liste
 
-The list editing function enables simultaneous and easy editing of multiple [objects](../glossary.md). Editing is carried out per [category](../glossary.md).
+La fonction d'édition de liste permet une édition simultanée et facile de plusieurs [objets](../glossary.md). L'édition est effectuée par [catégorie](../glossary.md).
 
-Access the List Editing
+Accéder à l'Édition de Liste
 -----------------------
 
-You can find the list editing at **Extras → CMDB → Listen editing**.  
-[![Access the List Editing](../assets/images/en/efficient-documentation/list-editing/1-le.png)](../assets/images/en/efficient-documentation/list-editing/1-le.png)
+Vous pouvez trouver l'édition de liste dans **Extras → CMDB → Édition de liste**.  
+[![Accéder à l'Édition de Liste](../assets/images/en/efficient-documentation/list-editing/1-le.png)](../assets/images/en/efficient-documentation/list-editing/1-le.png)
 
-Alternatively, you can open the list editing function by selecting multiple objects in an [object list](../basics/object-list/index.md) via their checkboxes and then clicking the **Edit** button.
+Alternativement, vous pouvez ouvrir la fonction d'édition de liste en sélectionnant plusieurs objets dans une [liste d'objets](../basics/object-list/index.md) via leurs cases à cocher, puis en cliquant sur le bouton **Éditer**.
 
-[![Access the List Editing](../assets/images/en/efficient-documentation/list-editing/2-le.gif)](../assets/images/en/efficient-documentation/list-editing/2-le.gif)
+[![Accéder à l'Édition de Liste](../assets/images/en/efficient-documentation/list-editing/2-le.gif)](../assets/images/en/efficient-documentation/list-editing/2-le.gif)
 
-Selection of Objects and the Category to be Edited
+Sélection des Objets et de la Catégorie à Éditer
 --------------------------------------------------
 
-When you activate the list editing using the **Extras**  menu, you can select the objects you wish to edit in the next step. You can also choose the [category](../glossary.md) you want to edit. Additionally, you can define a filter to limit the shown entries to a specific selection. For example, you can display only software assignments of a specific software.
+Lorsque vous activez l'édition de liste en utilisant le menu **Extras**, vous pouvez sélectionner les objets que vous souhaitez éditer à l'étape suivante. Vous pouvez également choisir la [catégorie](../glossary.md) que vous souhaitez éditer. De plus, vous pouvez définir un filtre pour limiter les entrées affichées à une sélection spécifique. Par exemple, vous pouvez afficher uniquement les affectations de logiciels d'un logiciel spécifique.
 
-[![Selection of Objects and the Category to be Edited](../assets/images/en/efficient-documentation/list-editing/3-le.gif)](../assets/images/en/efficient-documentation/list-editing/3-le.gif)
+[![Sélection d'objets et de la catégorie à éditer](../assets/images/en/efficient-documentation/list-editing/3-le.gif)](../assets/images/en/efficient-documentation/list-editing/3-le.gif)
 
-Execution of the List Editing
------------------------------
+Exécution de l'édition de liste
+-------------------------------
 
-As soon as the objects and the category have been selected, the list editing will load. You will receive a list of objects, including the properties of the selected category. Each line represents a single object.  
-Changes within a line of an object just change the [attribute](../glossary.md) of the object. Changes in the uppermost line assign the same value to all objects in the selected attribute. These changes are applied as soon as you click the **Save** button.The placeholder **##COUNT##** allows for an automated sequential numbering of the data records. It is also possible to let the numbering start from a specific value and to determine the leading zeros. Examples for this are available in the bottom section of the list editing.A counter will show you the number of applied changes.
+Dès que les objets et la catégorie ont été sélectionnés, l'édition de liste se chargera. Vous recevrez une liste d'objets, comprenant les propriétés de la catégorie sélectionnée. Chaque ligne représente un objet unique.  
+Les modifications au sein d'une ligne d'un objet modifient simplement l'[attribut](../glossary.md) de l'objet. Les modifications dans la ligne supérieure attribuent la même valeur à tous les objets dans l'attribut sélectionné. Ces modifications sont appliquées dès que vous cliquez sur le bouton **Enregistrer**. Le placeholder **##COUNT##** permet un numérotage séquentiel automatisé des enregistrements de données. Il est également possible de démarrer la numérotation à partir d'une valeur spécifique et de déterminer les zéros de remplissage. Des exemples à ce sujet sont disponibles dans la section inférieure de l'édition de liste. Un compteur vous montrera le nombre de modifications appliquées.
 
-[![Execution of the List Editing](../assets/images/en/efficient-documentation/list-editing/4-le.gif)](../assets/images/en/efficient-documentation/list-editing/4-le.gif)
+[![Exécution de la modification de la liste](../assets/images/en/efficient-documentation/list-editing/4-le.gif)](../assets/images/en/efficient-documentation/list-editing/4-le.gif)

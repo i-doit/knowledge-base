@@ -1,44 +1,44 @@
 ---
 title: Debian 11 GNU/Linux
-description: i-doit installation on Debian 11
+description: Installation de i-doit sur Debian 11
 icon: material/debian
 #status: updated
-lang: en
+lang: fr
 ---
 
-In this article we explain in just a few steps which packages need to be installed and configured. We use a environment without **desktop** .
+Dans cet article, nous expliquons en quelques étapes les paquets qui doivent être installés et configurés. Nous utilisons un environnement sans **bureau**.
 
 !!! warning ""
-    When you install Debian, you eventually reach a "Software selection" dialog which has a list of checkboxes to choose the software you want to install initially. This has a "Debian desktop environment" checkbox, pre-ticked; de-selecting that, and leaving all the other desktop environment checkboxes un-ticked (GNOME, Xfce, etc.), will result in a GUI-less installation:
+    Lorsque vous installez Debian, vous atteignez éventuellement une boîte de dialogue "Sélection des logiciels" qui contient une liste de cases à cocher pour choisir les logiciels que vous souhaitez installer initialement. Il y a une case à cocher "Environnement de bureau Debian", pré-cochée; en la décochant, et en laissant toutes les autres cases de l'environnement de bureau non cochées (GNOME, Xfce, etc.), vous obtiendrez une installation sans interface graphique :
 
-    [![Software selection]()]()
+    [![Sélection des logiciels]()]()
 
-## System Requirements
+## Configuration requise du système {/examples}
 
-The general [system requirements]() apply.
+Les [exigences système générales]() s'appliquent.
 
-This article refers to [**Debian GNU/Linux 11 "bullseye"**](https://www.debian.org/index.en.html). In order to find out which Debian version is used you can carry out the following command:
+Cet article fait référence à [**Debian GNU/Linux 11 "bullseye"**](https://www.debian.org/index.en.html). Pour savoir quelle version de Debian est utilisée, vous pouvez exécuter la commande suivante :
 
 ```shell
 cat /etc/debian_version
 ```
 
-As system architecture you should use a x86 in 64bit:
+En tant qu'architecture système, vous devriez utiliser un x86 en 64 bits :
 
 ```shell
 uname -m
 ```
 
-**x86_64** means 64bit, **i386** or **i686** only 32bit.
+**x86_64** signifie 64 bits, **i386** ou **i686** seulement 32 bits.
 
-## Installation of the Packages
+## Installation des paquets
 
-The default package repositories of Debian GNU/Linux already supply the necessary packages to install:
+Les dépôts de paquets par défaut de Debian GNU/Linux fournissent déjà les paquets nécessaires à l'installation :
 
--   the **Apache** web server 2.4
--   the script language **PHP** 7.4
--   the database management system **MariaDB** 10.5 and
--   the caching server **memcached**
+-   le serveur web **Apache** 2.4
+-   le langage de script **PHP** 7.4
+-   le système de gestion de base de données **MariaDB** 10.5 et
+-   le serveur de mise en cache **memcached**
 
 ```shell
 apt update
@@ -47,17 +47,17 @@ apt install apache2 libapache2-mod-php mariadb-client mariadb-server php php-bcm
 
 ## Configuration
 
-The installed packages for Apache web server, PHP and MariaDB already supply configuration files. It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
+Les paquets installés pour le serveur web Apache, PHP et MariaDB fournissent déjà des fichiers de configuration. Il est recommandé de sauvegarder les paramètres modifiés dans des fichiers séparés au lieu d'ajuster les fichiers de configuration déjà existants. Sinon, toutes les différences par rapport aux fichiers existants seraient signalées voire écrasées lors de chaque mise à jour du paquet. Les paramètres de la configuration par défaut sont complétés ou écrasés par des paramètres définis par l'utilisateur.
 
-### PHP
+### PHP {/examples}
 
-First of all, a new file is created and filled with the required settings:
+Tout d'abord, un nouveau fichier est créé et rempli avec les paramètres requis :
 
 ```shell
 sudo nano /etc/php/7.4/mods-available/i-doit.ini
 ```
 
-This file has the following contents:
+Ce fichier contient les éléments suivants :
 
 ```ini
 allow_url_fopen = Yes
@@ -85,11 +85,11 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
-The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings]() of i-doit.
+La valeur (en secondes) de `session.gc_maxlifetime` doit être égale ou supérieure à la `Durée de la session` dans les [paramètres système]() de i-doit.
 
-The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).
+Le paramètre `date.timezone` doit être ajusté à la zone horaire locale (voir la [liste des fuseaux horaires supportés](http://php.net/manual/en/timezones.php)).
 
-Afterwards, the required PHP modules are activated and the Apache web server is restarted:
+Ensuite, les modules PHP requis sont activés et le serveur web Apache est redémarré :
 
 ```shell
 sudo phpenmod i-doit
@@ -97,16 +97,16 @@ sudo phpenmod memcached
 sudo systemctl restart apache2.service
 ```
 
-### Apache Webserver
+### Serveur Web Apache {/examples}
 
-The default VHost is deactivated and a new one is created:
+Le VHost par défaut est désactivé et un nouveau est créé :
 
 ```shell
 sudo a2dissite 000-default
 sudo nano /etc/apache2/sites-available/i-doit.conf
 ```
 
-The new VHost configuration is saved in this file:
+La nouvelle configuration VHost est enregistrée dans ce fichier :
 
 ```shell
 <VirtualHost *:80>
@@ -124,8 +124,8 @@ The new VHost configuration is saved in this file:
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.<br>
-With the next step you activate the new VHost and the necessary Apache module **rewrite** and the Apache web server is restarted:
+i-doit inclut des paramètres Apache différents dans des fichiers portant le nom **.htaccess**. Le paramètre **AllowOverride All** est requis pour que ces paramètres soient pris en compte.<br>
+Avec l'étape suivante, vous activez le nouveau VHost et le module Apache nécessaire **rewrite** et le serveur web Apache est redémarré :
 
 ```shell
 sudo a2ensite i-doit
@@ -135,26 +135,26 @@ sudo systemctl restart apache2.service
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly. The **root** user should receive a secure password:
+Seules quelques étapes sont nécessaires pour garantir que MariaDB offre de bonnes performances et un fonctionnement sécurisé. Cependant, vous devez porter une attention méticuleuse aux détails et effectuer ces étapes avec précision. Cela commence par une installation sécurisée et vous devez suivre les recommandations en conséquence. L'utilisateur **root** doit recevoir un mot de passe sécurisé :
 
 ```shell
 sudo mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
+Activez l'invite MariaDB afin que i-doit soit autorisé à utiliser l'utilisateur **root** lors de la configuration :
 
 ```shell
 sudo mysql -uroot
 ```
 
-!!! warning "Password for MariaDB root user"
-    If the MariaDB root user does not have a password yet, the database access will not work after executing the ALTER USER statement. Therefore, the MariaDB root user should be assigned a password beforehand:
+!!! warning "Mot de passe pour l'utilisateur root de MariaDB"
+    Si l'utilisateur root de MariaDB n'a pas encore de mot de passe, l'accès à la base de données ne fonctionnera pas après l'exécution de l'instruction ALTER USER. Par conséquent, l'utilisateur root de MariaDB doit se voir attribuer un mot de passe au préalable :
 
-    ```sql
-    SET PASSWORD for 'root'@'localhost' = PASSWORD ('passwort');
-    ```
+```sql
+SET PASSWORD for 'root'@'localhost' = PASSWORD ('motdepasse');
+```
 
-The following SQL statements are now carried out in the MariaDB shell (The 'password' must be replaced by the current password of the 'root' user):
+Les instructions SQL suivantes sont maintenant exécutées dans l'invite MariaDB (Le 'motdepasse' doit être remplacé par le mot de passe actuel de l'utilisateur 'root') :
 
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('password');
@@ -162,15 +162,15 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-!!! info "Use of MariaDB 10.3 and downwards"
+!!! info "Utilisation de MariaDB 10.3 et versions antérieures"
 
-    Up to MariaDB version 10.3, the UPDATE statement is supported in the user table.
+Jusqu'à la version 10.3 de MariaDB, l'instruction UPDATE est prise en charge dans la table utilisateur.
 
-    ```sql
-    UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
-    ```
+```sql
+UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
+```
 
-Afterwards, MariaDB is stopped. Now it is important to move files which are not required, otherwise the result would be a significant loss of performance:
+Ensuite, MariaDB est arrêté. Il est maintenant important de déplacer les fichiers qui ne sont pas nécessaires, sinon le résultat serait une perte significative de performance :
 
 ```shell
 mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
@@ -178,13 +178,13 @@ sudo systemctl stop mysql.service
 sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
 
-A new file is created for the deviating settings:
+Un nouveau fichier est créé pour les paramètres déviants :```
 
 ```shell
 sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
 ```
 
-This file contains the new configuration settings. For an optimal performance you should adapt these settings to the (virtual) hardware:
+Ce fichier contient les nouveaux paramètres de configuration. Pour des performances optimales, vous devriez adapter ces paramètres au matériel (virtuel) :
 
 ```ini
 [mysqld]
@@ -225,14 +225,15 @@ innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
 
-Finally, MariaDB is started:
+Enfin, MariaDB est démarré :
 
 ```shell
 sudo systemctl start mysql.service
 ```
 
-## Next Step
+## Étape suivante {/ * exemples *}
 
-Now the operating system is prepared and i-doit can be installed.
+Maintenant que le système d'exploitation est prêt, vous pouvez procéder à l'installation de i-doit.
 
-Proceed with [**Setup**]()
+Procédez à [**Configuration**]()
+```

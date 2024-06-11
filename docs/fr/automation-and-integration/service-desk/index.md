@@ -1,53 +1,55 @@
 # Service Desk
 
-The service desk is a key interface to the customer in many organizations. If the customer has a question about a product, he submits a request to the support team. In connection with ITIL you also speak of "incidents", with reference to software development questions you rather say "issues". Usually requests are made per e-mail or by phone call and are organized in tickets. There is a multitude of different (web) applications to support a service desk. These applications often access additional resources (customer databases etc.) to examine and process inquiries comprehensively and efficiently. An important resource is the [IT documentation](../../glossary.md): If a colleague from a specialized division reports a defective printer to the IT department, the IT documentation supplies helpful information about the model, location, IP address, remote access and many other things.
+Le service desk est une interface clé avec le client dans de nombreuses organisations. Si le client a une question sur un produit, il soumet une demande à l'équipe de support. En relation avec l'ITIL, on parle également d'"incidents", en ce qui concerne les questions de développement logiciel, on parle plutôt de "problèmes". Habituellement, les demandes sont faites par e-mail ou par appel téléphonique et sont organisées en tickets. Il existe une multitude de différentes applications (web) pour soutenir un service desk. Ces applications accèdent souvent à des ressources supplémentaires (bases de données clients, etc.) pour examiner et traiter les demandes de manière exhaustive et efficace. Une ressource importante est la [documentation IT](../../glossary.md) : Si un collègue d'une division spécialisée signale une imprimante défectueuse au service informatique, la documentation IT fournit des informations utiles sur le modèle, l'emplacement, l'adresse IP, l'accès à distance et bien d'autres choses.
 
-Supported Applications
+Applications prises en charge
 
-The i-doit default installation provides interfaces to several applications from the service desk field:
+L'installation par défaut d'i-doit fournit des interfaces vers plusieurs applications du domaine du service desk. 
+
+{ /* examples */ }
 
 *   [((OTRS)) Community Edition Help Desk](./otrscommunity-help-desk.md)
 *   [Request Tracker (RT)](./request-tracker.md)
 
-… and iTop.
+… et iTop.
 
-The specific installation and use of extensions (RT) and modules (((OTRS)) Community Edition) is described in the corresponding articles or the relevant links are included. In the following text we concentrate on the configuration and functions of i-doit.
+L'installation spécifique et l'utilisation des extensions (RT) et des modules (((OTRS)) Community Edition) sont décrites dans les articles correspondants ou les liens pertinents sont inclus. Dans le texte suivant, nous nous concentrons sur la configuration et les fonctions d'i-doit.
 
 Configuration
 -------------
 
-You carry out the configuration regarding the above mentioned applications under **Administration → Interfaces/ external data → Trouble Ticket System (TTS) → Configuration**.
+Vous effectuez la configuration concernant les applications mentionnées ci-dessus sous **Administration → Interfaces/ données externes → Système de gestion des incidents (SGI) → Configuration**.
 
 [![Configuration](../../assets/images/en/automation-and-integration/service-desk/0-sd.png)](../../assets/images/en/automation-and-integration/service-desk/0-sd.png)
 
 |     |     |
 | --- | --- |
 | **Option** | **Description** |
-| **TTS-Type** | Which type of application do you want to select? |
-| **Active** | Do you want the interface to be active? |
-| **Username** | i-doit has to log on to the application with a user to retrieve data. For reasons of safety, you should choose a dedicated user. |
-| **Password** | Password of the respective user |
-| **URL incl. protocol** | Link to the web GUI of the application, for example [https://rt.example.org/rt](https://rt.example.org/rt) |
+| **Type de SGI** | Quel type d'application souhaitez-vous sélectionner ? |
+| **Actif** | Souhaitez-vous activer l'interface ? |
+| **Nom d'utilisateur** | i-doit doit se connecter à l'application avec un utilisateur pour récupérer des données. Pour des raisons de sécurité, vous devriez choisir un utilisateur dédié. |
+| **Mot de passe** | Mot de passe de l'utilisateur respectif |
+| **URL incluant le protocole** | Lien vers l'interface web de l'application, par exemple [https://rt.example.org/rt](https://rt.example.org/rt) |
 
-Reading Out Tickets
+Lecture des Tickets
 -------------------
 
-When a ticket is referenced to an object in i-doit via the application, you can display this reference in i-doit. For this purpose, you have to set the **Active** option to **Yes** in the configuration. For each object you can reach the **All tickets** category with the speech bubble [![icon](../../assets/images/en/automation-and-integration/service-desk/1-sd.png)](../../assets/images/en/automation-and-integration/service-desk/1-sd.png) icon.
+Lorsqu'un ticket est référencé à un objet dans i-doit via l'application, vous pouvez afficher cette référence dans i-doit. Pour cela, vous devez définir l'option **Actif** sur **Oui** dans la configuration. Pour chaque objet, vous pouvez accéder à la catégorie **Tous les tickets** avec l'icône de bulle de dialogue [![icon](../../assets/images/en/automation-and-integration/service-desk/1-sd.png)](../../assets/images/en/automation-and-integration/service-desk/1-sd.png).
 
-[![Reading Out Tickets](../../assets/images/en/automation-and-integration/service-desk/2-sd.png)](../../assets/images/en/automation-and-integration/service-desk/2-sd.png)
+[![Lecture des Tickets](../../assets/images/en/automation-and-integration/service-desk/2-sd.png)](../../assets/images/en/automation-and-integration/service-desk/2-sd.png)
 
-This category lists all referenced tickets and shows further details about each ticket. With a click on the ticket, you can open it in the web GUI of the service desk application.
+Cette catégorie répertorie tous les tickets référencés et affiche des détails supplémentaires sur chaque ticket. En cliquant sur le ticket, vous pouvez l'ouvrir dans l'interface web de l'application de service desk.
 
-Create a New Ticket
+Créer un Nouveau Ticket
 -------------------
 
-You can also create a new ticket with the **All tickets** category. When you click the button **Create ticket** in the upper part of the window, the web form of the service desk application opens and references the object for which you want to create a ticket.
+Vous pouvez également créer un nouveau ticket avec la catégorie **Tous les tickets**. Lorsque vous cliquez sur le bouton **Créer un ticket** dans la partie supérieure de la fenêtre, le formulaire web de l'application de service desk s'ouvre et référence l'objet pour lequel vous souhaitez créer un ticket.
 
-If you use the [Request Tracker (RT)](./request-tracker.md) application, you also have to choose the queue to which the ticket is assigned. The configuration of the preset queues is carried out with **Administration → System settings → System parameters → Request Tracker queues**. Here you enter the queues in a comma-separated way.
+Si vous utilisez l'application [Request Tracker (RT)](./request-tracker.md), vous devez également choisir la file à laquelle le ticket est attribué. La configuration des files prédéfinies est effectuée avec **Administration → Paramètres système → Paramètres système → Files Request Tracker**. Ici, vous saisissez les files de manière séparée par des virgules.
 
-Logbook Entries for Tickets
----------------------------
+Entrées de journal pour les tickets
+-----------------------------------
 
-When you create or handle a ticket in the service desk application and at least one object of i-doit is referenced in the process, you can trace this back in the [logbook](../../basics/logbook.md) afterwards.
+Lorsque vous créez ou gérez un ticket dans l'application de service desk et qu'au moins un objet de i-doit est référencé dans le processus, vous pouvez retracer cela dans le [journal](../../basics/logbook.md) par la suite.
 
-[![Logbook Entries for Tickets](../../assets/images/en/automation-and-integration/service-desk/3-sd.png)](../../assets/images/en/automation-and-integration/service-desk/3-sd.png)
+[![Entrées de journal pour les tickets](../../assets/images/en/automation-and-integration/service-desk/3-sd.png)](../../assets/images/en/automation-and-integration/service-desk/3-sd.png)

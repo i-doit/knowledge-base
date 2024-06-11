@@ -1,47 +1,48 @@
-# Troubleshooting
+# Dépannage {/examples}
 
-Untransparent behaviour in i-doit. An error! How to deal with it? Please read on! It could be useful.
+Comportement non transparent dans i-doit. Une erreur ! Comment y faire face ? Veuillez lire la suite ! Cela pourrait être utile.
 
-## Do Not Panic!
+## Ne Paniquez Pas ! {/examples}
 
-First of all, it is very important to keep calm. Errors happen. To us. To you. To everyone. The world will not come to an end. Very, very rarely do IT documentations just disappear.
+Tout d'abord, il est très important de rester calme. Les erreurs arrivent. À nous. À vous. À tout le monde. Le monde ne va pas s'arrêter. Très, très rarement les documentations informatiques disparaissent simplement.
 
-After the initial shock it comes down to evaluate the situation and then act correctly. "Correctly" would mean in the case of an error, to inform us as fast as possible but also as detailed as possible. Begin by gathering all information before contacting us. This way we can quickly help without the need for many further inquiries.
+Après le choc initial, il s'agit d'évaluer la situation et d'agir correctement. "Correctement" signifierait, en cas d'erreur, de nous informer le plus rapidement possible mais aussi le plus en détail possible. Commencez par rassembler toutes les informations avant de nous contacter. De cette manière, nous pouvons rapidement aider sans avoir besoin de nombreuses autres demandes.
 
-## Analyze Errors
+## Analyser les Erreurs {/examples}
 
-**What exactly happens when the error occurs? What steps are performed to provoke the error? Does an error message exist? Is the error reproducible?** - These are important questions which should be answered before going into detail.
+**Que se passe-t-il exactement lorsque l'erreur se produit ? Quelles étapes sont effectuées pour provoquer l'erreur ? Existe-t-il un message d'erreur ? L'erreur est-elle reproductible ?** - Ce sont des questions importantes auxquelles il convient de répondre avant d'entrer dans les détails.
 
-Here is a small checklist what to research beyond of that:
+Voici une petite liste de contrôle sur ce qu'il convient de rechercher au-delà de cela :
 
-1.  ==Is the error already known and maybe even fixed?==<br> We maintain a [list for many errors](../hotfixes/index.md) here in the knowledge base. Our [FAQ](https://help.i-doit.com/hc/en-us/categories/115000434905) is also a source for possible solutions. A courageous search via the search engine of your choice could also provide further clues.
-2.  ==Has i-doit been correctly installed and configured?==<br> An error can occur when our [system requirements](../../installation/system-requirements.md) and [system settings](../../installation/manual-installation/system-settings.md) were not taken into account. The information stated there can also change. A look at the active settings at the time of the error can bring clarity. You should also check additionally whether the ==file permissions== in the installation path of i-doit were set correctly.
-3.  ==Is i-doit maintained on a regular basis?==<br> An error could already have been solved and a fix may have been released. Please make sure to use the ==most recent version== of i-doit.
-4.  ==Are there overlapping issues?==<br> There could be network problems, for example. Connected third party systems could be configured differently or even malfunction.
-5.  ==Are log files of i-doit made available?==<br> [Imports](../../consolidate-data/index.md), [notifications](../../evaluation/notifications.md) or [API requests](../../i-doit-pro-add-ons/api/index.md) can be logged, for example. There are also different log levels in some cases, for example, when importing data from JDisc. The higher the level (debug is the highest) the more details in the error analysis. These logs are located in the installation path of i-doit in the `log/` folder. Some of them can be activated at [Administration → Tenant settings → Settings for Tenant → Logging](../administration/tenant-management/settings-for-tenant.md#logging).
-6.  ==Are exceptions being thrown?==<br> Many errors can be intercepted in PHP. These errors are gathered in the installation path of i-doit in `log/exception.log`. This option is activated at [Administration → Tenant settings → Settings for Tenant → Logging](../administration/tenant-management/settings-for-tenant.md#logging).
-7.  ==Are errors of PHP passed on to the Apache web server?==<br> If you follow our [system settings](../../installation/manual-installation/system-settings.md), you also log many errors of the Apache web server. This log can be found in Debian-based operating systems at `/var/log/apache2/error.log`.
-8.  ==Does the web server report an error to the web browser?==<br> Given the case that the error does not occur in the web GUI: Sometimes the web server is sending an error message to the browser without it being visible for the user. Using the developer consoles of the browsers will make the communication between these two visible, including possible issues.
-9.  ==Does the operating system report an error?==<br> Maybe the issue is not associated with i-doit but with used services, like Apache web server, MySQL/MariaDB or the operating system itself. The services under GNU/Linux are usually administrated via an Init-service like systemd. This writes reports in the Syslog, which is most commonly found at `/var/log/syslog`.
+1.  ==L'erreur est-elle déjà connue et peut-être même corrigée ?==<br> Nous tenons une [liste pour de nombreuses erreurs](../hotfixes/index.md) ici dans la base de connaissances. Notre [FAQ](https://help.i-doit.com/hc/en-us/categories/115000434905) est également une source de solutions possibles. Une recherche courageuse via le moteur de recherche de votre choix pourrait également fournir d'autres indices.
+2.  ==i-doit a-t-il été correctement installé et configuré ?==<br> Une erreur peut survenir lorsque nos [exigences système](../../installation/system-requirements.md) et [paramètres système](../../installation/manual-installation/system-settings.md) n'ont pas été pris en compte. Les informations indiquées peuvent également changer. Un regard sur les paramètres actifs au moment de l'erreur peut apporter de la clarté. Vous devriez également vérifier en outre si les ==autorisations de fichiers== dans le chemin d'installation de i-doit ont été correctement définies.
+3.  ==i-doit est-il maintenu régulièrement ?==<br> Une erreur pourrait déjà avoir été résolue et un correctif peut avoir été publié. Assurez-vous d'utiliser la ==version la plus récente== de i-doit.
+4.  ==Y a-t-il des problèmes superposés ?==<br> Il pourrait y avoir des problèmes de réseau, par exemple. Des systèmes tiers connectés pourraient être configurés différemment ou même dysfonctionner.
+5.  ==Les fichiers journaux de i-doit sont-ils disponibles ?==<br> Les [imports](../../consolidate-data/index.md), les [notifications](../../evaluation/notifications.md) ou les [requêtes API](../../i-doit-pro-add-ons/api/index.md) peuvent être journalisés, par exemple. Il existe également différents niveaux de journalisation dans certains cas, par exemple, lors de l'importation de données depuis JDisc. Plus le niveau est élevé (le débogage est le plus élevé), plus les détails dans l'analyse des erreurs. Ces journaux se trouvent dans le chemin d'installation de i-doit dans le dossier `log/`. Certains d'entre eux peuvent être activés à [Administration → Paramètres du locataire → Paramètres du locataire → Journalisation](../administration/tenant-management/settings-for-tenant.md#logging).
+6.  ==Des exceptions sont-elles lancées ?==<br> De nombreuses erreurs peuvent être interceptées en PHP. Ces erreurs sont rassemblées dans le chemin d'installation de i-doit dans `log/exception.log`. Cette option est activée à [Administration → Paramètres du locataire → Paramètres du locataire → Journalisation](../administration/tenant-management/settings-for-tenant.md#logging).
+7.  ==Les erreurs de PHP sont-elles transmises au serveur web Apache ?==<br> Si vous suivez nos [paramètres système](../../installation/manual-installation/system-settings.md), vous journalisez également de nombreuses erreurs du serveur web Apache. Ce journal peut être trouvé dans les systèmes d'exploitation basés sur Debian à `/var/log/apache2/error.log`.
+8.  ==Le serveur web signale-t-il une erreur au navigateur web ?==<br> Dans le cas où l'erreur ne se produit pas dans l'interface web : Parfois, le serveur web envoie un message d'erreur au navigateur sans que celui-ci soit visible pour l'utilisateur. L'utilisation des consoles de développement des navigateurs rendra la communication entre ces deux éléments visible, y compris les problèmes éventuels.
+9.  ==Le système d'exploitation signale-t-il une erreur ?==<br> Peut-être que le problème n'est pas associé à i-doit mais aux services utilisés, comme le serveur web Apache, MySQL/MariaDB ou le système d'exploitation lui-même. Les services sous GNU/Linux sont généralement administrés via un service Init comme systemd. Celui-ci écrit des rapports dans le Syslog, qui se trouve le plus souvent à `/var/log/syslog`.
 
-!!! success "Debugging for beginners"
 
-    To observe an error not in retrospect but in realtime it is worthwhile to examine the log files mentioned above while examining the system load at the same time. Log files can be opened in GNU/Linux with tail -f <logfile>. Changes are immediately visible. To observe the system load command line commands like top, htop, atop and free are helpful. Note that processes of Apache and MySQL/MariaDB use exceptional amounts of CPU time and/or memory.
+!!! success "Débogage pour les débutants"
 
-## Write a Bug Report
+    Pour observer une erreur non pas a posteriori mais en temps réel, il est utile d'examiner les fichiers journaux mentionnés ci-dessus tout en examinant la charge système en même temps. Les fichiers journaux peuvent être ouverts dans GNU/Linux avec la commande tail -f <logfile>. Les changements sont immédiatement visibles. Pour observer la charge système, des commandes en ligne comme top, htop, atop et free sont utiles. Notez que les processus d'Apache et de MySQL/MariaDB utilisent des quantités exceptionnelles de temps CPU et/ou de mémoire.
 
-==If we know a bug, we can fix it==. If you signed a support contract with us, we already have the needed contact data at our disposal. Bugs can also be reported without support contract via the [help center](https://help.i-doit.com).
+## Rédiger un rapport de bug
+
+==Si nous connaissons un bug, nous pouvons le corriger==. Si vous avez signé un contrat de support avec nous, nous avons déjà les données de contact nécessaires à notre disposition. Les bugs peuvent également être signalés sans contrat de support via le [centre d'aide](https://help.i-doit.com).
 
 !!! tip ""
 
-    Please always state which ==versions== of i-doit, affected add-ons, Apache web server, PHP and MySQL/MariaDB are in use. The ==i-doit environment info file== which is downloadable in the [admin center](../admin-center.md), will help doing so. ==Configuration files==, ==log files==, ==screenshots== and the ==error message== in plain text also support the analysis. ==Answers== to the questions stated above are also a big help for us and in return for you.
+    Veuillez toujours indiquer les ==versions== d'i-doit, les add-ons affectés, le serveur web Apache, PHP et MySQL/MariaDB en cours d'utilisation. Le fichier d'informations sur l'environnement i-doit, téléchargeable dans le [centre d'administration](../admin-center.md), vous aidera à le faire. Les fichiers de configuration, les fichiers journaux, les captures d'écran et le message d'erreur en texte brut soutiennent également l'analyse. Les ==réponses== aux questions mentionnées ci-dessus sont également d'une grande aide pour nous et en retour pour vous.
 
-Formatting your bug report beautifully or even embedding it in high quality PDFs is of less importance for us. We are however much happier about a friendly and objective conversational tone. This however goes without saying.
+Mettre en forme votre rapport de bug de manière esthétique ou même l'intégrer dans des PDF de haute qualité est moins important pour nous. Nous sommes cependant beaucoup plus heureux d'avoir un ton de conversation amical et objectif. Cela va de soi.
 
-## We Will Get in Touch With You
+## Nous prendrons contact avec vous
 
-Within a short period of time we will get back to customers with a support contract (often already proposing a solution). We try to reproduce the issue on our test systems using your information. If this bug seen as one, it will be solved as soon as possible. Before providing a fix, it will first go through our testing processes. Quality needs time. After this, we will release the fix in the course of our release cycles. Whatever the reasons: Sometimes it takes longer to resolve an issue. In these cases we ask for your understanding. We keep working on it.
+Dans un court laps de temps, nous recontacterons les clients ayant un contrat de support (proposant souvent déjà une solution). Nous essayons de reproduire le problème sur nos systèmes de test en utilisant vos informations. Si ce bug est considéré comme tel, il sera résolu dès que possible. Avant de fournir une solution, elle passera d'abord par nos processus de test. La qualité nécessite du temps. Ensuite, nous publierons la correction dans le cadre de nos cycles de publication. Quelles que soient les raisons : Parfois, il faut plus de temps pour résoudre un problème. Dans ces cas, nous vous demandons votre compréhension. Nous continuons à travailler dessus.
 
-## Is Everything Fine?
+## Tout va bien ?
 
-We are happy about your feedback once you tried a proposed solution (fix, workaround, etc.). Did it work? Fantastic. Does the problem persist? Alright, we will try different ways then. A follow-up issue did arise? Do not panic, we will go through all the steps again until all issues are recognized and hopefully resolved. And do not forget: You will never walk alone.
+Nous sommes heureux de recevoir vos retours une fois que vous avez essayé une solution proposée (correctif, contournement, etc.). Cela a fonctionné ? Fantastique. Le problème persiste ? D'accord, nous essaierons alors différentes méthodes. Un problème de suivi est survenu ? Ne paniquez pas, nous passerons à nouveau par toutes les étapes jusqu'à ce que tous les problèmes soient identifiés et, espérons-le, résolus. Et n'oubliez pas : vous ne marcherez jamais seul.

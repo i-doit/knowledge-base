@@ -1,2 +1,1 @@
-<!---Todo: Fixme--->
-tbd
+<!---À faire--->{/*examples*/}

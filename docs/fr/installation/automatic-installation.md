@@ -1,49 +1,49 @@
-# Automatic Installation
+# Installation Automatique {/examples}
 
-This article describes the automatic [IT documentation](../glossary.md) of i-doit. All the required configuration steps are executed on a newly installed GNU/Linux operating system and i-doit is installed. Additionally, Cronjobs, backups and other useful CLI tools are included. Only the execution of a script is required for this purpose.
+Cet article décrit la [documentation informatique](../glossary.md) automatique d'i-doit. Toutes les étapes de configuration requises sont exécutées sur un système d'exploitation GNU/Linux nouvellement installé et i-doit est installé. De plus, les tâches Cron, les sauvegardes et d'autres outils CLI utiles sont inclus. Seule l'exécution d'un script est requise à cette fin.
 
-## Scope
+## Portée {/examples}
 
-:material-check: Installation of software packages <br>
-:material-check: Configuration of software packages<br>
-:material-check: Installation of i-doit<br>
-:material-check: Set-up of Cronjobs<br>
-:material-check: Set-up of backups<br>
-:material-check: Set-up of Restore
+:material-check: Installation des paquets logiciels <br>
+:material-check: Configuration des paquets logiciels<br>
+:material-check: Installation d'i-doit<br>
+:material-check: Configuration des tâches Cron<br>
+:material-check: Configuration des sauvegardes<br>
+:material-check: Configuration de la Restauration
 
-## Requirements
+## Exigences {/examples}
 
--   The [system requirements](system-requirements.md) **have to be fulfilled**. An exception is the LAMP stack (Apache Web Server, MariaDB/MySQL, PHP).
--   One of the [supported](system-requirements.md) GNU/Linux operating systems is installed freshly.
--   The system can access i-doit packet repositories and web services via an internet connection.
+-   Les [exigences système](system-requirements.md) **doivent être remplies**. Une exception est la pile LAMP (serveur Web Apache, MariaDB/MySQL, PHP).
+-   Un des systèmes d'exploitation GNU/Linux [pris en charge](system-requirements.md) est installé récemment.
+-   Le système peut accéder aux dépôts de paquets i-doit et aux services Web via une connexion Internet.
 
-## Use
+## Utilisation {/examples}
 
-The installation is carried out by a [script](https://github.com/bheisig/i-doit-scripts#install-i-doit-on-a-gnulinux-operating-system) which is executed on the operating system.<br>
-The following steps are carried out via the command line. For this purpose, you can connect, for example, via **SSH**. Afterwards, you download the script and enable its execution:
+L'installation est effectuée par un [script](https://github.com/bheisig/i-doit-scripts#install-i-doit-on-a-gnulinux-operating-system) qui est exécuté sur le système d'exploitation.<br>
+Les étapes suivantes sont effectuées via la ligne de commande. Pour cela, vous pouvez vous connecter, par exemple, via **SSH**. Ensuite, vous téléchargez le script et activez son exécution :
 
 ```shell
 wget https://raw.githubusercontent.com/i-doit/scripts/main/idoit-install
 chmod 755 idoit-install
 ```
 
-The scipt has to be executed with **root** rights. If **sudo**  is available:
+Le script doit être exécuté avec les droits de **root**. Si **sudo** est disponible :
 
 ```shell
 sudo ./idoit-install
 ```
 
-Alternatively, you log in as **root**:
+Sinon, vous vous connectez en tant que **root** :
 
 ```shell
 su
 ./idoit-install
 ```
 
-The script asks several questions regarding the configuration. For all questions there are predefined answers which you can accept by pressing **ENTER**.
+Le script pose plusieurs questions concernant la configuration. Pour toutes les questions, il existe des réponses prédéfinies que vous pouvez accepter en appuyant sur **ENTRÉE**.
 
-## Next Steps
+## Étapes Suivantes {/examples}
 
--   [Installation of a valid license (only i-doit pro)](../maintenance-and-operation/activate-license.md)
--   [Follow the tips regarding security and protection](../maintenance-and-operation/security-and-protection.md)
--   [First steps with i-doit](../basics/index.md)
+-   [Installation d'une licence valide (uniquement i-doit pro)](../maintenance-and-operation/activate-license.md)
+-   [Suivre les conseils concernant la sécurité et la protection](../maintenance-and-operation/security-and-protection.md)
+-   [Premiers pas avec i-doit](../basics/index.md)

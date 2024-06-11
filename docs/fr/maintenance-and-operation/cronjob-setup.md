@@ -1,154 +1,169 @@
-# Cronjobs Setup
+# Configuration des tâches planifiées
 
-Many tasks in i-doit can be automated with help of the CLI tool [controller](../automation-and-integration/cli/index.md). We use it to maintain the IT documentation on a regular basis.
+De nombreuses tâches dans i-doit peuvent être automatisées à l'aide de l'outil CLI [controller](../automation-and-integration/cli/index.md). Nous l'utilisons pour maintenir la documentation IT de manière régulière.
 
-The setup of cronjobs is optional. However, we definitely recommend using this option, at best directly after the [IT documentation](../glossary.md).
+La configuration des tâches planifiées est facultative. Cependant, nous recommandons vivement d'utiliser cette option, de préférence juste après l'[installation](../installation/index.md).
 
-!!! success "Cronjobs setup - yes or no?"
+!!! success "Configuration des tâches planifiées - oui ou non ?"
 
-    The setup of cronjobs is optional. However, we definitely recommend using this option, at best directly after the [installation](../installation/index.md).
+    La configuration des tâches planifiées est facultative. Cependant, nous recommandons vivement d'utiliser cette option, de préférence juste après l'[installation](../installation/index.md).
 
-Simplify Access of the Controller  
+Simplifier l'accès au Controller
 ------------------------------------
 
-To simplify the process to access the controller, you can use a simple bash script:
+Pour simplifier le processus d'accès au controller, vous pouvez utiliser un simple script bash :
 
     sudo nano /usr/local/bin/idoit
 
-The script gets the following contents which have to be adapted to your own installation:
+Le script contient le contenu suivant qui doit être adapté à votre propre installation :
 
     #!/bin/bash
     
     ##
-    ## i-doit console
+    ## Console i-doit
     ##
     
     ##
     ## Copyright (C) 2017-18 synetics GmbH, <https://i-doit.com/>
     ##
-    ## This program is free software: you can redistribute it and/or modify
-    ## it under the terms of the GNU Affero General Public License as published by
-    ## the Free Software Foundation, either version 3 of the License, or
-    ## (at your option) any later version.
+    ## Ce programme est un logiciel libre : vous pouvez le redistribuer et/ou le modifier
+    ## selon les termes de la Licence publique générale Affero de la Free Software Foundation telle que publiée par
+    ## la Free Software Foundation, soit la version 3 de la Licence, soit
+    ## (à votre choix) toute version ultérieure.
     ##
-    ## This program is distributed in the hope that it will be useful,
-    ## but WITHOUT ANY WARRANTY; without even the implied warranty of
-    ## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    ## GNU Affero General Public License for more details.
+    ## Ce programme est distribué dans l'espoir qu'il sera utile,
+    ## mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de
+    ## QUALITÉ MARCHANDE ou D'ADÉQUATION À UN USAGE PARTICULIER. Consultez la
+    ## Licence publique générale Affero pour plus de détails.
     ##
-    ## You should have received a copy of the GNU Affero General Public License
-    ## along with this program. If not, see <http://www.gnu.org/licenses/>.
+    ## Vous devriez avoir reçu une copie de la Licence publique générale Affero
+    ## en même temps que ce programme. Si ce n'est pas le cas, consultez <http://www.gnu.org/licenses/>.
     ##
-    
-    set -euo pipefail
-    
-    ##
-    ## Configuration
-    ##
-    
-    INSTANCE_PATH="/var/www/html/i-doit"
-    APACHE_USER="www-data"
-    ARGS="$*"
-    
-    ##--------------------------------------------------------------------------------------------------
-    
-    function execute {
-        local prefix=""
-        local console="php console.php $ARGS"
-    
-        test "$(whoami)" != "$APACHE_USER" && prefix="sudo -u $APACHE_USER "
-    
-        eval "${prefix}${console}" || abort "i-doit console exited with non-zero status"
-    }
-    
-    function setup {
-        cd "$INSTANCE_PATH" || abort "No i-doit instance found under '${INSTANCE_PATH}'"
-    }
-    
-    function finish {
-        exit 0
-    }
-    
-    function abort {
-        echo -e "$1"  1>&2
-        echo "Operation failed. Please check what is wrong and try again." 1>&2
-        exit 1
-    }
-    
-    function log {
-        echo -e "$1"
-    }
-    
-    ##--------------------------------------------------------------------------------------------------
-    
-    if [[ "${BASH_SOURCE[0]}" = "$0" ]]; then
-        setup && execute && finish
-    fi
 
-Afterwards, the execution of the script is enabled:  
+```bash
+set -euo pipefail
 
-    sudo chmod +x /usr/local/bin/idoit
+##
+## Configuration
+##
+
+INSTANCE_PATH="/var/www/html/i-doit"
+APACHE_USER="www-data"
+ARGS="$*"
+
+##--------------------------------------------------------------------------------------------------
+
+function execute {
+    local prefix=""
+    local console="php console.php $ARGS"
+
+    test "$(whoami)" != "$APACHE_USER" && prefix="sudo -u $APACHE_USER "
+
+    eval "${prefix}${console}" || abort "La console i-doit s'est terminée avec un statut différent de zéro"
+}
+
+function setup {
+    cd "$INSTANCE_PATH" || abort "Aucune instance i-doit trouvée sous '${INSTANCE_PATH}'"
+}
+
+function finish {
+    exit 0
+}
+
+function abort {
+    echo -e "$1"  1>&2
+    echo "L'opération a échoué. Veuillez vérifier ce qui ne va pas et réessayer." 1>&2
+    exit 1
+}
+
+function log {
+    echo -e "$1"
+}
+
+##--------------------------------------------------------------------------------------------------
+```
+
+```bash
+if [[ "${BASH_SOURCE[0]}" = "$0" ]]; then
+    setup && execute && finish
+fi
+```
+
+Ensuite, l'exécution du script est activée:
+
+```bash
+sudo chmod +x /usr/local/bin/idoit
+```
 
 !!! attention "sudo"
 
-    The script automatically obtains the right permissions through the use of **sudo**.
-    The currently logged-in user needs the permission to use the **sudo** command. Under Debian GNU/Linux 9 add the user to the **sudo** group. This requires **root** rights:
+Le script obtient automatiquement les bonnes autorisations grâce à l'utilisation de **sudo**.
+L'utilisateur actuellement connecté doit avoir l'autorisation d'utiliser la commande **sudo**. Sous Debian GNU/Linux 9, ajoutez l'utilisateur au groupe **sudo**. Cela nécessite des droits **root**:
 
-        usermod -aG sudo "$(whoami)"
+```bash
+usermod -aG sudo "$(whoami)"
+```
 
-    The option **Defaults targetpw**, which prevents this mechanism, is set under [SLES](../installation/manual-installation/suse-linux-enterprise-server.md). Therefore you have to comment out this option in the **/etc/sudoers** file.
+L'option **Defaults targetpw**, qui empêche ce mécanisme, est définie sous [SLES](../installation/manual-installation/suse-linux-enterprise-server.md). Par conséquent, vous devez commenter cette option dans le fichier **/etc/sudoers**.
 
-From now on, every user can use it:
+Désormais, chaque utilisateur peut l'utiliser:
 
-    idoit COMMAND [OPTIONEN]
+```bash
+idoit COMMANDE [OPTIONS]
+```
 
-Create Essential Jobs
----------------------
+Créer des tâches essentielles
+-----------------------------
 
-In the next step we create another script which we can call up both manually and automatically:
+À l'étape suivante, nous créons un autre script que nous pouvons appeler à la fois manuellement et automatiquement:
 
-    sudo nano /usr/local/bin/idoit-jobs
+```bash
+sudo nano /usr/local/bin/idoit-jobs
+```
 
-This script gets the following contents:
+Ce script contient le contenu suivant:
 
-    #!/bin/bash
-    
-    ##
-    ## i-doit jobs
-    ##
-    
-    ##
-    ## Copyright (C) 2017-18 synetics GmbH, <https://i-doit.com/>
-    ##
-    ## This program is free software: you can redistribute it and/or modify
-    ## it under the terms of the GNU Affero General Public License as published by
-    ## the Free Software Foundation, either version 3 of the License, or
-    ## (at your option) any later version.
-    ##
-    ## This program is distributed in the hope that it will be useful,
-    ## but WITHOUT ANY WARRANTY; without even the implied warranty of
-    ## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    ## GNU Affero General Public License for more details.
-    ##
-    ## You should have received a copy of the GNU Affero General Public License
-    ## along with this program. If not, see <http://www.gnu.org/licenses/>.
-    ##
-    
-    set -euo pipefail
-    IFS=$'\n\t'
-    
-    ##
-    ## Configuration
-    ##
-    
-    CONSOLE_BIN="/usr/local/bin/idoit"
-    INSTANCE_PATH="/var/www/html/i-doit"
-    APACHE_USER="www-data"
-    IDOIT_USERNAME="admin"
-    IDOIT_PASSWORD="admin"
-    TENANT_ID="1"
-    
-    ##--------------------------------------------------------------------------------------------------
+```bash
+#!/bin/bash
+
+##
+## tâches i-doit
+##
+
+##
+## Droits d'auteur (C) 2017-18 synetics GmbH, <https://i-doit.com/>
+##
+## Ce programme est un logiciel libre : vous pouvez le redistribuer et/ou le modifier
+## selon les termes de la Licence publique générale Affero GNU telle que publiée par
+## la Free Software Foundation, soit la version 3 de la Licence, soit
+## (à votre choix) toute version ultérieure.
+##
+## Ce programme est distribué dans l'espoir qu'il sera utile,
+## mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de
+## QUALITÉ MARCHANDE ou D'ADÉQUATION À UN USAGE PARTICULIER. Voir la
+## Licence publique générale Affero GNU pour plus de détails.
+##
+## Vous devriez avoir reçu une copie de la Licence publique générale Affero GNU
+## avec ce programme. Si ce n'est pas le cas, consultez <http://www.gnu.org/licenses/>.
+##
+
+set -euo pipefail
+IFS=$'\n\t'
+
+##
+## Configuration
+##
+
+CONSOLE_BIN="/usr/local/bin/idoit"
+INSTANCE_PATH="/var/www/html/i-doit"
+APACHE_USER="www-data"
+IDOIT_USERNAME="admin"
+IDOIT_PASSWORD="admin"
+TENANT_ID="1"
+```
+
+```markdown
+##--------------------------------------------------------------------------------------------------{/*examples*/}
     
     function execute {
         local prefix=""
@@ -156,107 +171,118 @@ This script gets the following contents:
     
         test "$(whoami)" != "$APACHE_USER" && prefix="sudo -u $APACHE_USER "
     
-        log "Archive i-doit logbook"
+        log "Archiver le journal i-doit"
         eval "${prefix}${CONSOLE_BIN} logbook-archive $suffix" || \
-            abort "Command 'logbook-archive' failed"
+            abort "La commande 'logbook-archive' a échoué"
         log ""
     
-        log "Cleanup i-doit rights"
+        log "Nettoyer les droits i-doit"
         eval "${prefix}${CONSOLE_BIN} auth-cleanup $suffix" || \
-            abort "Command 'auth-cleanup' failed"
+            abort "La commande 'auth-cleanup' a échoué"
         log ""
     
-        log "Purge unfinished objects"
+        log "Purger les objets inachevés"
         eval "${prefix}${CONSOLE_BIN} system-objectcleanup --objectStatus 1 $suffix" || \
-            abort "Command 'system-objectcleanup' failed"
+            abort "La commande 'system-objectcleanup' a échoué"
         log ""
     
-        log "Re-create search index"
+        log "Recréer l'index de recherche"
         eval "${prefix}${CONSOLE_BIN} search-index $suffix" || \
-            abort "Command 'search-index' failed"
-    
-        log "Send notifications"
-        eval "${prefix}${CONSOLE_BIN} notifications-send $suffix" || \
-            abort "Command 'notifications-send' failed"
-    
-        log "Clear caches"
-        eval "${prefix}rm -rf ${INSTANCE_PATH}/temp/*" || \
-            abort "Unable to clear caches"
-    
-        log "Clear updates"
-        eval "${prefix}rm -rf ${INSTANCE_PATH}/updates/versions/*" || \
-            abort "Unable to clear updates"
-    }
-    
-    function setup {
-        test -x "$CONSOLE_BIN" || \
-            abort "Script '${CONSOLE_BIN}' not found"
-    
-        test -d "$INSTANCE_PATH" || \
-            abort "No i-doit instance found under '${INSTANCE_PATH}'"
-    }
-    
-    function log {
-        echo -e "$1"
-    }
-    
-    function finish {
-        log "Done. Have fun :-)"
-        exit 0
-    }
-    
-    function abort {
-        echo -e "$1"  1>&2
-        echo "Operation failed. Please check what is wrong and try again." 1>&2
-        exit 1
-    }
-    
-    ##--------------------------------------------------------------------------------------------------
-    
-    if [[ "${BASH_SOURCE[0]}" = "$0" ]]; then
-        setup && execute && finish
-    fi
+            abort "La commande 'search-index' a échoué"
+```  
 
-Afterwards, the execution of the script is enabled:  
+```bash
+log "Envoyer des notifications"
+eval "${prefix}${CONSOLE_BIN} notifications-send $suffix" || \
+    abort "La commande 'notifications-send' a échoué"
 
-    sudo chmod +x /usr/local/bin/idoit-jobs
+log "Effacer les caches"
+eval "${prefix}rm -rf ${INSTANCE_PATH}/temp/*" || \
+    abort "Impossible de vider les caches"
 
-From now on, every user can use it:
+log "Effacer les mises à jour"
+eval "${prefix}rm -rf ${INSTANCE_PATH}/updates/versions/*" || \
+    abort "Impossible de vider les mises à jour"
+}
 
-    idoit-jobs
+function setup {
+    test -x "$CONSOLE_BIN" || \
+        abort "Le script '${CONSOLE_BIN}' est introuvable"
 
-The following tasks are carried out when the script is executed:  
+    test -d "$INSTANCE_PATH" || \
+        abort "Aucune instance i-doit trouvée sous '${INSTANCE_PATH}'"
+}
 
-*   File caches in the **temp/** directory are emptied.
-*   [Update packages](../maintenance-and-operation/update.md) which are not required anymore are deleted.
-*   Older [logbook](../basics/logbook.md) entries are archived.
-*   The cache for [user rights](../efficient-documentation/rights-management/index.md) is build up afresh.
-*   ["Unfinished" objects](../basics/life-and-documentation-cycle.md) are deleted irrevocably.
-*   The [search index](../efficient-documentation/search.md) is created freshly.
-*   [Notifications](../evaluation/notifications.md) are sent via e-mail.  
+function log {
+    echo -e "$1"
+}
 
-Automation of Jobs Calls
-------------------------
+function finish {
+    log "Terminé. Amusez-vous :-)"
+    exit 0
+}
 
-### When and how often?  
+function abort {
+    echo -e "$1"  1>&2
+    echo "L'opération a échoué. Veuillez vérifier ce qui ne va pas et réessayer." 1>&2
+    exit 1
+}
 
-We recommend executing the above mentioned jobs at least once per day. You should ensure that no other interactions are carried out in i-doit during the execution - neither via the web GUI nor through additional scripts or by external applications via the API. Therefore the jobs are usually carried out during the night.
+##--------------------------------------------------------------------------------------------------
+```
+
+```bash
+if [[ "${BASH_SOURCE[0]}" = "$0" ]]; then
+    setup && execute && finish
+fi
+```
+
+Ensuite, l'exécution du script est activée :
+
+```bash
+sudo chmod +x /usr/local/bin/idoit-jobs
+```
+
+Désormais, chaque utilisateur peut l'utiliser :
+
+```bash
+idoit-jobs
+```
+
+Les tâches suivantes sont effectuées lors de l'exécution du script :
+
+* Les caches de fichiers dans le répertoire **temp/** sont vidés.
+* Les [paquets mis à jour](../maintenance-and-operation/update.md) qui ne sont plus nécessaires sont supprimés.
+* Les anciennes entrées du [journal](../basics/logbook.md) sont archivées.
+* Le cache des [droits d'utilisateur](../efficient-documentation/rights-management/index.md) est reconstruit à neuf.
+* Les objets "non terminés" sont supprimés de manière irrévocable.
+* L'index de [recherche](../efficient-documentation/search.md) est créé à nouveau.
+* Des [notifications](../evaluation/notifications.md) sont envoyées par e-mail.
+
+Automatisation des Appels de Tâches
+-----------------------------------
+
+### Quand et à quelle fréquence ?
+
+Nous recommandons d'exécuter les tâches mentionnées ci-dessus au moins une fois par jour. Vous devriez vous assurer qu'aucune autre interaction n'est effectuée dans i-doit pendant l'exécution - ni via l'interface web ni à travers des scripts supplémentaires ou par des applications externes via l'API. Par conséquent, les tâches sont généralement effectuées pendant la nuit.
+
+{ /* examples */ }
 
 ### GNU/Linux  
 
-Under Linux you can run automated commands on a regular basis. You could use [cron, anacron, crontab](https://de.wikipedia.org/wiki/Cron) or [systemd.timer](https://www.freedesktop.org/software/systemd/man/systemd.timer.html).
+Sous Linux, vous pouvez exécuter des commandes automatisées régulièrement. Vous pourriez utiliser [cron, anacron, crontab](https://de.wikipedia.org/wiki/Cron) ou [systemd.timer](https://www.freedesktop.org/software/systemd/man/systemd.timer.html).{/*examples*/}
 
 ### Windows
 
-The scripts mentioned in this article do not work under Windows withour further ado and should be replaced by equivalent scripts. Windows tasks are suitable for the automation.
+Les scripts mentionnés dans cet article ne fonctionnent pas sous Windows sans autre préparation et devraient être remplacés par des scripts équivalents. Les tâches Windows sont adaptées à l'automatisation.{/*examples*/}
 
-### Catch problems
+### Attraper les problèmes
 
-In order to intercept possible errors and to report them to the responsible system administrator, you can configure the operating system in such a way that e-mails are sent correspondingly. A simple mailer is **[**sSMTP**](https://wiki.debian.org/sSMTP)**. However, the **idoit-jobs** script creates a lot of output on the shell. You can apply the **chronic** tool to achieve that only errors are reported. This tool can be installed retroactively on many operating systems, often it is contained in the [**moreutils**](https://joeyh.name/code/moreutils/) distribution package.
+Afin d'intercepter d'éventuelles erreurs et de les signaler à l'administrateur système responsable, vous pouvez configurer le système d'exploitation de manière à ce que des e-mails soient envoyés en conséquence. Un simple expéditeur de courrier est **[**sSMTP**](https://wiki.debian.org/sSMTP)**. Cependant, le script **idoit-jobs** crée beaucoup de sortie dans le terminal. Vous pouvez appliquer l'outil **chronic** pour que seules les erreurs soient signalées. Cet outil peut être installé rétroactivement sur de nombreux systèmes d'exploitation, souvent il est contenu dans le paquet de distribution [**moreutils**](https://joeyh.name/code/moreutils/).{/*examples*/}
 
-!!! attention chronic under SLES
+!!! Attention sous SLES
 
-    The **moreutils** package and thus the **chronic** tool are not part of [SLES](../installation/manual-installation/suse-linux-enterprise-server.md). Therefore you have to download **chronic** manually from the website:
+    Le paquet **moreutils** et donc l'outil **chronic** ne font pas partie de [SLES](../installation/manual-installation/suse-linux-enterprise-server.md). Par conséquent, vous devez télécharger **chronic** manuellement depuis le site web :
 
         wget https://git.joeyh.name/index.cgi/moreutils.git/plain/chronic
         chmod +x chronic
@@ -264,18 +290,18 @@ In order to intercept possible errors and to report them to the responsible syst
         wget -O - https://cpanmin.us | perl - --sudo App::cpanminus
         sudo cpanm --notest --install IPC::Run
 
-### Example for Cron
+### Exemple pour Cron
 
-We create a new file for Cron:
+Nous créons un nouveau fichier pour Cron :
 
     sudo nano /etc/cron.d/i-doit
 
-The file obtains the following contents:
+Le fichier contient les éléments suivants :
 
-    ## i-doit cron jobs
+    ## tâches cron i-doit
 
     MAILTO="sysadmin@i-doit.example.net"
 
     5 5 * * *   www-data    test -x /usr/local/bin/idoit-jobs && /usr/bin/chronic /usr/local/bin/idoit-jobs
 
-Every day at 5:05 a.m. the **idoit-jobs** script is executed with the permissions of the Apacheuser **www-data**. To achieve that only errors are sent per mail, we use ****chronic****. The errors are sent via mail notifications.
+Chaque jour à 5h05, le script **idoit-jobs** est exécuté avec les permissions de l'utilisateur Apache **www-data**. Pour ne recevoir que les erreurs par e-mail, nous utilisons ****chronic****. Les erreurs sont envoyées via des notifications par e-mail.

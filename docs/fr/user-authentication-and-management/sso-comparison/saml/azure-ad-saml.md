@@ -1,52 +1,52 @@
-# Azure AD (SAML) authentication
+# Authentification Azure AD (SAML)
 
-In this guide, we describe how to set up single sign-on (SSO) for i-doit using SAML. We will be using Mellon as an authenticator versus Azure AD via SAML ..
+Dans ce guide, nous décrivons comment configurer l'authentification unique (SSO) pour i-doit en utilisant SAML. Nous utiliserons Mellon comme authentificateur par rapport à Azure AD via SAML.
 
-## Preparations
+## Préparatifs
 
-We use for the example configuration a Debian 11 server with Apache, Mellon and installed i-doit.
+Nous utilisons, pour la configuration d'exemple, un serveur Debian 11 avec Apache, Mellon et i-doit installé.
 
-### Basic configuration:
+### Configuration de base :
 
-✔ This guide assumes that your Azure Active Directory has already been configured properly.<br>
-✔ i-doit is already pre-installed and usable.
+✔ Ce guide suppose que votre Azure Active Directory a déjà été configuré correctement.<br>
+✔ i-doit est déjà pré-installé et utilisable.
 
-### Install packages
+### Installation des packages
 
 ```shell
 sudo apt -y install openssl libapache2-mod-auth-mellon ntpdate
 ```
 
-The system architecture should be x86 in 64bit.
+L'architecture du système doit être x86 en 64 bits.
 
-## Mellon configuration
+## Configuration de Mellon
 
-For this we create a directory under `/etc/apache2` and put our configuration file here.
+Pour cela, nous créons un répertoire sous `/etc/apache2` et plaçons notre fichier de configuration ici.
 
 ```shell
 sudo mkdir -p /etc/apache2/mellon
 cd /etc/apache2/mellon
 ```
 
-With the following command we create our Mellon metadata "Customize URLs to your needs".
+Avec la commande suivante, nous créons nos métadonnées Mellon "Personnalisez les URL selon vos besoins".
 
 ```shell
 /usr/sbin/mellon_create_metadata https://tu2-samlsso.synetics.test/ "https://tu2-samlsso.synetics.test/mellon"
 ```
 
-The command now the following files:
+La commande crée maintenant les fichiers suivants :
 
     https_tu2_samlsso.synetics.test_.cert
     https_tu2_samlsso.synetics.test_.key
     https_tu2_samlsso.synetics.test_.xml
 
-Now we have to create our Mellon configuration.
+Maintenant, nous devons créer notre configuration Mellon.
 
 ```shell
 sudo nano /etc/apache2/conf-available/mellon.conf
 ```
 
-The following directives are inserted based on the example:
+Les directives suivantes sont insérées en fonction de l'exemple :
 
 ```shell
 <Location / >
@@ -59,15 +59,15 @@ The following directives are inserted based on the example:
 </Location>
 ```
 
-## Apache2 configuration
+## Configuration Apache2
 
-First we create a self signed certificate "name can be individual".
+Tout d'abord, nous créons un certificat auto-signé "le nom peut être individuel".
 
 ```shell
 openssl req -newkey rsa:3072 -new -x509 -days 3652 -nodes -out /etc/ssl/certs/mywebserver.pem -keyout /etc/ssl/private/mywebserver.key
 ```
 
-Beispiel:
+Exemple :
 
 ```shell
 Country Name (2 letter code) [AU]:Your_Country
@@ -79,13 +79,13 @@ Common Name (e.g. server FQDN or YOUR name) []:mywebserver.example.com
 Email Address []:your_email_address
 ```
 
-Create VHost:
+Créer VHost :
 
 ```shell
 sudo nano /etc/apache2/sites-available/mywebserver.conf
 ```
 
-Example:
+Exemple :
 
 ```shell
 <IfModule mod_ssl.c>
@@ -115,101 +115,98 @@ Example:
 ```
 
 !!! info ""
-    In this example, the directory `/var/www/html/i-doit` where our i-doit is located is protected by using Mellon.
+    Dans cet exemple, le répertoire `/var/www/html/i-doit` où se trouve notre i-doit est protégé en utilisant Mellon.
 
-## Activate i-doit pro SSO
+## Activer i-doit pro SSO
 
-Now we have to go to administration -> system settings and adjust the configuration as follows.
+Maintenant, nous devons aller dans administration -> paramètres système et ajuster la configuration comme suit.
 
-!!! attention "Important information about contacts"
-    
-    It is mandatory that the e-mail address of the respective user is stored as login in i-doit!
+!!! attention "Informations importantes sur les contacts"
 
-[![i-doit SSO setting](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)
+    Il est obligatoire que l'adresse e-mail de l'utilisateur respectif soit enregistrée en tant que connexion dans i-doit!
 
-As long as the configurations on the Linux server have not been activated yet, users can still log in with the i-doit login mask and a local user.
+[![Paramètres SSO i-doit](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)
+
+Tant que les configurations sur le serveur Linux n'ont pas encore été activées, les utilisateurs peuvent toujours se connecter avec le masque de connexion i-doit et un utilisateur local.
 
 ## Azure AD (SAML)
 
-In order to get the required XML for the Mellon configuration we have to do the following steps (example):
+Afin d'obtenir le XML requis pour la configuration de Mellon, nous devons suivre les étapes suivantes (exemple) :
 
-### Create a enterprise application
+### Créer une application d'entreprise
 
-We log into Azure AD and then go to enterprise applications.
+Nous nous connectons à Azure AD, puis nous allons dans les applications d'entreprise.
 
-[![Azure-AD-enterprise-application](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-1.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-1.png)
+[![Application d'entreprise Azure AD](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-1.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-1.png)
 
-Create your own enterprise application.
+Créez votre propre application d'entreprise.
 
 [![Azure-AD-enterprise-application-2](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-2.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-2.png)
 
-Set up SSO.
+Configurez le SSO.
 
 [![Azure-AD-enterprise-application-3](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-3.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-3.png)
 
-Now we select the SAML method and in the next step we provide our `https_tu2_samlsso.synetics.test_.xml` by clicking the button `upload metadata file`.
+Maintenant, nous sélectionnons la méthode SAML et à l'étape suivante, nous fournissons notre `https_tu2_samlsso.synetics.test_.xml` en cliquant sur le bouton `télécharger le fichier de métadonnées`.
 
 !!! info "https_tu2_samlsso.synetics.test_.xml"
 
-    The file must be downloaded beforehand from our server via e.g. SFTP.
+    Le fichier doit être téléchargé au préalable depuis notre serveur via par exemple SFTP.
 
 [![Azure-AD-enterprise-application-4](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-4.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-4.png)
 
-Now we save the configuration.
+Maintenant nous enregistrons la configuration.
 
 !!! attention "Test"
 
-    If a message appears asking to test the configuration, please confirm with the button `No, I will test it later`.
+    Si un message apparaît demandant de tester la configuration, veuillez confirmer avec le bouton `Non, je le testerai plus tard`.
 
 [![Azure-AD-enterprise-application-5](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-5.jpg)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-5.jpg)
 
-Afterwards we download the metadata XML because it will be needed later on.
+Ensuite, nous téléchargeons le fichier XML de métadonnées car il sera nécessaire ultérieurement.
 
 [![Azure-AD-enterprise-application-6](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-6.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-6.png)
 
-In order for the users to gain access to the enterprise application, the assignment must be adjusted.
+Afin que les utilisateurs puissent accéder à l'application d'entreprise, l'attribution doit être ajustée.
 
 [![Azure-AD-enterprise-application-7](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-7.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-7.png)
 
-Lastly, we need to customize the unique user identifier so that Mellon can forward the user's email address to i-doit.
+Enfin, nous devons personnaliser l'identifiant unique de l'utilisateur afin que Mellon puisse transmettre l'adresse e-mail de l'utilisateur à i-doit.
 
-To do this, we open the `Single sign-on` item in the administration of the enterprise application.
-Then we see in the main area 'Attributes and claims' and we edit them.
+Pour ce faire, nous ouvrons l'élément `Authentification unique` dans l'administration de l'application d'entreprise.
+Ensuite, nous voyons dans la zone principale 'Attributs et revendications' et nous les éditons.
 
-[![Azure-AD-enterprise-application-8](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-8.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-8.png)
+Maintenant, nous éditons sous `Revendication réussie` la première revendication qui est affichée.
 
-Now we edit under `Successful claim` the first claim that is displayed.
+Le format de l'identifiant de nom doit être modifié en `adresse e-mail` obligatoire.
+L'attribut source doit être modifié en `user.mail`.
+Ensuite, nous enregistrons la configuration.
 
-[![Azure-AD-enterprise-application-9](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-9.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-9.png)
-
-The name identifier format must be changed to `email address` mandatory.
-The source attribute must be changed to `user.mail`..
-Then we save the configuration.
 
 [![Azure-AD-enterprise-application-10](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-10.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/azure-ad/azure-ad-enterprise-application-10.png)
 
-At this point, we are done configuring our enterprise application in Azure AD.
+À ce stade, nous avons terminé la configuration de notre application d'entreprise dans Azure AD.
 
-## Activation of the configurations on the Linux server
+## Activation des configurations sur le serveur Linux
 
-### Provide metadata XML
+### Fournir le XML de métadonnées
 
-The previously created metadata XML must now be made available on our Linux server in the directory `/etc/apache2/mellon` so that Mellon can use it..
+Le XML de métadonnées précédemment créé doit maintenant être disponible sur notre serveur Linux dans le répertoire `/etc/apache2/mellon` afin que Mellon puisse l'utiliser.
 
-!!!attention "Filename"
+!!!attention "Nom de fichier"
 
-    Please adjust the name of the file to `AzureAD_metadata.xml` in `mellon.conf`.
-    Alternatively, adjust the filename in `mellon.conf`.
+    Veuillez ajuster le nom du fichier à `AzureAD_metadata.xml` dans `mellon.conf`.
+    Sinon, ajustez le nom de fichier dans `mellon.conf`.
 
-Now that we have created all the configurations so far, we can test them and activate all the necessary mods.
+Maintenant que nous avons créé toutes les configurations jusqu'à présent, nous pouvons les tester et activer tous les mods nécessaires.
 
-###Test config
+### Tester la configuration
 
 ```shell
 sudo apache2ctl configtest
 ```
 
-###Activate mods and configs
+### Activer les mods et les configurations
 
 ```shell
 sudo a2enmod ssl
@@ -218,11 +215,11 @@ sudo a2ensite mywebserver.conf
 sudo systemctl restart apache2
 ```
 
-At this point we are done with the configuration of our Linux server.
+À ce stade, nous avons terminé la configuration de notre serveur Linux.
 
-If we now open the URL again in our browser `https://tu2-samlsso.synetics.test` we will be redirected to the Azure AD login.
-After successful login we are redirected back to our i-doit and are successfully logged in.
+Si nous ouvrons à nouveau l'URL dans notre navigateur `https://tu2-samlsso.synetics.test`, nous serons redirigés vers la connexion Azure AD.
+Après une connexion réussie, nous sommes redirigés vers notre i-doit et nous sommes connectés avec succès.
 
-!!! info "Fallback to login screen"
+!!! info "Retour à l'écran de connexion"
 
-    If a user logs in who does not yet exist in i-doit, then this user is automatically redirected to the i-doit login screen and can log in with a local user.
+    Si un utilisateur se connecte et n'existe pas encore dans i-doit, cet utilisateur est automatiquement redirigé vers l'écran de connexion i-doit et peut se connecter avec un utilisateur local.

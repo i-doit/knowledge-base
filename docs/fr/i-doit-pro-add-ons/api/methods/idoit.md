@@ -8,34 +8,34 @@ lang: en
 
 # idoit
 
-This namespace is reserved for common methods.
+Cet espace de noms est réservé aux méthodes communes.
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## idoit.addons
 
-Displays a list of installed add-ons
+Affiche une liste des modules complémentaires installés.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Description |
-| --- | -------------- | ----------- |
-| -   | -              | -           |
+| Clé | Type de données JSON | Description |
+| --- | -------------------- | ----------- |
+| -   | -                    | -           |
 
-!!! example "WIP"
+!!! example "Travail en cours"
 
-    ### Response parameters
+    ### Paramètres de la réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+    | Clé             | Type de données JSON | Description |
+    | --------------- | -------------------- | ----------- |
+    | **Placeholder** | Placeholder          | Placeholder |
+    | **Placeholder** | Placeholder          | Placeholder |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -49,7 +49,7 @@ Displays a list of installed add-ons
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -87,28 +87,28 @@ Displays a list of installed add-ons
 
 ## idoit.constants
 
-Fetch defined constants from i-doit.
+Récupère les constantes définies dans i-doit.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Description |
-| --- | -------------- | ----------- |
-| -   | -              | -           |
+| Clé | Type de données JSON | Description |
+| --- | -------------------- | ----------- |
+| -   | -                    | -           |
 
-### Response
+### Réponse {/examples/}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key              | JSON data type | Description                                                                                           |
-| ---------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
-| **objectTypes**  | Object         | List of object types<br><br>Keys: object type constants<br><br>Values: translated object type titles  |
-| **categories**   | Object         | List of global and specific categories                                                                |
-| **categories.g** | Object         | List of global categories<br><br>Keys: category constants<br><br>Values: translated category titles   |
-| **categories.s** | Object         | List of specific categories<br><br>Keys: category constants<br><br>Values: translated category titles |
+| Clé              | Type de données JSON | Description                                                                                           |
+| ---------------- | -------------------- | ----------------------------------------------------------------------------------------------------- |
+| **objectTypes**  | Objet                | Liste des types d'objets<br><br>Clés : constantes de types d'objets<br><br>Valeurs : titres de types d'objets traduits  |
+| **categories**   | Objet                | Liste des catégories globales et spécifiques                                                            |
+| **categories.g** | Objet                | Liste des catégories globales<br><br>Clés : constantes de catégories<br><br>Valeurs : titres de catégories traduits   |
+| **categories.s** | Objet                | Liste des catégories spécifiques<br><br>Clés : constantes de catégories<br><br>Valeurs : titres de catégories traduits |
 
-### Example
+### Exemple {/examples/}
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -122,7 +122,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -197,30 +197,30 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-## idoit.license
+## idoit.license { /*examples*/ }
 
-Displays information about the installed license.
+Affiche des informations sur la licence installée.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key             | JSON data type | Required | Description |
-| --------------- | -------------- | -------- | ----------- |
-| **Placeholder** | Placeholder    | Yes      | Placeholder |
+| Clé            | Type de données JSON | Requis   | Description |
+| -------------- | -------------------- | -------- | ----------- |
+| **Placeholder** | Placeholder          | Oui      | Placeholder |
 
 !!! example "WIP"
 
-    ### Response parameters
+    ### Paramètres de la réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+    | Clé            | Type de données JSON | Description |
+    | -------------- | -------------------- | ----------- |
+    | **Placeholder** | Placeholder          | Placeholder |
+    | **Placeholder** | Placeholder          | Placeholder |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -234,7 +234,7 @@ Displays information about the installed license.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -286,34 +286,34 @@ Displays information about the installed license.
     }
     ```
 
-## idoit.login
+## idoit.login { /*examples*/ }
 
-Create new session with X-RPC-Auth headers.
+Crée une nouvelle session avec les en-têtes X-RPC-Auth.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Required | Description |
-| --- | -------------- | -------- | ----------- |
-| -   | -              | -        | -           |
+| Clé | Type de données JSON | Requis   | Description |
+| --- | -------------------- | -------- | ----------- |
+| -   | -                    | -        | -           |
 
-### Response parameters
+### Paramètres de réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key             | JSON data type | Description                                                        |
-| --------------- | -------------- | ------------------------------------------------------------------ |
-| **result**      | Boolean        | Should be **true**                                                 |
-| **userid**      | String         | Object identifier of logged-in user (as numeric string)            |
-| **name**        | String         | Object title of logged-in user                                     |
-| **mail**        | String         | Attribute **E-mail address** in category **Persons → Master Data** |
-| **username**    | String         | Attribute **User name** in category **Persons → Login**            |
-| **session-id**  | String         | Generated session identifier                                       |
-| **client-id**   | String         | Tenant identifier (as numeric string)                              |
-| **client-name** | String         | Tenant name                                                        |
+| Clé             | Type de données JSON | Description                                                        |
+| --------------- | -------------------- | ------------------------------------------------------------------ |
+| **result**      | Booléen              | Doit être **true**                                                 |
+| **userid**      | Chaîne de caractères | Identifiant d'objet de l'utilisateur connecté (sous forme de chaîne numérique) |
+| **name**        | Chaîne de caractères | Titre de l'objet de l'utilisateur connecté                          |
+| **mail**        | Chaîne de caractères | Attribut **Adresse e-mail** dans la catégorie **Personnes → Données principales** |
+| **username**    | Chaîne de caractères | Attribut **Nom d'utilisateur** dans la catégorie **Personnes → Connexion** |
+| **session-id**  | Chaîne de caractères | Identifiant de session généré                                     |
+| **client-id**   | Chaîne de caractères | Identifiant du locataire (sous forme de chaîne numérique)          |
+| **client-name** | Chaîne de caractères | Nom du locataire                                                   |
 
-### Example
+### Exemple
 
-=== "Request body with set header"
+=== "Corps de la requête avec en-tête défini"
 
     ```
     X-RPC-Auth-Username: admin
@@ -332,7 +332,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body with header"
+=== "Corps de la réponse avec en-tête"
 
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
@@ -357,28 +357,28 @@ JSON key **result** contains a JSON object.
 
 ### idoit.logout
 
-Close current session
+Ferme la session actuelle
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Description |
-| --- | -------------- | ----------- |
-| -   | -              | -           |
+| Clé | Type de données JSON | Description |
+| --- | -------------------- | ----------- |
+| -   | -                    | -           |
 
-### Response parameters
+### Paramètres de la réponse
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key     | JSON data type | Description                        |
-| ------- | -------------- | ---------------------------------- |
-| message | String         | Should be **"Logout successfull"** |
-| result  | Boolean        | Should be **true**                 |
+| Clé     | Type de données JSON | Description                           |
+| ------- | -------------------- | ------------------------------------- |
+| message | Chaîne de caractères | Doit être **"Déconnexion réussie"**    |
+| result  | Booléen              | Doit être **true**                    |
 
-### Example
+### Exemple
 
-See method [idoit.login](#idoitlogin) before.
+Voir la méthode [idoit.login](#idoitlogin) avant.
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
@@ -396,7 +396,7 @@ See method [idoit.login](#idoitlogin) before.
     }
     ```
 
-=== "Response body"
+### Corps de la réponse {/%%%/}
 
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
@@ -413,32 +413,32 @@ See method [idoit.login](#idoitlogin) before.
     }
     ```
 
-## idoit.search
+## idoit.search {/%%%/}
 
-[Search](../../../efficient-documentation/search.md) in i-doit
+[Recherche](../../../efficient-documentation/search.md) dans i-doit
 
-### Request parameters
+### Paramètres de la requête {/%%%/}
 
-| Key   | JSON data typ | Required | Description                                |
-| ----- | ------------- | -------- | ------------------------------------------ |
-| **q** | String        | Yes      | Query, for example: **"My little server"** |
+| Clé   | Type de données JSON | Requis | Description                                |
+| ----- | --------------------- | ------ | ------------------------------------------ |
+| **q** | Chaîne de caractères | Oui    | Requête, par exemple : **"Mon petit serveur"** |
 
-### Response parameters
+### Paramètres de la réponse {/%%%/}
 
-JSON key **result** contains an array of JSON objects. Each object contains a search result.
+La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-| Key            | JSON data type | Description                                        |
-| -------------- | -------------- | -------------------------------------------------- |
-| **documentID** | String         | Identifier                                         |
-| **key**        | String         | Attribute which relates to query                   |
-| **value**      | String         | Value which relates to query                       |
-| **type**       | String         | [Add-on](../index.md) or core feature              |
-| **link**       | String         | Relative URL which directly links to search result |
-| **score**      | Integer        | Scoring (deprecated)                               |
+| Clé            | Type de données JSON | Description                                        |
+| -------------- | -------------------- | -------------------------------------------------- |
+| **documentID** | Chaîne de caractères  | Identifiant                                         |
+| **key**        | Chaîne de caractères  | Attribut lié à la requête                          |
+| **value**      | Chaîne de caractères  | Valeur liée à la requête                           |
+| **type**       | Chaîne de caractères  | [Module complémentaire](../index.md) ou fonction principale |
+| **link**       | Chaîne de caractères  | URL relative qui mène directement au résultat de la recherche |
+| **score**      | Entier               | Score (obsolète)                                   |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -453,7 +453,7 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -476,37 +476,37 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
 
 ## idoit.version
 
-Fetch information about i-doit and the current user
+Obtenez des informations sur i-doit et l'utilisateur actuel
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Description |
-| --- | -------------- | ----------- |
-| -   | -              | -           |
+| Clé | Type de données JSON | Description |
+| --- | -------------------- | ----------- |
+| -   | -                    | -           |
 
-### Response parameters
+### Paramètres de la réponse
 
-JSON key **result** contains an JSON object with various information about i-doit itself and the current user.
+La clé JSON **result** contient un objet JSON avec diverses informations sur i-doit lui-même et l'utilisateur actuel.
 
-| Key                | JSON data type | Description                                                                     |
-| ------------------ | -------------- | ------------------------------------------------------------------------------- |
-| **login**          | Array          | Information about the user who has performed the request; see below for details |
-| **login.userid**   | String         | Object identifier (as numeric string)                                           |
-| **login.name**     | String         | Object title                                                                    |
-| **login.mail**     | String         | E-mail address (see category **Persons → Master Data**)                         |
-| **login.username** | String         | User name (see category **Persons → Login**)                                    |
-| **login.mandator** | String         | Tenant name                                                                     |
-| **login.language** | String         | Language: **"en"** or **"de"**                                                  |
-| **version**        | String         | Version of installed i-doit                                                     |
-| **step**           | String         | Dev, alpha or beta release                                                      |
-| **type**           | String         | Release variant: **"OPEN"** or **"PRO"**                                        |
+| Clé                | Type de données JSON | Description                                                                     |
+| ------------------ | -------------------- | ------------------------------------------------------------------------------- |
+| **login**          | Tableau              | Informations sur l'utilisateur ayant effectué la demande; voir ci-dessous pour les détails |
+| **login.userid**   | Chaîne               | Identifiant de l'objet (sous forme de chaîne numérique)                         |
+| **login.name**     | Chaîne               | Titre de l'objet                                                                |
+| **login.mail**     | Chaîne               | Adresse e-mail (voir la catégorie **Personnes → Données principales**)          |
+| **login.username** | Chaîne               | Nom d'utilisateur (voir la catégorie **Personnes → Connexion**)                 |
+| **login.mandator** | Chaîne               | Nom du locataire                                                               |
+| **login.language** | Chaîne               | Langue : **"en"** ou **"de"**                                                  |
+| **version**        | Chaîne               | Version de i-doit installée                                                    |
+| **step**           | Chaîne               | Version de développement, alpha ou bêta                                        |
+| **type**           | Chaîne               | Variante de version : **"OPEN"** ou **"PRO"**                                  |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
-    ```json
-    {
+```json
+{
         "version": "2.0",
         "method": "idoit.version",
         "params": {
@@ -515,12 +515,12 @@ JSON key **result** contains an JSON object with various information about i-doi
         },
         "id": 1
     }
-    ```
+```
 
-=== "Response body"
+=== "Corps de la réponse"
 
-    ```json
-    {
+```json
+{
       "id": 1,
       "jsonrpc": "2.0",
       "result": {
@@ -537,4 +537,4 @@ JSON key **result** contains an JSON object with various information about i-doi
         "type": "PRO"
       }
     }
-    ```
+```

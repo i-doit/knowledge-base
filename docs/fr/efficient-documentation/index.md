@@ -1,14 +1,14 @@
-# Efficient Documentation
+# Documentation Efficace {/ * exemples *}
 
-In the beginning, when you start to deal with the structure of i-doit, you will realize that i-doit is primarily a structured database with a graphical interface. Far from it - some features are available to help you document as fast and easily as possible. To succeed in the manual handling of the documentation you can find many tips and tricks in the following subpages:
+Au début, lorsque vous commencez à vous familiariser avec la structure de i-doit, vous réaliserez que i-doit est principalement une base de données structurée avec une interface graphique. Bien loin de là - certaines fonctionnalités sont disponibles pour vous aider à documenter aussi rapidement et facilement que possible. Pour réussir dans la manipulation manuelle de la documentation, vous pouvez trouver de nombreux conseils et astuces dans les sous-pages suivantes :
 
-*   [List Editing](./list-editing.md) 
-*   [Mass Change](./mass-change.md)
-*   [Duplicate Objects](./duplicate-objects.md)  
-*   [Templates](./templates.md)
-*   [Validation and Mandatory Fields](./validation-and-mandatory-fields.md)
-*   [Rights Management](./rights-management/index.md)
-*   [Search](./search.md)
-*   [Object Lock](./object-lock.md)
+*   [Édition de Liste](./list-editing.md) 
+*   [Changement en Masse](./mass-change.md)
+*   [Dupliquer des Objets](./duplicate-objects.md)  
+*   [Modèles](./templates.md)
+*   [Validation et Champs Obligatoires](./validation-and-mandatory-fields.md)
+*   [Gestion des Droits](./rights-management/index.md)
+*   [Recherche](./search.md)
+*   [Verrouillage d'Objet](./object-lock.md)
 
-By the way: There is much more to i-doit than manual documentation. But this is [another chapter](./../automation-and-integration/index.md).
+Au fait : Il y a beaucoup plus à i-doit qu'une simple documentation manuelle. Mais c'est [un autre chapitre](./../automation-and-integration/index.md).

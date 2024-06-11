@@ -1,3 +1,3 @@
-# SSO with GSSAPI
+# SSO avec GSSAPI
 
-- [Active Directory with GSSAPI SSO](ad-gssapi.md)
+- [Active Directory avec SSO GSSAPI](ad-gssapi.md) {/ * exemples * /}

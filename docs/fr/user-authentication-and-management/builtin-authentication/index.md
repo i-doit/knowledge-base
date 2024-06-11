@@ -1,10 +1,11 @@
-# Builtin authentication
+# Authentification intégrée
 
-!!! example "Work in Progress"
+!!! exemple "Travail en cours"
 
-Here we describe which login options are already integrated in i-doit pro.<br>
-Login via the web interface is possible via [LDAP](../ldap-directory/index.md) or [local user](creating-a-local-user.md).
+Ici, nous décrivons quelles options de connexion sont déjà intégrées dans i-doit pro.<br>
+La connexion via l'interface web est possible via [LDAP](../ldap-directory/index.md) ou un [utilisateur local](creating-a-local-user.md).
 
-If you are using the [i-doit pro Add-on API](../../i-doit-pro-add-ons/api/index.md#authentication-and-authorization), you need a [local user](creating-a-local-user.md) for authentication.<br>
-Also you need the [API Token](../../i-doit-pro-add-ons/api/index.md#authentication-and-authorization), which is for identify the [tenant](../../system-administration/multi-tenant.md) you want to login.
+Si vous utilisez l'[API de l'Add-on i-doit pro](../../i-doit-pro-add-ons/api/index.md#authentication-and-authorization), vous avez besoin d'un [utilisateur local](creating-a-local-user.md) pour l'authentification.<br>
+Vous avez également besoin du [jeton API](../../i-doit-pro-add-ons/api/index.md#authentication-and-authorization), qui sert à identifier le [locataire](../../system-administration/multi-tenant.md) avec lequel vous souhaitez vous connecter.
 
+{ /* exemples */ }

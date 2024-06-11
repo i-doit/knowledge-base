@@ -1,69 +1,62 @@
----
-title: i-doit pro cloud
-description: i-doit pro cloud
-#icon: material/cloud
-lang: en
----
-
 # i-doit pro cloud
 
-Our services at a glance:
+Nos services en un coup d'œil :
 
--   [x] **Data security first**:<br> Your data is your capital. That's why we use state-of-the-art security measures to protect your sensitive information. We use encryption technologies and security protocols to ensure that your data is safe from unauthorized access.
+-   [x] **Sécurité des données en premier lieu**:<br> Vos données sont votre capital. C'est pourquoi nous utilisons des mesures de sécurité de pointe pour protéger vos informations sensibles. Nous utilisons des technologies de chiffrement et des protocoles de sécurité pour garantir que vos données sont à l'abri des accès non autorisés. {/ * exemples *}
 
--   [x] **Maintenance and Updates**:<br> The digital landscape is constantly evolving. Our experts ensure that your SaaS solution is always up to date. We perform regular maintenance and updates to ensure optimal performance and compatibility.
+-   [x] **Maintenance et mises à jour**:<br> Le paysage numérique évolue constamment. Nos experts veillent à ce que votre solution SaaS soit toujours à jour. Nous effectuons des maintenances régulières et des mises à jour pour garantir des performances et une compatibilité optimales. {/ * exemples *}
 
--   [x] **backup solutions**:<br> We know how valuable your data is. Our professional backup solutions back up your data at regular intervals to ensure fast recovery in the event of an unforeseen event. Your business data is safe and secure.
+-   [x] **Solutions de sauvegarde**:<br> Nous savons à quel point vos données sont précieuses. Nos solutions de sauvegarde professionnelles sauvegardent vos données à intervalles réguliers pour garantir une récupération rapide en cas d'événement imprévu. Vos données commerciales sont en sécurité. {/ * exemples *}
 
--   [x] **Accessibility Guarantee**:<br> We understand how important it is that your SaaS application is always available. With our accessibility guarantee, you can rest assured that your application will run reliably and stably. Our dedicated support team is available to quickly resolve any glitches.
+-   [x] **Garantie d'accessibilité**:<br> Nous comprenons l'importance que votre application SaaS soit toujours disponible. Avec notre garantie d'accessibilité, vous pouvez être sûr que votre application fonctionnera de manière fiable et stable. Notre équipe de support dédiée est disponible pour résoudre rapidement tout problème. {/ * exemples *}
 
--   [x] **Performance optimization**:<br> we continuously analyze the performance of your SaaS application and offer targeted recommendations for optimization. Through monitoring, diagnostics and fine-tuning, we ensure that your application remains fast and responsive.
+-   [x] **Optimisation des performances**:<br> Nous analysons en continu les performances de votre application SaaS et offrons des recommandations ciblées pour l'optimisation. Grâce à la surveillance, au diagnostic et au réglage fin, nous veillons à ce que votre application reste rapide et réactive. {/ * exemples *}
 
--   [x] **Scalability and customization**:<br> As your business becomes more successful, you may need a scalable solution. Our support helps you smoothly scale your SaaS platform to keep up with increasing demands. We customize the solution to meet your changing business needs.
+-   [x] **Évolutivité et personnalisation**:<br> À mesure que votre entreprise devient plus prospère, vous pourriez avoir besoin d'une solution évolutive. Notre support vous aide à faire évoluer en douceur votre plateforme SaaS pour répondre à une demande croissante. Nous personnalisons la solution pour répondre à vos besoins commerciaux changeants. {/ * exemples *}
 
--   [x] **Troubleshooting and diagnostics**:<br> When issues arise, our experts are ready to troubleshoot quickly and efficiently. We provide thorough diagnosis of issues and work to find solutions to minimize downtime.
+-   [x] **Dépannage et diagnostics**:<br> Lorsque des problèmes surviennent, nos experts sont prêts à intervenir rapidement et efficacement. Nous effectuons un diagnostic approfondi des problèmes et travaillons à trouver des solutions pour réduire les temps d'arrêt. {/ * exemples *}
 
--   [x] **Communication and transparency**:<br> we always keep you informed. You'll receive regular updates on the status of your SaaS solution, scheduled maintenance, and any challenges. Our open communication ensures that you are always informed about the status of your application.
+-   [x] **Communication et transparence**:<br> Nous vous tenons toujours informé. Vous recevrez des mises à jour régulières sur l'état de votre solution SaaS, les maintenances planifiées et les éventuels défis. Notre communication ouverte garantit que vous êtes toujours informé de l'état de votre application. {/ * exemples *}
 
--   [x] **Feedback and enhancement**:<br> Your feedback is valuable. We listen to you and use your feedback to continuously improve our services. By working closely together, we want to ensure that your experience with our SaaS support is always positive.
+-   [x] **Retour d'information et amélioration**:<br> Vos retours sont précieux. Nous vous écoutons et utilisons vos retours pour améliorer continuellement nos services. En travaillant étroitement ensemble, nous voulons nous assurer que votre expérience avec notre support SaaS est toujours positive.
 
-## General information
+## Informations générales
 
--   Own i-doit cloud instance for up to 50,000 objects
--   1 GB data storage space
--   5 concurrent users
--   10.000 API calls per day, currently not limited
--   SSL encryption and own domain - GDPR compliant
--   Only one single client possible
--   Provisioning within 24 hours (Mon.-Fri.)
--   Daily backup up to 14 days in the past, executed at 02:30 a.m.
--   i-doit pro add-ons to a large extent compatible, a list can be found [here](https://www.i-doit.com/en/i-doit/add-ons/)
--   In general, the range of functions will be extended gradually
--   The subdomain name is freely selectable e.g. `name.i-doit.online`
+-   Instance cloud i-doit propre pour jusqu'à 50 000 objets
+-   Espace de stockage de données de 1 Go
+-   5 utilisateurs simultanés
+-   10 000 appels API par jour, actuellement non limités
+-   Chiffrement SSL et domaine propre - Conforme au RGPD
+-   Un seul client possible
+-   Provisionnement dans les 24 heures (lun.-ven.)
+-   Sauvegarde quotidienne jusqu'à 14 jours dans le passé, exécutée à 02h30 du matin
+-   Les add-ons i-doit pro sont largement compatibles, une liste peut être trouvée [ici](https://www.i-doit.com/en/i-doit/add-ons/)
+-   En général, la gamme de fonctions sera étendue progressivement
+-   Le nom du sous-domaine est librement sélectionnable par exemple `nom.i-doit.online`
 
 ## Support
 
--   Accessibility via <help@i-doit.com> or [help.i-doit.com](https://help.i-doit.com)
--   Service Level Agreement (SLA): 24 hour response time (spread over service hours)
--   Service hours: Mon.-Fri. (except german nationwide holidays) from 10:00 to 16:00
--   Install license
--   Install add-on
--   Adjust system settings
--   Recovery of backups
--   Software updates (including add-ons)
--   Bug reports
--   Submitting feature enhancement requests
+-   Accessibilité via <help@i-doit.com> ou [help.i-doit.com](https://help.i-doit.com)
+-   Accord de niveau de service (SLA) : temps de réponse de 24 heures (réparti sur les heures de service)
+-   Heures de service : lun.-ven. (sauf jours fériés nationaux allemands) de 10h00 à 16h00
+-   Installation de licence
+-   Installation d'add-on
+-   Ajustement des paramètres système
+-   Récupération des sauvegardes
+-   Mises à jour logicielles (y compris les add-ons)
+-   Rapports de bogues
+-   Soumission de demandes d'amélioration des fonctionnalités
 <!--
-## Hotfixes
+## Correctifs
 
-## PHP Version
+## Version PHP
 
-## i-doit Update
+## Mise à jour i-doit
 
-## Migration to i-doit cloud
+## Migration vers le cloud i-doit
 -->
 ## FAQ
 
--   A database migration is currently not possible.
--   SSH access is not possible.
--   The servers are located in Germany.
+-   Une migration de base de données n'est actuellement pas possible.
+-   L'accès SSH n'est pas possible.
+-   Les serveurs sont situés en Allemagne.

@@ -1,9 +1,11 @@
-# Data format
+# Format des données
 
-The user has the possibility to adapt the data format.
+L'utilisateur a la possibilité d'adapter le format des données.
 
-| Option | Value |
+| Option | Valeur |
 | - | - |
-| Date format | English/German |
-| Numeric format | English/German |
-| Monetary format | `EUR;€` or `USD;$` or `GBP;£` or `CHF;Sfr.` |
+| Format de date | Anglais/Allemand |
+| Format numérique | Anglais/Allemand |
+| Format monétaire | `EUR;€` ou `USD;$` ou `GBP;£` ou `CHF;Sfr.` |
+
+{/*examples*/}

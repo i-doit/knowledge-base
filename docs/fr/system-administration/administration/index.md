@@ -1,24 +1,24 @@
-# Administration
+# Administration {/%%%/}
 
-If you want to take advantage of each and every subtlety a perfect [IT documentation](../../glossary.md) can offer, then you will need to deal with the administration of _i-doit_ in greater detail. Most administrative actions can be managed via the web GUI.
+Si vous souhaitez profiter de chaque subtilité qu'une [documentation informatique](../../glossary.md) parfaite peut offrir, alors vous devrez vous occuper de l'administration d'_i-doit_ en détail. La plupart des actions administratives peuvent être gérées via l'interface web.
 
-## Where Can I Find the Administration?
+## Où Puis-je Trouver l'Administration?
 
-The administration is accessed via the gear wheel icon in the top right corner. The user area is displayed as soon as you hover over you login name with the mouse.
+L'administration est accessible via l'icône de roue dentée dans le coin supérieur droit. La zone utilisateur s'affiche dès que vous survolez votre nom de connexion avec la souris.
 
-[![Where Can I Find the Administration](../../assets/images/en/system-administration/administration/1-admin.png)](../../assets/images/en/system-administration/administration/1-admin.png)
+[![Où Puis-je Trouver l'Administration](../../assets/images/en/system-administration/administration/1-admin.png)](../../assets/images/en/system-administration/administration/1-admin.png)
 
-## The Administration is divided into the following sub-sections
+## L'Administration est divisée en les sous-sections suivantes
 
--   [User settings](./user-settings/index.md)
--   [[Tenant name] management](./tenant-management/index.md)
--   [Data structure](./data-structure/index.md)
--   [Data view](./data-view/index.md)
--   [Predefined content](./predefined-content/index.md)
--   [User permissions](./user-permissions.md)
--   [Logbook](./logbook.md)
--   [Import and interfaces](./import-and-interfaces/index.md)
--   [Add-ons](add-ons/index.md)
--   [Two-factor Authentication](two-factor-authentication.md)
--   [Download Center](download-center.md)
--   [Contract details](contract-details.md)
+-   [Paramètres utilisateur](./user-settings/index.md)
+-   [Gestion de [Nom du locataire]](./tenant-management/index.md)
+-   [Structure des données](./data-structure/index.md)
+-   [Vue des données](./data-view/index.md)
+-   [Contenu prédéfini](./predefined-content/index.md)
+-   [Permissions utilisateur](./user-permissions.md)
+-   [Journal](./logbook.md)
+-   [Importation et interfaces](./import-and-interfaces/index.md)
+-   [Extensions](add-ons/index.md)
+-   [Authentification à deux facteurs](two-factor-authentication.md)
+-   [Centre de téléchargement](download-center.md)
+-   [Détails du contrat](contract-details.md)

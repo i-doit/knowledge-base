@@ -1,5 +1,5 @@
-# Export configuration
+# Configuration d'export
 
-Define the [parameters for export](../../../../automation-and-integration/network-monitoring/nagios.md).
+Définissez les [paramètres d'export](../../../../automation-and-integration/network-monitoring/nagios.md).
 
-[![Export Configuration](../../../../assets/images/en/system-administration/administration/import-and-interfaces/monitoring/1-m.png)](../../../../assets/images/en/system-administration/administration/import-and-interfaces/monitoring/1-m.png)
+[![Configuration d'export](../../../../assets/images/en/system-administration/administration/import-and-interfaces/monitoring/1-m.png)](../../../../assets/images/en/system-administration/administration/import-and-interfaces/monitoring/1-m.png)

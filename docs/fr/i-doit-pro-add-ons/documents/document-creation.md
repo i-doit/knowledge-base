@@ -1,70 +1,74 @@
-# Document creation
+# Création de documents
 
-Create documents in the add-on
-------------------------------
+Créer des documents dans l'extension
+------------------------------------
 
-Once a [template](./document-templates.md) has been created, it is possible to create a document for an object within the add-on in the menu item "Documents" under the document category in which the template is located.
+Une fois qu'un [modèle](./document-templates.md) a été créé, il est possible de créer un document pour un objet dans l'extension dans l'élément de menu "Documents" sous la catégorie de document dans laquelle le modèle est situé.
 
-[![Create documents in the add-on](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/1-dc.png)](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/1-dc.png)
+[![Créer des documents dans l'extension](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/1-dc.png)](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/1-dc.png)
 
-The "New" button opens another view. Here, a title for the created document can be specified. Then the desired template as well as the desired object(s) for which the document is to be created are selected.
+Le bouton "Nouveau" ouvre une autre vue. Ici, un titre pour le document créé peut être spécifié. Ensuite, le modèle souhaité ainsi que l'objet ou les objets souhaités pour lesquels le document doit être créé sont sélectionnés.
 
-!!! attention "Documents category"
+!!! attention "Catégorie de documents"
 
-    In order to create a document for an object, it is necessary that the "Documents" category is linked to the object type. If the object type does not have this category, no documents can be created for the objects it contains, because they do not appear in the selection.
+    Pour créer un document pour un objet, il est nécessaire que la catégorie "Documents" soit liée au type d'objet. Si le type d'objet n'a pas cette catégorie, aucun document ne peut être créé pour les objets qu'il contient, car ils n'apparaissent pas dans la sélection.
 
-In addition, it is possible to write a comment about the object.
+De plus, il est possible d'écrire un commentaire sur l'objet.
+
+{ /* examples */ }
 
 [![object](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/2-dc.png)](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/2-dc.png)
 
 !!! info "Note"
 
-    A yellow info box indicates if at least one unfinished document template exists, i.e. does not yet have any chapters. If the desired template does not appear, the chapter configuration should be checked again.
+    Une boîte d'information jaune indique si au moins un modèle de document inachevé existe, c'est-à-dire n'a pas encore de chapitres. Si le modèle souhaité n'apparaît pas, la configuration des chapitres doit être vérifiée à nouveau.
 
-The document creation is started via the "Add" button. As soon as this process is completed, the documents appear in the list and can be downloaded in the desired format.
+La création de document est lancée via le bouton "Ajouter". Dès que ce processus est terminé, les documents apparaissent dans la liste et peuvent être téléchargés dans le format souhaité.
 
-If a document in the list is clicked or its checkbox is activated and the "Edit" button is used, further details can be viewed. In this view it is also possible to create new revisions. This is relevant if information in the documentation for this object has changed and the document needs to be updated. Changes to the document template can also be transferred to the document in this way.  
-In the lower area, the current version and all revisions can be downloaded. The download of the document overview always refers to the most recent revision.
+Si un document de la liste est cliqué ou si sa case est activée et que le bouton "Éditer" est utilisé, d'autres détails peuvent être consultés. Dans cette vue, il est également possible de créer de nouvelles révisions. Cela est pertinent si des informations dans la documentation pour cet objet ont changé et que le document doit être mis à jour. Les modifications apportées au modèle de document peuvent également être transférées au document de cette manière.  
+Dans la zone inférieure, la version actuelle et toutes les révisions peuvent être téléchargées. Le téléchargement de l'aperçu du document fait toujours référence à la révision la plus récente.
 
-[![recent revision](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/3-dc.png)](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/3-dc.png)
+[![révision récente](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/3-dc.png)](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/3-dc.png)
 
-!!! success "Create revisions from the list"
+!!! succès "Créer des révisions à partir de la liste"
 
-    A new revision can alternatively be created directly in the list of documents. For this purpose, the desired document is selected via its checkbox and then the "Create Revision" button in the header is used.<br>[![Create revisions from the list](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/4-dc.png)](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/4-dc.png)
+    Une nouvelle révision peut également être créée directement dans la liste des documents. À cet effet, le document souhaité est sélectionné via sa case à cocher, puis le bouton "Créer une révision" dans l'en-tête est utilisé.<br>[![Créer des révisions à partir de la liste](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/4-dc.png)](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/4-dc.png)
 
-Create documents in the "Documents" category
+Créer des documents dans la catégorie "Documents"
 --------------------------------------------
 
-If a document has been created for an object in i-doit, it can be found in the "Documents" category of the object. Here it is also possible to download the document in the appropriate formats. In the detailed view of the document, it is also possible to view the revisions and create new revisions.  
-The "New" button can be used to create additional documents for the object. Here, the object is already preselected and a title can be assigned as well as a template linked.
+Si un document a été créé pour un objet dans i-doit, il peut être trouvé dans la catégorie "Documents" de l'objet. Il est également possible de télécharger le document dans les formats appropriés. Dans la vue détaillée du document, il est également possible de consulter les révisions et de créer de nouvelles révisions.  
+Le bouton "Nouveau" peut être utilisé pour créer des documents supplémentaires pour l'objet. Ici, l'objet est déjà présélectionné et un titre peut être attribué ainsi qu'un modèle lié. 
 
-[![Create documents in the "Documents" category](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/5-dc.png)](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/5-dc.png)
+{ /*examples*/ }
 
-Document creation via the i-doit Console
-----------------------------------------
+[![Créer des documents dans la catégorie "Documents"](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/5-dc.png)](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/5-dc.png)
 
-The creation of new revisions as well as the export of documents can also be performed and automated via the i-doit Console.
+Création de documents via la Console i-doit
+--------------------------------------------
 
-The command "[documents](../../automation-and-integration/cli/index.md)" is available for these operations. This can be supplemented by the following options:
+La création de nouvelles révisions ainsi que l'exportation de documents peuvent également être effectuées et automatisées via la Console i-doit.
 
-| Parameter (Kurzfrom) | Parameter (Langform) | Beschreibung |
+La commande "[documents](../../automation-and-integration/cli/index.md)" est disponible pour ces opérations. Cela peut être complété par les options suivantes :
+
+| Paramètre (Kurzfrom) | Paramètre (Langform) | Description |
 | --- | --- | --- |
-|     | \--create\_revision | Creates one or more revisions for given documents |
-|     | \--export | Exports one or more documents to a file |
-|     | \--id=ID | Select one or more documents by id (multiple values allowed) |
-|     | \--all\_documents | Selects all documents |
-|     | \--all\_category=\[ALL\_CATEGORY\] | Selects all documents in category |
-|     | \--all\_template=\[ALL\_TEMPLATE\] | Selects all documents with template |
-|     | \--all\_object=\[ALL\_OBJECT\] | Selects all documents with object |
-|     | \--export\_format=\[EXPORT\_FORMAT\] | Export format: pdf or html |
-|     | \--export\_folder=\[EXPORT\_FOLDER\] | Export format: pdf or html \[default: "/var/www/html/main/upload/files/"\] |
-| \-u | \--user=\[USERNAME\] | User |
-| \-p | \--password=\[PASSWORD\] | Password |
-| \-t | \--tenant=\[TENANT-ID\] | Tenant ID \[default: 1\] |
-| \-h | \--help | Display this help message |
-| \-q | \--quiet | Do not output any message |
-| \-V | \--version | Display this application version |
-|     | \--ansi | Erzwingt die Ausgabe im ANSI-Format |
-|     | \--no-ansi | Disable ANSI output |
-| \-n | \--no-interaction | Do not ask any interactive question |
-| \-v / -vv / -vvv | \--verbose | Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug |
+|     | \--create\_revision | Crée une ou plusieurs révisions pour les documents donnés |
+|     | \--export | Exporte un ou plusieurs documents vers un fichier |
+|     | \--id=ID | Sélectionne un ou plusieurs documents par ID (valeurs multiples autorisées) |
+|     | \--all\_documents | Sélectionne tous les documents |
+|     | \--all\_category=\[ALL\_CATEGORY\] | Sélectionne tous les documents dans la catégorie |
+|     | \--all\_template=\[ALL\_TEMPLATE\] | Sélectionne tous les documents avec le modèle |
+|     | \--all\_object=\[ALL\_OBJECT\] | Sélectionne tous les documents avec l'objet |
+|     | \--export\_format=\[EXPORT\_FORMAT\] | Format d'exportation : pdf ou html |
+|     | \--export\_folder=\[EXPORT\_FOLDER\] | Format d'exportation : pdf ou html \[par défaut : "/var/www/html/main/upload/files/"\] |
+| \-u | \--user=\[USERNAME\] | Utilisateur |
+| \-p | \--password=\[PASSWORD\] | Mot de passe |
+| \-t | \--tenant=\[TENANT-ID\] | ID du locataire \[par défaut : 1\] |
+| \-h | \--help | Afficher ce message d'aide |
+| \-q | \--quiet | Ne pas afficher de message |
+| \-V | \--version | Afficher la version de cette application |
+|     | \--ansi | Force la sortie au format ANSI |
+|     | \--no-ansi | Désactive la sortie ANSI |
+| \-n | \--no-interaction | Ne posez aucune question interactive |
+| \-v / -vv / -vvv | \--verbose | Augmente la verbosité des messages : 1 pour une sortie normale, 2 pour une sortie plus verbeuse et 3 pour le débogage |

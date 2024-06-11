@@ -1,176 +1,176 @@
 # Notifications
 
-In this article we describe the notifications module, which has the purpose to check various data in the IT documentation and to send emails in the case of specific events. The module consists of particular kinds of notifications, the setup of these notification types, e-mail templates and last but not least the regular execution of the [controller](../i-doit-pro-add-ons/api/index.md).
+Dans cet article, nous décrivons le module de notifications, qui a pour but de vérifier diverses données dans la documentation informatique et d'envoyer des e-mails en cas d'événements spécifiques. Le module se compose de types de notifications particuliers, de la configuration de ces types de notifications, de modèles d'e-mails et enfin de l'exécution régulière du [contrôleur](../i-doit-pro-add-ons/api/index.md).
 
-Kinds of Notifications
+Types de Notifications
 ----------------------
 
-You can carry out the configuration settings at **Extras → CMDB → Notifications**.
+Vous pouvez effectuer les paramétrages de configuration à **Extras → CMDB → Notifications**.
 
-Currently, you can choose from the following kinds of notifications:
+Actuellement, vous pouvez choisir parmi les types de notifications suivants :
 
-*   **Expiration of a notice period**  
-    Checks contracts for the time frame until the expiration of the notice period
+*   **Expiration d'une période de préavis**  
+    Vérifie les contrats pour la période jusqu'à l'expiration du préavis
     
 
-*   **Expiration of a maintenance/guarantee period**  
-    Checks contracts for the time frame until the expiration of the maintenance/ guarantee period
+*   **Expiration d'une période de maintenance/garantie**  
+    Vérifie les contrats pour la période jusqu'à l'expiration de la période de maintenance/garantie
     
 
-*   **Expiration of a certification period**  
-    Checks all object types associated to the category “certificate” for the expiration date of the certificate
+*   **Expiration d'une période de certification**  
+    Vérifie tous les types d'objets associés à la catégorie "certificat" pour la date d'expiration du certificat
+
+{/*examples*/}
+
+*   **État de la CMDB - Fin**  
+    Utile pour la catégorie "planification de l'état". Cette notification vous informe d'un état de la CMDB planifié qui va se terminer.
     
 
-*   **CMDB** **s****tatus end****s**  
-    Helpful for the category “status planning”. This notifications informs you about a planned CMDB status that is going to end.
+*   **État de la CMDB - Début**  
+    Utile pour la catégorie "planification de l'état". Cette notification vous informe d'un état de la CMDB planifié qui va commencer.
     
 
-*   **CMDB** **s****tatus starte****d**  
-    Helpful for the category “status planning”. This notification informs you about a planned CMDB status that is going to start.
+*   **Licences gratuites**  
+    Vérifie les licences pour le nombre de licences disponibles restantes.
     
 
-*   **Free** **l****i****censes**  
-    Checks licenses for the number of available licenses left.
+*   **Objets stockés**  
+    Vérifie tout type d'objet pour le nombre d'objets contenus avec le statut "stocké".
     
 
-*   **Stored objects**  
-    Checks any object type for the number of contained objects with the status “stored”.
+*   **Expiration de licence**  
+    Vérifie les licences pour la période jusqu'à leur expiration.
     
 
-*   **Li****cense expiration**  
-    Checks licenses for the time frame until they expire.
+*   **Notification basée sur un rapport**  
+    Exécute des rapports et vous informe une fois qu'un nombre personnalisé d'objets trouvés est atteint.
     
 
-*   **Report bas****ed**  **notification**  
-    Executes reports and notifies you once a custom number of found objects is reached.
+*   **Objets inchangés**  
+    Vérifie les objets qui n'ont pas été modifiés dans une période de temps définie par l'utilisateur. Peut être utile pour trouver des données très anciennes et les mettre à jour dans les processus.
     
 
-*   **Unchanged objects**  
-    Checks objects which have not been changed in a custom-defined time frame. Can be helpful to find very old data and update them in processes.
+*   **Objets modifiés**  
+    Vérifie les objets qui ont été modifiés dans une période de temps définie par l'utilisateur. Par exemple, une liste quotidienne de tous les objets modifiés au cours des dernières 24 heures peut être générée.
+
+*   **Mise à jour de i-doit**  
+    Vérifie s'il existe une nouvelle version de i-doit pro disponible. i-doit nécessite une connexion internet pour le faire.
     
+!!! info "Notification basée sur le rapport"
 
-*   **Changed objects**  
-    Checks objects which have been changed in a custom-defined time frame. As an example, a daily list of all objects that have been changed in the last 24 hours can be issued.
-    
+    Le type de notification "notification basée sur le rapport" peut être utilisé de manière très flexible et peut envoyer des notifications appropriées pour presque tous les événements et statuts.
 
-*   **i-doit** **u****pdate**  
-    Checks whether a new version of i-doit pro is available. i-doit requires an internet connection to do so.
-    
-!!! info "Report based notification"
-
-    The notification type “report based notification” can be used in a very flexible way and can send appropriate notifications for almost all events and statuses.
-
-Setup
+Configuration
 -----
 
-The setup of notifications always follows the same pattern. General settings, like a threshold value, a limit of notifications, objects which will be monitored and contacts that are to be notified, are defined.
+La configuration des notifications suit toujours le même schéma. Les paramètres généraux, tels qu'une valeur seuil, une limite de notifications, les objets qui seront surveillés et les contacts à notifier, sont définis.
 
-### General Settings
+### Paramètres généraux
 
-The \* constitutes a mandatory field in i-doit.
+Le \* constitue un champ obligatoire dans i-doit.
 
-*   **Name****\***  
-    Ideally, the name should have a meaningful designation.
+*   **Nom****\***  
+    Idéalement, le nom devrait avoir une désignation significative.
     
-*   **A****c****ti****ve****\***  
-    You can click the checkbox for activation or you can deactivate the notifications.
+*   **Activation****\***  
+    Vous pouvez cocher la case pour l'activation ou vous pouvez désactiver les notifications.
     
-*   **Threshold value**  
-    The threshold value varies depending on whether a time factor (X years/ months/ days/ hours/ minutes/ seconds) or a counter (number of found objects) can be set up for the notification. Above the settings is a short explanation of the notification as well as the information of what exactly is checked by the threshold value.
-    
-*   **Max.** **amount**  **of notifications to send****\***  
-    In case the notification is checked multiple times and an object is found multiple times, you can set a limit here. As soon as the limit value has been reached, no further notifications will be sent. Everything less or equal to 0 means that notifications will continue until the object/s are changed so that the notification is not valid anymore.  
+*   **Valeur seuil**  
+    La valeur seuil varie en fonction de la possibilité de définir un facteur temps (X années/ mois/ jours/ heures/ minutes/ secondes) ou un compteur (nombre d'objets trouvés) pour la notification. Au-dessus des paramètres se trouve une brève explication de la notification ainsi que des informations sur ce qui est exactement vérifié par la valeur seuil.
+
+*   **Max.** **montant** **de notifications à envoyer****\***  
+    Dans le cas où la notification est vérifiée plusieurs fois et qu'un objet est trouvé plusieurs fois, vous pouvez définir une limite ici. Dès que la valeur limite est atteinte, aucune autre notification ne sera envoyée. Tout ce qui est inférieur ou égal à 0 signifie que les notifications continueront jusqu'à ce que l'objet ou les objets soient modifiés de sorte que la notification ne soit plus valide.  
       
-    Example: If checks and notifications are carried out every day and a 5 is entered in this field, then the notifications will stop after 5 days.  
+    Exemple : Si les vérifications et les notifications sont effectuées chaque jour et qu'un 5 est saisi dans ce champ, alors les notifications s'arrêteront après 5 jours.  
       
-    The counter will be reset to 0 if the object cannot be found anymore by this notification, for example, when the object is updated or after the maximum number of notifications was made.
+    Le compteur sera remis à 0 si l'objet ne peut plus être trouvé par cette notification, par exemple, lorsque l'objet est mis à jour ou après que le nombre maximum de notifications a été atteint.
     
-*   **Number of sent notifications**  
-    This display is purely for information purposes and is either increased when a notification is sent or reset if none is sent.
+*   **Nombre de notifications envoyées**  
+    Cet affichage est purement informatif et est soit augmenté lorsqu'une notification est envoyée, soit réinitialisé s'il n'y en a pas d'envoyée.
     
-*   **Dat****e of the last check**  
-    Also purely for information purposes. It shows the last time a check was performed.
-    
+*   **Dat****e de la dernière vérification**  
+    Également purement à des fins d'information. Il montre la dernière fois qu'une vérification a été effectuée.
+
 *   **Description**  
-    This field is a free text field for a descriptive text of the notification.
+    Ce champ est un champ de texte libre pour une description de la notification.
+
+### Domaines
+
+Les objets à vérifier par la notification peuvent être sélectionnés spécifiquement ou selon un motif dans les domaines.
+
+*   **Objets**  
+    Un ou plusieurs objets peuvent être sélectionnés via la loupe.
     
-
-### Domains
-
-Objects which are to be checked by the notification can be selected specifically or according to a pattern in the domains.
-
-*   **Obje****c****t****s**  
-    One or more objects can be selected via the magnifier.
+*   **Types d'objets**  
+    Tous les objets d'un ou de plusieurs types d'objets sélectionnés peuvent être vérifiés ici.
     
-*   **Obje****c****t type****s**  
-    All objects of one or more selected object types can be checked here.
+*   **Rapports**  
+    Les notifications peuvent être encore plus spécifiques avec un rapport.  
+    Exemple : L'objectif est de vérifier s'il reste suffisamment de licences gratuites qui coûtent plus de 150 EUR par licence, car un processus plus long s'applique ici par rapport aux licences moins chères. Ensuite, un deuxième rapport peut être créé et utilisé dans une autre notification pour interroger les licences moins chères et effectuer une notification ultérieurement. Veuillez vraiment faire attention au domaine et aux catégories interrogées attribuées aux types d'objets!
+
+!!! info "Types d'objets restreints"
+
+    Seuls certains types d'objets sont pris en charge, en fonction du type de notification. Par exemple, lors de la vérification des contrats, seuls les objets de type "Contrat" et lors de la vérification des licences, seuls les objets de type "Licence" peuvent être choisis.
+
+### Destinataire {/ * exemples * /}
+
+Vous pouvez également notifier les destinataires de manière spécifique ou collective.
+
+* **Rôles assignés**  
+    Lorsqu'un objet est trouvé avec la notification configurée, vous pouvez informer le contact qui est assigné à l'objet dans le rôle défini ici.  
+    Exemple : Le contact documenté avec le rôle de "Partenaire contractuel" peut être notifié via la catégorie "Affectation de contact" dans le contrat.
     
-*   **Reports**  
-    Notifications can be even more specific with a report.  
-    Example: The aim is to test whether enough free licenses are left which cost more than 150 EUR per license since a longer process applies here compared to the cheaper licenses. Then a second report can be created and used in another notification in order to query the cheaper licences and to effect a notification at a later time. Please be really mindful of the domain and the queried categories assigned to the object types!
+* **Contacts assignés**  
+    Il est également possible de notifier un ou plusieurs contacts/groupes de personnes ou organisations. Il est important pour cela qu'une adresse e-mail définie soit associée à chaque objet contact.
     
-
-!!! info "Restricted object types"
-
-    Only certain object types are supported, depending on the type of notification. For example, when checking contracts only objects of the type “Contract” and when checking licenses only objects of the type “License” may be chosen.
-
-### Recipient
-
-You can also notify recipients both specifically or collectively.
-
-*   **Assigned roles**  
-    When an object is found with the configured notification, you can notify the contact which is assigned to the object in the role that is set here.  
-    Example: The documented contact with the role “Contract partner” can be notified via the category “Contact assignment” in the contract.
-    
-*   **Assigned contacts**  
-    It is also possible to notify one or more contacts/ person groups or organizations. Important for this is a defined email address for each contact object.
-    
-*   **Receiver calculation strategy  
-    **Used calculation strategy of recipients when **resolving Person groups** to persons. This setting affects only groups of persons assigned as contacts.
+* **Stratégie de calcul du destinataire**  
+    **Stratégie de calcul utilisée pour les destinataires lors de la résolution des groupes de personnes en personnes. Ce paramètre n'affecte que les groupes de personnes assignés en tant que contacts.
     
       
     
-    | Strategie | Beschreibung |
+    | Stratégie | Description |
     | --- | --- |
-    | \-  | This is the default = Groups if available, otherwise assigned persons |
-    | Groups and Persons | The primary email address of the Person group and each Person group member are notified. |
-    | Groups if available, otherwise assigned persons | If the person group has stored a primary e-mail address, this will be notified.  <br>If the person group does NOT have a primary e-mail address, the primary e-mail address of each person group member will be notified. |
-    | Groups only | Person groups with a primary email address will be notified. |
-    | Persons only | Person group member with a primary email address will be notified. |
+    | \-  | C'est la valeur par défaut = Groupes si disponibles, sinon personnes assignées |
+    | Groupes et Personnes | L'adresse e-mail principale du groupe de personnes et de chaque membre du groupe de personnes est notifiée. |
+    | Groupes si disponibles, sinon personnes assignées | Si le groupe de personnes a enregistré une adresse e-mail principale, celle-ci sera notifiée.  <br>Si le groupe de personnes n'a PAS d'adresse e-mail principale, l'adresse e-mail principale de chaque membre du groupe de personnes sera notifiée. |
+    | Uniquement les groupes | Les groupes de personnes avec une adresse e-mail principale seront notifiés. |
+    | Uniquement les personnes | Les membres du groupe de personnes avec une adresse e-mail principale seront notifiés. |
+
     
-E-mail Templates
+Modèles d'e-mail
 ----------------
 
-The templates matching the corresponding notifications can be selected and adjusted for the German or English language in the left navigation tree. This always applies globally to all users and because of this your adjustments should not be be too specific. There is no possibility to reset the template to default. Whether the German or the English message is sent depends on the user settings of the contact who will be notified. If this user was never logged in to i-doit, the default language of i-doit is used for the notification.
+Les modèles correspondant aux notifications peuvent être sélectionnés et ajustés pour la langue allemande ou anglaise dans l'arborescence de navigation de gauche. Cela s'applique toujours globalement à tous les utilisateurs et en raison de cela, vos ajustements ne doivent pas être trop spécifiques. Il n'y a pas de possibilité de réinitialiser le modèle par défaut. Que le message en allemand ou en anglais soit envoyé dépend des paramètres de l'utilisateur du contact qui sera notifié. Si cet utilisateur ne s'est jamais connecté à i-doit, la langue par défaut d'i-doit est utilisée pour la notification.
 
-*   **Languag****e****\***  
-    The language that is currently being edited is displayed.
+*   **Langue**  
+    La langue actuellement en cours d'édition est affichée.
     
-*   **Subject****\***  
-    The subject of the message can be customized with placeholders from the bottom section of the interface.
+*   **Sujet**  
+    Le sujet du message peut être personnalisé avec des espaces réservés de la section inférieure de l'interface.
     
-*   **Notification** **text****\***  
-    The text can be assembled with placeholders just like the subject.
+*   **Texte de notification**  
+    Le texte peut être assemblé avec des espaces réservés tout comme le sujet.
     
-*   **Report**  
-    A report for the e-mail can be defined here, which is then used to organize the object information found in the notification.
-    
+*   **Rapport**  
+    Un rapport pour l'e-mail peut être défini ici, qui est ensuite utilisé pour organiser les informations d'objet trouvées dans la notification.
 
-Configuration of the call with the i-doit Console
+Configuration de l'appel avec la Console i-doit
 -------------------------------------------------
 
-To ensure that the set-up notifications are also checked regularly, the i-doit [Console](../console/../automation-and-integration/cli/index.md) must be executed with the command **[notifications-send](../automation-and-integration/cli/console/options-and-parameters-cli.md#notifications-send)**, for example as a cron job. It is not possible to call up each notification individually, but all notifications are always checked automatically one after the other. It makes sense to consider how often the maximum number of checks should be. In our experience, it has proven useful to check every day shortly before starting work, so that it is immediately clear in the morning what you should deal with during the day.
+Pour garantir que les notifications de configuration sont également vérifiées régulièrement, la [Console](../console/../automation-and-integration/cli/index.md) i-doit doit être exécutée avec la commande **[notifications-send](../automation-and-integration/cli/console/options-and-parameters-cli.md#notifications-send)**, par exemple en tant que tâche cron. Il n'est pas possible d'appeler chaque notification individuellement, mais toutes les notifications sont toujours vérifiées automatiquement les unes après les autres. Il est judicieux de considérer à quelle fréquence le nombre maximum de vérifications doit être effectué. Selon notre expérience, il s'est avéré utile de vérifier chaque jour peu de temps avant le début du travail, de sorte qu'il soit immédiatement clair le matin sur quoi vous devriez travailler pendant la journée.
 
-!!! info "Hint"
+!!! info "Astuce"
 
-    Without a call of the command via the i-doit [Console](../console/../automation-and-integration/cli/index.md) no dispatch of the notifications takes place!
+    Sans un appel de la commande via la [Console](../console/../automation-and-integration/cli/index.md) i-doit, aucune notification n'est envoyée !
 
-The possible parameters as well as an example call for sending notifications can be found in the [corresponding article](,/../notifications.md) for the command **[notifications-send](../automation-and-integration/cli/console/options-and-parameters-cli.md#notifications-send)**.
+Les paramètres possibles ainsi qu'un exemple d'appel pour l'envoi de notifications peuvent être trouvés dans l'[article correspondant](,/../notifications.md) pour la commande **[notifications-send](../automation-and-integration/cli/console/options-and-parameters-cli.md#notifications-send)**.
 
-!!! info "Escalation levels"
+!!! info "Niveaux d'escalade"
 
-    You can map escalation levels by using the notification module. For this, you need to set up multiple notifications with different recipient groups and threshold values for the same notification types.
+    Vous pouvez mapper les niveaux d'escalade en utilisant le module de notification. Pour cela, vous devez configurer plusieurs notifications avec des groupes de destinataires différents et des valeurs de seuil différentes pour les mêmes types de notifications.
 
-**Example of use**
+**Exemple d'utilisation**
 
-    sudo -u www-data php console.php notifications-send --user admin --password admin --tenantId 1
+    sudo -u www-data php console.php notifications-send --user admin --password admin --tenantId 1
+
+{/*examples*/}

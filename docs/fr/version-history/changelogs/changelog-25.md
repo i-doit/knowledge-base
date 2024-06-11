@@ -1,44 +1,46 @@
-# Changelog 25
+# Journal des modifications 25 {/examples/}
 
-[Task][Code (Internal)]                           Remove all query_cache_* options from the systemoverview of i-doit<br>
-[Task][Code (Internal)]                           Use buttons to edit properties in custom category configuration<br>
-[Task][System settings]                           Create new i-doit administration structure<br>
-[Task][System settings]                           Search text is hidden after clicking anywhere else<br>
-[Improvement][Custom categories]                  Define your own attribute keys in custom categories<br>
-[Improvement][Custom categories]                  Change isys_catg_custom_fields_list__field_content from text to longtext<br>
-[Improvement][CMDB]                               Add object name of a server to list view of "logical devices (Client)" category<br>
-[Improvement][CMDB]                               Add ID to list view of assigned objects from person group<br>
-[Improvement][Installation]                       MySQL 8.0 compatibility<br>
-[Bug][Categories]                                 Adding a chassis to the back of a rack does not show the front of the chassis<br>
-[Bug][Categories]                                 Duplicate of workplace has identical workplace components<br>
-[Bug][Categories]                                 Placeholder helper is not displayed when the category has no saved data<br>
-[Bug][Categories]                                 Ipv4 adress out of range when changing layer3 net<br>
-[Bug][Categories]                                 All workplaces assigned when creating a person<br>
-[Bug][Categories]                                 Can not copy passwords with double click if special characters are used<br>
-[Bug][Authorization system]                       Set the expert setting auth.active to 1 by default<br>
-[Bug][Authorization system]                       Rights set by the database get overwritten when viewed<br>
-[Bug][Authorization system]                       Rights are not granted to a Person<br>
-[Bug][LDAP]                                       LDAP page should not break when testing connection<br>
-[Bug][Documents]                                  Placeholder "assigned workplaces (general->title)" shows title of main object<br>
-[Bug][Documents]                                  Kosten und Laufzeit des Vertrags werden nicht richtig angezeigt<br>
-[Bug][CMDB]                                       Do not break i-doit when object type is clicked in breadcrumb<br>
-[Bug][Update]                                     Empty Migration log after update to Version 23<br>
-[Bug][CSV Import]                                 CPU frequency + CPU frequency unit can not imported at once<br>
-[Bug][Custom categories]                          Can't save custom categories in overview on creation, when service assignment is also in the overview (>=php8)<br>
-[Bug][Custom categories]                          Duplicate technical keys when creating many fields at once in custom category<br>
-[Bug][Code (Internal)]                            Object Browser request canceled<br>
-[Bug][Code (Internal)]                            JS error when user is not allowed to see the search<br>
-[Bug][Code (Internal)]                            Error when creating object with locally assigned object category in overview<br>
-[Bug][Code (Internal)]                            No object type group selected, when accessing i-doit via "index.php"<br>
-[Bug][JDisc]                                      JDisc Discovery does not use the correct port<br>
-[Bug][Report-Manager]                             %LIKE% Operator for guarantee date is not working<br>
-[Bug][Report-Manager]                             SQL query is wrongly created when using Assigned workstation -> Parent object<br>
-[Bug][Report-Manager]                             Report Manager - Query for runtime not built correctly<br>
-[Bug][Report-Manager]                             Exported SQL-based report can not be imported without an error<br>
-[Bug][Admincenter]                                i-doit tries to check the hashed password as plaintext<br>
-[Bug][Search]                                     Exception error when creating fc ports<br>
-[Bug][Lists]                                      Expiration date in certificates does not sort correctly<br>
-[Bug][List editing]                               Up/Down scrollbar is not anchored in list edit<br>
-[Bug][List editing]                               List edit - Software assignment is not updated via list overview<br>
-[Bug][API]                                        API-Examples displays object as string<br>
-[Bug][Console-base Installation/Update/Licensing] Using "clear-credentials" command deletes user name
+[Tâche][Code (Interne)]                           Supprimer toutes les options query_cache_* de la vue d'ensemble du système d'i-doit<br>
+[Tâche][Code (Interne)]                           Utiliser des boutons pour modifier les propriétés dans la configuration de catégorie personnalisée<br>
+[Tâche][Paramètres système]                       Créer une nouvelle structure d'administration i-doit<br>
+[Tâche][Paramètres système]                       Le texte de recherche est masqué après avoir cliqué ailleurs<br>
+[Amélioration][Catégories personnalisées]           Définir vos propres clés d'attribut dans les catégories personnalisées<br>
+[Amélioration][Catégories personnalisées]           Changer isys_catg_custom_fields_list__field_content de texte à longtext<br>
+[Amélioration][CMDB]                               Ajouter le nom d'objet d'un serveur à la vue de liste de la catégorie "dispositifs logiques (Client)"<br>
+[Amélioration][CMDB]                               Ajouter l'ID à la vue de liste des objets assignés du groupe de personnes<br>
+[Amélioration][Installation]                       Compatibilité MySQL 8.0<br>
+[Bogue][Catégories]                               Ajouter un châssis à l'arrière d'une baie ne montre pas l'avant du châssis<br>
+[Bogue][Catégories]                               Le doublon du lieu de travail a des composants de lieu de travail identiques<br>
+[Bogue][Catégories]                               L'assistant de substitution n'est pas affiché lorsque la catégorie n'a pas de données enregistrées<br>
+[Bogue][Catégories]                               Adresse Ipv4 hors de portée lors du changement de réseau de couche3<br>
+[Bogue][Catégories]                               Tous les lieux de travail sont assignés lors de la création d'une personne<br>
+[Bogue][Catégories]                               Impossible de copier les mots de passe en double-cliquant si des caractères spéciaux sont utilisés<br>
+[Bogue][Système d'autorisation]                   Définir le paramètre expert auth.active à 1 par défaut<br>
+[Bogue][Système d'autorisation]                   Les droits définis par la base de données sont écrasés lorsqu'ils sont consultés<br>
+[Bogue][Système d'autorisation]                   Les droits ne sont pas accordés à une personne<br>
+[Bogue][LDAP]                                     La page LDAP ne doit pas se rompre lors de la vérification de la connexion<br>
+[Bogue][Documents]                                L'assistant "lieux de travail assignés (général->titre)" affiche le titre de l'objet principal<br>
+[Bogue][Documents]                                Costs and runtime of the contract are not displayed correctly<br>
+[Bogue][CMDB]                                     Ne pas interrompre i-doit lorsque le type d'objet est cliqué dans le fil d'Ariane<br>
+[Bogue][Mise à jour]                              Journal de migration vide après la mise à jour en version 23<br>
+[Bogue][Importation CSV]                          La fréquence du processeur + l'unité de fréquence du processeur ne peuvent pas être importées en une seule fois<br>
+[Bogue][Catégories personnalisées]                 Impossible d'enregistrer les catégories personnalisées dans l'aperçu lors de la création, lorsque l'attribution de service est également dans l'aperçu (>=php8)<br>
+[Bogue][Catégories personnalisées]                 Clés techniques en double lors de la création de nombreux champs à la fois dans la catégorie personnalisée<br>
+[Bogue][Code (Interne)]                           Requête du navigateur d'objets annulée<br>
+[Bogue][Code (Interne)]                           Erreur JS lorsque l'utilisateur n'est pas autorisé à voir la recherche<br>
+[Bogue][Code (Interne)]                           Erreur lors de la création d'un objet avec une catégorie d'objet assignée localement dans l'aperçu<br>
+[Bogue][Code (Interne)]                           Aucun groupe de type d'objet sélectionné, lors de l'accès à i-doit via "index.php"<br>
+[Bogue][JDisc]                                    La découverte JDisc n'utilise pas le bon port<br>
+[Bogue][Gestionnaire de rapports]                 L'opérateur %LIKE% pour la date de garantie ne fonctionne pas<br>
+[Bogue][Gestionnaire de rapports]                 La requête SQL est mal créée lors de l'utilisation de Poste de travail assigné -> Objet parent<br>
+[Bogue][Gestionnaire de rapports]                 Gestionnaire de rapports - La requête pour le temps d'exécution n'est pas correctement construite<br>
+[Bogue][Gestionnaire de rapports]                 Le rapport basé sur SQL exporté ne peut pas être importé sans erreur<br>
+[Bogue][Centre d'administration]                   i-doit essaie de vérifier le mot de passe haché en texte brut<br>
+[Bogue][Recherche]                                Erreur d'exception lors de la création de ports fc<br>
+[Bogue][Listes]                                   La date d'expiration dans les certificats ne se trie pas correctement<br>
+[Bogue][Édition de liste]                         La barre de défilement Haut/Bas n'est pas ancrée dans l'édition de liste<br>
+[Bogue][Édition de liste]                         L'édition de liste - L'attribution de logiciel n'est pas mise à jour via l'aperçu de liste<br>
+[Bogue][API]                                      Les exemples d'API affichent l'objet comme une chaîne<br>
+[Bogue][Installation/ Mise à jour/ Licence de base de la console] Utilisation de la commande "clear-credentials" supprime le nom d'utilisateur
+
+Please provide the Markdown content you would like me to translate into French.

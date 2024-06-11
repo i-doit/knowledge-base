@@ -1,114 +1,114 @@
-# Changelog 1.12.2
+# Journal des modifications 1.12.2
 
-[Task][Code (internal)] Remove all polyfills for mbstring extension  
-[Improvement][CMDB] Save CMDB Status filter  
-[Improvement][LDAP] SYNC: Import of more than 1000 users  
-[Bug][Code (internal)] Object counter to show the number of objects per object type slows down the system  
-[Bug][Code (internal)] Improved security  
-[Bug][Export] Setting to define limiter of csv exports does not work for every type of csv export  
-[Bug][Export] Attribute "Purchased at" is not transferred to new object when duplicating  
-[Bug][System settings] "A support button to fix all" sequential requests  
-[Bug][System settings] Access to / upload folder without authentication  
-[Bug][Nagios] Double entries in Monitoring > NDO  
-[Bug][Nagios] Show the Check_commands values of the Nagios Services  
-[Bug][CSV Import] CSV-Import: Identification of locations based on complete location paths  
-[Bug][CSV Import] CSV import clears fields, which are not contained in the csv import file  
-[Bug][CSV Import] Latitude and longitude can only be imported with errors via the CSV import  
-[Bug][CSV Import] CSV Export incomplete in category "Contact Assignment"  
-[Bug][CSV Import] Attribute "Manufacturer" from category "Application" not available in CSV import  
-[Bug][CSV Import] CSV-Import: Contact assignments are not created  
-[Bug][CSV Import] CSV import: Blank tags are created  
-[Bug][Search] Find the right dialogue+ value  
-[Bug][Search] Search indexing of category C__CATG__CONNECTOR  
-[Bug][Search] Correct representation of umlauts in sources  
-[Bug][Search] Standard Search of Dialog Fields  
-[Bug][Search] Find all aliases that are specified  
-[Bug][Categories] Multi select in object browser is cut at a certain point  
-[Bug][Categories] Content from category extensions and assigned organization in category "master data" is deleted if the person is assigned to an object which is duplicated  
-[Bug][Categories] SQL error after saving a central unit  
-[Bug][Categories] Mouse over for last object in object browser does not work  
-[Bug][Categories] Using some special characters for password causes makes login impossible  
-[Bug][Categories] Use the contract date in the list view  
-[Bug][Categories] Show access URL's if no serial number is available  
-[Bug][Categories] IPv6 networks are not stored correctly  
-[Bug][Categories] Controllers cannot be assigned to any device  
-[Bug][Categories] Arbitrary example data for field placeholders in the category "General"  
-[Bug][Categories] List editing visible as category  
-[Bug][Categories] Assign software if the change comment is enabled  
-[Bug][Categories] Allow your own filter settings in the Object Browser  
-[Bug][Categories] Typo in german version "Email" instead of "E-Mail"  
-[Bug][Categories] Filtering on object browser not possible, when category names are shown  
-[Bug][Categories] Create tags without substrings  
-[Bug][Categories] Show the right contacts in the overview page  
-[Bug][Categories] Wrong export of date information  
-[Bug][Categories] Root location does not have an entry in location table  
-[Bug][Categories] Operation expenses being multiplicated when duplicating an object  
-[Bug][Authorization system] Restrict access to object browser settings under administration  
-[Bug][Authorization system] Rights are not read correctly  
-[Bug][Report-Manager] Attributes from "logical ports" not available in report manager  
-[Bug][Report-Manager] Comments must be checked for SQL statements  
-[Bug][Report-Manager] Sub-category "Connections" Provide the "Input / Output" attribute for Report Manager  
-[Bug][Report-Manager] Show HTML in created PDF from report manager as well  
-[Bug][Report-Manager] Selecting attribute "operating system" from category "operating system" in report manager lists all assigned operating systems instead of the primary  
-[Bug][Report-Manager] Setting to only show category entries of condition "normal" does not work in report manager for category "operating system".  
-[Bug][Report-Manager] Error in Report Manager  
-[Bug][Report-Manager] Error when using attribute "last refresh" of category "custom identifiers" in report  
-[Bug][Report-Manager] Wrong output of e-mail addresses in reports  
-[Bug][Report-Manager] Use of line breaks in the SQL editor are cleaned up  
-[Bug][Mass editing] CMDB status of mass change template always overwrites CMDB status of objects  
-[Bug][Mass editing] Mass change has no effect  
-[Bug][Relations] Subcategory "Listerner" of category "Network Connections" does not create relationships  
-[Bug][Relations] Fix the sorting of weighting in relation details  
-[Bug][Relations] Remove the database access via the database schema  
-[Bug][Custom categories] When creating new entries in User defined Categories data will be prefilled  
-[Bug][Custom categories] Dialog fields are not marked as drop down  
-[Bug][Custom categories] Archiving/Deleting entries in custom categories is not logged into the logbook  
-[Bug][Custom categories] Content from dialogue-plus fields can only be found after renewing the search index manually  
-[Bug][Custom categories] QCW Profil Import  
-[Bug][Custom categories] UTF-8 Symbols in the Database of the Custom Categories  
-[Bug][List editing] List editing of the category Cabling > Connections Empties Connected to port  
-[Bug][List editing] List edit category Cabling > Connections Empties Color/Wavelength  
-[Bug][List editing] In the listedit hidden columns were not hidden on new entries  
-[Bug][List editing] In the listedit, the contacts within the category Audit are not displayed correctly  
-[Bug][List editing] Changing an entry in a custom category (via list edit) leads to the description field being overwritten  
-[Bug][List editing] Field type "Link" leads to an error in user-defined categories in list edit  
-[Bug][List editing] List editing of the category General deletes tags  
-[Bug][List editing] Bad placement for calandre feature in list edit  
-[Bug][List editing] List Editing: Category "Port" Attribute "Standard VLAN" is emptied  
-[Bug][List editing] Error when opening list edit  
-[Bug][List editing] List editing of user-defined map categories with horizontal lines  
-[Bug][List editing] Category "Listendit" for new object types without function  
-[Bug][List editing] Category "General" Save attribute "CMDB status" correctly  
-[Bug][CMDB] Errors when archiving / deleting objects  
-[Bug][CMDB] Automatic generation of inventar number fails with php 7.2  
-[Bug][Logbook] Logbook entries are deleted permanently.  
-[Bug][Logbook] Logbook for service assignment incomplete  
-[Bug][Logbook] Logbook: Entries can disappear from the visible area  
-[Bug][Validation] IPv4 address is not validated by Global validation  
-[Bug][Validation] Save MAC addresses using EUI-64  
-[Bug][JDisc] When importing via JDISC a new Dialog+ entry is created at manufacturer for each application.  
-[Bug][JDisc] JDISC: Cluster / cluster services are not imported correctly  
-[Bug][JDisc] Changed IP addresses are not adopted during JDISC import (update)  
-[Bug][Console] Reduce animations while generating search index to increase performance  
-[Bug][Systemtools] Removal of the "One Button to fix them all"  
-[Bug][Update] Executing the update not possible in some cases, if Internet Explorer 11 is used  
-[Bug][CMDB-Explorer] Open CMDB Explorer with IE11  
-[Bug][CMDB-Explorer] Bad presentation when using long titles in service selection of CMDB explorer  
-[Bug][LDAP] LDAP Sync on StartTLS without function  
-[Bug][LDAP] Connect LDAP  
-[Bug][LDAP] Special characters are not escaped during LDAP sync  
-[Bug][My-doit] CMDB-Status Filter filter  
-[Bug][Admincenter] Remote Code Execution in the Admin Area  
-[Bug][Monitoring] Can't choose monitoring instance in "Monitoring: Affected Hosts" widget  
-[Bug][Objects] When creating, data is entered in the Form factor category.  
-[Bug][Objects] Fade out when the category "Service" is not filled  
-[Bug][Objects] Category "contact assignment" leads to performance fluctuations in the overview  
-[Bug][Lists] Error when filtering in object lists  
-[Bug][Lists] Error when using filter in object lists when involving a default sorting  
-[Bug][Lists] Fix paging when object status is changed  
-[Bug][Events] Events: Wrong/missing information in transmission to shell script  
-[Bug][Connector Cabling] tbd  
-[Bug][Licence settings] Special characters: Assignment of a license with special characters not possible  
-[Bug][Import] Wrong translation in OCS import settings  
-[Bug][Notifications] Notifications: Emails for expiring licenses will not be sent  
-[Bug][CMDB settings] SYSIDs will not always be generated as unique  
+[Tâche][Code (interne)] Supprimer tous les polyfills pour l'extension mbstring  
+[Amélioration][CMDB] Enregistrer le filtre d'état CMDB  
+[Amélioration][LDAP] SYNC : Importation de plus de 1000 utilisateurs  
+[Bug][Code (interne)] Le compteur d'objets pour afficher le nombre d'objets par type ralentit le système  
+[Bug][Code (interne)] Sécurité améliorée  
+[Bug][Export] Paramètre pour définir le limiteur des exports csv ne fonctionne pas pour tous les types d'export csv  
+[Bug][Export] L'attribut "Acheté à" n'est pas transféré au nouvel objet lors de la duplication  
+[Bug][Paramètres système] "Un bouton de support pour tout réparer" des demandes séquentielles  
+[Bug][Paramètres système] Accès au dossier / upload sans authentification  
+[Bug][Nagios] Doublons dans Monitoring > NDO  
+[Bug][Nagios] Afficher les valeurs des Check_commands des Services Nagios  
+[Bug][Import CSV] Import CSV : Identification des emplacements basée sur des chemins d'emplacement complets  
+[Bug][Import CSV] L'importation CSV efface les champs qui ne sont pas contenus dans le fichier d'importation csv  
+[Bug][Import CSV] Latitude et longitude ne peuvent être importées qu'avec des erreurs via l'importation CSV  
+[Bug][Import CSV] Export CSV incomplet dans la catégorie "Affectation de contact"  
+[Bug][Import CSV] L'attribut "Fabricant" de la catégorie "Application" n'est pas disponible dans l'importation CSV  
+[Bug][Import CSV] Import CSV : Les affectations de contact ne sont pas créées  
+[Bug][Import CSV] Import CSV : Des balises vides sont créées  
+[Bug][Recherche] Trouver le bon dialogue+ valeur  
+[Bug][Recherche] Indexation de la recherche de la catégorie C__CATG__CONNECTOR  
+[Bug][Recherche] Représentation correcte des umlauts dans les sources  
+[Bug][Recherche] Recherche standard des champs de dialogue  
+[Bug][Recherche] Trouver tous les alias spécifiés  
+[Bug][Catégories] La sélection multiple dans le navigateur d'objets est coupée à un certain point  
+[Bug][Catégories] Le contenu des extensions de catégorie et de l'organisation assignée dans la catégorie "données de base" est supprimé si la personne est assignée à un objet qui est dupliqué  
+[Bug][Catégories] Erreur SQL après avoir enregistré une unité centrale  
+[Bug][Catégories] Le survol de la dernière objet dans le navigateur d'objets ne fonctionne pas  
+[Bug][Catégories] L'utilisation de certains caractères spéciaux pour le mot de passe rend la connexion impossible  
+[Bug][Catégories] Utiliser la date du contrat dans la vue en liste  
+[Bug][Catégories] Afficher les URL d'accès si aucun numéro de série n'est disponible  
+[Bug][Catégories] Les réseaux IPv6 ne sont pas enregistrés correctement  
+[Bug][Catégories] Les contrôleurs ne peuvent pas être assignés à un appareil quelconque  
+[Bug][Catégories] Données d'exemple arbitraires pour les espaces réservés de champ dans la catégorie "Général"  
+[Bug][Catégories] L'édition de liste est visible en tant que catégorie  
+[Bug][Catégories] Assigner un logiciel si le commentaire de modification est activé  
+[Bug][Catégories] Autoriser vos propres paramètres de filtre dans le navigateur d'objets  
+[Bug][Catégories] Faute de frappe dans la version allemande "Email" au lieu de "E-Mail"  
+[Bug][Catégories] Filtrer sur le navigateur d'objets n'est pas possible lorsque les noms de catégorie sont affichés  
+[Bug][Catégories] Créer des balises sans sous-chaînes  
+[Bug][Catégories] Afficher les bons contacts dans la page d'aperçu  
+[Bug][Catégories] Mauvaise exportation des informations de date  
+[Bug][Catégories] L'emplacement racine n'a pas d'entrée dans la table des emplacements  
+[Bug][Catégories] Les dépenses d'exploitation sont multipliées lors de la duplication d'un objet  
+[Bug][Système d'autorisation] Restreindre l'accès aux paramètres du navigateur d'objets sous administration  
+[Bug][Système d'autorisation] Les droits ne sont pas lus correctement  
+[Bug][Gestionnaire de rapports] Les attributs de "ports logiques" ne sont pas disponibles dans le gestionnaire de rapports  
+[Bug][Gestionnaire de rapports] Les commentaires doivent être vérifiés pour les instructions SQL  
+[Bug][Gestionnaire de rapports] Sous-catégorie "Connexions" Fournir l'attribut "Entrée / Sortie" pour le gestionnaire de rapports  
+[Bug][Gestionnaire de rapports] Afficher du HTML dans le PDF créé à partir du gestionnaire de rapports également  
+[Bug][Gestionnaire de rapports] Sélectionner l'attribut "système d'exploitation" de la catégorie "système d'exploitation" dans le gestionnaire de rapports liste tous les systèmes d'exploitation assignés au lieu du principal  
+[Bug][Gestionnaire de rapports] Paramètre pour afficher uniquement les entrées de catégorie de condition "normale" ne fonctionne pas dans le gestionnaire de rapports pour la catégorie "système d'exploitation".  
+[Bug][Gestionnaire de rapports] Erreur dans le gestionnaire de rapports  
+[Bug][Gestionnaire de rapports] Erreur lors de l'utilisation de l'attribut "dernière actualisation" de la catégorie "identifiants personnalisés" dans le rapport  
+[Bug][Gestionnaire de rapports] Mauvaise sortie des adresses e-mail dans les rapports  
+[Bug][Gestionnaire de rapports] Utilisation des sauts de ligne dans l'éditeur SQL est nettoyée  
+[Bug][Édition de masse] L'état CMDB du modèle de modification de masse écrase toujours l'état CMDB des objets  
+[Bug][Édition de masse] La modification de masse n'a aucun effet  
+[Bug][Relations] La sous-catégorie "Listerner" de la catégorie "Connexions réseau" ne crée pas de relations  
+[Bug][Relations] Corriger le tri du poids dans les détails de la relation  
+[Bug][Relations] Supprimer l'accès à la base de données via le schéma de base de données  
+[Bug][Catégories personnalisées] Lors de la création de nouvelles entrées dans les catégories définies par l'utilisateur, les données seront préremplies  
+[Bug][Catégories personnalisées] Les champs de dialogue ne sont pas marqués comme liste déroulante  
+[Bug][Catégories personnalisées] Archiver/Supprimer des entrées dans les catégories personnalisées n'est pas enregistré dans le journal  
+[Bug][Catégories personnalisées] Le contenu des champs dialogue-plus ne peut être trouvé qu'après avoir renouvelé manuellement l'index de recherche  
+[Bug][Catégories personnalisées] Importation du Profil QCW  
+[Bug][Catégories personnalisées] Symboles UTF-8 dans la base de données des catégories personnalisées  
+[Bug][Édition de liste] L'édition de liste de la catégorie Câblage > Connexions Vide Connecté au port  
+[Bug][Édition de liste] L'édition de liste de la catégorie Câblage > Connexions Vide Couleur/Longueur d'onde  
+[Bug][Édition de liste] Dans l'édition de liste, les colonnes cachées n'étaient pas masquées sur de nouvelles entrées  
+[Bug][Édition de liste] Dans l'édition de liste, les contacts dans la catégorie Audit ne sont pas affichés correctement  
+[Bug][Édition de liste] Modifier une entrée dans une catégorie personnalisée (via l'édition de liste) entraîne l'écrasement du champ de description  
+[Bug][Édition de liste] Le type de champ "Lien" entraîne une erreur dans les catégories définies par l'utilisateur dans l'édition de liste  
+[Bug][Édition de liste] L'édition de liste de la catégorie Général supprime les balises  
+[Bug][Édition de liste] Mauvais emplacement pour la fonction de calendrier dans l'édition de liste  
+[Bug][Édition de liste] Édition de liste : Catégorie "Port" Attribut "VLAN standard" est vidé  
+[Bug][Édition de liste] Erreur lors de l'ouverture de l'édition de liste  
+[Bug][Édition de liste] L'édition de liste des catégories de carte définies par l'utilisateur avec des lignes horizontales  
+[Bug][Édition de liste] Catégorie "Listendit" pour les nouveaux types d'objets sans fonction  
+[Bug][Édition de liste] Catégorie "Général" Enregistrer l'attribut "état CMDB" correctement  
+[Bug][CMDB] Erreurs lors de l'archivage/suppression d'objets  
+[Bug][CMDB] La génération automatique du numéro d'inventaire échoue avec php 7.2  
+[Bug][Journal] Les entrées du journal sont supprimées définitivement.  
+[Bug][Journal] Journal pour l'attribution de service incomplet  
+[Bug][Journal] Journal : Les entrées peuvent disparaître de la zone visible  
+[Bug][Validation] L'adresse IPv4 n'est pas validée par la validation globale  
+[Bug][Validation] Enregistrer les adresses MAC en utilisant EUI-64  
+[Bug][JDisc] Lors de l'importation via JDISC, une nouvelle entrée Dialog+ est créée pour chaque application au fabricant.  
+[Bug][JDisc] JDISC : Les clusters / services de cluster ne sont pas importés correctement  
+[Bug][JDisc] Les adresses IP modifiées ne sont pas adoptées lors de l'importation JDISC (mise à jour)  
+[Bug][Console] Réduire les animations lors de la génération de l'index de recherche pour augmenter les performances  
+[Bug][Outils système] Suppression du "Bouton unique pour tout réparer"  
+[Bug][Mise à jour] L'exécution de la mise à jour n'est pas possible dans certains cas, si Internet Explorer 11 est utilisé  
+[Bug][Explorateur CMDB] Ouvrir l'explorateur CMDB avec IE11  
+[Bug][Explorateur CMDB] Mauvaise présentation lors de l'utilisation de titres longs dans la sélection de services de l'explorateur CMDB  
+[Bug][LDAP] Synchronisation LDAP sur StartTLS sans fonction  
+[Bug][LDAP] Connecter LDAP  
+[Bug][LDAP] Les caractères spéciaux ne sont pas échappés lors de la synchronisation LDAP  
+[Bug][My-doit] Filtre de statut CMDB de My-doit  
+[Bug][Centre d'administration] Exécution de code à distance dans la zone d'administration  
+[Bug][Surveillance] Impossible de choisir l'instance de surveillance dans le widget "Surveillance : Hôtes affectés"  
+[Bug][Objets] Lors de la création, les données sont saisies dans la catégorie Facteur de forme.  
+[Bug][Objets] Disparition lorsque la catégorie "Service" n'est pas remplie  
+[Bug][Objets] La catégorie "affectation de contact" entraîne des fluctuations de performances dans l'aperçu  
+[Bug][Listes] Erreur lors du filtrage dans les listes d'objets  
+[Bug][Listes] Erreur lors de l'utilisation du filtre dans les listes d'objets en impliquant un tri par défaut  
+[Bug][Listes] Correction de la pagination lorsque le statut de l'objet est modifié  
+[Bug][Événements] Événements : Informations erronées/manquantes dans la transmission au script shell  
+[Bug][Connecteur Câblage] à déterminer  
+[Bug][Paramètres de licence] Caractères spéciaux : Attribution d'une licence avec des caractères spéciaux non possible  
+[Bug][Importation] Mauvaise traduction dans les paramètres d'importation OCS  
+[Bug][Notifications] Notifications : Les e-mails pour les licences expirées ne seront pas envoyés  
+[Bug][Paramètres CMDB] Les SYSIDs ne seront pas toujours générés de manière unique  

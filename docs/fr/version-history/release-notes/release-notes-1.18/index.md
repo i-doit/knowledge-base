@@ -1,30 +1,30 @@
-We're happy to announce that the latest major version 1.18 of i-doit has been released. This update contains a lot of bug fixes, which can be found in the [changelog](../../changelogs/changelog-1.18.x/changelog-1.18.md) and new features which have been highly requested by our customers.
+Nous sommes heureux d'annoncer que la dernière version majeure 1.18 de i-doit a été publiée. Cette mise à jour contient de nombreuses corrections de bugs, qui peuvent être trouvées dans le [journal des modifications](../../changelogs/changelog-1.18.x/changelog-1.18.md) et de nouvelles fonctionnalités qui ont été fortement demandées par nos clients.
 
-You should [update](../../../maintenance-and-operation/update.md) to the latest version to benefit from these changes.
+Vous devriez [mettre à jour](../../../maintenance-and-operation/update.md) vers la dernière version pour bénéficier de ces changements.
 
-Highlights in this release
---------------------------
+Points forts de cette version
+-----------------------------
 
-*   New **crypto hashing** for user passwords to **increase security**.
-*   A **configuration** for your own **custom counter-placeholders** to gain control over multiple different counters at the same time.
-*   Two **Dialog+ fields** in custom categories can now be **linked with a dependency**, so you will have different selections of values, based on the first picked value.
+*   Nouveau **hachage cryptographique** pour les mots de passe des utilisateurs pour **accroître la sécurité**.
+*   Une **configuration** pour vos propres **espaces réservés de compteur personnalisés** pour contrôler plusieurs compteurs différents en même temps.
+*   Deux champs **Dialog+** dans les catégories personnalisées peuvent maintenant être **liés à une dépendance**, vous aurez donc des sélections de valeurs différentes, en fonction de la première valeur choisie.
 
-Add-ons
--------
+Extensions
+----------
 
-With i-doit v1.18, we’ve released a bunch of add-ons to be compatible with this major release:
+Avec i-doit v1.18, nous avons publié une série d'extensions compatibles avec cette version majeure :
 
 [API](../../../i-doit-pro-add-ons/api/index.md) **1.12.3**  
 [Documents](../../../i-doit-pro-add-ons/documents/index.md) **1.4.5**  
-[Analysis](../../../i-doit-pro-add-ons/analysis.md) **1.2**  
-[Replacement](../../../i-doit-pro-add-ons/replacement.md) **1.3.2**  
-[Floorplan](../../../i-doit-pro-add-ons/floorplan.md) **1.5.1**  
-[Cabling](../../../i-doit-pro-add-ons/cabling.md) **1.1**  
+[Analyse](../../../i-doit-pro-add-ons/analysis.md) **1.2**  
+[Remplacement](../../../i-doit-pro-add-ons/replacement.md) **1.3.2**  
+[Plan d'étage](../../../i-doit-pro-add-ons/floorplan.md) **1.5.1**  
+[Câblage](../../../i-doit-pro-add-ons/cabling.md) **1.1**  
 [Packager](../../../i-doit-pro-add-ons/add-on-packager.md) **1.1**  
-[Forms](../../../i-doit-pro-add-ons/forms/index.md) **1.0**
+[Formulaires](../../../i-doit-pro-add-ons/forms/index.md) **1.0**
 
-System requirements
+Exigences système
 -------------------
 
-Make sure, your system matches our [system requirements](../../../installation/system-requirements.md) before updating your instance of i-doit to 1.18 and you have created a [backup of all your data](../../../maintenance-and-operation/backup-and-recovery/index.md).  
-If you are using any of the add-ons listed above, make sure that they are [up-to-date](../../../i-doit-pro-add-ons/index.md) before performing the update.
+Assurez-vous que votre système correspond à nos [exigences système](../../../installation/system-requirements.md) avant de mettre à jour votre instance d'i-doit vers la version 1.18 et que vous avez créé une [sauvegarde de toutes vos données](../../../maintenance-and-operation/backup-and-recovery/index.md).  
+Si vous utilisez l'un des modules complémentaires répertoriés ci-dessus, assurez-vous qu'ils sont [à jour](../../../i-doit-pro-add-ons/index.md) avant d'effectuer la mise à jour.

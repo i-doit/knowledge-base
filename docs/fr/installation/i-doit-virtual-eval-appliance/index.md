@@ -1,133 +1,133 @@
-# i-doit Virtual Eval Appliance
+# i-doit Virtual Eval Appliance {/%%/}
 
-synetics provides a fully functional appliance of i-doit pro. It can be downloaded as a virtual machine.
+synetics fournit un appareil entièrement fonctionnel de i-doit pro. Il peut être téléchargé sous forme de machine virtuelle.
 
-Thanks to the virtual appliance the features of i-doit pro can be evaluated as fast as possible. You neither need knowledge of the [LAMP Stack](../system-requirements.md) nor do you have to install the software. Instead you can start immediately with a basic framework.
+Grâce à l'appareil virtuel, les fonctionnalités de i-doit pro peuvent être évaluées aussi rapidement que possible. Vous n'avez besoin d'aucune connaissance du [LAMP Stack](../system-requirements.md) ni d'installer le logiciel. Au lieu de cela, vous pouvez commencer immédiatement avec un cadre de base.
 
-!!! note "For testing only"
+!!! note "Pour les tests uniquement"
 
-    The appliance is intended for testing only and should not be used in production.
+    L'appareil est destiné uniquement aux tests et ne doit pas être utilisé en production.
 
-## Download
+## Téléchargement
 
-The appliance is available for download free of charge during the evaluation process. In order to request a valid trial license the form ["On Premise" on the i-doit website](https://www.i-doit.com/en/30-days-trial/) needs to be used.
+L'appareil est disponible en téléchargement gratuitement pendant le processus d'évaluation. Pour demander une licence d'essai valide, le formulaire ["On Premise" sur le site web de i-doit](https://www.i-doit.com/en/30-days-trial/) doit être utilisé.
 
-## Start
+## Démarrage
 
-The download comes as a normal ZIP file which has to be extracted after downloading. It contains an OVF file, which can be imported into popular virtualization environments.<br>
-When importing, settings may be requested (name, CPU cores, memory). The presets can be taken over without problems. If they are changed, however, it is also probable that the [settings](../manual-installation/system-settings.md) of MariaDB and PHP have to be adjusted too. It's also important to meet the [system requirements](../system-requirements.md).
+Le téléchargement est fourni sous forme d'un fichier ZIP normal qui doit être extrait après le téléchargement. Il contient un fichier OVF, qui peut être importé dans des environnements de virtualisation populaires.<br>
+Lors de l'importation, des paramètres peuvent être demandés (nom, cœurs CPU, mémoire). Les paramètres par défaut peuvent être repris sans problème. S'ils sont modifiés, cependant, il est également probable que les [paramètres](../manual-installation/system-settings.md) de MariaDB et PHP doivent être ajustés également. Il est également important de respecter les [exigences système](../system-requirements.md).
 
-[![Appliance config](../../assets/images/en/installation/manual-installation/virtual-appliance/1-va.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/1-va.png)
+[![Configuration de l'appareil](../../assets/images/en/installation/manual-installation/virtual-appliance/1-va.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/1-va.png)
 
-!!! note "Operating System"
+!!! note "Système d'exploitation"
 
-    The installed operating system is **Debian GNU/Linux 11 "buster" as 64-bit version**. If the virtualizer doesn't recognize this automatically, it is essential to enter this information manually. Otherwise it is possible that problems arise when starting and executing the VM.
+    Le système d'exploitation installé est **Debian GNU/Linux 11 "buster" en version 64 bits**. Si le virtualiseur ne le reconnaît pas automatiquement, il est essentiel d'entrer ces informations manuellement. Sinon, il est possible que des problèmes surviennent lors du démarrage et de l'exécution de la VM.
 
-## Start of i-doit
+## Démarrage de i-doit
 
-During the first start, the VM tries to obtain an IP address via DHCP and shows it on the console. When you activate the IP address in the browser, the i-doit Web GUI starts to load.<br>
-You can configure the IP address via the console (see below).
+Lors du premier démarrage, la VM tente d'obtenir une adresse IP via DHCP et l'affiche sur la console. Lorsque vous activez l'adresse IP dans le navigateur, l'interface Web de i-doit commence à se charger.<br>
+Vous pouvez configurer l'adresse IP via la console (voir ci-dessous).
 
-## Credentials
+## Identifiants
 
-| Tool | Username | Password |
+| Outil | Nom d'utilisateur | Mot de passe |
 | --- | --- | --- |
 | i-doit Web GUI | **admin** | **admin** |
 | i-doit Web GUI | **controller** | **controller** |
-| [i-doit Admin-Center](../../system-administration/admin-center.md) | **admin** | **idoit** |
+| [Centre d'administration i-doit](../../system-administration/admin-center.md) | **admin** | **idoit** |
 | SSH | **idoitadm** | **idoit** |
 | MySQL (i-doit) | **idoit** | **idoit** |
-| MySQL (Systemuser) | **root** | **idoit** |
+| MySQL (Utilisateur système) | **root** | **idoit** |
 
-Additionally, there are some [pre-defined persons and person groups](../../basics/initial-login.md) in i-doit.
+De plus, il existe quelques [personnes et groupes de personnes prédéfinis](../../basics/initial-login.md) dans i-doit.
 
 ## Configuration
 
-The configuration of the appliance can be carried out via the console. After logging in via **SSH** a menu appears:
+La configuration de l'appliance peut être effectuée via la console. Après vous être connecté via **SSH**, un menu apparaît :
 
-[![SSH menu](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)
+[![Menu SSH](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)
 
-| Shortcut | Menu item | Function |
+| Raccourci | Élément du menu | Fonction |
 | --- | --- | --- |
-| 1 | **Configure networking** | Set network connection; the network configuration is set to DHCP by default. |
-| 2 | **Proxy configuration** | Set HTTP proxy for the system |
-| 3 | **E-Mail configuration** | E-mail settings |
-| 4 | **Timezone** | Set the time zone |
-| 5 | **Keyboard layout** | Keyboard layout; de is set as default |
-| 6 | **Change idoitadm user password** | Change the password of the User idoitadm |
-| 7 | **i-doit scripting configuration** | Change settings for CLI, [cronjobs](../../maintenance-and-operation/cronjob-setup.md), [backup and restore](../../maintenance-and-operation/backup-and-recovery/index.md) |
-| 8 | **Reboot system** | Reboot system |
-| 9 | **Shutdown system** | System shutdown |
-| 0 | **Launch shell** | Open the shell for further action |
-| A | **Logout** | Log out the user idoitadm off the system |
+| 1 | **Configurer le réseau** | Définir la connexion réseau ; la configuration réseau est définie par défaut sur DHCP. |
+| 2 | **Configuration du proxy** | Définir le proxy HTTP pour le système |
+| 3 | **Configuration de messagerie électronique** | Paramètres de messagerie électronique |
+| 4 | **Fuseau horaire** | Définir le fuseau horaire |
+| 5 | **Disposition du clavier** | Disposition du clavier ; de est défini par défaut |
+| 6 | **Changer le mot de passe de l'utilisateur idoitadm** | Changer le mot de passe de l'utilisateur idoitadm |
+| 7 | **Configuration du script i-doit** | Modifier les paramètres pour CLI, [tâches cron](../../maintenance-and-operation/cronjob-setup.md), [sauvegarde et restauration](../../maintenance-and-operation/backup-and-recovery/index.md) |
+| 8 | **Redémarrer le système** | Redémarrer le système |
+| 9 | **Arrêter le système** | Arrêter le système |
+| 0 | **Lancer le shell** | Ouvrir le shell pour d'autres actions |
+| A | **Déconnexion** | Déconnecter l'utilisateur idoitadm du système |
 
-## Scripts and Cronjobs
+## Scripts et Tâches Cron
 
-The appliance is equipped with various scripts and cronjobs.
+L'appliance est équipée de différents scripts et tâches cron.
 
-| Script | Purpose |
+| Script | Objectif |
 | --- | --- |
-| **idoit** | i-doit CLI |
-| **idoit-backup** | Run backup manually |
-| **idoit-restore** | Restore |
-| **idoit-jobs** | Run cronjobs manually |
+| **idoit** | CLI i-doit |
+| **idoit-backup** | Exécuter une sauvegarde manuellement |
+| **idoit-restore** | Restaurer |
+| **idoit-jobs** | Exécuter manuellement des tâches cron |
 
-The scripts are located at `/usr/local/bin/`.
+Les scripts se trouvent dans `/usr/local/bin/`.
 
-Pre-configured [cronjobs](../../automation-and-integration/cli/index.md), which optimize the system regularly, exist at `/etc/cron.d/i-doit`.
+Des [tâches cron préconfigurées](../../automation-and-integration/cli/index.md), qui optimisent régulièrement le système, existent dans `/etc/cron.d/i-doit`.
 
-Every night the files of i-doit are saved locally. The storage period is one week.
+Chaque nuit, les fichiers d'i-doit sont sauvegardés localement. La période de stockage est d'une semaine.
 
-## Directories
+## Répertoires {/examples}
 
-The following overview shows you the purpose of the directories:
+L'aperçu suivant vous montre l'objectif des répertoires :
 
-| Directory | Purpose |
+| Répertoire | Objectif |
 | --- | --- |
-| **/var/www/html/** | Installation directory of i-doit |
-| **/etc/apache2/** | Configuration of the Apache web server |
-| **/etc/php/7.0/** | Configuration of PHP |
-| **/etc/mysql/** | Configuration of MariaDB |
-| **/var/log/apache2/** | Logs of the Apache web server |
-| **/var/backups/i-doit** | Backups |
+| **/var/www/html/** | Répertoire d'installation d'i-doit |
+| **/etc/apache2/** | Configuration du serveur web Apache |
+| **/etc/php/7.0/** | Configuration de PHP |
+| **/etc/mysql/** | Configuration de MariaDB |
+| **/var/log/apache2/** | Journaux du serveur web Apache |
+| **/var/backups/i-doit** | Sauvegardes |
 
-## Follow-up
+## Suivi {/examples}
 
-The appliance provides a "naked" installation of i-doit pro. This means that neither demo files nor additional [add-ons](../../i-doit-pro-add-ons/index.md) are included.<br>
-When logging in the first time, i-doit requests a valid [license](../../maintenance-and-operation/activate-license.md) which needs to be activated in order to have all features available.<br>
-Further information for first steps with i-doit are also described in the knowledge base under [Basics](../../basics/index.md).
+L'appliance fournit une installation "nue" d'i-doit pro. Cela signifie que ni les fichiers de démonstration ni les [extensions supplémentaires](../../i-doit-pro-add-ons/index.md) ne sont inclus.<br>
+Lors de la première connexion, i-doit demande une [licence](../../maintenance-and-operation/activate-license.md) valide qui doit être activée pour disposer de toutes les fonctionnalités disponibles.<br>
+Des informations supplémentaires pour les premiers pas avec i-doit sont également décrites dans la base de connaissances sous [Fondamentaux](../../basics/index.md).
 
-## Troubleshooting
+## Dépannage {/examples}
 
-!!! warning "Connection refused"
+!!! warning "Connexion refusée"
 
-    If the following error message is shown when running i-doit
+    Si le message d'erreur suivant s'affiche lors de l'exécution d'i-doit
 
     ```shell
-    mysqli_connect(): (HY000/2002): Connection refused (/var/www/html/src/classes/components/isys_component_database_mysqli.class.php:16)
+    mysqli_connect(): (HY000/2002): Connexion refusée (/var/www/html/src/classes/components/isys_component_database_mysqli.class.php:16)
     ```
 
-    then the MySQL service probably didn't start. In most cases this is related to changes in the virtual hardware of the appliance without adjusting the configurations. The settings need to be either reset to the default values following a restart of the machine or the configuration at `/etc/mysql/mariadb.conf.d/99-i-doit.cnf` needs to be adjusted so that the hardware suffices and the MySQL service can be started again using `systemctl start mysql`.
+    alors le service MySQL n'a probablement pas démarré. Dans la plupart des cas, cela est lié à des modifications dans le matériel virtuel de l'appliance sans ajuster les configurations. Les paramètres doivent être soit réinitialisés aux valeurs par défaut après un redémarrage de la machine, soit la configuration à `/etc/mysql/mariadb.conf.d/99-i-doit.cnf` doit être ajustée pour que le matériel soit suffisant et que le service MySQL puisse être redémarré en utilisant `systemctl start mysql`.
 
-!!! warning "VM doesn't start"
+!!! warning "La VM ne démarre pas"
 
-    If the VM doesn't start, insufficient or incompatible settings of the virtualizer could be the reason. Common virtualizers often supply helpful hints. For example, it is important to specify the correct operating system in the correct version: Debian GNU/Linux 64-bit.
+    Si la VM ne démarre pas, des paramètres insuffisants ou incompatibles du virtualiseur pourraient en être la raison. Les virtualiseurs courants fournissent souvent des indices utiles. Par exemple, il est important de spécifier le bon système d'exploitation dans la bonne version : Debian GNU/Linux 64 bits.
 
-!!! warning  "Unsupported hardware family"
+!!! warning  "Famille de matériel non prise en charge"
 
-    If the applied VMware environment is not up to date, the error message **line 25 unsupported hardware family 'vmx-10'**is displayed during import. To enable the import you have to edit the file **i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf** . In the line
+    Si l'environnement VMware appliqué n'est pas à jour, le message d'erreur **ligne 25 famille de matériel non prise en charge 'vmx-10'** s'affiche lors de l'importation. Pour activer l'importation, vous devez modifier le fichier **i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf**. À la ligne
 
     ```shell
     <vssd:VirtualSystemType>vmx-10</vssd:VirtualSystemType>
     ```
 
-    you have to select a lower version. The value **vmx-9** is suitable for ESXi 5.1:
+    vous devez sélectionner une version inférieure. La valeur **vmx-9** est adaptée pour ESXi 5.1 :
 
     ```shell
     <vssd:VirtualSystemType>vmx-9</vssd:VirtualSystemType>
     ```
 
-    After saving, you have to update the hash value (SHA1) of the modified file in the file **i-doit Eval Appliance 1.x.x i-doit 1.x.x.mf** You can use the **sha1sum** command under GNU/Linux:
+    Après avoir enregistré, vous devez mettre à jour la valeur de hachage (SHA1) du fichier modifié dans le fichier **i-doit Eval Appliance 1.x.x i-doit 1.x.x.mf**. Vous pouvez utiliser la commande **sha1sum** sous GNU/Linux :
 
     ```shell
     sha1sum i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf
@@ -135,7 +135,7 @@ Further information for first steps with i-doit are also described in the knowle
 
 !!! warning  "VSphere < 6.5.0"
 
-    Our virtual appliance is encrypted with a SHA265 hash for security reasons.<br>
-    Unfortunately, vSphere only supports this at version 6.5.0.<br>
-    [Here](https://kb.vmware.com/s/article/2151537) you can find the official entry from VMware.<br>
-    It also describes how you can work with virtual machines that use a SHA265 hash in versions prior to vSphere version 6.5.0.
+    Notre appliance virtuelle est chiffrée avec un hachage SHA265 pour des raisons de sécurité.<br>
+    Malheureusement, vSphere ne prend en charge cela qu'à partir de la version 6.5.0.<br>
+    [Ici](https://kb.vmware.com/s/article/2151537) vous pouvez trouver l'entrée officielle de VMware.<br>
+    Il décrit également comment travailler avec des machines virtuelles utilisant un hachage SHA265 dans des versions antérieures à la version vSphere 6.5.0.

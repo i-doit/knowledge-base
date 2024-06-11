@@ -1,3 +1,3 @@
-# Custom categories
+# Catégories personnalisées
 
-Here you can organize and edit the Custom categories. → [READMORE](../../../basics/custom-categories.md)
+Ici, vous pouvez organiser et modifier les catégories personnalisées. → [EN SAVOIR PLUS](../../../basics/custom-categories.md)

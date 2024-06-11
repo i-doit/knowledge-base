@@ -1,48 +1,51 @@
-Release date: 2021-01-18
+Date de sortie : 2021-01-18
 
-We’re happy to announce a new major release of i-doit. Version 1.16 brings you a bunch of added or changed features and includes many bug fixes. We encourage you to update to this release as soon as possible.
+Nous sommes heureux d'annoncer une nouvelle version majeure de i-doit. La version 1.16 vous apporte une série de fonctionnalités ajoutées ou modifiées et comprend de nombreuses corrections de bugs. Nous vous encourageons à mettre à jour vers cette version dès que possible.
 
-Highlights in this release
---------------------------
+Points forts de cette version
+------------------------------
 
-*   Import from JDisc Discovery: Fetch information about support entitlements for your hardware devices and import it to i-doit’s new category Support Entitlements
-*   …and another related feature: Decide to import cable connections between hardware devices either to i-doit’s standard categories or to its new category Connection Endpoint
+*   Importation depuis JDisc Discovery : Récupérez des informations sur les droits de support pour vos périphériques matériels et importez-les dans la nouvelle catégorie Support Entitlements de i-doit
+*   ...et une autre fonctionnalité connexe : Décidez d'importer les connexions de câbles entre les périphériques matériels soit dans les catégories standard de i-doit, soit dans sa nouvelle catégorie Connection Endpoint
 
-For a complete list of changes please take a look at the [changelog](../changelogs/changelog-1.16.x/changelog-1.16.md).
+Pour une liste complète des changements, veuillez consulter le [journal des modifications](../changelogs/changelog-1.16.x/changelog-1.16.md).
 
-Add-ons
--------
+Extensions
+----------
 
-With i-doit v1.16, we’ve released a bunch of add-ons to be compatible with this major release:
+Avec i-doit v1.16, nous avons publié une série d'extensions compatibles avec cette version majeure :
 
-*   i-doit API add-on v1.12.1
-*   i-doit Checkmk add-on v1.0.2
-*   i-doit Documents add-on v1.4.3
-*   i-doit Maintenance add-on v1.1.4
-*   i-doit Nagios add-on v1.0.3
-*   i-doit Workflow add-on v1.0.5
+*   Extension API i-doit v1.12.1
+*   Extension Checkmk i-doit v1.0.2
+*   Extension Documents i-doit v1.4.3
+*   Extension Maintenance i-doit v1.1.4
+*   Extension Nagios i-doit v1.0.3
+*   Extension Workflow i-doit v1.0.5
 
-**Note:** Before you update i-doit to v1.16 please ensure all installed add-ons are up-to-date.
+**Note:** Avant de mettre à jour i-doit en v1.16, assurez-vous que tous les modules complémentaires installés sont à jour.
 
-System requirements
+Exigences système
 -------------------
 
-We’ve slightly adjusted the system requirements for i-doit v1.16:
+Nous avons légèrement ajusté les exigences système pour i-doit v1.16 :
 
-*   PHP: We recommend the use of PHP version branch 7.4 which is currently under active maintenance. We’ve dropped the support of PHP 7.1 and set PHP v7.2.5 as the minimum required version. But keep in mind that PHP 7.2 is end-of-live and therefore marked as deprecated. The support will be removed in i-doit v1.17.
-*   Note about PHP 8.0: We’re working on supporting PHP 8.0 in i-doit and still need some time to fix the remaining issues. Please don’t run i-doit v1.16 with PHP 8.0 as we do not support it yet.
-*   MariaDB: i-doit v1.16 adds support for the current stable version branch 10.5 of MariaDB. Version branch 10.1 is marked as deprecated. The support for it will be removed in i-doit v1.17.
-*   We still support MySQL as the database backend for i-doit v1.16 but recommend the use of MariaDB. We’ve marked version branch 5.6 as deprecated and will drop the support in i-doit v1.17. MySQL 5.7 is currently the only supported version branch.
+*   PHP : Nous recommandons l'utilisation de la branche de version PHP 7.4 qui est actuellement en maintenance active. Nous avons abandonné le support de PHP 7.1 et défini la version minimale requise de PHP à 7.2.5. Gardez à l'esprit que PHP 7.2 est en fin de vie et donc marqué comme obsolète. Le support sera supprimé dans i-doit v1.17.
+*   Note sur PHP 8.0 : Nous travaillons à prendre en charge PHP 8.0 dans i-doit et avons encore besoin de temps pour résoudre les problèmes restants. Veuillez ne pas exécuter i-doit v1.16 avec PHP 8.0 car nous ne le prenons pas encore en charge.
+*   MariaDB : i-doit v1.16 ajoute la prise en charge de la branche de version stable actuelle 10.5 de MariaDB. La branche de version 10.1 est marquée comme obsolète. Le support en sera supprimé dans i-doit v1.17.
+*   Nous prenons toujours en charge MySQL en tant que base de données backend pour i-doit v1.16 mais recommandons l'utilisation de MariaDB. Nous avons marqué la branche de version 5.6 comme obsolète et supprimerons le support dans i-doit v1.17. MySQL 5.7 est actuellement la seule branche de version prise en charge. 
 
-**Note:** Before you update i-doit to v1.16 please ensure all [system requirements](../../installation/system-requirements.md) are met.
+{/*examples*/}
 
-Support and download
---------------------
 
-If you have any question about this release our customer support will be happy to help you: [help.i-doit.com](https://help.i-doit.com/)
+**Note:** Avant de mettre à jour i-doit vers la version 1.16, assurez-vous que toutes les [exigences système](../../installation/system-requirements.md) sont satisfaites. {/examples}
 
-Downloads are available for subscribed users at [login.i-doit.com](https://login.i-doit.com/).
+Support et téléchargement
+-------------------------
 
-Thanks for your using i-doit as your preferred IT documentation platform and being part of our great and growing community!
+Si vous avez des questions concernant cette version, notre service client se fera un plaisir de vous aider : [help.i-doit.com](https://help.i-doit.com/)
 
-– Benjamin Heisig for the i-doit team
+Les téléchargements sont disponibles pour les utilisateurs abonnés sur [login.i-doit.com](https://login.i-doit.com/).
+
+Merci d'utiliser i-doit comme votre plateforme de documentation informatique préférée et de faire partie de notre communauté en pleine croissance !
+
+– Benjamin Heisig pour l'équipe i-doit {/examples}

@@ -1,177 +1,172 @@
-# Object Types
+# Types d'Objets
 
-The default installation of i-doit already offers a large variety of [object types](structure-of-the-it-documentation.md) which can be used for a wide range of purposes or can be hidden when they are not used. This article provides a short overview of object types.
+L'installation par défaut de i-doit offre déjà une grande variété de [types d'objets](structure-of-the-it-documentation.md) qui peuvent être utilisés pour une large gamme de fins ou peuvent être cachés lorsqu'ils ne sont pas utilisés. Cet article fournit un bref aperçu des types d'objets.
 
-| Object type | Description | Examples |
+| Type d'objet | Description | Exemples |
 | --- | --- | --- |
-| **Application  <br>** | End user applications | Web browser, Office applications |
-| **Workplace  <br>** | Logical links of terminal devices and a person to workplaces |     |
-| **Operating system  <br>** | Operating systems | GNU/Linux, Windows, Mac OS |
-| **Blade chassis** | Chassis for **Blade server** |     |
-| **Blade server** | Physical server in a **Blade chassis** |     |
-| **Client** | Desktop computers, laptops, workstations |     |
-| **Cluster** | Logical links of highly available systems |     |
-| **Cluster services  <br>** | Application for managing highly available systems; see **Cluster** |     |
-| **File  <br>** | Uploaded files |     |
-| **Database instance  <br>** | Started instances of a **DBMS** |     |
-| **Database schema  <br>** | Created databases of a **DBMS** |     |
-| **DBMS** | Database management systems (DBMS) | MariaDB, MySQL, PostgreSQL |
-| **Printer  <br>** | Printers | Laser printers, inkjet printers, multifunction devices, fax machines, plotter, 3D printers |
-| **Electric power company  <br>** | Companies suppling other organizations with power |     |
-| **Vehicle  <br>** | Vehicles |     |
-| **FC switch  <br>** | Fiber channel switches; often in connection with SANs; see **Storage system** |     |
-| **Aircraft  <br>** | Aircrafts |     |
-| **Building  <br>** | Buildings in a **City** |     |
-| **Appliance  <br>** | Appliances which are used in the organization but are rather designed as black box | Firewalls |
-| **Host** | Remote computers which aren't directly accessible | DNS servers |
-| **information domain** | Information networks (IT security/ IT-Grundschutz); see [Add-on VIVA](../i-doit-pro-add-ons/viva/index.md) |     |
-| **Cable  <br>** | A group of wires, such as cupper wires or glass fibers, covered in plastic or rubber and used to carry electricity or electrical signals |     |
-| **Cable tray  <br>** | Cable routes; see **Cable** |     |
-| **Air Condition System  <br>** | Air-conditioning of active components |     |
-| **Converter  <br>** | Components for the conversion of signals etc. |     |
-| **Crypto card  <br>** | Smart cards with cryptography functions |     |
-| **KVM switch  <br>** | Devices allowing control of multiple input devices (keyboard, video, mouse) |     |
-| **Country** | Countries |     |
-| **Layer 2 Net  <br>** | VLANs |     |
-| **Layer 3-Net  <br>** | Subnets (IPv4, IPv6) |     |
-| **Conduit  <br>** | Empty conduit for **Cable** |     |
-| **Wiring System  <br>** | Logical wiring; see **Cable** |     |
-| **Licenses  <br>** | Software licenses etc. |     |
-| **Middleware  <br>** | Layers between presentation layers and data storage layers | JBoss |
-| **Migration objects  <br>** | Objects which had to be migrated after earlier updates (not in use at the moment) |     |
-| **Cellular phone  <br>** | Mobile phones, feature phones, smartphones; see **SIM card** |     |
-| **Monitor  <br>** | External displays for computers; see **Client** |     |
-| **Nagios host-template** | See [Network Monitoring with Nagios](../automation-and-integration/network-monitoring/nagios.md) |     |
-| **Nagios service** | See [Network Monitoring with Nagios](../automation-and-integration/network-monitoring/nagios.md) |     |
-| **Nagios service-template** | See [Network Monitoring with Nagios](../automation-and-integration/network-monitoring/nagios.md) |     |
-| **Net zone** | Segmentation of subnets; see **Layer 3-Net** |     |
-| **Emergency power supply  <br>** | Systems for power supply when the main power supply fails | Diesel generators |
-| **Emergency plan  <br>** | Emergency plans as **File** |     |
-| **Object group  <br>** | Logical link of objects |     |
-| **Organization  <br>** | Companies, institutions, facilities |     |
-| **Patch Panel  <br>** | Patch panels in a server rack; see **Rack** |     |
-| **Persons  <br>** | People and Bots |     |
-| **Person groups  <br>** | Grouped **Persons** | Access rights groups, departments |
-| **Printbox  <br>** | Printer server |     |
-| **Room  <br>** | Rooms in a **Building** |     |
-| **Remote Management Controller** | Components for remote administration of servers; see **Server** |     |
-| **Replication object  <br>** | \-  |     |
-| **Router** | Layer-3 router |     |
-| **SAN Zoning** | Zones in a SAN; see **Storage system** |     |
-| **Server** | Physical servers |     |
-| **Service** | Organizational services provided by an organization | IT services |
-| **SIM card  <br>** | SIM cards; see **Cellular phone** |     |
-| **Rack  <br>** | Server racks |     |
-| **Storage system  <br>** | Storage Area Networks (SAN) and Network Attached Storages (NAS) |     |
-| **Stacking** | Combination of hardware components | Stacked switches |
-| **City  <br>** | Cities in a **Country** |     |
-| **Power distribution unit  <br>** | Power Distribution Units (PDU) for power supply |     |
-| **Supernet** | Combination of subnets; see **Layer 3-Net** |     |
-| **Switch** | Layer-2 switches |     |
-| **Switch Chassis** | Housing for modular switches; see **Switch** |     |
-| **System service  <br>** | Services, daemons and applications which are executed on servers | Apache webserver, i-doit, PHP |
-| **Phone  <br>** | Analog or ISDN telephones |     |
-| ****Telephone** system  <br>** | Telephone systems |     |
-| ****Uninterruptible power supply**** | Uninterruptible power supplies (UPS) |     |
-| **Amplifier  <br>** | Active components for amplifying signals etc. |     |
-| **Distribution box  <br>** | For power supply; see **Cable** |     |
-| **Contract  <br>** | Maintenance contracts etc. |     |
-| **Virtual client** | Virtual desktops; see **Virtual host** |     |
-| **Virtual host** | Host systems for virtual machines; see **Virtual Maschine** and **Virtual client** |     |
-| **Virtual Maschine** | Virtual machines (VM); see **Virtual Host** |     |
-| **VoIP telephone  <br>** | SIP capable telephones |     |
-| **VRRP/HSRP Cluster** | Highly available routers which use VRRP, HSRP or CARP protocols |     |
-| **WAN  <br>** | External connections/ uplinks |     |
-| **Wireless Access Point** | WLAN APs |     |
+| **Application  <br>** | Applications pour les utilisateurs finaux | Navigateur Web, Applications de bureau |
+| **Lieu de travail  <br>** | Liens logiques entre les appareils terminaux et une personne sur les lieux de travail |     |
+| **Système d'exploitation  <br>** | Systèmes d'exploitation | GNU/Linux, Windows, Mac OS |
+| **Châssis de lame** | Châssis pour **Serveur lame** |     |
+| **Serveur lame** | Serveur physique dans un **Châssis de lame** |     |
+| **Client** | Ordinateurs de bureau, ordinateurs portables, postes de travail |     |
+| **Cluster** | Liens logiques de systèmes hautement disponibles |     |
+| **Services de cluster  <br>** | Application pour la gestion de systèmes hautement disponibles ; voir **Cluster** |     |
+| **Fichier  <br>** | Fichiers téléchargés |     |
+| **Instance de base de données  <br>** | Instances lancées d'un **SGBD** |     |
+| **Schéma de base de données  <br>** | Bases de données créées d'un **SGBD** |     |
+| **SGBD** | Systèmes de gestion de base de données (SGBD) | MariaDB, MySQL, PostgreSQL |
+| **Imprimante  <br>** | Imprimantes | Imprimantes laser, imprimantes à jet d'encre, appareils multifonctions, télécopieurs, traceurs, imprimantes 3D |
+| **Société d'électricité  <br>** | Sociétés fournissant de l'électricité à d'autres organisations |     |
+| **Véhicule  <br>** | Véhicules |     |
+| **Commutateur FC  <br>** | Commutateurs de fibre optique ; souvent en relation avec les SAN ; voir **Système de stockage** |     |
+| **Avion  <br>** | Avions |     |
+| **Bâtiment  <br>** | Bâtiments dans une **Ville** |     |
+| **Appareil  <br>** | Appareils utilisés dans l'organisation mais conçus plutôt comme une boîte noire | Pare-feu |
+| **Hôte** | Ordinateurs distants qui ne sont pas directement accessibles | Serveurs DNS |
+| **Domaine d'information** | Réseaux d'information (sécurité informatique/ IT-Grundschutz) ; voir [Add-on VIVA](../i-doit-pro-add-ons/viva/index.md) |     |
+| **Câble  <br>** | Un groupe de fils, tels que des fils de cuivre ou des fibres de verre, recouverts de plastique ou de caoutchouc et utilisés pour transporter de l'électricité ou des signaux électriques |     |
+| **Chemin de câbles  <br>** | Itinéraires de câbles ; voir **Câble** |     |
+| **Système de climatisation  <br>** | Climatisation des composants actifs |     |
+| **Convertisseur  <br>** | Composants pour la conversion de signaux, etc. |     |
+| **Carte cryptographique  <br>** | Cartes intelligentes avec fonctions de cryptographie |     |
+| **Commutateur KVM  <br>** | Appareils permettant de contrôler plusieurs périphériques d'entrée (clavier, vidéo, souris) |     |
+| **Pays** | Pays |     |
+| **Réseau de couche 2  <br>** | VLAN |     |
+| **Réseau de couche 3  <br>** | Sous-réseaux (IPv4, IPv6) |     |
+| **Conduit  <br>** | Conduit vide pour **Câble** |     |
+| **Système de câblage  <br>** | Câblage logique ; voir **Câble** |     |
+| **Licences  <br>** | Licences logicielles, etc. |     |
+| **Middleware  <br>** | Couches entre les couches de présentation et les couches de stockage de données | JBoss |
+| **Objets de migration  <br>** | Objets qui ont dû être migrés après des mises à jour antérieures (non utilisés pour le moment) |     |
+| **Téléphone portable  <br>** | Téléphones mobiles, téléphones basiques, smartphones ; voir **Carte SIM** |     |
+| **Moniteur  <br>** | Écrans externes pour ordinateurs ; voir **Client** |     |
+| **Modèle d'hôte Nagios** | Voir [Surveillance réseau avec Nagios](../automation-and-integration/network-monitoring/nagios.md) |     |
+| **Service Nagios** | Voir [Surveillance réseau avec Nagios](../automation-and-integration/network-monitoring/nagios.md) |     |
+| **Modèle de service Nagios** | Voir [Surveillance réseau avec Nagios](../automation-and-integration/network-monitoring/nagios.md) |     |
+| **Zone réseau** | Segmentation des sous-réseaux ; voir **Réseau de couche 3** |     |
+| **Alimentation de secours  <br>** | Systèmes d'alimentation de secours en cas de défaillance de l'alimentation principale | Groupes électrogènes diesel |
+| **Plan d'urgence  <br>** | Plans d'urgence en tant que **Fichier** |     |
+| **Groupe d'objets  <br>** | Lien logique d'objets |     |
+| **Organisation  <br>** | Entreprises, institutions, installations |     |
+| **Panneau de brassage  <br>** | Panneaux de brassage dans une baie de serveurs ; voir **Baie** |     |
+| **Personnes  <br>** | Personnes et Bots |     |
+| **Groupes de personnes  <br>** | Groupes de **Personnes** | Groupes de droits d'accès, départements |
+| **Boîte d'impression  <br>** | Serveur d'impression |     |
+| **Salle  <br>** | Salles dans un **Bâtiment** |     |
+| **Contrôleur de gestion à distance** | Composants pour l'administration à distance des serveurs ; voir **Serveur** |     |
+| **Objet de réplication  <br>** | \-  |     |
+| **Routeur** | Routeur de couche 3 |     |
+| **Zonage SAN** | Zones dans un SAN ; voir **Système de stockage** |     |
+| **Serveur** | Serveurs physiques |     |
+| **Service** | Services organisationnels fournis par une organisation | Services informatiques |
+| **Carte SIM  <br>** | Cartes SIM ; voir **Téléphone portable** |     |
+| **Baie  <br>** | Baies de serveurs |     |
+| **Système de stockage  <br>** | Réseaux de stockage (SAN) et Stockages Attachés au Réseau (NAS) |     |
+| **Empilement** | Combinaison de composants matériels | Commutateurs empilés |
+| **Ville  <br>** | Villes dans un **Pays** |     |
+| **Unité de distribution d'énergie  <br>** | Unités de distribution d'énergie (PDU) pour l'alimentation électrique |     |
+| **Superréseau** | Combinaison de sous-réseaux ; voir **Réseau de couche 3** |     |
+| **Commutateur** | Commutateurs de couche 2 |     |
+| **Châssis de commutation** | Boîtier pour commutateurs modulaires ; voir **Commutateur** |     |
+| **Service système  <br>** | Services, démons et applications exécutés sur les serveurs | Serveur web Apache, i-doit, PHP |
+| **Téléphone  <br>** | Téléphones analogiques ou RNIS |     |
+| ****Système de téléphonie**  <br>** | Systèmes téléphoniques |     |
+| ****Alimentation sans interruption**** | Alimentations sans interruption (ASI) |     |
+| **Amplificateur  <br>** | Composants actifs pour amplifier les signaux, etc. |     |
+| **Boîtier de distribution  <br>** | Pour l'alimentation électrique ; voir **Câble** |     |
+| **Contrat  <br>** | Contrats de maintenance, etc. |     |
+| **Client virtuel** | Postes de travail virtuels ; voir **Hôte virtuel** |     |
+| **Hôte virtuel** | Systèmes hôtes pour les machines virtuelles ; voir **Machine virtuelle** et **Client virtuel** |     |
+| **Machine virtuelle** | Machines virtuelles (VM) ; voir **Hôte virtuel** |     |
+| **Téléphone VoIP  <br>** | Téléphones compatibles SIP |     |
+| **Cluster VRRP/HSRP** | Routeurs hautement disponibles utilisant les protocoles VRRP, HSRP ou CARP |     |
+| **WAN  <br>** | Connexions externes/ montantes |     |
+| **Point d'accès sans fil** | Points d'accès WLAN |     |
 
-Fields in the Configuration
+Champs dans la Configuration
 ---------------------------
 
-[![Fields in the Configuration](../assets/images/en/basics/object-types/1-ot.png)](../assets/images/en/basics/object-types/1-ot.png)
+[![Champs dans la Configuration](../assets/images/en/basics/object-types/1-ot.png)](../assets/images/en/basics/object-types/1-ot.png)
 
   
 
-The following fields are displayed in new and existing object types:
+Les champs suivants sont affichés dans les types d'objets nouveaux et existants :
 
 *   **ID**  
-    The ID is a sequential number which is given by the system. Its uniqueness allows for the identification of the object type. A manual change is not possible.  
+    L'ID est un numéro séquentiel attribué par le système. Sa caractéristique d'unicité permet d'identifier le type d'objet. Un changement manuel n'est pas possible.  
       
     
 *   **TranslatedTitle**  
-    Using this field you can check whether the language constant you are using is correctly translated in the currently chosen language if you are using your own language file.  
+    En utilisant ce champ, vous pouvez vérifier si la constante de langue que vous utilisez est correctement traduite dans la langue actuellement choisie si vous utilisez votre propre fichier de langue.  
       
     
-*   **Language constant/Title**  
-    It is possible in this field to enter a language constant or a title in plain text. If you are using i-doit multilingually, please use a constant you translate in your own language file.  
+*   **Constante de Langue/Title**  
+    Il est possible dans ce champ d'entrer une constante de langue ou un titre en texte brut. Si vous utilisez i-doit de manière multilingue, veuillez utiliser une constante que vous traduisez dans votre propre fichier de langue.  
       
     
-*   **SYSID Prefix**  
-    The [SYSID](../glossary.md) prefix is inserted in all objects of this type when generating the SYSID. When leaving this field empty, the standard prefix**SYSID_**will be used. Otherwise, the SYSIDs will be generated with your own prefix. If the field remains untouched, the current Unix timestamp will be included in the SYSID. The object ID is included for custom prefixes.  
+*   **Préfixe SYSID**  
+    Le préfixe [SYSID](../glossary.md) est inséré dans tous les objets de ce type lors de la génération du SYSID. En laissant ce champ vide, le préfixe standard **SYSID_** sera utilisé. Sinon, les SYSID seront générés avec votre propre préfixe. Si le champ reste inchangé, le timestamp Unix actuel sera inclus dans le SYSID. L'ID de l'objet est inclus pour les préfixes personnalisés.  
+
+*   **Numéros d'inventaire automatiques**  
+    Si vous souhaitez que i-doit génère automatiquement des numéros d'inventaire individuels pour les objets de ce type, vous pouvez entrer la formule ici. Des variables sont disponibles pour cela, que vous pouvez afficher via le point d'interrogation bleu à la fin de la ligne. Il est également possible de combiner ces variables entre elles et avec du texte brut.  
       
     
-*   **Automatic Inventory numbers**  
-    If you want i-doit to generate individual inventory numbers on its own for objects of this type, you can enter the formula for this here. Variables are available for this which you can display via the blue question mark at the end of the line. It is also possible to combine these variables with each other and with plain text.  
+*   **Position dans l'arborescence**  
+    Si vous n'utilisez pas de tri alphabétique pour les types d'objets dans le menu de l'arborescence sur le côté gauche, vous pouvez créer un ordre personnalisé via le tri. Le tri s'effectue par ordre croissant en fonction des valeurs numériques.  
       
     
-*   **Position in the tree**  
-    If you are not using an alphabetical sorting for the object types in the tree menu on left side, you can create a custom order via the sorting. The sorting takes place in ascending order based on the number values.  
+*   **Couleur de l'objet**  
+    Ici, vous pouvez attribuer une couleur à chaque type d'objet. Ces balises de couleur se trouvent par exemple dans l'explorateur CMDB et également dans la représentation graphique des racks pour rendre l'affichage plus transparent.  
       
     
-*   **Object color**  
-    Here you can assign a color to each object type. These color tags are found for example in theCMDB explorerand also in the graphical representation of racks to make the display more transparent..  
+*   **Groupe de type d'objet**  
+    Si vous changez d'avis lors de la configuration et attribuez votre type d'objet à un autre groupe ou si vous souhaitez déplacer un type d'objet existant dans un autre groupe, vous pouvez ajuster le groupe de type d'objet via cette option.  
+
+*   **Catégorie spécifique**  
+    Vous pouvez facultativement choisir la [catégorie spécifique](../glossary.md) souhaitée et la lier avec le type d'objet en utilisant un menu déroulant. Veuillez noter que les catégories spécifiques sont mutuellement exclusives et donc seule une catégorie spécifique peut être choisie.  
       
     
-*   **Object type group**  
-    If you changed your mind while configuring and assigned your object type to another group or if you wanted to move an existing object type in another group, you can adjust the object type group via this option.  
+*   **Personnalisé**  
+    Les informations **Personnalisées** vous indiqueront si ce type d'objet est déjà disponible dans l'installation standard ou s'il a été créé par un utilisateur. Les types d'objets standard ne peuvent être que masqués et non supprimés.  
       
     
-*   **Specific category**  
-    You can optionally choose the desired [specific category](../glossary.md) and link it with the object type using a drop-down menu. Please note that specific categories are mutually exclusive and therefore only one specific category can be chosen.  
+*   **Emplacement**  
+    Dans cette sélection, il est possible de définir si les objets de ce type sont censés servir de lieu physique pour d'autres objets. Les objets qui ne sont pas censés servir de lieu physique ne seront pas affichés dans le navigateur d'emplacement.  
       
     
-*   **Custom made**  
-    The**Custom**information will inform you whether this object type is already available in the standard installation or if it was created by a user. Standard object types can only be hidden and not be deleted.  
+*   **Maître de relation**  
+    Chaque [relation d'objet](./object-relations.md) a une direction ou une dépendance. Lors de la modification d'un objet et de la liaison avec un autre, l'objet lié dépend toujours de l'objet en cours d'édition. Cependant, si l'objet lié est un objet dont le type d'objet a été configuré en tant que maître de relation, cet objet assumera alors le rôle de maître dans la relation.  
+
+*   **Positionnable dans le rack**  
+    Ici, vous pouvez déclarer si les objets de ce type peuvent être installés dans un rack dans des unités de hauteur spécifiques. Lorsque désactivé, les attributs ne sont pas disponibles pour le positionnement dans le rack.  
       
     
-*   **Location**  
-    In this selection it is possible to define whether objects of this type are supposed to serve as the physicallocationfor further objects. Objects which are not supposed to serve as the physical location will not be shown in the location browser.  
+*   **Affichage dans l'arborescence du menu**  
+    L'affichage dans l'arborescence du menu peut être désactivé avec cette option. Si vous n'avez pas besoin des types d'objets standard et que vous souhaitez les masquer, ou si vous ne voulez pas que vos types d'objets personnalisés apparaissent dans l'arborescence du menu pour le moment, vous pouvez les masquer pour tous les utilisateurs ici.  
       
     
-*   **Relation master**  
-    Each [object relation](./object-relations.md) has a direction or a dependency. When editing an object and linking another, the linked object is always dependent on the object being edited. However, if the linked object is an object whose object type has been configured as relation master, this object will then assume the master role in the relation.  
+*   **Image**  
+    Ici, vous pouvez sélectionner une image d'objet standard pour la ligne d'information.  
       
     
-*   **Positionable in rack**  
-    Here you can declare whether objects of this type can be built into a rack within specific height units. When deactivated, the attributes are not available for positioning in the rack.  
+*   **Icône**  
+    Avec cette option, vous pouvez déterminer l'icône qui sera affichée à côté de votre type d'objet dans l'arborescence du menu. Pour cela, vous devez spécifier le chemin de l'icône à partir du dossier d'installation de_i-doit.  
       
     
-*   **Display in menu tree**  
-    The display in the menu tree can be deactivated with this option. If you don't need standard object types and want to hide them or if you don't want your custom object types to appear in the menu tree yet, you can hide them for all users here.  
+*   **Constante**  
+    Vous pouvez déterminer une [constante](../glossary.md) qui permet des requêtes de base de données pour le type d'objet. Dans_i-doit, la formule standard pour cela est **C__OBJTYPE__[NOM]**, tandis que **[NOM]** doit être remplacé par le nom du type d'objet. _i-doit_génère automatiquement une constante qui reçoit l'horodatage Unix actuel à la place du nom. Remplacez l'horodatage Unix par le nom stylisé du type d'objet (idéalement uniquement des lettres capitales ASCII) pour une meilleure lisibilité (par exemple, pour les rapports SQL).  
+
+*   **Modèle-Par-Défaut**  
+    Si vous avez déjà créé des modèles en utilisant la fonction [modèle](../efficient-documentation/templates.md), vous pouvez sélectionner un modèle ici qui sera ensuite utilisé pour remplir automatiquement de nouveaux objets. De cette manière, vous pouvez pré-remplir des valeurs qui sont les mêmes pour tous les objets de ce type. Vous pouvez ajuster ces valeurs pré-remplies à tout moment, si nécessaire.  
       
     
-*   **Picture**  
-    Here you can select a standard object picture for the information line.  
+*   **Page d'aperçu comme vue standard**  
+    Avec cette option, vous déterminez si l'ouverture d'un objet de ce type affichera la [page d'aperçu](../glossary.md) ou la catégorie **Général**. Cette option est définie par défaut sur "Non". En la réglant sur "Oui", la catégorie spécifique sélectionnée sera ajoutée automatiquement à la page d'aperçu.  
       
     
-*   **Icon**  
-    With this option you can determine the icon that will be displayed next to your object type in the menu tree. For this you need to specify the path of the icon beginning from the_i-doit_installation folder.  
-      
-    
-*   **Constant**  
-    You can determine a [constant](../glossary.md) which allows database queries for the object type. In_i-doit_the standard formula for this is **C__OBJTYPE__[NAME]**, while **[NAME]** is to be replaced by the name of the object type._i-doit_automatically generates a constant which receives the current Unix timestamp instead of the name. Replace the Unix timestamp by the stylized name of the object type (ideally only ASCII capital letters) for better readability (e.g. for SQL reports).  
-      
-    
-*   **Default-Template**  
-    If you already created templates using the [template](../efficient-documentation/templates.md) feature, you can select a template here which is then used to fill in new objects automatically. This way, you can pre-fill values which are the same for all objects of this type. You can adjust these pre-filled values anytime, if needed.  
-      
-    
-*   **Overview page as standard view**  
-    With this option you determine whether opening an object of this type will display the [overview page](../glossary.md) or the category**General**. This option is set to “No” by default. When setting it to “Yes”, the selected specific category will be added automatically to the overview page.  
-      
-    
-*   **Categories**  
-    You customize your object type in this selection. Each [category](../glossary.md) having its checkbox activated will be available within your object type. In the right column you can specify what categories will be shown on the overview page. This selection is only possible if the overview page was previously set as the standard display. The order of categories can be determined per drag'n'drop using the hatched lines.  
-      
-    
+*   **Catégories**  
+    Vous personnalisez votre type d'objet dans cette sélection. Chaque [catégorie](../glossary.md) ayant sa case cochée activée sera disponible dans votre type d'objet. Dans la colonne de droite, vous pouvez spécifier quelles catégories seront affichées sur la page d'aperçu. Cette sélection n'est possible que si la page d'aperçu a été précédemment définie comme affichage standard. L'ordre des catégories peut être déterminé par glisser-déposer en utilisant les lignes hachurées.  
+
 *   **Description**  
-    Here it is possible to leave hints and notes regarding your object type.
+    Ici, il est possible de laisser des indices et des notes concernant votre type d'objet.   {/ * examples * /}

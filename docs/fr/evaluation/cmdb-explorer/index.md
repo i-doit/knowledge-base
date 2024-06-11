@@ -1,58 +1,60 @@
-# CMDB Explorer
+# Explorateur CMDB
 
-The CMDB explorer graphically represents the [relations between objects](../../basics/object-relations.md). You can generate various views for dependencies so that you get a quick overview. These views can then be exported to various formats for further editing.
+L'explorateur CMDB représente graphiquement les [relations entre les objets](../../basics/object-relations.md). Vous pouvez générer diverses vues des dépendances pour obtenir un aperçu rapide. Ces vues peuvent ensuite être exportées dans différents formats pour une édition ultérieure.
 
-Access the CMDB Explorer
+Accéder à l'Explorateur CMDB
 ------------------------
 
-The CMDB explorer can be accessed both via the menu bar at the top and within an [object](../../basics/structure-of-the-it-documentation.md) via the associated icon above the [category](../../glossary.md) list.
+L'explorateur CMDB peut être accédé à la fois via la barre de menu en haut et à l'intérieur d'un [objet](../../basics/structure-of-the-it-documentation.md) via l'icône associée au-dessus de la liste des [catégories](../../glossary.md).
 
-[![Access the CMDB Explorer](../../assets/images/en/evaluation/cmdb-explorer/1-ce.png)](../../assets/images/en/evaluation/cmdb-explorer/1-ce.png)
+[![Accéder à l'Explorateur CMDB](../../assets/images/en/evaluation/cmdb-explorer/1-ce.png)](../../assets/images/en/evaluation/cmdb-explorer/1-ce.png)
 
-When you open the CMDB explorer via the icon from an object, this object is preselected as root object. The CMDB explorer is loaded without any preselected object when you open the CMDB explorer via the menu bar.
+Lorsque vous ouvrez l'explorateur CMDB via l'icône d'un objet, cet objet est présélectionné en tant qu'objet racine. L'explorateur CMDB est chargé sans aucun objet présélectionné lorsque vous ouvrez l'explorateur CMDB via la barre de menu.
 
-Segmentation of the CMDB Explorer
+Segmentation de l'Explorateur CMDB
 ---------------------------------
 
-The CMDB explorer is split in three sections, which have the following roles:
+L'explorateur CMDB est divisé en trois sections, qui ont les rôles suivants:
 
-*   **Content area**  
-    This area is concerned with the graphical representation of the contents in the center.
+*   **Zone de contenu**  
+    Cette zone concerne la représentation graphique des contenus au centre.
     
-*   **Information** **area**  
-    This area is located to the left of the content area and can be used to obtain more detailed information.
+*   **Zone d'information**  
+    Cette zone est située à gauche de la zone de contenu et peut être utilisée pour obtenir des informations plus détaillées.
     
-*   **Toolbar**  
-    The function toolbar is used to configure the view. It is located above the content area.
+*   **Barre d'outils**  
+    La barre d'outils de fonction est utilisée pour configurer la vue. Elle est située au-dessus de la zone de contenu.
     
 
-Content Area
-------------
+Zone de Contenu
+---------------
 
-The content area is located at the center of the CMDB explorer. Here you can find all contents and with regard to representation and scope the contents correspond to the settings you made. The form of representation can be determined using [Profiles](./profiles-in-the-cmdb-explorer.md). The presented section in the content area can be moved at any time. To do so click the free area of the presentation, hold the mouse button and move the display. To show more relations of an object you can double-click on its tile. If more relations exist, these will be expanded. The information area contains further information about the selected object and is located to the left of the content area. The object is selected by simply clicking its tile. As soon as an object has been selected, the path to the root object is traced for illustration purposes.
+La zone de contenu est située au centre de l'explorateur CMDB. Vous y trouverez tous les contenus et en ce qui concerne la représentation et la portée, les contenus correspondent aux paramètres que vous avez définis. La forme de représentation peut être déterminée à l'aide des [Profils](./profiles-in-the-cmdb-explorer.md). La section présentée dans la zone de contenu peut être déplacée à tout moment. Pour ce faire, cliquez sur la zone libre de la présentation, maintenez le bouton de la souris enfoncé et déplacez l'affichage. Pour afficher plus de relations d'un objet, vous pouvez double-cliquer sur sa tuile. Si d'autres relations existent, elles seront développées. La zone d'information contient des informations supplémentaires sur l'objet sélectionné et est située à gauche de la zone de contenu. L'objet est sélectionné en cliquant simplement sur sa tuile. Dès qu'un objet est sélectionné, le chemin vers l'objet racine est tracé à des fins d'illustration.
 
-[![Content Area](../../assets/images/en/evaluation/cmdb-explorer/2-ce.png)](../../assets/images/en/evaluation/cmdb-explorer/2-ce.png)
+[![Zone de contenu](../../assets/images/en/evaluation/cmdb-explorer/2-ce.png)](../../assets/images/en/evaluation/cmdb-explorer/2-ce.png)
 
-Orientation of relations
+Orientation des relations
 
-The direction for the expansion of individual tiles depends on the orientation of the relation. For each relation there is a master and a slave object. Once an orientation has been chosen, it cannot be changed in the CMDB explorer, meaning that tiles expanding downwards can only show relations that would also expand downwards.
+La direction de l'expansion des tuiles individuelles dépend de l'orientation de la relation. Pour chaque relation, il y a un objet maître et un objet esclave. Une fois qu'une orientation a été choisie, elle ne peut pas être modifiée dans l'explorateur CMDB, ce qui signifie que les tuiles s'étendant vers le bas ne peuvent montrer que des relations qui s'étendraient également vers le bas.
 
-Information Area
-----------------
+Zone d'information
+------------------
 
-The information area is located at the left border of the CMDB explorer and displays additional information about the chosen object. The kind of information shown can be determined via the applied [profile](profiles-in-the-cmdb-explorer.md) of the CMDB explorer. Once an object has been selected, the **Show / Hide object type** button can be used to gray out all [objects of this type](../../basics/structure-of-the-it-documentation.md). If you wish to select a different object as root object, then the **Set as root** button can be used. This way, the centralization can be put to the currently activated object and the relations are built around this object. Via **Open object** the object is opened in i-doit so that you can see and edit its attributes. Object colors for each [object type](../../glossary.md) are displayed in the legend. It is also possible to gray out all objects of a type globally in the CMDB explorer.
+La zone d'information est située sur la bordure gauche de l'explorateur CMDB et affiche des informations supplémentaires sur l'objet choisi. Le type d'informations affichées peut être déterminé via le [profil](profiles-in-the-cmdb-explorer.md) appliqué à l'explorateur CMDB. Une fois qu'un objet a été sélectionné, le bouton **Afficher / Masquer le type d'objet** peut être utilisé pour griser tous les [objets de ce type](../../basics/structure-of-the-it-documentation.md). Si vous souhaitez sélectionner un autre objet en tant qu'objet racine, alors le bouton **Définir comme racine** peut être utilisé. De cette manière, la centralisation peut être mise sur l'objet actuellement activé et les relations sont construites autour de cet objet. Via **Ouvrir l'objet**, l'objet est ouvert dans i-doit afin que vous puissiez voir et éditer ses attributs. Les couleurs d'objet pour chaque [type d'objet](../../glossary.md) sont affichées dans la légende. Il est également possible de griser tous les objets d'un type globalement dans l'explorateur CMDB.
 
-[![Information Area](../../assets/images/en/evaluation/cmdb-explorer/3-ce.png)](../../assets/images/en/evaluation/cmdb-explorer/3-ce.png)
+[![Zone d'information](../../assets/images/en/evaluation/cmdb-explorer/3-ce.png)](../../assets/images/en/evaluation/cmdb-explorer/3-ce.png)
 
-Toolbar
--------
+Barre d'outils
+--------------
 
-The object which is displayed in a centralized way and which has the relations built around it is selected in the toolbar above the content area. In addition it is possible to choose the [profile](profiles-in-the-cmdb-explorer.md) for the representation. In addition to the **Default profile** a **Micro profile** is offered in the delivery state which allows you to display more information in a smaller area. The display can also be influenced by the **Service filter**. Conditions for objects and relations that are to be considered can be defined here. The service filters can be configured at **Extras → Services → Service filter**. The depth of the representation and the CMDB status of the objects can be set as conditions in addition to the type of the relation, its weighting and the displayed object types.
+L'objet qui est affiché de manière centralisée et autour duquel les relations sont construites est sélectionné dans la barre d'outils au-dessus de la zone de contenu. De plus, il est possible de choisir le [profil](profiles-in-the-cmdb-explorer.md) pour la représentation. En plus du **Profil par défaut**, un **Profil Micro** est proposé dans l'état de livraison qui vous permet d'afficher plus d'informations dans une zone plus petite. L'affichage peut également être influencé par le **Filtre de service**. Les conditions pour les objets et les relations à prendre en compte peuvent être définies ici. Les filtres de service peuvent être configurés dans **Extras → Services → Filtre de service**. La profondeur de la représentation et le statut CMDB des objets peuvent être définis comme conditions en plus du type de relation, de son poids et des types d'objets affichés.
 
-The orientation of the display can be adjusted using the **Change orientation** button. Here it is possible to let the representation be displayed either from top to bottom, or from left to right. The presentation from left to right is recommended for extensive visualizations. Moreover, it is possible to choose the form of display. Via the **Change form of display** button you can switch from the **Tree view** to a **Net view**. In the tree view it may happen that objects are displayed multiple times if they are related to other objects in different places. An object is displayed exactly once in the net view and all relations are generated from its tile. For more complex relation representations the tree view is recommended.
+L'orientation de l'affichage peut être ajustée en utilisant le bouton **Changer l'orientation**. Ici, il est possible de laisser la représentation être affichée soit de haut en bas, soit de gauche à droite. La présentation de gauche à droite est recommandée pour les visualisations étendues. De plus, il est possible de choisir la forme d'affichage. Via le bouton **Changer la forme d'affichage**, vous pouvez passer de la **Vue arborescente** à une **Vue en réseau**. Dans la vue arborescente, il peut arriver que les objets soient affichés plusieurs fois s'ils sont liés à d'autres objets à différents endroits. Un objet est affiché exactement une fois dans la vue en réseau et toutes les relations sont générées à partir de sa tuile. Pour des représentations de relations plus complexes, la vue arborescente est recommandée. 
 
-The zoom on the display can be adjusted using the **Zoom in** and the **Zoom out** buttons. The centering with a zoom level of 100% is carried out via the **Center and zoom to 100%** button. Alternatively, you can use the mouse wheel for zooming as well.
+{/*examples*/}
 
-The **Export** button allows you to export the current content of the CMDB explorer to other formats, which can be used externally. Using the **Print** button will prepare the current screen section for printing. **Fullscreen** will expand the displayed are to a bigger surface, so that there is more room available for the representation.
+Le zoom sur l'écran peut être ajusté en utilisant les boutons **Zoom avant** et **Zoom arrière**. Le centrage avec un niveau de zoom de 100% est effectué via le bouton **Centrer et zoomer à 100%**. Alternativement, vous pouvez également utiliser la molette de la souris pour zoomer.
 
-[![Toolbar](../../assets/images/en/evaluation/cmdb-explorer/4-ce.png)](../../assets/images/en/evaluation/cmdb-explorer/4-ce.png)
+Le bouton **Exporter** vous permet d'exporter le contenu actuel de l'explorateur CMDB vers d'autres formats, qui peuvent être utilisés de manière externe. En utilisant le bouton **Imprimer**, vous préparerez la section d'écran actuelle pour l'impression. **Plein écran** étendra la zone affichée à une surface plus grande, de sorte qu'il y ait plus d'espace disponible pour la représentation.
+
+[![Barre d'outils](../../assets/images/en/evaluation/cmdb-explorer/4-ce.png)](../../assets/images/en/evaluation/cmdb-explorer/4-ce.png)

@@ -1,9 +1,9 @@
-# Consolidate Data
+# Consolider les données
 
-When you break down the [IT documentation](../glossary.md), you always end up with data. Different data in various forms (usually as text) are collected somewhere in order to be organized in i-doit and to be stored in a structured way. Data can also be reused somewhere else in another context. The following articles address the question of  where “somewhere” is. To put it briefly: Where do these data come from and where are they needed?
+Lorsque vous décomposez la [documentation informatique](../glossary.md), vous finissez toujours par obtenir des données. Différentes données sous diverses formes (généralement du texte) sont collectées quelque part afin d'être organisées dans i-doit et stockées de manière structurée. Les données peuvent également être réutilisées ailleurs dans un autre contexte. Les articles suivants abordent la question de l'endroit où se trouve ce "quelque part". Pour le dire brièvement : d'où viennent ces données et où sont-elles nécessaires ?
 
-*   [CSV Data Import](../consolidate-data/csv-data-import/index.md)
-*   [CSV Data Export](../consolidate-data/csv-data-export.md)
+*   [Importation de données CSV](../consolidate-data/csv-data-import/index.md)
+*   [Exportation de données CSV](../consolidate-data/csv-data-export.md)
 *   [h-inventory](../consolidate-data/h-inventory.md)
-*   [JDisc Discovery](../consolidate-data/jdisc-discovery.md)
-*   [Object Identification During Imports](../consolidate-data/object-identification-during-imports.md)
+*   [Découverte JDisc](../consolidate-data/jdisc-discovery.md)
+*   [Identification d'objets lors des importations](../consolidate-data/object-identification-during-imports.md)

@@ -1,9 +1,9 @@
-We're happy to announce a new release of i-doit pro. The first release of the year 2023 contains a collection of bugfixes aswell as some improvements for the [JDisc](../../consolidate-data/jdisc-discovery.md) interface. You are able to import more information into newly provieded attributes within i-doit. Furthermore, if you are using smaller i-doit on a screen with a lower resolution, you will experience an automatic adjustment of the menu bar at the top. We also recommend to check out the changelog.
+Nous sommes heureux d'annoncer une nouvelle version de i-doit pro. La première version de l'année 2023 contient une collection de correctifs de bogues ainsi que quelques améliorations pour l'interface [JDisc](../../consolidate-data/jdisc-discovery.md). Vous pouvez importer plus d'informations dans les attributs nouvellement fournis dans i-doit. De plus, si vous utilisez un petit i-doit sur un écran avec une résolution plus basse, vous constaterez un ajustement automatique de la barre de menu en haut. Nous vous recommandons également de consulter le journal des modifications.
 
-Add-ons
+Extensions
 -------
 
-Paired with the release of i-doit 22, we also provided new versions for the following add-ons:
+Associés à la sortie de i-doit 22, nous avons également fourni de nouvelles versions pour les extensions suivantes :
 
 [API](../../i-doit-pro-add-ons/api/index.md) 1.13.1
 

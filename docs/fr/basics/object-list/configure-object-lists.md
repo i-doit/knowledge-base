@@ -1,47 +1,55 @@
-# Configure Object Lists
+# Configurer les listes d'objets
 
-Each user can configure his own list views.
+Chaque utilisateur peut configurer ses propres vues de liste.
 
-## Configuration of the Custom List View
+## Configuration de la vue de liste personnalisée
 
-You can reach the configuration of the respective [object lists](./index.md) via the icon next to the filter of the object list. Alternatively you can open **Administration → User settings → Object lists → [Object type]**, whereby **[Object type]** needs to be replaced by the object type whose list view you wish to customize.
+Vous pouvez accéder à la configuration des [listes d'objets](./index.md) respectives via l'icône à côté du filtre de la liste d'objets. Alternativement, vous pouvez ouvrir **Administration → Paramètres utilisateur → Listes d'objets → [Type d'objet]**, où **[Type d'objet]** doit être remplacé par le type d'objet dont vous souhaitez personnaliser la vue de liste.
 
-The configuration of a list view is user specific. This means that these settings only apply to the user himself. The views of other users are not changed, unless one of them transfers these views to others. That particular user will need the corresponding permissions which can be set in the permission administration. This way the need for regular adjustments of users with different priorities (e.g., because they are in different departments) can be avoided.
+La configuration d'une vue de liste est spécifique à l'utilisateur. Cela signifie que ces paramètres s'appliquent uniquement à l'utilisateur lui-même. Les vues des autres utilisateurs ne sont pas modifiées, à moins que l'un d'eux ne transfère ces vues à d'autres. Cet utilisateur particulier aura besoin des autorisations correspondantes qui peuvent être définies dans l'administration des autorisations. De cette manière, la nécessité d'ajustements réguliers des utilisateurs avec des priorités différentes (par exemple, parce qu'ils sont dans des départements différents) peut être évitée.
 
-[![Configuration of the Custom List View](../../assets/images/en/basics/object-list/configure-object-lists/1-col.png)](../../assets/images/en/basics/object-list/configure-object-lists/1-col.png)
+[![Configuration de la vue de liste personnalisée](../../assets/images/en/basics/object-list/configure-object-lists/1-col.png)](../../assets/images/en/basics/object-list/configure-object-lists/1-col.png)
 
-## Setting the Way of Opening an Object
+## Définition de la manière d'ouvrir un objet
 
-In the top left a checkbox marks the option allowing for opening an object by clicking its row. When deactivating this option, an object can be opened exclusively via the object link in the corresponding column.
+En haut à gauche, une case à cocher marque l'option permettant d'ouvrir un objet en cliquant sur sa ligne. En désactivant cette option, un objet peut être ouvert exclusivement via le lien de l'objet dans la colonne correspondante.
 
-## Selection of the Shown Attributes
+{ /*examples*/ }
 
-The [attributes](../../glossary.md) shown in the list can be set via the two columns. Select the [category](../../glossary.md) of which you want to see its contents in the list in the left area. Please ensure to select whether it is a global, [specific](../../glossary.md) or [custom category](../custom-categories.md) first. The category itself is chosen via the drop-down menu. Now all attributes that belong to this category are shown. You can add the attributes to the selected attributes via the green plus symbol, so they appear in the right column as well. The red minus symbol enables you to remove already selected attributes from the list view. You can adjust the hierarchy of the attributes in the right column via drag'n'drop. The uppermost attribute in this view can be found first in your list.
+## Sélection des attributs affichés
 
-## Set Standard Sorting
+Les [attributs](../../glossary.md) affichés dans la liste peuvent être définis via les deux colonnes. Sélectionnez la [catégorie](../../glossary.md) dont vous souhaitez voir le contenu dans la liste dans la zone de gauche. Assurez-vous de sélectionner d'abord s'il s'agit d'une catégorie globale, [spécifique](../../glossary.md) ou [catégorie personnalisée](../custom-categories.md). La catégorie elle-même est choisie via le menu déroulant. Maintenant, tous les attributs appartenant à cette catégorie sont affichés. Vous pouvez ajouter les attributs aux attributs sélectionnés via le symbole plus vert, afin qu'ils apparaissent également dans la colonne de droite. Le symbole moins rouge vous permet de supprimer les attributs déjà sélectionnés de la vue de la liste. Vous pouvez ajuster la hiérarchie des attributs dans la colonne de droite via un glisser-déposer. L'attribut le plus en haut dans cette vue se trouve en premier dans votre liste.
 
-You can find radio buttons in the area of the selected attributes for this list, which are used to determine by which attribute the list will be sorted. The **Sort** option is available above the selection of attributes. This way it is possible to adjust the sorting to ascending or descending order.
+{ /*examples*/ }
 
-## Saving and Restoring the Lists
+## Définir le Tri Standard
 
-As soon as your configuration meets your specifications, use the button **Save** to save the changes. If you already performed a configuration but wish to revert it to the default view, you can use the **Reset list to default** button. Do not forget to save this process by clicking the **Save** button. To see the configuration results you can go to the list view via the **Go to list** button.
+Vous pouvez trouver des boutons radio dans la zone des attributs sélectionnés pour cette liste, qui sont utilisés pour déterminer par quel attribut la liste sera triée. L'option **Trier** est disponible au-dessus de la sélection des attributs. De cette manière, il est possible d'ajuster le tri à l'ordre croissant ou décroissant.
+
+{/*examples*/}
+
+## Enregistrer et Restaurer les Listes
+
+Dès que votre configuration répond à vos spécifications, utilisez le bouton **Enregistrer** pour sauvegarder les modifications. Si vous avez déjà effectué une configuration mais souhaitez la rétablir à la vue par défaut, vous pouvez utiliser le bouton **Réinitialiser la liste par défaut**. N'oubliez pas de sauvegarder ce processus en cliquant sur le bouton **Enregistrer**. Pour voir les résultats de la configuration, vous pouvez accéder à la vue de la liste via le bouton **Aller à la liste**.
+
+<Notes>
+
+    Si vous configurez une vue de liste et que vous remarquez que l'affichage ne correspond pas à la configuration lors du chargement de la liste la prochaine fois, veuillez vider le cache de votre navigateur pour vous assurer que l'affichage de la liste est à jour.
+
+## Appliquer la Configuration à d'Autres Utilisateurs
+
+Tant que vous avez les autorisations nécessaires, il est possible d'attribuer la configuration actuelle d'une liste à d'autres utilisateurs de votre installation i-doit, dans la section **Attribuer la configuration à d'autres utilisateurs**. Pour ce faire, sélectionnez l'utilisateur souhaité via le navigateur d'objets. Veuillez noter que votre propre configuration peut être écrasée en procédant ainsi.
+
+## Définir la Configuration comme Standard
+
+Vous pouvez ajuster la vue standard des listes de ce type d'objet via **Définir la configuration comme standard**, tant que vous possédez les autorisations nécessaires pour le faire. Tous les utilisateurs sans configuration personnalisée pour cette liste verront la vue standard que vous avez définie la prochaine fois qu'ils ouvriront la liste. Les utilisateurs ayant une vue personnalisée conserveront leur liste. Bien sûr, tous les utilisateurs peuvent toujours configurer des vues de liste personnalisées.
 
 !!! info "Note"
 
-    If you configure a list view and notice that the display does not match the configuration when loading the list the next time, please clear the cache of your browser to ensure that the display of the list is up-to-date.
+    Les listes d'objets avec un grand nombre d'attributs peuvent entraîner une diminution des performances. Si vous constatez une baisse de performance, veuillez réduire le nombre d'attributs sélectionnés ou augmenter vos [ressources système](../../installation/system-requirements.md).
 
-## Apply Configuration to other Users
+!!! succès "Conseil"
 
-As long as you have the permissions, it is possible to allocate the current configuration of a list to other users of your i-doit installation, in the **Allocate configuration to other users** section. To do this, select the desired user via the object browser. Please note that your own configuration may be overwritten doing so.
+    L'identifiant de l'objet est affiché dans chaque liste d'objets dans l'installation standard d'_i-doit_. Comme cela n'est pas pertinent pour une utilisation régulière, vous pouvez supprimer cette colonne des listes. Cela améliore également la transparence.
 
-## Set Configuration as Standard
-
-You can adjust the standard view for lists of this object type via **Set configuration as standard**, as long as you possess the needed permissions for this. All users without custom configuration for this list will see the standard view set by you the next time they will open the list. Users having a custom view will keep their list. All users can of course still configure custom list views.
-
-!!! info "Note"
-
-    Object lists with a great amount of attributes can lead to a diminished performance. If you find your performance to be decreasing, please reduce the amount of selected attributes or increase your [system rersources](../../installation/system-requirements.md).
-
-!!! success "Tip"
-
-    The object-ID is shown in every object list in the standard installation of _i-doit_. Since this is not relevant for regular use you can remove this column from the lists. This also improves transparency.
+{/*examples*/}

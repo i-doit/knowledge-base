@@ -1,114 +1,119 @@
-# Analysis
+# Analyse
 
-The **Analyse** [add-on](../i-doit-pro-add-ons/index.md) primarily enables two implementations: On the one hand, it examines data quality and documentation quality and supplies an interactive result view stating the determined status. On the other hand, the add-on can be used as failure simulation. In this way, you can run through various "What happens if..." scenarios and analyse their impact on the infrastructure. With a combined use of the interface for the [Checkmk](./checkmk.md) monitoring solution, you also can directly examine live failures with regard to their effect.
+Le **Module d'Analyse** [complément](../i-doit-pro-add-ons/index.md) permet principalement deux implémentations : D'une part, il examine la qualité des données et la qualité de la documentation et fournit une vue interactive des résultats indiquant l'état déterminé. D'autre part, le complément peut être utilisé pour simuler des pannes. De cette manière, vous pouvez parcourir divers scénarios "Que se passe-t-il si..." et analyser leur impact sur l'infrastructure. En utilisant conjointement l'interface de la solution de surveillance [Checkmk](./checkmk.md), vous pouvez également examiner directement les pannes en direct en ce qui concerne leur effet.
 
-Download and Installation
--------------------------
+Téléchargement et Installation
+------------------------------
 
-You can install this add-on afterwards at any time. The "[Add-ons](./index.md)" article provides detailed descriptions regarding download, installation, updates etc.
+Vous pouvez installer ce complément ultérieurement à tout moment. L'article "[Compléments](./index.md)" fournit des descriptions détaillées concernant le téléchargement, l'installation, les mises à jour, etc.
 
 Configuration
 -------------
 
-There is no provision for a separate configuration.
+Il n'y a pas de disposition pour une configuration séparée.
 
-Rights Assignment
------------------
+Attribution des Droits
+----------------------
 
-You can set [permissions for persons and person groups](../efficient-documentation/rights-management/index.md) via **Administration → Authorization system → Rights → Analyse**.
+Vous pouvez définir des [autorisations pour les personnes et les groupes de personnes](../efficient-documentation/rights-management/index.md) via **Administration → Système d'autorisation → Droits → Analyse**. 
+
+{ /* examples */ }
 
 | Condition | Description |
 | --- | --- |
-| **Analytics** | Execution of analyses |
-| **Manage the dataquality profiles** | Create, edit profiles for **Dataquality** and/ or delete them irrevocably |
+| **Analytique** | Exécution des analyses |
+| **Gérer les profils de qualité des données** | Créer, modifier des profils pour la **Qualité des données** et/ou les supprimer de manière irrévocable |
 
-Impact Simulation
------------------
+Simulation d'impact
+-------------------
 
-When you want to find out which consequences the failure of a certain object would have on documented services, you can use the appropriate simulation under **Extras → Analyse → Impact simulation** . With the tab for **Manual selection** you can select several options:
+Lorsque vous souhaitez savoir quelles conséquences l'échec d'un certain objet aurait sur les services documentés, vous pouvez utiliser la simulation appropriée sous **Extras → Analyse → Simulation d'impact**. Avec l'onglet de **Sélection manuelle**, vous pouvez sélectionner plusieurs options :
 
 | Option | Description |
 | --- | --- |
-| **Object selection** | Selection of one or more objects which failed (or which you want to test as failed) |
-| **Servicefilter** | Limitation of the analysis to a certain degree/depth, certain object types, object relations etc.; the configuration is under **Extras → Services → Service filter.** |
-| **Viewtype** | Simplified representation of the **Tree view** |
-| **Result filter** | Subsequent filtering |
+| **Sélection d'objet** | Sélection d'un ou plusieurs objets en échec (ou que vous souhaitez tester en échec) |
+| **Filtre de service** | Limitation de l'analyse à un certain degré/profondeur, certains types d'objets, relations d'objets, etc. ; la configuration se trouve sous **Extras → Services → Filtre de service.** |
+| **Type de vue** | Représentation simplifiée de la **Vue arborescente** |
+| **Filtre de résultat** | Filtrage ultérieur |
 
-After a click on the **Start the simulation** button, the result is displayed under the Options section: First there is a list of the services concerned. Also services which are on a higher level in the hierarchy may be listed here, depending on the selected **Servicefilter** . For each service, the **Impact weighting** is stated and represented in green (minor failure) or red (major failure) color depending on the degree of severity. The evaluation is carried out with emphasis on the affected [object relations](../basics/object-relations.md). If a “**C**” follows after the numeric field, the failed object is part of a cluster.
+Après avoir cliqué sur le bouton **Démarrer la simulation**, le résultat est affiché sous la section Options : Tout d'abord, il y a une liste des services concernés. Les services qui se trouvent à un niveau supérieur dans la hiérarchie peuvent également être répertoriés ici, en fonction du **Filtre de service** sélectionné. Pour chaque service, le **Poids de l'impact** est indiqué et représenté en vert (échec mineur) ou en rouge (échec majeur) en fonction du degré de gravité. L'évaluation est effectuée en mettant l'accent sur les [relations d'objets](../basics/object-relations.md) affectées. Si un "C" suit le champ numérique, l'objet en échec fait partie d'un cluster.
 
-In order to visualize the failure, a service tree is built under **Tree view**.
+Pour visualiser l'échec, un arbre de services est construit sous **Vue arborescente**.
 
-[![Tree view](../assets/images/en/i-doit-pro-add-ons/analysis/1-ana.png)](../assets/images/en/i-doit-pro-add-ons/analysis/1-ana.png)
+[![Vue arborescente](../assets/images/en/i-doit-pro-add-ons/analysis/1-ana.png)](../assets/images/en/i-doit-pro-add-ons/analysis/1-ana.png)
 
-With the tab called **Selection by report** you have the additional option to choose objects which are affected by a failure on the basis of a [Report](../evaluation/report-manager.md).
+Avec l'onglet appelé **Sélection par rapport**, vous avez la possibilité supplémentaire de choisir les objets qui sont affectés par un échec sur la base d'un [Rapport](../evaluation/report-manager.md).
 
 Impact Live
 -----------
 
-One variant of the above described failure simulation is at ****Extras → Analyse → Impact live****. Here i-doit refers to the interface of a configured [Network Monitoring](../automation-and-integration/network-monitoring/index.md) (for example, [Checkmk](./checkmk.md)). Target data which are to be analyzed become actual date. If a host really fails, you can now simulate which are the consequences of this failure with regard to the documented services.
+Une variante de la simulation d'échec décrite ci-dessus se trouve dans ****Extras → Analyse → Impact live****. Ici, i-doit fait référence à l'interface d'un [Monitoring réseau configuré](../automation-and-integration/network-monitoring/index.md) (par exemple, [Checkmk](./checkmk.md)). Les données cibles à analyser deviennent des données réelles. Si un hôte échoue réellement, vous pouvez maintenant simuler quelles sont les conséquences de cet échec en ce qui concerne les services documentés.
 
-Data Quality
-------------
+Qualité des données
+-------------------
 
-With the menu item **Extras → Analyse → Data quality** you can measure in what way the IT documentation is filled. The aspiration is that [for each visible object type each assigned category](../basics/assignment-of-categories-to-object-types.md) of every object is filled in. This is the definition for the 100% target.
+Avec l'élément de menu **Extras → Analyse → Qualité des données**, vous pouvez mesurer dans quelle mesure la documentation informatique est remplie. L'aspiration est que [pour chaque type d'objet visible, chaque catégorie attribuée](../basics/assignment-of-categories-to-object-types.md) à chaque objet soit remplie. C'est la définition de l'objectif de 100%.
 
-Example: There are 21 objects of the type **Client**. 20 categories are assigned to this object type. In order to reach the target of 100% all categories have to be filled in for all of the 21 objects. The percentage decreases for every missing detail.
+Il y a 21 objets du type **Client**. 20 catégories sont assignées à ce type d'objet. Afin d'atteindre l'objectif de 100 %, toutes les catégories doivent être remplies pour les 21 objets. Le pourcentage diminue pour chaque détail manquant.
 
-You can display additional details for each object type with the button **Show detailed information**. In case of missing data, you can generate a list of the objects concerned for every category with the **Magnifier** function.
+Vous pouvez afficher des détails supplémentaires pour chaque type d'objet en cliquant sur le bouton **Afficher les informations détaillées**. En cas de données manquantes, vous pouvez générer une liste des objets concernés pour chaque catégorie avec la fonction **Loupe**.
 
-[![Show detailed information](../assets/images/en/i-doit-pro-add-ons/analysis/2-ana.png)](../assets/images/en/i-doit-pro-add-ons/analysis/2-ana.png)
+[![Afficher les informations détaillées](../assets/images/en/i-doit-pro-add-ons/analysis/2-ana.png)](../assets/images/en/i-doit-pro-add-ons/analysis/2-ana.png)
 
-Should object types and/ or categories falsify the results, you can hide them. Then the result is recalculated. You can save these adjustments in profiles by clicking the **Save** button and reload them at any time. Choose a conclusive title under **Name** . In **User specific** you can determine whether only the respective user may load the profile or the profile is accessible for all users. Already saved profiles are shown in the left navigation tree under **Data quality**.
+Si les types d'objets et/ou les catégories faussent les résultats, vous pouvez les masquer. Ensuite, le résultat est recalculé. Vous pouvez enregistrer ces ajustements dans des profils en cliquant sur le bouton **Enregistrer** et les recharger à tout moment. Choisissez un titre concluant sous **Nom**. Dans **Utilisateur spécifique**, vous pouvez déterminer si seul l'utilisateur respectif peut charger le profil ou si le profil est accessible à tous les utilisateurs. Les profils déjà enregistrés sont affichés dans l'arborescence de navigation de gauche sous **Qualité des données**.
 
-[![Data quality](../assets/images/en/i-doit-pro-add-ons/analysis/3-ana.png)](../assets/images/en/i-doit-pro-add-ons/analysis/3-ana.png)
+[![Qualité des données](../assets/images/en/i-doit-pro-add-ons/analysis/3-ana.png)](../assets/images/en/i-doit-pro-add-ons/analysis/3-ana.png)
 
-Object Catalog
+Catalogue d'Objets
 --------------
 
-You can create a list showing you which objects belong to a service. With ****Extras → Analyse → Objectcatalog**** you can choose an object of the type **Service** via **Object selection** . Then you limit the analysis optionally via the ****Service filter****. Similar to the [Report Manager](../evaluation/report-manager.md) you can vary the display of objects by selecting the matching [attributes](../basics/structure-of-the-it-documentation.md) from [global and specific categories](../basics/structure-of-the-it-documentation.md). With a click on **Load object data** the result is generated in a tabular overview.
+Vous pouvez créer une liste vous montrant quels objets appartiennent à un service. Avec ****Extras → Analyse → Catalogue d'objets****, vous pouvez choisir un objet du type **Service** via **Sélection d'objet**. Ensuite, vous limitez éventuellement l'analyse via le ****Filtre de service****. De manière similaire au [Gestionnaire de rapports](../evaluation/report-manager.md), vous pouvez varier l'affichage des objets en sélectionnant les [attributs](../basics/structure-of-the-it-documentation.md) correspondants des [catégories globales et spécifiques](../basics/structure-of-the-it-documentation.md). En cliquant sur **Charger les données de l'objet**, le résultat est généré dans une vue tabulaire.
 
-[![Object Catalog](../assets/images/en/i-doit-pro-add-ons/analysis/4-ana.png)](../assets/images/en/i-doit-pro-add-ons/analysis/4-ana.png)
+[![Catalogue d'Objets](../assets/images/en/i-doit-pro-add-ons/analysis/4-ana.png)](../assets/images/en/i-doit-pro-add-ons/analysis/4-ana.png)
 
-Service Costs
+Coûts de Service
 
-What are the costs for the performance of a given service? This question can be answered with **Extras → Analyse → Servicecosts** on basis of the IT documentation. At first you select an object of the type **Service** under **Object selection.** Then you limit the analysis optionally via the **Servicefilter**. By clicking the **Calculate servicecosts** button the data will be analyzed and prepared. The result is featured in a compressed overview via the **Cost overview** item.
+Quels sont les coûts pour la prestation d'un service donné ? Cette question peut être répondue avec **Extras → Analyse → Coûts de service** sur la base de la documentation IT. Tout d'abord, vous sélectionnez un objet du type **Service** sous **Sélection d'objet**. Ensuite, vous limitez éventuellement l'analyse via le **Filtre de service**. En cliquant sur le bouton **Calculer les coûts de service**, les données seront analysées et préparées. Le résultat est présenté dans une vue d'ensemble compressée via l'élément **Vue d'ensemble des coûts**.
 
-| Category | Description |
+| Catégorie | Description |
 | --- | --- |
-| **Licence costs** | See category **Software assignment** |
-| **Investment costs** | See category **Accounting** |
-| **Yearly operation expense** | See category ****Accounting**** |
-| **Contract costs** | See category **Contract assignment  <br>** |
+| **Coûts de licence** | Voir la catégorie **Affectation de logiciel** |
+| **Coûts d'investissement** | Voir la catégorie **Comptabilité** |
+| **Dépenses d'exploitation annuelles** | Voir la catégorie **Comptabilité** |
+| **Coûts de contrat** | Voir la catégorie **Affectation de contrat** <br> |
 
-The maximum energy demand of hardware objects is summarized in the section  **Miscellaneous overview** (see category **Power consumer**).
+La demande maximale en énergie des objets matériels est résumée dans la section **Aperçu divers** (voir la catégorie **Consommateur d'énergie**).
 
-Beside a pie chart illustrating the above mentioned costs, there is a detailed breakdown listing which data were evaluated per **Category** and analyzed object.
+En plus d'un diagramme circulaire illustrant les coûts mentionnés ci-dessus, il y a un détail de la répartition listant les données qui ont été évaluées par **Catégorie** et objet analysé.
 
-[![Service Costs](../assets/images/en/i-doit-pro-add-ons/analysis/5-ana.png)](../assets/images/en/i-doit-pro-add-ons/analysis/5-ana.png)
+[![Coûts de service](../assets/images/en/i-doit-pro-add-ons/analysis/5-ana.png)](../assets/images/en/i-doit-pro-add-ons/analysis/5-ana.png)
 
-Analyse Category
-----------------
+Catégorie d'Analyse
+-------------------
 
-A category of the same name **Analyse** is assigned to each object after activation of the **Analyse** add-on. Via this category you can get directly to the **Impact simulation**, where the respective object is already preselected under **Object selection**.
+Une catégorie du même nom **Analyse** est assignée à chaque objet après l'activation de l'extension **Analyse**. Via cette catégorie, vous pouvez accéder directement à la **Simulation d'impact**, où l'objet respectif est déjà présélectionné sous **Sélection d'objet**.
+
 
 Releases
 --------
 
-| Version | Date | Changelog |
+| Version | Date | Journal des modifications |
 | --- | --- | --- |
-| 1.5 | 2024-02-27 | [Task] PHP 8.2 compatibility, cleaned up color usage |
-| 1.4 | 2023-11-07 | [Task] Use new routes to display object and object type images / move add-on related files |
-| 1.3.1 | 2023-08.22 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Service assignment is not displayed in data quality<br>[Bug] It is not possible to remove categories in data-quality profiles |
-| 1.3 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
-| 1.2 | 2022-02-21 | [Improvement] Dataquality on a report basis  <br>[Improvement] Implement API methods for the data quality report  <br>[Improvement] English add-on renaming to Analysis  <br>[Bug] Result In Objectcatalog Is Incomplete And Partially Incorrect |
-| 1.1.4 | 2020-10-20 | [Bug] Missing option to add object types back into the data quality profiles after they were removed  <br>[Bug] Data quality is not evaluated correctly for user-defined categories |
-| 1.1.3 | 2020-05-04 | [Bug] The "Report object selection" under "Failure simulation" must change the source for the reports.  <br>[Bug] Empty object types generate an SQL error in the data quality.  <br>[Bug] When opening data quality an SQL error is output |
-| 1.1.2 | 2019-07-05 | [Bug] Impact simulation aborts with PHP fatal error |
-| 1.1.1 | 2018-12-05 | [Verbesserung] PHP 7.2 Kompatibilität<br>[Verbesserung] Links im Ergebnis der Ausfallsimulation sollten in einem neuen Browser-Fenster geöffnet werden<br>[Bug] Objektkatalog: Anzeige der Attribute fehlerhaft<br>[Bug] Objekt "Personen" fehlende Zuordnung von Arbeitsplätzen in der Detailansicht<br>[Bug] Kein "Objektdaten laden" möglich, wenn bei Klick auf "Objektdaten laden" kein Objekt ausgewählt war |
-| 1.1 | 2018-07-19 | [Improvement] New visuals in the data quality report<br>[Change] Dataquality does not display object type cable<br>[Bug] "Display objects without data" for custom categories leads to SQL error<br>[Bug] Error displaying detailed information in custom categories<br>[Bug] Error Message After Click On Object Link In Data Quality |
-| 1.0.5 | 2017-07-31 | [Improvement] Increase the data quality performance<br>[Improvement] New option for calculation of total costs<br>[Bug] Size of object icons does not scale in data quality overview<br>[Bug] Service costs use wrong currency<br>[Bug] User defined icons are wrong displayed |
-| 1.0.4 | 2017-05-02 | [Bug] When a impact simulation is executed, a timeout occurs depending on the size of the Database<br> |
-| 1.0.3 | 2017-03-08 | [Change] Improved stability and performance during the internal service tree evaluation<br>[Bug] Invoking service costs shows defect note<br>[Bug] Custom categories are not evaluated><br>[Bug] get_currency() Error executing report view "service costs" |
+| 1.5 | 2024-02-27 | [Tâche] Compatibilité PHP 8.2, nettoyage de l'utilisation des couleurs |
+| 1.4 | 2023-11-07 | [Tâche] Utiliser de nouvelles routes pour afficher les images d'objet et de type d'objet / déplacer les fichiers liés à l'extension |
+| 1.3.1 | 2023-08.22 | [Amélioration] Compatibilité PHP 8.1<br>[Bug] L'attribution de service n'est pas affichée dans la qualité des données<br>[Bug] Il n'est pas possible de supprimer des catégories dans les profils de qualité des données |
+| 1.3 | 2022-09-05 | [Tâche] Compatibilité PHP 8.0  <br>[Tâche] Compatibilité de conception |
+| 1.2 | 2022-02-21 | [Amélioration] Qualité des données sur une base de rapport  <br>[Amélioration] Implémenter des méthodes API pour le rapport de qualité des données  <br>[Amélioration] Renommer l'extension anglaise en Analyse  <br>[Bug] Le résultat dans le catalogue d'objets est incomplet et partiellement incorrect |
+| 1.1.4 | 2020-10-20 | [Bug] Option manquante pour réintégrer les types d'objets dans les profils de qualité des données après leur suppression  <br>[Bug] La qualité des données n'est pas évaluée correctement pour les catégories définies par l'utilisateur |
+| 1.1.3 | 2020-05-04 | [Bug] La "Sélection d'objet de rapport" sous "Simulation d'échec" doit changer la source des rapports.  <br>[Bug] Les types d'objets vides génèrent une erreur SQL dans la qualité des données.  <br>[Bug] Lors de l'ouverture de la qualité des données, une erreur SQL est affichée |
+| 1.1.2 | 2019-07-05 | [Bug] La simulation d'impact s'interrompt avec une erreur fatale PHP |
+| 1.1.1 | 2018-12-05 | [Amélioration] Compatibilité PHP 7.2<br>[Amélioration] Les liens dans le résultat de la simulation d'échec devraient s'ouvrir dans une nouvelle fenêtre de navigateur<br>[Bug] Catalogue d'objets : affichage des attributs incorrect<br>[Bug] Objet "Personnes" : affectation manquante des postes de travail dans la vue détaillée<br>[Bug] Impossible de "Charger les données de l'objet" lorsque aucun objet n'était sélectionné en cliquant sur "Charger les données de l'objet" |
+| 1.1 | 2018-07-19 | [Amélioration] Nouvelles visualisations dans le rapport de qualité des données<br>[Changement] La qualité des données n'affiche pas le type d'objet câble<br>[Bug] "Afficher les objets sans données" pour les catégories personnalisées entraîne une erreur SQL<br>[Bug] Erreur d'affichage des informations détaillées dans les catégories personnalisées<br>[Bug] Message d'erreur après avoir cliqué sur le lien d'objet dans la qualité des données |
+| 1.0.5 | 2017-07-31 | [Amélioration] Améliorer les performances de la qualité des données<br>[Amélioration] Nouvelle option de calcul des coûts totaux<br>[Bug] La taille des icônes d'objet ne s'adapte pas dans la vue d'ensemble de la qualité des données<br>[Bug] Les coûts de service utilisent une mauvaise devise<br>[Bug] Les icônes définies par l'utilisateur sont mal affichées |
+| 1.0.4 | 2017-05-02 | [Bug] Lorsqu'une simulation d'impact est exécutée, un délai d'attente se produit en fonction de la taille de la base de données<br> |
+| 1.0.3 | 2017-03-08 | [Changement] Stabilité et performances améliorées lors de l'évaluation de l'arborescence de services internes<br>[Bug] L'invocation des coûts de service affiche une note de défaut<br>[Bug] Les catégories personnalisées ne sont pas évaluées><br>[Bug] Erreur get_currency() lors de l'exécution de la vue du rapport "coûts de service" |
 | 1.0.2 | 2015-03-09 |     |
-| 1.0.1 | 2014-09-23 | [Bug] Changing the weight of a relationship has no impact on failure seriousness<br>[Bug] Category network connections shows a data quality of 0% at any time<br>[Bug] Category rack shows a data quality of 0% at any time |
-| 1.0 | 2014-08-20 | Initial release |
+| 1.0.1 | 2014-09-23 | [Bug] Changer le poids d'une relation n'a aucun impact sur la gravité de l'échec<br>[Bug] Les connexions réseau de catégorie montrent une qualité des données de 0% à tout moment<br>[Bug] La baie de catégorie montre une qualité des données de 0% à tout moment |
+| 1.0 | 2014-08-20 | Version initiale |
+
+I am ready to start the translation once you provide me with the Markdown content.

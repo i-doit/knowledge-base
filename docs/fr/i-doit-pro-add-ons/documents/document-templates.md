@@ -1,96 +1,116 @@
-# Document templates
+# Modèles de documents
 
-Templates overview
+Aperçu des modèles
 ------------------
 
-[![Templates overview](../../assets/images/en/i-doit-pro-add-ons/documents/templates/1-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/1-dd.png)
+[![Aperçu des modèles](../../assets/images/en/i-doit-pro-add-ons/documents/templates/1-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/1-dd.png)
 
-The document templates overview allows managing the existing templates. Operations like creating, editing, deleting and importing from files is possible here.  
-Furthermore, it is possible to create document categories to group the individual documents and templates thematically. The button "Edit categories" leads further to the dialog admin, where the categories can be added to the selection.  
-This way documents can be grouped for example by type (protocols, manuals, ...) department, language or own criteria.
+L'aperçu des modèles de documents permet de gérer les modèles existants. Des opérations telles que la création, la modification, la suppression et l'importation à partir de fichiers sont possibles ici.  
+De plus, il est possible de créer des catégories de documents pour regrouper les documents et modèles individuels de manière thématique. Le bouton "Modifier les catégories" mène à un dialogue administratif, où les catégories peuvent être ajoutées à la sélection.  
+De cette manière, les documents peuvent être regroupés par exemple par type (protocoles, manuels, ...) département, langue ou critères propres.
 
-Create new document template
+Créer un nouveau modèle de document
 ----------------------------
 
-A new template can be created via the "New" button. The add-on will continue to the next input mask here. At the beginning, general and chapter-independent contents can be edited.
+Un nouveau modèle peut être créé via le bouton "Nouveau". L'extension continuera vers le prochain masque de saisie ici. Au début, des contenus généraux et indépendants des chapitres peuvent être modifiés.
 
-[![Create new document template](../../assets/images/en/i-doit-pro-add-ons/documents/templates/2-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/2-dd.png)
+[![Créer un nouveau modèle de document](../../assets/images/en/i-doit-pro-add-ons/documents/templates/2-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/2-dd.png)
 
-*   **Title**  
-    The designation defines the name of the template by which it can be found in the system.
-*   **Category**  
-    The template can be assigned to a document category. Only categories that have been created in advance are available. The category of a document can be changed at any time later.
-*   **Title page**  
-    The cover page can be designed according to your own specifications. It appears as the first page of the finished document.
-    In the Title page tab you can enable/disable the Title page.
-*   **Header**  
-    The header represents the header area of each page of the document. The content is added to the top of each page.
-    In the Header tab you can enable/disable the header.
-*   **Footer**  
-    The footer can be found at the bottom of each page. Additional content can be added here as well, similar to the header.
-    In the Footer tab you can enable/disable the Footer.
-*   **Table of contents**
-    In the Table of contents tab you can enable/disable the table of contents.
+*   **Titre**  
+    La désignation définit le nom du modèle par lequel il peut être trouvé dans le système.  
+    {/ *exemples*}
+
+*   **Catégorie**  
+    Le modèle peut être assigné à une catégorie de document. Seules les catégories créées à l'avance sont disponibles. La catégorie d'un document peut être modifiée à tout moment ultérieurement.  
+    {/ *exemples*}
+
+*   **Page de titre**  
+    La page de couverture peut être conçue selon vos propres spécifications. Elle apparaît comme la première page du document final.  
+    Dans l'onglet Page de titre, vous pouvez activer/désactiver la page de titre.  
+    {/ *exemples*}
+
+*   **En-tête**  
+    L'en-tête représente la zone d'en-tête de chaque page du document. Le contenu est ajouté en haut de chaque page.  
+    Dans l'onglet En-tête, vous pouvez activer/désactiver l'en-tête.  
+    {/ *exemples*}
+
+*   **Pied de page**  
+    Le pied de page se trouve en bas de chaque page. Du contenu supplémentaire peut également être ajouté ici, de manière similaire à l'en-tête.  
+    Dans l'onglet Pied de page, vous pouvez activer/désactiver le pied de page.  
+    {/ *exemples*}
+
+*   **Table des matières**  
+    Dans l'onglet Table des matières, vous pouvez activer/désactiver la table des matières.  
+    {/ *exemples*}
+
 *   **Options**  
-    The options allow to specify which pages are used for page number counting and from which page number is counted. It is also possible to specify the format of headings.  
-    In the lower area of the options further settings for the PDF documents can be made. These include margin spacing and page orientation. If necessary, you can also upload and add your own fonts. The use of background images for the cover page, the table of contents or all other pages is also possible here.
-*   **User-defined fields**  
-    To add more fields to the document, it is possible to define your own fields under "Custom Fields", which can later be included in the document. For these fields some field types are available, which define the content. The required fields can be added using the "Add new field" button.  
-    To include the user-defined fields in the document itself, this must be created once. Afterwards all fields are available in the editing view of the document and can be filled there. To ensure that the information is also filled in the document (PDF/HTML), a new revision must be created. If the information in the fields has been updated, it is also necessary to create a new revision.
+    Les options permettent de spécifier quelles pages sont utilisées pour le comptage des numéros de page et à partir de quel numéro de page le comptage est effectué. Il est également possible de spécifier le format des en-têtes.  
+    Dans la zone inférieure des options, d'autres paramètres pour les documents PDF peuvent être définis. Ceux-ci incluent l'espacement des marges et l'orientation de la page. Si nécessaire, vous pouvez également télécharger et ajouter vos propres polices. L'utilisation d'images d'arrière-plan pour la page de couverture, la table des matières ou toutes les autres pages est également possible ici.  
+    {/ *exemples*}
 
-Create chapter in document
---------------------------
+*   **Champs personnalisés**  
+    Pour ajouter plus de champs au document, il est possible de définir vos propres champs sous "Champs personnalisés", qui peuvent ensuite être inclus dans le document. Pour ces champs, certains types de champs sont disponibles, qui définissent le contenu. Les champs requis peuvent être ajoutés en utilisant le bouton "Ajouter un nouveau champ".  
+    Pour inclure les champs personnalisés dans le document lui-même, celui-ci doit être créé une fois. Ensuite, tous les champs sont disponibles dans la vue d'édition du document et peuvent y être remplis. Pour garantir que les informations sont également remplies dans le document (PDF/HTML), une nouvelle révision doit être créée. Si les informations dans les champs ont été mises à jour, il est également nécessaire de créer une nouvelle révision.  
+    {/ *exemples*}
 
-After the basic settings have been made, the template must be saved. Now the template can be called up again from the overview of the corresponding document category. From now on, it is possible to add new chapters via the "New Chapter" button and thus express the contents of the document.
+Créer un chapitre dans le document
+-----------------------------------
 
-Existing chapters can be adjusted via the pencil icon, which is displayed on mouseover. At the same time, the green plus icon is also displayed here, which enables the creation of a subchapter. This subchapter is subordinated to the existing chapter and is one level lower in the chapter hierarchy. The chapter can also be deleted again via the X icon.
+Après avoir effectué les réglages de base, le modèle doit être enregistré. À présent, le modèle peut être de nouveau consulté depuis l'aperçu de la catégorie de document correspondante. Désormais, il est possible d'ajouter de nouveaux chapitres via le bouton "Nouveau Chapitre" et ainsi exprimer le contenu du document.
 
-[![Create chapter in document](../../assets/images/en/i-doit-pro-add-ons/documents/templates/3-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/3-dd.png)
+Les chapitres existants peuvent être ajustés via l'icône du crayon, qui s'affiche au survol de la souris. En même temps, l'icône verte en forme de plus est également affichée ici, ce qui permet la création d'un sous-chapitre. Ce sous-chapitre est subordonné au chapitre existant et se situe à un niveau inférieur dans la hiérarchie des chapitres. Le chapitre peut également être supprimé via l'icône X.
 
-Each chapter can first be given a name that also serves as a heading for the chapter and appears in the table of contents if it is active. As soon as several chapters exist, a superordinate chapter can be selected. The selection Chapter template allows to reference an already existing chapter. Additionally, you can specify whether the chapter should use the available space on the last page of the previous chapter or always start on a new page.
+Chaque chapitre peut d'abord recevoir un nom qui sert également de titre pour le chapitre et apparaît dans la table des matières s'il est actif. Dès lors que plusieurs chapitres existent, un chapitre supérieur peut être sélectionné. Le modèle de chapitre sélectionné permet de faire référence à un chapitre déjà existant. De plus, vous pouvez spécifier si le chapitre doit utiliser l'espace disponible sur la dernière page du chapitre précédent ou commencer toujours sur une nouvelle page.
 
-The Content section provides the option to copy content of existing chapters into the template.
+[![Créer un chapitre dans le document](../../assets/images/en/i-doit-pro-add-ons/documents/templates/3-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/3-dd.png)
 
-WYSIWYG Editor
+{/*examples*/}
+
+La section Contenu offre la possibilité de copier le contenu des chapitres existants dans le modèle.
+
+Éditeur WYSIWYG
 --------------
 
-In the input field the content of the chapter can be inserted via the WYSIWYG editor. The different contents can be inserted via the icons. The icons are divided into several areas.
+Dans le champ d'entrée, le contenu du chapitre peut être inséré via l'éditeur WYSIWYG. Les différents contenus peuvent être insérés via les icônes. Les icônes sont divisées en plusieurs zones.
 
-[![WYSIWYG Editor](../../assets/images/en/i-doit-pro-add-ons/documents/templates/4-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/4-dd.png)
+[![Éditeur WYSIWYG](../../assets/images/en/i-doit-pro-add-ons/documents/templates/4-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/4-dd.png)
 
-|   Icon  |   Function  |
+|   Icône  |   Fonction  |
 | --- | --- |
-| [![WYSIWYG Editor](../../assets/images/en/i-doit-pro-add-ons/documents/templates/5-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/5-dd.png) | The first block contains all the options that affect existing text. These are options to paste, cut, undo, redo, search, replace and select. |
-| [![WYSIWYG Editor](../../assets/images/en/i-doit-pro-add-ons/documents/templates/6-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/6-dd.png) | The next area allows inserting links in the form of hyperlinks or anchor points in the document. In addition, images and tables can be inserted. A horizontal line can also be included to further structure the document.<br><br>Insert pictures<br><br>Images should not be inserted into a document via copy & paste. This leads to the files being stored directly in the database and thus increasing the size of the database very quickly.<br><br>An image file can be inserted into the document using the button for inserting images either via a URL or an upload function provided for this purpose. Alternatively, images from the category of the same name can also be included via the corresponding placeholder. |
-| [![WYSIWYG Editor](../../assets/images/en/i-doit-pro-add-ons/documents/templates/7-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/7-dd.png) | The last area of the first icon line adjusts the view. Here it is possible to use a full screen view, display text blocks, switch to the source code view or generate a print view.<br><br>The "Source Code" view, which can be activated via the WYSIWYG editor, displays the content of the editor unformatted with HTML tags. At the same time, HTML code can be entered here independently to further design the document. While editing in the "Source Code" mode, all other buttons of the WYSIWYG Editor are disabled. Only when the view is switched again, they are usable again and the entered HTML code is interpreted. |
-| [![WYSIWYG Editor](../../assets/images/en/i-doit-pro-add-ons/documents/templates/8-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/8-dd.png) | In the second line it is possible to perform the text formatting. Here the usual options are available but also the possibility to use superscript and subscript. |
-| [![WYSIWYG Editor](../../assets/images/en/i-doit-pro-add-ons/documents/templates/9-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/9-dd.png) | The next area allows the specification of lists and citation blocks. In addition, the general alignment of the text can be selected. |
-| [![WYSIWYG Editor](../../assets/images/en/i-doit-pro-add-ons/documents/templates/10-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/10-dd.png) | Additionally, the style of the text can be customized. This also includes the specification of headings, the font and the text size. |
-| [![WYSIWYG Editor](../../assets/images/en/i-doit-pro-add-ons/documents/templates/11-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/11-dd.png) | Also a color adjustment of the text as well as the text background is possible over the WYSIWYG editor. |
-| [![WYSIWYG Editor](../../assets/images/en/i-doit-pro-add-ons/documents/templates/12-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/12-dd.png) | Content from the documentation can be dynamically integrated via the individual placeholders. More details about the placeholders and how they can be used can be found in the corresponding chapter. |
-| [![WYSIWYG Editor](../../assets/images/en/i-doit-pro-add-ons/documents/templates/13-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/13-dd.png) | Finally, it is possible to insert an automatic line break using the icon provided for this purpose. |
+| [![Éditeur WYSIWYG](../../assets/images/en/i-doit-pro-add-ons/documents/templates/5-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/5-dd.png) | Le premier bloc contient toutes les options qui affectent le texte existant. Il s'agit des options de copier, couper, annuler, rétablir, rechercher, remplacer et sélectionner. |
+| [![Éditeur WYSIWYG](../../assets/images/en/i-doit-pro-add-ons/documents/templates/6-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/6-dd.png) | La zone suivante permet d'insérer des liens sous forme d'hyperliens ou de points d'ancrage dans le document. De plus, des images et des tableaux peuvent être insérés. Une ligne horizontale peut également être incluse pour structurer davantage le document.<br><br>Insérer des images<br><br>Les images ne doivent pas être insérées dans un document via copier-coller. Cela entraîne le stockage direct des fichiers dans la base de données et donc une augmentation rapide de la taille de la base de données.<br><br>Un fichier image peut être inséré dans le document en utilisant le bouton d'insertion d'images soit via une URL, soit via une fonction de téléchargement prévue à cet effet. Alternativement, des images de la catégorie du même nom peuvent également être incluses via le placeholder correspondant. |
+| [![Éditeur WYSIWYG](../../assets/images/en/i-doit-pro-add-ons/documents/templates/7-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/7-dd.png) | La dernière zone de la première ligne d'icônes ajuste la vue. Il est possible d'utiliser une vue en plein écran, d'afficher des blocs de texte, de passer à la vue du code source ou de générer une vue d'impression.<br><br>La vue "Code source", qui peut être activée via l'éditeur WYSIWYG, affiche le contenu de l'éditeur sans mise en forme avec des balises HTML. En même temps, du code HTML peut être saisi ici de manière indépendante pour continuer à concevoir le document. Lors de l'édition en mode "Code source", tous les autres boutons de l'éditeur WYSIWYG sont désactivés. Ce n'est que lorsque la vue est à nouveau basculée qu'ils sont à nouveau utilisables et que le code HTML saisi est interprété. |
+| [![Éditeur WYSIWYG](../../assets/images/en/i-doit-pro-add-ons/documents/templates/8-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/8-dd.png) | Dans la deuxième ligne, il est possible d'effectuer la mise en forme du texte. Ici, les options habituelles sont disponibles mais aussi la possibilité d'utiliser les indices et les indices. |
+| [![Éditeur WYSIWYG](../../assets/images/en/i-doit-pro-add-ons/documents/templates/9-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/9-dd.png) | La zone suivante permet de spécifier des listes et des blocs de citation. De plus, l'alignement général du texte peut être sélectionné. |
+| [![Éditeur WYSIWYG](../../assets/images/en/i-doit-pro-add-ons/documents/templates/10-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/10-dd.png) | De plus, le style du texte peut être personnalisé. Cela inclut également la spécification des en-têtes, de la police et de la taille du texte. |
+| [![Éditeur WYSIWYG](../../assets/images/en/i-doit-pro-add-ons/documents/templates/11-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/11-dd.png) | Il est également possible d'ajuster la couleur du texte ainsi que l'arrière-plan du texte via l'éditeur WYSIWYG. |
+| [![Éditeur WYSIWYG](../../assets/images/en/i-doit-pro-add-ons/documents/templates/12-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/12-dd.png) | Le contenu de la documentation peut être intégré de manière dynamique via les placeholders individuels. Plus de détails sur les placeholders et comment ils peuvent être utilisés se trouvent dans le chapitre correspondant. |
+| [![Éditeur WYSIWYG](../../assets/images/en/i-doit-pro-add-ons/documents/templates/13-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/13-dd.png) | Enfin, il est possible d'insérer un saut de ligne automatique à l'aide de l'icône prévue à cet effet. |
 
-Export and import templates
+
+Exporter et importer des modèles
 ---------------------------
 
-If required, existing templates can also be exported independently and imported into other clients/installations of i-doit. To export an existing template, it must be called up in the editing view. In the line in the upper area, the button "Export document template" can now be used to execute this process. The template is provided as a file in .zip format, which contains all contents, including inserted images, and can be saved locally on your own system.
+Si nécessaire, les modèles existants peuvent également être exportés indépendamment et importés dans d'autres clients/installations d'i-doit. Pour exporter un modèle existant, il doit être appelé dans la vue d'édition. Dans la ligne dans la zone supérieure, le bouton "Exporter le modèle de document" peut maintenant être utilisé pour exécuter ce processus. Le modèle est fourni sous forme de fichier au format .zip, qui contient tous les contenus, y compris les images insérées, et peut être enregistré localement sur votre propre système.
 
-[![Export and import templates](../../assets/images/en/i-doit-pro-add-ons/documents/templates/14-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/14-dd.png)
+[![Exporter et importer des modèles](../../assets/images/en/i-doit-pro-add-ons/documents/templates/14-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/14-dd.png)
 
-An exported template can be uploaded to the system via the "Import document template" button in the list of templates. To do this, the file in .zip format must be selected from the local system via the browser. The template is then available for use in the add-on.
+Un modèle exporté peut être téléchargé dans le système via le bouton "Importer le modèle de document" dans la liste des modèles. Pour ce faire, le fichier au format .zip doit être sélectionné à partir du système local via le navigateur. Le modèle est alors disponible pour une utilisation dans l'extension.
 
-Duplicate Document Templates
+Dupliquer les modèles de document
 ----------------------------
 
-Using the "Duplicate document template" button in the document template overview, already existing templates can be duplicated. To do this, the desired template is first selected via the checkbox, so that using the button opens another dialog. Here the name of the duplicate as well as the category in which it is to be sorted can be specified.
+En utilisant le bouton "Dupliquer le modèle de document" dans l'aperçu des modèles de document, les modèles déjà existants peuvent être dupliqués. Pour ce faire, le modèle souhaité est d'abord sélectionné via la case à cocher, de sorte que l'utilisation du bouton ouvre une autre boîte de dialogue. Ici, le nom du duplicata ainsi que la catégorie dans laquelle il doit être trié peuvent être spécifiés.
 
-[![Duplicate Document Templates](../../assets/images/en/i-doit-pro-add-ons/documents/templates/15-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/15-dd.png)
+[![Modèles de documents en double](../../assets/images/en/i-doit-pro-add-ons/documents/templates/15-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/15-dd.png)
 
-Online Repository
+Dépôt en ligne
 -----------------
 
-Ready-made document templates are available in the online repository, which can be adapted to your own requirements and needs and used to generate documents. After these have been downloaded, they are available in the document templates.
+Des modèles de documents prêts à l'emploi sont disponibles dans le dépôt en ligne, qui peuvent être adaptés à vos propres exigences et besoins et utilisés pour générer des documents. Après les avoir téléchargés, ils sont disponibles dans les modèles de documents.
 
-!!! info "Note"
+!!! info "Remarque"
 
-    In order to access the online repository, the i-doit server must be connected to the Internet. In addition, the selection of available templates depends on the selected i-doit system language.
+    Pour accéder au dépôt en ligne, le serveur i-doit doit être connecté à Internet. De plus, la sélection des modèles disponibles dépend de la langue du système i-doit sélectionnée.
+
+{ /* examples */ }

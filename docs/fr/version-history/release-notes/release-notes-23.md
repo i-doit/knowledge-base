@@ -1,16 +1,16 @@
-We’re happy to announce i-doit pro 23. As usual, we prepared a bunch of bugfixes to improve the experience when using i-doit and create your documentation. Additionally, new features are added alongside. We encourage you to update to this release as soon as possible.
+Nous sommes heureux d'annoncer i-doit pro 23. Comme d'habitude, nous avons préparé une série de correctifs pour améliorer l'expérience lors de l'utilisation de i-doit et de la création de votre documentation. De plus, de nouvelles fonctionnalités ont été ajoutées. Nous vous encourageons à mettre à jour vers cette version dès que possible.
 
-## Highlights in this release
+## Points forts de cette version
 
-* An option to [automatically extend](https://kb.i-doit.com/en/use-cases/automated-contract-term-extension.html) contracts, if they are not manually terminated.
-* [Option](https://kb.i-doit.com/en/use-cases/custom-translation.html) to also have multi language translations for custom content.
-* [Setting](https://kb.i-doit.com/en/system-administration/administration/user-settings.html) for more compact menu trees.
-* Better structure for the [dialog-admin](https://kb.i-doit.com/en/basics/dialog-admin.html).
+* Une option pour [prolonger automatiquement](https://kb.i-doit.com/fr/scenarios/prolongation-automatique-de-la-duree-du-contrat.html) les contrats s'ils ne sont pas résiliés manuellement.
+* [Option](https://kb.i-doit.com/fr/scenarios/traduction-personnalisee.html) pour avoir également des traductions multilingues pour le contenu personnalisé.
+* [Réglage](https://kb.i-doit.com/fr/administration-systeme/administration/reglages-utilisateur.html) pour des arbres de menu plus compacts.
+* Meilleure structure pour le [dialogue-admin](https://kb.i-doit.com/fr/bases/dialogue-admin.html).
 
-Please check the changelog for further details.
+Veuillez consulter le journal des modifications pour plus de détails.
 
 ## Add-ons
 
-Together with i-doit pro 23, we also provide a new version of the API add-on with additional bugfixes to further improve the user experience.
+En plus de i-doit pro 23, nous fournissons également une nouvelle version de l'add-on API avec des correctifs supplémentaires pour améliorer davantage l'expérience utilisateur.
 
-* [API 1.14](https://kb.i-doit.com/en/i-doit-pro-add-ons/api/index.html)
+* [API 1.14](https://kb.i-doit.com/fr/i-doit-pro-add-ons/api/index.html)

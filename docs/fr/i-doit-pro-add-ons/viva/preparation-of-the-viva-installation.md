@@ -1,64 +1,64 @@
-# Preparation of the VIVA installation
+# Préparation de l'installation de VIVA
 
-Before using the [i-doit pro add-on VIVA](../index.md) for the first time, you need to install it.
+Avant d'utiliser l'[extension VIVA de i-doit pro](../index.md) pour la première fois, vous devez l'installer.
 
-System requirements
+Exigences système
 -------------------
 
-In addition to the system [requirements](../../installation/system-requirements.md) and [system settings](../../installation/manual-installation/system-settings.md) generally applicable to i-doit, this add-on imposes the following conditions on the system on which it is installed:
+En plus des [exigences système](../../installation/system-requirements.md) et des [paramètres système](../../installation/manual-installation/system-settings.md) généralement applicables à i-doit, cette extension impose les conditions suivantes au système sur lequel elle est installée :
 
-An executable i-doit pro in the versions currently supported by Synetics is installed.  
-The PHP setting short_open_tag is enabled (On).  
-Optionally, Graphviz (in the form of the dot or neato binaries) is required on the system to create a cleaned up network and the PHP exec function is required to be allowed to run. This will not work on a Windows operating system.
+Un i-doit pro exécutable dans les versions actuellement prises en charge par Synetics est installé.  
+Le paramètre PHP short_open_tag est activé (On).  
+Facultativement, Graphviz (sous forme des binaires dot ou neato) est requis sur le système pour créer un réseau nettoyé et la fonction exec de PHP doit être autorisée à s'exécuter. Cela ne fonctionnera pas sur un système d'exploitation Windows.
 
-Download, install, update, (de)activate
+Téléchargement, installation, mise à jour, (dés)activation
 ---------------------------------------
 
-See article [i-doit pro add-ons](../index.md).
+Voir l'article sur les [extensions i-doit pro](../index.md).
 
-Rights management
+Gestion des droits
 -----------------
 
-i-doit pro has a fine-granular rights management, which is also used for VIVA. Rights can be assigned per user/user group under Administration → Rights System → VIVA. The following rights are available:
+i-doit pro dispose d'une gestion des droits fine et granulaire, qui est également utilisée pour VIVA. Les droits peuvent être attribués par utilisateur/groupe d'utilisateurs sous Administration → Système de droits → VIVA. Les droits suivants sont disponibles:
 
-Reading access: editing is not possible.  
-Writing access: reading, creating, saving and deleting information.  
-Administrative access: without restrictions.  
-To simplify the first steps, the eponymous person group VIVA is created during installation, which already has administrative rights. If persons are to receive these rights, it is sufficient to add them to this person group. In this way, the Admin person group is given administrative access.
+Lecture d'accès : l'édition n'est pas possible.  
+Accès en écriture : lecture, création, enregistrement et suppression d'informations.  
+Accès administratif : sans restrictions.  
+Pour simplifier les premières étapes, le groupe de personnes éponyme VIVA est créé lors de l'installation, qui dispose déjà de droits administratifs. Si des personnes doivent recevoir ces droits, il suffit de les ajouter à ce groupe de personnes. De cette manière, le groupe de personnes Admin obtient un accès administratif.
 
 !!! attention Note
 
-    After installation, the logged-in user does not yet have the corresponding group membership. Therefore, VIVA does not appear in the Extras menu. If the person object corresponding to the user has been added to the person group, the user must log in again once for the change to take effect. After that, the VIVA appears in the Extras menu.
+    Après l'installation, l'utilisateur connecté n'a pas encore l'appartenance au groupe correspondant. Par conséquent, VIVA n'apparaît pas dans le menu Extras. Si l'objet personne correspondant à l'utilisateur a été ajouté au groupe de personnes, l'utilisateur doit se reconnecter une fois pour que le changement prenne effet. Après cela, VIVA apparaît dans le menu Extras.
 
-Migrate from the previous ITGS module
+Migration du module ITGS précédent
 -------------------------------------
 
-Already since i-doit pro in version 0.9.9-6 pro, a module for documenting IT baseline protection-relevant information has been included. VIVA completely replaces it and extends it with numerous new functions. If documentation has already been carried out in the old module, this data can be transferred to VIVA without leaving any residues.
+Déjà depuis i-doit pro en version 0.9.9-6 pro, un module pour documenter les informations pertinentes pour la protection de la base IT a été inclus. VIVA le remplace complètement et l'étend avec de nombreuses nouvelles fonctions. Si une documentation a déjà été effectuée dans l'ancien module, ces données peuvent être transférées à VIVA sans laisser de résidus.
 
-Prepare migration
------------------
+Préparer la migration
+-----------------------
 
-In order to transfer the data from the old module as smoothly as possible, the following assumptions are made:
+Afin de transférer les données du vieux module aussi facilement que possible, les hypothèses suivantes sont faites :
 
-*   The IT-Grundschutz EL 11 catalogs from 2009 will be used in the old module.
-*   The EL 12 catalogs from 2011 are to be used in VIVA. The import must already have taken place.
-*   In the old module, the object type ITGS group has been used for the documentation of the target groups.
-*   Objects assigned to these \_ITGS groups\_ are of the same type, i.e. they correspond to the definition of target groups and objects.
-*   The IT-Grundschutz-relevant documentation is taken from the ITGS groups and those objects in i-doit that do not inherit their documentation from any ITGS group.
-*   These non-grouped objects are each transformed to target groups.
-*   Based on the title of the client used at runtime, a new information federation is created. Existing information groups in VIVA are not touched.
-*   The layer assignment of the groups is based on their linked modules.
+*   Les catalogues IT-Grundschutz EL 11 de 2009 seront utilisés dans l'ancien module.
+*   Les catalogues EL 12 de 2011 doivent être utilisés dans VIVA. L'importation doit déjà avoir eu lieu.
+*   Dans l'ancien module, le type d'objet groupe ITGS a été utilisé pour la documentation des groupes cibles.
+*   Les objets assignés à ces groupes ITGS sont du même type, c'est-à-dire qu'ils correspondent à la définition des groupes cibles et des objets.
+*   La documentation pertinente pour l'IT-Grundschutz est extraite des groupes ITGS et des objets dans i-doit qui n'héritent pas de leur documentation d'un groupe ITGS.
+*   Ces objets non regroupés sont chacun transformés en groupes cibles.
+*   Sur la base du titre du client utilisé en cours d'exécution, une nouvelle fédération d'informations est créée. Les groupes d'informations existants dans VIVA ne sont pas touchés.
+*   L'attribution de couche des groupes est basée sur leurs modules liés.
 
-Perform migration
------------------
+Effectuer la migration
+------------------------
 
-If the requirements are met and the old module is not (yet) deleted, the migration can be started via the web interface using VIVA → Migration. There you can choose between two actions:
+Si les exigences sont satisfaites et que l'ancien module n'est pas encore supprimé, la migration peut être lancée via l'interface web en utilisant VIVA → Migration. Vous pouvez choisir entre deux actions :
 
-*   Start migration ...
-*   Remove old module ...
+*   Démarrer la migration ...
+*   Supprimer l'ancien module ...
 
-The former guides through the migration and shows the progress of the respective steps. After the user has defined the ITGS groups as target groups and assigned them to an IT-Grundschutz layer, the migration is performed. When clicking on Finish, the user is redirected to the newly created information federation.
+Le premier guide à travers la migration et montre la progression des étapes respectives. Après que l'utilisateur a défini les groupes ITGS comme groupes cibles et les a assignés à une couche IT-Grundschutz, la migration est effectuée. En cliquant sur Terminer, l'utilisateur est redirigé vers la fédération d'informations nouvellement créée.
 
-Optionally, the old module including all data (objects, categories) can be deleted after the migration. This step is irrevocable.
+Facultativement, l'ancien module incluant toutes les données (objets, catégories) peut être supprimé après la migration. Cette étape est irrévocable.
 
-!!! attention "Before performing any of the above actions, a backup of the database and the i-doit installation should be made in order to be able to return to a working state in the event of an error."
+!!! attention "Avant d'effectuer l'une des actions ci-dessus, une sauvegarde de la base de données et de l'installation i-doit devrait être effectuée afin de pouvoir revenir à un état de fonctionnement en cas d'erreur."

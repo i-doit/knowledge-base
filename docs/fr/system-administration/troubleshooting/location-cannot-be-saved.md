@@ -1,21 +1,21 @@
-# Location Cannot Be Saved
+# L'emplacement ne peut pas être enregistré
 
-Problem
+Problème
 -------
 
-When saving in the Location category an error message appears:
+Lors de l'enregistrement dans la catégorie Emplacement, un message d'erreur apparaît :
 
-    Error!
+    Erreur!
     
-    CMDB Error: Database error : Query error: 'UPDATE isys_catg_location_list SET isys_catg_location_list__rgt = isys_catg_location_list__rgt + -4294967294 WHERE isys_catg_location_list__rgt > -1': BIGINT UNSIGNED value is out of range in '(`idoit_data`.`isys_catg_location_list`.`isys_catg_location_list__rgt` + -(4294967294))'
+    Erreur CMDB : Erreur de base de données : Erreur de requête : 'UPDATE isys_catg_location_list SET isys_catg_location_list__rgt = isys_catg_location_list__rgt + -4294967294 WHERE isys_catg_location_list__rgt > -1' : la valeur BIGINT UNSIGNED est hors de portée dans '(`idoit_data`.`isys_catg_location_list`.`isys_catg_location_list__rgt` + -(4294967294))'
 
-[![Problem](../../assets/images/en/system-administration/troubleshooting/location-can-not-be-saved/1-lcnbs.png)](../../assets/images/en/system-administration/troubleshooting/location-can-not-be-saved/1-lcnbs.png)
+[![Problème](../../assets/images/en/system-administration/troubleshooting/location-can-not-be-saved/1-lcnbs.png)](../../assets/images/en/system-administration/troubleshooting/location-can-not-be-saved/1-lcnbs.png)
 
-The exact wording can be slightly different. The result however is always the same: The location assignment is not saved.
+La formulation exacte peut être légèrement différente. Le résultat cependant est toujours le même : l'attribution de l'emplacement n'est pas enregistrée.
 
 Solution
 --------
 
-This problem can be caused by creating too many automated location assignments (e.g. via a [data import](../../consolidate-data/index.md)). The solution for this is to click the **Correction of locations** button at **Administration → Systemtools → Cache / Database → Database**. Afterwards the creation and editing of location assignments is possible again.
+Ce problème peut être causé par la création de trop nombreuses affectations d'emplacement automatisées (par exemple via une [importation de données](../../consolidate-data/index.md)). La solution consiste à cliquer sur le bouton **Correction des emplacements** dans **Administration → Outils système → Cache / Base de données → Base de données**. Ensuite, la création et la modification des affectations d'emplacement sont à nouveau possibles.
 
 [![Solution](../../assets/images/en/system-administration/troubleshooting/location-can-not-be-saved/1-lcnbs.png)](../../assets/images/en/system-administration/troubleshooting/location-can-not-be-saved/1-lcnbs.png)

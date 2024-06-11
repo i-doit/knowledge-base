@@ -1,39 +1,39 @@
 ---
-title: Namespace cmdb.status
+title: Espace de noms cmdb.status
 description: cmdb.status
 icon: material/api
 #status: updated
-lang: en
+lang: fr
 ---
 
-# Namespace cmdb.status
+# Espace de noms cmdb.status
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## cmdb.status.read
 
-Read all available states.
+Lire tous les états disponibles.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Required | Description |
-| --- | -------------- | -------- | ----------- |
-| -   | -              | -        | -           |
+| Clé | Type de données JSON | Requis | Description |
+| --- | -------------------- | ------ | ----------- |
+| -   | -                    | -      | -           |
 
-!!! example "WIP"
+!!! example "Travail en cours"
 
-    ### Response parameters
+    ### Paramètres de la réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+    | Clé             | Type de données JSON | Description |
+    | --------------- | -------------------- | ----------- |
+    | **Placeholder** | Placeholder          | Placeholder |
+    | **Placeholder** | Placeholder          | Placeholder |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -47,7 +47,7 @@ Read all available states.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -158,33 +158,31 @@ Read all available states.
 
 ## cmdb.status.save
 
-Create new or save existing state.
+Créer un nouvel état ou enregistrer un état existant.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key          | JSON data type | Required | Description                                            |
-| ------------ | -------------- | -------- | ------------------------------------------------------ |
-| **title**    | String         | Yes      | Status title                                           |
-| **constant** | String         | Yes      | Status constant                                        |
-| **color**    | String         | Yes      | Color in hex without leading `#`, for example `FF0000` |
+| Clé          | Type de données JSON | Requis | Description                                            |
+| ------------ | -------------------- | ------ | ------------------------------------------------------ |
+| **title**    | Chaîne de caractères | Oui    | Titre de l'état                                        |
+| **constant** | Chaîne de caractères | Oui    | Constante de l'état                                    |
+| **color**    | Chaîne de caractères | Oui    | Couleur en hexadécimal sans le `#` initial, par exemple `FF0000` |
 
-!!! example "WIP"
+### Paramètres de réponse
 
-    ### Response parameters
+La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Clé            | Type de données JSON | Description |
+| -------------- | --------------------- | ----------- |
+| **Placeholder** | Placeholder           | Placeholder |
+| **Placeholder** | Placeholder           | Placeholder |
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+### Exemple
 
-### Example
+=== "Corps de la requête"
 
-=== "Request body"
-
-    ```json
-    {
+```json
+{
       "version": "2.0",
       "method": "cmdb.status.save",
       "params": {
@@ -196,12 +194,12 @@ Create new or save existing state.
       },
       "id": 1
     }
-    ```
+```
 
-=== "Response body"
+=== "Corps de la réponse"
 
-    ```json
-    {
+```json
+{
       "id": 1,
       "jsonrpc": "2.0",
       "result": {
@@ -210,12 +208,12 @@ Create new or save existing state.
         "id": 15
       }
     }
-    ```
+```
 
-=== "or update Request body"
+=== "ou mettre à jour le corps de la requête"
 
-    ```json
-    {
+```json
+{
       "version": "2.0",
       "method": "cmdb.status.save",
       "params": {
@@ -228,35 +226,33 @@ Create new or save existing state.
       },
       "id": 1
     }
-    ```
+```
 
 ## cmdb.status.delete
 
-Purge a state.
+Purge un état.
 
-### Request parameters
+### Paramètres de requête
 
-| Key    | JSON data type | Required | Description           |
-| ------ | -------------- | -------- | --------------------- |
-| **id** | Integer        | Yes      | ID of the CMDB Status |
+| Clé   | Type de données JSON | Requis   | Description           |
+| ----- | -------------------- | -------- | --------------------- |
+| **id** | Entier               | Oui      | ID du statut CMDB     |
 
-!!! example "WIP"
+### Paramètres de réponse
 
-    ### Response parameters
+La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Clé            | Type de données JSON | Description |
+| -------------- | --------------------- | ----------- |
+| **Placeholder** | Placeholder           | Placeholder |
+| **Placeholder** | Placeholder           | Placeholder |
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+### Exemple
 
-### Example
+=== "Corps de la requête"
 
-=== "Request body"
-
-    ```json
-    {
+```json
+({
       "version": "2.0",
       "method": "cmdb.status.delete",
       "params": {
@@ -266,12 +262,12 @@ Purge a state.
       },
       "id": 1
     }
-    ```
+```
 
-=== "Response body"
+=== "Corps de la réponse"
 
-    ```json
-    {
+```json
+({
       "id": 1,
       "jsonrpc": "2.0",
       "result": {
@@ -279,4 +275,4 @@ Purge a state.
         "message": "Status purged"
       }
     }
-    ```
+```

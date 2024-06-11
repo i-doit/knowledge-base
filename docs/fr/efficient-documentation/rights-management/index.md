@@ -1,123 +1,123 @@
-# Rights Management
+# Gestion des droits
 
-Who is allowed to read and edit what data in i-doit?  
-This frequently asked question is based on the intention to create a user rights concept for your own IT documentation.  
-Not every person who is authorized for log-in should be allowed to read or even edit sensitive data.  
-i-doit has a comprehensive rights management to protect your IT documentation from unauthorized access and to preserve its integrity.
+Qui est autorisé à lire et à modifier quelles données dans i-doit?  
+Cette question fréquemment posée est basée sur l'intention de créer un concept de droits d'utilisateur pour votre propre documentation informatique.  
+Toute personne autorisée à se connecter ne devrait pas nécessairement être autorisée à lire ou même à modifier des données sensibles.  
+i-doit dispose d'une gestion complète des droits pour protéger votre documentation informatique contre tout accès non autorisé et préserver son intégrité.
 
-Persons and Person Groups
+Personnes et Groupes de Personnes
 
-You can assign rights to persons and groups of persons. When you assign a certain right to a group, all persons belonging to this group will inherit this permission. Users authorized for log-in are saved as objects of the type **Person** in i-doit. Groups have the type **Person groups**.
+Vous pouvez attribuer des droits à des personnes et des groupes de personnes. Lorsque vous attribuez un certain droit à un groupe, toutes les personnes appartenant à ce groupe hériteront de cette autorisation. Les utilisateurs autorisés à se connecter sont enregistrés en tant qu'objets de type **Personne** dans i-doit. Les groupes ont le type **Groupes de personnes**.
 
-!!! success "Create groups"
+!!! success "Créer des groupes"
 
-    It is a proven approach in the IT sector to create role concepts not for single users but for groups (often referred to as roles). In this way, handling is easier and smarter because users can be assigned to one or more groups. As a result, you only have to configure rights in a small number of points.
+    Il s'agit d'une approche éprouvée dans le secteur informatique de créer des concepts de rôles non pas pour des utilisateurs individuels mais pour des groupes (souvent appelés rôles). De cette manière, la manipulation est plus facile et plus intelligente car les utilisateurs peuvent être assignés à un ou plusieurs groupes. En conséquence, vous n'avez qu'à configurer les droits en un petit nombre de points.
 
-The default installation of i-doit has some **Person** objects which are assigned to **Person groups** and thus have predefined rights:
+La configuration par défaut d'i-doit comprend certains objets **Personne** qui sont assignés à des **Groupes de personnes** et ont ainsi des droits prédéfinis :
 
-| User | Password | Group | Rights (outline only) |
+| Utilisateur | Mot de passe | Groupe | Droits (aperçu uniquement) |
 | --- | --- | --- | --- |
-| admin | admin | Admin | All rights, also for administration |
-| archivar | archivar | Archivar | Read and edit |
-| author | author | Author | Create, edit, [archive](../../basics/life-and-documentation-cycle.md) and execute |
-| editor | editor | Editor | Read and edit |
-| reader | reader | Reader | Read |
+| admin | admin | Admin | Tous les droits, également pour l'administration |
+| archivar | archivar | Archivar | Lecture et modification |
+| auteur | auteur | Auteur | Créer, modifier, [archiver](../../basics/life-and-documentation-cycle.md) et exécuter |
+| éditeur | éditeur | Éditeur | Lecture et modification |
+| lecteur | lecteur | Lecteur | Lecture |
 
-The listed users inherit their rights through the groups of the same name.
+Les utilisateurs répertoriés héritent de leurs droits à travers les groupes portant le même nom.
 
-!!! success "Connect rights to LDAP/AD"
+!!! success "Connecter les droits à LDAP/AD"
 
-    As already described in the article for [Initial Login](../../basics/initial-login.md), it makes sense to automate assignments of persons and groups with the connection to an [LDAP folder/ Active Directory (AD)](../../user-authentication-and-management/ldap-directory/index.md).
+    Comme déjà décrit dans l'article sur [Connexion initiale](../../basics/initial-login.md), il est judicieux d'automatiser les affectations de personnes et de groupes avec la connexion à un [dossier LDAP/Active Directory (AD)](../../user-authentication-and-management/ldap-directory/index.md).
 
-Positive Rights
+Droits Positifs
 ---------------
 
-The i-doit rights management follows the concept of positive rights. That means that you can assign permissions to persons or groups but you can't take them away.
+La gestion des droits d'i-doit suit le concept de droits positifs. Cela signifie que vous pouvez attribuer des autorisations à des personnes ou des groupes, mais vous ne pouvez pas les retirer.
 
-Example: Person X is assigned to the groups **Admin** and **Reader**. Although the **Reader** group only has read rights in i-doit, person X is authorized to do everything, as person X also received rights of the **Admin** group which is permitted to do everything in i-doit.
+Exemple : La personne X est assignée aux groupes **Admin** et **Reader**. Bien que le groupe **Reader** ait uniquement des droits de lecture dans i-doit, la personne X est autorisée à tout faire, car la personne X a également reçu les droits du groupe **Admin** qui est autorisé à tout faire dans i-doit.
 
-Additive Rights
+Droits Additifs
 ---------------
 
-Furthermore, the rights add. If somebody is assigned to several groups, this person inherits the rights of all groups. Likewise, rights add when rights are assigned to the person and the person's corresponding groups.
+De plus, les droits s'ajoutent. Si quelqu'un est assigné à plusieurs groupes, cette personne hérite des droits de tous les groupes. De même, les droits s'ajoutent lorsque des droits sont attribués à la personne et aux groupes correspondants de la personne.
 
-Example: Person X is in the **Reader** group and allowed to read everything but not to edit data in i-doit. Additionally, person X obtains the right to create [reports](../../evaluation/report-manager.md). For this person this right is added to the permissions of the **Reader** group.
+Exemple : La personne X est dans le groupe **Reader** et autorisée à tout lire mais pas à modifier les données dans i-doit. De plus, la personne X obtient le droit de créer des [rapports](../../evaluation/report-manager.md). Pour cette personne, ce droit est ajouté aux autorisations du groupe **Reader**.
 
-General Structure of the Configuration
+Structure Générale de la Configuration
 --------------------------------------
 
-For each module the configuration is always structured in the same way, only the rights differ. In the first step you either select an object of the type **Person** or **Person group** in the field **Person / Person group**. When you type the object title, matching objects will be suggested. A click on the **Load rights**  button loads the configuration which is saved for this module.
+Pour chaque module, la configuration est toujours structurée de la même manière, seuls les droits diffèrent. Dans un premier temps, vous sélectionnez un objet du type **Personne** ou **Groupe de personnes** dans le champ **Personne / Groupe de personnes**. Lorsque vous saisissez le titre de l'objet, des objets correspondants seront suggérés. Un clic sur le bouton **Charger les droits** charge la configuration qui est enregistrée pour ce module.
 
-If a person inherits rights of associated groups, these inherited rights are also displayed, when rights for this specified person object are loaded. However, the inherited rights can't be modified and so they are shown as grayed out.
+Si une personne hérite des droits de groupes associés, ces droits hérités sont également affichés lorsque les droits pour cet objet de personne spécifié sont chargés. Cependant, les droits hérités ne peuvent pas être modifiés et sont donc affichés en gris.
 
-The configuration in the Web GUI is structured in tabular form.
+La configuration dans l'interface graphique Web est structurée sous forme de tableau.
 
-| [![icon](../../assets/images/en/efficient-documentation/rights-management/1-rm.png)](../../assets/images/en/efficient-documentation/rights-management/1-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/2-rm.png)](../../assets/images/en/efficient-documentation/rights-management/2-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/3-rm.png)](../../assets/images/en/efficient-documentation/rights-management/3-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/4-rm.png)](../../assets/images/en/efficient-documentation/rights-management/4-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/5-rm.png)](../../assets/images/en/efficient-documentation/rights-management/5-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/6-rm.png)](../../assets/images/en/efficient-documentation/rights-management/6-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/7-rm.png)](../../assets/images/en/efficient-documentation/rights-management/7-rm.png) | Condition | Parameter | Action |
+| [![icon](../../assets/images/en/efficient-documentation/rights-management/1-rm.png)](../../assets/images/en/efficient-documentation/rights-management/1-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/2-rm.png)](../../assets/images/en/efficient-documentation/rights-management/2-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/3-rm.png)](../../assets/images/en/efficient-documentation/rights-management/3-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/4-rm.png)](../../assets/images/en/efficient-documentation/rights-management/4-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/5-rm.png)](../../assets/images/en/efficient-documentation/rights-management/5-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/6-rm.png)](../../assets/images/en/efficient-documentation/rights-management/6-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/7-rm.png)](../../assets/images/en/efficient-documentation/rights-management/7-rm.png) | Condition | Paramètre | Action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Create | Read | Edit | Archive | Delete | Execute | Administrator | What area is involved? | Optional parameters | [![](../../assets/images/en/efficient-documentation/rights-management/8-rm.png)](../../assets/images/en/efficient-documentation/rights-management/8-rm.png) Remove right |
+| Créer | Lire | Modifier | Archiver | Supprimer | Exécuter | Administrateur | Quel domaine est concerné ? | Paramètres optionnels | [![](../../assets/images/en/efficient-documentation/rights-management/8-rm.png)](../../assets/images/en/efficient-documentation/rights-management/8-rm.png) Supprimer le droit |
 
-The **Condition** is selected from a drop-down menu. The first columns assign precise authorizations for this condition. Partly they are shown as grayed out and thus can't be activated because it makes no sense to assign rights for the condition in question. The optional parameters are also dependent on the condition. In the last column you can carry out actions (until now: remove rights).
+Le **Condition** est sélectionné à partir d'un menu déroulant. Les premières colonnes attribuent des autorisations précises pour cette condition. En partie, elles sont affichées en gris et ne peuvent donc pas être activées car il n'a pas de sens d'attribuer des droits pour la condition en question. Les paramètres optionnels dépendent également de la condition. Dans la dernière colonne, vous pouvez effectuer des actions (jusqu'à présent : supprimer des droits).
 
 [![Condition](../../assets/images/en/efficient-documentation/rights-management/9-rm.png)](../../assets/images/en/efficient-documentation/rights-management/9-rm.png)
 
-With a click on the **New right** button you can add a new line to the table.
+En cliquant sur le bouton **Nouveau droit**, vous pouvez ajouter une nouvelle ligne au tableau.
 
-!!! success "Test rights"
+!!! success "Droits de test"
 
-    In order to test the consequences for the configuration, you could open a second browser (for example, in "private mode") and log in with a user who is affected by the configuration changes. You could also generate a test user whom you assign to the groups to be tested.
+    Pour tester les conséquences de la configuration, vous pourriez ouvrir un deuxième navigateur (par exemple, en mode "privé") et vous connecter avec un utilisateur affecté par les changements de configuration. Vous pourriez également générer un utilisateur de test que vous attribuez aux groupes à tester.
 
-When you are ready with all the desired configurations, activate the rights with the **Save** button.
+Lorsque vous avez terminé avec toutes les configurations souhaitées, activez les droits avec le bouton **Enregistrer**.
 
-!!! attention "Renew cache"
+!!! attention "Renouveler le cache"
 
-    Sometimes it may be the case that rights are not activated immediately, for example, because the users in question are still logged in. In order to activate the new rights you have to renew the rights cache with **Administration → System tools → Cache / Database → Cache → Clear auth-system cache**. We also suggest to renew the cache [automatically with Cronjob on a regular basis](../../i-doit-pro-add-ons/api/index.md).
+    Il se peut parfois que les droits ne soient pas activés immédiatement, par exemple, parce que les utilisateurs en question sont toujours connectés. Pour activer les nouveaux droits, vous devez renouveler le cache des droits avec **Administration → Outils système → Cache / Base de données → Cache → Effacer le cache d'authentification**. Nous vous suggérons également de renouveler le cache [automatiquement avec un Cronjob régulièrement](../../i-doit-pro-add-ons/api/index.md).
 
 Modules
 -------
 
-In order to keep the rights management in a clear structure all rights are divided into modules. You can find the modules under **Administration → Authorization System → Rights**.
+Afin de maintenir la gestion des droits dans une structure claire, tous les droits sont divisés en modules. Vous pouvez trouver les modules sous **Administration → Système d'autorisation → Droits**.
 
 *   **Administration**
 *   **Analyse**
-*   **Authorization system**
+*   **Système d'autorisation**
 *   **[CMDB](./cmdb-right-management.md)**
-*   **Dashboard**
+*   **Tableau de bord**
 *   **Dialog-Admin**
 *   **Documents**
-*   **Events**
+*   **Événements**
 *   **Export**
-*   **Floorplan**
-*   **Import**
-*   **Logbook**
+*   **Plan d'étage**
+*   **Importation**
+*   **Journal**
 *   **Maintenance**
 *   **Nagios**
 *   **Notifications**
-*   **Object swap**
-*   **Relocate-CI**
-*   **Report Manager**
-*   **Search**
+*   **Échange d'objets**
+*   **Relocaliser-CI**
+*   **Gestionnaire de rapports**
+*   **Recherche**
 *   **Services**
-*   **Templates/ Mass changes**
+*   **Modèles/ Changements massifs**
 *   **VIVA**
-*   **Wiring**
+*   **Câblage**
 
-Restore Rights
+Restauration des droits
 --------------
 
-With **Administration → Authorization system → Authorization system reset** you can assign all rights to the user with whom you are currently logged in. This means that all available rights are assigned to the person object of this user. You have to enter the credentials for the [Admin Center](../../system-administration/admin-center.md) to activate this function.
+Avec **Administration → Système d'autorisation → Réinitialisation du système d'autorisation**, vous pouvez attribuer tous les droits à l'utilisateur avec lequel vous êtes actuellement connecté. Cela signifie que tous les droits disponibles sont attribués à l'objet personne de cet utilisateur. Vous devez saisir les informations d'identification pour le [Centre d'administration](../../system-administration/admin-center.md) pour activer cette fonction.
 
-Deactivation of Authorization System
+Désactivation du système d'autorisation
 ------------------------------------
 
-You can deactive the rights management to assign all rights to all users with **Administration → System Settings → System Parameters** **→ Authorization System**.
+Vous pouvez désactiver la gestion des droits pour attribuer tous les droits à tous les utilisateurs avec **Administration → Paramètres du système → Paramètres du système** **→ Système d'autorisation**.
 
-Authorization Config Category
+Catégorie de configuration d'autorisation
 -----------------------------
 
-Additionally to the object types **Persons** and **Person groups** there is the **Authorization config** category. This category provides a strongly simplified configuration concerning the rights management of the above mentioned modules. The rights **Read**, **Edit**, **Archive**, **Delete**, **Execute** and **Administrator** are available for the single modules. This function is similar to the simple rights management of older i-doit versions. To see and apply this category you require the **Administrator** right for this category in the **CMDB** module.
+En plus des types d'objets **Personnes** et **Groupes de personnes**, il existe la catégorie **Configuration d'autorisation**. Cette catégorie offre une configuration fortement simplifiée concernant la gestion des droits des modules mentionnés ci-dessus. Les droits **Lire**, **Modifier**, **Archiver**, **Supprimer**, **Exécuter** et **Administrateur** sont disponibles pour les modules individuels. Cette fonction est similaire à la gestion des droits simple des anciennes versions d'i-doit. Pour voir et appliquer cette catégorie, vous avez besoin du droit **Administrateur** pour cette catégorie dans le module **CMDB**.
 
-[![Authorization Config Category](../../assets/images/en/efficient-documentation/rights-management/10-rm.png)](../../assets/images/en/efficient-documentation/rights-management/10-rm.png)
+[![Catégorie de configuration d'autorisation](../../assets/images/en/efficient-documentation/rights-management/10-rm.png)](../../assets/images/en/efficient-documentation/rights-management/10-rm.png)
 
-!!! attention "General idea"
+!!! attention "Idée générale"
 
-    The **Authorization config** category offered the users of the then existing rights management a smooth changeover when the new rights management was introduced. However, now this category has become much less important. Therefore you shouldn't use it anymore. Under no circumstances you should mix the rights of single modules with configurations in this category at the same time.
+    La catégorie de configuration d'**autorisation** offrait aux utilisateurs de la gestion des droits existante une transition en douceur lors de l'introduction de la nouvelle gestion des droits. Cependant, cette catégorie est maintenant devenue beaucoup moins importante. Par conséquent, vous ne devriez plus l'utiliser. En aucun cas, vous ne devriez mélanger les droits des modules individuels avec les configurations de cette catégorie en même temps.

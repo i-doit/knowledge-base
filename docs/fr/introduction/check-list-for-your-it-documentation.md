@@ -1,47 +1,47 @@
-# Check List for Your IT Documentation
+# Liste de vérification pour votre documentation informatique
 
-A good [IT documentation](../glossary.md): What is it that makes a difference? At bookshops you can find extensive literature to deal with the subject in detail and as a whole.
+Une bonne [documentation informatique](../glossary.md) : Qu'est-ce qui fait la différence ? Dans les librairies, vous pouvez trouver une littérature étendue pour traiter le sujet en détail et dans son ensemble.
 
-Our suggestion: Quick successful results first, and then you can consider things as a whole. The following checklist helps you to take a pragmatic approach to achieve first successes. But nevertheless, we recommend the literature ;-)!
+Notre suggestion : Obtenez d'abord des résultats rapides et réussis, puis vous pourrez considérer les choses dans leur ensemble. La liste de contrôle suivante vous aide à adopter une approche pragmatique pour obtenir des premiers succès. Néanmoins, nous recommandons la littérature ;-) !
 
-| #   | Checkpoints | Implemented by | Date of implementation | Status |
+| #   | Points de contrôle | Mis en place par | Date de mise en place | Statut |
 | --- | --- | --- | --- | --- |
-| 1. Organizational preparations |     |     |     |     |
-| 1.1 | Have you clarified all requirements for the IT documentation?<br><br>(What do you want to document? What benefits do you want to generate?) |     |     |     |
-| 1.2 | Did you define a team for the management and development of the IT documentation? |     |     |     |
-| 1.3 | Did you involve also staff and specialist departments who are supposed to work with the IT documentation? |     |     |     |
-| 1.4 | Did you consider the previous documentation? Have you decided if you want to keep it (or parts of it) or if it shall be renewed? |     |     |     |
-| 1.5 | Have you clarified which third-party applications you want to integrate in your IT documentation? |     |     |     |
-| 1.6 | Did you define milestones specifying which targets you want to reach and when? When do you want to apply the IT documentation in a productive way? |     |     |     |
-| 2. Learn to know i-doit |     |     |     |     |
-| 2.1 | Did you order a test license?<br><br>Did you make an evaluation with respect to your requirements? |     |     |     |
-| 2.2 | Do you know the i-doit basics? (Did you participate in a webinar covering the basics? Did you read the Knowledge Base?) |     |     |     |
-| 2.3 | Did you purchase i-doit?<br><br>(Did you subscribe to an object package and conclude a support contract?) |     |     |     |
-| 3. Implementation of i-doit |     |     |     |     |
-| 3.1 | Is a pre-configured (virtual) machine available covering all system requirements? Are all the required system settings carried out? |     |     |     |
-| 3.2 | Is i-doit installed? |     |     |     |
-| 3.3 | Is the license installed? |     |     |     |
-| 3.4 | Did you set up the essential Cronjobs? |     |     |     |
-| 3.4 | Did you set up a backup and recovery procedure? |     |     |     |
-| 3.5 | Did you set up a test system?<br><br>(This is an option which may cause additional costs.) |     |     |     |
-| 4. Configuration of i-doit |     |     |     |     |
-| 4.1 | Did you integrate all relevant third-party applications? Did you test the respective integration? |     |     |     |
-| 4.2 | Did you define all persons and person groups authorized for login? |     |     |     |
-| 4.3 | Did you remove the login-rights of the preinstalled persons or did you change their passwords? |     |     |     |
-| 4.4 | Are the relevant object types activated and the others deactivated? |     |     |     |
-| 4.5 | Are the relevant categories assigned to the object types and the others deactivated? |     |     |     |
-| 4.6 | Did you create additional object types which you require? Are they configured with the relevant categories? |     |     |     |
-| 4.7 | Are the additional attributes which you require mapped by custom categories? Are they assigned to object types? |     |     |     |
-| 4.8 | Did you pre-configure the object lists globally for all persons authorized for login? |     |     |     |
-| 4.9 | Did you pre-configure the dashboard globally for all persons authorized for login? |     |     |     |
-| 5. Initial Filling |     |     |     |     |
-| 5.1 | Has the previous documentation been replaced (for example, Excel sheets by CSV import)? |     |     |     |
-| 5.2 | Have you automated the data imports (for example, JDisc, OCS Inventory NG, CSV files)? |     |     |     |
-| 5.3 | Have the manual (re-) works been finished? |     |     |     |
-| 6. Using i-doit productively |     |     |     |     |
-| 6.1 | Did you integrate the IT documentation into all relevant (manual/automated) processes? |     |     |     |
-| 6.2 | Are the persons authorized for login well-trained? (Trainings, if necessary?) |     |     |     |
-| 6.3 | Are all the requirements fulfilled? |     |     |     |
-| 6.4 | Did you initiate mechanisms to adapt your IT documentation constantly to new requirements? (Follow-up projects, meetings on a regular basis?) |     |     |     |
+| 1. Préparatifs organisationnels |     |     |     |     |
+| 1.1 | Avez-vous clarifié tous les besoins pour la documentation informatique ?<br><br>(Que voulez-vous documenter ? Quels avantages voulez-vous en tirer ?) |     |     |     |
+| 1.2 | Avez-vous défini une équipe pour la gestion et le développement de la documentation informatique ? |     |     |     |
+| 1.3 | Avez-vous impliqué également le personnel et les départements spécialisés qui sont censés travailler avec la documentation informatique ? |     |     |     |
+| 1.4 | Avez-vous pris en compte la documentation précédente ? Avez-vous décidé si vous souhaitez la conserver (ou des parties de celle-ci) ou si elle doit être renouvelée ? |     |     |     |
+| 1.5 | Avez-vous clarifié quelles applications tierces vous souhaitez intégrer dans votre documentation informatique ? |     |     |     |
+| 1.6 | Avez-vous défini des jalons précisant quels objectifs vous souhaitez atteindre et quand ? Quand souhaitez-vous appliquer la documentation informatique de manière productive ? |     |     |     |
+| 2. Apprendre à connaître i-doit |     |     |     |     |
+| 2.1 | Avez-vous commandé une licence de test ?<br><br>Avez-vous effectué une évaluation par rapport à vos besoins ? |     |     |     |
+| 2.2 | Connaissez-vous les bases d'i-doit ? (Avez-vous participé à un webinaire couvrant les bases ? Avez-vous lu la base de connaissances ?) |     |     |     |
+| 2.3 | Avez-vous acheté i-doit ?<br><br>(Avez-vous souscrit à un package d'objets et conclu un contrat de support ?) |     |     |     |
+| 3. Mise en œuvre de i-doit |     |     |     |     |
+| 3.1 | Une machine (virtuelle) préconfigurée est-elle disponible couvrant tous les besoins du système ? Tous les paramètres système requis sont-ils effectués ? |     |     |     |
+| 3.2 | i-doit est-il installé ? |     |     |     |
+| 3.3 | La licence est-elle installée ? |     |     |     |
+| 3.4 | Avez-vous configuré les tâches Cron essentielles ? |     |     |     |
+| 3.4 | Avez-vous mis en place une procédure de sauvegarde et de récupération ? |     |     |     |
+| 3.5 | Avez-vous mis en place un système de test ?<br><br>(C'est une option qui peut entraîner des coûts supplémentaires.) |     |     |     |
+| 4. Configuration de i-doit |     |     |     |     |
+| 4.1 | Avez-vous intégré toutes les applications tierces pertinentes ? Avez-vous testé l'intégration respective ? |     |     |     |
+| 4.2 | Avez-vous défini toutes les personnes et groupes de personnes autorisés à se connecter ? |     |     |     |
+| 4.3 | Avez-vous supprimé les droits de connexion des personnes préinstallées ou avez-vous changé leurs mots de passe ? |     |     |     |
+| 4.4 | Les types d'objets pertinents sont-ils activés et les autres désactivés ? |     |     |     |
+| 4.5 | Les catégories pertinentes sont-elles attribuées aux types d'objets et les autres désactivées ? |     |     |     |
+| 4.6 | Avez-vous créé des types d'objets supplémentaires dont vous avez besoin ? Sont-ils configurés avec les catégories pertinentes ? |     |     |     |
+| 4.7 | Les attributs supplémentaires dont vous avez besoin sont-ils cartographiés par des catégories personnalisées ? Sont-ils attribués aux types d'objets ? |     |     |     |
+| 4.8 | Avez-vous préconfiguré les listes d'objets globalement pour toutes les personnes autorisées à se connecter ? |     |     |     |
+| 4.9 | Avez-vous préconfiguré le tableau de bord globalement pour toutes les personnes autorisées à se connecter ? |     |     |     |
+| 5. Remplissage initial |     |     |     |     |
+| 5.1 | La documentation précédente a-t-elle été remplacée (par exemple, des feuilles Excel par importation CSV) ? |     |     |     |
+| 5.2 | Avez-vous automatisé les importations de données (par exemple, JDisc, OCS Inventory NG, fichiers CSV) ? |     |     |     |
+| 5.3 | Les travaux manuels (de re-) ont-ils été terminés ? |     |     |     |
+| 6. Utilisation productive de i-doit |     |     |     |     |
+| 6.1 | Avez-vous intégré la documentation informatique dans tous les processus pertinents (manuels/automatisés) ? |     |     |     |
+| 6.2 | Les personnes autorisées à se connecter sont-elles bien formées ? (Formations, si nécessaire ?) |     |     |     |
+| 6.3 | Tous les besoins sont-ils satisfaits ? |     |     |     |
+| 6.4 | Avez-vous initié des mécanismes pour adapter constamment votre documentation informatique aux nouvelles exigences ? (Projets de suivi, réunions régulières ?) |     |     |     |
 
-Was this checklist helpful? Do you have any other suggestions or additions? We are happy to receive your feedback!
+Avez-vous trouvé cette liste de contrôle utile? Avez-vous d'autres suggestions ou ajouts? Nous sommes heureux de recevoir vos commentaires!

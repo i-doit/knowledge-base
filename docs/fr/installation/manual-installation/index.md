@@ -1,29 +1,29 @@
-# Manual installation
+# Installation manuelle {/ * exemples * /}
 
-This article describes the manual [IT documentation](../../glossary.md) of i-doit. The required software packages are installed and configured independently. Afterwards, i-doit is downloaded and installed. The necessary steps for Cronjobs and backups also have to be carried out by the user.
+Cet article décrit la documentation pour l'installation manuelle d'i-doit. Les packages logiciels requis doivent être installés et configurés indépendamment. Ensuite, i-doit doit être téléchargé et installé. Les étapes nécessaires pour les tâches Cron et les sauvegardes doivent également être effectuées par l'utilisateur.
 
-## Scope
+## Portée {/ * exemples * /}
 
-:material-check: Installation of software packages<br>
-:material-check: Configuration of software packages<br>
-:material-check: Installation of i-doit<br>
-:material-check: Set-up of Cronjobs<br>
-:material-check: Set-up of backups<br>
-:material-check: Set-up of Restore
+:material-check: Installation des packages logiciels<br>
+:material-check: Configuration des packages logiciels<br>
+:material-check: Installation d'i-doit<br>
+:material-check: Configuration des tâches Cron<br>
+:material-check: Configuration des sauvegardes<br>
+:material-check: Configuration de la restauration
 
-## Requirements
+## Exigences {/ * exemples * /}
 
--   The [system requirements](../system-requirements.md) **have to be fulfilled** .
--   One of the [supported](../system-requirements.md) GNU/Linux operating systems is installed with its current updates.
--   The system is able to access package repositories via an **internet connection** .
--   The Apache module (**mod_php**) is applied. Alternative methods (Fast CGI, HHVM) are not taken into consideration.
--   Furthermore a simplified setup is required **i-doit is the main application** of the system and Apache Web Server, PHP as well as MariaDB/MySQL are installed locally.
--   **Firewall rules and open ports** i-doit is a typical web application, which means that i-doit is accessed via web browser for basic functionality. This usually happens via port 80 (unencrypted) or port 443 (encrypted). If a firewall is used, these ports have to be opened for incoming TCP connections. It is possible that you need further rules when you use additional functions ([notifications](../../evaluation/notifications.md), [interfaces to third-party applications](../../automation-and-integration/index.md)). The communication between i-doit and MySQL/MariaDB is carried out locally (port 3306 TCP) and normally no extra firewall rules are necessary for this.
--   **Security frameworks:** Please carry out the necessary configurations if a security framework, such as **AppAmor** or **SELinux**, is installed.
+-   Les [exigences système](../system-requirements.md) **doivent être remplies** .
+-   L'un des systèmes d'exploitation GNU/Linux [pris en charge](../system-requirements.md) doit être installé avec ses mises à jour actuelles.
+-   Le système doit pouvoir accéder aux référentiels de packages via une **connexion Internet** .
+-   Le module Apache (**mod_php**) doit être appliqué. Les méthodes alternatives (Fast CGI, HHVM) ne sont pas prises en compte.
+-   De plus, une configuration simplifiée est requise **i-doit est l'application principale** du système et Apache Web Server, PHP ainsi que MariaDB/MySQL doivent être installés localement.
+-   **Règles de pare-feu et ports ouverts** i-doit est une application web typique, ce qui signifie qu'i-doit est accessible via un navigateur web pour des fonctionnalités de base. Cela se fait généralement via le port 80 (non crypté) ou le port 443 (crypté). Si un pare-feu est utilisé, ces ports doivent être ouverts pour les connexions TCP entrantes. Il est possible que vous ayez besoin de règles supplémentaires lorsque vous utilisez des fonctions supplémentaires ([notifications](../../evaluation/notifications.md), [interfaces vers des applications tierces](../../automation-and-integration/index.md)). La communication entre i-doit et MySQL/MariaDB est effectuée localement (port 3306 TCP) et normalement aucune règle de pare-feu supplémentaire n'est nécessaire pour cela.
+-   **Cadres de sécurité:** Veuillez effectuer les configurations nécessaires si un cadre de sécurité, tel que **AppArmor** ou **SELinux**, est installé.
 
-## Next Steps
+## Étapes suivantes {/ * exemples * /}
 
-The specific steps depend on the selected operating system:
+Les étapes spécifiques dépendent du système d'exploitation sélectionné:
 
 -   [Debian 12 GNU/Linux](debian12.md)
 -   [Red Hat Enterprise Linux (RHEL)](red-hat-enterprise-linux/index.md)

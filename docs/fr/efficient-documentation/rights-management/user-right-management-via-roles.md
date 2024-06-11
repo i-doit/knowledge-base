@@ -1,26 +1,26 @@
-# User right management via roles
+# Gestion des droits utilisateur via les rôles
 
-With version [1.18.2](../../version-history/release-notes/release-notes-1.18/release-notes-1.18.2.md) we have added a new way of assigning rights in i-doit. It is now possible to give users or groups rights to objects by linking them via the contact assignment. Furthermore, the rights can also be linked to the assignment of certain roles.
+Avec la version [1.18.2](../../version-history/release-notes/release-notes-1.18/release-notes-1.18.2.md), nous avons ajouté une nouvelle façon d'attribuer des droits dans i-doit. Il est désormais possible de donner des droits aux utilisateurs ou aux groupes sur des objets en les liant via l'attribution de contact. De plus, les droits peuvent également être liés à l'attribution de certains rôles.
 
-## Create a Persongroup and add a user the group
+## Créer un groupe de personnes et ajouter un utilisateur au groupe
 
-Für unser Beispiel erstelle ich eine Test Gruppe in i-doit "User Rights to Objects" und packe einen "Test User" in die Mitgliederzuweisung der Gruppe.<br>
-Create a Persongroup object and a Person object. Add the Person as member to the Persongroup, via Members category.
+Pour notre exemple, créons un objet Groupe de personnes dans i-doit "Droits utilisateur sur les objets" et ajoutons un "Utilisateur de test" à l'attribution des membres du groupe.<br>
+Créez un objet Groupe de personnes et un objet Personne. Ajoutez la Personne en tant que membre du Groupe de personnes, via la catégorie Membres.
 
-## Rights assignment
+## Attribution des droits
 
-Now open the ==Administration -> User permissions== and open for example CMDB. Here you insert the title of the Persongroup object into `Person / Group` field or select a persongroup via the `Select` button and load the rights.<br>
+Ouvrez maintenant la ==Administration -> Autorisations utilisateur== et ouvrez par exemple CMDB. Ici, vous insérez le titre de l'objet Groupe de personnes dans le champ `Personne / Groupe` ou sélectionnez un groupe de personnes via le bouton `Sélectionner` et chargez les droits.<br>
 
-### Condition: Objects with assigned role in contact assignment
+### Condition : Objets avec rôle attribué dans l'attribution de contact
 
-Here you can set the appropriate rights (View, Edit, Archive, Delete, Execute, Administrator) and then select among the parameters either all available roles or only one or more roles that should be used for the assignment of rights.
+Ici, vous pouvez définir les droits appropriés (Afficher, Modifier, Archiver, Supprimer, Exécuter, Administrateur) et ensuite sélectionner parmi les paramètres soit tous les rôles disponibles, soit un ou plusieurs rôles qui devraient être utilisés pour l'attribution des droits.
 
-### Condition: Categories in objects with assigned role in contact assignment
+### Condition: Catégories dans les objets avec rôle assigné dans l'attribution de contact {/examples/}
 
-Here you can set the appropriate rights (Create, View, Edit, Archive, Delete, Execute, Administrator) and then select among the parameters either all available roles or only one or more roles and define whether all or only certain categories should be used for the assignment of rights.
+Ici, vous pouvez définir les droits appropriés (Créer, Afficher, Modifier, Archiver, Supprimer, Exécuter, Administrateur) puis sélectionner parmi les paramètres soit tous les rôles disponibles, soit un ou plusieurs rôles et définir si toutes les catégories ou seulement certaines doivent être utilisées pour l'attribution des droits.
 
-### Example configuration
+### Exemple de configuration {/examples/}
 
-In diesem Beispiel bekommen dann alle Benutzer die Mitglied in der Gruppe "User Rights to Objects" bei Objekten wo Sie in der Kontaktzuweisung mit der Rolle Mitarbeiter verknüpft sind Rechte auf diese Objekte:
+Dans cet exemple, tous les utilisateurs membres du groupe "Droits utilisateur sur les objets" pour les objets où ils sont liés à un contact avec le rôle d'employé obtiennent des droits sur ces objets :
 
-[![Assigned rights](../../assets/images/en/efficient-documentation/rights-management/user-right-management-via-roles/1-urmvr.png)](../../assets/images/en/efficient-documentation/rights-management/user-right-management-via-roles/1-urmvr.png)
+[![Droits assignés](../../assets/images/en/efficient-documentation/rights-management/user-right-management-via-roles/1-urmvr.png)](../../assets/images/en/efficient-documentation/rights-management/user-right-management-via-roles/1-urmvr.png)

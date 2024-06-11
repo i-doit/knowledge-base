@@ -1,17 +1,19 @@
-# SMTP configuration (E-Mail)
+# Configuration SMTP (E-Mail)
 
-Here you can configure the mail server used by i-doit.
+Ici, vous pouvez configurer le serveur de messagerie utilisé par i-doit.
 
-| Option | Value |
+| Option | Valeur |
 | - | - |
-| SMTP Host | Hostname or URL |
-| SMTP Port	| Port |
-| SMTP Username | Username |
-| SMTP Password	| Password |
-| SMTP TLS | Yes or No |
-| Sender | E-Mail address |
-| Name | Name |
-| Timeout | Value in seconds |
-| SMTP Debug | Yes or no |
-| Subject prefix | String |
-| Notification template for maintenance contract | HTMl |
+| Hôte SMTP | Nom d'hôte ou URL |
+| Port SMTP | Port |
+| Nom d'utilisateur SMTP | Nom d'utilisateur |
+| Mot de passe SMTP | Mot de passe |
+| SMTP TLS | Oui ou Non |
+| Expéditeur | Adresse e-mail |
+| Nom | Nom |
+| Délai d'attente | Valeur en secondes |
+| Débogage SMTP | Oui ou non |
+| Préfixe du sujet | Chaîne |
+| Modèle de notification pour le contrat de maintenance | HTML |
+
+{/*examples*/}

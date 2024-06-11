@@ -1,98 +1,99 @@
-# Changelog 1.13
+# Journal des modifications 1.13
 
-[Task][List editing] Multiple hardware RAIDS appear in list edit although none were created  
-[Improvement][Code (internal)] Securiy update for external libraries  
-[Improvement][Code (internal)] i-doit no longer supports PHP 5.6, minimum requirement is PHP 7  
-[Improvement][Code (internal)] Check for duplicate assigned categories after add-on installation  
-[Improvement][LDAP] Sync attributes objectSid and objectGUID via LDAP  
-[Improvement][Update] Improve i-doit updater  
-[Improvement][Installation] Compatibility for PHP 7.3  
-[Improvement][Installation] Add support for newer MariaDB versions  
-[Improvement][Lists] New attribute "contact + role" for object lists - thanks to Christian Haase  
-[Improvement][Service] Services: Service View for other object types in the menu-tree  
-[Improvement][Console-base Installation/Update/Licensing] Console-based management of i-doit tenants  
-[Improvement][Console-base Installation/Update/Licensing] Console-based Licensing of i-doit  
-[Improvement][Console-base Installation/Update/Licensing] Console-based management of i-doit add-ons  
-[Change][Categories] Multi Dialog Plus fields do not use new line  
-[Bug][Categories] Data in the Monitoring category cannot be saved.  
-[Bug][Categories] The Form Factor category does not store any data in the overview.  
-[Bug][Categories] Saved profiles of the QCW are visible in all clients.  
-[Bug][Categories] Archived attributes are displayed in the list view of the object type  
-[Bug][Categories] Add attribute "Telephone rate" to the category SIM card in the dialog admin  
-[Bug][Categories] Changing database field type for license keys to allow longer license keys  
-[Bug][Categories] Option to select database instance also offers archived/deleted instances for selection  
-[Bug][Categories] Sorting and Filtering Live Status  
-[Bug][Categories] Standard filtering of CMDB status  
-[Bug][Categories] Attribute priority can not be selected to be shown in list of multi value category "softwareassignment"  
-[Bug][Categories] Single check of each categories when installing the pro add-on  
-[Bug][Categories] Mouseover in categories only load after refresh of page  
-[Bug][Categories] FQDN not used in print view  
-[Bug][Categories] Show assigned objects in the list view for groups of people  
-[Bug][Categories] Filter by contract type  
-[Bug][Categories] Category "SIM card", no leading zeros can be added / deleted on the overview page  
-[Bug][List editing] Create new category entries for all objects in list editing  
-[Bug][List editing] Sub-category "Installation" is missing in the list edit  
-[Bug][List editing] HTTP 500 error / empty page when calling list editing when Nagios Add-On was uninstalled  
-[Bug][List editing] List Editing: Calendar selection moves outside the visible area  
-[Bug][List editing] List edit of category "power consumer"  
-[Bug][List editing] Logical location can not be saved via list edit  
-[Bug][Lists] Filter for Objects is missing  
-[Bug][Lists] Archiving a database instance causes some attributes of database scheme not being shown in object list for "database scheme"  
-[Bug][Lists] The category "Contract assignment" is displayed empty in the default list of object lists  
-[Bug][Lists] Filtering is not possible with the Virtual Machine attribute of the Virtual Machine category  
-[Bug][Lists] Object lists: attribute "Description" of the specific category "Organization" is not saved  
-[Bug][Lists] Special characters in filtering option for dialogue plus fields cause the filter to deliver an empty result  
-[Bug][Lists] Object titles are not visible anymore after object has been archived/deleted  
-[Bug][Lists] The version number and variant should not be shown in the object lists configuration  
-[Bug][Lists] Create Dialog+ values via the filter in the object list  
-[Bug][Lists] The objects are not shown in the object list  
-[Bug][Lists] Default filter "virtual machine> virtual machine" is ignored in object list  
-[Bug][OCS] OCS import: When importing an SNMP device, the operating system is not imported correctly  
-[Bug][OCS] OCS-IMPORT: Category "Operating system" is overwritten during an import  
-[Bug][OCS] Import of CPU cores from OCS inventory failed  
-[Bug][Logbook] Incorrect description / operation in log recovery  
-[Bug][Logbook] Logbook: Assignment categories don't create an log entry for assigned object  
-[Bug][CSV Import] Fields are cleared during csv import, even if they do not appear as part of the import  
-[Bug][CSV Import] Objects are skipped during CSV import  
-[Bug][CSV Import] CSV-Import: Import via CLI overwrite existing objects  
-[Bug][CSV Import] Version number (Category: Software assignment) cannot be filled via CSV import  
-[Bug][CSV Import] Importing content into dialogue fields vis csv import is case sensitive  
-[Bug][Import] The company of a person is emptied during CSV import.  
-[Bug][Update] Missing Check of PHP Extensions in the GUI Updater  
-[Bug][Code (internal)] Output in Infobox can block the user from working with i-doit  
-[Bug][Code (internal)] Indexing of the category C__CATG__NET_LISTENER  
-[Bug][Code (internal)] When accessing i-doit, index.php cannot be found  
-[Bug][Code (internal)] Saving a SIM card without twin-card "card number" leads to SQL error  
-[Bug][Code (internal)] Many links are directed to old `http` addresses  
-[Bug][Code (internal)] idoit-rights.sh tries to set rights to folders which are not available  
-[Bug][Code (internal)] Unnecessary dialog+ table "isys_catg_cpu_frequency"  
-[Bug][Custom categories] Poor performance when saving/updating multivalue categories  
-[Bug][Custom categories] Print view of reports in custom categories incorrect  
-[Bug][Custom categories] Data cleansing overwrites the HTML toolbar.  
-[Bug][Custom categories] Reports are displayed for selecting attributes in Custom Categories  
-[Bug][LDAP] LDAP Sync: Import of organization incorrect  
-[Bug][LDAP] SSO-authentication when full specification of index.php not possible  
-[Bug][LDAP] LDAP connection handling  
-[Bug][LDAP] Subcategory "Master data" Provide the attribute "Salutation" for ldap-sync  
-[Bug][LDAP] LDAP Sync: Contact Assignment / Assigned objects are not archived when the contact is archived  
-[Bug][LDAP] Configure LDAP via API  
-[Bug][Print view] Print-preview on object browsers with multiselect of custom categories broken  
-[Bug][Print view] Print preview shows HTML code  
-[Bug][Report-Manager] Report Manager: Output of the grouped MultiValues ​​error during PDF export  
-[Bug][Report-Manager] Attributes of category "Assigned workstations" can not be used in report Manager  
-[Bug][Report-Manager] Sub-Kategorie "Anschlüsse" Attribut "Sub-Kategorie" Anschlüsse "Attribut" Ein / Ausgang "für Report-Manager bereitstellen" für Report-Manager bereitstellen  
-[Bug][Report-Manager] Attribute "standard gateway for net" can not be used in report manager as condition  
-[Bug][CMDB settings] Limiting the view via rights does not effect location browser  
-[Bug][Open-Version] Console.php error  
-[Bug][Installation] Dead Link in setup  
-[Bug][JDisc] JDisc-Import Fehler: "CMDB Error: Relation type should not be empty."  
-[Bug][Systemtools] Re-new relation objects cannot be executed  
-[Bug][H-Inventory] Object matching profile does not get applied for H-Inventory  
-[Bug][Request Tracker] Request Tracker: Language Constants are not used/translated  
-[Bug][Request Tracker] Request Tracker: In the "All Objects" tab, all objects are selected.  
-[Bug][Validation] Wrong validation on inventory number  
-[Bug][Search] Automatic DeepSearch does not work, when normal search did not find any results  
-[Bug][Authorization system] Prohibit users from assigning work centers  
-[Bug][Relations] Correct display of the relations in state archived/deleted  
-[Bug][Console-base Installation/Update/Licensing] Using the "system-checkforupdates" command outputs constants  
-[Bug][Cabling view] Enable horizontal scrolling for overview in cabling >> connectors  
+[Tâche][Édition de liste] Plusieurs RAIDS matériels apparaissent dans la liste d'édition alors qu'aucun n'a été créé  
+[Amélioration][Code (interne)] Mise à jour de sécurité pour les bibliothèques externes  
+[Amélioration][Code (interne)] i-doit ne prend plus en charge PHP 5.6, la configuration minimale est PHP 7  
+[Amélioration][Code (interne)] Vérifier les catégories attribuées en double après l'installation de l'extension  
+[Amélioration][LDAP] Synchroniser les attributs objectSid et objectGUID via LDAP  
+[Amélioration][Mise à jour] Améliorer le programme de mise à jour i-doit  
+[Amélioration][Installation] Compatibilité avec PHP 7.3  
+[Amélioration][Installation] Ajouter le support pour les versions plus récentes de MariaDB  
+[Amélioration][Listes] Nouvel attribut "contact + rôle" pour les listes d'objets - merci à Christian Haase  
+[Amélioration][Service] Services : Affichage des services pour d'autres types d'objets dans l'arborescence du menu  
+[Amélioration][Installation/ Mise à jour / Licence basées sur la console] Gestion basée sur la console des locataires i-doit  
+[Amélioration][Installation/ Mise à jour / Licence basées sur la console] Licence basée sur la console d'i-doit  
+[Amélioration][Installation/ Mise à jour / Licence basées sur la console] Gestion basée sur la console des extensions i-doit  
+[Changement][Catégories] Les champs Multi Dialog Plus ne passent pas à la ligne suivante  
+[Bogue][Catégories] Les données de la catégorie Surveillance ne peuvent pas être enregistrées.  
+[Bogue][Catégories] La catégorie Facteur de forme ne stocke aucune donnée dans l'aperçu.  
+[Bogue][Catégories] Les profils enregistrés du QCW sont visibles dans tous les clients.  
+[Bogue][Catégories] Les attributs archivés sont affichés dans la vue en liste du type d'objet  
+[Bogue][Catégories] Ajouter l'attribut "Taux de téléphone" à la catégorie Carte SIM dans l'administration du dialogue  
+[Bogue][Catégories] Changer le type de champ de base de données pour les clés de licence pour permettre des clés de licence plus longues  
+[Bogue][Catégories] L'option de sélection d'instance de base de données propose également des instances archivées/supprimées pour la sélection  
+[Bogue][Catégories] Tri et filtrage de l'état en direct  
+[Bogue][Catégories] Le filtre standard de l'état CMDB ne peut pas être sélectionné pour être affiché dans la liste de la catégorie de valeurs multiples "affectation de logiciel"  
+[Bogue][Catégories] Vérification unique de chaque catégorie lors de l'installation de l'extension pro  
+[Bogue][Catégories] Le survol dans les catégories ne se charge qu'après le rafraîchissement de la page  
+[Bogue][Catégories] FQDN non utilisé dans la vue d'impression  
+[Bogue][Catégories] Afficher les objets attribués dans la vue en liste pour les groupes de personnes  
+[Bogue][Catégories] Filtrer par type de contrat  
+[Bogue][Catégories] Catégorie "Carte SIM", aucun zéro initial ne peut être ajouté/supprimé sur la page d'aperçu  
+[Bogue][Édition de liste] Créer de nouvelles entrées de catégorie pour tous les objets dans l'édition de liste  
+[Bogue][Édition de liste] La sous-catégorie "Installation" est manquante dans l'édition de liste  
+[Bogue][Édition de liste] Erreur HTTP 500 / page vide lors de l'appel de l'édition de liste lorsque l'extension Nagios a été désinstallée  
+[Bogue][Édition de liste] Édition de liste : La sélection du calendrier se déplace en dehors de la zone visible  
+[Bogue][Édition de liste] Édition de liste de la catégorie "consommateur d'énergie"  
+[Bogue][Édition de liste] L'emplacement logique ne peut pas être enregistré via l'édition de liste  
+[Bogue][Listes] Le filtre pour les objets est manquant  
+[Bogue][Listes] Archiver une instance de base de données fait que certains attributs du schéma de base de données ne sont pas affichés dans la liste d'objets pour "schéma de base de données"  
+[Bogue][Listes] La catégorie "Affectation de contrat" est affichée vide dans la liste par défaut des listes d'objets  
+[Bogue][Listes] Le filtrage n'est pas possible avec l'attribut Machine virtuelle de la catégorie Machine virtuelle  
+[Bogue][Listes] Listes d'objets : l'attribut "Description" de la catégorie spécifique "Organisation" n'est pas enregistré  
+[Bogue][Listes] Les caractères spéciaux dans l'option de filtrage pour les champs de dialogue plus provoquent la fourniture d'un résultat vide  
+[Bogue][Listes] Les titres des objets ne sont plus visibles après que l'objet a été archivé/supprimé  
+[Bogue][Listes] Le numéro de version et la variante ne doivent pas être affichés dans la configuration des listes d'objets  
+[Bogue][Listes] Créer des valeurs Dialog+ via le filtre dans la liste d'objets  
+[Bogue][Listes] Les objets ne sont pas affichés dans la liste d'objets  
+[Bogue][Listes] Le filtre par défaut "machine virtuelle > machine virtuelle" est ignoré dans la liste d'objets  
+[Bogue][OCS] Import OCS : Lors de l'importation d'un périphérique SNMP, le système d'exploitation n'est pas importé correctement  
+[Bogue][OCS] IMPORTATION OCS : La catégorie "Système d'exploitation" est écrasée lors d'une importation  
+[Bogue][OCS] L'importation des cœurs de CPU à partir de l'inventaire OCS a échoué  
+[Bogue][Journal] Description / opération incorrecte dans la récupération du journal  
+[Bogue][Journal] Journal : Les catégories attribuées ne créent pas une entrée de journal pour l'objet attribué  
+[Bogue][Import CSV] Les champs sont effacés lors de l'importation CSV, même s'ils ne font pas partie de l'importation  
+[Bogue][Import CSV] Les objets sont ignorés lors de l'importation CSV  
+[Bogue][Import CSV] Importation CSV : L'importation via CLI écrase les objets existants  
+[Bogue][Import CSV] Le numéro de version (Catégorie : Affectation de logiciel) ne peut pas être rempli via l'importation CSV  
+[Bogue][Import CSV] L'importation de contenu dans les champs de dialogue via l'importation CSV est sensible à la casse  
+[Bogue][Import] La société d'une personne est vidée lors de l'importation CSV.  
+[Bogue][Mise à jour] Vérification manquante des extensions PHP dans le programme de mise à jour GUI  
+[Bogue][Code (interne)] La sortie dans Infobox peut bloquer l'utilisateur dans i-doit  
+[Bogue][Code (interne)] Indexation de la catégorie C__CATG__NET_LISTENER  
+[Bogue][Code (interne)] Lors de l'accès à i-doit, index.php ne peut pas être trouvé  
+[Bogue][Code (interne)] Enregistrer une carte SIM sans carte jumelle "numéro de carte" entraîne une erreur SQL  
+[Bogue][Code (interne)] De nombreux liens sont dirigés vers d'anciennes adresses `http`  
+[Bogue][Code (interne)] idoit-rights.sh tente de définir des droits sur des dossiers qui ne sont pas disponibles  
+[Bogue][Code (interne)] Table de dialogue+ inutile "isys_catg_cpu_frequency"  
+[Bogue][Catégories personnalisées] Mauvaises performances lors de l'enregistrement/mise à jour des catégories à valeurs multiples  
+[Bogue][Catégories personnalisées] La vue d'impression des rapports dans les catégories personnalisées est incorrecte  
+[Bogue][Catégories personnalisées] La purification des données écrase la barre d'outils HTML.  
+[Bogue][Catégories personnalisées] Les rapports sont affichés pour la sélection des attributs dans les catégories personnalisées  
+[Bogue][LDAP] Synchronisation LDAP : Importation d'organisation incorrecte  
+[Bogue][LDAP] Authentification SSO lorsque la spécification complète de index.php n'est pas possible  
+[Bogue][LDAP] Gestion de la connexion LDAP  
+[Bogue][LDAP] Sous-catégorie "Données principales" Fournir l'attribut "Civilité" pour la synchronisation LDAP  
+[Bogue][LDAP] Synchronisation LDAP : Affectation de contact / Les objets attribués ne sont pas archivés lorsque le contact est archivé  
+[Bogue][LDAP] Configurer LDAP via API  
+[Bogue][Aperçu d'impression] Aperçu avant impression sur les navigateurs d'objets avec sélection multiple de catégories personnalisées cassé  
+[Bogue][Aperçu d'impression] L'aperçu avant impression affiche du code HTML  
+[Bogue][Gestionnaire de rapports] Gestionnaire de rapports : Erreur de sortie des MultiValues groupés lors de l'exportation PDF  
+[Bogue][Gestionnaire de rapports] Les attributs de la catégorie "Postes de travail attribués" ne peuvent pas être utilisés dans le gestionnaire de rapports  
+[Bogue][Gestionnaire de rapports] Sous-catégorie "Connexions" Attribut "Sous-catégorie" Connexions "Attribut" Entrée / Sortie "pour le gestionnaire de rapports prêt à l'emploi" pour le gestionnaire de rapports prêt à l'emploi  
+[Bogue][Gestionnaire de rapports] L'attribut "passerelle standard pour le réseau" ne peut pas être utilisé dans le gestionnaire de rapports en tant que condition  
+[Bogue][Paramètres CMDB] Limiter la vue via les droits n'affecte pas le navigateur d'emplacement  
+[Bogue][Version ouverte] Erreur Console.php  
+[Bogue][Installation] Lien mort dans la configuration  
+[Bogue][JDisc] Erreur d'importation JDisc : "Erreur CMDB : Le type de relation ne doit pas être vide."  
+[Bogue][Outils système] Les objets de relation renouvelés ne peuvent pas être exécutés  
+[Bogue][H-Inventory] Le profil de correspondance d'objet n'est pas appliqué pour H-Inventory  
+[Bogue][Request Tracker] Request Tracker : Les constantes de langue ne sont pas utilisées/traduites  
+[Bogue][Request Tracker] Request Tracker : Dans l'onglet "Tous les objets", tous les objets sont sélectionnés.  
+[Bogue][Validation] Validation incorrecte sur le numéro d'inventaire  
+[Bogue][Recherche] La recherche approfondie automatique ne fonctionne pas, lorsque la recherche normale n'a pas trouvé de résultats  
+[Bogue][Système d'autorisation] Interdire aux utilisateurs d'attribuer des centres de travail  
+[Bogue][Relations] Affichage correct des relations dans l'état archivé/supprimé  
+[Bogue][Installation/ Mise à jour / Licence basées sur la console] L'utilisation de la commande "system-checkforupdates" affiche des constantes  
+[Bogue][Vue de câblage] Activer le défilement horizontal pour l'aperçu dans le câblage >> connecteurs  
+
+I'm ready to start translating the Markdown content into French. Please paste the content you'd like me to translate.

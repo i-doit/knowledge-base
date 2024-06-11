@@ -1,21 +1,21 @@
-# Email (SMTP)
+# Email (SMTP) {#email-smtp}
 
-_i-doit_ is capable of sending e-mails automatically in the case of specific events or states.
+_i-doit_ est capable d'envoyer des e-mails automatiquement en cas d'événements ou d'états spécifiques.
 
-!!! attention "Controller"
+!!! attention "Contrôleur"
 
-    The configuration is essential when the [i-doit controller (CLI)](./cli/index.md) is used with the [notifications](,,/../../evaluation/notifications.md) or workflows. Otherwise no e-mails can be sent!
+    La configuration est essentielle lorsque le [contrôleur i-doit (CLI)](./cli/index.md) est utilisé avec les [notifications](,,/../../evaluation/notifications.md) ou les workflows. Sinon, aucun e-mail ne peut être envoyé !
 
-The integration of a mail server is possible in the **Administration** under **System settings**. A configuration mask with the following fields is available there:
+L'intégration d'un serveur de messagerie est possible dans la **Administration** sous **Paramètres système**. Une fenêtre de configuration avec les champs suivants est disponible :
 
-| Field | Description |
+| Champ | Description |
 | --- | --- |
-| SMTP Host | Name of the host or the IP address of the mail server. |
-| SMTP Port | 25 is the standard port. The port has to be changed accordingly for an encrypted connection or deviating configuration. |
-| Sender | Sending e-mail address for e-mail dispatch |
-| Name | Sender name for e-mail dispatch |
-| Timeout | Timeout for e-mail dispatch |
-| SMTP Debug | It is often helpful to activate the debugging function for the initial setup. The log is deposited in the log/ folder of the _i-doit_ main folder.<br><br>(default: **No**) |
-| Subject Präfix | Optional entry for a better support of automation based on e-mail client rules. |
-| Notification template for maintenance contract | This template was used in a previous version and is not needed anymore in the current _i-doit_ versions.<br><br>In current versions, this template can be configured in the **Notifications system** in the **Extras** section. |
-| Notification template for lost password | An artifact from an earlier version lacking any function, can be ignored. |
+| Hôte SMTP | Nom de l'hôte ou l'adresse IP du serveur de messagerie. |
+| Port SMTP | 25 est le port standard. Le port doit être modifié en conséquence pour une connexion chiffrée ou une configuration déviante. |
+| Expéditeur | Adresse e-mail d'envoi pour l'envoi d'e-mails |
+| Nom | Nom de l'expéditeur pour l'envoi d'e-mails |
+| Délai d'attente | Délai d'attente pour l'envoi d'e-mails |
+| Débogage SMTP | Il est souvent utile d'activer la fonction de débogage pour la configuration initiale. Le journal est déposé dans le dossier log/ du dossier principal d'_i-doit_.<br><br>(par défaut : **Non**) |
+| Préfixe du sujet | Entrée facultative pour un meilleur support de l'automatisation basée sur les règles du client de messagerie. |
+| Modèle de notification pour le contrat de maintenance | Ce modèle était utilisé dans une version précédente et n'est plus nécessaire dans les versions actuelles d'_i-doit_.<br><br>Dans les versions actuelles, ce modèle peut être configuré dans le **Système de notifications** dans la section **Extras**. |
+| Modèle de notification pour mot de passe perdu | Un artefact d'une version antérieure sans aucune fonction, peut être ignoré. |

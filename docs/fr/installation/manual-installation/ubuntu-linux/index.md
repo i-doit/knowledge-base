@@ -1,39 +1,39 @@
 ---
 title: Ubuntu 22.04 GNU/Linux
-description: i-doit installation auf Ubuntu 22.04
+description: Installation de i-doit sur Ubuntu 22.04
 icon: material/ubuntu
 #status: new
 lang: de
 ---
 
-In this article we explain in just a few steps which packages need to be installed and configured.
+Dans cet article, nous expliquons en quelques étapes les paquets qui doivent être installés et configurés.
 
-## System Requirements
+## Configuration requise du système
 
-The general [system requirements](../../system-requirements.md) apply.
+Les [exigences système](../../system-requirements.md) générales s'appliquent.
 
-When you want to use [Ubuntu Linux](https://www.ubuntu.com/) as operating system, the server version **22.04 LTS "Jammy Jellyfish"** is recommended. In order to find out which version is used you can carry out the following command:
+Si vous souhaitez utiliser [Ubuntu Linux](https://www.ubuntu.com/) comme système d'exploitation, la version serveur **22.04 LTS "Jammy Jellyfish"** est recommandée. Pour savoir quelle version est utilisée, vous pouvez exécuter la commande suivante :
 
 ```shell
 cat /etc/os-release
 ```
 
-As system architecture you should use a x86 in 64bit:
+En tant qu'architecture système, vous devriez utiliser un x86 en 64 bits :
 
 ```shell
 uname -m
 ```
 
-**x86_64** means 64bit, **i386** or **i686** only 32bit.
+**x86_64** signifie 64 bits, **i386** ou **i686** seulement 32 bits.
 
-## Installation of the Packages
+## Installation des paquets
 
-When you want to use the official package repositories, use the following instructions for installation of:
+Si vous souhaitez utiliser les dépôts de paquets officiels, suivez les instructions suivantes pour l'installation de :
 
-*   the **Apache** web server 2.4
-*   the script language **PHP** 8.1
-*   the database management system **MariaDB** 10.6 and
-*   the caching server **memcached**
+*   le serveur web **Apache** 2.4
+*   le langage de script **PHP** 8.1
+*   le système de gestion de base de données **MariaDB** 10.6 et
+*   le serveur de mise en cache **memcached**
 
 ```shell
 apt update
@@ -42,64 +42,38 @@ apt install apache2 libapache2-mod-php mariadb-client mariadb-server memcached u
 
 ## Configuration
 
-The installed packages for Apache web server, PHP and MariaDB already supply configuration files.<br>
-It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
+Les paquets installés pour le serveur web Apache, PHP et MariaDB fournissent déjà des fichiers de configuration.<br>
+Il est recommandé de sauvegarder les paramètres modifiés dans des fichiers séparés au lieu d'ajuster les fichiers de configuration déjà existants. Sinon, toutes les différences par rapport aux fichiers existants seraient signalées ou même écrasées lors de chaque mise à jour du paquet. Les paramètres de la configuration par défaut sont complétés ou écrasés par des paramètres définis par l'utilisateur.
 
 ### PHP
 
-First of all, a new file is created and filled with the required settings:
+Tout d'abord, un nouveau fichier est créé et rempli avec les paramètres requis :
 
 ```shell
 sudo nano /etc/php/8.1/mods-available/i-doit.ini
 ```
 
-!!! example "This file contains the following content specified by us. For more information about the parameters, have a look at [PHP.net](https://www.php.net/manual/de/ini.core.php)"
+!!! example "Ce fichier contient le contenu suivant spécifié par nous. Pour plus d'informations sur les paramètres, consultez [PHP.net](https://www.php.net/manual/de/ini.core.php)"
 
-```ini
-allow_url_fopen = Yes
-file_uploads = On
-magic_quotes_gpc = Off
-max_execution_time = 300
-max_file_uploads = 42
-max_input_time = 60
-max_input_vars = 10000
-memory_limit = 256M
-post_max_size = 128M
-register_argc_argv = On
-register_globals = Off
-short_open_tag = On
-upload_max_filesize = 128M
-display_errors = Off
-display_startup_errors = Off
-error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
-log_errors = On
-default_charset = "UTF-8"
-default_socket_timeout = 60
-date.timezone = Europe/Berlin
-session.gc_maxlifetime = 604800
-session.cookie_lifetime = 0
-mysqli.default_socket = /var/run/mysqld/mysqld.sock
-```
-
-The `memory_limit` must be increased if necessary, e.g. for very large reports or extensive documents.<br>
-The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](../system-settings.md) of i-doit.<br>
-The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).<br>
-Afterwards, the required PHP modules are activated and the Apache web server is restarted:<br>
+Le `memory_limit` doit être augmenté si nécessaire, par exemple pour de très grands rapports ou des documents étendus.<br>
+La valeur (en secondes) de `session.gc_maxlifetime` doit être la même ou supérieure à la `Durée de la session` dans les [paramètres du système](../system-settings.md) d'i-doit.<br>
+Le paramètre `date.timezone` doit être ajusté à l'heure locale (voir [Liste des fuseaux horaires supportés](http://php.net/manual/en/timezones.php)).<br>
+Ensuite, les modules PHP requis sont activés et le serveur web Apache est redémarré:<br>
 
 ```shell
 sudo phpenmod i-doit memcached
 ```
 
-### Apache Webserver
+### Serveur Web Apache
 
-The default VHost is deactivated and a new one is created:
+Le VHost par défaut est désactivé et un nouveau est créé:
 
 ```shell
 sudo a2dissite 000-default
 sudo nano /etc/apache2/sites-available/i-doit.conf
 ```
 
-The new VHost configuration is saved in this file:
+La nouvelle configuration VHost est enregistrée dans ce fichier:
 
 ```shell
 <VirtualHost *:80>
@@ -118,8 +92,8 @@ The new VHost configuration is saved in this file:
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.<br>
-With the next step you activate the new VHost and the necessary Apache module **rewrite** and the Apache web server is restarted:
+i-doit inclut des paramètres Apache différents dans des fichiers portant le nom **.htaccess**. Le paramètre **AllowOverride All** est requis pour que ces paramètres soient pris en compte.<br>
+Avec l'étape suivante, vous activez le nouveau VHost et le module Apache nécessaire **rewrite** et le serveur web Apache est redémarré:
 
 ```shell
 sudo a2ensite i-doit
@@ -129,42 +103,45 @@ sudo systemctl restart apache2
 
 ### MariaDB
 
-Only a few steps are necessary to guarantee that MariaDB provides a good performance and safe operation. However, you should pay meticulous attention to details and carry out these steps precisely. This starts with a secure installation and you should follow the recommendations accordingly.<br>
-The **root** user should receive a secure password:
+Seules quelques étapes sont nécessaires pour garantir que MariaDB offre de bonnes performances et un fonctionnement sûr. Cependant, vous devez porter une attention méticuleuse aux détails et effectuer ces étapes avec précision. Cela commence par une installation sécurisée et vous devriez suivre les recommandations en conséquence.<br>
+L'utilisateur **root** doit recevoir un mot de passe sécurisé:
 
 ```shell
 mysql_secure_installation
 ```
 
-Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
+Activez l'invite MariaDB afin qu'i-doit soit autorisé à utiliser l'utilisateur **root** lors de la configuration:
 
 ```shell
 sudo mysql -uroot
 ```
 
-The following SQL statements are now carried out in the MariaDB shell (The 'password' must be replaced by the current password of the 'root' user):
+Les déclarations SQL suivantes sont maintenant effectuées dans l'invite MariaDB (Le mot de passe 'password' doit être remplacé par le mot de passe actuel de l'utilisateur 'root'):
 
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('password');
 FLUSH PRIVILEGES;
 EXIT;
 ```
+{ /*examples*/ }
 
-Afterwards, MariaDB **10.6** is stopped. Now it is important to move files which are not required, otherwise the result would be a significant loss of performance:
+Ensuite, MariaDB **10.6** est arrêté. Il est maintenant important de déplacer les fichiers qui ne sont pas nécessaires, sinon le résultat serait une perte significative de performance :
 
 ```shell
 mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
 sudo systemctl stop mysql.service
 sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
+{ /*examples*/ }
 
-A new file is created for the deviating settings:
+Un nouveau fichier est créé pour les paramètres déviants :
 
 ```shell
 sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
 ```
+{ /*examples*/ }
 
-This file contains the new configuration settings. For an optimal performance you should adapt these settings to the (virtual) hardware:
+Ce fichier contient les nouveaux paramètres de configuration. Pour des performances optimales, vous devriez adapter ces paramètres au matériel (virtuel) :
 
 ```shell
 [mysqld]
@@ -214,15 +191,18 @@ innodb_stats_on_metadata = 0
 
 sql-mode = ""
 ```
+{ /*examples*/ }
 
-Finally, MariaDB is restarted:
+Enfin, MariaDB est redémarré :
 
 ```shell
 sudo systemctl restart mysql.service
 ```
+{ /*examples*/ }
 
-## Next Step
+## Étape suivante
 
-Now the operating system is prepared and i-doit can be installed.
+Maintenant que le système d'exploitation est prêt, i-doit peut être installé.
 
-[Proceed with **Setup**](../setup.md){ .md-button .md-button--primary }
+[Procéder à la **Configuration**](../setup.md){ .md-button .md-button--primary }
+

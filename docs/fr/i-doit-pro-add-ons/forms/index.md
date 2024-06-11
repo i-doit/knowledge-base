@@ -1,63 +1,61 @@
-# Forms
+# Formulaires {/examples}
 
-With this add-on you can create forms that you can send to other employees to fill in.<br>
-This add-on can create a form that, for example, helps new employees document computers in your company.
+Avec cette extension, vous pouvez créer des formulaires que vous pouvez envoyer à d'autres employés pour les remplir.<br>
+Cette extension peut créer un formulaire qui, par exemple, aide les nouveaux employés à documenter les ordinateurs dans votre entreprise.
 
-When entering new objects, it is often the case that several categories are displayed, but only individual fields from each category need to be maintained.<br>
-In this case it is easier for the user (especially if they are new colleagues) if only the attributes that actually need to be filled in are displayed.
+Lors de la saisie de nouveaux objets, il arrive souvent que plusieurs catégories soient affichées, mais seuls les champs individuels de chaque catégorie doivent être maintenus.<br>
+Dans ce cas, il est plus facile pour l'utilisateur (surtout s'il s'agit de nouveaux collègues) si seuls les attributs qui doivent réellement être remplis sont affichés.
 
-The Forms add-on uses the design of the new i-doit Cloud product, so the appearance is different from the other i-doit 1.x Add-ons.
+L'extension Forms utilise la conception du nouveau produit Cloud i-doit, donc l'apparence est différente des autres extensions i-doit 1.x.
 
-We have also a [Blog article](https://www.i-doit.com/en/blog/the-new-i-doit-pro-forms-add-on/) with a lot of Information.
+Nous avons également un [article de blog](https://www.i-doit.com/en/blog/the-new-i-doit-pro-forms-add-on/) avec beaucoup d'informations.
 
-[![Overview](../../assets/images/en/i-doit-pro-add-ons/forms/1-forms.png)](../../assets/images/en/i-doit-pro-add-ons/forms/1-forms.png)
+[![Aperçu](../../assets/images/en/i-doit-pro-add-ons/forms/1-forms.png)](../../assets/images/en/i-doit-pro-add-ons/forms/1-forms.png)
 
-## Requirements
+## Exigences {/examples}
 
-The Forms add-on requires:
+L'extension Forms nécessite :
 
--   i-doit Version **>=23**
--   MongoDB Server Version **5**
--   NodeJS Version **>=16.x**
+-   Version i-doit **>=23**
+-   Version du serveur MongoDB **5**
+-   Version de NodeJS **>=16.x**
 
-Also the system requirements of [MongoDB](https://docs.mongodb.com/manual/administration/production-notes/#mongodb-binaries) must be observed.<br>
-Also, MongoDB has a [checklist for use in operations](https://docs.mongodb.com/manual/administration/production-checklist-operations/#operations-checklist).
 
-[NodeJS](https://nodejs.org/en/download/current/) has its dependencies documented [here](https://nodejs.org/en/docs/).
+## Installation { .md-button }
 
-## Installation
+-   Installation de l'add-on Forms via le [Centre d'administration](../../system-administration/admin-center.md).
+-   Installation de [MongoDB Server v5](https://docs.mongodb.com/manual/installation/)
+-   Ensuite, installer [NodeJS](https://nodejs.org/en/download/current/) >= v16.x. via [Gestionnaire de paquets](https://nodejs.org/en/download/package-manager/).
+-   Configurer le Backend des Forms
+-   Configurer le backend dans i-doit
 
--   Installing the Forms add-on via the [Admin Center](../../system-administration/admin-center.md).
--   [MongoDB Server v5](https://docs.mongodb.com/manual/installation/) installation
--   Then install [NodeJS](https://nodejs.org/en/download/current/) >= v16.x. via [Package Manager](https://nodejs.org/en/download/package-manager/).
--   Configure Forms Backend
--   Configure backend in i-doit
+[Continuer avec l'installation de l'add-on Forms](./install-forms-addon.md){ .md-button .md-button--primary }
 
-[Continue to the installation of the Forms add-on](./install-forms-addon.md){ .md-button .md-button--primary }
+## Attribution des droits
 
-## Assignment of rights
+Pour que les utilisateurs puissent créer des formulaires, il est nécessaire d'attribuer les droits appropriés.<br>
+Cela est possible dans l'administration de i-doit sous Système d'autorisation > Droits > Formulaires, si l'add-on est installé.
 
-In order for users to be able to create forms, it is necessary to assign appropriate rights.<br>
-This is possible in the i-doit administration under Authorization System > Rights > Forms, if the add-on is installed.
+[![Attribution des droits](../../assets/images/en/i-doit-pro-add-ons/forms/2-forms.png)](../../assets/images/en/i-doit-pro-add-ons/forms/2-forms.png)
 
-[![Assignment of rights](../../assets/images/en/i-doit-pro-add-ons/forms/2-forms.png)](../../assets/images/en/i-doit-pro-add-ons/forms/2-forms.png)
+Vider le cache du système de droits
 
-Clear cache for the rights system
+Après avoir attribué ou modifié les droits, il est nécessaire de vider le [cache](../../system-administration/administration/tenant-management/repair-and-clean-up.md) dans l' [administration](../../system-administration/administration/index.md) de i-doit sous `Gestion des locataires > Réparation et nettoyage` afin que les modifications soient prises en compte par le système.
 
-After the rights have been assigned or changed, it is necessary to clear the [cache](../../system-administration/administration/tenant-management/repair-and-clean-up.md) in the i-doit [administration](../../system-administration/administration/index.md) under `Tenant Management > Repair and clean up` so that the changes are adopted by the system.
+## Appel de l'add-on
 
-## Calling the add-on
+Une fois toutes les préparations terminées, l'add-on peut être accédé via Extras > Formulaires.
 
-After all preparations are completed, the add-on can be accessed via Extras > Forms.
+[![Appel de l'add-on](../../assets/images/en/i-doit-pro-add-ons/forms/3-forms.png)](../../assets/images/en/i-doit-pro-add-ons/forms/3-forms.png)
 
-[![Calling the add-on](../../assets/images/en/i-doit-pro-add-ons/forms/3-forms.png)](../../assets/images/en/i-doit-pro-add-ons/forms/3-forms.png)
+La vue du menu "Extras" peut différer en raison de différents droits et/ou add-ons installés supplémentaires.
 
-The view of the "Extras" menu may differ due to different rights and/or additional installed add-ons.
+## Versions
 
-## Releases
-
-| Version | Date | Changelog |
+| Version | Date | Journal des modifications |
 | --- | --- | --- |
-| 1.2.0 | 2023-05-03 | [Bug] Fix Investment cost and cost center with Forms<br> [Bug] Align categories on the left side<br>[Bug] Fix right to delete or create Forms<br>[Bug] Fix empty list in object browser if category names should be used in header<br>[Bug] Show objects if attribute type is missing<br>[Bug] Improve rendering performance of object browser fields with multiple objects<br>[Bug] Filter child values after parent values
-| 1.1.0 | 2022-06-27 | [Bug] Allow all default characters to be used in Forms-secret key  <br>[Bug] Do not show time selection in Start date for license keys  <br>[Bug] Allow to publish form if load balancer and HTTP2 is used  <br>[Bug] Save Form when publishing  <br>[Bug] Create Logbook entries when creating an object and category data via "Forms" add-on  <br>[Bug] Filter down connectable objects for custom categories with object relations in Forms  <br>[Bug] Allow user to copy link in Forms table  <br>[Bug] Allow user to select multiple objects in Forms object browser  <br>[Bug] Inform user about required attributes in category  <br>[Task] Add tooltip to disabled state of copy link button in Forms add-on  <br>[Task] Allow to add child attribute only when parent dependent is added  <br>[Task] Change real text to placeholder text in text field in Forms add-on  <br>[Task] Do not allow to add same attribute multiple times in Forms  <br>[Task] Give user warning before publishing if form will be empty  <br>[Task] Add dependencies of object browser to Forms add-on  <br>[Task] Split hostaddress category into virtual IPv4 and IPv6 categories for Forms add-on  <br>[Task] Take default template values in consideration in Forms  <br>[Task] Update attribute name in pre-defined field in Forms add-on  <br>[Task] Disable child attribute until a value for parent is assigned  <br>[Task] Implement Pagination in Attribute Type Object Browser Single- and Multi-Selection |
-| 1.0.0 | 2022-02-21 | Initial release |
+| 1.2.0 | 2023-05-03 | [Bug] Correction du coût d'investissement et du centre de coûts avec les formulaires<br> [Bug] Aligner les catégories sur le côté gauche<br>[Bug] Correction du droit de supprimer ou de créer des formulaires<br>[Bug] Correction de la liste vide dans le navigateur d'objets si les noms de catégories doivent être utilisés dans l'en-tête<br>[Bug] Afficher les objets si le type d'attribut est manquant<br>[Bug] Améliorer les performances de rendu des champs du navigateur d'objets avec plusieurs objets<br>[Bug] Filtrer les valeurs enfants après les valeurs parentales
+| 1.1.0 | 2022-06-27 | [Bug] Autoriser tous les caractères par défaut à être utilisés dans les clés secrètes des formulaires  <br>[Bug] Ne pas afficher la sélection de l'heure dans la date de début pour les clés de licence  <br>[Bug] Autoriser la publication du formulaire si un répartiteur de charge et HTTP2 sont utilisés  <br>[Bug] Enregistrer le formulaire lors de la publication  <br>[Bug] Créer des entrées de journal lors de la création d'un objet et de données de catégorie via l'add-on "Formulaires"  <br>[Bug] Filtrer les objets connectables pour les catégories personnalisées avec des relations d'objets dans les formulaires  <br>[Bug] Autoriser l'utilisateur à copier le lien dans le tableau des formulaires  <br>[Bug] Autoriser l'utilisateur à sélectionner plusieurs objets dans le navigateur d'objets des formulaires  <br>[Bug] Informer l'utilisateur des attributs requis dans la catégorie  <br>[Task] Ajouter une info-bulle à l'état désactivé du bouton de copie de lien dans l'add-on Formulaires  <br>[Task] Autoriser l'ajout d'attribut enfant uniquement lorsque le parent dépendant est ajouté  <br>[Task] Changer le texte réel en texte de substitution dans le champ de texte de l'add-on Formulaires  <br>[Task] Ne pas autoriser l'ajout du même attribut plusieurs fois dans les formulaires  <br>[Task] Avertir l'utilisateur avant la publication si le formulaire sera vide  <br>[Task] Ajouter les dépendances du navigateur d'objets à l'add-on Formulaires  <br>[Task] Diviser la catégorie d'adresse IP en IPv4 virtuel et catégories IPv6 pour l'add-on Formulaires  <br>[Task] Prendre en compte les valeurs de modèle par défaut dans les formulaires  <br>[Task] Mettre à jour le nom de l'attribut dans le champ prédéfini de l'add-on Formulaires  <br>[Task] Désactiver l'attribut enfant jusqu'à ce qu'une valeur pour le parent soit attribuée  <br>[Task] Implémenter la pagination dans le navigateur d'objets de type d'attribut Sélection unique et multiple |
+| 1.0.0 | 2022-02-21 | Version initiale |
+
+I am ready to start the translation. Please provide the Markdown content for me to translate into French.

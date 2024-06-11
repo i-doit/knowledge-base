@@ -1,67 +1,67 @@
-# Changelog 20
+# Journal des modifications 20
 
-[Task][Code (Internal)]             Change versioning schema  
-[Task][Code (Internal)]             Remove callables from smarty plugin parameters 'modify' and 'p_func'  
-[Improvement][Application Redesign] Allow user to define the category field margins  
-[Bug][CMDB]                         When I purge a Layer 3 network the remaining IP Addresses should be moved to the Global v4 Layer 3 Net  
-[Bug][CMDB]                         Show referenced LDAP server in "LDAP" category  
-[Bug][CMDB]                         IPv6 address range is cut off  
-[Bug][CMDB]                         rack view vertical slots do not display parallel to each other anymore and the view is moved when to much are added  
-[Bug][Custom categories]            Recommendation list for dates blocks the calendar  
-[Bug][CMDB-Explorer]                Limit results in CMDB-Explorer  
-[Bug][Lists]                        IDs in multi value custom categories are not sorted correctly  
-[Bug][Lists]                        Memory size is not considered when filtering for capacity  
-[Bug][Lists]                        Wrong Sorting of dates in object list  
-[Bug][Lists]                        Overwriting the list configuration of a user does not work  
-[Bug][Lists]                        Sorting of net attributes not possible with active filter  
-[Bug][Categories]                   Active logging of last log in of a user prevents saving a new password  
-[Bug][Categories]                   Category lists - Make all attributes selectable (part 1)  
-[Bug][Categories]                   Objects from object types with specific category Persons cannot be added to Organization (Persons) category  
-[Bug][Categories]                   Fields for date of creation and date of last change are not read only on overview page  
-[Bug][Categories]                   The Location browser does not display the Location Tree when using Right System  
-[Bug][Categories]                   If category operating system is used on overview page, a false new entry is created in this category  
-[Bug][Categories]                   If category host address is used on overview page, a false new entry is created in this category  
-[Bug][Categories]                   Attribute "Purchased at" has an assigned object when creating a new object  
-[Bug][Categories]                   GEO coordinates cannot be inherited  
-[Bug][JDisc]                        JDisc import duplicates layer-3 objects  
-[Bug][JDisc]                        Can not create or save new JDisc Profile when Change CMDB-Status of objects to is  set to Keep CMDB-Status  
-[Bug][JDisc]                        JDisc: Set default value for cloud subscriptions Value alters JDisc profiles  
-[Bug][Report-Manager]               Report Manager does not display the value costs of category contract assignment  
-[Bug][Report-Manager]               Unable to create categories in reportmanager  
-[Bug][Report-Manager]               A configured Report condition with a Operator like >= is not functional  
-[Bug][Report-Manager]               Using Location attribute in Reports triggers SQL error  
-[Bug][Report-Manager]               Referencing Assigned Objects from the Master object displays the master object  
-[Bug][Report-Manager]               False results in the list of report results  
-[Bug][Report-Manager]               Sorting by object type does not work  
-[Bug][Report-Manager]               Result list for reports stops count at 1500 results  
-[Bug][Report-Manager]               PHP error when assigning Groups directly to a notification and using PHP8  
-[Bug][Report-Manager]               Using locations in the report manager as attributes ends in error  
-[Bug][Code (Internal)]              Maintenance with Interval leads to error  
-[Bug][Code (Internal)]              Error message after login "Tenantsettings are only available after logging in."  
-[Bug][Code (Internal)]              Wrong breadcrumb URL for add-ons with URL rewrite  
-[Bug][Code (Internal)]              HTTP 500 if the SQL timeout is too short  
-[Bug][Code (Internal)]              Indexing attributes do not work with custom Add-on  
-[Bug][Code (Internal)]              Import profile is not migrated after 1.18.2 update  
-[Bug][CSV Import]                   Custom categories: Dialog+ entries with a dependency are not correctly imported and assigned  
-[Bug][CSV Import]                   CSV Import does not assign a Person to a Custom Category Object Browser (single) field  
-[Bug][CSV Import]                   If the attribute Login > Username is set for a person this person cannot log in with the stored password.  
-[Bug][CSV Import]                   Importing content for Yes/No fields not possible with 0/1 via CSV import  
-[Bug][CSV Import]                   CPU Frequency is 0 when importing via CSV  
-[Bug][CSV Import]                   Memory>Capacity is not filled via CSV  
-[Bug][LDAP]                         LDAP Sync assign groups to users which are not member of the group  
-[Bug][API]                          'InstallDate' property can not be set in application category via API  
-[Bug][API]                          API is ignoring Validation of Unique attributes  
-[Bug][API]                          API category and attribute configuration does not load  
-[Bug][Authorization system]         Category net is not displayed in overview despite correct rights  
-[Bug][Objects]                      The root location is clickable in the location view  
-[Bug][List editing]                 All version numbers are displayed in list edit  
-[Bug][List editing]                 List edit not saving correctly when one object is selected  
-[Bug][List editing]                 "purchased at" in Category accounting is filled with a default value in list edit  
-[Bug][Search]                       Global search for inventory number does not work when using counter  
-[Bug][Search]                       Global search with ' or % causes sql error  
-[Bug][Templates]                    Disallow using category "Authorization config" for Templates  
-[Bug][Logbook]                      When I purge a Layer 3 network no Logbook entries are created  
-[Bug][Logbook]                      Value for yes/no fields in logbook is empty  
-[Bug][New cabling logic]            Fiber connection is not deleted  
-[Bug][System settings]              More Info for System Parameter > Keep status of imported objects?  
-[Bug][Licence settings]             Changing the client name resets the assigned object licenses.  
+[Tâche][Code (Interne)]             Modifier le schéma de versioning  
+[Tâche][Code (Interne)]             Supprimer les callables des paramètres du plugin smarty 'modify' et 'p_func'  
+[Amélioration][Refonte de l'application] Permettre à l'utilisateur de définir les marges du champ de catégorie  
+[Erreur][CMDB]                      Lorsque je purge un réseau de niveau 3, les adresses IP restantes devraient être déplacées vers le réseau global v4 de niveau 3  
+[Erreur][CMDB]                      Afficher le serveur LDAP référencé dans la catégorie "LDAP"  
+[Erreur][CMDB]                      La plage d'adresses IPv6 est tronquée  
+[Erreur][CMDB]                      Les emplacements verticaux de la vue en rack ne s'affichent plus parallèlement les uns aux autres et la vue est déplacée lorsqu'il y en a trop ajoutés  
+[Erreur][Catégories personnalisées]  La liste de recommandations pour les dates bloque le calendrier  
+[Erreur][Explorateur CMDB]          Limiter les résultats dans l'Explorateur CMDB  
+[Erreur][Listes]                    Les ID dans les catégories personnalisées à valeurs multiples ne sont pas triés correctement  
+[Erreur][Listes]                    La taille de la mémoire n'est pas prise en compte lors du filtrage par capacité  
+[Erreur][Listes]                    Mauvais tri des dates dans la liste des objets  
+[Erreur][Listes]                    L'écrasement de la configuration de liste d'un utilisateur ne fonctionne pas  
+[Erreur][Listes]                    Le tri des attributs réseau n'est pas possible avec un filtre actif  
+[Erreur][Catégories]                La journalisation active de la dernière connexion d'un utilisateur empêche l'enregistrement d'un nouveau mot de passe  
+[Erreur][Catégories]                Listes de catégories - Rendre tous les attributs sélectionnables (partie 1)  
+[Erreur][Catégories]                Les objets des types d'objet avec la catégorie spécifique "Personnes" ne peuvent pas être ajoutés à la catégorie "Organisation (Personnes)"  
+[Erreur][Catégories]                Les champs de date de création et de dernière modification ne sont pas en lecture seule sur la page d'aperçu  
+[Erreur][Catégories]                Le navigateur d'emplacement ne affiche pas l'arborescence des emplacements lors de l'utilisation de Right System  
+[Erreur][Catégories]                Si la catégorie système d'exploitation est utilisée sur la page d'aperçu, une fausse nouvelle entrée est créée dans cette catégorie  
+[Erreur][Catégories]                Si la catégorie adresse hôte est utilisée sur la page d'aperçu, une fausse nouvelle entrée est créée dans cette catégorie  
+[Erreur][Catégories]                L'attribut "Acheté à" a un objet assigné lors de la création d'un nouvel objet  
+[Erreur][Catégories]                Les coordonnées GEO ne peuvent pas être héritées  
+[Erreur][JDisc]                     L'importation JDisc duplique les objets de couche 3  
+[Erreur][JDisc]                     Impossible de créer ou enregistrer un nouveau profil JDisc lorsque le statut CMDB des objets est défini sur Conserver le statut CMDB  
+[Erreur][JDisc]                     JDisc : Définir une valeur par défaut pour les abonnements cloud modifie les profils JDisc  
+[Erreur][Gestionnaire de rapports]  Le Gestionnaire de rapports n'affiche pas les coûts de la valeur de la catégorie d'affectation de contrat  
+[Erreur][Gestionnaire de rapports]  Impossible de créer des catégories dans le gestionnaire de rapports  
+[Erreur][Gestionnaire de rapports]  Une condition de rapport configurée avec un opérateur comme >= n'est pas fonctionnelle  
+[Erreur][Gestionnaire de rapports]  L'utilisation de l'attribut d'emplacement dans les rapports déclenche une erreur SQL  
+[Erreur][Gestionnaire de rapports]  La référence aux objets assignés de l'objet maître affiche l'objet maître  
+[Erreur][Gestionnaire de rapports]  Résultats erronés dans la liste des résultats de rapport  
+[Erreur][Gestionnaire de rapports]  Le tri par type d'objet ne fonctionne pas  
+[Erreur][Gestionnaire de rapports]  La liste de résultats pour les rapports s'arrête à 1500 résultats  
+[Erreur][Gestionnaire de rapports]  Erreur PHP lors de l'attribution directe de groupes à une notification et utilisation de PHP8  
+[Erreur][Gestionnaire de rapports]  L'utilisation des emplacements dans le gestionnaire de rapports en tant qu'attributs se termine par une erreur  
+[Erreur][Code (Interne)]            La maintenance avec intervalle entraîne une erreur  
+[Erreur][Code (Interne)]            Message d'erreur après connexion "Les paramètres du locataire ne sont disponibles qu'après la connexion."  
+[Erreur][Code (Interne)]            Mauvaise URL de fil d'Ariane pour les modules complémentaires avec réécriture d'URL  
+[Erreur][Code (Interne)]            HTTP 500 si le délai d'attente SQL est trop court  
+[Erreur][Code (Interne)]            Les attributs d'indexation ne fonctionnent pas avec un module complémentaire personnalisé  
+[Erreur][Code (Interne)]            Le profil d'importation n'est pas migré après la mise à jour 1.18.2  
+[Erreur][Importation CSV]           Catégories personnalisées : Les entrées de dialogue avec une dépendance ne sont pas correctement importées et assignées  
+[Erreur][Importation CSV]           L'importation CSV n'attribue pas une personne à un champ de navigateur d'objet de catégorie personnalisée (unique)  
+[Erreur][Importation CSV]           Si l'attribut Connexion > Nom d'utilisateur est défini pour une personne, cette personne ne peut pas se connecter avec le mot de passe enregistré.  
+[Erreur][Importation CSV]           Importer du contenu pour les champs Oui/Non n'est pas possible avec 0/1 via l'importation CSV  
+[Erreur][Importation CSV]           La fréquence du processeur est de 0 lors de l'importation via CSV  
+[Erreur][Importation CSV]           La Capacité de la mémoire n'est pas remplie via CSV  
+[Erreur][LDAP]                      La synchronisation LDAP attribue des groupes à des utilisateurs qui ne sont pas membres du groupe  
+[Erreur][API]                       La propriété 'Date d'installation' ne peut pas être définie dans la catégorie d'application via l'API  
+[Erreur][API]                       L'API ignore la validation des attributs uniques  
+[Erreur][API]                       La configuration de catégorie et d'attribut de l'API ne se charge pas  
+[Erreur][Système d'autorisation]     La catégorie réseau n'est pas affichée dans l'aperçu malgré les droits corrects  
+[Erreur][Objets]                    L'emplacement racine est cliquable dans la vue d'emplacement  
+[Erreur][Édition de liste]          Tous les numéros de version sont affichés dans l'édition de liste  
+[Erreur][Édition de liste]          L'édition de liste ne se sauvegarde pas correctement lorsqu'un objet est sélectionné  
+[Erreur][Édition de liste]          "acheté à" dans la catégorie comptabilité est rempli avec une valeur par défaut dans l'édition de liste  
+[Erreur][Recherche]                 La recherche globale du numéro d'inventaire ne fonctionne pas lors de l'utilisation du compteur  
+[Erreur][Recherche]                 La recherche globale avec ' ou % provoque une erreur SQL  
+[Erreur][Modèles]                   Interdire l'utilisation de la catégorie "Configuration d'autorisation" pour les modèles  
+[Erreur][Journal]                   Lorsque je purge un réseau de niveau 3, aucune entrée de journal n'est créée  
+[Erreur][Journal]                   La valeur des champs Oui/Non dans le journal est vide  
+[Erreur][Nouvelle logique de câblage] La connexion fibre n'est pas supprimée  
+[Erreur][Paramètres système]        Plus d'informations pour le paramètre système > Conserver le statut des objets importés ?  
+[Erreur][Paramètres de licence]      Changer le nom du client réinitialise les licences d'objet assignées.  

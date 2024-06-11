@@ -1,35 +1,37 @@
-#  checkmk 2: First steps
+#  checkmk 2: Premiers pas
 
-You are new to this topic and want to integrate both checkmk and i-doit? Follow these simple steps:
+Vous êtes nouveau sur ce sujet et souhaitez intégrer à la fois checkmk et i-doit ? Suivez ces étapes simples :
 
-1.  [Meet all requirements](./requirements.md)
-2.  [Download and install](./installation.md) the add-on package with the built-in command-line tool idoitcmk
-3.  Make sure checkmk and i-doit can be accessed by their APIs
-4.  Create your own configuration:
+1.  [Répondre à toutes les exigences](./requirements.md)
+2.  [Télécharger et installer](./installation.md) le package d'extension avec l'outil en ligne de commande intégré idoitcmk
+3.  Assurez-vous que checkmk et i-doit peuvent être accessibles via leurs API
+4.  Créez votre propre configuration:
     
-    idoitcmk init ([read more](./configuration.md))
+    idoitcmk init ([en savoir plus](./configuration.md))
     
-5.  [Try some basic commands](./usage.md)
-6.  Sync some basic information between checkmk and i-doit:
+5.  [Essayer quelques commandes de base](./usage.md)
+6.  Synchroniser quelques informations de base entre checkmk et i-doit:
     
-    idoitcmk sync-agents ([read more](./sync-checkmk-agents.md))
+    idoitcmk sync-agents ([en savoir plus](./sync-checkmk-agents.md))
     
-    idoitcmk sync-contact-groups ([read more](./sync-contact-groups.md))
+    idoitcmk sync-contact-groups ([en savoir plus](./sync-contact-groups.md))
     
-    idoitcmk sync-folders ([read more](./sync-wato-folder.md))
+    idoitcmk sync-folders ([en savoir plus](./sync-wato-folder.md))
     
-    idoitcmk sync-sites ([read more](./sync-checkmk-sites.md))
+    idoitcmk sync-sites ([en savoir plus](./sync-checkmk-sites.md))
     
-    idoitcmk sync-tags ([read more](./sync-host-tags.md))
+    idoitcmk sync-tags ([en savoir plus](./sync-host-tags.md))
     
-7.  Either configure checkmk based on i-doit:
+7.  Configurer checkmk en fonction de i-doit:
     
-    idoitcmk push ([read more](./generate-wato-configuration-base-on-cmdb-data.md))
-    
-8.  Or fetch useful information about your infrastructure from checkmk to i-doit:
-    
-    idoitcmk pull ([read more](./import-inventory-data-into-cmdb.md))
-    
-9.  Automate all the things!
+    idoitcmk push ([en savoir plus](./generate-wato-configuration-base-on-cmdb-data.md)) 
 
-Any questions? Read our [FAQ](./faq.md)
+{ /* examples */ }
+
+8.  Ou récupérez des informations utiles sur votre infrastructure depuis checkmk vers i-doit:
+    
+    idoitcmk pull ([en savoir plus](./import-inventory-data-into-cmdb.md))
+    
+9.  Automatisez toutes les choses!
+
+Des questions ? Consultez notre [FAQ](./faq.md)

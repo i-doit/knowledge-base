@@ -1,581 +1,601 @@
 # Checkmk2
 
-## What is new (v1.8.5)
+## Quoi de neuf (v1.8.5)
 
-### Dynamic Filtering Using Whitelist and Blacklist
+### Filtrage dynamique à l'aide d'une liste blanche et d'une liste noire
 
-With the latest software update, users now have the ability to precisely control the import and synchronization process of software applications. By using regular expressions, users can define exactly which applications should be included or excluded during the process. A whitelist allows users to selectively choose specific software applications for processing. For example, the regular expression `^Windows Update.*$` ensures that all Windows updates are included in the process, while `^python[0-9.]+$` captures all Python versions.
-Complementary to the whitelist, the blacklist provides a function to explicitly exclude applications from the import and synchronization process.
+Avec la dernière mise à jour du logiciel, les utilisateurs ont désormais la possibilité de contrôler précisément le processus d'importation et de synchronisation des applications logicielles. En utilisant des expressions régulières, les utilisateurs peuvent définir exactement quelles applications doivent être incluses ou exclues lors du processus. Une liste blanche permet aux utilisateurs de choisir sélectivement des applications logicielles spécifiques pour le traitement. Par exemple, l'expression régulière `^Mise à jour Windows.*$` garantit que toutes les mises à jour de Windows sont incluses dans le processus, tandis que `^python[0-9.]+$` capture toutes les versions de Python.
+Complémentaire à la liste blanche, la liste noire fournit une fonction pour exclure explicitement des applications du processus d'importation et de synchronisation.
 
-Additionally, an important change has been made to the configuration structure in this version: The parameter `createUnknownSoftwareApplications,` which was previously located in the main "pull" section, has been moved to the newly created `softwareApplications` subsection. This restructuring improves the clarity and modularity of the configuration settings.
-For users who want to familiarize themselves with the new configuration structure, the command `./idoitcmk print-example-config`provides a convenient way to view an example of the new parameter arrangement.
+De plus, un changement important a été apporté à la structure de configuration dans cette version : Le paramètre `createUnknownSoftwareApplications,` qui était précédemment situé dans la section principale "pull", a été déplacé vers la sous-section nouvellement créée `softwareApplications`. Cette restructuration améliore la clarté et la modularité des paramètres de configuration.
+Pour les utilisateurs qui souhaitent se familiariser avec la nouvelle structure de configuration, la commande `./idoitcmk print-example-config` offre un moyen pratique de visualiser un exemple du nouvel agencement des paramètres.
 
-## What is new (v1.8.2)
+## Quoi de neuf (v1.8.2) {/examples}
 
--   With version 1.8.2 CMK2 now supports Checkmk version 2.2.
--   If the config parameter check_mk.version is set to "2.2", the REST API is automatically accessed instead of the Web API.
--   If the config parameter check_mk.version is set to "2.1", the WebAPI is used unless there is a configuration section. "check_mk.rest" that can be used in parallel with the WebAPI configuration. Then the REST API is also used for 2.1.
--   This does not affect the calls to the Inventory API!
+- Avec la version 1.8.2, CMK2 prend désormais en charge la version 2.2 de Checkmk.
+- Si le paramètre de configuration check_mk.version est défini sur "2.2", l'API REST est automatiquement utilisée à la place de l'API Web.
+- Si le paramètre de configuration check_mk.version est défini sur "2.1", l'API Web est utilisée sauf s'il existe une section de configuration "check_mk.rest" qui peut être utilisée en parallèle avec la configuration de l'API Web. Dans ce cas, l'API REST est également utilisée pour la version 2.1.
+- Cela n'affecte pas les appels à l'API d'inventaire!
 
-!!! info ""
-    As a Gold Partner of Tribe29, SHD - System-Haus-Dresden GmbH is considered a proven specialist for monitoring with Checkmk. With the takeover and further development of the i-doit pro add-on Checkmk 2, SHD is now making this expertise available to i-doit users.
+<Notes>
+    En tant que partenaire Gold de Tribe29, SHD - System-Haus-Dresden GmbH est considéré comme un spécialiste éprouvé en matière de surveillance avec Checkmk. Avec la reprise et le développement ultérieur de l'add-on i-doit pro Checkmk 2, SHD met désormais cette expertise à la disposition des utilisateurs d'i-doit.
+</Notes>
 
-!!! attention ""
-    With [Checkmk version 2.1.0b1](https://checkmk.com/werk/12389) the structure of the inventory data has been changed. It is currently not possible to transfer inventory to i-doit with CheckMK 2 add-on <=1.8<br>
-    With version 1.8.1 the [configuration](./configuration.md) must be adjusted.
+<Notes>
+    Avec [Checkmk version 2.1.0b1](https://checkmk.com/werk/12389), la structure des données d'inventaire a été modifiée. Il n'est actuellement pas possible de transférer l'inventaire vers i-doit avec l'add-on CheckMK 2 <=1.8<br>
+    Avec la version 1.8.1, la [configuration](./configuration.md) doit être ajustée.
+</Notes>
 
-Share information between i-doit and checkmk
+Partager des informations entre i-doit et checkmk
 
-## About
+## À propos
 
-[i-doit](https://i-doit.com) is a Web application for IT documentation and a CMDB (Configuration Management Database). This application is very useful to collect all your knowledge about the IT infrastructure you are dealing with.
+[i-doit](https://i-doit.com) est une application Web pour la documentation informatique et une CMDB (Base de données de gestion de configuration). Cette application est très utile pour recueillir toutes vos connaissances sur l'infrastructure informatique avec laquelle vous travaillez.
 
-[checkmk](https://mathias-kettner.de/checkmk.html) is a software application for network monitoring.
+[checkmk](https://mathias-kettner.de/checkmk.html) est une application logicielle de surveillance réseau.
 
-Together both applications do one job very well: collecting and sharing knowledge about what _is_ the current state of all your hosts and services in real-time _and_ in which state each host and service _should_ be. This is often essential for a professional and efficient IT service management (ITSM).
+Ensemble, ces deux applications font très bien un travail : collecter et partager des connaissances sur l'état actuel de tous vos hôtes et services en temps réel et dans quel état chaque hôte et service devrait être. Cela est souvent essentiel pour une gestion de services informatiques (ITSM) professionnelle et efficace.
 
-The application idoitcmk closely connects i-doit with checkmk. A lot of information will be shared between them to reach the following goals:
+L'application idoitcmk connecte étroitement i-doit avec checkmk. Beaucoup d'informations seront partagées entre eux pour atteindre les objectifs suivants :
 
--   Write-once, read-many: Keep your documentation and configuration at one place.
--   Easily compare the current state with the target state of all your hosts and services within your documentation.
--   Configure your network monitoring based on your documentation
--   Let your network monitoring collect essential information about hosts and re-use it in your documentation.
--   Automate all the boring tasks a sysadmin doesn’t like.
+- Écrire une fois, lire plusieurs fois : Gardez votre documentation et votre configuration au même endroit.
+- Comparez facilement l'état actuel avec l'état cible de tous vos hôtes et services dans votre documentation.
+- Configurez votre surveillance réseau en fonction de votre documentation.
+- Permettez à votre surveillance réseau de collecter des informations essentielles sur les hôtes et de les réutiliser dans votre documentation.
+- Automatisez toutes les tâches ennuyeuses qu'un administrateur système n'aime pas.
 
-We know each (IT) organization has different requirements and various processes. Due to this it is important to have a [highly customizable](./configuration.md) application.
+Nous savons que chaque organisation informatique a des exigences différentes et des processus variés. C'est pourquoi il est important d'avoir une [application hautement personnalisable](./configuration.md).
 
 ## Documentation
 
--   [First steps](./first-steps.md)
--   [Requirements](./requirements.md)
+-   [Premiers pas](./first-steps.md)
+-   [Exigences](./requirements.md)
 -   [Installation](./installation.md)
--   [Usage](./usage.md)
+-   [Utilisation](./usage.md)
 -   [Configuration](./configuration.md)
--   [Generate WATO configuration based on CMDB data](./generate-wato-configuration-base-on-cmdb-data.md)
--   [Import inventory data into CMDB](./import-inventory-data-into-cmdb.md)
--   [Match objects from i-doit with hosts from checkmk](./match-objects-from-i-doit-with-hosts-from-checkmk.md)
--   [Read information from i-doit and checkmk](./read-information-from-i-doit-and-checkmk.md)
--   [Import agents types from checkmk to i-doit](./sync-checkmk-agents.md)
--   [Sync contact groups between checkmk and i-doit](./sync-contact-groups.md)
--   [Sync WATO folders between checkmk and i-doit](./sync-wato-folder.md)
--   [Import monitoring sites from checkmk to i-doit](./sync-checkmk-sites.md)
--   [Sync host tags between checkmk and i-doit](./sync-host-tags.md)
--   [i-doit Web GUI](./i-doit-web-gui.md)
--   [Frequently asked questions (FAQ)](./faq.md)
+-   [Générer une configuration WATO basée sur les données de la CMDB](./generate-wato-configuration-base-on-cmdb-data.md)
+-   [Importer des données d'inventaire dans la CMDB](./import-inventory-data-into-cmdb.md)
+-   [Faire correspondre des objets de i-doit avec des hôtes de checkmk](./match-objects-from-i-doit-with-hosts-from-checkmk.md)
+-   [Lire des informations de i-doit et checkmk](./read-information-from-i-doit-and-checkmk.md)
+-   [Importer les types d'agents de checkmk dans i-doit](./sync-checkmk-agents.md)
+-   [Synchroniser les groupes de contacts entre checkmk et i-doit](./sync-contact-groups.md)
+-   [Synchroniser les dossiers WATO entre checkmk et i-doit](./sync-wato-folder.md)
+-   [Importer des sites de surveillance de checkmk dans i-doit](./sync-checkmk-sites.md)
+-   [Synchroniser les tags d'hôtes entre checkmk et i-doit](./sync-host-tags.md)
+-   [Interface Web i-doit](./i-doit-web-gui.md)
+-   [Foire aux questions (FAQ)](./faq.md)
 
-## Changelog
+## Journal des modifications {/ * exemples *}
 
-All notable changes to this project will be documented in this file.
+Tous les changements notables apportés à ce projet seront documentés dans ce fichier.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/)
+et ce projet adhère à [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [1.8.5] - 2024-04-16
+### [1.8.5] - 16 avril 2024
 
-### Added
+### Ajouté
 
--   Adding software application white- and blacklist
--   Moving config parameter pull.createUnknownSoftwareApplications to pull.softwareApplications.createUnknownSoftwareApplications
--   PHP 8.1 Compatibility
--   Improved log messages
--   Removed Checkmk 1.5 from list of supported versions
--   Extend status command to print the used config files
+-   Ajout de la liste blanche et noire des applications logicielles
+-   Déplacement du paramètre de configuration pull.createUnknownSoftwareApplications vers pull.softwareApplications.createUnknownSoftwareApplications
+-   Compatibilité PHP 8.1
+-   Amélioration des messages de journalisation
+-   Suppression de Checkmk 1.5 de la liste des versions prises en charge
+-   Étendre la commande de statut pour afficher les fichiers de configuration utilisés
 
-### Fixes
+### Corrections
 
--   CMK2-99 fix creation of hosts in other folder than main
--   CMK2-88 fix crash with inventory api and config param i-doit.limitBatchRequests
--   CMK2-68 fix error at static tag sync
--   CMK2-67 fix crash when importing drives
+-   CMK2-99 correction de la création d'hôtes dans un dossier autre que le principal
+-   CMK2-88 correction du crash avec l'API d'inventaire et du paramètre de configuration i-doit.limitBatchRequests
+-   CMK2-68 correction de l'erreur lors de la synchronisation des balises statiques
+-   CMK2-67 correction du crash lors de l'importation de disques
 
-### [1.8.4] - 2023-11-17
+### [1.8.4] - 17 novembre 2023
 
-### Fixes
+### Corrections
 
--   CMK2-49 error when calling cmdb.category.save
--   CMK2-50 unify folder and host responses
--   CMK2-51 fix inventory for checkmk <2.1
--   CMK2-53 fix include tags
--   CMK2-53 remove obsolete dynamic attributes
--   CMK2-55 correct handling of empty attributes in HW/SW Inventory
--   CMK2-56 fix errors during sync-sites
--   CMK2-57 fix errors during sync-tags
--   CMK2-61 fix errors during saving of contact-groups
--   CMK2-62 validfation error during pull
--   CMK2-63 fix undefined index mac
+-   CMK2-49 erreur lors de l'appel à cmdb.category.save
+-   CMK2-50 unifier les réponses de dossiers et d'hôtes
+-   CMK2-51 correction de l'inventaire pour checkmk <2.1
+-   CMK2-53 correction de l'inclusion des balises
+-   CMK2-53 suppression des attributs dynamiques obsolètes
+-   CMK2-55 gestion correcte des attributs vides dans l'inventaire HW/SW
+-   CMK2-56 correction des erreurs lors de la synchronisation des sites
+-   CMK2-57 correction des erreurs lors de la synchronisation des balises
+-   CMK2-61 correction des erreurs lors de l'enregistrement des groupes de contacts
+-   CMK2-62 erreur de validation lors du pull
+-   CMK2-63 correction de l'index mac non défini
 
-### [1.8.3] - 2023-09-07
+### [1.8.3] - 2023-09-07 {/ * exemples * /}
 
-### Fixes
+### Corrections
 
--   CMK2-41 REST-API: pull crashes when certain host or folder attributes are sets
--   CMK2-42 REST-API: match crashes
--   CMK2-44 REST-API: read nested folders correct
--   CMK2-45 REST-API: sync-folders crashes when creating nested folders
--   CMK2-46 CONFIG: only require a rest configuration if Checkmk Version >= 2.2
+-   CMK2-41 REST-API: le pull plante lorsque certains attributs d'hôte ou de dossier sont définis
+-   CMK2-42 REST-API: le match plante
+-   CMK2-44 REST-API: lire correctement les dossiers imbriqués
+-   CMK2-45 REST-API: sync-folders plante lors de la création de dossiers imbriqués
+-   CMK2-46 CONFIG: nécessiter une configuration rest uniquement si la version de Checkmk est >= 2.2
 
-### [1.8.2] - 2023-08-18
+### [1.8.2] - 2023-08-18 {/ * exemples * /}
 
-### Fixes
+### Corrections
 
--   CMK2-41 REST-API: pull crashes when certain host or folder attributes are sets
--   CMK2-42 REST-API: match crashes
--   CMK2-44 REST-API: read nested folders correct
--   CMK2-45 REST-API: sync-folders crashes when creating nested folders
--   CMK2-46 CONFIG: only require a rest configuration if Checkmk Version >= 2.2
+-   CMK2-41 REST-API: le pull plante lorsque certains attributs d'hôte ou de dossier sont définis
+-   CMK2-42 REST-API: le match plante
+-   CMK2-44 REST-API: lire correctement les dossiers imbriqués
+-   CMK2-45 REST-API: sync-folders plante lors de la création de dossiers imbriqués
+-   CMK2-46 CONFIG: nécessiter une configuration rest uniquement si la version de Checkmk est >= 2.2
 
-### [1.8.2] - 2023-08-18
+### [1.8.2] - 2023-08-18 {/ * exemples * /}
 
-### Added
+### Ajouté
 
--   Adding compatibility to checkmk 2.1
+-   Ajout de la compatibilité avec checkmk 2.1
 
-### Fixes
+### Corrections
 
--   CMK2-38 prevent arbitrary code execution on the idoit host via command injection in the hostname field of the ajax call
+-   CMK2-38 empêcher l'exécution de code arbitraire sur l'hôte idoit via une injection de commande dans le champ de nom d'hôte de l'appel ajax
 
-### [1.8.1] - 2022-11-21
+### [1.8.1] - 2022-11-21 {/ * exemples * /}
 
-### Fixes
+### Corrections
 
--   Adding compatibility to checkmk 2.1
+-   Ajout de la compatibilité avec checkmk 2.1
 
-### [1.8.0] - 2022-09-05
+### [1.8.0] - 2022-09-05 {/ * exemples * /}
 
-### Added
+### Ajouté
 
--   PHP 8.0 Compatibility
--   Design Compatibility
+-   Compatibilité PHP 8.0
+-   Compatibilité de conception
 
-### Fixes
+{/*examples*/}
 
--   Error message when synchronizing tags
--   Synchronizing IPv6 IPs and networks generates an error message
+### Corrections
+
+-   Message d'erreur lors de la synchronisation des balises
+-   La synchronisation des adresses IPv6 et des réseaux génère un message d'erreur
+
+{/*examples*/}
 
 ### [1.7.1] - 2021-10-18
 
-### Added
+### Ajouté
 
--   Pull IPv6 addresses from checkmk to i-doit
+-   Extraire les adresses IPv6 de checkmk vers i-doit
 
-### Fixed
+{/*examples*/}
 
--   Add/fix CPU attributes from checkmk to i-doit
--   Add/fix operating system attributes from checkmk to i-doit
+### Corrigé
+
+-   Ajouter/corriger les attributs du processeur de checkmk à i-doit
+-   Ajouter/corriger les attributs du système d'exploitation de checkmk à i-doit
+
+{/*examples*/}
 
 ### [1.7.0] - 2021-08-09
 
-### Added
+### Ajouté
 
--   Implement merge strategy while pulling from checkmk to i-doit
+-   Implémenter une stratégie de fusion lors de l'extraction de checkmk vers i-doit
 
-### Fixed
+{/*examples*/}
 
--   Tags (static) Dropdown ‘Tag group’ attributes cannot be deleted
--   CheckMK 2: Tags are not displayed with the tag group in reports
+### Corrigé
+
+-   Les attributs du groupe de balises statiques 'Tag group' ne peuvent pas être supprimés
+-   CheckMK 2 : Les balises ne sont pas affichées avec le groupe de balises dans les rapports
+
+{/*examples*/}
 
 ### [1.6.1] – 2021-06-15
 
-### Fixed
+### Corrigé
 
--   Password and username must be specified (i-doit config)
--   Filtering on attributes of category Check\_MK (host) generates SQL error and list view does not work anymore
--   Dynamic host tag “Location” cannot be set globally
--   CheckMK 2 Plugin Pull: Validation errors in dialog related properties
--   The live status configuration is not optional
--   Checkmk responded with an error message: Check\_MK exception: Invalid key(s): hostname
--   Check\_MK 2: Error Message strlen() expects parameter 1 to be string, null given
--   Error in list views when add-on Check\_MK 2 was deinstalled
--   Operating system is not assigned
--   No attributes are imported for applications
--   Pull with the same Host as parent ends in a loop
+-   Le mot de passe et le nom d'utilisateur doivent être spécifiés (configuration i-doit)
+-   Le filtrage sur les attributs de la catégorie Check\_MK (hôte) génère une erreur SQL et la vue en liste ne fonctionne plus
+-   L'étiquette d'hôte dynamique "Emplacement" ne peut pas être définie globalement
+-   Plugin Pull CheckMK 2 : Erreurs de validation dans les propriétés liées à la boîte de dialogue
+-   La configuration de l'état en direct n'est pas facultative
+-   Checkmk a répondu avec un message d'erreur : Exception Check\_MK : Clé(s) non valide(s) : nom d'hôte
+-   Check\_MK 2 : Message d'erreur strlen() attend un paramètre de type chaîne, null donné
+-   Erreur dans les vues en liste lorsque l'add-on Check\_MK 2 a été désinstallé
+-   Le système d'exploitation n'est pas attribué
+-   Aucun attribut n'est importé pour les applications
+-   L'extraction avec le même hôte que le parent se termine en boucle
 
-### [1.6.0] – 2019-12-06
+{/*examples*/}
 
-### Added
+### [1.6.0] – 2019-12-06 {/ * exemples * /}
 
--   pull: Import software applications
--   pull: New configuration setting pull.createUnknownSoftwareApplications
--   pull: New configuration setting pull.attributes.C__CATG__APPLICATION
--   pull: New configuration setting objectTypes.softwareApplication
--   pull/match: Match objects and hosts by serial number configured by new item serial in pull.attributes
--   fetch-hosts: Add new option --select to select one or multiple attributes, ignore everything else (works only in verbose mode)
--   push: Print last request to Checkmk API on failure as debug message
+### Ajouté
 
-### Changed
+-   pull: Importer des applications logicielles
+-   pull: Nouveau paramètre de configuration pull.createUnknownSoftwareApplications
+-   pull: Nouveau paramètre de configuration pull.attributes.C__CATG__APPLICATION
+-   pull: Nouveau paramètre de configuration objectTypes.softwareApplication
+-   pull/match: Faire correspondre des objets et des hôtes par numéro de série configuré par le nouvel élément de série dans pull.attributes
+-   fetch-hosts: Ajouter la nouvelle option --select pour sélectionner un ou plusieurs attributs, ignorer tout le reste (fonctionne uniquement en mode verbeux)
+-   push: Afficher la dernière requête à l'API Checkmk en cas d'échec en tant que message de débogage
 
--   Drop support for PHP version 5.6
--   Mark PHP version 7.0 as deprecated
--   Recommend PHP 7.3
--   Re-name Check_MK to Checkmk
--   Require PHP modules hash, sockets and SPL
--   pull: Do not warn about empty host tag IDs because they are allowed in Checkmk
--   pull: Ignore link local networking addresses and interfaces
--   pull: Do not ignore a networking address which can’t be assigned to a networking port
--   push: Create site if it’s set in i-doit (category Checkmk Host) but not set in Checkmk
--   push: Update site if it’s set in both i-doit and Checkmk but differs
--   push: Remove site if it isn’t set in i-doit but set in Checkmk
--   match: Warn about ignored objects or objects without unique identifiers
+### Changé
 
-### Fixed
+-   Abandonner le support de la version PHP 5.6
+-   Marquer la version PHP 7.0 comme obsolète
+-   Recommander PHP 7.3
+-   Renommer Check_MK en Checkmk
+-   Exiger les modules PHP hash, sockets et SPL
+-   pull: Ne pas avertir des identifiants de balises d'hôte vides car ils sont autorisés dans Checkmk
+-   pull: Ignorer les adresses et interfaces réseau locales
+-   pull: Ne pas ignorer une adresse réseau qui ne peut pas être attribuée à un port réseau
+-   push: Créer un site s'il est défini dans i-doit (catégorie Checkmk Host) mais non défini dans Checkmk
+-   push: Mettre à jour le site s'il est défini à la fois dans i-doit et dans Checkmk mais qu'il est différent
+-   push: Supprimer le site s'il n'est pas défini dans i-doit mais défini dans Checkmk
+-   match: Avertir des objets ignorés ou des objets sans identifiants uniques
 
--   fetch-hosts/pull: Fetch HW/SW inventory data for all hosts if configuration setting i-doit.limitBatchRequests is smaller than the number of hosts.
--   match/pull/push: Use primary category entry from category hostadress to determine hostname used by Checkmk
--   pull: Do not import empty MAC addresses
--   pull: Prevent validation error caused by unknown property entry
--   pull: Print link to Checkmk if attribute “site” is available
--   pull: Validate data type of each tag identifier
--   pull: Do not leave any host without an import strategy (create, overwrite, merge or ignore)
--   pull: Decide import strategy for each host based on matching and configuration settings
--   pull: Do not create objects which should be ignored
--   push: Use IPv4 address which is explicitly marked as primary
--   Web GUI: Add missing translations in English
+### Corrigé {/ * exemples * /}
+
+-   fetch-hosts/pull: Récupérer les données d'inventaire HW/SW pour tous les hôtes si le paramètre de configuration i-doit.limitBatchRequests est inférieur au nombre d'hôtes.
+-   match/pull/push: Utiliser l'entrée de catégorie principale de la catégorie hostadress pour déterminer le nom d'hôte utilisé par Checkmk
+-   pull: Ne pas importer les adresses MAC vides
+-   pull: Empêcher l'erreur de validation causée par une entrée de propriété inconnue
+-   pull: Afficher le lien vers Checkmk si l'attribut "site" est disponible
+-   pull: Valider le type de données de chaque identifiant de balise
+-   pull: Ne laisser aucun hôte sans stratégie d'importation (créer, écraser, fusionner ou ignorer)
+-   pull: Décider de la stratégie d'importation pour chaque hôte en fonction de la correspondance et des paramètres de configuration
+-   pull: Ne pas créer d'objets qui devraient être ignorés
+-   push: Utiliser l'adresse IPv4 qui est explicitement marquée comme principale
+-   Interface Web: Ajouter les traductions manquantes en anglais
 
 ### [1.5.1] – 2019-05-08
 
-This is a bug fix release after we received tons of useful feedback from our users.
+Il s'agit d'une version de correction de bugs après avoir reçu des tonnes de retours utiles de nos utilisateurs.
 
-**Important notices:**
+**Avis importants:**
 
--   Before installing/updating this add-on, please update to the latest version of i-doit (at least 1.12.2) and the API add-on (at least 1.10.2).
--   Before using any other commands, run sync-agents first and check your i-doit objects for missing values in category Check_MK Host, attribute Agent.
+-   Avant d'installer/mettre à jour ce module complémentaire, veuillez mettre à jour vers la dernière version de i-doit (au moins 1.12.2) et le module complémentaire API (au moins 1.10.2).
+-   Avant d'utiliser d'autres commandes, exécutez d'abord sync-agents et vérifiez vos objets i-doit pour les valeurs manquantes dans la catégorie Check_MK Host, attribut Agent.
 
-### Added
+### Ajouté
 
--   status: Check installed versions of Check\_MK 2 and API add-on
--   sync-agents: Cleanup agent types in i-doit which aren’t available in Check\_MK
--   sync-tags: Validate tags in i-doit before pushing them to Check\_MK
--   pull/push: Add new configuration settings to identify required object types by their constants and objects by their titles
--   pull: Print links to i-doit and Check\_MK for each object (only in debug mode)
+-   status: Vérifier les versions installées de Check\_MK 2 et de l'extension API
+-   sync-agents: Nettoyer les types d'agents dans i-doit qui ne sont pas disponibles dans Check\_MK
+-   sync-tags: Valider les tags dans i-doit avant de les pousser vers Check\_MK
+-   pull/push: Ajouter de nouveaux paramètres de configuration pour identifier les types d'objets requis par leurs constantes et les objets par leurs titres
+-   pull: Afficher les liens vers i-doit et Check\_MK pour chaque objet (uniquement en mode débogage)
 
-### Changed
+### Modifié
 
--   Require i-doit >=1.12.2
--   Require API add-on >=1.10.2
--   pull/push/sync-tags/Extras > Check_MK 2 > Tags (static): Mark attribute Tag ID as optional
--   pull: Skip empty tag identifiers
--   pull: If model is given but vendor is unknown set vendor to n/a (and vice versa)
--   pull: Support more bandwidth options
--   sync-agents: Fetch agent types directly from Check\_MK and do not rely on a pre-defined list of agent types
--   sync-tags: Do not allow to sync duplicate tag IDs, empty group titles or changed tag IDs
--   sync-tags/sync-agents: Include built-in host tag groups, for example: agent type, SNMP, IP address family
--   init: Do not force to configure most settings which have proper defaults; just ask nicely
--   Add performance boost while fetching objects from i-doit by tweaking API calls
--   Replaced deprecated i-doit API methods
--   help/--help/-h: Improve included documentation
--   Abort application run on any PHP error
--   Category Check_MK Host: Print message if host/object not found
--   Category Check_MK Host: Remove link to command log (prevents 403 forbidden error message)
--   fetch-hosts/fetch-objects/delete-hosts: Exit with status code 2 if host/object not found
--   Build binary: Replace BZip2 with GZip compression after autoloading failed because of wrong checksums
+-   Nécessite i-doit >=1.12.2
+-   Nécessite l'extension API >=1.10.2
+-   pull/push/sync-tags/Extras > Check_MK 2 > Tags (statique): Marquer l'attribut Tag ID comme optionnel
+-   pull: Ignorer les identifiants de tag vides
+-   pull: Si le modèle est donné mais que le vendeur est inconnu, définir le vendeur sur n/a (et vice versa)
+-   pull: Prendre en charge plus d'options de bande passante
+-   sync-agents: Récupérer les types d'agents directement depuis Check\_MK et ne pas se fier à une liste prédéfinie de types d'agents
+-   sync-tags: Ne pas autoriser la synchronisation des identifiants de tag en double, des titres de groupe vides ou des identifiants de tag modifiés
+-   sync-tags/sync-agents: Inclure les groupes de tags d'hôtes intégrés, par exemple : type d'agent, SNMP, famille d'adresses IP
+-   init: Ne pas forcer à configurer la plupart des paramètres qui ont des valeurs par défaut correctes ; demander gentiment
+-   Ajouter un boost de performance lors de la récupération d'objets depuis i-doit en ajustant les appels API
+-   Remplacer les méthodes API obsolètes d'i-doit
+-   help/--help/-h: Améliorer la documentation incluse
+-   Arrêter l'exécution de l'application sur toute erreur PHP
+-   Catégorie Check_MK Host: Afficher un message si l'hôte/objet n'est pas trouvé
+-   Catégorie Check_MK Host: Supprimer le lien vers le journal des commandes (évite le message d'erreur 403 forbidden)
+-   fetch-hosts/fetch-objects/delete-hosts: Sortir avec le code d'état 2 si l'hôte/objet n'est pas trouvé
+-   Construire un binaire: Remplacer la compression BZip2 par la compression GZip après un échec de chargement automatique en raison de mauvais checksums
 
-### Fixed
+{/*examples*/}
 
--   pull: Fix API calls to prevent validation errors in attributes active, primary and export_ip
--   pull: Avoid errors when archiving data in overwrite mode
--   pull: Do not create new objects in i-doit if configuration setting pull.createObjects is disabled
--   pull: Do not warn about missing host tags because they are dynamically created by i-doit
--   pull: Do not try to add network port with zero bandwidth
--   pull: Select proper attributes to import CPUs
--   pull: Do not overwrite hostname selection in categories Check_MK Host and Livestatus if object is updated
--   pull/fetch-hosts: Fix filtering by Check\_MK site with option --include-site
--   pull/match: Do not try to match objects by unspecified hostname selection in category Check_MK Host
--   pull/push/match: Do not try to create already existing object which has a match with a host
--   push: Do not miss any host-related contact group if more than one group is assigned to an object
--   push: Do not push tag IDs in lower-case
--   push: Validate possible identifiers before using one of them
--   push: Do not push any object with option --include-ids which is disabled for export
--   push: Add parents to existing host or overwrite current parents or remove them properly
--   push: Add or remove alias to/from host properly
--   push/fetch-objects: Prevent error “Found invalid result for request in batch” if --include-ids filters by unknown objects
--   sync-tags: Do not forget to strip HTML tags from tag group title before syncing to Check\_MK
--   Installation/update: Grant “Admin” group access to Extras > Check_MK 2 in Web GUI
--   Extras > Check_MK 2 > Tags (static): Edit/delete/sort static host tags in i-doit
--   Administration > Interfaces / external data > Monitoring > Check_MK 2: Fix updating configuration settings
--   Administration > CMDB settings > Dialog-Admin: Make dialog+ attributes agent, site and WATO folder available
--   Category Check_MK Host/Check_MK Tags: Do not create duplicate assignments to object types after update
--   Category Check_MK Host: Write full command output incl. STDERR to log file
--   Category Check_MK Tags: Make “dynamic tags” and “CMDB tags” available in reports
+### Corrigé
 
-### [1.5.0] – 2018-12-18
+-   pull: Corriger les appels API pour éviter les erreurs de validation dans les attributs actif, primaire et export_ip
+-   pull: Éviter les erreurs lors de l'archivage des données en mode écrasement
+-   pull: Ne pas créer de nouveaux objets dans i-doit si le paramètre de configuration pull.createObjects est désactivé
+-   pull: Ne pas avertir des balises d'hôte manquantes car elles sont créées dynamiquement par i-doit
+-   pull: Ne pas essayer d'ajouter un port réseau avec une bande passante nulle
+-   pull: Sélectionner les attributs appropriés pour importer les processeurs
+-   pull: Ne pas écraser la sélection du nom d'hôte dans les catégories Check_MK Host et Livestatus si l'objet est mis à jour
+-   pull/fetch-hosts: Corriger le filtrage par site Check\_MK avec l'option --include-site
+-   pull/match: Ne pas essayer de faire correspondre des objets par une sélection de nom d'hôte non spécifiée dans la catégorie Check_MK Host
+-   pull/push/match: Ne pas essayer de créer un objet déjà existant qui correspond à un hôte
+-   push: Ne pas oublier de prendre en compte tous les groupes de contacts liés à un hôte si plusieurs groupes sont assignés à un objet
+-   push: Ne pas transmettre les identifiants de balise en minuscules
+-   push: Valider les identifiants possibles avant d'en utiliser un
+-   push: Ne pas transmettre d'objet avec l'option --include-ids qui est désactivée pour l'export
+-   push: Ajouter des parents à un hôte existant ou écraser les parents actuels ou les supprimer correctement
+-   push: Ajouter ou supprimer un alias à/de l'hôte correctement
+-   push/fetch-objects: Éviter l'erreur “Résultat invalide trouvé pour la requête en lot” si --include-ids filtre par des objets inconnus
+-   sync-tags: Ne pas oublier de supprimer les balises HTML du titre du groupe de balises avant la synchronisation avec Check\_MK
+-   Installation/mise à jour: Accorder l'accès au groupe “Admin” à Extras > Check_MK 2 dans l'interface Web
+-   Extras > Check_MK 2 > Balises (statiques): Modifier/supprimer/trier les balises d'hôte statiques dans i-doit
+-   Administration > Interfaces / données externes > Surveillance > Check_MK 2: Corriger la mise à jour des paramètres de configuration
+-   Administration > Paramètres CMDB > Dialog-Admin: Rendre les attributs dialog+ agent, site et dossier WATO disponibles
+-   Catégorie Check_MK Host/Check_MK Tags: Ne pas créer de doublons d'assignations aux types d'objets après la mise à jour
+-   Catégorie Check_MK Host: Écrire la sortie complète de la commande incluant STDERR dans le fichier journal
+-   Catégorie Check_MK Tags: Rendre les “balises dynamiques” et les “balises CMDB” disponibles dans les rapports
 
-First public release 🎉
+{/*examples*/}
 
-**Important notes:**
+### [1.5.0] – 2018-12-18 {/ * exemples * /}
 
--   Because of several major changes in i-doit we had to increase minimum versions of i-doit pro and API add-on.
--   Please re-run idoitcmk init to update configuration setting pull.attributes.
--   From now on, you need a valid license for this add-on. Download your license file from [https://portal.i-doit.com/](https://portal.i-doit.com/).
+Première publication publique 🎉
 
-### Added
+**Notes importantes:**
 
--   push/pull/match: Validate hostname specified in i-doit
--   Add more pre-checks: Please do not use neither PHP version < 7.0.0 nor super-user “root”
+- En raison de plusieurs changements majeurs dans i-doit, nous avons dû augmenter les versions minimales d'i-doit pro et de l'extension API.
+- Veuillez exécuter à nouveau idoitcmk init pour mettre à jour le paramètre de configuration pull.attributes.
+- Désormais, vous avez besoin d'une licence valide pour cette extension. Téléchargez votre fichier de licence depuis [https://portal.i-doit.com/](https://portal.i-doit.com/).
 
-### Changed
+### Ajouté
 
--   Require i-doit pro, at least version 1.12
--   Require i-doit API add-on, at least version 1.10
--   Enforce license check
--   Remove dependency from legacy Check\_MK add-on
--   Migrate tag configuration from Extras > Check_MK to Extras > Check_MK 2
--   Migrate category Check_MK (Host) > Export parameter to Check_MK Host
--   Migrate category Check_MK (Host) > Host tags to Check_MK Tags
--   Re-name category constant C__CATG__CMK_DEF to C__CATG__CMK2
--   Re-name category constant C__CATG__CMK_TAG to C__CATG__CMK2_TAG
--   Re-name category constant C__CMDB__SUBCAT__NETWORK_PORT to C__CATG__NETWORK_PORT in configuration setting pull.attributes
--   Re-name category constant C__CMDB__SUBCAT__NETWORK_INTERFACE_L to C__CATG__NETWORK_LOG_PORT in configuration setting pull.attributes
+- push/pull/match: Valider le nom d'hôte spécifié dans i-doit
+- Ajouter plus de pré-vérifications: Veuillez ne pas utiliser de version PHP inférieure à 7.0.0 ni l'utilisateur super "root"
 
-### Fixed
+### Changé
 
--   push: Fix error while archiving category entries
--   sync-folders: Fix typos
--   pull: Accept only EUI-48 MAC addresses (48-bit)
+- Exiger i-doit pro, au moins en version 1.12
+- Exiger l'extension API i-doit, au moins en version 1.10
+- Appliquer la vérification de licence
+- Supprimer la dépendance de l'ancienne extension Check_MK
+- Migrer la configuration des tags de Extras > Check_MK à Extras > Check_MK 2
+- Migrer la catégorie Check_MK (Host) > Paramètre d'exportation vers Check_MK Host
+- Migrer la catégorie Check_MK (Host) > Tags d'hôte vers Tags Check_MK
+- Renommer la constante de catégorie C__CATG__CMK_DEF en C__CATG__CMK2
+- Renommer la constante de catégorie C__CATG__CMK_TAG en C__CATG__CMK2_TAG
+- Renommer la constante de catégorie C__CMDB__SUBCAT__NETWORK_PORT en C__CATG__NETWORK_PORT dans le paramètre de configuration pull.attributes
+- Renommer la constante de catégorie C__CMDB__SUBCAT__NETWORK_INTERFACE_L en C__CATG__NETWORK_LOG_PORT dans le paramètre de configuration pull.attributes
 
-### [1.4.0] – 2018-11-05
+### Corrigé {/ * exemples * /}
 
-Remember, remember, the fifth of November… 🎃
+-   push: Corrigez l'erreur lors de l'archivage des entrées de catégorie
+-   sync-folders: Corrigez les fautes de frappe
+-   pull: Acceptez uniquement les adresses MAC EUI-48 (48 bits)
 
-### Added
+### [1.4.0] - 2018-11-05
 
--   push: Add management board address to host based on a object-related remote management controller
--   sync-tags: Import host tags and host tag groups from i-doit into Check\_MK
--   sync-tags: Filter objects to sync their dynamic CMDB tags with Check\_MK
--   sync-tags: Do not re-import dynamic CMDB tags from Check\_MK into i-doit
--   sync-tags: Activate (foreign) changes after adding new host tags to Check\_MK
+Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 
-### Fixed
+### Ajouté {/ * exemples * /}
 
--   Fix error when installing add-on in i-doit admin center without parallel login to i-doit tenant
--   fetch-objects: Print URL without PHP notice
+-   push: Ajoutez l'adresse du tableau de gestion à l'hôte en fonction d'un contrôleur de gestion à distance lié à un objet
+-   sync-tags: Importez les balises d'hôte et les groupes de balises d'hôte de i-doit dans Check\_MK
+-   sync-tags: Filtrer les objets pour synchroniser leurs balises CMDB dynamiques avec Check\_MK
+-   sync-tags: Ne réimportez pas les balises CMDB dynamiques de Check\_MK dans i-doit
+-   sync-tags: Activer les modifications (étrangères) après avoir ajouté de nouvelles balises d'hôte à Check\_MK
 
-### [1.3.0] – 2018-09-10
+### Corrigé {/ * exemples * /}
 
-**Important note:** There are changes in the configuration settings. Re-configure your application with idoitcmk init.
+-   Corrigez l'erreur lors de l'installation de l'extension dans le centre d'administration i-doit sans connexion parallèle au locataire i-doit
+-   fetch-objects: Imprimez l'URL sans avis PHP
 
-### Added
+### [1.3.0] - 2018-09-10
 
--   push: Validate regular expressions in configuration setting push.autoTagging
--   status: Test loaded PHP extensions
--   Make it optional to fetch “effective” attributes from hosts in Check\_MK, but enable it by default
--   Add new configuration setting check_mk.webAPI.effectiveAttributes (set to true by default)
--   fetch-objects: Print URL to each i-doit object
--   fetch-hosts: Print URL to each Check\_MK host
--   push/fetch-objects: Increase performance dramatically if the only filter option is --include-ids
+**Note importante:** Il y a des changements dans les paramètres de configuration. Reconfigurez votre application avec idoitcmk init.
 
-### Changed
+### Ajouté {/ * exemples * /}
 
--   pull: Ignore empty host tags
--   pull: Ignore host tag groups address_family and snmp (they are not available via Check\_MK Web API call)
+-   push: Validez les expressions régulières dans le paramètre de configuration push.autoTagging
+-   status: Testez les extensions PHP chargées
+-   Rendre facultatif le fait de récupérer les attributs "effectifs" des hôtes dans Check\_MK, mais l'activer par défaut
+-   Ajouter un nouveau paramètre de configuration check_mk.webAPI.effectiveAttributes (défini sur true par défaut)
+-   fetch-objects: Imprimez l'URL de chaque objet i-doit
+-   fetch-hosts: Imprimez l'URL de chaque hôte Check\_MK
+-   push/fetch-objects: Augmenter considérablement les performances si la seule option de filtre est --include-ids
 
-### Fixed
+### Modifié {/ * exemples *}
 
--   push: Do not ignore IP address
--   push/pull/match: Check for every object attribute whether it exists before matching it against host attributes
--   Configure individual proxy hosts for both i-doit JSON-RPC API and Check\_MK Web API
--   Verbose mode: Do not print that no objects have been found by blacklisted object types
+-   pull: Ignorer les balises d'hôte vides
+-   pull: Ignorer les balises d'hôte des groupes address_family et snmp (elles ne sont pas disponibles via l'appel à l'API Web Check\_MK)
+
+### Corrigé {/ * exemples *}
+
+-   push: Ne pas ignorer l'adresse IP
+-   push/pull/match: Vérifier pour chaque attribut d'objet s'il existe avant de le faire correspondre avec les attributs d'hôte
+-   Configurer des hôtes proxy individuels pour l'API JSON-RPC i-doit et l'API Web Check\_MK
+-   Mode verbeux: Ne pas afficher que aucun objet n'a été trouvé par les types d'objet sur liste noire
 
 ### [1.2.0] – 2018-07-09
 
-**Important notice:** Before installing/updating this add-on, please update your i-doit instance to the latest version (currently 1.11).
+**Avis important :** Avant d'installer/mettre à jour ce module complémentaire, veuillez mettre à jour votre instance i-doit vers la dernière version (actuellement 1.11).
 
-### Added
+### Ajouté {/ * exemples *}
 
--   Trigger idoitcmk commands within i-doit category Check_MK (Host)
--   delete-hosts: Delete hosts in Check\_MK
--   push: Activate all changes including foreign changes by configuration setting push.activateForeignChanges
+-   Déclencher des commandes idoitcmk dans la catégorie i-doit Check_MK (Hôte)
+-   delete-hosts: Supprimer les hôtes dans Check\_MK
+-   push: Activer tous les changements, y compris les changements étrangers, en définissant la configuration push.activateForeignChanges
 
-### Changed
+### Modifié {/ * exemples *}
 
--   Require i-doit pro, version 1.11 or higher
+-   Nécessite i-doit pro, version 1.11 ou supérieure
 
-### Fixed
+### Corrigé {/ * exemples *}
 
--   push, fetch-objects: Increase performance when using option --include-type
--   push, fetch-objects: Include dynamic host tags
+-   push, fetch-objects: Augmenter les performances lors de l'utilisation de l'option --include-type
+-   push, fetch-objects: Inclure les balises d'hôte dynamiques
 
-### [1.1.0] – 2018-05-24
+### [1.1.0] – 2018-05-24 {/%%/}
 
-**Important notice:** Default configuration has changed. Setting pull.identifier has new value user-defined.
+**Avis important :** La configuration par défaut a été modifiée. La définition de pull.identifier a une nouvelle valeur définie par l'utilisateur.
 
-### Added
+### Ajouté
 
--   pull: Import IPv4 addresses and network ports from GNU/Linux and other non-windows systems
--   pull: Add speed to network ports
--   -v|--verbose: Print number of API requests
--   match: Match objects from i-doit with hosts from Check\_MK
--   pull: Match object with host by user-defined value for attribute Hostname in category Check_MK (Host) > Export parameter
+-   pull : Importer les adresses IPv4 et les ports réseau à partir de GNU/Linux et d'autres systèmes non-Windows
+-   pull : Ajouter la vitesse aux ports réseau
+-   -v|--verbeux : Imprimer le nombre de requêtes API
+-   match : Faire correspondre les objets de i-doit avec les hôtes de Check_MK
+-   pull : Faire correspondre un objet avec un hôte par une valeur définie par l'utilisateur pour l'attribut Nom d'hôte dans la catégorie Check_MK (Hôte) > Paramètre d'export
 
-### Fixed
+### Corrigé
 
--   pull: Import right amount of CPU cores
+-   pull : Importer le bon nombre de cœurs de CPU
 
-### [1.0.0] – 2018-04-30
+### [1.0.0] – 2018-04-30 {/%%/}
 
-### Added
+### Ajouté
 
--   pull: Import CPU model, manufacturer and max. frequency
+-   pull : Importer le modèle de CPU, le fabricant et la fréquence maximale
 
-### Changed
+### Changé
 
--   pull: Do not enable monitoring via Livestatus if attribute “site” is not available for Check\_MK host
+-   pull : Ne pas activer la surveillance via Livestatus si l'attribut "site" n'est pas disponible pour l'hôte Check_MK
 
-### Fixed
+### Corrigé
 
--   pull: Prevent PHP warnings while accessing unknown information
+-   pull : Empêcher les avertissements PHP lors de l'accès à des informations inconnues
 
-### [0.10] – 2018-04-27
+### [0.10] – 2018-04-27 {/%%/}
 
-**Important note:** There are changes in the configuration settings. Re-configure your application with idoitcmk init.
+**Note importante :** Il y a des changements dans les paramètres de configuration. Reconfigurez votre application avec idoitcmk init.
 
-### Added
+### Ajouté
 
--   pull: Allow more than one IPv4 address per network adapter
--   pull: Assign IPv4 addresses to physical/logical network ports
--   pull: Import information about (virtual) video cards/chips
--   New configuration setting pull.attributes.C__CATG__GRAPHIC; defaults to true
+-   pull : Autoriser plus d'une adresse IPv4 par adaptateur réseau
+-   pull : Assigner des adresses IPv4 aux ports réseau physiques/logiques
+-   pull : Importer des informations sur les cartes/chips vidéo (virtuelles)
+-   Nouveau paramètre de configuration pull.attributes.C__CATG__GRAPHIC ; par défaut à vrai
 
-### Fixed
+### Corrigé {/ * exemples *}
 
--   pull: Sometimes host is missing in import cue when there is a match with an object
--   pull: Do not forget to add primary IPv4 address to category “Check\_MK (Host) > Export parameter”
--   push: Do not forget to add host tags based on configuration setting push.autoTagging
--   sync-tags: Incomplete host group tags may cause errors
--   Configuration setting push.autoTagging: Missing slashes in regular expressions
+-   pull: Parfois, l'hôte est manquant dans la file d'attente d'importation lorsqu'il y a une correspondance avec un objet
+-   pull: N'oubliez pas d'ajouter l'adresse IPv4 principale à la catégorie "Check\_MK (Hôte) > Exporter les paramètres"
+-   push: N'oubliez pas d'ajouter des balises d'hôte en fonction du paramètre de configuration push.autoTagging
+-   sync-tags: Des balises de groupe d'hôtes incomplètes peuvent provoquer des erreurs
+-   Paramètre de configuration push.autoTagging: Barres obliques manquantes dans les expressions régulières
 
 ### [0.9] – 2018-04-25
 
-**Important note:** There are changes in the configuration settings. Re-configure your application with idoitcmk init.
+**Note importante :** Il y a des changements dans les paramètres de configuration. Reconfigurez votre application avec idoitcmk init.
 
-### Added
+### Ajouté {/ * exemples *}
 
--   pull: Look for IP address configuration in hardware/software inventory from Check\_MK
--   pull: Assign IP addresses to proper subnets in i-doit
--   pull: Use ipaddress attribute as fallback if there are no addresses found in hw/sw inventory
--   pull: Create or update link in i-doit object to host in Check\_MK
--   New configuration setting pull.attributes.C__CATG__ACCESS; defaults to true
+-   pull: Recherchez la configuration de l'adresse IP dans l'inventaire matériel/logiciel de Check\_MK
+-   pull: Attribuez des adresses IP aux sous-réseaux appropriés dans i-doit
+-   pull: Utilisez l'attribut ipaddress comme solution de secours s'il n'y a pas d'adresses trouvées dans l'inventaire hw/sw
+-   pull: Créez ou mettez à jour le lien dans l'objet i-doit vers l'hôte dans Check\_MK
+-   Nouveau paramètre de configuration pull.attributes.C__CATG__ACCESS; par défaut à vrai
 
-### Changed
+### Changé {/ * exemples *}
 
--   pull: Convert drive capacity to proper unit
+-   pull: Convertir la capacité du lecteur en unité appropriée
 
-### Fixed
+### Corrigé {/ * exemples *}
 
--   Let user overwrite (not merge) configuration settings pull.identifier and blacklistedObjectTypes
--   pull: Do not ignore RAM, CPU sockets and cores
+-   Autoriser à l'utilisateur de remplacer (et non fusionner) les paramètres de configuration pull.identifier et blacklistedObjectTypes
+-   pull: Ne pas ignorer la RAM, les sockets CPU et les cœurs
 
 ### [0.8] – 2018-04-19
 
-### Added
+### Ajouté
 
--   pull: Add static host tags to i-doit objects
--   push: Show more details if a host identifier is used by more than one i-doit object
+-   pull: Ajouter des balises d'hôte statiques aux objets i-doit
+-   push: Afficher plus de détails si un identifiant d'hôte est utilisé par plus d'un objet i-doit
 
-### Fixed
+### Corrigé
 
--   pull: Prevent mismatches for i-doit objects and Check\_MK hosts
--   pull: Handle i-doit objects with missing attributes properly
+-   pull: Éviter les incohérences entre les objets i-doit et les hôtes Check\_MK
+-   pull: Gérer correctement les objets i-doit avec des attributs manquants
 
 ### [0.7] – 2018-04-19
 
-**Important notes:**
+**Notes importantes:**
 
-1. Activate MK\_Livestatus in Check\_MK
-2. There are changes in the configuration settings. Re-configure your application with idoitcmk init.
+1. Activer MK\_Livestatus dans Check\_MK
+2. Il y a des changements dans les paramètres de configuration. Reconfigurez votre application avec idoitcmk init.
 
-### Added
+### Ajouté
 
--   push: Look for duplicate identifiers (object title, hostname, FQDN, user-defined) used by objects in i-doit
--   status: Check connection to MK\_Livestatus and check Check\_MK version
--   New configuration setting roles.monitoring to define i-doit role for contact groups assigned to objects
+-   push: Rechercher des identifiants en double (titre d'objet, nom d'hôte, FQDN, défini par l'utilisateur) utilisés par des objets dans i-doit
+-   status: Vérifier la connexion à MK\_Livestatus et vérifier la version de Check\_MK
+-   Nouveau paramètre de configuration roles.monitoring pour définir le rôle i-doit pour les groupes de contacts assignés aux objets
 
-### Changed
+### Changé
 
--   pull: Remove merge mode because it does not make sense for all categories which can be updated
+-   pull: Supprimer le mode de fusion car il n'a pas de sens pour toutes les catégories pouvant être mises à jour
 
-### Fixed
+### Corrigé {/ * exemples *}
 
--   pull: Archive entries for enabled categories only
--   pull: Respect ignore mode
--   init: Ask for configuration setting pull.updateObjects
+-   pull: Archiver les entrées pour les catégories activées uniquement
+-   pull: Respecter le mode d'ignorance
+-   init: Demander le paramètre de configuration pull.updateObjects
 
-### [0.6] – 2018-04-13
+### [0.6] - 2018-04-13
 
-### Added
+### Ajouté {/ * exemples *}
 
--   status: Print warning if configuration setting i-doit.url looks insufficient
--   push: Print warning if object is not enabled by attribute active in category Check_MK (Host) > Export parameter
+-   status: Afficher un avertissement si le paramètre de configuration i-doit.url semble insuffisant
+-   push: Afficher un avertissement si l'objet n'est pas activé par l'attribut actif dans la catégorie Check_MK (Host) > Paramètre d'export
 
-### Fixed
+### Corrigé {/ * exemples *}
 
--   push: PHP warning is thrown while fetching a contact without specified role
--   pull/fetch-hosts: Prevent HTTP error code 414 URI Too Long while fetching hw/sw inventory data from Check\_MK
+-   push: Avertissement PHP est lancé lors de la récupération d'un contact sans rôle spécifié
+-   pull/fetch-hosts: Empêcher le code d'erreur HTTP 414 URI Too Long lors de la récupération des données d'inventaire hw/sw de Check\_MK
 
-### [0.5] – 2018-04-12
+### [0.5] - 2018-04-12
 
-This release fixes several issues in required packages.
+Cette version corrige plusieurs problèmes dans les packages requis.
 
-### Changed
+### Changé {/ * exemples *}
 
--   Add requirements for PHP modules bzip2 and phar
--   Do not look for configuration settings in /root/.idoitcmk/config.json
+-   Ajouter des exigences pour les modules PHP bzip2 et phar
+-   Ne pas rechercher les paramètres de configuration dans /root/.idoitcmk/config.json
 
-### Fixed
+### Corrigé {/ * exemples *}
 
--   Avoid duplicates in configuration settings
--   Remove backslashes from configuration settings
--   Fix several problems while parsing responses from Check\_MK Web API
+-   Éviter les doublons dans les paramètres de configuration
+-   Supprimer les barres obliques inverses des paramètres de configuration
+-   Corriger plusieurs problèmes lors de l'analyse des réponses de l'API Web Check\_MK
 
-### [0.4] – 2018-04-05
+### [0.4] - 2018-04-05
 
-### Added
+### Ajouté
 
--   fetch-objects: Read information about objects from i-doit
--   fetch-hosts: Read information about hosts from Check\_MK
+-   fetch-objects: Lire les informations sur les objets depuis i-doit
+-   fetch-hosts: Lire les informations sur les hôtes depuis Check\_MK
 
-### Changed
+### Modifié
 
--   Decreased binary file size
+-   Taille du fichier binaire réduite
 
 ### [0.3] – 2018-03-09
 
-### Fixed
+### Corrigé
 
--   help/init/configtest/print-example-config/print-config/list: Validation error for missing/invalid configuration settings
+-   help/init/configtest/print-example-config/print-config/list: Erreur de validation pour les paramètres de configuration manquants/invalides
 
 ### [0.2] – 2018-03-08
 
-This release is dedicated to all women.
+Cette version est dédiée à toutes les femmes.
 
-### Added
+### Ajouté
 
--   push: Use primary IP address if no other is given
--   push/pull: Print more information what is going on when there is a huge amount of objects to be fetched from i-doit
--   Print current configuration settings with command print-config
--   Validate configuration settings before any command is executed
+-   push: Utiliser l'adresse IP principale si aucune autre n'est donnée
+-   push/pull: Afficher plus d'informations sur ce qui se passe lorsqu'il y a un grand nombre d'objets à récupérer depuis i-doit
+-   Afficher les paramètres de configuration actuels avec la commande print-config
+-   Valider les paramètres de configuration avant l'exécution de toute commande
 
-### Changed
+### Modifié
 
--   push: Continue even if any discovery of services failed
+-   push: Continuer même si la découverte de services a échoué
 
-### Fixed
+### Corrigé
 
--   pull: Do not try to fetch objects by type from i-doit if there are no objects available
--   sync-folders: Keep in mind WATO folders “/” and "" (empty string) are the same
--   sync-folders: PHP error when WATO folder is copied from i-doit to Check\_MK
+-   pull: Ne pas essayer de récupérer des objets par type depuis i-doit s'il n'y a pas d'objets disponibles
+-   sync-folders: Garder à l'esprit que les dossiers WATO "/" et "" (chaîne vide) sont les mêmes
+-   sync-folders: Erreur PHP lorsqu'un dossier WATO est copié de i-doit à Check\_MK
 
-### [0.1] – 2018-03-05
+### [0.1] – 2018-03-05 {/examples}
 
-First release!
+Première version!
 
-### Added
+### Ajouté
 
--   push: Generate WATO configuration based on CMDB data
--   pull: Import inventory data into CMDB
--   sync-agents: Import agents types from Check\_MK to i-doit
--   sync-contact-groups: Sync contact groups between Check\_MK and i-doit
--   sync-folders: Sync WATO folders between Check\_MK and i-doit
--   sync-sites: Import monitoring sites from Check\_MK to i-doit
--   sync-tags: Import tag groups from Check\_MK as static host tags to i-doit
--   print-example-config: Print all configuration settings as an example
--   More commands: help, list, init, status, configtest, print-example-config, build-test-environment
+-   push: Générer une configuration WATO basée sur les données de la CMDB
+-   pull: Importer les données d'inventaire dans la CMDB
+-   sync-agents: Importer les types d'agents de Check\_MK vers i-doit
+-   sync-contact-groups: Synchroniser les groupes de contacts entre Check\_MK et i-doit
+-   sync-folders: Synchroniser les dossiers WATO entre Check\_MK et i-doit
+-   sync-sites: Importer les sites de surveillance de Check\_MK vers i-doit
+-   sync-tags: Importer des groupes de tags de Check\_MK en tant que tags d'hôte statiques vers i-doit
+-   print-example-config: Imprimer tous les paramètres de configuration comme exemple
+-   Plus de commandes: help, list, init, status, configtest, print-example-config, build-test-environment

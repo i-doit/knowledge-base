@@ -1,9 +1,9 @@
-# Maintenance and Operation
+# Maintenance et Opération {/examples/}
 
-For a stable and safe operation of i-doit you should maintain your system regularly. These are the essential topics to be aware of:
+Pour assurer un fonctionnement stable et sécurisé de i-doit, vous devez maintenir votre système régulièrement. Voici les sujets essentiels dont vous devez être conscient :
 
--   [Activate License](./activate-license.md)
--   [Backup and Recovery](./backup-and-recovery/index.md)
--   [Cronjobs Setup](./cronjob-setup.md)
--   [Security and Protection](./security-and-protection.md)
--   [Update](./update.md)
+- [Activer la Licence](./activate-license.md)
+- [Sauvegarde et Récupération](./backup-and-recovery/index.md)
+- [Configuration des Tâches Cron](./cronjob-setup.md)
+- [Sécurité et Protection](./security-and-protection.md)
+- [Mise à Jour](./update.md)

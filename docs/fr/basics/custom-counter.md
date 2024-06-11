@@ -1,28 +1,28 @@
-# Custom Counter
+# Compteur Personnalisé
 
-All configured counters are displayed here in a list.<br>
-Counters can be added via the **Add counter** button.
+Tous les compteurs configurés sont affichés ici dans une liste.<br>
+Les compteurs peuvent être ajoutés via le bouton **Ajouter un compteur**.
 
-You are also able to reset a counter to 1 with the **Reset** button.<br>
-Also you can delete a counter with the **Delete** button.
+Vous pouvez également réinitialiser un compteur à 1 avec le bouton **Réinitialiser**.<br>
+Vous pouvez également supprimer un compteur avec le bouton **Supprimer**.
 
-All counters are also available/usable in [list edit](../efficient-documentation/list-editing.md), [mass change](../efficient-documentation/mass-change.md), [templates](../efficient-documentation/templates.md) and [automatically generated inventory number](../basics/unique-references.md#inventory-number) from object type configuration. In addition, the counters can also be used with text fields of [custom categories](../basics/custom-categories.md).<br>
-For example for the "Title" attribute in the "General" category. It is entered manually in the corresponding field. Each time the counter is used, it is incremented by 1.
+Tous les compteurs sont également disponibles/utilisables dans [l'édition de liste](../efficient-documentation/list-editing.md), [changement en masse](../efficient-documentation/mass-change.md), [modèles](../efficient-documentation/templates.md) et [numéro d'inventaire généré automatiquement](../basics/unique-references.md#inventory-number) à partir de la configuration du type d'objet. De plus, les compteurs peuvent également être utilisés avec les champs de texte des [catégories personnalisées](../basics/custom-categories.md).<br>
+Par exemple pour l'attribut "Titre" dans la catégorie "Général". Il est saisi manuellement dans le champ correspondant. Chaque fois que le compteur est utilisé, il est incrémenté de 1.
 
-## Creating a custom counter
+## Création d'un compteur personnalisé
 
-After a counter has been added, it must be given its own title. The **%COUNTER_** text is not editable.<br>
-A complete counter looks e.g. like this **%COUNTER_CUSTOMTEXT%**. A saved counter is not editable anymore.
+Après qu'un compteur a été ajouté, il doit recevoir son propre titre. Le texte **%COUNTER_** n'est pas modifiable.<br>
+Un compteur complet ressemble par exemple à ceci **%COUNTER_CUSTOMTEXT%**. Un compteur enregistré n'est plus modifiable.
 
-## Set leading zeros
+## Définir des zéros de tête
 
-If you need leading zeros use them in a [template](../efficient-documentation/templates.md#) or while creating a new [Object](../basics/structure-of-the-it-documentation.md#object).
-To use leading zeros you need to add **#N** to the counter while creating a object.
+Si vous avez besoin de zéros de tête, utilisez-les dans un [modèle](../efficient-documentation/templates.md#) ou lors de la création d'un nouvel [Objet](../basics/structure-of-the-it-documentation.md#object).
+Pour utiliser des zéros de tête, vous devez ajouter **#N** au compteur lors de la création d'un objet.
 
-If you create a Client which title should be like **Client_00001** you need to insert **Client_%COUNTER_CLIENTS#5%** as title.
+Si vous créez un Client dont le titre doit être **Client_00001**, vous devez insérer **Client_%COUNTER_CLIENTS#5%** comme titre.
 
-## Set starting number
+## Définir le numéro de départ
 
-However, if the counter is intended to start at 125 instead of 1, then you need to alter the created counter in the [expert settings of the tenant](../system-administration/administration/tenant-management/expert-settings.md).<br>
-Open the expert settings and search for `cmdb.counter`, you will find your counter also by name if you counter is called `%COUNTER_CLIENT%` than the name is `cmdb.counter.counter_client`.<br>
-Now alter the value to the desired starting number and hit the save button.
+Cependant, si le compteur doit commencer à 125 au lieu de 1, vous devez modifier le compteur créé dans les [paramètres experts du locataire](../system-administration/administration/tenant-management/expert-settings.md).<br>
+Ouvrez les paramètres experts et recherchez `cmdb.counter`, vous trouverez votre compteur également par nom si votre compteur s'appelle `%COUNTER_CLIENT%`, alors le nom est `cmdb.counter.counter_client`.<br>
+Modifiez maintenant la valeur pour le numéro de départ souhaité et appuyez sur le bouton de sauvegarde.

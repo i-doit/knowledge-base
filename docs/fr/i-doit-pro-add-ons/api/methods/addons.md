@@ -1,37 +1,37 @@
 ---
-title: addons
-description: Here you find API methods from Add-ons
+title: extensions
+description: Ici, vous trouverez les méthodes API des extensions
 icon: material/api
 #status: updated
-lang: en
+lang: fr
 ---
 
-# addons
+# extensions
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## analysis.dataquality.read
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data typ | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **profileId** | Integer | Yes | Profile identifier, for example: 1 |
+| **profileId** | Entier | Oui | Identifiant du profil, par exemple : 1 |
 
-!!! example "WIP"
+!!! example "Travail en cours"
 
-    ### Response parameters
+    ### Paramètres de la réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key | JSON data type | Description |
+    | Clé | Type de données JSON | Description |
     | --- | --- | --- |
     | **Placeholder** | Placeholder | Placeholder |
     | **Placeholder** | Placeholder | Placeholder |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -46,7 +46,7 @@ lang: en
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {

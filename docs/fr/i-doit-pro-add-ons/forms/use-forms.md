@@ -1,81 +1,81 @@
-# Use Forms
+# Utiliser les formulaires
 
-## Opening the add-on
+## Ouvrir le module complémentaire
 
-After all preparations are completed, the add-on can be accessed via Extras > Forms.
+Une fois toutes les préparations terminées, le module complémentaire peut être accédé via Extras > Formulaires.
 
-[![Use Forms](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/1-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/1-usf.png)
+[![Utiliser les formulaires](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/1-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/1-usf.png)
 
-## Create forms
+## Créer des formulaires
 
-A form is created via the [![Create forms](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/2-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/2-usf.png) button.
+Un formulaire est créé via le bouton [![Créer des formulaires](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/2-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/2-usf.png).
 
-The process begins with the assignment of the form title.<br>
-Then an object type is selected that is created by the form respectively by the user's input.
+Le processus commence par l'attribution du titre du formulaire.<br>
+Ensuite, un type d'objet est sélectionné qui est créé par le formulaire respectivement par la saisie de l'utilisateur.
 
-Now we can add elements to be displayed in the form.<br>
-Possible elements are _attributes_, _headlines_, _texts_ and _dividing lines_.
+Maintenant, nous pouvons ajouter des éléments à afficher dans le formulaire.<br>
+Les éléments possibles sont les _attributs_, les _titres_, les _textes_ et les _lignes de séparation_.
 
-[![elements](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/3-usf.gif)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/3-usf.gif)
+[![éléments](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/3-usf.gif)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/3-usf.gif)
 
-The order of the elements can be changed afterwards, via drag&drop.
+L'ordre des éléments peut être modifié par la suite, via glisser-déposer.
 
-[![elements](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/4-usf.gif)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/4-usf.gif)
+[![éléments](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/4-usf.gif)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/4-usf.gif)
 
-Already created elements can be deleted [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/5-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/5-usf.png) or duplicated [![icon](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/6-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/6-usf.png).  
-Of course, you can also distribute the form over several pages.<br>
-The pages can be moved and deleted like the other elements.
+Les éléments déjà créés peuvent être supprimés [![icône](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/5-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/5-usf.png) ou dupliqués [![icône](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/6-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/6-usf.png).  
+Bien sûr, vous pouvez également répartir le formulaire sur plusieurs pages.<br>
+Les pages peuvent être déplacées et supprimées comme les autres éléments.
 
-[![elements](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/7-usf.gif)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/7-usf.gif)
+[![éléments](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/7-usf.gif)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/7-usf.gif)
 
-## Available elements
+## Éléments disponibles
 
-### **Headline**
+### **Titre**
 
-[![Headline](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/8-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/8-usf.png)
+[![Titre](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/8-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/8-usf.png)
 
-The headline style can be H1, H2 or H3.
+Le style de titre peut être H1, H2 ou H3.
 
-### **Text**
+### **Texte**
 
-[![Text](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/9-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/9-usf.png)
+[![Texte](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/9-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/9-usf.png)
 
-A text can be entered for the text element. There is an option to hide the element for users.
+Un texte peut être saisi pour l'élément texte. Il y a une option pour masquer l'élément pour les utilisateurs.
 
-**Dividing Line**
+**Ligne de division**
 
-[![Dividing Line](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/10-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/10-usf.png)
+[![Ligne de division](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/10-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/10-usf.png)
 
-### **Attribute**
+### **Attribut**
 
-If such an element is added, the attribute selection opens directly.<br>
-Here, all categories are displayed that are assigned to the object type in i-doit.
+Si un tel élément est ajouté, la sélection de l'attribut s'ouvre directement.<br>
+Ici, toutes les catégories sont affichées qui sont assignées au type d'objet dans i-doit.
 
-[![Attribute](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/11-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/11-usf.png)
+[![Attribut](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/11-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/11-usf.png)
 
-[![Attribute](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/12-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/12-usf.png)
+[![Attribut](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/12-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/12-usf.png)
 
-The field name in the element can be changed.<br>
-In addition, a pre-defined value can be stored, this value will then be pre-filled.
+Le nom du champ dans l'élément peut être modifié.<br>
+De plus, une valeur prédéfinie peut être stockée, cette valeur sera alors pré-remplie.
 
-[![Attribute](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/13-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/13-usf.png)
+[![Attribut](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/13-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/13-usf.png)
 
-The Hide element for recipients setting is used to hide fields for users.<br>
-This allows the form to include values defined by the creator (pre-defined values) in the object to be created.<br>
-If the setting is activated, this is visualized by a crossed-out eye [![](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/14-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/14-usf.png).
+L'élément Masquer pour les destinataires est utilisé pour masquer les champs pour les utilisateurs.<br>
+Cela permet au formulaire d'inclure des valeurs définies par le créateur (valeurs prédéfinies) dans l'objet à créer.<br>
+Si le paramètre est activé, cela est visualisé par un œil barré [![](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/14-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/14-usf.png).
 
-[![Attribute](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/15-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/15-usf.png)
+[![Attribut](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/15-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/15-usf.png)
 
-In addition, these elements can be marked as required Field cannot be blank.<br>
-These attribute elements must then not be blank. This is made clear by the lettering REQUIRED [![Attribute](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/16-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/16-usf.png).
+De plus, ces éléments peuvent être marqués comme Champ obligatoire ne peut pas être vide.<br>
+Ces éléments d'attribut ne doivent alors pas être vides. Cela est clairement indiqué par l'inscription OBLIGATOIRE [![Attribut](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/16-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/16-usf.png).
 
-[![Attribute](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/17-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/17-usf.png)
+[![Attribut](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/17-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/17-usf.png)
 
-## Preview
+## Aperçu { /*examples*/ }
 
-Before releasing the form to the users, you would like to have a look at it, of course.<br>
-Exactly for this purpose we have built in the preview! Click the [![](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/18-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/18-usf.png) button.
+Avant de publier le formulaire aux utilisateurs, vous aimeriez y jeter un coup d'œil, bien sûr.<br>
+C'est précisément à cette fin que nous avons intégré l'aperçu ! Cliquez sur le [![](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/18-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/18-usf.png) bouton.
 
-[![Preview](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/19-usf.gif)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/19-usf.gif)
+[![Aperçu](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/19-usf.gif)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/19-usf.gif)
 
-[Continue to publish forms](./publish-form.md){ .md-button .md-button--primary }
+[Continuer à publier des formulaires](./publish-form.md){ .md-button .md-button--primary }

@@ -1,99 +1,107 @@
-# Migration from Windows to Linux
+# Migration de Windows vers Linux {/examples}
 
-There may be good reasons to operate i-doit in [Windows](../installation/manual-installation/microsoft-windows-server/index.md). However, due to various reasons we recommend the use of Linux. But how do we transfer the well-established [IT-documentation](../glossary.md) in an ongoing operation from one system to another as smooth as possible?
+Il peut y avoir de bonnes raisons d'exploiter i-doit sous [Windows](../installation/manual-installation/microsoft-windows-server/index.md). Cependant, en raison de diverses raisons, nous recommandons l'utilisation de Linux. Mais comment transférer la [documentation informatique](../glossary.md) bien établie dans une opération en cours d'un système à un autre aussi facilement que possible?
 
-## Preparation and Assumptions
+## Préparation et hypothèses {/examples}
 
-!!! warning "Both systems have to be on the same i-doit version"
+!!! warning "Les deux systèmes doivent être sur la même version d'i-doit"
 
-Before starting, a few things should be kept in mind. The objective is to migrate without a long downtime and especially without data loss.
+Avant de commencer, quelques points doivent être pris en compte. L'objectif est de migrer sans une longue période d'arrêt et surtout sans perte de données.
 
-Everyone involved in working with data of i-doit should be informed about the migration in due time. Nothing is worse than angry colleagues whose work flow has been interrupted.
+Tous ceux impliqués dans le travail avec les données d'i-doit doivent être informés de la migration en temps voulu. Rien n'est pire que des collègues en colère dont le flux de travail a été interrompu.
 
-Additionally, all ports that will be used in accordance with i-doit should be identified. Specifically: Which third-party systems, such as [Nagios](../automation-and-integration/network-monitoring/nagios.md), [((OTRS)) Community Edition](../automation-and-integration/service-desk/otrscommunity-help-desk.md) & [Co.](../consolidate-data/index.md), access i-doit? During the migration, the data access should be disabled. The same applies to running [tasks](../automation-and-integration/cli/index.md), [backups](../maintenance-and-operation/backup-and-recovery/index.md) and the monitoring, which ensures that a running Webserver answers HTTP requests through port 80/443 on the Windows system.
+De plus, tous les ports qui seront utilisés en accord avec i-doit doivent être identifiés. Plus précisément: Quels systèmes tiers, tels que [Nagios](../automation-and-integration/network-monitoring/nagios.md), [((OTRS)) Community Edition](../automation-and-integration/service-desk/otrscommunity-help-desk.md) & [Co.](../consolidate-data/index.md), accèdent à i-doit? Pendant la migration, l'accès aux données doit être désactivé. Il en va de même pour l'exécution des [tâches](../automation-and-integration/cli/index.md), des [sauvegardes](../maintenance-and-operation/backup-and-recovery/index.md) et de la surveillance, qui garantit qu'un serveur Web en cours d'exécution répond aux requêtes HTTP via les ports 80/443 sur le système Windows.
 
-We assume that an instance of XAMP is used in Windows and is not or just minimally adjusted. For example, a newer version of the [Apache Friends](https://www.apachefriends.org/). The Apache Webserver, the DBMS MySQL or MariaDB and the script language PHP are installed via this distribution. In the following, we only mention MySQL, even if MariaDB is used. When you made changes to the configuration, these should be kept in mind for the new system.
+Nous supposons qu'une instance de XAMPP est utilisée sous Windows et n'est pas ou juste minimalement ajustée. Par exemple, une version plus récente de [Apache Friends](https://www.apachefriends.org/). Le serveur Web Apache, le SGBD MySQL ou MariaDB et le langage de script PHP sont installés via cette distribution. Dans ce qui suit, nous mentionnons uniquement MySQL, même si MariaDB est utilisé. Si vous avez apporté des modifications à la configuration, celles-ci doivent être prises en compte pour le nouveau système.
 
-Finally, we assume the new home system of i-doit is already prepared, all [system requirements](../installation/system-requirements.md) are met and [settings](../installation/manual-installation/system-settings.md) have been carried out. All services i-doit expects should be available on the new system: DNS, SMTP, LDAP/AD. Does everything work? Okay, let's get started.
+Enfin, nous supposons que le nouveau système d'accueil d'i-doit est déjà prêt, que toutes les [exigences système](../installation/system-requirements.md) sont remplies et que les [paramètres](../installation/manual-installation/system-settings.md) ont été effectués. Tous les services attendus par i-doit devraient être disponibles sur le nouveau système : DNS, SMTP, LDAP/AD. Tout fonctionne-t-il ? D'accord, commençons.
 
-One more thing: You should have all system accounts and passwords ready, which are used on the old as well as on the new system. These include MySQL system users (root) and the i-doit user for MySQL (by default i-doit).
+Une dernière chose : Vous devriez avoir tous les comptes système et mots de passe prêts, qui sont utilisés sur l'ancien système ainsi que sur le nouveau système. Cela inclut les utilisateurs système MySQL (root) et l'utilisateur i-doit pour MySQL (par défaut i-doit).
 
-## Export Data from Windows
+## Exporter des données depuis Windows
 
-First and foremost we take care of securing the data of the old system in order to transfer them to the new system:
+Tout d'abord, nous nous occupons de sécuriser les données du vieux système afin de les transférer vers le nouveau système :
 
-1. The Apache Webserver should be disabled so no external requests can come in. We keep the database backend MySQL running, otherwise we cannot get hold of the data.
-2. We compress the folder in which i-doit is installed (typically found in C:\xampp\htdocs\) to a ZIP file i-doit.zip.
-3. We export the databases of i-doit (by default installations with a client are idoit_system and idoit_data) with the software mysqldump.exe. For this, we open the command prompt and move to the path in which the software is found (for example, at C:\xampp\mysql\bin\). We continue by executing the following command:
+1. Le serveur Web Apache doit être désactivé pour empêcher toute requête externe d'entrer. Nous laissons le backend de la base de données MySQL en cours d'exécution, sinon nous ne pourrons pas accéder aux données.
+2. Nous compressons le dossier dans lequel i-doit est installé (généralement situé dans C:\xampp\htdocs\) dans un fichier ZIP nommé i-doit.zip.
+3. Nous exportons les bases de données de i-doit (par défaut, les installations avec un client sont idoit_system et idoit_data) avec le logiciel mysqldump.exe. Pour cela, nous ouvrons l'invite de commandes et nous déplaçons vers le chemin où se trouve le logiciel (par exemple, à C:\xampp\mysql\bin\). Nous continuons en exécutant la commande suivante :
 
         mysqldump.exe -uidoit -p --databases idoit_system idoit_data > i-doit.sql
 
-    Upon entering the password, all data is written in the i-doit.sql file.
+    Après avoir saisi le mot de passe, toutes les données sont écrites dans le fichier i-doit.sql.
 
-4. Now we stop the MySQL process and hope that neither MySQL nor the Apache Webserver are needed ever again in Windows.
+4. Maintenant, nous arrêtons le processus MySQL et espérons que ni MySQL ni le serveur Web Apache ne seront jamais nécessaires à nouveau sous Windows.
 
-## Migrate Data to GNU/Linux
+{/*examples*/}
 
-After copying both the ZIP file, including the i-doit folder, and the SQL file, including the database contents, onto the new server ([WinSCP](http://winscp.net/eng/index.php) serves this purpose well), we connect via SSH (for example via [Putty](http://www.putty.org/)) and operate in the command line from now on. The Apache Webserver, MySQL and PHP are fully configured and all needed packages are properly [installed](../installation/index.md). The only thing missing is i-doit:
+## Migrer les données vers GNU/Linux {/examples}
 
-### Database
+Après avoir copié à la fois le fichier ZIP, y compris le dossier i-doit, et le fichier SQL, y compris le contenu de la base de données, sur le nouveau serveur ([WinSCP](http://winscp.net/eng/index.php) remplit bien cette fonction), nous nous connectons via SSH (par exemple via [Putty](http://www.putty.org/)) et opérons en ligne de commande à partir de maintenant. Le serveur Web Apache, MySQL et PHP sont entièrement configurés et tous les paquets nécessaires sont correctement [installés](../installation/index.md). La seule chose qui manque est i-doit :
 
-1. We import the database. For this we use the MySQL client:
+### Base de données {/examples}
+
+1. Nous importons la base de données. Pour cela, nous utilisons le client MySQL :
 
         mysql -uroot -p < i-doit.sql
 
-    *If the database exists for a long time this error message might appear: "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". You can find the solution[HERE](../system-administration/troubleshooting/cant-create-table.md)
+    *Si la base de données existe depuis longtemps, ce message d'erreur peut apparaître : "Impossible de créer la table \idoit\_data\.\table\_name\ (errno: 140 "Mauvaises options de création")". Vous pouvez trouver la solution [ICI](../system-administration/troubleshooting/cant-create-table.md)
 
-2. After that, we connect to MySQL to set up the user needed for i-doit:
+2. Ensuite, nous nous connectons à MySQL pour configurer l'utilisateur nécessaire pour i-doit :
 
         mysql -uroot -p
 
-    The following SQL commands set up the user idoit, who has access to the two databases:
+    Les commandes SQL suivantes configurent l'utilisateur idoit, qui a accès aux deux bases de données :
 
-        grant all privileges on idoit_system.* to idoit@localhost identified by 'mypasswd';
-        grant all privileges on idoit_data.* to idoit@localhost identified by 'mypasswd';
+```sql
+        accorder toutes les autorisations sur idoit_system.* à idoit@localhost identifié par 'monmotdepasse';
+        accorder toutes les autorisations sur idoit_data.* à idoit@localhost identifié par 'monmotdepasse';
 
-    Then we should test this by logging in with these credentials to see if the databases can be read out correctly:
+    Ensuite, nous devrions tester ceci en nous connectant avec ces identifiants pour voir si les bases de données peuvent être lues correctement :
 
         mysql -uidoit -p,
-        use idoit_system;
+        utiliser idoit_system;
 
-3. Since we are already at it, we should load the table isys_mandator to check the credentials:
+3. Puisque nous y sommes déjà, nous devrions charger la table isys_mandator pour vérifier les identifiants :
 
-        select* from isys_mandator;
+        sélectionner* from isys_mandator;
 
-4. It may be the case that absolute paths are stored in the database. Affected datasets include system.dir.file-upload and system.dir.image-upload in the table isys_settings:
+4. Il se peut que des chemins absolus soient stockés dans la base de données. Les ensembles de données concernés incluent system.dir.file-upload et system.dir.image-upload dans la table isys_settings :
 
-        select* from isys_settings
+        sélectionner* from isys_settings
 
-    Relative paths, like upload/files/ and upload/images/, are legitimate.
+    Les chemins relatifs, comme upload/files/ et upload/images/, sont légitimes.
 
-5. We close the MySQL client with the exit; command or by pressing CTRL+D .
+5. Nous fermons le client MySQL avec la commande exit; ou en appuyant sur CTRL+D .
 
-## Files
+## Fichiers
 
-1. We extract the ZIP file in the desired location. In Debian GNU/Linux this would be in /var/www/html/:
+1. Nous extrayons le fichier ZIP à l'emplacement souhaité. Dans Debian GNU/Linux, cela se ferait dans /var/www/html/ :
 
         sudo unzip i-doit.zip
 
-2. After this, we set the permissions correctly and clear up:
+2. Ensuite, nous définissons correctement les autorisations et nettoyons :
+```
 
-        sudo chown www-data:www-data -R .
-        sudo find . -type d -name \* -exec chmod 775 {} \;
-        sudo find . -type f -exec chmod 664 {} \;
-        sudo chmod 774 controller tenants import updatecheck *.sh
-        sudo rm -r temp/*
+```shell
+sudo chown www-data:www-data -R .
+sudo find . -type d -name \* -exec chmod 775 {} \;
+sudo find . -type f -exec chmod 664 {} \;
+sudo chmod 774 controller tenants import updatecheck *.sh
+sudo rm -r temp/*
+```
 
-    If needed, we delete files which may be left over from the XAMPP installation.
+Si nécessaire, nous supprimons les fichiers qui pourraient rester de l'installation de XAMPP.
 
-Now it is time for a first big test: Can the new home of i-doit be opened via the browser? If not, something went wrong in the previous steps. A precise error analysis is important for this.
+Maintenant, il est temps pour un premier grand test : Est-ce que le nouveau domicile de i-doit peut être ouvert via le navigateur ? Sinon, quelque chose s'est mal passé dans les étapes précédentes. Une analyse d'erreur précise est importante pour cela.
 
-### Cronjobs
+### Tâches Cron
 
-What is left is the transfer of the Windows tasks to Cronjobs. Most of the time the [i-doit controller (CLI)](../automation-and-integration/cli/index.md) has to do recurring tasks. If you didn't set up any Tasks/Cronjobs for i-doit yet, then you should do it now.
+Ce qui reste, c'est le transfert des tâches Windows vers les tâches Cron. La plupart du temps, le [contrôleur i-doit (CLI)](../automation-and-integration/cli/index.md) doit effectuer des tâches récurrentes. Si vous n'avez pas encore configuré de tâches/Cron pour i-doit, vous devriez le faire maintenant.
 
-## Follow-up Work
+## Travaux de Suivi
 
-Following this migration, you should run various tests and reactivate the interfaces between i-doit and third-party tools. It is also important to have the [backups](../maintenance-and-operation/backup-and-recovery/index.md) running. If all tests are successful (which can hopefully be presumed), the maintenance mode can be concluded and all colleagues be informed that the IT-documentation is available again.
+Suite à cette migration, vous devriez effectuer divers tests et réactiver les interfaces entre i-doit et les outils tiers. Il est également important de faire fonctionner les [sauvegardes](../maintenance-and-operation/backup-and-recovery/index.md). Si tous les tests sont concluants (ce qui peut être espéré), le mode maintenance peut être conclu et tous les collègues informés que la documentation IT est à nouveau disponible. 
 
-How long does such a migration take? If the preparation and the subsequent work is ignored, such a migration takes not longer than two hours, so it's worth it. Good luck!
+{ /*examples*/ }
+
+Combien de temps prend une telle migration ? Si l'on ignore la préparation et le travail ultérieur, une telle migration ne prend pas plus de deux heures, donc cela en vaut la peine. Bonne chance !

@@ -1,37 +1,37 @@
 ---
-title: Namespace cmdb.filter
+title: Espace de noms cmdb.filter
 description: cmdb.filter
 icon: material/api
 #status: updated
-lang: en
+lang: fr
 ---
 
-# Namespace cmdb.filter
+# Espace de noms cmdb.filter
 
-!!! example "Work in Progress. **Alpha state**"
+!!! example "Travail en cours. **État alpha**"
 
 ## cmdb.filter.read
 
-For example, get all objects with {Attribute} and {Attribute} which where updated in a specific time frame.
+Par exemple, obtenir tous les objets avec {Attribut} et {Attribut} qui ont été mis à jour dans une plage de temps spécifique.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key     | JSON data type | Required | Description                                |
-| ------- | -------------- | -------- | ------------------------------------------ |
-| **Key** | String         | Yes      | Query, for example: **"My little server"** |
+| Clé     | Type de données JSON | Requis   | Description                                |
+| ------- | -------------------- | -------- | ------------------------------------------ |
+| **Clé** | Chaîne               | Oui      | Requête, par exemple : **"Mon petit serveur"** |
 
-### Response parameters
+### Paramètres de la réponse
 
-JSON key **result** contains an array of JSON objects. Each object contains a search result.
+La clé JSON **résultat** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-| Key       | JSON data type | Description                      |
-| --------- | -------------- | -------------------------------- |
-| **key**   | String         | Attribute which relates to query |
-| **value** | String         | Value which relates to query     |
+| Clé       | Type de données JSON | Description                            |
+| --------- | -------------------- | -------------------------------------- |
+| **clé**   | Chaîne               | Attribut lié à la requête               |
+| **valeur** | Chaîne               | Valeur liée à la requête               |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -45,12 +45,12 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
-    ```json
-    {
+```json
+{
         "jsonrpc": "2.0",
         "result": [],
         "id": 1
     }
-    ```
+```

@@ -1,42 +1,42 @@
 ---
-title: Namespace cmdb.category
-description: Read, create or update one or more category entries for an object.
+title: Espace de noms cmdb.category
+description: Lire, créer ou mettre à jour une ou plusieurs entrées de catégorie pour un objet.
 icon: material/api
 #status: updated
-lang: en
+lang: fr
 ---
 
-# Namespace cmdb.category
+# Espace de noms cmdb.category
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## cmdb.category.create
 
-!!! warning "This method is deprecated and will be removed in a feature release. Use [cmdb.category.save](#cmdbcategorysave) instead."
+!!! warning "Cette méthode est obsolète et sera supprimée dans une prochaine version. Utilisez [cmdb.category.save](#cmdbcategorysave) à la place."
 
-Create a new [category](../../../basics/structure-of-the-it-documentation.md) entry
+Créer une nouvelle entrée de [catégorie](../../../basics/structure-of-the-it-documentation.md)
 
-### Request parameters
+### Paramètres de la requête
 
-| Key          | JSON data type | Required | Description                                                                                                                                                        |
-| ------------ | -------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **objID**    | Integer        | Yes      | Object identifier, for example: **42**                                                                                                                             |
-| **category** | String         | Yes      | [Category constant](../category-fields-for-data-arrays.md), for example: **C__CATG__MODEL**                                                                        |
-| **data**     | Object         | Yes      | [Attributes](../category-fields-for-data-arrays.md) with their values, for example: <br>```{ "manufacturer": "Name of manufacturer", "title": "Name of model" }``` |
+| Clé          | Type de données JSON | Requis   | Description                                                                                                                                                        |
+| ------------ | -------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **objID**    | Entier               | Oui      | Identifiant de l'objet, par exemple : **42**                                                                                                                        |
+| **catégorie**| Chaîne               | Oui      | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **C__CATG__MODEL**                                                                  |
+| **données**  | Objet                | Oui      | [Attributs](../category-fields-for-data-arrays.md) avec leurs valeurs, par exemple : <br>```{ "fabricant": "Nom du fabricant", "titre": "Nom du modèle" }``` |
 
-### Response parameters
+### Paramètres de réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key         | JSON data type | Description                          |
-| ----------- | -------------- | ------------------------------------ |
-| **id**      | String         | Entry identifier (as numeric string) |
-| **message** | String         | Some information                     |
-| **success** | Boolean        | Should always be **true**            |
+| Clé         | Type de données JSON | Description                          |
+| ----------- | ------------------- | ------------------------------------ |
+| **id**      | Chaîne de caractères | Identifiant de l'entrée (sous forme de chaîne numérique) |
+| **message** | Chaîne de caractères | Quelques informations                |
+| **success** | Booléen             | Doit toujours être **true**          |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -56,7 +56,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -72,33 +72,33 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.category.read
 
-Read one or more [category](../../../basics/structure-of-the-it-documentation.md) entries for an object
+Lire une ou plusieurs entrées de [catégorie](../../../basics/structure-of-the-it-documentation.md) pour un objet
 
-### Request parameters
+### Paramètres de requête {/examples}
 
-| Key          | JSON data type | Required | Description                                          |
-| ------------ | -------------- | -------- | ---------------------------------------------------- |
-| **objID**    | Integer        | Yes      | Object identifier, for example: **42**               |
-| **category** | String         | Yes      | Category constant, for example: **"C__CATG__MODEL"** |
-| **status**   | Integer        | Yes      | ID of the status, for example **2** for **normal** <br> If the status parameter is not specified, the status must be set to **2** (normal). This corresponds to the previous behavior. |
+| Clé          | Type de données JSON | Requis   | Description                                          |
+| ------------ | ------------------- | -------- | ---------------------------------------------------- |
+| **objID**    | Entier              | Oui      | Identifiant de l'objet, par exemple : **42**         |
+| **category** | Chaîne de caractères | Oui      | Constante de catégorie, par exemple : **"C__CATG__MODEL"** |
+| **status**   | Entier              | Oui      | ID du statut, par exemple **2** pour **normal** <br> Si le paramètre de statut n'est pas spécifié, le statut doit être défini sur **2** (normal). Cela correspond au comportement précédent. |
 
-### Response parameters
+### Paramètres de réponse {/examples/}
 
-JSON key **result** contains an array of JSON objects. Each object contains [all available attributes](../category-fields-for-data-arrays.md) for the requested category.
+La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient [tous les attributs disponibles](../category-fields-for-data-arrays.md) pour la catégorie demandée.
 
 !!! note ""
 
-    Even if it is a [single-value category](../../../basics/structure-of-the-it-documentation.md) or a [multi-value category](../../../basics/structure-of-the-it-documentation.md) with only 1 entry, the JSON key **result** contains always an array of JSON objects.
+    Même s'il s'agit d'une [catégorie à valeur unique](../../../basics/structure-of-the-it-documentation.md) ou d'une [catégorie à valeurs multiples](../../../basics/structure-of-the-it-documentation.md) avec seulement 1 entrée, la clé JSON **result** contient toujours un tableau d'objets JSON.
 
-| Key       | JSON data type | Description                                                     |
-| --------- | -------------- | --------------------------------------------------------------- |
-| **id**    | String         | Entry identifier (as numeric string)                            |
-| **objID** | String         | Object identifier (as numeric string)                           |
-| …         | Mixed          | Optional attributes with values depending on requested category |
+| Clé       | Type de données JSON | Description                                                     |
+| --------- | ------------------- | --------------------------------------------------------------- |
+| **id**    | Chaîne de caractères | Identifiant de l'entrée (sous forme de chaîne numérique)         |
+| **objID** | Chaîne de caractères | Identifiant de l'objet (sous forme de chaîne numérique)          |
+| …         | Mixte               | Attributs facultatifs avec des valeurs dépendant de la catégorie demandée |
 
-### Example
+### Exemple {/examples/}
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -114,7 +114,7 @@ JSON key **result** contains an array of JSON objects. Each object contains [all
     }
     ```
 
-=== "Response body"
+### Corps de la réponse
 
     ```json
     {
@@ -146,31 +146,31 @@ JSON key **result** contains an array of JSON objects. Each object contains [all
     }
     ```
 
-## cmdb.category.update
+## cmdb.category.update { /*examples*/ }
 
-!!! warning "This method is deprecated and will be removed in a feature release. Use [cmdb.category.save](#cmdbcategorysave) instead."
+!!! warning "Cette méthode est obsolète et sera supprimée dans une prochaine version. Utilisez [cmdb.category.save](#cmdbcategorysave) à la place."
 
-### Request parameters
+### Paramètres de la requête
 
-| Key                  | JSON data type | Required | Description                                                                                                         |
-| -------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------------------------------- |
-| **objID**            | Integer        | Yes      | Object identifier, for example: **42**                                                                              |
-| **category**         | String         | Yes      | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__MODEL"**                       |
-| **data**             | Object         | Yes      | [Attributes](../category-fields-for-data-arrays.md) which will be updated                                           |
-| **data.category_id** | Integer        | No       | Entry identifier (only required for [multi-value categories](../../../basics/structure-of-the-it-documentation.md)) |
+| Clé                  | Type de données JSON | Requis   | Description                                                                                                         |
+| -------------------- | -------------------- | -------- | ------------------------------------------------------------------------------------------------------------------- |
+| **objID**            | Entier               | Oui      | Identifiant de l'objet, par exemple : **42**                                                                         |
+| **category**         | Chaîne               | Oui      | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **"C__CATG__MODEL"**                 |
+| **data**             | Objet                | Oui      | [Attributs](../category-fields-for-data-arrays.md) qui seront mis à jour                                           |
+| **data.category_id** | Entier               | Non      | Identifiant de l'entrée (uniquement requis pour les [catégories à valeurs multiples](../../../basics/structure-of-the-it-documentation.md)) |
 
-### Response parameters
+### Paramètres de réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key         | JSON data type | Description                                       |
-| ----------- | -------------- | ------------------------------------------------- |
-| **success** | Boolean        | Should be **true**                                |
-| **message** | String         | Should be **"Category entry successfully saved"** |
+| Clé         | Type de données JSON | Description                                       |
+| ----------- | ------------------- | ------------------------------------------------- |
+| **success** | Booléen             | Doit être **true**                                |
+| **message** | Chaîne de caractères| Doit être **"Entrée de catégorie enregistrée avec succès"** |
 
-### Example
+### Exemple {/examples}
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -189,7 +189,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -202,37 +202,37 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-## cmdb.category.delete
+## cmdb.category.delete {/examples}
 
-[Archive a category entry for an object, mark it as deleted or purge it from database](../../../basics/life-and-documentation-cycle.md)
+[Archiver une entrée de catégorie pour un objet, la marquer comme supprimée ou la purger de la base de données](../../../basics/life-and-documentation-cycle.md)
 
 **Limitations:**
 
--   This only works with ==multi-value categories== at the moment.
--   You can only ==archive== category entries which have a normal status.
--   You can only ==mark== category entries ==as deleted== which are archived.
--   You can only ==purge== category entries from the database which are marked as deleted.
+-   Cela fonctionne uniquement avec les ==catégories à valeurs multiples== pour le moment.
+-   Vous ne pouvez ==archiver== que les entrées de catégorie qui ont un statut normal.
+-   Vous ne pouvez ==marquer== que les entrées de catégorie ==comme supprimées== qui sont archivées.
+-   Vous ne pouvez ==purger== que les entrées de catégorie de la base de données qui sont marquées comme supprimées.
 
-### Request parameters
+### Paramètres de la requête {/examples/}
 
-| Key                  | JSON data type | Required | Description                                                                                |
-| -------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------ |
-| **objID**            | Integer        | Yes      | Object identifier, for example: **42**                                                     |
-| **category**         | String         | Yes      | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__IP"** |
-| **cateID** or **id** | Integer        | Yes      | Entry identifier, for example: **3**                                                       |
+| Clé                  | Type de données JSON | Requis | Description                                                                                |
+| -------------------- | -------------------- | ------ | ------------------------------------------------------------------------------------------ |
+| **objID**            | Entier               | Oui    | Identifiant de l'objet, par exemple : **42**                                                |
+| **category**         | Chaîne de caractères | Oui    | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **"C__CATG__IP"** |
+| **cateID** ou **id** | Entier               | Oui    | Identifiant de l'entrée, par exemple : **3**                                                |
 
-### Response
+### Réponse {/examples/}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key         | JSON data type | Description        |
-| ----------- | -------------- | ------------------ |
-| **success** | Boolean        | Should be **true** |
-| **message** | String         | Some information   |
+| Clé         | Type de données JSON | Description        |
+| ----------- | -------------------- | ------------------ |
+| **success** | Booléen              | Doit être **true** |
+| **message** | Chaîne de caractères | Quelques informations   |
 
-### Example
+### Exemple {/examples/}
 
-=== "Delete Request body"
+=== "Corps de la requête de suppression"
 
     ```json
     {
@@ -249,7 +249,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -264,30 +264,30 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.category.save
 
-Create or Update [category](../../../basics/structure-of-the-it-documentation.md) entry of an object.<br>
-It works for [multi-value categories](../../../basics/structure-of-the-it-documentation.md) and [single-value category](../../../basics/structure-of-the-it-documentation.md) .
+Créez ou mettez à jour l'entrée de [catégorie](../../../basics/structure-of-the-it-documentation.md) d'un objet.<br>
+Cela fonctionne pour les [catégories à valeurs multiples](../../../basics/structure-of-the-it-documentation.md) et les [catégories à valeur unique](../../../basics/structure-of-the-it-documentation.md).
 
-### Request parameters
+### Paramètres de la requête
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                |
-| ------------ | ------------------ | ------------ | ---------------------------------------------------------------------------------------------- |
-| **object**   | Integer            | Yes          | Object identifier, for example: **456**                                                        |
-| **category** | String             | Yes          | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
-| **data**     | Object             | Yes          | ```{ "title":"Name of the access", "description": "description of the access" }```             |
+| **Clé**      | **Type de données JSON** | **Requis** | **Description**                                                                                |
+| ------------ | ------------------------ | ---------- | ---------------------------------------------------------------------------------------------- |
+| **objet**    | Entier                   | Oui        | Identifiant de l'objet, par exemple : **456**                                                   |
+| **catégorie** | Chaîne                  | Oui        | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **"C__CATG__ACCESS"** |
+| **données**  | Objet                    | Oui        | ```{ "titre":"Nom de l'accès", "description": "description de l'accès" }```                    |
 
-### Response body
+### Corps de la réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| **Key**     | **JSON data type** | **Description**                       |
-| ----------- | ------------------ | ------------------------------------- |
-| **success** | Boolean            | Should be **true**                    |
-| **message** | String             | Some information                      |
-| **entry**   | Integer            | Entry identifier, for example: **35** |
+| **Clé**     | **Type de données JSON** | **Description**                       |
+| ----------- | ------------------------ | ------------------------------------- |
+| **succès**  | Booléen                  | Doit être **true**                    |
+| **message** | Chaîne de caractères     | Quelques informations                 |
+| **entrée**  | Entier                   | Identifiant de l'entrée, par exemple : **35** |
 
-### Example
+### Exemple
 
-=== "Create Request body"
+=== "Corps de la requête de création"
 
     ```json
     {
@@ -307,7 +307,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -321,7 +321,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "or update Request body"
+=== "ou corps de la requête de mise à jour"
 
     ```json
     {
@@ -344,28 +344,28 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.category.quickpurge
 
-If **Quickpurge** is [enabled](../../../basics/life-and-documentation-cycle.md), purge a category entry of an object directly from the database.
+Si **Quickpurge** est [activé](../../../basics/life-and-documentation-cycle.md), purger une entrée de catégorie d'un objet directement de la base de données.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key                  | JSON data type | Required | Description                                                                                |
-| -------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------ |
-| **objID**            | Integer        | Yes      | Object identifier, for example: **42**                                                     |
-| **category**         | String         | Yes      | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__IP"** |
-| **cateID** or **id** | Integer        | Yes      | Entry identifier, for example: **3**                                                       |
+| Clé                  | Type de données JSON | Requis   | Description                                                                                   |
+| -------------------- | -------------------- | -------- | --------------------------------------------------------------------------------------------- |
+| **objID**            | Entier               | Oui      | Identifiant de l'objet, par exemple : **42**                                                  |
+| **catégorie**        | Chaîne de caractères | Oui      | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **"C__CATG__IP"** |
+| **cateID** ou **id** | Entier               | Oui      | Identifiant de l'entrée, par exemple : **3**                                                  |
 
-### Response body
+### Corps de la réponse
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key         | JSON data type | Description        |
-| ----------- | -------------- | ------------------ |
-| **success** | Boolean        | Should be **true** |
-| **message** | String         | Some information   |
+| Clé         | Type de données JSON | Description        |
+| ----------- | --------------------- | ------------------ |
+| **success** | Booléen              | Doit être **true** |
+| **message** | Chaîne de caractères | Quelques informations |
 
-### Example
+### Exemple
 
-=== "Create Request body"
+=== "Corps de la requête de création"
 
     ```json
     {
@@ -382,7 +382,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -397,28 +397,28 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.category.purge
 
-Purge a [category](../../../basics/structure-of-the-it-documentation.md) entry of an object.It works for [multi-value categories](../../../basics/structure-of-the-it-documentation.md#multi-value-category) and [single-value category](../../../basics/structure-of-the-it-documentation.md#single-value-category) .
+Purger une entrée de [catégorie](../../../basics/structure-of-the-it-documentation.md) d'un objet. Cela fonctionne pour les [catégories à valeurs multiples](../../../basics/structure-of-the-it-documentation.md#multi-value-category) et les [catégories à valeur unique](../../../basics/structure-of-the-it-documentation.md#single-value-category).
 
-### Request parameters
+### Paramètres de la requête
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                |
-| ------------ | ------------------ | ------------ | ---------------------------------------------------------------------------------------------- |
-| **object**   | Integer            | Yes          | Object identifier, for example: **456**                                                        |
-| **category** | String             | Yes          | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
-| **entry**    | Integer            | Yes          | Entry identifier, for example: **33**                                                          |
+| **Clé**      | **Type de données JSON** | **Requis** | **Description**                                                                                |
+| ------------ | ------------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
+| **objet**    | Entier                   | Oui        | Identifiant de l'objet, par exemple : **456**                                                  |
+| **catégorie**| Chaîne de caractères     | Oui        | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **"C__CATG__ACCESS"** |
+| **entrée**   | Entier                   | Oui        | Identifiant de l'entrée, par exemple : **33**                                                  |
 
-### Response body
+### Corps de la réponse { /*examples*/ }
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| **Key**     | **JSON data type** | **Description**    |
-| ----------- | ------------------ | ------------------ |
-| **success** | Boolean            | Should be **true** |
-| **message** | String             | Some information   |
+| **Clé**     | **Type de données JSON** | **Description**    |
+| ----------- | ------------------------ | ------------------ |
+| **success** | Booléen                  | Doit être **true** |
+| **message** | Chaîne de caractères     | Quelques informations |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -435,7 +435,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -452,29 +452,29 @@ JSON key **result** contains a JSON object.
 
 **Limitations:**
 
--   This only works with [multi-value categories](../../../basics/structure-of-the-it-documentation.md).
--   You can recycle category entries which have archived or deleted status.
+-   Cela fonctionne uniquement avec les [catégories à valeurs multiples](../../../basics/structure-of-the-it-documentation.md).
+-   Vous pouvez recycler les entrées de catégorie qui ont le statut archivé ou supprimé.
 
-### Request parameters
+### Paramètres de la requête
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                       |
-| ------------ | ------------------ | ------------ | ----------------------------------------------------------------------------------------------------- |
-| **object**   | Integer            | Yes          | Object identifier, for example: **456**                                                               |
-| **category** | String             | Yes          | [Category constant](../../../basics/categories-and-attributes.md), for example: **"C__CATG__ACCESS"** |
-| **entry**    | Integer            | Yes          | Entry identifier, for example: **32**                                                                 |
+| **Clé**      | **Type de données JSON** | **Requis** | **Description**                                                                                       |
+| ------------ | ------------------------ | ---------- | ----------------------------------------------------------------------------------------------------- |
+| **objet**    | Entier                   | Oui        | Identifiant de l'objet, par exemple : **456**                                                          |
+| **catégorie** | Chaîne de caractères     | Oui        | [Constante de catégorie](../../../basics/categories-and-attributes.md), par exemple : **"C__CATG__ACCESS"** |
+| **entrée**   | Entier                   | Oui        | Identifiant de l'entrée, par exemple : **32**                                                         |
 
-### Response body
+### Corps de la réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| **Key**     | **JSON data type** | **Description**    |
-| ----------- | ------------------ | ------------------ |
-| **success** | Boolean            | Should be **true** |
-| **message** | String             | Some information   |
+| **Clé**     | **Type de données JSON** | **Description**    |
+| ----------- | ------------------------ | ------------------ |
+| **succès** | Booléen                 | Doit être **true** |
+| **message** | Chaîne de caractères    | Quelques informations   |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -491,7 +491,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -508,29 +508,29 @@ JSON key **result** contains a JSON object.
 
 **Limitations**
 
--   This only works with [multi-value categories](../../../basics/structure-of-the-it-documentation.md) at the moment.
--   You can only archive category entries which have a normal status.
+-   Cela fonctionne uniquement avec les [catégories à valeurs multiples](../../../basics/structure-of-the-it-documentation.md) pour le moment.
+-   Vous ne pouvez archiver que des entrées de catégorie qui ont un statut normal.
 
-### Request parameters
+### Paramètres de la requête
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                |
-| ------------ | ------------------ | ------------ | ---------------------------------------------------------------------------------------------- |
-| **object**   | Integer            | Yes          | Object identifier, for example: **456**                                                        |
-| **category** | String             | Yes          | [Category constant](../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
-| **entry**    | Integer            | Yes          | Entry identifier, for example: **32**                                                          |
+| **Clé**      | **Type de données JSON** | **Requis** | **Description**                                                                                |
+| ------------ | ------------------------ | ------------ | ---------------------------------------------------------------------------------------------- |
+| **objet**   | Entier                 | Oui          | Identifiant de l'objet, par exemple : **456**                                                        |
+| **catégorie** | Chaîne de caractères    | Oui          | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **"C__CATG__ACCESS"** |
+| **entrée**    | Entier                 | Oui          | Identifiant de l'entrée, par exemple : **32**                                                          |
 
-### Response body
+### Corps de la réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| **Key**     | **JSON data type** | **Description**    |
-| ----------- | ------------------ | ------------------ |
-| **success** | Boolean            | Should be **true** |
-| **message** | String             | Some information   |
+| **Clé**     | **Type de données JSON** | **Description**    |
+| ----------- | ------------------------ | ------------------ |
+| **success** | Booléen                  | Doit être **true** |
+| **message** | Chaîne de caractères     | Quelques informations |
 
-### Example
+### Exemple {/examples}
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -547,7 +547,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {

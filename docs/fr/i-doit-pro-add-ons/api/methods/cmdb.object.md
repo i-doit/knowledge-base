@@ -1,47 +1,47 @@
 ---
-title: object
-description: object
+title: objet
+description: objet
 icon: material/api
-#status: updated
-lang: en
+#status: mis à jour
+lang: fr
 ---
 
-# cmdb.object
+# cmdb.objet
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
-## cmdb.object.read
+## cmdb.objet.lire
 
-Read common information about an [object](../../../basics/structure-of-the-it-documentation.md)
+Lire des informations communes sur un [objet](../../../basics/structure-of-the-it-documentation.md)
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **id** | Integer | Yes | Object identifier; for example: **42** |
+| **id** | Entier | Oui | Identifiant de l'objet; par exemple: **42** |
 
-### Response paramters
+### Paramètres de la réponse
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key | JSON data type | Description |
+| Clé | Type de données JSON | Description |
 | --- | --- | --- |
-| **id** | String | Object identifier (as numeric string) |
-| **title** | String | Object title |
-| **sysid** | String | SYSID (see category **Global**) |
-| **objecttype** | String | Object type identifier (as numeric string) |
-| **created** | String | Date of creation; format: **Y-m-d H:i:s** |
-| **updated** | String | Date of last update; format: **Y-m-d H:i:s**<br>**Note:** This key is optional because not every object has been updated before. |
-| **type_title** | String | Translated name of object type |
-| **type_icon** | String | Relative URL to object type icon |
-| **status**     | String   | Filter by status of the objects e.g. Normal or Archived:<br>-   **C__RECORD_STATUS__BIRTH** = Unfinished<br>-   **C__RECORD_STATUS__NORMAL** = Normal<br>-   **C__RECORD_STATUS__ARCHIVED** = Archived<br>-   **C__RECORD_STATUS__DELETED** = Deleted<br>-   **C__RECORD_STATUS__TEMPLATE** = Template<br>-   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE** = Template for mass changes |
-| **cmdb_status** | String | CMDB status (see category **Global**; as numeric string) |
-| **cmdb_status_title** | String | Translated CMDB status (see category **Global**) |
-| **image** | String | URL to object picture |
+| **id** | Chaîne | Identifiant de l'objet (sous forme de chaîne numérique) |
+| **titre** | Chaîne | Titre de l'objet |
+| **sysid** | Chaîne | SYSID (voir catégorie **Global**) |
+| **typeobjet** | Chaîne | Identifiant du type d'objet (sous forme de chaîne numérique) |
+| **créé** | Chaîne | Date de création; format: **Y-m-d H:i:s** |
+| **mis_à_jour** | Chaîne | Date de la dernière mise à jour; format: **Y-m-d H:i:s**<br>**Remarque:** Cette clé est facultative car tous les objets n'ont pas été mis à jour auparavant. |
+| **type_titre** | Chaîne | Nom traduit du type d'objet |
+| **type_icône** | Chaîne | URL relative vers l'icône du type d'objet |
+| **statut**     | Chaîne   | Filtrer par statut des objets, par exemple Normal ou Archivé:<br>-   **C__RECORD_STATUS__BIRTH** = Inachevé<br>-   **C__RECORD_STATUS__NORMAL** = Normal<br>-   **C__RECORD_STATUS__ARCHIVED** = Archivé<br>-   **C__RECORD_STATUS__DELETED** = Supprimé<br>-   **C__RECORD_STATUS__TEMPLATE** = Modèle<br>-   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE** = Modèle pour les changements massifs |
+| **statut_cmdb** | Chaîne | Statut CMDB (voir catégorie **Global**; sous forme de chaîne numérique) |
+| **titre_statut_cmdb** | Chaîne | Statut CMDB traduit (voir catégorie **Global**) |
+| **image** | Chaîne | URL vers l'image de l'objet |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -56,7 +56,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -81,33 +81,33 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.object.create
 
-Create new [object](../../../basics/structure-of-the-it-documentation.md) with some optional information
+Crée un nouveau [objet](../../../basics/structure-of-the-it-documentation.md) avec quelques informations facultatives
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **type** | String\|Integer | Yes | Object type constant as string, for example: **"C__OBJTYPE__SERVER"**<br><br>Alternatively, object type identifier as integer, for example: **5** |
-| **title** | String | Yes | Object title, for example: **"My little server"** |
-| **category** | String | No  | Attribute **Category** in category **Global** |
-| **categories** | Object with Array | No | Category constant, for example: **"C__CATG__MODEL"** with keys in a array |
-| **purpose** | String | No  | Attribute **Purpose** in category Global, for example: **"In production"** |
-| **cmdb_status** | String\|Integer | No  | Attribute **CMDB status** in category **Global** by its constant (string), for example: **"C__CMDB_STATUS__IN_OPERATION"**<br><br>Alternatively, by its identifier (integer), for example: **6** |
-| **description** | String | No  | Attribute **Description** in category **Global** |
+| **type** | Chaîne\|Entier | Oui | Constante de type d'objet en tant que chaîne, par exemple : **"C__OBJTYPE__SERVER"**<br><br>Alternativement, identifiant de type d'objet en tant qu'entier, par exemple : **5** |
+| **title** | Chaîne | Oui | Titre de l'objet, par exemple : **"Mon petit serveur"** |
+| **category** | Chaîne | Non  | Attribut **Catégorie** dans la catégorie **Global** |
+| **categories** | Objet avec un tableau | Non | Constante de catégorie, par exemple : **"C__CATG__MODEL"** avec des clés dans un tableau |
+| **purpose** | Chaîne | Non  | Attribut **Objectif** dans la catégorie Global, par exemple : **"En production"** |
+| **cmdb_status** | Chaîne\|Entier | Non  | Attribut **Statut CMDB** dans la catégorie **Global** par sa constante (chaîne), par exemple : **"C__CMDB_STATUS__IN_OPERATION"**<br><br>Alternativement, par son identifiant (entier), par exemple : **6** |
+| **description** | Chaîne | Non  | Attribut **Description** dans la catégorie **Global** |
 
-### Response paramters
+### Paramètres de réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key | JSON data type | Description |
+| Clé | Type de données JSON | Description |
 | --- | --- | --- |
-| **id** | String | Object identifier (as numeric string) |
-| **message** | String | Some information |
-| **success** | Boolean | Should always be **true** |
+| **id** | Chaîne | Identifiant de l'objet (sous forme de chaîne numérique) |
+| **message** | Chaîne | Quelques informations |
+| **success** | Booléen | Doit toujours être **true** |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -123,7 +123,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -137,29 +137,29 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-## cmdb.object.update
+## cmdb.object.update {/examples}
 
-Change object e.g title of a object.
+Modifier un objet, par exemple le titre d'un objet.
 
-### Request parameters
+### Paramètres de requête {/examples}
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **id** | Integer | Yes | Object identifier, for example: **42** |
-| **title** | String | Yes | New object title, for example: **"Your little server"** |
+| **id** | Entier | Oui | Identifiant de l'objet, par exemple : **42** |
+| **title** | Chaîne | Oui | Nouveau titre de l'objet, par exemple : **"Votre petit serveur"** |
 
-### Response paramters
+### Paramètres de réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key | JSON data type | Description |
+| Clé | Type de données JSON | Description |
 | --- | --- | --- |
-| **message** | String | Should be |
-| **success** | Boolean | Should be true |
+| **message** | Chaîne | Doit être |
+| **success** | Booléen | Doit être true |
 
-### Example
+### Exemple {/examples}
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -175,7 +175,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+### Corps de la réponse {/ * exemples *}
 
     ```json
     {
@@ -190,27 +190,27 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.object.delete
 
-[Deletes](../../../basics/life-and-documentation-cycle.md) a object also can set a specific record status like Archived.
+[Supprime](../../../basics/life-and-documentation-cycle.md) un objet et peut également définir un statut d'enregistrement spécifique comme Archivé.
 
-### Request paramters
+### Paramètres de la demande
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **id** | Integer | Yes | Object identifier, for example: **42** |
-| **status** | String | Yes | Status constant:<br> **C__RECORD_STATUS__ARCHIVED**<br> Archive object<br> **C__RECORD_STATUS__DELETED**<br> Mark object as deleted<br> **C__RECORD_STATUS__PURGE**<br> Purge object from database |
+| **id** | Entier | Oui | Identifiant de l'objet, par exemple: **42** |
+| **status** | Chaîne | Oui | Constante de statut :<br> **C__RECORD_STATUS__ARCHIVED**<br> Archiver l'objet<br> **C__RECORD_STATUS__DELETED**<br> Marquer l'objet comme supprimé<br> **C__RECORD_STATUS__PURGE**<br> Purger l'objet de la base de données |
 
-### Response paramters
+### Paramètres de la réponse
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key | JSON data type | Description |
+| Clé | Type de données JSON | Description |
 | --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
+| **success** | Booléen | Doit être **true** |
+| **message** | Chaîne | Quelques informations |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la demande"
 
     ```json
     {
@@ -225,7 +225,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+### Corps de la réponse {/ * exemples *}
 
     ```json
     {
@@ -240,26 +240,26 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.object.recycle
 
-Recycles a object
+Recycle un objet
 
-### Request paramters
+### Paramètres de la requête {/examples}
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **object** | Integer | Yes | Object identifier, for example: **464** |
+| **objet** | Entier | Oui | Identifiant de l'objet, par exemple : **464** |
 
-### Response paramters
+### Paramètres de la réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **résultat** contient un objet JSON.
 
-| Key | JSON data type | Description |
+| Clé | Type de données JSON | Description |
 | --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
+| **succès** | Booléen | Doit être **true** |
+| **message** | Chaîne de caractères | Quelques informations |
 
-### Example
+### Exemple {/examples}
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -275,7 +275,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -288,77 +288,47 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-## cmdb.object.archive
+## cmdb.object.archive {/examples}
 
-[Archives](../../../basics/life-and-documentation-cycle.md#archive-category-entries-mark-them-as-deleted-or-purge-them) a object
+[Archive](../../../basics/life-and-documentation-cycle.md#archive-category-entries-mark-them-as-deleted-or-purge-them) un objet
 
-### Request paramters
+### Paramètres de la requête {/examples}
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **object** | Integer | Yes | Object identifier, for example: **464** |
+| **objet** | Entier | Oui | Identifiant de l'objet, par exemple : **464** |
 
-### Response paramters
+### Paramètres de la réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **résultat** contient un objet JSON.
 
-| Key | JSON data type | Description |
+| Clé | Type de données JSON | Description |
 | --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
+| **succès** | Booléen | Doit être **true** |
+| **message** | Chaîne de caractères | Quelques informations |
 
-### Example
+## cmdb.object.purge {#examples}
 
-=== "Request body"
+[Purges](../../../basics/life-and-documentation-cycle.md#archive-category-entries-mark-them-as-deleted-or-purge-them) un objet lorsque le statut est supprimé.
 
-    ```json
-    {
-        "version": "2.0",
-        "method": "cmdb.object.archive",
-        "params": {
-            "object": 464,
-            "apikey": "xxx",
-            "language": "en"
-        },
-        "id": 1
-    }
-    ```
+### Paramètres de la requête
 
-=== "Response body"
-
-    ```json
-    {
-        "id": 1,
-        "jsonrpc": "2.0",
-        "result": {
-            "success": true,
-            "message": "Object 464 has been archived."
-        }
-    }
-    ```
-
-## cmdb.object.purge
-
-[Purges](../../../basics/life-and-documentation-cycle.md#archive-category-entries-mark-them-as-deleted-or-purge-them) a object when the status is deleted.
-
-### Request paramters
-
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **object** | Integer | Yes | Object identifier, for example: **464** |
+| **objet** | Entier | Oui | Identifiant de l'objet, par exemple : **464** |
 
-### Response paramters
+### Paramètres de la réponse
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| Key | JSON data type | Description |
+| Clé | Type de données JSON | Description |
 | --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
+| **succès** | Booléen | Doit être **true** |
+| **message** | Chaîne | Quelques informations |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -373,7 +343,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -388,26 +358,26 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.object.markAsTemplate
 
-Set the Object condition as a [Template](../../../efficient-documentation/templates.md)
+Définit la condition de l'objet comme un [Modèle](../../../efficient-documentation/templates.md)
 
-### Request paramters
+### Paramètres de la requête
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **object** | Integer | Yes | Object identifier, for example: **465** |
+| **objet** | Entier | Oui | Identifiant de l'objet, par exemple : **465** |
 
-### Response paramters
+### Paramètres de réponse
 
-JSON key **result** contains a JSON object.
+La clé JSON **résultat** contient un objet JSON.
 
-| Key | JSON data type | Description |
+| Clé | Type de données JSON | Description |
 | --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
+| **succès** | Booléen | Doit être **true** |
+| **message** | Chaîne de caractères | Quelques informations |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -422,7 +392,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -437,29 +407,29 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.object.markAsMassChangeTemplate
 
-Set the Object condition as a [Mass Change](../../../efficient-documentation/mass-change.md) [Template](../../../efficient-documentation/templates.md)
+Définit la condition de l'objet comme un [Changement de masse](../../../efficient-documentation/mass-change.md) [Modèle](../../../efficient-documentation/templates.md)
 
-### Request paramters
+### Paramètres de la requête
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **object** | Integer | Yes | Object identifier, for example: **465** |
+| **objet** | Entier | Oui | Identifiant de l'objet, par exemple : **465** |
 
-### Response paramters
+### Paramètres de réponse
 
-JSON key **result** contains a JSON object.
+La clé JSON **résultat** contient un objet JSON.
 
-| Key | JSON data type | Description |
+| Clé | Type de données JSON | Description |
 | --- | --- | --- |
-| **success** | Boolean | Should be **true** |
-| **message** | String | Some information |
+| **succès** | Booléen | Doit être **true** |
+| **message** | Chaîne de caractères | Quelques informations |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
-    ```json
-    {
+```json
+{
         "version": "2.0",
         "method": "cmdb.object.markAsMassChangeTemplate",
         "params": {
@@ -469,12 +439,12 @@ JSON key **result** contains a JSON object.
         },
         "id": 1
     }
-    ```
+```
 
-=== "Response body"
+=== "Corps de la réponse"
 
-    ```json
-    {
+```json
+{
         "id": 1,
         "jsonrpc": "2.0",
         "result": {
@@ -482,4 +452,4 @@ JSON key **result** contains a JSON object.
             "message": "Object 465 has been marked as mass change template."
         }
     }
-    ```
+```

@@ -3,37 +3,37 @@ title: cmdb.ip_search
 description: cmdb.ip_search
 icon: material/api
 #status: updated
-lang: en
+lang: fr
 ---
 
 # cmdb.ip_search
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## cmdb.ip_search.read
 
-Get all Layer3 Objects (except Global v4/v6, where the IP is in the address range of the Layer3 Network)
+Obtenez tous les objets de la couche 3 (sauf Global v4/v6, où l'IP se trouve dans la plage d'adresses du réseau de la couche 3)
 
-### Request parameters
+### Paramètres de la requête
 
-| Key             | JSON data type | Required | Description |
-| --------------- | -------------- | -------- | ----------- |
-| **ip** | String    | Yes      | A IP Address |
+| Clé             | Type de données JSON | Requis | Description |
+| --------------- | -------------------- | ------ | ----------- |
+| **ip** | Chaîne    | Oui      | Une adresse IP |
 
-!!! example "WIP"
+!!! example "Travail en cours"
 
-    ### Response parameters
+    ### Paramètres de réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
+    | Clé             | Type de données JSON | Description |
+    | --------------- | -------------------- | ----------- |
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -48,7 +48,7 @@ Get all Layer3 Objects (except Global v4/v6, where the IP is in the address rang
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     Placeholder

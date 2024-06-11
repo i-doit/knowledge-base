@@ -1,51 +1,51 @@
-# Logbook
+# Journal de bord {/ * exemples *}
 
-In the logbook view you can filter entries according to several parameters. If possible, an entry contains the exact changes. (Which values were changed and how?) → [READMORE](../../basics/logbook.md)
+Dans la vue du journal de bord, vous pouvez filtrer les entrées selon plusieurs paramètres. Si possible, une entrée contient les changements exacts. (Quelles valeurs ont été modifiées et comment ?) → [EN SAVOIR PLUS](../../basics/logbook.md)
 
-| Option                 | Value                                                                                      |
+| Option                 | Valeur                                                                                     |
 | ---------------------- | ------------------------------------------------------------------------------------------ |
-| Status                 | Normal<br>Archive                                                                          |
-| Of                     | Date and/or time                                                                           |
-| Source                 | -<br>All!<br>External<br>Import<br>Internal<br>JDisc Import<br>Manual entries<br>RT Ticket |
-| Alarm level            | 0 (information)<br>1 (low)<br>2 (middle)<br>3 (high)                                       |
-| User                   | Object browser                                                                             |
-| To                     | Date and/or time                                                                           |
-| Type                   | Objects<br>System                                                                          |
-| Show only CMDB changes | Checkbox                                                                                   |
+| Statut                 | Normal<br>Archive                                                                          |
+| De                     | Date et/ou heure                                                                            |
+| Source                 | -<br>Tous !<br>Externe<br>Importation<br>Interne<br>Importation JDisc<br>Entrées manuelles<br>Ticket RT |
+| Niveau d'alarme         | 0 (information)<br>1 (faible)<br>2 (moyen)<br>3 (élevé)                                    |
+| Utilisateur             | Navigateur d'objets                                                                        |
+| À                      | Date et/ou heure                                                                            |
+| Type                   | Objets<br>Système                                                                          |
+| Afficher uniquement les modifications CMDB | Case à cocher                                                                           |
 
-[![Logbook View](../../assets/images/en/system-administration/administration/logbook/1-l.png)](../../assets/images/en/system-administration/administration/logbook/1-l.png)
+[![Vue du journal de bord](../../assets/images/en/system-administration/administration/logbook/1-l.png)](../../assets/images/en/system-administration/administration/logbook/1-l.png)
 
-## Logbook Configuration
+## Configuration du journal de bord {/ * exemples *}
 
-In the logbook configuration you can define how many changes may be combined as a maximum in a logbook entry, if the user only should be displayed with his/her ID or in an extended way and if yes, how this should look like. Additionally, you can determine the number of combined changes per logbook entry during an import procedure.
+Dans la configuration du journal de bord, vous pouvez définir combien de changements peuvent être combinés au maximum dans une entrée de journal, si l'utilisateur doit être affiché uniquement avec son ID ou de manière étendue et si oui, à quoi cela devrait ressembler. De plus, vous pouvez déterminer le nombre de changements combinés par entrée de journal lors d'une procédure d'importation.
 
-| Option                               | Value                                     |
+| Option                               | Valeur                                     |
 | ------------------------------------ | ----------------------------------------- |
-| User identification                 | Standard<br>Extended                      |
-| Create logbook entries for relations | Only initiating object<br>On both objects |
+| Identification de l'utilisateur       | Standard<br>Étendue                       |
+| Créer des entrées de journal pour les relations | Seulement l'objet initiateur<br>Sur les deux objets |
 
-### Import
+### Import {/examples}
 
-| Option                                                     | Value |
+| Option                                                     | Valeur |
 | ---------------------------------------------------------- | ----- |
-| Maximum amount of combined detailed changes (per category) | Value |
+| Montant maximum de modifications détaillées combinées (par catégorie) | Valeur |
 
-## Archive
+## Archive {/examples}
 
-Enter for how long entries in the logbook should be kept before they will be archived.
+Indiquez pendant combien de temps les entrées du journal de bord doivent être conservées avant d'être archivées.
 
-| Option             | Value                             |
+| Option             | Valeur                             |
 | ------------------ | --------------------------------- |
-| Entries older than | Value in Days                     |
-| Destination        | local database<br>remote database |
+| Entrées plus anciennes que | Valeur en jours                     |
+| Destination        | base de données locale<br>base de données distante |
 
-To archive the logbook, the [logbook-archive](../../automation-and-integration/cli/console/options-and-parameters-cli.md#logbook-archive) CLI command must be executed.
+Pour archiver le journal de bord, la commande CLI [logbook-archive](../../automation-and-integration/cli/console/options-and-parameters-cli.md#logbook-archive) doit être exécutée.
 
-## Restore
+## Restaurer {/examples}
 
-With this function you can restore entries which were already archived.
+Avec cette fonction, vous pouvez restaurer les entrées qui ont déjà été archivées.
 
-| Option             | Value                             |
+| Option             | Valeur                             |
 | ------------------ | --------------------------------- |
-| Entries older than | Value in Days                     |
-| Source             | local database<br>remote database |
+| Entrées plus anciennes que | Valeur en jours                     |
+| Source             | base de données locale<br>base de données distante |

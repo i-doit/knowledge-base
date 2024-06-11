@@ -1,14 +1,16 @@
-# Object category VIVA
+# Catégorie d'objet VIVA
 
-The VIVA add-on brings the VIVA category, which is globally available for all object types. Through it, the user gains a quick overview. The category lists the appropriate VIVA-specific properties. These include ...
+L'extension VIVA apporte la catégorie VIVA, qui est disponible mondialement pour tous les types d'objets. À travers elle, l'utilisateur obtient un aperçu rapide. La catégorie répertorie les propriétés spécifiques à VIVA appropriées. Celles-ci incluent ...
 
-*   the information network,
-*   the target group with primary IT-Grundschutz layer,
-*   protection requirements of the target group,
-*   other members of the target group,
-*   modules assigned to the target group, and
-*   statistics on the implementation of measures assigned to the target group.
+*   le réseau d'information,
+*   le groupe cible avec la couche primaire IT-Grundschutz,
+*   les exigences de protection du groupe cible,
+*   les autres membres du groupe cible,
+*   les modules assignés au groupe cible, et
+*   des statistiques sur la mise en œuvre des mesures assignées au groupe cible.
 
-If an object is assigned to several information associations, this is also taken into account in the category. In addition, the user can switch from i-doit's IT documentation to the relevant areas of the VIVA add-on.
+Si un objet est assigné à plusieurs associations d'informations, cela est également pris en compte dans la catégorie. De plus, l'utilisateur peut passer de la documentation IT d'i-doit aux domaines pertinents de l'extension VIVA.
 
-It is not necessary to assign the category to object types. It is automatically available to all object types. The category can be found above the category tree of each object next to other categories such as the CMDB Explorer or the Logbook.
+Il n'est pas nécessaire d'assigner la catégorie aux types d'objets. Elle est automatiquement disponible pour tous les types d'objets. La catégorie peut être trouvée au-dessus de l'arborescence des catégories de chaque objet à côté d'autres catégories telles que l'Explorateur CMDB ou le Journal. 
+
+{/*examples*/}

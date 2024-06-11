@@ -1,312 +1,317 @@
-# Update Guide from i-doit 1.7.4 to 1.19
+# Guide de mise à jour de i-doit 1.7.4 à 1.19
 
-Here we you will find short instruction to Update your i-doit up to i-doit 1.19.  
-You may need to Upgrade your Operating System.  
-This instructions are valid for **Debian** and the commands used differ in other OS.Before you start, Download all updates you need to do and copy them in the i-doit root Folder.
+Ici, vous trouverez des instructions succinctes pour mettre à jour votre i-doit jusqu'à la version 1.19.  
+Vous devrez peut-être mettre à jour votre système d'exploitation.  
+Ces instructions sont valables pour **Debian** et les commandes utilisées diffèrent sur d'autres systèmes d'exploitation. Avant de commencer, téléchargez toutes les mises à jour nécessaires et copiez-les dans le dossier racine de i-doit.
 
-!!! danger "**Important things to note before hand**"
+!!! danger "**Choses importantes à noter au préalable**"
 
-    This Guide do not come with any warranty and may not work in your specific use case.  
-    This depends on the configuration and installation type of your instance.
+    Ce guide ne comporte aucune garantie et peut ne pas fonctionner dans votre cas d'utilisation spécifique.  
+    Cela dépend de la configuration et du type d'installation de votre instance.
 
-    Also needed **Add-on** updates are not mentioned.
+    Les mises à jour des **Add-ons** nécessaires ne sont pas mentionnées.
 
-!!! attention "Backup"
+!!! attention "Sauvegarde"
 
-    Do a Backup or Snapshot **before each Update** step!
+    Faites une sauvegarde ou un instantané **avant chaque étape de mise à jour** !
 
-!!! attention "Release Notes"
+!!! attention "Notes de version"
 
-    Read the [Release Notes](../version-history/index.md) before you Update to a new Version
+    Lisez les [Notes de version](../version-history/index.md) avant de mettre à jour vers une nouvelle version.
 
-!!! attention "Hotfix note"
+!!! attention "Note sur les correctifs"
 
-    Please use Hotfixes exclusively with the specified version. Hotfixes will be included in newer versions so that a renewed installation is not necessary.
+    Veuillez utiliser exclusivement les correctifs avec la version spécifiée. Les correctifs seront inclus dans les versions ultérieures afin qu'une réinstallation ne soit pas nécessaire.
 
-    Should you use an older i-doit version it is essential to make an update to the latest version first.
+    Si vous utilisez une ancienne version d'i-doit, il est essentiel de faire une mise à jour vers la dernière version en premier.
 
-    If a Hotfix is required to update an older version, it can be found in the Hotfix subchapters here in the Knowledge Base.
+    Si un correctif est nécessaire pour mettre à jour une ancienne version, vous pouvez le trouver dans les sous-chapitres des correctifs ici dans la base de connaissances.
 
-    As these are Hotfixes we recommend installing them only when the adjustments are necessary for a flawless operation of your installation or you are requested by the support team to use them. Please ensure that you made a [backup of i-doit](../maintenance-and-operation/backup-and-recovery/index.md) before you use any Hotfix.
+    Comme il s'agit de correctifs, nous vous recommandons de les installer uniquement lorsque les ajustements sont nécessaires pour un fonctionnement sans faille de votre installation ou si vous êtes invité par l'équipe de support à les utiliser. Assurez-vous d'avoir fait une [sauvegarde d'i-doit](../maintenance-and-operation/backup-and-recovery/index.md) avant d'utiliser un correctif.
 
-    Please inform us about the use of Hotfixes, should you contact our support team afterwards.
+    Veuillez nous informer de l'utilisation des correctifs si vous contactez notre équipe de support par la suite.
 
 | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| i-doit Version | 1.19 | 1.18 | 1.17 | 1.16 | 1.15 | 1.14 | 1.13 | 1.12 | 1.11 | 1.10 | 1.9 | 1.8 | 1.7 |
-| Release | 2022-09 | 2022-01 | 2021-07 | 2021-01 | 2020-07 | 2020-01 | 2019-06 | 2018-12 | 2018-06 | 2017-12 | 2017-05 | 2016-10 | 2016-03 |
-| Apache Webserver | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.2, 2.4 |
-| PHP | 7.4 (deprecated)  <br>8.0 (recommended) | 7.3 (deprecated)  <br>7.4 (recommended) | 7.3  <br>7.4 (recommended) | 7.2.5 (deprecated)  <br>7.3  <br>7.4 (recommended) | 7.1.8 (deprecated)  <br>7.2  <br>7.3 (recommended)  <br>7.4 | 7.1.8 (deprecated)  <br>7.2  <br>7.3 (recommended)  <br>7.4 | 7.0.8 (deprecated)  <br>7.1  <br>7.2  <br>7.3 (recommended) | 5.6 (deprecated)  <br>7.0  <br>7.1  <br>7.2 (recommended) | 5.6  <br>7.0  <br>7.1 | 5.6  <br>7.0 | 5.4  <br>5.5  <br>5.6  <br>7.0 | 5.4  <br>5.5  <br>5.6 | 5.4  <br>5.5  <br>5.6 |
-| MySQL | 5.7 | 5.7 | 5.7 | 5.6 (deprecated)  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 |
-| MariaDB | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) | 10.1 (deprecated)  <br>10.2  <br>10.3  <br>10.4 (recommended)  <br>10.5 | 10.1  <br>10.2  <br>10.3  <br>10.4 (recommended) | 10.1  <br>10.2  <br>10.3  <br>10.4 (recommended) | 10.0 (deprecated)  <br>10.1  <br>10.2  <br>10.3 (recommended) | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 |
+| Version d'i-doit | 1.19 | 1.18 | 1.17 | 1.16 | 1.15 | 1.14 | 1.13 | 1.12 | 1.11 | 1.10 | 1.9 | 1.8 | 1.7 |
+| Date de sortie | 2022-09 | 2022-01 | 2021-07 | 2021-01 | 2020-07 | 2020-01 | 2019-06 | 2018-12 | 2018-06 | 2017-12 | 2017-05 | 2016-10 | 2016-03 |
+| Serveur Web Apache | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.4 | 2.2, 2.4 |
+| PHP | 7.4 (obsolète)  <br>8.0 (recommandé) | 7.3 (obsolète)  <br>7.4 (recommandé) | 7.3  <br>7.4 (recommandé) | 7.2.5 (obsolète)  <br>7.3  <br>7.4 (recommandé) | 7.1.8 (obsolète)  <br>7.2  <br>7.3 (recommandé)  <br>7.4 | 7.1.8 (obsolète)  <br>7.2  <br>7.3 (recommandé)  <br>7.4 | 7.0.8 (obsolète)  <br>7.1  <br>7.2  <br>7.3 (recommandé) | 5.6 (obsolète)  <br>7.0  <br>7.1  <br>7.2 (recommandé) | 5.6  <br>7.0  <br>7.1 | 5.6  <br>7.0 | 5.4  <br>5.5  <br>5.6  <br>7.0 | 5.4  <br>5.5  <br>5.6 | 5.4  <br>5.5  <br>5.6 |
+| MySQL | 5.7 | 5.7 | 5.7 | 5.6 (obsolète)  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 | 5.6  <br>5.7 |
+| MariaDB | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommandé) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommandé) | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommandé) | 10.1 (obsolète)  <br>10.2  <br>10.3  <br>10.4 (recommandé)  <br>10.5 | 10.1  <br>10.2  <br>10.3  <br>10.4 (recommandé) | 10.1  <br>10.2  <br>10.3  <br>10.4 (recommandé) | 10.0 (obsolète)  <br>10.1  <br>10.2  <br>10.3 (recommandé) | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 | 10.0  <br>10.1 |
 | Debian GNU/Linux | 11  | 10, 11 | 10  | 10  | 10  | 10  | 8, 9, 10 | 8, 9 | 8, 9 | 8, 9 | 8, 9 | 8   | 8   |
 | Ubuntu | 18.04, 20.04 | 18.04, 20.04 | 18.04, 20.04 | 18.04, 20.04 | 18.04, 20.04 | 18.04 | 16.04, 18.04 | 16.04, 18.04 | 16.04 | 16.04, 17.04 | 16.04 LTS, 16.10, 17.04 | 14.04¹ | 15.10, 14.04¹ |
 | Red Hat Enterprise Linux (RHEL) | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7¹, 8 | 7.3¹, 7.4¹, 7.5¹, 7.6¹ | 7.3¹, 7.4¹, 7.5¹ | 7.3¹, 7.4¹ | 7.3¹ | 7.3¹ | 7.2¹ |
 | SUSE Linux Enterprise Server (SLES) | 15 SP1, 15 SP 2, SP 3 | 15 SP1, 15 SP 2, SP 3 | 15, 15 SP1 | 15, 15 SP1 | 15, 15 SP1 | 15, 15 SP1 | 12 SP3, 12 SP4, 15, 15 SP1 | 12 SP3, 15 | 12 SP3 | 12 SP2, SP3 | 12, 12 SP2 | 12, 12 SP2 | 12  |
-| XAMPP for Windows² | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2008 R2, 2012 R2, 2016, 2019 | 2008 R2, 2012 R2, 2016, 2019 | 2008 R2, 2012 R2, 2016 | 2008 R2, 2012 R2, 2016 | 2008, 2012 | 2008, 2012 | 2008, 2012 |
-| Legend |     |     |     |     |     |     |     |     |     |     |     |     |     |
-| ¹ With the help of third-party repositories |     |     |     |     |     |     |     |     |     |     |     |     |     |
-| ² Not recommended for productive use |     |     |     |     |     |     |     |     |     |     |     |     |     |
+| XAMPP pour Windows² | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2016, 2019 | 2008 R2, 2012 R2, 2016, 2019 | 2008 R2, 2012 R2, 2016, 2019 | 2008 R2, 2012 R2, 2016 | 2008 R2, 2012 R2, 2016 | 2008, 2012 | 2008, 2012 | 2008, 2012 |
+| Légende |     |     |     |     |     |     |     |     |     |     |     |     |     |
+| ¹ Avec l'aide de dépôts tiers |     |     |     |     |     |     |     |     |     |     |     |     |     |
+| ² Non recommandé pour une utilisation en production |     |     |     |     |     |     |     |     |     |     |     |     |     |
 
-Updating 1.7.4 to 1.8
----------------------
+Mise à jour de 1.7.4 à 1.8
+---------------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+Tout d'abord, nous préparons la mise à jour via l'interface en ligne de commande en ouvrant le dossier i-doit à `/var/www/html/` et en dézippant le package de mise à jour idoit avec
 
     sudo -u www-data unzip idoit-1.8-update.zip
 
-If you are asked, overwrite everything by typing A.
-Now we open the Web Interface Updater and the Update to v1.8 is displayed and selected, do the update.
+Si on vous demande, écrasez tout en tapant A.
+Maintenant, ouvrez l'interface de mise à jour Web et la mise à jour vers la v1.8 est affichée et sélectionnée, effectuez la mise à jour.
 
-[![Updating 1.7.4 to 1.8](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)
+[![Mise à jour de 1.7.4 à 1.8](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)
 
-!!! attention "**Possible error**"
+!!! attention "**Erreur possible**"
 
     PHP Fatal error: Call to undefined method idoit\Component\ContainerFacade::has() in /var/www/html/src/idoit/Model/Summary/SystemSummary.php on line 185
 
-    Solution is to reload the page and go on.
+    La solution est de recharger la page et de continuer.
 
-!!! success "**Check the update Logs**"
+!!! success "**Vérifiez les journaux de mise à jour**"
 
-    Please take the time to Scroll down the logs and check if a error occurred
+    Veuillez prendre le temps de faire défiler les journaux et de vérifier s'il y a eu une erreur
 
-    Login and check your installation.
+    Connectez-vous et vérifiez votre installation.
 
-Updating 1.8 to 1.9
--------------------
+Mise à jour de 1.8 à 1.9
+-------------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+Tout d'abord, nous préparons la mise à jour via l'interface en ligne de commande en ouvrant le dossier i-doit à `/var/www/html/` et en dézippant le package de mise à jour idoit avec
 
+```markdown
     sudo -u www-data unzip idoit-1.9-update.zip
 
-If you are asked, overwrite everything by typing A.
-Now we open the Web Interface Updater and the Update to v1.9 is displayed and selected, do the update.
+Si on vous demande, écrasez tout en tapant A.
+Maintenant, ouvrez l'Interface Web Updater et la mise à jour vers la version 1.9 est affichée et sélectionnée, effectuez la mise à jour.
 
-[![Updating 1.8 to 1.9](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)
+[![Mise à jour de 1.8 à 1.9](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)
 
-!!! success "**Check the update Logs**"
+!!! success "**Vérifiez les journaux de mise à jour**"
 
-    Please take the time to Scroll down the logs and check if a error occurred
+    Veuillez prendre le temps de faire défiler les journaux et de vérifier s'il y a eu une erreur
 
-    Login and check your installation.
+    Connectez-vous et vérifiez votre installation.
 
-Updating 1.9 to 1.10
+Mise à jour de 1.9 à 1.10
 --------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+Tout d'abord, nous préparons la mise à jour via CLI en ouvrant le dossier i-doit à `/var/www/html/` et en dézippant le package de mise à jour idoit avec
 
     sudo -u www-data unzip idoit-1.10-update.zip
 
-If you are asked, overwrite everything by typing A.  
-Now we open the Web Interface Updater and the Update to v1.10 is displayed and selected, do the update.
+Si on vous demande, écrasez tout en tapant A.  
+Maintenant, ouvrez l'Interface Web Updater et la mise à jour vers la version 1.10 est affichée et sélectionnée, effectuez la mise à jour.
 
-[![Updating 1.9 to 1.10](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)
+[![Mise à jour de 1.9 à 1.10](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)
+```
 
-!!! success "**Check the update Logs**"
+!!! success "**Vérifiez les journaux de mise à jour**"
 
-    Please take the time to Scroll down the logs and check if a error occurred
+    Veuillez prendre le temps de faire défiler les journaux et de vérifier s'il y a eu une erreur.
 
-    Login and check your installation.
+    Connectez-vous et vérifiez votre installation.
 
-Updating 1.10 to 1.11
----------------------
+Mise à jour de 1.10 à 1.11
+---------------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+Tout d'abord, nous préparons la mise à jour via CLI en ouvrant le dossier i-doit à `/var/www/html/` et en dézippant le package de mise à jour idoit avec
 
     sudo -u www-data unzip idoit-1.11-update.zip
 
-If you are asked, overwrite everything by typing A.  
-Now we open the Web Interface Updater and the Update to v1.11 is displayed and selected, do the update.  
+Si on vous demande, écrasez tout en tapant A.  
+Maintenant, ouvrez l'interface de mise à jour Web et la mise à jour vers la v1.11 est affichée et sélectionnée, effectuez la mise à jour.  
 
-!!! attention "**Possible error**"
+!!! attention "**Erreur possible**"
 
-    Call of unknown method '_realpath'.
+    Appel d'une méthode inconnue '_realpath'.
 
 Solutions:
 
-*   Reload the page and go on.
-*   or use the following Hotfix if reloading do not work  
+*   Rechargez la page et continuez.
+*   ou utilisez le correctif suivant si le rechargement ne fonctionne pas  
 
-!!! attention "Declaration of consent"
+!!! attention "Déclaration de consentement"
 
-    By downloading a Hotfix you declare that you have read and understood the [above mentioned note](#update-guide-from-i-doit-174-to-119) completely.  
+    En téléchargeant un correctif, vous déclarez avoir lu et compris la [note mentionnée ci-dessus](#update-guide-from-i-doit-174-to-119) entièrement.  
     
-    [Click here for the Hotfix](../assets/downloads/upgrades-and-migrations/ID-5843_b4159eb.zip)
+    [Cliquez ici pour le correctif](../assets/downloads/upgrades-and-migrations/ID-5843_b4159eb.zip)
 
-Continue with the update
+Continuez avec la mise à jour
 
-!!! success "**Check the update Logs**"
+!!! success "**Vérifiez les journaux de mise à jour**"
 
-    Please take the time to Scroll down the logs and check if a error occurred
+    Veuillez prendre le temps de faire défiler les journaux et de vérifier s'il y a eu une erreur
 
-Login and check your installation.
+Connectez-vous et vérifiez votre installation.
 
-Updating 1.11 to 1.12
+Mise à jour de 1.11 à 1.12
 ---------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+Tout d'abord, nous préparons la mise à jour via CLI en ouvrant le dossier i-doit à `/var/www/html/` et en dézippant le package de mise à jour idoit avec
 
     sudo -u www-data unzip idoit-1.12-update.zip
 
-If you are asked, overwrite everything by typing A.  
-Now we open the Web Interface Updater and the Update to v1.12 is displayed and selected, do the update.
+Si on vous demande, écrasez tout en tapant A.  
+Maintenant, ouvrez l'interface de mise à jour Web et la mise à jour vers la v1.12 est affichée et sélectionnée, effectuez la mise à jour.
 
-[![Updating 1.11 to 1.12](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)
+[![Mise à jour de 1.11 à 1.12](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)
 
-!!! success "**Check the update Logs**"
+!!! success "**Vérifiez les journaux de mise à jour**"
 
-    Please take the time to Scroll down the logs and check if a error occurred
+    Veuillez prendre le temps de faire défiler les journaux et de vérifier s'il y a eu une erreur
 
-    Login and check your installation.
+    Connectez-vous et vérifiez votre installation.
 
-Upgrade Debian 8 to 9
+Mise à niveau de Debian 8 à 9
 ---------------------
 
-!!! attention "**Warning**"
+!!! attention "**Attention**"
 
-    Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!  
-    Read the Update Instructions for Debian 8 to 9 [here](https://www.debian.org/releases/stretch)
+    Avant de commencer, assurez-vous d'avoir une sauvegarde complète que vous avez testée en la restaurant sur un serveur propre au cas où quelque chose tournerait mal, car il n'y a pas de retour en arrière !  
+    Lisez les instructions de mise à jour de Debian 8 à 9 [ici](https://www.debian.org/releases/stretch)
 
-??? example "I have a working full Backup"
+??? example "J'ai une sauvegarde complète fonctionnelle"
 
-    Free up some space with  
+    Libérez de l'espace avec  
         ```
         sudo apt-get autoremove
         sudo apt-get clean
         ```
-    Alter the sources.list with your favorite editor  
+    Modifiez le fichier sources.list avec votre éditeur préféré  
         ```
         sudo nano /etc/apt/sources.list
         ```
-    Alter all entries to 'stretch' or delete all entries and insert  
+    Modifiez toutes les entrées en 'stretch' ou supprimez toutes les entrées et insérez  
         ```
         deb http://deb.debian.org/debian stretch main
         deb http://deb.debian.org/debian stretch contrib
         ```
-    Now update the packages again  
+    Maintenant mettez à jour les paquets à nouveau  
         ```
         sudo apt-get update
         ```
-    If you get a message like this, you can ignore it or read [here](https://stackoverflow.com/a/70795162).  
+    Si vous obtenez un message comme celui-ci, vous pouvez l'ignorer ou lire [ici](https://stackoverflow.com/a/70795162).  
         ```
-        There is no public key available for the following key IDs:
+        Il n'y a pas de clé publique disponible pour les identifiants de clé suivants :
         112695A0E562B32A
         ```
-    Now stop mysql and cron  
+    Maintenant arrêtez mysql et cron  
         ```
         sudo systemctl stop mysql cron  
         ```
-    Do the update to Debian 9  
+    Faites la mise à jour vers Debian 9  
         ```
         sudo apt-get upgrade
         sudo apt-get full-upgrade
         ```
-    If you are asked 'Restart services during package upgrades without asking?' select 'Yes' and hit enter  
-    Start the Services we stopped
+    Si on vous demande 'Redémarrer les services pendant les mises à jour de paquets sans demander?' sélectionnez 'Oui' et appuyez sur Entrée  
+    Démarrez les services que nous avons arrêtés
         ```
         sudo systemctl start mysql cron
         ```
-    Errors? [Read here](https://www.debian.org/releases/stretch/)  
+    Des erreurs ? [Lisez ici](https://www.debian.org/releases/stretch/)  
+
+{/*examples*/}
+
     
-    !!! success "**Check the System and i-doit**"
+    !!! success "**Vérifiez le système et i-doit**"
 
-        Check your system. Check i-doit!
+        Vérifiez votre système. Vérifiez i-doit!
 
-    Free up some space again  
+    Libérez de l'espace à nouveau  
         ```
         sudo apt-get autoremove
         sudo apt-get clean
         ```
-    Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)  
-    You are now at Debian 9 with PHP 5.6 and MariaDB 10.
+    Vérifiez votre sources.list, pour plus d'informations consultez [ici](https://wiki.debian.org/SourcesList)  
+    Vous êtes maintenant sur Debian 9 avec PHP 5.6 et MariaDB 10.
 
-Upgrade Debian 9 to 10
+Mettre à niveau Debian 9 vers 10
 ----------------------
 
-!!! attention "**Warning**"
+!!! attention "**Attention**"
 
-    Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!  
-    Read the Update Instructions for Debian 9 to 10 [here](https://www.debian.org/releases/buster/amd64/release-notes/ch-upgrading.en.html)
+    Avant de commencer, assurez-vous d'avoir une sauvegarde complète que vous avez testée en la restaurant sur un serveur propre au cas où quelque chose se passe mal, car il n'y a pas de retour en arrière!  
+    Lisez les instructions de mise à jour de Debian 9 à 10 [ici](https://www.debian.org/releases/buster/amd64/release-notes/ch-upgrading.en.html)
 
-??? example "I have a working full Backup"
+??? example "J'ai une sauvegarde complète fonctionnelle"
 
-    Free up some space with  
+    Libérez de l'espace avec  
         ```
         sudo apt-get autoremove
         sudo apt-get clean
         ```
-    Alter the sources.list with your favorite editor  
+    Modifiez le sources.list avec votre éditeur préféré  
         ```
         sudo nano /etc/apt/sources.list
         ```
-    Alter all entries to 'buster' or delete all entries and insert  
+    Modifiez toutes les entrées en 'buster' ou supprimez toutes les entrées et insérez  
         ```
         deb http://deb.debian.org/debian buster main
         deb http://deb.debian.org/debian buster contrib
         ```
-    Now stop mysql and cron  
+    Arrêtez maintenant mysql et cron  
         ```
         sudo systemctl stop mysql cron
         ```
-    Do the update to Debian 10  
+    Faites la mise à jour vers Debian 10  
         ```
         sudo apt-get update
         sudo apt-get upgrade
         sudo apt-get full-upgrade
         ```
-    Start the Services we stopped  
+    Démarrez les services que nous avons arrêtés  
         ```
         sudo systemctl start mysql cron  
         ```
-    Errors? [Read here](https://www.debian.org/releases/buster/amd64/release-notes/ch-upgrading.en.html#trouble)  
+    Des erreurs? [Lisez ici](https://www.debian.org/releases/buster/amd64/release-notes/ch-upgrading.en.html#trouble)  
 
-    !!! success "**Check the System and i-doit**"
+    !!! success "**Vérifiez le système et i-doit**"
 
-        Check your system. Check i-doit!  
+        Vérifiez votre système. Vérifiez i-doit!
 
-    Free up some space again  
+    Libérez de l'espace à nouveau
         ```
         sudo apt-get autoremove
         sudo apt-get clean
         ```
-    Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)  
-    You are now at Debian 10 with PHP 5.6 and MariaDB 10.3.
+    Vérifiez votre sources.list, pour plus d'informations consultez [ici](https://wiki.debian.org/SourcesList)
+    Vous êtes maintenant sur Debian 10 avec PHP 5.6 et MariaDB 10.3.
 
-Update PHP 5.6 to PHP 7.3
+Mettre à jour PHP 5.6 vers PHP 7.3
 -------------------------
 
-!!! attention "Backup"
+!!! attention "Sauvegarde"
 
-    Create a Backup or Snapshot!
+    Créez une sauvegarde ou un instantané!
 
-Update packages and install all needed packages
+Mettre à jour les packages et installer tous les packages nécessaires
 
     sudo apt update
     sudo apt install apache2 libapache2-mod-php mariadb-client mariadb-server php php-bcmath php-cli php-common php-curl php-gd php-imagick php-json php-ldap php-mbstring php-memcached php-mysql php-pgsql php-soap php-xml php-zip memcached unzip sudo moreutils
 
-Create PHP config file
+Créer le fichier de configuration PHP
 
     sudo nano /etc/php/7.3/mods-available/i-doit.ini
 
-insert
+insérer
 
-    allow_url_fopen = Yes
-    file_uploads = On
-    magic_quotes_gpc = Off
+    allow_url_fopen = Oui
+    file_uploads = Activé
+    magic_quotes_gpc = Désactivé
     max_execution_time = 300
     max_file_uploads = 42
     max_input_time = 60
     max_input_vars = 10000
     memory_limit = 256M
     post_max_size = 128M
-    register_argc_argv = On
-    register_globals = Off
-    short_open_tag = On
+    register_argc_argv = Activé
+    register_globals = Désactivé
+    short_open_tag = Activé
     upload_max_filesize = 128M
-    display_errors = Off
-    display_startup_errors = Off
+    display_errors = Désactivé
+    display_startup_errors = Désactivé
     error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
-    log_errors = On
+    log_errors = Activé
     default_charset = "UTF-8"
     default_socket_timeout = 60
     date.timezone = Europe/Berlin
@@ -314,44 +319,51 @@ insert
     session.cookie_lifetime = 0
     mysqli.default_socket = /var/run/mysqld/mysqld.sock
 
-Activate changes
+Activez les changements
 
-    sudo a2dismod php5
-    sudo a2enmod php7.3
-    sudo phpenmod i-doit
-    sudo phpenmod memcached
-    sudo systemctl restart apache2.service
+```bash
+sudo a2dismod php5
+sudo a2enmod php7.3
+sudo phpenmod i-doit
+sudo phpenmod memcached
+sudo systemctl restart apache2.service
+```
 
-i-doit should now display via Administration > System tools > System overview the new PHP Version 7.3.31-1~deb10u1
+i-doit devrait maintenant afficher via Administration > Outils système > Vue d'ensemble du système la nouvelle version PHP 7.3.31-1~deb10u1
 
-Create MariaDB config file if not exist
+Créez le fichier de configuration MariaDB s'il n'existe pas
 ---------------------------------------
 
-Create or update a MariaDB config file
+Créez ou mettez à jour un fichier de configuration MariaDB
 
-    sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
+```bash
+sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
+```
 
-insert or update your MariaDB configuration
+insérez ou mettez à jour votre configuration MariaDB
 
-    [mysqld]
-    
-    # This is the number 1 setting to look at for any performance optimization
-    # It is where the data and indexes are cached: having it as large as possible will
-    # ensure MySQL uses memory and not disks for most read operations.
-    #
-    # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
-    innodb_buffer_pool_size = 1G
-    
-    # Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
-    innodb_buffer_pool_instances = 1
-    
-    # Redo log file size, the higher the better.
-    # MySQL/MariaDB writes two of these log files in a default installation.
-    innodb_log_file_size = 512M
-    
+```conf
+[mysqld]
+
+# Ceci est le premier paramètre à examiner pour toute optimisation des performances
+# C'est là que les données et les index sont mis en cache : le rendre aussi grand que possible
+# garantira que MySQL utilise la mémoire et non les disques pour la plupart des opérations de lecture.
+#
+# Les valeurs typiques sont 1G (1-2 Go de RAM), 5-6G (8 Go de RAM), 20-25G (32 Go de RAM), 100-120G (128 Go de RAM).
+innodb_buffer_pool_size = 1G
+
+# Utilisez plusieurs instances si vous avez innodb_buffer_pool_size > 10G, 1 pour chaque tranche de 4 Go
+innodb_buffer_pool_instances = 1
+
+# Taille du fichier journal de refaire, plus elle est grande, mieux c'est.
+# MySQL/MariaDB écrit deux de ces fichiers journaux dans une installation par défaut.
+innodb_log_file_size = 512M
+```
+
+```plaintext
     innodb_sort_buffer_size = 64M
-    sort_buffer_size = 262144 # default
-    join_buffer_size = 262144 # default
+    sort_buffer_size = 262144 # par défaut
+    join_buffer_size = 262144 # par défaut
     
     max_allowed_packet = 128M
     max_heap_table_size = 32M
@@ -364,279 +376,297 @@ insert or update your MariaDB configuration
     max_connections = 200
     innodb_file_per_table = 1
     
-    # Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
+    # Désactivez ceci (= 0) si vous avez seulement un ou deux cœurs de CPU, changez-le à 4 pour un quad core.
     innodb_thread_concurrency = 0
     
-    # Disable this (= 0) if you have slow hard disks
+    # Désactivez ceci (= 0) si vous avez des disques durs lents
     innodb_flush_log_at_trx_commit = 1
     innodb_flush_method = O_DIRECT
     
     innodb_lru_scan_depth = 2048
     table_definition_cache = 1024
     table_open_cache = 2048
-    #Only if your have MySQL 5.6 or higher, do not use with MariaDB!
-    #table_open_cache_instances = 4
+    # Uniquement si vous avez MySQL 5.6 ou supérieur, ne pas utiliser avec MariaDB!
+    # table_open_cache_instances = 4
     
     innodb_stats_on_metadata = 0
     
     sql-mode = ""
 
-Restart MariaDB afterwards
+Redémarrez MariaDB par la suite
 
     sudo systemctl start mysql.service
 
-Updating 1.12 to 1.13
----------------------
+Mise à jour de 1.12 à 1.13
+---------------------------
+```
 
-First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+Tout d'abord, nous préparons la mise à jour via CLI en ouvrant le dossier i-doit à `/var/www/html/` et en dézippant le package de mise à jour idoit avec
 
     sudo -u www-data unzip idoit-1.13-update.zip
 
-If you are asked, overwrite everything by typingA.
+Si on vous demande, écrasez tout en tapant A.
 
-Now we open the Web Interface Updater and the Update to v1.13 is displayed and selected, do the update.
+Maintenant, ouvrez l'interface de mise à jour Web et la mise à jour vers la v1.13 est affichée et sélectionnée, effectuez la mise à jour.
 
-[![Updating 1.12 to 1.13](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/5-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/5-u18-119.png)
+[![Mise à jour de 1.12 à 1.13](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/5-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/5-u18-119.png)
 
-Probably you will get this error:
+Vous obtiendrez probablement cette erreur :
 
-!!! attention "**Possible error**"
+!!! attention "**Erreur possible**"
 
-    Fatal error: Uncaught Error: Class 'idoit\\Module\\License\\LicenseServiceFactory' not found in /var/www/html/updates/versions/v1.13/migration/license\_migration.php:50 Stack trace: #0 /var/www/html/updates/classes/isys\_update\_migration.class.php(98): include() #1 /var/www/html/updates/update.inc.php(911): isys\_update\_migration->migrate('/var/www/html/u...') #2 /var/www/html/src/hypergate.inc.php(152): include\_once('/var/www/html/u...') #3 /var/www/html/index.php(231): include\_once('/var/www/html/s...') #4 {main} thrown in /var/www/html/updates/versions/v1.13/migration/license\_migration.php on line 50
+    Erreur fatale : Uncaught Error: Class 'idoit\\Module\\License\\LicenseServiceFactory' non trouvée dans /var/www/html/updates/versions/v1.13/migration/license\_migration.php:50 Trace de la pile : #0 /var/www/html/updates/classes/isys\_update\_migration.class.php(98) : include() #1 /var/www/html/updates/update.inc.php(911) : isys\_update\_migration->migrate('/var/www/html/u...') #2 /var/www/html/src/hypergate.inc.php(152) : include\_once('/var/www/html/u...') #3 /var/www/html/index.php(231) : include\_once('/var/www/html/s...') #4 {main} thrown in /var/www/html/updates/versions/v1.13/migration/license\_migration.php on line 50
 
 Then you need to restart the update again.  
 If you now get a HTTP 500, do the update again.
 
-!!! success "**Check the System and i-doit**"
+!!! success "**Vérifiez le système et i-doit**"
 
-    Check your system. Check i-doit!
+    Vérifiez votre système. Vérifiez i-doit!
 
-Updating 1.13 to 1.14
----------------------
+Mise à jour de 1.13 à 1.14
+---------------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+Tout d'abord, nous préparons la mise à jour via CLI en ouvrant le dossier i-doit à `/var/www/html/` et en dézippant le package de mise à jour idoit avec
 
     sudo -u www-data unzip idoit-1.14-update.zip
 
-If you are asked, overwrite everything by typingA.
+Si on vous demande, écrasez tout en tapantA.
 
-Now we open the Web Interface Updater and the Update to v1.14 is displayed and selected, do the update.
+Maintenant, ouvrez l'interface de mise à jour Web et la mise à jour vers la v1.14 est affichée et sélectionnée, effectuez la mise à jour.
 
-[![Updating 1.13 to 1.14](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/6-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/6-u18-119.png)
+[![Mise à jour de 1.13 à 1.14](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/6-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/6-u18-119.png)
 
-!!! success "**Check the update Logs**"
+!!! success "**Vérifiez les journaux de mise à jour**"
 
-    Please take the time to Scroll down the logs and check if a error occurred
+    Prenez le temps de faire défiler les journaux et vérifiez s'il y a eu une erreur
 
-If you see this error:
+Si vous voyez cette erreur:
 
-!!! attention "**Possible error**"
+!!! attention "**Erreur possible**"
 
-    Database error : Query error: 'ALTER TABLE isys\_cats\_person\_list ADD isys\_cats\_person\_list\_\_disabled\_login TINYINT(1) UNSIGNED DEFAULT 0':Row size too large. The maximum row size for the used table type, not counting BLOBs, is 8126. This includes storage overhead, check the manual. You have to change some columns to TEXT or BLOBs
+    Erreur de base de données : Erreur de requête : 'ALTER TABLE isys\_cats\_person\_list ADD isys\_cats\_person\_list\_\_disabled\_login TINYINT(1) UNSIGNED DEFAULT 0': La taille de la ligne est trop grande. La taille maximale de ligne pour le type de table utilisé, sans compter les BLOB, est de 8126. Cela inclut les frais généraux de stockage, consultez le manuel. Vous devez changer certaines colonnes en TEXT ou BLOBs
 
-The Solution is documented [here](../system-administration/troubleshooting/row-size-too-large.md)
+La solution est documentée [ici](../system-administration/troubleshooting/row-size-too-large.md)
 
-!!! success "**Check the System and i-doit**"
+!!! success "**Vérifiez le système et i-doit**"
 
-    Check your system. Check i-doit!
+    Vérifiez votre système. Vérifiez i-doit!
 
-Updating 1.14 to 1.15
+Mise à jour de 1.14 à 1.15
 ---------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+Tout d'abord, nous préparons la mise à jour via CLI en ouvrant le dossier i-doit à `/var/www/html/` et en dézippant le package de mise à jour idoit avec
 
     sudo -u www-data unzip idoit-1.15-update.zip
 
-If you are asked, overwrite everything by typingA.
+Si on vous demande, écrasez tout en tapant A.
 
-Now we open the Web Interface Updater and the Update to v1.15 is displayed and selected, do the update.
+Maintenant, ouvrez l'interface de mise à jour Web et la mise à jour vers v1.15 est affichée et sélectionnée, effectuez la mise à jour.
 
-[![Updating 1.14 to 1.15](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)
+[![Mise à jour de 1.14 à 1.15](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)
 
-!!! success "**Check the System and i-doit**"
+!!! success "**Vérifiez le système et i-doit**"
 
-    Check your system. Check i-doit!
+    Vérifiez votre système. Vérifiez i-doit!
 
-Updating 1.15 to 1.16
+Mise à jour de 1.15 à 1.16
 ---------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+Tout d'abord, nous préparons la mise à jour via CLI en ouvrant le dossier i-doit à `/var/www/html/` et en dézippant le package de mise à jour idoit avec
 
     sudo -u www-data unzip idoit-1.16-update.zip
 
-If you are asked, overwrite everything by typingA.
 
-Now we open the Web Interface Updater and the Update to v1.16 is displayed and selected, do the update.
+Si on vous demande, écrasez tout en tapantA.
 
-[![Updating 1.15 to 1.16](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)
+Maintenant, ouvrez l'Interface de Mise à Jour Web et la mise à jour vers la version 1.16 est affichée et sélectionnée, effectuez la mise à jour.
 
-!!! success "**Check the System and i-doit**"
+[![Mise à jour de 1.15 à 1.16](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)
 
-    Check your system. Check i-doit!
+!!! success "**Vérifiez le Système et i-doit**"
 
-Updating 1.16 to 1.17
----------------------
+    Vérifiez votre système. Vérifiez i-doit!
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/and unzip the idoit update package with
+Mise à jour de 1.16 à 1.17
+---------------------------
+
+Tout d'abord, nous préparons la mise à jour via CLI en ouvrant le dossier i-doit à /var/www/html/et en décompressant le package de mise à jour idoit avec
 
     sudo -u www-data unzip idoit-1.17-update.zip
 
-If you are asked, overwrite everything by typingA.
+Si on vous demande, écrasez tout en tapantA.
 
-Now we open the Web Interface Updater and the Update to v1.17 is displayed and selected, do the update.
+Maintenant, ouvrez l'Interface de Mise à Jour Web et la mise à jour vers la version 1.17 est affichée et sélectionnée, effectuez la mise à jour.
 
-[![Updating 1.16 to 1.17](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)
+[![Mise à jour de 1.16 à 1.17](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)
 
-!!! success "**Check the System and i-doit**"
+!!! success "**Vérifiez le Système et i-doit**"
 
-    Check your system. Check i-doit!
+```markdown
+    Vérifiez votre système. Vérifiez i-doit!
 
-Updating 1.17 to 1.18
----------------------
+Mise à jour de 1.17 à 1.18
+--------------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
+Tout d'abord, nous préparons la mise à jour via CLI en ouvrant le dossier i-doit à `/var/www/html/` et en dézippant le package de mise à jour idoit avec
 
     sudo -u www-data unzip idoit-1.18-update.zip
 
-If you are asked, overwrite everything by typingA.
+Si on vous demande, écrasez tout en tapantA.
 
-Now we open the Web Interface Updater and the Update to v1.18 is displayed and selected, do the update.
+Maintenant, ouvrez l'interface de mise à jour Web et la mise à jour vers la v1.18 est affichée et sélectionnée, effectuez la mise à jour.
 
-[![Updating 1.17 to 1.18](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)
+[![Mise à jour de 1.17 à 1.18](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)
 
-!!! success "**Check the System and i-doit**"
+!!! success "**Vérifiez le système et i-doit**"
 
-    Check your system. Check i-doit!
+    Vérifiez votre système. Vérifiez i-doit!
 
-Upgrade Debian 10 to 11
------------------------
+Mise à niveau de Debian 10 à 11
+-------------------------------
 
-!!! attention "**Warning**"
+!!! attention "**Attention**"
 
-    Before you start, please ensure that you have a full Backup which you have tested restoring on a clean server in case something goes wrong, because there is no going back!  
-    Read the Update Instructions for Debian 10 to 11 [here](https://www.debian.org/releases/bullseye/amd64/release-notes/ch-upgrading.en.html)
+    Avant de commencer, assurez-vous d'avoir une sauvegarde complète que vous avez testée en la restaurant sur un serveur propre au cas où quelque chose se passe mal, car il n'y a pas de retour en arrière!
+    Lisez les instructions de mise à jour de Debian 10 à 11 [ici](https://www.debian.org/releases/bullseye/amd64/release-notes/ch-upgrading.en.html)
+```
 
-??? example "I have a working full Backup"
+??? example "J'ai une sauvegarde complète fonctionnelle"
 
-    Free up some space with  
+    Libérez de l'espace avec  
         ```
         sudo apt-get autoremove
         sudo apt-get clean
         ```
-    Alter the sources.list with your favorite editor  
+    Modifiez le fichier sources.list avec votre éditeur préféré  
         ```
         sudo nano /etc/apt/sources.list
         ```
-    Alter all entries to 'buster' or delete all entries and insert  
+    Modifiez toutes les entrées en 'buster' ou supprimez toutes les entrées et insérez  
         ```
     deb http://deb.debian.org/debian bullseye main
     deb http://deb.debian.org/debian bullseye contrib
         ```
-    Now stop mysql and cron  
+    Arrêtez maintenant mysql et cron  
         ```
         sudo systemctl stop mysql cron
         ```
-    Do the update to Debian 11  
+    Effectuez la mise à jour vers Debian 11  
         ```
         sudo apt-get update
         sudo apt-get upgrade
         sudo apt-get full-upgrade
         ```
-    Start the Services we stopped  
+    Démarrez les services que nous avons arrêtés  
         ```
         sudo systemctl start mysql cron
         ```
-    Errors? [Read here](https://www.debian.org/releases/bullseye/amd64/release-notes/ch-upgrading.en.html#trouble)  
+    Des erreurs ? [Lisez ici](https://www.debian.org/releases/bullseye/amd64/release-notes/ch-upgrading.en.html#trouble)  
 
-    !!! success "**Check the System and i-doit**"
+    !!! success "**Vérifiez le système et i-doit**"
 
-        Check your system. Check i-doit!
+        Vérifiez votre système. Vérifiez i-doit!
 
-    Free up some space again  
-        ```
-        sudo apt-get autoremove
-        sudo apt-get clean
-        ```
-    Check your sources.list, for more Info see [here](https://wiki.debian.org/SourcesList)  
+Libérez de l'espace à nouveau
 
-    You are now at Debian 11 with PHP 7.4.30 and MariaDB 10.5.
+```
+sudo apt-get autoremove
+sudo apt-get clean
+```
 
-Configure PHP 7.4
+Vérifiez votre sources.list, pour plus d'informations consultez [ici](https://wiki.debian.org/SourcesList)
+
+Vous êtes maintenant sur Debian 11 avec PHP 7.4.30 et MariaDB 10.5.
+
+Configurer PHP 7.4
 -----------------
 
-Create PHP config file
+Créez le fichier de configuration PHP
 
-    sudo nano /etc/php/7.4/mods-available/i-doit.ini
+```
+sudo nano /etc/php/7.4/mods-available/i-doit.ini
+```
 
-insert
+insérez
 
-    allow_url_fopen = Yes
-    file_uploads = On
-    magic_quotes_gpc = Off
-    max_execution_time = 300
-    max_file_uploads = 42
-    max_input_time = 60
-    max_input_vars = 10000
-    memory_limit = 256M
-    post_max_size = 128M
-    register_argc_argv = On
-    register_globals = Off
-    short_open_tag = On
-    upload_max_filesize = 128M
-    display_errors = Off
-    display_startup_errors = Off
-    error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
-    log_errors = On
-    default_charset = "UTF-8"
-    default_socket_timeout = 60
-    date.timezone = Europe/Berlin
-    session.gc_maxlifetime = 604800
-    session.cookie_lifetime = 0
-    mysqli.default_socket = /var/run/mysqld/mysqld.sock
+```
+allow_url_fopen = Oui
+file_uploads = Activé
+magic_quotes_gpc = Désactivé
+max_execution_time = 300
+max_file_uploads = 42
+max_input_time = 60
+max_input_vars = 10000
+memory_limit = 256M
+post_max_size = 128M
+register_argc_argv = Activé
+register_globals = Désactivé
+short_open_tag = Activé
+upload_max_filesize = 128M
+display_errors = Désactivé
+display_startup_errors = Désactivé
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+log_errors = Activé
+default_charset = "UTF-8"
+default_socket_timeout = 60
+date.timezone = Europe/Berlin
+session.gc_maxlifetime = 604800
+session.cookie_lifetime = 0
+mysqli.default_socket = /var/run/mysqld/mysqld.sock
+```
 
-Activate changes
+Activez les changements
 
-    sudo a2dismod php7.3
-    sudo a2enmod php7.4
-    sudo phpenmod i-doit
-    sudo phpenmod memcached
-    sudo systemctl restart apache2.service
+```bash
+sudo a2dismod php7.3
+sudo a2enmod php7.4
+sudo phpenmod i-doit
+sudo phpenmod memcached
+sudo systemctl restart apache2.service
+```
 
-!!! attention "**Possible error**"
+!!! attention "**Erreur possible**"
 
-    (38)Function not implemented: AH00141: Could not initialize random number generator
+```bash
+(38) Fonction non implémentée: AH00141: Impossible d'initialiser le générateur de nombres aléatoires
+```
 
-If the apache2 is not restarting and you get the above error, restart the server.
+Si apache2 ne redémarre pas et que vous obtenez l'erreur ci-dessus, redémarrez le serveur.
 
-i-doit should now display via Administration > System tools > System overview the new PHP Version 7.4.30
+i-doit devrait maintenant afficher via Administration > Outils système > Vue d'ensemble du système la nouvelle version PHP 7.4.30
 
-Updating 1.18 to 1.19
----------------------
+Mise à jour de 1.18 à 1.19
+---------------------------
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/and unzip the idoit update package with
+Tout d'abord, nous préparons la mise à jour via CLI en ouvrant le dossier i-doit à /var/www/html/et en dézippant le package de mise à jour idoit avec
 
-    sudo -u www-data unzip idoit-1.19-update.zip
+```bash
+sudo -u www-data unzip idoit-1.19-update.zip
+```
 
-If you are asked, overwrite everything by typingA.
+Si on vous demande, écrasez tout en tapantA.
 
-If you try the update without PHP 7.3 you will see this message:
+Si vous essayez la mise à jour sans PHP 7.3, vous verrez ce message:
 
-!!! attention "**Possible error**"
+!!! attention "**Erreur possible**"
 
-    You have PHP 7.3.31. For updating i-doit to the next version you need at least PHP 7.4!
+```bash
+Vous avez PHP 7.3.31. Pour mettre à jour i-doit vers la prochaine version, vous avez besoin d'au moins PHP 7.4!
+```
 
-Now we open the Web Interface Updater and the Update to v1.19 is displayed and selected, do the update.
+Maintenant, ouvrez l'Interface de mise à jour Web et la mise à jour vers la v1.19 est affichée et sélectionnée, effectuez la mise à jour.
 
-[![Updating 1.18 to 1.19](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/11-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/11-u18-119.png)
+[![Mise à jour de 1.18 à 1.19](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/11-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/11-u18-119.png)
 
-!!! success "**Check the System and i-doit**"
+!!! success "**Vérifiez le système et i-doit**"
 
-Check your system. Check i-doit!
+Vérifiez votre système. Vérifiez i-doit !
 
 Sources
 -------
 
-*   MariaDB upgrade Information [https://mariadb.com/kb/en/upgrading/](https://mariadb.com/kb/en/upgrading/)
-*   Debian 9 upgrade [https://www.debian.org/releases/stretch/](https://www.debian.org/releases/stretch/)
-*   Debian 10 upgrade [https://www.debian.org/releases/buster/](https://www.debian.org/releases/buster/)
-*   Debian 11 upgrade [https://www.debian.org/releases/bullseye/](https://www.debian.org/releases/bullseye/)
+*   Informations de mise à niveau de MariaDB [https://mariadb.com/kb/fr/mise-a-niveau/](https://mariadb.com/kb/fr/mise-a-niveau/)
+*   Mise à niveau de Debian 9 [https://www.debian.org/releases/stretch/](https://www.debian.org/releases/stretch/)
+*   Mise à niveau de Debian 10 [https://www.debian.org/releases/buster/](https://www.debian.org/releases/buster/)
+*   Mise à niveau de Debian 11 [https://www.debian.org/releases/bullseye/](https://www.debian.org/releases/bullseye/)

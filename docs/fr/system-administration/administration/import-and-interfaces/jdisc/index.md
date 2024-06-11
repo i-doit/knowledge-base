@@ -1,4 +1,4 @@
 # JDisc
 
--   [JDisc Configuration](./jdisc-configuration.md)
--   [JDisk Profiles](./jdisc-profiles.md)
+-   [Configuration de JDisc](./jdisc-configuration.md)
+-   [Profils de JDisk](./jdisc-profiles.md)

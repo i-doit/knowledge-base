@@ -1,68 +1,70 @@
-# Changelog 29
+# Journal des modifications 29 {/examples/}
 
-[Task][Service]                    Add link to customer satisfaction survey in i-doit pro<br>
-[Task][Code (Internal)]            Integrate enhanced color picker component<br>
-[Task][Code (Internal)]            Clean up color usages<br>
-[Task][Permission system]          Improve authorization performance for locations<br>
-[Task][Integrated customer portal] Integrate i-doit and Add-on specific download packages into i-doit<br>
-[Task][i-doit Login]               Disable 'autocomplete' for password field on login page<br>
-[Task][CMDB]                       Improve UI element for rack statistics<br>
-[Improvement][Code (Internal)]     PHP 8.2 Compatibility<br>
-[Improvement][Code (Internal)]     Improved login for SSO<br>
-[Improvement][JDisc]               New console.php command: Configure JDisc common settings<br>
-[Improvement][JDisc]               Add matching profile selection for each JDisc type mapping<br>
-[Improvement][JDisc]               Black/Whitelist for Layer 3 networks and host addresses<br>
-[Improvement][Eval Journey]        Add i-doit pro EVAL survey link<br>
-[Bug][CMDB]                        Recycle locations via locally assigned objects causes error and removes data<br>
-[Bug][CMDB]                        Custom counter counts 2 instead of 1<br>
-[Bug][Security]                    XSS Vulnerability in the global search input<br>
-[Bug][Logbook]                     Change via API is not written to logbook<br>
-[Bug][Logbook]                     An entry in Category X could not be changed<br>
-[Bug][Code (Internal)]             It is possible to create location loops<br>
-[Bug][Code (Internal)]             500 Error when archiving an object<br>
-[Bug][Code (Internal)]             Custom Counter are not replaced correctly<br>
-[Bug][Code (Internal)]             More space for conditions and elements in report manager<br>
-[Bug][Code (Internal)]             Placeholder is added to all placeholder fields on overview page<br>
-[Bug][Code (Internal)]             It is possible to create multiple persons with the same username<br>
-[Bug][Code (Internal)]             Login uses unfinished person with username<br>
-[Bug][Code (Internal)]             Recurring JS error when "escape" remains pressed<br>
-[Bug][JDisc]                       Allow user to import jdisc profiles<br>
-[Bug][JDisc]                       SQL error when importing JDisc Profile with custom object matching profile<br>
-[Bug][API]                         Saving dialog+ multi values via ID in a custom category does create a wrong logbook entry<br>
-[Bug][API]                         cmdb.condition does not work with custom categories<br>
-[Bug][API]                         Technical configuration of custom categories displays wrong examples<br>
-[Bug][Import]                      When a object is being updated via import, the Date of change is updated even though no change has been made<br>
-[Bug][Admincenter]                 Installing a addon for the wrong version of i-doit still unpacks the addon and updates files<br>
-[Bug][Notifications]               Notifications based on reports will not get send even though the report has results<br>
-[Bug][Notifications]               Notification Report: ID of Assigned license is displayed instead of Title<br>
-[Bug][CSV Import]                  CSV import creates object with wrong object type<br>
-[Bug][CSV Import]                  CSV-Import considers archived and deleted objects<br>
-[Bug][CSV Import]                  CSV importing object with "new line" causes categories of object to be hidden and error message<br>
-[Bug][Lists]                       Error when using "broad search" in tables (in PHP 8+)<br>
-[Bug][Lists]                       Custom attributes are not shown as added after editing the list view again<br>
-[Bug][Permission system]           Missing view right for reading dialog-fields via api<br>
-[Bug][Permission system]           Rights from archived Person groups are applied<br>
-[Bug][Permission system]           Despite parameter "All" is selected, the detail selection is not disabled<br>
-[Bug][Permission system]           Dialog admin edit button is not deactivated with only view right<br>
-[Bug][XML]                         XML Import not possible with assigned application<br>
-[Bug][Validation]                  Error uploading a file for a object with validation<br>
-[Bug][Validation]                  Do not validate objects while creating them<br>
-[Bug][Report-Manager]              Report viewing DBMS version always shows the first entry<br>
-[Bug][Report-Manager]              Report Manager reduces rows in result when adding additional columns<br>
-[Bug][Report-Manager]              Missing operators for date fields<br>
-[Bug][Report-Manager]              Assigned objects is missing in report manager selection<br>
-[Bug][Categories]                  Saving ip address with space at the end<br>
-[Bug][Categories]                  Existing models not displayed when selecting manufacturer<br>
-[Bug][Categories]                  Default gateway for the Layer-3 Net cannot be set in the host address category<br>
-[Bug][Categories]                  CPU manufacturer can not be used in a form<br>
-[Bug][Categories]                  Wrong sorting of subcategories under "Datenbank Hierarchie"<br>
-[Bug][Categories]                  Wrong sorting of subcategories under "Cluster"<br>
-[Bug][CMDB-Explorer]               i-doit should answer with a proper json response when checking cmdb explorer with limited user<br>
-[Bug][Documents]                   Document does not exist error message when opening a document<br>
-[Bug][Templates]                   Counter does not work for custom categories in templates<br>
-[Bug][Monitoring]                  livestatus with wrong address causes long loading times for categories<br>
-[Bug][Logging]                     ldap log does not log archived or deleted persons<br>
-[Bug][Interface management]        TypeError message in category "All Tickets"<br>
-[Bug][System settings]             The object browser configuration for Remote Management Controller and Managed devices refers to the wrong category<br>
-[Bug][Cabling import]              Do not rename cabling input/outputs after import<br>
-[Bug][Object type configuration]   Sorting places category "Zugewiesener Arbeitsplatz" before "Zugewiesene SIM-Karten"
+[Tâche][Service]                    Ajouter un lien vers l'enquête de satisfaction client dans i-doit pro<br>
+[Tâche][Code (Interne)]            Intégrer un composant de sélection de couleurs amélioré<br>
+[Tâche][Code (Interne)]            Nettoyer les utilisations de couleurs<br>
+[Tâche][Système de permissions]    Améliorer les performances d'autorisation pour les emplacements<br>
+[Tâche][Portail client intégré]    Intégrer i-doit et les packages de téléchargement spécifiques à l'Add-on dans i-doit<br>
+[Tâche][Connexion i-doit]          Désactiver l'autocomplétion pour le champ de mot de passe sur la page de connexion<br>
+[Tâche][CMDB]                      Améliorer l'élément d'interface utilisateur pour les statistiques de rack<br>
+[Amélioration][Code (Interne)]     Compatibilité PHP 8.2<br>
+[Amélioration][Code (Interne)]     Connexion améliorée pour SSO<br>
+[Amélioration][JDisc]              Nouvelle commande console.php : Configurer les paramètres communs de JDisc<br>
+[Amélioration][JDisc]              Ajouter la sélection de profil correspondant pour chaque mappage de type JDisc<br>
+[Amélioration][JDisc]              Liste noire/Liste blanche pour les réseaux de couche 3 et les adresses d'hôtes<br>
+[Amélioration][Parcours d'évaluation] Ajouter le lien d'enquête i-doit pro EVAL<br>
+[Bogue][CMDB]                      Recycler les emplacements via des objets assignés localement provoque une erreur et supprime des données<br>
+[Bogue][CMDB]                      Le compteur personnalisé compte 2 au lieu de 1<br>
+[Bogue][Sécurité]                  Vulnérabilité XSS dans la recherche globale<br>
+[Bogue][Journal]                   Le changement via l'API n'est pas enregistré dans le journal<br>
+[Bogue][Journal]                   Une entrée dans la catégorie X n'a pas pu être modifiée<br>
+[Bogue][Code (Interne)]            Il est possible de créer des boucles d'emplacement<br>
+[Bogue][Code (Interne)]            Erreur 500 lors de l'archivage d'un objet<br>
+[Bogue][Code (Interne)]            Les compteurs personnalisés ne sont pas remplacés correctement<br>
+[Bogue][Code (Interne)]            Plus d'espace pour les conditions et les éléments dans le gestionnaire de rapports<br>
+[Bogue][Code (Interne)]            Un espace réservé est ajouté à tous les champs de l'aperçu<br>
+[Bogue][Code (Interne)]            Il est possible de créer plusieurs personnes avec le même nom d'utilisateur<br>
+[Bogue][Code (Interne)]            La connexion utilise une personne inachevée avec un nom d'utilisateur<br>
+[Bogue][Code (Interne)]            Erreur JS récurrente lorsque la touche "échappement" reste enfoncée<br>
+[Bogue][JDisc]                    Autoriser l'utilisateur à importer des profils JDisc<br>
+[Bogue][JDisc]                    Erreur SQL lors de l'importation d'un profil JDisc avec un profil de correspondance d'objet personnalisé<br>
+[Bogue][API]                      Enregistrer des valeurs multiples via ID dans une catégorie personnalisée crée une entrée de journal incorrecte<br>
+[Bogue][API]                      cmdb.condition ne fonctionne pas avec les catégories personnalisées<br>
+[Bogue][API]                      La configuration technique des catégories personnalisées affiche des exemples incorrects<br>
+[Bogue][Import]                   Lorsqu'un objet est mis à jour via l'importation, la date de modification est mise à jour même si aucun changement n'a été apporté<br>
+[Bogue][Centre d'administration]    L'installation d'un addon pour la mauvaise version d'i-doit décompresse toujours l'addon et met à jour les fichiers<br>
+[Bogue][Notifications]            Les notifications basées sur les rapports ne sont pas envoyées même si le rapport a des résultats<br>
+[Bogue][Notifications]            Rapport de notification : L'ID de la licence attribuée est affiché au lieu du titre<br>
+[Bogue][Import CSV]               L'importation CSV crée un objet avec un mauvais type d'objet<br>
+[Bogue][Import CSV]               L'importation CSV prend en compte les objets archivés et supprimés<br>
+[Bogue][Import CSV]               L'importation CSV d'un objet avec "nouvelle ligne" provoque la disparition des catégories de l'objet et un message d'erreur<br>
+[Bogue][Listes]                   Erreur lors de l'utilisation de la "recherche large" dans les tableaux (en PHP 8+)<br>
+[Bogue][Listes]                   Les attributs personnalisés ne sont pas affichés comme ajoutés après avoir de nouveau édité la vue de liste<br>
+[Bogue][Système de permissions]    Droit de vue manquant pour lire les champs de dialogue via l'API<br>
+[Bogue][Système de permissions]    Les droits des groupes de personnes archivées sont appliqués<br>
+[Bogue][Système de permissions]    Malgré le paramètre "Tout" est sélectionné, la sélection détaillée n'est pas désactivée<br>
+[Bogue][Système de permissions]    Le bouton d'édition d'administration de dialogue n'est pas désactivé avec seulement le droit de vue<br>
+[Bogue][XML]                      Importation XML non possible avec l'application assignée<br>
+[Bogue][Validation]               Erreur lors du téléchargement d'un fichier pour un objet avec validation<br>
+[Bogue][Validation]               Ne pas valider les objets lors de leur création<br>
+[Bogue][Gestionnaire de rapports]  La visualisation du gestionnaire de rapports de la version DBMS montre toujours la première entrée<br>
+[Bogue][Gestionnaire de rapports]  Le gestionnaire de rapports réduit les lignes du résultat lors de l'ajout de colonnes supplémentaires<br>
+[Bogue][Gestionnaire de rapports]  Opérateurs manquants pour les champs de date<br>
+[Bogue][Gestionnaire de rapports]  Les objets assignés manquent dans la sélection du gestionnaire de rapports<br>
+[Bogue][Catégories]               Enregistrement de l'adresse IP avec un espace à la fin<br>
+[Bogue][Catégories]               Les modèles existants ne sont pas affichés lors de la sélection du fabricant<br>
+[Bogue][Catégories]               La passerelle par défaut pour le réseau de couche 3 ne peut pas être définie dans la catégorie d'adresse d'hôte<br>
+[Bogue][Catégories]               Le fabricant de CPU ne peut pas être utilisé dans un formulaire<br>
+[Bogue][Catégories]               Tri incorrect des sous-catégories sous "Hiérarchie de base de données"<br>
+[Bogue][Catégories]               Tri incorrect des sous-catégories sous "Cluster"<br>
+[Bogue][Explorateur CMDB]          i-doit devrait répondre avec une réponse JSON appropriée lors de la vérification de l'explorateur CMDB avec un utilisateur limité<br>
+[Bogue][Documents]                Message d'erreur "Le document n'existe pas" lors de l'ouverture d'un document<br>
+[Bogue][Modèles]                  Le compteur ne fonctionne pas pour les catégories personnalisées dans les modèles<br>
+[Bogue][Surveillance]             Livestatus avec une mauvaise adresse provoque de longs temps de chargement pour les catégories<br>
+[Bogue][Journalisation]           Le journal LDAP ne journalise pas les personnes archivées ou supprimées<br>
+[Bogue][Gestion de l'interface]    Message TypeError dans la catégorie "Tous les tickets"<br>
+[Bogue][Paramètres système]       La configuration du navigateur d'objets pour le contrôleur de gestion à distance et les appareils gérés fait référence à la mauvaise catégorie<br>
+[Bogue][Importation de câblage]    Ne pas renommer les entrées/sorties de câblage après l'importation<br>
+[Bogue][Configuration du type d'objet] Classer la catégorie "Lieu de travail attribué" avant "Cartes SIM attribuées" {/examples/}
+
+I am ready to start the translation. Please provide the Markdown content you would like me to translate into French.

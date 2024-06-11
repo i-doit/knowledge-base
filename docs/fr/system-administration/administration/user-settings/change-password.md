@@ -1,3 +1,1 @@
-# Change Password
-
-Logged-in users can change their credentials under Login Credentials.
+# Changer le mot de passe {/ * exemples * /}

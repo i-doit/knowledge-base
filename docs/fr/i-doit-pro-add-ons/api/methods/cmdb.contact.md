@@ -1,43 +1,43 @@
 ---
-title: Namespace cmdb.contact
+title: Espace de noms cmdb.contact
 description: cmdb.contact
 icon: material/api
 #status: updated
-lang: en
+lang: fr
 ---
 
-# Namespace cmdb.contact
+# Espace de noms cmdb.contact {/examples}
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
-## cmdb.contact.read
+## cmdb.contact.read {/examples}
 
-Retrieves all assigned objects by contact.
+Récupère tous les objets attribués par contact.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key        | JSON data type | Required                                     | Description                       |
-| ---------- | -------------- | -------------------------------------------- | --------------------------------- |
-| **method** | String         | only "assigned_objects_by_contact" available |                                   |
-| **filter** | Object         | Yes                                          | By `email` String or `id` Integer |
+| Clé        | Type de données JSON | Requis                                       | Description                       |
+| ---------- | -------------------- | -------------------------------------------- | --------------------------------- |
+| **méthode** | Chaîne de caractères | uniquement "assigned_objects_by_contact" disponible |                                   |
+| **filtre** | Objet                | Oui                                          | Par `email` Chaîne de caractères ou `id` Entier |
 
-!!! example "WIP"
+!!! example "Travail en cours"
 
-    ### Response parameters
+    ### Paramètres de la réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **résultat** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key       | JSON data type | Description                      |
-    | --------- | -------------- | -------------------------------- |
-    | **key**   | String         | Attribute which relates to query |
-    | **value** | String         | Value which relates to query     |
+    | Clé       | Type de données JSON | Description                      |
+    | --------- | -------------------- | -------------------------------- |
+    | **clé**   | Chaîne de caractères | Attribut lié à la requête         |
+    | **valeur** | Chaîne de caractères | Valeur liée à la requête         |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
-    ```json
-    {
+```json
+{
       "version": "2.0",
       "method": "cmdb.contact.read",
       "params": {
@@ -50,12 +50,12 @@ Retrieves all assigned objects by contact.
       },
       "id": 1
     }
-    ```
+```
 
-=== "Response body"
+=== "Corps de la réponse"
 
-    ```json
-    {
+```json
+{
       "id": 1,
       "jsonrpc": "2.0",
       "result": {
@@ -70,4 +70,4 @@ Retrieves all assigned objects by contact.
             }
         }
     }
-    ```
+```

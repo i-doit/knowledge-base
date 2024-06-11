@@ -3,32 +3,32 @@ title: cmdb.reports
 description: cmdb.reports
 icon: material/api
 #status: updated
-lang: en
+lang: fr
 ---
 
 # cmdb.reports
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## cmdb.reports.read
 
-Display the result of a report.
+Affiche le résultat d'un rapport.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key        | JSON data type | Required | Description                                  |
-| ---------- | -------------- | -------- | -------------------------------------------- |
-| **id**     | String         | No       | Identifier of the Report                     |
-| **limit**  | Integer        | No       | Limit displayed results                      |
-| **offset** | Integer        | No       | Start displaying results from defined offset |
+| Clé        | Type de données JSON | Requis   | Description                                  |
+| ---------- | -------------------- | -------- | -------------------------------------------- |
+| **id**     | Chaîne               | Non      | Identifiant du rapport                       |
+| **limit**  | Entier               | Non      | Limite des résultats affichés                |
+| **offset** | Entier               | Non      | Commencer à afficher les résultats à partir du décalage défini |
 
-### Response parameters
+### Paramètres de la réponse
 
-JSON key **result** contains the Report result.
+La clé JSON **result** contient le résultat du rapport.
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -42,7 +42,7 @@ JSON key **result** contains the Report result.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -60,7 +60,7 @@ JSON key **result** contains the Report result.
     }
     ```
 
-=== "Request boy with Identifier"
+=== "Corps de la requête avec Identifiant"
 
     ```json
     {
@@ -75,10 +75,10 @@ JSON key **result** contains the Report result.
     }
     ```
 
-=== "Response body with Identifier"
+=== "Corps de la réponse avec Identifiant"
 
-    ```json
-    {
+```json
+({
       "id": 1,
       "jsonrpc": "2.0",
       "result": [
@@ -91,12 +91,11 @@ JSON key **result** contains the Report result.
         ....
       ]
     }
-    ```
+```
 
-=== "Request boy with limit and offset"
-
-    ```json
-    {
+=== "Demande garçon avec limite et décalage"
+```json
+({
       "version": "2.0",
       "method": "cmdb.reports",
       "params": {
@@ -113,12 +112,11 @@ JSON key **result** contains the Report result.
         {
           "Title": "Admin"
         },
-    ```
+```
 
-=== "Response body with limit and offset"
-
-    ```json
-    {
+=== "Corps de réponse avec limite et décalage"
+```json
+({
       "id": 1,
       "jsonrpc": "2.0",
       "result": [
@@ -130,4 +128,4 @@ JSON key **result** contains the Report result.
         },
       ]
     }
-    ```
+```

@@ -1,42 +1,32 @@
----
-title: cmdb.condition
-description: cmdb.condition
-icon: material/api
-#status: updated
-lang: en
----
-
 # cmdb.condition
 
-!!! example "Work in Progress. **Alpha state**"
+!!! example "Travail en cours. **État Alpha**" {/examples}
 
 ## cmdb.condition.read
 
-Give me all objects that have attribute Y = Z in category X. Like a report.
+Donnez-moi tous les objets qui ont l'attribut Y = Z dans la catégorie X. Comme un rapport.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key                                                       | JSON data type | Required          | Description                                               |
-| --------------------------------------------------------- | -------------- | ----------------- | --------------------------------------------------------- |
-| **conditions**                                            | Array          | Yes               | Consists of the category constant + the attribute name    |
-| **property**                                              | String         | Yes               | `=`, `!=`, `like`, `not like`, `>`, `>=`, `<`, `<=`, `<>` |
-| **comparison**                                            | String         | String or Integer | Exmaple, `C__OBJTYPE__SERVER`, `123` or `*server*`        |
-| **operator** :material-flask:{ title="Work in progress" } | Array          | Yes               | `AND` or `OR`                                             |
+| Clé                                                       | Type de données JSON | Requis            | Description                                               |
+| --------------------------------------------------------- | -------------------- | ----------------- | --------------------------------------------------------- |
+| **conditions**                                            | Tableau              | Oui               | Composé de la constante de catégorie + le nom de l'attribut |
+| **property**                                              | Chaîne               | Oui               | `=`, `!=`, `like`, `not like`, `>`, `>=`, `<`, `<=`, `<>` |
+| **comparison**                                            | Chaîne               | Chaîne ou Entier   | Exemple, `C__OBJTYPE__SERVER`, `123` ou `*server*`        |
+| **operator** :material-flask:{ title="Travail en cours" } | Tableau              | Oui               | `ET` ou `OU`                                             |
 
-!!! example "WIP"
+### Paramètres de réponse {/examples}
 
-    ### Response parameters
+La clé JSON **résultat** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Clé       | Type de données JSON | Description                      |
+| --------- | --------------------- | -------------------------------- |
+| **clé**   | Chaîne de caractères | Attribut lié à la requête        |
+| **valeur** | Chaîne de caractères | Valeur liée à la requête         |
 
-    | Key       | JSON data type | Description                      |
-    | --------- | -------------- | -------------------------------- |
-    | **key**   | String         | Attribute which relates to query |
-    | **value** | String         | Value which relates to query     |
+### Exemple {/examples}
 
-### Example
-
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -67,7 +57,7 @@ Give me all objects that have attribute Y = Z in category X. Like a report.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {

@@ -1,56 +1,56 @@
-# Actions in Object Lists
+# Actions dans les listes d'objets {/examples}
 
-Above the [object list](./index.md) is the action bar with which you can carry out various actions.
+Au-dessus de la [liste d'objets](./index.md) se trouve la barre d'actions avec laquelle vous pouvez effectuer diverses actions.
 
-[![Actions in Object Lists](../../assets/images/en/basics/object-list/actions-in-object-lists/1-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/1-aiol.png)
+[![Actions dans les listes d'objets](../../assets/images/en/basics/object-list/actions-in-object-lists/1-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/1-aiol.png)
 
-## Create an Object
+## Créer un objet {/examples}
 
-Various options are available for the creation of a new object:
+Plusieurs options sont disponibles pour la création d'un nouvel objet :
 
--   **New** or **New object** create a new object which you can edit via forms.
--   **New object from template** changes to the dialog which creates one or more objects from a [template](../../efficient-documentation/templates.md).
--   **Create new templat**e is similar to the first item, but the [state](../life-and-documentation-cycle.md) **Template** is preselected so that the object becomes a [template](../../efficient-documentation/templates.md) after saving.
+-   **Nouveau** ou **Nouvel objet** crée un nouvel objet que vous pouvez modifier via des formulaires.
+-   **Nouvel objet à partir d'un modèle** change vers la boîte de dialogue qui crée un ou plusieurs objets à partir d'un [modèle](../../efficient-documentation/templates.md).
+-   **Créer un nouveau modèle** est similaire au premier élément, mais l'état **Modèle** est présélectionné afin que l'objet devienne un [modèle](../../efficient-documentation/templates.md) après l'enregistrement.
 
-[![Create an Object](../../assets/images/en/basics/object-list/actions-in-object-lists/2-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/2-aiol.png)
+[![Créer un objet](../../assets/images/en/basics/object-list/actions-in-object-lists/2-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/2-aiol.png)
 
-## Edit an Object
+## Modifier un Objet {/ * exemples * /}
 
-When you want to edit an object, select the object to be edited with the corresponding checkbox and click the **Edit** button. When you select more than one object, the [list editing](../../efficient-documentation/list-editing.md) function is started.
+Lorsque vous souhaitez modifier un objet, sélectionnez l'objet à modifier avec la case à cocher correspondante et cliquez sur le bouton **Modifier**. Lorsque vous sélectionnez plus d'un objet, la fonction [d'édition de liste](../../efficient-documentation/list-editing.md) est lancée.
 
-[![Edit an Object](../../assets/images/en/basics/object-list/actions-in-object-lists/3-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/3-aiol.png)
+[![Modifier un Objet](../../assets/images/en/basics/object-list/actions-in-object-lists/3-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/3-aiol.png)
 
-## Duplicate an Object
+## Dupliquer un Objet {/ * exemples * /}
 
-Use the **Duplicate button** to [duplicate an object with its attributes](../../efficient-documentation/duplicate-objects.md).
+Utilisez le **bouton Dupliquer** pour [dupliquer un objet avec ses attributs](../../efficient-documentation/duplicate-objects.md).
 
-## Objects: Archive, Mark as Deleted, Restore or Delete Irrevocably
+## Objets : Archiver, Marquer comme Supprimé, Restaurer ou Supprimer de Manière Irrévocable {/ * exemples * /}
 
-You can click the corresponding buttons to **Archive**, **Delete**, **Restore**, **Purge** and **Quickpurge** when you want to change the [state](../life-and-documentation-cycle.md) of one or more objects or you even want to delete them irrevocably.
+Vous pouvez cliquer sur les boutons correspondants pour **Archiver**, **Supprimer**, **Restaurer**, **Purger** et **Purger rapidement** lorsque vous souhaitez modifier l'[état](../life-and-documentation-cycle.md) d'un ou de plusieurs objets ou même les supprimer de manière irrévocable.
 
-## Print Preview
+## Aperçu Avant Impression {/ * exemples * /}
 
-A pop-up window showing the list with an optimized view for printing opens by activating the **Print Preview** button. The list is supplemented with attributes which are displayed on the summary page of the corresponding object.
+Une fenêtre contextuelle affichant la liste avec une vue optimisée pour l'impression s'ouvre en activant le bouton **Aperçu Avant Impression**. La liste est complétée par des attributs qui sont affichés sur la page de résumé de l'objet correspondant.
 
-[![Print Preview](../../assets/images/en/basics/object-list/actions-in-object-lists/4-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/4-aiol.png)
+[![Aperçu avant impression](../../assets/images/en/basics/object-list/actions-in-object-lists/4-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/4-aiol.png)
 
-!!! success "Print preview of the web browser"
+!!! success "Aperçu avant impression du navigateur Web"
 
-    The applied web browser can also generate a print preview. Here the superfluous elements of the Web GUI are not displayed:
+    Le navigateur Web utilisé peut également générer un aperçu avant impression. Ici, les éléments superflus de l'interface graphique Web ne sont pas affichés :
 
-    -   Firefox: **File → Print preview**
-    -   Chrome: **Menu → Print…** or **STRG+P**
+    -   Firefox : **Fichier → Aperçu avant impression**
+    -   Chrome : **Menu → Imprimer…** ou **CTRL+P**
 
-## Export Object List as CSV File
+## Exporter la liste d'objets sous forme de fichier CSV
 
-You can download the displayed object list [as a file in CSV format](../../consolidate-data/csv-data-export.md) with the **Export as CSV** button and then process it with third-party applications.
+Vous pouvez télécharger la liste d'objets affichée [sous forme de fichier au format CSV](../../consolidate-data/csv-data-export.md) avec le bouton **Exporter au format CSV** et ensuite la traiter avec des applications tierces.
 
-## Link to this Page
+## Lien vers cette page
 
-To reload the page and thus the object list you can use the **Link to this page** button. This button is also useful to get the unique URL. However, it should correspond to the URL shown in the address bar of the web browser.
+Pour recharger la page et donc la liste d'objets, vous pouvez utiliser le bouton **Lien vers cette page**. Ce bouton est également utile pour obtenir l'URL unique. Cependant, il devrait correspondre à l'URL affichée dans la barre d'adresse du navigateur Web.
 
-## Change of State
+## Changement d'état
 
-If you want to display only objects with a certain [state](../life-and-documentation-cycle.md), you can select the corresponding state with the drop-down menu on the right side of the action bar. You can see how many objects are in the respective state by the indications enclosed in parenthesis. As standard, the selected state is set to **Normal**. A change to another state is saved and therefore affects all other object lists..
+Si vous souhaitez afficher uniquement les objets ayant un certain [état](../life-and-documentation-cycle.md), vous pouvez sélectionner l'état correspondant dans le menu déroulant situé du côté droit de la barre d'actions. Vous pouvez voir combien d'objets se trouvent dans l'état respectif en fonction des indications entre parenthèses. Par défaut, l'état sélectionné est défini sur **Normal**. Un changement vers un autre état est enregistré et affecte donc toutes les autres listes d'objets.
 
-[![Change of State](../../assets/images/en/basics/object-list/actions-in-object-lists/5-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/5-aiol.png)
+[![Changement d'état](../../assets/images/en/basics/object-list/actions-in-object-lists/5-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/5-aiol.png)

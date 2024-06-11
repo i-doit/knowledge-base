@@ -1,8 +1,8 @@
-# User language
+# Langue de l'utilisateur
 
-Under User language the logged-in user can define the desired language.
+Sous Langue de l'utilisateur, l'utilisateur connecté peut définir la langue souhaitée.
 
-| Option | Value |
+| Option | Valeur |
 | - | - |
-| Choose language by browser | Yes or No |
-| Language | English<br>German<br>Custom language |
+| Choisir la langue par le navigateur | Oui ou Non |
+| Langue | Anglais<br>Allemand<br>Langue personnalisée |

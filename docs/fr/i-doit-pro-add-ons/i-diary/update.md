@@ -1,3 +1,3 @@
-# i-diary: Update
+# i-diary: Mise à jour
 
-If you want to update your i-diary, you can download the newest version [here](https://portal.i-doit.com).
+Si vous souhaitez mettre à jour votre i-diary, vous pouvez télécharger la dernière version [ici](https://portal.i-doit.com). {/examples}

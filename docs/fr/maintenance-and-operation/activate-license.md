@@ -1,129 +1,131 @@
-# Activate License
+# Activer la Licence
 
-i-doit PRO is unlocked with a license.
+i-doit PRO est déverrouillé avec une licence.
 
-The licenses for your company are available at the [customer portal](../system-administration/customer-portal.md). Access is given to the person who is stated as the primary contact person.
+Les licences pour votre entreprise sont disponibles sur le [portail client](../system-administration/customer-portal.md). L'accès est donné à la personne désignée comme le contact principal.
 
-!!! attention "Name of the database"
+!!! attention "Nom de la base de données"
 
-    When creating a license for a single tenant, the **name of the database** is required. Please make sure that the name is available to you when creating the license in our customer portal
+    Lors de la création d'une licence pour un locataire unique, le **nom de la base de données** est requis. Assurez-vous que le nom est disponible lorsque vous créez la licence dans notre portail client.
 
-    Licenses have a certain period of time during which they are valid. If the period expires a new license is required.
+    Les licences ont une certaine période de validité. Si la période expire, une nouvelle licence est requise.
 
-!!! attention "Token compatibility"
+!!! attention "Compatibilité du jeton"
 
-    License Token can be used starting with **i-doit version 1.12.2**  
-    Offline License Key can be used only with **i-doit version 1.15**
+    Le jeton de licence peut être utilisé à partir de la version **i-doit 1.12.2**  
+    La clé de licence hors ligne ne peut être utilisée qu'avec la version **i-doit 1.15**
 
-!!! info "Pre i-doit 1.12.2 behavior"
+!!! info "Comportement avant i-doit 1.12.2"
 
-    Multiple types of licenses are available for i-doit pro:
+    Plusieurs types de licences sont disponibles pour i-doit pro :
 
-    *   The **subscription** license for each single tenant (including **trial licenses**)  
-        You can load a subscription license via the [Admin center](../system-administration/admin-center.md) 
-    *   The **subscription** license for multiple **tenants**  
-        If you wish to use one subscription license for multiple tenants, you can only Activate this via the Admin center.
-    *   The **buy** license for single or multiple **tenants**  
-        The activation for both types is also carried out via the [Admin center](../system-administration/admin-center.md)
+    *   La licence **d'abonnement** pour chaque locataire unique (y compris les licences **d'essai**)  
+        Vous pouvez charger une licence d'abonnement via le [centre d'administration](../system-administration/admin-center.md) 
+    *   La licence **d'abonnement** pour plusieurs **locataires**  
+        Si vous souhaitez utiliser une licence d'abonnement pour plusieurs locataires, vous ne pouvez l'activer que via le centre d'administration.
+    *   La licence **d'achat** pour un ou plusieurs **locataires**  
+        L'activation pour les deux types est également effectuée via le [centre d'administration](../system-administration/admin-center.md)
 
-Import License Token
+Importation du jeton de licence
 --------------------
 
-The new customer portal has been in operation since March 2022. This has changed the licensing and a license server has been created.  
-Tokens are created via this server and replace the license file.
+Le nouveau portail client est en service depuis mars 2022. Cela a modifié la procédure de licence et un serveur de licences a été créé.  
+Les jetons sont créés via ce serveur et remplacent le fichier de licence.
 
-Which method of importing a license should I use?
+Quelle méthode d'importation de licence dois-je utiliser ?
 -------------------------------------------------
 
-*   If your server, on which i-doit is installed, **has an internet connection**, use activate [License Token](#activate-license).
-*   If your server, on which i-doit is installed, **does not have an internet connection**, follow the Steps 1 to 5 and go on with the Steps from [Offline License Key](#activate-offline-license-key-offline).  
+*   Si votre serveur, sur lequel i-doit est installé, **a une connexion internet**, utilisez l'activation du [Jeton de Licence](#activate-license).
+*   Si votre serveur, sur lequel i-doit est installé, **n'a pas de connexion internet**, suivez les étapes 1 à 5 et continuez avec les étapes de la [Clé de Licence Hors Ligne](#activate-offline-license-key-offline).  
 
-How to get the License Token and how to get the Offline License Key string?
+Comment obtenir le Jeton de Licence et comment obtenir la chaîne de Clé de Licence Hors Ligne ?
 ---------------------------------------------------------------------------
 
-*   The **License Token** can be found in the customer portal.
-*   You can retrieve the license key string by clicking the **Offline License Key**-button, top right. This will open a popup with the Offline License.
+*   Le **Jeton de Licence** peut être trouvé dans le portail client.
+*   Vous pouvez récupérer la chaîne de clé de licence en cliquant sur le bouton **Clé de Licence Hors Ligne**, en haut à droite. Cela ouvrira une fenêtre contextuelle avec la Licence Hors Ligne.
 
-[![customer portal](../assets/images/en/maintenance-and-operation/activate-license/1-al.png)](../assets/images/en/maintenance-and-operation/activate-license/1-al.png)
+[![portail client](../assets/images/en/maintenance-and-operation/activate-license/1-al.png)](../assets/images/en/maintenance-and-operation/activate-license/1-al.png)
 
-Activate License Token Online
+Activer le jeton de licence en ligne
 -----------------------------
 
-**Step 1:** Go to the i-doit customer portal. To enter the admin center, click on the link in the login screen.
+**Étape 1 :** Accédez au portail client i-doit. Pour accéder au centre d'administration, cliquez sur le lien de l'écran de connexion.
 
-[![login](../assets/images/en/maintenance-and-operation/activate-license/2-al.png)](../assets/images/en/maintenance-and-operation/activate-license/2-al.png)
+[![connexion](../assets/images/en/maintenance-and-operation/activate-license/2-al.png)](../assets/images/en/maintenance-and-operation/activate-license/2-al.png)
 
-**Step 2:** Next, you need to enter the credentials you assigned for the admin center when you installed i-doit.
+**Étape 2 :** Ensuite, vous devez saisir les identifiants que vous avez attribués pour le centre d'administration lorsque vous avez installé i-doit.
 
-[![admin center](../assets/images/en/maintenance-and-operation/activate-license/3-al.png)](../assets/images/en/maintenance-and-operation/activate-license/3-al.png)
+[![centre d'administration](../assets/images/en/maintenance-and-operation/activate-license/3-al.png)](../assets/images/en/maintenance-and-operation/activate-license/3-al.png)
 
-**Step 3:** Now you are logged into the Admin Center and click on the "Licenses" tab.
+**Étape 3 :** Maintenant, vous êtes connecté au Centre d'administration et cliquez sur l'onglet "Licences".
 
-[![Admin Center](../assets/images/en/maintenance-and-operation/activate-license/4-al.png)](../assets/images/en/maintenance-and-operation/activate-license/4-al.png)
+[![Centre d'administration](../assets/images/en/maintenance-and-operation/activate-license/4-al.png)](../assets/images/en/maintenance-and-operation/activate-license/4-al.png)
 
-**Step 4:** Here you can import a licence file or your License Token. For this you copy the License Token into the input field.
+**Étape 4 :** Ici, vous pouvez importer un fichier de licence ou votre jeton de licence. Pour cela, copiez le jeton de licence dans le champ d'entrée.
 
-[![import a licence](../assets/images/en/maintenance-and-operation/activate-license/5-al.png)](../assets/images/en/maintenance-and-operation/activate-license/5-al.png)
+[![importer une licence](../assets/images/en/maintenance-and-operation/activate-license/5-al.png)](../assets/images/en/maintenance-and-operation/activate-license/5-al.png)
 
-**\*If a license file is still installed here, it must be deleted.**
+**\*Si un fichier de licence est encore installé ici, il doit être supprimé.**
 
-Afterwards click on the **Save & Check**-button. Now the License Token will be checked by the license server.
+Ensuite, cliquez sur le bouton **Enregistrer et Vérifier**. Maintenant, le jeton de licence sera vérifié par le serveur de licences.
 
-**Step 5:** The License Token has been verified by the license server and all associated licenses are displayed.
+**Étape 5 :** Le jeton de licence a été vérifié par le serveur de licences et toutes les licences associées sont affichées.
 
-[![License Token](../assets/images/en/maintenance-and-operation/activate-license/6-al.png)](../assets/images/en/maintenance-and-operation/activate-license/6-al.png)
+[![Jeton de licence](../assets/images/en/maintenance-and-operation/activate-license/6-al.png)](../assets/images/en/maintenance-and-operation/activate-license/6-al.png)
 
-**_Note_**: The License Token looks as follows: **2e23aa70df492b7e7b8f321929gcfcde**
+**_Note_** : Le jeton de licence ressemble à ceci : **2e23aa70df492b7e7b8f321929gcfcde**
 
-Activate Offline License Key Offline
+Activer la clé de licence hors ligne
 ------------------------------------
 
-We perform [Steps 1-5](#activate-licenses-steps-1-5) beforehand.
+Nous effectuons [les étapes 1 à 5](#activate-licenses-steps-1-5) au préalable.
 
-**Step 5:** Insert **License Token**. Click the **Save**\-button. Do **not** click "Save and Check".
+**Étape 5 :** Insérez le **Jeton de Licence**. Cliquez sur le bouton **Enregistrer**. Ne cliquez **pas** sur "Enregistrer et Vérifier".
 
-[![License Token](../assets/images/en/maintenance-and-operation/activate-license/7-al.png)](../assets/images/en/maintenance-and-operation/activate-license/7-al.png)
 
-**Step 6:** Click on the "**Install new license**" button.
+[![Jeton de licence](../assets/images/en/maintenance-and-operation/activate-license/7-al.png)](../assets/images/en/maintenance-and-operation/activate-license/7-al.png)
 
-[![Install new license](../assets/images/en/maintenance-and-operation/activate-license/8-al.png)](../assets/images/en/maintenance-and-operation/activate-license/8-al.png)
+**Étape 6 :** Cliquez sur le bouton "**Installer une nouvelle licence**".
 
-**Step 7:** Now you see a field into which the entire **Offline License Key** string must be copied.
+[![Installer une nouvelle licence](../assets/images/en/maintenance-and-operation/activate-license/8-al.png)](../assets/images/en/maintenance-and-operation/activate-license/8-al.png)
 
-[![Offline License Key](../assets/images/en/maintenance-and-operation/activate-license/9-al.png)](../assets/images/en/maintenance-and-operation/activate-license/9-al.png)
+**Étape 7 :** Vous verrez maintenant un champ dans lequel la chaîne de la **Clé de licence hors ligne** doit être copiée.
 
-**_Note:_** Depending on how many add-ons are included in the purchased license, there will be several license keys. You can copy them contiguously into the field.
+[![Clé de licence hors ligne](../assets/images/en/maintenance-and-operation/activate-license/9-al.png)](../assets/images/en/maintenance-and-operation/activate-license/9-al.png)
+
+**_Note :_** Selon le nombre d'extensions incluses dans la licence achetée, il y aura plusieurs clés de licence. Vous pouvez les copier de manière contiguë dans le champ.
 
 [![Note](../assets/images/en/maintenance-and-operation/activate-license/10-al.png)](../assets/images/en/maintenance-and-operation/activate-license/10-al.png)
 
-**Step 8:** Now click on the **Add licence**-button.
+**Étape 8 :** Cliquez maintenant sur le bouton **Ajouter la licence**.
 
-[![Add licence](../assets/images/en/maintenance-and-operation/activate-license/11-al.png)](../assets/images/en/maintenance-and-operation/activate-license/11-al.png)
 
-Now the License Token has been verified with the Offline License Key string and all associated licenses are displayed.
+[![Ajouter une licence](../assets/images/en/maintenance-and-operation/activate-license/11-al.png)](../assets/images/en/maintenance-and-operation/activate-license/11-al.png)
 
-[![Offline License Key](../assets/images/en/maintenance-and-operation/activate-license/12-al.png)](../assets/images/en/maintenance-and-operation/activate-license/12-al.png)
+Maintenant que le jeton de licence a été vérifié avec la chaîne de clé de licence hors ligne et que toutes les licences associées sont affichées.
 
-Activation via the Admin-Center (License file outdated)
--------------------------------------------------------
+[![Clé de licence hors ligne](../assets/images/en/maintenance-and-operation/activate-license/12-al.png)](../assets/images/en/maintenance-and-operation/activate-license/12-al.png)
 
-After logging in, the installation via the [Admin center](../system-administration/admin-center.md) is carried out in the **Licenses** tab. Use the button **Install new licence** to open the expanded dialogue and select the downloaded License file.
+Activation via l'Admin-Center (Fichier de licence obsolète)
+------------------------------------------------------------
 
-New log-in may be required
+Après vous être connecté, l'installation via le [centre d'administration](../system-administration/admin-center.md) est effectuée dans l'onglet **Licences**. Utilisez le bouton **Installer une nouvelle licence** pour ouvrir le dialogue étendu et sélectionner le fichier de licence téléchargé.
 
-When a license was activated successfully and you want to work with i-doit, it may be the case that you nevertheless receive the information that no valid license is activated. You can correct the situation by logging off and then logging in again with the current user. Afterwards, this note should not reappear.
+Une nouvelle connexion peut être requise
 
-[![New log-in may be required](../assets/images/en/maintenance-and-operation/activate-license/13-al.png)](../assets/images/en/maintenance-and-operation/activate-license/13-al.png)
+Lorsqu'une licence a été activée avec succès et que vous souhaitez travailler avec i-doit, il se peut que vous receviez néanmoins l'information qu'aucune licence valide n'est activée. Vous pouvez corriger la situation en vous déconnectant puis en vous reconnectant avec l'utilisateur actuel. Ensuite, cette note ne devrait plus réapparaître.
 
-Automatic license distribution
+[![Une nouvelle connexion peut être requise](../assets/images/en/maintenance-and-operation/activate-license/13-al.png)](../assets/images/en/maintenance-and-operation/activate-license/13-al.png)
 
-Please note that in the **Tenants** tab you can configure how many object licenses can be assigned to a client. Even if only a single client exists, a switched off automatic license distribution can ensure that not all object licenses are used. If this is the case, it can simply be activated and applied with a click on save.
+Distribution automatique de licences
 
-Trial Licenses
+Veuillez noter que dans l'onglet **Locataires**, vous pouvez configurer le nombre de licences d'objets pouvant être attribuées à un client. Même s'il n'existe qu'un seul client, une distribution automatique de licences désactivée peut garantir que toutes les licences d'objets ne sont pas utilisées. Si tel est le cas, elle peut simplement être activée et appliquée en cliquant sur Enregistrer.
+
+Licences d'essai
 --------------
 
-You can [apply for a license to test i-doit pro for 30-days](https://www.i-doit.com/) on our website.
+Vous pouvez [demander une licence pour tester i-doit pro pendant 30 jours](https://www.i-doit.com/) sur notre site web.
 
-Name of the test database
+Nom de la base de données de test
 
-The trial license is always issued for the database name **idoit\_data**. To guarantee a flawless function during the trial period, you may not change the name of the database during the installation!
+La licence d'essai est toujours délivrée pour le nom de base de données **idoit\_data**. Pour garantir un fonctionnement sans faille pendant la période d'essai, vous ne pouvez pas modifier le nom de la base de données lors de l'installation!

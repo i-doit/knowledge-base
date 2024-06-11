@@ -1,5 +1,5 @@
-# Object lists
+# Listes d'objets
 
-The user has the possibility to adapt the viewing options for all object lists under [Object List](../../../../basics/object-list/index.md).
+L'utilisateur a la possibilité d'adapter les options d'affichage pour toutes les listes d'objets sous [Liste d'objets](../../../../basics/object-list/index.md).
 
-[![Object Lists](../../../../assets/images/en/system-administration/administration/user-settings/user-interface/1-ui.png)](../../../../assets/images/en/system-administration/administration/user-settings/user-interface/1-ui.png)
+[![Listes d'objets](../../../../assets/images/en/system-administration/administration/user-settings/user-interface/1-ui.png)](../../../../assets/images/en/system-administration/administration/user-settings/user-interface/1-ui.png){/*examples*/}

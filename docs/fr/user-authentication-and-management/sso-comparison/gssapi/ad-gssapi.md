@@ -1,76 +1,75 @@
 # SSO via Active Directory with GSSAPI
 
-For automatic login to i-doit within an intranet, authentication via Single Sign On (SSO) is the best option.
+Pour une connexion automatique à i-doit au sein d'un intranet, l'authentification via Single Sign On (SSO) est la meilleure option.
 
-Conditions and assumptions
+Conditions et hypothèses
 --------------------------
 
-The following conditions are the basis of this article:
+Les conditions suivantes sont à la base de cet article :
 
-*   i-doit is [installed](../../../installation/manual-installation/index.md) under GNU/Linux.
-*   Active Directory (AD) on Windows Server 2008/2012 is used for authentication.
+*   i-doit est [installé](../../../installation/manual-installation/index.md) sous GNU/Linux.
+*   Active Directory (AD) sur Windows Server 2008/2012 est utilisé pour l'authentification.
 
-This article describes how to set up Single Sign On (SSO) under Apache web server using \mod-auth-gssapi\.
+Cet article décrit comment configurer Single Sign On (SSO) sous le serveur web Apache en utilisant \mod-auth-gssapi\.
 
-!!! attention "Upper and lower case"
-    The configuration is exactly case sensitive.
+!!! attention "Majuscules et minuscules"
+    La configuration est sensible à la casse.
 
-Configure Active Directory (AD)
+Configurer Active Directory (AD)
 -------------------------------
 
-A user is generated in AD for SSO access. Example:
+Un utilisateur est généré dans AD pour l'accès SSO. Exemple :
 
-*   Server name of i-doit: idoit.mydomain.local
-*   AD domain: addomain.local
-*   SSO user: ssouser
-*   Password: password
+*   Nom du serveur i-doit : idoit.mydomain.local
+*   Domaine AD : addomain.local
+*   Utilisateur SSO : ssouser
+*   Mot de passe : password
 
-Configuration of the i-doit server
+Configuration du serveur i-doit
 ----------------------------------
 
-Installation of all required packages
+Installation de tous les paquets requis
 
-Debian GNU/Linux or Ubuntu Linux:
+Debian GNU/Linux ou Ubuntu Linux :
 
 ```shell
 sudo apt install msktutil libapache2-mod-auth-gssapi kinit krb5-user
 ```
 
 Info:
-Domain"REALM" angeben: addomain.local
-Hostname"Passwortserver" mydomaincontroller
+Indiquer le domaine "REALM": addomain.local
+Nom d'hôte "Serveur de mot de passe" mydomaincontroller
 
-Apache neustarten:
+Redémarrer Apache:
 
 ```shell
 sudo systemctl restart apache2.service
 ```
 
-Initial registration and creation of the keytab
+Enregistrement initial et création du keytab
 -----------------------------------------------
 
-
-Authentication of the server:
+Authentification du serveur:
 
 ```shell
-kinit <AD Administrator Account>
+kinit <Compte Administrateur AD>
 ```
 
-Creating the keytab:
+Création du keytab:
 ```shell
-msktutil --server <AD Domain-Controller> --user-creds-only --update --use-service-account --service HTTP/idoit.mydomain.local --keytab /etc/apache2/apache_krb5.keytab --password <SERVICE ACCOUNT PASSWORD> --account-name ssouser
+msktutil --server <Contrôleur de domaine AD> --user-creds-only --update --use-service-account --service HTTP/idoit.mydomain.local --keytab /etc/apache2/apache_krb5.keytab --password <MOT DE PASSE DU COMPTE DE SERVICE> --account-name ssouser
 ```
 
-Assign permissions for Apache
+Attribuer des autorisations pour Apache
 
 ```shell
 chmod 644 /etc/apache2/apache_krb5.keytab
 ```
 
-Configure Apache Web Server
+Configurer le serveur Web Apache
 ---------------------------
 
-This file will customize the new VHost configuration:
+Ce fichier personnalisera la nouvelle configuration VHost:
 
 ```shell
 sudo nano /etc/apache2/sites-available/i-doit.conf
@@ -90,13 +89,13 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
     </Directory>
 ```
 
-Afterwards restart Apache once so that the changes take effect
+Ensuite, redémarrez Apache une fois pour que les changements prennent effet
 
 ```shell
 sudo systemctl restart apache2.service
 ```
 
-To test the configuration, execute the following command:
+Pour tester la configuration, exécutez la commande suivante:
 
 ```shell
 kinit ssouser@ADDOMAIN.LOCAL

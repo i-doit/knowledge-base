@@ -1,120 +1,121 @@
-# Life and Documentation Cycle
+# Cycle de vie et Documentation
 
-IT components come and go. You plan, purchase and operate them and take them out of service eventually. Bingo: This article is about the lifecycle management. It plays an important role in the [IT documentation](../glossary.md), since it can be used to track the state that a component has or should have. Furthermore, it should be possible to archive or delete the [IT documentation](../glossary.md) itself.
+Les composants informatiques viennent et partent. Vous les planifiez, les achetez, les exploitez et les retirez finalement du service. Bingo : Cet article concerne la gestion du cycle de vie. Il joue un rôle important dans la [documentation informatique](../glossary.md), car il peut être utilisé pour suivre l'état qu'un composant a ou devrait avoir. De plus, il devrait être possible d'archiver ou de supprimer la [documentation informatique](../glossary.md) elle-même.
 
-## Lifecycle of IT Components
+## Cycle de vie des composants informatiques
 
-The lifecycle of an IT component is documented in the CMDB status. The following CMD states are available with a fresh i-doit installation:
+Le cycle de vie d'un composant informatique est documenté dans l'état de la CMDB. Les états CMD suivants sont disponibles avec une installation i-doit fraîche :
 
--   **planned**
--   **ordered**
--   **delivered**
--   **assembled**
--   **tested**
--   **in operation (not editable)**
--   **defect**
--   **inoperative (not editable)**
--   **under repair**
--   **delivered from repair**
--   **stored**
--   **scrapped**
--   **i-doit Status (not editable)**
--   **Template (not editable)**
+-   **planifié**
+-   **commandé**
+-   **livré**
+-   **assemblé**
+-   **testé**
+-   **en exploitation (non modifiable)**
+-   **défectueux**
+-   **inopérant (non modifiable)**
+-   **en réparation**
+-   **livré de la réparation**
+-   **stocké**
+-   **mis au rebut**
+-   **Statut i-doit (non modifiable)**
+-   **Modèle (non modifiable)**
 
-The **CMDB status** can be displayed as a column in the object lists in order to see the target condition of a documented object as fast as possible.
+Le **statut de la CMDB** peut être affiché en tant que colonne dans les listes d'objets afin de voir le plus rapidement possible l'état cible d'un objet documenté.
 
-[![CMDB status](../assets/images/en/basics/life-and-documentation-cycle/1-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/1-ladc.png)
+[![État de la CMDB](../assets/images/en/basics/life-and-documentation-cycle/1-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/1-ladc.png)
 
-!!! success "Planning"
+!!! success "Planification"
 
-    By representing the lifecycle it is possible to use _i-doit_ for planning. Whether there is an upcoming big update or a relocation - the IT documentation is always present and offers valid statements.
+    En représentant le cycle de vie, il est possible d'utiliser _i-doit_ pour la planification. Qu'il s'agisse d'une prochaine grande mise à jour ou d'une relocalisation - la documentation informatique est toujours présente et offre des déclarations valides.
 
-### Set CMDB Status Per Object
+### Définir l'état de la CMDB par objet
 
-To represent the complete lifecycle of an [object](../glossary.md), the CMDB status [attribute](../glossary.md) in the **General** category is used per [object](../glossary.md). If a new object is created, it receives **in operation** as its **CMDB status**, if not explicitly set to a different state.
+Pour représenter le cycle de vie complet d'un [objet](../glossary.md), l'attribut d'état de la CMDB dans la catégorie **Général** est utilisé par [objet](../glossary.md). Si un nouvel objet est créé, il reçoit **en fonctionnement** comme son **état de la CMDB**, s'il n'est pas explicitement défini sur un état différent.
 
-[![Set CMDB Status Per Object](../assets/images/en/basics/life-and-documentation-cycle/2-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/2-ladc.png)
+[![Définir l'état de la CMDB par objet](../assets/images/en/basics/life-and-documentation-cycle/2-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/2-ladc.png)
 
-### Manage CMDB Status
+### Gérer l'état de la CMDB
 
-The adding, changing or deleting of a **CMDB status** is carried out via **Administration → Predefined content → CMDB status**. For each **CMDB status** the following information is needed:
+L'ajout, la modification ou la suppression d'un **état de la CMDB** est effectué via **Administration → Contenu prédéfini → État de la CMDB**. Pour chaque **état de la CMDB**, les informations suivantes sont nécessaires:
 
--   Unique name/ [language constant (for translation)](../system-administration/localization.md)
--   Unique constant (helpful for using the [API](../i-doit-pro-add-ons/api/index.md), for example)
--   Color (is used in object lists, the **General** category, in the **CMDB-Explorer** and many other cases)
+-   Nom unique/ [constante de langue (pour la traduction)](../system-administration/localization.md)
+-   Constante unique (utile pour utiliser l'[API](../i-doit-pro-add-ons/api/index.md), par exemple)
+-   Couleur (utilisée dans les listes d'objets, la catégorie **Général**, dans l'**Explorateur CMDB** et dans de nombreux autres cas)
 
-[![Manage CMDB Status](../assets/images/en/basics/life-and-documentation-cycle/3-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/3-ladc.png)
+[![Gérer l'état de la CMDB](../assets/images/en/basics/life-and-documentation-cycle/3-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/3-ladc.png)
 
-## Lifecycle of the IT Documentation
+## Cycle de vie de la documentation IT
 
-Apart from the objects that are to be documented, the documentation itself can also be subject to a lifecycle. A documentation artifact can be archived once it is not needed anymore. An artifact can also be marked as deleted, so that a person who is responsible for the IT documentation can irrevocably remove this artifact via the **Purge** function.
+Outre les objets à documenter, la documentation elle-même peut également être soumise à un cycle de vie. Un artefact de documentation peut être archivé une fois qu'il n'est plus nécessaire. Un artefact peut également être marqué comme supprimé, de sorte qu'une personne responsable de la documentation IT puisse supprimer définitivement cet artefact via la fonction **Purge**.
 
-!!! success "Deletion process"
+!!! success "Processus de suppression"
 
-    It may be worthwhile for bigger environments to establish the required processes for the archiving and deleting of documentation artifacts. At what point shall parts of the documentation be archived? Who may clean up the IT documentation? These kind of questions need to be addressed by the team. The permission system of i-doit provides the required settings to assign the rights to archive or to purge parts of the documentation to specific users.
+    Il peut être utile pour les environnements plus importants d'établir les processus nécessaires pour l'archivage et la suppression des artefacts de documentation. À quel moment des parties de la documentation doivent-elles être archivées ? Qui peut nettoyer la documentation IT ? Ce genre de questions doit être abordé par l'équipe. Le système de permission d'i-doit fournit les paramètres nécessaires pour attribuer les droits d'archivage ou de purge de parties de la documentation à des utilisateurs spécifiques.
 
-### States
+### États {/ * exemples * /}
 
-Almost all documentation artifacts (objects, category entries, values in [**Dialog+**\-fields](./dialog-admin.md) etc.) receive a state:
+Presque tous les artefacts de documentation (objets, entrées de catégorie, valeurs dans les [**champs Dialog+**](./dialog-admin.md) etc.) reçoivent un état :
 
--   **Normal**: When working normally (create, edit), each artifact receives this state and can be used anywhere.
--   **Archived**: The artifact is hidden in the [IT documentation](../glossary.md). Further use, e.g. linking, is not possible anymore.
--   **Deleted**: The artifact is supposed to be purged but still exists completely with all relations in the IT documentation. Apart from this, the state is similar to **Archived**.
+-   **Normal** : Lorsqu'il fonctionne normalement (créer, éditer), chaque artefact reçoit cet état et peut être utilisé n'importe où.
+-   **Archivé** : L'artefact est caché dans la [documentation informatique](../glossary.md). Son utilisation ultérieure, par exemple le lien, n'est plus possible.
+-   **Supprimé** : L'artefact est censé être purgé mais existe toujours complètement avec toutes les relations dans la documentation informatique. En dehors de cela, l'état est similaire à **Archivé**.
 
-The cycle provides that every documentation artifact receives the **Normal** status. Later on, the states will be **Archived** and then **Deleted**. A restoration to the respective previous state is possible at any time.
+Le cycle prévoit que chaque artefact de documentation reçoive le statut **Normal**. Plus tard, les états seront **Archivés** puis **Supprimés**. Une restauration à l'état précédent respectif est possible à tout moment.
 
-In addition to these three states there are also special cases concerning objects:
+En plus de ces trois états, il existe également des cas spéciaux concernant les objets :
 
--   **Unfinished**: This state is assigned to a new object that has been created but not saved. This happens, for example, when a new object is created but the **Save** button is not pressed. These objects can only be found via a report and can then be used. You should remove the unfinished objects on a regular basis via **Administration → [Tenant Name] management → Repair and clean up → Remove unfinished objects**. As an alternative, the unfinished objects can be removed automatically. More details can be found further below.
--   **Template**: An object can be used as a [template](../efficient-documentation/templates.md) for other objects.
--   **Change template**: An object can be used as a change template for [mass changing](../efficient-documentation/mass-change.md).
+-   **Inachevé** : Cet état est attribué à un nouvel objet qui a été créé mais pas enregistré. Cela se produit, par exemple, lorsqu'un nouvel objet est créé mais que le bouton **Enregistrer** n'est pas pressé. Ces objets ne peuvent être trouvés que via un rapport et peuvent ensuite être utilisés. Vous devriez supprimer régulièrement les objets inachevés via **Administration → Gestion du [Nom du locataire] → Réparation et nettoyage → Supprimer les objets inachevés**. En alternative, les objets inachevés peuvent être supprimés automatiquement. Plus de détails peuvent être trouvés ci-dessous.
+-   **Modèle** : Un objet peut être utilisé comme un [modèle](../efficient-documentation/templates.md) pour d'autres objets.
+-   **Modifier le modèle** : Un objet peut être utilisé comme modèle de modification pour [changer en masse](../efficient-documentation/mass-change.md).
 
-If you want to delete a documentation artifact irrevocably, mark it as as **Deleted** first and then use the **Purge** function. This, however, is not a state because all data (including the previous state and any logbook entries) will be deleted during the **Purge** process. This means that the object and its existence can't be traced anymore; thus you should use the function with particular caution.
+Si vous souhaitez supprimer définitivement un artefact de documentation, marquez-le d'abord comme **Supprimé** puis utilisez la fonction **Purge**. Cependant, ce n'est pas un état car toutes les données (y compris l'état précédent et les entrées du journal) seront supprimées lors du processus de **Purge**. Cela signifie que l'objet et son existence ne pourront plus être retracés ; vous devez donc utiliser la fonction avec une prudence particulière.
 
-### Archive Objects, Mark them as Deleted or Purge them
+### Archiver des objets, les marquer comme supprimés ou les purger
 
-The state of an object is visible in the **General** category. If you wish to archive an object, mark it as deleted or purge it, you can do so via the [object lists](./object-list/index.md). For this purpose, the checkboxes of the corresponding objects are marked and one of the buttons **Archive**, **Delete** or **Purge** needs to be pressed.
+L'état d'un objet est visible dans la catégorie **Général**. Si vous souhaitez archiver un objet, le marquer comme supprimé ou le purger, vous pouvez le faire via les [listes d'objets](./object-list/index.md). À cette fin, les cases à cocher des objets correspondants sont cochées et l'un des boutons **Archiver**, **Supprimer** ou **Purger** doit être pressé.
 
-It is only possible to change to the next possible state. If an object is in the **Normal** state, it will only be possible to change it to the **Archived** state. You can only delete an object by using the filtered list of archived objects in the right-hand corner. Using **Recycle** changes the object to its previous state.
+Il n'est possible de passer à l'état suivant que s'il est possible. Si un objet est dans l'état **Normal**, il ne sera possible de le changer qu'à l'état **Archivé**. Vous ne pouvez supprimer un objet qu'en utilisant la liste filtrée des objets archivés dans le coin supérieur droit. En utilisant **Recycler**, l'objet revient à son état précédent.
+
 
 [![object-status](../assets/images/en/basics/life-and-documentation-cycle/4-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/4-ladc.png)
 
-There is no further query when purging an object except if relations to other objects exist.
+Il n'y a pas d'autre requête lors de la purge d'un objet sauf si des relations avec d'autres objets existent. {/ * exemples *}
 
-### Archive Category Entries, Mark them as Deleted or Purge them
+### Archiver les entrées de catégorie, les marquer comme supprimées ou les purger
 
-A similar functionality as with the objects exists for some [list categories](../glossary.md) ("Multi-value"). With this function you can archive category entries, mark them as deleted or purge them.
+Une fonctionnalité similaire à celle des objets existe pour certaines [catégories de liste](../glossary.md) ("Multi-valeur"). Avec cette fonction, vous pouvez archiver les entrées de catégorie, les marquer comme supprimées ou les purger. {/ * exemples *}
 
-### Simplified Deleting (Quickpurge)
+### Suppression simplifiée (Purge rapide)
 
-In order to purge a documentation artifact it first has to be archived and marked as deleted. To shorten this cycle, it is possible to activate the **Quickpurge** button. This is done via **Administration → [Tenant Name] management → Settings for CMDB → CMDB → Activate Quickpurge button**. By this means you can purge an object or category entry regardless of its state.
+Pour purger un artefact de documentation, il doit d'abord être archivé et marqué comme supprimé. Pour raccourcir ce cycle, il est possible d'activer le bouton **Purge rapide**. Cela se fait via **Administration → Gestion du [Nom du locataire] → Paramètres pour CMDB → CMDB → Activer le bouton Purge rapide**. De cette manière, vous pouvez purger un objet ou une entrée de catégorie indépendamment de son état. {/ * exemples *}
 
-### Listing of all Objects that are Archived or Marked as Deleted
+### Liste de tous les objets archivés ou marqués comme supprimés
 
-In order to receive a list with all objects which are archived or marked as deleted, you can use a report which can be configured via the Query Builder.
+Pour obtenir une liste de tous les objets qui sont archivés ou marqués comme supprimés, vous pouvez utiliser un rapport qui peut être configuré via le générateur de requêtes. {/ * exemples *}
 
-### Remove Objects or Category Entries that are Unfinished/ Archived/ Marked as Deleted Collectively (**Purge**)
+### Supprimer les objets ou les entrées de catégorie inachevés/archivés/marqués comme supprimés collectivement (**Purge**)
 
-In almost all cases, unfinished objects are unwanted since they are not visible and thus can not be edited. However, also archived objects or objects marked as deleted are often undesired. The same applies to category entries. Therefore it is a good idea to purge these unwanted documentation artifacts. To this end you can use two methods: manual or automatic delection.
+Dans presque tous les cas, les objets inachevés sont indésirables car ils ne sont pas visibles et ne peuvent donc pas être édités. Cependant, les objets archivés ou marqués comme supprimés sont également souvent indésirables. Il en va de même pour les entrées de catégorie. Il est donc conseillé de purger ces artefacts de documentation indésirables. À cette fin, vous pouvez utiliser deux méthodes : la suppression manuelle ou automatique.
 
-#### Manual Deletion
+#### Suppression manuelle
 
-You can delete the artifacts via the web GUI. The respective function is located at **Administration → [Tenant Name] management → Repair and clean up → Objects** or **Categories**. After using one of the provided buttons, a notification showing the amount of objects/ category entries which you are about to delete, will be displayed. After the deleting process it also shows statistics of the amount of objects/ category entries that have been deleted.
+Vous pouvez supprimer les artefacts via l'interface web. La fonction respective se trouve à **Administration → Gestion de [Nom du locataire] → Réparation et nettoyage → Objets** ou **Catégories**. Après avoir utilisé l'un des boutons fournis, une notification affichant la quantité d'objets/entrées de catégorie que vous êtes sur le point de supprimer sera affichée. Après le processus de suppression, des statistiques sur la quantité d'objets/entrées de catégorie supprimés seront également affichées.
 
-#### Automated Deletion
+#### Suppression automatisée
 
-The [controller](../automation-and-integration/cli/index.md) also offers a possibility to delete undesired objects irrevocably. The corresponding handler is called cleanup_objects. The -t parameter determines the group of objects that are to be deleted based on their states:
+Le [contrôleur](../automation-and-integration/cli/index.md) offre également la possibilité de supprimer de manière irrévocable des objets indésirables. Le gestionnaire correspondant s'appelle cleanup_objects. Le paramètre -t détermine le groupe d'objets à supprimer en fonction de leur état :
 
--   -t 1: delete unfinished objects
--   -t 3: delete archived objects
--   -t 4: delete objects that are marked as deleted
+-   -t 1: supprimer les objets inachevés
+-   -t 3: supprimer les objets archivés
+-   -t 4: supprimer les objets marqués comme supprimés
 
-Example for the deletion of unfinished objects:
+Exemple de suppression des objets inachevés :
 
     sudo -u www-data console.php system-objectcleanup -u admin -p admin -i 1 --objectStatus 3
 
-The automation consists of executing the controller on a regular basis via cron job. An example with other important cron jobs can be found in [the article regarding the controller](../automation-and-integration/cli/index.md).
+L'automatisation consiste à exécuter le contrôleur régulièrement via une tâche cron. Un exemple avec d'autres tâches cron importantes peut être trouvé dans [l'article concernant le contrôleur](../automation-and-integration/cli/index.md).
 
-### Change of States in the Logbook
+### Changement d'états dans le journal
 
-Changes of states are recorded completely in the logbook. Only when an object/ category entry is purged, the associated logbook entries will be permanently deleted.
+Les changements d'états sont enregistrés intégralement dans le journal. Seulement lorsque une entrée d'objet/catégorie est purgée, les entrées de journal associées seront définitivement supprimées.

@@ -1,126 +1,125 @@
-# Custom Categories
+# Catégories Personnalisées {/examples}
 
-Besides having standard categories _i-doit_ makes it possible to create (custom) [categories](structure-of-the-it-documentation.md) in order to document additional [attributes](./structure-of-the-it-documentation.md), which are not included in standard categories.
+Outre les catégories standard, _i-doit_ permet de créer (personnalisées) des [catégories](structure-of-the-it-documentation.md) afin de documenter des [attributs](./structure-of-the-it-documentation.md) supplémentaires qui ne sont pas inclus dans les catégories standard.
 
-## Configuration of the Category
+## Configuration de la Catégorie {/examples}
 
-You can find the configuration of the custom categories in _i-doit_ at **Administration → Data structure → Custom categories**. The **New** button is used to create a custom category. If you already created some custom categories, you can also edit them here.
+Vous pouvez trouver la configuration des catégories personnalisées dans _i-doit_ à **Administration → Structure des données → Catégories personnalisées**. Le bouton **Nouveau** est utilisé pour créer une catégorie personnalisée. Si vous avez déjà créé des catégories personnalisées, vous pouvez également les modifier ici.
 
-[![Configuration of the Category](../assets/images/en/basics/custom-categories/1-cc.png)](../assets/images/en/basics/custom-categories/1-cc.png)
+[![Configuration de la Catégorie](../assets/images/en/basics/custom-categories/1-cc.png)](../assets/images/en/basics/custom-categories/1-cc.png)
 
-As a first step, it is necessary to give a unique name to the category so that it can be identified in the category list.
+En premier lieu, il est nécessaire de donner un nom unique à la catégorie afin qu'elle puisse être identifiée dans la liste des catégories.
 
-[![category list](../assets/images/en/basics/custom-categories/2-cc.png)](../assets/images/en/basics/custom-categories/2-cc.png)
+[![liste des catégories](../assets/images/en/basics/custom-categories/2-cc.png)](../assets/images/en/basics/custom-categories/2-cc.png)
 
-Furthermore, the category has to be linked to one or more [object types](structure-of-the-it-documentation.md) in order to use it.
+De plus, la catégorie doit être liée à un ou plusieurs [types d'objets](structure-of-the-it-documentation.md) afin de pouvoir l'utiliser.
 
-[![object types](../assets/images/en/basics/custom-categories/3-cc.png)](../assets/images/en/basics/custom-categories/3-cc.png)
+[![types d'objets](../assets/images/en/basics/custom-categories/3-cc.png)](../assets/images/en/basics/custom-categories/3-cc.png)
 
-Now you can define if you require a [single-](structure-of-the-it-documentation.md) or a [multi-value-category](structure-of-the-it-documentation.md). If you wish to use attributes which are unique in their combination, the configuration as single-value category will be sufficient. However, if you want to use the values repeatedly, you will need a multi-value category. This way it is possible to save multiple entries in one category.
+Maintenant, vous pouvez définir si vous avez besoin d'une [catégorie à valeur unique](structure-of-the-it-documentation.md) ou d'une [catégorie à valeurs multiples](structure-of-the-it-documentation.md). Si vous souhaitez utiliser des attributs uniques dans leur combinaison, la configuration en tant que catégorie à valeur unique sera suffisante. Cependant, si vous souhaitez utiliser les valeurs de manière répétée, vous aurez besoin d'une catégorie à valeurs multiples. De cette manière, il est possible de sauvegarder plusieurs entrées dans une catégorie.
 
-[![multi-value-category](../assets/images/en/basics/custom-categories/4-cc.png)](../assets/images/en/basics/custom-categories/4-cc.png)
+[![catégorie à valeurs multiples](../assets/images/en/basics/custom-categories/4-cc.png)](../assets/images/en/basics/custom-categories/4-cc.png)
 
-In order to have access to a category in a database when querying (for example, in custom-made [reports](../evaluation/report-manager.md) of the report manager) you can set a database constant. This constant is suggested automatically when creating the category and can be changed.
+Afin d'avoir accès à une catégorie dans une base de données lors de requêtes (par exemple, dans des [rapports](../evaluation/report-manager.md) personnalisés du gestionnaire de rapports), vous pouvez définir une constante de base de données. Cette constante est suggérée automatiquement lors de la création de la catégorie et peut être modifiée.
 
-[![database constant](../assets/images/en/basics/custom-categories/5-cc.png)](../assets/images/en/basics/custom-categories/5-cc.png)
+[![constante de base de données](../assets/images/en/basics/custom-categories/5-cc.png)](../assets/images/en/basics/custom-categories/5-cc.png)
 
-## Characteristics of the Category
+## Caractéristiques de la Catégorie
 
-In order to customize your category you can add any number of attributes with the **Add new field** button.
+Pour personnaliser votre catégorie, vous pouvez ajouter autant d'attributs que vous le souhaitez en utilisant le bouton **Ajouter un nouveau champ**.
 
-You can choose from the following [field types](./attribute-fields.md):
+Vous pouvez choisir parmi les [types de champs](./attribute-fields.md) suivants :
 
-- **Checkbox**<br>
-    A checkbox that can be selected
-- **Date and Time**<br>
-    A field for date or for date + time
+- **Case à cocher**<br>
+    Une case à cocher qui peut être sélectionnée.
+- **Date et Heure**<br>
+    Un champ pour la date ou la date + l'heure.
 - **Dialog+**<br>
-    [Dialog-Plus-Fields](./dialog-admin.md) are fields which can be filled with their own values to make them re-usable. The dialog-plus field can also be used in other categories via the identifier in the **Addition**field, so that the already entered values are available there. For this purpose, it is necessary to enter the same identifier in both categories.
-- **Dialog+ (multiple selection)**<br>
-    Like **Dialog+**, only with any number of values.
-- **File Browser**<br>
-    Allows you to reference a file.
-- **HTML editor**<br>
-    A text field which allows simple text formatting, such as italic letters.
-- **Link**<br>
-    A field to show a hyperlink which can be clicked within the category and forwards from there.
-- **Number only**<br>
-    A field where only numbers can be entered.
-- **Object browser**<br>
-    A field for creating a link to another object. This link is a reference only and not a complete relationship. Therefore this kind of reference will not appear in the CMDB explorer.
-- **Object browser (multiple objects)**<br>
-    Like **object browser**, only with any number of objects.
-- **Object relation**<br>
-    A complete relationship is generated when using an [object relation](./object-relations.md). The **Addition** field allows the selection of the kind of relation and the associated relation text. These relations can also be found in the CMDB explorer. Whenever possible, this field type is to be preferred over the object browser mentioned above.
-- **Object relation** (**multiple objects**)<br>
-    Like **object relation**, only with any number of objects.
-- **Report**<br>
-    Displays a report, the ID of the report must be entered in the additional field.
-- **Text field**<br>
-    A single-line text field for entering plain text.
-- **Text field (masked)**<br>
-    A single-line text field for entering masked text. Content is only in the Database visible.
-- **Text field (multiple rows)**<br>
-    You can enter longer texts in this multi-line text field.
-- **Time**<br>
-    A time between 00:00 and 23:59 can be entered here
-- **Yes-no-field**<br>
-    A simple yes-or-no selection.
+    Les [Champs Dialog-Plus](./dialog-admin.md) sont des champs qui peuvent être remplis avec leurs propres valeurs pour les rendre réutilisables. Le champ dialog-plus peut également être utilisé dans d'autres catégories via l'identifiant dans le champ **Addition**, de sorte que les valeurs déjà saisies soient disponibles là-bas. À cette fin, il est nécessaire d'entrer le même identifiant dans les deux catégories.
+- **Dialog+ (sélection multiple)**<br>
+    Comme **Dialog+**, mais avec un nombre quelconque de valeurs.
+- **Explorateur de fichiers**<br>
+    Vous permet de faire référence à un fichier.
+- **Éditeur HTML**<br>
+    Un champ de texte qui permet une mise en forme simple du texte, comme des lettres en italique.
+- **Lien**<br>
+    Un champ pour afficher un hyperlien qui peut être cliqué dans la catégorie et redirigé à partir de là.
+- **Chiffres uniquement**<br>
+    Un champ où seuls des chiffres peuvent être saisis.
+- **Explorateur d'objets**<br>
+    Un champ pour créer un lien vers un autre objet. Ce lien est une référence uniquement et non une relation complète. Par conséquent, ce type de référence n'apparaîtra pas dans l'explorateur CMDB.
+- **Explorateur d'objets (objets multiples)**<br>
+    Comme **explorateur d'objets**, mais avec un nombre quelconque d'objets.
+- **Relation d'objet**<br>
+    Une relation complète est générée lors de l'utilisation d'une [relation d'objet](./object-relations.md). Le champ **Addition** permet la sélection du type de relation et du texte de relation associé. Ces relations peuvent également être trouvées dans l'explorateur CMDB. Dans la mesure du possible, ce type de champ est à privilégier par rapport à l'explorateur d'objets mentionné ci-dessus.
+- **Relation d'objet** (**objets multiples**)<br>
+    Comme **relation d'objet**, mais avec un nombre quelconque d'objets.
+- **Rapport**<br>
+    Affiche un rapport, l'ID du rapport doit être saisi dans le champ supplémentaire.
+- **Champ de texte**<br>
+    Un champ de texte à une seule ligne pour saisir du texte brut.
+- **Champ de texte (masqué)**<br>
+    Un champ de texte à une seule ligne pour saisir du texte masqué. Le contenu n'est visible que dans la base de données.
+- **Champ de texte (plusieurs lignes)**<br>
+    Vous pouvez saisir des textes plus longs dans ce champ de texte multi-lignes.
+- **Heure**<br>
+    Une heure entre 00:00 et 23:59 peut être saisie ici.
+- **Champ Oui-non**<br>
+    Une simple sélection oui ou non.
 
-Additionally, the following design elements are available:
+De plus, les éléments de design suivants sont disponibles :
 
-- **Horizontal line**<br>
-    Separate fields and contents graphically with a line.
+- **Ligne horizontale**<br>
+    Séparez graphiquement les champs et les contenus avec une ligne.
 - **HTML**<br>
-    You can enter HTML code in the categories configuration which will be interpreted in the category. The source code will be entered in the configuration of the category and cannot be entered by the user when viewing the category in the documentation.
+    Vous pouvez saisir du code HTML dans la configuration des catégories qui sera interprété dans la catégorie. Le code source sera saisi dans la configuration de la catégorie et ne peut pas être saisi par l'utilisateur lors de la consultation de la catégorie dans la documentation.
 - **Javascript**<br>
-    You can enter Javascript code in the categories configuration which will be interpreted in the category. The source code will be entered in the configuration of the category and cannot be entered by the user when viewing the category in the documentation.
+    Vous pouvez saisir du code Javascript dans la configuration des catégories qui sera interprété dans la catégorie. Le code source sera saisi dans la configuration de la catégorie et ne peut pas être saisi par l'utilisateur lors de la consultation de la catégorie dans la documentation.
 
-As with most of the other categories, custom categories also have a **Description field** attached at the end.<br>
-If you wish to change the order of the fields, you can do so easily with the dotted area at the start of each line and move the position of the attributes via drag and drop.
+Comme pour la plupart des autres catégories, les catégories personnalisées ont également un **champ de description** attaché à la fin.<br>
+Si vous souhaitez changer l'ordre des champs, vous pouvez le faire facilement avec la zone en pointillés au début de chaque ligne et déplacer la position des attributs via un glisser-déposer.
 
-[![Description field](../assets/images/en/basics/custom-categories/6-cc.gif)](../assets/images/en/basics/custom-categories/6-cc.gif)
+[![Champ de description](../assets/images/en/basics/custom-categories/6-cc.gif)](../assets/images/en/basics/custom-categories/6-cc.gif)
 
-You can delete attributes with the **Remove** button.
 
 [![Remove](../assets/images/en/basics/custom-categories/7-cc.gif)](../assets/images/en/basics/custom-categories/7-cc.gif)
 
-!!! attention "Caution!"
+!!! attention "Attention !"
 
-    As soon as the category is in use, existing field types cannot be changed anymore in order to avoid loss of data.
-    If you remove fields in the configuration, you will not be able to access their contents anymore.
+    Dès que la catégorie est utilisée, les types de champ existants ne peuvent plus être modifiés afin d'éviter toute perte de données.
+    Si vous supprimez des champs dans la configuration, vous ne pourrez plus accéder à leur contenu.
 
-An interpretation is carried out below the configuration:
+Une interprétation est effectuée ci-dessous la configuration :
 
-- **Total entry count:**:<br>
-    How often was this category saved? The entries are added up per object (once with single value, per entry with multi-value).
-- **Value count**:<br>
-    Each attribute which was filled and saved is added together.
+- **Nombre total d'entrées :**<br>
+    Combien de fois cette catégorie a-t-elle été enregistrée ? Les entrées sont ajoutées par objet (une fois avec une seule valeur, par entrée avec une valeur multiple).
+- **Nombre de valeurs :**<br>
+    Chaque attribut rempli et enregistré est ajouté ensemble.
 
-[![Custom category](../assets/images/en/basics/custom-categories/8-cc.png)](../assets/images/en/basics/custom-categories/8-cc.png)
+[![Catégorie personnalisée](../assets/images/en/basics/custom-categories/8-cc.png)](../assets/images/en/basics/custom-categories/8-cc.png)
 
-As soon as your category is configured and set up, you can use the **Save** button in order to make the category available in the chosen object types.
+Dès que votre catégorie est configurée et prête, vous pouvez utiliser le bouton **Enregistrer** pour rendre la catégorie disponible dans les types d'objet choisis.
 
-## Technical Configuration
+## Configuration technique
 
-The technical configuration helps you to use the custom category via [API](../i-doit-pro-add-ons/api/index.md). You can display it with the **Show technical configuration** button.
+La configuration technique vous aide à utiliser la catégorie personnalisée via [API](../i-doit-pro-add-ons/api/index.md). Vous pouvez l'afficher avec le bouton **Afficher la configuration technique**.
 
-It is possible to change the technical keys for each field by click on **Change technical key**
+Il est possible de modifier les clés techniques pour chaque champ en cliquant sur **Changer la clé technique**
 
-[![change technical key](../assets/images/en/basics/custom-categories/9-cc.png)](../assets/images/en/basics/custom-categories/9-cc.png)
+[![changer la clé technique](../assets/images/en/basics/custom-categories/9-cc.png)](../assets/images/en/basics/custom-categories/9-cc.png)
 
-Now you are able to alter the key. The key will be checked automtically before you can save the new value.
+Maintenant, vous pouvez modifier la clé. La clé sera vérifiée automatiquement avant que vous puissiez enregistrer la nouvelle valeur.
 
 !!! warning "Attention!"
 
-    Changing the technical key will lead to a migration of the existing data to reference the new key<br>
-    The key can only consist of characters **a-z**, **0-9** and **_**.<br>
-    The key needs to contain at least **one alphabetical character**.<br>
-    The key can **not be empty** or **exceed 64 characters**.<br>
-    The key **needs to be unique**.
+    Changer la clé technique entraînera une migration des données existantes pour faire référence à la nouvelle clé.<br>
+    La clé ne peut contenir que des caractères **a-z**, **0-9** et **_**.<br>
+    La clé doit contenir au moins **un caractère alphabétique**.<br>
+    La clé ne peut **pas être vide** ou **dépasser 64 caractères**.<br>
+    La clé **doit être unique**.
 
-[![editing field key](../assets/images/en/basics/custom-categories/10-cc.png)](../assets/images/en/basics/custom-categories/10-cc.png)
+[![modification de la clé de champ](../assets/images/en/basics/custom-categories/10-cc.png)](../assets/images/en/basics/custom-categories/10-cc.png)
 
-After saving the custom category you can view and use the new technical configuration.
+Après avoir enregistré la catégorie personnalisée, vous pouvez consulter et utiliser la nouvelle configuration technique.
 
-[![Technical Configuration](../assets/images/en/basics/custom-categories/11-cc.png)](../assets/images/en/basics/custom-categories/11-cc.png)
+[![Configuration Technique](../assets/images/en/basics/custom-categories/11-cc.png)](../assets/images/en/basics/custom-categories/11-cc.png)

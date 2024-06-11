@@ -1,21 +1,21 @@
-We're happy to announce the general availability of i-doit v1.17. This is a major update with new and changed features and a lot of bug fixes since the last major release. See the [changelog](../changelogs/changelog-1.17.x/changelog-1.17.md) for a complete list of changes. We encourage you to update to this release as soon as possible.
+Nous sommes heureux d'annoncer la disponibilité générale de i-doit v1.17. Il s'agit d'une mise à jour majeure avec de nouvelles fonctionnalités et des modifications, ainsi que de nombreuses corrections de bugs depuis la dernière version majeure. Consultez le [journal des modifications](../changelogs/changelog-1.17.x/changelog-1.17.md) pour une liste complète des changements. Nous vous encourageons à effectuer la mise à jour vers cette version dès que possible.
 
-Highlights in this release
---------------------------
+Points saillants de cette version
+---------------------------------
 
-*   We enhanced the documentation of **licenses**: You are now able to document licenses based on CPU cores.
-*   The settings of **custom categories** got an UI update.
-*   The data import from **JDisc Discovery** introduces various minor improvements.
-*   Filter for empty values in lists.
-*   Define how many rows should be imported from a CSV file at once in a batch.
+* Nous avons amélioré la documentation des **licences** : Vous pouvez désormais documenter les licences en fonction des cœurs de CPU.
+* Les paramètres des **catégories personnalisées** ont été mis à jour dans l'interface utilisateur.
+* L'importation de données depuis **JDisc Discovery** introduit diverses améliorations mineures.
+* Filtre pour les valeurs vides dans les listes.
+* Définir combien de lignes doivent être importées à la fois à partir d'un fichier CSV en lot.
 
-Update notes
-------------
+Notes de mise à jour
+--------------------
 
-The update to this new version [works as usual](../../maintenance-and-operation/update.md). We slightly adjusted the [system requirements](../../installation/system-requirements.md):
+La mise à jour vers cette nouvelle version [fonctionne comme d'habitude](../../maintenance-and-operation/update.md). Nous avons légèrement ajusté les [exigences système](../../installation/system-requirements.md) :
 
-*   **PHP:** We removed the support of PHP version 7.2 as it is end of life. PHP versions 7.3 and 7.4 are still supported while 7.4 is recommended to use. (Side note: At the moment, PHP version 8 is not supported. We plan the support of PHP 8 in a later release.)
-*   **MariaDB:** We also removed the support of MariaDB version 10.1 as it is end of life. MariaDB versions 10.2, 10.3, 10.4 and 10.5 are still supported while 10.5 is the new recommended version. (Side note: When version 10.6 is marked as stable we plan to support it in a later release.)
-*   **MySQL:** We removed the support of MySQL version 5.6. Version 5.7 is still supported. But we highly recommend to use MariaDB instead of MySQL.
+* **PHP :** Nous avons supprimé le support de la version PHP 7.2 car elle a atteint sa fin de vie. Les versions PHP 7.3 et 7.4 sont toujours prises en charge, la version 7.4 étant recommandée. (Note : Pour le moment, la version PHP 8 n'est pas prise en charge. Nous prévoyons de prendre en charge PHP 8 dans une version ultérieure.)
+* **MariaDB :** Nous avons également supprimé le support de la version MariaDB 10.1 car elle a atteint sa fin de vie. Les versions MariaDB 10.2, 10.3, 10.4 et 10.5 sont toujours prises en charge, la version 10.5 étant la nouvelle version recommandée. (Note : Lorsque la version 10.6 sera marquée comme stable, nous prévoyons de la prendre en charge dans une version ultérieure.)
+* **MySQL :** Nous avons supprimé le support de la version MySQL 5.6. La version 5.7 est toujours prise en charge. Cependant, nous recommandons vivement d'utiliser MariaDB à la place de MySQL.
 
-Before you update ensure all system requirements are met and you've made a [backup of all your data](../../maintenance-and-operation/backup-and-recovery/index.md).
+Avant de procéder à la mise à jour, assurez-vous que toutes les exigences du système sont satisfaites et que vous avez effectué une [sauvegarde de toutes vos données](../../maintenance-and-operation/backup-and-recovery/index.md).

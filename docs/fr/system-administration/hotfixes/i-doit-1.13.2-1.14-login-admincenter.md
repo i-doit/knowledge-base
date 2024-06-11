@@ -1,31 +1,37 @@
-# i-doit 1.13.2 & 1.14: Login to Admin Center no longer possible
+# i-doit 1.13.2 & 1.14: Connexion au Centre d'administration n'est plus possible
 
-Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP file is unpacked in the i-doit installation directory. Confirm the question whether you want to overwrite files during unpacking (**Y** key for "yes" or **A** key for "all"). Here you can find an example:
+Les correctifs résolvent une erreur spécifique et sont généralement fournis sous forme de fichier ZIP. Le fichier ZIP est décompressé dans le répertoire d'installation de i-doit. Confirmez la question si vous souhaitez écraser les fichiers lors de la décompression (touche **Y** pour "oui" ou **A** pour "tous"). Voici un exemple :
 
-    sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
-    cd /var/www/html/i-doit/
-    sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
-    sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+```bash
+sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
+cd /var/www/html/i-doit/
+sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
+```
 
-!!! attention "Please note"
+!!! attention "Veuillez noter"
 
-    Please use hotfixes exclusively with the specified version.
-    Please ensure that you made a [backup of i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) before you use any hotfix.
-    Please inform us about the use of hotfixes should you contact our support team afterwards.
+    Veuillez utiliser les correctifs exclusivement avec la version spécifiée.
+    Assurez-vous d'avoir effectué une [sauvegarde de i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) avant d'utiliser un correctif.
+    Veuillez nous informer de l'utilisation des correctifs si vous contactez notre équipe de support par la suite.
 
-!!! danger "Updating from i-doit 1.12.2 to 1.12.3 is not possible (Version 1.12.2 only!)"
+!!! danger "La mise à jour de i-doit 1.12.2 à 1.12.3 n'est pas possible (Version 1.12.2 uniquement !)"
 
-This hotfix corrects an error that prevents the update from continuing via the download function when version 1.12.2 is used.
+Ce correctif corrige une erreur qui empêche la mise à jour de se poursuivre via la fonction de téléchargement lorsque la version 1.12.2 est utilisée.
 
-!!! attention "Declaration of consent"
+!!! attention "Déclaration de consentement"
 
-    By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
+    En téléchargeant un correctif, vous déclarez avoir lu et compris complètement les notes mentionnées ci-dessus.
 
 [i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip :material-file-download:](../../assets/downloads/hotfixes/i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip){ .md-button .md-button--primary }
 
-After implementation, this hotfix provides a new command for [console.php](../../automation-and-integration/cli/index.md) to issue a new encrypted password for the Admin Center.  
-The following command must be executed to reset the password:
+Après la mise en œuvre, ce correctif fournit une nouvelle commande pour [console.php](../../automation-and-integration/cli/index.md) pour émettre un nouveau mot de passe chiffré pour le Centre d'administration.  
+La commande suivante doit être exécutée pour réinitialiser le mot de passe :
 
-    sudo -u www-data php console.php admin-center-password-reset --user User --password Password
+```bash
+sudo -u www-data php console.php admin-center-password-reset --user Utilisateur --password MotDePasse
+```
 
-The user www-data is the Apache user of a Debian system. This user has to be adapted to other systems. Furthermore in the sections --user and --password a user from i-doit is needed who has the permissions to use the console.
+L'utilisateur www-data est l'utilisateur Apache d'un système Debian. Cet utilisateur doit être adapté à d'autres systèmes. De plus, dans les sections --user et --password, un utilisateur de i-doit est nécessaire qui a les autorisations pour utiliser la console.
+
+Please provide the Markdown content you would like me to translate into French.

@@ -1,20 +1,20 @@
-We're pleased to announce our latest minor version 1.18.2 of i-doit pro. This update contains a lot of bug fixes, which can be found in the [changelog](../../changelogs/changelog-1.18.x/changelog-1.18.2.md). You will also get the option to assign rights to objects, based on their assigned contacts. As usual, you should [update](../../../maintenance-and-operation/update.md) to the latest version to benefit from these changes.
+Nous sommes heureux d'annoncer notre dernière version mineure 1.18.2 de i-doit pro. Cette mise à jour contient de nombreuses corrections de bugs, qui peuvent être trouvées dans le [journal des modifications](../../changelogs/changelog-1.18.x/changelog-1.18.2.md). Vous aurez également la possibilité d'attribuer des droits aux objets, en fonction de leurs contacts assignés. Comme d'habitude, vous devriez [mettre à jour](../../../maintenance-and-operation/update.md) vers la dernière version pour bénéficier de ces changements.
 
-Primary changes in this version
--------------------------------
+Changements principaux dans cette version
+----------------------------------------
 
-*   The **OCS interface** has now become a separate **add-on**.
-*   New **right assignment**, based on contact assignments
+*   L'interface **OCS** est désormais devenue un **module complémentaire** séparé.
+*   Nouvelle **attribution de droits**, basée sur les affectations de contacts
 
-Add-ons
--------
+Modules complémentaires
+-----------------------
 
-Alongside i-doit pro 1.18.2, we will also release new versions of the following add-on:
+Aux côtés de i-doit pro 1.18.2, nous publierons également de nouvelles versions des modules complémentaires suivants :
 
   
 [Forms](../../../i-doit-pro-add-ons/forms/index.md) **1.1**
 
-System requirements
--------------------
+Configuration système requise
+------------------------------
 
-Make sure, your system matches our [system requirements](../../../installation/system-requirements.md) before updating your instance of i-doit to 1.18 and you have created a [backup of all your data](../../../maintenance-and-operation/backup-and-recovery/backup-script-for-data-and-files.md).
+Assurez-vous que votre système correspond à nos [exigences système](../../../installation/system-requirements.md) avant de mettre à jour votre instance de i-doit vers la version 1.18 et que vous avez créé une [sauvegarde de toutes vos données](../../../maintenance-and-operation/backup-and-recovery/backup-script-for-data-and-files.md).

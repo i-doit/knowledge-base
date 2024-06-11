@@ -1,22 +1,22 @@
-# Example of CSV import - Creating Locations
+# Exemple d'importation CSV - Création de lieux
 
-Today we will take a look at a practical example of CSV import.
-Our use case is the automatic creation of locations within i-doit using a CSV import.
+Aujourd'hui, nous allons examiner un exemple pratique d'importation CSV.
+Notre cas d'utilisation est la création automatique de lieux dans i-doit en utilisant une importation CSV.
 
-!!! info "This article was last checked for i-doit version 1.17.1"
+!!! info "Cet article a été vérifié pour la version i-doit 1.17.1"
 
-We need the following information to create the individual objects:
+Nous avons besoin des informations suivantes pour créer les objets individuels :
 
--  The self-created object type Floor/Basement with the object type constant →  C\_\_OBJECT\_TYPE\_\_FLOOR.
--  Object name → the name of the building, floor or room
--  Location → under which location the object should be located
--  Object type → what type of object it should be
+- Le type d'objet créé par soi-même Étage/Sous-sol avec la constante de type d'objet → C\_\_OBJECT\_TYPE\_\_FLOOR.
+- Nom de l'objet → le nom du bâtiment, de l'étage ou de la pièce
+- Lieu → sous quel lieu l'objet doit être situé
+- Type d'objet → quel type d'objet il doit être
 
-Example CSV file for this import:
+Exemple de fichier CSV pour cette importation :
 
-[Import-Location.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/Import-Location.csv){ .md-button .md-button--primary }
+[Télécharger le fichier Import-Location.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/Import-Location.csv){ .md-button .md-button--primary }
 
-The structure of the CSV looks as follows:
+La structure du CSV est la suivante :
 
 ??? example "Import Location.csv"
 
@@ -85,31 +85,31 @@ The structure of the CSV looks as follows:
     Room 3.014;Third Floor;C__OBJTYPE__ROOM
     ```
 
-Since we want to set dependencies that build on each other, it is important to keep a corresponding order for the locations in the CSV file.  
-The root location is always the lowest level and already exists. In this location are the individual buildings, in the buildings the individual floors and in the floors the respective rooms:
+Comme nous voulons définir des dépendances qui se construisent les unes sur les autres, il est important de maintenir un ordre correspondant pour les lieux dans le fichier CSV.  
+Le lieu racine est toujours le niveau le plus bas et existe déjà. Dans ce lieu se trouvent les bâtiments individuels, dans les bâtiments les étages individuels et dans les étages les pièces respectives:
 
-  Root location → Building → Floor → Room
+  Emplacement racine → Bâtiment → Étage → Salle { /*examples*/ }
 
-So in the CSV file the buildings come first, then the floors and last the rooms.
+Donc, dans le fichier CSV, les bâtiments viennent en premier, puis les étages et enfin les salles.
 
-[![buildings-floor-room](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/1-csv-cl.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/1-csv-cl.png)
+[![bâtiments-étage-salle](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/1-csv-cl.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/1-csv-cl.png)
 
-In order to define which object type is to be created in each case, we give the import in each line the object type constant on the way, we find this in the object type configuration:
+Pour définir quel type d'objet doit être créé dans chaque cas, nous attribuons à l'importation, sur chaque ligne, la constante de type d'objet de la manière suivante, que nous trouvons dans la configuration du type d'objet :
 
-[![object-type-configuration](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/2-csv-cl.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/2-csv-cl.png)
+[![configuration-type-objet](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/2-csv-cl.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/2-csv-cl.png)
 
-Now let's look at the configuration for the import, in the upper area we can leave the settings as they are:
+Maintenant, regardons la configuration pour l'importation, dans la zone supérieure, nous pouvons laisser les paramètres tels qu'ils sont :
 
 [![configuration](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/3-csv-cl.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/3-csv-cl.png)
 
-Now click Prepare Mapping, after that we can adjust the settings as follows:
+Maintenant, cliquez sur Préparer la correspondance, après quoi nous pouvons ajuster les paramètres comme suit:
 
-[![prepare-mapping](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/4-csv-cl.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/4-csv-cl.png)
+[![préparer-la-correspondance](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/4-csv-cl.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/4-csv-cl.png)
 
-Now we are ready and can start the import, in the location view the following picture should appear afterwards:
+Maintenant, nous sommes prêts et pouvons commencer l'importation, dans la vue de l'emplacement l'image suivante devrait apparaître ensuite:
 
-[![import-start](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/5-csv-cl.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/5-csv-cl.png)
+[![démarrer-l'importation](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/5-csv-cl.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/5-csv-cl.png)
 
-The configuration of the newly created object type Floor:
+La configuration du type d'objet nouvellement créé Étage:
 
 [![configuration](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/6-csv-cl.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-create-locations/6-csv-cl.png)

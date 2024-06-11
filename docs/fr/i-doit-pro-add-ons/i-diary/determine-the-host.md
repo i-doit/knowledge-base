@@ -1,38 +1,38 @@
-# i-diary: Determine the host
+# i-diary: Déterminer l'hôte
 
-There are three ways to select a host:
+Il existe trois façons de sélectionner un hôte :
 
-Automatically discover a host
+Découverte automatique d'un hôte
 -----------------------------
 
-If no object is stored in the settings, an object should be determined automatically and proposed to the user. The name of the application host is determined for this purpose.
+Si aucun objet n'est stocké dans les paramètres, un objet doit être déterminé automatiquement et proposé à l'utilisateur. Le nom de l'hôte de l'application est déterminé à cette fin.
 
-[![Automatically discover a host](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-host/1-dth.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-host/1-dth.png)
+[![Découverte automatique d'un hôte](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-host/1-dth.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-host/1-dth.png)
 
-The hostname is searched for as the object title in i-doit
+Le nom d'hôte est recherché en tant que titre de l'objet dans i-doit
 ----------------------------------------------------------
 
-*   If exactly one object is found, its ID is saved.
-*   If several objects with the same name are found, the user can choose from these objects.
-*   The user can cancel the selection to manually select the host.
+*   Si un seul objet est trouvé, son ID est enregistré.
+*   Si plusieurs objets portant le même nom sont trouvés, l'utilisateur peut choisir parmi ces objets.
+*   L'utilisateur peut annuler la sélection pour sélectionner manuellement l'hôte.
     
 
-Set host manually
+Définir l'hôte manuellement
 -----------------
 
-*   The user sets the Object ID in the configuration file. After restarting the application the setting takes effect.
+*   L'utilisateur définit l'ID de l'objet dans le fichier de configuration. Après le redémarrage de l'application, le paramètre prend effet.
 
-[![Set host manually](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-host/1-dth.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-host/1-dth.png)
+[![Définir l'hôte manuellement](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-host/1-dth.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/determine-the-host/1-dth.png)
 
-*   The user selects an object title from a searchable list. Only objects whose object types are assigned to the category “Diary” are displayed. The list is divided into the respective object types. The translated title of the respective object type is displayed as the list heading. If the user selects an object from the list, its ID is saved.
-*   The user types the Object ID into a search mask. The application gives feedback whether the object was found and saves its ID.
-*   The user enters the Object Title in a search mask. The application gives feedback if the object was found and saves its ID.
-*   If several objects with the same name are found, the user can choose from this list.
+*   L'utilisateur sélectionne un titre d'objet dans une liste consultable. Seuls les objets dont les types d'objet sont assignés à la catégorie "Journal" sont affichés. La liste est divisée en fonction des types d'objets respectifs. Le titre traduit du type d'objet respectif est affiché comme en-tête de liste. Si l'utilisateur sélectionne un objet dans la liste, son ID est enregistré.
+*   L'utilisateur saisit l'ID de l'objet dans un masque de recherche. L'application donne un retour d'information sur la présence de l'objet et enregistre son ID.
+*   L'utilisateur saisit le titre de l'objet dans un masque de recherche. L'application donne un retour d'information sur la présence de l'objet et enregistre son ID.
+*   Si plusieurs objets portant le même nom sont trouvés, l'utilisateur peut choisir dans cette liste.
     
 
-Reuse host
+Réutilisation de l'hôte
 ----------
 
-When the application is started, the configuration file is read if the configuration file exists.
+Lorsque l'application est lancée, le fichier de configuration est lu s'il existe.
 
-If an object ID is saved, the application gets the respective title to display it.
+Si un ID d'objet est enregistré, l'application récupère le titre respectif pour l'afficher.

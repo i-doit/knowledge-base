@@ -1,77 +1,77 @@
 ---
-title: Namespace cmdb.impact
+title: Espace de noms cmdb.impact
 description: cmdb.impact
 icon: material/api
 #status: updated
-lang: en
+lang: fr
 ---
 
-# Namespace cmdb.impact
+# Espace de noms cmdb.impact
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## cmdb.impact.read
 
-This method is used for impact analysis and recursively returns all relationships of the specified object. The output can be restricted by specifying the relationship type.<br>
-Attention: Depending on the environment and filling of the database this query may take some time and server resources (especially memory).
+Cette méthode est utilisée pour l'analyse d'impact et renvoie de manière récursive toutes les relations de l'objet spécifié. La sortie peut être restreinte en spécifiant le type de relation.<br>
+Attention : En fonction de l'environnement et du remplissage de la base de données, cette requête peut prendre du temps et des ressources serveur (en particulier de la mémoire).
 
-### Request parameters
+### Paramètres de la requête
 
-| Key               | JSON data type    | Required | Description                                                                         |
-| ----------------- | ----------------- | -------- | ----------------------------------------------------------------------------------- |
-| **id**            | Integer           | Yes      | Object identifier, for example: **9**                                               |
-| **relation_type** | String or Integer | Yes      | Constant of the relationship type or ID of the relationship type, for example **4** |
+| Clé               | Type de données JSON | Requis   | Description                                                                         |
+| ----------------- | --------------------- | -------- | ----------------------------------------------------------------------------------- |
+| **id**            | Entier               | Oui      | Identifiant de l'objet, par exemple : **9**                                         |
+| **relation_type** | Chaîne ou Entier     | Oui      | Constante du type de relation ou ID du type de relation, par exemple **4**          |
 
-Default relation types are:
+Les types de relations par défaut sont :
 
-| Title                      | ID  | Constant                                 |
+| Titre                      | ID  | Constante                                |
 | -------------------------- | --- | ---------------------------------------- |
-| Software assignment        | 1   | C__RELATION_TYPE__SOFTWARE               |
-| Cluster service assignment | 2   | C__RELATION_TYPE__CLUSTER_SERVICE        |
-| Backup                     | 3   | C__RELATION_TYPE__BACKUP                 |
-| Contact assignment         | 4   | C__RELATION_TYPE__ADMIN                  |
-| Contact assignment         | 5   | C__RELATION_TYPE__USER                   |
-| Cluster memberships        | 6   | C__RELATION_TYPE__CLUSTER_MEMBERSHIPS    |
-| Power consumer             | 7   | C__RELATION_TYPE__POWER_CONSUMER         |
+| Attribution de logiciel    | 1   | C__RELATION_TYPE__SOFTWARE               |
+| Attribution de service de cluster | 2   | C__RELATION_TYPE__CLUSTER_SERVICE        |
+| Sauvegarde                 | 3   | C__RELATION_TYPE__BACKUP                 |
+| Attribution de contact     | 4   | C__RELATION_TYPE__ADMIN                  |
+| Attribution de contact     | 5   | C__RELATION_TYPE__USER                   |
+| Adhésions de cluster       | 6   | C__RELATION_TYPE__CLUSTER_MEMBERSHIPS    |
+| Consommateur d'énergie     | 7   | C__RELATION_TYPE__POWER_CONSUMER         |
 | Ports                      | 8   | C__RELATION_TYPE__NETWORK_PORT           |
-| Virtual machine            | 9   | C__RELATION_TYPE__VIRTUAL_MACHINE        |
-| Location                   | 10  | C__RELATION_TYPE__LOCATION               |
+| Machine virtuelle          | 9   | C__RELATION_TYPE__VIRTUAL_MACHINE        |
+| Emplacement                | 10  | C__RELATION_TYPE__LOCATION               |
 | Interface                  | 11  | C__RELATION_TYPE__UNIVERSAL_INTERFACE    |
-| Host address               | 12  | C__RELATION_TYPE__IP_ADDRESS             |
-| FC port                    | 13  | C__RELATION_TYPE__CONTROLLER_FC_PORT     |
-| Connectors                 | 14  | C__RELATION_TYPE__CONNECTORS             |
-| Logical devices (Client)   | 15  | C__RELATION_TYPE__LDEV_CLIENT            |
-| Group memberships          | 16  | C__RELATION_TYPE__GROUP_MEMBERSHIPS      |
-| Person group memberships   | 17  | C__RELATION_TYPE__PERSON_ASSIGNED_GROUPS |
-| Dependency                 | 18  | C__RELATION_TYPE__DEFAULT                |
-| Database access            | 19  | C__RELATION_TYPE__DATABASE_ACCESS        |
-| Database links             | 20  | C__RELATION_TYPE__DATABASE_LINK          |
-| Database gateway           | 21  | C__RELATION_TYPE__DATABASE_GATEWAY       |
-| Database instance          | 22  | C__RELATION_TYPE__DATABASE_INSTANCE      |
-| Service component          | 23  | C__RELATION_TYPE__IT_SERVICE_COMPONENT   |
-| Replication partner        | 24  | C__RELATION_TYPE__REPLICATION_PARTNER    |
-| SOA-Component              | 25  | C__RELATION_TYPE__SOA_COMPONENTS         |
+| Adresse hôte               | 12  | C__RELATION_TYPE__IP_ADDRESS             |
+| Port FC                    | 13  | C__RELATION_TYPE__CONTROLLER_FC_PORT     |
+| Connecteurs                | 14  | C__RELATION_TYPE__CONNECTORS             |
+| Appareils logiques (Client) | 15  | C__RELATION_TYPE__LDEV_CLIENT            |
+| Adhésions de groupe        | 16  | C__RELATION_TYPE__GROUP_MEMBERSHIPS      |
+| Adhésions de groupe de personnes | 17  | C__RELATION_TYPE__PERSON_ASSIGNED_GROUPS |
+| Dépendance                 | 18  | C__RELATION_TYPE__DEFAULT                |
+| Accès à la base de données | 19  | C__RELATION_TYPE__DATABASE_ACCESS        |
+| Liens de base de données   | 20  | C__RELATION_TYPE__DATABASE_LINK          |
+| Passerelle de base de données | 21  | C__RELATION_TYPE__DATABASE_GATEWAY       |
+| Instance de base de données | 22  | C__RELATION_TYPE__DATABASE_INSTANCE      |
+| Composant de service       | 23  | C__RELATION_TYPE__IT_SERVICE_COMPONENT   |
+| Partenaire de réplication  | 24  | C__RELATION_TYPE__REPLICATION_PARTNER    |
+| Composant SOA              | 25  | C__RELATION_TYPE__SOA_COMPONENTS         |
 
-### Response parameters
+### Paramètres de réponse
 
-JSON key **result** contains an array of JSON objects. Each object contains a search result.
+La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-| Key             | JSON data type | Description |
-| --------------- | -------------- | ----------- |
-| **id**          | String         | Placeholder |
-| **name**        | String         | Placeholder |
-| **data**        | String         | Placeholder |
-| **type**        | String         | Placeholder |
-| **text**        | String         | Placeholder |
-| **relation**    | String         | Placeholder |
-| **statusColor** | String         | Placeholder |
-| **objTypeID**   | String         | Placeholder |
-| **objectType**  | String         | Placeholder |
-| **objID**       | String         | Placeholder |
+| Clé             | Type de données JSON | Description |
+| --------------- | --------------------- | ----------- |
+| **id**          | Chaîne               | Placeholder |
+| **name**        | Chaîne               | Placeholder |
+| **data**        | Chaîne               | Placeholder |
+| **type**        | Chaîne               | Placeholder |
+| **text**        | Chaîne               | Placeholder |
+| **relation**    | Chaîne               | Placeholder |
+| **statusColor** | Chaîne               | Placeholder |
+| **objTypeID**   | Chaîne               | Placeholder |
+| **objectType**  | Chaîne               | Placeholder |
+| **objID**       | Chaîne               | Placeholder |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -87,7 +87,7 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {

@@ -1,8 +1,8 @@
-# Release Notes 28
+# Notes de version 28 {/examples}
 
-We’re happy to announce i-doit pro 28 - 2023’s final release which focuses on **security and quality**.
+Nous sommes heureux d'annoncer la version finale de i-doit pro 28 - 2023 qui met l'accent sur la **sécurité et la qualité**.
 
-The following **CVE**s have been resolved with the changes from this release:
+Les **CVE** suivantes ont été résolues avec les modifications de cette version :
 
 CVE-2023-46856<br>
 CVE-2023-49303<br>
@@ -18,6 +18,6 @@ CVE-2023-49309<br>
 CVE-2023-49311<br>
 CVE-2023-49310<br>
 
-Furthermore, we have taken feedback from our customers to further improve the previously released feature to create custom **category folders** for a more intuitive configuration and folder creation. Last but not least, we added a lot of bug fixes for a general improvement of your experience which can be found in detail in our changelog.
+De plus, nous avons pris en compte les retours de nos clients pour améliorer davantage la fonctionnalité précédemment publiée afin de créer des **dossiers de catégories personnalisés** pour une configuration et une création de dossiers plus intuitives. Enfin, nous avons ajouté de nombreuses corrections de bugs pour améliorer globalement votre expérience, que vous pouvez trouver en détail dans notre journal des modifications.
 
-We highly encourage you to [update](../../maintenance-and-operation/update.md) your installation of i-doit pro to version 28 as soon as possible to benefit from all of the contained improvements.
+Nous vous encourageons vivement à [mettre à jour](../../maintenance-and-operation/update.md) votre installation de i-doit pro vers la version 28 dès que possible pour bénéficier de toutes les améliorations contenues.

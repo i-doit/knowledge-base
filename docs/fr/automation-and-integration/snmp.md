@@ -1,31 +1,31 @@
 # SNMP
 
-The SNMP category allows you to read out the SNMP values of objects and display them in realtime. Using the example scenario of querying a switch we will discuss the requirements and execution in this article.
+La catégorie SNMP vous permet de lire les valeurs SNMP des objets et de les afficher en temps réel. En utilisant l'exemple de requête d'un commutateur, nous discuterons des exigences et de l'exécution dans cet article.
 
-## Requirements
+## Exigences
 
-i-doit requires the SNMP module of PHP in order to use this category. In Debian you can install the module with the following command:
+i-doit nécessite le module SNMP de PHP pour utiliser cette catégorie. Sur Debian, vous pouvez installer le module avec la commande suivante :
 
 ```shell
 sudo apt-get install php5-snmp
 ```
 
-Afterwards, you have to assign the SNMP category to the desired object type with the **Data structure editor**. In our example we only used the **Switch** object type.
+Ensuite, vous devez attribuer la catégorie SNMP au type d'objet souhaité avec l'**Éditeur de structure de données**. Dans notre exemple, nous avons utilisé uniquement le type d'objet **Switch**.
 
-Furthermore, we need a valid host address which in turn needs to be documented in the respective category of course.
+De plus, nous avons besoin d'une adresse hôte valide qui doit être documentée dans la catégorie respective bien sûr.
 
 [![object](../assets/images/en/automation-and-integration/snmp/1-snmp.png)](../assets/images/en/automation-and-integration/snmp/1-snmp.png)
 
-In order to avoid failed attempts we test the SNMP connection "manually" by accessing the console of the server via SSH. For this purpose, we install the "snmp" package in order to be provided with the "snmpwalk" command. Afterwards, we use a standard call of the switch which will supply us with the list of all interfaces.
+Afin d'éviter les tentatives échouées, nous testons la connexion SNMP "manuellement" en accédant à la console du serveur via SSH. À cette fin, nous installons le paquet "snmp" afin d'obtenir la commande "snmpwalk". Ensuite, nous utilisons un appel standard du commutateur qui nous fournira la liste de toutes les interfaces.
 
 ```shell
 sudo apt-get install snmpsnmpwalk -v 2c -c public 192.168.10.13 .1.3.6.1.2.1.2.2.1.1
 ```
 
-!!! info "At this point we omit the details on the subject of SNMP and this call. Information about the OID .1.3.6.1.2.1.2.2.1.1 can be found here for example: [http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1](http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1)"
+!!! info "À ce stade, nous omettons les détails sur le sujet de SNMP et cet appel. Des informations sur l'OID .1.3.6.1.2.1.2.2.1.1 peuvent être trouvées ici par exemple: [http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1](http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1)"
 
 
-In our case the results look like this:
+Dans notre cas, les résultats ressemblent à ceci:
 
 iso.3.6.1.2.1.2.2.1.1.1 = INTEGER: 1
 
@@ -75,17 +75,17 @@ iso.3.6.1.2.1.2.2.1.1.23 = INTEGER: 23
 
 iso.3.6.1.2.1.2.2.1.1.24 = INTEGER: 24
 
-The query was successful and we are dealing with a 24port switch. If timeouts or similar issues arise at this point, you should check the network connectivity to verify whether SNMP is allowed under the firewall rules, the SNMP server is running and whether the i-doit server has access permissions for the SNMP server. Of course also the selected SNMP community (in our example public) has to be available.
+La requête a été réussie et nous traitons un commutateur à 24 ports. Si des délais d'attente ou des problèmes similaires surviennent à ce stade, vous devriez vérifier la connectivité réseau pour vérifier si SNMP est autorisé dans les règles du pare-feu, si le serveur SNMP est en cours d'exécution et si le serveur i-doit a des autorisations d'accès pour le serveur SNMP. Bien sûr, la communauté SNMP sélectionnée (dans notre exemple public) doit également être disponible.
 
-Now we switch back to the SNMP category in i-doit. The primary IP address of the switch is automatically shown there and the standard SNMP community public is offered.
+Maintenant, nous retournons à la catégorie SNMP dans i-doit. L'adresse IP principale du commutateur est automatiquement affichée là-bas et la communauté SNMP standard public est proposée.
 
-Since we are not interested in the interface indices, we will concern ourselves with the OID for the list of faulty packets per interface. This has the OID .1.3.6.1.2.1.2.2.1.1.14.x, where x stands for the index of the respective interface.
+Comme nous ne sommes pas intéressés par les indices d'interface, nous nous préoccuperons de l'OID pour la liste des paquets défectueux par interface. Cela a l'OID .1.3.6.1.2.1.2.2.1.1.14.x, où x représente l'index de l'interface respective.
 
-With these details we build 24 entries for the corresponding interfaces:  
+Avec ces détails, nous construisons 24 entrées pour les interfaces correspondantes:
 
-Afterwards, we save the category.
+Ensuite, nous sauvegardons la catégorie.
 
-!!! info "Optional"
-    In the command line example the OIDs are shown with a dot. This is not necessary in the SNMP category and is therefore optional.  
+!!! info "Optionnel"
+    Dans l'exemple de ligne de commande, les OID sont affichés avec un point. Ce n'est pas nécessaire dans la catégorie SNMP et est donc facultatif.
 
-When you click on the category again, the SNMP values are loaded and displayed in realtime. Unfortunately, the test shows that there are packet errors in two interfaces. Therefore we conclude the practical example at this point and begin to search for the reason of the packet errors.
+Lorsque vous cliquez à nouveau sur la catégorie, les valeurs SNMP sont chargées et affichées en temps réel. Malheureusement, le test montre qu'il y a des erreurs de paquets dans deux interfaces. Par conséquent, nous concluons l'exemple pratique à ce stade et commençons à chercher la raison des erreurs de paquets.

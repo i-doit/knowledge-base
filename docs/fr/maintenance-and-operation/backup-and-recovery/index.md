@@ -1,83 +1,89 @@
-# Backup and Recovery
+# Sauvegarde et Récupération
 
-Since the [IT-documentation](../../glossary.md) contains important data required for daily work, the backup and recovery of i-doit is essential. Therefore it is important to consider i-doit with regard to the existing backup strategy.
+Étant donné que la [documentation informatique](../../glossary.md) contient des données importantes nécessaires pour le travail quotidien, la sauvegarde et la récupération d'i-doit sont essentielles. Il est donc important de prendre en compte i-doit en ce qui concerne la stratégie de sauvegarde existante.
 
-In this context, the following three areas need to be covered: [databases](index.md), [files](index.md) of i-doit and the [system configuration](index.md).
+Dans ce contexte, les trois domaines suivants doivent être couverts : les [bases de données](index.md) d'i-doit, les [fichiers](index.md) d'i-doit et la [configuration système](index.md).
 
-Backup and Recovery of Databases
+Sauvegarde et Récupération des Bases de Données
 --------------------------------
 
-For this purpose, you can use the command line tool mysqldump. A simple example for securing all data:
+À cette fin, vous pouvez utiliser l'outil en ligne de commande mysqldump. Un exemple simple pour sécuriser toutes les données :
 
     mysqldump -hlocalhost -uroot -p --all-databases > backup.sql
 
-The corresponding recovery is this:
+La récupération correspondante est la suivante :
 
     mysql -hlocalhost -uroot -p < backup.sql
 
-You should not use i-doit during the backup process in order not to corrupt the backup. The Webserver can be deactivated for the time of the backup/recovery. On Debian-based Linux distributions the command
+Vous ne devriez pas utiliser i-doit pendant le processus de sauvegarde afin de ne pas corrompre la sauvegarde. Le serveur Web peut être désactivé pendant la sauvegarde/récupération. Sur les distributions Linux basées sur Debian, la commande
 
     sudo service apache2 stop
 
-is executed. When the backup/recovery is finished, the command  
+est exécutée. Lorsque la sauvegarde/récupération est terminée, la commande  
 
+```markdown
     sudo service apache2 start
+```
 
-can be used to reactivate the Webserver. If applicable, you should also deactivate [Cronjobs](../../automation-and-integration/cli/index.md), which are set up in i-doit, during the data securing process and reactivate them afterwards.
+peut être utilisé pour réactiver le serveur Web. Si nécessaire, vous devriez également désactiver les [Cronjobs](../../automation-and-integration/cli/index.md), qui sont configurés dans i-doit, pendant le processus de sécurisation des données et les réactiver par la suite.
 
-!!! success "Compressing"
+!!! success "Compression"
 
-    A lot of disk space can be saved by compressing the SQL-dumps. For example, the commands mentioned above could look as follows:
+    Beaucoup d'espace disque peut être économisé en compressant les dumps SQL. Par exemple, les commandes mentionnées ci-dessus pourraient ressembler à ceci :
 
-        # Backup:
+        # Sauvegarde :
         mysqldump -hlocalhost -uroot -p --all-databases | gzip -9 > backup.sql.gz
 
-        # Recovery:
+        # Restauration :
         gunzip < backup.sql.gz | mysql -hlocalhost -uroot -p
 
-!!! attention "Foreign Key Constraints"
+!!! attention "Contraintes de clé étrangère"
 
-    When restoring database contents, it may happen that MySQL/MariaDB aborts the process and shows an error message, as for example: errno: 150 "Foreign key constraint is incorrectly formed"
+    Lors de la restauration du contenu de la base de données, il peut arriver que MySQL/MariaDB interrompe le processus et affiche un message d'erreur, par exemple : errno: 150 "La contrainte de clé étrangère est mal formée"
 
-    This is caused by the fact that data and structures are restored one after another (meaning table after table). In the meantime, old data exists additionally beside new (restored) data. The database model of i-doit contains many links of tables between each other for which Foreign Key Constraints are used. This reference of, for example, a dataset A in table 1 to a dataset B in table 2, underlies specific automatisms when A or B is updated or even deleted. The order is important to determine when A is restored and when B is restored. Old and new references can however use the same indexes even if they express different references. This may lead to the errors mentioned above.
+    Cela est dû au fait que les données et les structures sont restaurées les unes après les autres (c'est-à-dire table après table). Pendant ce temps, d'anciennes données existent en plus des nouvelles (restaurées). Le modèle de base de données d'i-doit contient de nombreux liens de tables entre eux pour lesquels des contraintes de clé étrangère sont utilisées. Cette référence, par exemple, d'un ensemble de données A dans la table 1 à un ensemble de données B dans la table 2, est soumise à des automatismes spécifiques lorsque A ou B est mis à jour ou même supprimé. L'ordre est important pour déterminer quand A est restauré et quand B est restauré. Les anciennes et nouvelles références peuvent cependant utiliser les mêmes index même si elles expriment des références différentes. Cela peut entraîner les erreurs mentionnées ci-dessus.
+```
 
-    Deleting the databases explicitly before restoring is a suitable workaround for this:
+    Supprimer explicitement les bases de données avant de les restaurer est une solution de contournement appropriée pour cela :
 
-        -- Default name of the system database:
+        -- Nom par défaut de la base de données système :
         DROP DATABASE idoit_system;
 
-        -- Default name of the first client database:
+        -- Nom par défaut de la première base de données client :
         DROP DATABASE idoit_data;
 
-Backup and Recovery of Files
-----------------------------
+Sauvegarde et Restauration des Fichiers
+---------------------------------------
 
-We recommend securing the complete i-doit folder and - if needed - restoring the complete folder. By using
+Nous recommandons de sécuriser l'intégralité du dossier i-doit et - si nécessaire - de restaurer l'intégralité du dossier. En utilisant
 
-    tar -czvf i-doit.tar.gz /pfad/zu/i-doit
+    tar -czvf i-doit.tar.gz /chemin/vers/i-doit
 
-you can create a compressed tar-archive.
+vous pouvez créer une archive tar compressée.
 
-The corresponding recovery is this:
+La restauration correspondante est la suivante :
 
     tar -xzv i-doit.tar.gz
 
-Backup and Recovery of the System Configuration
------------------------------------------------
+Sauvegarde et Restauration de la Configuration Système
+------------------------------------------------------
 
-It is important for the immediate operation of i-doit to secure the configuration files of the Apache Webserver, PHP and MySQL/MariaDB and restore them, if needed. In the best case, you already documented the corresponding changes of the configuration files and stored them safely during the [installation](../../installation/index.md) process of i-doit.
+Il est important pour le fonctionnement immédiat de i-doit de sécuriser les fichiers de configuration du serveur Web Apache, de PHP et de MySQL/MariaDB et de les restaurer, si nécessaire. Dans le meilleur des cas, vous avez déjà documenté les modifications correspondantes des fichiers de configuration et les avez stockées en toute sécurité lors du processus d'[installation](../../installation/index.md) de i-doit.
 
-Backup via VM-Snapshots
------------------------
+Sauvegarde via les Instantanés de VM
+---------------------------------------
 
-i-doit is often installed on a virtual machine (VM). However, for backup and recovery purposes it does not suffice to simply make snapshots of the VM during operation. The problem is the consistency of the databases: The data may be stored in the working memory but is not (yet) located in the non-volatile memory. Therefore it may be the case that data is not covered by the backup and thus lost if the backup is needed.
+i-doit est souvent installé sur une machine virtuelle (VM). Cependant, pour des raisons de sauvegarde et de récupération, il ne suffit pas de simplement prendre des instantanés de la VM pendant son fonctionnement. Le problème réside dans la cohérence des bases de données : Les données peuvent être stockées dans la mémoire de travail mais ne sont pas (encore) situées dans la mémoire non volatile. Il est donc possible que des données ne soient pas couvertes par la sauvegarde et soient ainsi perdues si la sauvegarde est nécessaire.
 
-If you still do not want to do without snapshots, the DBMS MySQL/MariaDB needs to be stopped beforehand. On Debian-based operating systems this is carried out via the following command:
+Si vous ne voulez toujours pas vous passer des instantanés, le SGBD MySQL/MariaDB doit être arrêté au préalable. Sur les systèmes d'exploitation basés sur Debian, cela est effectué via la commande suivante :
 
     sudo service mysql stop
 
-When the snapshot was taken, the DBMS is restarted:
+Une fois l'instantané pris, le SGBD est redémarré :
 
     sudo service mysql start
 
-It is surely well understood but still important to mention: **Backups should never stay on the system that is being secured.**
+Il est certainement bien compris mais toujours important de mentionner : **Les sauvegardes ne doivent jamais rester sur le système qui est sécurisé.**
+
+{/*examples*/}
+

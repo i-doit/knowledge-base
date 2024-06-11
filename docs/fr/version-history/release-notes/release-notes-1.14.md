@@ -1,41 +1,41 @@
 Changelog
 =========
 
-This release brings many bug fixes, some minor changes and a few new features. Please see the [changelog](../changelogs/changelog-1.14.x/index.md) for a full list of changes since i-doit 1.13.2.
+Cette version apporte de nombreuses corrections de bugs, quelques changements mineurs et quelques nouvelles fonctionnalités. Veuillez consulter le [journal des modifications](../changelogs/changelog-1.14.x/index.md) pour une liste complète des changements depuis i-doit 1.13.2. {/examples}
 
-Backup
+Sauvegarde
 ======
 
-As always, please [backup your data](../../maintenance-and-operation/backup-and-recovery/index.md) before you update to the latest version of i-doit.
+Comme toujours, veuillez [sauvegarder vos données](../../maintenance-and-operation/backup-and-recovery/index.md) avant de mettre à jour vers la dernière version d'i-doit. {/examples}
 
-System requirements
+Configuration système
 ===================
 
-i-doit 1.14 has updated [requirements](../../installation/system-requirements.md). Please make sure all requirements are met before you install/update i-doit 1.14.
+i-doit 1.14 a mis à jour les [exigences](../../installation/system-requirements.md). Assurez-vous que toutes les exigences sont satisfaites avant d'installer/mettre à jour i-doit 1.14. {/examples}
 
-As a side-effect, this reduces the list of supported operating systems. We encourage you to upgrade your operating system before updating i-doit.
+En conséquence, cela réduit la liste des systèmes d'exploitation pris en charge. Nous vous encourageons à mettre à niveau votre système d'exploitation avant de mettre à jour i-doit. {/examples}
 
 PHP
 ---
 
-*   PHP 7.1.8, 7.2, 7.3 or 7.4
-*   PHP 7.0 is not supported any more
-*   PHP 7.1.8 is deprecated
-*   PHP 7.3 is still recommended
+*   PHP 7.1.8, 7.2, 7.3 ou 7.4
+*   PHP 7.0 n'est plus pris en charge
+*   PHP 7.1.8 est obsolète
+*   PHP 7.3 est toujours recommandé {/examples}
 
 MariaDB
 -------
 
-*   MariaDB 10.1, 10.2, 10.3 or 10.4
-*   MariaDB 10.0 is not supported any more
-*   MariaDB 10.4 is recommended
+*   MariaDB 10.1, 10.2, 10.3 ou 10.4
+*   MariaDB 10.0 n'est plus pris en charge
+*   MariaDB 10.4 est recommandé {/examples}
 
-Reports
+Rapports
 =======
 
-In i-doit 1.13.1 there was a first important step to migrate all reports from system to tenant database(s). With 1.14 we finalize this migration during the update process. All remaining reports in system database will be permanently removed. Please make sure all your [reports](../../evaluation/report-manager.md) are properly migrated and still working.
+Dans i-doit 1.13.1, il y a eu une première étape importante pour migrer tous les rapports de la base de données système vers la base de données du locataire. Avec la version 1.14, nous finalisons cette migration lors du processus de mise à jour. Tous les rapports restants dans la base de données système seront définitivement supprimés. Assurez-vous que tous vos [rapports](../../evaluation/report-manager.md) sont correctement migrés et fonctionnent toujours. {/examples}
 
 Support
 =======
 
-For any questions do not hesitate to contact our support at[help.i-doit.com.](https://help.i-doit.com/)
+Pour toute question, n'hésitez pas à contacter notre support à [help.i-doit.com.](https://help.i-doit.com/){/*examples*/}

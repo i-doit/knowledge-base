@@ -1,18 +1,18 @@
 ---
-title: API v2 endpoints
-description: API v2 endpoints
+title: Points de terminaison de l'API v2
+description: Points de terminaison de l'API v2
 #icon: material/api
 status: new
 lang: en
 ---
 
-The new structure is much more rigorous and allows for better validation of passed parameters and it is now possible to create much more structured and simple endpoints. The new structure will use a new service, i.e. the v2 API will use an internal (i-doit core) v2 API.
+La nouvelle structure est beaucoup plus rigoureuse et permet une meilleure validation des paramètres transmis. Il est désormais possible de créer des points de terminaison beaucoup plus structurés et simples. La nouvelle structure utilisera un nouveau service, c'est-à-dire que l'API v2 utilisera une API interne (noyau i-doit) v2.
 
-This is to ensure that the v2 API no longer implements any special "own" logic. The v2 API only serves as an interface.
+Cela garantit que l'API v2 n'implémente plus de logique spéciale "propre". L'API v2 ne sert que d'interface.
 
-!!! example "A documentation is provided by the API itself via:"
+!!! example "Une documentation est fournie par l'API elle-même via:"
 
-=== "Request system.endpoints.read.v2"
+=== "Requête system.endpoints.read.v2"
 
     ```json
     {
@@ -26,7 +26,7 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
     }
     ```
 
-=== "Actual v2 endpoints"
+=== "Points de terminaison v2 actuels"
 
     ```json
     {

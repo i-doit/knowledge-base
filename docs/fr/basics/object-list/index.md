@@ -1,16 +1,16 @@
-# Object List
+# Liste d'objets
 
-The object lists in i-doit do not only serve the purpose of listing [objects](../../basics/structure-of-the-it-documentation.md#object), but also provide various features and they can be customized almost completely.
-For each [object type](../../basics/structure-of-the-it-documentation.md#object-type) the object list shows all assigned objects in a table. Each line focuses on an object with its corresponding [attributes](../../basics/structure-of-the-it-documentation.md#attribute). You can [specify](configuration-of-the-list-view.md) which attributes you want to display.
-With a click on the column headers you can sort the columns in ascending or descending order. You can also set a [preliminary sorting](./configuration-of-the-list-view.md#presort-columns) or vary the width of the columns per user.
+Les listes d'objets dans i-doit ne servent pas seulement à répertorier les [objets](../../basics/structure-of-the-it-documentation.md#object), mais offrent également diverses fonctionnalités et peuvent être presque entièrement personnalisées.
+Pour chaque [type d'objet](../../basics/structure-of-the-it-documentation.md#object-type), la liste d'objets affiche tous les objets attribués dans un tableau. Chaque ligne se concentre sur un objet avec ses [attributs](../../basics/structure-of-the-it-documentation.md#attribute) correspondants. Vous pouvez [spécifier](configuration-of-the-list-view.md) les attributs que vous souhaitez afficher.
+En cliquant sur les en-têtes de colonne, vous pouvez trier les colonnes par ordre croissant ou décroissant. Vous pouvez également définir un [tri préliminaire](./configuration-of-the-list-view.md#presort-columns) ou varier la largeur des colonnes par utilisateur.
 
-[![sorting](../../assets/images/en/basics/object-list/1-ol.png)](../../assets/images/en/basics/object-list/1-ol.png)
+[![tri](../../assets/images/en/basics/object-list/1-ol.png)](../../assets/images/en/basics/object-list/1-ol.png)
 
-With the hatched area in each line you can assign an object to another object type. Via drag and drop you can drag the object to the desired object type in the menu tree on the left, called **object view**.
+Avec la zone hachurée dans chaque ligne, vous pouvez attribuer un objet à un autre type d'objet. Via un glisser-déposer, vous pouvez déplacer l'objet vers le type d'objet souhaité dans l'arborescence du menu à gauche, appelé **vue d'objet**.
 
-The following articles inform you about other functions and modifications you can use for the object list:
+Les articles suivants vous informent sur d'autres fonctions et modifications que vous pouvez utiliser pour la liste d'objets :
 
--   [Action bar](./actions-in-object-lists.md):<br> In the upper area you can find single buttons to carry out different actions. To the right of these buttons is a drop-down menu with which you can change the [status](../structure-of-the-it-documentation.md).
--   [Navigation and filtering](./navigation-and-filtering.md):<br> You can navigate through several pages and filter the list by attributes so that you don't loose track.
--   [Configuration of the list view](./configuration-of-the-list-view.md):<br> You can adapt each object list per user. You can also set specifications for existing and new users about how the object lists should look like.
--   [Advanced settings](./advanced-settings.md):<br> Do you want to make the most out of the object lists? This is no problem with the advanced settings.
+-   [Barre d'actions](./actions-in-object-lists.md):<br> Dans la zone supérieure, vous pouvez trouver des boutons individuels pour effectuer différentes actions. À droite de ces boutons se trouve un menu déroulant avec lequel vous pouvez modifier le [statut](../structure-of-the-it-documentation.md).
+-   [Navigation et filtrage](./navigation-and-filtering.md):<br> Vous pouvez naviguer à travers plusieurs pages et filtrer la liste par attributs afin de ne pas perdre le fil.
+-   [Configuration de la vue de liste](./configuration-of-the-list-view.md):<br> Vous pouvez adapter chaque liste d'objets par utilisateur. Vous pouvez également définir des spécifications pour les utilisateurs existants et nouveaux sur la façon dont les listes d'objets devraient apparaître.
+-   [Paramètres avancés](./advanced-settings.md):<br> Vous voulez tirer le meilleur parti des listes d'objets ? Cela ne pose aucun problème avec les paramètres avancés.

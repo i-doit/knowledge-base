@@ -1,13 +1,13 @@
-# checkmk 2: Sync host tags
+# checkmk 2: Synchronisation des balises d'hôte
 
-checkmk’s host and service checks are often based on its tagging system. You can share tag groups and the tags themselves with i-doit by running:
+Les vérifications d'hôtes et de services de checkmk sont souvent basées sur son système de balisage. Vous pouvez partager des groupes de balises et les balises elles-mêmes avec i-doit en exécutant :
 
     idoitcmk sync-tags
 
-Tags will be stored in i-doit under Extras > Check_MK 2 > Tags (static) and can be assigned to any objects with attribute Host tags in category Check_MK Tags.
+Les balises seront stockées dans i-doit sous Extras > Check_MK 2 > Balises (statiques) et peuvent être attribuées à n'importe quels objets avec l'attribut Balises d'hôte dans la catégorie Balises Check_MK.
 
-**Recommendation:** Run this command every time you add new host tags/groups in checkmk.
+**Recommandation :** Exécutez cette commande chaque fois que vous ajoutez de nouvelles balises/groupes d'hôtes dans checkmk.
 
-If you create your own tags, it is important to fill in all fields so that the tags can be created in CheckMK. A mapping of the fields can be seen on the screenshot.
+Si vous créez vos propres balises, il est important de remplir tous les champs afin que les balises puissent être créées dans CheckMK. Un mapping des champs peut être vu sur la capture d'écran.
 
-[![Sync host tags](../../assets/images/en/i-doit-pro-add-ons/checkmk2/sync-host-tags/1-sht.png)](../../assets/images/en/i-doit-pro-add-ons/checkmk2/sync-host-tags/1-sht.png)
+[![Synchronisation des balises d'hôte](../../assets/images/en/i-doit-pro-add-ons/checkmk2/sync-host-tags/1-sht.png)](../../assets/images/en/i-doit-pro-add-ons/checkmk2/sync-host-tags/1-sht.png)

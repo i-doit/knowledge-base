@@ -1,24 +1,25 @@
-# Advanced Settings
+# Paramètres Avancés {/ * exemples * /}
 
-Many parameters concerning the [object lists](index.md) can be adapted according to your requirements. This increases clarity and provides the possibility to gain access to desired contents quickly.
+De nombreux paramètres concernant les [listes d'objets](index.md) peuvent être adaptés selon vos besoins. Cela augmente la clarté et offre la possibilité d'accéder rapidement aux contenus souhaités.
 
-## Adapting the Number of Objects per Page
+## Adaptation du Nombre d'Objets par Page {/ * exemples * /}
 
-You have the possibility to define the number of displayed [objects](../structure-of-the-it-documentation.md) per page for the system. This is a custom setting so that all users are able to determine the objects per page for their own view individially. You can enter and set the number with [**Administration → User settings → User interface**](../../system-administration/administration/user-settings/user-interface/index.md). A very high value may reduce performance.
+Vous avez la possibilité de définir le nombre d'[objets](../structure-of-the-it-documentation.md) affichés par page pour le système. Il s'agit d'un paramètre personnalisé afin que tous les utilisateurs puissent déterminer individuellement le nombre d'objets par page pour leur propre affichage. Vous pouvez entrer et définir le nombre avec [**Administration → Paramètres utilisateur → Interface utilisateur**](../../system-administration/administration/user-settings/user-interface/index.md). Une valeur très élevée peut réduire les performances.
 
-## Maximum Length of Object Titles
+## Longueur Maximale des Titres d'Objet {/ * exemples * /}
 
-Depending on how many attributes or columns are to be displayed in a list, it may be useful to limit the maximum length of the object title. Should an [object title](../unique-references.md) exceed this length, it will be abbreviated with three dots (...) from the specified length. You can adapt the maximum length with [**Administration → [Tenant-Name] management → [Tenant-Name] Settings → Maximum lengths → Object title in lists**](../../system-administration/administration/tenant-management/settings-for-tenant.md#maximum-lengths). Enter the desired maximum length as a positive integer into the text field.
+En fonction du nombre d'attributs ou de colonnes à afficher dans une liste, il peut être utile de limiter la longueur maximale du titre de l'objet. Si un [titre d'objet](../unique-references.md) dépasse cette longueur, il sera abrégé avec trois points (...) à partir de la longueur spécifiée. Vous pouvez adapter la longueur maximale avec [**Administration → Gestion du [Nom-du-locataire] → Paramètres du [Nom-du-locataire] → Longueurs maximales → Titre de l'objet dans les listes**](../../system-administration/administration/tenant-management/settings-for-tenant.md#maximum-lengths). Entrez la longueur maximale souhaitée en tant qu'entier positif dans le champ de texte.
 
-## Activation/ Deactivation of the Quickpurge Button
+## Activation/ Désactivation du Bouton de Purge Rapide
 
-You can add the [**Quickpurge**](../../system-administration/administration/tenant-management/settings-for-tenant.md#cmdb) button to the action bar in object lists. With **Administration → [Tenant-Name] management → [Tenant-Name] Settings → Activate quickpurge button** you can either select **Yes** to display the button or **No** so that it isn't shown.
+Vous pouvez ajouter le bouton [**Purge Rapide**](../../system-administration/administration/tenant-management/settings-for-tenant.md#cmdb) à la barre d'actions dans les listes d'objets. Avec **Administration → Gestion du [Nom-du-Locataire] → Paramètres du [Nom-du-Locataire] → Activer le bouton de purge rapide**, vous pouvez sélectionner **Oui** pour afficher le bouton ou **Non** pour qu'il ne soit pas affiché.
 
-## Activation/ Deactivation of the Drag and Drop Function
+## Activation/ Désactivation de la Fonction Glisser-Déposer
 
-An object can be assigned to another [object type](../structure-of-the-it-documentation.md) by using the drag and drop function. With [**Administration → [Tenant-Name] management → [Tenant-Name] → Settings Graphical interface → Drag 'n' Drop of objects**](../../system-administration/administration/tenant-management/settings-for-tenant.md#graphical-interface) you can either activate the function by
-choosing **Yes** or deactivate it by choosing **No**.
+Un objet peut être assigné à un autre [type d'objet](../structure-of-the-it-documentation.md) en utilisant la fonction glisser-déposer. Avec [**Administration → Gestion du [Nom-du-Locataire] → [Nom-du-Locataire] → Paramètres Interface Graphique → Glisser-déposer des objets**](../../system-administration/administration/tenant-management/settings-for-tenant.md#graphical-interface), vous pouvez activer la fonction en choisissant **Oui** ou la désactiver en choisissant **Non**.
 
-## Display of Templates in Object Lists
+## Affichage des Modèles dans les Listes d'Objets
 
-Templates aren't displayed in object lists in i-doit. However, you can display them beside Norma, Archived and Deleted as templates. Use [**Administration → [Tenant-Name] management → [Tenant-Name] Settings → Templates → Show template filter in object lists**](../../system-administration/administration/tenant-management/settings-for-tenant.md#templates) to carry out the corresponding settings.
+Les modèles ne sont pas affichés dans les listes d'objets dans i-doit. Cependant, vous pouvez les afficher à côté de Norma, Archivé et Supprimé en tant que modèles. Utilisez [**Administration → Gestion du [Nom-du-Locataire] → Paramètres du [Nom-du-Locataire] → Modèles → Afficher le filtre de modèle dans les listes d'objets**](../../system-administration/administration/tenant-management/settings-for-tenant.md#templates) pour effectuer les réglages correspondants.
+
+I am ready to start the translation once you provide the Markdown content.

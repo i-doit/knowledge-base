@@ -1,20 +1,20 @@
-# Example of CSV import - Workplaces
+# Exemple d'importation CSV - Lieux de travail
 
-In this example we build on the [CSV import of locations](example-csv-import-creating-locations.md) and want to import workplaces.  
-These are to be assigned to a room as a location and furthermore we want to assign clients, monitors and printers to the workplaces.
+Dans cet exemple, nous nous appuyons sur l'[importation CSV des emplacements](example-csv-import-creating-locations.md) et souhaitons importer des lieux de travail.  
+Ceux-ci doivent être attribués à une salle en tant qu'emplacement et nous voulons également attribuer des clients, des moniteurs et des imprimantes aux lieux de travail.
 
-!!! info "This article was last checked for i-doit version 1.17.1"
+!!! info "Cet article a été vérifié pour la version 1.17.1 d'i-doit"
 
-For the import we need the following information:
+Pour l'importation, nous avons besoin des informations suivantes :
 
--  Object title → the name of the workstation, client, screen or printer.
--  Location → under which location the object should be located
--  Object type → what type of object it should be
--  Workplaces assignment → to which workstation the component should be assigned
+-  Titre de l'objet → le nom du poste de travail, du client, de l'écran ou de l'imprimante.
+-  Emplacement → sous quel emplacement l'objet doit être situé
+-  Type d'objet → quel type d'objet il doit être
+-  Attribution des lieux de travail → à quel poste de travail le composant doit être attribué
 
-Example CSV file for this import:
+Fichier CSV d'exemple pour cette importation :
 
-[Import-Workplaces.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/Import-Workplaces.csv){ .md-button .md-button--primary }
+[Télécharger le fichier Import-Workplaces.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/Import-Workplaces.csv){ .md-button .md-button--primary }
 
 ??? example "Import Workplaces.csv"
 
@@ -102,18 +102,20 @@ Example CSV file for this import:
     PRNT020;;C__OBJTYPE__PRINTER;AP0020
     ```
 
-There are also dependencies in this example. The locations already exist, they were created via the [location creation example](example-csv-import-creating-locations.md).  
-Next come the workstations themselves, we must create these first, so that we can then directly assign the individual components such as clients, monitor and printer to them.  
-Therefore, the individual workstations are also in first place in the CSV file.
+Il y a aussi des dépendances dans cet exemple. Les emplacements existent déjà, ils ont été créés via l'exemple de création d'emplacement.  
+Ensuite viennent les postes de travail eux-mêmes, nous devons les créer en premier lieu, afin de pouvoir ensuite attribuer directement les composants individuels tels que les clients, le moniteur et l'imprimante à ceux-ci.  
+Par conséquent, les postes de travail individuels sont également en première place dans le fichier CSV.
 
-For the import we go back to the CSV import area. The settings in the upper area remain at the default settings and we click on Prepare Mapping:
+Pour l'importation, revenons à la zone d'importation CSV. Les paramètres dans la zone supérieure restent aux réglages par défaut et nous cliquons sur Préparer la Mise en correspondance :
 
-[![prepare-mapping](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/1-csv-i-w.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/1-csv-i-w.png)
+[![préparer-la-mise-en-correspondance](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/1-csv-i-w.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/1-csv-i-w.png)
 
-Now we can make the import configuration in the lower area as follows, and then start the import process:
+Maintenant, nous pouvons configurer l'importation dans la zone inférieure comme suit, puis démarrer le processus d'importation :
 
-[![import-process](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/2-csv-i-w.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/2-csv-i-w.png)
+[![processus-d'importation](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/2-csv-i-w.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/2-csv-i-w.png)
 
-If we have done everything correctly, the individual workstations will now appear, are assigned to a location and under each workstation we will find an assigned client, monitor and printer.
+Si nous avons tout fait correctement, les postes de travail individuels apparaîtront maintenant, seront assignés à un emplacement et sous chaque poste de travail, nous trouverons un client, un moniteur et une imprimante assignés.
 
-[![idividual-workstations](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/3-csv-i-w.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/3-csv-i-w.png)
+[![postes-de-travail-individuels](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/3-csv-i-w.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/3-csv-i-w.png)
+
+I am ready to start the translation. Please paste the Markdown content you would like me to translate into French.

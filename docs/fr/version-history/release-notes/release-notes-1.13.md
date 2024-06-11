@@ -1,28 +1,28 @@
-System requirements
+Exigences système
 -------------------
 
-*   i-doit 1.13 supports PHP 7.0, 7.1,7.2 and 7.3
+*   i-doit 1.13 prend en charge PHP 7.0, 7.1, 7.2 et 7.3
     
-*   PHP 7.0 is deprecated
-    
-
-*   PHP 5.6 is unsupported starting with i-doit 1.13
+*   PHP 7.0 est obsolète
     
 
-*   i-doit 1.13 supports MariaDB 10.0, 10.1, 10.2 and 10.3
+*   PHP 5.6 n'est plus pris en charge à partir de i-doit 1.13
     
 
-*   MariaDB 10.0 is now deprecated and will be unsupported with i-doit 1.14
+*   i-doit 1.13 prend en charge MariaDB 10.0, 10.1, 10.2 et 10.3
     
 
-*   i-doit 1.13 supports MySQL 5.6 and 5.7
+*   MariaDB 10.0 est désormais obsolète et ne sera plus pris en charge avec i-doit 1.14
     
 
-[More details can be found in the i-doit knowledge base.](../../installation/system-requirements.md)
+*   i-doit 1.13 prend en charge MySQL 5.6 et 5.7
+    
+
+[Plus de détails peuvent être trouvés dans la base de connaissances i-doit.](../../installation/system-requirements.md)
 
 Notes
 -----
 
-*   If you have i-doit **VIVA 2** add-on installed, please update this add-on to version 2.0.1 before you update i-doit.
+*   Si vous avez installé l'extension **VIVA 2** pour i-doit, veuillez mettre à jour cette extension vers la version 2.0.1 avant de mettre à jour i-doit.
 
-For any questions do not hesitate to contact our support at [https://help.i-doit.com.](https://help.i-doit.com)
+Pour toute question, n'hésitez pas à contacter notre support à [https://help.i-doit.com.](https://help.i-doit.com)

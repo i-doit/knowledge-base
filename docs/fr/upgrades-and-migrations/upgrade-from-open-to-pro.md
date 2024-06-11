@@ -1,80 +1,82 @@
-# Upgrade from i-doit open to i-doit pro
+# Mise à niveau de i-doit open vers i-doit pro
 
-How do you switch from _i-doit_ _open_ to _i-doit pro_ with added functionality in a quick and easy way?
+Comment passer de _i-doit_ _open_ à _i-doit pro_ avec des fonctionnalités supplémentaires de manière rapide et facile?
 
 Motivation
 ----------
 
-What are the advantages of documenting the IT infrastructure rather with the _i-doit pro_ version than with the _i-doit_ _open_ version? The reason is simple: _[i-doit pro offers considerably more functions](https://www.i-doit.org/cmdb-it-documentation/)_ which can be of great help for your daily work.
+Quels sont les avantages de documenter l'infrastructure informatique plutôt avec la version _i-doit pro_ que avec la version _i-doit_ _open_? La raison est simple: _[i-doit pro offre considérablement plus de fonctions](https://www.i-doit.org/cmdb-it-documentation/)_ qui peuvent être d'une grande aide pour votre travail quotidien.
 
-_i-doit pro_ in Seven Steps
+_i-doit pro_ en sept étapes
 ---------------------------
 
-Here is a quick overview about the necessary steps before going further into details:
+Voici un aperçu rapide des étapes nécessaires avant d'entrer dans les détails:
 
-1.  Preparation
-2.  Download and implementation of the _pro_\-update
-3.  Installation of the _i-doit pro_ extension
-4.  License activation
-5.  Clear cache
-6.  Configure permissions
-7.  Finishing work
+1.  Préparation
+2.  Téléchargement et mise en œuvre de la mise à jour _pro_
+3.  Installation de l'extension _i-doit pro_
+4.  Activation de la licence
+5.  Vider le cache
+6.  Configurer les autorisations
+7.  Finir le travail
 
-Preparation
+Préparation
 -----------
 
-Important: This procedure is irreversible. It is essential to create a [backup](../maintenance-and-operation/backup-and-recovery/index.md)! After upgrading, a valid [license for _i-doit_ pro](../maintenance-and-operation/activate-license.md) is required. The [system requirements](../installation/system-requirements.md) and [system settings](../installation/manual-installation/system-settings.md) must also be met.
+Important : Cette procédure est irréversible. Il est essentiel de créer une [sauvegarde](../maintenance-and-operation/backup-and-recovery/index.md)! Après la mise à niveau, une [licence valide pour _i-doit_ pro](../maintenance-and-operation/activate-license.md) est requise. Les [exigences du système](../installation/system-requirements.md) et les [paramètres du système](../installation/manual-installation/system-settings.md) doivent également être respectés.
 
-Should you use an older version of the _i-doit open_ installation, you have to bear the following facts in mind:
+Si vous utilisez une ancienne version de l'installation _i-doit open_, vous devez tenir compte des faits suivants :
 
-*   When you use _i-doit open_ version **0.9.x** or older, an upgrade is not possible.
-*   When you use _i-doit open_ **1.4.x**, you have to upgrade to the newest version starting from version 1.8.
-*   When you have installed i-doit open **1.8.x** or higher, you can continue with the upgrade.
+- Lorsque vous utilisez la version **0.9.x** ou une version antérieure de _i-doit open_, une mise à jour n'est pas possible.
+- Lorsque vous utilisez la version **1.4.x** de _i-doit open_, vous devez effectuer une mise à jour vers la version la plus récente à partir de la version 1.8.
+- Si vous avez installé _i-doit open_ **1.8.x** ou une version ultérieure, vous pouvez continuer avec la mise à jour.
 
-You can download the most current version from [i-doit.org](http://i-doit.org/).
+Vous pouvez télécharger la version la plus récente sur [i-doit.org](http://i-doit.org/).
 
-Download and Implementation of the _pro_\-Update
-------------------------------------------------
+Téléchargement et mise en œuvre de la mise à jour _pro_
+--------------------------------------------------------
 
-Download the update package of _i-doit pro_ from the [customer portal](../system-administration/customer-portal.md) and carry out an update [in the usual way](../maintenance-and-operation/update.md). It is important that the version number of the installed _i-doit open_ version corresponds to the desired _i-doit pro_ version. Example: You have to use update package _i-doit pro_ 1.8, when your installed version is _i-doit open_ 1.8.
+Téléchargez le package de mise à jour de _i-doit pro_ depuis le [portail client](../system-administration/customer-portal.md) et effectuez une mise à jour [de la manière habituelle](../maintenance-and-operation/update.md). Il est important que le numéro de version de la version _i-doit open_ installée corresponde à la version _i-doit pro_ souhaitée. Exemple : Vous devez utiliser le package de mise à jour _i-doit pro_ 1.8 si votre version installée est _i-doit open_ 1.8.
 
-The upgrade doesn't work with the installation packet of the _i-doit pro_ version.
+L'amélioration ne fonctionne pas avec le paquet d'installation de la version _i-doit pro_.
 
-Installation of the _i-doit pro-addon_
---------------------------------------
+Installation de l'extension _i-doit pro_
+----------------------------------------
 
-After upgrading to the _pro_ version you have to install the _pro_\-addon. The __pro__\-addon is available in the [admin center](../system-administration/admin-center.md) under **Add-ons**. Here you can find the installation button.
+Après avoir mis à niveau vers la version _pro_, vous devez installer l'extension _pro_. L'extension __pro__ est disponible dans le [centre d'administration](../system-administration/admin-center.md) sous **Extensions**. Vous y trouverez le bouton d'installation.
 
-License Activation
-------------------
+Activation de la licence
+------------------------
 
-The upgrade is completed now and the last step is the activation of a valid license. You can activate it directly in the [Admin Center under **Licenses**](../maintenance-and-operation/activate-license.md).
+La mise à niveau est maintenant terminée et la dernière étape est l'activation d'une licence valide. Vous pouvez l'activer directement dans le [Centre d'administration sous **Licences**](../maintenance-and-operation/activate-license.md).
 
-Clear Cache
------------
+Effacer le cache
+----------------
 
-Now we log off from the Admin Center and log in again to _i-doit_. Now we click through  **Administration** → **System tools → Cache / Database** to the button **Clear complete Cache**. We clear the browser cache by pressing **CTRL+F5**.
+Maintenant, nous nous déconnectons du Centre d'administration et nous nous reconnectons à _i-doit_. Ensuite, nous naviguons dans **Administration** → **Outils système → Cache / Base de données** jusqu'au bouton **Effacer le cache complet**. Nous vidons le cache du navigateur en appuyant sur **CTRL+F5**.
 
-Configure Permissions
----------------------
+Configurer les autorisations
+----------------------------
 
-In contrast to _i-doit open, i-doit pro_ does possess a free configurable [authorization system](../system-administration/administration/user-permissions.md). For this reason, the user who is logged in at this moment will not have all permissions.
+Contrairement à _i-doit open, i-doit pro_ possède un [système d'autorisation](../system-administration/administration/user-permissions.md) librement configurable. Pour cette raison, l'utilisateur connecté à ce moment n'aura pas toutes les autorisations.
 
-To give your admin-user full access in a few steps, go to **Administration** → **Authorization system** → **Authorization system reset** and give your user full access to _i-doit_ by entering the credentials for the [Admin center](../system-administration/admin-center.md).
+Pour donner à votre utilisateur administrateur un accès complet en quelques étapes, allez dans **Administration** → **Système d'autorisation** → **Réinitialisation du système d'autorisation** et donnez à votre utilisateur un accès complet à _i-doit_ en saisissant les informations d'identification pour le [Centre d'administration](../system-administration/admin-center.md).
 
-Now you can configure the assignment of permissions for persons and groups of persons.
+Maintenant, vous pouvez configurer l'attribution des autorisations pour les personnes et les groupes de personnes.
 
-Finishing Work
+Finalisation du travail
 --------------
 
-If you have not yet done so, you should carry out the following steps to ensure a flawless performance of _i-doit_:
+Si ce n'est pas encore fait, vous devriez effectuer les étapes suivantes pour garantir un fonctionnement optimal de _i-doit_ :
 
-*   [Set up and test Backup and Restore](../maintenance-and-operation/backup-and-recovery/index.md)
-*   [Set up Cronjobs](../automation-and-integration/cli/index.md) (with the controller)
-*   [Carry out an optional update to the current _i-doit pro_ version:](../maintenance-and-operation/update.md) With a valid license it is possible and recommended that you always update to the newest version of _i-doit pro_.  
+*   [Configurer et tester la sauvegarde et la restauration](../maintenance-and-operation/backup-and-recovery/index.md)
+*   [Configurer les Cronjobs](../automation-and-integration/cli/index.md) (avec le contrôleur)
+*   [Effectuer une mise à jour facultative vers la version actuelle de _i-doit pro_ :](../maintenance-and-operation/update.md) Avec une licence valide, il est possible et recommandé de toujours mettre à jour vers la dernière version de _i-doit pro_.  
     
 
-Downgrade to _i-doit open_?
+Revenir à _i-doit open_?
 ---------------------------
 
-It's not intended to go back to an older version of _i-doit_. This is also the case for downgrades from _i-doit pro_ to the _i-doit open_ variant.
+Il n'est pas prévu de revenir à une version antérieure d'_i-doit_. Cela vaut également pour les rétrogradations de _i-doit pro_ vers la variante _i-doit open_.
+
+Please provide the Markdown content you would like me to translate into French.

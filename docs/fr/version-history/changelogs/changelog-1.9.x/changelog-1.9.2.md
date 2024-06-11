@@ -1,60 +1,62 @@
-# Changelog 1.9.2
+# Journal des modifications 1.9.2
 
-[Improvement]   New field in category "contract" to document the calculation of costs  
-[Improvement]   Optional update of object type of modules in JDisc import  
-[Improvement]   Search: Option to change the behaviour of highlighting  
-[Improvement]   Permanently activate the Add-on version check in the update procedure  
-[Improvement]   Interaction between category Logical location and location for the object type Workplace  
-[Improvement]   install.sh gets parameter -u for specifying the MySQL username  
-[Improvement]   Numeric sorting of IP addresses  
-[Bug]           Wrong presentation of chassis in racks within room overview  
-[Bug]           Location does not load fields to define position in rack when assigning for the first time  
-[Bug]           Form factor in rack visualization is always "undefined"  
-[Bug]           Error when using a condition for attribute role when using only one attribute for output  
-[Bug]           Property connection type not usable in object lists  
-[Bug]           Content "To be filled by O.E.M." is not blacklisted for import and causes wrong matching  
-[Bug]           Report Manager: Accounting - Investment costs not available in conditions  
-[Bug]           Object IDs are sometimes displayed as dates in reports  
-[Bug]           Listen: Dates of custom categories are always being displayed in English format  
-[Bug]           Usage of attribute "role" in report manager as condition may sometimes cause objects to be displayed multiple times  
-[Bug]           Some attributes from specific categories can not be added to list view  
-[Bug]           Cannot open object in a new tab if the title includes a comma  
-[Bug]           Fist hostaddress of an object is not set to primary  
-[Bug]           Rackview does not have a definition of sorting of hight units  
-[Bug]           Import of position in rack not possible via csv import  
-[Bug]           Error when using cleanup functions at "cache / database"  
-[Bug]           Report Manager: Attributes 'Message' and 'Description' from logbook category not available  
-[Bug]           "Load IP-net" of category Hostaddress not working properly  
-[Bug]           Duplicating an object with contact assignment deletes company of assigned object  
-[Bug]           Information bar at the bottom edge shows date '01.01.1970 01:00 [..]'  
-[Bug]           Using of attribute "event" of category "logbook" in report manager not possible  
-[Bug]           Search: QuickView of relationship objects does not work  
-[Bug]           CSV-Files using a name containing a + can not be downloaded from the system  
-[Bug]           Error when trying to save category "port" via list edit  
-[Bug]           Additional columns in report when using attributes of assigned objects for output  
-[Bug]           Can't display 'Remainder warranty' in object lists  
-[Bug]           Conten of "Instance / Oracle database" can not be saved under some circumstances  
-[Bug]           Editing of connectors via list edit not possible  
-[Bug]           Title of a report in PDF-Export is "i" when using special characters in the name of the report  
-[Bug]           DropDown for selecting role in contact assignment cuts off longer role titles  
-[Bug]           Subcategories can not be configured for auth system correctly  
-[Bug]           i-doit uses wrong Unix socket  
-[Bug]           XML import: Expert setting 'system.dir.import-uploads' without any impact  
-[Bug]           Category Virtual Switches: Guest systems are not displayed among the port groups  
-[Bug]           Lists: Displaying service assignments is not possible  
-[Bug]           CSV import: Import and assignment of multiple attributes at the same time is not possible (Dialog + multiple selection)  
-[Bug]           Some Language Constants Are DIsplayed Under JDisc Profiles  
-[Bug]           Report Manager: Wrong constant when using descriptions from custom categories  
-[Bug]           Length of cable is not imported via csv import  
-[Bug]           Removing service component assignment via list edit not possible  
-[Bug]           Right "Categories in Objecttype" does not allow to access/edit categories on overview  
-[Bug]           Dashboard Calculator Counts Wrong For Network Bandwidth  
-[Bug]           Multiple software assignment of additional software does not redirect to list view, if the current selection is saved  
-[Bug]           Content in the description field in the logbook entry can not be evaluated via the Report Manager  
-[Bug]           Log settings have no effect when logging is deactivated  
-[Bug]           While inserting a whitespace at export draft, the main view disappears  
-[Bug]           Hight units in report wrong  
-[Bug]           Horizontal scrollbar is missing in category connectors  
-[Bug]           Comparison operators not correctly saved while first insert in report definition  
-[Bug]           List edit - Category 'Contracts' shows error when saving  
-[Bug]           JDisc Import: Existing operating systems are not checked and are re-created every time they are imported  
+[Amélioration] Nouveau champ dans la catégorie "contrat" pour documenter le calcul des coûts  
+[Amélioration] Mise à jour facultative du type d'objet des modules dans l'importation JDisc  
+[Amélioration] Recherche : Option pour changer le comportement de mise en surbrillance  
+[Amélioration] Activation permanente de la vérification de version de l'extension dans la procédure de mise à jour  
+[Amélioration] Interaction entre la catégorie Emplacement logique et l'emplacement pour le type d'objet Lieu de travail  
+[Amélioration] install.sh obtient le paramètre -u pour spécifier le nom d'utilisateur MySQL  
+[Amélioration] Tri numérique des adresses IP  
+[Bug] Mauvaise présentation du châssis dans les racks dans l'aperçu de la salle  
+[Bug] L'emplacement ne charge pas les champs pour définir la position dans le rack lors de l'attribution pour la première fois  
+[Bug] Le facteur de forme dans la visualisation du rack est toujours "indéfini"  
+[Bug] Erreur lors de l'utilisation d'une condition pour l'attribut rôle lors de l'utilisation d'un seul attribut en sortie  
+[Bug] Le type de connexion de propriété n'est pas utilisable dans les listes d'objets  
+[Bug] Le contenu "À remplir par le fabricant" n'est pas mis sur liste noire pour l'importation et provoque un mauvais appariement  
+[Bug] Gestionnaire de rapports : Coûts d'investissement non disponibles dans les conditions  
+[Bug] Les identifiants d'objets sont parfois affichés comme des dates dans les rapports  
+[Bug] Écoute : Les dates des catégories personnalisées sont toujours affichées au format anglais  
+[Bug] L'utilisation de l'attribut "rôle" dans le gestionnaire de rapports comme condition peut parfois entraîner l'affichage multiple d'objets  
+[Bug] Certains attributs de catégories spécifiques ne peuvent pas être ajoutés à la vue en liste  
+[Bug] Impossible d'ouvrir un objet dans un nouvel onglet si le titre contient une virgule  
+[Bug] La première adresse IP d'un objet n'est pas définie comme principale  
+[Bug] Rackview n'a pas de définition de tri des unités de hauteur  
+[Bug] L'importation de la position dans le rack n'est pas possible via l'importation csv  
+[Bug] Erreur lors de l'utilisation des fonctions de nettoyage dans "cache / base de données"  
+[Bug] Gestionnaire de rapports : Les attributs 'Message' et 'Description' de la catégorie journal ne sont pas disponibles  
+[Bug] Le "Chargement du réseau IP" de la catégorie Adresse IP ne fonctionne pas correctement  
+[Bug] La duplication d'un objet avec une affectation de contact supprime l'entreprise de l'objet assigné  
+[Bug] La barre d'information en bas de l'écran affiche la date '01.01.1970 01:00 [..]'  
+[Bug] L'utilisation de l'attribut "événement" de la catégorie "journal" dans le gestionnaire de rapports n'est pas possible  
+[Bug] Recherche : La QuickView des objets de relation ne fonctionne pas  
+[Bug] Les fichiers CSV portant un nom contenant un + ne peuvent pas être téléchargés à partir du système  
+[Bug] Erreur lors de la tentative d'enregistrement de la catégorie "port" via l'édition en liste  
+[Bug] Colonnes supplémentaires dans le rapport lors de l'utilisation d'attributs d'objets assignés en sortie  
+[Bug] Impossible d'afficher la 'Garantie restante' dans les listes d'objets  
+[Bug] Le contenu de "Instance / Base de données Oracle" ne peut pas être enregistré dans certaines circonstances  
+[Bug] L'édition des connecteurs via l'édition en liste n'est pas possible  
+[Bug] Le titre d'un rapport dans l'exportation PDF est "i" lors de l'utilisation de caractères spéciaux dans le nom du rapport  
+[Bug] Le menu déroulant pour sélectionner le rôle dans l'affectation de contact coupe les titres de rôle plus longs  
+[Bug] Les sous-catégories ne peuvent pas être configurées correctement pour le système d'authentification  
+[Bug] i-doit utilise le mauvais socket Unix  
+[Bug] Importation XML : Le paramètre expert 'system.dir.import-uploads' n'a aucun impact  
+[Bug] Catégorie Commutateurs virtuels : Les systèmes invités ne sont pas affichés parmi les groupes de ports  
+[Bug] Listes : L'affichage des affectations de service n'est pas possible  
+[Bug] Importation CSV : L'importation et l'affectation de plusieurs attributs en même temps ne sont pas possibles (Dialogue + sélection multiple)  
+[Bug] Certaines constantes de langue sont affichées sous les profils JDisc  
+[Bug] Gestionnaire de rapports : Mauvaise constante lors de l'utilisation de descriptions de catégories personnalisées  
+[Bug] La longueur du câble n'est pas importée via l'importation csv  
+[Bug] Suppression de l'affectation de composant de service via l'édition en liste n'est pas possible  
+[Bug] Le droit "Catégories dans le type d'objet" ne permet pas d'accéder/éditer les catégories sur l'aperçu  
+[Bug] Calculateur du tableau de bord compte mal pour la bande passante réseau  
+[Bug] L'affectation de logiciel multiple de logiciels supplémentaires ne redirige pas vers la vue en liste, si la sélection actuelle est enregistrée  
+[Bug] Le contenu dans le champ de description de l'entrée du journal ne peut pas être évalué via le gestionnaire de rapports  
+[Bug] Les paramètres de journalisation n'ont aucun effet lorsque la journalisation est désactivée  
+[Bug] Lors de l'insertion d'un espace blanc dans le brouillon d'exportation, la vue principale disparaît  
+[Bug] Unités de hauteur dans le rapport incorrectes  
+[Bug] La barre de défilement horizontale est manquante dans la catégorie connecteurs  
+[Bug] Les opérateurs de comparaison ne sont pas correctement enregistrés lors de la première insertion dans la définition du rapport  
+[Bug] Édition en liste - La catégorie 'Contrats' affiche une erreur lors de l'enregistrement  
+[Bug] Importation JDisc : Les systèmes d'exploitation existants ne sont pas vérifiés et sont recréés à chaque importation  
+
+Please provide the Markdown content you would like me to translate into French.

@@ -1,3 +1,3 @@
-# Hide attributes
+# Masquer les attributs
 
-Here you can configure the visibility of [attributes](../../../basics/attribute-fields.md) per category → [READMORE](../../../basics/attribute-visibility.md)
+Ici, vous pouvez configurer la visibilité des [attributs](../../../basics/attribute-fields.md) par catégorie → [EN SAVOIR PLUS](../../../basics/attribute-visibility.md) {/examples}

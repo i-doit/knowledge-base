@@ -1,39 +1,39 @@
 ---
-title: Namespace cmdb.category
+title: Espace de noms cmdb.category
 description: cmdb.location_tree
 icon: material/api
-#status: updated
-lang: en
+#status: mis à jour
+lang: fr
 ---
 
-# Namespace cmdb.location_tree
+# Espace de noms cmdb.location_tree
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## cmdb.location_tree
 
-This method can be used to build the location tree. Always exactly one level is loaded down.
+Cette méthode peut être utilisée pour construire l'arborescence des emplacements. Toujours exactement un niveau est chargé vers le bas.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key    | JSON data type | Required | Description                                  |
-| ------ | -------------- | -------- | -------------------------------------------- |
-| **id** | Integer        | Yes      | A location object, for example a City **31** |
+| Clé    | Type de données JSON | Requis | Description                                  |
+| ------ | --------------------- | ------- | -------------------------------------------- |
+| **id** | Entier               | Oui     | Un objet d'emplacement, par exemple une ville **31** |
 
-!!! example "WIP"
+!!! example "Travail en cours"
 
-    ### Response parameters
+    ### Paramètres de réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+    | Clé             | Type de données JSON | Description |
+    | --------------- | --------------------- | ----------- |
+    | **Placeholder** | Placeholder           | Placeholder |
+    | **Placeholder** | Placeholder           | Placeholder |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -48,33 +48,8 @@ This method can be used to build the location tree. Always exactly one level is 
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
-    ```json
-    {
-      "id": 1,
-      "jsonrpc": "2.0",
-      "result": [
-        {
-          "id": 33,
-          "title": "Building 1",
-          "sysid": "SYSID_1691739706",
-          "type": 3,
-          "type_title": "Building",
-          "status": 2,
-          "cmdb_status": 6,
-          "cmdb_status_title": "in operation"
-        },
-        {
-          "id": 35,
-          "title": "Building 2",
-          "sysid": "SYSID_1691739718",
-          "type": 3,
-          "type_title": "Building",
-          "status": 2,
-          "cmdb_status": 6,
-          "cmdb_status_title": "in operation"
-        }
-      ]
-    }
-    ```
+```json
+((((c8895ea13a69f31f))))
+```

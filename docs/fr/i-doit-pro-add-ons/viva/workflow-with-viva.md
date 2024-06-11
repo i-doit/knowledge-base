@@ -1,33 +1,35 @@
-# Workflow with VIVA
+# Flux de travail avec VIVA
 
-The options for IT documentation are already diverse in i-doit and can be adapted to the specifications and needs of the respective (organizational) environment. The VIVA add-on is no exception: Even though the underlying standards of IT-Grundschutz provide many specifications, they are open to interpretation in numerous places. VIVA attempts to do justice to this. Despite all this, some work sequences have become established in practice and are described in more detail in this chapter. The example makes no claim to be complete or binding. Further (intermediate) steps such as adaptation of the documentation are probably necessary.
+Les options de documentation informatique sont déjà diverses dans i-doit et peuvent être adaptées aux spécifications et aux besoins de l'environnement (organisationnel) respectif. L'add-on VIVA ne fait pas exception : même si les normes sous-jacentes d'IT-Grundschutz fournissent de nombreuses spécifications, elles sont ouvertes à l'interprétation à de nombreux endroits. VIVA tente de rendre justice à cela. Malgré tout cela, certains séquences de travail se sont établies dans la pratique et sont décrites plus en détail dans ce chapitre. L'exemple ne prétend pas être complet ou contraignant. D'autres étapes (intermédiaires) telles que l'adaptation de la documentation sont probablement nécessaires.
 
-The goal of this workflow is to create a solid documentation basis to later support auditing and certification according to ISO 27001 based on IT-Grundschutz.
+L'objectif de ce flux de travail est de créer une base de documentation solide pour soutenir ultérieurement l'audit et la certification selon ISO 27001 basée sur IT-Grundschutz.
 
-1.  Preparing the VIVA installation: i-doit's IT documentation contains objects (including location and software assignment as well as port connections, if possible) that are modeled as services and are to be covered by IT-Grundschutz.
-2.  Manage IT-Grundschutz catalogs  
-    1.  Import IT-Grundschutz catalogs EL 15 from 2016
-    2.  Adapt building blocks, measures and hazards (optional)
-3.  Model information federation with target groups and objects
-    1.  Create information federation
-    2.  Run IT service wizard (layer 5 applications); then:
-    3.  Application wizard (layer 3 IT systems)
-    4.  IT system wizard (layer 2 infrastructure)
-    5.  IT system wizard (layer 4 networks)
-4.  Determine protection requirements  
-    1.  Adapt protection requirement categories
-    2.  Determine protection needs of target groups in layer 5 Applications; then run wizards:
-    3.  Protection Needs Wizard (Layer 3 IT Systems)
-    4.  Protection requirement wizards (layer 2 infrastructure)
-5.  Assign modules and implement measures  
-    1.  Assign the necessary modules for each target group
-    2.  Document the implementation of measures for each target group
-    3.  Answer test questions
-6.  Perform risk analysis  
-    1.  Perform supplementary safety analysis
-    2.  Perform risk analysis if necessary
-7.  Create audit  
-    1.  Review reports and repeat steps 2-5, if necessary, until reports no longer provide unavoidable negative results
-    2.  Store information on reference documents A.0 and A.1
-    3.  Create audits
-    4.  Post-process output
+1.  Préparation de l'installation VIVA : La documentation informatique d'i-doit contient des objets (y compris l'emplacement et l'attribution de logiciels ainsi que les connexions de port, si possible) qui sont modélisés en tant que services et doivent être couverts par IT-Grundschutz.
+2.  Gérer les catalogues IT-Grundschutz  
+    1.  Importer les catalogues IT-Grundschutz EL 15 de 2016
+    2.  Adapter les blocs de construction, les mesures et les dangers (facultatif)
+3.  Modéliser la fédération d'informations avec des groupes cibles et des objets
+    1.  Créer une fédération d'informations
+    2.  Exécuter l'assistant de service informatique (applications de couche 5) ; puis :
+    3.  Assistant d'application (systèmes informatiques de couche 3)
+    4.  Assistant de système informatique (infrastructure de couche 2)
+    5.  Assistant de système informatique (réseaux de couche 4)
+4.  Déterminer les exigences de protection  
+    1.  Adapter les catégories d'exigences de protection
+    2.  Déterminer les besoins de protection des groupes cibles dans la couche 5 Applications ; puis exécuter les assistants :
+    3.  Assistant des besoins de protection (systèmes informatiques de couche 3)
+    4.  Assistants d'exigences de protection (infrastructure de couche 2)
+5.  Attribuer des modules et mettre en œuvre des mesures  
+    1.  Attribuer les modules nécessaires à chaque groupe cible
+    2.  Documenter la mise en œuvre des mesures pour chaque groupe cible
+    3.  Répondre aux questions de test
+6.  Effectuer une analyse des risques  
+    1.  Effectuer une analyse de sécurité supplémentaire
+    2.  Effectuer une analyse des risques si nécessaire
+7.  Créer un audit  
+    1.  Examiner les rapports et répéter les étapes 2-5, si nécessaire, jusqu'à ce que les rapports ne fournissent plus de résultats négatifs inévitables
+    2.  Enregistrer les informations sur les documents de référence A.0 et A.1
+    3.  Créer des audits
+    4.  Post-traiter la sortie
+
+{/*examples*/}

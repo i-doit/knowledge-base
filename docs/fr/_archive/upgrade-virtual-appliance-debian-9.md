@@ -1,37 +1,40 @@
-# Upgrade of i-doit Virtual Eval Appliance to Debian GNU/Linux 9 "Stretch"
+# Mise à niveau de l'Appliance Virtuelle d'Évaluation i-doit vers Debian GNU/Linux 9 "Stretch" {#examples}
 
-Besides the maintenance of i-doit you also have to keep the regular maintenance of the operating system in mind. This article explains the upgrade of [Debian GNU/Linux] in version 8 "Jessie" to version 9 "Stretch". It takes just a few steps and the [i-doit Eval Virtual Appliance](will be up to date.
+En plus de la maintenance de i-doit, vous devez également tenir compte de la maintenance régulière du système d'exploitation. Cet article explique la mise à niveau de [Debian GNU/Linux] de la version 8 "Jessie" à la version 9 "Stretch". Il suffit de suivre quelques étapes et l'[Appliance Virtuelle d'Évaluation i-doit](sera à jour.
 
-!!! note "Why should I upgrade?"
+!!! note "Pourquoi devrais-je faire la mise à niveau ?"
 
-    Why should you upgrade your operating system to the latest version? There are good reasons for this:
+    Pourquoi devriez-vous mettre à niveau votre système d'exploitation vers la dernière version ? Il y a de bonnes raisons à cela :
 
-    1.  The IT documentation contains [sensitiva data which need to be protected]. This can only be guaranteed when all system compontents are up to date.
-    2.  The change from PHP 5.6 to 7.0 results in a measurable improvement in performance.
+    1.  La documentation informatique contient des [données sensibles qui doivent être protégées]. Cela ne peut être garanti que lorsque tous les composants du système sont à jour.
+    2.  Le passage de PHP 5.6 à 7.0 entraîne une amélioration mesurable des performances.
 
-## Requirements
+## Exigences {#examples}
 
-Before upgrading, you have to consider the following:
+Avant de procéder à la mise à niveau, vous devez tenir compte des éléments suivants :
 
--   The upgrade only describes the i-doit Virtual Eval Appliance in Version 1.2.x.
--   We assume that no changes of the system were carried out (except updates). We are not responsible for subsequent changes.
--   There has to be enough available memory. The update requires approximately 1 GByte free memory.
+-   La mise à niveau décrit uniquement l'Appliance Virtuelle d'Évaluation i-doit en version 1.2.x.
+-   Nous supposons qu'aucun changement du système n'a été effectué (sauf les mises à jour). Nous ne sommes pas responsables des modifications ultérieures.
+-   Il doit y avoir suffisamment de mémoire disponible. La mise à jour nécessite environ 1 Go de mémoire libre.
 
-## Tips
 
-You also should pay attention to the following issues before an upgrade:
+{ /* exemples */ }
 
--   Do you have [==backups==]?
--   You shoud inform i-doit users before downtime.
--   Automatisms, cronjobs and external access should be stopped during the upgrade.
+## Conseils {/%%/}
 
-You can read many additional [==hints regarding the upgrade of the operating system==] provided by the Debian Community.
+Vous devez également prêter attention aux problèmes suivants avant une mise à jour :
 
-## Preparing the Upgrade
+-   Avez-vous des [==sauvegardes==] ?
+-   Vous devez informer les utilisateurs d'i-doit avant l'arrêt.
+-   Les automatismes, les tâches cron et l'accès externe doivent être arrêtés pendant la mise à jour.
 
-We connect via ==SSH== and activate item ==0 Launch Shell== in the menu.
+Vous pouvez lire de nombreux [==conseils supplémentaires concernant la mise à niveau du système d'exploitation==] fournis par la communauté Debian.
 
-Then we carry out updates:
+## Préparation de la mise à jour {/%%/}
+
+Nous nous connectons via ==SSH== et activons l'élément ==0 Lancer Shell== dans le menu.
+
+Ensuite, nous effectuons les mises à jour :
 
 ```shell
 sudo apt update
@@ -40,80 +43,80 @@ sudo apt-get autoremove
 sudo apt clean
 ```
 
-Afterwards, the system needs to be rebooted. Because of an error the Linux kernel has to be up to date:
+Ensuite, le système doit être redémarré. En raison d'une erreur, le noyau Linux doit être à jour :
 
 ```shell
 sudo systemctl reboot
 ```
 
-After the restart, we connect again via SSH and activate the shell in the menu to ensure that version ==8.8== is used:
+Après le redémarrage, nous nous reconnectons via SSH et activons le shell dans le menu pour nous assurer que la version ==8.8== est utilisée :
 
 ```shell
 cat /etc/debian_release
 ```
 
-If this is not the case, the upgrade will fail.<br>
-As a precautionary measure you should stop the webserver so that i-doit is not activated in the meantime:
+Si ce n'est pas le cas, la mise à jour échouera.<br>
+Par mesure de précaution, vous devriez arrêter le serveur web pour que i-doit ne soit pas activé entre-temps :
 
 ```shell
 sudo systemctl stop apache2.service
 ```
 
-Now everything is prepared for the upgrade.
+Maintenant tout est prêt pour la mise à niveau.
 
-## Performing the Upgrade
+## Réalisation de la mise à niveau {/examples}
 
-Now the sources for the distribution packages are adapted:
+Maintenant les sources des paquets de distribution sont adaptées :
 
 ```shell
 sudo nano /etc/apt/sources.list
 ```
 
-The following line is supplemented at the end:
+La ligne suivante est ajoutée à la fin :
 
 ```shell
 deb http://mirrors.kernel.org/debian stretch main contrib
 ```
 
-All previous lines are commented out; a ==#== is used as a prefix for each line.<br>
-Then all package sources are updated and a package upgrade is carried out:
+Toutes les lignes précédentes sont commentées ; un ==#== est utilisé comme préfixe pour chaque ligne.<br>
+Ensuite, toutes les sources de paquets sont mises à jour et une mise à niveau des paquets est effectuée :
 
 ```shell
 sudo apt update
 sudo apt upgrade
 ```
 
-For the last command some user interactions are required:
+Pour la dernière commande, certaines interactions utilisateur sont requises :
 
-1. Answer the question ==Restart services during package upgrades without asking?== with "==Yes==".
-2. Answer the question regarding the overwriting of ==Configuration file '/etc/issue'== with ==N==.
-3. Answer the question regarding the overwriting of ==Configuration file '/etc/issue.net'== with ==N== as well.
+1. Répondez à la question ==Redémarrer les services pendant les mises à niveau des paquets sans demander ?== avec "==Oui==".
+2. Répondez à la question concernant l'écrasement du ==Fichier de configuration '/etc/issue'== avec ==N==.
+3. Répondez également à la question concernant l'écrasement du ==Fichier de configuration '/etc/issue.net'== avec ==N==.
 
-Now the actual upgrade of the packages to new versions is carried out:
+Maintenant, la mise à niveau effective des paquets vers de nouvelles versions est effectuée :
 
 ```shell
 sudo apt dist-upgrade
 ```
 
-In order to activate the new Linux kernel the system is restarted:
+Pour activer le nouveau noyau Linux, le système est redémarré :
 
 ```shell
 sudo systemctl reboot
 ```
 
-Thus the upgrade to version 9 is completed.
+Ainsi, la mise à niveau vers la version 9 est terminée.
 
-## Follow-up
+## Suivi
 
-After the restart we connect to the system again vai SSH and activate the shell in the menu.<br>
-Now we clear up the distribution packages:
+Après le redémarrage, nous nous connectons de nouveau au système via SSH et activons le shell dans le menu.<br>
+Maintenant, nous nettoyons les paquets de distribution :
 
 ```shell
 sudo apt autoremove
 sudo apt clean
 ```
 
-Then Apache Webserver and PHP have to be adapted as PHP 7.0 instead of PHP 5.6 is provided:
+Ensuite, le serveur Web Apache et PHP doivent être adaptés car PHP 7.0 est fourni au lieu de PHP 5.6 :
 
 ```shell
 sudo cp /etc/php5/mods-available/i-doit.ini /etc/php/7.0/mods-available/
@@ -124,50 +127,49 @@ sudo a2enmod php7.0
 sudo systemctl restart apache2.service
 ```
 
-Changes to the configuration files are not necessary.<br>
-Also the DBMS MariaDB has to be adapted:
+Aucun changement aux fichiers de configuration n'est nécessaire.<br>
+Également, le SGBD MariaDB doit être adapté :
 
 ```shell
 sudo mv /etc/mysql/conf.d/i-doit.cnf /etc/mysql/mariadb.conf.d/99-i-doit.cnf
 sudo systemctl restart mysql.service
 ```
 
-To guarantee the correct function of the welcome screen and the menu you have to modify some lines:
+Pour garantir le bon fonctionnement de l'écran d'accueil et du menu, vous devez modifier quelques lignes :
 
 ```shell
 sudo nano /usr/local/bin/appliance_getip.sh
 ```
-
-The contents is replaced by the following:
 
 ```shell
 #!/bin/bash
 /bin/hostname -I | awk -F: '{ print " "$1 }'
 ```
 
-Also:
+Aussi :
 
 ```shell
 sudo nano /usr/local/bin/get-ip-address
 ```
 
-Contents:
+Contenu :
 
 ```shell
 #!/bin/bash
 echo " /bin/hostname -I"
 ```
 
-And finally the version number of the appliance:
+Et enfin le numéro de version de l'appliance :
 
 ```shell
 sudo nano /etc/i-doit/appliance.conf
 ```
 
-Contents:
+Contenu :
 
 ```shell
 APPLIANCE_VERSION="1.3.0"
 ```
 
-Now also the follow-up works are completed. You can now restart all automatism. The downtime is over and users can work with i-doit as usual.
+Maintenant, les travaux de suivi sont également terminés. Vous pouvez maintenant redémarrer tous les automatismes. L'arrêt est terminé et les utilisateurs peuvent travailler avec i-doit comme d'habitude.
+```

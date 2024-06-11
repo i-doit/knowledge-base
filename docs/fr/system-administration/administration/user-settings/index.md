@@ -1,9 +1,9 @@
-# User Settings
+# Paramètres de l'utilisateur
 
-## The User Settings are divided into the following sub-sections
+## Les paramètres de l'utilisateur sont divisés en les sous-sections suivantes
 
--   [Change password](./change-password.md)
--   [Data format](./data-format.md)
--   [User language](./user-language.md)
--   [User interface](./user-interface/index.md)
--   [Editing lock](./editing-lock.md)
+-   [Changer le mot de passe](./change-password.md)
+-   [Format des données](./data-format.md)
+-   [Langue de l'utilisateur](./user-language.md)
+-   [Interface utilisateur](./user-interface/index.md)
+-   [Verrouillage de l'édition](./editing-lock.md)

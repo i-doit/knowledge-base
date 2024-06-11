@@ -1,9 +1,9 @@
-# Categories and attributes
+# Catégories et attributs {/structure-of-the-it-documentation}
 
-i-doit provides over 200 predefined [categories](structure-of-the-it-documentation.md). The result is a wide range of over 1,000 [attributes](structure-of-the-it-documentation.md) which theoretically can be documented for each [object](structure-of-the-it-documentation.md). This abundance inevitably leads to the frequently asked question "What is the purpose of category XY with all its attributes?" Which concepts represent each single category and each single attribute?
+i-doit propose plus de 200 [catégories](structure-of-the-it-documentation.md) prédéfinies. Le résultat est une large gamme de plus de 1 000 [attributs](structure-of-the-it-documentation.md) qui peuvent théoriquement être documentés pour chaque [objet](structure-of-the-it-documentation.md). Cette abondance conduit inévitablement à la question fréquemment posée "Quel est le but de la catégorie XY avec tous ses attributs ?" Quels concepts représentent chaque catégorie individuelle et chaque attribut individuel ?
 
-!!! info "Flexibility versus specifications"
-    The following table is an attempt to give you a general overview. It is an "attempt" because of the sheer bulk of predefined categories and attributes. There are no strict specifications for many categories and attributes. Therefore the following descriptions are only recommendations. We would appreciate additions and corrections and would be glad to receive information about how you use the following categories and attributes in practice. Please just send an e-mail to [feedback@i-doit.com](mailto:feedback@i-doit.com).
+!!! info "Flexibilité versus spécifications"
+    Le tableau suivant est une tentative de vous donner un aperçu général. Il s'agit d'une "tentative" en raison de la masse énorme de catégories et d'attributs prédéfinis. Il n'y a pas de spécifications strictes pour de nombreuses catégories et attributs. Par conséquent, les descriptions suivantes ne sont que des recommandations. Nous apprécierions les ajouts et les corrections et serions heureux de recevoir des informations sur la manière dont vous utilisez les catégories et attributs suivants en pratique. Veuillez simplement envoyer un e-mail à [feedback@i-doit.com](mailto:feedback@i-doit.com).
 
 ## Global Categories
 
@@ -24,13 +24,13 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **Audit** | -  | If a component is checked on a regular basis, you can enter the results in this category. |
 | **Backup** | -  | Backup: Data of this object are stored by another object. Backwards category: **Backup (assigned objects)** |
 | **Backup (assigned Objects)** | -  | Backup: This objects stores data of other objects. Backwards category: **Backup** |
-| **Cable connection** | \-  | Category folder with the subordinate categories **Cable connection** and **Cable**. |
+| **Cable connection** | -  | Category folder with the subordinate categories **Cable connection** and **Cable**. |
 | **Cable connection -> Cable** | -  | Information about a **Cable**, for example, length and color |
-| **Cable connection -> Cable connection** | \-  | Displays the cable connection |
+| **Cable connection -> Cable connection** | -  | Displays the cable connection |
 | **Cabling** | -  | Category folder with the subordinated categories **Connectors** and **Interface**; offers several (graphical) evaluations of these categories |
 | **Cabling -> Connectors** | - | Here you can document the cabling between components. A distinction is made between **Input** and **Output** which can be connected to each other. This category is filled automatically by other categories, for example, **Port** or **Power consumer**. |
 | **Cabling -> Interface** | -  | Further external interfaces of a hardware which go beyond physical network ports (see category **Network → Port**) and power supplies (see category **Power consumer**), for example, peripheral devices via USB, HDMI, display Port, VGA etc.; thus suitable for the documentation of rather "unimportant" components, such as mouse and keyboard |
-| **Cards** | \-  | Details of a **SIM card** (linked cell phone, pin, serial number); back category: **Assigned SIM cards** |
+| **Cards** | -  | Details of a **SIM card** (linked cell phone, pin, serial number); back category: **Assigned SIM cards** |
 | **Certificate** | -  | Documentation of x.509 certificates |
 | **Cluster** | -  | Via this category folder you can document a **Cluster**. Frequent clusters are virtualization clusters, web clusters or database clusters. Subordinate categories: **Cluster**, **Cluster service assignment**, **Cluster Members**, **Cluster vitality**, **Shared Storage**, **Shared virtual switches**, **Administration service**  <br> |
 | **Cluster -> Administration service** | -  | Instance which manages the virtual cluster; is contained in the category folder **Cluster**; backwards category: **Virtual managed objects** |
@@ -48,7 +48,7 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **CUCM VoIP Phone Line** | -  | Information about Cisco Unified Call Manager (CUCM) |
 | **CUCM VoIP Phone** | -  | Information about Cisco Unified Call Manager (CUCM) |
 | **Database assignment** | -  | If an installed application (see object types **Applications** and **System service**) accesses one or more databases, it can be documented here; supplements the **Installation** category in the category folders **Applications** and **Services** |
-| **Database hierarchy** | \-  | Category folder with subordinate categories **Database hierarchy**, **Databases**, **Database tables** and **DBMS information** |
+| **Database hierarchy** | -  | Category folder with subordinate categories **Database hierarchy**, **Databases**, **Database tables** and **DBMS information** |
 | **Data Source** | -  | Information about the [data import](../consolidate-data/index.md) which provided the attributes of this object |
 | **Direct Attached Storage** | -  | Category folder with the subordinate categories **Controller**, **Device** and **Raid-Array**; evaluation of these categories; supplements the category **Drive**; for access to shares see category **Share access** and for LUNs the category **Storage Area Network** **→ Logical Devices (Client)** |
 | **Direct Attached Storage -> Controller** | -  | Built-in onboard or PCIe plug-in cards for the connection of storages drives; is contained in the category folder **Direct Attached Storage** |
@@ -107,12 +107,12 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **Object vitality** | -  | Indicates the target system utilization; for this purpose the categories **CPU**, **Memory**, **Network → Port**, **Direct Attached Storage** and **Software assignment** are assessed and compared to the category **Computing resources**, which is assigned to the allocated applications; has only little informative value as it is just a simple addition of values |
 | **Operating system** | - | Here you can record the primal operating system; this information complements the category **Software assignment** |
 | **Passwords** | -  | List of passwords |
-| **Port Overview (Stacking)** | \- | Shows the ports of all stack members bundled together. Click on a port to open it |
+| **Port Overview (Stacking)** | - | Shows the ports of all stack members bundled together. Click on a port to open it |
 | **Power consumer** | -  | List of built-in power adapters; thus you can document a redundant power supply, automatically fills the category **Cabling → Connectors**; enables the specification of a **BTU** (suitable for the calculation of cooling/ air-conditioning) |
 | **Power supplier** | -  | Information about a power supplier |
 | **QinQ CE-VLAN** | -  | Documentation of QinQ VLANs (see object type **Layer-2 net**) |
 | **QinQ SP-VLAN** | -  | Documentation of QinQ VLANs (see object type **Layer-2 net**) |
-| **Racks** | \- | Visual representation of spatially assigned cabinets, therefore often assigned to the **Room** object type |
+| **Racks** | - | Visual representation of spatially assigned cabinets, therefore often assigned to the **Room** object type |
 | **Relationship** [![Relationship](../assets/images/en/basics/categories-and-attributes/3-caa.png)](../assets/images/en/basics/categories-and-attributes/3-caa.png) | - | List of all [object relations](./object-relations.md) |
 | **Remote management controller** | **Assigned object** | If the object has a Lights Out Management (LOM), you can link it here. Often the object type **Remote Management Controller** of the same name serves this purpose. Backwards category: **Managed devices** |
 | **Remote management controller** | **Primary access URL** | If the assigned object has a link (see category **Access**), it is shown here. In case of several links the link which is marked as primary link is displayed. |
@@ -125,7 +125,7 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **Share access** | -  | This object accesses an existing share (Samba, CIFS, NFS etc.) of another object. Backwards category: **Shares** |
 | **Shares** | -  | This object provides one or more shares (Samba, CIFS, NFS etc.). Backwards category: **Share access** |
 | **SIM card** | -  | Details about a **SIM card** (PIN, PUK, phone number etc.); backwards category: **Assigned cards** |
-| **SIM** | \-  | Details of a **SIM** (network provider, rate, telephone number, etc.) |
+| **SIM** | -  | Details of a **SIM** (network provider, rate, telephone number, etc.) |
 | **SLA** | -  | Information about a Service Level Agreement (SLA); often assigned to the object types **Service** and **Contract** |
 | **Smart Card Certificate** | -  | Details about a smartcard |
 | **SNMP** | -  | Live query of information via the SNMP protocol; retrieved date are **not** saved |
@@ -140,7 +140,7 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **Storage Area Network -> Logical devices (Client)** | -  | If an object accesses LUNs of a SAN, this is documented here; is contained in the category folder **Storage Area Network**; backwards category: **Logical devices (LDEV Server)** |
 | **Storage Area Network -> Logical devices (LDEV Server)**| -  | If an object, for example, a SAN, offers LUNs to other objects, this is documented here; is contained in the category folder **Storage Area Network**; backwards category: **Logical devices (Client)** |
 | **Subscriptions** | -  | Information on existing subscriptions, which is assigned to **persons** via the category **Assigned Users**; can be imported via **JDisc** |
-| **Supernet** | \- | List of supernetworks and subnetworks |
+| **Supernet** | - | List of supernetworks and subnetworks |
 | **Support Entitlements** | -  | **JDisc** retrieves the status of support claims directly from some vendors and imports them into its database. This information can be imported from **JDisc** to **i-doit**. |
 | **Telephone/fax** | -  | Information such as telephone number or fax number |
 | **TSI service** |     | Details about Cisco telephone systems |
@@ -207,7 +207,7 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **Object group** | -  | List of assigned objects (see object type **Object group**); category folder with the subordinated category **Type**; backwards category: **Group memberships** |
 | **Object group -> Type** | -  | Definition if an **Object group** is structured dynamically (per [Report](../evaluation/report-manager.md)) or statically; is contained in the category folder **Object group** |
 | **Overview** | -  | 1.  Summary of details regarding a license; is contained in the category folder **License assignment**<br>2.  Visual presentation and statistics regarding PDU branches; is contained in the category folder **PDU** |
-| **Operating Systems** | \- | Category order with subordinate categories **Operating Systems**, **Installation** and **Variants**; contains information on the operating system |
+| **Operating Systems** | - | Category order with subordinate categories **Operating Systems**, **Installation** and **Variants**; contains information on the operating system |
 | **Organization** | -  | Category folder with subordinated categories **Persons**, **Master data** and **Assigned objects**; often assigned to the object type of the same name  **Organization** |
 | **PDU** | -  | Category folder with subordinated categories **View** and **Branch**; contains information about a power distribution unit; often assigned to the object type **Power distribution unit** |
 | **PDU -> Branch** | -  | List of branches; is contained in the category folder **PDU** |
@@ -231,7 +231,7 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **Uninterruptible power supply** | -  | Details of an uninterruptible power supply (USP), thus often assigned to the object type **Uninterruptible power supply** of the same name |
 | **Variants** | -  | List of variants of an application, for example, "Standard", "Enterprise", "Pro", "Open"; is contained in the category folders **Applications**, **DBMS** and **Services**; supplements the category **Installation** in these category folders |
 | **WAN Connection** | -  | Information about an internet connection (WAN, MAN, GAN etc.), thus often assigned to the object type **WAN Connection** of the same name |
-| **WAN** | \-  | Information on an Internet connection (WAN, MAN, GAN or similar), therefore often assigned to the **WAN Connection** object type |
+| **WAN** | -  | Information on an Internet connection (WAN, MAN, GAN or similar), therefore often assigned to the **WAN Connection** object type |
 | **WiFi device** | -  | Information about a WLAN access point, thus often assigned to the object type **Wireless Access Point** |
 | **Logbook** [![Logbook](../assets/images/en/basics/categories-and-attributes/5-caa.png)](../assets/images/en/basics/categories-and-attributes/5-caa.png) | -  | [Changes of an object](./logbook.md) |
 | **Wiring System -> Net type** | **Net type** | Information about a **Wiring System**, for example, "Electricity", "Water", "Gas"; is contained in the category folder **Wiring System** |

@@ -1,9 +1,10 @@
 ---
-title: Contract details
-description: Contract details
+title: Détails du contrat
+description: Détails du contrat
 #icon: material/
 status: new
 lang: en
 ---
 
-# Contract details
+# Détails du contrat
+

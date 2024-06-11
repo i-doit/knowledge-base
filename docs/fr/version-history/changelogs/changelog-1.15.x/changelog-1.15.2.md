@@ -1,52 +1,52 @@
-# Changelog 1.15.2
+# Journal des modifications 1.15.2
 
-[Improvement][Authorization system] Creation of objects of certain object types is possible despite missing authorization  
-[Improvement][OCS] Compatibility with new OCS versions  
-[Bug][User settings] Validation for login passwords  
-[Bug][Notifications] Notifications are not sent to members of a group of people  
-[Bug][Notifications] Notifications do not send e-mails to groups, even if they match the role assignment  
-[Bug][Notifications] Notification: Expiration of a certificate period - Despite threshold value, certificates outside the threshold value are also displayed  
-[Bug][Notifications] Links in notifications are created incorrectly  
-[Bug][Notifications] Notifications are sent, even if the observed objects do not match the conditions  
-[Bug][Relations] The field "Layer 2 Net Assignment" within the "Net" category of "Layer-3 Net" objects does not create a relation to the "Layer 2 net" object  
-[Bug][Lists] Linking manufacturer and model in object list filters  
-[Bug][Lists] Sorting yes/no fields in object lists generates SQL errors  
-[Bug][Export] CMDB export via XML cannot be imported into i-doit  
-[Bug][Code (internal)] ISMS: Report with attributes "Likelihood" and "Likelihood after treatment" always shows "Likelihood"  
-[Bug][Code (internal)] "Loose" cables cannot be connected to existing connectors  
-[Bug][Code (internal)] The Configuration object type is not saved  
-[Bug][Code (internal)] Selection of linked attributes is not loaded/opened when an existing placeholder is edited  
-[Bug][Code (internal)] Sorting in the list browser of Dialog-Plus fields sorts case sensitive  
-[Bug][Code (internal)] Tooltip is always created at the bottom right of the object during mouse-over  
-[Bug][Code (internal)] Linked database in the database category does not refer to the database  
-[Bug][Categories] Selection for DBMS of category "Instance / Oracle database" shows archived/deleted entries  
-[Bug][Categories] Information about Achievement certificate is reset when editing  
-[Bug][Categories] Softwareversion of DBMS not included in selection  
-[Bug][Categories] Automatic update of status and CMDB-status of outdated contracts  
-[Bug][Categories] The list view of the category Network > Port overview shows VLAN Layer-2 and Layer-3 networks not line-separated  
-[Bug][Categories] Backward category "Assigned subscriptions" shows no entries  
-[Bug][Categories] Used databases for software assignments are not displayed in the software installation  
-[Bug][Categories] Category "Workplace components" shows archived and deleted items  
-[Bug][Report-Manager] Some attributes cause a lot of empty pages in report results  
-[Bug][Report-Manager] User without rights to edit all reports of one category can not edit a report from list  
-[Bug][Report-Manager] Rework all the attributes of the subcategory "Databases" from the folder "Databases" for the Report Manager.  
-[Bug][Report-Manager] Report Manager: PDF export ASCII diagram is not displayed correctly  
-[Bug][Report-Manager] Report Manager: Condition Location:Assembly > Vertical cannot be selected  
-[Bug][Report-Manager] Reports: Reports with output with location:mounting information ignores the value "Vertical  
-[Bug][Import] Database Error in OCS Import  
-[Bug][Import] CSV Import: Operating system and version are not assigned  
-[Bug][Import] Assign CSV import attributes as linked objects, with automatic object type selection does not work correctly  
-[Bug][JDisc] Content from category "location" is overwritten/deleted when performing a JDisc import  
-[Bug][JDisc] JDISC: Location of imported objects in enclosures with unpositioned objects will be removed  
-[Bug][List editing] Field for notice period value of contracts missing in list edit  
-[Bug][Custom categories] Content of custom multi value categories are not shown on overview page  
-[Bug][Logbook] No logbook entry is created for the Connected Object when a connection is created via the category Network > Port  
-[Bug][Logbook] The logbook contains the ID instead of the object name of a location after change  
-[Bug][H-Inventory] Error when importing h-inventory XML-files  
-[Bug][CSV Import] Memory usage for CSV import  
-[Bug][CSV Import] CSV Import: Category Databases > Database Attributes Assigned DBMS missing  
-[Bug][CSV Import] CSV Import: Attribute missing Import Server > DBMS > DBMS  
-[Bug][CSV Import] CSV Import: Object type> Database schema specific category > Database schema is not available for import  
-[Bug][Installation] Installation script does not use given database user for configuration  
-[Bug][Installation] Operating system check from the i-doit installation marks unsupported operating systems as OK  
-[Bug][Search] Search for host address -> Alias shows the language constant of the alias  
+[Amélioration][Système d'autorisation] La création d'objets de certains types d'objets est possible malgré l'autorisation manquante  
+[Amélioration][OCS] Compatibilité avec les nouvelles versions OCS  
+[Bogue][Paramètres utilisateur] Validation des mots de passe de connexion  
+[Bogue][Notifications] Les notifications ne sont pas envoyées aux membres d'un groupe de personnes  
+[Bogue][Notifications] Les notifications n'envoient pas d'e-mails aux groupes, même s'ils correspondent à l'attribution de rôle  
+[Bogue][Notifications] Notification : Expiration d'une période de certificat - Malgré la valeur seuil, les certificats en dehors de la valeur seuil sont également affichés  
+[Bogue][Notifications] Les liens dans les notifications sont créés de manière incorrecte  
+[Bogue][Notifications] Les notifications sont envoyées, même si les objets observés ne correspondent pas aux conditions  
+[Bogue][Relations] Le champ "Affectation de réseau de couche 2" dans la catégorie "Réseau" des objets "Réseau de couche 3" ne crée pas de relation avec l'objet "Réseau de couche 2"  
+[Bogue][Listes] Liaison fabricant et modèle dans les filtres de liste d'objets  
+[Bogue][Listes] Le tri des champs oui/non dans les listes d'objets génère des erreurs SQL  
+[Bogue][Export] L'exportation CMDB via XML ne peut pas être importée dans i-doit  
+[Bogue][Code (interne)] ISMS : Le rapport avec les attributs "Probabilité" et "Probabilité après traitement" montre toujours "Probabilité"  
+[Bogue][Code (interne)] Les câbles "lâches" ne peuvent pas être connectés aux connecteurs existants  
+[Bogue][Code (interne)] Le type d'objet Configuration n'est pas enregistré  
+[Bogue][Code (interne)] La sélection des attributs liés n'est pas chargée/ouverte lorsqu'un espace réservé existant est modifié  
+[Bogue][Code (interne)] Le tri dans le navigateur de liste des champs Dialog-Plus trie sensible à la casse  
+[Bogue][Code (interne)] L'info-bulle est toujours créée en bas à droite de l'objet lors du survol de la souris  
+[Bogue][Code (interne)] La base de données liée dans la catégorie base de données ne renvoie pas à la base de données  
+[Bogue][Catégories] La sélection pour le SGBD de la catégorie "Instance / Base de données Oracle" montre des entrées archivées/supprimées  
+[Bogue][Catégories] Les informations sur le certificat de réalisation sont réinitialisées lors de la modification  
+[Bogue][Catégories] La version du logiciel du SGBD n'est pas incluse dans la sélection  
+[Bogue][Catégories] Mise à jour automatique de l'état et du statut CMDB des contrats obsolètes  
+[Bogue][Catégories] La vue en liste de la catégorie Réseau > Vue d'ensemble des ports montre les réseaux VLAN de couche 2 et de couche 3 non séparés par des lignes  
+[Bogue][Catégories] La catégorie "Abonnements attribués" en arrière-plan ne montre aucune entrée  
+[Bogue][Catégories] Les bases de données utilisées pour les affectations de logiciels ne sont pas affichées dans l'installation de logiciels  
+[Bogue][Catégories] La catégorie "Composants de poste de travail" montre des éléments archivés et supprimés  
+[Bogue][Gestionnaire de rapports] Certains attributs provoquent beaucoup de pages vides dans les résultats du rapport  
+[Bogue][Gestionnaire de rapports] L'utilisateur sans droits pour modifier tous les rapports d'une catégorie ne peut pas modifier un rapport de la liste  
+[Bogue][Gestionnaire de rapports] Refonte de tous les attributs de la sous-catégorie "Bases de données" du dossier "Bases de données" pour le Gestionnaire de rapports.  
+[Bogue][Gestionnaire de rapports] Gestionnaire de rapports : Le diagramme ASCII d'exportation PDF n'est pas affiché correctement  
+[Bogue][Gestionnaire de rapports] Gestionnaire de rapports : Condition Emplacement:Assemblage > Vertical ne peut pas être sélectionnée  
+[Bogue][Gestionnaire de rapports] Rapports : Les rapports avec une sortie avec l'information d'emplacement : informations de montage ignorent la valeur "Vertical"  
+[Bogue][Import] Erreur de base de données dans l'importation OCS  
+[Bogue][Import] Import CSV : Le système d'exploitation et la version ne sont pas attribués  
+[Bogue][Import] Attribuer les attributs d'importation CSV en tant qu'objets liés, avec une sélection automatique du type d'objet ne fonctionne pas correctement  
+[Bogue][JDisc] Le contenu de la catégorie "emplacement" est écrasé/supprimé lors de l'exécution d'une importation JDisc  
+[Bogue][JDisc] JDISC : L'emplacement des objets importés dans des boîtiers avec des objets non positionnés sera supprimé  
+[Bogue][Édition de liste] Champ pour la valeur de préavis de contrat manquant dans l'édition de liste  
+[Bogue][Catégories personnalisées] Le contenu des catégories de valeurs multiples personnalisées n'est pas affiché sur la page d'aperçu  
+[Bogue][Journal] Aucune entrée de journal n'est créée pour l'objet connecté lorsqu'une connexion est créée via la catégorie Réseau > Port  
+[Bogue][Journal] Le journal contient l'ID au lieu du nom de l'objet d'un emplacement après modification  
+[Bogue][H-Inventory] Erreur lors de l'importation de fichiers XML h-inventory  
+[Bogue][Importation CSV] Utilisation de la mémoire pour l'importation CSV  
+[Bogue][Importation CSV] Importation CSV : Catégorie Bases de données > Attributs de base de données DBMS attribués manquants  
+[Bogue][Importation CSV] Importation CSV : Attribut manquant Importation Serveur > DBMS > DBMS  
+[Bogue][Importation CSV] Importation CSV : Type d'objet > Catégorie spécifique du schéma de base de données > Le schéma de base de données n'est pas disponible pour l'importation  
+[Bogue][Installation] Le script d'installation n'utilise pas l'utilisateur de base de données donné pour la configuration  
+[Bogue][Installation] La vérification du système d'exploitation de l'installation i-doit marque les systèmes d'exploitation non pris en charge comme OK  
+[Bogue][Recherche] Recherche d'adresse hôte -> Alias montre la constante de langue de l'alias  

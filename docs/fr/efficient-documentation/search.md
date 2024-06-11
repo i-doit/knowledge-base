@@ -1,62 +1,62 @@
-# Search
+# Recherche
 
-"Seek and you shall find." Specific research in the [IT documentation](../glossary.md) requires a fast and comfortable search. A specific search is often a faster method than clicking through menu structures.
+"Cherchez et vous trouverez." Une recherche spécifique dans la [documentation informatique](../glossary.md) nécessite une recherche rapide et confortable. Une recherche spécifique est souvent une méthode plus rapide que de naviguer à travers les structures de menu.
 
-## The Search Field
+## Le Champ de Recherche
 
-The search field is located in the web GUI of i-doit in the upper right corner. Here you can search for any term of the IT documentation. While typing, the first results already appear (search suggestions), they can be selected using the mouse or the keyboard (auto-completion) to jump directly to the found data set.
+Le champ de recherche est situé dans l'interface web d'i-doit dans le coin supérieur droit. Ici, vous pouvez rechercher n'importe quel terme de la documentation informatique. En tapant, les premiers résultats apparaissent déjà (suggestions de recherche), ils peuvent être sélectionnés à l'aide de la souris ou du clavier (auto-complétion) pour accéder directement à l'ensemble de données trouvé.
 
-[![The Search Field](../assets/images/en/efficient-documentation/search/1-se.png)](../assets/images/en/efficient-documentation/search/1-se.png)
+[![Le Champ de Recherche](../assets/images/en/efficient-documentation/search/1-se.png)](../assets/images/en/efficient-documentation/search/1-se.png)
 
-Apart from the plain text, the search can be restricted to specific [object attributes](../glossary.md):
+Outre le texte brut, la recherche peut être restreinte à des [attributs d'objet](../glossary.md) spécifiques :
 
--   If the search begins with a hash followed by the [object ID](../glossary.md) (#123), the overview page of the object associated to this ID will be opened upon pressing the return key.
--   If the search begins with the keyword title followed by a colon and the object title, the corresponding object will be displayed (title:acme).
+-   Si la recherche commence par un dièse suivi de l'[identifiant d'objet](../glossary.md) (#123), la page d'aperçu de l'objet associé à cet identifiant sera ouverte en appuyant sur la touche Entrée.
+-   Si la recherche commence par le mot-clé titre suivi de deux-points et du titre de l'objet, l'objet correspondant sera affiché (titre:acme).
 
-## The Search Results
+## Les Résultats de la Recherche {/%%/}
 
-If the search suggestions mentioned above do not lead to the desired result, then pressing return will present a page with search results. Next to each piece of found data sets also the source is stated, for example, the [attribute](../glossary.md) of a category of an [object type](../glossary.md) in the [CMDB](../glossary.md) module.
+Si les suggestions de recherche mentionnées ci-dessus ne conduisent pas au résultat souhaité, appuyer sur retour affichera une page avec les résultats de la recherche. À côté de chaque ensemble de données trouvé, la source est également indiquée, par exemple, l'[attribut](../glossary.md) d'une catégorie d'un [type d'objet](../glossary.md) dans le module [CMDB](../glossary.md).
 
-[![The Search Results](../assets/images/en/efficient-documentation/search/2-se.png)](../assets/images/en/efficient-documentation/search/2-se.png)
+[![Les Résultats de la Recherche](../assets/images/en/efficient-documentation/search/2-se.png)](../assets/images/en/efficient-documentation/search/2-se.png)
 
-!!! success "Set bookmark/favorite"
-    Each search can be referenced via the URL. Searching the term "acme" results in the URL [http://i-doit/search?q=acme](http://i-doit/search?q=acme). Search results can be saved as bookmarks/favorites in the web browser in order to be able to access them quicker.
+!!! success "Définir un signet/favori"
+    Chaque recherche peut être référencée via l'URL. La recherche du terme "acme" donne l'URL [http://i-doit/search?q=acme](http://i-doit/search?q=acme). Les résultats de recherche peuvent être enregistrés comme signets/favoris dans le navigateur web afin de pouvoir y accéder plus rapidement.
 
-## Search Mode
+## Mode de Recherche
 
-There are two selectable modes for the search which all may lead to different results:
+Il existe deux modes de recherche sélectionnables qui peuvent tous conduire à des résultats différents :
 
--   **Normal:** The indexing (see below) is used for the search. This is the default setting.
--   **Deep Search:** Attributes are scanned one after another. The index is ignored. This search mode takes more time than the others.
+-   **Normal :** L'indexation (voir ci-dessous) est utilisée pour la recherche. C'est le paramètre par défaut.
+-   **Recherche Approfondie :** Les attributs sont scannés un par un. L'index est ignoré. Ce mode de recherche prend plus de temps que les autres.
 
-The search mode can be selected at **Extras → CMDB → Search** after the first search. At **Administration → [Tenant name] management → Settings for [Tenant name] → Search → Default search mode** you can select the specific mode you want to use automatically in the future.
+Le mode de recherche peut être sélectionné dans **Extras → CMDB → Recherche** après la première recherche. À **Administration → Gestion de [Nom du locataire] → Paramètres pour [Nom du locataire] → Recherche → Mode de recherche par défaut**, vous pouvez sélectionner le mode spécifique que vous souhaitez utiliser automatiquement à l'avenir.
 
-## Automatic Deep Search
+## Recherche approfondie automatique
 
-Should a search with the predefined mode (see above) provide an unsatisfactory result or even no result, you can carry out a **Deep Search** automatically. You can configure the settings for **Deep Search** under **Administration → [Tenant name] management → Settings for [Tenant name] → Search → Automatic DeepSearch**:
+Si une recherche avec le mode prédéfini (voir ci-dessus) fournit un résultat insatisfaisant ou même aucun résultat, vous pouvez effectuer une **Recherche approfondie** automatiquement. Vous pouvez configurer les paramètres de la **Recherche approfondie** sous **Administration → Gestion de [Nom du locataire] → Paramètres pour [Nom du locataire] → Recherche → Recherche approfondie automatique** :
 
 | Option | Description |
 | --- | --- |
-| **Active** | The search results are supplemented by an additional **Deep Search**. |
-| **Active, when no results are found** | The additional **Deep Search** is started when there are no results. |
-| **Deactivated** | The additional **Deep Search** is omitted. |
+| **Actif** | Les résultats de la recherche sont complétés par une **Recherche approfondie** supplémentaire. |
+| **Actif, en l'absence de résultats** | La **Recherche approfondie** supplémentaire est lancée en l'absence de résultats. |
+| **Désactivé** | La **Recherche approfondie** supplémentaire est omise. |
 
-## Indexing
+## Indexation
 
-Initially, the search index is generated automatically when updating or installing. Only for very big databases with more than 500,000 objects it has to be generated manually to ensure that the search is fast and delivers good results. The index can be created or updated in the background regardless of user interactions. This action is triggered via the i-doit Console. An example call and explanations of the possible parameters can be found in the corresponding article.
+Initialement, l'index de recherche est généré automatiquement lors de la mise à jour ou de l'installation. Seulement pour les bases de données très volumineuses avec plus de 500 000 objets, il doit être généré manuellement pour garantir que la recherche est rapide et fournit de bons résultats. L'index peut être créé ou mis à jour en arrière-plan indépendamment des interactions de l'utilisateur. Cette action est déclenchée via la Console i-doit. Un exemple d'appel et des explications des paramètres possibles peuvent être trouvés dans l'article correspondant.
 
 ```shell
 php console.php search-index -uadmin -padmin -i 1
 ```
 
-Alternatively, the Reindex can also be executed in the i-doit administration at [Repair and clean up](../system-administration/administration/tenant-management/repair-and-clean-up.md) up via the **Re-new search index** button.
+Alternativement, la réindexation peut également être exécutée dans l'administration i-doit à [Réparation et nettoyage](../system-administration/administration/tenant-management/repair-and-clean-up.md) via le bouton **Renouveler l'index de recherche**.
 
-!!! info "Memory requirement"
-    On a Unix-like operating system the index is 500 MB per 1 million indexed data records. Usually, the duration of a search query is not increased by bigger indexes.
+!!! info "Exigence en mémoire"
+    Sur un système d'exploitation de type Unix, l'index est de 500 Mo par million d'enregistrements de données indexés. En général, la durée d'une requête de recherche n'est pas augmentée par des index plus grands.
 
-## Search via the Console
+## Recherche via la Console
 
-The [CLI tool](../automation-and-integration/cli/console/options-and-parameters-cli.md#search) allows you to search via the command line. An example:
+L'outil [CLI](../automation-and-integration/cli/console/options-and-parameters-cli.md#search) vous permet de rechercher via la ligne de commande. Un exemple :
 
 ```shell
 sudo -u www-data php console.php search -uadmin -padmin --searchString=acme
@@ -74,9 +74,9 @@ sudo -u www-data php console.php search -uadmin -padmin --searchString=acme
 +------+-------------------------------------------------------+------------------------------------------------------------------------+-------+
 ```
 
-## Search via the API
+## Recherche via l'API
 
-It is also possible to search the [IT documentation](../basics/structure-of-the-it-documentation.md) via the [Application Programming Interface (API)](../i-doit-pro-add-ons/api/index.md) of i-doit. The required method is idoit.search:
+Il est également possible de rechercher la [documentation IT](../basics/structure-of-the-it-documentation.md) via l'[Interface de Programmation Applicative (API)](../i-doit-pro-add-ons/api/index.md) de i-doit. La méthode requise est idoit.search :
 
 ```json
 {
@@ -91,7 +91,7 @@ It is also possible to search the [IT documentation](../basics/structure-of-the-
 }
 ```
 
-The server replies as follows:
+Le serveur répond comme suit:
 
 ```json
 {
@@ -111,94 +111,94 @@ The server replies as follows:
 }
 ```
 
-## Adjust the Indexing
+## Ajuster l'indexation {/adjust-the-indexing}
 
-The indexing of i-doit utilizes many features that are provided by MySQL/MariaDB. These can be customized. For some settings the configuration file of MySQL/MariaDB is adjusted (for example at `/etc/mysql/conf.d/i-doit.cnf`). For other settings it is required to run SQL statements for which the command line client is suitable. Example:
+L'indexation d'i-doit utilise de nombreuses fonctionnalités fournies par MySQL/MariaDB. Celles-ci peuvent être personnalisées. Pour certains paramètres, le fichier de configuration de MySQL/MariaDB est ajusté (par exemple à `/etc/mysql/conf.d/i-doit.cnf`). Pour d'autres paramètres, il est nécessaire d'exécuter des instructions SQL pour lesquelles le client en ligne de commande est adapté. Exemple :
 
 ```shell
 mysql -uroot -p -hlocalhost
 ```
 
-### Word Length
+### Longueur des mots
 
-An important question for indexing is how long [the minimal length of a word](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) has to be. Often this value is set to 3 characters. Terms like "PC 01" will not be found with this value. A suitable specification would be a value of 2 or even 1 character(s).
+Une question importante pour l'indexation est de savoir quelle [longueur minimale d'un mot](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) doit être. Souvent, cette valeur est définie à 3 caractères. Des termes comme "PC 01" ne seront pas trouvés avec cette valeur. Une spécification appropriée serait une valeur de 2 ou même 1 caractère(s).
 
 ```conf
-innodb_ft_min_token_size = 2 # minimal number of characters for a searched term
+innodb_ft_min_token_size = 2 # nombre minimal de caractères pour un terme recherché
 ```
 
-This setting could lead to an index which is many times greater than before.
+Ce paramètre pourrait entraîner un index beaucoup plus grand qu'auparavant.
 
-### Word Separators
+### Séparateurs de mots
 
-In order to differentiate between words, various characters are used to serve as separators (e.g. space, dot, dash). To find the term "PC-01", the term is separated into "PC" and "01". The word length is again the decisive factor whether "PC" and "01" are indexed or not.
+Afin de différencier les mots, divers caractères sont utilisés comme séparateurs (par exemple espace, point, tiret). Pour trouver le terme "PC-01", le terme est séparé en "PC" et "01". La longueur du mot est à nouveau le facteur décisif pour savoir si "PC" et "01" sont indexés ou non.
 
-### Stop Words
+### Mots vides
 
-[Stop words](https://en.wikipedia.org/wiki/Stop_words) are the terms which are ignored when searching. Thus the index should not take these words into account. Examples for such words are "at", "that" and "with". MySQL already provides a list of stop words which is relatively small, however, and only contains English terms. This list can be replaced by your own list. You can use the following SQL statements:
+[Les mots vides](https://fr.wikipedia.org/wiki/Mot_vide) sont les termes qui sont ignorés lors de la recherche. Ainsi, l'index ne doit pas prendre en compte ces mots. Des exemples de tels mots sont "à", "que" et "avec". MySQL fournit déjà une liste de mots vides qui est relativement petite, cependant, et ne contient que des termes anglais. Cette liste peut être remplacée par votre propre liste. Vous pouvez utiliser les déclarations SQL suivantes :
 
-Enter the system database of i-doit:
+Accédez à la base de données système de i-doit :
 
 ```sql
 USE idoit_system;
 ```
 
-If the table does not exist yet, it should be created:
+Si la table n'existe pas encore, elle doit être créée :
 
 ```sql
 CREATE TABLE IF NOT EXISTS isys_search_stopwords (value VARCHAR(18) NOT NULL DEFAULT '') ENGINE=INNODB DEFAULT CHARSET=latin1;
 ```
 
-## Empty the table
+## Vider la table
 
 ```sql
 TRUNCATE TABLE isys_search_stopwords;
 ```
 
-Insert list of stop words:
+Insérer la liste des mots vides :
 
 ```sql
 INSERT INTO isys_search_stopwords (value)
-VALUES ('but'), ('as'), ('also'), ('at'), ('so'), ('on'), ('from'), ('am'), ('until'), ('are'), ('there'), ('by'), ('thus'), ('because'), ('that'), ('the'), ('your'), ('whose'), ('this'),('yet'), ('there'), ('you'), ('through'), ('a'), ('an'), ('he'), ('it'), ('yours'), ('for'), ('had'), ('here'), ('behind'), ('i'), ('their'), ('in'), ('is'), ('yes'), ('each'), ('everyone'), ('everything'), ('can'), ('do'), ('my'), ('mine'), ('with'), ('must'), ('after'), ('afterwards'), ('no'), ('not'), ('now'), ('or'), ('be'), ('his'), ('she'), ('should'), ('shall'), ('sofar'), ('over'), ('and'), ('our'), ('ours'), ('beneath'), ('of'), ('before'), ('when'), ('why'), ('what'), ('continue'), ('further'), ('if'), ('who'), ('become'), ('becomes'), ('how'), ('again'), ('we'), ('to');
+VALUES ('mais'), ('comme'), ('aussi'), ('à'), ('ainsi'), ('sur'), ('depuis'), ('suis'), ('jusqu\'à'), ('sont'), ('là'), ('par'), ('donc'), ('parce que'), ('que'), ('le'), ('votre'), ('dont'), ('ce'),('encore'), ('là'), ('vous'), ('à travers'), ('un'), ('une'), ('il'), ('cela'), ('le vôtre'), ('pour'), ('avait'), ('ici'), ('derrière'), ('je'), ('leur'), ('dans'), ('est'), ('oui'), ('chaque'), ('tout le monde'), ('tout'), ('peut'), ('faire'), ('mon'), ('mien'), ('avec'), ('doit'), ('après'), ('ensuite'), ('non'), ('pas'), ('maintenant'), ('ou'), ('être'), ('son'), ('elle'), ('devrait'), ('doit'), ('jusqu\'à présent'), ('au-dessus'), ('et'), ('notre'), ('nôtre'), ('sous'), ('de'), ('avant'), ('quand'), ('pourquoi'), ('quoi'), ('continuer'), ('plus loin'), ('si'), ('qui'), ('devenir'), ('devient'), ('comment'), ('encore'), ('nous'), ('à');
 ```
 
-Lists of stop words in various languages can be found on the internet.<br>
-The following settings are required to replace the MySQL list with your list:
+Listes de mots vides dans diverses langues peuvent être trouvées sur internet.<br>
+Les paramètres suivants sont nécessaires pour remplacer la liste MySQL par votre liste :
 
 ```conf
 innodb_ft_server_stopword_table = 'idoit_system/isys_search_stopwords'
 ```
 
-### Activate Index Changes
+### Activer les modifications d'index
 
-Three steps are necessary to make changes to the index behavior effective. First you should restart the MySQL service. The following command is used for Debian-based operating systems:
+Trois étapes sont nécessaires pour rendre les modifications du comportement de l'index effectives. Tout d'abord, vous devez redémarrer le service MySQL. La commande suivante est utilisée pour les systèmes d'exploitation basés sur Debian :
 
 ```shell
 sudo systemctl restart mysql.service
 ```
 
-Afterwards, the following SQL statement has to be run for each tenant database:
+Ensuite, l'instruction SQL suivante doit être exécutée pour chaque base de données locataire :
 
 ```sql
 OPTIMIZE TABLE isys_search_idx;
 ```
 
-Complete SQL statement for the first tenant with the database idoit_data:
+Instruction SQL complète pour le premier locataire avec la base de données idoit_data :
 
 ```sql
 USE idoit_data;
 OPTIMIZE TABLE isys_search_idx;
 ```
 
-Finally, re-indexing via the i-doit controller has to be effected (see above).
+Enfin, la réindexation via le contrôleur i-doit doit être effectuée (voir ci-dessus).
 
-### Increase the limit of 2500 results
+### Augmenter la limite de 2500 résultats
 
-If objects are named consecutively e.g. 123456-00001 to 123456-99999 only objects up to 123456-2500 can be found with normal search settings.<br>
-This limit is for performance reasons. To increase this limit, an expert setting must be added.
+Si les objets sont nommés consécutivement par exemple 123456-00001 à 123456-99999, seuls les objets jusqu'à 123456-2500 peuvent être trouvés avec les paramètres de recherche normaux.<br>
+Cette limite est pour des raisons de performance. Pour augmenter cette limite, un paramètre d'expert doit être ajouté.
 
-Here is an example where the limit was set to 5000 results.
+Voici un exemple où la limite a été fixée à 5000 résultats.
 
-| Key | Value | Type |
+| Clé | Valeur | Type |
 | --- | --- | --- |
-| search.limit | 5000 | Tenant-wide |
+| search.limit | 5000 | Au niveau du locataire |

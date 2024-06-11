@@ -1,47 +1,47 @@
 # i-doit via XAMPP
 
 !!! note ""
-    This article was last checked for i-doit version ==31==
+    This article has been verified for i-doit version ==31==
 
 !!! attention "Firewall"
 
-    We deactivate the Windows Firewall for our installation so that RDP and the connection to the Webserver will function. The applications and ports should be configured precisely in the Firewall, however, we don't want to focus on that in this article.
+    We disable the Windows firewall for our installation so that RDP and web server connection work. Applications and ports need to be precisely configured in the firewall, however, we do not want to focus on that in this article.
 
-## Step 1: Installation of XAMPP
+## Étape 1 : Installation de XAMPP
 
-First of all, download the XAMPP package at [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html). Here we use the installer (xampp-win32-XXX-installer.exe). Other packages are fine too. The compressed package (.zip), for example, can simply be extracted to C:\\. It is important to note that the installation path for XAMPP has to be "C:\\xampp" as "C:\\Program Files (x86)" has not enough permission rights, which most likely will result in a faulty installation. Bitnami is not needed and can be unchecked in the installation process.
+First, download the XAMPP package from [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html). Here, we are using the installer (xampp-win32-XXX-installer.exe). Other packages are also good. The compressed package (.zip), for example, can simply be extracted to C:\\. It is important to note that the installation path for XAMPP should be "C:\\xampp" as "C:\\Program Files (x86)" does not have sufficient permission rights, which will likely result in a faulty installation. Bitnami is not necessary and can be unchecked during the installation process.
 
-Here the [System Requirements](../../system-requirements.md) of the respective i-doit version must be considered. Therefore, in this example the installation package → `xampp-windows-x64-7.4.20-0-VC15-installer.exe`
+Here, the [System Requirements](../../system-requirements.md) of the respective i-doit version must be considered. Therefore, in this example, the installation package → `xampp-windows-x64-7.4.20-0-VC15-installer.exe`
 
-At least the components ==Apache==, ==MySQL== and ==PHP== must be installed.
+At least the ==Apache==, ==MySQL==, and ==PHP== components must be installed.
 
 [![Select components](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)
 
-The default folder is left as → ==C:\xampp==
+The default folder is left as is → ==C:\xampp==
 
-[![Select install folder](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/2-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/2-mws.png)
+[![Select installation folder](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/2-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/2-mws.png)
 
-Then we select the language, I leave it at ==English==.
+Then, we select the language, I leave it in ==English==.
 
 [![Select language](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/3-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/3-mws.png)
 
-The next few ==Next== \> buttons should be self-explanatory.
+Les prochains boutons ==Suivant== devraient être explicites.
 
-[![Completing](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/4-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/4-mws.png)
+[![Terminer](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/4-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/4-mws.png)
 
-Now the installation is finished and we start the control panel of XAMPP by clicking Finish.
+Maintenant, l'installation est terminée et nous démarrons le panneau de contrôle de XAMPP en cliquant sur Terminer.
 
-[![Control panel](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/5-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/5-mws.png)
+[![Panneau de contrôle](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/5-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/5-mws.png)
 
-## Step 2: Configuration of XAMPP
+## Étape 2 : Configuration de XAMPP
 
 ### PHP
 
-Now we configure PHP. For this we click on the button Config → PHP (php.ini) to open the php.ini.
+Maintenant nous configurons PHP. Pour cela, nous cliquons sur le bouton Config → PHP (php.ini) pour ouvrir le php.ini.
 
-[![Configure php](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/6-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/6-mws.png)
+[![Configurer php](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/6-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/6-mws.png)
 
-Normally, the file should open automatically with the editor. We add the following settings at the end of the file and save:
+Normalement, le fichier devrait s'ouvrir automatiquement avec l'éditeur. Nous ajoutons les paramètres suivants à la fin du fichier et sauvegardons :
 
 ```shell
 allow_url_fopen = Yes
@@ -68,20 +68,18 @@ session.gc_maxlifetime = 604800
 session.cookie_lifetime = 0
 ```
 
-_Additionally, for the LDAP extension, it may be necessary to copy the libsasl.dll file from `C:\\xampp\\php\\` to `C:\\xampp\\apache\\bin`._
-_Also, under Dynamic Extensions, the `;extension=ldap` must be freed from the leading semicolon._
+_De plus, pour l'extension LDAP, il peut être nécessaire de copier le fichier libsasl.dll de `C:\\xampp\\php\\` vers `C:\\xampp\\apache\\bin`._
+_Aussi, sous Extensions Dynamiques, le `;extension=ldap` doit être libéré du point-virgule initial._
 
-## Apache Webserver
+## Serveur Web Apache
 
-Separate settings for the Apache web server are not necessary here.
+Des paramètres séparés pour le serveur web Apache ne sont pas nécessaires ici.
 
 ### MySQL/MariaDB
 
-Now we configure MySQL/MariaDB. For this we click on the button Config → my.ini.
+Maintenant nous configurons MySQL/MariaDB. Pour cela, nous cliquons sur le bouton Config → my.ini.
 
-[![Configure MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/7-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/7-mws.png)
-
-Normally, this file should also be opened automatically with the editor. We also add the following settings here at the end of the file and save:
+[![Configurer MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/7-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/7-mws.png)
 
 ```shell
 [mysqld]
@@ -132,53 +130,54 @@ innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
 
-## Step 3: Start Apache and MySQL
+## Étape 3 : Démarrer Apache et MySQL {/examples}
 
-We click on the [![Start](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/8-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/8-mws.png) button for Apache and MySQL. If necessary, a firewall popup will appear.
-Now both modules should be highlighted in green.
+Nous cliquons sur le [![Démarrer](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/8-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/8-mws.png) bouton pour Apache et MySQL. Si nécessaire, une fenêtre contextuelle de pare-feu apparaîtra.
+Maintenant, les deux modules devraient être mis en surbrillance en vert.
 
-[![Started modules](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/9-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/9-mws.png)
 
-### Password for the MySQL root
+[![Modules démarrés](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/9-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/9-mws.png)
 
-Now we should set a password for the MySQL root user.
-For this we click on the [![shell](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/10-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/10-mws.png) button.
+### Mot de passe pour le root MySQL {/examples}
 
-[![Shell and control panel](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/11-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/11-mws.png)
+Maintenant, nous devons définir un mot de passe pour l'utilisateur root MySQL.
+Pour cela, nous cliquons sur le bouton [![shell](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/10-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/10-mws.png).
 
-First, we log in:
+[![Shell et panneau de contrôle](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/11-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/11-mws.png)
+
+Tout d'abord, nous nous connectons :
 
 ```shell
 mysql -u root
 ```
 
-Now we change the password, '_thisistotallysecure!!11_' should be replaced with your own password:
+Maintenant, nous changeons le mot de passe, '_thisistotallysecure!!11_' doit être remplacé par votre propre mot de passe :
 
 ```shell
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'thisistotallysecure!!11';
 ```
 
-## Step 4: Download and unzip i-doit
+## Étape 4 : Télécharger et décompresser i-doit {/examples}
 
-### Download and unzip i-doit
+### Télécharger et décompresser i-doit {/examples}
 
-Now we download i-doit in the latest version from the customer portal.
-We unpack the `idoit-xx.x.zip` under `C:\\xampp\\htdocs` and rename the folder to idoit.
+Maintenant, nous téléchargeons i-doit dans la dernière version depuis le portail client.
+Nous déballons le `idoit-xx.x.zip` sous `C:\\xampp\\htdocs` et renommons le dossier en idoit.
 
-## Step 5: Checking the installation
+## Étape 5 : Vérifier l'installation {/examples}
 
-With the previous configuration we have prepared the web server. Now, when we call the IP of the system or localhost in a browser, we should get the welcome page of Apache displayed.
-Under ==PHPInfo== in the menu you can check if the values set in php.ini were taken over correctly.
+Avec la configuration précédente, nous avons préparé le serveur web. Maintenant, lorsque nous appelons l'IP du système ou localhost dans un navigateur, nous devrions obtenir la page de bienvenue d'Apache affichée.
+Sous ==PHPInfo== dans le menu, vous pouvez vérifier si les valeurs définies dans php.ini ont été correctement prises en compte.
 
-## Next Step
+## Next Step {/examples/}
 
-Now the operating system is prepared and i-doit can be installed.
+Maintenant, le système d'exploitation est prêt et i-doit peut être installé.
 
-Proceed to [==Setup== …](../setup.md)
+Passez à [==Configuration== …](../setup.md)
 
-### FAQ
+### FAQ {/examples/}
 
-With XAMPP `xampp-windows-x64-8.0.23-0-VS16-installer` a new version of the PHP extension gd was added.
-Therefore the `php.ini` should not be replaced by the one of the PHP 7.4 version.
+Avec XAMPP `xampp-windows-x64-8.0.23-0-VS16-installer`, une nouvelle version de l'extension PHP gd a été ajoutée.
+Par conséquent, le `php.ini` ne doit pas être remplacé par celui de la version PHP 7.4.
 
-For PHP 7.4 it was called `extension=gd2` and in PHP8.0 it is called `extension=gd`.
+Pour PHP 7.4, il était appelé `extension=gd2` et en PHP 8.0, il est appelé `extension=gd`.

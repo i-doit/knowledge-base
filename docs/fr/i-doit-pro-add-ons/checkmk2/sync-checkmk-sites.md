@@ -1,11 +1,11 @@
-# checkmk 2: Sync checkmk sites
+# checkmk 2: Synchroniser les sites checkmk
 
-checkmk provides a distributed monitoring of hosts and its services. You can configure multiple monitoring hosts which are called “sites”. To share these sites with i-doit run:
+checkmk offre une surveillance distribuée des hôtes et de leurs services. Vous pouvez configurer plusieurs hôtes de surveillance appelés "sites". Pour partager ces sites avec i-doit, exécutez :
 
     idoitcmk sync-sites
 
-_Sites without hosts are not considered._
+_Les sites sans hôtes ne sont pas pris en compte._
 
-In i-doit these sites are stored in the dialog+ attribute Site in category Check_MK Host.
+Dans i-doit, ces sites sont stockés dans l'attribut de dialogue+ Site de la catégorie Hôte Check_MK.
 
-**Recommendation:** Run this command every time you add a new site.
+**Recommandation :** Exécutez cette commande chaque fois que vous ajoutez un nouveau site.

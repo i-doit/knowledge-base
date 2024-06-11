@@ -1,46 +1,48 @@
-# Changelog 31
+# Journal des modifications 31 {/ * exemples * /}
 
-[Task][Import]                       Improve CSV-Import to not block the current user-session<br>
-[Task][Code (Internal)]              Allow API parameters to have multiple types<br>
-[Task][JDisc]                        Refactor "Data source" usage in JDisc code<br>
-[Task][JDisc]                        Create a tooltip info for importing connection endpoints<br>
-[Task][CMDB]                         Rename Remainder warranty to Remaining warranty<br>
-[Improvement][LDAP]                  Insert ldap filter directly<br>
-[Bug][CMDB]                          Using a custom counter with N digits does not create N digits<br>
-[Bug][CMDB]                          The "Relations" item is missing in updated extras menu<br>
-[Bug][CMDB]                          Specific category organization can not be removed from overview page<br>
-[Bug][CMDB]                          Linking the same object to two different Remote Management Controller via Managed devices leads to SQL error<br>
-[Bug][CMDB]                          Sub-locations remain hidden when user lacks view rights for intermediate location nodes<br>
-[Bug][Report-Manager]                Cable connections are not displayed in reports<br>
-[Bug][Report-Manager]                Report import not possible<br>
-[Bug][Report-Manager]                Report Manager - Runtime displaying wrong operators<br>
-[Bug][Report-Manager]                500 error code when importing demo reports into i-doit<br>
-[Bug][Report-Manager]                Cluster service assignment attributes are not selectable at report manager<br>
-[Bug][Report-Manager]                Report with attributes from Persons category causes error<br>
-[Bug][LDAP]                          Empty LDAP attribute extension title sets the unique attribute empty<br>
-[Bug][Permission system]             Person without rights can view object lists when using direct link<br>
-[Bug][Permission system]             Update user permissions placeholder for CMDB > Objects with assigned role in contact assignment<br>
-[Bug][JDisc]                         JDisc discovery needs IP address for matching<br>
-[Bug][JDisc]                         Using log level 'less' creates no log level for JDisc imports<br>
-[Bug][JDisc]                         JDisc matches non existent object id<br>
-[Bug][JDisc]                         Serial number is displayed without using GraphQL<br>
-[Bug][JDisc]                         Allow user to delete multiple jdisc servers at once<br>
-[Bug][JDisc]                         Clean up and refactor the "Data source" category<br>
-[Bug][JDisc]                         Do not always show tooltips when removing matching row of jdisc profile<br>
-[Bug][License installation (i-doit)] Error message when saving license and tenant is not existent<br>
-[Bug][Code (Internal)]               Make username field unique<br>
-[Bug][Code (Internal)]               TypeError: Cannot read properties of null (reading 'tagName')<br>
-[Bug][Code (Internal)]               Error message when installing without database connection is incomprehensible<br>
-[Bug][Code (Internal)]               Wrong subquery for attribute 'remote management controller' causes error at list view<br>
-[Bug][Code (Internal)]               Wiki button is not working properly for list view<br>
-[Bug][Validation]                    Do not save empty category entries in case of validation errors<br>
-[Bug][Update]                        i-doit 29 is displaying i-doit 28 is newer version to download<br>
-[Bug][Console]                       Console command description wrong or typo<br>
-[Bug][Lists]                         Your given configuration is malformed<br>
-[Bug][Lists]                         When filtering 'net with suffix' no results are displayed<br>
-[Bug][Lists]                         Typerror shown when accessing file versions category list<br>
-[Bug][Lists]                         Filtering a string for attribute location also filter for attribute location path<br>
-[Bug][CMDB settings]                 Can't hide description of cluster<br>
-[Bug][Notifications]                 Saving notifications displays no saving message and stays in editor window<br>
-[Bug][CSV Import]                    Skip empty contact fields during csv import<br>
-[Bug][Import]                        Format xml import log correctly<br>
+[Tâche][Importation] Améliorer l'importation CSV pour ne pas bloquer la session utilisateur actuelle<br>
+[Tâche][Code (Interne)] Autoriser aux paramètres de l'API d'avoir plusieurs types<br>
+[Tâche][JDisc] Refactoriser l'utilisation de "Source de données" dans le code JDisc<br>
+[Tâche][JDisc] Créer une info-bulle pour l'importation des points de connexion<br>
+[Tâche][CMDB] Renommer Garantie restante en Garantie restante<br>
+[Amélioration][LDAP] Insérer directement le filtre ldap<br>
+[Bogue][CMDB] L'utilisation d'un compteur personnalisé avec N chiffres ne crée pas N chiffres<br>
+[Bogue][CMDB] L'élément "Relations" est manquant dans le menu des extras mis à jour<br>
+[Bogue][CMDB] L'organisation de catégorie spécifique ne peut pas être supprimée de la page d'aperçu<br>
+[Bogue][CMDB] Lier le même objet à deux contrôleurs de gestion à distance différents via des appareils gérés entraîne une erreur SQL<br>
+[Bogue][CMDB] Les sous-emplacements restent cachés lorsque l'utilisateur n'a pas les droits de visualisation pour les nœuds d'emplacement intermédiaires<br>
+[Bogue][Gestionnaire de rapports] Les connexions de câbles ne sont pas affichées dans les rapports<br>
+[Bogue][Gestionnaire de rapports] Importation de rapport non possible<br>
+[Bogue][Gestionnaire de rapports] Gestionnaire de rapports - Affichage incorrect des opérateurs en cours d'exécution<br>
+[Bogue][Gestionnaire de rapports] Code d'erreur 500 lors de l'importation de rapports de démonstration dans i-doit<br>
+[Bogue][Gestionnaire de rapports] Les attributs d'attribution de service de cluster ne sont pas sélectionnables dans le gestionnaire de rapports<br>
+[Bogue][Gestionnaire de rapports] Le rapport avec des attributs de la catégorie Personnes provoque une erreur<br>
+[Bogue][LDAP] Le titre d'extension d'attribut LDAP vide définit l'attribut unique comme vide<br>
+[Bogue][Système de permissions] Une personne sans droits peut voir des listes d'objets lors de l'utilisation du lien direct<br>
+[Bogue][Système de permissions] Mettre à jour le placeholder des autorisations utilisateur pour CMDB > Objets avec rôle assigné dans l'attribution de contact<br>
+[Bogue][JDisc] La découverte JDisc nécessite une adresse IP pour correspondre<br>
+[Bogue][JDisc] L'utilisation du niveau de journal 'moins' ne crée pas de niveau de journal pour les importations JDisc<br>
+[Bogue][JDisc] JDisc correspond à un identifiant d'objet inexistant<br>
+[Bogue][JDisc] Le numéro de série est affiché sans utiliser GraphQL<br>
+[Bogue][JDisc] Autoriser l'utilisateur à supprimer plusieurs serveurs JDisc à la fois<br>
+[Bogue][JDisc] Nettoyer et refactoriser la catégorie "Source de données"<br>
+[Bogue][JDisc] Ne pas toujours afficher les info-bulles lors de la suppression de la ligne correspondante du profil JDisc<br>
+[Bogue][Installation de licence (i-doit)] Message d'erreur lors de l'enregistrement de la licence et le locataire n'existe pas<br>
+[Bogue][Code (Interne)] Rendre le champ de nom d'utilisateur unique<br>
+[Bogue][Code (Interne)] TypeError: Impossible de lire les propriétés de null (lecture de 'tagName')<br>
+[Bogue][Code (Interne)] Message d'erreur lors de l'installation sans connexion à la base de données est incompréhensible<br>
+[Bogue][Code (Interne)] Sous-requête incorrecte pour l'attribut 'contrôleur de gestion à distance' provoque une erreur dans la vue de liste<br>
+[Bogue][Code (Interne)] Le bouton Wiki ne fonctionne pas correctement pour la vue de liste<br>
+[Bogue][Validation] Ne pas enregistrer les entrées de catégorie vides en cas d'erreurs de validation<br>
+[Bogue][Mise à jour] i-doit 29 affiche i-doit 28 comme version plus récente à télécharger<br>
+[Bogue][Console] Description de la commande de console incorrecte ou faute de frappe<br>
+[Bogue][Listes] Votre configuration donnée est mal formée<br>
+[Bogue][Listes] Lors du filtrage 'net avec suffixe' aucun résultat n'est affiché<br>
+[Bogue][Listes] Typerror affiché lors de l'accès à la liste de catégories de versions de fichiers<br>
+[Bogue][Listes] Filtrer une chaîne pour l'attribut emplacement filtre également pour le chemin d'emplacement de l'attribut<br>
+[Bogue][Paramètres CMDB] Impossible de masquer la description du cluster<br>
+[Bogue][Notifications] Enregistrer les notifications n'affiche aucun message d'enregistrement et reste dans la fenêtre de l'éditeur<br>
+[Bogue][Importation CSV] Ignorer les champs de contact vides lors de l'importation CSV<br>
+[Bogue][Importation] Formater correctement le journal d'importation xml<br>
+
+I am ready to start translating the Markdown content into French. Please paste the content you would like me to translate.

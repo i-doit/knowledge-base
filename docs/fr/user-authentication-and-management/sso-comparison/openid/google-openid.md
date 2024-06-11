@@ -1,49 +1,49 @@
-# Google authentifizierung via OpenID
+# Authentification Google via OpenID {/%%%/}
 
-## Requirements
+## Exigences {/%%%/}
 
 *   Debian 10
-*   installed i-doit
-*   Server needs internet accessy
-*   Server needs a valid DNS name
-*   Server has to be reachable via SSL
-*   Access to Google **APIs & Dienste**
+*   i-doit installé
+*   Le serveur doit avoir accès à Internet
+*   Le serveur doit avoir un nom DNS valide
+*   Le serveur doit être accessible via SSL
+*   Accès aux **APIs & Services Google**
 
-## Create OAuth login credentials
+## Créer des identifiants de connexion OAuth {/%%%/}
 
-Open [https://console.developers.google.com/](https://console.developers.google.com/)
+Ouvrez [https://console.developers.google.com/](https://console.developers.google.com/)
 
-1.  Go the the home screen
-2.  Select "Credentials"
-3.  Select "Create Credentials"
-4.  Select "OAuth client ID"
+1.  Accédez à l'écran d'accueil
+2.  Sélectionnez "Identifiants"
+3.  Sélectionnez "Créer des identifiants"
+4.  Sélectionnez "ID client OAuth"
 
 [![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/1-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/1-oidc.png)
 
-1.  Select "Web application"
-2.  Use a recognizable title for the name
-3.  Specify as Authorized Redirection URL a URL that is behind the web resource to be backed up but does not point to any content (!).
-    The URL specified here as an example should be secured with authentication from [https://gauth.i-doit.com/i-doit/](https://gauth.i-doit.com/i-doit/).
-    The attached resource **"redirect_uri" does not exist** on the web server!
+1.  Sélectionnez "Application Web"
+2.  Utilisez un titre reconnaissable pour le nom
+3.  Spécifiez une URL de redirection autorisée qui se trouve derrière la ressource web à sauvegarder mais ne pointe vers aucun contenu (!).
+    L'URL spécifiée ici à titre d'exemple doit être sécurisée avec une authentification depuis [https://gauth.i-doit.com/i-doit/](https://gauth.i-doit.com/i-doit/).
+    La ressource attachée **"redirect_uri" n'existe pas** sur le serveur web!
 
 [![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/2-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/2-oidc.png)
 
-1.  Copy Client ID (will be needed later)
-2.  Copy Client Secret (will be needed later)
-3.  Configure OAuth approval screen
-    (This is **not neccessary for a test** but will be needed on live systems)
+1. Copiez l'identifiant du client (sera nécessaire ultérieurement)
+2. Copiez le secret du client (sera nécessaire ultérieurement)
+3. Configurez l'écran d'approbation OAuth
+   (Ce n'est **pas nécessaire pour un test** mais sera nécessaire sur les systèmes en direct)
 
 [![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/3-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/3-oidc.png)
 
-## Configure webserver
+## Configurez le serveur web
 
-### Install the Apache package **mod_auth_openidc** in your installation of **Debian 10**
+### Installez le package Apache **mod_auth_openidc** dans votre installation de **Debian 10**
 
 ```shell
 sudo apt install libapache2-mod-auth-openidc
 ```
 
-### Add the following code to your Apache configuration:
+### Ajoutez le code suivant à votre configuration Apache :
 
 ```ini
 OIDCProviderMetadataURL https://accounts.google.com/.well-known/openid-configuration
@@ -67,19 +67,19 @@ OIDCScope "email"
 </Location>
 ```
 
-### This is how the configuration looks:
+### Voici à quoi ressemble la configuration :
 
 [![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/4-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/4-oidc.png)
 
-### Restart your webserver
+### Redémarrer votre serveur web
 
 ```shell
 sudo systemctl restart apache2
 ```
 
-### Test authentication and finish last steps
+### Tester l'authentification et terminer les dernières étapes
 
-Create the file identity.php. In our case it will be created at /var/www/html/i-doit/identity.php.
+Créez le fichier identity.php. Dans notre cas, il sera créé à /var/www/html/i-doit/identity.php.
 
 ```php
 <?php
@@ -88,28 +88,30 @@ echo $_SERVER['REMOTE_USER'];
 ?>
 ```
 
-1.  Open the file in your browser
-2.  Login via Google
+1. Ouvrez le fichier dans votre navigateur
+2. Connectez-vous via Google
 
 [![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/5-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/5-oidc.png)
 
-1.  Verify the displayed ID (This should be the ID from the e-mail address)
-2.  Login into your i-doit and use this as the login name for the corresponding i-doit user
+1. Vérifiez l'ID affiché (Cela devrait être l'ID de l'adresse e-mail)
+2. Connectez-vous à votre i-doit et utilisez ceci comme nom d'utilisateur pour l'utilisateur i-doit correspondant
 
 !!! warning
-    The domain part of the address, beginning with @ is not used. The name has to be reduced to the first part:“testaccount@i-doit.com” becomes “testaccount”.
+    La partie du domaine de l'adresse, commençant par @ n'est pas utilisée. Le nom doit être réduit à la première partie : "testaccount@i-doit.com" devient "testaccount".
 
 [![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/6-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/6-oidc.png)
 
 [![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/7-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/7-oidc.png)
 
-### Enable SSO in i-doit
+### Activer le SSO dans i-doit
 
-1.  Open your i-doit administration
-2.  Select system settings
-3.  Select "**yes**" at "**Single Sign on**" option "**Active**"
-4.  Save
+1. Ouvrez votre administration i-doit
+2. Sélectionnez les paramètres du système
+3. Sélectionnez "**oui**" à l'option "**Single Sign on**" "**Actif**"
+4. Enregistrez
 
 [![openid-connect](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/8-oidc.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/openid/google-openid/8-oidc.png)
 
-Done! If i-doit is now opened, the Google authentication appears first. After successful authentication, the user is directly logged in with the account linked to the user name.
+Terminé ! Si i-doit est maintenant ouvert, l'authentification Google apparaît en premier. Après une authentification réussie, l'utilisateur est directement connecté avec le compte lié au nom d'utilisateur.
+
+

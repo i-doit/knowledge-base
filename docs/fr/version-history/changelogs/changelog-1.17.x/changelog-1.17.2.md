@@ -1,44 +1,44 @@
-# Changelog 1.17.2
+# Journal des modifications 1.17.2
 
-[Improvement][Categories]   Option to define if relations to an archived object should be displayed as archived or normal  
-[Improvement][Console]      Functions for cleaning up objects via i-doit console  
-[Bug][Lists]                Objects from relations are not shown in object lists  
-[Bug][Lists]                Filtering in object lists does not find Umlauts  
-[Bug][Lists]                Object list for network area shows wrong information for the category Network area > Options  
-[Bug][Lists]                When exporting the Service > Service Components list, the ID in {}  
-[Bug][JDisc]                JDisc import imports all cloud users  
-[Bug][JDisc]                Some information to operating systems are only imported into the description field  
-[Bug][JDisc]                Objects without any details do not get imported via JDisc  
-[Bug][JDisc]                Using i-doit >=1.16.3 with an older version of JDisc (<5022) fails because of a missing JDisc Table "ipdnsserverconfiguration"  
-[Bug][System settings]      The configuration for the Standard LDAP group is not to be found in the client settings but in the cross-system settings under System Parameters  
-[Bug][Categories]           ##COUNT## Placeholder is not evaluated for outputs (connection)  
-[Bug][Categories]           Selecting a name shema in category "connectors" uses a wrong default  
-[Bug][Categories]           Connection of logical ports is not saved  
-[Bug][Categories]           Missing categories to select for overview page  
-[Bug][Categories]           Purge button in category "location" not available  
-[Bug][Categories]           Button "Purge" is performed without a security query  
-[Bug][Categories]           In category "Cabling" > "connectors" object IDs are shown next to cable names  
-[Bug][Custom categories]    If the value of a Yes-No field of a user-defined category is changed via the overview page, the value is not saved  
-[Bug][Custom categories]    Dialog+ values are not identified by category  
-[Bug][Custom categories]    The default value of Yes/No fields is also displayed in the view mode.  
-[Bug][Custom categories]    Handling for YES/No fields in user-defined categories cannot be changed  
-[Bug][CMDB settings]        In the Category Services the Dialog Attribut Alias cannot be accessed via the Dialog-Admin  
-[Bug][CMDB settings]        Add option to object browser configuration to limit the types of creatable objects  
-[Bug][Dashboard]            The date is not displayed in German on the Dashboard > Welcome widget  
-[Bug][Code (internal)]      Saved passwords can no longer be issued  
-[Bug][Code (internal)]      The object list is not loaded if an object has a '(Apostrophe) in its name  
-[Bug][Code (internal)]      Apostrophes are not escaped  
-[Bug][Code (internal)]      Extending existing categories with attributes via an add-on the data is not stored  
-[Bug][Code (internal)]      Attributes in existing categories are not merged correctly when they are extended via an add-on  
-[Bug][Update]               Update across a major version should not be possible (>=1.16.1 > 1.17.1)  
-[Bug][CSV Import]           CSV Import: Import of operating system versions via the operating system category  
-[Bug][Report-Manager]       The table isys_user_session can be read out by SQL report  
-[Bug][Report-Manager]       Report displays incorrect attributes for the "Managed devices" category  
-[Bug][Report-Manager]       Report Manager: Using Installed on -> Operating system as condition generates SQL error message  
-[Bug][Authorization system] By setting a role in contact assignments, the object is opened if the rights are insufficient  
-[Bug][OCS]                  OCS Import: If Multi Value categories are imported there are duplicate entries  
-[Bug][Validation]           Validation of unique Dialog Plus fields does not allow editing the Multi-Value entry  
-[Bug][CMDB]                 In the category Cabling > Connectors the Configured value for the "Naming scheme for output pairs" is not considered  
-[Bug][LDAP]                 Missing error message if the path to the .ini or the filename is not entered correctly  
-[Bug][List editing]         Sorting for IPv4 address not possible in list edit  
-[Bug][Logbook]              Creating a client creates CPU and memory entries in the logbook  
+[Amélioration][Catégories]   Option pour définir si les relations avec un objet archivé doivent être affichées comme archivées ou normales  
+[Amélioration][Console]      Fonctions pour nettoyer les objets via la console i-doit  
+[Bug][Listes]                Les objets des relations ne sont pas affichés dans les listes d'objets  
+[Bug][Listes]                La recherche dans les listes d'objets ne trouve pas les caractères spéciaux  
+[Bug][Listes]                La liste d'objets pour la zone réseau affiche des informations incorrectes pour la catégorie Zone réseau > Options  
+[Bug][Listes]                Lors de l'export de la liste des composants de service > Service, l'ID est entre {}  
+[Bug][JDisc]                L'import JDisc importe tous les utilisateurs cloud  
+[Bug][JDisc]                Certaines informations sur les systèmes d'exploitation ne sont importées que dans le champ de description  
+[Bug][JDisc]                Les objets sans aucun détail ne sont pas importés via JDisc  
+[Bug][JDisc]                L'utilisation de i-doit >=1.16.3 avec une version plus ancienne de JDisc (<5022) échoue en raison de l'absence de la table JDisc "ipdnsserverconfiguration"  
+[Bug][Paramètres système]      La configuration du groupe LDAP standard ne se trouve pas dans les paramètres client mais dans les paramètres inter-systèmes sous Paramètres système  
+[Bug][Catégories]           Le ##COUNT## Placeholder n'est pas évalué pour les sorties (connexion)  
+[Bug][Catégories]           La sélection d'un schéma de nom dans la catégorie "connecteurs" utilise un mauvais paramètre par défaut  
+[Bug][Catégories]           La connexion des ports logiques n'est pas enregistrée  
+[Bug][Catégories]           Catégories manquantes à sélectionner pour la page d'aperçu  
+[Bug][Catégories]           Le bouton "Purger" dans la catégorie "emplacement" n'est pas disponible  
+[Bug][Catégories]           Le bouton "Purger" est exécuté sans demande de sécurité  
+[Bug][Catégories]           Dans la catégorie "Câblage" > "connecteurs", les ID d'objets sont affichés à côté des noms de câbles  
+[Bug][Catégories personnalisées]    Si la valeur d'un champ Oui/Non d'une catégorie définie par l'utilisateur est modifiée via la page d'aperçu, la valeur n'est pas enregistrée  
+[Bug][Catégories personnalisées]    Les valeurs Dialog+ ne sont pas identifiées par catégorie  
+[Bug][Catégories personnalisées]    La valeur par défaut des champs Oui/Non est également affichée en mode visualisation.  
+[Bug][Catégories personnalisées]    La gestion des champs Oui/Non dans les catégories définies par l'utilisateur ne peut pas être modifiée  
+[Bug][Paramètres CMDB]        Dans la catégorie Services, l'attribut de dialogue Alias ne peut pas être accédé via le Dialog-Admin  
+[Bug][Paramètres CMDB]        Ajouter une option à la configuration du navigateur d'objets pour limiter les types d'objets créables  
+[Bug][Tableau de bord]            La date n'est pas affichée en allemand sur le widget de bienvenue du tableau de bord  
+[Bug][Code (interne)]      Les mots de passe enregistrés ne peuvent plus être émis  
+[Bug][Code (interne)]      La liste d'objets n'est pas chargée si un objet a un '(apostrophe) dans son nom  
+[Bug][Code (interne)]      Les apostrophes ne sont pas échappées  
+[Bug][Code (interne)]      L'extension des catégories existantes avec des attributs via un module complémentaire ne stocke pas les données  
+[Bug][Code (interne)]      Les attributs dans les catégories existantes ne sont pas fusionnés correctement lorsqu'ils sont étendus via un module complémentaire  
+[Bug][Mise à jour]               La mise à jour d'une version majeure à une autre ne devrait pas être possible (>=1.16.1 > 1.17.1)  
+[Bug][Importation CSV]           Importation CSV : Importation des versions de systèmes d'exploitation via la catégorie système d'exploitation  
+[Bug][Gestionnaire de rapports]       La table isys_user_session peut être lue par le rapport SQL  
+[Bug][Gestionnaire de rapports]       Le rapport affiche des attributs incorrects pour la catégorie "Appareils gérés"  
+[Bug][Gestionnaire de rapports]       Gestionnaire de rapports : L'utilisation de Installé sur -> Système d'exploitation comme condition génère un message d'erreur SQL  
+[Bug][Système d'autorisation] En définissant un rôle dans les affectations de contact, l'objet est ouvert si les droits sont insuffisants  
+[Bug][OCS]                  Importation OCS : Si des catégories à valeurs multiples sont importées, il y a des doublons  
+[Bug][Validation]           La validation des champs Dialog Plus uniques ne permet pas de modifier l'entrée à valeurs multiples  
+[Bug][CMDB]                 Dans la catégorie Câblage > Connecteurs, la valeur configurée pour le "Schéma de nom pour les paires de sortie" n'est pas prise en compte  
+[Bug][LDAP]                 Message d'erreur manquant si le chemin du fichier .ini ou le nom de fichier n'est pas saisi correctement  
+[Bug][Édition de liste]         Le tri des adresses IPv4 n'est pas possible dans l'édition de liste  
+[Bug][Journal]              La création d'un client crée des entrées de CPU et de mémoire dans le journal  

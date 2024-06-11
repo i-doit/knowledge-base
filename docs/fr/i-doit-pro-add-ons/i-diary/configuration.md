@@ -1,19 +1,19 @@
 # i-diary: Configuration
 
-Change and save settings via GUI
+Changer et enregistrer les paramètres via l'interface graphique
 --------------------------------
 
-The user has the possibility to create and modify the configuration file via the application.
+L'utilisateur a la possibilité de créer et de modifier le fichier de configuration via l'application.
 
-[![create and modify](../../assets/images/en/i-doit-pro-add-ons/i-diary/configuration/1-idconf.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/configuration/1-idconf.png)
+[![créer et modifier](../../assets/images/en/i-doit-pro-add-ons/i-diary/configuration/1-idconf.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/configuration/1-idconf.png)
 
-These are the following cases:
+Voici les cas suivants :
 
-*   If the configuration file is empty or does not exist yet or if it the configuration file empty, the GUI setting is opened automatically when the application is started.
+*   Si le fichier de configuration est vide ou n'existe pas encore, ou s'il est vide, les paramètres de l'interface graphique s'ouvrent automatiquement lorsque l'application est lancée.
 
-[![GUI setting](../../assets/images/en/i-doit-pro-add-ons/i-diary/configuration/1-idconf.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/configuration/1-idconf.png)
+[![Paramètres de l'interface graphique](../../assets/images/en/i-doit-pro-add-ons/i-diary/configuration/1-idconf.png)](../../assets/images/en/i-doit-pro-add-ons/i-diary/configuration/1-idconf.png)
 
-*   If the user changes something in the GUI setting, the change is immediately checked and saved if it is valid.
-*   When the user does not specify ‘[http://](http://)’, ‘[http://](http://)’ is used for the check and saved.
-*   When the user does specify ‘rc/jsonrpc.php’ as a suffix in the URL field, it will be ignored for the check and saved without it.
-*   The user can test the connection manually by clicking the button ‘Test the connection’.
+*   Si l'utilisateur modifie quelque chose dans les paramètres de l'interface graphique, le changement est immédiatement vérifié et enregistré s'il est valide.
+*   Lorsque l'utilisateur ne spécifie pas 'http://', 'http://' est utilisé pour la vérification et l'enregistrement.
+*   Lorsque l'utilisateur spécifie 'rc/jsonrpc.php' comme suffixe dans le champ d'URL, il sera ignoré pour la vérification et enregistré sans cela.
+*   L'utilisateur peut tester la connexion manuellement en cliquant sur le bouton 'Tester la connexion'.

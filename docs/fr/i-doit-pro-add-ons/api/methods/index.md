@@ -1,37 +1,36 @@
-# Methods
+# Méthodes
 
-!!! info "Work in Progress. If you miss anything feel free to open a [github issue](https://github.com/i-doit/knowledge-base/issues/new) or create a [ticket](https://help.i-doit.com)"
+!!! info "Travail en cours. Si vous avez des questions, n'hésitez pas à ouvrir un [problème sur GitHub](https://github.com/i-doit/knowledge-base/issues/new) ou à créer un [ticket](https://help.i-doit.com)"
 
-In this articles we explain the [i-doit JSON-RPC API](./index.md) in depth. If you want to know what parameters must/can be set for each method and what a typical response looks like, this will be the right resource.
+Dans cet article, nous expliquons en détail l'[API JSON-RPC i-doit](./index.md). Si vous souhaitez savoir quels paramètres doivent/peuvent être définis pour chaque méthode et à quoi ressemble une réponse typique, c'est la ressource appropriée.
 
-<!---- How to document methods
+<!---- Comment documenter les méthodes
 
 ## method.method
 
 description
 
-### Request parameters
+### Paramètres de la requête
 
-| Key | JSON data type | Required | Description |
+| Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
-| **Placeholder** | Placeholder | Yes | Placeholder |
+| **Placeholder** | Placeholder | Oui | Placeholder |
 
-!!! example "WIP"
+!!! example "Travail en cours"
 
-    ### Response parameters
+    ### Paramètres de la réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key | JSON data type | Description |
+    | Clé | Type de données JSON | Description |
     | --- | --- | --- |
     | **Placeholder** | Placeholder | Placeholder |
     | **Placeholder** | Placeholder | Placeholder |
 
-### Example:
+### Exemple:
 
-=== "Request body"
+=== "Corps de la requête"
 
-    ```json
 
     ```
 
@@ -41,7 +40,7 @@ description
 
     ```
 
-=== "or update Request body"
+### "ou mettre à jour le corps de la requête"
 
     ```json
 

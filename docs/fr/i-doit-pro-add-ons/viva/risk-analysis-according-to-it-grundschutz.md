@@ -1,13 +1,15 @@
-# Risk analysis according to IT-Grundschutz
+# Analyse des risques selon l'IT-Grundschutz
 
-In part, the necessary information is based on additional data to be documented, in part on data already collected as part of the procedure with VIVA according to BSI Standard 100-2.
+En partie, les informations nécessaires sont basées sur des données supplémentaires à documenter, en partie sur des données déjà collectées dans le cadre de la procédure avec VIVA selon la norme BSI 100-2.
 
-Identifying hazards
--------------------
+Identification des dangers
+--------------------------
 
-When assigning building blocks to a target group, hazards that belong to this building block are taken into account in addition to measures. Additional hazards can be added or existing ones can be adjusted or deleted. This is done within the assigned building blocks. (See BSI standard 100-3, chapters 3 and 4.)
+Lors de l'attribution de blocs de construction à un groupe cible, les dangers appartenant à ce bloc de construction sont pris en compte en plus des mesures. Des dangers supplémentaires peuvent être ajoutés ou des dangers existants peuvent être ajustés ou supprimés. Cela se fait au sein des blocs de construction attribués. (Voir la norme BSI 100-3, chapitres 3 et 4.)
 
-Assess hazards
---------------
+Évaluation des dangers
+----------------------
 
-The assessment of hazards (See BSI Standard 100-3, Chapter 5.) is documented within the linked hazards - to be found under Information Network → Target Group → Linked Module → Linked Hazard.
+L'évaluation des dangers (Voir la norme BSI 100-3, Chapitre 5.) est documentée au sein des dangers liés - à trouver sous Réseau d'information → Groupe cible → Module lié → Danger lié. 
+
+{/*examples*/}

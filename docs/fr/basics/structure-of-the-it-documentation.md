@@ -1,133 +1,135 @@
-# Structure of the IT Documentation
+# Structure de la documentation informatique
 
-The topic of this article is how i-doit structures the [IT documentation](../glossary.md). Here we focus especially on the vocabulary which is used in i-doit, how these terms are related to each other and how this is represented in the Web GUI.
+Le sujet de cet article est la façon dont i-doit structure la [documentation informatique](../glossary.md). Ici, nous nous concentrons particulièrement sur le vocabulaire utilisé dans i-doit, sur la manière dont ces termes sont liés les uns aux autres et sur la façon dont cela est représenté dans l'interface Web.
+
+{/*examples*/}
 
 ## Navigation
 
-Upon [logging in,](./initial-login.md) the [dashboard and widgets](./dashboard-and-widgets.md) are displayed. From here you can start to explore the IT documentation. Almost all functionalities of i-doit can be accessed from the main navigation bar (the black bar at the top).
+Après vous être [connecté,](./initial-login.md) le [tableau de bord et les widgets](./dashboard-and-widgets.md) s'affichent. À partir de là, vous pouvez commencer à explorer la documentation informatique. Presque toutes les fonctionnalités de i-doit peuvent être accessibles à partir de la barre de navigation principale (la barre noire en haut).
 
 [![Navigation](../assets/images/en/basics/structure-of-the-it-documentation/1-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/1-sotitd.png)
 
-For better orientation you can take a look at the bread crumb navigation. From here you can access pages which are higher in the hierarchy.
+Pour une meilleure orientation, vous pouvez jeter un œil à la navigation par fil d'Ariane. À partir de là, vous pouvez accéder aux pages qui se trouvent plus haut dans la hiérarchie.
 
 [![Navigation](../assets/images/en/basics/structure-of-the-it-documentation/2-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/2-sotitd.png)
 
-## Groups, Types and Categorizations
+## Groupes, Types et Catégorisations {/%%/}
 
-Object type groups comprise object types which instantiate objects, which in turn inherit categories, which then include attributes. Got it? Again from the start:
+Les groupes de types d'objets comprennent des types d'objets qui instancient des objets, qui à leur tour héritent de catégories, qui incluent ensuite des attributs. Vous avez compris ? Reprenons depuis le début :
 
-[![Groups, Types and Categorizations](../assets/images/en/basics/structure-of-the-it-documentation/3-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/3-sotitd.png)
+[![Groupes, Types et Catégorisations](../assets/images/en/basics/structure-of-the-it-documentation/3-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/3-sotitd.png)
 
-### Object Type Group
+### Groupe de Type d'Objet
 
-It is not uncommon that a lot of object types are in use in a living and well-maintained IT documentation. Object types of the same kind can be grouped in order to have a clear overview of this abundance of data. These object type groups appear in the main navigation bar (top section) of i-doit.
+Il n'est pas rare qu'une multitude de types d'objets soient utilisés dans une documentation informatique vivante et bien entretenue. Les types d'objets du même genre peuvent être regroupés afin d'avoir une vue d'ensemble claire de cette abondance de données. Ces groupes de types d'objets apparaissent dans la barre de navigation principale (section supérieure) de i-doit.
 
-[![Object Type Group](../assets/images/en/basics/structure-of-the-it-documentation/4-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/4-sotitd.png)
+[![Groupe de Type d'Objet](../assets/images/en/basics/structure-of-the-it-documentation/4-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/4-sotitd.png)
 
-In our example, we take a closer look at the object type group **Hardware**.
+Dans notre exemple, nous examinons de plus près le groupe de type d'objet **Matériel**.
 
-[![Object Type Group](../assets/images/en/basics/structure-of-the-it-documentation/5-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/5-sotitd.png)
+[![Groupe de Type d'Objet](../assets/images/en/basics/structure-of-the-it-documentation/5-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/5-sotitd.png)
 
-### Object Type
+### Type d'objet {/ * exemples * /}
 
-We refer to the combination of all objects of the same type as object type. Examples are **Router**, **Server** or **Applications**. Usually, this combination is also called a "Class". In ITIL© the term "CI Type" is used.
+Nous désignons la combinaison de tous les objets du même type comme type d'objet. Les exemples sont **Routeur**, **Serveur** ou **Applications**. Habituellement, cette combinaison est également appelée une "Classe". En ITIL©, le terme "Type CI" est utilisé.
 
-i-doit already contains a lot of pre-configured object types in the default installation. If those are not enough, you can create your own [custom object types](./custom-object-types.md).
+i-doit contient déjà de nombreux types d'objets préconfigurés dans l'installation par défaut. Si ceux-ci ne sont pas suffisants, vous pouvez créer vos propres [types d'objets personnalisés](./custom-object-types.md).
 
-An [object list](./object-list/index.md) exists for each object type. All objects that are associated with the selected object type are listed here, including some attributes. As an example we take a look at the object list for the object type **Virtual host**.
+Une [liste d'objets](./object-list/index.md) existe pour chaque type d'objet. Tous les objets associés au type d'objet sélectionné sont répertoriés ici, y compris certains attributs. À titre d'exemple, nous examinons la liste d'objets pour le type d'objet **Hôte virtuel**.
 
-[![Object Type](../assets/images/en/basics/structure-of-the-it-documentation/6-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/6-sotitd.png)
+[![Type d'objet](../assets/images/en/basics/structure-of-the-it-documentation/6-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/6-sotitd.png)
 
-### Object
+### Objet
 
-You have to decide for each artefact to be documented as what you want to save it. For example, often a single server is seen as a product consisting of multiple parts. In this case, a server is created as an object in i-doit. In i-doit are all things we document in an IT documentation objects. It is of no importance if it is a physical device, like a server or client, or if it is a logical construct, such as a network or a service. An object is defined by its object type, which in turn determines what attributes can be filled with values for the object. In ITIL© the term "Configuration item (CI)" is used, whereas the term "Asset Value" is common in the asset management. We want to establish a more abstract and a more general and flexible definition by using the "Object" term.
+Vous devez décider pour chaque artefact à documenter en quoi vous souhaitez le sauvegarder. Par exemple, souvent un seul serveur est considéré comme un produit composé de plusieurs parties. Dans ce cas, un serveur est créé en tant qu'objet dans i-doit. Dans i-doit, toutes les choses que nous documentons dans une documentation informatique sont des objets. Peu importe s'il s'agit d'un appareil physique, comme un serveur ou un client, ou s'il s'agit d'une construction logique, comme un réseau ou un service. Un objet est défini par son type d'objet, qui détermine à son tour quels attributs peuvent être remplis de valeurs pour l'objet. En ITIL©, le terme "Élément de configuration (CI)" est utilisé, tandis que le terme "Valeur d'actif" est courant dans la gestion des actifs. Nous voulons établir une définition plus abstraite, plus générale et plus flexible en utilisant le terme "Objet".
 
-Some objects exist in the default installation of i-doit and they are essential for proper functionality. This includes user objects of the object type "Persons" and also "Person groups" for permissions and "[Layer-3 networks](../use-cases/ip-adress-management.md)". Furthermore, invisible objects do exist, e.g. the "Root location" for locations. These cannot be deleted.
+Certains objets existent dans l'installation par défaut d'i-doit et sont essentiels pour un bon fonctionnement. Cela inclut les objets utilisateur du type d'objet "Personnes" et aussi les "Groupes de personnes" pour les autorisations et les "[réseaux de couche 3](../use-cases/ip-adress-management.md)". De plus, des objets invisibles existent, par exemple la "Localisation racine" pour les emplacements. Ceux-ci ne peuvent pas être supprimés.
 
-Each object in i-doit receives a title. The title is documented as an attribute in the "General" category. This attribute is synonymously also called "Name" or "Object link".
+Chaque objet dans i-doit reçoit un titre. Le titre est documenté en tant qu'attribut dans la catégorie "Général". Cet attribut est également appelé de manière synonyme "Nom" ou "Lien d'objet".
 
-[![Object](../assets/images/en/basics/structure-of-the-it-documentation/7-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/7-sotitd.png)
+[![Objet](../assets/images/en/basics/structure-of-the-it-documentation/7-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/7-sotitd.png)
 
-In this example, we focus on the object with the object title **ESX1**. You can get there with a click on the object link in the object list (as mentioned above).
+Dans cet exemple, nous nous concentrons sur l'objet avec le titre d'objet **ESX1**. Vous pouvez y accéder en cliquant sur le lien d'objet dans la liste des objets (comme mentionné ci-dessus).
 
-### Category
+### Catégorie
 
-Topically coherent attributes are summed up per object in categories. Three types of categories exist: global ones, specific ones and [customized categories](./custom-categories.md). They are additionally divided into single-value and multi-value categories (list categories). Some categories are mirrored and show the same relation from another point of view. Others serve as a read-only point of view. Some categories are assigned to all object types in a fixed way and as such to each object. Others can be flexibly added or removed per object type. Last but not least special categories such as **General** or **Overview page** exist.
+Les attributs cohérents sur le plan thématique sont regroupés par objet dans des catégories. Trois types de catégories existent : les catégories globales, spécifiques et [catégories personnalisées](./custom-categories.md). Elles sont en outre divisées en catégories à valeur unique et à valeurs multiples (catégories de liste). Certaines catégories sont en miroir et montrent la même relation d'un autre point de vue. D'autres servent de point de vue en lecture seule. Certaines catégories sont attribuées à tous les types d'objets de manière fixe et donc à chaque objet. D'autres peuvent être ajoutées ou supprimées de manière flexible par type d'objet. Enfin, des catégories spéciales telles que **Général** ou **Page d'aperçu** existent.
 
-Categories are displayed in the left navigation tree in the object view.
+Les catégories sont affichées dans l'arborescence de navigation de gauche dans la vue objet.
 
-[![Category](../assets/images/en/basics/structure-of-the-it-documentation/8-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/8-sotitd.png)
+[![Catégorie](../assets/images/en/basics/structure-of-the-it-documentation/8-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/8-sotitd.png)
 
-The static categories are listed as icons above the left navigation tree.
+Les catégories statiques sont répertoriées sous forme d'icônes au-dessus de l'arborescence de navigation de gauche.
 
-[![Category](../assets/images/en/basics/structure-of-the-it-documentation/9-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/9-sotitd.png)
+[![Catégorie](../assets/images/en/basics/structure-of-the-it-documentation/9-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/9-sotitd.png)
 
-Usually, a category has two views: one for reading and one for editing. In order to edit the attributes in a category the **Edit** button in the action bar can be clicked.
+Généralement, une catégorie a deux vues : une pour la lecture et une pour l'édition. Pour éditer les attributs dans une catégorie, vous pouvez cliquer sur le bouton **Éditer** dans la barre d'actions.
 
-[![Category](../assets/images/en/basics/structure-of-the-it-documentation/10-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/10-sotitd.png)
+[![Catégorie](../assets/images/en/basics/structure-of-the-it-documentation/10-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/10-sotitd.png)
 
-For our example we take a closer look at the Model category.
+Pour notre exemple, nous examinons de plus près la catégorie Modèle.
 
-[![Category](../assets/images/en/basics/structure-of-the-it-documentation/11-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/11-sotitd.png)
+[![Catégorie](../assets/images/en/basics/structure-of-the-it-documentation/11-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/11-sotitd.png)
 
-[Categories are assigned to object types](./assignment-of-categories-to-object-types.md), not to objects. Within an object type all objects have the same categories assigned to them.
+[Les catégories sont attribuées aux types d'objets](./assignment-of-categories-to-object-types.md), et non aux objets. Au sein d'un type d'objet, tous les objets ont les mêmes catégories qui leur sont attribuées.
 
-#### Overview Page
+#### Page d'aperçu
 
-The overview page is displayed on the selection of an object in the web GUI of i-doit. It consists of the **General** category and more optional categories which are assigned to the object type. These can be selected or deselected and also be sorted in the object type configuration.
+La page d'aperçu s'affiche lors de la sélection d'un objet dans l'interface web de i-doit. Elle se compose de la catégorie **Général** et d'autres catégories facultatives qui sont attribuées au type d'objet. Celles-ci peuvent être sélectionnées ou désélectionnées et également être triées dans la configuration du type d'objet.
 
-[![Overview](../assets/images/en/basics/structure-of-the-it-documentation/12-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/12-sotitd.png)
+[![Aperçu](../assets/images/en/basics/structure-of-the-it-documentation/12-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/12-sotitd.png)
 
-#### General Category
+#### Catégorie Général
 
-The **General** category belongs to those categories which are fixed components of each object. Therefore you cannot deselect it per object type. Important attributes, such as the object title, SYS-ID and the [CMDB state and condition](./life-and-documentation-cycle.md), can be found there.
+La catégorie **Général** fait partie de ces catégories qui sont des composants fixes de chaque objet. Par conséquent, vous ne pouvez pas la désélectionner par type d'objet. Des attributs importants, tels que le titre de l'objet, l'ID SYS et l'[état et la condition de la CMDB](./life-and-documentation-cycle.md), s'y trouvent.
 
-[![General](../assets/images/en/basics/structure-of-the-it-documentation/13-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/13-sotitd.png)
+[![Général](../assets/images/en/basics/structure-of-the-it-documentation/13-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/13-sotitd.png)
 
-#### Global Category
+#### Catégorie Globale {/ * exemples * /}
 
-A global category can generally be assigned to all object types, so that their attributes are available to the corresponding objects. Example: **Model** category.
+Une catégorie globale peut généralement être attribuée à tous les types d'objets, de sorte que leurs attributs soient disponibles pour les objets correspondants. Exemple : catégorie **Modèle**.
 
-#### Specific Category
+#### Catégorie Spécifique {/ * exemples * /}
 
-A specific category is different from a global category in its very specific focus, which is only suitable for just one or a few object types. An example is the **Rack** category, which is assigned to the object type of the same name and offers the user a rack view.
+Une catégorie spécifique est différente d'une catégorie globale par son focus très spécifique, qui convient uniquement à un ou quelques types d'objets. Un exemple est la catégorie **Rack**, qui est attribuée au type d'objet du même nom et offre à l'utilisateur une vue en rack.
 
-#### Single-Value Category
+#### Catégorie à Valeur Unique {/ * exemples * /}
 
-Each attribute of a single-value category can be documented just once per object. An example is the **Accounting** category: The information of the inventory number, cost unit and so on are only needed once. The counterpart to this is the multi-value category.
+Chaque attribut d'une catégorie à valeur unique peut être documenté une seule fois par objet. Un exemple est la catégorie **Comptabilité** : Les informations du numéro d'inventaire, de l'unité de coût, etc., ne sont nécessaires qu'une seule fois. Le contrepartie de cela est la catégorie à valeurs multiples.
 
-#### Multi-Value Category
+#### Catégorie à Valeurs Multiples {/ * exemples * /}
 
-If the attributes of a category can be documented more than once per object, then this will be referred to as a multi-value category or a list category. An example is the **CPU** category. If there is a multi-socket system, each CPU can be documented separately with frequency, number of cores and so on. The counterpart to this is the single-value category.
+Si les attributs d'une catégorie peuvent être documentés plus d'une fois par objet, alors cela sera appelé une catégorie à valeurs multiples ou une catégorie de liste. Un exemple est la catégorie **CPU**. S'il s'agit d'un système multi-socket, chaque CPU peut être documenté séparément avec la fréquence, le nombre de cœurs, etc. La contrepartie de cela est la catégorie à valeur unique.
 
-#### Custom Category
+#### Catégorie personnalisée {/ * exemples * /}
 
-A category which has been created and configured with one or more attribute fields by a user is marked as [custom](./custom-categories.md) in i-doit.
+Une catégorie qui a été créée et configurée avec un ou plusieurs champs d'attributs par un utilisateur est marquée comme [personnalisée](./custom-categories.md) dans i-doit.
 
-#### Mirrored Category
+#### Catégorie miroir {/ * exemples * /}
 
-If two or more objects are in relation to each other, then this is documented in the category which is defined for this purpose. For example, you can store any number of persons, person groups etc. as contact for an object in the category **Contact assignment**. There is a further category called **Assigned objects** so that you can also see for the persons and person groups to which objects they are assigned as contacts. As the same information is available in this additional category, but is saved only once and just displayed in a different context, this is called a mirrored category.
+Si deux objets ou plus sont en relation les uns avec les autres, cela est documenté dans la catégorie définie à cet effet. Par exemple, vous pouvez stocker n'importe quel nombre de personnes, groupes de personnes, etc. en tant que contact pour un objet dans la catégorie **Affectation de contact**. Il existe une autre catégorie appelée **Objets assignés** afin que vous puissiez également voir pour les personnes et les groupes de personnes à quels objets ils sont assignés en tant que contacts. Comme les mêmes informations sont disponibles dans cette catégorie supplémentaire, mais ne sont enregistrées qu'une seule fois et simplement affichées dans un contexte différent, cela s'appelle une catégorie miroir.
 
-#### View Category
+#### Catégorie de vue {/ * exemples * /}
 
-In some categories it is not possible to store attributes per object. These categories serve the evaluation of data which is stored in another way. The processed data cannot be edited. An example is the **Object vitality** category, an evaluation of the **CPU**, **Memory**, **Port** and **Software assignment** categories.
+Dans certaines catégories, il n'est pas possible de stocker des attributs par objet. Ces catégories servent à l'évaluation des données qui sont stockées d'une autre manière. Les données traitées ne peuvent pas être modifiées. Un exemple est la catégorie **Vitalité de l'objet**, une évaluation des catégories **CPU**, **Mémoire**, **Port** et **Affectation de logiciel**.
 
-### Attribute
+### Attribut {/ * exemples * /}
 
-An attribute is a documented value belonging to an object. Attributes of the same type are combined in i-doit. Example: The **Serial number** attribute in the **Model** category.
+Un attribut est une valeur documentée appartenant à un objet. Les attributs du même type sont combinés dans i-doit. Exemple : L'attribut **Numéro de série** dans la catégorie **Modèle**.
 
-[![Attribute](../assets/images/en/basics/structure-of-the-it-documentation/14-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/14-sotitd.png)
+[![Attribut](../assets/images/en/basics/structure-of-the-it-documentation/14-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/14-sotitd.png)
 
-Important attributes of different categories are combined to one view, which is shown above each category. These primary attributes are **SYS-ID**, **Purpose** (both in the **General** category), **Relationship**, **Location**, **Contact assignment** and **Primary access URL** (**Access** category). Additionally, a QR code which contains the link to the overview page is shown next to them. Pressing the arrow opens this view.
+Les attributs importants de différentes catégories sont combinés en une vue, qui est affichée au-dessus de chaque catégorie. Ces attributs principaux sont **SYS-ID**, **Objectif** (tous deux dans la catégorie **Général**), **Relation**, **Emplacement**, **Affectation de contact** et **URL d'accès principal** (catégorie **Accès**). De plus, un code QR contenant le lien vers la page de vue d'ensemble est affiché à côté d'eux. En appuyant sur la flèche, cette vue s'ouvre.
 
-[![Access](../assets/images/en/basics/structure-of-the-it-documentation/15-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/15-sotitd.png)
+[![Accès](../assets/images/en/basics/structure-of-the-it-documentation/15-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/15-sotitd.png)
 
-### Attribute Field
+### Champ d'Attribut {/ * exemples * /}
 
-Attributes of objects are saved and edited via form fields in the web GUI of i-doit. Hence these fields are called attribute fields. They can vary: There are single-line and multi-line text fields, date fields, HTML editors, object browsers, [dialogue-plus fields](./dialog-admin.md) and many more.
+Les attributs des objets sont enregistrés et édités via des champs de formulaire dans l'interface web de i-doit. C'est pourquoi ces champs sont appelés champs d'attribut. Ils peuvent varier : il existe des champs de texte à une ligne et à plusieurs lignes, des champs de date, des éditeurs HTML, des navigateurs d'objets, des [champs de dialogue-plus](./dialog-admin.md) et bien d'autres.
 
-[![Attribute Field](../assets/images/en/basics/structure-of-the-it-documentation/16-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/16-sotitd.png)
+[![Champ d'attribut](../assets/images/en/basics/structure-of-the-it-documentation/16-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/16-sotitd.png)
 
-## Relationships
+## Relations
 
-IT components can not only be documented individually, but they can also be put in relation to each other. There are already various pre-configured types of relationships which can be adjusted and modified. Each relationship is a separate object (with no need for a license) which is automatically created, edited or deleted.
+Les composants IT ne peuvent pas seulement être documentés individuellement, mais ils peuvent également être mis en relation les uns avec les autres. Il existe déjà divers types de relations préconfigurés qui peuvent être ajustés et modifiés. Chaque relation est un objet distinct (sans nécessité de licence) qui est automatiquement créé, édité ou supprimé. { /*examples*/ }

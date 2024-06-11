@@ -1,102 +1,104 @@
-# Rack View
+# Vue de Rack {/%%/}
 
-i-doit provides a visualization for 19" racks with which you can display all built-in components clearly. Statistics about free height units, maximum energy requirements and free network ports in switches and patch panels provide support with capacity planning.
+i-doit fournit une visualisation pour les racks 19" avec lesquels vous pouvez afficher tous les composants intégrés clairement. Les statistiques sur les unités de hauteur libres, les besoins énergétiques maximum et les ports réseau libres dans les commutateurs et les panneaux de brassage fournissent un support pour la planification de la capacité.
 
-Rack Category
--------------
+Catégorie de Rack
+-----------------
 
-The **Rack** [category](../basics/structure-of-the-it-documentation.md) is already assigned to the [object type](../basics/structure-of-the-it-documentation.md) **Rack** in the default [installation](../installation/index.md) of i-doit. The category shows the modeled front and back of the rack.
+La **Catégorie de Rack** [category](../basics/structure-of-the-it-documentation.md) est déjà assignée au [type d'objet](../basics/structure-of-the-it-documentation.md) **Rack** dans l'[installation](../installation/index.md) par défaut d'i-doit. La catégorie montre l'avant et l'arrière modélisés du rack.
 
-[![Rack Category](../assets/images/en/evaluation/rack-view/1-rv.png)](../assets/images/en/evaluation/rack-view/1-rv.png)
+[![Catégorie de Rack](../assets/images/en/evaluation/rack-view/1-rv.png)](../assets/images/en/evaluation/rack-view/1-rv.png)
 
 !!! success "Rack"
 
-    The screenshots show an i-doit demo installation in which the original object type and the category of the same name were renamed to **Rack**. When you want to [apply your own vocabulary for the IT documentation](../system-administration/localization.md), you can do so without any problems.
+    Les captures d'écran montrent une installation de démonstration d'i-doit dans laquelle le type d'objet original et la catégorie du même nom ont été renommés en **Rack**. Lorsque vous souhaitez [appliquer votre propre vocabulaire pour la documentation IT](../system-administration/localization.md), vous pouvez le faire sans aucun problème.
 
-Editing of Rack Attributes
---------------------------
 
-The height units of the rack are defined in the **Form factor** category. Also this category is already assigned to the object type **Rack** when i-doit is installed. Beside the attribute **Rack units**, you should also define the **Form factor** of **19"**.
-
-[![Editing of Rack Attributes](../assets/images/en/evaluation/rack-view/2-rv.png)](../assets/images/en/evaluation/rack-view/2-rv.png)
-
-In the example, the rack can take up a maximum of 42 units with a form factor of 19".
-
-The ascending or descending **Height unit sorting** is carried out in the **Rack** category. With the **Edit** button you can change to the corresponding drop-down menu which is in the box on the right to make your choice.
-
-In this box you can also define how many **vertical slots** are available on the **front** and on the **back**. With these definitions you can document PDUs which are mounted at the side, for example. In the screenshot you can see **2 vertical slots** for the **front** and the **back** which are placed on the left and the right alternately.
-
-[![Editing of Rack Attributes](../assets/images/en/evaluation/rack-view/3-rv.png)](../assets/images/en/evaluation/rack-view/3-rv.png)
-
-Positioning of Objects in the Rack
+Modification des Attributs du Rack
 ----------------------------------
 
-Two conditions apply to fill racks with [objects](../basics/structure-of-the-it-documentation.md): On the one hand, you have to define for each object in the **Form factor** category how many **rack units** it requires and that it has the **Form factor 19"**. On the other hand, you have to tick the box in the [object type configuration](../basics/assignment-of-categories-to-object-types.md) confirming that objects of this type can be positioned in the rack. If the entry in the **Form factor** category is missing, i-doit assumes that a 19" component with 1 RU is involved.
+Les unités de hauteur du rack sont définies dans la catégorie **Facteur de forme**. Cette catégorie est déjà attribuée à l'objet de type **Rack** lors de l'installation d'i-doit. En plus de l'attribut **Unités de rack**, vous devriez également définir le **Facteur de forme** de **19"**.
 
-The assignment from object to rack is carried out in the **Location** category in which physical locations are set into [relation](../basics/object-relations.md) to each other. First you choose the rack in the **Location** attribute; afterwards further attributes to be filled in are shown:
+[![Modification des Attributs du Rack](../assets/images/en/evaluation/rack-view/2-rv.png)](../assets/images/en/evaluation/rack-view/2-rv.png)
 
-*   **Assembly**: How will the object be assembled - in a **Horizontal** ("normal" assembly) or **Vertical** way (for example, PDUs which are built in at the side)?
-*   **Insertion**: Does the object require the complete depth of the rack (**Front** and **Back**) or is it only mounted at the front or back? In case of objects which are assembled only on one side, the same unit can be assigned doubly, namely at the front and at the back.
-*   **Position in the rack**: With a **horizontal** assembly you select the height units. Depending on how many RU an object requires, the specifications in the drop-down menu change. With a  **vertical** assembly the **slots** are displayed (on the top right = 1, on the top left = 2, on the bottom right = 3, on the bottom left = 4 etc.). Rack units or slots which are already in use will be hidden.
+Dans l'exemple, le rack peut occuper un maximum de 42 unités avec un facteur de forme de 19".
 
-[![Positioning of Objects in the Rack](../assets/images/en/evaluation/rack-view/4-rv.png)](../assets/images/en/evaluation/rack-view/4-rv.png)
+Le tri des **Unités de hauteur** par ordre croissant ou décroissant est effectué dans la catégorie **Rack**. Avec le bouton **Modifier**, vous pouvez accéder au menu déroulant correspondant qui se trouve dans la boîte à droite pour faire votre choix.
 
-Objects which are already assigned are displayed in the **Location view** and in the category **locally assigned objects**.
+Dans cette boîte, vous pouvez également définir combien de **logements verticaux** sont disponibles à l'**avant** et à l'**arrière**. Avec ces définitions, vous pouvez documenter les PDU qui sont montés sur le côté, par exemple. Sur la capture d'écran, vous pouvez voir **2 logements verticaux** pour l'**avant** et l'**arrière** qui sont placés à gauche et à droite alternativement.
 
-[![Positioning of Objects in the Rack](../assets/images/en/evaluation/rack-view/5-rv.png)](../assets/images/en/evaluation/rack-view/5-rv.png)
+[![Édition des Attributs du Rack](../assets/images/en/evaluation/rack-view/3-rv.png)](../assets/images/en/evaluation/rack-view/3-rv.png)
 
-Editing of Assigned Objects
+Positionnement des Objets dans le Rack
+---------------------------------------
+
+Deux conditions s'appliquent pour remplir les racks avec des [objets](../basics/structure-of-the-it-documentation.md) : D'une part, vous devez définir pour chaque objet dans la catégorie **Facteur de forme** combien d'**unités de rack** il nécessite et qu'il a le **Facteur de forme 19"**. D'autre part, vous devez cocher la case dans la [configuration du type d'objet](../basics/assignment-of-categories-to-object-types.md) confirmant que les objets de ce type peuvent être positionnés dans le rack. Si l'entrée dans la catégorie **Facteur de forme** est manquante, i-doit suppose qu'un composant 19" avec 1 U est impliqué.
+
+L'assignation de l'objet au rack est effectuée dans la catégorie **Emplacement** dans laquelle des emplacements physiques sont mis en [relation](../basics/object-relations.md) les uns avec les autres. Tout d'abord, vous choisissez le rack dans l'attribut **Emplacement** ; ensuite, d'autres attributs à remplir sont affichés :
+
+*   **Assemblage**: Comment l'objet sera-t-il assemblé - de manière **horizontale** (assemblage "normal") ou de manière **verticale** (par exemple, les PDU qui sont installés sur le côté)?
+*   **Insertion**: L'objet nécessite-t-il la profondeur complète du rack (**avant** et **arrière**) ou est-il seulement monté à l'avant ou à l'arrière? Dans le cas d'objets qui sont assemblés d'un seul côté, la même unité peut être attribuée deux fois, c'est-à-dire à l'avant et à l'arrière.
+*   **Position dans le rack**: Avec un assemblage **horizontal**, vous sélectionnez les unités de hauteur. Selon le nombre d'unités RU qu'un objet nécessite, les spécifications dans le menu déroulant changent. Avec un assemblage **vertical**, les **emplacements** sont affichés (en haut à droite = 1, en haut à gauche = 2, en bas à droite = 3, en bas à gauche = 4, etc.). Les unités de rack ou les emplacements déjà utilisés seront masqués.
+
+[![Positionnement des objets dans le rack](../assets/images/en/evaluation/rack-view/4-rv.png)](../assets/images/en/evaluation/rack-view/4-rv.png)
+
+Les objets déjà assignés sont affichés dans la **vue d'emplacement** et dans la catégorie **objets assignés localement**.
+
+[![Positionnement des objets dans le rack](../assets/images/en/evaluation/rack-view/5-rv.png)](../assets/images/en/evaluation/rack-view/5-rv.png)
+
+Édition des objets assignés
 ---------------------------
 
-In the **Rack** category there are several ways to edit the assigned objects. For each object there is a little button with an arrow pointing down on the right side. When you click this button, you can choose from the following options:
+Dans la catégorie **Rack**, il existe plusieurs façons d'éditer les objets assignés. Pour chaque objet, il y a un petit bouton avec une flèche pointant vers le bas du côté droit. Lorsque vous cliquez sur ce bouton, vous pouvez choisir parmi les options suivantes :
 
-*   **Objectlink**: The overview page of the object is opened.
-*   **Reassign object**: A dialog opens on the right side with which you can choose a new position for an object (see below).
-*   **Detach object**: The information at which position the object is mounted in the rack is deleted. The object remains assigned to the rack through the location assignment.
+*   **Lien d'objet** : La page de vue d'ensemble de l'objet est ouverte.
+*   **Réassigner l'objet** : Une boîte de dialogue s'ouvre sur le côté droit avec laquelle vous pouvez choisir une nouvelle position pour un objet (voir ci-dessous).
+*   **Détacher l'objet** : Les informations indiquant à quelle position l'objet est monté dans le rack sont supprimées. L'objet reste assigné au rack via l'assignation de l'emplacement.
 
-[![Editing of Assigned Objects](../assets/images/en/evaluation/rack-view/6-rv.png)](../assets/images/en/evaluation/rack-view/6-rv.png)
+[![Édition des objets assignés](../assets/images/en/evaluation/rack-view/6-rv.png)](../assets/images/en/evaluation/rack-view/6-rv.png)
 
-Objects which are already assigned to the rack locally but do not have a position yet, are listed on the right side in the box called **Unpositioned objects**. Via the button with the gearwheel symbol you can change the required rack units (RU) of the object. With the X button you delete the location assignment irrevocably (**purge**).
+Les objets qui sont déjà assignés au rack localement mais qui n'ont pas encore de position sont répertoriés du côté droit dans la boîte appelée **Objets non positionnés**. Via le bouton avec le symbole de la roue dentée, vous pouvez modifier les unités de rack (RU) requises pour l'objet. Avec le bouton X, vous supprimez l'assignation de l'emplacement de manière irrévocable (**purge**).
 
-[![Editing of Assigned Objects](../assets/images/en/evaluation/rack-view/7-rv.png)](../assets/images/en/evaluation/rack-view/7-rv.png)
 
-When you click on the object in the list, another box opens below. With this dialog you can position the object in the rack.
+[![Édition des objets assignés](../assets/images/en/evaluation/rack-view/7-rv.png)](../assets/images/en/evaluation/rack-view/7-rv.png)
 
-[![Editing of Assigned Objects](../assets/images/en/evaluation/rack-view/8-rv.png)](../assets/images/en/evaluation/rack-view/8-rv.png)
+Lorsque vous cliquez sur l'objet dans la liste, une autre boîte s'ouvre en dessous. Avec ce dialogue, vous pouvez positionner l'objet dans le rack.
 
-Statistics
-----------
+[![Édition des objets assignés](../assets/images/en/evaluation/rack-view/8-rv.png)](../assets/images/en/evaluation/rack-view/8-rv.png)
 
-The **Rack** category provides a wide range of evaluations regarding the assigned objects. Above the visual representation of the rack you can see the Statistics box. You can open or close it by clicking the arrow on the left side.
+Statistiques
+------------
 
-[![Statistics](../assets/images/en/evaluation/rack-view/9-rv.png)](../assets/images/en/evaluation/rack-view/9-rv.png)
+La catégorie **Rack** fournit une large gamme d'évaluations concernant les objets assignés. Au-dessus de la représentation visuelle du rack, vous pouvez voir la boîte de statistiques. Vous pouvez l'ouvrir ou la fermer en cliquant sur la flèche du côté gauche.
 
-The statistics comprise several rack attributes and assigned objects:
+[![Statistiques](../assets/images/en/evaluation/rack-view/9-rv.png)](../assets/images/en/evaluation/rack-view/9-rv.png)
 
-| Statistics | Objects | Categories | Attributes |
+Les statistiques comprennent plusieurs attributs de rack et d'objets assignés :
+
+| Statistiques | Objets | Catégories | Attributs |
 | --- | --- | --- | --- |
-| **Free slots** | **Rack**<br><br>locally assigned objects | **Form factor**<br><br>**Location** | **Rack units**<br><br>**Assembly , Insertion**, **Position in the rack** |
-| **Used slots  <br>** | see above | see above | see above |
-| **Free vertical slots  <br>** | see above | see above | see above |
-| **Used vertical slots  <br>** | see above | see above | see above |
-| **PDU connectors (Input)** | locally assigned objects of the type **Power distribution unit  <br>** | **Wiring system → Connectors** | **Input/Output**, **Connection type**, **Assigned to  <br>** |
-| ****PDU connectors (Output)**** | locally assigned objects of the type  ****Power distribution unit**** | ****Wiring system → Connectors**** | ****Input/Output**, **Connection type**, **Assigned to**** |
-| **Switch ports** | locally assigned objects of the type **Switch** | **Network → Port** | **Plug**, **Connected with  <br>** |
-| **FC-switch ports** | locally assigned objects of the type **FC-switch** | ****Network** → Port** | ****Plug**, **Connected with**** |
-| **Patch panel ports (Inputs)** | locally assigned objects of the type **Patch panel** | ****Wiring system → Connectors**** | ****Input/Output**, **Connection type**, **Assigned to**** |
-| **Patch panel ports (Outputs)** | locally assigned objects of the type **Patch panel** | ****Wiring system → Connectors**** | ****Input/Output**, **Connection type**, **Assigned to**** |
-| **Consumption of electricity** | locally assigned objects | **Power consumer  <br>** | **Watt** |
-| ****Consumption of thermal energy**** | locally assigned objects | ****Power consumer**** | **BTU** |
+| **Emplacements libres** | **Rack**<br><br>objets assignés localement | **Facteur de forme**<br><br>**Emplacement** | **Unités de rack**<br><br>**Assemblage**, **Insertion**, **Position dans le rack** |
+| **Emplacements utilisés** | voir ci-dessus | voir ci-dessus | voir ci-dessus |
+| **Emplacements verticaux libres** | voir ci-dessus | voir ci-dessus | voir ci-dessus |
+| **Emplacements verticaux utilisés** | voir ci-dessus | voir ci-dessus | voir ci-dessus |
+| **Connecteurs PDU (Entrée)** | objets assignés localement du type **Unité de distribution d'énergie** | **Système de câblage → Connecteurs** | **Entrée/Sortie**, **Type de connexion**, **Assigné à** |
+| **Connecteurs PDU (Sortie)** | objets assignés localement du type **Unité de distribution d'énergie** | **Système de câblage → Connecteurs** | **Entrée/Sortie**, **Type de connexion**, **Assigné à** |
+| **Ports de commutateur** | objets assignés localement du type **Commutateur** | **Réseau → Port** | **Brancher**, **Connecté avec** |
+| **Ports de commutateur FC** | objets assignés localement du type **Commutateur FC** | **Réseau → Port** | **Brancher**, **Connecté avec** |
+| **Ports de panneau de brassage (Entrées)** | objets assignés localement du type **Panneau de brassage** | **Système de câblage → Connecteurs** | **Entrée/Sortie**, **Type de connexion**, **Assigné à** |
+| **Ports de panneau de brassage (Sorties)** | objets assignés localement du type **Panneau de brassage** | **Système de câblage → Connecteurs** | **Entrée/Sortie**, **Type de connexion**, **Assigné à** |
+| **Consommation d'électricité** | objets assignés localement | **Consommateur d'énergie** | **Watt** |
+| **Consommation d'énergie thermique** | objets assignés localement | **Consommateur d'énergie** | **BTU** |
 
-Racks Category
+Catégorie des Racks
 --------------
 
-When a rack is assigned to a room via the **Location** category, another visual representation is available. In the default installation of i-doit the **Racks** category is already assigned to the object type **Room**. Via this category all objects of the type **Rack,** which are assigned to a certain room, are displayed visually.
+Lorsqu'un rack est assigné à une salle via la catégorie **Emplacement**, une autre représentation visuelle est disponible. Dans l'installation par défaut de i-doit, la catégorie **Racks** est déjà assignée au type d'objet **Salle**. Via cette catégorie, tous les objets de type **Rack**, qui sont assignés à une certaine salle, sont affichés visuellement.
 
-[![Racks Category](../assets/images/en/evaluation/rack-view/10-rv.png)](../assets/images/en/evaluation/rack-view/10-rv.png)
+[![Catégorie des Racks](../assets/images/en/evaluation/rack-view/10-rv.png)](../assets/images/en/evaluation/rack-view/10-rv.png)
 
-Above the visual representation several options are available:
+Au-dessus de la représentation visuelle, plusieurs options sont disponibles :
 
-*   **Rearrange racks**: With this function you can adjust the order of the racks.
-*   **Load all racks from all child locations!** Racks which are assigned to a deeper level of the location hierarchy are also loaded. As a standard, directly assigned objects of the type **Rack** are displayed. For example, the **Racks** category can then be assigned to objects of the type **Building**, in which there are first **Rooms** and on a subordinated level **Racks**.
-*   **Load statistics for all racks**: The statistics (see above) for all racks are shown successively.
+*   **Réorganiser les racks** : Avec cette fonction, vous pouvez ajuster l'ordre des racks.
+*   **Charger tous les racks de tous les emplacements enfants !** Les racks qui sont assignés à un niveau plus profond de la hiérarchie des emplacements sont également chargés. En standard, les objets directement assignés de type **Rack** sont affichés. Par exemple, la catégorie **Racks** peut ensuite être assignée à des objets de type **Bâtiment**, dans lesquels il y a d'abord des **Salles** et à un niveau inférieur des **Racks**.
+*   **Charger les statistiques pour tous les racks** : Les statistiques (voir ci-dessus) pour tous les racks sont affichées successivement.

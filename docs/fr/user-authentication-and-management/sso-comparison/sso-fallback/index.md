@@ -1,3 +1,3 @@
-# SSO fallback to builtin
+# SSO de secours vers le système intégré
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"

@@ -8,36 +8,34 @@ lang: en
 
 # cmdb.logbook
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## cmdb.logbook.read
 
-Read access to the i-doit logbook.
+Accès en lecture au journal de bord i-doit.
 
-### Request parameters
+### Paramètres de la requête
 
-| Key                 | JSON data type | Required | Description                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **id**              | Integer        | No       | ID of the global logbook entry from table isys_logbook                                                                                                                                                                                                                                                                                                                                |
-| **object_id**       | Integer        | No       | ID of the object                                                                                                                                                                                                                                                                                                                                                                      |
-| **catg_logbook_id** | Integer        | No       | ID of the logbook category entry from table sys_catg_logbook_list                                                                                                                                                                                                                                                                                                                     |
-| **since**           | String         | No       | Date to filter for logbook changes since a certain date, for possible values see also [https://www.php.net/manual/de/function.strtotime.php](https://www.php.net/manual/de/function.strtotime.php){:target="_blank"} for example **1660203634** (2022-08-11 09:40:34)                                                                                                                 |
-| **status**          | String         | No       | Filter by status of the objects e.g. Normal or Archived:<br>-   **C__RECORD_STATUS__BIRTH** = Unfinished<br>-   **C__RECORD_STATUS__NORMAL** = Normal<br>-   **C__RECORD_STATUS__ARCHIVED** = Archived<br>-   **C__RECORD_STATUS__DELETED** = Deleted<br>-   **C__RECORD_STATUS__TEMPLATE** = Template<br>-   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE** = Template for mass changes |
+| Clé                 | Type de données JSON | Requis | Description                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------- | --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **id**              | Entier               | Non    | ID de l'entrée de journal de bord global de la table isys_logbook                                                                                                                                                                                                                                                                                                                     |
+| **object_id**       | Entier               | Non    | ID de l'objet                                                                                                                                                                                                                                                                                                                                                                         |
+| **catg_logbook_id** | Entier               | Non    | ID de l'entrée de catégorie de journal de bord de la table sys_catg_logbook_list                                                                                                                                                                                                                                                                                                       |
+| **since**           | Chaîne               | Non    | Date pour filtrer les changements du journal de bord depuis une certaine date, pour les valeurs possibles voir aussi [https://www.php.net/manual/de/function.strtotime.php](https://www.php.net/manual/de/function.strtotime.php){:target="_blank"} par exemple **1660203634** (2022-08-11 09:40:34)                                                                                                                 |
+| **status**          | Chaîne               | Non    | Filtrer par statut des objets par exemple Normal ou Archivé:<br>-   **C__RECORD_STATUS__BIRTH** = Non terminé<br>-   **C__RECORD_STATUS__NORMAL** = Normal<br>-   **C__RECORD_STATUS__ARCHIVED** = Archivé<br>-   **C__RECORD_STATUS__DELETED** = Supprimé<br>-   **C__RECORD_STATUS__TEMPLATE** = Modèle<br>-   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE** = Modèle pour les changements de masse |
 
-!!! example "WIP"
+### Paramètres de réponse {/examples}
 
-    ### Response parameters
+La clé JSON **résultat** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Clé             | Type de données JSON | Description |
+| --------------- | ------------------- | ----------- |
+| **Placeholder** | Placeholder          | Placeholder |
+| **Placeholder** | Placeholder          | Placeholder |
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+### Exemple
 
-### Example
-
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -54,7 +52,7 @@ Read access to the i-doit logbook.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -88,55 +86,55 @@ Read access to the i-doit logbook.
 
 ## cmdb.logbook.create
 
-Write a entry to the i-doit logbook.
+Écrire une entrée dans le journal i-doit.
 
-### Request parameters
+### Paramètres de requête {/examples}
 
-| Key             | JSON data type    | Required | Description                                                                                                                     |
-| --------------- | ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| **object_id**   | Integer           | Yes      | ID of the object                                                                                                                |
-| **object_ids**  | String or Array   | No       | List of object identifiers                                                                                                      |
-| **message**     | String            | Yes      | Message for the entry                                                                                                           |
-| **description** | String            | No       | Description for the entry                                                                                                       |
-| **comment**     | String            | No       | Comment what has changed                                                                                                        |
-| **source**      | String            | No       | Constant or ID of the source of the logbook entry from table `isys_logbook_source`.<br> Default is `C__LOGBOOK__ALERT_LEVEL__0` |
-| **alert_level** | Integer or String | No       | Constant or ID of the alert level, from table `isys_logbook_level`.<br> Default is `C__LOGBOOK__ALERT_LEVEL__0`                 |
+| Clé             | Type de données JSON | Requis   | Description                                                                                                                     |
+| --------------- | --------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **object_id**   | Entier               | Oui      | ID de l'objet                                                                                                                   |
+| **object_ids**  | Chaîne ou Tableau    | Non      | Liste d'identifiants d'objet                                                                                                    |
+| **message**     | Chaîne               | Oui      | Message pour l'entrée                                                                                                           |
+| **description** | Chaîne               | Non      | Description de l'entrée                                                                                                         |
+| **comment**     | Chaîne               | Non      | Commentaire sur ce qui a changé                                                                                                 |
+| **source**      | Chaîne               | Non      | Constante ou ID de la source de l'entrée du journal à partir de la table `isys_logbook_source`.<br> La valeur par défaut est `C__LOGBOOK__ALERT_LEVEL__0` |
+| **alert_level** | Entier ou Chaîne     | Non      | Constante ou ID du niveau d'alerte, à partir de la table `isys_logbook_level`.<br> La valeur par défaut est `C__LOGBOOK__ALERT_LEVEL__0` |
 
-=== "Source list"
+=== "Liste des sources"
 
-    | Title          | ID   | Constant                    |
-    | -------------- | ---- | --------------------------- |
-    | Internal       | 1    | C__LOGBOOK_SOURCE__INTERNAL |
-    | External       | 2    | C__LOGBOOK_SOURCE__EXTERNAL |
-    | Manual entries | 3    | C__LOGBOOK_SOURCE__USER     |
-    | All!           | 4    | C__LOGBOOK_SOURCE__ALL      |
-    | RT Ticket      | 1001 | C__LOGBOOK_SOURCE__RT       |
-    | JDisc Import   | 1004 | C__LOGBOOK_SOURCE__JDISC    |
-    | Import         | 1005 | C__LOGBOOK_SOURCE__IMPORT   |
+    | Titre           | ID   | Constante                     |
+    | --------------- | ---- | ----------------------------- |
+    | Interne         | 1    | C__LOGBOOK_SOURCE__INTERNAL   |
+    | Externe         | 2    | C__LOGBOOK_SOURCE__EXTERNAL   |
+    | Entrées manuelles| 3    | C__LOGBOOK_SOURCE__USER       |
+    | Tous!           | 4    | C__LOGBOOK_SOURCE__ALL        |
+    | Ticket RT       | 1001 | C__LOGBOOK_SOURCE__RT         |
+    | Import JDisc    | 1004 | C__LOGBOOK_SOURCE__JDISC      |
+    | Import          | 1005 | C__LOGBOOK_SOURCE__IMPORT     |
 
-=== "Alert level list"
+=== "Liste des niveaux d'alerte"
 
-    | Title           | ID  | Costant                    |
-    | --------------- | --- | -------------------------- |
-    | 0 (information) | 1   | C__LOGBOOK__ALERT_LEVEL__0 |
-    | 1 (low)         | 2   | C__LOGBOOK__ALERT_LEVEL__1 |
-    | 2 (middle)      | 3   | C__LOGBOOK__ALERT_LEVEL__2 |
-    | 3 (high)        | 4   | C__LOGBOOK__ALERT_LEVEL__3 |
+    | Titre            | ID  | Constante                     |
+    | ---------------- | --- | ----------------------------- |
+    | 0 (information)  | 1   | C__LOGBOOK__ALERT_LEVEL__0    |
+    | 1 (faible)       | 2   | C__LOGBOOK__ALERT_LEVEL__1    |
+    | 2 (moyen)        | 3   | C__LOGBOOK__ALERT_LEVEL__2    |
+    | 3 (élevé)        | 4   | C__LOGBOOK__ALERT_LEVEL__3    |
 
-!!! example "WIP"
+!!! example "En cours"
 
-    ### Response parameters
+    ### Paramètres de réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+    | Clé             | Type de données JSON | Description |
+    | --------------- | ------------------- | ----------- |
+    | **Placeholder** | Placeholder          | Placeholder |
+    | **Placeholder** | Placeholder          | Placeholder |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -156,7 +154,7 @@ Write a entry to the i-doit logbook.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {

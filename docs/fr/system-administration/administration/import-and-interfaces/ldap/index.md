@@ -1,5 +1,5 @@
 # LDAP
 
--   [Attribute-extension](./attribute-extension.md)
--   [Directories](./directories.md)
--   [LDAP Server](./server.md)
+-   [Extension d'attribut](./attribute-extension.md)
+-   [Répertoires](./directories.md)
+-   [Serveur LDAP](./server.md)

@@ -1,6 +1,6 @@
-# Introduction
+# Introduction {/examples}
 
-The first thought that comes to mind is that the first step is always the hardest. To approach the challenges of a modern and comprehensive [IT documentation](../glossary.md), we address this very topic at the beginning. In this knowledge base we will concentrate extensively on the possibilities i-doit offers with respect to IT documentation and CMDB. This also includes addressing general subjects which aren't linked with the tool directly. From planning to introduction to active use in daily operations, there are many organizational steps which you have to think through carefully. While the objective of IT documentation often seems to be clear, the steps up to a productive application often remain in the dark. It is time to bring light into the darkness - and for logical reasons right at the beginning.
+La première pensée qui vient à l'esprit est que le premier pas est toujours le plus difficile. Pour aborder les défis d'une [documentation informatique](../glossary.md) moderne et complète, nous abordons ce sujet dès le début. Dans cette base de connaissances, nous nous concentrerons largement sur les possibilités offertes par i-doit en matière de documentation informatique et de CMDB. Cela inclut également l'abord de sujets généraux qui ne sont pas directement liés à l'outil. De la planification à l'introduction à l'utilisation active dans les opérations quotidiennes, il existe de nombreuses étapes organisationnelles auxquelles vous devez réfléchir attentivement. Alors que l'objectif de la documentation informatique semble souvent clair, les étapes jusqu'à une application productive restent souvent dans l'ombre. Il est temps de faire la lumière sur l'obscurité - et pour des raisons logiques dès le début.
 
-*   [How do I Start Documenting?](./how-do-i-start-documenting.md)
-*   [Check List for Your IT Documentation](./check-list-for-your-it-documentation.md)
+*   [Comment commencer la documentation ?](./how-do-i-start-documenting.md)
+*   [Liste de contrôle pour votre documentation informatique](./check-list-for-your-it-documentation.md)

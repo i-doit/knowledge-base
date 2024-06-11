@@ -1,7 +1,9 @@
-# Customer Portal
+# Portail Client
 
-A central contact point exists for users of i-doit pro. [Installation packages](../installation/index.md) and the currently valid [license](../maintenance-and-operation/activate-license.md) are available for download there. The subscription and buyers products (for example [add-ons](../i-doit-pro-add-ons/index.md)) are also listed there. The customer portal can be accessed at the following address:
+Un point de contact central existe pour les utilisateurs de i-doit pro. Les [packages d'installation](../installation/index.md) et la [licence](../maintenance-and-operation/activate-license.md) actuellement valide sont disponibles en téléchargement. Les abonnements et les produits achetés (par exemple les [modules complémentaires](../i-doit-pro-add-ons/index.md)) sont également répertoriés. Le portail client est accessible à l'adresse suivante :
 
 **[portal.i-doit.com](https://portal.i-doit.com/)**
 
-Access data are required for the customer portal. Customers of the i-doit pro version receive the necessary information for the creation of a user account during the ordering process.
+Des données d'accès sont nécessaires pour le portail client. Les clients de la version i-doit pro reçoivent les informations nécessaires à la création d'un compte utilisateur lors du processus de commande.
+
+{/*examples*/}

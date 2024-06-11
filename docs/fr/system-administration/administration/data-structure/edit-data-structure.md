@@ -1,44 +1,44 @@
-# Edit Data structure
+# Modifier la structure des données {/examples/}
 
-Here you can find configurations to alter the data structure of your tenant.
+Ici, vous pouvez trouver des configurations pour modifier la structure des données de votre locataire.
 
-The configuration of assignments is carried out via a separation into three columns. These columns represent your ==Object type Groups==, ==Object types in== and ==Categories in==. In each column there is a ==dotted area== per line allowing you to change the order per drag and drop.
+La configuration des affectations est effectuée via une séparation en trois colonnes. Ces colonnes représentent vos ==Groupes de types d'objets==, ==Types d'objets dans== et ==Catégories dans==. Dans chaque colonne, il y a une ==zone en pointillés== par ligne vous permettant de changer l'ordre par glisser-déposer.
 
-[![Layout](../../../assets/images/en/system-administration/administration/data-structure/1-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/1-ds.png)
+[![Mise en page](../../../assets/images/en/system-administration/administration/data-structure/1-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/1-ds.png)
 
-## Adjusting Object type Groups, Object types and Categories
+## Ajuster les Groupes de types d'objets, les Types d'objets et les Catégories {/examples/}
 
-In all three main fields you can change into the editing mode by pressing the ==Adjust button==.
-Here you can ==edit the assignments== of the respective object group, but you can also create and develop new groups, object types or categories.
+Dans les trois champs principaux, vous pouvez passer en mode édition en appuyant sur le ==bouton Ajuster==.
+Ici, vous pouvez ==modifier les affectations== du groupe d'objets respectif, mais vous pouvez également créer et développer de nouveaux groupes, types d'objets ou catégories.
 
-[![Adjusting](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)
+[![Ajuster](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)
 
-## Editing the Assignments
+## Modifier les Affectations {/examples/}
 
-You start editing in the ==Object type Groups== column. Here you can ==select the object type group== for which you want to adjust the object type assignments.<br>
-==Click on the Object type Group== which you want to edit, so that in the middle column a selection is available. In case you don't need the groups, ==you can hide== them by using the checkboxes or the ==Adjust button==.
+Vous commencez à éditer dans la colonne ==Groupes de types d'objets==. Ici, vous pouvez ==sélectionner le groupe de types d'objets== pour lequel vous souhaitez ajuster les affectations de types d'objets.<br>
+==Cliquez sur le Groupe de types d'objets== que vous souhaitez modifier, afin qu'une sélection soit disponible dans la colonne du milieu. Si vous n'avez pas besoin des groupes, ==vous pouvez les masquer== en utilisant les cases à cocher ou le ==bouton Ajuster==.
 
-When a group has been selected and the middle column is active, you can determine ==which Object types== are assigned to the corresponding group. ==Object types== that are grayed out are already assigned to other groups, but can still be reassigned.
+Lorsqu'un groupe est sélectionné et que la colonne du milieu est active, vous pouvez déterminer ==quels types d'objets== sont assignés au groupe correspondant. Les ==Types d'objets== qui sont grisés sont déjà assignés à d'autres groupes, mais peuvent toujours être réaffectés.
 
-You can ==add custom groups== at the bottom of the object group column. They have a pencil icon in their line so that you can edit or delete them at any time.
+Vous pouvez ==ajouter des groupes personnalisés== en bas de la colonne des groupes d'objets. Ils ont une icône de crayon sur leur ligne afin que vous puissiez les éditer ou les supprimer à tout moment.
 
-The same applies to the object type column. Here you can create [custom object types](../../../basics/custom-object-types.md). For an extensive configuration of an object type however, we recommend the use of the [object type configuration](../../../basics/custom-object-types.md).
+Il en va de même pour la colonne des types d'objets. Ici, vous pouvez créer des [types d'objets personnalisés](../../../basics/custom-object-types.md). Pour une configuration approfondie d'un type d'objet, cependant, nous recommandons l'utilisation de la [configuration des types d'objets](../../../basics/custom-object-types.md).
 
-When clicking on an object type in the middle column, the right column is activated. Here you can see the categories assigned to the selected object type and you can change or remove the assignments via the checkboxes.
+Lorsque vous cliquez sur un type d'objet dans la colonne du milieu, la colonne de droite est activée. Ici, vous pouvez voir les catégories attribuées au type d'objet sélectionné et vous pouvez modifier ou supprimer les attributions via les cases à cocher.
 
-The ==Create custom categories== button will forward you directly to the function for creating [custom categories](../../../basics/custom-categories.md).
+Le bouton ==Créer des catégories personnalisées== vous dirigera directement vers la fonction de création de [catégories personnalisées](../../../basics/custom-categories.md).
 
-## Edit data structure Profiles
+## Modifier les profils de structure de données
 
-You can save your current configuration in the form of a profile. For this purpose, enter a name for the profile at ==Save current profile==. The profile will then appear in the available profiles in the right column. Here it is possible to activate the profile, delete it or to download it. Activate the checkbox of the desired profile and click ==Load selected profile(s)== to restore the assignment from the selected profile. By using the download button you can save the profile as an XML file and upload it again by using the button ==Choose file==, if required. With the red X icon you can delete the selected profile.
+Vous pouvez enregistrer votre configuration actuelle sous forme de profil. Pour ce faire, saisissez un nom pour le profil dans ==Enregistrer le profil actuel==. Le profil apparaîtra alors dans les profils disponibles dans la colonne de droite. Ici, il est possible d'activer le profil, de le supprimer ou de le télécharger. Activez la case à cocher du profil souhaité et cliquez sur ==Charger le(s) profil(s) sélectionné(s)== pour restaurer l'attribution à partir du profil sélectionné. En utilisant le bouton de téléchargement, vous pouvez enregistrer le profil sous forme de fichier XML et le télécharger à nouveau en utilisant le bouton ==Choisir un fichier==, si nécessaire. Avec l'icône X rouge, vous pouvez supprimer le profil sélectionné.
 
-This feature is suitable to exchange configuration data between multiple _i-doit_ installations. A profile contains the following settings:
+Cette fonction est adaptée pour échanger des données de configuration entre plusieurs installations _i-doit_. Un profil contient les paramètres suivants :
 
-- Object type groups with names, order and further attributes
-- Objekt types with names, assignments to object type groups and other attributes from the object type configuration
-- Global, specific and custom categories assigned to each object type
-- Configuration of each custom category which is assigned to at least one object type
+- Groupes de types d'objets avec des noms, un ordre et d'autres attributs
+- Types d'objets avec des noms, des attributions à des groupes de types d'objets et d'autres attributs de la configuration des types d'objets
+- Catégories globales, spécifiques et personnalisées attribuées à chaque type d'objet
+- Configuration de chaque catégorie personnalisée qui est attribuée à au moins un type d'objet
 
-Accordingly, a profile contains the configuration of the IT documentation but no contents. Neither objects, category entries nor filled-in dialog fields are saved.
+En conséquence, un profil contient la configuration de la documentation IT mais pas de contenu. Ni les objets, ni les entrées de catégories, ni les champs de dialogue remplis ne sont enregistrés.
 
-If you wish to have a clear state to carry out the assignments from scratch, you can reset all assignments via the ==Reset== button.
+Si vous souhaitez avoir un état clair pour effectuer les attributions à partir de zéro, vous pouvez réinitialiser toutes les attributions via le bouton ==Réinitialiser==.

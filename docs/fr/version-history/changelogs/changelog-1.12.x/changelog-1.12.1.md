@@ -1,15 +1,15 @@
-# Changelog 1.12.1
+# Journal des modifications 1.12.1 {/examples/}
 
-[Bug][CMDB] Unauthenticated SQL-Injection in i-doit during login  
-[Bug][CMDB] Via the URL parameter "objectGroupId" it was possible to inject SQL Injections.  
-[Bug][Code (internal)] Arbitrary File Download Security Vulnerability  
-[Bug][CSV Import] Import object assignments via CSV  
-[Bug][Custom categories] Editing of custom categories overwrites existing categories  
-[Bug][Search] Opening an object via location view with active result list from search reopens search instead of the chosen object  
-[Bug][List editing] Edit values in the Contract category in list editing  
-[Bug][List editing] Edit attributes in list editing  
-[Bug][Admincenter] Open the Admin Center with i-doit Cache  
-[Bug][Console] Exit codes for the console.php  
-[Bug][Categories] Create a report with service assignment as condition  
-[Bug][Authorization system] Right to create a new report can be avoided when using a second tenant  
-[Bug][Report-Manager] Deploy connected to attribute from all parent categories  
+- [Bug][CMDB] Injection SQL non authentifiée dans i-doit lors de la connexion
+- [Bug][CMDB] Via le paramètre d'URL "objectGroupId", il était possible d'injecter des injections SQL.
+- [Bug][Code (interne)] Vulnérabilité de sécurité de téléchargement de fichier arbitraire
+- [Bug][Importation CSV] Importer des affectations d'objets via CSV
+- [Bug][Catégories personnalisées] La modification des catégories personnalisées écrase les catégories existantes
+- [Bug][Recherche] Ouvrir un objet via la vue de l'emplacement avec une liste de résultats active de la recherche rouvre la recherche au lieu de l'objet choisi
+- [Bug][Édition de liste] Modifier les valeurs dans la catégorie Contrat en édition de liste
+- [Bug][Édition de liste] Modifier les attributs en édition de liste
+- [Bug][Centre d'administration] Ouvrir le Centre d'administration avec le cache i-doit
+- [Bug][Console] Codes de sortie pour console.php
+- [Bug][Catégories] Créer un rapport avec l'attribution de service comme condition
+- [Bug][Système d'autorisation] Le droit de créer un nouveau rapport peut être évité lors de l'utilisation d'un deuxième locataire
+- [Bug][Gestionnaire de rapports] Déployer connecté à l'attribut de toutes les catégories parentes

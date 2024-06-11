@@ -1,76 +1,76 @@
 # Red Hat Enterprise Linux 8 (RHEL 8)
 
-This article describes which packages need to be installed and configured.
+Cet article décrit les packages qui doivent être installés et configurés.
 
-## System requirements
+## Configuration système
 
-The general [system requirements]() apply.
+Les [exigences système générales]() s'appliquent.
 
-This article refers to ==RHEL in version 8.x==
-To determine which version is used, this command can be executed on the console:
+Cet article fait référence à ==RHEL en version 8.x==
+Pour déterminer quelle version est utilisée, cette commande peut être exécutée sur la console :
 
 ```shell
 cat /etc/os-release
 ```
 
-As system architecture a x86 in 64bit should be used:
+En tant qu'architecture système, un x86 en 64 bits devrait être utilisé :
 
 ```shell
 uname -m
 ```
 
-==x86_64== stands for 64bit, ==i386== or ==i686== only for 32bit.
+==x86_64== signifie 64 bits, ==i386== ou ==i686== seulement pour 32 bits.
 
-There are other operating systems that are closely related to RHEL, such as the open replica CentOS and Fedora, which is maintained by Red Hat. However, only RHEL is officially supported.
+Il existe d'autres systèmes d'exploitation étroitement liés à RHEL, tels que la réplique ouverte CentOS et Fedora, maintenue par Red Hat. Cependant, seul RHEL est officiellement pris en charge.
 
-## Installation of the packages
+## Installation des packages
 
-On a system that is up-to-date
+Sur un système à jour
 
--   the ==Apache== web server 2.4,
--   the script language ==PHP== 7.4,
--   the database management system ==MariaDB== 10.5
--   the caching server ==memcached==
+-   le serveur web ==Apache== 2.4,
+-   le langage de script ==PHP== 7.4,
+-   le système de gestion de base de données ==MariaDB== 10.5
+-   le serveur de mise en cache ==memcached==
 
-However, the current ==version 8.x of RHEL== only contains obsolete packages that do not meet the system requirements.<br>
-It is therefore necessary to install current packages from other repositories.
+Cependant, la ==version 8.x actuelle de RHEL== ne contient que des packages obsolètes qui ne répondent pas aux exigences du système.<br>
+Il est donc nécessaire d'installer des packages actuels à partir d'autres référentiels.
 
-But be ==careful== as third-repositories could endanger the stability of the operating system!
+Mais soyez ==prudent== car les dépôts tiers pourraient compromettre la stabilité du système d'exploitation !
 
-At first the first packages are installed from the default repositories:
+Tout d'abord, les premiers paquets sont installés à partir des dépôts par défaut :
 
 ```shell
 sudo dnf update
 sudo dnf install httpd memcached unzip wget zip
 ```
 
-For PHP, the current Extra Packages for Enterprise Linux (EPEL) is included:
+Pour PHP, le référentiel actuel des paquets supplémentaires pour Enterprise Linux (EPEL) est inclus :
 
 ```shell
 sudo rpm --import https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-8
 sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ```
 
-After the repository has been included, the possible versions are initialized and then the desired version can be activated (we use PHP 7.3 here):
+Après l'inclusion du dépôt, les versions possibles sont initialisées et ensuite la version souhaitée peut être activée (nous utilisons PHP 7.3 ici) :
 
 ```shell
 sudo dnf module list php
 sudo dnf module install php:7.4 -y
 ```
 
-The PHP packages are then installed:
+Les paquets PHP sont ensuite installés :
 
 ```shell
 sudo dnf install php php-bcmath php-cli php-common php-curl php-gd php-json php-ldap php-mysql php-pgsql php-soap php-xml php-zip
 ```
 
-Furthermore, RHEL only offers outdated distribution packages for MariaDB. Therefore we use the official third party repository of MariaDB:
+De plus, RHEL ne propose que des paquets de distribution obsolètes pour MariaDB. Par conséquent, nous utilisons le dépôt tiers officiel de MariaDB :
 
 ```shell
 sudo nano /etc/yum.repos.d/MariaDB.repo
 ```
 
-Die Datei erhält folgenden Inhalt:
+Le fichier contient le contenu suivant :
 
 ```shell
 # MariaDB 10.5 RHEL repository list
@@ -83,14 +83,14 @@ gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
 
-After that the packages are installed (Note: MariaDB needs the additional package boost-program-options for a clean installation):
+Après l'installation des paquets (Remarque : MariaDB nécessite le paquet supplémentaire boost-program-options pour une installation propre) :
 
 ```shell
 sudo dnf install boost-program-options
 sudo dnf install MariaDB-server MariaDB-client --disablerepo=AppStream
 ```
 
-These commands are required to start the Apache web server and MariaDB at boot time:
+Ces commandes sont nécessaires pour démarrer le serveur web Apache et MariaDB au démarrage :
 
 ```shell
 sudo systemctl enable httpd.service
@@ -98,7 +98,7 @@ sudo systemctl enable mariadb.service
 sudo systemctl enable memcached.service
 ```
 
-Both services are then started:
+Les deux services sont ensuite démarrés :
 
 ```shell
 sudo systemctl start httpd.service
@@ -106,7 +106,7 @@ sudo systemctl start mariadb.service
 sudo systemctl start memcached.service
 ```
 
-Furthermore, the default port 80 of HTTP is allowed through the firewall. This must be restarted after the adjustment:
+De plus, le port par défaut 80 de HTTP est autorisé à travers le pare-feu. Celui-ci doit être redémarré après l'ajustement :
 
 ```shell
 sudo firewall-cmd --permanent --add-service=http
@@ -115,17 +115,17 @@ sudo systemctl restart firewalld.service
 
 ## Configuration
 
-The installed packages for Apache Webserver, PHP and MariaDB already come with configuration files. It is recommended to store different settings in separate files instead of adapting the existing configuration files. Each time you upgrade the package, the different settings will be changed or overwritten. The settings of the standard configuration will be supplemented or overwritten by the user-defined ones.
+Les paquets installés pour le serveur web Apache, PHP et MariaDB sont déjà livrés avec des fichiers de configuration. Il est recommandé de stocker différents paramètres dans des fichiers séparés au lieu d'adapter les fichiers de configuration existants. Chaque fois que vous mettez à jour le paquet, les différents paramètres seront modifiés ou écrasés. Les paramètres de la configuration standard seront complétés ou écrasés par ceux définis par l'utilisateur.
 
-### PHP
+### PHP { /*examples*/ }
 
-First a new file is created and filled with the necessary settings:
+Tout d'abord, un nouveau fichier est créé et rempli avec les paramètres nécessaires :
 
 ```shell
 sudo nano /etc/php.d/i-doit.ini
 ```
 
-This file receives the following content:
+Ce fichier reçoit le contenu suivant :
 
 ```shell
 allow_url_fopen = Yes
@@ -153,25 +153,25 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 
-The value (in seconds) of `session.gc_maxlifetime` should be greater than or equal to the `session timeout` in the i-doit system settings.
+La valeur (en secondes) de `session.gc_maxlifetime` doit être supérieure ou égale à la `durée de la session` dans les paramètres du système i-doit.
 
-The parameter `date.timezone` should be adjusted to the local time zone (see [list of supported time zones](http://php.net/manual/en/timezones.php)).
+Le paramètre `date.timezone` doit être ajusté au fuseau horaire local (voir [liste des fuseaux horaires supportés](http://php.net/manual/en/timezones.php)).
 
-The Apache Web server is then restarted:
+Ensuite, le serveur Web Apache est redémarré :
 
 ```shell
 sudo systemctl restart httpd.service
 ```
 
-### Apache web server
+### Serveur web Apache { /*examples*/ }
 
-The default vhost is retained and added. A new file is created and edited:
+Le vhost par défaut est conservé et ajouté. Un nouveau fichier est créé et édité :
 
 ```shell
 sudo nano /etc/httpd/conf.d/i-doit.conf
 ```
 
-In this file the supplementary one is stored:
+Dans ce fichier, le complémentaire est stocké :
 
 ```shell
 DirectoryIndex index.php
@@ -181,15 +181,15 @@ DocumentRoot /var/www/html/
 </Directory>
 ```
 
-i-doit provides different Apache settings in files named ==.htaccess==. In order for these settings to be taken into account, the setting ==AllowOverride All is required==.
+i-doit fournit différents paramètres Apache dans des fichiers nommés ==.htaccess==. Afin que ces paramètres soient pris en compte, le paramètre ==AllowOverride All est requis==.
 
-The next step is to restart the Apache web server:
+La prochaine étape consiste à redémarrer le serveur web Apache :
 
 ```shell
 sudo systemctl restart httpd.service
 ```
 
-For Apache to have read and write permissions in the future installation directory of i-doit, this must be allowed by ==SELinux==:
+Pour qu'Apache ait des autorisations de lecture et d'écriture dans le répertoire d'installation future de i-doit, cela doit être autorisé par ==SELinux== :
 
 ```shell
 sudo chown apache:apache -R /var/www/html
@@ -199,19 +199,19 @@ sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 
 ### MariaDB
 
-In order for MariaDB to perform well and run safely, there are a few steps that need to be done meticulously. This starts with a secure installation. The recommendations should be followed. The ==root== user should be given a secure password:
+Pour que MariaDB fonctionne bien et fonctionne en toute sécurité, quelques étapes doivent être effectuées méticuleusement. Cela commence par une installation sécurisée. Les recommandations doivent être suivies. L'utilisateur ==root== doit se voir attribuer un mot de passe sécurisé :
 
 ```shell
 mysql_secure_installation
 ```
 
-To allow i-doit to use the ==root== user during setup, call the shell of MariaDB:
+Pour permettre à i-doit d'utiliser l'utilisateur ==root== lors de la configuration, appelez l'interpréteur de commandes de MariaDB :
 
 ```shell
 sudo mysql -uroot
 ```
 
-The following SQL statements are now executed in the MariaDB shell
+Les instructions SQL suivantes sont maintenant exécutées dans l'interpréteur de commandes MariaDB
 
 ```shell
 ALTER USER root@localhost IDENTIFIED VIA mysql_native_password;
@@ -219,7 +219,7 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-MariaDB is then stopped. It is important to move unneeded files (otherwise you risk a significant performance loss):
+MariaDB est ensuite arrêté. Il est important de déplacer les fichiers inutiles (sinon vous risquez une perte de performance significative) :```
 
 ```shell
 mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
@@ -227,13 +227,13 @@ sudo systemctl stop mariadb.service
 sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
 
-A new file is created for the different configuration settings:
+Un nouveau fichier est créé pour les différents paramètres de configuration :
 
 ```shell
 sudo nano /etc/my.cnf.d/99-i-doit.cnf
 ```
 
-This file contains the new configuration settings. For optimal performance, these settings should be adapted to the (virtual) hardware:
+Ce fichier contient les nouveaux paramètres de configuration. Pour des performances optimales, ces paramètres doivent être adaptés au matériel (virtuel) :
 
 ```shell
 [mysqld]
@@ -285,14 +285,15 @@ innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
 
-Finally, MariaDB is started:
+Enfin, MariaDB est démarré :
 
 ```shell
 sudo systemctl start mariadb.service
 ```
 
-## Next Step
+## Étape suivante
 
-The operating system is now prepared so that i-doit can be installed:
+Le système d'exploitation est maintenant prêt pour l'installation de i-doit :
 
-[Go to Setup ...]()
+[Aller à la configuration ...]()
+```

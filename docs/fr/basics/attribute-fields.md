@@ -1,150 +1,153 @@
-# Attribute Fields
+# Champs d'attribut
 
-Now that you are familiar with the [structure of the IT documentation](structure-of-the-it-documentation.md) let's take a closer look at the attribute fields which i-doit provides in the Web GUI.
+Maintenant que vous êtes familiarisé avec la [structure de la documentation IT](structure-of-the-it-documentation.md), examinons de plus près les champs d'attribut fournis par i-doit dans l'interface Web.
 
-## Overview
+## Aperçu
 
-Each attribute which can be edited is represented by a form field. This applies both to the standard categories and the [custom categories](./custom-categories.md). Almost every attribute field can be [declared as mandatory field and/or assigned with validation options](../efficient-documentation/validation-and-mandatory-fields.md).
+Chaque attribut pouvant être édité est représenté par un champ de formulaire. Cela s'applique aussi bien aux catégories standard qu'aux [catégories personnalisées](./custom-categories.md). Presque chaque champ d'attribut peut être [déclaré comme champ obligatoire et/ou associé à des options de validation](../efficient-documentation/validation-and-mandatory-fields.md).
 
-[![Overview](../assets/images/en/basics/attribute-fields/1-af.png)](../assets/images/en/basics/attribute-fields/1-af.png)
+[![Aperçu](../assets/images/en/basics/attribute-fields/1-af.png)](../assets/images/en/basics/attribute-fields/1-af.png)
 
-Attributes which can't be edited either have no attribute field in the editing view or they only have a field with a read-only option.<br>
-An example for an attribute which was created dynamically without an attribute field is ==Hostname(FQDN)== in the ==Host address== category. ==Hostname(FQDN)== is comprised of the attributes ==Host name== and ==DNS Domain==.
+Les attributs qui ne peuvent pas être édités n'ont pas de champ d'attribut dans la vue d'édition ou ils ont uniquement un champ avec une option en lecture seule.<br>
+Un exemple d'un attribut créé dynamiquement sans champ d'attribut est ==Nom d'hôte (FQDN)== dans la catégorie ==Adresse de l'hôte==. ==Nom d'hôte (FQDN)== est composé des attributs ==Nom de l'hôte== et ==Domaine DNS==.
+
+{/*examples*/}
 
 [![FQDN](../assets/images/en/basics/attribute-fields/2-af.png)](../assets/images/en/basics/attribute-fields/2-af.png)
 
-An example for a read-only attribute field is the ==Object ID== which is generated automatically.
+Un exemple de champ d'attribut en lecture seule est l'==Identifiant d'objet== qui est généré automatiquement.
 
-[![Object ID](../assets/images/en/basics/attribute-fields/3-af.png)](../assets/images/en/basics/attribute-fields/3-af.png)
+[![Identifiant d'objet](../assets/images/en/basics/attribute-fields/3-af.png)](../assets/images/en/basics/attribute-fields/3-af.png)
 
-## Text fields (Single-line)
+## Champs de texte (Une ligne)
 
-You can enter any desired text in single-line text fields. The character length is limited to 255 characters. An example is the ==Serial number== in the ==Model== category.
+Vous pouvez saisir n'importe quel texte souhaité dans les champs de texte à une seule ligne. La longueur des caractères est limitée à 255 caractères. Un exemple est le ==Numéro de série== dans la catégorie ==Modèle==.
 
-[![Single-line Text Fields](../assets/images/en/basics/attribute-fields/4-af.png)](../assets/images/en/basics/attribute-fields/4-af.png)
+[![Champs de texte à une ligne](../assets/images/en/basics/attribute-fields/4-af.png)](../assets/images/en/basics/attribute-fields/4-af.png)
 
-## HTML Editor/ Multiline text fields
+## Éditeur HTML/ Champs de texte multilignes
 
-Multiline text fields can contain any desired text in several lines. The character length is limited to approximately 65000 characters. From a simple text field you can switch to an HTML editor to format your text.<br>
-You can [activate the ==WYSIWYG== Editor in the Administration](../system-administration/administration/tenant-management/settings-for-tenant.md#cmdb), WYSIWYG means "What You See Is What You Get".<br>
-The HTML-Editor also has other formatting options which you can activate via ==[Activate all WYSIWYG Editor functions](../system-administration/administration/tenant-management/settings-for-tenant.md#cmdb)==.<br>
-Almost every category entry has the Description attribute at the end which is as a standard presented as HTML editor.
+Les champs de texte multilignes peuvent contenir n'importe quel texte souhaité sur plusieurs lignes. La longueur des caractères est limitée à environ 65000 caractères. À partir d'un champ de texte simple, vous pouvez passer à un éditeur HTML pour formater votre texte.<br>
+Vous pouvez [activer l'Éditeur ==WYSIWYG== dans l'Administration](../system-administration/administration/tenant-management/settings-for-tenant.md#cmdb), WYSIWYG signifie "What You See Is What You Get".<br>
+L'éditeur HTML propose également d'autres options de formatage que vous pouvez activer via ==[Activer toutes les fonctions de l'éditeur WYSIWYG](../system-administration/administration/tenant-management/settings-for-tenant.md#cmdb)==.<br>
+Presque chaque entrée de catégorie a l'attribut Description à la fin qui est présenté par défaut comme un éditeur HTML.
 
-[![HTML Editor Multiline Text Fields](../assets/images/en/basics/attribute-fields/5-af.png)](../assets/images/en/basics/attribute-fields/5-af.png)
 
-## Dialog field (Drop Down)
+[![Champs de texte multilignes de l'éditeur HTML](../assets/images/en/basics/attribute-fields/5-af.png)](../assets/images/en/basics/attribute-fields/5-af.png)
 
-The Dialog field is a drop-down selection field. The values from which you can choose one single value are pre-set and usually you can't edit them. If you don't want to select any of the given values, you can choose the dash (==-==), if possible.
+## Champ de dialogue (Menu déroulant)
 
-In our example you can see the [==Condition==](./life-and-documentation-cycle.md) in the ==General== category.
+Le champ de dialogue est un champ de sélection déroulant. Les valeurs parmi lesquelles vous pouvez choisir une seule valeur sont prédéfinies et vous ne pouvez généralement pas les modifier. Si vous ne souhaitez pas sélectionner l'une des valeurs données, vous pouvez choisir le tiret (==-==), si possible.
 
-[![Dialog Field](../assets/images/en/basics/attribute-fields/6-af.png)](../assets/images/en/basics/attribute-fields/6-af.png)
+Dans notre exemple, vous pouvez voir la [==Condition==](./life-and-documentation-cycle.md) dans la catégorie ==Général==.
 
-An example for an attribute which can be edited centrally is the [==CMDB status==](./life-and-documentation-cycle.md) in the ==General== category.
+[![Champ de dialogue](../assets/images/en/basics/attribute-fields/6-af.png)](../assets/images/en/basics/attribute-fields/6-af.png)
 
-## Dialog plus field (extended drop down)
+Un exemple d'attribut pouvant être modifié de manière centralisée est le [==Statut CMDB==](./life-and-documentation-cycle.md) dans la catégorie ==Général==.
 
-The dialog plus field is similar to the dialog field. In addition, you can set further values. For this purpose, you can either use the icon to the right of the attribute field or the [Dialog-Admin](./dialog-admin.md).
+## Champ de dialogue plus (Menu déroulant étendu)
 
-Examples are the attributes ==Category== and ==Purpose== in the ==General== category.
+Le champ de dialogue plus est similaire au champ de dialogue. De plus, vous pouvez définir d'autres valeurs. Pour ce faire, vous pouvez utiliser soit l'icône à droite du champ d'attribut, soit le [Dialog-Admin](./dialog-admin.md).
 
-[![attributes](../assets/images/en/basics/attribute-fields/7-af.png)](../assets/images/en/basics/attribute-fields/7-af.png)
+Exemples sont les attributs ==Catégorie== et ==Objectif== dans la catégorie ==Général==.
 
-When you click on the icon, the ==List browser== opens with which you can add further values or change existing values.
+[![attributs](../assets/images/en/basics/attribute-fields/7-af.png)](../assets/images/en/basics/attribute-fields/7-af.png)
 
-[![List browser](../assets/images/en/basics/attribute-fields/8-af.png)](../assets/images/en/basics/attribute-fields/8-af.png)
+Lorsque vous cliquez sur l'icône, le ==Navigateur de liste== s'ouvre avec lequel vous pouvez ajouter d'autres valeurs ou modifier les valeurs existantes.
 
-!!! info "Please note"
+[![Navigateur de liste](../assets/images/en/basics/attribute-fields/8-af.png)](../assets/images/en/basics/attribute-fields/8-af.png)
 
-    You can only delete data via the Dialog-Admin. Only administrators should use this function as removed field values are deleted irrevocably from all entries.
+!!! info "Veuillez noter"
 
-## Multi-Dialog-Plus field (multiselection)
+    Vous ne pouvez supprimer des données que via le Dialog-Admin. Seuls les administrateurs doivent utiliser cette fonction car les valeurs de champ supprimées sont supprimées de manière irrévocable de toutes les entrées.
 
-You can only select one value with the above mentioned selection fields. But if you want to select more values at the same time, you can use the multi-dialog-plus field. You can add further values with help of a drop-down menu. In some cases there are additional buttons with which you can select/ deselect all values or reverse your selection.
+## Champ Multi-Dialog-Plus (multisélection)
 
-The example illustrates the ==DNS Domain== attribute in the ==Host address== category.
+Vous ne pouvez sélectionner qu'une seule valeur avec les champs de sélection mentionnés ci-dessus. Mais si vous souhaitez sélectionner plusieurs valeurs en même temps, vous pouvez utiliser le champ multi-dialog-plus. Vous pouvez ajouter d'autres valeurs à l'aide d'un menu déroulant. Dans certains cas, il y a des boutons supplémentaires avec lesquels vous pouvez sélectionner/désélectionner toutes les valeurs ou inverser votre sélection.
 
-[![Multiselection](../assets/images/en/basics/attribute-fields/9-af.png)](../assets/images/en/basics/attribute-fields/9-af.png)
+L'exemple illustre l'attribut ==Domaine DNS== dans la catégorie ==Adresse de l'hôte==.
 
-## Date field
+[![Sélection multiple](../assets/images/en/basics/attribute-fields/9-af.png)](../assets/images/en/basics/attribute-fields/9-af.png)
 
-You can use the date field for date entries. When you click on the single-line text field, a calendar opens. With a click on the desired date, the date is copied into the text field. You can also enter the date manually in the format `dd.mm.yyyy`.
+## Champ de date
 
-Our example shows the ==Date of Invoice== attribute in the ==Acccounting== category.
+Vous pouvez utiliser le champ de date pour les entrées de date. Lorsque vous cliquez sur le champ de texte à ligne unique, un calendrier s'ouvre. En cliquant sur la date souhaitée, la date est copiée dans le champ de texte. Vous pouvez également saisir la date manuellement au format `jj.mm.aaaa`.
 
-[![Date Field](../assets/images/en/basics/attribute-fields/10-af.png)](../assets/images/en/basics/attribute-fields/10-af.png)
+Notre exemple montre l'attribut ==Date de la facture== dans la catégorie ==Comptabilité==.
 
-## Units and Intervals
+[![Champ de date](../assets/images/en/basics/attribute-fields/10-af.png)](../assets/images/en/basics/attribute-fields/10-af.png)
 
-Beside the attribute fields, there is a drop-down field with which you can determine values in order to document units or intervals. These values can be time units, measurement units, weight units, time periods etc.
+## Unités et Intervales
 
-As an example you can see the ==Period of warranty== in the ==Acccounting== category.
+En plus des champs d'attributs, il y a un champ déroulant avec lequel vous pouvez déterminer des valeurs pour documenter des unités ou des intervalles. Ces valeurs peuvent être des unités de temps, des unités de mesure, des unités de poids, des périodes de temps, etc.
 
-[![Units and Intervals](../assets/images/en/basics/attribute-fields/11-af.png)](../assets/images/en/basics/attribute-fields/11-af.png)
+À titre d'exemple, vous pouvez voir la ==Période de garantie== dans la catégorie ==Comptabilité==.
 
-## Costs
+[![Unités et Intervales](../assets/images/en/basics/attribute-fields/11-af.png)](../assets/images/en/basics/attribute-fields/11-af.png)
 
-Costs are documented as decimal numbers (or simplified as real numbers without decimal digits). You may use decimal points and commas as separation characters. Additionally, the attribute field shows the configured currency. You can [configure the currency in the Administration](../system-administration/administration/user-settings/data-format.md).
+## Coûts {/examples/}
 
-As an example you can see the ==Investment costs== attribute in the ==Acccounting== category.
+Les coûts sont documentés sous forme de nombres décimaux (ou simplifiés en nombres réels sans chiffres décimaux). Vous pouvez utiliser des points décimaux et des virgules comme caractères de séparation. De plus, le champ d'attribut indique la devise configurée. Vous pouvez [configurer la devise dans l'Administration](../system-administration/administration/user-settings/data-format.md).
 
-[![Costs](../assets/images/en/basics/attribute-fields/12-af.png)](../assets/images/en/basics/attribute-fields/12-af.png)
+À titre d'exemple, vous pouvez voir l'attribut ==Coûts d'investissement== dans la catégorie ==Comptabilité==.
 
-## Links
+[![Coûts](../assets/images/en/basics/attribute-fields/12-af.png)](../assets/images/en/basics/attribute-fields/12-af.png)
 
-Some single-line text fields are intended for entering URLs. Such an entry is used to generate a link on which the user can click to open it.
+## Liens {/examples/}
 
-For example, you can find this kind of attribute field in the ==Access== category.
+Certains champs de texte à une seule ligne sont destinés à saisir des URL. Une telle entrée est utilisée pour générer un lien sur lequel l'utilisateur peut cliquer pour l'ouvrir.
 
-[![Links](../assets/images/en/basics/attribute-fields/13-af.png)](../assets/images/en/basics/attribute-fields/13-af.png)
+Par exemple, vous pouvez trouver ce type de champ d'attribut dans la catégorie ==Accès==.
 
-## Object relationships
+[![Liens](../assets/images/en/basics/attribute-fields/13-af.png)](../assets/images/en/basics/attribute-fields/13-af.png)
 
-To create a relationship between two or more objects you can use the object browser for general cases; for special cases there are other browsers. The single-line text field is supplemented by two icons to the right.
+## Relations d'objets {/examples/}
 
-When you can create a one-to-one relationship between two objects, you can write into the text field. Word suggestions are made during typing. When you can create a one-to-n relationsship, the text field is in read-only mode.
+Pour créer une relation entre deux objets ou plus, vous pouvez utiliser le navigateur d'objets pour les cas généraux ; pour les cas spéciaux, il existe d'autres navigateurs. Le champ de texte à une seule ligne est complété par deux icônes à droite.
 
-With a click on the magnifier icon the right browser opens. The icon beside the magnifier icon, a paper clip with a blocking signal, dissolves existing or recently selected relationships.
+Lorsque vous pouvez créer une relation un-à-un entre deux objets, vous pouvez écrire dans le champ de texte. Des suggestions de mots sont proposées pendant la saisie. Lorsque vous pouvez créer une relation un-à-n, le champ de texte est en mode lecture seule.
 
-[![Object Relationships](../assets/images/en/basics/attribute-fields/14-af.png)](../assets/images/en/basics/attribute-fields/14-af.png)
+En cliquant sur l'icône de la loupe, le bon navigateur s'ouvre. L'icône à côté de l'icône de la loupe, une trombone avec un signal de blocage, dissout les relations existantes ou récemment sélectionnées.
 
-### Object browser
+[![Relations d'objets](../assets/images/en/basics/attribute-fields/14-af.png)](../assets/images/en/basics/attribute-fields/14-af.png)
 
-The object browser has a unique setup, depending on which relationship type is to be documented. For this reason, not all functions which are described in the follwoing text are available at all times. Often the selection of filters is restricted, because, for example, you are only allowed to choose objects of certain object types.
+### Navigateur d'objets
 
-When you select the referenced object via radio buttons, you can only make a single choice. But if the [![](../assets/images/en/basics/attribute-fields/15-af.png)](../assets/images/en/basics/attribute-fields/15-af.png) add buttons are available, multiple choice is possible.
+Le navigateur d'objets a une configuration unique, en fonction du type de relation à documenter. Pour cette raison, toutes les fonctions décrites dans le texte suivant ne sont pas toujours disponibles. Souvent, la sélection des filtres est restreinte, car, par exemple, vous n'êtes autorisé à choisir que des objets de certains types d'objets.
 
-There are several tabs in the upper part of the window:
+Lorsque vous sélectionnez l'objet référencé via des boutons radio, vous ne pouvez faire qu'un seul choix. Mais si les boutons d'ajout [![](../assets/images/en/basics/attribute-fields/15-af.png)](../assets/images/en/basics/attribute-fields/15-af.png) sont disponibles, le choix multiple est possible.
 
-- **Object View**:<br> The object view is sorted by filters. If the right object is missing, you can create it with the **Create new object** button. Filters:<br>
-    - **by object type**:<br> First you select the object type, then the object or objects.
-    - **by object groups**:<br> If you use the object type **object-group**, objects can be listed per **object-group**.
-    - **by person groups**:<br> All **persons** are listed per **person group**.
-    - **by relations**:<br> All relationship objects are listed, whereby you initially have to choose the type of relationship.
-    - **by date**:<br> Objects are sorted by date. You have the following options: **newly created, newly updated, created this month, created last month**.
-- **Location view**:<br> The location in the tree with all its paths is created, from here you can select the right object.
-- **Search**:<br> Here you can [search](../efficient-documentation/search.md) for objects by means of object titles.
-- **Reports**:<br> Objects are listed with help of already created [reports](../evaluation/report-manager.md).
-- **Selected objects**:<br> In this tab all selected objects are displayed. Via the button **Create new object-group from selection** you can create an object of the type object group which is then filled with your selection of objects.
+Il y a plusieurs onglets dans la partie supérieure de la fenêtre :
 
-All current modifications are listed in the log.
+- **Vue d'objet**:<br> La vue d'objet est triée par filtres. Si le bon objet est manquant, vous pouvez le créer avec le bouton **Créer un nouvel objet**. Filtres :<br>
+    - **par type d'objet**:<br> Vous sélectionnez d'abord le type d'objet, puis l'objet ou les objets.
+    - **par groupes d'objets**:<br> Si vous utilisez le type d'objet **groupe d'objets**, les objets peuvent être répertoriés par **groupe d'objets**.
+    - **par groupes de personnes**:<br> Toutes les **personnes** sont répertoriées par **groupe de personnes**.
+    - **par relations**:<br> Tous les objets de relation sont répertoriés, vous devez d'abord choisir le type de relation.
+    - **par date**:<br> Les objets sont triés par date. Vous avez les options suivantes : **nouvellement créé, nouvellement mis à jour, créé ce mois-ci, créé le mois dernier**.
+- **Vue de l'emplacement**:<br> L'emplacement dans l'arborescence avec tous ses chemins est créé, à partir de là vous pouvez sélectionner le bon objet.
+- **Recherche**:<br> Ici vous pouvez [rechercher](../efficient-documentation/search.md) des objets par le biais des titres d'objets.
+- **Rapports**:<br> Les objets sont répertoriés à l'aide des rapports déjà créés [rapports](../evaluation/report-manager.md).
+- **Objets sélectionnés**:<br> Dans cet onglet, tous les objets sélectionnés sont affichés. Via le bouton **Créer un nouveau groupe d'objets à partir de la sélection**, vous pouvez créer un objet du type groupe d'objets qui est ensuite rempli avec votre sélection d'objets.
 
-As an example, you can see the ==Contact Browser== from the ==Accounting== category with the ==Purchased at== attribute.
+Toutes les modifications actuelles sont répertoriées dans le journal.
 
-[![Contact Browser](../assets/images/en/basics/attribute-fields/16-af.png)](../assets/images/en/basics/attribute-fields/16-af.png)
+À titre d'exemple, vous pouvez voir le ==Navigateur de contacts== de la catégorie ==Comptabilité== avec l'attribut ==Acheté à==.
 
-### Location selection
+[![Navigateur de contacts](../assets/images/en/basics/attribute-fields/16-af.png)](../assets/images/en/basics/attribute-fields/16-af.png)
 
-This browser builds a one-to-one relationship of the type ==Location== with an object which is defined as location. With a click on the magnifying glass, the ==Location selection== is activated. It is similar to the ==Location view== (see above). The browser can be found in the ==Location== category.
+### Sélection de l'emplacement
 
-[![Location Selection](../assets/images/en/basics/attribute-fields/17-af.png)](../assets/images/en/basics/attribute-fields/17-af.png)
+Ce navigateur crée une relation de type un à un avec un objet de type ==Emplacement== qui est défini comme un emplacement. En cliquant sur la loupe, la ==Sélection de l'emplacement== est activée. Elle est similaire à la ==Vue de l'emplacement== (voir ci-dessus). Le navigateur peut être trouvé dans la catégorie ==Emplacement==.
 
-### Browser with Subselection
+[![Sélection de l'emplacement](../assets/images/en/basics/attribute-fields/17-af.png)](../assets/images/en/basics/attribute-fields/17-af.png)
 
-Sometimes you not only have to select the object but also an attribute of this object. Examples are the ==Connected with== attribute in the ==Port (Network)== category where you have to choose an input or output of the ==Connectors (Cabling)== category and the possibility to chose software relations in the ==Service Components== category.
+### Navigateur avec sous-sélection
 
-[![Browser with Subselection](../assets/images/en/basics/attribute-fields/18-af.png)](../assets/images/en/basics/attribute-fields/18-af.png)
+Parfois, vous devez non seulement sélectionner l'objet mais aussi un attribut de cet objet. Des exemples sont l'attribut ==Connecté avec== dans la catégorie ==Port (Réseau)== où vous devez choisir une entrée ou une sortie de la catégorie ==Connecteurs (Câblage)== et la possibilité de choisir des relations logicielles dans la catégorie ==Composants de service==.
 
-!!! info "Tip"
+[![Navigateur avec sous-sélection](../assets/images/en/basics/attribute-fields/18-af.png)](../assets/images/en/basics/attribute-fields/18-af.png)
 
-    When the browser is divided and therefore has a subselection and radio buttons, you have to make a selection in both columns. Take for example the wiring of two devices: if you select only the connected object but not the corresponding connection in the object browser, your entry won't be the saved.
+!!! info "Conseil"
+
+    Lorsque le navigateur est divisé et comporte donc une sous-sélection et des boutons radio, vous devez effectuer une sélection dans les deux colonnes. Prenons par exemple le câblage de deux appareils : si vous sélectionnez uniquement l'objet connecté mais pas la connexion correspondante dans le navigateur d'objets, votre saisie ne sera pas enregistrée.

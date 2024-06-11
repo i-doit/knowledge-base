@@ -1,3 +1,3 @@
-# i-diary: Install
+# i-diary: Installation
 
-If you want to install i-diary, you can download it from our [customer support center](https://portal.i-doit.com).
+Si vous souhaitez installer i-diary, vous pouvez le télécharger depuis notre [centre de support client](https://portal.i-doit.com). {/examples/}

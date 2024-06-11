@@ -1,98 +1,100 @@
-# Logbook
+# Journal de bord {/examples/}
 
-Each change to the [IT documentation](../glossary.md) is noted in the logbook by i-doit. This way it is easy to keep track of the [lifecycle of the IT documentation](./life-and-documentation-cycle.md).
+Chaque modification apportée à la [documentation informatique](../glossary.md) est notée dans le journal de bord par i-doit. De cette manière, il est facile de suivre le [cycle de vie de la documentation informatique](./life-and-documentation-cycle.md).
 
-## Global Logbook
+## Journal de bord global {/examples/}
 
-The logbook in which all changes are incorporated is located at **Extras → CMDB → Logbook**. There you can filter the entries by various parameters. If possible, an entry also contains the specific changes (Which value was changed and in what respects?).
+Le journal de bord dans lequel toutes les modifications sont intégrées se trouve à **Extras → CMDB → Journal de bord**. Vous pouvez y filtrer les entrées selon divers paramètres. Si possible, une entrée contient également les modifications spécifiques (Quelle valeur a été modifiée et en quoi?).
 
-[![Global Logbook](../assets/images/en/basics/logbook/1-lb.png)](../assets/images/en/basics/logbook/1-lb.png)
+[![Journal de bord global](../assets/images/en/basics/logbook/1-lb.png)](../assets/images/en/basics/logbook/1-lb.png)
 
-The latest change can be tracked in the bottom area of each page.
+La dernière modification peut être suivie dans la zone inférieure de chaque page.
 
-[![latest change](../assets/images/en/basics/logbook/2-lb.png)](../assets/images/en/basics/logbook/2-lb.png)
+[![dernière modification](../assets/images/en/basics/logbook/2-lb.png)](../assets/images/en/basics/logbook/2-lb.png)
 
-## Logbook per Object
+## Journal de bord par objet {/examples/}
 
-The logbook can not only be displayed as global but you can also limit the view to a single [object](../glossary.md). The [category](../glossary.md) **Logbook** is assigned to each [object type](../glossary.md) in a fixed way. The logbook can be accessed in the **Object view** via the book-icon above the category tree.
+Le journal de bord peut non seulement être affiché de manière globale, mais vous pouvez également limiter la vue à un seul [objet](../glossary.md). La [catégorie](../glossary.md) **Journal de bord** est attribuée à chaque [type d'objet](../glossary.md) de manière fixe. Le journal de bord peut être consulté dans la **Vue objet** via l'icône de livre située au-dessus de l'arborescence des catégories.
 
-[![Logbook per Object](../assets/images/en/basics/logbook/3-lb.png)](../assets/images/en/basics/logbook/3-lb.png)
+[![Journal par objet](../assets/images/en/basics/logbook/3-lb.png)](../assets/images/en/basics/logbook/3-lb.png)
 
-The filter functions and level of detail correspond to those of the global logbook.
+Les fonctions de filtre et le niveau de détail correspondent à ceux du journal global.
 
-[![filter functions](../assets/images/en/basics/logbook/4-lb.png)](../assets/images/en/basics/logbook/4-lb.png)
+[![fonctions de filtre](../assets/images/en/basics/logbook/4-lb.png)](../assets/images/en/basics/logbook/4-lb.png)
 
-## Logbook per Service
+## Journal par service
 
-For each service that has been modelled in i-doit there is a logbook, which contains the changes to all service components (or sub-services). The category is called **Service Logbook** and can be added to those object types which represent these services via the **Service** category.
+Pour chaque service modélisé dans i-doit, il existe un journal, qui contient les modifications apportées à tous les composants du service (ou sous-services). La catégorie s'appelle **Journal de service** et peut être ajoutée à ces types d'objets qui représentent ces services via la catégorie **Service**.
 
-[![Logbook per Service](../assets/images/en/basics/logbook/5-lb.png)](../assets/images/en/basics/logbook/5-lb.png)
+[![Journal par service](../assets/images/en/basics/logbook/5-lb.png)](../assets/images/en/basics/logbook/5-lb.png)
 
-## Configuration of the Logbook
+## Configuration du journal
 
-You can find the configuration of the logbook at **Extras → CMDB → Logbook → Logbook configuration**.
+Vous pouvez trouver la configuration du journal dans **Extras → CMDB → Journal → Configuration du journal**.
 
-[![Configuration of the Logbook](../assets/images/en/basics/logbook/6-lb.png)](../assets/images/en/basics/logbook/6-lb.png)
+[![Configuration du journal](../assets/images/en/basics/logbook/6-lb.png)](../assets/images/en/basics/logbook/6-lb.png)
 
-Changes do **not** affect existing entries.
+Les modifications ne **n'affectent pas** les entrées existantes.
 
-The **Username** that is shown in each entry can be changed in the configuration. The [object title](../glossary.md) of the person object is considered as default; in most cases it consists of first name and surname.
+Le **Nom d'utilisateur** qui est affiché dans chaque entrée peut être modifié dans la configuration. Le titre de l'[objet](../glossary.md) de la personne est considéré par défaut ; dans la plupart des cas, il se compose du prénom et du nom de famille.
 
-!!! success "Anonymization"
-    Is the **Username** changed to a fixed value, for example to "Anonymous", the logbook is anonymized. The result is that you can't retrace who made which changes anymore.
+!!! success "Anonymisation"
+    Si le **Nom d'utilisateur** est changé pour une valeur fixe, par exemple "Anonyme", le journal est anonymisé. Le résultat est que vous ne pouvez plus retracer qui a effectué quelles modifications.
 
-The option for the **Maximum amount of combined detailed changes** causes simultaneous changes to be summarized. As a result the level of detail is decreased but on the other hand this effects an increase of performance for imports.
+L'option pour le **Nombre maximum de modifications détaillées combinées** entraîne la synthèse des modifications simultanées. Cela entraîne une diminution du niveau de détail mais d'un autre côté, cela entraîne une augmentation des performances pour les imports.
 
-### Delete Logbook entries from purged objects completely
+### Supprimer complètement les entrées du journal des objets purgés
 
-This configuration option for the logbook can be found under **Administration → Tenant management → Settings for Tenant → Logbook → Delete Logbook entries from purged objects completely**.
+Cette option de configuration pour le journal peut être trouvée sous **Administration → Gestion du locataire → Paramètres du locataire → Journal → Supprimer complètement les entrées du journal des objets purgés**.
 
 [![logbook-entries-purge](../assets/images/en/basics/logbook/12-lb.png)](../assets/images/en/basics/logbook/12-lb.png)
 
-This setting is set to **No** by default. If you set this setting to **Yes**, the logbook entry of the object will also be deleted after purging the object itself.
+Ce paramètre est défini par défaut sur **Non**. Si vous définissez ce paramètre sur **Oui**, l'entrée du journal de l'objet sera également supprimée après la purge de l'objet lui-même.
 
-## Activation/ Deactivation of the Logbook
+## Activation/ Désactivation du Journal
 
-You can activate/ deactivate the logbook at **Administration → Tenant management → Settings for tenant → Logbook → Log detailed CMDB changes**.
+Vous pouvez activer/désactiver le journal dans **Administration → Gestion du locataire → Paramètres du locataire → Journal → Journal des modifications détaillées du CMDB**. {/examples}
 
-## Custom Entries
+## Entrées Personnalisées
 
-You can generate a new entry in the logbook for each object. Activate the **Logbook** category within the object (see above). Then you can display the form for a new entry via the **New** button. You can set  **Alert level**, **Message** and **Description** according to your requirements. The entry appears in the logbook after clicking the **Save** button.
+Vous pouvez générer une nouvelle entrée dans le journal pour chaque objet. Activez la catégorie **Journal** dans l'objet (voir ci-dessus). Ensuite, vous pouvez afficher le formulaire pour une nouvelle entrée via le bouton **Nouveau**. Vous pouvez définir le **Niveau d'alerte**, le **Message** et la **Description** selon vos besoins. L'entrée apparaît dans le journal après avoir cliqué sur le bouton **Enregistrer**.
 
-[![Custom Entries](../assets/images/en/basics/logbook/7-lb.png)](../assets/images/en/basics/logbook/7-lb.png)
+[![Entrées Personnalisées](../assets/images/en/basics/logbook/7-lb.png)](../assets/images/en/basics/logbook/7-lb.png)
 
-## Entries from Third-Party Systems
+## Entrées des Systèmes Tiers
 
-The logbook accepts new entries from third-party systems, for example through [imports](../consolidate-data/index.md), [service desks](../evaluation/cmdb-explorer/index.md), [network monitoring](../automation-and-integration/network-monitoring/index.md) and the [API](../i-doit-pro-add-ons/api/index.md).
+Le journal accepte de nouvelles entrées des systèmes tiers, par exemple via [imports](../consolidate-data/index.md), [service desks](../evaluation/cmdb-explorer/index.md), [network monitoring](../automation-and-integration/network-monitoring/index.md) et l'[API](../i-doit-pro-add-ons/api/index.md). {/examples}
 
-## Archiving and Restoring Older Entries
+## Archivage et Restauration des Anciennes Entrées
 
-Whether older entries are to be archived or not can be configured via **Extras → CMDB → Logbook → Archive**. Here you need to state how old (in days) these entries have to be in order to be archived. This feature is helpful if the logbook is very big and the evaluation is impaired by long loading times. Archived entries are stored in a separate database table. This table is either created on a respective tenant database or on a third database instance.
+Que les anciennes entrées doivent être archivées ou non peut être configuré via **Extras → CMDB → Journal → Archiver**. Vous devez indiquer ici depuis combien de jours ces entrées doivent être pour être archivées. Cette fonctionnalité est utile si le journal est très volumineux et que l'évaluation est entravée par de longs temps de chargement. Les entrées archivées sont stockées dans une table de base de données distincte. Cette table est créée soit sur une base de données locataire respective, soit sur une troisième instance de base de données.
 
-[![Archiving and Restoring Older Entries](../assets/images/en/basics/logbook/8-lb.png)](../assets/images/en/basics/logbook/8-lb.png)
+[![Archiver et Restaurer les Anciennes Entrées](../assets/images/en/basics/logbook/8-lb.png)](../assets/images/en/basics/logbook/8-lb.png)
 
-Archiving is performed via the [i-doit Console](../i-doit-pro-add-ons/api/index.md). This step can therefore also be automated. A corresponding example of a call and a [list of parameters](../automation-and-integration/cli/console/options-and-parameters-cli.md) can be found in the corresponding article for the [logbook-archive](../automation-and-integration/cli/console/options-and-parameters-cli.md#logbook-archive) option.
+L'archivage est effectué via la [Console i-doit](../i-doit-pro-add-ons/api/index.md). Cette étape peut donc également être automatisée. Un exemple correspondant d'un appel et une [liste de paramètres](../automation-and-integration/cli/console/options-and-parameters-cli.md) peuvent être trouvés dans l'article correspondant pour l'option [logbook-archive](../automation-and-integration/cli/console/options-and-parameters-cli.md#logbook-archive).
 
-Example:
+Exemple:
 
 ```shell
 sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
 ```
 
-Archived entries can be restored for further evaluation. This item can be found under **Extras → CMDB → Logbook → Restore**.
+Les entrées archivées peuvent être restaurées pour une évaluation ultérieure. Cet élément peut être trouvé sous **Extras → CMDB → Logbook → Restaurer**.
 
-[![Archived entries](../assets/images/en/basics/logbook/9-lb.png)](../assets/images/en/basics/logbook/9-lb.png)
+[![Entrées archivées](../assets/images/en/basics/logbook/9-lb.png)](../assets/images/en/basics/logbook/9-lb.png)
 
-## Creation Date / Date of Change
+## Date de création / Date de modification
 
-Any changes to objects ([create, change, archive, delete, restore](./life-and-documentation-cycle.md)) not only cause an entry in the logbook but also causes changes to the [attributes](../glossary.md) **Creation date** and **Date of change** in the **General** category which is assigned to all object types.
+Toutes les modifications apportées aux objets ([créer, modifier, archiver, supprimer, restaurer](./life-and-documentation-cycle.md)) entraînent non seulement une entrée dans le journal, mais également des modifications des [attributs](../glossary.md) **Date de création** et **Date de modification** dans la catégorie **Général** qui est attribuée à tous les types d'objets.
 
-[![Creation Date](../assets/images/en/basics/logbook/10-lb.png)](../assets/images/en/basics/logbook/10-lb.png)
+[![Date de création](../assets/images/en/basics/logbook/10-lb.png)](../assets/images/en/basics/logbook/10-lb.png)
 
-The widget My last changed objects listing the latest changes to objects can be added to the [dashboard](./dashboard-and-widgets.md).
+Le widget Mes derniers objets modifiés affichant les dernières modifications apportées aux objets peut être ajouté au [tableau de bord](./dashboard-and-widgets.md).
 
-[![Date of Change](../assets/images/en/basics/logbook/11-lb.png)](../assets/images/en/basics/logbook/11-lb.png)
+[![Date de modification](../assets/images/en/basics/logbook/11-lb.png)](../assets/images/en/basics/logbook/11-lb.png)
 
-## Set Permissions
+## Définir les autorisations
 
-The authorisation system of i-doit allows the configuration of persons (or person groups) that are allowed to have reading access to the logbook. For example, you can specify that only i-doit-administrators have the authorisation to track changes.
+Le système d'autorisation d'i-doit permet la configuration des personnes (ou groupes de personnes) autorisées à avoir accès en lecture au journal. Par exemple, vous pouvez spécifier que seuls les administrateurs d'i-doit ont l'autorisation de suivre les modifications.
+
+{/*examples*/}

@@ -1,151 +1,151 @@
-# Changelog 1.9
+# Journal des modifications 1.9
 
-[Improvement]   Version in category installation  
-[Improvement]   The control for changing the column width in object lists has been improved  
-[Improvement]   Option for use of spaces in exported Check_MK tags  
-[Improvement]   Customizable welcom message on login screen (Administration -> Global Configuration)  
-[Improvement]   OCS Import: Ignored software is no longer imported  
-[Improvement]   Configuration for selection the i-doit language based on browser language  
-[Improvement]   Refactoring of mcrypt functions in favor of crypt  
-[Improvement]   Popups automatically adjust to the screen size  
-[Improvement]   Deep search runs automatically after quick search  
-[Improvement]   Focus filter field in object lists automatically  
-[Improvement]   Button to clear a search filter in object lists  
-[Improvement]   Suggestion Search in object lists  
-[Improvement]   Outsourcing of information about missing rights into new log  
-[Improvement]   Filter for dialog and dialog+ via drop-down in object lists  
-[Improvement]   New category "Cable-Connection"  
-[Improvement]   Enhanced DNS attributes in category hostaddress  
-[Improvement]   Add net zones to the hostaddress category  
-[Improvement]   New object type and category: Net area  
-[Improvement]   New feature in IP lists: areas / zones  
-[Improvement]   New popup for connecting multiple connectors at once in "Connectors" category  
-[Improvement]   Wiring category: decouple functionality  
-[Improvement]   Inheritance of latitude and longitude in category location  
-[Improvement]    *** ID-3329 Verwendung von voranstehenden Nullen im Counter-Platzhalter in Objekt-Titel / Inventarnummer  
-[Improvement]   Advanced guarantee options in category accounting  
-[Improvement]   OCS-import: Import CPU cores  
-[Improvement]   PHP 7.0 compatibility  
-[Change]        Admin-Center: Renaming modules to "Add-ons"  
-[Change]        Unnecessary DropDown in Category Dialogue Lists below Dialog-Admin  
-[Change]        Check_MK: Link to export page will be moved to the module  
-[Change]        Nagios: Link to export page will be moved to the module  
-[Bug]           Host tags (dynamic) Under Check_MK Does Not Adapts To The Browser Window  
-[Bug]           Object type gets created while clicking cancel  
-[Bug]           OPEN: Print preview in overview page throws PHP error  
-[Bug]           Value of calbe length is modified by x10 when opend in list edit  
-[Bug]           Search index needs utf8_unicode_ci as collation  
-[Bug]           Licenses: Once a price has been set, it cannot be deleted afterwards  
-[Bug]           Check for php-mysqli fails  
-[Bug]           Identification fields of the CSV import do not work when using the controller  
-[Bug]           JDisc-import: Capacity of hard disks in category "Device" are not being updated.  
-[Bug]           JDisc-Import: JDisc import: In "Overwrite" mode, objects of type "cable" are created again and again.  
-[Bug]           Button to clear object list filter does not work with all browsers  
-[Bug]           CMDB Explorer algorithm does not show software instances  
-[Bug]           Creating a connector without a connection also creates a cable  
-[Bug]           Baseline design issues for selects in an input group  
-[Bug]           Usage of more than one description in report export not possible  
-[Bug]           Deep Search does not find any dash-separated words  
-[Bug]           Report manager: CSV and TXT exports deliver empty reports  
-[Bug]           Highlighting of search results displays HTML code  
-[Bug]           Search finds logbook entries  
-[Bug]           Category "Contract assignment" cannot be shown in the object overview  
-[Bug]           Right "Edit" on "Reports in category" does not allow to edit these reports  
-[Bug]           Creating an object with the "CPU" categorie automatically creates an entry in this category  
-[Bug]           JDisc import: Logbook entries are being created mistakenly  
-[Bug]           Object Limit Not Completely Visible  
-[Bug]           Log book: Changing object specific categories shows wrong category  
-[Bug]           Date in Object Lists in English Form Although Settings Are German  
-[Bug]           Objectlist widget cannot transform entries correctly  
-[Bug]           Notifications are not sent, if reciever is not part of object typ person/person group  
-[Bug]           SYSID can not be changed via the CSV-import  
-[Bug]           Wrong Displayed Description in Dialogue for Deleting an Object in Category Rack  
-[Bug]           Typo in german version at OCS configuration  
-[Bug]           Typo in german version of category "PDU"  
-[Bug]           Button "Add/Remove" Vanishes after Click on "Accept" in Object Browser  
-[Bug]           Specific categories are not shown in reports when used in linked objects  
-[Bug]           Resetting the rights system does not work with encrypted password  
-[Bug]           Dates in custom categories not deletable  
-[Bug]           CSV export: Custom information is being surrounded by HTML tags  
-[Bug]           Missing status dropdown for dialog admin  
-[Bug]           Geo-information can not be imported via csv import  
-[Bug]           Conditions for "Assembly" are not handled correctly  
-[Bug]           Removing a slot assignment does not delete the physical location  
-[Bug]           Attribut selection for category "operating system" empty in report manager  
-[Bug]           Search index: An error occurred when the search index was regenerated with a large database  
-[Bug]           Raid capacity is always displayed in GB  
-[Bug]           Field in LDAP configuration shown as empty in edit mode  
-[Bug]           Incorrect logbook content, if an object is placed into another hight unit within the rack  
-[Bug]           CSV import: "Object relationship (Several objects)"  does not fill out field and does not create a relationship  
-[Bug]           CSV import: "Object relationship (One object)"  does not create a relationship  
-[Bug]           Mandatory definition for location does not work  
-[Bug]           Wrong SQL if "IS NULL"/"IS NOT NULL" is used in report manager  
-[Bug]           Service components can only be selected from infrastructure in report manager  
-[Bug]           Example date format does not match the format to use  
-[Bug]           List edit of category "service" overwrites content of "service description extern" with content from service description intern"  
-[Bug]           Some Entries in the expert settings are not hidden  
-[Bug]           Category "DHCP" is missing in list edit  
-[Bug]           Category "DHCP" is missing in CSV-import  
-[Bug]           Wrong presentation of icons in list browser  
-[Bug]           Default-Template information is only imported into categories, which are selected for the import  
-[Bug]           Error in category "object vitality", if no software is assigned  
-[Bug]           Object type selection for assignment in csv-import does not have an impact  
-[Bug]           "Last Change" not available as condition in report manager  
-[Bug]           Report does not allow to select an attribute for category "spatially assigned objects"  
-[Bug]           JDisc: Import of attribute "speed" in interfaces are calculated wrong  
-[Bug]           Display of the assigned network does not allow to read which network was selected  
-[Bug]           Report results are not sortable  
-[Bug]           Quickinfo is shown in location path even if it's disabled  
-[Bug]           Selecting objects in the object browser by clicking the "Page" button is not possible  
-[Bug]           CMDB-Status settings in JDisc profile has no effect if imported via controller  
-[Bug]           CSV export of a report with newlines is exported with these newlines resulting in an invalid csv syntax  
-[Bug]           Pager in object browsers only work after scrolling vertically  
-[Bug]           Icon for editing list edit is not hidden if the user has no rights to it  
-[Bug]           Location is not detachable  
-[Bug]           Ip address filtering not possible  
-[Bug]           No translated language constant in menu tree of administration  
-[Bug]           Contract start and end are not selectable for viewing in object lists  
-[Bug]           Multi value attributes are displayed twice in object lists  
-[Bug]           Error selecting CMDB-Status in Reports  
-[Bug]           Magnification Icon for connected attributes in report manager missing  
-[Bug]           Object link does not work if line-click in object lists is disabled  
-[Bug]           There is a problem with mandatory fields in custom categories on overview page  
-[Bug]           Yes/no fields are not viewable correctly in report manager  
-[Bug]           Data backup details are not viewable on overview if mandatory fields are enabled  
-[Bug]           Print view incorrect when filtering the lists  
-[Bug]           Error on csv import without any identification value  
-[Bug]           Expert setting "auth.use-in-location-tree" deactivates root location in site browser for all users  
-[Bug]           Login error for ldap user that does not have any rights  
-[Bug]           Attribute "interface" is not cleared in a connector if this connector was created via cable import  
-[Bug]           Attributes "dns domain" and "fqdn" are not displayed in reports  
-[Bug]           Attribute location does not appear in object lists with active my-doit statusfilter  
-[Bug]           Displaying Listener category in report manager results in an error  
-[Bug]           SMTP password viewable via developer tools  
-[Bug]           Category "Connection" holds wrong information  
-[Bug]           No translation for cmdb-status constants with custom translations  
-[Bug]           Notification will be only sent for first report object, not for the whole list  
-[Bug]           Logbook entry of a resolved connection holds code  
-[Bug]           Modules and extensions cannot be enabled or disabled for single tenants  
-[Bug]           Logout appends ?logout to url, which results in a malformed url after recurring login  
-[Bug]           Contact browser: Objectgroup allows user to select objects which are not part of contact category  
-[Bug]           Remove attribute threshold from notification for updates  
-[Bug]           Group assignment does not work via mass change  
-[Bug]           Import log begins with "\n" in each line  
-[Bug]           Button "Detach" in list edit does not work and organization of objects is inconsistent  
-[Bug]           Custom translations are overlooked after login  
-[Bug]           Links in reports cannot be clicked  
-[Bug]           OCS-Import imports objects in wrong object type  
-[Bug]           Table for JDisc profiles is not shown completely  
-[Bug]           Button "Edit" is missing in category dialogs in dialog admin  
-[Bug]           Different behavior for cancel button in dialog admin  
-[Bug]           Working space is displayed doubled in tree views "logic location" and "combined view"  
-[Bug]           After clicking on the "Operating system" category in the relationship object, the edit mode is displayed immediately  
-[Bug]           Edit button is always clickable in service filter view, when no service filter selected it will trigger functionality of new button  
-[Bug]           Logbook list view: date setting will not be reset when closing the calendar sheet  
-[Bug]           Logbook list view: Wrong description of date fields "from" and "to"  
-[Bug]           Counter in export templates count executions double when reloading current page  
-[Bug]           Wrong buttons for delete and restore of templates, also deprecated dropdown for status  
-[Bug]           Raid-Level "-" in widget "calculator" in "RAID capacity" wrong  
-[Bug]           Wrong entry in widget "Calculator" in list for storage capacity and raid capacity  
-[Bug]           Doubled ID field in widget object list when no attribute was chosen  
-[Bug]           Button print preview is shown in list view of relations  
+[Amélioration] Version dans la catégorie installation  
+[Amélioration] Le contrôle pour changer la largeur de colonne dans les listes d'objets a été amélioré  
+[Amélioration] Option pour l'utilisation d'espaces dans les tags Check_MK exportés  
+[Amélioration] Message de bienvenue personnalisable sur l'écran de connexion (Administration -> Configuration globale)  
+[Amélioration] Import OCS : les logiciels ignorés ne sont plus importés  
+[Amélioration] Configuration pour sélectionner la langue i-doit en fonction de la langue du navigateur  
+[Amélioration] Refonte des fonctions mcrypt en faveur de crypt  
+[Amélioration] Les popups s'ajustent automatiquement à la taille de l'écran  
+[Amélioration] La recherche approfondie s'exécute automatiquement après une recherche rapide  
+[Amélioration] Champ de filtre de mise au point dans les listes d'objets automatiquement  
+[Amélioration] Bouton pour effacer un filtre de recherche dans les listes d'objets  
+[Amélioration] Recherche de suggestion dans les listes d'objets  
+[Amélioration] Externalisation des informations sur les droits manquants dans un nouveau journal  
+[Amélioration] Filtre pour dialoguer et dialoguer+ via un menu déroulant dans les listes d'objets  
+[Amélioration] Nouvelle catégorie "Connexion de câble"  
+[Amélioration] Attributs DNS améliorés dans la catégorie adresse de l'hôte  
+[Amélioration] Ajouter des zones réseau à la catégorie adresse de l'hôte  
+[Amélioration] Nouveau type et catégorie d'objet : Zone réseau  
+[Amélioration] Nouvelle fonctionnalité dans les listes IP : zones  
+[Amélioration] Nouveau popup pour connecter plusieurs connecteurs à la fois dans la catégorie "Connecteurs"  
+[Amélioration] Catégorie de câblage : fonctionnalité de découplage  
+[Amélioration] Héritage de la latitude et de la longitude dans la catégorie emplacement  
+[Amélioration]    *** ID-3329 Utilisation de zéros initiaux dans le placeholder de compteur dans le titre de l'objet / numéro d'inventaire  
+[Amélioration] Options de garantie avancées dans la catégorie comptabilité  
+[Amélioration] Import OCS : Importer les cœurs de CPU  
+[Amélioration] Compatibilité PHP 7.0  
+[Changement] Centre d'administration : Renommer les modules en "Extensions"  
+[Changement] Menu déroulant inutile dans les listes de dialogue de la catégorie Dialogue en dessous de Dialog-Admin  
+[Changement] Check_MK : Le lien vers la page d'export sera déplacé vers le module  
+[Changement] Nagios : Le lien vers la page d'export sera déplacé vers le module  
+[Erreur] Les tags d'hôte (dynamiques) sous Check_MK ne s'adaptent pas à la fenêtre du navigateur  
+[Erreur] Le type d'objet est créé en cliquant sur Annuler  
+[Erreur] OUVERT : L'aperçu avant impression sur la page d'aperçu génère une erreur PHP  
+[Erreur] La valeur de la longueur du câble est modifiée par x10 lorsqu'elle est ouverte en mode édition de liste  
+[Erreur] L'index de recherche nécessite utf8_unicode_ci comme collation  
+[Erreur] Licences : Une fois qu'un prix a été défini, il ne peut plus être supprimé par la suite  
+[Erreur] La vérification de php-mysqli échoue  
+[Erreur] Les champs d'identification de l'import CSV ne fonctionnent pas lors de l'utilisation du contrôleur  
+[Erreur] Import JDisc : La capacité des disques durs dans la catégorie "Appareil" n'est pas mise à jour.  
+[Erreur] Import JDisc : Dans le mode "Écraser", des objets de type "câble" sont créés encore et encore.  
+[Erreur] Le bouton pour effacer le filtre de liste d'objets ne fonctionne pas avec tous les navigateurs  
+[Erreur] L'algorithme de l'explorateur CMDB ne montre pas les instances de logiciel  
+[Erreur] La création d'un connecteur sans connexion crée également un câble  
+[Erreur] Problèmes de conception de base pour les sélections dans un groupe d'entrée  
+[Erreur] L'utilisation de plus d'une description dans l'export de rapport n'est pas possible  
+[Erreur] La recherche approfondie ne trouve pas les mots séparés par des tirets  
+[Erreur] Le gestionnaire de rapports : Les exportations CSV et TXT fournissent des rapports vides  
+[Erreur] La mise en évidence des résultats de recherche affiche du code HTML  
+[Erreur] La recherche trouve des entrées de journal  
+[Erreur] La catégorie "Affectation de contrat" ne peut pas être affichée dans l'aperçu des objets  
+[Erreur] Le droit "Modifier" sur "Rapports dans la catégorie" ne permet pas de modifier ces rapports  
+[Erreur] La création d'un objet avec la catégorie "CPU" crée automatiquement une entrée dans cette catégorie  
+[Erreur] Import JDisc : Des entrées de journal sont créées par erreur  
+[Erreur] La limite d'objet n'est pas complètement visible  
+[Erreur] Journal : Le changement de catégories spécifiques à l'objet affiche une mauvaise catégorie  
+[Erreur] Date dans les listes d'objets en anglais alors que les paramètres sont en allemand  
+[Erreur] Le widget de liste d'objets ne transforme pas correctement les entrées  
+[Erreur] Les notifications ne sont pas envoyées si le destinataire ne fait pas partie du type d'objet personne/groupe de personnes  
+[Erreur] SYSID ne peut pas être modifié via l'import CSV  
+[Erreur] Description incorrecte affichée dans le dialogue de suppression d'un objet dans la catégorie Rack  
+[Erreur] Faute de frappe dans la version allemande de la configuration OCS  
+[Erreur] Faute de frappe dans la version allemande de la catégorie "PDU"  
+[Erreur] Le bouton "Ajouter/Supprimer" disparaît après avoir cliqué sur "Accepter" dans le navigateur d'objets  
+[Erreur] Les catégories spécifiques ne sont pas affichées dans les rapports lorsqu'elles sont utilisées dans des objets liés  
+[Erreur] La réinitialisation du système de droits ne fonctionne pas avec un mot de passe chiffré  
+[Erreur] Les dates dans les catégories personnalisées ne sont pas supprimables  
+[Erreur] Export CSV : Les informations personnalisées sont entourées de balises HTML  
+[Erreur] Menu déroulant de statut manquant pour l'administration de dialogues  
+[Erreur] Les informations géographiques ne peuvent pas être importées via l'import CSV  
+[Erreur] Les conditions pour "Assemblage" ne sont pas gérées correctement  
+[Erreur] Supprimer une affectation de slot ne supprime pas l'emplacement physique  
+[Erreur] Sélection d'attributs pour la catégorie "système d'exploitation" vide dans le gestionnaire de rapports  
+[Erreur] Index de recherche : Une erreur s'est produite lors de la régénération de l'index de recherche avec une grande base de données  
+[Erreur] La capacité RAID est toujours affichée en Go  
+[Erreur] Le champ dans la configuration LDAP est affiché comme vide en mode édition  
+[Erreur] Contenu incorrect du journal, si un objet est placé dans une autre unité de hauteur dans le rack  
+[Erreur] Import CSV : La "Relation d'objet (Plusieurs objets)" ne remplit pas le champ et ne crée pas de relation  
+[Erreur] Import CSV : La "Relation d'objet (Un objet)" ne crée pas de relation  
+[Erreur] La définition obligatoire pour l'emplacement ne fonctionne pas  
+[Erreur] Mauvaise requête SQL si "EST NULL"/"N'EST PAS NULL" est utilisé dans le gestionnaire de rapports  
+[Erreur] Les composants de service ne peuvent être sélectionnés que dans l'infrastructure du gestionnaire de rapports  
+[Erreur] Le format de date d'exemple ne correspond pas au format à utiliser  
+[Erreur] L'édition de liste de la catégorie "service" écrase le contenu de "description de service externe" avec le contenu de la description de service interne"  
+[Erreur] Certaines entrées dans les paramètres experts ne sont pas masquées  
+[Erreur] La catégorie "DHCP" est manquante dans l'édition de liste  
+[Erreur] La catégorie "DHCP" est manquante dans l'import CSV  
+[Erreur] Mauvaise présentation des icônes dans le navigateur de listes  
+[Erreur] Les informations du modèle par défaut ne sont importées que dans les catégories sélectionnées pour l'import  
+[Erreur] Erreur dans la catégorie "vitalité de l'objet", si aucun logiciel n'est attribué  
+[Erreur] La sélection du type d'objet pour l'attribution dans l'import CSV n'a pas d'impact  
+[Erreur] "Dernière modification" n'est pas disponible comme condition dans le gestionnaire de rapports  
+[Erreur] Le rapport ne permet pas de sélectionner un attribut pour la catégorie "objets spatialement assignés"  
+[Erreur] JDisc : L'import de l'attribut "vitesse" dans les interfaces est calculé de manière incorrecte  
+[Erreur] L'affichage du réseau attribué ne permet pas de lire quel réseau a été sélectionné  
+[Erreur] Les résultats du rapport ne sont pas triables  
+[Erreur] Les informations rapides sont affichées dans le chemin d'accès de l'emplacement même si elles sont désactivées  
+[Erreur] La sélection d'objets dans le navigateur d'objets en cliquant sur le bouton "Page" n'est pas possible  
+[Erreur] Les paramètres de statut CMDB dans le profil JDisc n'ont aucun effet s'ils sont importés via le contrôleur  
+[Erreur] L'export CSV d'un rapport avec des sauts de ligne est exporté avec ces sauts de ligne, ce qui entraîne une syntaxe CSV invalide  
+[Erreur] Le paginateur dans les navigateurs d'objets ne fonctionne qu'après un défilement vertical  
+[Erreur] L'icône pour modifier l'édition de liste n'est pas masquée si l'utilisateur n'a pas les droits pour le faire  
+[Erreur] L'emplacement n'est pas détachable  
+[Erreur] Filtrage des adresses IP non possible  
+[Erreur] Constante de langue non traduite dans l'arborescence de menu de l'administration  
+[Erreur] Le début et la fin du contrat ne sont pas sélectionnables pour l'affichage dans les listes d'objets  
+[Erreur] Les attributs à valeurs multiples sont affichés deux fois dans les listes d'objets  
+[Erreur] Erreur de sélection du statut CMDB dans les rapports  
+[Erreur] Icône de grossissement pour les attributs connectés manquante dans le gestionnaire de rapports  
+[Erreur] Le lien d'objet ne fonctionne pas si le clic sur la ligne dans les listes d'objets est désactivé  
+[Erreur] Problème avec les champs obligatoires dans les catégories personnalisées sur la page d'aperçu  
+[Erreur] Les champs oui/non ne sont pas affichés correctement dans le gestionnaire de rapports  
+[Erreur] Les détails de sauvegarde des données ne sont pas visibles dans l'aperçu si les champs obligatoires sont activés  
+[Erreur] Aperçu d'impression incorrect lors du filtrage des listes  
+[Erreur] Erreur lors de l'import CSV sans aucune valeur d'identification  
+[Erreur] Le paramètre expert "auth.use-in-location-tree" désactive l'emplacement racine dans le navigateur de site pour tous les utilisateurs  
+[Erreur] Erreur de connexion pour l'utilisateur LDAP qui n'a aucun droit  
+[Erreur] L'attribut "interface" n'est pas effacé dans un connecteur si ce connecteur a été créé via l'import de câble  
+[Erreur] Les attributs "domaine DNS" et "fqdn" ne sont pas affichés dans les rapports  
+[Erreur] L'attribut emplacement n'apparaît pas dans les listes d'objets avec le filtre de statut my-doit actif  
+[Erreur] L'affichage de la catégorie Listener dans le gestionnaire de rapports entraîne une erreur  
+[Erreur] Le mot de passe SMTP est visible via les outils de développement  
+[Erreur] La catégorie "Connexion" contient des informations erronées  
+[Erreur] Pas de traduction pour les constantes de statut CMDB avec des traductions personnalisées  
+[Erreur] Les notifications ne seront envoyées que pour le premier objet du rapport, pas pour toute la liste  
+[Erreur] L'entrée de journal d'une connexion résolue contient du code  
+[Erreur] Les modules et les extensions ne peuvent pas être activés ou désactivés pour des locataires individuels  
+[Erreur] La déconnexion ajoute ?logout à l'URL, ce qui entraîne une URL mal formée après une connexion récurrente  
+[Erreur] Navigateur de contacts : Le groupe d'objets permet à l'utilisateur de sélectionner des objets qui ne font pas partie de la catégorie de contact  
+[Erreur] Supprimer l'attribut de seuil de la notification pour les mises à jour  
+[Erreur] L'attribution de groupe ne fonctionne pas via le changement de masse  
+[Erreur] Le journal d'import commence par "\n" sur chaque ligne  
+[Erreur] Le bouton "Détacher" dans l'édition de liste ne fonctionne pas et l'organisation des objets est incohérente  
+[Erreur] Les traductions personnalisées sont ignorées après la connexion  
+[Erreur] Les liens dans les rapports ne peuvent pas être cliqués  
+[Erreur] L'import OCS importe des objets dans le mauvais type d'objet  
+[Erreur] Le tableau des profils JDisc n'est pas entièrement affiché  
+[Erreur] Le bouton "Modifier" est manquant dans les dialogues de catégorie dans l'administration de dialogues  
+[Erreur] Comportement différent pour le bouton Annuler dans l'administration de dialogues  
+[Erreur] L'espace de travail est affiché en double dans les vues arborescentes "emplacement logique" et "vue combinée"  
+[Erreur] Après avoir cliqué sur la catégorie "Système d'exploitation" dans l'objet de relation, le mode édition est affiché immédiatement  
+[Erreur] Le bouton d'édition est toujours cliquable dans la vue de filtre de service, lorsqu'aucun filtre de service n'est sélectionné, il déclenchera la fonctionnalité du nouveau bouton  
+[Erreur] Vue de liste du journal : le paramétrage de la date ne sera pas réinitialisé lors de la fermeture de la feuille de calendrier  
+[Erreur] Vue de liste du journal : Mauvaise description des champs de date "de" et "à"  
+[Erreur] Le compteur dans les modèles d'exportation compte les exécutions en double lors du rechargement de la page actuelle  
+[Erreur] Mauvais boutons pour supprimer et restaurer les modèles, également menu déroulant obsolète pour le statut  
+[Erreur] Niveau RAID "-" dans le widget "calculatrice" dans "Capacité RAID" incorrect  
+[Erreur] Entrée incorrecte dans le widget "Calculatrice" dans la liste pour la capacité de stockage et la capacité RAID  
+[Erreur] Champ ID doublé dans la liste d'objets du widget lorsque aucun attribut n'a été choisi  
+[Erreur] Le bouton d'aperçu avant impression est affiché dans la vue de liste des relations  

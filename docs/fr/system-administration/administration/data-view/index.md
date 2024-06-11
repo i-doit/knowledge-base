@@ -1,8 +1,8 @@
-# Data view
+# Vue des données
 
-## The Data view is divided into the following sub-sections
+## La vue des données est divisée en les sous-sections suivantes
 
--   [Configure object browser](./configure-object-browser.md)
--   [Hide attributes](./hide-attributes.md)
--   [Language profiles](./language-profiles.md)
--   [Category folders](category-folders.md)
+-   [Configurer le navigateur d'objets](./configure-object-browser.md)
+-   [Masquer les attributs](./hide-attributes.md)
+-   [Profils de langues](./language-profiles.md)
+-   [Dossiers de catégories](category-folders.md)

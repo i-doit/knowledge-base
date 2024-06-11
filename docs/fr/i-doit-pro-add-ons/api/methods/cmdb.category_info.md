@@ -3,40 +3,40 @@ title: cmdb.category_info
 description: cmdb.category_info
 icon: material/api
 #status: updated
-lang: en
+lang: fr
 ---
 
-# category_info
+# Infos_catégorie
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## cmdb.category_info.read
 
 description
 
-### Request parameters
+### Paramètres de la requête
 
-| Key          | JSON data type | Required | Description |
-| ------------ | -------------- | -------- | ----------- |
-| **catgID**   | Integer        | No       | Placeholder |
-| **catsID**   | Integer        | No       | Placeholder |
-| **customID** | Integer        | No       | Placeholder |
-| **category** | String         | No       | Placeholder |
+| Clé          | Type de données JSON | Requis | Description |
+| ------------ | -------------------- | ------ | ----------- |
+| **catgID**   | Entier               | Non    | Placeholder |
+| **catsID**   | Entier               | Non    | Placeholder |
+| **customID** | Entier               | Non    | Placeholder |
+| **category** | Chaîne               | Non    | Placeholder |
 
 !!! example "WIP"
 
-    ### Response parameters
+    ### Paramètres de la réponse
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+    La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+    | Clé             | Type de données JSON | Description |
+    | --------------- | -------------------- | ----------- |
+    | **Placeholder** | Placeholder           | Placeholder |
+    | **Placeholder** | Placeholder           | Placeholder |
 
-### Example
+### Exemple
 
-=== "Request body catgID"
+=== "Corps de la requête catgID"
 
     ```json
     {
@@ -51,10 +51,10 @@ description
     }
     ```
 
-=== "Response body catgID"
+=== "Corps de réponse catgID" {/examples}
 
-    ```json
-    {
+```json
+({
       "id": 1,
       "jsonrpc": "2.0",
       "result": {
@@ -558,12 +558,12 @@ description
         }
       }
     }
-    ```
+```
 
-=== "Request body catsID"
+=== "Corps de requête catsID" {/examples}
 
-    ```json
-    {
+```json
+({
       "version": "2.0",
       "method": "cmdb.category_info.read",
       "params": {
@@ -573,12 +573,12 @@ description
       },
       "id": 1
     }
-    ```
+```
 
-=== "Response body catsID"
+=== "Corps de réponse catsID" {/examples}
 
-    ```json
-    {
+```json
+({
       "id": 1,
       "jsonrpc": "2.0",
       "result": {
@@ -720,12 +720,12 @@ description
         }
       }
     }
-    ```
+```
 
-=== "Request body custimID"
+=== "Corps de requête custimID" {/examples}
 
-    ```json
-    {
+```json
+({
       "version": "2.0",
       "method": "cmdb.category_info.read",
       "params": {
@@ -735,12 +735,12 @@ description
       },
       "id": 1
     }
-    ```
+```
 
-=== "Response body customID"
+=== "Corps de réponse customID" {/examples}
 
-    ```json
-    {
+```json
+({
       "id": 1,
       "jsonrpc": "2.0",
       "result": {
@@ -1630,12 +1630,12 @@ description
         }
       }
     }
-    ```
+```
 
-=== "Request body category"
+=== "Corps de requête catégorie" {/examples}
 
-    ```json
-    {
+```json
+({
       "version": "2.0",
       "method": "cmdb.category_info.read",
       "params": {
@@ -1645,12 +1645,12 @@ description
       },
       "id": 1
     }
-    ```
+```
 
-=== "Response body category"
+=== "Corps de réponse catégorie" {/examples}
 
-    ```json
-    {
+```json
+({
       "id": 1,
       "jsonrpc": "2.0",
       "result": {
@@ -2154,4 +2154,4 @@ description
         }
       }
     }
-    ```
+```

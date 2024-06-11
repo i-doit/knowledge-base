@@ -1,26 +1,26 @@
 # Console
 
-i-doit has a Command line Interface (CLI) with which you can carry out various tasks. For example, the CLI is required for [Cronjobs](../../../maintenance-and-operation/cronjob-setup.md) and can be applied for the automation of work steps.
+i-doit dispose d'une Interface en Ligne de Commande (CLI) avec laquelle vous pouvez effectuer diverses tâches. Par exemple, la CLI est nécessaire pour les [Cronjobs](../../../maintenance-and-operation/cronjob-setup.md) et peut être utilisée pour l'automatisation des étapes de travail.
 
-## First Steps
+## Premiers Pas
 
-The CLI can be found in the i-doit installation directory, for example at **/var/www/html/**. Within this directory the CLI has to be activated with the same permissions as the Apache webserver. Under **Debian GNU/Linux** this is the user called **www-data**. You can achieve the permissions with **sudo**:
+La CLI peut être trouvée dans le répertoire d'installation de i-doit, par exemple à **/var/www/html/**. Dans ce répertoire, la CLI doit être activée avec les mêmes autorisations que le serveur web Apache. Sous **Debian GNU/Linux**, il s'agit de l'utilisateur appelé **www-data**. Vous pouvez obtenir les autorisations avec **sudo** :
 
 ```sh
 cd /var/www/html/
 sudo -u www-data php console.php
 ```
 
-Under Windows you also have to change to the installation directory. As the permissions of the webserver are not an issue, the start of **php.exe**, which has to stand in the path of the user, is sufficient.
+Sous Windows, vous devez également vous rendre dans le répertoire d'installation. Comme les autorisations du serveur web ne posent pas de problème, le démarrage de **php.exe**, qui doit se trouver dans le chemin de l'utilisateur, est suffisant.
 
 ```cmd
 cd C:\xampp\htdocs
 php.exe console.php
 ```
 
-When you execute the CLI without further arguments, the general help is displayed:
+Lorsque vous exécutez la CLI sans autres arguments, l'aide générale est affichée :
 
-??? abstract "Available commands without add-ons"
+<Notes> "Commandes disponibles sans modules supplémentaires"
     ```sh
     i-doit console utility 31
 
@@ -94,27 +94,26 @@ When you execute the CLI without further arguments, the general help is displaye
     update                              Update the i-doit application
     ```
 
-## Authentication Process
+## Processus d'authentification {/examples}
 
-In order to access i-doit via the CLI an authentication is required for most of the commands. For this purpose, you hand over a user name, the appropriate password and the desired [tenant ID](../../../system-administration/multi-tenant.md). With a default installation, in most cases the latter is **"1"**.
+Pour accéder à i-doit via l'interface en ligne de commande, une authentification est requise pour la plupart des commandes. À cette fin, vous devez fournir un nom d'utilisateur, le mot de passe approprié et l'ID du [locataire](../../../system-administration/multi-tenant.md) souhaité. Avec une installation par défaut, dans la plupart des cas, ce dernier est **"1"**.
 
 ```shell
 cd /var/www/html/
-sudo -u www-data php console.php [COMMAND] --user admin --password admin --tenantId 1 [FURTHER OPTIONs]
+sudo -u www-data php console.php [COMMANDE] --user admin --password admin --tenantId 1 [AUTRES OPTIONS]
 ```
 
-!!! success "The user "controller""
-    We recommend creating a dedicated user in i-doit for the application of the CLI. If this user is to be configured as [local user](../../../user-authentication-and-management/builtin-authentication/creating-a-local-user.md), create it as object of the type **Persons** with the desired credentials in the **Persons → Login** category. This user should receive admin rights. The rights assignment can be carried out through allocation to the predefined **Person group Admin**.
+!!! success "L'utilisateur "controller""
+    Nous vous recommandons de créer un utilisateur dédié dans i-doit pour l'application de l'interface en ligne de commande. Si cet utilisateur doit être configuré en tant qu'[utilisateur local](../../../user-authentication-and-management/builtin-authentication/creating-a-local-user.md), créez-le en tant qu'objet de type **Personnes** avec les informations d'identification souhaitées dans la catégorie **Personnes → Connexion**. Cet utilisateur devrait recevoir des droits d'administrateur. L'attribution des droits peut être effectuée en l'assignant au groupe prédéfini **Groupe de personnes Admin**.
 
-## Help
-
-Often commands are accompanied by further arguments. Therefore each command provides a help via **--help**:
+## Aide {/examples}
 
 ```shell
 cd /var/www/html/
 sudo -u www-data php console.php search --help
 ```
 
-Furthermore, some commands provide examples via **--usage**.
+De plus, certaines commandes fournissent des exemples via **--usage**.
 
-[Go to the commands](options-and-parameters-cli.md){ .md-button .md-button--primary }
+[Accéder aux commandes](options-and-parameters-cli.md){ .md-button .md-button--primary }
+```

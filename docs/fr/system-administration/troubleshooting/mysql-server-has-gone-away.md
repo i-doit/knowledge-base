@@ -1,15 +1,15 @@
-# "MySQL-Server Has Gone Away"
+# "Le serveur MySQL est parti"
 
-Problem
--------
+Problème
+--------
 
-When starting i-doit the error message "MySQL-Server has gone away" appears.
+Lors du démarrage d'i-doit, le message d'erreur "Le serveur MySQL est parti" apparaît.
 
 Solution
 --------
 
-The default configuration of the property ***max_allowed_packet*** has the value 1M in some environments. Adjust this setting in the configuration file of MySQL/MariaDB as follows:
+La configuration par défaut de la propriété ***max_allowed_packet*** a la valeur 1M dans certains environnements. Ajustez ce paramètre dans le fichier de configuration de MySQL/MariaDB comme suit :
 
     max_allowed_packet = 128M
 
-Also take a look at our recommended [system settings](../../installation/manual-installation/system-settings.md).
+Consultez également nos [paramètres système recommandés](../../installation/manual-installation/system-settings.md).

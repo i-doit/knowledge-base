@@ -1,48 +1,51 @@
-# IP List
-Again and again there is one central issue for the Admin: Which IP addresses are assigned to which host and which addresses can still be assigned? The IP lists in i-doit can be a great help to tackle this question.
+# Liste des adresses IP
+Encore et encore, il y a une question centrale pour l'administrateur : Quelles adresses IP sont attribuées à quel hôte et quelles adresses peuvent encore être attribuées ? Les listes d'adresses IP dans i-doit peuvent être d'une grande aide pour répondre à cette question.
 
-A more detailed approach into this matter is provided in the application case for the [IP Address Management (IPAM)](../use-cases/ip-adress-management.md).
+Une approche plus détaillée de cette question est fournie dans le cas d'application pour la [Gestion des adresses IP (IPAM)](../use-cases/ip-adress-management.md).
 
-IP List Category
+Catégorie de la liste IP
 ----------------
 
-The **IP list** [category](../basics/structure-of-the-it-documentation.md) provides a comprehensive overview of each net. In the default installation of i-doit it is assigned to the [object type](../basics/structure-of-the-it-documentation.md) Layer-3-Net. You can find all [objects](../basics/structure-of-the-it-documentation.md) which are assigned to this net, including their IP address, host name and type of address assignment, in a tabular listing.
+La **liste IP** [catégorie](../basics/structure-of-the-it-documentation.md) fournit un aperçu complet de chaque réseau. Dans l'installation par défaut de i-doit, elle est attribuée au [type d'objet](../basics/structure-of-the-it-documentation.md) Réseau de niveau 3. Vous pouvez trouver tous les [objets](../basics/structure-of-the-it-documentation.md) qui sont attribués à ce réseau, y compris leur adresse IP, leur nom d'hôte et le type d'attribution d'adresse, dans une liste tabulaire.
 
-[![IP List Category](../assets/images/en/evaluation/ip-list/1-il.png)](../assets/images/en/evaluation/ip-list/1-il.png)
+[![Catégorie de liste IP](../assets/images/en/evaluation/ip-list/1-il.png)](../assets/images/en/evaluation/ip-list/1-il.png)
 
-The type of address assignment is presented with colors and their respective meaning is explained in a color key on the right of the list:
+Le type d'attribution d'adresse est présenté avec des couleurs et leur signification respective est expliquée dans une légende de couleur à droite de la liste :
 
-*   **Green:** Net address / Broadcast
-*   **Yellow:** Default Gateway (This is the object for which you defined in the Host address category that it should act as default gateway.)
-*   **Orange:** unnumbered address range
-*   **Gray:** statically assigned IP addresses
-*   **Blue:** IP addresses which are reserved by the DHCP server (see also **DHCP** category)
-*   **Light blue:** IP addresses which are assigned dynamically by the DHCP server (see also **DHCP** category)
+*   **Vert:** Adresse réseau / Broadcast
+*   **Jaune:** Passerelle par défaut (C'est l'objet pour lequel vous avez défini dans la catégorie Adresse hôte qu'il doit agir en tant que passerelle par défaut.)
+*   **Orange:** Plage d'adresses non numérotées
+*   **Gris:** Adresses IP attribuées statiquement
+*   **Bleu:** Adresses IP réservées par le serveur DHCP (voir également la catégorie **DHCP**)
+*   **Bleu clair:** Adresses IP attribuées dynamiquement par le serveur DHCP (voir également la catégorie **DHCP**)
 
-In order to avoid (unintentional) address conflicts, i-doit points out multiple assigned IP addresses beside the table.
+Afin d'éviter les conflits d'adresses (non intentionnels), i-doit signale plusieurs adresses IP attribuées à côté du tableau.
 
-In smaller networks (< 1,000 IP addresses) also IP addresses which have not been assigned yet are displayed. Should the network have an address range which is too extensive, for example a /16 with more than 65,000 IP addresses, only the used IP addresses are shown and those who are not yet assigned are hidden. Additionally, a corresponding note is made.
+Dans les réseaux plus petits (< 1 000 adresses IP), les adresses IP qui n'ont pas encore été attribuées sont également affichées. Si le réseau dispose d'une plage d'adresses trop étendue, par exemple un /16 avec plus de 65 000 adresses IP, seules les adresses IP utilisées sont affichées et celles qui ne sont pas encore attribuées sont masquées. De plus, une note correspondante est ajoutée.
 
-Another table on the right concludes important information about the net:
+Une autre table sur la droite résume des informations importantes sur le réseau:
 
-*   IP addresses in use
-*   Net address
-*   Subnet mask
-*   Default gateway
-*   Address range
-*   Superordinate supernets (object type **Supernet**)
-*   Assigned VLANs (object type **Layer-2-Net**)
+*   Adresses IP en cours d'utilisation
+*   Adresse réseau
+*   Masque de sous-réseau
+*   Passerelle par défaut
+*   Plage d'adresses
+*   Superréseaux supérieurs (type d'objet **Superréseau**)
+*   VLANs attribués (type d'objet **Réseau de couche 2**)
 
-Object Assignment
------------------
+Attribution d'Objets
+--------------------
 
-You can expand the list by further objects without using the **Host address** category but by using the **Connect object**  button.
+Vous pouvez étendre la liste en ajoutant d'autres objets sans utiliser la catégorie **Adresse hôte** mais en utilisant le bouton **Connecter objet**.
 
-Check of IP Addresses
----------------------
+Vérification des Adresses IP
+----------------------------
 
-The **IP list** category provides the possibility to make a comparison between the target state and the actual state. In order to check if the documented IP addresses and host names are really assigned, i-doit can send ICMP packets ("Pings") and start a NSLOOKUP. For this purpose, i-doit requires net access. You can check single entries or all entries in a subsequent order. With  **Administration → System settings → Tentantsettings → Options for the IP-List** you can set which command line tools should be applied. The user/ group of the Apache webserver have to have the permission to activate these tools.
+La catégorie **Liste IP** offre la possibilité de comparer l'état cible et l'état actuel. Afin de vérifier si les adresses IP documentées et les noms d'hôtes sont réellement attribués, i-doit peut envoyer des paquets ICMP ("Pings") et démarrer une recherche NSLOOKUP. À cette fin, i-doit nécessite un accès réseau. Vous pouvez vérifier des entrées individuelles ou toutes les entrées dans un ordre ultérieur. Avec **Administration → Paramètres système → Paramètres du locataire → Options pour la Liste IP**, vous pouvez définir quels outils en ligne de commande doivent être appliqués. L'utilisateur/le groupe du serveur web Apache doit avoir l'autorisation d'activer ces outils.
 
-*   **Ping**: Send ICMP packet to IP address
-*   **NSLOOKUP**: Specify IP address as host name
-*   **Reverse NSLOOKUP**: Specify host name for IP address
+*   **Ping**: Envoyer un paquet ICMP à une adresse IP
+*   **NSLOOKUP**: Spécifier l'adresse IP en tant que nom d'hôte
+*   **Reverse NSLOOKUP**: Spécifier le nom d'hôte pour une adresse IP
+
+{/*examples*/}
+

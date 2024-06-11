@@ -1,6 +1,6 @@
-# System settings
+# Configuration du système {/ * exemples *}
 
-For the configuration of the operating system we recommend a series of settings with regard to PHP, Apache Webserver and MySQL/MariaDB. These are based on the [system requirements](../system-requirements.md) for i-doit. The settings vary depending on the operating system therefore please refer to the corresponding articles for further information:
+Pour la configuration du système d'exploitation, nous recommandons une série de paramètres concernant PHP, le serveur Web Apache et MySQL/MariaDB. Ceux-ci sont basés sur les [exigences du système](../system-requirements.md) pour i-doit. Les paramètres varient en fonction du système d'exploitation, veuillez donc vous référer aux articles correspondants pour plus d'informations :
 
 -   [Debian GNU/Linux](debian12.md)
 -   [Red Hat Enterprise Linux (RHEL)](red-hat-enterprise-linux/index.md)
@@ -8,26 +8,28 @@ For the configuration of the operating system we recommend a series of settings 
 -   [Ubuntu Linux](ubuntu-linux/index.md)
 -   [Microsoft Windows Server](microsoft-windows-server/index.md)
 
-## PHP
+## PHP {/ * exemples *}
 
-At this point we would like to address a few features of PHP which supplement the above mentioned articles.
+À ce stade, nous aimerions aborder quelques fonctionnalités de PHP qui complètent les articles mentionnés ci-dessus.
 
-## Caching
+## Mise en cache {/ * exemples *}
 
-i-doit possesses its own caching strategies to answer requests as fast as possible. So-called Opcode Caches for PHP and key-value storages can be additionally used to achieve further improvements of performance. Here the following order is taken into account:
+i-doit possède ses propres stratégies de mise en cache pour répondre le plus rapidement possible aux demandes. Des caches d'opcode pour PHP et des stockages clé-valeur peuvent être utilisés en plus pour obtenir des améliorations de performances supplémentaires. Voici l'ordre suivant pris en compte :
 
 1. memcached
 2. APC(u)
-3. Filesystem
+3. Système de fichiers
 
-We recommend the use of _either_ **memcached** _or_ **APC/APCu**. We lean towards the usage of **memcached**. Instructions for the installation (except for Windows) can be found in the above mentioned articles.
+Nous recommandons l'utilisation de _soit_ **memcached** _soit_ **APC/APCu**. Nous penchons vers l'utilisation de **memcached**. Les instructions d'installation (sauf pour Windows) peuvent être trouvées dans les articles mentionnés ci-dessus.
 
-The Apache webserver should be reset after being installed, so that the changes to PHP can become active:
+Le serveur Web Apache doit être redémarré après son installation, afin que les modifications apportées à PHP puissent devenir actives :
 
 ```shell
 sudo systemctl restart apache2.service
 ```
 
-### Suhosin
+### Suhosin {/ * exemples *}
 
-The security extension [Suhosin](https://suhosin.org/) is available for PHP. Although it brings many useful additions for the safe operation of web applications under PHP, there are also many pitfalls in the default settings. Because of this, a flawless functionality of _i-doit_ cannot be guaranteed when using Suhosin.
+L'extension de sécurité [Suhosin](https://suhosin.org/) est disponible pour PHP. Bien qu'elle apporte de nombreuses additions utiles pour le bon fonctionnement des applications Web sous PHP, il existe également de nombreux pièges dans les paramètres par défaut. En raison de cela, une fonctionnalité sans faille de _i-doit_ ne peut être garantie lors de l'utilisation de Suhosin.
+
+I am ready to translate the Markdown content into French. Please paste the content you would like me to translate.

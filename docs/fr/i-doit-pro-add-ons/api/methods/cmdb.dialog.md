@@ -1,39 +1,39 @@
 ---
-title: Namespace cmdb.dialog
+title: Espace de noms cmdb.dialog
 description: cmdb.dialog
 icon: material/api
 #status: updated
-lang: en
+lang: fr
 ---
 
-# Namespace cmdb.dialog
+# Espace de noms cmdb.dialog
 
-!!! example "Work in Progress"
+!!! example "Travail en cours"
 
 ## cmdb.dialog.read
 
-Read dialog information.
+Lire les informations de la boîte de dialogue.
 
-### Request parameters
+### Paramètres de la requête
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                    |
-| ------------ | ------------------ | ------------ | -------------------------------------------------------------------------------------------------- |
-| **category** | String             | Yes          | [Category constant](../../api/category-fields-for-data-arrays.md), for example: **"C__CATG__CPU"** |
-| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                             |
+| **Clé**      | **Type de données JSON** | **Requis** | **Description**                                                                                    |
+| ------------ | ------------------------ | ---------- | -------------------------------------------------------------------------------------------------- |
+| **catégorie** | Chaîne                 | Oui        | [Constante de catégorie](../../api/category-fields-for-data-arrays.md), par exemple: **"C__CATG__CPU"** |
+| **propriété** | Chaîne                 | Oui        | Attribut dans la catégorie, par exemple: "fabricant"                                             |
 
-### Response parameters
+### Paramètres de la réponse
 
-JSON key **result** contains an array of JSON objects.
+La clé JSON **résultat** contient un tableau d'objets JSON.
 
-| **Key**   | **JSON data type** | **Description**                  |
-| --------- | ------------------ | -------------------------------- |
-| **id**    | Integer            | Identifier                       |
-| **const** | String             | **Constant of Dialog Attribute** |
-| **title** | String             | Title of the Attribute           |
+| **Clé**   | **Type de données JSON** | **Description**                  |
+| --------- | ------------------------ | -------------------------------- |
+| **id**    | Entier                   | Identifiant                       |
+| **const** | Chaîne                   | **Constante de l'attribut de la boîte de dialogue** |
+| **titre** | Chaîne                   | Titre de l'attribut           |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -49,7 +49,7 @@ JSON key **result** contains an array of JSON objects.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -72,28 +72,28 @@ JSON key **result** contains an array of JSON objects.
 
 ### cmdb.dialog.create
 
-Created Dialogs.
+Dialogues créés.
 
-## Request parameters
+## Paramètres de la requête
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                    |
-| ------------ | ------------------ | ------------ | -------------------------------------------------------------------------------------------------- |
-| **category** | String             | Yes          | [Category constant](../../api/category-fields-for-data-arrays.md), for example: **"C__CATG__CPU"** |
-| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                             |
-| **value**    | String             | Yes          | Value of the Attribute                                                                             |
+| **Clé**      | **Type de données JSON** | **Requis** | **Description**                                                                                    |
+| ------------ | ------------------------ | ---------- | -------------------------------------------------------------------------------------------------- |
+| **catégorie** | Chaîne                 | Oui        | [Constante de catégorie](../../api/category-fields-for-data-arrays.md), par exemple : **"C__CATG__CPU"** |
+| **propriété** | Chaîne                 | Oui        | Attribut dans la catégorie, par exemple : "fabricant"                                             |
+| **valeur**    | Chaîne                 | Oui        | Valeur de l'attribut                                                                             |
 
-### Response parameters
+### Paramètres de la réponse
 
-JSON key **result** contains a JSON object.
+La clé JSON **résultat** contient un objet JSON.
 
-| **Key**      | **JSON data type** | **Description**                  |
-| ------------ | ------------------ | -------------------------------- |
-| **success**  | Boolean            | Should be **true**               |
-| **entry_id** | Integer            | Entry Identifier, for example: 3 |
+| **Clé**      | **Type de données JSON** | **Description**                  |
+| ------------ | ------------------------ | -------------------------------- |
+| **succès**  | Booléen                  | Doit être **true**               |
+| **entry_id** | Entier                   | Identifiant de l'entrée, par exemple : 3 |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -110,7 +110,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -125,29 +125,29 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.dialog.update
 
-Update a [dialog](../../../basics/dialog-admin.md#dialog-admin) entry.
+Mettre à jour une entrée de [dialogue](../../../basics/dialog-admin.md#dialog-admin).
 
-## Request parameters
+## Paramètres de la requête
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                    |
-| ------------ | ------------------ | ------------ | -------------------------------------------------------------------------------------------------- |
-| **category** | String             | Yes          | [Category constant](../../api/category-fields-for-data-arrays.md), for example: **"C__CATG__CPU"** |
-| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                             |
-| **value**    | String             | Yes          | Value of the Attribute                                                                             |
-| **entry_id** | Integer            | Yes          | Entry Identifier, for example: 3                                                                   |
+| **Clé**      | **Type de données JSON** | **Requis** | **Description**                                                                                    |
+| ------------ | ------------------------ | ---------- | -------------------------------------------------------------------------------------------------- |
+| **catégorie** | Chaîne                  | Oui        | [Constante de catégorie](../../api/category-fields-for-data-arrays.md), par exemple : **"C__CATG__CPU"** |
+| **propriété** | Chaîne                  | Oui        | Attribut dans la catégorie, par exemple : "fabricant"                                             |
+| **valeur**    | Chaîne                  | Oui        | Valeur de l'attribut                                                                             |
+| **entry_id** | Entier                   | Oui        | Identifiant de l'entrée, par exemple : 3                                                                   |
 
-### Response parameters
+### Paramètres de réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| **Key**      | **JSON data type** | **Description**                  |
-| ------------ | ------------------ | -------------------------------- |
-| **success**  | Boolean            | Should be **true**               |
-| **entry_id** | Integer/String     | Entry Identifier, for example: 3 |
+| **Clé**       | **Type de données JSON** | **Description**                  |
+| ------------- | ------------------------ | -------------------------------- |
+| **succès**   | Booléen                 | Doit être **true**               |
+| **entry_id**  | Entier/Chaîne de caractères | Identifiant de l'entrée, par exemple : 3 |
 
-### Example
+### Exemple
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -165,7 +165,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {
@@ -178,30 +178,30 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-## cmdb.dialog.delete
+## cmdb.dialog.delete {/examples}
 
-Deletes dialogs.
+Supprime les dialogues.
 
-### Request parameters
+### Paramètres de la requête {/examples}
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                    |
-| ------------ | ------------------ | ------------ | -------------------------------------------------------------------------------------------------- |
-| **category** | String             | Yes          | [Category constant](../../api/category-fields-for-data-arrays.md), for example: **"C__CATG__CPU"** |
-| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                             |
-| **entry_id** | Integer            | Yes          | Entry Identifier, for example: 3                                                                   |
+| **Clé**       | **Type de données JSON** | **Requis** | **Description**                                                                                    |
+| ------------- | ------------------------ | ---------- | -------------------------------------------------------------------------------------------------- |
+| **catégorie** | Chaîne de caractères    | Oui        | [Constante de catégorie](../../api/category-fields-for-data-arrays.md), par exemple : **"C__CATG__CPU"** |
+| **propriété** | Chaîne de caractères    | Oui        | Attribut dans la catégorie, par exemple : "fabricant"                                             |
+| **entry_id**  | Entier                 | Oui        | Identifiant de l'entrée, par exemple : 3                                                                   |
 
-### Response parameters
+### Paramètres de réponse {/examples}
 
-JSON key **result** contains a JSON object.
+La clé JSON **result** contient un objet JSON.
 
-| **Key**      | **JSON data type** | **Description**                  |
-| ------------ | ------------------ | -------------------------------- |
-| **success**  | Boolean            | Should be **true**               |
-| **entry_id** | Integer/String     | Entry Identifier, for example: 3 |
+| **Clé**      | **Type de données JSON** | **Description**                  |
+| ------------ | ------------------------ | -------------------------------- |
+| **success**  | Booléen                  | Doit être **true**                |
+| **entry_id** | Entier/Chaîne de caractères | Identifiant de l'entrée, par exemple : 3 |
 
-### Example
+### Exemple {/examples}
 
-=== "Request body"
+=== "Corps de la requête"
 
     ```json
     {
@@ -219,7 +219,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-=== "Response body"
+=== "Corps de la réponse"
 
     ```json
     {

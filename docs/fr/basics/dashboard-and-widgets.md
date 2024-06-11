@@ -1,193 +1,193 @@
-# Dashboard and Widgets
+# Tableau de bord et Widgets {/examples}
 
-To be provided with the most important information upon signing in to i-doit you can customize your dashboard with useful widgets. Each user in i-doit has his own dashboard and can personalize his own view of data. Should you have set up the “ultimate” dashboard, you can even define it as default dashboard or transfer it to specific users.
+Pour obtenir les informations les plus importantes dès la connexion à i-doit, vous pouvez personnaliser votre tableau de bord avec des widgets utiles. Chaque utilisateur dans i-doit a son propre tableau de bord et peut personnaliser sa propre vue des données. Si vous avez configuré le tableau de bord "ultime", vous pouvez même le définir comme tableau de bord par défaut ou le transférer à des utilisateurs spécifiques.
 
-Access
+Accès
 ------
 
-You can reach the dashboard automatically after signing in to i-doit. Alternatively, you can click on the [![icon](../assets/images/en/basics/dashboard-and-widgets/1-daw.png)](../assets/images/en/basics/dashboard-and-widgets/1-daw.png) symbol in the breadcrumb navigation or on the i-doit logo in the top left corner.
+Vous pouvez accéder au tableau de bord automatiquement après vous être connecté à i-doit. Alternativement, vous pouvez cliquer sur le [![icône](../assets/images/en/basics/dashboard-and-widgets/1-daw.png)](../assets/images/en/basics/dashboard-and-widgets/1-daw.png) symbole dans la navigation par fil d'Ariane ou sur le logo i-doit dans le coin supérieur gauche.
 
-Available Widgets
+Widgets Disponibles
 -----------------
 
-!!! success "Multi-selection"
+!!! success "Sélection multiple"
 
-    You can put individual widgets repeatedly on your dashboard, for example, to display multiple reports.
+    Vous pouvez placer des widgets individuels de manière répétée sur votre tableau de bord, par exemple, pour afficher plusieurs rapports.
 
-### CMDB Status Lifecycle
+### Cycle de vie de l'état CMDB
 
-You can select one or more objects with help of the pencil and have their status history visualized in a graph.
+Vous pouvez sélectionner un ou plusieurs objets à l'aide du crayon et visualiser leur historique d'état sous forme de graphique.
 
-[![CMDB Status Lifecycle](../assets/images/en/basics/dashboard-and-widgets/2-daw.png)](../assets/images/en/basics/dashboard-and-widgets/2-daw.png)
+[![Cycle de vie de l'état CMDB](../assets/images/en/basics/dashboard-and-widgets/2-daw.png)](../assets/images/en/basics/dashboard-and-widgets/2-daw.png)
 
-### CMDB-Explorer
+### Explorateur CMDB
 
-A smaller variant of the regular [CMDB-explorer](../evaluation/cmdb-explorer/index.md) without extended features can be displayed here. For this purpose, select an object with the pencil which is loaded automatically when the dashboard is started.
+Une variante plus petite du [CMDB-explorer](../evaluation/cmdb-explorer/index.md) régulier sans fonctionnalités étendues peut être affichée ici. À cette fin, sélectionnez un objet avec le crayon qui est chargé automatiquement lorsque le tableau de bord est démarré.
 
-[![CMDB-Explorer](../assets/images/en/basics/dashboard-and-widgets/3-daw.png)](../assets/images/en/basics/dashboard-and-widgets/3-daw.png)
+[![Explorateur CMDB](../assets/images/en/basics/dashboard-and-widgets/3-daw.png)](../assets/images/en/basics/dashboard-and-widgets/3-daw.png)
 
-### Signed-in Users
+### Utilisateurs Connectés
 
-A list of all users who are signed in is displayed.
+Une liste de tous les utilisateurs connectés est affichée.
 
-[![Signed-in Users](../assets/images/en/basics/dashboard-and-widgets/4-daw.png)](../assets/images/en/basics/dashboard-and-widgets/4-daw.png)
+[![Utilisateurs Connectés](../assets/images/en/basics/dashboard-and-widgets/4-daw.png)](../assets/images/en/basics/dashboard-and-widgets/4-daw.png)
 
-### Calendar
+### Calendrier
 
-The calendar widget marks fixed dates or events in bold letters. For this purpose, a check has to be set via the pencil so that object dates, such as the status planning, are considered. It is mandatory to have the role of  “administrator” for that particular object with a planned status, so that the calendar entry will be shown.
+Le widget calendrier marque les dates fixes ou les événements en caractères gras. À cette fin, une vérification doit être effectuée via le crayon afin que les dates des objets, telles que la planification de l'état, soient prises en compte. Il est obligatoire d'avoir le rôle d' "administrateur" pour cet objet particulier avec un statut planifié, afin que l'entrée du calendrier soit affichée.
 
-[![Calendar](../assets/images/en/basics/dashboard-and-widgets/5-daw.png)](../assets/images/en/basics/dashboard-and-widgets/5-daw.png)
+[![Calendrier](../assets/images/en/basics/dashboard-and-widgets/5-daw.png)](../assets/images/en/basics/dashboard-and-widgets/5-daw.png)
 
-[![Calendar](../assets/images/en/basics/dashboard-and-widgets/6-daw.png)](../assets/images/en/basics/dashboard-and-widgets/6-daw.png)
+[![Calendrier](../assets/images/en/basics/dashboard-and-widgets/6-daw.png)](../assets/images/en/basics/dashboard-and-widgets/6-daw.png)
 
-As an alternative, you can define your own dates or events which are then displayed in the calendar via the widget settings.
+En alternative, vous pouvez définir vos propres dates ou événements qui seront ensuite affichés dans le calendrier via les paramètres du widget.
 
-[![Calendar](../assets/images/en/basics/dashboard-and-widgets/7-daw.png)](../assets/images/en/basics/dashboard-and-widgets/7-daw.png)
+[![Calendrier](../assets/images/en/basics/dashboard-and-widgets/7-daw.png)](../assets/images/en/basics/dashboard-and-widgets/7-daw.png)
 
-### Bookmarks
+### Signets
 
-The bookmark widget allows you to set custom bookmarks for all kinds of addresses.
+Le widget de signets vous permet de définir des signets personnalisés pour toutes sortes d'adresses.
 
-[![Bookmarks](../assets/images/en/basics/dashboard-and-widgets/8-daw.png)](../assets/images/en/basics/dashboard-and-widgets/8-daw.png)
+[![Signets](../assets/images/en/basics/dashboard-and-widgets/8-daw.png)](../assets/images/en/basics/dashboard-and-widgets/8-daw.png)
 
-You can add new links using the pencil.
+Vous pouvez ajouter de nouveaux liens en utilisant le crayon.
 
-[![Bookmarks](../assets/images/en/basics/dashboard-and-widgets/9-daw.png)](../assets/images/en/basics/dashboard-and-widgets/9-daw.png)
+[![Signets](../assets/images/en/basics/dashboard-and-widgets/9-daw.png)](../assets/images/en/basics/dashboard-and-widgets/9-daw.png)
 
-### License
+### Licence
 
-You can examine the current status of your i-doit license in the license widget. The description texts are displayed horizontally by default.
+Vous pouvez examiner l'état actuel de votre licence i-doit dans le widget de licence. Les textes des descriptions sont affichés horizontalement par défaut.
 
-[![License](../assets/images/en/basics/dashboard-and-widgets/10-daw.png)](../assets/images/en/basics/dashboard-and-widgets/10-daw.png)
+[![Licence](../assets/images/en/basics/dashboard-and-widgets/10-daw.png)](../assets/images/en/basics/dashboard-and-widgets/10-daw.png)
 
-A vertical display and a short version are selectable in the configuration which can be accessed via the pencil.
+Un affichage vertical et une version courte sont sélectionnables dans la configuration qui peut être accédée via le crayon.
 
 [![License](../assets/images/en/basics/dashboard-and-widgets/11-daw.png)](../assets/images/en/basics/dashboard-and-widgets/11-daw.png)
 
-The short version looks like this:
+La version courte ressemble à ceci :
 
 [![License](../assets/images/en/basics/dashboard-and-widgets/12-daw.png)](../assets/images/en/basics/dashboard-and-widgets/12-daw.png)
 
-### My Last Changed Objects
+### Mes derniers objets modifiés
 
-The objects last changed by the user who is signed in are displayed in this widget. The amount of shown objects can be configured using the pencil. The default value is 25.
+Les objets modifiés en dernier par l'utilisateur connecté sont affichés dans ce widget. Le nombre d'objets affichés peut être configuré en utilisant le crayon. La valeur par défaut est de 25.
 
-[![My Last Changed Objects](../assets/images/en/basics/dashboard-and-widgets/13-daw.png)](../assets/images/en/basics/dashboard-and-widgets/13-daw.png)
+[![Mes derniers objets modifiés](../assets/images/en/basics/dashboard-and-widgets/13-daw.png)](../assets/images/en/basics/dashboard-and-widgets/13-daw.png)
 
-  ### Monitoring: Vulnerable Hosts
+### Surveillance : Hôtes vulnérables
 
-This widget requires a connection to [Nagios](../automation-and-integration/network-monitoring/nagios.md) or [Checkmk](../i-doit-pro-add-ons/checkmk.md) and displays a view of vulnerable hosts. Via the pencil you can select the host which is to be displayed.
+Ce widget nécessite une connexion à [Nagios](../automation-and-integration/network-monitoring/nagios.md) ou [Checkmk](../i-doit-pro-add-ons/checkmk.md) et affiche une vue des hôtes vulnérables. Via le crayon, vous pouvez sélectionner l'hôte à afficher.
 
-### Notes
+### Notes {/examples}
 
-You can put all your text notes on your dashboard by using the notes widget.
+Vous pouvez mettre toutes vos notes textuelles sur votre tableau de bord en utilisant le widget de notes.
 
 [![Notes](../assets/images/en/basics/dashboard-and-widgets/14-daw.png)](../assets/images/en/basics/dashboard-and-widgets/14-daw.png)
 
-You can add or edit notes simply by **double-clicking**.
+Vous pouvez ajouter ou modifier des notes simplement en **double-cliquant**.
 
 [![Notes](../assets/images/en/basics/dashboard-and-widgets/15-daw.png)](../assets/images/en/basics/dashboard-and-widgets/15-daw.png)
 
-By using the pencil symbol you can set up the title, background and font color as well as edit the text.
+En utilisant le symbole de crayon, vous pouvez définir le titre, l'arrière-plan et la couleur de la police ainsi que modifier le texte.
 
 [![Notes](../assets/images/en/basics/dashboard-and-widgets/16-daw.png)](../assets/images/en/basics/dashboard-and-widgets/16-daw.png)
 
-### Object Info
+### Informations sur l'objet {/examples}
 
-The widget displays a standard set of information for up to three objects which are configured via the pencil.
+Le widget affiche un ensemble standard d'informations pour jusqu'à trois objets qui sont configurés via le crayon.
 
-[![Object Info](../assets/images/en/basics/dashboard-and-widgets/17-daw.png)](../assets/images/en/basics/dashboard-and-widgets/17-daw.png)
+[![Informations sur l'objet](../assets/images/en/basics/dashboard-and-widgets/17-daw.png)](../assets/images/en/basics/dashboard-and-widgets/17-daw.png)
 
-[![Object Info](../assets/images/en/basics/dashboard-and-widgets/18-daw.png)](../assets/images/en/basics/dashboard-and-widgets/18-daw.png)
+[![Informations sur l'objet](../assets/images/en/basics/dashboard-and-widgets/18-daw.png)](../assets/images/en/basics/dashboard-and-widgets/18-daw.png)
 
-### Object Information List
+### Liste des informations sur les objets
 
-You can select one or more objects via the object list using the pencil symbol and decide which [attributes](../glossary.md) are going to be displayed from the various [categories](../glossary.md).
+Vous pouvez sélectionner un ou plusieurs objets via la liste des objets en utilisant le symbole du crayon et décider quels [attributs](../glossary.md) seront affichés à partir des différentes [catégories](../glossary.md).
 
-[![Object Information List](../assets/images/en/basics/dashboard-and-widgets/19-daw.png)](../assets/images/en/basics/dashboard-and-widgets/19-daw.png)
+[![Liste des informations sur les objets](../assets/images/en/basics/dashboard-and-widgets/19-daw.png)](../assets/images/en/basics/dashboard-and-widgets/19-daw.png)
 
-[![Object Information List](../assets/images/en/basics/dashboard-and-widgets/20-daw.png)](../assets/images/en/basics/dashboard-and-widgets/20-daw.png)
+[![Liste des informations sur les objets](../assets/images/en/basics/dashboard-and-widgets/20-daw.png)](../assets/images/en/basics/dashboard-and-widgets/20-daw.png)
 
-### Quicklaunch
+### Lancement rapide
 
-This widget is a compilation of frequently needed features.
+Ce widget est une compilation des fonctionnalités fréquemment nécessaires.
 
-[![Quicklaunch](../assets/images/en/basics/dashboard-and-widgets/21-daw.png)](../assets/images/en/basics/dashboard-and-widgets/21-daw.png)
+[![Lancement rapide](../assets/images/en/basics/dashboard-and-widgets/21-daw.png)](../assets/images/en/basics/dashboard-and-widgets/21-daw.png)
 
-### Calculator
+### Calculatrice
 
-If you wish to calculate the performance, the bandwidth, a RAID or storage capacity, then the calculator widget will be a fitting tool for your dashboard.
+Si vous souhaitez calculer les performances, la bande passante, un RAID ou la capacité de stockage, alors le widget de calculatrice sera un outil adapté pour votre tableau de bord.
 
-[![Calculator](../assets/images/en/basics/dashboard-and-widgets/22-daw.png)](../assets/images/en/basics/dashboard-and-widgets/22-daw.png)
+[![Calculatrice](../assets/images/en/basics/dashboard-and-widgets/22-daw.png)](../assets/images/en/basics/dashboard-and-widgets/22-daw.png)
 
-### Report
+### Rapport
 
-Reports of any kind can be viewed in the report widget.
+Les rapports de tout type peuvent être consultés dans le widget de rapport.
 
-[![Report](../assets/images/en/basics/dashboard-and-widgets/23-daw.png)](../assets/images/en/basics/dashboard-and-widgets/23-daw.png)
+[![Rapport](../assets/images/en/basics/dashboard-and-widgets/23-daw.png)](../assets/images/en/basics/dashboard-and-widgets/23-daw.png)
 
-Using the pencil, you can select a report and set limits. A restriction can benefit the performance of the dashboard.
+En utilisant le crayon, vous pouvez sélectionner un rapport et définir des limites. Une restriction peut bénéficier aux performances du tableau de bord.
 
-[![Report](../assets/images/en/basics/dashboard-and-widgets/24-daw.png)](../assets/images/en/basics/dashboard-and-widgets/24-daw.png)
+[![Rapport](../assets/images/en/basics/dashboard-and-widgets/24-daw.png)](../assets/images/en/basics/dashboard-and-widgets/24-daw.png)
 
-### RSS-Feed
+### Flux RSS
 
-With the help of the RSS-feed widget you can integrate a feed into your dashboard.
+À l'aide du widget Flux RSS, vous pouvez intégrer un flux dans votre tableau de bord.
 
-[![RSS-Feed](../assets/images/en/basics/dashboard-and-widgets/25-daw.png)](../assets/images/en/basics/dashboard-and-widgets/25-daw.png)
+[![Flux RSS](../assets/images/en/basics/dashboard-and-widgets/25-daw.png)](../assets/images/en/basics/dashboard-and-widgets/25-daw.png)
 
-Via the pencil you can configure the address and the amount of displayed entries.
+Via le crayon, vous pouvez configurer l'adresse et la quantité d'entrées affichées.
 
-### Service Consistency Check
+### Vérification de la cohérence du service
 
-The consistency check examines the status of objects which are part of a service. Its purpose is to find a status among those objects which might threaten the status of the service. In our example, the objects are all in the CMDB status “stored”, which is why the superordinated service might be threatened.
+La vérification de la cohérence examine l'état des objets qui font partie d'un service. Son but est de trouver un état parmi ces objets qui pourrait menacer l'état du service. Dans notre exemple, les objets sont tous dans l'état CMDB "stocké", c'est pourquoi le service supérieur pourrait être menacé.
 
 !!! attention "Performance"
 
-    Please note that the performance of the dashboard may be negatively affected in case of many services and documented relationships.
+    Veuillez noter que les performances du tableau de bord peuvent être affectées négativement en cas de nombreux services et de relations documentées.
 
 [![Performance](../assets/images/en/basics/dashboard-and-widgets/26-daw.png)](../assets/images/en/basics/dashboard-and-widgets/26-daw.png)
 
-The consistent services can be shown in the configuration.
+Les services cohérents peuvent être affichés dans la configuration.
 
 [![Performance](../assets/images/en/basics/dashboard-and-widgets/27-daw.png)](../assets/images/en/basics/dashboard-and-widgets/27-daw.png)
 
-### Statistic: Chart
+### Statistique : Graphique
 
-The statistic chart examines the object types configured via the pencil and displays them in one of many different ways. In our example you can see a pie chart.
+Le graphique statistique examine les types d'objets configurés via le crayon et les affiche de différentes manières. Dans notre exemple, vous pouvez voir un diagramme circulaire.
 
-[![Statistic Chart](../assets/images/en/basics/dashboard-and-widgets/28-daw.png)](../assets/images/en/basics/dashboard-and-widgets/28-daw.png)
+[![Graphique Statistique](../assets/images/en/basics/dashboard-and-widgets/28-daw.png)](../assets/images/en/basics/dashboard-and-widgets/28-daw.png)
 
-[![Statistic Chart](../assets/images/en/basics/dashboard-and-widgets/29-daw.png)](../assets/images/en/basics/dashboard-and-widgets/29-daw.png)
+[![Graphique Statistique](../assets/images/en/basics/dashboard-and-widgets/29-daw.png)](../assets/images/en/basics/dashboard-and-widgets/29-daw.png)
 
-### Statistic: Tabular
+### Statistique : Tabulaire
 
-[![Statistic Tabular](../assets/images/en/basics/dashboard-and-widgets/30-daw.png)](../assets/images/en/basics/dashboard-and-widgets/30-daw.png)
+[![Tableau Statistique](../assets/images/en/basics/dashboard-and-widgets/30-daw.png)](../assets/images/en/basics/dashboard-and-widgets/30-daw.png)
 
-### Hints
+### Indices
 
-[![Hints](../assets/images/en/basics/dashboard-and-widgets/31-daw.png)](../assets/images/en/basics/dashboard-and-widgets/31-daw.png)
+[![Indices](../assets/images/en/basics/dashboard-and-widgets/31-daw.png)](../assets/images/en/basics/dashboard-and-widgets/31-daw.png){/*examples*/}
 
-### VIVA Reports
+### Rapports VIVA
 
-For these reports you have to install the VIVA module and need to document information groupings. An information grouping can be chosen via the pencil in the widget.
+Pour ces rapports, vous devez installer le module VIVA et documenter les regroupements d'informations. Un regroupement d'informations peut être choisi via le crayon dans le widget.
 
-[![VIVA Reports](../assets/images/en/basics/dashboard-and-widgets/32-daw.png)](../assets/images/en/basics/dashboard-and-widgets/32-daw.png)
+[![Rapports VIVA](../assets/images/en/basics/dashboard-and-widgets/32-daw.png)](../assets/images/en/basics/dashboard-and-widgets/32-daw.png){/*examples*/}
 
-### Web-Browser
+### Navigateur Web
 
-This widget is a browser within the browser.
+Ce widget est un navigateur dans le navigateur.
 
-[![Web-Browser](../assets/images/en/basics/dashboard-and-widgets/33-daw.png)](../assets/images/en/basics/dashboard-and-widgets/33-daw.png)
+[![Navigateur Web](../assets/images/en/basics/dashboard-and-widgets/33-daw.png)](../assets/images/en/basics/dashboard-and-widgets/33-daw.png){/*examples*/}
 
-Using the pencil you can add a headline to the widget and add an URL which will be opened upon loading the dashboard. You can also configure the height of the widget in order to display longer websites properly.
+En utilisant le crayon, vous pouvez ajouter un titre au widget et ajouter une URL qui sera ouverte lors du chargement du tableau de bord. Vous pouvez également configurer la hauteur du widget afin d'afficher correctement les sites Web plus longs.
 
-[![Web-Browser](../assets/images/en/basics/dashboard-and-widgets/34-daw.png)](../assets/images/en/basics/dashboard-and-widgets/34-daw.png)
+[![Navigateur Web](../assets/images/en/basics/dashboard-and-widgets/34-daw.png)](../assets/images/en/basics/dashboard-and-widgets/34-daw.png){/*examples*/}
 
-### Welcome Widget
+### Widget de Bienvenue {/examples}
 
-This widget welcomes you depending on how it was configured via the pencil. It provides useful information regarding the design of the dashboard. Here it is easy to see how the widgets will be arranged on the dashboard after adding them.
+Ce widget vous accueille en fonction de la façon dont il a été configuré via le crayon. Il fournit des informations utiles concernant la conception du tableau de bord. Ici, il est facile de voir comment les widgets seront disposés sur le tableau de bord après les avoir ajoutés.
 
-[![Welcome Widget](../assets/images/en/basics/dashboard-and-widgets/35-daw.png)](../assets/images/en/basics/dashboard-and-widgets/35-daw.png)
+[![Widget de Bienvenue](../assets/images/en/basics/dashboard-and-widgets/35-daw.png)](../assets/images/en/basics/dashboard-and-widgets/35-daw.png)
 
-[![Welcome Widget](../assets/images/en/basics/dashboard-and-widgets/36-daw.png)](../assets/images/en/basics/dashboard-and-widgets/36-daw.png)
+[![Widget de Bienvenue](../assets/images/en/basics/dashboard-and-widgets/36-daw.png)](../assets/images/en/basics/dashboard-and-widgets/36-daw.png)

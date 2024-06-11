@@ -1,100 +1,99 @@
-# Changelog 23
+# Journal des modifications 23
 
-[Task][Categories]               Change database field type for description fields from TEXT to LONGTEXT  
-[Task][Code (Internal)]          Rename "Possible next termination date" to "Last possible termination date"  
-[Improvement][CMDB]              Allow SVG as object image and icon  
-[Improvement][CMDB]              Create placeholder for the 24h format  
-[Improvement][Code (Internal)]   Translation of custom content  
-[Improvement][Relations]         Option to set spacing for menu trees  
-[Improvement][CSV Import]        Make proper use of profiles in CSV import command  
-[Improvement][Categories]        Automatically extend contract runtime  
-[Bug][Lists]                     Filter for Net Zone is not available in the list view  
-[Bug][Lists]                     Wiring system missing in servers list view configuration  
-[Bug][Lists]                     Assigned objects is missing in list view configuration  
-[Bug][Lists]                     Text in list overview is cut off for multi-value fields  
-[Bug][JDisc]                     JDisc import always sets the DNS server and this is logged in the logbook  
-[Bug][JDisc]                     JDisc Discovery does not work with HTTP/HTTPS  
-[Bug][JDisc]                     DBMS and Instance Name are not deleted correctly  
-[Bug][JDisc]                     JDisc import error when "Use simple database modelling?" is activated  
-[Bug][JDisc]                     JDisc import via console removes categories and other configurations  
-[Bug][JDisc]                     JDisc Profile is not saved with default JDisc Server after creating a JDisc Server entry  
-[Bug][List editing]              Port allocation is deleted when saving in list edit  
-[Bug][List editing]              Creating a new value for model in list edit causes error  
-[Bug][List editing]              Default VLAN in list edit not selectable  
-[Bug][List editing]              Contact assignment does not work for empty values in list edit  
-[Bug][List editing]              List edit - Headquarters are not displayed for Organizations  
-[Bug][Code (Internal)]           Deny access to .ini files  
-[Bug][Code (Internal)]           Fixing config.inc.php content  
-[Bug][Code (Internal)]           Filter a numeric ID in the object list fails - PHP 8.1  
-[Bug][Code (Internal)]           After typing 3 characters the focus of the object browser search is changed to the filter  
-[Bug][Code (Internal)]           Allow opening link in new Tab for HTML Field  
-[Bug][Code (Internal)]           Wrong icon for export in quick configuration wizard  
-[Bug][Code (Internal)]           Attachments in racks are not working correctly  
-[Bug][Code (Internal)]           Switching to location view with a huge amount of objects and locations freezes i-doit  
-[Bug][Code (Internal)]           Saving Trouble Ticket System (TTS) configuration does not display a save message  
-[Bug][Code (Internal)]           Uploading custom object images and icons is not possible  
-[Bug][Code (Internal)]           Fix IP calculation for PHP 8+  
-[Bug][Code (Internal)]           Saving the 'General' category will always show empty 'creation date' and 'last change' change in logbook  
-[Bug][Code (Internal)]           PHP 8.1 error when add-on is disabled  
-[Bug][Code (Internal)]           Objects with empty location category are displayed in location tree  
-[Bug][Object type configuration] Specific object type categories are missing in selection  
-[Bug][Object type configuration] Icons for objects are not uploaded  
-[Bug][Object type configuration] Can't upload .svg for object type icon  
-[Bug][Report-Manager]            Report Manager using wrong date format which displays wrong results  
-[Bug][Report-Manager]            Conditions might not be loaded correctly in the report manager  
-[Bug][Report-Manager]            A Net zone is not selectable for the Report Manager in a updated i-doit installation  
-[Bug][Report-Manager]            Runtime of a contract is not shown in report results  
-[Bug][Report-Manager]            No information about active sorting in report manager  
-[Bug][Report-Manager]            Report Manager - Conditions are deleted when using one condition block  
-[Bug][Report-Manager]            Different export of a report if a dynamic attribute was added in the report  
-[Bug][Report-Manager]            Report Logbook is missing colors  
-[Bug][LDAP]                      If the ldap-sync can not find a User in the search path a php fatal error occurs with php8.0  
-[Bug][LDAP]                      The LDAP Sync does not log in the loogbok when a Person is recycled  
-[Bug][LDAP]                      Each ldap-sync generates an object was archived message in the logbook  
-[Bug][LDAP]                      The ldap-sync resulted in an error  
-[Bug][LDAP]                      500 Error with SSO login  
-[Bug][Installation]              The variable passwords_encryption_method is set to %config.security.passwords_encryption_method% after installation  
-[Bug][CSV Import]                Import of CMDB status via CSV import over console creates new CMDB status instead of using the correct one  
-[Bug][CSV Import]                CSV Import Profile with console.php does not handle multi value category setting  
-[Bug][CSV Import]                Import of vertically assigned objects into a rack via CSV import not possible  
-[Bug][CSV Import]                DateTime fields are not importable via CSV  
-[Bug][CSV Import]                Imported CMDB Status via CSV are not displayed in the CMDB Settings > CMDB status  
-[Bug][CSV Import]                CSV Import does not use automatic inventory number  
-[Bug][CSV Import]                CSV import cache is not flushed before import via console.php  
-[Bug][CSV Import]                If the --csvSeparator option is not used for the import-csv command "CSV-File empty" is displayed  
-[Bug][QR-Codes]                  QR-Code not loading when using a load balancer  
-[Bug][QR-Codes]                  Layout of QR-Codes in report view is irregular  
-[Bug][Categories]                Using quickpurge for application>installations causes error  
-[Bug][Categories]                Error when archiving service assignment  
-[Bug][Categories]                Can't hide objectid  
-[Bug][Categories]                SQL Error when deleting assigned objects in organizations  
-[Bug][Categories]                SQL Error when archiving assigned user  
-[Bug][Categories]                IP addresses are sometimes cut in ip lists  
-[Bug][H-Inventory]               hinventory import error due to missing entries in constants cache  
-[Bug][Validation]                CSV Import validation for automatic inventory number  
-[Bug][Validation]                CSV-Import ignores validation rule "a regular expression"  
-[Bug][Validation]                Chosen fields do not get highlighted when validation fails  
-[Bug][Validation]                Show validation error to user if custom dialog+ field is required  
-[Bug][Validation]                It is not possible to Validate the category Assigned Workplaces  
-[Bug][Documents]                 Assigned objects not displayed in documents  
-[Bug][Documents]                 Error when using console.php documents export outisde of i-doit folder  
-[Bug][Admincenter]               No message if  a Add-on with requirement 1.19 is installed in a pre 1.19 Version  
-[Bug][Admincenter]               Assigned Object licenses are not counted in the Admin Center  
-[Bug][Admincenter]               Admin-Center Password reset throws exception when license missing for more than 30days  
-[Bug][CMDB-Explorer]             CMDB-Explorer can't export graph  
-[Bug][CMDB-Explorer]             The relationships are displayed upside down in a GraphML export of the CMDB Explorer  
-[Bug][Templates]                 Automatic inventory number not working for template  
-[Bug][Notifications]             Notifications for license expiration do not work correctly  
-[Bug][Application Redesign]      IP-List cut off when assigning an object  
-[Bug][CMDB]                      Can not hide some attributes in attribute visibility  
-[Bug][System tools]              Endless loading when checking mod_rewrite in system overview  
-[Bug][System settings]           If the System setting Placeholder in lists is below the needed chars the ID of the object is displayed  
-[Bug][Update]                    Authorization for Update via console.php not possible  
-[Bug][Update]                    Error message when editing Object Type Configuration  
-[Bug][Mass editing]              If a license > license key are assigned via the mass change the license key is duplicated  
-[Bug][Authorization system]      Right Categories in objects with assigned role in contact assignment are not awarded  
-[Bug][Custom categories]         Displaying 2 variable reports in overview does not work  
-[Bug][Import]                    Werden Objekte mit Checkmk 2 Add-on Daten via XML Exportiert und in einem Mandanten ohne das Add-on Importiert bricht der Import ab  
-[Bug][Monitoring]                Monitoring cannot be deactivated with the Active attribute  
-[Bug][API]                       The Parent entry of a dialog+ field can not identified by title  
-[Bug][API]                       Category Cabling Connectors > Assigned connector is a Array  
+[Task][Catégories]               Changer le type de champ de la base de données pour les champs de description de TEXT à LONGTEXT  
+[Task][Code (Interne)]          Renommer "Date de résiliation possible suivante" en "Dernière date de résiliation possible"  
+[Amélioration][CMDB]            Autoriser les fichiers SVG en tant qu'image et icône d'objet  
+[Amélioration][CMDB]            Créer un espace réservé pour le format 24h  
+[Amélioration][Code (Interne)]  Traduction de contenu personnalisé  
+[Amélioration][Relations]       Option pour définir l'espacement pour les arbres de menu  
+[Amélioration][Import CSV]      Faire un usage approprié des profils dans la commande d'importation CSV  
+[Amélioration][Catégories]      Étendre automatiquement la durée du contrat  
+[Bug][Listes]                   Le filtre pour la zone Net n'est pas disponible dans la vue de liste  
+[Bug][Listes]                   Système de câblage manquant dans la configuration de la vue de liste des serveurs  
+[Bug][Listes]                   Les objets assignés manquent dans la configuration de la vue de liste  
+[Bug][Listes]                   Le texte dans l'aperçu de la liste est tronqué pour les champs à valeurs multiples  
+[Bug][JDisc]                   L'importation JDisc définit toujours le serveur DNS et cela est enregistré dans le journal  
+[Bug][JDisc]                   La découverte JDisc ne fonctionne pas avec HTTP/HTTPS  
+[Bug][JDisc]                   Le nom du DBMS et de l'instance n'est pas supprimé correctement  
+[Bug][JDisc]                   Erreur d'importation JDisc lorsque "Utiliser une modélisation de base de données simple ?" est activé  
+[Bug][JDisc]                   L'importation JDisc via la console supprime les catégories et autres configurations  
+[Bug][JDisc]                   Le profil JDisc n'est pas enregistré avec le serveur JDisc par défaut après la création d'une entrée de serveur JDisc  
+[Bug][Édition de liste]         L'allocation de port est supprimée lors de l'enregistrement dans l'édition de liste  
+[Bug][Édition de liste]         Créer une nouvelle valeur pour le modèle dans l'édition de liste provoque une erreur  
+[Bug][Édition de liste]         Le VLAN par défaut dans l'édition de liste n'est pas sélectionnable  
+[Bug][Édition de liste]         L'attribution de contact ne fonctionne pas pour les valeurs vides dans l'édition de liste  
+[Bug][Édition de liste]         Édition de liste - Les sièges sociaux ne sont pas affichés pour les organisations  
+[Bug][Code (Interne)]          Interdire l'accès aux fichiers .ini  
+[Bug][Code (Interne)]          Correction du contenu de config.inc.php  
+[Bug][Code (Interne)]          Filtrer un ID numérique dans la liste d'objets échoue - PHP 8.1  
+[Bug][Code (Interne)]          Après avoir tapé 3 caractères, le focus de la recherche du navigateur d'objets est changé en filtre  
+[Bug][Code (Interne)]          Autoriser l'ouverture du lien dans un nouvel onglet pour le champ HTML  
+[Bug][Code (Interne)]          Mauvaise icône pour l'exportation dans l'assistant de configuration rapide  
+[Bug][Code (Interne)]          Les pièces jointes dans les racks ne fonctionnent pas correctement  
+[Bug][Code (Interne)]          Passer à la vue d'emplacement avec une énorme quantité d'objets et d'emplacements gèle i-doit  
+[Bug][Code (Interne)]          Enregistrer la configuration du système de tickets d'incident (TTS) ne affiche pas de message de sauvegarde  
+[Bug][Code (Interne)]          Il n'est pas possible de télécharger des images et des icônes d'objet personnalisées  
+[Bug][Code (Interne)]          Correction du calcul IP pour PHP 8+  
+[Bug][Code (Interne)]          Enregistrer la catégorie 'Général' affichera toujours des champs 'date de création' et 'dernière modification' vides dans le journal  
+[Bug][Code (Interne)]          Erreur PHP 8.1 lorsque l'extension est désactivée  
+[Bug][Code (Interne)]          Les objets avec une catégorie d'emplacement vide sont affichés dans l'arborescence des emplacements  
+[Bug][Configuration du type d'objet]  Les catégories spécifiques du type d'objet manquent dans la sélection  
+[Bug][Configuration du type d'objet]  Les icônes des objets ne sont pas téléchargées  
+[Bug][Configuration du type d'objet]  Impossible de télécharger .svg pour l'icône du type d'objet  
+[Bug][Gestionnaire de rapports]  Le gestionnaire de rapports utilise un mauvais format de date qui affiche de mauvais résultats  
+[Bug][Gestionnaire de rapports]  Les conditions pourraient ne pas être chargées correctement dans le gestionnaire de rapports  
+[Bug][Gestionnaire de rapports]  Une zone Net n'est pas sélectionnable pour le gestionnaire de rapports dans une installation i-doit mise à jour  
+[Bug][Gestionnaire de rapports]  La durée d'un contrat n'est pas affichée dans les résultats du rapport  
+[Bug][Gestionnaire de rapports]  Aucune information sur le tri actif dans le gestionnaire de rapports  
+[Bug][Gestionnaire de rapports]  Gestionnaire de rapports - Les conditions sont supprimées lors de l'utilisation d'un bloc de condition  
+[Bug][Gestionnaire de rapports]  Exportation différente d'un rapport si un attribut dynamique a été ajouté dans le rapport  
+[Bug][Gestionnaire de rapports]  Le journal des rapports ne contient pas de couleurs  
+[Bug][LDAP]                   Si la synchronisation ldap ne trouve pas un utilisateur dans le chemin de recherche une erreur fatale php se produit avec php8.0  
+[Bug][LDAP]                   La synchronisation LDAP ne se connecte pas au journal lorsque une personne est recyclée  
+[Bug][LDAP]                   Chaque synchronisation ldap génère un message d'objet archivé dans le journal  
+[Bug][LDAP]                   La synchronisation ldap a entraîné une erreur  
+[Bug][LDAP]                   Erreur 500 avec la connexion SSO  
+[Bug][Installation]           La méthode de chiffrement des mots de passe est définie sur %config.security.passwords_encryption_method% après l'installation  
+[Bug][Importation CSV]        L'importation de l'état CMDB via l'importation CSV via la console crée un nouvel état CMDB au lieu d'utiliser le bon  
+[Bug][Importation CSV]        Le profil d'importation CSV avec console.php ne gère pas le paramètre de catégorie à valeurs multiples  
+[Bug][Importation CSV]        Importation d'objets assignés verticalement dans un rack via l'importation CSV non possible  
+[Bug][Importation CSV]        Les champs DateTime ne sont pas importables via CSV  
+[Bug][Importation CSV]        Les statuts CMDB importés via CSV ne sont pas affichés dans Paramètres CMDB > Statut CMDB  
+[Bug][Importation CSV]        L'importation CSV n'utilise pas le numéro d'inventaire automatique  
+[Bug][Importation CSV]        Le cache d'importation CSV n'est pas vidé avant l'importation via console.php  
+[Bug][Importation CSV]        Si l'option --csvSeparator n'est pas utilisée pour la commande d'importation-csv "Fichier CSV vide" est affiché  
+[Bug][Codes QR]               Le code QR ne se charge pas lors de l'utilisation d'un répartiteur de charge  
+[Bug][Codes QR]               La mise en page des codes QR dans la vue du rapport est irrégulière  
+[Bug][Catégories]             L'utilisation de quickpurge pour application>installations provoque une erreur  
+[Bug][Catégories]             Erreur lors de l'archivage de l'attribution de service  
+[Bug][Catégories]             Impossible de masquer l'objectid  
+[Bug][Catégories]             Erreur SQL lors de la suppression des objets assignés dans les organisations  
+[Bug][Catégories]             Les adresses IP sont parfois tronquées dans les listes IP  
+[Bug][H-Inventory]            Erreur d'importation d'inventaire en raison d'entrées manquantes dans le cache des constantes  
+[Bug][Validation]             Validation de l'importation CSV pour le numéro d'inventaire automatique  
+[Bug][Validation]             L'importation CSV ignore la règle de validation "une expression régulière"  
+[Bug][Validation]             Les champs choisis ne sont pas mis en surbrillance lorsque la validation échoue  
+[Bug][Validation]             Afficher l'erreur de validation à l'utilisateur si le champ de dialogue personnalisé+ est requis  
+[Bug][Validation]             Il n'est pas possible de valider la catégorie Lieux de travail assignés  
+[Bug][Documents]              Les objets assignés ne sont pas affichés dans les documents  
+[Bug][Documents]              Erreur lors de l'exportation de documents console.php en dehors du dossier i-doit  
+[Bug][Centre d'administration]  Aucun message si un module complémentaire avec une exigence 1.19 est installé dans une version antérieure à 1.19  
+[Bug][Centre d'administration]  Les licences d'objets assignés ne sont pas comptabilisées dans le Centre d'administration  
+[Bug][Centre d'administration]  La réinitialisation du mot de passe du Centre d'administration lance une exception lorsque la licence est manquante depuis plus de 30 jours  
+[Bug][Explorateur CMDB]        L'explorateur CMDB ne peut pas exporter le graphique  
+[Bug][Explorateur CMDB]        Les relations sont affichées à l'envers dans une exportation GraphML de l'explorateur CMDB  
+[Bug][Modèles]                Le numéro d'inventaire automatique ne fonctionne pas pour le modèle  
+[Bug][Notifications]          Les notifications d'expiration de licence ne fonctionnent pas correctement  
+[Bug][Refonte de l'application]  Liste IP tronquée lors de l'attribution d'un objet  
+[Bug][CMDB]                  Impossible de masquer certains attributs dans la visibilité des attributs  
+[Bug][Outils système]         Chargement infini lors de la vérification de mod_rewrite dans l'aperçu du système  
+[Bug][Paramètres système]     Si le paramètre système Placeholder dans les listes est inférieur au nombre de caractères requis, l'ID de l'objet est affiché  
+[Bug][Mise à jour]            Autorisation pour la mise à jour via console.php non possible  
+[Bug][Mise à jour]            Message d'erreur lors de la modification de la configuration du type d'objet  
+[Bug][Édition de masse]       Si une licence > clé de licence est attribuée via le changement de masse, la clé de licence est dupliquée  
+[Bug][Système d'autorisation]  Les bonnes catégories dans les objets avec un rôle assigné dans l'attribution de contact ne sont pas attribuées  
+[Bug][Catégories personnalisées]  L'affichage de 2 rapports variables dans l'aperçu ne fonctionne pas  
+[Bug][Importation]            Objets avec Checkmk 2 Add-on données exportées via XML et importées dans un client sans l'Add-on provoquent une erreur d'importation  
+[Bug][Surveillance]           La surveillance ne peut pas être désactivée avec l'attribut Actif  
+[Bug][API]                    L'entrée parent d'un champ de dialogue+ ne peut pas être identifiée par le titre  
+[Bug][API]                    Catégorie Connecteurs de câblage > Le connecteur assigné est un tableau  

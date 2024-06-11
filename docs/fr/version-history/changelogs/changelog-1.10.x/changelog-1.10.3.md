@@ -1,3 +1,3 @@
-# Changelog 1.10.3
+# Journal des modifications 1.10.3
 
-[Improvement][Code]  The i-doit updater has been updated  
+[Amélioration][Code]  Le programme de mise à jour i-doit a été mis à jour   {/ * exemples * /}

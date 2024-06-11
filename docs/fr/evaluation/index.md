@@ -1,11 +1,11 @@
-# Evaluation
+# Évaluation {/evaluation}
 
-Documenting with _i-doit_ is not meant as an end in itself. In the following articles we will show what kind of information can be gathered from the data and how this information can be presented in various ways:
+Documenter avec _i-doit_ n'est pas une fin en soi. Dans les articles suivants, nous montrerons quel type d'informations peut être recueilli à partir des données et comment ces informations peuvent être présentées de différentes manières :
 
-*   [Report Manager](./report-manager.md)
-*   [Variable Reports](./variable-reports.md)
+*   [Gestionnaire de rapports](./report-manager.md)
+*   [Rapports variables](./variable-reports.md)
 *   [Notifications](./notifications.md)
-*   [CMDB Explorer](./cmdb-explorer/index.md)
-*   [i-doit QR-Code Printer](./../i-doit-pro-add-ons/i-doit-qr-code-printer.md)
-*   [Rack View](./rack-view.md)
-*   [IP List](./ip-list.md)
+*   [Explorateur CMDB](./cmdb-explorer/index.md)
+*   [Imprimante de codes QR i-doit](./../i-doit-pro-add-ons/i-doit-qr-code-printer.md)
+*   [Vue en rack](./rack-view.md)
+*   [Liste IP](./ip-list.md)

@@ -1,77 +1,77 @@
-# Migration of an Installation under GNU/Linux
+# Migration d'une Installation sous GNU/Linux
 
-This article focuses on the general procedure to migrate an i-doit installation from one GNU/Linux to another one. The migration includes databases as well as files and directories.
+Cet article se concentre sur la procédure générale pour migrer une installation i-doit d'un GNU/Linux à un autre. La migration inclut les bases de données ainsi que les fichiers et répertoires.
 
-## Preparation and Assumptions
+## Préparation et Hypothèses
 
-!!! warning "Both systems have to be on the same i-doit version"
+!!! warning "Les deux systèmes doivent être sur la même version d'i-doit"
 
-You have to observe a few things to guarantee a smooth migration:
+Vous devez observer quelques points pour garantir une migration sans problème :
 
-1. i-doit and optional [add-ons](../i-doit-pro-add-ons/index.md) should be [up to date](../maintenance-and-operation/update.md).
-2. No changes should be made to the old system, so that we are able to return quickly to the original status when trouble strikes.
-3. The commands shown here apply to a current Debian GNU/Linux and should be modified in correspondence with the environment. Avoid a blind approach regarding the execution of commands.
+1. i-doit et les [modules complémentaires](../i-doit-pro-add-ons/index.md) optionnels doivent être [à jour](../maintenance-and-operation/update.md).
+2. Aucun changement ne doit être apporté au système ancien, afin que nous puissions rapidement revenir à l'état d'origine en cas de problème.
+3. Les commandes présentées ici s'appliquent à un Debian GNU/Linux actuel et doivent être modifiées en fonction de l'environnement. Évitez une approche aveugle concernant l'exécution des commandes.
 
-## Preparation of the New System
+## Préparation du Nouveau Système
 
-First of all, it is necessary to prepare the new systems as far as possible by observing the following:
+Tout d'abord, il est nécessaire de préparer les nouveaux systèmes autant que possible en observant ce qui suit :
 
-1. The new operating system meets the [system requirements](../installation/system-requirements.md) and is up to date.
-2. The [system settings](../installation/manual-installation/system-settings.md) have been configured on the new operating system.
-3. The usual [security measures](../maintenance-and-operation/security-and-protection.md) have been carried out.
+1. Le nouveau système d'exploitation répond aux [exigences du système](../installation/system-requirements.md) et est à jour.
+2. Les [paramètres du système](../installation/manual-installation/system-settings.md) ont été configurés sur le nouveau système d'exploitation.
+3. Les [mesures de sécurité](../maintenance-and-operation/security-and-protection.md) habituelles ont été effectuées.
 
-## Closing Down the Old System
+## Fermeture de l'Ancien Système {/fermeture-ancien-systeme}
 
-The old system should not be used productively during the migration process anymore:
+L'ancien système ne doit plus être utilisé de manière productive pendant le processus de migration :
 
-1. Of course, down times are annoying, especially when users do not expect it. Therefore you should inform i-doit users about the upcoming migration of the installation and about the approximate length of downtime.
-2. You should deactivate [automated access of third-party systems](../automation-and-integration/index.md).
-3. Also [cronjobs](../automation-and-integration/cli/index.md) should be deactivated. In most cases, it is sufficient to comment out the command lines.
-4. After the above mentioned points have been completed, you should stop the Apache Webserver:
+1. Bien sûr, les temps d'arrêt sont ennuyeux, surtout lorsque les utilisateurs ne s'y attendent pas. Par conséquent, vous devriez informer les utilisateurs d'i-doit de la migration imminente de l'installation et de la durée approximative de l'arrêt.
+2. Vous devriez désactiver l'[accès automatisé des systèmes tiers](../automation-and-integration/index.md).
+3. Les [tâches cron](../automation-and-integration/cli/index.md) devraient également être désactivées. Dans la plupart des cas, il suffit de commenter les lignes de commande.
+4. Après que les points mentionnés ci-dessus ont été complétés, vous devriez arrêter le serveur Web Apache :
 
         sudo systemctl stop apache2.service
 
-## Migration of Files and Directories
+## Migration des Fichiers et Répertoires {/migration-fichiers-repertoires}
 
-1. We copy the complete i-doit installation directory from the old system to the new system. In many cases, the directory is located under /var/www/html/. Here is an example with SSH, where i-doit can be found in the directory /var/www/html/i-doit/.
+1. Nous copions l'intégralité du répertoire d'installation d'i-doit de l'ancien système vers le nouveau système. Dans de nombreux cas, le répertoire est situé sous /var/www/html/. Voici un exemple avec SSH, où i-doit peut être trouvé dans le répertoire /var/www/html/i-doit/.
 
         scp -r user@oldsystem:/var/www/html/i-doit/ /tmp/
         scp -r /tmp/i-doit/ user@newsystem:/tmp/
         ssh user@newsystem
         sudo -u www-data cp -r /tmp/i-doit/ /var/www/html/
 
-2. After the copying process you should ensure that the file system permissions are set correctly. The Apache webserver requires read and write permissions for the complete installation directory. In the "[Setup](../installation/manual-installation/setup.md)" article you can find additional tips. Example:
+2. Après le processus de copie, vous devez vous assurer que les autorisations du système de fichiers sont correctement définies. Le serveur web Apache nécessite des autorisations de lecture et d'écriture pour le répertoire d'installation complet. Dans l'article "[Configuration](../installation/manual-installation/setup.md)" vous pouvez trouver des conseils supplémentaires. Exemple :
 
         cd /var/www/html/i-doit/
         sudo chown www-data:www-data -R .
         sudo find . -type d -name \* -exec chmod 775 {} \;
         sudo find . -type f -exec chmod 664 {} \;
 
-3. i-doit stores internal caches under the temp/ directory. The contents should be removed completely. The caches are created automatically with the first use of i-doit:
+3. i-doit stocke des caches internes sous le répertoire temp/. Le contenu doit être complètement supprimé. Les caches sont créés automatiquement lors de la première utilisation de i-doit :
 
         sudo rm -r temp/*
 
-4. You should check if the .htaccess file was copied:
+4. Vous devriez vérifier si le fichier .htaccess a été copié :
 
         ls -lha /var/www/html/i-doit/.htaccess
 
-## Migration of Databases
+## Migration des bases de données
 
-1. i-doit requires at least two [databases](../software-development/database-model/index.md). You should create a dump of each database on the old system:
+1. i-doit nécessite au moins deux [bases de données](../software-development/database-model/index.md). Vous devriez créer une sauvegarde de chaque base de données sur l'ancien système :
 
         mysqldump -uroot -p idoit_system > /tmp/idoit_system.sql
         mysqldump -uroot -p idoit_data > /tmp/idoit_data.sql
 
-    \*If the database exists for a long time this error message might appear: "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". You can find the solution [HERE](../system-administration/troubleshooting/cant-create-table.md)
+    \*Si la base de données existe depuis longtemps, ce message d'erreur peut apparaître : "Impossible de créer la table \idoit\_data\.\table\_name\ (errno: 140 "Mauvaises options de création")". Vous pouvez trouver la solution [ICI](../system-administration/troubleshooting/cant-create-table.md){/*examples*/}
 
-2. We copy these dumps to the new system:
+2. Nous copions ces dumps vers le nouveau système :
 
         scp user@oldsystem:/tmp/idoit_system.sql /tmp/
         scp user@oldsystem:/tmp/idoit_data.sql /tmp/
         scp /tmp/idoit_system.sql user@newsystem:/tmp/
         scp /tmp/idoit_data.sql user@newsystem:/tmp/
 
-3. Then the dumps are imported to the new system:
+3. Ensuite, les dumps sont importés dans le nouveau système :
 
         mysql -uroot -p
         CREATE DATABASE idoit_system;
@@ -80,31 +80,41 @@ The old system should not be used productively during the migration process anym
         mysql -uroot -p idoit_system < /tmp/idoit_system.sql
         mysql -uroot -p idoit_data < /tmp/idoit_data.sql
 
-4. A MySQL user was created during the initial i-doit [setup](../installation/manual-installation/setup.md) (location: idoit). This user has to be available on the new system with identical permissions and identical password. For this purpose, we log in with the superuser of MySQL:
+4. Un utilisateur MySQL a été créé lors de la configuration initiale d'i-doit [setup](../installation/manual-installation/setup.md) (emplacement : idoit). Cet utilisateur doit être disponible sur le nouveau système avec des autorisations et un mot de passe identiques. Pour ce faire, nous nous connectons avec le superutilisateur de MySQL:
 
-        mysql -uroot -p
+```sql
+mysql -uroot -p
+```
 
-    Now we execute the required SQL commands:
+Nous exécutons maintenant les commandes SQL requises :
 
-        GRANT ALL PRIVILEGES ON idoit_system.* TO 'idoit'@'localhost' IDENTIFIED BY 'mypasswd';
-        GRANT ALL PRIVILEGES ON idoit_data.* TO 'idoit'@'localhost' IDENTIFIED BY 'mypasswd';
-        exit;
+```sql
+GRANT ALL PRIVILEGES ON idoit_system.* TO 'idoit'@'localhost' IDENTIFIED BY 'mypasswd';
+GRANT ALL PRIVILEGES ON idoit_data.* TO 'idoit'@'localhost' IDENTIFIED BY 'mypasswd';
+exit;
+```
 
-    We log in with this user for a test:
+Nous nous connectons avec cet utilisateur pour un test :
 
-        mysql -uidoit -p
+```sql
+mysql -uidoit -p
+```
 
-    In this context, we can also check the credentials of the tenant databases:
+Dans ce contexte, nous pouvons également vérifier les informations d'identification des bases de données du locataire :
 
-        SELECT * FROM idoit_system.isys_mandator;
-        exit;
+```sql
+SELECT * FROM idoit_system.isys_mandator;
+exit;
+```
 
-    The above password for the idoit user should be identical with the details in the file /var/www/html/i-doit/src/config.inc.php.
+Le mot de passe ci-dessus pour l'utilisateur idoit doit être identique aux détails du fichier /var/www/html/i-doit/src/config.inc.php.
 
-## Follow-up Work
+## Travail de Suivi
 
-1. Afterwards, you should adapt DNS entries, IP addresses, host names etc., so that i-doit can be accessed as usual.
-2. Now interfaces to third-party systems can be reactivated. The functions should be checked.
-3. Reactivate cronjobs and test them.
-4. Set up [backups](../maintenance-and-operation/backup-and-recovery/index.md) and test them.
-5. When the Web GUI reacts as usual and all data are available in i-doit, the migration was successful.
+1. Ensuite, vous devriez adapter les entrées DNS, les adresses IP, les noms d'hôtes, etc., afin que i-doit puisse être accessible comme d'habitude.
+2. Maintenant, les interfaces vers des systèmes tiers peuvent être réactivées. Les fonctions doivent être vérifiées.
+3. Réactivez les tâches cron et testez-les.
+4. Mettez en place des [sauvegardes](../maintenance-and-operation/backup-and-recovery/index.md) et testez-les.
+5. Lorsque l'interface Web réagit comme d'habitude et que toutes les données sont disponibles dans i-doit, la migration a été réussie.
+
+Please provide the Markdown content you would like me to translate into French.

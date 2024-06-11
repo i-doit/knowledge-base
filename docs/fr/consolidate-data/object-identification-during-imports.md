@@ -1,69 +1,73 @@
-# Object Identification during Imports
+# Identification d'objet lors des imports
 
-i-doit provides various data imports. Existing data in the [IT documentation](../glossary.md) can be updated with imports instead of generating (often) unnecessary redundancy. In order to achieve this, i-doit tries to identify existing [objects](../basics/structure-of-the-it-documentation.md) by means of various [attributes](../basics/structure-of-the-it-documentation.md).
+i-doit propose divers imports de données. Les données existantes dans la [documentation informatique](../glossary.md) peuvent être mises à jour avec des imports au lieu de générer (souvent) une redondance inutile. Afin d'atteindre cet objectif, i-doit tente d'identifier les [objets](../basics/structure-of-the-it-documentation.md) existants au moyen de divers [attributs](../basics/structure-of-the-it-documentation.md).
 
-## Data Imports Concerned
+## Imports de données concernés
 
-The following data imports are considered in this article:
+Les imports de données suivants sont pris en compte dans cet article :
 
-*   [CSV file import](./csv-data-import/index.md)
-*   [JDisc Discovery](jdisc-discovery.md)
+*   [Import de fichier CSV](./csv-data-import/index.md)
+*   [Découverte JDisc](jdisc-discovery.md)
 *   [h-inventory](h-inventory.md)
 
-Other data imports might have another way of proceeding.
+D'autres imports de données peuvent avoir une autre manière de procéder.
 
-## Approach
+## Approche
 
-The identification of objects is carried out in two steps:
+L'identification des objets se fait en deux étapes :
 
-1. The unambiguous attributes of the respective data sources have the highest priority:
+1. Les attributs non équivoques des sources de données respectives ont la priorité absolue :
 
-    CSV data import: _not applicable_<br>
-    JDisc: Device ID<br>
-    OCS Inventory NG: _not applicable_<br>
-    h-inventory: Serial number<br>
+    Import de données CSV : _non applicable_<br>
+    JDisc : ID de l'appareil<br>
+    OCS Inventory NG : _non applicable_<br>
+    h-inventory : Numéro de série<br>
 
-    With the first data import, these attributes are saved and can then be used as identification feature for following data imports. If these attributes are not available, step 2 follows.
+    Avec le premier import de données, ces attributs sont enregistrés et peuvent ensuite être utilisés comme caractéristique d'identification pour les imports de données suivants. Si ces attributs ne sont pas disponibles, l'étape 2 est suivie.
 
-2. A so-called object matching (see below) is carried out by means of profiles.
+2. Une soi-disant correspondance d'objets (voir ci-dessous) est effectuée au moyen de profils.
 
-## Creation of Profiles
+## Création de profils
 
-Some attributes are suitable to reference objects [unambiguously](../basics/unique-references.md). You can use this characteristic regarding the data import of third-party applications with similar unambiguity. To be prepared for various import cases you can create so-called object-matching profiles in i-doit which are to be observed during import. The central configuration is under **Administration → Interfaces / external data → Import → Object-matching profiles**. You can create any number of profiles.
+Certains attributs sont adaptés pour référencer des objets [de manière univoque](../basics/unique-references.md). Vous pouvez utiliser cette caractéristique concernant l'importation de données d'applications tierces avec une similaire univocité. Pour être prêt pour divers cas d'importation, vous pouvez créer des profils de correspondance d'objets dans i-doit qui doivent être observés lors de l'importation. La configuration centrale se trouve sous **Administration → Interfaces / données externes → Importation → Profils de correspondance d'objets**. Vous pouvez créer un nombre illimité de profils.
 
 [![objidi-create-profiles](../assets/images/en/consolidate-data/object-identification-during-imports/1-oidi.png)](../assets/images/en/consolidate-data/object-identification-during-imports/1-oidi.png)
 
-The i-doit default installation already contains a profile named **Default** which mustn't be edited or deleted. With the **New** button you can create a new profile, with **Edit** you can edit a profile while **Purge** deletes a profile irrevocably.
+L'installation par défaut d'i-doit contient déjà un profil nommé **Par défaut** qui ne doit pas être modifié ou supprimé. Avec le bouton **Nouveau**, vous pouvez créer un nouveau profil, avec **Modifier** vous pouvez modifier un profil tandis que **Purger** supprime un profil de manière irrévocable. 
 
-Several details are required per profile:
+{ /* examples */ }
 
-*   **Name**: a meaningful description of the profile
-*   **Matchings**: Various attributes and other fields can be selected. With help of these attributes and fields already documented objects are searched and compared to the data to be imported. The order is irrelevant and cannot be changed.
-*   **Minimum Match**: During the matching process of data and objects to be imported in i-doit a check is carried out as to how many attributes of an object have to match. The selectable number follows the number of attributes under **Matchings**.
-*   **Filter für neue Objekte (JDISC)**:<br>**The New object filter option only affects NEW objects when importing JDiscs**. Exclude objects from import that do not have configured attributes. Possible attributes are host name, serial number, object title, MAC and IP address.
-*   **Minimale Filterübereinstimmung (JDISC)**:<br>Minimum number of missing attributes to ignore **NEW** import objects.
+Plusieurs détails sont requis par profil :
+
+*   **Nom** : une description significative du profil
+*   **Correspondances** : Divers attributs et autres champs peuvent être sélectionnés. À l'aide de ces attributs et champs, les objets déjà documentés sont recherchés et comparés aux données à importer. L'ordre est sans importance et ne peut être modifié.
+*   **Correspondance minimale** : Pendant le processus de correspondance des données et des objets à importer dans i-doit, une vérification est effectuée pour déterminer combien d'attributs d'un objet doivent correspondre. Le nombre sélectionnable suit le nombre d'attributs sous **Correspondances**.
+*   **Filtre pour les nouveaux objets (JDISC)** :<br>**L'option de filtre pour les nouveaux objets n'affecte que les NOUVEAUX objets lors de l'importation de JDiscs**. Exclure les objets de l'importation qui n'ont pas d'attributs configurés. Les attributs possibles sont le nom d'hôte, le numéro de série, le titre de l'objet, l'adresse MAC et IP.
+*   **Correspondance minimale de filtre (JDISC)** :<br>Nombre minimal d'attributs manquants à ignorer pour les objets d'importation **NOUVEAUX**.
 
 [![objidi-requirements](../assets/images/en/consolidate-data/object-identification-during-imports/2-oidi.png)](../assets/images/en/consolidate-data/object-identification-during-imports/2-oidi.png)
 
-## Possible Identifiers
+## Identifiants Possibles
 
-| Identifier               | Comments                                                                                                                                                                                                                                        | JDisc | CSV data import | OCS Inventory NG | h-inventory |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | --------------- | ---------------- | ----------- |
-| **IP address**           | Import of network-compatible device; see category **Host address**                                                                                                                                                                              | yes   | yes             | no               | no          |
-| **Username**             | Import of person; see category for **Persons → Login**, **Username** attribute                                                                                                                                                                  | no    | yes             | no               | no          |
-| **Object SYSID**         | See category **General**, **SYS-ID**attribute                                                                                                                                                                                                   | no    | yes             | no               | no          |
-| **IMEI number**          | See category **Mobile ratio**, **IMEI** attribute                                                                                                                                                                                               | no    | yes             | no               | no          |
-| **Serial number**        | See category **Modell**                                                                                                                                                                                                                         | yes   | yes             | yes              | yes         |
-| **Service tag**          | See category **Modell**                                                                                                                                                                                                                         | no    | yes             | no               | no          |
-| **Inventory number**     | See category **Accounting**, **Inventory number** attribute                                                                                                                                                                                     | no    | yes             | no               | no          |
-| **Location**             | See category **Location**                                                                                                                                                                                                                       | no    | yes             | no               | no          |
-| **Object type constant** | Object type has to match; see [custom object types](../basics/custom-object-types.md)                                                                                                                                                           | no    | yes             | yes              | no          |
-| **Object title**         | See category **General**, **Description** attribute                                                                                                                                                                                             | yes   | yes             | yes              | yes         |
-| **Object ID**            | See category **General**, **Object ID** attribute                                                                                                                                                                                               | no    | yes             | no               | no          |
-| **Hostname**             | Import of network-compatible device; see category for **Host address**                                                                                                                                                                          | yes   | yes             | yes              | yes         |
-| **E-mail address**       | See category for **E-mail address**                                                                                                                                                                                                             | no    | yes             | no               | no          |
-| **Room number**          | Import of room; see category **Room**                                                                                                                                                                                                           | no    | yes             | no               | no          |
-| **Host Alias**           | Import of network-compatible device; see category for **Host address**                                                                                                                                                                          | ja    | ja              | ja               | ja          |
-| **FQDN**                 | Import of network-compatible device; see category for **Host address**                                                                                                                                                                          | yes   | yes             | yes              | yes         |
-| **MAC**                  | Import of network-compatible device; see category **Network → Port**,  **MAC address** attribute                                                                                                                                                | yes   | yes             | yes              | yes         |
-| **LDAP DN**              | When persons are synchronized via [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md), i-doit saves the corresponding DN in the background. You can't see this attribute in i-doit but you can use it as an identification | no    | yes             | no               | no          |
+| Identifiant              | Commentaires                                                                                                                                                                                                                                   | JDisc | Importation de données CSV | OCS Inventory NG | h-inventory |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | -------------------------- | ---------------- | ----------- |
+| **Adresse IP**           | Importation d'un appareil compatible réseau ; voir la catégorie **Adresse hôte**                                                                                                                                                                | oui   | oui                        | non              | non         |
+| **Nom d'utilisateur**    | Importation d'une personne ; voir la catégorie pour **Personnes → Connexion**, attribut **Nom d'utilisateur**                                                                                                                                   | non   | oui                        | non              | non         |
+| **SYSID de l'objet**     | Voir la catégorie **Général**, attribut **SYS-ID**                                                                                                                                                                                              | non   | oui                        | non              | non         |
+| **Numéro IMEI**          | Voir la catégorie **Ratio mobile**, attribut **IMEI**                                                                                                                                                                                           | non   | oui                        | non              | non         |
+| **Numéro de série**      | Voir la catégorie **Modèle**                                                                                                                                                                                                                   | oui   | oui                        | oui              | oui         |
+| **Tag de service**       | Voir la catégorie **Modèle**                                                                                                                                                                                                                   | non   | oui                        | non              | non         |
+| **Numéro d'inventaire**  | Voir la catégorie **Comptabilité**, attribut **Numéro d'inventaire**                                                                                                                                                                            | non   | oui                        | non              | non         |
+| **Emplacement**          | Voir la catégorie **Emplacement**                                                                                                                                                                                                              | non   | oui                        | non              | non         |
+| **Constante de type d'objet** | Le type d'objet doit correspondre ; voir [types d'objets personnalisés](../basics/custom-object-types.md)                                                                                                                                      | non   | oui                        | oui              | non         |
+| **Titre de l'objet**     | Voir la catégorie **Général**, attribut **Description**                                                                                                                                                                                         | oui   | oui                        | oui              | oui         |
+| **ID de l'objet**        | Voir la catégorie **Général**, attribut **ID de l'objet**                                                                                                                                                                                        | non   | oui                        | non              | non         |
+| **Nom d'hôte**           | Importation d'un appareil compatible réseau ; voir la catégorie pour **Adresse hôte**                                                                                                                                                           | oui   | oui                        | oui              | oui         |
+| **Adresse e-mail**       | Voir la catégorie pour **Adresse e-mail**                                                                                                                                                                                                      | non   | oui                        | non              | non         |
+| **Numéro de salle**      | Importation de salle ; voir la catégorie **Salle**                                                                                                                                                                                              | non   | oui                        | non              | non         |
+| **Alias d'hôte**         | Importation d'un appareil compatible réseau ; voir la catégorie pour **Adresse hôte**                                                                                                                                                           | oui   | oui                        | oui              | oui         |
+| **FQDN**                 | Importation d'un appareil compatible réseau ; voir la catégorie pour **Adresse hôte**                                                                                                                                                           | oui   | oui                        | oui              | oui         |
+| **MAC**                  | Importation d'un appareil compatible réseau ; voir la catégorie **Réseau → Port**, attribut **Adresse MAC**                                                                                                                                     | oui   | oui                        | oui              | oui         |
+| **LDAP DN**              | Lorsque les personnes sont synchronisées via [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md), i-doit enregistre le DN correspondant en arrière-plan. Vous ne pouvez pas voir cet attribut dans i-doit, mais vous pouvez l'utiliser comme identification | non   | oui                        | non              | non         |
+
+Please provide the Markdown content you would like me to translate into French.

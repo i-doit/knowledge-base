@@ -1,26 +1,30 @@
-# Introduction to VIVA
+# Introduction à VIVA
 
-VIVA stands for availability, integrity, confidentiality, authenticity and is available as an [add-on](../index.md).
+VIVA signifie disponibilité, intégrité, confidentialité, authenticité et est disponible en tant que [extension](../index.md).
 
-As an essential part of an information security management system (ISMS), VIVA supports the documentation of all IT security-relevant processes. The documentation is considered the basis for achieving the goals set in standards such as ISO 27001 or IT-Grundschutz. With the help of VIVA, all data required for the procedure according to IT-Grundschutz and a risk analysis are recorded. Thanks to the structured, partially automated preparation of data, continuous quality analysis and comprehensive reporting, VIVA accompanies the procedure from the very beginning.
+En tant que partie essentielle d'un système de gestion de la sécurité de l'information (SMSI), VIVA soutient la documentation de tous les processus liés à la sécurité informatique. La documentation est considérée comme la base pour atteindre les objectifs fixés dans des normes telles que l'ISO 27001 ou l'IT-Grundschutz. Grâce à l'aide de VIVA, toutes les données requises pour la procédure selon l'IT-Grundschutz et une analyse des risques sont enregistrées. Grâce à la préparation structurée, partiellement automatisée des données, à l'analyse continue de la qualité et à la génération de rapports complets, VIVA accompagne la procédure dès le tout début.
 
-VIVA integrates seamlessly with i-doit pro. The focus is on the sensible reuse of data, which is only maintained in one place and always placed in the context of IT security. Much of this data can originate from discovery/inventory tools and LDAP/AD, minimizing the need for manual maintenance. The use of data for other areas such as monitoring, help desk, change management or reporting is also supported. Automatisms and wizards facilitate further work steps. VIVA is rounded off by extensive customizing and the management of several IT-Grundschutz catalogs, information networks and audits.
+VIVA s'intègre parfaitement avec i-doit pro. L'accent est mis sur la réutilisation judicieuse des données, qui ne sont maintenues qu'à un seul endroit et toujours placées dans le contexte de la sécurité informatique. Une grande partie de ces données peut provenir d'outils de découverte/inventaire et de LDAP/AD, réduisant ainsi le besoin de maintenance manuelle. L'utilisation des données pour d'autres domaines tels que la surveillance, le service d'assistance, la gestion des changements ou les rapports est également prise en charge. Des automatismes et des assistants facilitent les étapes de travail ultérieures. VIVA est complété par un paramétrage étendu et la gestion de plusieurs catalogues IT-Grundschutz, réseaux d'information et audits. 
 
-The following chapters provide a detailed insight into how VIVA works.
+{ /* examples */ }
+
+Les chapitres suivants fournissent un aperçu détaillé du fonctionnement de VIVA.
 
 IT-Grundschutz
 --------------
 
-The website of the German Federal Office for Information Security (BSI) provides a [detailed introduction to IT-Grundschutz](https://www.bsi.bund.de/EN/Home/home_node.html). There you will find all information about the BSI standards 100-x, the IT-Grundschutz catalogs and certifications according to ISO 27001 based on IT-Grundschutz.
+Le site Web du Bureau fédéral allemand de la sécurité de l'information (BSI) propose une [introduction détaillée à l'IT-Grundschutz](https://www.bsi.bund.de/EN/Home/home_node.html). Vous y trouverez toutes les informations sur les normes BSI 100-x, les catalogues IT-Grundschutz et les certifications selon l'ISO 27001 basées sur l'IT-Grundschutz.
 
-VIVA covers all topics from the two BSI standards 100-2 "Basic IT protection procedure" and 100-3 "Risk analysis based on basic IT protection". Which IT-Grundschutz catalogs are supported is described in the article Importing Catalogs.
+VIVA couvre tous les sujets des deux normes BSI 100-2 "Procédure de protection de base des TI" et 100-3 "Analyse des risques basée sur la protection de base des TI". Les catalogues IT-Grundschutz pris en charge sont décrits dans l'article Importation des catalogues.
 
-To whom this document is addressed
+À qui s'adresse ce document
 ----------------------------------
 
-The content of this document is aimed at those persons in an organization who are responsible for and/or oversee IT security. In our knowlede base, this role is consistently referred to as Security Manager. The secure handling of i-doit is assumed.
+Le contenu de ce document s'adresse aux personnes au sein d'une organisation qui sont responsables de la sécurité informatique et/ou en supervisent la mise en œuvre. Dans notre base de connaissances, ce rôle est systématiquement désigné sous le nom de Gestionnaire de sécurité. La manipulation sécurisée d'i-doit est supposée.
 
-Structure of this documentation
+Structure de cette documentation
 -------------------------------
 
-To make it easier to find your way around VIVA, the structure of the following chapters is described here. It is also explained which chapters are referenced in which BSI standard.
+Pour faciliter la navigation dans VIVA, la structure des chapitres suivants est décrite ici. Il est également expliqué quels chapitres sont référencés dans quelle norme BSI.
+
+

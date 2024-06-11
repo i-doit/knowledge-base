@@ -1,5 +1,5 @@
-# Data validation
+# Validation des données
 
-With this feature you can determine and administer mandatory fields. You can also specify extended content definitions for the respective mandatory fields.
+Avec cette fonctionnalité, vous pouvez déterminer et gérer les champs obligatoires. Vous pouvez également spécifier des définitions de contenu étendues pour les champs obligatoires respectifs.
 
-[![Data Validation](../../../assets/images/en/system-administration/administration/predefined-content/data-validation/1-dv.png)](../../../assets/images/en/system-administration/administration/predefined-content/data-validation/1-dv.png)
+[![Validation des données](../../../assets/images/en/system-administration/administration/predefined-content/data-validation/1-dv.png)](../../../assets/images/en/system-administration/administration/predefined-content/data-validation/1-dv.png) {/examples/}
