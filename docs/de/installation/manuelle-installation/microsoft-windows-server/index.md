@@ -288,7 +288,7 @@ Der Inhalt des Pakets ist wie folgt:
 -   windowsdesktop-runtime-6.0.14-win-x64.exe
 
 Das Installationspaket enthält immer die neueste [i-doit Version](../../../versionshistorie/index.md) sowie JDisc 5.0 und mehrere JDisc Add-ons. Auch der Ordner `src.zip` ermöglicht eine Installation ohne Internetverbindung.<br>
-Da der i-doit-Windows-Installer ==windowsdesktop-runtime-6.0.14== benötigt, wird dieser auch mitgeliefert, falls keine Internetverbindung vorhanden ist.
+Da der i-doit-Windows-Installer **windowsdesktop-runtime-6.0.14** benötigt, wird dieser auch mitgeliefert, falls keine Internetverbindung vorhanden ist.
 
 ### Installation
 
@@ -300,22 +300,22 @@ Nachdem Sie auf Installieren geklickt haben, werden alle erforderlichen Elemente
 
 Es werden die folgenden Inhalte installiert:
 
--   ==Apache 2.4==
--   ==PHP 8.X==
--   ==MariaDB 10.X==
--   ==i-doit==
--   ==JDisc 5.X==
--   ==JDisc JDisc Discovery Dependency Mapping 5.X(Add-on)==
--   ==JDisc Discovery Device History 5.X(Add-on)==
--   ==JDisc Discovery Measurement 5.X(Add-on)==
--   ==JDisc Discovery Measurement 5.X(Add-on)==
--   ==JDisc Discovery Security 5.X(Add-on)==
--   ==JDisc Discovery WEB UI 5.X(Add-on)==
+-   **Apache 2.4**
+-   **PHP 8.X**
+-   **MariaDB 10.X**
+-   **i-doit**
+-   **JDisc 5.X**
+-   **JDisc JDisc Discovery Dependency Mapping 5.X(Add-on)**
+-   **JDisc Discovery Device History 5.X(Add-on)**
+-   **JDisc Discovery Measurement 5.X(Add-on)**
+-   **JDisc Discovery Measurement 5.X(Add-on)**
+-   **JDisc Discovery Security 5.X(Add-on)**
+-   **JDisc Discovery WEB UI 5.X(Add-on)**
 
 !!! info "Wenn die Firewall aktiviert ist, werden Sie gefragt ob Sie der Software vertrauen"
 
-Nachdem die Installation erfolgreich war, erscheint eine kleines Fenster mit folgender Nachricht: "==i-doit Discovery wurde erfolgreich installiert.==".<br>
-Nachdem Sie ==OK== geklickt haben öffnet sich ein neues Fenster in Ihrem Browser in welchem die `localhost` URL automatisch geöffnet wird. Jetzt können Sie i-doit Discovery im vollen Umfang benutzen.
+Nachdem die Installation erfolgreich war, erscheint eine kleines Fenster mit folgender Nachricht: **"i-doit Discovery wurde erfolgreich installiert."**.<br>
+Nachdem Sie **OK** geklickt haben öffnet sich ein neues Fenster in Ihrem Browser in welchem die `localhost` URL automatisch geöffnet wird. Jetzt können Sie i-doit Discovery im vollen Umfang benutzen.
 
 !!! info "Wenn während der Installation ein Fehler auftreten sollte, wird im i-doit Discovery Ordner eine Log Datei erstellt."
 
@@ -323,13 +323,13 @@ Nachdem Sie ==OK== geklickt haben öffnet sich ein neues Fenster in Ihrem Browse
 
 Die Konfigurationsdateien von PHP, MariaDB oder Apache finden Sie in den folgenden Verzeichnissen:
 
--   ==PHP:==<br>
+-   **PHP:**<br>
     `C:\ProgramData\i-doit-discovery\php\php.ini`
 
--   ==MariaDB:==<br>
+-   **MariaDB:**<br>
     `C:\ProgramData\MariaDB\data\my.ini`
 
--   ==Apache:==<br>
+-   **Apache:**<br>
     `C:\ProgramData\i-doit-discovery\apache-2.4\conf\httpd.conf`
 
 ## Credentials
@@ -363,7 +363,7 @@ Anschließend wird MariaDB deinstalliert indem wir unter **Programme hinzufügen
 
 [![Deinstallieren MariaDB](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)
 
-Zusätzlich müssen JDisc und seine Add-ons unter ==Programme hinzufügen oder entfernen== entfernt werden.
+Zusätzlich müssen JDisc und seine Add-ons unter **Programme hinzufügen oder entfernen** entfernt werden.
 
 !!! warning "Die JDisc Add-ons müssen vor JDisc deinstalliert werden!"
 
