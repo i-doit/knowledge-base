@@ -11,7 +11,7 @@ The contents of the package are as follows:
 -   windowsdesktop-runtime-6.0.14-win-x64.exe
 
 The installation package will always include the latest [i-doit version](../../../version-history/index.md). Also the `src.zip` folder allows for an installation without internet connection.<br>
-Since the i-doit Windows installer requires ==windowsdesktop-runtime-6.0.14==, this is also provided in case there is no internet connection available.
+Since the i-doit Windows installer requires **windowsdesktop-runtime-6.0.14**, this is also provided in case there is no internet connection available.
 
 ## i-doit Windows installation
 
@@ -23,15 +23,15 @@ After clicking Install, all the required items will be installed in the backgrou
 
 The following will be installed:
 
--   ==Apache 2.4==
--   ==PHP 8.X==
--   ==MariaDB 10.X==
--   ==i-doit==
+-   **Apache 2.4**
+-   **PHP 8.X**
+-   **MariaDB 10.X**
+-   **i-doit**
 
 !!! info "If the Windows Firewall is activated, you will be asked if want to trust the application"
 
-If the installation was successful, a small window with the message "==i-doit has been installed successfully.==" will display.<br>
-After clicking ==OK== a new browser tab with the `localhost` URL will be opened automatically and you can use i-doit to the full extent.
+If the installation was successful, a small window with the message **"i-doit has been installed successfully."** will display.<br>
+After clicking **OK** a new browser tab with the `localhost` URL will be opened automatically and you can use i-doit to the full extent.
 
 !!! info "If an error occurred during the installation, a log file is automatically created in the i-doit folder"
 
@@ -39,13 +39,13 @@ After clicking ==OK== a new browser tab with the `localhost` URL will be opened 
 
 To configure PHP, MariaDB or Apache, you can find the respective config files in the following directories:
 
--   ==PHP:==<br>
+-   **PHP:**
     `C:\ProgramData\i-doit\php\php.ini`
 
--   ==MariaDB:==<br>
+-   **MariaDB:**
     `C:\ProgramData\MariaDB\data\my.ini`
 
--   ==Apache:==<br>
+-   **Apache:**
     `C:\ProgramData\i-doit\apache-2.4\conf\httpd.conf`
 
 ### Credentials
@@ -268,7 +268,7 @@ Once the Apache2 service is stopped, Apache2 can be uninstalled:
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
-Afterwards MariaDB is uninstalled by removing MariaDB under ==Add or Remove Programs==.
+Afterwards MariaDB is uninstalled by removing MariaDB under **Add or Remove Programs**.
 
 [![Uninstall MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
 
@@ -289,9 +289,9 @@ The contents of the package are as follows:
 -   windowsdesktop-runtime-6.0.14-win-x64.exe
 
 The installation package will always include the latest [i-doit version](../../../version-history/index.md) as well as JDisc 5.0 and multiple JDisc add-ons. Also the `src.zip` folder allows for an installation without internet connection.<br>
-Since the i-doit Windows installer requires ==windowsdesktop-runtime-6.0.14==, this is also provided in case there is no internet connection available.
+Since the i-doit Windows installer requires **windowsdesktop-runtime-6.0.14**, this is also provided in case there is no internet connection available.
 
-### installation
+### Installation
 
 After running the `i-doit Discovery Installer.exe` you will see the following GUI:
 
@@ -301,22 +301,22 @@ After clicking Install, all the required items will be installed in the backgrou
 
 The following will be installed:
 
--   ==Apache 2.4==
--   ==PHP 8.X==
--   ==MariaDB 10.X==
--   ==i-doit==
--   ==JDisc 5.X==
--   ==JDisc JDisc Discovery Dependency Mapping 5.X(Add-on)==
--   ==JDisc Discovery Device History 5.X(Add-on)==
--   ==JDisc Discovery Measurement 5.X(Add-on)==
--   ==JDisc Discovery Measurement 5.X(Add-on)==
--   ==JDisc Discovery Security 5.X(Add-on)==
--   ==JDisc Discovery WEB UI 5.X(Add-on)==
+-   **Apache 2.4**
+-   **PHP 8.X**
+-   **MariaDB 10.X**
+-   **i-doit**
+-   **JDisc 5.X**
+-   **JDisc JDisc Discovery Dependency Mapping 5.X(Add-on)**
+-   **JDisc Discovery Device History 5.X(Add-on)**
+-   **JDisc Discovery Measurement 5.X(Add-on)**
+-   **JDisc Discovery Measurement 5.X(Add-on)**
+-   **JDisc Discovery Security 5.X(Add-on)**
+-   **JDisc Discovery WEB UI 5.X(Add-on)**
 
 !!! info "If the Windows Firewall is activated, you will be asked if want to trust the application"
 
-If the installation was successful, a small window with the message "==i-doit Discovery has been installed successfully.==" will display.<br>
-After clicking ==OK== a new browser tab with the `localhost` URL will be opened automatically and you can use i-doit to the full extent.
+If the installation was successful, a small window with the message "**i-doit Discovery has been installed successfully.**" will display.<br>
+After clicking **OK** a new browser tab with the `localhost` URL will be opened automatically and you can use i-doit to the full extent.
 
 !!! info "If an error occurred during the installation, a log file is automatically created in the i-doit folder"
 
@@ -324,13 +324,13 @@ After clicking ==OK== a new browser tab with the `localhost` URL will be opened 
 
 To configure PHP, MariaDB or Apache, you can find the respective config files in the following directories:
 
--   ==PHP:==<br>
+-   **PHP:**<br>
     `C:\ProgramData\i-doit-discovery\php\php.ini`
 
--   ==MariaDB:==<br>
+-   **MariaDB:**<br>
     `C:\ProgramData\MariaDB\data\my.ini`
 
--   ==Apache:==<br>
+-   **Apache:**<br>
     `C:\ProgramData\i-doit-discovery\apache-2.4\conf\httpd.conf`
 
 ## Credentials
@@ -360,11 +360,11 @@ Once the Apache2 service is stopped, Apache2 can be uninstalled:
 C:\ProgramData\i-doit-discovery\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
-Afterwards MariaDB is uninstalled by removing MariaDB under ==Add or Remove Programs==.
+Afterwards MariaDB is uninstalled by removing MariaDB under **Add or Remove Programs**.
 
 [![Uninstall MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
 
-Additionally JDisc and it's respective add-ons need to be removed under ==Add or Remove Programs==.
+Additionally JDisc and it's respective add-ons need to be removed under **Add or Remove Programs**.
 
 !!! warning "The JDisc add-ons need to be removed before removing JDisc itself!"
 
