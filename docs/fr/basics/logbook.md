@@ -1,8 +1,8 @@
-# Journal de bord {/examples/}
+# Journal de bord 
 
 Chaque modification apportée à la [documentation informatique](../glossary.md) est notée dans le journal de bord par i-doit. De cette manière, il est facile de suivre le [cycle de vie de la documentation informatique](./life-and-documentation-cycle.md).
 
-## Journal de bord global {/examples/}
+## Journal de bord global 
 
 Le journal de bord dans lequel toutes les modifications sont intégrées se trouve à **Extras → CMDB → Journal de bord**. Vous pouvez y filtrer les entrées selon divers paramètres. Si possible, une entrée contient également les modifications spécifiques (Quelle valeur a été modifiée et en quoi?).
 
@@ -12,7 +12,7 @@ La dernière modification peut être suivie dans la zone inférieure de chaque p
 
 [![dernière modification](../assets/images/en/basics/logbook/2-lb.png)](../assets/images/en/basics/logbook/2-lb.png)
 
-## Journal de bord par objet {/examples/}
+## Journal de bord par objet 
 
 Le journal de bord peut non seulement être affiché de manière globale, mais vous pouvez également limiter la vue à un seul [objet](../glossary.md). La [catégorie](../glossary.md) **Journal de bord** est attribuée à chaque [type d'objet](../glossary.md) de manière fixe. Le journal de bord peut être consulté dans la **Vue objet** via l'icône de livre située au-dessus de l'arborescence des catégories.
 
@@ -53,7 +53,7 @@ Ce paramètre est défini par défaut sur **Non**. Si vous définissez ce param�
 
 ## Activation/ Désactivation du Journal
 
-Vous pouvez activer/désactiver le journal dans **Administration → Gestion du locataire → Paramètres du locataire → Journal → Journal des modifications détaillées du CMDB**. {/examples}
+Vous pouvez activer/désactiver le journal dans **Administration → Gestion du locataire → Paramètres du locataire → Journal → Journal des modifications détaillées du CMDB**. 
 
 ## Entrées Personnalisées
 
@@ -63,7 +63,7 @@ Vous pouvez générer une nouvelle entrée dans le journal pour chaque objet. Ac
 
 ## Entrées des Systèmes Tiers
 
-Le journal accepte de nouvelles entrées des systèmes tiers, par exemple via [imports](../consolidate-data/index.md), [service desks](../evaluation/cmdb-explorer/index.md), [network monitoring](../automation-and-integration/network-monitoring/index.md) et l'[API](../i-doit-pro-add-ons/api/index.md). {/examples}
+Le journal accepte de nouvelles entrées des systèmes tiers, par exemple via [imports](../consolidate-data/index.md), [service desks](../evaluation/cmdb-explorer/index.md), [network monitoring](../automation-and-integration/network-monitoring/index.md) et l'[API](../i-doit-pro-add-ons/api/index.md). 
 
 ## Archivage et Restauration des Anciennes Entrées
 
@@ -97,4 +97,3 @@ Le widget Mes derniers objets modifiés affichant les dernières modifications a
 
 Le système d'autorisation d'i-doit permet la configuration des personnes (ou groupes de personnes) autorisées à avoir accès en lecture au journal. Par exemple, vous pouvez spécifier que seuls les administrateurs d'i-doit ont l'autorisation de suivre les modifications.
 
-{/*examples*/}

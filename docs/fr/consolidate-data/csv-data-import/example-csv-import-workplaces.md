@@ -118,4 +118,4 @@ Si nous avons tout fait correctement, les postes de travail individuels apparaî
 
 [![postes-de-travail-individuels](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/3-csv-i-w.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/3-csv-i-w.png)
 
-I am ready to start the translation. Please paste the Markdown content you would like me to translate into French.
+

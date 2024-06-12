@@ -297,4 +297,4 @@ Le système d'exploitation est maintenant prêt pour l'installation de i-doit :
 
 [Aller à la configuration ...](../../manual-installation/setup.md)
 
-Please provide the Markdown content you would like me to translate into French.
+

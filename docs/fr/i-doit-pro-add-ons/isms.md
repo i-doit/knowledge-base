@@ -6,4 +6,4 @@ Ce module complémentaire est développé par [becon](https://viva2.readthedocs.
 
 La documentation est maintenue par [becon](https://viva2.readthedocs.io/de/latest/LICENSE.html) © et peut être consultée sur [isms.readthedocs.io/](http://isms.readthedocs.io/). 
 
-{ /* examples */ }
+

@@ -2,7 +2,6 @@
 
 Le script de sauvegarde suivant sert d'**exemple** de la manière dont une sauvegarde de données simple peut être organisée. Il ne remplace pas une solution professionnelle!
 
-{/*examples*/}
 
 !!! attention "À vos risques et périls"
 
@@ -30,9 +29,7 @@ Le script de sauvegarde suivant sert d'**exemple** de la manière dont une sauve
     glob_path="/tmp/backup/${glob_machine}"     #Spécifier le chemin de sauvegarde local
     glob_delete=0                               #Supprimer les fichiers locaux immédiatement après la copie CIFS ou FTP? 
 
-{/*examples*/}
 
-```markdown
 ## Configuration de sauvegarde de la base de données
 backup_database=1                           #Sauvegarde de la base de données activée?
 db_user=""                                  #Nom d'utilisateur MySQL
@@ -61,7 +58,6 @@ cifs_domain=""                              #Nom de domaine CIFS
 ```
 
 
-```markdown
 ## Suppression des anciens fichiers
 delete_file=0                               #Supprimer les anciennes sauvegardes locales ?
 delete_file_age=7                           #Supprimer les sauvegardes locales plus anciennes que x jours

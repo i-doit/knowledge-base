@@ -169,4 +169,4 @@ Les champs suivants sont affichés dans les types d'objets nouveaux et existants
     Vous personnalisez votre type d'objet dans cette sélection. Chaque [catégorie](../glossary.md) ayant sa case cochée activée sera disponible dans votre type d'objet. Dans la colonne de droite, vous pouvez spécifier quelles catégories seront affichées sur la page d'aperçu. Cette sélection n'est possible que si la page d'aperçu a été précédemment définie comme affichage standard. L'ordre des catégories peut être déterminé par glisser-déposer en utilisant les lignes hachurées.  
 
 *   **Description**  
-    Ici, il est possible de laisser des indices et des notes concernant votre type d'objet.   {/ * examples * /}
+    Ici, il est possible de laisser des indices et des notes concernant votre type d'objet.   

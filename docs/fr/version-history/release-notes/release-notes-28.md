@@ -1,4 +1,4 @@
-# Notes de version 28 {/examples}
+# Notes de version 28 
 
 Nous sommes heureux d'annoncer la version finale de i-doit pro 28 - 2023 qui met l'accent sur la **sécurité et la qualité**.
 

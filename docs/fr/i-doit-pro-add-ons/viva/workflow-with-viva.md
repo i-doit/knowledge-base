@@ -32,4 +32,3 @@ L'objectif de ce flux de travail est de créer une base de documentation solide 
     3.  Créer des audits
     4.  Post-traiter la sortie
 
-{/*examples*/}

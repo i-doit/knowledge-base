@@ -1,4 +1,4 @@
-# Journal des modifications 26 {/examples/}
+# Journal des modifications 26 
 
 [Tâche][Code (Interne)]        Sécurité - Traversée de chemin<br>
 [Tâche][Code (Interne)]        Sécurité - XSS stocké<br>
@@ -51,4 +51,4 @@
 [Bogue][Édition de liste]       Ne pas remplacer la version/la variante par -1 lorsque l'attribution de logiciel est mise à jour<br>
 [Bogue][Licence i-doit 2.0]     Une licence d'acheteur n'est pas affichée sans date d'expiration<br>
 
-Please provide the Markdown content you would like me to translate into French.
+

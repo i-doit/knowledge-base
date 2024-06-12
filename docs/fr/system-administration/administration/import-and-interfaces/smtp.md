@@ -15,5 +15,3 @@ Ici, vous pouvez configurer le serveur de messagerie utilisé par i-doit.
 | Débogage SMTP | Oui ou non |
 | Préfixe du sujet | Chaîne |
 | Modèle de notification pour le contrat de maintenance | HTML |
-
-{/*examples*/}

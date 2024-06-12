@@ -25,7 +25,7 @@ Configurer Active Directory (AD)
 
 Dans AD, un utilisateur est généré pour l'accès SSO. Exemple : 
 
-{ /* examples */ }
+
 
 *   Nom du serveur i-doit : **idoit.mydomain.local**
 *   Domaine AD : **addomain.local**
@@ -129,11 +129,11 @@ Configuration côté client du navigateur
 
 Enfin, chaque navigateur doit être configuré pour utiliser automatiquement le SSO.
 
-### Microsoft Internet Explorer (IE) {/ * exemples * /}
+### Microsoft Internet Explorer (IE) 
 
 Le serveur _i-doit_ doit être ajouté aux sites intranet locaux dans les paramètres d'IE. Après cela, l'élément **Connexion automatique avec le nom d'utilisateur et le mot de passe actuels** doit être activé sous **Authentification de l'utilisateur** dans l'option **Niveau personnalisé**. De plus, assurez-vous d'activer l'option **Authentification Windows intégrée** dans l'onglet **Avancé** des **Options Internet**.
 
-### Mozilla Firefox et Google Chrome {/ * exemples * /}
+### Mozilla Firefox et Google Chrome 
 
 Le SSO est également possible pour ces navigateurs. Des informations détaillées sur la configuration peuvent être trouvées sur Internet. Vous pouvez trouver un exemple pour Firefox [ici](https://superuser.com/questions/664656/how-to-configure-firefox-for-ntlm-sso-single-sign-on).
 
@@ -148,5 +148,3 @@ Si vous rencontrez des problèmes concernant l'authentification, les questions e
 *   L'utilisateur de domaine SSO est-il déverrouillé ?
 *   Le DC peut-il être résolu par DNS à partir du serveur _i-doit_ ?
 *   Le serveur web a-t-il l'autorisation de lecture pour le fichier krb5.keytab ?
-
-I am ready to start translating the Markdown content into French. Please paste the content you would like me to translate.

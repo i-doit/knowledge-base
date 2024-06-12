@@ -54,7 +54,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | Limite de profondeur du chemin d'emplacement | Valeur |
 | Entrées de tâches MyDoIt | Valeur |
 
-## Options pour la liste d'adresses IP {/examples}
+## Options pour la liste d'adresses IP 
 
 | Option | Valeur |
 | - | - |
@@ -62,7 +62,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | Fonction de ping | Ping via NMAP<br>Ping via FPING |
 | Paramètre NMAP (pour le ping) | PE/PP/PM: sondes de découverte ICMP echo, timestamp et netmask<br>sP: Scan de ping - ne va pas plus loin que de déterminer si l'hôte est en ligne<br>PR: Scan ARP<br>sT: Scan de connexion TCP |
 
-## Vérifications uniques (Utilisées uniquement pendant la procédure d'import/export) {/examples}
+## Vérifications uniques (Utilisées uniquement pendant la procédure d'import/export) 
 
 | Option | Valeur |
 | - | - |
@@ -71,14 +71,14 @@ Ici, vous trouverez les paramètres liés au locataire.
 | Adresses IP | Oui ou Non |
 | Nom d'hôte | Oui ou Non |
 
-## Codes-barres {/examples}
+## Codes-barres 
 
 | Option | Valeur |
 | - | - |
 | Afficher les codes-barres dans i-doit | Oui ou Non |
 | Format de code-barres | QR-Code<br>Code39 |
 
-## Interface graphique {/examples}
+## Interface graphique 
 
 | Option | Valeur |
 | - | - |
@@ -89,7 +89,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | Glisser-déposer des objets | Oui ou Non |
 | Tri des types d'objets | Alphabétiquement<br>Manuellement |
 
-## Longueurs maximales {/examples}
+## Longueurs maximales 
 
 | Option | Valeur |
 | - | - |
@@ -97,7 +97,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | Titre de l'objet dans le chemin de l'emplacement | Valeur |
 | Chemin complet de l'emplacement | Valeur |
 
-## Journal {/examples}
+## Journal 
 
 | Option | Valeur |
 | - | - |
@@ -105,7 +105,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | Désactiver les commentaires du journal | Oui ou Non |
 | Supprimer complètement les entrées du journal des objets purgés | Oui ou Non |
 
-## Modèles {/examples}
+## Modèles 
 
 | Option | Valeur |
 | - | - |
@@ -113,7 +113,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | Coloriser les affectations/références de modèles | Oui ou Non |
 | Avec couleur | Sélecteur de couleur<br>Hexadécimal |
 
-## Sécurité {/examples}
+## Sécurité 
 
 | Option | Valeur |
 | - | - |
@@ -123,7 +123,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | Informations sur la dernière connexion | Inactif<br>Actif |
 | Assainir les données d'entrée | Oui ou Non |
 
-## Journalisation {/examples}
+## Journalisation 
 
 | Option | Valeur |
 | - | - |
@@ -132,7 +132,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | Importation de la CMDB | Oui ou Non |
 | Débogage LDAP | Oui ou Non |
 
-## Quickinfo (Survol de la souris sur le lien) {/examples}
+## Quickinfo (Survol de la souris sur le lien) 
 
 | Option | Valeur |
 | - | - |
@@ -148,7 +148,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | Salutation Monsieur | Liste séparée par des virgules avec des valeurs associées pour l'attribut de salutation LDAP |
 | Salutation Madame | Liste séparée par des virgules avec des valeurs associées pour l'attribut de salutation LDAP |
 
-{ /*examples*/ }
+
 
 ## Gestionnaire de rapports
 
@@ -156,7 +156,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | - | - |
 | Filtre par défaut | ID<br>Titre<br>Catégorie<br>Généré par l'éditeur de requêtes<br>Rapport variable<br>Description |
 
-{ /*examples*/ }
+
 
 ## Importation
 
@@ -167,7 +167,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | L'importation CSV peut-elle écraser le type d'objet ? | Oui ou Non |
 | Nombre de lignes à importer par lot | Valeur |
 
-{ /*examples*/ }
+
 
 ## Recherche
 
@@ -181,7 +181,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | Afficher les objets archivés/supprimés dans les résultats de recherche | Oui ou Non |
 | Afficher les chemins d'accès dans les résultats de recherche | Oui ou Non |
 
-{ /*examples*/ }
+
 
 ## Langue
 
@@ -189,7 +189,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | - | - |
 | Langue par défaut pour les nouveaux utilisateurs | Allemand<br>Anglais |
 
-{ /*examples*/ }
+
 
 ## Notifications
 
@@ -197,7 +197,7 @@ Ici, vous trouverez les paramètres liés au locataire.
 | - | - |
 | Ignorer les licences expirées | Oui ou Non |
 
-{ /*examples*/ }
+
 
 ## Paramètres liés aux modules complémentaires installés
 
@@ -220,5 +220,3 @@ Ici, vous trouverez les paramètres liés au locataire.
 | [Formulaires](../../../i-doit-pro-add-ons/forms/index.md) Serveur de formulaires | URL |
 | [Formulaires](../../../i-doit-pro-add-ons/forms/index.md) Nom d'utilisateur | Chaîne |
 | [Formulaires](../../../i-doit-pro-add-ons/forms/index.md) Clé API | Chaîne |
-
-Please provide the Markdown content that needs to be translated.

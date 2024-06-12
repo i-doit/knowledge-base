@@ -1,4 +1,4 @@
-# Interface utilisateur {/ * exemples * /}
+# Interface utilisateur 
 
 Ici, vous trouverez les configurations liées à l'interface. Également des modules complémentaires.
 

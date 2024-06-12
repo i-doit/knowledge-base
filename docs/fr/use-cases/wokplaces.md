@@ -1,4 +1,4 @@
-# Lieux de travail {/examples/}
+# Lieux de travail 
 
 Quels composants informatiques sont disponibles pour quel membre du personnel et où puis-je les trouver ? Pour vous assurer d'avoir toujours une bonne vue d'ensemble concernant cette question, vous pouvez documenter les lieux de travail informatiques dans i-doit.
 

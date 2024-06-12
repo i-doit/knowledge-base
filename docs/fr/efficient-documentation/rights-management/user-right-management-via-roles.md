@@ -15,11 +15,11 @@ Ouvrez maintenant la ==Administration -> Autorisations utilisateur== et ouvrez p
 
 Ici, vous pouvez définir les droits appropriés (Afficher, Modifier, Archiver, Supprimer, Exécuter, Administrateur) et ensuite sélectionner parmi les paramètres soit tous les rôles disponibles, soit un ou plusieurs rôles qui devraient être utilisés pour l'attribution des droits.
 
-### Condition: Catégories dans les objets avec rôle assigné dans l'attribution de contact {/examples/}
+### Condition: Catégories dans les objets avec rôle assigné dans l'attribution de contact 
 
 Ici, vous pouvez définir les droits appropriés (Créer, Afficher, Modifier, Archiver, Supprimer, Exécuter, Administrateur) puis sélectionner parmi les paramètres soit tous les rôles disponibles, soit un ou plusieurs rôles et définir si toutes les catégories ou seulement certaines doivent être utilisées pour l'attribution des droits.
 
-### Exemple de configuration {/examples/}
+### Exemple de configuration 
 
 Dans cet exemple, tous les utilisateurs membres du groupe "Droits utilisateur sur les objets" pour les objets où ils sont liés à un contact avec le rôle d'employé obtiennent des droits sur ces objets :
 

@@ -101,4 +101,3 @@
 [Bogue] Les colonnes larges coupent les colonnes  
 [Bogue] L'édition de liste efface la connexion avec le port lors de l'édition de l'interface  
 
-{/*examples*/}

@@ -20,7 +20,6 @@ Actuellement, vous pouvez choisir parmi les types de notifications suivants :
 *   **Expiration d'une période de certification**  
     Vérifie tous les types d'objets associés à la catégorie "certificat" pour la date d'expiration du certificat
 
-{/*examples*/}
 
 *   **État de la CMDB - Fin**  
     Utile pour la catégorie "planification de l'état". Cette notification vous informe d'un état de la CMDB planifié qui va se terminer.
@@ -112,7 +111,7 @@ Les objets à vérifier par la notification peuvent être sélectionnés spécif
 
     Seuls certains types d'objets sont pris en charge, en fonction du type de notification. Par exemple, lors de la vérification des contrats, seuls les objets de type "Contrat" et lors de la vérification des licences, seuls les objets de type "Licence" peuvent être choisis.
 
-### Destinataire {/ * exemples * /}
+### Destinataire 
 
 Vous pouvez également notifier les destinataires de manière spécifique ou collective.
 
@@ -173,4 +172,3 @@ Les paramètres possibles ainsi qu'un exemple d'appel pour l'envoi de notificati
 
     sudo -u www-data php console.php notifications-send --user admin --password admin --tenantId 1
 
-{/*examples*/}

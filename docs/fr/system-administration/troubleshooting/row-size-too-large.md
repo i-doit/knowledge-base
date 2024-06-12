@@ -1,4 +1,4 @@
-# Taille de ligne trop grande {/examples}
+# Taille de ligne trop grande 
 
 ## Problème
 

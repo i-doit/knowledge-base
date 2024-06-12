@@ -59,4 +59,3 @@
 [Erreur][Configuration du type d'objet] La sélection des icônes de type d'objet n'inclut pas tous les dossiers  
 [Erreur][Paramètres utilisateur] La sauvegarde de la présentation de l'arborescence doit être enregistrée deux fois  
 
-I am ready to start translating the Markdown content into French. Please go ahead and paste the content you would like me to translate.

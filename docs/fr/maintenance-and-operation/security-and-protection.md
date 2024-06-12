@@ -1,4 +1,4 @@
-# Sécurité et Protection {/examples}
+# Sécurité et Protection 
 
 Dans de nombreux cas, la documentation informatique contient des données très sensibles qui doivent être protégées. Dans cet article, nous examinons quels mécanismes de protection sont efficaces pour sécuriser une installation i-doit. En particulier, nos objectifs de protection sont la confidentialité, l'intégrité, la disponibilité, l'authenticité et l'autorisation.
 
@@ -30,33 +30,27 @@ Outre Apache, SSH est le seul service accessible depuis l'extérieur. **SSH est 
 Pour limiter les attaques par force brute courantes, vous ne devriez pas autoriser l'enregistrement en tant que super utilisateur (root) :
 
     PermitRootLogin no
-{/*examples*/}
 
 Au lieu de devoir se souvenir des mots de passe, vous pouvez utiliser la procédure de clé publique. À cette fin, vous créez une paire composée de clés publique et privée sur le client :
 
     ssh-keygen -t rsa -f mykey -b 4096 -C myemail@example.org
-{/*examples*/}
 
 Ensuite, vous copiez la clé publique sur le serveur :
 
     ssh-copy-key -i ~/.ssh/mykey.pub idoitadm@i-doit.example.org
-{/*examples*/}
 
 Ensuite, vous modifiez la procédure des mots de passe en clés publiques dans la configuration du serveur SSH :
 
     PubkeyAuthentication yes
     PasswordAuthentication no
-{/*examples*/}
 
 Après cela, le service SSH doit être redémarré :
 
     sudo systemctl restart ssh.service
-{/*examples*/}
 
 ### Mise à jour, Mises à jour, Mises à jour
 
 Probablement le conseil le plus important est : **Gardez votre système à jour**. En termes informatiques : Vous ne pouvez pas avoir de sécurité des informations sans gestion des correctifs. Il est particulièrement important de maintenir à jour l'installation de i-doit, le système d'exploitation correspondant, les clients accédant à i-doit et le navigateur web en permanence. Les systèmes tiers communiquant avec i-doit devraient également être à jour en tout temps.
-{/*examples*/}
 
 Il est inconfortable d'installer les mises à jour manuellement. Lorsque vous n'utilisez pas l'automatisation et un système de contrôle centralisé, vous pouvez laisser les mises à jour à l'opération du système. Debian GNU/Linux propose l'application des [mises à jour non assistées](https://wiki.debian.org/UnattendedUpgrades). Avec cette fonction, vous pouvez obtenir les dépôts de paquets et effectuer des mises à jour (de sécurité) et même des mises à niveau des paquets. De plus, les administrateurs sont informés par e-mail.
 
@@ -69,18 +63,15 @@ Dans une certaine mesure, une installation habituelle implique un bagage inutile
 # Services en cours d'exécution administrés par Systemd:
 ```bash
 systemctl list-units
-```{/*examples*/}
-
+```
 # Afficher clairement les processus en cours d'exécution et les ressources système:
 ```bash
 htop
-```{/*examples*/}
-
+```
 # Ports actuellement ouverts:
 ```bash
 sudo netstat -tulpen
-```{/*examples*/}
-
+```
 Les composants inutiles peuvent être désactivés, arrêtés ou même supprimés du système.
 Voici un exemple:
 
@@ -88,18 +79,15 @@ Voici un exemple:
 ```bash
 sudo systemctl disable cups.service
 sudo systemctl stop cups.service
-```{/*examples*/}
-
+```
 # Supprimer le service d'impression CUPS:
 ```bash
 sudo apt remove cups
-```{/*examples*/}
-
+```
 # Supprimer le service d'impression CUPS y compris la configuration:
 ```bash
 sudo apt purge cups
-```{/*examples*/}
-
+```
 **Le principe du minimum ne s'applique pas seulement au système d'exploitation, mais aussi aux services et applications installés.** Il existe de nombreux modules pour Apache et PHP autres que ceux réellement nécessaires au bon fonctionnement d'i-doit. Exemples: mod_proxy pour Apache ou xdebug pour PHP ne doivent être installés et activés que s'ils sont vraiment nécessaires.
 
 Vous pouvez désactiver les modules avec ces commandes:
@@ -107,8 +95,7 @@ Vous pouvez désactiver les modules avec ces commandes:
 ```bash
 sudo a2dismod proxy
 sudo phpdismod xdebug
-```{/*examples*/}
-
+```
 Certains clients installent l'application web [phpMyAdmin](https://www.phpmyadmin.net/) car i-doit utilise MariaDB/MySQL en arrière-plan. Nous déconseillons fortement de le faire, car cela rend la base de données protégée accessible de l'extérieur. Au fil des années, phpMyAdmin a été un exemple négatif en ce qui concerne les failles de sécurité et cela pourrait aggraver les problèmes. phpMyAdmin est un outil utile, mais pas sur un système productif contenant des données sensibles.
 
 ### Sauvegarde et Restauration
@@ -161,7 +148,6 @@ Ensuite, les paramètres doivent être activés :
     sudo php5enmod zz_security
     sudo systemctl restart apache2.service
 
-{/*examples*/}
 
 
 Le **module de sécurité** **[Suhosin](https://suhosin.org/)** est disponible pour PHP. Il affecte profondément la mise en œuvre des méthodes PHP. En partie, cela a du sens, mais cela peut également entraîner le risque de compromettre le bon fonctionnement à 100% d'i-doit. Pour le moment, nous ne pouvons pas recommander de paramètres spécifiques.
@@ -315,7 +301,6 @@ Directement après l'installation, nous prenons d'autres mesures.
 
 **Le système de fichiers offre de nombreuses possibilités pour exclure l'accès non autorisé au code et aux données.** Debian GNU/Linux applique généralement Ext4 à cette fin. Pour cela, vous pouvez utiliser les outils standard chown, chmod et chattr :
 
-```markdown
 # Accédez au répertoire d'installation de i-doit :
 cd /var/www/html/i-doit
 
@@ -346,7 +331,7 @@ sudo find . -type f -exec chmod 664 {} \;
 sudo chmod 774 controller *.sh setup/*.sh
 ```
 
-### Mots de passe sécurisés {/ * exemples * /}
+### Mots de passe sécurisés 
 
 Ceux qui veulent simplement configurer rapidement i-doit à des fins de test oublient malheureusement souvent de tenir compte des mots de passe sécurisés. Ce ne devrait pas être le cas : si vous choisissez **des mots de passe sécurisés dès le début**, vous n'aurez pas à vous soucier de remédier à ces éventuelles failles de sécurité par la suite. Les mots de passe spécifiques sont les suivants :
 
@@ -382,9 +367,9 @@ Cet utilisateur est également créé lors de la configuration initiale. Ensuite
 
 Les utilisateurs admin, reader, author et editor sont déjà générés lors de la configuration initiale. La meilleure pratique est de ne jamais utiliser ces utilisateurs mais de créer un [objet personne](../basics/structure-of-the-it-documentation.md) pour chaque utilisateur à la place. Les objets personne pour admin etc. ne peuvent pas être supprimés, mais archivés. De cette manière, vous excluez la connexion. Si vous ne voulez pas vous passer de ces utilisateurs par défaut, vous devriez changer d'urgence leurs mots de passe car ils sont identiques au nom d'utilisateur. Vous pouvez implémenter les changements dans l'objet personne respectif dans la catégorie **Personnes → Connexion**. 
 
-{ /* examples */ }
 
-#### Utilisateur par défaut sous Linux {/ * exemples * /}
+
+#### Utilisateur par défaut sous Linux 
 
 Un utilisateur par défaut est déjà créé lors de l'installation du système d'exploitation. Cet utilisateur par défaut mérite également un mot de passe sécurisé que vous pouvez changer rétroactivement avec:
 
@@ -408,7 +393,7 @@ Le système est entre de bonnes mains dans un [Surveillance Réseau](../automati
 
 En plus de la surveillance réseau, il existe d'autres services qui **surveillent les journaux**. Avant de commencer avec l'installation d'un serveur de journaux complet (par exemple, [Logstash](https://www.elastic.co/products/logstash)), vous pourriez essayer des outils plus petits, comme [Logwatch](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-logwatch-log-analyzer-and-reporter-on-a-vps). Logwatch surveille les fichiers journaux d'Apache, SSH et d'autres services et envoie un rapport facile à lire par e-mail sur une base quotidienne. 
 
-{ /* examples */ }
+
 
 De plus, i-doit produit constamment des fichiers journaux. Vous pouvez les trouver dans le répertoire d'installation sous le répertoire log/. Il vaut la peine d'évaluer les journaux (régulièrement), non seulement lorsque vous êtes [à la recherche d'erreurs](../system-administration/troubleshooting/index.md).
 
@@ -458,4 +443,3 @@ Si vous souhaitez approfondir le sujet (et qui ne le voudrait pas après avoir �
 *   En relation avec la norme IT-Grundschutz (norme pour la protection informatique de base), l'Office fédéral allemand de la sécurité des technologies de l'information (BSI) publie des [catalogues IT-Grundschutz](https://www.bsi.bund.de/EN/Home/home_node.html) qui répertorient de nombreux risques affectant l'informatique au quotidien. De plus, le BSI propose des mesures adaptées pour minimiser les risques. Dans de nombreux cas, les catalogues servent de source pour d'autres normes et normes, telles que l'ISO27001. En particulier, les composants suivants du catalogue sont une lecture intéressante pour le fonctionnement sécurisé de i-doit : B 3.101 Serveur général, B 3.102 Serveurs sous Unix, B 3.304 Virtualisation, B 5.4 Serveurs Web, B 5.7 Bases de données, B 5.21 Applications Web, B 5.24 Services Web. Vous pouvez télécharger le dernier catalogue depuis le [site Web international IT-Grundschutz](https://www.bsi.bund.de/EN/Home/home_node.html).
 *   Le [Projet de sécurité des applications Web ouvertes (OWASP)](https://www.owasp.org/index.php/Main_Page) est une ONG à but non lucratif dédiée à assurer la sécurité des informations des applications Web. Ils mettent en évidence les scénarios d'attaques actuels, mais aussi les mesures pour minimiser les risques.
 
-I am ready to translate the Markdown content into French. Please provide the content you would like me to translate.

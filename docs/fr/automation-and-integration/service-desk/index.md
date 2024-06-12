@@ -6,7 +6,7 @@ Applications prises en charge
 
 L'installation par défaut d'i-doit fournit des interfaces vers plusieurs applications du domaine du service desk. 
 
-{ /* examples */ }
+
 
 *   [((OTRS)) Community Edition Help Desk](./otrscommunity-help-desk.md)
 *   [Request Tracker (RT)](./request-tracker.md)

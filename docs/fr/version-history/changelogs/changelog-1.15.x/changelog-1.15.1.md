@@ -73,4 +73,4 @@
 [Erreur][CMDB] La constante de langue pour l'emplacement racine ne fonctionne pas partout  
 [Erreur][Connecteur de câblage] Le tri dans le navigateur de câblage n'est pas correct  
 
-I am ready to start the translation once you provide the Markdown content.
+

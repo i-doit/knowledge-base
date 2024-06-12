@@ -1,4 +1,4 @@
-# Connexion Initiale {/%%/}
+# Connexion Initiale 
 
 i-doit est [installé](../installation/index.md) et vous voulez vous connecter pour la première fois ? Aucun problème ! Cependant, il y a quelques points à garder à l'esprit et c'est pourquoi il vaut la peine de lire cet article.
 
@@ -35,4 +35,4 @@ Chaque utilisateur dans i-doit est un [objet](structure-of-the-it-documentation.
 
 Lorsque vous souhaitez accueillir les utilisateurs avec un texte pendant le processus de connexion, il est possible d'entrer un texte correspondant dans le [Centre d'administration](../system-administration/admin-center.md) sous **Paramètres système → Connexion → Texte de bienvenue pour la connexion**.
 
-[![Connexion avec texte de bienvenue](../assets/images/en/basics/initial-login/2-il.png)](../assets/images/en/basics/initial-login/2-il.png){/*examples*/}
+[![Connexion avec texte de bienvenue](../assets/images/en/basics/initial-login/2-il.png)](../assets/images/en/basics/initial-login/2-il.png)

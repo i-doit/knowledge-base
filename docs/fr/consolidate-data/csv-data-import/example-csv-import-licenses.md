@@ -59,4 +59,3 @@ De plus, les catégories Affectation de licence et Affectation de licence: Clé 
 
 [![clé-de-licence](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)
 
-I am ready to start the translation once you provide me with the Markdown content.

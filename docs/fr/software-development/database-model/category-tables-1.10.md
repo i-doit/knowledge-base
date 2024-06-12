@@ -1,4 +1,4 @@
-# Tables de catégorie 1.10 {/ * exemples * /}
+# Tables de catégorie 1.10 
 
 !!! info "Générer ce contenu automatiquement"
 

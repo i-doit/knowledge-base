@@ -1,4 +1,4 @@
-# Emplacements {/ * exemples * /}
+# Emplacements 
 
 L'emplacement du matériel et d'autres composants est une partie essentielle de i-doit. Cet article explique la documentation des emplacements et comment vous placez [objets](../basics/structure-of-the-it-documentation.md).
 

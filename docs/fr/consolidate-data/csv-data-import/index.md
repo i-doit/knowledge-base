@@ -29,17 +29,17 @@ Choisissez votre fichier .csv dans la première étape en utilisant le bouton **
 
 Pour passer à l'étape suivante de l'importation, vous devez cliquer sur **Utiliser pour l'importation**.
 
-## Définir les options {/examples}
+## Définir les options 
 
 Vous devez définir certaines options avant que le processus de mappage entre les colonnes de la table et les attributs dans i-doit puisse commencer.
 
 [![mapping](../../assets/images/en/consolidate-data/csv-data-import/5-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/5-csvi.png)
 
-### Type d'objet {/examples}
+### Type d'objet 
 
 Lorsque vous sélectionnez un [type d'objet](../../basics/structure-of-the-it-documentation.md) via le menu déroulant **Type d'objet global**, tous les objets dans le fichier `.CSV` seront importés en tant que ce type d'objet. Si vous ne définissez pas de type d'objet global, vous aurez besoin d'un champ supplémentaire dans le fichier `.CSV` pour entrer la [constante de base de données](../../basics/structure-of-the-it-documentation.md). Le type d'objet auquel l'objet sera associé est déterminé par cette constante pour chaque ligne. Cela vous permet d'importer des objets de différents types d'objets (client, imprimante, moniteurs...) à partir d'un seul fichier. Cette information doit être maintenue pour tous les objets si aucun type d'objet global n'est utilisé. Vous ne pouvez pas utiliser une forme mixte.
 
-### Séparateurs, En-têtes et Considérer le modèle par défaut {/examples/}
+### Séparateurs, En-têtes et Considérer le modèle par défaut 
 
 Si vous utilisez un **séparateur** différent du point-virgule (;), il est possible de spécifier le séparateur utilisé.
 
@@ -47,14 +47,14 @@ Si vous n'utilisez pas de ligne d'en-tête, vous pouvez désactiver l'en-tête p
 
 Les objets sont créés avec les données du [modèle par défaut](../../efficient-documentation/templates.md).
 
-### Valeurs Vides {/examples/}
+### Valeurs Vides 
 
 Si vous souhaitez mettre à jour des objets existants avec l'importation de données CSV, vous pouvez décider comment gérer les cellules vides dans le fichier .CSV. Avec l'option **Adopter les valeurs vides**, vous avez la possibilité de choisir entre **Oui** ou **Non** :
 
 -   **Oui** : Les cellules vides signifient que les attributs existants (s'ils existent) sont écrasés.
 -   **Non** : Les cellules vides sont ignorées de sorte que les attributs existants (s'ils existent) sont préservés.
 
-### Gestion des Entrées dans les Catégories de Liste (Multivaluées) {/examples/}
+### Gestion des Entrées dans les Catégories de Liste (Multivaluées) 
 
 De plus, vous devez indiquer sous quelle forme les [catégories de liste](../../basics/structure-of-the-it-documentation.md) (multivaluées) apparaissent dans le fichier `.csv`. Si aucune catégorie de ce type n'est impliquée dans l'importation des données, vous pouvez ignorer les options suivantes.
 
@@ -74,12 +74,12 @@ En cliquant sur le bouton **Préparer la correspondance**, vous pouvez passer à
 
 Dès que vous avez ajusté les options, vous pouvez commencer le mappage. Tout d'abord, vous pouvez sélectionner un [**profil de correspondance d'objets**](../object-identification-during-imports.md) si vous souhaitez mettre à jour des objets existants. Vous pouvez modifier ce profil ultérieurement. 
 
-{ /* examples */ }
+
 
 
 [![update](../../assets/images/en/consolidate-data/csv-data-import/6-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/6-csvi.png)
 
-## Attribution des Colonnes aux Attributs {/ * exemples * /}
+## Attribution des Colonnes aux Attributs 
 
 Chaque colonne reçoit sa propre ligne dans la correspondance. De cette manière, vous pouvez lier chaque ligne du fichier .CSV à un attribut de _i-doit_. Cliquez sur l'icône du crayon de la ligne pour activer le champ de saisie permettant de sélectionner l'attribut associé. L'attribut correct peut maintenant être sélectionné dans le champ déroulant ou vous pouvez saisir son nom directement dans le champ pour utiliser la fonction de suggestion. La saisie sera confirmée en utilisant le bouton **Appliquer**. Liez chaque colonne de cette manière jusqu'à ce que toutes les allocations soient terminées. Vous pouvez supprimer des allocations ultérieurement. Les colonnes sans allocation seront ignorées lors de l'importation des données.
 
@@ -88,13 +88,13 @@ Chaque colonne reçoit sa propre ligne dans la correspondance. De cette manière
 !!! info Détails Obligatoires
     Indiquer le titre de l'objet _et_ le type d'objet est à la fois _obligatoire_. Si vous avez défini un type d'objet global dans les options d'importation de données, vous n'avez qu'à lier le titre de l'objet à une colonne dans la correspondance. Si vous n'avez pas défini de type d'objet global, alors un lien vers une colonne en tant que type d'objet sera également requis. Sinon, il ne sera pas possible de démarrer la fonction d'importation. Le réglage du type d'objet est effectué via sa constante de base de données (par exemple **C_OBJTYPE_SERVER**). Définir le nom du type d'objet (par exemple **Serveur**) n'est **pas** suffisant.
 
-## Création d'un Profil {/examples}
+## Création d'un Profil 
 
 Si vous souhaitez importer d'autres fichiers .CSV avec une structure identique en ce qui concerne l'allocation des colonnes, vous pouvez enregistrer la configuration de la correspondance actuelle en tant que profil. Il en va de même pour la mise à jour du fichier actuellement utilisé et son import ultérieur. Ainsi, vous pouvez éviter des étapes de travail récurrentes. Un profil enregistré peut être sélectionné et chargé ou supprimé dans la partie supérieure des options.
 
 S'il existe déjà un profil correspondant, vous pouvez le remplacer sans spécifier de nom.
 
-## Début de l'Importation des Données {/examples}
+## Début de l'Importation des Données 
 
 Le niveau de détail pour le journal d'importation CSV peut être défini sous la correspondance. Plus le journal est détaillé, plus de temps et de ressources sont nécessaires pour l'importation. Le journal des messages de débogage peut être utile pour le dépannage éventuellement requis.
 
@@ -129,4 +129,4 @@ Certains attributs contiennent des valeurs et des unités. Vous devez les saisir
 
 ## Import Automatisé de Fichiers CSV
 
-L'importation de fichiers CSV n'est pas seulement possible manuellement via l'interface utilisateur, mais peut également être mise en œuvre en utilisant la Console i-doit. Cela permet d'automatiser l'importation, ce qui peut être utilisé pour mettre à jour les informations régulièrement. Une description de tous les paramètres peut être trouvée dans l'article correspondant, y compris un exemple sous l'option [import-csv](../../automation-and-integration/cli/console/options-and-parameters-cli.md#import-csv). De plus, l'ID d'un profil d'importation précédemment créé peut être spécifié dans l'appel. Ces ID peuvent être lus avec l'option [import-csvprofiles](../../automation-and-integration/cli/console/options-and-parameters-cli.md#import-csvprofiles). L'utilisation de cette option est également décrite dans l'article mentionné. {/examples}
+L'importation de fichiers CSV n'est pas seulement possible manuellement via l'interface utilisateur, mais peut également être mise en œuvre en utilisant la Console i-doit. Cela permet d'automatiser l'importation, ce qui peut être utilisé pour mettre à jour les informations régulièrement. Une description de tous les paramètres peut être trouvée dans l'article correspondant, y compris un exemple sous l'option [import-csv](../../automation-and-integration/cli/console/options-and-parameters-cli.md#import-csv). De plus, l'ID d'un profil d'importation précédemment créé peut être spécifié dans l'appel. Ces ID peuvent être lus avec l'option [import-csvprofiles](../../automation-and-integration/cli/console/options-and-parameters-cli.md#import-csvprofiles). L'utilisation de cette option est également décrite dans l'article mentionné. 

@@ -1,4 +1,4 @@
-# Comment importer des utilisateurs et des groupes depuis AD/LDAP (configuration avancée) {/examples/}
+# Comment importer des utilisateurs et des groupes depuis AD/LDAP (configuration avancée) 
 
 L'importation des utilisateurs et des groupes depuis Active Directory dans i-doit se fait toujours via la commande [console.php](../../automation-and-integration/cli/console/index.md). Pour cela, nous utilisons la commande [ldap-sync](./index.md).<br>
 À la fin de l'article, vous trouverez un exemple complet de la configuration avancée créée.
@@ -114,8 +114,7 @@ Par exemple, si les utilisateurs diffèrent en ayant deux attributs objectClass 
 
 ### La configuration de l'extension de catégorie
 
-[![Configuration ldap.ini](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/9-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/9-htiuag.png){/*examples*/}
-
+[![Configuration ldap.ini](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/9-htiuag.png)](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/9-htiuag.png)
 Ici encore sous forme de tableau
 
 | Titre du champ | Attribut | Mappage avec |

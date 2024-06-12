@@ -1,4 +1,4 @@
-# Maintenance et Opération {/examples/}
+# Maintenance et Opération 
 
 Pour assurer un fonctionnement stable et sécurisé de i-doit, vous devez maintenir votre système régulièrement. Voici les sujets essentiels dont vous devez être conscient :
 

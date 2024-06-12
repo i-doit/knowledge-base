@@ -1,4 +1,4 @@
-# Journal de bord {/ * exemples *}
+# Journal de bord 
 
 Dans la vue du journal de bord, vous pouvez filtrer les entrées selon plusieurs paramètres. Si possible, une entrée contient les changements exacts. (Quelles valeurs ont été modifiées et comment ?) → [EN SAVOIR PLUS](../../basics/logbook.md)
 
@@ -15,7 +15,7 @@ Dans la vue du journal de bord, vous pouvez filtrer les entrées selon plusieurs
 
 [![Vue du journal de bord](../../assets/images/en/system-administration/administration/logbook/1-l.png)](../../assets/images/en/system-administration/administration/logbook/1-l.png)
 
-## Configuration du journal de bord {/ * exemples *}
+## Configuration du journal de bord 
 
 Dans la configuration du journal de bord, vous pouvez définir combien de changements peuvent être combinés au maximum dans une entrée de journal, si l'utilisateur doit être affiché uniquement avec son ID ou de manière étendue et si oui, à quoi cela devrait ressembler. De plus, vous pouvez déterminer le nombre de changements combinés par entrée de journal lors d'une procédure d'importation.
 
@@ -24,13 +24,13 @@ Dans la configuration du journal de bord, vous pouvez définir combien de change
 | Identification de l'utilisateur       | Standard<br>Étendue                       |
 | Créer des entrées de journal pour les relations | Seulement l'objet initiateur<br>Sur les deux objets |
 
-### Import {/examples}
+### Import 
 
 | Option                                                     | Valeur |
 | ---------------------------------------------------------- | ----- |
 | Montant maximum de modifications détaillées combinées (par catégorie) | Valeur |
 
-## Archive {/examples}
+## Archive 
 
 Indiquez pendant combien de temps les entrées du journal de bord doivent être conservées avant d'être archivées.
 
@@ -41,7 +41,7 @@ Indiquez pendant combien de temps les entrées du journal de bord doivent être 
 
 Pour archiver le journal de bord, la commande CLI [logbook-archive](../../automation-and-integration/cli/console/options-and-parameters-cli.md#logbook-archive) doit être exécutée.
 
-## Restaurer {/examples}
+## Restaurer 
 
 Avec cette fonction, vous pouvez restaurer les entrées qui ont déjà été archivées.
 

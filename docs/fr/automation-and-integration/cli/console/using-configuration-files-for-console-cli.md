@@ -94,7 +94,6 @@ Cette commande offre les options supplémentaires suivantes : [ldapServerId](./o
 L'option [ldapServerId](./options-and-parameters-cli.md#ldap-sync) spécifie le serveur ldap à utiliser. Ici, l'ID de l'entrée doit être spécifié.<br>
 Avec [dumpConfig](./options-and-parameters-cli.md#ldap-sync), aucune synchronisation n'est exécutée ! Seule la configuration est affichée. Devrait donc être utilisé uniquement pour le débogage.
 
-```markdown
     [argumentsDeCommande]
     [optionsDeCommande]
     utilisateur=admin

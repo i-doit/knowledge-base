@@ -1,4 +1,4 @@
-# Formulaires {/examples}
+# Formulaires 
 
 Avec cette extension, vous pouvez créer des formulaires que vous pouvez envoyer à d'autres employés pour les remplir.<br>
 Cette extension peut créer un formulaire qui, par exemple, aide les nouveaux employés à documenter les ordinateurs dans votre entreprise.
@@ -12,7 +12,7 @@ Nous avons également un [article de blog](https://www.i-doit.com/en/blog/the-ne
 
 [![Aperçu](../../assets/images/en/i-doit-pro-add-ons/forms/1-forms.png)](../../assets/images/en/i-doit-pro-add-ons/forms/1-forms.png)
 
-## Exigences {/examples}
+## Exigences 
 
 L'extension Forms nécessite :
 
@@ -58,4 +58,3 @@ La vue du menu "Extras" peut différer en raison de différents droits et/ou add
 | 1.1.0 | 2022-06-27 | [Bug] Autoriser tous les caractères par défaut à être utilisés dans les clés secrètes des formulaires  <br>[Bug] Ne pas afficher la sélection de l'heure dans la date de début pour les clés de licence  <br>[Bug] Autoriser la publication du formulaire si un répartiteur de charge et HTTP2 sont utilisés  <br>[Bug] Enregistrer le formulaire lors de la publication  <br>[Bug] Créer des entrées de journal lors de la création d'un objet et de données de catégorie via l'add-on "Formulaires"  <br>[Bug] Filtrer les objets connectables pour les catégories personnalisées avec des relations d'objets dans les formulaires  <br>[Bug] Autoriser l'utilisateur à copier le lien dans le tableau des formulaires  <br>[Bug] Autoriser l'utilisateur à sélectionner plusieurs objets dans le navigateur d'objets des formulaires  <br>[Bug] Informer l'utilisateur des attributs requis dans la catégorie  <br>[Task] Ajouter une info-bulle à l'état désactivé du bouton de copie de lien dans l'add-on Formulaires  <br>[Task] Autoriser l'ajout d'attribut enfant uniquement lorsque le parent dépendant est ajouté  <br>[Task] Changer le texte réel en texte de substitution dans le champ de texte de l'add-on Formulaires  <br>[Task] Ne pas autoriser l'ajout du même attribut plusieurs fois dans les formulaires  <br>[Task] Avertir l'utilisateur avant la publication si le formulaire sera vide  <br>[Task] Ajouter les dépendances du navigateur d'objets à l'add-on Formulaires  <br>[Task] Diviser la catégorie d'adresse IP en IPv4 virtuel et catégories IPv6 pour l'add-on Formulaires  <br>[Task] Prendre en compte les valeurs de modèle par défaut dans les formulaires  <br>[Task] Mettre à jour le nom de l'attribut dans le champ prédéfini de l'add-on Formulaires  <br>[Task] Désactiver l'attribut enfant jusqu'à ce qu'une valeur pour le parent soit attribuée  <br>[Task] Implémenter la pagination dans le navigateur d'objets de type d'attribut Sélection unique et multiple |
 | 1.0.0 | 2022-02-21 | Version initiale |
 
-I am ready to start the translation. Please provide the Markdown content for me to translate into French.

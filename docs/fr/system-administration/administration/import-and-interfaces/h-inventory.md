@@ -1,4 +1,4 @@
-# H-inventaire {/ * exemples * /}
+# H-inventaire 
 
 Ici, vous pouvez activer le profil de correspondance d'objets. → [EN SAVOIR PLUS](../../../consolidate-data/h-inventory.md)
 

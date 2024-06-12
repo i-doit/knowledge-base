@@ -94,7 +94,7 @@ Lorsque vous exécutez la CLI sans autres arguments, l'aide générale est affic
     update                              Update the i-doit application
     ```
 
-## Processus d'authentification {/examples}
+## Processus d'authentification 
 
 Pour accéder à i-doit via l'interface en ligne de commande, une authentification est requise pour la plupart des commandes. À cette fin, vous devez fournir un nom d'utilisateur, le mot de passe approprié et l'ID du [locataire](../../../system-administration/multi-tenant.md) souhaité. Avec une installation par défaut, dans la plupart des cas, ce dernier est **"1"**.
 
@@ -106,7 +106,7 @@ sudo -u www-data php console.php [COMMANDE] --user admin --password admin --tena
 !!! success "L'utilisateur "controller""
     Nous vous recommandons de créer un utilisateur dédié dans i-doit pour l'application de l'interface en ligne de commande. Si cet utilisateur doit être configuré en tant qu'[utilisateur local](../../../user-authentication-and-management/builtin-authentication/creating-a-local-user.md), créez-le en tant qu'objet de type **Personnes** avec les informations d'identification souhaitées dans la catégorie **Personnes → Connexion**. Cet utilisateur devrait recevoir des droits d'administrateur. L'attribution des droits peut être effectuée en l'assignant au groupe prédéfini **Groupe de personnes Admin**.
 
-## Aide {/examples}
+## Aide 
 
 ```shell
 cd /var/www/html/

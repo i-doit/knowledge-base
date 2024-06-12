@@ -33,7 +33,6 @@ Importation graphique d'un export H-Inventory
 
 i-doit -> Outils -> Importation -> Importer
 
-{/*examples*/}
 
 Téléchargez le fichier XML
 

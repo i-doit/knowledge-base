@@ -44,11 +44,9 @@ Par conséquent, vous devez toujours sélectionner un objet pour pouvoir remplir
 [![Type de champ Rapport](../assets/images/en/evaluation/variable-reports/6-vr.png)](../assets/images/en/evaluation/variable-reports/6-vr.png)
 
 L'identifiant du rapport est contenu dans l'aperçu des rapports déjà définis.  
-{/*examples*/}
 
 [![Type de champ Rapport](../assets/images/en/evaluation/variable-reports/7-vr.png)](../assets/images/en/evaluation/variable-reports/7-vr.png)
 
 Maintenant, la nouvelle catégorie est disponible dans les objets de la pièce. Il génère toujours le rapport pour l'objet dans lequel l'utilisateur se trouve actuellement. De cette manière, vous obtenez une vue en miroir de la relation avec le département.  
-{/*examples*/}
 
 [![Type de champ Rapport](../assets/images/en/evaluation/variable-reports/8-vr.png)](../assets/images/en/evaluation/variable-reports/8-vr.png)

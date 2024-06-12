@@ -98,5 +98,3 @@
 [Bug][Modèles]                      Les informations de changement de masse du modèle peuvent être déplacées verticalement<br>
 [Bug][Tableau de bord]                      Les popups d'information lors de la suppression des widgets ne disparaissent pas<br>
 [Bug][Explorateur CMDB]                  Le fichier image dans l'Explorateur CMDB n'est pas chargé<br>
-
-I am ready to translate the Markdown content you will provide. Please paste the content here for translation into French.

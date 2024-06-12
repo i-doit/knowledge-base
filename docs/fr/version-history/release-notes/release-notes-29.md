@@ -1,4 +1,4 @@
-# Notes de version 29 {/ * exemples * /}
+# Notes de version 29 
 
 Nous sommes heureux d'annoncer i-doit pro 29. Cette version apportera de nombreuses améliorations sous le capot.
 Cette version d'i-doit ajoutera la prise en charge de **PHP 8.2**. Cela signifie que les versions de PHP de 7.4 à 8.2 peuvent être utilisées afin que vous puissiez effectuer une mise à jour sans vous soucier de la compatibilité. Veuillez noter que **PHP 7.4** ne sera **plus** pris en charge avec les prochaines versions d'i-doit.

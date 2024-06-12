@@ -24,7 +24,7 @@ Créer une nouvelle entrée de [catégorie](../../../basics/structure-of-the-it-
 | **catégorie**| Chaîne               | Oui      | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **C__CATG__MODEL**                                                                  |
 | **données**  | Objet                | Oui      | [Attributs](../category-fields-for-data-arrays.md) avec leurs valeurs, par exemple : <br>```{ "fabricant": "Nom du fabricant", "titre": "Nom du modèle" }``` |
 
-### Paramètres de réponse {/examples}
+### Paramètres de réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -74,7 +74,7 @@ La clé JSON **result** contient un objet JSON.
 
 Lire une ou plusieurs entrées de [catégorie](../../../basics/structure-of-the-it-documentation.md) pour un objet
 
-### Paramètres de requête {/examples}
+### Paramètres de requête 
 
 | Clé          | Type de données JSON | Requis   | Description                                          |
 | ------------ | ------------------- | -------- | ---------------------------------------------------- |
@@ -82,7 +82,7 @@ Lire une ou plusieurs entrées de [catégorie](../../../basics/structure-of-the-
 | **category** | Chaîne de caractères | Oui      | Constante de catégorie, par exemple : **"C__CATG__MODEL"** |
 | **status**   | Entier              | Oui      | ID du statut, par exemple **2** pour **normal** <br> Si le paramètre de statut n'est pas spécifié, le statut doit être défini sur **2** (normal). Cela correspond au comportement précédent. |
 
-### Paramètres de réponse {/examples/}
+### Paramètres de réponse 
 
 La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient [tous les attributs disponibles](../category-fields-for-data-arrays.md) pour la catégorie demandée.
 
@@ -96,7 +96,7 @@ La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient
 | **objID** | Chaîne de caractères | Identifiant de l'objet (sous forme de chaîne numérique)          |
 | …         | Mixte               | Attributs facultatifs avec des valeurs dépendant de la catégorie demandée |
 
-### Exemple {/examples/}
+### Exemple 
 
 === "Corps de la requête"
 
@@ -146,7 +146,7 @@ La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient
     }
     ```
 
-## cmdb.category.update { /*examples*/ }
+## cmdb.category.update 
 
 !!! warning "Cette méthode est obsolète et sera supprimée dans une prochaine version. Utilisez [cmdb.category.save](#cmdbcategorysave) à la place."
 
@@ -159,7 +159,7 @@ La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient
 | **data**             | Objet                | Oui      | [Attributs](../category-fields-for-data-arrays.md) qui seront mis à jour                                           |
 | **data.category_id** | Entier               | Non      | Identifiant de l'entrée (uniquement requis pour les [catégories à valeurs multiples](../../../basics/structure-of-the-it-documentation.md)) |
 
-### Paramètres de réponse {/examples}
+### Paramètres de réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -168,7 +168,7 @@ La clé JSON **result** contient un objet JSON.
 | **success** | Booléen             | Doit être **true**                                |
 | **message** | Chaîne de caractères| Doit être **"Entrée de catégorie enregistrée avec succès"** |
 
-### Exemple {/examples}
+### Exemple 
 
 === "Corps de la requête"
 
@@ -202,7 +202,7 @@ La clé JSON **result** contient un objet JSON.
     }
     ```
 
-## cmdb.category.delete {/examples}
+## cmdb.category.delete 
 
 [Archiver une entrée de catégorie pour un objet, la marquer comme supprimée ou la purger de la base de données](../../../basics/life-and-documentation-cycle.md)
 
@@ -213,7 +213,7 @@ La clé JSON **result** contient un objet JSON.
 -   Vous ne pouvez ==marquer== que les entrées de catégorie ==comme supprimées== qui sont archivées.
 -   Vous ne pouvez ==purger== que les entrées de catégorie de la base de données qui sont marquées comme supprimées.
 
-### Paramètres de la requête {/examples/}
+### Paramètres de la requête 
 
 | Clé                  | Type de données JSON | Requis | Description                                                                                |
 | -------------------- | -------------------- | ------ | ------------------------------------------------------------------------------------------ |
@@ -221,7 +221,7 @@ La clé JSON **result** contient un objet JSON.
 | **category**         | Chaîne de caractères | Oui    | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **"C__CATG__IP"** |
 | **cateID** ou **id** | Entier               | Oui    | Identifiant de l'entrée, par exemple : **3**                                                |
 
-### Réponse {/examples/}
+### Réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -230,7 +230,7 @@ La clé JSON **result** contient un objet JSON.
 | **success** | Booléen              | Doit être **true** |
 | **message** | Chaîne de caractères | Quelques informations   |
 
-### Exemple {/examples/}
+### Exemple 
 
 === "Corps de la requête de suppression"
 
@@ -275,7 +275,7 @@ Cela fonctionne pour les [catégories à valeurs multiples](../../../basics/stru
 | **catégorie** | Chaîne                  | Oui        | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **"C__CATG__ACCESS"** |
 | **données**  | Objet                    | Oui        | ```{ "titre":"Nom de l'accès", "description": "description de l'accès" }```                    |
 
-### Corps de la réponse {/examples}
+### Corps de la réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -407,7 +407,7 @@ Purger une entrée de [catégorie](../../../basics/structure-of-the-it-documenta
 | **catégorie**| Chaîne de caractères     | Oui        | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **"C__CATG__ACCESS"** |
 | **entrée**   | Entier                   | Oui        | Identifiant de l'entrée, par exemple : **33**                                                  |
 
-### Corps de la réponse { /*examples*/ }
+### Corps de la réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -463,7 +463,7 @@ La clé JSON **result** contient un objet JSON.
 | **catégorie** | Chaîne de caractères     | Oui        | [Constante de catégorie](../../../basics/categories-and-attributes.md), par exemple : **"C__CATG__ACCESS"** |
 | **entrée**   | Entier                   | Oui        | Identifiant de l'entrée, par exemple : **32**                                                         |
 
-### Corps de la réponse {/examples}
+### Corps de la réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -519,7 +519,7 @@ La clé JSON **result** contient un objet JSON.
 | **catégorie** | Chaîne de caractères    | Oui          | [Constante de catégorie](../category-fields-for-data-arrays.md), par exemple : **"C__CATG__ACCESS"** |
 | **entrée**    | Entier                 | Oui          | Identifiant de l'entrée, par exemple : **32**                                                          |
 
-### Corps de la réponse {/examples}
+### Corps de la réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -528,7 +528,7 @@ La clé JSON **result** contient un objet JSON.
 | **success** | Booléen                  | Doit être **true** |
 | **message** | Chaîne de caractères     | Quelques informations |
 
-### Exemple {/examples}
+### Exemple 
 
 === "Corps de la requête"
 

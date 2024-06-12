@@ -5,7 +5,7 @@ Il suffit d'exécuter l'application pour afficher quelques informations de base 
 ```bash
 idoitcmk
 ```
-{ /*examples*/ }
+
 
 Aide
 ----
@@ -21,7 +21,7 @@ ou
 ```bash
 idoitcmk COMMANDE --help
 ```
-{ /*examples*/ }
+
 
 Informations sur la version
 ---------------------------
@@ -31,7 +31,7 @@ Quelle version de idoitcmk utilisez-vous ? Il suffit d'exécuter
 ```bash
 idoitcmk --version
 ```
-{ /*examples*/ }
+
 
 Lister toutes les commandes
 ---------------------------
@@ -41,7 +41,7 @@ Si vous souhaitez savoir quelles commandes sont disponibles, vous pouvez obtenir
 ```bash
 idoitcmk list
 ```
-{ /*examples*/ }
+
 
 Interaction avec l'utilisateur
 -----------------------------
@@ -58,7 +58,7 @@ Si vous souhaitez automatiser l'exécution sans aucune interaction utilisateur, 
 ```bash
 idoitcmk push --yes
 ```
-{ /*examples*/ }
+
 
 Récupérer des informations sur l'état
 -------------------------------------
@@ -68,7 +68,7 @@ Si vous voulez vous assurer que tout va bien, effectuez divers tests :
 ```bash
 idoitcmk status
 ```
-{ /*examples*/ }
+
 
 *   Environnement PHP
 *   Connexion à l'API JSON-RPC i-doit

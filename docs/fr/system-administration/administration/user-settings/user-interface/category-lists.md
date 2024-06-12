@@ -1,4 +1,4 @@
-# Listes de catégories {/ * exemples * /}
+# Listes de catégories 
 
 L'utilisateur a la possibilité d'adapter les options d'affichage pour toutes les listes de catégories.
 

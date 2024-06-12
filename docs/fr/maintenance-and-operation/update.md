@@ -82,7 +82,7 @@ Maintenant, la mise à jour est terminée. Des informations plus détaillées su
 
 [![Complétion](../assets/images/en/maintenance-and-operation/update/11-update.png)](../assets/images/en/maintenance-and-operation/update/11-update.png)
 
-## Mise à jour préparée via la console {/examples}
+## Mise à jour préparée via la console 
 
 La mise à jour peut être préparée, mais pas exécutée via la console. Pour la préparation, le dernier package de mise à jour doit être téléchargé depuis le [portail client i-doit](../system-administration/customer-portal.md).
 

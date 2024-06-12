@@ -1,4 +1,4 @@
-# checkmk 2: Synchroniser les groupes de contacts {/examples/}
+# checkmk 2: Synchroniser les groupes de contacts 
 
 Check_MK notifie les groupes de contacts à chaque événement s'ils sont correctement configurés. Dans i-doit, chaque groupe de contacts peut être documenté en tant qu'objet. Pour partager les groupes de contacts entre les deux, exécutez :
 

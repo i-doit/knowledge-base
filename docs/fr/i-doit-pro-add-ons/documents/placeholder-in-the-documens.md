@@ -45,7 +45,7 @@ Rapport de substitution
 En utilisant le bouton "Rapport", il est possible d'inclure des listes de résultats provenant de [rapports](../../evaluation/report-manager.md) précédemment créés. La sélection se fait en utilisant le champ déroulant dans la zone supérieure, où le rapport est sélectionné par son nom.  
 La liste des résultats dans le document correspond toujours à la sortie du rapport au moment de la création du document. S'il est prévu que les résultats du rapport aient changé/mis à jour, une nouvelle révision du document doit être créée en fonction du modèle. 
 
-{ /* examples */ }
+
 
 De plus, il est possible d'inclure des [rapports de variables](../../evaluation/variable-reports.md) dans le document. Ici, les espaces réservés sélectionnés correspondent à l'objet principal et produisent dynamiquement le contenu pour l'objet principal.
 

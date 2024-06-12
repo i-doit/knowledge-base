@@ -1,4 +1,4 @@
-# Notes de version 27 {/ * exemples *}
+# Notes de version 27 
 
 Nous sommes heureux d'annoncer i-doit pro 27. Cette version de l'automne 2023 ajoutera des fonctionnalités à i-doit pro qui ont été très attendues et vous aidera à utiliser efficacement votre documentation.
 

@@ -1,4 +1,4 @@
-# Changement de Masse {/examples/}
+# Changement de Masse 
 
 Le changement de masse est une fonctionnalité dans i-doit qui permet de modifier plusieurs [objets](../glossary.md) en une seule étape sur la base de modèles de changement. Avec ces modifications, les objets sélectionnés prennent les [attributs](../glossary.md) du modèle de changement.
 
@@ -40,7 +40,6 @@ Les options à la troisième étape déterminent comment les champs vides du mod
     
 *   **Effacer explicitement les champs lorsque le modèle n'a pas de contenu pour eux** 
 
-{/*examples*/}
 
 De cette manière, vous pouvez configurer si vos objets seront exactement alignés sur le modèle de changement ou si seules les valeurs documentées dans le modèle de changement seront transférées à vos objets existants.
 

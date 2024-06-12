@@ -83,7 +83,7 @@ Si vous souhaitez prédéfinir une liste d'objets spécifique pour d'autres util
 
 [![Attribuer la Configuration à d'Autres Utilisateurs](../../assets/images/en/basics/object-list/configuration-of-the-list-view/6-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/6-cotlv.png)
 
-## Sauvegarde de la Configuration {/examples}
+## Sauvegarde de la Configuration 
 
 Toutes les modifications de la configuration sont acceptées avec le bouton **Enregistrer**.
 
@@ -91,6 +91,6 @@ Toutes les modifications de la configuration sont acceptées avec le bouton **En
 
     Si la vue de liste ne correspond pas à la configuration lors de l'activation de la liste d'objets, il est utile de vider le cache du navigateur web.
 
-## Autorisation de Modifier la Vue de Liste {/examples}
+## Autorisation de Modifier la Vue de Liste 
 
 Avec la [gestion des droits des utilisateurs](../../efficient-documentation/rights-management/index.md), vous pouvez attribuer des droits et déterminer quelles personnes ou groupes de personnes seront autorisés à configurer la vue de liste et la préconfigurer pour d'autres utilisateurs.

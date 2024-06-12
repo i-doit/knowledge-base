@@ -1,4 +1,4 @@
-### À faire { /*examples*/ }
+### À faire 
 
 Voici une liste des tâches à faire :
 

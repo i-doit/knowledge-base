@@ -12,7 +12,6 @@ Toute personne qui traite en profondeur du sujet de la documentation informatiqu
 
 Jetez un œil à nos [livres blancs](https://www.i-doit.com/en/downloads/) également. 
 
-{/*examples*/}
 
 Connaître vos besoins
 ----------------------
@@ -21,7 +20,6 @@ Ce n'est pas par hasard que les gens s'occupent de la documentation informatique
 
 Il existe différentes approches : _Top down_ décrit que les exigences sont décomposées dans un processus de haut en bas. Cela s'applique également à la documentation : Avant de vous pencher sur les détails des composants informatiques individuels, vous élaborez le tableau d'ensemble. _Bottom up_ est le contrepartie : Sur la base d'une infrastructure détaillée, vous pouvez modéliser des services, attribuer des contrats de maintenance ou créer des plans de reprise après sinistre. Mais dans une certaine mesure, les exigences viennent de tous les côtés en même temps. Donc, avant de documenter ne serait-ce qu'une adresse IP ou de lire une spécification de serveur, vous devriez canaliser ces exigences et les intégrer dans des structures bien réfléchies. 
 
-{/*examples*/}
 
 Connaître vos utilisateurs
 ---------------------------
@@ -33,7 +31,6 @@ Connaître votre documentation existante
 
 Il est rare que vous commenciez vraiment de zéro. À vue de nez, environ 100 pour cent de nos clients utilisent _le_ produit rival d'i-doit appelé Excel. Listes d'adresses IP, listes de salles et de contacts, plans de rack... nous avons vu tout cela documenté sous une forme bidimensionnelle. Peut-être avez-vous également d'autres outils spécialisés qui créent le paysage actuel de l'ITSM. Voulez-vous qu'ils soient remplacés par i-doit ? Les données collectées peuvent-elles être réutilisées ? Y a-t-il des exports ou des interfaces ? Dans ce contexte, l'intégration des données est un mot-clé important. 
 
-{/*examples*/}
 
 
 Mais dans chaque cas, vous devez prendre une décision : devez-vous saisir les données manuellement ou peuvent-elles être traitées automatiquement ?

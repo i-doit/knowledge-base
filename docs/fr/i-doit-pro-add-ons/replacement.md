@@ -1,4 +1,4 @@
-# Remplacement {/ * exemples * /}
+# Remplacement 
 
 Un nouveau commutateur est mis en service mais vous souhaitez conserver toutes les connexions ? Utilisez l'**addon** **Remplacement** [add-on](./index.md) afin de ne pas avoir à documenter toutes les connexions à nouveau. Cet add-on permet l'échange d'[objets](../basics/structure-of-the-it-documentation.md) avec une adoption configurable des connexions existantes.
 

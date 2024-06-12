@@ -102,7 +102,7 @@ Sur la base de cette hypothèse, i-doit met en œuvre le filet de sécurité sui
         -   Un objet de source de données ne peut pas être géré par plusieurs sources de données
     -   Une autre précision: les objets existants ne peuvent pas être attribués manuellement à une source de données
 
-{ /*examples*/ }
+
 
 Nous avons un traitement similaire au niveau de la **catégorie** :
 

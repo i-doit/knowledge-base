@@ -95,7 +95,7 @@ Crée un nouveau [objet](../../../basics/structure-of-the-it-documentation.md) a
 | **cmdb_status** | Chaîne\|Entier | Non  | Attribut **Statut CMDB** dans la catégorie **Global** par sa constante (chaîne), par exemple : **"C__CMDB_STATUS__IN_OPERATION"**<br><br>Alternativement, par son identifiant (entier), par exemple : **6** |
 | **description** | Chaîne | Non  | Attribut **Description** dans la catégorie **Global** |
 
-### Paramètres de réponse {/examples}
+### Paramètres de réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -137,18 +137,18 @@ La clé JSON **result** contient un objet JSON.
     }
     ```
 
-## cmdb.object.update {/examples}
+## cmdb.object.update 
 
 Modifier un objet, par exemple le titre d'un objet.
 
-### Paramètres de requête {/examples}
+### Paramètres de requête 
 
 | Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
 | **id** | Entier | Oui | Identifiant de l'objet, par exemple : **42** |
 | **title** | Chaîne | Oui | Nouveau titre de l'objet, par exemple : **"Votre petit serveur"** |
 
-### Paramètres de réponse {/examples}
+### Paramètres de réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -157,7 +157,7 @@ La clé JSON **result** contient un objet JSON.
 | **message** | Chaîne | Doit être |
 | **success** | Booléen | Doit être true |
 
-### Exemple {/examples}
+### Exemple 
 
 === "Corps de la requête"
 
@@ -175,7 +175,7 @@ La clé JSON **result** contient un objet JSON.
     }
     ```
 
-### Corps de la réponse {/ * exemples *}
+### Corps de la réponse 
 
     ```json
     {
@@ -225,7 +225,7 @@ La clé JSON **result** contient un objet JSON.
     }
     ```
 
-### Corps de la réponse {/ * exemples *}
+### Corps de la réponse 
 
     ```json
     {
@@ -242,13 +242,13 @@ La clé JSON **result** contient un objet JSON.
 
 Recycle un objet
 
-### Paramètres de la requête {/examples}
+### Paramètres de la requête 
 
 | Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
 | **objet** | Entier | Oui | Identifiant de l'objet, par exemple : **464** |
 
-### Paramètres de la réponse {/examples}
+### Paramètres de la réponse 
 
 La clé JSON **résultat** contient un objet JSON.
 
@@ -257,7 +257,7 @@ La clé JSON **résultat** contient un objet JSON.
 | **succès** | Booléen | Doit être **true** |
 | **message** | Chaîne de caractères | Quelques informations |
 
-### Exemple {/examples}
+### Exemple 
 
 === "Corps de la requête"
 
@@ -288,17 +288,17 @@ La clé JSON **résultat** contient un objet JSON.
     }
     ```
 
-## cmdb.object.archive {/examples}
+## cmdb.object.archive 
 
 [Archive](../../../basics/life-and-documentation-cycle.md#archive-category-entries-mark-them-as-deleted-or-purge-them) un objet
 
-### Paramètres de la requête {/examples}
+### Paramètres de la requête 
 
 | Clé | Type de données JSON | Requis | Description |
 | --- | --- | --- | --- |
 | **objet** | Entier | Oui | Identifiant de l'objet, par exemple : **464** |
 
-### Paramètres de la réponse {/examples}
+### Paramètres de la réponse 
 
 La clé JSON **résultat** contient un objet JSON.
 
@@ -307,7 +307,7 @@ La clé JSON **résultat** contient un objet JSON.
 | **succès** | Booléen | Doit être **true** |
 | **message** | Chaîne de caractères | Quelques informations |
 
-## cmdb.object.purge {#examples}
+## cmdb.object.purge 
 
 [Purges](../../../basics/life-and-documentation-cycle.md#archive-category-entries-mark-them-as-deleted-or-purge-them) un objet lorsque le statut est supprimé.
 

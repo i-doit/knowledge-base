@@ -6,4 +6,3 @@ Un point de contact central existe pour les utilisateurs de i-doit pro. Les [pac
 
 Des données d'accès sont nécessaires pour le portail client. Les clients de la version i-doit pro reçoivent les informations nécessaires à la création d'un compte utilisateur lors du processus de commande.
 
-{/*examples*/}

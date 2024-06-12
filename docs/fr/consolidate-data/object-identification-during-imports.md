@@ -35,7 +35,7 @@ Certains attributs sont adaptés pour référencer des objets [de manière univo
 
 L'installation par défaut d'i-doit contient déjà un profil nommé **Par défaut** qui ne doit pas être modifié ou supprimé. Avec le bouton **Nouveau**, vous pouvez créer un nouveau profil, avec **Modifier** vous pouvez modifier un profil tandis que **Purger** supprime un profil de manière irrévocable. 
 
-{ /* examples */ }
+
 
 Plusieurs détails sont requis par profil :
 
@@ -70,4 +70,4 @@ Plusieurs détails sont requis par profil :
 | **MAC**                  | Importation d'un appareil compatible réseau ; voir la catégorie **Réseau → Port**, attribut **Adresse MAC**                                                                                                                                     | oui   | oui                        | oui              | oui         |
 | **LDAP DN**              | Lorsque les personnes sont synchronisées via [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md), i-doit enregistre le DN correspondant en arrière-plan. Vous ne pouvez pas voir cet attribut dans i-doit, mais vous pouvez l'utiliser comme identification | non   | oui                        | non              | non         |
 
-Please provide the Markdown content you would like me to translate into French.
+

@@ -47,7 +47,7 @@ Si le contrat est configuré correctement, la [Console](../automation-and-integr
 
 [![contract-extension-console](../assets/images/en/use-cases/automated-contract-extension/3-avv-uc.png)](../assets/images/en/use-cases/automated-contract-extension/3-avv-uc.png)
 
-## Étape 3: Automatiser {/examples}
+## Étape 3: Automatiser 
 
 Étant donné que nous ne voulons pas exécuter la commande manuellement à chaque fois, nous allons maintenant créer une **tâche cron**.
 Tout d'abord, nous créons une nouvelle tâche cron :

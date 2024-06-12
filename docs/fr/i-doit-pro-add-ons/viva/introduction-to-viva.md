@@ -6,7 +6,7 @@ En tant que partie essentielle d'un système de gestion de la sécurité de l'in
 
 VIVA s'intègre parfaitement avec i-doit pro. L'accent est mis sur la réutilisation judicieuse des données, qui ne sont maintenues qu'à un seul endroit et toujours placées dans le contexte de la sécurité informatique. Une grande partie de ces données peut provenir d'outils de découverte/inventaire et de LDAP/AD, réduisant ainsi le besoin de maintenance manuelle. L'utilisation des données pour d'autres domaines tels que la surveillance, le service d'assistance, la gestion des changements ou les rapports est également prise en charge. Des automatismes et des assistants facilitent les étapes de travail ultérieures. VIVA est complété par un paramétrage étendu et la gestion de plusieurs catalogues IT-Grundschutz, réseaux d'information et audits. 
 
-{ /* examples */ }
+
 
 Les chapitres suivants fournissent un aperçu détaillé du fonctionnement de VIVA.
 

@@ -95,5 +95,3 @@
 [Bogue][Relations] Affichage correct des relations dans l'état archivé/supprimé  
 [Bogue][Installation/ Mise à jour / Licence basées sur la console] L'utilisation de la commande "system-checkforupdates" affiche des constantes  
 [Bogue][Vue de câblage] Activer le défilement horizontal pour l'aperçu dans le câblage >> connecteurs  
-
-I'm ready to start translating the Markdown content into French. Please paste the content you'd like me to translate.

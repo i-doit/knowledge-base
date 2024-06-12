@@ -24,7 +24,7 @@ Accès en lecture au journal de bord i-doit.
 | **since**           | Chaîne               | Non    | Date pour filtrer les changements du journal de bord depuis une certaine date, pour les valeurs possibles voir aussi [https://www.php.net/manual/de/function.strtotime.php](https://www.php.net/manual/de/function.strtotime.php){:target="_blank"} par exemple **1660203634** (2022-08-11 09:40:34)                                                                                                                 |
 | **status**          | Chaîne               | Non    | Filtrer par statut des objets par exemple Normal ou Archivé:<br>-   **C__RECORD_STATUS__BIRTH** = Non terminé<br>-   **C__RECORD_STATUS__NORMAL** = Normal<br>-   **C__RECORD_STATUS__ARCHIVED** = Archivé<br>-   **C__RECORD_STATUS__DELETED** = Supprimé<br>-   **C__RECORD_STATUS__TEMPLATE** = Modèle<br>-   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE** = Modèle pour les changements de masse |
 
-### Paramètres de réponse {/examples}
+### Paramètres de réponse 
 
 La clé JSON **résultat** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
@@ -88,7 +88,7 @@ La clé JSON **résultat** contient un tableau d'objets JSON. Chaque objet conti
 
 Écrire une entrée dans le journal i-doit.
 
-### Paramètres de requête {/examples}
+### Paramètres de requête 
 
 | Clé             | Type de données JSON | Requis   | Description                                                                                                                     |
 | --------------- | --------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------- |

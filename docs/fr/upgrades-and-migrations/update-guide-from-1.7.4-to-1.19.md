@@ -77,7 +77,6 @@ Mise à jour de 1.8 à 1.9
 
 Tout d'abord, nous préparons la mise à jour via l'interface en ligne de commande en ouvrant le dossier i-doit à `/var/www/html/` et en dézippant le package de mise à jour idoit avec
 
-```markdown
     sudo -u www-data unzip idoit-1.9-update.zip
 
 Si on vous demande, écrasez tout en tapant A.
@@ -210,7 +209,6 @@ Mise à niveau de Debian 8 à 9
         ```
     Des erreurs ? [Lisez ici](https://www.debian.org/releases/stretch/)  
 
-{/*examples*/}
 
     
     !!! success "**Vérifiez le système et i-doit**"
@@ -503,7 +501,6 @@ Maintenant, ouvrez l'Interface de Mise à Jour Web et la mise à jour vers la ve
 
 !!! success "**Vérifiez le Système et i-doit**"
 
-```markdown
     Vérifiez votre système. Vérifiez i-doit!
 
 Mise à jour de 1.17 à 1.18

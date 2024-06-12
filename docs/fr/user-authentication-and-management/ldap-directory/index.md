@@ -15,7 +15,7 @@ L'extension PHP php_ldap doit être installée et activée pour la communication
 N'oubliez pas d'autoriser la connexion LDAP si vous utilisez **SELinux** avec `setsebool -P httpd_can_connect_ldap on`. Le -P est pour Permanent
 Vérifiez-le via `getsebool -a | grep httpd`
 
-### Installation ultérieure sous [Debian GNU/Linux](../../installation/manual-installation/debian12.md) { /*examples*/ }
+### Installation ultérieure sous [Debian GNU/Linux](../../installation/manual-installation/debian12.md) 
 
 ```shell
 sudo apt install php7-ldap
@@ -77,7 +77,6 @@ Les paramètres indiqués ici déterminent où les utilisateurs doivent être re
 | **Rechercher des utilisateurs dans (OU)*** | Champ obligatoire : Le chemin de l'unité organisationnelle dans laquelle les utilisateurs sont stockés dans l'annuaire.<br><br>(Exemple : **OU=arbre,DC=synetics,DC=int**) |
 | **Recherche récursive** | Lors de l'activation de la recherche récursive, les dossiers situés sous les unités organisationnelles indiquées sont également recherchés. Ceci n'est pas recommandé pour les grands annuaires et devrait être contourné par la création de plusieurs serveurs. |
 
-{/*examples*/}
 
 En plus de cela, le filtre peut être davantage défini. Les options derrière cela n'ont pas encore d'effet pour une seule ligne de filtre. Une fois que la requête est étendue en utilisant "Ajouter un filtre", les options supplémentaires entrent en vigueur.
 
@@ -117,7 +116,7 @@ Synchronisation Périodique
 
 La configuration requise pour cela a déjà été effectuée lors des étapes précédentes. Maintenant, vous devez simplement configurer une [interface en ligne de commande](../../automation-and-integration/cli/index.md) appropriée pour la synchronisation. Des champs supplémentaires peuvent également être configurés pour la synchronisation.
 
-### Configuration Avancée {/ * exemples * /}
+### Configuration Avancée 
 
 La configuration doit être effectuée dans la [configuration du gestionnaire](../../automation-and-integration/cli/index.md). Un exemple peut être trouvé [ici](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md) (i-doit < 1.15). Ce fichier peut être étendu et personnalisé avec des données de connexion, un locataire et des attributs. Le fichier de configuration est ensuite déplacé vers `/src/handler/config/`. <br>
 Afin que ce fichier soit pris en compte par exemple avec la commande ldap-sync, cela doit être indiqué avec la synchronisation via un autre paramètre (-c /chemin/) également (plus d'informations sur la [Console](../../automation-and-integration/cli/index.md)).
@@ -135,11 +134,11 @@ Afin que ce fichier soit pris en compte par exemple avec la commande ldap-sync, 
 | **ignoreFunction** | Il peut s'agir de n'importe quel nom de fonction qui peut être appelé via call\_user\_func ou les fonctions définies.<br><br>Fonctions définies:<br><br>empty  <br>!empty  <br>isset  <br>!isset<br><br>par exemple<br><br>ignoreFunction\=empty |
 | syncEmptyAttributes | Si des valeurs ont été supprimées/vidées des champs dans AD, elles sont transférées à i-doit.<br><br>par exemple<br><br>syncEmptyAttributes=true |
 
-### Console {/examples}
+### Console 
 
 Pour utiliser correctement la console, l'[article](../../automation-and-integration/cli/index.md) doit être familier avec celle-ci. Une synchronisation simple sans configuration avancée est fournie par l'option ldap-sync. Une description des paramètres ainsi qu'un exemple correspondant peuvent être trouvés dans le [chapitre](../../automation-and-integration/cli/console/options-and-parameters-cli.md#ldap-sync).
 
-### Attribution Automatisée des Personnes aux Groupes de Personnes {/examples}
+### Attribution Automatisée des Personnes aux Groupes de Personnes 
 
 L'attribution automatisée garantit que les autorisations spécifiées du groupe de personnes sont attribuées automatiquement lors de la connexion. L'attribut **Groupe LDAP (Mapping)** dans les **données maîtres** d'un **groupe de personnes** doit être rempli avec un groupe valide de votre répertoire pour que l'attribution se fasse. Les groupes attribués à l'objet utilisateur dans le répertoire sont interrogés et comparés à l'attribut **Groupe LDAP (Mapping)** des groupes de personnes _i-doit_ une fois qu'un utilisateur se connecte ou que la synchronisation est lancée. S'il y a correspondance, le groupe est attribué et les autres groupes sont interrogés.
 

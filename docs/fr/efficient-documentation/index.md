@@ -1,4 +1,4 @@
-# Documentation Efficace {/ * exemples *}
+# Documentation Efficace 
 
 Au début, lorsque vous commencez à vous familiariser avec la structure de i-doit, vous réaliserez que i-doit est principalement une base de données structurée avec une interface graphique. Bien loin de là - certaines fonctionnalités sont disponibles pour vous aider à documenter aussi rapidement et facilement que possible. Pour réussir dans la manipulation manuelle de la documentation, vous pouvez trouver de nombreux conseils et astuces dans les sous-pages suivantes :
 

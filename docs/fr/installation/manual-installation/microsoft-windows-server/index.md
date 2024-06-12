@@ -11,7 +11,7 @@ Le contenu du package est le suivant :
 -   windowsdesktop-runtime-6.0.14-win-x64.exe
 
 Le package d'installation inclura toujours la dernière [version de i-doit](../../../version-history/index.md). De plus, le dossier `src.zip` permet une installation sans connexion internet.<br>
-Puisque l'installateur Windows de i-doit nécessite ==windowsdesktop-runtime-6.0.14==, cela est également fourni au cas où aucune connexion internet n'est disponible.
+Puisque l'installateur Windows de i-doit nécessite **windowsdesktop-runtime-6.0.14**, cela est également fourni au cas où aucune connexion internet n'est disponible.
 
 ## Installation de i-doit pour Windows
 
@@ -23,15 +23,15 @@ Après avoir cliqué sur Installer, tous les éléments requis seront installés
 
 Les éléments suivants seront installés :
 
--   ==Apache 2.4==
--   ==PHP 8.X==
--   ==MariaDB 10.X==
--   ==i-doit==
+-   **Apache 2.4**
+-   **PHP 8.X**
+-   **MariaDB 10.X**
+-   **i-doit**
 
 !!! info "Si le pare-feu Windows est activé, vous serez invité à faire confiance à l'application"
 
-Si l'installation a réussi, une petite fenêtre avec le message "==i-doit a été installé avec succès.==" s'affichera.<br>
-Après avoir cliqué sur ==OK==, un nouvel onglet de navigateur avec l'URL `localhost` s'ouvrira automatiquement et vous pourrez utiliser i-doit pleinement.
+Si l'installation a réussi, une petite fenêtre avec le message "**i-doit a été installé avec succès.**" s'affichera.<br>
+Après avoir cliqué sur **OK**, un nouvel onglet de navigateur avec l'URL `localhost` s'ouvrira automatiquement et vous pourrez utiliser i-doit pleinement.
 
 !!! info "Si une erreur s'est produite pendant l'installation, un fichier journal est automatiquement créé dans le dossier i-doit"
 
@@ -39,16 +39,16 @@ Après avoir cliqué sur ==OK==, un nouvel onglet de navigateur avec l'URL `loca
 
 Pour configurer PHP, MariaDB ou Apache, vous pouvez trouver les fichiers de configuration respectifs dans les répertoires suivants :
 
--   ==PHP:==<br>
+-   **PHP:**<br>
     `C:\ProgramData\i-doit\php\php.ini`
 
--   ==MariaDB:==<br>
+-   **MariaDB:**<br>
     `C:\ProgramData\MariaDB\data\my.ini`
 
--   ==Apache:==<br>
+-   **Apache:**<br>
     `C:\ProgramData\i-doit\apache-2.4\conf\httpd.conf`
 
-### Informations d'identification {/ * exemples *}
+### Informations d'identification 
 
 Les informations d'identification suivantes sont définies par l'installateur.
 
@@ -60,13 +60,13 @@ Les informations d'identification suivantes sont définies par l'installateur.
 
 Pour les informations d'identification de connexion à i-doit, consultez [ici](../../../basics/initial-login.md).
 
-### Configuration de HTTPS (optionnel) {/ * exemples *}
+### Configuration de HTTPS (optionnel) 
 
 Les instructions suivantes vous montrent comment configurer SSL pour Windows avec i-doit.<br>
 Seules les étapes nécessaires pour configurer HTTPS sont décrites.<br>
 Cette section peut être ignorée.
 
-#### Prérequis {/ * exemples *}
+#### Prérequis 
 
 Tout d'abord, vous avez besoin d'un certificat valide au format `.crt` et `.key`. Vous pouvez le créer avec OpenSSL.<br>
 Vous pouvez télécharger et installer OpenSSL ici : [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)<br>
@@ -79,7 +79,7 @@ OpenSSL req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key 
 
 Le certificat et la clé privée ont maintenant été créés dans le dossier où la commande a été exécutée. Copiez-les, par exemple, dans le dossier `ProgramData\i-doit\apache-2.4\conf\extra\`.
 
-### Étapes de configuration {/ * exemples *}
+### Étapes de configuration 
 
 #### 1. **Création du fichier ssl.conf**
 
@@ -117,8 +117,7 @@ Accédez à votre dossier i-doit sous `ProgramData\i-doit\apache-2.4\conf\extra\
 
 **Remarque :** Personnalisez les chemins et les paramètres de configuration selon votre environnement et assurez-vous que votre certificat et votre clé privée sont situés dans les chemins spécifiés.
 
-#### 2. **Ajustements dans le fichier httpd.conf**{/*examples*/}
-
+#### 2. **Ajustements dans le fichier httpd.conf**
 Modifiez le fichier `httpd.conf` situé sous `i-doit\apache-2.4\conf\` et ajoutez ce qui suit :
 
 -   Ajoutez `lists 443` et commentez `lists 80`. En conséquence, i-doit ne sera plus accessible via http.
@@ -238,8 +237,7 @@ LogLevel warn
 </IfModule>
 ```
 
-#### 3. **Redémarrer le serveur Web Apache**{/*examples*/}
-
+#### 3. **Redémarrer le serveur Web Apache**
 - Appuyez sur ++windows+r++, tapez `cmd` et appuyez sur Entrée.<br>
 - Ou tapez `cmd` dans la barre de recherche de Windows pour ouvrir l'invite de commandes
 
@@ -253,8 +251,7 @@ Le serveur web Apache a maintenant été redémarré. Vérifiez l'installation e
 
 C'est tout ! Votre installation i-doit est maintenant configurée pour SSL sur Windows.
 
-### Désinstallation{/*examples*/}
-
+### Désinstallation
 Pour désinstaller i-doit, le service Apache2 doit d'abord être arrêté.<br>
 Pour cela, nous saisissons la commande suivante dans l'invite de commandes :
 
@@ -268,7 +265,7 @@ Une fois le service Apache2 arrêté, Apache2 peut être désinstallé :
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
-Ensuite, MariaDB est désinstallé en supprimant MariaDB sous ==Ajouter ou supprimer des programmes==.
+Ensuite, MariaDB est désinstallé en supprimant MariaDB sous **Ajouter ou supprimer des programmes**.
 
 [![Désinstaller MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
 
@@ -289,9 +286,9 @@ Le contenu du package est le suivant :
 -   windowsdesktop-runtime-6.0.14-win-x64.exe
 
 Le package d'installation inclura toujours la dernière [version d'i-doit](../../../version-history/index.md) ainsi que JDisc 5.0 et plusieurs add-ons JDisc. De plus, le dossier `src.zip` permet une installation sans connexion Internet.<br>
-Comme l'installateur Windows i-doit nécessite ==windowsdesktop-runtime-6.0.14==, il est également fourni au cas où aucune connexion Internet n'est disponible.
+Comme l'installateur Windows i-doit nécessite **windowsdesktop-runtime-6.0.14**, il est également fourni au cas où aucune connexion Internet n'est disponible.
 
-### Installation {/examples}
+### Installation 
 
 Après avoir exécuté le `i-doit Discovery Installer.exe`, vous verrez l'interface graphique suivante :
 
@@ -301,40 +298,39 @@ Après avoir cliqué sur Installer, tous les éléments requis seront installés
 
 Les éléments suivants seront installés :
 
--   ==Apache 2.4==
--   ==PHP 8.X==
--   ==MariaDB 10.X==
--   ==i-doit==
--   ==JDisc 5.X==
--   ==JDisc JDisc Discovery Dependency Mapping 5.X(Add-on)==
--   ==JDisc Discovery Device History 5.X(Add-on)==
--   ==JDisc Discovery Measurement 5.X(Add-on)==
--   ==JDisc Discovery Measurement 5.X(Add-on)==
--   ==JDisc Discovery Security 5.X(Add-on)==
--   ==JDisc Discovery WEB UI 5.X(Add-on)==
+-   **Apache 2.4**
+-   **PHP 8.X**
+-   **MariaDB 10.X**
+-   **i-doit**
+-   **JDisc 5.X**
+-   **JDisc JDisc Discovery Dependency Mapping 5.X(Add-on)**
+-   **JDisc Discovery Device History 5.X(Add-on)**
+-   **JDisc Discovery Measurement 5.X(Add-on)**
+-   **JDisc Discovery Measurement 5.X(Add-on)**
+-   **JDisc Discovery Security 5.X(Add-on)**
+-   **JDisc Discovery WEB UI 5.X(Add-on)**
 
 !!! info "Si le pare-feu Windows est activé, vous serez invité à faire confiance à l'application"
 
-Si l'installation a réussi, une petite fenêtre avec le message "==i-doit Discovery a été installé avec succès.==" s'affichera.<br>
-Après avoir cliqué sur ==OK==, un nouvel onglet de navigateur avec l'URL `localhost` s'ouvrira automatiquement et vous pourrez utiliser i-doit pleinement.
+Si l'installation a réussi, une petite fenêtre avec le message "**i-doit Discovery a été installé avec succès.**" s'affichera.<br>
+Après avoir cliqué sur **OK**, un nouvel onglet de navigateur avec l'URL `localhost` s'ouvrira automatiquement et vous pourrez utiliser i-doit pleinement.
 
-```markdown
 !!! info "Si une erreur s'est produite pendant l'installation, un fichier journal est automatiquement créé dans le dossier i-doit"
 
-### Configuration {/examples}
+### Configuration 
 
 Pour configurer PHP, MariaDB ou Apache, vous pouvez trouver les fichiers de configuration respectifs dans les répertoires suivants :
 
--   ==PHP:==<br>
+-   **PHP:**<br>
     `C:\ProgramData\i-doit-discovery\php\php.ini`
 
--   ==MariaDB:==<br>
+-   **MariaDB:**<br>
     `C:\ProgramData\MariaDB\data\my.ini`
 
--   ==Apache:==<br>
+-   **Apache:**<br>
     `C:\ProgramData\i-doit-discovery\apache-2.4\conf\httpd.conf`
 
-## Informations d'identification {/examples}
+## Informations d'identification 
 
 Les informations d'identification suivantes sont définies par l'installateur.
 
@@ -346,7 +342,7 @@ Les informations d'identification suivantes sont définies par l'installateur.
 
 Pour les informations d'identification de connexion à i-doit, voir [ici](../../../basics/initial-login.md).
 
-### Désinstallation {/examples}
+### Désinstallation 
 
 Pour désinstaller i-doit-discovery, le service Apache2 doit d'abord être arrêté.<br>
 Pour cela, nous saisissons la commande suivante dans l'invite de commandes :
@@ -361,11 +357,11 @@ Une fois le service Apache2 est arrêté, Apache2 peut être désinstallé :
 C:\ProgramData\i-doit-discovery\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
-Ensuite, MariaDB est désinstallé en supprimant MariaDB sous ==Ajouter ou supprimer des programmes==.
+Ensuite, MariaDB est désinstallé en supprimant MariaDB sous **Ajouter ou supprimer des programmes**.
 
 [![Désinstaller MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
 
-De plus, JDisc et ses add-ons respectifs doivent être supprimés sous ==Ajouter ou supprimer des programmes==.
+De plus, JDisc et ses add-ons respectifs doivent être supprimés sous **Ajouter ou supprimer des programmes**.
 
 !!! warning "Les add-ons JDisc doivent être supprimés avant de supprimer JDisc lui-même !"
 

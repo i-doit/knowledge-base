@@ -18,41 +18,33 @@ Un nouveau modèle peut être créé via le bouton "Nouveau". L'extension contin
 
 *   **Titre**  
     La désignation définit le nom du modèle par lequel il peut être trouvé dans le système.  
-    {/ *exemples*}
-
+    
 *   **Catégorie**  
     Le modèle peut être assigné à une catégorie de document. Seules les catégories créées à l'avance sont disponibles. La catégorie d'un document peut être modifiée à tout moment ultérieurement.  
-    {/ *exemples*}
-
+    
 *   **Page de titre**  
     La page de couverture peut être conçue selon vos propres spécifications. Elle apparaît comme la première page du document final.  
     Dans l'onglet Page de titre, vous pouvez activer/désactiver la page de titre.  
-    {/ *exemples*}
-
+    
 *   **En-tête**  
     L'en-tête représente la zone d'en-tête de chaque page du document. Le contenu est ajouté en haut de chaque page.  
     Dans l'onglet En-tête, vous pouvez activer/désactiver l'en-tête.  
-    {/ *exemples*}
-
+    
 *   **Pied de page**  
     Le pied de page se trouve en bas de chaque page. Du contenu supplémentaire peut également être ajouté ici, de manière similaire à l'en-tête.  
     Dans l'onglet Pied de page, vous pouvez activer/désactiver le pied de page.  
-    {/ *exemples*}
-
+    
 *   **Table des matières**  
     Dans l'onglet Table des matières, vous pouvez activer/désactiver la table des matières.  
-    {/ *exemples*}
-
+    
 *   **Options**  
     Les options permettent de spécifier quelles pages sont utilisées pour le comptage des numéros de page et à partir de quel numéro de page le comptage est effectué. Il est également possible de spécifier le format des en-têtes.  
     Dans la zone inférieure des options, d'autres paramètres pour les documents PDF peuvent être définis. Ceux-ci incluent l'espacement des marges et l'orientation de la page. Si nécessaire, vous pouvez également télécharger et ajouter vos propres polices. L'utilisation d'images d'arrière-plan pour la page de couverture, la table des matières ou toutes les autres pages est également possible ici.  
-    {/ *exemples*}
-
+    
 *   **Champs personnalisés**  
     Pour ajouter plus de champs au document, il est possible de définir vos propres champs sous "Champs personnalisés", qui peuvent ensuite être inclus dans le document. Pour ces champs, certains types de champs sont disponibles, qui définissent le contenu. Les champs requis peuvent être ajoutés en utilisant le bouton "Ajouter un nouveau champ".  
     Pour inclure les champs personnalisés dans le document lui-même, celui-ci doit être créé une fois. Ensuite, tous les champs sont disponibles dans la vue d'édition du document et peuvent y être remplis. Pour garantir que les informations sont également remplies dans le document (PDF/HTML), une nouvelle révision doit être créée. Si les informations dans les champs ont été mises à jour, il est également nécessaire de créer une nouvelle révision.  
-    {/ *exemples*}
-
+    
 Créer un chapitre dans le document
 -----------------------------------
 
@@ -64,7 +56,6 @@ Chaque chapitre peut d'abord recevoir un nom qui sert également de titre pour l
 
 [![Créer un chapitre dans le document](../../assets/images/en/i-doit-pro-add-ons/documents/templates/3-dd.png)](../../assets/images/en/i-doit-pro-add-ons/documents/templates/3-dd.png)
 
-{/*examples*/}
 
 La section Contenu offre la possibilité de copier le contenu des chapitres existants dans le modèle.
 
@@ -113,4 +104,4 @@ Des modèles de documents prêts à l'emploi sont disponibles dans le dépôt en
 
     Pour accéder au dépôt en ligne, le serveur i-doit doit être connecté à Internet. De plus, la sélection des modèles disponibles dépend de la langue du système i-doit sélectionnée.
 
-{ /* examples */ }
+

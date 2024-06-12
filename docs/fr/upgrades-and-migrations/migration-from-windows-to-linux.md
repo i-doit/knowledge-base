@@ -1,8 +1,8 @@
-# Migration de Windows vers Linux {/examples}
+# Migration de Windows vers Linux 
 
 Il peut y avoir de bonnes raisons d'exploiter i-doit sous [Windows](../installation/manual-installation/microsoft-windows-server/index.md). Cependant, en raison de diverses raisons, nous recommandons l'utilisation de Linux. Mais comment transférer la [documentation informatique](../glossary.md) bien établie dans une opération en cours d'un système à un autre aussi facilement que possible?
 
-## Préparation et hypothèses {/examples}
+## Préparation et hypothèses 
 
 !!! warning "Les deux systèmes doivent être sur la même version d'i-doit"
 
@@ -32,13 +32,12 @@ Tout d'abord, nous nous occupons de sécuriser les données du vieux système af
 
 4. Maintenant, nous arrêtons le processus MySQL et espérons que ni MySQL ni le serveur Web Apache ne seront jamais nécessaires à nouveau sous Windows.
 
-{/*examples*/}
 
-## Migrer les données vers GNU/Linux {/examples}
+## Migrer les données vers GNU/Linux 
 
 Après avoir copié à la fois le fichier ZIP, y compris le dossier i-doit, et le fichier SQL, y compris le contenu de la base de données, sur le nouveau serveur ([WinSCP](http://winscp.net/eng/index.php) remplit bien cette fonction), nous nous connectons via SSH (par exemple via [Putty](http://www.putty.org/)) et opérons en ligne de commande à partir de maintenant. Le serveur Web Apache, MySQL et PHP sont entièrement configurés et tous les paquets nécessaires sont correctement [installés](../installation/index.md). La seule chose qui manque est i-doit :
 
-### Base de données {/examples}
+### Base de données 
 
 1. Nous importons la base de données. Pour cela, nous utilisons le client MySQL :
 
@@ -102,6 +101,6 @@ Ce qui reste, c'est le transfert des tâches Windows vers les tâches Cron. La p
 
 Suite à cette migration, vous devriez effectuer divers tests et réactiver les interfaces entre i-doit et les outils tiers. Il est également important de faire fonctionner les [sauvegardes](../maintenance-and-operation/backup-and-recovery/index.md). Si tous les tests sont concluants (ce qui peut être espéré), le mode maintenance peut être conclu et tous les collègues informés que la documentation IT est à nouveau disponible. 
 
-{ /*examples*/ }
+
 
 Combien de temps prend une telle migration ? Si l'on ignore la préparation et le travail ultérieur, une telle migration ne prend pas plus de deux heures, donc cela en vaut la peine. Bonne chance !

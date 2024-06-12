@@ -468,7 +468,7 @@ Télécharger un fichier et l'attribuer à un objet
 
     Nous voulons télécharger le fichier existant **test.txt** dans i-doit et l'attribuer à un nouvel objet serveur. Dans i-doit, les fichiers sont également des objets. Avant de télécharger le fichier, son contenu doit être encodé en **BASE64**, voir l'attribut file_content dans la 3ème requête. Comme vous pouvez le voir, l'objet serveur reçoit l'ID **1000** et l'objet fichier l'ID **1001**. 
 
-{ /* examples */ }
+
 
     Créer un objet serveur
 
@@ -647,7 +647,7 @@ Installation de logiciel sur du matériel
     }
     ```
 
-### Données spécifiques au modèle d'un composant matériel {/examples}
+### Données spécifiques au modèle d'un composant matériel 
 
 ### cmdb.category.create
 ??? example "cmdb.category.create"

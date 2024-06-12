@@ -25,7 +25,7 @@ Lire les configurations de types d'objets.
 | **order_by**     | Chaîne                | Non     | Trier l'ensemble de résultats par (voir le filtre pour plus de détails sur la signification de chaque valeur):<br><br>- **"isys_obj_type__id"**,<br>- **"isys_obj__isys_obj_type__id"**,<br>- **"type"**,<br>- **"isys_obj__title"**,<br>- **"title"**,<br>- **"isys_obj_type__title"**,<br>- **"type_title"**,<br>- **"isys_obj__sysid"**,<br>- **"sysid"**,<br>- **"isys_cats_person_list__first_name"**,<br>- **"first_name"**,<br>- **"isys_cats_person_list__last_name"**,<br>- **"last_name"**,<br>- **"isys_cats_person_list__mail_address"**,<br>- **"email"**,<br>- **"isys_obj__id"**, ou<br>- **"id"** |
 | **raw**          | Booléen               | Non     | Afficher le format brut, voir exemple.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-### Filtre {/examples/}
+### Filtre 
 
 | Clé         | Type de données JSON | Requis | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------- | ------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -36,7 +36,7 @@ Lire les configurations de types d'objets.
 | **enabled** | Booléen             | Non    | Afficher uniquement les types d'objets activés ou désactivés dans l'interface graphique utilisateur                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 
-### Paramètres de réponse {/examples}
+### Paramètres de réponse 
 
 La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
@@ -45,7 +45,7 @@ La clé JSON **result** contient un tableau d'objets JSON. Chaque objet contient
 | **Placeholder** | Placeholder           | Placeholder |
 | **Placeholder** | Placeholder           | Placeholder |
 
-### Exemple {/examples}
+### Exemple 
 
 === "Corps de la requête"
     ```json

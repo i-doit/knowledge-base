@@ -1,4 +1,4 @@
-# Cas d'utilisation {/examples}
+# Cas d'utilisation 
 
 Dans cette section, vous trouverez des informations sur l'utilisation avancée d'_i-doit_: D'une part, pour affiner votre [documentation informatique](../glossary.md) et d'autre part, pour mieux soutenir les processus de gestion des services informatiques.
 

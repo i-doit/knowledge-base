@@ -26,7 +26,7 @@ Vous êtes nouveau sur ce sujet et souhaitez intégrer à la fois checkmk et i-d
     
     idoitcmk push ([en savoir plus](./generate-wato-configuration-base-on-cmdb-data.md)) 
 
-{ /* examples */ }
+
 
 8.  Ou récupérez des informations utiles sur votre infrastructure depuis checkmk vers i-doit:
     

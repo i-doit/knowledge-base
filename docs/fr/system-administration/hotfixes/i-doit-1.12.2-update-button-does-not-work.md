@@ -1,4 +1,4 @@
-# i-doit 1.12.2: Le bouton de mise à jour ne fonctionne pas { /*examples*/ }
+# i-doit 1.12.2: Le bouton de mise à jour ne fonctionne pas 
 
 Les correctifs résolvent une erreur spécifique et sont généralement fournis sous forme de fichier ZIP. Le fichier ZIP est décompressé dans le répertoire d'installation de i-doit. Confirmez la question de savoir si vous souhaitez écraser les fichiers lors de la décompression (touche **Y** pour "oui" ou **A** pour "tous"). Voici un exemple :
 

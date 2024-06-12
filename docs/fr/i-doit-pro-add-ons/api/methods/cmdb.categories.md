@@ -6,11 +6,11 @@ icon: material/api
 lang: en
 ---
 
-# Espace de noms cmdb.categories {/examples}
+# Espace de noms cmdb.categories 
 
 !!! example "Travail en cours"
 
-## cmdb.categories.read {/examples}
+## cmdb.categories.read 
 
 Récupérer plusieurs catégories en une seule requête.<br>
 Avant de commencer, vous devez utiliser [cmdb.object_type_categories](cmdb.object_type_categories.md#cmdbobject_type_categories) pour obtenir les catégories disponibles et les identifiants cats/catg.

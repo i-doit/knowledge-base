@@ -1,4 +1,4 @@
-# Journal des modifications 25 {/examples/}
+# Journal des modifications 25 
 
 [Tâche][Code (Interne)]                           Supprimer toutes les options query_cache_* de la vue d'ensemble du système d'i-doit<br>
 [Tâche][Code (Interne)]                           Utiliser des boutons pour modifier les propriétés dans la configuration de catégorie personnalisée<br>
@@ -43,4 +43,4 @@
 [Bogue][API]                                      Les exemples d'API affichent l'objet comme une chaîne<br>
 [Bogue][Installation/ Mise à jour/ Licence de base de la console] Utilisation de la commande "clear-credentials" supprime le nom d'utilisateur
 
-Please provide the Markdown content you would like me to translate into French.
+

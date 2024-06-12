@@ -27,5 +27,3 @@
 [Erreur][Code (interne)] Après la création et l'enregistrement d'un objet fichier, il ne peut pas être ouvert  
 [Erreur][Code (interne)] Le filtre dans tous les champs ne peut plus être supprimé  
 [Erreur][XML] Erreur SQL lors de l'importation XML de la catégorie Câblage > Connexion  
-
-Please provide the Markdown content that needs to be translated into French.

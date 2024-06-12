@@ -1,4 +1,4 @@
-# Tables de catégorie 1.9 {/ * exemples * /}
+# Tables de catégorie 1.9 
 
 !!! info "Générer ce contenu automatiquement"
 

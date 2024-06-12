@@ -1,8 +1,8 @@
-# Catégories Personnalisées {/examples}
+# Catégories Personnalisées 
 
 Outre les catégories standard, _i-doit_ permet de créer (personnalisées) des [catégories](structure-of-the-it-documentation.md) afin de documenter des [attributs](./structure-of-the-it-documentation.md) supplémentaires qui ne sont pas inclus dans les catégories standard.
 
-## Configuration de la Catégorie {/examples}
+## Configuration de la Catégorie 
 
 Vous pouvez trouver la configuration des catégories personnalisées dans _i-doit_ à **Administration → Structure des données → Catégories personnalisées**. Le bouton **Nouveau** est utilisé pour créer une catégorie personnalisée. Si vous avez déjà créé des catégories personnalisées, vous pouvez également les modifier ici.
 

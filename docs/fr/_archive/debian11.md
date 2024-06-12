@@ -13,7 +13,7 @@ Dans cet article, nous expliquons en quelques étapes les paquets qui doivent ê
 
     [![Sélection des logiciels]()]()
 
-## Configuration requise du système {/examples}
+## Configuration requise du système 
 
 Les [exigences système générales]() s'appliquent.
 
@@ -49,7 +49,7 @@ apt install apache2 libapache2-mod-php mariadb-client mariadb-server php php-bcm
 
 Les paquets installés pour le serveur web Apache, PHP et MariaDB fournissent déjà des fichiers de configuration. Il est recommandé de sauvegarder les paramètres modifiés dans des fichiers séparés au lieu d'ajuster les fichiers de configuration déjà existants. Sinon, toutes les différences par rapport aux fichiers existants seraient signalées voire écrasées lors de chaque mise à jour du paquet. Les paramètres de la configuration par défaut sont complétés ou écrasés par des paramètres définis par l'utilisateur.
 
-### PHP {/examples}
+### PHP 
 
 Tout d'abord, un nouveau fichier est créé et rempli avec les paramètres requis :
 
@@ -97,7 +97,7 @@ sudo phpenmod memcached
 sudo systemctl restart apache2.service
 ```
 
-### Serveur Web Apache {/examples}
+### Serveur Web Apache 
 
 Le VHost par défaut est désactivé et un nouveau est créé :
 
@@ -231,7 +231,7 @@ Enfin, MariaDB est démarré :
 sudo systemctl start mysql.service
 ```
 
-## Étape suivante {/ * exemples *}
+## Étape suivante 
 
 Maintenant que le système d'exploitation est prêt, vous pouvez procéder à l'installation de i-doit.
 

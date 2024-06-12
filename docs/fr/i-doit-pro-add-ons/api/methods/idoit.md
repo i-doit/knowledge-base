@@ -95,7 +95,7 @@ Récupère les constantes définies dans i-doit.
 | --- | -------------------- | ----------- |
 | -   | -                    | -           |
 
-### Réponse {/examples/}
+### Réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -106,7 +106,7 @@ La clé JSON **result** contient un objet JSON.
 | **categories.g** | Objet                | Liste des catégories globales<br><br>Clés : constantes de catégories<br><br>Valeurs : titres de catégories traduits   |
 | **categories.s** | Objet                | Liste des catégories spécifiques<br><br>Clés : constantes de catégories<br><br>Valeurs : titres de catégories traduits |
 
-### Exemple {/examples/}
+### Exemple 
 
 === "Corps de la requête"
 
@@ -197,7 +197,7 @@ La clé JSON **result** contient un objet JSON.
     }
     ```
 
-## idoit.license { /*examples*/ }
+## idoit.license 
 
 Affiche des informations sur la licence installée.
 
@@ -286,7 +286,7 @@ Affiche des informations sur la licence installée.
     }
     ```
 
-## idoit.login { /*examples*/ }
+## idoit.login 
 
 Crée une nouvelle session avec les en-têtes X-RPC-Auth.
 
@@ -296,7 +296,7 @@ Crée une nouvelle session avec les en-têtes X-RPC-Auth.
 | --- | -------------------- | -------- | ----------- |
 | -   | -                    | -        | -           |
 
-### Paramètres de réponse {/examples}
+### Paramètres de réponse 
 
 La clé JSON **result** contient un objet JSON.
 

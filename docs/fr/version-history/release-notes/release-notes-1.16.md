@@ -34,10 +34,9 @@ Nous avons légèrement ajusté les exigences système pour i-doit v1.16 :
 *   MariaDB : i-doit v1.16 ajoute la prise en charge de la branche de version stable actuelle 10.5 de MariaDB. La branche de version 10.1 est marquée comme obsolète. Le support en sera supprimé dans i-doit v1.17.
 *   Nous prenons toujours en charge MySQL en tant que base de données backend pour i-doit v1.16 mais recommandons l'utilisation de MariaDB. Nous avons marqué la branche de version 5.6 comme obsolète et supprimerons le support dans i-doit v1.17. MySQL 5.7 est actuellement la seule branche de version prise en charge. 
 
-{/*examples*/}
 
 
-**Note:** Avant de mettre à jour i-doit vers la version 1.16, assurez-vous que toutes les [exigences système](../../installation/system-requirements.md) sont satisfaites. {/examples}
+**Note:** Avant de mettre à jour i-doit vers la version 1.16, assurez-vous que toutes les [exigences système](../../installation/system-requirements.md) sont satisfaites. 
 
 Support et téléchargement
 -------------------------
@@ -48,4 +47,4 @@ Les téléchargements sont disponibles pour les utilisateurs abonnés sur [login
 
 Merci d'utiliser i-doit comme votre plateforme de documentation informatique préférée et de faire partie de notre communauté en pleine croissance !
 
-– Benjamin Heisig pour l'équipe i-doit {/examples}
+– Benjamin Heisig pour l'équipe i-doit 

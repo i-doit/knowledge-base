@@ -2,14 +2,10 @@
 
 Ici, vous pouvez gérer votre locataire et consulter les configurations liées au système.
 
-[![Aperçu de la gestion du nom du locataire](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png){/*examples*/}
-
+[![Aperçu de la gestion du nom du locataire](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)
 ## La gestion du nom du locataire est divisée en les sous-sections suivantes
 
--   [Paramètres pour le nom du locataire](settings-for-tenant.md){/*examples*/}
--   [Réparation et nettoyage](repair-and-clean-up.md){/*examples*/}
--   [Paramètres experts](expert-settings.md){/*examples*/}
-
+-   [Paramètres pour le nom du locataire](settings-for-tenant.md)-   [Réparation et nettoyage](repair-and-clean-up.md)-   [Paramètres experts](expert-settings.md)
 ## Aperçu de la licence
 
 Dans l'aperçu de la licence, vous trouverez des informations sur votre licence, les objets documentés, la version et un compteur d'objets.

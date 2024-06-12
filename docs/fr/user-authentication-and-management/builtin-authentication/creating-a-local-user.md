@@ -1,4 +1,4 @@
-# Création d'un utilisateur local {/examples}
+# Création d'un utilisateur local 
 
 i-doit fournit déjà quelques utilisateurs locaux avec l'installation par défaut que vous pouvez utiliser pour la [connexion initiale](../../basics/initial-login.md). Cet article décrit comment créer un utilisateur local supplémentaire.
 
@@ -10,7 +10,7 @@ i-doit fournit déjà quelques utilisateurs locaux avec l'installation par défa
 
     Vous pouvez également utiliser des utilisateurs locaux lorsque des interfaces d'autorisation externes, telles que LDAP/AD ou [SSO](../sso-comparison/index.md), ne sont pas disponibles. De cette manière, vous pouvez toujours accéder à la documentation IT en cas d'urgence.
 
-## Création d'un nouvel objet (Personne) {/examples}
+## Création d'un nouvel objet (Personne) 
 
 Les utilisateurs dans i-doit font partie de la documentation IT, donc tous les utilisateurs sont un [objet](../../basics/structure-of-the-it-documentation.md) du type **Personnes**. Pour créer un utilisateur local, vous créez initialement un nouvel objet **Personnes**.
 
@@ -38,23 +38,23 @@ Pour créer ou modifier un mot de passe, vous devez cliquer sur le bouton "Chang
 
 Vous pouvez prédéfinir la longueur minimale d'un mot de passe utilisateur pour chaque locataire. Cela peut être effectué sous **Administration → Gestion du [Nom du Locataire] → Paramètres pour [Nom du Locataire] → Sécurité → Longueur minimale des mots de passe utilisateur**. Entrez une valeur entière positive dans ce champ.
 
-## Paramètres utilisateur {/examples}
+## Paramètres utilisateur 
 
 Chaque utilisateur peut adapter i-doit individuellement. Beaucoup de ces paramètres se trouvent sous [**Administration → Paramètres utilisateur**](../../system-administration/administration/user-settings/index.md).
 
-## Informations de connexion {/examples}
+## Informations de connexion 
 
 Même si un utilisateur n'a pas le droit de modifier la catégorie mentionnée ci-dessus **Personnes → Connexion**, il ou elle peut changer son propre mot de passe via **Administration → Paramètres utilisateur → Informations de connexion**.
 
 [![creating-a-local-user-person](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/5-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/5-calu.png)
 
-## Photo de profil {/examples}
+## Photo de profil 
 
 Avec la catégorie **Image d'objet**, vous pouvez télécharger une photo de profil pour chaque utilisateur.
 
 [![creating-a-local-user-person](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/6-calu.png)](../../assets/images/en/user-authentication-and-management/builtin-authentication/creating-a-local-user/6-calu.png)
 
-## Paramètres supplémentaires {/ * exemples * /}
+## Paramètres supplémentaires 
 
 Aussi dans d'autres domaines, l'utilisateur a la possibilité de faire des paramétrages individuels:
 
@@ -62,6 +62,6 @@ Aussi dans d'autres domaines, l'utilisateur a la possibilité de faire des param
 *   [Définition du profil dans l'explorateur CMDB comme profil par défaut](../../evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer.md)
 *   [Filtres activés dans les listes d'objets](../../basics/object-list/navigation-and-filtering.md)
 
-## Droits de l'utilisateur {/ * exemples * /}
+## Droits de l'utilisateur 
 
 [Les droits](../../efficient-documentation/rights-management/index.md) au sein de i-doit peuvent être attribués par utilisateur - ou mieux - par groupe de personnes. À cette fin, un utilisateur est assigné au groupe correspondant. Ce groupe possède les droits pertinents que l'utilisateur hérite. Un utilisateur peut être assigné à plusieurs groupes et hérite des droits respectifs.

@@ -10,7 +10,7 @@ Complémentaire à la liste blanche, la liste noire fournit une fonction pour ex
 De plus, un changement important a été apporté à la structure de configuration dans cette version : Le paramètre `createUnknownSoftwareApplications,` qui était précédemment situé dans la section principale "pull", a été déplacé vers la sous-section nouvellement créée `softwareApplications`. Cette restructuration améliore la clarté et la modularité des paramètres de configuration.
 Pour les utilisateurs qui souhaitent se familiariser avec la nouvelle structure de configuration, la commande `./idoitcmk print-example-config` offre un moyen pratique de visualiser un exemple du nouvel agencement des paramètres.
 
-## Quoi de neuf (v1.8.2) {/examples}
+## Quoi de neuf (v1.8.2) 
 
 - Avec la version 1.8.2, CMK2 prend désormais en charge la version 2.2 de Checkmk.
 - Si le paramètre de configuration check_mk.version est défini sur "2.2", l'API REST est automatiquement utilisée à la place de l'API Web.
@@ -65,7 +65,7 @@ Nous savons que chaque organisation informatique a des exigences différentes et
 -   [Interface Web i-doit](./i-doit-web-gui.md)
 -   [Foire aux questions (FAQ)](./faq.md)
 
-## Journal des modifications {/ * exemples *}
+## Journal des modifications 
 
 Tous les changements notables apportés à ce projet seront documentés dans ce fichier.
 
@@ -106,7 +106,7 @@ et ce projet adhère à [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   CMK2-62 erreur de validation lors du pull
 -   CMK2-63 correction de l'index mac non défini
 
-### [1.8.3] - 2023-09-07 {/ * exemples * /}
+### [1.8.3] - 2023-09-07 
 
 ### Corrections
 
@@ -116,7 +116,7 @@ et ce projet adhère à [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   CMK2-45 REST-API: sync-folders plante lors de la création de dossiers imbriqués
 -   CMK2-46 CONFIG: nécessiter une configuration rest uniquement si la version de Checkmk est >= 2.2
 
-### [1.8.2] - 2023-08-18 {/ * exemples * /}
+### [1.8.2] - 2023-08-18 
 
 ### Corrections
 
@@ -126,7 +126,7 @@ et ce projet adhère à [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   CMK2-45 REST-API: sync-folders plante lors de la création de dossiers imbriqués
 -   CMK2-46 CONFIG: nécessiter une configuration rest uniquement si la version de Checkmk est >= 2.2
 
-### [1.8.2] - 2023-08-18 {/ * exemples * /}
+### [1.8.2] - 2023-08-18 
 
 ### Ajouté
 
@@ -136,27 +136,25 @@ et ce projet adhère à [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 -   CMK2-38 empêcher l'exécution de code arbitraire sur l'hôte idoit via une injection de commande dans le champ de nom d'hôte de l'appel ajax
 
-### [1.8.1] - 2022-11-21 {/ * exemples * /}
+### [1.8.1] - 2022-11-21 
 
 ### Corrections
 
 -   Ajout de la compatibilité avec checkmk 2.1
 
-### [1.8.0] - 2022-09-05 {/ * exemples * /}
+### [1.8.0] - 2022-09-05 
 
 ### Ajouté
 
 -   Compatibilité PHP 8.0
 -   Compatibilité de conception
 
-{/*examples*/}
 
 ### Corrections
 
 -   Message d'erreur lors de la synchronisation des balises
 -   La synchronisation des adresses IPv6 et des réseaux génère un message d'erreur
 
-{/*examples*/}
 
 ### [1.7.1] - 2021-10-18
 
@@ -164,14 +162,12 @@ et ce projet adhère à [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 -   Extraire les adresses IPv6 de checkmk vers i-doit
 
-{/*examples*/}
 
 ### Corrigé
 
 -   Ajouter/corriger les attributs du processeur de checkmk à i-doit
 -   Ajouter/corriger les attributs du système d'exploitation de checkmk à i-doit
 
-{/*examples*/}
 
 ### [1.7.0] - 2021-08-09
 
@@ -179,14 +175,12 @@ et ce projet adhère à [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 -   Implémenter une stratégie de fusion lors de l'extraction de checkmk vers i-doit
 
-{/*examples*/}
 
 ### Corrigé
 
 -   Les attributs du groupe de balises statiques 'Tag group' ne peuvent pas être supprimés
 -   CheckMK 2 : Les balises ne sont pas affichées avec le groupe de balises dans les rapports
 
-{/*examples*/}
 
 ### [1.6.1] – 2021-06-15
 
@@ -204,9 +198,8 @@ et ce projet adhère à [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Aucun attribut n'est importé pour les applications
 -   L'extraction avec le même hôte que le parent se termine en boucle
 
-{/*examples*/}
 
-### [1.6.0] – 2019-12-06 {/ * exemples * /}
+### [1.6.0] – 2019-12-06 
 
 ### Ajouté
 
@@ -233,7 +226,7 @@ et ce projet adhère à [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   push: Supprimer le site s'il n'est pas défini dans i-doit mais défini dans Checkmk
 -   match: Avertir des objets ignorés ou des objets sans identifiants uniques
 
-### Corrigé {/ * exemples * /}
+### Corrigé 
 
 -   fetch-hosts/pull: Récupérer les données d'inventaire HW/SW pour tous les hôtes si le paramètre de configuration i-doit.limitBatchRequests est inférieur au nombre d'hôtes.
 -   match/pull/push: Utiliser l'entrée de catégorie principale de la catégorie hostadress pour déterminer le nom d'hôte utilisé par Checkmk
@@ -285,7 +278,6 @@ Il s'agit d'une version de correction de bugs après avoir reçu des tonnes de r
 -   fetch-hosts/fetch-objects/delete-hosts: Sortir avec le code d'état 2 si l'hôte/objet n'est pas trouvé
 -   Construire un binaire: Remplacer la compression BZip2 par la compression GZip après un échec de chargement automatique en raison de mauvais checksums
 
-{/*examples*/}
 
 ### Corrigé
 
@@ -315,9 +307,8 @@ Il s'agit d'une version de correction de bugs après avoir reçu des tonnes de r
 -   Catégorie Check_MK Host: Écrire la sortie complète de la commande incluant STDERR dans le fichier journal
 -   Catégorie Check_MK Tags: Rendre les “balises dynamiques” et les “balises CMDB” disponibles dans les rapports
 
-{/*examples*/}
 
-### [1.5.0] – 2018-12-18 {/ * exemples * /}
+### [1.5.0] – 2018-12-18 
 
 Première publication publique 🎉
 
@@ -346,7 +337,7 @@ Première publication publique 🎉
 - Renommer la constante de catégorie C__CMDB__SUBCAT__NETWORK_PORT en C__CATG__NETWORK_PORT dans le paramètre de configuration pull.attributes
 - Renommer la constante de catégorie C__CMDB__SUBCAT__NETWORK_INTERFACE_L en C__CATG__NETWORK_LOG_PORT dans le paramètre de configuration pull.attributes
 
-### Corrigé {/ * exemples * /}
+### Corrigé 
 
 -   push: Corrigez l'erreur lors de l'archivage des entrées de catégorie
 -   sync-folders: Corrigez les fautes de frappe
@@ -356,7 +347,7 @@ Première publication publique 🎉
 
 Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 
-### Ajouté {/ * exemples * /}
+### Ajouté 
 
 -   push: Ajoutez l'adresse du tableau de gestion à l'hôte en fonction d'un contrôleur de gestion à distance lié à un objet
 -   sync-tags: Importez les balises d'hôte et les groupes de balises d'hôte de i-doit dans Check\_MK
@@ -364,7 +355,7 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 -   sync-tags: Ne réimportez pas les balises CMDB dynamiques de Check\_MK dans i-doit
 -   sync-tags: Activer les modifications (étrangères) après avoir ajouté de nouvelles balises d'hôte à Check\_MK
 
-### Corrigé {/ * exemples * /}
+### Corrigé 
 
 -   Corrigez l'erreur lors de l'installation de l'extension dans le centre d'administration i-doit sans connexion parallèle au locataire i-doit
 -   fetch-objects: Imprimez l'URL sans avis PHP
@@ -373,7 +364,7 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 
 **Note importante:** Il y a des changements dans les paramètres de configuration. Reconfigurez votre application avec idoitcmk init.
 
-### Ajouté {/ * exemples * /}
+### Ajouté 
 
 -   push: Validez les expressions régulières dans le paramètre de configuration push.autoTagging
 -   status: Testez les extensions PHP chargées
@@ -383,12 +374,12 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 -   fetch-hosts: Imprimez l'URL de chaque hôte Check\_MK
 -   push/fetch-objects: Augmenter considérablement les performances si la seule option de filtre est --include-ids
 
-### Modifié {/ * exemples *}
+### Modifié 
 
 -   pull: Ignorer les balises d'hôte vides
 -   pull: Ignorer les balises d'hôte des groupes address_family et snmp (elles ne sont pas disponibles via l'appel à l'API Web Check\_MK)
 
-### Corrigé {/ * exemples *}
+### Corrigé 
 
 -   push: Ne pas ignorer l'adresse IP
 -   push/pull/match: Vérifier pour chaque attribut d'objet s'il existe avant de le faire correspondre avec les attributs d'hôte
@@ -399,22 +390,22 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 
 **Avis important :** Avant d'installer/mettre à jour ce module complémentaire, veuillez mettre à jour votre instance i-doit vers la dernière version (actuellement 1.11).
 
-### Ajouté {/ * exemples *}
+### Ajouté 
 
 -   Déclencher des commandes idoitcmk dans la catégorie i-doit Check_MK (Hôte)
 -   delete-hosts: Supprimer les hôtes dans Check\_MK
 -   push: Activer tous les changements, y compris les changements étrangers, en définissant la configuration push.activateForeignChanges
 
-### Modifié {/ * exemples *}
+### Modifié 
 
 -   Nécessite i-doit pro, version 1.11 ou supérieure
 
-### Corrigé {/ * exemples *}
+### Corrigé 
 
 -   push, fetch-objects: Augmenter les performances lors de l'utilisation de l'option --include-type
 -   push, fetch-objects: Inclure les balises d'hôte dynamiques
 
-### [1.1.0] – 2018-05-24 {/%%/}
+### [1.1.0] – 2018-05-24 
 
 **Avis important :** La configuration par défaut a été modifiée. La définition de pull.identifier a une nouvelle valeur définie par l'utilisateur.
 
@@ -430,7 +421,7 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 
 -   pull : Importer le bon nombre de cœurs de CPU
 
-### [1.0.0] – 2018-04-30 {/%%/}
+### [1.0.0] – 2018-04-30 
 
 ### Ajouté
 
@@ -444,7 +435,7 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 
 -   pull : Empêcher les avertissements PHP lors de l'accès à des informations inconnues
 
-### [0.10] – 2018-04-27 {/%%/}
+### [0.10] – 2018-04-27 
 
 **Note importante :** Il y a des changements dans les paramètres de configuration. Reconfigurez votre application avec idoitcmk init.
 
@@ -455,7 +446,7 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 -   pull : Importer des informations sur les cartes/chips vidéo (virtuelles)
 -   Nouveau paramètre de configuration pull.attributes.C__CATG__GRAPHIC ; par défaut à vrai
 
-### Corrigé {/ * exemples *}
+### Corrigé 
 
 -   pull: Parfois, l'hôte est manquant dans la file d'attente d'importation lorsqu'il y a une correspondance avec un objet
 -   pull: N'oubliez pas d'ajouter l'adresse IPv4 principale à la catégorie "Check\_MK (Hôte) > Exporter les paramètres"
@@ -467,7 +458,7 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 
 **Note importante :** Il y a des changements dans les paramètres de configuration. Reconfigurez votre application avec idoitcmk init.
 
-### Ajouté {/ * exemples *}
+### Ajouté 
 
 -   pull: Recherchez la configuration de l'adresse IP dans l'inventaire matériel/logiciel de Check\_MK
 -   pull: Attribuez des adresses IP aux sous-réseaux appropriés dans i-doit
@@ -475,11 +466,11 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 -   pull: Créez ou mettez à jour le lien dans l'objet i-doit vers l'hôte dans Check\_MK
 -   Nouveau paramètre de configuration pull.attributes.C__CATG__ACCESS; par défaut à vrai
 
-### Changé {/ * exemples *}
+### Changé 
 
 -   pull: Convertir la capacité du lecteur en unité appropriée
 
-### Corrigé {/ * exemples *}
+### Corrigé 
 
 -   Autoriser à l'utilisateur de remplacer (et non fusionner) les paramètres de configuration pull.identifier et blacklistedObjectTypes
 -   pull: Ne pas ignorer la RAM, les sockets CPU et les cœurs
@@ -513,7 +504,7 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 
 -   pull: Supprimer le mode de fusion car il n'a pas de sens pour toutes les catégories pouvant être mises à jour
 
-### Corrigé {/ * exemples *}
+### Corrigé 
 
 -   pull: Archiver les entrées pour les catégories activées uniquement
 -   pull: Respecter le mode d'ignorance
@@ -521,12 +512,12 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 
 ### [0.6] - 2018-04-13
 
-### Ajouté {/ * exemples *}
+### Ajouté 
 
 -   status: Afficher un avertissement si le paramètre de configuration i-doit.url semble insuffisant
 -   push: Afficher un avertissement si l'objet n'est pas activé par l'attribut actif dans la catégorie Check_MK (Host) > Paramètre d'export
 
-### Corrigé {/ * exemples *}
+### Corrigé 
 
 -   push: Avertissement PHP est lancé lors de la récupération d'un contact sans rôle spécifié
 -   pull/fetch-hosts: Empêcher le code d'erreur HTTP 414 URI Too Long lors de la récupération des données d'inventaire hw/sw de Check\_MK
@@ -535,12 +526,12 @@ Souviens-toi, souviens-toi, du cinquième de novembre… 🎃
 
 Cette version corrige plusieurs problèmes dans les packages requis.
 
-### Changé {/ * exemples *}
+### Changé 
 
 -   Ajouter des exigences pour les modules PHP bzip2 et phar
 -   Ne pas rechercher les paramètres de configuration dans /root/.idoitcmk/config.json
 
-### Corrigé {/ * exemples *}
+### Corrigé 
 
 -   Éviter les doublons dans les paramètres de configuration
 -   Supprimer les barres obliques inverses des paramètres de configuration
@@ -584,7 +575,7 @@ Cette version est dédiée à toutes les femmes.
 -   sync-folders: Garder à l'esprit que les dossiers WATO "/" et "" (chaîne vide) sont les mêmes
 -   sync-folders: Erreur PHP lorsqu'un dossier WATO est copié de i-doit à Check\_MK
 
-### [0.1] – 2018-03-05 {/examples}
+### [0.1] – 2018-03-05 
 
 Première version!
 

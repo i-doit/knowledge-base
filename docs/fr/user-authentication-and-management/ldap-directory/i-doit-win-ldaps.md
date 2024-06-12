@@ -6,7 +6,7 @@ status: new
 lang: fr
 ---
 
-## Résumé {/examples}
+## Résumé 
 
 Cet article fournit un guide pour configurer une connexion LDAPS avec i-doit pour Windows en utilisant Apache2 HTTPD
 
@@ -42,4 +42,4 @@ Puis redémarrez Apache2 HTTPD via l'invite de commande avec : `C:\i-doit\apache
 Maintenant, connectez-vous à i-doit et créez une nouvelle entrée de serveur sous `Administration -> Import et Interfaces -> LDAP -> Serveur`.
 Remplissez tous les champs nécessaires et définissez `TLS` sur `LDAPS`.
 
-[![Configuration i-doit](../../assets/images/en/user-authentication-and-management/ldap-directory/i-doit-win-ldaps/i-doit-conf.png)](../../assets/images/en/user-authentication-and-management/ldap-directory/i-doit-win-ldaps/i-doit-conf.png){/*examples*/}
+[![Configuration i-doit](../../assets/images/en/user-authentication-and-management/ldap-directory/i-doit-win-ldaps/i-doit-conf.png)](../../assets/images/en/user-authentication-and-management/ldap-directory/i-doit-win-ldaps/i-doit-conf.png)

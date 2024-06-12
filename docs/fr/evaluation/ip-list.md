@@ -47,5 +47,4 @@ La catégorie **Liste IP** offre la possibilité de comparer l'état cible et l'
 *   **NSLOOKUP**: Spécifier l'adresse IP en tant que nom d'hôte
 *   **Reverse NSLOOKUP**: Spécifier le nom d'hôte pour une adresse IP
 
-{/*examples*/}
 

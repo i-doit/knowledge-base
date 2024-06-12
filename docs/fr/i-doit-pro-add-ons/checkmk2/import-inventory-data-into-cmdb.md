@@ -23,7 +23,6 @@ Ces options sont disponibles pendant l'exécution :
 
 STRING signifie n'importe quelle chaîne incluant des caractères génériques *, ? et [ae]. Répétez l'option pour faire correspondre plus d'une STRING. Par exemple, récupérez tous les hôtes avec un système d'exploitation GNU/Linux ou Windows :
 
-```markdown
     idoitcmk pull --include-os "*Linux*" --include-os "*Windows*"
 
 Toute combinaison de ces filtres est logiquement combinée par ou. Par exemple, récupérez tous les hôtes avec le suffixe .example.com ou dans le dossier cloud :

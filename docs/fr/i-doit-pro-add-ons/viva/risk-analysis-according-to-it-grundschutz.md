@@ -12,4 +12,3 @@ Lors de l'attribution de blocs de construction à un groupe cible, les dangers a
 
 L'évaluation des dangers (Voir la norme BSI 100-3, Chapitre 5.) est documentée au sein des dangers liés - à trouver sous Réseau d'information → Groupe cible → Module lié → Danger lié. 
 
-{/*examples*/}

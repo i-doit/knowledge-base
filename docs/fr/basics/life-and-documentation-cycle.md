@@ -53,7 +53,7 @@ Outre les objets à documenter, la documentation elle-même peut également êtr
 
     Il peut être utile pour les environnements plus importants d'établir les processus nécessaires pour l'archivage et la suppression des artefacts de documentation. À quel moment des parties de la documentation doivent-elles être archivées ? Qui peut nettoyer la documentation IT ? Ce genre de questions doit être abordé par l'équipe. Le système de permission d'i-doit fournit les paramètres nécessaires pour attribuer les droits d'archivage ou de purge de parties de la documentation à des utilisateurs spécifiques.
 
-### États {/ * exemples * /}
+### États 
 
 Presque tous les artefacts de documentation (objets, entrées de catégorie, valeurs dans les [**champs Dialog+**](./dialog-admin.md) etc.) reçoivent un état :
 
@@ -80,19 +80,19 @@ Il n'est possible de passer à l'état suivant que s'il est possible. Si un obje
 
 [![object-status](../assets/images/en/basics/life-and-documentation-cycle/4-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/4-ladc.png)
 
-Il n'y a pas d'autre requête lors de la purge d'un objet sauf si des relations avec d'autres objets existent. {/ * exemples *}
+Il n'y a pas d'autre requête lors de la purge d'un objet sauf si des relations avec d'autres objets existent. 
 
 ### Archiver les entrées de catégorie, les marquer comme supprimées ou les purger
 
-Une fonctionnalité similaire à celle des objets existe pour certaines [catégories de liste](../glossary.md) ("Multi-valeur"). Avec cette fonction, vous pouvez archiver les entrées de catégorie, les marquer comme supprimées ou les purger. {/ * exemples *}
+Une fonctionnalité similaire à celle des objets existe pour certaines [catégories de liste](../glossary.md) ("Multi-valeur"). Avec cette fonction, vous pouvez archiver les entrées de catégorie, les marquer comme supprimées ou les purger. 
 
 ### Suppression simplifiée (Purge rapide)
 
-Pour purger un artefact de documentation, il doit d'abord être archivé et marqué comme supprimé. Pour raccourcir ce cycle, il est possible d'activer le bouton **Purge rapide**. Cela se fait via **Administration → Gestion du [Nom du locataire] → Paramètres pour CMDB → CMDB → Activer le bouton Purge rapide**. De cette manière, vous pouvez purger un objet ou une entrée de catégorie indépendamment de son état. {/ * exemples *}
+Pour purger un artefact de documentation, il doit d'abord être archivé et marqué comme supprimé. Pour raccourcir ce cycle, il est possible d'activer le bouton **Purge rapide**. Cela se fait via **Administration → Gestion du [Nom du locataire] → Paramètres pour CMDB → CMDB → Activer le bouton Purge rapide**. De cette manière, vous pouvez purger un objet ou une entrée de catégorie indépendamment de son état. 
 
 ### Liste de tous les objets archivés ou marqués comme supprimés
 
-Pour obtenir une liste de tous les objets qui sont archivés ou marqués comme supprimés, vous pouvez utiliser un rapport qui peut être configuré via le générateur de requêtes. {/ * exemples *}
+Pour obtenir une liste de tous les objets qui sont archivés ou marqués comme supprimés, vous pouvez utiliser un rapport qui peut être configuré via le générateur de requêtes. 
 
 ### Supprimer les objets ou les entrées de catégorie inachevés/archivés/marqués comme supprimés collectivement (**Purge**)
 

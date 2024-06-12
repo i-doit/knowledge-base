@@ -1,4 +1,4 @@
-# Permissions utilisateur {/ * exemples *}
+# Permissions utilisateur 
 
 ## Droits
 

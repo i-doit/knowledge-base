@@ -49,4 +49,4 @@
 [Erreur][Import]                                  L'importation CSV via la Console vide les catégories définies par l'utilisateur  
 [Erreur][Import]                                  Les serveurs ou clients importés via les ordinateurs Active Directory se sont attribués comme système d'exploitation  
 
-Please provide the Markdown content you would like me to translate into French.
+

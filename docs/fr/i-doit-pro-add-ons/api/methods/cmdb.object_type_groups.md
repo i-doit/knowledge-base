@@ -24,7 +24,7 @@ Lire les groupes de types d'objets.
 | **order_by** | Chaîne               | Non      | Trier l'ensemble de résultats par (voir le filtre pour plus de détails sur la signification de chaque valeur):<br>-   **"email"**,<br>-   **"first_name"**,<br>-   **"id"**,<br>-   **"last_name"**,<br>-   **"sysid"**,<br>-   **"type"**,<br>-   **"title"**,<br>-   **"type_title"** |
 | **raw**      | Booléen              | Non      | Afficher le format brut, voir exemple.                                                                                                                                                                                                            |
 
-### Filtre {/ * exemples * /}
+### Filtre 
 
 | Clé        | Type de données JSON | Requis | Description                                                                                                                                  |
 | ---------- | --------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |

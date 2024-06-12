@@ -40,4 +40,3 @@
 [Erreur][Listes] Vue de liste à valeurs multiples : largeur de colonne de la dernière colonne non ajustable  
 [Erreur][Gestion de l'interface] Zammad : Le bouton de création de ticket crée un lien avec indéfini à la fin  
 
-{/*examples*/}

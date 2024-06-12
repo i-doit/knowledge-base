@@ -8,4 +8,4 @@ Dans i-doit, ces dossiers WATO sont stockés dans l'attribut de dialogue+ Dossie
 
 **Recommandation :** Exécutez cette commande chaque fois que vous ajoutez un nouveau dossier dans checkmk ou i-doit. 
 
-{ /* examples */ }
+

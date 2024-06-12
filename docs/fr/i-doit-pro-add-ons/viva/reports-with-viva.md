@@ -1,4 +1,4 @@
-# Rapports avec VIVA {/ * exemples * /}
+# Rapports avec VIVA 
 
 Pour garantir une assurance qualité continue, l'extension VIVA prend en charge l'utilisateur avec une série de rapports (également appelés "rapports"). Ceux-ci sont principalement adaptés pour visualiser les informations manquantes ou insuffisantes lors de la documentation réelle. Les rapports accompagnent l'utilisateur tout au long du processus de documentation.
 

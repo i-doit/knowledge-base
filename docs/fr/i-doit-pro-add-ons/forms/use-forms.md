@@ -71,7 +71,7 @@ Ces éléments d'attribut ne doivent alors pas être vides. Cela est clairement 
 
 [![Attribut](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/17-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/17-usf.png)
 
-## Aperçu { /*examples*/ }
+## Aperçu 
 
 Avant de publier le formulaire aux utilisateurs, vous aimeriez y jeter un coup d'œil, bien sûr.<br>
 C'est précisément à cette fin que nous avons intégré l'aperçu ! Cliquez sur le [![](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/18-usf.png)](../../assets/images/en/i-doit-pro-add-ons/forms/use-forms/18-usf.png) bouton.

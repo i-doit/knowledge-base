@@ -24,7 +24,7 @@ Cliquez sur `Modifier` puis sur `Désactiver`, après avoir saisi le code d'auth
 
 !!! note "Un administrateur a la possibilité de désactiver le 2FA pour les utilisateurs via l'[administration](../../system-administration/administration/two-factor-authentication.md)."
 
-## Authentification à deux facteurs externe {/ * exemples * /}
+## Authentification à deux facteurs externe 
 
 Ici, nous fournirons des liens vers des méthodes d'authentification 2FA externes
 

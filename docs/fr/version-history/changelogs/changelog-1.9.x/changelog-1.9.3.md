@@ -73,5 +73,3 @@
 [Bogue] Les ressources restantes dans la vitalité du cluster ne sont pas calculées correctement  
 [Bogue] Dialog Admin : Suppression de la colonne "supprimable" pour les champs de dialog+ personnalisés  
 [Bogue] Relations de catégorie : Lors de la création d'une relation explicite, la direction entre l'objet maître et l'objet esclave n'est pas prise en compte  
-
-I am ready to start translating the Markdown content into French. Please paste the content you would like me to translate.

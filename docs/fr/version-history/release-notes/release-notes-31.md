@@ -1,9 +1,9 @@
-# Notes de version 31 {/ * exemples *}
+# Notes de version 31 
 
 Nous sommes heureux d'annoncer i-doit pro 31. Cette version se concentre principalement sur la compatibilité et la qualité. En plus de nos corrections de bugs habituelles, nous avons ajouté un navigateur de fichiers mis à jour pour améliorer l'expérience de téléchargement de fichiers vers i-doit. Nous avons également retravaillé les éditeurs WYSIWYG pour améliorer leur apparence et leur convivialité, ainsi que l'option de coller directement des images dans votre texte et de les télécharger vers i-doit pour éviter qu'elles ne soient stockées directement dans la base de données.
 Nous vous encourageons à [mettre à jour](https://kb.i-doit.com/fr/maintenance-and-operation/update.html) vers cette version dès que possible pour bénéficier de toutes ces améliorations.
 
-## Compatibilité {/ * exemples *}
+## Compatibilité 
 
 Veuillez noter que i-doit 31 aura des **exigences système mises à jour**. Assurez-vous que votre système les remplit en utilisant les versions suivantes :
 
@@ -13,7 +13,7 @@ Veuillez noter que i-doit 31 aura des **exigences système mises à jour**. Assu
 
 Veuillez mettre à jour votre système avant de mettre à jour i-doit si votre version ne correspond pas aux versions répertoriées ci-dessus.
 
-## Points forts de cette version {/ * exemples *}
+## Points forts de cette version 
 
 -   Nouveau **navigateur de fichiers** pour améliorer le **téléchargement** de fichiers vers i-doit
 -   Conception retravaillée pour l'éditeur **WYSIWYG**
@@ -28,4 +28,3 @@ Aux côtés de i-doit 31, nous publions également les modules complémentaires 
 
 Nous recommandons également de mettre à jour ces modules complémentaires pour bénéficier de toutes les améliorations.
 
-{/*examples*/}

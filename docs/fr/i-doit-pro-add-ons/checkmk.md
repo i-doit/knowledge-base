@@ -1,7 +1,6 @@
 # CheckMK
 
-[![Logo de Check_MK](../assets/images/en/i-doit-pro-add-ons/checkmk/1-cmk.gif)](../assets/images/en/i-doit-pro-add-ons/checkmk/1-cmk.gif){/*examples*/}
-
+[![Logo de Check_MK](../assets/images/en/i-doit-pro-add-ons/checkmk/1-cmk.gif)](../assets/images/en/i-doit-pro-add-ons/checkmk/1-cmk.gif)
 Check_MK est un logiciel de [Surveillance Réseau](../automation-and-integration/network-monitoring/index.md) qui peut être configuré depuis i-doit.
 
 L'exportation fournit à Check_MK des fichiers de configuration WATO. WATO est l'interface de configuration de Check_MK qui gère les modifications de la configuration de surveillance et vérifie leur validité. Les configurations contiennent les adresses IP ou le nom DNS des hôtes et/ou des clusters et de leurs membres à exporter, ainsi que les propriétés des hôtes associées (tags) et les contacts liés. D'autres configurations spécifiques à la surveillance restent dans Check_MK.
@@ -22,7 +21,7 @@ D'autres paramètres de configuration sont ouverts après avoir sélectionné Ch
 
 Dans le champ de texte brut **Site**, vous pouvez définir un site vers lequel la configuration exportée est transmise. Pour cela, **Multisite (Surveillance distribuée)** doit être réglé sur "**Oui**". 
 
-{ /* examples */ }
+
 
 Lorsque vous verrouillez des hôtes ou des dossiers, la configuration exportée ne peut plus être modifiée dans Check_MK. Cela est utile pour empêcher Check_MK de faire des modifications qui seraient écrasées à nouveau lors de la prochaine exportation.
 
@@ -69,7 +68,6 @@ Les propriétés dynamiques fonctionnent de manière similaire à l'exception qu
 
 ## Catégorie des Propriétés de l'Hôte
 
-{/*examples*/}
 
 Les propriétés d'hôte dynamiques sont affichées et les propriétés d'hôte statiques manuelles sont attribuées dans la catégorie **Propriétés d'hôte** d'un objet.
 
@@ -105,4 +103,4 @@ Une authentification par clé publique entre l'instance i-doit et le site OMD de
 | 1.0.1 | 2019-10-14 | [Bogue] Édition de liste des catégories Check_MK<br>[Bogue] Créer de nouvelles entrées de catégorie dans la catégorie d'édition de liste "Paramètre d'exportation (sous-catégorie de Check_MK (Hôte))"<br>[Bogue] Ajouter plus de balises CMDB dynamiques<br>[Bogue] Exporter des balises d'hôte dynamiques avec des caractères spéciaux<br> |
 | 1.0 | 2018-12-17 | [Amélioration] L'extension est installable<br>[Amélioration] L'extension est désinstallable<br>[Amélioration] L'extension est activable<br>[Amélioration] L'extension est désactivable<br>[Changement] Extension de Check_MK<br> |
 
-Please provide the Markdown content you would like me to translate into French.
+

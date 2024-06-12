@@ -136,7 +136,7 @@ Mettre à jour une entrée de [dialogue](../../../basics/dialog-admin.md#dialog-
 | **valeur**    | Chaîne                  | Oui        | Valeur de l'attribut                                                                             |
 | **entry_id** | Entier                   | Oui        | Identifiant de l'entrée, par exemple : 3                                                                   |
 
-### Paramètres de réponse {/examples}
+### Paramètres de réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -178,11 +178,11 @@ La clé JSON **result** contient un objet JSON.
     }
     ```
 
-## cmdb.dialog.delete {/examples}
+## cmdb.dialog.delete 
 
 Supprime les dialogues.
 
-### Paramètres de la requête {/examples}
+### Paramètres de la requête 
 
 | **Clé**       | **Type de données JSON** | **Requis** | **Description**                                                                                    |
 | ------------- | ------------------------ | ---------- | -------------------------------------------------------------------------------------------------- |
@@ -190,7 +190,7 @@ Supprime les dialogues.
 | **propriété** | Chaîne de caractères    | Oui        | Attribut dans la catégorie, par exemple : "fabricant"                                             |
 | **entry_id**  | Entier                 | Oui        | Identifiant de l'entrée, par exemple : 3                                                                   |
 
-### Paramètres de réponse {/examples}
+### Paramètres de réponse 
 
 La clé JSON **result** contient un objet JSON.
 
@@ -199,7 +199,7 @@ La clé JSON **result** contient un objet JSON.
 | **success**  | Booléen                  | Doit être **true**                |
 | **entry_id** | Entier/Chaîne de caractères | Identifiant de l'entrée, par exemple : 3 |
 
-### Exemple {/examples}
+### Exemple 
 
 === "Corps de la requête"
 

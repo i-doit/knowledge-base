@@ -1,4 +1,4 @@
-# Assistants VIVA {/ * exemples *}
+# Assistants VIVA 
 
 Alors que le chapitre sur la procédure avec VIVA décrit une manière manuelle de documenter toutes les informations pertinentes pour l'IT-Grundschutz, l'extension VIVA comprend un grand nombre de assistants pour rendre ce processus partiellement automatisé. Les assistants analysent les données dans VIVA et dans la CMDB de i-doit à l'avance pour générer des suggestions que l'utilisateur peut ensuite éditer et/ou adopter. Les interrelations complexes au sein du réseau d'informations deviennent ainsi visibles. L'utilisateur a donc la possibilité de documenter plus rapidement et plus confortablement.
 
@@ -123,4 +123,3 @@ Selon l'attribution de l'emplacement, le sorcier suggère l'exigence de protecti
 *   Intégrité : élevée
 *   Disponibilité : très élevée
 
-{/*examples*/}

@@ -17,7 +17,7 @@ Utilisez l'API au lieu de SQL
 
 i-doit enregistre la plupart des données dans un système de gestion de base de données (MariaDB ou MySQL). Pour un expert en SQL, il est tentant d'accéder directement à ces données. Cependant, soyez prudent : si vous contournez explicitement les mécanismes d'i-doit et modifiez les données via SQL, vous pourriez rencontrer des problèmes entraînant une installation corrompue. Dans un tel cas, le fabricant ne garantit rien. Il est préférable d'utiliser l'API car c'est le seul moyen d'avoir la garantie que, par exemple, les [relations d'objets](../../basics/object-relations.md) ou les [entrées du journal](../../basics/logbook.md), sont créées correctement. 
 
-{ /*examples*/ }
+
 
 Utilisez l'API au lieu de l'importation de données CSV
 -----------------------------------------------------------
@@ -94,4 +94,3 @@ Lisez le Manuel d'Utilisation (RTFM)
 
 La base de connaissances fournit toutes les méthodes d'API et de nombreux exemples. Si vous ne trouvez pas ce que vous cherchez, vous avez peut-être trouvé quelque chose que nous avons négligé. Dans ce cas également, nous apprécierions un court message avec vos commentaires.
 
-{/*examples*/}

@@ -1,4 +1,4 @@
-# Coordonnées Géographiques {/examples}
+# Coordonnées Géographiques 
 
 Chaque [objet](../basics/structure-of-the-it-documentation.md) dans i-doit peut être étiqueté avec des coordonnées géographiques indiquant la longitude et la latitude.
 

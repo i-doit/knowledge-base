@@ -1,8 +1,8 @@
-# Installation manuelle {/examples}
+# Installation manuelle 
 
 Une fois que les préparatifs nécessaires sont faits - par exemple la configuration du système d'exploitation sous-jacent - vous pouvez commencer la configuration de i-doit.
 
-## Démarrage rapide {/examples}
+## Démarrage rapide 
 
 Extrayez le package d'installation de i-doit dans un dossier auquel le serveur Web Apache peut accéder. Ensuite, ouvrez ce dossier dans le navigateur et suivez les instructions de configuration.
 
@@ -61,43 +61,43 @@ Le package d'installation de i-doit est extrait dans `C:\xampp\htdocs`. En gén�
 
 ## Exécuter la Configuration
 
-_i-doit_ peut être installé de deux manières : en utilisant l'**interface graphique Web** de manière confortable (recommandé pour les débutants) ou via l'[Installation automatique](../automatic-installation.md) (pour automatiser l'installation par exemple). {/examples}
+_i-doit_ peut être installé de deux manières : en utilisant l'**interface graphique Web** de manière confortable (recommandé pour les débutants) ou via l'[Installation automatique](../automatic-installation.md) (pour automatiser l'installation par exemple). 
 
-### Interface Web {/examples}
+### Interface Web 
 
-La configuration est lancée automatiquement dès l'ouverture de i-doit (exemple <http://i-doit-host/i-doit/>). {/examples}
+La configuration est lancée automatiquement dès l'ouverture de i-doit (exemple <http://i-doit-host/i-doit/>). 
 
-#### Vérification du système {/examples}
+#### Vérification du système 
 
-Les paramètres système importants sont demandés dès le premier pas. L'utilisateur sera notifié si quelque chose ne va pas. {/examples}
+Les paramètres système importants sont demandés dès le premier pas. L'utilisateur sera notifié si quelque chose ne va pas. 
 
-[![Vérification du système](../../assets/images/en/installation/manual-installation/setup/1-setup.png)](../../assets/images/en/installation/manual-installation/setup/1-setup.png) {/examples}
+[![Vérification du système](../../assets/images/en/installation/manual-installation/setup/1-setup.png)](../../assets/images/en/installation/manual-installation/setup/1-setup.png) 
 
-#### Configuration du répertoire {/examples}
+#### Configuration du répertoire 
 
-Ici, les chemins où les fichiers d'installation ou les fichiers spécifiques à l'utilisateur vont être stockés sont demandés. Vous pouvez accepter les options suggérées. {/examples}
+Ici, les chemins où les fichiers d'installation ou les fichiers spécifiques à l'utilisateur vont être stockés sont demandés. Vous pouvez accepter les options suggérées. 
 
-[![Configuration du répertoire](../../assets/images/en/installation/manual-installation/setup/2-setup.png)](../../assets/images/en/installation/manual-installation/setup/2-setup.png) {/examples}
+[![Configuration du répertoire](../../assets/images/en/installation/manual-installation/setup/2-setup.png)](../../assets/images/en/installation/manual-installation/setup/2-setup.png) 
 
-#### Configuration de la base de données {/examples}
+#### Configuration de la base de données 
 
-Des informations et des paramètres importants doivent être saisis pour la connexion à la base de données. Au moins deux bases de données et un utilisateur spécial sont créés pour i-doit. {/examples}
+Des informations et des paramètres importants doivent être saisis pour la connexion à la base de données. Au moins deux bases de données et un utilisateur spécial sont créés pour i-doit. 
 
-[![Configuration de la base de données](../../assets/images/en/installation/manual-installation/setup/3-setup.png)](../../assets/images/en/installation/manual-installation/setup/3-setup.png) {/examples}
+[![Configuration de la base de données](../../assets/images/en/installation/manual-installation/setup/3-setup.png)](../../assets/images/en/installation/manual-installation/setup/3-setup.png) 
 
-##### Paramètres de connexion {/examples}
+##### Paramètres de connexion 
 
 -   **Hôte :** Généralement l'hôte lui-même, donc localhost ou 127.0.0.1
 -   **Port :** Généralement le port par défaut de MySQL/MariaDB, donc 3306
 -   **Nom d'utilisateur :** Nom d'utilisateur du système de base de données, généralement root
--   **Mot de passe :** Mot de passe de l'utilisateur {/examples}
+-   **Mot de passe :** Mot de passe de l'utilisateur 
 
-##### Paramètres de l'utilisateur MySQL {/examples}
+##### Paramètres de l'utilisateur MySQL 
 
 -   **Nom d'utilisateur :** Nom d'utilisateur du propriétaire des bases de données i-doit, généralement idoit
--   **Mot de passe :** Mot de passe de l'utilisateur {/examples}
+-   **Mot de passe :** Mot de passe de l'utilisateur 
 
-##### Paramètres de la base de données {/%%/}
+##### Paramètres de la base de données 
 
 -   **Nom de la base de données système :** Nom de la base de données système, généralement idoit_system
 -   **Nom de la base de données du mandataire :** Nom de la base de données pour le premier locataire, généralement idoit_data
@@ -116,21 +116,21 @@ Les modifications ultérieures des paramètres PHP ne prendront effet qu'après 
 
 Cette astuce concerne les systèmes d'exploitation de type Unix ; elle ne s'applique pas à Windows.
 
-#### Configuration du Framework {/%%/}
+#### Configuration du Framework 
 
 Il existe des identifiants distincts dans i-doit pour accéder au [**Centre d'administration**](../../system-administration/admin-center.md) i-doit. Ils peuvent être spécifiés ici et nous recommandons d'utiliser cette option.
 
 [![Configuration du framework](../../assets/images/en/installation/manual-installation/setup/4-setup.png)](../../assets/images/en/installation/manual-installation/setup/4-setup.png)
 
-#### Vérification de la configuration {/ * exemples * /}
+#### Vérification de la configuration 
 
 À cette étape, toutes les étapes précédentes sont examinées et vérifiées pour voir si la configuration peut avoir lieu.
 
-#### Installation {/ * exemples * /}
+#### Installation 
 
 L'installation de i-doit sur le système est effectuée à cette étape. Après que l'installation a été terminée avec succès, un résumé est affiché. Ensuite, i-doit peut être lancé et utilisé.
 
-## Étapes supplémentaires {/ * exemples * /}
+## Étapes supplémentaires 
 
 - [Télécharger et installer une licence](../../maintenance-and-operation/activate-license.md)
 - [Configurer la sauvegarde](../../maintenance-and-operation/backup-and-recovery/index.md)

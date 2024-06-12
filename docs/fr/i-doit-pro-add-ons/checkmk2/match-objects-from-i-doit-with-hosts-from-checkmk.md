@@ -1,4 +1,4 @@
-# checkmk 2: Associer des objets de i-doit avec des hôtes de checkmk {/examples}
+# checkmk 2: Associer des objets de i-doit avec des hôtes de checkmk 
 
 Avant d'exécuter [push](./generate-wato-configuration-base-on-cmdb-data.md) ou [pull](./import-inventory-data-into-cmdb.md), vous souhaitez jeter un coup d'œil approfondi sur l'apparence de votre infrastructure dans les deux outils i-doit et checkmk. Les commandes [fetch-objects et fetch-hosts](./read-information-from-i-doit-and-checkmk.md) vous fournissent des informations détaillées sur vos objets documentés dans i-doit ou vos hôtes surveillés dans checkmk. Mais ils ne les mettent pas en correspondance les uns avec les autres. Cela est fait par la commande match :
 

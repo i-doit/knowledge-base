@@ -1,4 +1,4 @@
-# checkmk 2: Installation {/examples}
+# checkmk 2: Installation 
 
 Après avoir satisfait aux [exigences](./requirements.md), téléchargez la dernière version stable de l'extension i-doit pro depuis le [portail client i-doit](https://portal.i-doit.com/).
 

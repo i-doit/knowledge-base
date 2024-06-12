@@ -11,7 +11,7 @@ Vous enregistrez la configuration sous **Administration → Surveillance et inte
 
 [![Configurations de base](../../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)](../../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)
 
-## Configurations de base {/examples}
+## Configurations de base 
 
 Vous pouvez créer les configurations de base sous **Extras → Nagios**.
 
@@ -19,7 +19,7 @@ Vous pouvez créer les configurations de base sous **Extras → Nagios**.
 
 Cela inclut la configuration principale, les modèles de service et les modèles d'hôte ainsi que d'autres paramètres de base. Toutes les valeurs sont identiques à la configuration de Nagios.
 
-## Configuration dans les objets {/examples}
+## Configuration dans les objets 
 
 Toutes les configurations supplémentaires sont effectuées dans les [objets](../../basics/structure-of-the-it-documentation.md). Le cas le plus simple est la configuration des paramètres de l'hôte. À cette fin, le dossier **Nagios (Hôte)**[catégorie](../../basics/structure-of-the-it-documentation.md) doit être assigné au type d'objet souhaité via l'**[Éditer la structure des données](../../basics/assignment-of-categories-to-object-types.md)**.
 
@@ -62,4 +62,4 @@ L'exportation des fichiers peut être automatisée via le [contrôleur](../cli/i
 | 1.0.1   |            | [Bogue] La création des tables Nagios est effectuée dans le mauvais ordre                                                                                                                                                       |
 | 1.0     |            | [Changement] Ajouter Nagios en tant qu'extension                                                                                                                                                                               |
 
-Please provide the Markdown content you would like me to translate into French.
+

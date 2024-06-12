@@ -1,4 +1,4 @@
-#  checkmk 2: Exigences {/ * exemples *}
+#  checkmk 2: Exigences 
 
 idoitcmk est un outil en ligne de commande qui utilise les API à la fois d'i-doit et de Check\_MK. Veuillez respecter les exigences suivantes :
 
@@ -73,4 +73,3 @@ Assurez-vous d'avoir activé le module "Web and Scripting Module 12". Ensuite :
     zypper update
     zypper install php7 php7-bz2 php7-curl php7-json php7-phar
 
-{/*examples*/}

@@ -1,4 +1,4 @@
-# Multi-Locataires {/examples}
+# Multi-Locataires 
 
 _i-doit_ est capable de gérer plusieurs locataires. Cela signifie qu'une installation peut mapper une ou plusieurs [documentations informatiques](../glossary.md) indépendantes. Les cas d'utilisation sont divers : des sous-organisations qui ont besoin de documenter séparément les unes des autres aux sociétés de services informatiques, qui documentent l'informatique client dans des instances dédiées, aux fournisseurs d'hébergement qui fournissent _i-doit_ en tant que service.
 

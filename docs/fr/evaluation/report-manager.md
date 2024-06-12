@@ -1,4 +1,4 @@
-# Gestionnaire de rapports {/examples}
+# Gestionnaire de rapports 
 
 Le système de reporting est un instrument utile pour rassembler, traiter et envoyer des données à un tiers. Par conséquent, _i-doit_ possède un gestionnaire de rapports qui peut traiter toutes les données de la [documentation informatique](../glossary.md) de manière exhaustive.
 
@@ -92,7 +92,7 @@ Des imbrications simples en utilisant _et_ ou _ou_ sont possibles en définissan
 
 Des conditions peuvent être définies pour les attributs des objets en relation en choisissant l'attribut avec la relation d'objet et en définissant la condition sur **Attribut lié**. Ensuite, d'autres conditions peuvent être définies dans des blocs de conditions supplémentaires.
 
-### Éditeur SQL {/examples}
+### Éditeur SQL 
 
 Chaque rapport peut être créé ou édité dans l'éditeur SQL, y compris ceux créés dans le générateur de requêtes. À partir de la page d'aperçu des **Rapports**, cliquez sur le champ déroulant à côté de **Nouveau** ou sélectionnez un rapport existant et cliquez sur le champ déroulant à côté de **Éditer** et choisissez l'**Éditeur SQL**.
 

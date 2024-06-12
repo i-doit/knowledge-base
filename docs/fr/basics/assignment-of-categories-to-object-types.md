@@ -30,9 +30,9 @@ Il en va de même pour la colonne des types d'objets. Ici, vous pouvez créer [d
 En cliquant sur un type d'objet dans la colonne du milieu, la colonne de droite est activée. Ici, vous pouvez voir les catégories assignées au type d'objet sélectionné et vous pouvez modifier ou supprimer les affectations via les cases à cocher.<br>
 Le bouton **Créer des catégories personnalisées** vous dirigera directement vers la fonction de création de [catégories personnalisées](./custom-categories.md). 
 
-{ /* examples */ }
 
-## Modifier la structure de données Profils {/ * exemples * /}
+
+## Modifier la structure de données Profils 
 
 Vous pouvez enregistrer votre configuration actuelle sous forme de profil. À cette fin, saisissez un nom pour le profil dans **Enregistrer le profil actuel**. Le profil apparaîtra alors dans les profils disponibles. Il est possible d'activer un profil, de le supprimer ou de le télécharger. Activez la case à cocher du profil souhaité et cliquez sur **Charger le profil sélectionné** pour restaurer l'attribution à partir du profil sélectionné. En utilisant le bouton de téléchargement, vous pouvez enregistrer le profil sous forme de fichier XML et le télécharger à nouveau en utilisant le bouton **Choisir un fichier**, si nécessaire.
 

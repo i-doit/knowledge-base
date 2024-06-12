@@ -1,4 +1,4 @@
-# Procédure avec VIVA {/examples}
+# Procédure avec VIVA 
 
 Gérer les catalogues IT-Grundschutz
 

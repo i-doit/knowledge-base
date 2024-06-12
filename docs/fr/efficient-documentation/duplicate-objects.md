@@ -1,4 +1,4 @@
-# Dupliquer des objets {/examples}
+# Dupliquer des objets 
 
 Un objet peut être copié facilement et rapidement dans i-doit_._
 

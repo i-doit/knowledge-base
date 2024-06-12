@@ -51,8 +51,7 @@ Des paramètres avancés sont disponibles pour le module CMDB. Ils ne sont pas a
 *   **auth.use-in-object-browser**: La validation de la permission de lecture est également activée dans le navigateur d'objets (ainsi que ses dérivés). Les objets pour lesquels l'utilisateur n'a pas la permission de lecture ne peuvent pas être sélectionnés. Les objets déjà choisis (par exemple par d'autres utilisateurs) sont affichés avec **[Caché]**. Si ce paramètre est inactif, tous les objets sont affichés dans le navigateur d'objets.
 *   **auth.use-in-location-tree**: Si l'utilisateur est autorisé à utiliser la vue d'emplacement (comme décrit ci-dessus), tous les objets qui sont assignés à un emplacement sont affichés indépendamment de leurs permissions de lecture. Si le paramètre est activé, les permissions de lecture sont examinées pour chaque objet dans cette vue arborescente. S'il n'y a pas d'accès en lecture pour les objets, ces objets ainsi que tous les objets subordonnés ne sont pas affichés.
 
-!!! info "Performance"{/*examples*/}
-
+!!! info "Performance"
     La prise en compte des paramètres avancés peut influencer les performances de i-doit.
 
 Catégorie des autorisations d'accès

@@ -1,4 +1,4 @@
-# checkmk 2: i-doit Web GUI {/examples}
+# checkmk 2: i-doit Web GUI 
 
 La plupart des interactions utilisateur sont basées sur le [module complémentaire Check\_MK hérité](../checkmk.md) d'i-doit qui est actuellement livré avec i-doit pro/open. Ce module complémentaire hérité doit être activé [via le Centre d'administration i-doit](../index.md) (il est activé par défaut).
 

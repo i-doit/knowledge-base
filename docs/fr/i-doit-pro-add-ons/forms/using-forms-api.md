@@ -58,8 +58,7 @@ Ce point de terminaison renvoie une liste de tous les formulaires disponibles. D
     Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU2YThlNmY1ZTMxYjI5NzAwOTMxOWEiLCJuYW1lIjoic2VsY3VrIiwic3ViIjoiJDJhJDEwJFJ4YlRybVpUVXlXc1NSQ2VZTFR6enVBZXJZTUF1dUlsNU5qOWt5RFN4WXlFL0NsdG1iLmY2IiwiaWF0IjoxNjU3MjkyNTAxLCJleHAiOjE2NTcyOTYxMDF9.yEZAjFAGpOCbDsJuI_vqot5J75MOE0bKPPn8osQS0Ik
 ```
 
-### GET /api/form/{ID}{/*examples*/}
-
+### GET /api/form/{ID}
 > Récupération de formulaires spécifiques
 
 ```
@@ -197,8 +196,7 @@ Le retour ressemble à ceci :
     }
 ```
 
-### DELETE /api/form/{ID}{/*examples*/}
-
+### DELETE /api/form/{ID}
 Un formulaire spécifique peut être supprimé en utilisant le verbe DELETE. Le retour contient les données du formulaire.
 
 ```
@@ -206,13 +204,11 @@ Un formulaire spécifique peut être supprimé en utilisant le verbe DELETE. Le 
     Autorisation: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU2YThlNmY1ZTMxYjI5NzAwOTMxOWEiLCJuYW1lIjoic2VsY3VrIiwic3ViIjoiJDJhJDEwJFJ4YlRybVpUVXlXc1NSQ2VZTFR6enVBZXJZTUF1dUlsNU5qOWt5RFN4WXlFL0NsdG1iLmY2IiwiaWF0IjoxNjU3MjkyNTAxLCJleHAiOjE2NTcyOTYxMDF9.yEZAjFAGpOCbDsJuI_vqot5J75MOE0bKPPn8osQS0Ik
 ```
 
-### PUT /api/form/{ID}{/*examples*/}
-
-### POST /api/form {/ * examples * /}
-
+### PUT /api/form/{ID}
+### POST /api/form 
 Cet endpoint permet de modifier un formulaire. Seuls les attributs qui doivent être modifiés doivent être spécifiés dans le corps JSON.
 
-### POST /api/form {/ * exemples * /}
+### POST /api/form 
 
 Cet endpoint doit être utilisé pour créer de nouveaux formulaires. La définition est faite en utilisant JSON et doit avoir la structure suivante:
 

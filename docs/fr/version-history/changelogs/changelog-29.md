@@ -1,4 +1,4 @@
-# Journal des modifications 29 {/examples/}
+# Journal des modifications 29 
 
 [Tâche][Service]                    Ajouter un lien vers l'enquête de satisfaction client dans i-doit pro<br>
 [Tâche][Code (Interne)]            Intégrer un composant de sélection de couleurs amélioré<br>
@@ -65,6 +65,6 @@
 [Bogue][Gestion de l'interface]    Message TypeError dans la catégorie "Tous les tickets"<br>
 [Bogue][Paramètres système]       La configuration du navigateur d'objets pour le contrôleur de gestion à distance et les appareils gérés fait référence à la mauvaise catégorie<br>
 [Bogue][Importation de câblage]    Ne pas renommer les entrées/sorties de câblage après l'importation<br>
-[Bogue][Configuration du type d'objet] Classer la catégorie "Lieu de travail attribué" avant "Cartes SIM attribuées" {/examples/}
+[Bogue][Configuration du type d'objet] Classer la catégorie "Lieu de travail attribué" avant "Cartes SIM attribuées" 
 
-I am ready to start the translation. Please provide the Markdown content you would like me to translate into French.
+I am ready to start the translation. 

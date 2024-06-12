@@ -8,11 +8,11 @@ Le centre d'administration est une interface d'administration distincte intégr�
 
     Veuillez ne pas modifier le mot de passe s'il en existe déjà un. Cela ne peut être modifié que via la [CLI!](../automation-and-integration/cli/index.md)
 
-Pour le centre d'administration, il existe des ==identifiants distincts==. Ceux-ci peuvent être spécifiés lors de l'[installation de i-doit](../installation/manual-installation/setup.md). Si cette étape a été sautée, alors il n'y a pas d'accès possible au centre d'administration au départ.
+Pour le centre d'administration, il existe des **identifiants distincts**. Ceux-ci peuvent être spécifiés lors de l'[installation de i-doit](../installation/manual-installation/setup.md). Si cette étape a été sautée, alors il n'y a pas d'accès possible au centre d'administration au départ.
 
 ## Connexion
 
-Le centre d'administration peut être accédé via l'[écran de connexion de i-doit](../basics/initial-login.md). Le lien ==Admin-Center== est situé sous l'écran de connexion.
+Le centre d'administration peut être accédé via l'[écran de connexion de i-doit](../basics/initial-login.md). Le lien **Admin-Center** est situé sous l'écran de connexion.
 
 [![Connexion](../assets/images/en/system-administration/admin-center/1-ac.png)](../assets/images/en/system-administration/admin-center/1-ac.png)
 
@@ -28,31 +28,31 @@ En alternative, l'URL vers le centre d'administration peut être entrée dans le
 
 ## Aperçu
 
-Dans la section ==Accueil==, la version actuellement installée de _i-doit_ est affichée. Dans l'élément ==Actions==, le fichier d'informations sur l'environnement de _i-doit_ peut être téléchargé. Il s'agit d'un fichier XML avec des paramètres système importants qui peuvent être très utiles pour le [dépannage](./troubleshooting/index.md).
+Dans la section **Accueil**, la version actuellement installée de _i-doit_ est affichée. Dans l'élément **Actions**, le fichier d'informations sur l'environnement de _i-doit_ peut être téléchargé. Il s'agit d'un fichier XML avec des paramètres système importants qui peuvent être très utiles pour le [dépannage](./troubleshooting/index.md).
 
 [![Aperçu](../assets/images/en/system-administration/admin-center/3-ac.png)](../assets/images/en/system-administration/admin-center/3-ac.png)
 
 ## Locataires
 
-Les locataires sont administrés dans la section ==Locataires==. Cependant, cela n'est pertinent que pour une licence multi-locataire de _i-doit_. De nouveaux locataires peuvent être générés en utilisant le bouton ==Ajouter un nouveau locataire==. Les locataires existants peuvent également être édités, (dés)activés ou supprimés complètement. Un locataire supprimé ne peut être restauré que via une [sauvegarde](../maintenance-and-operation/backup-and-recovery/index.md).
+Les locataires sont administrés dans la section **Locataires**. Cependant, cela n'est pertinent que pour une licence multi-locataire de _i-doit_. De nouveaux locataires peuvent être générés en utilisant le bouton **Ajouter un nouveau locataire**. Les locataires existants peuvent également être édités, (dés)activés ou supprimés complètement. Un locataire supprimé ne peut être restauré que via une [sauvegarde](../maintenance-and-operation/backup-and-recovery/index.md).
 
 [![Locataires](../assets/images/en/system-administration/admin-center/4-ac.png)](../assets/images/en/system-administration/admin-center/4-ac.png)
 
 ## Licences
 
-[Les licences pour i-doit peuvent être installées](../maintenance-and-operation/activate-license.md) via la ==section Licences==.
+[Les licences pour i-doit peuvent être installées](../maintenance-and-operation/activate-license.md) via la **section Licences**.
 
 [![Licences](../assets/images/en/system-administration/admin-center/5-ac.png)](../assets/images/en/system-administration/admin-center/5-ac.png)
 
 ## Modules complémentaires
 
-Dans la ==section Modules complémentaires==, les [Modules complémentaires](../i-doit-pro-add-ons/index.md) sont gérés. Chaque fonctionnalité d'_i-doit_ est encapsulée dans un module complémentaire.
+Dans la **section Modules complémentaires**, les [Modules complémentaires](../i-doit-pro-add-ons/index.md) sont gérés. Chaque fonctionnalité d'_i-doit_ est encapsulée dans un module complémentaire.
 
 [![Modules complémentaires](../assets/images/en/system-administration/admin-center/6-ac.png)](../assets/images/en/system-administration/admin-center/6-ac.png)
 
 ## Support
 
-Le [portail client](../system-administration/customer-portal.md) est intégré dans la ==section Support==. Vous pouvez y télécharger des packages et des licences, entre autres.
+Le [portail client](../system-administration/customer-portal.md) est intégré dans la **section Support**. Vous pouvez y télécharger des packages et des licences, entre autres.
 
 [![Support](../assets/images/en/system-administration/admin-center/7-ac.png)](../assets/images/en/system-administration/admin-center/7-ac.png)
 
@@ -98,7 +98,7 @@ Vous trouverez ici les paramètres liés au système. Vous trouverez également 
 | Locataire par défaut  | Sélectionnez le nom du locataire via le menu déroulant  (l'ordre peut être modifié dans les [paramètres experts](#expert-settings-system-related)) |
 | Utiliser la partie de domaine | Oui ou Non                         |
 
-### Paramètres du système {/ * exemples *}
+### Paramètres du système 
 
 | Option                 | Valeur              |
 | ---------------------- | ------------------ |
@@ -106,7 +106,7 @@ Vous trouverez ici les paramètres liés au système. Vous trouverez également 
 | Répertoire de téléchargement de fichiers | Chemin sur le système de fichiers |
 | Répertoire de téléchargement d'images | Chemin sur le système de fichiers |
 
-### Interface utilisateur {/ * exemples *}
+### Interface utilisateur 
 
 | Option                            | Valeur                                          |
 | --------------------------------- | ---------------------------------------------- |
@@ -115,11 +115,11 @@ Vous trouverez ici les paramètres liés au système. Vous trouverez également 
 
 ## Configuration
 
-Dans l'onglet ==Configuration==, trois éléments peuvent être configurés :
+Dans l'onglet **Configuration**, trois éléments peuvent être configurés :
 
--   Via ==Identifiants du Centre d'administration==, les identifiants du centre d'administration peuvent être modifiés.
--   Via ==Configuration de sécurité==, la méthode de chiffrement peut être modifiée.
--   Via ==Connexion à la base de données du système i-doit==, l'accès à la base de données du système peut être modifié.
+-   Via **Identifiants du Centre d'administration**, les identifiants du centre d'administration peuvent être modifiés.
+-   Via **Configuration de sécurité**, la méthode de chiffrement peut être modifiée.
+-   Via **Connexion à la base de données du système i-doit**, l'accès à la base de données du système peut être modifié.
 
 [![Configuration](../assets/images/en/system-administration/admin-center/8-ac.png)](../assets/images/en/system-administration/admin-center/8-ac.png)
 
@@ -198,4 +198,4 @@ Les paramètres experts pour le système se trouvent dans le Centre d'administra
 | system.security.csrf                            | 1                                                                                                                                                   |                   |
 | system.show-proc-time                           | 0                                                                                                                                                   |                   |
 
-Please provide the Markdown content you would like me to translate into French.
+

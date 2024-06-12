@@ -1,4 +1,4 @@
-# Journal des modifications 31 {/ * exemples * /}
+# Journal des modifications 31 
 
 [Tâche][Importation] Améliorer l'importation CSV pour ne pas bloquer la session utilisateur actuelle<br>
 [Tâche][Code (Interne)] Autoriser aux paramètres de l'API d'avoir plusieurs types<br>
@@ -44,5 +44,3 @@
 [Bogue][Notifications] Enregistrer les notifications n'affiche aucun message d'enregistrement et reste dans la fenêtre de l'éditeur<br>
 [Bogue][Importation CSV] Ignorer les champs de contact vides lors de l'importation CSV<br>
 [Bogue][Importation] Formater correctement le journal d'importation xml<br>
-
-I am ready to start translating the Markdown content into French. Please paste the content you would like me to translate.

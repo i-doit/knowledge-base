@@ -8,4 +8,3 @@ Cela ajoutera tous les types d'agents disponibles à l'attribut "Agent" du dialo
 
 **Recommandation :** Vous n'avez besoin d'exécuter cette commande qu'une seule fois. 
 
-{/*examples*/}

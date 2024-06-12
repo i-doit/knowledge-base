@@ -62,8 +62,7 @@ L'ancien système ne doit plus être utilisé de manière productive pendant le 
         mysqldump -uroot -p idoit_system > /tmp/idoit_system.sql
         mysqldump -uroot -p idoit_data > /tmp/idoit_data.sql
 
-    \*Si la base de données existe depuis longtemps, ce message d'erreur peut apparaître : "Impossible de créer la table \idoit\_data\.\table\_name\ (errno: 140 "Mauvaises options de création")". Vous pouvez trouver la solution [ICI](../system-administration/troubleshooting/cant-create-table.md){/*examples*/}
-
+    \*Si la base de données existe depuis longtemps, ce message d'erreur peut apparaître : "Impossible de créer la table \idoit\_data\.\table\_name\ (errno: 140 "Mauvaises options de création")". Vous pouvez trouver la solution [ICI](../system-administration/troubleshooting/cant-create-table.md)
 2. Nous copions ces dumps vers le nouveau système :
 
         scp user@oldsystem:/tmp/idoit_system.sql /tmp/
@@ -117,4 +116,4 @@ Le mot de passe ci-dessus pour l'utilisateur idoit doit être identique aux dét
 4. Mettez en place des [sauvegardes](../maintenance-and-operation/backup-and-recovery/index.md) et testez-les.
 5. Lorsque l'interface Web réagit comme d'habitude et que toutes les données sont disponibles dans i-doit, la migration a été réussie.
 
-Please provide the Markdown content you would like me to translate into French.
+

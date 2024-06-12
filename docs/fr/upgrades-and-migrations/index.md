@@ -1,4 +1,4 @@
-# Mises à jour et Migrations {/examples/}
+# Mises à jour et Migrations 
 
 Ici, nous nous concentrons sur des mises à jour et des migrations spécifiques concernant i-doit.
 

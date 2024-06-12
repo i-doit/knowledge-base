@@ -152,17 +152,17 @@ Il est judicieux de définir combien de ports vous souhaitez créer simultanéme
 
 Une connexion à un autre composant réseau (actif/passif) par entrée de port est possible : Dans le **Navigateur de Ports**, vous présélectionnez l'objet, puis le port correspondant. Les ports doivent donc déjà exister avant de pouvoir les connecter les uns aux autres.
 
-### Ports Virtuels {/ * exemples * /}
+### Ports Virtuels 
 
 Vous pouvez regrouper des ports physiques pour former des ports logiques. Cette méthode est souvent appelée regroupement ou liaison. La catégorie **Ports logiques** dans le dossier de catégorie **Réseau** vous permet de documenter les ports logiques.
 
-### Câblage {/ * exemples * /}
+### Câblage 
 
 Dans i-doit, vous pouvez différencier clairement les différentes couches du [modèle de référence TCP/IP](https://fr.wikipedia.org/wiki/Suite_des_protocoles_Internet). Les sujets supérieurs traitent des couches 3 avec IP et 4 (MAC). Pour les autres couches, i-doit fournit d'autres fonctions de documentation, par exemple pour la couche 1, qui concerne le support physique.
 
 Pour documenter les câbles et leurs connexions aux composants actifs et passifs, i-doit fournit de nombreux types d'objets (**Câble**, **Panneau de brassage**, **Goulotte de câble**, **Conduit** etc.). La connexion des objets de ces types est effectuée dans la catégorie de câblage, qui peut être (mais ne doit pas nécessairement être) maintenue activement. Lorsque vous documentez une connexion entre deux composants via la catégorie **Port** (réseau), cette catégorie sera remplie automatiquement et un objet du type **Câble** sera généré.
 
-### Écouteur Réseau et Liaison de Port {/ * exemples * /}
+### Écouteur Réseau et Liaison de Port 
 
 Tout comme le câblage, vous pouvez documenter les couches supérieures du modèle de référence TCP/IP dans i-doit. Dans le dossier de catégorie **Connexions réseau**, vous pouvez voir quelle application ouvre quelles connexions TCP/UDP et quelles applications adressent quels ports par rapport aux systèmes tiers. Dans le dossier, vous trouverez les catégories **Écouteur** (le port est ouvert) et **Connexion** (le port du système tiers est utilisé). Au préalable, vous devriez vous assurer que les installations logicielles requises sont documentées dans i-doit.
 

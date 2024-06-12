@@ -6,11 +6,11 @@ icon: material/api
 lang: fr
 ---
 
-# Espace de noms cmdb.contact {/examples}
+# Espace de noms cmdb.contact 
 
 !!! example "Travail en cours"
 
-## cmdb.contact.read {/examples}
+## cmdb.contact.read 
 
 Récupère tous les objets attribués par contact.
 

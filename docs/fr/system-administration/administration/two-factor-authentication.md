@@ -15,5 +15,4 @@ Le 2FA peut être **désactivé** pour l'utilisateur respectif via la colonne **
 
 Les droits sont automatiquement ajoutés au groupe de personnes administratives après la mise à jour. Le droit peut être trouvé sous **Autorisations -> Administration** et est appelé **Authentification à deux facteurs**. 
 
-{/*examples*/}
 

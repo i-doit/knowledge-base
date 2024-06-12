@@ -1,4 +1,4 @@
-# Notes de version 30 {/ * exemples * /}
+# Notes de version 30 
 
 Nous sommes heureux d'annoncer i-doit pro 30. Cette version apportera une multitude de nouvelles fonctionnalités et améliorations pour améliorer votre expérience i-doit. Tout d'abord, nous sommes heureux d'annoncer que **MariaDB 10.11** est officiellement pris en charge avec i-doit 30. Associé à **PHP 8.2**, vous pouvez désormais mettre à jour votre système d'exploitation sans vous soucier de la compatibilité avec i-doit.
 Cela signifie également que i-doit 30 sera la ^^dernière version prenant en charge PHP 7.4^^.

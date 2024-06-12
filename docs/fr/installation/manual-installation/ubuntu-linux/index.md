@@ -123,7 +123,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWOR
 FLUSH PRIVILEGES;
 EXIT;
 ```
-{ /*examples*/ }
+
 
 Ensuite, MariaDB **10.6** est arrêté. Il est maintenant important de déplacer les fichiers qui ne sont pas nécessaires, sinon le résultat serait une perte significative de performance :
 
@@ -132,14 +132,14 @@ mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
 sudo systemctl stop mysql.service
 sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
-{ /*examples*/ }
+
 
 Un nouveau fichier est créé pour les paramètres déviants :
 
 ```shell
 sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
 ```
-{ /*examples*/ }
+
 
 Ce fichier contient les nouveaux paramètres de configuration. Pour des performances optimales, vous devriez adapter ces paramètres au matériel (virtuel) :
 
@@ -191,14 +191,14 @@ innodb_stats_on_metadata = 0
 
 sql-mode = ""
 ```
-{ /*examples*/ }
+
 
 Enfin, MariaDB est redémarré :
 
 ```shell
 sudo systemctl restart mysql.service
 ```
-{ /*examples*/ }
+
 
 ## Étape suivante
 

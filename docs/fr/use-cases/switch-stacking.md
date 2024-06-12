@@ -1,4 +1,4 @@
-# Empilement de commutation {/ * exemples * /}
+# Empilement de commutation 
 
 Avec le type d'objet **Empilement** [type d'objet](../glossary.md), vous pouvez définir un groupe d'empilement de plusieurs membres qui échangent des informations. Bien que vous puissiez utiliser l'empilement pour différents types d'objets, l'idée originale de ce type d'objet et de la catégorie associée de **Membre de l'empilement** [catégorie](../glossary.md) est basée sur l'Empilement de commutation. À partir de la version 1.7, le type d'objet peut être trouvé sous le [groupe de types d'objets](../glossary.md) **Autre**.
 

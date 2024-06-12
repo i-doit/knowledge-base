@@ -34,4 +34,4 @@ sudo -u www-data php console.php admin-center-password-reset --user Utilisateur 
 
 L'utilisateur www-data est l'utilisateur Apache d'un système Debian. Cet utilisateur doit être adapté à d'autres systèmes. De plus, dans les sections --user et --password, un utilisateur de i-doit est nécessaire qui a les autorisations pour utiliser la console.
 
-Please provide the Markdown content you would like me to translate into French.
+

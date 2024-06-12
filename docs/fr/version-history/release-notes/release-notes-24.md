@@ -1,8 +1,8 @@
-# Notes de version 24 {/ * exemples * /}
+# Notes de version 24 
 
 Nous sommes heureux d'annoncer i-doit pro 24. Comme toujours, nous vous fournirons des correctifs de bogues ainsi que des fonctionnalités utiles pour une meilleure expérience logicielle. Nous vous encourageons à [mettre à jour](../../maintenance-and-operation/update.md) vers cette version dès que possible pour bénéficier de tout ce contenu.
 
-## Points forts de cette version {/ * exemples * /}
+## Points forts de cette version 
 
 * MariaDB 10.6 est officiellement pris en charge avec i-doit 24.
 * Les profils [JDisc](../../consolidate-data/jdisc-discovery.md) peuvent désormais être **exportés** et **importés** pour les transférer facilement entre différentes installations/locataires d'i-doit.
@@ -14,5 +14,4 @@ Nous sommes heureux d'annoncer i-doit pro 24. Comme toujours, nous vous fourniro
 
 Ensemble avec i-doit pro 24, nous fournissons également une nouvelle version du module complémentaire Forms avec quelques correctifs pour améliorer l'expérience utilisateur. Pour utiliser la dernière version du module complémentaire, assurez-vous de mettre à jour vers i-doit pro 23, ce qui est requis.
 
-* [Forms 1.2](../../i-doit-pro-add-ons/forms/index.md){/*examples*/}
-
+* [Forms 1.2](../../i-doit-pro-add-ons/forms/index.md)

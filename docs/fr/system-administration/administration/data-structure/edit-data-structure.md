@@ -1,4 +1,4 @@
-# Modifier la structure des données {/examples/}
+# Modifier la structure des données 
 
 Ici, vous pouvez trouver des configurations pour modifier la structure des données de votre locataire.
 
@@ -6,14 +6,14 @@ La configuration des affectations est effectuée via une séparation en trois co
 
 [![Mise en page](../../../assets/images/en/system-administration/administration/data-structure/1-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/1-ds.png)
 
-## Ajuster les Groupes de types d'objets, les Types d'objets et les Catégories {/examples/}
+## Ajuster les Groupes de types d'objets, les Types d'objets et les Catégories 
 
 Dans les trois champs principaux, vous pouvez passer en mode édition en appuyant sur le ==bouton Ajuster==.
 Ici, vous pouvez ==modifier les affectations== du groupe d'objets respectif, mais vous pouvez également créer et développer de nouveaux groupes, types d'objets ou catégories.
 
 [![Ajuster](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)
 
-## Modifier les Affectations {/examples/}
+## Modifier les Affectations 
 
 Vous commencez à éditer dans la colonne ==Groupes de types d'objets==. Ici, vous pouvez ==sélectionner le groupe de types d'objets== pour lequel vous souhaitez ajuster les affectations de types d'objets.<br>
 ==Cliquez sur le Groupe de types d'objets== que vous souhaitez modifier, afin qu'une sélection soit disponible dans la colonne du milieu. Si vous n'avez pas besoin des groupes, ==vous pouvez les masquer== en utilisant les cases à cocher ou le ==bouton Ajuster==.

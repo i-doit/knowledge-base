@@ -6,4 +6,4 @@ Ici, vous trouverez des configurations pour les extensions.
 
 - [API JSON-RPC](./json-rpc-api/index.md)
 - [Événements](./events.md)
-- [Remplacement](./replacement/index.md) {/examples}
+- [Remplacement](./replacement/index.md) 

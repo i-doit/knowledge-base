@@ -26,8 +26,6 @@ Après le téléchargement, vous copiez et décompressez le package de mise à j
     cd /var/www/html/i-doit/
     sudo -u www-data unzip idoit-open-1.8-update.zip
 
-{/*examples*/}
-
 Vous devez adapter le chemin en conséquence. Copiez et décompressez le package avec l'utilisateur du serveur Web Apache afin que la mise à jour soit effectuée avec les droits de cet utilisateur sans problèmes.
 
 En principe, la procédure de mise à jour ultérieure ne diffère pas d'une mise à jour normale [via l'interface Web](../maintenance-and-operation/update.md). Comme la version 1.8 est une mise à jour majeure, vous ne devez pas sauter les mises à jour majeures précédentes. Les mises à jour sont chargées les unes après les autres. Lorsque la première mise à jour a été effectuée, vous êtes invité à charger la mise à jour suivante. Cette procédure se répète jusqu'à ce que la mise à jour pour la version 1.8 soit chargée. Cela donne le chemin de mise à jour suivant :

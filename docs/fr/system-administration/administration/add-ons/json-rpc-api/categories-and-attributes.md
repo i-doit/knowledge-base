@@ -1,4 +1,4 @@
-# Catégories et Attributs {/examples/}
+# Catégories et Attributs 
 
 Cela répertorie tous les [attributs disponibles pour la catégorie sélectionnée](../../../../basics/structure-of-the-it-documentation.md) d'i-doit.
 

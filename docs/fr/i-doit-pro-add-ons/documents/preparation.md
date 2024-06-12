@@ -31,14 +31,14 @@ Pour télécharger des modèles depuis le dépôt en ligne, l'autorisation "Dép
 !!! attention "Vider le cache pour le système de droits"
     Après avoir attribué les droits, il est conseillé de vider le cache dans l'administration de i-doit [administration](../../system-administration/administration/index.md) sous [Réparation et nettoyage](../../system-administration/administration/tenant-management/repair-and-clean-up.md) > Cache / Base de données afin que les modifications soient prises en compte par le système.
 
-## Configuration supplémentaire {/examples}
+## Configuration supplémentaire 
 
 L'extension rend également la catégorie "Documents" [disponible](../../basics/categories-and-attributes.md) pour tous les types d'objets. La catégorie peut être liée aux types d'objets souhaités via la [configuration des types d'objets](../../basics/custom-object-types.md) et [Modifier la structure des données](../../basics/assignment-of-categories-to-object-types.md). De cette manière, seuls les types d'objets spécifiés par l'utilisateur apparaissent lors de la création d'objets afin de maintenir la liste de sélection claire.
 
 !!! attention "Catégorie Documents"
     Pour créer un document pour un objet, il est nécessaire que la catégorie "Documents" soit liée au type d'objet. Si le type d'objet n'a pas cette catégorie, aucun document ne peut être créé pour les objets qu'il contient, car ils n'apparaissent pas dans la sélection.
 
-## Appel de l'extension {/examples}
+## Appel de l'extension 
 
 Une fois que toutes les préparations sont terminées, l'extension peut être accédée via **Extras > Documents**.
 

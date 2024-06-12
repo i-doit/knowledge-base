@@ -1,4 +1,4 @@
-# i-doit Virtual Eval Appliance {/%%/}
+# i-doit Virtual Eval Appliance 
 
 synetics fournit un appareil entièrement fonctionnel de i-doit pro. Il peut être téléchargé sous forme de machine virtuelle.
 
@@ -78,7 +78,7 @@ Des [tâches cron préconfigurées](../../automation-and-integration/cli/index.m
 
 Chaque nuit, les fichiers d'i-doit sont sauvegardés localement. La période de stockage est d'une semaine.
 
-## Répertoires {/examples}
+## Répertoires 
 
 L'aperçu suivant vous montre l'objectif des répertoires :
 
@@ -91,13 +91,13 @@ L'aperçu suivant vous montre l'objectif des répertoires :
 | **/var/log/apache2/** | Journaux du serveur web Apache |
 | **/var/backups/i-doit** | Sauvegardes |
 
-## Suivi {/examples}
+## Suivi 
 
 L'appliance fournit une installation "nue" d'i-doit pro. Cela signifie que ni les fichiers de démonstration ni les [extensions supplémentaires](../../i-doit-pro-add-ons/index.md) ne sont inclus.<br>
 Lors de la première connexion, i-doit demande une [licence](../../maintenance-and-operation/activate-license.md) valide qui doit être activée pour disposer de toutes les fonctionnalités disponibles.<br>
 Des informations supplémentaires pour les premiers pas avec i-doit sont également décrites dans la base de connaissances sous [Fondamentaux](../../basics/index.md).
 
-## Dépannage {/examples}
+## Dépannage 
 
 !!! warning "Connexion refusée"
 

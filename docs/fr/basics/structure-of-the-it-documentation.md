@@ -2,7 +2,6 @@
 
 Le sujet de cet article est la façon dont i-doit structure la [documentation informatique](../glossary.md). Ici, nous nous concentrons particulièrement sur le vocabulaire utilisé dans i-doit, sur la manière dont ces termes sont liés les uns aux autres et sur la façon dont cela est représenté dans l'interface Web.
 
-{/*examples*/}
 
 ## Navigation
 
@@ -14,7 +13,7 @@ Pour une meilleure orientation, vous pouvez jeter un œil à la navigation par f
 
 [![Navigation](../assets/images/en/basics/structure-of-the-it-documentation/2-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/2-sotitd.png)
 
-## Groupes, Types et Catégorisations {/%%/}
+## Groupes, Types et Catégorisations 
 
 Les groupes de types d'objets comprennent des types d'objets qui instancient des objets, qui à leur tour héritent de catégories, qui incluent ensuite des attributs. Vous avez compris ? Reprenons depuis le début :
 
@@ -30,7 +29,7 @@ Dans notre exemple, nous examinons de plus près le groupe de type d'objet **Mat
 
 [![Groupe de Type d'Objet](../assets/images/en/basics/structure-of-the-it-documentation/5-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/5-sotitd.png)
 
-### Type d'objet {/ * exemples * /}
+### Type d'objet 
 
 Nous désignons la combinaison de tous les objets du même type comme type d'objet. Les exemples sont **Routeur**, **Serveur** ou **Applications**. Habituellement, cette combinaison est également appelée une "Classe". En ITIL©, le terme "Type CI" est utilisé.
 
@@ -86,35 +85,35 @@ La catégorie **Général** fait partie de ces catégories qui sont des composan
 
 [![Général](../assets/images/en/basics/structure-of-the-it-documentation/13-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/13-sotitd.png)
 
-#### Catégorie Globale {/ * exemples * /}
+#### Catégorie Globale 
 
 Une catégorie globale peut généralement être attribuée à tous les types d'objets, de sorte que leurs attributs soient disponibles pour les objets correspondants. Exemple : catégorie **Modèle**.
 
-#### Catégorie Spécifique {/ * exemples * /}
+#### Catégorie Spécifique 
 
 Une catégorie spécifique est différente d'une catégorie globale par son focus très spécifique, qui convient uniquement à un ou quelques types d'objets. Un exemple est la catégorie **Rack**, qui est attribuée au type d'objet du même nom et offre à l'utilisateur une vue en rack.
 
-#### Catégorie à Valeur Unique {/ * exemples * /}
+#### Catégorie à Valeur Unique 
 
 Chaque attribut d'une catégorie à valeur unique peut être documenté une seule fois par objet. Un exemple est la catégorie **Comptabilité** : Les informations du numéro d'inventaire, de l'unité de coût, etc., ne sont nécessaires qu'une seule fois. Le contrepartie de cela est la catégorie à valeurs multiples.
 
-#### Catégorie à Valeurs Multiples {/ * exemples * /}
+#### Catégorie à Valeurs Multiples 
 
 Si les attributs d'une catégorie peuvent être documentés plus d'une fois par objet, alors cela sera appelé une catégorie à valeurs multiples ou une catégorie de liste. Un exemple est la catégorie **CPU**. S'il s'agit d'un système multi-socket, chaque CPU peut être documenté séparément avec la fréquence, le nombre de cœurs, etc. La contrepartie de cela est la catégorie à valeur unique.
 
-#### Catégorie personnalisée {/ * exemples * /}
+#### Catégorie personnalisée 
 
 Une catégorie qui a été créée et configurée avec un ou plusieurs champs d'attributs par un utilisateur est marquée comme [personnalisée](./custom-categories.md) dans i-doit.
 
-#### Catégorie miroir {/ * exemples * /}
+#### Catégorie miroir 
 
 Si deux objets ou plus sont en relation les uns avec les autres, cela est documenté dans la catégorie définie à cet effet. Par exemple, vous pouvez stocker n'importe quel nombre de personnes, groupes de personnes, etc. en tant que contact pour un objet dans la catégorie **Affectation de contact**. Il existe une autre catégorie appelée **Objets assignés** afin que vous puissiez également voir pour les personnes et les groupes de personnes à quels objets ils sont assignés en tant que contacts. Comme les mêmes informations sont disponibles dans cette catégorie supplémentaire, mais ne sont enregistrées qu'une seule fois et simplement affichées dans un contexte différent, cela s'appelle une catégorie miroir.
 
-#### Catégorie de vue {/ * exemples * /}
+#### Catégorie de vue 
 
 Dans certaines catégories, il n'est pas possible de stocker des attributs par objet. Ces catégories servent à l'évaluation des données qui sont stockées d'une autre manière. Les données traitées ne peuvent pas être modifiées. Un exemple est la catégorie **Vitalité de l'objet**, une évaluation des catégories **CPU**, **Mémoire**, **Port** et **Affectation de logiciel**.
 
-### Attribut {/ * exemples * /}
+### Attribut 
 
 Un attribut est une valeur documentée appartenant à un objet. Les attributs du même type sont combinés dans i-doit. Exemple : L'attribut **Numéro de série** dans la catégorie **Modèle**.
 
@@ -124,7 +123,7 @@ Les attributs importants de différentes catégories sont combinés en une vue, 
 
 [![Accès](../assets/images/en/basics/structure-of-the-it-documentation/15-sotitd.png)](../assets/images/en/basics/structure-of-the-it-documentation/15-sotitd.png)
 
-### Champ d'Attribut {/ * exemples * /}
+### Champ d'Attribut 
 
 Les attributs des objets sont enregistrés et édités via des champs de formulaire dans l'interface web de i-doit. C'est pourquoi ces champs sont appelés champs d'attribut. Ils peuvent varier : il existe des champs de texte à une ligne et à plusieurs lignes, des champs de date, des éditeurs HTML, des navigateurs d'objets, des [champs de dialogue-plus](./dialog-admin.md) et bien d'autres.
 
@@ -132,4 +131,4 @@ Les attributs des objets sont enregistrés et édités via des champs de formula
 
 ## Relations
 
-Les composants IT ne peuvent pas seulement être documentés individuellement, mais ils peuvent également être mis en relation les uns avec les autres. Il existe déjà divers types de relations préconfigurés qui peuvent être ajustés et modifiés. Chaque relation est un objet distinct (sans nécessité de licence) qui est automatiquement créé, édité ou supprimé. { /*examples*/ }
+Les composants IT ne peuvent pas seulement être documentés individuellement, mais ils peuvent également être mis en relation les uns avec les autres. Il existe déjà divers types de relations préconfigurés qui peuvent être ajustés et modifiés. Chaque relation est un objet distinct (sans nécessité de licence) qui est automatiquement créé, édité ou supprimé. 

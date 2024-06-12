@@ -20,7 +20,7 @@ Si vous avez des questions concernant l'installation ou la configuration de JDis
     > Elle utilise HTTPS par défaut (alors qu'avec le service Web, HTTP était utilisé par défaut)<br>
     > C'est une API moderne et puissante qui vous permet d'automatiser tout dans JDisc.<br>
 
-## Configuration {/examples}
+## Configuration 
 
 La configuration de l'interface se trouve sous **Administration → Importation et interfaces → JDISC → Configuration JDisc**. Vous pouvez définir un nombre quelconque d'instances de découverte JDisc. Cela permet des scénarios d'inventaire complexes avec des réseaux séparés.
 
@@ -29,7 +29,7 @@ La configuration de l'interface se trouve sous **Administration → Importation 
 !!! info "Archiver les objets obsolètes"
     Pour archiver les objets qui n'ont pas été vus par JDisc depuis un certain nombre de jours, la valeur seuil et l'unité de la valeur seuil doivent être définies dans **Administration → Gestion du [Nom du locataire] → Paramètres pour [Nom du locataire] → JDisc**.
 
-### Configuration JDisc {/examples}
+### Configuration JDisc 
 
 | Paramètre                                | Commentaire                                                                                                                                                                         |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -75,4 +75,4 @@
 [Bogue][Import CSV]                                  La description de la station de travail assignée n'est pas importée via CSV<br> 
 [Bogue][Recherche]                                   Le paramètre de locataire pour la recherche ne fonctionne pas
 
-Please provide the Markdown content you would like me to translate into French.
+

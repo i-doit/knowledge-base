@@ -6,4 +6,4 @@
 
 Actuellement, il existe plusieurs modules de ((OTRS)) Community Edition et vous pouvez trouver une liste à jour sur le site web de i-doit [i-doit website](https://www.i-doit.com/en/i-doit/add-ons/). 
 
-{ /*examples*/ }
+

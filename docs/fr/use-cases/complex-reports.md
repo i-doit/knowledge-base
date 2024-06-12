@@ -1,4 +1,4 @@
-# Rapports Complexes {/examples}
+# Rapports Complexes 
 
 Vous pouvez générer de nombreux rapports utiles avec le générateur de requêtes du gestionnaire de rapports. Pour des cas plus complexes, vous pouvez également modifier le SQL derrière celui-ci et ainsi utiliser des fonctions MySQL ou MariaDB, par exemple, pour interroger des intervalles de temps.
 

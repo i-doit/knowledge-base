@@ -1,4 +1,4 @@
-# Soutenir les audits avec VIVA {/examples}
+# Soutenir les audits avec VIVA 
 
 Les audits sont les rapports nécessaires pour une éventuelle certification selon l'ISO 27001 basée sur l'IT-Grundschutz. Les audits peuvent être créés et gérés avec l'extension VIVA. En plus des audits, VIVA propose d'autres rapports qui servent à l'assurance qualité continue.
 
@@ -36,32 +36,28 @@ Document de référence A.2 Identification des exigences de protection
 ----------------------------------------------------------------
 
 Ce document de référence ne contient que des données qui ont déjà été documentées au sein du réseau d'information sélectionné. Voir Définition des catégories d'exigences de protection et Définition des exigences de protection.
-{/*examples*/}
 
 Document de référence A.3 Modélisation du réseau informatique
 -------------------------------------------------
 
 Ce document de référence ne contient que des données qui ont déjà été documentées au sein de la fédération d'informations sélectionnée. Voir Modélisation des réseaux d'information.
-{/*examples*/}
 
 Document de référence A.4 Résultat du contrôle de sécurité de base
 ---------------------------------------------------------
 
 Ce document de référence ne contient que des données qui ont déjà été documentées au sein du réseau d'information sélectionné. Voir Mise en œuvre de mesures.
-{/*examples*/}
 
 Document de référence A.5 Analyse de sécurité supplémentaire
 ----------------------------------------------------
 
 Ce document de référence ne contient que des données qui ont déjà été documentées au sein du réseau d'information sélectionné. Voir Réalisation d'une Analyse de Sécurité Supplémentaire.
-{/*examples*/}
 
 Document de référence A.6 Analyse des risques
 ------------------------------------
 
-Ce document de référence compile des informations pour couvrir une analyse des risques selon la norme BSI 100-3. Voir l'analyse des risques selon l'IT-Grundschutz. {/ * exemples *}
+Ce document de référence compile des informations pour couvrir une analyse des risques selon la norme BSI 100-3. Voir l'analyse des risques selon l'IT-Grundschutz. 
 
 Document de référence A.7 Plan de traitement des risques
 ------------------------------------------
 
-Ce document de référence n'est actuellement pas généré. {/ * exemples *}
+Ce document de référence n'est actuellement pas généré. 

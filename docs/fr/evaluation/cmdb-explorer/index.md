@@ -51,7 +51,6 @@ L'objet qui est affiché de manière centralisée et autour duquel les relations
 
 L'orientation de l'affichage peut être ajustée en utilisant le bouton **Changer l'orientation**. Ici, il est possible de laisser la représentation être affichée soit de haut en bas, soit de gauche à droite. La présentation de gauche à droite est recommandée pour les visualisations étendues. De plus, il est possible de choisir la forme d'affichage. Via le bouton **Changer la forme d'affichage**, vous pouvez passer de la **Vue arborescente** à une **Vue en réseau**. Dans la vue arborescente, il peut arriver que les objets soient affichés plusieurs fois s'ils sont liés à d'autres objets à différents endroits. Un objet est affiché exactement une fois dans la vue en réseau et toutes les relations sont générées à partir de sa tuile. Pour des représentations de relations plus complexes, la vue arborescente est recommandée. 
 
-{/*examples*/}
 
 Le zoom sur l'écran peut être ajusté en utilisant les boutons **Zoom avant** et **Zoom arrière**. Le centrage avec un niveau de zoom de 100% est effectué via le bouton **Centrer et zoomer à 100%**. Alternativement, vous pouvez également utiliser la molette de la souris pour zoomer.
 

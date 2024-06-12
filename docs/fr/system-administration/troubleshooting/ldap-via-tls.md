@@ -26,7 +26,6 @@ Service de liens:
 
 [https://support.microsoft.com/en-us/help/935834/how-to-enable-ldap-signing-in-windows-server](https://support.microsoft.com/en-us/help/935834/how-to-enable-ldap-signing-in-windows-server) 
 
-{/*examples*/}
 
 [https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ldap-channel-binding-and-ldap-signing-requirements-march-2020/ba-p/921536#](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ldap-channel-binding-and-ldap-signing-requirements-march-2020/ba-p/921536#)
 

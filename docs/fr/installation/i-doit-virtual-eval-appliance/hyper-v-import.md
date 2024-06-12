@@ -64,4 +64,3 @@ La machine virtuelle devrait maintenant démarrer correctement et vous devriez p
 | Connexion i-doit | admin | admin |
 | Connexion Centre d'administration | admin | idoit |
 
-{/*examples*/}

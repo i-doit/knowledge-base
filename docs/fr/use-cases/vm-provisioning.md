@@ -73,7 +73,6 @@ tar vxzf VMware-vSphere-Perl-SDK-6.0.0-3561779.x86_64.tar.gz
 mv vmware-vsphere-cli-distrib/ /usr/src/
 cd /usr/src/
 ```
-{/*examples*/}
 
 À ce stade, il est conseillé de mettre à jour le système - si ce n'est pas déjà fait. Nous installons également des packages supplémentaires via apt et cpan:
 
@@ -82,14 +81,12 @@ apt-get update && apt-get upgrade && apt-get dist-upgrade && apt-get autoremove 
 apt-get install git build-essential libssl-dev perl-doc libxml-libxml-perl libxml2-dev uuid-dev libuuid-perl libcrypt-ssleay-perl libapache2-mod-perl2 libsoap-lite-perl
 cpan install CPAN ExtUtils::MakeMaker Module::Build Net::FTP LWP Crypt::OpenSSL::RSA Class::MethodMaker Socket6 IO::Socket::INET6 Convert::ASN1 Crypt::X509 UUID::Random Archive::Zip Path::Class Try::Tiny Data::Dump Net::INET6Glue LWP::Protocol::https
 ```
-{/*examples*/}
 
 Étant donné que le SDK ne prend pas en charge officiellement Debian GNU/Linux, nous devrons tromper le SDK en lui faisant croire qu'il s'agit d'un système d'exploitation différent:
 
 ```bash
 echo ubuntu > /etc/tmp-release
 ```
-{/*examples*/}
 
 Le SDK a besoin des variables d'environnement http_proxy et ftp_proxy:
 
@@ -97,21 +94,18 @@ Le SDK a besoin des variables d'environnement http_proxy et ftp_proxy:
 export http_proxy=
 export ftp_proxy=
 ```
-{/*examples*/}
 
 Maintenant, nous installons le SDK en utilisant le script d'installation fourni:
 
 ```bash
 ./vmware-install.pl
 ```
-{/*examples*/}
 
 Le script doit une fois de plus avoir l'EULA de VMware confirmé avec yes. Si des modules Perl supplémentaires doivent être installés, vous devez également confirmer cela avec yes. Une fois l'installation terminée avec succès, le texte suivant apparaît dans la sortie:
 
 ```bash
 Cet installateur a installé avec succès à la fois vSphere CLI et le SDK vSphere pour Perl.
 ```
-{/*examples*/}
 
 À ce stade, l'installation du SDK est terminée. Nous avons suivi ces [directives](http://www.sysadminslife.com/linux/vmware-vsphere-sdk-for-perl-api-unter-debian-squeeze-installieren/). Merci beaucoup! Et maintenant, nous passons à l'étape suivante.
 
@@ -119,7 +113,6 @@ Cet installateur a installé avec succès à la fois vSphere CLI et le SDK vSphe
 
 Une partie de la communication entre i-doit et VMware se fait via l'[API d'i-doit](../i-doit-pro-add-ons/api/index.md). L'API doit être activée et vous devez connaître la clé API. Pour utiliser l'API confortablement, nous utilisons le [client de référence pour PHP](https://bitbucket.org/dstuecken/i-doit-api-clients/wiki/PHP):
 ```
-{/*examples*/}
 
 ```php
     cd /usr/local/share/

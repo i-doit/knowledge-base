@@ -1,4 +1,4 @@
-# Vue de Rack {/%%/}
+# Vue de Rack 
 
 i-doit fournit une visualisation pour les racks 19" avec lesquels vous pouvez afficher tous les composants intégrés clairement. Les statistiques sur les unités de hauteur libres, les besoins énergétiques maximum et les ports réseau libres dans les commutateurs et les panneaux de brassage fournissent un support pour la planification de la capacité.
 

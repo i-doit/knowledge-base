@@ -24,4 +24,3 @@
 > *   Les polices sont copiées du répertoire du fournisseur vers upload/fonts.
 > *   Tous les mots de passe d'interface enregistrés (LDAP, OCS-Inventory, JDisc, etc.) dans la base de données sont rehashés. mcrypt, qui est obsolète avec PHP 7, sera remplacé par phpseclib. phpseclib vérifie si OpenSSL est disponible. Sinon, il utilise le cryptage natif. Si vous modifiez votre système après une mise à jour vers i-doit 1.9, vous devez vous assurer que la méthode de cryptage choisie est disponible.
 
-{/*examples*/}

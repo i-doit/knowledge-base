@@ -136,4 +136,3 @@
 [Bug][Outils système]                       Vérification de mod_rewrite dans l'aperçu du système incorrecte lors de l'utilisation de https  
 [Changement][Code (interne)]                Archivage des comptes par défaut  
 
-I am ready to start translating the Markdown content into French. Please paste the content you want me to translate.

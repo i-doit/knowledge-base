@@ -42,4 +42,3 @@
 > 
 > Une migration n'est pas nécessaire. Si vous souhaitez utiliser les nouvelles catégories, commencez simplement à les utiliser quand vous le souhaitez. 
 
-{/*examples*/}

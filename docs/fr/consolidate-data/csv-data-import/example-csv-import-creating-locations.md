@@ -88,7 +88,7 @@ La structure du CSV est la suivante :
 Comme nous voulons définir des dépendances qui se construisent les unes sur les autres, il est important de maintenir un ordre correspondant pour les lieux dans le fichier CSV.  
 Le lieu racine est toujours le niveau le plus bas et existe déjà. Dans ce lieu se trouvent les bâtiments individuels, dans les bâtiments les étages individuels et dans les étages les pièces respectives:
 
-  Emplacement racine → Bâtiment → Étage → Salle { /*examples*/ }
+  Emplacement racine → Bâtiment → Étage → Salle 
 
 Donc, dans le fichier CSV, les bâtiments viennent en premier, puis les étages et enfin les salles.
 

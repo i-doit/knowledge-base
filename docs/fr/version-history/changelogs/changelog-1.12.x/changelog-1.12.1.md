@@ -1,4 +1,4 @@
-# Journal des modifications 1.12.1 {/examples/}
+# Journal des modifications 1.12.1 
 
 - [Bug][CMDB] Injection SQL non authentifiée dans i-doit lors de la connexion
 - [Bug][CMDB] Via le paramètre d'URL "objectGroupId", il était possible d'injecter des injections SQL.

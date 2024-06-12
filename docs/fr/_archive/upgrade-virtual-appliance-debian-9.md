@@ -1,4 +1,4 @@
-# Mise à niveau de l'Appliance Virtuelle d'Évaluation i-doit vers Debian GNU/Linux 9 "Stretch" {#examples}
+# Mise à niveau de l'Appliance Virtuelle d'Évaluation i-doit vers Debian GNU/Linux 9 "Stretch" 
 
 En plus de la maintenance de i-doit, vous devez également tenir compte de la maintenance régulière du système d'exploitation. Cet article explique la mise à niveau de [Debian GNU/Linux] de la version 8 "Jessie" à la version 9 "Stretch". Il suffit de suivre quelques étapes et l'[Appliance Virtuelle d'Évaluation i-doit](sera à jour.
 
@@ -9,7 +9,7 @@ En plus de la maintenance de i-doit, vous devez également tenir compte de la ma
     1.  La documentation informatique contient des [données sensibles qui doivent être protégées]. Cela ne peut être garanti que lorsque tous les composants du système sont à jour.
     2.  Le passage de PHP 5.6 à 7.0 entraîne une amélioration mesurable des performances.
 
-## Exigences {#examples}
+## Exigences 
 
 Avant de procéder à la mise à niveau, vous devez tenir compte des éléments suivants :
 
@@ -18,21 +18,20 @@ Avant de procéder à la mise à niveau, vous devez tenir compte des éléments 
 -   Il doit y avoir suffisamment de mémoire disponible. La mise à jour nécessite environ 1 Go de mémoire libre.
 
 
-{ /* exemples */ }
 
-## Conseils {/%%/}
+## Conseils 
 
 Vous devez également prêter attention aux problèmes suivants avant une mise à jour :
 
--   Avez-vous des [==sauvegardes==] ?
+-   Avez-vous des [**sauvegardes**] ?
 -   Vous devez informer les utilisateurs d'i-doit avant l'arrêt.
 -   Les automatismes, les tâches cron et l'accès externe doivent être arrêtés pendant la mise à jour.
 
-Vous pouvez lire de nombreux [==conseils supplémentaires concernant la mise à niveau du système d'exploitation==] fournis par la communauté Debian.
+Vous pouvez lire de nombreux [**conseils supplémentaires concernant la mise à niveau du système d'exploitation**] fournis par la communauté Debian.
 
-## Préparation de la mise à jour {/%%/}
+## Préparation de la mise à jour 
 
-Nous nous connectons via ==SSH== et activons l'élément ==0 Lancer Shell== dans le menu.
+Nous nous connectons via **SSH** et activons l'élément **0 Lancer Shell** dans le menu.
 
 Ensuite, nous effectuons les mises à jour :
 
@@ -49,7 +48,7 @@ Ensuite, le système doit être redémarré. En raison d'une erreur, le noyau Li
 sudo systemctl reboot
 ```
 
-Après le redémarrage, nous nous reconnectons via SSH et activons le shell dans le menu pour nous assurer que la version ==8.8== est utilisée :
+Après le redémarrage, nous nous reconnectons via SSH et activons le shell dans le menu pour nous assurer que la version **8.8** est utilisée :
 
 ```shell
 cat /etc/debian_release
@@ -64,7 +63,7 @@ sudo systemctl stop apache2.service
 
 Maintenant tout est prêt pour la mise à niveau.
 
-## Réalisation de la mise à niveau {/examples}
+## Réalisation de la mise à niveau 
 
 Maintenant les sources des paquets de distribution sont adaptées :
 
@@ -78,7 +77,7 @@ La ligne suivante est ajoutée à la fin :
 deb http://mirrors.kernel.org/debian stretch main contrib
 ```
 
-Toutes les lignes précédentes sont commentées ; un ==#== est utilisé comme préfixe pour chaque ligne.<br>
+Toutes les lignes précédentes sont commentées ; un **#** est utilisé comme préfixe pour chaque ligne.<br>
 Ensuite, toutes les sources de paquets sont mises à jour et une mise à niveau des paquets est effectuée :
 
 ```shell
@@ -88,9 +87,9 @@ sudo apt upgrade
 
 Pour la dernière commande, certaines interactions utilisateur sont requises :
 
-1. Répondez à la question ==Redémarrer les services pendant les mises à niveau des paquets sans demander ?== avec "==Oui==".
-2. Répondez à la question concernant l'écrasement du ==Fichier de configuration '/etc/issue'== avec ==N==.
-3. Répondez également à la question concernant l'écrasement du ==Fichier de configuration '/etc/issue.net'== avec ==N==.
+1. Répondez à la question **Redémarrer les services pendant les mises à niveau des paquets sans demander ?** avec "**Oui**".
+2. Répondez à la question concernant l'écrasement du **Fichier de configuration '/etc/issue'** avec **N**.
+3. Répondez également à la question concernant l'écrasement du **Fichier de configuration '/etc/issue.net'** avec **N**.
 
 Maintenant, la mise à niveau effective des paquets vers de nouvelles versions est effectuée :
 

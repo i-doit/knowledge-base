@@ -1,7 +1,7 @@
 # i-doit via XAMPP
 
 !!! note ""
-    This article has been verified for i-doit version ==31==
+    This article has been verified for i-doit version **31**
 
 !!! attention "Firewall"
 
@@ -13,19 +13,19 @@ First, download the XAMPP package from [https://www.apachefriends.org/index.html
 
 Here, the [System Requirements](../../system-requirements.md) of the respective i-doit version must be considered. Therefore, in this example, the installation package → `xampp-windows-x64-7.4.20-0-VC15-installer.exe`
 
-At least the ==Apache==, ==MySQL==, and ==PHP== components must be installed.
+At least the **Apache**, **MySQL**, and **PHP** components must be installed.
 
 [![Select components](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/1-mws.png)
 
-The default folder is left as is → ==C:\xampp==
+The default folder is left as is → **C:\xampp**
 
 [![Select installation folder](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/2-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/2-mws.png)
 
-Then, we select the language, I leave it in ==English==.
+Then, we select the language, I leave it in **English**.
 
 [![Select language](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/3-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/3-mws.png)
 
-Les prochains boutons ==Suivant== devraient être explicites.
+Les prochains boutons **Suivant** devraient être explicites.
 
 [![Terminer](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/4-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/4-mws.png)
 
@@ -130,7 +130,7 @@ innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
 
-## Étape 3 : Démarrer Apache et MySQL {/examples}
+## Étape 3 : Démarrer Apache et MySQL 
 
 Nous cliquons sur le [![Démarrer](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/8-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/8-mws.png) bouton pour Apache et MySQL. Si nécessaire, une fenêtre contextuelle de pare-feu apparaîtra.
 Maintenant, les deux modules devraient être mis en surbrillance en vert.
@@ -138,7 +138,7 @@ Maintenant, les deux modules devraient être mis en surbrillance en vert.
 
 [![Modules démarrés](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/9-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/9-mws.png)
 
-### Mot de passe pour le root MySQL {/examples}
+### Mot de passe pour le root MySQL 
 
 Maintenant, nous devons définir un mot de passe pour l'utilisateur root MySQL.
 Pour cela, nous cliquons sur le bouton [![shell](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/10-mws.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/xampp/10-mws.png).
@@ -157,25 +157,25 @@ Maintenant, nous changeons le mot de passe, '_thisistotallysecure!!11_' doit êt
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'thisistotallysecure!!11';
 ```
 
-## Étape 4 : Télécharger et décompresser i-doit {/examples}
+## Étape 4 : Télécharger et décompresser i-doit 
 
-### Télécharger et décompresser i-doit {/examples}
+### Télécharger et décompresser i-doit 
 
 Maintenant, nous téléchargeons i-doit dans la dernière version depuis le portail client.
 Nous déballons le `idoit-xx.x.zip` sous `C:\\xampp\\htdocs` et renommons le dossier en idoit.
 
-## Étape 5 : Vérifier l'installation {/examples}
+## Étape 5 : Vérifier l'installation 
 
 Avec la configuration précédente, nous avons préparé le serveur web. Maintenant, lorsque nous appelons l'IP du système ou localhost dans un navigateur, nous devrions obtenir la page de bienvenue d'Apache affichée.
-Sous ==PHPInfo== dans le menu, vous pouvez vérifier si les valeurs définies dans php.ini ont été correctement prises en compte.
+Sous **PHPInfo** dans le menu, vous pouvez vérifier si les valeurs définies dans php.ini ont été correctement prises en compte.
 
-## Next Step {/examples/}
+## Next Step 
 
 Maintenant, le système d'exploitation est prêt et i-doit peut être installé.
 
-Passez à [==Configuration== …](../setup.md)
+Passez à [**Configuration** …](../setup.md)
 
-### FAQ {/examples/}
+### FAQ 
 
 Avec XAMPP `xampp-windows-x64-8.0.23-0-VS16-installer`, une nouvelle version de l'extension PHP gd a été ajoutée.
 Par conséquent, le `php.ini` ne doit pas être remplacé par celui de la version PHP 7.4.

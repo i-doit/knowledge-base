@@ -1,4 +1,4 @@
-# Notes de version {/ * exemples * /}
+# Notes de version 
 
 Quels changements ont été publiés avec quelles versions?
 
@@ -25,5 +25,3 @@ Quels changements ont été publiés avec quelles versions?
 - [Notes de version 1.9](release-notes-1.9.md)
 - [Notes de version 1.8](release-notes-1.8.md)
 - [Notes de version 1.7](release-notes-1.7.md)
-
-I am ready to start the translation once you provide me with the Markdown content.

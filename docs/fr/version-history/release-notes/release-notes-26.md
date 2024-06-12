@@ -1,4 +1,4 @@
-# Notes de version 26 {/ * exemples * /}
+# Notes de version 26 
 
 Nous sommes heureux d'annoncer i-doit pro 26. Cette version marquera le début de l'introduction des nouvelles versions de PHP en prenant en charge officiellement PHP 8.1. Ne vous inquiétez pas si votre système d'exploitation vous oblige à utiliser PHP 7.4. Cette version restera compatible avec i-doit jusqu'à la fin de 2023, vous avez donc un peu plus de temps pour préparer votre système.
 

@@ -1,4 +1,4 @@
-# Plan d'étage {/examples}
+# Plan d'étage 
 
 Via l'**extension** **Plan d'étage** [add-on](./index.md), il est possible de vous attribuer des plans graphiques à tous les [objets](../basics/structure-of-the-it-documentation.md) qui sont des objets de localisation, de les assortir de mesures et de positionner les objets attribués localement dans ce plan.
 
@@ -21,7 +21,6 @@ Créer un plan d'étage
 
 Les objets pour lesquels vous souhaitez créer un plan d'étage peuvent être sélectionnés via la loupe [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/4-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/4-fp.png) en haut de l'écran. Tous les [types d'objets](../basics/structure-of-the-it-documentation.md) pouvant servir de lieux sont disponibles à cet effet. Si des plans d'étage ont déjà été créés, ceux-ci peuvent être sélectionnés et ouverts via le tableau multicolore [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/5-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/5-fp.png) à côté de la loupe. Des graphiques tels que la disposition d'une pièce peuvent être placés en arrière-plan via le bouton [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/6-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/6-fp.png). Une échelle peut être ajoutée à ce graphique en utilisant le bouton [![icône](../assets/images/en/i-doit-pro-add-ons/floorplan/7-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/7-fp.png). La mesure de la pièce aide à positionner les objets plus tard afin qu'ils puissent être représentés à l'échelle et selon leur facteur de forme défini. 
 
-{/*examples*/}
 
 
 Les formats graphiques suivants sont pris en charge pour le plan d'étage : bmp, png, jpg, jpeg, gif. La taille maximale du fichier est limitée à 5 Mo.
@@ -83,7 +82,7 @@ Base floorplan:
 
 Imaginons que nous visualisons actuellement le "plan d'étage principal". Nous devrions pouvoir voir le plan d'étage imbriqué "A" et à l'intérieur de celui-ci, nous devrions pouvoir voir le plan d'étage "B" (comprenant "obj E" et "obj F"). Mais le "plan d'étage C" ne sera pas affiché en tant que plan d'étage - à la place, il ressemblera à un objet de base, car nous limitons les plans d'étage imbriqués à trois niveaux (pour éviter les problèmes de récursion, de mémoire et de performances).
 
-### Comment ça fonctionne {/examples}
+### Comment ça fonctionne 
 
 Si vous consultez le "plan d'étage principal", vous pouvez déplacer "le plan d'étage A" et "le plan d'étage B" comme les autres objets ("obj A" et "obj B") - vous ne pouvez pas modifier quoi que ce soit à l'intérieur de celui-ci.
 
@@ -151,7 +150,7 @@ Ces informations sur l'objet sont ensuite affichées dans la vue de l'objet sous
 Export
 ------
 
-Les plans d'étage peuvent être exportés sous forme de fichier SVG ou PNG en utilisant le bouton [![Export](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.png). {/ * exemples *}
+Les plans d'étage peuvent être exportés sous forme de fichier SVG ou PNG en utilisant le bouton [![Export](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.png)](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.png). 
 
 Versions
 --------
@@ -183,4 +182,4 @@ Versions
 | 1.0.2 |     | [Changement] Compatibilité avec i-doit 1.8<br>[Bogue] Le lien d'objet est mal formé lorsque l'URL Wiki est configurée<br>[Bogue] Le droit de lecture est suffisant pour apporter des modifications dans le plan d'étage<br> |
 | 1.0.1 | 2016-03-23 | Version initiale |
 
-I am ready to translate the Markdown content into French. Please paste the content you would like me to translate.
+

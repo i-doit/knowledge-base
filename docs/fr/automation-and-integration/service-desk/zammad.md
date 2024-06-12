@@ -17,4 +17,3 @@ Pour tester la connexion du serveur i-doit au serveur Zammad, un curl peut être
 
 Veuillez étendre le curl pour pouvoir vous authentifier.
 
-{/*examples*/}

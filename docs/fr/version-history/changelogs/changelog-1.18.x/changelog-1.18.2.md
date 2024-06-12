@@ -1,4 +1,4 @@
-# Journal des modifications 1.18.2 {/ * exemples *}
+# Journal des modifications 1.18.2 
 
 [Tâche][Code (interne)]                           Changer toutes les tables de base de données en "Format de ligne : Dynamique" lors des installations fraîches  
 [Amélioration][Importation CSV]                   Le navigateur d'objets d'une catégorie personnalisée devrait pouvoir utiliser une affectation spéciale via le modèle > numéro de série  

@@ -1,4 +1,4 @@
-# LOGINventory {/%%/}
+# LOGINventory 
 
 !!! danger ""
     
@@ -55,5 +55,4 @@ Ici, vous pouvez définir le comportement par défaut de l'importation pour le L
 
 **Importation :** Les bases de données qui ont été ajoutées dans la configuration peuvent être sélectionnées sur la page d'importation. Il est également possible de modifier le type d'objet par défaut pour l'importation en cours si nécessaire.
 
-{/*examples*/}
 

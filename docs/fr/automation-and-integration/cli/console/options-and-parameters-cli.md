@@ -322,7 +322,7 @@ Il supprime à la fois les attributs `username` et `password` de la catégorie "
 sudo -u www-data php console.php clear-credentials --user admin --password admin --object ObjectID
 ```
 
-### achèvement {/ * exemples * /}
+### achèvement 
 
 La commande d'achèvement génère le script d'achèvement de shell requis pour utiliser l'auto-complétion du shell (actuellement seule l'achèvement bash est pris en charge).
 
@@ -344,7 +344,7 @@ La commande d'achèvement génère le script d'achèvement de shell requis pour 
 sudo -u www-data php console.php achèvement
 ```
 
-### contrats-obsolètes {/ * exemples * /}
+### contrats-obsolètes 
 
 Met à jour le statut des contrats obsolètes
 
@@ -390,7 +390,7 @@ Permet de créer des révisions ou d'exporter un ou plusieurs documents
 | -n                        | --no-interaction              | Désactive toutes les questions d'interaction de la console i-doit                           |
 | -v / -vv / -vvv           | --verbose                     | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-{ /* examples */ }
+
 
 **Exemple d'utilisation**
 
@@ -423,7 +423,7 @@ sudo -u www-data php console.php documents --user admin --password admin
 sudo -u www-data php console.php extend-contracts --user admin --password admin
 ```
 
-### aide {/examples/}
+### aide 
 
 Utilisé en conjonction avec une autre commande pour afficher son utilisation, ses arguments et ses options
 
@@ -446,7 +446,7 @@ Utilisé en conjonction avec une autre commande pour afficher son utilisation, s
 sudo -u www-data php console.php aide --format=txt <commande>
 ```
 
-### importation-csv {/examples/}
+### importation-csv 
 
 Effectue l'importation d'un fichier CSV avec les paramètres d'importation souhaités
 
@@ -468,7 +468,7 @@ Effectue l'importation d'un fichier CSV avec les paramètres d'importation souha
 | -n                        | --sans-interaction                | Désactive toutes les questions d'interaction de la console i-doit                            |
 | -v / -vv / -vvv           | --verbeux                         | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-### import-csvprofiles {#examples}
+### import-csvprofiles 
 
 Renvoie une liste des profils d'importation pour l'importation CSV
 
@@ -585,7 +585,6 @@ Importe le contenu d'un fichier texte du serveur Syslog dans le journal i-doit.
 | -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                                     |
 | -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-{/*examples*/}
 
 ### import-xml
 
@@ -608,7 +607,6 @@ Effectue l'importation d'un fichier XML dans i-doit
 | -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
 | -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-{/*examples*/}
 
 ### Installer
 
@@ -999,7 +997,7 @@ Importe les changements d'état de surveillance depuis les NDOUtils dans le jour
 | -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
 | -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-### Liste des notifications {/ * exemples *}
+### Liste des notifications 
 
 Liste tous les types de notifications et les notifications pour une utilisation ultérieure
 
@@ -1269,7 +1267,7 @@ Convertit toutes les tables non INNODB en INNODB
 | -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
 | -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-### system-convert-non-utf8-tables {#examples}
+### system-convert-non-utf8-tables 
 
 Convertit tous les types de données non-UTF-8 en UTF-8.
 
@@ -1319,7 +1317,7 @@ Exécute la correction de l'emplacement à partir de l'interface graphique dans 
 sudo -u www-data php console.php system-location-fix --user admin --password admin --tenantId 1 --config /chemin/vers/fichier/config
 ```
 
-### contrat-de-maintenance-système {/examples}
+### contrat-de-maintenance-système 
 
 Envoie une notification par e-mail pour les contrats de maintenance.
 
@@ -1417,7 +1415,7 @@ Actualise toutes les configurations de liste disponibles (types d'objets et cat�
 | -n                          | --no-interaction           | Désactive toutes les questions d'interaction de la console i-doit                                                                      |
 | -v / -vv / -vvv             | --verbose                  | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage)                                        |
 
-{ /* examples */ }
+
 
 ### system-set-settings
 
@@ -1583,7 +1581,7 @@ Désinstalle l'installation i-doit utilisée
 | -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
 | -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-### mise à jour {/examples}
+### mise à jour 
 
 Met à jour l'installation d'i-doit
 

@@ -19,7 +19,6 @@ Pour chaque système d'exploitation, il peut y avoir plusieurs chemins de mise �
 | SUSE Linux Enterprise Server (SLES) | 12  | MariaDB 10.0 | MariaDB 10.0 |
 | Windows Server | 2008/2012 | en fonction de la version de XAMPP | MariaDB 10.0 | 
 
-{/*examples*/}
 
 !!! attention "Avant d'apporter des modifications au système, il est absolument vital de [sécuriser les données](../maintenance-and-operation/backup-and-recovery/index.md). Comme la durée du processus de mise à niveau varie en fonction du système d'exploitation, tous les utilisateurs d'_i-doit_ doivent être informés à l'avance."
 
@@ -76,13 +75,13 @@ La version 7.1 de [Red Hat Enterprise Linux (RHEL)](../installation/manual-insta
 
 Tout d'abord, la version actuelle est désinstallée :
 
-```markdown
+```
     sudo yum remove mariadb-server mariadb-libs
 ```
 
 Après cela, le fichier /etc/yum.repos.d/MariaDB.repo doit être créé et édité :
 
-```markdown
+```
     # Liste de dépôt RedHat MariaDB 10.0
     # [http://mariadb.org/mariadb/repositories/](http://mariadb.org/mariadb/repositories/)
     [mariadb]
@@ -94,7 +93,7 @@ Après cela, le fichier /etc/yum.repos.d/MariaDB.repo doit être créé et édit
 
 Enfin, les packages sont installés, le serveur MariaDB est démarré et les bases de données sont mises à jour :
 
-```markdown
+```
     sudo yum install MariaDB-server MariaDB-client
     sudo /etc/init.d/mysql start
     sudo mysql_upgrade -uroot -p
@@ -102,7 +101,7 @@ Enfin, les packages sont installés, le serveur MariaDB est démarré et les bas
 
 Lors de la désinstallation des packages mentionnés précédemment, l'extension PHP associée peut également être désinstallée. Pour l'installer à nouveau, nous avons besoin des commandes suivantes :
 
-```markdown
+```
     sudo yum install php-mysqlnd.x86_64
     sudo service httpd restart
 ```
@@ -180,4 +179,3 @@ La raison de cette erreur réside dans les processus Apache encore en cours d'ex
 sudo service apache2 restart
 ```
 
-{/*examples*/}

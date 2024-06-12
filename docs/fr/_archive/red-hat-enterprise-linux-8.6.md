@@ -117,7 +117,7 @@ sudo systemctl restart firewalld.service
 
 Les paquets installés pour le serveur web Apache, PHP et MariaDB sont déjà livrés avec des fichiers de configuration. Il est recommandé de stocker différents paramètres dans des fichiers séparés au lieu d'adapter les fichiers de configuration existants. Chaque fois que vous mettez à jour le paquet, les différents paramètres seront modifiés ou écrasés. Les paramètres de la configuration standard seront complétés ou écrasés par ceux définis par l'utilisateur.
 
-### PHP { /*examples*/ }
+### PHP 
 
 Tout d'abord, un nouveau fichier est créé et rempli avec les paramètres nécessaires :
 
@@ -163,7 +163,7 @@ Ensuite, le serveur Web Apache est redémarré :
 sudo systemctl restart httpd.service
 ```
 
-### Serveur web Apache { /*examples*/ }
+### Serveur web Apache 
 
 Le vhost par défaut est conservé et ajouté. Un nouveau fichier est créé et édité :
 

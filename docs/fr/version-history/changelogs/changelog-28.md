@@ -1,4 +1,4 @@
-# Journal des modifications 28 {/examples/}
+# Journal des modifications 28 
 
 [Tâche][Dossiers de catégorie]         Simplifier la formulation de déplacer le navigateur dans l'arborescence des catégories<br>
 [Tâche][Dossiers de catégorie]         Simplifier la formulation de la boîte de dialogue de réorganisation dans la fonctionnalité de l'arborescence des catégories<br>
@@ -112,5 +112,3 @@
 [Bogue][Configuration du type d'objet] Les cartes SIM assignées ne peuvent pas être affichées sur la page d'aperçu<br>
 [Bogue][Installation]              Le bouton de test mod_rewrite ne fonctionne pas<br>
 [Bogue][Centre d'administration]               Un locataire peut être sur-licencié lorsqu'il est désactivé<br>
-
-I am ready to start translating the Markdown content into French. Please go ahead and paste the content you would like me to translate.

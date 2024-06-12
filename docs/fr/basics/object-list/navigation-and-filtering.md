@@ -1,4 +1,4 @@
-# Navigation et Filtrage {/ * exemples * /}
+# Navigation et Filtrage 
 
 Il n'est pas difficile de naviguer à travers une [liste d'objets](./index.md) et de rechercher des [objets spécifiques](../structure-of-the-it-documentation.md). Et pourtant, il vaut la peine d'y regarder de plus près.
 

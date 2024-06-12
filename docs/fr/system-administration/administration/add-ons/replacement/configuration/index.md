@@ -9,4 +9,4 @@
 | Échanger également le SYS-ID ? | Oui ou Non |
 | Conserver les données des catégories d'objets échangés ? | Oui ou Non |
 
-Pour plus d'informations -> [EN SAVOIR PLUS](../../../../../i-doit-pro-add-ons/replacement.md) { /*examples*/ }
+Pour plus d'informations -> [EN SAVOIR PLUS](../../../../../i-doit-pro-add-ons/replacement.md) 

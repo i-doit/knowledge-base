@@ -8,4 +8,3 @@ L'utilisateur a la possibilité d'adapter le format des données.
 | Format numérique | Anglais/Allemand |
 | Format monétaire | `EUR;€` ou `USD;$` ou `GBP;£` ou `CHF;Sfr.` |
 
-{/*examples*/}

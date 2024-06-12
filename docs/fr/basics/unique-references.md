@@ -1,4 +1,4 @@
-# Références Uniques {/examples}
+# Références Uniques 
 
 Les références sont importantes pour prévenir un manque de clarté et d'ambiguïté au sein de la [documentation informatique](../glossary.md). Si vous souhaitez référencer des [objets](structure-of-the-it-documentation.md) pour des systèmes tiers, par exemple, divers [attributs](../glossary.md) peuvent être utilisés pour cette tâche.
 
@@ -6,7 +6,7 @@ Les références sont importantes pour prévenir un manque de clarté et d'ambig
 
     Afin de détecter les données déjà existantes, il existe des stratégies pertinentes pour les [importations de données](../consolidate-data/index.md). Pour la plupart, elles se réfèrent aux attributs mentionnés ci-dessous. Les détails peuvent être trouvés dans les articles correspondants.
 
-## Identifiant d'Objet {/examples}
+## Identifiant d'Objet 
 
 Chaque objet dans i-doit reçoit un identifiant (ID). Cet identifiant est toujours unique pour chaque locataire i-doit. L'ID est un nombre positif supérieur à 0 et peut avoir une longueur allant jusqu'à 11 chiffres. Il est automatiquement attribué par MySQL/MariaDB en incrémentant le nombre de 1. Un changement rétroactif de l'ID par l'utilisateur n'est pas possible afin de prévenir les incohérences. Lorsque vous [supprimez des objets (**Purge**)](./life-and-documentation-cycle.md), les IDs sont à nouveau disponibles mais ils ne sont pas réutilisables.
 
@@ -39,7 +39,7 @@ Par défaut, le SYSID ne peut pas être modifié rétroactivement par l'utilisat
 
 Il est absolument essentiel que chaque objet reçoive un titre. Ce titre est documenté en tant qu'attribut dans la catégorie **Général**. De manière synonyme, cet attribut est également appelé **Nom** ou **Lien d'objet**. 
 
-{ /*examples*/ }
+
 
 [![Titre de l'objet](../assets/images/en/basics/unique-references/4-ur.png)](../assets/images/en/basics/unique-references/4-ur.png)
 
@@ -86,13 +86,13 @@ Dans la plupart des cas, l'inventaire des biens est réalisé dans l'ensemble de
 
     Les numéros d'inventaire et les codes QR offrent une combinaison idéale et peuvent être associés à des étiquettes. Les codes QR sont générés pour chaque objet par i-doit. De telles étiquettes peuvent être imprimées à l'aide de l'imprimante de codes QR i-doit, par exemple.
 
-## Identifiant des systèmes tiers {/ * exemples * /}
+## Identifiant des systèmes tiers 
 
 Les données provenant de systèmes tiers, par exemple de la zone d'inventaire/découverte, peuvent être [importées](../consolidate-data/index.md) dans i-doit. Dans la plupart des cas, ces systèmes possèdent également des identifiants uniques ou quelque chose de similaire. Lorsque ces identifiants sont importés, la catégorie **Source de données** peut être utilisée. De cette manière, plusieurs systèmes utilisés peuvent être synchronisés afin de référencer de manière univoque des objets sur tous les systèmes.
 
 [![Identifiant des systèmes tiers](../assets/images/en/basics/unique-references/8-ur.png)](../assets/images/en/basics/unique-references/8-ur.png)
 
-## Constantes {/ * exemples * /}
+## Constantes 
 
 En interne, i-doit utilise des constantes qui référencent de manière univoque toutes sortes de données. Une constante se compose de lettres majuscules (A-Z) et de tirets bas (\_). De telles constantes sont utilisées pour certains objets qui existent déjà dans l'installation par défaut de i-doit. Par exemple, l'objet **Personne** "admin" a la constante C_OBJ_PERSON_ADMIN.
 

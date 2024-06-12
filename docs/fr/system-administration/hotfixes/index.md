@@ -54,7 +54,7 @@ Ne téléchargez pas à nouveau le package de mise à jour, cela écraserait le 
 
 ### Erreur HTTP 500 lors de la création d'un document ou d'une révision (ID-10831)
 
-```markdown
+
 ??? info "Message d'erreur trouvé dans les journaux du serveur Web"
     ```log
     Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: isys_cmdb_dao_category_property::getConstantFromRange(): Argument #1 ($constant) must be of type string, null given

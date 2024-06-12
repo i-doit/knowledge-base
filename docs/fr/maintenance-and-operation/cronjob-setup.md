@@ -162,9 +162,7 @@ IDOIT_PASSWORD="admin"
 TENANT_ID="1"
 ```
 
-```markdown
-##--------------------------------------------------------------------------------------------------{/*examples*/}
-    
+##--------------------------------------------------------------------------------------------------    
     function execute {
         local prefix=""
         local suffix="--user $IDOIT_USERNAME --password $IDOIT_PASSWORD --tenantId $TENANT_ID"
@@ -266,20 +264,17 @@ Automatisation des Appels de Tâches
 
 Nous recommandons d'exécuter les tâches mentionnées ci-dessus au moins une fois par jour. Vous devriez vous assurer qu'aucune autre interaction n'est effectuée dans i-doit pendant l'exécution - ni via l'interface web ni à travers des scripts supplémentaires ou par des applications externes via l'API. Par conséquent, les tâches sont généralement effectuées pendant la nuit.
 
-{ /* examples */ }
+
 
 ### GNU/Linux  
 
-Sous Linux, vous pouvez exécuter des commandes automatisées régulièrement. Vous pourriez utiliser [cron, anacron, crontab](https://de.wikipedia.org/wiki/Cron) ou [systemd.timer](https://www.freedesktop.org/software/systemd/man/systemd.timer.html).{/*examples*/}
-
+Sous Linux, vous pouvez exécuter des commandes automatisées régulièrement. Vous pourriez utiliser [cron, anacron, crontab](https://de.wikipedia.org/wiki/Cron) ou [systemd.timer](https://www.freedesktop.org/software/systemd/man/systemd.timer.html).
 ### Windows
 
-Les scripts mentionnés dans cet article ne fonctionnent pas sous Windows sans autre préparation et devraient être remplacés par des scripts équivalents. Les tâches Windows sont adaptées à l'automatisation.{/*examples*/}
-
+Les scripts mentionnés dans cet article ne fonctionnent pas sous Windows sans autre préparation et devraient être remplacés par des scripts équivalents. Les tâches Windows sont adaptées à l'automatisation.
 ### Attraper les problèmes
 
-Afin d'intercepter d'éventuelles erreurs et de les signaler à l'administrateur système responsable, vous pouvez configurer le système d'exploitation de manière à ce que des e-mails soient envoyés en conséquence. Un simple expéditeur de courrier est **[**sSMTP**](https://wiki.debian.org/sSMTP)**. Cependant, le script **idoit-jobs** crée beaucoup de sortie dans le terminal. Vous pouvez appliquer l'outil **chronic** pour que seules les erreurs soient signalées. Cet outil peut être installé rétroactivement sur de nombreux systèmes d'exploitation, souvent il est contenu dans le paquet de distribution [**moreutils**](https://joeyh.name/code/moreutils/).{/*examples*/}
-
+Afin d'intercepter d'éventuelles erreurs et de les signaler à l'administrateur système responsable, vous pouvez configurer le système d'exploitation de manière à ce que des e-mails soient envoyés en conséquence. Un simple expéditeur de courrier est **[**sSMTP**](https://wiki.debian.org/sSMTP)**. Cependant, le script **idoit-jobs** crée beaucoup de sortie dans le terminal. Vous pouvez appliquer l'outil **chronic** pour que seules les erreurs soient signalées. Cet outil peut être installé rétroactivement sur de nombreux systèmes d'exploitation, souvent il est contenu dans le paquet de distribution [**moreutils**](https://joeyh.name/code/moreutils/).
 !!! Attention sous SLES
 
     Le paquet **moreutils** et donc l'outil **chronic** ne font pas partie de [SLES](../installation/manual-installation/suse-linux-enterprise-server.md). Par conséquent, vous devez télécharger **chronic** manuellement depuis le site web :

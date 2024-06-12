@@ -1,4 +1,4 @@
-# Dialog-Admin {/%%examples%%}
+# Dialog-Admin
 
 Le [champ d'attribut](./attribute-fields.md) **Dialog+**, qui est un champ déroulant où vous pouvez modifier les valeurs, est souvent utilisé dans i-doit. Ces champs d'attribut peuvent être trouvés dans de nombreuses [catégories](../glossary.md) de la [documentation IT](../glossary.md) ou dans d'autres fonctionnalités fournies par i-doit. L'administration centrale des valeurs est effectuée via le **Dialog-Admin** dans l'**Administration**.
 
@@ -27,7 +27,6 @@ Cliquez sur le bouton **Nouveau** au-dessus de l'aperçu lorsque vous souhaitez 
 - **Statut**:<br>
     Chaque valeur peut avoir un statut. Vous devriez sélectionner le statut Normal (2) pour l'appliquer dans la documentation. 
 
-{/*examples*/}
 
 
 Vous pouvez enregistrer la valeur avec le bouton **Enregistrer**.
@@ -49,4 +48,4 @@ Le changement et la suppression des valeurs ont un effet immédiat sur la docume
 
 ## Définir les autorisations
 
-Pour chaque attribut **Dialog+**, vous pouvez attribuer des droits à chaque personne ou groupe de personnes. Par exemple, il est possible et souvent également conseillé que seuls certains groupes de personnes puissent créer, modifier ou supprimer des valeurs, tandis que d'autres groupes de personnes ne sont autorisés qu'à les utiliser. { /*examples*/ }
+Pour chaque attribut **Dialog+**, vous pouvez attribuer des droits à chaque personne ou groupe de personnes. Par exemple, il est possible et souvent également conseillé que seuls certains groupes de personnes puissent créer, modifier ou supprimer des valeurs, tandis que d'autres groupes de personnes ne sont autorisés qu'à les utiliser. 

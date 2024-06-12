@@ -1,4 +1,4 @@
-# Journal des modifications 22 {/examples/}
+# Journal des modifications 22 
 
 [Amélioration][Refonte de l'application] Amélioration du menu principal pour basculer automatiquement sur les petits écrans  
 [Amélioration][JDisc] Importer les cartes sonores depuis JDisc  

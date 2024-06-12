@@ -13,7 +13,7 @@ Outre le texte brut, la recherche peut être restreinte à des [attributs d'obje
 -   Si la recherche commence par un dièse suivi de l'[identifiant d'objet](../glossary.md) (#123), la page d'aperçu de l'objet associé à cet identifiant sera ouverte en appuyant sur la touche Entrée.
 -   Si la recherche commence par le mot-clé titre suivi de deux-points et du titre de l'objet, l'objet correspondant sera affiché (titre:acme).
 
-## Les Résultats de la Recherche {/%%/}
+## Les Résultats de la Recherche 
 
 Si les suggestions de recherche mentionnées ci-dessus ne conduisent pas au résultat souhaité, appuyer sur retour affichera une page avec les résultats de la recherche. À côté de chaque ensemble de données trouvé, la source est également indiquée, par exemple, l'[attribut](../glossary.md) d'une catégorie d'un [type d'objet](../glossary.md) dans le module [CMDB](../glossary.md).
 

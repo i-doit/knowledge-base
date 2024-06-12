@@ -21,7 +21,7 @@ Vous ne devriez pas utiliser i-doit pendant le processus de sauvegarde afin de n
 
 est exécutée. Lorsque la sauvegarde/récupération est terminée, la commande  
 
-```markdown
+```
     sudo service apache2 start
 ```
 
@@ -85,5 +85,4 @@ Une fois l'instantané pris, le SGBD est redémarré :
 
 Il est certainement bien compris mais toujours important de mentionner : **Les sauvegardes ne doivent jamais rester sur le système qui est sécurisé.**
 
-{/*examples*/}
 

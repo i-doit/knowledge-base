@@ -16,7 +16,7 @@ Certains éléments doivent être pris en compte avant la mise à niveau :
 -   Il est supposé qu'aucun changement (sauf les mises à jour) n'a été apporté au système. Les changements ultérieurs ne relèvent pas de notre responsabilité.
 -   Une mémoire suffisamment libre est disponible. Entre-temps, la mise à jour nécessite environ 1 Go de mémoire. 
 
-{ /*examples*/ }
+
 
 !!! note "À noter lors de l'utilisation de VirtualBox"
 

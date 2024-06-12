@@ -20,4 +20,4 @@ Le [savoir-faire](../introduction/index.md) est là et i-doit est [installé](..
 *   [Références Uniques](./unique-references.md)
 *   [Interface Web](./web-gui.md)
 
-Please provide the Markdown content you would like me to translate into French.
+

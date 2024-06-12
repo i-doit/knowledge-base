@@ -51,7 +51,7 @@ description
     }
     ```
 
-=== "Corps de réponse catgID" {/examples}
+=== "Corps de réponse catgID" 
 
 ```json
 ({
@@ -560,7 +560,7 @@ description
     }
 ```
 
-=== "Corps de requête catsID" {/examples}
+=== "Corps de requête catsID" 
 
 ```json
 ({
@@ -575,7 +575,7 @@ description
     }
 ```
 
-=== "Corps de réponse catsID" {/examples}
+=== "Corps de réponse catsID" 
 
 ```json
 ({
@@ -722,7 +722,7 @@ description
     }
 ```
 
-=== "Corps de requête custimID" {/examples}
+=== "Corps de requête custimID" 
 
 ```json
 ({
@@ -737,7 +737,7 @@ description
     }
 ```
 
-=== "Corps de réponse customID" {/examples}
+=== "Corps de réponse customID" 
 
 ```json
 ({
@@ -1632,7 +1632,7 @@ description
     }
 ```
 
-=== "Corps de requête catégorie" {/examples}
+=== "Corps de requête catégorie" 
 
 ```json
 ({
@@ -1647,7 +1647,7 @@ description
     }
 ```
 
-=== "Corps de réponse catégorie" {/examples}
+=== "Corps de réponse catégorie" 
 
 ```json
 ({

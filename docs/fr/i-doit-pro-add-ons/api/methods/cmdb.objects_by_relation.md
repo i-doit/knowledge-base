@@ -53,7 +53,7 @@ Les types de relations par défaut sont les suivants :
 | Partenaire de réplication  | 24  | C__RELATION_TYPE__REPLICATION_PARTNER    |
 | Composant SOA              | 25  | C__RELATION_TYPE__SOA_COMPONENTS         |
 
-### Paramètres de réponse {/examples}
+### Paramètres de réponse 
 
 Clé JSON **résultat** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
@@ -62,7 +62,7 @@ Clé JSON **résultat** contient un tableau d'objets JSON. Chaque objet contient
 | **Placeholder** | Placeholder           | Placeholder |
 | **Placeholder** | Placeholder           | Placeholder |
 
-### Exemple {/examples}
+### Exemple 
 
 === "Corps de la requête"
 

@@ -15,7 +15,7 @@ Le bouton "Nouveau" ouvre une autre vue. Ici, un titre pour le document créé p
 
 De plus, il est possible d'écrire un commentaire sur l'objet.
 
-{ /* examples */ }
+
 
 [![object](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/2-dc.png)](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/2-dc.png)
 
@@ -40,7 +40,7 @@ Créer des documents dans la catégorie "Documents"
 Si un document a été créé pour un objet dans i-doit, il peut être trouvé dans la catégorie "Documents" de l'objet. Il est également possible de télécharger le document dans les formats appropriés. Dans la vue détaillée du document, il est également possible de consulter les révisions et de créer de nouvelles révisions.  
 Le bouton "Nouveau" peut être utilisé pour créer des documents supplémentaires pour l'objet. Ici, l'objet est déjà présélectionné et un titre peut être attribué ainsi qu'un modèle lié. 
 
-{ /*examples*/ }
+
 
 [![Créer des documents dans la catégorie "Documents"](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/5-dc.png)](../../assets/images/en/i-doit-pro-add-ons/documents/document-creation/5-dc.png)
 

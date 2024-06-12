@@ -1,4 +1,4 @@
-# Visibilité des attributs {/examples}
+# Visibilité des attributs 
 
 La visibilité des [attributs](./attribute-fields.md) peut être configurée dans les [paramètres de la CMDB](../system-administration/administration/data-view/hide-attributes.md) à partir de la [version 1.19 d'i-doit](../version-history/release-notes/release-notes-1.19.md).<br>
 Il est possible de masquer certains attributs dans les [catégories](./categories-and-attributes.md) et/ou sur la [page d'aperçu des types d'objets](./object-types.md).
@@ -7,7 +7,7 @@ La visibilité configurée s'applique à tous les utilisateurs.
 
 [![Visibilité des attributs](../assets/images/en/basics/attribute-visibility/1-av.png)](../assets/images/en/basics/attribute-visibility/1-av.png)
 
-## Définir des droits {/examples}
+## Définir des droits 
 
 [Les droits](../efficient-documentation/rights-management/index.md) pour visualiser et modifier la visibilité des attributs peuvent être attribués par utilisateur (groupe). Par exemple, il est possible et souvent conseillé que seuls certains groupes d'utilisateurs puissent masquer des attributs.
 
@@ -45,4 +45,4 @@ La dernière colonne permet de masquer uniquement les attributs sélectionnés d
 
 [![Visibilité des attributs](../assets/images/en/basics/attribute-visibility/5-av.png)](../assets/images/en/basics/attribute-visibility/5-av.png)
 
-Please provide the Markdown content you would like me to translate into French.
+

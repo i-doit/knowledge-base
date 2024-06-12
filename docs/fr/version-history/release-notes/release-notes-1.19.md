@@ -33,7 +33,6 @@ Aux côtés de i-doit pro 1.19, nous publierons également de nouvelles versions
 - [Nagios](../../automation-and-integration/network-monitoring/nagios.md) **1.1**
 - [Packager](../../i-doit-pro-add-ons/add-on-packager.md) **1.2**
 
-{/*examples*/}
 
 Notes de mise à jour importantes
 ----------------------

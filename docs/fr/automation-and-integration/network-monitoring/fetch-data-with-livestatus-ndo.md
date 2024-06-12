@@ -1,8 +1,8 @@
-# Récupérer des données avec Livestatus / NDOUtils {/examples}
+# Récupérer des données avec Livestatus / NDOUtils 
 
 Pour une comparaison cible/réel entre la documentation cible dans i-doit et l'état réel fourni par un logiciel de [Surveillance Réseau](./index.md), une interface appropriée peut être très utile. Avec cette interface, vous pouvez afficher les données de la Surveillance Réseau dans i-doit et les évaluer.
 
-## Interfaces {/examples}
+## Interfaces 
 
 Les interfaces
 
@@ -14,7 +14,7 @@ pour [Nagios](https://www.nagios.org/), [Check\_MK](http://mathias-kettner.com/c
 !!! success "Recommandation"
     MK Livestatus offre une connexion très performante à la Surveillance Réseau. Il est donc préférable à NDOUtils.
 
-## Configuration de base {/examples}
+## Configuration de base 
 
 Un NDOUtils ou MK Livestatus en cours d'exécution est requis sur le système de surveillance. L'accès à l'une des interfaces doit être configuré dans i-doit à **Administration → Interfaces et interfaces → Surveillance → Livestatus/NDO**.
 
@@ -51,4 +51,3 @@ Une colonne pour le NDO ou Livestatus peut être également choisie dans la [con
 
 Les notifications d'état provenant de la surveillance peuvent être transférées au journal i-doit via le [contrôleur](../cli/index.md). Le gestionnaire correspondant, **check_mk** ou **nagios**, doit être ouvert et tous les changements d'état survenus depuis la dernière exécution sont automatiquement transférés au journal.
 
-{/*examples*/}

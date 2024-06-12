@@ -79,4 +79,4 @@ Revenir à _i-doit open_?
 
 Il n'est pas prévu de revenir à une version antérieure d'_i-doit_. Cela vaut également pour les rétrogradations de _i-doit pro_ vers la variante _i-doit open_.
 
-Please provide the Markdown content you would like me to translate into French.
+

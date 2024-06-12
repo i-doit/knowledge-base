@@ -1,4 +1,4 @@
-# Journal des modifications 1.12.4 {/ * exemples *}
+# Journal des modifications 1.12.4 
 
 - [Bug][Gestionnaire de rapports] Les rapports du générateur de requêtes ne peuvent pas être modifiés/sauvegardés avec certaines versions de PHP  
 - [Bug][Mise à jour] Le bouton de mise à jour sans fonction  

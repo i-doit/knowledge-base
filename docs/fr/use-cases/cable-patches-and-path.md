@@ -124,7 +124,7 @@ Dans la même lignée que le type d'objet **Chemin de câbles** (voir ci-dessus)
 
 [![cable-patches-tray2](../assets/images/en/use-cases/cable-patches-and-paths/11-cpap.png)](../assets/images/en/use-cases/cable-patches-and-paths/11-cpap.png)
 
-### Câblage Simple {/examples}
+### Câblage Simple 
 
 Le dossier de la catégorie **Câblage** contient déjà plusieurs options de visualisation. De plus, il existe une autre vue sous **Extras → CMDB → Câblage → Câblages simples** avec des fonctions supplémentaires. Après avoir sélectionné un objet câblé, tous les itinéraires de câbles entrants et sortants sont affichés. De plus, les noms des connexions et des câbles peuvent être affichés ou masqués. En utilisant le filtrage, vous pouvez afficher uniquement les itinéraires sélectionnés.
 
@@ -134,7 +134,7 @@ Les itinéraires de câbles peuvent être exportés au format CSV.
 
 [![câblage-simple](../assets/images/en/use-cases/cable-patches-and-paths/12-cpap.png)](../assets/images/en/use-cases/cable-patches-and-paths/12-cpap.png)
 
-Navigateur de Connexions {/examples}
+Navigateur de Connexions 
 
 Cette fonction permet une connexion rapide et plus facile de deux objets. Cet élément se trouve dans la catégorie **Câblage → Connecteurs** via le bouton **Navigateur de connexions**. Une condition préalable est l'existence de connexions déjà documentées des deux objets.
 

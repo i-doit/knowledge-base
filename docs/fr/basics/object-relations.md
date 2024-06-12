@@ -1,8 +1,8 @@
-# Relations d'Objets {/examples}
+# Relations d'Objets 
 
 [Les objets](structure-of-the-it-documentation.md) n'existent généralement pas séparément dans i-doit mais sont en relation les uns avec les autres. Les serveurs sont contenus dans des racks, les administrateurs maintiennent les serveurs, un système d'exploitation avec des logiciels s'exécute sur un serveur... Dans cet article, nous allons élaborer sur les concepts de base des relations d'objets.
 
-## Types de Relations {/examples}
+## Types de Relations 
 
 Les objets peuvent être dans différents types de relations. Pour clarifier, chaque relation reçoit un type. De nombreux types de relations prédéfinis sont déjà fournis par i-doit dans l'installation par défaut. Une liste de tous ces types peut être trouvée à **Administration → Contenu prédéfini → Types de relation d'objet**.
 
@@ -90,17 +90,17 @@ Comme il est déjà évident, une relation d'objet se compose d'un objet maître
 
 La direction de la relation (quel objet est le maître et lequel est l'esclave) a des conséquences pour l'[explorateur CMDB](../evaluation/cmdb-explorer/index.md). Les relations d'objet sont affichées de manière récursive soit vers le haut, soit vers le bas dans la vue arborescente. Les objets maîtres se trouvent en dessous des objets esclaves dans le [profil standard](../evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer.md).
 
-## Exigences de licence pour les objets {/ * exemples * /}
+## Exigences de licence pour les objets 
 
 Les objets de relation ne nécessitent pas de [licence](../maintenance-and-operation/activate-license.md).
 
-## Catégorie des relations {/ * exemples * /}
+## Catégorie des relations 
 
 Les relations avec d'autres objets sont regroupées dans la catégorie **Relations** [category](structure-of-the-it-documentation.md) par objet. Cette catégorie est attribuée à chaque type d'objet de manière fixe et peut être ouverte via l'icône des flèches.
 
 [![Catégorie des relations](../assets/images/en/basics/object-relations/5-or.png)](../assets/images/en/basics/object-relations/5-or.png)
 
-## Relations implicites versus explicites {/ * exemples * /}
+## Relations implicites versus explicites 
 
 Les relations n'ont pas seulement différents types (voir ci-dessus) mais elles sont également créées de manière implicite ou explicite. Les relations implicites proviennent des catégories. Si la catégorie **Emplacement** est modifiée, par exemple, et qu'un objet qui se trouve plus haut dans la hiérarchie est sélectionné dans l'attribut **Emplacement**, alors la relation implicite de type **Emplacement** sera créée automatiquement en arrière-plan. Cette relation implicite est également affichée dans la catégorie **Relations** à **Extras → CMDB → Relations → Emplacements**.
 
@@ -112,13 +112,13 @@ Lors de la création d'un nouveau type de relation explicite, le type et les des
 
 ### Implicite ou explicite?
 
-Alors, que vaut-il mieux : devriez-vous utiliser des relations implicites ou explicites ? La réponse est : les relations implicites. Les catégories et les attributs sont des éléments centraux pour structurer la documentation informatique. Les utilisateurs documentent dans les catégories et c'est également là que les utilisateurs cherchent des informations. Il est donc préférable de documenter les relations non spécifiques du type **Dépendance** de manière explicite dans une catégorie où les relations implicites et explicites sont variées. Les deux possibilités peuvent être évaluées, mais seules les relations implicites sont transparentes. {/ * exemples *}
+Alors, que vaut-il mieux : devriez-vous utiliser des relations implicites ou explicites ? La réponse est : les relations implicites. Les catégories et les attributs sont des éléments centraux pour structurer la documentation informatique. Les utilisateurs documentent dans les catégories et c'est également là que les utilisateurs cherchent des informations. Il est donc préférable de documenter les relations non spécifiques du type **Dépendance** de manière explicite dans une catégorie où les relations implicites et explicites sont variées. Les deux possibilités peuvent être évaluées, mais seules les relations implicites sont transparentes. 
 
 ## Pondération
 
 Chaque relation reçoit une pondération, comme mentionné ci-dessus. La pondération est spécifiée en tant qu'attribut dans l'objet relation. Des valeurs entre **1** et **10** sont possibles en tant que pondération. Elles expriment à quel point l'objet esclave dépend de l'objet maître. **1** signifie **très important**, tandis que **10** signifie **peu important**. **5** est le juste milieu, il représente **important** et correspond à la valeur par défaut.
 
-Exemple : Une alimentation reçoit son énergie d'un UPS, donc la pondération pourrait être **1 (très important)** car l'alimentation ne pourrait pas fonctionner sans un UPS utilisable. Cependant, si un nœud échoue au sein du cluster web, d'autres nœuds reprennent son travail. Cela signifie que la dépendance aux services de niveau supérieur n'est pas aussi forte et pourrait se situer entre **5 (important)** et **10 (peu important)**. {/ * exemples *}
+Exemple : Une alimentation reçoit son énergie d'un UPS, donc la pondération pourrait être **1 (très important)** car l'alimentation ne pourrait pas fonctionner sans un UPS utilisable. Cependant, si un nœud échoue au sein du cluster web, d'autres nœuds reprennent son travail. Cela signifie que la dépendance aux services de niveau supérieur n'est pas aussi forte et pourrait se situer entre **5 (important)** et **10 (peu important)**. 
 
 Le module d'analyse utilise cette pondération en combinaison avec les services et la [Surveillance du Réseau](../automation-and-integration/network-monitoring/index.md) pour évaluer quels services sont affectés par des dysfonctionnements.
 
@@ -144,4 +144,3 @@ Les relations d'objets peuvent être documentées dans les [catégories personna
 
 Pour les relations implicites et explicites, la même question se pose : quel type de champ est préférable ? Ici, la réponse est également claire : la **Relation d'Objet** a des utilisations supplémentaires et devrait donc être préférée au **Navigateur d'Objets.**
 
-{/*examples*/}

@@ -1,6 +1,6 @@
 # cmdb.condition
 
-!!! example "Travail en cours. **État Alpha**" {/examples}
+!!! example "Travail en cours. **État Alpha**" 
 
 ## cmdb.condition.read
 
@@ -15,7 +15,7 @@ Donnez-moi tous les objets qui ont l'attribut Y = Z dans la catégorie X. Comme 
 | **comparison**                                            | Chaîne               | Chaîne ou Entier   | Exemple, `C__OBJTYPE__SERVER`, `123` ou `*server*`        |
 | **operator** :material-flask:{ title="Travail en cours" } | Tableau              | Oui               | `ET` ou `OU`                                             |
 
-### Paramètres de réponse {/examples}
+### Paramètres de réponse 
 
 La clé JSON **résultat** contient un tableau d'objets JSON. Chaque objet contient un résultat de recherche.
 
@@ -24,7 +24,7 @@ La clé JSON **résultat** contient un tableau d'objets JSON. Chaque objet conti
 | **clé**   | Chaîne de caractères | Attribut lié à la requête        |
 | **valeur** | Chaîne de caractères | Valeur liée à la requête         |
 
-### Exemple {/examples}
+### Exemple 
 
 === "Corps de la requête"
 

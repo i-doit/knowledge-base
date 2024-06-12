@@ -1,4 +1,4 @@
-# Notes de version 1.8 {/ * exemples *}
+# Notes de version 1.8 
 
 > Exigences système
 > -------------------

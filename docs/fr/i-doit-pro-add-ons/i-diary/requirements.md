@@ -7,4 +7,3 @@ Les exigences suivantes sont nécessaires avant d'installer ou d'utiliser i-diar
 *   Windows 7 ou 10
 *   Version du framework .Net 4.6.2 ou supérieure
 
-{/*examples*/}

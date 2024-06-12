@@ -17,7 +17,7 @@ Attribution des Droits
 
 Vous pouvez définir des [autorisations pour les personnes et les groupes de personnes](../efficient-documentation/rights-management/index.md) via **Administration → Système d'autorisation → Droits → Analyse**. 
 
-{ /* examples */ }
+
 
 | Condition | Description |
 | --- | --- |
@@ -116,4 +116,3 @@ Releases
 | 1.0.1 | 2014-09-23 | [Bug] Changer le poids d'une relation n'a aucun impact sur la gravité de l'échec<br>[Bug] Les connexions réseau de catégorie montrent une qualité des données de 0% à tout moment<br>[Bug] La baie de catégorie montre une qualité des données de 0% à tout moment |
 | 1.0 | 2014-08-20 | Version initiale |
 
-I am ready to start the translation once you provide me with the Markdown content.

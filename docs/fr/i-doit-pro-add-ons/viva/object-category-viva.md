@@ -13,4 +13,3 @@ Si un objet est assigné à plusieurs associations d'informations, cela est éga
 
 Il n'est pas nécessaire d'assigner la catégorie aux types d'objets. Elle est automatiquement disponible pour tous les types d'objets. La catégorie peut être trouvée au-dessus de l'arborescence des catégories de chaque objet à côté d'autres catégories telles que l'Explorateur CMDB ou le Journal. 
 
-{/*examples*/}

@@ -59,7 +59,7 @@ Renouveler le Cache de Validation
 
 Il est également possible de renouveler le cache de validation dans la zone supérieure de la configuration. Lors de la création d'une nouvelle configuration, le cache sera généralement effacé automatiquement. Il peut arriver dans de rares cas que le système n'effectue pas cette tâche. Si vous constatez que votre configuration de validation n'a pas d'effet dans une catégorie, ou qu'une validation supprimée semble toujours être active, effacez le cache afin que le système reconnaisse les paramètres modifiés. 
 
-{ /* examples */ }
+
 
 [![Renouveler le cache de validation](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/5-vamv.png)](../assets/images/en/efficient-documentation/validation-and-mandatory-fields/5-vamv.png)
 

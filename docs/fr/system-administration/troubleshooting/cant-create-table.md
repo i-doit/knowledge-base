@@ -1,4 +1,4 @@
-# Impossible de créer la table `idoit_data`.`table_name` (errno: 140 "Mauvaises options de création") {/examples}
+# Impossible de créer la table `idoit_data`.`table_name` (errno: 140 "Mauvaises options de création") 
 
 Lors de la restauration d'un dump SQL, le message d'erreur suivant apparaît :
 
@@ -27,11 +27,11 @@ La Solution:
 Modifier le "ROW\_FORMAT=FIXED"
 
 ```sql
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED;
+  ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED;
 ```
 
 en "ROW\_FORMAT=DYNAMIC"
 
 ```sql
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
+  ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 ```

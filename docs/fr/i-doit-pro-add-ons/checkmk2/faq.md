@@ -1,4 +1,4 @@
-# checkmk 2: Questions fréquemment posées (FAQ) {/examples}
+# checkmk 2: Questions fréquemment posées (FAQ) 
 
 Nous avons recueilli certaines des questions les plus posées sur idoitcmk.
 

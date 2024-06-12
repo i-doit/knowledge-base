@@ -1,4 +1,4 @@
-# Câblage {/examples}
+# Câblage 
 
 L'extension Câblage vous offre un affichage détaillé du câblage. Que vous souhaitiez suivre un itinéraire de câble ou imprimer des travaux de raccordement.
 
@@ -41,5 +41,3 @@ Versions
 | 1.0.4 | 2019-05-20 | [Bug] Tri incorrect du câblage<br>[Bug] Affichage incorrect de la vitrification dans IE11<br> |
 | 1.0.3 | 2018-12-18 | [Bug] Une erreur empêche la création de documents PDF lors de l'utilisation de SSL<br>[Bug] Les images ne s'affichent pas<br> |
 | 1.0.2 | 2017-12-18 | [Amélioration] Vue d'impression du câblage<br>[Amélioration] Ajouter le navigateur de câblage en tant que fonction<br>[Amélioration] Le changement des types de connecteurs sera désormais documenté<br>[Amélioration] Afficher l'objet à exporter<br>[Bug] L'exportation PDF ne fonctionne pas lorsqu'un autre objet que l'objet racine est sélectionné<br> |
-
-I'm ready to start translating the Markdown content into French. Please paste the content here for me to begin the translation.

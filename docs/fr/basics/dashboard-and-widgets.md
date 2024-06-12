@@ -1,4 +1,4 @@
-# Tableau de bord et Widgets {/examples}
+# Tableau de bord et Widgets 
 
 Pour obtenir les informations les plus importantes dès la connexion à i-doit, vous pouvez personnaliser votre tableau de bord avec des widgets utiles. Chaque utilisateur dans i-doit a son propre tableau de bord et peut personnaliser sa propre vue des données. Si vous avez configuré le tableau de bord "ultime", vous pouvez même le définir comme tableau de bord par défaut ou le transférer à des utilisateurs spécifiques.
 
@@ -78,7 +78,7 @@ Les objets modifiés en dernier par l'utilisateur connecté sont affichés dans 
 
 Ce widget nécessite une connexion à [Nagios](../automation-and-integration/network-monitoring/nagios.md) ou [Checkmk](../i-doit-pro-add-ons/checkmk.md) et affiche une vue des hôtes vulnérables. Via le crayon, vous pouvez sélectionner l'hôte à afficher.
 
-### Notes {/examples}
+### Notes 
 
 Vous pouvez mettre toutes vos notes textuelles sur votre tableau de bord en utilisant le widget de notes.
 
@@ -92,7 +92,7 @@ En utilisant le symbole de crayon, vous pouvez définir le titre, l'arrière-pla
 
 [![Notes](../assets/images/en/basics/dashboard-and-widgets/16-daw.png)](../assets/images/en/basics/dashboard-and-widgets/16-daw.png)
 
-### Informations sur l'objet {/examples}
+### Informations sur l'objet 
 
 Le widget affiche un ensemble standard d'informations pour jusqu'à trois objets qui sont configurés via le crayon.
 
@@ -166,25 +166,21 @@ Le graphique statistique examine les types d'objets configurés via le crayon et
 
 ### Indices
 
-[![Indices](../assets/images/en/basics/dashboard-and-widgets/31-daw.png)](../assets/images/en/basics/dashboard-and-widgets/31-daw.png){/*examples*/}
-
+[![Indices](../assets/images/en/basics/dashboard-and-widgets/31-daw.png)](../assets/images/en/basics/dashboard-and-widgets/31-daw.png)
 ### Rapports VIVA
 
 Pour ces rapports, vous devez installer le module VIVA et documenter les regroupements d'informations. Un regroupement d'informations peut être choisi via le crayon dans le widget.
 
-[![Rapports VIVA](../assets/images/en/basics/dashboard-and-widgets/32-daw.png)](../assets/images/en/basics/dashboard-and-widgets/32-daw.png){/*examples*/}
-
+[![Rapports VIVA](../assets/images/en/basics/dashboard-and-widgets/32-daw.png)](../assets/images/en/basics/dashboard-and-widgets/32-daw.png)
 ### Navigateur Web
 
 Ce widget est un navigateur dans le navigateur.
 
-[![Navigateur Web](../assets/images/en/basics/dashboard-and-widgets/33-daw.png)](../assets/images/en/basics/dashboard-and-widgets/33-daw.png){/*examples*/}
-
+[![Navigateur Web](../assets/images/en/basics/dashboard-and-widgets/33-daw.png)](../assets/images/en/basics/dashboard-and-widgets/33-daw.png)
 En utilisant le crayon, vous pouvez ajouter un titre au widget et ajouter une URL qui sera ouverte lors du chargement du tableau de bord. Vous pouvez également configurer la hauteur du widget afin d'afficher correctement les sites Web plus longs.
 
-[![Navigateur Web](../assets/images/en/basics/dashboard-and-widgets/34-daw.png)](../assets/images/en/basics/dashboard-and-widgets/34-daw.png){/*examples*/}
-
-### Widget de Bienvenue {/examples}
+[![Navigateur Web](../assets/images/en/basics/dashboard-and-widgets/34-daw.png)](../assets/images/en/basics/dashboard-and-widgets/34-daw.png)
+### Widget de Bienvenue 
 
 Ce widget vous accueille en fonction de la façon dont il a été configuré via le crayon. Il fournit des informations utiles concernant la conception du tableau de bord. Ici, il est facile de voir comment les widgets seront disposés sur le tableau de bord après les avoir ajoutés.
 

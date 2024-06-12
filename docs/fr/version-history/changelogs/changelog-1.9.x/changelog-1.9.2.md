@@ -59,4 +59,4 @@
 [Bug] Édition en liste - La catégorie 'Contrats' affiche une erreur lors de l'enregistrement  
 [Bug] Importation JDisc : Les systèmes d'exploitation existants ne sont pas vérifiés et sont recréés à chaque importation  
 
-Please provide the Markdown content you would like me to translate into French.
+

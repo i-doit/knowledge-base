@@ -1,10 +1,10 @@
-# Actions dans les listes d'objets {/examples}
+# Actions dans les listes d'objets 
 
 Au-dessus de la [liste d'objets](./index.md) se trouve la barre d'actions avec laquelle vous pouvez effectuer diverses actions.
 
 [![Actions dans les listes d'objets](../../assets/images/en/basics/object-list/actions-in-object-lists/1-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/1-aiol.png)
 
-## Créer un objet {/examples}
+## Créer un objet 
 
 Plusieurs options sont disponibles pour la création d'un nouvel objet :
 
@@ -14,21 +14,21 @@ Plusieurs options sont disponibles pour la création d'un nouvel objet :
 
 [![Créer un objet](../../assets/images/en/basics/object-list/actions-in-object-lists/2-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/2-aiol.png)
 
-## Modifier un Objet {/ * exemples * /}
+## Modifier un Objet 
 
 Lorsque vous souhaitez modifier un objet, sélectionnez l'objet à modifier avec la case à cocher correspondante et cliquez sur le bouton **Modifier**. Lorsque vous sélectionnez plus d'un objet, la fonction [d'édition de liste](../../efficient-documentation/list-editing.md) est lancée.
 
 [![Modifier un Objet](../../assets/images/en/basics/object-list/actions-in-object-lists/3-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/3-aiol.png)
 
-## Dupliquer un Objet {/ * exemples * /}
+## Dupliquer un Objet 
 
 Utilisez le **bouton Dupliquer** pour [dupliquer un objet avec ses attributs](../../efficient-documentation/duplicate-objects.md).
 
-## Objets : Archiver, Marquer comme Supprimé, Restaurer ou Supprimer de Manière Irrévocable {/ * exemples * /}
+## Objets : Archiver, Marquer comme Supprimé, Restaurer ou Supprimer de Manière Irrévocable 
 
 Vous pouvez cliquer sur les boutons correspondants pour **Archiver**, **Supprimer**, **Restaurer**, **Purger** et **Purger rapidement** lorsque vous souhaitez modifier l'[état](../life-and-documentation-cycle.md) d'un ou de plusieurs objets ou même les supprimer de manière irrévocable.
 
-## Aperçu Avant Impression {/ * exemples * /}
+## Aperçu Avant Impression 
 
 Une fenêtre contextuelle affichant la liste avec une vue optimisée pour l'impression s'ouvre en activant le bouton **Aperçu Avant Impression**. La liste est complétée par des attributs qui sont affichés sur la page de résumé de l'objet correspondant.
 

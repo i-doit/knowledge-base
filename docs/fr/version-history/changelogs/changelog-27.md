@@ -91,4 +91,3 @@
 [Bogue][Relations]                                La fonction pour effacer le mot de passe des utilisateurs n'a aucun effet<br>
 [Bogue][Authentification unique (SSO)]            La langue du locataire par défaut écrase les langues des autres locataires<br>
 
-I am ready to start the translation once you provide me with the Markdown content.

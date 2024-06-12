@@ -11,7 +11,6 @@ Chaque attribut pouvant être édité est représenté par un champ de formulair
 Les attributs qui ne peuvent pas être édités n'ont pas de champ d'attribut dans la vue d'édition ou ils ont uniquement un champ avec une option en lecture seule.<br>
 Un exemple d'un attribut créé dynamiquement sans champ d'attribut est ==Nom d'hôte (FQDN)== dans la catégorie ==Adresse de l'hôte==. ==Nom d'hôte (FQDN)== est composé des attributs ==Nom de l'hôte== et ==Domaine DNS==.
 
-{/*examples*/}
 
 [![FQDN](../assets/images/en/basics/attribute-fields/2-af.png)](../assets/images/en/basics/attribute-fields/2-af.png)
 
@@ -85,7 +84,7 @@ En plus des champs d'attributs, il y a un champ déroulant avec lequel vous pouv
 
 [![Unités et Intervales](../assets/images/en/basics/attribute-fields/11-af.png)](../assets/images/en/basics/attribute-fields/11-af.png)
 
-## Coûts {/examples/}
+## Coûts 
 
 Les coûts sont documentés sous forme de nombres décimaux (ou simplifiés en nombres réels sans chiffres décimaux). Vous pouvez utiliser des points décimaux et des virgules comme caractères de séparation. De plus, le champ d'attribut indique la devise configurée. Vous pouvez [configurer la devise dans l'Administration](../system-administration/administration/user-settings/data-format.md).
 
@@ -93,7 +92,7 @@ Les coûts sont documentés sous forme de nombres décimaux (ou simplifiés en n
 
 [![Coûts](../assets/images/en/basics/attribute-fields/12-af.png)](../assets/images/en/basics/attribute-fields/12-af.png)
 
-## Liens {/examples/}
+## Liens 
 
 Certains champs de texte à une seule ligne sont destinés à saisir des URL. Une telle entrée est utilisée pour générer un lien sur lequel l'utilisateur peut cliquer pour l'ouvrir.
 
@@ -101,7 +100,7 @@ Par exemple, vous pouvez trouver ce type de champ d'attribut dans la catégorie 
 
 [![Liens](../assets/images/en/basics/attribute-fields/13-af.png)](../assets/images/en/basics/attribute-fields/13-af.png)
 
-## Relations d'objets {/examples/}
+## Relations d'objets 
 
 Pour créer une relation entre deux objets ou plus, vous pouvez utiliser le navigateur d'objets pour les cas généraux ; pour les cas spéciaux, il existe d'autres navigateurs. Le champ de texte à une seule ligne est complété par deux icônes à droite.
 

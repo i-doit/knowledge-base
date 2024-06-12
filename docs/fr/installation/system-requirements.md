@@ -1,11 +1,11 @@
-# Configuration système {/ * exemples *}
+# Configuration système 
 
 Afin de garantir le fonctionnement de toutes les fonctionnalités d'i-doit, certains prérequis doivent être respectés par le système sous-jacent.
 
 !!! info "Version actuelle"
     Les exigences ci-dessous s'appliquent à la version actuelle d'i-doit, dans ce cas **31**. Ces exigences sont ajustées pour chaque version majeure d'i-doit. Si les exigences des anciennes versions sont nécessaires, l'historique des modifications de cette page peut être utilisé.
 
-## Exigences minimales {/ * exemples *}
+## Exigences minimales 
 
 Les paramètres système suivants sont les exigences minimales pour garantir le bon fonctionnement d'i-doit avec jusqu'à environ 10 000 objets et jusqu'à 10 utilisateurs travaillant simultanément.
 
@@ -67,67 +67,67 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
 
 ## Matrice de compatibilité
 
-=== "31"
+**= "31"
 
     | **Version i-doit** | 31 |
     | --- | --- |
     | **Publication** | 2024-05 |
     | **Serveur Web Apache** | 2.4 |
-    | **PHP** | 8.0<br>==8.1== (recommandé)<br>8.2 |
+    | **PHP** | 8.0<br>**8.1** (recommandé)<br>8.2 |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** | 10.4 (obsolète)<br>10.5 (obsolète)<br>==10.6== (recommandé)<br>10.11 |
+    | **MariaDB** | 10.4 (obsolète)<br>10.5 (obsolète)<br>**10.6** (recommandé)<br>10.11 |
 
-=== "30"
+**= "30"
 
     | **Version i-doit** | 30 |
     | --- | --- |
     | **Publication** | 2024-04 |
     | **Serveur Web Apache** | 2.4 |
-    | **PHP** | 7.4 (obsolète) <br>8.0<br>==8.1== (recommandé)<br>8.2 |
+    | **PHP** | 7.4 (obsolète) <br>8.0<br>**8.1** (recommandé)<br>8.2 |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** | 10.4 (obsolète)<br>10.5 (obsolète)<br>==10.6== (recommandé)<br>{++10.11++} |
+    | **MariaDB** | 10.4 (obsolète)<br>10.5 (obsolète)<br>**10.6** (recommandé)<br>{++10.11++} |
 
-=== "29"
+**= "29"
 
     | **Version i-doit** | 29 |
     | --- | --- |
     | **Publication** | 2024-02 |
     | **Serveur Web Apache** | 2.4 |
-    | **PHP** | 7.4 (obsolète) <br>==8.0== (recommandé)<br>8.1<br>{++8.2++} |
+    | **PHP** | 7.4 (obsolète) <br>**8.0** (recommandé)<br>8.1<br>{++8.2++} |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommandé) |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>**10.6** (recommandé) |
 
-=== "28"
+**= "28"
 
     | **Version i-doit** | 28 |
     | --- | --- |
     | **Publication** | 2023-12 |
     | **Serveur Web Apache** | 2.4 |
-    | **PHP** | 7.4 (obsolète) <br>==8.0== (recommandé)<br>8.1 |
+    | **PHP** | 7.4 (obsolète) <br>**8.0** (recommandé)<br>8.1 |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommandé) |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>**10.6** (recommandé) |
 
-=== "27"
+**= "27"
 
     | **Version i-doit** | 27 |
     | --- | --- |
     | **Publication** | 2023-08 |
     | **Serveur Web Apache** | 2.4 |
-    | **PHP** | 7.4 (obsolète) <br>==8.0== (recommandé)<br>8.1 |
+    | **PHP** | 7.4 (obsolète) <br>**8.0** (recommandé)<br>8.1 |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommandé) |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>**10.6** (recommandé) |
 
-=== "26"
+**= "26"
 
     | **Version i-doit** | 26 |
     | --- | --- |
     | **Publication** | 2023-08 |
     | **Serveur Web Apache** | 2.4 |
-    | **PHP** | 7.4 <br>==8.0== (recommandé)<br>{++8.1++} |
+    | **PHP** | 7.4 <br>**8.0** (recommandé)<br>{++8.1++} |
     | **MySQL** | 5.7 <br>8.0 |
-    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommandé) |
+    | **MariaDB** |  10.2 <br>10.3  <br>10.4  <br>10.5 <br>**10.6** (recommandé) |
 
-=== "25"
+**= "25"
 
     | **Version i-doit** | 25 |
     | --- | --- |
@@ -142,7 +142,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 15 SP1<br> 15 SP 2<br> SP 3 |
     | **XAMPP pour Windows²** | 2022 |
 
-=== "24"
+**= "24"
 
     | **Version i-doit** | 24 |
     | --- | --- |
@@ -157,7 +157,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 15 SP1<br> 15 SP 2<br> SP 3 |
     | **XAMPP pour Windows²** | 2016<br> 2019 |
 
-=== "23, 22, 21, 20, 1.19"
+**= "23, 22, 21, 20, 1.19"
 
     | **Version i-doit** | 1.18 |
     | --- | --- |
@@ -172,7 +172,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 15 SP1<br> 15 SP 2 |
     | **XAMPP pour Windows²** | 2016<br> 2019 |
 
-=== "1.17"
+**= "1.17"
 
     | **Version i-doit** | 1.17 |
     | --- | --- |
@@ -187,7 +187,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 15<br> 15 SP1 |
     | **XAMPP pour Windows²** | 2016<br> 2019 |
 
-=== "1.16"
+**= "1.16"
 
     | **Version i-doit** | 1.16 |
     | --- | --- |
@@ -202,7 +202,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 15<br> 15 SP1 |
     | **XAMPP pour Windows²** | 2016<br> 2019 |
 
-=== "1.15"
+**= "1.15"
 
     | **Version i-doit** | 1.15 |
     | --- | --- |
@@ -217,7 +217,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 15<br> 15 SP1 |
     | **XAMPP pour Windows²** | 2016<br> 2019 |
 
-=== "1.14"
+**= "1.14"
 
     | **Version i-doit** | 1.14 |
     | --- | --- |
@@ -232,7 +232,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 15<br> 15 SP1 |
     | **XAMPP pour Windows²** | 2016<br> 2019 |
 
-=== "1.13"
+**= "1.13"
 
     | **Version i-doit** | 1.13 |
     | --- | --- |
@@ -247,7 +247,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 12 SP3<br> 15 |
     | **XAMPP pour Windows²** | 2008 R2<br> 2012 R2<br> 2016<br> 2019 |
 
-=== "1.12"
+**= "1.12"
 
     | **Version i-doit** | 1.12 |
     | --- | --- |
@@ -262,7 +262,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 12 SP3<br> 15 |
     | **XAMPP pour Windows²** | 2008 R2<br> 2012 R2<br> 2016<br> 2019 |
 
-=== "1.11"
+**= "1.11"
 
     | **Version i-doit** | 1.11 |
     | --- | --- |
@@ -277,7 +277,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 12 SP3 |
     | **XAMPP pour Windows²** | 2008 R2<br> 2012 R2<br> 2016 |
 
-=== "1.10"
+**= "1.10"
 
     | **Version i-doit** | 1.10 |
     | --- | --- |
@@ -292,7 +292,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 12 SP2 <br> 12 SP3 |
     | **XAMPP pour Windows²** | 2008 R2<br> 2012 R2<br> 2016 |
 
-=== "1.9"
+**= "1.9"
 
     | **Version i-doit** | 1.9 |
     | --- | --- |
@@ -307,7 +307,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 12<br> 12 SP2 |
     | **XAMPP pour Windows²** | 2008<br> 2012 |
 
-=== "1.8"
+**= "1.8"
 
     | **Version i-doit** | 1.8 |
     | --- | --- |
@@ -322,7 +322,7 @@ Un navigateur Web est nécessaire du côté client pour accéder à l'interface 
     | **SLES** | 12<br> 12 SP2 |
     | **XAMPP pour Windows²** | 2008<br> 2012 |
 
-=== "1.7"
+**= "1.7"
 
     | **Version i-doit** | 1.7 |
     | --- | --- |

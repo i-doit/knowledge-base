@@ -186,7 +186,6 @@ Catégories globales
 *   isys\_catg\_virtual\_machine\_list
 *   isys\_catg\_workflow\_list
 
-{/*examples*/}
 
 Catégories spécifiques
 
@@ -507,7 +506,6 @@ Tables Dialog-Plus
 
 *   isys\_stor\_con\_type => Stockage : type de connexion
 
-{/*examples*/}
 
 *   isys\_stor\_type => Stockage : type de périphérique
 

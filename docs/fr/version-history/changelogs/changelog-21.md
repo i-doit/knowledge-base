@@ -1,4 +1,4 @@
-# Journal des modifications 21 {/ * exemples *}
+# Journal des modifications 21 
 
 [Tâche][Centre d'administration] Remplacer l'iFrame du Centre d'administration > Onglet Support par un lien ouvert dans un nouvel onglet du navigateur  
 [Tâche][Paramètres système] Changer l'opérateur pour la version PHP recommandée dans l'aperçu du système  

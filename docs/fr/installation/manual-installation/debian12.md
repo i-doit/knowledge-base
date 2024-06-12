@@ -13,7 +13,7 @@ Dans cet article, nous expliquons en quelques étapes les paquets qui doivent ê
 
     [![Sélection de logiciels](../../assets/images/en/installation/manual-installation/debian/gui.png)](../../assets/images/en/installation/manual-installation/debian/gui.png)
 
-## Configuration requise du système {/examples}
+## Configuration requise du système 
 
 Les [exigences système](../system-requirements.md) générales s'appliquent.
 
@@ -31,7 +31,7 @@ uname -m
 
 **x86_64** signifie 64 bits, **i386** ou **i686** seulement 32 bits.
 
-## Installation des paquets {/examples}
+## Installation des paquets 
 
 Les dépôts de paquets par défaut de Debian GNU/Linux fournissent déjà les paquets nécessaires à l'installation :
 
@@ -45,7 +45,7 @@ apt update
 apt install apache2 libapache2-mod-php mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,gd,imagick,json,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
 ```
 
-## Configuration {/examples}
+## Configuration 
 
 Les paquets installés pour le serveur web Apache, PHP et MariaDB fournissent déjà des fichiers de configuration. Il est recommandé de sauvegarder les paramètres modifiés dans des fichiers séparés au lieu d'ajuster les fichiers de configuration déjà existants. Sinon, toutes les différences par rapport aux fichiers existants seraient signalées voire écrasées lors de chaque mise à jour du paquet. Les paramètres de la configuration par défaut sont complétés ou écrasés par des paramètres définis par l'utilisateur.
 
@@ -212,7 +212,7 @@ sudo systemctl restart mysql.service
     Si ce message apparaît dans le journal, commentez simplement `expire_logs_days = 10` dans le fichier `/etc/mysql/mariadb.conf.d/50-server.cnf`.
     Rapport de bug pour Debian -> <https://salsa.debian.org/mariadb-team/mariadb-server/-/merge_requests/61>
 
-## Étape suivante { /*examples*/ }
+## Étape suivante 
 
 setup.md
 Maintenant que le système d'exploitation est prêt, i-doit peut être installé.

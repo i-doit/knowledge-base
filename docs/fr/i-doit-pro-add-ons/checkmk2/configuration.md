@@ -27,7 +27,6 @@ Avec cette commande, vous pouvez même mettre à jour vos paramètres de configu
 
 Créer des fichiers de configuration manuellement
 
-{/*examples*/}
 
 Pour bien commencer, imprimez la configuration d'exemple et éditez-la localement :
 
@@ -56,7 +55,7 @@ Les paramètres de configuration sont séparés par thèmes :
 
 Les thèmes requis sont i-doit et check_mk, sinon le partage d'informations entre eux ne fonctionnera pas. Tous les autres thèmes peuvent être modifiés facultativement. 
 
-{ /* examples */ }
+
 
 Pour presque chaque paramètre, il existe une valeur par défaut prédéfinie. Vous pouvez supprimer les paramètres inchangés de vos fichiers de configuration locaux.
 
@@ -124,7 +123,7 @@ Configurer comment [envoyer des données de i-doit à checkmk](./generate-wato-c
 | push.discoverServices | Booléen | Non  | false | Rechercher des services sur les hôtes nouveaux/modifiés |
 | push.location | Booléen | Non  | true |     |
 
-#### Balisage automatique {/ * exemples * /}
+#### Balisage automatique 
 
 Exemple :
 
@@ -164,7 +163,7 @@ Essayez de faire correspondre toutes les expressions :
 - Les objets dont les noms d'hôtes (hostname) commencent par vm seront assignés à la DMZ.
 - Les objets dont les noms de domaine complets (fqdn) se terminent par test.local seront balisés comme test.
 
-### Configurer la commande pull {/examples}
+### Configurer la commande pull 
 
 Configurer comment [extraire des données de checkmk vers i-doit](./import-inventory-data-into-cmdb.md) :
 
@@ -181,7 +180,7 @@ Configurer comment [extraire des données de checkmk vers i-doit](./import-inven
 | pull.enableLivestatus | Booléen | Non  | true | Écrire la configuration de l'hôte dans la catégorie Monitoring |
 | pull.ports | Chaîne | Non  | physique | Ajouter/mettre à jour des ports réseau physiques ou logiques |
 
-#### Identifiants {/ * exemples * /}
+#### Identifiants 
 
 Dans i-doit, il existe plusieurs attributs qui conviennent en tant qu'identifiants uniques pour les associer à des hôtes dans checkmk:
 
@@ -211,7 +210,7 @@ Exemple:
         }
     }
 
-#### Attributs {/ * exemples * /}
+#### Attributs 
 
 Dans i-doit, chaque attribut d'objet est lié à une catégorie appelée catégorie. Ces catégories peuvent être modifiées:
 
@@ -230,7 +229,6 @@ Dans i-doit, chaque attribut d'objet est lié à une catégorie appelée catégo
 | Réseau > Ports logiques | C__CATG__NETWORK_LOG_PORT | vrai | Ports logiques actifs avec adresse MAC |
 | Réseau > Port | C__CATG__NETWORK_PORT | vrai | Ports physiques actifs avec adresse MAC |
 
-```markdown
 ### Types d'objet
 
 Types d'objet utilisés identifiés par leurs constantes :
