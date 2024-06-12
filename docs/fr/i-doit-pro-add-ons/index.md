@@ -1,92 +1,92 @@
-# i-doit pro Add-ons
+# Add-ons i-doit pro
 
-The [IT documentation](../basics/structure-of-the-it-documentation.md) and the [CMDB](../basics/structure-of-the-it-documentation.md) are in the foreground of i-doit. Moreover, there are extra add-ons to expand the scope of available functions of i-doit in line with your demands. In this way, the user is provided with a completely new perspective on IT documentation.
+La [documentation IT](../basics/structure-of-the-it-documentation.md) et la [CMDB](../basics/structure-of-the-it-documentation.md) sont au premier plan d'i-doit. De plus, il existe des modules complémentaires supplémentaires pour étendre la portée des fonctions disponibles d'i-doit en fonction de vos besoins. De cette manière, l'utilisateur bénéficie d'une toute nouvelle perspective sur la documentation IT.
 
-!!! info ""Modules" and "Extensions""
+!!! info ""Modules" et "Extensions""
 
-    The previously called "Modules" and "Extensions" were renamed "Add-ons" in March 2017. However, in some places in the software you can still find the old names which will replaced gradually with new releases.
+    Les anciennement appelés "Modules" et "Extensions" ont été renommés "Add-ons" en mars 2017. Cependant, dans certains endroits du logiciel, vous pouvez encore trouver les anciens noms qui seront progressivement remplacés par de nouvelles versions.
 
-List of Available Add-ons
+Liste des Add-ons Disponibles
 -------------------------
 
-| Add-on | Available for i-doit pro? | Available for i-doit open? | Subject to license? |
+| Add-on | Disponible pour i-doit pro? | Disponible pour i-doit open? | Soumis à licence? |
 | --- | --- | --- | --- |
-| **[Add-on Packager](./add-on-packager.md)** | yes | no  | no  |
-| **Active Directory Documentation ([GER](./active-directory-documentation.md))** | yes | no  | no  |
-| **[Analysis](./analysis.md)** | yes | no  | yes |
-| **[API](./api/index.md)** | yes | yes | no  |
-| **[Cabling](./cabling.md)** | yes | no  | no  |
-| **[Checkmk](./checkmk.md)** | yes | no  | no  |
-| **[Checkmk2](./checkmk2/index.md)** | yes | no  | yes |
-| **DNS Documentation ([GER](./dns-documentation.md))** | yes | no  | nein |
-| **[Documents](./documents/index.md)** | yes | no  | yes |
-| **[Events](./events.md)** | yes | no  | no  |
-| **[Floorplan](./floorplan.md)** | yes | no  | no  |
-| **HomeOffice ([GER](https://www.i-doit.com/blog/i-doit-home-office-add-on/))** | yes | no  | no  |
-| **[i-diary](./i-diary/index.md)** | yes | no  | no  |
-| **[ISMS](./isms.md)** | yes | no  | yes |
-| **[Maintenance](./maintenance.md)** | yes | no  | no  |
-| **[Nagios](./../automation-and-integration/network-monitoring/nagios.md)** | yes | no  | no  |
-| **[Relocate-CI](./relocate-ci.md)** | yes | no  | no  |
-| **[Replacement](./replacement.md)** | yes | no  | no  |
-| **Report Special ([GER](https://www.i-doit.com/blog/i-doit-reporting-special/))** | yes | no  | no  |
-| **VIVA ([GER](./viva/index.md/))** | yes | no  | yes |
-| **[Workflow](./workflow.md)** | yes | no  | no  |
+| **[Add-on Packager](./add-on-packager.md)** | oui | non  | non  |
+| **Documentation Active Directory ([GER](./active-directory-documentation.md))** | oui | non  | non  |
+| **[Analyse](./analysis.md)** | oui | non  | oui |
+| **[API](./api/index.md)** | oui | oui | non  |
+| **[Câblage](./cabling.md)** | oui | non  | non  |
+| **[Checkmk](./checkmk.md)** | oui | non  | non  |
+| **[Checkmk2](./checkmk2/index.md)** | oui | non  | oui |
+| Documentation DNS ([GER](./dns-documentation.md)) | oui | non  | non |
+| **[Documents](./documents/index.md)** | oui | non  | oui |
+| **[Événements](./events.md)** | oui | non  | non  |
+| **[Plan d'étage](./floorplan.md)** | oui | non  | non  |
+| HomeOffice ([GER](https://www.i-doit.com/blog/i-doit-home-office-add-on/)) | oui | non  | non  |
+| **[i-diary](./i-diary/index.md)** | oui | non  | non  |
+| **[ISMS](./isms.md)** | oui | non  | oui |
+| **[Maintenance](./maintenance.md)** | oui | non  | non  |
+| **[Nagios](./../automation-and-integration/network-monitoring/nagios.md)** | oui | non  | non  |
+| **[Relocate-CI](./relocate-ci.md)** | oui | non  | non  |
+| **[Remplacement](./replacement.md)** | oui | non  | non  |
+| Rapport Spécial ([GER](https://www.i-doit.com/blog/i-doit-reporting-special/)) | oui | non  | non  |
+| VIVA ([GER](./viva/index.md/)) | oui | non  | oui |
+| **[Workflow](./workflow.md)** | oui | non  | non  |
 
-Beside these add-ons there are many others which are provided by our partners or external developers. You can find a detailed list at the i-doit website [i-doit.com under **Product → Add-ons**](https://www.i-doit.com/en/i-doit/add-ons/).
+À côté de ces modules complémentaires, il y en a beaucoup d'autres qui sont fournis par nos partenaires ou des développeurs externes. Vous pouvez trouver une liste détaillée sur le site i-doit [i-doit.com sous **Produit → Modules complémentaires**](https://www.i-doit.com/fr/i-doit/modules-complementaires/).
 
-Download
---------
+Téléchargement
+--------------
 
-Add-ons are available as ZIP-files. These are installed via the [Admin Center](../system-administration/admin-center.md#add-ons).  
-Customers can download add-ons in the [customer portal](../system-administration/customer-portal.md). Add-ons which are subject to licensing (see above) will be unlocked for download in your customer account in the buying process.  
-If you miss any add-ons that you bought, please contact [help@i-doit.com](mailto:help@i-doit.com) for assistance.  
-  
-Evaluation users can download all free- und commercial add-ons in the evaluation process. There are download buttons for all add-ons on your personal evaluation page (e.g. [https://portal.i-doit.com](https://portal.i-doit.com)). All add-ons that are subject to licensing are licensed in the evaluation license.
+Les modules complémentaires sont disponibles sous forme de fichiers ZIP. Ceux-ci sont installés via le [Centre d'administration](../system-administration/admin-center.md#modules-complementaires).  
+Les clients peuvent télécharger des modules complémentaires dans le [portail client](../system-administration/customer-portal.md). Les modules complémentaires soumis à une licence (voir ci-dessus) seront débloqués pour le téléchargement dans votre compte client lors du processus d'achat.  
+Si vous ne trouvez pas de modules complémentaires que vous avez achetés, veuillez contacter [help@i-doit.com](mailto:help@i-doit.com) pour obtenir de l'aide.
+
+Les utilisateurs en évaluation peuvent télécharger tous les modules complémentaires gratuits et commerciaux dans le processus d'évaluation. Il y a des boutons de téléchargement pour tous les modules complémentaires sur votre page d'évaluation personnelle (par exemple [https://portal.i-doit.com](https://portal.i-doit.com)). Tous les modules complémentaires soumis à une licence sont sous licence dans la licence d'évaluation.
 
 Installation
 ------------
 
-All add-ons are installed via the [admin center](../system-administration/admin-center.md). After successfully logging in to the admin center, just change to the **Modules** tab and use the **Install/update module** button.
+Tous les modules complémentaires sont installés via le [centre d'administration](../system-administration/admin-center.md). Après vous être connecté avec succès au centre d'administration, passez simplement à l'onglet **Modules** et utilisez le bouton **Installer/mettre à jour le module**.
 
 [![Installation](../assets/images/en/i-doit-pro-add-ons/1-iao.png)](../assets/images/en/i-doit-pro-add-ons/1-iao.png)
 
-As soon as you click the button a new dialogue appears. First you have to determine whether the add-on is to be installed for all [tenants](../system-administration/multi-tenant.md) (**All tenants**) or just for a single one. Click the **Browse...** button under **ZIP File** to select the add-on. To confirm the download and installation of the ZIP file to the host click **Upload and install**.
+Dès que vous cliquez sur le bouton, une nouvelle boîte de dialogue apparaît. Tout d'abord, vous devez déterminer si le module complémentaire doit être installé pour tous les [locataires](../system-administration/multi-tenant.md) (**Tous les locataires**) ou seulement pour un seul. Cliquez sur le bouton **Parcourir...** sous **Fichier ZIP** pour sélectionner le module complémentaire. Pour confirmer le téléchargement et l'installation du fichier ZIP sur l'hôte, cliquez sur **Télécharger et installer**.
 
 [![Modules](../assets/images/en/i-doit-pro-add-ons/2-iao.png)](../assets/images/en/i-doit-pro-add-ons/2-iao.png)
 
-!!! info "System settings"
+!!! info "Paramètres système"
 
-    The [settings](../installation/manual-installation/system-settings.md) for the file upload need to allow the upload to make the installation possible. The limit for the maximum file size also needs to be above the file size of the archive for the installation.
+    Les [paramètres](../installation/manual-installation/system-settings.md) pour le téléchargement de fichiers doivent autoriser le téléchargement pour rendre l'installation possible. La limite de taille maximale des fichiers doit également être supérieure à la taille du fichier d'archive pour l'installation.
 
-After the add-on has been installed successfully, you will receive a confirmation message. The add-on will now also appear in the list of installed add-ons of the corresponding tenant. Each tenant uses a separate list.
+Une fois que l'extension a été installée avec succès, vous recevrez un message de confirmation. L'extension apparaîtra désormais également dans la liste des extensions installées du locataire correspondant. Chaque locataire utilise une liste séparée.
 
-[![Overview](../assets/images/en/i-doit-pro-add-ons/3-iao.png)](../assets/images/en/i-doit-pro-add-ons/3-iao.png)
+[![Aperçu](../assets/images/en/i-doit-pro-add-ons/3-iao.png)](../assets/images/en/i-doit-pro-add-ons/3-iao.png)
 
-If an add-on is available but not yet installed, it will be marked with **not installed** in the list of the respective tenant. With the **Install** button you can carry out the installation later without having to upload the ZIP file again.
+Si une extension est disponible mais n'est pas encore installée, elle sera marquée comme **non installée** dans la liste du locataire respectif. Avec le bouton **Installer**, vous pouvez effectuer l'installation ultérieurement sans avoir à télécharger à nouveau le fichier ZIP.
 
-Rights Assignment
------------------
+Attribution des droits
+----------------------
 
-Each add-on has its own rights which are assigned per person or person group. After installation of a new add-on, the users have no permissions yet to use it. You have to carry out further steps in the [Rights Management](../efficient-documentation/rights-management/index.md).
+Chaque extension a ses propres droits qui sont attribués par personne ou groupe de personnes. Après l'installation d'une nouvelle extension, les utilisateurs n'ont pas encore les autorisations pour l'utiliser. Vous devez effectuer d'autres étapes dans la [Gestion des droits](../efficient-documentation/rights-management/index.md).
 
-Update
-------
+Mise à jour
+-----------
 
-Once a new version of an add-on is available you can perform an update without the need to completely install it again. All existing data persist during this process.
+Une fois qu'une nouvelle version d'une extension est disponible, vous pouvez effectuer une mise à jour sans avoir besoin de l'installer complètement à nouveau. Toutes les données existantes persistent pendant ce processus.
 
-The required steps are similar to the installation process: Upload and install the new ZIP file via the **Install/update module** button. Alternatively, for some add-ons the **Update / Re-Install** button in the respective list can be clicked to perform the update process if the system has a internet connection. The ZIP file will be uploaded and installed automatically. Please note that this function is not available for all add-ons.
+Les étapes requises sont similaires au processus d'installation : Téléchargez et installez le nouveau fichier ZIP via le bouton **Installer/mettre à jour le module**. Alternativement, pour certaines extensions, le bouton **Mettre à jour / Réinstaller** dans la liste respective peut être cliqué pour effectuer le processus de mise à jour si le système a une connexion internet. Le fichier ZIP sera téléchargé et installé automatiquement. Veuillez noter que cette fonction n'est pas disponible pour toutes les extensions.
 
-Uninstall
----------
+Désinstallation
+---------------
 
-You can uninstall an add-on with the above mentioned list by activating the checkbox and then using the **Uninstall selected module** button. A dialogue will ask you to confirm this action. All files and user data associated with the add-on will be **deleted irreversibly**. The uninstallation will be tenant-wide. By clicking various checkboxes you can uninstall several add-ons simultaneously.
+Vous pouvez désinstaller une extension avec la liste mentionnée ci-dessus en activant la case à cocher, puis en utilisant le bouton **Désinstaller le module sélectionné**. Un dialogue vous demandera de confirmer cette action. Tous les fichiers et données utilisateur associés à l'extension seront **supprimés de manière irréversible**. La désinstallation sera effectuée au niveau du locataire. En cliquant sur différentes cases à cocher, vous pouvez désinstaller plusieurs extensions simultanément.
 
 (De)activation
 --------------
 
-If you wish to pause the usage of an add-on without deleting the associated data, you can deactivate the add-on. To do so activate the checkbox of the corresponding entry in the list and use the **Deactivate selected module** button for the respective tenant. Now the functions and user data of the add-on are no longer available.
+Si vous souhaitez mettre en pause l'utilisation d'une extension sans supprimer les données associées, vous pouvez désactiver l'extension. Pour ce faire, activez la case à cocher de l'entrée correspondante dans la liste et utilisez le bouton **Désactiver le module sélectionné** pour le locataire respectif. Désormais, les fonctions et les données utilisateur de l'extension ne sont plus disponibles.
 
-A renewed activation follows a similar process: Select the respective add-on in the list and click the **Activate selected module** button. Now the functions and user data will be available again.
+Un processus de réactivation renouvelé suit un processus similaire : Sélectionnez l'add-on respectif dans la liste et cliquez sur le bouton **Activer le module sélectionné**. Désormais, les fonctions et les données utilisateur seront à nouveau disponibles.
 
-All other tenants remain unaffected by these actions. By clicking various checkboxes you can activate/ deactivate several add-ons respectively one add-on for several tenants simultaneously.
+Tous les autres locataires ne sont pas affectés par ces actions. En cochant diverses cases, vous pouvez activer/désactiver plusieurs add-ons respectivement un add-on pour plusieurs locataires simultanément.

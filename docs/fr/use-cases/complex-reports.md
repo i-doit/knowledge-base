@@ -1,29 +1,30 @@
-# Complex Reports
+# Rapports Complexes {/examples}
 
-You can generate a lot of useful reports with the query builder of the report manager. For more complex cases, you can also edit the SQL behind it and in doing so you can utilize MySQL or MariaDB functions, for example, to query time intervals.
+Vous pouvez générer de nombreux rapports utiles avec le générateur de requêtes du gestionnaire de rapports. Pour des cas plus complexes, vous pouvez également modifier le SQL derrière celui-ci et ainsi utiliser des fonctions MySQL ou MariaDB, par exemple, pour interroger des intervalles de temps.
 
-Preparation
+Préparation
 -----------
 
-The required knowledge around [Reporting](../evaluation/report-manager.md) and the [database structure of i-doit](../software-development/database-model/index.md) can be found in the respective articles. A good knowledge of SQL or SQL functions provided by MySQL/MariaDB is clearly advantageous.
+Les connaissances requises autour du [Reporting](../evaluation/report-manager.md) et de la [structure de la base de données d'i-doit](../software-development/database-model/index.md) peuvent être trouvées dans les articles respectifs. Une bonne connaissance de SQL ou des fonctions SQL fournies par MySQL/MariaDB est clairement un avantage.
 
-Time Intervals
+Intervalles de Temps
 --------------
 
-Often a report is needed to provide information about a certain time interval. i-doit already supplies the required fields with date specifications, for example, when an [object](../basics/structure-of-the-it-documentation.md) was changed the last time or when a maintenance contract expires. The query builder of the report manager can address these fields but only with fixed date specifications: Which objects were changed since 2016-01-01? However, often the date is required to be in relation to the current time: Which objects were changed during this month? You don't specify the month but it is assumed that the month during which the report is executed is the month in question.
+Souvent, un rapport est nécessaire pour fournir des informations sur un certain intervalle de temps. i-doit fournit déjà les champs requis avec des spécifications de date, par exemple, quand un [objet](../basics/structure-of-the-it-documentation.md) a été modifié la dernière fois ou quand un contrat de maintenance expire. Le générateur de requêtes du gestionnaire de rapports peut adresser ces champs mais seulement avec des spécifications de date fixes : Quels objets ont été modifiés depuis le 2016-01-01 ? Cependant, souvent la date doit être en relation avec le temps actuel : Quels objets ont été modifiés ce mois-ci ? Vous ne spécifiez pas le mois mais il est supposé que le mois pendant lequel le rapport est exécuté est le mois en question.
 
-In order to generate such a report we create a new report with the query builder first. For the query we add, for example, [object title](../basics/unique-references.md), [object type](../basics/structure-of-the-it-documentation.md), date of the last change and the name of the editing person.
+Pour générer un tel rapport, nous créons d'abord un nouveau rapport avec le générateur de requêtes. Pour la requête, nous ajoutons, par exemple, le [titre de l'objet](../basics/unique-references.md), le [type d'objet](../basics/structure-of-the-it-documentation.md), la date de la dernière modification et le nom de la personne ayant effectué la modification.
 
-[![complex-reports](../assets/images/en/use-cases/complexe-reports/1-cr.png)](../assets/images/en/use-cases/complexe-reports/1-cr.png)
+[![rapports-complexes](../assets/images/en/use-cases/complexe-reports/1-cr.png)](../assets/images/en/use-cases/complexe-reports/1-cr.png)
 
-We save this report and then we duplicate it and name the duplicate with a significant name, for example "Changed objects of this month".
+Nous enregistrons ce rapport, puis nous le dupliquons et nommons la copie avec un nom significatif, par exemple "Objets modifiés de ce mois".
 
-!!! info "SQL edit"
+!!! info "Modification SQL"
 
-    We duplicate the report as it cannot be opened with the query builder anymore once the SQL has been edited.
+    Nous dupliquons le rapport car il ne peut plus être ouvert avec le générateur de requêtes une fois que le SQL a été modifié.
 
-Then we edit the duplicate with the SQL editor and extend the WHERE clause:
+Ensuite, nous modifions la copie avec l'éditeur SQL et étendons la clause WHERE :
 
+```sql
     SELECT
     obj_main.isys_obj__id AS '__id__',
     obj_main.isys_obj__title AS 'LC__UNIVERSAL__TITLE###1',
@@ -38,7 +39,8 @@ Then we edit the duplicate with the SQL editor and extend the WHERE clause:
 
     WHERE j2.isys_obj_type__const != 'C__OBJTYPE__RELATION' AND
     YEAR(obj_main.isys_obj__updated) = YEAR(NOW()) AND MONTH(obj_main.isys_obj__updated) = MONTH(NOW());
+```
 
-In order to narrow the time interval to _this_ month, we use the SQL functions `NOW()`, `YEAR()` and `MONTH()`. These are applied to the change date that is saved in the table column `bj_main.isys_obj__updated`. Additionally, we exclude all [relation objects](../basics/object-relations.md) with `j2.isys_obj_type__const != 'C__OBJTYPE__RELATION'`.
+Pour restreindre l'intervalle de temps à _ce_ mois, nous utilisons les fonctions SQL `NOW()`, `YEAR()` et `MONTH()`. Elles sont appliquées à la date de modification enregistrée dans la colonne de table `bj_main.isys_obj__updated`. De plus, nous excluons tous les [objets de relation](../basics/object-relations.md) avec `j2.isys_obj_type__const != 'C__OBJTYPE__RELATION'`.
 
-You can find [this and other examples regarding the query of time intervals](http://stackoverflow.com/questions/5293189/select-records-from-today-this-week-this-month-php-mysql) on the Stackoverflow website.
+Vous pouvez trouver [cet exemple et d'autres concernant la requête des intervalles de temps](http://stackoverflow.com/questions/5293189/select-records-from-today-this-week-this-month-php-mysql) sur le site web Stackoverflow.

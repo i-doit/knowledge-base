@@ -1,32 +1,32 @@
 # Documents
 
-With the i-doit add-on "Documents", free text, text elements and contents of the documentation can be combined in templates to create complete documents. In this way, operating manuals, handover protocols, emergency plans and much more can be conveniently created and exported. These overviews make it easy to find, use and share the contents of the documentation.
+Avec l'extension "Documents" d'i-doit, du texte libre, des éléments de texte et des contenus de la documentation peuvent être combinés dans des modèles pour créer des documents complets. De cette manière, des manuels d'utilisation, des protocoles de remise, des plans d'urgence et bien plus encore peuvent être créés et exportés de manière pratique. Ces aperçus facilitent la recherche, l'utilisation et le partage des contenus de la documentation.
 
-The documentation of the add-on is divided into the following sections
+La documentation de l'extension est divisée en sections suivantes
 -----------------------------------------------------------------------
 
-*   [Preparation (Add-on documents)](./preparation.md)
+*   [Préparation (Documents de l'extension)](./preparation.md)
 
-The preparation describes how to install and update the add-on. Also, all the configuration options are described in detail, so that the functions of the add-on can be used optimally.
+La préparation décrit comment installer et mettre à jour l'extension. De plus, toutes les options de configuration sont décrites en détail, de sorte que les fonctions de l'extension puissent être utilisées de manière optimale.
 
-*   [Create & edit document templates](./document-templates.md)
+*   [Créer & éditer des modèles de document](./document-templates.md)
 
-Document templates are the central element on the basis of which documents are created. Here we describe how to create, edit and reuse these templates. All parameters of the templates, the possibilities of the WYSIWYG editor are discussed.
+Les modèles de document sont l'élément central sur la base duquel les documents sont créés. Ici, nous décrivons comment créer, éditer et réutiliser ces modèles. Tous les paramètres des modèles, les possibilités de l'éditeur WYSIWYG sont discutés.
 
-*   [Placeholders in the Documents add-on](./placeholder-in-the-documens.md)
+*   [Emplacements réservés dans l'extension Documents](./placeholder-in-the-documens.md)
 
-The integration of dynamic contents of the documentation is done with placeholders. All available placeholders and how to use them are described in detail here.
+L'intégration de contenus dynamiques de la documentation se fait avec des emplacements réservés. Tous les emplacements réservés disponibles et comment les utiliser sont décrits en détail ici.
 
-*   [Create documents](./document-creation.md)
+*   [Créer des documents](./document-creation.md)
 
-Created templates can be used to create documents for objects in the documentation. This section provides a description that goes into detail about creating, updating and exporting these documents.
+Les modèles créés peuvent être utilisés pour créer des documents pour les objets de la documentation. Cette section fournit une description détaillée sur la création, la mise à jour et l'exportation de ces documents.
 
 Releases
 --------
 
 | Version | Date | Changelog |
 | --- | --- | --- |
-| 1.7     | 2024-02-27 | [Improvement] PHP 8.2 Compatibility<br>[Bug]         Rights for all Documents needed to create a New entry in Document category<br>[Bug]         Using pictures for background of a document with the same name, but different location overwrites one picture<br>[Bug]         Exporting a document template that contains a svg image causes the image to break<br>[Bug]         Opening online repository causes error when url is not reachable<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 1.7     | 2024-02-27 | [Improvement] PHP 8.2 Compatibility<br>[Bug]         Rights for all Documents needed to create a New entry in Document category<br>[Bug]         Using pictures for background of a document with the same name, but different location overwrites one picture<br>[Bug]         Exporting a document template that contains a svg image causes the image to break<br>[Bug]         Opening online repository causes error when url is not reachable<br> |
 | 1.6     | 2023-11-07 | [Task] Clean up options from the documents add-on<br>[Improvement] Show info about "block-level" placeholders<br>[Improvement] Option to apply header and footer to selected parts of the document (Front page, ToC, content pages)<br>[Bug]         Wrong description for "--export_folder" option of command "documents"<br>[Bug]         New options for document template: Count pages from table of contents and/or cover page<br>[Bug]         Fix styling of documents dashboard widget |
 | 1.5.2 | 2023-06-13 | [Bug] Chapter have headlines in HTML even though beeing deactivated <br>[Bug] Deleting chapters in document templates not possible<br>[Bug] Previews of document templates are saved as actual document <br>[Bug] Benutzerdefiniertes Feld "Objekt Browser (Einfach)" soll nur den Objekttitel anzeigen <br>[Bug] Header and Footer are not present in HTML export <br>[Bug] Using reports inserts paragraphs <br>[Bug] Chapters are editable with view rights <br>[Bug] Only the second page is displayed in the title page <br>[Bug] Data from objects via "Workplace components" cannot be queried <br>[Bug] Automatic console.php export of all documents to a template <br>[Bug] Error message when previewing documents with logical location <br>[Bug] H2 headlines have very large line spacing <br>[Bug] 500 Error when using "console.document.compile" via API <br>[Bug] Console command CompileDocuments and documents are missing a description |
 | 1.5.1 | 2023-01-24 | [Bug] Report placeholder does not apply the 'Grouped multivalue presentation' option  <br>[Bug] Service assignment is not displayed in documents  <br>[Bug] Empty row is displayed in a document  <br>[Bug] Document categories with apostrophe break the tree navigation  <br>[Bug] Deleting chapters not possible |

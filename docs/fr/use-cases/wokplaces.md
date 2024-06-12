@@ -1,41 +1,41 @@
-# Workplaces
+# Lieux de travail {/examples/}
 
-Which IT components are available for which staff member and where can I find them? To ensure that you always have a good overview with regard to this question, you can document IT workplaces in i-doit.
+Quels composants informatiques sont disponibles pour quel membre du personnel et où puis-je les trouver ? Pour vous assurer d'avoir toujours une bonne vue d'ensemble concernant cette question, vous pouvez documenter les lieux de travail informatiques dans i-doit.
 
-Persons and their Workplaces
-----------------------------
+Personnes et leurs Lieux de Travail
+-----------------------------------
 
-Besides the physical assignement of [objects](../basics/structure-of-the-it-documentation.md) to [locations](./locations.md), workplaces can be documented as logical construct. The **Workplace** [object type](../basics/structure-of-the-it-documentation.md) plays a central role.
+Outre l'assignation physique d'[objets](../basics/structure-of-the-it-documentation.md) à des [emplacements](./locations.md), les lieux de travail peuvent être documentés en tant que construction logique. Le type d'**Espace de travail** joue un rôle central.
 
-[![workplaces](../assets/images/en/use-cases/workplaces/1-wp.png)](../assets/images/en/use-cases/workplaces/1-wp.png)
+[![lieux de travail](../assets/images/en/use-cases/workplaces/1-wp.png)](../assets/images/en/use-cases/workplaces/1-wp.png)
 
-An object of this type is assigned to a person via the **Logical Location** [category](../basics/structure-of-the-it-documentation.md).
+Un objet de ce type est assigné à une personne via la catégorie **Emplacement logique** [objet](../basics/structure-of-the-it-documentation.md).
 
-[![workplaces](../assets/images/en/use-cases/workplaces/2-wp.png)](../assets/images/en/use-cases/workplaces/2-wp.png)
+[![lieux de travail](../assets/images/en/use-cases/workplaces/2-wp.png)](../assets/images/en/use-cases/workplaces/2-wp.png)
 
-Conversely, this person is assigned to one or more workplaces via the **Persons** object in the **Assigned Workplaces** category.
+Inversement, cette personne est assignée à un ou plusieurs lieux de travail via l'objet **Personnes** dans la catégorie **Lieux de travail assignés**.
 
-[![workplaces](../assets/images/en/use-cases/workplaces/3-wp.png)](../assets/images/en/use-cases/workplaces/3-wp.png)
+[![lieux de travail](../assets/images/en/use-cases/workplaces/3-wp.png)](../assets/images/en/use-cases/workplaces/3-wp.png)
 
-IT Components at the Workplace
-------------------------------
+Composants Informatiques au Lieu de Travail
+------------------------------------------
 
-The assignment of any (IT) components to a workplace is carried out in the **Workplace components** category within the **Workplace** object.
+L'assignation de tout composant (IT) à un lieu de travail est effectuée dans la catégorie **Composants du lieu de travail** au sein de l'objet **Espace de travail**.
 
-[![workplaces](../assets/images/en/use-cases/workplaces/4-wp.png)](../assets/images/en/use-cases/workplaces/4-wp.png)
+[![lieux de travail](../assets/images/en/use-cases/workplaces/4-wp.png)](../assets/images/en/use-cases/workplaces/4-wp.png)
 
-A workplace component can only be assigned to one workplace. You can search for the specific workplace of a component within the category **Assigned workstation** in the **Workplace components** object.
+Un composant de lieu de travail ne peut être assigné qu'à un seul lieu de travail. Vous pouvez rechercher le lieu de travail spécifique d'un composant dans la catégorie **Poste de travail assigné** de l'objet **Composants du lieu de travail**.
 
-[![workplaces](../assets/images/en/use-cases/workplaces/5-wp.png)](../assets/images/en/use-cases/workplaces/5-wp.png)
+[![lieux de travail](../assets/images/en/use-cases/workplaces/5-wp.png)](../assets/images/en/use-cases/workplaces/5-wp.png)
 
-Location of a Workplace
------------------------
+Emplacement d'un Lieu de Travail
+--------------------------------
 
-Last but not least, you can also physically locate a workplace, for example with an office room. With the [**Floor Plan**](../i-doit-pro-add-ons/floorplan.md) add-on you can then even visualize this room.
+Enfin, vous pouvez également localiser physiquement un lieu de travail, par exemple avec une salle de bureau. Avec l'extension [**Plan d'étage**](../i-doit-pro-add-ons/floorplan.md), vous pouvez même visualiser cette pièce.
 
-[![workplaces](../assets/images/en/use-cases/workplaces/6-wp.png)](../assets/images/en/use-cases/workplaces/6-wp.png)
+[![lieux de travail](../assets/images/en/use-cases/workplaces/6-wp.png)](../assets/images/en/use-cases/workplaces/6-wp.png)
 
-Relocation of a Workplace
--------------------------
+Déplacement d'un Lieu de Travail
+-------------------------------
 
-Should a person change the room within the company, you can manage the relocation of the workplace and selected workplace components. The **[Relocate CI](../i-doit-pro-add-ons/relocate-ci.md)** add-on offers a function solution for a relocation.
+Si une personne change de bureau au sein de l'entreprise, vous pouvez gérer le déplacement du lieu de travail et des composants de lieu de travail sélectionnés. L'**[Ajout Relocaliser CI](../i-doit-pro-add-ons/relocate-ci.md)** offre une solution fonctionnelle pour un déplacement.

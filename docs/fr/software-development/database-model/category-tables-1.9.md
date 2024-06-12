@@ -1,8 +1,8 @@
-# Category Tables 1.9
+# Tables de catégorie 1.9 {/ * exemples * /}
 
-!!! info "Generate this content automatically"
+!!! info "Générer ce contenu automatiquement"
 
-    You can create this content on your own i-doit host. Pass the parameter load=property_infos to the URL, for example:  [https://demo.i-doit.com/?load=property_infos](https://demo.i-doit.com/?load=property_infos).You need to be logged-in.
+    Vous pouvez créer ce contenu sur votre propre hôte i-doit. Passez le paramètre load=property_infos à l'URL, par exemple: [https://demo.i-doit.com/?load=property_infos](https://demo.i-doit.com/?load=property_infos). Vous devez être connecté.
 
 Global categories
 -----------------

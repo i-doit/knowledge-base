@@ -1,45 +1,46 @@
-# Documentation of Databases
+# Documentation des Bases de Données
 
-With version 1.xx of i-doit we have added an additional variant that can be used to document databases within i-doit.
+Avec la version 1.xx de i-doit, nous avons ajouté une variante supplémentaire qui peut être utilisée pour documenter les bases de données au sein de i-doit.
 
-The two models differ in that the old model included the following three object types:
+Les deux modèles diffèrent en ce que l'ancien modèle incluait les trois types d'objets suivants :
 
 [![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/1-dod.png)](../assets/images/en/use-cases/documentation-of-databases/1-dod.png)
 
-**DBMS** - this object type corresponds to that of normal applications, we can define here which database software is available in the company.
+**SGBD** - ce type d'objet correspond à celui des applications normales, nous pouvons définir ici quel logiciel de base de données est disponible dans l'entreprise.
 
-**Database instance** - this object type shows where the individual DBMS are installed and which instances are available there.
+**Instance de base de données** - ce type d'objet montre où les SGBD individuels sont installés et quelles instances sont disponibles.
 
-**Database schema** - this object type shows the respective databases defined within each instance.
+**Schéma de base de données** - ce type d'objet montre les bases de données respectives définies dans chaque instance.
 
-Using i-doit as an example, MariaDB would be the DBMS, the installation on the i-doit server would be the instance and the idoit\_system and i-doit\_data would be the database schema.
+En utilisant i-doit comme exemple, MariaDB serait le SGBD, l'installation sur le serveur i-doit serait l'instance et idoit\_system et idoit\_data seraient les schémas de base de données.
 
-In the new model, we are taking a slightly different approach here. We keep the DBMS object, but add the Assigned Databases tab in the list view of the DBMS - Database Installation category. This makes it possible to see directly at the DBMS object which databases are provided by the respective database software. To stay with the example of i-doit, the MariaDB DBMS object would show the installation on the respective server and the databases idoit\_data and idoit\_system.
+Dans le nouveau modèle, nous adoptons une approche légèrement différente ici. Nous conservons l'objet SGBD, mais ajoutons l'onglet Bases de Données Assignées dans la vue en liste de la catégorie Installation de Base de Données SGBD. Cela permet de voir directement à l'objet SGBD quelles bases de données sont fournies par le logiciel de base de données respectif. Pour rester avec l'exemple de i-doit, l'objet SGBD MariaDB montrerait l'installation sur le serveur respectif et les bases de données idoit\_data et idoit\_system.
 
-In the new model the object types database schema and database instance are dropped and replaced by a new category databases. The idea here is to document databases where they are executed. So if a database runs on a server, we assign the category there and maintain it directly at the resource. If the database runs on a cluster, we assign the category to the cluster objects and document there.
+Dans le nouveau modèle, les types d'objets schéma de base de données et instance de base de données sont abandonnés et remplacés par une nouvelle catégorie bases de données. L'idée ici est de documenter les bases de données là où elles sont exécutées. Ainsi, si une base de données s'exécute sur un serveur, nous attribuons la catégorie là-bas et la maintenons directement à la ressource. Si la base de données s'exécute sur un cluster, nous attribuons la catégorie aux objets de cluster et documentons là-bas.
 
-The new category offers a new view of the database hierarchy that can be expanded:
+La nouvelle catégorie offre une nouvelle vue de la hiérarchie des bases de données qui peut être étendue :
 
 [![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/2-dod.png)](../assets/images/en/use-cases/documentation-of-databases/2-dod.png)
 
-Below _Databases -> Databases_ we can now document the respective databases running on the resource:
+
+Below _Bases de données -> Bases de données_, nous pouvons maintenant documenter les bases de données respectives s'exécutant sur la ressource :
 
 [![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/3-dod.png)](../assets/images/en/use-cases/documentation-of-databases/3-dod.png)
 
-Below _Databases -> DBMS_ we see the connection to the respective DBMS object to which the server has a relationship.
+Below _Bases de données -> SGBD_, nous voyons la connexion à l'objet SGBD respectif auquel le serveur est lié.
 
 [![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/4-dod.png)](../assets/images/en/use-cases/documentation-of-databases/4-dod.png)
 
 
-**Migration of existing database documentation to the new model**
+**Migration de la documentation de base de données existante vers le nouveau modèle**
 
-You can decide which type of database documentation is better suited for your needs. If you want to change from the old model to the new one we offer a moderation function which you can find in the administration under System Tools -> Cache Database:
+Vous pouvez décider quel type de documentation de base de données convient le mieux à vos besoins. Si vous souhaitez passer du modèle ancien au nouveau, nous proposons une fonction de modération que vous pouvez trouver dans l'administration sous Outils Système -> Base de données de cache :
 
 [![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/5-dod.png)](../assets/images/en/use-cases/documentation-of-databases/5-dod.png)
-After clicking you will get another message about the effect of the migration:
+Après avoir cliqué, vous recevrez un autre message sur l'effet de la migration :
 
 [![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/6-dod.png)](../assets/images/en/use-cases/documentation-of-databases/6-dod.png)
 
-And when the migration is complete, a message will appear indicating whether the migration was successful:
+Et lorsque la migration est terminée, un message apparaîtra indiquant si la migration a été réussie :
 
 [![documentation-databases-models](../assets/images/en/use-cases/documentation-of-databases/7-dod.png)](../assets/images/en/use-cases/documentation-of-databases/7-dod.png)

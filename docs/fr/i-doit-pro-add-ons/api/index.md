@@ -1,69 +1,69 @@
-# API (JSON-RPC)
+# API (JSON-RPC) {#api-json-rpc}
 
-i-doit enables external access to the [IT documentation](../../glossary.md) via an [application programming interface (API)](https://en.wikipedia.org/wiki/Application_programming_interface). With the API data can be read, created, updated and deleted. Thus the API offers similar functions like the Web GUI but the additional benefit is that you can automate them without any problems.
+i-doit permet l'accès externe à la [documentation informatique](../../glossary.md) via une [interface de programmation d'application (API)](https://fr.wikipedia.org/wiki/Interface_de_programmation). Avec l'API, les données peuvent être lues, créées, mises à jour et supprimées. Ainsi, l'API offre des fonctions similaires à l'interface utilisateur Web mais le bénéfice supplémentaire est que vous pouvez les automatiser sans aucun problème.
 
-Technical Background
---------------------
+Contexte technique
+-------------------
 
-The API of i-doit provides typical [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) functionalities. With this, files can be
+L'API d'i-doit fournit des fonctionnalités typiques de [CRUD](https://fr.wikipedia.org/wiki/Create,_read,_update_and_delete). Avec cela, les fichiers peuvent être
 
-*   **C**reate
-*   **R**ead
-*   **U**pdate and
-*   **D**elete.
+*   **C**réés
+*   **R**éad
+*   **U**pdatés et
+*   **D**étruits.
 
-For this, a client (for example, in the form of a script) sends a request to the server (i-doit) in order to execute a method on the server. This approach is called [Remote Procedure Call (RPC)](https://en.wikipedia.org/wiki/Remote_procedure_call). The result of the method is returned to the client as a response. In this communication the API of i-doit is based on the [JSON-RPC](http://www.jsonrpc.org/) protocol, version 2.0. HTTP is used as higher protocol and the [JavaScript Object Notation (JSON)](https://en.wikipedia.org/wiki/JSON) is used as exchange format. A request is send to the server in the JSON format per HTTP POST. The response is also made in JSON format.
+Pour cela, un client (par exemple, sous forme de script) envoie une demande au serveur (i-doit) afin d'exécuter une méthode sur le serveur. Cette approche est appelée [Appel de Procédure à Distance (RPC)](https://fr.wikipedia.org/wiki/Appel_de_proc%C3%A9dure_%C3%A0_distance). Le résultat de la méthode est renvoyé au client en tant que réponse. Dans cette communication, l'API d'i-doit est basée sur le protocole [JSON-RPC](http://www.jsonrpc.org/), version 2.0. HTTP est utilisé comme protocole supérieur et le [JavaScript Object Notation (JSON)](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation) est utilisé comme format d'échange. Une demande est envoyée au serveur au format JSON via HTTP POST. La réponse est également faite au format JSON.
 
-API queries can take place in an asynchronous way without losing the relation between requests and responses. The utilized programming language can be chosen freely.
+Les requêtes API peuvent se faire de manière asynchrone sans perdre la relation entre les demandes et les réponses. Le langage de programmation utilisé peut être choisi librement.
 
-!!! success "API instead of database"
+!!! success "API au lieu de la base de données"
 
-    It's strongly recommended to prefer the API to database manipulations at all times. SQL statements bypass all sorts of internal processes. If a data record is manipulated via SQL per  INSERT, UPDATE  or  DELETE , this could risk data integrity and could even disable _i-doit_.
+    Il est fortement recommandé de préférer l'API aux manipulations de base de données en tout temps. Les instructions SQL contournent toutes sortes de processus internes. Si un enregistrement de données est manipulé via SQL par INSERT, UPDATE ou DELETE, cela pourrait compromettre l'intégrité des données et même désactiver _i-doit_.
 
-Download
---------
+Téléchargement
+--------------
 
-In the [customer portal](../../system-administration/customer-portal.md) you can download the API for the pro version as [add-on](../index.md) for free. Users of the open version can also download it for free via [i-doit.org](https://i-doit.org/). The [installation](../index.md) is in line with the same principles of other i-doit add-ons.
+Dans le [portail client](../../system-administration/customer-portal.md), vous pouvez télécharger l'API pour la version pro en tant qu'[extension](../index.md) gratuitement. Les utilisateurs de la version open peuvent également le télécharger gratuitement via [i-doit.org](https://i-doit.org/). L'[installation](../index.md) est conforme aux mêmes principes que les autres extensions i-doit.
 
 Configuration
 -------------
 
-The API is configured via the [Web GUI](../../basics/web-gui.md) of i-doit and can be found at **Administration → Interfaces / external data → JSON-RPC API**.
+L'API est configurée via l'[interface Web](../../basics/web-gui.md) d'i-doit et peut être trouvée à **Administration → Interfaces / données externes → API JSON-RPC**.
 
 [![Configuration](../../assets/images/en/i-doit-pro-add-ons/api/1-api.png)](../../assets/images/en/i-doit-pro-add-ons/api/1-api.png)
 
 !!! info "Info"
 
-    Removing HTML tags from description fields is only possible at i-doit version 1.15.2 with API version 1.11.3 installed.
+    Supprimer les balises HTML des champs de description n'est possible qu'à la version 1.15.2 d'i-doit avec la version 1.11.3 de l'API installée.
 
-Please note that the logging of API requests will create a file in the install path of _i-doit_ at  log/  for each request. This may lead to increased requirements of memory space in case the API is used intensively.
+Veuillez noter que la journalisation des requêtes API créera un fichier dans le chemin d'installation d'_i-doit_ à  log/  pour chaque requête. Cela peut entraîner une augmentation des besoins en espace mémoire si l'API est utilisée de manière intensive.
 
-Access
+Accès
 ------
 
-You can access the API of i-doit by activating a special URL. Add `src/jsonrpc.php`  to the basic URL:
+Vous pouvez accéder à l'API d'i-doit en activant une URL spéciale. Ajoutez `src/jsonrpc.php`  à l'URL de base :
 
      https://demo.i-doit.com/src/jsonrpc.php
 
-Authentication and Authorization
+Authentification et Autorisation
 --------------------------------
 
-You need an API key so that requests will be processed by the API. Additionally, you can activate the function that a dedicated user account is activated for log-in. Permissions for this account can be set as usual. Otherwise all permissions are available through the API. Another advantage is the fact that a dedicated user can be set per third-party system/ script; this makes it easier to keep track of the data flow.
+Vous avez besoin d'une clé API pour que les requêtes soient traitées par l'API. De plus, vous pouvez activer la fonction qu'un compte utilisateur dédié soit activé pour la connexion. Les autorisations pour ce compte peuvent être définies comme d'habitude. Sinon, toutes les autorisations sont disponibles via l'API. Un autre avantage est le fait qu'un utilisateur dédié peut être défini par système/script tiers ; cela facilite le suivi du flux de données.
 
-It may prove useful to use the API method  idoit.login  for a single authentication if a lot of requests (meaning thousands) are sent from a client. Otherwise it is possible that too many sessions are created in a very small time frame but are not terminated. This could result in the fact that i-doit stops working until the sessions have been terminated.
+Il peut être utile d'utiliser la méthode API  idoit.login  pour une seule authentification si de nombreuses requêtes (signifiant des milliers) sont envoyées depuis un client. Sinon, il est possible que trop de sessions soient créées dans un laps de temps très court mais ne sont pas terminées. Cela pourrait entraîner le fait qu'i-doit cesse de fonctionner jusqu'à ce que les sessions aient été terminées.
 
 !!! attention ""
 
-    The default user used for API actions is "Api System". This can be found under "Contacts -> People" if required.<br>
-    This is only used if no username/password is used to connect to the API interface.<br>
-    If the person is archived/deleted the API can no longer be used without authentication.
+    L'utilisateur par défaut utilisé pour les actions API est "Système API". Cela peut être trouvé sous "Contacts -> Personnes" si nécessaire.<br>
+    Ceci est utilisé uniquement si aucun nom d'utilisateur/mot de passe n'est utilisé pour se connecter à l'interface API.<br>
+    Si la personne est archivée/supprimée, l'API ne peut plus être utilisée sans authentification.
 
-Example
+Exemple
 -------
 
-With a simple example we create a new object of the type  **Server**  with the object title "My little server" via the API.
+Avec un exemple simple, nous créons un nouvel objet du type  **Serveur**  avec le titre d'objet "Mon petit serveur" via l'API.
 
-Request to server:
+Demande au serveur :
 
 ```json
 {
@@ -78,7 +78,7 @@ Request to server:
 }
 ```
 
-Via cURL you can send this request for test purposes:
+Via cURL, vous pouvez envoyer cette demande à des fins de test :
 
 ```json
 curl \
@@ -87,7 +87,7 @@ curl \
 https://demo.i-doit.com/src/jsonrpc.php
 ```
 
-Server response:
+Réponse du serveur :
 
 ```json
 {
@@ -101,51 +101,52 @@ Server response:
 }
 ```
 
-Categories in the IT Documentation
-----------------------------------
+Catégories dans la documentation informatique
+--------------------------------------------
 
-A helpful listing of all categories and attributes used in _i-doit_ is provided by a special URL:
+Une liste utile de toutes les catégories et attributs utilisés dans _i-doit_ est fournie par une URL spéciale :
 
-[![Categories in the IT Documentation](../../assets/images/en/i-doit-pro-add-ons/api/2-api.png)](../../assets/images/en/i-doit-pro-add-ons/api/2-api.png)
+[![Catégories dans la documentation informatique](../../assets/images/en/i-doit-pro-add-ons/api/2-api.png)](../../assets/images/en/i-doit-pro-add-ons/api/2-api.png)
 
-For example, this listing shows you which name is used to access categories and attributes and which data types are expected by these attributes.<br>
-For [custom categories](../../basics/custom-categories.md) or attributes, you will find the technical keys in the respective custom category. There it is possible to rename the technical keys.
+Par exemple, cette liste vous montre quel nom est utilisé pour accéder aux catégories et attributs et quels types de données sont attendus par ces attributs.<br>
+Pour les [catégories personnalisées](../../basics/custom-categories.md) ou attributs, vous trouverez les clés techniques dans la catégorie personnalisée respective. Il est possible de renommer les clés techniques.
 
-Clients and Libraries
----------------------
+Clients et Bibliothèques
+------------------------
 
-There are numerous projects and products applying the API by i-doit. We would like to introduce some clients and libraries:
+Il existe de nombreux projets et produits utilisant l'API par i-doit. Nous aimerions vous présenter quelques clients et bibliothèques :
 
-| Name | Website | Programming language | License |
+| Nom | Site Web | Langage de programmation | Licence |
 | --- | --- | --- | --- |
 | Idoit.API.Client | [https://github.com/OKT90/Idoit.API.Client](https://github.com/OKT90/Idoit.API.Client) | C#  | MIT |
-| i-doit API client | [https://github.com/bheisig/i-doit-api-client-php](https://github.com/bheisig/i-doit-api-client-php) | PHP | AGPLv3 |
+| Client API i-doit | [https://github.com/bheisig/i-doit-api-client-php](https://github.com/bheisig/i-doit-api-client-php) | PHP | AGPLv3 |
 | i-doit CLI | [https://github.com/bheisig/i-doit-cli](https://github.com/bheisig/i-doit-cli) | PHP | AGPLv3 |
 | i-doit-go-api | [https://github.com/cseeger-epages/i-doit-go-api](https://github.com/cseeger-epages/i-doit-go-api) | Go  | GPLv3 |
 | i-doit-python | <https://github.com/ScaleUp-Technologies/i-doit-python> | Python | MIT |
 | ansible-i-doit | <https://github.com/ScaleUp-Technologies/ansible-i-doit> | Python | MIT |
 | i-doit_API | <https://github.com/mvorl/i-doit_API>| Python | AGPLv3 |
 
-!!! info "Feedback"
+!!! info "Retour d'information"
 
-    Should a client or a library be missing in this article, we appreciate a short message to [feedback@i-doit.com](mailto:feedback@i-doit.com).
+    Si un client ou une bibliothèque manque dans cet article, nous apprécions un court message à [feedback@i-doit.com](mailto:feedback@i-doit.com).
 
-Documentation for Download
+Documentation pour Téléchargement
 --------------------------
 
-You can download a [{--documentation maintained by the developers~--}](../../assets/downloads/i-doit-JSON-RPC-1.8.3.pdf) as PDF file. (==out-dated==)
+Vous pouvez télécharger un [{--documentation maintenue par les développeurs~--}](../../assets/downloads/i-doit-JSON-RPC-1.8.3.pdf) en tant que fichier PDF. (==obsolète==)
 
-Since version 1.8.1 the API is released as an add-on. Pre-releases were [bundled with i-doit](../../version-history/index.md).
+Depuis la version 1.8.1, l'API est publiée en tant qu'extension. Les préversions étaient [groupées avec i-doit](../../version-history/index.md).
 
 FAQ
 ---
 
-### Error Messages
+### Messages d'Erreur
 
-| Error Message | Problem |
+| Message d'Erreur | Problème |
 | --- | --- |
-| Usersettings are only available after logging in. (i-doit <= 21) | Api System Person is archived or deleted. <br>**Solution** is to recycle the Api System user or to use  a authentication method |
-| i-doit system error: Could not connect tenant database. (i-doit >=22) | Api System Person is archived or deleted.  <br>**Solution** is to recycle the Api System user or to use  a authentication method |
+| Les paramètres utilisateur ne sont disponibles qu'après s'être connecté. (i-doit <= 21) | La personne du système Api est archivée ou supprimée. <br>**La solution** est de recycler l'utilisateur du système Api ou d'utiliser une méthode d'authentification |
+| Erreur système i-doit : Impossible de se connecter à la base de données du locataire. (i-doit >=22) | La personne du système Api est archivée ou supprimée. <br>**La solution** est de recycler l'utilisateur du système Api ou d'utiliser une méthode d'authentification |
+
 
 Releases
 --------

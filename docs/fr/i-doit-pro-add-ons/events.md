@@ -1,45 +1,45 @@
-# Events
+# Événements {/events}
 
-The Event [add-on](./index.md) allow for a high degree of automation when working with the [IT documentation](../glossary.md). If something is changed in the IT documentation, then third-party system will be informed about these changes. If, for example, a new VM is documented in i-doit, it can automatically be created and provisioned on a virtualization host.
+L'extension Événement [add-on](./index.md) permet un haut degré d'automatisation lors de la manipulation de la [documentation IT](../glossary.md). Si quelque chose est modifié dans la documentation IT, alors le système tiers sera informé de ces changements. Par exemple, si une nouvelle machine virtuelle est documentée dans i-doit, elle peut automatiquement être créée et provisionnée sur un hôte de virtualisation.
 
-Rights assignment
------------------
+Attribution des droits
+----------------------
 
-Under **Administration → Authorization system → Rights → Events**, [rights for persons and groups of persons](../efficient-documentation/rights-management/index.md) can be adjusted.
+Sous **Administration → Système d'autorisation → Droits → Événements**, les [droits des personnes et des groupes de personnes](../efficient-documentation/rights-management/index.md) peuvent être ajustés.
 
-[![Rights assignment](../assets/images/en/i-doit-pro-add-ons/events/1-eve.png)](../assets/images/en/i-doit-pro-add-ons/events/1-eve.png)
+[![Attribution des droits](../assets/images/en/i-doit-pro-add-ons/events/1-eve.png)](../assets/images/en/i-doit-pro-add-ons/events/1-eve.png)
 
 Configuration
 -------------
 
-The configuration is accessed via **Administration → CMDB settings → Events → Hooks**.
+La configuration est accessible via **Administration → Paramètres CMDB → Événements → Hooks**.
 
 [![Configuration](../assets/images/en/i-doit-pro-add-ons/events/2-eve.png)](../assets/images/en/i-doit-pro-add-ons/events/2-eve.png)
 
-!!! attention "404 Page not Found"
+!!! attention "404 Page non trouvée"
 
-    When you try to access the event configuration and receive an error message, stating that the page could not be found, this is in all likelihood due to a faulty [configuration of the web server](../installation/manual-installation/system-settings.md). The Apache module rewrite has to be activated and the processing of the .htaccess file in the installation folder of i-doit needs to be permitted (AllowOverride All).
+    Lorsque vous essayez d'accéder à la configuration des événements et que vous recevez un message d'erreur indiquant que la page est introuvable, cela est très probablement dû à une [configuration incorrecte du serveur web](../installation/manual-installation/system-settings.md). Le module Apache rewrite doit être activé et le traitement du fichier .htaccess dans le dossier d'installation de i-doit doit être autorisé (AllowOverride All).
 
-Events are combined with commands. An event is triggered by a hook, an internal routine in i-doit. The following events are available:
+Les événements sont associés à des commandes. Un événement est déclenché par un hook, une routine interne dans i-doit. Les événements suivants sont disponibles :
 
-*   [Category](../glossary.md)
-    *   Create (only via the web GUI)
-    *   Save
-    *   Archive/Delete/Restore/Purge
-*   [Object](../glossary.md)
-    *   Create
-    *   Purge
-*   [Object type](../glossary.md)
-    *   Create/Save
-    *   Purge
+*   [Catégorie](../glossary.md)
+    *   Créer (uniquement via l'interface web)
+    *   Enregistrer
+    *   Archiver/Supprimer/Restaurer/Purger
+*   [Objet](../glossary.md)
+    *   Créer
+    *   Purger
+*   [Type d'objet](../glossary.md)
+    *   Créer/Enregistrer
+    *   Purger
 
-Thus there exist matching events for all [states in the IT documentation](../basics/life-and-documentation-cycle.md). As many event-to-command combinations as desired are possible.
+Ainsi, il existe des événements correspondants pour tous les [états de la documentation IT](../basics/life-and-documentation-cycle.md). Autant de combinaisons événement-commande que souhaité sont possibles.
 
-The command is carried out immediately once the configured event occurs. A shell script is executed for this purpose. This requires the rights to be executed by the user or group with whose rights the web server is running. On a Debian-based operating system this is the user www-data with the group of the same name. Because of this, the script under GNU/Linux requires the right bit for executing (x). The programming language is arbitrary but it should be supported by the operating system (Bash, PHP, Python, Perl etc.).
+La commande est exécutée immédiatement une fois que l'événement configuré se produit. Un script shell est exécuté à cette fin. Cela nécessite les droits d'exécution par l'utilisateur ou le groupe avec lesquels le serveur web fonctionne. Sur un système d'exploitation basé sur Debian, il s'agit de l'utilisateur www-data avec le groupe du même nom. Pour cette raison, le script sous GNU/Linux nécessite le bit de droit pour l'exécution (x). Le langage de programmation est arbitraire mais il doit être pris en charge par le système d'exploitation (Bash, PHP, Python, Perl, etc.).
 
 [![command](../assets/images/en/i-doit-pro-add-ons/events/3-eve.png)](../assets/images/en/i-doit-pro-add-ons/events/3-eve.png)
 
-Information about the event is referred to the shell script. The information is encoded as JSON with BASE64. The following is an example of a JSON string when saving a category entry (the BASE64 decoding already took place):
+Les informations sur l'événement sont référencées dans le script shell. Les informations sont encodées en JSON avec BASE64. Voici un exemple de chaîne JSON lors de l'enregistrement d'une entrée de catégorie (le décodage BASE64 a déjà eu lieu):
 
     {
         "success": 0,
@@ -54,7 +54,7 @@ Information about the event is referred to the shell script. The information is 
             "properties": {
                 "title": {
                     "tag": "title",
-                    "value": "Headquarter Network",
+                    "value": "Réseau du siège social",
                     "title": "LC__UNIVERSAL__TITLE"
                 },
                 "created": {
@@ -83,7 +83,7 @@ Information about the event is referred to the shell script. The information is 
                     "tag": "category",
                     "value": "2",
                     "id": "2",
-                    "title_lang": "Demo",
+                    "title_lang": "Démo",
                     "title": "LC__CMDB__CATG__GLOBAL_CATEGORY"
                 },
                 "sysid": {
@@ -120,55 +120,55 @@ Information about the event is referred to the shell script. The information is 
         },
         "data": {
             "2949":{
-                "title": "Headquarter Network",
+                "title": "Réseau du siège social",
                 "status": "Normal",
                 "created": "2016-04-26 14:47:57",
                 "created_by": "admin",
                 "changed": "2016-04-26 14:47:57",
                 "changed_by": "admin",
-                "purpose": "Produktion",
-                "category": "Demo",
+                "purpose": "Production",
+                "category": "Démo",
                 "sysid": "SYSID_1461674878",
-                "cmdb_status": "In Betrieb",
+                "cmdb_status": "En fonctionnement",
                 "type": "Supernet",
                 "tag": null,
                 "description": "",
                 "_id": 2912,
-                "_title": "<span class=\"hide\">Headquarter Network<\/span><a name=\"Headquarter Network\" href=\"?objID=2912\" id=\"lb_58_2912\">Headquarter Network<\/a><script type='text\/javascript'>if ($('lb_58_2912')) new Tip('lb_58_2912', '', {ajax: {url: '\/i-doit\/?ajax=1&call=quick_info&objID=2912'}, delay: '0', stem: 'topLeft', style: 'default', className: 'objectinfo'});<\/script>",
+                "_title": "<span class=\"hide\">Réseau du siège social<\/span><a name=\"Réseau du siège social\" href=\"?objID=2912\" id=\"lb_58_2912\">Réseau du siège social<\/a><script type='text\/javascript'>if ($('lb_58_2912')) new Tip('lb_58_2912', '', {ajax: {url: '\/i-doit\/?ajax=1&call=quick_info&objID=2912'}, delay: '0', stem: 'topLeft', style: 'default', className: 'objectinfo'});<\/script>",
                 "_created": "<span data-date=\"2016-04-26 14:47:57\" class=\"hide\"><\/span>26.04.2016 (admin)",
                 "_changed": "<span data-date=\"2016-04-26 14:47:57\" class=\"hide\"><\/span>26.04.2016 (admin)",
-                "_cmdb_status": "<div class=\"cmdb-marker\" style=\"background-color:#33C20A;\"><\/div> In Betrieb"
+                "_cmdb_status": "<div class=\"cmdb-marker\" style=\"background-color:#33C20A;\"><\/div> En fonctionnement"
             }
         }
     }
 
-You can see that the **General** category was saved successfully for the "Headquarter Network" object.
+Vous pouvez voir que la catégorie **Général** a été enregistrée avec succès pour l'objet "Réseau du siège social".
 
-Additional parameters that are given to the shell script can also be set. These are static, in other words without a placeholder.
+Des paramètres supplémentaires donnés au script shell peuvent également être définis. Ceux-ci sont statiques, en d'autres termes, sans espace réservé.
 
-!!! success "i-doit Controller"
+!!! success "Contrôleur i-doit"
 
-    The described shell scripts are not only suited to control third-party systems but also i-doit itself. There is no reason not to use such a shell script in order to access the command line tool of i-doit, the [controller](../automation-and-integration/cli/index.md) or the [API](../i-doit-pro-add-ons/index.md). This way, automated tasks can be handled within the IT documentation.
+    Les scripts shell décrits ne sont pas seulement adaptés pour contrôler des systèmes tiers mais aussi i-doit lui-même. Il n'y a aucune raison de ne pas utiliser un tel script shell pour accéder à l'outil en ligne de commande d'i-doit, le [contrôleur](../automation-and-integration/cli/index.md) ou l'[API](../i-doit-pro-add-ons/index.md). De cette manière, les tâches automatisées peuvent être gérées dans la documentation IT.
 
 !!! success "Performance"
 
-    The commands are executed synchronously. For example, they are executed immediately as soon as the **Save** button is used and the system will wait until the shell script has ended. With many and/or extensive shell scripts this slow will down the web GUI of i-doit and thus negatively affect its usability. Because of this, it may be worthwhile to build a queue: i-doit runs a shell script which loads the parameters and stores them in a queue (for example in a temporary file). Another script is executed which processes this queue, using Cronjob or something similar. This way, an asynchronous workflow is created so that the usability of i-doit is not appreciably affected.
+    Les commandes sont exécutées de manière synchrone. Par exemple, elles sont exécutées immédiatement dès que le bouton **Enregistrer** est utilisé et le système attendra que le script shell se termine. Avec de nombreux scripts shell et/ou des scripts étendus, cela ralentira l'interface web d'i-doit et affectera négativement sa convivialité. Pour cette raison, il peut être intéressant de créer une file d'attente : i-doit exécute un script shell qui charge les paramètres et les stocke dans une file d'attente (par exemple dans un fichier temporaire). Un autre script est exécuté pour traiter cette file d'attente, en utilisant un Cronjob ou quelque chose de similaire. De cette manière, un flux de travail asynchrone est créé de sorte que la convivialité d'i-doit ne soit pas sensiblement affectée.
 
-Logging
+Journalisation
 -------
 
-When an event is triggered and it is linked to a command, then this execution is logged. The last 500 entries are listed at **Administration → CMDB settings → Events → History (Log)**.
+Lorsqu'un événement est déclenché et qu'il est lié à une commande, alors cette exécution est journalisée. Les 500 dernières entrées sont répertoriées dans **Administration → Paramètres CMDB → Événements → Historique (Journal)**.
 
-[![Logging](../assets/images/en/i-doit-pro-add-ons/events/4-eve.png)](../assets/images/en/i-doit-pro-add-ons/events/4-eve.png)
+[![Journalisation](../assets/images/en/i-doit-pro-add-ons/events/4-eve.png)](../assets/images/en/i-doit-pro-add-ons/events/4-eve.png)
 
-Releases
+Versions
 --------
 
-| Version | Date | Changelog |
+| Version | Date | Journal des modifications |
 | --- | --- | --- |
-| 1.3 | 2022-09-05 | [Task] Change link to Knowledgebase  <br>[Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Bug]  Events are not triggered when changing/assigning roles |
-| 1.2 |     | [Improvement] The event contains information about the user  <br>[Bug] Custom category constants are not passed, when ranking entries |
-| 1.1.1 | 2019-07-31 | [Bug] Drop-down empty in hooks for object types<br> |
-| 1.1 | 2019-01-30 | [Bug] Constant of user defined categories is missing<br> |
-| 1.0.1 |     | [Bug] i-doit 1.12 compatibility<br> |
-| 1.0 | 2018-07-03 | Initial release |
+| 1.3 | 2022-09-05 | [Tâche] Modifier le lien vers la base de connaissances  <br>[Tâche] Compatibilité PHP 8.0  <br>[Tâche] Compatibilité de conception  <br>[Bug]  Les événements ne sont pas déclenchés lors du changement/de l'attribution des rôles |
+| 1.2 |     | [Amélioration] L'événement contient des informations sur l'utilisateur  <br>[Bug] Les constantes de catégorie personnalisée ne sont pas transmises lors du classement des entrées |
+| 1.1.1 | 2019-07-31 | [Bug] Menu déroulant vide dans les hooks pour les types d'objet<br> |
+| 1.1 | 2019-01-30 | [Bug] La constante des catégories définies par l'utilisateur est manquante<br> |
+| 1.0.1 |     | [Bug] Compatibilité avec i-doit 1.12<br> |
+| 1.0 | 2018-07-03 | Première version |

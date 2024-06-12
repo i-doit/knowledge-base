@@ -94,6 +94,7 @@ Cette commande offre les options supplémentaires suivantes : [ldapServerId](./o
 L'option [ldapServerId](./options-and-parameters-cli.md#ldap-sync) spécifie le serveur ldap à utiliser. Ici, l'ID de l'entrée doit être spécifié.<br>
 Avec [dumpConfig](./options-and-parameters-cli.md#ldap-sync), aucune synchronisation n'est exécutée ! Seule la configuration est affichée. Devrait donc être utilisé uniquement pour le débogage.
 
+```markdown
     [argumentsDeCommande]
     [optionsDeCommande]
     utilisateur=admin
@@ -155,6 +156,7 @@ Liste des options de commande et une brève explication
 | autoReactivateUsers= | true ou false | Tous les utilisateurs sont automatiquement définis sur l'état normal avant d'être synchronisés. Cette fonction n'est nécessaire que pour OpenLDAP et NDS, car elle est toujours activée dans Active Directory |
 | ignoreUsersWithAttributes\[\]= | ignoreUsersWithAttributes\[\]=“sn” | Désactive la synchronisation des utilisateurs où par exemple le sn (Nom de Famille) dans AD est vide. Plusieurs attributs AD peuvent être utilisés ici, voir exemple |
 | ignoreFunction= | empty\*, !empty, isset\*, !isset | La fonction de vérification pour "ignoreUsersWithAttributes". Si la valeur est définie sur "empty", la fonction vérifie si la valeur spécifiée de "ignoreUsersWithAttributes" est vide. Si c'est le cas, l'utilisateur ne sera pas synchronisé. |
+```
 
 \*empty - Vérifie si une variable contient une valeur<br>
 \*isset - Vérifie si une variable existe et si elle n'est pas NULL

@@ -1,56 +1,57 @@
 # VIVA
 
-!!! warning "Deprecated"
-    This add-on is no longer developed and was replaced by Viva 2
+!!! warning "Obsolète"
+    Cet add-on n'est plus développé et a été remplacé par Viva 2
 
-The VIVA add-on is dedicated to the topic of information security based on IT-Grundschutz. It supports the user in the relevant documentation processes to establish an Information Security Management System (ISMS) in an organization.
+L'add-on VIVA est dédié au thème de la sécurité de l'information basée sur l'IT-Grundschutz. Il soutient l'utilisateur dans les processus de documentation pertinents pour établir un Système de Gestion de la Sécurité de l'Information (SGSI) dans une organisation.
 
-Table of contents
+Table des matières
 -----------------
 
-1. Introduction to VIVA
+1. Introduction à VIVA
     1. IT-Grundschutz
-    2. To whom this document is addressed
-    3. Structure of this document
-2. Preparation of the VIVA installation
-    1. System requirements
-    2. Download
-    3. Install
-    4. Update
-    5. Activate/Deactivate
-    6. Uninstall
-    7. Rights management
-    8. Migrate from previous ITGS module
-3. Procedure with VIVA  
-    1. Manage IT-Grundschutz catalogs
-    2. Modeling information networks
-    3. Create target groups
-    4. Assign target objects
-    5. Target group inheritance
-    6. Define protection requirement categories
-    7. Define protection needs
-    8. Assign modules
-    9. Implement measures
-    10. Answer test questions
-    11. Perform supplementary security analysis
-4. Risk analysis according to IT-Grundschutz  
-    1. Identify hazards
-    2. Evaluate hazards
-5. Reports with VIVA  
-    1. Create audits
-    2. Reference documents
-6. Support audits with VIVA
-7. VIVA Wizards  
-    1. Target group wizards
-    2. Protection needs wizards
-8. Object Category VIVA
-9. VIVA widget
+    2. À qui ce document s'adresse
+    3. Structure de ce document
+2. Préparation de l'installation de VIVA
+    1. Configuration système
+    2. Téléchargement
+    3. Installation
+    4. Mise à jour
+    5. Activer/Désactiver
+    6. Désinstaller
+    7. Gestion des droits
+    8. Migration depuis le module ITGS précédent
+3. Procédure avec VIVA  
+    1. Gérer les catalogues IT-Grundschutz
+    2. Modéliser les réseaux d'information
+    3. Créer des groupes cibles
+    4. Assigner des objets cibles
+    5. Héritage des groupes cibles
+    6. Définir les catégories de besoins de protection
+    7. Définir les besoins de protection
+    8. Assigner des modules
+    9. Mettre en œuvre des mesures
+    10. Répondre aux questions de test
+    11. Effectuer une analyse de sécurité supplémentaire
+4. Analyse des risques selon l'IT-Grundschutz  
+    1. Identifier les dangers
+    2. Évaluer les dangers
+5. Rapports avec VIVA  
+    1. Créer des audits
+    2. Documents de référence
+6. Soutenir les audits avec VIVA
+7. Assistants VIVA  
+    1. Assistants de groupes cibles
+    2. Assistants de besoins de protection
+8. Catégorie d'objet VIVA
+9. Widget VIVA
 
-Anhang
+Annexe
 ------
 
-*   Example of a possible workflow
-*   FAQ about VIVA
+*   Exemple d'un flux de travail possible
+*   FAQ sur VIVA
+
 
 Releases
 --------

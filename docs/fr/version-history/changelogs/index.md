@@ -65,5 +65,3 @@ Quels changements ont été publiés par version de _i-doit pro_?
 -   [Journaux des modifications 1.8.x](changelog-1.8.x/index.md)
     -   [Journal des modifications 1.8.3.1](changelog-1.8.x/changelog-1.8.3.1.md)
     -   [Journal des modifications 1.8.3](changelog-1.8.x/changelog-1.8.3.md)
-
-Please provide the Markdown content you would like me to translate into French.

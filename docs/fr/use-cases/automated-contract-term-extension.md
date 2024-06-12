@@ -1,68 +1,68 @@
-# Automated contract term extension
+# Extension automatique de la durée du contrat
 
-!!! info "Was last tested for i-doit version 23"
+!!! info "A été testé pour la dernière fois pour la version 23 d'i-doit"
 
-**Use-Case:**
-The contract of a client has passed the last termination date and has to be extended.
-To extend the contract we will use the command `extend-contracts`.
+**Cas d'utilisation :**
+Le contrat d'un client a dépassé la dernière date de résiliation et doit être prolongé.
+Pour prolonger le contrat, nous utiliserons la commande `extend-contracts`.
 
-## Step 1: Make the contract `extend-contract` capable
+## Étape 1 : Rendre le contrat capable d'être prolongé avec `extend-contracts`
 
-In order to extend a contract with the `extend-contracts` command, it must meet a few requirements.
-To achieve this we have to edit the existing contract first.<br>
+Pour prolonger un contrat avec la commande `extend-contracts`, il doit répondre à quelques exigences.
+Pour ce faire, nous devons d'abord modifier le contrat existant.<br>
 
-The required settings can be found in the object view of the desired contract,
+Les paramètres requis se trouvent dans la vue objet du contrat souhaité,
 
-**Contract → Contract information**
+**Contrat → Informations sur le contrat**
 
 [![contractextension-info](../assets/images/en/use-cases/automated-contract-extension/1-avv-uc.png)](../assets/images/en/use-cases/automated-contract-extension/1-avv-uc.png)
 
-Which we subsequently edit:
+Que nous éditons ensuite comme suit :
 
-* **Runtime period** we set to *1 year*.
-* **End of Contract by** we set to *Notice of termination*.
-* **Cancellation date** remains *empty*.
-* **Cancellation period** which we set to *1 month* and *on contract end*.
+* **Période de fonctionnement** que nous définissons à *1 an*.
+* **Fin de contrat par** que nous définissons à *Avis de résiliation*.
+* **Date de résiliation** reste *vide*.
+* **Délai de résiliation** que nous définissons à *1 mois* et *à la fin du contrat*.
 
 [![contract-extension-config](../assets/images/en/use-cases/automated-contract-extension/2-avv-uc.png)](../assets/images/en/use-cases/automated-contract-extension/2-avv-uc.png)
 
-!!! info "The prerequisites to run the command are as follows:"
+!!! info "Les prérequis pour exécuter la commande sont les suivants :"
 
-    * **Runtime period** must be filled in.
-    * **Contract end by** must be set to termination
-    * **Cancellation date** must be empty
-    * **Cancellation period** must be in the past (the same day as today is not possible!)
+    * **Période de fonctionnement** doit être remplie.
+    * **Fin de contrat par** doit être définie sur résiliation
+    * **Date de résiliation** doit être vide
+    * **Délai de résiliation** doit être dans le passé (le même jour qu'aujourd'hui n'est pas possible !)
 
-## Step 2: Apply `extend-contracts`
+## Étape 2 : Appliquer `extend-contracts`
 
-To be able to apply the `extend-contracts` command, we need to go to the [Console](../automation-and-integration/cli/console/index.md).
+Pour pouvoir appliquer la commande `extend-contracts`, nous devons nous rendre sur la [Console](../automation-and-integration/cli/console/index.md).
 
-The command should look like this:
+La commande devrait ressembler à ceci :
 
 ```shell
     sudo -u www-data php console.php extend-contracts --user user --password password
 ```
 
-If the contract is configured correctly, the [Console](../automation-and-integration/cli/console/index.md) will show that the contract has been extended by 1 year. 
+Si le contrat est configuré correctement, la [Console](../automation-and-integration/cli/console/index.md) montrera que le contrat a été prolongé d'un an.
 
 [![contract-extension-console](../assets/images/en/use-cases/automated-contract-extension/3-avv-uc.png)](../assets/images/en/use-cases/automated-contract-extension/3-avv-uc.png)
 
-## Step 3: Automate
+## Étape 3: Automatiser {/examples}
 
-Since we don't want to run the command by hand every time, we now create a **cronjob**.
-First we create a new cronjob:
+Étant donné que nous ne voulons pas exécuter la commande manuellement à chaque fois, nous allons maintenant créer une **tâche cron**.
+Tout d'abord, nous créons une nouvelle tâche cron :
 
 ```shell
     sudo nano /etc/cron.d/idoit-extend-contracts.
 ```
 
-In this cronjob we add the following code:
+Dans cette tâche cron, nous ajoutons le code suivant :
 
 ```shell
-    ## idoit cronjob idoit-extend-contracts
+    ## tâche cron idoit-extend-contracts
 
     15 6 * * www-data php /var/www/html/i-doit/console.php extend-contracts --user user --password password
 ```
 
-With this code, the cronjob will run every day at 6:15 *am* and will automatically extend the contracts if they meet the requirements.<br>
-The only important thing is, that the path to the [Console](../automation-and-integration/cli/console/index.md) is correct and that you use the **username** and **password** of the idoit instance.
+Avec ce code, la tâche cron s'exécutera tous les jours à 6h15 du matin et prolongera automatiquement les contrats si les conditions sont remplies.<br>
+La seule chose importante est que le chemin d'accès à la [Console](../automation-and-integration/cli/console/index.md) soit correct et que vous utilisiez le **nom d'utilisateur** et le **mot de passe** de l'instance idoit.

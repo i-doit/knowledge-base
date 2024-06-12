@@ -1,98 +1,99 @@
-# Locations
+# Emplacements {/ * exemples * /}
 
-The location of hardware and other components is an essential part of i-doit. This article explains the documentation of locations and how you place [objects](../basics/structure-of-the-it-documentation.md).
+L'emplacement du matériel et d'autres composants est une partie essentielle de i-doit. Cet article explique la documentation des emplacements et comment vous placez [objets](../basics/structure-of-the-it-documentation.md).
 
-Overview
+Aperçu
 --------
 
-In the default installation i-doit already supplies [object types](../basics/structure-of-the-it-documentation.md) which are suitable for the documentation of locations - you can use them or hide them:
+Dans l'installation par défaut, i-doit fournit déjà des [types d'objets](../basics/structure-of-the-it-documentation.md) adaptés à la documentation des emplacements - vous pouvez les utiliser ou les masquer :
 
-*   **Country**
-*   **City**
-*   **Building**
-*   **Room**
+*   **Pays**
+*   **Ville**
+*   **Bâtiment**
+*   **Salle**
 *   **Rack**
 
-Beside these object types there are [categories](../basics/structure-of-the-it-documentation.md) for each object where you can store the location:
+Outre ces types d'objets, il existe des [catégories](../basics/structure-of-the-it-documentation.md) pour chaque objet où vous pouvez stocker l'emplacement :
 
-*   **Location**: Information about the object which is physically on a higher-level
-*   **Locally assigned objects**: List of objects which are physically on a lower level
+*   **Emplacement** : Informations sur l'objet qui se trouve physiquement à un niveau supérieur
+*   **Objets attribués localement** : Liste des objets qui se trouvent physiquement à un niveau inférieur
 
-The locations are documented in a tree structure. With this method you can prevent a multiple local assignment of objects which is impossible in physical terms.
+Les emplacements sont documentés dans une structure arborescente. Avec cette méthode, vous pouvez éviter une attribution locale multiple d'objets qui est impossible en termes physiques.
 
-Building the Location Path
+Construction du chemin de l'emplacement
 --------------------------
 
-On top is the **Root Location** object and all other locations are subordinate to this object. You cannot delete this object.
+En haut se trouve l'objet **Emplacement racine** et tous les autres emplacements sont subordonnés à cet objet. Vous ne pouvez pas supprimer cet objet.
 
-We use a printer as an example, it is located in an office room and the office room is assigned to a building:
+Nous utilisons une imprimante comme exemple, elle se trouve dans une salle de bureau et la salle de bureau est attribuée à un bâtiment :
 
-1.  Create a building and allocate it to the **Root Location** via the **Location** category.
-2.  Create a room and assign it to the building via the **Location** category.
-3.  Create printer and assign it to the room via the **Location** category.
+1.  Créez un bâtiment et attribuez-le à l'**Emplacement racine** via la catégorie **Emplacement**.
+2.  Créez une salle et attribuez-la au bâtiment via la catégorie **Emplacement**.
+3.  Créez une imprimante et attribuez-la à la salle via la catégorie **Emplacement**.
 
-With this method you generate a so-called location path: **Root Location → Building → Room → Printer**.
+Avec cette méthode, vous générez un chemin d'emplacement appelé : **Emplacement racine → Bâtiment → Salle → Imprimante**.
 
-[![locations-path](../assets/images/en/use-cases/locations/1-loc.png)](../assets/images/en/use-cases/locations/1-loc.png)
+[![chemin-des-emplacements](../assets/images/en/use-cases/locations/1-loc.png)](../assets/images/en/use-cases/locations/1-loc.png)
 
-With every location object the associated subordinated object is displayed in the **locally assigned objects** category. You can also edit the location path via this category.
+Avec chaque objet d'emplacement, l'objet subordonné associé est affiché dans la catégorie **objets attribués localement**. Vous pouvez également modifier le chemin d'emplacement via cette catégorie.
 
-[![locations-path](../assets/images/en/use-cases/locations/2-loc.png)](../assets/images/en/use-cases/locations/2-loc.png)
+[![chemin-des-emplacements](../assets/images/en/use-cases/locations/2-loc.png)](../assets/images/en/use-cases/locations/2-loc.png)
 
-Define an Object as Location
+Définir un Objet en tant que Lieu
 ----------------------------
 
-When you want to define an object – for example, a room – also as a location for other objects, you have to activate their corresponding object type. This can be carried out under **Administration→ CMDB settings → Object type configuration → <Object type group> → <Object type> → Location**. For the above mentioned object types, the option is already set to **Yes**.
+Lorsque vous souhaitez définir un objet - par exemple, une pièce - également en tant que lieu pour d'autres objets, vous devez activer leur type d'objet correspondant. Cela peut être effectué sous **Administration → Paramètres CMDB → Configuration du type d'objet → <Groupe de types d'objets> → <Type d'objet> → Lieu**. Pour les types d'objets mentionnés ci-dessus, l'option est déjà définie sur **Oui**.
 
-Configuration of the Location Path
+Configuration du Chemin du Lieu
 ----------------------------------
 
-You can configure the location path for each tenant.
+Vous pouvez configurer le chemin du lieu pour chaque locataire.
 
-| Option | Data type | Default value | Description |
+| Option | Type de données | Valeur par défaut | Description |
 | --- | --- | --- | --- |
-| **Administration** → System settings → Tenantsettings → Graphical interface → String for separation of locations  <br>** | String | **>** | Which string shall be used to separate the objects of a location path from one another? |
-| **Administration** → System settings → Tenantsettings** → Maximum lengths → Object title in location path  <br>** | Positive integer | **16** | How many characters per object are allowed for an object title in the location path? A longer string of characters is cut off. |
-| **Administration** → System settings → Tenantsettings** → Maximum lengths → Full Length location path** | Positive integer | **40** | How many characters are allowed for the location path? A longer string of characters is cut off. |
+| **Administration** → Paramètres système → Paramètres du locataire → Interface graphique → Chaîne de séparation des lieux  <br>** | Chaîne | **>** | Quelle chaîne doit être utilisée pour séparer les objets d'un chemin de lieu les uns des autres? |
+| **Administration** → Paramètres système → Paramètres du locataire** → Longueurs maximales → Titre de l'objet dans le chemin du lieu  <br>** | Entier positif | **16** | Combien de caractères par objet sont autorisés pour un titre d'objet dans le chemin du lieu? Une chaîne de caractères plus longue est tronquée. |
+| **Administration** → Paramètres système → Paramètres du locataire** → Longueurs maximales → Chemin complet du lieu** | Entier positif | **40** | Combien de caractères sont autorisés pour le chemin du lieu? Une chaîne de caractères plus longue est tronquée. |
 
-Positioning of Hardware in the Rack
+Positionnement du Matériel dans le Rack
 -----------------------------------
 
-You can also use server racks as locations to [position hardware in the racks](../evaluation/rack-view.md).
+Vous pouvez également utiliser des baies de serveurs comme lieux pour [positionner le matériel dans les racks](../evaluation/rack-view.md).
 
-Chassis
+Châssis
 -------
 
-A similar method is used in order to equip chassis with the corresponding modules. This feature is available in the object types
+Une méthode similaire est utilisée pour équiper les châssis avec les modules correspondants. Cette fonctionnalité est disponible dans les types d'objets
 
-*   **Blade Chassis** and **Blade Server** as well as
-*   **Switch Chassis** and **Switch** (as module)
+*   **Châssis de Lame** et **Serveur de Lame** ainsi que
+*   **Châssis de Commutateur** et **Commutateur** (en tant que module)
 
-The actual documentation is carried out in the **Chassis** category folder. By allocating a module in the  **Chassis → Assigned devices** category, you also generate a location relation.
+La documentation réelle est effectuée dans le dossier de catégorie **Châssis**. En attribuant un module dans la catégorie **Châssis → Appareils attribués**, vous générez également une relation de lieu.
 
-Geographical Coordinates
+Coordonnées Géographiques
 ------------------------
 
-In the **Location** category you can store [geographical coordinates with latitude and longitude](./geo-coordinates.md). In this way links to the known map services are generated and the object is located on their maps.
+Dans la catégorie **Lieu**, vous pouvez stocker des [coordonnées géographiques avec latitude et longitude](./geo-coordinates.md). De cette manière, des liens vers les services de cartographie connus sont générés et l'objet est situé sur leurs cartes.
 
-Location View
--------------
 
-You can navigate through all location paths with the left navigation menu under **Location View**. You can display or hide the tree structure. An object which is opened in the main contents section is highlighted in the **Location View**.
+Vue de l'emplacement
+--------------------
+
+Vous pouvez naviguer à travers tous les chemins d'emplacement avec le menu de navigation de gauche sous **Vue de l'emplacement**. Vous pouvez afficher ou masquer la structure arborescente. Un objet ouvert dans la section principale du contenu est mis en surbrillance dans la **Vue de l'emplacement**.
 
 [![locations-standort-ansicht](../assets/images/en/use-cases/locations/3-loc.png)](../assets/images/en/use-cases/locations/3-loc.png)
 
-Logical Locations
------------------
+Emplacements Logiques
+---------------------
 
-A documented workplace receives a person as logical location. You can also assign workplaces to physical locations. The **Location View** (see above) can either represent physical or logical locations or a combination of both. This option is a [user-defined](../user-authentication-and-management/builtin-authentication/creating-a-local-user.md) option.
+Un lieu de travail documenté reçoit une personne en tant qu'emplacement logique. Vous pouvez également attribuer des lieux de travail à des emplacements physiques. La **Vue de l'emplacement** (voir ci-dessus) peut représenter des emplacements physiques ou logiques ou une combinaison des deux. Cette option est une [option définie par l'utilisateur](../user-authentication-and-management/builtin-authentication/creating-a-local-user.md).
 
-Floor Plan
-----------
+Plan d'étage
+------------
 
-The [Floorplan](../i-doit-pro-add-ons/floorplan.md) add-on is suitable for creating two-dimensional plans on basis of the location paths.
+L'extension [Plan d'étage](../i-doit-pro-add-ons/floorplan.md) est adaptée pour créer des plans bidimensionnels sur la base des chemins d'emplacement.
 
-User Rights for Locations
--------------------------
+Droits d'utilisateur pour les emplacements
+-----------------------------------------
 
-For each user or group of users you can assign [write permissions, read permissions and many other authorizations for locations and subordinated objects](./location-bases-authorization.md).
+Pour chaque utilisateur ou groupe d'utilisateurs, vous pouvez attribuer des [autorisations d'écriture, des autorisations de lecture et de nombreuses autres autorisations pour les emplacements et les objets subordonnés](./location-bases-authorization.md).

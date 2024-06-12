@@ -1,31 +1,31 @@
-# Custom Translation
+# Traduction Personnalisée
 
-Using the user-defined translation, you can change the name of the desired fields or add new languages within a few mouse clicks.
+En utilisant la traduction définie par l'utilisateur, vous pouvez modifier le nom des champs souhaités ou ajouter de nouvelles langues en quelques clics.
 
-**Create a language**
+**Créer une langue**
 
-*   Navigate to Administration>CMDB Settings>User Defined Translation
-*   Click on New to create a new language
-*   Enter the language, select the flag and click on Save
+*   Accédez à Administration>Paramètres CMDB>Traduction Définie par l'Utilisateur
+*   Cliquez sur Nouveau pour créer une nouvelle langue
+*   Entrez la langue, sélectionnez le drapeau et cliquez sur Enregistrer
 
-[![Create a language](../assets/images/en/use-cases/custom-translation/1-ct.png)](../assets/images/en/use-cases/custom-translation/1-ct.png)
+[![Créer une langue](../assets/images/en/use-cases/custom-translation/1-ct.png)](../assets/images/en/use-cases/custom-translation/1-ct.png)
 
-You can now select the language in i-doit, but so far it is still identical to the German language.
+Vous pouvez maintenant sélectionner la langue dans i-doit, mais pour l'instant elle est toujours identique à la langue allemande.
 
-Therefore you have to translate the fields now.
+Par conséquent, vous devez maintenant traduire les champs.
 
-**Translation of a field**
+**Traduction d'un champ**
 
-As an example we change the name of the Quickpurge button.
+À titre d'exemple, nous changeons le nom du bouton Quickpurge.
 
-[![Translation of a button](../assets/images/en/use-cases/custom-translation/2-ct.png)](../assets/images/en/use-cases/custom-translation/2-ct.png)
+[![Traduction d'un bouton](../assets/images/en/use-cases/custom-translation/2-ct.png)](../assets/images/en/use-cases/custom-translation/2-ct.png)
 
-*   Navigate to Administration>CMDB Settings>User Defined Translations
-*   Select language and click on edit
-*   Filter by Quickpurge and enter translation
+*   Accédez à Administration>Paramètres CMDB>Traduction Définie par l'Utilisateur
+*   Sélectionnez la langue et cliquez sur modifier
+*   Filtrez par Quickpurge et saisissez la traduction
 
-[![Translation of a button](../assets/images/en/use-cases/custom-translation/3-ct.png)](../assets/images/en/use-cases/custom-translation/3-ct.png)
+[![Traduction d'un bouton](../assets/images/en/use-cases/custom-translation/3-ct.png)](../assets/images/en/use-cases/custom-translation/3-ct.png)
 
-*   Save, navigate to overview and change language to Spanish
+*   Enregistrez, accédez à l'aperçu et changez la langue en espagnol
 
-[![Translation of a button](../assets/images/en/use-cases/custom-translation/4-ct.png)](../assets/images/en/use-cases/custom-translation/4-ct.png)
+[![Traduction d'un bouton](../assets/images/en/use-cases/custom-translation/4-ct.png)](../assets/images/en/use-cases/custom-translation/4-ct.png)

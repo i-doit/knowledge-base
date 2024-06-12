@@ -1,172 +1,173 @@
-# IP Address Management (IPAM)
+# Gestion des adresses IP (IPAM)
 
-An essential part of an [IT documentation](../glossary.md) is the maintenance of IP networks, IP addresses and various network components, the so-called IP Address Management (IPAM).
+Une partie essentielle de la [documentation informatique](../glossary.md) est la maintenance des réseaux IP, des adresses IP et des divers composants réseau, appelée Gestion des adresses IP (IPAM).
 
-Overview
---------
+Aperçu
+------
 
-[IPAM](https://en.wikipedia.org/wiki/IP_address_management) contains several areas which the following text explains in more detail. In the default installation, i-doit already provides all [object types](../glossary.md) and [categories](../glossary.md) in order to cover precisely these areas. These include amongst others the following object types:
+[IPAM](https://fr.wikipedia.org/wiki/Gestion_des_adresses_IP) contient plusieurs domaines que le texte suivant explique plus en détail. Dans l'installation par défaut, i-doit fournit déjà tous les [types d'objets](../glossary.md) et [catégories](../glossary.md) afin de couvrir précisément ces domaines. Cela inclut entre autres les types d'objets suivants :
 
-*   **Layer 3 Net**
-*   **Layer 2 Net**
-*   **Supernet**
+*   **Réseau de couche 3**
+*   **Réseau de couche 2**
+*   **Superréseau**
 
-We especially focus on these categories:
+Nous nous concentrons particulièrement sur ces catégories :
 
-*   **Host address**
-*   **Net** (category folder)
-*   **Network** (category folder)
+*   **Adresse hôte**
+*   **Net** (dossier de catégorie)
+*   **Réseau** (dossier de catégorie)
 
-As active net components i-doit provides, for example, the object types **Switch** and **Router**, as active devices **Server**, **Client**, **VoIP Telephone** and many others.
+En tant que composants réseau actifs, i-doit fournit, par exemple, les types d'objets **Switch** et **Routeur**, en tant que dispositifs actifs **Serveur**, **Client**, **Téléphone VoIP** et bien d'autres.
 
 LAN
 ---
 
-Before you start documenting single IP addresses, host names and MAC addresses, it is worth documenting the corresponding LANs (local area networks). The **Layer 3 Net** object type is suitable for this purpose. The **Net** category contains the essential [attributes](../glossary.md) to maintain an IP net:
+Avant de commencer à documenter des adresses IP individuelles, des noms d'hôtes et des adresses MAC, il est utile de documenter les LAN correspondants (réseaux locaux). Le type d'objet **Réseau de couche 3** est adapté à cet effet. La catégorie **Net** contient les [attributs](../glossary.md) essentiels pour maintenir un réseau IP :
 
-*   **Type** (IPv4, IPv6; selection field)
-*   **Net** address (text field) with Subnet mask or CIDR notation (text fields; are mutually dependent)
-*   **Default Gateway** ([object relation](../basics/object-relations.md) to active component, for example router; multiple selection)
-*   **Reverse DNS** (text field)
-*   **DNS server** (object relation; multiple selection)
-*   **DNS domain** (multiple selection)
-*   **Layer-2-net-assignment** (for VLANs; object relation; multiple selection)
+*   **Type** (IPv4, IPv6 ; champ de sélection)
+*   Adresse **Net** (champ de texte) avec masque de sous-réseau ou notation CIDR (champs de texte ; sont mutuellement dépendants)
+*   **Passerelle par défaut** ([relation d'objet](../basics/object-relations.md) à un composant actif, par exemple un routeur ; sélection multiple)
+*   **DNS inverse** (champ de texte)
+*   **Serveur DNS** (relation d'objet ; sélection multiple)
+*   **Domaine DNS** (sélection multiple)
+*   **Affectation de réseau de couche 2** (pour les VLAN ; relation d'objet ; sélection multiple)
 
-In this category you can also check whether other nets have already been documented and if the specified address ranges overlap.
+Dans cette catégorie, vous pouvez également vérifier si d'autres réseaux ont déjà été documentés et si les plages d'adresses spécifiées se chevauchent.
 
-Global v4 and Global v6
+Global v4 et Global v6
 
-i-doit provides two [objects](../glossary.md) of the type **Layer 3 Net**: **Global v4** and **Global v6**. Those who want to do without the documentation of single nets can assign single IP addresses to one of the two objects. This is done automatically, depending on the IP version. The nets comprise the complete IPv4 and IPv6 address range. Therefore you cannot delete these two objects and you should not change them radically so that they cannot fulfill their purpose anymore.
+i-doit fournit deux [objets](../glossary.md) du type **Réseau de couche 3** : **Global v4** et **Global v6**. Ceux qui veulent se passer de la documentation des réseaux individuels peuvent attribuer des adresses IP individuelles à l'un des deux objets. Cela se fait automatiquement, en fonction de la version IP. Les réseaux comprennent l'ensemble de la plage d'adresses IPv4 et IPv6. Par conséquent, vous ne pouvez pas supprimer ces deux objets et vous ne devriez pas les modifier radicalement pour qu'ils ne puissent plus remplir leur objectif.
+
 
 Supernets
 ---------
 
-Supernets, in other words, the combination of several subnets to one net, can be documented in the **Supernet** object type. When the address range in the **Net** category is defined in an object of this type, the associated subnets will be related to each other automatically. The **Supernet** category supplies a summary in form of a table.
+Les supernets, en d'autres termes, la combinaison de plusieurs sous-réseaux en un seul réseau, peuvent être documentés dans le type d'objet **Supernet**. Lorsque la plage d'adresses dans la catégorie **Net** est définie dans un objet de ce type, les sous-réseaux associés seront automatiquement liés les uns aux autres. La catégorie **Supernet** fournit un résumé sous forme de tableau.
 
-IP Address with Host Name
+Adresse IP avec Nom d'Hôte
 -------------------------
 
-The documentation of single IP addresses is carried out in the **Host address** category which can be assigned to each object type. As this is a [list category](../glossary.md), you can specify any number of IP addresses per object. Beside the mere maintenance of data, this category provides some automatisms to support the user. First, you should define which **Type** (which IP version) is used. Then you should specify the net which you created before and the type of **Address allocation** (for example, static). Then i-doit suggests the next available IP address which you can accept or change. It is also important to specify the host name. Under **DNS domain** you can make a selection from the domains which are allocated to the net so that FQDNs (Fully Qualified Domain Names) can be generated from host names and domains.
+La documentation des adresses IP individuelles est effectuée dans la catégorie **Adresse hôte** qui peut être attribuée à chaque type d'objet. Comme il s'agit d'une [catégorie de liste](../glossary.md), vous pouvez spécifier un nombre quelconque d'adresses IP par objet. Outre la simple maintenance des données, cette catégorie fournit quelques automatismes pour soutenir l'utilisateur. Tout d'abord, vous devriez définir quel **Type** (quelle version IP) est utilisé. Ensuite, vous devriez spécifier le réseau que vous avez créé auparavant et le type d'**Allocation d'adresse** (par exemple, statique). Ensuite, i-doit suggère la prochaine adresse IP disponible que vous pouvez accepter ou modifier. Il est également important de spécifier le nom d'hôte. Sous **Domaine DNS**, vous pouvez faire une sélection parmi les domaines qui sont alloués au réseau afin que des FQDN (Fully Qualified Domain Names) puissent être générés à partir des noms d'hôtes et des domaines.
 
-IP List
+Liste IP
 -------
 
-The **IP list** category which is assigned to the **Layer 3 Net** object type provides a [comprehensive overview of each net](..//evaluation/ip-list.md). All objects which are allocated to this net are listed in a table, including IP address, host name and type of the address assignment. The latter is shown in color and in a legend to the right of the list you can find the color code.
+La catégorie **Liste IP** qui est attribuée au type d'objet **Réseau de couche 3** fournit un [aperçu complet de chaque réseau](..//evaluation/ip-list.md). Tous les objets qui sont alloués à ce réseau sont répertoriés dans un tableau, y compris l'adresse IP, le nom d'hôte et le type d'attribution de l'adresse. Ce dernier est affiché en couleur et dans une légende à droite de la liste, vous pouvez trouver le code couleur.
 
-You can also add further objects to the list without using the Host address category. You can even detach an assignment. With "smaller" nets (< 1,000 IP addresses), the free IP addresses will be also displayed, in other cases a corresponding message appears.
+Vous pouvez également ajouter d'autres objets à la liste sans utiliser la catégorie Adresse hôte. Vous pouvez même détacher une attribution. Avec des "petits" réseaux (< 1 000 adresses IP), les adresses IP libres seront également affichées, dans d'autres cas, un message correspondant apparaît.
 
-In order to avoid unintentional address conflicts, i-doit informs you about multiple assigned IP addresses beside the table.
+Afin d'éviter les conflits d'adresses involontaires, i-doit vous informe des adresses IP multiples attribuées à côté du tableau.
 
-Another table summarizes important details about the net (number of assigned and free IP addresses, address range etc.).
+Un autre tableau résume les détails importants sur le réseau (nombre d'adresses IP attribuées et libres, plage d'adresses, etc.).
 
-Ping and NSLOOKUP
+Ping et NSLOOKUP
 
-The IP list category provides the possibility to compare the desired status and the actual state: To check if the documented IP addresses and host names are really already assigned, i-doit can send ICMP packets ("pings") and start a NSLOOKUP. For this purpose, i-doit requires access to the net. It is possible to check single entries or all entries subsequently. With **Administration → System settings → Tenantsettings → Options for the IP-List** you can define the command line tools to be used. The user/ the group of the Apache webserver has to be allowed to apply them.
+La catégorie de liste IP offre la possibilité de comparer l'état souhaité et l'état réel : Pour vérifier si les adresses IP et les noms d'hôtes documentés sont effectivement déjà attribués, i-doit peut envoyer des paquets ICMP ("pings") et démarrer un NSLOOKUP. À cette fin, i-doit nécessite un accès au réseau. Il est possible de vérifier des entrées individuelles ou toutes les entrées ultérieurement. Avec **Administration → Paramètres système → Paramètres du locataire → Options pour la liste IP**, vous pouvez définir les outils en ligne de commande à utiliser. L'utilisateur/le groupe du serveur web Apache doit être autorisé à les appliquer.
 
 VLAN
 ----
 
-For each virtual LAN (VLAN) you want to maintain you create an object of the type **Layer 2 Net** in i-doit. The category of the same name, in which the VLAN ID is stored, is important here. You can also connect a physical net with a VLAN via the **Layer 3 Net assignment** attribute here. Also possible is the specification of **IP helper addresses**.
+Pour chaque réseau local virtuel (VLAN) que vous souhaitez maintenir, vous créez un objet de type **Réseau de couche 2** dans i-doit. La catégorie du même nom, dans laquelle l'ID VLAN est stocké, est importante ici. Vous pouvez également connecter un réseau physique à un VLAN via l'attribut **Affectation de réseau de couche 3** ici. Il est également possible de spécifier des **adresses d'aide IP**.
 
-You should create the port of an active net component before you connect a VLAN to a (virtual/ physical) port. Either the port can be assigned in the object of the component (categories **Port** or **Logical port**) or in the **Layer 2 Net** object in the categories ****Assigned p****orts**or **Assigned logical ports****.
+Vous devez créer le port d'un composant réseau actif avant de connecter un VLAN à un port (virtuel/physique). Soit le port peut être attribué dans l'objet du composant (catégories **Port** ou **Port logique**) soit dans l'objet **Réseau de couche 2** dans les catégories **Ports affectés** ou **Ports logiques affectés**.
 
 DHCP
 ----
 
-IP addresses are allocated with different methods in a net (objects of the type **Layer 3 Net**). While servers often receive a static IP address, clients usually receive an address via DHCP. The DHCP server may assign IP addresses dynamically or per reservation. To document this, you can divide the net into different sections. For this purpose, the **DHCP** category is used.
+Les adresses IP sont attribuées avec différentes méthodes dans un réseau (objets de type **Réseau de couche 3**). Alors que les serveurs reçoivent souvent une adresse IP statique, les clients reçoivent généralement une adresse via DHCP. Le serveur DHCP peut attribuer des adresses IP de manière dynamique ou par réservation. Pour documenter cela, vous pouvez diviser le réseau en différentes sections. À cette fin, la catégorie **DHCP** est utilisée.
 
-During the assignment of an IP to a net (**Host address** category), the selection of the **Address allocation** influences the automatic assignment of the next available IP address. Vice versa it is possible to define a new (either reserved or unreserved) DHCP section in the assigned net by a targeted specification of the **Address allocation**.
+Lors de l'attribution d'une IP à un réseau (catégorie **Adresse hôte**), la sélection de l'**Allocation d'adresse** influence l'attribution automatique de la prochaine adresse IP disponible. Inversement, il est possible de définir une nouvelle section DHCP (réservée ou non réservée) dans le réseau attribué par une spécification ciblée de l'**Allocation d'adresse**.
 
-Net Zones
+Zones de réseau
 ---------
 
-Apart from CIDR you can divide a subnet logically into several segments. This is especially useful when allocating IP addresses for special tasks or for certain departments.
+Outre le CIDR, vous pouvez diviser logiquement un sous-réseau en plusieurs segments. Cela est particulièrement utile lors de l'attribution d'adresses IP pour des tâches spéciales ou pour certains départements.
 
-[![ip-adress-management](../assets/images/en/use-cases/ipam/1-ipam.png)](../assets/images/en/use-cases/ipam/1-ipam.png)
+[![gestion-adresse-ip](../assets/images/en/use-cases/ipam/1-ipam.png)](../assets/images/en/use-cases/ipam/1-ipam.png)
 
-Each segment is created as object of the type **Net zone**. Here the category folder of the same name is available. You can choose a **Zone color** in the subordinated **Options** category. This color is used in the category **Net → IP list.** Furthermore, the address ranges of the allocated subnets of the type **Layer 3 Net** are displayed in the subcategory **Scope**.
+Chaque segment est créé en tant qu'objet du type **Zone réseau**. Ici, le dossier de catégorie du même nom est disponible. Vous pouvez choisir une **Couleur de zone** dans la catégorie **Options** subordonnée. Cette couleur est utilisée dans la catégorie **Réseau → Liste IP.** De plus, les plages d'adresses des sous-réseaux alloués du type **Réseau de couche 3** sont affichées dans la sous-catégorie **Portée**.
 
-The assignment of an area to a subnet is carried out in the category **Net → IP list** of a subnet. First, you select an IP address or a range of IP addresses. Then you assign the segment to these IP addresses via the button **New area**. The IP addresses are highlighted in the colors of the net zones.
+L'attribution d'une zone à un sous-réseau est effectuée dans la catégorie **Réseau → Liste IP** d'un sous-réseau. Tout d'abord, vous sélectionnez une adresse IP ou une plage d'adresses IP. Ensuite, vous attribuez le segment à ces adresses IP via le bouton **Nouvelle zone**. Les adresses IP sont mises en surbrillance dans les couleurs des zones réseau.
 
-[![ip-adress-management](../assets/images/en/use-cases/ipam/2-ipam.png)](../assets/images/en/use-cases/ipam/2-ipam.png)
+[![gestion-adresse-ip](../assets/images/en/use-cases/ipam/2-ipam.png)](../assets/images/en/use-cases/ipam/2-ipam.png)
 
-In the **Host address** category the next available IP address is suggested automatically on basis of the selected net zones. The **Domain** attribute in the category **Net zone → Options** ensures that this domain is preselected automatically with newly assigned IP addresses in the **Host address** category.
+Dans la catégorie **Adresse hôte**, la prochaine adresse IP disponible est automatiquement suggérée sur la base des zones réseau sélectionnées. L'attribut **Domaine** dans la catégorie **Zone réseau → Options** garantit que ce domaine est présélectionné automatiquement avec les adresses IP nouvellement attribuées dans la catégorie **Adresse hôte**.
 
-DNS and FQDNs
+DNS et FQDN
 -------------
 
-When you want to maintain details referring to the applied Domain Name System (DNS) and/ or Fully Qualified Domain Names (FQDN), you can manage this with help of i-doit. You can store any number of **DNS servers** (object relation) and domains in the **Net** category for each **Layer 3 Net**. Varying settings regarding applied DNS servers and domains can be stored in the **Host address** category for each object. If an object has one or more host names (**Host address** category) and other details about the applied domains, the result are one or more FQDNs which are displayed automatically. Domains can be inherited through assignment to a net. Furthermore, you can also specify **Search domains**.
+Lorsque vous souhaitez conserver des détails se référant au Système de noms de domaine (DNS) et/ou aux Noms de domaine complets (FQDN) appliqués, vous pouvez gérer cela avec l'aide de i-doit. Vous pouvez stocker un nombre quelconque de **Serveurs DNS** (relation d'objet) et de domaines dans la catégorie **Réseau** pour chaque **Réseau de couche 3**. Des paramètres variables concernant les serveurs DNS et les domaines appliqués peuvent être stockés dans la catégorie **Adresse hôte** pour chaque objet. Si un objet a un ou plusieurs noms d'hôte (catégorie **Adresse hôte**) et d'autres détails sur les domaines appliqués, le résultat est un ou plusieurs FQDN qui sont affichés automatiquement. Les domaines peuvent être hérités par attribution à un réseau. De plus, vous pouvez également spécifier des **Domaines de recherche**.
 
-[![ip-adress-management](../assets/images/en/use-cases/ipam/3-ipam.png)](../assets/images/en/use-cases/ipam/3-ipam.png)
+[![gestion-adresse-ip](../assets/images/en/use-cases/ipam/3-ipam.png)](../assets/images/en/use-cases/ipam/3-ipam.png)
 
-Configuration data for DNS and DHCP server
+Données de configuration pour les serveurs DNS et DHCP
 
-Basically, the documented data are suited to equip DNS or DHCP servers with appropriate configuration data. i-doit contains an [export function for the DNS server ISC DHCPD](../automation-and-integration/cli/index.md).
+Fondamentalement, les données documentées sont adaptées pour équiper les serveurs DNS ou DHCP avec les données de configuration appropriées. i-doit contient une [fonction d'exportation pour le serveur DNS ISC DHCPD](../automation-and-integration/cli/index.md).
 
-DNS zones and records
+Zones DNS et enregistrements
 
-While DNS zones can be determined from the IT documentation with a few simple i-doit remedies, DNS records (A, AAAA, MX etc.) are not a core element at the moment. It is helpful to generate a user-defined list category containing the corresponding records. This category can be assigned to every object for which you want to store records. Reverse DNS is documented in objects of the type **Layer 3 Net**.
+Alors que les zones DNS peuvent être déterminées à partir de la documentation IT avec quelques remèdes simples i-doit, les enregistrements DNS (A, AAAA, MX, etc.) ne sont pas un élément central pour le moment. Il est utile de générer une catégorie de liste définie par l'utilisateur contenant les enregistrements correspondants. Cette catégorie peut être attribuée à chaque objet pour lequel vous souhaitez stocker des enregistrements. Le DNS inversé est documenté dans des objets de type **Layer 3 Net**.
 
-Gateways
---------
+Passerelles
+----------
 
-Net components can act as gateways to transfer connections from one net to other nets (routing). Usually, there is a so-called default gateway per net which is used when no explicit routing rule can be applied. Such a default gateway is specified in i-doit for each net: Either you select an object acting as a default gateway in the **Net** category of a **Layer 3 Net** object. Here it is important that this object already has an IP address which is allocated to this net. Or you select **Yes** for the attribute **Default gateway for the net** within the object in the **Host address** category.
+Les composants réseau peuvent agir comme passerelles pour transférer des connexions d'un réseau à d'autres réseaux (routage). Habituellement, il y a une passerelle par défaut par réseau qui est utilisée lorsque aucune règle de routage explicite ne peut être appliquée. Une telle passerelle par défaut est spécifiée dans i-doit pour chaque réseau : Soit vous sélectionnez un objet agissant comme passerelle par défaut dans la catégorie **Net** d'un objet **Layer 3 Net**. Il est important que cet objet ait déjà une adresse IP qui est attribuée à ce réseau. Ou vous sélectionnez **Oui** pour l'attribut **Passerelle par défaut pour le réseau** dans l'objet de la catégorie **Adresse hôte**.
 
 IPv4 versus IPv6
 ----------------
 
-Presumably, IPv6 is not widely spread in most company LANs, but nevertheless i-doit provides the basic elements for a documentation of IPv6 networks. Similar to the procedure with IPv4 you define networks and assign IP addresses. Only the **Address allocation** is different (SLAAC, DHCPv6, etc.). Moreover, you can specify the range of validity (global, linklocal etc.). Both attributes belong to the **Host address** category.
+Probablement, IPv6 n'est pas largement répandu dans la plupart des LAN d'entreprise, mais néanmoins i-doit fournit les éléments de base pour une documentation des réseaux IPv6. De manière similaire à la procédure avec IPv4, vous définissez des réseaux et attribuez des adresses IP. Seule l'**Allocation d'adresse** est différente (SLAAC, DHCPv6, etc.). De plus, vous pouvez spécifier la plage de validité (globale, linklocal, etc.). Les deux attributs appartiennent à la catégorie **Adresse hôte**.
 
 WLAN
 ----
 
-The documentation of WLANs does not differ fundamentally from the already mentioned options. You can document an access point (AP) as an object of the type **Wireless Access Point**. Among other things, SSIDs and specifications about encryption are maintained in the **WiFi device** category.
+La documentation des WLAN ne diffère pas fondamentalement des options déjà mentionnées. Vous pouvez documenter un point d'accès (AP) en tant qu'objet de type **Point d'accès sans fil**. Entre autres, les SSID et les spécifications sur le chiffrement sont maintenus dans la catégorie **Appareil WiFi**.
 
-WLAN controller
+Contrôleur WLAN
 
-In the default installation i-doit does not provide a direct possibility to map WLAN controllers to control access points. For this purpose, it makes sense to create a dedicated object type and to define a corresponding customized category.
+Dans l'installation par défaut, i-doit ne fournit pas directement la possibilité de mapper les contrôleurs WLAN pour contrôler les points d'accès. Dans ce but, il est judicieux de créer un type d'objet dédié et de définir une catégorie personnalisée correspondante.
 
 WAN
 ---
 
-In order to document external connections you can use the **WAN Connection** object type. WAN stands for Wide Area Network. Similar forms, such as Metropol Area Network (MAN) or Global Area Network (GAN) shall be covered by WAN.
+Pour documenter les connexions externes, vous pouvez utiliser le type d'objet **Connexion WAN**. WAN signifie Wide Area Network. Des formes similaires, telles que le Réseau Métropolitain (MAN) ou le Réseau d'Étendue Globale (GAN), doivent être couvertes par WAN.
 
-Details about upstream and downstream, assigned LANs and WANs etc., can be stored in the **WAN Connection** category.
+Les détails sur l'amont et l'aval, les LAN et WAN assignés, etc., peuvent être stockés dans la catégorie **Connexion WAN**.
 
 VPN
 ---
 
-The default installation of i-doit neither provides a dedicated object type nor a special category for virtual private networks (VPN). It is possible to use the **Layer 3 Net** object type and assign a significant name as **Object title** so that the object can be recognized as VPN. If you need additional attributes tailored for VPN, a dedicated object type and a user-defined category will help.
+L'installation par défaut d'i-doit ne fournit ni un type d'objet dédié ni une catégorie spéciale pour les réseaux privés virtuels (VPN). Il est possible d'utiliser le type d'objet **Réseau de Couche 3** et d'assigner un nom significatif en tant que **Titre de l'objet** afin que l'objet puisse être reconnu comme VPN. Si vous avez besoin d'attributs supplémentaires adaptés pour les VPN, un type d'objet dédié et une catégorie définie par l'utilisateur seront utiles.
 
-Related Subjects
+Sujets Connexes
 ----------------
 
-Often the IPAM documentation alone is not enough. There are many related subjects which play a more or less important role. We would like to address some of them in the following text.
+Souvent, la documentation IPAM seule ne suffit pas. Il existe de nombreux sujets connexes qui jouent un rôle plus ou moins important. Nous aimerions aborder certains d'entre eux dans le texte suivant.
 
-### MAC Addresses and Ports
+### Adresses MAC et Ports
 
-Often you also want to document the associated MAC addresses in addition to IP addresses for a host. The MAC addresses are allocated unambiguously to a network port. In i-doit the **Port** category in the category folder **Network** serves documentation purposes. Here you can specify additional (physical) characteristics of the port. Moreover, you can assign one ore more IP addresses to a certain port. As the **Port** category is a list category you can create any number of ports per object.
+Souvent, vous souhaitez également documenter les adresses MAC associées en plus des adresses IP pour un hôte. Les adresses MAC sont attribuées de manière univoque à un port réseau. Dans i-doit, la catégorie **Port** dans le dossier de catégories **Réseau** sert à des fins de documentation. Vous pouvez spécifier des caractéristiques (physiques) supplémentaires du port ici. De plus, vous pouvez assigner une ou plusieurs adresses IP à un port spécifique. Comme la catégorie **Port** est une catégorie de liste, vous pouvez créer un nombre illimité de ports par objet.
 
-It makes sense to define how many ports you want to create simultaneously. For this purpose, you can also apply a names scheme (eth0, eth1, eth2).
+Il est judicieux de définir combien de ports vous souhaitez créer simultanément. À cette fin, vous pouvez également appliquer un schéma de noms (eth0, eth1, eth2).
 
-A connection to another (active/ passive) net component per port entry is possible: In the **Port Browser** you preselect the object and then the corresponding port. Therefor the ports should already exist before you can connect them to each other.
+Une connexion à un autre composant réseau (actif/passif) par entrée de port est possible : Dans le **Navigateur de Ports**, vous présélectionnez l'objet, puis le port correspondant. Les ports doivent donc déjà exister avant de pouvoir les connecter les uns aux autres.
 
-### Virtual Ports
+### Ports Virtuels {/ * exemples * /}
 
-You can put together physical ports to logical ports. This method is often called trunking or bonding. The **Logical ports** category in the category folder **Network** enables you to document logical ports.
+Vous pouvez regrouper des ports physiques pour former des ports logiques. Cette méthode est souvent appelée regroupement ou liaison. La catégorie **Ports logiques** dans le dossier de catégorie **Réseau** vous permet de documenter les ports logiques.
 
-### Cabling
+### Câblage {/ * exemples * /}
 
-In i-doit you can differentiate clearly between the various layers of the [TCP/IP reference model](https://en.wikipedia.org/wiki/Internet_protocol_suite). The upper subjects treat the layers 3 with IP and 4 (MAC). For the other layers, i-doit provides further documentation functions, for example for layer 1, which concerns the physical medium.
+Dans i-doit, vous pouvez différencier clairement les différentes couches du [modèle de référence TCP/IP](https://fr.wikipedia.org/wiki/Suite_des_protocoles_Internet). Les sujets supérieurs traitent des couches 3 avec IP et 4 (MAC). Pour les autres couches, i-doit fournit d'autres fonctions de documentation, par exemple pour la couche 1, qui concerne le support physique.
 
-To document cables and their connections to active and passive components i-doit supplies numerous object types (**Cable**, **Patch Panel**, **Cable tray**, **Conduit** etc.). The connection of objects of these types is carried out in the category for cabling, which can be (but doesn't have to be) maintained actively. When you document a connection between two components via the **Port** category (network), this category will be filled automatically and an object of the type **Cable** will be generated.
+Pour documenter les câbles et leurs connexions aux composants actifs et passifs, i-doit fournit de nombreux types d'objets (**Câble**, **Panneau de brassage**, **Goulotte de câble**, **Conduit** etc.). La connexion des objets de ces types est effectuée dans la catégorie de câblage, qui peut être (mais ne doit pas nécessairement être) maintenue activement. Lorsque vous documentez une connexion entre deux composants via la catégorie **Port** (réseau), cette catégorie sera remplie automatiquement et un objet du type **Câble** sera généré.
 
-### Network Listener and Port Binding
+### Écouteur Réseau et Liaison de Port {/ * exemples * /}
 
-Just like the cabling you can document the upper layers of the TCP/IP reference model in i-doit. In the category folder **Network connections** you can see which application opens which TCP/UDP connections and which application addresses which ports regarding third-party systems. Within the folder you can find the categories **Listener** (port is opened) and **Connection** (port of third-party system is used). Beforehand you should ensure that the required software installations are documented in i-doit.
+Tout comme le câblage, vous pouvez documenter les couches supérieures du modèle de référence TCP/IP dans i-doit. Dans le dossier de catégorie **Connexions réseau**, vous pouvez voir quelle application ouvre quelles connexions TCP/UDP et quelles applications adressent quels ports par rapport aux systèmes tiers. Dans le dossier, vous trouverez les catégories **Écouteur** (le port est ouvert) et **Connexion** (le port du système tiers est utilisé). Au préalable, vous devriez vous assurer que les installations logicielles requises sont documentées dans i-doit.
 
-Further Links
+Liens Supplémentaires
 -------------
 
-*   [doIT BETTER: IP Address Management (IPAM)](https://www.i-doit.com/blog/ip-adress-management-mit-i-doit-pro/), German blog article with video at [i-doit.com](http://i-doit.com)
-*   [German demo](http://ipamdemo.i-doit.com/) regarding the above describes "doIT BETTER" subject (credentials: admin/admin)
+*   [doIT MIEUX : Gestion des Adresses IP (IPAM)](https://www.i-doit.com/blog/ip-adress-management-mit-i-doit-pro/), Article de blog en allemand avec vidéo sur [i-doit.com](http://i-doit.com)
+*   [Démo en allemand](http://ipamdemo.i-doit.com/) concernant le sujet "doIT MIEUX" décrit ci-dessus (identifiants : admin/admin)

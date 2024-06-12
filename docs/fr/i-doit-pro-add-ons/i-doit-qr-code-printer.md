@@ -1,106 +1,106 @@
-# i-doit QR Code Printer
+# Imprimante de codes QR i-doit
 
-The [i-doit QR code printer](./i-doit-qr-code-printer.md) allows you to print labels comfortably using your label printer. A configuration is provided for you to ensure that the formats match your requirements. If you scan the QR code with a smartphone or a tablet, for example, then you will be forwarded to the overview page of the labelled [object](../glossary.md).
+L'[imprimante de codes QR i-doit](./i-doit-qr-code-printer.md) vous permet d'imprimer des étiquettes confortablement à l'aide de votre imprimante d'étiquettes. Une configuration est fournie pour vous garantir que les formats correspondent à vos besoins. Si vous scannez le code QR avec un smartphone ou une tablette, par exemple, vous serez redirigé vers la page de présentation de l'[objet](../glossary.md) étiqueté.
 
 [![](../assets/images/en/i-doit-pro-add-ons/qr-code/1-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/1-qrc.png)
 
-Barcode
+Code-barres
 -------
 
-[![Barcode](../assets/images/en/i-doit-pro-add-ons/qr-code/2-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/2-qrc.png)
+[![Code-barres](../assets/images/en/i-doit-pro-add-ons/qr-code/2-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/2-qrc.png)
 
-A barcode or bar code is a method of representing data in a visual, machine-readable form. Initially, barcodes represented data by varying the widths and spacings of parallel lines. These barcodes, now commonly referred to as linear or one-dimensional, can be scanned by special optical scanners, called barcode readers, of which there are several types
+Un code-barres est une méthode de représentation des données sous une forme visuelle lisible par une machine. Initialement, les codes-barres représentaient des données en faisant varier les largeurs et les espacements des lignes parallèles. Ces codes-barres, maintenant communément appelés linéaires ou unidimensionnels, peuvent être scannés par des scanners optiques spéciaux, appelés lecteurs de codes-barres, dont il existe plusieurs types.
 
-QR-Code
+Code QR
 -------
 
-[![QR-Code](../assets/images/en/i-doit-pro-add-ons/qr-code/3-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/3-qrc.png)
+[![Code QR](../assets/images/en/i-doit-pro-add-ons/qr-code/3-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/3-qrc.png)
 
-A QR code (an initialism for Quick Response code) is a type of matrix barcode (or two-dimensional barcode) invented in 1994 by the Japanese automotive company Denso Wave. A barcode is a machine-readable optical label that contains information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or tracker that points to a website or application. A QR code uses four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently; extensions may also be used.
+Un code QR (acronyme de Quick Response code) est un type de code-barres matriciel (ou code-barres bidimensionnel) inventé en 1994 par la société automobile japonaise Denso Wave. Un code-barres est une étiquette optique lisible par une machine qui contient des informations sur l'objet auquel il est attaché. En pratique, les codes QR contiennent souvent des données pour un localisateur, un identifiant ou un suivi qui pointe vers un site Web ou une application. Un code QR utilise quatre modes d'encodage normalisés (numérique, alphanumérique, octet/binaire et kanji) pour stocker efficacement des données ; des extensions peuvent également être utilisées.
 
-Configuration QR code or barcode
+Configuration du code QR ou du code-barres
 --------------------------------
 
-You can find the configuration within i-doit under Administration → System Settings → Tenantsettings → QR-Code
+Vous pouvez trouver la configuration dans i-doit sous Administration → Paramètres système → Paramètres du locataire → Code QR
 
-[![Configuration QR code or barcode](../assets/images/en/i-doit-pro-add-ons/qr-code/4-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/4-qrc.png)
+[![Configuration du code QR ou du code-barres](../assets/images/en/i-doit-pro-add-ons/qr-code/4-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/4-qrc.png)
 
-Configuration of the QR-Code content
+Configuration du contenu du code QR
 ------------------------------------
 
-Which information from i-doit should be stored in the QR code can be configured here Administration → CMDB Settings → QR-Code
+Les informations provenant d'i-doit qui doivent être stockées dans le code QR peuvent être configurées ici Administration → Paramètres CMDB → Code QR
 
-[![Configuration of the QR-Code content](../assets/images/en/i-doit-pro-add-ons/qr-code/5-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/5-qrc.png)
+[![Configuration du contenu du code QR](../assets/images/en/i-doit-pro-add-ons/qr-code/5-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/5-qrc.png)
 
-Global definition
+Définition globale
 -----------------
 
-If global definition is selected, it is possible to fill the information stored in the QR code with the following placeholders:
+Si la définition globale est sélectionnée, il est possible de remplir les informations stockées dans le code QR avec les espaces réservés suivants :
 
-[![Global definition](../assets/images/en/i-doit-pro-add-ons/qr-code/6-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/6-qrc.png)
+[![Définition globale](../assets/images/en/i-doit-pro-add-ons/qr-code/6-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/6-qrc.png)
 
-Primary access URL
+URL d'accès principal
 ------------------
 
-If Primary access URL is selected, the URL stored in the object flows into the QR code as the only information.
+Si l'URL d'accès principal est sélectionnée, l'URL stockée dans l'objet est intégrée dans le code QR comme seule information.
 
-QR code linking
+Lien du code QR
 ---------------
 
-Here you can select which function is triggered when you click on the respective code.  
-You can choose between the [i-doit QR-Code Printer Tool](./i-doit-qr-code-printer.md) or a POP UP with the standard print function of the respective operating system.
+Ici, vous pouvez sélectionner la fonction déclenchée lorsque vous cliquez sur le code respectif.  
+Vous pouvez choisir entre l'outil [i-doit QR-Code Printer](./i-doit-qr-code-printer.md) ou une POP UP avec la fonction d'impression standard du système d'exploitation respectif.
 
-Text template
+Modèle de texte
 -------------
 
-Here it is possible to use free text, but also with the placeholders information from i-doit and format the label accordingly.
+Ici, il est possible d'utiliser du texte libre, mais aussi avec les informations des espaces réservés d'i-doit et de formater l'étiquette en conséquence.
 
-Logo for print view
+Logo pour la vue d'impression
 -------------------
 
-Here you can upload and link an image file, this will be used automatically when creating the label.
+Ici, vous pouvez télécharger et lier un fichier image, qui sera utilisé automatiquement lors de la création de l'étiquette.
 
 i-doit QR Code Printer
 ----------------------
 
-With the i-doit QR-Code Printer you can easily print labels on your label printer.  
-For this purpose, a configuration is available so that the formats correspond exactly to your specifications.  
-If the QR code is scanned with a smartphone or tablet, for example, you will be redirected to the overview page of the labeled [object](../glossary.md).
+Avec l'i-doit QR-Code Printer, vous pouvez facilement imprimer des étiquettes sur votre imprimante d'étiquettes.  
+À cette fin, une configuration est disponible pour que les formats correspondent exactement à vos spécifications.  
+Si le code QR est scanné avec un smartphone ou une tablette, par exemple, vous serez redirigé vers la page de présentation de l'objet [étiqueté](../glossary.md).
 
-Start and Configuration
+Démarrage et Configuration
 -----------------------
 
-You can download the QR code printer in our [customer portal](../system-administration/customer-portal.md). The i-doit QR code printer is a Windows application which can be run immediately. No installation is needed.
+Vous pouvez télécharger l'imprimante de codes QR dans notre [portail client](../system-administration/customer-portal.md). L'imprimante de codes QR i-doit est une application Windows qui peut être exécutée immédiatement. Aucune installation n'est nécessaire.
 
-The first step upon starting the application is to set up a connection to your i-doit installation, so that the tool can read the information. The possibility to set the connection is provided in the **i-doit API settings** area at **File →** **Options**. The URL to your i-doit _i_nstallation, the API key as well as the credentials of an i-doit user with the corresponding permissions are needed for [access via the API](./api/index.md).
+La première étape lors du démarrage de l'application est de configurer une connexion à votre installation i-doit, afin que l'outil puisse lire les informations. La possibilité de configurer la connexion est fournie dans la zone des **paramètres de l'API i-doit** dans **Fichier →** **Options**. L'URL de votre installation i-doit, la clé API ainsi que les identifiants d'un utilisateur i-doit avec les autorisations correspondantes sont nécessaires pour [l'accès via l'API](./api/index.md).
 
-The i-doit API key
+La clé API i-doit
 
-You can find the API key of your installation in i-doit at **Administration → Interfaces / external data → JSON-RPC API**.
+Vous pouvez trouver la clé API de votre installation dans i-doit à **Administration → Interfaces / données externes → API JSON-RPC**.
 
-Configuration of the Print Parameters
--------------------------------------
-  
-At **File → Options**you can find the possibility to adjust any settings needed for your printer.  
-Here you can set the margins as well as the size of the label.
+Configuration des Paramètres d'Impression
+-----------------------------------------
 
-You can also define the positioning of the QR code via spacing in pixels and the size of the QR code.  
-If you want to use a different font, font size and font direction, you can adjust these values according to your wishes at **QR-code positioning**.  
-You can also specify the logo for your labels in the options.  
-Choose the desired logo using a common image format via **Path** and position it using the corresponding parameters.  
-It makes sense to define the Dymo label writer as default printer and to change the default paper orientation for printing to horizontal.
+Dans **Fichier → Options**, vous pouvez trouver la possibilité d'ajuster tous les paramètres nécessaires pour votre imprimante.  
+Ici, vous pouvez définir les marges ainsi que la taille de l'étiquette.
 
-Printing of Labels
+Vous pouvez également définir le positionnement du code QR via l'espacement en pixels et la taille du code QR.  
+Si vous souhaitez utiliser une police, une taille de police et une direction de police différentes, vous pouvez ajuster ces valeurs selon vos souhaits à **Positionnement du code QR**.  
+Vous pouvez également spécifier le logo pour vos étiquettes dans les options.  
+Choisissez le logo souhaité en utilisant un format d'image courant via **Chemin** et positionnez-le en utilisant les paramètres correspondants.  
+Il est judicieux de définir l'imprimante d'étiquettes Dymo comme imprimante par défaut et de changer l'orientation par défaut du papier pour l'impression en horizontal.
 
-Once the connection was configured successfully and the settings meet your requirements, you can start printing your labels. To do so, enter the object ID of the object for which you want to print a label. Now the contents of the bar code information will be carried over according to the contents of i-doit. Of course, you can edit this information at any time.
+Impression des Étiquettes
 
-Once the information has been loaded, you can either print, save or export the QR code using the icons or via the **File** item in the context menu. The export takes place using the .bmp image format.
+Une fois que la connexion a été configurée avec succès et que les paramètres répondent à vos besoins, vous pouvez commencer à imprimer vos étiquettes. Pour ce faire, saisissez l'ID de l'objet pour lequel vous souhaitez imprimer une étiquette. Maintenant, les contenus des informations du code-barres seront transférés en fonction des contenus de i-doit. Bien sûr, vous pouvez modifier ces informations à tout moment.
 
-[![Configuration of the Print Parameters](../assets/images/en/i-doit-pro-add-ons/qr-code/7-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/7-qrc.png)
+Une fois que les informations ont été chargées, vous pouvez soit imprimer, enregistrer ou exporter le code QR en utilisant les icônes ou via l'élément **Fichier** dans le menu contextuel. L'export se fait en utilisant le format d'image **.bmp**.
+
+[![Configuration des Paramètres d'Impression](../assets/images/en/i-doit-pro-add-ons/qr-code/7-qrc.png)](../assets/images/en/i-doit-pro-add-ons/qr-code/7-qrc.png)
 
 Releases
 --------
 
-| Version | Datum | Changelog |
+| Version | Date | Changelog |
 | --- | --- | --- |
-| 1.5 | 2023-01-24 | \[Bug\]  Fix the configuration of the Text margin |
+| 1.5 | 2023-01-24 | \[Bug\]  Corriger la configuration de la marge de texte |

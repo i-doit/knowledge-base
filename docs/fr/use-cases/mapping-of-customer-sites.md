@@ -1,22 +1,22 @@
-# Mapping of Customer Sites
+# Cartographie des sites clients
 
-Customers often have several locations which shall be represented in a hierarchy and individually assigned to IT components.
+Les clients ont souvent plusieurs sites qui doivent être représentés dans une hiérarchie et attribués individuellement aux composants informatiques.
 
-Approach
+Approche
 --------
 
-We provide our customers with hardware and software components. Therefore, it is essential to document both our customers and the IT components they use. To generate a simple overview, we want to use the i-doit location view.
+Nous fournissons à nos clients des composants matériels et logiciels. Il est donc essentiel de documenter à la fois nos clients et les composants informatiques qu'ils utilisent. Pour générer un aperçu simple, nous voulons utiliser la vue de localisation i-doit.
 
 [![mapping-ocs](../assets/images/en/use-cases/mapping-of-customer-sites/1-mocs.png)](../assets/images/en/use-cases/mapping-of-customer-sites/1-mocs.png)[![mapping-ocs](../assets/images/en/use-cases/mapping-of-customer-sites/2-mocs.png)](../assets/images/en/use-cases/mapping-of-customer-sites/2-mocs.png)
 
 Configuration
 -------------
 
-All you need for the configuration can be found in the **O****bject Type Configuration** under **Administration → CMDB Settings**. Save customers in the independent object type **Customer**. Define the object type as **location**. The categories **Location** and **Locally assigned objects** should be assigned at least. Further categories may be useful (**Organization**, **Address**, **Email addresses**, **Contact assignment**, **Access**) to document the customers as detailed as needed.
+Tout ce dont vous avez besoin pour la configuration se trouve dans la **Configuration du type d'objet** sous **Administration → Paramètres de la CMDB**. Enregistrez les clients dans le type d'objet indépendant **Client**. Définissez le type d'objet comme **localisation**. Les catégories **Localisation** et **Objets attribués localement** doivent être attribuées au moins. D'autres catégories peuvent être utiles (**Organisation**, **Adresse**, **Adresses e-mail**, **Affectation de contact**, **Accès**) pour documenter les clients aussi en détail que nécessaire.
 
 [![mapping-ocs](../assets/images/en/use-cases/mapping-of-customer-sites/3-mocs.png)](../assets/images/en/use-cases/mapping-of-customer-sites/3-mocs.png)[![mapping-ocs](../assets/images/en/use-cases/mapping-of-customer-sites/4-mocs.png)](../assets/images/en/use-cases/mapping-of-customer-sites/4-mocs.png) 
 
 Application
 -----------
 
-When creating a new customer, the customer should be assigned to the [root location](../glossary.md). Nested constructs with sub-customers are feasible as well. For this, sub-customers are locally assigned to other customers. Below the customers, any number of objects can be assigned. Use the category "Locally assigned objects" or alternatively the category "Location" within the objects that you want to assign.
+Lors de la création d'un nouveau client, le client doit être attribué à la [localisation racine](../glossary.md). Des constructions imbriquées avec des sous-clients sont également possibles. Pour cela, les sous-clients sont attribués localement à d'autres clients. Sous les clients, un nombre quelconque d'objets peut être attribué. Utilisez la catégorie "Objets attribués localement" ou alternativement la catégorie "Localisation" dans les objets que vous souhaitez attribuer.

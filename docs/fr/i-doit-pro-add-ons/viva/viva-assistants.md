@@ -1,124 +1,126 @@
-# VIVA Assistants
+# Assistants VIVA {/ * exemples *}
 
-While the chapter on the procedure with VIVA describes a manual way to document all information relevant to IT-Grundschutz, the VIVA add-on includes a large number of wizards to make this way partially automated. The wizards analyze the data in VIVA and in i-doit's CMDB in advance to generate suggestions that the user can subsequently edit and/or adopt. Complex interrelationships within the information network thus become visible. The user thus has the possibility to document faster and more comfortably.
+Alors que le chapitre sur la procédure avec VIVA décrit une manière manuelle de documenter toutes les informations pertinentes pour l'IT-Grundschutz, l'extension VIVA comprend un grand nombre de assistants pour rendre ce processus partiellement automatisé. Les assistants analysent les données dans VIVA et dans la CMDB de i-doit à l'avance pour générer des suggestions que l'utilisateur peut ensuite éditer et/ou adopter. Les interrelations complexes au sein du réseau d'informations deviennent ainsi visibles. L'utilisateur a donc la possibilité de documenter plus rapidement et plus confortablement.
 
-The wizards can be found below each information network as buttons in the respective action and navigation bars. When a wizard is called up, a popup opens that fits seamlessly into the VIVA interface. The wizards all work according to a similar scheme:
+Les assistants se trouvent en dessous de chaque réseau d'informations sous forme de boutons dans les barres d'actions et de navigation respectives. Lorsqu'un assistant est appelé, une fenêtre contextuelle s'ouvre qui s'intègre parfaitement dans l'interface VIVA. Les assistants fonctionnent tous selon un schéma similaire :
 
-1.  Analyze data from VIVA and/or i-doit's IT documentation.
-2.  Compile suggestions and prepare them visually
-3.  Post-processing of proposals by the user
-4.  Save or discard proposals by the user
+1. Analyser les données de VIVA et/ou de la documentation IT de i-doit.
+2. Compiler des suggestions et les préparer visuellement.
+3. Post-traitement des propositions par l'utilisateur.
+4. Enregistrer ou rejeter les propositions par l'utilisateur.
 
-The wizards support an extensive process that runs through a significant portion of the documentation. This process is explained as a possible procedure in the chapter Example of a possible workflow.
+Les assistants soutiennent un processus étendu qui parcourt une partie significative de la documentation. Ce processus est expliqué comme une procédure possible dans le chapitre Exemple d'un flux de travail possible.
 
-The specific features of the various wizards are discussed below. These are divided into target group wizards and protection requirement wizards.
+Les fonctionnalités spécifiques des différents assistants sont discutées ci-dessous. Ils sont divisés en assistants de groupes cibles et en assistants d'exigences de protection.
 
-Target group wizards
+Assistants de groupes cibles
 --------------------
 
-This type of wizard suggests suitable target groups based on existing data. New target groups with IT-Grundschutz number and designation can thus be created conveniently. Suggestions can be discarded or, if appropriate, extended. The individual wizards are explained in more detail below. The sequence refers to the possible procedure described in the appendix Example of a possible workflow. The wizards can be found within the respective layers.
+Ce type d'assistant suggère des groupes cibles adaptés en fonction des données existantes. De nouveaux groupes cibles avec un numéro et une désignation IT-Grundschutz peuvent ainsi être créés de manière pratique. Les suggestions peuvent être rejetées ou, si approprié, étendues. Les assistants individuels sont expliqués plus en détail ci-dessous. La séquence se réfère à la procédure possible décrite dans l'annexe Exemple d'un flux de travail possible. Les assistants se trouvent dans les couches respectives.
 
-IT Service Wizard (Layer 5 Applications)
+Assistant de Service IT (Couche 5 Applications)
 ----------------------------------------
 
-This wizard analyzes the CIs of type Service in the IT documentation of i-doit, more precisely: the category Service Components. The components are analyzed from various points of view and, if necessary, added to the list of target objects to be proposed. A recursive approach is used. The following CIs are suggested if they are found:
+Cet assistant analyse les CI de type Service dans la documentation IT de i-doit, plus précisément : la catégorie Composants de Service. Les composants sont analysés sous différents angles et, si nécessaire, ajoutés à la liste des objets cibles à proposer. Une approche récursive est utilisée. Les CI suivants sont suggérés s'ils sont trouvés :
 
-*   The service itself
-*   Subordinate services; their components are analyzed in turn
-*   Software CIs
-*   Installed software of components (based on the category software assignment i.e. CIs of type application, system service, operating system, etc.)
-*   Installed software (based on the dependency object)
-*   Members of object groups
-*   Members of clusters
-*   Cluster services
+*   Le service lui-même
+*   Services subordonnés ; leurs composants sont analysés tour à tour
+*   CIs logiciels
+*   Logiciels installés des composants (basés sur la catégorie d'attribution de logiciel, c'est-à-dire les CIs de type application, service système, système d'exploitation, etc.)
+*   Logiciels installés (basés sur l'objet de dépendance)
+*   Membres des groupes d'objets
+*   Membres des clusters
+*   Services de cluster
 
-Even if no matching CIs are identified, a proposal is generated from the service. The overall result of the analysis - and thus the proposal - consists of a list of services whose names (consisting of the object title) are used for the group identifiers, and optionally matching CIs that meet the criteria of the layer, i.e. represent an application in the broader sense.  
-**Example**: In i-doit's IT documentation there is an object of type Service called "Web". In its Service Components category, three objects are linked: a software object of type Applications ("Apache HTTP Server"), an object of type Server ("Web Server") on which an application is installed (category Software Assignment; namely "Shop"), and a Relationship object (which represents a software assignment; namely "nginx running on reverse proxy"). From this, the proposal for a target group is generated: The name corresponds to the service, hence "web". The application "Apache HTTP Server", "Shop" and "ngnix" are taken as linked target objects.
+Même si aucun CI correspondant n'est identifié, une proposition est générée à partir du service. Le résultat global de l'analyse - et donc de la proposition - se compose d'une liste de services dont les noms (composés du titre de l'objet) sont utilisés pour les identifiants de groupe, et éventuellement des CIs correspondants qui répondent aux critères de la couche, c'est-à-dire représentent une application au sens large.  
+**Exemple** : Dans la documentation informatique de i-doit, il y a un objet de type Service appelé "Web". Dans sa catégorie de composants de service, trois objets sont liés : un objet logiciel de type Applications ("Serveur HTTP Apache"), un objet de type Serveur ("Serveur Web") sur lequel une application est installée (catégorie Attribution de logiciel ; à savoir "Shop"), et un objet de Relation (qui représente une attribution de logiciel ; à savoir "nginx exécuté sur un proxy inverse"). À partir de cela, la proposition pour un groupe cible est générée : Le nom correspond au service, donc "web". L'application "Serveur HTTP Apache", "Shop" et "ngnix" sont pris comme objets cibles liés.
 
-Application Wizard (Layer 3 IT Systems)
+Assistant d'Application (Systèmes IT de Couche 3)
 ---------------------------------------
 
-This wizard is useful for suggesting target groups from the IT systems layer. It uses data from layer 5 Applications. If there are target groups whose target objects have a relation to potential target objects of this layer, they are grouped and suggested as one or more groups.
+Cet assistant est utile pour suggérer des groupes cibles à partir de la couche des systèmes IT. Il utilise des données de la couche 5 Applications. S'il existe des groupes cibles dont les objets cibles ont une relation avec des objets cibles potentiels de cette couche, ils sont regroupés et suggérés comme un ou plusieurs groupes.
 
-**Example**: Layer 5 Applications contains the group "A 1 Web". The target object "Apache HTTP Server" is contained there, which results from the object with the same name in the CMDB. This (software) object is installed on a server ("Web server") (category Installation or Software assignments). This server is therefore suitable as a target object for a group in layer 3 IT systems. If this target object has not yet been assigned to a target group, the proposal is generated to create a target group that contains the CI "Web server".
+**Exemple** : La couche 5 Applications contient le groupe "A 1 Web". L'objet cible "Serveur HTTP Apache" y est contenu, ce qui résulte de l'objet du même nom dans la CMDB. Cet objet (logiciel) est installé sur un serveur ("Serveur Web") (catégorie Installation ou Attribution de logiciel). Ce serveur est donc adapté en tant qu'objet cible pour un groupe dans la couche 3 des systèmes IT. Si cet objet cible n'a pas encore été attribué à un groupe cible, la proposition est générée pour créer un groupe cible qui contient le CI "Serveur Web".
 
-IT System Assistant (Layer 2 Infrastructure)
---------------------------------------------
+Assistant du Système Informatique (Infrastructure de Couche 2)
+--------------------------------------------------------------
 
-Buildings and rooms contain hardware components. If there are corresponding target groups for the hardware in layer 3 IT systems, it is advisable to group these buildings and rooms into target groups as well. This wizard takes care of this. It analyzes the location assignments from already existing target objects of layer 3 and generates suggestions for target groups from layer 2 infrastructure. Here, all target objects of layer 3 are taken into account that have a location assignment but whose location has not yet been recorded as a target object of a group in layer 2. All container objects are considered as layer 2 target objects, i.e., objects whose object type is suitable as a location. The suggestions are recursive, consequently the entire chain of location assignments is considered (excluding "root location").
+Les bâtiments et les salles contiennent des composants matériels. S'il existe des groupes cibles correspondants pour le matériel dans les systèmes informatiques de couche 3, il est conseillé de regrouper également ces bâtiments et salles dans des groupes cibles. Cet assistant s'occupe de cela. Il analyse les affectations de localisation des objets cibles déjà existants de la couche 3 et génère des suggestions de groupes cibles à partir de l'infrastructure de couche 2. Ici, tous les objets cibles de la couche 3 sont pris en compte qui ont une affectation de localisation mais dont la localisation n'a pas encore été enregistrée en tant qu'objet cible d'un groupe dans la couche 2. Tous les objets conteneurs sont considérés comme des objets cibles de la couche 2, c'est-à-dire des objets dont le type d'objet est adapté comme emplacement. Les suggestions sont récursives, par conséquent toute la chaîne d'affectations de localisation est prise en compte (à l'exception de "l'emplacement racine").
 
-**Example**: In layer 2 IT systems, the target group "S 1 Web server" exists, to which the target object "Web server" is assigned. This server is located in the room "Server Room I". The room is located in the "Main building". If not already done, the wizard suggests creating a target group that includes the room and the building.
+**Exemple** : Dans les systèmes informatiques de couche 2, le groupe cible "Serveur Web S 1" existe, auquel l'objet cible "Serveur Web" est assigné. Ce serveur est situé dans la salle "Salle des serveurs I". La salle se trouve dans le "Bâtiment principal". Si ce n'est pas déjà fait, l'assistant suggère de créer un groupe cible qui inclut la salle et le bâtiment.
 
-IT System Wizard (Layer 4 Networks)
------------------------------------
+Assistant du Système Informatique (Réseaux de Couche 4)
+------------------------------------------------------
 
-In i-doit's IT documentation, there are many ways to document connections between two objects. One essential one is the connection via network ports. In this way, entire network infrastructures can be modeled down to the smallest detail. This wizard uses this data to suggest communication connections between target groups. These target groups all originate from layer 3 IT systems. Accordingly, the wizard analyzes target objects from layer 3 that correspond to an object in the CMDB that has entries in the Network Ports category. As in the Port Overview category, there may be a connection between two or more objects with a beginning (the object itself), intermediate objects (for example, passive components such as patch panels), and an end object that is used for further analysis. If there is a target object in layer 3 IT systems for this end object, it is examined whether this target object is assigned to a target group that does not yet have a communication link with the target group of the start object. If this is the case, both target groups are suggested as communication links.
+Dans la documentation informatique d'i-doit, il existe de nombreuses façons de documenter les connexions entre deux objets. L'une des plus essentielles est la connexion via les ports réseau. De cette manière, des infrastructures réseau entières peuvent être modélisées jusqu'au moindre détail. Cet assistant utilise ces données pour suggérer des connexions de communication entre les groupes cibles. Ces groupes cibles proviennent tous des systèmes informatiques de couche 3. En conséquence, l'assistant analyse les objets cibles de la couche 3 qui correspondent à un objet dans la CMDB qui a des entrées dans la catégorie Ports Réseau. Comme dans la catégorie Aperçu des Ports, il peut y avoir une connexion entre deux objets ou plus avec un début (l'objet lui-même), des objets intermédiaires (par exemple, des composants passifs tels que des panneaux de brassage) et un objet final qui est utilisé pour une analyse ultérieure. S'il existe un objet cible dans les systèmes informatiques de couche 3 pour cet objet final, il est examiné si cet objet cible est assigné à un groupe cible qui n'a pas encore de lien de communication avec le groupe cible de l'objet de départ. Si tel est le cas, les deux groupes cibles sont suggérés comme liens de communication.
 
-Communication links ultimately lead to a "cleaned network" that abstracts from the details and allows only essential information to maintain clarity. Therefore, it is also necessary to abstract from the richness of detail in the CMDB data, which the wizard attempts to relieve the user of.
+Les liens de communication mènent finalement à un "réseau nettoyé" qui abstrait des détails et ne permet que les informations essentielles pour maintenir la clarté. Par conséquent, il est également nécessaire d'abstraire de la richesse des détails dans les données de la CMDB, que le wizard tente de soulager l'utilisateur.
 
-**Example**: An object of type Server with the designation "Web server" belongs as a target object to the target group "S 1 Web server" (layer 3 IT systems). The target group "SW 1 Switch" also exists in this layer with the target object "Switch I", behind which the object of the same name is hidden in the CMDB. In the CMDB, both objects are connected via the port category. The fact that passive components such as patch panels are interposed between the two also has no effect. If both target groups do not yet have a common communication link in layer 3 networks, the wizard will suggest one.
+**Exemple**: Un objet de type Serveur avec la désignation "Serveur Web" appartient en tant qu'objet cible au groupe cible "S 1 Serveur Web" (systèmes informatiques de couche 3). Le groupe cible "SW 1 Switch" existe également dans cette couche avec l'objet cible "Switch I", derrière lequel l'objet du même nom est caché dans la CMDB. Dans la CMDB, les deux objets sont connectés via la catégorie de port. Le fait que des composants passifs tels que des panneaux de brassage soient interposés entre les deux n'a également aucun effet. Si les deux groupes cibles n'ont pas encore de lien de communication commun dans les réseaux de couche 3, le wizard en suggérera un.
 
-IT system wizard (layer 5 applications)
----------------------------------------
+Wizard du système informatique (applications de couche 5)
+-------------------------------------------------------
 
-This wizard proceeds analogously to the application wizard (layer 3 IT systems): Based on the target groups in layer 3, suggestions for target groups in layer 5 applications are generated. For this purpose, the category Software Assignment in the CMDB of i-doit is used.
+Ce wizard procède de manière analogue au wizard des applications (systèmes informatiques de couche 3) : Sur la base des groupes cibles de la couche 3, des suggestions de groupes cibles dans les applications de la couche 5 sont générées. À cette fin, la catégorie Affectation de logiciel dans la CMDB d'i-doit est utilisée.
 
-Infrastructure Wizard (Layer 3 IT Systems)
-------------------------------------------
+Wizard d'infrastructure (systèmes informatiques de couche 3)
+-----------------------------------------------------------
 
-Similar to the previous wizard, this wizard behaves in the same way as the IT system wizard (layer 2 infrastructure). Target groups from layer 2 infrastructure are analyzed to see if layer 3 target groups can be generated from them. The Location Assignment category in i-doit's CMDB is used for this purpose.
+Similaire au wizard précédent, ce wizard se comporte de la même manière que le wizard du système informatique (infrastructure de couche 2). Les groupes cibles de l'infrastructure de couche 2 sont analysés pour voir si des groupes cibles de couche 3 peuvent en être générés. La catégorie Affectation de localisation dans la CMDB d'i-doit est utilisée à cette fin.
 
-Protection needs wizards
-------------------------
+Wizards des besoins de protection
+---------------------------------
 
-Wizards of this type make suggestions as to how the protection requirement should be designed. For this purpose, related target groups are analyzed, resulting in an inheritance of the protection requirement as suggested in the BSI standard. (See BSI Standard 100-2, Chapter 4.3 Determining protection needs.) In brief, the highest protection class (normal, high, very high) is inherited for each basic value (confidentiality, integrity, availability). The examples in the following sections illustrate the principle.
+Les wizards de ce type font des suggestions sur la manière dont le besoin de protection devrait être conçu. À cette fin, les groupes cibles associés sont analysés, ce qui entraîne une héritage du besoin de protection tel que suggéré dans la norme BSI. (Voir Norme BSI 100-2, Chapitre 4.3 Détermination des besoins de protection.) En bref, la classe de protection la plus élevée (normale, élevée, très élevée) est héritée pour chaque valeur de base (confidentialité, intégrité, disponibilité). Les exemples dans les sections suivantes illustrent le principe.
 
-The wizards are located within the target groups to directly assist in the respective protection requirement determination. If the protection requirement is to be processed for several target groups at the same time, the wizards are located within the layers. In the following, the respective wizard of a layer is discussed. Suggestions can be generated for layers 2 infrastructure and 3 IT systems.
+Les sorciers sont situés au sein des groupes cibles pour aider directement à déterminer les besoins de protection respectifs. Si le besoin de protection doit être traité pour plusieurs groupes cibles en même temps, les sorciers sont situés au sein des couches. Dans ce qui suit, le sorcier respectif d'une couche est discuté. Des suggestions peuvent être générées pour les couches 2 infrastructure et 3 systèmes informatiques.
 
-Protection Needs Wizard (Layer 3 IT systems).
+Sorcier des Besoins de Protection (Couche 3 Systèmes informatiques).
 ---------------------------------------------
 
-Similar to the Application Wizard (layer 3 IT systems), the target groups of layer 5 applications are analyzed to determine whether they are related to a specific group (or groups) of this layer. Here, the software assignment/installation information is used.
+Tout comme le Sorcier des Applications (couche 3 Systèmes informatiques), les groupes cibles de la couche 5 applications sont analysés pour déterminer s'ils sont liés à un groupe spécifique (ou des groupes) de cette couche. Ici, les informations d'attribution/installation de logiciels sont utilisées.
 
-**Example**: The target group "Website" exists in layer 5 Applications. The protection requirement is set as follows:
+**Exemple**: Le groupe cible "Site Web" existe dans la couche 5 Applications. Le besoin de protection est défini comme suit :
 
-*   Confidentiality: normal
-*   Integrity: normal
-*   Availability: very high
+*   Confidentialité : normale
+*   Intégrité : normale
+*   Disponibilité : très élevée
 
-In addition, the target group "Forum" exists in the same layer with the protection requirement set:
+De plus, le groupe cible "Forum" existe dans la même couche avec le besoin de protection défini comme suit :
 
-*   Confidentiality: high
-*   Integrity: normal
-*   Availability: high
+*   Confidentialité : élevée
+*   Intégrité : normale
+*   Disponibilité : élevée
 
-In layer 3 IT systems there is the corresponding target group "Web server" on which the website and the forum are hosted. The wizard now suggests the following protection requirement:
+Dans la couche 3 Systèmes informatiques, il y a le groupe cible correspondant "Serveur Web" sur lequel le site web et le forum sont hébergés. Le sorcier suggère maintenant le besoin de protection suivant :
 
-*   Confidentiality: high
-*   Integrity: normal
-*   Availability: very high
+*   Confidentialité : élevée
+*   Intégrité : normale
+*   Disponibilité : très élevée
 
-Protection Needs Wizard (Layer 2 Infrastructure)
+Sorcier des Besoins de Protection (Couche 2 Infrastructure)
 ------------------------------------------------
 
-As with the IT System Wizard (Layer 2 Infrastructure), the site assignment is analyzed to determine the protection needs of a target group (or groups) in Layer 2 that is related to a target group in Layer 3 IT systems.
+Tout comme le Sorcier des Systèmes Informatiques (Couche 2 Infrastructure), l'attribution de site est analysée pour déterminer les besoins de protection d'un groupe cible (ou des groupes) dans la Couche 2 qui est lié à un groupe cible dans la Couche 3 Systèmes informatiques.
 
-**Example**: There is a target group "server room" in layer 2. There are two servers in this room, which are covered by the target groups "e-mail server" and "web server" in layer 3.
+**Exemple**: Il y a un groupe cible "salle des serveurs" dans la couche 2. Il y a deux serveurs dans cette salle, qui sont couverts par les groupes cibles "serveur de messagerie" et "serveur web" dans la couche 3.
 
-Protection requirement of "e-mail server":
+Besoin de protection du "serveur de messagerie" :
 
-*   Confidentiality: very high
-*   Integrity: high
-*   Availability: very high
+*   Confidentialité : très élevée
+*   Intégrité : élevée
+*   Disponibilité : très élevée
 
-Protection requirement of "Web server":
+Besoin de protection du "Serveur Web" :
 
-*   Confidentiality: high
-*   Integrity: normal
-*   Availability: very high
+*   Confidentialité : élevée
+*   Intégrité : normale
+*   Disponibilité : très élevée
 
-Based on the location assignment, the wizard suggests the following protection requirement for "Server room":
+Selon l'attribution de l'emplacement, le sorcier suggère l'exigence de protection suivante pour "Salle des serveurs":
 
-*   Confidentiality: very high
-*   Integrity: high
-*   Availability: very high
+*   Confidentialité : très élevée
+*   Intégrité : élevée
+*   Disponibilité : très élevée
+
+{/*examples*/}

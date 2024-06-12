@@ -34,6 +34,7 @@ The relocation will additionally be logged in the relocation logbook under **Ext
 
 [![Logbook](../assets/images/en/i-doit-pro-add-ons/relocate-ci/8-rlci.png)](../assets/images/en/i-doit-pro-add-ons/relocate-ci/8-rlci.png)
 
+
 Releases
 --------
 

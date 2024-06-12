@@ -35,6 +35,7 @@ Pour éviter les erreurs, il est important d'exécuter le contrôleur avec le m�
 
 Ce script doit être exécuté d'une manière légèrement différente dans les systèmes d'exploitation [Windows](../../installation/manual-installation/microsoft-windows-server/index.md) car ils ne peuvent pas gérer le script bash du contrôleur :
 
+```markdown
     php.exe controller.php
 
 Client et Informations d'identification
@@ -93,8 +94,9 @@ Le contrôleur est capable d'effectuer diverses actions. Celles-ci sont représe
 | **[tenants](#mandantund-credentials)** | oui | oui | –   | Liste, activer et désactiver les locataires |
 | **[updatecheck](../../maintenance-and-operation/update.md)** | oui | oui | –   | Rechercher des mises à jour dans i-doit |
 | **workflow** | oui | oui | –   | Envoyer des notifications de workflow par e-mail |
+```
 
-### Configuration des Gestionnaires
+### Configuration des Gestionnaires {/ * exemples * /}
 
 #### Définir des Paramètres Additionnels
 

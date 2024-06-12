@@ -1,8 +1,9 @@
-# ISMS
+# SMSI
 
-The **ISMS** [add-on](../index.md) is used to evaluate, document and analyze the risk and measures management directly at the respective [objects](../basics/structure-of-the-it-documentation.md) of the IT documentation and also to generate presentable  
-evaluations with the help of the [Report Manager](../evaluation/report-manager.md). It supports the documentation processes of the ISO 27000 standard family.
+Le **SMSI** [module complémentaire](../index.md) est utilisé pour évaluer, documenter et analyser les risques et les mesures de gestion directement au niveau des [objets](../basics/structure-of-the-it-documentation.md) respectifs de la documentation informatique et également pour générer des évaluations présentables à l'aide du [Gestionnaire de rapports](../evaluation/report-manager.md). Il prend en charge les processus de documentation de la famille de normes ISO 27000.
 
-This add-on is further developed by [becon](https://viva2.readthedocs.io/de/latest/LICENSE.html) ©.
+Ce module complémentaire est développé par [becon](https://viva2.readthedocs.io/de/latest/LICENSE.html) ©.
 
-The documentation is maintained by [becon](https://viva2.readthedocs.io/de/latest/LICENSE.html) © and can be accessed at [isms.readthedocs.io/](http://isms.readthedocs.io/).
+La documentation est maintenue par [becon](https://viva2.readthedocs.io/de/latest/LICENSE.html) © et peut être consultée sur [isms.readthedocs.io/](http://isms.readthedocs.io/). 
+
+{ /* examples */ }

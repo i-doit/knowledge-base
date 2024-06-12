@@ -1,10 +1,11 @@
-# Category Fields for Data Arrays
+# Champs de catégorie pour les tableaux de données
 
-This article lists all available [categories and their attributes](../../basics/structure-of-the-it-documentation.md) of i-doit. This can be a very helpful list when you use the [application programming interface (API)](./index.md) of i-doit.
+Cet article répertorie toutes les [catégories et leurs attributs](../../basics/structure-of-the-it-documentation.md) disponibles dans i-doit. Cette liste peut être très utile lorsque vous utilisez l'[interface de programmation d'application (API)](./index.md) de i-doit.
 
-!!! info "Create this contents automatically"
+!!! info "Créez ces contenus automatiquement"
 
-    Via the URL parameter load=api_properties the category tables for the currently installed i-doit version are created. A user has to be logged in. Example: [https://demo.i-doit.com/?load=api_properties](https://demo.i-doit.com/?load=api_properties)
+    Via le paramètre d'URL load=api_properties, les tables de catégories pour la version actuellement installée de i-doit sont créées. Un utilisateur doit être connecté. Exemple : [https://demo.i-doit.com/?load=api_properties](https://demo.i-doit.com/?load=api_properties)
+
 
 Global Categories (catg)
 ------------------------

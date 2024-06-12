@@ -1,22 +1,22 @@
-# Geo Coordinates
+# Coordonnées Géographiques {/examples}
 
-Each [object](../basics/structure-of-the-it-documentation.md) in i-doit can be tagged with geographic coordinates stating longitude and latitude.
+Chaque [objet](../basics/structure-of-the-it-documentation.md) dans i-doit peut être étiqueté avec des coordonnées géographiques indiquant la longitude et la latitude.
 
-Saving Geo Coordinates
-----------------------
+Enregistrement des Coordonnées Géographiques
+--------------------------------------------
 
-If not yet done, you can determine the geo coordinates of a location via various map and navigation services. The coordinates are saved in the **Location** [category](../basics/structure-of-the-it-documentation.md). Here you can find the attributes **Latitude** and **Longitude**.
+Si ce n'est pas encore fait, vous pouvez déterminer les coordonnées géographiques d'un emplacement via divers services de cartographie et de navigation. Les coordonnées sont enregistrées dans la **Catégorie** **Emplacement** [category](../basics/structure-of-the-it-documentation.md). Ici, vous pouvez trouver les attributs **Latitude** et **Longitude**.
 
 [![geo-coordinates](../assets/images/en/use-cases/geo-coordinates/en_geo_coordinates.png)](../assets/images/en/use-cases/geo-coordinates/en_geo_coordinates.png)
 
-Accessing Maps
---------------
+Accès aux Cartes
+----------------
 
-Two buttons are displayed in the **Location** category as soon as the coordinates are saved. The **Google Maps** button opens a tab for the map service of the same name in the web browser. A tag shows the geo coordinates. The same applies to the **OpenStreetMap** button.
+Deux boutons sont affichés dans la **Catégorie** **Emplacement** dès que les coordonnées sont enregistrées. Le bouton **Google Maps** ouvre un onglet pour le service de cartographie du même nom dans le navigateur web. Une étiquette affiche les coordonnées géographiques. Il en va de même pour le bouton **OpenStreetMap**.
 
-Inheriting Geo Coordinates
---------------------------
+Héritage des Coordonnées Géographiques
+---------------------------------------
 
-Each located object is situated within the location tree; this means that there is always a higher-level object (up to the **Root location**). The geo coordinates of a higher-level object can be inherited so that they are passed on to the subordinated objects with a spatial assignment. For this purpose, select the higher-level object in the **Location** attribute of the **Location** category. After clicking the **Inherit GEO coordinates** button the attributes **Latitude** and **Longitude** are automatically filled with the specifications of the higher-level object.
+Chaque objet localisé est situé dans l'arborescence des emplacements ; cela signifie qu'il y a toujours un objet de niveau supérieur (jusqu'à l'**Emplacement racine**). Les coordonnées géographiques d'un objet de niveau supérieur peuvent être héritées afin qu'elles soient transmises aux objets subordonnés avec une affectation spatiale. Pour ce faire, sélectionnez l'objet de niveau supérieur dans l'attribut **Emplacement** de la **Catégorie** **Emplacement**. Après avoir cliqué sur le bouton **Hériter des coordonnées GEO**, les attributs **Latitude** et **Longitude** sont automatiquement remplis avec les spécifications de l'objet de niveau supérieur.
 
-An automated inheritance process of object coordinates to all other objects with a spatial assignment does not take place.
+Un processus d'héritage automatisé des coordonnées d'objet vers tous les autres objets avec une affectation spatiale ne se produit pas.

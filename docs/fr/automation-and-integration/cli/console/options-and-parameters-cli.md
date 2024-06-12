@@ -1,102 +1,103 @@
-# Options and parameters for the console
+# Options et paramètres pour la console
 
 !!! attention "Notes"
-    All examples on this page refer to the use of the i-doit user with the combination user name/password: **admin**/**admin**.<br>
-    All parameters are case-sensitive, which means that upper and lower case must be followed exactly according to the examples and specifications.
+    Tous les exemples sur cette page se réfèrent à l'utilisation de l'utilisateur i-doit avec la combinaison nom d'utilisateur/mot de passe : **admin**/**admin**.<br>
+    Tous les paramètres sont sensibles à la casse, ce qui signifie que la casse doit être suivie exactement selon les exemples et les spécifications.
 
-## The following handlers are available for the i-doit Console
+## Les gestionnaires suivants sont disponibles pour la Console i-doit
 
-| Command                                                                   | Internal system description                                                                                                        |
+| Commande                                                                   | Description interne du système                                                                                                     |
 | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [CompileDocuments](#compiledocuments)                                     | Compile Documents                                                                                                                  |
-| [addon-activate](#addon-activate)                                         | Activating Add-ons                                                                                                                 |
-| [addon-deactivate](#addon-deactivate)                                     | Deactivating Add-ons                                                                                                               |
-| [addon-install](#addon-install)                                           | Installing Add-ons                                                                                                                 |
-| [addon-list](#addon-list)                                                 | Displays a list of all installed add-ons                                                                                           |
-| [admin-center-password-reset](#admin-center-password-reset)               | Reset the password for the Admin Center                                                                                            |
-| [auth-cleanup](#auth-cleanup)                                             | Clean up rights system                                                                                                             |
-| [check_mk-export](#check_mk-export)                                       | Export configuration data for Check_MK                                                                                             |
-| [check_mk-livestatus](#check_mk-livestatus)                               | Write actual state from Check_MK to logbook                                                                                        |
-| [clear-credentials](#clear-credentials)                                   | Removes user credentials                                                                                                           |
-| [completion](#completion)                                                 | Dump the shell completion script                                                                                                   |
-| [contracts-outdated](#contracts-outdated)                                 | Updates status of outdated contracts                                                                                               |
-| [documents](#documents)                                                   | Create and export documents                                                                                                        |
-| [extend-contracts](#extend-contracts)                                     | Extends Contracts with last cancellation date in the past                                                                          |
-| [help](#help)                                                             | Displays the help for a command                                                                                                    |
-| [import-csv](#import-csv)                                                 | Import data from a CSV file (uses a defined import profile from the GUI)                                                           |
-| [import-csvprofiles](#import-csvprofiles)                                 | Listing all CSV Import Profiles                                                                                                    |
-| [import-hinventory](#import-hinventory)                                   | Import data from hinventory data from hinventory                                                                                   |
-| [import-jdisc](#import-jdisc)                                             | Import data from JDisc Discovery (SQL Server access is configured via the GUI)                                                     |
-| [import-jdiscdiscovery](#import-jdiscdiscovery)                           | Start a scan in JDisc Discovery (API access is configured via the GUI)                                                             |
-| [import-syslog](#import-ocs)                                              | Import data from a syslog into the i-doit logbook                                                                                  |
-| [import-xml](#import-ocs)                                                 | Importing data from XML                                                                                                            |
-| [install](#install)                                                       | Install the i-doit application                                                                                                     |
-| [jdisc-create-server](#jdisc-create-server)                               | Creates a JDisc server, based on given input                                                                                       |
-| [ldap-sync](#ldap-sync)                                                   | Import persons and groups of persons from an LDAP directory or Active Directory (AD)                                               |
-| [ldap-syncdn](#ldap-sync)                                                 | Synchronize from an LDAP/AD the Distinguished Name (DN) of the users (see category LDAP)                                           |
-| [license-add](#license-add)                                               | Adds a license for i-doit (in progress)                                                                                            |
-| [license-assign](#license-assign)                                         | Assigns a hosting license to a client (in progress)                                                                                |
-| [license-import](#license-import)                                         | Imports licenses from the i-doit Server (in progress)                                                                              |
-| [license-key](#license-key)                                               | Sets a license key for i-doit (in process)                                                                                         |
-| [license-list](#license-list)                                             | Lists all licenses with all information (ID; product; type; start date; end date; licensed objects; licensed clients; environment) |
-| [license-remove](#license-remove)                                         | Removes licenses from i-doit                                                                                                       |
-| [list](#list)                                                             | Lists all commands                                                                                                                 |
-| [logbook-archive](#logbook-archive)                                       | Archiving logbook entries                                                                                                          |
-| [maintenance](#maintenance)                                               | Sends notifications of scheduled maintenance from the Maintenance Add-on                                                           |
-| [migrate-uploaded-files](#migrate-uploaded-files)                         | Migrates uploaded files in i-doit <v1.13 to v.1.14>                                                                                |
-| [nagios-export](#nagios-export)                                           | Export Nagios configuration                                                                                                        |
-| [nagios-ndoutils](#nagios-ndoutils)                                       | Write actual state from Nagios to logbook                                                                                          |
-| [notifications-list](#notifications-list)                                 | Lists all notification types and notifications for later usage                                                                     |
-| [notifications-send](#notifications-send)                                 | Send notifications by e-mail (notifications are configured in the GUI)                                                             |
-| [report-export](#report-export)                                           | Exporting a report as a file                                                                                                       |
-| [search](#search)                                                         | Search in i-doit                                                                                                                   |
-| [search-index](#search-index)                                             | Create/renew search index                                                                                                          |
-| [strip-description-html](#strip-description-html)                         | With this command you can strip html tags in description field of all categories and objects                                       |
-| [sync-dynamic-groups](#sync-dynamic-groups)                               | Resynchronizes dynamic group members                                                                                               |
-| [system-autoincrement](#system-autoincrement)                             | set auto_increment of MariaDB/MySQL tables to a positive integer value (concerns the data structure! Use with caution!)            |
-| [system-categorycleanup](#system-categorycleanup)                         | Purges optionally category entries that are in the state unfinished, archived or deleted                                           |
-| [system-checkforupdates](#system-checkforupdates)                         | Check for updates for i-doit                                                                                                       |
-| [system-convert-non-innodb-tables](#system-convert-non-innodb-tables)     | Converts all tables that are not in INNODB to INNODB (concerns the database coding. Use with caution!)                             |
-| [system-convert-non-utf8-tables](#system-convert-non-utf8-tables)         | Converts all non-UTF8 tables to UTF8 tables (concerns database encoding. Use with caution!)                                        |
-| [system-location-fix](#system-location-fix)                               | Executes the location correction from the GUI on the console                                                                       |
-| [system-maintenancecontract](#system-maintenancecontract)                 | Send e-mail for maintenance contracts (Function deprecated. Please use [notifications-send](#notifications-send))                  |
-| [system-objectcleanup](#system-objectcleanup)                             | Clean up objects (objects with the status "unfinished", "archived" or "deleted" are permanently removed)                           |
-| [system-objectrelations](#system-objectrelations)                         | Recreate Object Relationships                                                                                                      |
-| [system-refresh-table-configuration](#system-refresh-table-configuration) | Refreshes all available list configurations (object types and categories)                                                          |
-| [system-set-settings](#system-set-settings)                               | Enables Admin Center settings to be set via the CLI                                                                  |
-| [tenant-create](#tenant-create)                                           | Add a new tenant                                                                                                                   |
-| [tenant-disable](#tenant-disable)                                         | Deactivate an existing tenant                                                                                                      |
-| [tenant-enable](#tenant-enable)                                           | Activate an existing tenant                                                                                                        |
-| [tenant-list](#tenant-list)                                               | List all available tenants                                                                                                         |
-| [tenant-remove](#tenant-remove)                                           | Remove an existing tenant                                                                                                          |
-| [uninstall](#uninstall)                                                   | Uninstalls i-doit                                                                                                                  |
-| [update](#update)                                                         | Installs an update for i-doit                                                                                                      |
-| [workflows-process](#workflows-process)                                   | Processes all workflows, sends e-mails and creates new tasks from checklists                                                       |
+| [CompileDocuments](#compiledocuments)                                     | Compiler des documents                                                                                                             |
+| [addon-activate](#addon-activate)                                         | Activation des modules complémentaires                                                                                             |
+| [addon-deactivate](#addon-deactivate)                                     | Désactivation des modules complémentaires                                                                                          |
+| [addon-install](#addon-install)                                           | Installation des modules complémentaires                                                                                          |
+| [addon-list](#addon-list)                                                 | Affiche une liste de tous les modules complémentaires installés                                                                    |
+| [admin-center-password-reset](#admin-center-password-reset)               | Réinitialiser le mot de passe pour le Centre d'administration                                                                       |
+| [auth-cleanup](#auth-cleanup)                                             | Nettoyer le système de droits                                                                                                      |
+| [check_mk-export](#check_mk-export)                                       | Exporter les données de configuration pour Check_MK                                                                                |
+| [check_mk-livestatus](#check_mk-livestatus)                               | Écrire l'état actuel de Check_MK dans le journal                                                                                  |
+| [clear-credentials](#clear-credentials)                                   | Supprimer les informations d'identification de l'utilisateur                                                                       |
+| [completion](#completion)                                                 | Générer le script de complétion de shell                                                                                            |
+| [contracts-outdated](#contracts-outdated)                                 | Mettre à jour le statut des contrats obsolètes                                                                                     |
+| [documents](#documents)                                                   | Créer et exporter des documents                                                                                                   |
+| [extend-contracts](#extend-contracts)                                     | Prolonger les contrats avec la dernière date d'annulation dans le passé                                                            |
+| [help](#help)                                                             | Afficher l'aide pour une commande                                                                                                 |
+| [import-csv](#import-csv)                                                 | Importer des données à partir d'un fichier CSV (utilise un profil d'importation défini dans l'interface graphique)                |
+| [import-csvprofiles](#import-csvprofiles)                                 | Liste de tous les profils d'importation CSV                                                                                        |
+| [import-hinventory](#import-hinventory)                                   | Importer des données de l'inventaire matériel depuis l'inventaire matériel                                                         |
+| [import-jdisc](#import-jdisc)                                             | Importer des données de la découverte JDisc (l'accès au serveur SQL est configuré via l'interface graphique)                      |
+| [import-jdiscdiscovery](#import-jdiscdiscovery)                           | Démarrer un scan dans la découverte JDisc (l'accès API est configuré via l'interface graphique)                                    |
+| [import-syslog](#import-ocs)                                              | Importer des données d'un syslog dans le journal i-doit                                                                           |
+| [import-xml](#import-ocs)                                                 | Importer des données à partir de XML                                                                                              |
+| [install](#install)                                                       | Installer l'application i-doit                                                                                                     |
+| [jdisc-create-server](#jdisc-create-server)                               | Crée un serveur JDisc, basé sur les entrées fournies                                                                               |
+| [ldap-sync](#ldap-sync)                                                   | Importer des personnes et des groupes de personnes depuis un annuaire LDAP ou Active Directory (AD)                             |
+| [ldap-syncdn](#ldap-sync)                                                 | Synchroniser à partir d'un LDAP/AD le nom distinct (DN) des utilisateurs (voir la catégorie LDAP)                                |
+| [license-add](#license-add)                                               | Ajoute une licence pour i-doit (en cours)                                                                                         |
+| [license-assign](#license-assign)                                         | Affecte une licence d'hébergement à un client (en cours)                                                                           |
+| [license-import](#license-import)                                         | Importe des licences depuis le serveur i-doit (en cours)                                                                           |
+| [license-key](#license-key)                                               | Définit une clé de licence pour i-doit (en cours)                                                                                 |
+| [license-list](#license-list)                                             | Liste toutes les licences avec toutes les informations (ID ; produit ; type ; date de début ; date de fin ; objets sous licence ; clients sous licence ; environnement) |
+| [license-remove](#license-remove)                                         | Supprime des licences de i-doit                                                                                                   |
+| [list](#list)                                                             | Liste toutes les commandes                                                                                                        |
+| [logbook-archive](#logbook-archive)                                       | Archiver les entrées du journal                                                                                                   |
+| [maintenance](#maintenance)                                               | Envoie des notifications de maintenance planifiée depuis le module d'entretien                                                     |
+| [migrate-uploaded-files](#migrate-uploaded-files)                         | Migre les fichiers téléchargés dans i-doit <v1.13 à v.1.14>                                                                        |
+| [nagios-export](#nagios-export)                                           | Exporter la configuration Nagios                                                                                                  |
+| [nagios-ndoutils](#nagios-ndoutils)                                       | Écrire l'état actuel de Nagios dans le journal                                                                                    |
+| [notifications-list](#notifications-list)                                 | Liste tous les types de notification et les notifications pour une utilisation ultérieure                                         |
+| [notifications-send](#notifications-send)                                 | Envoyer des notifications par e-mail (les notifications sont configurées dans l'interface graphique)                             |
+| [report-export](#report-export)                                           | Exporter un rapport sous forme de fichier                                                                                         |
+| [search](#search)                                                         | Rechercher dans i-doit                                                                                                            |
+| [search-index](#search-index)                                             | Créer/renouveler l'index de recherche                                                                                             |
+| [strip-description-html](#strip-description-html)                         | Avec cette commande, vous pouvez supprimer les balises html dans le champ de description de toutes les catégories et objets      |
+| [sync-dynamic-groups](#sync-dynamic-groups)                               | Resynchroniser les membres du groupe dynamique                                                                                   |
+| [system-autoincrement](#system-autoincrement)                             | définir l'auto-incrément des tables MariaDB/MySQL sur une valeur entière positive (concerne la structure des données ! À utiliser avec prudence !) |
+| [system-categorycleanup](#system-categorycleanup)                         | Purge éventuellement les entrées de catégorie qui sont dans l'état inachevé, archivé ou supprimé                                 |
+| [system-checkforupdates](#system-checkforupdates)                         | Rechercher des mises à jour pour i-doit                                                                                           |
+| [system-convert-non-innodb-tables](#system-convert-non-innodb-tables)     | Convertit toutes les tables qui ne sont pas en INNODB en INNODB (concerne le codage de la base de données. À utiliser avec prudence !) |
+| [system-convert-non-utf8-tables](#system-convert-non-utf8-tables)         | Convertit toutes les tables non-UTF8 en tables UTF8 (concerne le codage de la base de données. À utiliser avec prudence !)          |
+| [system-location-fix](#system-location-fix)                               | Exécute la correction de l'emplacement depuis l'interface graphique sur la console                                                |
+| [system-maintenancecontract](#system-maintenancecontract)                 | Envoyer un e-mail pour les contrats de maintenance (Fonction obsolète. Veuillez utiliser [notifications-send](#notifications-send)) |
+| [system-objectcleanup](#system-objectcleanup)                             | Nettoyer les objets (les objets avec le statut "inachevé", "archivé" ou "supprimé" sont définitivement supprimés)                 |
+| [system-objectrelations](#system-objectrelations)                         | Recréer les relations d'objets                                                                                                    |
+| [system-refresh-table-configuration](#system-refresh-table-configuration) | Rafraîchit toutes les configurations de liste disponibles (types d'objets et catégories)                                         |
+| [system-set-settings](#system-set-settings)                               | Permet de définir les paramètres du Centre d'administration via l'interface en ligne de commande                                  |
+| [tenant-create](#tenant-create)                                           | Ajouter un nouveau locataire                                                                                                      |
+| [tenant-disable](#tenant-disable)                                         | Désactiver un locataire existant                                                                                                   |
+| [tenant-enable](#tenant-enable)                                           | Activer un locataire existant                                                                                                     |
+| [tenant-list](#tenant-list)                                               | Liste tous les locataires disponibles                                                                                             |
+| [tenant-remove](#tenant-remove)                                           | Supprimer un locataire existant                                                                                                   |
+| [uninstall](#uninstall)                                                   | Désinstalle i-doit                                                                                                                |
+| [update](#update)                                                         | Installe une mise à jour pour i-doit                                                                                              |
+| [workflows-process](#workflows-process)                                   | Traite tous les workflows, envoie des e-mails et crée de nouvelles tâches à partir des listes de contrôle                        |
 
-!!! attention "Configuration file and parameters --config"
-    It is possible to pass additional content to the call via a configuration file. This file must be stored in the i-doit directory src/handler/config/. An example in the form of the file "isys\_handler\_ldap.ini" can be found in the directory src/handler/config/examples/.<br>
-    If this file is to be included in the process, it must be included using the --config or -c parameter.
+
+!!! attention "Fichier de configuration et paramètres --config"
+    Il est possible de transmettre du contenu supplémentaire à l'appel via un fichier de configuration. Ce fichier doit être stocké dans le répertoire i-doit src/handler/config/. Un exemple sous la forme du fichier "isys_handler_ldap.ini" peut être trouvé dans le répertoire src/handler/config/examples/.<br>
+    Si ce fichier doit être inclus dans le processus, il doit être inclus en utilisant le paramètre --config ou -c.
 
 ### CompileDocuments
 
-Compile Documents
+Compiler des documents
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -t                        | --documentId=DOCUMENTID  | Several document ids (multiple values allowed)                                               |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -t                        | --tenant=TENANT-ID       | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -t                        | --documentId=DOCUMENTID  | Plusieurs identifiants de document (valeurs multiples autorisées)                             |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                   |
+| -t                        | --tenant=TENANT-ID       | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php CompileDocuments --user admin --password admin --tenant 1 --documentId 123 --documentId 321
@@ -104,49 +105,43 @@ sudo -u www-data php console.php CompileDocuments --user admin --password admin 
 
 ### addon-activate
 
-Activates installed add-ons for the desired tenant
+Active les modules complémentaires installés pour le locataire souhaité
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | i-doit Admin username                                                                        |
-| -p                        | --password[=PASSWORD]    | i-doit Admin password                                                                        |
-| -a                        | --addon[=ADDON]          | Add-on identifier (multiple values allowed)                                                  |
-| -t                        | --tenant[=TENANT]        | Tenant id (multiple values allowed)                                                          |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php addon-activate --user admin --password admin --tenant 1 --addon api
-```
+| -u                        | --user=USERNAME          | Nom d'utilisateur de l'administrateur i-doit                                                 |
+| -p                        | --password[=PASSWORD]    | Mot de passe de l'administrateur i-doit                                                      |
+| -a                        | --addon[=ADDON]          | Identifiant du module complémentaire (valeurs multiples autorisées)                         |
+| -t                        | --tenant[=TENANT]        | ID du locataire (valeurs multiples autorisées)                                               |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                 |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
 ### addon-deactivate
 
-Disabled installed add-ons for the desired tenant
+Désactive les modules complémentaires installés pour le locataire souhaité
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | i-doit Admin username                                                                        |
-| -p                        | --password[=PASSWORD]    | i-doit Admin password                                                                        |
-| -a                        | --addon[=ADDON]          | Add-on identifier (multiple values allowed)                                                  |
-| -t                        | --tenant[=TENANT]        | Tenant id (multiple values allowed)                                                          |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur de l'administrateur i-doit                                                 |
+| -p                        | --password[=PASSWORD]    | Mot de passe de l'administrateur i-doit                                                      |
+| -a                        | --addon[=ADDON]          | Identifiant du module complémentaire (valeurs multiples autorisées)                         |
+| -t                        | --tenant[=TENANT]        | ID du locataire (valeurs multiples autorisées)                                               |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                 |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php addon-deactivate --user admin --password admin --tenant 1 --addon api
@@ -154,48 +149,48 @@ sudo -u www-data php console.php addon-deactivate --user admin --password admin 
 
 ### addon-install
 
-Installs add-ons for the desired tenant
+Installe des modules complémentaires pour le locataire souhaité
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | i-doit Admin username                                                                        |
-| -p                        | --password[=PASSWORD]    | i-doit Admin password                                                                        |
-| -z                        | --zip=ZIP                | Path to add-on ZIP file                                                                      |
-| -a                        | --addon[=ADDON]          | Add-on identifier (multiple values allowed)                                                  |
-| -t                        | --tenant[=TENANT]        | Tenant id (multiple values allowed)                                                          |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur de l'administrateur i-doit                                                 |
+| -p                        | --password[=PASSWORD]    | Mot de passe de l'administrateur i-doit                                                      |
+| -z                        | --zip=ZIP                | Chemin vers le fichier ZIP du module complémentaire                                          |
+| -a                        | --addon[=ADDON]          | Identifiant du module complémentaire (plusieurs valeurs autorisées)                          |
+| -t                        | --tenant[=TENANT]        | ID du locataire (plusieurs valeurs autorisées)                                               |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
-sudo -u www-data php console.php addon-install --user admin --password admin --tenant 1 --addon api --zip /path/to/the/zip/file.zip
+sudo -u www-data php console.php addon-install --user admin --password admin --tenant 1 --addon api --zip /chemin/vers/le/fichier.zip
 ```
 
 ### addon-list
 
-Displays a list with all installed add-ons for the selected tenant
+Affiche une liste de tous les modules complémentaires installés pour le locataire sélectionné
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -a                        | --addon=ADDON            | Add-on identification                                                                        |
-| -t                        | --tenant=TENANT-ID       | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -a                        | --addon=ADDON            | Identification du module complémentaire                                                     |
+| -t                        | --tenant=TENANT-ID       | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php addon-list --tenant 1
@@ -203,24 +198,24 @@ sudo -u www-data php console.php addon-list --tenant 1
 
 ### admin-center-password-reset
 
-With this command you can reset the Admin-Center password
+Avec cette commande, vous pouvez réinitialiser le mot de passe du Centre d'administration
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                 |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -c                        | --config=CONFIG-FILE     | Spécification du chemin vers le fichier de configuration                                      |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php admin-center-password-reset --user admin --password admin
@@ -228,24 +223,24 @@ sudo -u www-data php console.php admin-center-password-reset --user admin --pass
 
 ### auth-cleanup
 
-Cleanup all auth paths
+Nettoyer tous les chemins d'authentification
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=MOT DE PASSE  | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                   |
+| -i                        | --tenantId=ID-TENANT     | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -c                        | --config=FICHIER-CONFIG  | Spécifie le chemin vers le fichier de configuration                                           |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affiche la version de la console i-doit                                                     |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                             |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php auth-cleanup --user admin --password admin --tenantId 1
@@ -253,26 +248,26 @@ sudo -u www-data php console.php auth-cleanup --user admin --password admin --te
 
 ### check_mk-export
 
-Performs a Check_MK export
+Effectue une exportation Check_MK
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)          | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)        | Description                                                                                  |
 | ------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------- |
-| -l                        | --exportLanguage=EXPORTLANGUAGE   | Definition of the language used for the export (default = 0)                                 |
-| -x                        | --exportStructure=EXPORTSTRUCTURE | Definition of the structure used for the export (default = 0)                                |
-| -u                        | --user=USERNAME                   | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD               | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID              | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE              | Specifying the path to the configuration file                                                |
-| -h                        | --help                            | Help message for displaying further information                                              |
-| -q                        | --quiet                           | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                         | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi               | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction                  | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                         | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -l                        | --exportLanguage=EXPORTLANGUAGE   | Définition de la langue utilisée pour l'exportation (par défaut = 0)                         |
+| -x                        | --exportStructure=EXPORTSTRUCTURE | Définition de la structure utilisée pour l'exportation (par défaut = 0)                     |
+| -u                        | --user=USERNAME                   | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=PASSWORD               | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                  |
+| -i                        | --tenantId=TENANT-ID              | ID du locataire du locataire à utiliser (par défaut : 1)                                    |
+| -c                        | --config=CONFIG-FILE              | Spécification du chemin d'accès au fichier de configuration                                   |
+| -h                        | --help                            | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                           | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                         | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi               | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction                  | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                         | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php check_mk-export --user admin --password admin --tenantId 1
@@ -280,24 +275,24 @@ sudo -u www-data php console.php check_mk-export --user admin --password admin -
 
 ### check_mk-livestatus
 
-Imports the monitoring status changes from Livestatus to i-doit
+Importe les changements d'état de surveillance de Livestatus vers i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                         |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                   |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -c                        | --config=CONFIG-FILE     | Spécifie le chemin du fichier de configuration                                                |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                    |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php check_mk-livestatus --user admin --password admin --tenantId 1
@@ -305,103 +300,99 @@ sudo -u www-data php console.php check_mk-livestatus --user admin --password adm
 
 ### clear-credentials
 
-It removes both attributes `username` and `password` from the users "login" category
+Il supprime à la fois les attributs `username` et `password` de la catégorie "login" des utilisateurs
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-|                           | --object=OBJECT          | Object ID of the user to be deactivated                                                      |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --object=OBJECT          | ID de l'objet de l'utilisateur à désactiver                                                  |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                 |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php clear-credentials --user admin --password admin --object ObjectID
 ```
 
-### completion
+### achèvement {/ * exemples * /}
 
-The completion command dumps the shell completion script required to use shell autocompletion (currently only bash completion is supported).
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-|                           | --debug                  | Tail the completion debug log                                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quit                   | Quiet-Mode to deactivate output                                                              |
-| -v                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Forces the output in ANSI format / Disables the output in ANSI format                        |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php completion
-```
-
-### contracts-outdated
-
-Updates status of outdated contracts
+La commande d'achèvement génère le script d'achèvement de shell requis pour utiliser l'auto-complétion du shell (actuellement seule l'achèvement bash est pris en charge).
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USER              | Username                                                                                     |
-| -p                        | --password=PASSWORD      | Password                                                                                     |
-| -i                        | --tenantID=TENANTID      | Tenant ID default: 1                                                                         |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quit                   | Quiet-Mode to deactivate output                                                              |
-| -v                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Forces the output in ANSI format / Disables the output in ANSI format                        |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --debug                  | Suivre le journal de débogage de l'achèvement                                                  |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                  |
+| -q                        | --quit                   | Mode silencieux pour désactiver la sortie                                                     |
+| -v                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Force la sortie au format ANSI / Désactive la sortie au format ANSI                          |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
-sudo -u www-data php console.php contracts-outdated --user admin --password admin
+sudo -u www-data php console.php achèvement
 ```
+
+### contrats-obsolètes {/ * exemples * /}
+
+Met à jour le statut des contrats obsolètes
+
+**Options:**
+
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
+| -u                        | --user=USER              | Nom d'utilisateur                                                                             |
+| -p                        | --password=PASSWORD      | Mot de passe                                                                                 |
+| -i                        | --tenantID=TENANTID      | ID du locataire par défaut: 1                                                                |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                  |
+| -q                        | --quit                   | Mode silencieux pour désactiver la sortie                                                     |
+| -v                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Force la sortie au format ANSI / Désactive la sortie au format ANSI                          |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
 ### documents
 
-Allows to create revisions or export one or multiple documents
+Permet de créer des révisions ou d'exporter un ou plusieurs documents
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)      | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)    | Description                                                                                  |
 | ------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --create_revision             | Creates one or more revisions for given documents                                            |
-|                           | --export                      | Exports one or more documents to a file                                                      |
-|                           | --id=ID                       | Select one or more documents by id (multiple values allowed)                                 |
-|                           | --all_documents               | Selects all documents                                                                        |
-|                           | --all_category=ALL_CATEGORY   | Selects all documents in category                                                            |
-|                           | --all_template=ALL_TEMPLATE   | Selects all documents with template                                                          |
-|                           | --all_object=ALL_OBJECT       | Selects all documents with object                                                            |
-|                           | --export_format=EXPORT_FORMAT | Export format: pdf or html                                                                   |
-|                           | --export_folder=EXPORT_FOLDER | Where should the document be exported to? The folder needs to exist and be writable          |
-| -u                        | --user=USER                   | Username                                                                                     |
-| -p                        | --password=PASSWORD           | Password                                                                                     |
-| -i                        | --tenantID=TENANTID           | Tenant ID default: 1                                                                         |
-| -h                        | --help                        | Help message for displaying further information                                              |
-| -c                        | --config=CONFIG               | Config file                                                                                  |
-| -q                        | --quit                        | Quiet-Mode to deactivate output                                                              |
-| -v                        | --version                     | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi           | Forces the output in ANSI format / Disables the output in ANSI format                        |
-| -n                        | --no-interaction              | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                     | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --create_revision             | Crée une ou plusieurs révisions pour les documents donnés                                    |
+|                           | --export                      | Exporte un ou plusieurs documents vers un fichier                                            |
+|                           | --id=ID                       | Sélectionne un ou plusieurs documents par ID (valeurs multiples autorisées)                  |
+|                           | --all_documents               | Sélectionne tous les documents                                                               |
+|                           | --all_category=ALL_CATEGORY   | Sélectionne tous les documents dans la catégorie                                             |
+|                           | --all_template=ALL_TEMPLATE   | Sélectionne tous les documents avec un modèle                                               |
+|                           | --all_object=ALL_OBJECT       | Sélectionne tous les documents avec un objet                                                |
+|                           | --export_format=EXPORT_FORMAT | Format d'export : pdf ou html                                                               |
+|                           | --export_folder=EXPORT_FOLDER | Où le document doit-il être exporté ? Le dossier doit exister et être accessible en écriture |
+| -u                        | --user=USER                   | Nom d'utilisateur                                                                            |
+| -p                        | --password=PASSWORD           | Mot de passe                                                                                |
+| -i                        | --tenantID=TENANTID           | ID du locataire par défaut : 1                                                               |
+| -h                        | --help                        | Message d'aide pour afficher des informations supplémentaires                                |
+| -c                        | --config=CONFIG               | Fichier de configuration                                                                     |
+| -q                        | --quit                        | Mode silencieux pour désactiver la sortie                                                   |
+| -v                        | --version                     | Affiche la version de la console i-doit                                                    |
+|                           | --ansi<br>--no-ansi           | Force la sortie au format ANSI / Désactive la sortie au format ANSI                         |
+| -n                        | --no-interaction              | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                     | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+{ /* examples */ }
+
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php documents --user admin --password admin
@@ -409,99 +400,93 @@ sudo -u www-data php console.php documents --user admin --password admin
 
 ### extend-contracts
 
-Automatically extend the runtime of not-cancelled contracts
+Étend automatiquement la durée d'exécution des contrats non annulés
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-|                           | --simulate               | Simulates contract extension                                                                 |
-| -u                        | --user=USER              | Username                                                                                     |
-| -p                        | --password=PASSWORD      | Password                                                                                     |
-| -i                        | --tenantID=TENANTID      | Tenant ID default: 1                                                                         |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -c                        | --config=CONFIG          | Config file                                                                                  |
-| -q                        | --quit                   | Quiet-Mode to deactivate output                                                              |
-| -v                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Forces the output in ANSI format / Disables the output in ANSI format                        |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --simulate               | Simule l'extension du contrat                                                               |
+| -u                        | --user=USER              | Nom d'utilisateur                                                                            |
+| -p                        | --password=PASSWORD      | Mot de passe                                                                                 |
+| -i                        | --tenantID=TENANTID      | ID du locataire par défaut : 1                                                               |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -c                        | --config=CONFIG          | Fichier de configuration                                                                     |
+| -q                        | --quit                   | Mode silencieux pour désactiver la sortie                                                   |
+| -v                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Force la sortie au format ANSI / Désactive la sortie au format ANSI                         |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php extend-contracts --user admin --password admin
 ```
 
-### help
+### aide {/examples/}
 
-Used in conjunction with another command to display its usage, arguments and options
+Utilisé en conjonction avec une autre commande pour afficher son utilisation, ses arguments et ses options
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-|                           | --format=FORMAT          | Set the output format (txt, xml, json or md) Default: txt                                    |
-|                           | --raw                    | Output of the command help                                                                   |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --format=FORMAT          | Définit le format de sortie (txt, xml, json ou md) Par défaut : txt                          |
+|                           | --raw                    | Sortie de l'aide de la commande                                                              |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --silencieux             | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --sans-interaction       | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbeux                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
-sudo -u www-data php console.php help --format=txt <command>
+sudo -u www-data php console.php aide --format=txt <commande>
 ```
 
-### import-csv
+### importation-csv {/examples/}
 
-Performs the import of a CSV file with the desired import parameters
+Effectue l'importation d'un fichier CSV avec les paramètres d'importation souhaités
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)          | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)          | Description                                                                                  |
 | ------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --importFile=IMPORTFILE           | Specifies the file and its path to be used for the import                                    |
-|                           | --importProfileId=IMPORTPROFILEID | Defines the profile with which the import is to be performed                                 |
-|                           | --csvSeparator=CSVSEPARATOR       | Defines the separators for the import                                                        |
-|                           | --multiValueMode=MULTIVALUEMODE   | Sets the mode for multi-value categories (possible values: "row", "column" or "comma")       |
-| -u                        | --user=USERNAME                   | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD               | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID              | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                            | Help message for displaying further information                                              |
-| -q                        | --quiet                           | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                         | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi               | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction                  | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                         | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --fichierImport=IMPORTFILE         | Spécifie le fichier et son chemin à utiliser pour l'importation                              |
+|                           | --idProfilImport=IMPORTPROFILEID    | Définit le profil avec lequel l'importation doit être effectuée                              |
+|                           | --separateurCSV=CSVSEPARATOR       | Définit les séparateurs pour l'importation                                                  |
+|                           | --modeValeurMultiple=MULTIVALUEMODE | Définit le mode pour les catégories à valeurs multiples (valeurs possibles : "ligne", "colonne" ou "virgule") |
+| -u                        | --utilisateur=USERNAME              | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                      |
+| -p                        | --motDePasse=PASSWORD               | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                 |
+| -i                        | --idLocataire=ID-LOCATAIRE          | ID du locataire à utiliser (par défaut : 1)                                                |
+| -h                        | --aide                            | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --silencieux                       | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                         | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi               | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --sans-interaction                | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbeux                         | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### import-csvprofiles {#examples}
 
-```shell
-sudo -u www-data php console.php import-csv --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-CSV-Import.csv --importProfileId 1 --csvSeparator ";" --multiValueMode column
-```
-
-### import-csvprofiles
-
-Returns a list of the import profiles for the CSV import
+Renvoie une liste des profils d'importation pour l'importation CSV
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                         |
+| -p                        | --password=MOT DE PASSE  | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                   |
+| -i                        | --tenantId=ID_LOCATAIRE  | ID du locataire à utiliser (par défaut : 1)                                                   |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                     |
+| -V                        | --version                | Sortie de la version de la Console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la Console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php import-csvprofiles --user admin --password admin --tenantId 1
@@ -509,174 +494,148 @@ sudo -u www-data php console.php import-csvprofiles --user admin --password admi
 
 ### import-hinventory
 
-Performs an h-inventory import of a compatible XML file
+Effectue une importation d'inventaire h à partir d'un fichier XML compatible
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-|                           | --importFile=IMPORTFILE  | Specifies the file and its path to be used for the import                                    |
-|                           | --usage                  | Further detailed information on using the command                                            |
-|                           | --objectType=OBJECTTYPE  | Imports the specified object type                                                            |
-|                           | --objectId=OBJECTID      | Imports only the specified object                                                            |
-| -f                        | --force                  | Forces existing objects to be updated but overwrites the imported categories                 |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php import-hinventory --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-h-inventory-import.xml
-```
+|                           | --importFile=IMPORTFILE  | Spécifie le fichier et son chemin à utiliser pour l'importation                               |
+|                           | --usage                  | Informations détaillées sur l'utilisation de la commande                                      |
+|                           | --objectType=OBJECTTYPE  | Importe le type d'objet spécifié                                                             |
+|                           | --objectId=OBJECTID      | Importe uniquement l'objet spécifié                                                          |
+| -f                        | --force                  | Force la mise à jour des objets existants mais écrase les catégories importées                |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                  |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
 ### import-jdisc
 
-Performs a JDisc import to i-doit.
+Effectue une importation JDisc vers i-doit.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Paramètre (version courte) | Paramètre (version longue)         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| -r                        | --profile=PROFILE                   | Specify/select the JDisc profile to be used for the import                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| -g                        | --group=GROUP                       | Specify/select the group ID to be used for the import                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| -x                        | --mode=MODE                         | Select the import mode.<br>**1**: "Append": The import will only create new objects.<br>**2**: "Update": The import will try to update already existing objects.<br>**3**: "Overwrite": Existing objects are updated, new objects are created additionally. Contents from Multi-Value-Categories are first completely deleted and then newly created on the database.<br>**4**: "Update (newly discovered)": The mode corresponds to "Update", but all known links between i-doit and JDisc objects are removed and reconnected after a check.<br>**5**: "Overwrite (newly discovered)": The import clears all existing identification keys before the Overwrite mode is triggered.<br>**6**: "Only create newly scanned devices": The import creates only newly scanned jdisc devices, existing ones are skipped.<br>**7**: "Update (Only existing objects)": Only existing objects are updated. No new objects are created. |
-| -s                        | --server=SERVER                     | Enter the Server-ID to select it                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| -o                        | --overwriteHost                     | Specify whether to overwrite overlapping host addresses                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| -l                        | --detailedLogging[=DETAILEDLOGGING] | Increases the logging level:<br>**1**: low log level only notices and warnings are being logged<br>**2**: additionally to the low log level errors are being logged<br>**3**: additionally to the normal log level debug messages are being logged. (Memory intensive)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| -b                        | --regenerateSearchIndex             | Automatically renews the search index                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|                           | --listProfiles                      | Creates a list of available profiles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| -u                        | --user=USERNAME                     | Username of a user who is authorized to execute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -p                        | --password=PASSWORD                 | Password for authentication of the previously specified user                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| -i                        | --tenantId=TENANT-ID                | Tenant ID of the tenant to be used (default: 1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -c                        | --config=CONFIG-FILE                | Specifying the path to the configuration file                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| -h                        | --help                              | Help message for displaying further information                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -q                        | --quiet                             | Quiet-Mode to deactivate output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -V                        | --version                           | Output of the i-doit Console version                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|                           | --ansi<br>--no-ansi                 | Force (or disable --no-ansi) ANSI output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| -n                        | --no-interaction                    | Disables all interaction questions of the i-doit Console                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| -v / -vv / -vvv           | --verbose                           | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| -r                        | --profile=PROFILE                   | Spécifie/sélectionne le profil JDisc à utiliser pour l'importation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -g                        | --group=GROUP                       | Spécifie/sélectionne l'ID du groupe à utiliser pour l'importation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -x                        | --mode=MODE                         | Sélectionne le mode d'importation.<br>**1**: "Ajouter": L'importation ne créera que de nouveaux objets.<br>**2**: "Mettre à jour": L'importation tentera de mettre à jour les objets déjà existants.<br>**3**: "Écraser": Les objets existants sont mis à jour, de nouveaux objets sont créés en plus. Les contenus des catégories à valeurs multiples sont d'abord complètement supprimés puis recréés dans la base de données.<br>**4**: "Mettre à jour (nouveaux découverts)": Le mode correspond à "Mettre à jour", mais tous les liens connus entre les objets i-doit et JDisc sont supprimés et reconnectés après une vérification.<br>**5**: "Écraser (nouveaux découverts)": L'importation efface toutes les clés d'identification existantes avant que le mode Écraser ne soit déclenché.<br>**6**: "Créer uniquement les appareils nouvellement scannés": L'importation crée uniquement les appareils jdisc nouvellement scannés, les existants sont ignorés.<br>**7**: "Mettre à jour (seuls les objets existants)": Seuls les objets existants sont mis à jour. Aucun nouvel objet n'est créé. |
+| -s                        | --server=SERVER                     | Entrez l'ID du serveur pour le sélectionner                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| -o                        | --overwriteHost                     | Spécifie si les adresses IP d'hôte se chevauchent doivent être écrasées                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| -l                        | --detailedLogging[=DETAILEDLOGGING] | Augmente le niveau de journalisation:<br>**1**: faible niveau de journalisation, seuls les avis et les avertissements sont enregistrés<br>**2**: en plus du faible niveau de journalisation, les erreurs sont enregistrées<br>**3**: en plus du niveau de journalisation normal, les messages de débogage sont enregistrés. (Intensif en mémoire)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| -b                        | --regenerateSearchIndex             | Renouvelle automatiquement l'index de recherche                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                           | --listProfiles                      | Crée une liste des profils disponibles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| -u                        | --user=USERNAME                     | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -p                        | --password=PASSWORD                 | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| -i                        | --tenantId=TENANT-ID                | ID du locataire à utiliser (par défaut : 1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -c                        | --config=CONFIG-FILE                | Spécifie le chemin vers le fichier de configuration                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| -h                        | --help                              | Message d'aide pour afficher des informations supplémentaires                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -q                        | --quiet                             | Mode silencieux pour désactiver la sortie                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -V                        | --version                           | Sortie de la version de la console i-doit                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|                           | --ansi<br>--no-ansi                 | Forcer (ou désactiver --no-ansi) la sortie ANSI                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -n                        | --no-interaction                    | Désactive toutes les questions d'interaction de la console i-doit                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -v / -vv / -vvv           | --verbose                           | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 
-**Example of use**
+### import-jdiscdiscovery {#import-jdiscdiscovery}
 
-```shell
-sudo -u www-data php console.php import-jdisc --user admin --password admin --tenantId 1 --profile 3 --mode 4 --server 2 --detailedLogging 3 --regenerateSearchIndex
-```
-
-### import-jdiscdiscovery
-
-Triggers a JDisc Discovery job.
+Déclenche une tâche de découverte JDisc.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)              | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)          | Description                                                                                  |
 | ------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------- |
-| -s                        | --server=SERVER                       | Selecting the JDisc Server                                                                   |
-| -j                        | --discoveryJob=DISCOVERYJOB           | Selection of the Discovery Job (Standard: "Discover all")                                    |
-| -d                        | --deviceHostname=DEVICEHOSTNAME       | Selecting the device by host name                                                            |
-| -a                        | --deviceHostAddress=DEVICEHOSTADDRESS | Selecting the device using the host address                                                  |
-| -l                        | --showLog                             | Displays the log during the Discoveries                                                      |
-| -u                        | --user=USERNAME                       | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD                   | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID                  | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE                  | Specifying the path to the configuration file                                                |
-| -h                        | --help                                | Help message for displaying further information                                              |
-| -q                        | --quiet                               | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                             | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi                   | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction                      | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                             | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php import-jdiscdiscovery --user admin --password admin --tenantId 1 --server 2
-```
+| -s                        | --server=SERVEUR                     | Sélection du serveur JDisc                                                                   |
+| -j                        | --discoveryJob=TÂCHEDÉCOUVERTE       | Sélection de la tâche de découverte (Standard : "Découvrir tout")                           |
+| -d                        | --deviceHostname=NOMHÔTEAPPAREIL     | Sélection de l'appareil par nom d'hôte                                                      |
+| -a                        | --deviceHostAddress=ADRESSEHÔTEAPPAREIL | Sélection de l'appareil en utilisant l'adresse IP de l'hôte                                 |
+| -l                        | --showLog                             | Affiche le journal pendant les découvertes                                                  |
+| -u                        | --user=UTILISATEUR                   | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                      |
+| -p                        | --password=MOTDEPASSE                | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                 |
+| -i                        | --tenantId=IDLOCATAIRE               | ID du locataire à utiliser (par défaut : 1)                                                |
+| -c                        | --config=FICHIERCONFIGURATION        | Spécification du chemin d'accès au fichier de configuration                                  |
+| -h                        | --help                                | Message d'aide pour afficher des informations supplémentaires                               |
+| -q                        | --quiet                               | Mode silencieux pour désactiver la sortie                                                  |
+| -V                        | --version                             | Affichage de la version de la console i-doit                                               |
+|                           | --ansi<br>--no-ansi                   | Forcer (ou désactiver --no-ansi) la sortie ANSI                                            |
+| -n                        | --no-interaction                      | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                             | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
 ### import-syslog
 
-Imports content from a Syslog Server text file into the i-doit logbook.
+Importe le contenu d'un fichier texte du serveur Syslog dans le journal i-doit.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=UTILISATEUR          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                              |
+| -p                        | --password=MOT DE PASSE      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                                 |
+| -i                        | --tenantId=ID-LOCATAIRE     | ID du locataire à utiliser (par défaut : 1)                                              |
+| -c                        | --config=FICHIER-CONFIG     | Spécifie le chemin vers le fichier de configuration                                                |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                              |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                              |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                         |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                                     |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                                     |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
-
-```shell
-sudo -u www-data php console.php import-syslog --user admin --password admin --tenantId 1
-```
+{/*examples*/}
 
 ### import-xml
 
-Performs an import of an XML file into i-doit
+Effectue l'importation d'un fichier XML dans i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-|                           | --importFile=IMPORTFILE  | Specification of the import file and its path                                                |
-|                           | --usage                  | Detailed information on using the command                                                    |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --importFile=IMPORTFILE  | Spécification du fichier d'importation et de son chemin                                       |
+|                           | --usage                  | Informations détaillées sur l'utilisation de la commande                                      |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                         |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                   |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -c                        | --config=CONFIG-FILE     | Spécification du chemin vers le fichier de configuration                                      |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+{/*examples*/}
 
-```shell
-sudo -u www-data php console.php import-xml --user admin --password admin --tenantId 1 --importFile /var/www/imports/idoit-Demo-xml-import.xml
-```
+### Installer
 
-### install
-
-Install the i-doit application
+Installer l'application i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)          | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)       | Description                                                                                  |
 | ------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------- |
-| -u                        | --root-user=ROOT-USER             | Username of a user who is authorized to execute                                              |
-| -p                        | --root-password[=ROOT-PASSWORD]   | Password for authentication of the previously specified user                                 |
-|                           | --host=HOST                       | Username of privileged DB User [default: "root"]                                             |
-|                           | --port=PORT                       | Port for DB connection [default: 3306]                                                       |
-| -d                        | --database=DATABASE               | i-doit System Database name [default: "idoit_system_temp"]                                   |
-| -U                        | --user=USER                       | Username of i-doit system DB [default: "idoit"]                                              |
-| -P                        | --password[=PASSWORD]             | Password of i-doit system DB                                                                 |
-|                           | --admin-password[=ADMIN-PASSWORD] | Password for i-doit admin center                                                             |
-| -l                        | --license-server=LICENSE-SERVER   | Path for the i-doit license server [default: "https://lizenzen.i-doit.com"]                  |
-| -k                        | --key[=KEY]                       | License key for i-doit                                                                       |
-| -h                        | --help                            | Help message for displaying further information                                              |
-| -q                        | --quiet                           | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                         | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi               | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction                  | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                         | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --root-user=ROOT-USER             | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --root-password[=ROOT-PASSWORD]   | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                   |
+|                           | --host=HOST                       | Nom d'utilisateur de l'utilisateur DB privilégié [par défaut: "root"]                          |
+|                           | --port=PORT                       | Port de connexion DB [par défaut: 3306]                                                      |
+| -d                        | --database=DATABASE               | Nom de la base de données du système i-doit [par défaut: "idoit_system_temp"]                |
+| -U                        | --user=USER                       | Nom d'utilisateur de la base de données système i-doit [par défaut: "idoit"]                 |
+| -P                        | --password[=PASSWORD]             | Mot de passe de la base de données système i-doit                                            |
+|                           | --admin-password[=ADMIN-PASSWORD] | Mot de passe pour le centre d'administration i-doit                                          |
+| -l                        | --license-server=LICENSE-SERVER   | Chemin du serveur de licences i-doit [par défaut: "https://lizenzen.i-doit.com"]             |
+| -k                        | --key[=KEY]                       | Clé de licence pour i-doit                                                                   |
+| -h                        | --help                            | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                           | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                         | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi               | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction                  | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                         | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php install
@@ -684,108 +643,96 @@ sudo -u www-data php console.php install
 
 ### jdisc-create-server
 
-Creates a JDisc server, based on given input.
+Crée un serveur JDisc, basé sur les entrées fournies.
 
-**Optionen:**
+**Options:**
 
-| Parameter (Kurzform) | Parameter (Langform)              | Beschreibung                                                                                 |
-| -------------------- | --------------------------------- | -------------------------------------------------------------------------------------------- |
-|                      | --default                         | Set as default server                                                                        |
-|                      | --title=[TITLE]                   | Name for JDisc server configuration [default: "JDisc Server"]                                |
-|                      | --jdisc-host=[JDISC-HOST]         | JDisc host [default: "localhost"]                                                            |
-|                      | --jdisc-port=[JDISC-PORT]         | JDisc port [default: 25321]                                                                  |
-|                      | --jdisc-database=[JDISC-DATABASE] | JDisc database [default: "inventory"]                                                        |
-|                      | --jdisc-username=[JDISC-USERNAME] | JDisc database username [default: "postgresro"]                                              |
-|                      | --jdisc-password=[JDISC-PASSWORD] | JDisc database password                                                                      |
-|                      | --allow-older-imports             | Allow import of older JDisc version [default: no]                                            |
-| -i                   | --tenantId=TENANT-ID              | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                   | --config=CONFIG-FILE              | Specifying the path to the configuration file                                                |
-| -h                   | --help                            | Help message for displaying further information                                              |
-| -q                   | --quiet                           | Quiet-Mode to deactivate output                                                              |
-| -V                   | --version                         | Output of the i-doit Console version                                                         |
-|                      | --ansi<br>--no-ansi               | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                   | --no-interaction                  | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv      | --verbose                         | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php jdisc-create-server -u admin -p admin --default --title JDisc Server --jdisc-host localhost --jdisc-port 25321
-```
+| Paramètre (Forme courte) | Paramètre (Forme longue)         | Description                                                                                  |
+| ------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------- |
+|                          | --default                        | Définir comme serveur par défaut                                                              |
+|                          | --title=[TITRE]                  | Nom de la configuration du serveur JDisc [par défaut: "Serveur JDisc"]                        |
+|                          | --jdisc-host=[HÔTE-JDISC]        | Hôte JDisc [par défaut: "localhost"]                                                         |
+|                          | --jdisc-port=[PORT-JDISC]        | Port JDisc [par défaut: 25321]                                                               |
+|                          | --jdisc-database=[BASE-JDISC]    | Base de données JDisc [par défaut: "inventaire"]                                             |
+|                          | --jdisc-username=[UTILISATEUR-JDISC] | Nom d'utilisateur de la base de données JDisc [par défaut: "postgresro"]                   |
+|                          | --jdisc-password=[MOT-DE-PASSE-JDISC] | Mot de passe de la base de données JDisc                                                 |
+|                          | --allow-older-imports            | Autoriser l'importation d'une version plus ancienne de JDisc [par défaut: non]               |
+| -i                       | --tenantId=ID-LOCATAIRE          | ID du locataire à utiliser (par défaut: 1)                                                  |
+| -c                       | --config=FICHIER-CONFIGURATION   | Spécifier le chemin vers le fichier de configuration                                          |
+| -h                       | --help                           | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                       | --quiet                          | Mode silencieux pour désactiver la sortie                                                   |
+| -V                       | --version                        | Affichage de la version de la console i-doit                                                |
+|                          | --ansi<br>--no-ansi              | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                       | --no-interaction                 | Désactive toutes les questions d'interaction de la console i-doit                             |
+| -v / -vv / -vvv          | --verbose                        | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
 ### ldap-sync
 
-Synchronizes users from LDAP to i-doit and creates them as person objects.
+Synchronise les utilisateurs de LDAP vers i-doit et les crée en tant qu'objets de personne.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)                          | Description                                                                                                                                                                             |
+| Paramètre (version courte) | Paramètre (version longue)                          | Description                                                                                                                                                                             |
 | ------------------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| -l                        | --ldapServerId=LDAPSERVERID                       | Specifies the ID of the LDAP server from which the users are to be synchronized  <br>If no ldapServerId is specified, all active servers are synchronized                               |
-|                           | --dumpConfig                                      | Outputs the current configuration from the configuration file                                                                                                                           |
-|                           | --connectionRankingActive=CONNECTIONRANKINGACTIVE | Configuration which reactivates all connections from all reactivated Users.  <br>Default configuration is expert setting 'ldap.connection-ranking-active' (Tenant-wide) with value '1'. |
-|                           | --dropExistingRelations=DROPEXISTINGRELATIONS     | If an existing ldap group has group member users, outside of these synced users, those will be purged.  <br>1 = drop existing relations, 0 = ignore existing relations default: 0       |
-|                           | --archiveDeletedGroups=ARCHIVEDELETEDGROUPS       | If a deleted ldap group remains in i-doit, archive or delete it. default: false                                                                                                         |
-|                           | --useDefaultTemplates                             | Use default templates, whenever object get created by this command (v1.18)                                                                                                              |
-| -u                        | --user=USERNAME                                   | Username of a user who is authorized to execute                                                                                                                                         |
-| -p                        | --password=PASSWORD                               | Password for authentication of the previously specified user                                                                                                                            |
-| -i                        | --tenantId=TENANT-ID                              | Tenant ID of the tenant to be used (default: 1)                                                                                                                                         |
-| -c                        | --config=CONFIG-FILE                              | Specifying the path to the configuration file                                                                                                                                           |
-| -h                        | --help                                            | Help message for displaying further information                                                                                                                                         |
-| -q                        | --quiet                                           | Quiet-Mode to deactivate output                                                                                                                                                         |
-| -V                        | --version                                         | Output of the i-doit Console version                                                                                                                                                    |
-|                           | --ansi<br>--no-ansi                               | Force (or disable --no-ansi) ANSI output                                                                                                                                                |
-| -n                        | --no-interaction                                  | Disables all interaction questions of the i-doit Console                                                                                                                                |
-| -v / -vv / -vvv           | --verbose                                         | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level)                                                                                            |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1
-```
+| -l                        | --ldapServerId=LDAPSERVERID                       | Spécifie l'ID du serveur LDAP à partir duquel les utilisateurs doivent être synchronisés  <br>Si aucun ldapServerId n'est spécifié, tous les serveurs actifs sont synchronisés               |
+|                           | --dumpConfig                                      | Affiche la configuration actuelle à partir du fichier de configuration                                                                                                                   |
+|                           | --connectionRankingActive=CONNECTIONRANKINGACTIVE | Configuration qui réactive toutes les connexions de tous les utilisateurs réactivés.  <br>La configuration par défaut est le paramètre expert 'ldap.connection-ranking-active' (Tenant-wide) avec la valeur '1'. |
+|                           | --dropExistingRelations=DROPEXISTINGRELATIONS     | Si un groupe ldap existant a des utilisateurs membres du groupe en dehors de ces utilisateurs synchronisés, ceux-ci seront purgés.  <br>1 = supprimer les relations existantes, 0 = ignorer les relations existantes par défaut : 0       |
+|                           | --archiveDeletedGroups=ARCHIVEDELETEDGROUPS       | Si un groupe ldap supprimé reste dans i-doit, l'archiver ou le supprimer. par défaut : false                                                                                                         |
+|                           | --useDefaultTemplates                             | Utiliser des modèles par défaut, chaque fois qu'un objet est créé par cette commande (v1.18)                                                                                                              |
+| -u                        | --user=USERNAME                                   | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                                                                                                                         |
+| -p                        | --password=PASSWORD                               | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                                                                                                                            |
+| -i                        | --tenantId=TENANT-ID                              | ID du locataire à utiliser (par défaut : 1)                                                                                                                                         |
+| -c                        | --config=CONFIG-FILE                              | Spécifie le chemin vers le fichier de configuration                                                                                                                                           |
+| -h                        | --help                                            | Message d'aide pour afficher des informations supplémentaires                                                                                                                                         |
+| -q                        | --quiet                                           | Mode silencieux pour désactiver la sortie                                                                                                                                                         |
+| -V                        | --version                                         | Sortie de la version de la console i-doit                                                                                                                                                    |
+|                           | --ansi<br>--no-ansi                               | Forcer (ou désactiver --no-ansi) la sortie ANSI                                                                                                                                                |
+| -n                        | --no-interaction                                  | Désactive toutes les questions d'interaction de la console i-doit                                                                                                                                |
+| -v / -vv / -vvv           | --verbose                                         | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage)                                                                                            |
 
 ### ldap-syncdn
 
-Synchronizes LDAP DNs with the i-doit users
+Synchronise les DNs LDAP avec les utilisateurs i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)    | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)  | Description                                                                                  |
 | ------------------------- | --------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --ldapServerId=LDAPSERVERID | Specifying the LDAP server via the ID                                                        |
-| -o                        | --objectType=OBJECTTYPE     | Specifying the object type as a constant (z.B. C__OBJTYPE__SERVER)                           |
-| -u                        | --user=USERNAME             | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD         | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID        | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                      | Help message for displaying further information                                              |
-| -q                        | --quiet                     | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                   | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi         | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction            | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --ldapServerId=LDAPSERVERID | Spécifie le serveur LDAP via l'ID                                                           |
+| -o                        | --objectType=OBJECTTYPE     | Spécifie le type d'objet en tant que constante (par exemple C__OBJTYPE__SERVER)             |
+| -u                        | --user=USERNAME             | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=PASSWORD         | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                  |
+| -i                        | --tenantId=TENANT-ID        | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -h                        | --help                      | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                     | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                   | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi         | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction            | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                   | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php ldap-syncdn --user admin --password admin --tenantId 1 --ldapServerId 1
 ```
 
-### list
+### liste
 
-Lists all commands. Format of the output can be changed.
+Liste toutes les commandes. Le format de la sortie peut être modifié.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                   |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                   |
 | ------------------------- | ------------------------ | ------------------------------------------------------------- |
-|                           | --format=FORMAT          | Setting the output format (txt, xml, json or md) Default: txt |
-|                           | --raw                    | Output of the command help                                    |
-| Parameter (short version) | Parameter (long version) | Description                                                   |
+|                           | --format=FORMAT          | Définit le format de sortie (txt, xml, json ou md) Par défaut : txt |
+|                           | --raw                    | Affiche l'aide de la commande                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                   |
 | ------------------------- | ------------------------ | ------------------------------------------------------------- |
-|                           | --format=FORMAT          | Setting the output format (txt, xml, json or md) Default: txt |
-|                           | --raw                    | Output of the command help                                    |
+|                           | --format=FORMAT          | Définit le format de sortie (txt, xml, json ou md) Par défaut : txt |
+|                           | --raw                    | Affiche l'aide de la commande                                  |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php list --format=txt
@@ -793,49 +740,49 @@ sudo -u www-data php console.php list --format=txt
 
 ### license-add
 
-Adds a license for i-doit
+Ajoute une licence pour i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -l                        | --license=LICENSE        | Path to the license file (/path/to/license/file.key)                                         |
-| -t                        | --tenant=TENANT-ID       | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                  |
+| -l                        | --license=LICENSE        | Chemin vers le fichier de licence (/chemin/vers/fichier/license.key)                         |
+| -t                        | --tenant=TENANT-ID       | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                | Affiche la version de la console i-doit                                                    |
+|                           | --ansi<br>--no-ansi      | Force (ou désactive --no-ansi) la sortie ANSI                                               |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Attribution de licence {/ * Exemple d'utilisation * /}
 
 ```shell
-sudo -u www-data php console.php license-add --user admin --password admin --tenantId 1 --license /path/to/license/file.key
+sudo -u www-data php console.php license-add --user admin --password admin --tenantId 1 --license /chemin/vers/fichier/license.key
 ```
 
 ### license-assign
 
-Assigns a hosting license to a tenant
+Attribue une licence d'hébergement à un locataire
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --count=COUNT            | Number of objects to be licensed Default: 0                                                  |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                  |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -c                        | --count=COUNT            | Nombre d'objets à licencier. Par défaut : 0                                                  |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php license-assign --user admin --password admin --tenantId 1 --count 1000
@@ -843,48 +790,48 @@ sudo -u www-data php console.php license-assign --user admin --password admin --
 
 ### license-import
 
-Imports licenses from the i-doit license server
+Importe des licences depuis le serveur de licences i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)        | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)     | Description                                                                                  |
 | ------------------------- | ------------------------------- | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME                 | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD             | Password for authentication of the previously specified user                                 |
-| -l                        | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "<https://lizenzen.i-doit.com>"                   |
-| -h                        | --help                          | Help message for displaying further information                                              |
-| -q                        | --quiet                         | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                       | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi             | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction                | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                       | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME                 | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=PASSWORD             | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                   |
+| -l                        | --license-server=LICENSE-SERVER | Chemin d'accès au serveur de licences i-doit Par défaut : "<https://lizenzen.i-doit.com>"    |
+| -h                        | --help                          | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                         | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                       | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi             | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction                | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                       | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php license-import --user admin --password admin --license-server https://lizenzen.i-doit.com
 ```
 
-### license-key
+### clé-de-licence
 
-Sets a license key for i-doit
+Définit une clé de licence pour i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)        | Description                                                                                             |
+| Paramètre (version courte) | Paramètre (version longue)     | Description                                                                                             |
 | ------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME                 | Username of a user who is authorized to execute                                                         |
-| -p                        | --password=PASSWORD             | Password for authentication of the previously specified user                                            |
-| -l                        | --license-server=LICENSE-SERVER | Path to the i-doit license server Default: "<https://lizenzen.i-doit.com(https://lizenzen.i-doit.com)>" |
-| -k                        | --key=KEY                       | License key for i-doit                                                                                  |
-| -h                        | --help                          | Help message for displaying further information                                                         |
-| -q                        | --quiet                         | Quiet-Mode to deactivate output                                                                         |
-| -V                        | --version                       | Output of the i-doit Console version                                                                    |
-|                           | --ansi<br>--no-ansi             | Force (or disable --no-ansi) ANSI output                                                                |
-| -n                        | --no-interaction                | Disables all interaction questions of the i-doit Console                                                |
-| -v / -vv / -vvv           | --verbose                       | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level)            |
+| -u                        | --utilisateur=UTILISATEUR       | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                                   |
+| -p                        | --mot-de-passe=MOT-DE-PASSE     | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                             |
+| -l                        | --serveur-de-licence=SERVEUR-DE-LICENCE | Chemin vers le serveur de licence i-doit Par défaut : "<https://lizenzen.i-doit.com(https://lizenzen.i-doit.com)>" |
+| -k                        | --clé=CLÉ                       | Clé de licence pour i-doit                                                                             |
+| -h                        | --aide                          | Message d'aide pour afficher des informations supplémentaires                                           |
+| -q                        | --silencieux                    | Mode silencieux pour désactiver la sortie                                                              |
+| -V                        | --version                       | Sortie de la version de la console i-doit                                                              |
+|                           | --ansi<br>--no-ansi             | Forcer (ou désactiver --no-ansi) la sortie ANSI                                                        |
+| -n                        | --sans-interaction              | Désactive toutes les questions d'interaction de la console i-doit                                      |
+| -v / -vv / -vvv           | --verbeux                       | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage)         |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php license-key --user admin --password admin --license-server https://lizenzen.i-doit.com --key license
@@ -892,21 +839,21 @@ sudo -u www-data php console.php license-key --user admin --password admin --lic
 
 ### license-list
 
-Lists all installed licenses
+Liste toutes les licences installées
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -t                        | --tenant=TENANT          | ID of the assigned tenant to filter (multiple values allowed)                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -t                        | --tenant=TENANT          | ID du locataire assigné pour filtrer (valeurs multiples autorisées)                          |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php license-list --tenant 1
@@ -914,23 +861,23 @@ sudo -u www-data php console.php license-list --tenant 1
 
 ### license-remove
 
-Deletes a license from i-doit
+Supprime une licence de i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -l                        | --license=LICENSE        | License ID for the license to be deleted                                                     |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                   |
+| -l                        | --license=LICENSE        | ID de licence de la licence à supprimer                                                      |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php license-remove --user admin --password admin --license LicenseID
@@ -938,24 +885,24 @@ sudo -u www-data php console.php license-remove --user admin --password admin --
 
 ### logbook-archive
 
-Archives the logbook entries with a defined age, according to the settings on the i-doit interface.
+Archive les entrées du journal avec un âge défini, selon les paramètres sur l'interface i-doit.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                         |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                   |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                   |
+| -c                        | --config=CONFIG-FILE     | Spécifie le chemin vers le fichier de configuration                                           |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                 |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
@@ -963,237 +910,219 @@ sudo -u www-data php console.php logbook-archive --user admin --password admin -
 
 ### maintenance
 
-Sends e-mails with scheduled maintenance according to the time periods specified in the [Maintenance add-on](../../../i-doit-pro-add-ons/maintenance.md).
+Envoie des e-mails pour la maintenance planifiée selon les périodes spécifiées dans l'[add-on Maintenance](../../../i-doit-pro-add-ons/maintenance.md).
 
-**Options:**
+**Options :**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                  |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                | Affichage de la version de la Console i-doit                                               |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la Console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php maintenance --user admin --password admin --tenantId 1
 ```
 
-### migrate-uploaded-files
+### migrer-fichiers-uploadés
 
-Migrates uploaded files in i-doit <v1.13 to v.1.14>
+Migre les fichiers téléchargés dans i-doit <v1.13 à v.1.14>
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -h                        | --aide                   | Message d'aide pour afficher des informations supplémentaires                                  |
+| -q                        | --silencieux             | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --pas-d-interaction      | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbeux                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
-sudo -u www-data php console.php migrate-uploaded-files
+sudo -u www-data php console.php migrer-fichiers-uploadés
 ```
 
-### nagios-export
+### exportation-nagios
 
 !!!info
-    This Command is only available if the Nagios Add-on is installed
+    Cette commande n'est disponible que si le module complémentaire Nagios est installé
 
-Exports the Nagios settings and i-doit objects to Nagios configuration files
+Exporte les paramètres Nagios et les objets i-doit vers les fichiers de configuration Nagios
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)    | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)    | Description                                                                                  |
 | ------------------------- | --------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --nagiosHostId=NAGIOSHOSTID | Specifies the Nagios host to be used for the export                                          |
-|                           | --validate                  | Validates the export files                                                                   |
-| -u                        | --user=USERNAME             | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD         | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID        | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE        | Specifying the path to the configuration file                                                |
-| -h                        | --help                      | Help message for displaying further information                                              |
-| -q                        | --quiet                     | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                   | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi         | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction            | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php nagios-export --user admin --password admin --tenantId 1 --nagiosHostId 1
-```
+|                           | --idHoteNagios=IDHOTENAGIOS | Spécifie l'hôte Nagios à utiliser pour l'exportation                                          |
+|                           | --valider                  | Valide les fichiers d'exportation                                                            |
+| -u                        | --utilisateur=UTILISATEUR  | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --motDePasse=MOTDEPASSE    | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                  |
+| -i                        | --idLocataire=IDLOCATAIRE  | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -c                        | --config=FICHIER-CONFIG    | Spécifie le chemin du fichier de configuration                                               |
+| -h                        | --aide                     | Message d'aide pour afficher des informations supplémentaires                                  |
+| -q                        | --silencieux               | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                  | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi        | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --pas-d-interaction        | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbeux                  | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
 ### nagios-ndoutils
 
 !!!info
-    This Command is only available if the Nagios Add-on is installed
+    Cette commande n'est disponible que si l'extension Nagios est installée
 
-Imports monitoring status changes from the NDOUtils into the i-doit logbook.
+Importe les changements d'état de surveillance depuis les NDOUtils dans le journal i-doit.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                         |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                    |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -c                        | --config=CONFIG-FILE     | Spécifie le chemin vers le fichier de configuration                                           |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                 |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Liste des notifications {/ * exemples *}
 
-```shell
-sudo -u www-data php console.php nagios-ndoutils --user admin --password admin --tenantId 1
-```
-
-### notifications-list
-
-Lists all notification types and notifications for later usage
+Liste tous les types de notifications et les notifications pour une utilisation ultérieure
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                         |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                    |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                   |
+| -c                        | --config=CONFIG-FILE     | Spécifie le chemin vers le fichier de configuration                                           |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                     |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                    |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                               |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                             |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### notifications-send {#notifications-send}
 
-```shell
-sudo -u www-data php console.php notifications-list --user admin --password admin --tenantId 1
-```
-
-### notifications-send
-
-Sends the notifications configured on the i-doit interface
+Envoie les notifications configurées sur l'interface i-doit
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)                      | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)                   | Description                                                                                  |
 | ------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --notification-ids=NOTIFICATION-IDS           | Pass specific notification IDs to be sent 1,2,3                                              |
-|                           | --notification-type-ids=NOTIFICATION-TYPE-IDS | Pass specific notification type IDs to be sent 1,2,3                                         |
-| -u                        | --user=USERNAME                               | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD                           | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID                          | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE                          | Specifying the path to the configuration file                                                |
-| -h                        | --help                                        | Help message for displaying further information                                              |
-| -q                        | --quiet                                       | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                                     | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi                           | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction                              | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                                     | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --notification-ids=NOTIFICATION-IDS           | Transmettre des IDs de notification spécifiques à envoyer 1,2,3                               |
+|                           | --notification-type-ids=NOTIFICATION-TYPE-IDS | Transmettre des IDs de type de notification spécifiques à envoyer 1,2,3                       |
+| -u                        | --user=USERNAME                               | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=MOT DE PASSE                      | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                   |
+| -i                        | --tenantId=ID_LOCATAIRE                      | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -c                        | --config=FICHIER_CONFIG                      | Spécifier le chemin vers le fichier de configuration                                          |
+| -h                        | --help                                        | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                                       | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                                     | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi                           | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction                              | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                                     | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php notifications-send --user admin --password admin --tenantId 1
 ```
 
-### report-export
+### export-rapport
 
-Exports a report to the desired file format.
+Exporte un rapport dans le format de fichier souhaité.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)        | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)     | Description                                                                                  |
 | ------------------------- | ------------------------------- | -------------------------------------------------------------------------------------------- |
-| -r                        | --reportId=REPORTID             | ID of the report to be exported                                                              |
-| -d                        | --exportPath=EXPORTPATH         | Path to which the export should take place                                                   |
-| -f                        | --exportFilename=EXPORTFILENAME | File name of the export file without file extension                                          |
-| -t                        | --exportFileType=EXPORTFILETYPE | File type of the export file. Possible values: csv, txt, pdf, xml (Default: "csv")           |
-| -u                        | --user=USERNAME                 | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD             | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID            | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE            | Specifying the path to the configuration file                                                |
-| -h                        | --help                          | Help message for displaying further information                                              |
-| -q                        | --quiet                         | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                       | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi             | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction                | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                       | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -r                        | --reportId=REPORTID             | ID du rapport à exporter                                                                     |
+| -d                        | --exportPath=EXPORTPATH         | Chemin vers lequel l'exportation doit avoir lieu                                             |
+| -f                        | --exportFilename=EXPORTFILENAME | Nom du fichier d'exportation sans extension de fichier                                       |
+| -t                        | --exportFileType=EXPORTFILETYPE | Type de fichier d'exportation. Valeurs possibles : csv, txt, pdf, xml (Par défaut : "csv")   |
+| -u                        | --user=USERNAME                 | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=PASSWORD             | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                   |
+| -i                        | --tenantId=TENANT-ID            | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -c                        | --config=CONFIG-FILE            | Spécifie le chemin vers le fichier de configuration                                           |
+| -h                        | --help                          | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                         | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                       | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi             | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction                | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                       | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php report-export --user admin --password admin --tenantId 1 --reportId 27 --exportPath /var/www/exported-reports/ --exportFilename Report-Buchhaltung-November-2019 --exportFileType csv
 ```
 
-### search
+### recherche
 
-Searches for content in the documentation
+Recherche du contenu dans la documentation
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)    | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)  | Description                                                                                  |
 | ------------------------- | --------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --searchString=SEARCHSTRING | Content to be searched for                                                                   |
-| -u                        | --user=USERNAME             | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD         | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID        | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE        | Specifying the path to the configuration file                                                |
-| -h                        | --help                      | Help message for displaying further information                                              |
-| -q                        | --quiet                     | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                   | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi         | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction            | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --searchString=SEARCHSTRING | Contenu à rechercher                                                                         |
+| -u                        | --user=USERNAME             | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=MOT DE PASSE     | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                  |
+| -i                        | --tenantId=ID-TENANT        | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -c                        | --config=FICHIER-CONFIG     | Spécification du chemin d'accès au fichier de configuration                                   |
+| -h                        | --help                      | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                     | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                   | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi         | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction            | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                   | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php search --user admin --password admin --tenantId 1 --searchString "Server001"
 ```
 
-### search-index
+### index-de-recherche
 
-Restores the search index by deleting and rewriting it.
+Restaure l'index de recherche en le supprimant et en le réécrivant.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-|                           | --update                 | Instead of just creating a new index, the current index documents are overwritten            |
-|                           | --category=CATEGORY      | Whitelist of the categories                                                                  |
-|                           | --dry-run                | Run Reindex without saving                                                                   |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --update                 | Au lieu de simplement créer un nouvel index, les documents de l'index actuel sont écrasés     |
+|                           | --category=CATEGORIE     | Liste blanche des catégories                                                                 |
+|                           | --dry-run                | Exécute Reindex sans enregistrer                                                             |
+| -u                        | --user=UTILISATEUR       | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=MOT DE PASSE  | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                  |
+| -i                        | --tenantId=ID-LOCATAIRE  | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -c                        | --config=FICHIER-CONFIG  | Spécifie le chemin du fichier de configuration                                               |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                | Sortie de la version de la Console i-doit                                                  |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la Console i-doit                           |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php search-index --user admin --password admin --tenantId 1
@@ -1201,24 +1130,24 @@ sudo -u www-data php console.php search-index --user admin --password admin --te
 
 ### strip-description-html
 
-With this command you can strip html tags in description field of all categories and objects
+Avec cette commande, vous pouvez supprimer les balises HTML dans le champ de description de toutes les catégories et objets.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                   |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -c                        | --config=CONFIG-FILE     | Spécifie le chemin vers le fichier de configuration                                           |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affiche la version de la console i-doit                                                     |
+|                           | --ansi<br>--no-ansi      | Force (ou désactive --no-ansi) la sortie ANSI                                               |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php strip-description-html --user admin --password admin --tenantId 1
@@ -1226,24 +1155,24 @@ sudo -u www-data php console.php strip-description-html --user admin --password 
 
 ### sync-dynamic-groups
 
-Resynchronizes dynamic group members.
+Resynchronise les membres des groupes dynamiques.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -g                        | --groups=GROUPS          | Comma-separated list of IDs of the dynamic groups                                            |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -g                        | --groups=GROUPES          | Liste de IDs des groupes dynamiques séparés par des virgules                                  |
+| -u                        | --user=UTILISATEUR          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                              |
+| -p                        | --password=MOT DE PASSE      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                                 |
+| -i                        | --tenantId=ID-TENANT     | ID du locataire à utiliser (par défaut : 1)                                              |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                              |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                              |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                         |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                                     |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                                     |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php sync-dynamic-groups --user admin --password admin --tenantId --groups 173,188,219
@@ -1251,24 +1180,24 @@ sudo -u www-data php console.php sync-dynamic-groups --user admin --password adm
 
 ### system-autoincrement
 
-Determines the value of the system's auto-increment. This affects object IDs, category entries, and so on. When resetting the auto-increment, some content may no longer be accessible.
+Détermine la valeur de l'auto-incrémentation du système. Cela affecte les identifiants d'objet, les entrées de catégorie, etc. Lors de la réinitialisation de l'auto-incrémentation, certains contenus peuvent ne plus être accessibles.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)      | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)   | Description                                                                                  |
 | ------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --autoIncrement=AUTOINCREMENT | Number to which the auto-increment should be set                                             |
-| -u                        | --user=USERNAME               | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD           | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID          | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                        | Help message for displaying further information                                              |
-| -q                        | --quiet                       | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                     | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi           | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction              | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                     | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --autoIncrement=AUTOINCREMENT | Nombre auquel l'auto-incrémentation doit être définie                                        |
+| -u                        | --user=USERNAME               | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=PASSWORD           | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                   |
+| -i                        | --tenantId=TENANT-ID          | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -h                        | --help                        | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                       | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                     | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi           | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction              | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                     | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php system-autoincrement --user admin --password admin --tenantId 1 --autoIncrement 20
@@ -1276,24 +1205,24 @@ sudo -u www-data php console.php system-autoincrement --user admin --password ad
 
 ### system-categorycleanup
 
-Purges optionally category entries that are in the state unfinished, archived or deleted
+Purge éventuellement les entrées de catégorie qui sont dans l'état inachevé, archivé ou supprimé
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)        | Description                                                                                                                                                                 |
+| Paramètre (version courte) | Paramètre (version longue)     | Description                                                                                                                                                                 |
 | ------------------------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                           | --categoryStatus=CATEGORYSTATUS | Use to start cleaning up the specified status: <br>**1** for 'unfinished' category entries<br>**3** for 'archived' category entries<br>**4** for 'deleted' category entries |
-| -u                        | --user=USERNAME                 | Username of a user who is authorized to execute                                                                                                                             |
-| -p                        | --password=PASSWORD             | Password for authentication of the previously specified user                                                                                                                |
-| -i                        | --tenantId=TENANT-ID            | Tenant ID of the tenant to be used (default: 1)                                                                                                                             |
-| -h                        | --help                          | Help message for displaying further information                                                                                                                             |
-| -q                        | --quiet                         | Quiet-Mode to deactivate output                                                                                                                                             |
-| -V                        | --version                       | Output of the i-doit Console version                                                                                                                                        |
-|                           | --ansi<br>--no-ansi             | Force (or disable --no-ansi) ANSI output                                                                                                                                    |
-| -n                        | --no-interaction                | Disables all interaction questions of the i-doit Console                                                                                                                    |
-| -v / -vv / -vvv           | --verbose                       | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level)                                                                                |
+|                           | --categoryStatus=CATEGORYSTATUS | Utilisé pour commencer le nettoyage de l'état spécifié : <br>**1** pour les entrées de catégorie 'inachevées'<br>**3** pour les entrées de catégorie 'archivées'<br>**4** pour les entrées de catégorie 'supprimées' |
+| -u                        | --user=USERNAME                 | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                                                                                                        |
+| -p                        | --password=PASSWORD             | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                                                                                                  |
+| -i                        | --tenantId=TENANT-ID            | ID du locataire à utiliser (par défaut : 1)                                                                                                                                  |
+| -h                        | --help                          | Message d'aide pour afficher des informations supplémentaires                                                                                                                |
+| -q                        | --quiet                         | Mode silencieux pour désactiver la sortie                                                                                                                                    |
+| -V                        | --version                       | Sortie de la version de la console i-doit                                                                                                                                    |
+|                           | --ansi<br>--no-ansi             | Forcer (ou désactiver --no-ansi) la sortie ANSI                                                                                                                              |
+| -n                        | --no-interaction                | Désactive toutes les questions d'interaction de la console i-doit                                                                                                           |
+| -v / -vv / -vvv           | --verbose                       | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage)                                                                             |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php system-categorycleanup --user admin --password admin --tenantId 1 --categoryStatus 3
@@ -1301,20 +1230,20 @@ sudo -u www-data php console.php system-categorycleanup --user admin --password 
 
 ### system-checkforupdates
 
-Checks if a new i-doit version is available.
+Vérifie si une nouvelle version d'i-doit est disponible.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php system-checkforupdates
@@ -1322,50 +1251,44 @@ sudo -u www-data php console.php system-checkforupdates
 
 ### system-convert-non-innodb-tables
 
-Converts all non INNODB tables to INNODB
+Convertit toutes les tables non INNODB en INNODB
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-|                           | --convert                | Starts the process of converting all non-UTF-8 tables                                        |
-|                           | --table=TABLE            | Table to be checked and converted                                                            |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --convert                | Lance le processus de conversion de toutes les tables non UTF-8                              |
+|                           | --table=TABLE            | Table à vérifier et à convertir                                                              |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                 |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### system-convert-non-utf8-tables {#examples}
 
-```shell
-sudo -u www-data php console.php system-convert-non-innodb-tables --convert --table TABLE_NAME
-```
-
-### system-convert-non-utf8-tables
-
-Converts all non-UTF-8 data types to UTF-8.
+Convertit tous les types de données non-UTF-8 en UTF-8.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-|                           | --convert                | Starts the process of converting all non-UTF-8 tables                                        |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --convert                | Démarre le processus de conversion de toutes les tables non-UTF-8                            |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                  |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php system-convert-non-utf8-tables --convert
@@ -1373,75 +1296,75 @@ sudo -u www-data php console.php system-convert-non-utf8-tables --convert
 
 ### system-location-fix
 
-Executes the location correction from the GUI in the console
+Exécute la correction de l'emplacement à partir de l'interface graphique dans la console
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                         |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                    |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                   |
+| -c                        | --config=CONFIG-FILE     | Spécification du chemin vers le fichier de configuration                                       |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                  |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                     |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                    |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                               |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                              |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
-sudo -u www-data php console.php system-location-fix --user admin --password admin --tenantId 1 --config /path/to/config/file
+sudo -u www-data php console.php system-location-fix --user admin --password admin --tenantId 1 --config /chemin/vers/fichier/config
 ```
 
-### system-maintenancecontract
+### contrat-de-maintenance-système {/examples}
 
-Sends an e-mail notification for maintenance contacts.
+Envoie une notification par e-mail pour les contrats de maintenance.
 
-**Options:**
+**Options :**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                   |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -c                        | --config=CONFIG-FILE     | Spécifie le chemin vers le fichier de configuration                                           |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                 |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php system-maintenancecontract --user admin --password admin --tenantId 1
 ```
 
-### system-objectcleanup
+### nettoyage-objet-systeme
 
-Cleans all objects with a self-defined status.
+Nettoie tous les objets avec un statut défini par l'utilisateur.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)    | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)  | Description                                                                                  |
 | ------------------------- | --------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --objectStatus=OBJECTSTATUS | Determines which status is to be cleaned up: 1: "unfinished"; 3: "archived"; 4: "deleted     |
-| -u                        | --user=USERNAME             | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD         | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID        | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE        | Specifying the path to the configuration file                                                |
-| -h                        | --help                      | Help message for displaying further information                                              |
-| -q                        | --quiet                     | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                   | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi         | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction            | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --objectStatus=OBJECTSTATUS | Détermine quel statut doit être nettoyé : 1 : "non terminé"; 3 : "archivé"; 4 : "supprimé"     |
+| -u                        | --user=USERNAME             | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=MOT DE PASSE     | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                  |
+| -i                        | --tenantId=ID-TENANT        | ID du locataire du locataire à utiliser (par défaut : 1)                                     |
+| -c                        | --config=FICHIER-CONFIG     | Spécifie le chemin vers le fichier de configuration                                           |
+| -h                        | --help                      | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                     | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                   | Affichage de la version de la console i-doit                                                 |
+|                           | --ansi<br>--no-ansi         | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction            | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                   | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php system-objectcleanup --user admin --password admin --tenantId 1 --objectStatus 1
@@ -1449,25 +1372,25 @@ sudo -u www-data php console.php system-objectcleanup --user admin --password ad
 
 ### system-objectrelations
 
-Renews the names of all object relationships.
+Renouvelle les noms de toutes les relations d'objets.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)            | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)         | Description                                                                                  |
 | ------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --categoryConstant=CATEGORYCONSTANT | constant of the category for which the operation is to be performed (z.B. C__CATG__IP)       |
-| -u                        | --user=USERNAME                     | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD                 | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID                | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE                | Specifying the path to the configuration file                                                |
-| -h                        | --help                              | Help message for displaying further information                                              |
-| -q                        | --quiet                             | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                           | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi                 | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction                    | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                           | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+|                           | --categoryConstant=CATEGORYCONSTANT | constante de la catégorie pour laquelle l'opération doit être effectuée (par exemple C__CATG__IP) |
+| -u                        | --user=USERNAME                     | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=MOT DE PASSE             | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                  |
+| -i                        | --tenantId=ID-TENANT                | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -c                        | --config=FICHIER-CONFIGURATION      | Spécifie le chemin vers le fichier de configuration                                           |
+| -h                        | --help                              | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                             | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                           | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi                 | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction                    | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                           | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php system-objectrelations --user admin --password admin --tenantId 1 --categoryConstant C__CATG__IP
@@ -1475,52 +1398,48 @@ sudo -u www-data php console.php system-objectrelations --user admin --password 
 
 ### system-refresh-table-configuration
 
-Refreshes all available list configurations (object types and categories)
+Actualise toutes les configurations de liste disponibles (types d'objets et catégories)
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)    | Description                                                                                                                            |
-| ------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| -a                        | --all                       | Will process all object type table configurations                                                                                      |
-| -o                        | --object-types=OBJECT-TYPES | Process only specific object type table configurations via their constant (it is possible to pass a comma separated list of constants) |
-| -u                        | --user=USERNAME             | Username of a user who is authorized to execute                                                                                        |
-| -p                        | --password=PASSWORD         | Password for authentication of the previously specified user                                                                           |
-| -i                        | --tenantId=TENANT-ID        | Tenant ID of the tenant to be used (default: 1)                                                                                        |
-| -c                        | --config=CONFIG-FILE        | Specifying the path to the configuration file                                                                                          |
-| -h                        | --help                      | Help message for displaying further information                                                                                        |
-| -q                        | --quiet                     | Quiet-Mode to deactivate output                                                                                                        |
-| -V                        | --version                   | Output of the i-doit Console version                                                                                                   |
-|                           | --ansi<br>--no-ansi         | Force (or disable --no-ansi) ANSI output                                                                                               |
-| -n                        | --no-interaction            | Disables all interaction questions of the i-doit Console                                                                               |
-| -v / -vv / -vvv           | --verbose                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level)                                           |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                                                            |
+| --------------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| -a                          | --all                      | Traitera toutes les configurations de table de type d'objet                                                                             |
+| -o                          | --object-types=OBJECT-TYPES | Traiter uniquement des configurations de table de type d'objet spécifiques via leur constante (il est possible de passer une liste de constantes séparées par des virgules) |
+| -u                          | --user=USERNAME            | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                                                                 |
+| -p                          | --password=MOT DE PASSE    | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                                                             |
+| -i                          | --tenantId=ID_LOCATAIRE    | ID du locataire à utiliser (par défaut : 1)                                                                                           |
+| -c                          | --config=FICHIER_CONFIG    | Spécifie le chemin vers le fichier de configuration                                                                                   |
+| -h                          | --help                     | Message d'aide pour afficher des informations supplémentaires                                                                         |
+| -q                          | --quiet                    | Mode silencieux pour désactiver la sortie                                                                                             |
+| -V                          | --version                  | Sortie de la version de la console i-doit                                                                                             |
+|                             | --ansi<br>--no-ansi        | Forcer (ou désactiver --no-ansi) la sortie ANSI                                                                                       |
+| -n                          | --no-interaction           | Désactive toutes les questions d'interaction de la console i-doit                                                                      |
+| -v / -vv / -vvv             | --verbose                  | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage)                                        |
 
-**Example of use**
-
-```shell
-sudo -u www-data php console.php system-refresh-table-configuration --user admin --password admin --tenantId 1
-```
+{ /* examples */ }
 
 ### system-set-settings
 
-Enables Admin Center settings to be set via the CLI.
+Permet de définir les paramètres du Centre d'administration via l'interface de ligne de commande.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                      |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                      |
 | ------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------ |
-| -u                        | --user=[USERNAME]        | i-doit Admin username [default: "admin"]                                                         |
-| -p                        | --password=[PASSWORD]    | i-doit Admin password                                                                            |
-| -s                        | --settings=[SETTINGS]    | Map of settings to be set as json like {"proxy.active": 1, [...]}                                |
-| -i                        | --tenantId=TENANT-ID        | Tenant ID of the tenant to be used (default: 1)                                                                                        |
-| -c                        | --config=CONFIG-FILE        | Specifying the path to the configuration file                                                                                          |
-| -h                        | --help                      | Help message for displaying further information                                                                                        |
-| -q                        | --quiet                     | Quiet-Mode to deactivate output                                                                                                        |
-| -V                        | --version                   | Output of the i-doit Console version                                                                                                   |
-|                           | --ansi<br>--no-ansi         | Force (or disable --no-ansi) ANSI output                                                                                               |
-| -n                        | --no-interaction            | Disables all interaction questions of the i-doit Console                                                                               |
-| -v / -vv / -vvv           | --verbose                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level)                                           |
+| -u                        | --user=[NOM_UTILISATEUR]        | Nom d'utilisateur Admin i-doit [par défaut : "admin"]                                                         |
+| -p                        | --password=[MOT_DE_PASSE]    | Mot de passe de l'administrateur i-doit                                                                            |
+| -s                        | --settings=[PARAMÈTRES]    | Carte des paramètres à définir au format json comme {"proxy.active": 1, [...]}                                |
+| -i                        | --tenantId=ID_LOCATAIRE        | ID du locataire à utiliser (par défaut : 1)                                                                                        |
+| -c                        | --config=FICHIER_CONFIG        | Spécification du chemin vers le fichier de configuration                                                                                          |
+| -h                        | --help                      | Message d'aide pour afficher des informations supplémentaires                                                                                        |
+| -q                        | --quiet                     | Mode silencieux pour désactiver la sortie                                                                                                        |
+| -V                        | --version                   | Affichage de la version de la console i-doit                                                                                                   |
+|                           | --ansi<br>--no-ansi         | Forcer (ou désactiver --no-ansi) la sortie ANSI                                                                                               |
+| -n                        | --no-interaction            | Désactive toutes les questions d'interaction de la console i-doit                                                                               |
+| -v / -vv / -vvv           | --verbose                   | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage)                                           |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php system-set-settings -u admin -p admin --settings="{\"proxy.active\":1,\"proxy.host\":\"http://myproxy.net\",\"unknown-setting\": 4}" -n
@@ -1529,26 +1448,26 @@ sudo -u www-data php system-set-settings -u admin -p admin --settings="{\"proxy.
 
 ### tenant-create
 
-Creates a new tenant
+Crée un nouveau locataire
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)      | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue)   | Description                                                                                  |
 | ------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------- |
-| -u                        | --root-user=ROOT-USER         | Database password of the new tenant                                                          |
-| -p                        | --root-password=ROOT-PASSWORD | Username of privileged DB User default: "root"                                               |
-| -U                        | --user=USER                   | Username of DB for new tenant default: "idoit"                                               |
-| -P                        | --password=PASSWORD           | Password of DB for new tenant                                                                |
-| -d                        | --database=DATABASE           | DB name for new tenant default: "idoit_data"                                                 |
-| -t                        | --title=TITLE                 | Name of the new tenant default: "Your company name"                                          |
-| -h                        | --help                        | Help message for displaying further information                                              |
-| -q                        | --quiet                       | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                     | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi           | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction              | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                     | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --root-user=ROOT-USER         | Mot de passe de la base de données du nouveau locataire                                       |
+| -p                        | --root-password=ROOT-PASSWORD | Nom d'utilisateur du super utilisateur de la base de données par défaut : "root"              |
+| -U                        | --user=USER                   | Nom d'utilisateur de la base de données pour le nouveau locataire par défaut : "idoit"        |
+| -P                        | --password=PASSWORD           | Mot de passe de la base de données pour le nouveau locataire                                   |
+| -d                        | --database=DATABASE           | Nom de la base de données pour le nouveau locataire par défaut : "idoit_data"                 |
+| -t                        | --title=TITLE                 | Nom du nouveau locataire par défaut : "Nom de votre entreprise"                               |
+| -h                        | --help                        | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                       | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                     | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi           | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction              | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                     | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php tenant-create --title my-org --user idoit --password idoitpassword -- enable --tenantId 3
@@ -1556,23 +1475,23 @@ sudo -u www-data php console.php tenant-create --title my-org --user idoit --pas
 
 ### tenant-disable
 
-Deactivates an existing tenant.
+Désactive un locataire existant.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                         |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                   |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affichage de la version de la console i-doit                                                |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php tenant-disable --tenantId 3
@@ -1580,44 +1499,44 @@ sudo -u www-data php console.php tenant-disable --tenantId 3
 
 ### tenant-enable
 
-Activates an existing tenant.
+Active un locataire existant.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=UTILISATEUR       | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=MOT DE PASSE  | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                   |
+| -i                        | --tenantId=ID-TENANT     | ID du locataire à utiliser (par défaut : 1)                                                  |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php tenant-enable --tenantId 3
 ```
 
-### tenant-list
+### tenant-liste
 
-Lists all existing tenants.
+Liste tous les locataires existants.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                      |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                      |
 | ------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------ |
-| -h                        | --help                   | Hilfenachricht zur Einblendung weiterer Informationen                                            |
-| -q                        | --quiet                  | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
-| -V                        | --version                | Ausgabe der Version der i-doit Console                                                           |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                         |
-| -n                        | --no-interaction         | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
-| -v / -vv / -vvv           | --verbose                | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                     |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                        |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                        |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                                  |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                                 |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### Exemple d'utilisation
 
 ```shell
 sudo -u www-data php console.php tenant-list
@@ -1625,97 +1544,91 @@ sudo -u www-data php console.php tenant-list
 
 ### tenant-remove
 
-Removes an existing client
+Supprime un client existant
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=MOT DE PASSE  | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                  |
+| -i                        | --tenantId=ID-TENANT     | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php tenant-remove --user admin --password admin --tenant 1
 ```
 
-### uninstall
+### désinstaller
 
-Uninstalls the used i-doit installation
+Désinstalle l'installation i-doit utilisée
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=MOT DE PASSE  | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                  |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                | Sortie de la version de la console i-doit                                                   |
+|                           | --ansi<br>--no-ansi      | Forcer (ou désactiver --no-ansi) la sortie ANSI                                             |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                           |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
+### mise à jour {/examples}
+
+Met à jour l'installation d'i-doit
+
+**Options:**
+
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                        |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur précédemment spécifié                   |
+| -z                        | --zip=ZIP                | Spécifie le chemin vers le paquet de mise à jour                                              |
+|                           | --v=V                    | Version à laquelle effectuer la mise à jour                                                   |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                 |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                    |
+| -V                        | --version                | Affiche la version de la console i-doit                                                     |
+|                           | --ansi<br>--no-ansi      | Force (ou désactive --no-ansi) la sortie ANSI                                                |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
+
+**Exemple d'utilisation**
 
 ```shell
-sudo -u www-data php console.php uninstall --user admin --password admin
+sudo -u www-data php console.php update --user admin --password admin --zip /chemin/vers/fichier.zip --v 1.14
 ```
 
-### update
+### processus-de-flux
 
-Updates the i-doit installation
+Envoie des e-mails concernant les processus de flux et crée des tâches à partir de listes de contrôle.
 
-**Options:**
+**Options :**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| Paramètre (version courte) | Paramètre (version longue) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -z                        | --zip=ZIP                | Specifying the path to the update packet                                                     |
-|                           | --v=V                    | Version to update to                                                                         |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| -t                        | --types=TYPES            | Types de processus de flux (valeurs multiples autorisées)                                    |
+| -u                        | --user=USERNAME          | Nom d'utilisateur d'un utilisateur autorisé à exécuter                                       |
+| -p                        | --password=PASSWORD      | Mot de passe pour l'authentification de l'utilisateur spécifié précédemment                  |
+| -i                        | --tenantId=TENANT-ID     | ID du locataire à utiliser (par défaut : 1)                                                 |
+| -c                        | --config=CONFIG-FILE     | Spécifie le chemin vers le fichier de configuration                                          |
+| -h                        | --help                   | Message d'aide pour afficher des informations supplémentaires                                |
+| -q                        | --quiet                  | Mode silencieux pour désactiver la sortie                                                   |
+| -V                        | --version                | Affiche la version de la console i-doit                                                    |
+|                           | --ansi<br>--no-ansi      | Force (ou désactive --no-ansi) la sortie ANSI                                              |
+| -n                        | --no-interaction         | Désactive toutes les questions d'interaction de la console i-doit                            |
+| -v / -vv / -vvv           | --verbose                | Augmente la portée du retour. (1 = sortie normale, 2 = sortie détaillée, 3 = niveau de débogage) |
 
-**Example of use**
-
-```shell
-sudo -u www-data php console.php update --user admin --password admin --zip /path/to/zip/file.zip --v 1.14
-```
-
-### workflows-process
-
-Sends emails about workflows and creates tasks from checklists.
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -t                        | --types=TYPES            | Workflow types (multiple values allowed)                                                     |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
+**Exemple d'utilisation**
 
 ```shell
 sudo -u www-data php console.php workflows-process --user admin --password admin --tenantId 1 --types task --types checklist

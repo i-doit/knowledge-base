@@ -1,19 +1,19 @@
-# Use Cases
+# Cas d'utilisation {/examples}
 
-In this section, you will find information on the advanced use of _i-doit_: For one thing, to refine your [IT documentation](../glossary.md) and secondly, to even better support the processes in your IT service management.
+Dans cette section, vous trouverez des informations sur l'utilisation avancée d'_i-doit_: D'une part, pour affiner votre [documentation informatique](../glossary.md) et d'autre part, pour mieux soutenir les processus de gestion des services informatiques.
 
-The following articles are already available online:
+Les articles suivants sont déjà disponibles en ligne :
 
-*   [Cable patches and paths](./cable-patches-and-path.md)
-*   [Complex Reports](./complex-reports.md)
-*   [Documentation of Databases](./documentation-of-databases.md)
-*   [Geo Coordinates](./geo-coordinates.md)
-*   [IP Address Management (IPAM)](./ip-adress-management.md)
-*   [Location-based Authorization](./location-bases-authorization.md)
-*   [Locations](./locations.md)
-*   [Manage Passwords](./manage-password.md)
-*   [Mapping of Customer Sites](./mapping-of-customer-sites.md)
-*   [Switch Stacking](./switch-stacking.md)
-*   [Upload and Link of Files](./upload-and-link-files.md)
-*   [VM Provisioning](./vm-provisioning.md)
-*   [Workplaces](./wokplaces.md)
+*   [Raccords et chemins de câbles](./cable-patches-and-path.md)
+*   [Rapports complexes](./complex-reports.md)
+*   [Documentation des bases de données](./documentation-of-databases.md)
+*   [Coordonnées géographiques](./geo-coordinates.md)
+*   [Gestion des adresses IP (IPAM)](./ip-adress-management.md)
+*   [Autorisation basée sur l'emplacement](./location-bases-authorization.md)
+*   [Emplacements](./locations.md)
+*   [Gestion des mots de passe](./manage-password.md)
+*   [Cartographie des sites clients](./mapping-of-customer-sites.md)
+*   [Empilement de commutateurs](./switch-stacking.md)
+*   [Téléchargement et liaison de fichiers](./upload-and-link-files.md)
+*   [Provisionnement de machines virtuelles](./vm-provisioning.md)
+*   [Postes de travail](./wokplaces.md)

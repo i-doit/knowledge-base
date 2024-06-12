@@ -1,152 +1,152 @@
-# Changelog 1.13.1
+# Journal des modifications 1.13.1
 
-[Task][List editing] Multiple hardware RAIDS appear in list edit although none were created  
-[Improvement][Report-Manager] Reports should always contain a constant  
-[Improvement][Report-Manager] Virtuelle und dynamische Properties in Report Manager Konditionen  
-[Improvement][Categories] New Command: Restore category data of lost references  
-[Improvement][Cabling import] The cabling import does not import as intended.  
-[Improvement][Import] Identification of objects during csv imports via IMEI  
-[Improvement][Code (internal)] Clear user credentials via command  
-[Improvement][Console-base Installation/Update/Licensing] Console-based installation of the i-doit add-ons  
-[Improvement][CMDB-Explorer] Display direction of relations in the CMDB-Explorer  
-[Improvement][Systemtools] Command to convert the engine from MySQL tables to INNODB  
-[Bug][Report-Manager] Report Manager: Category "software-assignment" title is also displayed in the category "operating-system" attribute "operating-system"  
-[Bug][Report-Manager] Report Manager: Output of the grouped MultiValues ​​error during CSV/TXT export  
-[Bug][Report-Manager] Attribute "variant" only displays the title in report output  
-[Bug][Report-Manager] Missing attributes from category "Net" in Report Manager to define conditions  
-[Bug][Report-Manager] Attribute "Aliase" not available in report Manager  
-[Bug][Report-Manager] Attribute "hostname" from category "monitoring" is not available in report manager  
-[Bug][Report-Manager] Simultanous display of operating system and software assignment in report not possible  
-[Bug][Report-Manager] The role of persons is not displayed in the Report Manager.  
-[Bug][Report-Manager] Subselects for Dynamic Groups  
-[Bug][Report-Manager] Create reports with the Logbook category as a condition  
-[Bug][Report-Manager] Combining object title and primary hosdt address in report manager leads to multiple output of the same object  
-[Bug][Report-Manager] Variable report results in a SQL error  
-[Bug][Report-Manager] Report-Manager: Assignment Category "Service Assignment" does not return blank values  
-[Bug][Report-Manager] Reports: Combination of dynamic property and condition leads to sql error  
-[Bug][Report-Manager] Report for "Inserted at" uses a wrong DB table  
-[Bug][Report-Manager] It is not possible to show objects without assignments in report manager  
-[Bug][Categories] SQL error when the category "Layer-3 net" is sorted by "Net with suffix".  
-[Bug][Categories] Condition "Normal" can always be selected in category "General"  
-[Bug][Categories] The Form Factor category does not store any data in the overview.  
-[Bug][Categories] Back of a chassis is not presented in rack view  
-[Bug][Categories] Category port dialog plus field does not work together with cabling category  
-[Bug][Categories] Revision of the Hostadresses Category  
-[Bug][Categories] Improved handling for editing hight unit when swapping objects between front and back of a rack  
-[Bug][Categories] Correct formatting of the overview page when reports and categories are to be displayed  
-[Bug][Categories] Category "service logbook" is even duplicated when not selected for duplication  
-[Bug][Categories] Change attributes in object lists removed wrong attribute in default filter  
-[Bug][Categories] Long port names are truncated in Port Browser  
-[Bug][Categories] Dateien in der Kategorie Objektbild sind für alle Mandanten sichtbar  
-[Bug][Categories] The "Assigned Organization" column does not display any data.  
-[Bug][Categories] Relationships between objects are not displayed in the list view.  
-[Bug][Categories] Wrong default value category "host address" in attribute "Address assignment"  
-[Bug][Categories] Category: "Service" Subcategory "Service Type" the attribute "Type" is not loaded correctly  
-[Bug][Categories] Title of objects in slots is not shown in category "Racks"  
-[Bug][Categories] Database field type for isys_validation_config.isys_validation_config__json changed  
-[Bug][Categories] Rack view: Blade chassis are not displayed vertically  
-[Bug][Categories] Display dropdown menu to choose entry status in category "cluster members"  
-[Bug][Categories] Deselect attributes in object lists removes values in standard filter  
-[Bug][Categories] The time/date at "Initial Import" in the category "Custom Identifier" is not displayed correct  
-[Bug][Categories] Double Category Entries  
-[Bug][OCS] Capacities are always imported as byte in OCS import  
-[Bug][OCS] Capacities of SNMP devices are not updated properly by OCS import  
-[Bug][Lists] SQL error message in object list  
-[Bug][Lists] Sorting location path uses root location for sorting  
-[Bug][Lists] The description field is missing as an attribute in the category lists Configuration for the category "E-Mail Addresses"  
-[Bug][Lists] Object list configuration only mirrors selected attributes to other users and default configuration  
-[Bug][Lists] Logical location of an object is not displayed in object list  
-[Bug][Lists] Setting for maximum lenght of location paths does not work with object lists  
-[Bug][Lists] Sorting of shortened location paths in object lists  
-[Bug][Lists] Showing linked beginning and end of conctracts in object lists  
-[Bug][Lists] Object Lists: Add Custom Attributes  
-[Bug][Lists] E-mail address is always displayed as HTML-mailto in object lists  
-[Bug][Check_MK] Missing setting to define the timeout of Livestatus  
-[Bug][LDAP] Sync all LDAP groups when paging is enabled  
-[Bug][LDAP] Improved handling of deactivated/moved users originating from AD  
-[Bug][LDAP] Don't show email icon if LDAP has mail set as filter  
-[Bug][CMDB] Sort by model  
-[Bug][CMDB] Capacities "Bit" and "Terabit" are missing  
-[Bug][CMDB] Creating assigned devices of an blade chassis causes an white screen  
-[Bug][List editing] Activate edited SLA´s  
-[Bug][List editing] Edit the Service Category in List Editing  
-[Bug][List editing] Release the connections in the Service Assignment category.  
-[Bug][List editing] List editing: Filter for object browser does not always work  
-[Bug][List editing] Listenditierung: Detach from a location impossible  
-[Bug][List editing] Controller isn't selectable for all objects in list edit  
-[Bug][List editing] List Editing: It is not possible to assign workstations in the "assigned workstation" category  
-[Bug][List editing] Empty Sub-Categories in the list edit  
-[Bug][List editing] Multiedit displays categories without attributes  
-[Bug][List editing] Saving a host address generates an error message  
-[Bug][List editing] Leave excluded fields from list edit excluded after saving  
-[Bug][Import] CSV Import: Assignment of licences  
-[Bug][Import] For Layer-2 nets the field = Layer-3 net assignment is missing for an import.  
-[Bug][Import] The device assignment of the category Slots (Switch Chassis) cannot be assigned in csv-import.  
-[Bug][Import] Import variants of operating systems  
-[Bug][Import] OCS Import Categories  
-[Bug][Import] Editing an object matching profile doesn't work as it should be  
-[Bug][Objects] Error "name must be a valid object or a string" when accessing objects  
-[Bug][Objects] Category "Virtual Devices" attribute "Host Ressource" displays incorrect "switch port groups"  
-[Bug][Objects] Changes to DialogPlus fields are not output correctly  
-[Bug][CSV Import] Option to overwrite existing entries in multi value categories also overwrites newly imported entries  
-[Bug][CSV Import] CSV import also creates logbook entries, if content is not changed  
-[Bug][CSV Import] CSV import: "Virtual machine" attribute of the "Virtual machine" category is not set correctly  
-[Bug][System settings] Administration forwards to an empty site if Check_MK2 has been deactivated  
-[Bug][System settings] Deny unauthenticated access to /upload/images  
-[Bug][System settings] Darstellungsfehler in der Rechteverwaltung  
-[Bug][System settings] HTML editor changes content enumeration  
-[Bug][Systemtools] Improvement of location correction  
-[Bug][Admincenter] GRANT command during tenant creation via console does not consider localhost  
-[Bug][Admincenter] When combining tenant and subscription licenses some add-ons are not correctly licensed  
-[Bug][Admincenter] Tenant licenses "in use" and "free" don't take deactivated tenants into account and displays wrong value for free tenant licenses  
-[Bug][Notifications] Notification number is not reset  
-[Bug][Notifications] Notification query error with the placeholder %notifications__threshold_unit%  
-[Bug][Notifications] Notify a contact group  
-[Bug][License installation (i-doit)] Limit for tenants uses incorrect counting during licensing  
-[Bug][Code (internal)] Perform a correct property migration for the Software Assignment category  
-[Bug][Code (internal)] The condition General > Description in the Report Manager is no longer a text field.  
-[Bug][Code (internal)] HTTP 500 Search error message when self-created add-on is disabled  
-[Bug][Code (internal)] When exchanging the outputs and inputs, the window is displayed empty.  
-[Bug][Code (internal)] Check the system settings for valid JSON  
-[Bug][Authorization system] After an object has been archived, it is no longer displayed  
-[Bug][Authorization system] Archive/delete only possible, if the user has rights to all objects of the corresponding object type  
-[Bug][Authorization system] Location permissions do not show archived / deleted in object lists  
-[Bug][Authorization system] Rights check for files in the file browser  
-[Bug][Validation] Objectview not possible if category validation is active  
-[Bug][Validation] Validate newly created objects  
-[Bug][Mass editing] Software assignment clears operating system assignment during mass change  
-[Bug][Mass editing] Disconnect the field "Purchased from:" in the accounting category by the mass change.  
-[Bug][Mass editing] Automatically replace object titles via mass change with %COUNTER:11#6%.  
-[Bug][Mass editing] Error during the actions of mass-change  
-[Bug][Mass editing] Creating a template for a mass change generates white screen  
-[Bug][Custom categories] The Report Manager adds unnecessary placeholders if the category is a custom category  
-[Bug][Custom categories] Print view of variable reports incorrect  
-[Bug][My-doit] Assigned/created orders are not displayed in My-doit  
-[Bug][Console] Memory leak when performing a loogbook archive via i-doit console  
-[Bug][Logbook] Long logbook entries move the other columns out of the view area  
-[Bug][Logbook] Wrong content in logbook when changing the selection for object assignment  
-[Bug][Logbook] Pass changed values to the logbook  
-[Bug][Events] When using /main/ as i-doit installation directory events are not callable  
-[Bug][Relations] Relationships: Category "Wan-connection" Attribute: "connected networks" no relationship is created  
-[Bug][Relations] The relationship of the category Contact assignment is deleted during archiving.  
-[Bug][JDisc] JDISC: Import of loopback and logical ports not possible  
-[Bug][JDisc] JDISC-import: IP-address change is not displayed correctly in the logbook  
-[Bug][JDisc] Logbook: Empty entries through the JDisc import  
-[Bug][H-Inventory] H-Inventory-Import: Software Assignment relationships are not removed correctly  
-[Bug][Templates] Default tempalte is sometimes ignored for custom categories  
-[Bug][Templates] Field-placeholder %COUNTER% does not work correctly in default templates  
-[Bug][CMDB-Explorer] Loop when creating connections in cmdb explorer  
-[Bug][CMDB-Explorer] CMDB-Explorer exports wrong GraphML data  
-[Bug][CMDB-Explorer] CMDB-Explorer exports duplicated GraphML edges  
-[Bug][Search] Search switches selection of object type group  
-[Bug][Search] Fix deadlock in search index while using API  
-[Bug][Search] Global search of Layer-3 networks over IP  
-[Bug][Search] Correct formatting of the search result  
-[Bug][Installation] Files and directories in temp/ are world-writable  
-[Bug][Installation] Removing checks for extensions not needed to use i-doit  
-[Bug][API] PHP warning when saving a storage device without connected HDs  
-[Bug][API] Reading WAN category via API does not always return an object ID  
-[Bug][API] Properties with units are not consistent when retried via API  
-[Bug][QR-Codes] Global QR code configuration is overwritten  
-[Bug][User settings] Numeric format setting has no effect  
-[Bug][CMDB settings] Configurable logging  
+[Tâche][Édition de liste] Plusieurs RAIDS matériels apparaissent dans la liste d'édition alors qu'aucun n'a été créé  
+[Amélioration][Gestionnaire de rapports] Les rapports devraient toujours contenir une constante  
+[Amélioration][Gestionnaire de rapports] Propriétés virtuelles et dynamiques dans les conditions du Gestionnaire de rapports  
+[Amélioration][Catégories] Nouvelle commande : Restaurer les données de catégorie des références perdues  
+[Amélioration][Importation de câblage] L'importation de câblage ne s'effectue pas comme prévu.  
+[Amélioration][Importation] Identification des objets lors des importations CSV via IMEI  
+[Amélioration][Code (interne)] Effacer les informations d'identification de l'utilisateur via une commande  
+[Amélioration][Installation/Mise à jour/Licence basée sur la console] Installation basée sur la console des modules complémentaires i-doit  
+[Amélioration][Explorateur CMDB] Affichage de la direction des relations dans l'Explorateur CMDB  
+[Amélioration][Outils système] Commande pour convertir le moteur des tables MySQL en INNODB  
+[Bogue][Gestionnaire de rapports] Gestionnaire de rapports : Le titre de la catégorie "affectation de logiciel" est également affiché dans l'attribut "système d'exploitation" de la catégorie "système d'exploitation"  
+[Bogue][Gestionnaire de rapports] Gestionnaire de rapports : Erreur de sortie des MultiValues groupés lors de l'exportation CSV/TXT  
+[Bogue][Gestionnaire de rapports] L'attribut "variante" n'affiche que le titre dans la sortie du rapport  
+[Bogue][Gestionnaire de rapports] Attributs manquants de la catégorie "Net" dans le Gestionnaire de rapports pour définir des conditions  
+[Bogue][Gestionnaire de rapports] L'attribut "Alias" n'est pas disponible dans le Gestionnaire de rapports  
+[Bogue][Gestionnaire de rapports] L'attribut "nom d'hôte" de la catégorie "surveillance" n'est pas disponible dans le gestionnaire de rapports  
+[Bogue][Gestionnaire de rapports] Affichage simultané du système d'exploitation et de l'affectation de logiciel dans le rapport non possible  
+[Bogue][Gestionnaire de rapports] Le rôle des personnes n'est pas affiché dans le Gestionnaire de rapports.  
+[Bogue][Gestionnaire de rapports] Sous-sélections pour les groupes dynamiques  
+[Bogue][Gestionnaire de rapports] Créer des rapports avec la catégorie Journal des modifications comme condition  
+[Bogue][Gestionnaire de rapports] Combinaison du titre de l'objet et de l'adresse principale de l'hôte dans le gestionnaire de rapports entraîne une sortie multiple du même objet  
+[Bogue][Gestionnaire de rapports] Le rapport variable entraîne une erreur SQL  
+[Bogue][Gestionnaire de rapports] Gestionnaire de rapports : La catégorie "Affectation de service" ne renvoie pas de valeurs vides  
+[Bogue][Gestionnaire de rapports] Rapports : La combinaison de propriété dynamique et de condition entraîne une erreur SQL  
+[Bogue][Gestionnaire de rapports] Le rapport pour "Inséré à" utilise une mauvaise table de base de données  
+[Bogue][Gestionnaire de rapports] Il n'est pas possible d'afficher des objets sans affectation dans le gestionnaire de rapports  
+[Bogue][Catégories] Erreur SQL lorsque la catégorie "Réseau de couche 3" est triée par "Réseau avec suffixe".  
+[Bogue][Catégories] La condition "Normal" peut toujours être sélectionnée dans la catégorie "Général"  
+[Bogue][Catégories] La catégorie Facteur de forme ne stocke aucune donnée dans l'aperçu.  
+[Bogue][Catégories] L'arrière d'un châssis n'est pas présenté dans la vue en rack  
+[Bogue][Catégories] Le dialogue de la catégorie port plus le champ ne fonctionne pas avec la catégorie de câblage  
+[Bogue][Catégories] Révision de la catégorie des adresses d'hôte  
+[Bogue][Catégories] Gestion améliorée de l'édition de l'unité de hauteur lors de l'échange d'objets entre l'avant et l'arrière d'un rack  
+[Bogue][Catégories] Formatage correct de la page d'aperçu lors de l'affichage de rapports et de catégories  
+[Bogue][Catégories] La catégorie "journal des modifications de service" est même dupliquée lorsqu'elle n'est pas sélectionnée pour duplication  
+[Bogue][Catégories] Modifier les attributs dans les listes d'objets a supprimé un attribut incorrect dans le filtre par défaut  
+[Bogue][Catégories] Les noms de port longs sont tronqués dans le navigateur de ports  
+[Bogue][Catégories] Les fichiers de la catégorie d'image d'objet sont visibles pour tous les locataires  
+[Bogue][Catégories] La colonne "Organisation attribuée" ne affiche aucune donnée.  
+[Bogue][Catégories] Les relations entre les objets ne sont pas affichées dans la vue en liste.  
+[Bogue][Catégories] Mauvaise valeur par défaut de la catégorie "adresse d'hôte" dans l'attribut "Affectation d'adresse"  
+[Bogue][Catégories] Catégorie : "Service" Sous-catégorie "Type de service" l'attribut "Type" n'est pas chargé correctement  
+[Bogue][Catégories] Le titre des objets dans les emplacements n'est pas affiché dans la catégorie "Racks"  
+[Bogue][Catégories] Le type de champ de base de données pour isys_validation_config.isys_validation_config__json a été modifié  
+[Bogue][Catégories] Vue en rack : Les châssis de lames ne sont pas affichés verticalement  
+[Bogue][Catégories] Affichage du menu déroulant pour choisir l'état d'entrée dans la catégorie "membres de cluster"  
+[Bogue][Catégories] Désélectionner des attributs dans les listes d'objets supprime les valeurs dans le filtre standard  
+[Bogue][Catégories] L'heure/la date à "Importation initiale" dans la catégorie "Identifiant personnalisé" n'est pas affichée correctement  
+[Bogue][Catégories] Entrées de catégorie en double  
+[Bogue][OCS] Les capacités sont toujours importées en tant qu'octet dans l'importation OCS  
+[Bogue][OCS] Les capacités des périphériques SNMP ne sont pas mises à jour correctement par l'importation OCS  
+[Bogue][Listes] Message d'erreur SQL dans la liste d'objets  
+[Bogue][Listes] Le tri du chemin d'emplacement utilise l'emplacement racine pour le tri  
+[Bogue][Listes] Le champ de description est manquant en tant qu'attribut dans les listes de catégories Configuration pour la catégorie "Adresses e-mail"  
+[Bogue][Listes] La configuration de la liste d'objets ne reflète que les attributs sélectionnés pour d'autres utilisateurs et la configuration par défaut  
+[Bogue][Listes] L'emplacement logique d'un objet n'est pas affiché dans la liste d'objets  
+[Bogue][Listes] Le paramètre de longueur maximale des chemins d'emplacement ne fonctionne pas avec les listes d'objets  
+[Bogue][Listes] Tri des chemins d'emplacement raccourcis dans les listes d'objets  
+[Bogue][Listes] Affichage des débuts et fins liés des contrats dans les listes d'objets  
+[Bogue][Listes] Listes d'objets : Ajouter des attributs personnalisés  
+[Bogue][Listes] L'adresse e-mail est toujours affichée en tant que courrier électronique HTML dans les listes d'objets  
+[Bogue][Check_MK] Paramètre manquant pour définir le délai d'attente de Livestatus  
+[Bogue][LDAP] Synchroniser tous les groupes LDAP lorsque la pagination est activée  
+[Bogue][LDAP] Gestion améliorée des utilisateurs désactivés/déplacés provenant d'AD  
+[Bogue][LDAP] Ne pas afficher l'icône d'e-mail si LDAP a défini le courrier comme filtre  
+[Bogue][CMDB] Trier par modèle  
+[Bogue][CMDB] Les capacités "Bit" et "Térabit" manquent  
+[Bogue][CMDB] La création de périphériques assignés à un châssis de lames provoque un écran blanc  
+[Bug][Édition de liste] Activer les SLA édités  
+[Bug][Édition de liste] Modifier la catégorie de service dans l'édition de liste  
+[Bug][Édition de liste] Libérer les connexions dans la catégorie d'attribution de service.  
+[Bug][Édition de liste] Édition de liste : Le filtre pour le navigateur d'objets ne fonctionne pas toujours  
+[Bug][Édition de liste] Édition de liste : Détacher d'un emplacement impossible  
+[Bug][Édition de liste] Le contrôleur n'est pas sélectionnable pour tous les objets dans l'édition de liste  
+[Bug][Édition de liste] Édition de liste : Il n'est pas possible d'attribuer des postes de travail dans la catégorie "poste de travail attribué"  
+[Bug][Édition de liste] Sous-catégories vides dans l'édition de liste  
+[Bug][Édition de liste] L'édition multiple affiche des catégories sans attributs  
+[Bug][Édition de liste] Enregistrer une adresse d'hôte génère un message d'erreur  
+[Bug][Édition de liste] Laisser les champs exclus de l'édition de liste exclus après l'enregistrement  
+[Bug][Import] Import CSV : Attribution de licences  
+[Bug][Import] Pour les réseaux de couche 2, le champ = Attribution de réseau de couche 3 est manquant pour une importation.  
+[Bug][Import] L'attribution d'appareils de la catégorie Emplacements (Châssis de commutateur) ne peut pas être attribuée dans l'importation csv.  
+[Bug][Import] Importer des variantes de systèmes d'exploitation  
+[Bug][Import] Catégories d'importation OCS  
+[Bug][Import] L'édition d'un profil d'objet ne fonctionne pas comme il se doit  
+[Bug][Objets] Erreur "le nom doit être un objet valide ou une chaîne" lors de l'accès aux objets  
+[Bug][Objets] Catégorie "Appareils virtuels" attribut "Ressource hôte" affiche incorrectement "groupes de ports de commutation"  
+[Bug][Objets] Les modifications des champs DialogPlus ne sont pas correctement affichées  
+[Bug][Import CSV] Option pour écraser les entrées existantes dans les catégories à valeurs multiples écrase également les nouvelles entrées importées  
+[Bug][Import CSV] L'import CSV crée également des entrées de journal, si le contenu n'est pas modifié  
+[Bug][Import CSV] Import CSV : L'attribut "Machine virtuelle" de la catégorie "Machine virtuelle" n'est pas défini correctement  
+[Bug][Paramètres système] L'administration redirige vers un site vide si Check_MK2 a été désactivé  
+[Bug][Paramètres système] Refuser l'accès non authentifié à /upload/images  
+[Bug][Paramètres système] Erreur d'affichage dans la gestion des droits  
+[Bug][Paramètres système] L'éditeur HTML modifie l'énumération du contenu  
+[Bug][Outils système] Amélioration de la correction d'emplacement  
+[Bug][Centre d'administration] La commande GRANT lors de la création de locataire via la console ne tient pas compte de localhost  
+[Bug][Centre d'administration] Lors de la combinaison des licences de locataire et d'abonnement, certains modules complémentaires ne sont pas correctement licenciés  
+[Bug][Centre d'administration] Les licences de locataire "en cours d'utilisation" et "libres" ne tiennent pas compte des locataires désactivés et affichent une valeur incorrecte pour les licences de locataire libres  
+[Bug][Notifications] Le numéro de notification n'est pas réinitialisé  
+[Bug][Notifications] Erreur de requête de notification avec le paramètre %notifications__threshold_unit%  
+[Bug][Notifications] Notifier un groupe de contacts  
+[Bug][Installation de licence (i-doit)] La limite pour les locataires utilise un comptage incorrect lors de la licence  
+[Bug][Code (interne)] Effectuer une migration correcte des propriétés pour la catégorie Attribution de logiciel  
+[Bug][Code (interne)] La condition Général > Description dans le Gestionnaire de rapports n'est plus un champ de texte.  
+[Bug][Code (interne)] Erreur de recherche HTTP 500 lorsqu'un module complémentaire créé par l'utilisateur est désactivé  
+[Bug][Code (interne)] Lors de l'échange des sorties et des entrées, la fenêtre est affichée vide.  
+[Bug][Code (interne)] Vérifier les paramètres système pour un JSON valide  
+[Bug][Système d'autorisation] Après qu'un objet a été archivé, il n'est plus affiché  
+[Bug][Système d'autorisation] Archiver/supprimer uniquement possible, si l'utilisateur a des droits sur tous les objets du type d'objet correspondant  
+[Bug][Système d'autorisation] Les autorisations d'emplacement ne montrent pas les objets archivés/supprimés dans les listes d'objets  
+[Bug][Système d'autorisation] Vérification des droits pour les fichiers dans le navigateur de fichiers  
+[Bug][Validation] Affichage de l'objet non possible si la validation de catégorie est active  
+[Bug][Validation] Valider les objets nouvellement créés  
+[Bug][Édition de masse] L'attribution de logiciel efface l'attribution de système d'exploitation lors du changement de masse  
+[Bug][Édition de masse] Déconnecter le champ "Acheté chez :" dans la catégorie comptabilité par le changement de masse.  
+[Bug][Édition de masse] Remplacer automatiquement les titres d'objet via un changement de masse avec %COUNTER:11#6%.  
+[Bug][Édition de masse] Erreur lors des actions de changement de masse  
+[Bug][Édition de masse] La création d'un modèle pour un changement de masse génère un écran blanc  
+[Bug][Catégories personnalisées] Le Gestionnaire de rapports ajoute des espaces réservés inutiles si la catégorie est une catégorie personnalisée  
+[Bug][Catégories personnalisées] La vue d'impression des rapports variables est incorrecte  
+[Bug][My-doit] Les commandes attribuées/créées ne sont pas affichées dans My-doit  
+[Bug][Console] Fuite de mémoire lors de l'archivage du journal via la console i-doit  
+[Bug][Journal] Les entrées longues du journal déplacent les autres colonnes hors de la zone d'affichage  
+[Bug][Journal] Contenu incorrect dans le journal lors du changement de la sélection pour l'attribution d'objet  
+[Bug][Journal] Transmettre les valeurs modifiées au journal  
+[Bug][Événements] Lors de l'utilisation de /main/ comme répertoire d'installation de i-doit, les événements ne sont pas accessibles  
+[Bug][Relations] Relations : Catégorie "Connexion Wan" Attribut : "réseaux connectés" aucune relation n'est créée  
+[Bug][Relations] La relation de la catégorie Attribution de contact est supprimée lors de l'archivage.  
+[Bug][JDisc] JDISC : Importation des boucles locales et des ports logiques non possible  
+[Bug][JDisc] Importation JDISC : Le changement d'adresse IP n'est pas affiché correctement dans le journal  
+[Bug][JDisc] Journal : Entrées vides via l'importation JDisc  
+[Bug][H-Inventory] Importation H-Inventory : Les relations d'attribution de logiciel ne sont pas supprimées correctement  
+[Bug][Modèles] Le modèle par défaut est parfois ignoré pour les catégories personnalisées  
+[Bug][Modèles] Le placeholder de champ %COUNTER% ne fonctionne pas correctement dans les modèles par défaut  
+[Bug][Explorateur CMDB] Boucle lors de la création de connexions dans l'explorateur cmdb  
+[Bug][Explorateur CMDB] L'explorateur CMDB exporte des données GraphML incorrectes  
+[Bug][Explorateur CMDB] L'explorateur CMDB exporte des arêtes GraphML dupliquées  
+[Bug][Recherche] La recherche bascule la sélection du groupe de type d'objet  
+[Bug][Recherche] Correction d'un blocage dans l'index de recherche lors de l'utilisation de l'API  
+[Bug][Recherche] Recherche globale des réseaux de couche 3 via IP  
+[Bug][Recherche] Formatage correct du résultat de la recherche  
+[Bug][Installation] Les fichiers et répertoires dans temp/ sont accessibles en écriture par tout le monde  
+[Bug][Installation] Suppression des vérifications des extensions non nécessaires pour utiliser i-doit  
+[Bug][API] Avertissement PHP lors de l'enregistrement d'un périphérique de stockage sans disques durs connectés  
+[Bug][API] La lecture de la catégorie WAN via l'API ne renvoie pas toujours un ID d'objet  
+[Bug][API] Les propriétés avec unités ne sont pas cohérentes lorsqu'elles sont récupérées via l'API  
+[Bug][Codes QR] La configuration globale des codes QR est écrasée  
+[Bug][Paramètres utilisateur] Le paramètre de format numérique n'a pas d'effet  
+[Bug][Paramètres CMDB] Journalisation configurable  

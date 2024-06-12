@@ -1,24 +1,24 @@
-# VM-provisioning
+# Provisionnement de machines virtuelles
 
-In this article, we examine the [use case](../use-cases/index.md) of provisioning virtual machines (VM) via i-doit. For this purpose, we utilize a well-maintained [IT documentation](../glossary.md) paired with a few scripts to make this [automation](../automation-and-integration/index.md) a reality.
+Dans cet article, nous examinons le [cas d'utilisation](../use-cases/index.md) du provisionnement de machines virtuelles (VM) via i-doit. À cette fin, nous utilisons une [documentation informatique](../glossary.md) bien entretenue associée à quelques scripts pour rendre cette [automatisation](../automation-and-integration/index.md) une réalité.
 
-Problem
+Problème
 -------
 
-Up until now, documentation and configuration files are strictly distinguished: The organization-wide IT is documented in i-doit, including a virtualization cluster. This cluster consists of multiple virtualization hosts (host systems) and the virtual machines running there (guest systems). The configuration of each VM is executed within the administration environment of the cluster. This includes the creation of a new VM with specific settings to CPU, memory, network, disk space and so on. This process is also called provisioning.
+Jusqu'à présent, la documentation et les fichiers de configuration sont strictement distingués : L'informatique de l'organisation est documentée dans i-doit, y compris un cluster de virtualisation. Ce cluster se compose de plusieurs hôtes de virtualisation (systèmes hôtes) et des machines virtuelles qui y fonctionnent (systèmes invités). La configuration de chaque VM est exécutée dans l'environnement d'administration du cluster. Cela inclut la création d'une nouvelle VM avec des paramètres spécifiques pour le CPU, la mémoire, le réseau, l'espace disque, etc. Ce processus est également appelé provisionnement.
 
-For the daily routine, this means that the process is characterized by a dedicated tool which creates a new VM. Subsequently, the completed work is documented in i-doit:
+Pour la routine quotidienne, cela signifie que le processus est caractérisé par un outil dédié qui crée une nouvelle VM. Ensuite, le travail terminé est documenté dans i-doit :
 
-1.  Start the configuration tool of the virtualization cluster
-2.  Create and configure a new VM
-3.  Switch to the IT documentation (i-doit)
-4.  Create a new VM, configure the respective [categories](../basics/structure-of-the-it-documentation.md), assign the VM to the cluster
+1.  Démarrer l'outil de configuration du cluster de virtualisation
+2.  Créer et configurer une nouvelle VM
+3.  Passer à la documentation informatique (i-doit)
+4.  Créer une nouvelle VM, configurer les [catégories](../basics/structure-of-the-it-documentation.md) respectives, attribuer la VM au cluster
 
-There is no data exchange between the applied tool and i-doit, thus the VM configuration has to be performed twice. Errors cannot be ruled out when transferring the configuration. The redundant maintenance of configuration files is therefore a very thankless task for the admin.
+Il n'y a pas d'échange de données entre l'outil utilisé et i-doit, donc la configuration de la VM doit être effectuée deux fois. Les erreurs ne peuvent pas être exclues lors du transfert de la configuration. La maintenance redondante des fichiers de configuration est donc une tâche très ingrate pour l'administrateur.
 
-!!! warning "This article is outdated and no longer current"
+!!! warning "Cet article est obsolète et n'est plus à jour"
 
-    Please note that the procedure described here may already be outdated.
+    Veuillez noter que la procédure décrite ici peut déjà être obsolète.
 
   
 
@@ -27,33 +27,33 @@ There is no data exchange between the applied tool and i-doit, thus the VM confi
 Solution
 --------
 
-We wish to optimize this process by using the configuration files available in i-doit and by automating some of the steps. With this in mind, we change the process:
+Nous souhaitons optimiser ce processus en utilisant les fichiers de configuration disponibles dans i-doit et en automatisant certaines étapes. Dans cette optique, nous modifions le processus :
 
-1.  Open the IT documentation (i-doit)
-2.  Create a new VM, configure the respective [categories](../basics/structure-of-the-it-documentation.md), assign the VM to the cluster
-3.  The VM will be created and provisioned automatically in the configuration tool of the virtualization cluster
+1.  Ouvrir la documentation informatique (i-doit)
+2.  Créer une nouvelle VM, configurer les [catégories](../basics/structure-of-the-it-documentation.md) respectives, attribuer la VM au cluster
+3.  La VM sera créée et provisionnée automatiquement dans l'outil de configuration du cluster de virtualisation
 
-Four manual steps become two. The third step is carried out automatically in the background. The doubled maintenance of the configuration files by the admin can be omitted. Error sources are eliminated and the admin is happy.
+Quatre étapes manuelles deviennent deux. La troisième étape est effectuée automatiquement en arrière-plan. La maintenance doublée des fichiers de configuration par l'administrateur peut être omise. Les sources d'erreurs sont éliminées et l'administrateur est satisfait.
 
-Assumptions
+Hypothèses
 -----------
 
-We will completely go through this use case with an example. This is supposed to show the general procedure and can be applied easily in other environments. For the solution we assume:
+Nous allons parcourir complètement ce cas d'utilisation avec un exemple. Cela est censé montrer la procédure générale et peut être facilement appliqué dans d'autres environnements. Pour la solution, nous supposons :
 
-1.  The virtualization cluster is based on [VMware vSphere](https://en.wikipedia.org/wiki/VMware_vSphere) in version 5.
-2.  i-doit is installed on Debian GNU/Linux 8.5. For this, we use the [Eval Appliance](../installation/i-doit-virtual-eval-appliance/index.md). The distribution packages should be updated with apt.
-3.  The version of i-doit is [1.7.1](../version-history/index.md) or higher. The i-doit host is accessible via the FQDN i-doit.example.net.
-4.  To monitor the automation we use the VMware vSphere client.
-5.  A user exists in VMware vSphere who has the permissions to provision VMs. In our example this user is called vmprovision with the password vmprovision.
+1.  Le cluster de virtualisation est basé sur [VMware vSphere](https://fr.wikipedia.org/wiki/VMware_vSphere) en version 5.
+2.  i-doit est installé sur Debian GNU/Linux 8.5. Pour cela, nous utilisons l'[Appliance d'Évaluation](../installation/i-doit-virtual-eval-appliance/index.md). Les paquets de distribution doivent être mis à jour avec apt.
+3.  La version de i-doit est [1.7.1](../version-history/index.md) ou supérieure. L'hôte i-doit est accessible via le FQDN i-doit.example.net.
+4.  Pour surveiller l'automatisation, nous utilisons le client VMware vSphere.
+5.  Un utilisateur existe dans VMware vSphere qui a les autorisations pour provisionner des VM. Dans notre exemple, cet utilisateur s'appelle vmprovision avec le mot de passe vmprovision.
 
 Configuration
 -------------
 
-First of all, we have to carry out some preparations so that both systems are able to communicate with each other.
+Tout d'abord, nous devons effectuer quelques préparatifs afin que les deux systèmes puissent communiquer entre eux.
 
-### vSphere SDK
+### SDK vSphere
 
-We require [VMware SDK for Perl](https://developercenter.vmware.com/web/sdk/60/vsphere-perl) on the i-doit host so that i-doit can inform the vSphere cluster to provision a new VM. Therefore we download version 6.0.2. For this purpose, you need an account at VMware and you have to accept the VMware End User License Agreement (EULA). We decide to download the package as Tarball (.tar.gz) for 64bit operating systems.
+Nous avons besoin du [SDK VMware pour Perl](https://developercenter.vmware.com/web/sdk/60/vsphere-perl) sur l'hôte i-doit afin que i-doit puisse informer le cluster vSphere de provisionner une nouvelle VM. Pour cela, nous téléchargeons la version 6.0.2. À cette fin, vous avez besoin d'un compte chez VMware et vous devez accepter le Contrat de Licence Utilisateur Final (CLUF) de VMware. Nous décidons de télécharger le package en tant que Tarball (.tar.gz) pour les systèmes d'exploitation 64 bits.
 
   
 
@@ -63,82 +63,104 @@ We require [VMware SDK for Perl](https://developercenter.vmware.com/web/sdk/60/v
 
 [![vm-provisioning-sdk](../assets/images/en/use-cases/vm-provisioning/2-vmp.png)](../assets/images/en/use-cases/vm-provisioning/2-vmp.png)
 
-After downloading, we copy the Tarball to the i-doit host and extract it. We will log in as root since the root permissions are necessary for almost all of the following commands:
+Après le téléchargement, nous copions le Tarball sur l'hôte i-doit et l'extrayons. Nous nous connecterons en tant que root car les permissions root sont nécessaires pour presque toutes les commandes suivantes:
 
-    scp VMware-vSphere-Perl-SDK-6.0.0-3561779.x86_64.tar.gz idoitadm@i-doit.example.net:
-    ssh idoitadm@i-doit.example.net
-    sudo -s
-    tar vxzf VMware-vSphere-Perl-SDK-6.0.0-3561779.x86_64.tar.gz
-    mv vmware-vsphere-cli-distrib/ /usr/src/
-    cd /usr/src/
+```bash
+scp VMware-vSphere-Perl-SDK-6.0.0-3561779.x86_64.tar.gz idoitadm@i-doit.example.net:
+ssh idoitadm@i-doit.example.net
+sudo -s
+tar vxzf VMware-vSphere-Perl-SDK-6.0.0-3561779.x86_64.tar.gz
+mv vmware-vsphere-cli-distrib/ /usr/src/
+cd /usr/src/
+```
+{/*examples*/}
 
-At this point, it is a good idea to bring the system up to date - if you have not already done so. We also install additional packages via apt and cpan:
+À ce stade, il est conseillé de mettre à jour le système - si ce n'est pas déjà fait. Nous installons également des packages supplémentaires via apt et cpan:
 
-    apt-get update && apt-get upgrade && apt-get dist-upgrade && apt-get autoremove && apt-get clean
-    apt-get install git build-essential libssl-dev perl-doc libxml-libxml-perl libxml2-dev uuid-dev libuuid-perl libcrypt-ssleay-perl libapache2-mod-perl2 libsoap-lite-perl
-    cpan install CPAN ExtUtils::MakeMaker Module::Build Net::FTP LWP Crypt::OpenSSL::RSA Class::MethodMaker Socket6 IO::Socket::INET6 Convert::ASN1 Crypt::X509 UUID::Random Archive::Zip Path::Class Try::Tiny Data::Dump Net::INET6Glue LWP::Protocol::https
+```bash
+apt-get update && apt-get upgrade && apt-get dist-upgrade && apt-get autoremove && apt-get clean
+apt-get install git build-essential libssl-dev perl-doc libxml-libxml-perl libxml2-dev uuid-dev libuuid-perl libcrypt-ssleay-perl libapache2-mod-perl2 libsoap-lite-perl
+cpan install CPAN ExtUtils::MakeMaker Module::Build Net::FTP LWP Crypt::OpenSSL::RSA Class::MethodMaker Socket6 IO::Socket::INET6 Convert::ASN1 Crypt::X509 UUID::Random Archive::Zip Path::Class Try::Tiny Data::Dump Net::INET6Glue LWP::Protocol::https
+```
+{/*examples*/}
 
-Since the SDK does not support Debian GNU/Linux officially, we will need to trick the SDK into thinking it is a different operating system:
+Étant donné que le SDK ne prend pas en charge officiellement Debian GNU/Linux, nous devrons tromper le SDK en lui faisant croire qu'il s'agit d'un système d'exploitation différent:
 
-    echo ubuntu > /etc/tmp-release
+```bash
+echo ubuntu > /etc/tmp-release
+```
+{/*examples*/}
 
-The SDK needs the environment variables http_proxy and ftp_proxy:
+Le SDK a besoin des variables d'environnement http_proxy et ftp_proxy:
 
-    export http_proxy=
-    export ftp_proxy=
+```bash
+export http_proxy=
+export ftp_proxy=
+```
+{/*examples*/}
 
-Now we install the SDK by utilizing the provided installation script:
+Maintenant, nous installons le SDK en utilisant le script d'installation fourni:
 
-    ./vmware-install.pl
+```bash
+./vmware-install.pl
+```
+{/*examples*/}
 
-The script once again needs to have the EULA of VMware confirmed with yes. If additional Perl modules are to be installed, you should also confirm this with yes. Once the installation was completed successfully, the following text appears as part of the output:
+Le script doit une fois de plus avoir l'EULA de VMware confirmé avec yes. Si des modules Perl supplémentaires doivent être installés, vous devez également confirmer cela avec yes. Une fois l'installation terminée avec succès, le texte suivant apparaît dans la sortie:
 
-    This installer has successfully installed both vSphere CLI and the vSphere SDK for Perl.
+```bash
+Cet installateur a installé avec succès à la fois vSphere CLI et le SDK vSphere pour Perl.
+```
+{/*examples*/}
 
-At this point, the installation of the SDK is completed. We followed these [guidelines](http://www.sysadminslife.com/linux/vmware-vsphere-sdk-for-perl-api-unter-debian-squeeze-installieren/). Thank you very much! And now we continue with the next step.
+À ce stade, l'installation du SDK est terminée. Nous avons suivi ces [directives](http://www.sysadminslife.com/linux/vmware-vsphere-sdk-for-perl-api-unter-debian-squeeze-installieren/). Merci beaucoup! Et maintenant, nous passons à l'étape suivante.
 
-### i-doit API
+### API i-doit
 
-Part of the communication between i-doit and VMware takes place via the [API of i-doit](../i-doit-pro-add-ons/api/index.md). The API has to be activated and you need to know the API key. To use the API comfortably we use the [reference client for PHP](https://bitbucket.org/dstuecken/i-doit-api-clients/wiki/PHP):
+Une partie de la communication entre i-doit et VMware se fait via l'[API d'i-doit](../i-doit-pro-add-ons/api/index.md). L'API doit être activée et vous devez connaître la clé API. Pour utiliser l'API confortablement, nous utilisons le [client de référence pour PHP](https://bitbucket.org/dstuecken/i-doit-api-clients/wiki/PHP):
+```
+{/*examples*/}
 
+```php
     cd /usr/local/share/
     git clone https://bitbucket.org/dstuecken/i-doit-api-clients.git
     cd i-doit-api-clients/php/
     make initialize
+```
 
-For make initialize the API client queries the URL and the API key of the i-doit installation that is going to be used.
+Pour exécuter `make initialize`, le client API interroge l'URL et la clé API de l'installation i-doit qui va être utilisée.
 
 ### Script
 
-The following script represents the link connection between i-doit and VMware:
+Le script suivant représente la connexion de lien entre i-doit et VMware:
 
+```php
     #!/usr/bin/php
     <?php
     
     /**
-    * Example script to privision a new virtual machine in vSphere with i-doit
+    * Script d'exemple pour provisionner une nouvelle machine virtuelle dans vSphere avec i-doit
     *
-    * This script uses the i-doit API and the VMware Perl SDK. For more details, please See the i-doit
-    * knowledge base.
+    * Ce script utilise l'API i-doit et le SDK VMware Perl. Pour plus de détails, veuillez consulter la base de connaissances i-doit.
     *
-    * Licensed under the MIT License (MIT), <https://opensource.org/licenses/mit-license.php>.
+    * Sous licence MIT (MIT), <https://opensource.org/licenses/mit-license.php>.
     *
-    * Copyright (c) 2016 synetics GmbH
+    * Droits d'auteur (c) 2016 synetics GmbH
     *
-    * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
-    * associated documentation files (the "Software"), to deal in the Software without restriction,
-    * including without limitation the rights to use, copy, modify, merge, publish, distribute,
-    * sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
-    * furnished to do so, subject to the following conditions:
+    * La permission est accordée, à titre gracieux, à toute personne obtenant une copie de ce logiciel et
+    * des fichiers de documentation associés (le "Logiciel"), de traiter dans le Logiciel sans restriction,
+    * y compris, sans limitation, les droits d'utiliser, de copier, de modifier, de fusionner, de publier, de distribuer,
+    * de sous-licencier et/ou de vendre des copies du Logiciel, et de permettre aux personnes à qui le Logiciel est
+    * fourni de le faire, sous réserve des conditions suivantes :
     *
-    * The above copyright notice and this permission notice shall be included in all copies or
-    * substantial portions of the Software.
+    * L'avis de droit d'auteur ci-dessus et cet avis d'autorisation doivent être inclus dans toutes les copies ou
+    * parties substantielles du Logiciel.
     *
-    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
-    * NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-    * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-    * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    * LE LOGICIEL EST FOURNI "TEL QUEL", SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS
+    * SANS S'Y LIMITER, LES GARANTIES DE QUALITÉ MARCHANDE, D'ADÉQUATION À UN USAGE PARTICULIER ET
+    * D'ABSENCE DE CONTREFAÇON. EN AUCUN CAS LES AUTEURS OU LES TITULAIRES DE DROITS D'AUTEUR NE SERONT RESPONSABLES DE TOUTE RÉCLAMATION,
+    * DOMMAGES OU AUTRE RESPONSABILITÉ, QUE CE SOIT DANS UNE ACTION CONTRACTUELLE, DÉLICTUELLE OU AUTRE, DÉCOULANT DE,
+    * HORS DE OU EN RELATION AVEC LE LOGICIEL OU L'UTILISATION OU D'AUTRES TRANSACTIONS DANS LE LOGICIEL.
     */
     
     use idoit\Api\Client as ApiClient;
@@ -147,132 +169,137 @@ The following script represents the link connection between i-doit and VMware:
     use idoit\Api\Connection as ApiConnection;
     
     require_once('/usr/local/share/i-doit-api-clients/php/apiclient.php');
+```
+
+```php
+/**
+* Configuration
+*/
     
-    /**
-    * Configuration
-    */
+$vSphereUsername = 'vmprovision';
+$vSpherePassword = 'vmprovision';
+$vSphereWebService = 'https://vc01.example.net:443/sdk/webService';
+$objCMDBStatus = '15'; // 'à provisionner'
+$objCMDBStatus_ready = '16'; // 'provisionné'
+$api_entry_point = 'http://localhost/src/jsonrpc.php';
+$api_key = '2p1osbg427';
+\idoit\Api\Config::$jsonRpcDebug = false;
     
-    $vSphereUsername = 'vmprovision';
-    $vSpherePassword = 'vmprovision';
-    $vSphereWebService = 'https://vc01.example.net:443/sdk/webService';
-    $objCMDBStatus = '15'; // 'to be provisioned'
-    $objCMDBStatus_ready = '16'; // 'provisioned'
-    $api_entry_point = 'http://localhost/src/jsonrpc.php';
-    $api_key = '2p1osbg427';
-    \idoit\Api\Config::$jsonRpcDebug = false;
-    
-    function filter_number($p_string)
-    {
-    // Check, if we got a positive or negative number.
+function filter_number($p_string)
+{
+    // Vérifiez si nous avons un nombre positif ou négatif.
     $l_sign = (substr(trim($p_string), 0, 1) === '-') ? '-' : '';
     
-    // First we strip the currency ("GHZ", "Euro", "$", ...) including spaces.
+    // Tout d'abord, nous supprimons la devise ("GHZ", "Euro", "$", ...) y compris les espaces.
     $p_string = preg_replace('/([^,\.\d])*/i', '', $p_string);
     
-    // If the number is null
+    // Si le nombre est nul
     if (is_null($p_string) || $p_string === '') return null;
     
-    // Check if someone wrote a string like "1.000.000".
+    // Vérifiez si quelqu'un a écrit une chaîne comme "1.000.000".
     if (substr_count($p_string, '.') > 1)
     {
         $p_string = str_replace('.', '', $p_string);
     } // if
     
-    // Check if someone wrote a string like "1,000,000".
+    // Vérifiez si quelqu'un a écrit une chaîne comme "1,000,000".
     if (substr_count($p_string, ',') > 1)
     {
         $p_string = str_replace(',', '', $p_string);
     } // if
     
-    // If we find a single point or a single comma, we use the last found one as decimal point.
+    // Si nous trouvons un seul point ou une seule virgule, nous utilisons le dernier trouvé comme point décimal.
     if (strpos($p_string, '.') !== false || strpos($p_string, ',') !== false)
     {
         if (strpos($p_string, '.') > strpos($p_string, ','))
         {
-        $p_string = str_replace(',', '', $p_string);
+            $p_string = str_replace(',', '', $p_string);
         }
         elseif (strpos($p_string, '.') < strpos($p_string, ','))
         {
-        $p_string = str_replace('.', '', $p_string);
-        $p_string = str_replace(',', '.', $p_string);
+            $p_string = str_replace('.', '', $p_string);
+            $p_string = str_replace(',', '.', $p_string);
         }
         elseif (strpos($p_string, '.') === false && is_int(strpos($p_string, ',')))
         {
-        $p_string = str_replace(',', '.', $p_string);
+            $p_string = str_replace(',', '.', $p_string);
         }
     } // if
     
-    // Finally check if number is not numeric then return null
+    // Enfin, vérifiez si le nombre n'est pas numérique, puis retournez null
     if (!is_numeric($p_string)) return null;
     
-    // Now we replace commas with dots: "1000,10" to "1000.10" and return the rounded value.
+    // Maintenant, nous remplaçons les virgules par des points : "1000,10" par "1000.10" et renvoyons la valeur arrondie.
     return (float) round(str_replace(',', '.', $l_sign . $p_string), 4);
-    } // function
-    
-    
-    function to_kbytes($p_value)
+} // function
+```
+
+```php
+function to_kbytes($p_value)
+{
+    if (is_null($p_value) || !is_numeric(substr($p_value, 0, -2)))
     {
-        if (is_null($p_value) || !is_numeric(substr($p_value, 0, -2)))
-        {
-            return null;
-        } // if
-        $l_return = trim($p_value);
-        $l_unit   = strtoupper(substr($p_value, -2));
-        switch ($l_unit)
-        {
-        case 'TB':
-                $l_return *= 1024;
-            case 'GB':
-                $l_return *= 1024;
-            case 'MB':
-                $l_return *= 1024;
-        } // switch
-        return $l_return;
-    } // function
-    
-    try
+        return null;
+    } // if
+    $l_return = trim($p_value);
+    $l_unit   = strtoupper(substr($p_value, -2));
+    switch ($l_unit)
     {
-        if (isset($argv[1]))
+    case 'TB':
+            $l_return *= 1024;
+        case 'GB':
+            $l_return *= 1024;
+        case 'MB':
+            $l_return *= 1024;
+    } // switch
+    return $l_return;
+} // function
+
+try
+{
+    if (isset($argv[1]))
+    {
+        if (is_scalar($argv[1]) && ($params = base64_decode($argv[1])))
         {
-            if (is_scalar($argv[1]) && ($params = base64_decode($argv[1])))
+            if (($params = json_decode($params, true)))
             {
-                if (($params = json_decode($params, true)))
+                if (isset($params['objectID']) && $params['objectID'] > 0)
                 {
-                    if (isset($params['objectID']) && $params['objectID'] > 0)
+                    if ($params['categoryConst'] == 'C__CATG__GLOBAL')
                     {
-                        if ($params['categoryConst'] == 'C__CATG__GLOBAL')
-                        {
-                                if ($params['postData']['C__OBJ__CMDB_STATUS'] == $objCMDBStatus)
-                                {
-    
-                            \idoit\Api\Config::$jsonRpcDebug = false;
-                            $l_apiClient = new ApiClient(
-                                new ApiConnection(
-                                $api_entry_point, $api_key
-                                )
-                            );
-    
-                            // Get number of CPUs
-                            $l_request = new \idoit\Api\Request($l_apiClient,
+                            if ($params['postData']['C__OBJ__CMDB_STATUS'] == $objCMDBStatus)
+                            {
+
+                        \idoit\Api\Config::$jsonRpcDebug = false;
+                        $l_apiClient = new ApiClient(
+                            new ApiConnection(
+                            $api_entry_point, $api_key
+                            )
+                        );
+
+                        // Get number of CPUs
+                        $l_request = new \idoit\Api\Request($l_apiClient,
+                            'cmdb.category.read',
+                            array(
+                            'objID' => $params['objectID'],
+                            'category' => 'C__CATG__CPU'
+                            )
+                        );
+
+                        $l_response = $l_request->send();
+                        $cpuCount = count($l_response);
+
+                        // Get memory
+                        $l_request = new \idoit\Api\Request($l_apiClient,
                                 'cmdb.category.read',
                                 array(
                                 'objID' => $params['objectID'],
-                                'category' => 'C__CATG__CPU'
-                                )
+                                'category' => 'C__CATG__MEMORY'
+                            )
                             );
-    
-                            $l_response = $l_request->send();
-                            $cpuCount = count($l_response);
-    
-                            // Get memory
-                            $l_request = new \idoit\Api\Request($l_apiClient,
-                                    'cmdb.category.read',
-                                    array(
-                                    'objID' => $params['objectID'],
-                                    'category' => 'C__CATG__MEMORY'
-                                )
-                                );
-    
+```  
+
+```php
                             $all_memory = 0;
                             $l_response = $l_request->send();
                             for ( $x = 0; $x < count($l_response); $x++) {
@@ -283,7 +310,7 @@ The following script represents the link connection between i-doit and VMware:
                             }
                             $all_memory_mb = $all_memory / 1024;
     
-                            // Get HDD
+                            // Obtenir le disque dur
                             $l_request = new \idoit\Api\Request($l_apiClient,
                                     'cmdb.category.read',
                                     array(
@@ -297,7 +324,7 @@ The following script represents the link connection between i-doit and VMware:
                             $hdd = to_kbytes( $hdd_cleaned . $l_response[0]['unit']['title']);
                             $hdd_mb = $hdd / 1024;
     
-                            // Get virtual host and cluster
+                            // Obtenir l'hôte virtuel et le cluster
                             $l_request = new \idoit\Api\Request($l_apiClient,
                                 'cmdb.category.read',
                                 array(
@@ -310,8 +337,8 @@ The following script represents the link connection between i-doit and VMware:
                             $datacenter = $l_response[0]['hosts']['title'];
                             $host = $l_response[0]['primary']['title'];
     
-                            //Get SAN LUN
-                            $l_request = new \idoit\Api\Request($l_apiClient,
+                            // Obtenir le LUN SAN
+                            $l_request = new \idoit\Api.Request($l_apiClient,
                                 'cmdb.category.read',
                                 array(
                                 'objID' => $params['objectID'],
@@ -325,185 +352,190 @@ The following script represents the link connection between i-doit and VMware:
                                 $lun = $l_response[$x]['host_ldev_client']['ref_title'];
                                 }
                             }
-    
-                            //Get Network
-                            $l_request = new \idoit\Api\Request($l_apiClient,
-                                'cmdb.category.read',
-                                array(
-                                'objID' => $params['objectID'],
-                                'category' => 'C__CATG__VIRTUAL_DEVICE'
-                                )
-                            );
-                            $l_response = $l_request->send();
-                            for ( $x = 0; $x < count($l_response); $x++) {
-                                if (isset($l_response[$x]['switch_port_group']['vs_port_group_title']) && !empty($l_response[$x]['switch_port_group']['vs_port_group_title']))
-                                {
-                                $network = $l_response[$x]['switch_port_group']['vs_port_group_title'];
-                                }
-                            }
-    
-                            $dom      = new DomDocument("1.0");
-                            $dom->formatOutput = true;
-                            $dom->preserveWhiteSpace = false;
-                            $VirtualMachines  = $dom->createElement('Virtual-Machines');
-                            $VirtualMachine = $dom->createElement('Virtual-Machine');
-                            $VirtualMachines->appendChild( $VirtualMachine );
-                            $VirtualMachine->appendChild( $dom->createElement('Name', $params['postData']['C__CATG__GLOBAL_TITLE']) );
-                            $VirtualMachine->appendChild( $dom->createElement('Host', $host) );
-                            $VirtualMachine->appendChild( $dom->createElement('Datacenter', $datacenter) );
-                            $VirtualMachine->appendChild( $dom->createElement('Guest-Id', '' ) );
-                            $VirtualMachine->appendChild( $dom->createElement('Datastore', $lun ) );
-                            $VirtualMachine->appendChild( $dom->createElement('Disksize', $hdd ) );
-                            $VirtualMachine->appendChild( $dom->createElement('Memory', $all_memory_mb ) );
-                            $VirtualMachine->appendChild( $dom->createElement('Number-of-Processor', $cpuCount) );
-                            $VirtualMachine->appendChild( $dom->createElement('Nic-Network', $network) );
-                            $VirtualMachine->appendChild( $dom->createElement('Nic-Poweron', '1') );
-                            $dom->appendChild( $VirtualMachines );
-    
-                            $dom->save("/tmp/i-doit-vm-provision.xml");
-    
-                                    exec("/usr/src/vmware-vsphere-cli-distrib/apps/vm/vmcreate.pl --url $vSphereWebService --username $vSphereUsername --password $vSpherePassword --filename /tmp/i-doit-vm-provision.xml --schema /usr/src/vmware-vsphere-cli-distrib/apps/schema/vmcreate.xsd");
-                            echo 'Provisioned machine ' . $params['postData']['C__CATG__GLOBAL_TITLE'] ;
-    
-                            //Set CMDB Status to provisioned
-                            $l_request = new \idoit\Api\Request($l_apiClient,
-                                'cmdb.category.update',
-                                array(
-                                    'objID' => $params['objectID'],
-                                    'category' => 'C__CATG__GLOBAL',
-                                    'data'     => array(
-                                    'cmdb_status' => $objCMDBStatus_ready,
-                                    )
-                                )
-                            );
-    
-                            $l_response = $l_request->send();
-    
-                        }
-                        }
-                    }
-                    else throw new Exception('Event Error: Object id not existent.');
-    
-                }
-                else throw new Exception('Event Error: Script Parameters not json-encoded.');
-    
-            }
-            else throw new Exception('Event Error: Script Parameters not base64 encoded.');
-        }
-    } catch (Exception $e)
+```
+
+```php
+//Obtenir le réseau
+$l_request = new \idoit\Api\Request($l_apiClient,
+    'cmdb.category.read',
+    array(
+    'objID' => $params['objectID'],
+    'category' => 'C__CATG__VIRTUAL_DEVICE'
+    )
+);
+$l_response = $l_request->send();
+for ( $x = 0; $x < count($l_response); $x++) {
+    if (isset($l_response[$x]['switch_port_group']['vs_port_group_title']) && !empty($l_response[$x]['switch_port_group']['vs_port_group_title']))
     {
-        echo $e->getMessage();
-        exit;
+    $network = $l_response[$x]['switch_port_group']['vs_port_group_title'];
     }
+}
 
-We copy this to the /usr/local/bin/i-doit_provision.php file. We also assign the appropriate permissions so that the Apache web server is able to run the script:
+$dom      = new DomDocument("1.0");
+$dom->formatOutput = true;
+$dom->preserveWhiteSpace = false;
+$VirtualMachines  = $dom->createElement('Machines-Virtuelles');
+$MachineVirtuelle = $dom->createElement('Machine-Virtuelle');
+$VirtualMachines->appendChild( $MachineVirtuelle );
+$MachineVirtuelle->appendChild( $dom->createElement('Nom', $params['postData']['C__CATG__GLOBAL_TITLE']) );
+$MachineVirtuelle->appendChild( $dom->createElement('Hôte', $host) );
+$MachineVirtuelle->appendChild( $dom->createElement('Centre-de-données', $datacenter) );
+$MachineVirtuelle->appendChild( $dom->createElement('Id-Guest', '' ) );
+$MachineVirtuelle->appendChild( $dom->createElement('Stockage', $lun ) );
+$MachineVirtuelle->appendChild( $dom->createElement('Taille-du-disque', $hdd ) );
+$MachineVirtuelle->appendChild( $dom->createElement('Mémoire', $all_memory_mb ) );
+$MachineVirtuelle->appendChild( $dom->createElement('Nombre-de-Processeur', $cpuCount) );
+$MachineVirtuelle->appendChild( $dom->createElement('Réseau-Nic', $network) );
+$MachineVirtuelle->appendChild( $dom->createElement('Nic-Mise-en-marche', '1') );
+$dom->appendChild( $VirtualMachines );
+```
 
-    chmod 775 /usr/local/bin/i-doit_provision.php
+```php
+$dom->save("/tmp/i-doit-vm-provision.xml");
 
-This script includes the configuration to access both i-doit and VMware. It has to be adjusted accordingly:
+exec("/usr/src/vmware-vsphere-cli-distrib/apps/vm/vmcreate.pl --url $vSphereWebService --username $vSphereUsername --password $vSpherePassword --filename /tmp/i-doit-vm-provision.xml --schema /usr/src/vmware-vsphere-cli-distrib/apps/schema/vmcreate.xsd");
+echo 'Machine provisionnée ' . $params['postData']['C__CATG__GLOBAL_TITLE'] ;
 
-*   $vSphereUsername: User for vSphere (see above)
-*   $vSpherePassword: Password for vSphere (see above)
-*   $vSphereWebService: URL to the Web Service of vSphere
-*   $objCMDBStatus: ID of the CMDB status **to be provisioned** (see below)
-*   $objCMDBStatus_ready: ID of the CMDB status **provisioned** (see below)
-*   $api_entry_point: URL to the API of i-doit
-*   $api_key: Key for the i-doit API
+//Définir le statut CMDB sur provisionné
+$l_request = new \idoit\Api\Request($l_apiClient,
+    'cmdb.category.update',
+    array(
+        'objID' => $params['objectID'],
+        'category' => 'C__CATG__GLOBAL',
+        'data'     => array(
+        'cmdb_status' => $objCMDBStatus_ready,
+        )
+    )
+);
 
-### Supplement CMDB Status
+$l_response = $l_request->send();
 
-The two [CMDB status](../basics/life-and-documentation-cycle.md) statements **to be provisioned** and **provisioned** do not exist in the i-doit default installation yet but they are crucial for the automation. They need to be supplemented as described in the linked article.
+}
+}
+}
+else throw new Exception('Erreur d\'événement : ID d\'objet inexistant.');
+
+}
+else throw new Exception('Erreur d\'événement : Paramètres de script non encodés en JSON.');
+
+}
+else throw new Exception('Erreur d\'événement : Paramètres de script non encodés en base64.');
+} catch (Exception $e)
+{
+echo $e->getMessage();
+exit;
+}
+```
+
+Nous copions ceci dans le fichier /usr/local/bin/i-doit_provision.php. Nous attribuons également les autorisations appropriées pour que le serveur web Apache puisse exécuter le script :
+
+```bash
+chmod 775 /usr/local/bin/i-doit_provision.php
+```
+
+Ce script inclut la configuration pour accéder à la fois à i-doit et VMware. Il doit être ajusté en conséquence :
+
+-   $vSphereUsername : Utilisateur pour vSphere (voir ci-dessus)
+-   $vSpherePassword : Mot de passe pour vSphere (voir ci-dessus)
+-   $vSphereWebService : URL du service Web de vSphere
+-   $objCMDBStatus : ID du statut CMDB **à provisionner** (voir ci-dessous)
+-   $objCMDBStatus_ready : ID du statut CMDB **provisionné** (voir ci-dessous)
+-   $api_entry_point : URL de l'API d'i-doit
+-   $api_key : Clé pour l'API d'i-doit
+```
+
+### Statut de la CMDB supplémentaire
+
+Les deux déclarations de statut de la [CMDB](../basics/life-and-documentation-cycle.md) **à provisionner** et **provisionné** n'existent pas encore dans l'installation par défaut d'i-doit, mais elles sont cruciales pour l'automatisation. Elles doivent être complétées comme décrit dans l'article lié.
 
 [![vm-provisioning-cmd](../assets/images/en/use-cases/vm-provisioning/3-vmp.png)](../assets/images/en/use-cases/vm-provisioning/3-vmp.png)
 
-### Configure Event
+### Configurer l'événement
 
-Now i-doit has to be configured to execute the script if certain changes are performed. For this, we use the [event controls](../i-doit-pro-add-ons/events.md) and create a new hook.
+Maintenant, i-doit doit être configuré pour exécuter le script si certaines modifications sont effectuées. Pour cela, nous utilisons les [contrôles d'événements](../i-doit-pro-add-ons/events.md) et créons un nouveau hook.
 
-*   **Event**: **Category: (arbitrary sources) Save**
-*   **Description**: **VM provisioning**
-*   **Type**: **SHELL COMMAND**
-*   **Command**: **/usr/local/bin/i-doit_provision.php**
-*   **Additional parameters**: leave this blank
-*   **Mode**: **Executive live**
+*   **Événement**: **Catégorie: (sources arbitraires) Enregistrer**
+*   **Description**: **Provisionnement de VM**
+*   **Type**: **COMMANDE SHELL**
+*   **Commande**: **/usr/local/bin/i-doit_provision.php**
+*   **Paramètres supplémentaires**: laisser ceci vide
+*   **Mode**: **Exécutif en direct**
 
 [![vm-provisioning-configure](../assets/images/en/use-cases/vm-provisioning/4-vmp.png)](../assets/images/en/use-cases/vm-provisioning/4-vmp.png)
 
-At this point, the configuration is finished and the automation is "activated".
+À ce stade, la configuration est terminée et l'automatisation est "activée".
 
-Handling
+Gestion
 --------
 
-After this extensive one-time configuration we can now take a look at how the automation works.
+Après cette configuration unique et étendue, nous pouvons maintenant voir comment fonctionne l'automatisation.
 
-### Document the Virtual Environment in i-doit
+### Documenter l'environnement virtuel dans i-doit
 
-A vSphere cluster (object type **Cluster**) with some ESX hosts (object type **Virtual Host**) already exists. The object title of the cluster corresponds to the datacenter in vSphere. The object titles of the ESX hosts are the host names which are also displayed in vSphere.
+Un cluster vSphere (type d'objet **Cluster**) avec quelques hôtes ESX (type d'objet **Hôte virtuel**) existe déjà. Le titre de l'objet du cluster correspond au centre de données dans vSphere. Les titres des objets des hôtes ESX sont les noms d'hôtes qui sont également affichés dans vSphere.
 
 [![vm-provisioning-virtual](../assets/images/en/use-cases/vm-provisioning/5-vmp.png)](../assets/images/en/use-cases/vm-provisioning/5-vmp.png)
 
 [![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/6-vmp.png)](../assets/images/en/use-cases/vm-provisioning/6-vmp.png)
 
-Virtual switches are configured with VLAN IDs (category **Virtual switches**) for each ESX host.
+Les commutateurs virtuels sont configurés avec des identifiants VLAN (catégorie **Commutateurs virtuels**) pour chaque hôte ESX.
 
 [![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/7-vmp.png)](../assets/images/en/use-cases/vm-provisioning/7-vmp.png)
 
-The ESX hosts are bound to a central storage which supplies the VMs with disk space (category **Logic devices (Client)**).
+Les hôtes ESX sont liés à un stockage central qui fournit aux machines virtuelles de l'espace disque (catégorie **Dispositifs logiques (Client)**).
 
-[![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/8-vmp.png)](../assets/images/en/use-cases/vm-provisioning/8-vmp.png)
+[![provisionnement-vm](../assets/images/en/use-cases/vm-provisioning/8-vmp.png)](../assets/images/en/use-cases/vm-provisioning/8-vmp.png)
 
-The storage side is construed accordingly. The **Logic devices (LDEV Server)** category contains the assignment of LUNs to ESX hosts.
+Le côté stockage est construit en conséquence. La catégorie **Dispositifs logiques (Serveur LDEV)** contient l'attribution des LUN aux hôtes ESX.
 
-[![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/9-vmp.png)](../assets/images/en/use-cases/vm-provisioning/9-vmp.png)
+[![provisionnement-vm](../assets/images/en/use-cases/vm-provisioning/9-vmp.png)](../assets/images/en/use-cases/vm-provisioning/9-vmp.png)
 
-### Create New VM
+### Créer une nouvelle VM
 
-The vSphere Cluster and the storage are now ready according to the [IT documentation](../basics/structure-of-the-it-documentation.md). It is time to document VMs – and provision them automatically.
+Le cluster vSphere et le stockage sont maintenant prêts selon la [documentation informatique](../basics/structure-of-the-it-documentation.md). Il est temps de documenter les machines virtuelles - et de les provisionner automatiquement.
 
-First you create a new VM (object type **Virtual server**) and set its CMDB status to **planned** (since it does not exist yet).
+Tout d'abord, vous créez une nouvelle VM (type d'objet **Serveur virtuel**) et définissez son statut CMDB à **planifié** (car elle n'existe pas encore).
 
-[![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/10-vmp.png)](../assets/images/en/use-cases/vm-provisioning/10-vmp.png)  
+[![provisionnement-vm](../assets/images/en/use-cases/vm-provisioning/10-vmp.png)](../assets/images/en/use-cases/vm-provisioning/10-vmp.png)  
 
-Afterwards, the desired system configuration is documented. The number of demanded CPU cores is documented in the **CPU** category. One entry is generated for each core.
+Ensuite, la configuration système souhaitée est documentée. Le nombre de cœurs de CPU demandés est documenté dans la catégorie **CPU**. Une entrée est générée pour chaque cœur.
 
-[![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/11-vmp.png)](../assets/images/en/use-cases/vm-provisioning/11-vmp.png)
+[![provisionnement-vm](../assets/images/en/use-cases/vm-provisioning/11-vmp.png)](../assets/images/en/use-cases/vm-provisioning/11-vmp.png)
 
-The required RAM is documented in the **Memory** category. Number of RAM modules and the chosen value units are not important. The total capacity is summed up instead.
+La RAM requise est documentée dans la catégorie **Mémoire**. Le nombre de modules de RAM et les unités de valeur choisies ne sont pas importants. La capacité totale est plutôt cumulée.
 
-[![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/12-vmp.png)](../assets/images/en/use-cases/vm-provisioning/12-vmp.png)
+[![provisionnement-vm](../assets/images/en/use-cases/vm-provisioning/12-vmp.png)](../assets/images/en/use-cases/vm-provisioning/12-vmp.png)
 
-In the **Network → Port** category the title of the first entry is used to configure a virtual port for the VM.
+Dans la catégorie **Réseau → Port**, le titre de la première entrée est utilisé pour configurer un port virtuel pour la VM.
 
-[![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/13-vmp.png)](../assets/images/en/use-cases/vm-provisioning/13-vmp.png)
+[![provisionnement-vm](../assets/images/en/use-cases/vm-provisioning/13-vmp.png)](../assets/images/en/use-cases/vm-provisioning/13-vmp.png)
 
-The required disk space is specified in the **Direct Attached Storage → Device** category.
+L'espace disque requis est spécifié dans la catégorie **Stockage Direct Attaché → Périphérique**.
 
-[![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/14-vmp.png)](../assets/images/en/use-cases/vm-provisioning/14-vmp.png)
+[![provisionnement-vm](../assets/images/en/use-cases/vm-provisioning/14-vmp.png)](../assets/images/en/use-cases/vm-provisioning/14-vmp.png)
 
-In the **Virtual machine** category you document in which cluster and on what ESX host the VM is supposed to run.
+Dans la catégorie **Machine virtuelle**, vous documentez dans quel cluster et sur quel hôte ESX la VM est censée s'exécuter.
 
 [![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/15-vmp.png)](../assets/images/en/use-cases/vm-provisioning/15-vmp.png)
 
-The assignment of storage and network is stored in the **Virtual machine → Virtual devices** category. The screenshot shows which attributes should be filled in.
+L'attribution du stockage et du réseau est stockée dans la catégorie **Machine virtuelle → Périphériques virtuels**. La capture d'écran montre quels attributs doivent être remplis.
 
 [![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/16-vmp.png)](../assets/images/en/use-cases/vm-provisioning/16-vmp.png)
 
-With this the configuration of the VM is sufficiently documented.
+Avec cela, la configuration de la VM est suffisamment documentée.
 
-  
+Modèles
 
-Templates
+Un modèle est utile pour documenter plus rapidement les machines virtuelles et ainsi les provisionner plus rapidement. Un modèle est créé pour chaque VM pré-assemblée et de nouveaux objets sont générés sur la base de ce modèle.
 
-A template is useful to document virtual machines faster and thereby provision them faster. A template is created for each pre-assembled VM and new objects are generated on basis of this template.
+### Provisionnement automatique de VM
 
-### Provision VM Automatically
-
-Now we come to the final step: the provisioning. We do not have much left to do. In the **General** category the CMDB status is set to **to be provisioned**. When the change is saved, the script described above starts to read the configuration files from i-doit and transfer them to vSphere. Saving may take some time as the results need to be there first.
+Maintenant, nous arrivons à la dernière étape : le provisionnement. Il ne nous reste plus grand-chose à faire. Dans la catégorie **Général**, le statut CMDB est défini sur **à provisionner**. Lorsque la modification est enregistrée, le script décrit ci-dessus commence à lire les fichiers de configuration depuis i-doit et les transfère vers vSphere. L'enregistrement peut prendre un certain temps car les résultats doivent d'abord être disponibles.
 
 [![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/17-vmp.png)](../assets/images/en/use-cases/vm-provisioning/17-vmp.png)
 
-Once the provisioning has finished successfully, the CMDB status is automatically changed to **provisioned**. The VM has been created and runs. Done!
+Une fois le provisionnement terminé avec succès, le statut CMDB est automatiquement changé en **provisionné**. La VM a été créée et fonctionne. Terminé !
 
-[![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/18-vmp.png)](../assets/images/en/use-cases/vm-provisioning/18-vmp.png)  
+[![vm-provisioning](../assets/images/en/use-cases/vm-provisioning/18-vmp.png)](../assets/images/en/use-cases/vm-provisioning/18-vmp.png)
 
-The communication between i-doit and vSphere is displayed at **Administration → CMDB settings → Events → History (Log)**.
+La communication entre i-doit et vSphere est affichée dans **Administration → Paramètres CMDB → Événements → Historique (Journal)**.

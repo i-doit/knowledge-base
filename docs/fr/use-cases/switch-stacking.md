@@ -1,17 +1,17 @@
-# Switch Stacking
+# Empilement de commutation {/ * exemples * /}
 
-With the **Stacking** [object type](../glossary.md) you can define a stack group of several members which exchange information. Although you can use stacking for different object types, the original idea for this object type and the associated **Stack member** [category](../glossary.md) is based on Switch Stacking. From version 1.7 the object type can be found under the [object type group](../glossary.md) **Other**.
+Avec le type d'objet **Empilement** [type d'objet](../glossary.md), vous pouvez définir un groupe d'empilement de plusieurs membres qui échangent des informations. Bien que vous puissiez utiliser l'empilement pour différents types d'objets, l'idée originale de ce type d'objet et de la catégorie associée de **Membre de l'empilement** [catégorie](../glossary.md) est basée sur l'Empilement de commutation. À partir de la version 1.7, le type d'objet peut être trouvé sous le [groupe de types d'objets](../glossary.md) **Autre**.
 
-Stack Members
--------------
+Membres de l'empilement
+-----------------------
 
-You can add [objects](../glossary.md) as members of the stack and specify them as "Active" or "Passive" in the **Stack member** category, which was especially created for stacking. Beside the corresponding display, this specification has no other effect  on the documentation.
+Vous pouvez ajouter des [objets](../glossary.md) en tant que membres de l'empilement et les spécifier comme "Actif" ou "Passif" dans la catégorie **Membre de l'empilement**, qui a été spécialement créée pour l'empilement. Outre l'affichage correspondant, cette spécification n'a aucun autre effet sur la documentation.
 
-[![switch-stacking](../assets/images/en/use-cases/switch-stacking/1-sws.png)](../assets/images/en/use-cases/switch-stacking/1-sws.png)
+[![empilement-de-commutation](../assets/images/en/use-cases/switch-stacking/1-sws.png)](../assets/images/en/use-cases/switch-stacking/1-sws.png)
 
-Logical Ports
--------------
+Ports logiques
+--------------
 
-When a logical port is created in one of the stack members, this port is also displayed with the other stack members under the logical ports section.
+Lorsqu'un port logique est créé dans l'un des membres de l'empilement, ce port est également affiché avec les autres membres de l'empilement dans la section des ports logiques.
 
-Additionally, cou can assign the logical port of another stack member as parent port to the port.
+De plus, vous pouvez attribuer le port logique d'un autre membre de l'empilement en tant que port parent au port.

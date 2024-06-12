@@ -1,165 +1,165 @@
-# Changelog 1.11
+# Journal des modifications 1.11
 
-[Task][Code (internal)]                         Detach "Events" Add-on from the core  
-[Task][Import]                                  Removing of loginventory import incl. DB, module, etc.  
-[Improvement][CMDB]                             Extras menu does not disappear on clicking outside of it  
-[Improvement][CMDB]                             Make tabs 'search' and 'reports' available for browsers with two columns  
-[Improvement][CMDB]                             Select the standard object type of object browsers  
-[Improvement][CMDB]                             Customizable columns and object types in object browser  
-[Improvement][Search]                           Recursive search within location path (activatable in tenant settings)  
-[Improvement][Search]                           Fuzzy search got removed  
-[Improvement][Search]                           Adding aliase to the search index  
-[Improvement][Categories]                       Button for recommending passwords in the password category  
-[Improvement][Categories]                       User definable columns in multivalue category-lists (as in object lists)  
-[Improvement][Categories]                       Improved visualisation of chassis in rack  
-[Improvement][Categories]                       Change columns from multi value categories  
-[Improvement][CSV]                              CSV import: object matching using object ID  
-[Improvement][CSV]                              Contact assignment via mail address or login name not possible in the CSV import  
-[Improvement][Lists]                            Availability of attribute "capacity" of RAIDs for list view of storage systems  
-[Improvement][Lists]                            Object lists: Show group membership of persons  
-[Improvement][Lists]                            Showing linked beginning and end of conctracts in object lists  
-[Improvement][Lists]                            Using a drop-down field in object list filter for drop-down and dialogue-plus fields  
-[Improvement][Lists]                            Display the variant and version number of an application in List view  
-[Improvement][Lists]                            Display the number of cluster members  
-[Improvement][Lists]                            Lists: Save sortings after attributes  
-[Improvement][Lists]                            Object lists: Filter after dialog (plus) fields  
-[Improvement][Lists]                            Fixed caption head in object lists  
-[Improvement][Objects]                          Object browser:  customizable columns as in the list views  
-[Improvement][Objects]                          Bildergallerie: Sortierung nach Namen etc.  
-[Improvement][Report-Manager]                   Group Report manager results instead of showing multiple rows  
-[Improvement][Report-Manager]                   Period of time can be slected as condition  
-[Improvement][Custom categories]                Selection of shown object types in object browser of custom category  
-[Improvement][Code (internal)]                  PHP 7.1 compatibility  
-[Bug][Search]                                   Search does not index model and manufacturer from category model  
-[Bug][Search]                                   Reindex via Console for a database error  
-[Bug][Search]                                   After duplicating and object and changing it's object type, the search will display two results  
-[Bug][Search]                                   Refactoring search indexing: Dialog + fields are not indexed  
-[Bug][Search]                                   Changing the object type results in a corrupt search index  
-[Bug][Search]                                   Search: SYSID of object type "Cable" are not considered for search  
-[Bug][Search]                                   FQDN can not be found via search  
-[Bug][Search]                                   Deleted/archived objects can not be distinguished in the search  
-[Bug][Search]                                   Custom categories can only be found using deep search  
-[Bug][Search]                                   Content of description fields is kept in search index  
-[Bug][Search]                                   open: Fullindex aborts with memory leak  
-[Bug][Search]                                   Changing object type creates duplicated entry in the search index  
-[Bug][Search]                                   Search index: An error occurred when the search index was regenerated with a large database  
-[Bug][Lists]                                    One-Klick-Edit Modus  
-[Bug][Lists]                                    Sorting: Subcategory "Installation" of the category "Application" not possible  
-[Bug][Lists]                                    Sorting: Subcategory "License key" Sorting leads to incorrect presentation  
-[Bug][Lists]                                    Sort subcategory "Assigned files" from the category "Files" not possible  
-[Bug][Lists]                                    Object List: Backup Category Sorting for "being backed up" results in an SQL error  
-[Bug][Lists]                                    Category "Contact Assignment"  field "Email Address" displays a function  
-[Bug][Lists]                                    SQL-error in list view when searching all fields  
-[Bug][Lists]                                    Dashboard-Widget: Object List can not be configured  
-[Bug][Lists]                                    List view not visible on events "hooks / history"  
-[Bug][Lists]                                    List View: Changing the column width in lists results in an unusable list  
-[Bug][Lists]                                    JDISC: Edit Checkbox will be removed in the configuration / profiles  
-[Bug][Lists]                                    Print view in object lists without function  
-[Bug][Lists]                                    Incorrect sorting in "Number of user-defined fields"  
-[Bug][Lists]                                    Deletet objects are used for counting of ip addresses in use  
-[Bug][Lists]                                    Objektliste: Die Option "Gruppierte Daten zeigen als" kann nicht als Standard gespeichert werden  
-[Bug][Lists]                                    Error when sorting for "category" from category "General"  
-[Bug][Lists]                                    Language constant is displayed in object list configuration  
-[Bug][Lists]                                    Attributes "Front grid size" and "Rear grid size" are not available for view in object list  
-[Bug][Lists]                                    Sorting of VLANs is alphanummeric  
-[Bug][Lists]                                    Cannot filter after contract status  
-[Bug][Lists]                                    Object list configuration still shows category 'Applications'  
-[Bug][Lists]                                    Filter does not find supplied data in dialog+ fields  
-[Bug][Check_MK]                                 Check_MK tag titles with quotes lead to problems when creating the idoit_hosttags.mk  
-[Bug][Check_MK]                                 Check-MK: Deinstallation of the add-on possible  
-[Bug][Categories]                               Attribute 'Path to save' not available in category 'Backup'  
-[Bug][Categories]                               Saving an entry in the category "CUCM VoIP line" leads to an SQL error message  
-[Bug][Categories]                               Logical devices being displayed despite being archived  
-[Bug][Categories]                               Placeholder %ipaddress% in category access also contains i-doit host  
-[Bug][Categories]                               Archived dialog + entries selectable in the state Normal  
-[Bug][Categories]                               Patchlevel not being displayed in category 'Software Assignment'  
-[Bug][Categories]                               Specific category "license assignment" is necassary in i-doit open but can not be used  
-[Bug][CMDB]                                     Object Browser: Switch from "Object View" to "Search", "Location Not" or "Reports"  
-[Bug][CMDB]                                     Wrong decrypted passwords causes empty reports  
-[Bug][CMDB]                                     Paging does not work in Internet Explorer 11  
-[Bug][CMDB]                                     Object browser: Performance problems when calling the object browser  
-[Bug][CMDB]                                     Drop down for dates shown transculent when clicking multiple times  
-[Bug][CMDB]                                     Inconsistent values for tmp_table_size and max_heap_table_size override each other  
-[Bug][CMDB]                                     Duplicate: Confirmation by pressing ENTER-Key will not duplicate the object but reload the page  
-[Bug][CMDB]                                     Incosisting sorting of service filters  
-[Bug][Mass editing]                             Mass change overwrites content of custom categories with empty fields, even if the option to ignore empty fields is set  
-[Bug][Mass editing]                             Mass change: existing templates are missing the download  
-[Bug][Mass editing]                             Wrong display of changed attributes of category "monitoring" in mass change/templates  
-[Bug][LDAP]                                     LDAP sync results in exception errors  
-[Bug][LDAP]                                     Display of the license in the license overview incorrect  
-[Bug][LDAP]                                     LDAP Sync: Connection test output incorrect  
-[Bug][Objects]                                  Object browser: Category "QinQ CE-VLAN" Attribute "Assigned SP-VLAN" ignores configuration  
-[Bug][Objects]                                  Object Browser: Missing categories in an object type may not display objects  
-[Bug][Objects]                                  Object browser: Category "QinQ CE-VLAN" does not display "Layer 2 networks"  
-[Bug][Objects]                                  Assignment field: source object equals zero  
-[Bug][Objects]                                  QCW: Final deletion of an object type group is not possible  
-[Bug][Objects]                                  Opening the overview page jumps to the last field "on object browser"  
-[Bug][Objects]                                  Automatic inventory number results in duplicate duplicate duplicates  
-[Bug][Objects]                                  Incorrect summation of the objects to be licensed  
-[Bug][Objects]                                  Wrong calculation of the next possible cancellation date  
-[Bug][Objects]                                  Javascript warning on Dialog+ fields  
-[Bug][Objects]                                  Changing the status of a dialog field with a parent results in an error  
-[Bug][Objects]                                  Prevent editing of multiple entries in multi-value categories  
-[Bug][Objects]                                  Chassis: objects only assignable once  
-[Bug][Objects]                                  Cabinet view not correct on chassis  
-[Bug][Objects]                                  Category: Virtual machine is the backward category without function  
-[Bug][Objects]                                  Category Port overview (stacking) not visible  
-[Bug][Objects]                                  Layer 2 network: Attached ports can not be purged  
-[Bug][Custom categories]                        Error with Information "ID" in custom categories  
-[Bug][Custom categories]                        Custom rearward category is not presented bold when the corresponding report does have results  
-[Bug][Custom categories]                        Dialog+ multiple select ID instead of name if this is a zero  
-[Bug][Custom categories]                        In the help text no umlauts are displayed  
-[Bug][Custom categories]                        Custom Category: Dialog+(Multiselect) Attribute can not be deleted  
-[Bug][System settings]                          System setting keys are limited to 100 characters  
-[Bug][Report-Manager]                           Report Manager: Sorting reports will result in non-functioning buttons  
-[Bug][Report-Manager]                           Report Manager: Microsoft Internet Explorer does not display a report output  
-[Bug][Report-Manager]                           Report Manager: Duplicating a report is not possible  
-[Bug][Report-Manager]                           Report Manager: Editing / saving a report is not possible  
-[Bug][Report-Manager]                           Report Manager: Output of the language constant if the value is 0  
-[Bug][Report-Manager]                           Attributes of category "CPU" completely available for reports  
-[Bug][Report-Manager]                           Attributes "Front grid size" and "Rear grid size" are not available in Report Manager  
-[Bug][Report-Manager]                           Error when using some attributes in report manager  
-[Bug][Report-Manager]                           While executing a variable report, nothing happens  
-[Bug][Console]                                  Console: "Call to member function" after OCS import  
-[Bug][API]                                      API: Multiple category entries in custom categories  
-[Bug][Open-Version]                             i-doit Open: main area without function  
-[Bug][Installation]                             Incorrect check of MySQL version during installation / update  
-[Bug][Installation]                             Improved check of versions during update and installation  
-[Bug][List editing]                             List edit disregards data cleansing  
-[Bug][List editing]                             List Editing: Language Constant is displayed in the Location category  
-[Bug][List editing]                             List Editing: Individual selection of an object is not possible for several objects  
-[Bug][List editing]                             List Editing: Editing the category "host address" is displayed incorrectly  
-[Bug][List editing]                             List editing: Save category "electricity supplier / consumer" releases connections  
-[Bug][List editing]                             List Editing: Filtering by contact assignment by object title not possible  
-[Bug][List editing]                             List editing: location not possible  
-[Bug][List editing]                             Suggestion function does not open properly in fields of object browser  
-[Bug][List editing]                             Listedit of the category WAN CONNECTIONS shows succesfull save, but no value is changed  
-[Bug][OCS]                                      OCS import: Logging via GUI is missing  
-[Bug][OCS]                                      Database error during OCS import  
-[Bug][Update]                                   Database error in the update process  
-[Bug][Logbook]                                  Logbook: list view of logbook entries superimposed fields if content is too long  
-[Bug][Logbook]                                  Logbook: Archived entries can not be viewed  
-[Bug][Logbook]                                  Missing horizontal scrollbar in logbook  
-[Bug][Logbook]                                  Logbook: Allocation category "software allocation" no entries are made in case of changes  
-[Bug][JDisc]                                    JDISC: Editing / creating a profile results in a DB error message  
-[Bug][JDisc]                                    If you enter a value in the category JDisc custom attributes without attribute, an error message will be displayed  
-[Bug][Relations]                                Relationships: Weightings are missing in relations to be edited  
-[Bug][Relations]                                Relationships: list of relationships incomplete  
-[Bug][CMDB-Explorer]                            CMDB Explorer: Management of profiles incorrect  
-[Bug][Systemtools]                              tmp_table_size being displayed twice in the system overview  
-[Bug][Notifications]                            Notifications: Incorrect output of objects for certain assigned person groups  
-[Bug][Notifications]                            Notifications: Custom categories are missing for selection in e-mail templates  
-[Bug][Authorization system]                     Reports can be created in all report categories, even without permission  
-[Bug][Authorization system]                     File Browser ignores the rights system  
-[Bug][Authorization system]                     Rights system: Parameter All does not apply to "Categories in object type" in list edit  
-[Bug][Authorization system]                     Purging all objects which are involved in an authorization set leaves an empty right  
-[Bug][Events]                                   Events: Do not provide uniquely identifiable changes  
-[Bug][CSV]                                      CSV import: LDAP group mapping leads to incorrect import  
-[Bug][CSV]                                      CSV import throws PHP fatal error  
-[Bug][Templates]                                High amount of templates/mass change templates will prevent vom showing all templates/mass change templates in selection  
-[Bug][Dashboard]                                Widget "objectlist" shows ID instead of livestatus icon  
-[Bug][XML]                                      XML export does not save information about the category "Virtual Machine"  
-[Bug][Import]                                   Summary logic leads to various errors  
-[Bug][Validation]                               Validation of tags does not work in the list edit  
-[Bug][User settings]                            Umlauts in the user login lead to incorrect logins  
-[Bug][Controller]                               Full index enforces PHP setting "memory_limit" to 4 gigabytes  
+[Tâche][Code (interne)]                         Détacher l'extension "Événements" du noyau  
+[Tâche][Import]                                 Suppression de l'importation de loginventory incl. DB, module, etc.  
+[Amélioration][CMDB]                            Le menu Extras ne disparaît pas en cliquant en dehors de celui-ci  
+[Amélioration][CMDB]                            Rendre les onglets 'recherche' et 'rapports' disponibles pour les navigateurs avec deux colonnes  
+[Amélioration][CMDB]                            Sélectionner le type d'objet standard des navigateurs d'objets  
+[Amélioration][CMDB]                            Colonnes personnalisables et types d'objets dans le navigateur d'objets  
+[Amélioration][Recherche]                        Recherche récursive dans le chemin d'accès de l'emplacement (activable dans les paramètres du locataire)  
+[Amélioration][Recherche]                        La recherche floue a été supprimée  
+[Amélioration][Recherche]                        Ajout d'alias à l'index de recherche  
+[Amélioration][Catégories]                      Bouton pour recommander des mots de passe dans la catégorie des mots de passe  
+[Amélioration][Catégories]                      Colonnes définissables par l'utilisateur dans les listes de catégories multivaluées (comme dans les listes d'objets)  
+[Amélioration][Catégories]                      Visualisation améliorée des châssis dans le rack  
+[Amélioration][Catégories]                      Changer les colonnes des catégories à valeurs multiples  
+[Amélioration][CSV]                             Importation CSV : correspondance d'objets en utilisant l'ID d'objet  
+[Amélioration][CSV]                             Affectation de contact via adresse e-mail ou nom d'utilisateur non possible dans l'importation CSV  
+[Amélioration][Listes]                          Disponibilité de l'attribut "capacité" des RAIDs pour la vue en liste des systèmes de stockage  
+[Amélioration][Listes]                          Listes d'objets : Afficher l'appartenance à un groupe de personnes  
+[Amélioration][Listes]                          Affichage des débuts et fins liés des contrats dans les listes d'objets  
+[Amélioration][Listes]                          Utilisation d'un champ de liste déroulante dans le filtre de liste d'objets pour les champs de liste déroulante et de dialogue-plus  
+[Amélioration][Listes]                          Afficher la variante et le numéro de version d'une application en vue liste  
+[Amélioration][Listes]                          Afficher le nombre de membres du cluster  
+[Amélioration][Listes]                          Listes : Enregistrer les tris après les attributs  
+[Amélioration][Listes]                          Listes d'objets : Filtrer après les champs de dialogue (plus)  
+[Amélioration][Listes]                          Tête de légende fixe dans les listes d'objets  
+[Amélioration][Objets]                         Navigateur d'objets : colonnes personnalisables comme dans les vues en liste  
+[Amélioration][Objets]                         Galerie d'images : Tri par nom etc.  
+[Amélioration][Gestionnaire de rapports]        Regrouper les résultats du gestionnaire de rapports au lieu d'afficher plusieurs lignes  
+[Amélioration][Gestionnaire de rapports]        Période de temps pouvant être sélectionnée comme condition  
+[Amélioration][Catégories personnalisées]       Sélection des types d'objets affichés dans le navigateur d'objets de catégorie personnalisée  
+[Amélioration][Code (interne)]                 Compatibilité PHP 7.1  
+[Bogue][Recherche]                              La recherche n'indexe pas le modèle et le fabricant du modèle de la catégorie  
+[Bogue][Recherche]                              Réindexer via Console pour une erreur de base de données  
+[Bogue][Recherche]                              Après avoir dupliqué un objet et changé son type d'objet, la recherche affichera deux résultats  
+[Bogue][Recherche]                              Réorganisation de l'indexation de la recherche : Les champs de dialogue + ne sont pas indexés  
+[Bogue][Recherche]                              Changer le type d'objet entraîne un index de recherche corrompu  
+[Bogue][Recherche]                              Recherche : Les SYSID du type d'objet "Câble" ne sont pas pris en compte pour la recherche  
+[Bogue][Recherche]                              FQDN ne peut pas être trouvé via la recherche  
+[Bogue][Recherche]                              Les objets supprimés/archivés ne peuvent pas être distingués dans la recherche  
+[Bogue][Recherche]                              Les catégories personnalisées ne peuvent être trouvées qu'en utilisant une recherche approfondie  
+[Bogue][Recherche]                              Le contenu des champs de description est conservé dans l'index de recherche  
+[Bogue][Recherche]                              ouvert : L'indexation complète s'arrête avec une fuite de mémoire  
+[Bogue][Recherche]                              Changer le type d'objet crée une entrée dupliquée dans l'index de recherche  
+[Bogue][Recherche]                              Index de recherche : Une erreur s'est produite lors de la régénération de l'index de recherche avec une grande base de données  
+[Bogue][Listes]                                 Mode d'édition en un clic  
+[Bogue][Listes]                                 Tri : La sous-catégorie "Installation" de la catégorie "Application" n'est pas possible  
+[Bogue][Listes]                                 Tri : La sous-catégorie "Clé de licence" Le tri conduit à une présentation incorrecte  
+[Bogue][Listes]                                 Trier la sous-catégorie "Fichiers attribués" de la catégorie "Fichiers" n'est pas possible  
+[Bogue][Listes]                                 Liste d'objets : Le tri de la catégorie de sauvegarde pour "en cours de sauvegarde" entraîne une erreur SQL  
+[Bogue][Listes]                                 Catégorie "Affectation de contact" Le champ "Adresse e-mail" affiche une fonction  
+[Bogue][Listes]                                 Erreur SQL dans la vue en liste lors de la recherche dans tous les champs  
+[Bogue][Listes]                                 Widget du tableau de bord : La liste d'objets ne peut pas être configurée  
+[Bogue][Listes]                                 Vue liste non visible sur les événements "hooks / historique"  
+[Bogue][Listes]                                 Vue liste : Changer la largeur de colonne dans les listes entraîne une liste inutilisable  
+[Bogue][Listes]                                 JDISC : La case à cocher d'édition sera supprimée dans la configuration / profils  
+[Bogue][Listes]                                 Vue impression dans les listes d'objets sans fonction  
+[Bogue][Listes]                                 Tri incorrect dans "Nombre de champs définis par l'utilisateur"  
+[Bogue][Listes]                                 Les objets supprimés sont utilisés pour le comptage des adresses IP utilisées  
+[Bogue][Listes]                                 Liste d'objets : L'option "Afficher les données groupées en tant que" ne peut pas être enregistrée comme standard  
+[Bogue][Listes]                                 Erreur lors du tri pour "catégorie" de la catégorie "Général"  
+[Bogue][Listes]                                 La constante de langue est affichée dans la configuration de la liste d'objets  
+[Bogue][Listes]                                 Attributs "Taille de la grille avant" et "Taille de la grille arrière" non disponibles pour la vue en liste d'objets  
+[Bogue][Listes]                                 Le tri des VLAN est alphanumérique  
+[Bogue][Listes]                                 Impossible de filtrer après l'état du contrat  
+[Bogue][Listes]                                 La configuration de la liste d'objets affiche toujours la catégorie 'Applications'  
+[Bogue][Listes]                                 Le filtre ne trouve pas les données fournies dans les champs de dialogue+  
+[Bogue][Check_MK]                              Les titres des balises Check_MK avec des guillemets posent problème lors de la création de idoit_hosttags.mk  
+[Bogue][Check_MK]                              Check-MK : Désinstallation de l'extension possible  
+[Bogue][Catégories]                            L'attribut 'Chemin de sauvegarde' n'est pas disponible dans la catégorie 'Sauvegarde'  
+[Bogue][Catégories]                            Enregistrer une entrée dans la catégorie "Ligne VoIP CUCM" entraîne un message d'erreur SQL  
+[Bogue][Catégories]                            Les périphériques logiques sont affichés malgré leur archivage  
+[Bogue][Catégories]                            Le placeholder %adresseip% dans l'accès à la catégorie contient également l'hôte i-doit  
+[Bogue][Catégories]                            Les entrées de dialogue + archivées sont sélectionnables dans l'état Normal  
+[Bogue][Catégories]                            Le niveau de correctif n'est pas affiché dans la catégorie 'Affectation de logiciel'  
+[Bogue][Catégories]                            La catégorie spécifique "affectation de licence" est nécessaire dans i-doit open mais ne peut pas être utilisée  
+[Bogue][CMDB]                                  Navigateur d'objets : Passage de "Vue d'objet" à "Recherche", "Emplacement non" ou "Rapports"  
+[Bogue][CMDB]                                  Les mots de passe mal déchiffrés entraînent des rapports vides  
+[Bogue][CMDB]                                  La pagination ne fonctionne pas dans Internet Explorer 11  
+[Bogue][CMDB]                                  Navigateur d'objets : Problèmes de performances lors de l'appel du navigateur d'objets  
+[Bug][CMDB]                                     Le menu déroulant des dates est affiché de manière transparente lors de plusieurs clics  
+[Bug][CMDB]                                     Valeurs incohérentes pour tmp_table_size et max_heap_table_size s'écrasent mutuellement  
+[Bug][CMDB]                                     Duplication : La confirmation en appuyant sur la touche ENTRÉE ne dupliquera pas l'objet mais rechargera la page  
+[Bug][CMDB]                                     Tri incohérent des filtres de service  
+[Bug][Édition de masse]                             Le changement en masse écrase le contenu des catégories personnalisées avec des champs vides, même si l'option d'ignorer les champs vides est activée  
+[Bug][Édition de masse]                             Changement en masse : les modèles existants ne proposent pas le téléchargement  
+[Bug][Édition de masse]                             Affichage incorrect des attributs modifiés de la catégorie "monitoring" dans les changements en masse/modèles  
+[Bug][LDAP]                                     La synchronisation LDAP entraîne des erreurs d'exception  
+[Bug][LDAP]                                     L'affichage de la licence dans l'aperçu des licences est incorrect  
+[Bug][LDAP]                                     Synchronisation LDAP : La sortie du test de connexion est incorrecte  
+[Bug][Objets]                                  Navigateur d'objets : La catégorie "QinQ CE-VLAN" L'attribut "Assigned SP-VLAN" ignore la configuration  
+[Bug][Objets]                                  Navigateur d'objets : Les catégories manquantes dans un type d'objet peuvent ne pas afficher les objets  
+[Bug][Objets]                                  Navigateur d'objets : La catégorie "QinQ CE-VLAN" ne affiche pas les "réseaux de couche 2"  
+[Bug][Objets]                                  Champ d'attribution : l'objet source est égal à zéro  
+[Bug][Objets]                                  QCW : La suppression finale d'un groupe de types d'objets n'est pas possible  
+[Bug][Objets]                                  L'ouverture de la page d'aperçu saute au dernier champ "sur le navigateur d'objets"  
+[Bug][Objets]                                  Le numéro d'inventaire automatique entraîne des duplications en double  
+[Bug][Objets]                                  Sommation incorrecte des objets à licencier  
+[Bug][Objets]                                  Calcul incorrect de la prochaine date d'annulation possible  
+[Bug][Objets]                                  Avertissement JavaScript sur les champs Dialog+  
+[Bug][Objets]                                  Le changement de statut d'un champ de dialogue avec un parent entraîne une erreur  
+[Bug][Objets]                                  Empêcher la modification de plusieurs entrées dans les catégories à valeurs multiples  
+[Bug][Objets]                                  Châssis : les objets ne sont assignables qu'une seule fois  
+[Bug][Objets]                                  La vue de l'armoire n'est pas correcte sur le châssis  
+[Bug][Objets]                                  Catégorie : La machine virtuelle est la catégorie inverse sans fonction  
+[Bug][Objets]                                  Vue d'ensemble des ports de la catégorie (empilage) non visible  
+[Bug][Objets]                                  Réseau de couche 2 : Les ports attachés ne peuvent pas être purgés  
+[Bug][Catégories personnalisées]                        Erreur avec l'information "ID" dans les catégories personnalisées  
+[Bug][Catégories personnalisées]                        La catégorie personnalisée inverse n'est pas présentée en gras lorsque le rapport correspondant a des résultats  
+[Bug][Catégories personnalisées]                        Dialog+ sélection multiple ID au lieu du nom si celui-ci est égal à zéro  
+[Bug][Catégories personnalisées]                        Dans le texte d'aide, aucun umlaut n'est affiché  
+[Bug][Catégories personnalisées]                        Catégorie personnalisée : L'attribut Dialog+(Multiselect) ne peut pas être supprimé  
+[Bug][Paramètres système]                          Les clés de paramètres système sont limitées à 100 caractères  
+[Bug][Gestionnaire de rapports]                           Gestionnaire de rapports : Le tri des rapports entraînera des boutons non fonctionnels  
+[Bug][Gestionnaire de rapports]                           Gestionnaire de rapports : Microsoft Internet Explorer ne affiche pas une sortie de rapport  
+[Bug][Gestionnaire de rapports]                           Gestionnaire de rapports : La duplication d'un rapport n'est pas possible  
+[Bug][Gestionnaire de rapports]                           Gestionnaire de rapports : L'édition / la sauvegarde d'un rapport n'est pas possible  
+[Bug][Gestionnaire de rapports]                           Gestionnaire de rapports : Sortie de la constante de langue si la valeur est 0  
+[Bug][Gestionnaire de rapports]                           Les attributs de la catégorie "CPU" sont entièrement disponibles pour les rapports  
+[Bug][Gestionnaire de rapports]                           Les attributs "Taille de la grille avant" et "Taille de la grille arrière" ne sont pas disponibles dans le Gestionnaire de rapports  
+[Bug][Gestionnaire de rapports] Erreur lors de l'utilisation de certains attributs dans le gestionnaire de rapports  
+[Bug][Gestionnaire de rapports] Lors de l'exécution d'un rapport variable, rien ne se passe  
+[Bug][Console] Console : "Appel à la fonction membre" après l'importation OCS  
+[Bug][API] API : Entrées de catégorie multiples dans les catégories personnalisées  
+[Bug][Open-Version] i-doit Open : zone principale sans fonction  
+[Bug][Installation] Vérification incorrecte de la version de MySQL lors de l'installation/mise à jour  
+[Bug][Installation] Vérification améliorée des versions lors de la mise à jour et de l'installation  
+[Bug][Édition de liste] L'édition de liste ne tient pas compte du nettoyage des données  
+[Bug][Édition de liste] Édition de liste : La constante de langue est affichée dans la catégorie Emplacement  
+[Bug][Édition de liste] Édition de liste : La sélection individuelle d'un objet n'est pas possible pour plusieurs objets  
+[Bug][Édition de liste] Édition de liste : L'édition de la catégorie "adresse de l'hôte" est affichée de manière incorrecte  
+[Bug][Édition de liste] Édition de liste : Enregistrer la catégorie "fournisseur/consommateur d'électricité" libère les connexions  
+[Bug][Édition de liste] Édition de liste : Filtrer par affectation de contact par titre d'objet n'est pas possible  
+[Bug][Édition de liste] Édition de liste : l'emplacement n'est pas possible  
+[Bug][Édition de liste] La fonction de suggestion ne s'ouvre pas correctement dans les champs du navigateur d'objets  
+[Bug][Édition de liste] L'édition de liste de la catégorie CONNEXIONS WAN montre une sauvegarde réussie, mais aucune valeur n'est modifiée  
+[Bug][OCS] Importation OCS : La journalisation via l'interface graphique est manquante  
+[Bug][OCS] Erreur de base de données lors de l'importation OCS  
+[Bug][Mise à jour] Erreur de base de données dans le processus de mise à jour  
+[Bug][Journal] Journal : la vue en liste des entrées du journal superpose les champs si le contenu est trop long  
+[Bug][Journal] Journal : les entrées archivées ne peuvent pas être visualisées  
+[Bug][Journal] Barre de défilement horizontale manquante dans le journal  
+[Bug][Journal] Journal : La catégorie d'allocation "allocation de logiciel" ne fait aucune entrée en cas de modifications  
+[Bug][JDisc] JDISC : L'édition/création d'un profil entraîne un message d'erreur de base de données  
+[Bug][JDisc] Si vous saisissez une valeur dans la catégorie des attributs personnalisés JDisc sans attribut, un message d'erreur s'affiche  
+[Bug][Relations] Relations : Les pondérations sont manquantes dans les relations à éditer  
+[Bug][Relations] Relations : liste des relations incomplète  
+[Bug][Explorateur CMDB] Explorateur CMDB : Gestion des profils incorrecte  
+[Bug][Outils système] tmp_table_size est affiché deux fois dans l'aperçu du système  
+[Bug][Notifications] Notifications : Sortie incorrecte des objets pour certains groupes de personnes assignés  
+[Bug][Notifications] Notifications : Les catégories personnalisées sont manquantes pour la sélection dans les modèles d'e-mail  
+[Bug][Système d'autorisation] Les rapports peuvent être créés dans toutes les catégories de rapports, même sans autorisation  
+[Bug][Système d'autorisation] Le navigateur de fichiers ignore le système de droits  
+[Bug][Système d'autorisation] Système de droits : Le paramètre Tout ne s'applique pas aux "Catégories dans le type d'objet" dans l'édition de liste  
+[Bug][Système d'autorisation] Purger tous les objets impliqués dans un ensemble d'autorisations laisse un droit vide  
+[Bug][Événements] Événements : Ne fournissent pas de changements identifiables de manière unique  
+[Bug][CSV] Importation CSV : La correspondance des groupes LDAP entraîne une importation incorrecte  
+[Bug][CSV] L'importation CSV génère une erreur fatale PHP  
+[Bug][Modèles] Un grand nombre de modèles/changements de masse de modèles empêchera l'affichage de tous les modèles/changements de masse de modèles dans la sélection  
+[Bug][Tableau de bord] Le widget "liste d'objets" affiche l'ID au lieu de l'icône de statut en direct  
+[Bug][XML] L'exportation XML ne sauvegarde pas les informations sur la catégorie "Machine virtuelle"  
+[Bug][Importation] La logique de synthèse entraîne diverses erreurs  
+[Bug][Validation] La validation des balises ne fonctionne pas dans l'édition de liste  
+[Bug][Paramètres utilisateur] Les umlauts dans la connexion de l'utilisateur entraînent des connexions incorrectes  
+[Bug][Contrôleur] L'index complet force le paramètre PHP "memory_limit" à 4 gigaoctets  
