@@ -142,15 +142,7 @@ sudo nano /etc/httpd/conf.d/i-doit.conf
 
 In dieser Datei wird die ergänzende gespeichert:
 
-```ini
-DirectoryIndex index.php
-DocumentRoot /var/www/html/
-<Directory /var/www/html/>
-    AllowOverride All
-</Directory>
-```
-
-oder?
+```shell
 <VirtualHost *:80>
         ServerAdmin i-doit@example.net
 
@@ -164,6 +156,7 @@ oder?
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+```
 
 i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Damit diese Einstellungen berücksichtigt werden, ist die Einstellung **AllowOverride All** nötig.
 
