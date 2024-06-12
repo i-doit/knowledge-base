@@ -1,12 +1,12 @@
 ---
-title: Red Hat Enterprise Linux 9.4
-description: i-doit installation auf RHEL 9.4
+title: Red Hat Enterprise Linux 8.10
+description: i-doit installation auf RHEL 8.10
 icon: material/redhat
 status:
 lang: de
 ---
 
-# Red Hat Enterprise Linux 9.4
+# Red Hat Enterprise Linux 8.10
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
@@ -14,7 +14,7 @@ Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenige
 
 Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md).
 
-Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
+Dieser Artikel bezieht sich auf **RHEL in Version 8.9**. Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
 ```sh
 cat /etc/os-release
@@ -33,8 +33,8 @@ uname -m
 Auf einem aktuell gehaltenen System werden
 
 *   der **Apache** Webserver 2.4,
-*   die Script-Sprache **PHP** 8.2,
-*   das Datenbankmanagementsystem **MariaDB** 10.11 und
+*   die Script-Sprache **PHP** 8.0,
+*   das Datenbankmanagementsystem **MariaDB** 10.5 und
 *   der Caching-Server **memcached**
 
 installiert.
@@ -45,34 +45,56 @@ Doch zunächst werden erste Pakete aus den Standard-Repositories aktualisiert:
 sudo dnf update
 ```
 
-Installieren von PHP 8.2 als Module:
+Wir prüfen welche PHP Versionen zur Verfügung stehen:
 
 ```sh
-sudo dnf module install php:8.2 -y
+sudo dnf module list php
+```
+
+Hier setzen wir die Version auf PHP 8.0:
+
+```sh
+sudo dnf module enable php:8.0
 ```
 
 Die Installation der PHP-Pakete erfolgt danach:
 
 ```sh
-sudo dnf install php php-common php-bcmath php-cli php-gd php-ldap php-mbstring php-mysqlnd php-opcache php-pdo php-pgsql php-soap php-xml php-odbc php-json php-pecl-zip memcached unzip rsync python3 php-snmp.x86_64 -y
+sudo dnf install php php-common php-bcmath php-cli php-gd php-ldap php-mbstring php-mysqlnd php-opcache php-pdo php-pgsql php-soap php-xml php-gd php-odbc php-opcache php-json php-pecl-zip memcached unzip rsync python3 php-snmp.x86_64 -y
 ```
 
-Installation von MariaDB 10.11 (Achtung: MariaDB benötigt hier das zusätzliche Paket boost-program-options für eine saubere Installation):
+Wir prüfen welche MariadB Versionen zur Verfügung stehen:
 
 ```sh
-sudo dnf module install mariadb boost-program-options -y
+sudo dnf module list mariadb
+```
+
+Hier setzen wir die Version auf MariaDB 10.5:
+
+```sh
+sudo dnf module enable mariadb:10.5
+```
+
+Danach werden die Pakete installiert (Achtung: MariaDB benötigt hier das zusätzliche Paket boost-program-options für eine saubere Installation):
+
+```sh
+sudo dnf install mariadb-server boost-program-options -y
 ```
 
 Damit der Apache Webserver und MariaDB beim Booten gestartet werden, sind diese Befehle erforderlich:
 
 ```sh
-sudo systemctl enable httpd.service mariadb.service memcached.service
+sudo systemctl enable httpd.service
+sudo systemctl enable mariadb.service
+sudo systemctl enable memcached.service
 ```
 
 Anschließend erfolgt der Start beider Dienste:
 
 ```sh
-sudo systemctl start httpd.service mariadb.service memcached.service
+sudo systemctl start httpd.service
+sudo systemctl start mariadb.service
+sudo systemctl start memcached.service
 ```
 
 Weiterhin wird der Standard-Port 80 von HTTP über die Firewall erlaubt. Diese muss nach der Anpassung neu gestartet werden:
@@ -94,7 +116,7 @@ Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befü
 sudo nano /etc/php.d/i-doit.ini
 ```
 
-!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/de/ini.core.php) vorbei"
+Diese Datei erhält folgenden Inhalt:
 
 ```ini
 allow_url_fopen = Yes
@@ -122,8 +144,8 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 
-Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.<br>
-Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](systemeinstellungen.md) von i-doit sein.<br>
+Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
+
 Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
 Anschließend muss **php-fpm** neu gestartet werden:
@@ -149,21 +171,6 @@ DocumentRoot /var/www/html/
     AllowOverride All
 </Directory>
 ```
-
-oder?
-<VirtualHost *:80>
-        ServerAdmin i-doit@example.net
-
-        DocumentRoot /var/www/html/
-        <Directory /var/www/html/>
-                AllowOverride All
-                Require all granted
-        </Directory>
-
-        LogLevel warn
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
 
 i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Damit diese Einstellungen berücksichtigt werden, ist die Einstellung **AllowOverride All** nötig.
 
@@ -194,6 +201,7 @@ Anschließend wird MariaDB gestoppt. Wichtig ist hierbei das Verschieben von nic
 ```sh
 mysql -u root -p -e"SET GLOBAL innodb_fast_shutdown = 0"
 sudo systemctl stop mariadb.service
+sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
 
 Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
