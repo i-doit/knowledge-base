@@ -275,6 +275,7 @@ nav:
               - Debian 12: installation/manuelle-installation/debian12.md
           - Red Hat Enterprise Linux (RHEL):
               - installation/manuelle-installation/red-hat-enterprise-linux/index.md
+              - RHEL 9.4: installation/manuelle-installation/red-hat-enterprise-linux/rhel9.md
           - Suse Linux Enterprise Server (SLES): installation/manuelle-installation/suse-linux-enterprise-server.md
           - Ubuntu GNU/Linux:
               - installation/manuelle-installation/ubuntu-linux/index.md
