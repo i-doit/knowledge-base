@@ -55,3 +55,53 @@ Die Kategorie **IP-Liste** bietet eine Möglichkeit zum Abgleich zwischen Soll- 
 *   **Ping**: ICMP-Paket an IP-Adresse schicken
 *   **NSLOOKUP**: IP-Adresse zum Hostname bestimmen
 *   **Reverse NSLOOKUP**: Hostname zur IP-Adresse bestimmen
+
+## Nmap Installation
+
+### Windows
+
+Lade die neueste stable Version von Nmap auf <https://nmap.org/download.html> herunter und führe die Installation aus.
+
+Falls du die Datei aus irgendeinem Grund nicht direkt herunterladen kannst, kannst du die Kommandozeile verwenden.<br>
+Öffne die Eingabeaufforderung und benutze `bitsadmin`, um das Nmap-Zip-Archiv herunterzuladen
+
+```cmd
+bitsadmin /transfer nmapDownloadJob /download /priority normal https://nmap.org/dist/nmap-7.92-win32.zip C:\nmap-7.92-win32.zip
+```
+
+!!! attention "Aktuell ist die letzte Zip-Datei nicht die neueste stable Version."
+
+Sobald Nmap installiert ist, füge das Nmap-Verzeichnis zur Systemumgebungsvariablen PATH hinzu
+
+```cmd
+setx PATH "%PATH%;C:\nmap"
+```
+
+!!! danger "Stelle sicher, dass der Pfad dem Verzeichnis entspricht, in dem du Nmap extrahiert hast"
+
+### Unix
+
+#### Debian or Ubuntu
+
+```sh
+sudo apt update
+sudo apt install nmap
+```
+
+#### Red Hat Enterprise Linux (RHEL)
+
+```sh
+sudo dnf install nmap
+```
+
+or
+
+```sh
+sudo yum install nmap
+```
+
+## IP List Ping
+
+Sobald Nmap installiert ist, steht die Ping Funktion zur Verfügung.
+
+[![Ping Button in IP list](../assets/images/de/auswertungen/ip-listen/ip-liste-2.png)](../assets/images/de/auswertungen/ip-listen/ip-liste-2.png)
