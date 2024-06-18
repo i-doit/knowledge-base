@@ -44,6 +44,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_31_hotfix_ID-10905_aab04c5.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10905_aab04c5.zip){ .md-button .md-button--primary }
 
+### End of Period in Category Contract > Contract is not calculated (ID-10891)
+
+[i-doit_31_hotfix_ID-10891_f6b4624.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10891_f6b4624.zip){ .md-button .md-button--primary }
+
 ### JDisc updates archived objects (ID-10889)
 
 [i-doit_31_hotfix_ID-10889.zip_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10889.zip){ .md-button .md-button--primary }
