@@ -40,6 +40,14 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
+### Custom category is incorrectly marked as empty or filled (ID-10905)
+
+[i-doit_31_hotfix_ID-10905_aab04c5.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10905_aab04c5.zip){ .md-button .md-button--primary }
+
+### End of Period in Category Contract > Contract is not calculated (ID-10891)
+
+[i-doit_31_hotfix_ID-10891_f6b4624.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10891_f6b4624.zip){ .md-button .md-button--primary }
+
 ### JDisc updates archived objects (ID-10889)
 
 [i-doit_31_hotfix_ID-10889.zip_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10889.zip){ .md-button .md-button--primary }
@@ -47,13 +55,22 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 [i-doit_32_hotfix_ID-10889.zip_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10889.zip){ .md-button .md-button--primary }
 -->
 
+### Creating a new connection at category Network listener does not create a new connection (ID-10884)
+
+[i-doit_31_hotfix_ID-10884_ddb80db.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10884_ddb80db.zip){ .md-button .md-button--primary }
+
 ### Altering data in Network > Port entry which has a Interface assigned are not saved (ID-10853)
 
 [i-doit_31_hotfix_ID-10853_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10853_b9ee2aa.zip){ .md-button .md-button--primary }
 
-### Creating a new connection at category Network listener does not create a new connection (ID-10884)
+### HTTP 500 error when creating a document or a revision (ID-10831)
 
-[i-doit_31_hotfix_ID-10884_ddb80db.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10884_ddb80db.zip){ .md-button .md-button--primary }
+??? info "Error message found in the Webserver logs"
+    ```log
+    Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: isys_cmdb_dao_category_property::getConstantFromRange(): Argument #1 ($constant) must be of type string, null given
+    ```
+
+[i-doit_31_hotfix_ID-10831.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10831.zip){ .md-button .md-button--primary }
 
 ### Migration error when updating (ID-10808)
 
@@ -67,15 +84,6 @@ Do **not** download the update package again, this would override the Hotfix.
 
 [i-doit_29-30_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29-30_hotfix_ID-10808.zip){ .md-button .md-button--primary }
 [i-doit_30-31_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30-31_hotfix_ID-10808.zip){ .md-button .md-button--primary }
-
-### HTTP 500 error when creating a document or a revision (ID-10831)
-
-??? info "Error message found in the Webserver logs"
-    ```log
-    Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: isys_cmdb_dao_category_property::getConstantFromRange(): Argument #1 ($constant) must be of type string, null given
-    ```
-
-[i-doit_31_hotfix_ID-10831.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10831.zip){ .md-button .md-button--primary }
 
 ### Counter skips a number when duplicating objects (ID-10763)
 
