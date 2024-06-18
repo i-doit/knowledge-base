@@ -6,18 +6,29 @@ A more detailed approach into this matter is provided in the application case fo
 
 ## IP List Category
 
-The **IP list** [category](../basics/structure-of-the-it-documentation.md) provides a comprehensive overview of each net. In the default installation of i-doit it is assigned to the [object type](../basics/structure-of-the-it-documentation.md) Layer-3-Net. You can find all [objects](../basics/structure-of-the-it-documentation.md) which are assigned to this net, including their IP address, host name and type of address assignment, in a tabular listing.
+The **IP list** [category](../basics/structure-of-the-it-documentation.md) provides a comprehensive overview of each net. In the default installation of i-doit it is assigned to the [object type](../basics/structure-of-the-it-documentation.md) **Layer-3-Net**. You can find all [objects](../basics/structure-of-the-it-documentation.md) which are assigned to this net, including their IP address, host name and type of address assignment, in a tabular listing.
 
 [![IP List Category](../assets/images/en/evaluation/ip-list/1-il.png)](../assets/images/en/evaluation/ip-list/1-il.png)
 
 The type of address assignment is presented with colors and their respective meaning is explained in a color key on the right of the list:
 
-*   **Green:** Net address / Broadcast
-*   **Yellow:** Default Gateway (This is the object for which you defined in the Host address category that it should act as default gateway.)
-*   **Orange:** unnumbered address range
-*   **Gray:** statically assigned IP addresses
-*   **Blue:** IP addresses which are reserved by the DHCP server (see also **DHCP** category)
-*   **Light blue:** IP addresses which are assigned dynamically by the DHCP server (see also **DHCP** category)
+*   **Green:**<br>
+    Net address / Broadcast
+
+*   **Yellow:**<br>
+    Default Gateway (This is the object for which you defined in the Host address category that it should act as default gateway.)
+
+*   **Orange:**<br>
+    unnumbered address range
+
+*   **Gray:**<br>
+    statically assigned IP addresses
+
+*   **Blue:**<br>
+    IP addresses which are reserved by the DHCP server (see also **DHCP** category)
+
+*   **Light blue:**<br>
+    IP addresses which are assigned dynamically by the DHCP server (see also **DHCP** category)
 
 In order to avoid (unintentional) address conflicts, i-doit points out multiple assigned IP addresses beside the table.
 
@@ -58,7 +69,7 @@ Open Command Prompt and use `bitsadmin` to download the Nmap Zip archive:
 bitsadmin /transfer nmapDownloadJob /download /priority normal https://nmap.org/dist/nmap-7.92-win32.zip C:\nmap-7.92-win32.zip
 ```
 
-!!! attention Currently the last zip file is not the latest stable version.
+!!! attention "Currently the last zip file is not the latest stable version."
 
 Once Nmap is installed, add the Nmap directory to the system PATH environment variable
 
@@ -66,7 +77,7 @@ Once Nmap is installed, add the Nmap directory to the system PATH environment va
 setx PATH "%PATH%;C:\nmap"
 ```
 
-!!! danger "Ensure the path matches the directory where you extracted Nmap"
+!!! warning "Ensure the path matches the directory where you extracted Nmap"
 
 ### Unix
 

@@ -77,7 +77,7 @@ Sobald Nmap installiert ist, füge das Nmap-Verzeichnis zur Systemumgebungsvaria
 setx PATH "%PATH%;C:\nmap"
 ```
 
-!!! danger "Stelle sicher, dass der Pfad dem Verzeichnis entspricht, in dem du Nmap extrahiert hast"
+!!! warning "Stelle sicher, dass der Pfad dem Verzeichnis entspricht, in dem du Nmap extrahiert hast"
 
 ### Unix
 
