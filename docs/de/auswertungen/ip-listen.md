@@ -100,7 +100,7 @@ or
 sudo yum install nmap
 ```
 
-## IP List Ping
+## IP-Listen Ping
 
 Sobald Nmap installiert ist, steht die Ping Funktion zur Verfügung.
 
