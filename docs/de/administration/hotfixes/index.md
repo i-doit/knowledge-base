@@ -59,9 +59,12 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_31_hotfix_ID-10884_ddb80db.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10884_ddb80db.zip){ .md-button .md-button--primary }
 
-### Altering data in Network > Port entry which has a Interface assigned are not saved (ID-10853)
+### Altering data in Network > Port entry which has a Interface assigned are not saved (ID-10853) UPDATED
 
-[i-doit_31_hotfix_ID-10853_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10853_b9ee2aa.zip){ .md-button .md-button--primary }
+[i-doit_31_hotfix_ID-10853v2_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10853v2_b9ee2aa.zip){ .md-button .md-button--primary }
+
+??? info "Error message found in the Webserver logs"
+    AH01071: Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: Illegal offset type in /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Type/DialogDataType.php:103\nStack trace:\n#0 /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Type/DialogDataType.php(155): idoit\\Module\\Cmdb\\Component\\CategoryChanges\\Type\\DialogDataType->dataHandlerHelper()\n#1 /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Builder/ChangesBuilder.php(137): idoit\\Module\\Cmdb\\Component\\CategoryChanges\\Type\\DialogDataType->handleData()\n#2 /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Builder/ChangesBuilder.php(54): idoit\\Module\\Cmdb\\Component\\CategoryChanges\\Builder\\ChangesBuilder->processWithArrayData()\n#3 /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Changes.php(123): idoit\\Module\\Cmdb\\Component\\CategoryChanges\\Builder\\ChangesBuilder->process()\n#4 /var/www/html/...'
 
 ### HTTP 500 error when creating a document or a revision (ID-10831)
 
