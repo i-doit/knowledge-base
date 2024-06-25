@@ -88,6 +88,10 @@ Do **not** download the update package again, this would override the Hotfix.
 [i-doit_29-30_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29-30_hotfix_ID-10808.zip){ .md-button .md-button--primary }
 [i-doit_30-31_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30-31_hotfix_ID-10808.zip){ .md-button .md-button--primary }
 
+### Exporting a object list via csv has no results (ID-10798)
+
+[i-doit_31_hotfix_ID-10798.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10798.zip){ .md-button .md-button--primary }
+
 ### Counter skips a number when duplicating objects (ID-10763)
 
 [i-doit_31_hotfix_ID-10763.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10763.zip){ .md-button .md-button--primary }
@@ -96,9 +100,13 @@ Do **not** download the update package again, this would override the Hotfix.
 
 [i-doit_31_hotfix_ID-10762.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10762.zip){ .md-button .md-button--primary }
 
-### Exporting a object list via csv has no results (ID-10798)
+### Assigning location to object via csv import only uses first entry of csv (ID-10749)
 
-[i-doit_31_hotfix_ID-10798.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10798.zip){ .md-button .md-button--primary }
+Fixed with hotfix CSV import using comma-separated or row causes only values from first entry to be used (ID-10892)
+
+### CSV import using comma-separated or row causes only values from first entry to be used (ID-10892)
+
+[i-doit_31_hotfix_ID-10749_ac7b360.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10749_ac7b360.zip){ .md-button .md-button--primary }
 
 ## API
 
