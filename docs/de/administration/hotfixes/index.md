@@ -75,7 +75,7 @@ Use this Hotfix and update i-doit pro Add-on Documents to 1.8.
     Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: isys_cmdb_dao_category_property::getConstantFromRange(): Argument #1 ($constant) must be of type string, null given
     ```
 
-[i-doit_31_hotfix_ID-10831.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10831v2.zip){ .md-button .md-button--primary }
+[i-doit_31_hotfix_ID-10831v2.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10831v2.zip){ .md-button .md-button--primary }
 
 ### Migration error when updating (ID-10808)
 
