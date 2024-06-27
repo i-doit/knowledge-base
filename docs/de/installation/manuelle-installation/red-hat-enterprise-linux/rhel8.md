@@ -33,7 +33,7 @@ uname -m
 Auf einem aktuell gehaltenen System werden
 
 *   der **Apache** Webserver 2.4,
-*   die Script-Sprache **PHP** 8.0,
+*   die Script-Sprache **PHP** 8.2,
 *   das Datenbankmanagementsystem **MariaDB** 10.5 und
 *   der Caching-Server **memcached**
 
@@ -51,16 +51,16 @@ Wir prüfen welche PHP Versionen zur Verfügung stehen:
 sudo dnf module list php
 ```
 
-Hier setzen wir die Version auf PHP 8.0:
+Hier setzen wir die Version auf PHP 8.2:
 
 ```sh
-sudo dnf module enable php:8.0
+sudo dnf module enable php:8.2
 ```
 
 Die Installation der PHP-Pakete erfolgt danach:
 
 ```sh
-sudo dnf install php php-common php-bcmath php-cli php-gd php-ldap php-mbstring php-mysqlnd php-opcache php-pdo php-pgsql php-soap php-xml php-gd php-odbc php-opcache php-json php-pecl-zip memcached unzip rsync python3 php-snmp.x86_64 -y
+sudo dnf install php php-common php-bcmath php-cli php-gd php-ldap php-mbstring php-mysqlnd php-opcache php-pdo php-pgsql php-soap php-xml php-gd php-odbc php-opcache php-json php-zip php-snmp memcached unzip
 ```
 
 Wir prüfen welche MariadB Versionen zur Verfügung stehen:
@@ -69,16 +69,16 @@ Wir prüfen welche MariadB Versionen zur Verfügung stehen:
 sudo dnf module list mariadb
 ```
 
-Hier setzen wir die Version auf MariaDB 10.5:
+Hier setzen wir die Version auf MariaDB 10.11:
 
 ```sh
-sudo dnf module enable mariadb:10.5
+sudo dnf module enable mariadb:10.11
 ```
 
 Danach werden die Pakete installiert (Achtung: MariaDB benötigt hier das zusätzliche Paket boost-program-options für eine saubere Installation):
 
 ```sh
-sudo dnf install mariadb-server boost-program-options -y
+sudo dnf install mariadb-server boost-program-options
 ```
 
 Damit der Apache Webserver und MariaDB beim Booten gestartet werden, sind diese Befehle erforderlich:
@@ -200,8 +200,6 @@ Anschließend wird MariaDB gestoppt. Wichtig ist hierbei das Verschieben von nic
 
 ```sh
 mysql -u root -p -e"SET GLOBAL innodb_fast_shutdown = 0"
-sudo systemctl stop mariadb.service
-sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
 
 Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:

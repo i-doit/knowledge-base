@@ -14,12 +14,19 @@ Das Installationspaket der pro-Variante ist für alle Kunden im [Kundenportal](.
 
 Der Apache Webserver läuft mit den Rechten des Users **www-data** und der gleichnamigen Gruppe **www-data**. Das Hauptverzeichnis vom Apache Webserver lautet **/var/www/html/**:
 
-```shell
+i-doit Ordner erstellen und die Dateien hinein kopieren:
+
+```sh
 sudo mkdir /var/www/html/i-doit
 sudo cp i-doit.zip /var/www/html/i-doit/
 cd /var/www/html/i-doit/
 sudo unzip i-doit.zip
 sudo rm i-doit.zip
+```
+
+Nun die Rechte setzen, damit der Webserver Benutzer lesen und schreiben kann:
+
+```sh
 sudo chown www-data:www-data -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
@@ -29,12 +36,19 @@ sudo find . -type f -exec chmod 664 {} \;
 
 Der Apache Webserver läuft mit den Rechten des Users **apache** und der gleichnamigen Gruppe **apache**. Das Hauptverzeichnis vom Apache Webserver lautet **/var/www/html/**:
 
-```shell
+i-doit Ordner erstellen und die Dateien hinein kopieren:
+
+```sh
 sudo mkdir /var/www/html/i-doit
 sudo cp i-doit.zip /var/www/html/i-doit/
 cd /var/www/html/i-doit/
 sudo unzip i-doit.zip
 sudo rm i-doit.zip
+```
+
+Nun die Rechte setzen, damit der Webserver Benutzer lesen und schreiben kann:
+
+```sh
 sudo chown apache:apache -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
@@ -44,11 +58,16 @@ sudo find . -type f -exec chmod 664 {} \;
 
 Der Apache Webserver läuft mit den Rechten des Users **wwwrun** und der Gruppe **www**. Das Hauptverzeichnis vom Apache Webserver lautet **/srv/www/htdocs/**:
 
-```shell
+```sh
 sudo mkdir /srv/www/htdocs/i-doit
 sudo cp i-doit.zip /srv/www/htdocs/i-doit/
 cd /srv/www/htdocs/i-doit/
 sudo unzip i-doit.zip
+```
+
+Nun die Rechte setzen, damit der Webserver Benutzer lesen und schreiben kann:
+
+```sh
 sudo rm i-doit.zip
 sudo chown wwwrun:www -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
@@ -157,8 +176,7 @@ Nun wurde i-doit installiert. Wir benötigen noch einen [Mandant](../../administ
 sudo -u www-data php console.php tenant-create --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --admin-password admincenterpw --no-interaction
 ```
 
-Weitere Schritte
-----------------
+## Weitere Schritte
 
 -   [Lizenz herunterladen und einspielen](../../wartung-und-betrieb/lizenz-aktivieren.md)
 -   [Backup einrichten](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
