@@ -8,7 +8,7 @@ lang: en
 
 ## Important information before you start
 
-Here we you will find short instruction to Update your i-doit up to i-doit 1.19.<br>
+Here we you will find short instruction to Update your i-doit up to i-doit 31.<br>
 You may need to Upgrade your Operating System.<br>
 This instructions are valid for **Debian** and the commands used differ in other OS.Before you start, Download all updates you need to do and copy them in the i-doit root Folder.
 
@@ -75,7 +75,7 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.9-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.
+If you are asked, overwrite everything by typing **A**.
 Now we open the Web Interface Updater and the Update to v1.9 is displayed and selected, do the update.
 
 [![Updating 1.8 to 1.9](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)
@@ -92,7 +92,7 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.10-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.<br> Now we open the Web Interface Updater and the Update to v1.10 is displayed and selected, do the update.
+If you are asked, overwrite everything by typing **A**.<br> Now we open the Web Interface Updater and the Update to v1.10 is displayed and selected, do the update.
 
 [![Updating 1.9 to 1.10](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)
 
@@ -108,7 +108,7 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.11-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.<br> Now we open the Web Interface Updater and the Update to v1.11 is displayed and selected, do the update.
+If you are asked, overwrite everything by typing **A**.<br> Now we open the Web Interface Updater and the Update to v1.11 is displayed and selected, do the update.
 
 !!! attention "**Possible error**"
     Call of unknown method '_realpath'.
@@ -137,7 +137,7 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.12-update.zip
 ```
 
-If you are asked, overwrite everything by typing A.<br> Now we open the Web Interface Updater and the Update to v1.12 is displayed and selected, do the update.
+If you are asked, overwrite everything by typing **A**.<br> Now we open the Web Interface Updater and the Update to v1.12 is displayed and selected, do the update.
 
 [![Updating 1.11 to 1.12](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)
 

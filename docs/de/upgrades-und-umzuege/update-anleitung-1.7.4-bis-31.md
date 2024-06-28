@@ -1,8 +1,16 @@
+---
+title: Update Anleitung von i-doit 1.7.4 zu 31
+description: i-doit update guide
+icon:
+status:
+lang: de
+---
+
 ## Wichtige Informationen, bevor Sie beginnen {#important-information}
 
-Hier finden Sie eine kurze Anleitung zum Aktualisieren Ihres i-doit auf i-doit 1.19.<br>
+Hier finden Sie eine kurze Anleitung zum Aktualisieren Ihres i-doit auf i-doit 31.<br>
 Möglicherweise müssen Sie Ihr Betriebssystem aktualisieren.<br>
-Diese Anweisungen gelten für **Debian**, und die verwendeten Befehle unterscheiden sich in anderen Betriebssystemen. Bevor Sie beginnen, laden Sie alle Updates herunter, die Sie durchführen müssen, und kopieren Sie sie in den i-doit-Stammordner.
+Diese Anweisungen gelten für **Debian**, die verwendeten Befehle unterscheiden sich in anderen Betriebssystemen. Bevor Sie beginnen, laden Sie alle Updates herunter, die Sie durchführen müssen, und kopieren Sie sie in den i-doit-Stammordner.
 
 !!! danger "**Wichtige Hinweise im Voraus**"
 
@@ -14,13 +22,13 @@ Diese Anweisungen gelten für **Debian**, und die verwendeten Befehle unterschei
     Erstellen Sie vor jedem Aktualisierungsschritt ein Backup oder einen Snapshot!
 
 !!! attention "Versionshinweise"
-    Lesen Sie die [Versionshinweise](../version-history/index.md) bevor Sie auf eine neue Version aktualisieren.
+    Lesen Sie die [Versionshinweise](../versionshistorie/index.md) bevor Sie auf eine neue Version aktualisieren.
 
 !!! attention "Hotfix-Hinweis"
     Verwenden Sie Hotfixes ausschließlich mit der angegebenen Version. Hotfixes werden in neueren Versionen enthalten sein, sodass eine erneute Installation nicht erforderlich ist.
     Sollten Sie eine ältere i-doit-Version verwenden, ist es unerlässlich, zuerst ein Update auf die neueste Version durchzuführen.
     Wenn ein Hotfix erforderlich ist, um eine ältere Version zu aktualisieren, finden Sie diesen in den Hotfix-Unterkapiteln hier im Knowledge Base.
-    Da es sich um Hotfixes handelt, empfehlen wir, sie nur zu installieren, wenn die Anpassungen für einen reibungslosen Betrieb Ihrer Installation erforderlich sind oder wenn Sie vom Support-Team dazu aufgefordert werden. Stellen Sie sicher, dass Sie ein [Backup von i-doit](../maintenance-and-operation/backup-and-recovery/index.md) erstellt haben, bevor Sie einen Hotfix verwenden.
+    Da es sich um Hotfixes handelt, empfehlen wir, sie nur zu installieren, wenn die Anpassungen für einen reibungslosen Betrieb Ihrer Installation erforderlich sind oder wenn Sie vom Support-Team dazu aufgefordert werden. Stellen Sie sicher, dass Sie ein [Backup von i-doit](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) erstellt haben, bevor Sie einen Hotfix verwenden.
     Informieren Sie uns über die Verwendung von Hotfixes, wenn Sie sich anschließend an unser Support-Team wenden.
 
 | <!-- -->                                    | <!-- -->                                                                 | <!-- -->                                                                 | <!-- -->                                                | <!-- -->                                               | <!-- -->                                               | <!-- -->                                               | <!-- -->                                               | <!-- -->                                      | <!-- -->                                      | <!-- -->                                         | <!-- -->                                         | <!-- -->                                         | <!-- -->                                                                | <!-- -->                                                    | <!-- -->                                                    | <!-- -->                                                      | <!-- -->                                                  | <!-- -->               | <!-- -->               | <!-- -->                       | <!-- -->              | <!-- -->              |
@@ -49,7 +57,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
 
 Nun öffnen wir den Web-Interface-Updater, wählen das Update auf v1.8 aus und führen das Update durch.
 
-[![Aktualisierung von 1.7.4 auf 1.8](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)
+[![Aktualisierung von 1.7.4 auf 1.8](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/1-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/1-u18-119.png)
 
 !!! Achtung "**Möglicher Fehler**"
     PHP Fatal error: Aufruf einer nicht definierten Methode idoit\Component\ContainerFacade::has() in /var/www/html/src/idoit/Model/Summary/SystemSummary.php in Zeile 185
@@ -67,10 +75,10 @@ Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner un
 sudo -u www-data unzip idoit-1.9-update.zip
 ```
 
-Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie A eingeben.
+Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.
 Nun öffnen wir den Web-Interface-Updater, wählen das Update auf v1.9 aus und führen das Update durch.
 
-[![Aktualisierung von 1.8 auf 1.9](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)
+[![Aktualisierung von 1.8 auf 1.9](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/2-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/2-u18-119.png)
 
 !!! Erfolg "**Überprüfen Sie die Update-Logs**"
     Nehmen Sie sich bitte die Zeit, um die Logs durchzusehen und zu prüfen, ob ein Fehler aufgetreten ist.
@@ -84,9 +92,9 @@ Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner un
 sudo -u www-data unzip idoit-1.10-update.zip
 ```
 
-Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie A eingeben.<br> Nun öffnen wir den Web-Interface-Updater, wählen das Update auf v1.10 aus und führen das Update durch.
+Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.<br> Nun öffnen wir den Web-Interface-Updater, wählen das Update auf v1.10 aus und führen das Update durch.
 
-[![Aktualisierung von 1.9 auf 1.10](../assets/images/de/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)](../assets/images/de/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)
+[![Aktualisierung von 1.9 auf 1.10](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/3-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/3-u18-119.png)
 
 !!! success "**Überprüfen Sie die Update-Logs**"
     Bitte nehmen Sie sich die Zeit, um die Logs durchzusehen und zu überprüfen, ob ein Fehler aufgetreten ist.
@@ -100,7 +108,7 @@ Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner un
 sudo -u www-data unzip idoit-1.11-update.zip
 ```
 
-Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie A eingeben.<br> Öffnen Sie nun das Webinterface-Updater und das Update auf v1.11 wird angezeigt und ausgewählt, führen Sie das Update durch.
+Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.<br> Öffnen Sie nun das Webinterface-Updater und das Update auf v1.11 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
 !!! attention "**Möglicher Fehler**"
     Aufruf einer unbekannten Methode '_realpath'.
@@ -128,9 +136,9 @@ Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner un
 sudo -u www-data unzip idoit-1.12-update.zip
 ```
 
-Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie A eingeben.<br> Öffnen Sie nun das Webinterface-Updater und das Update auf v1.12 wird angezeigt und ausgewählt, führen Sie das Update durch.
+Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.<br> Öffnen Sie nun das Webinterface-Updater und das Update auf v1.12 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
-[![Aktualisierung von 1.11 auf 1.12](../assets/images/de/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)](../assets/images/de/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)
+[![Aktualisierung von 1.11 auf 1.12](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/4-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/4-u18-119.png)
 
 !!! success "**Überprüfen Sie die Update-Logs**"
     Bitte nehmen Sie sich die Zeit, um die Logs durchzusehen und zu überprüfen, ob ein Fehler aufgetreten ist.
@@ -412,7 +420,7 @@ entpacken. Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** ei
 
 Öffnen Sie nun das Web-Interface-Updater und das Update auf v1.13 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
-[![Aktualisierung von 1.12 auf 1.13](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/5-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/5-u18-119.png)
+[![Aktualisierung von 1.12 auf 1.13](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/5-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/5-u18-119.png)
 
 Möglicherweise erhalten Sie diesen Fehler:
 
@@ -436,7 +444,7 @@ entpacken. Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** ei
 
 Öffnen Sie nun das Web-Interface-Updater und das Update auf v1.14 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
-[![Aktualisierung von 1.13 auf 1.14](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/6-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/6-u18-119.png)
+[![Aktualisierung von 1.13 auf 1.14](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/6-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/6-u18-119.png)
 
 !!! success "**Überprüfen Sie die Update-Logs**"
     Bitte nehmen Sie sich die Zeit, um die Logs durchzugehen und zu überprüfen, ob ein Fehler aufgetreten ist.
@@ -446,7 +454,7 @@ Wenn Sie diesen Fehler sehen:
 !!! attention "**Möglicher Fehler**"
     Datenbankfehler: Abfragefehler: 'ALTER TABLE isys\_cats\_person\_list ADD isys\_cats\_person\_list\_\_disabled\_login TINYINT(1) UNSIGNED DEFAULT 0': Zeilengröße zu groß. Die maximale Zeilengröße für den verwendeten Tabellentyp, ohne BLOBs zu zählen, beträgt 8126. Dies beinhaltet Speicherüberkopf, überprüfen Sie das Handbuch. Sie müssen einige Spalten in TEXT oder BLOBs ändern.
 
-Die Lösung ist [hier dokumentiert](../system-administration/troubleshooting/row-size-too-large.md)
+Die Lösung ist [hier dokumentiert](../administration/troubleshooting/row-size-too-large.md)
 
 !!! success "**Überprüfen Sie das System und i-doit**"
     Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
@@ -465,7 +473,7 @@ Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** eingeben.
 
 Öffnen Sie nun das Web-Interface-Updater und das Update auf v1.15 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
-[![Update von 1.14 auf 1.15](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)
+[![Update von 1.14 auf 1.15](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/7-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/7-u18-119.png)
 
 !!! success "**Überprüfen Sie das System und i-doit**"
     Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
@@ -484,7 +492,7 @@ Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** eingeben.
 
 Öffnen Sie nun das Web-Interface-Updater und das Update auf v1.16 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
-[![Update von 1.15 auf 1.16](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)
+[![Update von 1.15 auf 1.16](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/8-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/8-u18-119.png)
 
 !!! success "**Überprüfen Sie das System und i-doit**"
     Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
@@ -501,7 +509,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
 
 Nun öffnen wir das Web-Interface-Updater und das Update auf v1.17 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
-[![Aktualisierung von 1.16 auf 1.17](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)
+[![Aktualisierung von 1.16 auf 1.17](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/9-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/9-u18-119.png)
 
 !!! success "**Überprüfen Sie das System und i-doit**"
     Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
@@ -518,7 +526,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
 
 Nun öffnen wir das Web-Interface-Updater und das Update auf v1.18 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
-[![Aktualisierung von 1.17 auf 1.18](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)
+[![Aktualisierung von 1.17 auf 1.18](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/10-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/10-u18-119.png)
 
 !!! success "**Überprüfen Sie das System und i-doit**"
     Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
@@ -658,7 +666,7 @@ Wenn Sie das Update ohne PHP 7.3 versuchen, sehen Sie diese Meldung:
 
 Öffnen Sie nun das Web-Interface-Updater und das Update auf v1.19 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
-[![Aktualisierung von 1.18 auf 1.19](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/11-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/11-u18-119.png)
+[![Aktualisierung von 1.18 auf 1.19](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/11-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/11-u18-119.png)
 
 !!! success "**Überprüfen Sie das System und i-doit**"
 
@@ -667,6 +675,7 @@ Wenn Sie das Update ohne PHP 7.3 versuchen, sehen Sie diese Meldung:
 Öffnen Sie zuerst den Web-Interface-Updater.<br>
 Durch Klicken auf **Nach einer neuen Version suchen** können Sie überprüfen, ob ein neueres Paket verfügbar ist. Dafür benötigen Sie eine Internetverbindung.<br>
 Wenn eine neue Version verfügbar ist, kann das Update-Paket mit einem Klick auf **Herunterladen** heruntergeladen und extrahiert werden.
+
 ```
 
 Wenn Sie nicht mit dem Internet verbunden sind, können Sie das Update über die Befehlszeile vorbereiten, indem Sie den i-doit-Ordner unter `/var/www/html/` öffnen und das idoit-Update-Paket mit dem folgenden Befehl entpacken:
@@ -679,7 +688,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
 
 Überprüfen Sie im Webinterface, ob das Update auf Version 20 angezeigt und ausgewählt ist, und führen Sie dann das Update durch.
 
-[![Aktualisierung von 1.19 auf 20](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/12-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/12-u18-119.png)
+[![Aktualisierung von 1.19 auf 20](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/12-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/12-u18-119.png)
 
 !!! success "**Überprüfen Sie die Update-Logs**"
     Nehmen Sie sich bitte die Zeit, um die Logs durchzusehen und zu überprüfen, ob ein Fehler aufgetreten ist.
@@ -698,7 +707,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
 
 Überprüfen Sie im Webinterface des Updaters, ob das Update auf Version 29 angezeigt und ausgewählt ist, und führen Sie dann das Update durch.
 
-[![Aktualisierung von 20 auf 29](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/13-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/13-u18-119.png)
+[![Aktualisierung von 20 auf 29](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/13-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/13-u18-119.png)
 
 !!! success "**Überprüfen Sie die Update-Logs**"
     Nehmen Sie sich bitte die Zeit, um die Logs durchzusehen und zu überprüfen, ob ein Fehler aufgetreten ist.
@@ -847,8 +856,7 @@ Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** eingeben.
 
 Im Web-Interface-Updater überprüfen Sie, ob das Update auf Version 31 angezeigt und ausgewählt ist, und führen Sie dann das Update durch.
 
-[![Aktualisierung von 29 auf 31](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)
-
+[![Aktualisierung von 29 auf 31](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/14-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/14-u18-119.png)
 
 !!! success "**Überprüfen Sie die Update-Logs**"
     Bitte nehmen Sie sich die Zeit, um die Logs durchzusehen und zu überprüfen, ob ein Fehler aufgetreten ist.
