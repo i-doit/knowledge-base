@@ -62,7 +62,7 @@ Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwende
         mysqldump -uroot -p idoit_system > /tmp/idoit_system.sql
         mysqldump -uroot -p idoit_data > /tmp/idoit_data.sql
 
-*Wenn beim einspielen der Datenbank diese Fehlermeldung erscheint "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". Ist die Lösung dazu [HIER](../administration/troubleshooting/cant-create-table.md) zu finden
+    \*Wenn beim einspielen der Datenbank diese Fehlermeldung erscheint "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". Ist die Lösung dazu [HIER](../administration/troubleshooting/cant-create-table.md) zu finden
 
 2. Diese Dumps kopieren wir auf das neue System:
 
