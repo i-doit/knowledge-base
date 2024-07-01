@@ -343,7 +343,9 @@ The following credentials are set by the installer.
 | MariaDB i-doit | idoit | idoit |
 | i-doit Admin Center | admin | admin |
 | JDisc Database | postgres | idoitdiscovery |
-| JDisc Database | postgresro | idoit |
+| JDisc Database (readonly) | postgresro | idoit |
+| install_dir | i-doit-Discovery | - |
+| admin_center_password | admin | - |
 
 For i-doit Login credentials see [here](../../../basics/initial-login.md).
 
