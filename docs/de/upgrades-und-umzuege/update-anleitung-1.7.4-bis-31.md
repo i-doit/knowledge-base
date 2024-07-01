@@ -92,7 +92,8 @@ Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner un
 sudo -u www-data unzip idoit-1.10-update.zip
 ```
 
-Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.<br> Nun öffnen wir den Web-Interface-Updater, wählen das Update auf v1.10 aus und führen das Update durch.
+Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.
+Nun öffnen wir den Web-Interface-Updater, wählen das Update auf v1.10 aus und führen das Update durch.
 
 [![Aktualisierung von 1.9 auf 1.10](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/3-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/3-u18-119.png)
 
@@ -108,7 +109,8 @@ Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner un
 sudo -u www-data unzip idoit-1.11-update.zip
 ```
 
-Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.<br> Öffnen Sie nun das Webinterface-Updater und das Update auf v1.11 wird angezeigt und ausgewählt, führen Sie das Update durch.
+Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.
+Öffnen Sie nun das Webinterface-Updater und das Update auf v1.11 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
 !!! attention "**Möglicher Fehler**"
     Aufruf einer unbekannten Methode '_realpath'.
@@ -136,7 +138,8 @@ Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner un
 sudo -u www-data unzip idoit-1.12-update.zip
 ```
 
-Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.<br> Öffnen Sie nun das Webinterface-Updater und das Update auf v1.12 wird angezeigt und ausgewählt, führen Sie das Update durch.
+Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.
+Öffnen Sie nun das Webinterface-Updater und das Update auf v1.12 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
 [![Aktualisierung von 1.11 auf 1.12](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/4-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/4-u18-119.png)
 
@@ -144,7 +147,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
     Bitte nehmen Sie sich die Zeit, um die Logs durchzusehen und zu überprüfen, ob ein Fehler aufgetreten ist.
     Melden Sie sich an und überprüfen Sie Ihre Installation.
 
-## Debian 8 auf 9 aktualisieren {#upgrade-debian-8-to-9}
+## Debian 8 auf 9 aktualisieren
 
 !!! Achtung "**Warnung**"
     Bevor Sie beginnen, stellen Sie bitte sicher, dass Sie ein vollständiges Backup haben, das Sie auf einem sauberen Server getestet haben, falls etwas schief geht, denn es gibt kein Zurück!
@@ -165,7 +168,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
     sudo nano /etc/apt/sources.list
     ```
 
-    Ändern Sie alle Einträge auf 'stretch' oder löschen Sie alle Einträge und fügen Sie ein
+    Ändern Sie alle Einträge auf 'stretch' oder löschen Sie alle Einträge und fügen Sie folgendes ein:
 
     ```sh
     deb http://deb.debian.org/debian stretch main
@@ -198,7 +201,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
     sudo apt-get full-upgrade
     ```
 
-    Wenn Sie gefragt werden 'Dienste während der Paketaktualisierungen ohne Nachfrage neu starten?' wählen Sie 'Ja' und drücken Sie die Eingabetaste
+    Wenn Sie gefragt werden 'Restart services during package upgrades without asking?' wählen Sie 'Yes' und drücken Sie die Eingabetaste
 
     Starten Sie die Dienste, die wir gestoppt haben:
 
@@ -209,7 +212,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
     Fehler? [Hier lesen](https://www.debian.org/releases/stretch/)
 
     !!! Erfolg "**Überprüfen Sie das System und i-doit**"
-        Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
+        Überprüfen Sie Ihr System und i-doit!
 
     Schaffen Sie erneut etwas Platz
 
@@ -221,7 +224,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
     Überprüfen Sie Ihre sources.list, für weitere Informationen siehe [hier](https://wiki.debian.org/SourcesList)<br>
     Sie befinden sich jetzt bei Debian 9 mit PHP 5.6 und MariaDB 10.
 
-## Debian 9 auf 10 aktualisieren {#upgrade-debian-9-to-10}
+## Debian 9 auf 10 aktualisieren
 
 !!! Achtung "**Warnung**"
     Bevor Sie beginnen, stellen Sie bitte sicher, dass Sie ein vollständiges Backup haben, das Sie auf einem sauberen Server getestet haben, falls etwas schief geht, denn es gibt kein Zurück!
@@ -242,7 +245,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
     sudo nano /etc/apt/sources.list
     ```
 
-    Ändern Sie alle Einträge in 'buster' oder löschen Sie alle Einträge und fügen Sie ein
+    Ändern Sie alle Einträge in 'buster' oder löschen Sie alle Einträge und fügen Sie folgendes ein
 
     ```sh
     deb http://deb.debian.org/debian buster main
@@ -272,7 +275,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
     Fehler? [Überprüfen Sie die Debian-Website](https://www.debian.org/releases/buster/)
 
     !!! Erfolg "**Überprüfen Sie das System und i-doit**"
-        Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
+        Überprüfen Sie Ihr System und i-doit!
 
     Schaffen Sie erneut etwas Platz
 
@@ -284,12 +287,12 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
     Überprüfen Sie Ihre sources.list, für weitere Informationen siehe [hier](https://wiki.debian.org/SourcesList)<br>
     Sie befinden sich jetzt bei Debian 10 mit PHP 5.6 und MariaDB 10.3.
 
-## Aktualisieren Sie PHP 5.6 auf PHP 7.3
+## Aktualisierung von PHP 5.6 auf PHP 7.3
 
 !!! Achtung "Backup"
     Erstellen Sie ein Backup oder Snapshot!
 
-Aktualisieren Sie Pakete und installieren Sie alle benötigten Pakete
+Aktualisieren und installieren Sie alle benötigten Pakete
 
 ```sh
 sudo apt update
@@ -302,7 +305,7 @@ Erstellen Sie die PHP-Konfigurationsdatei
 sudo nano /etc/php/7.3/mods-available/i-doit.ini
 ```
 
-einfügen
+folgendes einfügen:
 
 ```ini
 allow_url_fopen = Yes
@@ -340,7 +343,7 @@ sudo phpenmod memcached
 sudo systemctl restart apache2.service
 ```
 
-i-doit sollte jetzt über Administration > Systemtools > Systemübersicht die neue PHP-Version 7.3.31-1~deb10u1 anzeigen.
+i-doit sollte jetzt über Verwaltung > [Mandant Name] Verwaltung > System Config Check die neue PHP-Version 7.3.31-1~deb10u1 anzeigen.
 
 ## Erstellen Sie die MariaDB-Konfigurationsdatei, falls nicht vorhanden
 
@@ -416,9 +419,11 @@ Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner un
 sudo -u www-data unzip idoit-1.13-update.zip
 ```
 
-entpacken. Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** eingeben.
+entpacken.
 
-Öffnen Sie nun das Web-Interface-Updater und das Update auf v1.13 wird angezeigt und ausgewählt, führen Sie das Update durch.
+Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** eingeben.
+
+Öffnen Sie nun den Web-Interface-Updater und das Update auf v1.13 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
 [![Aktualisierung von 1.12 auf 1.13](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/5-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/5-u18-119.png)
 
@@ -430,7 +435,7 @@ Möglicherweise erhalten Sie diesen Fehler:
 Dann müssen Sie das Update erneut starten.<br> Wenn Sie jetzt einen HTTP 500 erhalten, führen Sie das Update erneut durch.
 
 !!! success "**Überprüfen Sie das System und i-doit**"
-    Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
+    Überprüfen Sie Ihr System und i-doit!
 
 ## Aktualisierung von 1.13 auf 1.14
 
@@ -440,9 +445,11 @@ Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner un
 sudo -u www-data unzip idoit-1.14-update.zip
 ```
 
-entpacken. Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** eingeben.
+entpacken.
 
-Öffnen Sie nun das Web-Interface-Updater und das Update auf v1.14 wird angezeigt und ausgewählt, führen Sie das Update durch.
+Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** eingeben.
+
+Öffnen Sie nun den Web-Interface-Updater und das Update auf v1.14 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
 [![Aktualisierung von 1.13 auf 1.14](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/6-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/6-u18-119.png)
 
@@ -457,7 +464,7 @@ Wenn Sie diesen Fehler sehen:
 Die Lösung ist [hier dokumentiert](../administration/troubleshooting/row-size-too-large.md)
 
 !!! success "**Überprüfen Sie das System und i-doit**"
-    Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
+    Überprüfen Sie Ihr System und i-doit!
 
 ## Update von 1.14 auf 1.15
 
@@ -471,12 +478,12 @@ entpacken.
 
 Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** eingeben.
 
-Öffnen Sie nun das Web-Interface-Updater und das Update auf v1.15 wird angezeigt und ausgewählt, führen Sie das Update durch.
+Öffnen Sie nun den Web-Interface-Updater und das Update auf v1.15 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
 [![Update von 1.14 auf 1.15](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/7-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/7-u18-119.png)
 
 !!! success "**Überprüfen Sie das System und i-doit**"
-    Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
+    Überprüfen Sie Ihr System und i-doit!
 
 ## Update von 1.15 auf 1.16
 
@@ -490,12 +497,12 @@ entpacken.
 
 Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** eingeben.
 
-Öffnen Sie nun das Web-Interface-Updater und das Update auf v1.16 wird angezeigt und ausgewählt, führen Sie das Update durch.
+Öffnen Sie nun den Web-Interface-Updater und das Update auf v1.16 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
 [![Update von 1.15 auf 1.16](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/8-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/8-u18-119.png)
 
 !!! success "**Überprüfen Sie das System und i-doit**"
-    Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
+    Überprüfen Sie Ihr System und i-doit!
 
 ## Update von 1.16 auf 1.17
 
@@ -505,14 +512,16 @@ Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner un
 sudo -u www-data unzip idoit-1.17-update.zip
 ```
 
+entpacken.
+
 Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.
 
-Nun öffnen wir das Web-Interface-Updater und das Update auf v1.17 wird angezeigt und ausgewählt, führen Sie das Update durch.
+Nun öffnen wir den Web-Interface-Updater und das Update auf v1.17 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
 [![Aktualisierung von 1.16 auf 1.17](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/9-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/9-u18-119.png)
 
 !!! success "**Überprüfen Sie das System und i-doit**"
-    Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
+    Überprüfen Sie Ihr System und i-doit!
 
 ## Aktualisierung von 1.17 auf 1.18
 
@@ -524,12 +533,12 @@ sudo -u www-data unzip idoit-1.18-update.zip
 
 Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** eingeben.
 
-Nun öffnen wir das Web-Interface-Updater und das Update auf v1.18 wird angezeigt und ausgewählt, führen Sie das Update durch.
+Nun öffnen wir den Web-Interface-Updater und das Update auf v1.18 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
 [![Aktualisierung von 1.17 auf 1.18](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/10-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/10-u18-119.png)
 
 !!! success "**Überprüfen Sie das System und i-doit**"
-    Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
+    Überprüfen Sie Ihr System und i-doit!
 
 ## Upgrade von Debian 10 auf 11
 
@@ -552,7 +561,7 @@ Nun öffnen wir das Web-Interface-Updater und das Update auf v1.18 wird angezeig
     sudo nano /etc/apt/sources.list
     ```
 
-    Ändern Sie alle Einträge in 'buster' oder löschen Sie alle Einträge und fügen Sie ein
+    Ändern Sie alle Einträge in 'buster' oder löschen Sie alle Einträge und fügen Sie folgendes ein
 
     ```sh
     deb http://deb.debian.org/debian bullseye main
@@ -583,7 +592,7 @@ Nun öffnen wir das Web-Interface-Updater und das Update auf v1.18 wird angezeig
     Fehler? [Überprüfen Sie die Debian-Website](https://www.debian.org/releases/bullseye/)
 
     !!! success "**Überprüfen Sie das System und i-doit**"
-        Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
+        Überprüfen Sie Ihr System und i-doit!
 
     Schaffen Sie wieder etwas Platz frei
 
@@ -604,7 +613,7 @@ Erstellen Sie die PHP-Konfigurationsdatei
 sudo nano /etc/php/7.4/mods-available/i-doit.ini
 ```
 
-einfügen
+folgendes einfügen:
 
 ```ini
 allow_url_fopen = Yes
@@ -643,19 +652,21 @@ sudo systemctl restart apache2.service
 ```
 
 !!! attention "**Möglicher Fehler**"
-    (38)Funktion nicht implementiert: AH00141: Konnte den Zufallszahlengenerator nicht initialisieren
+    (38)Function not implemented: AH00141: Could not initialize random number generator
 
 Wenn der apache2 nicht neu startet und Sie den obigen Fehler erhalten, starten Sie den Server neu.
 
-i-doit sollte jetzt über Administration > Systemtools > Systemübersicht die neue PHP-Version 7.4.30 anzeigen.
+i-doit sollte jetzt über Verwaltung > [Mandant Name] Verwaltung > System Config Check die neue PHP-Version 7.4.30 anzeigen.
 
 ## Aktualisierung von 1.18 auf 1.19
 
-Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner unter /var/www/html/ öffnen und das i-doit-Update-Paket mit
+Zuerst bereiten wir das Update über die CLI vor, indem wir den i-doit-Ordner unter `/var/www/html/`  öffnen und das i-doit-Update-Paket mit
 
 ```sh
 sudo -u www-data unzip idoit-1.19-update.zip
 ```
+
+entpacken.
 
 Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** eingeben.
 
@@ -664,7 +675,7 @@ Wenn Sie das Update ohne PHP 7.3 versuchen, sehen Sie diese Meldung:
 !!! attention "**Möglicher Fehler**"
     Sie haben PHP 7.3.31. Um i-doit auf die nächste Version zu aktualisieren, benötigen Sie mindestens PHP 7.4!
 
-Öffnen Sie nun das Web-Interface-Updater und das Update auf v1.19 wird angezeigt und ausgewählt, führen Sie das Update durch.
+Öffnen Sie nun den Web-Interface-Updater und das Update auf v1.19 wird angezeigt und ausgewählt, führen Sie das Update durch.
 
 [![Aktualisierung von 1.18 auf 1.19](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/11-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/11-u18-119.png)
 
@@ -675,8 +686,6 @@ Wenn Sie das Update ohne PHP 7.3 versuchen, sehen Sie diese Meldung:
 Öffnen Sie zuerst den Web-Interface-Updater.<br>
 Durch Klicken auf **Nach einer neuen Version suchen** können Sie überprüfen, ob ein neueres Paket verfügbar ist. Dafür benötigen Sie eine Internetverbindung.<br>
 Wenn eine neue Version verfügbar ist, kann das Update-Paket mit einem Klick auf **Herunterladen** heruntergeladen und extrahiert werden.
-
-```
 
 Wenn Sie nicht mit dem Internet verbunden sind, können Sie das Update über die Befehlszeile vorbereiten, indem Sie den i-doit-Ordner unter `/var/www/html/` öffnen und das idoit-Update-Paket mit dem folgenden Befehl entpacken:
 
@@ -735,7 +744,7 @@ Wenn Sie dazu aufgefordert werden, überschreiben Sie alles, indem Sie **A** ein
 sudo nano /etc/apt/sources.list
 ```
 
-Ändern Sie alle Einträge in 'bookworm' oder löschen Sie alle Einträge und fügen Sie ein
+Ändern Sie alle Einträge in 'bookworm' oder löschen Sie alle Einträge und fügen Sie folgendes ein
 
 ```sh
 deb http://deb.debian.org/debian bookworm main
@@ -765,7 +774,7 @@ sudo systemctl start mysql cron
 Fehler? [Hier lesen](https://www.debian.org/releases/bookworm/amd64/release-notes/ch-upgrading.en.html#trouble)<br>
 
 !!! success "**Überprüfen Sie das System und i-doit**"
-    Überprüfen Sie Ihr System. Überprüfen Sie i-doit!
+    Überprüfen Sie Ihr System und i-doit!
 
 Geben Sie erneut etwas Speicherplatz frei
 
@@ -786,7 +795,7 @@ Erstellen Sie die PHP-Konfigurationsdatei
 sudo nano /etc/php/8.2/mods-available/i-doit.ini
 ```
 
-fügen Sie ein
+fügen Sie ein:
 
 ```ini
 allow_url_fopen = Yes
@@ -826,7 +835,7 @@ sudo systemctl restart apache2.service
 
 Wenn der apache2 nicht neu startet, starten Sie den Server neu.
 
-i-doit sollte jetzt die neue PHP-Version 8.2.18 unter Administration → [Tenant-Name] management → System Config Check anzeigen.
+i-doit sollte jetzt die neue PHP-Version 8.2.18 unter Verwaltung > [Mandant Name] Verwaltung > System Config Check anzeigen.
 
 ## MariaDB 10.11 Upgrade
 
@@ -851,6 +860,8 @@ Zuerst müssen Sie das Update über die CLI vorbereiten, indem Sie den i-doit-Or
 ```sh
 sudo -u www-data unzip idoit-31-update.zip
 ```
+
+entpacken.
 
 Wenn Sie gefragt werden, überschreiben Sie alles, indem Sie **A** eingeben.
 

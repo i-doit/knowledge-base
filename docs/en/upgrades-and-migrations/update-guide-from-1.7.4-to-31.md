@@ -92,7 +92,8 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.10-update.zip
 ```
 
-If you are asked, overwrite everything by typing **A**.<br> Now we open the Web Interface Updater and the Update to v1.10 is displayed and selected, do the update.
+If you are asked, overwrite everything by typing **A**.
+Now we open the Web Interface Updater and the Update to v1.10 is displayed and selected, do the update.
 
 [![Updating 1.9 to 1.10](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)
 
@@ -108,7 +109,8 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.11-update.zip
 ```
 
-If you are asked, overwrite everything by typing **A**.<br> Now we open the Web Interface Updater and the Update to v1.11 is displayed and selected, do the update.
+If you are asked, overwrite everything by typing **A**.
+Now we open the Web Interface Updater and the Update to v1.11 is displayed and selected, do the update.
 
 !!! attention "**Possible error**"
     Call of unknown method '_realpath'.
@@ -137,7 +139,8 @@ First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html
 sudo -u www-data unzip idoit-1.12-update.zip
 ```
 
-If you are asked, overwrite everything by typing **A**.<br> Now we open the Web Interface Updater and the Update to v1.12 is displayed and selected, do the update.
+If you are asked, overwrite everything by typing **A**.
+Now we open the Web Interface Updater and the Update to v1.12 is displayed and selected, do the update.
 
 [![Updating 1.11 to 1.12](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)
 
@@ -210,7 +213,7 @@ If you are asked, overwrite everything by typing **A**.<br> Now we open the Web 
     Errors? [Read here](https://www.debian.org/releases/stretch/)
 
     !!! success "**Check the System and i-doit**"
-        Check your system. Check i-doit!
+        Check your system and i-doit!
 
     Free up some space again
 
@@ -273,7 +276,7 @@ If you are asked, overwrite everything by typing **A**.<br> Now we open the Web 
     Errors? [Check Debian Website](https://www.debian.org/releases/buster/)
 
     !!! success "**Check the System and i-doit**"
-        Check your system. Check i-doit!
+        Check your system and i-doit!
 
     Free up some space again
 
@@ -341,7 +344,7 @@ sudo phpenmod memcached
 sudo systemctl restart apache2.service
 ```
 
-i-doit should now display via Administration > System tools > System overview the new PHP Version 7.3.31-1~deb10u1
+i-doit should now display via Administration > [Tenant Name] management > System config check the new PHP Version 7.3.31-1~deb10u1
 
 ## Create MariaDB config file if not exist
 
@@ -431,7 +434,7 @@ Probably you will get this error:
 Then you need to restart the update again.<br> If you now get a HTTP 500, do the update again.
 
 !!! success "**Check the System and i-doit**"
-    Check your system. Check i-doit!
+    Check your system and i-doit!
 
 ## Updating 1.13 to 1.14
 
@@ -458,7 +461,7 @@ If you see this error:
 The Solution is documented [here](../system-administration/troubleshooting/row-size-too-large.md)
 
 !!! success "**Check the System and i-doit**"
-    Check your system. Check i-doit!
+    Check your system and i-doit!
 
 ## Updating 1.14 to 1.15
 
@@ -475,7 +478,7 @@ Now we open the Web Interface Updater and the Update to v1.15 is displayed and s
 [![Updating 1.14 to 1.15](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)
 
 !!! success "**Check the System and i-doit**"
-    Check your system. Check i-doit!
+    Check your system and i-doit!
 
 ## Updating 1.15 to 1.16
 
@@ -492,11 +495,11 @@ Now we open the Web Interface Updater and the Update to v1.16 is displayed and s
 [![Updating 1.15 to 1.16](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)
 
 !!! success "**Check the System and i-doit**"
-    Check your system. Check i-doit!
+    Check your system and i-doit!
 
 ## Updating 1.16 to 1.17
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
 ```sh
 sudo -u www-data unzip idoit-1.17-update.zip
@@ -509,7 +512,7 @@ Now we open the Web Interface Updater and the Update to v1.17 is displayed and s
 [![Updating 1.16 to 1.17](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)
 
 !!! success "**Check the System and i-doit**"
-    Check your system. Check i-doit!
+    Check your system and i-doit!
 
 ## Updating 1.17 to 1.18
 
@@ -526,7 +529,7 @@ Now we open the Web Interface Updater and the Update to v1.18 is displayed and s
 [![Updating 1.17 to 1.18](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)
 
 !!! success "**Check the System and i-doit**"
-    Check your system. Check i-doit!
+    Check your system and i-doit!
 
 ## Upgrade Debian 10 to 11
 
@@ -579,7 +582,7 @@ Now we open the Web Interface Updater and the Update to v1.18 is displayed and s
     Errors? [Check Debian Website](https://www.debian.org/releases/bullseye/)
 
     !!! success "**Check the System and i-doit**"
-        Check your system. Check i-doit!
+        Check your system and i-doit!
 
     Free up some space again
 
@@ -643,11 +646,11 @@ sudo systemctl restart apache2.service
 
 If the apache2 is not restarting and you get the above error, restart the server.
 
-i-doit should now display via Administration > System tools > System overview the new PHP Version 7.4.30
+i-doit should now display via Administration > [Tenant Name] management > System config check the new PHP Version 7.4.30
 
 ## Updating 1.18 to 1.19
 
-First, we prepare the update via CLI by open the i-doit Folder at /var/www/html/and unzip the idoit update package with
+First, we prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
 ```sh
 sudo -u www-data unzip idoit-1.19-update.zip
@@ -759,7 +762,7 @@ In the Web Interface Updater check if the Update to Version 29 is displayed and 
     Errors? [Read here](https://www.debian.org/releases/bookworm/amd64/release-notes/ch-upgrading.en.html#trouble)<br>
 
     !!! success "**Check the System and i-doit**"
-        Check your system. Check i-doit!
+        Check your system and i-doit!
 
     Free up some space again
 
