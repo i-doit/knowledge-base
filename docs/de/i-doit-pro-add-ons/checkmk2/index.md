@@ -1,5 +1,35 @@
 # Checkmk2
 
+## Release Notes Checkmk2 Version 1.8.6
+
+Diese Version bringt wichtige Verbesserungen und neue Funktionen, um die Nutzung von Checkmk2 effizienter und zukunftssicher zu gestalten.
+
+### Kompatibilität mit PHP 8.2
+
+- Checkmk2 unterstützt jetzt alle PHP-Versionen von 7.4 bis 8.2.
+
+### Kompatibilität mit Checkmk 2.3
+
+- Um das Checkmk2 Add-on mit Checkmk 2.3 zu verwenden, muss der Konfigurationsparameter `check_mk.version` auf `“2.3”` gesetzt werden.
+- Das Add-on unterstützt damit alle Versionen ab Checkmk 1.5.
+- Neue Feature werden zukünftig nur noch für Checkmk >= Version 2.2 implementiert.
+
+### Erweitertes Logging
+
+- Das Logging wurde erweitert und umfasst nun auch die Protokollierung von HTTP-Requests und Responses in/aus Richtung Checkmk.
+- Neue Parameter für das Logging:
+    - `check_mk.logging.enableLogging: true|false`: Aktiviert das Logging von Checkmk Responses/Requests (standardmäßig deaktiviert).
+    - `check_mk.logging.logFilePath: “/log/path”`: Verzeichnis, in dem die Logdateien gespeichert werden. Es wird pro Aufruf eine Logdatei erstellt. Das Verzeichnis muss für den Benutzer, der Checkmk2 ausführt (z.B. www-data), les- und schreibbar sein.
+    - Eine beispielhafte Konfiguration kann man mit `idoitcmk print-example-config` anschauen.
+
+### Bugfixes/weitere Anpassungen
+
+- Das Merging von Hostadressen (`pull.updateObjects: true`) überschreibt jetzt nicht mehr bereits zugewiesenen Netzwerke.
+- Das Aktivieren von Änderungen beachtet jetzt korrekt anhand des Konfigurationsparameters `push.activateForeignChanges` ob es gleichzeitig Änderungen seitens anderer Checkmk Nutzer gibt.
+- Das Pushen von Objekten wurde weiter optimiert.
+- Auswertung des Konfigurationsparameters `webAPI|rest.effectiveAttributes` korrigiert
+- Viele weitere kleinere Anpassungen im “Maschinenraum”.
+
 ## Was ist neu (v1.8.5)
 
 ### Dynamische Filterung durch Whitelist und Blacklist
@@ -69,6 +99,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### [1.8.5] - 2024-07-01
+
 
 ### [1.8.5] - 2024-04-16
 
