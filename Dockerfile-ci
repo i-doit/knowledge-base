@@ -129,7 +129,6 @@ RUN curl -OfsSL \
 RUN dpkg -r --force-depends python3-wheel \
     ; \
     pip3 install --upgrade --no-cache-dir --break-system-packages \
-        pip \
         setuptools \
         wheel
 

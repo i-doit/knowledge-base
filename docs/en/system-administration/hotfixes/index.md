@@ -59,18 +59,23 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_31_hotfix_ID-10884_ddb80db.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10884_ddb80db.zip){ .md-button .md-button--primary }
 
-### Altering data in Network > Port entry which has a Interface assigned are not saved (ID-10853)
+### Altering data in Network > Port entry which has a Interface assigned are not saved (ID-10853) **UPDATED 20.06.**
 
-[i-doit_31_hotfix_ID-10853_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10853_b9ee2aa.zip){ .md-button .md-button--primary }
+[i-doit_31_hotfix_ID-10853v2_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10853v2_b9ee2aa.zip){ .md-button .md-button--primary }
 
-### HTTP 500 error when creating a document or a revision (ID-10831)
+??? info "Error message found in the Webserver logs"
+    AH01071: Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: Illegal offset type in /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Type/DialogDataType.php:103\nStack trace:\n#0 /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Type/DialogDataType.php(155): idoit\\Module\\Cmdb\\Component\\CategoryChanges\\Type\\DialogDataType->dataHandlerHelper()\n#1 /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Builder/ChangesBuilder.php(137): idoit\\Module\\Cmdb\\Component\\CategoryChanges\\Type\\DialogDataType->handleData()\n#2 /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Builder/ChangesBuilder.php(54): idoit\\Module\\Cmdb\\Component\\CategoryChanges\\Builder\\ChangesBuilder->processWithArrayData()\n#3 /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Changes.php(123): idoit\\Module\\Cmdb\\Component\\CategoryChanges\\Builder\\ChangesBuilder->process()\n#4 /var/www/html/...'
+
+### HTTP 500 error when creating a document or a revision (ID-10831) **UPDATED 26.06.**
+
+Use this Hotfix and update i-doit pro Add-on Documents to 1.8.
 
 ??? info "Error message found in the Webserver logs"
     ```log
     Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: isys_cmdb_dao_category_property::getConstantFromRange(): Argument #1 ($constant) must be of type string, null given
     ```
 
-[i-doit_31_hotfix_ID-10831.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10831.zip){ .md-button .md-button--primary }
+[i-doit_31_hotfix_ID-10831v2.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10831v2.zip){ .md-button .md-button--primary }
 
 ### Migration error when updating (ID-10808)
 
@@ -85,6 +90,10 @@ Do **not** download the update package again, this would override the Hotfix.
 [i-doit_29-30_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29-30_hotfix_ID-10808.zip){ .md-button .md-button--primary }
 [i-doit_30-31_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30-31_hotfix_ID-10808.zip){ .md-button .md-button--primary }
 
+### Exporting a object list via csv has no results (ID-10798)
+
+[i-doit_31_hotfix_ID-10798.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10798.zip){ .md-button .md-button--primary }
+
 ### Counter skips a number when duplicating objects (ID-10763)
 
 [i-doit_31_hotfix_ID-10763.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10763.zip){ .md-button .md-button--primary }
@@ -93,9 +102,13 @@ Do **not** download the update package again, this would override the Hotfix.
 
 [i-doit_31_hotfix_ID-10762.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10762.zip){ .md-button .md-button--primary }
 
-### Exporting a object list via csv has no results (ID-10798)
+### Assigning location to object via csv import only uses first entry of csv (ID-10749)
 
-[i-doit_31_hotfix_ID-10798.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10798.zip){ .md-button .md-button--primary }
+Fixed with hotfix CSV import using comma-separated or row causes only values from first entry to be used (ID-10892)
+
+### CSV import using comma-separated or row causes only values from first entry to be used (ID-10892)
+
+[i-doit_31_hotfix_ID-10749_ac7b360.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10749_ac7b360.zip){ .md-button .md-button--primary }
 
 ## API
 
