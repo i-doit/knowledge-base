@@ -343,8 +343,7 @@ Hier finden Sie die Login Daten für den i-doit Windows installer:
 | i-doit Admin Center | admin | admin |
 | JDisc Datenbank | postgres | idoitdiscovery |
 | JDisc Datenbank (ReadOnly) | postgresro | idoit |
-| install_dir | i-doit-Discovery | - |
-| admin_center_password | admin | - |
+| Install Directory | C:\ProgramData\i-doit-discovery | - |
 
 Die i-doit Login Daten finden Sie [hier](../../../grundlagen/erstanmeldung.md).
 

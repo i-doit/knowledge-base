@@ -344,8 +344,7 @@ The following credentials are set by the installer.
 | i-doit Admin Center | admin | admin |
 | JDisc Database | postgres | idoitdiscovery |
 | JDisc Database (readonly) | postgresro | idoit |
-| install_dir | i-doit-Discovery | - |
-| admin_center_password | admin | - |
+| Install Directory | C:\ProgramData\i-doit-discovery | - |
 
 For i-doit Login credentials see [here](../../../basics/initial-login.md).
 
