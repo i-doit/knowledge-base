@@ -6,29 +6,29 @@ This version brings important improvements and new functions to make the use of 
 
 ### Compatibility with PHP 8.2
 
-- Checkmk2 now supports all PHP versions from 7.4 to 8.2.
+-   Checkmk2 now supports all PHP versions from 7.4 to 8.2.
 
 ### Compatibility with Checkmk 2.3
 
-- To use the Checkmk2 add-on with Checkmk 2.3, the configuration parameter `check_mk.version` must be set to `"2.3"`.
-- The add-on thus supports all versions from Checkmk 1.5.
-- In future, new features will only be implemented for Checkmk >= version 2.2.
+-   To use the Checkmk2 add-on with Checkmk 2.3, the configuration parameter `check_mk.version` must be set to `"2.3"`.
+-   The add-on thus supports all versions from Checkmk 1.5.
+-   In future, new features will only be implemented for Checkmk >= version 2.2.
 
 ### Extended logging
 
-- Logging has been extended and now also includes the logging of HTTP requests and responses to/from Checkmk.
-- New parameters for logging:
-    - `check_mk.logging.enableLogging: true|false`: Enables logging of Checkmk responses/requests (disabled by default).
-    - `check_mk.logging.logFilePath: "/log/path"`: Directory in which the log files are saved. One log file is created per call. The directory must be readable and writable for the user running Checkmk2 (e.g. www-data).
-    - An example configuration can be viewed with `idoitcmk print-example-config`.
+-   Logging has been extended and now also includes the logging of HTTP requests and responses to/from Checkmk.
+-   New parameters for logging:
+    -   `check_mk.logging.enableLogging: true|false`: Enables logging of Checkmk responses/requests (disabled by default).
+    -   `check_mk.logging.logFilePath: "/log/path"`: Directory in which the log files are saved. One log file is created per call. The directory must be readable and writable for the user running Checkmk2 (e.g. www-data).
+    -   An example configuration can be viewed with `idoitcmk print-example-config`.
 
 ### Bugfixes/further adjustments
 
-- The merging of host addresses (`pull.updateObjects: true`) no longer overwrites already assigned networks.
-- Activating changes now correctly uses the configuration parameter `push.activateForeignChanges` to check whether other Checkmk users are making changes at the same time.
-- The pushing of objects has been further optimized.
-- Evaluation of the configuration parameter `webAPI|rest.effectiveAttributes` corrected
-- Many other minor adjustments in the "engine room".
+-   The merging of host addresses (`pull.updateObjects: true`) no longer overwrites already assigned networks.
+-   Activating changes now correctly uses the configuration parameter `push.activateForeignChanges` to check whether other Checkmk users are making changes at the same time.
+-   The pushing of objects has been further optimized.
+-   Evaluation of the configuration parameter `webAPI|rest.effectiveAttributes` corrected
+-   Many other minor adjustments in the "engine room".
 
 ## What is new (v1.8.5)
 
