@@ -167,7 +167,7 @@ sudo -u www-data php console.php create-tenant
 #### Automatisierte Installation
 
 ```shell
-sudo -u www-data php console.php install --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --admin-password admincenterpw --no-interaction
+sudo -u www-data php console.php install --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlrootuser --password mysqlrootpassword --admin-password admincenterpw --no-interaction
 ```
 
 Nun wurde i-doit installiert. Wir benötigen noch einen [Mandant](../../administration/mandantenfaehigkeit.md). Diesen erstellen wir auch über die [console.php](../../automatisierung-und-integration/cli/console/index.md):

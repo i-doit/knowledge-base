@@ -45,22 +45,16 @@ Doch zunächst werden erste Pakete aus den Standard-Repositories aktualisiert:
 sudo dnf update
 ```
 
-Installieren von PHP 8.2 als Module:
+Installieren von PHP 8.2 und MariaDB als Module Stream:
 
 ```sh
-sudo dnf module install php:8.2 -y
+sudo dnf module install php:8.2 mariadb:10.11 -y
 ```
 
-Die Installation der PHP-Pakete erfolgt danach:
+Die Installation weiterer Pakete erfolgt danach:
 
 ```sh
-sudo dnf install memcached unzip php php-{bcmath,cli,common,curl,gd,imagick,json,ldap,mbstring,memcached,mysql,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,xml,zip} -y
-```
-
-Installation von MariaDB 10.11 (Achtung: MariaDB benötigt hier das zusätzliche Paket boost-program-options für eine saubere Installation):
-
-```sh
-sudo dnf module install mariadb boost-program-options -y
+sudo dnf install boost-program-options memcached unzip php php-{bcmath,cli,common,curl,gd,json,ldap,mbstring,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,xml,zip} -y
 ```
 
 Damit der Apache Webserver und MariaDB beim Booten gestartet werden, sind diese Befehle erforderlich:
@@ -153,8 +147,6 @@ In dieser Datei wird die ergänzende gespeichert:
         </Directory>
 
         LogLevel warn
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
 
