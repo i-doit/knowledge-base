@@ -122,7 +122,7 @@ Fixed with hotfix CSV import using comma-separated or row causes only values fro
 
 [forms_1.2.0_hotfix_AOF-38_69144fc.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2.0_hotfix_AOF-38_69144fc.zip){ .md-button .md-button--primary }
 
-### Using Forms to create an object bypasses validation "unique" check
+### Using Forms to create an object bypasses validation "unique" check (AOF-54)
 
 ??? info "The only exception to unique checks are IPv4 addresses"
 
