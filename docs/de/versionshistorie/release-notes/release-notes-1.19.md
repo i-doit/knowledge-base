@@ -9,7 +9,7 @@ Highlights in this release
 *   Added **compatibility** for **PHP 8.0**.
 *   **New configuration** to **create custom translations** and **custom languages**.
 *   **Setting** to define a [**default language** for newly created users](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#sprache).
-*   **New configuration** to **[hide attributes](../../grundlagen/attributsichtbarkeit.md)** from categories and/or overview pages.
+*   **New configuration** to **[attribute settings](../../administration/verwaltung/datenansicht/attribut-einstellungen.md)** from categories and/or overview pages.
 *   **Option** to **log** the **[last login](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#sicherheit)** of a user.
 *   [**Export** for **reports**](../../auswertungen/report-manager.md#report-exportierenimportieren) which have been created via **query builder**.
 
