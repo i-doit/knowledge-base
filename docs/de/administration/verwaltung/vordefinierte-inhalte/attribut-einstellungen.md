@@ -1,4 +1,10 @@
-# Attributsichtbarkeit
+# Attribut Einstellungen
+
+Mit dieser Funktion können Sie Pflichtfelder festlegen und verwalten. Sie können auch erweiterte Inhaltsdefinitionen für die jeweiligen Pflichtfelder festlegen und deren Sichtbarkeit einstellen.
+
+[![Attribut Einstellungen](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/attribut-einstellungen/as-1.png)](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/attribut-einstellungen/as-1.png)
+
+## Attributsichtbarkeit
 
 Die Sichtbarkeit von [Attributen](attributfelder.md) wird unter [Datenansicht](../administration/verwaltung/datenansicht/index.md) konfiguriert werden.
 
@@ -8,13 +14,13 @@ Die konfigurierte Sichtbarkeit wird für alle Benutzer übernommen.
 
 [![Attributsichtbarkeit](../assets/images/de/grundlagen/attributsichtbarkeit/1-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/1-as.png)
 
-## Rechte setzen
+### Rechte setzen
 
 [Die Rechte](../administration/verwaltung/berechtigungen.md) zur Ansicht und zum Bearbeiten der Attributsichtbarkeit kann pro Benutzer(-gruppe) vergeben werden. So ist es beispielsweise möglich und oft auch ratsam, dass nur bestimmte Benutzergruppen Attribute ausblenden können.
 
 [![rechte-setzen](../assets/images/de/grundlagen/attributsichtbarkeit/2-as.png)](../assets/images/de/grundlagen/attributsichtbarkeit/2-as.png)
 
-## Verwendung
+### Verwendung
 
 Wenn die Attributsichtbarkeit im Editiermodus geöffnet wird, können alle Kategorien (global, spezifisch und benutzerdefiniert) über ein Dropdown-Feld am oberen Rand ausgewählt werden. Neben diesem Drop-Down-Feld befindet sich die Schaltfläche "Konfiguration hinzufügen.
 

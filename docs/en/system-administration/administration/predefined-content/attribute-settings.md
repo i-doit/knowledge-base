@@ -1,4 +1,10 @@
-# Attribute visibility
+# Attribute settings
+
+With this feature you can determine and administer mandatory fields. You can also specify extended content definitions for the respective mandatory fields and manage their visibility.
+
+[![Attribute Settings](../../../assets/images/en/system-administration/administration/predefined-content/attribute-settings/as-1.png)](../../../assets/images/en/system-administration/administration/predefined-content/attribute-settings/as-1.png)
+
+## Attribute visibility
 
 The visibility of [attributes](./attribute-fields.md) can be configured in the [CMDB settings](../system-administration/administration/data-view/hide-attributes.md) starting with [i-doit version 1.19](../version-history/release-notes/release-notes-1.19.md).<br>
 It is possible to hide certain attributes in [categories](./categories-and-attributes.md) and/or on the [overview page of object types](./object-types.md).
@@ -7,13 +13,13 @@ The configured visibility is applied to all users.
 
 [![Attribute visibility](../assets/images/en/basics/attribute-visibility/1-av.png)](../assets/images/en/basics/attribute-visibility/1-av.png)
 
-## Set rights
+### Set rights
 
 [The rights](../efficient-documentation/rights-management/index.md) to view and edit attribute visibility can be assigned per user (group). For example, it is possible and often advisable that only certain user groups can hide attributes.
 
 [![Set rights](../assets/images/en/basics/attribute-visibility/2-av.png)](../assets/images/en/basics/attribute-visibility/2-av.png)
 
-## Usage
+### Usage
 
 When the Attribute visibility is opened in edit mode, all categories (global, specific and custom) can be picked via a drop down field at the top. Next to this drop down field, there is a button "Add configuration".
 
