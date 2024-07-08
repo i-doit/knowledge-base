@@ -23,17 +23,14 @@ Die [Rechte](../berechtigungen.md) zur Ansicht und zum Bearbeiten der Attributsi
 
 ## Verwendung
 
-Wenn ein Attribut über die **Hinzufügen** Schaltfläche ergänzt wird, können alle Kategorien (global, spezifisch und benutzerdefiniert) ausgewählt werden.
+Wenn ein Attribut über die **Hinzufügen** Schaltfläche ergänzt wird, können alle Kategorien (global, spezifisch und benutzerdefiniert) ausgewählt werden. Wenn diese Schaltfläche verwendet wird, wird die Kategorie als unterster Eintrag hinzugefügt.
 
-Wenn diese Schaltfläche verwendet wird, wird die Kategorie als unterster Eintrag hinzugefügt.
+Um die Einstellungen zu editieren, wird das Stift Symbol verwendet, mit dem die Sichtbarkeit und die Validierung eingestellt werden kann. Standardmäßig ist die Sichtbarkeit für alle Attribute aktiviert<br>
 
-Um die Einstellungen zu editieren, wird das Stift Symbol verwendet, mit dem die Sichtbarkeit und die Validierung eingestellt werden kann.
-
-Standardmäßig ist die Sichtbarkeit für alle Attribute aktiviert
-[![button-angezeigt](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)](/../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)
-In diesem Zustand ist die Sichtbarkeit auf der Übersichtsseite mit **Sichtbar**  beschriftet.<br>
-Wenn Sie die Sichtbarkeit auf **Versteckt** setzen, wird auch die Anzeige angepasst
-[![button-ausgeblendet](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)
+[![button-angezeigt](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)](/../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)<br>
+In diesem Zustand ist die Sichtbarkeit auf der Übersichtsseite mit **Sichtbar**  beschriftet.
+Wenn Sie die Sichtbarkeit auf **Versteckt** setzen, wird auch die Anzeige angepasst<br>
+    [![button-ausgeblendet](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)<br>
 
 **Objekt Bezeichnung**, **Zustand** und **CMDB-Status** können **nicht** ausgeblendet werden. In den entsprechenden Spalten steht ein Hinweis "Kann nicht versteckt werden".
 
