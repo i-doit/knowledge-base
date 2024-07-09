@@ -468,6 +468,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
           - Hotfix archive:
               - system-administration/hotfixes/hotfix-archive/index.md
+              - Version 31: system-administration/hotfixes/hotfix-archive/v31.md
               - Version 30: system-administration/hotfixes/hotfix-archive/v30.md
               - Version 29: system-administration/hotfixes/hotfix-archive/v29.md
               - Version 28: system-administration/hotfixes/hotfix-archive/v28.md
