@@ -1,10 +1,11 @@
-!!! info 
+# Validierung und Pflichtfelder
+
+!!! info
     Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/validierung-von-daten-und-eingaben-in-i-doit/)
 
 Wer die Eindeutigkeit von [Attributen](../glossar.md) sicherstellen möchte oder bei der Pflege von bestimmten Feldern nur definierte Werte erwartet oder Felder zu Pflichtfeldern machen möchte, findet bei i-doit die entsprechenden Funktionen.
 
-Überblick
----------
+## Überblick
 
 Folgende Anforderungen erfüllt die Validierung:
 
@@ -12,10 +13,9 @@ Folgende Anforderungen erfüllt die Validierung:
 *   Festlegung einer Eindeutigkeit des Feldwerts pro [Objekt](../grundlagen/struktur-it-dokumentation.md) ([Listen-Kategorie](../grundlagen/struktur-it-dokumentation.md))/[Objekttyp](../grundlagen/struktur-it-dokumentation.md)/[Mandant](../glossar.md) (global)
 *   Definition des Feldes als Pflichtfeld bei der Erzeugung eines neuen Objekts/Bearbeitung der Informationen
 
-Konfiguration
--------------
+## Konfiguration
 
-Du findest die Möglichkeit zur Festlegung dieser Einstellungen **Verwaltung → CMDB-Einstellungen → Validierung**. Im Auslieferungszustand wirst du hier noch keine Konfiguration vorfinden. Die Konfiguration erfolgt pro Kategorie. Wähle die Kategorie, aus der du ein oder mehrere Attribute validieren möchtest.
+Du findest die Möglichkeit zur Festlegung dieser Einstellungen **Verwaltung → Datenansicht → Attribut Einstellungen**. Im Auslieferungszustand wirst du hier noch keine Konfiguration vorfinden. Die Konfiguration erfolgt pro Kategorie. Wähle die Kategorie, aus der du ein oder mehrere Attribute validieren möchtest.
 
 [![validierung-validieren](../assets/images/de/effizientes-dokumentieren/validierung-und-pflichtfelder/1-vup.png)](../assets/images/de/effizientes-dokumentieren/validierung-und-pflichtfelder/1-vup.png)
 
@@ -53,15 +53,13 @@ Pro Kategorie, für die du eine Validierung anlegst, wird ein Bereich in der Kon
 
     Wenn du die Konfiguration einer Kategorie entfernst, gehen die Validierungseinstellungen unwiderruflich verloren.
 
-Validierungs-Cache erneuern
----------------------------
+## Validierungs-Cache erneuern
 
 In der Konfiguration ist es dir im oberen Bereich auch möglich, den Validierungs-Cache zu erneuern. In der Regel wird dieser beim Anlegen einer neuen Konfiguration automatisch geleert. In seltenen Fällen kann es jedoch vorkommen, dass das System diese Aufgabe nicht übernimmt. Wenn du also feststellst, dass eine Validierungskonfiguration in einer Kategorie nicht greift oder eine entfernte Validierung weiterhin aktiv zu sein scheint, leere den Cache, damit das System die veränderten Einstellungen erkennt.
 
 [![validierung-erneuern](../assets/images/de/effizientes-dokumentieren/validierung-und-pflichtfelder/5-vup.png)](../assets/images/de/effizientes-dokumentieren/validierung-und-pflichtfelder/5-vup.png)
 
-Reguläre Ausdrücke testen
--------------------------
+## Reguläre Ausdrücke testen
 
 Falls du vorgeben möchtest, dass Felder regulären Ausdrücken entsprechen müssen und dir nicht sicher bist, ob der von dir verwendete reguläre Ausdruck korrekt ist, kannst du über diesen Bereich den regulären Ausdruck eintragen und prüfen, ob die von dir erwartete Eingabe im Feld zugelassen würde.
 

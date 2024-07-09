@@ -23,23 +23,20 @@ The [rights](../user-permissions.md) the right to view and edit attribute visibi
 
 ## Usage
 
-If an attribute is added using the "Add" button, all categories (global, specific and user-defined) can be selected.
+If an attribute is added using the **Add** button, all categories (global, specific and user-defined) can be selected. If this button is used, the category is added as the lowest entry.
 
-If this button is used, the category is added as the lowest entry.
+To edit the settings, the pencil icon is used, with which the visibility and validation can be set. By default, the visibility is activated for all attributes<br>
 
-To edit the settings, the pencil icon is used, with which the visibility and validation can be set.
-
-By default, the visibility is activated for all attributes
-[![button-displayed](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-4.png)](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-4.png)
-In this state, the visibility on the overview page is labelled **Visible**.<br>
-If you set the visibility to **Hidden**, the display is also adjusted
-[![button-hidden](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-5.png)](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-5.png)
+[![button-displayed](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-4.png)](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-4.png)<br>
+In this state, the visibility on the overview page is labelled **Visible**.
+If you set the visibility to **Hidden**, the display is also adjusted<br>
+[![button-hidden](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-5.png)](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-5.png)<br>
 
 **Object title**, **Condition** and **CMDB-Status** can **not** be hidden. A note "Cannot be hidden" is displayed in the corresponding columns.
 
 If an attribute is hidden, it is no longer shown in the category for all objects (of all object types).
 
-<!-- If an attribute is set to hidden but it was defined as mandatory via the validation settings, the user get's a information (popup) when pressing the save button:
+<!-- If an attribute is set to hidden but it was defined as mandatory via the "attribute settings", the user get's a information (popup) when pressing the save button:
 
 !!! info "Popup"
 

@@ -27,16 +27,16 @@ Wenn ein Attribut über die **Hinzufügen** Schaltfläche ergänzt wird, können
 
 Um die Einstellungen zu editieren, wird das Stift Symbol verwendet, mit dem die Sichtbarkeit und die Validierung eingestellt werden kann. Standardmäßig ist die Sichtbarkeit für alle Attribute aktiviert<br>
 
-[![button-angezeigt](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)](/../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)<br>
+[![button-angezeigt](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)<br>
 In diesem Zustand ist die Sichtbarkeit auf der Übersichtsseite mit **Sichtbar**  beschriftet.
 Wenn Sie die Sichtbarkeit auf **Versteckt** setzen, wird auch die Anzeige angepasst<br>
-    [![button-ausgeblendet](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)<br>
+[![button-ausgeblendet](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)<br>
 
 **Objekt Bezeichnung**, **Zustand** und **CMDB-Status** können **nicht** ausgeblendet werden. In den entsprechenden Spalten steht ein Hinweis "Kann nicht versteckt werden".
 
 Wenn ein Attribut ausgeblendet ist, wird es in der Kategorie für alle Objekte (aller Objekttypen) nicht mehr angezeigt.
 
-<!-- Wenn ein Attribut ausgeblendet werden soll aber über die Validierungseinstellungen als Pflichtfeld definiert ist, erhält der Benutzer eine Information (Popup), wenn er auf die Schaltfläche "Speichern" klickt:
+<!-- Wenn ein Attribut ausgeblendet werden soll aber über die "Attribut Einstellungen" als Pflichtfeld definiert ist, erhält der Benutzer eine Information (Popup), wenn er auf die Schaltfläche "Speichern" klickt:
 
 !!! popup "Popup"
     _Die folgenden Attribute wurden zuvor als Pflichtfelder definiert:_
