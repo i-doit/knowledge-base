@@ -294,7 +294,6 @@ nav:
       - Unique references: basics/unique-references.md
       - Web GUI: basics/web-gui.md
       - Custom counter: basics/custom-counter.md
-      - Attribute visibility: basics/attribute-visibility.md
   - User authentication and management:
       - user-authentication-and-management/index.md
       - Builtin authentication:
@@ -403,7 +402,7 @@ nav:
           - Data view:
               - system-administration/administration/data-view/index.md
               - Configure object browser: system-administration/administration/data-view/configure-object-browser.md
-              - Hide attributes: system-administration/administration/data-view/hide-attributes.md
+              - Attribute settings: system-administration/administration/data-view/attribute-settings.md
               - Language profiles: system-administration/administration/data-view/language-profiles.md
               - Category folders: system-administration/administration/data-view/category-folders.md
           - Predefined content:
@@ -411,7 +410,6 @@ nav:
               - CMDB Status: system-administration/administration/predefined-content/cmdb-status.md
               - Contact assignment roles: system-administration/administration/predefined-content/contact-assignment-roles.md
               - Custom counter: system-administration/administration/predefined-content/custom-counter.md
-              - Data validation: system-administration/administration/predefined-content/data-validation.md
               - Dialog admin: system-administration/administration/predefined-content/dialog-admin.md
               - Object relation types: system-administration/administration/predefined-content/object-relation-types.md
               - QR Code: system-administration/administration/predefined-content/qr-code.md

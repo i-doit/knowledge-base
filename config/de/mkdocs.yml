@@ -331,7 +331,6 @@ nav:
       - Eindeutige Referenzierungen: grundlagen/eindeutige-referenzierungen.md
       - Web GUI: grundlagen/web-gui.md
       - Benutzerdefinierte Zähler: grundlagen/benutzerdefinierte-zaehler.md
-      - Attributsichtbarkeit: grundlagen/attributsichtbarkeit.md
   - Benutzerauthentifizierung und Verwaltung:
       - benutzerauthentifizierung-und-verwaltung/index.md
       - Integrierte Authentifizierung:
@@ -439,7 +438,7 @@ nav:
           - Datenansicht:
               - administration/verwaltung/datenansicht/index.md
               - Objekt-Browser konfigurieren: administration/verwaltung/datenansicht/objekt-browser-konfigurieren.md
-              - Attribute verstecken: administration/verwaltung/datenansicht/attribute-verstecken.md
+              - Attribut Einstellungen: administration/verwaltung/datenansicht/attribut-einstellungen.md
               - Sprachprofile: administration/verwaltung/datenansicht/sprachprofile.md
               - Kategorieordner: administration/verwaltung/datenansicht/kategorieordner.md
           - Vordefinierte Inhalte:
@@ -447,7 +446,6 @@ nav:
               - CMDB Status: administration/verwaltung/vordefinierte-inhalte/cmdb-status.md
               - Kontaktzuweisungsrollen: administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen.md
               - Benutzerdefinierte Zähler: administration/verwaltung/vordefinierte-inhalte/benutzerdefinierte-zaehler.md
-              - Daten Validierung: administration/verwaltung/vordefinierte-inhalte/daten-validierung.md
               - Dialog admin: administration/verwaltung/vordefinierte-inhalte/dialog-admin.md
               - Objektbeziehungsarten: administration/verwaltung/vordefinierte-inhalte/objekt-beziehungsarten.md
               - QR Code: administration/verwaltung/vordefinierte-inhalte/qr-code.md

@@ -23,11 +23,10 @@ Now the attributes of the category are ready for configuration of the validation
 Additionally, you can state whether or not the attribute has to be unique in your [IT documentation](../basics/structure-of-the-it-documentation.md) and thus may exist only once. This happens via the following buttons:
 
 *   **Unique (per object):** This option is only available in multi-value categories. When activated, it is not possible for this object to use the same value repeatedly in two entries of this category. It is possible, however, to use the entered value in other objects.
-    
+
 *   **Unique (per Objecttype):** The same value may not exist in another object of this type when you activate this option per object type.
-    
+
 *   **Unique (global):** The entered value is unique for the whole tenant and cannot be used in this attribute for any other object.
-    
 
 If a value is already in use for a field but the user tries to save the entry, a notice will inform him that the repeated usage of this value is not possible.
 

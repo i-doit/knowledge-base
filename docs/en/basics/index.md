@@ -7,7 +7,6 @@ The [know-how](../introduction/index.md) is there and i-doit is [installed](../
 *   [Dashboard and Widgets](./dashboard-and-widgets.md)
 *   [Assignment of Categories to Object Types](./assignment-of-categories-to-object-types.md)
 *   [Attribute Fields](./attribute-fields.md)
-*   [Attribute visibility](./attribute-visibility.md)
 *   [Categories and Attributes](./categories-and-attributes.md)
 *   [Custom Categories](./custom-categories.md)
 *   [Custom Object Types](./custom-object-types.md)
