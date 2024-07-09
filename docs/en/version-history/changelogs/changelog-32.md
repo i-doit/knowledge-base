@@ -20,7 +20,7 @@
 [Bug][CMDB]                     End of Period in Category Contract > Contract is not calculated<br>
 [Bug][CMDB]                     "Host in cluster" and "Running on host" in "Virtual servers" category is switched<br>
 [Bug][CMDB]                     Remove filter field role from category contact assignment<br>
-[Bug][CMDB]                     Links in search for description fields are added with "\<p\>"<br>
+[Bug][CMDB]                     Links in search for description fields are added with `<p\>`<br>
 [Bug][CMDB]                     Object browser displays german text while using english<br>
 [Bug][JDisc]                    Do not display an error message if an incorrectly configured jdisc server exists<br>
 [Bug][JDisc]                    JDisc updates archived objects<br>
