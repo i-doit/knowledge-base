@@ -21,7 +21,7 @@ Alongside i-doit 32 we also release the following Add-ons which include some bug
 -   [API 2.1](../../i-doit-pro-add-ons/api/index.md)
 -   [Maintenance 1.4](../../i-doit-pro-add-ons/maintenance.md)
 -   [Workflow 1.3](../../i-doit-pro-add-ons/workflow.md)
--   [Nagios 1.2](../../automation-and-integration/network-monitoring/nagios.md)
+-   [Nagios 1.2](../../automatisierung-und-integration/network-monitoring/nagios.md)
 
 Between the release of i-doit 31 and the latest version 32 we also released a new version of the add-on documents:
 
