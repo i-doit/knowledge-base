@@ -362,7 +362,7 @@ nav:
       - Massenänderung: effizientes-dokumentieren/massenaenderung.md
       - Objekte Duplizieren: effizientes-dokumentieren/objekte-duplizieren.md
       - Templates: effizientes-dokumentieren/templates.md
-      - Validierung und Pflichtfelder: effizientes-dokumentieren/validierung-und-pflichtfelder.md
+      - Attributvalidierung und Pflichtfelder: effizientes-dokumentieren/attributvalidierung-und-pflichtfelder.md
       - Rechteverwaltung:
           - effizientes-dokumentieren/rechteverwaltung/index.md
           - CMDB (Rechteverwaltung): effizientes-dokumentieren/rechteverwaltung/cmdb.md

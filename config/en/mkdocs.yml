@@ -325,7 +325,7 @@ nav:
       - Mass change: efficient-documentation/mass-change.md
       - Duplicate objects: efficient-documentation/duplicate-objects.md
       - Templates: efficient-documentation/templates.md
-      - Validation and mandatory fields: efficient-documentation/validation-and-mandatory-fields.md
+      - Attribute validation and mandatory fields: efficient-documentation/attribute-validation-and-mandatory-fields.md
       - Rights management:
           - efficient-documentation/rights-management/index.md
           - CMDB (User Rights Management): efficient-documentation/rights-management/cmdb-right-management.md
