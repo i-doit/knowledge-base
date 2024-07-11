@@ -38,6 +38,20 @@ Path for the **i-doit Discovery installer**:
 C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 ```
 
+## i-doit core
+
+### JDisc import stops with an error message (ID-10970)
+
+[i-doit_32_hotfix_ID-10970.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10970.zip){ .md-button .md-button--primary }
+
+### View right for objects of a type allows to create a unfinished object (ID-10972)
+
+[i-doit_32_hotfix_ID-10972_29ef713.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10972_29ef713.zip){ .md-button .md-button--primary }
+
+### PHP error when importing from JDisc (ID-10991)
+
+[i-doit_32_hotfix_ID-10991.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10991.zip){ .md-button .md-button--primary }
+
 ## Forms Add-on 1.2.0
 
 ### Object is not created when a attribute validation is used and no error is displayed
