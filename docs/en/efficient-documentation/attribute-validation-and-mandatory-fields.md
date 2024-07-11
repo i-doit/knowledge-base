@@ -16,6 +16,10 @@ You can find the option to specify these settings at **Administration → Data v
 
 [![Configuration](../assets/images/en/efficient-documentation/attribute-validation-and-mandatory-fields/vup-1.png)](../assets/images/en/efficient-documentation/attribute-validation-and-mandatory-fields/vup-1.png)
 
+First, you have the option of setting the visibility of the attribute with three selections. You can find a detailed insight into this setting in the article [**Attribute visibility**](../system-administration/administration/data-view/attribute-settings.md#attribute-visibility)
+
+[![attribute-visibility](../assets/images/en/efficient-documentation/attribute-validation-and-mandatory-fields/vup-1.1.png)](../assets/images/en/efficient-documentation/attribute-validation-and-mandatory-fields/vup-1.1.png)
+
 The attributes of the category are now available for the [configuration of validation](../system-administration/administration/data-view/attribute-settings.md#usage). By ticking the **Mandatory field** box, you can require users to enter data in this field. It is not possible to save the category if the field is empty. The category is labelled with a red asterisk (\*) next to the name of the attribute.
 
 You can also specify whether the attribute in your [IT documentation](../basics/structure-of-the-it-documentation.md) must be unique, i.e. may only exist once. This is done using the following buttons:
