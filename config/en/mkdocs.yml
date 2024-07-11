@@ -452,6 +452,7 @@ nav:
       - Customer portal: system-administration/customer-portal.md
       - Troubleshooting:
           - system-administration/troubleshooting/index.md
+          - Known update problems: system-administration/troubleshooting/known-update-problems.md
           - Lost link to database: system-administration/troubleshooting/lost-link-to-database.md
           - MySQL-Server has gone away: system-administration/troubleshooting/mysql-server-has-gone-away.md
           - Can not create table idoit_data.table_name: system-administration/troubleshooting/cant-create-table.md
