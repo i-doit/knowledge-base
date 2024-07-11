@@ -19,7 +19,7 @@ Du findest die Möglichkeit zur Festlegung dieser Einstellungen **Verwaltung →
 
 [![attribute-validieren](../assets/images/de/effizientes-dokumentieren/attributvalidierung-und-pflichtfelder/vup-1.png)](../assets/images/de/effizientes-dokumentieren/attributvalidierung-und-pflichtfelder/vup-1.png)
 
-Nun stehen dir die Attribute der Kategorie zur [Konfiguration der Validierung](../administration/verwaltung/datenansicht/attribut-einstellungen.md#verwendung) bereit. Mit einem Haken der im Kästchen **Pflichtfeld** kannst du eine Eingabe in dieses Feld durch die Benutzer voraussetzen. Es ist nicht möglich, die Kategorie zu speichern, wenn das Feld leer ist. Die Kennzeichnung in der Kategorie erfolgt über ein rotes Sternchen (\*) neben der Bezeichnung des Attributs.
+Nun stehen dir die Attribute der Kategorie zur [Konfiguration der Validierung](../administration/verwaltung/datenansicht/attribut-einstellungen.md#verwendung) bereit. Mit einem Haken im Kästchen **Pflichtfeld** kannst du eine Eingabe in dieses Feld durch die Benutzer voraussetzen. Es ist nicht möglich, die Kategorie zu speichern, wenn das Feld leer ist. Die Kennzeichnung in der Kategorie erfolgt über ein rotes Sternchen (\*) neben der Bezeichnung des Attributs.
 
 Weiterhin kannst du angeben, ob das Attribut in deiner [IT-Dokumentation](../grundlagen/struktur-it-dokumentation.md) eindeutig sein muss, also maximal einmal vorhanden sein darf. Dies erfolgt über folgende Schaltflächen:
 
