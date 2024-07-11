@@ -488,6 +488,7 @@ nav:
       - Kundenportal: administration/kundenportal.md
       - Troubleshooting:
           - administration/troubleshooting/index.md
+          - Bekannte update Probleme: administration/troubleshooting/bekannte-update-probleme.md
           - Lost link to database: administration/troubleshooting/lost-link-to-database.md
           - MySQL-Server has gone away: administration/troubleshooting/mysql-server-has-gone-away.md
           - Can not create table idoit_data.table_name: administration/troubleshooting/cant-create-table.md
