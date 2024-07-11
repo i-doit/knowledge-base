@@ -16,7 +16,7 @@ Du findest die Template-Funktion in i-doit unter **Extras → Templates**. Hier 
 
 ## Konfiguration
 
-Unter **Verwaltung → [Mandanten-Name] Verwaltung → Templates** können Einstellungen zu Templates getätigt werden. Mit der Aktivierung des Template-Filters ist es möglich, Templates in den [Objekt-Listen](../grundlagen/objekt-liste/index.md) anzuzeigen. Wenn du innerhalb einer Objektliste den Status-Filter auf Template stellst, werden dir hier alle Templates, die diesem [Objekttyp](../grundlagen/struktur-it-dokumentation.md) zugehörig sind, angezeigt.
+Unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Templates** können Einstellungen zu Templates getätigt werden. Mit der Aktivierung des Template-Filters ist es möglich, Templates in den [Objekt-Listen](../grundlagen/objekt-liste/index.md) anzuzeigen. Wenn du innerhalb einer Objektliste den Status-Filter auf Template stellst, werden dir hier alle Templates, die diesem [Objekttyp](../grundlagen/struktur-it-dokumentation.md) zugehörig sind, angezeigt.
 
 [![templates-anzeigen](../assets/images/de/effizientes-dokumentieren/templates/2-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/2-temp.png)
 
@@ -43,6 +43,8 @@ Hier wirst du zuerst aufgefordert, grundlegende Informationen zu deinen neuen Ob
 Im Abschnitt **Template(s) wählen** kannst du nun festlegen, welches Template oder welche Templates für die Erzeugung der Objekte verwendet werden sollen. Wähle die gewünschten Templates im Drop-Down-Menü aus und füge diese nacheinander über die Schaltfläche **Ausgewähltes Template verwenden** hinzu. Informationen mehrerer Templates werden in jedem Objekt kombiniert.
 
 [![templates Objekt erzeugen](../assets/images/de/effizientes-dokumentieren/templates/5-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/5-temp.png)
+
+!!! info "Die Platzhalter können über den :fontawesome-regular-circle-question: angezeigt werden."
 
 ## Aufrufen der Template-Funktionen aus einer Objektliste
 

@@ -6,17 +6,17 @@ status:
 lang: en
 ---
 
-i-doit allows you to create objects that can serve as templates for the creation of new [objects](../glossary.md). You can create a great amount of objects with identical [attributes](../glossary.md), for example servers using the same hardware, in a simplified procedure.
+i-doit allows you to create objects that can serve as templates for the creation of new [objects](../basics/structure-of-the-it-documentation.md). You can create a great amount of objects with identical [attributes](../basics/structure-of-the-it-documentation.md), for example servers using the same hardware, in a simplified procedure.
 
 ## Usage
 
-You will find the template function in i-doit at **Extras → CMDB → Templates**. Here it is possible to view and edit existing templates as well as to create new templates and generate objects via templates.
+You will find the template function in i-doit at **Extras → Templates**. Here it is possible to view and edit existing templates as well as to create new templates and generate objects via templates.
 
 [![Usage](../assets/images/en/efficient-documentation/templates/1-te.png)](../assets/images/en/efficient-documentation/templates/1-te.png)
 
 ## Configuration
 
-The settings for templates can be configured at **Administration → General settings → Template configuration**. It is possible to display templates in the [object lists](../basics/object-list/index.md) by activating the template filter. When you set the status filter within an object list to "Template", all templates associated with this [object type](../basics/structure-of-the-it-documentation.md) will be shown.
+The settings for templates can be configured at **Administration → [Tenant-name] management → Settings for [Tenant-name] → Templates**. It is possible to display templates in the [object lists](../basics/object-list/index.md) by activating the template filter. When you set the status filter within an object list to "Template", all templates associated with this [object type](../basics/structure-of-the-it-documentation.md) will be shown.
 
 [![Configuration](../assets/images/en/efficient-documentation/templates/2-te.png)](../assets/images/en/efficient-documentation/templates/2-te.png)
 
@@ -43,6 +43,8 @@ Here you will be asked to enter basic information about your new objects. In the
 You can now determine which template(s) are to be used for the creation of objects in the section **Choose template(s)**. Select the desired templates in the drop-down menu and add these one after another via the **Use selected template** button. Information of multiple templates will be combined in each object.
 
 [![Generating Objects from Templates](../assets/images/en/efficient-documentation/templates/5-te.png)](../assets/images/en/efficient-documentation/templates/5-te.png)
+
+!!! info "The placeholders can be displayed using the :fontawesome-regular-circle-question:."
 
 ## Open the Template Function from an Object List
 
