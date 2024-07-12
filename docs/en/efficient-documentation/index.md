@@ -6,7 +6,7 @@ In the beginning, when you start to deal with the structure of i-doit, you will 
 *   [Mass Change](./mass-change.md)
 *   [Duplicate Objects](./duplicate-objects.md)
 *   [Templates](./templates.md)
-*   [Validation and Mandatory Fields](./validation-and-mandatory-fields.md)
+*   [Attribute validation and Mandatory Fields](./attribute-validation-and-mandatory-fields.md)
 *   [Rights Management](./rights-management/index.md)
 *   [Search](./search.md)
 *   [Object Lock](./object-lock.md)
