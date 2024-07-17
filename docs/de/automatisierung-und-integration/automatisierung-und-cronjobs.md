@@ -8,7 +8,7 @@ In diesem Abschnitt zeigen wir Ihnen, wie Sie über die Aufgabenplanung unter Wi
 
 In unserem Beispiel zur Aufgabenplanung für i-doit unter Windows benutzen wir eine i-doit Instanz, welche mit dem [i-doit Windows Installer](../installation/manuelle-installation/microsoft-windows-server/index.md) aufgesetzt wurde.
 
-??? info "Falls Sie i-doit über XAMPP installiert haben, müssen Sie ggf. die Pfade in der Batch Datei für die console.php oder php.exe anpassen."
+!!! warning "Falls Sie i-doit über XAMPP installiert haben, müssen Sie die Pfade in der Batch Datei für die console.php und php.exe anpassen."
 
 ### Erstellen einer Batch Datei
 
@@ -38,7 +38,7 @@ C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\consol
 C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\console.php notifications-send --user %IDOIT_USERNAME% --password %IDOIT_PASSWORD% --tenantId %TENANT_ID%
 ```
 
-??? info "Der Benutzername, das Passwort und die TenantID müssen eventuell angepasst werden"
+!!! info "Der Benutzername, das Passwort und die TenantID müssen eventuell angepasst werden"
 
 ### JDisc import und LDAP sync automatisieren
 
