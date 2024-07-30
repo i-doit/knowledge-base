@@ -80,6 +80,17 @@ It is possible to create a Object with only the view right.
 
 ### Using Forms to create an object bypasses validation "unique" check (AOF-54)
 
-??? info "The only exception to unique checks are IPv4 addresses"
+!!! info "The only exception to unique checks are IPv4 addresses"
 
 [forms_1.2_hotfix_AOF-54-43.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2_hotfix_AOF-54-43.zip){ .md-button .md-button--primary }
+
+## Workflow
+
+### Workflow Checklist is inaccessible after workflow is accepted
+
+??? info "Error message found in the Webserver logs"
+    ```
+    Something went wrong while executing the current action/component with message: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
+    ```
+
+[workflow_1.2_1.3_hotfix_WORKFLOW-52_21fd9c0.zip :material-file-download:](../../assets/downloads/hotfixes/workflow/workflow_1.2_1.3_hotfix_WORKFLOW-52_21fd9c0.zip){ .md-button .md-button--primary }

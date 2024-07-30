@@ -2,7 +2,7 @@
 title: Download Center
 description: Download Center
 #icon: material/
-status: new
+status:
 lang: en
 ---
 

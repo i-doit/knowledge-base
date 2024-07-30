@@ -5,12 +5,12 @@ Markdown ~= 3.6
 mkdocs == 1.6.0
 mkdocs-git-revision-date-localized-plugin ~= 1.2.6
 mkdocs-macros-plugin ~= 1.0.5
-mkdocs-material == 9.5.28
+mkdocs-material == 9.5.30
 mkdocs-minify-plugin ~= 0.8.0
 mkdocs-video ~= 1.5.0
 pip-audit == 2.7.3
 Pygments ~= 2.18.0
-pymdown-extensions ~= 10.8
-PyOpenSSL ~= 24.1.0
+pymdown-extensions ~= 10.9
+PyOpenSSL ~= 24.2.1
 wheel ~= 0.43.0
 yamllint == 1.35.1
