@@ -72,6 +72,12 @@ It is possible to create a Object with only the view right.
 
 [i-doit_32_hotfix_ID-10972_29ef713.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10972_29ef713.zip){ .md-button .md-button--primary }
 
+### CSV export with symbols (ID-10758)
+
+Exporting a object list as csv includes special symbols.
+
+[i-doit_32_hotfix_ID-10758_b26033c.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10758_b26033c.zip){ .md-button .md-button--primary }
+
 ## Forms Add-on 1.2.0
 
 ### Object is not created when a attribute validation is used and no error is displayed
