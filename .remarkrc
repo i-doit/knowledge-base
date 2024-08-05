@@ -23,7 +23,6 @@
                 "length": 100
             }
         ],
-        "remark-lint-no-repeat-punctuation",
         "remark-lint-no-trailing-spaces",
         "remark-preset-lint-consistent",
         "remark-preset-lint-recommended"
