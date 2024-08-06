@@ -4,7 +4,7 @@ Now that you are familiar with the [structure of the IT documentation](structure
 
 ## Overview
 
-Each attribute which can be edited is represented by a form field. This applies both to the standard categories and the [custom categories](./custom-categories.md). Almost every attribute field can be [declared as mandatory field and/or assigned with validation options](../efficient-documentation/validation-and-mandatory-fields.md).
+Each attribute which can be edited is represented by a form field. This applies both to the standard categories and the [custom categories](./custom-categories.md). Almost every attribute field can be [declared as mandatory field and/or assigned with validation options](../efficient-documentation/attribute-validation-and-mandatory-fields.md).
 
 [![Overview](../assets/images/en/basics/attribute-fields/1-af.png)](../assets/images/en/basics/attribute-fields/1-af.png)
 
@@ -116,16 +116,16 @@ When you select the referenced object via radio buttons, you can only make a sin
 
 There are several tabs in the upper part of the window:
 
-- **Object View**:<br> The object view is sorted by filters. If the right object is missing, you can create it with the **Create new object** button. Filters:<br>
-    - **by object type**:<br> First you select the object type, then the object or objects.
-    - **by object groups**:<br> If you use the object type **object-group**, objects can be listed per **object-group**.
-    - **by person groups**:<br> All **persons** are listed per **person group**.
-    - **by relations**:<br> All relationship objects are listed, whereby you initially have to choose the type of relationship.
-    - **by date**:<br> Objects are sorted by date. You have the following options: **newly created, newly updated, created this month, created last month**.
-- **Location view**:<br> The location in the tree with all its paths is created, from here you can select the right object.
-- **Search**:<br> Here you can [search](../efficient-documentation/search.md) for objects by means of object titles.
-- **Reports**:<br> Objects are listed with help of already created [reports](../evaluation/report-manager.md).
-- **Selected objects**:<br> In this tab all selected objects are displayed. Via the button **Create new object-group from selection** you can create an object of the type object group which is then filled with your selection of objects.
+-   **Object View**:<br> The object view is sorted by filters. If the right object is missing, you can create it with the **Create new object** button. Filters:<br>
+    -   **by object type**:<br> First you select the object type, then the object or objects.
+    -   **by object groups**:<br> If you use the object type **object-group**, objects can be listed per **object-group**.
+    -   **by person groups**:<br> All **persons** are listed per **person group**.
+    -   **by relations**:<br> All relationship objects are listed, whereby you initially have to choose the type of relationship.
+    -   **by date**:<br> Objects are sorted by date. You have the following options: **newly created, newly updated, created this month, created last month**.
+-   **Location view**:<br> The location in the tree with all its paths is created, from here you can select the right object.
+-   **Search**:<br> Here you can [search](../efficient-documentation/search.md) for objects by means of object titles.
+-   **Reports**:<br> Objects are listed with help of already created [reports](../evaluation/report-manager.md).
+-   **Selected objects**:<br> In this tab all selected objects are displayed. Via the button **Create new object-group from selection** you can create an object of the type object group which is then filled with your selection of objects.
 
 All current modifications are listed in the log.
 

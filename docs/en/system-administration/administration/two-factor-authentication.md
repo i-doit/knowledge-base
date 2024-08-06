@@ -2,7 +2,7 @@
 title: Two-factor Authentication administration
 description: Two-factor Authentication administration
 icon: material/two-factor-authentication
-status: new
+status:
 lang: en
 ---
 

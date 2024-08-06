@@ -127,6 +127,7 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 32: versionshistorie/release-notes/release-notes-32.md
           - Release Notes 31: versionshistorie/release-notes/release-notes-31.md
           - Release Notes 30: versionshistorie/release-notes/release-notes-30.md
           - Release Notes 29: versionshistorie/release-notes/release-notes-29.md
@@ -153,6 +154,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 32: versionshistorie/changelogs/changelog-32.md
           - Changelog 31: versionshistorie/changelogs/changelog-31.md
           - Changelog 30: versionshistorie/changelogs/changelog-30.md
           - Changelog 29: versionshistorie/changelogs/changelog-29.md
@@ -299,7 +301,7 @@ nav:
       - Sicherheit und Schutz: wartung-und-betrieb/sicherheit-und-schutz.md
   - Upgrades und Umzüge:
       - upgrades-und-umzuege/index.md
-      - Update Anleitung i-doit 1.7.4 bis 1.19: upgrades-und-umzuege/update-anleitung-1.7.4-bis-1.19.md
+      - Update Anleitung i-doit 1.7.4 bis 31: upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md
       - Upgrade von i-doit open auf pro: upgrades-und-umzuege/upgrade-von-open-auf-pro.md
       - Update von i-doit open 1.4.8 auf 1.8: upgrades-und-umzuege/update-von-open-1.4.8-auf-1.8.md
       - Upgrade zu MySQL 5.6 oder MariaDB 10.0: upgrades-und-umzuege/upgrade-zu-mysql-5.6-oder-mariadb-10.0.md
@@ -330,7 +332,6 @@ nav:
       - Eindeutige Referenzierungen: grundlagen/eindeutige-referenzierungen.md
       - Web GUI: grundlagen/web-gui.md
       - Benutzerdefinierte Zähler: grundlagen/benutzerdefinierte-zaehler.md
-      - Attributsichtbarkeit: grundlagen/attributsichtbarkeit.md
   - Benutzerauthentifizierung und Verwaltung:
       - benutzerauthentifizierung-und-verwaltung/index.md
       - Integrierte Authentifizierung:
@@ -362,7 +363,7 @@ nav:
       - Massenänderung: effizientes-dokumentieren/massenaenderung.md
       - Objekte Duplizieren: effizientes-dokumentieren/objekte-duplizieren.md
       - Templates: effizientes-dokumentieren/templates.md
-      - Validierung und Pflichtfelder: effizientes-dokumentieren/validierung-und-pflichtfelder.md
+      - Attributvalidierung und Pflichtfelder: effizientes-dokumentieren/attributvalidierung-und-pflichtfelder.md
       - Rechteverwaltung:
           - effizientes-dokumentieren/rechteverwaltung/index.md
           - CMDB (Rechteverwaltung): effizientes-dokumentieren/rechteverwaltung/cmdb.md
@@ -411,6 +412,7 @@ nav:
           - ((OTRS)) Community Edition Help Desk: automatisierung-und-integration/service-desk/otrscommunity-help-desk.md
           - Zammad: automatisierung-und-integration/service-desk/zammad.md
       - SNMP: automatisierung-und-integration/snmp.md
+      - Aufgabenplanung & Cron Jobs: automatisierung-und-integration/automatisierung-und-cronjobs.md
   - Administration:
       - administration/index.md
       - Verwaltung:
@@ -438,7 +440,7 @@ nav:
           - Datenansicht:
               - administration/verwaltung/datenansicht/index.md
               - Objekt-Browser konfigurieren: administration/verwaltung/datenansicht/objekt-browser-konfigurieren.md
-              - Attribute verstecken: administration/verwaltung/datenansicht/attribute-verstecken.md
+              - Attribut Einstellungen: administration/verwaltung/datenansicht/attribut-einstellungen.md
               - Sprachprofile: administration/verwaltung/datenansicht/sprachprofile.md
               - Kategorieordner: administration/verwaltung/datenansicht/kategorieordner.md
           - Vordefinierte Inhalte:
@@ -446,7 +448,6 @@ nav:
               - CMDB Status: administration/verwaltung/vordefinierte-inhalte/cmdb-status.md
               - Kontaktzuweisungsrollen: administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen.md
               - Benutzerdefinierte Zähler: administration/verwaltung/vordefinierte-inhalte/benutzerdefinierte-zaehler.md
-              - Daten Validierung: administration/verwaltung/vordefinierte-inhalte/daten-validierung.md
               - Dialog admin: administration/verwaltung/vordefinierte-inhalte/dialog-admin.md
               - Objektbeziehungsarten: administration/verwaltung/vordefinierte-inhalte/objekt-beziehungsarten.md
               - QR Code: administration/verwaltung/vordefinierte-inhalte/qr-code.md
@@ -489,6 +490,7 @@ nav:
       - Kundenportal: administration/kundenportal.md
       - Troubleshooting:
           - administration/troubleshooting/index.md
+          - Bekannte update Probleme: administration/troubleshooting/bekannte-update-probleme.md
           - Lost link to database: administration/troubleshooting/lost-link-to-database.md
           - MySQL-Server has gone away: administration/troubleshooting/mysql-server-has-gone-away.md
           - Can not create table idoit_data.table_name: administration/troubleshooting/cant-create-table.md
@@ -503,6 +505,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
           - Hotfix Archiv:
               - administration/hotfixes/hotfix-archiv/index.md
+              - Version 31: administration/hotfixes/hotfix-archiv/v31.md
               - Version 30: administration/hotfixes/hotfix-archiv/v30.md
               - Version 29: administration/hotfixes/hotfix-archiv/v29.md
               - Version 28: administration/hotfixes/hotfix-archiv/v28.md

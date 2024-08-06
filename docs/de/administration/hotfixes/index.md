@@ -1,6 +1,6 @@
 # Hotfixes
 
-!!! success "Hotfixes für Version **31**"
+!!! success "Hotfixes für Version **32**"
 
 Ein Hotfix beseitigt einen bestimmten Fehler und werden in der Regel als ZIP-Datei zur Verfügung gestellt. Die ZIP-Datei wird im **Installationsverzeichnis** von i-doit entpackt. Die Abfrage, ob Dateien beim Entpacken überschrieben werden sollen, muss bestätigt werden.
 
@@ -40,60 +40,43 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
-### JDisc updates archived objects (ID-10889)
+### JDisc-Group filter is ignored (ID-11007)
 
-[i-doit_31_hotfix_ID-10889.zip_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10889.zip){ .md-button .md-button--primary }
-<!---- for i-doit 32 release
-[i-doit_32_hotfix_ID-10889.zip_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10889.zip){ .md-button .md-button--primary }
--->
+[i-doit_32_hotfix_ID-11007.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11007.zip){ .md-button .md-button--primary }
 
-### Altering data in Network > Port entry which has a Interface assigned are not saved (ID-10853)
-
-[i-doit_31_hotfix_ID-10853_b9ee2aa.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10853_b9ee2aa.zip){ .md-button .md-button--primary }
-
-### Creating a new connection at category Network listener does not create a new connection (ID-10884)
-
-[i-doit_31_hotfix_ID-10884_ddb80db.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10884_ddb80db.zip){ .md-button .md-button--primary }
-
-### Migration error when updating (ID-10808)
-
-Is used for doing the update from 29 or 30 to 31. Unzip File and do the Update.
-Do **not** download the update package again, this would override the Hotfix.
+### HTTP 500 error when a object is added via object browser (ID-10993)
 
 ??? info "Error message found in the Webserver logs"
-    ```log
-    Fatal error: Uncaught TypeError: getDefaultConfiguration(): Argument #1 ($className) must be of type string, null given, called in
+    ```
+    [Thu Jul 11 07:57:26.093062 2024] [proxy_fcgi:error] [pid 1568446] [client 10.0.8.6:54078] AH01071: Got error 'PHP message: PHP Fatal error:  Uncaught TypeError:
+    isys_cmdb_action_category::fetchEntryId(): Return value must be of type ?int, string returned in
+    /var/www/html/testinstance/src/classes/modules/cmdb/action/isys_cmdb_action_category.class.php:100
     ```
 
-[i-doit_29-30_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/29/i-doit_29-30_hotfix_ID-10808.zip){ .md-button .md-button--primary }
-[i-doit_30-31_hotfix_ID-10808.zip :material-file-download:](../../assets/downloads/hotfixes/30/i-doit_30-31_hotfix_ID-10808.zip){ .md-button .md-button--primary }
+[i-doit_32_hotfix_ID-10993_976e0c2.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10993_976e0c2.zip){ .md-button .md-button--primary }
 
-### HTTP 500 error when creating a document or a revision (ID-10831)
+### PHP error when importing from JDisc (ID-10991)
 
 ??? info "Error message found in the Webserver logs"
-    ```log
-    Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: isys_cmdb_dao_category_property::getConstantFromRange(): Argument #1 ($constant) must be of type string, null given
+    ```
+    PHP Fatal error: Uncaught TypeError: idoit\Module\Cmdb\Component\CategoryChanges\Data\ChangesData::setObjectId():
+    Argument #1 ($objectId) must be of type int, null given, called in /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Data/ChangesData.php on line 71
+    and defined in /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Data/ChangesData.php:37
     ```
 
-[i-doit_31_hotfix_ID-10831.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10831.zip){ .md-button .md-button--primary }
+[i-doit_32_hotfix_ID-10991.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10991.zip){ .md-button .md-button--primary }
 
-### Counter skips a number when duplicating objects (ID-10763)
+### View right for objects of a type allows to create a unfinished object (ID-10972)
 
-[i-doit_31_hotfix_ID-10763.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10763.zip){ .md-button .md-button--primary }
+It is possible to create a Object with only the view right.
 
-### List editing Ports does not select Default VLAN (ID-10762)
+[i-doit_32_hotfix_ID-10972_29ef713.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10972_29ef713.zip){ .md-button .md-button--primary }
 
-[i-doit_31_hotfix_ID-10762.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10762.zip){ .md-button .md-button--primary }
+### CSV export with symbols (ID-10758)
 
-### Exporting a object list via csv has no results (ID-10798)
+Exporting a object list as csv includes special symbols.
 
-[i-doit_31_hotfix_ID-10798.zip :material-file-download:](../../assets/downloads/hotfixes/31/i-doit_31_hotfix_ID-10798.zip){ .md-button .md-button--primary }
-
-## API
-
-### API is using report query from db instead of creating the query new which leads to wrong results (API-496)
-
-[api_2.0.1_hotfix_API-496.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.0.1_hotfix_API-496.zip){ .md-button .md-button--primary }
+[i-doit_32_hotfix_ID-10758_b26033c.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10758_b26033c.zip){ .md-button .md-button--primary }
 
 ## Forms Add-on 1.2.0
 
@@ -101,12 +84,19 @@ Do **not** download the update package again, this would override the Hotfix.
 
 [forms_1.2.0_hotfix_AOF-38_69144fc.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2.0_hotfix_AOF-38_69144fc.zip){ .md-button .md-button--primary }
 
-### Using Forms to create an object bypasses validation "unique" check
+### Using Forms to create an object bypasses validation "unique" check (AOF-54)
 
-[forms_1.2_hotfix_AOF-43_1100aa5.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2_hotfix_AOF-43_1100aa5.zip){ .md-button .md-button--primary }
+!!! info "The only exception to unique checks are IPv4 addresses"
 
-## Workflow Add-on 1.2
+[forms_1.2_hotfix_AOF-54-43.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2_hotfix_AOF-54-43.zip){ .md-button .md-button--primary }
 
-### Workflow Add-on User Permissions are not available
+## Workflow
 
-[workflow_1.2_workflow-51_b54b344.zip :material-file-download:](../../assets/downloads/hotfixes/workflow/workflow_1.2_workflow-51_b54b344.zip){ .md-button .md-button--primary }
+### Workflow Checklist is inaccessible after workflow is accepted
+
+??? info "Error message found in the Webserver logs"
+    ```
+    Something went wrong while executing the current action/component with message: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
+    ```
+
+[workflow_1.2_1.3_hotfix_WORKFLOW-52_21fd9c0.zip :material-file-download:](../../assets/downloads/hotfixes/workflow/workflow_1.2_1.3_hotfix_WORKFLOW-52_21fd9c0.zip){ .md-button .md-button--primary }

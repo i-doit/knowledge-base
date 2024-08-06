@@ -53,15 +53,16 @@ Workflows can also be displayed in the object via the **Workflows** category. Th
 Releases
 --------
 
-| Version | Datum | Changelog |
-| --- | --- | --- |
-| 1.2 | 2023-11-07 | [Task] Use new routes to display object and object type images / move add-on related files |
-| 1.1.1 | 2023-08-22 | [Improvement] PHP 8.1 Compatibility |
-| 1.1 | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility |
-| 1.0.6 | 2022-07-27 | [Bug] Error message when a workflow is accepted  <br>[Bug] The frequency of checklists cannot be used because the value is not saved |
-| 1.0.5 | 2021-01-18 | [Improvement] Compatibility with i-doit 1.16 |
-| 1.0.4 | 2020-08-10 | [Bug] Only the creator of a checklist is able to edit it |
-| 1.0.3 | 2019-07-05 | [Bug] Error Update Workflow Add-on 1.0.2 |
-| 1.0.2 | 2019-05-20 | [Bug] I-doit is also displayed in the sidebar via My-doit link<br>[Bug] Console.php command workflows-process<br>[Bug] ModuleID is missing in the notification<br>[Bug] ModuleID is missing in the links of the Workflow category to the module |
-| 1.0.1 | 2019-01-09 | [Bug] I-doit is also displayed in the sidebar |
-| 1.0 | 2018-12-17 | [Improvement] Add-onizing the workflows |
+| Version | Datum      | Changelog                                                                                                                                                                                                                                       |
+| ------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.3     | 2024-07-09 | [Bug] Workflow Add-on User Permissions are not available<br>[Bug] This task is part of the following checklist link does not work<br>[Bug] Dependent tasks are not displayed in checklists                                                      |
+| 1.2     | 2023-11-07 | [Task] Use new routes to display object and object type images / move add-on related files                                                                                                                                                      |
+| 1.1.1   | 2023-08-22 | [Improvement] PHP 8.1 Compatibility                                                                                                                                                                                                             |
+| 1.1     | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility                                                                                                                                                                                   |
+| 1.0.6   | 2022-07-27 | [Bug] Error message when a workflow is accepted  <br>[Bug] The frequency of checklists cannot be used because the value is not saved                                                                                                            |
+| 1.0.5   | 2021-01-18 | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                                    |
+| 1.0.4   | 2020-08-10 | [Bug] Only the creator of a checklist is able to edit it                                                                                                                                                                                        |
+| 1.0.3   | 2019-07-05 | [Bug] Error Update Workflow Add-on 1.0.2                                                                                                                                                                                                        |
+| 1.0.2   | 2019-05-20 | [Bug] I-doit is also displayed in the sidebar via My-doit link<br>[Bug] Console.php command workflows-process<br>[Bug] ModuleID is missing in the notification<br>[Bug] ModuleID is missing in the links of the Workflow category to the module |
+| 1.0.1   | 2019-01-09 | [Bug] I-doit is also displayed in the sidebar                                                                                                                                                                                                   |
+| 1.0     | 2018-12-17 | [Improvement] Add-onizing the workflows                                                                                                                                                                                                         |
