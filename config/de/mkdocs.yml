@@ -57,7 +57,6 @@ plugins:
       lang: de
   - minify:
       minify_html: true
-  - mkdocs-video
 markdown_extensions:
   - abbr
   - admonition
@@ -276,8 +275,7 @@ nav:
           - Debian GNU/Linux:
               - Debian 12: installation/manuelle-installation/debian12.md
           - Red Hat Enterprise Linux (RHEL):
-              - RHEL 9.x: installation/manuelle-installation/red-hat-enterprise-linux/index.md
-              - RHEL 8.x: installation/manuelle-installation/red-hat-enterprise-linux/rhel8.md
+            - installation/manuelle-installation/red-hat-enterprise-linux/index.md
           - Suse Linux Enterprise Server (SLES): installation/manuelle-installation/suse-linux-enterprise-server.md
           - Ubuntu GNU/Linux:
               - installation/manuelle-installation/ubuntu-linux/index.md
