@@ -43,7 +43,7 @@ Zunächst werden erste Pakete aus den Standard-Repositories aktualisiert:
 sudo dnf update
 ```
 
-Installieren von PHP 8.2 und MariaDB als Module Stream:
+Installieren von PHP 8.2 und MariaDB über Module Stream:
 
 ```sh
 sudo dnf module enable php:8.2 mariadb:10.11 -y
