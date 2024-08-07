@@ -31,7 +31,7 @@ uname -m
 Auf einem aktuell gehaltenen System werden
 
 *   der **Apache** HTTP Server 2.4,
-*   die Script-Sprache **PHP** 8.2,
+*   die Script-Sprache **PHP-FPM** 8.2,
 *   das Datenbankmanagementsystem **MariaDB** 10.11 und
 *   der Caching-Server **memcached**
 
@@ -337,7 +337,7 @@ Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, si
 mysql_secure_installation
 ```
 
-Anschließend wird MariaDB gestoppt. Wichtig ist hierbei das Verschieben von nicht benötigten Dateien (andernfalls droht ein signifikanter Performance-Verlust):
+Anschließend wird MariaDB gestoppt und auf [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown) gesetzt:
 
 ```sh
 mysql -u root -p -e"SET GLOBAL innodb_fast_shutdown = 0"
