@@ -30,14 +30,14 @@ uname -m
 
 Auf einem aktuell gehaltenen System werden
 
-*   der **Apache** HTTP Server 2.4,
+*   der **Apache** Webserver 2.4,
 *   die Script-Sprache **PHP** 8.2,
 *   das Datenbankmanagementsystem **MariaDB** 10.11 und
 *   der Caching-Server **memcached**
 
 installiert.
 
-Zunächst werden erste Pakete aus den Standard-Repositories aktualisiert:
+Doch zunächst werden erste Pakete aus den Standard-Repositories aktualisiert:
 
 ```sh
 sudo dnf update
@@ -52,19 +52,19 @@ sudo dnf module install php:8.2 mariadb:10.11 -y
 Die Installation weiterer Pakete erfolgt danach:
 
 ```sh
-sudo dnf install httpd boost-program-options memcached unzip php php-{bcmath,cli,common,curl,gd,json,ldap,mbstring,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,xml,zip} -y
+sudo dnf install boost-program-options memcached unzip php php-{bcmath,cli,common,curl,gd,json,ldap,mbstring,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,xml,zip} -y
 ```
 
-Damit der Apache HTTP Server, MariaDB, PHP-FPM und memcached auch beim Booten gestartet werden, sind diese Befehle erforderlich:
+Damit der Apache Webserver und MariaDB beim Booten gestartet werden, sind diese Befehle erforderlich:
 
 ```sh
-sudo systemctl enable httpd mariadb php-fpm memcached
+sudo systemctl enable httpd.service mariadb.service memcached.service
 ```
 
-Anschließend erfolgt der Start der Dienste:
+Anschließend erfolgt der Start beider Dienste:
 
 ```sh
-sudo systemctl start httpd mariadb php-fpm memcached
+sudo systemctl start httpd.service mariadb.service memcached.service
 ```
 
 Weiterhin wird der Standard-Port 80 von HTTP über die Firewall erlaubt. Diese muss nach der Anpassung neu gestartet werden:
@@ -74,47 +74,48 @@ sudo firewall-cmd --permanent --add-service=http
 sudo systemctl restart firewalld.service
 ```
 
-!!! info "Für HTTPS müssen weitere Schritte durchgeführt werden die hier nicht behandelt werden, siehe [Sicherheit und Schutz](../../../wartung-und-betrieb/sicherheit-und-schutz.md)"
-
 ## Konfiguration
 
-Die installierten Pakete für Apache HTTP Server, PHP und MariaDB bringen bereits Konfigurationsdateien mit. Es empfiehlt sich, abweichende Einstellungen in gesonderten Dateien zu speichern, anstatt die vorhandenen Konfigurationsdateien anzupassen. Bei jedem Paket-Upgrade würden die abweichenden Einstellungen bemängelt oder überschrieben werden. Die Einstellungen der Standardkonfiguration werden durch die benutzerdefinierten ergänzt bzw. überschrieben.
+Die installierten Pakete für Apache Webserver, PHP und MariaDB bringen bereits Konfigurationsdateien mit. Es empfiehlt sich, abweichende Einstellungen in gesonderten Dateien zu speichern, anstatt die vorhandenen Konfigurationsdateien anzupassen. Bei jedem Paket-Upgrade würden die abweichenden Einstellungen bemängelt oder überschrieben werden. Die Einstellungen der Standardkonfiguration werden durch die benutzerdefinierten ergänzt bzw. überschrieben.
 
-### PHP-FPM Konfiguration
+### PHP
 
-Zunächst wird die alte Konfiguration deaktiviert:
-
-```sh
-sudo mv /etc/php-fpm.d/www.conf{,.bak}
-```
-
-und anschließend eine neue Datei erstellt und mit den Einstellungen befüllt:
+Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befüllt:
 
 ```sh
-sudo nano /etc/php-fpm.d/i-doit.conf
+sudo nano /etc/php.d/i-doit.ini
 ```
 
-!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/de/ini.core.php) vorbei"
 
 ```ini
-[i-doit]
-listen = /run/php-fpm/php-fpm.sock
-user = apache
-group = apache
-listen.owner = apache
-listen.group = apache
-pm = dynamic
-pm.max_children = 50
-pm.start_servers = 5
-pm.min_spare_servers = 5
-pm.max_spare_servers = 35
-security.limit_extensions = .php
+allow_url_fopen = Yes
+file_uploads = On
+magic_quotes_gpc = Off
+max_execution_time = 300
+max_file_uploads = 42
+max_input_time = 60
+max_input_vars = 10000
+memory_limit = 256M
+post_max_size = 128M
+register_argc_argv = On
+register_globals = Off
+short_open_tag = On
+upload_max_filesize = 128M
+display_errors = Off
+display_startup_errors = Off
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+log_errors = On
+default_charset = "UTF-8"
+default_socket_timeout = 60
+date.timezone = Europe/Berlin
+session.gc_maxlifetime = 604800
+session.cookie_lifetime = 0
+mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 
-Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
-
-Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
-
+Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.<br>
+Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.<br>
 Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
 Anschließend muss **php-fpm** neu gestartet werden:
@@ -125,14 +126,13 @@ sudo systemctl restart php-fpm.service
 
 ### Apache HTTP Server
 
-Der Default-VHost wird deaktiviert und ein neuer angelegt:
+Der Default-VHost wird beibehalten und ergänzt. Dazu wird eine neue Datei erstellt und bearbeitet:
 
 ```sh
-sudo a2dissite 000-default
 sudo nano /etc/httpd/conf.d/i-doit.conf
 ```
 
-Diese Datei erhält folgenden Inhalt:
+In dieser Datei wird die ergänzende gespeichert:
 
 ```apache
 <VirtualHost *:80>
@@ -148,9 +148,9 @@ Diese Datei erhält folgenden Inhalt:
 </VirtualHost>
 ```
 
-i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Damit diese Einstellungen berücksichtigt werden, ist die Einstellung **AllowOverride All** nötig.
+i-doit liefert abweichende Apache-Einstellungen in der **.htaccess** Datei mit. Damit diese Einstellungen berücksichtigt werden, ist die Einstellung **AllowOverride All** nötig.
 
-Im nächsten Schritt wird der Apache HTTP Server neu gestartet:
+Im nächsten Schritt wird der Apache Webserver neu gestartet:
 
 ```sh
 sudo systemctl restart httpd.service
@@ -196,44 +196,34 @@ Diese Datei enthält die neuen Konfigurationseinstellungen. **Für eine optimale
 #
 # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
 innodb_buffer_pool_size = 1G
-
 # Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
 innodb_buffer_pool_instances = 1
-
 # Redo log file size, the higher the better.
 # MySQL/MariaDB writes two of these log files in a default installation.
 innodb_log_file_size = 512M
-
 innodb_sort_buffer_size = 64M
 sort_buffer_size = 262144 # default
 join_buffer_size = 262144 # default
-
 max_allowed_packet = 128M
 max_heap_table_size = 32M
 query_cache_min_res_unit = 4096
 query_cache_type = 1
 query_cache_limit = 5M
 query_cache_size = 80M
-
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
-
 # Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
 innodb_thread_concurrency = 0
-
 # Disable this (= 0) if you have slow harddisks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
-
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
 # Only if your have MySQL 5.6 or higher, do not use with MariaDB!
 #table_open_cache_instances = 4
-
 innodb_stats_on_metadata = 0
-
 sql-mode = ""
 ```
 
