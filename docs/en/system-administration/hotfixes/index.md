@@ -50,7 +50,7 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
     ```
     [Thu Jul 11 07:57:26.093062 2024] [proxy_fcgi:error] [pid 1568446] [client 10.0.8.6:54078] AH01071: Got error 'PHP message: PHP Fatal error:  Uncaught TypeError:
     isys_cmdb_action_category::fetchEntryId(): Return value must be of type ?int, string returned in
-    /var/www/html/testinstance/src/classes/modules/cmdb/action/isys_cmdb_action_category.class.php:100
+    /var/www/html/src/classes/modules/cmdb/action/isys_cmdb_action_category.class.php:100
     ```
 
 [i-doit_32_hotfix_ID-10993_976e0c2.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10993_976e0c2.zip){ .md-button .md-button--primary }
@@ -78,7 +78,13 @@ Exporting a object list as csv includes special symbols.
 
 [i-doit_32_hotfix_ID-10758_b26033c.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10758_b26033c.zip){ .md-button .md-button--primary }
 
-## Forms Add-on 1.2.0
+## API Add-on
+
+### Reading category Contact via API does not respond with a contact data array (API-549)
+
+[api_2.1_hotfix_API-549_0e82df9.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.1_hotfix_API-549_0e82df9.zip){ .md-button .md-button--primary }
+
+## Forms Add-on
 
 ### Object is not created when a attribute validation is used and no error is displayed
 
@@ -90,7 +96,7 @@ Exporting a object list as csv includes special symbols.
 
 [forms_1.2_hotfix_AOF-54-43.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2_hotfix_AOF-54-43.zip){ .md-button .md-button--primary }
 
-## Workflow
+## Workflow Add-on
 
 ### Workflow Checklist is inaccessible after workflow is accepted
 
