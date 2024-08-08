@@ -82,7 +82,7 @@ As a rule, specific file and directory rights do not need to be set if the Apach
 
 ## Run the Setup
 
-_i-doit_ can be installed in two ways: Using the **web GUI** in a comfortable way (recommended for beginners) or via the [console](#) (to automate the installation for example).
+_i-doit_ can be installed in two ways: Using the **web GUI** in a comfortable way (recommended for beginners) or via the [console](#console) (to automate the installation for example).
 
 ### Web GUI
 
@@ -126,15 +126,10 @@ Important credentials and settings need to be entered for the database connectio
 -   **Start value for object/configuration item IDs:** Normally 1
 
 !!! tip "Unix Socket vs. Network Port"
-
     PHP is able to connect to MariaDB/MySQL in two ways: For one thing, per Unix Socket, and secondly via TCP/IP. For performance reasons we recommend using the Unix Socket. The use of the Unix Socket is enforced by entering the **localhost** value in the above mentioned host configuration. Other specifications (**127.0.0.1**, FQDN or the like) result in the use of TCP/IP.
-
     Usually, MariaDB/MySQL opens a Unix Socket when a service is started. In the **socket** settings you specify the path, an example under Debian GNU/Linux is `/var/run/mysqld/mysqld.sock`.  This value has to be known to PHP so that i-doit can establish a connection to MariaDB/MySQL.
-
     The corresponding PHP setting is `mysqli.default_socket`. When you have followed the installation instructions, you can supplement the created PHP configuration file by this setting, for example, `mysqli.default_socket = /var/run/mysqld/mysqld.sock`.
-
     Subsequent changes to the PHP settings will only become effective when the Apache HTTP Server service is restarted. Example for Debian GNU/Linux: `sudo systemctl reload apache2.service`
-
     This tip refers to Unix-like operating systems; it does not apply to Windows.
 
 #### Framework Configuration
@@ -151,7 +146,7 @@ In this step all prior steps are reviewed and checked to see if the setup can ta
 
 In this step, i-doit is actually installed on the system. After successful installation, a summary follows. Then i-doit can be called up and used.
 
-### Konsole
+### Console
 
 i-doit can be installed via the console using the supplied [console.php](../../automation-and-integration/cli/console/index.md): via a guided wizard or via a simple line that is suitable for automated installations. Both types are carried out within the **i-doit**\-directory:
 
@@ -171,7 +166,7 @@ sudo -u www-data php console.php install
 
 The wizard asks for some credentials and settings. Values in brackets are default values that are accepted by pressing **Enter**.
 
-A [Tenant](../../system-administration/multi-tenant.md) can then be created via the [Admin Center](../../administration/admin-center.md) or via the [console.php](../../automation-and-integration/cli/console/index.md).
+A [Tenant](../../system-administration/multi-tenant.md) can then be created via the [Admin Center](../../system-administration/admin-center.md) or via the [console.php](../../automation-and-integration/cli/console/index.md).
 
 ```shell
 sudo -u www-data php console.php create-tenant
@@ -183,7 +178,7 @@ sudo -u www-data php console.php create-tenant
 sudo -u www-data php console.php install --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --admin-password admincenterpw --no-interaction
 ```
 
-Nun wurde i-doit installiert. Wir benötigen noch einen [Mandant](../../administration/mandantenfaehigkeit.md). Diesen erstellen wir auch über die [console.php](../../automatisierung-und-integration/cli/console/index.md):
+Nun wurde i-doit installiert. Wir benötigen noch einen [Mandant](../../system-administration/multi-tenant.md). Diesen erstellen wir auch über die [console.php](../../automation-and-integration/cli/console/index.md):
 
 ```shell
 sudo -u www-data php console.php tenant-create --root-user mysqlrootuser --root-password mysqlrootpassword --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --no-interaction --title "CMDB"
