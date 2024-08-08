@@ -1,4 +1,10 @@
-# JDisc Discovery
+---
+title: JDisc Discovery
+description: JDisc Discovery
+icon:
+status:
+lang: en
+---
 
 [JDisc Discovery](http://www.jdisc.com/en/) makes an inventory of whole networks and recognizes all important operating systems (including HP-UX, Solaris and AIX). It recognizes hardware and software, IP networks, Windows domains and Active Directory. In addition, JDisc Discovery identifies all important virtualization technologies, as well as many cluster environments.
 
