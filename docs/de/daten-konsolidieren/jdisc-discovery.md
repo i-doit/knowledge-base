@@ -214,6 +214,6 @@ Aufruf aus dem i-doit Verzeichnis:
 sudo -u www-data php console.php import-jdisc -c jdisc.ini
 ```
 
-### JDisc-Verfügbarkeit Report
+### JDisc-Verfügbarkeit Report view
 
 Unter **Report Manager -> Views** ist ein Report mit dem Namen **JDisc-Verfügbarkeit** zu finden, der i-doit Objekte mit JDisc objekten vergleicht.

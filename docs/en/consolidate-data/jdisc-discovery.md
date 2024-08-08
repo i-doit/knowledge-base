@@ -18,13 +18,9 @@ This article addresses the interface between i-doit and JDisc Discovery.
 
 !!! info "JDisc WebService see [JDisc FAQ](https://jdisc.com/support/faq/)"
     > The WebService implements access to some JDisc Functionality using a SOAP interface on port 9000. However, with the new GraphQL-based API, the SOAP service is obsolete. I-Doit can access our GraphQL-API to perform the same tasks as with the WEB Service starting with i-doit Release 22.
-
     > Simply change the protocol in i-doit to HTTPS and use port 443 and then i-doit will use the GraphQL API and you can uninstall the obsolete WEB Service Add-On.
-
     > The GraphQL-API offers two major advantages:
-
     > It is using HTTPS by default (as with the WEB Service, HTTP was used by default)
-
     > It is a modern and powerful API that lets you automate everything in JDisc.
 
 ## Configuration
@@ -32,9 +28,6 @@ This article addresses the interface between i-doit and JDisc Discovery.
 The configuration of the interface is under **Administration → Import and interfaces → JDISC → JDisc configuration**. You can define any number of instances of JDisc Discovery. This allows complex inventory scenarios with separated networks.
 
 [![jdisc-discovery-interface](../assets/images/en/consolidate-data/jdisc-discovery/1-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/1-jd.png)
-
-!!! info "Archive outdated objects"
-    To archive objects that have not been seen by JDisc for a certain number of days, the threshold value and the threshold value unit must be set at **Administration → [Tenant name] management → Settings for [Tenant name] → JDisc**.
 
 ### Common Settings
 
@@ -52,10 +45,10 @@ After the parameters are saved, you can test the connection to the JDisc databas
 
 To archive objects that have not been seen by JDisc for a certain number of  e.g. X days, the threshold value and the threshold value unit must be set under **Administration → [Tenant name] management → Settings for [Tenant name] → JDisc**.
 
-| Parameter          | Anmerkung                                                                                                                                    |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Threshold**      | Eine Zahl einfügen. When the setting is defined, the objects have not been seen by JDisc within this time period will be archived on import. |
-| **Threshold unit** | Days, Weeks oder Month                                                                                                                       |
+| Parameter          | Anmerkung                                                                                                                |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| **Threshold**      | When the setting is defined, the objects have not been seen by JDisc within this time period will be archived on import. |
+| **Threshold unit** | Days, Weeks or Month                                                                                                     |
 
 ### Discovery Settings
 
@@ -65,8 +58,8 @@ The user can activate a scan with the configured JDisc instance with i-doit. For
 | ------------ | ------------------------------------------- |
 | **Username** | The account to be used for the web service. |
 | **Password** | Password for the account                    |
-| **Port**     | Default: **9000**                           |
-| **Protocol** | Default: **http**                           |
+| **Port**     | Default: **9000** for GraphQL **443**       |
+| **Protocol** | Default: **http** for GraphQL **https**     |
 
 After saving the parameters, you can test whether the configuration was successful with the **Check connection** button.
 
@@ -78,7 +71,7 @@ The JDisc profiles of i-doit provide the possibility to define the connection of
 
 The i-doit default installation already provides predefined profiles. Among these predefined profiles is the **Complete import** profile which has the purpose to import all data in i-doit which have been inventoried by JDisc.
 
-!!! note ""
+!!! note "Own profiles"
     Keep in mind that you would need to alter these profiles to fit your installation and available types of objects from JDisc mapped to i-doit object types.
 
 ### General Configuration
@@ -214,3 +207,7 @@ If we assume that the jdisc.ini is located in the i-doit root directory, then th
 ```shell
 sudo -u www-data php console.php import-jdisc -c jdisc.ini
 ```
+
+### JDisc availability Report view
+
+Under **Report Manager -> Views** you will find a report with the name **JDisc availability**, which compares i-doit objects with JDisc objects.
