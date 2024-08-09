@@ -78,6 +78,12 @@ Exporting a object list as csv includes special symbols.
 
 [i-doit_32_hotfix_ID-10758_b26033c.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10758_b26033c.zip){ .md-button .md-button--primary }
 
+### Adding #Number to a counter set for automatic inventory number creates a new custom counter when creating a object (ID-11073)
+
+Adding a #Number to a counter creates a new counter AND counters skip a count (2 -> 4 -> 6)
+
+[i-doit_32_hotfix_ID-11073_7be428b.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11073_7be428b.zip){ .md-button .md-button--primary }
+
 ## API Add-on
 
 ### Reading category Contact via API does not respond with a contact data array (API-549)
