@@ -1,4 +1,10 @@
-# Red Hat Enterprise Linux 8 (RHEL 8)
+---
+title: Red Hat Enterprise Linux 9.4
+description: i-doit installation auf RHEL 9.4
+icon: material/redhat
+status:
+lang: en
+---
 
 This article describes which packages need to be installed and configured.
 
@@ -6,128 +12,113 @@ This article describes which packages need to be installed and configured.
 
 The general [system requirements](../../system-requirements.md) apply.
 
-This article refers to **RHEL in version 8.x**
 To determine which version is used, this command can be executed on the console:
 
-```shell
+```sh
 cat /etc/os-release
 ```
 
 As system architecture a x86 in 64bit should be used:
 
-```shell
+```sh
 uname -m
 ```
 
 **x86_64** stands for 64bit, **i386** or **i686** only for 32bit.
 
-There are other operating systems that are closely related to RHEL, such as the open replica CentOS and Fedora, which is maintained by Red Hat. However, only RHEL is officially supported.
-
 ## Installation of the packages
 
 On a system that is up-to-date
 
--   the **Apache** web server 2.4,
--   the script language **PHP** 7.4,
--   the database management system **MariaDB** 10.5
+-   the **Apache** HTTP Server 2.4,
+-   the script language **PHP-FPM** 8.2,
+-   the database management system **MariaDB** 10.11 and
 -   the caching server **memcached**
-
-However, the current **version 8.x of RHEL** only contains obsolete packages that do not meet the system requirements.<br>
-It is therefore necessary to install current packages from other repositories.
-
-But be **careful** as third-repositories could endanger the stability of the operating system!
 
 At first the first packages are installed from the default repositories:
 
-```shell
+```sh
 sudo dnf update
-sudo dnf install httpd memcached unzip wget zip
 ```
 
-For PHP, the current Extra Packages for Enterprise Linux (EPEL) is included:
+Install PHP 8.2 and MariaDB via module stream:
 
-```shell
-sudo rpm --import https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-8
-sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+```sh
+sudo dnf module enable php:8.2 mariadb:10.11 -y
+sudo dnf module install php:8.2 mariadb:10.11 -y
 ```
 
-After the repository has been included, the possible versions are initialized and then the desired version can be activated (we use PHP 7.3 here):
+Further packages are installed afterwards:
 
-```shell
-sudo dnf module list php
-sudo dnf module install php:7.4 -y
+```sh
+sudo dnf install httpd boost-program-options memcached unzip php php-{bcmath,curl,gd,json,ldap,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,zip} -y
 ```
 
-The PHP packages are then installed:
+These commands are required so that the Apache HTTP server, MariaDB, PHP-FPM and memcached are also started at boot time:
 
-```shell
-sudo dnf install php php-bcmath php-cli php-common php-curl php-gd php-json php-ldap php-mysql php-pgsql php-soap php-xml php-zip
+```sh
+sudo systemctl enable httpd mariadb php-fpm memcached
 ```
 
-Furthermore, RHEL only offers outdated distribution packages for MariaDB. Therefore we use the official third party repository of MariaDB:
+The services are then started:
 
-```shell
-sudo nano /etc/yum.repos.d/MariaDB.repo
+```sh
+sudo systemctl start httpd mariadb php-fpm memcached
 ```
 
-Die Datei erhält folgenden Inhalt:
+Furthermore, the standard HTTP port 80 is permitted via the firewall. This must be restarted after the adjustment:
 
-```shell
-# MariaDB 10.5 RHEL repository list
-# http://downloads.mariadb.org/mariadb/repositories/
-[mariadb]
-name = MariaDB
-baseurl = http://yum.mariadb.org/10.5/rhel8-amd64
-module_hotfixes=1
-gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-gpgcheck=1
-```
-
-After that the packages are installed (Note: MariaDB needs the additional package boost-program-options for a clean installation):
-
-```shell
-sudo dnf install boost-program-options
-sudo dnf install MariaDB-server MariaDB-client --disablerepo=AppStream
-```
-
-These commands are required to start the Apache web server and MariaDB at boot time:
-
-```shell
-sudo systemctl enable httpd.service
-sudo systemctl enable mariadb.service
-sudo systemctl enable memcached.service
-```
-
-Both services are then started:
-
-```shell
-sudo systemctl start httpd.service
-sudo systemctl start mariadb.service
-sudo systemctl start memcached.service
-```
-
-Furthermore, the default port 80 of HTTP is allowed through the firewall. This must be restarted after the adjustment:
-
-```shell
+```sh
 sudo firewall-cmd --permanent --add-service=http
 sudo systemctl restart firewalld.service
 ```
 
+!!! info "For HTTPS, further steps must be carried out which are not covered here, see [Security and protection](../../../maintenance-and-operation/security-and-protection.md)"
+
 ## Configuration
 
-The installed packages for Apache Webserver, PHP and MariaDB already come with configuration files. It is recommended to store different settings in separate files instead of adapting the existing configuration files. Each time you upgrade the package, the different settings will be changed or overwritten. The settings of the standard configuration will be supplemented or overwritten by the user-defined ones.
+The installed packages for Apache HTTP Server, PHP and MariaDB already include configuration files. It is recommended to save deviating settings in separate files instead of adapting the existing configuration files. With every package upgrade, the deviating settings would be rejected or overwritten. The settings of the standard configuration are supplemented or overwritten by the user-defined settings.
 
-### PHP
+### PHP-FPM Configuration
 
-First a new file is created and filled with the necessary settings:
+First, the old configuration is deactivated by renaming it:
 
-```shell
+```sh
+sudo mv /etc/php-fpm.d/www.conf{,.bak}
+```
+
+and then create a new file and fill it with the settings:
+
+```sh
+sudo nano /etc/php-fpm.d/i-doit.conf
+```
+
+```ini
+[i-doit]
+listen = /var/run/php-fpm/i-doit.sock
+user = apache
+group = apache
+listen.owner = apache
+listen.group = apache
+pm = dynamic
+pm.max_children = 50
+pm.start_servers = 5
+pm.min_spare_servers = 5
+pm.max_spare_servers = 35
+security.limit_extensions = .php
+```
+
+### PHP Configuration
+
+First, a new file is created and filled with the necessary settings:
+
+```sh
 sudo nano /etc/php.d/i-doit.ini
 ```
 
-This file receives the following content:
+!!! example "This file contains the following content specified by us. For more information on the parameters, see [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php)"
 
-```shell
+```ini
 allow_url_fopen = Yes
 file_uploads = On
 magic_quotes_gpc = Off
@@ -153,142 +144,261 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 
-The value (in seconds) of `session.gc_maxlifetime` should be greater than or equal to the `session timeout` in the i-doit system settings.
+The `memory_limit` must be increased if necessary, e.g. for very large reports or extensive documents.
+The value (in seconds) of **session.gc_maxlifetime** should be greater than or equal to the **session timeout** in the [system settings](../system-settings.md) of i-doit.
+The **date.timezone** parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/de/timezones.php)).
 
-The parameter `date.timezone` should be adjusted to the local time zone (see [list of supported time zones](http://php.net/manual/en/timezones.php)).
+### Apache HTTP Server configuration
 
-The Apache Web server is then restarted:
+The Welcome Page is deactivated by renaming it:
 
-```shell
-sudo systemctl restart httpd.service
+```sh
+sudo mv /etc/httpd/conf.d/welcome.conf{,.bak}
 ```
 
-### Apache web server
+The default VirtualHost is deactivated and a new one is created:
 
-The default vhost is retained and added. A new file is created and edited:
-
-```shell
+```sh
+sudo mv /etc/php-fpm.d/www.conf{,.bak}
 sudo nano /etc/httpd/conf.d/i-doit.conf
 ```
 
-In this file the supplementary one is stored:
+This file contains the following content:
 
-```shell
+```ini
 DirectoryIndex index.php
-DocumentRoot /var/www/html/
-<Directory /var/www/html/>
-    AllowOverride All
-</Directory>
+DocumentRoot /var/www/html/i-doit
+
+<Directory /var/www/html/i-doit>
+    ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
+    AllowOverride FileInfo AuthConfig
+
+    ## Apache Web server configuration file for i-doit
+    ##
+    ## This file requires:
+    ##
+    ## - Apache HTTPD >= 2.4 with enabled modules:
+    ##   - rewrite
+    ##   - expires
+    ##   - headers
+    ##   - authz_core
+    ##
+    ## For performance and security reasons we put these settings
+    ## directly into the VirtualHost configuration and explicitly set
+    ## "AllowOverride FileInfo AuthConfig". After each i-doit update check if the .htaccess file, in the i-doit directory,
+    ## has changed and add the changes in the VirtualHost configuration.
+    ##
+    ## See the i-doit Knowledge Base for more details:
+    ## <https://kb.i-doit.com/>
+
+    ## Disable directory indexes:
+    Options -Indexes +SymLinksIfOwnerMatch
+
+    <IfModule mod_authz_core.c>
+        RewriteCond %{REQUEST_METHOD}  =GET
+        RewriteRule "^$" "/index.php"
+
+        ## Deny access to meta files:
+        <Files "*.yml">
+            Require all denied
+        </Files>
+
+        ## Deny access to hidden files:
+        <FilesMatch "^\.">
+            Require all denied
+        </FilesMatch>
+
+        ## Deny access to bash scripts:
+        <FilesMatch "^(controller|.*\.sh)$">
+            Require all denied
+        </FilesMatch>
+
+        ## Deny access to all PHP files…
+        <Files "*.php">
+            Require all denied
+        </Files>
+
+        ## Deny access to wrongly created config backup files like ...inc.php.0123123 instead of ...inc.012341.php
+        <FilesMatch "\.php\.\d+$">
+            Require all denied
+        </FilesMatch>
+
+        ## …except some PHP files in root directory:
+        <FilesMatch "^(index\.php|controller\.php|proxy\.php)$">
+            <IfModule mod_auth_kerb.c>
+                Require valid-user
+            </IfModule>
+            <IfModule !mod_auth_kerb.c>
+                Require all granted
+            </IfModule>
+        </FilesMatch>
+
+        ## …except some PHP files in src/:
+        <Files "jsonrpc.php">
+            Require all granted
+        </Files>
+
+        ## …except some PHP files in src/tools/php/:
+        <FilesMatch "^(rt\.php|barcode_window\.php|barcode\.php)$">
+            Require all granted
+        </FilesMatch>
+
+        ## …except some PHP files in src/tools/php/qr/:
+        <FilesMatch "^(qr\.php|qr_img\.php)$">
+            Require all granted
+        </FilesMatch>
+
+        ## …except some PHP files in src/tools/js/:
+        <FilesMatch "^js\.php$">
+            Require all granted
+        </FilesMatch>
+    </IfModule>
+
+    ## Deny access to some directories:
+    <IfModule mod_alias.c>
+        RedirectMatch 403 /imports/.*$
+        RedirectMatch 403 /log/.*$
+        RedirectMatch 403 /temp/.*(?<!\.(css|xsl))$
+        RedirectMatch 403 /upload/files/.*$
+        RedirectMatch 403 /upload/images/.*$
+        RedirectMatch 403 /vendor/.*$
+    </IfModule>
+
+    ## Cache static files:
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        # A2592000 = 30 days
+        ExpiresByType image/svg+xml A2592000
+        ExpiresByType image/gif A2592000
+        ExpiresByType image/png A2592000
+        ExpiresByType image/jpg A2592000
+        ExpiresByType image/jpeg A2592000
+        ExpiresByType image/ico A2592000
+        ExpiresByType text/css A2592000
+        ExpiresByType text/javascript A2592000
+        ExpiresByType image/x-icon "access 1 year"
+        ExpiresDefault "access 2 week"
+
+        <IfModule mod_headers.c>
+            Header append Cache-Control "public"
+        </IfModule>
+    </IfModule>
+
+    ## Pretty URLs:
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteRule favicon\.ico$ images/favicon.ico [L]
+        RewriteCond %{REQUEST_FILENAME} !-l
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule .* index.php [L,QSA]
+    </IfModule>
+
+    ## Deny access to all ini files…
+    <Files "*.ini">
+        Require all denied
+    </Files>
+
+    </Directory>
+
+TimeOut 600
+ProxyTimeout 600
+
+<FilesMatch "\\.php$">
+    <If "-f %{REQUEST_FILENAME}">
+        SetHandler "proxy:unix:/var/run/php-fpm/i-doit.sock|fcgi://localhost"
+    </If>
+</FilesMatch>
 ```
 
-i-doit provides different Apache settings in files named **.htaccess**. In order for these settings to be taken into account, the setting **AllowOverride All is required**.
+i-doit provides different Apache settings in files with the name **.htaccess**. These must be checked after each update and updated in the VirtualHost configuration.
 
-The next step is to restart the Apache web server:
+In the next step, the Apache HTTP server is restarted:
 
-```shell
-sudo systemctl restart httpd.service
+```sh
+sudo systemctl restart httpd php-fpm
 ```
 
-For Apache to have read and write permissions in the future installation directory of i-doit, this must be allowed by **SELinux**:
+In order for Apache to have read and write permissions in the future installation directory of i-doit, this must be permitted by **SELinux**:
 
-```shell
+```sh
 sudo chown apache:apache -R /var/www/html
 sudo chcon -t httpd_sys_content_t "/var/www/html/" -R
 sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 ```
 
-### MariaDB
+### MariaDB configuration
 
-In order for MariaDB to perform well and run safely, there are a few steps that need to be done meticulously. This starts with a secure installation. The recommendations should be followed. The **root** user should be given a secure password:
+To ensure that MariaDB delivers good performance and can be operated securely, a few steps are necessary that should be carried out meticulously. This starts with a secure installation. **The recommendations should be followed**. The user **root** should be given a secure password:
 
-```shell
+```sh
 mysql_secure_installation
 ```
 
-To allow i-doit to use the **root** user during setup, call the shell of MariaDB:
+MariaDB is then stopped and set to [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown):
 
-```shell
-sudo mysql -uroot
-```
-
-The following SQL statements are now executed in the MariaDB shell
-
-```shell
-ALTER USER root@localhost IDENTIFIED VIA mysql_native_password;
-FLUSH PRIVILEGES;
-EXIT;
-```
-
-MariaDB is then stopped. It is important to move unneeded files (otherwise you risk a significant performance loss):
-
-```shell
-mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
+```sh
+mysql -u root -p -e"SET GLOBAL innodb_fast_shutdown = 0"
 sudo systemctl stop mariadb.service
-sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
 
 A new file is created for the different configuration settings:
 
-```shell
+```sh
 sudo nano /etc/my.cnf.d/99-i-doit.cnf
 ```
 
-This file contains the new configuration settings. For optimal performance, these settings should be adapted to the (virtual) hardware:
+This file contains the new configuration settings. **For optimum performance, these settings should be adapted to the (virtual) hardware**:
 
-```shell
+```sh
 [mysqld]
-  
 # This is the number 1 setting to look at for any performance optimization
 # It is where the data and indexes are cached: having it as large as possible will
 # ensure MySQL uses memory and not disks for most read operations.
 #
 # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
 innodb_buffer_pool_size = 1G
- 
 # Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
 innodb_buffer_pool_instances = 1
- 
 # Redo log file size, the higher the better.
 # MySQL/MariaDB writes two of these log files in a default installation.
 innodb_log_file_size = 512M
- 
 innodb_sort_buffer_size = 64M
 sort_buffer_size = 262144 # default
 join_buffer_size = 262144 # default
- 
 max_allowed_packet = 128M
 max_heap_table_size = 32M
 query_cache_min_res_unit = 4096
 query_cache_type = 1
 query_cache_limit = 5M
 query_cache_size = 80M
- 
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
- 
 # Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
 innodb_thread_concurrency = 0
- 
 # Disable this (= 0) if you have slow harddisks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
- 
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
 # Only if your have MySQL 5.6 or higher, do not use with MariaDB!
 #table_open_cache_instances = 4
- 
 innodb_stats_on_metadata = 0
- 
 sql-mode = ""
 ```
 
-Finally, MariaDB is started:
+Finally, MariaDB is restarted:
 
-```shell
-sudo systemctl start mariadb.service
+```sh
+sudo systemctl restart mariadb.service
+```
+
+Finally, we need to configure SELinux:
+
+```sh
+sudo setsebool -P httpd_can_network_connect_db 1
 ```
 
 ## Next Step

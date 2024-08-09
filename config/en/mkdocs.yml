@@ -239,11 +239,9 @@ nav:
           - installation/manual-installation/index.md
           - Debian GNU/Linux:
               - Debian 12: installation/manual-installation/debian12.md
-          - Red Hat Enterprise Linux (RHEL):
-              - installation/manual-installation/red-hat-enterprise-linux/index.md
+          - Red Hat Enterprise Linux (RHEL): installation/manual-installation/red-hat-enterprise-linux/index.md
           - Suse Linux Enterprise Server (SLES): installation/manual-installation/suse-linux-enterprise-server.md
-          - Ubuntu GNU/Linux:
-              - installation/manual-installation/ubuntu-linux/index.md
+          - Ubuntu GNU/Linux: installation/manual-installation/ubuntu-linux/index.md
           - Microsoft Windows Server:
               - installation/manual-installation/microsoft-windows-server/index.md
               - i-doit via XAMPP: installation/manual-installation/microsoft-windows-server/i-doit-via-xampp.md
