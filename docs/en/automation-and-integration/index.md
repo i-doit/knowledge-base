@@ -9,3 +9,4 @@ The described interfaces are already included in _i-doit pro_:
 *   [Service Desk](./service-desk/index.md)
 *   [Email (SMTP)](./e-mail.md)
 *   [SNMP](./snmp.md)
+*   [Task scheduling & Cronjobs](./task-scheduling-and-cronjobs.md)

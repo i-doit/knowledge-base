@@ -375,6 +375,7 @@ nav:
           - ((OTRS)) Community Edition Help Desk: automation-and-integration/service-desk/otrscommunity-help-desk.md
           - Zammad: automation-and-integration/service-desk/zammad.md
       - SNMP: automation-and-integration/snmp.md
+      - Task scheduling & Cronjobs: automation-and-integration/task-scheduling-and-cronjobs.md
   - System Administration:
       - system-administration/index.md
       - Administration:
