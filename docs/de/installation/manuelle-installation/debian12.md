@@ -2,7 +2,7 @@
 title: Debian 12 GNU/Linux
 description: i-doit installation auf Debian 12
 icon: material/debian
-status: new
+status:
 lang: de
 ---
 

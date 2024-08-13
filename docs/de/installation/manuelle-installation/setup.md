@@ -1,25 +1,38 @@
-# Setup
+---
+title: Setup
+description: Setup
+icon:
+status:
+lang: de
+---
 
 Wenn die nötigen Vorbereitungen getroffen sind - zum Beispiel [die Konfiguration des zugrunde liegenden Betriebssystems](../manuelle-installation/index.md), kann das Setup von i-doit beginnen.
 
 ## Schnellstart
 
-In einem Verzeichnis, auf das der Apache Webserver Zugriff hat, entpackt man das Installationspaket von i-doit. Anschließend steuert man mit dem Browser dieses Verzeichnis an und folgt den Anweisungen des Setups.
+In einem Verzeichnis, auf das der Apache HTTP Server Zugriff hat, entpackt man das Installationspaket von i-doit. Anschließend steuert man mit dem Browser dieses Verzeichnis an und folgt den Anweisungen des Setups.
 
 ## Installationspaket herunterladen und entpacken
 
 Das Installationspaket der pro-Variante ist für alle Kunden im [Kundenportal](../../administration/kundenportal.md) erreichbar, das der open-Variante unter [i-doit.org](https://i-doit.org/). Dieses Paket wird auf den vorbereiteten Server kopiert, entpackt und die Dateien sowie Verzeichnisse mit den passenden Rechten versehen. Diese Anweisungen unterscheiden sich je nach Betriebssystem.
 
-### Debian GNU/Linux oder Ubuntu Linux
+### Debian oder Ubuntu
 
-Der Apache Webserver läuft mit den Rechten des Users **www-data** und der gleichnamigen Gruppe **www-data**. Das Hauptverzeichnis vom Apache Webserver lautet **/var/www/html/**:
+Der Apache HTTP Server läuft mit den Rechten des Users **www-data** und der gleichnamigen Gruppe **www-data**. Das Hauptverzeichnis vom Apache HTTP Server lautet **/var/www/html/**:
 
-```shell
+i-doit Ordner erstellen und die Dateien hinein kopieren:
+
+```sh
 sudo mkdir /var/www/html/i-doit
 sudo cp i-doit.zip /var/www/html/i-doit/
 cd /var/www/html/i-doit/
 sudo unzip i-doit.zip
 sudo rm i-doit.zip
+```
+
+Nun die Rechte setzen, damit der Apache HTTP Server Benutzer lesen und schreiben kann:
+
+```sh
 sudo chown www-data:www-data -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
@@ -27,14 +40,21 @@ sudo find . -type f -exec chmod 664 {} \;
 
 ### Red Hat Enterprise Linux (RHEL)
 
-Der Apache Webserver läuft mit den Rechten des Users **apache** und der gleichnamigen Gruppe **apache**. Das Hauptverzeichnis vom Apache Webserver lautet **/var/www/html/**:
+Der Apache HTTP Server läuft mit den Rechten des Users **apache** und der gleichnamigen Gruppe **apache**. Das Hauptverzeichnis vom Apache HTTP Server lautet **/var/www/html/**:
 
-```shell
+i-doit Ordner erstellen und die Dateien hinein kopieren:
+
+```sh
 sudo mkdir /var/www/html/i-doit
 sudo cp i-doit.zip /var/www/html/i-doit/
 cd /var/www/html/i-doit/
 sudo unzip i-doit.zip
 sudo rm i-doit.zip
+```
+
+Nun die Rechte setzen, damit der Webserver Benutzer lesen und schreiben kann:
+
+```sh
 sudo chown apache:apache -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
@@ -42,14 +62,19 @@ sudo find . -type f -exec chmod 664 {} \;
 
 ### Suse Linux Enterprise Server (SLES)
 
-Der Apache Webserver läuft mit den Rechten des Users **wwwrun** und der Gruppe **www**. Das Hauptverzeichnis vom Apache Webserver lautet **/srv/www/htdocs/**:
+Der Apache HTTP Server läuft mit den Rechten des Users **wwwrun** und der Gruppe **www**. Das Hauptverzeichnis vom Apache HTTP Server lautet **/srv/www/htdocs/**:
 
-```shell
+```sh
 sudo mkdir /srv/www/htdocs/i-doit
 sudo cp i-doit.zip /srv/www/htdocs/i-doit/
 cd /srv/www/htdocs/i-doit/
 sudo unzip i-doit.zip
 sudo rm i-doit.zip
+```
+
+Nun die Rechte setzen, damit der Webserver Benutzer lesen und schreiben kann:
+
+```sh
 sudo chown wwwrun:www -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
@@ -57,11 +82,11 @@ sudo find . -type f -exec chmod 664 {} \;
 
 ### Microsoft Windows Server
 
-Spezifische Datei- und Verzeichnisrechte sind in der Regel nicht zu setzen, wenn der mit XAMPP installierte Apache Webserver mit denselben Nutzerrechten läuft.
+Spezifische Datei- und Verzeichnisrechte sind in der Regel nicht zu setzen, wenn der mit XAMPP installierte Apache HTTP Server mit denselben Nutzerrechten läuft.
 
 ## Setup durchführen
 
-i-doit lässt sich auf zwei Arten installieren: Bequem über die Web GUI (für Einsteiger empfohlen) oder über die Konsole (beispielsweise für die automatisierte Installation).
+i-doit lässt sich auf zwei Arten installieren: Bequem über die Web GUI (für Einsteiger empfohlen) oder über die [Konsole](#konsole) (beispielsweise für die automatisierte Installation).
 
 ### Web GUI
 
@@ -105,7 +130,7 @@ Für die Datenbank-Anbindung sind wichtige Credentials und Einstellungen einzutr
 
     MariaDB/MySQL öffnet in der Regel beim Start des Dienstes einen Unix Socket. Der Pfad dorthin wird in der Einstellung **socket** angegeben und lautet beispielsweise unter Debian GNU/Linux **/var/run/mysqld/mysqld.sock**. Dieser Wert muss PHP bekannt sein, damit i-doit eine Verbindung zu MariaDB/MySQL aufbauen kann. Die entsprechende PHP-Einstellung lautet **mysqli.default_socket**. Wer nach der Installationsanleitung vorgegangen ist, kann die selbst erstellte PHP-Konfigurationsdatei um diese Einstellung ergänzen, zum Beispiel: **mysqli.default_socket = /var/run/mysqld/mysqld.sock**
 
-    Nachträgliche Änderungen an den PHP-Einstellungen werden erst wirksam, wenn der Dienst des Apache Webservers neu geladen wird. Beispiel unter Debian GNU/Linux: `sudo systemctl reload apache2.service`
+    Nachträgliche Änderungen an den PHP-Einstellungen werden erst wirksam, wenn der Dienst des Apache HTTP Servers neu geladen wird. Beispiel unter Debian GNU/Linux: `sudo systemctl reload apache2.service`
 
     Dieser Tipp bezieht sich auf Unix-artige Betriebssysteme. Windows ist davon ausgenommen.
 
@@ -127,13 +152,15 @@ In diesem Schritt geschieht die eigentliche Installation von i-doit auf dem Syst
 
 Über die Konsole lässt sich i-doit über die mitgelieferte [console.php](../../automatisierung-und-integration/cli/console/index.md) installieren: durch einen geführten Assistenten oder durch eine einfache Zeile, die sich für automatisierte Installationen eignet. Beide Arten führt man innerhalb des **i-doit**\-Verzeichnisses durch:
 
+```sh
 cd /var/www/html/i-doit/
+```
 
 Es ist zwingend erforderlich, die folgenden Befehle mit dem Benutzer auszuführen, mit dessen Rechten der Webserver läuft. Bei Debian basierten Betriebssystemen ist dies **www-data**, unter RHEL **apache** und SLES **wwwrun**.
 
 Die Optionen orientieren sich am Setup über die Web GUI.
 
-#### Geführte Installation
+#### Geführte Installation über die Konsole
 
 ```shell
 sudo -u www-data php console.php install
@@ -143,9 +170,11 @@ Der Assistent fragt einige Credentials und Einstellungen ab. In Klammern angegeb
 
 Anschließend kann ein [Mandant](../../administration/mandantenfaehigkeit.md) über das [Admin Center](../../administration/admin-center.md) oder über die [console.php](../../automatisierung-und-integration/cli/console/index.md) erstellt werden.
 
+```shell
 sudo -u www-data php console.php create-tenant
+```
 
-#### Automatisierte Installation
+#### Automatisierte Installation über die Konsole
 
 ```shell
 sudo -u www-data php console.php install --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --admin-password admincenterpw --no-interaction
@@ -154,11 +183,10 @@ sudo -u www-data php console.php install --root-user mysqlrootuser --root-passwo
 Nun wurde i-doit installiert. Wir benötigen noch einen [Mandant](../../administration/mandantenfaehigkeit.md). Diesen erstellen wir auch über die [console.php](../../automatisierung-und-integration/cli/console/index.md):
 
 ```shell
-sudo -u www-data php console.php tenant-create --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --admin-password admincenterpw --no-interaction
+sudo -u www-data php console.php tenant-create --root-user mysqlrootuser --root-password mysqlrootpassword --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --no-interaction --title "CMDB"
 ```
 
-Weitere Schritte
-----------------
+## Weitere Schritte
 
 -   [Lizenz herunterladen und einspielen](../../wartung-und-betrieb/lizenz-aktivieren.md)
 -   [Backup einrichten](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
