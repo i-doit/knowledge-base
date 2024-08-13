@@ -40,9 +40,26 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
+### Adding #Number to a counter set for automatic inventory number creates a new custom counter when creating a object (ID-11073)
+
+Adding a #Number to a counter creates a new counter AND counters skip a count (2 -> 4 -> 6)
+
+[i-doit_32_hotfix_ID-11073_7be428b.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11073_7be428b.zip){ .md-button .md-button--primary }
+
 ### JDisc-Group filter is ignored (ID-11007)
 
 [i-doit_32_hotfix_ID-11007.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11007.zip){ .md-button .md-button--primary }
+
+### HTTP 500 error when an contact (person(-group) or orga) is created which has a default template set (ID-11001)
+
+Can also occur when creating a duplicate of an object.
+
+??? info "Error message found in the Webserver logs"
+    ```
+    [Fri Jul 12 16:05:59.553712 2024] [proxy_fcgi:error] [pid 1869452] [client 10.0.8.6:36768] AH01071: Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, array given in /var/www/html/testinstance/src/classes/modules/cmdb/dao/category/specific/isys_cmdb_dao_category_s_person_master.class.php:694 Stack trace: #0 /var/www/html/testinstance/src/classes/modules/cmdb/dao/category/specific/isys_cmdb_dao_category_s_person_master.class.php(694): trim()
+    ```
+
+[i-doit_32_hotfix_ID-11001.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11001.zip){ .md-button .md-button--primary }
 
 ### HTTP 500 error when a object is added via object browser (ID-10993)
 
@@ -77,12 +94,6 @@ It is possible to create a Object with only the view right.
 Exporting a object list as csv includes special symbols.
 
 [i-doit_32_hotfix_ID-10758_b26033c.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10758_b26033c.zip){ .md-button .md-button--primary }
-
-### Adding #Number to a counter set for automatic inventory number creates a new custom counter when creating a object (ID-11073)
-
-Adding a #Number to a counter creates a new counter AND counters skip a count (2 -> 4 -> 6)
-
-[i-doit_32_hotfix_ID-11073_7be428b.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11073_7be428b.zip){ .md-button .md-button--primary }
 
 ## API Add-on
 
