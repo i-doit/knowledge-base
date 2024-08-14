@@ -136,7 +136,7 @@ Under Settings, you can define the profile globally or for specific users as the
 
 ## Export
 
-A Floorplan can be exported as SVG or PNG file using the button [![Export](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.svg)](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.svg).
+A Floorplan can be exported as SVG or PNG file using the [![Export](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.svg)](../assets/images/en/i-doit-pro-add-ons/floorplan/33-fp.svg) button.
 
 ## Releases
 
