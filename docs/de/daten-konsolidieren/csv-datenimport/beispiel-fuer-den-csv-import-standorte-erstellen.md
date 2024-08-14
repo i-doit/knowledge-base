@@ -1,5 +1,7 @@
 # Beispiel Standorte
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 Heute wollen wir uns einmal ein praktisches Beispiel für den CSV Import anschauen.
 Unser Anwendungsfall ist das automatische erstellen der Standorte innerhalb von i-doit mithilfe einer CSV Imports.
 
@@ -7,10 +9,10 @@ Unser Anwendungsfall ist das automatische erstellen der Standorte innerhalb von 
 
 Wir benötigen für das erstellen der einzelnen Objekte folgende Informationen:
 
--  Den selbst erstellten Objekttyp Etage/Basement mit der Objekttyp Konstante - C__OBJECT_TYPE__FLOOR
--  Objektname → den Namen des Gebäudes, der Etage oder des Raumes
--  Standort → unterhalb welcher Lokation soll sich das Objekt befinden
--  Objekttyp → Um welchen Objekttypen soll es sich Handeln
+-   Den selbst erstellten Objekttyp Etage/Basement mit der Objekttyp Konstante - C__OBJECT_TYPE__FLOOR
+-   Objektname → den Namen des Gebäudes, der Etage oder des Raumes
+-   Standort → unterhalb welcher Lokation soll sich das Objekt befinden
+-   Objekttyp → Um welchen Objekttypen soll es sich Handeln
 
 Beispiel CSV Datei für diesen Import:
 
@@ -19,7 +21,6 @@ Beispiel CSV Datei für diesen Import:
 Der Aufbau der CSV sieht wie folgt aus:
 
 ??? example "Import Standort.csv"
-
     ```text
     ObjektName;Standort;Objekttyp
     HEADQUARTER;Root location;C__OBJTYPE__BUILDING
@@ -108,7 +109,7 @@ Jetzt auf Mapping vorbereiten klicken, danach können wir die Einstellungen wie 
 
 Nun sind wir soweit und können den Import starten, in der Standortansicht sollte sich danach folgendes Bild ergeben:
 
-[![ Standortsicht](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/5-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/5-csv-standort.png)
+[![Standortsicht](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/5-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/5-csv-standort.png)
 
 Die Konfiguration des neu erstellten Objekttyps Etage
 

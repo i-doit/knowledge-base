@@ -1,5 +1,7 @@
 # Zammad
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 [Zammad](https://zammad.com/) ist eine Web-Applikation für den Service Desk. Es ist in der Lage, auf Informationen zu Objekten aus i-doit zuzugreifen und diese mit Tickets zu verknüpfen. Für weitere Informationen zur Konfiguration und Nutzung von Zammad, hilft der Hersteller gerne weiter.
 
 i-doit bringt bereits in der Standardinstallation alle Funktionen mit, um [auf Tickets in Zammad zuzugreifen](index.md).

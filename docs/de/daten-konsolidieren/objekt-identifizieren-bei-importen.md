@@ -1,5 +1,7 @@
 # Objekte identifizieren bei Importen
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 i-doit verfügt über diverse Datenimporte. Bestehende Daten in der [IT-Dokumentation](../glossar.md) können dabei aktualisiert werden, anstatt meist unnötige Redundanzen zu erzeugen. Damit dies funktioniert, versucht i-doit bestehende [Objekte](../grundlagen/struktur-it-dokumentation.md) anhand von verschiedenen [Attributen](../grundlagen/struktur-it-dokumentation.md) zu identifizieren.
 
 ## Betroffene Datenimporte
@@ -19,12 +21,12 @@ Die Identifizierung von Objekten erfolgt zweistufig:
 
 1. Die höchste Priorität genießen die eindeutigen Attribute der jeweiligen Datenquellen:
 
-    CSV-Datenimport: _nicht anwendbar_<br>
-    JDisc: Device ID<br>
-    OCS Inventory NG: _nicht anwendbar_<br>
-    h-inventory: Seriennummer<br>
+*   CSV-Datenimport: _nicht anwendbar_<br>
+*   JDisc: Device ID<br>
+*   OCS Inventory NG: _nicht anwendbar_<br>
+*   h-inventory: Seriennummer<br>
 
-    Diese Attribute werden beim ersten Datenimport gespeichert und können bei folgenden Datenimporten als Identifizierungsmerkmal verwendet werden. Falls diese Attribute nicht zur Verfügung stehen, folgt Schritt 2.
+Diese Attribute werden beim ersten Datenimport gespeichert und können bei folgenden Datenimporten als Identifizierungsmerkmal verwendet werden. Falls diese Attribute nicht zur Verfügung stehen, folgt Schritt 2.
 
 2. Anhand von Profilen erfolgt ein sogenanntes Objekt-Matching (siehe unten).
 

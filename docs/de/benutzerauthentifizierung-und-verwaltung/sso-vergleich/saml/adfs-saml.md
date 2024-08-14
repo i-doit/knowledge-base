@@ -1,14 +1,16 @@
 # ADFS (Active Directory) (SAML)
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 In dieser Anleitung beschreiben wir die Einrichtung von Single-Sign-On (SSO) für i-doit mit Hilfe von SAML. In diesem Beispiel nutzen wir Mellon als Authenticator gegen LDAP-AD-FS.
 
 ## Vorbereitungen
 
 Wir nutzen für die Beispielkonfiguration zwei Server, einen Windows Server mit Domäne/AD und FS und einen Debian 11 Server mit Apache und Mellon:
 
-| FQDN | IP  | Rolle | OS  |
-| --- | --- | --- | --- |
-| tu2-dc2.tu-synetics.test | 10.10.60.22 | AD, FS | Windows |
+| FQDN                      | IP           | Rolle         | OS       |
+| ------------------------- | ------------ | ------------- | -------- |
+| tu2-dc2.tu-synetics.test  | 10.10.60.22  | AD, FS        | Windows  |
 | tu2-samlsso.synetics.test | 10.10.60.108 | Apache+Mellon | Debian11 |
 
 ### Basiskonfiguration:

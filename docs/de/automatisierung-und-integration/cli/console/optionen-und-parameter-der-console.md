@@ -1,5 +1,7 @@
 # Optionen und Parameter der Console
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 !!! attention "Hinweise"
     Sämtliche Beispiele auf dieser Seite beziehen sich auf die Verwendung des i-doit Benutzers mit der Kombination Benutzername/Passwort: **admin**/**admin**.<br>
     Alle Parameter sind case-sensitive, dies bedeutet, dass Groß- und Kleinschreibung gemäß den Beispielen und Vorgaben exakt einzuhalten sind.
@@ -1279,7 +1281,7 @@ Bereinigt optional Kategorieeinträge, die sich im Status unfertig, archiviert o
 
 | Parameter (Kurzform) | Parameter (Langform)            | Beschreibung                                                                                                                                                                      |
 | -------------------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                      | --categoryStatus=CATEGORYSTATUS | Use to start cleaning up the specified status:<br>**1** für "unfertige" Kategorieeinträge<br>**3** für "archivierte" Kategorieeinträge<br>**4** für "gelöschte" Kategorieeinträge | 
+|                      | --categoryStatus=CATEGORYSTATUS | Use to start cleaning up the specified status:<br>**1** für "unfertige" Kategorieeinträge<br>**3** für "archivierte" Kategorieeinträge<br>**4** für "gelöschte" Kategorieeinträge |
 | -u                   | --user=[USERNAME]               | Username eines Benutzers, der zur Ausführung berechtigt ist                                                                                                                       |
 | -p                   | --password=[PASSWORD]           | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                                                                                                    |
 | -i                   | --tenantId=[TENANT-ID]          | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                                                                                                               |
