@@ -1,5 +1,7 @@
 # CSV Data Import
 
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
 Many organizations use spreadsheet software for their [IT documentation](index.md) to view information in form of tables. This is not only confusing, but requires also a lot work for maintenance and updating. Using the CSV import allows you to import data comfortably, for example, from Microsoft Excel, OpenOffice or LibreOffice Calc, to _i-doit_.
 
 ## Requirements
@@ -117,11 +119,11 @@ After selecting the field during the mapping, you can decide whether the selecti
 
 Some attributes contain values and units. You have to enter them separately in the corresponding forms of the Web GUI. For example, in the category **Monitor** the **Display** attribute consists of the field for the value and the field for the unit (inch, cm etc.). In order to import this attribute analogous via CSV file import, value and unit have to be together in one cell. Examples:
 
-| Category | Attribute | Assignment with CSV file import | Cell in CSV file |
-| --- | --- | --- | --- |
-| **CPU** | **CPU frequency** | **CPU frequency (unit)** | 2.5 GHz |
-| **Local mass storage → Device** | **Capacity** | **Capacity (unit)** | 4 TB |
-| **Monitor** | **Display** | **Display (unit)** | 24 Inch |
+| Category                        | Attribute         | Assignment with CSV file import | Cell in CSV file |
+| ------------------------------- | ----------------- | ------------------------------- | ---------------- |
+| **CPU**                         | **CPU frequency** | **CPU frequency (unit)**        | 2.5 GHz          |
+| **Local mass storage → Device** | **Capacity**      | **Capacity (unit)**             | 4 TB             |
+| **Monitor**                     | **Display**       | **Display (unit)**              | 24 Inch          |
 
 ## Automated Import of CSV Files
 

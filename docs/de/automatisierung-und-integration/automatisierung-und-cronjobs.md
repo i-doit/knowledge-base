@@ -1,7 +1,5 @@
 # Aufgabenplanung & Cron Jobs
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
-
 ## Aufgabenplanung unter Windows
 
 In diesem Abschnitt zeigen wir Ihnen, wie Sie über die Aufgabenplanung unter Windows i-doit automatisieren können.
