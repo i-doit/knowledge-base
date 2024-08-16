@@ -14,22 +14,22 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
     **Anfrage Parameter**
 
-    | Key | JSON Datentyp | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **q** | String | Ja  | Abfrage, zum Beispiel: **"My little server"** |
+    | Key   | JSON Datentyp | Erforderlich | Beschreibung                                  |
+    | ----- | ------------- | ------------ | --------------------------------------------- |
+    | **q** | String        | Ja           | Abfrage, zum Beispiel: **"My little server"** |
 
     **Antwort**
 
     JSON-Schlüsselergebnis enthält ein Array von JSON-Objekten. Jedes Objekt enthält ein Suchergebnis.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **documentID** | String | Identifikationsnummer |
-    | **key** | String | Attribut, das sich auf die Abfrage bezieht |
-    | **value** | String | Wert, der sich auf die Abfrage bezieht |
-    | **type** | String | [Add-on](../../index.md) oder Kernfunktionalität |
-    | **link** | String | Relative URL, die direkt zum Suchergebnis führt |
-    | **score** | Integer | Punktevergabe (veraltet) |
+    | Key            | JSON Datentyp | Beschreibung                                     |
+    | -------------- | ------------- | ------------------------------------------------ |
+    | **documentID** | String        | Identifikationsnummer                            |
+    | **key**        | String        | Attribut, das sich auf die Abfrage bezieht       |
+    | **value**      | String        | Wert, der sich auf die Abfrage bezieht           |
+    | **type**       | String        | [Add-on](../../index.md) oder Kernfunktionalität |
+    | **link**       | String        | Relative URL, die direkt zum Suchergebnis führt  |
+    | **score**      | Integer       | Punktevergabe (veraltet)                         |
 
     **Anfrage**<br>
     Body:
@@ -82,18 +82,18 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
     Das JSON-Schlüsselergebnis enthält ein JSON-Objekt mit verschiedenen Informationen über i-doit selbst und den aktuellen Benutzer.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **login** | Array | Informationen über den Benutzer, der die Anfrage durchgeführt hat; Einzelheiten siehe unten |
-    | **login.userid** | String | Objekt-Identifikator (als numerische Zeichenfolge) |
-    | **login.name** | String | ObjektBezeichnung |
-    | **login.mail** | String | E-Mail-Adresse (siehe Kategorie Personen → Stammdaten) |
-    | **login.username** | String | Benutzername (siehe Kategorie Personen → Login) |
-    | **login.tenant** | String | Name des Mandanten |
-    | **login.language** | String | Sprache: "en" oder "de" |
-    | **version** | String | Version des installierten i-doit |
-    | **step** | String | Dev, alpha oder beta release |
-    | **type** | String | Variante: "OPEN" oder "PRO". |
+    | Key                | JSON Datentyp | Beschreibung                                                                                |
+    | ------------------ | ------------- | ------------------------------------------------------------------------------------------- |
+    | **login**          | Array         | Informationen über den Benutzer, der die Anfrage durchgeführt hat; Einzelheiten siehe unten |
+    | **login.userid**   | String        | Objekt-Identifikator (als numerische Zeichenfolge)                                          |
+    | **login.name**     | String        | ObjektBezeichnung                                                                           |
+    | **login.mail**     | String        | E-Mail-Adresse (siehe Kategorie Personen → Stammdaten)                                      |
+    | **login.username** | String        | Benutzername (siehe Kategorie Personen → Login)                                             |
+    | **login.tenant**   | String        | Name des Mandanten                                                                          |
+    | **login.language** | String        | Sprache: "en" oder "de"                                                                     |
+    | **version**        | String        | Version des installierten i-doit                                                            |
+    | **step**           | String        | Dev, alpha oder beta release                                                                |
+    | **type**           | String        | Variante: "OPEN" oder "PRO".                                                                |
 
     Beispiel
 
@@ -149,12 +149,12 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **objectTypes** | Object | Liste der Objekttypen<br><br>Schlüssel: Objekttyp-Konstanten<br><br>Werte: Bezeichnung der übersetzten Objekttypen |
-    | **categories** | Object | Liste der globalen und spezifischen Kategorien |
-    | **categories.g** | Object | Liste der globalen Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
-    | **categories.s** | Object | Liste spezifischer Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
+    | Key              | JSON Datentyp | Beschreibung                                                                                                        |
+    | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------- |
+    | **objectTypes**  | Object        | Liste der Objekttypen<br><br>Schlüssel: Objekttyp-Konstanten<br><br>Werte: Bezeichnung der übersetzten Objekttypen  |
+    | **categories**   | Object        | Liste der globalen und spezifischen Kategorien                                                                      |
+    | **categories.g** | Object        | Liste der globalen Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
+    | **categories.s** | Object        | Liste spezifischer Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
 
     Beispiel
     **Anfrage**<br>
@@ -209,16 +209,16 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **result** | Boolean | Sollte **true** sein |
-    | **userid** | String | Objekt-Identifikator des eingeloggten Benutzers (als numerische Zeichenfolge) |
-    | **name** | String | ObjektBezeichnung des eingeloggten Benutzers |
-    | **mail** | String | Attribut E-Mail-Adresse in der Kategorie Personen → Stammdaten |
-    | **username** | String | Attribut Benutzername in Kategorie Personen → Anmeldung |
-    | **session-id** | String | Generierter Sitzungs-Identifikator |
-    | **client-id** | String | Mandanten Identifikator (als numerische Zeichenfolge) |
-    | **client-name** | String | Name des Mandanten |
+    | Key             | JSON Datentyp | Beschreibung                                                                  |
+    | --------------- | ------------- | ----------------------------------------------------------------------------- |
+    | **result**      | Boolean       | Sollte **true** sein                                                          |
+    | **userid**      | String        | Objekt-Identifikator des eingeloggten Benutzers (als numerische Zeichenfolge) |
+    | **name**        | String        | ObjektBezeichnung des eingeloggten Benutzers                                  |
+    | **mail**        | String        | Attribut E-Mail-Adresse in der Kategorie Personen → Stammdaten                |
+    | **username**    | String        | Attribut Benutzername in Kategorie Personen → Anmeldung                       |
+    | **session-id**  | String        | Generierter Sitzungs-Identifikator                                            |
+    | **client-id**   | String        | Mandanten Identifikator (als numerische Zeichenfolge)                         |
+    | **client-name** | String        | Name des Mandanten                                                            |
 
     Beispiel
 
@@ -353,10 +353,10 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | message | String | Sollte **"Logout successfull" **sein |
-    | result | Boolean | Sollte **true **sein |
+    | Key     | JSON Datentyp | Beschreibung                         |
+    | ------- | ------------- | ------------------------------------ |
+    | message | String        | Sollte **"Logout successfull" **sein |
+    | result  | Boolean       | Sollte **true **sein                 |
 
     Beispiel
 
@@ -375,24 +375,24 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | Key | JSON Datentyp | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **type** | String\|Integer | Ja  | Objekttyp Konstante als String, zum Beispiel: "C\_\_OBJTYPE\_\_SERVER".<br><br>Alternativ z.B. Objekttyp-Identifikator als Ganzzahl: 5 |
-    | **title** | String | Ja  | Zum Beispiel Objekt Bezeichnung **"My little server"** |
-    | **category** | String | Nein | Attribut-Kategorie in Kategorie Global |
-    | **purpose** | String | Nein | Attribut Zweck in der Kategorie Global, zum Beispiel: **"In production"** |
-    | **cmdb_status** | String\|Integer | Nein | Attribute CMDB-Status in der Kategorie Global z. B. durch seine Konstante (String): **"C__CMDB_STATUS__IN_OPERATION"**<br><br>Alternativ, durch seinen Bezeichner (Ganzzahl), zum Beispiel: 6 |
-    | **description** | String | Nein | Attributbeschreibung in der Kategorie Global |
+    | Key             | JSON Datentyp   | Erforderlich | Beschreibung                                                                                                                                                                                  |
+    | --------------- | --------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **type**        | String\|Integer | Ja           | Objekttyp Konstante als String, zum Beispiel: "C\_\_OBJTYPE\_\_SERVER".<br><br>Alternativ z.B. Objekttyp-Identifikator als Ganzzahl: 5                                                        |
+    | **title**       | String          | Ja           | Zum Beispiel Objekt Bezeichnung **"My little server"**                                                                                                                                        |
+    | **category**    | String          | Nein         | Attribut-Kategorie in Kategorie Global                                                                                                                                                        |
+    | **purpose**     | String          | Nein         | Attribut Zweck in der Kategorie Global, zum Beispiel: **"In production"**                                                                                                                     |
+    | **cmdb_status** | String\|Integer | Nein         | Attribute CMDB-Status in der Kategorie Global z. B. durch seine Konstante (String): **"C__CMDB_STATUS__IN_OPERATION"**<br><br>Alternativ, durch seinen Bezeichner (Ganzzahl), zum Beispiel: 6 |
+    | **description** | String          | Nein         | Attributbeschreibung in der Kategorie Global                                                                                                                                                  |
 
      Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **id** | String | Objektbezeichner (als numerische Zeichenfolge) |
-    | **message** | String | Einige Informationen |
-    | **success** | Boolean | Sollte immer **true **sein |
+    | Key         | JSON Datentyp | Beschreibung                                   |
+    | ----------- | ------------- | ---------------------------------------------- |
+    | **id**      | String        | Objektbezeichner (als numerische Zeichenfolge) |
+    | **message** | String        | Einige Informationen                           |
+    | **success** | Boolean       | Sollte immer **true **sein                     |
 
     Beispiel
 
@@ -433,28 +433,28 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
      Anfrage Parameter
 
-    | Key | JSON Datentyp | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **id** | Integer | Ja  | Objekt-Identifikator; zum Beispiel: **42** |
+    | Key    | JSON Datentyp | Erforderlich | Beschreibung                               |
+    | ------ | ------------- | ------------ | ------------------------------------------ |
+    | **id** | Integer       | Ja           | Objekt-Identifikator; zum Beispiel: **42** |
 
      Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **id** | String | Objektbezeichner (als numerische Zeichenfolge) |
-    | **title** | String | Objekt Bezeichnung |
-    | **sysid** | String | SYSID (siehe Kategorie Global) |
-    | **objecttype** | String | Objekt-Typ-Identifikator (als numerische Zeichenfolge) |
-    | **created** | String | Datum der Erstellung; Format: Y-m-d H:i:s |
-    | **updated** | String | Datum der letzten Aktualisierung; Format: Y-m-d H:i:s<br><br>**Hinweis:** Dieser Schlüssel ist optional, da nicht jedes Objekt zuvor aktualisiert wurde. |
-    | **type_title** | String | Übersetzter Name des Objekttyps |
-    | **type_icon** | String | Relative URL zum Objekttyp-Symbol |
-    | **status** | String | Objekt status:<br><br>*   **C__RECORD_STATUS__BIRTH  <br>    Status-ID = 1  <br>    Bezeichnung = Unfertig**<br>*   **C__RECORD_STATUS__NORMAL  <br>    Status-ID = 2**  <br>    **Bezeichnung = ****Normal**<br>*   **C__RECORD_STATUS__ARCHIVED  <br>    Status-ID = 3**  <br>    **Bezeichnung =** **Archiviert**<br>*   **C__RECORD_STATUS__DELETED  <br>    Status-ID = 4**  <br>    **Bezeichnung =** **Gelöscht**<br>*   **C__RECORD_STATUS__TEMPLATE  <br>    Status-ID = 6**  <br>    **Bezeichnung =** **Vorlage**<br>*   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE  <br>    Status-ID = 7**  <br>    **Bezeichnung =** **Vorlage für Massenänderung** |
-    | **cmdb_status** | String | CMDB-Status (siehe Kategorie Global; als numerische Zeichenfolge) |
-    | **cmdb_status_title** | String | Übersetzter CMDB-Status (siehe Kategorie Global) |
-    | **image** | String | URL zum Objektbild |
+    | Key                   | JSON Datentyp | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+    | --------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **id**                | String        | Objektbezeichner (als numerische Zeichenfolge)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+    | **title**             | String        | Objekt Bezeichnung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+    | **sysid**             | String        | SYSID (siehe Kategorie Global)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+    | **objecttype**        | String        | Objekt-Typ-Identifikator (als numerische Zeichenfolge)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+    | **created**           | String        | Datum der Erstellung; Format: Y-m-d H:i:s                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+    | **updated**           | String        | Datum der letzten Aktualisierung; Format: Y-m-d H:i:s<br><br>**Hinweis:** Dieser Schlüssel ist optional, da nicht jedes Objekt zuvor aktualisiert wurde.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+    | **type_title**        | String        | Übersetzter Name des Objekttyps                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+    | **type_icon**         | String        | Relative URL zum Objekttyp-Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | **status**            | String        | Objekt status:<br><br>*   **C__RECORD_STATUS__BIRTH  <br>    Status-ID = 1  <br>    Bezeichnung = Unfertig**<br>*   **C__RECORD_STATUS__NORMAL  <br>    Status-ID = 2**  <br>    **Bezeichnung = ****Normal**<br>*   **C__RECORD_STATUS__ARCHIVED  <br>    Status-ID = 3**  <br>    **Bezeichnung =** **Archiviert**<br>*   **C__RECORD_STATUS__DELETED  <br>    Status-ID = 4**  <br>    **Bezeichnung =** **Gelöscht**<br>*   **C__RECORD_STATUS__TEMPLATE  <br>    Status-ID = 6**  <br>    **Bezeichnung =** **Vorlage**<br>*   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE  <br>    Status-ID = 7**  <br>    **Bezeichnung =** **Vorlage für Massenänderung** |
+    | **cmdb_status**       | String        | CMDB-Status (siehe Kategorie Global; als numerische Zeichenfolge)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | **cmdb_status_title** | String        | Übersetzter CMDB-Status (siehe Kategorie Global)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+    | **image**             | String        | URL zum Objektbild                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
     Beispiel
 
@@ -503,19 +503,19 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
      Anfrage Parameter
 
-    | Key | JSON Datentyp | Erforderlich | Description |
-    | --- | --- | --- | --- |
-    | **id** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **42** |
-    | **title** | String | Ja  | Neue Objekt Bezeichnung, zum Beispiel: **"Your little server"** |
+    | Key       | JSON Datentyp | Erforderlich | Description                                                     |
+    | --------- | ------------- | ------------ | --------------------------------------------------------------- |
+    | **id**    | Integer       | Ja           | Objekt-Identifikator, zum Beispiel: **42**                      |
+    | **title** | String        | Ja           | Neue Objekt Bezeichnung, zum Beispiel: **"Your little server"** |
 
      Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **message** | String | Sollte "Object title was successfully updated" sein |
-    | **success** | Boolean | Sollte true sein |
+    | Key         | JSON Datentyp | Beschreibung                                        |
+    | ----------- | ------------- | --------------------------------------------------- |
+    | **message** | String        | Sollte "Object title was successfully updated" sein |
+    | **success** | Boolean       | Sollte true sein                                    |
 
     Beispiel
 
@@ -555,10 +555,10 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
      Anfrage Parameter
 
-    | Key | JSON Datentyp | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **id** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **42** |
-    | **status** | String | Ja  | Status Konstante:<br><br>*   **"C__RECORD_STATUS__ARCHIVED"**: Archiviertes Objekt<br>*   **"C__RECORD_STATUS__DELETED"**: Objekt als gelöscht markieren<br>*   **"C__RECORD_STATUS__PURGE"**: Objekt aus der Datenbank bereinigen |
+    | Key        | JSON Datentyp | Erforderlich | Beschreibung                                                                                                                                                                                                                       |
+    | ---------- | ------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **id**     | Integer       | Ja           | Objekt-Identifikator, zum Beispiel: **42**                                                                                                                                                                                         |
+    | **status** | String        | Ja           | Status Konstante:<br><br>*   **"C__RECORD_STATUS__ARCHIVED"**: Archiviertes Objekt<br>*   **"C__RECORD_STATUS__DELETED"**: Objekt als gelöscht markieren<br>*   **"C__RECORD_STATUS__PURGE"**: Objekt aus der Datenbank bereinigen |
 
     Antwort
 
@@ -602,18 +602,18 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **object** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **464** |
+    | **Key**    | **JSON Datentyp** | Erforderlich | Beschreibung                                |
+    | ---------- | ----------------- | ------------ | ------------------------------------------- |
+    | **object** | Integer           | Ja           | Objekt-Identifikator, zum Beispiel: **464** |
 
     Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte **true** sein |
-    | **message** | String | Einige Informationen |
+    | **Key**     | **JSON Datentyp** | Beschreibung         |
+    | ----------- | ----------------- | -------------------- |
+    | **success** | Boolean           | Sollte **true** sein |
+    | **message** | String            | Einige Informationen |
 
     Beispiel
 
@@ -652,18 +652,18 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
      Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **object** | Integer | Yes | Objekt-Identifikator, zum Beispiel: **464** |
+    | **Key**    | **JSON Datentyp** | Erforderlich | Beschreibung                                |
+    | ---------- | ----------------- | ------------ | ------------------------------------------- |
+    | **object** | Integer           | Yes          | Objekt-Identifikator, zum Beispiel: **464** |
 
      **Antwort**
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **message** | String | Einige Informationen |
+    | **Key**     | **JSON Datentyp** | Beschreibung         |
+    | ----------- | ----------------- | -------------------- |
+    | **success** | Boolean           | Sollte true sein     |
+    | **message** | String            | Einige Informationen |
     Beispiel
 
     **Anfrage**
@@ -701,18 +701,18 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
      Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **object** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **464** |
+    | **Key**    | **JSON Datentyp** | Erforderlich | Beschreibung                                |
+    | ---------- | ----------------- | ------------ | ------------------------------------------- |
+    | **object** | Integer           | Ja           | Objekt-Identifikator, zum Beispiel: **464** |
 
      **Antwort**
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **message** | String | Einige Informationen |
+    | **Key**     | **JSON Datentyp** | Beschreibung         |
+    | ----------- | ----------------- | -------------------- |
+    | **success** | Boolean           | Sollte true sein     |
+    | **message** | String            | Einige Informationen |
 
     Beispiel
 
@@ -751,18 +751,18 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **object** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **465** |
+    | **Key**    | **JSON Datentyp** | Erforderlich | Beschreibung                                |
+    | ---------- | ----------------- | ------------ | ------------------------------------------- |
+    | **object** | Integer           | Ja           | Objekt-Identifikator, zum Beispiel: **465** |
 
     **Antwort**
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **message** | String | Einige Informationen |
+    | **Key**     | **JSON Datentyp** | Beschreibung         |
+    | ----------- | ----------------- | -------------------- |
+    | **success** | Boolean           | Sollte true sein     |
+    | **message** | String            | Einige Informationen |
 
     Beispiel
 
@@ -801,18 +801,18 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **object** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **465** |
+    | **Key**    | **JSON Datentyp** | Erforderlich | Beschreibung                                |
+    | ---------- | ----------------- | ------------ | ------------------------------------------- |
+    | **object** | Integer           | Ja           | Objekt-Identifikator, zum Beispiel: **465** |
 
     **Antwort**
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **message** | String | Einige Informationen |
+    | **Key**     | **JSON Datentyp** | Beschreibung         |
+    | ----------- | ----------------- | -------------------- |
+    | **success** | Boolean           | Sollte true sein     |
+    | **message** | String            | Einige Informationen |
 
     Beispiel
 
@@ -851,28 +851,28 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | Key | JSON Datentyp | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **categories** | Array | Nein | Hier kann nach einer Liste oder einer Kategorie, in Form von Kategorie Konstante/n, gefiltert werden.  <br>"categories": ["C__CATG__MY_CUSTOM_CATEGORY"]  <br>"categories": ["C__CATG__MY_CUSTOM_CATEGORY", "C__CATG__MY_SECOND_CATEGORY"] |
-    | **filter** | Array | Nein | Liste der Objekte filtern; siehe unten für eine vollständige Liste der Optionen |
-    | **limit** | Mixed | Nein | Maximale Anzahl von Objekten (als ganze Zahl), z.B. die ersten tausend Objekte abrufen: **1000**<br><br>Kombinieren Sie diese Grenze mit einem Offset (als Zeichenkette), z.B. holen Sie die nächsten tausend Objekte: **"1000,1000"** |
-    | **order_by** | String | Nein | Ordnen Sie das Ergebnis nach (siehe Filter für weitere Details, was jeder Wert bedeutet):<br><br>*   **"isys_obj_type__id"**,<br>*   **"isys_obj__isys_obj_type__id"**,<br>*   **"type"**,<br>*   **"isys_obj__title"**,<br>*   **"title"**,<br>*   **"isys_obj_type__title"**,<br>*   **"type_title"**,<br>*   **"isys_obj__sysid"**,<br>*   **"sysid"**,<br>*   **"isys_cats_person_list__first_name"**,<br>*   **"first_name"**,<br>*   **"isys_cats_person_list__last_name"**,<br>*   **"last_name"**,<br>*   **"isys_cats_person_list__mail_address"**,<br>*   **"email"**,<br>*   **"isys_obj__id"**, or<br>*   **"id"** |
-    | **sort** | String | Nein | Nur sinnvoll in Kombination mit Schlüssel order\_by; erlaubte Werte sind entweder "ASC" (aufsteigend) oder "DESC" (absteigend) |
+    | Key            | JSON Datentyp | Erforderlich | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+    | -------------- | ------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | **categories** | Array         | Nein         | Hier kann nach einer Liste oder einer Kategorie, in Form von Kategorie Konstante/n, gefiltert werden.  <br>"categories": ["C__CATG__MY_CUSTOM_CATEGORY"]  <br>"categories": ["C__CATG__MY_CUSTOM_CATEGORY", "C__CATG__MY_SECOND_CATEGORY"]                                                                                                                                                                                                                                                                                                                                                                                     |
+    | **filter**     | Array         | Nein         | Liste der Objekte filtern; siehe unten für eine vollständige Liste der Optionen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | **limit**      | Mixed         | Nein         | Maximale Anzahl von Objekten (als ganze Zahl), z.B. die ersten tausend Objekte abrufen: **1000**<br><br>Kombinieren Sie diese Grenze mit einem Offset (als Zeichenkette), z.B. holen Sie die nächsten tausend Objekte: **"1000,1000"**                                                                                                                                                                                                                                                                                                                                                                                         |
+    | **order_by**   | String        | Nein         | Ordnen Sie das Ergebnis nach (siehe Filter für weitere Details, was jeder Wert bedeutet):<br><br>*   **"isys_obj_type__id"**,<br>*   **"isys_obj__isys_obj_type__id"**,<br>*   **"type"**,<br>*   **"isys_obj__title"**,<br>*   **"title"**,<br>*   **"isys_obj_type__title"**,<br>*   **"type_title"**,<br>*   **"isys_obj__sysid"**,<br>*   **"sysid"**,<br>*   **"isys_cats_person_list__first_name"**,<br>*   **"first_name"**,<br>*   **"isys_cats_person_list__last_name"**,<br>*   **"last_name"**,<br>*   **"isys_cats_person_list__mail_address"**,<br>*   **"email"**,<br>*   **"isys_obj__id"**, or<br>*   **"id"** |
+    | **sort**       | String        | Nein         | Nur sinnvoll in Kombination mit Schlüssel order\_by; erlaubte Werte sind entweder "ASC" (aufsteigend) oder "DESC" (absteigend)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
     Filter
 
-    | Key | JSON Datentyp | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **ids** | Array | Nein | Liste von Objekt-Identifikatoren (als ganze Zahlen), zum Beispiel: **1, 2, 3** |
-    | **type** | Integer\|String | Nein | Objekttyp-Identifikator (als ganze Zahl), zum Beispiel: **5**<br><br>Alternativ Objekttyp-Konstante (als String), z.B.: **"C__OBJTYPE__SERVER"** |
-    | **title** | String | Nein | Objekt Bezeichnung (siehe Attribut Bezeichnung in Kategorie Global), z.B.: **"My little server"** |
-    | **type_title** | String | Nein | Übersetzter Name des Objekttyps, zum Beispiel: **"Server"**<br><br>**Hinweis:** Stellen Sie in Ihrer Anfrage eine geeignete Sprache ein.. |
-    | **sysid** | String | Nein | **SYSID** (siehe Kategorie Global), zum Beispiel: **"SRV_101010"** |
-    | **first_name** | String | Nein | Vorname eines Objekts vom Typ Personen (siehe Attribut Vorname in der Kategorie Personen → Stammdaten), z.B.: **"John"** |
-    | **last_name** | String | Nein | Nachname eines Objekts vom Typ Personen (siehe Attribut Nachname in der Kategorie Personen → Stammdaten), z.B.: **"Doe"** |
-    | **email** | String | Nein | Primäre E-Mail-Adresse eines Objekts vom Typ Personen, Personengruppen oder Organisation (siehe Attribut E-Mail-Adresse in den Kategorien Personen/Personengruppen/Organisation → Stammdaten), zum Beispiel: **"john.doe@example.com"** |
-    | **type_group** | String | Nein | Filter nach der Objekt Typ Gruppe z.B. Infrastructure oder Andere:  <br>"**C__OBJTYPE_GROUP__INFRASTRUCTURE**" |
-    | **status** | String |     | Filter nach Status der Objekte z.B. Normal oder Archiviert:<br><br>*   **C__RECORD_STATUS__BIRTH  <br>    Status-ID = 1  <br>    Bezeichnung = Unfertig**<br>*   **C__RECORD_STATUS__NORMAL  <br>    Status-ID = 2**  <br>    **Bezeichnung = ****Normal**<br>*   **C__RECORD_STATUS__ARCHIVED  <br>    Status-ID = 3**  <br>    **Bezeichnung =** **Archiviert**<br>*   **C__RECORD_STATUS__DELETED  <br>    Status-ID = 4**  <br>    **Bezeichnung =** **Gelöscht**<br>*   **C__RECORD_STATUS__TEMPLATE  <br>    Status-ID = 6**  <br>    **Bezeichnung =** **Vorlage**<br>*   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE  <br>    Status-ID = 7**  <br>    **Bezeichnung =** **Vorlage für Massenänderung** |
+    | Key            | JSON Datentyp   | Erforderlich | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+    | -------------- | --------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **ids**        | Array           | Nein         | Liste von Objekt-Identifikatoren (als ganze Zahlen), zum Beispiel: **1, 2, 3**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | **type**       | Integer\|String | Nein         | Objekttyp-Identifikator (als ganze Zahl), zum Beispiel: **5**<br><br>Alternativ Objekttyp-Konstante (als String), z.B.: **"C__OBJTYPE__SERVER"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+    | **title**      | String          | Nein         | Objekt Bezeichnung (siehe Attribut Bezeichnung in Kategorie Global), z.B.: **"My little server"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+    | **type_title** | String          | Nein         | Übersetzter Name des Objekttyps, zum Beispiel: **"Server"**<br><br>**Hinweis:** Stellen Sie in Ihrer Anfrage eine geeignete Sprache ein..                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+    | **sysid**      | String          | Nein         | **SYSID** (siehe Kategorie Global), zum Beispiel: **"SRV_101010"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+    | **first_name** | String          | Nein         | Vorname eines Objekts vom Typ Personen (siehe Attribut Vorname in der Kategorie Personen → Stammdaten), z.B.: **"John"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+    | **last_name**  | String          | Nein         | Nachname eines Objekts vom Typ Personen (siehe Attribut Nachname in der Kategorie Personen → Stammdaten), z.B.: **"Doe"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+    | **email**      | String          | Nein         | Primäre E-Mail-Adresse eines Objekts vom Typ Personen, Personengruppen oder Organisation (siehe Attribut E-Mail-Adresse in den Kategorien Personen/Personengruppen/Organisation → Stammdaten), zum Beispiel: **"john.doe@example.com"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+    | **type_group** | String          | Nein         | Filter nach der Objekt Typ Gruppe z.B. Infrastructure oder Andere:  <br>"**C__OBJTYPE_GROUP__INFRASTRUCTURE**"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | **status**     | String          |              | Filter nach Status der Objekte z.B. Normal oder Archiviert:<br><br>*   **C__RECORD_STATUS__BIRTH  <br>    Status-ID = 1  <br>    Bezeichnung = Unfertig**<br>*   **C__RECORD_STATUS__NORMAL  <br>    Status-ID = 2**  <br>    **Bezeichnung = ****Normal**<br>*   **C__RECORD_STATUS__ARCHIVED  <br>    Status-ID = 3**  <br>    **Bezeichnung =** **Archiviert**<br>*   **C__RECORD_STATUS__DELETED  <br>    Status-ID = 4**  <br>    **Bezeichnung =** **Gelöscht**<br>*   **C__RECORD_STATUS__TEMPLATE  <br>    Status-ID = 6**  <br>    **Bezeichnung =** **Vorlage**<br>*   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE  <br>    Status-ID = 7**  <br>    **Bezeichnung =** **Vorlage für Massenänderung** |
 
     Sie können eine beliebige Kombination von Filtern verwenden. Filter sind logisch mit UND verknüpft. Eine gültige Kombination könnte sein: "Gib mir alle Server, die den gleichen Hostnamen haben."
 
@@ -880,21 +880,21 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     JSON-Schlüsselergebnis enthält ein Array von JSON-Objekten. Jedes Objekt enthält ein Bündel von Informationen über ein i-doit-Objekt.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **id** | String | Objektbezeichner (als numerische Zeichenfolge) |
-    | **title** | String | Objekt Bezeichnung |
-    | **sysid** | String | SYSID (siehe Kategorie Global) |
-    | **type** | String | Objekt-Typ-Identifikator (als numerische Zeichenfolge) |
-    | **created** | String | Datum der Erstellung; Format: Y-m-d H:i:s |
-    | **updated** | String | Datum der letzten Aktualisierung; Format: Y-m-d H:i:s<br><br>**Hinweis:** Dieser Schlüssel ist optional, da nicht jedes Objekt zuvor aktualisiert wurde.. |
-    | **type_title** | String | Übersetzter Name des Objekttyps |
-    | **type_group_title** | String | Übersetzter Name der Objekttypgruppe |
-    | **status** | String | Objekt status:<br><br>*   **C__RECORD_STATUS__BIRTH  <br>    Status-ID = 1  <br>    Bezeichnung = Unfertig**<br>*   **C__RECORD_STATUS__NORMAL  <br>    Status-ID = 2**  <br>    **Bezeichnung = ****Normal**<br>*   **C__RECORD_STATUS__ARCHIVED  <br>    Status-ID = 3**  <br>    **Bezeichnung =** **Archiviert**<br>*   **C__RECORD_STATUS__DELETED  <br>    Status-ID = 4**  <br>    **Bezeichnung =** **Gelöscht**<br>*   **C__RECORD_STATUS__TEMPLATE  <br>    Status-ID = 6**  <br>    **Bezeichnung =** **Vorlage**<br>*   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE  <br>    Status-ID = 7**  <br>    **Bezeichnung =** **Vorlage für Massenänderung** |
-    | **cmdb_status** | String | CMDB-Status (siehe Kategorie Global; als numerische Zeichenfolge) |
-    | **cmdb_status_title** | String | Übersetzter CMDB-Status (siehe Kategorie Global) |
-    | **image** | String | URL zum Objektbild |
-    | **categories** | Mixed | Optionale Attribute mit Werten abhängig von der angeforderten Kategorie |
+    | Key                   | JSON Datentyp | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+    | --------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **id**                | String        | Objektbezeichner (als numerische Zeichenfolge)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+    | **title**             | String        | Objekt Bezeichnung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+    | **sysid**             | String        | SYSID (siehe Kategorie Global)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+    | **type**              | String        | Objekt-Typ-Identifikator (als numerische Zeichenfolge)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+    | **created**           | String        | Datum der Erstellung; Format: Y-m-d H:i:s                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+    | **updated**           | String        | Datum der letzten Aktualisierung; Format: Y-m-d H:i:s<br><br>**Hinweis:** Dieser Schlüssel ist optional, da nicht jedes Objekt zuvor aktualisiert wurde..                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+    | **type_title**        | String        | Übersetzter Name des Objekttyps                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+    | **type_group_title**  | String        | Übersetzter Name der Objekttypgruppe                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+    | **status**            | String        | Objekt status:<br><br>*   **C__RECORD_STATUS__BIRTH  <br>    Status-ID = 1  <br>    Bezeichnung = Unfertig**<br>*   **C__RECORD_STATUS__NORMAL  <br>    Status-ID = 2**  <br>    **Bezeichnung = ****Normal**<br>*   **C__RECORD_STATUS__ARCHIVED  <br>    Status-ID = 3**  <br>    **Bezeichnung =** **Archiviert**<br>*   **C__RECORD_STATUS__DELETED  <br>    Status-ID = 4**  <br>    **Bezeichnung =** **Gelöscht**<br>*   **C__RECORD_STATUS__TEMPLATE  <br>    Status-ID = 6**  <br>    **Bezeichnung =** **Vorlage**<br>*   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE  <br>    Status-ID = 7**  <br>    **Bezeichnung =** **Vorlage für Massenänderung** |
+    | **cmdb_status**       | String        | CMDB-Status (siehe Kategorie Global; als numerische Zeichenfolge)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | **cmdb_status_title** | String        | Übersetzter CMDB-Status (siehe Kategorie Global)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+    | **image**             | String        | URL zum Objektbild                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+    | **categories**        | Mixed         | Optionale Attribute mit Werten abhängig von der angeforderten Kategorie                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
     Beispiel
 
@@ -953,21 +953,21 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **object** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **456** |
-    | **category** | String | Ja  | [Kategoriekonstante](../../../../grundlagen/kategorien-und-attribute.md), zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
-    | **data** | Object | Ja  | {<br><br> "title":"Name of the access",<br><br>  "description":"description of the access"<br><br>} |
+    | **Key**      | **JSON Datentyp** | Erforderlich | Beschreibung                                                                                                      |
+    | ------------ | ----------------- | ------------ | ----------------------------------------------------------------------------------------------------------------- |
+    | **object**   | Integer           | Ja           | Objekt-Identifikator, zum Beispiel: **456**                                                                       |
+    | **category** | String            | Ja           | [Kategoriekonstante](../../../../grundlagen/kategorien-und-attribute.md), zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
+    | **data**     | Object            | Ja           | {<br><br> "title":"Name of the access",<br><br>  "description":"description of the access"<br><br>}               |
 
     Antwort
 
     Objekt-Identifikator, zum Beispiel
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **message** | String | Einige Informationen |
-    | **entry** | Integer | Eintragsidentifikator, zum Beispiel: **35** |
+    | **Key**     | **JSON Datentyp** | Beschreibung                                |
+    | ----------- | ----------------- | ------------------------------------------- |
+    | **success** | Boolean           | Sollte true sein                            |
+    | **message** | String            | Einige Informationen                        |
+    | **entry**   | Integer           | Eintragsidentifikator, zum Beispiel: **35** |
 
     Beispiel
 
@@ -1047,22 +1047,22 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | Key | JSON Datentyp | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **objID** | Integer | ja | Objekt-Identifikator, zum Beispiel: **42** |
-    | **category** | String | ja | [Kategoriekonstante](../../../../grundlagen/kategorien-und-attribute.md), zum Beispiel: **C__CATG__MODEL** |
-    | **data** | Object | ja | Attribute mit ihren Werten, zum Beispiel: <br>``` { "manufacturer": "Name of manufacturer", "title": "Name of model" } ``` |
+    | Key          | JSON Datentyp | Erforderlich | Beschreibung                                                                                                               |
+    | ------------ | ------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------- |
+    | **objID**    | Integer       | ja           | Objekt-Identifikator, zum Beispiel: **42**                                                                                 |
+    | **category** | String        | ja           | [Kategoriekonstante](../../../../grundlagen/kategorien-und-attribute.md), zum Beispiel: **C__CATG__MODEL**                 |
+    | **data**     | Object        | ja           | Attribute mit ihren Werten, zum Beispiel: <br>``` { "manufacturer": "Name of manufacturer", "title": "Name of model" } ``` |
 
 
      Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **id** | String | Eintragsidentifikator (als numerische Zeichenfolge) |
-    | **message** | String | Einige Informationen |
-    | **success** | Boolean | Sollte immer true sein |
+    | Key         | JSON Datentyp | Beschreibung                                        |
+    | ----------- | ------------- | --------------------------------------------------- |
+    | **id**      | String        | Eintragsidentifikator (als numerische Zeichenfolge) |
+    | **message** | String        | Einige Informationen                                |
+    | **success** | Boolean       | Sollte immer true sein                              |
 
     Beispiel
 
@@ -1107,20 +1107,20 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | Key | JSON Datentyp | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **objID** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **42** |
-    | **category** | String | Ja  | Kategorie-Konstante, zum Beispiel: **"C__CATG__MODEL"** |
-    | **status** | Integer | Ja  | ID des Status, zum Beispiel **2** für **normal  <br>**Wird der Parameter _status_ nicht angegeben, ist der Status auf **2** (normal) zu setzen. Dies entspricht dem bisherigen Verhalten. |
+    | Key          | JSON Datentyp | Erforderlich | Beschreibung                                                                                                                                                                              |
+    | ------------ | ------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **objID**    | Integer       | Ja           | Objekt-Identifikator, zum Beispiel: **42**                                                                                                                                                |
+    | **category** | String        | Ja           | Kategorie-Konstante, zum Beispiel: **"C__CATG__MODEL"**                                                                                                                                   |
+    | **status**   | Integer       | Ja           | ID des Status, zum Beispiel **2** für **normal  <br>**Wird der Parameter _status_ nicht angegeben, ist der Status auf **2** (normal) zu setzen. Dies entspricht dem bisherigen Verhalten. |
 
     Gültige Werte für **status**
 
-    | Wert | Beschreibung |
-    | --- | --- |
+    | Wert | Beschreibung                                                                   |
+    | ---- | ------------------------------------------------------------------------------ |
     | -1   | Lese alle Einträge mit dem Status **normal**, **archiviert** oder **gelöscht** |
-    | 2   | Lese alle Einträge mit dem Status **normal** (default) |
-    | 3   | Lese alle Einträge mit dem Status **archiviert** |
-    | 4   | Lese alle Einträge mit dem Status **gelöscht** |
+    | 2    | Lese alle Einträge mit dem Status **normal** (default)                         |
+    | 3    | Lese alle Einträge mit dem Status **archiviert**                               |
+    | 4    | Lese alle Einträge mit dem Status **gelöscht**                                 |
 
     Wird ein ungültiger Wert für _status_ angegeben, resultiert dies in der Response in einer Fehlermeldung:
     ```
@@ -1130,11 +1130,11 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     JSON-Schlüsselergebnis enthält ein Array von JSON-Objekten. Jedes Objekt enthält alle verfügbaren Attribute für die angeforderte Kategorie. **Hinweis**: Auch wenn es sich um eine single-value Kategorie oder eine multi-value Kategorie mit nur 1 Eintrag handelt, enthält das JSON-Schlüsselergebnis immer ein Array von JSON-Objekten.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **id** | String | Eingabe-Identifikator (als numerische Zeichenfolge) |
-    | **objID** | String | Objektbezeichner (als numerische Zeichenfolge) |
-    | …   | Mixed | Optionale Attribute mit Werten abhängig von der angeforderten Kategorie |
+    | Key       | JSON Datentyp | Beschreibung                                                            |
+    | --------- | ------------- | ----------------------------------------------------------------------- |
+    | **id**    | String        | Eingabe-Identifikator (als numerische Zeichenfolge)                     |
+    | **objID** | String        | Objektbezeichner (als numerische Zeichenfolge)                          |
+    | …         | Mixed         | Optionale Attribute mit Werten abhängig von der angeforderten Kategorie |
 
     Beispiel
 
@@ -1194,21 +1194,21 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
      Anfrage Parameter
 
-    | Key | JSON Datentyp | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **objID** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **42** |
-    | **category** | String | Ja  | Kategorie-Konstante, zum Beispiel: **"C__CATG__MODEL"** |
-    | **data** | Object | Ja  | Attribute, die aktualisiert werden |
-    | **data.category_id** | Integer | Ja  | Eintrags-Identifikator (nur bei multi-value Kategorien erforderlich) |
+    | Key                  | JSON Datentyp | Erforderlich | Beschreibung                                                         |
+    | -------------------- | ------------- | ------------ | -------------------------------------------------------------------- |
+    | **objID**            | Integer       | Ja           | Objekt-Identifikator, zum Beispiel: **42**                           |
+    | **category**         | String        | Ja           | Kategorie-Konstante, zum Beispiel: **"C__CATG__MODEL"**              |
+    | **data**             | Object        | Ja           | Attribute, die aktualisiert werden                                   |
+    | **data.category_id** | Integer       | Ja           | Eintrags-Identifikator (nur bei multi-value Kategorien erforderlich) |
 
      Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **message** | String | Sollte "**Category entry successfully** **saved**" lauten |
+    | Key         | JSON Datentyp | Beschreibung                                              |
+    | ----------- | ------------- | --------------------------------------------------------- |
+    | **success** | Boolean       | Sollte true sein                                          |
+    | **message** | String        | Sollte "**Category entry successfully** **saved**" lauten |
 
     Beispiel
 
@@ -1258,20 +1258,20 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | Key | JSON Datentyp | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **objID** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **42** |
-    | **category** | String | Ja  | Kategorie-Konstante, zum Beispiel: **"C__CATG__IP"** |
-    | **cateID** | Integer | Ja  | Eintrags-Identifikator, zum Beispiel: **3** |
+    | Key          | JSON Datentyp | Erforderlich | Beschreibung                                         |
+    | ------------ | ------------- | ------------ | ---------------------------------------------------- |
+    | **objID**    | Integer       | Ja           | Objekt-Identifikator, zum Beispiel: **42**           |
+    | **category** | String        | Ja           | Kategorie-Konstante, zum Beispiel: **"C__CATG__IP"** |
+    | **cateID**   | Integer       | Ja           | Eintrags-Identifikator, zum Beispiel: **3**          |
 
     Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **message** | String | Einige Informationen |
+    | Key         | JSON Datentyp | Beschreibung         |
+    | ----------- | ------------- | -------------------- |
+    | **success** | Boolean       | Sollte true sein     |
+    | **message** | String        | Einige Informationen |
 
     Beispiel
 
@@ -1312,20 +1312,20 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | Key | JSON Datentyp | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **objID** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **42** |
-    | **category** | String | Ja  | Kategorie-Konstante, zum Beispiel: **"C__CATG__IP"** |
-    | **cateID** | Integer | Ja  | Eintrags-Identifikator, zum Beispiel: **3** |
+    | Key          | JSON Datentyp | Erforderlich | Beschreibung                                         |
+    | ------------ | ------------- | ------------ | ---------------------------------------------------- |
+    | **objID**    | Integer       | Ja           | Objekt-Identifikator, zum Beispiel: **42**           |
+    | **category** | String        | Ja           | Kategorie-Konstante, zum Beispiel: **"C__CATG__IP"** |
+    | **cateID**   | Integer       | Ja           | Eintrags-Identifikator, zum Beispiel: **3**          |
 
     Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key | JSON Datentyp | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **message** | String | Einige Informationen |
+    | Key         | JSON Datentyp | Beschreibung         |
+    | ----------- | ------------- | -------------------- |
+    | **success** | Boolean       | Sollte true sein     |
+    | **message** | String        | Einige Informationen |
 
     Beispiel
 
@@ -1367,20 +1367,20 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **object** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **456** |
-    | **category** | String | Ja  | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
-    | **entry** | Integer | Ja  | Eintrags-Identifikator, zum Beispiel: **33** |
+    | **Key**      | **JSON Datentyp** | Erforderlich | Beschreibung                                                 |
+    | ------------ | ----------------- | ------------ | ------------------------------------------------------------ |
+    | **object**   | Integer           | Ja           | Objekt-Identifikator, zum Beispiel: **456**                  |
+    | **category** | String            | Ja           | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
+    | **entry**    | Integer           | Ja           | Eintrags-Identifikator, zum Beispiel: **33**                 |
 
     Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **message** | String | Einige Informationen |
+    | **Key**     | **JSON Datentyp** | Beschreibung         |
+    | ----------- | ----------------- | -------------------- |
+    | **success** | Boolean           | Sollte true sein     |
+    | **message** | String            | Einige Informationen |
 
     Beispiel
 
@@ -1455,20 +1455,20 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **object** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **456** |
-    | **category** | String | Ja  | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
-    | **entry** | Integer | Ja  | Eintrags-Identifikator, zum Beispiel: **32** |
+    | **Key**      | **JSON Datentyp** | Erforderlich | Beschreibung                                                 |
+    | ------------ | ----------------- | ------------ | ------------------------------------------------------------ |
+    | **object**   | Integer           | Ja           | Objekt-Identifikator, zum Beispiel: **456**                  |
+    | **category** | String            | Ja           | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
+    | **entry**    | Integer           | Ja           | Eintrags-Identifikator, zum Beispiel: **32**                 |
 
     Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **message** | String | Einige Informationen |
+    | **Key**     | **JSON Datentyp** | Beschreibung         |
+    | ----------- | ----------------- | -------------------- |
+    | **success** | Boolean           | Sollte true sein     |
+    | **message** | String            | Einige Informationen |
 
     Beispiel
 
@@ -1512,20 +1512,20 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **object** | Integer | Ja  | Objekt-Identifikator, zum Beispiel: **456** |
-    | **category** | String | Ja  | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
-    | **entry** | Integer | Ja  | Eintrags-Identifikator, zum Beispiel: **32** |
+    | **Key**      | **JSON Datentyp** | Erforderlich | Beschreibung                                                 |
+    | ------------ | ----------------- | ------------ | ------------------------------------------------------------ |
+    | **object**   | Integer           | Ja           | Objekt-Identifikator, zum Beispiel: **456**                  |
+    | **category** | String            | Ja           | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_ACCESS"** |
+    | **entry**    | Integer           | Ja           | Eintrags-Identifikator, zum Beispiel: **32**                 |
 
     Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **message** | String | Einige Informationen |
+    | **Key**     | **JSON Datentyp** | Beschreibung         |
+    | ----------- | ----------------- | -------------------- |
+    | **success** | Boolean           | Sollte true sein     |
+    | **message** | String            | Einige Informationen |
 
     Beispiel
 
@@ -1566,20 +1566,20 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **category** | String | Ja  | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_CPU"** |
-    | **property** | String | Ja  | Attribut in der Kategorie, zum Beispiel: "manufacturer" |
+    | **Key**      | **JSON Datentyp** | Erforderlich | Beschreibung                                              |
+    | ------------ | ----------------- | ------------ | --------------------------------------------------------- |
+    | **category** | String            | Ja           | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_CPU"** |
+    | **property** | String            | Ja           | Attribut in der Kategorie, zum Beispiel: "manufacturer"   |
 
     Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **id** | Integer | Identifikator |
-    | **const** | String | Konstante des Dialog-Attributs |
-    | **title** | String | Bezeichnung des Attributs |
+    | **Key**   | **JSON Datentyp** | Beschreibung                   |
+    | --------- | ----------------- | ------------------------------ |
+    | **id**    | String            | Identifikator                  |
+    | **const** | String            | Konstante des Dialog-Attributs |
+    | **title** | String            | Bezeichnung des Attributs      |
 
     Beispiel
 
@@ -1627,20 +1627,20 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | **Key** | **JSON Datentyp  <br>** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **category** | String | Yes | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_CPU"** |
-    | **property** | String | Yes | Attribut in der Kategorie, zum Beispiel: "Hersteller" |
-    | **value** | String | Yes | Wert des Attributs |
+    | **Key**      | **JSON Datentyp  <br>** | Erforderlich | Beschreibung                                              |
+    | ------------ | ----------------------- | ------------ | --------------------------------------------------------- |
+    | **category** | String                  | Yes          | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_CPU"** |
+    | **property** | String                  | Yes          | Attribut in der Kategorie, zum Beispiel: "Hersteller"     |
+    | **value**    | String                  | Yes          | Wert des Attributs                                        |
 
     Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **entry\_id** | Integer | Eintrags-Identifikator, zum Beispiel |
+    | **Key**       | **JSON Datentyp** | Beschreibung                         |
+    | ------------- | ----------------- | ------------------------------------ |
+    | **success**   | Boolean           | Sollte true sein                     |
+    | **entry\_id** | Integer           | Eintrags-Identifikator, zum Beispiel |
 
     Beispiel
 
@@ -1681,21 +1681,21 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **category** | String | Ja  | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_CPU"** |
-    | **property** | String | Ja  | Attribut in der Kategorie, zum Beispiel: "manufacturer" |
-    | **value** | String | Ja  | Wert des Attributs |
-    | **entry\_id** | String | Ja  | Eintrags-Identifikator, zum Beispiel: 3 |
+    | **Key**       | **JSON Datentyp** | Erforderlich | Beschreibung                                              |
+    | ------------- | ----------------- | ------------ | --------------------------------------------------------- |
+    | **category**  | String            | Ja           | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_CPU"** |
+    | **property**  | String            | Ja           | Attribut in der Kategorie, zum Beispiel: "manufacturer"   |
+    | **value**     | String            | Ja           | Wert des Attributs                                        |
+    | **entry\_id** | String            | Ja           | Eintrags-Identifikator, zum Beispiel: 3                   |
 
     Anfrage
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **entry\_id** | Integer/String | Eintrags-Identifikator, zum Beispiel: 3 |
+    | **Key**       | **JSON Datentyp** | Beschreibung                            |
+    | ------------- | ----------------- | --------------------------------------- |
+    | **success**   | Boolean           | Sollte true sein                        |
+    | **entry\_id** | Integer/String    | Eintrags-Identifikator, zum Beispiel: 3 |
 
     Beispiel
 
@@ -1737,20 +1737,20 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Anfrage Parameter
 
-    | **Key** | **JSON Datentyp** | Erforderlich | Beschreibung |
-    | --- | --- | --- | --- |
-    | **category** | String | Ja  | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_CPU"** |
-    | **property** | String | Ja  | Attribut in der Kategorie, zum Beispiel: "manufacturer" |
-    | **entry\_id** | String | Ja  | Eintrags-Identifikator, zum Beispiel: 3 |
+    | **Key**       | **JSON Datentyp** | Erforderlich | Beschreibung                                              |
+    | ------------- | ----------------- | ------------ | --------------------------------------------------------- |
+    | **category**  | String            | Ja           | Kategorie-Konstante, zum Beispiel: **"C\_\_CATG\_\_CPU"** |
+    | **property**  | String            | Ja           | Attribut in der Kategorie, zum Beispiel: "manufacturer"   |
+    | **entry\_id** | String            | Ja           | Eintrags-Identifikator, zum Beispiel: 3                   |
 
     Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt..
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **success** | Boolean | Sollte true sein |
-    | **entry\_id** | Integer/String | Eintrags-Identifikator, zum Beispiel: 3 |
+    | **Key**       | **JSON Datentyp** | Beschreibung                            |
+    | ------------- | ----------------- | --------------------------------------- |
+    | **success**   | Boolean           | Sollte true sein                        |
+    | **entry\_id** | Integer/String    | Eintrags-Identifikator, zum Beispiel: 3 |
 
     Beispiel
 
@@ -1797,13 +1797,13 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **id** | String | Identifikator |
-    | **category** | String | Attribut-Kategorie in Kategorie Global |
-    | **title** | String | Bezeichnung des Berichts |
-    | **description** | String | Beschreibung des Berichts |
-    | **created** | String | Wann wurde er erstellt |
+    | **Key**         | **JSON Datentyp** | Beschreibung                           |
+    | --------------- | ----------------- | -------------------------------------- |
+    | **id**          | String            | Identifikator                          |
+    | **category**    | String            | Attribut-Kategorie in Kategorie Global |
+    | **title**       | String            | Bezeichnung des Berichts               |
+    | **description** | String            | Beschreibung des Berichts              |
+    | **created**     | String            | Wann wurde er erstellt                 |
 
     Beispiel
 
@@ -1856,9 +1856,9 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     **Anfrage Parameter**
 
-    | **Key** | **JSON Datentyp** | Beschreibung |
-    | --- | --- | --- |
-    | **id** | String | Identifikator |
+    | **Key** | **JSON Datentyp** | Beschreibung  |
+    | ------- | ----------------- | ------------- |
+    | **id**  | String            | Identifikator |
 
     **Antwort**
 
