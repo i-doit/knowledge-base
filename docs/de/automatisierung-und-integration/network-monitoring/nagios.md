@@ -1,5 +1,7 @@
 # Nagios
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 Nagios ist eine Software für [Network Monitoring](index.md), das aus den Daten der [IT-Dokumentation](../../glossar.md) heraus konfiguriert werden kann. Dadurch lassen sich eine doppelte Pflege von Daten vermeiden und Fehler minimieren. Der in i-doit verfügbare Export erlaubt es, vollständige oder partielle Konfigurationen zu erzeugen. Dazu werden in der i-doit-Oberfläche Nagios-Konfigurationen manuell angelegt oder automatisiert mit Werten unterfüttert.
 
 !!! info "Kompatibilität"
@@ -22,7 +24,7 @@ Dazu gehört die Hauptkonfiguration, Service- und Host-Templates sowie weitere g
 
 ## Konfiguration in Objekten
 
-Alle weiteren Konfigurationen werden innerhalb der [Objekte](../../grundlagen/struktur-it-dokumentation.md) vorgenommen. Der einfachste Fall ist die Konfiguration von Hostparametern. Hierzu muss über [Datenstruktur bearbeiten](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) der [Kategorie](../../grundlagen/struktur-it-dokumentation.md) Ordner **Nagios (Host)** zu den gewünschten [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) zugewiesen werden.
+Alle weiteren Konfigurationen werden innerhalb der [Objekte](../../grundlagen/struktur-it-dokumentation.md) vorgenommen. Der einfachste Fall ist die Konfiguration von Host Parameter. Hierzu muss über [Datenstruktur bearbeiten](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) der [Kategorie](../../grundlagen/struktur-it-dokumentation.md) Ordner **Nagios (Host)** zu den gewünschten [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) zugewiesen werden.
 
 In der Kategorie **Host Definition** kann dann entweder über ein Nagios Template oder durch individuelle Konfiguration eine Hostdefinition für Nagios hinterlegt werden.
 

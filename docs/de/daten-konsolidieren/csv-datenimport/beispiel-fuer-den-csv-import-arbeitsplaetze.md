@@ -1,5 +1,7 @@
 # Beispiel Arbeitsplätze
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 In diesem Beispiel bauen wir auf den [CSV Import von Standorten](beispiel-fuer-den-csv-import-standorte-erstellen.md) auf, und wollen Arbeitsplätze importieren.
 Diese sollen einem Raum als Standort zugewiesen werden und weiterhin wollen wir den Arbeitsplätzen Clients, Bildschirme und Drucker zuweisen.
 
@@ -7,17 +9,16 @@ Diese sollen einem Raum als Standort zugewiesen werden und weiterhin wollen wir 
 
 Für den Import benötigen wir folgende Informationen:
 
--  Objektname → den Namen des Arbeitsplatzes, des Clients, des Bildschirms  oder des Druckers
--  Standort → unterhalb welcher Lokation soll sich das Objekt befinden
--  Objekttyp → Um welchen Objekttypen soll es sich Handeln
--  Arbeitsplatz Zuweisung → Welchem Arbeitsplatz soll die Komponente zugewiesen werden
+-   Objektname → den Namen des Arbeitsplatzes, des Clients, des Bildschirms  oder des Druckers
+-   Standort → unterhalb welcher Lokation soll sich das Objekt befinden
+-   Objekttyp → Um welchen Objekttypen soll es sich Handeln
+-   Arbeitsplatz Zuweisung → Welchem Arbeitsplatz soll die Komponente zugewiesen werden
 
 Beispiel CSV Datei für diesen Import:
 
 [Import-Arbeitsplaetze.csv :material-file-download:](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/Import-Arbeitsplaetze.csv){ .md-button .md-button--primary }
 
 ??? example "Import-Arbeitsplaetze.csv"
-
     ```text
     ObjektName;Standort;Objekttyp;AP Zuweisung
     AP0001;RAUM 1.001;C__OBJTYPE__WORKSTATION;

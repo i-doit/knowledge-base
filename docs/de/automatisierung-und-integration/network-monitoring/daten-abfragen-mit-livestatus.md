@@ -6,31 +6,29 @@ Für einen Soll-/Ist-Vergleich zwischen der Soll-Dokumentation in i-doit und dem
 
 Es werden die Schnittstellen
 
-*   [NDOUtils](https://exchange.nagios.org/directory/Addons/Database-Backends/NDOUtils/details) (bzw. IDOUtils) sowie
+-   [NDOUtils](https://exchange.nagios.org/directory/Addons/Database-Backends/NDOUtils/details) (bzw. IDOUtils) sowie
+-   [MK Livestatus](https://mathias-kettner.de/checkmk_livestatus.html)
 
-*   [MK Livestatus](https://mathias-kettner.de/checkmk_livestatus.html)
-
-für [Nagios](https://www.nagios.org/), [Check\_MK](https://mathias-kettner.de/check_mk), [Icinga](https://www.icinga.org/) und kompatiblen Forks unterstützt.
+für [Nagios](https://www.nagios.org/), [Check_MK](https://mathias-kettner.de/check_mk), [Icinga](https://www.icinga.org/) und kompatiblen Forks unterstützt.
 
 !!! success "Empfehlung"
-
     MK Livestatus bietet eine sehr performante Anbindung an das Network Monitoring. Daher ist es den NDOUtils zu bevorzugen.
 
 ## Grundkonfiguration
 
 Voraussetzung ist ein laufendes NDOUtils oder MK Livestatus auf dem Monitoring-System. In i-doit muss unter **Verwaltung → Import und Schnittstellen → Monitoring → Livestatus/NDO** der Zugriff auf eine der Schnittstellen konfiguriert werden.
 
-[![datenabfragenmls-access](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)
+[![daten-abfragen-mls-access](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)
 
 Je nach Typ der Schnittstelle muss nun entweder ein TCP/UNIX Socket oder eine Datenbankkonfiguration mit entsprechenden Zugriffsberechtigungen angegeben werden.
 
 Beispiel NDOUtils:
 
-[![datenabfragenmls-example](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/2-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/2-nm.png)
+[![daten-abfragen-mls-example](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/2-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/2-nm.png)
 
 Beispiel MK Livestatus:
 
-[![datenabfragenmls-example](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/3-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/3-nm.png)
+[![daten-abfragen-mls-example](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/3-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/3-nm.png)
 
 ## Kategorien
 
@@ -38,15 +36,15 @@ Um die Daten auszulesen muss über **[Datenstruktur bearbeiten](../../administra
 
 Falls mehrere Monitoring-Instanzen konfiguriert sind, wird die entsprechende Instanz ausgewählt.
 
-[![datenabfragenmls-multiinstance](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/4-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/4-nm.png)
+[![daten-abfragen-mls-multi-instance](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/4-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/4-nm.png)
 
 Wird die Kategorie aktiviert und der Eintrag abgespeichert, kann in der Kategorie **Livestatus** bzw. **NDO** der aktuelle Status abgefragt werden.
 
-[![datenabfragenmls-status](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/5-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/5-nm.png)
+[![daten-abfragen-mls-status](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/5-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/5-nm.png)
 
 Zusätzlich kann in der [Objektlistenkonfiguration](../../grundlagen/objekt-liste/listenansicht-konfigurieren.md) eine Spalte für NDO oder Livestatus ausgewählt werden, so dass in den [Objekt-Liste](../../grundlagen/objekt-liste/index.md) der aktuelle Hoststatus mit angezeigt wird.
 
-[![datenabfragenmls-objlist](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/6-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/6-nm.png)
+[![daten-abfragen-mls-objlist](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/6-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/6-nm.png)
 
 ## Logbucheinträge aus dem Monitoring
 

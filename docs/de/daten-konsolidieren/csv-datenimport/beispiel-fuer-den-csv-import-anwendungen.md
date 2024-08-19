@@ -1,31 +1,32 @@
 # Beispiel Anwendungen
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 In diesem Beispiel wollen wir Anwendungen importieren. Wir möchten so viele Informationen zu einer Anwendung importieren wie möglich.
 
 !!! note "Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft"
 
 Für den Import können wir folgende Informationen importieren:
 
--  Objekttyp → Um welchen Objekttypen soll es sich Handeln
--  Objekt-Titel → Wie heißt die Anwendung
--  Anwendung - Spezifikation → Welche Spezifikation hat die Anwendung?
--  Anwendung - Hersteller → Wer hat die Anwendung hergestellt?
--  Anwendung - Installationsart → Wird die Anwendung automatisch oder manuell installiert?
--  Anwendung - Registrierungs-Key → Welcher Registrierungs-Key wurde verwendet?
--  Anwendung - Installationspfad → Wie lautet der Installationspfad?
--  Anwendung-Varianten - Bezeichnung → Wie soll die Variante bezeichnet werden?
--  Anwendung-Varianten - Variante → Wie wurde die Variante bezeichnet?
--  Anwendung-Version - Versionsnummer → Welche Versionsnummern gibt es?
--  Anwendung-Version - Servicepack → Welche Servicepacks gibt es?
--  Anwendung-Version - Kernel → Welche Kernel Versionen gibt es?
--  Anwendung-Version - Patchlevel → Welche Patchlevel gibt es?
+-   Objekttyp → Um welchen Objekttypen soll es sich Handeln
+-   Objekt-Titel → Wie heißt die Anwendung
+-   Anwendung - Spezifikation → Welche Spezifikation hat die Anwendung?
+-   Anwendung - Hersteller → Wer hat die Anwendung hergestellt?
+-   Anwendung - Installationsart → Wird die Anwendung automatisch oder manuell installiert?
+-   Anwendung - Registrierungs-Key → Welcher Registrierungs-Key wurde verwendet?
+-   Anwendung - Installationspfad → Wie lautet der Installationspfad?
+-   Anwendung-Varianten - Bezeichnung → Wie soll die Variante bezeichnet werden?
+-   Anwendung-Varianten - Variante → Wie wurde die Variante bezeichnet?
+-   Anwendung-Version - Versionsnummer → Welche Versionsnummern gibt es?
+-   Anwendung-Version - Servicepack → Welche Servicepacks gibt es?
+-   Anwendung-Version - Kernel → Welche Kernel Versionen gibt es?
+-   Anwendung-Version - Patchlevel → Welche Patchlevel gibt es?
 
 Beispiel CSV Datei für diesen Import:
 
 [Import-Anwendungen.csv :material-file-download:](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/Import-Anwendungen.csv){ .md-button .md-button--primary }
 
 ??? example "Import-Anwendungen.csv"
-
     ```text
     Objekttyp;ObjektName;Anwendungen - Spezifikation;Anwendung - Hersteller;Anwendung - Installationsart;Anwendung - Registrierungs-Key;Anwendung - Installationspfad;Anwendungen: Varianten - Bezeichnung;Anwendungen: Varianten - Variante;Version - Versionsnummer;Version - Servicepack;Version - Kernel;Version - Patchlevel
     C__OBJTYPE__APPLICATION;Anwendung;Spezifikation;"Hersteller Alpha";Automatisch;"Kein RegKey";"C:\Program Files\Anwendung";Anwendung PRO;Pro;1.0;Service Pack 1;;1
@@ -40,16 +41,16 @@ Für den Import begeben wir uns wieder in den CSV Import Bereich. Die Einstellun
 
 [![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/1-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/1-csva.png)
 
-Jetzt können wir im unteren Bereich die Import Konfiguratio]n wie folgt vornehmen, und danach den Import Vorgang starten:
+Jetzt können wir im unteren Bereich die Import Konfiguration wie folgt vornehmen, und danach den Import Vorgang starten:
 
 [![CSV Zuweisung](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/2-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/2-csva.png)
 
 Sollten wir alles richtig gemacht haben, erscheinen nun die einzelnen Anwendungen in der Listenansicht.
 
-[![Anwedungs Objekte](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/3-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/3-csva.png)
+[![Anwendungs-Objekte](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/3-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/3-csva.png)
 
 Außerdem sind die Kategorien `Anwendungen → Varianten` und `Version` gefüllt.
 
-[![Anwendung Varianten](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/4-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/4-csva.png)
+[![Anwendungs-Varianten](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/4-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/4-csva.png)
 
-[![Awendung Versionen](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/5-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/5-csva.png)
+[![Anwendungs-Versionen](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/5-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/5-csva.png)

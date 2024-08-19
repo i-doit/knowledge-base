@@ -1,5 +1,7 @@
 # API (JSON-RPC)
 
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
 i-doit enables external access to the [IT documentation](../../glossary.md) via an [application programming interface (API)](https://en.wikipedia.org/wiki/Application_programming_interface). With the API data can be read, created, updated and deleted. Thus the API offers similar functions like the Web GUI but the additional benefit is that you can automate them without any problems.
 
 Technical Background

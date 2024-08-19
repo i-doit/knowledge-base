@@ -15,18 +15,17 @@ You can assign rights to persons and groups of persons. When you assign a certai
 
 The default installation of i-doit has some **Person** objects which are assigned to **Person groups** and thus have predefined rights:
 
-| User | Password | Group | Rights (outline only) |
-| --- | --- | --- | --- |
-| admin | admin | Admin | All rights, also for administration |
-| archivar | archivar | Archivar | Read and edit |
-| author | author | Author | Create, edit, [archive](../../basics/life-and-documentation-cycle.md) and execute |
-| editor | editor | Editor | Read and edit |
-| reader | reader | Reader | Read |
+| User     | Password | Group    | Rights (outline only)                                                             |
+| -------- | -------- | -------- | --------------------------------------------------------------------------------- |
+| admin    | admin    | Admin    | All rights, also for administration                                               |
+| archivar | archivar | Archivar | Read and edit                                                                     |
+| author   | author   | Author   | Create, edit, [archive](../../basics/life-and-documentation-cycle.md) and execute |
+| editor   | editor   | Editor   | Read and edit                                                                     |
+| reader   | reader   | Reader   | Read                                                                              |
 
 The listed users inherit their rights through the groups of the same name.
 
 !!! success "Connect rights to LDAP/AD"
-
     As already described in the article for [Initial Login](../../basics/initial-login.md), it makes sense to automate assignments of persons and groups with the connection to an [LDAP folder/ Active Directory (AD)](../../user-authentication-and-management/ldap-directory/index.md).
 
 Positive Rights
@@ -52,9 +51,9 @@ If a person inherits rights of associated groups, these inherited rights are als
 
 The configuration in the Web GUI is structured in tabular form.
 
-| [![icon](../../assets/images/en/efficient-documentation/rights-management/1-rm.png)](../../assets/images/en/efficient-documentation/rights-management/1-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/2-rm.png)](../../assets/images/en/efficient-documentation/rights-management/2-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/3-rm.png)](../../assets/images/en/efficient-documentation/rights-management/3-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/4-rm.png)](../../assets/images/en/efficient-documentation/rights-management/4-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/5-rm.png)](../../assets/images/en/efficient-documentation/rights-management/5-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/6-rm.png)](../../assets/images/en/efficient-documentation/rights-management/6-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/7-rm.png)](../../assets/images/en/efficient-documentation/rights-management/7-rm.png) | Condition | Parameter | Action |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Create | Read | Edit | Archive | Delete | Execute | Administrator | What area is involved? | Optional parameters | [![](../../assets/images/en/efficient-documentation/rights-management/8-rm.png)](../../assets/images/en/efficient-documentation/rights-management/8-rm.png) Remove right |
+| [![icon](../../assets/images/en/efficient-documentation/rights-management/1-rm.png)](../../assets/images/en/efficient-documentation/rights-management/1-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/2-rm.png)](../../assets/images/en/efficient-documentation/rights-management/2-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/3-rm.png)](../../assets/images/en/efficient-documentation/rights-management/3-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/4-rm.png)](../../assets/images/en/efficient-documentation/rights-management/4-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/5-rm.png)](../../assets/images/en/efficient-documentation/rights-management/5-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/6-rm.png)](../../assets/images/en/efficient-documentation/rights-management/6-rm.png) | [![icon](../../assets/images/en/efficient-documentation/rights-management/7-rm.png)](../../assets/images/en/efficient-documentation/rights-management/7-rm.png) | Condition              | Parameter           | Action                                                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Create                                                                                                                                                          | Read                                                                                                                                                            | Edit                                                                                                                                                            | Archive                                                                                                                                                         | Delete                                                                                                                                                          | Execute                                                                                                                                                         | Administrator                                                                                                                                                   | What area is involved? | Optional parameters | [![](../../assets/images/en/efficient-documentation/rights-management/8-rm.png)](../../assets/images/en/efficient-documentation/rights-management/8-rm.png) Remove right |
 
 The **Condition** is selected from a drop-down menu. The first columns assign precise authorizations for this condition. Partly they are shown as grayed out and thus can't be activated because it makes no sense to assign rights for the condition in question. The optional parameters are also dependent on the condition. In the last column you can carry out actions (until now: remove rights).
 
@@ -63,13 +62,11 @@ The **Condition** is selected from a drop-down menu. The first columns assign pr
 With a click on the **New right** button you can add a new line to the table.
 
 !!! success "Test rights"
-
     In order to test the consequences for the configuration, you could open a second browser (for example, in "private mode") and log in with a user who is affected by the configuration changes. You could also generate a test user whom you assign to the groups to be tested.
 
 When you are ready with all the desired configurations, activate the rights with the **Save** button.
 
 !!! attention "Renew cache"
-
     Sometimes it may be the case that rights are not activated immediately, for example, because the users in question are still logged in. In order to activate the new rights you have to renew the rights cache with **Administration → System tools → Cache / Database → Cache → Clear auth-system cache**. We also suggest to renew the cache [automatically with Cronjob on a regular basis](../../i-doit-pro-add-ons/api/index.md).
 
 Modules
@@ -119,5 +116,4 @@ Additionally to the object types **Persons** and **Person groups** there is the 
 [![Authorization Config Category](../../assets/images/en/efficient-documentation/rights-management/10-rm.png)](../../assets/images/en/efficient-documentation/rights-management/10-rm.png)
 
 !!! attention "General idea"
-
     The **Authorization config** category offered the users of the then existing rights management a smooth changeover when the new rights management was introduced. However, now this category has become much less important. Therefore you shouldn't use it anymore. Under no circumstances you should mix the rights of single modules with configurations in this category at the same time.

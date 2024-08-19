@@ -1,4 +1,11 @@
-# So werden Benutzer und Gruppen aus dem AD/LDAP importiert (erweiterte Konfiguration)
+---
+title: Erweiterte ldap-sync Konfiguration
+description: Anleitung zur Konfiguration einer LDAPS Verbindung mit i-doit für Debian
+icon: material/debian
+lang: de
+---
+
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
 
 Der Import von Benutzern und Gruppen aus dem Active Directory in i-doit findet immer über den [console.php](../../automatisierung-und-integration/cli/console/index.md) Befehl statt. Dazu benutzen wir das Kommando [ldap-sync](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#ldap-sync).<br>
 Am Ende des Artikels ist ein komplettes Beispiel der erstellten erweiterten Konfiguration zu finden.
@@ -118,16 +125,16 @@ Wenn sich die Benutzer beispielsweise dadurch unterscheiden, dass sie zwei `obje
 
 Hier noch mal als Tabelle
 
-| Feldname | Attribut | Mapping mit |
-| --- | --- | --- |
-| Feldname 1 | objectSid | Key: custom_1 |
+| Feldname   | Attribut   | Mapping mit   |
+| ---------- | ---------- | ------------- |
+| Feldname 1 | objectSid  | Key: custom_1 |
 | Feldname 2 | objectGUID | Key: custom_2 |
-| Feldname 3 | - | Key: custom_3 |
-| Feldname 4 | - | Key: custom_4 |
-| Feldname 5 | - | Key: custom_5 |
-| Feldname 6 | - | Key: custom_6 |
-| Feldname 7 | - | Key: custom_7 |
-| Feldname 8 | - | Key: custom_8 |
+| Feldname 3 | -          | Key: custom_3 |
+| Feldname 4 | -          | Key: custom_4 |
+| Feldname 5 | -          | Key: custom_5 |
+| Feldname 6 | -          | Key: custom_6 |
+| Feldname 7 | -          | Key: custom_7 |
+| Feldname 8 | -          | Key: custom_8 |
 
 * * *
 

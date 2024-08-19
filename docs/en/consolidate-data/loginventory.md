@@ -1,10 +1,9 @@
 # LOGINventory
 
-!!! danger ""
-    
-    With i-doit version 1.11 LOGINventory was removed
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
 
-  
+!!! danger ""
+    With i-doit version 1.11 LOGINventory was removed
 
 Using this import, information from LOGINventory can be imported to _i-doit_ and used there.
 
@@ -34,11 +33,7 @@ Configuration of the Database
 
 **Password:** self explanatory.
 
-  
-
 [![loginventory](../assets/images/en/consolidate-data/loginventory/LOGINVENTORY1.jpg)](../assets/images/en/consolidate-data/loginventory/LOGINVENTORY1.jpg)
-
-  
 
 Configuration of the Interface
 ------------------------------
