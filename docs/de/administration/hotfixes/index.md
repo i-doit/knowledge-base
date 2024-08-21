@@ -40,6 +40,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
+### CSV import helper unable to split multi value dialog entries containing 0 values (ID-11080)
+
+[i-doit_32_hotfix_ID-11080_a3a793a.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11080_a3a793a.zip){ .md-button .md-button--primary }
+
 ### Adding #Number to a counter set for automatic inventory number creates a new custom counter when creating a object (ID-11073)
 
 Adding a #Number to a counter creates a new counter AND counters skip a count (2 -> 4 -> 6)
