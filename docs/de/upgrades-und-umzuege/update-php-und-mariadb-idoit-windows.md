@@ -27,6 +27,33 @@ Um erfolgreich aus MariaDB 10.11 Updaten zu können benötigen wir die [MariaDB 
 
 [![MariaDB selektierte Optionen](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/1-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/1-pum.png)
 
+## MariaDB auf 10.11 updaten
+
+!!! warning "Machen Sie vor den folgenden Schritten unbedingt ein [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) oder einen Snapshot!"
+
+### Apache Service stoppen
+
+Zuerst muss der Apache2 Service gestoppt werden. Dies kann entweder über das "Dienste" Fenster oder über einen Befehl für die Konsole ausgeführt werden.
+
+**"Dienste" Fenster:**
+
+Suchen Sie unter den angezeigten Diensten den **Apache2.4** Dienst und klicken Sie auf **"Den Dienst beenden"**
+
+[![apache service stoppen fenster](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)
+
+**Konsole:**
+
+Über **Windowstaste + R** können Sie, wenn Sie **cmd** eingeben, die Windowskonsole öffnen.
+Dort geben Sie dann den folgenden **Befehl** ein:
+
+```winbatch
+C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k stop
+```
+
+### MariaDB aktualisieren
+
+Nachdem der Apache2.4 Service erfolgreich beendet wurde, kann nun die MariaDB msi Datei ausgeführt werden, um das Update zu starten.
+
 <!--- Die Installation sollte wie folgt ablaufen:
 
 - Backup vorab erstellen
