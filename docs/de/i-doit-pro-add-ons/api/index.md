@@ -1,10 +1,18 @@
-# API (JSON-RPC)
+---
+title: API (JSON-RPC)
+description: API (JSON-RPC)
+icon: material/api
+status:
+lang: de
+---
+
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
 
 i-doit ermöglicht den externen Zugriff auf die [IT-Dokumentation](../../glossar.md) über eine [Programmierschnittstelle](https://de.wikipedia.org/wiki/Programmierschnittstelle), auch API genannt. Es können Daten gelesen, erstellt, aktualisiert und auch gelöscht werden. Somit stellt die API ähnliche Funktionen wie die Web GUI bereit - nur lassen sich diese problemlos automatisieren.
 
 ## Technischer Hintergrund
 
-Die API von i-doit bringt typische [CRUD](https://de.wikipedia.org/wiki/CRUD)\-Funktionalitäten mit. Daten können darüber
+Die API von i-doit bringt typische [CRUD](https://de.wikipedia.org/wiki/CRUD)-Funktionalitäten mit. Daten können darüber
 
 *   erstellt (**C**reate),
 *   gelesen (**R**ead),
@@ -52,7 +60,7 @@ Zusätzlicher Vorteil ist, dass man pro Dritt-System/Script einen dedizierten Be
     Andernfalls kann es passieren, dass in zu kurzer Zeit zu viele Sessions erstellt, aber nicht wieder beendet werden. Dies könnte dazu führen, dass i-doit unbenutzbar wird, bis die Sessions beendet wurden.<br>
     Dies erhöht außerdem die Performance erheblich.
 
-!!! attention "Api Benutzer"
+!!! attention ""
     Der für API-Aktionen verwendete Standardbenutzer ist **"Api System"**. Dieser kann bei Bedarf unter **"Kontakte -> Personen"** gefunden werden.<br>
     Dieser wird nur verwendet wenn kein Benutzername/Passwort für die Verbindung zur API Schnittstelle verwendet wird.<br>
     **Wird dieses Personen Objekt archiviert/gelöscht, kann die API nicht mehr ohne Authentifizierung genutzt werden.**<br>
@@ -99,7 +107,7 @@ Die Response vom Server:
 }
 ```
 
-## Kategorien in der IT-Dokumentation
+## Attribut Dokumentation
 
 Eine hilfreiche Auflistung aller in i-doit verwendeten Kategorien und Attribute finden Sie in der Verwaltung:
 
@@ -107,6 +115,12 @@ Eine hilfreiche Auflistung aller in i-doit verwendeten Kategorien und Attribute 
 
 Dort wird beispielsweise aufgelistet, unter welchem Namen Kategorien und Attribute angesprochen werden können und welche Datentypen die jeweiligen Attribute erwarten.<br>
 Für [benutzerdefinierte Kategorien](../../grundlagen/benutzerdefinierte-kategorien.md) bzw. Attribute finden Sie die technischen Schlüssel in der jeweiliges benutzerdefinierten Kategorie. Dort ist es möglich die technisches Schlüssel neu zu benennen.
+
+## Endpunkt Dokumentation v2
+
+Hier finden Sie v2 API-Anfragen mit ihren Anfragetypen, Antworttypen, Argumenten und der Form des Anfrage.
+
+[![Endpunkt Dokumentation](../../assets/images/de/i-doit-pro-add-ons/api/endpunkt-doku.png)](../../assets/images/de/i-doit-pro-add-ons/api/endpunkt-doku.png)
 
 ## Clients und Libraries
 

@@ -1,11 +1,16 @@
-# API (JSON-RPC)
+---
+title: API (JSON-RPC)
+description: API (JSON-RPC)
+icon: material/api
+status:
+lang: en
+---
 
 !!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
 
 i-doit enables external access to the [IT documentation](../../glossary.md) via an [application programming interface (API)](https://en.wikipedia.org/wiki/Application_programming_interface). With the API data can be read, created, updated and deleted. Thus the API offers similar functions like the Web GUI but the additional benefit is that you can automate them without any problems.
 
-Technical Background
---------------------
+## Technical Background
 
 The API of i-doit provides typical [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) functionalities. With this, files can be
 
@@ -22,13 +27,11 @@ API queries can take place in an asynchronous way without losing the relation be
 
     It's strongly recommended to prefer the API to database manipulations at all times. SQL statements bypass all sorts of internal processes. If a data record is manipulated via SQL per  INSERT, UPDATE  or  DELETE , this could risk data integrity and could even disable _i-doit_.
 
-Download
---------
+## Download
 
 In the [customer portal](../../system-administration/customer-portal.md) you can download the API for the pro version as [add-on](../index.md) for free. Users of the open version can also download it for free via [i-doit.org](https://i-doit.org/). The [installation](../index.md) is in line with the same principles of other i-doit add-ons.
 
-Configuration
--------------
+## Configuration
 
 The API is configured via the [Web GUI](../../basics/web-gui.md) of i-doit and can be found at **Administration → Interfaces / external data → JSON-RPC API**.
 
@@ -40,28 +43,27 @@ The API is configured via the [Web GUI](../../basics/web-gui.md) of i-doit and c
 
 Please note that the logging of API requests will create a file in the install path of _i-doit_ at  log/  for each request. This may lead to increased requirements of memory space in case the API is used intensively.
 
-Access
-------
+## Access
 
 You can access the API of i-doit by activating a special URL. Add `src/jsonrpc.php`  to the basic URL:
 
      https://demo.i-doit.com/src/jsonrpc.php
 
-Authentication and Authorization
---------------------------------
+### Authentication and Authorization
 
-You need an API key so that requests will be processed by the API. Additionally, you can activate the function that a dedicated user account is activated for log-in. Permissions for this account can be set as usual. Otherwise all permissions are available through the API. Another advantage is the fact that a dedicated user can be set per third-party system/ script; this makes it easier to keep track of the data flow.
+An API key is required for requests to be processed by the API. The API key is used to identify the **client**.
+You can also activate the use of a dedicated user account for logging in. Rights can be assigned for this as usual. Otherwise, all rights are available via the API.
+An additional advantage is that you can specify a dedicated user for each third-party system/script in order to easily track which data flows from where to where.
 
-It may prove useful to use the API method  idoit.login  for a single authentication if a lot of requests (meaning thousands) are sent from a client. Otherwise it is possible that too many sessions are created in a very small time frame but are not terminated. This could result in the fact that i-doit stops working until the sessions have been terminated.
+!!! success "Sending many requests"
+    It may prove useful to use the API method  idoit.login  for a single authentication if a lot of requests (meaning thousands) are sent from a client. Otherwise it is possible that too many sessions are created in a very small time frame but are not terminated. This could result in the fact that i-doit stops working until the sessions have been terminated.
 
 !!! attention ""
-
     The default user used for API actions is "Api System". This can be found under "Contacts -> People" if required.<br>
     This is only used if no username/password is used to connect to the API interface.<br>
     If the person is archived/deleted the API can no longer be used without authentication.
 
-Example
--------
+### Example
 
 With a simple example we create a new object of the type  **Server**  with the object title "My little server" via the API.
 
@@ -82,7 +84,7 @@ Request to server:
 
 Via cURL you can send this request for test purposes:
 
-```json
+```shell
 curl \
 --data '{"jsonrpc":"2.0","method":"cmdb.object.create","params":{"type":"C__OBJTYPE__SERVER","title":"My little server","apikey":"c1ia5q"},"id":1}' \
 --header "Content-Type: application/json" \
@@ -103,8 +105,7 @@ Server response:
 }
 ```
 
-Categories in the IT Documentation
-----------------------------------
+## Attribute documentation
 
 A helpful listing of all categories and attributes used in _i-doit_ is provided by a special URL:
 
@@ -113,8 +114,13 @@ A helpful listing of all categories and attributes used in _i-doit_ is provided 
 For example, this listing shows you which name is used to access categories and attributes and which data types are expected by these attributes.<br>
 For [custom categories](../../basics/custom-categories.md) or attributes, you will find the technical keys in the respective custom category. There it is possible to rename the technical keys.
 
-Clients and Libraries
----------------------
+## Endpoint documentation v2
+
+Here you will find API requests with their request types, response types, arguments and request body shape
+
+[![Endpoint documentation](../../assets/images/en/i-doit-pro-add-ons/api/endpoint-docu.png)](../../assets/images/en/i-doit-pro-add-ons/api/endpoint-docu.png)
+
+## Clients and Libraries
 
 There are numerous projects and products applying the API by i-doit. We would like to introduce some clients and libraries:
 
@@ -132,15 +138,13 @@ There are numerous projects and products applying the API by i-doit. We would li
 
     Should a client or a library be missing in this article, we appreciate a short message to [feedback@i-doit.com](mailto:feedback@i-doit.com).
 
-Documentation for Download
---------------------------
+## Documentation for Download
 
 You can download a [{--documentation maintained by the developers~--}](../../assets/downloads/i-doit-JSON-RPC-1.8.3.pdf) as PDF file. (==out-dated==)
 
 Since version 1.8.1 the API is released as an add-on. Pre-releases were [bundled with i-doit](../../version-history/index.md).
 
-FAQ
----
+## FAQ
 
 ### Error Messages
 
@@ -149,8 +153,7 @@ FAQ
 | Usersettings are only available after logging in. (i-doit <= 21)      | Api System Person is archived or deleted. <br>**Solution** is to recycle the Api System user or to use  a authentication method  |
 | i-doit system error: Could not connect tenant database. (i-doit >=22) | Api System Person is archived or deleted.  <br>**Solution** is to recycle the Api System user or to use  a authentication method |
 
-Releases
---------
+## Releases
 
 | Version | Date       | Changelog                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
