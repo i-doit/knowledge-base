@@ -8,16 +8,15 @@
 
 | Command                                                                   | Internal system description                                                                                                        |
 | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [CompileDocuments](#compiledocuments)                                     | Compile Documents                                                                                                                  |
 | [addon-activate](#addon-activate)                                         | Activating Add-ons                                                                                                                 |
 | [addon-deactivate](#addon-deactivate)                                     | Deactivating Add-ons                                                                                                               |
 | [addon-install](#addon-install)                                           | Installing Add-ons                                                                                                                 |
 | [addon-list](#addon-list)                                                 | Displays a list of all installed add-ons                                                                                           |
+| [addon-uninstall](#addon-uninstall)                                       | Deactivate add-on                                                                                                                  |
 | [admin-center-password-reset](#admin-center-password-reset)               | Reset the password for the Admin Center                                                                                            |
 | [auth-cleanup](#auth-cleanup)                                             | Clean up rights system                                                                                                             |
-| [check_mk-export](#check_mk-export)                                       | Export configuration data for Check_MK                                                                                             |
-| [check_mk-livestatus](#check_mk-livestatus)                               | Write actual state from Check_MK to logbook                                                                                        |
 | [clear-credentials](#clear-credentials)                                   | Removes user credentials                                                                                                           |
+| [compile-documents](#compile-documents)                                   | Allows to compile one or multiple documents                                                                                        |
 | [completion](#completion)                                                 | Dump the shell completion script                                                                                                   |
 | [contracts-outdated](#contracts-outdated)                                 | Updates status of outdated contracts                                                                                               |
 | [documents](#documents)                                                   | Create and export documents                                                                                                        |
@@ -28,7 +27,7 @@
 | [import-hinventory](#import-hinventory)                                   | Import data from hinventory data from hinventory                                                                                   |
 | [import-jdisc](#import-jdisc)                                             | Import data from JDisc Discovery (SQL Server access is configured via the GUI)                                                     |
 | [import-jdiscdiscovery](#import-jdiscdiscovery)                           | Start a scan in JDisc Discovery (API access is configured via the GUI)                                                             |
-| [import-syslog](#import-ocs)                                              | Import data from a syslog into the i-doit logbook                                                                                  |
+| [import-syslog](#import-syslog)                                           | Import data from a syslog into the i-doit logbook                                                                                  |
 | [import-xml](#import-ocs)                                                 | Importing data from XML                                                                                                            |
 | [install](#install)                                                       | Install the i-doit application                                                                                                     |
 | [jdisc-create-server](#jdisc-create-server)                               | Creates a JDisc server, based on given input                                                                                       |
@@ -44,8 +43,6 @@
 | [logbook-archive](#logbook-archive)                                       | Archiving logbook entries                                                                                                          |
 | [maintenance](#maintenance)                                               | Sends notifications of scheduled maintenance from the Maintenance Add-on                                                           |
 | [migrate-uploaded-files](#migrate-uploaded-files)                         | Migrates uploaded files in i-doit <v1.13 to v.1.14>                                                                                |
-| [nagios-export](#nagios-export)                                           | Export Nagios configuration                                                                                                        |
-| [nagios-ndoutils](#nagios-ndoutils)                                       | Write actual state from Nagios to logbook                                                                                          |
 | [notifications-list](#notifications-list)                                 | Lists all notification types and notifications for later usage                                                                     |
 | [notifications-send](#notifications-send)                                 | Send notifications by e-mail (notifications are configured in the GUI)                                                             |
 | [report-export](#report-export)                                           | Exporting a report as a file                                                                                                       |
@@ -59,48 +56,21 @@
 | [system-convert-non-innodb-tables](#system-convert-non-innodb-tables)     | Converts all tables that are not in INNODB to INNODB (concerns the database coding. Use with caution!)                             |
 | [system-convert-non-utf8-tables](#system-convert-non-utf8-tables)         | Converts all non-UTF8 tables to UTF8 tables (concerns database encoding. Use with caution!)                                        |
 | [system-location-fix](#system-location-fix)                               | Executes the location correction from the GUI on the console                                                                       |
-| [system-maintenancecontract](#system-maintenancecontract)                 | Send e-mail for maintenance contracts (Function deprecated. Please use [notifications-send](#notifications-send))                  |
 | [system-objectcleanup](#system-objectcleanup)                             | Clean up objects (objects with the status "unfinished", "archived" or "deleted" are permanently removed)                           |
 | [system-objectrelations](#system-objectrelations)                         | Recreate Object Relationships                                                                                                      |
 | [system-refresh-table-configuration](#system-refresh-table-configuration) | Refreshes all available list configurations (object types and categories)                                                          |
-| [system-set-settings](#system-set-settings)                               | Enables Admin Center settings to be set via the CLI                                                                  |
+| [system-set-settings](#system-set-settings)                               | Enables Admin Center settings to be set via the CLI                                                                                |
 | [tenant-create](#tenant-create)                                           | Add a new tenant                                                                                                                   |
 | [tenant-disable](#tenant-disable)                                         | Deactivate an existing tenant                                                                                                      |
 | [tenant-enable](#tenant-enable)                                           | Activate an existing tenant                                                                                                        |
 | [tenant-list](#tenant-list)                                               | List all available tenants                                                                                                         |
 | [tenant-remove](#tenant-remove)                                           | Remove an existing tenant                                                                                                          |
 | [uninstall](#uninstall)                                                   | Uninstalls i-doit                                                                                                                  |
-| [update](#update)                                                         | Installs an update for i-doit                                                                                                      |
-| [workflows-process](#workflows-process)                                   | Processes all workflows, sends e-mails and creates new tasks from checklists                                                       |
+| [update](#update)                                                         | Installs an update for i-doit                                                                                    |
 
 !!! attention "Configuration file and parameters --config"
     It is possible to pass additional content to the call via a configuration file. This file must be stored in the i-doit directory src/handler/config/. An example in the form of the file "isys\_handler\_ldap.ini" can be found in the directory src/handler/config/examples/.<br>
     If this file is to be included in the process, it must be included using the --config or -c parameter.
-
-### CompileDocuments
-
-Compile Documents
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -t                        | --documentId=DOCUMENTID  | Several document ids (multiple values allowed)                                               |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -t                        | --tenant=TENANT-ID       | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php CompileDocuments --user admin --password admin --tenant 1 --documentId 123 --documentId 321
-```
 
 ### addon-activate
 
@@ -201,6 +171,30 @@ Displays a list with all installed add-ons for the selected tenant
 sudo -u www-data php console.php addon-list --tenant 1
 ```
 
+### addon-uninstall
+
+Uninstall add-on
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description                                                                                        |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------- |
+| -u                        | --user[=USER]              | i-doit Admin username [default: "admin"]                                                           |
+| -p                        | --password[=PASSWORD]    | i-doit Admin password                                                                              |
+| -a                        | --addon=ADDON            | Add-on identifier                                                                                  |
+| -h                        | --help                   | Display help for the given command. When no command is given display help for the list command     |
+| -q                        | --quiet                  | Do not output any message                                                                          |
+| -V                        | --version                | Display this application version                                                                   |
+| --ansi                    | --no-ansi                | Force (or disable --no-ansi) ANSI output                                                           |
+| -n                        | --no-interaction         | Do not ask any interactive question                                                                |
+| -v / -vv / -vvv           | --verbose                | Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php addon-uninstall -u admin -p admin -a document
+```
+
 ### admin-center-password-reset
 
 With this command you can reset the Admin-Center password
@@ -251,58 +245,6 @@ Cleanup all auth paths
 sudo -u www-data php console.php auth-cleanup --user admin --password admin --tenantId 1
 ```
 
-### check_mk-export
-
-Performs a Check_MK export
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version)          | Description                                                                                  |
-| ------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------- |
-| -l                        | --exportLanguage=EXPORTLANGUAGE   | Definition of the language used for the export (default = 0)                                 |
-| -x                        | --exportStructure=EXPORTSTRUCTURE | Definition of the structure used for the export (default = 0)                                |
-| -u                        | --user=USERNAME                   | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD               | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID              | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE              | Specifying the path to the configuration file                                                |
-| -h                        | --help                            | Help message for displaying further information                                              |
-| -q                        | --quiet                           | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                         | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi               | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction                  | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                         | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php check_mk-export --user admin --password admin --tenantId 1
-```
-
-### check_mk-livestatus
-
-Imports the monitoring status changes from Livestatus to i-doit
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php check_mk-livestatus --user admin --password admin --tenantId 1
-```
-
 ### clear-credentials
 
 It removes both attributes `username` and `password` from the users "login" category
@@ -325,6 +267,31 @@ It removes both attributes `username` and `password` from the users "login" cate
 
 ```shell
 sudo -u www-data php console.php clear-credentials --user admin --password admin --object ObjectID
+```
+
+### compile-documents
+
+Compile Documents
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
+| -t                        | --documentId=DOCUMENTID  | Several document ids (multiple values allowed)                                               |
+| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
+| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
+| -t                        | --tenant=TENANT-ID       | Tenant ID of the tenant to be used (default: 1)                                              |
+| -h                        | --help                   | Help message for displaying further information                                              |
+| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php CompileDocuments --user admin --password admin --tenant 1 --documentId 123 --documentId 321
 ```
 
 ### completion
@@ -1006,64 +973,6 @@ Migrates uploaded files in i-doit <v1.13 to v.1.14>
 sudo -u www-data php console.php migrate-uploaded-files
 ```
 
-### nagios-export
-
-!!!info
-    This Command is only available if the Nagios Add-on is installed
-
-Exports the Nagios settings and i-doit objects to Nagios configuration files
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version)    | Description                                                                                  |
-| ------------------------- | --------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --nagiosHostId=NAGIOSHOSTID | Specifies the Nagios host to be used for the export                                          |
-|                           | --validate                  | Validates the export files                                                                   |
-| -u                        | --user=USERNAME             | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD         | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID        | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE        | Specifying the path to the configuration file                                                |
-| -h                        | --help                      | Help message for displaying further information                                              |
-| -q                        | --quiet                     | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                   | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi         | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction            | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php nagios-export --user admin --password admin --tenantId 1 --nagiosHostId 1
-```
-
-### nagios-ndoutils
-
-!!!info
-    This Command is only available if the Nagios Add-on is installed
-
-Imports monitoring status changes from the NDOUtils into the i-doit logbook.
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php nagios-ndoutils --user admin --password admin --tenantId 1
-```
-
 ### notifications-list
 
 Lists all notification types and notifications for later usage
@@ -1525,7 +1434,6 @@ Enables Admin Center settings to be set via the CLI.
 ```shell
 sudo -u www-data php system-set-settings -u admin -p admin --settings="{\"proxy.active\":1,\"proxy.host\":\"http://myproxy.net\",\"unknown-setting\": 4}" -n
 ```
-
 
 ### tenant-create
 

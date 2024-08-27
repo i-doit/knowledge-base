@@ -40,6 +40,7 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
       addon-deactivate                    Deactivate add-on
       addon-install                       Install add-on
       addon-list                          Shows list of installed addons
+      addon-uninstall                     Deaktivierung von Add-ons
       admin-center-password-reset         With this command you can reset the Admin-Center password
       auth-cleanup                        Cleanup all auth paths
       clear-credentials                   It removes both attributes `username` and `password` from the users "login" category
@@ -56,6 +57,7 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
       import-xml                          Imports files formatted in the i-doit XML syntax
       jdisc-create-server                 Creates a JDisc server, based on given input
       install                             Install the i-doit application
+      jdisc-create-server                 Erzeugt einen JDisc Server, basierend auf einer gegebenen Eingabe
       ldap-sync                           Synchronizes LDAP user accounts with i-doit user objects
       ldap-syncdn                         Synchronizes LDAP user DN attributes with i-doit user objects (Only needs to be run when migrating between different LDAP sources)
       license-add                         Add license into i-doit
