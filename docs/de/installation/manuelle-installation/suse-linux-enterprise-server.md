@@ -6,7 +6,7 @@ Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenige
 
 Es gelten die allgemeinen [Systemvoraussetzungen](../systemvoraussetzungen.md).
 
-Dieser Artikel bezieht sich auf [**SUSE Linux Enterprise Server 15**](https://www.suse.com/). Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
+Dieser Artikel bezieht sich auf [**SUSE Linux Enterprise Server 15 SP6**](https://www.suse.com/). Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
 ```sh
 cat /etc/os-release
@@ -25,8 +25,8 @@ uname -m
 Die Standard-Repositories von SUSE Linux Enterprise Server (SLES) bringen bereits alle nötigen Pakete mit, um
 
 -   den **Apache** Webserver 2.4,
--   die Script-Sprache **PHP** 7.2 (ab SLES 15 SP 2: **PHP**7.4),
--   das Datenbankmanagementsystem **MariaDB** 10.2 (ab SLES 15 SP 2: **MariaDB**10.4) und
+-   die Script-Sprache **PHP** 8.2,
+-   das Datenbankmanagementsystem **MariaDB** 10.11 und
 -   den Caching-Server **memcached**
 
 zu installieren.
@@ -46,30 +46,37 @@ Mit zypper werden anschließend die nötigen Pakete installiert:
 ```sh
 sudo zypper refresh
 sudo zypper update
-sudo zypper install \
-apache2 apache2-mod_php8 \
-mariadb mariadb-client \
-memcached \
-php8 php8-bcmath php8-bz2 php8-ctype php8-curl php8-gd php8-gettext php8-fileinfo \
-php8-json php8-ldap php8-mbstring php8-mcrypt php8-memcached php8-mysql php8-opcache \
+```
+
+```sh
+sudo zypper install apache2 apache2-mod_php8 mariadb mariadb-client memcached php8 php8-{bz2,ctype,bcmath,curl,gd,gettext,fileinfo,fpm,ldap,mbstring,memcached,mysql,odbc,pgsql,pdo,snmp,soap,zip}
+
+?
+php8-bcmath php8-bz2 php8-ctype php8-curl php8-gd php8-gettext php8-fileinfo \
+php8-ldap php8-mbstring php8-mcrypt php8-memcached php8-mysql php8-opcache \
 php8-openssl php8-pdo php8-pgsql php8-phar php8-posix php8-soap php8-sockets php8-sqlite \
 php8-xsl php8-zip php8-zlib
 ```
 
+sudo zypper --quiet --non-interactive install --no-recommends \
+        apache2 \
+        mariadb mariadb-client \
+        memcached \
+        make sudo unzip \
+        php8 php8-bcmath php8-bz2 php8-ctype php8-curl php8-fpm php8-gd php8-gettext php8-fileinfo \
+        php8-ldap php8-mbstring php8-mysql php8-opcache php8-openssl php8-pdo php8-pgsql \
+        php8-phar php8-posix php8-soap php8-sockets php8-sqlite php8-xsl php8-zip php8-zlib
+
 Damit der Apache Webserver und MariaDB beim Booten gestartet werden, sind diese Befehle erforderlich:
 
 ```sh
-sudo systemctl enable apache2.service
-sudo systemctl enable mysql.service
-sudo systemctl enable memcached.service
+sudo systemctl enable apache2 mysql memcached
 ```
 
-Anschließend erfolgt der Start beider Dienste:
+Anschließend erfolgt der Start der Dienste:
 
 ```sh
-sudo systemctl start apache2.service
-sudo systemctl start mysql.service
-sudo systemctl start memcached.service
+sudo systemctl start apache2 mysql memcached
 ```
 
 Weiterhin wird der Standard-Port 80 von HTTP über die Firewall erlaubt. Diese muss nach der Anpassung neu gestartet werden:
@@ -78,17 +85,54 @@ Weiterhin wird der Standard-Port 80 von HTTP über die Firewall erlaubt. Diese m
 sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
 ```
 
+```sh
+sudo firewall-cmd --reload
+```
+
+!!! info "Für HTTPS müssen weitere Schritte durchgeführt werden die hier nicht behandelt werden, siehe [Sicherheit und Schutz](../../../wartung-und-betrieb/sicherheit-und-schutz.md)"
+
 ## Konfiguration
 
-Die installierten Pakete für Apache Webserver, PHP und MariaDB bringen bereits Konfigurationsdateien mit. Es empfiehlt sich, abweichende Einstellungen in gesonderten Dateien zu speichern, anstatt die vorhandenen Konfigurationsdateien anzupassen. Bei jedem Paket-Upgrade würden die abweichenden Einstellungen bemängelt oder überschrieben werden. Die Einstellungen der Standardkonfiguration werden durch die benutzerdefinierten ergänzt bzw. überschrieben.
+Die installierten Pakete für Apache HTTP Server, PHP und MariaDB bringen bereits Konfigurationsdateien mit. Es empfiehlt sich, abweichende Einstellungen in gesonderten Dateien zu speichern, anstatt die vorhandenen Konfigurationsdateien anzupassen. Bei jedem Paket-Upgrade würden die abweichenden Einstellungen bemängelt oder überschrieben werden. Die Einstellungen der Standardkonfiguration werden durch die benutzerdefinierten ergänzt bzw. überschrieben.
 
-### PHP
+### PHP-FPM Konfiguration
+
+Zunächst wird die alte Konfiguration, durch umbenennen, deaktiviert:
+
+```sh
+sudo mv /etc/php8/fpm/php-fpm.d/www.conf /etc/php8/fpm/php-fpm.d/www.conf.bak
+```
+
+und anschließend eine neue Datei erstellt und mit den Einstellungen befüllt:
+
+```sh
+sudo nano /etc/php8/fpm/php-fpm.d/i-doit.conf
+```
+
+```ini
+[i-doit]
+listen = /var/run/php-fpm/php8-fpm.sock
+user = wwwrun
+group = run
+listen.owner = wwwrun
+listen.group = www
+pm = dynamic
+pm.max_children = 50
+pm.start_servers = 5
+pm.min_spare_servers = 5
+pm.max_spare_servers = 35
+security.limit_extensions = .php
+```
+
+### PHP Konfiguration
 
 Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befüllt:
 
 ```sh
 sudo vi /etc/php8/conf.d/i-doit.ini
 ```
+
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
 
 Diese Datei erhält folgenden Inhalt:
 
@@ -118,21 +162,21 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysql/mysql.sock
 ```
 
-Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer gleich dem **Session Timeout** in den [Systemeinstellungen](systemeinstellungen.md) von i-doit sein.<br>
-Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).<br>
-Anschließend wird der Apache Webserver neu gestartet:
+Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
+Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
+Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
 ```sh
-sudo systemctl restart apache2.service
+sudo a2enmod php7 rewrite mod_access_compat
+sudo systemctl restart apache2 php-fpm
 ```
 
-### Apache Webserver
+### Apache2 HTTP Server
 
 Ein wird eine neue VHost-Konfiguration aus dem existierenden Template **vhost.template** erzeugt:
 
 ```sh
-sudo cp /etc/apache2/vhosts.d/vhost.template /etc/apache2/vhosts.d/i-doit.conf
-sudo vi /etc/apache2/vhosts.d/i-doit.conf
+sudo cp /etc/apache2/vhosts.d/vhost.template /etc/apache2/vhosts.d/i-doit.conf & sudo vi /etc/apache2/vhosts.d/i-doit.conf
 ```
 
 In dieser Datei wird die VHost-Konfiguration angepasst und gespeichert:
@@ -143,13 +187,148 @@ In dieser Datei wird die VHost-Konfiguration angepasst und gespeichert:
 
         DocumentRoot /srv/www/htdocs/
         <Directory /srv/www/htdocs/>
-                AllowOverride All
-                Require all granted
-        </Directory>
+    ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
+    AllowOverride FileInfo AuthConfig
 
-        LogLevel warn
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
+    ## Apache Web server configuration file for i-doit
+    ##
+    ## This file requires:
+    ##
+    ## - Apache HTTPD >= 2.4 with enabled modules:
+    ##   - rewrite
+    ##   - expires
+    ##   - headers
+    ##   - authz_core
+    ##
+    ## For performance and security reasons we put these settings
+    ## directly into the VirtualHost configuration and explicitly set
+    ## "AllowOverride FileInfo AuthConfig". After each i-doit update check if the .htaccess file, in the i-doit directory,
+    ## has changed and add the changes in the VirtualHost configuration.
+    ##
+    ## See the i-doit Knowledge Base for more details:
+    ## <https://kb.i-doit.com/>
+
+    ## Disable directory indexes:
+    Options -Indexes +SymLinksIfOwnerMatch
+
+    <IfModule mod_authz_core.c>
+        RewriteCond %{REQUEST_METHOD}  =GET
+        RewriteRule "^$" "/index.php"
+
+        ## Deny access to meta files:
+        <Files "*.yml">
+            Require all denied
+        </Files>
+
+        ## Deny access to hidden files:
+        <FilesMatch "^\.">
+            Require all denied
+        </FilesMatch>
+
+        ## Deny access to bash scripts:
+        <FilesMatch "^(controller|.*\.sh)$">
+            Require all denied
+        </FilesMatch>
+
+        ## Deny access to all PHP files…
+        <Files "*.php">
+            Require all denied
+        </Files>
+
+        ## Deny access to wrongly created config backup files like ...inc.php.0123123 instead of ...inc.012341.php
+        <FilesMatch "\.php\.\d+$">
+            Require all denied
+        </FilesMatch>
+
+        ## …except some PHP files in root directory:
+        <FilesMatch "^(index\.php|controller\.php|proxy\.php)$">
+            <IfModule mod_auth_kerb.c>
+                Require valid-user
+            </IfModule>
+            <IfModule !mod_auth_kerb.c>
+                Require all granted
+            </IfModule>
+        </FilesMatch>
+
+        ## …except some PHP files in src/:
+        <Files "jsonrpc.php">
+            Require all granted
+        </Files>
+
+        ## …except some PHP files in src/tools/php/:
+        <FilesMatch "^(rt\.php|barcode_window\.php|barcode\.php)$">
+            Require all granted
+        </FilesMatch>
+
+        ## …except some PHP files in src/tools/php/qr/:
+        <FilesMatch "^(qr\.php|qr_img\.php)$">
+            Require all granted
+        </FilesMatch>
+
+        ## …except some PHP files in src/tools/js/:
+        <FilesMatch "^js\.php$">
+            Require all granted
+        </FilesMatch>
+    </IfModule>
+
+    ## Deny access to some directories:
+    <IfModule mod_alias.c>
+        RedirectMatch 403 /imports/.*$
+        RedirectMatch 403 /log/.*$
+        RedirectMatch 403 /temp/.*(?<!\.(css|xsl))$
+        RedirectMatch 403 /upload/files/.*$
+        RedirectMatch 403 /upload/images/.*$
+        RedirectMatch 403 /vendor/.*$
+    </IfModule>
+
+    ## Cache static files:
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        # A2592000 = 30 days
+        ExpiresByType image/svg+xml A2592000
+        ExpiresByType image/gif A2592000
+        ExpiresByType image/png A2592000
+        ExpiresByType image/jpg A2592000
+        ExpiresByType image/jpeg A2592000
+        ExpiresByType image/ico A2592000
+        ExpiresByType text/css A2592000
+        ExpiresByType text/javascript A2592000
+        ExpiresByType image/x-icon "access 1 year"
+        ExpiresDefault "access 2 week"
+
+        <IfModule mod_headers.c>
+            Header append Cache-Control "public"
+        </IfModule>
+    </IfModule>
+
+    ## Pretty URLs:
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteRule favicon\.ico$ images/favicon.ico [L]
+        RewriteCond %{REQUEST_FILENAME} !-l
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule .* index.php [L,QSA]
+    </IfModule>
+
+    ## Deny access to all ini files…
+    <Files "*.ini">
+        Require all denied
+    </Files>
+
+    </Directory>
+
+    TimeOut 600
+    ProxyTimeout 600
+    LogLevel warn
+    ErrorLog /var/log/apache2/error_log
+    CustomLog /var/log/apache2/access_log combined
+
+    <FilesMatch "\\.php$">
+        <If "-f %{REQUEST_FILENAME}">
+            SetHandler "proxy:unix:/var/run/php-fpm/php8-fpm.sock|fcgi://localhost"
+        </If>
+    </FilesMatch>
 </VirtualHost>
 ```
 
@@ -158,10 +337,7 @@ i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htac
 Im nächsten Schritt werden die nötigen Apache-Module **php8**, **rewrite** und **mod_access_compat** aktiviert sowie der Apache Webserver neu gestartet:
 
 ```sh
-sudo a2enmod php8
-sudo a2enmod rewrite
-sudo a2enmod mod_access_compat
-sudo systemctl restart apache2.service
+sudo a2enmod proxy proxy_fcgi php8 rewrite mod_access_compat && sudo systemctl restart apache2
 ```
 
 ### MariaDB
@@ -169,7 +345,7 @@ sudo systemctl restart apache2.service
 Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. Den Empfehlungen sollte gefolgt werden. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
 
 ```sh
-mysql_secure_installation
+sudo mysql_secure_installation
 ```
 
 Damit i-doit beim Setup den Benutzer **root** verwenden darf, ruft man die Shell von MariaDB auf:
@@ -197,8 +373,10 @@ Anschließend wird MariaDB gestoppt. Wichtig ist hierbei das Verschieben von nic
 
 ```sh
 mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
+```
+
+```sh
 sudo systemctl stop mysql.service
-sudo mv /var/lib/mysql/ib_logfile[01] /tmp
 ```
 
 Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
@@ -262,7 +440,7 @@ sql-mode = ""
 Abschließend wird MariaDB gestartet:
 
 ```sh
-sudo systemctl start mysql.service
+sudo systemctl restart mysql.service
 ```
 
 Nächster Schritt
