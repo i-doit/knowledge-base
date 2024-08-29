@@ -27,7 +27,7 @@ Um erfolgreich aus MariaDB 10.11 Updaten zu können benötigen wir die [MariaDB 
 
 [![MariaDB selektierte Optionen](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/1-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/1-pum.png)
 
-## MariaDB auf 10.11 updaten
+## MariaDB und PHP updaten
 
 !!! warning "Machen Sie vor den folgenden Schritten unbedingt ein [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) oder einen Snapshot!"
 
@@ -54,20 +54,40 @@ C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k stop
 
 Nachdem der Apache2.4 Service erfolgreich beendet wurde, kann nun die MariaDB msi Datei ausgeführt werden, um das Update zu starten.
 
-<!--- Die Installation sollte wie folgt ablaufen:
+Nachdem Sie der Lizenz zugestimmt haben, wählen Sie die Option **"Do not create a new database. Optionally upgrade existing instances"** aus.
 
-- Backup vorab erstellen
+[![upgrade existing instances](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/3-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/3-pum.png)
 
-MariaDB:
-- apache service stoppen
-- das vorhandene mariadb aktualisieren, nicht neu installieren!
-- den Pfad im "installer" auf ProgrammData abändern
-- Database Instance muss aus sein
--Launch wizard häkchen an vor finish
+Anschließend ändern Sie den Pfad auf **"C:\ProgramData\"** und klicken Sie dann auf **"Installieren"**
 
-PHP:
--backup der php.ini machen (rauskopieren)
--zip enpacken
--php.ini wieder einfügen
+[![ProgramData](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/4-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/4-pum.png)
 
--->
+Zuletzt muss noch die Option "Launch Wizard to Upgrade existing MariaDB or MySQL services" gesetzt werden.
+
+[![Haken](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/5-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/5-pum.png)
+
+In dem neuen Fenster das Sich daraufhin öffnet wählen Sie dann den MySQL Service aus und klicken auf **"Upgrade"**.
+
+[![upgrade existing instances](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)
+
+Damit ist MariaDB erfolgreich auf MariaDB 10.11 geupgraded.
+
+### PHP aktualisieren
+
+Die Aktualisierung von PHP gestaltet sich deutlich einfacher.
+
+Zuerst muss ein backup von der PHP.ini gemacht werden, hier reicht es aus, die Datei aus dem **"C:\ProgramData\i-doit\php\"** Ordner zu kopieren und in einem anderen Ordner einzufügen.
+
+!!! warning "Der Apache2.4 Service muss für den folgenden Schritt beendet sein!"
+
+Dann entpacken wir den Inhalt der vorher heruntergeladenen ZIP Datei in den **"C:\ProgramData\i-doit\php\"** Ordner und ersetzen so die alten PHP Dateien.
+
+Nachdem der Inhalt erfolgreich eingefügt wurde, kann das Backup der PHP.ini Datei ebenfalls in den Ordner eingefügt und ersetzt werden, damit die alten PHP Einstellungen wieder vorhanden sind.
+
+Zuletzt muss der Apache2.4 Service wieder eingeschaltet werden und somit ist PHP erfolgreich geupdated.
+
+### Überprüfen
+
+Überprüfen Sie zuletzt, ob das Update erfolgreich war, indem Sie in der Verwaltung unter **"System Config Check"** die Versionen überprüfen
+
+[![check version](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/7-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/7-pum.png)
