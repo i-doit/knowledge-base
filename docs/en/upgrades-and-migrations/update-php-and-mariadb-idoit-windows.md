@@ -29,7 +29,7 @@ To successfully update from MariaDB 10.11 we need the [MariaDB Server 10.11.1 RC
 
 ## Update MariaDB and PHP
 
-!!! warning “Be sure to make a [backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) or a snapshot before the following steps!”
+!!! warning “Be sure to make a [backup](../maintenance-and-operation/backup-and-recovery/index.md) or a snapshot before the following steps!”
 
 ### Stopping the Apache service
 
@@ -68,7 +68,7 @@ Finally, the option “Launch Wizard to Upgrade existing MariaDB or MySQL servic
 
 In the new window that opens up, select the MySQL service and click on **"Upgrade ”**.
 
-[![upgrade existing instances](../assets/images/en/upgrades-and-upgrades/php-mariadb-update/6-pum.png)](../assets/images/en/upgrades-and-upgrades/php-mariadb-update/6-pum.png)
+[![upgrade existing instances](../assets/images/en/upgrades-and-migrations/php-mariadb-update/6-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/6-pum.png)
 
 MariaDB has now been successfully upgraded to MariaDB 10.11.
 
