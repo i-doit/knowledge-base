@@ -143,7 +143,7 @@ Das manuelle Versenden von E-Mails (Button **E-Mails abschicken** unter **Extras
 
 ### maintenance
 
-Verschickt E-Mails mit geplanten Wartungen gemäß den im Add-on "Wartungen" festgelegten Zeiträumen.
+Verschickt E-Mails mit geplanten Wartungen gemäß den im Add-on [Wartungen](#maintenance) festgelegten Zeiträumen.
 
 **Optionen:**
 

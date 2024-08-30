@@ -133,7 +133,7 @@ Thus, you can automate the process and do not have to send e-mails manually anym
 
 ### maintenance
 
-Sends e-mails with scheduled maintenance according to the time periods specified in the [Maintenance add-on](../../../i-doit-pro-add-ons/maintenance.md).
+Sends e-mails with scheduled maintenance according to the time periods specified in the [Maintenance add-on](#maintenance).
 
 **Options:**
 
