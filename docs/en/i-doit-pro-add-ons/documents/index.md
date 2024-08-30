@@ -20,6 +20,72 @@ The integration of dynamic contents of the documentation is done with placeholde
 
 Created templates can be used to create documents for objects in the documentation. This section provides a description that goes into detail about creating, updating and exporting these documents.
 
+## CLI console commands and options
+
+| Command     | Interne Beschreibung                                                     |
+| ----------- | ------------------------------------------------------------------------ |
+| [compile-documents](#compile-documents)                                   | Allows to compile one or multiple documents|
+| [documents](#documents)                                                   | Create and export documents   |
+
+### compile-documents
+
+Compile Documents
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
+| -t                        | --documentId=DOCUMENTID  | Several document ids (multiple values allowed)                                               |
+| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
+| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
+| -t                        | --tenant=TENANT-ID       | Tenant ID of the tenant to be used (default: 1)                                              |
+| -h                        | --help                   | Help message for displaying further information                                              |
+| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php CompileDocuments --user admin --password admin --tenant 1 --documentId 123 --documentId 321
+```
+
+### documents
+
+Allows to create revisions or export one or multiple documents
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version)      | Description                                                                                  |
+| ------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------- |
+|                           | --create_revision             | Creates one or more revisions for given documents                                            |
+|                           | --export                      | Exports one or more documents to a file                                                      |
+|                           | --id=ID                       | Select one or more documents by id (multiple values allowed)                                 |
+|                           | --all_documents               | Selects all documents                                                                        |
+|                           | --all_category=ALL_CATEGORY   | Selects all documents in category                                                            |
+|                           | --all_template=ALL_TEMPLATE   | Selects all documents with template                                                          |
+|                           | --all_object=ALL_OBJECT       | Selects all documents with object                                                            |
+|                           | --export_format=EXPORT_FORMAT | Export format: pdf or html                                                                   |
+|                           | --export_folder=EXPORT_FOLDER | Where should the document be exported to? The folder needs to exist and be writable          |
+| -u                        | --user=USER                   | Username                                                                                     |
+| -p                        | --password=PASSWORD           | Password                                                                                     |
+| -i                        | --tenantID=TENANTID           | Tenant ID default: 1                                                                         |
+| -h                        | --help                        | Help message for displaying further information                                              |
+| -c                        | --config=CONFIG               | Config file                                                                                  |
+| -q                        | --quit                        | Quiet-Mode to deactivate output                                                              |
+| -v                        | --version                     | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi           | Forces the output in ANSI format / Disables the output in ANSI format                        |
+| -n                        | --no-interaction              | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                     | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php documents --user admin --password admin
+```
+
 ## Releases
 
 | Version | Date       | Changelog                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |

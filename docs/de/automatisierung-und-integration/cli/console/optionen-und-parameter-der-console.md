@@ -6,7 +6,7 @@
 
 ## Folgende Handler stehen für die i-doit Console zur Verfügung
 
-| Command                                                                   | Interne Beschreibung (en)                                                                                                                                                     |
+| Command                                                                   | Interne Beschreibung                                                                                                                                                      |
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [addon-activate](#addon-activate)                                         | Aktivieren von Add-ons                                                                                                                                                        |
 | [addon-deactivate](#addon-deactivate)                                     | Deaktivieren von Add-ons                                                                                                                                                      |
@@ -16,10 +16,8 @@
 | [admin-center-password-reset](#admin-center-password-reset)               | Passwort für das Admin-Center zurücksetzen                                                                                                                                    |
 | [auth-cleanup](#auth-cleanup)                                             | Rechtesystem bereinigen
 | [clear-credentials](#clear-credentials)                                   | Entfernt die Anmeldeinformationen von Benutzern                                                                                                                           |                                                                                                                          |
-| [compile-documents](#compile-documents)                                   | Erlaubt es dir ein oder mehrere Dokumente zu kompilieren                                                                                                                               |
 | [completion](#completion)                                                 | Das Shell-Vervollständigungsskript ausgeben                                                                                                                                   |
 | [contracts-outdated](#contracts-outdated)                                 | Aktualisiert den Status ausgelaufener Verträge                                                                                                                                |
-| [documents](#documents)                                                   | Dokumente und Revisionen erzeugen und exportieren                                                                                                                             |
 | [extend-contracts](#extend-contracts)                                     | Verlängert die Laufzeit eines Vertrags, wenn dessen letztmögliches Kündigungsdatum in der Vergangenheit liegt                                                                 |
 | [help](#help)                                                             | Zeigt die Hilfe zu einem Befehl an                                                                                                                                            |
 | [import-csv](#import-csv)                                                 | Daten aus einer CSV-Datei importieren (Nutzt einen definiertes Import Profil aus der GUI)                                                                                     |
@@ -41,7 +39,6 @@
 | [license-remove](#license-remove)                                         | Entfernt Lizenzen von i-doit                                                                                                                                                  |
 | [list](#list)                                                             | Listet alle console Kommandos auf                                                                                                                                             |
 | [logbook-archive](#logbook-archive)                                       | Logbuch-Einträge archivieren                                                                                                                                                  |
-| [maintenance](#maintenance)                                               | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs Add-on                                                                                                      |
 | [migrate-uploaded-files](#migrate-uploaded-files)                         | Migriert hochgeladene Dateien von i-doit <v1.13 zu v.1.14>                                                                                                                    |                                                                                                                                  |
 | [notifications-list](#notifications-list)                                 | Listet alle [Benachrichtigungen](../../../auswertungen/benachrichtigungen.md) auf                                                                                             |
 | [notifications-send](#notifications-send)                                 | Benachrichtigungen per E-Mail versenden (Benachrichtigungen werden in der GUI konfiguriert)                                                                                   |
@@ -269,31 +266,6 @@ Entfernt die Einträge der Attribute `username` und `password` von Benutzerlogin
 sudo -u www-data php console.php clear-credentials --user admin --password admin --object ObjectID
 ```
 
-### compile-documents
-
-Aktualisiert Dokumente
-
-**Optionen:**
-
-| Parameter (Kurzform) | Parameter (Langform)    | Beschreibung                                                                                     |
-| -------------------- | ----------------------- | ------------------------------------------------------------------------------------------------ |
-| -t                   | --documentId=DOCUMENTID | Mehrere Dokument-IDs (mehrere Werte zulässig)                                                    |
-| -u                   | --user=USERNAME         | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
-| -p                   | --password=PASSWORD     | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
-| -t                   | --tenant=TENANT-ID      | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
-| -h                   | --help                  | Hilfenachricht zur Einblendung weiterer Informationen                                            |
-| -q                   | --quiet                 | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
-| -V                   | --version               | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi<br>--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction        | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
-| -v / -vv / -vvv      | --verbose               | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
-
-**Beispiel zur Verwendung**
-
-```shell
-sudo -u www-data php console.php CompileDocuments --user admin --password admin --tenant 1 --documentId 123 --documentId 321
-```
-
 ### completion
 
 Der Befehl completion gibt das Shell-Vervollständigungsskript aus, das für die Verwendung der automatischen Shell-Vervollständigung erforderlich ist (derzeit wird nur die Bash-Vervollständigung unterstützt).
@@ -340,40 +312,6 @@ Aktualisiert den Status veralteter Verträge
 
 ```shell
 sudo -u www-data php console.php contracts-outdated --user admin --password admin
-```
-
-### documents
-
-Ermöglicht die Erstellung von Revisionen oder den Export eines oder mehrerer Dokumente
-
-**Optionen:**
-
-| Parameter (Kurzform) | Parameter (Langform)          | Beschreibung                                                                                     |
-| -------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
-|                      | --create_revision             | Erzeugt eine oder mehrere Revisionen für bestimmte Dokumente                                     |
-|                      | --export                      | Exportiert ein oder mehrere Dokumente in eine Datei                                              |
-|                      | --id=ID                       | Ein oder mehrere Dokumente nach ID auswählen (mehrere Werte zulässig)                            |
-|                      | --all_documents               | Selektiert alle Dokumente                                                                        |
-|                      | --all_category=ALL_CATEGORY   | Wählt alle Dokumente in der Kategorie aus                                                        |
-|                      | --all_template=ALL_TEMPLATE   | Selektiert alle Dokumente mit Vorlage                                                            |
-|                      | --all_object=ALL_OBJECT       | Selektiert alle Dokumente mit Objekt                                                             |
-|                      | --export_format=EXPORT_FORMAT | Exportformat: PDF oder HTML                                                                      |
-|                      | --export_folder=EXPORT_FOLDER | Wohin soll das Dokument exportiert werden? Der Ordner muss existieren und beschreibbar sein      |
-| -u                   | --user=USER                   | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
-| -p                   | --password=PASSWORD           | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
-| -i                   | --tenantId=TENANTID           | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
-| -h                   | --help                        | Hilfenachricht zur Einblendung weiterer Informationen                                            |
-| -c                   | --config=CONFIG               | Konfigurationsdatei                                                                              |
-| -q                   | --quiet                       | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
-| -V                   | --version                     | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi<br>--no-ansi           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction              | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
-| -v\|vv\|vvv          | --verbose                     | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
-
-**Beispiel zur Verwendung**
-
-```shell
-sudo -u www-data php console.php documents --user admin --password admin --create_revision
 ```
 
 ### extend-contracts
@@ -924,30 +862,6 @@ Archiviert die Logbucheinträge mit einem definierten Alter, gemäß den Einstel
 
 ```shell
 sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
-```
-
-### maintenance
-
-Verschickt E-Mails mit geplanten Wartungen gemäß den im Add-on "Wartungen" festgelegten Zeiträumen.
-
-**Optionen:**
-
-| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
-| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
-| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
-| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
-| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
-| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
-| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
-| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
-| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
-
-**Beispiel zur Verwendung**
-
-```shell
-sudo -u www-data php console.php maintenance --user admin --password admin --tenantId 1
 ```
 
 ### migrate-uploaded-files

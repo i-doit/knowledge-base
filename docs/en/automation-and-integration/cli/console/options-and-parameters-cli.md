@@ -16,10 +16,8 @@
 | [admin-center-password-reset](#admin-center-password-reset)               | Reset the password for the Admin Center                                                                                            |
 | [auth-cleanup](#auth-cleanup)                                             | Clean up rights system                                                                                                             |
 | [clear-credentials](#clear-credentials)                                   | Removes user credentials                                                                                                           |
-| [compile-documents](#compile-documents)                                   | Allows to compile one or multiple documents                                                                                        |
 | [completion](#completion)                                                 | Dump the shell completion script                                                                                                   |
 | [contracts-outdated](#contracts-outdated)                                 | Updates status of outdated contracts                                                                                               |
-| [documents](#documents)                                                   | Create and export documents                                                                                                        |
 | [extend-contracts](#extend-contracts)                                     | Extends Contracts with last cancellation date in the past                                                                          |
 | [help](#help)                                                             | Displays the help for a command                                                                                                    |
 | [import-csv](#import-csv)                                                 | Import data from a CSV file (uses a defined import profile from the GUI)                                                           |
@@ -41,7 +39,6 @@
 | [license-remove](#license-remove)                                         | Removes licenses from i-doit                                                                                                       |
 | [list](#list)                                                             | Lists all commands                                                                                                                 |
 | [logbook-archive](#logbook-archive)                                       | Archiving logbook entries                                                                                                          |
-| [maintenance](#maintenance)                                               | Sends notifications of scheduled maintenance from the Maintenance Add-on                                                           |
 | [migrate-uploaded-files](#migrate-uploaded-files)                         | Migrates uploaded files in i-doit <v1.13 to v.1.14>                                                                                |
 | [notifications-list](#notifications-list)                                 | Lists all notification types and notifications for later usage                                                                     |
 | [notifications-send](#notifications-send)                                 | Send notifications by e-mail (notifications are configured in the GUI)                                                             |
@@ -66,7 +63,7 @@
 | [tenant-list](#tenant-list)                                               | List all available tenants                                                                                                         |
 | [tenant-remove](#tenant-remove)                                           | Remove an existing tenant                                                                                                          |
 | [uninstall](#uninstall)                                                   | Uninstalls i-doit                                                                                                                  |
-| [update](#update)                                                         | Installs an update for i-doit                                                                                    |
+| [update](#update)                                                         | Installs an update for i-doit                                                                                                      |
 
 !!! attention "Configuration file and parameters --config"
     It is possible to pass additional content to the call via a configuration file. This file must be stored in the i-doit directory src/handler/config/. An example in the form of the file "isys\_handler\_ldap.ini" can be found in the directory src/handler/config/examples/.<br>
@@ -269,31 +266,6 @@ It removes both attributes `username` and `password` from the users "login" cate
 sudo -u www-data php console.php clear-credentials --user admin --password admin --object ObjectID
 ```
 
-### compile-documents
-
-Compile Documents
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -t                        | --documentId=DOCUMENTID  | Several document ids (multiple values allowed)                                               |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -t                        | --tenant=TENANT-ID       | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php CompileDocuments --user admin --password admin --tenant 1 --documentId 123 --documentId 321
-```
-
 ### completion
 
 The completion command dumps the shell completion script required to use shell autocompletion (currently only bash completion is supported).
@@ -338,40 +310,6 @@ Updates status of outdated contracts
 
 ```shell
 sudo -u www-data php console.php contracts-outdated --user admin --password admin
-```
-
-### documents
-
-Allows to create revisions or export one or multiple documents
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version)      | Description                                                                                  |
-| ------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --create_revision             | Creates one or more revisions for given documents                                            |
-|                           | --export                      | Exports one or more documents to a file                                                      |
-|                           | --id=ID                       | Select one or more documents by id (multiple values allowed)                                 |
-|                           | --all_documents               | Selects all documents                                                                        |
-|                           | --all_category=ALL_CATEGORY   | Selects all documents in category                                                            |
-|                           | --all_template=ALL_TEMPLATE   | Selects all documents with template                                                          |
-|                           | --all_object=ALL_OBJECT       | Selects all documents with object                                                            |
-|                           | --export_format=EXPORT_FORMAT | Export format: pdf or html                                                                   |
-|                           | --export_folder=EXPORT_FOLDER | Where should the document be exported to? The folder needs to exist and be writable          |
-| -u                        | --user=USER                   | Username                                                                                     |
-| -p                        | --password=PASSWORD           | Password                                                                                     |
-| -i                        | --tenantID=TENANTID           | Tenant ID default: 1                                                                         |
-| -h                        | --help                        | Help message for displaying further information                                              |
-| -c                        | --config=CONFIG               | Config file                                                                                  |
-| -q                        | --quit                        | Quiet-Mode to deactivate output                                                              |
-| -v                        | --version                     | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi           | Forces the output in ANSI format / Disables the output in ANSI format                        |
-| -n                        | --no-interaction              | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                     | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php documents --user admin --password admin
 ```
 
 ### extend-contracts
@@ -926,30 +864,6 @@ Archives the logbook entries with a defined age, according to the settings on th
 
 ```shell
 sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
-```
-
-### maintenance
-
-Sends e-mails with scheduled maintenance according to the time periods specified in the [Maintenance add-on](../../../i-doit-pro-add-ons/maintenance.md).
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php maintenance --user admin --password admin --tenantId 1
 ```
 
 ### migrate-uploaded-files
@@ -1601,30 +1515,4 @@ Updates the i-doit installation
 
 ```shell
 sudo -u www-data php console.php update --user admin --password admin --zip /path/to/zip/file.zip --v 1.14
-```
-
-### workflows-process
-
-Sends emails about workflows and creates tasks from checklists.
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -t                        | --types=TYPES            | Workflow types (multiple values allowed)                                                     |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php workflows-process --user admin --password admin --tenantId 1 --types task --types checklist
 ```

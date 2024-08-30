@@ -47,6 +47,71 @@ Die Konfigurationsdateien werden gemäß dem konfigurierten Pfad auf dem Dateisy
 
 Selbstverständlich lässt sich der Export der Dateien auch über die i-doit [Console](../cli/console/index.md) automatisieren. Eine Beschreibung der einzelnen Parameter sowie ein Beispiel sind im [entsprechenden Artikel](../cli/console/optionen-und-parameter-der-console.md#nagios-export) für die Option **Exportkonfiguration** zu finden.
 
+## CLI Console Commands und Optionen
+
+| Command     | Interne Beschreibung                                                     |
+| ----------- | ------------------------------------------------------------------------ |
+| [nagios-export](#nagios-export) | Nagios-Konfiguration exportieren |
+| [nagios-ndoutils](#nagios-ndoutils) | Ist-Zustand aus Nagios ins Logbuch schreiben |
+
+### nagios-export
+
+!!!info
+    Dieser Befehl ist erst nach installation des Nagios Add-ons verfügbar.
+
+Exportiert die Nagios-Einstellungen und i-doit Objekte in Nagios-Konfigurationsdateien.
+
+**Optionen:**
+
+| Parameter (Kurzform) | Parameter (Langform)        | Beschreibung                                                                                     |
+| -------------------- | --------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --nagiosHostId=NAGIOSHOSTID | Angabe des Nagios-Hosts, der für den Export verwendet werden soll                                |
+|                      | --validate                  | Validiert die Exportdateien                                                                      |
+| -u                   | --user=[USERNAME]           | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]       | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID]      | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE]      | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                      | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                     | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                   | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+
+**Beispiel zur Verwendung**
+
+```shell
+sudo -u www-data php console.php nagios-export --user admin --password admin --tenantId 1 --nagiosHostId 1
+```
+
+### nagios-ndoutils
+
+!!!info
+    Dieser Befehl ist erst nach installation des Nagios Add-ons verfügbar.
+
+Importiert Monitoring Statusänderungen aus den NDOUtils in das i-doit Logbuch.
+
+**Optionen:**
+
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+
+**Beispiel zur Verwendung**
+
+```shell
+sudo -u www-data php console.php nagios-ndoutils --user admin --password admin --tenantId 1
+```
+
 ## Changelog
 
 | Version | Date       | Changelog                                                                                                                                                                                                                   |
