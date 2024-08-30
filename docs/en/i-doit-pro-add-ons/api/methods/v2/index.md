@@ -6,6 +6,8 @@ status: new
 lang: en
 ---
 
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
 The new structure is much more rigorous and allows for better validation of passed parameters and it is now possible to create much more structured and simple endpoints. The new structure will use a new service, i.e. the v2 API will use an internal (i-doit core) v2 API.
 
 This is to ensure that the v2 API no longer implements any special "own" logic. The v2 API only serves as an interface.

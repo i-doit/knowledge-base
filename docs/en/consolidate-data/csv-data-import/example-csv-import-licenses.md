@@ -1,20 +1,22 @@
 # Example of CSV import - Licenses
 
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
 In this example we build on the [CSV import of applications](example-csv-import-applications.md) and want to import licenses.
 
 !!! info "This article was last checked for i-doit version 1.17.2"
 
 For the import we need the following information:
 
--  Object type → what type of object it should be.
--  Object title → the name of the client
--  License Assignment: License Key - License Type → Which license type will be imported, single or volume?
--  License Assignment: License Key - Number → What is the number of licenses?
--  License Assignment: License Key - Key → What is the license key?
--  License assignment: License key - Serial number → Which serial number should be assigned?
--  License assignment: License key - Start date → From when can the license be used?
--  License assignment: License key - Expiration date → When does the license expire?
--  License assignment: License key - Unit price → What does a license cost?
+-   Object type → what type of object it should be.
+-   Object title → the name of the client
+-   License Assignment: License Key - License Type → Which license type will be imported, single or volume?
+-   License Assignment: License Key - Number → What is the number of licenses?
+-   License Assignment: License Key - Key → What is the license key?
+-   License assignment: License key - Serial number → Which serial number should be assigned?
+-   License assignment: License key - Start date → From when can the license be used?
+-   License assignment: License key - Expiration date → When does the license expire?
+-   License assignment: License key - Unit price → What does a license cost?
 
 !!! info "With each import, the representation of the data must also be taken into account."
 
@@ -31,7 +33,6 @@ Example CSV file for this import:
 [Import-Licenses.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/Import-Licenses.csv){ .md-button .md-button--primary }
 
 ??? example "Import Licenses.csv"
-
     ```text
     Object type;Object title;Licenses: License keys > License Type (Dialog);Licenses: License keys > Amount;Licenses: License keys > Key;Licenses: License keys > Serial;Licenses: License keys > Start Date (Date);Licenses: License keys > Expiration Date (Date);Licenses: License keys > Price Per Unit (Money)
     C__OBJTYPE__LICENCE;License-X;Volume license;1000;License-X-111-LASKDZHW;123456789;2021-01-01;2021-12-31;999.9
@@ -57,4 +58,4 @@ Also, the License Assignment and License Assignment: License Key categories are 
 
 [![license-key](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/5-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/5-csv-i-l.png)
 
-[![licese-key](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)
+[![license-key](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)

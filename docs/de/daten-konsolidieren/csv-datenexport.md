@@ -10,13 +10,13 @@ Objekte und deren Attribute lassen sich über die [Objekt-Liste](../grundlagen/o
 
 ## Listen-Kategorien
 
-Derzeit unterstützt der CSV-Export viele der [Listen-Kategorien](../glossar.md) (Multi-Value). Die in deren Liste aufgeführten Einträge und [Attribute](../glossar.md) werden nach Druck auf den Button **Als CSV exportieren** zum Download angeboten. Als Spaltenüberschriften dienen die Attributnamen.
+Derzeit unterstützt der CSV-Export viele der [Listen-Kategorien](../glossar.md) (Multi-Value). Die in deren Liste aufgeführten Einträge und [Attribute](../glossar.md) werden nach Druck auf den Button **Als CSV exportieren** zum Download angeboten. Als Spaltenüberschriften dienen die Attribut Namen.
 
 [![Multi-Value Kategorie](../assets/images/de/daten-konsolidieren/csv-datenexport/2-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/2-csv-de.png)
 
 ## Reports
 
-Der [Report Manager](../auswertungen/report-manager.md) verfügt ebenfalls über einen Export ins CSV-Format. In einem Report klickt man dazu auf den Button **CSV**.aadawdwa
+Der [Report Manager](../auswertungen/report-manager.md) verfügt ebenfalls über einen Export ins CSV-Format. In einem Report klickt man dazu auf den Button **CSV**.
 
 [![Report Darstellung](../assets/images/de/daten-konsolidieren/csv-datenexport/3-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/3-csv-de.png)
 
@@ -25,7 +25,6 @@ Der [Report Manager](../auswertungen/report-manager.md) verfügt ebenfalls über
 CSV-Dateien sind einfache Textdateien, in der pro Zeile Komma-separierte Spalten hinterlegt sind. In diesem Fall dient ein Semikolon als Trennzeichen von Spalten. Die Daten sind im Zeichensatz Unicode (UTF-8) kodiert.
 
 !!! info "Microsoft Excel"
-
     Es kann vorkommen, dass Microsoft Excel die Daten in der exportierten CSV-Datei nicht korrekt darstellt. Insbesondere Encoding-Fehler sind zu beobachten. Um dies zu verhindern, sollte die CSV-Datei nicht direkt geöffnet, sondern erst importiert werden:
 
     1.  CSV-Datei exportieren und speichern

@@ -1,5 +1,7 @@
 # Console
 
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
 i-doit has a Command line Interface (CLI) with which you can carry out various tasks. For example, the CLI is required for [Cronjobs](../../../maintenance-and-operation/cronjob-setup.md) and can be applied for the automation of work steps.
 
 ## First Steps

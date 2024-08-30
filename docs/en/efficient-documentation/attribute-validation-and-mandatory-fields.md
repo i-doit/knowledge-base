@@ -6,9 +6,9 @@ If you want to ensure the uniqueness of [attributes](../glossary.md) or if you e
 
 The validation meets the following requirements:
 
-*   Determination of specified values for particular fields
-*   Determination of an uniqueness of the field value per [object](../glossary.md) ([multi-value category](../basics/structure-of-the-it-documentation.md))/ [object type](../basics/structure-of-the-it-documentation.md)/ [client](../glossary.md) (global)
-*   Definition of the field as mandatory when creating a new object or editing the information
+-   Determination of specified values for particular fields
+-   Determination of an uniqueness of the field value per [object](../glossary.md) ([multi-value category](../basics/structure-of-the-it-documentation.md))/ [object type](../basics/structure-of-the-it-documentation.md)/ [client](../glossary.md) (global)
+-   Definition of the field as mandatory when creating a new object or editing the information
 
 ## Configuration
 
@@ -24,9 +24,9 @@ The attributes of the category are now available for the [configuration of valid
 
 You can also specify whether the attribute in your [IT documentation](../basics/structure-of-the-it-documentation.md) must be unique, i.e. may only exist once. This is done using the following buttons:
 
-*   **Unique (per object)**: This option is only available in list categories (multi-value categories). If you activate it, it is not possible to use the same value repeatedly in two entries of this category within this object. However, it is possible to maintain the entered value again in other objects.
-*   **Unique (per object type)**: If you activate the option per object type, the same value cannot be present in another object of this type.
-*   **Unique (Global)**: The entered value is unique in the entire client and cannot be used again in this attribute in any other object.
+-   **Unique (per object)**: This option is only available in list categories (multi-value categories). If you activate it, it is not possible to use the same value repeatedly in two entries of this category within this object. However, it is possible to maintain the entered value again in other objects.
+-   **Unique (per object type)**: If you activate the option per object type, the same value cannot be present in another object of this type.
+-   **Unique (Global)**: The entered value is unique in the entire client and cannot be used again in this attribute in any other object.
 
 If a value is already in use for a field but the user tries to save the entry, a notice will inform him that the repeated usage of this value is not possible.
 
@@ -37,7 +37,6 @@ The selection **Attribute needs to be** is only available where there is no inte
 As long as there is no validation in the category, you can either determine specific content types which the value has to match or you can state custom text values from which the user can choose.
 
 !!! info "Special cases"
-
     There are some categories which already have an internal validation which can neither be deactivated nor be adjusted. In the “Host address” category, for example, there is a examination whether an entered IP address corresponds to the standards for IPv4 or IPv6.
 
 If you provide users with custom values, you can optionally create a drop-down list from which users can select the values. In this way, the field value can only be selected from a list whose content can only be changed in the administration in the validation configuration.
@@ -51,7 +50,6 @@ An entry is created in the configuration for each category for which you create 
 [![category](../assets/images/en/efficient-documentation/attribute-validation-and-mandatory-fields/vup-4.png)](../assets/images/en/efficient-documentation/attribute-validation-and-mandatory-fields/vup-4.png)
 
 !!! info "Caution when removing"
-
     When removing the configuration of a category, all validation configurations will be lost irreversibly.
 
 ## Renew validation/attributes cache

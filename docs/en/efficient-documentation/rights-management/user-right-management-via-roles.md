@@ -9,7 +9,7 @@ Create a Persongroup object and a Person object. Add the Person as member to the
 
 ## Rights assignment
 
-Now open the ==Administration -> User permissions== and open for example CMDB. Here you insert the title of the Persongroup object into `Person / Group` field or select a persongroup via the `Select` button and load the rights.<br>
+Now open the ==Administration -> User permissions== and open for example CMDB. Here you insert the title of the Persongroup object into `Person / Group` field or select a Persongroup via the `Select` button and load the rights.
 
 ### Condition: Objects with assigned role in contact assignment
 

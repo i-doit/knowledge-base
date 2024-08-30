@@ -27,7 +27,7 @@ JSON key **result** contains an array of JSON objects.
 
 | **Key**   | **JSON data type** | **Description**                  |
 | --------- | ------------------ | -------------------------------- |
-| **id**    | Integer            | Identifier                       |
+| **id**    | String             | Identifier                       |
 | **const** | String             | **Constant of Dialog Attribute** |
 | **title** | String             | Title of the Attribute           |
 

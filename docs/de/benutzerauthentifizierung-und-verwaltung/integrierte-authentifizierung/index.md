@@ -1,5 +1,7 @@
 # Integrierte Authentifizierung
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 !!! example "In Arbeit"
 
 Hier beschreiben wir, welche Anmeldemöglichkeiten in i-doit pro bereits integriert sind
