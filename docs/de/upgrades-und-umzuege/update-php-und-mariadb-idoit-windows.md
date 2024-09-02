@@ -39,7 +39,7 @@ Zuerst muss der Apache2 Service gestoppt werden. Dies kann entweder über das "D
 
 Suchen Sie unter den angezeigten Diensten den **Apache2.4** Dienst und klicken Sie auf **"Den Dienst beenden"**
 
-[![apache service stoppen Fenster](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)
+[![Apache Service stoppen Fenster](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)
 
 **Konsole:**
 
@@ -76,11 +76,11 @@ Damit ist MariaDB erfolgreich auf MariaDB 10.11 aktualisiert.
 
 Die Aktualisierung von PHP gestaltet sich deutlich einfacher.
 
-Zuerst muss ein backup von der PHP.ini gemacht werden, hier reicht es aus, die Datei aus dem **"C:\ProgramData\i-doit\php\"** Ordner zu kopieren und in einem anderen Ordner einzufügen.
+Zuerst muss ein backup von der PHP.ini gemacht werden, hier reicht es aus, die Datei aus dem `C:\ProgramData\i-doit\php\` Ordner zu kopieren und in einem anderen Ordner einzufügen.
 
 !!! warning "Der Apache2.4 Service muss für den folgenden Schritt beendet sein!"
 
-Dann entpacken wir den Inhalt der vorher heruntergeladenen ZIP Datei in den **"C:\ProgramData\i-doit\php\"** Ordner und ersetzen so die alten PHP Dateien.
+Dann entpacken wir den Inhalt der vorher heruntergeladenen ZIP Datei in den `C:\ProgramData\i-doit\php\` Ordner und ersetzen so die alten PHP Dateien.
 
 Nachdem der Inhalt erfolgreich eingefügt wurde, kann das Backup der PHP.ini Datei ebenfalls in den Ordner eingefügt und ersetzt werden, damit die alten PHP Einstellungen wieder vorhanden sind.
 

@@ -66,7 +66,7 @@ Finally, the option “Launch Wizard to Upgrade existing MariaDB or MySQL servic
 
 [![check mark](../assets/images/en/upgrades-and-migrations/php-mariadb-update/5-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/5-pum.png)
 
-In the new window that opens up, select the MySQL service and click on **"Upgrade ”**.
+In the new window that opens up, select the MySQL service and click on **Upgrade**.
 
 [![upgrade existing instances](../assets/images/en/upgrades-and-migrations/php-mariadb-update/6-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/6-pum.png)
 
@@ -76,11 +76,11 @@ MariaDB has now been successfully upgraded to MariaDB 10.11.
 
 Updating PHP is much easier than MariaDB.
 
-First a backup of the PHP.ini must be made, here it is sufficient to copy the file from the **“C:\ProgramData\i-doit\php\”** folder and paste it into another folder.
+First a backup of the PHP.ini must be made, here it is sufficient to copy the file from the `C:\ProgramData\i-doit\php\` folder and paste it into another folder.
 
 !!! warning “The Apache2.4 service must be stopped for the following step!”
 
-Then we unzip the contents of the previously downloaded ZIP file into the **“C:\ProgramData\i-doit\php\”** folder and replace the old PHP files.
+Then we unzip the contents of the previously downloaded ZIP file into the `C:\ProgramData\i-doit\php\`folder and replace the old PHP files.
 
 After the content has been successfully added, the backup of the PHP.ini file can also be added to the folder and replaced so that the old PHP settings are available again.
 
@@ -88,6 +88,6 @@ Finally, the Apache2.4 service must be switched on again and PHP has been succes
 
 ### Check
 
-Check whether the update was successful by checking the versions in the administration under **"System Config Check ”**
+Check whether the update was successful by checking the versions in the administration under **System Config Check**.
 
 [![check version](../assets/images/en/upgrades-and-migrations/php-mariadb-update/7-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/7-pum.png)
