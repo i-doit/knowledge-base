@@ -1,0 +1,32 @@
+{
+    "cSpell.words": [
+        "bcmath",
+        "compat",
+        "Cond",
+        "ctype",
+        "enmod",
+        "fcgi",
+        "fileinfo",
+        "filesize",
+        "fopen",
+        "gettext",
+        "htdocs",
+        "mariadb",
+        "maxlifetime",
+        "mbstring",
+        "mysqli",
+        "odbc",
+        "opcache",
+        "openssl",
+        "pgsql",
+        "phar",
+        "posix",
+        "SLES",
+        "snmp",
+        "sqlite",
+        "suseconnect",
+        "vhosts",
+        "wwwrun",
+        "zypper"
+    ]
+}

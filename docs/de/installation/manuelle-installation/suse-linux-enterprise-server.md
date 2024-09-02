@@ -31,43 +31,35 @@ Die Standard-Repositories von SUSE Linux Enterprise Server (SLES) bringen bereit
 
 zu installieren.
 
-Vorerst ist die Aktivierung von zusätzlichen Add-ons in **YaSt** nötig:
+Vorerst ist die Aktivierung von zusätzlichen Add-ons nötig:
 
 -   **Web and Scripting Module**
 
-Um zu prüfen, ob beide Add-ons aktiviert sind, ruft man folgenden Befehl auf:
+Um zu prüfen, ob das **Web and Scripting Add-on Module** aktiviert ist, ruft man folgenden Befehl auf:
 
 ```sh
 sudo zypper repos -E
 ```
 
-Mit zypper werden anschließend die nötigen Pakete installiert:
+Sollte es nicht aktiviert sein, kann es mit folgendem Befehl aktiviert werden:
 
 ```sh
-sudo zypper refresh
-sudo zypper update
+sudo suseconnect -p sle-module-web-scripting/15.6/x86_64
 ```
+
+Mit zypper werden anschließend die Pakete aktualisiert:
 
 ```sh
-sudo zypper install apache2 apache2-mod_php8 mariadb mariadb-client memcached php8 php8-{bz2,ctype,bcmath,curl,gd,gettext,fileinfo,fpm,ldap,mbstring,memcached,mysql,odbc,pgsql,pdo,snmp,soap,zip}
-
-?
-php8-bcmath php8-bz2 php8-ctype php8-curl php8-gd php8-gettext php8-fileinfo \
-php8-ldap php8-mbstring php8-mcrypt php8-memcached php8-mysql php8-opcache \
-php8-openssl php8-pdo php8-pgsql php8-phar php8-posix php8-soap php8-sockets php8-sqlite \
-php8-xsl php8-zip php8-zlib
+sudo zypper refresh && sudo zypper update
 ```
 
-sudo zypper --quiet --non-interactive install --no-recommends \
-        apache2 \
-        mariadb mariadb-client \
-        memcached \
-        make sudo unzip \
-        php8 php8-bcmath php8-bz2 php8-ctype php8-curl php8-fpm php8-gd php8-gettext php8-fileinfo \
-        php8-ldap php8-mbstring php8-mysql php8-opcache php8-openssl php8-pdo php8-pgsql \
-        php8-phar php8-posix php8-soap php8-sockets php8-sqlite php8-xsl php8-zip php8-zlib
+Nun werden die von i-doit benötigten Pakete installiert:
 
-Damit der Apache Webserver und MariaDB beim Booten gestartet werden, sind diese Befehle erforderlich:
+```sh
+sudo zypper install apache2 apache2-mod_php8 mariadb-server mariadb-client memcached php8 php8-{bz2,ctype,bcmath,curl,gd,gettext,fileinfo,fpm,ldap,mbstring,memcached,mysql,odbc,opcache,openssl,phar,posix,pgsql,pdo,snmp,soap,sockets,sqlite,zip,zlib}
+```
+
+Damit die notwendigen Dienste beim Booten gestartet werden, ist dieser Befehl erforderlich:
 
 ```sh
 sudo systemctl enable apache2 mysql memcached
@@ -79,17 +71,13 @@ Anschließend erfolgt der Start der Dienste:
 sudo systemctl start apache2 mysql memcached
 ```
 
-Weiterhin wird der Standard-Port 80 von HTTP über die Firewall erlaubt. Diese muss nach der Anpassung neu gestartet werden:
+Weiterhin wird der Standard-Port **80** von HTTP über die Firewall erlaubt. Diese muss nach der Anpassung neu gestartet werden:
 
 ```sh
-sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=80/tcp --permanent && sudo firewall-cmd --reload
 ```
 
-```sh
-sudo firewall-cmd --reload
-```
-
-!!! info "Für HTTPS müssen weitere Schritte durchgeführt werden die hier nicht behandelt werden, siehe [Sicherheit und Schutz](../../../wartung-und-betrieb/sicherheit-und-schutz.md)"
+!!! info "Für **HTTPS** müssen weitere Schritte durchgeführt werden die hier nicht behandelt werden, siehe [Sicherheit und Schutz](../../../wartung-und-betrieb/sicherheit-und-schutz.md)"
 
 ## Konfiguration
 
@@ -106,14 +94,14 @@ sudo mv /etc/php8/fpm/php-fpm.d/www.conf /etc/php8/fpm/php-fpm.d/www.conf.bak
 und anschließend eine neue Datei erstellt und mit den Einstellungen befüllt:
 
 ```sh
-sudo nano /etc/php8/fpm/php-fpm.d/i-doit.conf
+sudo vi /etc/php8/fpm/php-fpm.d/i-doit.conf
 ```
 
 ```ini
 [i-doit]
 listen = /var/run/php-fpm/php8-fpm.sock
 user = wwwrun
-group = run
+group = www
 listen.owner = wwwrun
 listen.group = www
 pm = dynamic
@@ -166,29 +154,25 @@ Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreic
 Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
 Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
-```sh
-sudo a2enmod php7 rewrite mod_access_compat
-sudo systemctl restart apache2 php-fpm
-```
-
 ### Apache2 HTTP Server
 
-Ein wird eine neue VHost-Konfiguration aus dem existierenden Template **vhost.template** erzeugt:
+Ein wird eine neue VHost-Konfiguration erzeugt:
 
 ```sh
-sudo cp /etc/apache2/vhosts.d/vhost.template /etc/apache2/vhosts.d/i-doit.conf & sudo vi /etc/apache2/vhosts.d/i-doit.conf
+sudo vi /etc/apache2/vhosts.d/i-doit.conf
 ```
 
 In dieser Datei wird die VHost-Konfiguration angepasst und gespeichert:
 
 ```conf
 <VirtualHost *:80>
-        ServerAdmin i-doit@example.net
+    ServerAdmin i-doit@example.net
 
-        DocumentRoot /srv/www/htdocs/
-        <Directory /srv/www/htdocs/>
-    ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
-    AllowOverride FileInfo AuthConfig
+    DirectoryIndex index.php
+    DocumentRoot /srv/www/htdocs/
+    <Directory /srv/www/htdocs>
+    ## See https://httpd.apache.org/docs/2.4/mod/core.html#allowoverride
+    AllowOverride None
 
     ## Apache Web server configuration file for i-doit
     ##
@@ -320,6 +304,7 @@ In dieser Datei wird die VHost-Konfiguration angepasst und gespeichert:
 
     TimeOut 600
     ProxyTimeout 600
+
     LogLevel warn
     ErrorLog /var/log/apache2/error_log
     CustomLog /var/log/apache2/access_log combined
@@ -330,14 +315,25 @@ In dieser Datei wird die VHost-Konfiguration angepasst und gespeichert:
         </If>
     </FilesMatch>
 </VirtualHost>
+
+
+
 ```
 
 i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Damit diese Einstellungen berücksichtigt werden, ist die Einstellung **AllowOverride All** nötig.
 
-Im nächsten Schritt werden die nötigen Apache-Module **php8**, **rewrite** und **mod_access_compat** aktiviert sowie der Apache Webserver neu gestartet:
+Im nächsten Schritt werden die nötigen Apache2 HTTP Server Module **php8**, **rewrite** und **mod_access_compat** aktiviert sowie der Apache HTTP Server neu gestartet:
 
 ```sh
-sudo a2enmod proxy proxy_fcgi php8 rewrite mod_access_compat && sudo systemctl restart apache2
+sudo a2enmod proxy && sudo a2enmod proxy_fcgi && sudo a2enmod php8 && sudo a2enmod rewrite && sudo a2enmod mod_access_compat
+```
+
+!!! note "Leider muss jedes Modul einzeln aktiviert werden"
+
+und dann die notwendigen Dienste neu starten:
+
+```sh
+sudo systemctl restart apache2 php-fpm
 ```
 
 ### MariaDB
@@ -356,27 +352,18 @@ sudo mysql -uroot
 
 In der Shell von MariaDB werden nun folgende SQL-Statements ausgeführt:
 
-```sh
+!!! note "Bitte ('passwort') ersetzen"
+
+```sql
 ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('passwort');
+```
+
+Der Modus für das Herunterfahren von InnoDB muss noch geändert werden. Der Wert 0 führt dazu, dass eine vollständige Bereinigung und eine Zusammenführung der Änderungspuffer durchgeführt wird, bevor MariaDB heruntergefahren wird:
+
+```sql
 FLUSH PRIVILEGES;
+SET GLOBAL innodb_fast_shutdown = 0;
 EXIT;
-```
-
-!!! info "Änderung ab MariaDB 10.4 und aufwärts"
-    Ab MariaDB Version 10.4 und aufwärts wird das UPDATE-Statement nicht mehr in der user-Tabelle unterstützt.
-    Nun muss das Statement ALTER USER genutzt werden:
-    ```sh
-    ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('passwort');
-    ```
-
-Anschließend wird MariaDB gestoppt. Wichtig ist hierbei das Verschieben von nicht benötigten Dateien (andernfalls droht ein signifikanter Performance-Verlust):
-
-```sh
-mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
-```
-
-```sh
-sudo systemctl stop mysql.service
 ```
 
 Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
@@ -385,66 +372,61 @@ Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
 sudo vi /etc/my.cnf.d/99-i-doit.cnf
 ```
 
-Diese Datei enthält die neuen Konfigurationseinstellungen. Für eine optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden:
+Diese Datei enthält die neuen Konfigurationseinstellungen. **Für eine optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden**:
 
 ```ini
 [mysqld]
-
 # This is the number 1 setting to look at for any performance optimization
 # It is where the data and indexes are cached: having it as large as possible will
 # ensure MySQL uses memory and not disks for most read operations.
 #
 # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
 innodb_buffer_pool_size = 1G
-
 # Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
 innodb_buffer_pool_instances = 1
-
 # Redo log file size, the higher the better.
 # MySQL/MariaDB writes two of these log files in a default installation.
 innodb_log_file_size = 512M
-
 innodb_sort_buffer_size = 64M
 sort_buffer_size = 262144 # default
 join_buffer_size = 262144 # default
-
 max_allowed_packet = 128M
 max_heap_table_size = 32M
 query_cache_min_res_unit = 4096
 query_cache_type = 1
 query_cache_limit = 5M
 query_cache_size = 80M
-
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
-
 # Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
 innodb_thread_concurrency = 0
-
 # Disable this (= 0) if you have slow harddisks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
-
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
 # Only if your have MySQL 5.6 or higher, do not use with MariaDB!
 #table_open_cache_instances = 4
-
 innodb_stats_on_metadata = 0
-
 sql-mode = ""
 ```
 
-Abschließend wird MariaDB gestartet:
+Abschließend wird MariaDB neugestartet:
 
 ```sh
-sudo systemctl restart mysql.service
+sudo systemctl restart mysql
 ```
 
-Nächster Schritt
+und der Firewall Verbindungen ia **HTTP** erlaubt:
+
+```sh
+sudo firewall-cmd --permanent --add-service=http
+```
+
+## Nächster Schritt
 
 Das Betriebssystem ist nun vorbereitet, sodass i-doit installiert werden kann:
 
-[Weiter zu *Setup*](setup.md)
+[Weiter zu **Setup**](setup.md)
