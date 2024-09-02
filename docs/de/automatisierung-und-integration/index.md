@@ -9,3 +9,4 @@ Die beschriebenen Schnittstellen sind bereits in _i-doit pro_ enthalten:
 *   [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md)
 *   [Service Desk](../automatisierung-und-integration/service-desk/index.md)
 *   [SNMP](../automatisierung-und-integration/snmp.md)
+*   [Automatisierung und Cronjobs](../automatisierung-und-integration/automatisierung-und-cronjobs.md)

@@ -39,7 +39,7 @@ Zuerst muss der Apache2 Service gestoppt werden. Dies kann entweder über das "D
 
 Suchen Sie unter den angezeigten Diensten den **Apache2.4** Dienst und klicken Sie auf **"Den Dienst beenden"**
 
-[![apache service stoppen fenster](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)
+[![apache service stoppen Fenster](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)
 
 **Konsole:**
 
@@ -70,7 +70,7 @@ In dem neuen Fenster das Sich daraufhin öffnet wählen Sie dann den MySQL Servi
 
 [![upgrade existing instances](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)
 
-Damit ist MariaDB erfolgreich auf MariaDB 10.11 geupgraded.
+Damit ist MariaDB erfolgreich auf MariaDB 10.11 aktualisiert.
 
 ### PHP aktualisieren
 
@@ -84,7 +84,7 @@ Dann entpacken wir den Inhalt der vorher heruntergeladenen ZIP Datei in den **"C
 
 Nachdem der Inhalt erfolgreich eingefügt wurde, kann das Backup der PHP.ini Datei ebenfalls in den Ordner eingefügt und ersetzt werden, damit die alten PHP Einstellungen wieder vorhanden sind.
 
-Zuletzt muss der Apache2.4 Service wieder eingeschaltet werden und somit ist PHP erfolgreich geupdated.
+Zuletzt muss der Apache2.4 Service wieder eingeschaltet werden und somit ist PHP erfolgreich aktualisiert.
 
 ### Überprüfen
 
