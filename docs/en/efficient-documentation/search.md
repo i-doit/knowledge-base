@@ -35,11 +35,11 @@ The search mode can be selected at **Extras → CMDB → Search** after the firs
 
 Should a search with the predefined mode (see above) provide an unsatisfactory result or even no result, you can carry out a **Deep Search** automatically. You can configure the settings for **Deep Search** under **Administration → [Tenant name] management → Settings for [Tenant name] → Search → Automatic DeepSearch**:
 
-| Option | Description |
-| --- | --- |
-| **Active** | The search results are supplemented by an additional **Deep Search**. |
-| **Active, when no results are found** | The additional **Deep Search** is started when there are no results. |
-| **Deactivated** | The additional **Deep Search** is omitted. |
+| Option                                | Description                                                           |
+| ------------------------------------- | --------------------------------------------------------------------- |
+| **Active**                            | The search results are supplemented by an additional **Deep Search**. |
+| **Active, when no results are found** | The additional **Deep Search** is started when there are no results.  |
+| **Deactivated**                       | The additional **Deep Search** is omitted.                            |
 
 ## Indexing
 
@@ -199,6 +199,6 @@ This limit is for performance reasons. To increase this limit, an expert setting
 
 Here is an example where the limit was set to 5000 results.
 
-| Key | Value | Type |
-| --- | --- | --- |
-| search.limit | 5000 | Tenant-wide |
+| Key          | Value | Type        |
+| ------------ | ----- | ----------- |
+| search.limit | 5000  | Tenant-wide |

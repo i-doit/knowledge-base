@@ -1,4 +1,6 @@
-## CSV-Datenimport
+# CSV-Datenimport
+
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
 
 !!! example ""
     Ein Praxisbeispiel für den automatisierten Datenimport finden Sie auf unserem [Blog](https://www.i-doit.com/blog/automatisierter-csv-import-mit-i-doit/)
@@ -123,11 +125,11 @@ Während des Mappings kann man, nachdem das Feld ausgewählt wurde, angeben, ob 
 
 Einige Attribute beinhalten aus Werten und Einheiten. In den jeweiligen Formularen der Web GUI sind diese jeweils voneinander getrennt anzugeben. Beispielsweise besteht in der Kategorie **Monitor** das Attribut **Display** aus dem Feld für den Wert und aus dem Feld für die Einheit (Zoll, cm, usw.). Um dieses Attribut sinngemäß über den CSV-Datenimport zu importieren, müssen Wert und Einheit zusammen in einer Zelle stehen. Beispiele:
 
-| Kategorie | Attribut | Zuweisung beim CSV-Datenimport | Zelle in CSV-Datei |
-| --- | --- | --- | --- |
-| **CPU** | **CPU-Frequenz** | **CPU-Frequenz (Einheit)** | 2.5 GHz |
-| **Lokaler Massenspeicher → Gerät** | **Kapazität** | **Kapazität (Einheit)** | 4 TB |
-| **Monitor** | **Display** | **Display (Einheit)** | 24 Inch |
+| Kategorie                          | Attribut         | Zuweisung beim CSV-Datenimport | Zelle in CSV-Datei |
+| ---------------------------------- | ---------------- | ------------------------------ | ------------------ |
+| **CPU**                            | **CPU-Frequenz** | **CPU-Frequenz (Einheit)**     | 2.5 GHz            |
+| **Lokaler Massenspeicher → Gerät** | **Kapazität**    | **Kapazität (Einheit)**        | 4 TB               |
+| **Monitor**                        | **Display**      | **Display (Einheit)**          | 24 Inch            |
 
 ## CSV-Dateien über die i-doit Console importieren
 

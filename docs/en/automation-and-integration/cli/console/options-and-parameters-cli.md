@@ -1,5 +1,7 @@
 # Options and parameters for the console
 
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
 !!! attention "Notes"
     All examples on this page refer to the use of the i-doit user with the combination user name/password: **admin**/**admin**.<br>
     All parameters are case-sensitive, which means that upper and lower case must be followed exactly according to the examples and specifications.
@@ -63,7 +65,7 @@
 | [system-objectcleanup](#system-objectcleanup)                             | Clean up objects (objects with the status "unfinished", "archived" or "deleted" are permanently removed)                           |
 | [system-objectrelations](#system-objectrelations)                         | Recreate Object Relationships                                                                                                      |
 | [system-refresh-table-configuration](#system-refresh-table-configuration) | Refreshes all available list configurations (object types and categories)                                                          |
-| [system-set-settings](#system-set-settings)                               | Enables Admin Center settings to be set via the CLI                                                                  |
+| [system-set-settings](#system-set-settings)                               | Enables Admin Center settings to be set via the CLI                                                                                |
 | [tenant-create](#tenant-create)                                           | Add a new tenant                                                                                                                   |
 | [tenant-disable](#tenant-disable)                                         | Deactivate an existing tenant                                                                                                      |
 | [tenant-enable](#tenant-enable)                                           | Activate an existing tenant                                                                                                        |
@@ -1506,19 +1508,19 @@ Enables Admin Center settings to be set via the CLI.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                      |
-| ------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------ |
-| -u                        | --user=[USERNAME]        | i-doit Admin username [default: "admin"]                                                         |
-| -p                        | --password=[PASSWORD]    | i-doit Admin password                                                                            |
-| -s                        | --settings=[SETTINGS]    | Map of settings to be set as json like {"proxy.active": 1, [...]}                                |
-| -i                        | --tenantId=TENANT-ID        | Tenant ID of the tenant to be used (default: 1)                                                                                        |
-| -c                        | --config=CONFIG-FILE        | Specifying the path to the configuration file                                                                                          |
-| -h                        | --help                      | Help message for displaying further information                                                                                        |
-| -q                        | --quiet                     | Quiet-Mode to deactivate output                                                                                                        |
-| -V                        | --version                   | Output of the i-doit Console version                                                                                                   |
-|                           | --ansi<br>--no-ansi         | Force (or disable --no-ansi) ANSI output                                                                                               |
-| -n                        | --no-interaction            | Disables all interaction questions of the i-doit Console                                                                               |
-| -v / -vv / -vvv           | --verbose                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level)                                           |
+| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
+| -u                        | --user=[USERNAME]        | i-doit Admin username [default: "admin"]                                                     |
+| -p                        | --password=[PASSWORD]    | i-doit Admin password                                                                        |
+| -s                        | --settings=[SETTINGS]    | Map of settings to be set as json like {"proxy.active": 1, [...]}                            |
+| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
+| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
+| -h                        | --help                   | Help message for displaying further information                                              |
+| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 

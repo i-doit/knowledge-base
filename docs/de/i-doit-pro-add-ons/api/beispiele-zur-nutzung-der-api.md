@@ -38,7 +38,8 @@ Suche
                 "value": "ESXi1",
                 "type": "cmdb",
                 "link": "\/?objID=1000&catgID=1&cateID=1029&highlight=ESXi1",
-                "score": 0
+                "score": 0,
+                "status": "Normal"
             }
         ],
         "id": 1

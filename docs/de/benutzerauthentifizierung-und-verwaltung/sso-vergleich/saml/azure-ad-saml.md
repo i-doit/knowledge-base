@@ -1,5 +1,7 @@
 # Azure AD (SAML) Authentifizierung
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 In dieser Anleitung beschreiben wir die Einrichtung von Single-Sign-On (SSO) für i-doit mit Hilfe von SAML. In diesem Beispiel nutzen wir Mellon als Authenticator gegen Azure AD via SAML.
 
 ## Vorbereitungen
@@ -224,5 +226,4 @@ Wenn wir nun die URL wieder in unserem Browser öffnen `https://tu2-samlsso.syne
 Nach erfolgreicher Anmeldung werden wir dann wieder auf unser i-doit weitergeleitet und sind erfolgreich angemeldet
 
 !!! info "Fallback auf Anmeldemaske"
-
     Sollte sich ein Benutzer anmelden, der in i-doit noch nicht vorhanden ist, dann wird dieser automatisch auf die Anmeldemaske von i-doit weitergeleitet und kann sich mit einem lokalen Benutzer anmelden.

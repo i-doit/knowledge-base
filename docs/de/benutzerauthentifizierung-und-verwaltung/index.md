@@ -1,5 +1,7 @@
 # Benutzerauthentifizierung und Verwaltung
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 In diesem Kapitel werden wir Informationen über die Benutzerauthentifizierung für i-doit bereitstellen.
 
 -   [Integrierte Authentifizierung](./integrierte-authentifizierung/index.md)
