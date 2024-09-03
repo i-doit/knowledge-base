@@ -8,3 +8,4 @@ An dieser Stelle werden bestimmte Upgrades und Umzüge rund um i-doit thematisie
 *   [Upgrade zu MySQL 5.6 oder MariaDB 10.0](upgrade-zu-mysql-5.6-oder-mariadb-10.0.md)
 *   [Umzug einer Installation unter GNU/Linux](umzug-einer-installation-unter-linux.md)
 *   [Umzug von Windows zu Linux](umzug-von-windows-zu-linux.md)
+*   [Update PHP und MariaDB für i-doit Windows](update-php-und-mariadb-idoit-windows.md)

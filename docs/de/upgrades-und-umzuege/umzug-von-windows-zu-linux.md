@@ -1,4 +1,10 @@
-# Umzug von Windows zu Linux
+---
+title: Umzug von Windows zu Linux
+description: Umzug von Windows zu Linux
+icon: material/microsoft-windows
+status:
+lang: de
+---
 
 Es mag gute Gründe geben, i-doit unter [Windows](../installation/manuelle-installation/microsoft-windows-server/index.md) zu betreiben. Aus diversen Gründen empfehlen wir allerdings den Betrieb unter Linux. Doch wie bekommt man die gut befüllte [IT-Dokumentation](../glossar.md#Glossar-IT-Dokumentation) im laufenden Betrieb möglichst reibungslos von einem System zum anderen?
 

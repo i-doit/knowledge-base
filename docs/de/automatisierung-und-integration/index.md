@@ -6,8 +6,9 @@ Niemand ist eine Insel... Gerade mit dem Thema IT-Dokumentation/CMDB befindet ma
 
 Die beschriebenen Schnittstellen sind bereits in _i-doit pro_ enthalten:
 
--   [E-Mail (SMTP)](../automatisierung-und-integration/e-mail.md)
--   [CLI](../automatisierung-und-integration/cli/index.md)
--   [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md)
--   [Service Desk](../automatisierung-und-integration/service-desk/index.md)
--   [SNMP](../automatisierung-und-integration/snmp.md)
+*   [E-Mail (SMTP)](../automatisierung-und-integration/e-mail.md)
+*   [CLI](../automatisierung-und-integration/cli/index.md)
+*   [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md)
+*   [Service Desk](../automatisierung-und-integration/service-desk/index.md)
+*   [SNMP](../automatisierung-und-integration/snmp.md)
+*   [Automatisierung und Cronjobs](../automatisierung-und-integration/automatisierung-und-cronjobs.md)
