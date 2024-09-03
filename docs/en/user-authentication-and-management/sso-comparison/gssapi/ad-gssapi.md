@@ -30,10 +30,16 @@ Configuration of the i-doit server
 
 Installation of all required packages
 
-Debian GNU/Linux or Ubuntu Linux:
+Debian GNU/Linux 
 
 ```shell
 sudo apt install msktutil libapache2-mod-auth-gssapi kinit krb5-user
+```
+
+Ubuntu Linux:
+
+```shell
+sudo apt install msktutil libapache2-mod-auth-gssapi krb5-user
 ```
 
 Info:
