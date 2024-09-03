@@ -1,5 +1,7 @@
 # SSO via Active Directory with GSSAPI
 
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
 For automatic login to i-doit within an intranet, authentication via Single Sign On (SSO) is the best option.
 
 Conditions and assumptions
