@@ -1,4 +1,12 @@
-# JDisc Discovery
+---
+title: JDisc Discovery
+description: JDisc Discovery
+icon:
+status:
+lang: en
+---
+
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
 
 [JDisc Discovery](http://www.jdisc.com/en/) makes an inventory of whole networks and recognizes all important operating systems (including HP-UX, Solaris and AIX). It recognizes hardware and software, IP networks, Windows domains and Active Directory. In addition, JDisc Discovery identifies all important virtualization technologies, as well as many cluster environments.
 
@@ -10,21 +18,14 @@ The installation of JDisc server components on a Microsoft Windows system (prefe
 
 During the setup you will be asked which passwords are to be used for the PostgreSQL-DBMS, which is applied in the background. This concerns the administrative account **postgres** and the account **postgresro**, which only has read permission for the JDisc database. The latter account is required for the interface to i-doit. Besides, with the setup you have to specify that the PostgreSQL instance should be accessible to the outside. As a default, it observes port **25321**. You have to activate the port in the Windows firewall.
 
-Should you have questions regarding the installation or configuration of JDisc, contact the manufacturer's customer support:
-
-[https://jdisc.com/support/](https://jdisc.com/support/)
-
-This article addresses the interface between i-doit and JDisc Discovery.
+The JDisc documentation can be found at [https://jdisc.com/support/documentation/](https://jdisc.com/support/documentation/).
+If you have any questions regarding the installation or configuration of JDisc, please contact the manufacturer's support [https://jdisc.com/support/](https://jdisc.com/support/).
 
 !!! info "JDisc WebService see [JDisc FAQ](https://jdisc.com/support/faq/)"
     > The WebService implements access to some JDisc Functionality using a SOAP interface on port 9000. However, with the new GraphQL-based API, the SOAP service is obsolete. I-Doit can access our GraphQL-API to perform the same tasks as with the WEB Service starting with i-doit Release 22.
-
     > Simply change the protocol in i-doit to HTTPS and use port 443 and then i-doit will use the GraphQL API and you can uninstall the obsolete WEB Service Add-On.
-
     > The GraphQL-API offers two major advantages:
-
     > It is using HTTPS by default (as with the WEB Service, HTTP was used by default)
-
     > It is a modern and powerful API that lets you automate everything in JDisc.
 
 ## Configuration
@@ -33,10 +34,7 @@ The configuration of the interface is under **Administration → Import and inte
 
 [![jdisc-discovery-interface](../assets/images/en/consolidate-data/jdisc-discovery/1-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/1-jd.png)
 
-!!! info "Archive outdated objects"
-    To archive objects that have not been seen by JDisc for a certain number of days, the threshold value and the threshold value unit must be set at **Administration → [Tenant name] management → Settings for [Tenant name] → JDisc**.
-
-### JDisc configuration
+### Common Settings
 
 | Parameter                                | Comment                                                                                                                                                                             |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -52,10 +50,10 @@ After the parameters are saved, you can test the connection to the JDisc databas
 
 To archive objects that have not been seen by JDisc for a certain number of e.g. X days, the threshold value and the threshold value unit must be set under **Administration → [Tenant name] management → Settings for [Tenant name] → JDisc**.
 
-| Parameter          | Anmerkung                                                                                                                                    |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Threshold**      | Eine Zahl einfügen. When the setting is defined, the objects have not been seen by JDisc within this time period will be archived on import. |
-| **Threshold unit** | Days, Weeks oder Month                                                                                                                       |
+| Parameter          | Anmerkung                                                                                                                |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| **Threshold**      | When the setting is defined, the objects have not been seen by JDisc within this time period will be archived on import. |
+| **Threshold unit** | Days, Weeks or Month                                                                                                     |
 
 ### Discovery settings
 
@@ -65,8 +63,8 @@ The user can activate a scan with the configured JDisc instance with i-doit. For
 | ------------ | ------------------------------------------- |
 | **Username** | The account to be used for the web service. |
 | **Password** | Password for the account                    |
-| **Port**     | Use **443** for GraphQL                     |
-| **Protocol** | Use: **https** for GraphQL                  |
+| **Port**     | Default: **9000** for GraphQL **443**       |
+| **Protocol** | Default: **http** for GraphQL **https**     |
 
 After saving the parameters, you can test whether the configuration was successful with the **Check connection** button.
 
@@ -78,7 +76,7 @@ The JDisc profiles of i-doit provide the possibility to define the connection of
 
 The i-doit default installation already provides predefined profiles. Among these predefined profiles is the **Complete import** profile which has the purpose to import all data in i-doit which have been inventoried by JDisc.
 
-!!! note ""
+!!! note "Own profiles"
     Keep in mind that you would need to alter these profiles to fit your installation and available types of objects from JDisc mapped to i-doit object types.
 
 ### General configuration
@@ -93,17 +91,19 @@ The i-doit default installation already provides predefined profiles. Among thes
 
 For each type in JDisc you can select an equivalent object type in i-doit. If none is selected, devices of this type will not be imported. The order of allocations is observed during import. In order to identify an allocation, the list is processed from top to bottom. For each line the matrix has the following structure:
 
-| JDisc type                                                                                                                                           | JDisc operating system                                                                                                                                                                                                                                           | Objekt title transform                                                                                                                                                                                                                                      | FQDN Addition                                 | Port filter                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Object matching profile                                                                                                                               | Object-type                                                                                                                         | Location                                                                                                                                              | Actions                                                                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| Device type from JDisc which is to be considered during import<br><br>The list is read out from the specified JDisc instance and kept in the buffer. | Operating systems which already have been inventoried by JDisc.<br><br>Often the device type isn't sufficient for an assignment to an object type, therefore you can enter the operating system as an option.<br><br>You can enter wildcards (\*) in this field. | Converts the object title.<br><br>**"As is" Unchanged**: The object name is not changed<br><br>**"Uppercase" letters**: The complete object name is changed to upper case.<br><br>**"Lowercase" letters**: The entire object name is changed to lower case. | Appends an FQDN addition to the object title. | Which network ports do you want to import?<br><br>**Normal import**: All physical and logical ports are imported.<br><br>**No import**: In the text field you can enter port names which shall be ignored.  <br>The field can be used with wildcards (\*). (Example: Port name: Loopback → Ports with the name Loopback are not imported)<br><br>**Logical port**/ **Physical port**/ **FC-port**: Only ports which are named in the text field are imported.<br><br>You can combine the criteria so that only certain physical and certain logical ports are considered. | [Which strategy do you want to use](object-identification-during-imports.md) to update objects which are already documented in i-doit? | Imported devices are assigned to this object type.<br><br>If you don't select an object type, devices of this type will be ignored. | Objects which meet the criteria mentioned here are allocated to a certain location during import. This is carried out with the **Location** category. | Add a new assignment, duplicate an existing assignment or delete an assignment. |
+| JDisc type                                                                                                                                           | JDisc operating system                                                                                                                                                                                                                                           | Objekt title transform                                                                                                                                                                                                                                      | FQDN Addition                                 | Port filter                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Object matching profile                                                                                                                                                                                              | Object-type                                                                                                                         | Location                                                                                                                                              | Actions                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Device type from JDisc which is to be considered during import<br><br>The list is read out from the specified JDisc instance and kept in the buffer. | Operating systems which already have been inventoried by JDisc.<br><br>Often the device type isn't sufficient for an assignment to an object type, therefore you can enter the operating system as an option.<br><br>You can enter wildcards (\*) in this field. | Converts the object title.<br><br>**"As is" Unchanged**: The object name is not changed<br><br>**"Uppercase" letters**: The complete object name is changed to upper case.<br><br>**"Lowercase" letters**: The entire object name is changed to lower case. | Appends an FQDN addition to the object title. | Which network ports do you want to import?<br><br>**Normal import**: All physical and logical ports are imported.<br><br>**No import**: In the text field you can enter port names which shall be ignored.  <br>The field can be used with wildcards (\*). (Example: Port name: Loopback → Ports with the name Loopback are not imported)<br><br>**Logical port**/ **Physical port**/ **FC-port**: Only ports which are named in the text field are imported.<br><br>You can combine the criteria so that only certain physical and certain logical ports are considered. | [Which strategy do you want to use](object-identification-during-imports.md) to update objects which are already documented in i-doit?<br>**Additional filter criteria can be found in the Import Matching profile** | Imported devices are assigned to this object type.<br><br>If you don't select an object type, devices of this type will be ignored. | Objects which meet the criteria mentioned here are allocated to a certain location during import. This is carried out with the **Location** category. | Add a new assignment, duplicate an existing assignment or delete an assignment. |
 
 ### Additional Options
 
 | Option                                                                            | Description                                                                                                                                                                                                                                |
 | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Select categories**                                                             | Which [categories](../basics/structure-of-the-it-documentation.md) do you want to fill during import? Only supported categories are listed.                                                                                                |
+| **MAC filter**                                                                    | Either a white list or a black list can be selected for MAC addresses. One MAC address per line.                                                                                                                                           |
 | **Import network interfaces as**                                                  | You can map inventoried network interfaces in different categories.                                                                                                                                                                        |
 | **Include software**                                                              | Do you want to import inventoried software as object type **Applications**?                                                                                                                                                                |
+| **Include software** -> **Software location**                                     | Only visible if **Consider software during import** is activated. Sets the location of applications to a specific location. Useful if authorizations are used based on locations.                                                          |
 | **Include software licences**                                                     | Do you want to import inventoried licenses as object type **Licenses**?                                                                                                                                                                    |
 | **Import system services**                                                        | Do you want to import inventoried Services as object type **System Services**?                                                                                                                                                             |
 | **Import cloud subscriptions**                                                    | Do you want to import inventoried Cloud data?<br> Data is imported to the category **Assigned subscriptions**. The backward category **Subscriptions** is is assigned to License objects.                                                  |
@@ -111,6 +111,8 @@ For each type in JDisc you can select an equivalent object type in i-doit. If no
 | **Import connection endpoints**                                                   | The connections are not imported into the cabling category, but into the category "Connection endpoint". This allows to distinguish between manual cabling and automatic cabling by JDisc.                                                 |
 | **Use simple database modelling?**                                                | Should the new or the old database logic be used?                                                                                                                                                                                          |
 | **Include layer 3 nets**                                                          | Do you want to import inventoried IP nets as object type **Layer 3 nets**?                                                                                                                                                                 |
+| **Include layer 3 nets** -> **Layer 3 filter**                                    | Only visible if **Include layer 3 nets** is activated. Specify the range in the following formats: 127.0.0.1-127.0.10.255 or 10.40.55.0/24 or 10.40.55.7. One rule per line.                                                               |
+| **Include layer 3 nets** -> **Network location**                                  | Only visible if **Include layer 3 nets** is activated. Sets the location of layer-3 objects to a specific location. Useful if authorizations are used based on locations.                                                                  |
 | **Layer 3 filter**                                                                | Specify the range in the following formats: 127.0.0.1-127.0.10.255 or 10.40.55.0/24 or 10.40.55.7. One rule per line.                                                                                                                      |
 | **Keep IP address types**                                                         | Should IPv4 addresses, IPv6 addresses, loopback addresses, virtual addresses be imported?                                                                                                                                                  |
 | **Import type for DHCP IP addresses**                                             | Should addresses assigned via DHCP be overwritten?                                                                                                                                                                                         |
@@ -146,27 +148,27 @@ Categories which are JDisc specific or have related information:
 !!! attention "Matching rule"
     The `deviceid` from JDisc is always used to identify objects.
 
-JDisc `deviceid` should be assigned with type JDisc when the object is created in the **Custom identifier** category. The objects should then also be identified here later.
+JDisc `deviceid` should be assigned with type JDisc when the object is created in the **Custom identifier** category. This is intended to identify the objects later on.
 If no data is available, the object matching profile is used.
 
 ## Import of Data via the Web GUI
 
-The import of data contents from JDisc is carried out via **Extras → CMDB → Import → JDisc**.
+The import of data contents from JDisc is carried out via **Extras → Import → JDisc**.
 
 [![jdisc-discovery-import](../assets/images/en/consolidate-data/jdisc-discovery/3-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/3-jd.png)
 
-Before you execute the import process, you have to define the import parameters.
-
+Before you execute the import process, you have to define the import parameters.<br>
 Because it is possible to apply more than one JDisc server, you have to select the JDisc server in the first step. The profile which you defined beforehand can be also selected to influence the imported contents and their use. In addition, you can set the import mode. The **Append** import mode creates all found objects without checking whether these already exist. The **Update** import mode creates only objects which can't be found in the i-doit data pool. Categories of already existing objects are complemented (if necessary) with new data. The **Overwrite** import mode is, in principle, like the **Update** mode but with the difference that list categories are emptied first and are then recreated.
 
 | **Import Mode**                       | **Description**                                                                                                                                                                    |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Create**                            | The import mode **"Create"** will create all found objects without checking if they already exist.                                                                                 |
+| **Append**                            | The import mode **"Create"** will create all found objects without checking if they already exist.                                                                                 |
 | **Update**                            | The import mode **"Update"** will only create objects that could not be found in i-doit. Categories of already existing objects will be supplemented with new data (if necessary). |
-| **Update (New inventory)**            | With the addition **"(New inventory)"** fixed i-doit-to-jdisc-device links are discarded and the object associations are recalculated.                                             |
-| **Only create newly scanned devices** | The "**Only create newly scanned devices"** Mode creates only objects that do not exist in i-doit.                                                                                 |
 | **Overwrite**                         | The **"Overwrite"** import mode behaves exactly like the "Update" mode with the difference that list categories are first emptied and then newly created.                          |
+| **Update (Existing only)**            | The addition of "(Existing only)" will update only existing objects, no new objects are created.                                                                                   |
 | **Overwrite (New inventory)**         | With the addition **"(New inventory)"** fixed i-doit-to-jdisc-device links are discarded and the object associations are recalculated.                                             |
+| **Only create newly scanned devices** | The "**Only create newly scanned devices"** Mode creates only objects that do not exist in i-doit.                                                                                 |
+| **Update (New inventory)**            | With the addition **"(New inventory)"** fixed i-doit-to-jdisc-device links are discarded and the object associations are recalculated.                                             |
 
 With the logging function you can influence the extent of the written log. A more extensive logging increases the import duration.<br>
 When you carried out the settings completely, you can activate the import with **Start the import**. Please, consider that the duration of the import process depends both on the size of the JDisc database and the utilized hardware.<br>
@@ -218,6 +220,6 @@ If we assume that the jdisc.ini is located in the i-doit root directory, then th
 sudo -u www-data php console.php import-jdisc -c jdisc.ini
 ```
 
-### JDisc availability Report
+### JDisc availability Report view
 
-At **Report Manager -> Views** is a report with the name **JDisc availability**, which compares i-doit objects with JDisc objects.
+Under **Report Manager -> Views** you will find a report with the name **JDisc availability**, which compares i-doit objects with JDisc objects.

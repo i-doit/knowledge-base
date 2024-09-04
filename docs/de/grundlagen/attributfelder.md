@@ -4,7 +4,7 @@ Nachdem wir uns mit der [Struktur der IT-Dokumentation](struktur-it-dokumentatio
 
 ## Überblick
 
-Jedes Attribut, dass bearbeitet werden kann, wird durch ein Formularfeld repräsentiert. Dies betrifft sowohl die Standard-Kategorien, als auch die [benutzerdefinierten Kategorien](benutzerdefinierte-kategorien.md). Fast jedes Attributfeld kann als [Pflichtfeld deklariert und/oder mit Validierungsoptionen belegt](../effizientes-dokumentieren/validierung-und-pflichtfelder.md) werden.
+Jedes Attribut, dass bearbeitet werden kann, wird durch ein Formularfeld repräsentiert. Dies betrifft sowohl die Standard-Kategorien, als auch die [benutzerdefinierten Kategorien](benutzerdefinierte-kategorien.md). Fast jedes Attributfeld kann als [Pflichtfeld deklariert und/oder mit Validierungsoptionen belegt](../effizientes-dokumentieren/attributvalidierung-und-pflichtfelder.md) werden.
 
 [![Überblick](../assets/images/de/grundlagen/attributfelder/1-af.png)](../assets/images/de/grundlagen/attributfelder/1-af.png)
 

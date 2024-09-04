@@ -18,14 +18,14 @@ Rechtevergabe
 
 Unter **Verwaltung → Rechtesystem → Rechtevergabe → Wartung** können [Rechte für Personen und Personengruppen](../effizientes-dokumentieren/rechteverwaltung/index.md) angepasst werden.
 
-| Bedingung | Beschreibung |
-| --- | --- |
-| **Anstehende Wartungen** | Ermöglicht das Handhaben von amstehenden Wartungen |
-| **Alle Wartungen** | Ermöglicht das Handhaben aller Wartungen |
+| Bedingung                    | Beschreibung                                        |
+| ---------------------------- | --------------------------------------------------- |
+| **Anstehende Wartungen**     | Ermöglicht das Handhaben von amstehenden Wartungen  |
+| **Alle Wartungen**           | Ermöglicht das Handhaben aller Wartungen            |
 | **Abgeschlossene Wartungen** | Ermöglicht das Handhaben von archivierten Wartungen |
-| **E-Mail Vorlagen** | Ermöglicht das Handhaben von E-Mail-Vorlagen |
-| **Bericht (Export)** | Ermöglicht den Export der Wartungen |
-| **E-Mails senden** | Ermöglicht das Erstellen eines Berichts |
+| **E-Mail Vorlagen**          | Ermöglicht das Handhaben von E-Mail-Vorlagen        |
+| **Bericht (Export)**         | Ermöglicht den Export der Wartungen                 |
+| **E-Mails senden**           | Ermöglicht das Erstellen eines Berichts             |
 
 Wartung planen
 --------------
@@ -36,30 +36,30 @@ Wartungen können unter **Extras → Wartung → Alle Wartungen** angelegt und b
 
 Die Aktionsleiste hält diese Funktionen bereit:
 
-| Button | Aktion |
-| --- | --- |
-| **Neu** | Neue Wartung erstellen |
-| **Editieren** | Selektierte Wartung bearbeiten |
-| **Löschen** | Selektierte Wartungen unwiderruflich löschen |
-| **Abschließen** | Selektierte Wartungen als erfolgreich beendet markieren |
+| Button                 | Aktion                                                        |
+| ---------------------- | ------------------------------------------------------------- |
+| **Neu**                | Neue Wartung erstellen                                        |
+| **Editieren**          | Selektierte Wartung bearbeiten                                |
+| **Löschen**            | Selektierte Wartungen unwiderruflich löschen                  |
+| **Abschließen**        | Selektierte Wartungen als erfolgreich beendet markieren       |
 | **E-Mails abschicken** | Betroffene Personen per E-Mail über die Wartungen informieren |
 
 [![Wartung](../assets/images/de/i-doit-pro-add-ons/maintenance/2-main.png)](../assets/images/de/i-doit-pro-add-ons/maintenance/2-main.png)
 
 Legt man eine neue Wartung an, stehen folgende Optionen zur Auswahl:
 
-| Option | Beschreibung |
-| --- | --- |
-| **Wartung abgeschlossen** | Wurde diese Wartung bereits als abgeschlossen markiert? |
-| **E-Mail abgeschickt** | Wurde bereits eine E-Mail an die betroffenen Personen versendet? |
-| **Objekte** | Liste von der Wartung betroffenen Objekte |
-| **Wartungstyp** | Wartungen können hierüber kategorisiert werden. |
-| **Wartungstermin** | Zeitraum der geplanten Wartung. |
-| **Wiederkehrende Wartung** | Konfiguration von wiederkehrenden Wartungen. Täglich, Wöchentlich, Monatlich oder Jährlich. |
-| **Beschreibung** | Weitere Details |
-| **Empfänger** | Personen, denen die Wartung zugeordnet ist; diese erhalten eine E-Mail, wenn ihnen eine entsprechende E-Mail-Adresse zugeordnet ist (Kategorie Personen → Stammdaten). Bei Personengruppen als Empfänger werden ihre Mitglieder benachrichtigt. |
-| **Zugewiesene Rollen** | Alternativ oder parallel zu den Empfängern können die zugewiesenen Kontakte anhand ihrer Rollen (Kategorie Kontaktzuweisung) benachrichtigt werden. |
-| **E-Mail Vorlage** | Welcher Text soll per E-Mail versendet werden (siehe unten)? |
+| Option                     | Beschreibung                                                                                                                                                                                                                                    |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Wartung abgeschlossen**  | Wurde diese Wartung bereits als abgeschlossen markiert?                                                                                                                                                                                         |
+| **E-Mail abgeschickt**     | Wurde bereits eine E-Mail an die betroffenen Personen versendet?                                                                                                                                                                                |
+| **Objekte**                | Liste von der Wartung betroffenen Objekte                                                                                                                                                                                                       |
+| **Wartungstyp**            | Wartungen können hierüber kategorisiert werden.                                                                                                                                                                                                 |
+| **Wartungstermin**         | Zeitraum der geplanten Wartung.                                                                                                                                                                                                                 |
+| **Wiederkehrende Wartung** | Konfiguration von wiederkehrenden Wartungen. Täglich, Wöchentlich, Monatlich oder Jährlich.                                                                                                                                                     |
+| **Beschreibung**           | Weitere Details                                                                                                                                                                                                                                 |
+| **Empfänger**              | Personen, denen die Wartung zugeordnet ist; diese erhalten eine E-Mail, wenn ihnen eine entsprechende E-Mail-Adresse zugeordnet ist (Kategorie Personen → Stammdaten). Bei Personengruppen als Empfänger werden ihre Mitglieder benachrichtigt. |
+| **Zugewiesene Rollen**     | Alternativ oder parallel zu den Empfängern können die zugewiesenen Kontakte anhand ihrer Rollen (Kategorie Kontaktzuweisung) benachrichtigt werden.                                                                                             |
+| **E-Mail Vorlage**         | Welcher Text soll per E-Mail versendet werden (siehe unten)?                                                                                                                                                                                    |
 
 [![Wartung](../assets/images/de/i-doit-pro-add-ons/maintenance/3-main.png)](../assets/images/de/i-doit-pro-add-ons/maintenance/3-main.png)
 
@@ -89,12 +89,12 @@ Bericht erstellen
 
 Aus den bisher geplanten und durchgeführten Wartungen lässt sich ein Bericht erstellen, der als PDF-Datei heruntergeladen werden kann. Diese Funktion befindet sich unter **Extras → Wartung → Wartung Jahresbericht (Export)**. Alternativ ist diese Funktion unter **Extras → Report Manager → Views → Wartung Jahresbericht (Export)** zu erreichen. Hierbei stehen folgende Optionen zur Auswahl:
 
-| Option | Beschreibung |
-| --- | --- |
-| **Überschrift** | Überschrift des Berichts |
-| **Wartungstyp** | Einschränkung auf einen bestimmten Typ |
-| **Von** | Anfangsdatum |
-| **Bis** | Enddatum |
+| Option           | Beschreibung                                                                                                                                                                      |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Überschrift**  | Überschrift des Berichts                                                                                                                                                          |
+| **Wartungstyp**  | Einschränkung auf einen bestimmten Typ                                                                                                                                            |
+| **Von**          | Anfangsdatum                                                                                                                                                                      |
+| **Bis**          | Enddatum                                                                                                                                                                          |
 | **Logo für PDF** | Zusätzliches Bild, das in jede Seite integriert wird; das Bild muss vorher als [Datei-Objekt](../anwendungsfaelle/dateien-hochladen-und-verknuepfen.md) in i-doit vorhanden sein. |
 
 Über den Button **PDF Export & Download** wird die PDF-Datei generiert und zum Herunterladen angeboten.
@@ -128,10 +128,10 @@ Für jede geplante Wartung kann eine E-Mail generiert werden, um die betroffenen
 
 Das Formular zum Anlegen/Bearbeiten sieht folgende Optionen vor:
 
-| Option | Beschreibung |
-| --- | --- |
-| **Titel** | Betreff der E-Mail |
-| **Inhalt** | Text der E-Mail |
+| Option     | Beschreibung       |
+| ---------- | ------------------ |
+| **Titel**  | Betreff der E-Mail |
+| **Inhalt** | Text der E-Mail    |
 
 Sowohl der **Titel** als auch der **Inhalt** können mit Platzhaltern bestückt werden, die vor dem Versand ersetzt werden. Die Liste der möglichen Platzhalter sind ebenfalls auf der Seite zu finden.
 
@@ -149,15 +149,16 @@ Das manuelle Versenden von E-Mails (Button **E-Mails abschicken** unter **Extras
 Releases
 --------
 
-| Version | Datum | Changelog |
-| --- | --- | --- |
-| 1.3 | 07.11.2023 | [Task] Use new routes to display object and object type images / move add-on related files |
-| 1.2.2 | 22.08.2023 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Filter in list views not working<br>[Bug] Creating a new E-Mail template does not work when the objecttype constant of client,server or switch or not available |
-| 1.2.1 | 24.01.2023 | [Bug] Error when sending multiple mails |
-| 1.2 | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Bug]  HTML code in browser message |
-| 1.1.4 | 18.01.2021 | [Improvement] Compatibility with i-doit 1.16 |
-| 1.1.3 | 20.10.2020 | [Bug] Maintenance without an object can be completed despite the error message  <br>[Bug] Keeping the filters in add-on "Maintenance"  <br>[Bug] Maintenance report shows the wrong period  <br>[Bug] Placeholder model>manufacturer is swapped with model>title  <br>[Bug] Email notification notifies archived contacts |
-| 1.1.2 | 31.07.2019 | [Bug] Column 'Person (Role)' is empty when exporting[Bug] Maintenance report: periods underneath each other to save space<br>[Bug] Export of corrects duplicates objects<br>[Bug] Double mailing possible for recurring maintenance<br>[Bug] Maintenance can not be completed<br> |
-| 1.1.1 | 05.12.2018 | [Bug] Export does not report assigned contacts in the report<br>[Bug] Object browser for recipients shows no results<br> |
-| 1.1 | 16.04.2018 | [Verbesserung]  Mehrfachauswahl von Typen in der Report-View<br>[Verbesserung]  Definition von Uhrzeiten für Beginn und Ende der Wartung<br>[Verbesserung]  Wiederkehrende Wartungen<br>[Verbesserung]  Maintenance Handler umleiten auf Command und Command mit Logik aus Handler erstellen<br> |
-| 1.0.3 | 18.12.2017 | Initiales Release |
+| Version | Datum      | Changelog                                                                                                                                                                                                                                                                                                                 |
+| ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.4     | 09.07.2024 | [Improvement] Send an email with all the objects within the maintenance<br>[Bug] Only one role can be selected to be notified                                                                                                                                                                                             |
+| 1.3     | 07.11.2023 | [Task] Use new routes to display object and object type images / move add-on related files                                                                                                                                                                                                                                |
+| 1.2.2   | 22.08.2023 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Filter in list views not working<br>[Bug] Creating a new E-Mail template does not work when the objecttype constant of client,server or switch or not available                                                                                                              |
+| 1.2.1   | 24.01.2023 | [Bug] Error when sending multiple mails                                                                                                                                                                                                                                                                                   |
+| 1.2     | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Bug]  HTML code in browser message                                                                                                                                                                                                                    |
+| 1.1.4   | 18.01.2021 | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                                                                                                              |
+| 1.1.3   | 20.10.2020 | [Bug] Maintenance without an object can be completed despite the error message  <br>[Bug] Keeping the filters in add-on "Maintenance"  <br>[Bug] Maintenance report shows the wrong period  <br>[Bug] Placeholder model>manufacturer is swapped with model>title  <br>[Bug] Email notification notifies archived contacts |
+| 1.1.2   | 31.07.2019 | [Bug] Column 'Person (Role)' is empty when exporting[Bug] Maintenance report: periods underneath each other to save space<br>[Bug] Export of corrects duplicates objects<br>[Bug] Double mailing possible for recurring maintenance<br>[Bug] Maintenance can not be completed<br>                                         |
+| 1.1.1   | 05.12.2018 | [Bug] Export does not report assigned contacts in the report<br>[Bug] Object browser for recipients shows no results<br>                                                                                                                                                                                                  |
+| 1.1     | 16.04.2018 | [Verbesserung]  Mehrfachauswahl von Typen in der Report-View<br>[Verbesserung]  Definition von Uhrzeiten für Beginn und Ende der Wartung<br>[Verbesserung]  Wiederkehrende Wartungen<br>[Verbesserung]  Maintenance Handler umleiten auf Command und Command mit Logik aus Handler erstellen<br>                          |
+| 1.0.3   | 18.12.2017 | Initiales Release                                                                                                                                                                                                                                                                                                         |

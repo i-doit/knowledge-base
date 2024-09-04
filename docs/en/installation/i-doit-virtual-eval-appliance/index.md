@@ -21,7 +21,7 @@ When importing, settings may be requested (name, CPU cores, memory). The presets
 
 !!! note "Operating System"
 
-    The installed operating system is ==[Debian GNU/Linux](../manual-installation/debian.md) 11 "buster" as 64-bit version==. If the virtualizer doesn't recognize this automatically, it is essential to enter this information manually. Otherwise it is possible that problems arise when starting and executing the VM.
+    The installed operating system is **Debian GNU/Linux 11 "buster" as 64-bit version**. If the virtualizer doesn't recognize this automatically, it is essential to enter this information manually. Otherwise it is possible that problems arise when starting and executing the VM.
 
 ## Start of i-doit
 
@@ -43,7 +43,7 @@ Additionally, there are some [pre-defined persons and person groups](../../basic
 
 ## Configuration
 
-The configuration of the appliance can be carried out via the console. After logging in via ==SSH== a menu appears:
+The configuration of the appliance can be carried out via the console. After logging in via **SSH** a menu appears:
 
 [![SSH menu](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)
 
@@ -115,19 +115,19 @@ Further information for first steps with i-doit are also described in the knowle
 
 !!! warning  "Unsupported hardware family"
 
-    If the applied VMware environment is not up to date, the error message ==line 25 unsupported hardware family 'vmx-10'==is displayed during import. To enable the import you have to edit the file ==i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf== . In the line
+    If the applied VMware environment is not up to date, the error message **line 25 unsupported hardware family 'vmx-10'**is displayed during import. To enable the import you have to edit the file **i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf** . In the line
 
     ```shell
     <vssd:VirtualSystemType>vmx-10</vssd:VirtualSystemType>
     ```
 
-    you have to select a lower version. The value ==vmx-9== is suitable for ESXi 5.1:
+    you have to select a lower version. The value **vmx-9** is suitable for ESXi 5.1:
 
     ```shell
     <vssd:VirtualSystemType>vmx-9</vssd:VirtualSystemType>
     ```
 
-    After saving, you have to update the hash value (SHA1) of the modified file in the file ==i-doit Eval Appliance 1.x.x i-doit 1.x.x.mf== You can use the ==sha1sum== command under GNU/Linux:
+    After saving, you have to update the hash value (SHA1) of the modified file in the file **i-doit Eval Appliance 1.x.x i-doit 1.x.x.mf** You can use the **sha1sum** command under GNU/Linux:
 
     ```shell
     sha1sum i-doit Eval Appliance 1.2.x i-doit 1.x.x.ovf

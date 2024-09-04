@@ -2,7 +2,7 @@
 title: Namespace cmdb.category
 description: cmdb.location_tree
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -31,7 +31,7 @@ This method can be used to build the location tree. Always exactly one level is 
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 

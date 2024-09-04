@@ -6,6 +6,8 @@ status: new
 lang: de
 ---
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 ## Zusammenfassung
 
 Der Artikel bietet eine Anleitung zur Konfiguration einer LDAPS-Verbindung mit i-doit für Windows, die Apache2 HTTPD verwendet.

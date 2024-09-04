@@ -1,5 +1,7 @@
 # Lokalen Benutzer anlegen
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 i-doit bringt bereits bei der Standard-Installation einige lokale Benutzer mit, die für die [Erstanmeldung](../../grundlagen/erstanmeldung.md) genutzt werden können. In diesem Artikel wird erklärt wie man einen weiteren lokalen Benutzer anlegt.
 
 !!! check "LDAP/AD"

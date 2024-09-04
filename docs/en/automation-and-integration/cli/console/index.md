@@ -1,10 +1,12 @@
 # Console
 
-i-doit has a Command Line Interface (CLI) with which you can carry out various tasks. For example, the CLI is required for [Cronjobs](../../../maintenance-and-operation/cronjob-setup.md) and can be applied for the automation of work steps.
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
+i-doit has a Command line Interface (CLI) with which you can carry out various tasks. For example, the CLI is required for [Cronjobs](../../../maintenance-and-operation/cronjob-setup.md) and can be applied for the automation of work steps.
 
 ## First Steps
 
-The CLI can be found in the i-doit installation directory, for example at **/var/www/html/**. Within this directory the CLI has to be activated with the same permissions as the Apache webserver. Under [Debian GNU/Linux](../../../installation/manual-installation/debian.md) this is the user called **www-data**. You can achieve the permissions with **sudo**:
+The CLI can be found in the i-doit installation directory, for example at **/var/www/html/**. Within this directory the CLI has to be activated with the same permissions as the Apache webserver. Under **Debian GNU/Linux** this is the user called **www-data**. You can achieve the permissions with **sudo**:
 
 ```sh
 cd /var/www/html/
@@ -20,10 +22,9 @@ php.exe console.php
 
 When you execute the CLI without further arguments, the general help is displayed:
 
-??? abstract "Available commands"
-
-```sh
-    i-doit console utility 29
+??? abstract "Available commands without add-ons"
+    ```sh
+    i-doit console utility 31
 
     Usage:
     command [options] [arguments]
@@ -41,6 +42,7 @@ When you execute the CLI without further arguments, the general help is displaye
     addon-deactivate                    Deactivate add-on
     addon-install                       Install add-on
     addon-list                          Shows list of installed addons
+    addon-uninstall                     Deactivate add-on
     admin-center-password-reset         With this command you can reset the Admin-Center password
     auth-cleanup                        Cleanup all auth paths
     clear-credentials                   It removes both attributes username and password from the users "login" category
@@ -63,7 +65,7 @@ When you execute the CLI without further arguments, the general help is displaye
     license-assign                      Assign hosting license to i-doit tenant
     license-import                      Import licenses from the i-doit server
     license-key                         Set license key for i-doit
-    license-list                        List of the licenses:  id, type of license, assigned tenant, organization, valid from, expire date, amount of licensed objects, amount of used objects, licensed add-ons
+    license-list                        List of the licenses:  ID, Product, Type (type of license), From (start of license), Expire (expiration date of license), Licensed (max amount of licensed objects), Tenants (max amount of tenants), Environment
     license-remove                      Remove license from i-doit
     list                                List commands
     logbook-archive                     Archives Logbook entries (Settings are defined in the GUI)
@@ -84,6 +86,7 @@ When you execute the CLI without further arguments, the general help is displaye
     system-objectcleanup                Purges optionally objects that are in the state unfinished, archived or deleted
     system-objectrelations              Regenerates all object relation names
     system-refresh-table-configuration  Refreshes all available list configurations (object types and categories)
+    system-set-settings                 Set system settings
     tenant-create                       Create tenant in i-doit
     tenant-disable                      Disables the tenant with specific id
     tenant-enable                       Enables the tenant with specific id
@@ -91,7 +94,7 @@ When you execute the CLI without further arguments, the general help is displaye
     tenant-remove                       Remove the i-doit Tenant
     uninstall                           Uninstall the i-doit application
     update                              Update the i-doit application
-```
+    ```
 
 ## Authentication Process
 
@@ -116,68 +119,4 @@ sudo -u www-data php console.php search --help
 
 Furthermore, some commands provide examples via **--usage**.
 
-## Commands
-
-| Command | pro Version | open Version | [Add-on](../../../i-doit-pro-add-ons/index.md) | Description |
-| --- | --- | --- | --- | --- |
-| **addon-activate** | yes | yes | -  | Activate add-on |
-| **addon-deactivate** | yes | yes | -  | Deactivate add-on |
-| **addon-install** | yes | yes | -  | Install add-on |
-| **addon-list** | yes | yes | -  | Shows list of installed add-ons |
-| **admin-center-password-reset** | yes | yes | -  | Reset the password for the Admin Center |
-| **auth-cleanup** | yes | yes | -  | Clean up of [authorization system](../../../efficient-documentation/rights-management/index.md) |
-| **check_mk-export** | yes | no | [Check_MK 1](../../../i-doit-pro-add-ons/checkmk.md) | Export of configuration files for [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) |
-| **check_mk-livestatus** | yes | no | [Check_MK 1](../../../i-doit-pro-add-ons/checkmk.md) | Write actual status from [Checkmk](../../../i-doit-pro-add-ons/checkmk.md) into log book |
-| **clear-credentials** | yes | yes | - | Removes user credentials |
-| **CompileDocuments** | yes | no | [Documents](../../../i-doit-pro-add-ons/documents/index.md) | Compile Documents |
-| **completion** | yes | yes | - | Dump the shell completion script |
-| **contracts-outdated** | yes | yes | - | Updates status of outdated contracts |
-| **documents** | yes | no | [Documents](../../../i-doit-pro-add-ons/documents/index.md) | Create and export documents |
-| **extend-contracts** | yes | no | - | Extends Contracts with last cancellation date in the past |
-| **help** | yes | yes | -  | Displays the help for a command |
-| **import-csv** | yes | no  | -   | Import data from a [CSV file](../../../consolidate-data/csv-data-import/index.md) |
-| **import-csvprofiles** | yes | no  | -  | List all [CSV import profiles](../../../consolidate-data/csv-data-import/index.md) |
-| **import-hinventory** | yes | yes | -  | Import data from [h-inventory](../../../consolidate-data/h-inventory.md) |
-| **import-jdisc** | yes | yes | -  | Import data from [JDisc Discovery](../../../consolidate-data/jdisc-discovery.md) |
-| **import-jdiscdiscovery** | yes | yes | -  | Start a scan in [JDisc Discovery](../../../consolidate-data/jdisc-discovery.md) |
-| **import-syslog** | yes | yes | -  | Import data from a Syslog into the i-doit [logbook](../../../basics/logbook.md) |
-| **import-xml** | yes | yes | -  | Import data from XML |
-| **install** | yes | yes | - | Install the i-doit application |
-| **ldap-sync** | yes | yes | -  | Import persons and person groups from an [LDAP directory or Active Directory (AD)](../../../user-authentication-and-management/ldap-directory/index.md) |
-| **ldap-syncdn** | yes | yes | -  | Synchronize the distinguished name (DN) of the users (see **LDAP** category) from an [LDAP/AD](../../../user-authentication-and-management/ldap-directory/index.md) |
-| **license-add** | yes | no  | -  | Adds a license for i-doit (in progress) |
-| **license-assign** | yes | no  | -  | Assigns a hosting license to a client (in progress) |
-| **license-import** | yes | no  | -  | Imports licenses from the i-doit Server (in progress) |
-| **license-key** | yes | no  | -  | Sets a license key for i-doit (in process) |
-| **license-list** | yes | no  | -  | Lists all licenses with all information (ID; product; type; start date; end date; licensed objects; licensed clients; environment) |
-| **license-remove** | yes | no  | -  | Removes licenses from i-doit |
-| **list** | yes | yes | - | List console commands |
-| **logbook-archive** | yes | yes | -  | Archive [logbook entries](../../../basics/logbook.md) |
-| **maintenance** | yes | no | [Maintenance](../../../i-doit-pro-add-ons/maintenance.md) | Sends notifications of scheduled maintenance from the Maintenance Add-on |
-| **migrate-uploaded-files** | yes | yes | - | --- |
-| **nagios-export** | yes | no | [Nagios](../../network-monitoring/nagios.md) | Export [Nagios](../../network-monitoring/nagios.md) configuration |
-| **nagios-ndoutils** | yes | no | [Nagios](../../network-monitoring/nagios.md) | Write actual status from [Nagios](../../network-monitoring/nagios.md) into logbook |
-| **notifications-list** | yes | yes | -  | List all [notifications](../../../evaluation/notifications.md) types and notifications for later usage |
-| **notifications-send** | yes | yes | -  | Send [notifications](../../../evaluation/notifications.md) per e-mail |
-| **report-export** | yes | no  | -  | Export a [report](../../../evaluation/report-manager.md) as file |
-| **search** | yes | yes | -   | [Search](../../../efficient-documentation/search.md) in i-doit |
-| **search-index** | yes | yes | -  | Create/ renew [search index](../../../efficient-documentation/search.md) |
-| **strip-description-html** | yes | yes | - | With this command you can strip html tags in description field of all categories and objects |
-| **sync-dynamic-groups** | yes | yes | - | Synchronize dynamic group members |
-| **system-autoincrement** | yes | yes | -  | Set auto_increment of MariaDB-/MySQL [tables](../../../software-development/database-model/index.md) to a positive integer value |
-| **system-categorycleanup** | yes | yes | - | Purges optionally category entries that are in the state unfinished, archived or deleted |
-| **system-checkforupdates** | yes | yes | -   | Search for i-doit [updates](../../../maintenance-and-operation/update.md) |
-| **system-convert-non-innodb-tables** | yes | yes | - | Converts all tables that are not in INNODB to INNODB (Affects the database coding. Use with caution!) |
-| **system-convert-non-utf8-tables** | yes | yes | -  | Converts all non-UTF8 tables to UTF8 tables (Affects database encoding. Use with caution!) |
-| **system-location-fix** | yes | yes | -  | Executes the location correction from the GUI on the console |
-| **system-objectcleanup** | yes | yes | -  | [Clean up objects](../../../basics/life-and-documentation-cycle.md) |
-| **system-objectrelations** | yes | yes | -  | Recreate [object relations](../../../basics/object-relations.md) |
-| **system-refresh-table-configuration** | yes | yes | -  | Refresh all available list configurations (object types and categories) |
-| **tenant-create** | yes | no  | -  | Add a new [tenant](../../../system-administration/multi-tenant.md) |
-| **tenant-disable** | yes | yes  | -  | Deactivate an existing [tenant](../../../system-administration/multi-tenant.md) |
-| **tenant-enable** | yes | yes  | -  | Activate an existing [tenant](../../../system-administration/multi-tenant.md) |
-| **tenant-list** | yes | yes  | -  | List all available [tenants](../../../system-administration/multi-tenant.md) |
-| **tenant-remove** | yes | yes  | -  | Remove an existing [tenant](../../../system-administration/multi-tenant.md) |
-| **uninstall** | yes | yes | -  | Uninstalls i-doit |
-| **update** | yes | yes | -  | Installs i-doit updates |
-| **workflows-process** | yes | no | [Workflow](../../../i-doit-pro-add-ons/workflow.md) | Process all workflows, send e-mails and create new tasks from checklists |
+[Go to the commands](options-and-parameters-cli.md){ .md-button .md-button--primary }

@@ -1,31 +1,32 @@
 # Example of CSV import - Applications
 
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
 In this example we want to import applications. We want to import as much information about an application as possible.
 
-!!! info "Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft"
+!!! info "This article was last checked for i-doit version 1.16.2"
 
 For the import we can import the following information:
 
--  Object type → What type of object should it be?
--  Object title → What is the name of the application?
--  Application - Specification → What is the specification of the application?
--  Application - Manufacturer → Who has manufactured the application?
--  Application - Installation → Is the application installed automatically or manually?
--  Application - Registration key → Which registration key was used?
--  Application - Install path → What is the installation path?
--  Application Variants - Title→ How should the variant be named?
--  Application Variants - Variant → How was the variant named?
--  Version - Version number → What are the version numbers?
--  Version - Servicepack → Which Service Packs are there?
--  Version - Kernel → Which kernel versions are there?
--  Version - Patchlevel → What patch levels are there?
+-   Object type → What type of object should it be?
+-   Object title → What is the name of the application?
+-   Application - Specification → What is the specification of the application?
+-   Application - Manufacturer → Who has manufactured the application?
+-   Application - Installation → Is the application installed automatically or manually?
+-   Application - Registration key → Which registration key was used?
+-   Application - Install path → What is the installation path?
+-   Application Variants - Title→ How should the variant be named?
+-   Application Variants - Variant → How was the variant named?
+-   Version - Version number → What are the version numbers?
+-   Version - Servicepack → Which Service Packs are there?
+-   Version - Kernel → Which kernel versions are there?
+-   Version - Patchlevel → What patch levels are there?
 
 Example CSV file for this import:
 
 [Import-Applications.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-applications/Import-Applications.csv){ .md-button .md-button--primary }
 
 ??? example "Import Applications.csv"
-
     ```text
     Object type;Object title;Application - Specification;Application - Manufacturer;Application - Installation;Application - Registration key;Application - Install path;Variants - Title;Variants - Variant;Version - Version number;Version - Servicepack;Version - Kernel;Version - Patchlevel
     C__OBJTYPE__APPLICATION;Application;Specification;"Manufacturer Alpha";Automatic;"No RegKey";"C:\Program Files\Application";Application PRO;Pro;1.0;Service Pack 1;;1

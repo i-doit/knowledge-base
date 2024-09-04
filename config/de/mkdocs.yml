@@ -57,13 +57,11 @@ plugins:
       lang: de
   - minify:
       minify_html: true
-  - mkdocs-video
 markdown_extensions:
   - abbr
   - admonition
   - attr_list
   - md_in_html
-  - meta
   - pymdownx.keys
   - toc:
       permalink: '#'
@@ -83,10 +81,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.details
   - pymdownx.tasklist:
       custom_checkbox: true
-
 extra:
   manifest: overrides/manifest.webmanifest
   social:
@@ -130,6 +126,9 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 32: versionshistorie/release-notes/release-notes-32.md
+          - Release Notes 31: versionshistorie/release-notes/release-notes-31.md
+          - Release Notes 30: versionshistorie/release-notes/release-notes-30.md
           - Release Notes 29: versionshistorie/release-notes/release-notes-29.md
           - Release Notes 28: versionshistorie/release-notes/release-notes-28.md
           - Release Notes 27: versionshistorie/release-notes/release-notes-27.md
@@ -154,6 +153,9 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 32: versionshistorie/changelogs/changelog-32.md
+          - Changelog 31: versionshistorie/changelogs/changelog-31.md
+          - Changelog 30: versionshistorie/changelogs/changelog-30.md
           - Changelog 29: versionshistorie/changelogs/changelog-29.md
           - Changelog 28: versionshistorie/changelogs/changelog-28.md
           - Changelog 27: versionshistorie/changelogs/changelog-27.md
@@ -270,14 +272,12 @@ nav:
       - Automatische Installation: installation/automatische-installation.md
       - Manuelle Installation:
           - installation/manuelle-installation/index.md
-          - Debian GNU/Linux: installation/manuelle-installation/debian.md
-          - Red Hat Enterprise Linux (RHEL):
-              - installation/manuelle-installation/red-hat-enterprise-linux/index.md
-              - Red Hat Enterprise Linux 8.6 (RHEL 8): installation/manuelle-installation/red-hat-enterprise-linux/red-hat-enterprise-linux-8.6.md
+          - Debian GNU/Linux:
+              - Debian 12: installation/manuelle-installation/debian12.md
+          - Red Hat Enterprise Linux (RHEL): installation/manuelle-installation/red-hat-enterprise-linux/index.md
           - SUSE Linux Enterprise Server (SLES):
               - installation/manuelle-installation/suse-linux-enterprise-server.md
-          - Ubuntu GNU/Linux:
-              - installation/manuelle-installation/ubuntu-linux/index.md
+          - Ubuntu GNU/Linux: installation/manuelle-installation/ubuntu-linux/index.md
           - Microsoft Windows Server:
               - installation/manuelle-installation/microsoft-windows-server/index.md
               - i-doit via XAMPP: installation/manuelle-installation/microsoft-windows-server/idoit-via-XAMPP.md
@@ -285,9 +285,8 @@ nav:
           - Setup: installation/manuelle-installation/setup.md
       - i-doit Virtual Eval Appliance:
           - installation/i-doit-virtual-eval-appliance/index.md
-          - Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 9 "Stretch": installation/i-doit-virtual-eval-appliance/upgrade-virtual-appliance-debian-9.md
+          - i-doit Appliance in VirtualBox importieren: installation/i-doit-virtual-eval-appliance/virtual-box.md
           - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
-          - Upgrade der i-doit Virtual Eval Appliance auf Debian GNU/Linux 10 "Buster": installation/i-doit-virtual-eval-appliance/upgrade-virtual-appliance-debian-10.md
   - Wartung und Betrieb:
       - wartung-und-betrieb/index.md
       - Lizenz Aktivieren: wartung-und-betrieb/lizenz-aktivieren.md
@@ -299,12 +298,13 @@ nav:
       - Sicherheit und Schutz: wartung-und-betrieb/sicherheit-und-schutz.md
   - Upgrades und Umzüge:
       - upgrades-und-umzuege/index.md
-      - Update Anleitung i-doit 1.7.4 bis 1.19: upgrades-und-umzuege/update-anleitung-1.7.4-bis-1.19.md
+      - Update Anleitung i-doit 1.7.4 bis 31: upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md
       - Upgrade von i-doit open auf pro: upgrades-und-umzuege/upgrade-von-open-auf-pro.md
       - Update von i-doit open 1.4.8 auf 1.8: upgrades-und-umzuege/update-von-open-1.4.8-auf-1.8.md
       - Upgrade zu MySQL 5.6 oder MariaDB 10.0: upgrades-und-umzuege/upgrade-zu-mysql-5.6-oder-mariadb-10.0.md
       - Umzug einer Installation unter GNU/Linux: upgrades-und-umzuege/umzug-einer-installation-unter-linux.md
       - Umzug von Windows zu Linux: upgrades-und-umzuege/umzug-von-windows-zu-linux.md
+      - Update von PHP und MariaDB unter Windows: upgrades-und-umzuege/update-php-und-mariadb-idoit-windows.md
   - Grundlagen:
       - grundlagen/index.md
       - Erstanmeldung: grundlagen/erstanmeldung.md
@@ -322,7 +322,7 @@ nav:
       - Objekttypen: grundlagen/objekttypen.md
       - Zuordnung von Kategorien zu Objekttypen: grundlagen/zurodnung-von-kategorien-zu-objekttypen.md
       - Kategorien und Attribute: grundlagen/kategorien-und-attribute.md
-      - Benutzerdefinierte Objektentypen: grundlagen/benutzerdefinierte-objekttypen.md
+      - Benutzerdefinierte Objekttypen: grundlagen/benutzerdefinierte-objekttypen.md
       - Benutzerdefinierte Kategorien: grundlagen/benutzerdefinierte-kategorien.md
       - Logbuch: grundlagen/logbuch.md
       - Objekt-Beziehungen: grundlagen/objekt-beziehungen.md
@@ -330,7 +330,6 @@ nav:
       - Eindeutige Referenzierungen: grundlagen/eindeutige-referenzierungen.md
       - Web GUI: grundlagen/web-gui.md
       - Benutzerdefinierte Zähler: grundlagen/benutzerdefinierte-zaehler.md
-      - Attributsichtbarkeit: grundlagen/attributsichtbarkeit.md
   - Benutzerauthentifizierung und Verwaltung:
       - benutzerauthentifizierung-und-verwaltung/index.md
       - Integrierte Authentifizierung:
@@ -341,7 +340,7 @@ nav:
           - LDAPS Debian Konfiguration: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
           - LDAPS i-doit für Windows: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/i-doit-win-ldaps.md
           - Benutzer-/Gruppen-Synchronisierung: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
-      - 2-Faktor-Authentifizierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
+      - Zwei-Faktor-Authentisierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
       - SSO-Authentifizierung im Vergleich:
           - benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md
       - SSO mit SAML:
@@ -362,7 +361,7 @@ nav:
       - Massenänderung: effizientes-dokumentieren/massenaenderung.md
       - Objekte Duplizieren: effizientes-dokumentieren/objekte-duplizieren.md
       - Templates: effizientes-dokumentieren/templates.md
-      - Validierung und Pflichtfelder: effizientes-dokumentieren/validierung-und-pflichtfelder.md
+      - Attributvalidierung und Pflichtfelder: effizientes-dokumentieren/attributvalidierung-und-pflichtfelder.md
       - Rechteverwaltung:
           - effizientes-dokumentieren/rechteverwaltung/index.md
           - CMDB (Rechteverwaltung): effizientes-dokumentieren/rechteverwaltung/cmdb.md
@@ -411,6 +410,7 @@ nav:
           - ((OTRS)) Community Edition Help Desk: automatisierung-und-integration/service-desk/otrscommunity-help-desk.md
           - Zammad: automatisierung-und-integration/service-desk/zammad.md
       - SNMP: automatisierung-und-integration/snmp.md
+      - Aufgabenplanung & Cron Jobs: automatisierung-und-integration/automatisierung-und-cronjobs.md
   - Administration:
       - administration/index.md
       - Verwaltung:
@@ -438,7 +438,7 @@ nav:
           - Datenansicht:
               - administration/verwaltung/datenansicht/index.md
               - Objekt-Browser konfigurieren: administration/verwaltung/datenansicht/objekt-browser-konfigurieren.md
-              - Attribute verstecken: administration/verwaltung/datenansicht/attribute-verstecken.md
+              - Attribut Einstellungen: administration/verwaltung/datenansicht/attribut-einstellungen.md
               - Sprachprofile: administration/verwaltung/datenansicht/sprachprofile.md
               - Kategorieordner: administration/verwaltung/datenansicht/kategorieordner.md
           - Vordefinierte Inhalte:
@@ -446,7 +446,6 @@ nav:
               - CMDB Status: administration/verwaltung/vordefinierte-inhalte/cmdb-status.md
               - Kontaktzuweisungsrollen: administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen.md
               - Benutzerdefinierte Zähler: administration/verwaltung/vordefinierte-inhalte/benutzerdefinierte-zaehler.md
-              - Daten Validierung: administration/verwaltung/vordefinierte-inhalte/daten-validierung.md
               - Dialog admin: administration/verwaltung/vordefinierte-inhalte/dialog-admin.md
               - Objektbeziehungsarten: administration/verwaltung/vordefinierte-inhalte/objekt-beziehungsarten.md
               - QR Code: administration/verwaltung/vordefinierte-inhalte/qr-code.md
@@ -480,12 +479,16 @@ nav:
               - Gerätetausch:
                   - administration/verwaltung/add-ons/geraetetausch/index.md
                   - Konfiguration: administration/verwaltung/add-ons/geraetetausch/konfiguration.md
+          - Zwei-Faktor-Authentisierung: administration/verwaltung/zwei-faktor-authentisierung.md
+          - Download Center: administration/verwaltung/download-center.md
+          - Vertragsdaten: administration/verwaltung/vertragsdaten.md
       - Admin Center: administration/admin-center.md
       - Mehrsprachigkeit und Übersetzungen: administration/mehrsprachigkeit-und-uebersetzungen.md
       - Mandantenfähigkeit: administration/mandantenfaehigkeit.md
       - Kundenportal: administration/kundenportal.md
       - Troubleshooting:
           - administration/troubleshooting/index.md
+          - Bekannte update Probleme: administration/troubleshooting/bekannte-update-probleme.md
           - Lost link to database: administration/troubleshooting/lost-link-to-database.md
           - MySQL-Server has gone away: administration/troubleshooting/mysql-server-has-gone-away.md
           - Can not create table idoit_data.table_name: administration/troubleshooting/cant-create-table.md
@@ -500,6 +503,9 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
           - Hotfix Archiv:
               - administration/hotfixes/hotfix-archiv/index.md
+              - Version 31: administration/hotfixes/hotfix-archiv/v31.md
+              - Version 30: administration/hotfixes/hotfix-archiv/v30.md
+              - Version 29: administration/hotfixes/hotfix-archiv/v29.md
               - Version 28: administration/hotfixes/hotfix-archiv/v28.md
               - Version 27: administration/hotfixes/hotfix-archiv/v27.md
               - Version 26: administration/hotfixes/hotfix-archiv/v26.md
@@ -533,7 +539,12 @@ nav:
       - Analysis: i-doit-pro-add-ons/analysis.md
       - API (JSON-RPC):
           - i-doit-pro-add-ons/api/index.md
-          - API Methoden: i-doit-pro-add-ons/api/api-methoden.md
+          - Methoden:
+              - v1:
+                  - i-doit-pro-add-ons/api/methoden/v1/index.md
+              - v2:
+                  - i-doit-pro-add-ons/api/methoden/v2/index.md
+                  - cmdb.external: i-doit-pro-add-ons/api/methoden/v2/cmdb.external.md
           - Beispiele zur Nutzung der API: i-doit-pro-add-ons/api/beispiele-zur-nutzung-der-api.md
           - Tipps und Tricks zur API: i-doit-pro-add-ons/api/tipps-und-tricks-zur-nutzung-der-api.md
           - Kategorie-Felder für Datenarrays: i-doit-pro-add-ons/api/kategorie-felder-fuer-datenarrays.md
@@ -578,12 +589,15 @@ nav:
           - Formular ausfuellen: i-doit-pro-add-ons/forms/formulare-ausfuellen.md
           - Verwendung der Forms API: i-doit-pro-add-ons/forms/verwenden-der-forms-api.md
       - i-diary: i-doit-pro-add-ons/i-diary.md
-      - ISMS: i-doit-pro-add-ons/isms.md
       - i-doit QR-Code Printer: i-doit-pro-add-ons/i-doit-qr-code-printer.md
+      - ISMS: i-doit-pro-add-ons/isms.md
       - Maintenance: i-doit-pro-add-ons/maintenance.md
       - OCS Inventory NG: i-doit-pro-add-ons/ocs-inventory-ng.md
       - Relocate-CI: i-doit-pro-add-ons/relocate-ci.md
       - Replacement: i-doit-pro-add-ons/replacement.md
+      - SHD SM-VIEW Connect:
+          - i-doit-pro-add-ons/sm-view-connect/index.md
+          - SHD SM-VIEW Connect - Telekom Adapter: i-doit-pro-add-ons/sm-view-connect/telekom-adapter.md
       - VIVA:
           - i-doit-pro-add-ons/viva/index.md
           - Einleitung zu VIVA: i-doit-pro-add-ons/viva/einleitung-zu-viva.md

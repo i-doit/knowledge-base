@@ -13,7 +13,6 @@ Via the options it is possible to (de-) virtualize the duplicate. To open and di
 The process is performed via the **Duplicate** button within the dialogue window. Upon its completion, the duplicate of the selected object is available, including the desired content.
 
 !!! info "Multiple objects"
-
     It is only possible to duplicate one object at a time. If you wish to duplicate multiple objects, you need to repeat this process for each single object.
 
 [![Duplicate Objects](../assets/images/en/efficient-documentation/duplicates-objects/dupe.gif)](../assets/images/en/efficient-documentation/duplicates-objects/dupe.gif)

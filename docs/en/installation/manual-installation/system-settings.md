@@ -2,7 +2,7 @@
 
 For the configuration of the operating system we recommend a series of settings with regard to PHP, Apache Webserver and MySQL/MariaDB. These are based on the [system requirements](../system-requirements.md) for i-doit. The settings vary depending on the operating system therefore please refer to the corresponding articles for further information:
 
--   [Debian GNU/Linux](debian.md)
+-   [Debian GNU/Linux](debian12.md)
 -   [Red Hat Enterprise Linux (RHEL)](red-hat-enterprise-linux/index.md)
 -   [Suse Linux Enterprise Server (SLES)](suse-linux-enterprise-server.md)
 -   [Ubuntu Linux](ubuntu-linux/index.md)
@@ -20,7 +20,7 @@ i-doit possesses its own caching strategies to answer requests as fast as possib
 2. APC(u)
 3. Filesystem
 
-We recommend the use of _either_ ==memcached== _or_ ==APC/APCu==. We lean towards the usage of ==memcached==. Instructions for the installation (except for Windows) can be found in the above mentioned articles.
+We recommend the use of _either_ **memcached** _or_ **APC/APCu**. We lean towards the usage of **memcached**. Instructions for the installation (except for Windows) can be found in the above mentioned articles.
 
 The Apache webserver should be reset after being installed, so that the changes to PHP can become active:
 

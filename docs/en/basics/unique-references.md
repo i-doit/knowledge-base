@@ -101,5 +101,5 @@ These constants cannot be viewed or even edited in the web GUI. For this reason,
 
 ## Further Unique Attributes
 
--   Attributes can be [defined as unique](../efficient-documentation/validation-and-mandatory-fields.md) globally, per object type or (for list categories) per object. In case of multiple occurrences a notification window by i-doit is displayed when you try to save your entries.
+-   Attributes can be [defined as unique](../efficient-documentation/attribute-validation-and-mandatory-fields.md) globally, per object type or (for list categories) per object. In case of multiple occurrences a notification window by i-doit is displayed when you try to save your entries.
 -   If the attributes mentioned above do not suffice, additional ones can be [created](./custom-categories.md).

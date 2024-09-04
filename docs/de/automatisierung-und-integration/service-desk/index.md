@@ -18,21 +18,21 @@ Die konkrete Installation und Benutzung von Extensions (RT) und Modulen (((OTRS)
 
 Die Konfiguration zur Anbindung von den oben genannten Applikationen geschieht unter **Verwaltung → Import und Schnittstellen → TroubleTicket-System (TTS)**.
 
-[![servicedesk-konfigurieren](../../assets/images/de/automatisierung-und-integration/service-desk/1-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/1-sd.png)
+[![service-desk-konfigurieren](../../assets/images/de/automatisierung-und-integration/service-desk/1-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/1-sd.png)
 
-| Option | Beschreibung |
-| --- | --- |
-| **TTS-Typ** | Um welche Applikation handelt es sich? |
-| **Aktiv** | Soll die Schnittstelle aktiv sein? |
-| **Benutzername** | i-doit muss sich mit einem Benutzer bei der Applikation anmelden, um Daten abrufen zu können. Aus Sicherheitsgründen sollte ein dedizierter Benutzer verwendet werden. |
-| **Passwort** | Das zum Benutzer passende Passwort |
-| **URL inkl. Protokoll** | Der Link zur Web GUI der Applikation, beispielsweise https://rt.example.org/rt |
+| Option                  | Beschreibung                                                                                                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **TTS-Typ**             | Um welche Applikation handelt es sich?                                                                                                                                 |
+| **Aktiv**               | Soll die Schnittstelle aktiv sein?                                                                                                                                     |
+| **Benutzername**        | i-doit muss sich mit einem Benutzer bei der Applikation anmelden, um Daten abrufen zu können. Aus Sicherheitsgründen sollte ein dedizierter Benutzer verwendet werden. |
+| **Passwort**            | Das zum Benutzer passende Passwort                                                                                                                                     |
+| **URL inkl. Protokoll** | Der Link zur Web GUI der Applikation, beispielsweise https://rt.example.org/rt                                                                                         |
 
 ## Tickets auslesen
 
-Wird ein Ticket über die Applikation mit einem Objekt aus i-doit verknüpft, kann diese Verknüpfung in i-doit angezeigt werden. Dazu muss die Option **Aktiv** in der Konfiguration auf **Ja** gestellt sein. Zu jedem Objekt existiert die Kategorie **Alle Tickets**, die über das Sprachblasen-Icon ![servicedesk-icon](../../assets/images/de/automatisierung-und-integration/service-desk/2-sd.png) erreichbar ist.
+Wird ein Ticket über die Applikation mit einem Objekt aus i-doit verknüpft, kann diese Verknüpfung in i-doit angezeigt werden. Dazu muss die Option **Aktiv** in der Konfiguration auf **Ja** gestellt sein. Zu jedem Objekt existiert die Kategorie **Alle Tickets**, die über das Sprachblasen-Icon ![service-desk-icon](../../assets/images/de/automatisierung-und-integration/service-desk/2-sd.png) erreichbar ist.
 
-[![servicedesk-anzeigen](../../assets/images/de/automatisierung-und-integration/service-desk/3-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/3-sd.png)
+[![service-desk-anzeigen](../../assets/images/de/automatisierung-und-integration/service-desk/3-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/3-sd.png)
 
 Die Kategorie listet alle verknüpften Tickets auf und zeigt zu jedem Ticket weitere Informationen. Klickt man auf das Ticket, öffnet es sich in der Web GUI der Service-Desk-Applikation.
 
@@ -40,10 +40,10 @@ Die Kategorie listet alle verknüpften Tickets auf und zeigt zu jedem Ticket wei
 
 Über die Kategorie Alle Ticket kann auch ein neues Ticket erstellt werden. Dazu dient der obere Bereich. Klickt man auf den Button Ticket erstellen, öffnet sich das Web-Formular der Service-Desk-Applikation und verknüpft bereits das Objekt, zu dem das Ticket erstellt werden soll.
 
-Kommt die Applikation [Request Tracker (RT)](../service-desk/request-tracker.md) zum Einsatz, muss zusätzlich die Queue ausgewählt werden, dem das Ticket zugeordnet wird. Die Konfiguration der voreingestellten Queues geschieht unter **Verwaltung → Import und Schnittstellen → TroubleTicket-System (TTS) → Request Tracker queues**. Hier werden die Queues kommasepariert angegeben.
+Kommt die Applikation [Request Tracker (RT)](../service-desk/request-tracker.md) zum Einsatz, muss zusätzlich die Queue ausgewählt werden, dem das Ticket zugeordnet wird. Die Konfiguration der voreingestellten Queues geschieht unter **Verwaltung → Import und Schnittstellen → TroubleTicket-System (TTS) → Request Tracker queues**. Hier werden die Queues Kommasepariert angegeben.
 
 ## Logbuch-Einträge zu Tickets
 
 Wenn in der Service-Desk-Applikation ein Ticket erstellt oder bearbeitet wird und dabei mindestens ein Objekt aus i-doit verknüpft wird, ist dies im Nachhinein im [Logbuch](../../grundlagen/logbuch.md) nachzuvollziehen.
 
-[![servicedesk-erstellen](../../assets/images/de/automatisierung-und-integration/service-desk/4-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/4-sd.png)
+[![service-desk-erstellen](../../assets/images/de/automatisierung-und-integration/service-desk/4-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/4-sd.png)

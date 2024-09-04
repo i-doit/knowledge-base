@@ -1,13 +1,16 @@
 # Optionen und Parameter der Console
 
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+
 !!! attention "Hinweise"
     Sämtliche Beispiele auf dieser Seite beziehen sich auf die Verwendung des i-doit Benutzers mit der Kombination Benutzername/Passwort: **admin**/**admin**.<br>
     Alle Parameter sind case-sensitive, dies bedeutet, dass Groß- und Kleinschreibung gemäß den Beispielen und Vorgaben exakt einzuhalten sind.
 
 ## Folgende Handler stehen für die i-doit Console zur Verfügung
 
-| Command                                                                   | Beschreibung (de)                                                                                                                                                             |
+| Command                                                                   | Interne Beschreibung (en)                                                                                                                                                     |
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [CompileDocuments](#compiledocuments)                                     | Compile Documents                                                                                                                                                             |
 | [addon-activate](#addon-activate)                                         | Aktivieren von Add-ons                                                                                                                                                        |
 | [addon-deactivate](#addon-deactivate)                                     | Deaktivieren von Add-ons                                                                                                                                                      |
 | [addon-install](#addon-install)                                           | Installieren von Add-ons                                                                                                                                                      |
@@ -17,8 +20,7 @@
 | [check_mk-export](#check_mk-export)                                       | Konfigurationsdaten für Check_MK exportieren                                                                                                                                  |
 | [check_mk-livestatus](#check_mk-livestatus)                               | Ist-Zustand aus Check_MK ins Logbuch schreiben                                                                                                                                |
 | [clear-credentials](#clear-credentials)                                   | Entfernt die Anmeldeinformationen von Benutzern                                                                                                                               |
-| [CompileDocuments](#compiledocuments)                                     | Compile Documents                                                                                                                                                             |
-| [completion](#completion)                                                 | Das Shell Vervollständigungsskript ausgeben                                                                                                                                   |
+| [completion](#completion)                                                 | Das Shell-Vervollständigungsskript ausgeben                                                                                                                                   |
 | [contracts-outdated](#contracts-outdated)                                 | Aktualisiert den Status ausgelaufener Verträge                                                                                                                                |
 | [documents](#documents)                                                   | Dokumente und Revisionen erzeugen und exportieren                                                                                                                             |
 | [extend-contracts](#extend-contracts)                                     | Verlängert die Laufzeit eines Vertrags, wenn dessen letztmögliches Kündigungsdatum in der Vergangenheit liegt                                                                 |
@@ -31,6 +33,7 @@
 | [import-syslog](#import-syslog)                                           | Daten aus einem Syslog in das Logbuch von i-doit importieren                                                                                                                  |
 | [import-xml](#import-ocs)                                                 | Daten aus XML importieren                                                                                                                                                     |
 | [install](#install)                                                       | Installiert i-doit                                                                                                                                                            |
+| [jdisc-create-server](#jdisc-create-server)                               | Erzeugt einen JDisc Server, basierend auf einer gegebenen Eingabe                                                                                                             |
 | [ldap-sync](#ldap-sync)                                                   | Personen und Personengruppen aus einem [LDAP-Verzeichnis oder Active Directory (AD)](../../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) importieren |
 | [ldap-syncdn](#ldap-sync)                                                 | Synchronisiere aus einem LDAP/AD den Distinguished Name (DN) der Benutzer (siehe Kategorie LDAP)                                                                              |
 | [license-add](#license-add)                                               | Fügt eine Lizenz für i-doit hinzu (in Bearbeitung)                                                                                                                            |
@@ -41,7 +44,7 @@
 | [license-remove](#license-remove)                                         | Entfernt Lizenzen von i-doit                                                                                                                                                  |
 | [list](#list)                                                             | Listet alle console Kommandos auf                                                                                                                                             |
 | [logbook-archive](#logbook-archive)                                       | Logbuch-Einträge archivieren                                                                                                                                                  |
-| [maintenance](#maintenance)                                               | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Maintenance Add-on                                                                                                   |
+| [maintenance](#maintenance)                                               | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs Add-on                                                                                                      |
 | [migrate-uploaded-files](#migrate-uploaded-files)                         | Migriert hochgeladene Dateien von i-doit <v1.13 zu v.1.14>                                                                                                                    |
 | [nagios-export](#nagios-export)                                           | Nagios-Konfiguration exportieren                                                                                                                                              |
 | [nagios-ndoutils](#nagios-ndoutils)                                       | Ist-Zustand aus Nagios ins Logbuch schreiben                                                                                                                                  |
@@ -58,9 +61,11 @@
 | [system-convert-non-innodb-tables](#system-convert-non-innodb-tables)     | Konvertiert alle Tabellen, welche nicht in INNODB sind zu INNODB (Betrifft die Datenbankkodierung. Mit Vorsicht zu nutzen!)                                                   |
 | [system-convert-non-utf8-tables](#system-convert-non-utf8-tables)         | Konvertiert alle non-UTF8-Tabellen in UTF8-Tabellen (Betrifft die Datenbankkodierung. Mit Vorsicht zu nutzen!)                                                                |
 | [system-location-fix](#system-location-fix)                               | Führt die Standortkorrektur aus der GUI auf der Konsole aus                                                                                                                   |
+| [system-maintenancecontract](#system-maintenancecontract)                 | E-Mail für Wartungsverträge senden (Funktion veraltet. Bitte<br>[notifications-send](#notifications-send) nutzen)                                                             |
 | [system-objectcleanup](#system-objectcleanup)                             | Objekte bereinigen (Objekte mit dem Status "unfertig", "archiviert" oder "gelöscht" werden endgültig entfernt)                                                                |
 | [system-objectrelations](#system-objectrelations)                         | Objekt-Beziehungen neu aufbauen                                                                                                                                               |
 | [system-refresh-table-configuration](#system-refresh-table-configuration) | Erneuert alle verfügbaren Listenkonfigurationen (Objekttypen und Kategorien)                                                                                                  |
+| [system-set-settings](#system-set-settings)                               | Ermöglicht das setzen von Admin Center Einstellungen über die CLI                                                                                                             |
 | [tenant-create](#tenant-create)                                           | Einen neuen Mandanten hinzufügen                                                                                                                                              |
 | [tenant-disable](#tenant-disable)                                         | Einen bestehenden Mandanten deaktivieren                                                                                                                                      |
 | [tenant-enable](#tenant-enable)                                           | Einen bestehenden Mandanten aktivieren                                                                                                                                        |
@@ -89,8 +94,8 @@ Aktualisiert Dokumente
 | -h                   | --help                  | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                 | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version               | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi       | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction        | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction        | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose               | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -114,8 +119,8 @@ Aktiviert installierte Add-ons für den gewünschten Mandanten
 | -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction      | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -139,8 +144,8 @@ Deaktiviert installierte Add-ons für den gewünschten Mandanten
 | -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction      | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -165,8 +170,8 @@ Installiert Add-ons für den gewünschten Mandanten
 | -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction      | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -188,8 +193,8 @@ Zeigt eine Liste mit allen installierten Add-ons zum ausgewählten Mandanten an
 | -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction     | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -212,8 +217,8 @@ Passwort für das Admin-Center zurücksetzen
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -237,8 +242,8 @@ Leert den Cache des Rechtesystems, damit die derzeit konfigurierten Rechte aktue
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -264,8 +269,8 @@ Führt einen Check_MK Export durch
 | -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                         | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi                 | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction                  | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -289,8 +294,8 @@ Importiert die Änderungen am Monitoring-Status aus Livestatus nach i-doit
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -313,8 +318,8 @@ Entfernt die Einträge der Attribute `username` und `password` von Benutzerlogin
 | -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction      | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -337,8 +342,8 @@ Der Befehl completion gibt das Shell-Vervollständigungsskript aus, das für die
 | -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction      | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -361,8 +366,8 @@ Aktualisiert den Status veralteter Verträge
 | -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction     | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -395,8 +400,8 @@ Ermöglicht die Erstellung von Revisionen oder den Export eines oder mehrerer Do
 | -c                   | --config=CONFIG               | Konfigurationsdatei                                                                              |
 | -q                   | --quiet                       | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                     | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi             | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction              | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction              | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v\|vv\|vvv          | --verbose                     | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -421,7 +426,7 @@ Verlängert die Laufzeit eines Vertrags, dessen letztmögliches Kündigungsdatum
 | -c                   | --config=CONFIG      | Konfigurationsdatei                                   |
 | -q                   | --quit               | Es wird keine Nachricht angezeigt                     |
 | -v                   | --version            | Zeigt die Version der Anwendung an                    |
-|                      | --ansi / --no-ansi   | Erzwingt ANSI Ausgabe / Deaktiviert ANSI Ausgabe      |
+|                      | --ansi<br>--no-ansi  | Erzwingt ANSI Ausgabe / Deaktiviert ANSI Ausgabe      |
 | -v / -vv / -vvv      | --verbose            | Erhöht die Ausführlichkeit der Nachricht [default: 1] |
 
 **Beispiel zur Verwendung**
@@ -443,8 +448,8 @@ Zeigt in Verbindung mit einem anderen Befehl dessen Nutzung, Argumente und Optio
 | -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction     | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -471,8 +476,8 @@ Führt den Import einer CSV-Datei mit den gewünschten Importparametern durch
 | -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                         | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi                 | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction                  | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -495,8 +500,8 @@ Gibt eine Auflistung der Import-Profile für den CSV-Import zurück
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -524,8 +529,8 @@ Führt einen h-inventory Import einer kompatiblen XML-Datei durch
 | -h                   | --help                  | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                 | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version               | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi       | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction        | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction        | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose               | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -557,8 +562,8 @@ Führt einen JDisc-Import nach i-doit durch.
 | -h                   | --help                             | Hilfenachricht zur Einblendung weiterer Informationen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | -q                   | --quiet                            | Quiet-Mode um die Rückgabe zu deaktivieren                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | -V                   | --version                          | Ausgabe der Version der i-doit Console                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|                      | --ansi /--no-ansi                  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -n                   | --no-interaction                   | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|                      | --ansi<br>--no-ansi                | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -n                   | --no-interaction                   | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | -v / -vv / -vvv      | --verbose                          | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 **Beispiel zur Verwendung**
@@ -587,8 +592,8 @@ Löst einen JDisc Discovery Job aus.
 | -h                   | --help                                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                             | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi                     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction                      | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi                   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -612,8 +617,8 @@ Importiert Inhalte aus einer Syslog Server Textdatei in das i-doit Logbuch.
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -639,8 +644,8 @@ Führt einen Import einer XML-Datei nach i-doit durch.
 | -h                   | --help                  | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                 | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version               | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi       | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction        | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction        | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose               | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -670,8 +675,8 @@ Installieren Sie die i-doit Anwendung
 | -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                         | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi                 | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction                  | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -682,33 +687,33 @@ sudo -u www-data php console.php install
 
 ### jdisc-create-server
 
-Creates a JDisc server, based on given input
+Erzeugt einen JDisc Server Eintrag.
 
-**Options:**
+**Optionen:**
 
-| Parameter (short version) | Parameter (long version)        | Description                                                                                      |
-| ------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------ |
-|                           | --default                       | Als Standard-Server festlegen                                                                    |
-|                           | --title=TITLE                   | Name für die JDisc-Server-Konfiguration [Voreinstellung: "JDisc Server"]                         |
-|                           | --jdisc-host=JDISC-HOST         | JDisc-Host [Voreinstellung: "localhost"]                                                                |
-|                           | --jdisc-port=JDISC-PORT         | JDisc-Port [Voreinstellung: 25321]                                                               |
-|                           | --jdisc-database=JDISC-DATABASE | JDisc database [Voreinstellung: "inventory"]                                                     |
-|                           | --jdisc-username=JDISC-USERNAME | JDisc-Benutzername [Voreinstellung: "postgresro"]                                                |
-|                           | --jdisc-password=JDISC-PASSWORD | JDisc-Passwort                                                                                   |
-|                           | --allow-older-imports           | Import älterer JDisc-Versionen zulassen [Voreinstellung: nein]                                     |
-| -u                        | --user=[USERNAME]               | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
-| -p                        | --password=[PASSWORD]           | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
-| -h                        | --help                          | Hilfenachricht zur Einblendung weiterer Informationen                                            |
-| -q                        | --quiet                         | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
-| -V                        | --version                       | Ausgabe der Version der i-doit Console                                                           |
-|                           | --ansi /--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                        | --no-interaction                | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
-| -v / -vv / -vvv           | --verbose                       | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)              | Beschreibung                                                                                     |
+| -------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --default                         | Als Standardserver festlegen                                                                     |
+|                      | --title=[TITLE]                   | Name für die JDisc Serverkonfiguration [default: "JDisc Server"]                                 |
+|                      | --jdisc-host=[JDISC-HOST]         | JDisc host [default: "localhost"]                                                                |
+|                      | --jdisc-port=[JDISC-PORT]         | JDisc port [default: 25321]                                                                      |
+|                      | --jdisc-database=[JDISC-DATABASE] | JDisc database [default: "inventory"]                                                            |
+|                      | --jdisc-username=[JDISC-USERNAME] | JDisc database username [default: "postgresro"]                                                  |
+|                      | --jdisc-password=[JDISC-PASSWORD] | JDisc database password                                                                          |
+|                      | --allow-older-imports             | Import älterer JDisc-Versionen zulassen [default: no]                                            |
+| -i                   | --tenantId=[TENANT-ID]            | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE]            | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                         | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
-**Example of use**
+**Beispiel zur Verwendung**
 
 ```shell
-sudo -u www-data php console.php jdisc-create-server --user admin --password admin --title JDisc-Server --jdisc-host localhost --jdisc-port 25321 --jdisc-username postgresro --jdisc-password jdisc-password --allow-older-imports
+sudo -u www-data php console.php jdisc-create-server -u admin -p admin --default --title JDisc Server --jdisc-host localhost --jdisc-port 25321
 ```
 
 ### ldap-sync
@@ -732,8 +737,8 @@ Synchronisiert Benutzer aus dem LDAP nach i-doit und legt diese als Personenobje
 | -h                   | --help                                              | Hilfenachricht zur Einblendung weiterer Informationen                                                                                                                                                                                            |
 | -q                   | --quiet                                             | Quiet-Mode um die Rückgabe zu deaktivieren                                                                                                                                                                                                       |
 | -V                   | --version                                           | Ausgabe der Version der i-doit Console                                                                                                                                                                                                           |
-|                      | --ansi /--no-ansi                                   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                                                                                                             |
-| -n                   | --no-interaction                                    | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                                                                                                                                                                      |
+|                      | --ansi<br>--no-ansi                                 | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                                                                                                             |
+| -n                   | --no-interaction                                    | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                                                                                                                                                                      |
 | -v / -vv / -vvv      | --verbose                                           | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)                                                                                                                                                 |
 
 **Beispiel zur Verwendung**
@@ -758,8 +763,8 @@ Synchronisiert LDAP DNs mit den i-doit Usern.
 | -h                   | --help                      | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                     | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                   | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction            | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -800,8 +805,8 @@ Fügt eine Lizenz für i-doit hinzu
 | -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction      | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -825,8 +830,8 @@ Ordnet eine Hosting Lizenz einem Mandaten zu
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -849,8 +854,8 @@ Importiert Lizenzen vom i-doit Lizenz-Server
 | -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                         | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi                 | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction                  | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -874,8 +879,8 @@ Setzt einen Lizenzschlüssel für i-doit
 | -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                                 |
 | -q                   | --quiet                           | Quiet-Mode um die Rückgabe zu deaktivieren                                                            |
 | -V                   | --version                         | Ausgabe der Version der i-doit Console                                                                |
-|                      | --ansi /--no-ansi                 | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                  |
-| -n                   | --no-interaction                  | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                           |
+|                      | --ansi<br>--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                  |
+| -n                   | --no-interaction                  | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                           |
 | -v / -vv / -vvv      | --verbose                         | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)      |
 
 **Beispiel zur Verwendung**
@@ -896,8 +901,8 @@ Listet alle installierten Lizenzen
 | -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction     | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -920,8 +925,8 @@ Löscht eine Lizenz aus i-doit
 | -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction      | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -945,8 +950,8 @@ Archiviert die Logbucheinträge mit einem definierten Alter, gemäß den Einstel
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -969,8 +974,8 @@ Verschickt E-Mails mit geplanten Wartungen gemäß den im Add-on "Wartungen" fes
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -990,8 +995,8 @@ Migriert hochgeladene Dateien in i-doit <v1.13 zu v.1.14>
 | -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction     | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1020,8 +1025,8 @@ Exportiert die Nagios-Einstellungen und i-doit Objekte in Nagios-Konfigurationsd
 | -h                   | --help                      | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                     | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                   | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction            | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1048,8 +1053,8 @@ Importiert Monitoring Statusänderungen aus den NDOUtils in das i-doit Logbuch.
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1073,8 +1078,8 @@ Listet alle [Benachrichtigungen](../../../auswertungen/benachrichtigungen.md) au
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1100,8 +1105,8 @@ Verschickt die auf der i-doit Oberfläche konfigurierten Benachrichtigungen
 | -h                   | --help                                        | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                                       | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                                     | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi                             | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction                              | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi                           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                              | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                                     | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1129,8 +1134,8 @@ Exportiert einen Report in das gewünschte Dateiformat.
 | -h                   | --help                          | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                         | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                       | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction                | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi             | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                       | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1155,8 +1160,8 @@ Sucht nach Inhalten in der Dokumentation
 | -h                   | --help                      | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                     | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                   | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction            | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1175,7 +1180,7 @@ Erneuert den Suchindex, indem dieser gelöscht und neu geschrieben wird.
 | -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
 |                      | --update               | Anstatt nur einen neuen Index zu erstellen, werden die aktuellen Index-Dokumente überschrieben   |
 |                      | --category=CATEGORY    | Whitelist der Kategorien                                                                         |
-|                      | --dry-run              | Indexierung ausführen, ohne zu speichern                                                         |
+|                      | --dry-run              | Reindex ausführen, ohne zu speichern                                                             |
 | -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
 | -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
 | -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
@@ -1183,8 +1188,8 @@ Erneuert den Suchindex, indem dieser gelöscht und neu geschrieben wird.
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1208,8 +1213,8 @@ Mit diesem Befehl können Sie html-Tags im Beschreibungsfeld aller Kategorien un
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1226,15 +1231,15 @@ Synchronisiert dynamische Gruppenmitglieder neu.
 
 | Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
 | -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
-| -g                   | --groups=GROUPS        | Durch Kommata getrennte Liste der IDs der dynamischen Gruppen                                    |
+| -g                   | --groups=GROUPS        | Kommaseparierte Liste von IDs der dynamischen Gruppen                                            |
 | -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
 | -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
 | -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1258,8 +1263,8 @@ Legt den Wert des Auto-Increment des Systems fest. Dies beeinflusst Objekt-IDs, 
 | -h                   | --help                        | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                       | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                     | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi             | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction              | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction              | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                     | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1283,8 +1288,8 @@ Bereinigt optional Kategorieeinträge, die sich im Status unfertig, archiviert o
 | -h                   | --help                          | Hilfenachricht zur Einblendung weiterer Informationen                                                                                                                             |
 | -q                   | --quiet                         | Quiet-Mode um die Rückgabe zu deaktivieren                                                                                                                                        |
 | -V                   | --version                       | Ausgabe der Version der i-doit Console                                                                                                                                            |
-|                      | --ansi /--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                                              |
-| -n                   | --no-interaction                | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                                                                                                       |
+|                      | --ansi<br>--no-ansi             | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                                              |
+| -n                   | --no-interaction                | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                                                                                                       |
 | -v / -vv / -vvv      | --verbose                       | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)                                                                                  |
 
 **Beispiel zur Verwendung**
@@ -1304,8 +1309,8 @@ Prüft, ob eine neue i-doit Version verfügbar ist.
 | -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction     | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1330,8 +1335,8 @@ Konvertiert alle nicht INNODB Tabellen nach INNODB.
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1355,8 +1360,8 @@ Konvertiert alle nicht UTF-8 Datentypen nach UTF-8.
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1380,14 +1385,39 @@ Führt die Standortkorrektur aus der GUI in der Konsole aus
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi / --no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
 ```shell
 sudo -u www-data php console.php system-location-fix --user admin --password admin --tenantId 1 --config /path/to/config/file
+```
+
+### system-maintenancecontract
+
+Verschickt eine E-Mail Benachrichtigung für Wartungskontakte.
+
+**Optionen:**
+
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+
+**Beispiel zur Verwendung**
+
+```shell
+sudo -u www-data php console.php system-maintenancecontract --user admin --password admin --tenantId 1
 ```
 
 ### system-objectcleanup
@@ -1406,8 +1436,8 @@ Bereinigt alle Objekte mit einem selbst definierbarem Status.
 | -h                   | --help                      | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                     | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                   | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi / --no-ansi          | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction            | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1432,8 +1462,8 @@ Erneuert die Bezeichnungen aller Objektbeziehungen.
 | -h                   | --help                              | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                             | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                           | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi                   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction                    | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi                 | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                    | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                           | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1459,8 +1489,8 @@ Aktualisiert alle verfügbaren Listenkonfigurationen (Objekttypen und Kategorien
 | -h                   | --help                      | Hilfenachricht zur Einblendung weiterer Informationen                                                                                                          |
 | -q                   | --quiet                     | Quiet-Mode um die Rückgabe zu deaktivieren                                                                                                                     |
 | -V                   | --version                   | Ausgabe der Version der i-doit Console                                                                                                                         |
-|                      | --ansi /--no-ansi           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                           |
-| -n                   | --no-interaction            | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                                                                                    |
+|                      | --ansi<br>--no-ansi         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                           |
+| -n                   | --no-interaction            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                                                                                    |
 | -v / -vv / -vvv      | --verbose                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)                                                               |
 
 **Beispiel zur Verwendung**
@@ -1469,9 +1499,33 @@ Aktualisiert alle verfügbaren Listenkonfigurationen (Objekttypen und Kategorien
 sudo -u www-data php console.php system-refresh-table-configuration --user admin --password admin --tenantId 1
 ```
 
+### system-set-settings
+
+Ermöglicht das setzen von Admin Center Einstellungen über die CLI.
+
+**Optionen:**
+
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -s                   | --settings=[SETTINGS] | JSON mit Key = Values z.B.: {"proxy.active": 1, [...]}                                           |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+
+**Beispiel zur Verwendung**
+
+```shell
+sudo -u www-data php system-set-settings -u admin -p admin --settings="{\"proxy.active\":1,\"proxy.host\":\"http://myproxy.net\",\"unknown-setting\": 4}" -n
+```
+
 ### tenant-create
 
-Erstellt einen neuen Mandanten
+Erstellt einen neuen Mandanten.
 
 **Optionen:**
 
@@ -1486,8 +1540,8 @@ Erstellt einen neuen Mandanten
 | -h                   | --help                          | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                         | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version                       | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi               | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction                | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi             | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose                       | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1510,8 +1564,8 @@ Deaktiviert einen existierenden Mandaten.
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1534,8 +1588,8 @@ Aktiviert einen bestehenden Mandanten.
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1555,8 +1609,8 @@ Listet alle bestehenden Mandanten auf.
 | -h                   | --help               | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet              | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version            | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction     | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi  | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction     | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose            | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1579,8 +1633,8 @@ Entfernt einen bestehenden Mandanten
 | -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction      | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1602,8 +1656,8 @@ Deinstalliert die genutzte i-doit Installation
 | -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction      | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1627,8 +1681,8 @@ Update von i-doit installieren.
 | -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction      | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
@@ -1653,8 +1707,8 @@ Sendet E-Mails zu Workflows und erstellt Aufgaben aus Checklisten.
 | -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
 | -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
 | -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi /--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction       | Deaktiviert sämtliche interaktive Fragen der i-doit Console                                      |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
 | -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**

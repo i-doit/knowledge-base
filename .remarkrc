@@ -2,6 +2,10 @@
     "settings": {},
     "plugins": [
         "lint",
+        [
+            "remark-lint-no-undefined-references",
+                { "allow": [ "[Task]", "Task", "[Improvement]", "[Bug]", "[Change]" ] }
+        ],
         "lint-no-empty-sections",
         [
             "remark-frontmatter",

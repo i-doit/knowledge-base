@@ -2,7 +2,7 @@
 title: cmdb.ip_search
 description: cmdb.ip_search
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -31,7 +31,7 @@ Get all Layer3 Objects (except Global v4/v6, where the IP is in the address rang
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example:
+### Example
 
 === "Request body"
 
@@ -53,4 +53,3 @@ Get all Layer3 Objects (except Global v4/v6, where the IP is in the address rang
     ```json
     Placeholder
     ```
-

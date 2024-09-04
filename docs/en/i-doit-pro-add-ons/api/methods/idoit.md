@@ -2,7 +2,7 @@
 title: idoit
 description: idoit
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -355,7 +355,7 @@ JSON key **result** contains a JSON object.
     }
     ```
 
-### idoit.logout
+## idoit.logout
 
 Close current session
 
@@ -427,14 +427,15 @@ See method [idoit.login](#idoitlogin) before.
 
 JSON key **result** contains an array of JSON objects. Each object contains a search result.
 
-| Key            | JSON data type | Description                                        |
-| -------------- | -------------- | -------------------------------------------------- |
-| **documentID** | String         | Identifier                                         |
-| **key**        | String         | Attribute which relates to query                   |
-| **value**      | String         | Value which relates to query                       |
-| **type**       | String         | [Add-on](../index.md) or core feature              |
-| **link**       | String         | Relative URL which directly links to search result |
-| **score**      | Integer        | Scoring (deprecated)                               |
+| Key            | JSON data type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| -------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **documentID** | String         | Identifier                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **key**        | String         | Attribute which relates to query                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **value**      | String         | Value which relates to query                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **type**       | String         | [Add-on](../index.md) or core feature                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **link**       | String         | Relative URL which directly links to search result                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **score**      | Integer        | Scoring (deprecated)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **status**     | String         | Object status:<br><br>***C__RECORD_STATUS__BIRTH  <br>    Status-ID = 1  <br>    Title =****Unfinished**<br>*   **C__RECORD_STATUS__NORMAL  <br>    Status-ID = 2**  <br>    **Title = ****Normal**<br>*   **C__RECORD_STATUS__ARCHIVED  <br>    Status-ID = 3**  <br>    **Title =** **Archived**<br>*   **C__RECORD_STATUS__DELETED  <br>    Status-ID = 4**  <br>    **Title =** **Deleted**<br>*   **C__RECORD_STATUS__TEMPLATE  <br>    Status-ID = 6**  <br>    **Title =** **Template**<br>*   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE  <br>    Status-ID = 7**  <br>    **Title =** **Mass change template** |
 
 ### Example
 

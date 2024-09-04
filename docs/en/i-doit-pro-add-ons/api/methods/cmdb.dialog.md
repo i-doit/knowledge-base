@@ -2,7 +2,7 @@
 title: Namespace cmdb.dialog
 description: cmdb.dialog
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 
@@ -12,7 +12,7 @@ lang: en
 
 ## cmdb.dialog.read
 
-Read dialog informations.
+Read dialog information.
 
 ### Request parameters
 
@@ -27,7 +27,7 @@ JSON key **result** contains an array of JSON objects.
 
 | **Key**   | **JSON data type** | **Description**                  |
 | --------- | ------------------ | -------------------------------- |
-| **id**    | Integer            | Identifier                       |
+| **id**    | String             | Identifier                       |
 | **const** | String             | **Constant of Dialog Attribute** |
 | **title** | String             | Title of the Attribute           |
 

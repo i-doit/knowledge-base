@@ -2,7 +2,7 @@
 title: cmdb.object_types
 description: cmdb.object_types
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 

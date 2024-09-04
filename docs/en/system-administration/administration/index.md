@@ -19,3 +19,6 @@ The administration is accessed via the gear wheel icon in the top right corner. 
 -   [Logbook](./logbook.md)
 -   [Import and interfaces](./import-and-interfaces/index.md)
 -   [Add-ons](add-ons/index.md)
+-   [Two-factor Authentication](two-factor-authentication.md)
+-   [Download Center](download-center.md)
+-   [Contract details](contract-details.md)

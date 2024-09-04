@@ -2,7 +2,7 @@
 title: cmdb.object_type_groups
 description: cmdb.object_type_groups
 icon: material/api
-status: new
+#status: updated
 lang: en
 ---
 

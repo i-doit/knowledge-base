@@ -1,4 +1,10 @@
-# Upgrade zu MySQL 5.6 oder MariaDB 10.0
+---
+title: Upgrade zu MySQL 5.6 oder MariaDB 10.0
+description: Upgrade zu MySQL 5.6 oder MariaDB 10.0
+icon: fontawesome/brands/linux
+status:
+lang: de
+---
 
 Ab der Version 1.7 von _i-doit_ ändern sich die [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) für das Datenbank-Backend. Wurde in der Version 1.6 noch mindestens MySQL 5.5 oder MariaDB 5.5 vorausgesetzt, sind es ab Version 1.7 mindestens MySQL 5.6 oder MariaDB 10.0. Dies bedingt unter Umständen Änderungen an denjenigen [Betriebssystemen](../installation/manuelle-installation/index.md), die von synetics unterstützt werden. Dieser Artikel beschreibt die wichtigsten Details, damit _i-doit_ auch weiterhin vollständig funktioniert.
 
@@ -8,23 +14,23 @@ Um festzustellen, welche Version im Einsatz ist, kann man folgenden Befehl auf d
 
 Es existieren pro Betriebssystem teilweise mehrere Upgrade-Pfade. Wir empfehlen daher diejenigen, die aus unserer Sicht den geringsten Einfluss auf das System haben:
 
-| Betriebssystem | Version | Altes Datenbank-Backend | Neues Datenbank-Backend |
-| --- | --- | --- | --- |
-| Debian GNU/Linux | 8   | MySQL 5.5, MariaDB 10.0 | MariaDB 10.0 |
-|     | 7.8 | MySQL 5.5 | MariaDB 10.0 |
-| Ubuntu | 14.04 LTS | MySQL 5.5, MySQL 5.6, MariaDB 5.5 | MySQL 5.6 |
-|     | 12.04 LTS | MySQL 5.5 | MariaDB 10.0 |
-| Red Hat Enterprise Linux (RHEL) | 7.1 | MariaDB 5.5 | MariaDB 10.0 |
-|     | 6.7 | MySQL 5.1 | MariaDB 10.0 |
-| SUSE Linux Enterprise Server (SLES) | 12  | MariaDB 10.0 | MariaDB 10.0 |
-| Windows Server | 2008/2012 | Je nach XAMPP-Version | MariaDB 10.0 |
+| Betriebssystem                      | Version   | Altes Datenbank-Backend           | Neues Datenbank-Backend |
+| ----------------------------------- | --------- | --------------------------------- | ----------------------- |
+| Debian GNU/Linux                    | 8         | MySQL 5.5, MariaDB 10.0           | MariaDB 10.0            |
+|                                     | 7.8       | MySQL 5.5                         | MariaDB 10.0            |
+| Ubuntu                              | 14.04 LTS | MySQL 5.5, MySQL 5.6, MariaDB 5.5 | MySQL 5.6               |
+|                                     | 12.04 LTS | MySQL 5.5                         | MariaDB 10.0            |
+| Red Hat Enterprise Linux (RHEL)     | 7.1       | MariaDB 5.5                       | MariaDB 10.0            |
+|                                     | 6.7       | MySQL 5.1                         | MariaDB 10.0            |
+| SUSE Linux Enterprise Server (SLES) | 12        | MariaDB 10.0                      | MariaDB 10.0            |
+| Windows Server                      | 2008/2012 | Je nach XAMPP-Version             | MariaDB 10.0            |
 
 !!! attention "Es ist absolut essentiell, dass die [Daten gesichert](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) werden, bevor Änderungen am System vorgenommen werden. Da die Upgrade-Prozedur je nach Betriebssystem unterschiedlich lange andauern kann, sollten die Benutzer von _i-doit_ vorab informiert werden."
 
 Debian GNU/Linux 8
 ------------------
 
-Version 8 von [Debian GNU/Linux](../installation/manuelle-installation/debian.md) enthält in den Standardpaketen MySQL 5.5 und MariaDB 10.0. Sollte MySQL installiert sein, genügt es, das Paket für MariaDB zu installieren. Dadurch wird MySQL durch MariaDB ersetzt:
+Version 8 von Debian GNU/Linux enthält in den Standardpaketen MySQL 5.5 und MariaDB 10.0. Sollte MySQL installiert sein, genügt es, das Paket für MariaDB zu installieren. Dadurch wird MySQL durch MariaDB ersetzt:
 
     sudo apt-get update
     sudo apt-get install mariadb-server php5-mysqlnd
@@ -32,7 +38,7 @@ Version 8 von [Debian GNU/Linux](../installation/manuelle-installation/debian.md
 Debian GNU/Linux 7.8
 --------------------
 
-Version 7.8 von [Debian GNU/Linux](../installation/manuelle-installation/debian.md) enthält in den Standardpaketen MySQL 5.5 und kein MariaDB. Um MariaDB einzusetzen, kann das [offizielle Repository von MariaDB eingebunden](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=Debian&distro_release=wheezy--wheezy&version=10.0) werden. Vorsicht: Dritt-Repositories können das System beeinträchtigen. Durch die Installation von MariaDB wird MySQL ersetzt:
+Version 7.8 von Debian GNU/Linux enthält in den Standardpaketen MySQL 5.5 und kein MariaDB. Um MariaDB einzusetzen, kann das [offizielle Repository von MariaDB eingebunden](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=Debian&distro_release=wheezy--wheezy&version=10.0) werden. Vorsicht: Dritt-Repositories können das System beeinträchtigen. Durch die Installation von MariaDB wird MySQL ersetzt:
 
     sudo apt-get update
     sudo apt-get install python-software-properties
@@ -132,15 +138,15 @@ Sollte [Windows Server 2008/2012](../installation/manuelle-installation/microsof
 
 Sollte nicht bereits eine XAMPP-Version mit MariaDB 10.0 zum Einsatz kommen, sind folgende Schritte nötig:
 
-1.  Kopieren des XAMPP-Verzeichnisses, meist unter C:\xampp\
-2.  Aktuelle Version von XAMPP auf der [offiziellen Seite](https://www.apachefriends.org/) herunterladen
-3.  Bisherige XAMPP-Version deinstallieren
-4.  XAMPP-Verzeichnis löschen
-5.  Neue XAMPP-Version in dasselbe Verzeichnis installieren
-6.  Verzeichnisse htdocs und mysql\data aus der Kopie des XAMPP-Verzeichnisses wiederherstellen, vorhandene Dateien dabei nicht überschreiben
-7.  Konfigurations-Dateien anpassen, sodass sie den [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) genügen
-8.  Apache Webserver und MariaDB starten
-9.  Tests durchführen
+1. Kopieren des XAMPP-Verzeichnisses, meist unter C:\xampp\
+2. Aktuelle Version von XAMPP auf der [offiziellen Seite](https://www.apachefriends.org/) herunterladen
+3. Bisherige XAMPP-Version deinstallieren
+4. XAMPP-Verzeichnis löschen
+5. Neue XAMPP-Version in dasselbe Verzeichnis installieren
+6. Verzeichnisse htdocs und mysql\data aus der Kopie des XAMPP-Verzeichnisses wiederherstellen, vorhandene Dateien dabei nicht überschreiben
+7. Konfigurations-Dateien anpassen, sodass sie den [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) genügen
+8. Apache Webserver und MariaDB starten
+9. Tests durchführen
 
 Troubleshooting
 ---------------

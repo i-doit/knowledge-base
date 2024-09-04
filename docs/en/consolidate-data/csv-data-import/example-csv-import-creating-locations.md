@@ -1,5 +1,7 @@
 # Example of CSV import - Creating Locations
 
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
 Today we will take a look at a practical example of CSV import.
 Our use case is the automatic creation of locations within i-doit using a CSV import.
 
@@ -7,10 +9,10 @@ Our use case is the automatic creation of locations within i-doit using a CSV im
 
 We need the following information to create the individual objects:
 
--  The self-created object type Floor/Basement with the object type constant →  C\_\_OBJECT\_TYPE\_\_FLOOR.
--  Object name → the name of the building, floor or room
--  Location → under which location the object should be located
--  Object type → what type of object it should be
+-   The self-created object type Floor/Basement with the object type constant →  C\_\_OBJECT\_TYPE\_\_FLOOR.
+-   Object name → the name of the building, floor or room
+-   Location → under which location the object should be located
+-   Object type → what type of object it should be
 
 Example CSV file for this import:
 
@@ -19,7 +21,6 @@ Example CSV file for this import:
 The structure of the CSV looks as follows:
 
 ??? example "Import Location.csv"
-
     ```text
     Object title;Location;Object type
     HEADQUARTER;Root location;C__OBJTYPE__BUILDING

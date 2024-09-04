@@ -5,24 +5,30 @@
     "MD007": {
         "indent": 4
     },
+    "MD009": true,
+    "MD012": true,
     "MD013": false,
-    "MD036": false,
     "MD024": false,
+    "MD022": true,
     "MD025": false,
+    "MD027": true,
     "MD028": false,
     "MD030": {
         "ul_single": 3,
         "ul_multi": 3
     },
+    "MD031": true,
+    "MD032": true,
     "MD033": {
         "allowed_elements": [
             "br",
             "a"
         ]
     },
+    "MD036": false,
     "MD038": false,
-    "MD046": {
-        "style": "fenced"
-    },
-    "MD051": false
+    "MD039": true,
+    "MD046": false,
+    "MD051": false,
+    "MD053": true
 }

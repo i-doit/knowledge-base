@@ -6,7 +6,7 @@ Wenn man sich anfangs mit der Struktur von _i-doit_ beschäftigt, stellt man ers
 *   [Massenänderung](massenaenderung.md)
 *   [Objekte duplizieren](objekte-duplizieren.md)
 *   [Templates](templates.md)
-*   [Validierung und Pflichtfelder](validierung-und-pflichtfelder.md)
+*   [Attributvalidierung und Pflichtfelder](attributvalidierung-und-pflichtfelder.md)
 *   [Rechteverwaltung](rechteverwaltung/index.md)
 *   [Suche](suche.md)
 *   [Objektsperre](objektsperre.md)
