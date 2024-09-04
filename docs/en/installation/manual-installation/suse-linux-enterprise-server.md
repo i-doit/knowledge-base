@@ -1,12 +1,12 @@
 ---
-title: Suse Linux Enterprise Server 15 SP6
-description: Suse Linux Enterprise Server 15 SP6
+title: SUSE Linux Enterprise Server 15 SP6
+description: SUSE Linux Enterprise Server 15 SP6
 icon: simple/suse
 status:
 lang: en
 ---
 
-!!! note "Stand i-doit **32**"
+!!! note "Tested with i-doit **32**"
 
 We explain in a few steps which packages to install and configure in this article.
 
@@ -14,7 +14,7 @@ We explain in a few steps which packages to install and configure in this articl
 
 The general [system requirements](../system-requirements.md) apply.
 
-This article refers to [**Suse Linux Enterprise Server 15 SP6**](https://www.suse.com/solutions/enterprise-linux/). In order to find out which version is used you can carry out the following command:
+This article refers to [**SUSE Linux Enterprise Server 15 SP6**](https://www.suse.com/solutions/enterprise-linux/). In order to find out which version is used you can carry out the following command:
 
 ```shell
 cat /etc/os-release
@@ -30,7 +30,7 @@ uname -m
 
 ## Installation of the Packages
 
-The default package repositories of Suse Linux Enterprise Server (SLES) already supply the most packages to install:
+The default package repositories of SUSE Linux Enterprise Server (SLES) already supply the most packages to install:
 
 -   The **Apache** HTTP server 2.4
 -   the script language **PHP** 8.2
@@ -120,7 +120,7 @@ First, a new file is created and filled with the necessary settings:
 sudo vi /etc/php8/conf.d/i-doit.ini
 ```
 
-!!! example “This file contains the following content specified by us. For more information about the parameters, have a look at [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php)”
+!!! example "This file contains the following content specified by us. For more information about the parameters, have a look at [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php)"
 
 This file contains the following content:
 
@@ -151,10 +151,10 @@ mysqli.default_socket = /var/run/mysql/mysql.sock
 ```
 
 The `memory_limit` must be increased if necessary, e.g. for very large reports or extensive documents.
-The value (in seconds) of **session.gc_maxlifetime** should be greater than or equal to the **session timeout** in the [system settings](../systemsettings.md) of i-doit.
-The **date.timezone** parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/de/timezones.php)).
+The value (in seconds) of `session.gc_maxlifetime` should be greater than or equal to the **session timeout** in the [system settings](system-settings.md) of i-doit.
+The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/de/timezones.php)).
 
-### Apache2 HTTP Server
+### Apache HTTP server
 
 A new VHost configuration is created:
 
@@ -318,7 +318,9 @@ ServerName i-doit
 </VirtualHost>
 ```
 
-i-doit includes differing Apache settings in a file with the name **.htaccess**. The configurations contained there must be checked after an update and changes must be adopted in the VHost configuration.
+!!! note "The configurations contained there must be checked after an update and changes must be adopted in the VHost configuration."
+
+i-doit includes differing Apache settings in a file with the name **.htaccess**.
 
 With the next step you activate the necessary Apache modules **php8**, **rewrite** and **mod_access_compat**:
 
@@ -417,13 +419,13 @@ Finally, MariaDB is restarted:
 sudo systemctl restart mysql
 ```
 
-and the firewall allows connections via **HTTP**:
+and connections via **HTTP** are permitted via the firewall:
 
 ```sh
 sudo firewall-cmd --permanent --add-service=http && sudo firewall-cmd --reload
 ```
 
-Before i-doit can now be accessed, **Apparmor**, for PHP-FPM, must either be **configured**, **disabled** or set to the so-called **complain** mode.
+Before i-doit can now be accessed, [Apparmor](https://apparmor.net/), for PHP-FPM, must either be **configured**, **disabled** or set to the so-called **complain** mode.
 In this guide we use the complain mode, which should be configured correctly afterwards:
 
 ```sh

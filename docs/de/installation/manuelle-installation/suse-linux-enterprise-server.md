@@ -1,12 +1,12 @@
 ---
-title: Suse Linux Enterprise Server 15 SP6
-description: Suse Linux Enterprise Server 15 SP6
+title: SUSE Linux Enterprise Server 15 SP6
+description: SUSE Linux Enterprise Server 15 SP6
 icon: simple/suse
 status:
 lang: de
 ---
 
-!!! note "Stand i-doit **32**"
+!!! note "Getestet mit i-doit **32**"
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
@@ -153,10 +153,10 @@ mysqli.default_socket = /var/run/mysql/mysql.sock
 ```
 
 Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
-Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
-Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
+Der Wert (in Sekunden) von `session.gc_maxlifetime` sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](systemeinstellungen.md) von i-doit sein.
+Der Parameter `date.timezone` sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
-### Apache2 HTTP Server
+### Apache HTTP Server
 
 Ein wird eine neue VHost-Konfiguration erzeugt:
 
@@ -320,7 +320,9 @@ ServerName i-doit
 </VirtualHost>
 ```
 
-i-doit liefert abweichende Apache-Einstellungen in der **.htaccess** Datei mit. Die dort enthaltenen Konfigurationen müssen nach einem Update geprüft und Änderungen in der VHost-Konfiguration übernommen werden.
+!!! note "Die dort enthaltenen Konfigurationen müssen nach einem Update geprüft und Änderungen in der VHost-Konfiguration übernommen werden."
+
+i-doit liefert abweichende Apache-Einstellungen in der **.htaccess** Datei mit.
 
 Im nächsten Schritt werden die nötigen Apache2 HTTP Server Module **php8**, **rewrite** und **mod_access_compat** aktiviert:
 
@@ -419,13 +421,13 @@ Abschließend wird MariaDB neugestartet:
 sudo systemctl restart mysql
 ```
 
-und der Firewall Verbindungen via **HTTP** erlaubt:
+und über die Firewall werden Verbindungen via **HTTP** erlaubt:
 
 ```sh
 sudo firewall-cmd --permanent --add-service=http && sudo firewall-cmd --reload
 ```
 
-Bevor i-doit nun erreichbar ist, muss **Apparmor**, für PHP-FPM, entweder **konfiguriert**, **deaktiviert** oder in den sogenannten **complain** modus versetzt werden.
+Bevor i-doit nun erreichbar ist, muss [Apparmor](https://apparmor.net/), für PHP-FPM, entweder **konfiguriert**, **deaktiviert** oder in den **complain** modus versetzt werden.
 In dieser Anleitung nutzen wir den complain Modus, sollte im Nachgang richtig konfiguriert werden:
 
 ```sh
