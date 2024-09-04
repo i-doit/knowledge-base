@@ -1,4 +1,12 @@
-# SUSE Linux Enterprise Server (SLES)
+---
+title: Suse Linux Enterprise Server 15 SP6
+description: Suse Linux Enterprise Server 15 SP6
+icon: simple/suse
+status:
+lang: de
+---
+
+!!! note "Stand i-doit **32**"
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
@@ -22,9 +30,9 @@ uname -m
 
 ## Installation der Pakete
 
-Die Standard-Repositories von SUSE Linux Enterprise Server (SLES) bringen bereits alle nötigen Pakete mit, um
+Die Standard-Repositories von SUSE Linux Enterprise Server (SLES) bringen bereits fast alle nötigen Pakete mit, um
 
--   den **Apache** Webserver 2.4,
+-   den **Apache** HTTP Server 2.4,
 -   die Script-Sprache **PHP** 8.2,
 -   das Datenbankmanagementsystem **MariaDB** 10.11 und
 -   den Caching-Server **memcached**
@@ -56,7 +64,7 @@ sudo zypper refresh && sudo zypper update
 Nun werden die von i-doit benötigten Pakete installiert:
 
 ```sh
-sudo zypper install apache2 apache2-mod_php8 mariadb-server mariadb-client memcached php8 php8-{bz2,ctype,bcmath,curl,gd,gettext,fileinfo,fpm,ldap,mbstring,memcached,mysql,odbc,opcache,openssl,phar,posix,pgsql,pdo,snmp,soap,sockets,sqlite,zip,zlib}
+sudo zypper install vim apache2 apache2-mod-php8 mariadb-server mariadb-client memcached php8 php8-{bz2,ctype,bcmath,curl,gd,gettext,fileinfo,fpm,ldap,mbstring,memcached,mysql,odbc,opcache,openssl,phar,posix,pgsql,pdo,snmp,soap,sockets,sqlite,zip,zlib}
 ```
 
 Damit die notwendigen Dienste beim Booten gestartet werden, ist dieser Befehl erforderlich:
@@ -71,13 +79,7 @@ Anschließend erfolgt der Start der Dienste:
 sudo systemctl start apache2 mysql memcached
 ```
 
-Weiterhin wird der Standard-Port **80** von HTTP über die Firewall erlaubt. Diese muss nach der Anpassung neu gestartet werden:
-
-```sh
-sudo firewall-cmd --zone=public --add-port=80/tcp --permanent && sudo firewall-cmd --reload
-```
-
-!!! info "Für **HTTPS** müssen weitere Schritte durchgeführt werden die hier nicht behandelt werden, siehe [Sicherheit und Schutz](../../../wartung-und-betrieb/sicherheit-und-schutz.md)"
+!!! info "Für **HTTPS** müssen weitere Schritte durchgeführt werden die hier nicht behandelt werden, siehe [Sicherheit und Schutz](../../wartung-und-betrieb/sicherheit-und-schutz.md)"
 
 ## Konfiguration
 
@@ -165,12 +167,13 @@ sudo vi /etc/apache2/vhosts.d/i-doit.conf
 In dieser Datei wird die VHost-Konfiguration angepasst und gespeichert:
 
 ```conf
+ServerName i-doit
 <VirtualHost *:80>
     ServerAdmin i-doit@example.net
 
     DirectoryIndex index.php
-    DocumentRoot /srv/www/htdocs/
-    <Directory /srv/www/htdocs>
+    DocumentRoot /srv/www/htdocs/i-doit
+    <Directory /srv/www/htdocs/i-doit>
     ## See https://httpd.apache.org/docs/2.4/mod/core.html#allowoverride
     AllowOverride None
 
@@ -315,14 +318,11 @@ In dieser Datei wird die VHost-Konfiguration angepasst und gespeichert:
         </If>
     </FilesMatch>
 </VirtualHost>
-
-
-
 ```
 
-i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Damit diese Einstellungen berücksichtigt werden, ist die Einstellung **AllowOverride All** nötig.
+i-doit liefert abweichende Apache-Einstellungen in der **.htaccess** Datei mit. Die dort enthaltenen Konfigurationen müssen nach einem Update geprüft und Änderungen in der VHost-Konfiguration übernommen werden.
 
-Im nächsten Schritt werden die nötigen Apache2 HTTP Server Module **php8**, **rewrite** und **mod_access_compat** aktiviert sowie der Apache HTTP Server neu gestartet:
+Im nächsten Schritt werden die nötigen Apache2 HTTP Server Module **php8**, **rewrite** und **mod_access_compat** aktiviert:
 
 ```sh
 sudo a2enmod proxy && sudo a2enmod proxy_fcgi && sudo a2enmod php8 && sudo a2enmod rewrite && sudo a2enmod mod_access_compat
@@ -338,7 +338,7 @@ sudo systemctl restart apache2 php-fpm
 
 ### MariaDB
 
-Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. Den Empfehlungen sollte gefolgt werden. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
+Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. **Den Empfehlungen sollte gefolgt werden sollten**. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
 
 ```sh
 sudo mysql_secure_installation
@@ -419,10 +419,17 @@ Abschließend wird MariaDB neugestartet:
 sudo systemctl restart mysql
 ```
 
-und der Firewall Verbindungen ia **HTTP** erlaubt:
+und der Firewall Verbindungen via **HTTP** erlaubt:
 
 ```sh
-sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --permanent --add-service=http && sudo firewall-cmd --reload
+```
+
+Bevor i-doit nun erreichbar ist, muss **Apparmor**, für PHP-FPM, entweder **konfiguriert**, **deaktiviert** oder in den sogenannten **complain** modus versetzt werden.
+In dieser Anleitung nutzen wir den complain Modus, sollte im Nachgang richtig konfiguriert werden:
+
+```sh
+sudo aa-complain '/etc/apparmor.d/php-fpm'
 ```
 
 ## Nächster Schritt
