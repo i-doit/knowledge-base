@@ -25,7 +25,9 @@ Created templates can be used to create documents for objects in the documentati
 | Command     | Interne Beschreibung                                                     |
 | ----------- | ------------------------------------------------------------------------ |
 | [compile-documents](#compile-documents)                                   | Allows to compile one or multiple documents|
-| [documents](#documents)                                                   | Create and export documents   |
+| [documents](#documents-1)                                                   | Create and export documents   |
+
+!!! info "These commands are only available if the Documents add-on is installed"
 
 ### compile-documents
 

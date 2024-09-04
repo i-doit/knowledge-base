@@ -53,13 +53,12 @@ Selbstverständlich lässt sich der Export der Dateien auch über die i-doit [Co
 
 | Command     | Interne Beschreibung                                                     |
 | ----------- | ------------------------------------------------------------------------ |
-| [nagios-export](#nagios-export) | Nagios-Konfiguration exportieren |
-| [nagios-ndoutils](#nagios-ndoutils) | Ist-Zustand aus Nagios ins Logbuch schreiben |
+| [nagios-export](#nagios-export) | Exportiert die Nagios-Einstellungen und i-doit Objekte in Nagios-Konfigurationsdateien |
+| [nagios-ndoutils](#nagios-ndoutils) | Importiert Monitoring Statusänderungen aus den NDOUtils in das i-doit Logbuch |
+
+!!! info "Diese Befehle sind erst nach Installation des Nagios Add-ons verfügbar."
 
 ### nagios-export
-
-!!!info
-    Dieser Befehl ist erst nach installation des Nagios Add-ons verfügbar.
 
 Exportiert die Nagios-Einstellungen und i-doit Objekte in Nagios-Konfigurationsdateien.
 
@@ -87,9 +86,6 @@ sudo -u www-data php console.php nagios-export --user admin --password admin --t
 ```
 
 ### nagios-ndoutils
-
-!!!info
-    Dieser Befehl ist erst nach installation des Nagios Add-ons verfügbar.
 
 Importiert Monitoring Statusänderungen aus den NDOUtils in das i-doit Logbuch.
 

@@ -25,11 +25,13 @@ Erstellte Vorlagen können genutzt werden, um für Objekte in der Dokumentation 
 | Command     | Interne Beschreibung                                                     |
 | ----------- | ------------------------------------------------------------------------ |
 | [compile-documents](#compile-documents) | Erlaubt es dir ein oder mehrere Dokumente zu kompilieren |
-| [documents](#documents) | Dokumente und Revisionen erzeugen und exportieren |
+| [documents](#documents-1) | Dokumente und Revisionen erzeugen und exportieren |
+
+!!! info "Diese Befehle sind erst nach Installation des Documents-Add-ons verfügbar."
 
 ### compile-documents
 
-Kompiliert Dokumente
+Erlaubt es dir ein oder mehrere Dokumente zu kompilieren
 
 **Optionen:**
 

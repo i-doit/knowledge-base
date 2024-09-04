@@ -139,7 +139,9 @@ Das manuelle Versenden von E-Mails (Button **E-Mails abschicken** unter **Extras
 
 | Command     | Interne Beschreibung                                                     |
 | ----------- | ------------------------------------------------------------------------ |
-| [maintenance](#maintenance) | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs Add-on |
+| [maintenance](#maintenance-1) | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs-Add-on |
+
+!!! info "Dieser Befehl ist erst nach Installation des Maintenance Add-ons verfügbar."
 
 ### maintenance
 

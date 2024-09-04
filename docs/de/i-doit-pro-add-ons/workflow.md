@@ -48,11 +48,12 @@ Die Bezeichnung und der Schlüssel bei einem neuen Workﬂow-Typen kann frei gew
 | Command                                 | Interne Beschreibung                                                                          |
 | --------------------------------------- | --------------------------------------------------------------------------------------------- |
 | [workflows-process](#workflows-process) | Verarbeitet alle Arbeitsabläufe, versendet E-Mails und erstellt neue Aufgaben aus Checklisten |
-| [system-maintenancecontract](#system-maintenancecontract) | E-Mail für maintenance contracts senden (Funktion veraltet. Bitte verwenden Sie [notifications-send](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#notifications-send)) |
+
+!!! info "Dieser Befehl ist erst nach Installation des Workflow Add-ons verfügbar."
 
 ### workflows-process
 
-Sendet E-Mails zu Workflows und erstellt Aufgaben aus Checklisten.
+Verarbeitet alle Arbeitsabläufe, versendet E-Mails und erstellt neue Aufgaben aus Checklisten
 
 **Optionen:**
 

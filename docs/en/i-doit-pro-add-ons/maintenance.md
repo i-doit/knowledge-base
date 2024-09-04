@@ -129,7 +129,9 @@ Thus, you can automate the process and do not have to send e-mails manually anym
 
 | Command | Internal system description  |
 | ------- | -------- |
-| [maintenance](#maintenance)   | Sends notifications of scheduled maintenance from the Maintenance Add-on                           |
+| [maintenance](#maintenance-1)   | Sends notifications of scheduled maintenance from the Maintenance Add-on                           |
+
+!!! info "This command is only available if the Maintenance add-on is installed"
 
 ### maintenance
 

@@ -59,7 +59,6 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
       import-xml                          Imports files formatted in the i-doit XML syntax
       jdisc-create-server                 Creates a JDisc server, based on given input
       install                             Install the i-doit application
-      jdisc-create-server                 Erzeugt einen JDisc Server, basierend auf einer gegebenen Eingabe
       ldap-sync                           Synchronizes LDAP user accounts with i-doit user objects
       ldap-syncdn                         Synchronizes LDAP user DN attributes with i-doit user objects (Only needs to be run when migrating between different LDAP sources)
       license-add                         Add license into i-doit

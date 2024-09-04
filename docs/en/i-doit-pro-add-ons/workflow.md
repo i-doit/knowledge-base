@@ -50,11 +50,12 @@ Workflows can also be displayed in the object via the **Workflows** category. Th
 | Command                                                   | Internal system description                                                                       |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | [workflows-process](#workflows-process)                   | Processes all workflows, sends e-mails and creates new tasks from checklists                      |
-| [system-maintenancecontract](#system-maintenancecontract) | Send e-mail for maintenance contracts (Function deprecated. Please use [notifications-send](../automation-and-integration/cli/console/options-and-parameters-cli.md#notifications-send)) |
+
+!!! info "This command is only available if the Workflow add-on is installed"
 
 ### workflows-process
 
-Sends emails about workflows and creates tasks from checklists.
+Processes all workflows, sends e-mails and creates new tasks from checklists
 
 **Options:**
 

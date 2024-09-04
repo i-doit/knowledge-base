@@ -55,13 +55,12 @@ The export of the files can be automated via the [controller](../cli/index.md) o
 
 | Command                             | Internal system description               |
 | ----------------------------------- | ----------------------------------------- |
-| [nagios-export](#nagios-export)     | Export Nagios configuration               |
-| [nagios-ndoutils](#nagios-ndoutils) | Write actual state from Nagios to logbook |
+| [nagios-export](#nagios-export)     | Exports the Nagios settings and i-doit objects to Nagios configuration files               |
+| [nagios-ndoutils](#nagios-ndoutils) | Imports monitoring status changes from the NDOUtils into the i-doit logbook. |
+
+!!! info "These commands are only available if the Nagios add-on is installed"
 
 ### nagios-export
-
-!!!info
-    This Command is only available if the Nagios Add-on is installed
 
 Exports the Nagios settings and i-doit objects to Nagios configuration files
 
@@ -89,9 +88,6 @@ sudo -u www-data php console.php nagios-export --user admin --password admin --t
 ```
 
 ### nagios-ndoutils
-
-!!!info
-    This Command is only available if the Nagios Add-on is installed
 
 Imports monitoring status changes from the NDOUtils into the i-doit logbook.
 
