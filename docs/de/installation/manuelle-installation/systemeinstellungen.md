@@ -2,11 +2,11 @@
 
 Für die Konfiguration des Betriebssystems empfehlen wir eine Reihe von Einstellungen bezogen auf PHP, Apache Webserver und MySQL/MariaDB. Diese fußen auf den [Systemvoraussetzungen](../systemvoraussetzungen.md) für i-doit. Die Einstellungen unterscheiden sich je nach Betriebssystem, weswegen auf die jeweiligen Artikel verwiesen wird:
 
-*   [Debian 12 GNU/Linux](debian12.md)
+*   [Debian 12 GNU/Linux](debian/index.md)
 *   [Red Hat Enterprise Linux (RHEL)](red-hat-enterprise-linux/index.md)
-*   [Suse Linux Enterprise Server (SLES)](suse-linux-enterprise-server.md)
-*   [Ubuntu Linux](ubuntu-linux/index.md)
-*   [Microsoft Windows Server](./microsoft-windows-server/index.md)
+*   [SUSE Linux Enterprise Server (SLES)](suse/index.md)
+*   [Ubuntu Linux](ubuntu/index.md)
+*   [Microsoft Windows Server](microsoft-windows-server/index.md)
 
 ## PHP
 

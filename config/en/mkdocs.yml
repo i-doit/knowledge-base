@@ -237,12 +237,10 @@ nav:
       - Automatic Installation: installation/automatic-installation.md
       - Manual Installation:
           - installation/manual-installation/index.md
-          - Debian GNU/Linux:
-              - Debian 12: installation/manual-installation/debian12.md
+          - Debian GNU/Linux: installation/manual-installation/debian/index.md
           - Red Hat Enterprise Linux (RHEL): installation/manual-installation/red-hat-enterprise-linux/index.md
-          - SUSE Linux Enterprise Server (SLES):
-              - installation/manual-installation/suse-linux-enterprise-server.md
-          - Ubuntu GNU/Linux: installation/manual-installation/ubuntu-linux/index.md
+          - SUSE Linux Enterprise Server (SLES): installation/manual-installation/suse/index.md
+          - Ubuntu GNU/Linux: installation/manual-installation/ubuntu/index.md
           - Microsoft Windows Server:
               - installation/manual-installation/microsoft-windows-server/index.md
               - i-doit via XAMPP: installation/manual-installation/microsoft-windows-server/i-doit-via-xampp.md

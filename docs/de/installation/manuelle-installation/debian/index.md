@@ -11,11 +11,11 @@ Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenige
 !!! warning ""
     Wenn Sie Debian installieren, gelangen Sie schließlich zu einem "Softwareauswahl"-Dialog, der eine Liste von Kontrollkästchen enthält, um die Software auszuwählen, die Sie zunächst installieren möchten. Hier ist das Kontrollkästchen "Debian-Desktop-Umgebung" bereits angekreuzt. Wenn Sie dieses Kontrollkästchen deaktivieren und alle anderen Kontrollkästchen für die Desktop-Umgebung (GNOME, Xfce usw.) nicht ankreuzen, führt dies zu einer GUI-losen Installation:
 
-    [![Software selection](../../assets/images/de/installation/manuelle-installation/debian/gui.png)](../../assets/images/de/installation/manuelle-installation/debian/gui.png)
+    [![Software selection](../../../assets/images/de/installation/manuelle-installation/debian/gui.png)](../../../assets/images/de/installation/manuelle-installation/debian/gui.png)
 
 ## Systemvoraussetzungen
 
-Es gelten die allgemeinen [Systemvoraussetzungen](../systemvoraussetzungen.md).
+Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md).
 
 Dieser Artikel bezieht sich auf [**Debian GNU/Linux 12 "bookworm"**](https://debian.org/). Um zu bestimmen, welche Debian Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
@@ -88,7 +88,7 @@ mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
 Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.<br>
-Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](systemeinstellungen.md) von i-doit sein.<br>
+Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.<br>
 Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
 Anschließend werden die benötigten PHP-Module aktiviert und der Apache Webserver neu gestartet:
@@ -207,4 +207,4 @@ sudo systemctl restart mysql.service
 
 Das Betriebssystem ist nun vorbereitet, sodass i-doit installiert werden kann:
 
-[Weiter zu **Setup**](setup.md){ .md-button .md-button--primary }
+[Weiter zu **Setup**](../setup.md){ .md-button .md-button--primary }

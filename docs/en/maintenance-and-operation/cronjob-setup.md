@@ -96,7 +96,7 @@ Afterwards, the execution of the script is enabled:
 
         usermod -aG sudo "$(whoami)"
 
-    The option **Defaults targetpw**, which prevents this mechanism, is set under [SLES](../installation/manual-installation/suse-linux-enterprise-server.md). Therefore you have to comment out this option in the **/etc/sudoers** file.
+    The option **Defaults targetpw**, which prevents this mechanism, is set under [SLES](../installation/manual-installation/suse/index.md). Therefore you have to comment out this option in the **/etc/sudoers** file.
 
 From now on, every user can use it:
 
@@ -256,7 +256,7 @@ In order to intercept possible errors and to report them to the responsible syst
 
 !!! attention chronic under SLES
 
-    The **moreutils** package and thus the **chronic** tool are not part of [SLES](../installation/manual-installation/suse-linux-enterprise-server.md). Therefore you have to download **chronic** manually from the website:
+    The **moreutils** package and thus the **chronic** tool are not part of [SLES](../installation/manual-installation/suse/index.md). Therefore you have to download **chronic** manually from the website:
 
         wget https://git.joeyh.name/index.cgi/moreutils.git/plain/chronic
         chmod +x chronic
