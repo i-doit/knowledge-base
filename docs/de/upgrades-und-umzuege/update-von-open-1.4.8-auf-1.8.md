@@ -1,4 +1,10 @@
-# Update von i-doit open 1.4.8 auf 1.8
+---
+title: Update von i-doit open 1.4.8 auf 1.8
+description: Update von i-doit open 1.4.8 auf 1.8
+icon: fontawesome/brands/linux
+status:
+lang: de
+---
 
 Dieser Artikel geht auf die Besonderheiten ein, die bei einem Update der open-Variante von Version 1.4.8 zu 1.8 zu berücksichtigen sind.
 

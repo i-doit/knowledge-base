@@ -1,4 +1,10 @@
-# Upgrade von i-doit open auf pro
+---
+title: Upgrade von i-doit open auf pro
+description: Upgrade von i-doit open auf pro
+icon: fontawesome/brands/linux
+status:
+lang: de
+---
 
 Wie steigt man schnell und einfach von _i-doit open_ auf _i-doit pro_ mit erweiterten Funktionen um?
 

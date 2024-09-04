@@ -240,7 +240,8 @@ nav:
           - Debian GNU/Linux:
               - Debian 12: installation/manual-installation/debian12.md
           - Red Hat Enterprise Linux (RHEL): installation/manual-installation/red-hat-enterprise-linux/index.md
-          - Suse Linux Enterprise Server (SLES): installation/manual-installation/suse-linux-enterprise-server.md
+          - SUSE Linux Enterprise Server (SLES):
+              - installation/manual-installation/suse-linux-enterprise-server.md
           - Ubuntu GNU/Linux: installation/manual-installation/ubuntu-linux/index.md
           - Microsoft Windows Server:
               - installation/manual-installation/microsoft-windows-server/index.md
@@ -267,6 +268,7 @@ nav:
       - Update of i-doit open 1.4.8 to 1.8: upgrades-and-migrations/update-of-i-doit-open-1.4.8-to-1.8.md
       - Upgrade from i-doit open to i-doit pro: upgrades-and-migrations/upgrade-from-open-to-pro.md
       - Upgrade to MySQL 5.6 or MariaDB 10.0: upgrades-and-migrations/upgrade-to-mysql-5.6-or-mariadb-10.0.md
+      - Upgrade PHP and MariaDB for Windows: upgrades-and-migrations/update-php-and-mariadb-idoit-windows.md
   - Basics:
       - basics/index.md
       - Initial login: basics/initial-login.md

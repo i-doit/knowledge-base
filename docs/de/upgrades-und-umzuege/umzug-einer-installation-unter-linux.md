@@ -1,4 +1,10 @@
-# Umzug einer Installation unter GNU/Linux
+---
+title: Umzug einer Installation unter GNU/Linux
+description: Umzug einer Installation unter GNU/Linux
+icon: fontawesome/brands/linux
+status:
+lang: de
+---
 
 In diesem Artikel beschreiben wir die generelle Vorgehensweise, um eine Installation von i-doit von einem GNU/Linux zu einem anderen umzuziehen. Der Umzug umfasst sowohl die Datenbanken, als auch die Dateien und Verzeichnisse.
 
