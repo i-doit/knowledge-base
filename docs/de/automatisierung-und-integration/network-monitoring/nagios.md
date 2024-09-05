@@ -51,10 +51,10 @@ Selbstverständlich lässt sich der Export der Dateien auch über die i-doit [Co
 
 ## CLI Console Commands und Optionen
 
-| Command     | Interne Beschreibung                                                     |
-| ----------- | ------------------------------------------------------------------------ |
-| [nagios-export](#nagios-export) | Exportiert die Nagios-Einstellungen und i-doit Objekte in Nagios-Konfigurationsdateien |
-| [nagios-ndoutils](#nagios-ndoutils) | Importiert Monitoring Statusänderungen aus den NDOUtils in das i-doit Logbuch |
+| Command                             | Interne Beschreibung                                                                   |
+| ----------------------------------- | -------------------------------------------------------------------------------------- |
+| [nagios-export](#nagios-export)     | Exportiert die Nagios-Einstellungen und i-doit Objekte in Nagios-Konfigurationsdateien |
+| [nagios-ndoutils](#nagios-ndoutils) | Importiert Monitoring Statusänderungen aus den NDOUtils in das i-doit Logbuch          |
 
 !!! info "Diese Befehle sind erst nach Installation des Nagios Add-ons verfügbar."
 

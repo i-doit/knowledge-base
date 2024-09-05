@@ -47,9 +47,9 @@ Workflows can also be displayed in the object via the **Workflows** category. Th
 
 ## CLI console commands and options
 
-| Command                                                   | Internal system description                                                                       |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| [workflows-process](#workflows-process)                   | Processes all workflows, sends e-mails and creates new tasks from checklists                      |
+| Command                                 | Internal system description                                                  |
+| --------------------------------------- | ---------------------------------------------------------------------------- |
+| [workflows-process](#workflows-process) | Processes all workflows, sends e-mails and creates new tasks from checklists |
 
 !!! info "This command is only available if the Workflow add-on is installed"
 

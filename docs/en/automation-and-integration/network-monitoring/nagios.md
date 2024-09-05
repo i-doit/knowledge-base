@@ -53,9 +53,9 @@ The export of the files can be automated via the [controller](../cli/index.md) o
 
 ## CLI console commands and options
 
-| Command                             | Internal system description               |
-| ----------------------------------- | ----------------------------------------- |
-| [nagios-export](#nagios-export)     | Exports the Nagios settings and i-doit objects to Nagios configuration files               |
+| Command                             | Internal system description                                                  |
+| ----------------------------------- | ---------------------------------------------------------------------------- |
+| [nagios-export](#nagios-export)     | Exports the Nagios settings and i-doit objects to Nagios configuration files |
 | [nagios-ndoutils](#nagios-ndoutils) | Imports monitoring status changes from the NDOUtils into the i-doit logbook. |
 
 !!! info "These commands are only available if the Nagios add-on is installed"

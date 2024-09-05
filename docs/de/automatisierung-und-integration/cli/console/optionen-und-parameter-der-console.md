@@ -8,16 +8,16 @@
 
 ## Folgende Handler stehen für die i-doit Console zur Verfügung
 
-| Command                                                                   | Interne Beschreibung                                                                                                                                                      |
+| Command                                                                   | Interne Beschreibung                                                                                                                                                          |
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [addon-activate](#addon-activate)                                         | Aktivieren von Add-ons                                                                                                                                                        |
 | [addon-deactivate](#addon-deactivate)                                     | Deaktivieren von Add-ons                                                                                                                                                      |
 | [addon-install](#addon-install)                                           | Installieren von Add-ons                                                                                                                                                      |
-| [addon-list](#addon-list)                                                 | Zeigt eine Liste mit allen installierten Add-ons an
-| [addon-uninstall](#addon-uninstall)                                       | Deaktivierung von Add-ons                                                                                                                                |
+| [addon-list](#addon-list)                                                 | Zeigt eine Liste mit allen installierten Add-ons an                                                                                                                           |
+| [addon-uninstall](#addon-uninstall)                                       | Deaktivierung von Add-ons                                                                                                                                                     |
 | [admin-center-password-reset](#admin-center-password-reset)               | Passwort für das Admin-Center zurücksetzen                                                                                                                                    |
-| [auth-cleanup](#auth-cleanup)                                             | Rechtesystem bereinigen
-| [clear-credentials](#clear-credentials)                                   | Entfernt die Anmeldeinformationen von Benutzern                                                                                                                           |                                                                                                                          |
+| [auth-cleanup](#auth-cleanup)                                             | Rechtesystem bereinigen                                                                                                                                                       |
+| [clear-credentials](#clear-credentials)                                   | Entfernt die Anmeldeinformationen von Benutzern                                                                                                                               |  |
 | [completion](#completion)                                                 | Das Shell-Vervollständigungsskript ausgeben                                                                                                                                   |
 | [contracts-outdated](#contracts-outdated)                                 | Aktualisiert den Status ausgelaufener Verträge                                                                                                                                |
 | [extend-contracts](#extend-contracts)                                     | Verlängert die Laufzeit eines Vertrags, wenn dessen letztmögliches Kündigungsdatum in der Vergangenheit liegt                                                                 |
@@ -41,7 +41,7 @@
 | [license-remove](#license-remove)                                         | Entfernt Lizenzen von i-doit                                                                                                                                                  |
 | [list](#list)                                                             | Listet alle console Kommandos auf                                                                                                                                             |
 | [logbook-archive](#logbook-archive)                                       | Logbuch-Einträge archivieren                                                                                                                                                  |
-| [migrate-uploaded-files](#migrate-uploaded-files)                         | Migriert hochgeladene Dateien von i-doit <v1.13 zu v.1.14>                                                                                                                    |                                                                                                                                  |
+| [migrate-uploaded-files](#migrate-uploaded-files)                         | Migriert hochgeladene Dateien von i-doit <v1.13 zu v.1.14>                                                                                                                    |  |
 | [notifications-list](#notifications-list)                                 | Listet alle [Benachrichtigungen](../../../auswertungen/benachrichtigungen.md) auf                                                                                             |
 | [notifications-send](#notifications-send)                                 | Benachrichtigungen per E-Mail versenden (Benachrichtigungen werden in der GUI konfiguriert)                                                                                   |
 | [report-export](#report-export)                                           | Einen Report als Datei exportieren                                                                                                                                            |
@@ -177,17 +177,17 @@ Deinstalliert ein Add-on
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform) | Beschreibung                                                                                     |
-| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------ |
-| -u                        | --user[=USER]              | i-doit Admin Benutzername [default: "admin"]                                                           |
-| -p                        | --password[=PASSWORD]    | i-doit Admin Passwort                                                                              |
-| -a                        | --addon=ADDON            | Add-on Identifikator                                                                                  |
-| -h                        | --help                   | Zeigt die Hilfe für den angegebenen Befehl an. Wenn kein Befehl angegeben wird, wird die Hilfe für den list-Befehl angezeigt     |
-| -q                        | --quiet                  | Kein Output                                                                        |
-| -V                        | --version                | Zeige die Anwendungsversion an                                                                   |
-| --ansi                    | --no-ansi                | Erzwinge (oder verhindere --no-ansi) ANSI output                                                           |
-| -n                        | --no-interaction         | Keine interaktive Frage anzeigen                                                                |
-| -v / -vv / -vvv           | --verbose                | Erhöhe die Ausführlichkeit der Meldungen: 1 für normale Ausgabe, 2 für ausführlichere Ausgabe und 3 für Debugging |
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                                                 |
+| -------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| -u                   | --user[=USER]         | i-doit Admin Benutzername [default: "admin"]                                                                                 |
+| -p                   | --password[=PASSWORD] | i-doit Admin Passwort                                                                                                        |
+| -a                   | --addon=ADDON         | Add-on Identifikator                                                                                                         |
+| -h                   | --help                | Zeigt die Hilfe für den angegebenen Befehl an. Wenn kein Befehl angegeben wird, wird die Hilfe für den list-Befehl angezeigt |
+| -q                   | --quiet               | Kein Output                                                                                                                  |
+| -V                   | --version             | Zeige die Anwendungsversion an                                                                                               |
+| --ansi               | --no-ansi             | Erzwinge (oder verhindere --no-ansi) ANSI output                                                                             |
+| -n                   | --no-interaction      | Keine interaktive Frage anzeigen                                                                                             |
+| -v / -vv / -vvv      | --verbose             | Erhöhe die Ausführlichkeit der Meldungen: 1 für normale Ausgabe, 2 für ausführlichere Ausgabe und 3 für Debugging            |
 
 **Beispiel zur Verwendung**
 

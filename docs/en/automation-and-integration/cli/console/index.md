@@ -41,7 +41,6 @@ When you execute the CLI without further arguments, the general help is displaye
     addon-activate                      Activate add-on
     addon-deactivate                    Deactivate add-on
     addon-install                       Install add-on
-    addon-uninstall                     Deactivate add-on
     addon-list                          Shows list of installed addons
     addon-uninstall                     Deactivate add-on
     admin-center-password-reset         With this command you can reset the Admin-Center password

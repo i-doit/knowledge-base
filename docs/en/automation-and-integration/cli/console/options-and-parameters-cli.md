@@ -28,7 +28,7 @@
 | [import-jdisc](#import-jdisc)                                             | Import data from JDisc Discovery (SQL Server access is configured via the GUI)                                                     |
 | [import-jdiscdiscovery](#import-jdiscdiscovery)                           | Start a scan in JDisc Discovery (API access is configured via the GUI)                                                             |
 | [import-syslog](#import-syslog)                                           | Import data from a syslog into the i-doit logbook                                                                                  |
-| [import-xml](#import-ocs)                                                 | Importing data from XML                                                                                                            |
+| [import-xml](#import-xml)                                                 | Importing data from XML                                                                                                            |
 | [install](#install)                                                       | Install the i-doit application                                                                                                     |
 | [jdisc-create-server](#jdisc-create-server)                               | Creates a JDisc server, based on given input                                                                                       |
 | [ldap-sync](#ldap-sync)                                                   | Import persons and groups of persons from an LDAP directory or Active Directory (AD)                                               |
@@ -178,7 +178,7 @@ Uninstall add-on
 
 | Parameter (short version) | Parameter (long version) | Description                                                                                        |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------- |
-| -u                        | --user[=USER]              | i-doit Admin username [default: "admin"]                                                           |
+| -u                        | --user[=USER]            | i-doit Admin username [default: "admin"]                                                           |
 | -p                        | --password[=PASSWORD]    | i-doit Admin password                                                                              |
 | -a                        | --addon=ADDON            | Add-on identifier                                                                                  |
 | -h                        | --help                   | Display help for the given command. When no command is given display help for the list command     |
