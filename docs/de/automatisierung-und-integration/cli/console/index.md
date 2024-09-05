@@ -24,7 +24,7 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
 
 ??? abstract "Verfügbare Kommandos ohne Add-ons"
     ```sh
-    i-doit console utility 31
+    i-doit console utility 32
 
     Usage:
     command [options] [arguments]
@@ -42,6 +42,7 @@ Führt man die CLI ohne weitere Argument aus, wird die allgemeine Hilfe präsent
       addon-deactivate                    Deactivate add-on
       addon-install                       Install add-on
       addon-list                          Shows list of installed addons
+      addon-uninstall                     Deaktivierung von Add-ons
       admin-center-password-reset         With this command you can reset the Admin-Center password
       auth-cleanup                        Cleanup all auth paths
       clear-credentials                   It removes both attributes `username` and `password` from the users "login" category

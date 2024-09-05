@@ -6,13 +6,11 @@ Download and Installation
 
 You can subsequently install the **Maintenance intervals** add-on. The article "[i-doit pro Add-ons](./index.md)" provides detailed descriptions regarding download, installation, updates etc.
 
-Configuration
--------------
+## Configuration
 
 A separate configuration is not planned.
 
-Rights Management
------------------
+## Rights Management
 
 You can set [rights for persons and person groups](../efficient-documentation/rights-management/index.md) under **Administration → Authorization system → Rights → Maintenance**.
 
@@ -24,8 +22,7 @@ You can set [rights for persons and person groups](../efficient-documentation/ri
 | **Overview**           | Enables the generation of an overview          |
 | **Send emails**        | Enables the creation of a report               |
 
-Planning Maintenance Works
---------------------------
+## Planning Maintenance Works
 
 You can create and edit maintenance works under **Extras → Maintenance → Planning**.
 
@@ -59,22 +56,19 @@ When you create a new maintenance work, you can select the following options:
 
 [![maintenance work](../assets/images/en/i-doit-pro-add-ons/maintenance/3-main.png)](../assets/images/en/i-doit-pro-add-ons/maintenance/3-main.png)
 
-Archived Maintenance Works
---------------------------
+## Archived Maintenance Works
 
 If a maintenance work is marked as completed, it will not appear in the **Planning** section anymore (see above). Instead, it will be listed under **Extras → Maintenance → Planning (archive)**.
 
 [![Archived Maintenance Works](../assets/images/en/i-doit-pro-add-ons/maintenance/4-main.png)](../assets/images/en/i-doit-pro-add-ons/maintenance/4-main.png)
 
-Create an Overview
-------------------
+## Create an Overview
 
 A detailed overview of all objects for which maintenance works have been planned or already completed can be found at **Extras → Maintenance → Overview**. You can define a time period for filtering purposes (option **From** and **To**).
 
 [![Create an Overview](../assets/images/en/i-doit-pro-add-ons/maintenance/5-main.png)](../assets/images/en/i-doit-pro-add-ons/maintenance/5-main.png)
 
-Create a Report
----------------
+## Create a Report
 
 You can create a report listing the planned and completed maintenance works and download it as PDF file. This function can be found under **Extras → Maintenance → Maintenance annual report (Export)**. Alternatively, you can reach this function at **Extras → Report Manager → Views → Maintenance annual report (Export)**. You can choose from the following options:
 
@@ -90,22 +84,19 @@ With the **PDF Export & Download** button you can create the PDF file and downl
 
 [![PDF Export & Download](../assets/images/en/i-doit-pro-add-ons/maintenance/6-main.png)](../assets/images/en/i-doit-pro-add-ons/maintenance/6-main.png)
 
-Maintenance Information for each Object
----------------------------------------
+## Maintenance Information for each Object
 
 During the performance of maintenance works for an object you can find a symbolic representation within the object. On every page of an object, i.e. the overview page or within the categories, you can see the information that the objects is **In maintenance** at the moment.
 
 [![Maintenance Information for each Object](../assets/images/en/i-doit-pro-add-ons/maintenance/7-main.png)](../assets/images/en/i-doit-pro-add-ons/maintenance/7-main.png)
 
-Maintenance Works on the Dashboard
-----------------------------------
+## Maintenance Works on the Dashboard
 
 You can display the dates of scheduled and completed maintenance works in the calendar widget on the [dashboard](../basics/dashboard-and-widgets.md) and highlight these dates.
 
 [![calendar widget](../assets/images/en/i-doit-pro-add-ons/maintenance/8-main.png)](../assets/images/en/i-doit-pro-add-ons/maintenance/8-main.png)
 
-Create E-mail Templates
------------------------
+## Create E-mail Templates
 
 You can generate an e-mail for scheduled maintenance works to inform the persons involved. The persons are either specified as recipient or via their assigned roles. Under **Extras → Maintenance → Email templates** you can define which text is to be send via e-mail to the persons in question. Any number of templates is possible which can be assigned to each single scheduled maintenance work (see above).
 
@@ -124,8 +115,7 @@ You can use placeholders for both the **Title** and the **Text** which are then 
 
 [![placeholders](../assets/images/en/i-doit-pro-add-ons/maintenance/10-main.png)](../assets/images/en/i-doit-pro-add-ons/maintenance/10-main.png)
 
-Automatic Sending of E-mails
-----------------------------
+## Automatic Sending of E-mails
 
 Actually, the e-mails are sent via the [console](../automation-and-integration/cli/index.md), the CLI Tool of i-doit, in the background. For this purpose, the **maintenance** handler is used. We recommend setting up a Cronjob for the automated sending of e-mails.
 
@@ -135,8 +125,39 @@ Example:
 
 Thus, you can automate the process and do not have to send e-mails manually anymore (**Send emails** button under **Extras → Maintenance → Planning**).
 
-Releases
---------
+## CLI console commands and options
+
+| Command                       | Internal system description                                              |
+| ----------------------------- | ------------------------------------------------------------------------ |
+| [maintenance](#maintenance-1) | Sends notifications of scheduled maintenance from the Maintenance Add-on |
+
+!!! info "This command is only available if the Maintenance add-on is installed"
+
+### maintenance
+
+Sends e-mails with scheduled maintenance according to the time periods specified in the [Maintenance add-on](#maintenance).
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
+| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
+| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
+| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
+| -h                        | --help                   | Help message for displaying further information                                              |
+| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php maintenance --user admin --password admin --tenantId 1
+```
+
+## Releases
 
 | Version | Date       | Changelog                                                                                                                                                                                                                                                                                                                 |
 | ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

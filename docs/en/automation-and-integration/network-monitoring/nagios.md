@@ -51,6 +51,67 @@ The configuration files are stored according to the configured path on the file 
 
 The export of the files can be automated via the [controller](../cli/index.md) of course. For this purpose, the handler **nagios_export** is run while stating the export configuration ID using the parameter **-n ID**.
 
+## CLI console commands and options
+
+| Command                             | Internal system description                                                  |
+| ----------------------------------- | ---------------------------------------------------------------------------- |
+| [nagios-export](#nagios-export)     | Exports the Nagios settings and i-doit objects to Nagios configuration files |
+| [nagios-ndoutils](#nagios-ndoutils) | Imports monitoring status changes from the NDOUtils into the i-doit logbook. |
+
+!!! info "These commands are only available if the Nagios add-on is installed"
+
+### nagios-export
+
+Exports the Nagios settings and i-doit objects to Nagios configuration files
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version)    | Description                                                                                  |
+| ------------------------- | --------------------------- | -------------------------------------------------------------------------------------------- |
+|                           | --nagiosHostId=NAGIOSHOSTID | Specifies the Nagios host to be used for the export                                          |
+|                           | --validate                  | Validates the export files                                                                   |
+| -u                        | --user=USERNAME             | Username of a user who is authorized to execute                                              |
+| -p                        | --password=PASSWORD         | Password for authentication of the previously specified user                                 |
+| -i                        | --tenantId=TENANT-ID        | Tenant ID of the tenant to be used (default: 1)                                              |
+| -c                        | --config=CONFIG-FILE        | Specifying the path to the configuration file                                                |
+| -h                        | --help                      | Help message for displaying further information                                              |
+| -q                        | --quiet                     | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                   | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi         | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction            | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php nagios-export --user admin --password admin --tenantId 1 --nagiosHostId 1
+```
+
+### nagios-ndoutils
+
+Imports monitoring status changes from the NDOUtils into the i-doit logbook.
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
+| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
+| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
+| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
+| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
+| -h                        | --help                   | Help message for displaying further information                                              |
+| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php nagios-ndoutils --user admin --password admin --tenantId 1
+```
+
 ## Changelog
 
 | Version | Date       | Changelog                                                                                                                                                                                                                       |

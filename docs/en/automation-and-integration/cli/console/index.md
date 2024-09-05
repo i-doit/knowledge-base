@@ -24,7 +24,7 @@ When you execute the CLI without further arguments, the general help is displaye
 
 ??? abstract "Available commands without add-ons"
     ```sh
-    i-doit console utility 31
+    i-doit console utility 32
 
     Usage:
     command [options] [arguments]

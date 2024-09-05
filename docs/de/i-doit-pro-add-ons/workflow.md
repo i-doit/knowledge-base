@@ -2,18 +2,15 @@
 
 Das Workﬂow-System in i-doit ist ein erweiterbares Modul, welches Workﬂows erzeugt. Somit lassen sich einmalige AUFTRÄGE, aber auch wiederkehrende CHECKLISTEN erstellen und an die verantwortlichen Personen und Objekte zuweisen. Involvierte Personen werden über statusbasierte Benachrichtigungen informiert.
 
-Workflow-Typen
---------------
+## Workflow-Typen
 
 Der WORKFLOW-TYP verhält sich wie eine Schablone und umfasst alle notwendigen Parameter, welche zur Ausführung notwendig sind. Diese Schablone lässt sich über eine Verwaltungsoberﬂäche bearbeiten. Über diese lassen sich ebenso neue Schablonen anlegen.
 
-Der Workflow
-------------
+## Der Workflow
 
 Ein Workﬂow beschreibt eine terminierte vom Benutzer auszuführende Aktion wie beispielsweise das Austauschen des Band-Mediums eines speziellen Backup-Servers. Jegliche WorkﬂowZuweisung muss von den entsprechenden Personen akzeptiert werden. Nach erfolgreichem Abschluss kann ein Statusbericht eingereicht werden.
 
-Vordefinierte Workflow-Typen
-----------------------------
+## Vordefinierte Workflow-Typen
 
 ### Arbeitsauftrag
 
@@ -23,8 +20,7 @@ Ein Arbeitsauftrag ist eine terminierte von wählbaren Benutzern auszuführende 
 
 Mit dem speziellen Workﬂow-Typ CHECKLISTEN können täglich, wöchentlich und jährlich wiederkehrende Aufträge generiert werden, indem zu dem reinen Startdatum eine periodische Zeitfolge angegeben und die entsprechende Option der Wiederholung ausgewählt wird. Diese wiederkehrenden Workﬂows lassen sich ebenfalls terminiert beenden.
 
-Parameter der Vorlagen
-----------------------
+## Parameter der Vorlagen
 
 Für die beiden Workﬂow-Typen TASK (Arbeitsauftrag) und CHECKLIST gibt es bereits vorgefertigte Parameter, welche bei Erstellung eines neuen Workﬂows berücksichtigt werden. Die beiden Datumstypen für Start- und Enddatum werden bei jedem neu angelegten Workﬂow-Typen automatisch erstellt. Die anderen Parameter können nach Belieben erstellt und einem neuen Typen zugeordnet werden:
 
@@ -41,15 +37,47 @@ Für die beiden Workﬂow-Typen TASK (Arbeitsauftrag) und CHECKLIST gibt es bere
 
 Die Bezeichnung und der Schlüssel bei einem neuen Workﬂow-Typen kann frei gewählt werden, die Reihenfolge gibt an, in welcher Reihenfolge die Felder untereinander angezeigt werden. Nach leerem Feld überprüfen gibt eine Fehlermeldung aus, wenn das Feld nicht ausgefüllt wurde und versucht wird den Workﬂow zu speichern.
 
-Workflows im Objekt
--------------------
+## Workflows im Objekt
 
 **Workflows** lassen sich auch im Objekt über die Kategorie **Workflows** anzeigen. Diese muss zuvor über die [Objekttyp Konfiguration](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) hinzugefügt werden.
 
 [![Workflows im Objekt](../assets/images/de/i-doit-pro-add-ons/workflow/1-wf.png)](../assets/images/de/i-doit-pro-add-ons/workflow/1-wf.png)
 
-Releases
---------
+## CLI Console Commands und Optionen
+
+| Command                                 | Interne Beschreibung                                                                          |
+| --------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [workflows-process](#workflows-process) | Verarbeitet alle Arbeitsabläufe, versendet E-Mails und erstellt neue Aufgaben aus Checklisten |
+
+!!! info "Dieser Befehl ist erst nach Installation des Workflow Add-ons verfügbar."
+
+### workflows-process
+
+Verarbeitet alle Arbeitsabläufe, versendet E-Mails und erstellt neue Aufgaben aus Checklisten
+
+**Optionen:**
+
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -t                   | --types=TYPES          | Workflow-Typen (mehrere Werte sind möglich)                                                      |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+
+**Beispiel zur Verwendung**
+
+```shell
+sudo -u www-data php console.php workflows-process --user admin --password admin --tenantId 1 --types task --types checklist
+```
+
+## Releases
 
 | Version | Datum      | Changelog                                                                                                                                                                                                                                       |
 | ------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
