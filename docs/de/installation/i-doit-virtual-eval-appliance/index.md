@@ -20,7 +20,7 @@ Beim Importieren werden eventuell Einstellungen abgefragt (Name, CPU-Kerne, Arbe
 [![Appliance-Einstellungen](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)
 
 !!! info "Betriebssystem"
-    Beim installierten Betriebssystem handelt es sich um **[Debian GNU/Linux](../manuelle-installation/debian12.md)** **10 buster** in der 64-bit-Variante. Wenn der Virtualisierer dies nicht automatisch erkennt, sollte dies unbedingt manuell angegeben werden. Andernfalls kann es zu Problemen beim Start und Ausführen der VM kommen.
+    Beim installierten Betriebssystem handelt es sich um **[Debian GNU/Linux](../manuelle-installation/debian/index.md)** **10 buster** in der 64-bit-Variante. Wenn der Virtualisierer dies nicht automatisch erkennt, sollte dies unbedingt manuell angegeben werden. Andernfalls kann es zu Problemen beim Start und Ausführen der VM kommen.
 
 ## i-doit aufrufen
 
@@ -30,14 +30,14 @@ Die IP-Adresse kann über die Konsole konfiguriert werden (siehe weiter unten).
 
 ## Zugangsdaten
 
-| Tool | Benutzername | Passwort |
-| --- | --- | --- |
-| i-doit Web GUI | **admin** | **admin** |
-| i-doit Web GUI | **controller** | **controller** |
-| [i-doit Admin-Center](../../administration/admin-center.md) | **admin** | **idoit** |
-| SSH | **idoitadm** | **idoit** |
-| MySQL (i-doit) | **idoit** | **idoit** |
-| MySQL (Systemuser) | **root** | **idoit** |
+| Tool                                                        | Benutzername   | Passwort       |
+| ----------------------------------------------------------- | -------------- | -------------- |
+| i-doit Web GUI                                              | **admin**      | **admin**      |
+| i-doit Web GUI                                              | **controller** | **controller** |
+| [i-doit Admin-Center](../../administration/admin-center.md) | **admin**      | **idoit**      |
+| SSH                                                         | **idoitadm**   | **idoit**      |
+| MySQL (i-doit)                                              | **idoit**      | **idoit**      |
+| MySQL (Systemuser)                                          | **root**       | **idoit**      |
 
 Weiterhin existieren [die vordefinierten Personen- und Personengruppen](../../grundlagen/erstanmeldung.md) in i-doit.
 
@@ -47,30 +47,30 @@ Die Konfiguration der Appliance kann auf der Konsole erledigt werden. Nach dem A
 
 [![Appliance-Konfiguration](../../assets/images/de/installation/virtual-appliance/import/appliance_menu.png)](../../assets/images/de/installation/virtual-appliance/import/appliance_menu.png)
 
-| Shortcut | Menüpunkt | Funktion |
-| --- | --- | --- |
-| **1** | **Configure networking** | Netzwerkanbindung festlegen; die Netzwerkkonfiguration ist per Default auf DHCP gesetzt. |
-| **2** | **Proxy configuration** | HTTP Proxy für das System angeben |
-| **3** | **E-Mail configuration** | E-Mail-Einstellungen |
-| **4** | **Timezone** | Zeitzone einstellen |
-| **5** | **Keyboard layout** | Tastatur-Belegung; de ist als Standard definiert |
-| **6** | **Change idoitadm user password** | Passwort vom User **idoitadm** ändern |
-| **7** | **i-doit scripting configuration  <br>** | Einstellungen für CLI, [Cron Jobs](../../wartung-und-betrieb/cronjobs-einrichten.md), [Backups und Restore](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) ändern |
-| **8** | **Reboot system** | System neustarten |
-| **9** | **Shutdown system** | System herunterfahren |
-| **0** | **Launch shell** | Shell öffnen für weitere Aktionen |
-| **A** | **Logout** | Den User **idoitadm** vom System abmelden |
+| Shortcut | Menüpunkt                                | Funktion                                                                                                                                                                                  |
+| -------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1**    | **Configure networking**                 | Netzwerkanbindung festlegen; die Netzwerkkonfiguration ist per Default auf DHCP gesetzt.                                                                                                  |
+| **2**    | **Proxy configuration**                  | HTTP Proxy für das System angeben                                                                                                                                                         |
+| **3**    | **E-Mail configuration**                 | E-Mail-Einstellungen                                                                                                                                                                      |
+| **4**    | **Timezone**                             | Zeitzone einstellen                                                                                                                                                                       |
+| **5**    | **Keyboard layout**                      | Tastatur-Belegung; de ist als Standard definiert                                                                                                                                          |
+| **6**    | **Change idoitadm user password**        | Passwort vom User **idoitadm** ändern                                                                                                                                                     |
+| **7**    | **i-doit scripting configuration  <br>** | Einstellungen für CLI, [Cron Jobs](../../wartung-und-betrieb/cronjobs-einrichten.md), [Backups und Restore](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) ändern |
+| **8**    | **Reboot system**                        | System neustarten                                                                                                                                                                         |
+| **9**    | **Shutdown system**                      | System herunterfahren                                                                                                                                                                     |
+| **0**    | **Launch shell**                         | Shell öffnen für weitere Aktionen                                                                                                                                                         |
+| **A**    | **Logout**                               | Den User **idoitadm** vom System abmelden                                                                                                                                                 |
 
 ## Scripte und Cronjobs
 
 Die Appliance verfügt über diverse Scripte und Cronjobs.
 
-| Script | Zweck |
-| --- | --- |
-| **idoit** | i-doit CLI |
-| idoit-backup | Backup manuell ausführen |
-| idoit-restore | Restore ausführen |
-| idoit-jobs | Cronjobs manuell ausführen |
+| Script        | Zweck                      |
+| ------------- | -------------------------- |
+| **idoit**     | i-doit CLI                 |
+| idoit-backup  | Backup manuell ausführen   |
+| idoit-restore | Restore ausführen          |
+| idoit-jobs    | Cronjobs manuell ausführen |
 
 Die Scripte befinden sich unter **/usr/local/bin/**.
 
@@ -82,14 +82,14 @@ Jede Nacht werden die Daten von i-doit lokal gesichert. Der Speicherzeitraum bet
 
 Wo ist was zu finden?
 
-| Verzeichnis | Zweck |
-| --- | --- |
-| /var/www/html/ | Installationsverzeichnis von i-doit |
-| /etc/apache2/ | Konfiguration des Apache Webservers |
-| /etc/php/8.x/ | Konfiguration von PHP |
-| /etc/mysql/ | Konfiguration von MariaDB |
-| /var/log/apache2/ | Logs vom Apache Webserver |
-| /var/backups/i-doit | Backups |
+| Verzeichnis         | Zweck                               |
+| ------------------- | ----------------------------------- |
+| /var/www/html/      | Installationsverzeichnis von i-doit |
+| /etc/apache2/       | Konfiguration des Apache Webservers |
+| /etc/php/8.x/       | Konfiguration von PHP               |
+| /etc/mysql/         | Konfiguration von MariaDB           |
+| /var/log/apache2/   | Logs vom Apache Webserver           |
+| /var/backups/i-doit | Backups                             |
 
 ## Nachbereitung
 

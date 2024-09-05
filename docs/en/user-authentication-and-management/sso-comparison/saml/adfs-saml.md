@@ -6,9 +6,9 @@ In this tutorial, we describe how to set up single sign-on (SSO) for i-doit usin
 
 We use two servers for the sample configuration, a Windows server with domain/AD and FS and a Debian 11 server with Apache and Mellon:
 
-| FQDN | IP  | Rolle | OS  |
-| --- | --- | --- | --- |
-| tu2-dc2.tu-synetics.test | 10.10.60.22 | AD, FS | Windows |
+| FQDN                      | IP           | Rolle         | OS       |
+| ------------------------- | ------------ | ------------- | -------- |
+| tu2-dc2.tu-synetics.test  | 10.10.60.22  | AD, FS        | Windows  |
 | tu2-samlsso.synetics.test | 10.10.60.108 | Apache+Mellon | Debian11 |
 
 ### Basic configuration
@@ -245,7 +245,7 @@ After successful registration, we should receive the following output.
 
 ## Installation i-doit pro
 
-The installation can be installed as described in the KB article for [Debian](../../../installation/manual-installation/debian12.md).
+The installation can be installed as described in the KB article for [Debian](../../../installation/manual-installation/debian/index.md).
 
 ## SSO login for i-doit pro
 

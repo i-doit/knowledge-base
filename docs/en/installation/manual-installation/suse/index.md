@@ -3,97 +3,95 @@ title: SUSE Linux Enterprise Server 15 SP6
 description: SUSE Linux Enterprise Server 15 SP6
 icon: simple/suse
 status:
-lang: de
+lang: en
 ---
 
-!!! note "Getestet mit i-doit **32**"
+!!! note "Tested with i-doit **32**"
 
-Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
+We explain in a few steps which packages to install and configure in this article.
 
-## Systemvoraussetzungen
+## System Requirements
 
-Es gelten die allgemeinen [Systemvoraussetzungen](../systemvoraussetzungen.md).
+The general [system requirements](../../system-requirements.md) apply.
 
-Dieser Artikel bezieht sich auf [**SUSE Linux Enterprise Server 15 SP6**](https://www.suse.com/). Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
+This article refers to [**SUSE Linux Enterprise Server 15 SP6**](https://www.suse.com/solutions/enterprise-linux/). In order to find out which version is used you can carry out the following command:
 
-```sh
+```shell
 cat /etc/os-release
 ```
 
-Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen:
+As system architecture you should use a x86 in 64bit:
 
-```sh
+```shell
 uname -m
 ```
 
-**x86_64** bedeutet 64bit, **i386** oder **i686** lediglich 32bit.
+**x86_64** means 64bit, **i386** or **i686** only 32bit.
 
-## Installation der Pakete
+## Installation of the Packages
 
-Die Standard-Repositories von SUSE Linux Enterprise Server (SLES) bringen bereits fast alle nötigen Pakete mit, um
+The default package repositories of SUSE Linux Enterprise Server (SLES) already supply the most packages to install:
 
--   den **Apache** HTTP Server 2.4,
--   die Script-Sprache **PHP** 8.2,
--   das Datenbankmanagementsystem **MariaDB** 10.11 und
--   den Caching-Server **memcached**
+-   The **Apache** HTTP server 2.4
+-   the script language **PHP** 8.2
+-   the database management system **MariaDB** 10.11 and
+-   the caching server **memcached**
 
-zu installieren.
-
-Vorerst ist die Aktivierung von zusätzlichen Add-ons nötig:
+First of all, you have to activate additional add-ons in **Yast**:
 
 -   **Web and Scripting Module**
 
-Um zu prüfen, ob das **Web and Scripting Add-on Module** aktiviert ist, ruft man folgenden Befehl auf:
+To check whether the **Web and Scripting Add-on Module** is activated, call the following command:
 
-```sh
+```shell
 sudo zypper repos -E
 ```
 
-Sollte es nicht aktiviert sein, kann es mit folgendem Befehl aktiviert werden:
+If it is not activated, it can be activated with the following command:
 
 ```sh
 sudo suseconnect -p sle-module-web-scripting/15.6/x86_64
 ```
 
-Mit zypper werden anschließend die Pakete aktualisiert:
+The packages are then updated with zypper:
 
 ```sh
 sudo zypper refresh && sudo zypper update
 ```
 
-Nun werden die von i-doit benötigten Pakete installiert:
+Afterwards the required packages are installed with zypper:
 
-```sh
+```shell
 sudo zypper install vim apache2 apache2-mod-php8 mariadb-server mariadb-client memcached php8 php8-{bz2,ctype,bcmath,curl,gd,gettext,fileinfo,fpm,ldap,mbstring,memcached,mysql,odbc,opcache,openssl,phar,posix,pgsql,pdo,snmp,soap,sockets,sqlite,zip,zlib}
 ```
 
-Damit die notwendigen Dienste beim Booten gestartet werden, ist dieser Befehl erforderlich:
+In order to start Apache Webserver and MariaDB during the boot process, the following commands are necessary:
 
-```sh
+```shell
 sudo systemctl enable apache2 mysql memcached
 ```
 
-Anschließend erfolgt der Start der Dienste:
+Then both services are started:
 
-```sh
+```shell
 sudo systemctl start apache2 mysql memcached
 ```
 
-!!! info "Für **HTTPS** müssen weitere Schritte durchgeführt werden die hier nicht behandelt werden, siehe [Sicherheit und Schutz](../../wartung-und-betrieb/sicherheit-und-schutz.md)"
+!!! info "For **HTTPS** further steps must be carried out which are not covered here, see [Security and protection](../../../maintenance-and-operation/security-and-protection.md)."
 
-## Konfiguration
+## Configuration
 
-Die installierten Pakete für Apache HTTP Server, PHP und MariaDB bringen bereits Konfigurationsdateien mit. Es empfiehlt sich, abweichende Einstellungen in gesonderten Dateien zu speichern, anstatt die vorhandenen Konfigurationsdateien anzupassen. Bei jedem Paket-Upgrade würden die abweichenden Einstellungen bemängelt oder überschrieben werden. Die Einstellungen der Standardkonfiguration werden durch die benutzerdefinierten ergänzt bzw. überschrieben.
+The installed packages for Apache HTTP Server, PHP and MariaDB already include configuration files. It is recommended to save deviating settings in separate files instead of adapting the existing configuration files. With every package upgrade, the deviating settings would be rejected or overwritten. The settings of the standard configuration are supplemented or overwritten by the user-defined settings.
 
-### PHP-FPM Konfiguration
+### PHP-FPM configuration
 
-Zunächst wird die alte Konfiguration, durch umbenennen, deaktiviert:
+First, the old configuration is deactivated by renaming it:
 
 ```sh
 sudo mv /etc/php8/fpm/php-fpm.d/www.conf /etc/php8/fpm/php-fpm.d/www.conf.bak
 ```
 
-und anschließend eine neue Datei erstellt und mit den Einstellungen befüllt:
+and then create a new file and fill it with the settings:
 
 ```sh
 sudo vi /etc/php8/fpm/php-fpm.d/i-doit.conf
@@ -114,19 +112,19 @@ pm.max_spare_servers = 35
 security.limit_extensions = .php
 ```
 
-### PHP Konfiguration
+### PHP configuration
 
-Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befüllt:
+First, a new file is created and filled with the necessary settings:
 
 ```sh
 sudo vi /etc/php8/conf.d/i-doit.ini
 ```
 
-!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
+!!! example "This file contains the following content specified by us. For more information about the parameters, have a look at [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php)"
 
-Diese Datei erhält folgenden Inhalt:
+This file contains the following content:
 
-```sh
+```shell
 allow_url_fopen = Yes
 file_uploads = On
 magic_quotes_gpc = Off
@@ -152,19 +150,19 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysql/mysql.sock
 ```
 
-Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
-Der Wert (in Sekunden) von `session.gc_maxlifetime` sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](systemeinstellungen.md) von i-doit sein.
-Der Parameter `date.timezone` sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
+The `memory_limit` must be increased if necessary, e.g. for very large reports or extensive documents.
+The value (in seconds) of `session.gc_maxlifetime` should be greater than or equal to the **session timeout** in the [system settings](../system-settings.md) of i-doit.
+The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/de/timezones.php)).
 
-### Apache HTTP Server
+### Apache HTTP server
 
-Ein wird eine neue VHost-Konfiguration erzeugt:
+A new VHost configuration is created:
 
 ```sh
 sudo vi /etc/apache2/vhosts.d/i-doit.conf
 ```
 
-In dieser Datei wird die VHost-Konfiguration angepasst und gespeichert:
+The VHost configuration is adapted and saved in this file:
 
 ```conf
 ServerName i-doit
@@ -320,19 +318,19 @@ ServerName i-doit
 </VirtualHost>
 ```
 
-!!! note "Die dort enthaltenen Konfigurationen müssen nach einem Update geprüft und Änderungen in der VHost-Konfiguration übernommen werden."
+!!! note "The configurations contained there must be checked after an update and changes must be adopted in the VHost configuration."
 
-i-doit liefert abweichende Apache-Einstellungen in der **.htaccess** Datei mit.
+i-doit includes differing Apache settings in a file with the name **.htaccess**.
 
-Im nächsten Schritt werden die nötigen Apache2 HTTP Server Module **php8**, **rewrite** und **mod_access_compat** aktiviert:
+With the next step you activate the necessary Apache modules **php8**, **rewrite** and **mod_access_compat**:
 
-```sh
+```shell
 sudo a2enmod proxy && sudo a2enmod proxy_fcgi && sudo a2enmod php8 && sudo a2enmod rewrite && sudo a2enmod mod_access_compat
 ```
 
-!!! note "Leider muss jedes Modul einzeln aktiviert werden"
+!!! note "Unfortunately, each module must be activated individually"
 
-und dann die notwendigen Dienste neu starten:
+and then restart the necessary services:
 
 ```sh
 sudo systemctl restart apache2 php-fpm
@@ -340,27 +338,27 @@ sudo systemctl restart apache2 php-fpm
 
 ### MariaDB
 
-Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. **Den Empfehlungen sollte gefolgt werden sollten**. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
+To ensure that MariaDB delivers good performance and can be operated securely, a few steps are necessary that should be carried out meticulously. This starts with a secure installation. **The recommendations should be followed**. The user **root** should be given a secure password:
 
 ```sh
 sudo mysql_secure_installation
 ```
 
-Damit i-doit beim Setup den Benutzer **root** verwenden darf, ruft man die Shell von MariaDB auf:
+To allow i-doit to use the **root** user during setup, call the MariaDB shell:
 
 ```sh
 sudo mysql -uroot
 ```
 
-In der Shell von MariaDB werden nun folgende SQL-Statements ausgeführt:
+The following SQL statements are now executed in the MariaDB shell:
 
-!!! note "Bitte ('passwort') ersetzen"
+!!! note "Please replace ('password')"
 
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('passwort');
 ```
 
-Der Modus für das Herunterfahren von InnoDB muss noch geändert werden. Der Wert 0 führt dazu, dass eine vollständige Bereinigung und eine Zusammenführung der Änderungspuffer durchgeführt wird, bevor MariaDB heruntergefahren wird:
+The mode for shutting down InnoDB still needs to be changed. The value 0 results in a complete cleanup and merging of the change buffers before MariaDB is shut down:
 
 ```sql
 FLUSH PRIVILEGES;
@@ -368,13 +366,13 @@ SET GLOBAL innodb_fast_shutdown = 0;
 EXIT;
 ```
 
-Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
+A new file is created for the different configuration settings:
 
 ```sh
 sudo vi /etc/my.cnf.d/99-i-doit.cnf
 ```
 
-Diese Datei enthält die neuen Konfigurationseinstellungen. **Für eine optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden**:
+This file contains the new configuration settings. **For optimum performance, these settings should be adapted to the (virtual) hardware**:
 
 ```ini
 [mysqld]
@@ -415,27 +413,27 @@ innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
 
-Abschließend wird MariaDB neugestartet:
+Finally, MariaDB is restarted:
 
 ```sh
 sudo systemctl restart mysql
 ```
 
-und über die Firewall werden Verbindungen via **HTTP** erlaubt:
+and connections via **HTTP** are permitted via the firewall:
 
 ```sh
 sudo firewall-cmd --permanent --add-service=http && sudo firewall-cmd --reload
 ```
 
-Bevor i-doit nun erreichbar ist, muss [Apparmor](https://apparmor.net/), für PHP-FPM, entweder **konfiguriert**, **deaktiviert** oder in den **complain** modus versetzt werden.
-In dieser Anleitung nutzen wir den complain Modus, sollte im Nachgang richtig konfiguriert werden:
+Before i-doit can now be accessed, [Apparmor](https://apparmor.net/), for PHP-FPM, must either be **configured**, **disabled** or set to the so-called **complain** mode.
+In this guide we use the complain mode, which should be configured correctly afterwards:
 
 ```sh
 sudo aa-complain '/etc/apparmor.d/php-fpm'
 ```
 
-## Nächster Schritt
+## Next Step
 
-Das Betriebssystem ist nun vorbereitet, sodass i-doit installiert werden kann:
+Now the operating system is prepared and i-doit can be installed.
 
-[Weiter zu **Setup**](setup.md)
+[Proceed with **Setup**](../setup.md)

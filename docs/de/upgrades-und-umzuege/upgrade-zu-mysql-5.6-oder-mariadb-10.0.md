@@ -50,7 +50,7 @@ Version 7.8 von Debian GNU/Linux enthält in den Standardpaketen MySQL 5.5 und k
 Ubuntu 14.04 LTS
 ----------------
 
-Version 14.04 LTS von [Ubuntu](../installation/manuelle-installation/ubuntu-linux/index.md) enthält in den Standardpaketen MySQL 5.5, 5.6 und MariaDB 5.5. Es wird daher empfohlen, MySQL 5.6 einzusetzen. Sollten MySQL 5.5 oder MariaDB 5.5 bisher installiert sein, werden diese durch MySQL 5.6 ersetzt:
+Version 14.04 LTS von Ubuntu enthält in den Standardpaketen MySQL 5.5, 5.6 und MariaDB 5.5. Es wird daher empfohlen, MySQL 5.6 einzusetzen. Sollten MySQL 5.5 oder MariaDB 5.5 bisher installiert sein, werden diese durch MySQL 5.6 ersetzt:
 
     sudo apt-get update
     sudo apt-get install mysql-server-5.6 php5-mysqlnd mysql-client-core-5.6 mysql-client-5.6
@@ -58,7 +58,7 @@ Version 14.04 LTS von [Ubuntu](../installation/manuelle-installation/ubuntu-linu
 Ubuntu 12.04 LTS
 ----------------
 
-Version 12.04 LTS von [Ubuntu](../installation/manuelle-installation/ubuntu-linux/index.md) enthält in den Standardpaketen MySQL 5.5 und kein MariaDB. Da diese Betriebssystem-Version sehr alte Pakete für MySQL, PHP und Apache Webserver enthält, raten wir vom Einsatz generell ab und empfehlen stattdessen ein Upgrade auf Version 14.04 LTS. Wenn dies nicht möglich sein sollte, kann auf MariaDB 10.0 gewechselt werden, indem das [offizielle Repository von MariaDB eingebunden](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=Ubuntu&distro_release=precise--ubuntu_precise&version=10.0) wird. Vorsicht: Dritt-Repositories können das System beeinträchtigen. Durch die Installation von MariaDB wird MySQL ersetzt:
+Version 12.04 LTS von Ubuntu enthält in den Standardpaketen MySQL 5.5 und kein MariaDB. Da diese Betriebssystem-Version sehr alte Pakete für MySQL, PHP und Apache Webserver enthält, raten wir vom Einsatz generell ab und empfehlen stattdessen ein Upgrade auf Version 14.04 LTS. Wenn dies nicht möglich sein sollte, kann auf MariaDB 10.0 gewechselt werden, indem das [offizielle Repository von MariaDB eingebunden](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=Ubuntu&distro_release=precise--ubuntu_precise&version=10.0) wird. Vorsicht: Dritt-Repositories können das System beeinträchtigen. Durch die Installation von MariaDB wird MySQL ersetzt:
 
     sudo apt-get update
     sudo apt-get install python-software-properties
@@ -70,7 +70,7 @@ Version 12.04 LTS von [Ubuntu](../installation/manuelle-installation/ubuntu-linu
 Red Hat Enterprise Linux 7.1
 ----------------------------
 
-Version 7.1 von [Red Hat Enterprise Linux (RHEL)](../installation/manuelle-installation/red-hat-enterprise-linux/index.md) enthält in den Standardpaketen MariaDB 5.5 und kein MySQL. Um auf MariaDB 10.0 zu wechseln, sind [laut einem Blog-Eintrag von MariaDB](https://mariadb.com/blog/installing-mariadb-10-centos-7-rhel-7) wenige Schritte nötig. Dadurch wird MariaDB 5.5 durch 10.0 ersetzt. Vorsicht: Dritt-Repositories können das System beeinträchtigen.
+Version 7.1 von Red Hat Enterprise Linux (RHEL) enthält in den Standardpaketen MariaDB 5.5 und kein MySQL. Um auf MariaDB 10.0 zu wechseln, sind [laut einem Blog-Eintrag von MariaDB](https://mariadb.com/blog/installing-mariadb-10-centos-7-rhel-7) wenige Schritte nötig. Dadurch wird MariaDB 5.5 durch 10.0 ersetzt. Vorsicht: Dritt-Repositories können das System beeinträchtigen.
 
 !!! attention "Dieser Upgrade-Pfad bezieht sich auf die 64bit-Variante des Betriebssystems."
 
@@ -102,7 +102,7 @@ Unter Umständen werden beim anfangs erwähnten Entfernen der Pakete ebenfalls d
 Red Hat Enterprise Linux 6.7
 ----------------------------
 
-Version 6.7 von [Red Hat Enterprise Linux (RHEL)](../installation/manuelle-installation/red-hat-enterprise-linux/index.md) enthält in den Standardpaketen MySQL 5.1 und kein MariaDB. Da diese Betriebssystem-Version sehr alte Pakete für MySQL, PHP und Apache Webserver enthält, raten wir vom Einsatz generell ab und empfehlen stattdessen ein Upgrade auf Version 7.1. Wenn dies nicht möglich sein sollte, kann auf MariaDB 10.0 gewechselt werden, indem das [offizielle Repository von MariaDB eingebunden](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=RedHat&distro_release=rhel6-amd64--rhel6&version=10.0) wird, wie [in einem Blog-Beitrag von MariaDB beschrieben](https://mariadb.com/kb/en/mariadb/yum/). Vorsicht: Dritt-Repositories können das System beeinträchtigen.
+Version 6.7 von Red Hat Enterprise Linux (RHEL) enthält in den Standardpaketen MySQL 5.1 und kein MariaDB. Da diese Betriebssystem-Version sehr alte Pakete für MySQL, PHP und Apache Webserver enthält, raten wir vom Einsatz generell ab und empfehlen stattdessen ein Upgrade auf Version 7.1. Wenn dies nicht möglich sein sollte, kann auf MariaDB 10.0 gewechselt werden, indem das [offizielle Repository von MariaDB eingebunden](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=RedHat&distro_release=rhel6-amd64--rhel6&version=10.0) wird, wie [in einem Blog-Beitrag von MariaDB beschrieben](https://mariadb.com/kb/en/mariadb/yum/). Vorsicht: Dritt-Repositories können das System beeinträchtigen.
 
 !!! "attention Dieser Upgrade-Pfad bezieht sich auf die 64bit-Variante des Betriebssystems."
 
@@ -127,12 +127,12 @@ Zu guter Letzt wird das Paket installiert:
 SUSE Linux Enterprise Server 12
 -------------------------------
 
-Version 12 von [SUSE Linux Enterprise Server (SLES)](../installation/manuelle-installation/suse-linux-enterprise-server.md) enthält in den Standardpaketen bereits MariaDB 10.0, aber kein MySQL. Es ist daher kein Upgrade nötig.
+Version 12 von SUSE Linux Enterprise Server (SLES) enthält in den Standardpaketen bereits MariaDB 10.0, aber kein MySQL. Es ist daher kein Upgrade nötig.
 
 Windows Server 2008/2012
 ------------------------
 
-Sollte [Windows Server 2008/2012](../installation/manuelle-installation/microsoft-windows-server/index.md) zum Einsatz kommen, empfiehlt sich der Einsatz von XAMPP. Diese von den [Apache Friends](https://www.apachefriends.org/) bereitgestellte Distribution enthält unter anderem den Apache Webserver, PHP und MariaDB. Es sollte darauf geachtet werden, dass stets die aktuelle Version zum Einsatz kommt.
+Sollte Windows Server 2008/2012 zum Einsatz kommen, empfiehlt sich der Einsatz von XAMPP. Diese von den [Apache Friends](https://www.apachefriends.org/) bereitgestellte Distribution enthält unter anderem den Apache Webserver, PHP und MariaDB. Es sollte darauf geachtet werden, dass stets die aktuelle Version zum Einsatz kommt.
 
 !!!attention "Da XAMPP weder über eine offizielle Dokumentation, noch einen Update-Mechanismus verfügt, ist der Upgrade-Pfad unter Umständen sehr kompliziert und fehleranfällig. Ein **aktuelles [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)** **und ausführliches Testen** nach dem Upgrade sind daher unabdingbar."
 
