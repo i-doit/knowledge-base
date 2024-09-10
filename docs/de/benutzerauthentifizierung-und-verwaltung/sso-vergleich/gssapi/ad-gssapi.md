@@ -36,7 +36,7 @@ Installation aller benötigten Pakete
 Debian GNU/Linux 
 
 ```shell
-sudo apt install msktutil libapache2-mod-auth-gssapi kinit krb5-user
+sudo apt install msktutil libapache2-mod-auth-gssapi krb5-user
 ```
 
 Ubuntu Linux:
