@@ -1,7 +1,7 @@
 ---
 title: Flows Add-on
 description: Flows Add-on
-icon:
+icon: addons/flows
 status:
 lang: en
 ---

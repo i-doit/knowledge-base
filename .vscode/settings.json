@@ -21,6 +21,8 @@
         "Floorplan",
         "Hostadresse",
         "idoit",
+        "Konsolenbefehl",
+        "Konsolenbefehls",
         "licence",
         "OBJTYPE",
         "purgen",
@@ -29,6 +31,9 @@
         "Reindex",
         "SYSID",
         "Usersettings",
-        "vlan"
+        "vlan",
+        "zeitbasierte",
+        "zeitbasierten",
+        "zeitbasierter"
     ]
 }
