@@ -40,6 +40,17 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
+### CSV Import Error message with Multi-valued categories option set to "row" or "comma-separated"
+
+Occurs when specific mappings are set
+
+??? info "Error message found in the PHP logs"
+    ```
+    [Wed Jul 31 15:25:44.477595 2024] [php:error] [pid 418181] [client 10.0.8.13:52397] PHP Fatal error:  Uncaught Error: Call to a member function hasAnyChanges() on null in /var/www>
+    ```
+
+[i-doit_32_hotfix_ID-11003.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11003.zip){ .md-button .md-button--primary }
+
 ### CSV import helper unable to split multi value dialog entries containing 0 values (ID-11080)
 
 [i-doit_32_hotfix_ID-11080_a3a793a.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11080_a3a793a.zip){ .md-button .md-button--primary }
