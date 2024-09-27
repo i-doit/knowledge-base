@@ -419,9 +419,9 @@ nav:
               - Import matching profiles: system-administration/administration/import-and-interfaces/import-matching-profiles.md
               - h-inventory: system-administration/administration/import-and-interfaces/h-inventory.md
               - SMTP configuration (E-Mail): system-administration/administration/import-and-interfaces/smtp.md
-              - JDIsc:
+              - JDisc:
                   - system-administration/administration/import-and-interfaces/jdisc/index.md
-                  - JDIsc Configuration: system-administration/administration/import-and-interfaces/jdisc/jdisc-configuration.md
+                  - JDisc Configuration: system-administration/administration/import-and-interfaces/jdisc/jdisc-configuration.md
                   - JDisc profiles: system-administration/administration/import-and-interfaces/jdisc/jdisc-profiles.md
               - LDAP:
                   - system-administration/administration/import-and-interfaces/ldap/index.md

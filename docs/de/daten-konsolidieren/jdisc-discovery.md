@@ -79,7 +79,7 @@ Die JDisc-Profile innerhalb von i-doit geben die Möglichkeit, die Verknüpfung 
 
 [![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.png)](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.png)
 
-In der Standard-Installation von i-doit sind bereits vordefinierte Profile vorhanden. Darunter befindet sich das Profile **Complete import**, dass darauf ausgelegt ist, die meisten Daten in i-doit zu importieren, die JDisc inventarisiert hat.
+In der Standard-Installation von i-doit ist bereits ein vordefiniertes **Beispiel** Profil vorhanden. Das vordefinierte JDisc Profil **Example** ist ein Profil das Ihnen aufzeigen soll, wie ein JDisc Profil gestaltet werden kann.
 
 !!! info "Eigene Profile erstellen"
     Es ist ratsam eigene Profile zu erstellen die auf die Objekttypen und Kategorien zugeschnitten sind.
@@ -184,7 +184,7 @@ Hier besteht die Möglichkeit, das Gerät über eine bestimmte Identifikation zu
 
 !!! note "Die Seriennummer ist nur verfügbar wenn der JDisc Server via [GraphQL](#discovery-einstellungen) verbunden wurde"
 
-[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)
+[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.png)](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.png)
 
 Die Kategorie können Sie über die Objekttyp Konfiguration des Objekttyps hinzufügen.
 

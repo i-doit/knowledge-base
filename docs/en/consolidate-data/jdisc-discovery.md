@@ -74,7 +74,7 @@ The JDisc profiles of i-doit provide the possibility to define the connection of
 
 [![jdisc-discovery-profiles](../assets/images/en/consolidate-data/jdisc-discovery/2-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/2-jd.png)
 
-The i-doit default installation already provides predefined profiles. Among these predefined profiles is the **Complete import** profile which has the purpose to import all data in i-doit which have been inventoried by JDisc.
+The i-doit default installation already provides a predefined example profile. The **Example** profile serves as an example of how you can setup your JDisc profile in order to import the data inventoried by JDisc.
 
 !!! note "Own profiles"
     Keep in mind that you would need to alter these profiles to fit your installation and available types of objects from JDisc mapped to i-doit object types.
