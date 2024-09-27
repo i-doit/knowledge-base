@@ -33,9 +33,9 @@ Now we can run the run.sh:
     sudo ./run.sh instance:create {Username} {Apikey}
 
 !!!info ""
-    Each Forms instance has its own API and gets its own {Username} and {Apikey}. These can be defined freely and have nothing in common with the i-doit pro API.
+    Each Forms instance has its own API and gets its own {Username} and {Apikey}. These can be defined freely and have nothing in common with the i-doit API.
 
-    The data must be noted during the installation, because they must be entered later in the configuration of the Forms Add-on in the i-doit pro interface.
+    The data must be noted during the installation, because they must be entered later in the configuration of the Forms Add-on in the i-doit interface.
 
     Example: sudo ./run.sh instance:create forms1 abDzfk74dsfi55FOS32
 
@@ -50,4 +50,4 @@ The Service will be activated and started:
 
     sudo ./forms-service.sh
 
-[ Continue to configuration in i-doit](./configuration-in-i-doit.md){ .md-button .md-button--primary }
+[Continue to configuration in i-doit](./configuration-in-i-doit.md){ .md-button .md-button--primary }

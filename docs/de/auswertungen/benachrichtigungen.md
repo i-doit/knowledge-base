@@ -44,7 +44,7 @@ Als Benachrichtigungsarten stehen aktuell die folgenden zur Auswahl:
     Prüft auf Objekte, die in dem vergangenen, selbst definierten Zeitraum bis Ausführung der Benachrichtigung geändert wurden. Es kann beispielsweise täglich eine Liste mit den in den letzten 24 Stunden geänderten Objekten ausgegeben werden.
 
 *   **i-doit Update**<br>
-    Prüft, ob eine neue Version von i-doit pro verfügbar ist. Dafür benötigt i-doit einen Zugang zum Internet.
+    Prüft, ob eine neue Version von i-doit verfügbar ist. Dafür benötigt i-doit einen Zugang zum Internet.
 
 !!! info "Hinweis"
 
@@ -133,7 +133,6 @@ Bei den Empfängern kann ebenfalls gezielt oder gesammelt benachrichtigt werden.
 
 *   **Strategie zur Berechnung der Empfänger**<br>
     Genutzte Berechnungsstrategie der Empfänger bei der **Auflösung von Personengruppen** zu Personen. Diese Einstellung betrifft nur Personengruppen die als Kontakt zugewiesen sind.
-
 
 | Strategie | Beschreibung |
 | --- | --- |

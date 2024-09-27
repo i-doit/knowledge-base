@@ -1,6 +1,6 @@
 # checkmk 2: Installation
 
-Nachdem Sie sich mit dem [Anforderungen](./checkmk2-anforderungen.md) Laden Sie die neueste stabile Version des i-doit pro Add-ons von der [i-doit Kundenportal](../../administration/kundenportal.md).
+Nachdem Sie sich mit dem [Anforderungen](./checkmk2-anforderungen.md) Laden Sie die neueste stabile Version des i-doit Add-ons von der [i-doit Kundenportal](../../administration/kundenportal.md).
 
 Installieren Sie die heruntergeladene ZIP-Datei [wie jedes andere i-doit Add-on](../index.md).
 

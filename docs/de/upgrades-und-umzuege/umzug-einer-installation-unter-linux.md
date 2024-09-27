@@ -14,7 +14,7 @@ In diesem Artikel beschreiben wir die generelle Vorgehensweise, um eine Installa
 
 Es sind ein paar Dinge zu beachten, um einen möglichst reibungslosen Umzug zu gewährleisten:
 
-1. i-doit und optional installierte [i-doit pro Add-ons](../i-doit-pro-add-ons/index.md) sollten auf einem [aktuellen Stand](../wartung-und-betrieb/update-einspielen.md) sein.
+1. i-doit und optional installierte [i-doit Add-ons](../i-doit-pro-add-ons/index.md) sollten auf einem [aktuellen Stand](../wartung-und-betrieb/update-einspielen.md) sein.
 2. Wir verändern das alte System nicht, um im Fall der Fälle schnell wieder in den Ursprungszustand zurückkehren zu können.
 3. Die gezeigten Befehle passen zu einem aktuellen Debian GNU/Linux und sollten an die entsprechende Umgebung angepasst werden. Blindes Ausführen der Befehle sollten vermieden werden.
 

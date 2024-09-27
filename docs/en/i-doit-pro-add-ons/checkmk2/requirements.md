@@ -1,10 +1,10 @@
-#  checkmk 2: Requirements
+# checkmk 2: Requirements
 
 idoitcmk is a command-line tool which uses the APIs of both i-doit and Check\_MK. Please, meet the following requirements:
 
 For i-doit you need:
 
-*   One working copy of i-doit pro, version 1.12.2 or higher
+*   One working copy of i-doit, version 1.12.2 or higher
 *   Enabled API add-on, version 1.10.2 or higher
 
 For Check\_MK you need:

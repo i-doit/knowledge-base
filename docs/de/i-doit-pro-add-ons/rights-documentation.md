@@ -8,7 +8,7 @@ User contributed Add-on
 *   1 [User contributed Add-on](#user-contributed-add-on)
 *   2 [Add-on Beschreibung](#add-on-beschreibung)
 
-Ein Highlight der doITbetter Conference 2021 war der i-doit Add-on Wettbewerb. Teilnehmen konnte jeder mit einer guten Idee für ein i-doit pro Add-on. Über den i-doit Add-on Packager werden verschiedene Objekttypen und Kategorien zusammengefasst und als Add-on bereitgestellt. Eigene Add-ons lassen sich ohne Programmierkenntnisse entwickeln. Während der dreiwöchigen doITbetter Conference 2021 sind bei uns eine Vielzahl von Ideen eingegangen. Eine Jury hat diese bewertet und die besten Add-on Ideen mit Preisen gekürt.
+Ein Highlight der doITbetter Conference 2021 war der i-doit Add-on Wettbewerb. Teilnehmen konnte jeder mit einer guten Idee für ein i-doit Add-on. Über den i-doit Add-on Packager werden verschiedene Objekttypen und Kategorien zusammengefasst und als Add-on bereitgestellt. Eigene Add-ons lassen sich ohne Programmierkenntnisse entwickeln. Während der dreiwöchigen doITbetter Conference 2021 sind bei uns eine Vielzahl von Ideen eingegangen. Eine Jury hat diese bewertet und die besten Add-on Ideen mit Preisen gekürt.
 
 Den 2ten Platz belegte in diesem Wettbewerb Gerhard Wingender von der Stadtverwaltung Neuwied mit dem Add-on **"Rights Documentation"**
 
@@ -16,7 +16,7 @@ Den 2ten Platz belegte in diesem Wettbewerb Gerhard Wingender von der Stadtverwa
 
 Bei der Dokumentation der Fachanwendungen ist ersichtlich, welcher Fachbereich verantwortlich für die Anwendung ist. Ebenso wird dargestellt, welche Fachbereiche diese Anwendungen nutzen. Eine Unterteilung in verschiedene Fachbereiche ist somit möglich. Auch wird erfasst, wie die Anwendung lizenziert wird und ob die Installation über das Zenworks Bundle abgedeckt ist bzw. durch dieses initialisiert wird. Zusätzliche Informationen sind ebenfalls direkt in der Anwendungsdokumentation ersichtlich, z. B. welche Datenbank verwendet wird, wie häufig Updates durchgeführt werden und welche Version bereitgestellt wurde.
 
-Das i-doit pro Add-on Rights Documentation unterstützt maßgeblich bei der Steuerung von Berechtigungen zwischen Fachabteilungen und der IT. Abteilungsverantwortliche können schnell prüfen, über welche Berechtigungen ihre Mitarbeitenden verfügen und diese bei Bedarf heruntersetzen oder ergänzen. Führungskräfte erhalten somit ein hochaktuelles Prüfungswerkzeug, ohne direkten Zugriff auf kritische Verzeichnisdienste wie das Active Directory zu erhalten. Der Überblick über die Berechtigungen der Mitarbeitenden führt zu höherer Transparenz und verbessert die Kommunikation zwischen IT und Fachabteilungen.
+Das i-doit Add-on Rights Documentation unterstützt maßgeblich bei der Steuerung von Berechtigungen zwischen Fachabteilungen und der IT. Abteilungsverantwortliche können schnell prüfen, über welche Berechtigungen ihre Mitarbeitenden verfügen und diese bei Bedarf heruntersetzen oder ergänzen. Führungskräfte erhalten somit ein hochaktuelles Prüfungswerkzeug, ohne direkten Zugriff auf kritische Verzeichnisdienste wie das Active Directory zu erhalten. Der Überblick über die Berechtigungen der Mitarbeitenden führt zu höherer Transparenz und verbessert die Kommunikation zwischen IT und Fachabteilungen.
 
 Add-on Beschreibung
 -------------------

@@ -1,6 +1,6 @@
 # checkmk 2: i-doit Web GUI
 
-Most user interactions are based on i-doit’s [legacy Check\_MK add-on](../checkmk.md) which is currently shipped with i-doit pro/open. This legacy add-on must be enabled [via the i-doit Admin Center](../index.md) (it’s enabled by default).
+Most user interactions are based on i-doit’s [legacy Check\_MK add-on](../checkmk.md) which is currently shipped with i-doit/open. This legacy add-on must be enabled [via the i-doit Admin Center](../index.md) (it’s enabled by default).
 
 ## Enable real-time calls
 

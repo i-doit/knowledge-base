@@ -5,7 +5,7 @@ _Do you speak IT documentation?_ English is and will remain the standard languag
 Supported Languages
 -------------------
 
-| Language | i-doit open | i-doit pro |
+| Language | i-doit open | i-doit |
 | --- | --- | --- |
 | English | yes | yes |
 | German | no  | yes |
@@ -102,7 +102,6 @@ Localized [object titles](../basics/structure-of-the-it-documentation.md) are no
 ### Multilingual Categories
 
 If the concerned category is a standard [category,](../basics/structure-of-the-it-documentation.md) you can overwrite the language constant in the custom files.
-
 
 In case of [custom categories](../basics/custom-categories.md), the category title is tied to a language constant which is translated in the custom files.
 

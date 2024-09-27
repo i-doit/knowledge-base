@@ -13,7 +13,7 @@ Wir nutzen für die Beispielkonfiguration zwei Server, einen Windows Server mit 
 | tu2-dc2.tu-synetics.test  | 10.10.60.22  | AD, FS        | Windows  |
 | tu2-samlsso.synetics.test | 10.10.60.108 | Apache+Mellon | Debian11 |
 
-### Basiskonfiguration:
+### Basiskonfiguration
 
 ✔ Der Windows-Server muss ein konfiguriertes AD haben, welches die Rolle AD-FS beinhaltet.<br>
 ✔ i-doit ist bereits vorinstalliert und nutzbar.
@@ -123,7 +123,7 @@ Beispiel:
 </IfModule>
 ```
 
-In diesem Beispiel wird unter `/var/www/html` nur das Verzeichnis via Mellon geschützt. Wir können also später noch eine weitere VHost Konfiguration anlegen, um z.B. i-doit pro zu installieren.
+In diesem Beispiel wird unter `/var/www/html` nur das Verzeichnis via Mellon geschützt. Wir können also später noch eine weitere VHost Konfiguration anlegen, um z.B. i-doit zu installieren.
 
 Anlegen des Verzeichnisses:
 
@@ -173,7 +173,7 @@ sudo ntpdate -u tu2-dc2.tu-synetics.test
 
 An dieser Stelle sind wir vorerst mit der Konfiguration des Linux Servers fertig und können uns jetzt unserem AD widmen.
 
-## Konfiguration AD-FS:
+## Konfiguration AD-FS
 
 Zuerst via z.B. WinSCP die `mellon_metadata.xml` vom Linux Server herunterladen und speichern.<br>
 Anschließend öffnen wir das AD-FS Management und legen ein neuen Relying Party Trust an
@@ -246,11 +246,11 @@ Nach der erfolgreichen Anmeldung sollten wir folgende Ausgabe erhalten.
 
 [![Auth users only](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-16.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-16.png)
 
-## Installation i-doit pro:
+## Installation i-doit
 
 Die Installation kann wie im KB-Artikel für Debian beschrieben installiert werden.
 
-## Anmeldung SSO für i-doit pro
+## Anmeldung SSO für i-doit
 
 Hierzu müssen wir einmal in die Administration -> System settings und passen die Konfiguration wie folgt an.
 **Wichtige Information zu Kontakten:****Es muss zwingend die E-Mail Adresse des jeweiligen Benutzers als Login im i-doit hinterlegt sein!**

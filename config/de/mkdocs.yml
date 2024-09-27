@@ -530,7 +530,7 @@ nav:
       - Standorte: anwendungsfaelle/standorte.md
       - Switch Stacking: anwendungsfaelle/switch-stacking.md
       - VM provisionieren (veraltet): anwendungsfaelle/vm-provisionieren.md
-  - i-doit pro Add-ons:
+  - i-doit Add-ons:
       - i-doit-pro-add-ons/index.md
       - Active Directory Documentation: i-doit-pro-add-ons/active-directory-documentation.md
       - Add-on Packager: i-doit-pro-add-ons/add-on-packager.md
@@ -611,7 +611,7 @@ nav:
       - VIVA2: i-doit-pro-add-ons/viva2.md
       - Workflow: i-doit-pro-add-ons/workflow.md
       - Rights Documentation: i-doit-pro-add-ons/rights-documentation.md
-  - i-doit pro cloud:
+  - i-doit cloud:
       - idoit-cloud/index.md
   - Software Entwicklung:
       - software-entwicklung/index.md

@@ -6,7 +6,7 @@ Mit dem [Add-on](./index.md) **Wartungsintervalle** können Wartungstermine gepl
 
 Download und Installation
 
-Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel "[i-doit pro Add-ons](./index.md)".
+Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel "[i-doit Add-ons](./index.md)".
 
 ## Konfiguration
 

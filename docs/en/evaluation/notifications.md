@@ -11,51 +11,40 @@ Currently, you can choose from the following kinds of notifications:
 
 *   **Expiration of a notice period**  
     Checks contracts for the time frame until the expiration of the notice period
-    
 
 *   **Expiration of a maintenance/guarantee period**  
     Checks contracts for the time frame until the expiration of the maintenance/ guarantee period
-    
 
 *   **Expiration of a certification period**  
     Checks all object types associated to the category “certificate” for the expiration date of the certificate
-    
 
 *   **CMDB** **s****tatus end****s**  
     Helpful for the category “status planning”. This notifications informs you about a planned CMDB status that is going to end.
-    
 
 *   **CMDB** **s****tatus starte****d**  
     Helpful for the category “status planning”. This notification informs you about a planned CMDB status that is going to start.
-    
 
 *   **Free** **l****i****censes**  
     Checks licenses for the number of available licenses left.
-    
 
 *   **Stored objects**  
     Checks any object type for the number of contained objects with the status “stored”.
-    
 
 *   **Li****cense expiration**  
     Checks licenses for the time frame until they expire.
-    
 
 *   **Report bas****ed**  **notification**  
     Executes reports and notifies you once a custom number of found objects is reached.
-    
 
 *   **Unchanged objects**  
     Checks objects which have not been changed in a custom-defined time frame. Can be helpful to find very old data and update them in processes.
-    
 
 *   **Changed objects**  
     Checks objects which have been changed in a custom-defined time frame. As an example, a daily list of all objects that have been changed in the last 24 hours can be issued.
-    
 
 *   **i-doit** **u****pdate**  
-    Checks whether a new version of i-doit pro is available. i-doit requires an internet connection to do so.
-    
+    Checks whether a new version of i-doit is available. i-doit requires an internet connection to do so.
+
 !!! info "Report based notification"
 
     The notification type “report based notification” can be used in a very flexible way and can send appropriate notifications for almost all events and statuses.
@@ -71,29 +60,28 @@ The \* constitutes a mandatory field in i-doit.
 
 *   **Name****\***  
     Ideally, the name should have a meaningful designation.
-    
+
 *   **A****c****ti****ve****\***  
     You can click the checkbox for activation or you can deactivate the notifications.
-    
+
 *   **Threshold value**  
     The threshold value varies depending on whether a time factor (X years/ months/ days/ hours/ minutes/ seconds) or a counter (number of found objects) can be set up for the notification. Above the settings is a short explanation of the notification as well as the information of what exactly is checked by the threshold value.
-    
+
 *   **Max.** **amount**  **of notifications to send****\***  
     In case the notification is checked multiple times and an object is found multiple times, you can set a limit here. As soon as the limit value has been reached, no further notifications will be sent. Everything less or equal to 0 means that notifications will continue until the object/s are changed so that the notification is not valid anymore.  
-      
+
     Example: If checks and notifications are carried out every day and a 5 is entered in this field, then the notifications will stop after 5 days.  
-      
+
     The counter will be reset to 0 if the object cannot be found anymore by this notification, for example, when the object is updated or after the maximum number of notifications was made.
-    
+
 *   **Number of sent notifications**  
     This display is purely for information purposes and is either increased when a notification is sent or reset if none is sent.
-    
+
 *   **Dat****e of the last check**  
     Also purely for information purposes. It shows the last time a check was performed.
-    
+
 *   **Description**  
     This field is a free text field for a descriptive text of the notification.
-    
 
 ### Domains
 
@@ -101,14 +89,13 @@ Objects which are to be checked by the notification can be selected specifically
 
 *   **Obje****c****t****s**  
     One or more objects can be selected via the magnifier.
-    
+
 *   **Obje****c****t type****s**  
     All objects of one or more selected object types can be checked here.
-    
+
 *   **Reports**  
     Notifications can be even more specific with a report.  
     Example: The aim is to test whether enough free licenses are left which cost more than 150 EUR per license since a longer process applies here compared to the cheaper licenses. Then a second report can be created and used in another notification in order to query the cheaper licences and to effect a notification at a later time. Please be really mindful of the domain and the queried categories assigned to the object types!
-    
 
 !!! info "Restricted object types"
 
@@ -121,15 +108,13 @@ You can also notify recipients both specifically or collectively.
 *   **Assigned roles**  
     When an object is found with the configured notification, you can notify the contact which is assigned to the object in the role that is set here.  
     Example: The documented contact with the role “Contract partner” can be notified via the category “Contact assignment” in the contract.
-    
+
 *   **Assigned contacts**  
     It is also possible to notify one or more contacts/ person groups or organizations. Important for this is a defined email address for each contact object.
-    
+
 *   **Receiver calculation strategy  
     **Used calculation strategy of recipients when **resolving Person groups** to persons. This setting affects only groups of persons assigned as contacts.
-    
-      
-    
+
     | Strategie | Beschreibung |
     | --- | --- |
     | \-  | This is the default = Groups if available, otherwise assigned persons |
@@ -137,7 +122,7 @@ You can also notify recipients both specifically or collectively.
     | Groups if available, otherwise assigned persons | If the person group has stored a primary e-mail address, this will be notified.  <br>If the person group does NOT have a primary e-mail address, the primary e-mail address of each person group member will be notified. |
     | Groups only | Person groups with a primary email address will be notified. |
     | Persons only | Person group member with a primary email address will be notified. |
-    
+
 E-mail Templates
 ----------------
 
@@ -145,16 +130,15 @@ The templates matching the corresponding notifications can be selected and adjus
 
 *   **Languag****e****\***  
     The language that is currently being edited is displayed.
-    
+
 *   **Subject****\***  
     The subject of the message can be customized with placeholders from the bottom section of the interface.
-    
+
 *   **Notification** **text****\***  
     The text can be assembled with placeholders just like the subject.
-    
+
 *   **Report**  
     A report for the e-mail can be defined here, which is then used to organize the object information found in the notification.
-    
 
 Configuration of the call with the i-doit Console
 -------------------------------------------------

@@ -46,7 +46,7 @@ Im mittleren Bereich der oberen Taskleiste findest du die einzelnen [Objekttyp](
 
 ## Extras
 
-Unter Extras sind ganz viele Sonderfunktionen von i-doit untergebracht. Hier findest du zum einen unter CMDB Features um effizienter mit i-doit zu arbeiten und hast Zugriff auf die jeweiligen installierten [i-doit pro Add-ons](../i-doit-pro-add-ons/i-diary.md) von i-doit.
+Unter Extras sind ganz viele Sonderfunktionen von i-doit untergebracht. Hier findest du zum einen unter CMDB Features um effizienter mit i-doit zu arbeiten und hast Zugriff auf die jeweiligen installierten [i-doit Add-ons](../i-doit-pro-add-ons/i-diary.md) von i-doit.
 
 [![extras](../assets/images/de/grundlagen/web-gui/8-web-gui.png)](../assets/images/de/grundlagen/web-gui/8-web-gui.png)
 

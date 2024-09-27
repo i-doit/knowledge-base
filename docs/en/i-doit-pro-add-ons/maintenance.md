@@ -4,7 +4,7 @@ You can plan, coordinate and control maintenance dates with help of the **Mainte
 
 Download and Installation
 
-You can subsequently install the **Maintenance intervals** add-on. The article "[i-doit pro Add-ons](./index.md)" provides detailed descriptions regarding download, installation, updates etc.
+You can subsequently install the **Maintenance intervals** add-on. The article "[i-doit Add-ons](./index.md)" provides detailed descriptions regarding download, installation, updates etc.
 
 ## Configuration
 

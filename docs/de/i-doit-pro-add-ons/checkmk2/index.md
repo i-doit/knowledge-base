@@ -48,7 +48,7 @@ Für Nutzer, die sich mit der neuen Konfigurationsstruktur vertraut machen möch
 -   Die betrifft nicht die Aufrufe der Inventory-API!
 
 !!! info ""
-    Als Gold-Partner von Tribe29 gilt das SHD - System-Haus-Dresden GmbH als ausgewiesener Spezialist für das Monitoring mit Checkmk. Mit der Übernahme und Weiterentwicklung des i-doit pro Add-Ons Checkmk 2 stellt SHD diese Expertise nun auch den i-doit Anwendern zur Verfügung.
+    Als Gold-Partner von Tribe29 gilt das SHD - System-Haus-Dresden GmbH als ausgewiesener Spezialist für das Monitoring mit Checkmk. Mit der Übernahme und Weiterentwicklung des i-doit Add-Ons Checkmk 2 stellt SHD diese Expertise nun auch den i-doit Anwendern zur Verfügung.
 
 !!! attention ""
     Mit der [Checkmk Version 2.1.0b1](https://checkmk.com/werk/12389) wurde die Struktur der Inventory Daten verändert. Es ist aktuell mit der CheckMK 2 Add-on Version <=1.8 nicht möglich Inventory in i-doit zu übertragen.<br>
@@ -335,7 +335,7 @@ First public release 🎉
 
 **Important notes:**
 
--   Because of several major changes in i-doit we had to increase minimum versions of i-doit pro and API add-on.
+-   Because of several major changes in i-doit we had to increase minimum versions of i-doit and API add-on.
 -   Please re-run idoitcmk init to update configuration setting pull.attributes.
 -   From now on, you need a valid license for this add-on. Download your license file from [https://portal.i-doit.com/](https://portal.i-doit.com/).
 
@@ -346,7 +346,7 @@ First public release 🎉
 
 ### Changed
 
--   Require i-doit pro, at least version 1.12
+-   Require i-doit, at least version 1.12
 -   Require i-doit API add-on, at least version 1.10
 -   Enforce license check
 -   Remove dependency from legacy Check\_MK add-on
@@ -419,7 +419,7 @@ Remember, remember, the fifth of November… 🎃
 
 ### Changed
 
--   Require i-doit pro, version 1.11 or higher
+-   Require i-doit, version 1.11 or higher
 
 ### Fixed
 

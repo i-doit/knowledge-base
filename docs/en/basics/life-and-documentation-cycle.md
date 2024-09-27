@@ -51,7 +51,7 @@ Apart from the objects that are to be documented, the documentation itself can a
 
 !!! success "Deletion process"
 
-    It may be worthwhile for bigger environments to establish the required processes for the archiving and deleting of documentation artifacts. At what point shall parts of the documentation be archived? Who may clean up the IT documentation? These kind of questions need to be addressed by the team. The permission system of i-doit provides the required settings to assign the rights to archive or to purge parts of the documentation to specific users.
+    It may be worthwhile for bigger environments to establish the required processes for the archiving and deleting of documentation artifacts. At what point shall parts of the documentation be archived? Who may clean up the IT documentation? These kind of questions need to be addressed by the team. The permission system of i-doitvides the required settings to assign the rights to archive or to purge parts of the documentation to specific users.
 
 ### States
 

@@ -248,7 +248,7 @@ Displays information about the installed license.
         "addons": {
           "iso27001": {
             "licensed": true,
-            "label": "i-doit pro Add-on ISMS medium"
+            "label": "i-doit Add-on ISMS medium"
           },
           "viva": {
             "label": "VIVA",
@@ -256,22 +256,22 @@ Displays information about the installed license.
           },
           "viva2": {
             "licensed": true,
-            "label": "i-doit pro Add-on VIVA medium"
+            "label": "i-doit Add-on VIVA medium"
           },
           "cmk2": {
             "licensed": true,
-            "label": "i-doit pro Add-on Checkmk2"
+            "label": "i-doit Add-on Checkmk2"
           },
           "document": {
             "licensed": true,
-            "label": "i-doit pro Add-on Documents medium"
+            "label": "i-doit Add-on Documents medium"
           },
           ...
         },
         "licenses": [
           {
             "id": 2,
-            "label": "i-doit pro Add-on Checkmk2",
+            "label": "i-doit Add-on Checkmk2",
             "licenseType": "Add-on",
             "registrationDate": "2023-08-01 00:00:00",
             "validUntil": "2023-08-31 00:00:00",

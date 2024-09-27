@@ -1,6 +1,6 @@
 # Add-on Packager
 
-Die Idee des Add-on Packagers ist es, dem Anwender die Möglichkeit zu eröffnen, eigene vollwertige [i-doit pro Add-ons](./index.md) zu bauen. Dabei wird der Add-on Packager komplett über die grafische Benutzeroberfläche von i-doit bedient und es werden keine Programmierkenntnisse benötigt.
+Die Idee des Add-on Packagers ist es, dem Anwender die Möglichkeit zu eröffnen, eigene vollwertige [i-doit Add-ons](./index.md) zu bauen. Dabei wird der Add-on Packager komplett über die grafische Benutzeroberfläche von i-doit bedient und es werden keine Programmierkenntnisse benötigt.
 
 Es können die Strukturen, die der Anwender beispielsweise über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) oder den [Report Manager](../auswertungen/report-manager.md) erstellen kann, als Add-on paketiert und weitergeben werden.
 

@@ -45,7 +45,7 @@
 [Bug][LDAP]                                        Administration > Import and interfaces > LDAP > Attribute extension cannot be saved<br>
 [Bug][Logbook]                                     If a change in the administration with "logbook commentary" is saved a missleading information tells that a logbook entry has been created.<br>
 [Bug][API]                                         Creating and setting a Dialog entry with a String which is only a number is not logged<br>
-[Bug][API]                                         PHP Error when posting a API request without installed i-doit pro add-on API<br>
+[Bug][API]                                         PHP Error when posting a API request without installed i-doit add-on API<br>
 [Bug][List editing]                                Software not displayed in list view when assigned via list edit<br>
 [Bug][List editing]                                Adding a new model in list edit causes database error<br>
 [Bug][List editing]                                Assignment categories not editable in list edit<br>

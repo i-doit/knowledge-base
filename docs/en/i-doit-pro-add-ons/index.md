@@ -1,6 +1,6 @@
 ---
-title: i-doit pro Add-ons
-description: i-doit pro Add-ons
+title: i-doit Add-ons
+description: i-doit Add-ons
 #icon: material/
 status:
 lang: en

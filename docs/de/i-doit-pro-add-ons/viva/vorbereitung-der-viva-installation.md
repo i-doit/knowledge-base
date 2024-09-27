@@ -1,25 +1,25 @@
 # Vorbereitung der VIVA-Installation
 
-Vor der ersten Nutzung des [i-doit pro Add-ons](../index.md) **VIVA** steht die Installation an.
+Vor der ersten Nutzung des [i-doit Add-ons](../index.md) **VIVA** steht die Installation an.
 
 Systemvoraussetzungen
 ---------------------
 
 Neben den für i-doit allgemeingültigen [Systemvoraussetzungen](../../installation/systemvoraussetzungen.md) und Systemeinstellungen setzt dieses Add-on folgende Bedingungen an das System, auf dem es installiert wird, voraus:
 
-*   Ein lauffähiges _i-doit pro_ in den aktuell von Synetics unterstützten Versionen ist installiert.
+*   Ein lauffähiges _i-doit_ in den aktuell von Synetics unterstützten Versionen ist installiert.
 *   Die PHP-Einstellung short_open_tag ist aktiviert (On).
 *   Optional wird für die Erstellung eines bereinigten Netzplans Graphviz (in Form der Binaries dot oder neato) auf dem System benötigt und es ist erforderlich, dass die PHP-Funktion exec ausgeführt werden darf. Dies funktioniert nicht auf einem Windows-Betriebssystem.
 
 Herunterladen, Installation, Aktualisierung, (De-)Aktivieren
 ------------------------------------------------------------
 
-Siehe Artikel [i-doit pro Add-ons](../index.md).
+Siehe Artikel [i-doit Add-ons](../index.md).
 
 Rechteverwaltung
 ----------------
 
-_i-doit pro_ verfügt über eine fein-granulare [Rechteverwaltung](../../effizientes-dokumentieren/rechteverwaltung/index.md), die auch für VIVA genutzt wird. Die Rechte können pro Benutzer/Benutzergruppe unter **Verwaltung → Rechtesystem → VIVA** vergeben werden. Folgende Rechte sind verfügbar:
+_i-doit_ verfügt über eine fein-granulare [Rechteverwaltung](../../effizientes-dokumentieren/rechteverwaltung/index.md), die auch für VIVA genutzt wird. Die Rechte können pro Benutzer/Benutzergruppe unter **Verwaltung → Rechtesystem → VIVA** vergeben werden. Folgende Rechte sind verfügbar:
 
 *   Lesender Zugriff: Bearbeitung ist nicht möglich.
 *   Schreibender Zugriff: Lesen, Neuanlegen, Speichern und Löschen von Informationen
@@ -34,7 +34,7 @@ Um die ersten Schritte zu vereinfachen, wird bei der Installation die gleichnami
 Migrieren vom bisherigen ITGS-Modul
 -----------------------------------
 
-Bereits seit _i-doit pro_ in Version 0.9.9-6 pro ist ein Modul zur Dokumentation von IT-Grundschutz-relevanten Informationen enthalten. VIVA löst es vollständig ab und erweitert es um zahlreiche neue Funktionen. Falls im alten Modul bereits dokumentiert wurde, können diese Daten rückstandslos nach VIVA überführt werden.
+Bereits seit _i-doit_ in Version 0.9.9-6 pro ist ein Modul zur Dokumentation von IT-Grundschutz-relevanten Informationen enthalten. VIVA löst es vollständig ab und erweitert es um zahlreiche neue Funktionen. Falls im alten Modul bereits dokumentiert wurde, können diese Daten rückstandslos nach VIVA überführt werden.
 
 ### Migration vorbereiten
 

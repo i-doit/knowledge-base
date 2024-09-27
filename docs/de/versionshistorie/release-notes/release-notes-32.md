@@ -1,6 +1,6 @@
 # Release Notes 32
 
-We’re happy to announce i-doit pro 32, a version which will continue our efforts of improving quality which also includes some preemptive security fixes. This is why we highly recommend updating to the latest version. A detailed list of over 75 fixes and changes can be found in our [changelog](../changelogs/changelog-32.md).
+We’re happy to announce i-doit 32, a version which will continue our efforts of improving quality which also includes some preemptive security fixes. This is why we highly recommend updating to the latest version. A detailed list of over 75 fixes and changes can be found in our [changelog](../changelogs/changelog-32.md).
 We also want to offer the best suited compatibility and be ready for upcoming new features. See the following section in the release notes for a summary of these previous changes, especially if you are running an i-doit version older than 31.
 
 ## Compatibility

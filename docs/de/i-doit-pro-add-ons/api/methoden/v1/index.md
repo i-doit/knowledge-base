@@ -10,7 +10,7 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
 ??? example "idoit.search"
 
-    Suchen in i-doit pro
+    Suchen in i-doit
 
     **Anfrage Parameter**
 

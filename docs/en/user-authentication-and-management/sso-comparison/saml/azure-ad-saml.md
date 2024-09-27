@@ -6,7 +6,7 @@ In this guide, we describe how to set up single sign-on (SSO) for i-doit using S
 
 We use for the example configuration a Debian 11 server with Apache, Mellon and installed i-doit.
 
-### Basic configuration:
+### Basic configuration
 
 ✔ This guide assumes that your Azure Active Directory has already been configured properly.<br>
 ✔ i-doit is already pre-installed and usable.
@@ -117,12 +117,12 @@ Example:
 !!! info ""
     In this example, the directory `/var/www/html/i-doit` where our i-doit is located is protected by using Mellon.
 
-## Activate i-doit pro SSO
+## Activate i-doit SSO
 
 Now we have to go to administration -> system settings and adjust the configuration as follows.
 
 !!! attention "Important information about contacts"
-    
+
     It is mandatory that the e-mail address of the respective user is stored as login in i-doit!
 
 [![i-doit SSO setting](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)
@@ -203,13 +203,13 @@ The previously created metadata XML must now be made available on our Linux serv
 
 Now that we have created all the configurations so far, we can test them and activate all the necessary mods.
 
-###Test config
+### Test config
 
 ```shell
 sudo apache2ctl configtest
 ```
 
-###Activate mods and configs
+### Activate mods and configs
 
 ```shell
 sudo a2enmod ssl

@@ -1,25 +1,25 @@
 # Preparation of the VIVA installation
 
-Before using the [i-doit pro add-on VIVA](../index.md) for the first time, you need to install it.
+Before using the [i-doit add-on VIVA](../index.md) for the first time, you need to install it.
 
 System requirements
 -------------------
 
 In addition to the system [requirements](../../installation/system-requirements.md) and [system settings](../../installation/manual-installation/system-settings.md) generally applicable to i-doit, this add-on imposes the following conditions on the system on which it is installed:
 
-An executable i-doit pro in the versions currently supported by Synetics is installed.  
+An executable i-doit in the versions currently supported by Synetics is installed.  
 The PHP setting short_open_tag is enabled (On).  
 Optionally, Graphviz (in the form of the dot or neato binaries) is required on the system to create a cleaned up network and the PHP exec function is required to be allowed to run. This will not work on a Windows operating system.
 
 Download, install, update, (de)activate
 ---------------------------------------
 
-See article [i-doit pro add-ons](../index.md).
+See article [i-doit add-ons](../index.md).
 
 Rights management
 -----------------
 
-i-doit pro has a fine-granular rights management, which is also used for VIVA. Rights can be assigned per user/user group under Administration → Rights System → VIVA. The following rights are available:
+i-doit has a fine-granular rights management, which is also used for VIVA. Rights can be assigned per user/user group under Administration → Rights System → VIVA. The following rights are available:
 
 Reading access: editing is not possible.  
 Writing access: reading, creating, saving and deleting information.  
@@ -33,7 +33,7 @@ To simplify the first steps, the eponymous person group VIVA is created during i
 Migrate from the previous ITGS module
 -------------------------------------
 
-Already since i-doit pro in version 0.9.9-6 pro, a module for documenting IT baseline protection-relevant information has been included. VIVA completely replaces it and extends it with numerous new functions. If documentation has already been carried out in the old module, this data can be transferred to VIVA without leaving any residues.
+Already since i-doit in version 0.9.9-6 pro, a module for documenting IT baseline protection-relevant information has been included. VIVA completely replaces it and extends it with numerous new functions. If documentation has already been carried out in the old module, this data can be transferred to VIVA without leaving any residues.
 
 Prepare migration
 -----------------

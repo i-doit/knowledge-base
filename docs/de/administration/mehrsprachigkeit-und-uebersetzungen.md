@@ -4,7 +4,7 @@ _Do you speak IT documentation?_ Englisch ist und bleibt die Standard-Sprache in
 
 ## Unterstützte Sprachen
 
-| Sprache | i-doit open | i-doit pro |
+| Sprache | i-doit open | i-doit |
 | --- | --- | --- |
 | Englisch | ja  | ja  |
 | Deutsch | nein | ja  |

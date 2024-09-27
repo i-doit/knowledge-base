@@ -4,7 +4,7 @@ idoitcmk ist ein Kommandozeilenwerkzeug, das die APIs von i-doit und Check\_MK v
 
 Für i-doit benötigen Sie:
 
-*   Eine Kopie von i-doit pro, Version 1.12.2 oder höher
+*   Eine Kopie von i-doit, Version 1.12.2 oder höher
 *   Aktiviertes API-Add-on, Version 1.10.2 oder höher
 
 Für checkmk benötigen Sie:

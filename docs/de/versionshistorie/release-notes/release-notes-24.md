@@ -1,6 +1,6 @@
 # Release Notes 24
 
-We're happy to announce i-doit pro 24. As always, we will provide you with bugfixes together with helpful features for a better software experience. We encourage you to [update](../../wartung-und-betrieb/update-einspielen.md) to this release as soon as possible to benefit from all these contents.
+We're happy to announce i-doit 24. As always, we will provide you with bugfixes together with helpful features for a better software experience. We encourage you to [update](../../wartung-und-betrieb/update-einspielen.md) to this release as soon as possible to benefit from all these contents.
 
 ## Highlights in this release
 
@@ -14,6 +14,6 @@ Please check the changelog for further details.
 
 ## Add-ons
 
-Together with i-doit pro 24, we also provide a new version of the add-on Forms with some bugfixes to improve the user experience. To use the latest version of the add-on, please make sure to update to i-doit pro 23, which is required.
+Together with i-doit 24, we also provide a new version of the add-on Forms with some bugfixes to improve the user experience. To use the latest version of the add-on, please make sure to update to i-doit 23, which is required.
 
 -   [Forms 1.2](../../i-doit-pro-add-ons/forms/index.md)

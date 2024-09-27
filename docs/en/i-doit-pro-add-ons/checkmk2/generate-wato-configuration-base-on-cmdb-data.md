@@ -1,6 +1,6 @@
 # checkmk 2: Generate WATO configuration based on CMDB data
 
-i-doit provides detailed information about your IT infrastructure including all your hosts. Those hosts can be shared with Check\_MK so you only have to document/configure your hosts once. To push these hosts to checkmk run:
+i-doitvides detailed information about your IT infrastructure including all your hosts. Those hosts can be shared with Check\_MK so you only have to document/configure your hosts once. To push these hosts to checkmk run:
 
     idoitcmk push
 

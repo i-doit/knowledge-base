@@ -121,7 +121,7 @@ Example:
 </IfModule>
 ```
 
-In this example only the directory protected via Mellon is protected under `/var/www/html`. So we can create another VHost config later to install e.g. i-doit pro.
+In this example only the directory protected via Mellon is protected under `/var/www/html`. So we can create another VHost config later to install e.g. i-doit.
 
 Creating the directory:
 
@@ -243,11 +243,11 @@ After successful registration, we should receive the following output.
 
 [![Auth users only]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-16.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-16.png)
 
-## Installation i-doit pro
+## Installation i-doit
 
 The installation can be installed as described in the KB article for [Debian](../../../installation/manual-installation/debian/index.md).
 
-## SSO login for i-doit pro
+## SSO login for i-doit
 
 For this we have to go to the Administration -> System settings and adjust the configuration as follows.
 Important information about contacts: **It is mandatory that the e-mail address of the respective user is stored as login in i-doit!**

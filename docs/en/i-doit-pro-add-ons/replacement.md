@@ -5,7 +5,7 @@ A new switch is put into operation but you want to maintain all the connections?
 Download and Installation
 -------------------------
 
-This add-on can also be installed at a later time. You can find detailed descriptions about download, installation, updates etc. in the "[i-doit pro Add-ons](./index.md)" article.
+This add-on can also be installed at a later time. You can find detailed descriptions about download, installation, updates etc. in the "[i-doit Add-ons](./index.md)" article.
 
 Configuration
 -------------
@@ -46,9 +46,9 @@ Object Swap
 
 There are three ways to swap an object for another one:
 
-1.  Select both objects within an [object list](../basics/object-list/index.md) and click the **Swap** button in the action bar.
-2.  Click the **Swap** button in the action bar within an object and then select the object of swapping  under **Stored object.**
-3.  Select both objects under **Object to swap** and **Stored object** at **Extras → Object Swap.**
+1. Select both objects within an [object list](../basics/object-list/index.md) and click the **Swap** button in the action bar.
+2. Click the **Swap** button in the action bar within an object and then select the object of swapping  under **Stored object.**
+3. Select both objects under **Object to swap** and **Stored object** at **Extras → Object Swap.**
 
 Now you can swap the selected objects by clicking the **Change** button.
 
@@ -82,8 +82,6 @@ Swap Report
 A report about swapping actions which have been carried out so far is generated under **Extras → Object swap → Swap-report**. You can also reach the reports item via **Extras → Report Manager → Views → Swap-report**.
 
 [![Swap Report](../assets/images/en/i-doit-pro-add-ons/replacement/5-rp.png)](../assets/images/en/i-doit-pro-add-ons/replacement/5-rp.png)
-
-  
 
 Releases
 --------

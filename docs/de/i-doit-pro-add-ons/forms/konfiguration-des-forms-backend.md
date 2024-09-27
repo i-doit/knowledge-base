@@ -33,8 +33,8 @@ Jetzt können wir die run.sh ausführen:
     sudo ./run.sh instance:create {Benutzername} {Apikey}
 
 !!! info ""
-    Jede Forms Instanz hat eine eigene API und bekommt einen eigenen {Benutzernamen} sowie {API Key}. Diese können frei definiert werden und haben nichts mit der i-doit pro API gemeinsam.
-    Die Daten müssen bei der Installation notiert werden, da sie später in der Konfiguration des Forms Add-on in der i-doit pro Oberfläche eingetragen werden müssen.
+    Jede Forms Instanz hat eine eigene API und bekommt einen eigenen {Benutzernamen} sowie {API Key}. Diese können frei definiert werden und haben nichts mit der i-doit API gemeinsam.
+    Die Daten müssen bei der Installation notiert werden, da sie später in der Konfiguration des Forms Add-on in der i-doit Oberfläche eingetragen werden müssen.
     Beispiel: sudo ./run.sh instance:create forms1 abDzfk74dsfi55FOS32
 
 Um die forms-service.shzu verwenden, müssen wir erst die Rechte zum Ausführen setzen:

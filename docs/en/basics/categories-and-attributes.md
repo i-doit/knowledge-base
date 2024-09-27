@@ -1,6 +1,6 @@
 # Categories and attributes
 
-i-doit provides over 200 predefined [categories](structure-of-the-it-documentation.md). The result is a wide range of over 1,000 [attributes](structure-of-the-it-documentation.md) which theoretically can be documented for each [object](structure-of-the-it-documentation.md). This abundance inevitably leads to the frequently asked question "What is the purpose of category XY with all its attributes?" Which concepts represent each single category and each single attribute?
+i-doitvides over 200 predefined [categories](structure-of-the-it-documentation.md). The result is a wide range of over 1,000 [attributes](structure-of-the-it-documentation.md) which theoretically can be documented for each [object](structure-of-the-it-documentation.md). This abundance inevitably leads to the frequently asked question "What is the purpose of category XY with all its attributes?" Which concepts represent each single category and each single attribute?
 
 !!! info "Flexibility versus specifications"
     The following table is an attempt to give you a general overview. It is an "attempt" because of the sheer bulk of predefined categories and attributes. There are no strict specifications for many categories and attributes. Therefore the following descriptions are only recommendations. We would appreciate additions and corrections and would be glad to receive information about how you use the following categories and attributes in practice. Please just send an e-mail to [feedback@i-doit.com](mailto:feedback@i-doit.com).

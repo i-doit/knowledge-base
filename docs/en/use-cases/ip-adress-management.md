@@ -17,7 +17,7 @@ We especially focus on these categories:
 *   **Net** (category folder)
 *   **Network** (category folder)
 
-As active net components i-doit provides, for example, the object types **Switch** and **Router**, as active devices **Server**, **Client**, **VoIP Telephone** and many others.
+As active net components i-doitvides, for example, the object types **Switch** and **Router**, as active devices **Server**, **Client**, **VoIP Telephone** and many others.
 
 LAN
 ---
@@ -36,7 +36,7 @@ In this category you can also check whether other nets have already been documen
 
 Global v4 and Global v6
 
-i-doit provides two [objects](../glossary.md) of the type **Layer 3 Net**: **Global v4** and **Global v6**. Those who want to do without the documentation of single nets can assign single IP addresses to one of the two objects. This is done automatically, depending on the IP version. The nets comprise the complete IPv4 and IPv6 address range. Therefore you cannot delete these two objects and you should not change them radically so that they cannot fulfill their purpose anymore.
+i-doitvides two [objects](../glossary.md) of the type **Layer 3 Net**: **Global v4** and **Global v6**. Those who want to do without the documentation of single nets can assign single IP addresses to one of the two objects. This is done automatically, depending on the IP version. The nets comprise the complete IPv4 and IPv6 address range. Therefore you cannot delete these two objects and you should not change them radically so that they cannot fulfill their purpose anymore.
 
 Supernets
 ---------
@@ -115,7 +115,7 @@ Net components can act as gateways to transfer connections from one net to other
 IPv4 versus IPv6
 ----------------
 
-Presumably, IPv6 is not widely spread in most company LANs, but nevertheless i-doit provides the basic elements for a documentation of IPv6 networks. Similar to the procedure with IPv4 you define networks and assign IP addresses. Only the **Address allocation** is different (SLAAC, DHCPv6, etc.). Moreover, you can specify the range of validity (global, linklocal etc.). Both attributes belong to the **Host address** category.
+Presumably, IPv6 is not widely spread in most company LANs, but nevertheless i-doitvides the basic elements for a documentation of IPv6 networks. Similar to the procedure with IPv4 you define networks and assign IP addresses. Only the **Address allocation** is different (SLAAC, DHCPv6, etc.). Moreover, you can specify the range of validity (global, linklocal etc.). Both attributes belong to the **Host address** category.
 
 WLAN
 ----
@@ -157,7 +157,7 @@ You can put together physical ports to logical ports. This method is often calle
 
 ### Cabling
 
-In i-doit you can differentiate clearly between the various layers of the [TCP/IP reference model](https://en.wikipedia.org/wiki/Internet_protocol_suite). The upper subjects treat the layers 3 with IP and 4 (MAC). For the other layers, i-doit provides further documentation functions, for example for layer 1, which concerns the physical medium.
+In i-doit you can differentiate clearly between the various layers of the [TCP/IP reference model](https://en.wikipedia.org/wiki/Internet_protocol_suite). The upper subjects treat the layers 3 with IP and 4 (MAC). For the other layers, i-doitvides further documentation functions, for example for layer 1, which concerns the physical medium.
 
 To document cables and their connections to active and passive components i-doit supplies numerous object types (**Cable**, **Patch Panel**, **Cable tray**, **Conduit** etc.). The connection of objects of these types is carried out in the category for cabling, which can be (but doesn't have to be) maintained actively. When you document a connection between two components via the **Port** category (network), this category will be filled automatically and an object of the type **Cable** will be generated.
 

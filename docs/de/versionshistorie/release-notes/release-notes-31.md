@@ -1,6 +1,6 @@
 # Release Notes 31
 
-We’re happy to announce i-doit pro 31. This version mainly focuses on compatibility and quality. Alongside our usual bug fixes we added an updated file browser to improve the upload experience for files to i-doit. We also reworked the WYSIWYG editors to increase their look and feel as well as the option to directly paste images into your text and upload them to i-doit to prevent them from being stored directly in the database..
+We’re happy to announce i-doit 31. This version mainly focuses on compatibility and quality. Alongside our usual bug fixes we added an updated file browser to improve the upload experience for files to i-doit. We also reworked the WYSIWYG editors to increase their look and feel as well as the option to directly paste images into your text and upload them to i-doit to prevent them from being stored directly in the database..
 We encourage you to [update](https://kb.i-doit.com/de/wartung-und-betrieb/update-einspielen.html) to this release as soon as possible to benefit from all of these improvements.
 
 ## Compatibility

@@ -4,7 +4,7 @@ _i-doit_ sollte immer in der aktuellsten Version betrieben werden. In Minor-Rele
 
 === "Release überspringen ab version 20"
     !!! attention "Release überspringen ab version 20"
-        Wenn du direkt auf eine neuere Version, z.B. 26, springen möchtest, kannst du das neueste Update-Paket aus dem [Kundenportal](../administration/kundenportal.md) herunterladen und im i-doit pro Ordner entpacken. Die notwendigen Schritte findest du [hier](update-einspielen.md#update-über-die-konsole-vorbereiten).
+        Wenn du direkt auf eine neuere Version, z.B. 26, springen möchtest, kannst du das neueste Update-Paket aus dem [Kundenportal](../administration/kundenportal.md) herunterladen und im i-doit Ordner entpacken. Die notwendigen Schritte findest du [hier](update-einspielen.md#update-über-die-konsole-vorbereiten).
         Ab Version **25** mit [Hotfix](../administration/hotfixes/hotfix-archiv/index.md), wird auch die Version 27 beim update check für den download angeboten.
 
 === "Releases überspringen vor version 20"
