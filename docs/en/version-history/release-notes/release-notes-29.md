@@ -24,10 +24,10 @@ You will find a detailed list of the changes in the [changelog](../changelogs/ch
 
 We also release new versions of the following add-ons:
 
--   [Analysis](../../i-doit-pro-add-ons/analysis.md) 1.5
--   [API](../../i-doit-pro-add-ons/api/index.md) 1.16
--   [Cabling](../../i-doit-pro-add-ons/cabling.md) 1.4
--   [Documents](../../i-doit-pro-add-ons/documents/index.md) 1.7
--   [Floorplan](../../i-doit-pro-add-ons/floorplan.md) 1.8
+-   [Analysis](../../i-doit-add-ons/analysis.md) 1.5
+-   [API](../../i-doit-add-ons/api/index.md) 1.16
+-   [Cabling](../../i-doit-add-ons/cabling.md) 1.4
+-   [Documents](../../i-doit-add-ons/documents/index.md) 1.7
+-   [Floorplan](../../i-doit-add-ons/floorplan.md) 1.8
 
 Please make sure that you fulfill all the requirements before installing these new versions.

@@ -18,8 +18,8 @@ We encourage you to [update](../../maintenance-and-operation/update.md) to this 
 Alongside i-doit 26, we will be releasing new and improved add-on versions with compatibility changes.<br>
 If you have been using one or more of these add-ons, you need to update them ==before== applying the i-doit update.
 
--   [Analysis 1.3.1](../../i-doit-pro-add-ons/analysis.md#releases)
--   [Maintenance 1.2.2](../../i-doit-pro-add-ons/maintenance.md#releases)
+-   [Analysis 1.3.1](../../i-doit-add-ons/analysis.md#releases)
+-   [Maintenance 1.2.2](../../i-doit-add-ons/maintenance.md#releases)
 -   [Nagios 1.1.1](../../automation-and-integration/network-monitoring/nagios.md)
--   [Workflow 1.1.1](../../i-doit-pro-add-ons/workflow.md#releases)
--   [Packager 1.2.1](../../i-doit-pro-add-ons/add-on-packager.md#releases)
+-   [Workflow 1.1.1](../../i-doit-add-ons/workflow.md#releases)
+-   [Packager 1.2.1](../../i-doit-add-ons/add-on-packager.md#releases)

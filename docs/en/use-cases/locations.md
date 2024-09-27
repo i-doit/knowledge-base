@@ -90,7 +90,7 @@ A documented workplace receives a person as logical location. You can also assig
 Floor Plan
 ----------
 
-The [Floorplan](../i-doit-pro-add-ons/floorplan.md) add-on is suitable for creating two-dimensional plans on basis of the location paths.
+The [Floorplan](../i-doit-add-ons/floorplan.md) add-on is suitable for creating two-dimensional plans on basis of the location paths.
 
 User Rights for Locations
 -------------------------

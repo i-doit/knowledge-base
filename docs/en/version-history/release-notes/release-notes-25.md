@@ -19,5 +19,5 @@ Please check the changelog for further details.
 
 Together with i-doit 25, we also provide a new version of the add-ons API and Documents which contain many bugfixes to improve the user experience. To use the latest version of these add-ons, please make sure to update to i-doit 25, which is required.
 
--   [API 1.14.1](../../i-doit-pro-add-ons/api/index.md)
--   [Documents 1.5.2](../../i-doit-pro-add-ons/documents/index.md)
+-   [API 1.14.1](../../i-doit-add-ons/api/index.md)
+-   [Documents 1.5.2](../../i-doit-add-ons/documents/index.md)

@@ -19,7 +19,7 @@ Die Objekt-ID findet in der Generierung der URIs eine hohe Bedeutung. Anhand der
 
 <https://demo.i-doit.com/?objID=9>
 
-Objekt-IDs werden vor allem zu internen Zwecken verwendet, können aber auch dem Benutzer oder Dritt-Systemen sehr nützlich sein. Die IDs sind beispielsweise bei [API-Zugriffen](../i-doit-pro-add-ons/api/index.md) essentiell.
+Objekt-IDs werden vor allem zu internen Zwecken verwendet, können aber auch dem Benutzer oder Dritt-Systemen sehr nützlich sein. Die IDs sind beispielsweise bei [API-Zugriffen](../i-doit-add-ons/api/index.md) essentiell.
 
 ## SYS-ID
 
@@ -75,7 +75,7 @@ Wenn Inventarnummern automatisch generiert werden sollen, kann dies unter **Verw
 [![Inventarnummer](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)
 
 !!! success "Labels"
-    Inventarnummern lassen sich ideal mit QR-Codes zu einem Label verbinden. QR-Codes werden von i-doit Objekt generiert. Solche Labels lassen sich beispielsweise mit dem [i-doit QR-Code Printer](../i-doit-pro-add-ons/i-doit-qr-code-printer.md) ausdrucken.
+    Inventarnummern lassen sich ideal mit QR-Codes zu einem Label verbinden. QR-Codes werden von i-doit Objekt generiert. Solche Labels lassen sich beispielsweise mit dem [i-doit QR-Code Printer](../i-doit-add-ons/i-doit-qr-code-printer.md) ausdrucken.
 
 ## Identifier von Dritt-Systemen
 

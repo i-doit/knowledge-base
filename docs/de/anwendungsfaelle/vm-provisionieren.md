@@ -88,7 +88,7 @@ An dieser Stelle sind wir mit der Installation des SDKs durch. Wir haben uns fre
 
 ### i-doit API
 
-Die Kommunikation zwischen i-doit und VMware findet unter anderem über die [API von i-doit](../i-doit-pro-add-ons/api/index.md) statt. Diese muss aktiviert und der API Key bekannt sein. Um die API komfortabel zu nutzen, verwenden wir den [Referenz-Client für PHP](https://bitbucket.org/dstuecken/i-doit-api-clients/wiki/PHP):
+Die Kommunikation zwischen i-doit und VMware findet unter anderem über die [API von i-doit](../i-doit-add-ons/api/index.md) statt. Diese muss aktiviert und der API Key bekannt sein. Um die API komfortabel zu nutzen, verwenden wir den [Referenz-Client für PHP](https://bitbucket.org/dstuecken/i-doit-api-clients/wiki/PHP):
 
     cd /usr/local/share/
     git clone https://bitbucket.org/dstuecken/i-doit-api-clients.git
@@ -408,7 +408,7 @@ Die beiden [CMDB-Status](../grundlagen/lebens-und-dokumentationszyklus.md)\-Anga
 
 ### Event konfigurieren
 
-Nun müssen wir in i-doit noch konfigurieren, dass bei bestimmten Änderungen des Script aufgerufen wird. Dazu verwenden wir die [Event-Steuerung](../i-doit-pro-add-ons/floorplan.md) und legen dort einen neuen Hook an:
+Nun müssen wir in i-doit noch konfigurieren, dass bei bestimmten Änderungen des Script aufgerufen wird. Dazu verwenden wir die [Event-Steuerung](../i-doit-add-ons/floorplan.md) und legen dort einen neuen Hook an:
 
 *   **Event**: **Category: (arbitrary sources) Speichern**
 *   **Description**: **VM provisioning**

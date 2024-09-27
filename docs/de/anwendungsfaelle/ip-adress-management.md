@@ -147,5 +147,5 @@ Analog zur Verkabelung lassen sich auch die oberen Schichten des TCP/IP-Referenz
 
 ## Weiterführende Links
 
-*   [doIT BETTER: IP Address Management (IPAM)](https://www.i-doit.com/blog/ip-adress-management-mit-i-doit-pro/), Blog-Artikel auf [i-doit.com](http://i-doit.com) mit Video
+*   [doIT BETTER: IP Address Management (IPAM)](https://www.i-doit.com/blog/ip-adress-management-mit-i-doit/), Blog-Artikel auf [i-doit.com](http://i-doit.com) mit Video
 *   [Deutschsprachige Demo](http://ipamdemo.i-doit.com/) zum obigen "doIT BETTER"-Thema (Credentials: admin/admin)

@@ -62,4 +62,4 @@ To link a file with an object you aren't dependent on the i-doit default categor
 
 !!! check "Document Module"
 
-    If you want to generate user manuals, emergency plans etc. directly from your IT documentation, you should consider the use of the [Documents add-on](../i-doit-pro-add-ons/documents/index.md) for i-doit. With this module you can add [attributes](../basics/structure-of-the-it-documentation.md), images and [reports](../evaluation/report-manager.md) from i-doit to comprehensive text documents.
+    If you want to generate user manuals, emergency plans etc. directly from your IT documentation, you should consider the use of the [Documents add-on](../i-doit-add-ons/documents/index.md) for i-doit. With this module you can add [attributes](../basics/structure-of-the-it-documentation.md), images and [reports](../evaluation/report-manager.md) from i-doit to comprehensive text documents.

@@ -1,6 +1,6 @@
 # Notifications
 
-In this article we describe the notifications module, which has the purpose to check various data in the IT documentation and to send emails in the case of specific events. The module consists of particular kinds of notifications, the setup of these notification types, e-mail templates and last but not least the regular execution of the [controller](../i-doit-pro-add-ons/api/index.md).
+In this article we describe the notifications module, which has the purpose to check various data in the IT documentation and to send emails in the case of specific events. The module consists of particular kinds of notifications, the setup of these notification types, e-mail templates and last but not least the regular execution of the [controller](../i-doit-add-ons/api/index.md).
 
 Kinds of Notifications
 ----------------------

@@ -16,4 +16,4 @@ Please check the changelog for further details.
 
 Together with i-doit 24, we also provide a new version of the add-on Forms with some bugfixes to improve the user experience. To use the latest version of the add-on, please make sure to update to i-doit 23, which is required.
 
--   [Forms 1.2](../../i-doit-pro-add-ons/forms/index.md)
+-   [Forms 1.2](../../i-doit-add-ons/forms/index.md)

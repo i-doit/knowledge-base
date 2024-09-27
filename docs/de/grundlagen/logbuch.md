@@ -63,7 +63,7 @@ Zu jedem Objekt kann ein neuer Eintrag im Logbuch generiert werden. Dazu wird in
 
 ## Einträge aus Dritt-Systemen
 
-Das Logbuch nimmt neue Einträge aus Dritt-Systemen entgegen, beispielsweise durch [Importe](../daten-konsolidieren/index.md), [Service Desks](../automatisierung-und-integration/service-desk/index.md), [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md) und die [API](../i-doit-pro-add-ons/api/index.md).
+Das Logbuch nimmt neue Einträge aus Dritt-Systemen entgegen, beispielsweise durch [Importe](../daten-konsolidieren/index.md), [Service Desks](../automatisierung-und-integration/service-desk/index.md), [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md) und die [API](../i-doit-add-ons/api/index.md).
 
 ## Ältere Einträge archivieren und wiederherstellen
 

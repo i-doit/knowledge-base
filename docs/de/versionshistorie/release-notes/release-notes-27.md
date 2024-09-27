@@ -19,13 +19,13 @@ We encourage you to [update](../../wartung-und-betrieb/update-einspielen.md) to 
 
 As mentioned above, we also release new versions of our Add-ons to improve the handling of custom uploaded and saved content. After updating i-doit to version 27, you should also update the following Add-ons if used:
 
--   [Analysis 1.4](../../i-doit-pro-add-ons/analysis.md#releases)
--   [API 1.15](../../i-doit-pro-add-ons/api/index.md#releases)
--   [Cabling 1.3](../../i-doit-pro-add-ons/cabling.md#releases)
--   [Documents 1.6](../../i-doit-pro-add-ons/documents/index.md#releases)
--   [Floorplan 1.7](../../i-doit-pro-add-ons/floorplan.md#releases)
--   [Maintenance](../../i-doit-pro-add-ons/maintenance.md#releases)
--   [Packager 1.3](../../i-doit-pro-add-ons/add-on-packager.md#releases)
--   [Relocate CI 1.3](../../i-doit-pro-add-ons/relocate-ci.md#releases)
--   [Replacement 1.5](../../i-doit-pro-add-ons/replacement.md#releases)
--   [Workflow 1.2](../../i-doit-pro-add-ons/workflow.md#releases)
+-   [Analysis 1.4](../../i-doit-add-ons/analysis.md#releases)
+-   [API 1.15](../../i-doit-add-ons/api/index.md#releases)
+-   [Cabling 1.3](../../i-doit-add-ons/cabling.md#releases)
+-   [Documents 1.6](../../i-doit-add-ons/documents/index.md#releases)
+-   [Floorplan 1.7](../../i-doit-add-ons/floorplan.md#releases)
+-   [Maintenance](../../i-doit-add-ons/maintenance.md#releases)
+-   [Packager 1.3](../../i-doit-add-ons/add-on-packager.md#releases)
+-   [Relocate CI 1.3](../../i-doit-add-ons/relocate-ci.md#releases)
+-   [Replacement 1.5](../../i-doit-add-ons/replacement.md#releases)
+-   [Workflow 1.2](../../i-doit-add-ons/workflow.md#releases)

@@ -172,7 +172,7 @@ Das Statistik-Diagramm betrachtet die unter dem Stift konfigurierten Objekttypen
 
 ### VIVA Reports
 
-Für diese Reports muss das [VIVA-Modul](../i-doit-pro-add-ons/viva/index.md) installiert und Informationsverbünde dokumentiert sein. Im Widget kann über den Stift ein Informationsverbund ausgewählt werden.
+Für diese Reports muss das [VIVA-Modul](../i-doit-add-ons/viva/index.md) installiert und Informationsverbünde dokumentiert sein. Im Widget kann über den Stift ein Informationsverbund ausgewählt werden.
 
 [![viva-reports](../assets/images/de/grundlagen/desktop-und-widgets/32-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/32-duw.png)
 

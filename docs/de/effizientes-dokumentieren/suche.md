@@ -83,7 +83,7 @@ Die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) er
 Über die API suchen
 -------------------
 
-Über die [programmierbare Schnittstelle (API)](../i-doit-pro-add-ons/api/index.md) von i-doit kann ebenfalls in der IT-Dokumentation gesucht werden. Die nötige Methode lautet idoit.search:
+Über die [programmierbare Schnittstelle (API)](../i-doit-add-ons/api/index.md) von i-doit kann ebenfalls in der IT-Dokumentation gesucht werden. Die nötige Methode lautet idoit.search:
 
 ```json
 {

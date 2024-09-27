@@ -23,7 +23,7 @@ Please update your system before updating i-doit if your version is not matching
 
 Alongside i-doit 31 we also release the following Add-ons which include some bug fixes:
 
--   [API](https://kb.i-doit.com/en/i-doit-pro-add-ons/api/index.html) 2.0.1
--   [i-diary](https://kb.i-doit.com/en/i-doit-pro-add-ons/i-diary/index.html) 1.3
+-   [API](https://kb.i-doit.com/en/i-doit-add-ons/api/index.html) 2.0.1
+-   [i-diary](https://kb.i-doit.com/en/i-doit-add-ons/i-diary/index.html) 1.3
 
 We also recommend updating those add-ons to benefit from all improvements.

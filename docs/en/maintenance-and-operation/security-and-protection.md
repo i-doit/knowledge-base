@@ -234,13 +234,13 @@ If you cannot limit a service by means of your own configuration, a firewall hel
 
 A **web application firewall** is especially suitable for web servers. A very popular application is [mod\_security](https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_security-with-apache-on-debian-ubuntu), which is an extension for Apache.
 
-An external **dedicated firewall** is very useful, but of course its implementation and operation are more complex. i-doit should be enabled to search for updates and to access online repositories (for example, for [reports](../evaluation/report-manager.md) and [templates](../i-doit-pro-add-ons/documents/index.md)):
+An external **dedicated firewall** is very useful, but of course its implementation and operation are more complex. i-doit should be enabled to search for updates and to access online repositories (for example, for [reports](../evaluation/report-manager.md) and [templates](../i-doit-add-ons/documents/index.md)):
 
 | Host | Protocol | Port | Description |
 | --- | --- | --- | --- |
 | **[login.i-doit.com](https://login.i-doit.com)** | **HTTPS** | **443** | Download of updates for i-doit and its add-ons |
 | **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)** | **HTTPS** | **443** | Online repositories (for example, for [reports](../evaluation/report-manager.md)) |
-| **[r.i-doit.com](https://r.i-doit.com)** | **HTTPS** | **443** | Online Repositories (for example, for [templates](../i-doit-pro-add-ons/documents/index.md)) |
+| **[r.i-doit.com](https://r.i-doit.com)** | **HTTPS** | **443** | Online Repositories (for example, for [templates](../i-doit-add-ons/documents/index.md)) |
 | **[news.i-doit.com](https://news.i-doit.com)** | **HTTPS** | **443** | News about i-doit in the dashboard (open version) |
 | **[i-doit.com](https://www.i-doit.com/en/)** | **HTTPS** | **443** | Search for updates of the pro version |
 | **[i-doit.org](https://i-doit.org)** | **HTTPS** | **443** | Search for updates of the pro version |

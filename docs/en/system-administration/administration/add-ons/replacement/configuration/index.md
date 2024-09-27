@@ -9,4 +9,4 @@
 | Also swap the SYS-ID? | Yes or No |
 | Keep swapped object categories data? | Yes or No |
 
-For more Information -> [READMORE](../../../../../i-doit-pro-add-ons/replacement.md)
+For more Information -> [READMORE](../../../../../i-doit-add-ons/replacement.md)

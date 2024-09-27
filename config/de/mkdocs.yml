@@ -297,7 +297,7 @@ nav:
   - Upgrades und Umzüge:
       - upgrades-und-umzuege/index.md
       - Update Anleitung i-doit 1.7.4 bis 31: upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md
-      - Upgrade von i-doit open auf pro: upgrades-und-umzuege/upgrade-von-open-auf-pro.md
+      - Upgrade von i-doit open auf pro: upgrades-und-umzuege/upgrade-von-open-auf-i-doit.md
       - Update von i-doit open 1.4.8 auf 1.8: upgrades-und-umzuege/update-von-open-1.4.8-auf-1.8.md
       - Upgrade zu MySQL 5.6 oder MariaDB 10.0: upgrades-und-umzuege/upgrade-zu-mysql-5.6-oder-mariadb-10.0.md
       - Umzug einer Installation unter GNU/Linux: upgrades-und-umzuege/umzug-einer-installation-unter-linux.md

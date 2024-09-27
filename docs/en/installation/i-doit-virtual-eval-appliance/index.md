@@ -93,7 +93,7 @@ The following overview shows you the purpose of the directories:
 
 ## Follow-up
 
-The appliance provides a "naked" installation of i-doit. This means that neither demo files nor additional [add-ons](../../i-doit-pro-add-ons/index.md) are included.<br>
+The appliance provides a "naked" installation of i-doit. This means that neither demo files nor additional [add-ons](../../i-doit-add-ons/index.md) are included.<br>
 When logging in the first time, i-doit requests a valid [license](../../maintenance-and-operation/activate-license.md) which needs to be activated in order to have all features available.<br>
 Further information for first steps with i-doit are also described in the knowledge base under [Basics](../../basics/index.md).
 

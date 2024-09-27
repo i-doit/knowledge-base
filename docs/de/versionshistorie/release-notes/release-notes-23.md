@@ -13,4 +13,4 @@ Please check the changelog for further details.
 
 Together with i-doit 23, we also provide a new version of the API add-on with additional bugfixes to further improve the user experience.
 
-*   [API 1.14](https://kb.i-doit.com/de/i-doit-pro-add-ons/api/index.html#releases)
+*   [API 1.14](https://kb.i-doit.com/de/i-doit-add-ons/api/index.html#releases)

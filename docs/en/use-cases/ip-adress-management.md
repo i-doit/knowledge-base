@@ -168,5 +168,5 @@ Just like the cabling you can document the upper layers of the TCP/IP reference 
 Further Links
 -------------
 
-*   [doIT BETTER: IP Address Management (IPAM)](https://www.i-doit.com/blog/ip-adress-management-mit-i-doit-pro/), German blog article with video at [i-doit.com](http://i-doit.com)
+*   [doIT BETTER: IP Address Management (IPAM)](https://www.i-doit.com/blog/ip-adress-management-mit-i-doit/), German blog article with video at [i-doit.com](http://i-doit.com)
 *   [German demo](http://ipamdemo.i-doit.com/) regarding the above describes "doIT BETTER" subject (credentials: admin/admin)

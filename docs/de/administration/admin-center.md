@@ -55,7 +55,7 @@ Wie License Token verwendet werden wird [HIER](../wartung-und-betrieb/lizenz-akt
 
 ## Add-ons
 
-Im Bereich **Modules** werden die [i-doit Add-ons](../i-doit-pro-add-ons/index.md) verwaltet. Jede Funktionalität von i-doit ist in einem Modul gekapselt. Viele davon gehören zum Kern (**core**) von i-doit, einige davon gelten als **extension**, wenn sie bei der Installation bereits installiert sind, oder als **addon**, wenn sie zusätzlich installiert werden können.
+Im Bereich **Modules** werden die [i-doit Add-ons](../i-doit-add-ons/index.md) verwaltet. Jede Funktionalität von i-doit ist in einem Modul gekapselt. Viele davon gehören zum Kern (**core**) von i-doit, einige davon gelten als **extension**, wenn sie bei der Installation bereits installiert sind, oder als **addon**, wenn sie zusätzlich installiert werden können.
 
 [![Add-ons](../assets/images/de/administration/admin-center/7-ac.png)](../assets/images/de/administration/admin-center/7-ac.png)
 

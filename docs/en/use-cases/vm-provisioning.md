@@ -99,7 +99,7 @@ At this point, the installation of the SDK is completed. We followed these [guid
 
 ### i-doit API
 
-Part of the communication between i-doit and VMware takes place via the [API of i-doit](../i-doit-pro-add-ons/api/index.md). The API has to be activated and you need to know the API key. To use the API comfortably we use the [reference client for PHP](https://bitbucket.org/dstuecken/i-doit-api-clients/wiki/PHP):
+Part of the communication between i-doit and VMware takes place via the [API of i-doit](../i-doit-add-ons/api/index.md). The API has to be activated and you need to know the API key. To use the API comfortably we use the [reference client for PHP](https://bitbucket.org/dstuecken/i-doit-api-clients/wiki/PHP):
 
     cd /usr/local/share/
     git clone https://bitbucket.org/dstuecken/i-doit-api-clients.git
@@ -418,7 +418,7 @@ The two [CMDB status](../basics/life-and-documentation-cycle.md) statements **to
 
 ### Configure Event
 
-Now i-doit has to be configured to execute the script if certain changes are performed. For this, we use the [event controls](../i-doit-pro-add-ons/events.md) and create a new hook.
+Now i-doit has to be configured to execute the script if certain changes are performed. For this, we use the [event controls](../i-doit-add-ons/events.md) and create a new hook.
 
 *   **Event**: **Category: (arbitrary sources) Save**
 *   **Description**: **VM provisioning**

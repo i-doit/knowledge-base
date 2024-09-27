@@ -234,13 +234,13 @@ Lässt sich ein Dienst nicht durch die eigene Konfiguration einschränken, hilft
 
 Speziell an Webserver richtet sich eine **Web Application Firewall**. Eine sehr bekannte ist [mod\_security](https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_security-with-apache-on-debian-ubuntu), eine Erweiterung für Apache.
 
-Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe, **dedizierte Firewall**. i-doit sollte erlaubt sein, nach Updates suchen und auf Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md) und [Vorlagen](../i-doit-pro-add-ons/documents/dokumentenvorlagen.md) zugreifen zu dürfen:
+Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe, **dedizierte Firewall**. i-doit sollte erlaubt sein, nach Updates suchen und auf Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md) und [Vorlagen](../i-doit-add-ons/documents/dokumentenvorlagen.md) zugreifen zu dürfen:
 
 | Host | Protokoll | Port | Beschreibung |
 | --- | --- | --- | --- |
 | **[login.i-doit.com](https://login.i-doit.com)** | **HTTPS** | **443** | Updates für i-doit und dessen Add-ons herunterladen |
 | **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)** | **HTTPS** | **443** | Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md)) |
-| **[r.i-doit.com](https://r.i-doit.com)** | **HTTPS** | **443** | Online Repositories (z. B. für [Vorlagen](../i-doit-pro-add-ons/documents/index.md)) |
+| **[r.i-doit.com](https://r.i-doit.com)** | **HTTPS** | **443** | Online Repositories (z. B. für [Vorlagen](../i-doit-add-ons/documents/index.md)) |
 | **[news.i-doit.com](<https://news.i-doit.com>)** | **HTTPS** | **443** | Neuigkeiten zu i-doit im Dashboard (open-Variante) |
 | **[i-doit.com](https://www.i-doit.com/en/)** | **HTTPS** | **443** | Nach Updates der pro-Variante suchen |
 | **[i-doit.org](https://i-doit.org)** | **HTTPS** | **443** | Nach Updates der open-Variante suchen |
@@ -260,7 +260,7 @@ Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss 
 | [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) | **PostgreSQL** | **25321** |
 | [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) | **HTTP** | **9000** |
 | [JDisc Discovery GraphQL](../daten-konsolidieren/jdisc-discovery.md) | **HTTPs** | **443** |
-| [OCS Inventory NG](../i-doit-pro-add-ons/ocs-inventory-ng.md) | **MySQL** | **3306** |
+| [OCS Inventory NG](../i-doit-add-ons/ocs-inventory-ng.md) | **MySQL** | **3306** |
 
 ### Sicherheits-Frameworks
 

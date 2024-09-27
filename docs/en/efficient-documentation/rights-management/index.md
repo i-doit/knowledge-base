@@ -67,7 +67,7 @@ With a click on the **New right** button you can add a new line to the table.
 When you are ready with all the desired configurations, activate the rights with the **Save** button.
 
 !!! attention "Renew cache"
-    Sometimes it may be the case that rights are not activated immediately, for example, because the users in question are still logged in. In order to activate the new rights you have to renew the rights cache with **Administration → System tools → Cache / Database → Cache → Clear auth-system cache**. We also suggest to renew the cache [automatically with Cronjob on a regular basis](../../i-doit-pro-add-ons/api/index.md).
+    Sometimes it may be the case that rights are not activated immediately, for example, because the users in question are still logged in. In order to activate the new rights you have to renew the rights cache with **Administration → System tools → Cache / Database → Cache → Clear auth-system cache**. We also suggest to renew the cache [automatically with Cronjob on a regular basis](../../i-doit-add-ons/api/index.md).
 
 Modules
 -------

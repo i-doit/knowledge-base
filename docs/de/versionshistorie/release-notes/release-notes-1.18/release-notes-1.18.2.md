@@ -13,7 +13,7 @@ Add-ons
 
 Alongside i-doit 1.18.2, we will also release new versions of the following add-on:
 
-[Forms](../../../i-doit-pro-add-ons/forms/index.md) **1.1**
+[Forms](../../../i-doit-add-ons/forms/index.md) **1.1**
 
 System requirements
 -------------------

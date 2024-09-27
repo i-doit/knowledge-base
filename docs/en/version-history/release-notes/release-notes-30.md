@@ -17,7 +17,7 @@ Alongside i-doit 30 we will also launch **API version 2.0**. You will find more 
 
 As mentioned above we will also release a new version 2.0 of the i-doit API. This version will clean up a lot in the backend of the add-on as well as introduce new pull and push endpoints. This is the **first step** of a completely **reworked API** for i-doit.
 
--   [API 2.0](../../i-doit-pro-add-ons/api/index.md)
+-   [API 2.0](../../i-doit-add-ons/api/index.md)
 
 Please make sure that you fulfill all the [requirements](../../installation/system-requirements.md) before installing these new versions. MariaDB 10.2 and MariaDB 10.3 will no longer be supported with i-doit 30.
 
