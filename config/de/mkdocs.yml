@@ -531,86 +531,86 @@ nav:
       - Switch Stacking: anwendungsfaelle/switch-stacking.md
       - VM provisionieren (veraltet): anwendungsfaelle/vm-provisionieren.md
   - i-doit Add-ons:
-      - i-doit-pro-add-ons/index.md
-      - Active Directory Documentation: i-doit-pro-add-ons/active-directory-documentation.md
-      - Add-on Packager: i-doit-pro-add-ons/add-on-packager.md
-      - Analysis: i-doit-pro-add-ons/analysis.md
+      - i-doit-add-ons/index.md
+      - Active Directory Documentation: i-doit-add-ons/active-directory-documentation.md
+      - Add-on Packager: i-doit-add-ons/add-on-packager.md
+      - Analysis: i-doit-add-ons/analysis.md
       - API (JSON-RPC):
-          - i-doit-pro-add-ons/api/index.md
+          - i-doit-add-ons/api/index.md
           - Methoden:
               - v1:
-                  - i-doit-pro-add-ons/api/methoden/v1/index.md
+                  - i-doit-add-ons/api/methoden/v1/index.md
               - v2:
-                  - i-doit-pro-add-ons/api/methoden/v2/index.md
-                  - cmdb.external: i-doit-pro-add-ons/api/methoden/v2/cmdb.external.md
-          - Beispiele zur Nutzung der API: i-doit-pro-add-ons/api/beispiele-zur-nutzung-der-api.md
-          - Tipps und Tricks zur API: i-doit-pro-add-ons/api/tipps-und-tricks-zur-nutzung-der-api.md
-          - Kategorie-Felder für Datenarrays: i-doit-pro-add-ons/api/kategorie-felder-fuer-datenarrays.md
-      - Cabling: i-doit-pro-add-ons/cabling.md
-      - CheckMK: i-doit-pro-add-ons/checkmk.md
+                  - i-doit-add-ons/api/methoden/v2/index.md
+                  - cmdb.external: i-doit-add-ons/api/methoden/v2/cmdb.external.md
+          - Beispiele zur Nutzung der API: i-doit-add-ons/api/beispiele-zur-nutzung-der-api.md
+          - Tipps und Tricks zur API: i-doit-add-ons/api/tipps-und-tricks-zur-nutzung-der-api.md
+          - Kategorie-Felder für Datenarrays: i-doit-add-ons/api/kategorie-felder-fuer-datenarrays.md
+      - Cabling: i-doit-add-ons/cabling.md
+      - CheckMK: i-doit-add-ons/checkmk.md
       - CheckMK2:
-          - i-doit-pro-add-ons/checkmk2/index.md
-          - checkmk 2 Erste Schritte: i-doit-pro-add-ons/checkmk2/checkmk2-erste-schritte.md
-          - checkmk 2 Anforderungen: i-doit-pro-add-ons/checkmk2/checkmk2-anforderungen.md
-          - checkmk 2 Installation: i-doit-pro-add-ons/checkmk2/checkmk2-installation.md
-          - checkmk 2 Konfiguration: i-doit-pro-add-ons/checkmk2/checkmk2-konfiguration.md
-          - checkmk 2 Verwendung: i-doit-pro-add-ons/checkmk2/checkmk2-verwendung.md
-          - checkmk 2 Synchronisierung der checkmk Agenten: i-doit-pro-add-ons/checkmk2/checkmk2-synchronisierung-der-checkmk-agenten.md
-          - checkmk 2 Kontaktgruppen synchronisieren: i-doit-pro-add-ons/checkmk2/checkmk2-kontaktgruppen-synchronisieren.md
-          - checkmk 2 WATO Ordner synchronisieren: i-doit-pro-add-ons/checkmk2/checkmk2-wato-ordner-synchronisieren.md
-          - checkmk 2 checkmk sites synchronisieren: i-doit-pro-add-ons/checkmk2/checkmk2-checkmk-sites-synchronisieren.md
-          - checkmk 2 Host Tags synchronisieren: i-doit-pro-add-ons/checkmk2/checkmk2-host-tags-synchronisieren.md
-          - checkmk 2 WATO Konfiguration auf Basis von CMDB-Daten generieren: i-doit-pro-add-ons/checkmk2/checkmk2-wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md
-          - checkmk 2 Bestandsdaten in die CMDB importieren: i-doit-pro-add-ons/checkmk2/checkmk2-bestandsdaten-in-die-cmdb-importieren.md
-          - checkmk 2 i-doit Web GUI: i-doit-pro-add-ons/checkmk2/checkmk2-i-doit-web-gui.md
-          - checkmk 2 Informationen aus i-doit und checkmk lesen: i-doit-pro-add-ons/checkmk2/checkmk2-informationen-aus-i-doit-und-checkmk-lesen.md
-          - checkmk 2 Abgleich von Objekten aus i-doit mit Hosts aus checkmk: i-doit-pro-add-ons/checkmk2/checkmk2-abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md
-          - checkmk 2 Häufig gestellte Fragen (FAQ): i-doit-pro-add-ons/checkmk2/checkmk2-faq.md
-      - DNS Documentation: i-doit-pro-add-ons/dns-documentation.md
+          - i-doit-add-ons/checkmk2/index.md
+          - checkmk 2 Erste Schritte: i-doit-add-ons/checkmk2/checkmk2-erste-schritte.md
+          - checkmk 2 Anforderungen: i-doit-add-ons/checkmk2/checkmk2-anforderungen.md
+          - checkmk 2 Installation: i-doit-add-ons/checkmk2/checkmk2-installation.md
+          - checkmk 2 Konfiguration: i-doit-add-ons/checkmk2/checkmk2-konfiguration.md
+          - checkmk 2 Verwendung: i-doit-add-ons/checkmk2/checkmk2-verwendung.md
+          - checkmk 2 Synchronisierung der checkmk Agenten: i-doit-add-ons/checkmk2/checkmk2-synchronisierung-der-checkmk-agenten.md
+          - checkmk 2 Kontaktgruppen synchronisieren: i-doit-add-ons/checkmk2/checkmk2-kontaktgruppen-synchronisieren.md
+          - checkmk 2 WATO Ordner synchronisieren: i-doit-add-ons/checkmk2/checkmk2-wato-ordner-synchronisieren.md
+          - checkmk 2 checkmk sites synchronisieren: i-doit-add-ons/checkmk2/checkmk2-checkmk-sites-synchronisieren.md
+          - checkmk 2 Host Tags synchronisieren: i-doit-add-ons/checkmk2/checkmk2-host-tags-synchronisieren.md
+          - checkmk 2 WATO Konfiguration auf Basis von CMDB-Daten generieren: i-doit-add-ons/checkmk2/checkmk2-wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md
+          - checkmk 2 Bestandsdaten in die CMDB importieren: i-doit-add-ons/checkmk2/checkmk2-bestandsdaten-in-die-cmdb-importieren.md
+          - checkmk 2 i-doit Web GUI: i-doit-add-ons/checkmk2/checkmk2-i-doit-web-gui.md
+          - checkmk 2 Informationen aus i-doit und checkmk lesen: i-doit-add-ons/checkmk2/checkmk2-informationen-aus-i-doit-und-checkmk-lesen.md
+          - checkmk 2 Abgleich von Objekten aus i-doit mit Hosts aus checkmk: i-doit-add-ons/checkmk2/checkmk2-abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md
+          - checkmk 2 Häufig gestellte Fragen (FAQ): i-doit-add-ons/checkmk2/checkmk2-faq.md
+      - DNS Documentation: i-doit-add-ons/dns-documentation.md
       - Documents:
-          - i-doit-pro-add-ons/documents/index.md
-          - Vorbereitung (Add-on Dokumente): i-doit-pro-add-ons/documents/vorbereitung-add-on-dokumente.md
-          - Dokumentenvorlagen: i-doit-pro-add-ons/documents/dokumentenvorlagen.md
-          - Platzhalter im Add-on Dokumente: i-doit-pro-add-ons/documents/platzhalter-im-add-on-dokumente.md
-          - Dokumenterstellung: i-doit-pro-add-ons/documents/dokumenterstellung.md
-      - Events: i-doit-pro-add-ons/events.md
-      - Floorplan: i-doit-pro-add-ons/floorplan.md
+          - i-doit-add-ons/documents/index.md
+          - Vorbereitung (Add-on Dokumente): i-doit-add-ons/documents/vorbereitung-add-on-dokumente.md
+          - Dokumentenvorlagen: i-doit-add-ons/documents/dokumentenvorlagen.md
+          - Platzhalter im Add-on Dokumente: i-doit-add-ons/documents/platzhalter-im-add-on-dokumente.md
+          - Dokumenterstellung: i-doit-add-ons/documents/dokumenterstellung.md
+      - Events: i-doit-add-ons/events.md
+      - Floorplan: i-doit-add-ons/floorplan.md
       - Forms:
-          - i-doit-pro-add-ons/forms/index.md
-          - Installation Forms Add-on: i-doit-pro-add-ons/forms/installation-forms-add-on.md
-          - Installation MongoDB v5: i-doit-pro-add-ons/forms/installation-mongodb-v5.md
-          - Installation NodeJS: i-doit-pro-add-ons/forms/installation-nodejs.md
-          - Konfiguration das Forms Backend: i-doit-pro-add-ons/forms/konfiguration-des-forms-backend.md
-          - Konfiguration in i-doit: i-doit-pro-add-ons/forms/konfiguration-in-i-doit.md
-          - Forms verwenden: i-doit-pro-add-ons/forms/forms-verwenden.md
-          - Formulare publishen: i-doit-pro-add-ons/forms/formulare-publishen.md
-          - Formular ausfuellen: i-doit-pro-add-ons/forms/formulare-ausfuellen.md
-          - Verwendung der Forms API: i-doit-pro-add-ons/forms/verwenden-der-forms-api.md
-      - i-diary: i-doit-pro-add-ons/i-diary.md
-      - i-doit QR-Code Printer: i-doit-pro-add-ons/i-doit-qr-code-printer.md
-      - ISMS: i-doit-pro-add-ons/isms.md
-      - Maintenance: i-doit-pro-add-ons/maintenance.md
-      - OCS Inventory NG: i-doit-pro-add-ons/ocs-inventory-ng.md
-      - Relocate-CI: i-doit-pro-add-ons/relocate-ci.md
-      - Replacement: i-doit-pro-add-ons/replacement.md
+          - i-doit-add-ons/forms/index.md
+          - Installation Forms Add-on: i-doit-add-ons/forms/installation-forms-add-on.md
+          - Installation MongoDB v5: i-doit-add-ons/forms/installation-mongodb-v5.md
+          - Installation NodeJS: i-doit-add-ons/forms/installation-nodejs.md
+          - Konfiguration das Forms Backend: i-doit-add-ons/forms/konfiguration-des-forms-backend.md
+          - Konfiguration in i-doit: i-doit-add-ons/forms/konfiguration-in-i-doit.md
+          - Forms verwenden: i-doit-add-ons/forms/forms-verwenden.md
+          - Formulare publishen: i-doit-add-ons/forms/formulare-publishen.md
+          - Formular ausfuellen: i-doit-add-ons/forms/formulare-ausfuellen.md
+          - Verwendung der Forms API: i-doit-add-ons/forms/verwenden-der-forms-api.md
+      - i-diary: i-doit-add-ons/i-diary.md
+      - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
+      - ISMS: i-doit-add-ons/isms.md
+      - Maintenance: i-doit-add-ons/maintenance.md
+      - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md
+      - Relocate-CI: i-doit-add-ons/relocate-ci.md
+      - Replacement: i-doit-add-ons/replacement.md
       - SHD SM-VIEW Connect:
-          - i-doit-pro-add-ons/sm-view-connect/index.md
-          - SHD SM-VIEW Connect - Telekom Adapter: i-doit-pro-add-ons/sm-view-connect/telekom-adapter.md
+          - i-doit-add-ons/sm-view-connect/index.md
+          - SHD SM-VIEW Connect - Telekom Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
       - VIVA:
-          - i-doit-pro-add-ons/viva/index.md
-          - Einleitung zu VIVA: i-doit-pro-add-ons/viva/einleitung-zu-viva.md
-          - Vorbereitung der VIVA-Installation: i-doit-pro-add-ons/viva/vorbereitung-der-viva-installation.md
-          - Vorgehensweise mit VIVA: i-doit-pro-add-ons/viva/vorgehensweise-mit-viva.md
-          - Risikoanalyse nach IT-Grundschutz: i-doit-pro-add-ons/viva/risikoanalyse-nach-it-grundschutz.md
-          - Berichte mit VIVA: i-doit-pro-add-ons/viva/berichte-mit-viva.md
-          - Audits mit VIVA unterstützen: i-doit-pro-add-ons/viva/audits-mit-viva-unterstuetzen.md
-          - VIVA-Assistenten: i-doit-pro-add-ons/viva/viva-assistenten.md
-          - Objekt-Kategorie VIVA: i-doit-pro-add-ons/viva/objekt-kategorie-viva.md
-          - VIVA-Widget: i-doit-pro-add-ons/viva/viva-widget.md
-          - Arbeitsablauf mit VIVA: i-doit-pro-add-ons/viva/arbeitsablauf-mit-viva.md
-      - VIVA2: i-doit-pro-add-ons/viva2.md
-      - Workflow: i-doit-pro-add-ons/workflow.md
-      - Rights Documentation: i-doit-pro-add-ons/rights-documentation.md
+          - i-doit-add-ons/viva/index.md
+          - Einleitung zu VIVA: i-doit-add-ons/viva/einleitung-zu-viva.md
+          - Vorbereitung der VIVA-Installation: i-doit-add-ons/viva/vorbereitung-der-viva-installation.md
+          - Vorgehensweise mit VIVA: i-doit-add-ons/viva/vorgehensweise-mit-viva.md
+          - Risikoanalyse nach IT-Grundschutz: i-doit-add-ons/viva/risikoanalyse-nach-it-grundschutz.md
+          - Berichte mit VIVA: i-doit-add-ons/viva/berichte-mit-viva.md
+          - Audits mit VIVA unterstützen: i-doit-add-ons/viva/audits-mit-viva-unterstuetzen.md
+          - VIVA-Assistenten: i-doit-add-ons/viva/viva-assistenten.md
+          - Objekt-Kategorie VIVA: i-doit-add-ons/viva/objekt-kategorie-viva.md
+          - VIVA-Widget: i-doit-add-ons/viva/viva-widget.md
+          - Arbeitsablauf mit VIVA: i-doit-add-ons/viva/arbeitsablauf-mit-viva.md
+      - VIVA2: i-doit-add-ons/viva2.md
+      - Workflow: i-doit-add-ons/workflow.md
+      - Rights Documentation: i-doit-add-ons/rights-documentation.md
   - i-doit cloud:
       - idoit-cloud/index.md
   - Software Entwicklung:
