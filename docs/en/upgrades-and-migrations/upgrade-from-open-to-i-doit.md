@@ -13,7 +13,7 @@ _i-doit_ in Seven Steps
 Here is a quick overview about the necessary steps before going further into details:
 
 1. Preparation
-2. Download and implementation of the _pro_\-update
+2. Download and implementation of the update
 3. Installation of the _i-doit_ extension
 4. License activation
 5. Clear cache
@@ -23,7 +23,7 @@ Here is a quick overview about the necessary steps before going further into det
 Preparation
 -----------
 
-Important: This procedure is irreversible. It is essential to create a [backup](../maintenance-and-operation/backup-and-recovery/index.md)! After upgrading, a valid [license for _i-doit_ pro](../maintenance-and-operation/activate-license.md) is required. The [system requirements](../installation/system-requirements.md) and [system settings](../installation/manual-installation/system-settings.md) must also be met.
+Important: This procedure is irreversible. It is essential to create a [backup](../maintenance-and-operation/backup-and-recovery/index.md)! After upgrading, a valid [license for _i-doit_](../maintenance-and-operation/activate-license.md) is required. The [system requirements](../installation/system-requirements.md) and [system settings](../installation/manual-installation/system-settings.md) must also be met.
 
 Should you use an older version of the _i-doit open_ installation, you have to bear the following facts in mind:
 
@@ -33,7 +33,7 @@ Should you use an older version of the _i-doit open_ installation, you have to b
 
 You can download the most current version from [i-doit.org](http://i-doit.org/).
 
-Download and Implementation of the _pro_\-Update
+Download and Implementation of the Update
 ------------------------------------------------
 
 Download the update package of _i-doit_ from the [customer portal](../system-administration/customer-portal.md) and carry out an update [in the usual way](../maintenance-and-operation/update.md). It is important that the version number of the installed _i-doit open_ version corresponds to the desired _i-doit_ version. Example: You have to use update package _i-doit_ 1.8, when your installed version is _i-doit open_ 1.8.
@@ -43,7 +43,7 @@ The upgrade doesn't work with the installation packet of the _i-doit_ version.
 Installation of the _i-doit-addon_
 --------------------------------------
 
-After upgrading to the _pro_ version you have to install the _pro_\-addon. The **pro**\-addon is available in the [admin center](../system-administration/admin-center.md) under **Add-ons**. Here you can find the installation button.
+After upgrading to the version you have to install the addon. The addon is available in the [admin center](../system-administration/admin-center.md) under **Add-ons**. Here you can find the installation button.
 
 License Activation
 ------------------
