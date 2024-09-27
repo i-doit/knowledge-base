@@ -79,7 +79,7 @@ Die JDisc-Profile innerhalb von i-doit geben die Möglichkeit, die Verknüpfung 
 
 [![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.png)](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.png)
 
-In der Standard-Installation von i-doit ist bereits ein vordefiniertes **Beispiel** Profil vorhanden. Das vordefinierte JDisc Profil **"Example"** ist ein Profil das Ihnen auszeigen soll, wie ein JDisc Profil gestaltet werden kann.
+In der Standard-Installation von i-doit ist bereits ein vordefiniertes **Beispiel** Profil vorhanden. Das vordefinierte JDisc Profil **"Example"** ist ein Profil das Ihnen aufzeigen soll, wie ein JDisc Profil gestaltet werden kann.
 
 !!! info "Eigene Profile erstellen"
     Es ist ratsam eigene Profile zu erstellen die auf die Objekttypen und Kategorien zugeschnitten sind.
