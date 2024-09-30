@@ -37,7 +37,7 @@
         "remark-gfm": "^4",
         "remark-lint": "^10.0",
         "remark-lint-match-punctuation": "^0.2.0",
-        "remark-lint-no-dead-urls": "^1.1.0",
+        "remark-lint-no-dead-urls": "^2.0.0",
         "remark-lint-no-empty-sections": "^4.0.0",
         "remark-lint-no-long-code": "^0.1.2",
         "remark-lint-no-repeat-punctuation": "^0.1.3",
