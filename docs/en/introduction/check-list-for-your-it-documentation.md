@@ -38,7 +38,7 @@ Our suggestion: Quick successful results first, and then you can consider things
 | 5.1 | Has the previous documentation been replaced (for example, Excel sheets by CSV import)? |     |     |     |
 | 5.2 | Have you automated the data imports (for example, JDisc, OCS Inventory NG, CSV files)? |     |     |     |
 | 5.3 | Have the manual (re-) works been finished? |     |     |     |
-| 6. Using i-doit productively |     |     |     |     |
+| 6. Using i-doitductively |     |     |     |     |
 | 6.1 | Did you integrate the IT documentation into all relevant (manual/automated) processes? |     |     |     |
 | 6.2 | Are the persons authorized for login well-trained? (Trainings, if necessary?) |     |     |     |
 | 6.3 | Are all the requirements fulfilled? |     |     |     |

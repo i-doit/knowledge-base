@@ -4,7 +4,7 @@ When working with i-doit, you should always use the newest version. Minor releas
 
 === "Skip releases version >=20"
     !!! attention "Skip releases >= version 20"
-        If you want to jump directly to a newer version e.g. 26, you can download the latest update package from the [customer portal](../system-administration/customer-portal.md) and unpack it in the i-doit pro folder on the i-doit host. You can find the necessary steps [here](update.md#update-prepared-via-the-console).
+        If you want to jump directly to a newer version e.g. 26, you can download the latest update package from the [customer portal](../system-administration/customer-portal.md) and unpack it in the i-doit folder on the i-doit host. You can find the necessary steps [here](update.md#update-prepared-via-the-console).
         From version **25** with [Hotfix](../system-administration/hotfixes/hotfix-archive/index.md), version 27 is also offered for download during the update check.
 
 === "Skip releases version <= 1.19"

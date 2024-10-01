@@ -92,11 +92,11 @@ Wer Angaben zum verwendeten Domain Name System (DNS) und/oder Fully Qualified Do
     Prinzipiell eignen sich die dokumentierten Daten, um DNS- oder DHCP-Server mit passenden Konfigurationsdaten auszustatten. i-doit enthält eine [Export-Funktion für den DNS-Server ISC DHCP](../automatisierung-und-integration/cli/index.md).
 
 !!! info "DNS-Zonen und -Records"
-    Während sich DNS-Zonen aus der IT-Dokumentation mit Hausmitteln von i-doit problemlos ableiten lassen, sind DNS-Records (A, AAAA, MX usw.) derzeit kein Kernbestandteil. Es bietet sich an, eine benutzerdefinierte Listen-Kategorie anzulegen, die die entsprechenden Records enthält. Diese Kategorie lässt sich jedem Objekt zuordnen, für das Records hinterlegt werden soll. Reverse DNS wird in Objekten vom Typ **Layer-3-Netz** dokumentiert.
+    Während sich DNS-Zonen aus der IT-Dokumentation mit Hausmitteln von i-doitblemlos ableiten lassen, sind DNS-Records (A, AAAA, MX usw.) derzeit kein Kernbestandteil. Es bietet sich an, eine benutzerdefinierte Listen-Kategorie anzulegen, die die entsprechenden Records enthält. Diese Kategorie lässt sich jedem Objekt zuordnen, für das Records hinterlegt werden soll. Reverse DNS wird in Objekten vom Typ **Layer-3-Netz** dokumentiert.
 
 ## Gateways
 
-Netzkomponenten können als Gateways agieren, um von einem Netz aus Verbindungen zu anderen Netzen zu vermitteln (Routing). Pro Netz gibt es in der Regel ein sogenanntes Standard-Gateway, das verwendet wird, wenn keine explizite Routing-Regel greift. Ein solches Standard-Gateway wird in i-doit pro Netz definiert: Entweder selektiert man in der Kategorie **Netz** eines **Layer-3-Netz**\-Objekts ein Objekt, das als Standard-Gateway agiert. Dabei ist wichtig, dass dieses Objekt bereits über eine IP-Adresse verfügt, die diesem Netz zugeordnet ist. Oder man selektiert innerhalb des Objekts in der Kategorie **Hostadresse** das Attribut **Standardgateway für das Netz** auf **ja**.
+Netzkomponenten können als Gateways agieren, um von einem Netz aus Verbindungen zu anderen Netzen zu vermitteln (Routing). Pro Netz gibt es in der Regel ein sogenanntes Standard-Gateway, das verwendet wird, wenn keine explizite Routing-Regel greift. Ein solches Standard-Gateway wird in i-doit Netz definiert: Entweder selektiert man in der Kategorie **Netz** eines **Layer-3-Netz**\-Objekts ein Objekt, das als Standard-Gateway agiert. Dabei ist wichtig, dass dieses Objekt bereits über eine IP-Adresse verfügt, die diesem Netz zugeordnet ist. Oder man selektiert innerhalb des Objekts in der Kategorie **Hostadresse** das Attribut **Standardgateway für das Netz** auf **ja**.
 
 ## IPv4 versus IPv6
 
@@ -147,5 +147,5 @@ Analog zur Verkabelung lassen sich auch die oberen Schichten des TCP/IP-Referenz
 
 ## Weiterführende Links
 
-*   [doIT BETTER: IP Address Management (IPAM)](https://www.i-doit.com/blog/ip-adress-management-mit-i-doit-pro/), Blog-Artikel auf [i-doit.com](http://i-doit.com) mit Video
+*   [doIT BETTER: IP Address Management (IPAM)](https://www.i-doit.com/blog/ip-adress-management-mit-i-doit/), Blog-Artikel auf [i-doit.com](http://i-doit.com) mit Video
 *   [Deutschsprachige Demo](http://ipamdemo.i-doit.com/) zum obigen "doIT BETTER"-Thema (Credentials: admin/admin)

@@ -23,7 +23,7 @@ i-doit bringt in der Standard-Installation bereits eine Vielzahl von [Objekttype
 | **Gebäude** | Gebäude in einer **Stadt** |     |
 | **Geräte/Appliance** | Appliances, die in der Organisation betrieben werden, aber eher als Black Box konzipiert sind | Firewalls |
 | **Host** | Entfernte Rechner, die nicht im direkten Zugriff stehen | DNS-Server |
-| **information domain** | Informationsverbünde (IT-Grundschutz); siehe [Add-on VIVA](../i-doit-pro-add-ons/viva/index.md) |     |
+| **information domain** | Informationsverbünde (IT-Grundschutz); siehe [Add-on VIVA](../i-doit-add-ons/viva/index.md) |     |
 | **Kabel** | Lange, schlauchartige Ansammlung von Kupfern/Fasern, ummantelt von einer Schutzhülle und mit zwei Enden |     |
 | **Kabeltrasse** | Kabeltrassen; siehe **Kabel** |     |
 | **Klimaanlage** | Klimatisierung von aktiven Komponenten |     |

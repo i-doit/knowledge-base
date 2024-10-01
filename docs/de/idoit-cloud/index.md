@@ -1,11 +1,11 @@
 ---
-title: i-doit pro cloud
-description: i-doit pro cloud
+title: i-doit cloud
+description: i-doit cloud
 #icon: material/cloud
 lang: de
 ---
 
-# i-doit pro cloud
+# i-doit cloud
 
 Unsere Services im Überblick:
 
@@ -29,7 +29,7 @@ Unsere Services im Überblick:
 
 ## Allgemeine Informationen
 
--   Eigene i-doit pro cloud Instanz für bis zu 50.000 Objekte
+-   Eigene i-doit cloud Instanz für bis zu 50.000 Objekte
 -   1 GB Datenspeicherplatz
 -   5 gleichzeitige Anwender
 -   10.000 API Calls pro Tag, aktuell nicht limitiert
@@ -37,7 +37,7 @@ Unsere Services im Überblick:
 -   Nur ein einzelner Mandant möglich
 -   Bereitstellung innerhalb von 24 Stunden (Mo.-Fr.)
 -   Tägliches Backup bis 14 Tage in die Vergangenheit, wird um 02:30 Uhr ausgeführt
--   i-doit pro Add-ons zu einem großen Teil kompatibel, eine Liste finden Sie [hier](https://www.i-doit.com/i-doit/add-ons/)
+-   i-doit Add-ons zu einem großen Teil kompatibel, eine Liste finden Sie [hier](https://www.i-doit.com/i-doit/add-ons/)
 -   Generell wird der Funktionsumfang nach und nach erweitert
 -   Der subdomain Name ist frei wählbar z.B. `name.i-doit.online`
 

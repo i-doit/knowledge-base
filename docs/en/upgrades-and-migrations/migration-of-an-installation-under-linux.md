@@ -8,7 +8,7 @@ This article focuses on the general procedure to migrate an i-doit installation 
 
 You have to observe a few things to guarantee a smooth migration:
 
-1. i-doit and optional [add-ons](../i-doit-pro-add-ons/index.md) should be [up to date](../maintenance-and-operation/update.md).
+1. i-doit and optional [add-ons](../i-doit-add-ons/index.md) should be [up to date](../maintenance-and-operation/update.md).
 2. No changes should be made to the old system, so that we are able to return quickly to the original status when trouble strikes.
 3. The commands shown here apply to a current Debian GNU/Linux and should be modified in correspondence with the environment. Avoid a blind approach regarding the execution of commands.
 

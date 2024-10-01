@@ -1,7 +1,7 @@
 # Changelog 30
 
 [Task][Update]                        i-doit 30 is only updateable from i-doit 29<br>
-[Task][Two-Factor Authentication]     Make TFA only available in i-doit pro<br>
+[Task][Two-Factor Authentication]     Make TFA only available in i-doit<br>
 [Task][Code (Internal)]               Replace all places where the old replace_placeholder method is being used with the new Replacer Component<br>
 [Task][Code (Internal)]               Deprecate WYSIWYG Smarty plugin parameter "p_image_upload_handler", please use "fileUploadUrl"<br>
 [Task][Code (Internal)]               Deprecate WYSIWYG Smarty plugin parameter "p_image_browser_handler", please use "fileBrowseUrl"<br>

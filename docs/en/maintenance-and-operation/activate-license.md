@@ -1,6 +1,6 @@
 # Activate License
 
-i-doit PRO is unlocked with a license.
+i-doit is unlocked with a license.
 
 The licenses for your company are available at the [customer portal](../system-administration/customer-portal.md). Access is given to the person who is stated as the primary contact person.
 
@@ -17,7 +17,7 @@ The licenses for your company are available at the [customer portal](../system-a
 
 !!! info "Pre i-doit 1.12.2 behavior"
 
-    Multiple types of licenses are available for i-doit pro:
+    Multiple types of licenses are available for i-doit:
 
     *   The **subscription** license for each single tenant (including **trial licenses**)  
         You can load a subscription license via the [Admin center](../system-administration/admin-center.md) 
@@ -122,7 +122,7 @@ Please note that in the **Tenants** tab you can configure how many object licens
 Trial Licenses
 --------------
 
-You can [apply for a license to test i-doit pro for 30-days](https://www.i-doit.com/) on our website.
+You can [apply for a license to test i-doit for 30-days](https://www.i-doit.com/) on our website.
 
 Name of the test database
 

@@ -1,6 +1,6 @@
 # Manage Passwords
 
-Every day a system administrator handles dozens of passwords. It is a big challenge to keep all those passwords in mind. i-doit provides a simple password management which keeps your head clear for essential tasks and helps you to find the required access data much faster.
+Every day a system administrator handles dozens of passwords. It is a big challenge to keep all those passwords in mind. i-doitvides a simple password management which keeps your head clear for essential tasks and helps you to find the required access data much faster.
 
 Distinction Between i-doit and Password Managers
 ------------------------------------------------

@@ -13,7 +13,7 @@ Mittels eigener Logik kann bei bestimmten Ereignissen, zum Beispiel beim dokumen
 
 **Achtung!**
 
-Aufwändige Prozeduren sollten nicht auf Basis eines Signals angesteuert werden, da die Verarbeitung synchron passiert. Das bedeutet eine rechenintensive Prozedur würde den dahinterliegenden i-doit Prozess verlangsamen und könnte dadurch unerwünschte Seiteneffekte auslösen (Abbruch des Requests, Speicherüberlauf, …).
+Aufwändige Prozeduren sollten nicht auf Basis eines Signals angesteuert werden, da die Verarbeitung synchron passiert. Das bedeutet eine rechenintensive Prozedur würde den dahinterliegenden i-doitzess verlangsamen und könnte dadurch unerwünschte Seiteneffekte auslösen (Abbruch des Requests, Speicherüberlauf, …).
 
 Alternativ lässt sich ein beobachtetes Signal in einen (Betriebssystem-) Prozess weiterleiten, sodass i-doit nicht geblockt wird. Dies wird in der [offiziellen PHP Dokumentation](https://www.php.net/manual/en/function.exec.php#refsect1-function.exec-notes) beschrieben.
 

@@ -1,6 +1,6 @@
 # Version History
 
-When were all the i-doit pro release dates?
+When were all the i-doit release dates?
 
 | Version                | Date           | Release Notes                                                    | Changelog                                                          |
 | ---------------------- | -------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------ |

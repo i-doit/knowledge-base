@@ -39,7 +39,7 @@ Um den gesamten Lebenszyklus eines Objekts abzubilden, wird pro [Objekt](../glos
 Das Hinzufügen, Ändern oder Löschen eines **CMDB-Status** erfolgt über **Verwaltung → Vordefinierte Inhalte → CMDB-Status**. Pro **CMDB-Status** werden folgende Angaben benötigt:
 
 -   Eindeutige Bezeichnung bzw. [Sprachkonstante (zur Übersetzung)](../administration/mehrsprachigkeit-und-uebersetzungen.md)
--   Eindeutige Konstante (beispielsweise für die Nutzung der [API](../i-doit-pro-add-ons/api/index.md) hilfreich)
+-   Eindeutige Konstante (beispielsweise für die Nutzung der [API](../i-doit-add-ons/api/index.md) hilfreich)
 -   Farbe (wird in Objektlisten, der **Allgemein**\-Kategorie, im [**CMDB-Explorer**](../auswertungen/cmdb-explorer/index.md) und an vielen anderen Stellen verwendet)
 
 [![cmdb-status-verwalten](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)

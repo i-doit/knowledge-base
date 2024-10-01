@@ -12,4 +12,4 @@ i-doit enables external access to the [IT documentation](../../../../glossary.md
 | Strip HTML tags from description fields | Yes or No |
 | Log Level | ERROR<br>WARNING<br>INFO<br>DEBUG |
 
-For more Informations -> [READMORE](../../../../i-doit-pro-add-ons/api/index.md)
+For more Informations -> [READMORE](../../../../i-doit-add-ons/api/index.md)

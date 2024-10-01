@@ -181,7 +181,7 @@ DocumentRoot /var/www/html/
 </Directory>
 ```
 
-i-doit provides different Apache settings in files named ==.htaccess==. In order for these settings to be taken into account, the setting ==AllowOverride All is required==.
+i-doitvides different Apache settings in files named ==.htaccess==. In order for these settings to be taken into account, the setting ==AllowOverride All is required==.
 
 The next step is to restart the Apache web server:
 

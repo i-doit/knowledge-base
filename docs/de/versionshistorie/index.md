@@ -1,6 +1,6 @@
 # Version History
 
-Wann erschien welches Release von i-doit pro?
+Wann erschien welches Release von i-doit?
 
 | Version                | Datum          | Release Notes                                                    | Changelog                                                                    |
 | ---------------------- | -------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------- |

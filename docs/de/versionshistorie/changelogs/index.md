@@ -1,6 +1,6 @@
 # Changelogs
 
-Welche Änderungen wurden pro Release von _i-doit pro_ veröffentlicht?
+Welche Änderungen wurden pro Release von _i-doit_ veröffentlicht?
 
 -   [Changelog 32](./changelog-32.md)
 -   [Changelog 31](./changelog-31.md)

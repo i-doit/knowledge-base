@@ -82,7 +82,7 @@ Ein dokumentierter Arbeitsplatz erhält eine Person als logischen Standort. Zude
 
 ## Raumplan
 
-Das Add-on [Raumplan](../i-doit-pro-add-ons/floorplan.md) eignet sich dazu, auf Basis der Standortpfade zweidimensionale Pläne zu erstellen.
+Das Add-on [Raumplan](../i-doit-add-ons/floorplan.md) eignet sich dazu, auf Basis der Standortpfade zweidimensionale Pläne zu erstellen.
 
 ## Benutzerrechte auf Standorte
 

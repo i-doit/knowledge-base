@@ -70,7 +70,7 @@ After saving the parameters, you can test whether the configuration was successf
 
 ## JDisc profiles
 
-The JDisc profiles of i-doit provide the possibility to define the connection of object types and their attributes between JDisc and i-doit. Under **Administration → Import and interfaces → JDISC → JDisc profiles** you can specify how the objects found by JDisc find their way into the IT documentation.
+The JDisc profiles of i-doitvide the possibility to define the connection of object types and their attributes between JDisc and i-doit. Under **Administration → Import and interfaces → JDISC → JDisc profiles** you can specify how the objects found by JDisc find their way into the IT documentation.
 
 [![jdisc-discovery-profiles](../assets/images/en/consolidate-data/jdisc-discovery/2-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/2-jd.png)
 

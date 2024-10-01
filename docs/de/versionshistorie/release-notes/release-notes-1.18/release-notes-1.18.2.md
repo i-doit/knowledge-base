@@ -1,6 +1,6 @@
 # Release Notes 1.18.2
 
-We're pleased to announce our latest minor version 1.18.2 of i-doit pro. This update contains a lot of bug fixes, which can be found in the [changelog](../../changelogs/changelog-1.18.x/changelog-1.18.2.md). You will also get the option to assign rights to objects, based on their assigned contacts. As usual, you should [update](../../../wartung-und-betrieb/update-einspielen.md) to the latest version to benefit from these changes.
+We're pleased to announce our latest minor version 1.18.2 of i-doit. This update contains a lot of bug fixes, which can be found in the [changelog](../../changelogs/changelog-1.18.x/changelog-1.18.2.md). You will also get the option to assign rights to objects, based on their assigned contacts. As usual, you should [update](../../../wartung-und-betrieb/update-einspielen.md) to the latest version to benefit from these changes.
 
 Primary changes in this version
 -------------------------------
@@ -11,10 +11,9 @@ Primary changes in this version
 Add-ons
 -------
 
-Alongside i-doit pro 1.18.2, we will also release new versions of the following add-on:
+Alongside i-doit 1.18.2, we will also release new versions of the following add-on:
 
-
-[Forms](../../../i-doit-pro-add-ons/forms/index.md) **1.1**
+[Forms](../../../i-doit-add-ons/forms/index.md) **1.1**
 
 System requirements
 -------------------

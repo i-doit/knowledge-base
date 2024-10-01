@@ -46,7 +46,7 @@ Tenants are administrated in the ==Tenants== section. This, however, is only rel
 
 ## Add-ons
 
-In the ==Add-ons== section the [Add-ons](../i-doit-pro-add-ons/index.md) are managed. Each feature of _i-doit_ is encapsulated in a Add-on.
+In the ==Add-ons== section the [Add-ons](../i-doit-add-ons/index.md) are managed. Each feature of _i-doit_ is encapsulated in a Add-on.
 
 [![Add-ons](../assets/images/en/system-administration/admin-center/6-ac.png)](../assets/images/en/system-administration/admin-center/6-ac.png)
 

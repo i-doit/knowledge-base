@@ -1,6 +1,6 @@
 # Release Notes 29
 
-We're happy to announce i-doit pro 29. This version will get a lot of tweaks and improvements under the hood.
+We're happy to announce i-doit 29. This version will get a lot of tweaks and improvements under the hood.
 This i-doit version will add support for **PHP 8.2**. This means PHP versions from 7.4 to 8.2 can be used so you can perform an update without having to worry about compatibility. Please note that **PHP 7.4** will **no longer** be supported with upcoming releases of i-doit.
 
 Users of **SSO** will also experience a change. The login does no longer happen automatically. Instead there will be an option to use SSO on your login screen so you are able to logout properly, if needed. To perform an automated login, you can use the parameter "?use-sso=1" in your URL.
@@ -24,10 +24,10 @@ You will find a detailed list of the changes in the [changelog](../changelogs/ch
 
 We also release new versions of the following add-ons:
 
--   [Analysis](../../i-doit-pro-add-ons/analysis.md) 1.5
--   [API](../../i-doit-pro-add-ons/api/index.md) 1.16
--   [Cabling](../../i-doit-pro-add-ons/cabling.md) 1.4
--   [Documents](../../i-doit-pro-add-ons/documents/index.md) 1.7
--   [Floorplan](../../i-doit-pro-add-ons/floorplan.md) 1.8
+-   [Analysis](../../i-doit-add-ons/analysis.md) 1.5
+-   [API](../../i-doit-add-ons/api/index.md) 1.16
+-   [Cabling](../../i-doit-add-ons/cabling.md) 1.4
+-   [Documents](../../i-doit-add-ons/documents/index.md) 1.7
+-   [Floorplan](../../i-doit-add-ons/floorplan.md) 1.8
 
 Please make sure that you fulfill all the requirements before installing these new versions.

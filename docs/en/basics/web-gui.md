@@ -38,7 +38,7 @@ In the central part of the upper task bar you can see the single [object type](.
 
 ## Extras
 
-A lot of special functions can be found under Extras. For example, there are CMDB features which help you to work more efficiently with i-doit and you have access to the respective installed i-doit [add-ons](../i-doit-pro-add-ons/index.md).
+A lot of special functions can be found under Extras. For example, there are CMDB features which help you to work more efficiently with i-doit and you have access to the respective installed i-doit [add-ons](../i-doit-add-ons/index.md).
 
 [![Extras](../assets/images/en/basics/web-gui/6-gui.png)](../assets/images/en/basics/web-gui/6-gui.png)
 

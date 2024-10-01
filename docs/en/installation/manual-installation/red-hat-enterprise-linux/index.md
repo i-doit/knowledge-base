@@ -311,7 +311,7 @@ ProxyTimeout 600
 </FilesMatch>
 ```
 
-i-doit provides different Apache settings in files with the name **.htaccess**. These must be checked after each update and updated in the VirtualHost configuration.
+i-doitvides different Apache settings in files with the name **.htaccess**. These must be checked after each update and updated in the VirtualHost configuration.
 
 In the next step, the Apache HTTP server is restarted:
 

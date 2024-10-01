@@ -1,6 +1,6 @@
 # Lizenz aktivieren
 
-i-doit PRO wird mit einer Lizenz freigeschaltet.
+i-doit wird mit einer Lizenz freigeschaltet.
 
 Die Lizenzen für dein Unternehmen sind im [Kundenportal](../administration/kundenportal.md) erhältlich. Zugriff hat jene Person, die als primärer Ansprechpartner angegeben wurde.
 
@@ -18,7 +18,6 @@ Die Lizenzen für dein Unternehmen sind im [Kundenportal](../administration/kund
 !!! info "Neuanmeldung nötig"
 
     Wird eine Lizenz erfolgreich eingespielt, kann es dennoch vorkommen, dass beim Weiterarbeiten mit i-doit ein Hinweis erscheint, es sei keine gültige Lizenz aktiviert. Hier hilft es, sich mit dem derzeitigen Benutzer ab- und wieder anzumelden. Daraufhin sollte der Hinweis nicht wieder erscheinen.
-
 
 !!! info "Verhalten vor i-doit Version 1.12.2"
 
@@ -51,7 +50,7 @@ Welche Methode eine Lizenz einzuspielen sollte ich verwenden?
 Wie erhält man den Weblicense Token und wie den Offline License Key String?
 ---------------------------------------------------------------------------
 
-Der **License Token** ist im i-doit pro Kundenportal zu finden.
+Der **License Token** ist im i-doit Kundenportal zu finden.
 Den Offline License Key können wir abrufen, indem wir den Button "**Show Offline License**", oben rechts klicken. Dies öffnet ein Popup mit den Offline License Key String.
 
 [![How-to-get-a-token](../assets/images/de/wartung-und-betrieb/activate-license/0.how-to-get-a-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/0.how-to-get-a-token.png)
@@ -61,11 +60,11 @@ Den Offline License Key können wir abrufen, indem wir den Button "**Show Offlin
 **License Token Online aktivieren**
 -----------------------------------
 
-**Schritt 1:** Als erstes rufen wir die i-doit pro installation über den Browser auf. Um in das Admin-Center zu gelangen klicken Sie auf den Link in der Anmeldemaske.
+**Schritt 1:** Als erstes rufen wir die i-doit installation über den Browser auf. Um in das Admin-Center zu gelangen klicken Sie auf den Link in der Anmeldemaske.
 
 [![Admin-login](../assets/images/de/wartung-und-betrieb/activate-license/1.Login_admin.png)](../assets/images/de/wartung-und-betrieb/activate-license/1.Login_admin.png)
 
-**Schritt 2:** Als nächstes müssen wir die Anmeldedaten eingeben, die wir bei der Installation von i-doit pro für das Admin-Center vergeben haben.
+**Schritt 2:** Als nächstes müssen wir die Anmeldedaten eingeben, die wir bei der Installation von i-doit für das Admin-Center vergeben haben.
 
 [![Admin-Center-login](../assets/images/de/wartung-und-betrieb/activate-license/2.login_admin_center.png)](../assets/images/de/wartung-und-betrieb/activate-license/2.login_admin_center.png)
 
