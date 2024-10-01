@@ -175,6 +175,18 @@ When you carried out the settings completely, you can activate the import with *
 When the import process is completed, a summary is displayed in the **Result** section.<br>
 You can find the logs which are generated during import in the i-doit directory called `log/`.
 
+While importing via the JDisc import, you can stop the import via the **Pause** button.<br>
+Pressing the Pause button will pause the import for a set amount of time to free system resources. This can be controlled via the setting Maximum import pause within your i-doit settings for the JDisc-import. After the time limit is reached, the import will either be canceled or continued, depending on your setting for Paused import behaviour in your settings. The import can also be manually canceled or continued manually at any time.<br>
+If the countdown is finished, the import will be canceled automatically.<br>
+You can also cancel the report by pressing the **Cancel** button, which is always available after starting the import.<br>
+This will cancel the import at the current state. Already imported objects will still remain in your database.<br>
+
+[![JDisc Profile](../assets/images/en/consolidate-data/jdisc-discovery/7-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/7-jd.png)
+
+The configuration can be found at **Administration → Tenant Management → Settings for Tenant → JDisc**.
+
+[![JDisc Profile](../assets/images/en/consolidate-data/jdisc-discovery/8-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/8-jd.png)
+
 ## Import via JDisc Discovery category
 
 You can update individual objects using the JDisc Discovery category.
