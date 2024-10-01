@@ -177,6 +177,16 @@ Wenn die Einstellungen vollständig vorgenommen wurden, kann der Import über **
 Wenn der Import abgeschlossen wurde, wird eine Zusammenfassung im Bereich **Ergebnis** angezeigt.<br>
 Beim Import erzeugte Logs findest du im i-doit-Verzeichnis `log/`.
 
+Durch das klicken des **Pause** Buttons wird der Import für die Dauer einer festgelegten Zeitspanne pausiert. Dies kann mit der Einstellung Maximale Länge der Importpause innerhalb der i-doit JDisc Einstellungen konfiguriert werden. Nachdem das eingestellte Zeitlimit erreicht wurde wird der Import entweder abgebrochen oder fortgesetzt. Dies ist abhängig von der Einstellung Verhalten des pausierten Imports. Der Import kann außerdem jederzeit manuell fortgesetzt oder abgebrochen werden.<br>
+Ein pausierter Import kann über den **Fortsetzen** Button wieder fortgesetzt werden. <br>
+Der **Abbrechen** Button kann jeder Zeit während eines laufenden Imports betätigt werden und sorgt anschließend dafür, dass der laufende Import abgebrochen wird, die bereits importierten Objekte verbleiben allerdings in der Datenbank.<br>
+
+[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/7-jdisc.png)](../assets/images/de/daten-konsolidieren/jdisc/7-jdisc.png)
+
+Die oben genannten Einstellungen können unter **Verwaltung → Mandanten Verwaltung → Einstellungen für Mandant → JDisc** vorgenommen werden.
+
+[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/8-jdisc.png)](../assets/images/de/daten-konsolidieren/jdisc/8-jdisc.png)
+
 ## Import über die Kategorie JDisc Discovery
 
 Über die Kategorie JDisc Discovery können Sie einzelne Objekte aktualisieren.
