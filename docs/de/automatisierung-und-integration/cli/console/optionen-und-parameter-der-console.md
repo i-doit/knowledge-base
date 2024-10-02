@@ -67,6 +67,7 @@
 | [tenant-remove](#tenant-remove)                                           | Einen bestehenden Mandanten entfernen                                                                                                                                         |
 | [uninstall](#uninstall)                                                   | Deinstalliert i-doit                                                                                                                                                          |
 | [update](#update)                                                         | Update von i-doit installieren                                                                                                                                                |
+| [idoit:feature-manager](#idoitfeature-manager)                           | Mit diesem Befehl ist es möglich Features in i-doit zu aktivieren            |
 
 !!! attention "Konfigurationsdatei und Parameter --config"
     Es ist möglich dem Aufruf zusätzliche Inhalte über eine Konfigurationsdatei zu übergeben. Diese Datei muss im i-doit Verzeichnis src/handler/config/ abgelegt werden. Ein Beispiel in Form der Datei "isys_handler_ldap.ini" ist im Verzeichnis src/handler/config/examples/ zu finden.<br>
@@ -1513,4 +1514,37 @@ Update von i-doit installieren.
 
 ```shell
 sudo -u www-data php console.php update --user admin --password admin --zip /path/to/zip/file.zip --v 1.14
+```
+
+### idoit:feature-manager
+
+Mit diesem Befehl ist es möglich Features in i-doit zu aktivieren
+
+**Optionen**
+
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --unset-cloud         | Deaktivieren wenn Anwendung eine Cloud-Instanz ist               |
+|                      | --set-cloud           | Aktivieren wenn Anwendung eine Cloud-Instanz ist                 |
+| -e                   | --enable=[ENABLE]     | Features aktivieren                                              |
+| -d                   | --disable=[DISABLE]   | Features deaktivieren                                            |
+| -r                   | --replace=[REPLACE]   | Vorhandene Features austauschen                                  |
+| -c                   | --cloudable           | Nur Cloud fähige Features werden beachtet                        |
+| -f                   | --noncloudable        | Nur nicht Cloud fähige Features werden beachtet                  |
+|                      | --wizard              | Interaktiver Modus um Features zu aktivieren oder deaktivieren   |
+| -l                   | --list                | Zeigt alle verfügbaren Features                                  |
+| -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenant=[TENANT-ID]  | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet               | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version             | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi   | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction      | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose             | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+
+**Beispiel zur Verwendung**
+
+```shell
+sudo -u www-data php console.php idoit:feature-manager --enable update-gui --user admin --password admin
 ```
