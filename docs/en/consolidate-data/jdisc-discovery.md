@@ -220,6 +220,16 @@ If we assume that the jdisc.ini is located in the i-doit root directory, then th
 sudo -u www-data php console.php import-jdisc -c jdisc.ini
 ```
 
-### JDisc availability Report view
+## Report views
+
+### JDisc availabilty
 
 Under **Report Manager -> Views** you will find a report with the name **JDisc availability**, which compares i-doit objects with JDisc objects.
+
+### JDisc delete devices
+
+!!! info "In order for this report view to work, you need to have GraphQL configured"
+
+!!! warning "This Report view will delete devices in JDisc, we advise to create a backup or snapshot JDisc before using the view!"
+
+Under **Report Manager -> Views** you will find a report with the name **JDisc delete devices**, which lists all objects which were imported from JDisc and are archived or deleted in i-doit. These objects can than be selected and than deleted in JDisc. The deleted objects will be logged in the **Device Deletion Log** in JDisc.

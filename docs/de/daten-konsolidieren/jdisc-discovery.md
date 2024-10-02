@@ -224,6 +224,16 @@ Aufruf aus dem i-doit Verzeichnis:
 sudo -u www-data php console.php import-jdisc -c jdisc.ini
 ```
 
-### JDisc-Verfügbarkeit Report view
+## Report views
+
+### JDisc-Verfügbarkeit
 
 Unter **Report Manager -> Views** ist ein Report mit dem Namen **JDisc-Verfügbarkeit** zu finden, der i-doit Objekte mit JDisc objekten vergleicht.
+
+### JDisc delete devices
+
+!!! info "Dieser Report view funktioniert nur, wenn GraphQL konfiguriert ist"
+
+!!! warning "Dieser Report view löscht Objekte in JDisc. Wir empfehlen deshalb vor dem verwenden des Report views ein Backup oder einen Snapshot von JDisc zu machen!"
+
+Unter **Report Manager -> Views** ist ein Report mit dem Namen **JDisc delete devices** zu finden, dieser listet alle JDisc Objekte auf, die in i-doit archiviert oder gelöscht sind. Die jeweiligen Objekte können dann ausgewählt und anschließend in JDisc gelöscht werden. Die in JDisc gelöschten Objekte werden im **Device Deletion Log** gelogged.
