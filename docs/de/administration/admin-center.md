@@ -47,7 +47,7 @@ Im Bereich **Tenants** werden die Mandanten verwaltet. Dies wird allerdings nur 
 
 ## Lizenzen
 
-Über den Bereich **Licences** kann die [Lizenz für i-doit](../wartung-und-betrieb/lizenz-aktivieren.md) eingespielt werden.
+Über den Bereich **Licenses** kann die [Lizenz für i-doit](../wartung-und-betrieb/lizenz-aktivieren.md) eingespielt werden.
 
 [![Lizenzen](../assets/images/de/administration/admin-center/5-ac.png)](../assets/images/de/administration/admin-center/5-ac.png)
 
