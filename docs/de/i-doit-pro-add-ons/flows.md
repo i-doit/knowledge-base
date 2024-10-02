@@ -2,7 +2,7 @@
 title: Flows Add-on
 description: Flows Add-on
 icon: addons/flows
-status:
+status: new
 lang: de
 ---
 

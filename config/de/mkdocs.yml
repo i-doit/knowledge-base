@@ -517,6 +517,7 @@ nav:
               - Version 22: administration/hotfixes/hotfix-archiv/v22.md
   - Anwendungsfälle:
       - anwendungsfaelle/index.md
+      - Update zu Version 33 und Installation Flows Add-on: anwendungsfaelle/33-flows.md
       - Abbildung von Kundenstandorten: anwendungsfaelle/abbildung-von-kundenstandorten.md
       - Arbeitsplätze: anwendungsfaelle/arbeitsplaetze.md
       - Benutzerdefinierte Übersetzungen: anwendungsfaelle/benutzerdefinierte-uebersetzungen.md
