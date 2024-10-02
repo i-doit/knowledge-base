@@ -12,23 +12,23 @@ Das Flows Add-on für i-doit ist ein leistungsstarkes Werkzeug zur Automatisieru
 
 ## Download und Installation
 
-Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel "[i-doit pro Add-ons](index.md)".
+Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel "[i-doit Add-ons](index.md)".
 
 ## Rechtevergabe
 
-Unter **Verwaltung → Berechtigungen → Flows** können [Rechte für Personen und Personengruppen](../effizientes-dokumentieren/rechteverwaltung/index.md) angepasst werden.
+Unter **Verwaltung → Berechtigungen → Flows** können [Rechte für Personen und Personengruppen](../../effizientes-dokumentieren/rechteverwaltung/index.md) angepasst werden.
 
 | Recht          | Beschreibung                                                                |
 | -------------- | --------------------------------------------------------------------------- |
+| **Erstellen**  | Erlaubt das erstellen, duplizieren und impliziert das Ansehen Recht         |
 | **Ansehen**    | Erlaubt Zugriff auf die Flows Overview                                      |
 | **Editieren**  | Erlaubt editieren, aktivieren/deaktivieren und impliziert das Ansehen Recht |
-| **Erstellen**  | Erlaubt das erstellen, duplizieren und impliziert das Ansehen Recht.        |
 | **Löschen**    | Erlaubt das löschen von Flows und impliziert das Ansehen Recht              |
 | **Supervisor** | Erlaubt alles                                                               |
 
 ## Overview
 
-Über die Aktionsleiste können Flows erstellt oder gelöscht werden. Sofern ein Flow erstellt wurde kann dieser auch über die **Actions** Spalte geöffnet, aktiviert oder deaktiviert werden. Außerdem sind über den "3 Punkte" (More) Button weitere Aktionen möglich wie zum Beispiel, editieren, duplizieren,
+Über die [**Aktionsleiste**](../../grundlagen/struktur-it-dokumentation.md#kategorie) können Flows erstellt oder gelöscht werden. Sofern ein Flow erstellt wurde kann dieser auch über die **Actions** Spalte geöffnet, aktiviert oder deaktiviert werden. Außerdem sind über den "3 Punkte" (More) Button weitere Aktionen möglich wie zum Beispiel, editieren, duplizieren,
 
 ## Flow erstellen
 
@@ -71,7 +71,7 @@ Es muss keine Condition gewählt werden. Außerdem können conditions mit **AND*
 Es muss mindestens eine Action definiert werden.
 
 === "Call API"
-    Die Aktion führt einen definierten API Call aus. Der API Call benötigt eine URL, eine Methode sowie Authorization details.
+    Die Aktion führt einen definierten API Call aus. Der API Call benötigt eine URL, eine Methode sowie angaben zur Autorisierung.
 
 === "Send E-Mail"
     Die Aktion sendet eine E-Mail an bestimmte Empfänger. Ein Subject ist notwendig.
@@ -88,11 +88,11 @@ Die Logs sind für alle Flows ersichtlich oder für den jeweils geöffneten Flow
 
 ## CLI Commands
 
-!!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende  [Mandanten ID](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list) zu übergeben."
+!!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende  [Mandanten ID](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list) zu übergeben."
 
 !!! info "Der Apache HTTP Server Benutzername ist je nach Betriebssystem unterschiedlich."
 
-Die Konfiguration zeitbasierter Flows setzt voraus, dass deren Auslösung durch regelmäßige Ausführung entsprechender [CLI-Befehle](../automatisierung-und-integration/cli/console/index.md) gewährleistet ist. Dies kann durch einen Cronjob sichergestellt werden. Voraussetzung hierfür ist die Bereitstellung eines gültigen zeitbasierten Triggers. Die Registrierung der Ausführungen erfolgt durch Aufruf des Konsolenbefehls für zeitbasierte Auslöser.
+Die Konfiguration zeitbasierter Flows setzt voraus, dass deren Auslösung durch regelmäßige Ausführung entsprechender [CLI-Befehle](../../automatisierung-und-integration/cli/console/index.md) gewährleistet ist. Dies kann durch einen Cronjob sichergestellt werden. Voraussetzung hierfür ist die Bereitstellung eines gültigen zeitbasierten Triggers. Die Registrierung der Ausführungen erfolgt durch Aufruf des Konsolenbefehls für zeitbasierte Auslöser.
 
 ```sh
 sudo -u www-data php console.php flows:time-trigger --user admin --password admin --tenantId 1
@@ -106,48 +106,10 @@ sudo -u www-data php console.php flows:perform --user admin --password admin --t
 
 ## Anwendungsfälle
 
-Wir führen hier einige Beispiele zur Anwendung von Flows auf.
-
-### Deaktiviere den Login für Personen die archiviert wurden
-
-Der Flow soll bei ausgeführt werden, wenn eine Person archiviert wird und soll bei dieser Person das Feld `Deaktiviere Login` auf `Ja` setzen. Alle Mitglieder der Personengruppe Admin, sollen ausgenommen sein.
-
-### Trigger erstellen
-
-Als erstes wird ein Trigger vom Typ [Object event](#trigger-types) erstellt. Damit die Aktion nur ausgelöst wird, wenn ein Personen Objekt archiviert wird, wird zusätzlich Personen unter **Only objects of the selected object type** ausgewählt.
-
-[![Trigger](../assets/images/de/i-doit-pro-add-ons/flows/uc-1-trigger.png)](../assets/images/de/i-doit-pro-add-ons/flows/uc-1-trigger.png)
-
-### Conditions
-
-Der verwendete Conditions Typ ist [Object based](#condition-types). Nun wird als Bedingung `And` `Personenmitgliedschaften` `not in` `Admin` ausgewählt, damit Mitglieder der Personengruppe Admin nicht ausgeschlossen werden können.
-
-[![Conditions](../assets/images/de/i-doit-pro-add-ons/flows/uc-1-condition.png)](../assets/images/de/i-doit-pro-add-ons/flows/uc-1-condition.png)
-
-### Action
-
-Als den Action Typ wird Update object genutzt. Dieser soll dann, über `Set following attributes`, in der Kategorie `Login (Personen)` das Attribut `Username` auf `Ja` setzen. Dazu kann entweder die Suche verwendet oder in der `Categories` Liste gesucht werden.
-
-[![Action_Attribute_selection](../assets/images/de/i-doit-pro-add-ons/flows/uc-1-action-attribute-selection.png)](../assets/images/de/i-doit-pro-add-ons/flows/uc-1-action-attribute-selection.png)
-
-Nun wird der Wert gewählt, der für das Attribut gesetzt werden soll.
-
-[![Action](../assets/images/de/i-doit-pro-add-ons/flows/uc-1-action.png)](../assets/images/de/i-doit-pro-add-ons/flows/uc-1-action.png)
+!!! example "Folgen."
 
 ## Releases
 
-| Version | Datum | Changelog |
-| ------- | ----- | --------- |
-
-*[Trigger]: Ein definierter Auslöser.
-*[Conditions]: Eine oder mehrere Bedingungen die erfüllt sein müssen.
-*[Condition]: Eine Bedingungen die erfüllt sein müssen.
-*[Action]: Eine oder mehrere Aktionen die ausgelöst werden.
-*[Time_based]: Ein Zeitpunkt/Datum oder innerhalb eines bestimmten Zeitrahmens.
-*[Button]: Eine Schaltfläche, die eine Aktion auslöst wenn eine diese gedrückt wird.
-*[Object_event]: Eine Aktion die für ein Objekt ausgelöst wird.
-*[Category_event]: Die Aktion die für eine Kategorie ausgelöst wird.
-*[Aktionsleiste]: in der Aktionsleiste werden Buttons dargestellt die aktionen ausführen, wie z.B. Speichern oder Editieren.
-*[AND]: Alle mit AND verknüpften Bedingungen müssen zutreffen um eine Aktion auszulösen.
-*[OR]: Eine der beiden Bedingungen muss zutreffen um die Aktion auszulösen.
-*[]:
+| Version | Datum      | Changelog         |
+| ------- | ---------- | ----------------- |
+| 1.0     | 10.10.2024 | Initiales Release |

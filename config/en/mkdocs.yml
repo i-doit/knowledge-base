@@ -57,6 +57,9 @@ plugins:
       lang: en
   - minify:
       minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      strict: false
 markdown_extensions:
   - abbr
   - admonition
@@ -563,7 +566,9 @@ nav:
           - Document creation: i-doit-add-ons/documents/document-creation.md
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
-      - Flows: i-doit-add-ons/flows.md
+      - Flows:
+          - i-doit-add-ons/flows/index.md
+          - i-doit update and installation Flows: i-doit-add-ons/flows/update-i-doit-and-install-flows.md
       - Forms:
           - i-doit-add-ons/forms/index.md
           - Install Forms Add-on: i-doit-add-ons/forms/install-forms-addon.md
