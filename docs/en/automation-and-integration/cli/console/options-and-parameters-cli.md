@@ -66,6 +66,7 @@
 | [tenant-remove](#tenant-remove)                                           | Remove an existing tenant                                                                                                          |
 | [uninstall](#uninstall)                                                   | Uninstalls i-doit                                                                                                                  |
 | [update](#update)                                                         | Installs an update for i-doit                                                                                                      |
+| [idoit:feature-manager](#idoitfeature-manager)                           | Activates features for i-doit            |
 
 !!! attention "Configuration file and parameters --config"
     It is possible to pass additional content to the call via a configuration file. This file must be stored in the i-doit directory src/handler/config/. An example in the form of the file "isys\_handler\_ldap.ini" can be found in the directory src/handler/config/examples/.<br>
@@ -1517,4 +1518,37 @@ Updates the i-doit installation
 
 ```shell
 sudo -u www-data php console.php update --user admin --password admin --zip /path/to/zip/file.zip --v 1.14
+```
+
+### idoit:feature-manager
+
+Activates features of i-doit
+
+**Optionen**
+
+| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --unset-cloud         | Deactivate if application is cloud instance                      |
+|                      | --set-cloud           | Activate if application is cloud instance                        |
+| -e                   | --enable=ENABLE       | Enable features                                                  |
+| -d                   | --disable=DISABLE     | Disable features                                                 |
+| -r                   | --replace=REPLACE     | Replace current features                                         |
+| -c                   | --cloudable           | Only cloudable features will be considered                       |
+| -f                   | --noncloudable        | Only non-cloudable features will be considered                   |
+|                      | --wizard              | Interactive mode to activate or deactivate features              |
+| -l                   | --list                | Shows all available features                                     |
+| -u                   | --user=USERNAME       | Username of a user who is authorized to execute                                                                                                           |
+| -p                   | --password=PASSWORD   | Password for authentication of the previously specified user                                                                                                              |
+| -i                   | --tenantId=TENANT-ID  | Tenant ID of the tenant to be used (default: 1)                                                                                                                |
+| -h                        | --help                   | Help message for displaying further information                                              |
+| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php idoit:feature-manager --enable update-gui --user admin --password admin
 ```
