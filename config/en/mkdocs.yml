@@ -57,6 +57,9 @@ plugins:
       lang: en
   - minify:
       minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      strict: false
 markdown_extensions:
   - abbr
   - admonition
@@ -73,6 +76,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - pymdownx.highlight:
       linenums: true
       linenums_style: table
@@ -560,6 +566,9 @@ nav:
           - Document creation: i-doit-add-ons/documents/document-creation.md
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
+      - Flows:
+          - i-doit-add-ons/flows/index.md
+          - i-doit 33 update and Flows installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
           - i-doit-add-ons/forms/index.md
           - Install Forms Add-on: i-doit-add-ons/forms/install-forms-addon.md
