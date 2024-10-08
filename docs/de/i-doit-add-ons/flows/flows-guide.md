@@ -69,12 +69,30 @@ Jetzt werden die Dateirechte angepasst, sodass der Webserver lesend wie schreibe
 
 !!! info "Die hier genutzte Benutzer:Gruppen Kombination **www-data:www-data** bezieht sich auf **Debian** oder **Ubuntu** Linux. Sollten ein anderes Betriebssystem genutzt werden, muss die genutzte Benutzer:Gruppen Kombination angepasst werden. Siehe [hier](../../installation/manuelle-installation/setup.md#installationspaket-herunterladen-und-entpacken)"
 
-```shell
-cd /var/www/html/i-doit/
-sudo chown www-data:www-data -R .
-sudo find . -type d -name \* -exec chmod 775 {} \;
-sudo find . -type f -exec chmod 664 {} \;
-```
+!!! quote ""
+    === "Debian & Ubuntu"
+        ```shell
+        cd /var/www/html/i-doit/
+        sudo chown www-data:www-data -R .
+        sudo find . -type d -name \* -exec chmod 775 {} \;
+        sudo find . -type f -exec chmod 664 {} \;
+        ```
+
+    === "Red Hat Enterprise Linux (RHEL)"
+        ```shell
+        cd /var/www/html/i-doit/
+        sudo chown apache:apache -R .
+        sudo find . -type d -name \* -exec chmod 775 {} \;
+        sudo find . -type f -exec chmod 664 {} \;
+        ```
+
+    === "SUSE Linux Enterprise Server (SLES)"
+        ```shell
+        cd /var/www/html/i-doit/
+        sudo chown wwwrun:www -R .
+        sudo find . -type d -name \* -exec chmod 775 {} \;
+        sudo find . -type f -exec chmod 664 {} \;
+        ```
 
 #### Schritt 3: i-doit Update Button anklicken
 
@@ -96,9 +114,9 @@ Um das Subscription & Add-ons Feature nutzen zu können, wird der Lizenztoken be
 
 [![Lizenztoken speichern](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-2.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-2.png)
 
-#### Schritt 3: Add-ons öffnen und Flows via Action installieren
+#### Schritt 3: Add-ons öffnen und Flows Add-on via Actions installieren
 
-[![//TODO bild erstellen ]]
+[![Add-ons öffnen und Flows Add-on installieren](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)
 
 ### 2.2 (Offline) Flows Add-on über das Admin-Center installieren
 
@@ -120,6 +138,41 @@ Nun mit den Admin-Center Login Daten einloggen
 
 [![Admin-Center installieren](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)
 
-## 3. Konfiguration des Dienstes
+## 3. Console Kommando Automatisierung
 
-Das Flows Add-on benötigt
+Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
+
+### Systemdienst-Installationsskript verwenden
+
+Zuerst müssen wir die Ausführungsrechte für die Datei festlegen. Verwenden Sie den Befehl im Ordner i-doit:
+
+```shell
+sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
+```
+
+Nun kann die Datei ausgeführt werden, um einen Systemdienst zu erstellen. **Dies muss für jeden Tenant durchgeführt werden**
+
+-   `-u` braucht einen i-doit admin-user
+-   `-p` benötigt ein i-doit admin-user-passwort
+-   `-i` benötigt eine Mandanten-ID, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list)
+
+```shell
+src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
+```
+
+### Erstellen eines Crontabs
+
+Erstellen Sie eine Crontab für den Apache-Benutzer. Beispiel für Debian:
+
+```shell
+sudo crontab -u www-data -e
+```
+
+Fügen Sie die folgenden Zeilen am Ende der Datei ein, nachdem Sie die i-doit Anmeldeinformationen ersetzt haben. Möglicherweise müssen Sie auch die Mandanten-ID ersetzen.
+
+```shell
+* * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
+* * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
+```
+
+Wenn Sie Fragen haben oder weitere Unterstützung benötigen, wenden Sie sich bitte an uns unter <help@i-doit.com>.
