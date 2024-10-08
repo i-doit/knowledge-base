@@ -97,7 +97,7 @@ To be able to use the Subscription & Add-ons feature, the licence token is requi
 
 #### Step 3: Open Add-ons and install flows via Action
 
-[![//TODO bild erstellen ]]
+[![//TODO bild erstellen ]()]()
 
 ### 2.2 (Offline) Install Flows add-on via the Admin-Center
 
