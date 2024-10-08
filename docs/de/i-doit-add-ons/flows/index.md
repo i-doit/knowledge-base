@@ -12,7 +12,7 @@ Das Flows Add-on für i-doit ist ein leistungsstarkes Werkzeug zur Automatisieru
 
 ## Download und Installation
 
-Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel "[i-doit Add-ons](index.md)".
+Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel [i-doit Add-ons](index.md).
 
 ## Rechtevergabe
 
