@@ -10,7 +10,7 @@ The Flows add-on for i-doit is a powerful tool for automating processes within t
 
 ## Download and installation
 
-This add-on can be installed at a later date. Detailed descriptions regarding download, installation, updates etc. can be found in the article "[i-doit  Add-ons](index.md)".
+This add-on can be installed at a later date. Detailed descriptions regarding download, installation, updates etc. can be found in the article[i-doit  Add-ons](index.md).
 
 ## Rights assignment
 
@@ -36,49 +36,52 @@ To create a flow, the Flows add-on is called up via **Add-ons → Flows**. A new
 
 Trigger bestimmen wann ein FLow ausgeführt wird. Es ist nur ein Trigger pro Flow möglich.
 
-=== "Time based"
-    The action is executed as soon as the date and time are reached. It can be repeated regularly. An end date or a maximum number can also be set.
+!!! success ""
+    === "Time based"
+        The action is executed as soon as the date and time are reached. It can be repeated regularly. An end date or a maximum number can also be set.
 
-=== "Button"
-    The action is executed as soon as the button is clicked. The button is displayed in the action bar of the object if the conditions are met.
+    === "Button"
+        The action is executed as soon as the button is clicked. The button is displayed in the action bar of the object if the conditions are met.
 
-=== "Object Event"
-    The action is executed when a specific CMDB status is set. It can also be filtered according to specific object types.
+    === "Object Event"
+        The action is executed when a specific CMDB status is set. It can also be filtered according to specific object types.
 
-=== "Category Event"
-    The action is executed when categories or entries are edited. It can also be set so that it is only executed when certain categories or attributes are edited.
+    === "Category Event"
+        The action is executed when categories or entries are edited. It can also be set so that it is only executed when certain categories or attributes are edited.
 
 ### Conditions types
 
 No condition needs to be selected. In addition, conditions can be linked and nested with **AND** and **OR**.
 
-=== "Logical conditions"
-    Several logical conditions can be added to link or nest conditions.
+!!! warning ""
+    === "Logical conditions"
+        Several logical conditions can be added to link or nest conditions.
 
-=== "Object based"
-    The action is only triggered for objects that fulfill the defined attribute-based conditions.
+    === "Object based"
+        The action is only triggered for objects that fulfill the defined attribute-based conditions.
 
-=== "Time based"
-    The action is only triggered at or within a defined time period.
+    === "Time based"
+        The action is only triggered at or within a defined time period.
 
-=== "User / User group based"
-    The action is only triggered if it is triggered by selected persons or members of person groups.
+    === "User / User group based"
+        The action is only triggered if it is triggered by selected persons or members of person groups.
 
 ### Action types
 
 At least one action must be defined.
 
-=== "Call API"
-    The action executes a defined API call. The API call requires a URL, a method and authorization details.
+!!! note ""
+    === "Call API"
+        The action executes a defined API call. The API call requires a URL, a method and authorization details.
 
-=== "Send E-Mail"
-    The action sends an e-mail to specific recipients. A subject is required.
+    === "Send E-Mail"
+        The action sends an e-mail to specific recipients. A subject is required.
 
-=== "Create object"
-    The action creates a new object. It is possible to store attributes for categories.
+    === "Create object"
+        The action creates a new object. It is possible to store attributes for categories.
 
-=== "Update object"
-    The action updates attributes for existing objects.
+    === "Update object"
+        The action updates attributes for existing objects.
 
 ## Logs
 
@@ -102,9 +105,9 @@ After executing this command, the execution is registered. To perform the execut
 sudo -u www-data php console.php flows:perform --user admin --password admin --tenantId 1
 ```
 
-## Anwendungsfälle
+## Use cases
 
-!!! example "To be continued."
+!!! note "To be continued."
 
 ## Releases
 

@@ -38,49 +38,52 @@ Um einen Flow zu erstellen wird das Flows Add-on aufgerufen, dies erfolgt über 
 
 Trigger bestimmen wann ein FLow ausgeführt wird. Es ist nur ein Trigger pro Flow möglich.
 
-=== "Time based"
-    Die Aktion wird ausgeführt, sobald Datum und Uhrzeit erreicht sind. Sie kann regelmäßig wiederholt werden. Außerdem kann ein Enddatum oder eine maximale Anzahl gesetzt werden.
+!!! success ""
+    === "Time based"
+        Die Aktion wird ausgeführt, sobald Datum und Uhrzeit erreicht sind. Sie kann regelmäßig wiederholt werden. Außerdem kann ein Enddatum oder eine maximale Anzahl gesetzt werden.
 
-=== "Button"
-    Die Aktion wird ausgeführt, sobald der Button angeklickt wird. Der Button wird in der Aktionsleiste des Objektes angezeigt, wenn die Bedingungen erfüllt sind.
+    === "Button"
+        Die Aktion wird ausgeführt, sobald der Button angeklickt wird. Der Button wird in der Aktionsleiste des Objektes angezeigt, wenn die Bedingungen erfüllt sind.
 
-=== "Object Event"
-    Die Aktion wird ausgeführt, wenn ein bestimmter CMDB-Status gesetzt wird. Es lässt sich auch nach bestimmten Objekttypen filtern.
+    === "Object Event"
+        Die Aktion wird ausgeführt, wenn ein bestimmter CMDB-Status gesetzt wird. Es lässt sich auch nach bestimmten Objekttypen filtern.
 
-=== "Category Event"
-    Die Aktion wird ausgeführt, wenn Kategorien oder Einträge bearbeitet werden. Es lässt sich auch einstellen, dass sie erst dann ausgeführt wird, wenn bestimmte Kategorien oder Attribute bearbeitet werden.
+    === "Category Event"
+        Die Aktion wird ausgeführt, wenn Kategorien oder Einträge bearbeitet werden. Es lässt sich auch einstellen, dass sie erst dann ausgeführt wird, wenn bestimmte Kategorien oder Attribute bearbeitet werden.
 
 ### Conditions types
 
 Es muss keine Condition gewählt werden. Außerdem können conditions mit **AND** sowie **OR** verknüpft und verschachtelt werden.
 
-=== "Logical conditions"
-    Es können mehrere Logical conditions hinzugefügt werden um Bedingungen zu verknüpfen oder zu verschachteln.
+!!! warning ""
+    === "Logical conditions"
+        Es können mehrere Logical conditions hinzugefügt werden um Bedingungen zu verknüpfen oder zu verschachteln.
 
-=== "Object based"
-    Die Aktion wird nur für Objekte ausgelöst, die die konfigurierte Bedingung erfüllen.
+    === "Object based"
+        Die Aktion wird nur für Objekte ausgelöst, die die konfigurierte Bedingung erfüllen.
 
-=== "Time based"
-    Die Aktion wird nur zu einer bestimmten Zeit ausgelöst.
+    === "Time based"
+        Die Aktion wird nur zu einer bestimmten Zeit ausgelöst.
 
-=== "User / User group based"
-    Die Aktion wird nur ausgelöst wenn diese durch bestimmte User oder User groups ausgelöst wird.
+    === "User / User group based"
+        Die Aktion wird nur ausgelöst wenn diese durch bestimmte User oder User groups ausgelöst wird.
 
 ### Action types
 
 Es muss mindestens eine Action definiert werden.
 
-=== "Call API"
-    Die Aktion führt einen definierten API Call aus. Der API Call benötigt eine URL, eine Methode sowie angaben zur Autorisierung.
+!!! note ""
+    === "Call API"
+        Die Aktion führt einen definierten API Call aus. Der API Call benötigt eine URL, eine Methode sowie angaben zur Autorisierung.
 
-=== "Send E-Mail"
-    Die Aktion sendet eine E-Mail an bestimmte Empfänger. Ein Subject ist notwendig.
+    === "Send E-Mail"
+        Die Aktion sendet eine E-Mail an bestimmte Empfänger. Ein Subject ist notwendig.
 
-=== "Create object"
-    Die Aktion erstellt ein neues Objekt. Es ist möglich Attribute für Kategorien zu hinterlegen.
+    === "Create object"
+        Die Aktion erstellt ein neues Objekt. Es ist möglich Attribute für Kategorien zu hinterlegen.
 
-=== "Update object"
-    Die Aktion aktualisiert Attribute bei Objekten.
+    === "Update object"
+        Die Aktion aktualisiert Attribute bei Objekten.
 
 ## Logs
 
@@ -106,7 +109,7 @@ sudo -u www-data php console.php flows:perform --user admin --password admin --t
 
 ## Anwendungsfälle
 
-!!! example "Folgen."
+!!! note "Folgen."
 
 ## Releases
 
