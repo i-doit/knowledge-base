@@ -1,7 +1,7 @@
 ---
 title: Add-on & Subscription Center
 description: Add-on & Subscription Center
-icon:
+icon: add-on-and-subscription-center
 status: new
 lang: en
 ---
