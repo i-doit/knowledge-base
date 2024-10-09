@@ -10,7 +10,7 @@ lang: de
 
 Das Admin-Center ist eine in i-doit integrierte separate Administrations-Oberfläche. Hierüber werden mandantenübergreifende Einstellungen konfiguriert.
 
-!!! tip "Add-ons und Subskriptionen sind auch über das [Add-on & Subscription Center](add-on-and-subscription-center.md) verwaltbar."
+!!! tip "Add-ons und Subskriptionen sind nun auch über das [Add-on & Subscription Center](add-on-and-subscription-center.md) verwaltbar."
 
 ## Zugangsdaten
 

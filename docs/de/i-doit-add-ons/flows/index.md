@@ -93,18 +93,98 @@ Die Logs sind für alle Flows ersichtlich oder für den jeweils geöffneten Flow
 
 !!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende  [Mandanten ID](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list) zu übergeben."
 
-!!! info "Der Apache HTTP Server Benutzername ist je nach Betriebssystem unterschiedlich."
+Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
 
-Die Konfiguration zeitbasierter Flows setzt voraus, dass deren Auslösung durch regelmäßige Ausführung entsprechender [CLI-Befehle](../../automatisierung-und-integration/cli/console/index.md) gewährleistet ist. Dies kann durch einen Cronjob sichergestellt werden. Voraussetzung hierfür ist die Bereitstellung eines gültigen zeitbasierten Triggers. Die Registrierung der Ausführungen erfolgt durch Aufruf des Konsolenbefehls für zeitbasierte Auslöser.
+### Systemdienst-Installationsskript verwenden
 
-```sh
-sudo -u www-data php console.php flows:time-trigger --user admin --password admin --tenantId 1
+Zuerst müssen wir die Ausführungsrechte für die Datei festlegen. Verwenden Sie den Befehl im Ordner i-doit:
+
+```shell
+sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
 ```
 
-Nach der Ausführung dieses Befehls wird die Ausführung registriert. Um die Ausführung durchzuführen, muss der `flow:perform` Befehl verwendet werden, der alle registrierten Ausführungen in der Warteschlange ausführen wird:
+Nun kann die Datei ausgeführt werden, um einen Systemdienst zu erstellen. **Dies muss für jeden Tenant durchgeführt werden**
 
-```sh
-sudo -u www-data php console.php flows:perform --user admin --password admin --tenantId 1
+-   `-u` braucht einen i-doit admin-user
+-   `-p` benötigt ein i-doit admin-user-passwort
+-   `-i` benötigt eine Mandanten-ID, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list)
+
+```shell
+src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
+```
+
+### Erstellen eines Crontabs
+
+Erstellen Sie eine Crontab für den Apache-Benutzer. Beispiel für Debian:
+
+```shell
+sudo crontab -u www-data -e
+```
+
+Fügen Sie die folgenden Zeilen am Ende der Datei ein, nachdem Sie die i-doit Anmeldeinformationen ersetzt haben. Möglicherweise müssen Sie auch die Mandanten-ID ersetzen.
+
+```shell
+* * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
+* * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
+```
+
+### CLI Konsolenbefehle und Optionen
+
+| Command                                  | Interne Beschreibung                  |
+| ---------------------------------------- | ------------------------------------- |
+| [flows:perform](#flowsperform)           | Perform executions                    |
+| [flows:time-trigger](#flowstime-trigger) | Trigger execution of time automations |
+
+!!! info "These commands are only available if the Documents add-on is installed"
+
+#### flows:perform
+
+Perform executions
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description                                                                         |
+| ------------------------- | ------------------------ | ----------------------------------------------------------------------------------- |
+| -u                        | --user=USERNAME          | Benutzername eines Benutzers, der berechtigt ist, die                               |
+| -p                        | --password=PASSWORD      | Kennwort für die Authentifizierung des zuvor angegebenen Benutzers                  |
+| -i                        | --tenant=TENANTID        | Mandanten-ID des zu verwendenden Mieters (Standard: 1)                              |
+| -c                        | --config=CONFIG          | Config File                                                                         |
+| -h                        | --help                   | Hilfemeldung für die Anzeige von weiteren Informationen                             |
+| -q                        | --quiet                  | Quiet-Mode zur Deaktivierung der Ausgabe                                            |
+| -V                        | --version                | Ausgabe der i-doit Konsolenversion                                                  |
+|                           | --ansi<br>--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                |
+| -n                        | --no-interaction         | Deaktiviert alle Interaktionsfragen der i-doit-Konsole                              |
+| -v / -vv / -vvv           | --verbose                | Erhöht die Befehlsausgabe (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php flows:perform --user admin-user --password admin-user-password --tenantId 1
+```
+
+### flows:time-trigger
+
+Trigger execution of time automations
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version) | Description                                                                         |
+| ------------------------- | ------------------------ | ----------------------------------------------------------------------------------- |
+| -u                        | --user=USERNAME          | Benutzername eines Benutzers, der berechtigt ist, die                               |
+| -p                        | --password=PASSWORD      | Kennwort für die Authentifizierung des zuvor angegebenen Benutzers                  |
+| -i                        | --tenant=TENANTID        | Mandanten-ID des zu verwendenden Mieters (Standard: 1)                              |
+| -c                        | --config=CONFIG          | Config File                                                                         |
+| -h                        | --help                   | Hilfemeldung für die Anzeige von weiteren Informationen                             |
+| -q                        | --quiet                  | Quiet-Mode zur Deaktivierung der Ausgabe                                            |
+| -V                        | --version                | Ausgabe der i-doit Konsolenversion                                                  |
+|                           | --ansi<br>--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                |
+| -n                        | --no-interaction         | Deaktiviert alle Interaktionsfragen der i-doit-Konsole                              |
+| -v / -vv / -vvv           | --verbose                | Erhöht die Befehlsausgabe (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
 ```
 
 ## Anwendungsfälle
