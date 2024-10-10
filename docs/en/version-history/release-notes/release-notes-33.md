@@ -27,7 +27,7 @@ There are manifold options for Flows you can create like helping you create obje
 
 ## New version and templates for Add-on Documents
 
-We also provide a new version of our Add-on Documents 1.9. This comes alongside updated document templates (currently only available for the German language). Those can be downloaded via the online repository within the add-on. Please note that for these templates to work, you need the latest version 1.9 of the add-on and i-doit 33.
+We also provide a new version of our Add-on **Documents 1.9**. This comes alongside updated document templates (currently only available for the German language). Those can be downloaded via the online repository within the add-on. Please note that for these templates to work, you need the latest version 1.9 of the add-on and i-doit 33.
 
 ## More i-doit Add-on updates
 
