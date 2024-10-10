@@ -14,7 +14,7 @@ Die Lizenzierung von i-doit und Add-ons erfolgt über einen License Token. Der L
 
 ## Wie erhält man den License Token und wie die Offline License?
 
-Der **License Token** wird per E-Mail zugeschickt. Die **Offline License** kann unter <https://center.i-doit.com/portal/advanced> abgerufen werden. Dazu benötigen Sie einen gültigen **License Token** um sich im [Add-on & Subscription Center](../administration/add-on-and-subscription-center.md) anzumelden.
+Der **License Token** wird per E-Mail zugeschickt. Die **Offline License** kann im [Kundenportal](../administration/kundenportal.md) unter <https://center.i-doit.com/portal/advanced> abgerufen werden.
 
 * * *
 

@@ -72,10 +72,10 @@ At least one action must be defined.
 
 !!! note ""
     === "Call API"
-        The action executes a defined API call. The API call requires a URL, a method and authorization details.
+        The action executes a defined API call. The API call requires a URL, a method and authorization details. [Twig](https://twig.symfony.com/doc/3.x/) can be used as a template engine for this action type.
 
     === "Send E-Mail"
-        The action sends an e-mail to specific recipients. A subject is required.
+        The action sends an e-mail to specific recipients. A subject is required. [Twig](https://twig.symfony.com/doc/3.x/) can be used as a template engine for this action type.
 
     === "Create object"
         The action creates a new object. It is possible to store attributes for categories.

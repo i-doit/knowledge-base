@@ -14,7 +14,7 @@ The licensing of i-doit and add-ons takes place via a license token. The license
 
 ## How do I obtain the License Token and the Offline License?
 
-The **License Token** will be sent by e-mail. The **Offline License** can be accessed at <https://center.i-doit.com/portal/advanced>. You will need a valid **License Token** to log in to the [Add-on & Subscription Center](../system-administration/add-on-and-subscription-center.md).
+The **License Token** will be sent by e-mail. The **Offline License** can be accessed in the [customer portal](../system-administration/customer-portal.md) at <https://center.i-doit.com/portal/advanced>.
 
 * * *
 
@@ -22,6 +22,8 @@ The **License Token** will be sent by e-mail. The **Offline License** can be acc
 
 -   If your server on which i-doit is installed has an **active internet connection**, use the [License Token](#activate-i-doit-via-the-add-on--subscription-center-online).
 -   If your server, on which i-doit is installed, does not have an **active internet connection**, use [License Token and Offline license](#activate-i-doit-offline).
+
+* * *
 
 ### Activate i-doit via the Add-on & Subscription Center (Online)
 

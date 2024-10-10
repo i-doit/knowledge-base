@@ -134,6 +134,7 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release Notes 33: version-history/release-notes/release-notes-33.md
           - Release Notes 32: version-history/release-notes/release-notes-32.md
           - Release Notes 31: version-history/release-notes/release-notes-31.md
           - Release Notes 30: version-history/release-notes/release-notes-30.md
@@ -161,6 +162,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 33: version-history/changelogs/changelog-33.md
           - Changelog 32: version-history/changelogs/changelog-32.md
           - Changelog 31: version-history/changelogs/changelog-31.md
           - Changelog 30: version-history/changelogs/changelog-30.md
@@ -473,6 +475,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
           - Hotfix archive:
               - system-administration/hotfixes/hotfix-archive/index.md
+              - Version 32: system-administration/hotfixes/hotfix-archive/v32.md
               - Version 31: system-administration/hotfixes/hotfix-archive/v31.md
               - Version 30: system-administration/hotfixes/hotfix-archive/v30.md
               - Version 29: system-administration/hotfixes/hotfix-archive/v29.md
