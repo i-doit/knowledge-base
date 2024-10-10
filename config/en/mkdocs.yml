@@ -5,7 +5,7 @@ site_dir: '../../generated/en'
 site_url: https://kb.i-doit.com/en/
 site_description: Knowledge Base
 site_author: synetics GmbH
-copyright: Copyright &copy; 2023 synetics GmbH
+copyright: Copyright &copy; 2024 synetics GmbH
 repo_url: https://github.com/i-doit/knowledge-base
 edit_uri: edit/main/docs/en
 strict: true
@@ -571,7 +571,7 @@ nav:
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
-          - i-doit-add-ons/flows/index.md
+          - i-doit-add-ons/flows.md
           - i-doit 33 update and Flows installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
           - i-doit-add-ons/forms/index.md

@@ -16,7 +16,7 @@ This add-on can be installed at a later date. Detailed descriptions regarding do
 
 ## CLI Commands
 
-!!! success "If the command is to be executed for a Tenant other than the first Tenant, the corresponding [Tenant ID](../../automation-and-integration/cli/console/options-and-parameters-cli.md#tenant-list) must be passed."
+!!! success "If the command is to be executed for a Tenant other than the first Tenant, the corresponding [Tenant ID](../automation-and-integration/cli/console/options-and-parameters-cli.md#tenant-list) must be passed."
 The Flows Add-on comes with two CLI commands. Both commands are needed to make the Flows Add-on work completely. There are two option to set up the CLI Commands. The Commands can be executed by a **Crontab**. We also have created a Service installation Script called **create-daemon.sh**, which can be found in the Flows Add-on folder `i-doit/src/classes/modules/synetics_flows/`.
 
 ### Using system service installer script
@@ -31,7 +31,7 @@ Now the file can be executed to create a system service. **This needs to be done
 
 -   `-u` needs a i-doit admin-user
 -   `-p` needs a i-doit admin-user-password
--   `-i` needs a tenant ID, can be viewed via console command [tenant-list](../../automation-and-integration/cli/console/options-and-parameters-cli.md#tenant-list)
+-   `-i` needs a tenant ID, can be viewed via console command [tenant-list](../automation-and-integration/cli/console/options-and-parameters-cli.md#tenant-list)
 
 ```shell
 src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
@@ -115,7 +115,7 @@ sudo -u www-data php console.php flows:time-trigger --user admin-user --password
 
 ## Rights assignment
 
-At **Administration → User permissions → Flows** you can change [Rights for Persons and Person groups](../../efficient-documentation/rights-management/index.md).
+At **Administration → User permissions → Flows** you can change [Rights for Persons and Person groups](../efficient-documentation/rights-management/index.md).
 
 | Recht          | Beschreibung                                                          |
 | -------------- | --------------------------------------------------------------------- |
@@ -129,7 +129,7 @@ At **Administration → User permissions → Flows** you can change [Rights for 
 
 ## Overview
 
-Flows can be created or deleted via the [**action bar**](../../basics/structure-of-the-it-documentation.md#category). If a flow has been created, it can also be opened, activated or deactivated via the **Actions** column. In addition, further actions are possible via the “3 dots” (More) button, such as editing and duplicating,
+Flows can be created or deleted via the [**action bar**](../basics/structure-of-the-it-documentation.md#category). If a flow has been created, it can also be opened, activated or deactivated via the **Actions** column. In addition, further actions are possible via the “3 dots” (More) button, such as editing and duplicating,
 
 * * *
 

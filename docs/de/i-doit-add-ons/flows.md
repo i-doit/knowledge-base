@@ -18,7 +18,7 @@ Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen
 
 ### Benötigte CLI Commands
 
-!!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende  [Mandanten ID](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list) zu übergeben."
+!!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende  [Mandanten ID](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list) zu übergeben."
 
 Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
 
@@ -34,7 +34,7 @@ Nun kann die Datei ausgeführt werden, um einen Systemdienst zu erstellen. **Die
 
 -   `-u` braucht einen i-doit admin-user
 -   `-p` benötigt ein i-doit admin-user-passwort
--   `-i` benötigt eine Mandanten-ID, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list)
+-   `-i` benötigt eine Mandanten-ID, kann über Konsolenbefehl eingesehen werden [tenant-list](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list)
 
 ```shell
 src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
@@ -118,7 +118,7 @@ sudo -u www-data php console.php flows:time-trigger --user admin-user --password
 
 ## Rechtevergabe
 
-Unter **Verwaltung → Berechtigungen → Flows** können [Rechte für Personen und Personengruppen](../../effizientes-dokumentieren/rechteverwaltung/index.md) angepasst werden.
+Unter **Verwaltung → Berechtigungen → Flows** können [Rechte für Personen und Personengruppen](../effizientes-dokumentieren/rechteverwaltung/index.md) angepasst werden.
 
 | Recht          | Beschreibung                                                                |
 | -------------- | --------------------------------------------------------------------------- |
@@ -132,7 +132,7 @@ Unter **Verwaltung → Berechtigungen → Flows** können [Rechte für Personen 
 
 ## Overview
 
-Über die [**Aktionsleiste**](../../grundlagen/struktur-it-dokumentation.md#kategorie) können Flows erstellt oder gelöscht werden. Sofern ein Flow erstellt wurde kann dieser auch über die **Actions** Spalte geöffnet, aktiviert oder deaktiviert werden. Außerdem sind über den "3 Punkte" (More) Button weitere Aktionen möglich wie zum Beispiel, editieren, duplizieren,
+Über die [**Aktionsleiste**](../grundlagen/struktur-it-dokumentation.md#kategorie) können Flows erstellt oder gelöscht werden. Sofern ein Flow erstellt wurde kann dieser auch über die **Actions** Spalte geöffnet, aktiviert oder deaktiviert werden. Außerdem sind über den "3 Punkte" (More) Button weitere Aktionen möglich wie zum Beispiel, editieren, duplizieren,
 
 * * *
 
