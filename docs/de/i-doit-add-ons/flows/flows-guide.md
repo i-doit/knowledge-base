@@ -30,6 +30,8 @@ Wenn die Instanz das Internet erreichen kann, sollte das Update über den Update
 
 [![Update Button anklicken](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)
 
+* * *
+
 ### 1.2 Offline Update vorbereiten und den Updater aufrufen
 
 !!! hint "Version 33 wird sofort über den online Updater verfügbar sein"
@@ -50,6 +52,8 @@ Das Update-Paket kann (beispielsweise per [WinSCP](https://winscp.net/eng/docs/l
 ```shell
 sudo mv idoit-33-update.zip /var/www/html/i-doit/
 ```
+
+* * *
 
 #### Schritt 3: ZIP Datei entpacken
 
@@ -98,9 +102,11 @@ Jetzt werden die Dateirechte angepasst, sodass der Webserver lesend wie schreibe
 
 [![Update Button anklicken](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)
 
+* * *
+
 ## 2. Installation
 
-Mit i-doit 33 wurde das Feature [Subscription & Add-ons](//TODO) hinzugefügt, worüber auch Add-ons direkt installiert werden können. Dieses Feature kann zur Installation genutzt werden. Das Flows Add-on kann aber auch wie üblich über das [Admin-Center](#22-offline-flows-add-on-über-das-admin-center-installieren) installiert werden.
+Mit i-doit 33 wurde das Feature [Subscription & Add-ons](../../administration/add-on-and-subscription-center.md) hinzugefügt, worüber auch Add-ons direkt installiert werden können. Dieses Feature kann zur Installation genutzt werden. Das Flows Add-on kann aber auch wie üblich über das [Admin-Center](#22-offline-flows-add-on-über-das-admin-center-installieren) installiert werden.
 
 ### 2.1 (Online) Flows Add-on über Subscription & Add-ons installieren
 
@@ -117,6 +123,8 @@ Um das Subscription & Add-ons Feature nutzen zu können, wird der Lizenztoken be
 #### Schritt 3: Add-ons öffnen und Flows Add-on via Actions installieren
 
 [![Add-ons öffnen und Flows Add-on installieren](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)
+
+* * *
 
 ### 2.2 (Offline) Flows Add-on über das Admin-Center installieren
 
@@ -137,6 +145,8 @@ Nun mit den Admin-Center Login Daten einloggen
 #### Schritt 3: Flows Add-on installieren
 
 [![Admin-Center installieren](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)
+
+* * *
 
 ## 3. Console Kommando Automatisierung
 

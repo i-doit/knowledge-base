@@ -30,6 +30,8 @@ If the instance can reach the Internet, the update should be used via the update
 
 [![Click on the update button](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)
 
+* * *
+
 ### 1.2 Prepare offline update and call up the updater
 
 If the instance cannot reach the Internet, the update package must be unpacked in the i-doit folder. The update is then available in the updater.
@@ -105,9 +107,11 @@ Now the file permissions are adjusted so that the web server has read and write 
 
 [![Click on the update button](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)
 
+* * *
+
 ## 2. Flows Add-on installation
 
-With i-doit 33, the [Add-on & Subscription Center](//TODO) feature was added, which can also be used to install Add-ons directly. This feature can be used for installation. However, the Flows Add-on can also be installed as usual via the [Admin-Center](#22-offline-flows-add-on-über-das-admin-center-installieren).
+With i-doit 33, the [Add-on & Subscription Center](../../system-administration/add-on-and-subscription-center.md) feature was added, which can also be used to install Add-ons directly. This feature can be used for installation. However, the Flows Add-on can also be installed as usual via the [Admin-Center](#22-offline-flows-add-on-über-das-admin-center-installieren).
 
 ### 2.1 (Online) install Flows Add-on via Add-on & Subscription Center
 
@@ -124,6 +128,8 @@ To be able to use the Add-on & Subscription Center feature, a licence token is r
 #### Step 3: Open Add-ons and install Flows Add-on
 
 [![Open Add-ons and install](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)
+
+* * *
 
 ### 2.2 (Offline) Install Flows Add-on via the Admin-Center
 
@@ -144,6 +150,8 @@ Now log in with the Admin Center login data
 #### Step 3: Flows Add-on installieren
 
 [![Install via Admin-Center](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)
+
+* * *
 
 ## 3. Console command automation
 
@@ -166,6 +174,8 @@ Now the file can be executed to create a system service. **This needs to be done
 ```shell
 src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
 ```
+
+* * *
 
 ### Creating a Crontab
 
