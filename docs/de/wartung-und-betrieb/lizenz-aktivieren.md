@@ -1,19 +1,14 @@
 ---
-title: Lizenzierung
-description: Lizenzierung
-icon:
+title: i-doit Lizenzierung
+description: i-doit Lizenzierung
+icon: license
 status: updated
 lang: de
 ---
 
-# Lizenzierung
+# i-doit Lizenzierung
 
 Die Lizenzierung von i-doit und Add-ons erfolgt über einen License Token. Der License Token ist im [Kundenportal](../administration/kundenportal.md) zu finden.
-
-## Welche Methode einen License Token einzuspielen sollte ich verwenden?
-
--   Wenn Ihr Server, auf dem i-doit installiert ist, **eine** **Internetverbindung** hat, verwenden Sie den **[License Token](lizenz-aktivieren.md#license-token-aktivieren-über-das-add-on--subscription-center-online)**.
--   Wenn Ihr Server, auf dem i-doit installiert ist, **keine** **Internetverbindung** hat, verwenden Sie **[License Token und Offline license](lizenz-aktivieren.md#offline-license-key-aktivieren)**.
 
 * * *
 
@@ -23,31 +18,38 @@ Der **License Token** wird per E-Mail zugeschickt. Die **Offline License** kann 
 
 * * *
 
-### License Token aktivieren über das Add-on & Subscription Center (Online)
+## Welche Methode i-doit zu aktivieren sollte ich verwenden?
 
-**Schritt 1:** Als erstes rufen wir die i-doit installation über den Browser auf und loggen uns ein. Navigieren Sie auf das **Avatar Symbol** rechts oben und klicken Sie auf **[Add-on & Subscription Center](../administration/add-on-and-subscription-center.md)**. Anschließend werden Sie aufgefordert, Ihren Lizenztoken einzugeben.
+-   Wenn Ihr Server, auf dem i-doit installiert ist, **eine** **Internetverbindung** hat, verwenden Sie den **[License Token](#i-doit-über-das-add-on--subscription-center-aktivieren-online)**.
+-   Wenn Ihr Server, auf dem i-doit installiert ist, **keine** **Internetverbindung** hat, verwenden Sie **[License Token und Offline license](#i-doit-aktivieren-offline)**.
+
+* * *
+
+### i-doit über das Add-on & Subscription Center aktivieren (Online)
+
+**Schritt 1:** Als erstes rufen wir die i-doit installation über den Browser auf und loggen uns ein. Anschließend navigieren Sie auf das **Avatar Symbol** rechts oben und klicken Sie auf **[Add-on & Subscription Center](../administration/add-on-and-subscription-center.md)**.
 
 [![Add-on & Subscription Center öffnen](../assets/images/de/wartung-und-betrieb/activate-license/add-on-und-subscription-center.png)](../assets/images/de/wartung-und-betrieb/activate-license/add-on-und-subscription-center.png)
 
-**Schritt 2:** Als nächstes müssen wir den License Token eingeben, die wir per E-Mail bekommen haben.
+**Schritt 2:** Als nächstes muss der License Token eingeben werden, dieser wird per E-Mail nach der Bestellung verschickt.
 
 [![Schritt 2](../assets/images/de/wartung-und-betrieb/activate-license/enter-license-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/enter-license-token.png)
 
-**Schritt 3:** Nun sind wir im [Add-on & Subscription Center](../administration/add-on-and-subscription-center.md) angemeldet und i-doit ist lizenziert.
+**Fertig** Nun sind wir im [Add-on & Subscription Center](../administration/add-on-and-subscription-center.md) angemeldet und i-doit ist lizenziert. Über das [Add-on & Subscription Center](../administration/add-on-and-subscription-center.md) können Sie nun auch weitere [Add-ons](../i-doit-add-ons/index.md) installieren.
 
 **_Hinweis_**_: Der License Token ist wie folgt aufgebaut:_ **_2e23aa70df492b7e7b8f321929gc6fcd6e7776_**
 
 * * *
 
-### License Token aktivieren über das Admin-Center (Online)
+### i-doit über das Admin-Center aktivieren (Online)
 
-**Schritt 1:** Als erstes rufen wir die i-doit installation über den Browser auf. Um in das [Admin-Center](../administration/admin-center.md) zu gelangen klicken Sie auf den Link in der Anmeldemaske.
+**Schritt 1:** Als erstes rufen wir die i-doit Installation über den Browser auf. Um in das [Admin-Center](../administration/admin-center.md) zu gelangen klicken wir auf den Link in der Anmeldemaske.
 
 [![Admin-login](../assets/images/de/wartung-und-betrieb/activate-license/1.Login_admin.png)](../assets/images/de/wartung-und-betrieb/activate-license/1.Login_admin.png)
 
-**Schritt 2:** Als nächstes müssen wir die Anmeldedaten eingeben, die wir bei der Installation von i-doit für das [Admin-Center](../administration/admin-center.md) vergeben haben.
+**Schritt 2:** Als nächstes müssen wir die Anmeldedaten für das Admin-Center eingeben. Diese Daten wurden bei der Installation von i-doit vergeben und sind nicht die selben Daten wie für den i-doit Login.
 
-!!! note "Nutzen Sie die **Eval Appliance**, dann nutzen Sie **admin** als Username und **idoit** als Password"
+!!! note "Wenn Sie die **Eval Appliance** verwenden, dann nutzen Sie **admin** als Username und **idoit** als Password"
 
 [![Admin-Center-login](../assets/images/de/wartung-und-betrieb/activate-license/2.login_admin_center.png)](../assets/images/de/wartung-und-betrieb/activate-license/2.login_admin_center.png)
 
@@ -59,15 +61,15 @@ Der **License Token** wird per E-Mail zugeschickt. Die **Offline License** kann 
 
 [![Admin-Center-license](../assets/images/de/wartung-und-betrieb/activate-license/4.admin-center-licenses.png)](../assets/images/de/wartung-und-betrieb/activate-license/4.admin-center-licenses.png)
 
-**Schritt 5:** Anschließend klicken wir auf den "**Save & Check**"-Button. Nun wird der License Token vom Lizenzserver geprüft. Fertig.
+**Schritt 5:** Anschließend klicken wir auf den **Save & Check** Button. Nun wird der License Token vom Lizenzserver geprüft und i-doit lizenziert. Fertig.
 
 [![License-save](../assets/images/de/wartung-und-betrieb/activate-license/5.admin-center-licenses-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/5.admin-center-licenses-token.png)
 
-**_Hinweis_**_: Der License Token ist wie folgt aufgebaut:_ **_2e23aa70df492b7e7b8f321929gc6fcd6e7776_**
+**_Hinweis_**_: Ein License Token ist wie folgt aufgebaut:_ **_2e23aa70df492b7e7b8f321929gc6fcd6e7776_**
 
 * * *
 
-### License Token aktivieren (Offline)
+### i-doit aktivieren (Offline)
 
 **Schritt 1:** Als erstes rufen wir die i-doit installation über den Browser auf. Um in das [Admin-Center](../administration/admin-center.md) zu gelangen klicken Sie auf den Link in der Anmeldemaske.
 
@@ -75,35 +77,31 @@ Der **License Token** wird per E-Mail zugeschickt. Die **Offline License** kann 
 
 **Schritt 2:** Als nächstes müssen wir die Anmeldedaten eingeben, die wir bei der Installation von i-doit für das [Admin-Center](../administration/admin-center.md) vergeben haben.
 
-!!! note "Nutzen Sie die **Eval Appliance**, dann nutzen Sie **admin** als Username und **idoit** als Password"
+!!! note "Haben Sie die **Eval Appliance**, dann nutzen Sie **admin** als Username und **idoit** als Password"
 
 [![Admin-Center-login](../assets/images/de/wartung-und-betrieb/activate-license/2.login_admin_center.png)](../assets/images/de/wartung-und-betrieb/activate-license/2.login_admin_center.png)
 
-**Schritt 3:** Nun Fügen wir den License Token ein. Klicken auf den **"Save"**\-button. Klicken Sie **nicht** auf "Save and Check".
+**Schritt 3:** Nun Fügen wir den **License Token** ein. Klicken auf den {++Save++} Button.
+
+!!! warning "**Nicht** auf {--Save and Check--} klicken."
 
 [![offline-key](../assets/images/de/wartung-und-betrieb/activate-license/6-offline-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/6-offline-token.png)
 
-**Schritt 4:** Nachdem der Token gespeichert wurde klicken wir auf den "**Install new license**" Button.
+**Schritt 4:** Nachdem der Token gespeichert wurde, klicken wir auf den **Install new license** Button.
 
 [![offline-key-install](../assets/images/de/wartung-und-betrieb/activate-license/7.add-new-license-button.png)](../assets/images/de/wartung-und-betrieb/activate-license/7.add-new-license-button.png)
 
-**Schritt 3:** Nun sehen wir das Feld in welches der gesamte **Offline License** hineinkopiert werden muss.[![license-file](../assets/images/de/wartung-und-betrieb/activate-license/8.add-new-license.png)](../assets/images/de/wartung-und-betrieb/activate-license/8.add-new-license.png)
-
-**_Hinweis:_** Je nachdem wie viele Add-ons in der gekauften Lizenz enthalten sind, variiert die Länge der Zeichenkette. Diese können Sie zusammenhängend in das Feld kopieren.
-
-[![license-file-insert](../assets/images/de/wartung-und-betrieb/activate-license/9.add-new-license-end.png)](../assets/images/de/wartung-und-betrieb/activate-license/9.add-new-license-end.png)
-
-**Schritt 5:** Klicken Sie nun auf den **Add license** Button.
+**Schritt 5:** Nun sehen wir das Feld in welches der gesamte **Offline License** hineinkopiert werden muss. Die **Offline License** kann von [hier](#wie-erhält-man-den-license-token-und-wie-die-offline-license) kopiert werden. Anschließend auf den **Add license** Button klicken.
 
 [![license-file-add](../assets/images/de/wartung-und-betrieb/activate-license/10.add-new-license-save.png)](../assets/images/de/wartung-und-betrieb/activate-license/10.add-new-license-save.png)
 
-Der License Token wird mit dem Offline license verifiziert und es werden alle damit verbundenen Lizenzen angezeigt.
+**Fertig** Der License Token wird mit dem Offline license verifiziert und es werden alle damit verbundenen Lizenzen angezeigt.
 
 [![license-overview](../assets/images/de/wartung-und-betrieb/activate-license/11.admin-center-licenses-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/11.admin-center-licenses-token.png)
 
 * * *
 
-### Installation über das [Admin-Center](../administration/admin-center.md) (veraltet)
+### i-doit Aktivierung über das [Admin-Center](../administration/admin-center.md) (veraltet)
 
 Die Installation über das [Admin Center](../administration/admin-center.md) erfolgt nach dem Login im Reiter **Licenses**. Verwende hier die Schaltfläche **Install new license** um den erweiterten Dialog zu öffnen und die aus dem Kundenportal heruntergeladene Lizenz auszuwählen.
 
@@ -116,17 +114,23 @@ Automatische Lizenzdistribution
 
 Bitte beachte, dass im Reiter **Tenants** konfiguriert werden kann, wie viele Objektlizenzen einem Mandanten zugewiesen werden können. Auch wenn nur ein einzelner Mandant existiert, kann eine ausgeschaltete automatische Lizenzdistribution dafür sorgen, dass nicht alle Objektlizenzen genutzt werden. Sollte dies der Fall sein, kann diese einfach aktiviert werden und mit einem Klick auf Speichern übernommen werden.
 
-### Testlizenzen
-
-Auf unserer Website kannst du die Ausstellung einer [Lizenz zum 30-tägigen Test von i-doit _pro_ beantragen](https://www.i-doit.com/testversion/).
-
-!!! attention "Name der Test-Datenbank"
-    Die Test-Lizenz wird stets für den Datenbanknamen **idoit\_data** ausgestellt. Um eine einwandfreie Funktion in der Testperiode sicher zu stellen, darf der Datenbankname bei der Installation nicht geändert werden.
+* * *
 
 ## FAQ
 
-!!! info "Verhalten vor i-doit Version 1.12.2"
+!!! attention "Name der Datenbank"
+    Bei der Erstellung einer Lizenz für einen einzelnen Mandanten wird der **Name der** **Datenbank** benötigt. Bitte stelle sicher, dass dir dieser bei der Erstellung der Lizenz in unserem Kundenportal vorliegt.
 
+    Lizenzen besitzen einen bestimmten Zeitraum in welchem Sie gültig sind. Ist der Zeitraum abgelaufen wird eine neue Lizenz benötigt.
+
+!!! attention "Kompatibilität der Token"
+    License Token können ab **i-doit Version 1.12.2** verwendet werden
+    Offline License Key kann erst mit **i-doit Version 1.15** verwendet werden
+
+!!! info "Neuanmeldung nötig"
+    Wird eine Lizenz erfolgreich eingespielt, kann es dennoch vorkommen, dass beim Weiterarbeiten mit i-doit ein Hinweis erscheint, es sei keine gültige Lizenz aktiviert. Hier hilft es, sich mit dem derzeitigen Benutzer ab- und wieder anzumelden. Daraufhin sollte der Hinweis nicht wieder erscheinen.
+
+!!! info "Verhalten vor i-doit Version 1.12.2"
     Für i-doit gibt es verschiedene Formen von Lizenzen:
 
     *   Die **Subskriptionslizenz** für einen einzelnen Mandanten (Hierzu zählen auch **Test-Lizenzen**)
@@ -138,7 +142,7 @@ Auf unserer Website kannst du die Ausstellung einer [Lizenz zum 30-tägigen Test
 
 * * *
 
-### Die Lizenz ist gültig aber i-doit Zeigt an, dass es nicht lizenziert ist?
+### Die Lizenz ist gültig aber i-doit zeigt an, dass es nicht lizenziert ist?
 
 !!! success "Öffne den Reiter Tenant im Admin Center und klicke auf **Save license settings**."
     [![tenant-licenses](../assets/images/de/wartung-und-betrieb/activate-license/13.png)](../assets/images/de/wartung-und-betrieb/activate-license/13.png)
