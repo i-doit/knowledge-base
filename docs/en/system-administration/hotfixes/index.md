@@ -1,6 +1,6 @@
 # Hotfixes
 
-!!! success "Hotfixes for version **32**"
+!!! success "Hotfixes for version **33**"
 
 A hotfix fixes a specific error and is usually made available as a ZIP file. The ZIP file is extracted in the **installation directory** of i-doit. The prompt asking whether files should be overwritten when unpacking must be confirmed.
 
@@ -40,85 +40,18 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
-### CSV Import Error message with Multi-valued categories option set to "row" or "comma-separated"
+### SQL error when using location path as a condition block at report manager (D-11151)
 
-Occurs when specific mappings are set
-
-??? info "Error message found in the PHP logs"
+??? info "Error message found in the logs"
     ```
-    [Wed Jul 31 15:25:44.477595 2024] [php:error] [pid 418181] [client 10.0.8.13:52397] PHP Fatal error:  Uncaught Error: Call to a member function hasAnyChanges() on null in /var/www>
+    Database error : Query error: 'SELECT obj_main.isys_obj__id AS '__id__', obj_main.isys_obj__title AS 'LC__UNIVERSAL__TITLE###0_1', j3.isys_obj__title AS 'LC__CMDB__CATG__LOCATION###0_26', j2.isys_catg_location_list__parentid as 'isys_cmdb_dao_category_g_location::dynamic_property_callback_location_path::DYNAMIC_PROPERTY::0', j2.isys_catg_location_list__parentid as 'isys_cmdb_dao_category_g_location::dynamic_property_callback_location_path::DYNAMIC_PROPERTY::1' FROM isys_obj AS obj_main INNER JOIN isys_cmdb_status AS obj_main_status ON obj_main_status.isys_cmdb_status__id = obj_main.isys_obj__isys_cmdb_status__id LEFT JOIN isys_catg_location_list AS j2 ON obj_main.isys_obj__id = j2.isys_catg_location_list__isys_obj__id LEFT JOIN isys_obj AS j3 ON j2.isys_catg_location_list__parentid = j3.isys_obj__id LEFT JOIN isys_obj_type AS j4 ON j4.isys_obj_type__id = obj_main.isys_obj__isys_obj_type__id WHERE TRUE AND ( (j4.isys_obj_type__id != '60' ) AND (j4.isys_obj_type__id != '63' ) ) AND ( (FALSE) ) AND ( ( ( j2.isys_catg_location_list__parentid IN (Array) ) AND (j2.isys_catg_location_list__parentid IS NOT NULL AND j2.isys_catg_location_list__parentid != '') ) ) ORDER BY obj_main.isys_obj__title ASC': Unknown column 'Array' in 'where clause'
     ```
 
-[i-doit_32_hotfix_ID-11003.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11003.zip){ .md-button .md-button--primary }
-
-### CSV import helper unable to split multi value dialog entries containing 0 values (ID-11080)
-
-[i-doit_32_hotfix_ID-11080_a3a793a.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11080_a3a793a.zip){ .md-button .md-button--primary }
-
-### Adding #Number to a counter set for automatic inventory number creates a new custom counter when creating a object (ID-11073)
-
-Adding a #Number to a counter creates a new counter AND counters skip a count (2 -> 4 -> 6)
-
-[i-doit_32_hotfix_ID-11073_7be428b.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11073_7be428b.zip){ .md-button .md-button--primary }
-
-### JDisc-Group filter is ignored (ID-11007)
-
-[i-doit_32_hotfix_ID-11007.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11007.zip){ .md-button .md-button--primary }
-
-### HTTP 500 error when an contact (person(-group) or orga) is created which has a default template set (ID-11001)
-
-Can also occur when creating a duplicate of an object.
-
-??? info "Error message found in the Webserver logs"
-    ```
-    [Fri Jul 12 16:05:59.553712 2024] [proxy_fcgi:error] [pid 1869452] [client 10.0.8.6:36768] AH01071: Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, array given in /var/www/html/testinstance/src/classes/modules/cmdb/dao/category/specific/isys_cmdb_dao_category_s_person_master.class.php:694 Stack trace: #0 /var/www/html/testinstance/src/classes/modules/cmdb/dao/category/specific/isys_cmdb_dao_category_s_person_master.class.php(694): trim()
-    ```
-
-[i-doit_32_hotfix_ID-11001.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11001.zip){ .md-button .md-button--primary }
-
-### HTTP 500 error when a object is added via object browser (ID-10993)
-
-??? info "Error message found in the Webserver logs"
-    ```
-    [Thu Jul 11 07:57:26.093062 2024] [proxy_fcgi:error] [pid 1568446] [client 10.0.8.6:54078] AH01071: Got error 'PHP message: PHP Fatal error:  Uncaught TypeError:
-    isys_cmdb_action_category::fetchEntryId(): Return value must be of type ?int, string returned in
-    /var/www/html/src/classes/modules/cmdb/action/isys_cmdb_action_category.class.php:100
-    ```
-
-[i-doit_32_hotfix_ID-10993_976e0c2.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10993_976e0c2.zip){ .md-button .md-button--primary }
-
-### PHP error when importing from JDisc (ID-10991)
-
-??? info "Error message found in the Webserver logs"
-    ```
-    PHP Fatal error: Uncaught TypeError: idoit\Module\Cmdb\Component\CategoryChanges\Data\ChangesData::setObjectId():
-    Argument #1 ($objectId) must be of type int, null given, called in /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Data/ChangesData.php on line 71
-    and defined in /var/www/html/src/classes/modules/cmdb/src/Component/CategoryChanges/Data/ChangesData.php:37
-    ```
-
-[i-doit_32_hotfix_ID-10991.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10991.zip){ .md-button .md-button--primary }
-
-### View right for objects of a type allows to create a unfinished object (ID-10972)
-
-It is possible to create a Object with only the view right.
-
-[i-doit_32_hotfix_ID-10972_29ef713.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10972_29ef713.zip){ .md-button .md-button--primary }
-
-### CSV export with symbols (ID-10758)
-
-Exporting a object list as csv includes special symbols.
-
-[i-doit_32_hotfix_ID-10758_b26033c.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-10758_b26033c.zip){ .md-button .md-button--primary }
-
-## API Add-on
-
-### Reading category Contact via API does not respond with a contact data array (API-549)
-
-[api_2.1_hotfix_API-549_0e82df9.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.1_hotfix_API-549_0e82df9.zip){ .md-button .md-button--primary }
+[i-doit_32_hotfix_ID-11151.zip :material-file-download:](../../assets/downloads/hotfixes/32/i-doit_32_hotfix_ID-11151.zip){ .md-button .md-button--primary }
 
 ## Forms Add-on
 
-### Object is not created when a attribute validation is used and no error is displayed
+### Object is not created when a attribute validation is used and no error is displayed (AOF-38)
 
 [forms_1.2.0_hotfix_AOF-38_69144fc.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2.0_hotfix_AOF-38_69144fc.zip){ .md-button .md-button--primary }
 
@@ -130,7 +63,7 @@ Exporting a object list as csv includes special symbols.
 
 ## Workflow Add-on
 
-### Workflow Checklist is inaccessible after workflow is accepted
+### Workflow Checklist is inaccessible after workflow is accepted (WORKFLOW-52)
 
 ??? info "Error message found in the Webserver logs"
     ```

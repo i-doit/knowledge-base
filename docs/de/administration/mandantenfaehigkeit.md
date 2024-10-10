@@ -44,7 +44,7 @@ Pro Mandant kann eingestellt werden, wie viele lizenzpflichtige Objekte maximal 
 
 ## Add-ons pro Mandant
 
-Bei der [Installation und beim Update von Add-ons](../i-doit-pro-add-ons/i-diary.md) kann ausgewählt werden, ob diese Aktion für einen einzelnen Mandanten oder für alle Mandanten durchgeführt werden soll. Im Admin Center unter **Modules** werden alle installierten Add-ons pro Mandant aufgeführt. Sie können pro Mandant (de-)aktiviert werden. Das Löschen erfolgt für alle Mandanten.
+Bei der [Installation und beim Update von Add-ons](../i-doit-add-ons/i-diary.md) kann ausgewählt werden, ob diese Aktion für einen einzelnen Mandanten oder für alle Mandanten durchgeführt werden soll. Im Admin Center unter **Modules** werden alle installierten Add-ons pro Mandant aufgeführt. Sie können pro Mandant (de-)aktiviert werden. Das Löschen erfolgt für alle Mandanten.
 
 [![Add-ons pro Mandant](../assets/images/de/administration/mandantenfaehigkeit/4-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/4-mand.png)
 

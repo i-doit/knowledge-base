@@ -1,10 +1,11 @@
 # Version History
 
-When were all the i-doit pro release dates?
+When were all the i-doit release dates?
 
 | Version                | Date           | Release Notes                                                    | Changelog                                                          |
 | ---------------------- | -------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------ |
 | 2024<br>----           |                |                                                                  |                                                                    |
+| **33**                 | **2024-10-10** | **[Release Notes](./release-notes/release-notes-33.md)**         | **[Changelog](./changelogs/changelog-33.md)**                      |
 | **32**                 | **2024-07-09** | **[Release Notes](./release-notes/release-notes-32.md)**         | **[Changelog](./changelogs/changelog-32.md)**                      |
 | **31**                 | **2024-05-08** | **[Release Notes](./release-notes/release-notes-31.md)**         | **[Changelog](./changelogs/changelog-31.md)**                      |
 | **30**                 | **2024-04-10** | **[Release Notes](./release-notes/release-notes-30.md)**         | **[Changelog](./changelogs/changelog-30.md)**                      |

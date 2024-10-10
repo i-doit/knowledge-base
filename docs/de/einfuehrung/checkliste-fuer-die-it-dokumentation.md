@@ -1,4 +1,5 @@
 # Checkliste für die IT-Dokumentation
+
 Was macht gute [IT-Dokumentation](../glossar.md) aus? Um sich mit dem Thema ganzheitlich zu befassen, gibt es im Buchhandel umfangreiche Literatur.
 
 Unsere Antwort: Schnell Erfolge zeigen, dann kann man ganzheitlich werden. Für einen pragmatischen Zugang dient folgende Checkliste, um erste Erfolge zu erzielen. Die Literatur empfehlen wir trotzdem ;-)
@@ -37,7 +38,7 @@ Unsere Antwort: Schnell Erfolge zeigen, dann kann man ganzheitlich werden. Für 
 | 5.1 | Ist die bisherige Dokumentation abgelöst? (z. B. Excel-Listen durch den CSV-Import) |     |     |     |
 | 5.2 | Sind Datenimporte automatisiert? (z. B. JDisc, OCS Inventory NG, CSV-Dateien) |     |     |     |
 | 5.3 | Sind manuelle (Nach-)Arbeiten erledigt? |     |     |     |
-| **6.**  | **i-doit produktiv einsetzen** |     |     |     |     |
+| **6.**  | **i-doitduktiv einsetzen** |     |     |     |     |
 | 61  | Ist die IT-Dokumentation in alle relevanten Prozesse (manuell/automatisiert) integriert? |     |     |     |
 | 6.2 | Sind alle Login-berechtigen Personen geschult? (ggf. Trainings) |     |     |     |
 | 6.3 | Sind alle Anforderungen erfüllt? |     |     |     |

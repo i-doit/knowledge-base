@@ -57,6 +57,9 @@ plugins:
       lang: en
   - minify:
       minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      strict: false
 markdown_extensions:
   - abbr
   - admonition
@@ -73,6 +76,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - pymdownx.highlight:
       linenums: true
       linenums_style: table
@@ -128,6 +134,7 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release Notes 33: version-history/release-notes/release-notes-33.md
           - Release Notes 32: version-history/release-notes/release-notes-32.md
           - Release Notes 31: version-history/release-notes/release-notes-31.md
           - Release Notes 30: version-history/release-notes/release-notes-30.md
@@ -155,6 +162,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 33: version-history/changelogs/changelog-33.md
           - Changelog 32: version-history/changelogs/changelog-32.md
           - Changelog 31: version-history/changelogs/changelog-31.md
           - Changelog 30: version-history/changelogs/changelog-30.md
@@ -264,7 +272,7 @@ nav:
       - Migration of an Installation under GNU/Linux: upgrades-and-migrations/migration-of-an-installation-under-linux.md
       - Update guide from i-doit 1.7.4 to 31: upgrades-and-migrations/update-guide-from-1.7.4-to-31.md
       - Update of i-doit open 1.4.8 to 1.8: upgrades-and-migrations/update-of-i-doit-open-1.4.8-to-1.8.md
-      - Upgrade from i-doit open to i-doit pro: upgrades-and-migrations/upgrade-from-open-to-pro.md
+      - Upgrade from i-doit open to i-doit: upgrades-and-migrations/upgrade-from-open-to-i-doit.md
       - Upgrade to MySQL 5.6 or MariaDB 10.0: upgrades-and-migrations/upgrade-to-mysql-5.6-or-mariadb-10.0.md
       - Upgrade PHP and MariaDB for Windows: upgrades-and-migrations/update-php-and-mariadb-idoit-windows.md
   - Basics:
@@ -419,9 +427,9 @@ nav:
               - Import matching profiles: system-administration/administration/import-and-interfaces/import-matching-profiles.md
               - h-inventory: system-administration/administration/import-and-interfaces/h-inventory.md
               - SMTP configuration (E-Mail): system-administration/administration/import-and-interfaces/smtp.md
-              - JDIsc:
+              - JDisc:
                   - system-administration/administration/import-and-interfaces/jdisc/index.md
-                  - JDIsc Configuration: system-administration/administration/import-and-interfaces/jdisc/jdisc-configuration.md
+                  - JDisc Configuration: system-administration/administration/import-and-interfaces/jdisc/jdisc-configuration.md
                   - JDisc profiles: system-administration/administration/import-and-interfaces/jdisc/jdisc-profiles.md
               - LDAP:
                   - system-administration/administration/import-and-interfaces/ldap/index.md
@@ -446,6 +454,7 @@ nav:
           - Download Center: system-administration/administration/download-center.md
           - Contract details: system-administration/administration/contract-details.md
       - Admin Center: system-administration/admin-center.md
+      - Add-on & Subscription Center: system-administration/add-on-and-subscription-center.md
       - Localization: system-administration/localization.md
       - Multi-Tenants: system-administration/multi-tenant.md
       - Customer portal: system-administration/customer-portal.md
@@ -466,6 +475,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
           - Hotfix archive:
               - system-administration/hotfixes/hotfix-archive/index.md
+              - Version 32: system-administration/hotfixes/hotfix-archive/v32.md
               - Version 31: system-administration/hotfixes/hotfix-archive/v31.md
               - Version 30: system-administration/hotfixes/hotfix-archive/v30.md
               - Version 29: system-administration/hotfixes/hotfix-archive/v29.md
@@ -493,118 +503,121 @@ nav:
       - Upload and link of files: use-cases/upload-and-link-files.md
       - VM Provisioning: use-cases/vm-provisioning.md
       - Workplaces: use-cases/wokplaces.md
-  - i-doit pro Add-ons:
-      - i-doit-pro-add-ons/index.md
-      - Active Directory Documentation: i-doit-pro-add-ons/active-directory-documentation.md
-      - Add-on Packager: i-doit-pro-add-ons/add-on-packager.md
-      - Analysis: i-doit-pro-add-ons/analysis.md
+  - i-doit Add-ons:
+      - i-doit-add-ons/index.md
+      - Active Directory Documentation: i-doit-add-ons/active-directory-documentation.md
+      - Add-on Packager: i-doit-add-ons/add-on-packager.md
+      - Analysis: i-doit-add-ons/analysis.md
       - API (JSON-RPC):
-          - i-doit-pro-add-ons/api/index.md
+          - i-doit-add-ons/api/index.md
           - Methods:
               - v1:
-                  - i-doit-pro-add-ons/api/methods/index.md
-                  - cmdb.categories: i-doit-pro-add-ons/api/methods/cmdb.categories.md
-                  - cmdb.category_info: i-doit-pro-add-ons/api/methods/cmdb.category_info.md
-                  - cmdb.category: i-doit-pro-add-ons/api/methods/cmdb.category.md
-                  - cmdb.condition: i-doit-pro-add-ons/api/methods/cmdb.condition.md
-                  - cmdb.contact: i-doit-pro-add-ons/api/methods/cmdb.contact.md
-                  - cmdb.dialog: i-doit-pro-add-ons/api/methods/cmdb.dialog.md
-                  - cmdb.filter: i-doit-pro-add-ons/api/methods/cmdb.filter.md
-                  - cmdb.impact: i-doit-pro-add-ons/api/methods/cmdb.impact.md
-                  - cmdb.location_tree: i-doit-pro-add-ons/api/methods/cmdb.location_tree.md
-                  - cmdb.logbook: i-doit-pro-add-ons/api/methods/cmdb.logbook.md
-                  - cmdb.object_type_categories: i-doit-pro-add-ons/api/methods/cmdb.object_type_categories.md
-                  - cmdb.object_type_groups: i-doit-pro-add-ons/api/methods/cmdb.object_type_groups.md
-                  - cmdb.object_types: i-doit-pro-add-ons/api/methods/cmdb.object_types.md
-                  - cmdb.object: i-doit-pro-add-ons/api/methods/cmdb.object.md
-                  - cmdb.objects_by_relation: i-doit-pro-add-ons/api/methods/cmdb.objects_by_relation.md
-                  - cmdb.objects: i-doit-pro-add-ons/api/methods/cmdb.objects.md
-                  - cmdb.reports: i-doit-pro-add-ons/api/methods/cmdb.reports.md
-                  - cmdb.status: i-doit-pro-add-ons/api/methods/cmdb.status.md
-                  - cmdb.workstation_components: i-doit-pro-add-ons/api/methods/cmdb.workstation_components.md
-                  - console: i-doit-pro-add-ons/api/methods/console.md
-                  - idoit: i-doit-pro-add-ons/api/methods/idoit.md
-                  - Add-ons: i-doit-pro-add-ons/api/methods/addons.md
+                  - i-doit-add-ons/api/methods/index.md
+                  - cmdb.categories: i-doit-add-ons/api/methods/cmdb.categories.md
+                  - cmdb.category_info: i-doit-add-ons/api/methods/cmdb.category_info.md
+                  - cmdb.category: i-doit-add-ons/api/methods/cmdb.category.md
+                  - cmdb.condition: i-doit-add-ons/api/methods/cmdb.condition.md
+                  - cmdb.contact: i-doit-add-ons/api/methods/cmdb.contact.md
+                  - cmdb.dialog: i-doit-add-ons/api/methods/cmdb.dialog.md
+                  - cmdb.filter: i-doit-add-ons/api/methods/cmdb.filter.md
+                  - cmdb.impact: i-doit-add-ons/api/methods/cmdb.impact.md
+                  - cmdb.location_tree: i-doit-add-ons/api/methods/cmdb.location_tree.md
+                  - cmdb.logbook: i-doit-add-ons/api/methods/cmdb.logbook.md
+                  - cmdb.object_type_categories: i-doit-add-ons/api/methods/cmdb.object_type_categories.md
+                  - cmdb.object_type_groups: i-doit-add-ons/api/methods/cmdb.object_type_groups.md
+                  - cmdb.object_types: i-doit-add-ons/api/methods/cmdb.object_types.md
+                  - cmdb.object: i-doit-add-ons/api/methods/cmdb.object.md
+                  - cmdb.objects_by_relation: i-doit-add-ons/api/methods/cmdb.objects_by_relation.md
+                  - cmdb.objects: i-doit-add-ons/api/methods/cmdb.objects.md
+                  - cmdb.reports: i-doit-add-ons/api/methods/cmdb.reports.md
+                  - cmdb.status: i-doit-add-ons/api/methods/cmdb.status.md
+                  - cmdb.workstation_components: i-doit-add-ons/api/methods/cmdb.workstation_components.md
+                  - console: i-doit-add-ons/api/methods/console.md
+                  - idoit: i-doit-add-ons/api/methods/idoit.md
+                  - Add-ons: i-doit-add-ons/api/methods/addons.md
               - v2:
-                  - i-doit-pro-add-ons/api/methods/v2/index.md
-                  - cmdb.external: i-doit-pro-add-ons/api/methods/v2/cmdb.external.md
-          - Examples for handling the API: i-doit-pro-add-ons/api/examples-for-handling-the-api.md
-          - Tips and tricks for working with the API: i-doit-pro-add-ons/api/tips-and-tricks-for-api.md
-          - Category fields for data arrays: i-doit-pro-add-ons/api/category-fields-for-data-arrays.md
-      - Cabling: i-doit-pro-add-ons/cabling.md
-      - CheckMK: i-doit-pro-add-ons/checkmk.md
+                  - i-doit-add-ons/api/methods/v2/index.md
+                  - cmdb.external: i-doit-add-ons/api/methods/v2/cmdb.external.md
+          - Examples for handling the API: i-doit-add-ons/api/examples-for-handling-the-api.md
+          - Tips and tricks for working with the API: i-doit-add-ons/api/tips-and-tricks-for-api.md
+          - Category fields for data arrays: i-doit-add-ons/api/category-fields-for-data-arrays.md
+      - Cabling: i-doit-add-ons/cabling.md
+      - CheckMK: i-doit-add-ons/checkmk.md
       - CheckMK2:
-          - i-doit-pro-add-ons/checkmk2/index.md
-          - First steps: i-doit-pro-add-ons/checkmk2/first-steps.md
-          - Requirements: i-doit-pro-add-ons/checkmk2/requirements.md
-          - Installation: i-doit-pro-add-ons/checkmk2/installation.md
-          - Configuration: i-doit-pro-add-ons/checkmk2/configuration.md
-          - Usage: i-doit-pro-add-ons/checkmk2/usage.md
-          - Import agents types from checkmk to i-doit: i-doit-pro-add-ons/checkmk2/sync-checkmk-agents.md
-          - Sync contact groups between checkmk and i-doit: i-doit-pro-add-ons/checkmk2/sync-contact-groups.md
-          - Sync WATO folders between checkmk and i-doit: i-doit-pro-add-ons/checkmk2/sync-wato-folder.md
-          - Import monitoring sites from checkmk to i-doit: i-doit-pro-add-ons/checkmk2/sync-checkmk-sites.md
-          - Sync host tags between checkmk and i-doit: i-doit-pro-add-ons/checkmk2/sync-host-tags.md
-          - Generate WATO configuration based on CMDB data: i-doit-pro-add-ons/checkmk2/generate-wato-configuration-base-on-cmdb-data.md
-          - Import inventory data into CMDB: i-doit-pro-add-ons/checkmk2/import-inventory-data-into-cmdb.md
-          - i-doit web GUI: i-doit-pro-add-ons/checkmk2/i-doit-web-gui.md
-          - Read information from i-doit and checkmk: i-doit-pro-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md
-          - Match objects from i-doit with hosts from checkmk: i-doit-pro-add-ons/checkmk2/match-objects-from-i-doit-with-hosts-from-checkmk.md
-          - Frequently asked questions (FAQ): i-doit-pro-add-ons/checkmk2/faq.md
-      - DNS Documentation: i-doit-pro-add-ons/dns-documentation.md
+          - i-doit-add-ons/checkmk2/index.md
+          - First steps: i-doit-add-ons/checkmk2/first-steps.md
+          - Requirements: i-doit-add-ons/checkmk2/requirements.md
+          - Installation: i-doit-add-ons/checkmk2/installation.md
+          - Configuration: i-doit-add-ons/checkmk2/configuration.md
+          - Usage: i-doit-add-ons/checkmk2/usage.md
+          - Import agents types from checkmk to i-doit: i-doit-add-ons/checkmk2/sync-checkmk-agents.md
+          - Sync contact groups between checkmk and i-doit: i-doit-add-ons/checkmk2/sync-contact-groups.md
+          - Sync WATO folders between checkmk and i-doit: i-doit-add-ons/checkmk2/sync-wato-folder.md
+          - Import monitoring sites from checkmk to i-doit: i-doit-add-ons/checkmk2/sync-checkmk-sites.md
+          - Sync host tags between checkmk and i-doit: i-doit-add-ons/checkmk2/sync-host-tags.md
+          - Generate WATO configuration based on CMDB data: i-doit-add-ons/checkmk2/generate-wato-configuration-base-on-cmdb-data.md
+          - Import inventory data into CMDB: i-doit-add-ons/checkmk2/import-inventory-data-into-cmdb.md
+          - i-doit web GUI: i-doit-add-ons/checkmk2/i-doit-web-gui.md
+          - Read information from i-doit and checkmk: i-doit-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md
+          - Match objects from i-doit with hosts from checkmk: i-doit-add-ons/checkmk2/match-objects-from-i-doit-with-hosts-from-checkmk.md
+          - Frequently asked questions (FAQ): i-doit-add-ons/checkmk2/faq.md
+      - DNS Documentation: i-doit-add-ons/dns-documentation.md
       - Documents:
-          - i-doit-pro-add-ons/documents/index.md
-          - Preparation: i-doit-pro-add-ons/documents/preparation.md
-          - Document templates: i-doit-pro-add-ons/documents/document-templates.md
-          - Placeholder in the Documents add-on: i-doit-pro-add-ons/documents/placeholder-in-the-documents.md
-          - Document creation: i-doit-pro-add-ons/documents/document-creation.md
-      - Events: i-doit-pro-add-ons/events.md
-      - Floorplan: i-doit-pro-add-ons/floorplan.md
+          - i-doit-add-ons/documents/index.md
+          - Preparation: i-doit-add-ons/documents/preparation.md
+          - Document templates: i-doit-add-ons/documents/document-templates.md
+          - Placeholder in the Documents add-on: i-doit-add-ons/documents/placeholder-in-the-documents.md
+          - Document creation: i-doit-add-ons/documents/document-creation.md
+      - Events: i-doit-add-ons/events.md
+      - Floorplan: i-doit-add-ons/floorplan.md
+      - Flows:
+          - i-doit-add-ons/flows/index.md
+          - i-doit 33 update and Flows installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
-          - i-doit-pro-add-ons/forms/index.md
-          - Install Forms Add-on: i-doit-pro-add-ons/forms/install-forms-addon.md
-          - Install MongoDB v5: i-doit-pro-add-ons/forms/install-mongodb.md
-          - Install NodeJS: i-doit-pro-add-ons/forms/install-nodejs.md
-          - Configure the Forms Backend: i-doit-pro-add-ons/forms/configure-forms-backend.md
-          - Configuration in i-doit: i-doit-pro-add-ons/forms/configuration-in-i-doit.md
-          - Use forms: i-doit-pro-add-ons/forms/use-forms.md
-          - Publish forms: i-doit-pro-add-ons/forms/publish-form.md
-          - Fill out form: i-doit-pro-add-ons/forms/fill-out-forms.md
-          - Using Forms Add-on API: i-doit-pro-add-ons/forms/using-forms-api.md
+          - i-doit-add-ons/forms/index.md
+          - Install Forms Add-on: i-doit-add-ons/forms/install-forms-addon.md
+          - Install MongoDB v5: i-doit-add-ons/forms/install-mongodb.md
+          - Install NodeJS: i-doit-add-ons/forms/install-nodejs.md
+          - Configure the Forms Backend: i-doit-add-ons/forms/configure-forms-backend.md
+          - Configuration in i-doit: i-doit-add-ons/forms/configuration-in-i-doit.md
+          - Use forms: i-doit-add-ons/forms/use-forms.md
+          - Publish forms: i-doit-add-ons/forms/publish-form.md
+          - Fill out form: i-doit-add-ons/forms/fill-out-forms.md
+          - Using Forms Add-on API: i-doit-add-ons/forms/using-forms-api.md
       - i-diary:
-          - i-doit-pro-add-ons/i-diary/index.md
-          - i-diary Requirements: i-doit-pro-add-ons/i-diary/requirements.md
-          - i-diary Install: i-doit-pro-add-ons/i-diary/install.md
-          - i-diary Update: i-doit-pro-add-ons/i-diary/update.md
-          - i-diary Configuration: i-doit-pro-add-ons/i-diary/configuration.md
-          - i-diary Basic Usage: i-doit-pro-add-ons/i-diary/basic-usage.md
-          - i-diary Determine the author: i-doit-pro-add-ons/i-diary/determine-the-author.md
-          - i-diary Determine the host: i-doit-pro-add-ons/i-diary/determine-the-host.md
-      - i-doit QR-Code Printer: i-doit-pro-add-ons/i-doit-qr-code-printer.md
-      - ISMS: i-doit-pro-add-ons/isms.md
-      - Maintenance: i-doit-pro-add-ons/maintenance.md
-      - OCS Inventory NG: i-doit-pro-add-ons/ocs-inventory-ng.md
-      - Relocate-CI: i-doit-pro-add-ons/relocate-ci.md
-      - Replacement: i-doit-pro-add-ons/replacement.md
+          - i-doit-add-ons/i-diary/index.md
+          - i-diary Requirements: i-doit-add-ons/i-diary/requirements.md
+          - i-diary Install: i-doit-add-ons/i-diary/install.md
+          - i-diary Update: i-doit-add-ons/i-diary/update.md
+          - i-diary Configuration: i-doit-add-ons/i-diary/configuration.md
+          - i-diary Basic Usage: i-doit-add-ons/i-diary/basic-usage.md
+          - i-diary Determine the author: i-doit-add-ons/i-diary/determine-the-author.md
+          - i-diary Determine the host: i-doit-add-ons/i-diary/determine-the-host.md
+      - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
+      - ISMS: i-doit-add-ons/isms.md
+      - Maintenance: i-doit-add-ons/maintenance.md
+      - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md
+      - Relocate-CI: i-doit-add-ons/relocate-ci.md
+      - Replacement: i-doit-add-ons/replacement.md
       - SHD SM-VIEW Connect:
-          - i-doit-pro-add-ons/sm-view-connect/index.md
-          - SHD SM-VIEW Connect - Telekom Adapter: i-doit-pro-add-ons/sm-view-connect/telekom-adapter.md
+          - i-doit-add-ons/sm-view-connect/index.md
+          - SHD SM-VIEW Connect - Telekom Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
       - VIVA:
-          - i-doit-pro-add-ons/viva/index.md
-          - Introduction to VIVA: i-doit-pro-add-ons/viva/introduction-to-viva.md
-          - Preparation of the VIVA installation: i-doit-pro-add-ons/viva/preparation-of-the-viva-installation.md
-          - Procedure with VIVA: i-doit-pro-add-ons/viva/procedure-with-viva.md
-          - Risk analysis according to IT-Grundschutz: i-doit-pro-add-ons/viva/risk-analysis-according-to-it-grundschutz.md
-          - Reports with VIVA: i-doit-pro-add-ons/viva/reports-with-viva.md
-          - Support audits with VIVA: i-doit-pro-add-ons/viva/support-audits-with-viva.md
-          - VIVA assistants: i-doit-pro-add-ons/viva/viva-assistants.md
-          - Object category VIVA: i-doit-pro-add-ons/viva/object-category-viva.md
-          - VIVA-Widget: i-doit-pro-add-ons/viva/viva-widget.md
-          - Workflow with VIVA: i-doit-pro-add-ons/viva/workflow-with-viva.md
-      - VIVA2: i-doit-pro-add-ons/viva2.md
-      - Workflow: i-doit-pro-add-ons/workflow.md
-      - Rights Documentation: i-doit-pro-add-ons/rights-documentation.md
-  - i-doit pro cloud:
+          - i-doit-add-ons/viva/index.md
+          - Introduction to VIVA: i-doit-add-ons/viva/introduction-to-viva.md
+          - Preparation of the VIVA installation: i-doit-add-ons/viva/preparation-of-the-viva-installation.md
+          - Procedure with VIVA: i-doit-add-ons/viva/procedure-with-viva.md
+          - Risk analysis according to IT-Grundschutz: i-doit-add-ons/viva/risk-analysis-according-to-it-grundschutz.md
+          - Reports with VIVA: i-doit-add-ons/viva/reports-with-viva.md
+          - Support audits with VIVA: i-doit-add-ons/viva/support-audits-with-viva.md
+          - VIVA assistants: i-doit-add-ons/viva/viva-assistants.md
+          - Object category VIVA: i-doit-add-ons/viva/object-category-viva.md
+          - VIVA-Widget: i-doit-add-ons/viva/viva-widget.md
+          - Workflow with VIVA: i-doit-add-ons/viva/workflow-with-viva.md
+      - VIVA2: i-doit-add-ons/viva2.md
+      - Workflow: i-doit-add-ons/workflow.md
+      - Rights Documentation: i-doit-add-ons/rights-documentation.md
+  - i-doit cloud:
       - idoit-cloud/index.md
   - Software Development:
       - software-development/index.md

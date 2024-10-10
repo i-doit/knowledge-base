@@ -1,6 +1,6 @@
 # Attribute Fields
 
-Now that you are familiar with the [structure of the IT documentation](structure-of-the-it-documentation.md) let's take a closer look at the attribute fields which i-doit provides in the Web GUI.
+Now that you are familiar with the [structure of the IT documentation](structure-of-the-it-documentation.md) let's take a closer look at the attribute fields which i-doitvides in the Web GUI.
 
 ## Overview
 

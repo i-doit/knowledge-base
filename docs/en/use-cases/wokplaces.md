@@ -31,11 +31,11 @@ A workplace component can only be assigned to one workplace. You can search for 
 Location of a Workplace
 -----------------------
 
-Last but not least, you can also physically locate a workplace, for example with an office room. With the [**Floor Plan**](../i-doit-pro-add-ons/floorplan.md) add-on you can then even visualize this room.
+Last but not least, you can also physically locate a workplace, for example with an office room. With the [**Floor Plan**](../i-doit-add-ons/floorplan.md) add-on you can then even visualize this room.
 
 [![workplaces](../assets/images/en/use-cases/workplaces/6-wp.png)](../assets/images/en/use-cases/workplaces/6-wp.png)
 
 Relocation of a Workplace
 -------------------------
 
-Should a person change the room within the company, you can manage the relocation of the workplace and selected workplace components. The **[Relocate CI](../i-doit-pro-add-ons/relocate-ci.md)** add-on offers a function solution for a relocation.
+Should a person change the room within the company, you can manage the relocation of the workplace and selected workplace components. The **[Relocate CI](../i-doit-add-ons/relocate-ci.md)** add-on offers a function solution for a relocation.

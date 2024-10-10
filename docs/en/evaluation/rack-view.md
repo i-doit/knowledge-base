@@ -1,6 +1,6 @@
 # Rack View
 
-i-doit provides a visualization for 19" racks with which you can display all built-in components clearly. Statistics about free height units, maximum energy requirements and free network ports in switches and patch panels provide support with capacity planning.
+i-doitvides a visualization for 19" racks with which you can display all built-in components clearly. Statistics about free height units, maximum energy requirements and free network ports in switches and patch panels provide support with capacity planning.
 
 Rack Category
 -------------

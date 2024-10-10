@@ -40,7 +40,7 @@ To represent the complete lifecycle of an [object](../glossary.md), the CMDB sta
 The adding, changing or deleting of a **CMDB status** is carried out via **Administration → Predefined content → CMDB status**. For each **CMDB status** the following information is needed:
 
 -   Unique name/ [language constant (for translation)](../system-administration/localization.md)
--   Unique constant (helpful for using the [API](../i-doit-pro-add-ons/api/index.md), for example)
+-   Unique constant (helpful for using the [API](../i-doit-add-ons/api/index.md), for example)
 -   Color (is used in object lists, the **General** category, in the **CMDB-Explorer** and many other cases)
 
 [![Manage CMDB Status](../assets/images/en/basics/life-and-documentation-cycle/3-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/3-ladc.png)
@@ -51,7 +51,7 @@ Apart from the objects that are to be documented, the documentation itself can a
 
 !!! success "Deletion process"
 
-    It may be worthwhile for bigger environments to establish the required processes for the archiving and deleting of documentation artifacts. At what point shall parts of the documentation be archived? Who may clean up the IT documentation? These kind of questions need to be addressed by the team. The permission system of i-doit provides the required settings to assign the rights to archive or to purge parts of the documentation to specific users.
+    It may be worthwhile for bigger environments to establish the required processes for the archiving and deleting of documentation artifacts. At what point shall parts of the documentation be archived? Who may clean up the IT documentation? These kind of questions need to be addressed by the team. The permission system of i-doitvides the required settings to assign the rights to archive or to purge parts of the documentation to specific users.
 
 ### States
 

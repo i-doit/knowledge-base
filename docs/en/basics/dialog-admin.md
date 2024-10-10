@@ -19,7 +19,7 @@ An overview of the values which were documented so far (if existing) will be loa
 Click the **New** button above the overview when you want to create a new value. A form field opens and you can fill in the following details:
 
 - **ID**:<br>
-    Each value in a **Dialog+** attribute receives a unique identifier by i-doit. This is very helpful, for example, when working with the [API](../i-doit-pro-add-ons/api/index.md).
+    Each value in a **Dialog+** attribute receives a unique identifier by i-doit. This is very helpful, for example, when working with the [API](../i-doit-add-ons/api/index.md).
 - **Title**:<br>
     Here you can enter the value you want to display in the i-doit Web GUI when you view or edit the **Dialog+** attribute.
 - **Constant**:<br>

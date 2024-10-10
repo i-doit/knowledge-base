@@ -44,6 +44,6 @@ Das Script stellt mehrere Fragen zur Konfiguration. Für alle Fragen gibt es vor
 
 ## Nächste Schritte
 
--   [Eine gültige Lizenz einspielen (nur i-doit pro)](../wartung-und-betrieb/lizenz-aktivieren.md)
+-   [Eine gültige Lizenz einspielen (nur i-doit)](../wartung-und-betrieb/lizenz-aktivieren.md)
 -   [Tipps zur Sicherheit und zum Schutz beachten](../wartung-und-betrieb/sicherheit-und-schutz.md)
 -   [Erste Schritte mit i-doit](../grundlagen/index.md)

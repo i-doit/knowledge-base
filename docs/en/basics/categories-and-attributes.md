@@ -1,6 +1,6 @@
 # Categories and attributes
 
-i-doit provides over 200 predefined [categories](structure-of-the-it-documentation.md). The result is a wide range of over 1,000 [attributes](structure-of-the-it-documentation.md) which theoretically can be documented for each [object](structure-of-the-it-documentation.md). This abundance inevitably leads to the frequently asked question "What is the purpose of category XY with all its attributes?" Which concepts represent each single category and each single attribute?
+i-doitvides over 200 predefined [categories](structure-of-the-it-documentation.md). The result is a wide range of over 1,000 [attributes](structure-of-the-it-documentation.md) which theoretically can be documented for each [object](structure-of-the-it-documentation.md). This abundance inevitably leads to the frequently asked question "What is the purpose of category XY with all its attributes?" Which concepts represent each single category and each single attribute?
 
 !!! info "Flexibility versus specifications"
     The following table is an attempt to give you a general overview. It is an "attempt" because of the sheer bulk of predefined categories and attributes. There are no strict specifications for many categories and attributes. Therefore the following descriptions are only recommendations. We would appreciate additions and corrections and would be glad to receive information about how you use the following categories and attributes in practice. Please just send an e-mail to [feedback@i-doit.com](mailto:feedback@i-doit.com).
@@ -54,7 +54,7 @@ i-doit provides over 200 predefined [categories](structure-of-the-it-documentati
 | **Direct Attached Storage -> Controller** | -  | Built-in onboard or PCIe plug-in cards for the connection of storages drives; is contained in the category folder **Direct Attached Storage** |
 | **Direct Attached Storage -> Device** | -  | List of drives (hard disks, SSDs etc.); is contained in the category folder **Direct Attached Storage**; supplements the **Controller** and **Raid-Array** categories in this category folder |
 | **Direct Attached Storage -> Raid-Array** | -  | Documentation of hardware or software RAIDs with the various levels (1, 5, 6, 10 etc.); is contained in the category folder **Direct Attached Storage** |
-| **Documents** | -  | [Documents](../i-doit-pro-add-ons/documents/index.md) add-on: List of created documents |
+| **Documents** | -  | [Documents](../i-doit-add-ons/documents/index.md) add-on: List of created documents |
 | **Drive** | -  | Documentation of configured mount points or drive letters; supplements category folder **Direct Attached Storage**; see also categories **Share access** and **Storage Area Network → Logical devices(client)** |
 | **E-Mail addresses** | -  | List of e-mail addresses; often in connection with contacts (see object types **Persons**, **Person groups** and **Organization**); supplements the **Master data** in the category folders **Persons**, **Person groups** and **Organization** |
 | **Emergency plan assignment** | -  | Assignment of files which then again are stored as objects of the type **Files**; you can upload new files per drag and drop; similar to the categories **File assignment** and **Manual assignment**; backwards category: **Emergency plan → Assigned objects** |

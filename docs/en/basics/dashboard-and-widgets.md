@@ -76,7 +76,7 @@ The objects last changed by the user who is signed in are displayed in this widg
 
   ### Monitoring: Vulnerable Hosts
 
-This widget requires a connection to [Nagios](../automation-and-integration/network-monitoring/nagios.md) or [Checkmk](../i-doit-pro-add-ons/checkmk.md) and displays a view of vulnerable hosts. Via the pencil you can select the host which is to be displayed.
+This widget requires a connection to [Nagios](../automation-and-integration/network-monitoring/nagios.md) or [Checkmk](../i-doit-add-ons/checkmk.md) and displays a view of vulnerable hosts. Via the pencil you can select the host which is to be displayed.
 
 ### Notes
 

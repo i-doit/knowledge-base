@@ -20,7 +20,7 @@ The object ID is very important for the generation of the URIs. By means of the 
 
     http://i-doit.example.net/i-doit/?objID=1000
 
-Object IDs are especially used for internal purposes, but they can also be helpful for the user or for third-party systems. The IDs are essential for [API access,](../i-doit-pro-add-ons/api/index.md) for example.
+Object IDs are especially used for internal purposes, but they can also be helpful for the user or for third-party systems. The IDs are essential for [API access,](../i-doit-add-ons/api/index.md) for example.
 
 ## SYS-ID
 
@@ -81,7 +81,7 @@ At **Administration → Data structure → Object types → [Object type group
 
 !!! success "Labels"
 
-    Inventory numbers and QR codes offer an ideal combination and can be joined to labels. QR codes are generated for each object by i-doit. Such labels can be printed using the i-doit [QR-code printer](../i-doit-pro-add-ons/i-doit-qr-code-printer.md), for example.
+    Inventory numbers and QR codes offer an ideal combination and can be joined to labels. QR codes are generated for each object by i-doit. Such labels can be printed using the i-doit [QR-code printer](../i-doit-add-ons/i-doit-qr-code-printer.md), for example.
 
 ## Identifier of Third-Party Systems
 

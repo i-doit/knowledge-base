@@ -24,7 +24,7 @@ The default installation of i-doit already offers a large variety of [object typ
 | **Building  <br>** | Buildings in a **City** |     |
 | **Appliance  <br>** | Appliances which are used in the organization but are rather designed as black box | Firewalls |
 | **Host** | Remote computers which aren't directly accessible | DNS servers |
-| **information domain** | Information networks (IT security/ IT-Grundschutz); see [Add-on VIVA](../i-doit-pro-add-ons/viva/index.md) |     |
+| **information domain** | Information networks (IT security/ IT-Grundschutz); see [Add-on VIVA](../i-doit-add-ons/viva/index.md) |     |
 | **Cable  <br>** | A group of wires, such as cupper wires or glass fibers, covered in plastic or rubber and used to carry electricity or electrical signals |     |
 | **Cable tray  <br>** | Cable routes; see **Cable** |     |
 | **Air Condition System  <br>** | Air-conditioning of active components |     |

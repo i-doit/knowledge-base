@@ -1,8 +1,8 @@
 # i-doit Virtual Eval Appliance
 
-synetics stellt eine voll funktionstüchtige Appliance von i-doit pro zur Verfügung. Diese kann als virtuelle Maschine heruntergeladen werden.
+synetics stellt eine voll funktionstüchtige Appliance von i-doit zur Verfügung. Diese kann als virtuelle Maschine heruntergeladen werden.
 
-Diese virtuelle Appliance bringt den Vorteil, dass man möglichst schnell die Funktionen von i-doit pro evaluieren kann. Man benötigt weder Kenntnisse zum darunter liegenden [LAMP Stack](../index.md), noch muss man die Software installieren, sondern kann gleich mit einem fertigen Grundgerüst starten.
+Diese virtuelle Appliance bringt den Vorteil, dass man möglichst schnell die Funktionen von i-doit evaluieren kann. Man benötigt weder Kenntnisse zum darunter liegenden [LAMP Stack](../index.md), noch muss man die Software installieren, sondern kann gleich mit einem fertigen Grundgerüst starten.
 
 !!! attention "Nur zu Testzwecken"
     Die Appliance dient ausschließlich zu Testzwecken und sollte nicht als Produktivsystem eingesetzt werden.
@@ -93,7 +93,7 @@ Wo ist was zu finden?
 
 ## Nachbereitung
 
-Die Appliance stellt eine "nackte" Installation von i-doit pro zur Verfügung. Das bedeutet, es sind weder Demodaten, noch zusätzliche [i-doit pro Add-ons](../../i-doit-pro-add-ons/index.md) enthalten.
+Die Appliance stellt eine "nackte" Installation von i-doit zur Verfügung. Das bedeutet, es sind weder Demodaten, noch zusätzliche [i-doit Add-ons](../../i-doit-add-ons/index.md) enthalten.
 
 Beim ersten Anmelden fragt i-doit nach einer gültigen [Lizenz](../../wartung-und-betrieb/lizenz-aktivieren.md), die eingespielt werden muss, damit alle Funktionen zur Verfügung stehen.
 

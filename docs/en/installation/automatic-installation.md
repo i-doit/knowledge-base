@@ -44,6 +44,6 @@ The script asks several questions regarding the configuration. For all questions
 
 ## Next Steps
 
--   [Installation of a valid license (only i-doit pro)](../maintenance-and-operation/activate-license.md)
+-   [Installation of a valid license (only i-doit)](../maintenance-and-operation/activate-license.md)
 -   [Follow the tips regarding security and protection](../maintenance-and-operation/security-and-protection.md)
 -   [First steps with i-doit](../basics/index.md)

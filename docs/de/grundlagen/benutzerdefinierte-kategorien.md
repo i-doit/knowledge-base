@@ -101,7 +101,7 @@ Sobald deine Kategorie konfiguriert und ausgeprägt wurde, kannst du die Schaltf
 
 ## Technische Konfiguration
 
-Um die benutzerdefinierte Kategorie über die [API](../i-doit-pro-add-ons/api/index.md) nutzen zu können, hilft die technische Konfiguration. Diese ist über den Button **Technische Konfiguration anzeigen** erreichbar.
+Um die benutzerdefinierte Kategorie über die [API](../i-doit-add-ons/api/index.md) nutzen zu können, hilft die technische Konfiguration. Diese ist über den Button **Technische Konfiguration anzeigen** erreichbar.
 
 Es ist möglich, die technischen Schlüssel für jedes Feld zu ändern, indem Sie auf **Technischen Schlüssel ändern** klicken.
 

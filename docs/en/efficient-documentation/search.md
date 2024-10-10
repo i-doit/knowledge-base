@@ -76,7 +76,7 @@ sudo -u www-data php console.php search -uadmin -padmin --searchString=acme
 
 ## Search via the API
 
-It is also possible to search the [IT documentation](../basics/structure-of-the-it-documentation.md) via the [Application Programming Interface (API)](../i-doit-pro-add-ons/api/index.md) of i-doit. The required method is idoit.search:
+It is also possible to search the [IT documentation](../basics/structure-of-the-it-documentation.md) via the [Application Programming Interface (API)](../i-doit-add-ons/api/index.md) of i-doit. The required method is idoit.search:
 
 ```json
 {

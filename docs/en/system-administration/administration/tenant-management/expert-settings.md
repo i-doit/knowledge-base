@@ -18,7 +18,7 @@ Each setting consists of three parts:
 
 ## List of Settings
 
-| Key                                             | Default Value                               | Recommended Value | Type                | Module<br>(Scope/[Add-on](../../../i-doit-pro-add-ons/index.md) in i-doit) | Description                                                                                                                                                                       |
+| Key                                             | Default Value                               | Recommended Value | Type                | Module<br>(Scope/[Add-on](../../../i-doit-add-ons/index.md) in i-doit) | Description                                                                                                                                                                       |
 | ----------------------------------------------- | ------------------------------------------- | ----------------- | ------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | auth.logging                                    | 1                                           | 1                 | Tenant-wide setting | PRO/CMDB                                                                   | Activates/ deactivates logging of authorization system notifications                                                                                                              |
 | auth.use-in-cmdb-explorer                       | 0                                           | 0                 | Tenant-wide setting | PRO/CMDB                                                                   | Activates considering of permissions in the CMDB explorer. Objects which don't have any rights assignments aren't displayed/ iterated.                                            |
@@ -57,7 +57,7 @@ Each setting consists of three parts:
 
 ## Expert setting (User related)
 
-| Key | Default Value | Recommended Value | Type | Module<br>(Scope/[Add-on](../../../i-doit-pro-add-ons/index.md) in i-doit) | Description |
+| Key | Default Value | Recommended Value | Type | Module<br>(Scope/[Add-on](../../../i-doit-add-ons/index.md) in i-doit) | Description |
 | --- | --- | --- | --- | --- | --- |
 | gui.leftcontent.width | 235 | 350 | User setting | Core | Defines the width of the left tree area in pixels |
 | workflows.max-checklist-entries | 7   |     | User setting | Workflows | Maximum entries in check lists |

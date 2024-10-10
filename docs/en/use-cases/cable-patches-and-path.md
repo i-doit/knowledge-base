@@ -7,7 +7,7 @@ Concept
 
 The mapping of cablings in i-doit is as versatile as in reality: Ethernet, fiberglass, electricity supply, connection of peripheral equipment - everything that has a connector and can be connected with a cable finds its place in the IT documentation.
 
-i-doit provides **a strict separation between the documentation of connections and the physical wiring**. A good example is the network wiring via Ethernet. For one thing, the connections between active network components (switches, routers, firewalls) can be recorded in the [category](../basics/structure-of-the-it-documentation.md) **Network → Port**. By this means, you can recognize which switch is connected with which server. Connection routes between several components become visible. On the other hand, passive components often play an important role: Patch panels and network outlets help to get things in line to avoid tangled cables. However, when the connections between active components cover your needs, you can ignore the passive components and their corresponding cables. i-doit is able to carry out the documentation of the cabling in the background; the user does not have to take out additional steps. If detailed knowledge of the cabling becomes necessary at a later time, the present documentation can just be complemented and the user does not have to start from scratch.
+i-doitvides **a strict separation between the documentation of connections and the physical wiring**. A good example is the network wiring via Ethernet. For one thing, the connections between active network components (switches, routers, firewalls) can be recorded in the [category](../basics/structure-of-the-it-documentation.md) **Network → Port**. By this means, you can recognize which switch is connected with which server. Connection routes between several components become visible. On the other hand, passive components often play an important role: Patch panels and network outlets help to get things in line to avoid tangled cables. However, when the connections between active components cover your needs, you can ignore the passive components and their corresponding cables. i-doit is able to carry out the documentation of the cabling in the background; the user does not have to take out additional steps. If detailed knowledge of the cabling becomes necessary at a later time, the present documentation can just be complemented and the user does not have to start from scratch.
 
 As usual in i-doit, the documentation of the cabling is executed with the help of objects and [attributes](../basics/structure-of-the-it-documentation.md). Beside numerous forms, i-doit supplies functions for visualization, evaluation and import. The following text describes these functions.
 
@@ -120,7 +120,7 @@ Cable trays are a standard in server rooms and computer centres. They bundle up 
 Object Type **Conduit**
 -------------------------
 
-Along the same lines as the **Cable Tray** object type (see above) is the **Conduit **object type.
+Along the same lines as the **Cable Tray** object type (see above) is the **Conduit**object type.
 
 [![cable-patches-tray2](../assets/images/en/use-cases/cable-patches-and-paths/11-cpap.png)](../assets/images/en/use-cases/cable-patches-and-paths/11-cpap.png)
 
@@ -169,7 +169,7 @@ The following options are available:
 
 | Option | Description |
 | --- | --- |
-| **Cabling type  <br>** | In which category do you want to create entries? You can choose between:<br><br>*   **Connectors** (see category **Cabling → Connectors**)<br>*   **FC Ports** (see category **Storage Area Network → FC Port**)<br>*   **Ports** (see category **Network → Port**)<br>*   **Interface** (see category **Cabling → Interface**)<br><br>The category is considered only with the first and with the last object of the respective cabling route. With all other objects in between the entries are imported in the category **Cabling → Connectors**. |
+| **Cabling type  <br>** | In which category do you want to create entries? You can choose between:<br><br>***Connectors** (see category **Cabling → Connectors**)<br>*   **FC Ports** (see category **Storage Area Network → FC Port**)<br>***Ports** (see category **Network → Port**)<br>*   **Interface** (see category **Cabling → Interface**)<br><br>The category is considered only with the first and with the last object of the respective cabling route. With all other objects in between the entries are imported in the category **Cabling → Connectors**. |
 | **Connection type  <br>** | Which connection is involved? You can select all entries of the **Connection type** attribute in the **Cabling → Connectors** category. The list can be adapted at **Administration → CMDB settings → Dialog Admin → Connectors:** **Connection type**. |
 | **Create non existing objects between the start object and end object automatically** | If this option is activated, you can create non-existing documented objects between start object and end object automatically during import. |
 | **Object type for all automatically generated objects** | If the above mentioned option is active, you have to define additionally to which object type the newly created objects shall be assigned. |

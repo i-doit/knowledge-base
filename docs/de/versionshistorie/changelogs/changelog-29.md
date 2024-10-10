@@ -1,6 +1,6 @@
 # Changelog 29
 
-[Task][Service]                    Add link to customer satisfaction survey in i-doit pro<br>
+[Task][Service]                    Add link to customer satisfaction survey in i-doit<br>
 [Task][Code (Internal)]            Integrate enhanced color picker component<br>
 [Task][Code (Internal)]            Clean up color usages<br>
 [Task][Permission system]          Improve authorization performance for locations<br>
@@ -12,7 +12,7 @@
 [Improvement][JDisc]               New console.php command: Configure JDisc common settings<br>
 [Improvement][JDisc]               Add matching profile selection for each JDisc type mapping<br>
 [Improvement][JDisc]               Black/Whitelist for Layer 3 networks and host addresses<br>
-[Improvement][Eval Journey]        Add i-doit pro EVAL survey link<br>
+[Improvement][Eval Journey]        Add i-doit EVAL survey link<br>
 [Bug][CMDB]                        Recycle locations via locally assigned objects causes error and removes data<br>
 [Bug][CMDB]                        Custom counter counts 2 instead of 1<br>
 [Bug][Security]                    XSS Vulnerability in the global search input<br>

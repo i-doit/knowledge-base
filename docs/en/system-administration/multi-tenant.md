@@ -48,7 +48,7 @@ Provided you use a multi-tenant license, you can set the maximum number of licen
 Add-ons per Tenant
 ------------------
 
-In the installation/update process of [add-ons](../i-doit-pro-add-ons/index.md) you can choose whether this action shall be carried out for a single tenant or for all tenants. All installed add-ons are displayed per tenant in the Admin Center in **Modules**. They can be (de-)activated per tenant. The deletion of add-ons takes place for all tenants.
+In the installation/update process of [add-ons](../i-doit-add-ons/index.md) you can choose whether this action shall be carried out for a single tenant or for all tenants. All installed add-ons are displayed per tenant in the Admin Center in **Modules**. They can be (de-)activated per tenant. The deletion of add-ons takes place for all tenants.
 
 [![Add-ons per Tenant](../assets/images/en/system-administration/multi-tenants/4-mt.png)](../assets/images/en/system-administration/multi-tenants/4-mt.png)
 

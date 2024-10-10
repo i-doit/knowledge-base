@@ -2,6 +2,7 @@
 
 Here we find the archive of old hotfix pages.
 
+-   [Version 32](v32.md)
 -   [Version 31](v31.md)
 -   [Version 30](v30.md)
 -   [Version 29](v29.md)

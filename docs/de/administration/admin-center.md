@@ -1,37 +1,38 @@
-# Admin Center
+---
+title: Admin-Center
+description: Admin-Center
+icon: admin-center
+status:
+lang: de
+---
 
-Das Admin Center ist eine in i-doit integrierte separate Administrations-Oberfläche. Hierüber werden mandantenübergreifende Einstellungen konfiguriert.
+# Admin-Center
+
+Das Admin-Center ist eine in i-doit integrierte separate Administrations-Oberfläche. Hierüber werden mandantenübergreifende Einstellungen konfiguriert.
+
+!!! tip "Add-ons und Subskriptionen sind nun auch über das [Add-on & Subscription Center](add-on-and-subscription-center.md) verwaltbar."
 
 ## Zugangsdaten
 
 !!! attention "Achtung!"
-    Bitte editieren Sie nicht das Passwort, falls eines bereits vergeben ist. Dies kann nur über die [CLI](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#admin-center-password-reset) geändert werden!
+    Sollten Sie sich nicht mehr einloggen können, dann kann das Passwort nur über die [CLI](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#admin-center-password-reset) geändert werden!
 
-Für das Admin Center gelten **separate Zugangsdaten**. Diese können bei der [Installation von i-doit](../installation/manuelle-installation/setup.md) festgelegt werden. Sollte dieser Schritt übersprungen werden, ist erst einmal kein Zugang zum Admin Center möglich. Um **nachträglich** Zugangsdaten zu vergeben, wird die Datei src/config.inc.php im Installationsverzeichnis von i-doit durch den CLI Befehl [**admin-center-password-reset**](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#console-admin-center-password-reset) aktualisiert, wobei username und password durch durch die im Befehl mitgegebenen Werte ausgetauscht werden :
-
-```shell
-$g_admin_auth = array(
-"username" => "password",
-);
-```
+Für das Admin-Center gelten **separate Zugangsdaten**. Diese können bei der [Installation von i-doit](../installation/manuelle-installation/setup.md) festgelegt werden. Sollte dieser Schritt übersprungen werden, ist erst einmal kein Zugang zum Admin-Center möglich.
 
 ## Anmeldung
 
-Das Admin Center ist über die [Login-Maske von i-doit](../grundlagen/erstanmeldung.md) zu erreichen. Unterhalb der Maske befindet sich der Link **Admin-Center**.
+Das Admin-Center ist über die [Login-Maske von i-doit](../grundlagen/erstanmeldung.md) zu erreichen. Unterhalb der Maske befindet sich der Link **Admin-Center**.
 
 [![Anmeldung](../assets/images/de/administration/admin-center/1-ac.png)](../assets/images/de/administration/admin-center/1-ac.png)
 
-!!! info "Zugangsdaten vergeben"
-    Dieser Link steht nur zur Verfügung, wenn die Zugangsdaten für das Admin Center konfiguriert wurden (siehe oben).
-
-Alternativ kann im Browser die URL zum Admin Center eingegeben werden. Dabei wird dem Link zu i-doit ein /admin/ nachgestellt:
+Alternativ kann im Browser die URL zum Admin-Center eingegeben werden. Dabei wird dem Link zu i-doit ein `/admin/` nachgestellt:
 
 <https://demo.i-doit.com/admin/>
 
 [![Anmeldung](../assets/images/de/administration/admin-center/2-ac.png)](../assets/images/de/administration/admin-center/2-ac.png)
 
 !!! info "Englische Oberfläche"
-    Das Admin Center ist vollständig in englisch gehalten.
+    Das Admin-Center ist vollständig in englisch gehalten.
 
 ## Übersicht
 
@@ -47,25 +48,23 @@ Im Bereich **Tenants** werden die Mandanten verwaltet. Dies wird allerdings nur 
 
 ## Lizenzen
 
-Über den Bereich **Licences** kann die [Lizenz für i-doit](../wartung-und-betrieb/lizenz-aktivieren.md) eingespielt werden.
+Über den Bereich **Licenses** wird die [Lizenzierung](../wartung-und-betrieb/lizenz-aktivieren.md) vorgenommen.
 
 [![Lizenzen](../assets/images/de/administration/admin-center/5-ac.png)](../assets/images/de/administration/admin-center/5-ac.png)
 
-Wie License Token verwendet werden wird [HIER](../wartung-und-betrieb/lizenz-aktivieren.md) erklärt.
-
 ## Add-ons
 
-Im Bereich **Modules** werden die [i-doit pro Add-ons](../i-doit-pro-add-ons/index.md) verwaltet. Jede Funktionalität von i-doit ist in einem Modul gekapselt. Viele davon gehören zum Kern (**core**) von i-doit, einige davon gelten als **extension**, wenn sie bei der Installation bereits installiert sind, oder als **addon**, wenn sie zusätzlich installiert werden können.
+Im Bereich **Add-ons** werden die [i-doit Add-ons](../i-doit-add-ons/index.md) verwaltet. Jede Funktionalität von i-doit ist in einem Modul gekapselt. Viele davon gehören zum Kern (**core**) von i-doit, einige davon gelten als **extension**, wenn sie bei der Installation bereits installiert sind, oder als **addon**, wenn sie zusätzlich installiert werden können.
 
-[![Add-ons](../assets/images/de/administration/admin-center/7-ac.png)](../assets/images/de/administration/admin-center/7-ac.png)
+[![Add-ons](../assets/images/de/administration/admin-center/6-ac.png)](../assets/images/de/administration/admin-center/6-ac.png)
 
 ## Support
 
-Bei einem Klick auf den Bereich **Support** wird das [Kundenportal](../administration/kundenportal.md) in einem neuen Tab geöffnet. Darüber können beispielsweise Download-Pakete und Lizenzen heruntergeladen werden.
+Bei einem Klick auf den Bereich **Support** wird das <help.i-doit.com></https.help.i-doit.com> in einem neuen Tab geöffnet. Dort können Sie Tickets erstellen und den Bearbeitungsstand einsehen.
 
 ## System settings
 
-Hier finden Sie die systembezogenen Einstellungen. Auch finden Sie hier den Link zu den [Experteneinstellungen](#expert-settings-system-related) auf der rechten Seite.
+Hier finden Sie die system bezogenen Einstellungen. Auch finden Sie hier den Link zu den [Experteneinstellungen](#expert-settings-system-related) auf der rechten Seite.
 
 ### LDAP Debug settings
 
@@ -130,17 +129,17 @@ Einstellung kann auch via [Expert settings](#expert-settings-system-related) ge�
 
 Im Bereich Config werden drei Punkte konfiguriert:
 
--   Über **Admin-Center Credentials** können die Zugangsdaten zum Admin Center geändert werden (siehe oben).
--   Über **Security configuration** kann die `Encryption method` ausgewählt werden.
+-   Über **Admin-Center Credentials** können die Zugangsdaten zum Admin-Center geändert werden.
+-   Über **Security configuration** kann die `Encryption method` ausgewählt werden. Sofern verfügbar.
 -   Über **Connection to i-doit System Database** kann der Zugang zur [System-Datenbank](../software-entwicklung/datenbank-modell/index.md) geändert werden.
 
-[![Konfiguration](../assets/images/de/administration/admin-center/9-ac.png)](../assets/images/de/administration/admin-center/9-ac.png)
+[![Konfiguration](../assets/images/de/administration/admin-center/7-ac.png)](../assets/images/de/administration/admin-center/7-ac.png)
 
-Die Einstellungen können alternativ in der Dateien src/config.inc.php im Installationsverzeichnis von i-doit geändert werden. Diese Datei wird bei der [Installation von i-doit](../installation/manuelle-installation/setup.md) erstellt. Wird ein [Update von i-doit](../wartung-und-betrieb/update-einspielen.md) eingespielt, wird automatisch ein [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) der Datei angegeben. Im Dateinamen wird das Datum des Updates angeben.
+Die Einstellungen können in **Notfällen** in der Datei `src/config.inc.php` im Installationsverzeichnis von i-doit geändert werden. Diese Datei wird bei der [Installation von i-doit](../installation/manuelle-installation/setup.md) erstellt. Wird ein [Update von i-doit](../wartung-und-betrieb/update-einspielen.md) eingespielt, wird automatisch ein [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) der Datei erstellt. Im Dateinamen wird das Datum des Updates angeben.
 
-## Expert settings (Systembezogenen)
+## Expert settings (System bezogen)
 
-Die Experteneinstellungen für das System befinden sich im Admin Center. Sie können sie erreichen über die [System settings](#system-settings)
+Die Experteneinstellungen für das komplette System befinden sich im Admin-Center. Sie erreichen diese über die [System settings](#system-settings)
 
 | Key                                             | Value                                                                                                                                                             | Description                            |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |

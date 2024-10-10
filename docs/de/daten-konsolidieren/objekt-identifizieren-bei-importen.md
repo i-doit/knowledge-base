@@ -10,7 +10,7 @@ Betrachtet werden in diesem Artikel folgende Datenimporte:
 
 *   [CSV-Datenimport](csv-datenimport/index.md)
 *   [JDisc Discovery](jdisc-discovery.md)
-*   [OCS Inventory NG](../i-doit-pro-add-ons/ocs-inventory-ng.md)
+*   [OCS Inventory NG](../i-doit-add-ons/ocs-inventory-ng.md)
 *   [h-inventory](h-inventory.md)
 
 Weitere Datenimporte verfolgen mitunter andere Vorgehensweisen.

@@ -103,7 +103,7 @@ As soon as your category is configured and set up, you can use the **Save** butt
 
 ## Technical Configuration
 
-The technical configuration helps you to use the custom category via [API](../i-doit-pro-add-ons/api/index.md). You can display it with the **Show technical configuration** button.
+The technical configuration helps you to use the custom category via [API](../i-doit-add-ons/api/index.md). You can display it with the **Show technical configuration** button.
 
 It is possible to change the technical keys for each field by click on **Change technical key**
 

@@ -191,20 +191,20 @@ Here you will find tenant related settings.
 
 | Option | Value |
 | - | - |
-| [ISMS](../../../i-doit-pro-add-ons/isms.md) Filter report views with location based rights | Yes or No |
-| [ISMS](../../../i-doit-pro-add-ons/isms.md) Show risk flag | Yes or No |
-| [ISMS](../../../i-doit-pro-add-ons/isms.md) Show risk title | Yes or No |
-| [Documents](../../../i-doit-pro-add-ons/documents/index.md) Comment revisions | Yes or No |
-| [Documents](../../../i-doit-pro-add-ons/documents/index.md) Cache generated documents | Yes or No |
-| [Maintenance](../../../i-doit-pro-add-ons/maintenance.md) Get email addresses from | Resolve contact groups and notify each person individually<br>Simply use the selected contacts without resolving contact groups |
-| [Events](../../../i-doit-pro-add-ons/events.md) Base64 Decode Event Parameters | Yes or No |
-| [Check_MK](../../../i-doit-pro-add-ons/checkmk.md) Tags may only consist of alphabetic characters, numbers, underscores and hyphens | Yes or No |
-| [Workflows](../../../i-doit-pro-add-ons/workflow.md) Hide checklists in my-doit area | Yes or No |
-| [IT-Grundschutz](../../../i-doit-pro-add-ons/viva/index.md) URL-Prefix to IT-Grundschutz Compendium | URL |
-| [IT-Grundschutz](../../../i-doit-pro-add-ons/viva/index.md) Upload folder for IT-Grundschutz Compendium | Directory path |
-| [Relocate-CI](../../../i-doit-pro-add-ons/relocate-ci.md) Remove the logical location after a object has been relocated physically. | Yes or No |
-| [Relocate-CI](../../../i-doit-pro-add-ons/relocate-ci.md) Update the physical location after a object has been relocated logically. | Yes or No |
-| [Relocate-CI](../../../i-doit-pro-add-ons/relocate-ci.md) Write logbook entries to all children of a relocated object. | Yes or No |
-| [Forms](../../../i-doit-pro-add-ons/forms/index.md) Forms Server | URL |
-| [Forms](../../../i-doit-pro-add-ons/forms/index.md) User name | String |
-| [Forms](../../../i-doit-pro-add-ons/forms/index.md) API Key | String |
+| [ISMS](../../../i-doit-add-ons/isms.md) Filter report views with location based rights | Yes or No |
+| [ISMS](../../../i-doit-add-ons/isms.md) Show risk flag | Yes or No |
+| [ISMS](../../../i-doit-add-ons/isms.md) Show risk title | Yes or No |
+| [Documents](../../../i-doit-add-ons/documents/index.md) Comment revisions | Yes or No |
+| [Documents](../../../i-doit-add-ons/documents/index.md) Cache generated documents | Yes or No |
+| [Maintenance](../../../i-doit-add-ons/maintenance.md) Get email addresses from | Resolve contact groups and notify each person individually<br>Simply use the selected contacts without resolving contact groups |
+| [Events](../../../i-doit-add-ons/events.md) Base64 Decode Event Parameters | Yes or No |
+| [Check_MK](../../../i-doit-add-ons/checkmk.md) Tags may only consist of alphabetic characters, numbers, underscores and hyphens | Yes or No |
+| [Workflows](../../../i-doit-add-ons/workflow.md) Hide checklists in my-doit area | Yes or No |
+| [IT-Grundschutz](../../../i-doit-add-ons/viva/index.md) URL-Prefix to IT-Grundschutz Compendium | URL |
+| [IT-Grundschutz](../../../i-doit-add-ons/viva/index.md) Upload folder for IT-Grundschutz Compendium | Directory path |
+| [Relocate-CI](../../../i-doit-add-ons/relocate-ci.md) Remove the logical location after a object has been relocated physically. | Yes or No |
+| [Relocate-CI](../../../i-doit-add-ons/relocate-ci.md) Update the physical location after a object has been relocated logically. | Yes or No |
+| [Relocate-CI](../../../i-doit-add-ons/relocate-ci.md) Write logbook entries to all children of a relocated object. | Yes or No |
+| [Forms](../../../i-doit-add-ons/forms/index.md) Forms Server | URL |
+| [Forms](../../../i-doit-add-ons/forms/index.md) User name | String |
+| [Forms](../../../i-doit-add-ons/forms/index.md) API Key | String |

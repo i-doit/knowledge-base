@@ -1,62 +1,63 @@
-# Admin Center
+---
+title: Admin-Center
+description: Admin-Center
+icon: admin-center
+status:
+lang: en
+---
 
-The admin center is a separate administration interface integrated in i-doit. Here the settings shared by all tenants are configured.
+# Admin-Center
+
+The Admin-Center is a separate administration interface integrated in i-doit. Here the settings shared by all tenants are configured.
+
+!!! tip "Add-ons and subscriptions can also be managed via the [Add-on & Subscription Center](add-on-and-subscription-center.md)."
 
 ## Credentials
 
 !!! attention "Attention!"
+    If you can no longer log in, the password can only be changed via the [CLI!](../automation-and-integration/cli/index.md)
 
-    Please do not edit the password if one is already assigned. This can only be changed via the [CLI!](../automation-and-integration/cli/index.md)
-
-For the admin center there are ==separate credentials==. These can be specified during the [installation of i-doit](../installation/manual-installation/setup.md). If this step was skipped, then there is no access to the admin center possible at first.
+For the Admin-Center there are **separate credentials**. These can be specified during the [installation of i-doit](../installation/manual-installation/setup.md). If this step was skipped, then there is no access to the Admin-Center possible at first.
 
 ## Signing in
 
-The admin center can be accessed via the [login screen of i-doit](../basics/initial-login.md). The ==Admin-Center== link is located beneath the login screen.
+The Admin-Center can be accessed via the [login screen of i-doit](../basics/initial-login.md). The **Admin-Center** link is located beneath the login screen.
 
 [![Signing In](../assets/images/en/system-administration/admin-center/1-ac.png)](../assets/images/en/system-administration/admin-center/1-ac.png)
 
-!!! info "Assign credentials"
+As an alternative, the URL to the Admin-Center can be entered in the browser. For this purpose, `/admin/` is added to the link to i-doit:
 
-    This link is only available if the credentials for the admin center have been configured (see above).
-
-As an alternative, the URL to the admin center can be entered in the browser. For this purpose, /admin/ is added to the link to i-doit :
-
-    https://i-doit.example.net/i-doit/admin/
+<https://demo.i-doit.com/admin/>
 
 [![Assign credentials](../assets/images/en/system-administration/admin-center/2-ac.png)](../assets/images/en/system-administration/admin-center/2-ac.png)
 
 ## Overview
 
-In the ==Home== section the currently installed version of _i-doit_ is displayed. In the ==Actions== item the ==i-doit environment info file== can be downloaded. This is a XML file with important system settings which can be very helpful for [troubleshooting](./troubleshooting/index.md).
+In the **Home** section the currently installed version of _i-doit_ is displayed. In the **Actions** item the **i-doit environment info file** can be downloaded. This is a XML file with important system settings which can be very helpful for [troubleshooting](./troubleshooting/index.md).
 
 [![Overview](../assets/images/en/system-administration/admin-center/3-ac.png)](../assets/images/en/system-administration/admin-center/3-ac.png)
 
 ## Tenants
 
-Tenants are administrated in the ==Tenants== section. This, however, is only relevant for a multi-tenant license of _i-doit_. New tenants can be generated using the ==Add new tenant== button. Existing tenants can also be edited, (de)activated or deleted completely. A deleted tenant can only be restored via a [back up](../maintenance-and-operation/backup-and-recovery/index.md).
+Tenants are administrated in the **Tenants** section. This, however, is only relevant for a multi-tenant license of _i-doit_. New tenants can be generated using the **Add new tenant** button. Existing tenants can also be edited, (de)activated or deleted completely. A deleted tenant can only be restored via a [back up](../maintenance-and-operation/backup-and-recovery/index.md).
 
 [![Tenants](../assets/images/en/system-administration/admin-center/4-ac.png)](../assets/images/en/system-administration/admin-center/4-ac.png)
 
 ## Licenses
 
-[Licenses for i-doit can be installed](../maintenance-and-operation/activate-license.md) via the ==Licenses== section.
+[Licenses](../maintenance-and-operation/activate-license.md) for i-doit can be installed via the **Licenses** section.
 
 [![Licenses](../assets/images/en/system-administration/admin-center/5-ac.png)](../assets/images/en/system-administration/admin-center/5-ac.png)
 
 ## Add-ons
 
-In the ==Add-ons== section the [Add-ons](../i-doit-pro-add-ons/index.md) are managed. Each feature of _i-doit_ is encapsulated in a Add-on.
+The [i-doit add-ons](../i-doit-add-ons/index.md) are managed in the **Add-ons** area. Each functionality of i-doit is encapsulated in a module. Many of them belong to the core (**core**) of i-doit, some of them are considered **extension** if they are already installed during installation, or **addon** if they can be installed additionally.
 
 [![Add-ons](../assets/images/en/system-administration/admin-center/6-ac.png)](../assets/images/en/system-administration/admin-center/6-ac.png)
 
 ## Support
 
-The [customer portal](../system-administration/customer-portal.md) is embedded in the ==Support== section. Download packages and licenses can be downloaded here among other things.
-
-[![Support](../assets/images/en/system-administration/admin-center/7-ac.png)](../assets/images/en/system-administration/admin-center/7-ac.png)
-
-The i-doit Support can be found here [help.i-doit.com](https://help.i-doit.com).
+Click on the **Support** area to open the <help.i-doit.com></https.help.i-doit.com> in a new tab. There you can create tickets and view the processing status.
 
 ## System settings
 
@@ -123,15 +124,15 @@ Setting can also be toggled via [Expert settings](#expert-settings-system-relate
 
 ## Config
 
-In the ==Config== tab three items can be configured:
+In the **Config** tab three items can be configured:
 
--   Via ==Admin-Center Credentials== the credentials to the admin center can be changed.
--   Via ==Security configuration== the encryption method can be changed.
--   Via ==Connection to i-doit System Database== the access to the system database can be changed.
+-   Via **Admin-Center Credentials** the credentials to the Admin-Center can be changed.
+-   Via **Security configuration** the encryption method can be changed. If available.
+-   Via **Connection to i-doit System Database** the access to the system database can be changed.
 
-[![Configuration](../assets/images/en/system-administration/admin-center/8-ac.png)](../assets/images/en/system-administration/admin-center/8-ac.png)
+[![Configuration](../assets/images/en/system-administration/admin-center/7-ac.png)](../assets/images/en/system-administration/admin-center/7-ac.png)
 
-The settings will be save in `i-doit/src/config.inc.php` file. This file is created during the [installation process of i-doit](../installation/manual-installation/setup.md). If an [update of i-doit](../maintenance-and-operation/update.md) is installed, a backup of the file is created automatically. The date of the update is stated in the file name.
+The settings can be changed in **emergency cases** in the file `src/config.inc.php` in the installation directory of i-doit. This file is created during the [installation of i-doit](../installation/manual-installation/setup.md). If an [update of i-doit](../maintenance-and-operation/update.md) is installed, a [backup](../maintenance-and-operation/backup-and-recovery/index.md) of the file is created automatically. The date of the update is specified in the file name.
 
 ## Expert settings (System related)
 

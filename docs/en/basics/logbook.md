@@ -63,7 +63,7 @@ You can generate a new entry in the logbook for each object. Activate the **Logb
 
 ## Entries from Third-Party Systems
 
-The logbook accepts new entries from third-party systems, for example through [imports](../consolidate-data/index.md), [service desks](../evaluation/cmdb-explorer/index.md), [network monitoring](../automation-and-integration/network-monitoring/index.md) and the [API](../i-doit-pro-add-ons/api/index.md).
+The logbook accepts new entries from third-party systems, for example through [imports](../consolidate-data/index.md), [service desks](../evaluation/cmdb-explorer/index.md), [network monitoring](../automation-and-integration/network-monitoring/index.md) and the [API](../i-doit-add-ons/api/index.md).
 
 ## Archiving and Restoring Older Entries
 
@@ -71,7 +71,7 @@ Whether older entries are to be archived or not can be configured via **Extras â
 
 [![Archiving and Restoring Older Entries](../assets/images/en/basics/logbook/8-lb.png)](../assets/images/en/basics/logbook/8-lb.png)
 
-Archiving is performed via the [i-doit Console](../i-doit-pro-add-ons/api/index.md). This step can therefore also be automated. A corresponding example of a call and a [list of parameters](../automation-and-integration/cli/console/options-and-parameters-cli.md) can be found in the corresponding article for the [logbook-archive](../automation-and-integration/cli/console/options-and-parameters-cli.md#logbook-archive) option.
+Archiving is performed via the [i-doit Console](../i-doit-add-ons/api/index.md). This step can therefore also be automated. A corresponding example of a call and a [list of parameters](../automation-and-integration/cli/console/options-and-parameters-cli.md) can be found in the corresponding article for the [logbook-archive](../automation-and-integration/cli/console/options-and-parameters-cli.md#logbook-archive) option.
 
 Example:
 

@@ -79,7 +79,7 @@ Die JDisc-Profile innerhalb von i-doit geben die Möglichkeit, die Verknüpfung 
 
 [![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.png)](../assets/images/de/daten-konsolidieren/jdisc/2-jdisc.png)
 
-In der Standard-Installation von i-doit sind bereits vordefinierte Profile vorhanden. Darunter befindet sich das Profile **Complete import**, dass darauf ausgelegt ist, die meisten Daten in i-doit zu importieren, die JDisc inventarisiert hat.
+In der Standard-Installation von i-doit ist bereits ein vordefiniertes **Beispiel** Profil vorhanden. Das vordefinierte JDisc Profil **Example** ist ein Profil das Ihnen aufzeigen soll, wie ein JDisc Profil gestaltet werden kann.
 
 !!! info "Eigene Profile erstellen"
     Es ist ratsam eigene Profile zu erstellen die auf die Objekttypen und Kategorien zugeschnitten sind.
@@ -177,6 +177,16 @@ Wenn die Einstellungen vollständig vorgenommen wurden, kann der Import über **
 Wenn der Import abgeschlossen wurde, wird eine Zusammenfassung im Bereich **Ergebnis** angezeigt.<br>
 Beim Import erzeugte Logs findest du im i-doit-Verzeichnis `log/`.
 
+Durch das klicken des **Pause** Buttons wird der Import für die Dauer einer festgelegten Zeitspanne pausiert. Dies kann mit der Einstellung Maximale Länge der Importpause innerhalb der i-doit JDisc Einstellungen konfiguriert werden. Nachdem das eingestellte Zeitlimit erreicht wurde wird der Import entweder abgebrochen oder fortgesetzt. Dies ist abhängig von der Einstellung Verhalten des pausierten Imports. Der Import kann außerdem jederzeit manuell fortgesetzt oder abgebrochen werden.<br>
+Ein pausierter Import kann über den **Fortsetzen** Button wieder fortgesetzt werden. <br>
+Der **Abbrechen** Button kann jeder Zeit während eines laufenden Imports betätigt werden und sorgt anschließend dafür, dass der laufende Import abgebrochen wird, die bereits importierten Objekte verbleiben allerdings in der Datenbank.<br>
+
+[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/7-jdisc.png)](../assets/images/de/daten-konsolidieren/jdisc/7-jdisc.png)
+
+Die oben genannten Einstellungen können unter **Verwaltung → Mandanten Verwaltung → Einstellungen für Mandant → JDisc** vorgenommen werden.
+
+[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/8-jdisc.png)](../assets/images/de/daten-konsolidieren/jdisc/8-jdisc.png)
+
 ## Import über die Kategorie JDisc Discovery
 
 Über die Kategorie JDisc Discovery können Sie einzelne Objekte aktualisieren.
@@ -184,7 +194,7 @@ Hier besteht die Möglichkeit, das Gerät über eine bestimmte Identifikation zu
 
 !!! note "Die Seriennummer ist nur verfügbar wenn der JDisc Server via [GraphQL](#discovery-einstellungen) verbunden wurde"
 
-[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.jpg)
+[![JDisc Profile](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.png)](../assets/images/de/daten-konsolidieren/jdisc/6-jdisc.png)
 
 Die Kategorie können Sie über die Objekttyp Konfiguration des Objekttyps hinzufügen.
 
@@ -224,6 +234,16 @@ Aufruf aus dem i-doit Verzeichnis:
 sudo -u www-data php console.php import-jdisc -c jdisc.ini
 ```
 
-### JDisc-Verfügbarkeit Report view
+## Report views
+
+### JDisc-Verfügbarkeit
 
 Unter **Report Manager -> Views** ist ein Report mit dem Namen **JDisc-Verfügbarkeit** zu finden, der i-doit Objekte mit JDisc objekten vergleicht.
+
+### JDisc delete devices
+
+!!! info "Dieser Report view funktioniert nur, wenn GraphQL konfiguriert ist"
+
+!!! warning "Dieser Report view löscht Objekte in JDisc. Wir empfehlen deshalb vor dem verwenden des Report views ein Backup oder einen Snapshot von JDisc zu machen!"
+
+Unter **Report Manager -> Views** ist ein Report mit dem Namen **JDisc delete devices** zu finden, dieser listet alle JDisc Objekte auf, die in i-doit archiviert oder gelöscht sind. Die jeweiligen Objekte können dann ausgewählt und anschließend in JDisc gelöscht werden. Die in JDisc gelöschten Objekte werden im **Device Deletion Log** gelogged.

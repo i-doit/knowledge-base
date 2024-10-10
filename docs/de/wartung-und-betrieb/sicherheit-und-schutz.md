@@ -234,19 +234,19 @@ Lässt sich ein Dienst nicht durch die eigene Konfiguration einschränken, hilft
 
 Speziell an Webserver richtet sich eine **Web Application Firewall**. Eine sehr bekannte ist [mod\_security](https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_security-with-apache-on-debian-ubuntu), eine Erweiterung für Apache.
 
-Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe, **dedizierte Firewall**. i-doit sollte erlaubt sein, nach Updates suchen und auf Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md) und [Vorlagen](../i-doit-pro-add-ons/documents/dokumentenvorlagen.md) zugreifen zu dürfen:
+Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe, **dedizierte Firewall**. i-doit sollte erlaubt sein, nach Updates suchen und auf Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md) und [Vorlagen](../i-doit-add-ons/documents/dokumentenvorlagen.md) zugreifen zu dürfen:
 
 | Host | Protokoll | Port | Beschreibung |
 | --- | --- | --- | --- |
 | **[login.i-doit.com](https://login.i-doit.com)** | **HTTPS** | **443** | Updates für i-doit und dessen Add-ons herunterladen |
 | **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)** | **HTTPS** | **443** | Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md)) |
-| **[r.i-doit.com](https://r.i-doit.com)** | **HTTPS** | **443** | Online Repositories (z. B. für [Vorlagen](../i-doit-pro-add-ons/documents/index.md)) |
+| **[r.i-doit.com](https://r.i-doit.com)** | **HTTPS** | **443** | Online Repositories (z. B. für [Vorlagen](../i-doit-add-ons/documents/index.md)) |
 | **[news.i-doit.com](<https://news.i-doit.com>)** | **HTTPS** | **443** | Neuigkeiten zu i-doit im Dashboard (open-Variante) |
 | **[i-doit.com](https://www.i-doit.com/en/)** | **HTTPS** | **443** | Nach Updates der pro-Variante suchen |
 | **[i-doit.org](https://i-doit.org)** | **HTTPS** | **443** | Nach Updates der open-Variante suchen |
 | **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)** | **HTTPS** | **443** | Lizenzen über Token abrufen |
 | **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)** | **HTTPS** | **443** | Ruft über den Lizenz Token verfügbare Downloads ab |
-| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)** | **HTTPS** | **443** | Lizenzen über Token abrufen | 
+| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)** | **HTTPS** | **443** | Lizenzen über Token abrufen |
 
 Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss der jeweilige Zugriff ebenfalls erlaubt sein:
 
@@ -260,7 +260,7 @@ Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss 
 | [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) | **PostgreSQL** | **25321** |
 | [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md) | **HTTP** | **9000** |
 | [JDisc Discovery GraphQL](../daten-konsolidieren/jdisc-discovery.md) | **HTTPs** | **443** |
-| [OCS Inventory NG](../i-doit-pro-add-ons/ocs-inventory-ng.md) | **MySQL** | **3306** |
+| [OCS Inventory NG](../i-doit-add-ons/ocs-inventory-ng.md) | **MySQL** | **3306** |
 
 ### Sicherheits-Frameworks
 
@@ -369,7 +369,7 @@ Das System ist gut in einem [Network Monitoring](../automatisierung-und-integrat
 
 Neben dem Network Monitoring bieten sich noch weitere Dienste an, die **Logs überwachen**. Bevor man mit der Installation eines ausgewachsenen Log-Servers (zum Beispiel [Logstash](https://www.elastic.co/products/logstash)) beginnt, kann man erst einmal auf kleinere Tools wie [Logwatch](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-logwatch-log-analyzer-and-reporter-on-a-vps) zurückgreifen. Logwatch überwacht die Log-Dateien von Apache, SSH sowie weiteren Diensten und verschickt täglich einen gut lesbaren Report per E-Mail.
 
-i-doit produziert ebenfalls laufend Log-Dateien. Im Installationsverzeichnis befinden sie sich unterhalb vom Verzeichnis log/. Eine (regelmäßige) Auswertung lohnt sich nicht nur bei der [Suche nach Fehlern](../administration/troubleshooting/index.md).
+i-doitduziert ebenfalls laufend Log-Dateien. Im Installationsverzeichnis befinden sie sich unterhalb vom Verzeichnis log/. Eine (regelmäßige) Auswertung lohnt sich nicht nur bei der [Suche nach Fehlern](../administration/troubleshooting/index.md).
 
 Nachdem [Cronjobs einmal eingerichtet](../automatisierung-und-integration/cli/console/index.md) worden sind, interessiert sich niemand mehr dafür. Das ist fatal, wenn beim automatischen Ausführen etwas schief geht und niemand etwas mitbekommt. Es ist demnach ratsam, die **Ausgaben von laufenden Jobs in Log-Dateien umzuleiten** und bei Bedarf E-Mails zu verschicken.
 
