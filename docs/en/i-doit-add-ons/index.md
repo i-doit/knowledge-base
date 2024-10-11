@@ -26,6 +26,7 @@ The [IT documentation](../basics/structure-of-the-it-documentation.md) and the [
 | **[Documents](./documents/index.md)**                                             | yes                 |
 | **[Events](./events.md)**                                                         | no                  |
 | **[Floorplan](./floorplan.md)**                                                   | no                  |
+| **[Flows](flows/index.md)**                                                       | yes                 |
 | **[Forms](forms/index.md)**                                                       | yes                 |
 | **HomeOffice ([GER](https://www.i-doit.com/blog/i-doit-home-office-add-on/))**    | no                  |
 | **[i-diary](./i-diary/index.md)**                                                 | no                  |
@@ -35,8 +36,8 @@ The [IT documentation](../basics/structure-of-the-it-documentation.md) and the [
 | **[Relocate CI](./relocate-ci.md)**                                               | no                  |
 | **[Replacement](./replacement.md)**                                               | no                  |
 | **Report Special ([GER](https://www.i-doit.com/blog/i-doit-reporting-special/))** | no                  |
-| **[VIVA](viva/index.md))**                                                        | yes                 |
-| **[VIVA2](viva2.md))**                                                            | yes                 |
+| **[VIVA](viva/index.md)**                                                         | yes                 |
+| **[VIVA2](viva2.md)**                                                             | yes                 |
 | **[Workflow](./workflow.md)**                                                     | no                  |
 
 Beside these add-ons there are many others which are provided by our partners or external developers. You can find a detailed list at the i-doit website [i-doit.com under **Product → Add-ons**](https://www.i-doit.com/en/i-doit/add-ons/).
