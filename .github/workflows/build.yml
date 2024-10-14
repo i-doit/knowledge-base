@@ -23,8 +23,7 @@ jobs:
           sudo swapoff -a
           sudo rm -f /swapfile
           sudo apt clean
-          docker image ls -aq
-          docker image rm $(docker image ls -aq)
+          docker rmi -f `docker images -qa `
           df -h
       - name: Pull container base image
         run: |
