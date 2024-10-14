@@ -20,10 +20,10 @@ jobs:
             ${{ runner.os }}-node-
       - name: free disk space
         run: |
-          sudo swapoff -a
-          sudo rm -f /swapfile
-          sudo apt clean
-          docker image rm $(docker image ls -aq)
+          sudo swapoff -a; \
+          sudo rm -f /swapfile; \
+          sudo apt clean; \
+          docker image rm $(docker image ls -aq); \
           df -h
       - name: Pull container base image
         run: |
