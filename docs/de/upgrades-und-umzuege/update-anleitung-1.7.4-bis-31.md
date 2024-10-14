@@ -574,7 +574,6 @@ Nun öffnen wir den Web-Interface-Updater und das Update auf v1.18 wird angezeig
     sudo systemctl stop mysql cron
     ```
 
-```md
     Führen Sie das Update auf Debian 11 durch
 
     ```sh
