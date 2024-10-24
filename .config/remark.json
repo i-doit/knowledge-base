@@ -18,7 +18,19 @@
         [
             "remark-lint-no-dead-urls",
             {
-                "skipLocalhost": true
+                "skipLocalhost": true,
+                "skipUrlPatterns": [
+                    "^https://(.+)\\.i-doit\\.com",
+                    "^https://(.+)\\.i-doit\\.org",
+                    "^https://(.+)\\.i-doit\\.cloud",
+                    "^https://(.+)\\.i-doit\\.coffee",
+                    "^https://(.+)\\.i-doit\\.xyz",
+                    "^http(|s)://(.+)\\.synetics\\.int",
+                    "^https://www.php\\.net"
+                ],
+                "deadOrAliveOptions": {
+                    "timeout": 5000
+                }
             }
         ],
         "remark-lint-no-repeat-punctuation",

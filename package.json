@@ -90,7 +90,7 @@
         "?test": "Run tests locally",
         "test": "run-s test:*",
         "?test:markdown": "Lint Markdown files",
-        "test:markdown": "remark --ignore-path .gitignore .",
+        "test:markdown": "remark --rc-path .config/remark.json --ignore-path .gitignore .",
         "?test:ec": "Verify that files are in harmony with .editorconfig",
         "test:ec": "ec",
         "?test:json": "Lint JSON files",
