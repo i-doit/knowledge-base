@@ -11,7 +11,7 @@ jobs:
       fail-fast: false
       matrix:
         script:
-# Actually no workaroung, we had to disable this test
+# Actually no workaround, we had to disable this test
 #          - markdown
           - ec
           - json
