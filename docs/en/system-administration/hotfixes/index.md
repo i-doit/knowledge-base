@@ -67,6 +67,12 @@ Improved location tree loading times.
 
 [i-doit_32_hotfix_ID-11151.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11151.zip){ .md-button .md-button--primary }
 
+## API Add-on
+
+### Reading a SQL Report without result (API-551)
+
+[api_2.2_hotfix_API-551_08fc1cb.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.2_hotfix_API-551_08fc1cb.zip){ .md-button .md-button--primary }
+
 ## Forms Add-on
 
 ### Object is not created when a attribute validation is used and no error is displayed (AOF-38)
