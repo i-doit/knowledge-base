@@ -67,6 +67,12 @@ Improved location tree loading times.
 
 [i-doit_32_hotfix_ID-11151.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11151.zip){ .md-button .md-button--primary }
 
+## API Add-on
+
+### Reading a SQL Report without result (API-551)
+
+[api_2.2_hotfix_API-551_08fc1cb.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.2_hotfix_API-551_08fc1cb.zip){ .md-button .md-button--primary }
+
 ## Forms Add-on
 
 ### Object is not created when a attribute validation is used and no error is displayed (AOF-38)
@@ -89,3 +95,9 @@ Improved location tree loading times.
     ```
 
 [workflow_1.2_1.3_hotfix_WORKFLOW-52_21fd9c0.zip :material-file-download:](../../assets/downloads/hotfixes/workflow/workflow_1.2_1.3_hotfix_WORKFLOW-52_21fd9c0.zip){ .md-button .md-button--primary }
+
+## Floorplan Add-on
+
+### 'Hide / unhide Object' Button does not hide or unhide the object (FP-140)
+
+[floorplan_1.8_hotfix_FP-140_2e1ca1e.zip :material-file-download:](../../assets/downloads/hotfixes/floorplan/floorplan_1.8_hotfix_FP-140_2e1ca1e.zip){ .md-button .md-button--primary }
