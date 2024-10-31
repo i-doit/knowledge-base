@@ -245,3 +245,7 @@ Under **Report Manager -> Views** you will find a report with the name **JDisc a
 !!! warning "This Report view will delete devices in JDisc, we advise to create a backup or snapshot JDisc before using the view!"
 
 Under **Report Manager -> Views** you will find a report with the name **JDisc delete devices**, which lists all objects which were imported from JDisc and are archived or deleted in i-doit. These objects can than be selected and than deleted in JDisc. The deleted objects will be logged in the **Device Deletion Log** in JDisc.
+
+## FAQ
+
+The JDisc import uses a fixed `memory_limit` of `2G`, if the search index exceeds this limit during the JDisc import the key `system.memory-limit.jdisc` = `3G` should be added to the [Expert settings](../system-administration/admin-center.md#expert-settings-system-related).

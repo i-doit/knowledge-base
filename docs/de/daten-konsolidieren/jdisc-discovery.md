@@ -247,3 +247,7 @@ Unter **Report Manager -> Views** ist ein Report mit dem Namen **JDisc-Verfügba
 !!! warning "Dieser Report view löscht Objekte in JDisc. Wir empfehlen deshalb vor dem verwenden des Report views ein Backup oder einen Snapshot von JDisc zu machen!"
 
 Unter **Report Manager -> Views** ist ein Report mit dem Namen **JDisc delete devices** zu finden, dieser listet alle JDisc Objekte auf, die in i-doit archiviert oder gelöscht sind. Die jeweiligen Objekte können dann ausgewählt und anschließend in JDisc gelöscht werden. Die in JDisc gelöschten Objekte werden im **Device Deletion Log** gelogged.
+
+## FAQ
+
+Der JDisc Import verwendet ein festes `memory_limit` von `2G`, sollte beim JDisc Import der Suchindex dieses Limit überschreiten sollte der Key `system.memory-limit.jdisc` = `3G` zu den [Experteneinstellungen](../administration/admin-center.md#expert-settings-system-bezogen) hinzugefügt werden.
