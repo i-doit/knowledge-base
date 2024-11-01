@@ -18,13 +18,23 @@ Auf dem neuen System sollten alle Dienste erreichbar sein, die i-doit erwartet: 
 
 Eines noch: Wir sollten alle System-Benutzerkonten und deren Passwörter parat haben, die auf dem alten und neuen System verwendet werden. Dazu zählen MySQL-Systembenutzer (root) und der i-doit-Benutzer für MySQL (standardmäßig idoit).
 
-## Daten aus Linux exportieren
+## Verzeichnis aus Linux exportieren
+
+Um das Dateiverzeichnis von dem Linux Server auf den Windows Server zu exportieren, verwenden wir den **zip** Befehl:
+
+    sudo zip -r i-doit.zip /var/www/html/i-doit/
+
+Wenn Ihre i-doit Instanz unter einem anderen Pfad liegt, passen Sie den Befehl entsprechend an.
+
+Jetzt muss nur noch die ZIP Datei heruntergeladen oder auf den Windows Server transferiert werden.
+
+## Datenbank aus Linux exportieren
 
 ## Daten nach Windows umziehen
 
-### Cronjobs
+Entpacken Sie die von Ihnen erstellte ZIP Datei unter dem folgenden Pfad und überschreiben Sie alle Dateien:
 
-Was noch fehlt, ist die Übertragung der Windows-Tasks zu Cronjobs. Zumeist geht es um wiederkehrende Aufgaben, die der [CLI](../automatisierung-und-integration/cli/index.md) erledigen soll. Wer bisher keine Tasks/Cronjobs für i-doit eingerichtet hatte, sollte dies spätestens jetzt tun.
+    C:\ProgramData\i-doit\apache-2.4\htdocs
 
 ### Nacharbeiten
 
