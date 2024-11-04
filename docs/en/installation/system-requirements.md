@@ -69,23 +69,23 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 === "33"
 
-    | **i-doit Version**   | 33                                                                  |
-    | -------------------- | ------------------------------------------------------------------- |
-    | **Release**          | 2024-10                                                             |
-    | **Apache Webserver** | 2.4                                                                 |
-    | **PHP**              | 8.1<br>==8.2== (empfohlen)<br>8.3                                   |
-    | **MySQL**            | 5.7 <br>8.0                                                         |
-    | **MariaDB**          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
+    | **i-doit Version**   | 33                                                                        |
+    | -------------------- | ------------------------------------------------------------------------- |
+    | **Release**          | 2024-10                                                                   |
+    | **Apache Webserver** | 2.4                                                                       |
+    | **PHP**              | 8.1<br>==8.2== (recommended)<br>8.3                                       |
+    | **MySQL**            | 5.7 <br>8.0                                                               |
+    | **MariaDB**          | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
 
 === "32"
 
-    | **i-doit Version**   | 32                                                                  |
-    | -------------------- | ------------------------------------------------------------------- |
-    | **Release**          | 2024-07                                                             |
-    | **Apache Webserver** | 2.4                                                                 |
-    | **PHP**              | 8.0<br>==8.1== (empfohlen)<br>8.2                                   |
-    | **MySQL**            | 5.7 <br>8.0                                                         |
-    | **MariaDB**          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
+    | **i-doit Version**   | 32                                                                        |
+    | -------------------- | ------------------------------------------------------------------------- |
+    | **Release**          | 2024-07                                                                   |
+    | **Apache Webserver** | 2.4                                                                       |
+    | **PHP**              | 8.0<br>==8.1== (empfohlen)<br>8.2                                         |
+    | **MySQL**            | 5.7 <br>8.0                                                               |
+    | **MariaDB**          | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
 
 === "31"
 
