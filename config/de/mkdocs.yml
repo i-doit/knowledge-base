@@ -608,7 +608,8 @@ nav:
       - Replacement: i-doit-add-ons/replacement.md
       - SHD SM-VIEW Connect:
           - i-doit-add-ons/sm-view-connect/index.md
-          - SHD SM-VIEW Connect - Telekom Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
+          - Telekom-Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
+          - Baramundi-Adapter: i-doit-add-ons/sm-view-connect/baramundi-adapter.md
       - VIVA:
           - i-doit-add-ons/viva/index.md
           - Einleitung zu VIVA: i-doit-add-ons/viva/einleitung-zu-viva.md
