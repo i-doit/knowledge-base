@@ -245,7 +245,8 @@ An external **dedicated firewall** is very useful, but of course its implementat
 | **[i-doit.com](https://www.i-doit.com/en/)** | **HTTPS** | **443** | Search for updates of the pro version |
 | **[i-doit.org](https://i-doit.org)** | **HTTPS** | **443** | Search for updates of the pro version |
 | **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)** | **HTTPS** | **443** | Retrieves available downloads via the license token |
-| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)**  | **HTTPS** | **443** | Retrieve licenses via token
+| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)**  | **HTTPS** | **443** | Retrieve licenses via token |
+| **[center.i-doit.com/portal/](https://center.i-doit.com/portal/)** | **HTTPS**| **443** | Access to the Add-on & Subscription Center |
 
 If one or more interfaces to third-party applications are configured, you also have to enable access respectively:
 
