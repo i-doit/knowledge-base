@@ -247,6 +247,7 @@ Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe,
 | **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)** | **HTTPS** | **443** | Lizenzen über Token abrufen |
 | **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)** | **HTTPS** | **443** | Ruft über den Lizenz Token verfügbare Downloads ab |
 | **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)** | **HTTPS** | **443** | Lizenzen über Token abrufen |
+| **[center.i-doit.com/portal/](https://center.i-doit.com/portal/)** | **HTTPS**| **443** | Zugriff auf das Add-on & Subscription Center |
 
 Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss der jeweilige Zugriff ebenfalls erlaubt sein:
 
