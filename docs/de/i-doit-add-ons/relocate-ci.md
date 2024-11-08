@@ -2,7 +2,7 @@
 
 Das [Add-on](./index.md) **CI-Umzug** dient zum einfachen Dokumentieren von Standort-Wechseln von IT-Komponenten. Im Vordergrund stehen klassische Arbeitsplatzkomponenten wie Desktop-PCs, Telefone oder Monitore. Unterstützt werden auch logische Gruppierungen durch den [Objekttyp](../grundlagen/struktur-it-dokumentation.md) Arbeitsplatz.
 
-Die Funktionen sind über **Extras → CI-Umzug** zu finden.
+Die Funktionen sind über **Add-ons → CI-Umzug** zu finden.
 
 [![CI-Umzug](../assets/images/de/i-doit-add-ons/relocate-ci/1-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/1-rci.png)
 
@@ -34,8 +34,7 @@ Um im Nachhinein genauere Informationen über die einzelnen umgezogenen Komponen
 
 [![Logbuch](../assets/images/de/i-doit-add-ons/relocate-ci/7-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/7-rci.png)
 
-Mandanten Optionen
-------------------
+## Mandanten Optionen
 
 | Option                                                                             | Wert         | Beschreibung                                                                      |
 | ---------------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------------- |
@@ -43,12 +42,11 @@ Mandanten Optionen
 | Nach einem logischen Umzug soll der physische Standort aktualisiert werden.        | Ja oder Nein | Soll der physische Standort dem logisch übergeordnetem Objekt angeglichen werden? |
 | Schreibe Logbucheinträge in alle positionierten Objekte eines umgezogenen Objekts. | Ja oder Nein | Sollen Logbucheinträge für alle umgezogenen Objekte angelegt werden?              |
 
-Releases
---------
+## Releases
 
 | Version | Datum      | Changelog                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
- 1.5     | 2024-11-05 | [Task] Use new Tree component + filter service <br> [Bug]  Fix PHP 8+ tree filter issue <br> [Bug]  Search function does not work, when searching for workplaces
+| 1.5     | 2024-11-05 | [Task] Use new Tree component + filter service <br> [Bug]  Fix PHP 8+ tree filter issue <br> [Bug]  Search function does not work, when searching for workplaces                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | 1.4     | 10.10.2024 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | 1.3     | 07.11.2023 | [Bug] Deselected Objects are moved anyway                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | 1.2     | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |

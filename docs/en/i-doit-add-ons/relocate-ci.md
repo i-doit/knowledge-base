@@ -2,7 +2,7 @@
 
 The add-on **Relocate-CI** allows for easy documentation of location changes of IT components. The focus is on classic workplace components such as desktop PCs, telephones or monitors. Supported are also logical groupings by the [object type](../basics/structure-of-the-it-documentation.md) Workplace.
 
-The functions are accessible via the **Extras** menu under **Relocate-CI**.
+The functions are accessible via the **Add-ons** menu under **Relocate-CI**.
 
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/1-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/1-rlci.png)
 
@@ -10,15 +10,15 @@ Two location browsers appear. Here you can navigate manually to an object or mor
 
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/2-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/2-rlci.png)
 
- In this specific example _Hans Olo_ will be relocated from _Raum 00.01_ in the _Zentrale_ in _Düsseldorf_ to _Raum 1.03._
+ In this specific example **Hans Olo** will be relocated from **1.06 Open-plan Office** in the **ACME Headquarter (HQ)** to **1.03 Office** in the **ACME Headquarter (HQ)**.
   
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/3-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/3-rlci.png)
 
-For this purpose, the _Hans Olo_ object is moved from its old location to the new one via drag and drop. The target location is highlighted in green to make it easily recognizable.  
+For this purpose, the **Hans Olo** workplace object is moved from its old location to the new one via drag and drop. The target location is highlighted in green to make it easily recognizable.  
 
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/4-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/4-rlci.png)
 
-A selection popup appears which displays the current location on the left and the future location to the right. Here you can decide which components will be relocated and which will remain in the old location. All objects that are below the selected object in its hierarchy will be displayed. In this case, these are the workplace components of _Hans Olo_. His PC and his monitor will move but the telephone is deselected as it will remain in the old room.
+A selection popup appears which displays the current location on the left and the future location to the right. Here you can decide which components will be relocated and which will remain in the old location. <br> All objects that are below the selected object in its hierarchy will be displayed. In this case, these are the workplace components of **Hans Olo**. His PC and his monitor will move but the telephone is deselected as it will remain in the old room.
 
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/5-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/5-rlci.png)
 
@@ -26,20 +26,19 @@ The tree view will be updated once the relocation is complete.
 
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/6-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/6-rlci.png)
 
-The relocation will be logged in the [logbook](../basics/logbook.md) of _i-doit_, however, only in the _Hans Olo_ object.
+The relocation will be logged in the [logbook](../basics/logbook.md) of **i-doit**, however, only in the **Hans Olo** workplace object.
 
 [![Logbook](../assets/images/en/i-doit-add-ons/relocate-ci/7-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/7-rlci.png)
 
-The relocation will additionally be logged in the relocation logbook under **Extras → Relocate-CI → Logbook**so you can receive more detailed information about the relocation and each relocated component. All affected components will be noted here.
+The relocation will additionally be logged in the relocation logbook under **Add-ons → Relocate-CI → Logbook**so you can receive more detailed information about the relocation and each relocated component. All affected components will be noted here.
 
 [![Logbook](../assets/images/en/i-doit-add-ons/relocate-ci/8-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/8-rlci.png)
 
-Releases
---------
+## Releases
 
 | Version | Date       | Changelog                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
-1.5     | 2024-11-05 | [Task] Use new Tree component + filter service <br>[Bug]  Fix PHP 8+ tree filter issue <br> [Bug]  Search function does not work, when searching for workplaces
+| ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.5     | 2024-11-05 | [Task] Use new Tree component + filter service <br>[Bug]  Fix PHP 8+ tree filter issue <br> [Bug]  Search function does not work, when searching for workplaces                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | 1.4     | 2024-10-10 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | 1.3     | 2023-11-07 | [Bug] Deselected Objects are moved anyway                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | 1.2     | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
