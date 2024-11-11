@@ -10,29 +10,39 @@ Two location browsers appear. Here you can navigate manually to an object or mor
 
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/2-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/2-rlci.png)
 
- In this specific example **Hans Olo** will be relocated from **1.06 Open-plan Office** in the **ACME Headquarter (HQ)** to **1.03 Office** in the **ACME Headquarter (HQ)**.
+ In this specific example workplace **Hans Olo** will be relocated from **1.06 Open-plan Office** in the **ACME Headquarter (HQ)** to **1.03 Office** in the **ACME Headquarter (HQ)**.
   
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/3-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/3-rlci.png)
 
 For this purpose, the **Hans Olo** workplace object is moved from its old location to the new one via drag and drop. The target location is highlighted in green to make it easily recognizable.
 
-[![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/4-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/4-rlci.png)
-
 A selection popup appears which displays the current location on the left and the future location to the right. Here you can decide which components will be relocated and which will remain in the old location.
 
 All objects that are below the selected object in its hierarchy will be displayed. In this case, these are the workplace components of **Hans Olo**. His PC and his monitor will move but the telephone is deselected as it will remain in the old room.
 
-[![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/5-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/5-rlci.png)
+[![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/4-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/4-rlci.png)
 
 The tree view will be updated once the relocation is complete.
 
+[![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/5-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/5-rlci.png)
+
+The relocation will be logged in the [logbook](../basics/logbook.md) of **i-doit**, for each object of the workplace **Hans Olo**, that has been moved.
+
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/6-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/6-rlci.png)
 
-The relocation will be logged in the [logbook](../basics/logbook.md) of **i-doit**, however, only in the **Hans Olo** workplace object.
+The relocation will additionally be logged in the relocation logbook under **Add-ons → Relocate-CI → Logbook** so you can receive more detailed information about the relocation and each relocated component. All affected components will be noted here.
 
 [![Logbook](../assets/images/en/i-doit-add-ons/relocate-ci/7-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/7-rlci.png)
 
-The relocation will additionally be logged in the relocation logbook under **Add-ons → Relocate-CI → Logbook**so you can receive more detailed information about the relocation and each relocated component. All affected components will be noted here.
+## Relocate-CI Settings
+
+You can set the **Relocate-CI Setting** under **Administration → [Tenant] Management → Settings for [Tenant] → Relocate-CI**.
+
+| Option                                                                             | Value        | Description                                                                      |
+| ---------------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------------- |
+| Remove the logical location after a object has been relocated physically.        | Yes or No | Should the local location be removed after a physical relocation?           |
+| Update the physical location after a object has been relocated logically.        | Yes or No | Should the physical location be aligned with the logically superior object? |
+| Write logbook entries to all children of a relocated object. | Yes or No | Should logbook entries be created for all moved objects?              |
 
 [![Logbook](../assets/images/en/i-doit-add-ons/relocate-ci/8-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/8-rlci.png)
 

@@ -10,37 +10,41 @@ Es öffnen sich zwei Standortbrowser. Hier kann manuell zu einem Objekt navigier
 
 [![Standortbrowser](../assets/images/de/i-doit-add-ons/relocate-ci/2-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/2-rci.png)
 
-In einem konkreten Beispiel wird Hans Olo von Raum 1.06 Open-plan Office in der Zentrale in Düsseldorf nach Raum 1.03 umgezogen.
+In einem konkreten Beispiel wird der Arbeitsplatz **Hans Olo** von Raum **1.06 Open-plan Office** nach Raum **1.03** umgezogen.
 
 [![Umzug](../assets/images/de/i-doit-add-ons/relocate-ci/3-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/3-rci.png)
 
-Dafür wird das Objekt Hans Olo per Drag and Drop von seinem alten Standort auf den neuen Standort gezogen. Die Ziellokation wird zur besseren Sichtbarkeit grün hervorgehoben.
-
-[![Objekt](../assets/images/de/i-doit-add-ons/relocate-ci/4-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/4-rci.png)
+Dafür wird der Arbeitsplatz **Hans Olo** per Drag and Drop von seinem alten Standort auf den neuen Standort gezogen. Die Ziellokation wird zur besseren Sichtbarkeit grün hervorgehoben.
 
 Nach dem Klicken auf Umzug Starten öffnet sich ein Umzugsdialog, der links den derzeitigen Standort und rechts den zukünftigen Standort anzeigt. Hier kann ausgewählt werden, welche Komponenten umgezogen werden und welche am alten Standort verbleiben.
 
-Es werden alle Objekte angezeigt, die hierarchisch "unterhalb" des ausgewählten Objektes liegen, im konkreten Fall also alle Arbeitsplatzkomponenten von Hans Olo. Umgezogen wird sein PC und sein Monitor, das Telefon wird abgewählt, da es im alten Raum verbleibt.
+Es werden alle Objekte angezeigt, die hierarchisch "unterhalb" des ausgewählten Objektes liegen, im konkreten Fall also alle Arbeitsplatzkomponenten von **Hans Olo**. Umgezogen wird sein PC und sein Monitor, das Telefon wird abgewählt, da es im alten Raum verbleibt.
 
-[![Umzugsdialog](../assets/images/de/i-doit-add-ons/relocate-ci/5-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/5-rci.png)
+[![Objekt](../assets/images/de/i-doit-add-ons/relocate-ci/4-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/4-rci.png)
 
 Ist der Umzug abgeschlossen, wird die Baumansicht aktualisiert.
 
-[![Baumansicht](../assets/images/de/i-doit-add-ons/relocate-ci/6-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/6-rci.png)
+[![Umzugsdialog](../assets/images/de/i-doit-add-ons/relocate-ci/5-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/5-rci.png)
 
-Der Umzug wird im [Logbuch](../grundlagen/logbuch.md) von i-doit vermerkt, allerdings nur im Objekt Hans Olo.
+Der Umzug wird im [Logbuch](../grundlagen/logbuch.md) von **i-doit** vermerkt, für jedes Objekt welches für den Arbeitsplatz **Hans Olo** umgezogen wurde.
+
+[![Baumansicht](../assets/images/de/i-doit-add-ons/relocate-ci/6-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/6-rci.png)
 
 Um im Nachhinein genauere Informationen über die einzelnen umgezogenen Komponenten zu bekommen, wird der Umzug zusätzlich im Detail im Umzugslogbuch unter **Add-ons → CI-Umzug → Logbuch** verzeichnet. Hier wird jede einzelne betroffenen Komponente aufgeführt.
 
 [![Logbuch](../assets/images/de/i-doit-add-ons/relocate-ci/7-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/7-rci.png)
 
-## Mandanten Optionen
+## CI-Umzug Optionen
+
+Die **CI-Umzug Optionen** können unter **Verwaltung → [Mandant] Verwaltung → Einstellungen für [Mandant] → CI-Umzug** angepasst werden
 
 | Option                                                                             | Wert         | Beschreibung                                                                      |
 | ---------------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------------- |
 | Nach einem physikalischen Umzug soll der logische Standort entfernt werden.        | Ja oder Nein | Soll der logische Standort nach einem physischem Umzug entfernt werden?           |
 | Nach einem logischen Umzug soll der physische Standort aktualisiert werden.        | Ja oder Nein | Soll der physische Standort dem logisch übergeordnetem Objekt angeglichen werden? |
 | Schreibe Logbucheinträge in alle positionierten Objekte eines umgezogenen Objekts. | Ja oder Nein | Sollen Logbucheinträge für alle umgezogenen Objekte angelegt werden?              |
+
+[![Logbuch](../assets/images/de/i-doit-add-ons/relocate-ci/8-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/8-rci.png)
 
 ## Releases
 
