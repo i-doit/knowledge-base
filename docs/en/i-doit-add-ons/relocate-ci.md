@@ -14,11 +14,13 @@ Two location browsers appear. Here you can navigate manually to an object or mor
   
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/3-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/3-rlci.png)
 
-For this purpose, the **Hans Olo** workplace object is moved from its old location to the new one via drag and drop. The target location is highlighted in green to make it easily recognizable.  
+For this purpose, the **Hans Olo** workplace object is moved from its old location to the new one via drag and drop. The target location is highlighted in green to make it easily recognizable.
 
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/4-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/4-rlci.png)
 
-A selection popup appears which displays the current location on the left and the future location to the right. Here you can decide which components will be relocated and which will remain in the old location. <br> All objects that are below the selected object in its hierarchy will be displayed. In this case, these are the workplace components of **Hans Olo**. His PC and his monitor will move but the telephone is deselected as it will remain in the old room.
+A selection popup appears which displays the current location on the left and the future location to the right. Here you can decide which components will be relocated and which will remain in the old location.
+
+All objects that are below the selected object in its hierarchy will be displayed. In this case, these are the workplace components of **Hans Olo**. His PC and his monitor will move but the telephone is deselected as it will remain in the old room.
 
 [![Relocate-CI](../assets/images/en/i-doit-add-ons/relocate-ci/5-rlci.png)](../assets/images/en/i-doit-add-ons/relocate-ci/5-rlci.png)
 
