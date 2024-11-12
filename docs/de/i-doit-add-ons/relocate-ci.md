@@ -36,7 +36,7 @@ Um im Nachhinein genauere Informationen über die einzelnen umgezogenen Komponen
 
 ## CI-Umzug Optionen
 
-Die **CI-Umzug Optionen** können unter **Verwaltung → [Mandant] Verwaltung → Einstellungen für [Mandant] → CI-Umzug** angepasst werden
+Die **CI-Umzug Optionen** können unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → CI-Umzug** angepasst werden
 
 | Option                                                                             | Wert         | Beschreibung                                                                      |
 | ---------------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------------- |
