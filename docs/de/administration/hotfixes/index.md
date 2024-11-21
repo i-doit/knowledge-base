@@ -67,6 +67,15 @@ Improved location tree loading times.
 
 [i-doit_32_hotfix_ID-11151.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11151.zip){ .md-button .md-button--primary }
 
+### SQL Syntax Error when watching report with Location and operator below as condition (ID-11343)
+
+??? info "Error message found in the logs"
+    ```
+    You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'under_location '38' ) ) ORDER BY obj_main.isys_obj__title DESC' at line 12
+    ```
+
+[i-doit_33_hotfix_ID-11343.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11343_88000e7.zip){ .md-button .md-button--primary }
+
 ## API Add-on
 
 ### Reading a SQL Report without result (API-551)
