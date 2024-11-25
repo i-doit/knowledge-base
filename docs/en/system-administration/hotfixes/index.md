@@ -52,6 +52,24 @@ Improved object list loading times.
 
 [i-doit_31_32_33_hotfix_ID-11230_ba0221d.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_31_32_33_hotfix_ID-11230_ba0221d.zip){ .md-button .md-button--primary }
 
+### Custom dialog+ fields empty after saving / no options to choose despite values (ID-11427)
+
+??? info "This Hotfix is a workaround that prevents the bug's trigger which are certain words in the field configuration, specifically in 'Addition'"
+    Known trigger words:
+    ```
+    'select'
+    'update'
+    'insert'
+    'drop'
+    'replace'
+    'delete'
+    'alter'
+    'create'
+    'set'
+    ```
+
+[i-doit_33_hotfix_ID-11427.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11427_ceee702.zip){ .md-button .md-button--primary }
+
 ### Improve performance of location tree when considering user rights (ID-11261)
 
 Improved location tree loading times.
