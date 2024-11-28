@@ -68,13 +68,14 @@ Improved object list loading times.
     'set'
     ```
 
-After installing the hotfix, please remove any of these words, if your identifier contains one or more of these strings and leave the rest untouched. This will ensure the values will be the same.
+!!! warning "Please note"
+    After installing the hotfix, please remove any of these words, if your identifier contains one or more of these strings and leave the rest untouched. This will ensure the values will be the same.
 
-Examples:
-If your identifier is set to ´update_identifier´, change this to ´_identifier´
-If it is set to ´my_update_identifier´, change it to ´my__identifier´ (two underscores)
+    Examples:
+    If your identifier is set to ´update_identifier´, change this to ´_identifier´
+    If it is set to ´my_update_identifier´, change it to ´my__identifier´ (two underscores)
 
-Please also note that you will need to refresh the browser cache after applying the hotfix.
+    Please also note that you will need to refresh the browser cache after applying the hotfix.
 
 [i-doit_33_hotfix_ID-11427.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11427_ceee702.zip){ .md-button .md-button--primary }
 
