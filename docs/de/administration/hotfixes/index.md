@@ -52,6 +52,33 @@ Improved object list loading times.
 
 [i-doit_31_32_33_hotfix_ID-11230_ba0221d.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_31_32_33_hotfix_ID-11230_ba0221d.zip){ .md-button .md-button--primary }
 
+### Custom dialog+ fields empty after saving / no options to choose despite values (ID-11427)
+
+??? info "This Hotfix prevents the saving of strings that trigger the bug in the dialog+ field identifier. A message will appear and the word gets deleted"
+    Known trigger words:
+    ```
+    'select'
+    'update'
+    'insert'
+    'drop'
+    'replace'
+    'delete'
+    'alter'
+    'create'
+    'set'
+    ```
+
+!!! warning "Please note"
+    After installing the hotfix, please remove any of these words, if your identifier contains one or more of these strings and leave the rest untouched. This will ensure the values will be the same.
+
+    Examples:
+    If your identifier is set to ´update_identifier´, change this to ´_identifier´
+    If it is set to ´my_update_identifier´, change it to ´my__identifier´ (two underscores)
+
+    Please also note that you will need to refresh the browser cache after applying the hotfix.
+
+[i-doit_33_hotfix_ID-11427.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11427_0bca4f0.zip){ .md-button .md-button--primary }
+
 ### Improve performance of location tree when considering user rights (ID-11261)
 
 Improved location tree loading times.
