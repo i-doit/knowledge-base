@@ -77,7 +77,7 @@ Improved object list loading times.
 
     Please also note that you will need to refresh the browser cache after applying the hotfix.
 
-[i-doit_33_hotfix_ID-11427.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11427_ceee702.zip){ .md-button .md-button--primary }
+[i-doit_33_hotfix_ID-11427.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11427_0bca4f0.zip){ .md-button .md-button--primary }
 
 ### Improve performance of location tree when considering user rights (ID-11261)
 
