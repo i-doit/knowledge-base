@@ -12,5 +12,5 @@ pip-audit == 2.7.3
 Pygments ~= 2.18.0
 pymdown-extensions ~= 10.12
 PyOpenSSL ~= 24.2.1
-wheel ~= 0.45.0
+wheel ~= 0.45.1
 yamllint == 1.35.1
