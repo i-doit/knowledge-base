@@ -46,6 +46,10 @@ Use this if you use any newer JDisc version, to be able to use the GraphQL Disco
 
 [i-doit_33_hotfix_ID-11256.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11256.zip){ .md-button .md-button--primary }
 
+### Unable to update objects via JDisc Discovery category (ID-11323)
+
+[i-doit_33_hotfix_ID-11323_21c277e.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11323_21c277e.zip){ .md-button .md-button--primary }
+
 ### Better Object list loading performance (ID-11230)
 
 Improved object list loading times.
