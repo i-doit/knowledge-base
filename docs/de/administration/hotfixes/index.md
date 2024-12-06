@@ -40,21 +40,48 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
-### Add support for new JDisc GraphQL Schema (ID-11256)
+### CSV Import doesn't set "Yes/No" Fields in custom categories (ID-11162)<br>A custom field change of type Yes-no-field is not logged in the Logbook (ID-11234)<br>API changes to yes-no-fields type are not written to the logbook (ID-11288)
 
-Use this if you use any newer JDisc version, to be able to use the GraphQL Discovery feature.
-
-[i-doit_33_hotfix_ID-11256.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11256.zip){ .md-button .md-button--primary }
-
-### Unable to update objects via JDisc Discovery category (ID-11323)
-
-[i-doit_33_hotfix_ID-11323_21c277e.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11323_21c277e.zip){ .md-button .md-button--primary }
+[i-doit_33_hotfix_ID-11162_ID-11234_ID-11288_f3ad92e.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11162_ID-11234_ID-11288_f3ad92e.zip){ .md-button .md-button--primary }
 
 ### Better Object list loading performance (ID-11230)
 
 Improved object list loading times.
 
 [i-doit_31_32_33_hotfix_ID-11230_ba0221d.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_31_32_33_hotfix_ID-11230_ba0221d.zip){ .md-button .md-button--primary }
+
+### Add support for new JDisc GraphQL Schema (ID-11256)
+
+Use this if you use any newer JDisc version, to be able to use the GraphQL Discovery feature.
+
+[i-doit_33_hotfix_ID-11256.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11256.zip){ .md-button .md-button--primary }
+
+### Improve performance of location tree when considering user rights (ID-11261)
+
+Improved location tree loading times.
+
+[i-doit_32_33_hotfix_ID-11261_2785c2c.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_32_33_hotfix_ID-11261_2785c2c.zip){ .md-button .md-button--primary }
+
+### Unable to update objects via JDisc Discovery category (ID-11323)
+
+[i-doit_33_hotfix_ID-11323_21c277e.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11323_21c277e.zip){ .md-button .md-button--primary }
+
+### SQL Syntax Error when watching report with Location and operator below as condition (ID-11343)
+
+??? info "Error message found in the logs"
+    ```
+    You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'under_location '38' ) ) ORDER BY obj_main.isys_obj__title DESC' at line 12
+    ```
+
+[i-doit_33_hotfix_ID-11343.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11343_88000e7.zip){ .md-button .md-button--primary }
+
+### Report Manager uses the same temp table for different conditions (ID-11374)
+
+[i-doit_32_33_hotfix_ID-11374_2e3f733.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_32_33_hotfix_ID-11374_2e3f733.zip){ .md-button .md-button--primary }
+
+### Condition without value empties other conditions (ID-11397)
+
+[i-doit_33_hotfix_ID-11397_edd07cb.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11397_edd07cb.zip){ .md-button .md-button--primary }
 
 ### Custom dialog+ fields empty after saving / no options to choose despite values (ID-11427)
 
@@ -83,29 +110,9 @@ Improved object list loading times.
 
 [i-doit_33_hotfix_ID-11427.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11427_0bca4f0.zip){ .md-button .md-button--primary }
 
-### Improve performance of location tree when considering user rights (ID-11261)
+### Use proxy in context of "Trouble Ticket System" (TTS) (ID-11446)
 
-Improved location tree loading times.
-
-[i-doit_32_33_hotfix_ID-11261_2785c2c.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_32_33_hotfix_ID-11261_2785c2c.zip){ .md-button .md-button--primary }
-
-### SQL error when using location path as a condition block at report manager (ID-11151)
-
-??? info "Error message found in the logs"
-    ```
-    Database error : Query error: 'SELECT obj_main.isys_obj__id AS '__id__', obj_main.isys_obj__title AS 'LC__UNIVERSAL__TITLE###0_1', j3.isys_obj__title AS 'LC__CMDB__CATG__LOCATION###0_26', j2.isys_catg_location_list__parentid as 'isys_cmdb_dao_category_g_location::dynamic_property_callback_location_path::DYNAMIC_PROPERTY::0', j2.isys_catg_location_list__parentid as 'isys_cmdb_dao_category_g_location::dynamic_property_callback_location_path::DYNAMIC_PROPERTY::1' FROM isys_obj AS obj_main INNER JOIN isys_cmdb_status AS obj_main_status ON obj_main_status.isys_cmdb_status__id = obj_main.isys_obj__isys_cmdb_status__id LEFT JOIN isys_catg_location_list AS j2 ON obj_main.isys_obj__id = j2.isys_catg_location_list__isys_obj__id LEFT JOIN isys_obj AS j3 ON j2.isys_catg_location_list__parentid = j3.isys_obj__id LEFT JOIN isys_obj_type AS j4 ON j4.isys_obj_type__id = obj_main.isys_obj__isys_obj_type__id WHERE TRUE AND ( (j4.isys_obj_type__id != '60' ) AND (j4.isys_obj_type__id != '63' ) ) AND ( (FALSE) ) AND ( ( ( j2.isys_catg_location_list__parentid IN (Array) ) AND (j2.isys_catg_location_list__parentid IS NOT NULL AND j2.isys_catg_location_list__parentid != '') ) ) ORDER BY obj_main.isys_obj__title ASC': Unknown column 'Array' in 'where clause'
-    ```
-
-[i-doit_32_hotfix_ID-11151.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11151.zip){ .md-button .md-button--primary }
-
-### SQL Syntax Error when watching report with Location and operator below as condition (ID-11343)
-
-??? info "Error message found in the logs"
-    ```
-    You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'under_location '38' ) ) ORDER BY obj_main.isys_obj__title DESC' at line 12
-    ```
-
-[i-doit_33_hotfix_ID-11343.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11343_88000e7.zip){ .md-button .md-button--primary }
+[i-doit_33_hotfix_ID-11446_f97efe2.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11446_f97efe2.zip){ .md-button .md-button--primary }
 
 ## API Add-on
 
