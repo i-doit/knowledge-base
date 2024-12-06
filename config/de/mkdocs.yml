@@ -550,6 +550,28 @@ nav:
           - Methoden:
               - v1:
                   - i-doit-add-ons/api/methoden/v1/index.md
+                  - cmdb.categories: i-doit-add-ons/api/methoden/v1/cmdb.categories.md
+                  - cmdb.category_info: i-doit-add-ons/api/methoden/v1/cmdb.category_info.md
+                  - cmdb.category: i-doit-add-ons/api/methoden/v1/cmdb.category.md
+                  - cmdb.condition: i-doit-add-ons/api/methoden/v1/cmdb.condition.md
+                  - cmdb.contact: i-doit-add-ons/api/methoden/v1/cmdb.contact.md
+                  - cmdb.dialog: i-doit-add-ons/api/methoden/v1/cmdb.dialog.md
+                  - cmdb.filter: i-doit-add-ons/api/methoden/v1/cmdb.filter.md
+                  - cmdb.impact: i-doit-add-ons/api/methoden/v1/cmdb.impact.md
+                  - cmdb.location_tree: i-doit-add-ons/api/methoden/v1/cmdb.location_tree.md
+                  - cmdb.logbook: i-doit-add-ons/api/methoden/v1/cmdb.logbook.md
+                  - cmdb.object_type_categories: i-doit-add-ons/api/methoden/v1/cmdb.object_type_categories.md
+                  - cmdb.object_type_groups: i-doit-add-ons/api/methoden/v1/cmdb.object_type_groups.md
+                  - cmdb.object_types: i-doit-add-ons/api/methoden/v1/cmdb.object_types.md
+                  - cmdb.object: i-doit-add-ons/api/methoden/v1/cmdb.object.md
+                  - cmdb.objects_by_relation: i-doit-add-ons/api/methoden/v1/cmdb.objects_by_relation.md
+                  - cmdb.objects: i-doit-add-ons/api/methoden/v1/cmdb.objects.md
+                  - cmdb.reports: i-doit-add-ons/api/methoden/v1/cmdb.reports.md
+                  - cmdb.status: i-doit-add-ons/api/methoden/v1/cmdb.status.md
+                  - cmdb.workstation_components: i-doit-add-ons/api/methoden/v1/cmdb.workstation_components.md
+                  - console: i-doit-add-ons/api/methoden/v1/console.md
+                  - idoit: i-doit-add-ons/api/methoden/v1/idoit.md
+                  - addons: i-doit-add-ons/api/methoden/v1/addons.md
               - v2:
                   - i-doit-add-ons/api/methoden/v2/index.md
                   - cmdb.external: i-doit-add-ons/api/methoden/v2/cmdb.external.md
@@ -608,8 +630,7 @@ nav:
       - Replacement: i-doit-add-ons/replacement.md
       - SHD SM-VIEW Connect:
           - i-doit-add-ons/sm-view-connect/index.md
-          - Telekom-Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
-          - Baramundi-Adapter: i-doit-add-ons/sm-view-connect/baramundi-adapter.md
+          - SHD SM-VIEW Connect - Telekom Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
       - VIVA:
           - i-doit-add-ons/viva/index.md
           - Einleitung zu VIVA: i-doit-add-ons/viva/einleitung-zu-viva.md
