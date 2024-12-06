@@ -3,16 +3,18 @@ title: addons
 description: Here you find API methods from Add-ons
 icon: material/api
 #status: updated
-lang: en
+lang: de
 ---
 
 # addons
 
-!!! example "Work in Progress"
+Hier werden bekannte Methoden zu Add-ons aufgelistet.
 
-## analysis.dataquality.read
+## analysis
 
-### Request parameters
+### analysis.dataquality.read
+
+#### Request parameters
 
 | Key           | JSON data typ | Required | Description                        |
 | ------------- | ------------- | -------- | ---------------------------------- |
@@ -29,7 +31,7 @@ lang: en
     | **Placeholder** | Placeholder    | Placeholder |
     | **Placeholder** | Placeholder    | Placeholder |
 
-### Example
+#### Example
 
 === "Request body"
 

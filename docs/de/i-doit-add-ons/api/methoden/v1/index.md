@@ -1,6 +1,8 @@
 # API Methoden
 
-In diesem Artikel erläutern wir die i-doit [JSON-RPC API](../../index.md) im Detail. Wenn Sie wissen wollen, welche Parameter für jede Methode gesetzt werden müssen/können und wie eine typische Antwort aussieht, ist dies die richtige Ressource.
+In dieser Sektion erläutern wir die i-doit [JSON-RPC API](../../index.md). Wenn Sie wissen wollen, welche Parameter für die jeweilige Methode gesetzt werden müssen/können und wie eine typische Antwort aussieht, ist dies die richtige Ressource.
+
+Einige Beispiele findest du hier. Mehr Informationen zu jeder Methode ist auf der jeweiligen Seite zu finden.
 
 ## Namespace [idoit]
 
@@ -8,197 +10,197 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
 ### idoit.search
 
-??? example "idoit.search"
+Über die API suchen
 
-    Suchen in i-doit
+#### Anfrage Parameter
 
-    **Anfrage Parameter**
+| Key   | JSON Datentyp | Erforderlich | Beschreibung                                  |
+| ----- | ------------- | ------------ | --------------------------------------------- |
+| **q** | String        | Ja           | Abfrage, zum Beispiel: **"My little server"** |
 
-    | Key   | JSON Datentyp | Erforderlich | Beschreibung                                  |
-    | ----- | ------------- | ------------ | --------------------------------------------- |
-    | **q** | String        | Ja           | Abfrage, zum Beispiel: **"My little server"** |
+#### Antwort
 
-    **Antwort**
+JSON-Schlüsselergebnis enthält ein Array von JSON-Objekten. Jedes Objekt enthält ein Suchergebnis.
 
-    JSON-Schlüsselergebnis enthält ein Array von JSON-Objekten. Jedes Objekt enthält ein Suchergebnis.
+| Key            | JSON Datentyp | Beschreibung                                     |
+| -------------- | ------------- | ------------------------------------------------ |
+| **documentID** | String        | Identifikationsnummer                            |
+| **key**        | String        | Attribut, das sich auf die Abfrage bezieht       |
+| **value**      | String        | Wert, der sich auf die Abfrage bezieht           |
+| **type**       | String        | [Add-on](../../index.md) oder Kernfunktionalität |
+| **link**       | String        | Relative URL, die direkt zum Suchergebnis führt  |
+| **score**      | Integer       | Punktevergabe (veraltet)                         |
 
-    | Key            | JSON Datentyp | Beschreibung                                     |
-    | -------------- | ------------- | ------------------------------------------------ |
-    | **documentID** | String        | Identifikationsnummer                            |
-    | **key**        | String        | Attribut, das sich auf die Abfrage bezieht       |
-    | **value**      | String        | Wert, der sich auf die Abfrage bezieht           |
-    | **type**       | String        | [Add-on](../../index.md) oder Kernfunktionalität |
-    | **link**       | String        | Relative URL, die direkt zum Suchergebnis führt  |
-    | **score**      | Integer       | Punktevergabe (veraltet)                         |
+#### Anfrage
 
-    **Anfrage**<br>
-    Body:
+Body:
 
-    ```json
-    {
-        "version": "2.0",
-        "method": "idoit.search",
-        "params": {
-            "q": "My little server",
-            "apikey": "xxx",
-            "language": "en"
+```json
+{
+    "version": "2.0",
+    "method": "idoit.search",
+    "params": {
+        "q": "My little server",
+        "apikey": "xxx",
+        "language": "en"
+    },
+    "id": 1
+}
+```
+
+#### Antwort
+
+Body:
+
+```json
+{
+    "jsonrpc": "2.0",
+    "result": [
+        {
+            "documentId": "1000",
+            "key": "Virtual Host > Global > Title",
+            "value": "My little server",
+            "type": "cmdb",
+            "link": "/?objID=1000&catgID=1&cateID=1029&highlight=My%20little%20server",
+            "score": 0
         },
-        "id": 1
-    }
-    ```
-
-    **Antwort**<br>
-    Body:
-
-    ```json
-    {
-        "jsonrpc": "2.0",
-        "result": [
-            {
-                "documentId": "1000",
-                "key": "Virtual Host > Global > Title",
-                "value": "My little server",
-                "type": "cmdb",
-                "link": "/?objID=1000&catgID=1&cateID=1029&highlight=My%20little%20server",
-                "score": 0
-            },
-            […]
-        ],
-        "id": 1
-    }
-    ```
+        […]
+    ],
+    "id": 1
+}
+```
 
 ### idoit.version
 
-??? example "idoit.version"
+Informationen über i-doit und den aktuellen Benutzer abrufen
 
-    Informationen über i-doit und den aktuellen Benutzer abrufen
+#### Anfrage Parameter
 
-    Anfrage Parameter
+Keine
 
-    Keine
+#### Antwort
 
-    Antwort
+Das JSON-Schlüsselergebnis enthält ein JSON-Objekt mit verschiedenen Informationen über i-doit selbst und den aktuellen Benutzer.
 
-    Das JSON-Schlüsselergebnis enthält ein JSON-Objekt mit verschiedenen Informationen über i-doit selbst und den aktuellen Benutzer.
+| Key                | JSON Datentyp | Beschreibung                                                                                |
+| ------------------ | ------------- | ------------------------------------------------------------------------------------------- |
+| **login**          | Array         | Informationen über den Benutzer, der die Anfrage durchgeführt hat; Einzelheiten siehe unten |
+| **login.userid**   | String        | Objekt-Identifikator (als numerische Zeichenfolge)                                          |
+| **login.name**     | String        | ObjektBezeichnung                                                                           |
+| **login.mail**     | String        | E-Mail-Adresse (siehe Kategorie Personen → Stammdaten)                                      |
+| **login.username** | String        | Benutzername (siehe Kategorie Personen → Login)                                             |
+| **login.tenant**   | String        | Name des Mandanten                                                                          |
+| **login.language** | String        | Sprache: "en" oder "de"                                                                     |
+| **version**        | String        | Version des installierten i-doit                                                            |
+| **step**           | String        | Dev, alpha oder beta release                                                                |
+| **type**           | String        | Variante: "OPEN" oder "PRO".                                                                |
 
-    | Key                | JSON Datentyp | Beschreibung                                                                                |
-    | ------------------ | ------------- | ------------------------------------------------------------------------------------------- |
-    | **login**          | Array         | Informationen über den Benutzer, der die Anfrage durchgeführt hat; Einzelheiten siehe unten |
-    | **login.userid**   | String        | Objekt-Identifikator (als numerische Zeichenfolge)                                          |
-    | **login.name**     | String        | ObjektBezeichnung                                                                           |
-    | **login.mail**     | String        | E-Mail-Adresse (siehe Kategorie Personen → Stammdaten)                                      |
-    | **login.username** | String        | Benutzername (siehe Kategorie Personen → Login)                                             |
-    | **login.tenant**   | String        | Name des Mandanten                                                                          |
-    | **login.language** | String        | Sprache: "en" oder "de"                                                                     |
-    | **version**        | String        | Version des installierten i-doit                                                            |
-    | **step**           | String        | Dev, alpha oder beta release                                                                |
-    | **type**           | String        | Variante: "OPEN" oder "PRO".                                                                |
+#### Anfrage
 
-    Beispiel
+Body:
 
-    **Anfrage**<br>
-    Body:
+```json
+{
+    "version": "2.0",
+    "method": "idoit.version",
+    "params": {
+        "apikey": "xxx",
+        "language": "en"
+    },
+    "id": 1
+}
+```
 
-    ```json
-    {
-        "version": "2.0",
-        "method": "idoit.version",
-        "params": {
-            "apikey": "xxx",
+#### Antwort
+
+Body:
+
+```json
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "login": {
+            "userid": "9",
+            "name": "i-doit Systemadministrator ",
+            "mail": "i-doit@acme-it.example",
+            "username": "admin",
+            "mandator": "ACME IT Solutions",
             "language": "en"
         },
-        "id": 1
-    }
-    ```
-
-    **Antwort**<br>
-    Body:
-
-    ```json
-    {
-        "jsonrpc": "2.0",
-        "result": {
-            "login": {
-                "userid": "9",
-                "name": "i-doit Systemadministrator ",
-                "mail": "i-doit@acme-it.example",
-                "username": "admin",
-                "mandator": "ACME IT Solutions",
-                "language": "en"
-            },
-            "version": "1.10.2",
-            "step": "",
-            "type": "PRO"
-        },
-        "id": 1
-    }
-    ```
+        "version": "1.10.2",
+        "step": "",
+        "type": "PRO"
+    },
+    "id": 1
+}
+```
 
 ### idoit.constants
 
-??? example "idoit.constants"
+Abrufen definierter Konstanten aus i-doit
 
-    Abrufen definierter Konstanten aus i-doit
+#### Anfrage Parameter
 
-    Anfrage Parameter
+Keine
 
-    Keine
+#### Antwort
 
-    Antwort
+JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    JSON-Schlüsselergebnis enthält ein JSON-Objekt.
+| Key              | JSON Datentyp | Beschreibung                                                                                                        |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **objectTypes**  | Object        | Liste der Objekttypen<br><br>Schlüssel: Objekttyp-Konstanten<br><br>Werte: Bezeichnung der übersetzten Objekttypen  |
+| **categories**   | Object        | Liste der globalen und spezifischen Kategorien                                                                      |
+| **categories.g** | Object        | Liste der globalen Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
+| **categories.s** | Object        | Liste spezifischer Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
 
-    | Key              | JSON Datentyp | Beschreibung                                                                                                        |
-    | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------- |
-    | **objectTypes**  | Object        | Liste der Objekttypen<br><br>Schlüssel: Objekttyp-Konstanten<br><br>Werte: Bezeichnung der übersetzten Objekttypen  |
-    | **categories**   | Object        | Liste der globalen und spezifischen Kategorien                                                                      |
-    | **categories.g** | Object        | Liste der globalen Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
-    | **categories.s** | Object        | Liste spezifischer Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
+#### Anfrage
 
-    Beispiel
-    **Anfrage**<br>
-    Body:
-    ```
-    {
-        "version": "2.0",
-        "method": "idoit.constants",
-        "params": {
-            "apikey": "xxx",
-            "language": "en"
+Body:
+
+```json
+{
+    "version": "2.0",
+    "method": "idoit.constants",
+    "params": {
+        "apikey": "xxx",
+        "language": "en"
+    },
+    "id": 1
+}
+```
+
+#### Antwort
+
+Body:
+
+```json
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "objectTypes": {
+            "C__OBJTYPE__SERVER": "Server",
+            […]
         },
-        "id": 1
-    }
-    ```
-    **Antwort**
-    <br>Body:
-    ```
-    {
-        "jsonrpc": "2.0",
-        "result": {
-            "objectTypes": {
-                "C__OBJTYPE__SERVER": "Server",
+        "categories": {
+            "g": {
+                "C__CATG__GLOBAL": "General",
+                "C__CATG__MODEL": "Model",
                 […]
             },
-            "categories": {
-                "g": {
-                    "C__CATG__GLOBAL": "General",
-                    "C__CATG__MODEL": "Model",
-                    […]
-                },
-                "s": {
-                    "C__CATS__MONITOR": "Monitor",
-                    […]
-                }
+            "s": {
+                "C__CATS__MONITOR": "Monitor",
+                […]
             }
-        },
-        "id": 1
-    }
-    ```
+        }
+    },
+    "id": 1
+}
+```
 
 ### idoit.login
 
-??? example "idoit.login"
+??? example "idoit.login (Zum aufklappen anklicken)"
 
     Neue Sitzung erstellen
 
@@ -333,7 +335,7 @@ Dieser Namensraum ist für gängige Methoden reserviert.
     {
         "jsonrpc": "2.0",
         "result": {
-            "message": "Logout successfull",
+            "message": "Logout successful",
             "result": true
         },
         "id": 3
@@ -342,7 +344,7 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
 ### idoit.logout
 
-??? example "idoit.logout"
+??? example "idoit.logout (Zum aufklappen anklicken)"
     Aktuelle Sitzung schließen
 
     Anfrage Parameter
@@ -353,10 +355,10 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key     | JSON Datentyp | Beschreibung                         |
-    | ------- | ------------- | ------------------------------------ |
-    | message | String        | Sollte **"Logout successfull" **sein |
-    | result  | Boolean       | Sollte **true **sein                 |
+    | Key     | JSON Datentyp | Beschreibung                        |
+    | ------- | ------------- | ----------------------------------- |
+    | message | String        | Sollte **"Logout successful" **sein |
+    | result  | Boolean       | Sollte **true **sein                |
 
     Beispiel
 
@@ -369,7 +371,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.object.create
 
-??? example "cmdb.object.create"
+??? example "cmdb.object.create (Zum aufklappen anklicken)"
 
     Erstelle ein neues Objekt mit einigen optionalen Informationen
 
@@ -418,7 +420,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "jsonrpc": "2.0",
         "result": {
             "id": "42",
-            "message": "Object was successfully created",
+            "message": "Object was successfuly created",
             "success": true
         },
         "id": 1
@@ -427,7 +429,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.object.read
 
-??? example "cmdb.object.read"
+??? example "cmdb.object.read (Zum aufklappen anklicken)"
 
     Lesen Sie allgemeine Informationen über eine Objekt
 
@@ -497,7 +499,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.object.update
 
-??? example "cmdb.object.update"
+??? example "cmdb.object.update (Zum aufklappen anklicken)"
 
     Objekt ändern, z.B. Bezeichnung eines Objekts
 
@@ -512,10 +514,10 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key         | JSON Datentyp | Beschreibung                                        |
-    | ----------- | ------------- | --------------------------------------------------- |
-    | **message** | String        | Sollte "Object title was successfully updated" sein |
-    | **success** | Boolean       | Sollte true sein                                    |
+    | Key         | JSON Datentyp | Beschreibung                                       |
+    | ----------- | ------------- | -------------------------------------------------- |
+    | **message** | String        | Sollte "Object title was successfuly updated" sein |
+    | **success** | Boolean       | Sollte true sein                                   |
 
     Beispiel
 
@@ -540,7 +542,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     {
         "jsonrpc": "2.0",
         "result": {
-            "message": "Object title was successfully updated",
+            "message": "Object title was successfuly updated",
             "success": true
         },
         "id": 1
@@ -549,7 +551,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.object.delete
 
-??? example "cmdb.object.delete"
+??? example "cmdb.object.delete (Zum aufklappen anklicken)"
 
     Löscht ein Objekt
 
@@ -587,7 +589,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     {
         "jsonrpc": "2.0",
         "result": {
-            "message": "Object(s) successfully archived!",
+            "message": "Object(s) successfuly archived!",
             "success": true
         },
         "id": 1
@@ -596,7 +598,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.object.recycle
 
-??? example "cmdb.object.recycle"
+??? example "cmdb.object.recycle (Zum aufklappen anklicken)"
 
     Wiederherstellen eines Objekts
 
@@ -646,7 +648,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.object.archive
 
-??? example "cmdb.object.archive"
+??? example "cmdb.object.archive (Zum aufklappen anklicken)"
 
     [Archiviert](../../../../grundlagen/lebens-und-dokumentationszyklus.md) ein Objekt
 
@@ -695,7 +697,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.object.purge
 
-??? example "cmdb.object.purge"
+??? example "cmdb.object.purge (Zum aufklappen anklicken)"
 
     [Löscht](../../../../grundlagen/lebens-und-dokumentationszyklus.md) ein Objekt
 
@@ -745,7 +747,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.object.markAsTemplate
 
-??? example "cmdb.object.markAsTemplate"
+??? example "cmdb.object.markAsTemplate (Zum aufklappen anklicken)"
 
     Setze den Objekt Zustand auf [Vorlage](../../../../effizientes-dokumentieren/templates.md)
 
@@ -795,7 +797,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.object.markAsMassChangeTemplate
 
-??? example "cmdb.object.markAsMassChangeTemplate"
+??? example "cmdb.object.markAsMassChangeTemplate (Zum aufklappen anklicken)"
 
     Setze den Objekt Zustand auf [Massenänderung](../../../../effizientes-dokumentieren/massenaenderung.md) [Template](../../../../effizientes-dokumentieren/templates.md)
 
@@ -845,7 +847,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.objects.read
 
-??? example "cmdb.objects.read"
+??? example "cmdb.objects.read (Zum aufklappen anklicken)"
 
     Hole eine Liste von Objekten
 
@@ -945,7 +947,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.category.save
 
-??? example "cmdb.category.save"
+??? example "cmdb.category.save (Zum aufklappen anklicken)"
 
     Kategorieeintrag eines Objekts erstellen oder aktualisieren.
 
@@ -999,7 +1001,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "jsonrpc": "2.0",
         "result": {
             "success": true,
-            "message": "Category entry successfully saved",
+            "message": "Category entry successfuly saved",
             "entry": 35
         }
     }
@@ -1033,7 +1035,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     "jsonrpc": "2.0",
     "result": {
         "success": true,
-        "message": "Category entry successfully saved",
+        "message": "Category entry successfuly saved",
         "entry": 24
     }
     }
@@ -1041,7 +1043,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.category.create
 
-??? example "cmdb.category.create"
+??? example "cmdb.category.create (Zum aufklappen anklicken)"
 
     Einen neuen Kategorieeintrag erstellen
 
@@ -1092,7 +1094,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "jsonrpc": "2.0",
         "result": {
             "id": "123",
-            "message": "Category entry successfully created.",
+            "message": "Category entry successfuly created.",
             "success": true
         },
         "id": 1
@@ -1101,7 +1103,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.category.read
 
-??? example "cmdb.category.read"
+??? example "cmdb.category.read (Zum aufklappen anklicken)"
 
     Lesen Sie einen oder mehrere Kategorieeinträge für ein Objekt
 
@@ -1188,7 +1190,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.category.update
 
-??? example "cmdb.category.update"
+??? example "cmdb.category.update (Zum aufklappen anklicken)"
 
     Kategorieeintrag eines Objekts aktualisieren
 
@@ -1205,10 +1207,10 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-    | Key         | JSON Datentyp | Beschreibung                                              |
-    | ----------- | ------------- | --------------------------------------------------------- |
-    | **success** | Boolean       | Sollte true sein                                          |
-    | **message** | String        | Sollte "**Category entry successfully** **saved**" lauten |
+    | Key         | JSON Datentyp | Beschreibung                                             |
+    | ----------- | ------------- | -------------------------------------------------------- |
+    | **success** | Boolean       | Sollte true sein                                         |
+    | **message** | String        | Sollte "**Category entry successfuly** **saved**" lauten |
 
     Beispiel
 
@@ -1237,7 +1239,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "jsonrpc": "2.0",
         "result": {
             "success": true,
-            "message": "Category entry successfully saved"
+            "message": "Category entry successfuly saved"
         },
         "id": 1
     }
@@ -1245,7 +1247,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.category.delete
 
-??? example "cmdb.category.delete"
+??? example "cmdb.category.delete (Zum aufklappen anklicken)"
 
     Einen Kategorieeintrag für ein Objekt archivieren, als gelöscht markieren oder aus der Datenbank bereinigen
 
@@ -1298,7 +1300,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "jsonrpc": "2.0",
         "result": {
             "success": true,
-            "message": "Category entry '3' successfully deleted"
+            "message": "Category entry '3' successfuly deleted"
         },
         "id": 1
     }
@@ -1306,7 +1308,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.category.quickpurge
 
-??? example "cmdb.category.quickpurge"
+??? example "cmdb.category.quickpurge (Zum aufklappen anklicken)"
 
     Wenn [Quickpurge](../../../../grundlagen/objekt-liste/erweiterte-einstellungen.md) aktiviert ist, bereinigen Sie einen Kategorieeintrag eines Objekts direkt aus der Datenbank.
 
@@ -1352,7 +1354,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "jsonrpc": "2.0",
         "result": {
             "success": true,
-            "message": "Category entry '3' successfully purged"
+            "message": "Category entry '3' successfuly purged"
         },
         "id": 1
     }
@@ -1360,7 +1362,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.category.purge
 
-??? example "cmdb.category.purge"
+??? example "cmdb.category.purge (Zum aufklappen anklicken)"
 
     Bereinigen eines Kategorieeintrags eines Objekts.
     Es funktioniert bei multi-value Kategorien und single-value Kategorien.
@@ -1408,7 +1410,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "jsonrpc": "2.0",
         "result": {
             "success": true,
-            "message": "Entry 33 has been successfully purged from 4 to 5."
+            "message": "Entry 33 has been successfuly purged from 4 to 5."
         }
     }
     ```
@@ -1439,14 +1441,14 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "jsonrpc": "2.0",
         "result": {
             "success": true,
-            "message": "Entry 24 has been successfully purged from 2 to 5."
+            "message": "Entry 24 has been successfuly purged from 2 to 5."
         }
     }
     ```
 
 ### cmdb.category.recycle
 
-??? example "cmdb.category.recycle"
+??? example "cmdb.category.recycle (Zum aufklappen anklicken)"
 
     Einschränkungen
 
@@ -1496,14 +1498,14 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "jsonrpc": "2.0",
         "result": {
             "success": true,
-            "message": "Entry 32 has been successfully recycled from 4 to 2."
+            "message": "Entry 32 has been successfuly recycled from 4 to 2."
         }
     }
     ```
 
 ### cmdb.category.archive
 
-??? example "cmdb.category.archive"
+??? example "cmdb.category.archive (Zum aufklappen anklicken)"
 
     Limitations
 
@@ -1553,14 +1555,14 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "jsonrpc": "2.0",
         "result": {
             "success": true,
-            "message": "Entry 32 has been successfully archived from 2 to 3."
+            "message": "Entry 32 has been successfuly archived from 2 to 3."
         }
     }
     ```
 
 ### cmdb.dialog.read
 
-??? example "cmdb.dialog.read"
+??? example "cmdb.dialog.read (Zum aufklappen anklicken)"
 
     Lese die Dialoginformationen.
 
@@ -1621,7 +1623,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.dialog.create
 
-??? example "cmdb.dialog.create"
+??? example "cmdb.dialog.create (Zum aufklappen anklicken)"
 
     Dialoge erstellen
 
@@ -1675,7 +1677,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.dialog.update
 
-??? example "cmdb.dialog.update"
+??? example "cmdb.dialog.update (Zum aufklappen anklicken)"
 
     Einen [Dialogeintrag](../../../../grundlagen/dialog-admin.md) aktualisieren
 
@@ -1731,7 +1733,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.dialog.delete
 
-??? example "cmdb.dialog.delete"
+??? example "cmdb.dialog.delete (Zum aufklappen anklicken)"
 
     Löscht Dialoge
 
@@ -1785,7 +1787,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ### cmdb.reports.read
 
-??? example "cmdb.reports.read"
+??? example "cmdb.reports.read (Zum aufklappen anklicken)"
 
     Bericht anzeigen.
 
