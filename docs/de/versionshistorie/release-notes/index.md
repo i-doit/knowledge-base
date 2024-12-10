@@ -1,3 +1,10 @@
+---
+# Rank this page down for search
+# Use values above 1 to rank up and values below 1 to rank down
+search:
+  boost: 0.1
+---
+
 # Release Notes
 
 Welche Änderungen sind mit welchen Versionen veröffentlicht worden?
