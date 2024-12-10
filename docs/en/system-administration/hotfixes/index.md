@@ -148,3 +148,9 @@ Improved location tree loading times.
 ### Hide/unhide Object Button does not hide or unhide the object (FP-140)
 
 [floorplan_1.8_hotfix_FP-140_2e1ca1e.zip :material-file-download:](../../assets/downloads/hotfixes/floorplan/floorplan_1.8_hotfix_FP-140_2e1ca1e.zip){ .md-button .md-button--primary }
+
+## Swap-CI
+
+### TypeErrors when selecting objects to swap
+
+[Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip :material-file-download:](../../assets/downloads/hotfixes/swap-ci/Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip){ .md-button .md-button--primary }
