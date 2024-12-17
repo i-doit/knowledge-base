@@ -1,8 +1,14 @@
-# Gerätetausch
+---
+title: Replacement Add-on
+description: Replacement Add-on
+icon: addons/replacement
+status:
+lang: de
+---
 
-Ein neuer Switch wird in Betrieb genommen, doch alle Verbindungen sollen erhalten bleiben. Wer hier nicht im Anschluss alle Anschlüsse neu dokumentieren will, nutzt das [Add-on](./index.md) **Gerätetausch**. Diese erlaubt den Austausch von [Objekten](../grundlagen/struktur-it-dokumentation.md) bei konfigurierbarer Übernahme der bestehenden Verbindungen.
+Ein neuer Switch wird in Betrieb genommen, doch alle Verbindungen sollen erhalten bleiben. Wer hier nicht im Anschluss z.B. alle Anschlüsse neu dokumentieren will, nutzt das [Add-on](./index.md) **Replacement**. Diese erlaubt den Austausch von [Objekten](../grundlagen/struktur-it-dokumentation.md) bei konfigurierbarer Übernahme der bestehenden Verbindungen.
 
-Das Add-on hieß zuvor **SwapCI** bis zur Version 1.3.1.
+!!! note "Das Add-on hieß zuvor **SwapCI** bis zur Version 1.3.1."
 
 ## Download und Installation
 
@@ -12,13 +18,14 @@ Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen
 
 Die Konfiguration befindet sich unter **Verwaltung → Add-ons → Gerätetausch → Konfiguration**. Sie dient größtenteils für die Definition von Standardwerten, um häufiges Tauschen zu standardisieren und zu beschleunigen.
 
-| Option                               | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Auswählbare Objekt-Typen**         | Welche Objekte welchen Typs getauscht werden können, wird hier festgelegt. Zudem wird pro [Objekttyp](../grundlagen/struktur-it-dokumentation.md) festgelegt, welche [Kategorien](../grundlagen/struktur-it-dokumentation.md) (und somit welche [Attribute](../grundlagen/struktur-it-dokumentation.md)) getauscht werden sollen. Diejenigen Kategorien, die nicht ausgewählt werden, bleiben von einem Tausch unberührt. |
-| **CMDB Status für Tauschgeräte**     | Die Auswahl, welche Objekte zum Tauschen angeboten werden, kann über deren [**CMDB-Status**](../grundlagen/lebens-und-dokumentationszyklus.md) eingeschränkt werden.                                                                                                                                                                                                                                                      |
-| **"Tausch" Status berücksichtigen?** | Wenn der Tausch-Status berücksichtigt wird, erhält das getauschte Gerät den **CMDB-Status** **Getauscht** und das Tauschgerät den **CMDB-Status In Betrieb**.                                                                                                                                                                                                                                                             |
-| **Getauschte Geräte archivieren?**   | Das das Objekt, das getauscht wird, den [Zustand](../grundlagen/lebens-und-dokumentationszyklus.md) **Archiviert** erhalten?                                                                                                                                                                                                                                                                                              |
-| **SYS-ID ebenfalls tauschen?**       | Soll das Attribut **SYS-ID** der Kategorie **Allgemein** getauscht werden? Hierbei handelt es sich um [ein Attribut zur eindeutigen Referenzierung](../grundlagen/eindeutige-referenzierungen.md).                                                                                                                                                                                                                        |
+| Option                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Auswählbare Objekt-Typen**                        | Welche Objekte welchen Typs getauscht werden können, wird hier festgelegt. Zudem wird pro [Objekttyp](../grundlagen/struktur-it-dokumentation.md) festgelegt, welche [Kategorien](../grundlagen/struktur-it-dokumentation.md) (und somit welche [Attribute](../grundlagen/struktur-it-dokumentation.md)) getauscht werden sollen. Diejenigen Kategorien, die nicht ausgewählt werden, bleiben von einem Tausch unberührt. |
+| **CMDB Status für Tauschgeräte**                    | Die Auswahl, welche Objekte zum Tauschen angeboten werden, kann über deren [**CMDB-Status**](../grundlagen/lebens-und-dokumentationszyklus.md) eingeschränkt werden.                                                                                                                                                                                                                                                      |
+| **"Tausch" Status berücksichtigen?**                | Wenn der Tausch-Status berücksichtigt wird, erhält das getauschte Gerät den **CMDB-Status** **Getauscht** und das Tauschgerät den **CMDB-Status In Betrieb**.                                                                                                                                                                                                                                                             |
+| **Getauschte Geräte archivieren?**                  | Das das Objekt, das getauscht wird, den [Zustand](../grundlagen/lebens-und-dokumentationszyklus.md) **Archiviert** erhalten?                                                                                                                                                                                                                                                                                              |
+| **SYS-ID ebenfalls tauschen?**                      | Soll das Attribut **SYS-ID** der Kategorie **Allgemein** getauscht werden? Hierbei handelt es sich um [ein Attribut zur eindeutigen Referenzierung](../grundlagen/eindeutige-referenzierungen.md).                                                                                                                                                                                                                        |
+| **Kategoriedaten getauschter Objekte beibehalten?** | Sollen die Kategoriedaten von beiden Objekten getauscht werden? A -> B und B -> A. Wenn "Nein" ausgewählt wird, wird das ausgetauschte Objekt keine Kategoriedaten übernehmen.                                                                                                                                                                                                                                            |
 
 ## Rechtevergabe
 
@@ -37,32 +44,25 @@ Unter **Verwaltung → Berechtigungen → Gerätetausch** können [Rechte für P
 Bevor zwei Objekte miteinander getauscht werden können, müssen folgende Voraussetzungen erfüllt sein:
 
 -   Beide Objekte haben denselben Objekttyp.
--   Ein Objekt darf nicht mit sich selbst getauscht werden.
+-   Ein Objekt kann nicht mit sich selbst getauscht werden.
 
 ## Objekte tauschen
 
 Um ein Objekt gegen ein anderes zu tauschen, gibt es drei Wege:
 
-1. Innerhalb einer [Objekt-Liste](../grundlagen/objekt-liste/index.md) beide Objekte auswählen und in der [Aktionsleiste](../grundlagen/objekt-liste/aktionsleiste.md) den Button **Tauschen** klicken
+1. Innerhalb einer [Objekt-Liste](../grundlagen/objekt-liste/index.md) beide Objekte auswählen und in der [Aktionsleiste](../grundlagen/objekt-liste/aktionsleiste.md) den Button **Tauschen** klicken.
 2. Innerhalb eines Objekts in der Aktionsleiste den Button **Tauschen** klicken und anschließend das Tauschgerät unter **Lagerndes Objekt** auswählen
 3. Unter **Add-ons → Gerätetausch** die beiden Objekte unter **Zu tauschendes Objekt** und **Lagerndes Objekt** auswählen
 
-Über den Button **Umstellen** können die ausgewählten Objekte vertauscht werden.
+!!! note "Nur möglich wenn zuvor die #Konfiguration vorgenommen wurde und der Objekttyp ausgewählt wurde."
+
+Über den Button **Tauschen** können die ausgewählten Objekte vertauscht werden.
 
 [![Auswahl über Objekt-Liste](../assets/images/de/i-doit-add-ons/replacement/1-rp.png)](../assets/images/de/i-doit-add-ons/replacement/1-rp.png)
 
 [![Auswahl über Objekt](../assets/images/de/i-doit-add-ons/replacement/2-rp.png)](../assets/images/de/i-doit-add-ons/replacement/2-rp.png)
 
-Nach der Auswahl der beiden Objekte können weitere Optionen angepasst werden. Die Vorauswahl stammt aus der oben genannten Konfiguration.
-
-| Option                               | Beschreibung |
-| ------------------------------------ | ------------ |
-| **Zu übernehmende Kategorien**       | Siehe oben   |
-| **"Tausch" Status berücksichtigen?** | Siehe oben   |
-| **Getauschte Geräte archivieren?**   | Siehe oben   |
-| **SYS-ID ebenfalls tauschen?**       | Siehe oben   |
-
-Durch einen Klick auf den Button **Gerätetausch starten** wird der Tausch beider Objekte durchgeführt.
+Nach der Auswahl der beiden Objekte können die Optionen angepasst werden. Durch einen Klick auf den Button **Gerätetausch starten** wird der Tausch beider Objekte durchgeführt.
 
 [![Objekte tauschen](../assets/images/de/i-doit-add-ons/replacement/3-rp.png)](../assets/images/de/i-doit-add-ons/replacement/3-rp.png)
 
@@ -82,7 +82,7 @@ Ein Bericht über bisher durchgeführte Tauschaktionen wird unter **Add-ons → 
 
 | Version | Datum      | Changelog                                                                                                                                                                                                                                                                                                                                                            |
 | ------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.6     | 10.10.2024 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                                                                                                                                                  |
+| 1.6     | 10.10.2024 | [Bug] Fix auto load issue during add-on installation                                                                                                                                                                                                                                                                                                                 |
 | 1.5     | 07.11.2023 | [Bug] No changes are recorded in the logbook<br>[Bug] Signal error when downloading a document from the document repository                                                                                                                                                                                                                                          |
 | 1.4     | 05.09.2022 | [Task] HP 8.0 Compatibility<br>[Task] Design Compatibility                                                                                                                                                                                                                                                                                                           |
 | 1.3.2   | 21.02.2022 | [Bug] Use Of German Language in English Version Of Object Swap                                                                                                                                                                                                                                                                                                       |
