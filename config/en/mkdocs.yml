@@ -493,6 +493,7 @@ nav:
       - Complex reports: use-cases/complex-reports.md
       - Custom translations: use-cases/custom-translation.md
       - Documentation of databases: use-cases/documentation-of-databases.md
+      - Documentation of licenses: use-cases/documentation-of-licenses.md
       - Geo coordinates: use-cases/geo-coordinates.md
       - IP address management (IPAM): use-cases/ip-adress-management.md
       - Location-based authorization: use-cases/location-bases-authorization.md
