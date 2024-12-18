@@ -33,7 +33,7 @@ The [IT documentation](../basics/structure-of-the-it-documentation.md) and the [
 | **[ISMS aka ISO27001](./isms.md)**                                                | yes                 |
 | **[Maintenance](./maintenance.md)**                                               | no                  |
 | **[Nagios](./../automation-and-integration/network-monitoring/nagios.md)**        | no                  |
-| **[Relocate CI](./relocate-ci.md)**                                               | no                  |
+| **[Relocate-CI](./relocate-ci.md)**                                               | no                  |
 | **[Replacement](./replacement.md)**                                               | no                  |
 | **Report Special ([GER](https://www.i-doit.com/blog/i-doit-reporting-special/))** | no                  |
 | **[VIVA](viva/index.md)**                                                         | yes                 |

@@ -33,7 +33,7 @@ Mit i-doit stehen die [IT-Dokumentation](../grundlagen/struktur-it-dokumentation
 | **[ISMS aka ISO27001](./isms.md)**                                            | ja               |
 | **[Maintenance](./maintenance.md)**                                           | nein             |
 | **[Nagios](../automatisierung-und-integration/network-monitoring/nagios.md)** | nein             |
-| **[Relocate CI](./relocate-ci.md)**                                           | nein             |
+| **[Relocate-CI](./relocate-ci.md)**                                           | nein             |
 | **[Replacement](./replacement.md)**                                           | nein             |
 | **[Report Special](https://www.i-doit.com/blog/i-doit-reporting-special/)**   | nein             |
 | **[VIVA](./viva/index.md)**                                                   | ja               |
