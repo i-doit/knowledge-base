@@ -21,7 +21,7 @@
 [Bug]           Automatic delete of physical location when assigning a logical location  
 [Bug]           Category accounting: Replacing the Automatic Inventory Number for multiple object types does not work correctly when importing  
 [Bug]           Category Cluster Memberships: If an assignment is removed, the corresponding relation object is not removed  
-[Bug]           Admin Center: Umlauts are not displayed correctly, if a new tenant has been added  
+[Bug]           Admin-Center: Umlauts are not displayed correctly, if a new tenant has been added  
 [Bug]           Contents of logbook are found via search after performing a mass change  
 [Bug]           Configured prefix for automatically created cables is being ignored  
 [Bug]           CSV Import: Import of category contact assignment creates an empty entry if this is not set in the CSV file  

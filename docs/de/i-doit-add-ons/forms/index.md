@@ -29,7 +29,7 @@ Außerdem hat MongoDB eine [Checkliste für den Einsatz im Betrieb](https://docs
 
 ## Installation
 
-*   Installieren des Forms Add-on über das [Admin Center](../../administration/admin-center.md).
+*   Installieren des Forms Add-on über das [Admin-Center](../../administration/admin-center.md).
 *   [MongoDB Server v5](https://docs.mongodb.com/manual/installation/) installation
 *   Anschließend wird [NodeJS](https://nodejs.org/en/download/current/) >= v16.x installiert. via [Package Manager](https://nodejs.org/en/download/package-manager/).
 *   Forms Backend konfigurieren

@@ -1,4 +1,4 @@
-# i-doit 1.13.2 & 1.14: Login to Admin Center no longer possible
+# i-doit 1.13.2 & 1.14: Login to Admin-Center no longer possible
 
 Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP file is unpacked in the i-doit installation directory. Confirm the question whether you want to overwrite files during unpacking (**Y** key for "yes" or **A** key for "all"). Here you can find an example:
 
@@ -23,7 +23,7 @@ This hotfix corrects an error that prevents the update from continuing via the d
 
 [i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip :material-file-download:](../../assets/downloads/hotfixes/i-doit_1.13.2_hotfix_ID-7224_Admin-Center-Login.zip){ .md-button .md-button--primary }
 
-After implementation, this hotfix provides a new command for [console.php](../../automation-and-integration/cli/index.md) to issue a new encrypted password for the Admin Center.  
+After implementation, this hotfix provides a new command for [console.php](../../automation-and-integration/cli/index.md) to issue a new encrypted password for the Admin-Center.  
 The following command must be executed to reset the password:
 
     sudo -u www-data php console.php admin-center-password-reset --user User --password Password

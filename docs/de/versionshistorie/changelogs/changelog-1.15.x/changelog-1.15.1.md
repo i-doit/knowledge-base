@@ -62,7 +62,7 @@
 [Bug][Lists] Layer 3 network object list "Filter in all fields" shows empty list after emptying the filter<br>
 [Bug][API] Incorrect reference for service assignment via API<br>
 [Bug][API] Attribte "model" of category "Storage" is not included in the results<br>
-[Bug][Admincenter] Editing a tenant in the Admin Center resets the assigned object licenses<br>
+[Bug][Admincenter] Editing a tenant in the Admin-Center resets the assigned object licenses<br>
 [Bug][Custom categories] Report Manager: The filter for checkboxes filter not correct<br>
 [Bug][Custom categories] HTML-content from custom categories is shown twice on overview page<br>
 [Bug][Notifications] Notification about stored objects is not sent with a threshold value of 0 or -1<br>

@@ -12,7 +12,7 @@ Praxisbeispiele finden Sie auf unserem [Blog](https://www.i-doit.com/blog/floorp
 
 [![Raumplan](../assets/images/de/i-doit-add-ons/floorplan/1-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/1-fp.png)
 
-Das Add-on wird über das [Admin Center installiert](./index.md). Danach kann es unter **Add-ons → Raumplan** aufgerufen werden.
+Das Add-on wird über das [Admin-Center installiert](./index.md). Danach kann es unter **Add-ons → Raumplan** aufgerufen werden.
 
 [![installiert](../assets/images/de/i-doit-add-ons/floorplan/2-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/2-fp.png)
 

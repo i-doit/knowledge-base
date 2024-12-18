@@ -101,7 +101,7 @@ In order to keep the rights management in a clear structure all rights are divid
 Restore Rights
 --------------
 
-With **Administration → Authorization system → Authorization system reset** you can assign all rights to the user with whom you are currently logged in. This means that all available rights are assigned to the person object of this user. You have to enter the credentials for the [Admin Center](../../system-administration/admin-center.md) to activate this function.
+With **Administration → Authorization system → Authorization system reset** you can assign all rights to the user with whom you are currently logged in. This means that all available rights are assigned to the person object of this user. You have to enter the credentials for the [Admin-Center](../../system-administration/admin-center.md) to activate this function.
 
 Deactivation of Authorization System
 ------------------------------------

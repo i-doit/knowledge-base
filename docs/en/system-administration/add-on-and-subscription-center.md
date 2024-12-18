@@ -12,7 +12,7 @@ Add-on & Subscription Center enables the comprehensive management of add-ons. Us
 
 !!! info "**To access the Add-on & Subscription Center page, the token must only include one client.**"
 
-The page can be accessed via the Admin Center login page. The page can also be accessed by clicking on the avatar in i-doit and selecting Add-on & Subscription Center.
+The page can be accessed via the Admin-Center login page. The page can also be accessed by clicking on the avatar in i-doit and selecting Add-on & Subscription Center.
 
 [![Add-on & Subscription Center](../assets/images/en/system-administration/add-on-and-subscription-center/asc-1.png)](../assets/images/en/system-administration/add-on-and-subscription-center/asc-1.png)
 

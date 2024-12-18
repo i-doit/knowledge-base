@@ -44,11 +44,11 @@ Beside these add-ons there are many others which are provided by our partners or
 
 ## Download
 
-Add-ons are available as ZIP-files. These are installed via the [Admin Center](../system-administration/admin-center.md#add-ons). Customers can download add-ons in the [customer portal](../system-administration/customer-portal.md). Add-ons which are subject to licensing (see above) will be unlocked for download in your customer account in the buying process. If you miss any add-ons that you bought, please contact [help@i-doit.com](mailto:help@i-doit.com) for assistance. Evaluation users can download all free- und commercial add-ons in the evaluation process. There are download buttons for all add-ons on your personal evaluation page (e.g. [https://portal.i-doit.com](https://portal.i-doit.com)). All add-ons that are subject to licensing are licensed in the evaluation license.
+Add-ons are available as ZIP-files. These are installed via the [Admin-Center](../system-administration/admin-center.md#add-ons). Customers can download add-ons in the [customer portal](../system-administration/customer-portal.md). Add-ons which are subject to licensing (see above) will be unlocked for download in your customer account in the buying process. If you miss any add-ons that you bought, please contact [help@i-doit.com](mailto:help@i-doit.com) for assistance. Evaluation users can download all free- und commercial add-ons in the evaluation process. There are download buttons for all add-ons on your personal evaluation page (e.g. [https://portal.i-doit.com](https://portal.i-doit.com)). All add-ons that are subject to licensing are licensed in the evaluation license.
 
 ## Installation
 
-All add-ons are installed via the [admin center](../system-administration/admin-center.md). After successfully logging in to the admin center, just change to the **Modules** tab and use the **Install/update module** button.
+All add-ons are installed via the [Admin-Center](../system-administration/admin-center.md). After successfully logging in to the Admin-Center, just change to the **Modules** tab and use the **Install/update module** button.
 
 [![Installation](../assets/images/en/i-doit-add-ons/1-iao.png)](../assets/images/en/i-doit-add-ons/1-iao.png)
 

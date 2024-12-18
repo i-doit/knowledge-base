@@ -127,7 +127,7 @@ sudo systemctl restart apache2.service
 i-doit konfigurieren
 --------------------
 
-Ab Version 1.5 kann SSO über die Web GUI von i-doit konfiguriert werden. Die entsprechende Einstellung befindet sich im Admin Center unter **System settings → Single Sign on**. Dort ist **SSO** zu aktivieren.
+Ab Version 1.5 kann SSO über die Web GUI von i-doit konfiguriert werden. Die entsprechende Einstellung befindet sich im Admin-Center unter **System settings → Single Sign on**. Dort ist **SSO** zu aktivieren.
 
 Browser Client-seitig konfigrieren
 ----------------------------------

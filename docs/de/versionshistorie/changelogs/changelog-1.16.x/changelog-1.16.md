@@ -23,7 +23,7 @@
 [Bug][JDisc] Wrong handling of IPv6 addresses during JDisc import<br>
 [Bug][Documents] Attributes of SIM cards assigned to mobile phones cannot be displayed<br>
 [Bug][Search] Wrong presentation of special characters when using highlighting of search<br>
-[Bug][Code (internal)] After installing add-ons in the Admin Center an error message appears<br>
+[Bug][Code (internal)] After installing add-ons in the Admin-Center an error message appears<br>
 [Bug][Code (internal)] After creating and saving a file object, it cannot be opened<br>
 [Bug][Code (internal)] Filter in all fields can no longer be deleted<br>
 [Bug][XML] XML Import SQL error message during import of category Cabling > Connection<br>

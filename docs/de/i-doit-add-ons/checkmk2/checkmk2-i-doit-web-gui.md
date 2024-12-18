@@ -1,6 +1,6 @@
 # checkmk 2 i-doit Web GUI
 
-Die meisten Benutzerinteraktionen basieren auf dem [legacy checkmk add-on](./index.md) von i-doit, das derzeit mit i-doit/open ausgeliefert wird. Dieses Legacy-Add-on muss [über das i-doit Admin Center](../index.md) aktiviert werden (es ist standardmäßig aktiviert).
+Die meisten Benutzerinteraktionen basieren auf dem [legacy checkmk add-on](./index.md) von i-doit, das derzeit mit i-doit/open ausgeliefert wird. Dieses Legacy-Add-on muss [über das i-doit Admin-Center](../index.md) aktiviert werden (es ist standardmäßig aktiviert).
 
 Echtzeit-Aufrufe aktivieren
 ---------------------------

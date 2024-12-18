@@ -136,7 +136,7 @@ Damit ein Add-on im Admin-Center aktiviert und deaktiviert werden kann, muss die
     }
 
     /**
-    * Method that is called after clicking "activate" in admin center for specific mandator
+    * Method that is called after clicking "activate" in Admin-Center for specific mandator
     *
     * @param isys_component_database $mandatorDb
     *
@@ -153,7 +153,7 @@ Damit ein Add-on im Admin-Center aktiviert und deaktiviert werden kann, muss die
     }
 
     /**
-    * Method that is called after clicking "deactivate" in admin center for specific mandator
+    * Method that is called after clicking "deactivate" in Admin-Center for specific mandator
     *
     * @param isys_component_database $mandatorDb
     *

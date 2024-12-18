@@ -62,14 +62,14 @@ Die folgenden Anforderungen sind vor der Installation oder Verwendung des i-diar
 =============================
 
 Das Add-on wird über das [Kundenportal](../administration/kundenportal.md) heruntergeladen
-Das Add-on muss zuvor über das [Admin Center](../administration/admin-center.md) installiert werden.
+Das Add-on muss zuvor über das [Admin-Center](../administration/admin-center.md) installiert werden.
 
 * * *
 
 [Updates](#updates)
 ===================
 
-i-diary wird wie andere Add-on auch über das [Admin Center](../administration/admin-center.md) aktualisiert.
+i-diary wird wie andere Add-on auch über das [Admin-Center](../administration/admin-center.md) aktualisiert.
 Die neue i-diary.exe muss dann durch die aktualisierte i-diary.exe ersetzt werden.
 Diese befindet sich in der heruntergeladenen ZIP idoit-i_diary-x.x.x.zip im Pfad
 \idoit-i-diary-1.1\src\classes\modules\syneticsgmbh_idoit\i-diary

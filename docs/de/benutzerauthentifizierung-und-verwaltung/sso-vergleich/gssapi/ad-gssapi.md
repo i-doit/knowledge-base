@@ -33,7 +33,7 @@ Konfiguration des i-doit Servers
 
 Installation aller benötigten Pakete
 
-Debian GNU/Linux 
+Debian GNU/Linux
 
 ```shell
 sudo apt install msktutil libapache2-mod-auth-gssapi krb5-user
@@ -122,7 +122,7 @@ kann kontrolliert werden, ob ein gültiges Ticket existiert.
 i-doit konfigurieren
 --------------------
 
-Ab Version 1.5 kann SSO über die Web GUI von i-doit konfiguriert werden. Die entsprechende Einstellung befindet sich im Admin Center unter **System settings → Single Sign on**. Dort ist **SSO** zu aktivieren.
+Ab Version 1.5 kann SSO über die Web GUI von i-doit konfiguriert werden. Die entsprechende Einstellung befindet sich im Admin-Center unter **System settings → Single Sign on**. Dort ist **SSO** zu aktivieren.
 
 Browser Client-seitig konfigurieren
 -----------------------------------

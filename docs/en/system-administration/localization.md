@@ -10,7 +10,7 @@ Supported Languages
 | English | yes | yes |
 | German | no  | yes |
 
-The localization refers to the [web GUI of i-doit](../basics/structure-of-the-it-documentation.md). [Login](../basics/initial-login.md), [Admin Center](./admin-center.md), [Setup](../installation/manual-installation/setup.md), [Update assistant](../maintenance-and-operation/update.md) as well as the [command line tool Controller](../automation-and-integration/cli/index.md) are in English.
+The localization refers to the [web GUI of i-doit](../basics/structure-of-the-it-documentation.md). [Login](../basics/initial-login.md), [Admin-Center](./admin-center.md), [Setup](../installation/manual-installation/setup.md), [Update assistant](../maintenance-and-operation/update.md) as well as the [command line tool Controller](../automation-and-integration/cli/index.md) are in English.
 
 !!! info "Support new languages"
 

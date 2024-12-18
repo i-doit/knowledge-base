@@ -7,7 +7,7 @@
 [Task][Code (Internal)]               Deprecate WYSIWYG Smarty plugin parameter "p_image_browser_handler", please use "fileBrowseUrl"<br>
 [Task][Code (Internal)]               Update WYSIWYG editor to use proper upload and browse URLs<br>
 [Task][CMDB]                          Restructure nested 'Extras' menu<br>
-[Task][Console]                       Add additional way to perform i-doit update with admin center credentials<br>
+[Task][Console]                       Add additional way to perform i-doit update with Admin-Center credentials<br>
 [Task][Validation]                    Add checkbox to attribute settings to delete multiple attributes at once<br>
 [Task][CMDB settings]                 Make object type sorting alphabetically for new installations<br>
 [Task][License installation (i-doit)] Notification when license is successfully installed<br>

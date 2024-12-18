@@ -168,7 +168,7 @@ sudo -u www-data php console.php install
 
 Der Assistent fragt einige Credentials und Einstellungen ab. In Klammern angegebene Werte sind Standardwerte, die durch Druck auf **Enter** übernommen werden.
 
-Anschließend kann ein [Mandant](../../administration/mandantenfaehigkeit.md) über das [Admin Center](../../administration/admin-center.md) oder über die [console.php](../../automatisierung-und-integration/cli/console/index.md) erstellt werden.
+Anschließend kann ein [Mandant](../../administration/mandantenfaehigkeit.md) über das [Admin-Center](../../administration/admin-center.md) oder über die [console.php](../../automatisierung-und-integration/cli/console/index.md) erstellt werden.
 
 ```shell
 sudo -u www-data php console.php create-tenant

@@ -56,7 +56,7 @@ Hier finden Sie die Login Daten für den i-doit Windows installer:
 |-|-|-|
 | MariaDB root | root | idoit |
 | MariaDB i-doit | idoit | idoit |
-| i-doit Admin Center | - | admin |
+| i-doit Admin-Center | - | admin |
 | Installations Verzeichnis | C:\ProgramData\i-doit | - |
 
 Die i-doit Login Daten finden Sie [hier](../../../grundlagen/erstanmeldung.md).
@@ -341,7 +341,7 @@ Hier finden Sie die Login Daten für den i-doit Windows installer:
 |-|-|-|
 | MariaDB root | root | idoit |
 | MariaDB i-doit | idoit | idoit |
-| i-doit Admin Center | admin | admin |
+| i-doit Admin-Center | admin | admin |
 | JDisc Datenbank | postgres | idoitdiscovery |
 | JDisc Datenbank (ReadOnly) | postgresro | idoit |
 | Installations Verzeichnis | C:\ProgramData\i-doit-discovery | - |

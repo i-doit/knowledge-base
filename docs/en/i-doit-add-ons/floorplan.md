@@ -10,7 +10,7 @@ Via the **Floorplan** [add-on](./index.md) it is possible for you to assign g
 
 [![Floorplan](../assets/images/en/i-doit-add-ons/floorplan/1-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/1-fp.png)
 
-This add-on is [installed via the admin center](./index.md). Afterwards you will find it at **Add-ons → Floorplan**.
+This add-on is [installed via the Admin-Center](./index.md). Afterwards you will find it at **Add-ons → Floorplan**.
 
 [![Access](../assets/images/en/i-doit-add-ons/floorplan/2-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/2-fp.png)
 

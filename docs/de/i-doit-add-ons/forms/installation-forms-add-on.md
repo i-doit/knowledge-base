@@ -14,7 +14,7 @@ Nachdem festgelegt wurde, für welche(n) [Mandant(en)](../../administration/mand
 
 ## Installation der Lizenz
 
-Die Installation über das [Admin Center](../../administration/admin-center.md) erfolgt nach dem Login im Reiter **Licences**. Verwende hier die Schaltfläche **Install new** **licence**, um den erweiterten Dialog zu öffnen und die aus dem Kundenportal heruntergeladene Lizenz auszuwählen.
+Die Installation über das [Admin-Center](../../administration/admin-center.md) erfolgt nach dem Login im Reiter **Licences**. Verwende hier die Schaltfläche **Install new** **licence**, um den erweiterten Dialog zu öffnen und die aus dem Kundenportal heruntergeladene Lizenz auszuwählen.
 
 !!! success "Neuanmeldung eventuell nötig"
 
