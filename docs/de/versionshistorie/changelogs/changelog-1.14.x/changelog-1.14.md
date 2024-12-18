@@ -47,7 +47,7 @@
 [Bug][Code (internal)] Create import and upload folders for each client<br>
 [Bug][Update] Recursively create folders for uploading files<br>
 [Bug][Update] Migration of reports not possible 1.13 > 1.13.1-2<br>
-[Bug][Admincenter] Admin Center login does not work after updating to i-doit 1.13.2<br>
+[Bug][Admincenter] Admin-Center login does not work after updating to i-doit 1.13.2<br>
 [Bug][Console] Relationships are misrepresented when using php console.php system-objectrelations<br>
 [Bug][Search] Memory exception when creating search index<br>
 [Bug][Licence settings] License widget: color of remaining term not according to definition<br>

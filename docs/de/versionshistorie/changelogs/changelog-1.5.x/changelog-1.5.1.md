@@ -55,8 +55,8 @@
 [Bug]           Cache/Datenbank -> unfertige/archivierte/gelöschte Kategorien entfernen erzeugt SQL-Fehlermeldung<br>
 [Bug]           Report View Beziehung "layer-3 network plan" gibt Fehlermeldung aus<br>
 [Bug]           Beim Anlegen eines APs wird die Kategorie WiFi-Gerät nicht gespeichert<br>
-[Bug]           Beim Installieren einer Subskriptions-Lizenz im Admin Center wird eine Fehlermeldung ausgegeben<br>
+[Bug]           Beim Installieren einer Subskriptions-Lizenz im Admin-Center wird eine Fehlermeldung ausgegeben<br>
 [Bug]           SQL-Fehler bei der Standortzuweisung und/oder Standortkorrektur<br>
 [Bug]           Bei expandiertem Menübaum (Vollbild) kann die ursprüngliche Breite weiterhin verändert werden<br>
-[Bug]           Bei Lizenzfehlern werden im Admin Center Sprachkonstanten angezeigt<br>
+[Bug]           Bei Lizenzfehlern werden im Admin-Center Sprachkonstanten angezeigt<br>
 [Bug]           Berechnung des nächstmöglichen Kündigungsdatums bei Verträgen berücksichtigt keine Schaltjahre<br>

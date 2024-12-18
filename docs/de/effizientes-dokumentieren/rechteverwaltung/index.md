@@ -100,7 +100,7 @@ Damit die Rechteverwaltung nicht zu unübersichtlich wird, sind alle Rechte in M
 Rechte wiederherstellen
 -----------------------
 
-Über die **Verwaltung → Rechtesystem → Rechtesystem zurücksetzen** kann man für dem Benutzer, mit dem man derzeit angemeldet ist, alle Rechte zuordnen. Das heißt, dem Personenobjekt des Benutzers werden alle zur Verfügung stehenden Rechte zugeordnet. Um dies zu aktivieren, müssen die Credentials für das [Admin Center](../../administration/admin-center.md) eingegeben werden.
+Über die **Verwaltung → Rechtesystem → Rechtesystem zurücksetzen** kann man für dem Benutzer, mit dem man derzeit angemeldet ist, alle Rechte zuordnen. Das heißt, dem Personenobjekt des Benutzers werden alle zur Verfügung stehenden Rechte zugeordnet. Um dies zu aktivieren, müssen die Credentials für das [Admin-Center](../../administration/admin-center.md) eingegeben werden.
 
 Rechteverwaltung deaktivieren
 -----------------------------

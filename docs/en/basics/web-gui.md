@@ -4,7 +4,7 @@ The i-doit GUI is a WEB application that can be used with the respective [suppor
 
 ## Logon Screen
 
-When you activate i-doit after successful installation, the logon screen is displayed first. Here you can logon to i-doit directly or you can go to the [Admin Center](../system-administration/admin-center.md) by clicking the "Admin-Center" button in the lower area of the window.
+When you activate i-doit after successful installation, the logon screen is displayed first. Here you can logon to i-doit directly or you can go to the [Admin-Center](../system-administration/admin-center.md) by clicking the "Admin-Center" button in the lower area of the window.
 
 [![Logon Screen](../assets/images/en/basics/web-gui/1-gui.png)](../assets/images/en/basics/web-gui/1-gui.png)
 

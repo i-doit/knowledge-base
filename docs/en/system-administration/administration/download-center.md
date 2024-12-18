@@ -18,6 +18,6 @@ The **Execute** right to the **Download Center** can be assigned under **Adminis
 
 ## Usage
 
-The Download Center can be accessed via two routes: **Add-ons → Download Center** and **Administration → Download Center**. Once there, the available downloads are listed, ready to be downloaded via the Download button. The ZIP files are then installed using the usual process via the [Admin Center](../admin-center.md).
+The Download Center can be accessed via two routes: **Add-ons → Download Center** and **Administration → Download Center**. Once there, the available downloads are listed, ready to be downloaded via the Download button. The ZIP files are then installed using the usual process via the [Admin-Center](../admin-center.md).
 
 [![Tree view](../../assets/images/en/system-administration/administration/download-center/1-dc.png)](../../assets/images/en/system-administration/administration/download-center/1-dc.png)

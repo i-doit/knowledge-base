@@ -12,7 +12,7 @@ Add-on & Subscription Center ermöglicht die umfassende Verwaltung von Add-ons. 
 
 !!! info "**Um die Seite Add-on & Subscription Center aufzurufen, darf die Lizenz nur einen Mandanten umfassen. Außerdem ist eine Verbindung <https:center.i-doit.com></https:center.i-doit.com> notwendig.**"
 
-Die Seite kann über die Login Seite des Admin Center aufgerufen werden. Zusätzlich lässt sich die Seite auch aufrufen, wenn man in i-doit auf den Avatar klickt und Add-on & Subscription Center auswählt.
+Die Seite kann über die Login Seite des Admin-Center aufgerufen werden. Zusätzlich lässt sich die Seite auch aufrufen, wenn man in i-doit auf den Avatar klickt und Add-on & Subscription Center auswählt.
 
 [![Add-on & Subscription Center](../assets/images/de/administration/add-on-and-subscription-center/asc-1.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-1.png)
 

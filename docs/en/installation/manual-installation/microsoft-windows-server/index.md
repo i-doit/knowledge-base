@@ -56,7 +56,7 @@ The following credentials are set by the installer.
 |-|-|-|
 | MariaDB root | root | idoit |
 | MariaDB i-doit | idoit | idoit |
-| i-doit Admin Center | admin | admin |
+| i-doit Admin-Center | admin | admin |
 | Install Directory | C:\ProgramData\i-doit | - |
 
 For i-doit Login credentials see [here](../../../basics/initial-login.md).
@@ -342,7 +342,7 @@ The following credentials are set by the installer.
 |-|-|-|
 | MariaDB root | root | idoit |
 | MariaDB i-doit | idoit | idoit |
-| i-doit Admin Center | admin | admin |
+| i-doit Admin-Center | admin | admin |
 | JDisc Database | postgres | idoitdiscovery |
 | JDisc Database (readonly) | postgresro | idoit |
 | Install Directory | C:\ProgramData\i-doit-discovery | - |

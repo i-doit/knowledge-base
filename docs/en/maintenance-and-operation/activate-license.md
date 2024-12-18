@@ -71,11 +71,11 @@ The **License Token** will be sent by e-mail. The **Offline License** can be acc
 
 ### Activate i-doit (offline)
 
-**Step 1:** First, we call up the i-doit installation via the browser. To access the [Admin Center](../system-administration/admin-center.md), click on the link in the login screen.
+**Step 1:** First, we call up the i-doit installation via the browser. To access the [Admin-Center](../system-administration/admin-center.md), click on the link in the login screen.
 
 [![License Token](../assets/images/en/maintenance-and-operation/activate-license/1.Login_admin.png)](../assets/images/en/maintenance-and-operation/activate-license/1.Login_admin.png)
 
-**Step 2:** Next, we need to enter the login data that we assigned to the [Admin Center](../system-administration/admin-center.md) during the installation of i-doit.
+**Step 2:** Next, we need to enter the login data that we assigned to the [Admin-Center](../system-administration/admin-center.md) during the installation of i-doit.
 
 !!! note "If you have the **Eval Appliance**, use **admin** as username and **idoit** as password"
 
@@ -142,5 +142,5 @@ Please note that in the **Tenants** tab you can configure how many object licens
 
 ### The license is valid but i-doit shows that it is not licensed?
 
-!!! success "Open the Tenant tab in the Admin Center and click on **Save license settings**."
+!!! success "Open the Tenant tab in the Admin-Center and click on **Save license settings**."
     [![tenant-licenses](../assets/images/en/maintenance-and-operation/activate-license/13.png)](../assets/images/en/maintenance-and-operation/activate-license/13.png)

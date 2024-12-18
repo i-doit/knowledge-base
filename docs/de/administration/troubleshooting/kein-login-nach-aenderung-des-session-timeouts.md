@@ -2,7 +2,7 @@
 
 ## Problem
 
-Im Admin Center unter **System settings → Session → Session timeout** wird angegeben, nach wie vielen Sekunden ein inaktiver Benutzer automatisch von i-doit abgemeldet wird. Als Standard sind 600 Sekunden (10 Minuten) eingestellt. Wird ein sehr niedriger Wert, ein Wert von 0 oder gar eine negative Zahl eingestellt, kann sich kein Benutzer mehr im System anmelden, ohne kurz darauf wieder abgemeldet zu werden. Ein Arbeiten mit i-doit erscheint dadurch unmöglich.
+Im Admin-Center unter **System settings → Session → Session timeout** wird angegeben, nach wie vielen Sekunden ein inaktiver Benutzer automatisch von i-doit abgemeldet wird. Als Standard sind 600 Sekunden (10 Minuten) eingestellt. Wird ein sehr niedriger Wert, ein Wert von 0 oder gar eine negative Zahl eingestellt, kann sich kein Benutzer mehr im System anmelden, ohne kurz darauf wieder abgemeldet zu werden. Ein Arbeiten mit i-doit erscheint dadurch unmöglich.
 
 ## Lösung
 

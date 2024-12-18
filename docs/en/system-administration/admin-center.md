@@ -136,7 +136,7 @@ The settings can be changed in **emergency cases** in the file `src/config.inc.p
 
 ## Expert settings (System related)
 
-The Expert settings for the System are located in the Admin Center. You can reach them via the [System settings](#system-settings)
+The Expert settings for the System are located in the Admin-Center. You can reach them via the [System settings](#system-settings)
 
 | Key                                             | Value                                                                                                                                                             | Description             |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |

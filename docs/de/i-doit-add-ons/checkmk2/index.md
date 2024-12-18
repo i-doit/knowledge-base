@@ -378,7 +378,7 @@ Remember, remember, the fifth of November… 🎃
 
 ### Fixed
 
--   Fix error when installing add-on in i-doit admin center without parallel login to i-doit tenant
+-   Fix error when installing add-on in i-doit Admin-Center without parallel login to i-doit tenant
 -   fetch-objects: Print URL without PHP notice
 
 ### [1.3.0] – 2018-09-10

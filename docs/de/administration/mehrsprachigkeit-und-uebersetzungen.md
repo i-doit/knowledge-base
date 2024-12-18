@@ -9,7 +9,7 @@ _Do you speak IT documentation?_ Englisch ist und bleibt die Standard-Sprache in
 | Englisch | ja  | ja  |
 | Deutsch | nein | ja  |
 
-Die Mehrsprachigkeit bezieht sich auf die [Web GUI von i-doit](../grundlagen/struktur-it-dokumentation.md). In Englisch gehalten sind der [Login](../grundlagen/erstanmeldung.md), das [Admin Center](../administration/admin-center.md), das [Setup](../installation/manuelle-installation/setup.md), der [Update-Assistent](../wartung-und-betrieb/update-einspielen.md) und das [Kommandozeilen-Tool Controller](../automatisierung-und-integration/cli/index.md).
+Die Mehrsprachigkeit bezieht sich auf die [Web GUI von i-doit](../grundlagen/struktur-it-dokumentation.md). In Englisch gehalten sind der [Login](../grundlagen/erstanmeldung.md), das [Admin-Center](../administration/admin-center.md), das [Setup](../installation/manuelle-installation/setup.md), der [Update-Assistent](../wartung-und-betrieb/update-einspielen.md) und das [Kommandozeilen-Tool Controller](../automatisierung-und-integration/cli/index.md).
 
 !!! info "Neue Sprachen unterstützen"
     Wie Sie andere Sprachen hinzufügen können finden Sie unter [Benutzerdefinierte Übersetzungen](../anwendungsfaelle/benutzerdefinierte-uebersetzungen.md)
