@@ -1,9 +1,8 @@
-# checkmk 2: Häufig gestellte Fragen (FAQ)
+# Häufig gestellte Fragen (FAQ)
 
 Wir haben einige der am häufigsten gestellten Fragen zu idoitcmk gesammelt.
 
-Zugriff auf Hardware/Software-Inventar
---------------------------------------
+## Zugriff auf Hardware/Software-Inventar
 
 In einer Umgebung mit mehreren Standorten können die Standorte Hardware-/Software-Informationen von ihren überwachten Hosts abrufen. Wenn Sie idoitcmk so konfiguriert haben, dass es Informationen über Ihre Hosts von einem Standort abruft, benötigt dieser Standort Zugriff auf das Hardware-/Softwareinventar der anderen Standorte. Stellen Sie dazu bitte sicher, dass Sie die folgenden Einstellungen vorgenommen haben:
 
@@ -16,8 +15,7 @@ In einer Umgebung mit mehreren Standorten können die Standorte Hardware-/Softwa
 
 Nun sehen Sie in der Web-GUI auf jeder Statusseite eines Hosts eine Schaltfläche mit der Bezeichnung **Inventory**. Dies ist ein guter Indikator dafür, dass idoitcmk auch über die Web-API auf Inventarinformationen zugreifen kann.
 
-Multi-tenants
--------------
+## Multi-tenants
 
 Das Add-on unterstützt mehr als einen von i-doit bereitgestellten Tenant. Für jeden i-doit tenant müssen Sie einen eindeutigen API-Schlüssel konfigurieren.
 
@@ -35,8 +33,7 @@ Sie können die Konfigurationsdateien sogar vermischen: Eine Datei enthält allg
     idoitcmk --config common.js --config tenant2.json
 ```
 
-Vergleich der Host-Tags zwischen checkmk und i-doit
----------------------------------------------------
+## Vergleich der Host-Tags zwischen checkmk und i-doit
 
 Host-Tags werden in checkmk gruppiert. Dies ist ein Beispiel für eine Tag-Gruppe mit all ihren Tags:
 
@@ -84,8 +81,7 @@ Hier ist ein direkter Vergleich zwischen checkmk und i-doit:
 | Tag ID | Host tag (ID) | const | prod |
 | Description | Display name | val | Productive system |
 
-Selbstsignierte Zertifikate und andere Probleme mit TLS-Verbindungen
---------------------------------------------------------------------
+## Selbstsignierte Zertifikate und andere Probleme mit TLS-Verbindungen
 
 Es ist gängige Praxis, TLS-verschlüsselte HTTPS-Verbindungen zwischen idoitcmk, i-doit und checkmk zu erzwingen - selbst in privaten Netzwerken mit Firewalls. Oft werden dabei selbstsignierte x.509-Zertifikate verwendet. Das ist überhaupt kein Problem, wenn man diese Schritte beachtet:
 
@@ -103,8 +99,7 @@ Es ist gängige Praxis, TLS-verschlüsselte HTTPS-Verbindungen zwischen idoitcmk
 
 Bitte bedenken Sie, dass die Deaktivierung der Überprüfung Ihre Einrichtung nicht vor Man-in-the-Middle-Angriffen schützt. Dies schwächt Ihre IT-Sicherheit erheblich. Sie werden gewarnt werden.
 
-checkmk antwortet mit dem HTTP-Statuscode "414"
-------------------------------------------------
+## checkmk antwortet mit dem HTTP-Statuscode "414"
 
 Manchmal antwortet checkmk mit dem HTTP-Statuscode 414 URI too long, wenn es die Hardware/Software-Inventarisierungs-API anfordert. Dies könnte zum Beispiel bei der Ausführung des Befehls pull passieren:
 
@@ -121,9 +116,8 @@ Manchmal antwortet checkmk mit dem HTTP-Statuscode 414 URI too long, wenn es die
 
 Um diesen Fehler zu vermeiden, sollten Sie die Konfigurationseinstellung `i-doit.limitBatchRequests` verringern. Der Standardwert ist 500. Ein Wert von 100 sollte funktionieren.
 
-Duplizierte Objekte nach dem Ziehen nach i-doit
------------------------------------------------
+## Duplizierte Objekte nach dem Ziehen nach i-doit
 
 Wenn das Matching nicht richtig zu funktionieren scheint, stellen Sie sicher, dass die Kategorien "Checkmk Host" und "Checkmk Tags" den Objekttypen, die Sie nach i-doit pullen, zugewiesen sind, indem Sie [Datenstruktur bearbeiten](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) verwenden.
 
-Es kann auch notwendig sein, die [pull identifiers](./checkmk2-konfiguration.md) auf z.B. den Hostnamen zu reduzieren.
+Es kann auch notwendig sein, die [pull identifiers](./konfiguration.md) auf z.B. den Hostnamen zu reduzieren.

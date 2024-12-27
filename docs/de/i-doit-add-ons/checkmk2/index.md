@@ -1,16 +1,16 @@
-# Checkmk2
+# Checkmk 2
 
-## Release Notes Checkmk2 Version 1.8.6
+## Release Notes Checkmk 2 Version 1.8.6
 
-Diese Version bringt wichtige Verbesserungen und neue Funktionen, um die Nutzung von Checkmk2 effizienter und zukunftssicher zu gestalten.
+Diese Version bringt wichtige Verbesserungen und neue Funktionen, um die Nutzung von Checkmk 2 effizienter und zukunftssicher zu gestalten.
 
 ### Kompatibilität mit PHP 8.2
 
--   Checkmk2 unterstützt jetzt alle PHP-Versionen von 7.4 bis 8.2.
+-   Checkmk 2 unterstützt jetzt alle PHP-Versionen von 7.4 bis 8.2.
 
 ### Kompatibilität mit Checkmk 2.3
 
--   Um das Checkmk2 Add-on mit Checkmk 2.3 zu verwenden, muss der Konfigurationsparameter `check_mk.version` auf `“2.3”` gesetzt werden.
+-   Um das Checkmk 2 Add-on mit Checkmk 2.3 zu verwenden, muss der Konfigurationsparameter `check_mk.version` auf `“2.3”` gesetzt werden.
 -   Das Add-on unterstützt damit alle Versionen ab Checkmk 1.5.
 -   Neue Feature werden zukünftig nur noch für Checkmk >= Version 2.2 implementiert.
 
@@ -19,7 +19,7 @@ Diese Version bringt wichtige Verbesserungen und neue Funktionen, um die Nutzung
 -   Das Logging wurde erweitert und umfasst nun auch die Protokollierung von HTTP-Requests und Responses in/aus Checkmk.
 -   Neue Parameter für das Logging:
     -   `check_mk.logging.enableLogging: true|false`: Aktiviert das Logging von Checkmk Responses/Requests (standardmäßig deaktiviert).
-    -   `check_mk.logging.logFilePath: “/log/path”`: Verzeichnis, in dem die Logdateien gespeichert werden. Es wird pro Aufruf eine Logdatei erstellt. Das Verzeichnis muss für den Benutzer, der Checkmk2 ausführt (z.B. www-data), les- und schreibbar sein.
+    -   `check_mk.logging.logFilePath: “/log/path”`: Verzeichnis, in dem die Logdateien gespeichert werden. Es wird pro Aufruf eine Logdatei erstellt. Das Verzeichnis muss für den Benutzer, der Checkmk 2 ausführt (z.B. www-data), les- und schreibbar sein.
     -   Eine beispielhafte Konfiguration kann man mit `idoitcmk print-example-config` anschauen.
 
 ### Bugfixes/weitere Anpassungen
@@ -51,8 +51,8 @@ Für Nutzer, die sich mit der neuen Konfigurationsstruktur vertraut machen möch
     Als Gold-Partner von Tribe29 gilt das SHD - System-Haus-Dresden GmbH als ausgewiesener Spezialist für das Monitoring mit Checkmk. Mit der Übernahme und Weiterentwicklung des i-doit Add-Ons Checkmk 2 stellt SHD diese Expertise nun auch den i-doit Anwendern zur Verfügung.
 
 !!! attention ""
-    Mit der [Checkmk Version 2.1.0b1](https://checkmk.com/werk/12389) wurde die Struktur der Inventory Daten verändert. Es ist aktuell mit der CheckMK 2 Add-on Version <=1.8 nicht möglich Inventory in i-doit zu übertragen.<br>
-    Mit Version 1.8.1 muss die [Konfiguration](./checkmk2-konfiguration.md) angepasst werden.
+    Mit der [Checkmk Version 2.1.0b1](https://checkmk.com/werk/12389) wurde die Struktur der Inventory Daten verändert. Es ist aktuell mit der Checkmk 2 Add-on Version <=1.8 nicht möglich Inventory in i-doit zu übertragen.<br>
+    Mit Version 1.8.1 muss die [Konfiguration](./konfiguration.md) angepasst werden.
 
 Austausch von Informationen zwischen i-doit und checkmk
 
@@ -72,26 +72,26 @@ Die Anwendung idoitcmk stellt eine enge Verbindung zwischen i-doit und checkmk h
 -   Lassen Sie Ihre Netzwerküberwachung wichtige Informationen über Hosts sammeln und diese in Ihrer Dokumentation wiederverwenden.
 -   Automatisieren Sie alle langweiligen Aufgaben, die ein Systemadministrator nicht mag.
 
-Wir wissen, dass jede (IT-)Organisation unterschiedliche Anforderungen und verschiedene Prozesse hat. Aus diesem Grund ist es wichtig, eine [highly customizable](checkmk2-konfiguration.md) Anwendung zu haben.
+Wir wissen, dass jede (IT-)Organisation unterschiedliche Anforderungen und verschiedene Prozesse hat. Aus diesem Grund ist es wichtig, eine [highly customizable](konfiguration.md) Anwendung zu haben.
 
 ## Dokumentation
 
--   [Erste Schritte](./checkmk2-erste-schritte.md)
--   [Anforderungen](./checkmk2-anforderungen.md)
--   [Installation](./checkmk2-installation.md)
--   [Konfiguration](./checkmk2-konfiguration.md)
--   [Verwendung](./checkmk2-verwendung.md)
--   [Erstelle WATO Konfiguration basierend auf CMDB Daten](./checkmk2-wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md)
--   [Importieren von Bestandsdaten in die CMDB](./checkmk2-bestandsdaten-in-die-cmdb-importieren.md)
--   [Abgleich von Objekten aus i-doit mit Hosts aus checkmk](./checkmk2-abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md)
--   [Informationen von i-doit und checkmk lesen](./checkmk2-informationen-aus-i-doit-und-checkmk-lesen.md)
--   [Agentenarten von checkmk nach i-doit importieren](./checkmk2-synchronisierung-der-checkmk-agenten.md)
--   [Kontaktgruppen zwischen checkmk und i-doit synchronisieren](./checkmk2-kontaktgruppen-synchronisieren.md)
--   [WATO-Ordner zwischen checkmk und i-doit synchronisieren](./checkmk2-wato-ordner-synchronisieren.md)
--   [Importieren von Sites aus checkmk in i-doit](./checkmk2-checkmk-sites-synchronisieren.md)
--   [Synchronisierung von Host-Tags zwischen checkmk und i-doit](./checkmk2-host-tags-synchronisieren.md)
--   [i-doit Web GUI](./checkmk2-i-doit-web-gui.md)
--   [Häufig gestellte Fragen (FAQ)](./checkmk2-faq.md)
+-   [Erste Schritte](./erste-schritte.md)
+-   [Anforderungen](./anforderungen.md)
+-   [Installation](./installation.md)
+-   [Konfiguration](./konfiguration.md)
+-   [Verwendung](./verwendung.md)
+-   [Erstelle WATO Konfiguration basierend auf CMDB Daten](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md)
+-   [Importieren von Bestandsdaten in die CMDB](./bestandsdaten-in-die-cmdb-importieren.md)
+-   [Abgleich von Objekten aus i-doit mit Hosts aus checkmk](./abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md)
+-   [Informationen von i-doit und checkmk lesen](./informationen-aus-i-doit-und-checkmk-lesen.md)
+-   [Agentenarten von checkmk nach i-doit importieren](./synchronisierung-der-checkmk-agenten.md)
+-   [Kontaktgruppen zwischen checkmk und i-doit synchronisieren](./kontaktgruppen-synchronisieren.md)
+-   [WATO-Ordner zwischen checkmk und i-doit synchronisieren](./wato-ordner-synchronisieren.md)
+-   [Importieren von Sites aus checkmk in i-doit](./checkmk-sites-synchronisieren.md)
+-   [Synchronisierung von Host-Tags zwischen checkmk und i-doit](./host-tags-synchronisieren.md)
+-   [i-doit Web GUI](./i-doit-web-gui.md)
+-   [Häufig gestellte Fragen (FAQ)](./faq.md)
 
 ## Changelog
 
@@ -160,7 +160,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   Adding compatibility to checkmk 2.1
+-   Adding compatibility to Checkmk 2.1
 
 ### Fixes
 
@@ -170,7 +170,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixes
 
--   Adding compatibility to checkmk 2.1
+-   Adding compatibility to Checkmk 2.1
 
 ### [1.8.0] - 2022-09-05
 
@@ -204,7 +204,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 -   Tags (static) Dropdown ‘Tag group’ attributes cannot be deleted
--   CheckMK 2: Tags are not displayed with the tag group in reports
+-   Checkmk 2: Tags are not displayed with the tag group in reports
 
 ### [1.6.1] – 2021-06-15
 
@@ -213,7 +213,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Password and username must be specified (i-doit config)
 -   Filtering on attributes of category Check\_MK (host) generates SQL error and list view does not work anymore
 -   Dynamic host tag “Location” cannot be set globally
--   CheckMK 2 Plugin Pull: Validation errors in dialog related properties
+-   Checkmk 2 Plugin Pull: Validation errors in dialog related properties
 -   The live status configuration is not optional
 -   Checkmk responded with an error message: Check\_MK exception: Invalid key(s): hostname
 -   Check\_MK 2: Error Message strlen() expects parameter 1 to be string, null given

@@ -1,4 +1,4 @@
-# checkmk 2: Frequently asked questions (FAQ)
+# Frequently asked questions (FAQ)
 
 We have collected some of the most asked questions about idoitcmk.
 
@@ -6,12 +6,12 @@ We have collected some of the most asked questions about idoitcmk.
 
 In a multi-site environment sites are able to collect hardware/software information from their monitored hosts. If you have configured idoitcmk to fetch information about your hosts from one site this site will need access to the other sites hardware/software inventory. To do so please make sure you have the following settings:
 
-1.  Go to `WATO > Distributed Monitoring > Edit slave site > Livestatus settings > Connection`
-2.  Select `Use Livestatus Proxy Daemon`
-3.  Select option `CP port to connect to` for `Connect to`
-4.  Add FQDN/IP and port for the selected slave which other sites can use
-5.  Uncheck `Allow access via TCP`
-6.  Save and activate your changes
+1. Go to `WATO > Distributed Monitoring > Edit slave site > Livestatus settings > Connection`
+2. Select `Use Livestatus Proxy Daemon`
+3. Select option `CP port to connect to` for `Connect to`
+4. Add FQDN/IP and port for the selected slave which other sites can use
+5. Uncheck `Allow access via TCP`
+6. Save and activate your changes
 
 Now you will see inside the Web GUI a button called **Inventory** on each status page of a host. This is a good indicator that idoitcmk may access inventory information via Web API as well.
 

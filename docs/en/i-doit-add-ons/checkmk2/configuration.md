@@ -1,9 +1,8 @@
-# checkmk 2: Configuration
+# Configuration
 
 This application is highly-customizable via configuration files and runtime settings.
 
-Configuration files
--------------------
+## Configuration files
 
 On startup it try to load the following files:
 
@@ -12,12 +11,13 @@ On startup it try to load the following files:
 
 Configuration files are formatted as JSON (JavaScript Object Notation), an easily-readable format for both humans and robots.
 
-Create configuration file automatically
----------------------------------------
+## Create configuration file automatically
 
 Use command init to create your own configuration file:
 
-    idoitcmk init
+```shell
+idoitcmk init
+```
 
 This command will ask you several questions about all settings which are mentioned below. After that a configuration file will be written to `~/.idoitcmk/config.json`.
 
@@ -25,17 +25,17 @@ If you run this command with super-user rights (root) a configuration file will 
 
 With this command you are even able to update your configuration settings. Before that a backup will be created in the background.
 
-Create configuration files manually
------------------------------------
+## Create configuration files manually
 
 For a good start print the example configuration and edit it locally:
 
-    mkdir ~/.idoitcmk
-    idoitcmk print-example-config > ~/.idoitcmk/config.json
-    editor ~/.idoitcmk/config.json
+```shell
+mkdir ~/.idoitcmk
+idoitcmk print-example-config > ~/.idoitcmk/config.json
+editor ~/.idoitcmk/config.json
+```
 
-Available settings
-------------------
+## Available settings
 
 The configuration settings are separated by topics:
 
@@ -61,7 +61,7 @@ Configure how to access i-doit's JSON-RPC API:
 
 | Key | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| i-doit.url | String | Yes | -   | Entry point to i-doit's JSON-RPC API (Example: http://demo.i-doit.com/src/jsonrpc.php |
+| i-doit.url | String | Yes | -   | Entry point to i-doit's JSON-RPC API (Example: <http://demo.i-doit.com/src/jsonrpc.php> |
 | i-doit.key | String | Yes | -   | API key |
 | i-doit.username | String | No  | -   | Username |
 | i-doit.password | String | No  | -   | Password |
@@ -79,7 +79,7 @@ Configure how to access checkmk's Web API:
 
 | Key | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| check_mk.webAPI.url | String | Yes | -   | Entry point to checkmk's Web API (Example: http://CheckMK-Server/site-name/check_mk/) |
+| check_mk.webAPI.url | String | Yes | -   | Entry point to checkmk's Web API (Example: <http://CheckMK-Server/site-name/check_mk/>) |
 | check_mk.webAPI.username | String | Yes | automation | Automation user |
 | check_mk.webAPI.secret | String | Yes | -   | Automation secret |
 | check_mk.webAPI.effectiveAttributes | Boolean | Yes | true | Fetch inherited settings from rulesets, folders, etc. |
@@ -359,48 +359,50 @@ There is a configuration setting log.verbosity to adjust the default log level. 
 
 On the one side runtime option `-v|--verbose` sets this configuration setting temporarily to 63 which includes all log levels. On the other side runtime option `-q|--quiet` sets it temporarily to 3 (only fatals and errors).
 
-Additional configuration files
-------------------------------
+## Additional configuration files
 
 Optionally, you may pass one or more additional JSON-formatted configuration files by using option -c or --config. Repeat option for more then one file. For example:
 
+```shell
+idoitcmk push --config i-doit-testing.json --config check_mk-testing.json
+```
 
-    idoitcmk push --config i-doit-testing.json --config check_mk-testing.json
-
-Runtime settings
-----------------
+## Runtime settings
 
 You would like to change some settings during runtime? You can do that with options `-s` and `--setting`. Separate nested keys with ., for example:
 
-    idoitcmk push --setting "push.activateChanges=true"
+```shell
+idoitcmk push --setting "push.activateChanges=true"
 
-    idoitcmk pull -s ['pull.attributes={"C__CATG__ACCESS": true,"C__CATG__APPLICATION": true,"C__CATG__CONTACT": true,"C__CATG__CPU": true,"C__CATG__DRIVE": true,"C__CATG__GRAPHIC": true,"C__CATG__IP": true,"C__CATG__MEMORY": true,"C__CATG__MODEL": true,"C__CATG__OPERATING_SYSTEM": true,"C__CATG__NETWORK_LOG_PORT": true,"C__CATG__NETWORK_PORT": true}']
+idoitcmk pull -s ['pull.attributes={"C__CATG__ACCESS": true,"C__CATG__APPLICATION": true,"C__CATG__CONTACT": true,"C__CATG__CPU": true,"C__CATG__DRIVE": true,"C__CATG__GRAPHIC": true,"C__CATG__IP": true,"C__CATG__MEMORY": true,"C__CATG__MODEL": true,"C__CATG__OPERATING_SYSTEM": true,"C__CATG__NETWORK_LOG_PORT": true,"C__CATG__NETWORK_PORT": true}']
+```
 
 Repeat option for more than one setting.
 
-Order of configuration settings matters
----------------------------------------
+## Order of configuration settings matters
 
 As you already read you have various options to pass your preferred settings to this application. This application follows this order:
 
-1.  Default settings will be overwritten by
-2.  System-wide settings (/etc/idoitcmk/config.json) will be overwritten by
-3.  User-defined settings (~/.idoitcmk/config.json) will be overwritten by
-4.  Additional configuration files (options -c FILE or --config FILE) will be overwritten by
-5.  Runtime settings (options -s KEY=VALUE or --setting KEY=VALUE)
+1. Default settings will be overwritten by
+2. System-wide settings (/etc/idoitcmk/config.json) will be overwritten by
+3. User-defined settings (~/.idoitcmk/config.json) will be overwritten by
+4. Additional configuration files (options -c FILE or --config FILE) will be overwritten by
+5. Runtime settings (options -s KEY=VALUE or --setting KEY=VALUE)
 
-Test your config
-----------------
+## Test your config
 
 With command configtest you are able to perform a detailed validation of your configuration settings. This is very useful after you create or change your settings:
 
-    idoitcmk configtest
+```shell
+idoitcmk configtest
+```
 
-Print your config
------------------
+## Print your config
 
 If you have a bunch of configuration files and runtime settings sometimes it's good to know what are your compiled settings:
 
-    idoitcmk print-config
+```shell
+idoitcmk print-config
+```
 
 This will print your current configuration settings JSON-formatted to STDOUT.

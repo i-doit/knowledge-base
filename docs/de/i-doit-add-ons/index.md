@@ -21,7 +21,7 @@ Mit i-doit stehen die [IT-Dokumentation](../grundlagen/struktur-it-dokumentation
 | **[API](./api/index.md)**                                                     | nein             |
 | **[Cabling](./cabling.md)**                                                   | nein             |
 | **[Checkmk](./checkmk.md)**                                                   | nein             |
-| **[Checkmk2](./checkmk2/index.md)**                                           | ja               |
+| **[Checkmk 2](./checkmk2/index.md)**                                           | ja               |
 | **[DNS Documentation](./dns-documentation.md)**                               | nein             |
 | **[Documents](./documents/index.md)**                                         | ja               |
 | **[Events](./events.md)**                                                     | nein             |

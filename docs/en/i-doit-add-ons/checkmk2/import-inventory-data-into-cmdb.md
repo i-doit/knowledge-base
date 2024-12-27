@@ -1,13 +1,14 @@
-# checkmk 2: Import inventory data into CMDB
+# Import inventory data into CMDB
 
 You let checkmk monitor all your hosts? You let checkmk collect basic information about your hardware/software? Well, why not share these information with your CMDB? Import or update objects in i-doit by running:
 
-    idoitcmk pull
+```shell
+idoitcmk pull
+```
 
 **Recommendation:** Run this command every time you alter your WATO configuration in checkmk or whenever checkmk’s inventory agents find new hardware/software information.
 
-Options
--------
+## Options
 
 These options are available during runtime:
 
@@ -23,18 +24,23 @@ These options are available during runtime:
 
 STRING means any string including wildcards *, ? and [ae]. Repeat option to match more than one STRING. For example, fetch all hosts with a GNU/Linux or Windows operating system:
 
-    idoitcmk pull --include-os "*Linux*" --include-os "*Windows*"
+```shell
+idoitcmk pull --include-os "*Linux*" --include-os "*Windows*"
+```
 
 Any combination of these filters are logically combined by or. For example, fetch all hosts with suffix .example.com or in folder cloud:
 
-    idoitcmk pull --include-hostname "*.example.com" --include-folder "cloud"
+```shell
+idoitcmk pull --include-hostname "*.example.com" --include-folder "cloud"
+```
 
 TAG is like STRING but is a key/value combination with the tag name and its value. For example, fetch all hosts marked as business critical:
 
-    idoitcmk pull --include-tag "criticality=critical"
+```shell
+idoitcmk pull --include-tag "criticality=critical"
+```
 
-Configuration
--------------
+## Configuration
 
 These [configuration settings](./configuration.md) are available:
 

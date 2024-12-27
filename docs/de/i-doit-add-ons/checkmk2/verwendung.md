@@ -1,36 +1,42 @@
-# checkmk 2: Verwendung
+# Verwendung
 
 Führen Sie einfach die Anwendung aus, um einige grundlegende Informationen zu drucken:
 
-    idoitcmk
+```shell
+idoitcmk
+```
 
-Hilfe
------
+## Hilfe
 
 Jeder Befehl hat seine eigene Verwendung. Entweder führen Sie
 
-    idoitcmk help COMMAND
+```shell
+idoitcmk help COMMAND
+```
 
 oder
 
-    idoitcmk COMMAND --help
+```
+idoitcmk COMMAND --help
+```
 
-Versionsinformationen
----------------------
+## Versionsinformationen
 
 Welche Version von idoitcmk benutzen Sie? Führen Sie einfach
 
-    idoitcmk --version
+```shell
+idoitcmk --version
+```
 
-Alle Befehle auflisten
-----------------------
+## Alle Befehle auflisten
 
 Wenn Sie wissen wollen, welche Befehle verfügbar sind, können Sie eine vollständige Liste mit:
 
-    idoitcmk list
+```shell
+idoitcmk list
+```
 
-Benutzerinteraktion
--------------------
+## Benutzerinteraktion
 
 Bevor diese Anwendung Daten ändert, wird sie den Benutzer um Erlaubnis bitten. Zum Beispiel:
 
@@ -41,14 +47,17 @@ Der Standardwert ist in Großbuchstaben hervorgehoben (Y), so dass Sie einfach E
 
 Wenn Sie die Ausführung ohne Benutzerinteraktion automatisieren möchten, verwenden Sie die Option -y oder --yes:
 
-    idoitcmk push --yes
+```shell
+idoitcmk push --yes
+```
 
-Abrufen von Statusinformationen
--------------------------------
+## Abrufen von Statusinformationen
 
 Wenn Sie sicherstellen wollen, dass alles in Ordnung ist, führen Sie verschiedene Tests durch:
 
-    idoitcmk status
+```shell
+idoitcmk status
+```
 
 Die folgenden Tests sind enthalten:
 
@@ -57,8 +66,7 @@ Die folgenden Tests sind enthalten:
 *   Verbindung zur checkmk Web API
 *   Verbindung zu checkmk Livestatus API
 
-Verbosity
----------
+## Verbosity
 
 Während der Ausführung wird diese Anwendung mehr oder weniger nützliche Informationen ausgeben. Sie können den gewünschten Grad der Verbosity mit zwei Optionen einstellen. Erhöhen Sie die Verbosity mit -v oder --verbose, verringern Sie sie mit -q oder --quiet. Diese Protokollstufen sind verfügbar:
 
@@ -73,9 +81,10 @@ Während der Ausführung wird diese Anwendung mehr oder weniger nützliche Infor
 
 Deaktivieren Sie die farbige Ausgabe mit der Option -no-colors. Dies ist sehr nützlich für Protokollierungszwecke, zum Beispiel:
 
-    idoitcmk push --verbose --no-colors --yes > idoitcmk.log
+```shell
+idoitcmk push --verbose --no-colors --yes > idoitcmk.log
+```
 
-Superuser-Rechte
-----------------
+## Superuser-Rechte
 
 Hinweis: Es ist nicht notwendig, dieses Skript in einer Produktionsumgebung mit Superuser-Rechten wie root auszuführen.
