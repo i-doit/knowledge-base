@@ -1,13 +1,14 @@
-# checkmk 2 Bestandsdaten in die CMDB importieren
+# Bestandsdaten in die CMDB importieren
 
 Sie lassen checkmk alle Ihre Rechner überwachen? Sie lassen checkmk grundlegende Informationen über Ihre Hardware/Software sammeln? Warum sollten Sie diese Informationen dann nicht mit Ihrer CMDB teilen? Importieren oder aktualisieren Sie Objekte in i-doit, indem Sie Folgendes ausführen:
 
-    idoitcmk pull
+```shell
+idoitcmk pull
+```
 
 **Empfehlung:** Führen Sie diesen Befehl jedes Mal aus, wenn Sie Ihre WATO Konfiguration in checkmk ändern oder wenn die Inventarisierungsagenten von checkmk neue Hardware-/Softwareinformationen finden.
 
-Optionen
---------
+## Optionen
 
 Diese Optionen sind während der Laufzeit verfügbar:
 
@@ -23,20 +24,25 @@ Diese Optionen sind während der Laufzeit verfügbar:
 
 STRING bedeutet eine beliebige Zeichenfolge einschließlich der Platzhalter *, ? und [ae]. Wiederholen Sie die Option, um mehr als einen STRING zu finden. Beispiel: Alle Hosts mit einem GNU/Linux- oder Windows-Betriebssystem abrufen:
 
-    idoitcmk pull --include-os "*Linux*" --include-os "*Windows*"
+```
+idoitcmk pull --include-os "*Linux*" --include-os "*Windows*"
+```
 
 Beliebige Kombinationen dieser Filter werden logisch durch oder kombiniert. Zum Beispiel, alle Hosts mit der Endung .example.com oder im Ordner cloud abrufen:
 
-    idoitcmk pull --include-hostname "*.example.com" --include-folder "cloud"
+```shell
+idoitcmk pull --include-hostname "*.example.com" --include-folder "cloud"
+```
 
 TAG ist wie STRING, ist aber eine Schlüssel/Wert-Kombination mit dem Tag-Namen und seinem Wert. Beispiel: Abruf aller als geschäftskritisch gekennzeichneten Hosts:
 
-    idoitcmk pull --include-tag "criticality=critical"
+```shell
+idoitcmk pull --include-tag "criticality=critical"
+```
 
-Konfiguration
--------------
+## Konfiguration
 
-Diese [Einstellungen](./checkmk2-konfiguration.md) sind verfügbar:
+Diese [Einstellungen](./konfiguration.md) sind verfügbar:
 
 | Key | Typ | Erforderlich | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |

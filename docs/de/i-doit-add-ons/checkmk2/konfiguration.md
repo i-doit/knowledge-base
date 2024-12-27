@@ -1,9 +1,8 @@
-# checkmk 2: Konfiguration
+# Konfiguration
 
 Diese Anwendung ist über Konfigurationsdateien und Laufzeiteinstellungen in hohem Maße anpassbar.
 
-Konfigurationsdateien
----------------------
+## Konfigurationsdateien
 
 Beim Start wird versucht, die folgenden Dateien zu laden:
 
@@ -12,12 +11,13 @@ Beim Start wird versucht, die folgenden Dateien zu laden:
 
 Die Konfigurationsdateien sind als JSON (JavaScript Object Notation) formatiert, ein für Menschen und Roboter leicht lesbares Format.
 
-Konfigurationsdatei automatisch erstellen
------------------------------------------
+## Konfigurationsdatei automatisch erstellen
 
 Verwenden Sie den Befehl init, um Ihre eigene Konfigurationsdatei zu erstellen:
 
-    idoitcmk init
+```shell
+idoitcmk init
+```
 
 Dieser Befehl stellt Ihnen mehrere Fragen zu allen Einstellungen, die unten aufgeführt sind. Danach wird eine Konfigurationsdatei nach ~/.idoitcmk/config.json geschrieben.
 
@@ -25,17 +25,17 @@ Wenn Sie diesen Befehl mit Super-User-Rechten (root) ausführen, wird stattdesse
 
 Mit diesem Befehl können Sie sogar Ihre Konfigurationseinstellungen aktualisieren. Vorher wird im Hintergrund ein Backup erstellt.
 
-Konfigurationsdateien manuell erstellen
----------------------------------------
+## Konfigurationsdateien manuell erstellen
 
 Für einen guten Start geben Sie die Beispielkonfiguration aus und bearbeiten sie sie lokal:
 
-    mkdir ~/.idoitcmk
-    idoitcmk print-example-config > ~/.idoitcmk/config.json
-    editor ~/.idoitcmk/config.json
+```shell
+mkdir ~/.idoitcmk
+idoitcmk print-example-config > ~/.idoitcmk/config.json
+editor ~/.idoitcmk/config.json
+```
 
-Verfügbare Einstellungen
-------------------------
+## Verfügbare Einstellungen
 
 Die Konfigurationseinstellungen sind nach Themen getrennt:
 
@@ -43,8 +43,8 @@ Die Konfigurationseinstellungen sind nach Themen getrennt:
 | --- | --- |
 | i-doit | Konfigurieren Sie den Zugriff auf die JSON-RPC-API von i-doit |
 | check_mk | Konfigurieren Sie den Zugriff auf die Web-API von Check\_MK |
-| push | Konfigurieren, wie [Daten von i-doit an checkmk übertragen](./checkmk2-wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md) werden sollen |
-| pull | Konfigurieren Sie, wie [Daten von checkmk zu i-doit ziehen](./checkmk2-bestandsdaten-in-die-cmdb-importieren.md) |
+| push | Konfigurieren, wie [Daten von i-doit an checkmk übertragen](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md) werden sollen |
+| pull | Konfigurieren Sie, wie [Daten von checkmk zu i-doit ziehen](./bestandsdaten-in-die-cmdb-importieren.md) |
 | objectTypes | Verwendete Objekttypen, identifiziert durch ihre Konstanten |
 | objectTitles | Verwendete Objekte, die durch ihren Titel gekennzeichnet sind |
 | roles | i-doit-Rollen für Kontaktgruppen, die bei Kontaktzuweisungen verwendet werden |
@@ -61,7 +61,7 @@ Konfigurieren Sie den Zugriff auf die JSON-RPC-API von i-doit:
 
 | Key | Type | Erforderlich | Erforderlich | Beschreibung |
 | --- | --- | --- | --- | --- |
-| i-doit.url | String | ja  | -   | Einstiegspunkt zur JSON-RPC-API von i-doit (Beispiel: http://demo.i-doit.com/src/jsonrpc.php) |
+| i-doit.url | String | ja  | -   | Einstiegspunkt zur JSON-RPC-API von i-doit (Beispiel: <http://demo.i-doit.com/src/jsonrpc.php>) |
 | i-doit.key | String | ja  | -   | API key |
 | i-doit.username | String | nein | -   | Benutzername |
 | i-doit.password | String | nein | -   | Passwort |
@@ -79,7 +79,7 @@ Konfigurieren Sie den Zugriff auf die Web-API von checkmk:
 
 | Key | Type | Erforderlich | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
-| check_mk.webAPI.url | String | ja  | -   | Einstiegspunkt zur Web-API von Check\_MK (Beispiel: http://CheckMK-Server/site-name/check_mk/) |
+| check_mk.webAPI.url | String | ja  | -   | Einstiegspunkt zur Web-API von Check\_MK (Beispiel: <http://CheckMK-Server/site-name/check_mk/>) |
 | check_mk.webAPI.username | String | ja  | automation | Automation Benutzer |
 | check_mk.webAPI.secret | String | ja  | -   | Automation secret |
 | check_mk.webAPI.effectiveAttributes | Boolean | ja  | true | Abrufen von geerbten Einstellungen aus Regelsätzen, Ordnern usw. |
@@ -104,7 +104,7 @@ Livestatus kann derzeit nicht über TLS verbunden werden.
 
 ### Konfiguration command push
 
-Konfigurieren Sie, wie [Daten von i-doit an checkmk übertragen werden sollen](./checkmk2-wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md):
+Konfigurieren Sie, wie [Daten von i-doit an checkmk übertragen werden sollen](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md):
 
 | Key | Type | Erforderlich | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
@@ -159,7 +159,7 @@ Versucht, alle Ausdrücke zu finden:
 
 ### Konfigurieration command pull
 
-Konfigurieren Sie, wie [Daten von Check\_MK zu i-doit ziehen](./checkmk2-bestandsdaten-in-die-cmdb-importieren.md):
+Konfigurieren Sie, wie [Daten von Check\_MK zu i-doit ziehen](./bestandsdaten-in-die-cmdb-importieren.md):
 
 | Key | Type | Erforderlich | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
@@ -361,46 +361,49 @@ Es gibt eine Konfigurationseinstellung log.verbosity, um die Standard-Protokolls
 
 Auf der einen Seite setzt die Laufzeitoption -v|--verbose diese Konfigurationseinstellung temporär auf 63, was alle Loglevel einschließt. Auf der anderen Seite setzt die Laufzeitoption -q|--quiet diese Einstellung temporär auf 3 (nur Fatals und Fehler).
 
-Zusätzliche Konfigurationsdateien
----------------------------------
+## Zusätzliche Konfigurationsdateien
 
 Optional können Sie eine oder mehrere zusätzliche JSON-formatierte Konfigurationsdateien mit der Option -c oder --config übergeben. Wiederholen Sie die Option für mehr als eine Datei. Zum Beispiel:
 
-    idoitcmk push --config i-doit-testing.json --config check_mk-testing.json
+```shell
+idoitcmk push --config i-doit-testing.json --config check_mk-testing.json
+```
 
-Laufzeit-Einstellungen
-----------------------
+## Laufzeit-Einstellungen
 
 Sie möchten einige Einstellungen während der Laufzeit ändern? Das können Sie mit den Optionen -s und --setting tun. Trennen Sie verschachtelte Schlüssel mit ., zum Beispiel:
 
-    idoitcmk push --setting "push.activateChanges=true"
-    idoitcmk pull -s ['pull.attributes={"C__CATG__ACCESS": true,"C__CATG__APPLICATION": true,"C__CATG__CONTACT": true,"C__CATG__CPU": true,"C__CATG__DRIVE": true,"C__CATG__GRAPHIC": true,"C__CATG__IP": true,"C__CATG__MEMORY": true,"C__CATG__MODEL": true,"C__CATG__OPERATING_SYSTEM": true,"C__CATG__NETWORK_LOG_PORT": true,"C__CATG__NETWORK_PORT": true}']
+```shell
+idoitcmk push --setting "push.activateChanges=true"
+idoitcmk pull -s ['pull.attributes={"C__CATG__ACCESS": true,"C__CATG__APPLICATION": true,"C__CATG__CONTACT": true,"C__CATG__CPU": true,"C__CATG__DRIVE": true,"C__CATG__GRAPHIC": true,"C__CATG__IP": true,"C__CATG__MEMORY": true,"C__CATG__MODEL": true,"C__CATG__OPERATING_SYSTEM": true,"C__CATG__NETWORK_LOG_PORT": true,"C__CATG__NETWORK_PORT": true}']
+```
 
 Option "Wiederholen" für mehr als eine Einstellung.
 
-Reihenfolge der Konfigurationseinstellungen ist wichtig
--------------------------------------------------------
+## Reihenfolge der Konfigurationseinstellungen ist wichtig
 
 Wie Sie bereits gelesen haben, haben Sie verschiedene Möglichkeiten, Ihre bevorzugten Einstellungen an diese Anwendung zu übergeben. Diese Anwendung folgt dieser Reihenfolge:
 
-1.  Die Standardeinstellungen werden überschrieben durch
-2.  Systemweite Einstellungen (/etc/idoitcmk/config.json) werden überschrieben mit
-3.  Benutzerdefinierte Einstellungen (~/.idoitcmk/config.json) werden überschrieben mit
-4.  Zusätzliche Konfigurationsdateien (Optionen -c FILE oder --config FILE) werden überschrieben mit
-5.  Laufzeiteinstellungen (Optionen -s KEY=VALUE oder --setting KEY=VALUE)
+1. Die Standardeinstellungen werden überschrieben durch
+2. Systemweite Einstellungen (/etc/idoitcmk/config.json) werden überschrieben mit
+3. Benutzerdefinierte Einstellungen (~/.idoitcmk/config.json) werden überschrieben mit
+4. Zusätzliche Konfigurationsdateien (Optionen -c FILE oder --config FILE) werden überschrieben mit
+5. Laufzeiteinstellungen (Optionen -s KEY=VALUE oder --setting KEY=VALUE)
 
-Testen Sie Ihre Konfiguration
------------------------------
+## Testen Sie Ihre Konfiguration
 
 Mit dem Befehl configtest können Sie eine detaillierte Überprüfung Ihrer Konfigurationseinstellungen durchführen. Dies ist sehr nützlich, nachdem Sie Ihre Einstellungen erstellt oder geändert haben:
 
-    idoitcmk configtest
+```shell
+idoitcmk configtest
+```
 
-Geben Sie Ihre Konfiguration aus
---------------------------------
+## Geben Sie Ihre Konfiguration aus
 
 Wenn Sie eine Reihe von Konfigurationsdateien und Laufzeiteinstellungen haben, ist es manchmal gut zu wissen, was Ihre kompilierten Einstellungen sind:
 
-    idoitcmk print-config
+```shell
+idoitcmk print-config
+```
 
 Damit werden Ihre aktuellen Konfigurationseinstellungen JSON-formatiert auf STDOUT ausgegeben.

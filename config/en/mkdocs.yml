@@ -543,7 +543,7 @@ nav:
           - Category fields for data arrays: i-doit-add-ons/api/category-fields-for-data-arrays.md
       - Cabling: i-doit-add-ons/cabling.md
       - CheckMK: i-doit-add-ons/checkmk.md
-      - CheckMK2:
+      - Checkmk 2:
           - i-doit-add-ons/checkmk2/index.md
           - First steps: i-doit-add-ons/checkmk2/first-steps.md
           - Requirements: i-doit-add-ons/checkmk2/requirements.md

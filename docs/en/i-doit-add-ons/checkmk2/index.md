@@ -1,16 +1,16 @@
-# Checkmk2
+# Checkmk 2
 
-## Release Notes Checkmk2 Version 1.8.6
+## Release Notes Checkmk 2 Version 1.8.6
 
-This version brings important improvements and new functions to make the use of Checkmk2 more efficient and future-proof.
+This version brings important improvements and new functions to make the use of Checkmk 2 more efficient and future-proof.
 
 ### Compatibility with PHP 8.2
 
--   Checkmk2 now supports all PHP versions from 7.4 to 8.2.
+-   Checkmk 2 now supports all PHP versions from 7.4 to 8.2.
 
 ### Compatibility with Checkmk 2.3
 
--   To use the Checkmk2 add-on with Checkmk 2.3, the configuration parameter `check_mk.version` must be set to `"2.3"`.
+-   To use the Checkmk 2 add-on with Checkmk 2.3, the configuration parameter `check_mk.version` must be set to `"2.3"`.
 -   The add-on thus supports all versions from Checkmk 1.5.
 -   In future, new features will only be implemented for Checkmk >= version 2.2.
 
@@ -19,7 +19,7 @@ This version brings important improvements and new functions to make the use of 
 -   Logging has been extended and now also includes the logging of HTTP requests and responses to/from Checkmk.
 -   New parameters for logging:
     -   `check_mk.logging.enableLogging: true|false`: Enables logging of Checkmk responses/requests (disabled by default).
-    -   `check_mk.logging.logFilePath: "/log/path"`: Directory in which the log files are saved. One log file is created per call. The directory must be readable and writable for the user running Checkmk2 (e.g. www-data).
+    -   `check_mk.logging.logFilePath: "/log/path"`: Directory in which the log files are saved. One log file is created per call. The directory must be readable and writable for the user running Checkmk 2 (e.g. www-data).
     -   An example configuration can be viewed with `idoitcmk print-example-config`.
 
 ### Bugfixes/further adjustments
@@ -51,7 +51,7 @@ For users who want to familiarize themselves with the new configuration structur
     As a Gold Partner of Tribe29, SHD - System-Haus-Dresden GmbH is considered a proven specialist for monitoring with Checkmk. With the takeover and further development of the i-doit add-on Checkmk 2, SHD is now making this expertise available to i-doit users.
 
 !!! attention ""
-    With [Checkmk version 2.1.0b1](https://checkmk.com/werk/12389) the structure of the inventory data has been changed. It is currently not possible to transfer inventory to i-doit with CheckMK 2 add-on <=1.8<br>
+    With [Checkmk version 2.1.0b1](https://checkmk.com/werk/12389) the structure of the inventory data has been changed. It is currently not possible to transfer inventory to i-doit with Checkmk 2 add-on <=1.8<br>
     With version 1.8.1 the [configuration](./configuration.md) must be adjusted.
 
 Share information between i-doit and checkmk
@@ -158,7 +158,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   Adding compatibility to checkmk 2.1
+-   Adding compatibility to Checkmk 2.1
 
 ### Fixes
 
@@ -168,7 +168,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixes
 
--   Adding compatibility to checkmk 2.1
+-   Adding compatibility to Checkmk 2.1
 
 ### [1.8.0] - 2022-09-05
 
@@ -202,7 +202,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 -   Tags (static) Dropdown ‘Tag group’ attributes cannot be deleted
--   CheckMK 2: Tags are not displayed with the tag group in reports
+-   Checkmk 2: Tags are not displayed with the tag group in reports
 
 ### [1.6.1] – 2021-06-15
 
@@ -211,7 +211,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Password and username must be specified (i-doit config)
 -   Filtering on attributes of category Check\_MK (host) generates SQL error and list view does not work anymore
 -   Dynamic host tag “Location” cannot be set globally
--   CheckMK 2 Plugin Pull: Validation errors in dialog related properties
+-   Checkmk 2 Plugin Pull: Validation errors in dialog related properties
 -   The live status configuration is not optional
 -   Checkmk responded with an error message: Check\_MK exception: Invalid key(s): hostname
 -   Check\_MK 2: Error Message strlen() expects parameter 1 to be string, null given

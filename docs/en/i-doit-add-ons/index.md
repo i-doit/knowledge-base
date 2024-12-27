@@ -21,7 +21,7 @@ The [IT documentation](../basics/structure-of-the-it-documentation.md) and the [
 | **[API](./api/index.md)**                                                         | no                  |
 | **[Cabling](./cabling.md)**                                                       | no                  |
 | **[Checkmk](./checkmk.md)**                                                       | no                  |
-| **[Checkmk2](./checkmk2/index.md)**                                               | yes                 |
+| **[Checkmk 2](./checkmk2/index.md)**                                               | yes                 |
 | **[DNS Documentation](dns-documentation.md)**                                     | no                  |
 | **[Documents](./documents/index.md)**                                             | yes                 |
 | **[Events](./events.md)**                                                         | no                  |

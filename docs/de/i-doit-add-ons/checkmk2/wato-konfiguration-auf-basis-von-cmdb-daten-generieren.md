@@ -1,15 +1,16 @@
-# checkmk 2 WATO Konfiguration auf Basis von CMDB-Daten generieren
+# WATO Konfiguration auf Basis von CMDB-Daten generieren
 
 i-doit liefert detaillierte Informationen über Ihre IT-Infrastruktur, einschließlich aller Ihrer Hosts. Diese Hosts können mit checkmk geteilt werden, so dass Sie Ihre Hosts nur einmal dokumentieren/konfigurieren müssen. Um diese Hosts an checkmk zu übergeben, führen Sie aus:
 
-    idoitcmk push
+```shell
+idoitcmk push
+```
 
 Denken Sie daran, dass Objekte in i-doit markiert sein müssen, damit sie nach checkmk exportiert werden können. Überprüfen Sie zuerst die Kategorie Check_MK Host, bevor Sie diesen Befehl ausführen.
 
 **Empfehlung:** Führen Sie diesen Befehl jedes Mal aus, wenn Sie Ihre CMDB-Daten ändern.
 
-Optionen
---------
+## Optionen
 
 Diese Optionen sind während der Laufzeit verfügbar:
 
@@ -27,10 +28,11 @@ TYPE bedeutet den Objekt-Typ, der durch seine Bezeichnung, seine Konstante oder 
 
 Jede Kombination dieser Filter wird logisch durch oder kombiniert. Beispiel: Alle Hosts mit den Objekt-IDs "1", "2" und "3" und alle Hosts, deren Titel mit "\*.example.com" übereinstimmt, werden gepusht.:
 
-    idoitcmk push --include-ids 1,2,3 --include-title "*.example.com"
+```shell
+idoitcmk push --include-ids 1,2,3 --include-title "*.example.com"
+```
 
-Konfiguration Diese [Konfigurationseinstellungen](./checkmk2-konfiguration.md) sind verfügbar:
-------------------------------------------------------------------------------------------------------------------------------
+## Konfiguration Diese [Konfigurationseinstellungen](./konfiguration.md) sind verfügbar
 
 | Key | Typ | Erforderlich | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
