@@ -1,8 +1,8 @@
 ---
 title: Documentation of licenses
 description: Documentation of licenses
-icon: 
-status: new
+icon:
+status: updated
 lang: en
 ---
 
@@ -60,7 +60,7 @@ There are various ways to determine the assigned and free licenses. The simplest
 
 In the Report Manager, the standardized report “License utilization” is available in the online repositories. This can also be used to view all licenses with license keys, total licenses available and the licenses actually used.
 
-[![Used Licenses report](../assets/images/en/use-cases/documentation-of-licenses/6.png)](../assets/images/en/use-cases/documentation-of-licenses/6.png)
+[![Used Licenses report](../assets/images/en/use-cases/documentation-of-licenses/7.png)](../assets/images/en/use-cases/documentation-of-licenses/7.png)
 
 ## Be notified automatically about expiring licenses
 

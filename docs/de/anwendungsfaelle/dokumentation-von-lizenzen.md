@@ -1,8 +1,8 @@
 ---
 title: Dokumentation von Lizenzen
 description: Dokumentation von Lizenzen
-icon: 
-status: new
+icon:
+status: updated
 lang: de
 ---
 
