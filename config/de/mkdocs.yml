@@ -405,12 +405,11 @@ nav:
               - automatisierung-und-integration/cli/console/index.md
               - Optionen und Parameter der Console: automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md
               - Verwendung von Konfigurationsdateien für Console Commands: automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md
-          - Controller: automatisierung-und-integration/cli/controller.md
       - Network Monitoring:
           - automatisierung-und-integration/network-monitoring/index.md
           - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md
           - Nagios: automatisierung-und-integration/network-monitoring/nagios.md
-      - Service Desk:
+      - Trouble Ticket System (TTS):
           - automatisierung-und-integration/service-desk/index.md
           - Request Tracker (RT): automatisierung-und-integration/service-desk/request-tracker.md
           - ((OTRS)) Community Edition Help Desk: automatisierung-und-integration/service-desk/otrscommunity-help-desk.md
