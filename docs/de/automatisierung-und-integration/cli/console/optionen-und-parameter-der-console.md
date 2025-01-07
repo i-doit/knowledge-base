@@ -1,3 +1,11 @@
+---
+title: Optionen und Parameter der Console
+description: Optionen und Parameter der Console
+icon:
+status:
+lang: de
+---
+
 # Optionen und Parameter der Console
 
 !!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
@@ -67,7 +75,7 @@
 | [tenant-remove](#tenant-remove)                                           | Einen bestehenden Mandanten entfernen                                                                                                                                         |
 | [uninstall](#uninstall)                                                   | Deinstalliert i-doit                                                                                                                                                          |
 | [update](#update)                                                         | Update von i-doit installieren                                                                                                                                                |
-| [idoit:feature-manager](#idoitfeature-manager)                           | Mit diesem Befehl ist es möglich Features in i-doit zu aktivieren            |
+| [idoit:feature-manager](#idoitfeature-manager)                            | Mit diesem Befehl ist es möglich Features in i-doit zu aktivieren                                                                                                             |
 
 !!! attention "Konfigurationsdatei und Parameter --config"
     Es ist möglich dem Aufruf zusätzliche Inhalte über eine Konfigurationsdatei zu übergeben. Diese Datei muss im i-doit Verzeichnis src/handler/config/ abgelegt werden. Ein Beispiel in Form der Datei "isys_handler_ldap.ini" ist im Verzeichnis src/handler/config/examples/ zu finden.<br>
@@ -1524,15 +1532,15 @@ Mit diesem Befehl ist es möglich Features in i-doit zu aktivieren
 
 | Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
 | -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
-|                      | --unset-cloud         | Deaktivieren wenn Anwendung eine Cloud-Instanz ist               |
-|                      | --set-cloud           | Aktivieren wenn Anwendung eine Cloud-Instanz ist                 |
-| -e                   | --enable=[ENABLE]     | Features aktivieren                                              |
-| -d                   | --disable=[DISABLE]   | Features deaktivieren                                            |
-| -r                   | --replace=[REPLACE]   | Vorhandene Features austauschen                                  |
-| -c                   | --cloudable           | Nur Cloud fähige Features werden beachtet                        |
-| -f                   | --noncloudable        | Nur nicht Cloud fähige Features werden beachtet                  |
-|                      | --wizard              | Interaktiver Modus um Features zu aktivieren oder deaktivieren   |
-| -l                   | --list                | Zeigt alle verfügbaren Features                                  |
+|                      | --unset-cloud         | Deaktivieren wenn Anwendung eine Cloud-Instanz ist                                               |
+|                      | --set-cloud           | Aktivieren wenn Anwendung eine Cloud-Instanz ist                                                 |
+| -e                   | --enable=[ENABLE]     | Features aktivieren                                                                              |
+| -d                   | --disable=[DISABLE]   | Features deaktivieren                                                                            |
+| -r                   | --replace=[REPLACE]   | Vorhandene Features austauschen                                                                  |
+| -c                   | --cloudable           | Nur Cloud fähige Features werden beachtet                                                        |
+| -f                   | --noncloudable        | Nur nicht Cloud fähige Features werden beachtet                                                  |
+|                      | --wizard              | Interaktiver Modus um Features zu aktivieren oder deaktivieren                                   |
+| -l                   | --list                | Zeigt alle verfügbaren Features                                                                  |
 | -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
 | -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
 | -i                   | --tenant=[TENANT-ID]  | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |

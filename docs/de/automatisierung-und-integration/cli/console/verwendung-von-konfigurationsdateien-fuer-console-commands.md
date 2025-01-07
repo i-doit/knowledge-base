@@ -1,19 +1,17 @@
+---
+title: Verwendung von Konfigurationsdateien für Console Commands
+description: Verwendung von Konfigurationsdateien für Console Commands
+icon:
+status:
+lang: de
+---
+
 # Verwendung von Konfigurationsdateien für Console Commands
 
 !!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
 
 Wenn Sie eine Konfigurationsdateien verwenden, können Sie dort für die Console Command die Optionen unterbringen.
 Speichern können Sie diese neu erstellten Dateien dann z.B. unter /i-doit/src/handler/config/.
-
-!!! warning "Zugriff auf .ini Dateien"
-    Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
-    Es sollte dieser code hinzugefügt werden:
-    ```shell
-    ## Deny access to all ini files…
-    <Files "*.ini">
-        Require all denied
-    </Files>
-    ```
 
 Damit Sie z.B. Passwörter nicht im Klartext in die Console tippen müssen.
 Der [Console Command](../console/optionen-und-parameter-der-console.md) verwendet .ini Dateien.
