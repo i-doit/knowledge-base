@@ -1,3 +1,11 @@
+---
+title: SNMP
+description: SNMP
+icon: material/dots-hexagon
+status:
+lang: de
+---
+
 # SNMP
 
 Die SNMP-Kategorie erlaubt es, in Echtzeit SNMP Werte aus Objekten auszulesen und darzustellen. Anhand der beispielhaften Abfrage eines Switches gehen wir in diesem Artikel die Voraussetzungen und die Umsetzung durch.

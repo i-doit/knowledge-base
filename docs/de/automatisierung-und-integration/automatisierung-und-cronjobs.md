@@ -1,3 +1,11 @@
+---
+title: Aufgabenplanung & Cron Jobs
+description: Aufgabenplanung & Cron Jobs
+icon: material/refresh-auto
+status:
+lang: de
+---
+
 # Aufgabenplanung & Cron Jobs
 
 ## Aufgabenplanung unter Windows

@@ -1,10 +1,17 @@
-# E-Mail (SMTP)
+---
+title: SMTP Konfiguration (E-Mail)
+description: SMTP Konfiguration (E-Mail)
+icon: mail-back
+status:
+lang: de
+---
+
+# SMTP Konfiguration (E-Mail)
 
 _i-doit_ ist in der Lage, beim Eintreten verschiedener Events oder bei Abfragen von bestimmten Zuständen automatisiert E-Mails zu versenden.
 
-!!! warning "Controller"
-
-    Die Konfiguration ist unbedingt notwendig, wenn der [CLI](../automatisierung-und-integration/cli/index.md) mit den [Benachrichtigungen](../auswertungen/benachrichtigungen.md) oder Workflows verwendet wird. Es können sonst keine E-Mails versandt werden!
+!!! warning "Console"
+    Die Konfiguration ist unbedingt notwendig, wenn automatisiert E-Mail Benachrichtigungen über das [CLI](../automatisierung-und-integration/cli/index.md) mit den [Benachrichtigungen](../auswertungen/benachrichtigungen.md) oder Workflows verwendet wird. Es können sonst keine E-Mails versandt werden!
 
 Die Einbindung eines Mailservers ist in der **Verwaltung** unter **Import und Schnittstellen** als **SMTP Konfiguration (E-Mail)** zu finden.
 
