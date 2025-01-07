@@ -1,10 +1,18 @@
-# Service Desk
+---
+title: Trouble Ticket System (TTS)
+description: Trouble Ticket System (TTS)
+icon: comment-empty
+status:
+lang: de
+---
 
-Der Service Desk ist in vielen Organisationen eine zentrale Schnittstelle zum Kunden. Wenn der Kunde ein Anliegen zu einem Produkt hat, stellt er eine Anfrage (Request) an den Support. Bei ITIL wird auch von Incidents gesprochen, bei der Software-Entwicklung eher von Issues. Anfragen kommen in der Regel als E-Mail oder per Telefon (Call) herein und werden in Tickets organisiert. Zur Unterstützung eines Service Desks existiert eine Vielzahl an (Web-)Applikationen. Diese greifen meistens auf zusätzliche Ressourcen zu (Kundendatenbanken etc.), um Anfragen ganzheitlich zu betrachten und möglichst effizient zu bearbeiten. Eine wichtige Ressource ist die [IT-Dokumentation](../../glossar.md): Meldet ein Kollege aus einer Fachabteilung einen defekten Drucker an die IT-Abteilung, unterstützt die IT-Dokumentation mit hilfreichen Informationen zum Modell, Standort, IP-Adresse, Remote-Zugriff und vielem mehr.
+# Trouble Ticket System (TTS)
+
+Das Trouble Ticket System (TTS) ist in vielen Organisationen eine zentrale Schnittstelle zum Kunden. Wenn der Kunde ein Anliegen zu einem Produkt hat, stellt er eine Anfrage (Request) an den Support. Bei ITIL wird auch von Incidents gesprochen, bei der Software-Entwicklung eher von Issues. Anfragen kommen in der Regel als E-Mail oder per Telefon (Call) herein und werden in Tickets organisiert. Zur Unterstützung eines Service Desks existiert eine Vielzahl an (Web-)Applikationen. Diese greifen meistens auf zusätzliche Ressourcen zu (Kundendatenbanken etc.), um Anfragen ganzheitlich zu betrachten und möglichst effizient zu bearbeiten. Eine wichtige Ressource ist die [IT-Dokumentation](../../glossar.md): Meldet ein Kollege aus einer Fachabteilung einen defekten Drucker an die IT-Abteilung, unterstützt die IT-Dokumentation mit hilfreichen Informationen zum Modell, Standort, IP-Adresse, Remote-Zugriff und vielem mehr.
 
 Unterstützte Applikationen
 
-i-doit bietet in der Standard-Installationen Schnittstellen zu mehreren Applikationen aus dem Bereich Service Desk:
+i-doit bietet in der Standard-Installationen Schnittstellen zu mehreren Applikationen aus dem Bereich Trouble Ticket System:
 
 *   [((OTRS)) Community Edition](../service-desk/otrscommunity-help-desk.md)
 *   [Request Tracker (RT)](../service-desk/request-tracker.md)
