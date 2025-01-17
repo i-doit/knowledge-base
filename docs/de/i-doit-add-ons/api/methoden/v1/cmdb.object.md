@@ -92,6 +92,7 @@ Create new [object](../../../../grundlagen/struktur-it-dokumentation.md) with so
 | **purpose**     | String            | No       | Attribute **Purpose** in category Global, for example: **"In production"**                                                                                                                       |
 | **cmdb_status** | String\|Integer   | No       | Attribute **CMDB status** in category **Global** by its constant (string), for example: **"C__CMDB_STATUS__IN_OPERATION"**<br><br>Alternatively, by its identifier (integer), for example: **6** |
 | **description** | String            | No       | Attribute **Description** in category **Global**                                                                                                                                                 |
+| **defaultTemplate** | Integer       | No       | Should the default Template should be used when creating a object? Default template has to be set in the object type configuration.        |
 
 ### Response parameter
 
