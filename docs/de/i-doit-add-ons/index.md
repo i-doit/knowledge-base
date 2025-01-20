@@ -13,32 +13,32 @@ Mit i-doit stehen die [IT-Dokumentation](../grundlagen/struktur-it-dokumentation
 
 ## Liste von verfügbaren Add-ons
 
-| Add-on                                                                        | Lizenzpflichtig? |
-| ----------------------------------------------------------------------------- | ---------------- |
-| **[Active Directory Documentation](./active-directory-documentation.md)**     | nein             |
-| **[Add-on Packager](./add-on-packager.md)**                                   | ja               |
-| **[Analysis](./analysis.md)**                                                 | ja               |
-| **[API](./api/index.md)**                                                     | nein             |
-| **[Cabling](./cabling.md)**                                                   | nein             |
-| **[Checkmk](./checkmk.md)**                                                   | nein             |
-| **[Checkmk2](./checkmk2/index.md)**                                           | ja               |
-| **[DNS Documentation](./dns-documentation.md)**                               | nein             |
-| **[Documents](./documents/index.md)**                                         | ja               |
-| **[Events](./events.md)**                                                     | nein             |
-| **[Floorplan](./floorplan.md)**                                               | nein             |
-| **[Flows](flows/index.md)**                                                   | ja               |
-| **[Forms](forms/index.md)**                                                   | ja               |
-| **[HomeOffice](https://www.i-doit.com/blog/i-doit-home-office-add-on/)**      | nein             |
-| **[i-diary](./i-diary.md)**                                                   | nein             |
-| **[ISMS aka ISO27001](./isms.md)**                                            | ja               |
-| **[Maintenance](./maintenance.md)**                                           | nein             |
-| **[Nagios](../automatisierung-und-integration/network-monitoring/nagios.md)** | nein             |
-| **[Relocate CI](./relocate-ci.md)**                                           | nein             |
-| **[Replacement](./replacement.md)**                                           | nein             |
-| **[Report Special](https://www.i-doit.com/blog/i-doit-reporting-special/)**   | nein             |
-| **[VIVA](./viva/index.md)**                                                   | ja               |
-| **[VIVA2](viva2.md)**                                                         | ja               |
-| **[Workflow](./workflow.md)**                                                 | nein             |
+| Add-on                                                                      | Lizenzpflichtig? |
+| --------------------------------------------------------------------------- | ---------------- |
+| **[Active Directory Documentation](./active-directory-documentation.md)**   | nein             |
+| **[Add-on Packager](./add-on-packager.md)**                                 | ja               |
+| **[Analysis](./analysis.md)**                                               | ja               |
+| **[API](./api/index.md)**                                                   | nein             |
+| **[Cabling](./cabling.md)**                                                 | nein             |
+| **[Checkmk](./checkmk.md)**                                                 | nein             |
+| **[Checkmk2](./checkmk2/index.md)**                                         | ja               |
+| **[DNS Documentation](./dns-documentation.md)**                             | nein             |
+| **[Documents](./documents/index.md)**                                       | ja               |
+| **[Events](./events.md)**                                                   | nein             |
+| **[Floorplan](./floorplan.md)**                                             | nein             |
+| **[Flows](flows/index.md)**                                                 | ja               |
+| **[Forms](forms/index.md)**                                                 | ja               |
+| **[HomeOffice](https://www.i-doit.com/blog/i-doit-home-office-add-on/)**    | nein             |
+| **[i-diary](./i-diary.md)**                                                 | nein             |
+| **[ISMS aka ISO27001](./isms.md)**                                          | ja               |
+| **[Maintenance](./maintenance.md)**                                         | nein             |
+| **[Nagios](../automatisierung-und-integration/monitoring/nagios.md)**       | nein             |
+| **[Relocate CI](./relocate-ci.md)**                                         | nein             |
+| **[Replacement](./replacement.md)**                                         | nein             |
+| **[Report Special](https://www.i-doit.com/blog/i-doit-reporting-special/)** | nein             |
+| **[VIVA](./viva/index.md)**                                                 | ja               |
+| **[VIVA2](viva2.md)**                                                       | ja               |
+| **[Workflow](./workflow.md)**                                               | nein             |
 
 Neben diesen Add-ons existieren viele weitere, die von unseren Partnern und externen Entwicklern zur Verfügung gestellt werden. Eine umfangreiche Auflistung befindet sich [auf der Website i-doit.com unter **Produkt → Add-ons**](https://www.i-doit.com/i-doit/add-ons/).
 

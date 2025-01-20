@@ -134,13 +134,13 @@ Bei den Empfängern kann ebenfalls gezielt oder gesammelt benachrichtigt werden.
 *   **Strategie zur Berechnung der Empfänger**<br>
     Genutzte Berechnungsstrategie der Empfänger bei der **Auflösung von Personengruppen** zu Personen. Diese Einstellung betrifft nur Personengruppen die als Kontakt zugewiesen sind.
 
-| Strategie | Beschreibung |
-| --- | --- |
-| \-  | Dies is der Standard = Gruppen falls E-Mail vorhanden, sonst zugewiesene Personen |
+| Strategie                                                  | Beschreibung                                                                                                                                                                                                                                               |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -                                                          | Dies is der Standard = Gruppen falls E-Mail vorhanden, sonst zugewiesene Personen                                                                                                                                                                          |
 | Gruppen falls E-Mail vorhanden, sonst zugewiesene Personen | Wenn die Personengruppe eine primäre E-Mail Adresse hinterlegt hat wird diese benachrichtigt.  <br>Wenn die Personengruppe KEINE primäre E-Mail Adresse hinterlegt hat, werden die primären E-Mail Adressen der Personengruppen Mitglieder benachrichtigt. |
-| Gruppen und Personen | Es werden die primären E-Mail Adressen der Personengruppen und der Personengruppen Mitglieder benachrichtigt. |
-| Nur Gruppen | Personengruppen mit einer primären E-Mail Adresse werden benachrichtigt. |
-| Nur Personen | Personengruppen Mitglieder mit einer primären E-Mail Adresse werden benachrichtigt. |
+| Gruppen und Personen                                       | Es werden die primären E-Mail Adressen der Personengruppen und der Personengruppen Mitglieder benachrichtigt.                                                                                                                                              |
+| Nur Gruppen                                                | Personengruppen mit einer primären E-Mail Adresse werden benachrichtigt.                                                                                                                                                                                   |
+| Nur Personen                                               | Personengruppen Mitglieder mit einer primären E-Mail Adresse werden benachrichtigt.                                                                                                                                                                        |
 
 ### E-Mail-Vorlagen
 

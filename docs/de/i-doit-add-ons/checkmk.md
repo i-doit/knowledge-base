@@ -2,7 +2,7 @@
 
 [![Logo von Check_MK](../assets/images/de/i-doit-add-ons/checkmk/1-cmk.gif)](../assets/images/de/i-doit-add-ons/checkmk/1-cmk.gif)
 
-Check\_MK ist eine Software für [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md), die aus i-doit heraus konfiguriert werden kann.
+Check\_MK ist eine Software für [Network Monitoring](../automatisierung-und-integration/monitoring/index.md), die aus i-doit heraus konfiguriert werden kann.
 
 Der Export beliefert Check\_MK mit WATO-Konfigurationsdateien. WATO ist die Konfigurationsoberfläche von Check\_MK, welche Änderungen an der Monitoring-Konfiguration verwaltet und deren Gültigkeit überprüft. Die Konfigurationen beinhalten IP-Adresse oder den DNS-Namen von zu exportierenden Hosts und/oder Cluster und deren Mitgliedern sowie zugeordnete Hostmerkmale (Tags) und verknüpfte Kontakte. Weitere Monitoring-spezifische Konfigurationen verbleiben in Check\_MK.
 
@@ -74,7 +74,7 @@ Analyse-Modul
 
 Diese Kategorie ist nur bei installiertem Analyse-Modul nutzbar.
 
-Die **Servicezuweisung** dient zur Zuweisung von installierter Software zu Service-Checks, die per [Livestatus](../automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md) ausgelesen werden. Dies wird genutzt, um im Analyse-Modul anhand von aus dem Monitoring gemeldeten Ausfällen zu errechnen, welche IT-Services betroffen sind. In der Kategorie wird quasi ein Monitoring Check mit einer auf dem System installierten Software "verheiratet".
+Die **Servicezuweisung** dient zur Zuweisung von installierter Software zu Service-Checks, die per [Livestatus](../automatisierung-und-integration/monitoring/daten-abfragen-mit-livestatus.md) ausgelesen werden. Dies wird genutzt, um im Analyse-Modul anhand von aus dem Monitoring gemeldeten Ausfällen zu errechnen, welche IT-Services betroffen sind. In der Kategorie wird quasi ein Monitoring Check mit einer auf dem System installierten Software "verheiratet".
 
 Dadurch kann im Analyse-Modul ermittelt werden, welche IT-Services direkt oder indirekt von dem technischen Ausfall betroffen sind.
 
@@ -99,9 +99,9 @@ Voraussetzung für die Übertragung per SSH ist Public-Key-Authentifizierung zwi
 Releases
 --------
 
-| Version | Date | Changelog |
-| --- | --- | --- |
-| 1.1 | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br> [Task] Design Compatibility |
-| 1.0.2 |     | [Improvement] Compatibility with i-doit 1.16 |
-| 1.0.1 | 14.10.2019 | [Bug] List editing of Check_MK categories <br> [Bug] Create new category entries in the list editing category "Export Parameter (subcategory of Check_MK (Host))" <br>[Bug] Add more dynamic CMDB-tags <br> [Bug] Export of dynamic host tags with special characters |
-| 1.0 | 17.12.2018 | [Improvement] Add-on is installable[Improvement] Add-on is uninstallable <br> [Improvement] Add-on is activatable <br> [Improvement] Add-on is deactivatable <br> [Change] Add-onize Check_MK |
+| Version | Date       | Changelog                                                                                                                                                                                                                                                             |
+| ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.1     | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br> [Task] Design Compatibility                                                                                                                                                                                                        |
+| 1.0.2   |            | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                                                          |
+| 1.0.1   | 14.10.2019 | [Bug] List editing of Check_MK categories <br> [Bug] Create new category entries in the list editing category "Export Parameter (subcategory of Check_MK (Host))" <br>[Bug] Add more dynamic CMDB-tags <br> [Bug] Export of dynamic host tags with special characters |
+| 1.0     | 17.12.2018 | [Improvement] Add-on is installable[Improvement] Add-on is uninstallable <br> [Improvement] Add-on is activatable <br> [Improvement] Add-on is deactivatable <br> [Change] Add-onize Check_MK                                                                         |

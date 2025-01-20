@@ -405,10 +405,10 @@ nav:
               - automatisierung-und-integration/cli/console/index.md
               - Optionen und Parameter der Console: automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md
               - Verwendung von Konfigurationsdateien für Console Commands: automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md
-      - Network Monitoring:
-          - automatisierung-und-integration/network-monitoring/index.md
-          - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md
-          - Nagios: automatisierung-und-integration/network-monitoring/nagios.md
+      - Monitoring:
+          - automatisierung-und-integration/monitoring/index.md
+          - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/monitoring/daten-abfragen-mit-livestatus.md
+          - Nagios: automatisierung-und-integration/monitoring/nagios.md
       - Trouble Ticket System (TTS):
           - automatisierung-und-integration/service-desk/index.md
           - Request Tracker (RT): automatisierung-und-integration/service-desk/request-tracker.md

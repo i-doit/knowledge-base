@@ -63,7 +63,7 @@ You can generate a new entry in the logbook for each object. Activate the **Logb
 
 ## Entries from Third-Party Systems
 
-The logbook accepts new entries from third-party systems, for example through [imports](../consolidate-data/index.md), [service desks](../evaluation/cmdb-explorer/index.md), [network monitoring](../automation-and-integration/network-monitoring/index.md) and the [API](../i-doit-add-ons/api/index.md).
+The logbook accepts new entries from third-party systems, for example through [imports](../consolidate-data/index.md), [service desks](../evaluation/cmdb-explorer/index.md), [network monitoring](../automation-and-integration/monitoring/index.md) and the [API](../i-doit-add-ons/api/index.md).
 
 ## Archiving and Restoring Older Entries
 

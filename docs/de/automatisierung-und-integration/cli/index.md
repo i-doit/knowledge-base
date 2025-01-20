@@ -1,6 +1,6 @@
 ---
-title: Console commands
-description: Console commands
+title: Command Line Interface
+description: Command Line Interface
 icon: material/console
 status:
 lang: de

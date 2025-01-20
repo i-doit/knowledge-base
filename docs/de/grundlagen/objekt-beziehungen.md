@@ -9,53 +9,53 @@ Objekte können auf die unterschiedlichste Art in Beziehung stehen. Um hier Klar
 
 [![Beziehungen](../assets/images/de/grundlagen/objekt-beziehungen/1-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/1-ob.png)
 
-| Beziehungstitel | Beschreibung aus Sicht des Master-Objekts | Beschreibung aus Sicht des Slave-Objekts |
-| --- | --- | --- |
-| **Abhängigkeit** | **hat Abhängigkeit zu** | **hängt ab von** |
-| **Anschlüsse** | **verbindet** | **ist verbunden mit** |
-| **Betriebssystem** | **hat Betriebssystem** | **ist installiert auf** |
-| **Chassis** | **beinhaltet** | **ist eingeschoben in** |
-| **Clusterdienstzuweisung** | **ist Host für** | **auf** |
-| **Clustermitgliedschaften** | **ist Mitglied von** | **hat Mitglied** |
-| **DBMS** | **verwaltet** | **ist eingerichtet in** |
-| **Dateizuweisung** | **hat Dateizuweisung** | **ist Datei für** |
-| **Datenbank Gateway** | **hat Datenbank Gateway zu** | **ist Datenbank Gateway von** |
-| **Datenbankinstanz** | **auf mir läuft** | **ist Datenbankinstanz von** |
-| **Datenbanklinks** | **hat Datenbanklink zu** | **hat Datenbanklink von** |
-| **Datenbankzugriff** | **wird benutzt von** | **hat Datenbankzugriff auf** |
-| **Datensicherung** | **sichert** | **wird gesichert von** |
-| **FC-Port** | **liefert Netzwerk an** | **bekommt Netzwerk geliefert von** |
-| **Freigabenzugriff** | **Freigabe wird genutzt von** | **nutzt Freigabe auf** |
-| **Gruppenmitgliedschaft** | **ist Mitglied von** | **hat Mitglied** |
-| **Hostadresse** | **liefert Netzwerk an** | **bekommt Netzwerk geliefert von** |
-| **Kontaktzuweisung (administriert)** | **administriert** | **wird administriert von** |
-| **Kontaktzuweisung (wird benutzt von)** | **wird benutzt von** | **benutzt** |
-| **Layer-2-Transport** | **transportiert Layer-2-Netz** | **wird transportiert von** |
-| **Logische Geräte (Client)** | **verbindet** | **ist verbunden mit** |
-| **Logischer Standort** | **ist Ordnungselement von** | **ist zugeordnet zu** |
-| **Netzwerkverbindungen** | **ist verbunden mit** | **verbindet sich zu** |
-| **Organisation (Organisation)** | **hat Mitglied** | **gehört zu** |
-| **Organisation (Personen)** | **hat Mitglied** | **gehört zu** |
-| **Personengruppenmitgliedschaft** | **hat Mitglied** | **ist Mitglied von** |
-| **Ports** | **liefert Netzwerk an** | **bekommt Netzwerk geliefert von** |
-| **Remote Management Controller** | **wird remote gemanagt von** | **ist management controller von** |
-| **Replikationspartner** | **ist Replikationspartner von** | **hat Replikationspartner** |
-| **SOA-Komponente** | **ist SOA Komponente von** | **hat SOA Komponente** |
-| **SOA-Stacks** | **hat SOA Stacks** | **ist SOA Stack von** |
-| **Schnittstelle** | **hat Abhängigkeit zu** | **hängt ab von** |
-| **Service-Komponente** | **ist Service Komponente von** | **hat Service Komponente** |
-| **Servicezuweisung** | **auf mir läuft** | **läuft auf** |
-| **Softwarezuweisung** | **auf mir läuft** | **auf** |
-| **Stacking** | **ist stack von** | **ist gestackt mit** |
-| **Standort** | **ist Standort von** | **steht in** |
-| **Stromverbraucher** | **liefert Strom an** | **bezieht Strom von** |
-| **VRRP** | **hat VRRP Mitglied** | **ist VRRP Mitglied von** |
-| **Verknüpfte Karten** | **hat Karte** | **ist Karte von** |
-| **Vertragszuweisung** | **ist Vertrag von** | **hat Vertragszuweisung zu** |
-| **Verwaltungsinstanz** | **ist Verwaltungsinstanz für** | **wird verwaltet von** |
-| **Virtuelle Maschine** | **ist Host für** | **läuft auf** |
-| **Virtueller Host** | **ist Verwaltungsinstanz für** | **wird verwaltet von** |
-| **Zentrale (Organisation)** | **ist Zentrale von** | **ist Zweigstelle** |
+| Beziehungstitel                         | Beschreibung aus Sicht des Master-Objekts | Beschreibung aus Sicht des Slave-Objekts |
+| --------------------------------------- | ----------------------------------------- | ---------------------------------------- |
+| **Abhängigkeit**                        | **hat Abhängigkeit zu**                   | **hängt ab von**                         |
+| **Anschlüsse**                          | **verbindet**                             | **ist verbunden mit**                    |
+| **Betriebssystem**                      | **hat Betriebssystem**                    | **ist installiert auf**                  |
+| **Chassis**                             | **beinhaltet**                            | **ist eingeschoben in**                  |
+| **Clusterdienstzuweisung**              | **ist Host für**                          | **auf**                                  |
+| **Clustermitgliedschaften**             | **ist Mitglied von**                      | **hat Mitglied**                         |
+| **DBMS**                                | **verwaltet**                             | **ist eingerichtet in**                  |
+| **Dateizuweisung**                      | **hat Dateizuweisung**                    | **ist Datei für**                        |
+| **Datenbank Gateway**                   | **hat Datenbank Gateway zu**              | **ist Datenbank Gateway von**            |
+| **Datenbankinstanz**                    | **auf mir läuft**                         | **ist Datenbankinstanz von**             |
+| **Datenbanklinks**                      | **hat Datenbanklink zu**                  | **hat Datenbanklink von**                |
+| **Datenbankzugriff**                    | **wird benutzt von**                      | **hat Datenbankzugriff auf**             |
+| **Datensicherung**                      | **sichert**                               | **wird gesichert von**                   |
+| **FC-Port**                             | **liefert Netzwerk an**                   | **bekommt Netzwerk geliefert von**       |
+| **Freigabenzugriff**                    | **Freigabe wird genutzt von**             | **nutzt Freigabe auf**                   |
+| **Gruppenmitgliedschaft**               | **ist Mitglied von**                      | **hat Mitglied**                         |
+| **Hostadresse**                         | **liefert Netzwerk an**                   | **bekommt Netzwerk geliefert von**       |
+| **Kontaktzuweisung (administriert)**    | **administriert**                         | **wird administriert von**               |
+| **Kontaktzuweisung (wird benutzt von)** | **wird benutzt von**                      | **benutzt**                              |
+| **Layer-2-Transport**                   | **transportiert Layer-2-Netz**            | **wird transportiert von**               |
+| **Logische Geräte (Client)**            | **verbindet**                             | **ist verbunden mit**                    |
+| **Logischer Standort**                  | **ist Ordnungselement von**               | **ist zugeordnet zu**                    |
+| **Netzwerkverbindungen**                | **ist verbunden mit**                     | **verbindet sich zu**                    |
+| **Organisation (Organisation)**         | **hat Mitglied**                          | **gehört zu**                            |
+| **Organisation (Personen)**             | **hat Mitglied**                          | **gehört zu**                            |
+| **Personengruppenmitgliedschaft**       | **hat Mitglied**                          | **ist Mitglied von**                     |
+| **Ports**                               | **liefert Netzwerk an**                   | **bekommt Netzwerk geliefert von**       |
+| **Remote Management Controller**        | **wird remote gemanagt von**              | **ist management controller von**        |
+| **Replikationspartner**                 | **ist Replikationspartner von**           | **hat Replikationspartner**              |
+| **SOA-Komponente**                      | **ist SOA Komponente von**                | **hat SOA Komponente**                   |
+| **SOA-Stacks**                          | **hat SOA Stacks**                        | **ist SOA Stack von**                    |
+| **Schnittstelle**                       | **hat Abhängigkeit zu**                   | **hängt ab von**                         |
+| **Service-Komponente**                  | **ist Service Komponente von**            | **hat Service Komponente**               |
+| **Servicezuweisung**                    | **auf mir läuft**                         | **läuft auf**                            |
+| **Softwarezuweisung**                   | **auf mir läuft**                         | **auf**                                  |
+| **Stacking**                            | **ist stack von**                         | **ist gestackt mit**                     |
+| **Standort**                            | **ist Standort von**                      | **steht in**                             |
+| **Stromverbraucher**                    | **liefert Strom an**                      | **bezieht Strom von**                    |
+| **VRRP**                                | **hat VRRP Mitglied**                     | **ist VRRP Mitglied von**                |
+| **Verknüpfte Karten**                   | **hat Karte**                             | **ist Karte von**                        |
+| **Vertragszuweisung**                   | **ist Vertrag von**                       | **hat Vertragszuweisung zu**             |
+| **Verwaltungsinstanz**                  | **ist Verwaltungsinstanz für**            | **wird verwaltet von**                   |
+| **Virtuelle Maschine**                  | **ist Host für**                          | **läuft auf**                            |
+| **Virtueller Host**                     | **ist Verwaltungsinstanz für**            | **wird verwaltet von**                   |
+| **Zentrale (Organisation)**             | **ist Zentrale von**                      | **ist Zweigstelle**                      |
 
 Unter der Auflistung der Beziehungsarten kann über den Button **Neuen Wert Hinzufügen** eine neue Art erstellt werden. Möchten Sie diese Beziehung in einer benutzerdefinierten Kategorie verwenden, müssen Sie diese als "Implizit" definieren.
 
@@ -71,9 +71,9 @@ Wird eine Beziehung zwischen zwei Objekten erstellt, wird automatisch im Hinterg
 
 Beispiel:
 
-| Master-Objekt | Beschreibung der Beziehung | Slave-Objekt |
-| --- | --- | --- |
-| PDU-HQ-Intern-01-A | **liefert Strom an** | ESX1 |
+| Master-Objekt      | Beschreibung der Beziehung | Slave-Objekt |
+| ------------------ | -------------------------- | ------------ |
+| PDU-HQ-Intern-01-A | **liefert Strom an**       | ESX1         |
 
 Das Beziehungs-Objekt ist nötig, um Eigenschaften der Beziehung als [Attribute](struktur-it-dokumentation.md) zu speichern. Dazu gehören unter anderem:
 
@@ -115,7 +115,7 @@ Wie weiter oben bereits erwähnt, erhält jede Beziehung eine Gewichtung. Diese 
 
 Beispiel: Bekommt ein nicht redundant ausgelegtes Netzteil Strom von einer USV, dann könnte die Gewichtung bei **1 (sehr wichtig)** liegen, denn ohne funktionierende USV funktioniert das Netzteil nicht. Fällt stattdessen eine Node im Web Cluster aus, übernehmen andere Nodes ihren Job. Die Abhängigkeit zu übergeordneten Services ist also nicht ganz so hart, sondern könnte zwischen **5 (wichtig)** und **10 (nicht wichtig)** liegen.
 
-Das Analyse-Modul verwendet diese Gewichtung in Kombination mit Services und [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md), um Aussagen treffen zu können, welche Services von Ausfällen betroffen sind.
+Das Analyse-Modul verwendet diese Gewichtung in Kombination mit Services und [Network Monitoring](../automatisierung-und-integration/monitoring/index.md), um Aussagen treffen zu können, welche Services von Ausfällen betroffen sind.
 
 ## Gleichgerichtete Beziehungen
 

@@ -1,7 +1,7 @@
 ---
 title: SNMP
 description: SNMP
-icon: material/dots-hexagon
+icon:
 status:
 lang: de
 ---
@@ -15,11 +15,12 @@ Die SNMP-Kategorie erlaubt es, in Echtzeit SNMP Werte aus Objekten auszulesen un
 
 ## Voraussetzungen
 
-Um diese Kategorie nutzen zu können benötigt _i-doit_ das SNMP Modul von PHP. Unter Debian lässt sich dies installieren mit dem Befehl:
+Um diese Kategorie nutzen zu können benötigt das **SNMP Modul** von PHP. Unter Debian lässt sich dies installieren mit dem Befehl:
+```shell
+sudo apt-get install php-snmp
+```
 
-    sudo apt-get install php-snmp
-
-Die SNMP Kategorie muss anschließend über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) dem gewünschten Objekttyp zugewiesen werden. In unserem Beispiel haben wir uns auf den Objekttyp Router reduziert.
+Die SNMP Kategorie muss anschließend über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) dem gewünschten Objekttyp zugewiesen werden. In unserem Beispiel haben wir uns auf den Objekttyp **Router** reduziert.
 
 Wir benötigen weiterhin eine gültige Hostadresse, die selbstverständlich in der entsprechenden Kategorie dokumentiert sein muss.
 
@@ -31,22 +32,23 @@ Um unnötige Fehlersuche zu vermeiden begeben wir uns erst einmal per SSH auf di
 snmpwalk -v 2c -c public 192.168.10.1 1.3.6.1.2.1.2.2.1.1
 ```
 
-!!! info
-    Die Details zum Thema SNMP und diesem Aufruf lassen wir an dieser Stelle weg. Informationen über die OID .1.3.6.1.2.1.2.2.1.1 gibt es beispielsweise hier: [http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1](http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1)
+!!! info "Die Details zum Thema SNMP und diesem Aufruf lassen wir an dieser Stelle weg. Informationen über die OID 1.3.6.1.2.1.2.2.1.1 gibt es beispielsweise hier: [http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1](http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1)"
 
 Das Ergebnis in unserem Falle sieht folgendermaßen aus:
 
-    iso.3.6.1.2.1.2.2.1.1.1 = INTEGER: 1
-    iso.3.6.1.2.1.2.2.1.1.2 = INTEGER: 2
-    iso.3.6.1.2.1.2.2.1.1.3 = INTEGER: 3
-    iso.3.6.1.2.1.2.2.1.1.4 = INTEGER: 4
-    iso.3.6.1.2.1.2.2.1.1.5 = INTEGER: 5
-    iso.3.6.1.2.1.2.2.1.1.6 = INTEGER: 6
-    iso.3.6.1.2.1.2.2.1.1.7 = INTEGER: 7
-    iso.3.6.1.2.1.2.2.1.1.8 = INTEGER: 8
-    iso.3.6.1.2.1.2.2.1.1.9 = INTEGER: 9
-    iso.3.6.1.2.1.2.2.1.1.10 = INTEGER: 10
-    iso.3.6.1.2.1.2.2.1.1.11 = INTEGER: 11
+```text
+iso.3.6.1.2.1.2.2.1.1.1 = INTEGER: 1
+iso.3.6.1.2.1.2.2.1.1.2 = INTEGER: 2
+iso.3.6.1.2.1.2.2.1.1.3 = INTEGER: 3
+iso.3.6.1.2.1.2.2.1.1.4 = INTEGER: 4
+iso.3.6.1.2.1.2.2.1.1.5 = INTEGER: 5
+iso.3.6.1.2.1.2.2.1.1.6 = INTEGER: 6
+iso.3.6.1.2.1.2.2.1.1.7 = INTEGER: 7
+iso.3.6.1.2.1.2.2.1.1.8 = INTEGER: 8
+iso.3.6.1.2.1.2.2.1.1.9 = INTEGER: 9
+iso.3.6.1.2.1.2.2.1.1.10 = INTEGER: 10
+...
+```
 
 Die Abfrage war also erfolgreich, wir habe es mit einem 11 Port Router zu tun. Sollten an dieser Stelle Timeouts o.Ä. Fehler auftreten, sollte die Netzwerk Konnektivität geprüft werden, ob SNMP in den Firewall Regeln erlaubt ist, ob der SNMP Server läuft und ob der i-doit Server Zugriffsberechtigung auf den SNMP Server hat. Selbstverständlich muss auch die gewählte SNMP Community (in unserem Beispiel public) verfügbar sein.
 

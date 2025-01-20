@@ -63,13 +63,13 @@ quiet
 [additional]
 ```
 
-Damit die Konfiguration auch verwendet wird führen wir den Console Command aus und geben den Pfad zur Konfigurationsdatei mit --config oder -can.
+Damit die Konfiguration auch verwendet wird führen wir den Console Command aus und geben den Pfad zur Konfigurationsdatei mit `--config` oder `-c`.
 
 ```shell
 sudo -u www-data php console.php search-index -c /var/www/html/i-doit/src/handler/config/examples/search-index.ini
 ```
 
-[example-search.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-seach_index.ini){ .md-button .md-button--primary }
+[example-search_index.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/example-seach_index.ini){ .md-button .md-button--primary }
 
 * * *
 
@@ -86,13 +86,13 @@ tenantId=1
 [additional]
 ```
 
-Damit die Konfiguration auch verwendet wird führen wir den Console Command aus und geben den Pfad zur Konfigurationsdatei mit --config oder -can.
+Damit die Konfiguration auch verwendet wird führen wir den Console Command aus und geben den Pfad zur Konfigurationsdatei mit `--config` oder `-c`.
 
 ```shell
 sudo -u www-data php console.php notifications-send -c /var/www/html/i-doit/src/handler/config/examples/notifications-send.ini
 ```
 
-[example-notifications-send.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-notifications-send.ini){ .md-button .md-button--primary }
+[example-notifications-send.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/example-ldap.ini){ .md-button .md-button--primary }
 
 * * *
 
@@ -110,7 +110,7 @@ password=pass
 tenantId=1
 [additional]
 import_rooms=false
-defaultCompany=''
+defaultCompany=""
 deletedUsersBehaviour=disable_login
 disabledUsersBehaviour=disable_login
 ; LDAP Attributes are individual. This default configuration is prepared for Active Directory:
@@ -146,7 +146,7 @@ ignoreFunction=empty
 syncEmptyAttributes=true
 ```
 
-[example-ldap.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/console-commands/example-ldap.ini){ .md-button .md-button--primary }
+[example-ldap.ini :material-file-download:](../../../assets/images/de/automatisierung-und-integration/cli/console/example-ldap.ini){ .md-button .md-button--primary }
 
 Damit die Konfiguration auch verwendet wird führen wir den Console Command aus und geben den Pfad zur Konfigurationsdatei mit --config oder -can.
 
@@ -159,7 +159,7 @@ Liste der Command Optionen und eine kurze Erklärung
 | Key                            | Wert                                  | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------------ | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | import\_rooms=                 | true oder false                       | Importiert das LDAP Attribut physicalDeliveryOfficeName und legt diesen falls nicht vorhanden als Raum, ohne Standort, an                                                                                                                                                                                                                                                                                                                                                                                                     |
-| defaultCompany=''              | 'Name der Organisation'               | Standard Organisation die eingetragen werden soll, leer lassen wenn nichts geändert werden soll                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| defaultCompany=""              | "Name der Organisation"               | Standard Organisation die eingetragen werden soll, leer lassen wenn nichts geändert werden soll                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | deletedUsersBehaviour=         | archive, delete oder disable\_login   | Verhalten für gelöschte LDAP Benutzer. Sollen diese archiviert, gelöscht oder soll das Login deaktiviert werden                                                                                                                                                                                                                                                                                                                                                                                                               |
 | disabledUsersBehaviour=        | archive, delete oder disable\_login   | Verhalten für deaktivierte LDAP Benutzer. Sollen diese archiviert, gelöscht oder soll das Login deaktiviert werden                                                                                                                                                                                                                                                                                                                                                                                                            |
 | rooms\[\]=""                   | \["Raum 01"\]="userPrincipalName"     | Hier wir dein Raum einem LDAP Benutzer statisch zugewiesen                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |

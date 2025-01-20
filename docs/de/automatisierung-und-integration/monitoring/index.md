@@ -1,12 +1,12 @@
 ---
-title: Network Monitoring
+title: Monitoring
 description: Network Monitoring
 icon: computer-activity
 status:
 lang: de
 ---
 
-# Network Monitoring
+# Monitoring
 
 Die Integration zum Network Monitoring besteht aus zwei Komponenten, die unabhängig voneinander genutzt werden können. Zum Einen können Live Daten aus dem Network Monitoring ausgelesen werden, zum Anderen können Daten aus i-doit heraus exportiert werden, um das Network Monitoring zu konfigurieren.
 

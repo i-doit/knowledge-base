@@ -64,7 +64,7 @@ Bei einem Klick auf den Bereich **Support** wird das <help.i-doit.com></https.he
 
 ## System settings
 
-Hier finden Sie die system bezogenen Einstellungen. Auch finden Sie hier den Link zu den [Experteneinstellungen](#expert-settings-system-related) auf der rechten Seite.
+Hier finden Sie die system bezogenen Einstellungen. Auch finden Sie hier den Link zu den [Experteneinstellungen](#expert-settings-system-bezogen) auf der rechten Seite.
 
 ### LDAP Debug settings
 

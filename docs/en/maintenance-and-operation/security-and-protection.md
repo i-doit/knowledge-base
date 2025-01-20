@@ -236,31 +236,31 @@ A **web application firewall** is especially suitable for web servers. A very po
 
 An external **dedicated firewall** is very useful, but of course its implementation and operation are more complex. i-doit should be enabled to search for updates and to access online repositories (for example, for [reports](../evaluation/report-manager.md) and [templates](../i-doit-add-ons/documents/index.md)):
 
-| Host | Protocol | Port | Description |
-| --- | --- | --- | --- |
-| **[login.i-doit.com](https://login.i-doit.com)** | **HTTPS** | **443** | Download of updates for i-doit and its add-ons |
-| **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)** | **HTTPS** | **443** | Online repositories (for example, for [reports](../evaluation/report-manager.md)) |
-| **[r.i-doit.com](https://r.i-doit.com)** | **HTTPS** | **443** | Online Repositories (for example, for [templates](../i-doit-add-ons/documents/index.md)) |
-| **[news.i-doit.com](https://news.i-doit.com)** | **HTTPS** | **443** | News about i-doit in the dashboard (open version) |
-| **[i-doit.com](https://www.i-doit.com/en/)** | **HTTPS** | **443** | Search for updates of the pro version |
-| **[i-doit.org](https://i-doit.org)** | **HTTPS** | **443** | Search for updates of the pro version |
-| **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)** | **HTTPS** | **443** | Retrieves available downloads via the license token |
-| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)**  | **HTTPS** | **443** | Retrieve licenses via token |
-| **[center.i-doit.com/portal/](https://center.i-doit.com/portal/)** | **HTTPS**| **443** | Access to the Add-on & Subscription Center |
+| Host                                                               | Protocol  | Port    | Description                                                                              |
+| ------------------------------------------------------------------ | --------- | ------- | ---------------------------------------------------------------------------------------- |
+| **[login.i-doit.com](https://login.i-doit.com)**                   | **HTTPS** | **443** | Download of updates for i-doit and its add-ons                                           |
+| **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)**         | **HTTPS** | **443** | Online repositories (for example, for [reports](../evaluation/report-manager.md))        |
+| **[r.i-doit.com](https://r.i-doit.com)**                           | **HTTPS** | **443** | Online Repositories (for example, for [templates](../i-doit-add-ons/documents/index.md)) |
+| **[news.i-doit.com](https://news.i-doit.com)**                     | **HTTPS** | **443** | News about i-doit in the dashboard (open version)                                        |
+| **[i-doit.com](https://www.i-doit.com/en/)**                       | **HTTPS** | **443** | Search for updates of the pro version                                                    |
+| **[i-doit.org](https://i-doit.org)**                               | **HTTPS** | **443** | Search for updates of the pro version                                                    |
+| **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)**       | **HTTPS** | **443** | Retrieves available downloads via the license token                                      |
+| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)**             | **HTTPS** | **443** | Retrieve licenses via token                                                              |
+| **[center.i-doit.com/portal/](https://center.i-doit.com/portal/)** | **HTTPS** | **443** | Access to the Add-on & Subscription Center                                               |
 
 If one or more interfaces to third-party applications are configured, you also have to enable access respectively:
 
-| Interface | Protocol | Default port |
-| --- | --- | --- |
-| [Sending e-mails](../evaluation/notifications.md) | **SMTP** | **25/465/587** |
-| [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md) | **LDAP** | **389/636** |
-| Livestatus | **Livestatus** | **6557** |
-| NDOUtils/IDOUtils | **MySQL** | **3306** |
-| [((OTRS)) Community Edition Help Desk](../automation-and-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automation-and-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443** |
-| [JDisc Discovery](../consolidate-data/jdisc-discovery.md) | **PostgreSQL** | **25321** |
-| [JDisc Discovery graphQL](../consolidate-data/jdisc-discovery.md) | **HTTPS** | **443** |
-| [JDisc Discovery](../consolidate-data/jdisc-discovery.md) | **HTTP** | **9000** |
-| OCS Inventory NG | **MySQL** | **3306** |
+| Interface                                                                                                                                                                                             | Protocol       | Default port   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- |
+| [Sending e-mails](../evaluation/notifications.md)                                                                                                                                                     | **SMTP**       | **25/465/587** |
+| [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md)                                                                                                                              | **LDAP**       | **389/636**    |
+| Livestatus                                                                                                                                                                                            | **Livestatus** | **6557**       |
+| NDOUtils/IDOUtils                                                                                                                                                                                     | **MySQL**      | **3306**       |
+| [((OTRS)) Community Edition Help Desk](../automation-and-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automation-and-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443**     |
+| [JDisc Discovery](../consolidate-data/jdisc-discovery.md)                                                                                                                                             | **PostgreSQL** | **25321**      |
+| [JDisc Discovery graphQL](../consolidate-data/jdisc-discovery.md)                                                                                                                                     | **HTTPS**      | **443**        |
+| [JDisc Discovery](../consolidate-data/jdisc-discovery.md)                                                                                                                                             | **HTTP**       | **9000**       |
+| OCS Inventory NG                                                                                                                                                                                      | **MySQL**      | **3306**       |
 
 ### Security Frameworks
 
@@ -366,7 +366,7 @@ i-doit enables additional mechanisms through the underlying Apache web server. F
 
 All effected measures should be monitored constantly, preferably in an automated way.
 
-The system is in good hands in a [Network Monitoring](../automation-and-integration/network-monitoring/index.md), such as Nagios or Check\_MK. There is hardly anything which cannot be monitored by this means. For example, it is important to keep an eye on the operating system and the (virtual) hardware with running processes, memory consumption, logged on users, available updates etc. **For i-doit you should ensure that Apache, MariaDB/MySQL and the available storage space are monitored.**
+The system is in good hands in a [Network Monitoring](../automation-and-integration/monitoring/index.md), such as Nagios or Check\_MK. There is hardly anything which cannot be monitored by this means. For example, it is important to keep an eye on the operating system and the (virtual) hardware with running processes, memory consumption, logged on users, available updates etc. **For i-doit you should ensure that Apache, MariaDB/MySQL and the available storage space are monitored.**
 
 Beside the network monitoring, there are other services which **monitor logs**. Before you start with the installation of a full-fledged log server (for example, [Logstash](https://www.elastic.co/products/logstash)), you could try smaller tools, like [Logwatch](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-logwatch-log-analyzer-and-reporter-on-a-vps). Logwatch monitors the log files of Apache, SSH and other services and sends a report which is easy to read per e-mail on a daily basis.
 

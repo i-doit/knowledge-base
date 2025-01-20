@@ -11,8 +11,8 @@ Objects can be in various types of relations. To provide clarification each rela
 | Relation title                         | Description from the point of view of the master object | Description from the point of view of the slave object |
 | -------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------ |
 | **Administration service**             | **is administration instance for**                      | **is managed by**                                      |
-| **Assigned SIM cards**                 | **has card**                                          | **is assigned to**                                     |
-| **Assigned cards**                     | **has card**                                          | **is card of**                                         |
+| **Assigned SIM cards**                 | **has card**                                            | **is assigned to**                                     |
+| **Assigned cards**                     | **has card**                                            | **is card of**                                         |
 | **Backup**                             | **saves**                                               | **saved by**                                           |
 | **Chassis**                            | **includes**                                            | **is inserted to**                                     |
 | **Cluster memberships**                | **is member of**                                        | **has member**                                         |
@@ -122,7 +122,7 @@ Each relation receives a weighting, as already mentioned above. The weighting is
 
 Example: A power supply receives its power from an UPS, so the weighting could be **1 (very important)** as the power supply could not function without a usable UPS. However, if a node fails within the web cluster, other nodes take on its job. This means that the dependency to higher-level services is not as strong and could lie somewhere between **5 (important)** and **10 (unimportant)**.
 
-The Analysis module uses this weighting in combination with services and [Network Monitoring](../automation-and-integration/network-monitoring/index.md) to evaluate which services are affected by malfunctions.
+The Analysis module uses this weighting in combination with services and [Network Monitoring](../automation-and-integration/monitoring/index.md) to evaluate which services are affected by malfunctions.
 
 ## Parallel Relations
 

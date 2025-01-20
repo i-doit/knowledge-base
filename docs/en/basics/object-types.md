@@ -2,87 +2,87 @@
 
 The default installation of i-doit already offers a large variety of [object types](structure-of-the-it-documentation.md) which can be used for a wide range of purposes or can be hidden when they are not used. This article provides a short overview of object types.
 
-| Object type | Description | Examples |
-| --- | --- | --- |
-| **Application  <br>** | End user applications | Web browser, Office applications |
-| **Workplace  <br>** | Logical links of terminal devices and a person to workplaces |     |
-| **Operating system  <br>** | Operating systems | GNU/Linux, Windows, Mac OS |
-| **Blade chassis** | Chassis for **Blade server** |     |
-| **Blade server** | Physical server in a **Blade chassis** |     |
-| **Client** | Desktop computers, laptops, workstations |     |
-| **Cluster** | Logical links of highly available systems |     |
-| **Cluster services  <br>** | Application for managing highly available systems; see **Cluster** |     |
-| **File  <br>** | Uploaded files |     |
-| **Database instance  <br>** | Started instances of a **DBMS** |     |
-| **Database schema  <br>** | Created databases of a **DBMS** |     |
-| **DBMS** | Database management systems (DBMS) | MariaDB, MySQL, PostgreSQL |
-| **Printer  <br>** | Printers | Laser printers, inkjet printers, multifunction devices, fax machines, plotter, 3D printers |
-| **Electric power company  <br>** | Companies suppling other organizations with power |     |
-| **Vehicle  <br>** | Vehicles |     |
-| **FC switch  <br>** | Fiber channel switches; often in connection with SANs; see **Storage system** |     |
-| **Aircraft  <br>** | Aircrafts |     |
-| **Building  <br>** | Buildings in a **City** |     |
-| **Appliance  <br>** | Appliances which are used in the organization but are rather designed as black box | Firewalls |
-| **Host** | Remote computers which aren't directly accessible | DNS servers |
-| **information domain** | Information networks (IT security/ IT-Grundschutz); see [Add-on VIVA](../i-doit-add-ons/viva/index.md) |     |
-| **Cable  <br>** | A group of wires, such as cupper wires or glass fibers, covered in plastic or rubber and used to carry electricity or electrical signals |     |
-| **Cable tray  <br>** | Cable routes; see **Cable** |     |
-| **Air Condition System  <br>** | Air-conditioning of active components |     |
-| **Converter  <br>** | Components for the conversion of signals etc. |     |
-| **Crypto card  <br>** | Smart cards with cryptography functions |     |
-| **KVM switch  <br>** | Devices allowing control of multiple input devices (keyboard, video, mouse) |     |
-| **Country** | Countries |     |
-| **Layer 2 Net  <br>** | VLANs |     |
-| **Layer 3-Net  <br>** | Subnets (IPv4, IPv6) |     |
-| **Conduit  <br>** | Empty conduit for **Cable** |     |
-| **Wiring System  <br>** | Logical wiring; see **Cable** |     |
-| **Licenses  <br>** | Software licenses etc. |     |
-| **Middleware  <br>** | Layers between presentation layers and data storage layers | JBoss |
-| **Migration objects  <br>** | Objects which had to be migrated after earlier updates (not in use at the moment) |     |
-| **Cellular phone  <br>** | Mobile phones, feature phones, smartphones; see **SIM card** |     |
-| **Monitor  <br>** | External displays for computers; see **Client** |     |
-| **Nagios host-template** | See [Network Monitoring with Nagios](../automation-and-integration/network-monitoring/nagios.md) |     |
-| **Nagios service** | See [Network Monitoring with Nagios](../automation-and-integration/network-monitoring/nagios.md) |     |
-| **Nagios service-template** | See [Network Monitoring with Nagios](../automation-and-integration/network-monitoring/nagios.md) |     |
-| **Net zone** | Segmentation of subnets; see **Layer 3-Net** |     |
-| **Emergency power supply  <br>** | Systems for power supply when the main power supply fails | Diesel generators |
-| **Emergency plan  <br>** | Emergency plans as **File** |     |
-| **Object group  <br>** | Logical link of objects |     |
-| **Organization  <br>** | Companies, institutions, facilities |     |
-| **Patch Panel  <br>** | Patch panels in a server rack; see **Rack** |     |
-| **Persons  <br>** | People and Bots |     |
-| **Person groups  <br>** | Grouped **Persons** | Access rights groups, departments |
-| **Printbox  <br>** | Printer server |     |
-| **Room  <br>** | Rooms in a **Building** |     |
-| **Remote Management Controller** | Components for remote administration of servers; see **Server** |     |
-| **Replication object  <br>** | \-  |     |
-| **Router** | Layer-3 router |     |
-| **SAN Zoning** | Zones in a SAN; see **Storage system** |     |
-| **Server** | Physical servers |     |
-| **Service** | Organizational services provided by an organization | IT services |
-| **SIM card  <br>** | SIM cards; see **Cellular phone** |     |
-| **Rack  <br>** | Server racks |     |
-| **Storage system  <br>** | Storage Area Networks (SAN) and Network Attached Storages (NAS) |     |
-| **Stacking** | Combination of hardware components | Stacked switches |
-| **City  <br>** | Cities in a **Country** |     |
-| **Power distribution unit  <br>** | Power Distribution Units (PDU) for power supply |     |
-| **Supernet** | Combination of subnets; see **Layer 3-Net** |     |
-| **Switch** | Layer-2 switches |     |
-| **Switch Chassis** | Housing for modular switches; see **Switch** |     |
-| **System service  <br>** | Services, daemons and applications which are executed on servers | Apache webserver, i-doit, PHP |
-| **Phone  <br>** | Analog or ISDN telephones |     |
-| ****Telephone** system  <br>** | Telephone systems |     |
-| ****Uninterruptible power supply**** | Uninterruptible power supplies (UPS) |     |
-| **Amplifier  <br>** | Active components for amplifying signals etc. |     |
-| **Distribution box  <br>** | For power supply; see **Cable** |     |
-| **Contract  <br>** | Maintenance contracts etc. |     |
-| **Virtual client** | Virtual desktops; see **Virtual host** |     |
-| **Virtual host** | Host systems for virtual machines; see **Virtual Maschine** and **Virtual client** |     |
-| **Virtual Maschine** | Virtual machines (VM); see **Virtual Host** |     |
-| **VoIP telephone  <br>** | SIP capable telephones |     |
-| **VRRP/HSRP Cluster** | Highly available routers which use VRRP, HSRP or CARP protocols |     |
-| **WAN  <br>** | External connections/ uplinks |     |
-| **Wireless Access Point** | WLAN APs |     |
+| Object type                          | Description                                                                                                                              | Examples                                                                                   |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Application  <br>**                | End user applications                                                                                                                    | Web browser, Office applications                                                           |
+| **Workplace  <br>**                  | Logical links of terminal devices and a person to workplaces                                                                             |                                                                                            |
+| **Operating system  <br>**           | Operating systems                                                                                                                        | GNU/Linux, Windows, Mac OS                                                                 |
+| **Blade chassis**                    | Chassis for **Blade server**                                                                                                             |                                                                                            |
+| **Blade server**                     | Physical server in a **Blade chassis**                                                                                                   |                                                                                            |
+| **Client**                           | Desktop computers, laptops, workstations                                                                                                 |                                                                                            |
+| **Cluster**                          | Logical links of highly available systems                                                                                                |                                                                                            |
+| **Cluster services  <br>**           | Application for managing highly available systems; see **Cluster**                                                                       |                                                                                            |
+| **File  <br>**                       | Uploaded files                                                                                                                           |                                                                                            |
+| **Database instance  <br>**          | Started instances of a **DBMS**                                                                                                          |                                                                                            |
+| **Database schema  <br>**            | Created databases of a **DBMS**                                                                                                          |                                                                                            |
+| **DBMS**                             | Database management systems (DBMS)                                                                                                       | MariaDB, MySQL, PostgreSQL                                                                 |
+| **Printer  <br>**                    | Printers                                                                                                                                 | Laser printers, inkjet printers, multifunction devices, fax machines, plotter, 3D printers |
+| **Electric power company  <br>**     | Companies suppling other organizations with power                                                                                        |                                                                                            |
+| **Vehicle  <br>**                    | Vehicles                                                                                                                                 |                                                                                            |
+| **FC switch  <br>**                  | Fiber channel switches; often in connection with SANs; see **Storage system**                                                            |                                                                                            |
+| **Aircraft  <br>**                   | Aircrafts                                                                                                                                |                                                                                            |
+| **Building  <br>**                   | Buildings in a **City**                                                                                                                  |                                                                                            |
+| **Appliance  <br>**                  | Appliances which are used in the organization but are rather designed as black box                                                       | Firewalls                                                                                  |
+| **Host**                             | Remote computers which aren't directly accessible                                                                                        | DNS servers                                                                                |
+| **information domain**               | Information networks (IT security/ IT-Grundschutz); see [Add-on VIVA](../i-doit-add-ons/viva/index.md)                                   |                                                                                            |
+| **Cable  <br>**                      | A group of wires, such as cupper wires or glass fibers, covered in plastic or rubber and used to carry electricity or electrical signals |                                                                                            |
+| **Cable tray  <br>**                 | Cable routes; see **Cable**                                                                                                              |                                                                                            |
+| **Air Condition System  <br>**       | Air-conditioning of active components                                                                                                    |                                                                                            |
+| **Converter  <br>**                  | Components for the conversion of signals etc.                                                                                            |                                                                                            |
+| **Crypto card  <br>**                | Smart cards with cryptography functions                                                                                                  |                                                                                            |
+| **KVM switch  <br>**                 | Devices allowing control of multiple input devices (keyboard, video, mouse)                                                              |                                                                                            |
+| **Country**                          | Countries                                                                                                                                |                                                                                            |
+| **Layer 2 Net  <br>**                | VLANs                                                                                                                                    |                                                                                            |
+| **Layer 3-Net  <br>**                | Subnets (IPv4, IPv6)                                                                                                                     |                                                                                            |
+| **Conduit  <br>**                    | Empty conduit for **Cable**                                                                                                              |                                                                                            |
+| **Wiring System  <br>**              | Logical wiring; see **Cable**                                                                                                            |                                                                                            |
+| **Licenses  <br>**                   | Software licenses etc.                                                                                                                   |                                                                                            |
+| **Middleware  <br>**                 | Layers between presentation layers and data storage layers                                                                               | JBoss                                                                                      |
+| **Migration objects  <br>**          | Objects which had to be migrated after earlier updates (not in use at the moment)                                                        |                                                                                            |
+| **Cellular phone  <br>**             | Mobile phones, feature phones, smartphones; see **SIM card**                                                                             |                                                                                            |
+| **Monitor  <br>**                    | External displays for computers; see **Client**                                                                                          |                                                                                            |
+| **Nagios host-template**             | See [Network Monitoring with Nagios](../automation-and-integration/monitoring/nagios.md)                                                 |                                                                                            |
+| **Nagios service**                   | See [Network Monitoring with Nagios](../automation-and-integration/monitoring/nagios.md)                                                 |                                                                                            |
+| **Nagios service-template**          | See [Network Monitoring with Nagios](../automation-and-integration/monitoring/nagios.md)                                                 |                                                                                            |
+| **Net zone**                         | Segmentation of subnets; see **Layer 3-Net**                                                                                             |                                                                                            |
+| **Emergency power supply  <br>**     | Systems for power supply when the main power supply fails                                                                                | Diesel generators                                                                          |
+| **Emergency plan  <br>**             | Emergency plans as **File**                                                                                                              |                                                                                            |
+| **Object group  <br>**               | Logical link of objects                                                                                                                  |                                                                                            |
+| **Organization  <br>**               | Companies, institutions, facilities                                                                                                      |                                                                                            |
+| **Patch Panel  <br>**                | Patch panels in a server rack; see **Rack**                                                                                              |                                                                                            |
+| **Persons  <br>**                    | People and Bots                                                                                                                          |                                                                                            |
+| **Person groups  <br>**              | Grouped **Persons**                                                                                                                      | Access rights groups, departments                                                          |
+| **Printbox  <br>**                   | Printer server                                                                                                                           |                                                                                            |
+| **Room  <br>**                       | Rooms in a **Building**                                                                                                                  |                                                                                            |
+| **Remote Management Controller**     | Components for remote administration of servers; see **Server**                                                                          |                                                                                            |
+| **Replication object  <br>**         | \-                                                                                                                                       |                                                                                            |
+| **Router**                           | Layer-3 router                                                                                                                           |                                                                                            |
+| **SAN Zoning**                       | Zones in a SAN; see **Storage system**                                                                                                   |                                                                                            |
+| **Server**                           | Physical servers                                                                                                                         |                                                                                            |
+| **Service**                          | Organizational services provided by an organization                                                                                      | IT services                                                                                |
+| **SIM card  <br>**                   | SIM cards; see **Cellular phone**                                                                                                        |                                                                                            |
+| **Rack  <br>**                       | Server racks                                                                                                                             |                                                                                            |
+| **Storage system  <br>**             | Storage Area Networks (SAN) and Network Attached Storages (NAS)                                                                          |                                                                                            |
+| **Stacking**                         | Combination of hardware components                                                                                                       | Stacked switches                                                                           |
+| **City  <br>**                       | Cities in a **Country**                                                                                                                  |                                                                                            |
+| **Power distribution unit  <br>**    | Power Distribution Units (PDU) for power supply                                                                                          |                                                                                            |
+| **Supernet**                         | Combination of subnets; see **Layer 3-Net**                                                                                              |                                                                                            |
+| **Switch**                           | Layer-2 switches                                                                                                                         |                                                                                            |
+| **Switch Chassis**                   | Housing for modular switches; see **Switch**                                                                                             |                                                                                            |
+| **System service  <br>**             | Services, daemons and applications which are executed on servers                                                                         | Apache webserver, i-doit, PHP                                                              |
+| **Phone  <br>**                      | Analog or ISDN telephones                                                                                                                |                                                                                            |
+| ****Telephone** system  <br>**       | Telephone systems                                                                                                                        |                                                                                            |
+| ****Uninterruptible power supply**** | Uninterruptible power supplies (UPS)                                                                                                     |                                                                                            |
+| **Amplifier  <br>**                  | Active components for amplifying signals etc.                                                                                            |                                                                                            |
+| **Distribution box  <br>**           | For power supply; see **Cable**                                                                                                          |                                                                                            |
+| **Contract  <br>**                   | Maintenance contracts etc.                                                                                                               |                                                                                            |
+| **Virtual client**                   | Virtual desktops; see **Virtual host**                                                                                                   |                                                                                            |
+| **Virtual host**                     | Host systems for virtual machines; see **Virtual Maschine** and **Virtual client**                                                       |                                                                                            |
+| **Virtual Maschine**                 | Virtual machines (VM); see **Virtual Host**                                                                                              |                                                                                            |
+| **VoIP telephone  <br>**             | SIP capable telephones                                                                                                                   |                                                                                            |
+| **VRRP/HSRP Cluster**                | Highly available routers which use VRRP, HSRP or CARP protocols                                                                          |                                                                                            |
+| **WAN  <br>**                        | External connections/ uplinks                                                                                                            |                                                                                            |
+| **Wireless Access Point**            | WLAN APs                                                                                                                                 |                                                                                            |
 
 Fields in the Configuration
 ---------------------------

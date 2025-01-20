@@ -76,7 +76,7 @@ In diesem Widget werden die letzten, von dem angemeldeten Benutzer geänderten O
 
 ### Monitoring: Gefährdete Hosts
 
-Dieses Widget benötigt eine Anbindung an [Nagios oder Check\_MK](../automatisierung-und-integration/network-monitoring/index.md) und zeigt eine Ansicht der gefährdeten Hosts an. Über den Stift kann ein Host für die Anzeige ausgewählt werden.
+Dieses Widget benötigt eine Anbindung an [Nagios oder Check\_MK](../automatisierung-und-integration/monitoring/index.md) und zeigt eine Ansicht der gefährdeten Hosts an. Über den Stift kann ein Host für die Anzeige ausgewählt werden.
 
 ### Notizen
 

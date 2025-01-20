@@ -18,17 +18,17 @@ for [Nagios](https://www.nagios.org/), [Check\_MK](http://mathias-kettner.com/ch
 
 A running NDOUtils or MK Livestatus are required on the monitoring system. The access to one of the interfaces has to be configured in i-doit at **Administration → Interfaces and interfaces → Monitoring → Livestatus/NDO**.
 
-[![Livestatus/NDO](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/1-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/1-fdwls.png)
+[![Livestatus/NDO](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/1-fdwls.png)](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/1-fdwls.png)
 
 A TCP/UNIX socket or a database configuration with corresponding access permissions has to be set depending on the type of interface.
 
 Example for NDOUtils:
 
-[![NDOUtils](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/2-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/2-fdwls.png)
+[![NDOUtils](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/2-fdwls.png)](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/2-fdwls.png)
 
 Example for MK Livestatus:
 
-[![Livestatus](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/3-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/3-fdwls.png)
+[![Livestatus](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/3-fdwls.png)](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/3-fdwls.png)
 
 ## Categories
 
@@ -36,15 +36,15 @@ In order to read out data the [category folder](../../basics/structure-of-the-it
 
 If multiple monitoring instances are configured, the corresponding instance is chosen.
 
-[![monitoring](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/4-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/4-fdwls.png)
+[![monitoring](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/4-fdwls.png)](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/4-fdwls.png)
 
 Is the category activated and the entry saved, then the current status can be queried in the **Livestatus** or the **NDO** category.
 
-[![Livestatus](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/5-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/5-fdwls.png)
+[![Livestatus](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/5-fdwls.png)](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/5-fdwls.png)
 
 A column for the NDO or Livestatus can be additionally chosen in the [object list configuration](../../basics/object-list/configuration-of-the-list-view.md) so that the current host status is also shown in the [object list](../../basics/object-list/index.md).
 
-[![Object list with Livestatus](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/6-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/6-fdwls.png)
+[![Object list with Livestatus](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/6-fdwls.png)](../../assets/images/en/automation-and-integration/monitoring/fetch-data-with-livestatus/6-fdwls.png)
 
 ## Log Entries from the Monitoring
 

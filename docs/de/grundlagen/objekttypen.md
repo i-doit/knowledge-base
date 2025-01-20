@@ -1,87 +1,88 @@
 #  Objekttypen
+
 i-doit bringt in der Standard-Installation bereits eine Vielzahl von [Objekttypen](struktur-it-dokumentation.md) mit, die sich für vielfältige Zwecke nutzen oder bei Nichtverwendung ausblenden lassen. Welche das sind, erklärt dieser Artikel.
 
-| Objekttyp | Beschreibung | Beispiele |
-| --- | --- | --- |
-| **Anwendung** | Endbenutzer-Applikationen | Webbrowser, Office-Programme |
-| **Arbeitsplatz** | Logische Verknüpfungen von Endgeräten und einer Person zu Arbeitsplätzen |     |
-| **Betriebssystem** | Betriebssysteme | GNU/Linux, Windows, Mac OS |
-| **Blade Chassis** | Chassis für **Blade Server** |     |
-| **Blade Server** | Physikalischer Server in einem **Blade Chassis** |     |
-| **Client** | Desktop-PCs, Laptops, Workstations |     |
-| **Cluster** | Logische Verknüpfung von hochverfügbaren Systemen |     |
-| **Clusterdienst** | Applikation zur Verwaltung von hochverfügbaren Systemen; siehe **Cluster** |     |
-| **Dateien** | Hochgeladene Dateien |     |
-| **Datenbankinstanz** | Gestartete Instanzen eines **DBMS** |     |
-| **Datenbankschema** | Erstellte Datenbanken eines **DBMS** |     |
-| **DBMS** | Datenbank Management Systeme (DBMS) | MariaDB, MySQL, PostgreSQL |
-| **Drucker** | Irgendwas mit Holz | Laser-, Tintenstrahldrucker, Multifunktionsgeräte, Faxgeräte, Plotter, 3D-Drucker |
-| **Energieversorgungsunternehmen** | Organisationen, die andere Organisationen mit Strom versorgen |     |
-| **Fahrzeug** | Fahrzeuge |     |
-| **FC-Switch** | Fiber Channel Switches; häufig im Zusammenhang mit SANs; siehe **Speichersystem** |     |
-| **Flugzeug** | Flugzeuge |     |
-| **Gebäude** | Gebäude in einer **Stadt** |     |
-| **Geräte/Appliance** | Appliances, die in der Organisation betrieben werden, aber eher als Black Box konzipiert sind | Firewalls |
-| **Host** | Entfernte Rechner, die nicht im direkten Zugriff stehen | DNS-Server |
-| **information domain** | Informationsverbünde (IT-Grundschutz); siehe [Add-on VIVA](../i-doit-add-ons/viva/index.md) |     |
-| **Kabel** | Lange, schlauchartige Ansammlung von Kupfern/Fasern, ummantelt von einer Schutzhülle und mit zwei Enden |     |
-| **Kabeltrasse** | Kabeltrassen; siehe **Kabel** |     |
-| **Klimaanlage** | Klimatisierung von aktiven Komponenten |     |
-| **Konverter** | Komponenten zum Konvertieren von Signalen o. ä. |     |
-| **Kryptokarte** | Smard Cards mit Kryptographie-Funktionen |     |
-| **KVM-Switch** | Komponenten zum entfernten Bereitstellen von Eingabegeräten (Keyboard, Video, Mouse) |     |
-| **Land** | Länder |     |
-| **Layer-2-Netz** | VLANs |     |
-| **Layer-3-Netz** | Subnetze (IPv4, IPv6) |     |
-| **Leerrohr** | Leerrohre für **Kabel** |     |
-| **Leitungsnetz** | Logische Verkabelungen; siehe **Kabel** |     |
-| **Lizenzen** | Software-Lizenzen o. ä. |     |
-| **Middleware** | Vermittlungsschichten zwischen Präsentations- und Datenhaltungsschichten | JBoss |
-| **Migrationsobjekte** | Objekte, die nach früheren Updates migriert werden mussten (derzeit nicht in Verwendung) |     |
-| **Mobiltelefon** | Handys, Feature Phones, Smartphones; siehe **SIM-Karte** |     |
-| **Monitore** | Externe Displays für Rechner; siehe **Client** |     |
-| **Nagios Host-Template** | Siehe [Network Monitoring mit Nagios](../automatisierung-und-integration/network-monitoring/nagios.md) |     |
-| **Nagios Service** | Siehe [Network Monitoring mit Nagios](../automatisierung-und-integration/network-monitoring/nagios.md) |     |
-| **Nagios Service-Template** | Siehe [Network Monitoring mit Nagios](../automatisierung-und-integration/network-monitoring/nagios.md) |     |
-| **Netzbereich** | Segmentierung von Subnetzen; siehe Layer-3-Netz |     |
-| **Netzersatzanlage** | Anlagen zur Stromversorgung, wenn die Hauptstromversorgung wegbricht | Dieselgeneratoren |
-| **Notfallplan** | Notfallpläne als **Dateien** |     |
-| **Objektgruppe** | Logische Verknüpfung von Objekten |     |
-| **Organisation** | Unternehmen, Institutionen, Einrichtungen |     |
-| **Patchfeld** | Patchfelder in einem Serverschrank; siehe **Schrank** |     |
-| **Personen** | Menschen und Bots |     |
-| **Personengruppen** | Gruppierte **Personen** | Rechtegruppen, Abteilungen |
-| **Printbox** | Drucker-Server |     |
-| **Raum** | Räume in einem **Gebäude** |     |
-| **Remote Management Controller** | Komponenten zum entfernten Administrieren von Servern; siehe **Server** |     |
-| **Replikationsobjekt** | \-  |     |
-| **Router** | Layer-3-Router |     |
-| **SAN Zoning** | Zonen in einem SAN; siehe **Speichersystem** |     |
-| **Server** | Physikalische Server |     |
-| **Service** | Organisatorische Dienste, die von einer Organisation erbracht werden | IT-Services |
-| **SIM-Karte** | SIM-Karten; siehe **Mobiltelefon** |     |
-| **Schrank** | Serverschränke (Racks) |     |
-| **Speichersystem** | Storage Area Networks (SAN) und Network Attached Storages (NAS) |     |
-| **Stacking** | Zusammenschluss von Hardware-Komponenten | Stacked Switches |
-| **Stadt** | Städte in einem **Land** |     |
-| **Steckdosenleiste** | Power Distribution Units (PDU) zur Stromversorgung |     |
-| **Supernet** | Zusammenfassung von Subnetzen; siehe **Layer-3-Netz** |     |
-| **Switch** | Layer-2-Switche |     |
-| **Switch Chassis** | Gehäuse für modulare Switche; siehe **Switch** |     |
-| **Systemdienst** | Dienste, Daemons und Applikationen, die auf Servern ausgeführt werden | Apache Webserver, i-doit, PHP |
-| **Telefon** | Analoge oder ISDN-Telefone |     |
-| **Telefonanlage** | Telefonanlagen |     |
-| **Unterbrechungsfreie Stromversorgung** | USVs |     |
-| **Verstärker** | Aktive Komponenten zum Verstärken von Signalen o. ä. |     |
-| **Verteilerkasten** | Zur Stromversorgung; siehe **Kabel** |     |
-| **Vertrag** | Wartungsverträge o. ä. |     |
-| **Virtueller Client** | Virtuelle Desktops; siehe **Virtueller Host** |     |
-| **Virtueller Host** | Wirtsysteme für virtuelle Maschinen; siehe **Virtueller Server** und **Virtueller Client** |     |
-| **Virtueller Server** | Virtuelle Maschinen (VM); siehe **Virtueller Host** |     |
-| **VoIP Telefon** | SIP-fähige Telefone |     |
-| **VRRP/HSRP Cluster** | Hochverfügbare Router, die die Protokolle VRRP, HSRP oder CARP verwenden |     |
-| **WAN-Leitungen** | Außenanbindungen/Uplinks |     |
-| **Wireless Access Point** | WLAN APs |     |
+| Objekttyp                               | Beschreibung                                                                                            | Beispiele                                                                         |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **Anwendung**                           | Endbenutzer-Applikationen                                                                               | Webbrowser, Office-Programme                                                      |
+| **Arbeitsplatz**                        | Logische Verknüpfungen von Endgeräten und einer Person zu Arbeitsplätzen                                |                                                                                   |
+| **Betriebssystem**                      | Betriebssysteme                                                                                         | GNU/Linux, Windows, Mac OS                                                        |
+| **Blade Chassis**                       | Chassis für **Blade Server**                                                                            |                                                                                   |
+| **Blade Server**                        | Physikalischer Server in einem **Blade Chassis**                                                        |                                                                                   |
+| **Client**                              | Desktop-PCs, Laptops, Workstations                                                                      |                                                                                   |
+| **Cluster**                             | Logische Verknüpfung von hochverfügbaren Systemen                                                       |                                                                                   |
+| **Clusterdienst**                       | Applikation zur Verwaltung von hochverfügbaren Systemen; siehe **Cluster**                              |                                                                                   |
+| **Dateien**                             | Hochgeladene Dateien                                                                                    |                                                                                   |
+| **Datenbankinstanz**                    | Gestartete Instanzen eines **DBMS**                                                                     |                                                                                   |
+| **Datenbankschema**                     | Erstellte Datenbanken eines **DBMS**                                                                    |                                                                                   |
+| **DBMS**                                | Datenbank Management Systeme (DBMS)                                                                     | MariaDB, MySQL, PostgreSQL                                                        |
+| **Drucker**                             | Irgendwas mit Holz                                                                                      | Laser-, Tintenstrahldrucker, Multifunktionsgeräte, Faxgeräte, Plotter, 3D-Drucker |
+| **Energieversorgungsunternehmen**       | Organisationen, die andere Organisationen mit Strom versorgen                                           |                                                                                   |
+| **Fahrzeug**                            | Fahrzeuge                                                                                               |                                                                                   |
+| **FC-Switch**                           | Fiber Channel Switches; häufig im Zusammenhang mit SANs; siehe **Speichersystem**                       |                                                                                   |
+| **Flugzeug**                            | Flugzeuge                                                                                               |                                                                                   |
+| **Gebäude**                             | Gebäude in einer **Stadt**                                                                              |                                                                                   |
+| **Geräte/Appliance**                    | Appliances, die in der Organisation betrieben werden, aber eher als Black Box konzipiert sind           | Firewalls                                                                         |
+| **Host**                                | Entfernte Rechner, die nicht im direkten Zugriff stehen                                                 | DNS-Server                                                                        |
+| **information domain**                  | Informationsverbünde (IT-Grundschutz); siehe [Add-on VIVA](../i-doit-add-ons/viva/index.md)             |                                                                                   |
+| **Kabel**                               | Lange, schlauchartige Ansammlung von Kupfern/Fasern, ummantelt von einer Schutzhülle und mit zwei Enden |                                                                                   |
+| **Kabeltrasse**                         | Kabeltrassen; siehe **Kabel**                                                                           |                                                                                   |
+| **Klimaanlage**                         | Klimatisierung von aktiven Komponenten                                                                  |                                                                                   |
+| **Konverter**                           | Komponenten zum Konvertieren von Signalen o. ä.                                                         |                                                                                   |
+| **Kryptokarte**                         | Smard Cards mit Kryptographie-Funktionen                                                                |                                                                                   |
+| **KVM-Switch**                          | Komponenten zum entfernten Bereitstellen von Eingabegeräten (Keyboard, Video, Mouse)                    |                                                                                   |
+| **Land**                                | Länder                                                                                                  |                                                                                   |
+| **Layer-2-Netz**                        | VLANs                                                                                                   |                                                                                   |
+| **Layer-3-Netz**                        | Subnetze (IPv4, IPv6)                                                                                   |                                                                                   |
+| **Leerrohr**                            | Leerrohre für **Kabel**                                                                                 |                                                                                   |
+| **Leitungsnetz**                        | Logische Verkabelungen; siehe **Kabel**                                                                 |                                                                                   |
+| **Lizenzen**                            | Software-Lizenzen o. ä.                                                                                 |                                                                                   |
+| **Middleware**                          | Vermittlungsschichten zwischen Präsentations- und Datenhaltungsschichten                                | JBoss                                                                             |
+| **Migrationsobjekte**                   | Objekte, die nach früheren Updates migriert werden mussten (derzeit nicht in Verwendung)                |                                                                                   |
+| **Mobiltelefon**                        | Handys, Feature Phones, Smartphones; siehe **SIM-Karte**                                                |                                                                                   |
+| **Monitore**                            | Externe Displays für Rechner; siehe **Client**                                                          |                                                                                   |
+| **Nagios Host-Template**                | Siehe [Network Monitoring mit Nagios](../automatisierung-und-integration/monitoring/nagios.md)          |                                                                                   |
+| **Nagios Service**                      | Siehe [Network Monitoring mit Nagios](../automatisierung-und-integration/monitoring/nagios.md)          |                                                                                   |
+| **Nagios Service-Template**             | Siehe [Network Monitoring mit Nagios](../automatisierung-und-integration/monitoring/nagios.md)          |                                                                                   |
+| **Netzbereich**                         | Segmentierung von Subnetzen; siehe Layer-3-Netz                                                         |                                                                                   |
+| **Netzersatzanlage**                    | Anlagen zur Stromversorgung, wenn die Hauptstromversorgung wegbricht                                    | Dieselgeneratoren                                                                 |
+| **Notfallplan**                         | Notfallpläne als **Dateien**                                                                            |                                                                                   |
+| **Objektgruppe**                        | Logische Verknüpfung von Objekten                                                                       |                                                                                   |
+| **Organisation**                        | Unternehmen, Institutionen, Einrichtungen                                                               |                                                                                   |
+| **Patchfeld**                           | Patchfelder in einem Serverschrank; siehe **Schrank**                                                   |                                                                                   |
+| **Personen**                            | Menschen und Bots                                                                                       |                                                                                   |
+| **Personengruppen**                     | Gruppierte **Personen**                                                                                 | Rechtegruppen, Abteilungen                                                        |
+| **Printbox**                            | Drucker-Server                                                                                          |                                                                                   |
+| **Raum**                                | Räume in einem **Gebäude**                                                                              |                                                                                   |
+| **Remote Management Controller**        | Komponenten zum entfernten Administrieren von Servern; siehe **Server**                                 |                                                                                   |
+| **Replikationsobjekt**                  | \-                                                                                                      |                                                                                   |
+| **Router**                              | Layer-3-Router                                                                                          |                                                                                   |
+| **SAN Zoning**                          | Zonen in einem SAN; siehe **Speichersystem**                                                            |                                                                                   |
+| **Server**                              | Physikalische Server                                                                                    |                                                                                   |
+| **Service**                             | Organisatorische Dienste, die von einer Organisation erbracht werden                                    | IT-Services                                                                       |
+| **SIM-Karte**                           | SIM-Karten; siehe **Mobiltelefon**                                                                      |                                                                                   |
+| **Schrank**                             | Serverschränke (Racks)                                                                                  |                                                                                   |
+| **Speichersystem**                      | Storage Area Networks (SAN) und Network Attached Storages (NAS)                                         |                                                                                   |
+| **Stacking**                            | Zusammenschluss von Hardware-Komponenten                                                                | Stacked Switches                                                                  |
+| **Stadt**                               | Städte in einem **Land**                                                                                |                                                                                   |
+| **Steckdosenleiste**                    | Power Distribution Units (PDU) zur Stromversorgung                                                      |                                                                                   |
+| **Supernet**                            | Zusammenfassung von Subnetzen; siehe **Layer-3-Netz**                                                   |                                                                                   |
+| **Switch**                              | Layer-2-Switche                                                                                         |                                                                                   |
+| **Switch Chassis**                      | Gehäuse für modulare Switche; siehe **Switch**                                                          |                                                                                   |
+| **Systemdienst**                        | Dienste, Daemons und Applikationen, die auf Servern ausgeführt werden                                   | Apache Webserver, i-doit, PHP                                                     |
+| **Telefon**                             | Analoge oder ISDN-Telefone                                                                              |                                                                                   |
+| **Telefonanlage**                       | Telefonanlagen                                                                                          |                                                                                   |
+| **Unterbrechungsfreie Stromversorgung** | USVs                                                                                                    |                                                                                   |
+| **Verstärker**                          | Aktive Komponenten zum Verstärken von Signalen o. ä.                                                    |                                                                                   |
+| **Verteilerkasten**                     | Zur Stromversorgung; siehe **Kabel**                                                                    |                                                                                   |
+| **Vertrag**                             | Wartungsverträge o. ä.                                                                                  |                                                                                   |
+| **Virtueller Client**                   | Virtuelle Desktops; siehe **Virtueller Host**                                                           |                                                                                   |
+| **Virtueller Host**                     | Wirtsysteme für virtuelle Maschinen; siehe **Virtueller Server** und **Virtueller Client**              |                                                                                   |
+| **Virtueller Server**                   | Virtuelle Maschinen (VM); siehe **Virtueller Host**                                                     |                                                                                   |
+| **VoIP Telefon**                        | SIP-fähige Telefone                                                                                     |                                                                                   |
+| **VRRP/HSRP Cluster**                   | Hochverfügbare Router, die die Protokolle VRRP, HSRP oder CARP verwenden                                |                                                                                   |
+| **WAN-Leitungen**                       | Außenanbindungen/Uplinks                                                                                |                                                                                   |
+| **Wireless Access Point**               | WLAN APs                                                                                                |                                                                                   |
 
 [![objekttypkonfiguration](../assets/images/de/grundlagen/objekttypen/1-ot.png)](../assets/images/de/grundlagen/objekttypen/1-ot.png)
 
@@ -148,7 +149,7 @@ Folgende Felder werden in der Konfiguration neuer und bestehender Objekttypen an
     Mit dieser Auswahl legst du fest, ob beim Aufruf eines Objekts dieses Typs die [Übersichtsseite](../glossar.md) oder lediglich die Kategorie **Allgemein** angezeigt werden soll. Standardmäßig ist diese Option auf "Nein" gesetzt. Wenn sie auf "Ja" steht, wird die zuvor ausgewählte spezifische Kategorie auf der Übersichtsseite automatisch hinzugefügt.
 
 *   **Kategorien**
-    In dieser Auswahl prägst du deinen Objekttypen aus. Jede [Kategorie](../glossar.md), deren Checkbox du aktivierst, wird dir innerhalb deines Objekttyps zur Verfügung stehen. In der rechten Spalte legst du fest, welche Kategorien auf der Übersichtsseite angezeigt werden sollen. Diese Auswahl ist nur möglich, wenn zuvor die Übersichtsseite als Standard-Ansicht aktiviert wurde. Über die schraffierten Streifen lässt sich die Reihenfolge der Kategorien per Drag'n'Drop bestimmen. 
+    In dieser Auswahl prägst du deinen Objekttypen aus. Jede [Kategorie](../glossar.md), deren Checkbox du aktivierst, wird dir innerhalb deines Objekttyps zur Verfügung stehen. In der rechten Spalte legst du fest, welche Kategorien auf der Übersichtsseite angezeigt werden sollen. Diese Auswahl ist nur möglich, wenn zuvor die Übersichtsseite als Standard-Ansicht aktiviert wurde. Über die schraffierten Streifen lässt sich die Reihenfolge der Kategorien per Drag'n'Drop bestimmen.
 
 *   **Beschreibung**
     Hier ist es dir möglich, Hinweise und Notizen zu deinem Objekttyp zu hinterlegen.

@@ -9,13 +9,13 @@ Nagios is a software for [Network Monitoring](./index.md) which can be configure
 
 You store the configuration under **Administration → Monitoring and interfaces → Monitoring → Export Configuration**. The **Local Path** defines an absolute or relative path to the i-doit installation in the file system in which the configuration created by i-doit is to be stored. The **Link to your monitoring tool** specifies a basic link to generate links to the monitoring instance from i-doit.
 
-[![Basic Configurations](../../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)](../../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)
+[![Basic Configurations](../../assets/images/en/automation-and-integration/monitoring/nagios/1-nag.png)](../../assets/images/en/automation-and-integration/monitoring/nagios/1-nag.png)
 
 ## Basic Configurations
 
 You can create the basic configurations under **Extras → Nagios**.
 
-[![Basic Configurations](../../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)](../../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)
+[![Basic Configurations](../../assets/images/en/automation-and-integration/monitoring/nagios/2-nag.png)](../../assets/images/en/automation-and-integration/monitoring/nagios/2-nag.png)
 
 This includes the main configuration, service templates and host templates as well as other basic settings. All values are identical to the Nagios configuration.
 
@@ -25,7 +25,7 @@ All further configurations are carried out within the [objects](../../basics/str
 
 In the category **Host Definition** a host definition for Nagios can be set either via a Nagios template or via individual configuration.
 
-[![Host Definition](../../assets/images/en/automation-and-integration/network-monitoring/nagios/3-nag.png)](../../assets/images/en/automation-and-integration/network-monitoring/nagios/3-nag.png)
+[![Host Definition](../../assets/images/en/automation-and-integration/monitoring/nagios/3-nag.png)](../../assets/images/en/automation-and-integration/monitoring/nagios/3-nag.png)
 
 The concept of host templates and service templates is identical to the original Nagios configuration.
 
@@ -43,7 +43,7 @@ Further Nagios configurations within objects can be found in **Persons** objects
 
 The Nagios configurations can be exported manually via **Administration → Monitoring and interfaces → Nagios Export** . For this purpose, you select an export configuration and optionally you can also choose a validation of the parameters.
 
-[![Export of the Nagios Configuration](../../assets/images/en/automation-and-integration/network-monitoring/nagios/4-nag.png)](../../assets/images/en/automation-and-integration/network-monitoring/nagios/4-nag.png)
+[![Export of the Nagios Configuration](../../assets/images/en/automation-and-integration/monitoring/nagios/4-nag.png)](../../assets/images/en/automation-and-integration/monitoring/nagios/4-nag.png)
 
 The validation checks basic dependencies, for example, if an IP address has been entered for a host etc. This check is supposed to prevent the generation of corrupt Nagios configurations. This, however, is not a 100% safe protection so you should always run a test with the Nagios binary checking the generated configuration.
 
