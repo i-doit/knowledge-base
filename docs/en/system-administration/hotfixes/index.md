@@ -114,6 +114,18 @@ Improved location tree loading times.
 
 [i-doit_33_hotfix_ID-11446_f97efe2.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11446_f97efe2.zip){ .md-button .md-button--primary }
 
+### Unable to archive outdated objects from JDisc (ID-11300)
+
+[i-doit_33_hotfix_ID-11300.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11300.zip){ .md-button .md-button--primary }
+
+### Adding multiple reports in category rights to a user causes inconsistent behavior (ID-11517)
+
+[i-doit_33_hotfix_ID-11517.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11517.zip){ .md-button .md-button--primary }
+
+### Sorting for a rack causes vertical slots to be seen already taken when importing via csv import (ID-11522)
+
+[i-doit_33_hotfix_ID-11522_dc34840.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11522_dc34840.zip){ .md-button .md-button--primary }
+
 ## API Add-on
 
 ### Reading a SQL Report without result (API-551)
