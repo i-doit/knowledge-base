@@ -66,6 +66,12 @@ Bei einem Klick auf den Bereich **Support** wird das <help.i-doit.com></https.he
 
 Hier finden Sie die system bezogenen Einstellungen. Auch finden Sie hier den Link zu den [Experteneinstellungen](#expert-settings-system-related) auf der rechten Seite.
 
+### Login
+
+| Option                    | Wert   |
+| ------------------------- | ------ |
+| Welcome message for login | String |
+
 ### LDAP Debug settings
 
 | Option     | Wert         |
@@ -74,11 +80,22 @@ Hier finden Sie die system bezogenen Einstellungen. Auch finden Sie hier den Lin
 
 Einstellung kann auch via [Expert settings](#expert-settings-system-related) geändert werden. Die Option heißt `ldap.debug`.
 
-### Login
+### SMTP
 
-| Option                    | Wert   |
-| ------------------------- | ------ |
-| Welcome message for login | String |
+| Option         | Wert              |
+| -------------- | ----------------- |
+| SMTP Host      | Hostname oder URL |
+| SMTP Port      | Port              |
+| SMTP Username  | Username          |
+| SMTP Password  | Password          |
+| SMTP TLS       | Ja oder Nein      |
+| Sender         | E-Mail Adresse    |
+| Name           | Name              |
+| Timeout        | Wert in Sekunden  |
+| SMTP Debug     | Ja oder Nein      |
+| Subject prefix | String            |
+
+Zusätzlich gibt es einen Button, der die SMTP Verbindung testet.
 
 ### Proxy
 
