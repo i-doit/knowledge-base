@@ -9,7 +9,7 @@ mkdocs-material == 9.5.49
 mkdocs-minify-plugin ~= 0.8.0
 mkdocs-video ~= 1.5.0
 pip-audit == 2.7.3
-Pygments ~= 2.19.0
+Pygments ~= 2.19.1
 pymdown-extensions ~= 10.13
 PyOpenSSL ~= 24.3.0
 wheel ~= 0.45.1
