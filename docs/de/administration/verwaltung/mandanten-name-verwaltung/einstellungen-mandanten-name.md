@@ -1,6 +1,22 @@
+---
+title: Einstellungen für [Mandanten-Name]
+description: Einstellungen für [Mandanten-Name]
+icon:
+status:
+lang: de
+---
+
 # Einstellungen für [Mandanten-Name]
 
 Hier findest du Einstellungen für den aktuellen Mandanten.
+
+[![Einstellungen übersicht](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/einstellungen/uebersicht.png)](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/einstellungen/uebersicht.png)
+
+## Passwort zurücksetzen
+
+| Option                | Wert                                       |
+| --------------------- | ------------------------------------------ |
+| Passwort zurücksetzen | Aktiviert oder deaktiviert für den Mandant |
 
 ## URL Einstellungen
 
@@ -91,18 +107,18 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 
 ## Maximallänge von Zeichenfolgen
 
-| Option                             | Wert |
-| ---------------------------------- | ---- |
-| Dialog-Plus                        | Wert |
+| Option                            | Wert |
+| --------------------------------- | ---- |
+| Dialog-Plus                       | Wert |
 | Objektbezeichnung im Standortpfad | Wert |
-| Kompletter Standortpfad            | Wert |
+| Kompletter Standortpfad           | Wert |
 
 ## Logbuch
 
-| Option                                      | Wert         |
-| ------------------------------------------- | ------------ |
-| Detaillierte CMDB Änderungen protokollieren | Ja oder Nein |
-| "Änderungskommentar" deaktivieren           | Ja oder Nein |
+| Option                                                      | Wert         |
+| ----------------------------------------------------------- | ------------ |
+| Detaillierte CMDB Änderungen protokollieren                 | Ja oder Nein |
+| "Änderungskommentar" deaktivieren                           | Ja oder Nein |
 | Logbucheinträge zu bereinigten Objekten vollständig löschen | Ja oder Nein |
 
 ## Templates
@@ -131,7 +147,6 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Rechtesystem Log | Ja oder Nein |
 | Exception Log    | Ja oder Nein |
 | CMDB Import      | Ja oder Nein |
-| LDAP Debug       | Ja oder Nein |
 
 ## Quickinfo (Link mouseover)
 
@@ -144,7 +159,7 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 
 | Option               | Wert                                                                    |
 | -------------------- | ----------------------------------------------------------------------- |
-| Standard LDAP Gruppe | Komma-separierte Liste von Personengruppen IDs                           |
+| Standard LDAP Gruppe | Komma-separierte Liste von Personengruppen IDs                          |
 | LDAP Config:         | JSON String                                                             |
 | Anrede Herr          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |
 | Anrede Frau          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |
@@ -174,7 +189,16 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Hervorhebung des Suchstrings                                   | Ja oder Nein                                                          |
 | Mindestlänge Suchwort                                          | Wert                                                                  |
 | Archivierte/Gelöschte Objekte mit in der Suche berücksichtigen | Ja oder Nein                                                          |
-| Standort Pfade mit in der Suche berücksichtigen                | Ja oder Nein                                                          |
+| Standort-Pfade mit in der Suche berücksichtigen                | Ja oder Nein                                                          |
+
+## JDisc
+
+| Option                           | Wert                     |
+| -------------------------------- | ------------------------ |
+| Schwellwert                      | Anzahl                   |
+| Schwellwert Einheit              | Tage<br>Wochen<br>Monate |
+| Maximale Länge der Importpause   | Zeit in Minuten          |
+| Verhalten des pausierten Imports | Abbrechen<br>Fortsetzen  |
 
 ## Sprache
 
@@ -190,8 +214,8 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 
 ## Installed Add-on related settings
 
-| Option                                                                                                                                    | Wert                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Option                                                                                                                                | Wert                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | [ISMS](../../../i-doit-add-ons/isms.md) Reportviews nach Standortrechten filtern                                                      | Ja oder Nein                                                                                                                         |
 | [ISMS](../../../i-doit-add-ons/isms.md) Risikokennzeichnung anzeigen                                                                  | Ja oder Nein                                                                                                                         |
 | [ISMS](../../../i-doit-add-ons/isms.md) Risikotitel anzeigen                                                                          | Ja oder Nein                                                                                                                         |
@@ -202,7 +226,7 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | [Check_MK](../../../i-doit-add-ons/checkmk.md) Tags dürfen beim Export nur aus Buchstaben, Zahlen, Binde- und Unterstrichen bestehen  | Ja oder Nein                                                                                                                         |
 | [Workflows](../../../i-doit-add-ons/workflow.md) Checklisten im my-doit Bereich ausblenden                                            | Ja oder Nein                                                                                                                         |
 | [IT-Grundschutz](../../../i-doit-add-ons/viva/index.md) URL-Prefix zum IT-Grundschutz Kompendium                                      | URL                                                                                                                                  |
-| [IT-Grundschutz](../../../i-doit-add-ons/viva/index.md) Upload Verzeichnis des IT-Grundschutz Kompendiums                             | Verzeichnis Pfad                                                                                                                       |
+| [IT-Grundschutz](../../../i-doit-add-ons/viva/index.md) Upload Verzeichnis des IT-Grundschutz Kompendiums                             | Verzeichnis Pfad                                                                                                                     |
 | [CI-Umzug](../../../i-doit-add-ons/relocate-ci.md) Nach einem physikalischen Umzug soll der logische Standort entfernt werden.        | Ja oder Nein                                                                                                                         |
 | [CI-Umzug](../../../i-doit-add-ons/relocate-ci.md) Nach einem logischen Umzug soll der physische Standort aktualisiert werden.        | Ja oder Nein                                                                                                                         |
 | [CI-Umzug](../../../i-doit-add-ons/relocate-ci.md) Schreibe Logbucheinträge in alle positionierten Objekte eines umgezogenen Objekts. | Ja oder Nein                                                                                                                         |
