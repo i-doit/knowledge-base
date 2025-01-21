@@ -74,7 +74,7 @@ OpenSSL können Sie z.B. hier herunterladen und installieren: [OpenSSL](https://
 Sobald OpenSSL installiert ist, können Sie Win64 OpenSSL Command Prompt über die Windows-Suchleiste öffnen, indem Sie nach "OpenSSL" suchen.
 Hier geben Sie nun folgenden Befehl ein, um das Zertifikat zu erstellen:
 
-```winbatch
+```bat
 OpenSSL req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt
 ```
 

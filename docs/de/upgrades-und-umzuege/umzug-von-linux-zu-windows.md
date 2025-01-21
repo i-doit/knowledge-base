@@ -22,19 +22,44 @@ Eines noch: Wir sollten alle System-Benutzerkonten und deren Passwörter parat h
 
 Um das Dateiverzeichnis von dem Linux Server auf den Windows Server zu exportieren, verwenden wir den **zip** Befehl:
 
-    sudo zip -r i-doit.zip /var/www/html/i-doit/
+```shell
+sudo zip -r i-doit.zip /var/www/html/i-doit/
+```
 
 Wenn Ihre i-doit Instanz unter einem anderen Pfad liegt, passen Sie den Befehl entsprechend an.
 
 Jetzt muss nur noch die ZIP Datei heruntergeladen oder auf den Windows Server transferiert werden.
 
+Für das transferieren der ZIP Datei kann scp verwendet werden. Den folgenden Befehl führen wir auf dem Windows Server aus:
+
+```shell
+scp -r user@linuxsystem:/var/www/html/i-doit/i-doit.zip C:\
+```
+
 ## Datenbank aus Linux exportieren
+
+Als nächstes müssen wir die Datenbank exportieren und ebenfalls auf den Windows Server transferieren.
+Um die Datenbank erfolgreich zu exportieren müssen folgende Befehle ausgeführt werden:
+
+```bash
+mysqldump -uroot -p idoit_system > /tmp/idoit_system.sql
+mysqldump -uroot -p idoit_data > /tmp/idoit_data.sql
+```
+
+Sind die zwei Datenbanken exportiert, müssen wir anschließend die beiden SQL Dateien ebenfalls auf den Windows Server transferieren:
+
+```shell
+scp -r user@linuxsystem:/tmp/idoit_system.sql C:\
+scp -r user@linuxsystem:/tmp/idoit_data.sql C:\
+```
 
 ## Daten nach Windows umziehen
 
 Entpacken Sie die von Ihnen erstellte ZIP Datei unter dem folgenden Pfad und überschreiben Sie alle Dateien:
 
-    C:\ProgramData\i-doit\apache-2.4\htdocs
+```bat
+C:\ProgramData\i-doit\apache-2.4\htdocs
+```
 
 ### Nacharbeiten
 
