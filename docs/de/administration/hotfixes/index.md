@@ -40,6 +40,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
+### Login via LDAP credentials when using PHP 8.3.16 (ID-11561)
+
+[i-doit_33_hotfix_ID-11561_b75b245.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11561_b75b245.zip){ .md-button .md-button--primary }
+
 ### CSV Import doesn't set "Yes/No" Fields in custom categories (ID-11162)<br>A custom field change of type Yes-no-field is not logged in the Logbook (ID-11234)<br>API changes to yes-no-fields type are not written to the logbook (ID-11288)
 
 [i-doit_33_hotfix_ID-11162_ID-11234_ID-11288_f3ad92e.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11162_ID-11234_ID-11288_f3ad92e.zip){ .md-button .md-button--primary }
