@@ -173,7 +173,7 @@ DocumentRoot /var/www/html/i-doit
 
 <Directory /var/www/html/i-doit>
     ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
-    AllowOverride FileInfo AuthConfig
+    AllowOverride None
 
     ## Apache Web server configuration file for i-doit
     ##
@@ -187,7 +187,7 @@ DocumentRoot /var/www/html/i-doit
     ##
     ## For performance and security reasons we put these settings
     ## directly into the VirtualHost configuration and explicitly set
-    ## "AllowOverride FileInfo AuthConfig". After each i-doit update check if the .htaccess file, in the i-doit directory,
+    ## "AllowOverride None". After each i-doit update check if the .htaccess file, in the i-doit directory,
     ## has changed and add the changes in the VirtualHost configuration.
     ##
     ## See the i-doit Knowledge Base for more details:
@@ -313,7 +313,7 @@ ProxyTimeout 600
 </FilesMatch>
 ```
 
-i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Diese müssen nach jedem Update geprüft und in der VirtualHost Konfiguration aktualisiert werden.
+!!! note "i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Diese müssen nach jedem Update geprüft und in der VirtualHost Konfiguration aktualisiert werden."
 
 Im nächsten Schritt wird der Apache HTTP Server neu gestartet:
 

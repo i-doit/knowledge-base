@@ -187,7 +187,7 @@ ServerName i-doit
     ##
     ## For performance and security reasons we put these settings
     ## directly into the VirtualHost configuration and explicitly set
-    ## "AllowOverride FileInfo AuthConfig". After each i-doit update check if the .htaccess file, in the i-doit directory,
+    ## "AllowOverride None". After each i-doit update check if the .htaccess file, in the i-doit directory,
     ## has changed and add the changes in the VirtualHost configuration.
     ##
     ## See the i-doit Knowledge Base for more details:
@@ -318,9 +318,7 @@ ServerName i-doit
 </VirtualHost>
 ```
 
-!!! note "The configurations contained there must be checked after an update and changes must be adopted in the VHost configuration."
-
-i-doit includes differing Apache settings in a file with the name **.htaccess**.
+!!! note "i-doit provides different Apache settings in files with the name **.htaccess**. These must be checked after each update and updated in the VirtualHost configuration."
 
 With the next step you activate the necessary Apache modules **php8**, **rewrite** and **mod_access_compat**:
 
