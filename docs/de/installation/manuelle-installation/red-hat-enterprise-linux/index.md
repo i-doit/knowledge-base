@@ -187,7 +187,7 @@ DocumentRoot /var/www/html/i-doit
     ##
     ## For performance and security reasons we put these settings
     ## directly into the VirtualHost configuration and explicitly set
-    ## "AllowOverride FileInfo AuthConfig". After each i-doit update check if the .htaccess file, in the i-doit directory,
+    ## "AllowOverride None". After each i-doit update check if the .htaccess file, in the i-doit directory,
     ## has changed and add the changes in the VirtualHost configuration.
     ##
     ## See the i-doit Knowledge Base for more details:
