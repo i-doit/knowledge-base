@@ -17,7 +17,7 @@ The i-doit instance was installed on the Windows Server with the [i-doit Windows
 
 Before you start, there are a few things to consider. The aim should be to move without long downtime and above all without data loss.
 
-Everyone who works with i-doit data should be informed about the move in good time. Nothing is worse than angry colleagues whose work has been interrupted.
+Everyone who works with i-doit data should be informed about the migration in good time. Nothing is worse than angry colleagues whose work has been interrupted.
 
 You should also identify which interfaces are used by i-doit. Specifically: Which third-party systems such as [Nagios](../automation-and-integration/network-monitoring/nagios.md), [((OTRS)) Community Edition](../automation-and-integration/service-desk/otrscommunity-help-desk.md) & [Co.](../consolidate-data/index.md) access i-doit? Data access should be switched off during the move. The same applies to running [Tasks](../automation-and-integration/cli/index.md), [Backups](../maintenance-and-operation/backup-and-recovery/index.md) and monitoring, which monitors that a running web server on the Windows system on port 80/443 is responding to HTTP requests.
 
@@ -107,6 +107,6 @@ The instance has now been successfully migrated from Linux to Windows.
 
 ## Follow-up Work
 
-Following this migration, you should run various tests and reactivate the interfaces between i-doit and third-party tools. It is also important to have the [backups](../maintenance-and-operation/backup-and-recovery/index.md) running. If all tests are successful (which can hopefully be presumed), the maintenance mode can be concluded and all colleagues be informed that the IT-documentation is available again.
+Following this migration, you should run various tests and reactivate the interfaces between i-doit and third-party tools. It is also important to have the [backups](../maintenance-and-operation/backup-and-recovery/index.md) running. If all tests are successful (which can hopefully be presumed), all colleagues should be informed that the IT-documentation is available again.
 
 How long does such a migration take? If the preparation and the subsequent work is ignored, such a migration takes not longer than two hours, so it's worth it. Good luck!
