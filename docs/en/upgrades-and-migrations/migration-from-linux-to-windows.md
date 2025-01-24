@@ -1,3 +1,11 @@
+---
+title: Migration under Windows
+description: Migration under Windows
+icon: fontawesome/brands/windows
+status:
+lang: en
+---
+
 # Migration from Linux to Windows
 
 This article explains how to migrate your i-doit installation under Linux to a Windows server.
