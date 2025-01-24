@@ -1,7 +1,7 @@
 ---
 title: Migration from Linux to Windows
 description: Migration from Linux to Windows
-icon: fontawesome/brands/windows
+icon: fontawesome/brands/linux
 status:
 lang: en
 ---
