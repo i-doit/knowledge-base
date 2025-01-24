@@ -65,7 +65,7 @@ C:\ProgramData\i-doit\apache-2.4\htdocs
 
 Anschließend muss die Datenbank eingespielt werden. Um Fehler zu vermeiden löschen wir zuerst die bereits bestehenden Datenbanken auf unserem Windows Server:
 
-???info "Die SQL Befehle können über den MySQL Client (über die Windowssuche zu finden) ausgeführt werden"
+!!! info "Die SQL Befehle können über den MySQL Client (über die Windowssuche zu finden) ausgeführt werden"
 
 ```shell
 DROP Database idoit_data;
@@ -81,7 +81,7 @@ CREATE DATABASE idoit_system;
 
 Jetzt können wir die Datenbanken aus der alten Instanz einspielen:
 
-???info "Hierzu wechseln wir auf die normale Eingabeaufforderung von Windows"
+!!! info "Hierzu wechseln wir auf die normale Eingabeaufforderung von Windows"
 
 ```shell
 mysql -uroot -p idoit_data < C:\idoit_data.sql

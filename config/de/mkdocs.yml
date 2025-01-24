@@ -306,6 +306,7 @@ nav:
       - Upgrade zu MySQL 5.6 oder MariaDB 10.0: upgrades-und-umzuege/upgrade-zu-mysql-5.6-oder-mariadb-10.0.md
       - Umzug einer Installation unter GNU/Linux: upgrades-und-umzuege/umzug-einer-installation-unter-linux.md
       - Umzug von Windows zu Linux: upgrades-und-umzuege/umzug-von-windows-zu-linux.md
+      - Umzug von Linux zu Windows: upgrades-und-umzuege/umzug-von-linux-zu-windows.md
   - Grundlagen:
       - grundlagen/index.md
       - Erstanmeldung: grundlagen/erstanmeldung.md
