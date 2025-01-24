@@ -1,11 +1,3 @@
----
-title: Umzug einer Installation unter Windows
-description: Umzug einer Installation unter Windows
-icon: fontawesome/brands/windows
-status:
-lang: de
----
-
 # Umzug einer Installation unter GNU/Linux
 
 In diesem Artikel beschreiben wir die generelle Vorgehensweise, um eine Installation von i-doit von einem GNU/Linux zu einem anderen umzuziehen. Der Umzug umfasst sowohl die Datenbanken, als auch die Dateien und Verzeichnisse.

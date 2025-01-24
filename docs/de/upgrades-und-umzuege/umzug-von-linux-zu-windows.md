@@ -1,3 +1,11 @@
+---
+title: Umzug von Linux zu Windows
+description: Umzug von Linux zu Windows
+icon: fontawesome/brands/linux
+status:
+lang: de
+---
+
 # Umzug von Linux zu Windows
 
 In diesem Artikel wird erklärt, wie man seine i-doit Installation unter Linux zu einem Windows Server migriert.

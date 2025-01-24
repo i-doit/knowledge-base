@@ -1,6 +1,6 @@
 ---
-title: Migration under Windows
-description: Migration under Windows
+title: Migration from Linux to Windows
+description: Migration from Linux to Windows
 icon: fontawesome/brands/windows
 status:
 lang: en
