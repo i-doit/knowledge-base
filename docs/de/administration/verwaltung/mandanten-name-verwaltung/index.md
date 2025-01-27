@@ -6,7 +6,7 @@ Hier kannst du deine Mandanten verwalten und systembezogene Konfigurationen eins
 
 ## Unterseiten
 
--   [Mandanten Einstellungen](einstellungen-mandanten-name.md)
+-   [Einstellungen für Mandanten-Name](einstellungen-mandanten-name.md)
 -   [Systemreparatur und Bereinigung](systemreparatur-und-bereinigung.md)
 -   [Experteneinstellungen](experteneinstellungen.md)
 

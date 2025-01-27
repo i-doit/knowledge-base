@@ -490,9 +490,10 @@ nav:
           - Vertragsdaten: administration/verwaltung/vertragsdaten.md
       - Admin Center: administration/admin-center.md
       - Add-on & Subscription Center: administration/add-on-and-subscription-center.md
+      - Kundenportal: administration/kundenportal.md
       - Mehrsprachigkeit und Übersetzungen: administration/mehrsprachigkeit-und-uebersetzungen.md
       - Mandantenfähigkeit: administration/mandantenfaehigkeit.md
-      - Kundenportal: administration/kundenportal.md
+      - Passwort zurücksetzen: administration/passwort-zuruecksetzen.md
       - Troubleshooting:
           - administration/troubleshooting/index.md
           - Bekannte update Probleme: administration/troubleshooting/bekannte-update-probleme.md
