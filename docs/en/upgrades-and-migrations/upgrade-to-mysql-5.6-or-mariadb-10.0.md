@@ -1,3 +1,11 @@
+---
+title: Upgrade to MySQL 5.6 or MariaDB 10.0
+description: Upgrade to MySQL 5.6 or MariaDB 10.0
+icon: fontawesome/brands/linux
+status:
+lang: en
+---
+
 # Upgrade to MySQL 5.6 or MariaDB 10.0
 
 Beginning with version 1.7 of i-doit the [system requirements](../installation/system-requirements.md) for the database back end change. While version 1.6 required at least MySQL 5.5 or MariaDB 5.5, version 1.7 requires MySQL 5.6 or MariaDB 10.0. This may also entail changes to the [operating systems](../installation/manual-installation/index.md) which are supported by synetics. This article describes the most important details to ensure that i-doit continues to function completely.
