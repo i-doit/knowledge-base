@@ -8,16 +8,13 @@ lang: en
 
 # Migration from Linux to Windows
 
-This article explains how to migrate your i-doit installation under Linux to a Windows server.
-The i-doit instance was installed on the Windows Server with the [i-doit Windows Installer](../installation/manual-installation/microsoft-windows-server/index.md).
+This article explains how to migrate your i-doit installation under Linux to a Windows server. The i-doit instance was installed on the Windows Server with the [i-doit Windows Installer](../installation/manual-installation/microsoft-windows-server/index.md).
 
 ## Preparation and Assumptions
 
 !!! warning "Both systems must be on the same i-doit version!"
 
-Before you start, there are a few things to consider. The aim should be to move without long downtime and above all without data loss.
-
-Everyone who works with i-doit data should be informed about the migration in good time. Nothing is worse than angry colleagues whose work has been interrupted.
+Before you start, there are a few things to consider. The aim should be to move without long downtime and above all without data loss. Everyone who works with i-doit data should be informed about the migration in good time. Nothing is worse than angry colleagues whose work has been interrupted.
 
 You should also identify which interfaces are used by i-doit. Specifically: Which third-party systems such as [Nagios](../automation-and-integration/network-monitoring/nagios.md), [((OTRS)) Community Edition](../automation-and-integration/service-desk/otrscommunity-help-desk.md) & [Co.](../consolidate-data/index.md) access i-doit? Data access should be switched off during the move. The same applies to running [Tasks](../automation-and-integration/cli/index.md), [Backups](../maintenance-and-operation/backup-and-recovery/index.md) and monitoring, which monitors that a running web server on the Windows system on port 80/443 is responding to HTTP requests.
 
@@ -28,17 +25,13 @@ One last thing: We should have all system user accounts and their passwords read
 
 ## Export Data from Linux
 
-To export the file directory from the Linux server to the Windows server, we use the **zip** command:
+To avoid having to transfer the files individually and to pack them into an archive, we use the **zip** command:
 
 ```shell
 sudo zip -r i-doit.zip /var/www/html/i-doit/
 ```
 
-If your i-doit instance is under a different path, adjust the command accordingly.
-
-Now you only need to download the ZIP file or transfer it to the Windows server.
-
-You can use scp to transfer the ZIP file. We execute the following command on the Windows server:
+If your i-doit instance is under a different path, adjust the command accordingly. Now you only need to download the ZIP file or transfer it to the Windows server. You can use scp to transfer the ZIP file. We execute the following command on the Windows server:
 
 ```shell
 scp -r user@linuxsystem:/var/www/html/i-doit/i-doit.zip C:\
@@ -46,10 +39,9 @@ scp -r user@linuxsystem:/var/www/html/i-doit/i-doit.zip C:\
 
 ## Export the Database from Linux
 
-Next, we need to export the database and transfer it to the Windows server as well.
-To export the database successfully, the following commands must be executed:
+Next, we need to export the database and transfer it to the Windows server as well. To export the database successfully, the following commands must be executed:
 
-```bash
+```shell
 mysqldump -uroot -p idoit_system > /tmp/idoit_system.sql
 mysqldump -uroot -p idoit_data > /tmp/idoit_data.sql
 ```
