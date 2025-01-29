@@ -2,13 +2,13 @@
 title: Flows Add-on
 description: Flows Add-on
 icon: addons/flows
-status: new
+status:
 lang: de
 ---
 
 Das Flows Add-on für i-doit ist ein leistungsstarkes Werkzeug zur Automatisierung von Prozessen innerhalb des CMDB-Systems. Es ermöglicht die Erstellung von automatisierten Flows basierend auf Triggern und definierten Bedingungen. Mit Flows können Benutzer repetitive Aufgaben und manuelle Schritte automatisieren, indem sie Regeln festlegen, die durch bestimmte Ereignisse oder Zustände (z. B. eine Änderung in der CMDB) ausgelöst werden. Das Add-on hilft, Arbeitsabläufe effizienter zu gestalten, Fehler zu reduzieren und die Verwaltung komplexer IT-Umgebungen zu vereinfachen, indem es Routineprozesse ohne Benutzerinteraktion abwickelt.
 
-!!! note "**Add-on ist nur in englischer Sprache verfügbar**"
+!!! note "**Add-on ist aktuell nur in englischer Sprache verfügbar**"
 
 * * *
 
@@ -18,101 +18,44 @@ Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen
 
 ### Benötigte CLI Commands
 
-!!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende  [Mandanten ID](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list) zu übergeben."
+!!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende [Mandanten ID](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list) zu übergeben."
 
-Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
+Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. **Beide Befehle werden benötigt**, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
 
-### Systemdienst-Installationsskript verwenden
+### Automatisierung der CLI Commands
 
-Dieser Dienst führt alle paar Sekunden die CLI-Befehle des Flows Add-on aus. Zuerst müssen wir die Ausführungsrechte für die Datei festlegen. Verwenden Sie den Befehl im Ordner i-doit:
+=== "Systemdienst mit Skript"
 
-```shell
-sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
-```
+    Dieser Dienst führt alle paar Sekunden die CLI-Befehle des Flows Add-on aus. Zuerst müssen wir die Ausführungsrechte für die Datei festlegen. Verwenden Sie den Befehl im Ordner i-doit:
 
-Nun kann die Datei ausgeführt werden, um einen Systemdienst zu erstellen. **Dies muss für jeden Tenant durchgeführt werden**
+    ```shell
+    sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
+    ```
 
--   `-u` braucht einen i-doit admin-user
--   `-p` benötigt ein i-doit admin-user-passwort
--   `-i` benötigt eine Mandanten-ID, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list)
+    Nun kann die Datei ausgeführt werden, um einen Systemdienst zu erstellen. **Dies muss für jeden Mandanten durchgeführt werden**
 
-```shell
-src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
-```
+    -   `-u` i-doit Person mit Administrator rechten
+    -   `-p` das Passwort für die Person
+    -   `-i` Mandanten ID in dem die Person verwendet wird, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list)
 
-### Erstellen eines Crontab
+    ```shell
+    src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
+    ```
 
-Die Crontab führt die CLI-Befehle jede Minute aus. Erstellen Sie eine Crontab für den Apache-Benutzer. Beispiel für Debian:
+=== "Crontab erstellen"
 
-```shell
-sudo crontab -u www-data -e
-```
+    Der Crontab führt die CLI-Befehle jede Minute aus. Erstellen Sie einen Crontab für den Apache-Benutzer. Beispiel für Debian:
 
-Fügen Sie die folgenden Zeilen am Ende der Datei ein, nachdem Sie die i-doit Anmeldeinformationen ersetzt haben. Möglicherweise müssen Sie auch die Mandanten-ID ersetzen.
+    ```shell
+    sudo crontab -u www-data -e
+    ```
 
-```shell
-* * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
-* * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
-```
+    Fügen Sie die folgenden Zeilen am Ende der Datei ein, nachdem Sie die i-doit Anmeldeinformationen ersetzt haben. Möglicherweise müssen Sie auch die Mandanten-ID ersetzen.
 
-### CLI console commands and options
-
-| Command                                  | Interne Beschreibung                  |
-| ---------------------------------------- | ------------------------------------- |
-| [flows:perform](#flowsperform)           | Perform executions                    |
-| [flows:time-trigger](#flowstime-trigger) | Trigger execution of time automations |
-
-!!! info "These commands are only available if the Documents add-on is installed"
-
-#### flows:perform
-
-Perform executions
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                           |
-| ------------------------- | ------------------------ | ------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                       |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                          |
-| -i                        | --tenant=TENANTID        | Tenant ID of the tenant to be used (default: 1)                                       |
-| -c                        | --config=CONFIG          | Config File                                                                           |
-| -h                        | --help                   | Help message for displaying further information                                       |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                       |
-| -V                        | --version                | Output of the i-doit Console version                                                  |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                              |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                              |
-| -v / -vv / -vvv           | --verbose                | Increase the command output (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php flows:perform --user admin-user --password admin-user-password --tenantId 1
-```
-
-#### flows:time-trigger
-
-Trigger execution of time automations
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                           |
-| ------------------------- | ------------------------ | ------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                       |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                          |
-| -i                        | --tenant=TENANTID        | Tenant ID of the tenant to be used (default: 1)                                       |
-| -c                        | --config=CONFIG          | Config File                                                                           |
-| -h                        | --help                   | Help message for displaying further information                                       |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                       |
-| -V                        | --version                | Output of the i-doit Console version                                                  |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                              |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                              |
-| -v / -vv / -vvv           | --verbose                | Increase the command output (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
-```
+    ```shell
+    * * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
+    * * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
+    ```
 
 * * *
 
@@ -199,9 +142,68 @@ Die Logs sind für alle Flows ersichtlich oder für den jeweils geöffneten Flow
 
 * * *
 
+## CLI-Befehle und Optionen
+
+| Befehl                                   | Interne Beschreibung                            |
+| ---------------------------------------- | ----------------------------------------------- |
+| [flows:perform](#flowsperform)           | Führt Ausführungen durch                        |
+| [flows:time-trigger](#flowstime-trigger) | Löst die Ausführung der Zeitautomatisierung aus |
+
+### flows:perform
+
+Führt Ausführungen durch.
+
+**Optionen:**
+
+| Parameter (Kurzversion) | Parameter (Langversion)  | Beschreibung                                                                                            |
+| ----------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------- |
+| `-u`                    | `--user=BENUTZERNAME`    | Benutzername eines autorisierten Benutzers zur Ausführung                                               |
+| `-p`                    | `--password=PASSWORT`    | Passwort zur Authentifizierung des angegebenen Benutzers                                                |
+| `-i`                    | `--tenant=MANDANTID`     | Mandanten-ID des zu verwendenden Mandanten (Standard: 1)                                                |
+| `-c`                    | `--config=KONFIGURATION` | Konfigurationsdatei                                                                                     |
+| `-h`                    | `--help`                 | Hilfetext zur Anzeige weiterer Informationen                                                            |
+| `-q`                    | `--quiet`                | Quiet-Modus zur Deaktivierung der Ausgabe                                                               |
+| `-V`                    | `--version`              | Gibt die Version der i-doit Konsole aus                                                                 |
+|                         | `--ansi`<br>`--no-ansi`  | Erzwingt (oder deaktiviert mit `--no-ansi`) ANSI-Ausgabe                                                |
+| `-n`                    | `--no-interaction`       | Deaktiviert alle Interaktionsfragen der i-doit Konsole                                                  |
+| `-v / -vv / -vvv`       | `--verbose`              | Erhöht die Ausführlichkeit der Ausgabe (1 = normale Ausgabe, 2 = detaillierte Ausgabe, 3 = Debug-Level) |
+
+**Anwendungsbeispiel**
+
+```shell
+sudo -u www-data php console.php flows:perform --user admin-user --password admin-user-password --tenantId 1
+```
+
+### flows:time-trigger
+
+Löst die Ausführung der Zeitautomatisierung aus.
+
+**Optionen:**
+
+| Parameter (Kurzversion) | Parameter (Langversion)  | Beschreibung                                                                                            |
+| ----------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------- |
+| `-u`                    | `--user=BENUTZERNAME`    | Benutzername eines autorisierten Benutzers zur Ausführung                                               |
+| `-p`                    | `--password=PASSWORT`    | Passwort zur Authentifizierung des angegebenen Benutzers                                                |
+| `-i`                    | `--tenant=MANDANTID`     | Mandanten-ID des zu verwendenden Mandanten (Standard: 1)                                                |
+| `-c`                    | `--config=KONFIGURATION` | Konfigurationsdatei                                                                                     |
+| `-h`                    | `--help`                 | Hilfetext zur Anzeige weiterer Informationen                                                            |
+| `-q`                    | `--quiet`                | Quiet-Modus zur Deaktivierung der Ausgabe                                                               |
+| `-V`                    | `--version`              | Gibt die Version der i-doit Konsole aus                                                                 |
+|                         | `--ansi`<br>`--no-ansi`  | Erzwingt (oder deaktiviert mit `--no-ansi`) ANSI-Ausgabe                                                |
+| `-n`                    | `--no-interaction`       | Deaktiviert alle Interaktionsfragen der i-doit Konsole                                                  |
+| `-v / -vv / -vvv`       | `--verbose`              | Erhöht die Ausführlichkeit der Ausgabe (1 = normale Ausgabe, 2 = detaillierte Ausgabe, 3 = Debug-Level) |
+
+**Anwendungsbeispiel**
+
+```shell
+sudo -u www-data php console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
+```
+
+* * *
+
 ## Anwendungsfälle
 
-!!! note "Folgen."
+Wir haben Anwendungsfälle in der [Demo](https://demo.i-doit.com/flows) zur Verfügung gestellt.
 
 * * *
 
