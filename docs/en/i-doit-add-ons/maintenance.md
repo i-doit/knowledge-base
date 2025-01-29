@@ -121,7 +121,7 @@ Actually, the e-mails are sent via the [console](../automation-and-integration/
 
 Example:
 
-    sudo -u www-data php console.php --username admin --password admin maintenance
+    sudo -u www-data php console.php --user admin --password admin maintenance
 
 Thus, you can automate the process and do not have to send e-mails manually anymore (**Send emails** button under **Extras → Maintenance → Planning**).
 
