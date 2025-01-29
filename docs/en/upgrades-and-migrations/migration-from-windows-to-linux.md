@@ -1,3 +1,11 @@
+---
+title: Migration from Windows to Linux
+description: Migration from Windows to Linux
+icon: material/microsoft-windows
+status:
+lang: en
+---
+
 # Migration from Windows to Linux
 
 There may be good reasons to operate i-doit in [Windows](../installation/manual-installation/microsoft-windows-server/index.md). However, due to various reasons we recommend the use of Linux. But how do we transfer the well-established [IT-documentation](../glossary.md) in an ongoing operation from one system to another as smooth as possible?

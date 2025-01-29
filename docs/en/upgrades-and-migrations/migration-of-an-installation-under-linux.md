@@ -1,3 +1,11 @@
+---
+title: Migration of an Installation under GNU/Linux
+description: Migration of an Installation under GNU/Linux
+icon: fontawesome/brands/linux
+status:
+lang: en
+---
+
 # Migration of an Installation under GNU/Linux
 
 This article focuses on the general procedure to migrate an i-doit installation from one GNU/Linux to another one. The migration includes databases as well as files and directories.

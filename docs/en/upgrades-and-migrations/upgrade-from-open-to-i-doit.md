@@ -1,3 +1,11 @@
+---
+title: Upgrade from i-doit open to i-doit
+description: Upgrade from i-doit open to i-doit
+icon: fontawesome/brands/linux
+status:
+lang: en
+---
+
 # Upgrade from i-doit open to i-doit
 
 How do you switch from _i-doit_ _open_ to _i-doit_ with added functionality in a quick and easy way?
