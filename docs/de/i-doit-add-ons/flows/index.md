@@ -16,46 +16,37 @@ Das Flows Add-on für i-doit ist ein leistungsstarkes Werkzeug zur Automatisieru
 
 Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel [i-doit Add-ons](../index.md).
 
-### Benötigte CLI Commands
+* * *
+
+## Benötigte CLI Commands
 
 !!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende [Mandanten ID](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list) zu übergeben."
 
 Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. **Beide Befehle werden benötigt**, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
 
-### Automatisierung der CLI Commands
+## Automatisierung der CLI Commands
 
-=== "Systemdienst mit Skript"
+### Systemdienst erstellen via Skript
 
-    Dieser Dienst führt alle paar Sekunden die CLI-Befehle des Flows Add-on aus. Zuerst müssen wir die Ausführungsrechte für die Datei festlegen. Verwenden Sie den Befehl im Ordner i-doit:
+Mit dem Linux Skript lässt sich ein Dienst erstellen, dieser Dienst führt alle paar Sekunden die CLI-Befehle des Flows Add-on aus. Zuerst müssen wir die Ausführungsrechte für die Datei festlegen. Verwenden Sie den Befehl im Ordner i-doit:
 
-    ```shell
-    sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
-    ```
+```shell
+sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
+```
 
-    Nun kann die Datei ausgeführt werden, um einen Systemdienst zu erstellen. **Dies muss für jeden Mandanten durchgeführt werden**
+Nun kann die Datei ausgeführt werden, um einen Systemdienst zu erstellen. **Dies muss für jeden Mandanten durchgeführt werden**
 
-    -   `-u` i-doit Person mit Administrator rechten
-    -   `-p` das Passwort für die Person
-    -   `-i` Mandanten ID in dem die Person verwendet wird, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list)
+-   `-u` i-doit Person mit Administrator rechten
+-   `-p` das Passwort für die Person
+-   `-i` Mandanten ID in dem die Person verwendet wird, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#tenant-list)
 
-    ```shell
-    src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
-    ```
+```shell
+src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
+```
 
-=== "Crontab erstellen"
+### Aufgabenplanung & Cron Jobs
 
-    Der Crontab führt die CLI-Befehle jede Minute aus. Erstellen Sie einen Crontab für den Apache-Benutzer. Beispiel für Debian:
-
-    ```shell
-    sudo crontab -u www-data -e
-    ```
-
-    Fügen Sie die folgenden Zeilen am Ende der Datei ein, nachdem Sie die i-doit Anmeldeinformationen ersetzt haben. Möglicherweise müssen Sie auch die Mandanten-ID ersetzen.
-
-    ```shell
-    * * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
-    * * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
-    ```
+Wird Windows verwendet kann die Aufgabenplanung genutzt werden. Siehe [Aufgabenplanung & Cron Jobs](https://kb.i-doit.com/de/automatisierung-und-integration/automatisierung-und-cronjobs.html).
 
 * * *
 
@@ -155,18 +146,18 @@ Führt Ausführungen durch.
 
 **Optionen:**
 
-| Parameter (Kurzversion) | Parameter (Langversion)  | Beschreibung                                                                                            |
-| ----------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------- |
-| `-u`                    | `--user=BENUTZERNAME`    | Benutzername eines autorisierten Benutzers zur Ausführung                                               |
-| `-p`                    | `--password=PASSWORT`    | Passwort zur Authentifizierung des angegebenen Benutzers                                                |
-| `-i`                    | `--tenant=MANDANTID`     | Mandanten-ID des zu verwendenden Mandanten (Standard: 1)                                                |
-| `-c`                    | `--config=KONFIGURATION` | Konfigurationsdatei                                                                                     |
-| `-h`                    | `--help`                 | Hilfetext zur Anzeige weiterer Informationen                                                            |
-| `-q`                    | `--quiet`                | Quiet-Modus zur Deaktivierung der Ausgabe                                                               |
-| `-V`                    | `--version`              | Gibt die Version der i-doit Konsole aus                                                                 |
-|                         | `--ansi`<br>`--no-ansi`  | Erzwingt (oder deaktiviert mit `--no-ansi`) ANSI-Ausgabe                                                |
-| `-n`                    | `--no-interaction`       | Deaktiviert alle Interaktionsfragen der i-doit Konsole                                                  |
-| `-v / -vv / -vvv`       | `--verbose`              | Erhöht die Ausführlichkeit der Ausgabe (1 = normale Ausgabe, 2 = detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzversion) | Parameter (Langversion) | Beschreibung                                                                                            |
+| ----------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------- |
+| -u                      | --user=BENUTZERNAME     | Benutzername eines autorisierten Benutzers zur Ausführung                                               |
+| -p                      | --password=PASSWORT     | Passwort zur Authentifizierung des angegebenen Benutzers                                                |
+| -i                      | --tenant=MANDANTID      | Mandanten-ID des zu verwendenden Mandanten (Standard: 1)                                                |
+| -c                      | --config=KONFIGURATION  | Konfigurationsdatei                                                                                     |
+| -h                      | --help                  | Hilfetext zur Anzeige weiterer Informationen                                                            |
+| -q                      | --quiet                 | Quiet-Modus zur Deaktivierung der Ausgabe                                                               |
+| -V                      | --version               | Gibt die Version der i-doit Konsole aus                                                                 |
+|                         | --ansi<br>--no-ansi     | Erzwingt (oder deaktiviert mit --no-ansi) ANSI-Ausgabe                                                  |
+| -n                      | --no-interaction        | Deaktiviert alle Interaktionsfragen der i-doit Konsole                                                  |
+| -v / -vv / -vvv         | --verbose               | Erhöht die Ausführlichkeit der Ausgabe (1 = normale Ausgabe, 2 = detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Anwendungsbeispiel**
 
@@ -180,18 +171,18 @@ Löst die Ausführung der Zeitautomatisierung aus.
 
 **Optionen:**
 
-| Parameter (Kurzversion) | Parameter (Langversion)  | Beschreibung                                                                                            |
-| ----------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------- |
-| `-u`                    | `--user=BENUTZERNAME`    | Benutzername eines autorisierten Benutzers zur Ausführung                                               |
-| `-p`                    | `--password=PASSWORT`    | Passwort zur Authentifizierung des angegebenen Benutzers                                                |
-| `-i`                    | `--tenant=MANDANTID`     | Mandanten-ID des zu verwendenden Mandanten (Standard: 1)                                                |
-| `-c`                    | `--config=KONFIGURATION` | Konfigurationsdatei                                                                                     |
-| `-h`                    | `--help`                 | Hilfetext zur Anzeige weiterer Informationen                                                            |
-| `-q`                    | `--quiet`                | Quiet-Modus zur Deaktivierung der Ausgabe                                                               |
-| `-V`                    | `--version`              | Gibt die Version der i-doit Konsole aus                                                                 |
-|                         | `--ansi`<br>`--no-ansi`  | Erzwingt (oder deaktiviert mit `--no-ansi`) ANSI-Ausgabe                                                |
-| `-n`                    | `--no-interaction`       | Deaktiviert alle Interaktionsfragen der i-doit Konsole                                                  |
-| `-v / -vv / -vvv`       | `--verbose`              | Erhöht die Ausführlichkeit der Ausgabe (1 = normale Ausgabe, 2 = detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzversion) | Parameter (Langversion) | Beschreibung                                                                                            |
+| ----------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------- |
+| -u                      | --user=BENUTZERNAME     | Benutzername eines autorisierten Benutzers zur Ausführung                                               |
+| -p                      | --password=PASSWORT     | Passwort zur Authentifizierung des angegebenen Benutzers                                                |
+| -i                      | --tenant=MANDANTID      | Mandanten-ID des zu verwendenden Mandanten (Standard: 1)                                                |
+| -c                      | --config=KONFIGURATION  | Konfigurationsdatei                                                                                     |
+| -h                      | --help                  | Hilfetext zur Anzeige weiterer Informationen                                                            |
+| -q                      | --quiet                 | Quiet-Modus zur Deaktivierung der Ausgabe                                                               |
+| -V                      | --version               | Gibt die Version der i-doit Konsole aus                                                                 |
+|                         | --ansi<br>--no-ansi     | Erzwingt (oder deaktiviert mit --no-ansi) ANSI-Ausgabe                                                  |
+| -n                      | --no-interaction        | Deaktiviert alle Interaktionsfragen der i-doit Konsole                                                  |
+| -v / -vv / -vvv         | --verbose               | Erhöht die Ausführlichkeit der Ausgabe (1 = normale Ausgabe, 2 = detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Anwendungsbeispiel**
 

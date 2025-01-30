@@ -20,40 +20,29 @@ This add-on can be installed at a later date. Detailed descriptions regarding do
 
 The Flows Add-on comes with two CLI commands. Both commands are needed to make the Flows Add-on work completely. There are two option to set up the CLI Commands. The Commands can be executed by a **Crontab**. We also have created a Service installation Script called **create-daemon.sh**, which can be found in the Flows Add-on folder `i-doit/src/classes/modules/synetics_flows/`.
 
-### Automation of CLI commands
+## Automation of CLI commands
 
-=== "Systemservice with script"
+### Systemservice with script"
 
-    This Service will run the Flows Add-on CLI commands every few seconds. First we need to set execute rights for the file. Use the command inside the i-doit folder:
+A service can be created with the Linux script, this service executes the CLI commands of the Flows add-on every few seconds. First we need to set the execution rights for the file. Use the command in the i-doit folder:
 
-    ```shell
-    sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
-    ```
+```shell
+sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
+```
 
-    Now the file can be executed to create a system service. **This needs to be done for every Tenant**
+Now the file can be executed to create a system service. **This needs to be done for every Tenant**
 
-    -   `-u` i-doit person with administrator rights
-    -   `-p` the password for the person
-    -   `-i` tenant ID in which the person is used, can be viewed via console command [tenant-list](../../automation-and-integration/cli/console/options-and-parameters-cli.md#tenant-list)
+-   `-u` i-doit person with administrator rights
+-   `-p` the password for the person
+-   `-i` tenant ID in which the person is used, can be viewed via console command [tenant-list](../../automation-and-integration/cli/console/options-and-parameters-cli.md#tenant-list)
 
-    ```shell
-    src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
-    ```
+```shell
+src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
+```
 
-=== "create Crontab"
+### Task scheduling & Cronjobs
 
-    The Crontab will run the CLI commands every minute. Create a Crontab for the Apache user. Example for Debian:
-
-    ```shell
-    sudo crontab -u www-data -e
-    ```
-
-    Add the following lines at the end of the file, after replacing the i-doit login information. You may also need to replace the tenant ID.
-
-    ```shell
-    * * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
-    * * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
-    ```
+If you use Windows, you can use the task scheduler. See [Task scheduling & Cronjobs](https://kb.i-doit.com/en/automation-and-integration/task-scheduling-and-cronjobs.html).
 
 * * *
 
@@ -73,7 +62,7 @@ At **Administration → User permissions → Flows** you can change [Rights for 
 
 ## Overview
 
-Flows can be created or deleted via the [**action bar**](../../basics/structure-of-the-it-documentation.md#category). If a flow has been created, it can also be opened, activated or deactivated via the **Actions** column. In addition, further actions are possible via the “3 dots” (More) button, such as editing and duplicating,
+Flows can be created or deleted via the [**action bar**](../../basics/structure-of-the-it-documentation.md#category). If a flow has been created, it can also be opened, activated or deactivated via the **Actions** column. In addition, further actions are possible via the "3 dots" (More) button, such as editing and duplicating,
 
 * * *
 
@@ -140,10 +129,10 @@ The logs are visible for all flows or for the flow that is currently open. Impor
 
 ## CLI console commands and options
 
-| Command                                  | Interne Beschreibung                  |
-| ---------------------------------------- | ------------------------------------- |
-| [flows:perform](#flowsperform)           | Perform executions                    |
-| [flows:time-trigger](#flowstime-trigger) | Trigger execution of time automations |
+| Command                                  | Interne Beschreibung                 |
+| ---------------------------------------- | ------------------------------------ |
+| [flows:perform](#flowsperform)           | Perform executions                   |
+| [flows:time-trigger](#flowstime-trigger) | Trigger execution of time automation |
 
 !!! info "These commands are only available if the Flows add-on is installed"
 
