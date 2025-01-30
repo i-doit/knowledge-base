@@ -1,4 +1,10 @@
-# Maintenance
+---
+title: Maintenance Add-on
+description: Maintenance Add-on
+icon: addons/maintenance
+status:
+lang: en
+---
 
 You can plan, coordinate and control maintenance dates with help of the **Maintenance intervals**  [add-on](./index.md). Planned maintenance works can be linked to any [objects](../basics/structure-of-the-it-documentation.md). You will receive notifications automatically via e-mail so that you do not miss the maintenance works.
 
@@ -12,7 +18,7 @@ A separate configuration is not planned.
 
 ## Rights Management
 
-You can set [rights for persons and person groups](../efficient-documentation/rights-management/index.md) under **Administration → Authorization system → Rights → Maintenance**.
+You can set [rights for persons and person groups](../efficient-documentation/rights-management/index.md) under **Administration → User permissions → Maintenance**.
 
 | Condition              | Description                                    |
 | ---------------------- | ---------------------------------------------- |
@@ -24,7 +30,7 @@ You can set [rights for persons and person groups](../efficient-documentation/ri
 
 ## Planning Maintenance Works
 
-You can create and edit maintenance works under **Extras → Maintenance → Planning**.
+You can create and edit maintenance works under **Add-ons → Maintenance → All maintenances**.
 
 [![Planning](../assets/images/en/i-doit-add-ons/maintenance/1-main.png)](../assets/images/en/i-doit-add-ons/maintenance/1-main.png)
 
@@ -56,21 +62,21 @@ When you create a new maintenance work, you can select the following options:
 
 [![maintenance work](../assets/images/en/i-doit-add-ons/maintenance/3-main.png)](../assets/images/en/i-doit-add-ons/maintenance/3-main.png)
 
-## Archived Maintenance Works
+## Finished Maintenance Works
 
-If a maintenance work is marked as completed, it will not appear in the **Planning** section anymore (see above). Instead, it will be listed under **Extras → Maintenance → Planning (archive)**.
+If a maintenance work is marked as completed, it will not appear in the **Planning View** section anymore (see above). Instead, it will be listed under **Add-ons → Maintenance → Finished maintenances**.
 
 [![Archived Maintenance Works](../assets/images/en/i-doit-add-ons/maintenance/4-main.png)](../assets/images/en/i-doit-add-ons/maintenance/4-main.png)
 
 ## Create an Overview
 
-A detailed overview of all objects for which maintenance works have been planned or already completed can be found at **Extras → Maintenance → Overview**. You can define a time period for filtering purposes (option **From** and **To**).
+A detailed overview of all objects for which maintenance works have been planned or already completed can be found at **Add-ons → Maintenance → Planning View**. You can define a time period for filtering purposes (option **From** and **To**).
 
 [![Create an Overview](../assets/images/en/i-doit-add-ons/maintenance/5-main.png)](../assets/images/en/i-doit-add-ons/maintenance/5-main.png)
 
 ## Create a Report
 
-You can create a report listing the planned and completed maintenance works and download it as PDF file. This function can be found under **Extras → Maintenance → Maintenance annual report (Export)**. Alternatively, you can reach this function at **Extras → Report Manager → Views → Maintenance annual report (Export)**. You can choose from the following options:
+You can create a report listing the planned and completed maintenance works and download it as PDF file. This function can be found under **Add-ons → Maintenance → Report (Export)**. Alternatively, you can reach this function at **Extras → Report Manager → Views → Maintenance report (Export)**. You can choose from the following options:
 
 | Option                        | Description                                                                                                                                                      |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -98,7 +104,7 @@ You can display the dates of scheduled and completed maintenance works in the ca
 
 ## Create E-mail Templates
 
-You can generate an e-mail for scheduled maintenance works to inform the persons involved. The persons are either specified as recipient or via their assigned roles. Under **Extras → Maintenance → Email templates** you can define which text is to be send via e-mail to the persons in question. Any number of templates is possible which can be assigned to each single scheduled maintenance work (see above).
+You can generate an e-mail for scheduled maintenance works to inform the persons involved. The persons are either specified as recipient or via their assigned roles. Under **Add-ons → Maintenance → Email templates** you can define which text is to be send via e-mail to the persons in question. Any number of templates is possible which can be assigned to each single scheduled maintenance work (see above).
 
 [![Create E-mail Templates](../assets/images/en/i-doit-add-ons/maintenance/9-main.png)](../assets/images/en/i-doit-add-ons/maintenance/9-main.png)
 
@@ -123,7 +129,7 @@ Example:
 
     sudo -u www-data php console.php --user admin --password admin maintenance
 
-Thus, you can automate the process and do not have to send e-mails manually anymore (**Send emails** button under **Extras → Maintenance → Planning**).
+Thus, you can automate the process and do not have to send e-mails manually anymore (**Send emails** button under **Add-ons → Maintenance → Upcoming Maintenance** and at **Add-ons → Maintenance → Finished Maintenance** as well as **Add-ons → Maintenance → All Maintenances**).
 
 ## CLI console commands and options
 
