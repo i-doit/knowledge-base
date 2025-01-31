@@ -75,7 +75,6 @@ Hier können für Wartungen E-Mails versendet, Wartungen abgeschlossen oder erst
 ## Abgeschlossene Wartungen
 
 Wird eine Wartung als abgeschlossen markiert, so taucht diese nicht mehr unter **Anstehende Wartungen** auf (siehe oben). Stattdessen wird sie unter **Add-ons → Wartung → Abgeschlossenen Wartungen** aufgeführt.
-Wird eine Wartung als abgeschlossen markiert, so taucht diese nicht mehr unter **Anstehende Wartungen** auf (siehe oben). Stattdessen wird sie unter **Add-ons → Wartung → Abgeschlossenen Wartungen** aufgeführt.
 
 [![Abgeschlossene Wartungen](../assets/images/de/i-doit-add-ons/maintenance/5-main.png)](../assets/images/de/i-doit-add-ons/maintenance/5-main.png)
 
@@ -138,7 +137,9 @@ Sowohl der **Titel** als auch der **Inhalt** können mit Platzhaltern bestückt 
 
 Der eigentliche Versand von E-Mails geschieht im Hintergrund über den [Console](../automatisierung-und-integration/cli/index.md), dem CLI Tool von i-doit. Dazu wird der Command **maintenance** verwendet. Es ist zu empfehlen, einen Cronjob einzurichten, um automatisch E-Mails zu versenden. Beispiel für den Aufruf:
 
-    sudo -u www-data php console.php --user admin --password admin maintenance
+```shell
+sudo -u www-data php console.php --user admin --password admin maintenance
+```
 
 Das manuelle Versenden von E-Mails (Button **E-Mails abschicken** unter **Add-ons → Wartung → Alle Wartungen**) kann somit automatisiert werden.
 
