@@ -1,5 +1,10 @@
-# Maintenance
-# Maintenance
+---
+title: Maintenance Add-on
+description: Maintenance Add-on
+icon: addons/maintenance
+status:
+lang: de
+---
 
 Mit dem [Add-on](./index.md) **Wartungsintervalle** können Wartungstermine geplant, koordiniert und gesteuert werden. Geplante Wartungen werden an beliebige [Objekte](../grundlagen/struktur-it-dokumentation.md) geknüpft. Um die Termine nicht zu verpassen, werden automatisch Benachrichtigung per E-Mail gesendet.
 
@@ -10,18 +15,15 @@ Download und Installation
 Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel "[i-doit Add-ons](./index.md)".
 
 ## Konfiguration
-## Konfiguration
 
 Eine gesonderte Konfiguration ist nicht vorgesehen.
 
 ## Rechtevergabe
-## Rechtevergabe
 
-Unter **Verwaltung → Rechtesystem → Rechtevergabe → Wartung** können [Rechte für Personen und Personengruppen](../effizientes-dokumentieren/rechteverwaltung/index.md) angepasst werden.
+Unter **Verwaltung → Berechtigungen → Wartung** können [Rechte für Personen und Personengruppen](../effizientes-dokumentieren/rechteverwaltung/index.md) angepasst werden.
 
 | Bedingung                    | Beschreibung                                        |
 | ---------------------------- | --------------------------------------------------- |
-| **Anstehende Wartungen**     | Ermöglicht das Handhaben von anstehenden Wartungen  |
 | **Anstehende Wartungen**     | Ermöglicht das Handhaben von anstehenden Wartungen  |
 | **Alle Wartungen**           | Ermöglicht das Handhaben aller Wartungen            |
 | **Abgeschlossene Wartungen** | Ermöglicht das Handhaben von archivierten Wartungen |
@@ -30,9 +32,8 @@ Unter **Verwaltung → Rechtesystem → Rechtevergabe → Wartung** können [Rec
 | **E-Mails senden**           | Ermöglicht das Erstellen eines Berichts             |
 
 ## Wartung planen
-## Wartung planen
 
-Wartungen können unter **Extras → Wartung → Alle Wartungen** angelegt und bearbeitet werden.
+Wartungen können unter **Add-ons → Wartung → Alle Wartungen** angelegt und bearbeitet werden.
 
 [![Wartung](../assets/images/de/i-doit-add-ons/maintenance/1-main.png)](../assets/images/de/i-doit-add-ons/maintenance/1-main.png)
 
@@ -66,31 +67,26 @@ Legt man eine neue Wartung an, stehen folgende Optionen zur Auswahl:
 [![Wartung](../assets/images/de/i-doit-add-ons/maintenance/3-main.png)](../assets/images/de/i-doit-add-ons/maintenance/3-main.png)
 
 ## Anstehende Wartungen
-## Anstehende Wartungen
 
 Hier können für Wartungen E-Mails versendet, Wartungen abgeschlossen oder erstellt/editiert werden.
 
 [![Anstehende Wartungen](../assets/images/de/i-doit-add-ons/maintenance/4-main.png)](../assets/images/de/i-doit-add-ons/maintenance/4-main.png)
 
 ## Abgeschlossene Wartungen
-## Abgeschlossene Wartungen
 
-Wird eine Wartung als abgeschlossen markiert, so taucht diese nicht mehr unter **Anstehende Wartungen** auf (siehe oben). Stattdessen wird sie unter **Extras → Wartung → Abgeschlossenen Wartungen** aufgeführt.
-Wird eine Wartung als abgeschlossen markiert, so taucht diese nicht mehr unter **Anstehende Wartungen** auf (siehe oben). Stattdessen wird sie unter **Extras → Wartung → Abgeschlossenen Wartungen** aufgeführt.
+Wird eine Wartung als abgeschlossen markiert, so taucht diese nicht mehr unter **Anstehende Wartungen** auf (siehe oben). Stattdessen wird sie unter **Add-ons → Wartung → Abgeschlossenen Wartungen** aufgeführt.
 
 [![Abgeschlossene Wartungen](../assets/images/de/i-doit-add-ons/maintenance/5-main.png)](../assets/images/de/i-doit-add-ons/maintenance/5-main.png)
 
 ## Planungsansicht
-## Planungsansicht
 
-Eine ausführliche Übersicht aller Objekte, für die eine Wartung geplant oder bereits durchgeführt worden ist, befindet sich unter **Extras → Wartung → Übersicht**. Zur Filterung kann der Zeitraum definiert werden (Optionen **Von** und **Bis**).
+Eine ausführliche Übersicht aller Objekte, für die eine Wartung geplant oder bereits durchgeführt worden ist, befindet sich unter **Add-ons → Wartung → Planungsansicht**. Zur Filterung kann der Zeitraum definiert werden (Optionen **Von** und **Bis**).
 
 [![Planungsansicht](../assets/images/de/i-doit-add-ons/maintenance/6-main.png)](../assets/images/de/i-doit-add-ons/maintenance/6-main.png)
 
 ## Bericht erstellen
-## Bericht erstellen
 
-Aus den bisher geplanten und durchgeführten Wartungen lässt sich ein Bericht erstellen, der als PDF-Datei heruntergeladen werden kann. Diese Funktion befindet sich unter **Extras → Wartung → Wartung Jahresbericht (Export)**. Alternativ ist diese Funktion unter **Extras → Report Manager → Views → Wartung Jahresbericht (Export)** zu erreichen. Hierbei stehen folgende Optionen zur Auswahl:
+Aus den bisher geplanten und durchgeführten Wartungen lässt sich ein Bericht erstellen, der als PDF-Datei heruntergeladen werden kann. Diese Funktion befindet sich unter **Add-ons → Wartung → Bericht (Export)**. Alternativ ist diese Funktion unter **Extras → Report Manager → Views → Wartung Bericht (Export)** zu erreichen. Hierbei stehen folgende Optionen zur Auswahl:
 
 | Option           | Beschreibung                                                                                                                                                                      |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -105,7 +101,6 @@ Aus den bisher geplanten und durchgeführten Wartungen lässt sich ein Bericht e
 [![Wartungs-Bericht erstellen](../assets/images/de/i-doit-add-ons/maintenance/7-main.png)](../assets/images/de/i-doit-add-ons/maintenance/7-main.png)
 
 ## Wartungsübersicht im Objekt
-## Wartungsübersicht im Objekt
 
 Wenn sich ein Objekt befindet, wird dies innerhalb des Objekts symbolisch angezeigt. Auf jeder Seite eines Objekts, sprich in der Übersichtsseite oder innerhalb von Kategorien erscheint der Hinweis, das Objekt befinde sich **In Wartung**.
 
@@ -114,16 +109,14 @@ Es ist möglich die Kategorie **Wartungsübersicht** dem Objekttyp über die [Ob
 [![Wartungsübersicht im Objekt](../assets/images/de/i-doit-add-ons/maintenance/8-main.png)](../assets/images/de/i-doit-add-ons/maintenance/8-main.png)
 
 ## Wartungen auf dem Dashboard
-## Wartungen auf dem Dashboard
 
 Auf dem [Dashboard](../grundlagen/dashboard-und-widgets.md) lassen sich geplante und abgeschlossene Wartungen im Kalender-Widget anzeigen. Diese werden hervorgehoben.
 
 [![Kalender-Widget](../assets/images/de/i-doit-add-ons/maintenance/9-main.png)](../assets/images/de/i-doit-add-ons/maintenance/9-main.png)
 
 ## E-Mail-Vorlagen anlegen
-## E-Mail-Vorlagen anlegen
 
-Für jede geplante Wartung kann eine E-Mail generiert werden, um die betroffenen Personen zu benachrichtigen. Diese werden entweder als Empfänger oder über ihre zugewiesene Rolle angegeben. Welcher Text in der E-Mail verschickt wird, wird unter **Extras → Wartung → E-Mail Vorlagen** definiert. Hier sind beliebig viele Vorlagen möglich, die den einzelnen geplanten Wartungen zugeordnet werden (siehe oben).
+Für jede geplante Wartung kann eine E-Mail generiert werden, um die betroffenen Personen zu benachrichtigen. Diese werden entweder als Empfänger oder über ihre zugewiesene Rolle angegeben. Welcher Text in der E-Mail verschickt wird, wird unter **Add-ons → Wartung → E-Mail Vorlagen** definiert. Hier sind beliebig viele Vorlagen möglich, die den einzelnen geplanten Wartungen zugeordnet werden (siehe oben).
 
 [![E-Mail-Vorlage](../assets/images/de/i-doit-add-ons/maintenance/10-main.png)](../assets/images/de/i-doit-add-ons/maintenance/10-main.png)
 
@@ -141,13 +134,14 @@ Sowohl der **Titel** als auch der **Inhalt** können mit Platzhaltern bestückt 
 [![E-Mail-Vorlage](../assets/images/de/i-doit-add-ons/maintenance/11-main.png)](../assets/images/de/i-doit-add-ons/maintenance/11-main.png)
 
 ## E-Mails automatisch versenden
-## E-Mails automatisch versenden
 
 Der eigentliche Versand von E-Mails geschieht im Hintergrund über den [Console](../automatisierung-und-integration/cli/index.md), dem CLI Tool von i-doit. Dazu wird der Command **maintenance** verwendet. Es ist zu empfehlen, einen Cronjob einzurichten, um automatisch E-Mails zu versenden. Beispiel für den Aufruf:
 
-    sudo -u www-data php console.php --username admin --password admin maintenance
+```shell
+sudo -u www-data php console.php --user admin --password admin maintenance
+```
 
-Das manuelle Versenden von E-Mails (Button **E-Mails abschicken** unter **Extras → Wartung → Alle Wartungen**) kann somit automatisiert werden.
+Das manuelle Versenden von E-Mails (Button **E-Mails abschicken** unter **Add-ons → Wartung → Alle Wartungen**) kann somit automatisiert werden.
 
 ## CLI Console Commands und Optionen
 
