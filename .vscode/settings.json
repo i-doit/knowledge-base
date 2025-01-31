@@ -17,6 +17,7 @@
         "apikey",
         "apparmor",
         "authentification",
+        "autoload",
         "bcmath",
         "becon",
         "behaviour",

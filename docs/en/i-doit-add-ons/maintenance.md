@@ -16,7 +16,7 @@ You can subsequently install the **Maintenance intervals** add-on. The article "
 
 A separate configuration is not planned.
 
-## Rights Management
+## Rights management
 
 You can set [rights for persons and person groups](../efficient-documentation/rights-management/index.md) under **Administration → User permissions → Maintenance**.
 
@@ -28,7 +28,7 @@ You can set [rights for persons and person groups](../efficient-documentation/ri
 | **Overview**           | Enables the generation of an overview          |
 | **Send emails**        | Enables the creation of a report               |
 
-## Planning Maintenance Works
+## Planning maintenance works
 
 You can create and edit maintenance works under **Add-ons → Maintenance → All maintenances**.
 
@@ -48,27 +48,27 @@ The action bar contains the following functions:
 
 When you create a new maintenance work, you can select the following options:
 
-| Option                       | Description                                                                                                                                                                                                                                            |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Finish maintenance  <br>** | Is this maintenance work already marked as completed?                                                                                                                                                                                                  |
-| **Email dispatched**         | Was an e-mail sent to the persons concerned?                                                                                                                                                                                                           |
-| **Objects**                  | List of objects concerned by maintenance works                                                                                                                                                                                                         |
-| **Maintenance type**         | Here you can categorize maintenance works                                                                                                                                                                                                              |
-| ****Maintenance date****     | Date/ period of the planned maintenance works                                                                                                                                                                                                          |
-| **Comment**                  | Further details                                                                                                                                                                                                                                        |
-| **Recipient**                | Persons who the maintenance works are assigned to. They receive an e-mail if a corresponding e-mail address is assigned to them (**Persons → Master data** category). If person groups are the recipients, the members of the groups will be notified. |
-| **Assigned roles  <br>**     | As an alternative or in parallel with the recipients the assigned contacts can be notified by means of their roles (**Contact assignment** category).                                                                                                  |
-| **Email template**           | Which text do you want to send via e-mail (see below)?                                                                                                                                                                                                 |
+| Option                   | Description                                                                                                                                                                                                                                            |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Finish maintenance**   | Is this maintenance work already marked as completed?                                                                                                                                                                                                  |
+| **Email dispatched**     | Was an e-mail sent to the persons concerned?                                                                                                                                                                                                           |
+| **Objects**              | List of objects concerned by maintenance works                                                                                                                                                                                                         |
+| **Maintenance type**     | Here you can categorize maintenance works                                                                                                                                                                                                              |
+| ****Maintenance date**** | Date/ period of the planned maintenance works                                                                                                                                                                                                          |
+| **Comment**              | Further details                                                                                                                                                                                                                                        |
+| **Recipient**            | Persons who the maintenance works are assigned to. They receive an e-mail if a corresponding e-mail address is assigned to them (**Persons → Master data** category). If person groups are the recipients, the members of the groups will be notified. |
+| **Assigned roles**       | As an alternative or in parallel with the recipients the assigned contacts can be notified by means of their roles (**Contact assignment** category).                                                                                                  |
+| **Email template**       | Which text do you want to send via e-mail (see below)?                                                                                                                                                                                                 |
 
 [![maintenance work](../assets/images/en/i-doit-add-ons/maintenance/3-main.png)](../assets/images/en/i-doit-add-ons/maintenance/3-main.png)
 
-## Finished Maintenance Works
+## Finished maintenance works
 
 If a maintenance work is marked as completed, it will not appear in the **Planning View** section anymore (see above). Instead, it will be listed under **Add-ons → Maintenance → Finished maintenances**.
 
 [![Archived Maintenance Works](../assets/images/en/i-doit-add-ons/maintenance/4-main.png)](../assets/images/en/i-doit-add-ons/maintenance/4-main.png)
 
-## Create an Overview
+## Create an overview
 
 A detailed overview of all objects for which maintenance works have been planned or already completed can be found at **Add-ons → Maintenance → Planning View**. You can define a time period for filtering purposes (option **From** and **To**).
 
@@ -76,7 +76,7 @@ A detailed overview of all objects for which maintenance works have been planned
 
 ## Create a Report
 
-You can create a report listing the planned and completed maintenance works and download it as PDF file. This function can be found under **Add-ons → Maintenance → Report (Export)**. Alternatively, you can reach this function at **Extras → Report Manager → Views → Maintenance report (Export)**. You can choose from the following options:
+You can create a report listing the planned and completed maintenance works and download it as PDF file. This function can be found under **Add-ons → Maintenance → Report (Export)**. Alternatively, you can reach this function at **Extras → Report Manager → Views → Maintenance report (Export)**. You can choose from the following options:
 
 | Option                        | Description                                                                                                                                                      |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -86,23 +86,23 @@ You can create a report listing the planned and completed maintenance works and 
 | **To**                        | End date                                                                                                                                                         |
 | **Logo for PDF header  <br>** | Additional picture which is included in each page; the picture has to be available as [file object](../use-cases/upload-and-link-files.md) in i-doit beforehand. |
 
-With the **PDF Export & Download** button you can create the PDF file and download it.
+With the **PDF Export & Download** button you can create the PDF file and download it.
 
 [![PDF Export & Download](../assets/images/en/i-doit-add-ons/maintenance/6-main.png)](../assets/images/en/i-doit-add-ons/maintenance/6-main.png)
 
-## Maintenance Information for each Object
+## Maintenance information for each Object
 
 During the performance of maintenance works for an object you can find a symbolic representation within the object. On every page of an object, i.e. the overview page or within the categories, you can see the information that the objects is **In maintenance** at the moment.
 
 [![Maintenance Information for each Object](../assets/images/en/i-doit-add-ons/maintenance/7-main.png)](../assets/images/en/i-doit-add-ons/maintenance/7-main.png)
 
-## Maintenance Works on the Dashboard
+## Maintenance works on the dashboard
 
 You can display the dates of scheduled and completed maintenance works in the calendar widget on the [dashboard](../basics/dashboard-and-widgets.md) and highlight these dates.
 
 [![calendar widget](../assets/images/en/i-doit-add-ons/maintenance/8-main.png)](../assets/images/en/i-doit-add-ons/maintenance/8-main.png)
 
-## Create E-mail Templates
+## Create E-mail templates
 
 You can generate an e-mail for scheduled maintenance works to inform the persons involved. The persons are either specified as recipient or via their assigned roles. Under **Add-ons → Maintenance → Email templates** you can define which text is to be send via e-mail to the persons in question. Any number of templates is possible which can be assigned to each single scheduled maintenance work (see above).
 
@@ -121,13 +121,15 @@ You can use placeholders for both the **Title** and the **Text** which are then 
 
 [![placeholders](../assets/images/en/i-doit-add-ons/maintenance/10-main.png)](../assets/images/en/i-doit-add-ons/maintenance/10-main.png)
 
-## Automatic Sending of E-mails
+## Automatic sending of E-mails
 
-Actually, the e-mails are sent via the [console](../automation-and-integration/cli/index.md), the CLI Tool of i-doit, in the background. For this purpose, the **maintenance** handler is used. We recommend setting up a Cronjob for the automated sending of e-mails.
+Actually, the e-mails are sent via the [console](../automation-and-integration/cli/index.md), the CLI Tool of i-doit, in the background. For this purpose, the **maintenance** handler is used. We recommend setting up a Cronjob for the automated sending of e-mails.
 
 Example:
 
-    sudo -u www-data php console.php --user admin --password admin maintenance
+```shell
+sudo -u www-data php console.php --user admin --password admin maintenance
+```
 
 Thus, you can automate the process and do not have to send e-mails manually anymore (**Send emails** button under **Add-ons → Maintenance → Upcoming Maintenance** and at **Add-ons → Maintenance → Finished Maintenance** as well as **Add-ons → Maintenance → All Maintenances**).
 
@@ -139,7 +141,7 @@ Thus, you can automate the process and do not have to send e-mails manually anym
 
 !!! info "This command is only available if the Maintenance add-on is installed"
 
-### maintenance
+### Maintenance
 
 Sends e-mails with scheduled maintenance according to the time periods specified in the [Maintenance add-on](#maintenance).
 
@@ -170,7 +172,7 @@ sudo -u www-data php console.php maintenance --user admin --password admin --ten
 | 1.5     | 2024-10-10 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                                                                                                       |
 | 1.4     | 2024-07-09 | [Improvement] Send an email with all the objects within the maintenance<br>[Bug] Only one role can be selected to be notified                                                                                                                                                                                             |
 | 1.3     | 2023-11-07 | [Task] Use new routes to display object and object type images / move add-on related files                                                                                                                                                                                                                                |
-| 1.2.2   | 2023-08-22 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Filter in list views not working<br>[Bug] Creating a new E-Mail template does not work when the objecttype constant of client,server or switch or not available                                                                                                              |
+| 1.2.2   | 2023-08-22 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Filter in list views not working<br>[Bug] Creating a new E-Mail template does not work when the object type constant of client,server or switch or not available                                                                                                             |
 | 1.2.1   | 2023-01-24 | [Bug] Error when sending multiple mails                                                                                                                                                                                                                                                                                   |
 | 1.2     | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Bug] HTML code in browser message                                                                                                                                                                                                                     |
 | 1.1.4   | 2021-01-18 | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                                                                                                              |
