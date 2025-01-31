@@ -40,6 +40,12 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
+### cmdb.reports request that contains '&' outputs '&' instead [ID-11591]
+
+This fix effects the results when using the API to display report results
+
+[i-doit_33_hotfix_ID-11591_483c901.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11591_483c901.zip){ .md-button .md-button--primary }
+
 ### Login via LDAP credentials when using PHP 8.3.16 (ID-11561)
 
 [i-doit_33_hotfix_ID-11561_b75b245.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11561_b75b245.zip){ .md-button .md-button--primary }
@@ -165,8 +171,14 @@ Improved location tree loading times.
 
 [floorplan_1.8_hotfix_FP-140_2e1ca1e.zip :material-file-download:](../../assets/downloads/hotfixes/floorplan/floorplan_1.8_hotfix_FP-140_2e1ca1e.zip){ .md-button .md-button--primary }
 
-## Gerätetausch
+## Replacement Add-on
 
 ### TypeErrors when selecting objects to swap
 
 [Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip :material-file-download:](../../assets/downloads/hotfixes/swap-ci/Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip){ .md-button .md-button--primary }
+
+## Maintenance Add-on
+
+### Option 'Send multiple notifications for each maintenance?' automatically sets to 'Yes' after finishing an upcoming maintenance [WARTUNG-97]
+
+[i-doit_maintenance-1.5_hotfix_WARTUNG-97_6cab331.zip :material-file-download:](../../assets/downloads/hotfixes/maintenance/i-doit_maintenance-1.5_hotfix_WARTUNG-97_6cab331.zip){ .md-button .md-button--primary }
