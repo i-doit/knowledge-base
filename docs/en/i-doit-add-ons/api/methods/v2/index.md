@@ -2,7 +2,7 @@
 title: API v2 endpoints
 description: API v2 endpoints
 #icon: material/api
-status: new
+status: updated
 lang: en
 ---
 
