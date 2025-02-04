@@ -18,7 +18,7 @@ idoitcmk fetch-objects -v
 
 Geben Sie --help für Kommandozeilenoptionen ein, um diese Objekte zu filtern.
 
-## Check\_MK-Hosts
+## Checkmk-Hosts
 
 Auflisten der checkmk Hosts mit dem Befehl fetch-hosts:
 

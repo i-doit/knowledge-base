@@ -1,6 +1,6 @@
 # Anforderungen
 
-idoitcmk ist ein Kommandozeilenwerkzeug, das die APIs von i-doit und Check\_MK verwendet. Bitte erfüllen Sie die folgenden Anforderungen:
+idoitcmk ist ein Kommandozeilenwerkzeug, das die APIs von i-doit und Checkmk verwendet. Bitte erfüllen Sie die folgenden Anforderungen:
 
 Für i-doit benötigen Sie:
 
@@ -9,7 +9,7 @@ Für i-doit benötigen Sie:
 
 Für Checkmk 2 benötigen Sie:
 
-*   Eine oder mehrere Seiten von Check\_MK, Version 1.5 oder höher
+*   Eine oder mehrere Seiten von Checkmk, Version 1.5 oder höher
 *   Aktivierte Web-API
 *   Aktiviert Livestatus
 
@@ -18,7 +18,7 @@ idoitcmk kann auf jedem POSIX-Betriebssystem laufen. Die folgenden Betriebssyste
 *   Debian GNU/Linux 10 "buster" und 11 "bullseye"
 *   Ubuntu Linux 18.04 LTS "bionic" und 20.04 LTS "focal fossa"
 *   Red Hat Enterprise Linux (RHEL) 7 und 8
-*   Suse Linux Enterprise Server (SLES) 15, 15 SP1 und 15 SP2
+*   SUSE Linux Enterprise Server (SLES) 15, 15 SP1 und 15 SP2
 
 Andere Betriebssysteme sollten funktionieren, zum Beispiel macOS, CentOS und viele andere. MS Windows kann funktionieren, ist aber völlig ungetestet.
 
@@ -29,7 +29,7 @@ Bevor Sie idoitcmk installieren, vergewissern Sie sich, dass Sie folgendes insta
 
 Um das klarzustellen: Sie sind nicht gezwungen, diese Anwendung auf denselben Systemen laufen zu lassen wie i-doit oder Checkmk 2
 
-## Betriebssystemspezifische Anforderungen
+## Betriebssystem Spezifische Anforderungen
 
 Basierend auf den oben genannten Anforderungen verwenden Sie diese Anweisungen für Ihr Betriebssystem. Für alle Befehle benötigen Sie Superuser-Rechte (root). Sie können sie mit sudo erlangen.
 
@@ -60,7 +60,7 @@ yum update
 yum install php74w php74w-cli php74w-common
 ```
 
-## Suse Linux Enterprise Server (SLES) 15 SP2
+## SUSE Linux Enterprise Server (SLES) 15 SP2
 
 Vergewissern Sie sich, dass Sie das "Web- und Scripting-Modul" aktiviert haben. Dann:
 

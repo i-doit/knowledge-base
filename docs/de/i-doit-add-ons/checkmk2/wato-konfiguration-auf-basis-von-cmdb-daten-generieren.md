@@ -14,11 +14,11 @@ Denken Sie daran, dass Objekte in i-doit markiert sein müssen, damit sie nach c
 
 Diese Optionen sind während der Laufzeit verfügbar:
 
-| Option | Erforderlich | Beschreibung |
-| --- | --- | --- |
-| --include-ids IDs | Nein | i-doit-Objekte nach ID filtern |
-| --include-title TITLE | Nein | i-doit Objekte nach Bezeichnung filtern |
-| --include-type TYPE | Nein | i-doit Objekte nach Typ filtern |
+| Option                | Erforderlich | Beschreibung                            |
+| --------------------- | ------------ | --------------------------------------- |
+| --include-ids IDs     | Nein         | i-doit-Objekte nach ID filtern          |
+| --include-title TITLE | Nein         | i-doit Objekte nach Bezeichnung filtern |
+| --include-type TYPE   | Nein         | i-doit Objekte nach Typ filtern         |
 
 IDs ist eine durch Kommata getrennte Liste von Objekt ID's.
 
@@ -34,15 +34,15 @@ idoitcmk push --include-ids 1,2,3 --include-title "*.example.com"
 
 ## Konfiguration Diese [Konfigurationseinstellungen](./konfiguration.md) sind verfügbar
 
-| Key | Typ | Erforderlich | Standard | Beschreibung |
-| --- | --- | --- | --- | --- |
-| objectTypes.contactGroup | String | Nein | C__OBJTYPE__PERSON_GROUP | Kontaktgruppen sind durch diesen Typ gekennzeichnet (Konstante verwenden!) |
-| push.activateChanges | Boolean | Nein | false | Aktivieren Sie alle Änderungen mit Ausnahme der "foreign changes" |
-| push.autoMatching | String | Nein | all | Deaktivieren Sie autoTagging (none), suchen Sie nur nach der ersten Übereinstimmung (first) oder versuchen Sie, alle Ausdrücke zu finden (all) |
-| push.autoSite | Boolean | Nein | false | In einer Umgebung mit mehreren Standorten wird jeder Host von einem Standort überwacht. Mit dem Wert "Standort" kann ein Standort automatisch anhand des Standortpfades identifiziert werden. |
-| push.autoTagging | Object | Nein | -   | Fügen Sie Host Tags dynamisch auf der Grundlage von Objektinformationen hinzu, die mit regulären Ausdrücken übereinstimmen; siehe Abschnitt "Auto-Tagging". |
-| push.bakeAgents | Boolean | Nein | false | Automatisches erstellen "Bake" von Agenten; keine Verteilung von Agenten |
-| push.contactGroupIdentifier | String | Nein | title | Sammeln von Kontaktgruppen nach ihren Objekttiteln (title) oder nach ihren LDAP-DNs (ldap) |
-| push.defaultWATOFolder | String | Nein | -   | Hosts in diesen Ordner verschieben, falls nicht festgelegt; leerer Wert bedeutet Hauptordner |
-| push.discoverServices | Boolean | Nein | false | Suchen Sie nach Diensten auf neuen/geänderten Hosts |
-| roles.monitoring | String | Nein | Monitoring | i-doit-Rolle für Kontaktgruppen, die bei Kontaktzuweisungen verwendet werden |
+| Key                         | Typ     | Erforderlich | Standard                 | Beschreibung                                                                                                                                                                                  |
+| --------------------------- | ------- | ------------ | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectTypes.contactGroup    | String  | Nein         | C__OBJTYPE__PERSON_GROUP | Kontaktgruppen sind durch diesen Typ gekennzeichnet (Konstante verwenden!)                                                                                                                    |
+| push.activateChanges        | Boolean | Nein         | false                    | Aktivieren Sie alle Änderungen mit Ausnahme der "foreign changes"                                                                                                                             |
+| push.autoMatching           | String  | Nein         | all                      | Deaktivieren Sie autoTagging (none), suchen Sie nur nach der ersten Übereinstimmung (first) oder versuchen Sie, alle Ausdrücke zu finden (all)                                                |
+| push.autoSite               | Boolean | Nein         | false                    | In einer Umgebung mit mehreren Standorten wird jeder Host von einem Standort überwacht. Mit dem Wert "Standort" kann ein Standort automatisch anhand des Standortpfades identifiziert werden. |
+| push.autoTagging            | Object  | Nein         | -                        | Fügen Sie Host Tags dynamisch auf der Grundlage von Objektinformationen hinzu, die mit regulären Ausdrücken übereinstimmen; siehe Abschnitt "Auto-Tagging".                                   |
+| push.bakeAgents             | Boolean | Nein         | false                    | Automatisches erstellen "Bake" von Agenten; keine Verteilung von Agenten                                                                                                                      |
+| push.contactGroupIdentifier | String  | Nein         | title                    | Sammeln von Kontaktgruppen nach ihren Objekttiteln (title) oder nach ihren LDAP-DNs (ldap)                                                                                                    |
+| push.defaultWATOFolder      | String  | Nein         | -                        | Hosts in diesen Ordner verschieben, falls nicht festgelegt; leerer Wert bedeutet Hauptordner                                                                                                  |
+| push.discoverServices       | Boolean | Nein         | false                    | Suchen Sie nach Diensten auf neuen/geänderten Hosts                                                                                                                                           |
+| roles.monitoring            | String  | Nein         | Monitoring               | i-doit-Rolle für Kontaktgruppen, die bei Kontaktzuweisungen verwendet werden                                                                                                                  |

@@ -459,6 +459,10 @@ nav:
       - Localization: system-administration/localization.md
       - Multi-Tenants: system-administration/multi-tenant.md
       - Customer portal: system-administration/customer-portal.md
+      - Rights management:
+          - efficient-documentation/rights-management/index.md
+          - CMDB (User Rights Management): efficient-documentation/rights-management/cmdb-right-management.md
+          - Rights management via roles: efficient-documentation/rights-management/user-right-management-via-roles.md
       - Troubleshooting:
           - system-administration/troubleshooting/index.md
           - Known update problems: system-administration/troubleshooting/known-update-problems.md
@@ -544,7 +548,7 @@ nav:
           - Tips and tricks for working with the API: i-doit-add-ons/api/tips-and-tricks-for-api.md
           - Category fields for data arrays: i-doit-add-ons/api/category-fields-for-data-arrays.md
       - Cabling: i-doit-add-ons/cabling.md
-      - CheckMK: i-doit-add-ons/checkmk.md
+      - Checkmk: i-doit-add-ons/checkmk.md
       - Checkmk 2:
           - i-doit-add-ons/checkmk2/index.md
           - First steps: i-doit-add-ons/checkmk2/first-steps.md

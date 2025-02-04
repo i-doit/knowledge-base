@@ -20,7 +20,7 @@ Sowohl "statische" als auch "dynamische" Host-Tags werden in der Kategorie Check
 
 Die Kategorie Check_MK Host bietet mehrere Schaltflächen, die idoitcmk im Hintergrund auslösen:
 
-*   Existiert der Host in checkmk?: Identifizierung des Hosts in checkmk anhand seines Hostnamens
+*   Existiert der Host in checkmk?: Identifizierung des Hosts in checkmk anhand seines Hostnames
 *   Objekt von checkmk aktualisieren": Holt Daten vom checkmk-Host, um dieses Objekt zu aktualisieren.
 *   Host in checkmk erstellen/aktualisieren": Die Objektdaten werden nach checkmk übertragen. Entweder wird ein neuer Host in checkmk erstellt oder ein bestehender aktualisiert.
 *   Host in checkmk löschen": Wenn dieses Objekt als Host in checkmk existiert, wird es gelöscht.
@@ -33,7 +33,7 @@ Die Konfiguration erfolgt über **Verwaltung → Add-ons → Check_MK**. Durch d
 /usr/local/bin/idoitcmk
 ```
 
-Tipp: Möglicherweise möchten Sie Standardoptionen hinzufügen, wenn eine der Schaltflächen ausgelöst wird. In einer Multi-Mandanten-Umgebung können Sie beispielsweise mieterspezifische Konfigurationseinstellungen bereitstellen:
+Tipp: Möglicherweise möchten Sie Standardoptionen hinzufügen, wenn eine der Schaltflächen ausgelöst wird. In einer Multi-Mandanten-Umgebung können Sie beispielsweise Mandanten spezifische Konfigurationseinstellungen bereitstellen:
 
 ```shell
 /usr/local/bin/idoitcmk -c /etc/idoitcmk/tenant-one.json

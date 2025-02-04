@@ -16,7 +16,7 @@ idoitcmk help COMMAND
 
 oder
 
-```
+```shell
 idoitcmk COMMAND --help
 ```
 
@@ -70,16 +70,16 @@ Die folgenden Tests sind enthalten:
 
 Während der Ausführung wird diese Anwendung mehr oder weniger nützliche Informationen ausgeben. Sie können den gewünschten Grad der Verbosity mit zwei Optionen einstellen. Erhöhen Sie die Verbosity mit -v oder --verbose, verringern Sie sie mit -q oder --quiet. Diese Protokollstufen sind verfügbar:
 
-| Level | Farbe | Option | Beschreibung |
-| --- | --- | --- | --- |
-| Fatal error | Rot | Immer an | Sofortiger Abbruch der Ausführung |
-| Error | Rot | Immer an | Etwas Wichtiges ist schief gelaufen |
-| Warning | Gelb | Immer an | Überspringen eines Schrittes aufgrund mangelnder Informationen |
-| Notice | Gelb | Deaktiviert mit -q/--quiet | Alles ist in Ordnung, aber Sie sollten Folgendes beachten |
-| Info | Grün | Deaktiviert mit -q/--quiet | Nur eine Information, was los ist |
-| Debug | Grau | Deaktiviert mit -v/--verbose | Drucken Sie alles aus, was Sie haben |
+| Level       | Farbe | Option                       | Beschreibung                                                   |
+| ----------- | ----- | ---------------------------- | -------------------------------------------------------------- |
+| Fatal error | Rot   | Immer an                     | Sofortiger Abbruch der Ausführung                              |
+| Error       | Rot   | Immer an                     | Etwas Wichtiges ist schief gelaufen                            |
+| Warning     | Gelb  | Immer an                     | Überspringen eines Schrittes aufgrund mangelnder Informationen |
+| Notice      | Gelb  | Deaktiviert mit -q/--quiet   | Alles ist in Ordnung, aber Sie sollten Folgendes beachten      |
+| Info        | Grün  | Deaktiviert mit -q/--quiet   | Nur eine Information, was los ist                              |
+| Debug       | Grau  | Deaktiviert mit -v/--verbose | Drucken Sie alles aus, was Sie haben                           |
 
-Deaktivieren Sie die farbige Ausgabe mit der Option -no-colors. Dies ist sehr nützlich für Protokollierungszwecke, zum Beispiel:
+Deaktivieren Sie die farbige Ausgabe mit der Option -no-colors. Dies ist sehr nützlich zur Protokollierung, zum Beispiel:
 
 ```shell
 idoitcmk push --verbose --no-colors --yes > idoitcmk.log

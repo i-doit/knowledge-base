@@ -1,6 +1,6 @@
 # Synchronisierung der checkmk Agenten
 
-checkmk bietet eine agentenbasierte Überwachung von Hosts und deren Diensten. Es gibt verschiedene Arten von Agenten, die mit i-doit geteilt werden können. Um dies zu tun, führen Sie einfach aus:
+Checkmk bietet eine agentenbasierte Überwachung von Hosts und deren Diensten. Es gibt verschiedene Arten von Agenten, die mit i-doit geteilt werden können. Um dies zu tun, führen Sie einfach aus:
 
 ```shell
 idoitcmk sync-agents

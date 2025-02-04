@@ -16,6 +16,6 @@ Standardmäßig werden Kontaktgruppen als "Personengruppen" in i-doit gespeicher
 
 Diese [Konfigurationseinstellungen](./konfiguration.md) sind verfügbar:
 
-| Key | Typ | Erforderlich | Standart | Beschreibung |
-| --- | --- | --- | --- | --- |
-| objectTypes.contactGroup | String | Nein | C__OBJTYPE__PERSON_GROUP | Kontaktgruppen werden durch diesen Typ gekennzeichnet (Konstante verwenden!) |
+| Key                      | Typ    | Erforderlich | Wert                     | Beschreibung                                                                 |
+| ------------------------ | ------ | ------------ | ------------------------ | ---------------------------------------------------------------------------- |
+| objectTypes.contactGroup | String | Nein         | C__OBJTYPE__PERSON_GROUP | Kontaktgruppen werden durch diesen Typ gekennzeichnet (Konstante verwenden!) |

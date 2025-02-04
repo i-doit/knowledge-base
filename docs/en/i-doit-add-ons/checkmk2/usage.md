@@ -63,21 +63,21 @@ The following tests are included:
 
 *   PHP environment
 *   Connection to i-doit JSON-RPC API
-*   Connection to Check\_MK Web API
-*   Connection to Check\_MK Livestatus API
+*   Connection to Checkmk Web API
+*   Connection to Checkmk Livestatus API
 
 ## Verbosity
 
 During execution this application will print out more or less useful information. You can set the preferred level of verbosity with two options. Increase verbosity with -v or --verbose, decrease it with -q or --quiet. These log levels are available:
 
-| Level | Color | Option | Description |
-| --- | --- | --- | --- |
-| Fatal error | Red | Always on | Abort execution immediately |
-| Error | Red | Always on | Something important went wrong |
-| Warning | Yellow | Always on | Skip a step due to lack of information |
-| Notice | Yellow | Disable with -q/--quiet | Everything is alright but you should notice this |
-| Info | Green | Disable with -q/--quiet | Just a information what is going on |
-| Debug | Grey | Enable with -v/--verbose | Print out everything you got |
+| Level       | Color  | Option                   | Description                                      |
+| ----------- | ------ | ------------------------ | ------------------------------------------------ |
+| Fatal error | Red    | Always on                | Abort execution immediately                      |
+| Error       | Red    | Always on                | Something important went wrong                   |
+| Warning     | Yellow | Always on                | Skip a step due to lack of information           |
+| Notice      | Yellow | Disable with -q/--quiet  | Everything is alright but you should notice this |
+| Info        | Green  | Disable with -q/--quiet  | Just a information what is going on              |
+| Debug       | Grey   | Enable with -v/--verbose | Print out everything you got                     |
 
 Disable colored output with option --no-colors. This is very useful for logging purposes, for example:
 

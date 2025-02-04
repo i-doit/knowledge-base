@@ -1,6 +1,6 @@
 # Match objects from i-doit with hosts from checkmk
 
-Before running [push](./generate-wato-configuration-base-on-cmdb-data.md) or [pull](./import-inventory-data-into-cmdb.md) you like to take a deeper look how your infrastructure looks like in both tools i-doit and checkmk. The commands [fetch-objects and fetch-hosts](./read-information-from-i-doit-and-checkmk.md) gives you detailed information about your documented objects in i-doit or your monitored hosts in checkmk. But both don’t match them against each other. This is done by the command match:
+Before running [push](./generate-wato-configuration-base-on-cmdb-data.md) or [pull](./import-inventory-data-into-cmdb.md) you like to take a deeper look how your infrastructure looks like in both tools i-doit and checkmk. The commands [fetch-objects and fetch-hosts](./read-information-from-i-doit-and-checkmk.md) gives you detailed information about your documented objects in i-doit or your monitored hosts in checkmk. But both don't match them against each other. This is done by the command match:
 
 ```shell
 idoitcmk match

@@ -6,6 +6,6 @@ checkmk provides an agent-based monitoring of hosts and its services. There are 
 idoitcmk sync-agents
 ```
 
-This will add all available agent types to i-doit’s dialog+ attribute “Agent” in category Check_MK Host.
+This will add all available agent types to i-doit's dialog+ attribute "Agent" in category Check_MK Host.
 
 **Recommendation:** You only need to run this command once.

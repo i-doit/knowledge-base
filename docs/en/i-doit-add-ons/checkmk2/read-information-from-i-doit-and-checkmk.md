@@ -34,7 +34,7 @@ idoitcmk fetch-hosts -v
 
 Type --help for command-line options to filter these hosts.
 
-Fetch all hosts, but without “effective” attributes which are inherited from rulesets, folders, etc.:
+Fetch all hosts, but without "effective" attributes which are inherited from rulesets, folders, etc.:
 
 ```shell
 idoitcmk fetch-hosts -v -s check_mk.webAPI.effectiveAttributes=false

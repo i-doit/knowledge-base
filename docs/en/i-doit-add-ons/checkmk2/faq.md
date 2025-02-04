@@ -75,13 +75,13 @@ Description: Criticality
 
 Here is a direct comparison between checkmk and i-doit:
 
-| checkmk | i-doit | i-doit key | Example |
-| --- | --- | --- | --- |
-| Internal ID | Host group | group | criticality |
-| Title | Description | -   | Criticality |
-| Topic | -   | -   | -   |
-| Tag ID | Host tag (ID) | const | prod |
-| Description | Display name | val | Productive system |
+| checkmk     | i-doit        | i-doit key | Example           |
+| ----------- | ------------- | ---------- | ----------------- |
+| Internal ID | Host group    | group      | criticality       |
+| Title       | Description   | -          | Criticality       |
+| Topic       | -             | -          | -                 |
+| Tag ID      | Host tag (ID) | const      | prod              |
+| Description | Display name  | val        | Productive system |
 
 ## Self-signed certificates and other problems with TLS connections
 

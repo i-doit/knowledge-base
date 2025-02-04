@@ -1,4 +1,4 @@
-# CheckMK
+# Checkmk
 
 [![Logo von Check_MK](../assets/images/de/i-doit-add-ons/checkmk/1-cmk.gif)](../assets/images/de/i-doit-add-ons/checkmk/1-cmk.gif)
 
@@ -99,9 +99,9 @@ Voraussetzung für die Übertragung per SSH ist Public-Key-Authentifizierung zwi
 Releases
 --------
 
-| Version | Date | Changelog |
-| --- | --- | --- |
-| 1.1 | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br> [Task] Design Compatibility |
-| 1.0.2 |     | [Improvement] Compatibility with i-doit 1.16 |
-| 1.0.1 | 14.10.2019 | [Bug] List editing of Check_MK categories <br> [Bug] Create new category entries in the list editing category "Export Parameter (subcategory of Check_MK (Host))" <br>[Bug] Add more dynamic CMDB-tags <br> [Bug] Export of dynamic host tags with special characters |
-| 1.0 | 17.12.2018 | [Improvement] Add-on is installable[Improvement] Add-on is uninstallable <br> [Improvement] Add-on is activatable <br> [Improvement] Add-on is deactivatable <br> [Change] Add-onize Check_MK |
+| Version | Date       | Changelog                                                                                                                                                                                                                                                             |
+| ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.1     | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br> [Task] Design Compatibility                                                                                                                                                                                                        |
+| 1.0.2   |            | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                                                          |
+| 1.0.1   | 14.10.2019 | [Bug] List editing of Check_MK categories <br> [Bug] Create new category entries in the list editing category "Export Parameter (subcategory of Check_MK (Host))" <br>[Bug] Add more dynamic CMDB-tags <br> [Bug] Export of dynamic host tags with special characters |
+| 1.0     | 17.12.2018 | [Improvement] Add-on is installable[Improvement] Add-on is uninstallable <br> [Improvement] Add-on is activatable <br> [Improvement] Add-on is deactivatable <br> [Change] Add-onize Check_MK                                                                         |
