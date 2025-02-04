@@ -1,6 +1,6 @@
 # Hotfixes
 
-!!! success "Hotfixes for version **33**"
+!!! success "Hotfixes for version **34**"
 
 A hotfix fixes a specific error and is usually made available as a ZIP file. The ZIP file is extracted in the **installation directory** of i-doit. The prompt asking whether files should be overwritten when unpacking must be confirmed.
 
@@ -39,16 +39,6 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 ```
 
 ## i-doit core
-
-### cmdb.reports request that contains '&' outputs '&' instead [ID-11591]
-
-This fix effects the results when using the API to display report results
-
-[i-doit_33_hotfix_ID-11591_483c901.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11591_483c901.zip){ .md-button .md-button--primary }
-
-### Login via LDAP credentials when using PHP 8.3.16 (ID-11561)
-
-[i-doit_33_hotfix_ID-11561_b75b245.zip :material-file-download:](../../assets/downloads/hotfixes/33/i-doit_33_hotfix_ID-11561_b75b245.zip){ .md-button .md-button--primary }
 
 ### CSV Import doesn't set "Yes/No" Fields in custom categories (ID-11162)<br>A custom field change of type Yes-no-field is not logged in the Logbook (ID-11234)<br>API changes to yes-no-fields type are not written to the logbook (ID-11288)
 
