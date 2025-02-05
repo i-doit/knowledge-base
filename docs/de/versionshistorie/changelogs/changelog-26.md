@@ -39,7 +39,7 @@
 [Bug][LDAP]                    Allow user to check LDAP connection when editing via list table<br>
 [Bug][Logbook]                 The Primary attribute in Contact assignment is not written to the logbook<br>
 [Bug][Logbook]                 Multiple entries in Logbook when adding/changing assignments in category "group memberships"<br>
-[Bug][Admincenter]             Support button in Admin Center leads to customer portal<br>
+[Bug][Admincenter]             Support button in Admin-Center leads to customer portal<br>
 [Bug][CSV Import]              The csv import takes a long time because the location fix is executed<br>
 [Bug][CSV Import]              Date field from custom categories not displayed in mapping of csv import<br>
 [Bug][CMDB]                    Placeholder helper does not display object specific placeholders when category is not saved<br>

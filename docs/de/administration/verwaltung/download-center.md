@@ -18,6 +18,6 @@ Unter **Verwaltung → Berechtigungen → Verwaltung** kann das **Ausführen** R
 
 ## Verwendung
 
-Das Download Center kann über **Add-ons → Download Center** oder über **Verwaltung → Download Center** aufgerufen werden. Im Anschluss werden dort die Downloads aufgelistet, die über den Download-Button heruntergeladen werden können. Die heruntergeladenen ZIP-Dateien werden dann wie gewohnt über das [Admin Center](../admin-center.md) installiert.
+Das Download Center kann über **Add-ons → Download Center** oder über **Verwaltung → Download Center** aufgerufen werden. Im Anschluss werden dort die Downloads aufgelistet, die über den Download-Button heruntergeladen werden können. Die heruntergeladenen ZIP-Dateien werden dann wie gewohnt über das [Admin-Center](../admin-center.md) installiert.
 
 [![Tree view](../../assets/images/de/administration/verwaltung/download-center/1-dc.png)](../../assets/images/de/administration/verwaltung/download-center/1-dc.png)

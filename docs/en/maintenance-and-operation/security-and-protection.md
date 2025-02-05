@@ -319,7 +319,7 @@ After you carried out the update, you should reactivate the restrictions.
 Those who want to just quickly set up i-doit for test purposes unfortunately often forget to consider safe passwords. This should not be the case: If you choose **secure passwords consequently from the beginning**, you do not have to bother to remedy these potential safety gaps afterwards. The specific passwords are as follows:
 
 *   MySQL user set up by i-doit for databases
-*   User for the Admin Center
+*   User for the Admin-Center
 *   Default user in i-doit (admin, reader, author, editor)
 
 #### MySQL User
@@ -336,9 +336,9 @@ This password has also to be communicated to i-doit. First in the system databas
 
     UPDATE idoit_system.isys_mandator SET isys_mandator__db_pass = 'thisistotallysecure!!11' WHERE isys_mandator__db_user = 'idoit';
 
-Lastly, the password has to be stored in the central configuration, so that the system database can be accessed. This can be made either under **Config** in the Admin Center or in the file src/config.inc.php in the installation directory of i-doit.
+Lastly, the password has to be stored in the central configuration, so that the system database can be accessed. This can be made either under **Config** in the Admin-Center or in the file src/config.inc.php in the installation directory of i-doit.
 
-#### User for the Admin Center
+#### User for the Admin-Center
 
 This user is also created during the setup. Afterwards, you can change the password under Config. Alternatively, you can edit the file src/config.inc.php.
 

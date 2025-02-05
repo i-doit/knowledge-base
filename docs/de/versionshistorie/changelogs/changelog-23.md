@@ -79,7 +79,7 @@
 [Bug][Documents]                 Assigned objects not displayed in documents  
 [Bug][Documents]                 Error when using console.php documents export outisde of i-doit folder  
 [Bug][Admincenter]               No message if  a Add-on with requirement 1.19 is installed in a pre 1.19 Version  
-[Bug][Admincenter]               Assigned Object licenses are not counted in the Admin Center  
+[Bug][Admincenter]               Assigned Object licenses are not counted in the Admin-Center  
 [Bug][Admincenter]               Admin-Center Password reset throws exception when license missing for more than 30days  
 [Bug][CMDB-Explorer]             CMDB-Explorer can't export graph  
 [Bug][CMDB-Explorer]             The relationships are displayed upside down in a GraphML export of the CMDB Explorer  

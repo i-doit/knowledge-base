@@ -2,8 +2,8 @@
 
 ## Installation/Update
 
-The current installation package for the add-on is available in the i-doit customer portal at [https://portal.i-doit.com/](https://portal.i-doit.com/) after purchasing a valid license and can be downloaded there. The installation itself takes place in the i-doit [Admin Center](../../system-administration/admin-center.md) in the "Add-ons" tab.Here, the package is selected from the local system via the "Browse" button. After specifying for which [Tenant(s)](../../system-administration/multi-tenant.md) the add-on should be made available, the installation can be completed via the "Upload and install" button.<br
-After a new version has been released, the updated package, which will also be available in the i-doit customer portal, can be uploaded and installed in the Admin Center using the same path.
+The current installation package for the add-on is available in the i-doit customer portal at [https://portal.i-doit.com/](https://portal.i-doit.com/) after purchasing a valid license and can be downloaded there. The installation itself takes place in the i-doit [Admin-Center](../../system-administration/admin-center.md) in the "Add-ons" tab.Here, the package is selected from the local system via the "Browse" button. After specifying for which [Tenant(s)](../../system-administration/multi-tenant.md) the add-on should be made available, the installation can be completed via the "Upload and install" button.<br
+After a new version has been released, the updated package, which will also be available in the i-doit customer portal, can be uploaded and installed in the Admin-Center using the same path.
 
 ## Assignment of rights
 

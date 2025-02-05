@@ -4,7 +4,7 @@
 [Verbesserung]  JDisc-Profil: Neues Dialog Feld zur Bestimmung des Objekttypen von Blade/Chassis Modulen<br>
 [Verbesserung]  Sicherheit: Unterbundene Darstellung von Hashes in Passwortfeldern<br>
 [Verbesserung]  Sicherheit: Nutzung von Authenfizierungscookies (HTTPOnly, Secure)<br>
-[Verbesserung]  Sicherheit: Funktion für hash-basiertes Passwort in Admin Center (Neusetzen des Passworts über /admin/?req=config)<br>
+[Verbesserung]  Sicherheit: Funktion für hash-basiertes Passwort in Admin-Center (Neusetzen des Passworts über /admin/?req=config)<br>
 [Verbesserung]  Sicherheit: Freie Konfiguration des Pfades für Caches und temporäre Dateien (in src/config.inc.php)<br>
 [Verbesserung]  Sicherheit: CSRF Tokens beim Speichern von CMDB Kategorien (Systemeinstellungen)<br>
 [Verbesserung]  Login: Nutzung eines CSRF Tokens zur zusätzlichen Absicherung des Logins (Systemeinstellungen)<br>

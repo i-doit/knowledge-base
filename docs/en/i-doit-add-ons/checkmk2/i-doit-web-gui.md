@@ -1,6 +1,6 @@
-# checkmk 2: i-doit Web GUI
+# i-doit Web GUI
 
-Most user interactions are based on i-doit’s [legacy Check\_MK add-on](./../checkmk.md) which is currently shipped with i-doit/open. This legacy add-on must be enabled [via the i-doit Admin Center](./../index.md) (it’s enabled by default).
+Most user interactions are based on i-doit's [legacy Check\_MK add-on](../checkmk.md) which is currently shipped with i-doit/open. This legacy add-on must be enabled [via the i-doit Admin-Center](../index.md) (it's enabled by default).
 
 ## Enable real-time calls
 
@@ -42,7 +42,7 @@ Tip: You may want to add default options whenever one of the buttons are trigger
 /usr/local/bin/idoitcmk -c /etc/idoitcmk/tenant-one.json
 ```
 
-Logging is enabled by default. For the first steps it’s always a good thing to know what is happening.
+Logging is enabled by default. For the first steps it's always a good thing to know what is happening.
 
 To authorize users/user groups to trigger these buttons go to Administration > Authorization system > Rights > CMDB, load a user/group and enable the Execute right for one or more conditions:
 

@@ -1,16 +1,16 @@
-# Checkmk2
+# Checkmk 2
 
-## Release Notes Checkmk2 Version 1.8.6
+## Release Notes Checkmk 2 Version 1.8.6
 
-This version brings important improvements and new functions to make the use of Checkmk2 more efficient and future-proof.
+This version brings important improvements and new functions to make the use of Checkmk 2 more efficient and future-proof.
 
 ### Compatibility with PHP 8.2
 
--   Checkmk2 now supports all PHP versions from 7.4 to 8.2.
+-   Checkmk 2 now supports all PHP versions from 7.4 to 8.2.
 
 ### Compatibility with Checkmk 2.3
 
--   To use the Checkmk2 add-on with Checkmk 2.3, the configuration parameter `check_mk.version` must be set to `"2.3"`.
+-   To use the Checkmk 2 add-on with Checkmk 2.3, the configuration parameter `check_mk.version` must be set to `"2.3"`.
 -   The add-on thus supports all versions from Checkmk 1.5.
 -   In future, new features will only be implemented for Checkmk >= version 2.2.
 
@@ -19,7 +19,7 @@ This version brings important improvements and new functions to make the use of 
 -   Logging has been extended and now also includes the logging of HTTP requests and responses to/from Checkmk.
 -   New parameters for logging:
     -   `check_mk.logging.enableLogging: true|false`: Enables logging of Checkmk responses/requests (disabled by default).
-    -   `check_mk.logging.logFilePath: "/log/path"`: Directory in which the log files are saved. One log file is created per call. The directory must be readable and writable for the user running Checkmk2 (e.g. www-data).
+    -   `check_mk.logging.logFilePath: "/log/path"`: Directory in which the log files are saved. One log file is created per call. The directory must be readable and writable for the user running Checkmk 2 (e.g. www-data).
     -   An example configuration can be viewed with `idoitcmk print-example-config`.
 
 ### Bugfixes/further adjustments
@@ -51,7 +51,7 @@ For users who want to familiarize themselves with the new configuration structur
     As a Gold Partner of Tribe29, SHD - System-Haus-Dresden GmbH is considered a proven specialist for monitoring with Checkmk. With the takeover and further development of the i-doit add-on Checkmk 2, SHD is now making this expertise available to i-doit users.
 
 !!! attention ""
-    With [Checkmk version 2.1.0b1](https://checkmk.com/werk/12389) the structure of the inventory data has been changed. It is currently not possible to transfer inventory to i-doit with CheckMK 2 add-on <=1.8<br>
+    With [Checkmk version 2.1.0b1](https://checkmk.com/werk/12389) the structure of the inventory data has been changed. It is currently not possible to transfer inventory to i-doit with Checkmk 2 add-on <=1.8<br>
     With version 1.8.1 the [configuration](./configuration.md) must be adjusted.
 
 Share information between i-doit and checkmk
@@ -70,7 +70,7 @@ The application idoitcmk closely connects i-doit with checkmk. A lot of informat
 -   Easily compare the current state with the target state of all your hosts and services within your documentation.
 -   Configure your network monitoring based on your documentation
 -   Let your network monitoring collect essential information about hosts and re-use it in your documentation.
--   Automate all the boring tasks a sysadmin doesn’t like.
+-   Automate all the boring tasks a sysadmin doesn't like.
 
 We know each (IT) organization has different requirements and various processes. Due to this it is important to have a [highly customizable](./configuration.md) application.
 
@@ -131,7 +131,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   CMK2-56 fix errors during sync-sites
 -   CMK2-57 fix errors during sync-tags
 -   CMK2-61 fix errors during saving of contact-groups
--   CMK2-62 validfation error during pull
+-   CMK2-62 validation error during pull
 -   CMK2-63 fix undefined index mac
 
 ### [1.8.3] - 2023-09-07
@@ -158,7 +158,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   Adding compatibility to checkmk 2.1
+-   Adding compatibility to Checkmk 2.1
 
 ### Fixes
 
@@ -168,7 +168,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixes
 
--   Adding compatibility to checkmk 2.1
+-   Adding compatibility to Checkmk 2.1
 
 ### [1.8.0] - 2022-09-05
 
@@ -201,21 +201,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
--   Tags (static) Dropdown ‘Tag group’ attributes cannot be deleted
--   CheckMK 2: Tags are not displayed with the tag group in reports
+-   Tags (static) Dropdown Tag group attributes cannot be deleted
+-   Checkmk 2: Tags are not displayed with the tag group in reports
 
 ### [1.6.1] – 2021-06-15
 
 ### Fixed
 
 -   Password and username must be specified (i-doit config)
--   Filtering on attributes of category Check\_MK (host) generates SQL error and list view does not work anymore
--   Dynamic host tag “Location” cannot be set globally
--   CheckMK 2 Plugin Pull: Validation errors in dialog related properties
+-   Filtering on attributes of category Checkmk (host) generates SQL error and list view does not work anymore
+-   Dynamic host tag "Location" cannot be set globally
+-   Checkmk 2 Plugin Pull: Validation errors in dialog related properties
 -   The live status configuration is not optional
--   Checkmk responded with an error message: Check\_MK exception: Invalid key(s): hostname
--   Check\_MK 2: Error Message strlen() expects parameter 1 to be string, null given
--   Error in list views when add-on Check\_MK 2 was deinstalled
+-   Checkmk responded with an error message: Checkmk exception: Invalid key(s): hostname
+-   Checkmk 2: Error Message `strlen()` expects parameter 1 to be string, null given
+-   Error in list views when add-on Checkmk 2 was uninstalled
 -   Operating system is not assigned
 -   No attributes are imported for applications
 -   Pull with the same Host as parent ends in a loop
@@ -241,19 +241,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Require PHP modules hash, sockets and SPL
 -   pull: Do not warn about empty host tag IDs because they are allowed in Checkmk
 -   pull: Ignore link local networking addresses and interfaces
--   pull: Do not ignore a networking address which can’t be assigned to a networking port
--   push: Create site if it’s set in i-doit (category Checkmk Host) but not set in Checkmk
--   push: Update site if it’s set in both i-doit and Checkmk but differs
--   push: Remove site if it isn’t set in i-doit but set in Checkmk
+-   pull: Do not ignore a networking address which cant be assigned to a networking port
+-   push: Create site if it's set in i-doit (category Checkmk Host) but not set in Checkmk
+-   push: Update site if it's set in both i-doit and Checkmk but differs
+-   push: Remove site if it isn't set in i-doit but set in Checkmk
 -   match: Warn about ignored objects or objects without unique identifiers
 
 ### Fixed
 
 -   fetch-hosts/pull: Fetch HW/SW inventory data for all hosts if configuration setting i-doit.limitBatchRequests is smaller than the number of hosts.
--   match/pull/push: Use primary category entry from category hostadress to determine hostname used by Checkmk
+-   match/pull/push: Use primary category entry from category hostaddress to determine hostname used by Checkmk
 -   pull: Do not import empty MAC addresses
 -   pull: Prevent validation error caused by unknown property entry
--   pull: Print link to Checkmk if attribute “site” is available
+-   pull: Print link to Checkmk if attribute "site" is available
 -   pull: Validate data type of each tag identifier
 -   pull: Do not leave any host without an import strategy (create, overwrite, merge or ignore)
 -   pull: Decide import strategy for each host based on matching and configuration settings
@@ -272,11 +272,11 @@ This is a bug fix release after we received tons of useful feedback from our use
 
 ### Added
 
--   status: Check installed versions of Check\_MK 2 and API add-on
--   sync-agents: Cleanup agent types in i-doit which aren’t available in Check\_MK
--   sync-tags: Validate tags in i-doit before pushing them to Check\_MK
+-   status: Check installed versions of Checkmk 2 and API add-on
+-   sync-agents: Cleanup agent types in i-doit which aren't available in Checkmk
+-   sync-tags: Validate tags in i-doit before pushing them to Checkmk
 -   pull/push: Add new configuration settings to identify required object types by their constants and objects by their titles
--   pull: Print links to i-doit and Check\_MK for each object (only in debug mode)
+-   pull: Print links to i-doit and Checkmk for each object (only in debug mode)
 
 ### Changed
 
@@ -286,7 +286,7 @@ This is a bug fix release after we received tons of useful feedback from our use
 -   pull: Skip empty tag identifiers
 -   pull: If model is given but vendor is unknown set vendor to n/a (and vice versa)
 -   pull: Support more bandwidth options
--   sync-agents: Fetch agent types directly from Check\_MK and do not rely on a pre-defined list of agent types
+-   sync-agents: Fetch agent types directly from Checkmk and do not rely on a pre-defined list of agent types
 -   sync-tags: Do not allow to sync duplicate tag IDs, empty group titles or changed tag IDs
 -   sync-tags/sync-agents: Include built-in host tag groups, for example: agent type, SNMP, IP address family
 -   init: Do not force to configure most settings which have proper defaults; just ask nicely
@@ -297,7 +297,7 @@ This is a bug fix release after we received tons of useful feedback from our use
 -   Category Check_MK Host: Print message if host/object not found
 -   Category Check_MK Host: Remove link to command log (prevents 403 forbidden error message)
 -   fetch-hosts/fetch-objects/delete-hosts: Exit with status code 2 if host/object not found
--   Build binary: Replace BZip2 with GZip compression after autoloading failed because of wrong checksums
+-   Build binary: Replace BZip2 with GZip compression after auto loading failed because of wrong checksums
 
 ### Fixed
 
@@ -308,7 +308,7 @@ This is a bug fix release after we received tons of useful feedback from our use
 -   pull: Do not try to add network port with zero bandwidth
 -   pull: Select proper attributes to import CPUs
 -   pull: Do not overwrite hostname selection in categories Check_MK Host and Livestatus if object is updated
--   pull/fetch-hosts: Fix filtering by Check\_MK site with option --include-site
+-   pull/fetch-hosts: Fix filtering by Checkmk site with option --include-site
 -   pull/match: Do not try to match objects by unspecified hostname selection in category Check_MK Host
 -   pull/push/match: Do not try to create already existing object which has a match with a host
 -   push: Do not miss any host-related contact group if more than one group is assigned to an object
@@ -317,15 +317,15 @@ This is a bug fix release after we received tons of useful feedback from our use
 -   push: Do not push any object with option --include-ids which is disabled for export
 -   push: Add parents to existing host or overwrite current parents or remove them properly
 -   push: Add or remove alias to/from host properly
--   push/fetch-objects: Prevent error “Found invalid result for request in batch” if --include-ids filters by unknown objects
--   sync-tags: Do not forget to strip HTML tags from tag group title before syncing to Check\_MK
--   Installation/update: Grant “Admin” group access to Extras > Check_MK 2 in Web GUI
+-   push/fetch-objects: Prevent error "Found invalid result for request in batch" if --include-ids filters by unknown objects
+-   sync-tags: Do not forget to strip HTML tags from tag group title before syncing to Checkmk
+-   Installation/update: Grant "Admin" group access to Extras > Check_MK 2 in Web GUI
 -   Extras > Check_MK 2 > Tags (static): Edit/delete/sort static host tags in i-doit
 -   Administration > Interfaces / external data > Monitoring > Check_MK 2: Fix updating configuration settings
 -   Administration > CMDB settings > Dialog-Admin: Make dialog+ attributes agent, site and WATO folder available
 -   Category Check_MK Host/Check_MK Tags: Do not create duplicate assignments to object types after update
 -   Category Check_MK Host: Write full command output incl. STDERR to log file
--   Category Check_MK Tags: Make “dynamic tags” and “CMDB tags” available in reports
+-   Category Check_MK Tags: Make "dynamic tags" and "CMDB tags" available in reports
 
 ### [1.5.0] – 2018-12-18
 
@@ -340,14 +340,14 @@ First public release 🎉
 ### Added
 
 -   push/pull/match: Validate hostname specified in i-doit
--   Add more pre-checks: Please do not use neither PHP version < 7.0.0 nor super-user “root”
+-   Add more pre-checks: Please do not use neither PHP version < 7.0.0 nor super-user "root"
 
 ### Changed
 
 -   Require i-doit, at least version 1.12
 -   Require i-doit API add-on, at least version 1.10
 -   Enforce license check
--   Remove dependency from legacy Check\_MK add-on
+-   Remove dependency from legacy Checkmk add-on
 -   Migrate tag configuration from Extras > Check_MK to Extras > Check_MK 2
 -   Migrate category Check_MK (Host) > Export parameter to Check_MK Host
 -   Migrate category Check_MK (Host) > Host tags to Check_MK Tags
@@ -369,14 +369,14 @@ Remember, remember, the fifth of November… 🎃
 ### Added
 
 -   push: Add management board address to host based on a object-related remote management controller
--   sync-tags: Import host tags and host tag groups from i-doit into Check\_MK
--   sync-tags: Filter objects to sync their dynamic CMDB tags with Check\_MK
--   sync-tags: Do not re-import dynamic CMDB tags from Check\_MK into i-doit
--   sync-tags: Activate (foreign) changes after adding new host tags to Check\_MK
+-   sync-tags: Import host tags and host tag groups from i-doit into Checkmk
+-   sync-tags: Filter objects to sync their dynamic CMDB tags with Checkmk
+-   sync-tags: Do not re-import dynamic CMDB tags from Checkmk into i-doit
+-   sync-tags: Activate (foreign) changes after adding new host tags to Checkmk
 
 ### Fixed
 
--   Fix error when installing add-on in i-doit admin center without parallel login to i-doit tenant
+-   Fix error when installing add-on in i-doit Admin-Center without parallel login to i-doit tenant
 -   fetch-objects: Print URL without PHP notice
 
 ### [1.3.0] – 2018-09-10
@@ -387,22 +387,22 @@ Remember, remember, the fifth of November… 🎃
 
 -   push: Validate regular expressions in configuration setting push.autoTagging
 -   status: Test loaded PHP extensions
--   Make it optional to fetch “effective” attributes from hosts in Check\_MK, but enable it by default
+-   Make it optional to fetch "effective" attributes from hosts in Checkmk, but enable it by default
 -   Add new configuration setting check_mk.webAPI.effectiveAttributes (set to true by default)
 -   fetch-objects: Print URL to each i-doit object
--   fetch-hosts: Print URL to each Check\_MK host
+-   fetch-hosts: Print URL to each Checkmk host
 -   push/fetch-objects: Increase performance dramatically if the only filter option is --include-ids
 
 ### Changed
 
 -   pull: Ignore empty host tags
--   pull: Ignore host tag groups address_family and snmp (they are not available via Check\_MK Web API call)
+-   pull: Ignore host tag groups address_family and snmp (they are not available via Checkmk Web API call)
 
 ### Fixed
 
 -   push: Do not ignore IP address
 -   push/pull/match: Check for every object attribute whether it exists before matching it against host attributes
--   Configure individual proxy hosts for both i-doit JSON-RPC API and Check\_MK Web API
+-   Configure individual proxy hosts for both i-doit JSON-RPC API and Checkmk Web API
 -   Verbose mode: Do not print that no objects have been found by blacklisted object types
 
 ### [1.2.0] – 2018-07-09
@@ -412,7 +412,7 @@ Remember, remember, the fifth of November… 🎃
 ### Added
 
 -   Trigger idoitcmk commands within i-doit category Check_MK (Host)
--   delete-hosts: Delete hosts in Check\_MK
+-   delete-hosts: Delete hosts in Checkmk
 -   push: Activate all changes including foreign changes by configuration setting push.activateForeignChanges
 
 ### Changed
@@ -433,7 +433,7 @@ Remember, remember, the fifth of November… 🎃
 -   pull: Import IPv4 addresses and network ports from GNU/Linux and other non-windows systems
 -   pull: Add speed to network ports
 -   -v|--verbose: Print number of API requests
--   match: Match objects from i-doit with hosts from Check\_MK
+-   match: Match objects from i-doit with hosts from Checkmk
 -   pull: Match object with host by user-defined value for attribute Hostname in category Check_MK (Host) > Export parameter
 
 ### Fixed
@@ -448,7 +448,7 @@ Remember, remember, the fifth of November… 🎃
 
 ### Changed
 
--   pull: Do not enable monitoring via Livestatus if attribute “site” is not available for Check\_MK host
+-   pull: Do not enable monitoring via Livestatus if attribute "site" is not available for Checkmk host
 
 ### Fixed
 
@@ -468,7 +468,7 @@ Remember, remember, the fifth of November… 🎃
 ### Fixed
 
 -   pull: Sometimes host is missing in import cue when there is a match with an object
--   pull: Do not forget to add primary IPv4 address to category “Check\_MK (Host) > Export parameter”
+-   pull: Do not forget to add primary IPv4 address to category "Checkmk (Host) > Export parameter"
 -   push: Do not forget to add host tags based on configuration setting push.autoTagging
 -   sync-tags: Incomplete host group tags may cause errors
 -   Configuration setting push.autoTagging: Missing slashes in regular expressions
@@ -479,10 +479,10 @@ Remember, remember, the fifth of November… 🎃
 
 ### Added
 
--   pull: Look for IP address configuration in hardware/software inventory from Check\_MK
+-   pull: Look for IP address configuration in hardware/software inventory from Checkmk
 -   pull: Assign IP addresses to proper subnets in i-doit
 -   pull: Use ipaddress attribute as fallback if there are no addresses found in hw/sw inventory
--   pull: Create or update link in i-doit object to host in Check\_MK
+-   pull: Create or update link in i-doit object to host in Checkmk
 -   New configuration setting pull.attributes.C__CATG__ACCESS; defaults to true
 
 ### Changed
@@ -503,20 +503,20 @@ Remember, remember, the fifth of November… 🎃
 
 ### Fixed
 
--   pull: Prevent mismatches for i-doit objects and Check\_MK hosts
+-   pull: Prevent mismatches for i-doit objects and Checkmk hosts
 -   pull: Handle i-doit objects with missing attributes properly
 
 ### [0.7] – 2018-04-19
 
 **Important notes:**
 
-1. Activate MK\_Livestatus in Check\_MK
+1. Activate MK\_Livestatus in Checkmk
 2. There are changes in the configuration settings. Re-configure your application with idoitcmk init.
 
 ### Added
 
 -   push: Look for duplicate identifiers (object title, hostname, FQDN, user-defined) used by objects in i-doit
--   status: Check connection to MK\_Livestatus and check Check\_MK version
+-   status: Check connection to MK\_Livestatus and check Checkmk version
 -   New configuration setting roles.monitoring to define i-doit role for contact groups assigned to objects
 
 ### Changed
@@ -539,7 +539,7 @@ Remember, remember, the fifth of November… 🎃
 ### Fixed
 
 -   push: PHP warning is thrown while fetching a contact without specified role
--   pull/fetch-hosts: Prevent HTTP error code 414 URI Too Long while fetching hw/sw inventory data from Check\_MK
+-   pull/fetch-hosts: Prevent HTTP error code 414 URI Too Long while fetching hw/sw inventory data from Checkmk
 
 ### [0.5] – 2018-04-12
 
@@ -554,14 +554,14 @@ This release fixes several issues in required packages.
 
 -   Avoid duplicates in configuration settings
 -   Remove backslashes from configuration settings
--   Fix several problems while parsing responses from Check\_MK Web API
+-   Fix several problems while parsing responses from Checkmk Web API
 
 ### [0.4] – 2018-04-05
 
 ### Added
 
 -   fetch-objects: Read information about objects from i-doit
--   fetch-hosts: Read information about hosts from Check\_MK
+-   fetch-hosts: Read information about hosts from Checkmk
 
 ### Changed
 
@@ -591,8 +591,8 @@ This release is dedicated to all women.
 ### Fixed
 
 -   pull: Do not try to fetch objects by type from i-doit if there are no objects available
--   sync-folders: Keep in mind WATO folders “/” and "" (empty string) are the same
--   sync-folders: PHP error when WATO folder is copied from i-doit to Check\_MK
+-   sync-folders: Keep in mind WATO folders "/" and "" (empty string) are the same
+-   sync-folders: PHP error when WATO folder is copied from i-doit to Checkmk
 
 ### [0.1] – 2018-03-05
 
@@ -602,10 +602,10 @@ First release!
 
 -   push: Generate WATO configuration based on CMDB data
 -   pull: Import inventory data into CMDB
--   sync-agents: Import agents types from Check\_MK to i-doit
--   sync-contact-groups: Sync contact groups between Check\_MK and i-doit
--   sync-folders: Sync WATO folders between Check\_MK and i-doit
--   sync-sites: Import monitoring sites from Check\_MK to i-doit
--   sync-tags: Import tag groups from Check\_MK as static host tags to i-doit
+-   sync-agents: Import agents types from Checkmk to i-doit
+-   sync-contact-groups: Sync contact groups between Checkmk and i-doit
+-   sync-folders: Sync WATO folders between Checkmk and i-doit
+-   sync-sites: Import monitoring sites from Checkmk to i-doit
+-   sync-tags: Import tag groups from Checkmk as static host tags to i-doit
 -   print-example-config: Print all configuration settings as an example
 -   More commands: help, list, init, status, configtest, print-example-config, build-test-environment

@@ -1,9 +1,9 @@
-# checkmk 2: Host Tags synchronisieren
+# Host Tags synchronisieren
 
 Die Host- und Service-Prüfungen von checkmk basieren häufig auf dem Tagging-System. Sie können Tag-Gruppen und die Tags selbst mit i-doit teilen, indem Sie ausführen:
 
 ```shell
-    idoitcmk sync-tags
+idoitcmk sync-tags
 ```
 
 Die Tags werden in i-doit unter Extras > Check_MK 2 > Tags (statisch) gespeichert und können allen Objekten mit dem Attribut Host tags in der Kategorie Check_MK Tags zugewiesen werden.

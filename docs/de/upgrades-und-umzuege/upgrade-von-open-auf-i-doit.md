@@ -49,24 +49,24 @@ Mit dem Installations-Paket der pro-Variante funktioniert das Upgrade nicht.
 _i-doit_\-addon installieren
 --------------------------------
 
-Nach dem Update auf die pro-Variante muss das pro-addon installiert werden. Das pro-addon ist bereits im [Admin Center](../administration/admin-center.md) unter **Add-ons** verfügbar. Dort befindet sich ein Button zum Installieren.
+Nach dem Update auf die pro-Variante muss das pro-addon installiert werden. Das pro-addon ist bereits im [Admin-Center](../administration/admin-center.md) unter **Add-ons** verfügbar. Dort befindet sich ein Button zum Installieren.
 
 Lizenz einspielen
 -----------------
 
-Das eigentliche Upgrade ist nun vollendet und muss nur noch durch eine gültige Lizenz "veredelt" werden. Die Lizenz kann [direkt im Admin Center unter **Licenses** eingespielt](../wartung-und-betrieb/lizenz-aktivieren.md) werden.
+Das eigentliche Upgrade ist nun vollendet und muss nur noch durch eine gültige Lizenz "veredelt" werden. Die Lizenz kann [direkt im Admin-Center unter **Licenses** eingespielt](../wartung-und-betrieb/lizenz-aktivieren.md) werden.
 
 Caches leeren
 -------------
 
-Nun melden wir uns vom Admin Center ab und in i-doit an. Dort klicken wir uns über **Verwaltung → Systemtools → Cache / Datenbank** zur Schaltfläche **Kompletten Cache leeren**. Anschließend leeren wir den Browser-eigenen Cache mit der Tastenkombination **STRG+F5.**
+Nun melden wir uns vom Admin-Center ab und in i-doit an. Dort klicken wir uns über **Verwaltung → Systemtools → Cache / Datenbank** zur Schaltfläche **Kompletten Cache leeren**. Anschließend leeren wir den Browser-eigenen Cache mit der Tastenkombination **STRG+F5.**
 
 Rechte konfigurieren
 --------------------
 
 Im Gegensatz zu i-doit open besitzt i-doit ein umfangreiches, frei konfigurierbares [Rechtesystem](../effizientes-dokumentieren/rechteverwaltung/index.md). Der angemeldete Benutzer wird daher noch nicht über alle Berechtigungen verfügen.
 
-Um dem Benutzer mit wenigen Schritten vollen Zugriff zu gewähren, rufen wir **Verwaltung→ Rechtesystem** **→ Rechtesystem zurücksetzen** auf und erteilen ihm mit der Eingabe der Credentials für das [Admin Center](../administration/admin-center.md) vollen Zugriff auf i-doit.
+Um dem Benutzer mit wenigen Schritten vollen Zugriff zu gewähren, rufen wir **Verwaltung→ Rechtesystem** **→ Rechtesystem zurücksetzen** auf und erteilen ihm mit der Eingabe der Credentials für das [Admin-Center](../administration/admin-center.md) vollen Zugriff auf i-doit.
 
 Nun können über die einzelnen Rechtevergaben weitere Rechte für Personen und Personengruppen konfiguriert werden.
 

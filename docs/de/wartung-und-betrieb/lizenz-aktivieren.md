@@ -103,7 +103,7 @@ Der **License Token** wird per E-Mail zugeschickt. Die **Offline License** kann 
 
 ### i-doit Aktivierung über das [Admin-Center](../administration/admin-center.md) (veraltet)
 
-Die Installation über das [Admin Center](../administration/admin-center.md) erfolgt nach dem Login im Reiter **Licenses**. Verwende hier die Schaltfläche **Install new license** um den erweiterten Dialog zu öffnen und die aus dem Kundenportal heruntergeladene Lizenz auszuwählen.
+Die Installation über das [Admin-Center](../administration/admin-center.md) erfolgt nach dem Login im Reiter **Licenses**. Verwende hier die Schaltfläche **Install new license** um den erweiterten Dialog zu öffnen und die aus dem Kundenportal heruntergeladene Lizenz auszuwählen.
 
 !!! info "Neuanmeldung eventuell nötig"
     Wird eine Lizenz erfolgreich eingespielt, kann es dennoch vorkommen, dass beim Weiterarbeiten mit i-doit ein Hinweis erscheint, es sei keine gültige Lizenz aktiviert. Hier hilft es, sich mit dem derzeitigen Benutzer ab- und wieder anzumelden. Daraufhin sollte der Hinweis nicht wieder erscheinen.
@@ -134,15 +134,15 @@ Bitte beachte, dass im Reiter **Tenants** konfiguriert werden kann, wie viele Ob
     Für i-doit gibt es verschiedene Formen von Lizenzen:
 
     *   Die **Subskriptionslizenz** für einen einzelnen Mandanten (Hierzu zählen auch **Test-Lizenzen**)
-    Eine **Subskriptionslizenz** kannst du entweder über das [Admin Center](../administration/admin-center.md) oder über **Verwaltung → Lizenzverwaltung** aktivieren.
+    Eine **Subskriptionslizenz** kannst du entweder über das [Admin-Center](../administration/admin-center.md) oder über **Verwaltung → Lizenzverwaltung** aktivieren.
     *   Die **Subskriptionslizenz** für mehrere **Mandanten**
-    Wenn du eine Subskriptionslizenz für mehrere Mandanten verwenden möchtest, kann diese ausschließlich über das Admin Center installiert werden.
+    Wenn du eine Subskriptionslizenz für mehrere Mandanten verwenden möchtest, kann diese ausschließlich über das Admin-Center installiert werden.
     *   Die **Kauflizenz** für einen einzelnen oder mehrere **Mandanten**
-    Die Installation erfolgt für beide Lizenzarten ebenfalls über das [Admin Center](../administration/admin-center.md).
+    Die Installation erfolgt für beide Lizenzarten ebenfalls über das [Admin-Center](../administration/admin-center.md).
 
 * * *
 
 ### Die Lizenz ist gültig aber i-doit zeigt an, dass es nicht lizenziert ist?
 
-!!! success "Öffne den Reiter Tenant im Admin Center und klicke auf **Save license settings**."
+!!! success "Öffne den Reiter Tenant im Admin-Center und klicke auf **Save license settings**."
     [![tenant-licenses](../assets/images/de/wartung-und-betrieb/activate-license/13.png)](../assets/images/de/wartung-und-betrieb/activate-license/13.png)

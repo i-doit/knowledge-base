@@ -33,6 +33,6 @@ Jeder Benutzer in i-doit ist ein [Objekt](struktur-it-dokumentation.md) vom Typ 
 
 ## Begrüßungstext
 
-Wer Benutzer direkt beim Login mit einem Text begrüßen möchte, kann dies tun. Der Text wird im [Admin Center](../administration/admin-center.md) unter **System settings → Login → Welcome text for Login** hinterlegt.
+Wer Benutzer direkt beim Login mit einem Text begrüßen möchte, kann dies tun. Der Text wird im [Admin-Center](../administration/admin-center.md) unter **System settings → Login → Welcome text for Login** hinterlegt.
 
 [![login-begruessungstext](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)

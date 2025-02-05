@@ -4,7 +4,7 @@ Das "DNS Dokumentation" Add-on wurde als erstes [Add-on](./index.md) mit dem [Ad
 
 Installation und Lizenz
 
-Das "DNS Dokumentation" Add-on wird wie jedes Add-on über das [Admin Center](../administration/admin-center.md) installiert. Das Add-on ist nicht lizenzpflichtig. Es kann allerdings nur mit der pro-Variante genutzt werden.
+Das "DNS Dokumentation" Add-on wird wie jedes Add-on über das [Admin-Center](../administration/admin-center.md) installiert. Das Add-on ist nicht lizenzpflichtig. Es kann allerdings nur mit der pro-Variante genutzt werden.
 
 **Inhaltsverzeichnis**
 
@@ -66,8 +66,8 @@ Bei der Kategorie "Autorisierende Namesserver" handelt es sich um eine Multi-Val
 
 In einem Eintrag werden zwei Informationen dokumentiert:
 
-1.  DNS Server Objekt
-2.  Rolle
+1. DNS Server Objekt
+2. Rolle
 
 [![DNS Server Objekt](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)
 
@@ -78,7 +78,7 @@ Für das Attribut "DNS Server Objekt" steht ein Objektbrowser zur Verfügung. Hi
 Auch bei der Kategorie "DNS Records" handelt es sich um eine Multi-Value Kategorie.
 [![DNS Records](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)
 
-Die Kategorie wurde als Multi-Value Kategorie entworfen, damit eine DNS Datei "Zeile für Zeile" dokumentiert werden kann. Dies ermöglicht eine Übersicht aller Einträge. 
+Die Kategorie wurde als Multi-Value Kategorie entworfen, damit eine DNS Datei "Zeile für Zeile" dokumentiert werden kann. Dies ermöglicht eine Übersicht aller Einträge.
 
 [![DNS Records](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)
 

@@ -1,8 +1,10 @@
-# checkmk 2: Sync host tags
+# Sync host tags
 
-checkmk’s host and service checks are often based on its tagging system. You can share tag groups and the tags themselves with i-doit by running:
+checkmk's host and service checks are often based on its tagging system. You can share tag groups and the tags themselves with i-doit by running:
 
-    idoitcmk sync-tags
+```shell
+idoitcmk sync-tags
+```
 
 Tags will be stored in i-doit under Extras > Check_MK 2 > Tags (static) and can be assigned to any objects with attribute Host tags in category Check_MK Tags.
 

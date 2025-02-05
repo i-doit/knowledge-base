@@ -39,7 +39,7 @@
 [Bug][Code (Internal)]                             Do not display an empty Extras menu if the user does not have the right to do so<br>
 [Bug][i-doit Login]                                Display error message when a user logs in with incorrect credentials<br>
 [Bug][System settings]                             Open calendar picker when calendar input field is focused<br>
-[Bug][System settings]                             LDAP Debug log is only available in System settings (Admin Center)<br>
+[Bug][System settings]                             LDAP Debug log is only available in System settings (Admin-Center)<br>
 [Bug][LDAP]                                        Ldap-sync creates a duplicated logbook entries for a archived user<br>
 [Bug][LDAP]                                        Group Assignment is not removed for LDAP Users if the user was moved to another LDAP group<br>
 [Bug][LDAP]                                        Administration > Import and interfaces > LDAP > Attribute extension cannot be saved<br>

@@ -318,7 +318,7 @@ Ist das Update eingespielt, sollten die Einschränkungen wieder aktiviert werden
 Ein i-doit wird für Testzwecke "schnell mal" aufgesetzt. Dieses "schnell mal" bedeutet leider allzu oft, dass sich niemand um sichere Passwörter Gedanken macht. Das muss nicht sein. Wer konsequent **von Anfang an sichere Passwörter** setzt, hat im Nachhinein weniger Aufwand, diese potenziellen Sicherheitslücken zu stopfen. Konkret geht es um diese Passwörter:
 
 *   MySQL-Benutzer, den i-doit für die Datenbanken einrichtet
-*   Benutzer für das Admin Center
+*   Benutzer für das Admin-Center
 *   Standard-Benutzer in i-doit (admin, reader, author, editor)
 
 #### MySQL-Benutzer
@@ -336,9 +336,9 @@ Dieses Passwort muss auch i-doit mitgeteilt werden. Zuerst in der Systemdatenban
 
     UPDATE idoit_system.isys_mandator SET isys_mandator__db_pass = 'thisistotallysecure!!11' WHERE isys_mandator__db_user = 'idoit';
 
-Und zuletzt muss das Passwort in der zentralen Konfiguration abgelegt werden, damit die System-Datenbank erreicht werden kann. Dies geschieht entweder im Admin Center unter **Config** oder in der Datei src/config.inc.php im Installationsverzeichnis von i-doit.
+Und zuletzt muss das Passwort in der zentralen Konfiguration abgelegt werden, damit die System-Datenbank erreicht werden kann. Dies geschieht entweder im Admin-Center unter **Config** oder in der Datei src/config.inc.php im Installationsverzeichnis von i-doit.
 
-#### Benutzer für das Admin Center
+#### Benutzer für das Admin-Center
 
 Dieser Benutzer wird ebenfalls beim Setup angelegt. Anschließend kann das Passwort dort unter **Config** geändert werden. Alternativ kann die Datei src/config.inc.php bearbeitet werden.
 
@@ -354,7 +354,7 @@ Bereits bei der Installation des Betriebssystems wird ein Standard-Benutzer ange
 
 ### CSRF Tokens aktivieren
 
-i-doit bringt mehrere Maßnahmen mit, um Angriffe, die unter [**Cross-Site-Request-Forgery** (CSRF oder XSRF)](https://de.wikipedia.org/wiki/Cross-Site-Request-Forgery) firmieren, zu erschweren. Aktiviert werden die Maßnahmen im Admin Center unter **System setting → Security → CSRF-Token** mit der Angabe **Ja**.
+i-doit bringt mehrere Maßnahmen mit, um Angriffe, die unter [**Cross-Site-Request-Forgery** (CSRF oder XSRF)](https://de.wikipedia.org/wiki/Cross-Site-Request-Forgery) firmieren, zu erschweren. Aktiviert werden die Maßnahmen im Admin-Center unter **System setting → Security → CSRF-Token** mit der Angabe **Ja**.
 
 ### Zwei-Faktor-Authentifizierung
 

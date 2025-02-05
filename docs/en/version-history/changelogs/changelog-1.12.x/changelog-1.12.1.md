@@ -8,7 +8,7 @@
 [Bug][Search] Opening an object via location view with active result list from search reopens search instead of the chosen object  
 [Bug][List editing] Edit values in the Contract category in list editing  
 [Bug][List editing] Edit attributes in list editing  
-[Bug][Admincenter] Open the Admin Center with i-doit Cache  
+[Bug][Admincenter] Open the Admin-Center with i-doit Cache  
 [Bug][Console] Exit codes for the console.php  
 [Bug][Categories] Create a report with service assignment as condition  
 [Bug][Authorization system] Right to create a new report can be avoided when using a second tenant  

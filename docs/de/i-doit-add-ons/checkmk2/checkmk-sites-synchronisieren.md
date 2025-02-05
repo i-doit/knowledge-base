@@ -1,8 +1,10 @@
-# checkmk 2: checkmk sites synchronisieren
+# checkmk sites synchronisieren
 
 checkmk bietet eine verteilte Überwachung von Hosts und deren Diensten. Sie können mehrere Überwachungshosts konfigurieren, die als "Sites" bezeichnet werden. Um diese Sites mit i-doit zu teilen, führen Sie aus:
 
-    idoitcmk sync-sites
+```shell
+idoitcmk sync-sites
+```
 
 \*Sites ohne Hosts werden nicht berücksichtigt.
 
