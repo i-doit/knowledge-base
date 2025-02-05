@@ -2,11 +2,33 @@
 title: Known update Problems
 description: Known problems with the update
 icon: material/update
-status: new
+status: updated
 lang: en
 ---
 
 In this article we will add all known problems when updating from or to a specific i-doit version.
+
+## Version 33
+
+It may happen that some functions disappear after the update. For example, the update function or the LDAP function. To solve the problem, the file `.../i-doit/src/config.inc.php` must be set.
+
+There are other variables that should be checked, such as:
+
+=== "Correct"
+
+    ```php
+    $g_enable_gui_update = '1';
+    $g_is_cloud = '0';
+    $g_active_features = [''];
+    ```
+
+=== "Incorrect"
+
+    ```php
+    $g_enable_gui_update = '%config.admin.enable_gui_update%';
+    $g_is_cloud = '%config.cloud.active%';
+    $g_active_features = ['%config.active_features.list%'];
+    ```
 
 ## Version 25 - 28
 
