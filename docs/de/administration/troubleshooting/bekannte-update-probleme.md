@@ -2,11 +2,34 @@
 title: Bekannte update Probleme
 description: Bekannte Probleme beim Update
 icon: material/update
-status: new
+status: updated
 lang: de
 ---
 
 In diesem Artikel werden wir alle bekannten Probleme beim Update von oder auf eine bestimmte i-doit Version auflisten.
+
+## Version 33
+
+Es kann vorkommen, dass nach dem update einige Funktionen verschwinden. Wie zum Beispiel die Update Funktion oder die LDAP Funktion. Um das Problem zu lösen muss in der Datei `.../i-doit/src/config.inc.php`
+der Wert `$g_is_cloud = '0'` gesetzt werden.
+
+Es gibt noch weitere Variablen die geprüft werden sollten wie zum Beispiel:
+
+=== "Richtig"
+
+    ```php
+    $g_enable_gui_update = '1';
+    $g_is_cloud = '0';
+    $g_active_features = [''];
+    ```
+
+=== "Falsch"
+
+    ```php
+    $g_enable_gui_update = '%config.admin.enable_gui_update%';
+    $g_is_cloud = '%config.cloud.active%';
+    $g_active_features = ['%config.active_features.list%'];
+    ```
 
 ## Version 25 - 28
 
