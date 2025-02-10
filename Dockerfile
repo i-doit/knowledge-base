@@ -1,4 +1,4 @@
-FROM python:3.13.1-bullseye AS i-doit-kb-build
+FROM python:3.13.2-bullseye AS i-doit-kb-build
 
 RUN apt-get update && \
     apt-get full-upgrade -y && \
