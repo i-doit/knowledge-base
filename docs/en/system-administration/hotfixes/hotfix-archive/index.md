@@ -1,3 +1,10 @@
+---
+title: Hotfix archive
+description: Hotfix archive for all i-doit versions
+icon: tool-wrench
+lang: en
+---
+
 # Hotfix archive
 
 Here we find the archive of old hotfix pages.
