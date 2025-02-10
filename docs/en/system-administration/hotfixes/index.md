@@ -1,3 +1,10 @@
+---
+title: Hotfixes
+description: Hotfixes for the most recent i-doit version
+icon: tool-wrench
+lang: en
+---
+
 # Hotfixes
 
 !!! success "Hotfixes for version **34**"

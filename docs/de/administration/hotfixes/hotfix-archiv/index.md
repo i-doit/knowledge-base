@@ -1,3 +1,9 @@
+---
+title: Hotfix Archiv
+description: Hotfix Archiv für ältere i-doit Versionen
+lang: de
+---
+
 # Hotfix Archiv
 
 Hier finden wir das Archiv alter Hotfix Seiten.
