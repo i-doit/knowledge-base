@@ -1,6 +1,6 @@
 # [Tenant name] management
 
-Here you can mange your tenant and view system related configurations.
+Here you can mange your tenant and view system related configurations. All settings can be expanded using `Expand all` and collapsed again using `Collapse all`.
 
 [![[Tenant name] management overview](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)](../../../assets/images/en/system-administration/administration/tenant-mangement/1-tm.png)
 
@@ -56,7 +56,7 @@ In the license overview you will find information about your license, documented
 | memory_limit        | Size in MB |
 
 ## MySQL Settings
-
+<!-- cSpell:disable -->
 | Option                  | Value                   |
 | ----------------------- | ----------------------- |
 | innodb_buffer_pool_size | Size in MB              |
@@ -68,9 +68,9 @@ In the license overview you will find information about your license, documented
 | innodb_sort_buffer_size | Size in MB              |
 | innodb_log_file_size    | Size in MB              |
 | datadir                 | Data directory of MySQL |
-
+<!-- cSpell:enable -->
 ## PHP Extensions
-
+<!-- cSpell:disable -->
 | Option   | Value    |
 | -------- | -------- |
 | curl     | Used for |
@@ -86,7 +86,7 @@ In the license overview you will find information about your license, documented
 | xml      | Used for |
 | zlib     | Used for |
 | SNMP     | Used for |
-
+<!-- cSpell:enable -->
 ## Apache Modules
 
 | Option      | Value    |
