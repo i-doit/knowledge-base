@@ -33,7 +33,7 @@ Es gibt noch weitere Variablen die geprüft werden sollten wie zum Beispiel:
 
 ## Version 28
 
-Wenn du den Hotfix installiert hast [i-doit_28_hotfix_ID-10745.zip](../hotfixes/hotfix-archive/v28.md#wrong-i-doit-version-is-downloaded-at-updater), wird dir die neue Version angezeigt. Klickst du dann auf **Next**, passiert aber nichts. Wenn du in der Entwicklerkonsole des Browsers (F12) öffnest, dort die Konsole anzeigst und auf **Next** klickst, kann es zu folgender Fehlermeldung kommen:
+Wenn du den Hotfix installiert hast [i-doit_28_hotfix_ID-10745.zip](../hotfixes/hotfix-archiv/v28.md#wrong-i-doit-version-is-downloaded-at-updater), wird dir die neue Version angezeigt. Klickst du dann auf **Next**, passiert aber nichts. Wenn du in der Entwicklerkonsole des Browsers (F12) öffnest, dort die Konsole anzeigst und auf **Next** klickst, kann es zu folgender Fehlermeldung kommen:
 <!-- cSpell:disable -->
 ```shell
 Uncaught ReferenceError: open29NoticeHandler is not defined
