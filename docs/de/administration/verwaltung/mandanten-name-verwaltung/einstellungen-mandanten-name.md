@@ -8,7 +8,7 @@ lang: de
 
 # Einstellungen für [Mandanten-Name]
 
-Hier findest du Einstellungen für den aktuellen Mandanten.
+Hier findest du Einstellungen für den aktuellen Mandanten. Alle Einstellungen lassen sich über `Alles ausklappen` ausklappen und über `Alles einklappen` wieder einklappen.
 
 [![Einstellungen übersicht](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/einstellungen/uebersicht.png)](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/einstellungen/uebersicht.png)
 
@@ -25,7 +25,7 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | i-doit Adresse (URL) | URL zur i-doit installation |
 
 ## CMDB
-
+<!-- cSpell:disable -->
 | Option                                                                | Wert                                                                                                      |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | CSV-Export Trennzeichen                                               | Komma, Semikolon, Raute oder Tab                                                                          |
@@ -51,9 +51,9 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | WYSIWYG Editor in Kategorien                                          | Ja oder Nein                                                                                              |
 | Aktiviere alle WYSIWYG Editor Funktionen                              | Ja oder Nein                                                                                              |
 | my-doit CMDB-Status auswahl speichern                                 | Ja oder Nein                                                                                              |
-
+<!-- cSpell:enable -->
 ## Display Limits
-
+<!-- cSpell:disable -->
 | Option                                                      | Wert                        |
 | ----------------------------------------------------------- | --------------------------- |
 | Anzeigelimit verknüpfter Objekte in Objektbrowser           | Wert                        |
@@ -69,15 +69,15 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Anzeigelimit von Services im CMDB Explorer Popup            | Wert                        |
 | Limit der Tiefe des Standortpfades                          | Wert                        |
 | MyDoIt Taskeinträge                                         | Wert                        |
-
+<!-- cSpell:enable -->
 ## Optionen für IP-Liste
-
+<!-- cSpell:disable -->
 | Option                       | Wert                                                                                                                                                                             |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Cache Zeitraum (in Sekunden) | Wert                                                                                                                                                                             |
 | Ping Funktion                | Ping via NMAP<br>Ping via FPING                                                                                                                                                  |
 | NMAP Parameter (für Ping)    | PE/PP/PM: ICMP echo, timestamp, and netmask request discovery probes<br>sP: Ping Scan - go no further than determining if host is online<br>PR: ARP Scan<br>sT: TCP Connect Scan |
-
+<!-- cSpell:enable -->
 ## Unique checks (Auswertung lediglich während Import/Export Vorgängen!)
 
 | Option        | Wert         |
@@ -156,14 +156,14 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Zeilen pro Kategorie | Wert                    |
 
 ## LDAP
-
+<!-- cSpell:disable -->
 | Option               | Wert                                                                    |
 | -------------------- | ----------------------------------------------------------------------- |
 | Standard LDAP Gruppe | Komma-separierte Liste von Personengruppen IDs                          |
 | LDAP Config:         | JSON String                                                             |
 | Anrede Herr          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |
 | Anrede Frau          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |
-
+<!-- cSpell:enable-->
 ## Report Manager
 
 | Option         | Wert                                                                                             |
@@ -171,14 +171,14 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Standardfilter | ID<br>Bezeichnung<br>Kategorie<br>Mit Abfrage-Editor erzeugt<br>Variabler Report<br>Beschreibung |
 
 ## Import
-
+<!-- cSpell:disable -->
 | Option                                                        | Wert         |
 | ------------------------------------------------------------- | ------------ |
 | Bei Validierungsfehlern Prozess abbrechen?                    | Ja oder Nein |
 | Nur die betroffenen Attribute leeren bei Validierungsfehlern? | Ja oder Nein |
 | Der CSV Import kann den Objekttyp überschreiben?              | Ja oder Nein |
 | Anzahl der Zeilen pro Import Batch                            | Wert         |
-
+<!-- cSpell:enable-->
 ## Suche
 
 | Option                                                         | Wert                                                                  |
@@ -213,7 +213,7 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Abgelaufene Lizenzen überspringen | Ja oder Nein |
 
 ## Installed Add-on related settings
-
+<!-- cSpell:disable -->
 | Option                                                                                                                                | Wert                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | [ISMS](../../../i-doit-add-ons/isms.md) Reportviews nach Standortrechten filtern                                                      | Ja oder Nein                                                                                                                         |
@@ -233,3 +233,4 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | [Forms Add-on](../../../i-doit-add-ons/forms/index.md) Forms Server                                                                   | URL                                                                                                                                  |
 | [Forms Add-on](../../../i-doit-add-ons/forms/index.md) Benutzername                                                                   | String                                                                                                                               |
 | [Forms Add-on](../../../i-doit-add-ons/forms/index.md) API Schlüssel                                                                  | String                                                                                                                               |
+<!-- cSpell:enable-->

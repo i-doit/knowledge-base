@@ -8,7 +8,7 @@ lang: en
 
 # Settings for [Tenant name]
 
-Here you will find tenant related settings.
+Here you will find tenant related settings. All settings can be expanded using `Expand all` and collapsed again using `Collapse all`.
 
 [![overview](../../../assets/images/en/system-administration/administration/tenant-mangement/settings/overview.png)](../../../assets/images/en/system-administration/administration/tenant-mangement/settings/overview.png)
 
@@ -71,13 +71,13 @@ Here you will find tenant related settings.
 | MyDoIt task entries                                     | Value                      |
 
 ## Options for the IP-List
-
+<!-- cSpell:disable -->
 | Option                      | Value                                                                                                                                                                            |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Cache lifetime (in seconds) | Value                                                                                                                                                                            |
 | Ping function               | Ping via NMAP<br>Ping via FPING                                                                                                                                                  |
 | NMAP parameter (for ping)   | PE/PP/PM: ICMP echo, timestamp, and netmask request discovery probes<br>sP: Ping Scan - go no further than determining if host is online<br>PR: ARP Scan<br>sT: TCP Connect Scan |
-
+<!-- cSpell:enable -->
 ## Unique checks (Used during import/export procedure only!)
 
 | Option       | Value     |
