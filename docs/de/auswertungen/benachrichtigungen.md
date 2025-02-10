@@ -113,4 +113,4 @@ sudo -u www-data php console.php notifications-send --user admin --password admi
 
 ## Logging
 
-Beim Aufruf des CLI Befehls [notifications-send](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#notifications-send) wird eine Logdatei erstellt. Die Datei mit der Bezeichnung `notifications_YYYY-MM-DD.log` ist im i-doit `log` Ordner zu finden. 
+Beim Aufruf des CLI Befehls [notifications-send](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#notifications-send) wird eine Logdatei erstellt. Die Datei mit der Bezeichnung `notifications_YYYY-MM-DD.log` ist im i-doit `log` Ordner zu finden.
