@@ -1,5 +1,5 @@
 ---
-title: Known update Problems
+title: Known update problems
 description: Known problems with the update
 icon: material/update
 status: updated
@@ -10,7 +10,7 @@ In this article we will add all known problems when updating from or to a specif
 
 ## Version 33
 
-It may happen that some functions disappear after the update. For example, the update function or the LDAP function. To solve the problem, the file `.../i-doit/src/config.inc.php` must be set.
+It may happen that some functions disappear after the update. For example, the update function or the LDAP function. To solve the problem, in the file `.../i-doit/src/config.inc.php` the value `$g_is_cloud = '0'` must be set.
 
 There are other variables that should be checked, such as:
 
@@ -29,6 +29,24 @@ There are other variables that should be checked, such as:
     $g_is_cloud = '%config.cloud.active%';
     $g_active_features = ['%config.active_features.list%'];
     ```
+
+## Version 28
+
+After installing the hotfix [i-doit_28_hotfix_ID-10745.zip](../hotfixes/hotfix-archive/v28.md#wrong-i-doit-version-is-downloaded-at-updater) The new version is displayed, but nothing happens if you press the **Next** button. In the developer console of the browser (F12) and then click on **Next**, you should see the following error message:
+<!-- cSpell:disable -->
+```shell
+Uncaught ReferenceError: open29NoticeHandler is not defined
+at HTMLInputElement.<anonymous> (index.php?load=update:399:17)
+at klass.handleEvent (prototype.js:7182:34)
+at HTMLInputElement.<anonymous> (prototype.js:7266:15)
+```
+<!-- cSpell:enable -->
+Please perform the following steps:
+
+1. Run the update to Version **28** again via the updater
+2. Download Version **29** update ZIP via [customer portal](../customer-portal.md)
+3. Unzip update zip in the i-doit folder like [prepare update](../../maintenance-and-operation/update.md#update-prepared-via-the-console)
+4. Run the update to Version **29** again via the updater
 
 ## Version 25 - 28
 
@@ -61,7 +79,7 @@ We assume a "standard" installation, as described below [Installation](../../ins
     sudo find . -type f -exec chmod 664 {} \;
     ```
 
-=== "Suse Linux Enterprise Server"
+=== "SUSE Linux Enterprise Server"
 
     ```sh
     cd /var/www/html/i-doit/
