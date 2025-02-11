@@ -1,7 +1,7 @@
 ---
 title: Hotfix archive
 description: Hotfix archive for all i-doit versions
-icon: tool-wrench
+icon: fontawesome/solid/bug-slash
 lang: en
 ---
 

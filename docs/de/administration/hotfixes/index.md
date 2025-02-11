@@ -1,7 +1,7 @@
 ---
 title: Hotfixes
 description: Hotfixes für die aktuelle i-doit Version
-icon: tool-wrench
+icon: fontawesome/solid/bug-slash
 lang: de
 ---
 
