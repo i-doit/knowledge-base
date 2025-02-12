@@ -32,7 +32,7 @@ If you have any questions regarding the installation or configuration of JDisc, 
 
 The configuration of the interface is under **Administration → Import and interfaces → JDisc → JDisc configuration**. You can define any number of instances of JDisc Discovery. This allows complex inventory scenarios with separated networks.
 
-[![JDisc-discovery-interface](../assets/images/en/consolidate-data/JDisc-discovery/1-jd.png)](../assets/images/en/consolidate-data/JDisc-discovery/1-jd.png)
+[![JDisc-discovery-interface](../assets/images/en/consolidate-data/jdisc-discovery/1-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/1-jd.png)
 
 ### Common Settings
 
@@ -73,7 +73,7 @@ After saving the parameters, you can test whether the configuration was successf
 
 The JDisc profiles of i-doit provide the possibility to define the connection of object types and their attributes between JDisc and i-doit. Under **Administration → Import and interfaces → JDisc → JDisc profiles** you can specify how the objects found by JDisc find their way into the IT documentation.
 
-[![JDisc-discovery-profiles](../assets/images/en/consolidate-data/JDisc-discovery/2-jd.png)](../assets/images/en/consolidate-data/JDisc-discovery/2-jd.png)
+[![JDisc-discovery-profiles](../assets/images/en/consolidate-data/jdisc-discovery/2-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/2-jd.png)
 
 The i-doit default installation already provides a predefined example profile. The **Example** profile serves as an example of how you can setup your JDisc profile in order to import the data inventoried by JDisc.
 
@@ -158,7 +158,7 @@ When importing objects, other sub-objects such as networks, software, clusters a
 
 The import of data contents from JDisc is carried out via **Extras → Import → JDisc**.
 
-[![JDisc-discovery-import](../assets/images/en/consolidate-data/JDisc-discovery/3-jd.png)](../assets/images/en/consolidate-data/JDisc-discovery/3-jd.png)
+[![JDisc-discovery-import](../assets/images/en/consolidate-data/jdisc-discovery/3-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/3-jd.png)
 
 Before you execute the import process, you have to define the import parameters.<br>
 Because it is possible to apply more than one JDisc server, you have to select the JDisc server in the first step. The profile which you defined beforehand can be also selected to influence the imported contents and their use. In addition, you can set the import mode. The **Append** import mode creates all found objects without checking whether these already exist. The **Update** import mode creates only objects which can't be found in the i-doit data pool. Categories of already existing objects are complemented (if necessary) with new data. The **Overwrite** import mode is, in principle, like the **Update** mode but with the difference that list categories are emptied first and are then recreated.
@@ -177,18 +177,18 @@ With the logging function you can influence the extent of the written log. A mor
 
 While importing via the JDisc import, you can stop the import via the **Pause** button. Pressing the Pause button will pause the import for a set amount of time to free system resources. This can be controlled via the setting Maximum import pause within your i-doit settings for the JDisc-import. After the time limit is reached, the import will either be canceled or continued, depending on your setting for Paused import behaviour in your settings. The import can also be manually canceled or continued manually at any time. If the countdown is finished, the import will be canceled automatically. ou can also cancel the report by pressing the **Cancel** button, which is always available after starting the import. This will cancel the import at the current state. Already imported objects will still remain in your database.
 
-[![JDisc Profile](../assets/images/en/consolidate-data/JDisc-discovery/7-jd.png)](../assets/images/en/consolidate-data/JDisc-discovery/7-jd.png)
+[![JDisc Profile](../assets/images/en/consolidate-data/jdisc-discovery/7-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/7-jd.png)
 
 The configuration can be found at **Administration → Tenant Management → Settings for Tenant → JDisc**.
 
-[![JDisc Profile](../assets/images/en/consolidate-data/JDisc-discovery/8-jd.png)](../assets/images/en/consolidate-data/JDisc-discovery/8-jd.png)
+[![JDisc Profile](../assets/images/en/consolidate-data/jdisc-discovery/8-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/8-jd.png)
 
 ## Import via JDisc Discovery category
 
 You can update individual objects using the JDisc Discovery category.
 Here it is possible to scan the device using a specific identification (host address, FQDN and serial number).
 
-[![JDisc Profile](../assets/images/en/consolidate-data/JDisc-discovery/6-jd.png)](../assets/images/en/consolidate-data/JDisc-discovery/6-jd.png)
+[![JDisc Profile](../assets/images/en/consolidate-data/jdisc-discovery/6-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/6-jd.png)
 
 You can add the category via the object type configuration of the object type.
 
@@ -198,11 +198,11 @@ Importing data from JDisc to i-doit is not only possible manually via the user i
 
 For the import, the ID of the desired profile can be specified. The ID can be found in the list of profiles:
 
-[![JDisc-discovery-id](../assets/images/en/consolidate-data/JDisc-discovery/4-jd.png)](../assets/images/en/consolidate-data/JDisc-discovery/4-jd.png)
+[![JDisc-discovery-id](../assets/images/en/consolidate-data/jdisc-discovery/4-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/4-jd.png)
 
 Also the ID of the JDisc server to be used can be specified. This can be found in the configuration:
 
-[![JDisc-discovery-server](../assets/images/en/consolidate-data/JDisc-discovery/5-jd.png)](../assets/images/en/consolidate-data/JDisc-discovery/5-jd.png)
+[![JDisc-discovery-server](../assets/images/en/consolidate-data/jdisc-discovery/5-jd.png)](../assets/images/en/consolidate-data/jdisc-discovery/5-jd.png)
 
 A JDisc.ini might look like this more information about .ini files can be found [here](../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md).
 
