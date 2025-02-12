@@ -89,7 +89,7 @@ It is possible to change the technical keys for each field by click on **Change 
 
 [![change technical key](../assets/images/en/basics/custom-categories/9-cc.png)](../assets/images/en/basics/custom-categories/9-cc.png)
 
-Now you are able to alter the key. The key will be checked automtically before you can save the new value.
+Now you are able to alter the key. The key will be checked automatically before you can save the new value.
 
 !!! warning "Attention!"
     Changing the technical key will lead to a migration of the existing data to reference the new key<br>
