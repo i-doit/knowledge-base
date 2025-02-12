@@ -89,8 +89,8 @@ Eine Auflistung aller gleichgerichteter Beziehungen befindet sich unter **Extras
 
 In [benutzerdefinierten Kategorien](benutzerdefinierte-kategorien.md) können Objekt-Beziehungen dokumentiert werden. Hierbei ist zwischen zwei Feldtypen zu unterscheiden:
 
--   **Objekt-Browser**:<br> Es wird kein Beziehungs-Objekt erzeugt. Die hier zu dokumentierende Beziehung zwischen zwischen zwei Objekten wird in der Kategorie Beziehungen nicht aufgelistet und der [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md) wertet diese Beziehung nicht aus.
--   **Objekt-Beziehung**:<br> Als **Zusatz** kann hier nur eine implizite Beziehungsart angegeben werden. Explizite Beziehungen werden hier nicht angezeigt.
+-   **Objekt-Browser**: Es wird kein Beziehungs-Objekt erzeugt. Die hier zu dokumentierende Beziehung zwischen zwischen zwei Objekten wird in der Kategorie Beziehungen nicht aufgelistet und der [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md) wertet diese Beziehung nicht aus.
+-   **Objekt-Beziehung**: Als **Zusatz** kann hier nur eine implizite Beziehungsart angegeben werden. Explizite Beziehungen werden hier nicht angezeigt.
 
 !!! success "Objekt-Browser oder -Beziehung?"
     Wie bei den impliziten und expliziten Beziehungen stellt sich hier ebenfalls die Frage: Welcher Feldtyp ist besser? Auch hier fällt die Antwort wieder eindeutig aus: Die **Objekt-Beziehung** hat einen zusätzlichen Nutzen und ist daher dem Feldtyp **Objekt-Browser** zu bevorzugen.
