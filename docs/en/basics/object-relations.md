@@ -1,3 +1,11 @@
+---
+title: Object Relations
+description: Vordefinierte Objekttypen
+icon: relations
+status:
+lang: en
+---
+
 # Object Relations
 
 [Objects](structure-of-the-it-documentation.md) generally do not exist separately in i-doit but are in relation to each other. The servers are contained in racks, admins maintain servers, an operating system with software is running on a server ... In this article we will elaborate on the basic concepts of object relations.
@@ -7,60 +15,6 @@
 Objects can be in various types of relations. To provide clarification each relation receives a type. Many pre-defined types of relations are already supplied by i-doit in the default installation. A listing of all these types can be found at **Administration → Predefined content → Object relation types**.
 
 [![Relation Types](../assets/images/en/basics/object-relations/1-or.png)](../assets/images/en/basics/object-relations/1-or.png)
-
-| Relation title                         | Description from the point of view of the master object | Description from the point of view of the slave object |
-| -------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------ |
-| **Administration service**             | **is administration instance for**                      | **is managed by**                                      |
-| **Assigned SIM cards**                 | **has card**                                          | **is assigned to**                                     |
-| **Assigned cards**                     | **has card**                                          | **is card of**                                         |
-| **Backup**                             | **saves**                                               | **saved by**                                           |
-| **Chassis**                            | **includes**                                            | **is inserted to**                                     |
-| **Cluster memberships**                | **is member of**                                        | **has member**                                         |
-| **Cluster service assignment**         | **is host for on**                                      | **runs on**                                            |
-| **Connection endpoint**                | **has connection to**                                   | **is connected with**                                  |
-| **Connectors**                         | **is connected to**                                     | **is connected with**                                  |
-| **Contact assignment (administrates)** | **administrates**                                       | **is administered by**                                 |
-| **Contact assignment (is used by)**    | **is used by**                                          | **uses**                                               |
-| **Contract assignment**                | **is contract of**                                      | **has contract assignment**                            |
-| **DBMS**                               | **administrates**                                       | **is configured in**                                   |
-| **Database access**                    | **is used by**                                          | **has database access**                                |
-| **Database gateway**                   | **has database gateway to**                             | **is database gateway**                                |
-| **Database instance**                  | **is host for**                                         | **runs on**                                            |
-| **Database links**                     | **has database link to**                                | **is database link of**                                |
-| **Dependency**                         | **has dependency to**                                   | **depends on**                                         |
-| **Emergency plan**                     | **has emergency plan assignment to**                    | **is emergency plan for<br**                           |
-| **FC port**                            | **supplies network**                                    | **network is supplied by**                             |
-| **Files**                              | **has file assignment to**                              | **is file for**                                        |
-| **Group memberships**                  | **is member of**                                        | **has member**                                         |
-| **Headquarter (Organization)**         | **is headquarter of**                                   | **is branch of**                                       |
-| **Host address**                       | **supplies network**                                    | **network is supplied by**                             |
-| **Interface**                          | **has dependency to**                                   | **depends on**                                         |
-| **Layer 2 Transport**                  | **transports Layer 2 Net**                              | **is transported by**                                  |
-| **Layer 2 net assignment**             | **has layer 2 net assignment**                          | **is layer 2 net assignment for**                      |
-| **Location**                           | **is location of**                                      | **is located at**                                      |
-| **Logical devices (Client)**           | **is connected to**                                     | **is connected with**                                  |
-| **Logical location**                   | **is logical unit of**                                  | **is assigned to**                                     |
-| **Manual assignment**                  | **has manual assignment to**                            | **is manual for**                                      |
-| **Network connections**                | **is connected to**                                     | **is connected with**                                  |
-| **Operating system**                   | **has operating system**                                | **is installed on**                                    |
-| **Organization (Organization)**        | **has member**                                          | **belongs to**                                         |
-| **Organization (Persons)**             | **has member**                                          | **belongs to**                                         |
-| **Person group memberships**           | **has member**                                          | **is member of**                                       |
-| **Ports**                              | **supplies network**                                    | **network is supplied by**                             |
-| **Power consumer**                     | **supplies power to**                                   | **obtains power from**                                 |
-| **Remote Management Controller**       | **is remotely managed by**                              | **is management controller of**                        |
-| **Replication partner**                | **is Replication partner of**                           | **has Replication partner**                            |
-| **SOA-Component**                      | **is SOA component of**                                 | **has SOA component**                                  |
-| **SOA-Stacks**                         | **has SOA Stack**                                       | **is SOA Stack of**                                    |
-| **Service component**                  | **is Service component of**                             | **has Service component**                              |
-| **Servicecheck assignment**            | **is host for**                                         | **runs on**                                            |
-| **Share Access**                       | **share is used by**                                    | **has share access to**                                |
-| **Software assignment**                | **is running**                                          | **runs on**                                            |
-| **Stacking**                           | **is stack for**                                        | **is stacked with**                                    |
-| **VRRP**                               | **has VRRP member**                                     | **is VRRP member of**                                  |
-| **Virtual machine**                    | **is host for**                                         | **runs on**                                            |
-| **Virtual host**                       | **is administration instance for**                      | **is managed by**                                      |
-| **WAN Connection**                     | **provides WAN connection to**                          | **is connected to WAN**                                |
 
 Below the list of relation types a new type can be created using the **Add new value** button. If you wish to use this relation in a custom category, you have to define it as "Implicit".
 
@@ -92,9 +46,7 @@ As it is already obvious, an object relation consists of a master and a slave ob
 
 The direction of the relation (which object is the master and which one is the slave) has consequences for the [CMDB explorer](../evaluation/cmdb-explorer/index.md). Object relations are displayed recursively either upwards or downwards in the tree view. Master objects are below the slave objects in the [standard profile](../evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer.md).
 
-## License requirements for objects
-
-Relation objects do not require a [license](../maintenance-and-operation/activate-license.md).
+!!! info "Relation objects do not require a [license](../maintenance-and-operation/activate-license.md)."
 
 ## Relations Category
 
@@ -141,6 +93,5 @@ Object relations can be documented in [custom categories](custom-categories.md).
 -   **Object-Browser**: No relation object is created. The relation to be documented here between two objects is not listed in the **Relations** category and the [CMDB explorer](../evaluation/cmdb-explorer/index.md) does not process these relations.
 -   **Object-Relation**: Here only an implicit relation type can be given as **Addition**. Explicit relations are not shown.
 
-## Object browser or object relation?
-
-As for implicit and explicit relations the same question arises: Which field type is better? Here the answer is clear as well: The **Object-Relation** has additional uses and should therefore be preferred to the **Object-Browser.**
+!!! success "Object browser or object relation?"
+    As with implicit and explicit relationships, the question here is also: Which field type is better? Here too, the answer is clear: The **object relationship** has an additional benefit and is therefore preferable to the **object browser** field type.
