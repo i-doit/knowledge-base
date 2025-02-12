@@ -1,16 +1,24 @@
+---
+title: CSV-Datenexport
+description: CSV Datenexport
+icon:
+status:
+lang: de
+---
+
 # CSV-Datenexport
 
 Viele Daten lassen sich direkt aus der [IT-Dokumentation](../glossar.md) im CSV-Format exportieren, um diese mit einer Tabellenkalkulation o. ä. zu verarbeiten.
 
 ## Objekt-Liste
 
-Objekte und deren Attribute lassen sich über die [Objekt-Liste](../grundlagen/objekt-liste/index.md) exportieren. Hierzu dient der Button **Als CSV exportieren** in der Aktionsleiste. Die Spalten entsprechen den [in der Listenansicht konfigurierten Attributen](../grundlagen/objekt-liste/listenansicht-konfigurieren.md). Eine aktive [Filterung der Objekt-Liste](../grundlagen/objekt-liste/navigieren-und-filtern.md) wird beim Export **nicht** berücksichtigt.
+Objekte und deren Attribute lassen sich über die [Objekt-Liste](../grundlagen/objekt-liste/index.md) exportieren. Hierzu dient der Button **CSV** in der Aktionsleiste. Die Spalten entsprechen den [in der Listenansicht konfigurierten Attributen](../grundlagen/objekt-liste/listenansicht-konfigurieren.md). Eine aktive [Filterung der Objekt-Liste](../grundlagen/objekt-liste/navigieren-und-filtern.md) wird beim Export berücksichtigt.
 
 [![CSV-Export in der Aktionsleiste](../assets/images/de/daten-konsolidieren/csv-datenexport/1-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/1-csv-de.png)
 
-## Listen-Kategorien
+## Kategorie-Listen
 
-Derzeit unterstützt der CSV-Export viele der [Listen-Kategorien](../glossar.md) (Multi-Value). Die in deren Liste aufgeführten Einträge und [Attribute](../glossar.md) werden nach Druck auf den Button **Als CSV exportieren** zum Download angeboten. Als Spaltenüberschriften dienen die Attribut Namen.
+Derzeit unterstützt der CSV-Export viele der [Kategorie-Listen](../glossar.md) (Multi-Value). Die in deren Liste aufgeführten Einträge und [Attribute](../glossar.md) werden nach Druck auf den Button **CSV** zum Download angeboten. Als Spaltenüberschriften dienen die Attribut Namen. Beim Exportieren einer Kategorie-Liste als CSV werden die "multi-value" Daten nun immer Kommasepariert exportiert.
 
 [![Multi-Value Kategorie](../assets/images/de/daten-konsolidieren/csv-datenexport/2-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/2-csv-de.png)
 
