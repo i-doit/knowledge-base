@@ -34,7 +34,7 @@ Im unteren Bereich können die aktuelle Version und alle Revisionen heruntergela
 
 [![Hinzufügen](../../assets/images/de/i-doit-add-ons/documents/dokumentenerstellung/3-de.png)](../../assets/images/de/i-doit-add-ons/documents/dokumentenerstellung/3-de.png)
 
-!!! info "Revisionen aus der Liste heraus erzeugen"
+!!! success "Revisionen aus der Liste heraus erzeugen"
     Eine neue Revision kann alternativ auch direkt in der Liste der Dokumente erzeugt werden. Hierzu wird das gewünschte Dokument über dessen Checkbox ausgewählt und anschließend die Schaltfläche "Revision erzeugen" in der Kopfzeile verwendet.
     [![Revisionen](../../assets/images/de/i-doit-add-ons/documents/dokumentenerstellung/4-de.png)](../../assets/images/de/i-doit-add-ons/documents/dokumentenerstellung/4-de.png)
 

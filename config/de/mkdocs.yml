@@ -1,4 +1,5 @@
 ---
+# cSpell:disable
 site_name: Knowledge Base
 docs_dir: '../../docs/de'
 site_dir: '../../generated/de'

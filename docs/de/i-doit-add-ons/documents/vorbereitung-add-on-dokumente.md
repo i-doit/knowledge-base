@@ -22,37 +22,32 @@ Damit ein Benutzer in der Lage ist, Vorlagen zu erstellen und Dokumente zu erzeu
 
 Hier stehen folgende Berechtigungen zur Verfügung:
 
-*   **Dokument**
+-   **Dokument**
 
 Mit der Bedingung "Dokument" kann der Zugriff auf einzelne oder mehrere Dokumente ermöglicht werden. Benutzer mit dieser Berechtigung können die ausgewählten Dokumente bearbeiten.
 
-*   **Dokumente in Kategorien**
+-   **Dokumente in Kategorien**
 
 Über "Dokumente in Kategorien" kann der Zugriff auf Dokumente auf Basis der Dokumentkategorien erteilt werden.
 
-*   **Vorlagen**
+-   **Vorlagen**
 
 Die Berechtigung "Vorlage" vergibt die Erlaubnis, Dokumentenvorlagen bearbeiten zu können.
 
-*   **Vorlagen in Kategorien**
+-   **Vorlagen in Kategorien**
 
 Der Zugriff auf die Vorlagen kann mit "Vorlagen in Kategorien" auf Vorlagen aus definierten Kategorien ermöglicht werden.
 
-*   **Online Repository**
+-   **Online Repository**
 
 Um Vorlagen aus dem Online Repository herunterladen zu können wird die Berechtigung "Online Repository" benötigt.
-
-Cache für das Rechtesystem leeren
-
-Nachdem die Rechte vergeben wurden ist es ratsam, in der i-doit [Verwaltung](../../administration/verwaltung/index.md) unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Berechtigung** den [Cache](../../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) zu leeren, damit die Änderungen vom System übernommen werden.
 
 ## Zusätzliche Konfiguration
 
 Mit dem Add-on wird zusätzlich die [Kategorie](../../grundlagen/struktur-it-dokumentation.md) "Dokumente" für alle [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) verfügbar. Die Kategorie kann über die [Objekttyp-Konfiguration](../../grundlagen/benutzerdefinierte-objekttypen.md) und über [Datenstruktur bearbeiten](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) mit den gewünschten Objekttypen verknüpft werden. Auf diesem Weg tauchen nur jene Objekttypen bei der Objekterstellung auf, die vom Anwender vorgegeben sind um die Auswahlliste übersichtlich zu halten.
 
-Kategorie Dokumente
-
-Damit ein Dokument für ein Objekt erstellt werden kann ist es notwendig, dass die Kategorie "Dokumente" mit dem Objekttyp verknüpft ist. Wenn der Objekttyp nicht über diese Kategorie verfügt, können keine Dokumente für die darin enthaltenen Objekte erstellt werden, da sie nicht in der Auswahl auftauchen.
+!!! note "Kategorie Dokumente"
+    Damit ein Dokument für ein Objekt erstellt werden kann ist es notwendig, dass die Kategorie "Dokumente" mit dem Objekttyp verknüpft ist. Wenn der Objekttyp nicht über diese Kategorie verfügt, können keine Dokumente für die darin enthaltenen Objekte erstellt werden, da sie nicht in der Auswahl auftauchen.
 
 ## Aufruf des Add-ons
 
