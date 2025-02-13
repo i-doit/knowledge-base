@@ -1,4 +1,5 @@
 ---
+# cSpell:disable
 site_name: Knowledge Base
 docs_dir: '../../docs/de'
 site_dir: '../../generated/de'
@@ -602,9 +603,9 @@ nav:
       - DNS Documentation: i-doit-add-ons/dns-documentation.md
       - Documents:
           - i-doit-add-ons/documents/index.md
-          - Vorbereitung (Add-on Dokumente): i-doit-add-ons/documents/vorbereitung-add-on-dokumente.md
+          - Vorbereitung: i-doit-add-ons/documents/vorbereitung-add-on-dokumente.md
           - Dokumentenvorlagen: i-doit-add-ons/documents/dokumentenvorlagen.md
-          - Platzhalter im Add-on Dokumente: i-doit-add-ons/documents/platzhalter-im-add-on-dokumente.md
+          - Platzhalter: i-doit-add-ons/documents/platzhalter-im-add-on-dokumente.md
           - Dokumenterstellung: i-doit-add-ons/documents/dokumenterstellung.md
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
