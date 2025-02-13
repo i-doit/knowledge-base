@@ -456,9 +456,10 @@ nav:
           - Contract details: system-administration/administration/contract-details.md
       - Admin Center: system-administration/admin-center.md
       - Add-on & Subscription Center: system-administration/add-on-and-subscription-center.md
+      - Customer portal: system-administration/customer-portal.md
       - Localization: system-administration/localization.md
       - Multi-Tenants: system-administration/multi-tenant.md
-      - Customer portal: system-administration/customer-portal.md
+      - Password reset: system-administration/password-reset.md
       - Troubleshooting:
           - system-administration/troubleshooting/index.md
           - Known update problems: system-administration/troubleshooting/known-update-problems.md

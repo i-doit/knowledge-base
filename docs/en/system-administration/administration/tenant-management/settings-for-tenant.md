@@ -12,7 +12,7 @@ Here you will find tenant related settings. All settings can be expanded using `
 
 [![overview](../../../assets/images/en/system-administration/administration/tenant-mangement/settings/overview.png)](../../../assets/images/en/system-administration/administration/tenant-mangement/settings/overview.png)
 
-## Passwort zurücksetzen
+## Password reset option
 
 | Option                | Value                                |
 | --------------------- | ------------------------------------ |
