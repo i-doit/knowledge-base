@@ -1,7 +1,7 @@
 ---
 title: Vorbereitung
 description: Dokumente vorlagen
-icon: addons/documents
+icon:
 status:
 lang: de
 ---
