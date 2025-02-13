@@ -1,3 +1,11 @@
+---
+title: Documents
+description: Dokumente erstellen
+icon: addons/documents
+status:
+lang: de
+---
+
 # Documents
 
 Mit dem i-doit [Add-on](../index.md) "Dokumente" können Freitext, Textelemente und Inhalte der Dokumentation in Vorlagen kombiniert werden um mit diesen vollständige Dokumente erstellen. Auf diesem Weg lassen sich bequem Betriebshandbücher, Übergabeprotokolle, Notfallpläne und vieles mehr erzeugen und exportieren. Diese Übersichten lassen es so zu, dass die Inhalte der Dokumentation bequem aufgefunden, verwendet und weitergegeben werden können.
@@ -35,18 +43,18 @@ Erlaubt es dir ein oder mehrere Dokumente zu kompilieren
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform)    | Beschreibung                                                                                     |
-| -------------------- | ----------------------- | ------------------------------------------------------------------------------------------------ |
-| -t                   | --documentId=DOCUMENTID | Mehrere Dokument-IDs (mehrere Werte zulässig)                                                    |
-| -u                   | --user=USERNAME         | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
-| -p                   | --password=PASSWORD     | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
-| -t                   | --tenant=TENANT-ID      | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
-| -h                   | --help                  | Hilfenachricht zur Einblendung weiterer Informationen                                            |
-| -q                   | --quiet                 | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
-| -V                   | --version               | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi<br>--no-ansi     | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction        | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
-| -v / -vv / -vvv      | --verbose               | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)      | Beschreibung                                                                                     |
+| -------------------- | ------------------------- | ------------------------------------------------------------------------------------------------ |
+| -t                   | --documentId=[DOCUMENTID] | Mehrere Dokument-IDs (mehrere Werte zulässig)                                                    |
+| -u                   | --user=[USERNAME]         | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]     | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -t                   | --tenant=[TENANT-ID]      | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                    | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                   | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                 | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi       | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction          | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                 | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -60,27 +68,27 @@ Ermöglicht die Erstellung von Revisionen oder den Export eines oder mehrerer Do
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform)          | Beschreibung                                                                                     |
-| -------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
-|                      | --create_revision             | Erzeugt eine oder mehrere Revisionen für bestimmte Dokumente                                     |
-|                      | --export                      | Exportiert ein oder mehrere Dokumente in eine Datei                                              |
-|                      | --id=ID                       | Ein oder mehrere Dokumente nach ID auswählen (mehrere Werte zulässig)                            |
-|                      | --all_documents               | Selektiert alle Dokumente                                                                        |
-|                      | --all_category=ALL_CATEGORY   | Wählt alle Dokumente in der Kategorie aus                                                        |
-|                      | --all_template=ALL_TEMPLATE   | Selektiert alle Dokumente mit Vorlage                                                            |
-|                      | --all_object=ALL_OBJECT       | Selektiert alle Dokumente mit Objekt                                                             |
-|                      | --export_format=EXPORT_FORMAT | Exportformat: PDF oder HTML                                                                      |
-|                      | --export_folder=EXPORT_FOLDER | Wohin soll das Dokument exportiert werden? Der Ordner muss existieren und beschreibbar sein      |
-| -u                   | --user=USER                   | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
-| -p                   | --password=PASSWORD           | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
-| -i                   | --tenantId=TENANTID           | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
-| -h                   | --help                        | Hilfenachricht zur Einblendung weiterer Informationen                                            |
-| -c                   | --config=CONFIG               | Konfigurationsdatei                                                                              |
-| -q                   | --quiet                       | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
-| -V                   | --version                     | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi<br>--no-ansi           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction              | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
-| -v\|vv\|vvv          | --verbose                     | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)            | Beschreibung                                                                                     |
+| -------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --create_revision               | Erzeugt eine oder mehrere Revisionen für bestimmte Dokumente                                     |
+|                      | --export                        | Exportiert ein oder mehrere Dokumente in eine Datei                                              |
+|                      | --id=ID                         | Ein oder mehrere Dokumente nach ID auswählen (mehrere Werte zulässig)                            |
+|                      | --all_documents                 | Selektiert alle Dokumente                                                                        |
+|                      | --all_category=[ALL_CATEGORY]   | Wählt alle Dokumente in der Kategorie aus                                                        |
+|                      | --all_template=[ALL_TEMPLATE]   | Selektiert alle Dokumente mit Vorlage                                                            |
+|                      | --all_object=[ALL_OBJECT]       | Selektiert alle Dokumente mit Objekt                                                             |
+|                      | --export_format=[EXPORT_FORMAT] | Exportformat: PDF oder HTML                                                                      |
+|                      | --export_folder=[EXPORT_FOLDER] | Wohin soll das Dokument exportiert werden? Der Ordner muss existieren und beschreibbar sein      |
+| -u                   | --user=[USER]                   | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]           | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANTID]           | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -h                   | --help                          | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -c                   | --config=[CONFIG]               | Konfigurationsdatei                                                                              |
+| -q                   | --quiet                         | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                       | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi             | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v\|vv\|vvv          | --verbose                       | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 

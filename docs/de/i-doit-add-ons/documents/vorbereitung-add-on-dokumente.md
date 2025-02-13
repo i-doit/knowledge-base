@@ -1,14 +1,20 @@
-# Vorbereitung (Add-on Dokumente)
+---
+title: Vorbereitung
+description: Dokumente vorlagen
+icon: addons/documents
+status:
+lang: de
+---
 
-Installation/Update
-===================
+# Vorbereitung
 
-Das aktuelle Installationspaket für das Add-on steht im i-doit Kundenportal unter [https://portal.i-doit.com/](https://portal.i-doit.com/) nach dem Erwerb einer gültigen Lizenz zur Verfügung und kann dort heruntergeladen werden. Die Installation selbst erfolgt im i-doit [Admin-Center](../../administration/admin-center.md) im Reiter "Add-ons". Hier wird das Paket vom lokalen System über die Schaltfläche "Durchsuchen" ausgewählt. Nachdem festgelegt wurde, für welche(n) [Mandant(en)](../../administration/mandantenfaehigkeit.md) das Add-on verfügbar gemacht werden soll, kann die Installation über die Schaltfläche "Upload and install" fertiggestellt werden.
+## Installation/Update
 
-Nach der Veröffentlichung einer neuen Version kann im Admin-Center auf demselben Weg das aktualisierte Paket, welches ebenfalls im i-doit Kundenportal verfügbar sein wird, hochgeladen und installiert werden.
+Das aktuelle Installationspaket für das Add-on steht im i-doit [Kundenportal](../../administration/kundenportal.md) nach dem Erwerb einer gültigen Lizenz zur Verfügung und kann dort heruntergeladen werden. Die Installation selbst erfolgt im i-doit [Admin-Center](../../administration/admin-center.md) im Reiter "Add-ons". Hier wird das Paket vom lokalen System über die Schaltfläche "Durchsuchen" ausgewählt. Nachdem festgelegt wurde, für welche(n) [Mandant(en)](../../administration/mandantenfaehigkeit.md) das Add-on verfügbar gemacht werden soll, kann die Installation über die Schaltfläche "Upload and install" fertiggestellt werden.
 
-Rechtevergabe
-=============
+Nach der Veröffentlichung einer neuen Version kann im Admin-Center auf demselben Weg das aktualisierte Paket, welches ebenfalls im i-doit [Kundenportal](../../administration/kundenportal.md) verfügbar sein wird, hochgeladen und installiert werden.
+
+## Rechtevergabe
 
 Damit ein Benutzer in der Lage ist, Vorlagen zu erstellen und Dokumente zu erzeugen, ist es nötig, entsprechende [Rechte](../../effizientes-dokumentieren/rechteverwaltung/index.md) zu vergeben. Dies ist in der i-doit Verwaltung unter Rechtesystem > Rechtevergabe > Dokumente möglich, wenn das Add-on installiert ist.
 
@@ -40,8 +46,7 @@ Cache für das Rechtesystem leeren
 
 Nachdem die Rechte vergeben wurden ist es ratsam, in der i-doit [Verwaltung](../../administration/verwaltung/index.md) unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Berechtigung** den [Cache](../../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) zu leeren, damit die Änderungen vom System übernommen werden.
 
-Zusätzliche Konfiguration
-=========================
+## Zusätzliche Konfiguration
 
 Mit dem Add-on wird zusätzlich die [Kategorie](../../grundlagen/struktur-it-dokumentation.md) "Dokumente" für alle [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) verfügbar. Die Kategorie kann über die [Objekttyp-Konfiguration](../../grundlagen/benutzerdefinierte-objekttypen.md) und über [Datenstruktur bearbeiten](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) mit den gewünschten Objekttypen verknüpft werden. Auf diesem Weg tauchen nur jene Objekttypen bei der Objekterstellung auf, die vom Anwender vorgegeben sind um die Auswahlliste übersichtlich zu halten.
 
@@ -49,8 +54,7 @@ Kategorie Dokumente
 
 Damit ein Dokument für ein Objekt erstellt werden kann ist es notwendig, dass die Kategorie "Dokumente" mit dem Objekttyp verknüpft ist. Wenn der Objekttyp nicht über diese Kategorie verfügt, können keine Dokumente für die darin enthaltenen Objekte erstellt werden, da sie nicht in der Auswahl auftauchen.
 
-Aufruf des Add-ons
-==================
+## Aufruf des Add-ons
 
 Nachdem alle Vorbereitungen abgeschlossen sind ist der Zugriff auf das Add-on ist über Extras > Dokumente möglich.
 
