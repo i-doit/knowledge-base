@@ -1,22 +1,30 @@
+---
+title: Documents
+description: creating documents
+icon: addons/documents
+status:
+lang: en
+---
+
 # Documents
 
-With the i-doit add-on "Documents", free text, text elements and contents of the documentation can be combined in templates to create complete documents. In this way, operating manuals, handover protocols, emergency plans and much more can be conveniently created and exported. These overviews make it easy to find, use and share the contents of the documentation.
+With the i-doit [add-on](../index.md) "Documents", free text, text elements and contents of the documentation can be combined in templates to create complete documents. In this way, operating manuals, handover protocols, emergency plans and much more can be conveniently created and exported. These overviews make it easy to find, use and share the contents of the documentation.
 
 ## The documentation of the add-on is divided into the following sections
 
-*   [Preparation (Add-on documents)](./preparation.md)
+-   [Preparation (Add-on documents)](./preparation.md)
 
 The preparation describes how to install and update the add-on. Also, all the configuration options are described in detail, so that the functions of the add-on can be used optimally.
 
-*   [Create & edit document templates](./document-templates.md)
+-   [Create & edit document templates](./document-templates.md)
 
 Document templates are the central element on the basis of which documents are created. Here we describe how to create, edit and reuse these templates. All parameters of the templates, the possibilities of the WYSIWYG editor are discussed.
 
-*   [Placeholders in the Documents add-on](./placeholder-in-the-documents.md)
+-   [Placeholders in the Documents add-on](./placeholder-in-the-documents.md)
 
 The integration of dynamic contents of the documentation is done with placeholders. All available placeholders and how to use them are described in detail here.
 
-*   [Create documents](./document-creation.md)
+-   [Create documents](./document-creation.md)
 
 Created templates can be used to create documents for objects in the documentation. This section provides a description that goes into detail about creating, updating and exporting these documents.
 
@@ -35,18 +43,18 @@ Allows to compile one or multiple documents
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -t                        | --documentId=DOCUMENTID  | Several document ids (multiple values allowed)                                               |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -t                        | --tenant=TENANT-ID       | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| Parameter (short version) | Parameter (long version)  | Description                                                                                  |
+| ------------------------- | ------------------------- | -------------------------------------------------------------------------------------------- |
+| -t                        | --documentId=[DOCUMENTID] | Several document ids (multiple values allowed)                                               |
+| -u                        | --user=[USERNAME]         | Username of a user who is authorized to execute                                              |
+| -p                        | --password=[PASSWORD]     | Password for authentication of the previously specified user                                 |
+| -t                        | --tenant=[TENANT-ID]      | Tenant ID of the tenant to be used (default: 1)                                              |
+| -h                        | --help                    | Help message for displaying further information                                              |
+| -q                        | --quiet                   | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                 | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi       | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction          | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                 | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
@@ -60,27 +68,27 @@ Allows to create revisions or export one or multiple documents
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)      | Description                                                                                  |
-| ------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --create_revision             | Creates one or more revisions for given documents                                            |
-|                           | --export                      | Exports one or more documents to a file                                                      |
-|                           | --id=ID                       | Select one or more documents by id (multiple values allowed)                                 |
-|                           | --all_documents               | Selects all documents                                                                        |
-|                           | --all_category=ALL_CATEGORY   | Selects all documents in category                                                            |
-|                           | --all_template=ALL_TEMPLATE   | Selects all documents with template                                                          |
-|                           | --all_object=ALL_OBJECT       | Selects all documents with object                                                            |
-|                           | --export_format=EXPORT_FORMAT | Export format: pdf or html                                                                   |
-|                           | --export_folder=EXPORT_FOLDER | Where should the document be exported to? The folder needs to exist and be writable          |
-| -u                        | --user=USER                   | Username                                                                                     |
-| -p                        | --password=PASSWORD           | Password                                                                                     |
-| -i                        | --tenantID=TENANTID           | Tenant ID default: 1                                                                         |
-| -h                        | --help                        | Help message for displaying further information                                              |
-| -c                        | --config=CONFIG               | Config file                                                                                  |
-| -q                        | --quit                        | Quiet-Mode to deactivate output                                                              |
-| -v                        | --version                     | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi           | Forces the output in ANSI format / Disables the output in ANSI format                        |
-| -n                        | --no-interaction              | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                     | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| Parameter (short version) | Parameter (long version)        | Description                                                                                  |
+| ------------------------- | ------------------------------- | -------------------------------------------------------------------------------------------- |
+|                           | --create_revision               | Creates one or more revisions for given documents                                            |
+|                           | --export                        | Exports one or more documents to a file                                                      |
+|                           | --id=ID                         | Select one or more documents by id (multiple values allowed)                                 |
+|                           | --all_documents                 | Selects all documents                                                                        |
+|                           | --all_category=[ALL_CATEGORY]   | Selects all documents in category                                                            |
+|                           | --all_template=[ALL_TEMPLATE]   | Selects all documents with template                                                          |
+|                           | --all_object=[ALL_OBJECT]       | Selects all documents with object                                                            |
+|                           | --export_format=[EXPORT_FORMAT] | Export format: pdf or html                                                                   |
+|                           | --export_folder=[EXPORT_FOLDER] | Where should the document be exported to? The folder needs to exist and be writable          |
+| -u                        | --user=[USER]                   | Username                                                                                     |
+| -p                        | --password=[PASSWORD]           | Password                                                                                     |
+| -i                        | --tenantID=[TENANTID]           | Tenant ID default: 1                                                                         |
+| -h                        | --help                          | Help message for displaying further information                                              |
+| -c                        | --config=[CONFIG]               | Config file                                                                                  |
+| -q                        | --quit                          | Quiet-Mode to deactivate output                                                              |
+| -v                        | --version                       | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi             | Forces the output in ANSI format / Disables the output in ANSI format                        |
+| -n                        | --no-interaction                | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                       | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
 
 **Example of use**
 
