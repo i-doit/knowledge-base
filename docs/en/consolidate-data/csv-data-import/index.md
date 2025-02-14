@@ -23,7 +23,7 @@ Once the .CSV file has been prepared to this point, you can begin the import.
 
 ## Upload File
 
-Under **Extras → CMDB → Import → CSV Import** you can find the CSV import. You don't need to configure it in advance.
+Under **Extras → Import → CSV Import** you can find the CSV import. You don't need to configure it in advance.
 
 Choose your .csv file in the first step by using the **Browse...** button and upload the file from your system. Now the file is shown in the list and you can choose the actions **Use for import**, **Download file** and **Delete file** when hovering over the row of the file with the mouse cursor.
 
@@ -102,6 +102,16 @@ Use the **Import** button beneath the mapping to start the import. The time need
 Once the import has been completed, information regarding the import as well as a confirmation of its completion will be indicated. The imported or updated objects are linked directly. The content of these objects can be changed manually anytime, if needed.
 
 [![import-complete](../../assets/images/en/consolidate-data/csv-data-import/8-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/8-csvi.png)
+
+## Overwrite object types during CSV import
+
+With the option **The CSV import can overwrite the objecttype?** the object types of a object can also be changed or overwritten during a CSV import.
+
+[![overwrite option](../../assets/images/en/consolidate-data/csv-data-import/11-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/11-csvi.png)
+
+This option can be found in the expert settings as **import.csv.overwrite-objecttype**.
+
+!!! warning "This option is blocked by another option, if you activate the overwriting of the object types, you must set the option **SYS-ID read only** to **No**. In the expert settings, this option is named **cmdb.registry.sysid_readonly**"
 
 ## Import of Relations (Linking of Objects)
 

@@ -27,7 +27,7 @@ Wenn die .csv\-Datei soweit vorbereitet ist, kann der Datenimport beginnen.
 
 ## Datei hochladen
 
-Der CSV-Datenimport befindet sich unter **Extras → CMDB → Import** → **CSV Import**. Eine Konfiguration vorab ist nicht notwendig.
+Der CSV-Datenimport befindet sich unter **Extras → Import** → **CSV Import**. Eine Konfiguration vorab ist nicht notwendig.
 
 Im ersten Schritt wird eine .csv\-Datei über den Button **Durchsuchen…** ausgewählt und hochgeladen. Anschließend wird die Datei in der Liste angezeigt und sobald man mit der Maus über die Zeile der Datei fährt, kann man zwischen den Aktionen **Für Import verwenden**, **Datei herunterladen** und **Datei löschen** wählen.
 
@@ -107,6 +107,16 @@ Den Detailgrad des Loggings des CSV-Datenimports kann unterhalb des Mappings fes
 Nachdem der Import abgeschlossen wurde, werden die Informationen zum Import sowie eine Bestätigung über die Fertigstellung angezeigt. Die importierten oder aktualisierten Objekte sind direkt verlinkt. Die Inhalte dieser Objekte lassen sich bei Bedarf jederzeit manuell ändern.
 
 [![Liste der importierten Objekte](../../assets/images/de/daten-konsolidieren/csv-import/8-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/8-csvi.png)
+
+## Überschreiben von Objekttypen beim CSV Import
+
+Mit der Option **Der CSV Import kann den Objekttyp überschreiben?** können auch bei einem CSV Import die Objekttypen geändert bzw. Überschrieben werden.
+
+[![Überschreiben Option](../../assets/images/de/daten-konsolidieren/csv-import/11-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/11-csvi.png)
+
+Diese Option ist in den Experteneinstellungen als **import.csv.overwrite-objecttype** zu finden.
+
+!!! warning "Diese Option wird durch eine weitere Option blockiert, wenn Sie das überschreiben der Objekttypen aktivieren, müssen Sie die Option **SYS-ID nur lesbar** auf **Nein** stellen. In den Experteneinstellungen ist diese Option als **cmdb.registry.sysid_readonly**"
 
 ## Import von Beziehungen (Verknüpfen von Objekten)
 
