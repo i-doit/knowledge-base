@@ -1,7 +1,14 @@
+---
+title: Hotfix Archiv
+description: Hotfix Archiv für ältere i-doit Versionen
+lang: de
+---
+
 # Hotfix Archiv
 
 Hier finden wir das Archiv alter Hotfix Seiten.
 
+-   [Version 33](v33.md)
 -   [Version 32](v32.md)
 -   [Version 31](v31.md)
 -   [Version 30](v30.md)
