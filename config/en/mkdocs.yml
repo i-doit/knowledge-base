@@ -460,6 +460,7 @@ nav:
       - Localization: system-administration/localization.md
       - Multi-Tenants: system-administration/multi-tenant.md
       - Password reset: system-administration/password-reset.md
+      - Token reset: system-administration/reset-token.md
       - Troubleshooting:
           - system-administration/troubleshooting/index.md
           - Known update problems: system-administration/troubleshooting/known-update-problems.md
