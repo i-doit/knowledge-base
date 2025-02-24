@@ -7,7 +7,15 @@ lang: en
 note: linked in A&S Center
 ---
 
-!!! success "Initially, the licence token will be emailed to you by the sales team. You will only receive information about the licence or token from the sales team. Contact via <br>Phone: [+49 211 699 31-185](tel:+4921169931185) <br>E-mail: [sales@i-doit.com](mailto:sales@i-doit.com)"
+!!! success "If you have any questions about licensing or contracts, please contact the sales team at <br>Phone: [+49 211 699 31-185](tel:+4921169931185) <br>E-mail: [sales@i-doit.com](mailto:sales@i-doit.com)"
+
+## Overview
+
+*   [How do I find my token in the Add-on & Subscription Center? (i-doit from version 33)](#how-do-i-find-my-token-in-the-add-on--subscription-center-i-doit-from-version-33)
+*   [How do I find my token in the Admin-Center?](#how-do-i-find-my-token-in-the-admin-center)
+*   [How do I find my token with access to the operating system?](#how-do-i-find-my-token-with-access-to-the-operating-system)
+*   [How can I reset my token?](#how-can-i-reset-my-token)
+*   [Activate new token](#activate-new-token)
 
 ## How do I find my token in the Add-on & Subscription Center? (i-doit from version 33)
 
@@ -26,13 +34,13 @@ Log in to the [Admin-Center](admin-center.md) and then the token is displayed un
 The "Weblicense Token" is stored in the file `.../i-doit/src/config.inc.php`. You can output the token directly if you adapt this command to your i-doit installation path:
 
 ```shell
-cat /var/www/html/i-doit/src/config.inc.php | grep token
+cat /var/www/html/i-doit/src/config.inc.php | grep license_token
 ```
 
 The output will then look something like this:
 
 ```shell
-cat /var/www/html/i-doit/src/config.inc.php | grep token
+cat /var/www/html/i-doit/src/config.inc.php | grep license_token
  * i-doit License token.
 $g_license_token = 'abcdefg1234567890';
 ```
@@ -42,7 +50,7 @@ $g_license_token = 'abcdefg1234567890';
 If you cannot find the token, click on "Reset token". This will take you to the Reset token page in the Customer Portal. Here you can request a new token. Just follow the instructions on the page.
 
 !!! warning "The old token becomes invalid as soon as a new token is generated"
-    [Reset token :material-key-link:](https://center.i-doit.com/portal/reset-token)(https:/center.i-doit.com/portal/reset-token){: target="_blank" .md-button }
+    [Reset token :material-key-link:](https://center.i-doit.com/portal/reset-token){: target="_blank" .md-button }
 
 ### Activate new token
 

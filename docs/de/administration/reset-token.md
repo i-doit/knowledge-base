@@ -7,7 +7,15 @@ lang: de
 note: linked in A&S Center
 ---
 
-!!! success "Initial wird der Lizenz Token vom Sales Team per E-Mail verschickt. Fragen zur Lizenz oder dem Token kann nur das Sales Team beantworten. Kontakt via<br>Telefon: [+49 211 699 31-185](tel:+4921169931185) <br>E-Mail: [sales@i-doit.com](mailto:sales@i-doit.com)"
+!!! success "Bei Fragen zur Lizenz oder zum Vertrag wenden Sie sich bitte an das Sales Team  via<br>Telefon: [+49 211 699 31-185](tel:+4921169931185) <br>E-Mail: [sales@i-doit.com](mailto:sales@i-doit.com)"
+
+## Übersicht
+
+*   [Wie finde ich meinen Token im Add-on & Subscription Center? (i-doit ab Version 33)](#wie-finde-ich-meinen-token-im-add-on--subscription-center-i-doit-ab-version-33)
+*   [Wie finde ich meinen Token im Admin-Center?](#wie-finde-ich-meinen-token-im-admin-center)
+*   [Wie finde ich meinen Token mit Zugriff auf das Betriebssystem?](#wie-finde-ich-meinen-token-mit-zugriff-auf-das-betriebssystem)
+*   [Wie kann ich meinen Token zurücksetzen?](#wie-kann-ich-meinen-token-zurücksetzen)
+*   [Neuen Token einspielen](#neuen-token-einspielen)
 
 ## Wie finde ich meinen Token im Add-on & Subscription Center? (i-doit ab Version 33)
 
@@ -26,13 +34,13 @@ Zuerst in das [Admin-Center](admin-center.md) einloggen und dort wird der Token 
 Der "Weblicense Token" wird in der Datei `.../i-doit/src/config.inc.php` gespeichert. Der Token kann direkt ausgegeben werden, wenn dieser Befehl an deinen i-doit Installationspfad angepasst wurde:
 
 ```shell
-cat /var/www/html/i-doit/src/config.inc.php | grep token
+cat /var/www/html/i-doit/src/config.inc.php | grep license_token
 ```
 
 Die Ausgabe wird dann etwa so aussehen:
 
 ```shell
-cat /var/www/html/i-doit/src/config.inc.php | grep token
+cat /var/www/html/i-doit/src/config.inc.php | grep license_token
  * i-doit License token.
 $g_license_token = 'abcdefg1234567890';
 ```
