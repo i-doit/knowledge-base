@@ -613,7 +613,7 @@ nav:
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
-          - i-doit-add-ons/flows.md
+          - i-doit-add-ons/flows/index.md
           - i-doit 33 update und Flows installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
           - i-doit-add-ons/forms/index.md
@@ -636,6 +636,7 @@ nav:
       - SHD SM-VIEW Connect:
           - i-doit-add-ons/sm-view-connect/index.md
           - SHD SM-VIEW Connect - Telekom Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
+          - Baramundi-Adapter: i-doit-add-ons/sm-view-connect/baramundi-adapter.md
       - VIVA:
           - i-doit-add-ons/viva/index.md
           - Einleitung zu VIVA: i-doit-add-ons/viva/einleitung-zu-viva.md

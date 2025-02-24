@@ -576,7 +576,7 @@ nav:
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
-          - i-doit-add-ons/flows.md
+          - i-doit-add-ons/flows/index.md
           - i-doit 33 update and Flows installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
           - i-doit-add-ons/forms/index.md
