@@ -31,7 +31,7 @@ After installing and configuring the rights, the add-on is available under **Add
 [![Usage](../assets/images/en/i-doit-add-ons/cabling/2-cab.png)](../assets/images/en/i-doit-add-ons/cabling/2-cab.png)
 
 ## Releases
-
+<!-- cSpell:disable -->
 | Version | Date       | Changelog                                                                                                                                                                                                                                                                                                                                         |
 | ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1.5     | 2025-02-26 | [Task] Make symfony 6.4 compatible<br>[Task] Make Smarty 5 compatible<br>[Bug] Cabling does not display the full object title<br>[Bug] Connecting close ports causes connection visibility issues<br>[Bug] Wrong output sorting when connected to the same input                                                                                  |
