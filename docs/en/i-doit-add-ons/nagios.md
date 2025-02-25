@@ -1,6 +1,13 @@
+---
+title: Nagios
+description: Nagios
+icon: addons/nagios
+status:
+lang: en
+---
 # Nagios
 
-Nagios is a software for [Network Monitoring](./index.md) which can be configured from data of the [IT documentation](../../glossary.md). By this means, you can avoid that data have to be maintained twice and you can minimize errors. The export function available in i-doit allows the creation of complete or partial configurations. For this purpose, you manually create Nagios configurations in the i-doit interface or you fill it with values automatically.
+Nagios is a software for [Network Monitoring](../automation-and-integration/network-monitoring/index.md) which can be configured from data of the [IT documentation](../glossary.md). By this means, you can avoid that data have to be maintained twice and you can minimize errors. The export function available in i-doit allows the creation of complete or partial configurations. For this purpose, you manually create Nagios configurations in the i-doit interface or you fill it with values automatically.
 
 !!! info "Compatibility"
     The exported data are compatible with Nagios Version 3 and Icinga Version 1. Nagios Version 4 is not completely compatible. Other Nagios versions are not supported.
@@ -9,23 +16,23 @@ Nagios is a software for [Network Monitoring](./index.md) which can be configure
 
 You store the configuration under **Administration → Monitoring and interfaces → Monitoring → Export Configuration**. The **Local Path** defines an absolute or relative path to the i-doit installation in the file system in which the configuration created by i-doit is to be stored. The **Link to your monitoring tool** specifies a basic link to generate links to the monitoring instance from i-doit.
 
-[![Basic Configurations](../../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)](../../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)
+[![Basic Configurations](../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)
 
 ## Basic Configurations
 
 You can create the basic configurations under **Extras → Nagios**.
 
-[![Basic Configurations](../../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)](../../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)
+[![Basic Configurations](../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)
 
 This includes the main configuration, service templates and host templates as well as other basic settings. All values are identical to the Nagios configuration.
 
 ## Configuration in Objects
 
-All further configurations are carried out within the [objects](../../basics/structure-of-the-it-documentation.md). The easiest case is the configuration of host parameters. For this purpose, the **Nagios (Host)**[category](../../basics/structure-of-the-it-documentation.md) folder has to be assigned to the desired [object type](../../basics/structure-of-the-it-documentation.md) via the **[Edit data structure](../../basics/assignment-of-categories-to-object-types.md)**.
+All further configurations are carried out within the [objects](../basics/structure-of-the-it-documentation.md). The easiest case is the configuration of host parameters. For this purpose, the **Nagios (Host)**[category](../basics/structure-of-the-it-documentation.md) folder has to be assigned to the desired [object type](../basics/structure-of-the-it-documentation.md) via the **[Edit data structure](../basics/assignment-of-categories-to-object-types.md)**.
 
 In the category **Host Definition** a host definition for Nagios can be set either via a Nagios template or via individual configuration.
 
-[![Host Definition](../../assets/images/en/automation-and-integration/network-monitoring/nagios/3-nag.png)](../../assets/images/en/automation-and-integration/network-monitoring/nagios/3-nag.png)
+[![Host Definition](../assets/images/en/automation-and-integration/network-monitoring/nagios/3-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/3-nag.png)
 
 The concept of host templates and service templates is identical to the original Nagios configuration.
 
@@ -43,13 +50,13 @@ Further Nagios configurations within objects can be found in **Persons** objects
 
 The Nagios configurations can be exported manually via **Administration → Monitoring and interfaces → Nagios Export** . For this purpose, you select an export configuration and optionally you can also choose a validation of the parameters.
 
-[![Export of the Nagios Configuration](../../assets/images/en/automation-and-integration/network-monitoring/nagios/4-nag.png)](../../assets/images/en/automation-and-integration/network-monitoring/nagios/4-nag.png)
+[![Export of the Nagios Configuration](../assets/images/en/automation-and-integration/network-monitoring/nagios/4-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/4-nag.png)
 
 The validation checks basic dependencies, for example, if an IP address has been entered for a host etc. This check is supposed to prevent the generation of corrupt Nagios configurations. This, however, is not a 100% safe protection so you should always run a test with the Nagios binary checking the generated configuration.
 
 The configuration files are stored according to the configured path on the file system and correspond the values that have been configured in the categories.
 
-The export of the files can be automated via the [controller](../cli/index.md) of course. For this purpose, the handler **nagios_export** is run while stating the export configuration ID using the parameter **-n ID**.
+The export of the files can be automated via the [controller](../automation-and-integration/cli/index.md) of course. For this purpose, the handler **nagios_export** is run while stating the export configuration ID using the parameter **-n ID**.
 
 ## CLI console commands and options
 
@@ -113,9 +120,10 @@ sudo -u www-data php console.php nagios-ndoutils --user admin --password admin -
 ```
 
 ## Changelog
-
+<!-- cSpell:disable -->
 | Version | Date       | Changelog                                                                                                                                                                                                                       |
 | ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.3     | 2025-02-25 | [Task] Make symfony 6.4 compatible <br>[Bug] Some attributes are not writable via API in category folder Persons category Nagios                                                                                                |
 | 1.2     | 2024-07-09 | [Bug] Server error when open Nagios category                                                                                                                                                                                    |
 | 1.1.1   | 2023-08-22 | [Improvement] PHP 8.1 Compatibility                                                                                                                                                                                             |
 | 1.1     | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility                                                                                                                                                                   |

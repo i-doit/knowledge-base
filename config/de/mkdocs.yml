@@ -406,11 +406,9 @@ nav:
               - automatisierung-und-integration/cli/console/index.md
               - Optionen und Parameter der Console: automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md
               - Verwendung von Konfigurationsdateien für Console Commands: automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md
-          - Controller: automatisierung-und-integration/cli/controller.md
       - Network Monitoring:
           - automatisierung-und-integration/network-monitoring/index.md
           - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md
-          - Nagios: automatisierung-und-integration/network-monitoring/nagios.md
       - Service Desk:
           - automatisierung-und-integration/service-desk/index.md
           - Request Tracker (RT): automatisierung-und-integration/service-desk/request-tracker.md
@@ -630,6 +628,7 @@ nav:
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
       - ISMS: i-doit-add-ons/isms.md
       - Maintenance: i-doit-add-ons/maintenance.md
+      - Nagios: i-doit-add-ons/nagios.md
       - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md
       - Relocate-CI: i-doit-add-ons/relocate-ci.md
       - Replacement: i-doit-add-ons/replacement.md

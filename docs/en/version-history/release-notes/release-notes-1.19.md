@@ -31,7 +31,7 @@ Alongside i-doit 1.19, we will also release new versions of the following **add-
 -   [Workflow](../../i-doit-add-ons/workflow.md) **1.1**
 -   [Checkmk](../../i-doit-add-ons/checkmk.md) **1.1**
 -   [Check\_MK 2](../../i-doit-add-ons/checkmk2/index.md) **1.8**
--   [Nagios](../../automation-and-integration/network-monitoring/nagios.md) **1.1**
+-   [Nagios](../../i-doit-add-ons/nagios.md) **1.1**
 -   [Packager](../../i-doit-add-ons/add-on-packager.md) **1.2**
 
 Important update notes
