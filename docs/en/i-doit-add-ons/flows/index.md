@@ -182,10 +182,10 @@ Perform executions.
 
 | Parameter (short version) | Parameter (long version) | Description                                                                           |
 | ------------------------- | ------------------------ | ------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                       |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                          |
-| -i                        | --tenant=TENANTID        | Tenant ID of the tenant to be used (default: 1)                                       |
-| -c                        | --config=CONFIG          | Config File                                                                           |
+| -u                        | --user=[USERNAME]        | Username of a user who is authorized to execute                                       |
+| -p                        | --password=[PASSWORD]    | Password for authentication of the previously specified user                          |
+| -i                        | --tenant=[TENANT-ID]     | Tenant ID of the tenant to be used (default: 1)                                       |
+| -c                        | --config=[CONFIG]        | Config File                                                                           |
 | -h                        | --help                   | Help message for displaying further information                                       |
 | -q                        | --quiet                  | Quiet-Mode to deactivate output                                                       |
 | -V                        | --version                | Output of the i-doit Console version                                                  |
@@ -207,10 +207,10 @@ Trigger execution of time automation.
 
 | Parameter (short version) | Parameter (long version) | Description                                                                           |
 | ------------------------- | ------------------------ | ------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                       |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                          |
-| -i                        | --tenant=TENANTID        | Tenant ID of the tenant to be used (default: 1)                                       |
-| -c                        | --config=CONFIG          | Config File                                                                           |
+| -u                        | --user=[USERNAME]        | Username of a user who is authorized to execute                                       |
+| -p                        | --password=[PASSWORD]    | Password for authentication of the previously specified user                          |
+| -i                        | --tenant=[TENANT-ID]     | Tenant ID of the tenant to be used (default: 1)                                       |
+| -c                        | --config=[CONFIG]        | Config File                                                                           |
 | -h                        | --help                   | Help message for displaying further information                                       |
 | -q                        | --quiet                  | Quiet-Mode to deactivate output                                                       |
 | -V                        | --version                | Output of the i-doit Console version                                                  |
