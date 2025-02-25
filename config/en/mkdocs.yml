@@ -651,3 +651,7 @@ nav:
           - Program Dashboard Widget: software-development/software-development/program-dashboard-widgets.md
   - Glossary: glossary.md
   - FAQ: faq.md
+not_in_nav: |
+  _archive/*
+  i-doit-add-ons/api/methods/cmdb.ip_search.md
+  i-doit-add-ons/flows.md
