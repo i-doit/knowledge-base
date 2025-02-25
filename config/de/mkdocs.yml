@@ -495,7 +495,7 @@ nav:
       - Mandantenfähigkeit: administration/mandantenfaehigkeit.md
       - Mehrsprachigkeit und Übersetzungen: administration/mehrsprachigkeit-und-uebersetzungen.md
       - Passwort zurücksetzen: administration/passwort-zuruecksetzen.md
-      - Token zurücksetzen: administration/reset-token.md
+      - Den Lizenz Token finden oder zurücksetzen: administration/reset-token.md
       - Troubleshooting:
           - administration/troubleshooting/index.md
           - Bekannte update Probleme: administration/troubleshooting/bekannte-update-probleme.md
