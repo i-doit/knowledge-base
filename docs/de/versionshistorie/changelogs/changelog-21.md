@@ -1,6 +1,6 @@
 # Changelog 21
 
-[Task][Admincenter]          Replace iFrame from Admin Center > Support Tab with open link in a new browser tab<br>
+[Task][Admincenter]          Replace iFrame from Admin-Center > Support Tab with open link in a new browser tab<br>
 [Task][System settings]      Change operator for recommended php version in system overview<br>
 [Improvement][Notifications] Add new parameters for the notifications-send option of the i-doit console<br>
 [Improvement][Notifications] Add an interval function to the notifications configuration so notifications are sent in a defined interval<br>

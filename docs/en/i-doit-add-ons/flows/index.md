@@ -2,7 +2,7 @@
 title: Flows Add-on
 description: Flows Add-on
 icon: addons/flows
-status: new
+status:
 lang: en
 ---
 
@@ -18,9 +18,11 @@ This add-on can be installed at a later date. Detailed descriptions regarding do
 
 The Flows Add-on comes with two [CLI commands](../../automation-and-integration/cli/index.md). Both commands are needed to make the Flows Add-on work completely. There are two option to set up the CLI Commands. The Commands can be executed by a **Crontab**. We also have created a Service installation Script called **create-daemon.sh**, which can be found in the Flows Add-on folder `i-doit/src/classes/modules/synetics_flows/`.
 
-### Using system service installer script
+## Automation of CLI commands
 
-This Service will run the Flows Add-on CLI commands every few seconds. First we need to set execute rights for the file. Use the command inside the i-doit folder:
+### Systemservice with script"
+
+A service can be created with the Linux script, this service executes the CLI commands of the Flows add-on every few seconds. First we need to set the execution rights for the file. Use the command in the i-doit folder:
 
 ```shell
 sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
@@ -28,9 +30,9 @@ sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
 
 Now the file can be executed to create a system service. **This needs to be done for every Tenant**
 
--   `-u` needs a i-doit admin-user
--   `-p` needs a i-doit admin-user-password
--   `-i` needs a tenant ID, can be viewed via console command [tenant-list](../../automation-and-integration/cli/console/options-and-parameters-cli.md#tenant-list)
+-   `-u` i-doit person with administrator rights
+-   `-p` the password for the person
+-   `-i` tenant ID in which the person is used, can be viewed via console command [tenant-list](../../automation-and-integration/cli/console/options-and-parameters-cli.md#tenant-list)
 
 ```shell
 src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1

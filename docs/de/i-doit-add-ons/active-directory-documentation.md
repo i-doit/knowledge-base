@@ -4,7 +4,7 @@ Das "Active Directory Dokumentation" Add-on wurde als erstes [Add-on](./index.md
 
 Installation und Lizenz
 
-Das "Active Directory Dokumentation" Add-on wird wie jedes Add-on über das [Admin Center](../administration/admin-center.md) installiert. Das Add-on ist nicht lizenzpflichtig. Es kann allerdings nur mit der pro-Variante genutzt werden.
+Das "Active Directory Dokumentation" Add-on wird wie jedes Add-on über das [Admin-Center](../administration/admin-center.md) installiert. Das Add-on ist nicht lizenzpflichtig. Es kann allerdings nur mit der pro-Variante genutzt werden.
 
 Inhalt des Add-ons
 ------------------
@@ -25,7 +25,7 @@ Im folgenden werden die einzelnen Objekttypen mit den neu ausgelieferten Kategor
 Domäne
 ------
 
-Der ausgelieferte Objekttyp "Domäne" ermöglicht es die gängigsten Informationen einer Domäne zu dokumentieren.   
+Der ausgelieferte Objekttyp "Domäne" ermöglicht es die gängigsten Informationen einer Domäne zu dokumentieren.
 Mit dem Objekttypen werden die folgenden Kategorien ausgeliefert:
 
 | Kategorie |

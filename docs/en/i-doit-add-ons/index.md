@@ -48,7 +48,7 @@ Add-ons are available as ZIP-files. These are installed via the [Admin Center](.
 
 ## Installation
 
-All add-ons are installed via the [admin center](../system-administration/admin-center.md). After successfully logging in to the admin center, just change to the **Modules** tab and use the **Install/update module** button.
+All add-ons are installed via the [Admin-Center](../system-administration/admin-center.md). After successfully logging in to the Admin-Center, just change to the **Modules** tab and use the **Install/update module** button.
 
 [![Installation](../assets/images/en/i-doit-add-ons/1-iao.png)](../assets/images/en/i-doit-add-ons/1-iao.png)
 

@@ -32,7 +32,7 @@ Hier ist eine kleine Checkliste, was du darüber hinaus recherchieren kannst:
 Wenn wir einen Fehler kennen, können wir ihn auch beheben. Wer einen Support-Vertrag mit uns abgeschlossen hat, verfügt bereits über die nötigen Kontaktdaten. Fehler lassen sich auch ohne Support-Vertrag über das [Kundenportal](../../administration/kundenportal.md) oder über das [Help Portal](https://help.i-doit.com) melden.
 
 !!! attention "Wichtig"
-    Bitte gib immer an, welche **Versionen** von i-doit, betroffenen [Add-ons](../../i-doit-add-ons/index.md), Apache Webserver, PHP und MySQL/MariaDB im Einsatz sind. Dabei hilft dir das **i-doit environment info file**, das im [Admin Center](../../administration/admin-center.md) zum Download steht. **Konfigurationsdateien**, **Log-Dateien**, **Screenshots** und die **Fehlermeldung im Klartext** unterstützen ebenfalls bei der Analyse. **Antworten** auf die oben genannten Fragen helfen uns und letztendlich dir enorm weiter.
+    Bitte gib immer an, welche **Versionen** von i-doit, betroffenen [Add-ons](../../i-doit-add-ons/index.md), Apache Webserver, PHP und MySQL/MariaDB im Einsatz sind. Dabei hilft dir das **i-doit environment info file**, das im [Admin-Center](../../administration/admin-center.md) zum Download steht. **Konfigurationsdateien**, **Log-Dateien**, **Screenshots** und die **Fehlermeldung im Klartext** unterstützen ebenfalls bei der Analyse. **Antworten** auf die oben genannten Fragen helfen uns und letztendlich dir enorm weiter.
 
 Weniger wichtig ist uns, dass du deinen Bug Report hübsch formatierst oder gar in Hochglanz-PDFs einbettest. Umso mehr freuen wir uns über einen freundlichen, sachlichen Umgangston. Aber das versteht sich von selbst.
 

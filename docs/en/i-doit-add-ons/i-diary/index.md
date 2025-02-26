@@ -64,14 +64,14 @@ The following requirements are necessary before installing or using the i-diary.
 ===================
 
 The add-on is downloaded via the [customer portal](../../system-administration/customer-portal.md)  
-The add-on must first be installed via the [Admin Center](../../system-administration/admin-center.md#add-ons).
+The add-on must first be installed via the [Admin-Center](../../system-administration/admin-center.md#add-ons).
 
 * * *
 
 [Update](#update)
 =================
 
-i-diary is updated like other add-ons via the [Admin Center](../../system-administration/admin-center.md#add-ons).  
+i-diary is updated like other add-ons via the [Admin-Center](../../system-administration/admin-center.md#add-ons).  
 The new i-diary.exe must then be replaced by the updated i-diary.exe.  
 This can be found in the downloaded ZIP idoit-i_diary-x.x.x.zip in path  
 \idoit-i_diary-1.0.1\src\classes\modules\idoit-i_diary\i-diary\

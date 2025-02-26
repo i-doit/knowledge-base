@@ -1,3 +1,11 @@
+---
+title: Upgrade from i-doit open to i-doit
+description: Upgrade from i-doit open to i-doit
+icon: fontawesome/brands/linux
+status:
+lang: en
+---
+
 # Upgrade from i-doit open to i-doit
 
 How do you switch from _i-doit_ _open_ to _i-doit_ with added functionality in a quick and easy way?
@@ -43,24 +51,24 @@ The upgrade doesn't work with the installation packet of the _i-doit_ version.
 Installation of the _i-doit-addon_
 --------------------------------------
 
-After upgrading to the version you have to install the addon. The addon is available in the [admin center](../system-administration/admin-center.md) under **Add-ons**. Here you can find the installation button.
+After upgrading to the version you have to install the addon. The addon is available in the [Admin-Center](../system-administration/admin-center.md) under **Add-ons**. Here you can find the installation button.
 
 License Activation
 ------------------
 
-The upgrade is completed now and the last step is the activation of a valid license. You can activate it directly in the [Admin Center under **Licenses**](../maintenance-and-operation/activate-license.md).
+The upgrade is completed now and the last step is the activation of a valid license. You can activate it directly in the [Admin-Center under **Licenses**](../maintenance-and-operation/activate-license.md).
 
 Clear Cache
 -----------
 
-Now we log off from the Admin Center and log in again to _i-doit_. Now we click through  **Administration** → **System tools → Cache / Database** to the button **Clear complete Cache**. We clear the browser cache by pressing **CTRL+F5**.
+Now we log off from the Admin-Center and log in again to _i-doit_. Now we click through  **Administration** → **System tools → Cache / Database** to the button **Clear complete Cache**. We clear the browser cache by pressing **CTRL+F5**.
 
 Configure Permissions
 ---------------------
 
 In contrast to _i-doit open, i-doit_ does possess a free configurable [authorization system](../system-administration/administration/user-permissions.md). For this reason, the user who is logged in at this moment will not have all permissions.
 
-To give your admin-user full access in a few steps, go to **Administration** → **Authorization system** → **Authorization system reset** and give your user full access to _i-doit_ by entering the credentials for the [Admin center](../system-administration/admin-center.md).
+To give your admin-user full access in a few steps, go to **Administration** → **Authorization system** → **Authorization system reset** and give your user full access to _i-doit_ by entering the credentials for the [Admin-Center](../system-administration/admin-center.md).
 
 Now you can configure the assignment of permissions for persons and groups of persons.
 

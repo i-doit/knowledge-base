@@ -1,8 +1,10 @@
-# checkmk 2: Sync checkmk sites
+# Sync checkmk sites
 
-checkmk provides a distributed monitoring of hosts and its services. You can configure multiple monitoring hosts which are called “sites”. To share these sites with i-doit run:
+checkmk provides a distributed monitoring of hosts and its services. You can configure multiple monitoring hosts which are called "sites". To share these sites with i-doit run:
 
-    idoitcmk sync-sites
+```shell
+idoitcmk sync-sites
+```
 
 _Sites without hosts are not considered._
 

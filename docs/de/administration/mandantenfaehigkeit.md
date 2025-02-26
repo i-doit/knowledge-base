@@ -7,11 +7,11 @@ i-doit ist mandantenfähig. Das bedeutet, dass über eine Installation ein oder 
 
 ## Hintergrund
 
-Pro Mandant existiert in i-doit eine separate Datenbank. In dieser Datenbank werden alle Inhalte gespeichert, aber auch die Konfigurationen. So können über eine Instanz von i-doit völlig unterschiedliche IT-Dokumentationen gepflegt werden. Ein Austausch zwischen Mandanten ist nicht vorgesehen. Diese strikte Trennung ist auch ein Grund dafür, dass das [Admin Center](../administration/admin-center.md) als übergeordnete Verwaltungsinstanz zur Verfügung steht.
+Pro Mandant existiert in i-doit eine separate Datenbank. In dieser Datenbank werden alle Inhalte gespeichert, aber auch die Konfigurationen. So können über eine Instanz von i-doit völlig unterschiedliche IT-Dokumentationen gepflegt werden. Ein Austausch zwischen Mandanten ist nicht vorgesehen. Diese strikte Trennung ist auch ein Grund dafür, dass das [Admin-Center](../administration/admin-center.md) als übergeordnete Verwaltungsinstanz zur Verfügung steht.
 
 ## Konfiguration
 
-Die Verwaltung von Mandanten geschieht im Admin Center. Im Bereich **Tenants** werden alle derzeit angelegten Mandanten aufgelistet.
+Die Verwaltung von Mandanten geschieht im Admin-Center. Im Bereich **Tenants** werden alle derzeit angelegten Mandanten aufgelistet.
 
 [![Konfiguration](../assets/images/de/administration/mandantenfaehigkeit/1-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/1-mand.png)
 
@@ -38,13 +38,13 @@ Pro Mandant müssen verschiedene Eigenschaften angegeben werden (Pflichtfelder):
 
 ## Objektlimitierung pro Mandant
 
-Pro Mandant kann eingestellt werden, wie viele lizenzpflichtige Objekte maximal dokumentiert werden dürfen. Dies geschieht im Admin Center unter **Tenants**. Dort gibt es pro Mandant den Parameter **Assigned object licenses** (Ganzzahl).
+Pro Mandant kann eingestellt werden, wie viele lizenzpflichtige Objekte maximal dokumentiert werden dürfen. Dies geschieht im Admin-Center unter **Tenants**. Dort gibt es pro Mandant den Parameter **Assigned object licenses** (Ganzzahl).
 
 [![Objektlimitierung pro Mandant](../assets/images/de/administration/mandantenfaehigkeit/3-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/3-mand.png)
 
 ## Add-ons pro Mandant
 
-Bei der [Installation und beim Update von Add-ons](../i-doit-add-ons/i-diary.md) kann ausgewählt werden, ob diese Aktion für einen einzelnen Mandanten oder für alle Mandanten durchgeführt werden soll. Im Admin Center unter **Modules** werden alle installierten Add-ons pro Mandant aufgeführt. Sie können pro Mandant (de-)aktiviert werden. Das Löschen erfolgt für alle Mandanten.
+Bei der [Installation und beim Update von Add-ons](../i-doit-add-ons/i-diary.md) kann ausgewählt werden, ob diese Aktion für einen einzelnen Mandanten oder für alle Mandanten durchgeführt werden soll. Im Admin-Center unter **Modules** werden alle installierten Add-ons pro Mandant aufgeführt. Sie können pro Mandant (de-)aktiviert werden. Das Löschen erfolgt für alle Mandanten.
 
 [![Add-ons pro Mandant](../assets/images/de/administration/mandantenfaehigkeit/4-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/4-mand.png)
 
@@ -61,7 +61,7 @@ Sind mehrere Mandanten aktiviert, wird beim Login abgefragt, in welchen Mandante
 
 Wird für die Authentifizierung und Autorisierung ein [LDAP-Verzeichnis/Active Directory (AD)](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) angebunden, werden beim Login die konfigurierten Server nacheinander abgefragt, ob die Zugangsdaten gültig sind. Danach wird ermittelt, für welche Mandanten die Zugangsdaten gültig sind (siehe oben).
 
-Ist [Single Sign On (SSO)](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md) aktiv, kann ein Mandant als Standard gewählt werden. Dies geschieht im [Admin Center](admin-center.md#system-settings). Beim Aufruf von i-doit wird der Benutzer automatisch zu diesem Mandanten verbunden, falls die Zugangsdaten korrekt sind.
+Ist [Single Sign On (SSO)](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md) aktiv, kann ein Mandant als Standard gewählt werden. Dies geschieht im [Admin-Center](admin-center.md#system-settings). Beim Aufruf von i-doit wird der Benutzer automatisch zu diesem Mandanten verbunden, falls die Zugangsdaten korrekt sind.
 
 ## Mandanten-Wechsel
 

@@ -15,7 +15,7 @@
 | [addon-install](#addon-install)                                           | Installing Add-ons                                                                                                                 |
 | [addon-list](#addon-list)                                                 | Displays a list of all installed add-ons                                                                                           |
 | [addon-uninstall](#addon-uninstall)                                       | Deactivate add-on                                                                                                                  |
-| [admin-center-password-reset](#admin-center-password-reset)               | Reset the password for the Admin Center                                                                                            |
+| [admin-center-password-reset](#admin-center-password-reset)               | Reset the password for the Admin-Center                                                                                            |
 | [auth-cleanup](#auth-cleanup)                                             | Clean up rights system                                                                                                             |
 | [clear-credentials](#clear-credentials)                                   | Removes user credentials                                                                                                           |
 | [completion](#completion)                                                 | Dump the shell completion script                                                                                                   |
@@ -58,7 +58,7 @@
 | [system-objectcleanup](#system-objectcleanup)                             | Clean up objects (objects with the status "unfinished", "archived" or "deleted" are permanently removed)                           |
 | [system-objectrelations](#system-objectrelations)                         | Recreate Object Relationships                                                                                                      |
 | [system-refresh-table-configuration](#system-refresh-table-configuration) | Refreshes all available list configurations (object types and categories)                                                          |
-| [system-set-settings](#system-set-settings)                               | Enables Admin Center settings to be set via the CLI                                                                                |
+| [system-set-settings](#system-set-settings)                               | Enables Admin-Center settings to be set via the CLI                                                                                |
 | [tenant-create](#tenant-create)                                           | Add a new tenant                                                                                                                   |
 | [tenant-disable](#tenant-disable)                                         | Deactivate an existing tenant                                                                                                      |
 | [tenant-enable](#tenant-enable)                                           | Activate an existing tenant                                                                                                        |
@@ -574,7 +574,7 @@ Install the i-doit application
 | -d                        | --database=DATABASE               | i-doit System Database name [default: "idoit_system_temp"]                                   |
 | -U                        | --user=USER                       | Username of i-doit system DB [default: "idoit"]                                              |
 | -P                        | --password[=PASSWORD]             | Password of i-doit system DB                                                                 |
-|                           | --admin-password[=ADMIN-PASSWORD] | Password for i-doit admin center                                                             |
+|                           | --admin-password[=ADMIN-PASSWORD] | Password for i-doit Admin-Center                                                             |
 | -l                        | --license-server=LICENSE-SERVER   | Path for the i-doit license server [default: "https://lizenzen.i-doit.com"]                  |
 | -k                        | --key[=KEY]                       | License key for i-doit                                                                       |
 | -h                        | --help                            | Help message for displaying further information                                              |
@@ -1328,7 +1328,7 @@ sudo -u www-data php console.php system-refresh-table-configuration --user admin
 
 ### system-set-settings
 
-Enables Admin Center settings to be set via the CLI.
+Enables Admin-Center settings to be set via the CLI.
 
 **Options:**
 

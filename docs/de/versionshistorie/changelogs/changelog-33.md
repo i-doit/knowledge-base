@@ -59,7 +59,7 @@
 [Bug][Code (Internal)]                     HTTP 500 Error when creating a host address entry after setting field to mandatory in attribute settings<br>
 [Bug][Code (Internal)]                     Enable environment variable for default url<br>
 [Bug][Code (Internal)]                     Enable user creation during setup<br>
-[Bug][Code (Internal)]                     Allow access to standalone version of Admin Center 2.0<br>
+[Bug][Code (Internal)]                     Allow access to standalone version of Admin-Center 2.0<br>
 [Bug][Code (Internal)]                     Disable checks if the client/request comes from the same IP address.<br>
 [Bug][Code (Internal)]                     Addon CSV-Importhelper Methode um den Logger erweitern<br>
 [Bug][Code (Internal)]                     Patch Prototype to solve CVE-2020-27511<br>

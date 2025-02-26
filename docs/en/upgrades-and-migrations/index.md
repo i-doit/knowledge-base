@@ -3,6 +3,7 @@
 Here we focus on specific upgrades and migrations concerning i-doit.
 
 *   [Migration from Windows to Linux](./migration-from-windows-to-linux.md)
+*   [Migration from Linux to Windows](./migration-from-linux-to-windows.md)
 *   [Migration of an Installation under GNU/Linux](./migration-of-an-installation-under-linux.md)
 *   [Update Guide from i-doit 1.7.4 to 31](./update-guide-from-1.7.4-to-31.md)
 *   [Update of i-doit open 1.4.8 to 1.8](./update-of-i-doit-open-1.4.8-to-1.8.md)

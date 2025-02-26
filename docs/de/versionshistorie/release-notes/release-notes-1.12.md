@@ -12,7 +12,7 @@ Notes
 
 *   The Check\_MK, Nagios export and Workflow features are now available as separate (free to use) add-ons.
 
-*   When starting with a fresh installation, they need to be installed via the Admin Center.
+*   When starting with a fresh installation, they need to be installed via the Admin-Center.
 
 *   When updating i-doit, you do not need to do anything. They will show up as add-ons in the Admin-Center automatically.
 

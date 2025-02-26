@@ -54,7 +54,7 @@ Evaluierungsbenutzer können alle kostenlosen und kommerziellen Add-ons im Evalu
 
 ## Installation
 
-Alle Module und Erweiterungen werden über das [Admin Center](../administration/admin-center.md) unter **Modules → Install/update module** installiert.
+Alle Module und Erweiterungen werden über das [Admin-Center](../administration/admin-center.md) unter **Modules → Install/update module** installiert.
 
 [![Installation](../assets/images/de/i-doit-add-ons/1-i-doit-add-ons.png)](../assets/images/de/i-doit-add-ons/1-i-doit-add-ons.png)
 

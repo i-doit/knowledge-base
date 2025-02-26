@@ -33,6 +33,6 @@ Each user in i-doit is an [object](structure-of-the-it-documentation.md) of the 
 
 ## Welcome Text
 
-When you want to welcome users with a text during the login process, it is possible to enter a corresponding text in the [Admin Center](../system-administration/admin-center.md) under **System settings → Login → Welcome text for Login**.
+When you want to welcome users with a text during the login process, it is possible to enter a corresponding text in the [Admin-Center](../system-administration/admin-center.md) under **System settings → Login → Welcome text for Login**.
 
 [![Login mit Begrüßungstext](../assets/images/en/basics/initial-login/2-il.png)](../assets/images/en/basics/initial-login/2-il.png)

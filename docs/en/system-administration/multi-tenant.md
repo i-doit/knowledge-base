@@ -9,12 +9,12 @@ _i-doit_ is capable of managing multiple tenants. This means that one installati
 Background
 ----------
 
-A separate database exists in _i-doit_ for each tenant. In this database all contents as well as configurations are saved. This way, various completely different IT documentations can be maintained in one instance of _i-doit_. An exchange between tenants is not intended. This strict separation is also the reason for the [admin center](./admin-center.md) being available as a higher level administration instance.
+A separate database exists in _i-doit_ for each tenant. In this database all contents as well as configurations are saved. This way, various completely different IT documentations can be maintained in one instance of _i-doit_. An exchange between tenants is not intended. This strict separation is also the reason for the [Admin-Center](./admin-center.md) being available as a higher level administration instance.
 
 Configuration
 -------------
 
-The administration of tenants is done in the admin center. All presently created tenants are listed in the **Tenants** section.
+The administration of tenants is done in the Admin-Center. All presently created tenants are listed in the **Tenants** section.
 
 [![Configuration](../assets/images/en/system-administration/multi-tenants/1-mt.png)](../assets/images/en/system-administration/multi-tenants/1-mt.png)
 
@@ -41,14 +41,14 @@ For each tenant you need to set some properties (mandatory fields):
 Object Limitation per Tenant
 ----------------------------
 
-Provided you use a multi-tenant license, you can set the maximum number of license required objects that are allowed to be documented for each tenant. This is done in the admin center at **Licenses**. The parameter **Object limit** (integer) exists there for each tenant.
+Provided you use a multi-tenant license, you can set the maximum number of license required objects that are allowed to be documented for each tenant. This is done in the Admin-Center at **Licenses**. The parameter **Object limit** (integer) exists there for each tenant.
 
 [![Object Limitation per Tenant](../assets/images/en/system-administration/multi-tenants/3-mt.png)](../assets/images/en/system-administration/multi-tenants/3-mt.png)
 
 Add-ons per Tenant
 ------------------
 
-In the installation/update process of [add-ons](../i-doit-add-ons/index.md) you can choose whether this action shall be carried out for a single tenant or for all tenants. All installed add-ons are displayed per tenant in the Admin Center in **Modules**. They can be (de-)activated per tenant. The deletion of add-ons takes place for all tenants.
+In the installation/update process of [add-ons](../i-doit-add-ons/index.md) you can choose whether this action shall be carried out for a single tenant or for all tenants. All installed add-ons are displayed per tenant in the Admin-Center in **Modules**. They can be (de-)activated per tenant. The deletion of add-ons takes place for all tenants.
 
 [![Add-ons per Tenant](../assets/images/en/system-administration/multi-tenants/4-mt.png)](../assets/images/en/system-administration/multi-tenants/4-mt.png)
 

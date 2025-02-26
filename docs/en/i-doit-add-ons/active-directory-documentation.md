@@ -4,7 +4,7 @@ The "Active Directory Documentation" add-on was designed and created as the firs
 
 Installation and License
 
-The "Active Directory Documentation" add-on is installed like any other add-on via the Admin Center. The add-on does not require a license. However, it can only be used with the pro variant.
+The "Active Directory Documentation" add-on is installed like any other add-on via the Admin-Center. The add-on does not require a license. However, it can only be used with the pro variant.
 
 Contents of the add-on
 ----------------------
@@ -25,7 +25,7 @@ In the following, the individual object types with the newly delivered categorie
 Domain
 ------
 
-The delivered object type "Domain" allows to document the most common information of a domain.   
+The delivered object type "Domain" allows to document the most common information of a domain.
 The following categories are delivered with the object type:
 
 | Category |
@@ -40,8 +40,6 @@ The following categories are delivered with the object type:
 | Assigned sites |
 
 [![Domain](../assets/images/en/i-doit-add-ons/active-directory-documentation/1-adc.png)](../assets/images/en/i-doit-add-ons/active-directory-documentation/1-adc.png)
-
-  
 
 Forest
 ------
@@ -121,7 +119,7 @@ The following categories are delivered with the object type:
 DHCP server
 -----------
 
-The "DHCP server" object type is fundamentally based on the "Windows Server" object type. This enables separate documentation of DHCP information.   
+The "DHCP server" object type is fundamentally based on the "Windows Server" object type. This enables separate documentation of DHCP information.
 The following categories are delivered with the object type:
 
 | Category |

@@ -2,11 +2,10 @@
 
 The "DNS Documentation" [add-on](./index.md) was designed and created as the first add-on with the [Add-on Packager](./add-on-packager.md). The idea behind the DNS Documentation is to easily document DNS entries in i-doit. The add-on creates the necessary object types and categories.
 
-  
 Installation and license
 ---------------------------
 
-The "DNS Documentation" add-on is installed like any other add-on via the [Admin Center](../system-administration/admin-center.md). The add-on does not require a license. However, it can only be used with the pro variant.
+The "DNS Documentation" add-on is installed like any other add-on via the [Admin-Center](../system-administration/admin-center.md). The add-on does not require a license. However, it can only be used with the pro variant.
 
 Add-on content
 
@@ -36,7 +35,7 @@ The "DNS Documentation" add-on brings the following object types, categories and
 DNS Server
 ----------
 
-The delivered object type "DNS Server" is based on a normal server object, with the additional category "DNS Zones" assigned.   
+The delivered object type "DNS Server" is based on a normal server object, with the additional category "DNS Zones" assigned.
 In the add-on, an explicit object type is used so that a smooth integration can be ensured. The automatically assigned category "DNS Zones" contains an overview of all assigned DNS zones. (This is a backward category, which is why the information cannot be edited here).
 
 [![DNS Server](../assets/images/en/i-doit-add-ons/dns-documentation/1-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/1-dns.png)
@@ -44,7 +43,7 @@ In the add-on, an explicit object type is used so that a smooth integration can 
 DNS Zone
 --------
 
-In the new object type "DNS Zone" all information about the zone entries is documented.   
+In the new object type "DNS Zone" all information about the zone entries is documented.
 Three additional categories are available here:
 
 *   Authoritative Nameservers → the associated name servers are entered here and can be distinguished between "Primary" and "Secondary".
@@ -53,7 +52,7 @@ Three additional categories are available here:
 
 ### Authorizing name servers
 
-The category "Authoritative Nameservers" is a multi-value category. 
+The category "Authoritative Nameservers" is a multi-value category.
 
 [![Authorizing name servers](../assets/images/en/i-doit-add-ons/dns-documentation/2-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/2-dns.png)
 
@@ -73,7 +72,7 @@ The "DNS Records" category is also a multi-value category.
 
 [![DNS Records](../assets/images/en/i-doit-add-ons/dns-documentation/4-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/4-dns.png)
 
-The category was designed as a multi-value category so that a DNS file can be documented "line by line". This allows an overview of all entries. 
+The category was designed as a multi-value category so that a DNS file can be documented "line by line". This allows an overview of all entries.
 
 [![DNS Records](../assets/images/en/i-doit-add-ons/dns-documentation/5-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/5-dns.png)
 

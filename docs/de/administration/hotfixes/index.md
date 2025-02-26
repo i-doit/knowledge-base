@@ -53,6 +53,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## API Add-on
 
+### Saving field vlan_id does remove selected Layer-3 nets (API-604)
+
+[api_2.2-2.3_hotfix_API-604_7210da7.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.2-2.3_hotfix_API-604_7210da7.zip){ .md-button .md-button--primary }
+
 ### Reading a SQL Report without result (API-551)
 
 [api_2.2_hotfix_API-551_08fc1cb.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.2_hotfix_API-551_08fc1cb.zip){ .md-button .md-button--primary }

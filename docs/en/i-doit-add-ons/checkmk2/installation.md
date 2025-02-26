@@ -1,10 +1,10 @@
-# checkmk 2: Installation
+# Installation
 
 After you’ve met the [requirements](./requirements.md) download the latest stable version of the i-doit add-on from the [i-doit customer portal](https://center.i-doit.com/).
 
 Install the downloaded ZIP file [like any other i-doit add-on](./../index.md).
 
-## Adding the checkmk 2 add-on categories
+## Adding the Checkmk 2 add-on categories
 
 The add-on additionally makes the "Checkmk Host" and "Checkmk Tags" category available for all object types. The category can be linked to the desired object types via the object type configuration and [Edit data structure](../../system-administration/administration/data-structure/edit-data-structure.md). In this way, only those object types appear that are specified by the user in order to keep the selection list clear.
 

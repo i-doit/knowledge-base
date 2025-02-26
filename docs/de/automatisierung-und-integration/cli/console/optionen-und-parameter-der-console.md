@@ -59,7 +59,7 @@
 | [system-objectcleanup](#system-objectcleanup)                             | Objekte bereinigen (Objekte mit dem Status "unfertig", "archiviert" oder "gelöscht" werden endgültig entfernt)                                                                |
 | [system-objectrelations](#system-objectrelations)                         | Objekt-Beziehungen neu aufbauen                                                                                                                                               |
 | [system-refresh-table-configuration](#system-refresh-table-configuration) | Erneuert alle verfügbaren Listenkonfigurationen (Objekttypen und Kategorien)                                                                                                  |
-| [system-set-settings](#system-set-settings)                               | Ermöglicht das setzen von Admin Center Einstellungen über die CLI                                                                                                             |
+| [system-set-settings](#system-set-settings)                               | Ermöglicht das setzen von Admin-Center Einstellungen über die CLI                                                                                                             |
 | [tenant-create](#tenant-create)                                           | Einen neuen Mandanten hinzufügen                                                                                                                                              |
 | [tenant-disable](#tenant-disable)                                         | Einen bestehenden Mandanten deaktivieren                                                                                                                                      |
 | [tenant-enable](#tenant-enable)                                           | Einen bestehenden Mandanten aktivieren                                                                                                                                        |
@@ -576,7 +576,7 @@ Installieren Sie die i-doit Anwendung
 | -d                   | --database=DATABASE               | i-doit System Datenbankname [Standard: "idoit_system_temp"]                                      |
 | -U                   | --user=USER                       | Benutzername der i-doit-System-DB [Standard: "idoit"]                                            |
 | -P                   | --password[=PASSWORD]             | Passwort für i-doit system DB                                                                    |
-|                      | --admin-password[=ADMIN-PASSWORD] | Passwort für i-doit admin center                                                                 |
+|                      | --admin-password[=ADMIN-PASSWORD] | Passwort für i-doit Admin-Center                                                                 |
 | -l                   | --license-server=LICENSE-SERVER   | Pfad für den i-doit Lizenzserver [Standard: "https://lizenzen.i-doit.com"]                       |
 | -k                   | --key[=KEY]                       | Lizenzschlüssel für i-doit                                                                       |
 | -h                   | --help                            | Hilfenachricht zur Einblendung weiterer Informationen                                            |
@@ -1326,7 +1326,7 @@ sudo -u www-data php console.php system-refresh-table-configuration --user admin
 
 ### system-set-settings
 
-Ermöglicht das setzen von Admin Center Einstellungen über die CLI.
+Ermöglicht das setzen von Admin-Center Einstellungen über die CLI.
 
 **Optionen:**
 

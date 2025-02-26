@@ -6,16 +6,16 @@ The current installation package for the add-on can be downloaded from the i-doi
 
 ## Installation of the Forms add-on
 
-The installation itself is done in the i-doit [Admin Center](../../system-administration/admin-center.md) in the "Add-ons" tab. Here, the package is selected from the local system via the "Browse" button.
+The installation itself is done in the i-doit [Admin-Center](../../system-administration/admin-center.md) in the "Add-ons" tab. Here, the package is selected from the local system via the "Browse" button.
 
 After specifying for which tenant(s) the add-on should be made available, the installation can be completed via the "Upload and install" button.<br>
-After the release of a new version, the same way can be used in the [Admin Center](../../system-administration/admin-center.md) to upload and update the installed package, which will also be available in the i-doit [customer portal](../../system-administration/customer-portal.md).
+After the release of a new version, the same way can be used in the [Admin-Center](../../system-administration/admin-center.md) to upload and update the installed package, which will also be available in the i-doit [customer portal](../../system-administration/customer-portal.md).
 
 [![Installation of the Forms add-on](../../assets/images/en/i-doit-add-ons/forms/install/1-fi.png)](../../assets/images/en/i-doit-add-ons/forms/install/1-fi.png)
 
 ## Installing the license
 
-The installation via the [Admin Center](../../system-administration/admin-center.md) is done after login in the Licences tab. Use the Install new license button here to open the advanced dialog and select the license downloaded from the [customer portal](../../system-administration/customer-portal.md).
+The installation via the [Admin-Center](../../system-administration/admin-center.md) is done after login in the Licences tab. Use the Install new license button here to open the advanced dialog and select the license downloaded from the [customer portal](../../system-administration/customer-portal.md).
 
 New login may be necessary
 

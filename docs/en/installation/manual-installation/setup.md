@@ -134,7 +134,7 @@ Important credentials and settings need to be entered for the database connectio
 
 #### Framework Configuration
 
-There are separate credentials in i-doit to access the i-doit [**Admin Center**](../../system-administration/admin-center.md). They can be specified here and we recommend using this option.
+There are separate credentials in i-doit to access the i-doit [**Admin-Center**](../../system-administration/admin-center.md). They can be specified here and we recommend using this option.
 
 [![Framework configuration](../../assets/images/en/installation/manual-installation/setup/4-setup.png)](../../assets/images/en/installation/manual-installation/setup/4-setup.png)
 
@@ -166,7 +166,7 @@ sudo -u www-data php console.php install
 
 The wizard asks for some credentials and settings. Values in brackets are default values that are accepted by pressing **Enter**.
 
-A [Tenant](../../system-administration/multi-tenant.md) can then be created via the [Admin Center](../../system-administration/admin-center.md) or via the [console.php](../../automation-and-integration/cli/console/index.md).
+A [Tenant](../../system-administration/multi-tenant.md) can then be created via the [Admin-Center](../../system-administration/admin-center.md) or via the [console.php](../../automation-and-integration/cli/console/index.md).
 
 ```shell
 sudo -u www-data php console.php create-tenant

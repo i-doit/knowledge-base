@@ -62,4 +62,4 @@ Die virtuelle Maschine sollte nun Ordnungsgemäß starten und Sie sollten sich m
 | --- | --- | --- |
 | Console Login | idoitadm | idoit |
 | i-doit Login | admin | admin |
-| Admin Center Login | admin | idoit |
+| Admin-Center Login | admin | idoit |

@@ -4,7 +4,7 @@ Bei der GUI von i-doit handelt es sich um eine WEB Anwendung die mit dem jeweili
 
 ## Anmeldemaske
 
-Wird nach erfolgreicher Installation die Seite deiner i-doit Installation aufgerufen erscheint als erstes der Anmeldebildschirm. Hier hast du die Möglichkeit dich direkt bei i-doit anzumelden, oder den Weg in das [Admin Center](../administration/admin-center.md) zu suchen. Dieses erreichst du mit einem Klick auf "Admin Center" im unteren Bereich des Anmeldefensters.
+Wird nach erfolgreicher Installation die Seite deiner i-doit Installation aufgerufen erscheint als erstes der Anmeldebildschirm. Hier hast du die Möglichkeit dich direkt bei i-doit anzumelden, oder den Weg in das [Admin-Center](../administration/admin-center.md) zu suchen. Dieses erreichst du mit einem Klick auf "Admin-Center" im unteren Bereich des Anmeldefensters.
 
 [![anmeldemaske](../assets/images/de/grundlagen/web-gui/1-web-gui.png)](../assets/images/de/grundlagen/web-gui/1-web-gui.png)
 

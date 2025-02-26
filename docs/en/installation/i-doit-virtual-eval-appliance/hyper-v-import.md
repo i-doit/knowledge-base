@@ -62,4 +62,4 @@ The virtual machine should now start properly and you should be able to log in w
 | **Login** | **Username** | **Passwort** |
 | Console Login | idoitadm | idoit |
 | i-doit Login | admin | admin |
-| Admin Center Login | admin | idoit |
+| Admin-Center Login | admin | idoit |

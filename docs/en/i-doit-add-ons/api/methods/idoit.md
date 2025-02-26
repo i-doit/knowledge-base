@@ -260,7 +260,7 @@ Displays information about the installed license.
           },
           "cmk2": {
             "licensed": true,
-            "label": "i-doit Add-on Checkmk2"
+            "label": "i-doit Add-on Checkmk 2"
           },
           "document": {
             "licensed": true,
@@ -271,7 +271,7 @@ Displays information about the installed license.
         "licenses": [
           {
             "id": 2,
-            "label": "i-doit Add-on Checkmk2",
+            "label": "i-doit Add-on Checkmk 2",
             "licenseType": "Add-on",
             "registrationDate": "2023-08-01 00:00:00",
             "validUntil": "2023-08-31 00:00:00",

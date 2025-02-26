@@ -1,0 +1,4 @@
+[
+"docs/de/versionshistorie/changelogs/**/*.md",
+"docs/en/version-history/changelogs/**/*.md"
+]

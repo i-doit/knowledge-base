@@ -53,6 +53,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## API Add-on
 
+### Saving field vlan_id does remove selected Layer-3 nets (API-604)
+
+[api_2.2-2.3_hotfix_API-604_7210da7.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.2-2.3_hotfix_API-604_7210da7.zip){ .md-button .md-button--primary }
+
 ### Reading a SQL Report without result (API-551)
 
 [api_2.2_hotfix_API-551_08fc1cb.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.2_hotfix_API-551_08fc1cb.zip){ .md-button .md-button--primary }
@@ -87,10 +91,17 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 [floorplan_1.8_hotfix_FP-140_2e1ca1e.zip :material-file-download:](../../assets/downloads/hotfixes/floorplan/floorplan_1.8_hotfix_FP-140_2e1ca1e.zip){ .md-button .md-button--primary }
 
 ## Replacement
+## Replacement
 
 ### TypeErrors when selecting objects to swap
 
 [Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip :material-file-download:](../../assets/downloads/hotfixes/swap-ci/Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip){ .md-button .md-button--primary }
+
+## Maintenance Add-on
+
+### Option 'Send multiple notifications for each maintenance?' automatically sets to 'Yes' after finishing an upcoming maintenance [WARTUNG-97]
+
+[i-doit_maintenance-1.5_hotfix_WARTUNG-97_6cab331.zip :material-file-download:](../../assets/downloads/hotfixes/maintenance/i-doit_maintenance-1.5_hotfix_WARTUNG-97_6cab331.zip){ .md-button .md-button--primary }
 
 ## Maintenance Add-on
 

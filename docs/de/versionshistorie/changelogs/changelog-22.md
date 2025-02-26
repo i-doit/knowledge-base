@@ -56,7 +56,7 @@
 [Bug][List editing]                 All version numbers are displayed in list edit<br>
 [Bug][List editing]                 list edit of location category can not edit objects which have no location set<br>
 [Bug][List editing]                 List edit - Model is not displayed<br>
-[Bug][Admincenter]                  If a tenant has a wrong password for MySQL the Admin Center is blocked<br>
+[Bug][Admincenter]                  If a tenant has a wrong password for MySQL the Admin-Center is blocked<br>
 [Bug][Lists]                        Wrong sorting of locations<br>
 [Bug][Lists]                        Listview - filtering of date only works with english format<br>
 [Bug][Lists]                        Objects cannot be opened with read-only permissions<br>
