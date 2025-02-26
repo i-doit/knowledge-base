@@ -12,7 +12,7 @@ Für Benutzer von i-doit existiert eine zentrale Anlaufstelle. Dort befinden sic
 
 Erreicht werden kann das Kundenportal unter folgender Adresse:
 
-[portal.i-doit.com](https://portal.i-doit.com/) oder das neue **[Add-on & Subscription Center](https://center.i-doit.com/)**
+**[Add-on & Subscription Center](https://center.i-doit.com/)**
 
 Für das Kundenportal werden Zugangsdaten benötigt. i-doit Kunden erhalten während des Bestellprozesses einen Token um sich im Kundenportal anzumelden.
 Generell wird der Lizenz Token, für das login, verwendet.

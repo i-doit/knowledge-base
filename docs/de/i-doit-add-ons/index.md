@@ -50,7 +50,7 @@ Add-ons sind als installierbare ZIP-Dateien erhältlich. Diese werden über das 
 Im [Kundenportal](../administration/kundenportal.md) können Kunden Add-ons herunterladen. Lizenzpflichtige Add-ons (siehe oben) werden im Kaufprozess in Ihrem Kundenkonto zum Download freigeschaltet.
 Wenn Sie irgendwelche Add-ons vermissen, die Sie gekauft haben, kontaktieren Sie bitte [help@i-doit.com](mailto:help@i-doit.com) für Hilfe.
 
-Evaluierungsbenutzer können alle kostenlosen und kommerziellen Add-ons im Evaluierungsprozess herunterladen. Für alle Add-ons gibt es auf Ihrer persönlichen Evaluierungsseite ([https://portal.i-doit.com](https://portal.i-doit.com)) Download-Buttons. Alle lizenzpflichtigen Add-ons sind in der Evaluierungslizenz lizenziert.
+Evaluierungsbenutzer können alle kostenlosen und kommerziellen Add-ons im Evaluierungsprozess herunterladen. Für alle Add-ons gibt es auf Ihrer persönlichen Evaluierungsseite ([https://center.i-doit.com](https://center.i-doit.com)) Download-Buttons. Alle lizenzpflichtigen Add-ons sind in der Evaluierungslizenz lizenziert.
 
 ## Installation
 

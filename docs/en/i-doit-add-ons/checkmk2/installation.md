@@ -1,6 +1,6 @@
 # checkmk 2: Installation
 
-After you’ve met the [requirements](./requirements.md) download the latest stable version of the i-doit add-on from the [i-doit customer portal](https://portal.i-doit.com/).
+After you’ve met the [requirements](./requirements.md) download the latest stable version of the i-doit add-on from the [i-doit customer portal](https://center.i-doit.com/).
 
 Install the downloaded ZIP file [like any other i-doit add-on](./../index.md).
 
