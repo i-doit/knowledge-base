@@ -137,7 +137,7 @@ Kann die i-doit Instanz nicht auf das Internet bzw. das [Subskription & Add-ons]
 
 #### Schritt 1: Flows Add-on aus dem Kundenportal herunterladen
 
-Zuerst im Kundenportal unter <https://portal.i-doit.com> einloggen und dort unter Add-ons das Flows Add-on herunterladen
+Zuerst im Kundenportal unter <https://center.i-doit.com> einloggen und dort unter Add-ons das Flows Add-on herunterladen
 
 #### Schritt 2: Admin-Center öffnen
 

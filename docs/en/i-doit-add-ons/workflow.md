@@ -1,6 +1,14 @@
+---
+title: Workflow
+description: Workflow
+icon: addons/workflow
+status:
+lang: en
+---
+
 # Workflow
 
-The Workﬂow system in i-doit is an extensible module that generates Workﬂows. Thus, one-time TASKS, but also recurring CHECKLISTS can be created and assigned to the responsible persons and objects. Involved persons are informed via status-based notifications.
+The workflow system in i-doit is an extensible module that generates workflows. Thus, one-time TASKS, but also recurring CHECKLISTS can be created and assigned to the responsible persons and objects. Involved persons are informed via status-based notifications.
 
 ## Workflow types
 
@@ -8,7 +16,7 @@ The WORKFLOW-TYPE behaves like a template and includes all necessary parameters 
 
 ## The workflow
 
-A Workﬂow describes a scheduled action to be performed by the user, such as replacing the tape media of a specific backup server. Any Workﬂow assignment must be accepted by the appropriate people. After successful completion, a status report can be submitted.
+A workflow describes a scheduled action to be performed by the user, such as replacing the tape media of a specific backup server. Any workflow assignment must be accepted by the appropriate people. After successful completion, a status report can be submitted.
 
 ## Predefined workflow types
 
@@ -16,21 +24,21 @@ A Workﬂow describes a scheduled action to be performed by the user, such as re
 A work order is a scheduled action to be performed by selectable users.
 
 **Task**:
-The special Workﬂow type CHECKLISTS can be used to generate daily, weekly and yearly recurring Workﬂows by specifying a periodic time sequence to the pure start date and selecting the corresponding recurrence option.
-These recurring Workﬂows can also be terminated in a scheduled manner.
+The special workflow type CHECKLISTS can be used to generate daily, weekly and yearly recurring workflows by specifying a periodic time sequence to the pure start date and selecting the corresponding recurrence option.
+These recurring workflows can also be terminated in a scheduled manner.
 
-The name and the key for a new Workﬂow type can be freely chosen, the order specifies in which order the fields are displayed one below the other.
-Check for empty field gives an error message if the field is not filled in and an attempt is made to save the Workﬂow.
+The name and the key for a new workflow type can be freely chosen, the order specifies in which order the fields are displayed one below the other.
+Check for empty field gives an error message if the field is not filled in and an attempt is made to save the workflow.
 
 ## Parameters of the templates
 
-For the two Workﬂow types TASK (work order) and CHECKLIST there are already predefined parameters, which are taken into account when a new Workﬂow is created.
-The two date types for start and end date are automatically created for each newly created Workﬂow type.
+For the two workflow types TASK (work order) and CHECKLIST there are already predefined parameters, which are taken into account when a new workflow is created.
+The two date types for start and end date are automatically created for each newly created workflow type.
 The other parameters can be created and assigned to a new type as desired:
 
 *   Text
 *   Single line text field
-*   Fulltext
+*   Full text
 *   Multiline text field
 *   Numeric
 *   Numeric text field
@@ -80,9 +88,10 @@ sudo -u www-data php console.php workflows-process --user admin --password admin
 ```
 
 ## Releases
-
+<!-- cSpell:disable -->
 | Version | Datum      | Changelog                                                                                                                                                                                                                                       |
 | ------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.5     | 2025-02-26 | [Task] Make symfony 6.4 compatible<br>[Task] Make Smarty 5 compatible<br>[Bug] Workflow Checklist is inaccessible after workflow is accepted                                                                                                    |
 | 1.4     | 2024-10-10 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                             |
 | 1.3     | 2024-07-09 | [Bug] Workflow Add-on User Permissions are not available<br>[Bug] This task is part of the following checklist link does not work<br>[Bug] Dependent tasks are not displayed in checklists                                                      |
 | 1.2     | 2023-11-07 | [Task] Use new routes to display object and object type images / move add-on related files                                                                                                                                                      |

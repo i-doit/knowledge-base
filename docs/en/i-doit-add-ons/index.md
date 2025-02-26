@@ -21,7 +21,7 @@ The [IT documentation](../basics/structure-of-the-it-documentation.md) and the [
 | **[API](./api/index.md)**                                                         | no                  |
 | **[Cabling](./cabling.md)**                                                       | no                  |
 | **[Checkmk](./checkmk.md)**                                                       | no                  |
-| **[Checkmk 2](./checkmk2/index.md)**                                               | yes                 |
+| **[Checkmk2](./checkmk2/index.md)**                                               | yes                 |
 | **[DNS Documentation](dns-documentation.md)**                                     | no                  |
 | **[Documents](./documents/index.md)**                                             | yes                 |
 | **[Events](./events.md)**                                                         | no                  |
@@ -32,19 +32,19 @@ The [IT documentation](../basics/structure-of-the-it-documentation.md) and the [
 | **[i-diary](./i-diary/index.md)**                                                 | no                  |
 | **[ISMS aka ISO27001](./isms.md)**                                                | yes                 |
 | **[Maintenance](./maintenance.md)**                                               | no                  |
-| **[Nagios](./../automation-and-integration/network-monitoring/nagios.md)**        | no                  |
+| **[Nagios](./nagios.md)**                                                         | no                  |
 | **[Relocate-CI](./relocate-ci.md)**                                               | no                  |
 | **[Replacement](./replacement.md)**                                               | no                  |
 | **Report Special ([GER](https://www.i-doit.com/blog/i-doit-reporting-special/))** | no                  |
 | **[VIVA](viva/index.md)**                                                         | yes                 |
-| **[VIVA2](viva2.md)**                                                             | yes                 |
+| **[VIVA2 aka IT-Grundschutz](viva2.md)**                                          | yes                 |
 | **[Workflow](./workflow.md)**                                                     | no                  |
 
 Beside these add-ons there are many others which are provided by our partners or external developers. You can find a detailed list at the i-doit website [i-doit.com under **Product → Add-ons**](https://www.i-doit.com/en/i-doit/add-ons/).
 
 ## Download
 
-Add-ons are available as ZIP-files. These are installed via the [Admin-Center](../system-administration/admin-center.md#add-ons). Customers can download add-ons in the [customer portal](../system-administration/customer-portal.md). Add-ons which are subject to licensing (see above) will be unlocked for download in your customer account in the buying process. If you miss any add-ons that you bought, please contact [help@i-doit.com](mailto:help@i-doit.com) for assistance. Evaluation users can download all free- und commercial add-ons in the evaluation process. There are download buttons for all add-ons on your personal evaluation page (e.g. [https://portal.i-doit.com](https://portal.i-doit.com)). All add-ons that are subject to licensing are licensed in the evaluation license.
+Add-ons are available as ZIP-files. These are installed via the [Admin Center](../system-administration/admin-center.md#add-ons). Customers can download add-ons in the [customer portal](../system-administration/customer-portal.md). Add-ons which are subject to licensing (see above) will be unlocked for download in your customer account in the buying process. If you miss any add-ons that you bought, please contact [help@i-doit.com](mailto:help@i-doit.com) for assistance. Evaluation users can download all free- und commercial add-ons in the evaluation process. There are download buttons for all add-ons on your personal evaluation page (e.g. [https://center.i-doit.com](https://center.i-doit.com)). All add-ons that are subject to licensing are licensed in the evaluation license.
 
 ## Installation
 
@@ -63,7 +63,7 @@ After the add-on has been installed successfully, you will receive a confirmatio
 
 [![Overview](../assets/images/en/i-doit-add-ons/3-iao.png)](../assets/images/en/i-doit-add-ons/3-iao.png)
 
-If an add-on is available but not yet installed, it will be marked with **not installed** in the list of the respective tenant. With the **Install** button you can carry out the installation later without having to upload the ZIP file again.
+If an add-on is available but not yet installed, it will be marked with **not installed** in the list of the respective tenant. With the **Install** button you can carry out the installation later without having to upload the ZIP file again.
 
 ## Rights Assignment
 
@@ -77,7 +77,7 @@ The required steps are similar to the installation process: Upload and install t
 
 ## Uninstall
 
-You can uninstall an add-on with the above mentioned list by activating the checkbox and then using the **Uninstall selected module** button. A dialogue will ask you to confirm this action. All files and user data associated with the add-on will be **deleted irreversibly**. The Uninstallation will be tenant-wide. By clicking various checkboxes you can uninstall several add-ons simultaneously.
+You can uninstall an add-on with the above mentioned list by activating the checkbox and then using the **Uninstall selected module** button. A dialogue will ask you to confirm this action. All files and user data associated with the add-on will be **deleted irreversibly**. The Uninstallation will be tenant-wide. By clicking various checkboxes you can uninstall several add-ons simultaneously.
 
 ## (De)activation
 

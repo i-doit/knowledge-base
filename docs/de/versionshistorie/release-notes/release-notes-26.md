@@ -20,6 +20,6 @@ If you have been using one or more of these add-ons, you need to update them ==b
 
 -   [Analysis 1.3.1](../../i-doit-add-ons/analysis.md#releases)
 -   [Maintenance 1.2.2](../../i-doit-add-ons/maintenance.md#releases)
--   [Nagios 1.1.1](../..//automatisierung-und-integration/network-monitoring/nagios.md)
+-   [Nagios 1.1.1](../../i-doit-add-ons/nagios.md)
 -   [Workflow 1.1.1](../../i-doit-add-ons/workflow.md#releases)
 -   [Packager 1.2.1](../../i-doit-add-ons/add-on-packager.md#releases)

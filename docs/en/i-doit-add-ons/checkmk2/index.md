@@ -335,7 +335,7 @@ First public release 🎉
 
 -   Because of several major changes in i-doit we had to increase minimum versions of i-doit and API add-on.
 -   Please re-run idoitcmk init to update configuration setting pull.attributes.
--   From now on, you need a valid license for this add-on. Download your license file from [https://portal.i-doit.com/](https://portal.i-doit.com/).
+-   From now on, you need a valid license for this add-on. Download your license file from [https://center.i-doit.com/](https://center.i-doit.com/).
 
 ### Added
 

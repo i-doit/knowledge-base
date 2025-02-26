@@ -1,6 +1,6 @@
 # Dashboard and Widgets
 
-To be provided with the most important information upon signing in to i-doit you can customize your dashboard with useful widgets. Each user in i-doit has his own dashboard and can personalize his own view of data. Should you have set up the “ultimate” dashboard, you can even define it as default dashboard or transfer it to specific users.
+To be provided with the most important information upon signing in to i-doit you can customize your dashboard with useful widgets. Each user in i-doit has his own dashboard and can personalize his own view of data. Should you have set up the "ultimate" dashboard, you can even define it as default dashboard or transfer it to specific users.
 
 Access
 ------
@@ -34,7 +34,7 @@ A list of all users who are signed in is displayed.
 
 ### Calendar
 
-The calendar widget marks fixed dates or events in bold letters. For this purpose, a check has to be set via the pencil so that object dates, such as the status planning, are considered. It is mandatory to have the role of  “administrator” for that particular object with a planned status, so that the calendar entry will be shown.
+The calendar widget marks fixed dates or events in bold letters. For this purpose, a check has to be set via the pencil so that object dates, such as the status planning, are considered. It is mandatory to have the role of "administrator" for that particular object with a planned status, so that the calendar entry will be shown.
 
 [![Calendar](../assets/images/en/basics/dashboard-and-widgets/5-daw.png)](../assets/images/en/basics/dashboard-and-widgets/5-daw.png)
 
@@ -74,9 +74,9 @@ The objects last changed by the user who is signed in are displayed in this widg
 
 [![My Last Changed Objects](../assets/images/en/basics/dashboard-and-widgets/13-daw.png)](../assets/images/en/basics/dashboard-and-widgets/13-daw.png)
 
-  ### Monitoring: Vulnerable Hosts
+### Monitoring: Vulnerable Hosts
 
-This widget requires a connection to [Nagios](../automation-and-integration/network-monitoring/nagios.md) or [Checkmk](../i-doit-add-ons/checkmk.md) and displays a view of vulnerable hosts. Via the pencil you can select the host which is to be displayed.
+This widget requires a connection to [Nagios](../i-doit-add-ons/nagios.md) or [Checkmk](../i-doit-add-ons/checkmk.md) and displays a view of vulnerable hosts. Via the pencil you can select the host which is to be displayed.
 
 ### Notes
 
@@ -102,7 +102,7 @@ The widget displays a standard set of information for up to three objects which 
 
 ### Object Information List
 
-You can select one or more objects via the object list using the pencil symbol and decide which [attributes](../glossary.md) are going to be displayed from the various [categories](../glossary.md).
+You can select one or more objects via the object list using the pencil symbol and decide which [attributes](../glossary.md) are going to be displayed from the various [categories](../glossary.md).
 
 [![Object Information List](../assets/images/en/basics/dashboard-and-widgets/19-daw.png)](../assets/images/en/basics/dashboard-and-widgets/19-daw.png)
 
@@ -140,7 +140,7 @@ Via the pencil you can configure the address and the amount of displayed entries
 
 ### Service Consistency Check
 
-The consistency check examines the status of objects which are part of a service. Its purpose is to find a status among those objects which might threaten the status of the service. In our example, the objects are all in the CMDB status “stored”, which is why the superordinated service might be threatened.
+The consistency check examines the status of objects which are part of a service. Its purpose is to find a status among those objects which might threaten the status of the service. In our example, the objects are all in the CMDB status "stored", which is why the superordinated service might be threatened.
 
 !!! attention "Performance"
 

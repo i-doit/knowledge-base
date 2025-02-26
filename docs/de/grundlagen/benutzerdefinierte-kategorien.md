@@ -28,55 +28,37 @@ Um auf die Kategorie bei Abfragen (zum Beispiel in selbst geschriebenen [Reports
 
 Um eine Kategorie auszuprägen, können beliebig viele Attribute über den Button **Mehrere Felder hinzufügen** hinzugefügt werden. Hier stehen folgende [Feldtypen](attributfelder.md) zur Auswahl:
 
--   **Checkbox**<br>
-    Eine Checkbox die markiert werden kann
--   **Dateibrowser**<br>
-    Eine Datei referenzieren
--   **Datum und Uhrzeit**<br>
-    Ein Feld zum Eintragen eines Datums und/oder einer Uhrzeit; innerhalb der Kategorie steht hier ein Kalender zur Verfügung, mit dem die Auswahl ermöglicht wird.
--   **Dialog+**<br>
-    [Dialog-Plus-Felder](dialog-admin.md), die mit eigenen Werten befüllt werden können, sodass diese wiederverwendbar sind. Über den Identifier im Feld **Zusatz** kann das Dialog-Plus-Feld auch in anderen Kategorien genutzt werden, sodass dort die bereits eingetragenen Werte zur Verfügung stehen. Hierfür ist es notwendig, denselben Identifier in beiden Kategorien einzutragen.
--   **Dialog+ (Mehrfachauswahl)**<br>
-    Wie **Dialog+**, nur mit beliebig vielen Werten
--   **HTML-Editor**<br>
-    Ein Textfeld, das einfache Textformatierungen wie zum Beispiel kursive Schrift erlaubt
--   **Ja-Nein-Feld**<br>
-    Eine einfache Ja-oder-Nein-Auswahl
--   **Link**<br>
-    Ein Feld zur Angabe eines Hyperlinks, der innerhalb der Kategorie angeklickt werden kann und dort weiterleitet
--   **Nur Zahlen sind erlaubt**<br>
-    Ein Feld in dem nur Zahlen eingetragen werden können.
--   **Objekt-Beziehung**<br>
-    Bei der Verwendung einer [Objektbeziehung](objekt-beziehungen.md) wird eine vollwertige Beziehung erzeugt. Das Feld **Zusatz** erlaubt die Auswahl der Beziehungsart und den damit verbundenen Beziehungstext. Diese Beziehungen sind auch im CMDB Explorer aufzufinden. Wenn möglich, ist dieser Feldtyp dem oben genannten Objekt-Browser zu bevorzugen.
--   **Objekt-Beziehung (Mehrere Objekte)**<br>
-    Wie **Objekt-Beziehung**, nur mit beliebig vielen Objekten
--   **Objekt-Browser**<br>
-    Ein Feld zur Erzeugung einer Verknüpfung mit einem anderen Objekt. Hierbei handelt es sich nur um eine Referenzierung und nicht um eine vollwertige Beziehung. Eine solche Referenzierung wird daher nicht im CMDB Explorer erscheinen.
--   **Objekt-Browser (Mehrere Objekte)**<br>
-    Wie **Objekt-Browser**, nur mit beliebig vielen Objekten
--   **Report**<br>
-    Zeigt einen Report an, dazu muss die ID des Report in das Zusatz Feld eingetragen werden.
--   **Textfeld**<br>
-    Ein einzeiliges Textfeld zur Eingabe von Freitext
--   **Textfeld (maskiert)**<br>
-    Ein einzeiliges Textfeld zur Eingabe von maskiertem Freitext. Der Inhalt ist nur in der Datenbank sichtbar.
--   **Textfeld (Mehrzeilig)**<br>
-    In diesem mehrzeiligen Textfeld können längere Texte hinterlegt werden.
--   **Datum und Uhrzeit**<br>
-    Ein Feld für Datum oder für Datum + Uhrzeit
--   **Zeit**<br>
-    Hier kann eine Uhrzeit zwischen 00:00 und 23:59 angegeben werden
+| Feld                                   | Beschreibung                                                                                                                                                                                                                                                                                                                                                                            |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Checkbox**                           | Eine Checkbox die markiert werden kann.                                                                                                                                                                                                                                                                                                                                                 |
+| **Dateibrowser**                       | Eine Datei referenzieren.                                                                                                                                                                                                                                                                                                                                                               |
+| **Datum und Uhrzeit**                  | Ein Feld zum Eintragen eines Datums und/oder einer Uhrzeit; innerhalb der Kategorie steht hier ein Kalender zur Verfügung, mit dem die Auswahl ermöglicht wird.                                                                                                                                                                                                                         |
+| **Dialog+**                            | [Dialog-Plus-Felder](dialog-admin.md), die mit eigenen Werten befüllt werden können, sodass diese wiederverwendbar sind. Über den Identifier im Feld **Zusatz** kann das Dialog-Plus-Feld auch in anderen Kategorien genutzt werden, sodass dort die bereits eingetragenen Werte zur Verfügung stehen. Hierfür ist es notwendig, denselben Identifier in beiden Kategorien einzutragen. |
+| **Dialog+ (Mehrfachauswahl)**          | Wie **Dialog+**, nur mit beliebig vielen Werten.                                                                                                                                                                                                                                                                                                                                        |
+| **HTML-Editor**                        | Ein Textfeld, das einfache Textformatierungen wie zum Beispiel kursive Schrift erlaubt.                                                                                                                                                                                                                                                                                                 |
+| **Ja-Nein-Feld**                       | Eine einfache Ja-oder-Nein-Auswahl.                                                                                                                                                                                                                                                                                                                                                     |
+| **Link**                               | Ein Feld zur Angabe eines Hyperlinks, der innerhalb der Kategorie angeklickt werden kann und dort weiterleitet.                                                                                                                                                                                                                                                                         |
+| **Nur Zahlen sind erlaubt**            | Ein Feld in dem nur Zahlen eingetragen werden können.                                                                                                                                                                                                                                                                                                                                   |
+| **Objekt-Beziehung**                   | Bei der Verwendung einer [Objektbeziehung](objekt-beziehungen.md) wird eine vollwertige Beziehung erzeugt. Das Feld **Zusatz** erlaubt die Auswahl der Beziehungsart und den damit verbundenen Beziehungstext. Diese Beziehungen sind auch im CMDB Explorer aufzufinden. Wenn möglich, ist dieser Feldtyp dem oben genannten Objekt-Browser zu bevorzugen.                              |
+| **Objekt-Beziehung (Mehrere Objekte)** | Wie **Objekt-Beziehung**, nur mit beliebig vielen Objekten.                                                                                                                                                                                                                                                                                                                             |
+| **Objekt-Browser**                     | Ein Feld zur Erzeugung einer Verknüpfung mit einem anderen Objekt. Hierbei handelt es sich nur um eine Referenzierung und nicht um eine vollwertige Beziehung. Eine solche Referenzierung wird daher nicht im CMDB Explorer erscheinen.                                                                                                                                                 |
+| **Objekt-Browser (Mehrere Objekte)**   | Wie **Objekt-Browser**, nur mit beliebig vielen Objekten.                                                                                                                                                                                                                                                                                                                               |
+| **Report**                             | Zeigt einen Report an, dazu muss der Report im Feld Zusatz ausgewählt werden.                                                                                                                                                                                                                                                                                                           |
+| **Textfeld**                           | Ein einzeiliges Textfeld zur Eingabe von Freitext                                                                                                                                                                                                                                                                                                                                       |
+| **Textfeld (maskiert)**                | Ein einzeiliges Textfeld zur Eingabe von maskiertem Freitext. Der Inhalt ist nur in der Datenbank sichtbar.                                                                                                                                                                                                                                                                             |
+| **Textfeld (Mehrzeilig)**              | In diesem mehrzeiligen Textfeld können längere Texte hinterlegt werden.                                                                                                                                                                                                                                                                                                                 |
+| **Datum und Uhrzeit**                  | Ein Feld für Datum oder für Datum + Uhrzeit                                                                                                                                                                                                                                                                                                                                             |
+| **Zeit**                               | Hier kann eine Uhrzeit zwischen 00:00 und 23:59 angegeben werden                                                                                                                                                                                                                                                                                                                        |
 
 Zusätzlich sind folgende Elemente verfügbar:
 
--   **Horizontale Linie**<br>
-    Eine Linie zur optischen Abgrenzung von Feldern und Inhalten
--   **HTML**<br>
-    Die Möglichkeit in der Konfiguration der Kategorie HTML-Code zu hinterlegen, der in der Kategorie interpretiert wird. Der Quellcode wird in der Konfiguration der Kategorie eingetragen und kann nicht beim Aufruf der Kategorie in der Dokumentation durch die Anwender eingetragen werden.
--   **Javascript**<br>
-    Die Möglichkeit in der Konfiguration der Kategorie Javascript-Code zu hinterlegen, der in der Kategorie interpretiert wird. Der Quellcode wird in der Konfiguration der Kategorie eingetragen und kann nicht beim Aufruf der Kategorie in der Dokumentation durch die Anwender eingetragen werden.
+| Feld                  | Beschreibung                                                                                                                                                                                                                                                                                       |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Horizontale Linie** | Eine Linie zur optischen Abgrenzung von Feldern und Inhalten                                                                                                                                                                                                                                       |
+| **HTML**              | Die Möglichkeit in der Konfiguration der Kategorie HTML-Code zu hinterlegen, der in der Kategorie interpretiert wird. Der Quellcode wird in der Konfiguration der Kategorie eingetragen und kann nicht beim Aufruf der Kategorie in der Dokumentation durch die Anwender eingetragen werden.       |
+| **Javascript**        | Die Möglichkeit in der Konfiguration der Kategorie Javascript-Code zu hinterlegen, der in der Kategorie interpretiert wird. Der Quellcode wird in der Konfiguration der Kategorie eingetragen und kann nicht beim Aufruf der Kategorie in der Dokumentation durch die Anwender eingetragen werden. |
 
-Wie bei fast jeder anderen Kategorie wird bei einer benutzerdefinierten automatisch ein **Beschreibungsfeld** am Ende angehangen.
+Wie bei fast jeder anderen Kategorie wird bei einer benutzerdefinierten automatisch ein **Beschreibungsfeld** am Ende hinzugefügt.
 Die Reihenfolge der erstellten Attribute kann über die schraffierten Flächen am Anfang jeder Zeile per Drag'n'Drop verändert werden.
 
 [![benutzerdefinierte-kategorien-6](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/6-bk.gif)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/6-bk.gif)
@@ -86,14 +68,14 @@ Die Reihenfolge der erstellten Attribute kann über die schraffierten Flächen a
 [![benutzerdefinierte-kategorien-7](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/7-bk.gif)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/7-bk.gif)
 
 !!! attention "Achtung!"
-    Sobald die Kategorie in Verwendung ist, ist das Ändern von bestehenden Feldtypen nicht mehr möglich, um Datenverlust zu vermeiden.<br>
-    Sollten Felder in der Konfiguration entfernt werden, kann man auf deren Inhalte nicht mehr zugreifen.<br>
-    Anschließend müssen die Attribute über die [Systemreparatur und Bereinigung](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) neu indiziert werden.
+    Sobald die Kategorie in Verwendung ist, ist das Ändern von bestehenden Feldtypen nicht mehr möglich, um Datenverlust zu vermeiden. Sollten Felder in der Konfiguration entfernt werden, kann man auf deren Inhalte nicht mehr zugreifen. Anschließend müssen die Attribute über die [Systemreparatur und Bereinigung](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) neu indiziert werden.
 
 Unterhalb der Konfiguration erfolgt eine Auswertung:
 
--   **Kategorieeinträge gesamt**:<br> Wie oft wurde die Kategorie gespeichert? Pro Objekt werden die Einträge (bei Single-Value also einmal, bei Multi-Value pro Eintrag) zusammen gerechnet.
--   **Gepflegte Werte**:<br> Jedes Attribut, das ausgefüllt und gespeichert wurde, wird Objekt-übergreifend zusammen gezählt.
+| Statistik                    | Beschreibung                                                                                                                                            |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Kategorieeinträge gesamt** | Wie oft wurde die Kategorie gespeichert? Pro Objekt werden die Einträge (bei Single-Value also einmal, bei Multi-Value pro Eintrag) zusammen gerechnet. |
+| **Gepflegte Werte**          | Jedes Attribut, das ausgefüllt und gespeichert wurde, wird Objekt-übergreifend zusammen gezählt.                                                        |
 
 [![benutzerdefinierte-kategorien-8](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/8-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/8-bk.png)
 

@@ -2,6 +2,7 @@
 
 What changes were published per release of _i-doit_?
 
+-   [Changelog 34](./changelog-34.md)
 -   [Changelog 33](./changelog-33.md)
 -   [Changelog 32](./changelog-32.md)
 -   [Changelog 31](./changelog-31.md)

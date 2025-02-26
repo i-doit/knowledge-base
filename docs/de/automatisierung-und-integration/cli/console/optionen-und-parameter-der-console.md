@@ -67,7 +67,7 @@
 | [tenant-remove](#tenant-remove)                                           | Einen bestehenden Mandanten entfernen                                                                                                                                         |
 | [uninstall](#uninstall)                                                   | Deinstalliert i-doit                                                                                                                                                          |
 | [update](#update)                                                         | Update von i-doit installieren                                                                                                                                                |
-| [idoit:feature-manager](#idoitfeature-manager)                           | Mit diesem Befehl ist es möglich Features in i-doit zu aktivieren            |
+| [idoit:feature-manager](#idoitfeature-manager)                            | Mit diesem Befehl ist es möglich Features in i-doit zu aktivieren                                                                                                             |
 
 !!! attention "Konfigurationsdatei und Parameter --config"
     Es ist möglich dem Aufruf zusätzliche Inhalte über eine Konfigurationsdatei zu übergeben. Diese Datei muss im i-doit Verzeichnis src/handler/config/ abgelegt werden. Ein Beispiel in Form der Datei "isys_handler_ldap.ini" ist im Verzeichnis src/handler/config/examples/ zu finden.<br>
@@ -1354,20 +1354,24 @@ Erstellt einen neuen Mandanten.
 
 **Optionen:**
 
-| Parameter (Kurzform) | Parameter (Langform)            | Beschreibung                                                                                     |
-| -------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------ |
-| -u                   | --root-user=[ROOT-USER]         | Benutzername des privilegierten DB-Benutzers [default: "root"]                                   |
-| -p                   | --root-password=[ROOT-PASSWORD] | Passwort des privilegierten DB-Benutzers                                                         |
-| -U                   | --user=[USER]                   | Benutzername der DB für neuen Mandanten [default: "idoit"]                                       |
-| -P                   | --password=[PASSWORD]           | Password der DB für den neuen Mandanten                                                          |
-| -d                   | --database=[DATABASE]           | DB Name für den neuen Mandanten [default: "idoit_data"]                                          |
-| -t                   | --title=[TITLE]                 | Name des neuen Mandanten[default: "Your company name"]                                           |
-| -h                   | --help                          | Hilfenachricht zur Einblendung weiterer Informationen                                            |
-| -q                   | --quiet                         | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
-| -V                   | --version                       | Ausgabe der Version der i-doit Console                                                           |
-|                      | --ansi<br>--no-ansi             | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                   | --no-interaction                | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
-| -v / -vv / -vvv      | --verbose                       | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzform) | Parameter (Langform)                          | Beschreibung                                                                                     |
+| -------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --root-user=[ROOT-USER]                       | Benutzername des privilegierten DB-Benutzers [default: "root"]                                   |
+| -p                   | --root-password=[ROOT-PASSWORD]               | Passwort des privilegierten DB-Benutzers                                                         |
+| -U                   | --user=[USER]                                 | Benutzername der DB für neuen Mandanten [default: "idoit"]                                       |
+| -P                   | --password=[PASSWORD]                         | Password der DB für den neuen Mandanten                                                          |
+| -d                   | --database=[DATABASE]                         | DB Name für den neuen Mandanten [default: "idoit_data"]                                          |
+| -t                   | --title=[TITLE]                               | Name des neuen Mandanten[default: "Your company name"]                                           |
+|                      | --login-user[=LOGIN-USER]                     | Benutzername des i-doit-Benutzers                                                                |
+|                      | --login-password[=LOGIN-PASSWORD]             | Passwort des i-doit-Benutzers                                                                    |
+|                      | --login-recovery-email[=LOGIN-RECOVERY-EMAIL] | E-Mail des i-doit-Benutzers zur Wiederherstellung                                                |
+|                      | --send-email                                  | E-Mail für das initiale Passwort zusenden                                                        |
+| -h                   | --help                                        | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                                       | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version                                     | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi                           | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction                              | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose                                     | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Beispiel zur Verwendung**
 
@@ -1524,15 +1528,15 @@ Mit diesem Befehl ist es möglich Features in i-doit zu aktivieren
 
 | Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                     |
 | -------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
-|                      | --unset-cloud         | Deaktivieren wenn Anwendung eine Cloud-Instanz ist               |
-|                      | --set-cloud           | Aktivieren wenn Anwendung eine Cloud-Instanz ist                 |
-| -e                   | --enable=[ENABLE]     | Features aktivieren                                              |
-| -d                   | --disable=[DISABLE]   | Features deaktivieren                                            |
-| -r                   | --replace=[REPLACE]   | Vorhandene Features austauschen                                  |
-| -c                   | --cloudable           | Nur Cloud fähige Features werden beachtet                        |
-| -f                   | --noncloudable        | Nur nicht Cloud fähige Features werden beachtet                  |
-|                      | --wizard              | Interaktiver Modus um Features zu aktivieren oder deaktivieren   |
-| -l                   | --list                | Zeigt alle verfügbaren Features                                  |
+|                      | --unset-cloud         | Deaktivieren wenn Anwendung eine Cloud-Instanz ist                                               |
+|                      | --set-cloud           | Aktivieren wenn Anwendung eine Cloud-Instanz ist                                                 |
+| -e                   | --enable=[ENABLE]     | Features aktivieren                                                                              |
+| -d                   | --disable=[DISABLE]   | Features deaktivieren                                                                            |
+| -r                   | --replace=[REPLACE]   | Vorhandene Features austauschen                                                                  |
+| -c                   | --cloudable           | Nur Cloud fähige Features werden beachtet                                                        |
+| -f                   | --noncloudable        | Nur nicht Cloud fähige Features werden beachtet                                                  |
+|                      | --wizard              | Interaktiver Modus um Features zu aktivieren oder deaktivieren                                   |
+| -l                   | --list                | Zeigt alle verfügbaren Features                                                                  |
 | -u                   | --user=[USERNAME]     | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
 | -p                   | --password=[PASSWORD] | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
 | -i                   | --tenant=[TENANT-ID]  | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |

@@ -1,7 +1,15 @@
+---
+title: Hotfix archive
+description: Hotfix archive for all i-doit versions
+icon: fontawesome/solid/bug-slash
+lang: en
+---
+
 # Hotfix archive
 
 Here we find the archive of old hotfix pages.
 
+-   [Version 33](v33.md)
 -   [Version 32](v32.md)
 -   [Version 31](v31.md)
 -   [Version 30](v30.md)

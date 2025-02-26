@@ -4,6 +4,8 @@ Wann erschien welches Release von i-doit?
 
 | Version                | Datum          | Release Notes                                                    | Changelog                                                                    |
 | ---------------------- | -------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| 2025<br>----           |                |                                                                  |                                                                              |
+| **34**                 | **26.02.2025** | **[Release Notes](./release-notes/release-notes-34.md)**         | **[Changelog](./changelogs/changelog-34.md)**                                |
 | 2024<br>----           |                |                                                                  |                                                                              |
 | **33**                 | **10.10.2024** | **[Release Notes](./release-notes/release-notes-33.md)**         | **[Changelog](./changelogs/changelog-33.md)**                                |
 | **32**                 | **09.07.2024** | **[Release Notes](./release-notes/release-notes-32.md)**         | **[Changelog](./changelogs/changelog-32.md)**                                |

@@ -1,6 +1,22 @@
+---
+title: Einstellungen für [Mandanten-Name]
+description: Einstellungen für [Mandanten-Name]
+icon:
+status:
+lang: de
+---
+
 # Einstellungen für [Mandanten-Name]
 
-Hier findest du Einstellungen für den aktuellen Mandanten.
+Hier findest du Einstellungen für den aktuellen Mandanten. Alle Einstellungen lassen sich über `Alles ausklappen` ausklappen und über `Alles einklappen` wieder einklappen.
+
+[![Einstellungen übersicht](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/einstellungen/uebersicht.png)](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/einstellungen/uebersicht.png)
+
+## Passwort zurücksetzen
+
+| Option                | Wert                                       |
+| --------------------- | ------------------------------------------ |
+| Passwort zurücksetzen | Aktiviert oder deaktiviert für den Mandant |
 
 ## URL Einstellungen
 
@@ -9,7 +25,7 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | i-doit Adresse (URL) | URL zur i-doit installation |
 
 ## CMDB
-
+<!-- cSpell:disable -->
 | Option                                                                | Wert                                                                                                      |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | CSV-Export Trennzeichen                                               | Komma, Semikolon, Raute oder Tab                                                                          |
@@ -35,9 +51,9 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | WYSIWYG Editor in Kategorien                                          | Ja oder Nein                                                                                              |
 | Aktiviere alle WYSIWYG Editor Funktionen                              | Ja oder Nein                                                                                              |
 | my-doit CMDB-Status auswahl speichern                                 | Ja oder Nein                                                                                              |
-
+<!-- cSpell:enable -->
 ## Display Limits
-
+<!-- cSpell:disable -->
 | Option                                                      | Wert                        |
 | ----------------------------------------------------------- | --------------------------- |
 | Anzeigelimit verknüpfter Objekte in Objektbrowser           | Wert                        |
@@ -53,15 +69,15 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Anzeigelimit von Services im CMDB Explorer Popup            | Wert                        |
 | Limit der Tiefe des Standortpfades                          | Wert                        |
 | MyDoIt Taskeinträge                                         | Wert                        |
-
+<!-- cSpell:enable -->
 ## Optionen für IP-Liste
-
+<!-- cSpell:disable -->
 | Option                       | Wert                                                                                                                                                                             |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Cache Zeitraum (in Sekunden) | Wert                                                                                                                                                                             |
 | Ping Funktion                | Ping via NMAP<br>Ping via FPING                                                                                                                                                  |
 | NMAP Parameter (für Ping)    | PE/PP/PM: ICMP echo, timestamp, and netmask request discovery probes<br>sP: Ping Scan - go no further than determining if host is online<br>PR: ARP Scan<br>sT: TCP Connect Scan |
-
+<!-- cSpell:enable -->
 ## Unique checks (Auswertung lediglich während Import/Export Vorgängen!)
 
 | Option        | Wert         |
@@ -91,18 +107,18 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 
 ## Maximallänge von Zeichenfolgen
 
-| Option                             | Wert |
-| ---------------------------------- | ---- |
-| Dialog-Plus                        | Wert |
+| Option                            | Wert |
+| --------------------------------- | ---- |
+| Dialog-Plus                       | Wert |
 | Objektbezeichnung im Standortpfad | Wert |
-| Kompletter Standortpfad            | Wert |
+| Kompletter Standortpfad           | Wert |
 
 ## Logbuch
 
-| Option                                      | Wert         |
-| ------------------------------------------- | ------------ |
-| Detaillierte CMDB Änderungen protokollieren | Ja oder Nein |
-| "Änderungskommentar" deaktivieren           | Ja oder Nein |
+| Option                                                      | Wert         |
+| ----------------------------------------------------------- | ------------ |
+| Detaillierte CMDB Änderungen protokollieren                 | Ja oder Nein |
+| "Änderungskommentar" deaktivieren                           | Ja oder Nein |
 | Logbucheinträge zu bereinigten Objekten vollständig löschen | Ja oder Nein |
 
 ## Templates
@@ -131,7 +147,6 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Rechtesystem Log | Ja oder Nein |
 | Exception Log    | Ja oder Nein |
 | CMDB Import      | Ja oder Nein |
-| LDAP Debug       | Ja oder Nein |
 
 ## Quickinfo (Link mouseover)
 
@@ -141,14 +156,14 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Zeilen pro Kategorie | Wert                    |
 
 ## LDAP
-
+<!-- cSpell:disable -->
 | Option               | Wert                                                                    |
 | -------------------- | ----------------------------------------------------------------------- |
-| Standard LDAP Gruppe | Komma-separierte Liste von Personengruppen IDs                           |
+| Standard LDAP Gruppe | Komma-separierte Liste von Personengruppen IDs                          |
 | LDAP Config:         | JSON String                                                             |
 | Anrede Herr          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |
 | Anrede Frau          | Kommaseparierte Liste mit gemappten Werten für das LDAP Anrede Attribut |
-
+<!-- cSpell:enable-->
 ## Report Manager
 
 | Option         | Wert                                                                                             |
@@ -156,14 +171,14 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Standardfilter | ID<br>Bezeichnung<br>Kategorie<br>Mit Abfrage-Editor erzeugt<br>Variabler Report<br>Beschreibung |
 
 ## Import
-
+<!-- cSpell:disable -->
 | Option                                                        | Wert         |
 | ------------------------------------------------------------- | ------------ |
 | Bei Validierungsfehlern Prozess abbrechen?                    | Ja oder Nein |
 | Nur die betroffenen Attribute leeren bei Validierungsfehlern? | Ja oder Nein |
 | Der CSV Import kann den Objekttyp überschreiben?              | Ja oder Nein |
 | Anzahl der Zeilen pro Import Batch                            | Wert         |
-
+<!-- cSpell:enable-->
 ## Suche
 
 | Option                                                         | Wert                                                                  |
@@ -174,7 +189,16 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Hervorhebung des Suchstrings                                   | Ja oder Nein                                                          |
 | Mindestlänge Suchwort                                          | Wert                                                                  |
 | Archivierte/Gelöschte Objekte mit in der Suche berücksichtigen | Ja oder Nein                                                          |
-| Standort Pfade mit in der Suche berücksichtigen                | Ja oder Nein                                                          |
+| Standort-Pfade mit in der Suche berücksichtigen                | Ja oder Nein                                                          |
+
+## JDisc
+
+| Option                           | Wert                     |
+| -------------------------------- | ------------------------ |
+| Schwellwert                      | Anzahl                   |
+| Schwellwert Einheit              | Tage<br>Wochen<br>Monate |
+| Maximale Länge der Importpause   | Zeit in Minuten          |
+| Verhalten des pausierten Imports | Abbrechen<br>Fortsetzen  |
 
 ## Sprache
 
@@ -189,9 +213,9 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | Abgelaufene Lizenzen überspringen | Ja oder Nein |
 
 ## Installed Add-on related settings
-
-| Option                                                                                                                                    | Wert                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+<!-- cSpell:disable -->
+| Option                                                                                                                                | Wert                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | [ISMS](../../../i-doit-add-ons/isms.md) Reportviews nach Standortrechten filtern                                                      | Ja oder Nein                                                                                                                         |
 | [ISMS](../../../i-doit-add-ons/isms.md) Risikokennzeichnung anzeigen                                                                  | Ja oder Nein                                                                                                                         |
 | [ISMS](../../../i-doit-add-ons/isms.md) Risikotitel anzeigen                                                                          | Ja oder Nein                                                                                                                         |
@@ -202,10 +226,11 @@ Hier findest du Einstellungen für den aktuellen Mandanten.
 | [Check_MK](../../../i-doit-add-ons/checkmk.md) Tags dürfen beim Export nur aus Buchstaben, Zahlen, Binde- und Unterstrichen bestehen  | Ja oder Nein                                                                                                                         |
 | [Workflows](../../../i-doit-add-ons/workflow.md) Checklisten im my-doit Bereich ausblenden                                            | Ja oder Nein                                                                                                                         |
 | [IT-Grundschutz](../../../i-doit-add-ons/viva/index.md) URL-Prefix zum IT-Grundschutz Kompendium                                      | URL                                                                                                                                  |
-| [IT-Grundschutz](../../../i-doit-add-ons/viva/index.md) Upload Verzeichnis des IT-Grundschutz Kompendiums                             | Verzeichnis Pfad                                                                                                                       |
+| [IT-Grundschutz](../../../i-doit-add-ons/viva/index.md) Upload Verzeichnis des IT-Grundschutz Kompendiums                             | Verzeichnis Pfad                                                                                                                     |
 | [CI-Umzug](../../../i-doit-add-ons/relocate-ci.md) Nach einem physikalischen Umzug soll der logische Standort entfernt werden.        | Ja oder Nein                                                                                                                         |
 | [CI-Umzug](../../../i-doit-add-ons/relocate-ci.md) Nach einem logischen Umzug soll der physische Standort aktualisiert werden.        | Ja oder Nein                                                                                                                         |
 | [CI-Umzug](../../../i-doit-add-ons/relocate-ci.md) Schreibe Logbucheinträge in alle positionierten Objekte eines umgezogenen Objekts. | Ja oder Nein                                                                                                                         |
 | [Forms Add-on](../../../i-doit-add-ons/forms/index.md) Forms Server                                                                   | URL                                                                                                                                  |
 | [Forms Add-on](../../../i-doit-add-ons/forms/index.md) Benutzername                                                                   | String                                                                                                                               |
 | [Forms Add-on](../../../i-doit-add-ons/forms/index.md) API Schlüssel                                                                  | String                                                                                                                               |
+<!-- cSpell:enable-->

@@ -3,7 +3,7 @@
 In order to guarantee the operation of all functionalities of i-doit, some requirements must be met by the underlying system.
 
 !!! info "Current version"
-    The requirements shown below apply to the current version of i-doit, in this case **33**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case **34**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 ## Minimum Requirements
 
@@ -19,7 +19,7 @@ We recommend the use of a dedicated virtual machine. The actual demand for hardw
 
 ### Virtual Hardware (Windows)
 
-For Windows, the [general Windows system requirements](https://learn.microsoft.com/en-us/windows-server/get-started/hardware-requirements) must be observed.
+For Windows, the [general Windows system requirements](https://learn.microsoft.com/windows-server/get-started/hardware-requirements) must be observed.
 
 ### LAMP / WAMP Stack
 
@@ -27,7 +27,7 @@ For Windows, the [general Windows system requirements](https://learn.microsoft.c
 -   Apache Webserver **2.4**
 -   MariaDB 10.4 (deprecated), 10.5 (deprecated), **10.6** (recommended), 10.11 or MySQL 5.7 or 8.0.
 -   PHP 8.1, **8.2** (recommended) and 8.3.
--   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, zip
+-   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, xmlwriter, zip
 
 We recommend the usage of **Apache Webserver 2.4, PHP 8.2 and MariaDB 10.6**.
 
@@ -66,6 +66,16 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 -   Apple Safari
 
 ## Compatibility matrix
+
+=== "34"
+
+    | **i-doit Version**   | 34                                                                        |
+    | -------------------- | ------------------------------------------------------------------------- |
+    | **Release**          | 2025-02                                                                   |
+    | **Apache Webserver** | 2.4                                                                       |
+    | **PHP**              | 8.1<br>==8.2== (recommended)<br>8.3                                       |
+    | **MySQL**            | 5.7 <br>8.0                                                               |
+    | **MariaDB**          | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
 
 === "33"
 

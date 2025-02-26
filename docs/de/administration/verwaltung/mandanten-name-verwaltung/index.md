@@ -1,12 +1,12 @@
 # [Mandanten-Name] Verwaltung
 
-Hier kannst du deine Mandanten verwalten und systembezogene Konfigurationen einsehen.
+Hier kannst du deine Mandanten verwalten und systembezogene Konfigurationen einsehen. Alle Einstellungen lassen sich über `Alles ausklappen` ausklappen und über `Alles einklappen` wieder einklappen.
 
 [![Mandanten übersicht](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/1-mv.png)](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/1-mv.png)
 
 ## Unterseiten
 
--   [Mandanten Einstellungen](einstellungen-mandanten-name.md)
+-   [Einstellungen für Mandanten-Name](einstellungen-mandanten-name.md)
 -   [Systemreparatur und Bereinigung](systemreparatur-und-bereinigung.md)
 -   [Experteneinstellungen](experteneinstellungen.md)
 
@@ -56,7 +56,7 @@ In der Lizenzübersicht findest du Informationen über deine Lizenz, das dokumen
 | memory_limit        | Größe in MB |
 
 ## MySQL Settings
-
+<!-- cSpell:disable -->
 | Option                  | Wert             |
 | ----------------------- | ---------------- |
 | innodb_buffer_pool_size | Größe in MB      |
@@ -68,9 +68,9 @@ In der Lizenzübersicht findest du Informationen über deine Lizenz, das dokumen
 | innodb_sort_buffer_size | Größe in MB      |
 | innodb_log_file_size    | Größe in MB      |
 | datadir                 | Ordner von MySQL |
-
+<!-- cSpell:enable -->
 ## PHP Extensions
-
+<!-- cSpell:disable -->
 | Option   | Wert               |
 | -------- | ------------------ |
 | curl     | Wird verwendet von |
@@ -86,7 +86,7 @@ In der Lizenzübersicht findest du Informationen über deine Lizenz, das dokumen
 | xml      | Wird verwendet von |
 | zlib     | Wird verwendet von |
 | SNMP     | Wird verwendet von |
-
+<!-- cSpell:enable -->
 ## Apache Modules
 
 | Option      | Wert               |

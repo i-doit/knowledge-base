@@ -176,9 +176,10 @@ sudo -u www-data php console.php maintenance --user admin --password admin --ten
 ```
 
 ## Releases
-
+<!-- cSpell:disable -->
 | Version | Datum      | Changelog                                                                                                                                                                                                                                                                                                                           |
 | ------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.6     | 26.02.2025 | [Task] Make symfony 6.4 compatible<br>[Bug] Option 'Send multiple notifications for each maintenance?' automatically sets to 'Yes' after finishing an upcoming maintenance                                                                                                                                                          |
 | 1.5     | 10.10.2024 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                                                                                                                 |
 | 1.4     | 09.07.2024 | **Improvement** Send an email with all the objects within the maintenance<br>**Bug** Only one role can be selected to be notified                                                                                                                                                                                                   |
 | 1.3     | 07.11.2023 | **Task** Use new routes to display object and object type images / move add-on related files                                                                                                                                                                                                                                        |

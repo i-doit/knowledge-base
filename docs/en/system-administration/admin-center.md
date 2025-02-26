@@ -77,6 +77,23 @@ Setting can also be toggled via [Expert settings](#expert-settings-system-relate
 | ------------------------- | ------ |
 | Welcome message for login | String |
 
+### SMTP
+
+| Option         | Value            |
+| -------------- | ---------------- |
+| SMTP Host      | Hostname or URL  |
+| SMTP Port      | Port             |
+| SMTP Username  | Username         |
+| SMTP Password  | Password         |
+| SMTP TLS       | Yes or No        |
+| Sender         | E-Mail address   |
+| Name           | Name             |
+| Timeout        | Value in seconds |
+| SMTP Debug     | Yes or no        |
+| Subject prefix | String           |
+
+There is also a button that tests the SMTP connection.
+
 ### Proxy
 
 | Option          | Value              |

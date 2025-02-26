@@ -1,14 +1,22 @@
+---
+title: Workflow
+description: Workflow
+icon: addons/workflow
+status:
+lang: de
+---
+
 # Workflow
 
-Das Workﬂow-System in i-doit ist ein erweiterbares Modul, welches Workﬂows erzeugt. Somit lassen sich einmalige AUFTRÄGE, aber auch wiederkehrende CHECKLISTEN erstellen und an die verantwortlichen Personen und Objekte zuweisen. Involvierte Personen werden über statusbasierte Benachrichtigungen informiert.
+Das workflow-System in i-doit ist ein erweiterbares Modul, welches workflows erzeugt. Somit lassen sich einmalige AUFTRÄGE, aber auch wiederkehrende CHECKLISTEN erstellen und an die verantwortlichen Personen und Objekte zuweisen. Involvierte Personen werden über status basierte Benachrichtigungen informiert.
 
 ## Workflow-Typen
 
-Der WORKFLOW-TYP verhält sich wie eine Schablone und umfasst alle notwendigen Parameter, welche zur Ausführung notwendig sind. Diese Schablone lässt sich über eine Verwaltungsoberﬂäche bearbeiten. Über diese lassen sich ebenso neue Schablonen anlegen.
+Der WORKFLOW-TYP verhält sich wie eine Schablone und umfasst alle notwendigen Parameter, welche zur Ausführung notwendig sind. Diese Schablone lässt sich über eine Verwaltungsoberfläche bearbeiten. Über diese lassen sich ebenso neue Schablonen anlegen.
 
 ## Der Workflow
 
-Ein Workﬂow beschreibt eine terminierte vom Benutzer auszuführende Aktion wie beispielsweise das Austauschen des Band-Mediums eines speziellen Backup-Servers. Jegliche WorkﬂowZuweisung muss von den entsprechenden Personen akzeptiert werden. Nach erfolgreichem Abschluss kann ein Statusbericht eingereicht werden.
+Ein workflow beschreibt eine terminierte vom Benutzer auszuführende Aktion wie beispielsweise das Austauschen des Band-Mediums eines speziellen Backup-Servers. Jegliche Workflow Zuweisung muss von den entsprechenden Personen akzeptiert werden. Nach erfolgreichem Abschluss kann ein Statusbericht eingereicht werden.
 
 ## Vordefinierte Workflow-Typen
 
@@ -18,15 +26,15 @@ Ein Arbeitsauftrag ist eine terminierte von wählbaren Benutzern auszuführende 
 
 ### Checkliste
 
-Mit dem speziellen Workﬂow-Typ CHECKLISTEN können täglich, wöchentlich und jährlich wiederkehrende Aufträge generiert werden, indem zu dem reinen Startdatum eine periodische Zeitfolge angegeben und die entsprechende Option der Wiederholung ausgewählt wird. Diese wiederkehrenden Workﬂows lassen sich ebenfalls terminiert beenden.
+Mit dem speziellen workflow-Typ CHECKLISTEN können täglich, wöchentlich und jährlich wiederkehrende Aufträge generiert werden, indem zu dem reinen Startdatum eine periodische Zeitfolge angegeben und die entsprechende Option der Wiederholung ausgewählt wird. Diese wiederkehrenden workflows lassen sich ebenfalls terminiert beenden.
 
 ## Parameter der Vorlagen
 
-Für die beiden Workﬂow-Typen TASK (Arbeitsauftrag) und CHECKLIST gibt es bereits vorgefertigte Parameter, welche bei Erstellung eines neuen Workﬂows berücksichtigt werden. Die beiden Datumstypen für Start- und Enddatum werden bei jedem neu angelegten Workﬂow-Typen automatisch erstellt. Die anderen Parameter können nach Belieben erstellt und einem neuen Typen zugeordnet werden:
+Für die beiden workflow-Typen TASK (Arbeitsauftrag) und CHECKLIST gibt es bereits vorgefertigte Parameter, welche bei Erstellung eines neuen workflows berücksichtigt werden. Die beiden Datumstypen für Start- und Enddatum werden bei jedem neu angelegten workflow-Typen automatisch erstellt. Die anderen Parameter können nach Belieben erstellt und einem neuen Typen zugeordnet werden:
 
 *   Text
 *   Einzeiliges Textfeld
-*   Fulltext
+*   Volltext
 *   Mehrzeiliges Textfeld
 *   Numeric
 *   Numerisches Textfeld
@@ -35,7 +43,7 @@ Für die beiden Workﬂow-Typen TASK (Arbeitsauftrag) und CHECKLIST gibt es bere
 *   Ja / Nein
 *   Zwei Radiobuttons zur Auswahl
 
-Die Bezeichnung und der Schlüssel bei einem neuen Workﬂow-Typen kann frei gewählt werden, die Reihenfolge gibt an, in welcher Reihenfolge die Felder untereinander angezeigt werden. Nach leerem Feld überprüfen gibt eine Fehlermeldung aus, wenn das Feld nicht ausgefüllt wurde und versucht wird den Workﬂow zu speichern.
+Die Bezeichnung und der Schlüssel bei einem neuen workflow-Typen kann frei gewählt werden, die Reihenfolge gibt an, in welcher Reihenfolge die Felder untereinander angezeigt werden. Nach leerem Feld überprüfen gibt eine Fehlermeldung aus, wenn das Feld nicht ausgefüllt wurde und versucht wird den workflow zu speichern.
 
 ## Workflows im Objekt
 
@@ -78,9 +86,10 @@ sudo -u www-data php console.php workflows-process --user admin --password admin
 ```
 
 ## Releases
-
+<!-- cSpell:disable -->
 | Version | Datum      | Changelog                                                                                                                                                                                                                                       |
 | ------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.5     | 26.02.2025 | [Task] Make symfony 6.4 compatible<br>[Task] Make Smarty 5 compatible<br>[Bug] Workflow Checklist is inaccessible after workflow is accepted                                                                                                    |
 | 1.4     | 10.10.2024 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                             |
 | 1.3     | 09.07.2024 | [Bug] Workflow Add-on User Permissions are not available<br>[Bug] This task is part of the following checklist link does not work<br>[Bug] Dependent tasks are not displayed in checklists                                                      |
 | 1.2     | 07.11.2023 | [Task] Use new routes to display object and object type images / move add-on related files                                                                                                                                                      |

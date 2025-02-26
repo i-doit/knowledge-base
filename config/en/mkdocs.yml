@@ -1,11 +1,12 @@
 ---
+# cSpell:disable
 site_name: Knowledge Base
 docs_dir: '../../docs/en'
 site_dir: '../../generated/en'
 site_url: https://kb.i-doit.com/en/
 site_description: Knowledge Base
 site_author: synetics GmbH
-copyright: Copyright &copy; 2024 synetics GmbH
+copyright: Copyright &copy; 2025 synetics GmbH
 repo_url: https://github.com/i-doit/knowledge-base
 edit_uri: edit/main/docs/en
 strict: true
@@ -134,6 +135,7 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release Notes 34: version-history/release-notes/release-notes-34.md
           - Release Notes 33: version-history/release-notes/release-notes-33.md
           - Release Notes 32: version-history/release-notes/release-notes-32.md
           - Release Notes 31: version-history/release-notes/release-notes-31.md
@@ -162,6 +164,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 34: version-history/changelogs/changelog-34.md
           - Changelog 33: version-history/changelogs/changelog-33.md
           - Changelog 32: version-history/changelogs/changelog-32.md
           - Changelog 31: version-history/changelogs/changelog-31.md
@@ -371,11 +374,9 @@ nav:
               - automation-and-integration/cli/console/index.md
               - Options and parameters for the console: automation-and-integration/cli/console/options-and-parameters-cli.md
               - Using configuration files for console commands: automation-and-integration/cli/console/using-configuration-files-for-console-cli.md
-          - Controller: automation-and-integration/cli/controller.md
       - Network Monitoring:
           - automation-and-integration/network-monitoring/index.md
           - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md
-          - Nagios: automation-and-integration/network-monitoring/nagios.md
       - Service Desk:
           - automation-and-integration/service-desk/index.md
           - Request Tracker (RT): automation-and-integration/service-desk/request-tracker.md
@@ -456,9 +457,11 @@ nav:
           - Contract details: system-administration/administration/contract-details.md
       - Admin-Center: system-administration/admin-center.md
       - Add-on & Subscription Center: system-administration/add-on-and-subscription-center.md
+      - Customer portal: system-administration/customer-portal.md
       - Localization: system-administration/localization.md
       - Multi-Tenants: system-administration/multi-tenant.md
-      - Customer portal: system-administration/customer-portal.md
+      - Password reset: system-administration/password-reset.md
+      - Find or reset your license token: system-administration/reset-token.md
       - Rights management:
           - efficient-documentation/rights-management/index.md
           - CMDB (User Rights Management): efficient-documentation/rights-management/cmdb-right-management.md
@@ -480,6 +483,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
           - Hotfix archive:
               - system-administration/hotfixes/hotfix-archive/index.md
+              - Version 33: system-administration/hotfixes/hotfix-archive/v33.md
               - Version 32: system-administration/hotfixes/hotfix-archive/v32.md
               - Version 31: system-administration/hotfixes/hotfix-archive/v31.md
               - Version 30: system-administration/hotfixes/hotfix-archive/v30.md
@@ -572,12 +576,12 @@ nav:
           - i-doit-add-ons/documents/index.md
           - Preparation: i-doit-add-ons/documents/preparation.md
           - Document templates: i-doit-add-ons/documents/document-templates.md
-          - Placeholder in the Documents add-on: i-doit-add-ons/documents/placeholder-in-the-documents.md
+          - Placeholder in documents: i-doit-add-ons/documents/placeholder-in-the-documents.md
           - Document creation: i-doit-add-ons/documents/document-creation.md
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
-          - i-doit-add-ons/flows.md
+          - i-doit-add-ons/flows/index.md
           - i-doit 33 update and Flows installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
           - i-doit-add-ons/forms/index.md
@@ -602,6 +606,7 @@ nav:
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
       - ISMS: i-doit-add-ons/isms.md
       - Maintenance: i-doit-add-ons/maintenance.md
+      - Nagios: i-doit-add-ons/nagios.md
       - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md
       - Relocate-CI: i-doit-add-ons/relocate-ci.md
       - Replacement: i-doit-add-ons/replacement.md
@@ -652,3 +657,7 @@ nav:
           - Program Dashboard Widget: software-development/software-development/program-dashboard-widgets.md
   - Glossary: glossary.md
   - FAQ: faq.md
+not_in_nav: |
+  _archive/*
+  i-doit-add-ons/api/methods/cmdb.ip_search.md
+  i-doit-add-ons/flows.md

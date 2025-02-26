@@ -1,11 +1,12 @@
 ---
+# cSpell:disable
 site_name: Knowledge Base
 docs_dir: '../../docs/de'
 site_dir: '../../generated/de'
 site_url: https://kb.i-doit.com/de/
 site_description: Knowledge Base
 site_author: synetics GmbH
-copyright: Copyright &copy; 2024 synetics GmbH
+copyright: Copyright &copy; 2025 synetics GmbH
 repo_url: https://github.com/i-doit/knowledge-base
 edit_uri: edit/main/docs/de
 strict: true
@@ -132,6 +133,7 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 34: versionshistorie/release-notes/release-notes-34.md
           - Release Notes 33: versionshistorie/release-notes/release-notes-33.md
           - Release Notes 32: versionshistorie/release-notes/release-notes-32.md
           - Release Notes 31: versionshistorie/release-notes/release-notes-31.md
@@ -160,6 +162,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 34: versionshistorie/changelogs/changelog-34.md
           - Changelog 33: versionshistorie/changelogs/changelog-33.md
           - Changelog 32: versionshistorie/changelogs/changelog-32.md
           - Changelog 31: versionshistorie/changelogs/changelog-31.md
@@ -406,11 +409,9 @@ nav:
               - automatisierung-und-integration/cli/console/index.md
               - Optionen und Parameter der Console: automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md
               - Verwendung von Konfigurationsdateien für Console Commands: automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md
-          - Controller: automatisierung-und-integration/cli/controller.md
       - Network Monitoring:
           - automatisierung-und-integration/network-monitoring/index.md
           - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md
-          - Nagios: automatisierung-und-integration/network-monitoring/nagios.md
       - Service Desk:
           - automatisierung-und-integration/service-desk/index.md
           - Request Tracker (RT): automatisierung-und-integration/service-desk/request-tracker.md
@@ -491,9 +492,12 @@ nav:
           - Vertragsdaten: administration/verwaltung/vertragsdaten.md
       - Admin-Center: administration/admin-center.md
       - Add-on & Subscription Center: administration/add-on-and-subscription-center.md
-      - Mehrsprachigkeit und Übersetzungen: administration/mehrsprachigkeit-und-uebersetzungen.md
-      - Mandantenfähigkeit: administration/mandantenfaehigkeit.md
+      - Admin Center: administration/admin-center.md
       - Kundenportal: administration/kundenportal.md
+      - Mandantenfähigkeit: administration/mandantenfaehigkeit.md
+      - Mehrsprachigkeit und Übersetzungen: administration/mehrsprachigkeit-und-uebersetzungen.md
+      - Passwort zurücksetzen: administration/passwort-zuruecksetzen.md
+      - Den Lizenz Token finden oder zurücksetzen: administration/reset-token.md
       - Rechteverwaltung:
           - effizientes-dokumentieren/rechteverwaltung/index.md
           - CMDB (Rechteverwaltung): effizientes-dokumentieren/rechteverwaltung/cmdb.md
@@ -515,6 +519,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
           - Hotfix Archiv:
               - administration/hotfixes/hotfix-archiv/index.md
+              - Version 33: administration/hotfixes/hotfix-archiv/v33.md
               - Version 32: administration/hotfixes/hotfix-archiv/v32.md
               - Version 31: administration/hotfixes/hotfix-archiv/v31.md
               - Version 30: administration/hotfixes/hotfix-archiv/v30.md
@@ -607,14 +612,14 @@ nav:
       - DNS Documentation: i-doit-add-ons/dns-documentation.md
       - Documents:
           - i-doit-add-ons/documents/index.md
-          - Vorbereitung (Add-on Dokumente): i-doit-add-ons/documents/vorbereitung-add-on-dokumente.md
+          - Vorbereitung: i-doit-add-ons/documents/vorbereitung-add-on-dokumente.md
           - Dokumentenvorlagen: i-doit-add-ons/documents/dokumentenvorlagen.md
-          - Platzhalter im Add-on Dokumente: i-doit-add-ons/documents/platzhalter-im-add-on-dokumente.md
+          - Platzhalter: i-doit-add-ons/documents/platzhalter-im-add-on-dokumente.md
           - Dokumenterstellung: i-doit-add-ons/documents/dokumenterstellung.md
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
-          - i-doit-add-ons/flows.md
+          - i-doit-add-ons/flows/index.md
           - i-doit 33 update und Flows installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
           - i-doit-add-ons/forms/index.md
@@ -631,12 +636,14 @@ nav:
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
       - ISMS: i-doit-add-ons/isms.md
       - Maintenance: i-doit-add-ons/maintenance.md
+      - Nagios: i-doit-add-ons/nagios.md
       - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md
       - Relocate-CI: i-doit-add-ons/relocate-ci.md
       - Replacement: i-doit-add-ons/replacement.md
       - SHD SM-VIEW Connect:
           - i-doit-add-ons/sm-view-connect/index.md
           - SHD SM-VIEW Connect - Telekom Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
+          - Baramundi-Adapter: i-doit-add-ons/sm-view-connect/baramundi-adapter.md
       - VIVA:
           - i-doit-add-ons/viva/index.md
           - Einleitung zu VIVA: i-doit-add-ons/viva/einleitung-zu-viva.md
@@ -680,3 +687,7 @@ nav:
           - Dashboard Widget programmieren: software-entwicklung/add-ons-entwickeln/dashboard-widget-programmieren.md
   - Glossar: glossar.md
   - FAQ: faq.md
+not_in_nav: |
+  _archiv/*
+  i-doit-add-ons/api/methoden/v1/cmdb.ip_search.md
+  i-doit-add-ons/flows.md
