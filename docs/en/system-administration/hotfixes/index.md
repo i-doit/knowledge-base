@@ -91,7 +91,6 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 [floorplan_1.8_hotfix_FP-140_2e1ca1e.zip :material-file-download:](../../assets/downloads/hotfixes/floorplan/floorplan_1.8_hotfix_FP-140_2e1ca1e.zip){ .md-button .md-button--primary }
 
 ## Replacement
-## Replacement
 
 ### TypeErrors when selecting objects to swap
 
