@@ -14,6 +14,8 @@ The licensing of i-doit and add-ons takes place via a license token. The license
 
 ## How do I obtain the License Token and the Offline License?
 
+!!! hint "If you are evaluation i-doit please contact us via [help.i-doit.com](https://help.i-doit.com){: target="_blank" } or <mailto:help@i-doit.com> to get your offline license token"
+
 The **License Token** will be sent by e-mail. The **Offline License** can be accessed in the [customer portal](../system-administration/customer-portal.md) at <https://center.i-doit.com/portal/advanced>.
 
 * * *
@@ -65,7 +67,7 @@ The **License Token** will be sent by e-mail. The **Offline License** can be acc
 
 [![License Token](../assets/images/en/maintenance-and-operation/activate-license/5.admin-center-licenses-token.png)](../assets/images/en/maintenance-and-operation/activate-license/5.admin-center-licenses-token.png)
 
-**_Note_**: The License Token looks as follows: **2e23aa70df492b7e7b8f321929gcfcde**
+**_Note_**: The License Token looks as follows: **2e23aa70df492b7e7b8f321929gc6fcd6e7776**
 
 * * *
 
@@ -121,7 +123,6 @@ Please note that in the **Tenants** tab you can configure how many object licens
 
 !!! attention "Name of the database"
     When creating a license for a single tenant, the **name of the database** is required. Please make sure that the name is available to you when creating the license in our customer portal
-
     Licenses have a certain period of time during which they are valid. If the period expires a new license is required.
 
 !!! attention "Token compatibility"
@@ -131,12 +132,15 @@ Please note that in the **Tenants** tab you can configure how many object licens
 !!! info "Pre i-doit 1.12.2 behavior"
     Multiple types of licenses are available for i-doit:
 
-    *   The **subscription** license for each single tenant (including **trial licenses**)
+    *   The **subscription license** for each single tenant (including **trial licenses**)
         You can load a subscription license via the [Admin-Center](../system-administration/admin-center.md)
-    *   The **subscription** license for multiple **tenants**
+    *   The **subscription license** for multiple **tenants**
         If you wish to use one subscription license for multiple tenants, you can only Activate this via the Admin-Center.
     *   The **buy** license for single or multiple **tenants**
         The activation for both types is also carried out via the [Admin-Center](../system-administration/admin-center.md)
+
+!!! info "Re-login necessary"
+    If a license is successfully installed, it can still happen that a message appears when continuing to work with i-doit that no valid license has been activated. In this case, it helps to log out and log in again with the current user. The message should then not appear again.
 
 * * *
 

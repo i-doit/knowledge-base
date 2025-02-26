@@ -14,6 +14,8 @@ Die Lizenzierung von i-doit und Add-ons erfolgt über einen License Token. Der L
 
 ## Wie erhält man den License Token und wie die Offline License?
 
+!!! hint "Wenn du i-doit evaluierst, kontaktiere uns bitte über [help.i-doit.com](https://help.i-doit.com){: target="_blank" } oder <mailto:help@i-doit.com>, um den Offline Lizenz Token zu erhalten"
+
 Der **License Token** wird per E-Mail zugeschickt. Die **Offline License** kann im [Kundenportal](../administration/kundenportal.md) unter <https://center.i-doit.com/portal/advanced> abgerufen werden.
 
 * * *
@@ -65,7 +67,7 @@ Der **License Token** wird per E-Mail zugeschickt. Die **Offline License** kann 
 
 [![License-save](../assets/images/de/wartung-und-betrieb/activate-license/5.admin-center-licenses-token.png)](../assets/images/de/wartung-und-betrieb/activate-license/5.admin-center-licenses-token.png)
 
-**_Hinweis_**_: Ein License Token ist wie folgt aufgebaut:_ **_2e23aa70df492b7e7b8f321929gc6fcd6e7776_**
+**_Hinweis_**: Ein License Token ist wie folgt aufgebaut: **2e23aa70df492b7e7b8f321929gc6fcd6e7776**
 
 * * *
 
@@ -120,15 +122,11 @@ Bitte beachte, dass im Reiter **Tenants** konfiguriert werden kann, wie viele Ob
 
 !!! attention "Name der Datenbank"
     Bei der Erstellung einer Lizenz für einen einzelnen Mandanten wird der **Name der** **Datenbank** benötigt. Bitte stelle sicher, dass dir dieser bei der Erstellung der Lizenz in unserem Kundenportal vorliegt.
-
     Lizenzen besitzen einen bestimmten Zeitraum in welchem Sie gültig sind. Ist der Zeitraum abgelaufen wird eine neue Lizenz benötigt.
 
 !!! attention "Kompatibilität der Token"
-    License Token können ab **i-doit Version 1.12.2** verwendet werden
-    Offline License Key kann erst mit **i-doit Version 1.15** verwendet werden
-
-!!! info "Neuanmeldung nötig"
-    Wird eine Lizenz erfolgreich eingespielt, kann es dennoch vorkommen, dass beim Weiterarbeiten mit i-doit ein Hinweis erscheint, es sei keine gültige Lizenz aktiviert. Hier hilft es, sich mit dem derzeitigen Benutzer ab- und wieder anzumelden. Daraufhin sollte der Hinweis nicht wieder erscheinen.
+    Lizenz Token können ab **i-doit Version 1.12.2** verwendet werden
+    Offline Lizenz Token kann erst mit **i-doit Version 1.15** verwendet werden
 
 !!! info "Verhalten vor i-doit Version 1.12.2"
     Für i-doit gibt es verschiedene Formen von Lizenzen:
@@ -139,6 +137,9 @@ Bitte beachte, dass im Reiter **Tenants** konfiguriert werden kann, wie viele Ob
     Wenn du eine Subskriptionslizenz für mehrere Mandanten verwenden möchtest, kann diese ausschließlich über das Admin-Center installiert werden.
     *   Die **Kauflizenz** für einen einzelnen oder mehrere **Mandanten**
     Die Installation erfolgt für beide Lizenzarten ebenfalls über das [Admin-Center](../administration/admin-center.md).
+
+!!! info "Neuanmeldung nötig"
+    Wird eine Lizenz erfolgreich eingespielt, kann es dennoch vorkommen, dass beim Weiterarbeiten mit i-doit ein Hinweis erscheint, es sei keine gültige Lizenz aktiviert. Hier hilft es, sich mit dem derzeitigen Benutzer ab- und wieder anzumelden. Daraufhin sollte der Hinweis nicht wieder erscheinen.
 
 * * *
 
