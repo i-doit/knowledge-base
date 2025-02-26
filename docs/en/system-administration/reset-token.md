@@ -14,12 +14,15 @@ The i-doit license token is used to authenticate your i-doit instance against th
 ## Overview
 
 1. **I want to retrieve my license token from my running i-doit instance**
-   1. [Variant A: Find my token in the Add-on & Subscription Center? (i-doit version 33 and above)](#variant-a-find-my-token-in-the-add-on--subscription-center-i-doit-version-33-and-above)
-   2. [Variant B: Find my token in the Admin-Center? (i-doit version 34 and below)](#variant-b-find-my-token-in-the-admin-center-i-doit-version-34-and-below)
-   3. [Variant C: Find my token with access to the operating system? (All versions)](#variant-c-find-my-token-with-access-to-the-operating-system-all-versions)
+
+    1. [Variant A: Find my token in the Add-on & Subscription Center? (i-doit version 33 and above)](#variant-a-find-my-token-in-the-add-on--subscription-center-i-doit-version-33-and-above)
+    2. [Variant B: Find my token in the Admin-Center? (i-doit version 34 and below)](#variant-b-find-my-token-in-the-admin-center-i-doit-version-34-and-below)
+    3. [Variant C: Find my token with access to the operating system? (All versions)](#variant-c-find-my-token-with-access-to-the-operating-system-all-versions)
+
 2. **I can not find my license token and I want to reset it**
-   1. [How can I reset my token?](#how-can-i-reset-my-token)
-   2. \!\!\! IMPORTANT \!\!\! [Activate new token](#activate-new-token)
+
+    1. [How can I reset my token?](#how-can-i-reset-my-token)
+    2. \!\!\! IMPORTANT \!\!\! [Activate new token](#activate-new-token)
 
 ### Variant A: Find my token in the Add-on & Subscription Center? (i-doit version 33 and above)
 

@@ -8,11 +8,11 @@ lang: en
 
 # Customer Portal
 
-There is a central contact point for i-doit users. For example, [Installation packages](../installation/index.md) and the currently valid [license](../maintenance-and-operation/activate-license.md) acan be downloaded there. The subscription or purchase products (for example [add-ons](../i-doit-add-ons/index.md)) are also listed. The Customer Portal can be accessed at the following address:
+There is a central contact point for i-doit users. For example, [Installation packages](../installation/index.md) and the currently valid [offline token](../maintenance-and-operation/activate-license.md) can be downloaded there. The subscription or purchase products (for example [add-ons](../i-doit-add-ons/index.md)) are also listed. The Customer Portal can be accessed at the following address:
 
-[center.i-doit.com](https://center.i-doit.com/) or the new **[Add-on & Subscription Center](https://center.i-doit.com/)**
+**[Add-on & Subscription Center](https://center.i-doit.com/)**
 
-Access data are required for the Customer Portal. Customers of i-doit receive the necessary information for the creation of a user account during the ordering process.
+A license token is required for the Add-on & Subscription Center. Customers of i-doit receive the necessary information for the creation of a user account during the ordering process.
 
 After calling <https://center.i-doit.com/> you will land on the login page.
 
