@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Erweiterung]    Komplett überarbeitetes benutzerspezifisches Dashboard<br>
 [Erweiterung]      Widget: Report Widget<br>
 [Erweiterung]      Widget: Generischer RSS Feed<br>

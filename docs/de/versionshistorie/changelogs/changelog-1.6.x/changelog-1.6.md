@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.6
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Neue Funktion] Neue Kategorie zur Verknüpfung von Remote Management Controllern<br>
 [Neue Funktion] Rückwärtige Ansicht "Gemanagte Geräte" für Remote Management Devices<br>
 [Neue Funktion] Bearbeitung von Anschlusstypen in globaler Verkabelungsansicht<br>

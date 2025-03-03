@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.5.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  In der Chassis Ansicht wird in einer Info Box die Zugewiesenen Geräte des ausgewählten Slots angezeigt.<br>
 [Verbesserung]  Benutzereinstellungen erben von den Mandanteneinstellungen<br>
 [Verbesserung]  Konfigurierbare Variablen für Workflow E-Mails: IP-Adresse & Hostname (Siehe Dokumentation)<br>

@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 30
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Update]                        i-doit 30 is only updateable from i-doit 29<br>
 [Task][Two-Factor Authentication]     Make TFA only available in i-doit<br>
 [Task][Code (Internal)]               Replace all places where the old replace_placeholder method is being used with the new Replacer Component<br>

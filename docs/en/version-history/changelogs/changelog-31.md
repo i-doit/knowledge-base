@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 31
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Import]                       Improve CSV-Import to not block the current user-session<br>
 [Task][Code (Internal)]              Allow API parameters to have multiple types<br>
 [Task][JDisc]                        Refactor "Data source" usage in JDisc code<br>

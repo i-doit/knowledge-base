@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 33
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][JDisc]                              System settings for SMTP server settings are empty<br>
 [Task][Code (Internal)]                    Add PHP 8.3 compatibility<br>
 [Task][Code (Internal)]                    Remove PHP 8.0 support<br>

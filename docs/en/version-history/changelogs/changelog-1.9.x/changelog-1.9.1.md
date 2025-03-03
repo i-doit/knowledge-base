@@ -1,111 +1,116 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.9.1
-
-[Improvement]   Make Editing Of A New Entry In A DialogPlus Field Possible Directly After It Has Been Added  
-[Improvement]   Improved loop check on cabling  
-[Improvement]   Horizontal scrollbar in JDisc profiles immediately visible  
-[Improvement]   Switch Stacking: Port overwiew of all member switches  
-[Improvement]   Switch Stacking: logic ports spanning over multiple switches  
-[Improvement]   Export of Host Aliases via Check_MK export  
-[Improvement]   JDisc import does not refresh object title  
-[Improvement]   Segmentation of RUs in Racks  
-[Improvement]   Attribute "e-mail-address" of category "persons" not selectable in csv-import  
-[Improvement]   Newly created entries are validated via the Dialog-Admin  
-[Improvement]   Mass-change: Configuration for logging  
-[Improvement]   List edit: Renamed option "All objects" in "All entries"  
-[Improvement]   Global search: higher order display of object title and object in condition normal  
-[Improvement]   Configuration for maximum number of attributes in object lists  
-[Improvement]   Administration of tags in dialog-admin  
-[Improvement]   Notify when creating a custom category, if there is a duplicated constant  
-[Improvement]   New view: Open and unused cables  
-[Improvement]   In category operating system only operating systems can be chosen  
-[Improvement]   Remove button in logbook view  
-[Change]        Removal of Single-Sign-On languages selection in configuration  
-[Change]        Remove multiple selection in report views  
-[Bug]           Profile In QCW Cannot be Uploaded If All Other Profiles Have Been Deleted Before  
-[Bug]           Changing A Non-selfdefined Objecttype Group Is Possible With QCW  
-[Bug]           Wrong presentation of object links in Safari  
-[Bug]           Transfer of exported Check_MK configuration failed with error message  
-[Bug]           Relation between input und output will be lost while duplicating  
-[Bug]           Error when saving category accounting  
-[Bug]           Some Catagories Are Displayed In Objekt Tree But Not In QCW  
-[Bug]           Hidden Categories In QCW Are Also Not Displayed For Other Object Types  
-[Bug]           Editing of service filters with id > 10 not possible  
-[Bug]           object matching does not work with casesensitivity  
-[Bug]           List edit - Category "Operating system": Assigned licenses cannot be changed  
-[Bug]           Category "Service assignment": It is not possible to select self-defined object types with the category "Service"  
-[Bug]           Attribute "on device" has multiple selections in csv import  
-[Bug]           LC__UNIVERSAL__USED_BY is not translated  
-[Bug]           Report Manager: View 'Objects in location (list format)' cannot be downloaded  
-[Bug]           List edit - Category 'Accounting': Saving Date of invoice shows error 'Field value is invalid.'  
-[Bug]           Language Constants Are Displayed In English Version Under System Settings  
-[Bug]           Editing a connector without a connection always creates a new cable  
-[Bug]           Language Constant Is Displayed in A Cable Object in Category Fiber/lead  
-[Bug]           Category Relationship: Relationship direction changes when an entry is saved without changing the direction.  
-[Bug]           Category "Location" / "Operating System" / "Accounting": Objects, which have been selected from a search show a wrong location  
-[Bug]           Read-only for background in CMDB-explorer profiles does not work properly  
-[Bug]           Category host address: If the assigned network is resolved, the global v4 network is not selected automatically  
-[Bug]           Devices are not always displayed in the left menu tree in the Combined View  
-[Bug]           Javascript errors prohibit large IP lists to be displayed  
-[Bug]           Selection for the location views is not displayed after login.  
-[Bug]           Edit Button Under LDAP Directories does not work  
-[Bug]           Mixed Language under LDAP Directories  
-[Bug]           The default filter of an object list is not applied as soon as the list is called.  
-[Bug]           OCS Import: Category model is not updated on switch devices within a stack  
-[Bug]           Import: Model and manufacturer from the category Model are not connected correctly  
-[Bug]           Settings Of Categories To Display On Overview Page Are Deleted By Switching No-Yes  
-[Bug]           Assigning rooms to ldap-users does not work  
-[Bug]           Start and enddate of licenses are always empty in list view  
-[Bug]           Report Manager: Condition with a unit causes an error message if it is defined as the first condition  
-[Bug]           ZenDesk Testbug 0815  
-[Bug]           View "CMDB status changes" does not list every change  
-[Bug]           Overwriting mode of csv import causes mutiple cables to be created  
-[Bug]           Referring a controller to a hard drive not possible via csv import  
-[Bug]           Cable connection is not displayed when Cable length is not given  
-[Bug]           Import of Yes/No Fields in custom categories via csv import not possible  
-[Bug]           install.sh does not work  
-[Bug]           In JDisc profiles you may select "i-doit status" as CMDB status  
-[Bug]           Attribute "Fiber / wave length" ist falsch und sollte "Colour / Wavelength" heißen  
-[Bug]           Connections of manually created cables are not displayed in list view  
-[Bug]           Duplicating content of custom categories with dialog+ fields using language constants duplicates entries in dialog+  
-[Bug]           Duplicating content of custom categories while using language constants also duplicates the category itself  
-[Bug]           Report Manager: Specific category "Assigned objects"  from object type "Organization" can not be selected  
-[Bug]           ID-display is doubled in widget "Object information list" if ID is chosen as an attribute.  
-[Bug]           Object type gets created while clicking cancel  
-[Bug]           Value of calbe length is modified by x10 when opend in list edit  
-[Bug]           host address is not imported as primary  
-[Bug]           Lists: Numeric format makes no difference  
-[Bug]           Licenses: Total costs have too many decimals  
-[Bug]           Error message after login in category with currency field  
-[Bug]           Search won't find any results when searching for WYSIWYG fields from multi value categories  
-[Bug]           Unable to load notes widget because of its character length  
-[Bug]           Incorrect Editing Of A Unknown Object Type Configuration  
-[Bug]           Error Message Deleting A Non-Empty Object Type Is Incorrect  
-[Bug]           Report manager copies object title into assigned object information  
-[Bug]           Attribute "primary e-mail-address" in csv-import selectable  
-[Bug]           HTML-Tags at e-mail address at category e-mail-addresses  
-[Bug]           Multiple dialog entries have no status  
-[Bug]           Category "port" does not show IP address in table  
-[Bug]           Dialog+ attributes without proper names  
-[Bug]           Dialog entries for "Contract: Contract Type" have "0" as constants  
-[Bug]           Dialog Admin does not save entries for "Module TTS: Ticket Systems"  
-[Bug]           Configuration of QR-codes for specific object types is not displayed correctly, when configuration is opened  
-[Bug]           Icon for selection of linked attributes in "assigned workstation" is missing in report manager  
-[Bug]           Wrong presentation of assigned license in software assignment, when trying to edit an existing entry  
-[Bug]           An Error Message appears trying to Deinstall an Extension in AdminCenter  
-[Bug]           Filter in list 'JDisc profiles' does not work  
-[Bug]           View in multi value catory 'object group' defective  
-[Bug]           Assigned objects in files can not be clicked  
-[Bug]           Upload of a new file version removes category and commentary  
-[Bug]           Can not embed specific category "Files > Assignes objects" in a list  
-[Bug]           Search does not find content of description, if it contains special characters  
-[Bug]           Wiring: Connection does show IEC power connector by default instead of "-"  
-[Bug]           Connections are being duplicated rather than saved  
-[Bug]           Wrong presentation of dates in category "contract assignment"  
-[Bug]           Wrong inventory no. used in the QR-code printer, when using %COUNTER% for automatic generation of no.  
-[Bug]           If the search is added as a bookmark, only text will appear under my-doit  
-[Bug]           Deleted categories still shown in lists  
-[Bug]           Created bookmarks in my-doit link to dashboard  
-[Bug]           Category "listener" does not list connections  
-[Bug]           Reports with date fields from user defined categories does not recognize country specific date format  
-[Bug]           Calculation of raid capacity faulty while changing storage unit or capacity  
-[Bug]           Objects will be created before saving, no cleanup is happening on cancel  
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
+[Verbesserung]  Ermöglichen des Editieren eines neuen Eintrags im DialogPlus-Feld direkt nach dem Hinzufügen<br>
+[Verbesserung]  Berücksichtigung der Stromkreisrekursion<br>
+[Verbesserung]  Horizontale Scrollbar in JDisc Profilen sofort sichtbar<br>
+[Verbesserung]  Switch Stacking: Portübersicht über alle mitglieder hinweg<br>
+[Verbesserung]  Switch Stacking: Logische Ports über mehrere Switche hinweg<br>
+[Verbesserung]  Export der Host-Aliasse beim Check_MK Export<br>
+[Verbesserung]  JDisc-Import aktualisert Objekt-Titel nicht<br>
+[Verbesserung]  Segmentierung von HEs in Racks<br>
+[Verbesserung]  Attribut "E-Mail-Adresse" aus Kategorie "Personen" nicht im CSV-Import verknüpfbar<br>
+[Verbesserung]  Neu erzeugte Einträge über den Dialog-Admin werden validiert<br>
+[Verbesserung]  Massenänderung: Konfiguration von Logging<br>
+[Verbesserung]  Listeneditierung: Option "Alle Objekte" in "Alle Einträge" umbenannt<br>
+[Verbesserung]  Globale Suche: Höherwertige Darstellung von Objekttitel und Objekte im Zustand Normal<br>
+[Verbesserung]  Einstellung zur Festlegung der maximalen Anzahl an Attributen in Objekt-Listen<br>
+[Verbesserung]  Möglichkeit zur Administration von Tags im Dialog-Admin<br>
+[Verbesserung]  Benachrichtigung bei bereits vergebenen Konstanten bei der Erstellung einer neuen benutzerdefinierten Kategorie<br>
+[Verbesserung]  Neue View: Offene und ungenutzte Kabel<br>
+[Verbesserung]  In der Kategorie "Betriebssystem" können nur noch Betriebssysteme zugewiesen werden<br>
+[Verbesserung]  "Lösen"-Button in "Listenansicht Logbuch"<br>
+[Änderung]      Entfernen der Sprachauswahl in der Single-Sign-On Konfiguration<br>
+[Änderung]      Mehrfach-Auswahl in Report-Views entfernen<br>
+[Bug]           Profile können im QCW nicht hochgeladen werden wenn zuvor alle anderen Profile gelöscht wurden<br>
+[Bug]           Ändern einer nicht-selbst-definierten Objekttyp-Gruppe im QCW ist möglich<br>
+[Bug]           Fehlerhafte Darstellung von Objekt-Links im Safari<br>
+[Bug]           Transfer der exportierten Check_MK-Konfiguration bricht mit Fehlermeldung ab<br>
+[Bug]           Relation von Ein- und Ausgang geht beim Duplizieren verloren<br>
+[Bug]           Fehler beim Speichern der Kategorie "Buchhaltung"<br>
+[Bug]           Einige Kategorien werden im Objekttree aber nicht im QCW angezeigt<br>
+[Bug]           Ausgeblendete Kategorie im QCW wird auch für andere Objekttypen nicht mehr angezeigt<br>
+[Bug]           Bearbeiten von Service-Filtern mit ID > 10 nicht möglich<br>
+[Bug]           Objekterkennung im CSV-Import funktioniert nicht mit casesensitivity<br>
+[Bug]           Listeneditierung - Kategorie "Betriebssystem": Zugewiesene Lizenzen können nicht geändert werden<br>
+[Bug]           Kategorie "Servicezuweisung": Es ist nicht möglich Selbstdefinierte Objekttypen auszuwählen mit der Kategorie "Service"<br>
+[Bug]           Attribut "Auf Gerät" beim CSV-Import mehrfach vorhanden<br>
+[Bug]           LC__UNIVERSAL__USED_BY ist nicht übersetzt<br>
+[Bug]           Report Manager: View "Geräte in einem Standort (Listenformat)" kann nicht heruntergeladen werden<br>
+[Bug]           Listeneditierung - Kategorie "Buchhaltung": Rechnungsdatum gibt "Feldwert ist ungültig." aus<br>
+[Bug]           Sprachkonstanten werden in der englischen Version unter Systemeinstellungen angezeigt<br>
+[Bug]           Bearbeiten eines Anschlusses ohne Verbindung erzeugt automatisch ein Kabel<br>
+[Bug]           Sprachkonstante in der englischen Version unter Cable in der Kategorie Fiber/lead<br>
+[Bug]           Kategorie Beziehung: Beziehungsrichtung verändert sich wenn ein Eintrag gespeichert wird ohne die Richtung zu ändern.<br>
+[Bug]           Kategorie "Standort" / "Betriebssystem" / "Buchhaltung": Objekte, welche über die Suche aufgerufen werden, geben den Standort falsch aus<br>
+[Bug]           Read-only Funktion zur Farbauswahl im CMDB-Explorer Profil fehlerhaft<br>
+[Bug]           Kategorie Hostadresse: Wird das zugeordnete Netz gelöst wird nicht das Globale v4/v6 Netz automatisch ausgewählt<br>
+[Bug]           Geräte werden im linken Menübaum in der Kombinierten Ansicht nicht immer angezeigt<br>
+[Bug]           Javascript Fehler bei der Darstellung großer Netze<br>
+[Bug]           Auswahl für die Standort Ansichten wird nach einloggen nicht dargestellt.<br>
+[Bug]           Editieren-Button unter LDAP-Directories funktioniert nicht<br>
+[Bug]           Gemischte Sprachanzeige unter LDAP-Directories<br>
+[Bug]           Der Standardfilter einer Objektliste wird nicht angewendet sobald die Liste aufgerufen wird.<br>
+[Bug]           OCS-Import: Kategorie Modell wird bei Switch Geräten innerhalb eines Stacks nicht aktualisiert<br>
+[Bug]           Import: Modell und Hersteller aus der Kategorie Modell werden nicht korrekt miteinander verbunden<br>
+[Bug]           Settings für das Anzeigen von Kategorien auf der Übersichtsseite werden durch Nein-Ja-Setzen gelöscht<br>
+[Bug]           Zuweisung eines Raums zu einem LDAP-User funktioniert nicht<br>
+[Bug]           Startdatum und Enddatum von Lizenzen werden nicht in Objektlisten angezeigt<br>
+[Bug]           Report Manager: Bedingung mit einer Einheit verursacht Fehlermeldung wenn diese als erste Bedingung definiert ist<br>
+[Bug]           ZenDesk Testbug 0815<br>
+[Bug]           View "CMDB-Status Änderungen" arbeitet nicht korrekt<br>
+[Bug]           Überschreiben-Modus im CSV-Import bewirkt die mehrfache Anlage von Kabeln<br>
+[Bug]           Referenzierung eines Controllers einer Festplatte über den CSV-Import nicht möglich<br>
+[Bug]           KabelVerbindung wird nicht angezeigt, wenn keine Kabellänge angegeben ist<br>
+[Bug]           Import von Ja/Nein-Feldern über den CSV-Import nicht möglich.<br>
+[Bug]           install.sh funktioniert nicht<br>
+[Bug]           In JDisc-Profilen kann der CMDB-Status "i-doit Status" ausgewählt werden<br>
+[Bug]           Attribut "Faser / Wellenlänge" ist falsch und sollte "Farbe / Wellenlänge" heißen<br>
+[Bug]           Verbindungen manuell erzeugter Kabel werden nicht in der Liste angezeigt<br>
+[Bug]           Duplizieren von Kategorien mit Dialog-Plus Inhalten, die auf eine Sprachkonstante verwenden führt zu doppelten Dialog-Plus Einträgen.<br>
+[Bug]           Duplizieren von Inhalten aus benutzerdefinierten Kategorien bei Verwendung von Sprachkonstanten erzeugt ein Duplikat der Kategorie<br>
+[Bug]           Report Manager: Spezifische Kategorie "Zugewiesene Objekte" vom Objekttypen "Organisation" ist nicht auswählbar<br>
+[Bug]           Doppelte ID-Anzeige in Widget "Objektliste" wenn ID als Attribut gewählt ist<br>
+[Bug]           Objekttyp wird trotz Abbrechen erstellt.<br>
+[Bug]           Kabellänge wird in Listeneditierung falsch umgerechnet<br>
+[Bug]           Hostadresse wird nicht als primär importiert<br>
+[Bug]           Listen: Numerisches Format hat keine Auswirkungen<br>
+[Bug]           Lizenzen: Gesamtkosten in Listenansicht mit zu vielen Nachkommastellen<br>
+[Bug]           Fehlermeldung nach dem Login in Kategorie mit Währungsfeld<br>
+[Bug]           Suche findet keine Begriffe aus WYSIWYG Feldern in Benutzerdefinierten Kategorien<br>
+[Bug]           Notizen-Widget wird ab einer bestimmten Zeichenanzahl nicht mehr geladen<br>
+[Bug]           Inkorrektes Editieren einer unbekannten Objekttyp-Konfiguration<br>
+[Bug]           Fehlermeldung beim Löschen eines nicht-leeren Objekttypen inkorrekt<br>
+[Bug]           Report-Manager wiederholt Objekt-Titel statt das verknüpfte Objekt auszugeben.<br>
+[Bug]           Attribut "Primäre E-Mail-Adresse" im CSV-Import auswählbar<br>
+[Bug]           HTML-Tags um E-Mail Adresse in Kategorie "E-Mail-Adressen"<br>
+[Bug]           Diverse Dialog Einträge haben keinen Status<br>
+[Bug]           Kategorie "Port" zeigt in Tabelle nicht die zugeordnete IP-Adresse an<br>
+[Bug]           Dialog-Attribute ohne richtige Benamung<br>
+[Bug]           Dialog-Einträge für "Vertrag: Vertragsart" haben "0" als Konstante<br>
+[Bug]           Dialog-Admin speichert Einträge für "Modul TTS: Ticket Systeme" nicht.<br>
+[Bug]           Konfiguration der QR-Codes für Objekttypen öffnet sich nicht beim Aufruf<br>
+[Bug]           Im Attribut "Zugewiesene Arbeitsplätze" fehlt das Icon zur Auswahl der verknüpften Attribute im Report-Manager<br>
+[Bug]           Fehlerhafte Darstellung der zugewiesenen Lizenz in der Kategorie "Softwarezuweisung", wenn ein bestehender Eintrag bearbeitet wird<br>
+[Bug]           Fehlermeldung beim Deinstallieren einer Extension im AdminCenter<br>
+[Bug]           Filter der Liste "JDisc-Profile" in der Verwaltung funktioniert nicht<br>
+[Bug]           Darstellung in Multi Value-Kategorie "Objektgruppe" defekt<br>
+[Bug]           Zugewiesene Objekte in Dateien können nicht angeklickt werden<br>
+[Bug]           Upload einer neuen Dateiversion löscht die Kategorie und die Beschreibung<br>
+[Bug]           Spezifische Kategorie "Dateien > Zugewiesene Objekte" lässt sich nicht in Liste einbinden<br>
+[Bug]           Suche findet Inhalt von Beschreibungsfeldern nicht, wenn diese Sonderzeichen enthalten<br>
+[Bug]           Verkabelung: Anschluss enthält standardmäßig den Kaltgerätestecker anstatt den Eintrag "-"<br>
+[Bug]           Anschlüsse werden doppelt erstellt anstatt abgespeichert<br>
+[Bug]           Falsches Datumsformat in Kategorie "Vertragszuweisung"<br>
+[Bug]           Falsche Inventarnummer beim QR-Code Druck, wenn der Platzhalter %COUNTER% verwendet wird<br>
+[Bug]           Wird die ausgeführte Suche als Bookmark hinzugefügt, erscheint nur Text unter my-doit<br>
+[Bug]           Gelöschte Kategorien werden weiterhin in Listen angezeigt<br>
+[Bug]           Neue Bookmarks in my-doit zeigen auf das Dashboard<br>
+[Bug]           Kategorie "Listener" listet keine Verbindungen auf.<br>
+[Bug]           Report mit Datumsfeldern in benutzerdefinierten Kategorien berücksichtigt nicht das länderspezifische Datumsformat<br>
+[Bug]           Berechnung der "RAID Kapazität" nicht nachvollziehbar bei Änderung der Speichereinheit oder des Wertes<br>
+[Bug]           Objekte werden erstellt bevor sie gespeichert werden und nicht bei Klick auf Abbrechen gelöscht.<br>

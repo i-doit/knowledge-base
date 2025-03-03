@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.6.5
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Neue Funktion] Neue Felder "Freier-" und "Belegter Speicher" in Kategorie Laufwerk<br>
 [Neue Funktion] JDisc-Import: Berücksichtigung von freiem und benutzem Speicherplatz beim Import von Laufwerken<br>
 [Bug]           Sortierung der Objekttypen-Auswahl in der Konfiguration einer benutzerdefinierten Kategorie ist nicht alphabetisch<br>

@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.13.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][List editing] Multiple hardware RAIDS appear in list edit although none were created<br>
 [Improvement][Report-Manager] Reports should always contain a constant<br>
 [Improvement][Report-Manager] Virtuelle und dynamische Properties in Report Manager Konditionen<br>

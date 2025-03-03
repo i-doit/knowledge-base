@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.9
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  Anzeige von Spalte Version in Kategorie Installation<br>
 [Verbesserung]  Der Regler für anpassbare Spaltenbreiten in Objektlisten wurde verbessert<br>
 [Verbesserung]  Option zur Handhabung von Leerzeichen in exportierten Check_MK Tags<br>

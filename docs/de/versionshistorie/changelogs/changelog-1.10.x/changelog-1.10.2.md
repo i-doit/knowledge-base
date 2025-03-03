@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.10.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung][Systemtools]              Objekte Zähler in Systemübersicht für aktuellen Mandanten<br>
 [Verbesserung][Report-Manager]           Erweiterung der Attribute CPU-Kerne und -Sockets im Report Manager<br>
 [Verbesserung][API]                      API: Livestatus-Instanzen auslesen, erstellen, aktualisieren und löschen<br>

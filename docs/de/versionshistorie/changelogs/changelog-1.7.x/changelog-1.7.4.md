@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.7.4
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  Datei zur Objektbild-Kategorie über die API hochladen<br>
 [Verbesserung]  Datei-Objekte über die API erstellen<br>
 [Verbesserung]  Mandantenunabhängige Konfiguration des Import Ordners (Expertensettings: "system.dir.import-uploads")<br>

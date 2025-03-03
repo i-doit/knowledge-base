@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 25
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Code (Internal)]                           Remove all query_cache_* options from the systemoverview of i-doit<br>
 [Task][Code (Internal)]                           Use buttons to edit properties in custom category configuration<br>
 [Task][System settings]                           Create new i-doit administration structure<br>

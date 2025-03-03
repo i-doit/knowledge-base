@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 32
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Bug][Logbook]                  The logbook uses data from other objects for the Changed Of data when edited via overview page<br>
 [Bug][Categories]               Creating a new connection at category Network listener does not create a new connection<br>
 [Bug][Categories]               Allow user to update linked service in installation category<br>

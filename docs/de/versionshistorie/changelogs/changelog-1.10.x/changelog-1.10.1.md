@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.10.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  Neue Attribute in Kategorie "Check_MK (Host) > Export Parameter"  <br>
 [Verbesserung]  Gesamtkapazität von Festplatten im Report Manager  <br>
 [Verbesserung]  Listenansicht mit mehr als zehn Spalten  <br>

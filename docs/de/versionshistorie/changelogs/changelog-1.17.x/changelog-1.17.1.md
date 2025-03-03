@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.17.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvements][Categories]                        Always show horizontal scroll bar in the "Cabinets" category<br>
 [Bug][JDisc]                                      JDisc: Import aborts with an error message when importing clusters<br>
 [Bug][JDisc]                                      Category "JDisc custom attributes" not available on overview page<br>

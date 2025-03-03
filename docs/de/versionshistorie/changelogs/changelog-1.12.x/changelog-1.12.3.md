@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.12.3
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Admincenter] Create tenants without root MySQL user<br>
 [Improvement][Code (internal)] Notification popups do not vanish on click<br>
 [Improvement][System settings] Option to disable object count in object browser<br>

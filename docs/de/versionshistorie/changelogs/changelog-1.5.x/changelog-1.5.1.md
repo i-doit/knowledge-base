@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.5.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Neue Funktion] Neue zusätzliche Lizenzform "Multi-tenant buyers licence"<br>
 [Verbesserung]  Schrank-Statistik lässt sich nicht einklappen<br>
 [Verbesserung]  JDisc: weitere Beschleunigungen beim Handling des VLAN Imports<br>

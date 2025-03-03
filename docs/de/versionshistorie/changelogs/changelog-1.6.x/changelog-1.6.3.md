@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.6.3
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  Direkte Verlinkung von URLs in Report-Ergebnissen<br>
 [Verbesserung]  Ergänzung der zugewiesenen Lizenz in Kategorie "Installation"<br>
 [Verbesserung]  Beschleunigte Suche durch Ausklammern von Beziehungen<br>

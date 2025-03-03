@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 26
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Code (Internal)]        Security - Path traversal<br>
 [Task][Code (Internal)]        Security - Stored XSS<br>
 [Task][Code (Internal)]        Integrate/Reintegrate static php code analysis tools to identify logical errors<br>

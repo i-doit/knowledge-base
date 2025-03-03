@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.7.3
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  JDisc-Import: Erweiterung des Imports um Stacked Switches<br>
 [Verbesserung]  Neuer Parameter "hostfilter" in API Methode cmdb.filter.getUpdatedIPs<br>
 [Verbesserung]  Konfigurierbarer globaler Sysid Präfix<br>

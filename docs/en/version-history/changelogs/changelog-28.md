@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 28
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Category folders]         Streamline wording of move browser in Category Tree<br>
 [Task][Category folders]         Streamline wording of reorder modal in category tree feature<br>
 [Task][Category folders]         Rename message when folder is empty<br>
