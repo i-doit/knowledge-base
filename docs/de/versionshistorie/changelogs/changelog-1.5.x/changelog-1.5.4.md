@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.5.4
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  API: Neue automatische Existenzprüfung der angegebenen Objekt ID für die cmdb.category Methoden<br>
 [Verbesserung]  Beschreibungsfeld aus Kategorie "Standort" wird nun in der anpassbaren Listenansicht zur Auswahl angeboten<br>
 [Verbesserung]  Kategorie Service: Neues Feld "Service Nummer"<br>

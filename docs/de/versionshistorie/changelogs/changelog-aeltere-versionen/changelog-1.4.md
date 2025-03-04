@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.4
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Erweiterung]   "Report Modul" wird zu "Report Manager"<br>
 [Erweiterung]       Bearbeitung von Reports, welche mit dem Abfrage Editor erstellt wurden<br>
 [Erweiterung]       Unterstützung von Benutzerdefinierten Kategorien<br>

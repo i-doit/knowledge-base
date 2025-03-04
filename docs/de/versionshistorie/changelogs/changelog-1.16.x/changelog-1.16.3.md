@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.16.3
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Bug][Notifications] Notification: Expiration of a certificate period - Despite threshold value, certificates outside the threshold value are also displayed<br>
 [Bug][Notifications] Notifications: Recipients receive all objects although they are not selected as contact<br>
 [Bug][Lists] Problems with the delete and purge button in object lists<br>

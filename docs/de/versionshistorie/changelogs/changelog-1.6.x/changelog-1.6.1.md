@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.6.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Neue Funktion] CSV Export von Kategorielisten<br>
 [Neue Funktion] Anzeige von Wartungsfenstern im Kalender Dashboard Widget<br>
 [Verbesserung]  Aktualisierung von Objekten, welche per H-Inventory importiert werden (Anhand Custom-Identifier, Hostname, Seriennummer, Mac- oder IP-Adresse)<br>

@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.15.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Authorization system] Creation of objects of certain object types is possible despite missing authorization<br>
 [Improvement][OCS] Compatibility with new OCS versions<br>
 [Bug][User settings] Validation for login passwords<br>

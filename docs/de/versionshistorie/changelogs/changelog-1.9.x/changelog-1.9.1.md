@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.9.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  Ermöglichen des Editieren eines neuen Eintrags im DialogPlus-Feld direkt nach dem Hinzufügen<br>
 [Verbesserung]  Berücksichtigung der Stromkreisrekursion<br>
 [Verbesserung]  Horizontale Scrollbar in JDisc Profilen sofort sichtbar<br>

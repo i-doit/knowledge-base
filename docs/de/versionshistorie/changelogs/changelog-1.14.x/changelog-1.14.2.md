@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.14.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Categories] Add field for firmware version<br>
 [Improvement][Custom categories] Multi-Select Field in Custom Category<br>
 [Improvement][List editing] MV Custom Category: Enable List Edit<br>

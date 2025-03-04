@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.12
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Aufgabe][Export]                            Caching in "isys_export_helper" ein/ausschaltbar machen<br>
 [Verbesserung][Check_MK]                     Check_MK Add-onisieren<br>
 [Verbesserung][Update]                       Warnmeldung bei Update unter PHP 5.6 oder 7.0<br>

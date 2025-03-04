@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 27
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Application Redesign]                       Redesign the login page<br>
 [Task][Code (Internal)]                            Remove 'logical-location-handling' setting, refer to 'Relocate CI' add-on<br>
 [Task][Code (Internal)]                            Update ACE Editor<br>

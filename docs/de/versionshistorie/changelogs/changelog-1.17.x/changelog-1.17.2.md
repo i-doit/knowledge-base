@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.17.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Categories]   Option to define if relations to an archived object should be displayed as archived or normal<br>
 [Improvement][Console]      Functions for cleaning up objects via i-doit console<br>
 [Bug][Lists]                Objects from relations are not shown in object lists<br>

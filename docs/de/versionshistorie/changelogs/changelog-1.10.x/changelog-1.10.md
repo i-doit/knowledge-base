@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.10
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Änderung]      Wartungs Add-on aus dem Kern entfernt<br>
 [Änderung]      Dashboard Diagramme mit neuer Javascript Bibliothek verbessert<br>
 [Verbesserung]  CMDB-Explorer: Objektinformationskopf scrollt weg wenn man in Objektinformationen nach unten scrollt<br>

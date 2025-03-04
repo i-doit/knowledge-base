@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.19
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Application Redesign]   Redesign the i-doit application<br>
 [Task][Code (Internal)]        Implement a way to inject menus to the administration area<br>
 [Task][System tools]           Add function in the administration area to clean up unfinished / deleted dialog entries<br>

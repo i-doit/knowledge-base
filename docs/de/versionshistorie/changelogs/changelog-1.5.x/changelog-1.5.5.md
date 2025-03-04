@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.5.5
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  Report Widget: Neue Option zum Limitieren der Gesamtausgabe des gewählten Reports<br>
 [Bug]           spezifische Kategorie Personen - zugewiesene Objekte fehlt in Report Manager<br>
 [Bug]           Kennzeichnung von Pflichtfeldern in benutzerdefinierten Kategorien erfolgt nicht<br>

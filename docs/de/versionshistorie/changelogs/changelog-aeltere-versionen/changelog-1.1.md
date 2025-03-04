@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Erweiterung]    Rundum erneurtes granulares Rechtesystem<br>
 [Erweiterung]    CMDB Rechtestrukturen auf Basis von Objekttypen, Objekten und Kategorien<br>
 [Erweiterung]    Rechtestrukturen für Module: Reports, Dialog-Admin, Im-/Export, Logbuch, Nagios, globale Suche, Templates & Verwaltung<br>

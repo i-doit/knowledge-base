@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 22
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Application Redesign] Improve the main menu to automatically switch on small screens<br>
 [Improvement][JDisc]                Import Soundcards from JDisc<br>
 [Improvement][JDisc]                Import fields "Last Scan" and "Last Discovered"<br>

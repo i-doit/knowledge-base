@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.16.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Categories] Add Attribute Firmware for the category Network -> interfaces<br>
 [Bug][LDAP] LDAP-Group Mapping doesn't work anymore<br>
 [Bug][LDAP] Deleted values from AD/LDAP remain untouched in i-doit<br>

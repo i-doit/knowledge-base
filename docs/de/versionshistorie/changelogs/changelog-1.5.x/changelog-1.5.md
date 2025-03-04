@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.5
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Neue Funktion] Vertragszuweisung / Leistungsschein: Neues Feld Reaktionszeit<br>
 [Neue Funktion] Text bei leerer Report Vorschau<br>
 [Neue Funktion] Benutzerdefinierte Kategorien erhalten einen neuen Feldtypen "Textarea"<br>

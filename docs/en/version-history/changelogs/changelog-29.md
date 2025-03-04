@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 29
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Service]                    Add link to customer satisfaction survey in i-doit<br>
 [Task][Code (Internal)]            Integrate enhanced color picker component<br>
 [Task][Code (Internal)]            Clean up color usages<br>

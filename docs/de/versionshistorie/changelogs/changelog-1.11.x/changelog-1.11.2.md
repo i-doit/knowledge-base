@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.11.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung][Code]                            Verhalten des Mandanten-Switcher ändern<br>
 [Verbesserung][Code]                            Unterstützen der PHP-Extension "memcached", ergänzend zu "memcache"<br>
 [Verbesserung][Benutzerdefinierte Kategorien]   Benutzerdefinierte rückwärtige Kategorie/Report darf innerhalb der Kategorie nicht überschrieben werden<br>

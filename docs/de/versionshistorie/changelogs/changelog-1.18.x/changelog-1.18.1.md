@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.18.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Code (internal)]                    Allow Add-on Bundling<br>
 [Bug][Code (internal)]                            Existing connections from the category Cabling cannot be reconnected if the entry is selected and edited via the checkbox.<br>
 [Bug][Code (internal)]                            The HTML purifier is not turned off by the Sanitize input data setting<br>

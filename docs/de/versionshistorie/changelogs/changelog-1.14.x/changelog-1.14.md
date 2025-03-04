@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.14
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Code (internal)] Compatibility for PHP 7.4<br>
 [Improvement][Code (internal)] i-doit no longer supports PHP 7.0, minimum requirement is PHP 7.1<br>
 [Improvement][Code (internal)] Remove unnecessary WYSIWYG formatting options<br>

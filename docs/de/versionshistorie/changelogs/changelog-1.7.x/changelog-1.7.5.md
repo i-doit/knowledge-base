@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.7.5
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Bug]           In der Übersicht der Kategorie "Verbindung" führt ein Klick auf ein Objekt unter "Verbunden mit Listener" zurück zum Hauptobjekt statt zum verbundenen Objekt.<br>
 [Bug]           Fehler beim Upload einer exportierten XML-Datei<br>
 [Bug]           Daten können über einen SQL-Report gelöscht werden<br>

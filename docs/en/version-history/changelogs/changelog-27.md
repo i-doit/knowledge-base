@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 27
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Application Redesign]                       Redesign the login page<br>
 [Task][Code (Internal)]                            Remove 'logical-location-handling' setting, refer to 'Relocate CI' add-on<br>
 [Task][Code (Internal)]                            Update ACE Editor<br>
@@ -43,7 +48,7 @@
 [Bug][LDAP]                                        Ldap-sync creates a duplicated logbook entries for a archived user<br>
 [Bug][LDAP]                                        Group Assignment is not removed for LDAP Users if the user was moved to another LDAP group<br>
 [Bug][LDAP]                                        Administration > Import and interfaces > LDAP > Attribute extension cannot be saved<br>
-[Bug][Logbook]                                     If a change in the administration with "logbook commentary" is saved a missleading information tells that a logbook entry has been created.<br>
+[Bug][Logbook]                                     If a change in the administration with "logbook commentary" is saved a missleading information tells that a loogbook entry has been created.<br>
 [Bug][API]                                         Creating and setting a Dialog entry with a String which is only a number is not logged<br>
 [Bug][API]                                         PHP Error when posting a API request without installed i-doit add-on API<br>
 [Bug][List editing]                                Software not displayed in list view when assigned via list edit<br>

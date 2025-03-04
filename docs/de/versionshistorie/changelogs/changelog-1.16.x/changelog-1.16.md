@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.16
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Code (internal)] Remove Intro JS<br>
 [Improvement][Print view] Print feature for rack views and racks in rooms<br>
 [Improvement][JDisc] JDisc import of information about warrenty runtimes<br>

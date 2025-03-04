@@ -1,3 +1,7 @@
+---
+search:
+  exclude: true
+---
 # Changelog 34
 <!-- cSpell:disable -->
 <!-- markdownlint-disable MD052 -->

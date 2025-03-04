@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.15.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][LDAP] If a user logs in via LDAP the Auth Cache should also be cleared<br>
 [Improvement][Export] XML-Export: extend selection of custom categories for the export<br>
 [Improvement][OCS] OCS-Import Recalculate object type of CIs based on tag configuration<br>

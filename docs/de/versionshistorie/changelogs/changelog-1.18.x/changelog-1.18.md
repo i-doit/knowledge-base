@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.18
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Password Encryption 2.0] New Cryptohashing for user passwords<br>
 [Improvement][Custom categories]       New field type "Number field" in the custom categories<br>
 [Improvement][Custom categories]       Dependencies for dialog+ fields in custom categories<br>
