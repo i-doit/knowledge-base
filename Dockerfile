@@ -1,4 +1,4 @@
-FROM python:3.13.2-bullseye AS i-doit-kb-build
+FROM python:3.13.2-bookworm AS i-doit-kb-build
 
 RUN apt-get update && \
     apt-get full-upgrade -y && \
@@ -23,5 +23,6 @@ FROM nginx:alpine AS i-doit-kb-web
 
 COPY --from=i-doit-kb-build /usr/src/app/generated /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+RUN rm /usr/share/nginx/html/index.html
 
 WORKDIR /usr/share/nginx/html
