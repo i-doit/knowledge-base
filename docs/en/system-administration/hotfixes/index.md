@@ -51,6 +51,16 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_34_hotfix_ID-11522_dc34840.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11522_dc34840.zip){ .md-button .md-button--primary }
 
+### Using installed on attribute at database assignment causes 500 error (ID-11743)
+
+!!! info "This Hotfix can be used for any case of a 500 error when trying to select a object in a category if the following error occurs:"
+    ```bash
+    PHP Fatal error:  Declaration of idoit\\Module\\Cmdb\\Component\\Browser\\Filter\\AuthFilter::getQueryCondition() must be compatible with idoit\\Component\\Browser\\Filter::getQueryCondition(): string in /var/www/html/idoit/src/classes/modules/cmdb/src/Component/Browser/Filter/AuthFilter.php on line 20, referer: .../idoit/?objID=18138&mNavID=2&lang=de&viewMode=1002&tvMode=1006&catgID=12
+    ```
+
+
+[i-doit_34_hotfix_ID-11743_71ff22b.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11743_71ff22b.zip){ .md-button .md-button--primary }
+
 ## API Add-on
 
 ### Saving field vlan_id does remove selected Layer-3 nets (API-604)
