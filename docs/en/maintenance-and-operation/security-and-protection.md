@@ -142,7 +142,7 @@ It is important that the service is not accessible from the outside. Often the s
 
 We do not join the usual ranting and raving relating to PHP because we can adequately "harden" the script language for our purposes. An important message is as follows: **PHP should always be up to date with the newest patch**. In this regard, you have to consider which major PHP versions (5.x, 7.x) are supported by PHP developers and which PHP packages are supported by the used distribution. Often distributions do not count on the latest major versions, but maintain older, more stable versions. These are patched with bug and security fixes. Therefore you should always download PHP updates as quickly as possible.
 
-We already described the required settings for the operation of i-doit in the [tenant mangement](../system-administration/administration/tenant-management/index.md). **You can supplement these settings by additional ones.** For this purpose, we create a new.ini file:
+We already described the required settings for the operation of i-doit in the [tenant management](../system-administration/administration/tenant-management/index.md). **You can supplement these settings by additional ones.** For this purpose, we create a new.ini file:
 
 ```shell
 sudo editor /etc/php/7.2/mods-available/zz_security.ini
@@ -271,17 +271,17 @@ A **web application firewall** is especially suitable for web servers. A very po
 
 An external **dedicated firewall** is very useful, but of course its implementation and operation are more complex. i-doit should be enabled to search for updates and to access online repositories (for example, for [reports](../evaluation/report-manager.md) and [templates](../i-doit-add-ons/documents/index.md)):
 
-| Host                                                               | Protocol  | Port    | Description                                                                              |
-| ------------------------------------------------------------------ | --------- | ------- | ---------------------------------------------------------------------------------------- |
-| **[login.i-doit.com](https://login.i-doit.com)**                   | **HTTPS** | **443** | Download of updates for i-doit and its add-ons                                           |
-| **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)**         | **HTTPS** | **443** | Online repositories (for example, for [reports](../evaluation/report-manager.md))        |
-| **[r.i-doit.com](https://r.i-doit.com)**                           | **HTTPS** | **443** | Online Repositories (for example, for [templates](../i-doit-add-ons/documents/index.md)) |
-| **[news.i-doit.com](https://news.i-doit.com)**                     | **HTTPS** | **443** | News about i-doit in the dashboard (open version)                                        |
-| **[i-doit.com](https://www.i-doit.com/en/)**                       | **HTTPS** | **443** | Search for updates of the pro version                                                    |
-| **[i-doit.org](https://i-doit.org)**                               | **HTTPS** | **443** | Search for updates of the pro version                                                    |
-| **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)**       | **HTTPS** | **443** | Retrieves available downloads via the license token                                      |
-| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)**             | **HTTPS** | **443** | Retrieve licenses via token                                                              |
-| **[center.i-doit.com/portal/](https://center.i-doit.com/portal/)** | **HTTPS** | **443** | Access to the Add-on & Subscription Center                                               |
+| Host                                                               | Protocol  | Port    | Description                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------ | --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **[login.i-doit.com](https://login.i-doit.com)**                   | **HTTPS** | **443** | Download of updates for i-doit and its add-ons                                                                                                                                                                                                       |
+| **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)**         | **HTTPS** | **443** | Online repositories (for example, for [reports](../evaluation/report-manager.md))                                                                                                                                                                    |
+| **[r.i-doit.com](https://r.i-doit.com)**                           | **HTTPS** | **443** | Online Repositories (for example, for [templates](../i-doit-add-ons/documents/index.md))                                                                                                                                                             |
+| **[news.i-doit.com](https://news.i-doit.com)**                     | **HTTPS** | **443** | News about i-doit in the dashboard (open version)                                                                                                                                                                                                    |
+| **[i-doit.com](https://www.i-doit.com/en/)**                       | **HTTPS** | **443** | Search for updates of the pro version                                                                                                                                                                                                                |
+| **[i-doit.org](https://i-doit.org)**                               | **HTTPS** | **443** | Search for updates of the pro version                                                                                                                                                                                                                |
+| **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)**       | **HTTPS** | **443** | Retrieves available downloads via the license token                                                                                                                                                                                                  |
+| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)**             | **HTTPS** | **443** | Retrieve licenses via token                                                                                                                                                                                                                          |
+| **[center.i-doit.com/portal/](https://center.i-doit.com/portal/)** | **HTTPS** | **443** | Access to the Add-on & Subscription Center. IP addresses: <br>`159.69.103.121`<br>`78.46.236.49`<br>`2a01:4f8:c01f:289a::`<br>`2a01:4f8:1c17:a07c::`<br>`35.158.127.51`<br>`35.158.127.52`<br>`35.158.127.53`<br>`159.69.103.121`<br>`195.46.236.49` |
 
 If one or more interfaces to third-party applications are configured, you also have to enable access respectively:
 
@@ -363,23 +363,23 @@ Those who want to just quickly set up i-doit for test purposes unfortunately oft
 #### MySQL User
 
 This user is already created during the [setup](../installation/manual-installation/setup.md). The password can be changed afterwards with a few SQL commands. We assume that the user is called idoit and that the name of the [system database](../software-development/database-model/index.md) is idoit_system. At first you log in:
-
+<!-- cSpell:disable -->
 ```shell
 mysql -uroot -p -hlocalhost
 ```
-
+<!-- cSpell:enable -->
 Then you change the password:
-
+<!-- cSpell:disable -->
 ```shell
 ALTER USER 'idoit'@'localhost' IDENTIFIED BY 'thisistotallysecure!!11';
 ```
-
+<!-- cSpell:enable -->
 This password has also to be communicated to i-doit. First in the system database, so that the [tenants' databases](../software-development/database-model/index.md) can be accessed:
-
+<!-- cSpell:disable -->
 ```shell
 UPDATE idoit_system.isys_mandator SET isys_mandator__db_pass = 'thisistotallysecure!!11' WHERE isys_mandator__db_user = 'idoit';
 ```
-
+<!-- cSpell:enable -->
 Lastly, the password has to be stored in the central configuration, so that the system database can be accessed. This can be made either under **Config** in the Admin-Center or in the file src/config.inc.php in the installation directory of i-doit.
 
 #### User for the Admin-Center
@@ -431,7 +431,6 @@ There are numerous other measures which are beyond the actual installation, but 
 ### High Availability
 
 !!! info "Truly necessary?"
-
     Often people ask us how to set up i-doit in the most effective way. Quickly, the focus lies on redundant systems but in most cases such a system is oversized and too complex. Before you take a sledgehammer to crack a nut and use a huge apparatus of hardware and software for your IT documentation, it is better to set up one (!) simple but sophisticated system and maintain it regularly. As far as we know, no customer required a redundant system for i-doit due to performance reasons so far, as the system requirements are rather moderate. i-doit works smoothly with the stated demands even in case of a) many data and b) many users working at the same time.
 
 To enhance the availability of the IT documentation, it can be helpful to run the single services **redundantly** and on dedicated systems (Bare Metal, VM or Container). To operate i-doit, you require an Apache webserver which can be controlled redundantly by one or even several Load Balancers. You can store the databases on a MariaDB cluster, which is administered, for example, by [MaxScale](https://mariadb.com/products/mariadb-maxscale). The data stored by i-doit in the file system can be saved in a (distributed) storage system. And also the cache, which is administered by memcached, can be swapped out.
@@ -454,8 +453,7 @@ For many of the described measures it is irrelevant whether IP is used in versio
 
 Routing and address assignment in IPv6 nets differ from IPv4 nets. If you do not pay attention, you could accidentally make the system available to the worldwide internet, although this was excluded with IPv4.
 
-Additional Links
-----------------
+## Additional Links
 
 If you want to delve deeper into the matter (and who would not want to after studying this article?), you can find further information here:
 

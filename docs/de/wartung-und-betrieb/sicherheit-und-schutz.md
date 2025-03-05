@@ -104,12 +104,12 @@ sudo apt purge cups
 **Das Minimalprinzip gilt nicht nur für das Betriebssystem, sondern auch für die installierten Dienste und Anwendungen.** Für Apache und PHP gibt es weitaus mehr Module, als für den reibungslosen Betrieb von i-doit benötigt werden. Beispiele: mod_proxy für Apache oder xdebug für PHP sollten nur installiert und aktiviert sein, wenn diese wirklich benötigt werden.
 
 Deaktivieren lassen sich die Module mit diesen Befehlen:
-
+<!-- cSpell:disable -->
 ```shell
 sudo a2dismod proxy
 sudo phpdismod xdebug
 ```
-
+<!-- cSpell:enable -->
 Da i-doit im Hintergrund MariaDB/MySQL einsetzt, installieren einige Kunden die Web-Applikation [phpMyAdmin](https://www.phpmyadmin.net/). Wir raten dringend davon ab, denn dadurch wird die abgeschottete Datenbank nach außen hin verfügbar gemacht. phpMyAdmin ist in den vergangenen Jahren immer wieder durch Sicherheitslücken negativ aufgefallen, was die Problematik nochmals verschärfen könnte. phpMyAdmin leistet gute Dienste, aber nicht auf einem Produktivsystem mit sensiblen Daten.
 
 ### Backup & Restore
@@ -123,11 +123,11 @@ Schnell kommt eine weitere wichtige Frage: Was ist, wenn die gesamte Infrastrukt
 ### MariaDB/MySQL absichern
 
 **Die gröbste Absicherung von MariaDB/MySQL überlassen wir dem Kommandozeilenwerkzeug mysql_secure_installation.** Dies richtet unter anderem ein Passwort für den Benutzer root ein (wenn noch nicht geschehen). Anschließend sollten wir uns auf dem DBMS einmal umschauen. Dazu melden wir uns als root an:
-
+<!-- cSpell:disable -->
 ```shell
 mysql -uroot -p -hlocalhost
 ```
-
+<!-- cSpell:enable -->
 Nun verschaffen wir uns einen Überblick über die derzeit hinterlegten Benutzer:
 
 ```shell
@@ -271,17 +271,17 @@ Speziell an Webserver richtet sich eine **Web Application Firewall**. Eine sehr 
 
 Noch sinnvoller, aber aufwendiger umzusetzen und zu betreiben, ist eine externe, **dedizierte Firewall**. i-doit sollte erlaubt sein, nach Updates suchen und auf Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md) und [Vorlagen](../i-doit-add-ons/documents/dokumentenvorlagen.md) zugreifen zu dürfen:
 
-| Host                                                         | Protokoll | Port    | Beschreibung                                                                                                                                         |
-| ------------------------------------------------------------ | --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **[login.i-doit.com](https://login.i-doit.com)**             | **HTTPS** | **443** | Updates für i-doit und dessen Add-ons herunterladen                                                                                                  |
-| **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)**   | **HTTPS** | **443** | Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md))                                                                         |
-| **[r.i-doit.com](https://r.i-doit.com)**                     | **HTTPS** | **443** | Online Repositories (z. B. für [Vorlagen](../i-doit-add-ons/documents/index.md))                                                                     |
-| **[news.i-doit.com](<https://news.i-doit.com>)**             | **HTTPS** | **443** | Neuigkeiten zu i-doit im Dashboard (open-Variante)                                                                                                   |
-| **[i-doit.com](https://www.i-doit.com/en/)**                 | **HTTPS** | **443** | Nach Updates der pro-Variante suchen                                                                                                                 |
-| **[i-doit.org](https://i-doit.org)**                         | **HTTPS** | **443** | Nach Updates der open-Variante suchen                                                                                                                |
-| **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)** | **HTTPS** | **443** | Ruft über den Lizenz Token verfügbare Downloads ab                                                                                                   |
-| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)**       | **HTTPS** | **443** | Lizenzen über Token abrufen                                                                                                                          |
-| **[center.i-doit.com](https://center.i-doit.com/portal/)**   | **HTTPS** | **443** | Zugriff auf das Add-on & Subscription Center  Adressen: `159.69.103.121` oder `78.46.236.49` oder `2a01:4f8:c01f:289a::` oder `2a01:4f8:1c17:a07c::` |
+| Host                                                         | Protokoll | Port    | Beschreibung                                                                                                                                                                                                                                         |
+| ------------------------------------------------------------ | --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **[login.i-doit.com](https://login.i-doit.com)**             | **HTTPS** | **443** | Updates für i-doit und dessen Add-ons herunterladen                                                                                                                                                                                                  |
+| **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)**   | **HTTPS** | **443** | Online Repositories (z. B. für [Reports](../auswertungen/report-manager.md))                                                                                                                                                                         |
+| **[r.i-doit.com](https://r.i-doit.com)**                     | **HTTPS** | **443** | Online Repositories (z. B. für [Vorlagen](../i-doit-add-ons/documents/index.md))                                                                                                                                                                     |
+| **[news.i-doit.com](<https://news.i-doit.com>)**             | **HTTPS** | **443** | Neuigkeiten zu i-doit im Dashboard (open-Variante)                                                                                                                                                                                                   |
+| **[i-doit.com](https://www.i-doit.com/en/)**                 | **HTTPS** | **443** | Nach Updates der pro-Variante suchen                                                                                                                                                                                                                 |
+| **[i-doit.org](https://i-doit.org)**                         | **HTTPS** | **443** | Nach Updates der open-Variante suchen                                                                                                                                                                                                                |
+| **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)** | **HTTPS** | **443** | Ruft über den Lizenz Token verfügbare Downloads ab                                                                                                                                                                                                   |
+| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)**       | **HTTPS** | **443** | Lizenzen über Token abrufen                                                                                                                                                                                                                          |
+| **[center.i-doit.com](https://center.i-doit.com/portal/)**   | **HTTPS** | **443** | Zugriff auf das Add-on & Subscription Center. IP Adressen:<br>`159.69.103.121`<br>`78.46.236.49`<br>`2a01:4f8:c01f:289a::`<br>`2a01:4f8:1c17:a07c::`<br>`35.158.127.51`<br>`35.158.127.52`<br>`35.158.127.53`<br>`159.69.103.121`<br>`195.46.236.49` |
 
 Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss der jeweilige Zugriff ebenfalls erlaubt sein:
 
@@ -363,19 +363,19 @@ Ein i-doit wird für Testzwecke "schnell mal" aufgesetzt. Dieses "schnell mal" b
 #### MySQL-Benutzer
 
 Dieser Benutzer wird bereits beim [Setup](../installation/manuelle-installation/setup.md) angelegt. Das Passwort kann nachträglich mit wenigen SQL-Befehlen geändert werden. Es wird davon ausgegangen, dass der Benutzer idoit heißt und die [System-Datenbank](../software-entwicklung/datenbank-modell/index.md) idoit_system. Zuerst kommt die Anmeldung:
-
+<!-- cSpell:disable -->
 ```shell
 mysql -uroot -p -hlocalhost
 ```
-
+<!-- cSpell:enable -->
 Anschließend folgt das ändern des Passworts:
 <!-- cSpell:disable -->
 ```shell
 ALTER USER 'idoit'@'localhost' IDENTIFIED BY 'thisistotallysecure!!11';
 ```
-
+<!-- cSpell:enable -->
 Dieses Passwort muss auch i-doit mitgeteilt werden. Zuerst in der Systemdatenbank, damit die [Mandanten-Datenbanken](../software-entwicklung/datenbank-modell/index.md) erreicht werden können:
-
+<!-- cSpell:disable -->
 ```shell
 UPDATE idoit_system.isys_mandator SET isys_mandator__db_pass = 'thisistotallysecure!!11' WHERE isys_mandator__db_user = 'idoit';
 ```
