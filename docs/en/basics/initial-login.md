@@ -1,3 +1,11 @@
+---
+title: Initial Login
+description: Initial Login
+icon:
+status:
+lang: en
+---
+
 # Initial Login
 
 i-doit is [installed](../installation/index.md) and you want to log in for the first time? No problem at all! However, there are a few things to keep in mind and that is why it's worth reading this article.
@@ -8,13 +16,14 @@ i-doit is [installed](../installation/index.md) and you want to log in for the f
 
 There are some default users for login which are assigned to default groups and therefore have predefined [permissions](./../efficient-documentation/rights-management/index.md).
 
-| User | Password | Group | Permissions (short description) |
-| --- | --- | --- | --- |
-| **admin** | **admin** | **Admin** | All rights, also for administration |
-| **archivar** | **archivar** | **Archivar** | Read and edit |
-| **author** | **author** | **Author** | Create, edit, archive and execute |
-| **editor** | **editor** | **Editor** | Read and edit |
-| **reader** | **reader** | **Reader** | Read |
+| User          | Password     | Group        | Permissions (short description)     |
+| ------------- | ------------ | ------------ | ----------------------------------- |
+| **admin**     | **admin**    | **Admin**    | All rights, also for administration |
+| **archivar**  | **archivar** | **Archivar** | Read and edit                       |
+| **author**    | **author**   | **Author**   | Create, edit, archive and execute   |
+| **editor**    | **editor**   | **Editor**   | Read and edit                       |
+| **reader**    | **reader**   | **Reader**   | Read                                |
+| **systemapi** | -            | -            | Used for internal functions         |
 
 The listed users receive their permissions through the groups of the same name.
 
