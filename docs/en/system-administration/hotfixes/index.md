@@ -58,8 +58,11 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
     PHP Fatal error:  Declaration of idoit\\Module\\Cmdb\\Component\\Browser\\Filter\\AuthFilter::getQueryCondition() must be compatible with idoit\\Component\\Browser\\Filter::getQueryCondition(): string in /var/www/html/idoit/src/classes/modules/cmdb/src/Component/Browser/Filter/AuthFilter.php on line 20, referer: .../idoit/?objID=18138&mNavID=2&lang=de&viewMode=1002&tvMode=1006&catgID=12
     ```
 
-
 [i-doit_34_hotfix_ID-11743_71ff22b.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11743_71ff22b.zip){ .md-button .md-button--primary }
+
+### Configured user language is ignored (ID-11738)
+
+[i-doit_34_hotfix_ID-11738_2fe864f.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11738_2fe864f.zip){ .md-button .md-button--primary }
 
 ## API Add-on
 

@@ -60,6 +60,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_34_hotfix_ID-11743_71ff22b.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11743_71ff22b.zip){ .md-button .md-button--primary }
 
+### Configured user language is ignored (ID-11738)
+
+[i-doit_34_hotfix_ID-11738_2fe864f.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11738_2fe864f.zip){ .md-button .md-button--primary }
+
 ## API Add-on
 
 ### Saving field vlan_id does remove selected Layer-3 nets (API-604)
