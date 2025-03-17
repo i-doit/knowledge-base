@@ -64,6 +64,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_34_hotfix_ID-11738_2fe864f.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11738_2fe864f.zip){ .md-button .md-button--primary }
 
+### File assignment via list edit not working (ID-10914)
+
+[i-doit_34_hotfix_ID-10914_912c7a0.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-10914_912c7a0.zip){ .md-button .md-button--primary }
+
 ## API Add-on
 
 ### Saving field vlan_id does remove selected Layer-3 nets (API-604)
@@ -114,3 +118,9 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 ### Option 'Send multiple notifications for each maintenance?' automatically sets to 'Yes' after finishing an upcoming maintenance [WARTUNG-97]
 
 [i-doit_maintenance-1.5_hotfix_WARTUNG-97_6cab331.zip :material-file-download:](../../assets/downloads/hotfixes/maintenance/i-doit_maintenance-1.5_hotfix_WARTUNG-97_6cab331.zip){ .md-button .md-button--primary }
+
+## Documents Add-on
+
+### Rights for Templates in categories are not checked [DOKU-502]
+
+[Documents_1.10_hotfix_DOKU-502_f8a6ec2.zip :material-file-download:](../../assets/downloads/hotfixes/documents/Documents_1.10_hotfix_DOKU-502_f8a6ec2.zip){ .md-button .md-button--primary }
