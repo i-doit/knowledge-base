@@ -60,4 +60,4 @@ Wenn du den Token nicht mehr findest, klicke auf die "Token zurücksetzen" Schal
 
 ### Neuen Token einspielen
 
-Um den neuen Token einzuspielen benutze bitte unsere [Lizenz aktivieren](../wartung-und-betrieb/lizenz-aktivieren.md) Anleitung.
+Um den neuen Token einzuspielen benutze bitte unsere [Lizenz aktivieren](../wartung-und-betrieb/lizenzierung.md) Anleitung.

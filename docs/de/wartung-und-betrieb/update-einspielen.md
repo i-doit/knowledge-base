@@ -4,12 +4,12 @@ _i-doit_ sollte immer in der aktuellsten Version betrieben werden. In Minor-Rele
 
 === "Release überspringen ab version 20"
     !!! attention "Release überspringen ab version 20"
-        Wenn du direkt auf eine neuere Version, z.B. 26, springen möchtest, kannst du das neueste Update-Paket aus dem [Kundenportal](../administration/kundenportal.md) herunterladen und im i-doit Ordner entpacken. Die notwendigen Schritte findest du [hier](update-einspielen.md#update-über-die-konsole-vorbereiten).
+        Wenn du direkt auf eine neuere Version, z.B. 26, springen möchtest, kannst du das neueste Update-Paket aus dem [Kundenportal](../administration/kundenportal.md) herunterladen und im i-doit Ordner entpacken. Die notwendigen Schritte findest du [hier](#update-über-die-konsole-vorbereiten).
         Ab Version **25** mit [Hotfix](../administration/hotfixes/hotfix-archiv/index.md), wird auch die Version 27 beim update check für den download angeboten.
 
 === "Releases überspringen vor version 20"
     !!! attention "Releases überspringen vor version 20"
-        Wenn aktuell die Version 1.13.1 installiert und schon die Version 1.13.3 verfügbar ist, wird trotzdem nur die nächsthöhere Version - also 1.13.2 - angezeigt. Allerdings können Minor-Releases grundsätzlich übersprungen werden. Dennoch werden über diesen Weg trotzdem alle Minor-Releases einzeln installiert, bis die aktuellste Version erreicht ist. Wenn du direkt auf die Version 1.13.3 springen möchtest, kannst du das neueste Paket im [Kundenportal](../administration/kundenportal.md) herunterladen und auf dem _i-doit_\-Host entpacken. Die notwendigen Schritte dafür kannst du [hier](update-einspielen.md#update-über-die-konsole-vorbereiten) finden.
+        Wenn aktuell die Version 1.13.1 installiert und schon die Version 1.13.3 verfügbar ist, wird trotzdem nur die nächsthöhere Version - also 1.13.2 - angezeigt. Allerdings können Minor-Releases grundsätzlich übersprungen werden. Dennoch werden über diesen Weg trotzdem alle Minor-Releases einzeln installiert, bis die aktuellste Version erreicht ist. Wenn du direkt auf die Version 1.13.3 springen möchtest, kannst du das neueste Paket im [Kundenportal](../administration/kundenportal.md) herunterladen und auf dem _i-doit_\-Host entpacken. Die notwendigen Schritte dafür kannst du [hier](#update-über-die-konsole-vorbereiten) finden.
 
 !!! warning "Backup"
     Vor dem Update sollte unbedingt ein [Backup](daten-sichern-und-wiederherstellen/index.md) angefertigt werden.
@@ -142,35 +142,35 @@ sudo -u www-data php console.php update -u BENUTZERNAME -p PASSWORT -z /var/www/
 
 Die Ausgabe kann dann z.B. so aussehen:
 
-| Message | Result |
-| --- | --- |
-| i-doit update | OK  |
-| Environment Check | OK  |
-| PHP Check | OK  |
-| Configuration | OK  |
-| Ini Setting: max\_input\_vars > 10000: failed | WARN |
-| Ini Setting: post\_max\_size > 128M: failed | WARN |
-| php-ext: mod\_rewrite: failed | WARN |
-| Sql Check | OK  |
-| Process update | OK  |
-| File: /var/www/html/i-doit/updates/versions/v1.18.1/update\_sys.xml should exist: failed | OK  |
-| File: /var/www/html/i-doit/updates/versions/v1.18.1/config\_template.inc.php should exist: failed | OK  |
-| Upgrade config | OK  |
+| Message                                                                                           | Result |
+| ------------------------------------------------------------------------------------------------- | ------ |
+| i-doit update                                                                                     | OK     |
+| Environment Check                                                                                 | OK     |
+| PHP Check                                                                                         | OK     |
+| Configuration                                                                                     | OK     |
+| Ini Setting: max\_input\_vars > 10000: failed                                                     | WARN   |
+| Ini Setting: post\_max\_size > 128M: failed                                                       | WARN   |
+| php-ext: mod\_rewrite: failed                                                                     | WARN   |
+| Sql Check                                                                                         | OK     |
+| Process update                                                                                    | OK     |
+| File: /var/www/html/i-doit/updates/versions/v1.18.1/update\_sys.xml should exist: failed          | OK     |
+| File: /var/www/html/i-doit/updates/versions/v1.18.1/config\_template.inc.php should exist: failed | OK     |
+| Upgrade config                                                                                    | OK     |
 
-| Message | Result |
-| --- | --- |
-| i-doit update | OK  |
-| Process update | OK  |
-| Update \idoit\_system\_i-doit\\ with /var/www/html/i-doit/updates/versions/v1.18.1/update\_sys.xml: Update is successful | OK  |
-| Update tenant databases | OK  |
-| Update \idoit\_data\_i-doit\\ with /var/www/html/i-doit/updates/versions/v1.18.1/update\_data.xml: Update is successful | OK  |
-| Remove update files using /var/www/html/i-doit/updates/versions/v1.18.1/update\_files.xml: Removing done | OK  |
-| Update \idoit\_system\_i-doit\\ with /var/www/html/i-doit/src/classes/modules/pro/install/update\_sys.xml: Update is successful | OK  |
-| Update tenant databases | OK  |
-| Update \idoit\_data\_i-doit\\ with /var/www/html/i-doit/src/classes/modules/pro/install/update\_data.xml: Update is successful | OK  |
-| Migrate tenant databases | OK  |
-| Migrate properties of \idoit\_data\_i-doit\\ with /var/www/html/i-doit/updates/versions/v1.18.1/migration/: Migration is successful | OK  |
-| Clear caches | OK  |
+| Message                                                                                                                             | Result |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| i-doit update                                                                                                                       | OK     |
+| Process update                                                                                                                      | OK     |
+| Update \idoit\_system\_i-doit\\ with /var/www/html/i-doit/updates/versions/v1.18.1/update\_sys.xml: Update is successful            | OK     |
+| Update tenant databases                                                                                                             | OK     |
+| Update \idoit\_data\_i-doit\\ with /var/www/html/i-doit/updates/versions/v1.18.1/update\_data.xml: Update is successful             | OK     |
+| Remove update files using /var/www/html/i-doit/updates/versions/v1.18.1/update\_files.xml: Removing done                            | OK     |
+| Update \idoit\_system\_i-doit\\ with /var/www/html/i-doit/src/classes/modules/pro/install/update\_sys.xml: Update is successful     | OK     |
+| Update tenant databases                                                                                                             | OK     |
+| Update \idoit\_data\_i-doit\\ with /var/www/html/i-doit/src/classes/modules/pro/install/update\_data.xml: Update is successful      | OK     |
+| Migrate tenant databases                                                                                                            | OK     |
+| Migrate properties of \idoit\_data\_i-doit\\ with /var/www/html/i-doit/updates/versions/v1.18.1/migration/: Migration is successful | OK     |
+| Clear caches                                                                                                                        | OK     |
 
 Anschließend kann i-doit verwendet werden.
 Nach dem Update sollte der [Cache](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) geleert und der [Suche-index](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) erneuert werden.

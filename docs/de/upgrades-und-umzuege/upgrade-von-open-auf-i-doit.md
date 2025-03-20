@@ -29,7 +29,7 @@ Bevor wir ins Detail gehen, verschaffen wir uns einen kurzen Überblick, welche 
 Vorbereitung
 ------------
 
-Wichtig: Dieser Vorgang kann nicht rückgängig gemacht werden. Ein funktionierendes [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) ist daher unablässig.Nach dem Upgrade ist eine gültige [Lizenz für i-doit](../wartung-und-betrieb/lizenz-aktivieren.md)erforderlich. Ebenso müssen die [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) und [Einstellungen](../installation/manuelle-installation/systemeinstellungen.md) erfüllt sein.
+Wichtig: Dieser Vorgang kann nicht rückgängig gemacht werden. Ein funktionierendes [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) ist daher unablässig.Nach dem Upgrade ist eine gültige [Lizenz für i-doit](../wartung-und-betrieb/lizenzierung.md)erforderlich. Ebenso müssen die [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) und [Einstellungen](../installation/manuelle-installation/systemeinstellungen.md) erfüllt sein.
 
 Sollte es sich um eine ältere open-Installation handeln, müssen noch weitere Schritte befolgt werden:
 
@@ -54,7 +54,7 @@ Nach dem Update auf die pro-Variante muss das pro-addon installiert werden. Das 
 Lizenz einspielen
 -----------------
 
-Das eigentliche Upgrade ist nun vollendet und muss nur noch durch eine gültige Lizenz "veredelt" werden. Die Lizenz kann [direkt im Admin-Center unter **Licenses** eingespielt](../wartung-und-betrieb/lizenz-aktivieren.md) werden.
+Das eigentliche Upgrade ist nun vollendet und muss nur noch durch eine gültige Lizenz "veredelt" werden. Die Lizenz kann [direkt im Admin-Center unter **Licenses** eingespielt](../wartung-und-betrieb/lizenzierung.md) werden.
 
 Caches leeren
 -------------

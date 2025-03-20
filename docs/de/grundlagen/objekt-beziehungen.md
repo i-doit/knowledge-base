@@ -46,7 +46,7 @@ Wie bereits ersichtlich besteht eine Objekt-Beziehung aus einem Master- und eine
 
 Die Richtung der Beziehung - also welches ist Objekt Master, welches Slave - hat Auswirkungen auf den [CMDB-Explorer](../auswertungen/cmdb-explorer/index.md). In der Baumansicht werden Objekt-Beziehungen entweder nach oben oder unten rekursiv aufgebaut. Im [Standard-Profil](../auswertungen/cmdb-explorer/profile-im-cmdb-explorer.md) stehen Master-Objekte unter den Slave-Objekten.
 
-!!! info "Beziehungs-Objekte sind nicht [lizenzpflichtig](../wartung-und-betrieb/lizenz-aktivieren.md)."
+!!! info "Beziehungs-Objekte sind nicht [lizenzpflichtig](../wartung-und-betrieb/lizenzierung.md)."
 
 ## Kategorie Beziehungen
 

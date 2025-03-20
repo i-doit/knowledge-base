@@ -61,6 +61,9 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       strict: false
+  - redirects:
+      redirect_maps:
+        'wartung-und-betrieb/lizenz-aktivieren.md': 'wartung-und-betrieb/lizenzierung.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -90,6 +93,8 @@ markdown_extensions:
       check_paths: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.blocks.caption:
+      prepend: true
 extra:
   manifest: overrides/manifest.webmanifest
   social:
@@ -298,7 +303,7 @@ nav:
           - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
   - Wartung und Betrieb:
       - wartung-und-betrieb/index.md
-      - Lizenz Aktivieren: wartung-und-betrieb/lizenz-aktivieren.md
+      - Lizenzierung: wartung-und-betrieb/lizenzierung.md
       - Cronjobs einrichten: wartung-und-betrieb/cronjobs-einrichten.md
       - Daten sichern und wiederherstellen:
           - wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md
@@ -490,7 +495,6 @@ nav:
           - Zwei-Faktor-Authentisierung: administration/verwaltung/zwei-faktor-authentisierung.md
           - Download Center: administration/verwaltung/download-center.md
           - Vertragsdaten: administration/verwaltung/vertragsdaten.md
-      - Admin-Center: administration/admin-center.md
       - Add-on & Subscription Center: administration/add-on-and-subscription-center.md
       - Admin Center: administration/admin-center.md
       - Kundenportal: administration/kundenportal.md

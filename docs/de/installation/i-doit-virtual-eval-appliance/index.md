@@ -95,7 +95,7 @@ Wo ist was zu finden?
 
 Die Appliance stellt eine "nackte" Installation von i-doit zur Verfügung. Das bedeutet, es sind weder Demodaten, noch zusätzliche [i-doit Add-ons](../../i-doit-add-ons/index.md) enthalten.
 
-Beim ersten Anmelden fragt i-doit nach einer gültigen [Lizenz](../../wartung-und-betrieb/lizenz-aktivieren.md), die eingespielt werden muss, damit alle Funktionen zur Verfügung stehen.
+Beim ersten Anmelden fragt i-doit nach einer gültigen [Lizenz](../../wartung-und-betrieb/lizenzierung.md), die eingespielt werden muss, damit alle Funktionen zur Verfügung stehen.
 
 Weitere erste Schritte mit i-doit sind ebenfalls in der Knowledge Base unter [Grundlagen](../../grundlagen/index.md) beschrieben.
 

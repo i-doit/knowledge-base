@@ -48,7 +48,7 @@ Im Bereich **Tenants** werden die Mandanten verwaltet. Dies wird allerdings nur 
 
 ## Lizenzen
 
-Über den Bereich **Licenses** wird die [Lizenzierung](../wartung-und-betrieb/lizenz-aktivieren.md) vorgenommen.
+Über den Bereich **Licenses** wird die [Lizenzierung](../wartung-und-betrieb/lizenzierung.md) vorgenommen.
 
 [![Lizenzen](../assets/images/de/administration/admin-center/5-ac.png)](../assets/images/de/administration/admin-center/5-ac.png)
 
