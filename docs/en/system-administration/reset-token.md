@@ -60,4 +60,4 @@ If you cannot find the token, click on "Reset token" button below. This will tak
 
 ### Activate new token
 
-To activate the new token, please use our [Activate license](../maintenance-and-operation/activate-license.md) instructions.
+To activate the new token, please use our [licensing i-doit](../maintenance-and-operation/licensing.md) instructions.
