@@ -244,6 +244,9 @@ nav:
               - version-history/changelogs/changelog-1.8.x/index.md
               - Changelog 1.8.3.1: version-history/changelogs/changelog-1.8.x/changelog-1.8.3.1.md
               - Changelog 1.8.3: version-history/changelogs/changelog-1.8.x/changelog-1.8.3.md
+              - Changelog 1.8.2: version-history/changelogs/changelog-1.8.x/changelog-1.8.2.md
+              - Changelog 1.8.1: version-history/changelogs/changelog-1.8.x/changelog-1.8.1.md
+              - Changelog 1.8: version-history/changelogs/changelog-1.8.x/changelog-1.8.md
   - Installation:
       - installation/index.md
       - System Requirements: installation/system-requirements.md
