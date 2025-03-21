@@ -1,7 +1,7 @@
 ---
-title: Setup
+title: i-doit Setup
 description: Setup
-icon:
+icon: material/cog
 status:
 lang: de
 ---
