@@ -48,4 +48,4 @@ Zusätzlich kann in der [Objektlistenkonfiguration](../../grundlagen/objekt-list
 
 ## Logbucheinträge aus dem Monitoring
 
-Über die [Console](../cli/console/index.md) können Statusmeldungen aus dem Monitoring in das [Logbuch](../../grundlagen/logbuch.md) von i-doit übertragen werden. Dazu muss der entsprechende Handler [nagios-ndoutils](../cli/console/optionen-und-parameter-der-console.md#nagios-ndoutils) aufgerufen werden und es werden automatisch alle Statusänderungen, die sich seit dem letzten Lauf geändert haben, in das Logbuch übertragen.
+Über die [Console](../cli/console/index.md) können Statusmeldungen aus dem Monitoring in das [Logbuch](../../grundlagen/logbuch.md) von i-doit übertragen werden. Dazu muss der entsprechende Handler [nagios-ndoutils](../cli/console/befehle-und-optionen.md#nagios-ndoutils) aufgerufen werden und es werden automatisch alle Statusänderungen, die sich seit dem letzten Lauf geändert haben, in das Logbuch übertragen.

@@ -88,8 +88,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
-      auto_append:
-        - overrides/assets/glossary-en.md
   - pymdownx.tasklist:
       custom_checkbox: true
 extra:
@@ -372,7 +370,7 @@ nav:
           - automation-and-integration/cli/index.md
           - Console:
               - automation-and-integration/cli/console/index.md
-              - Options and parameters for the console: automation-and-integration/cli/console/options-and-parameters-cli.md
+              - Commands and options: automation-and-integration/cli/console/commands-and-options.md
               - Using configuration files for console commands: automation-and-integration/cli/console/using-configuration-files-for-console-cli.md
       - Network Monitoring:
           - automation-and-integration/network-monitoring/index.md

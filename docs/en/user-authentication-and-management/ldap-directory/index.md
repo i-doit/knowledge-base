@@ -135,7 +135,7 @@ So that this file is considered e.g. with the ldap-sync Command, this must be in
 
 ### Console
 
-In order to use the console correctly, the [article](../../automation-and-integration/cli/index.md) should be familiar with it. A simple synchronization without the advanced configuration is provided by the option ldap-sync. A description of the parameters as well as a corresponding example can be found in the corresponding [chapter](../../automation-and-integration/cli/console/options-and-parameters-cli.md#ldap-sync).
+In order to use the console correctly, the [article](../../automation-and-integration/cli/index.md) should be familiar with it. A simple synchronization without the advanced configuration is provided by the option ldap-sync. A description of the parameters as well as a corresponding example can be found in the corresponding [chapter](../../automation-and-integration/cli/console/commands-and-options.md#ldap-sync).
 
 ### Automated Assignment of Persons to Person Groups
 
@@ -163,7 +163,7 @@ A logfile named ldap_debug.txt can be found within log/ in the i-doit installati
 Running the ldap-sync
 ---------------------
 
-The ldap-sync can only be executed via the console of the server. To be able to use the console properly, you should know the [article](../../automation-and-integration/cli/console/index.md) about it. A simple synchronization without the advanced configuration serves the option ldap-sync. A description of the parameters can be found in the [corresponding chapter](../../automation-and-integration/cli/console/options-and-parameters-cli.md).
+The ldap-sync can only be executed via the console of the server. To be able to use the console properly, you should know the [article](../../automation-and-integration/cli/console/index.md) about it. A simple synchronization without the advanced configuration serves the option ldap-sync. A description of the parameters can be found in the [corresponding chapter](../../automation-and-integration/cli/console/commands-and-options.md).
 
 **Example**
 
