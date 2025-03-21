@@ -91,8 +91,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
-      auto_append:
-        - overrides/assets/glossary-en.md
   - pymdownx.tasklist:
       custom_checkbox: true
 extra:
@@ -265,7 +263,7 @@ nav:
           - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
   - Maintenance and operation:
       - maintenance-and-operation/index.md
-      - Activate license: maintenance-and-operation/licensing.md
+      - Licensing: maintenance-and-operation/licensing.md
       - Backup and recovery:
           - maintenance-and-operation/backup-and-recovery/index.md
           - Backup script for data and files: maintenance-and-operation/backup-and-recovery/backup-script-for-data-and-files.md

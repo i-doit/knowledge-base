@@ -145,9 +145,12 @@ Um das Add-on & Subscription Center in i-doit zu verwenden sind womöglich einig
 
 Bitte beachte, dass im Reiter **Tenants** konfiguriert werden kann, wie viele Objektlizenzen einem Mandanten zugewiesen werden. Auch wenn nur ein einzelner Mandant existiert, kann eine ausgeschaltete automatische Lizenzverteilung dafür sorgen, dass nicht alle Objektlizenzen genutzt werden. Sollte dies der Fall sein, kann diese einfach aktiviert werden und wird mit einem Klick auf Speichern übernommen.
 
-[![faq-license-distribution](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-distribution.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-distribution.png)
+!!! success ""
+    [![faq-license-distribution](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-distribution.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-distribution.png)
 
 ### Die Lizenz ist gültig aber i-doit zeigt an, dass es nicht lizenziert ist?
 
-!!! success "Öffne den Reiter Tenant im Admin-Center und klicke auf **Save license settings**."
+Öffne den Reiter Tenant im Admin-Center und klicke auf **Save license settings**.
+
+!!! success ""
     [![faq-license-settings](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-settings.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-settings.png)

@@ -42,6 +42,8 @@ The **License Token** will be sent by e-mail. The **Offline License** can be acc
 
 * * *
 
+<div class="steps" markdown>
+
 ## How do I activate the i-doit eval/trial (Offline)
 
 1. Open the i-doit installation via the browser and log in with the standard user data. See [initial login](../basics/initial-login.md).
@@ -142,9 +144,12 @@ In order to use the **Add-on & Subscription Center** in i-doit, some firewall pe
 
 Please note that in the **Tenants** tab you can configure how many object licenses can be assigned to a client. Even if only a single client exists, a switched off automatic license distribution can ensure that not all object licenses are used. If this is the case, it can simply be activated and applied with a click on save.
 
-[![faq-license-distribution](../assets/images/en/maintenance-and-operation/licensing/faq-license-distribution.png)](../assets/images/en/maintenance-and-operation/licensing/faq-license-distribution.png)
+!!! success ""
+    [![faq-license-distribution](../assets/images/en/maintenance-and-operation/licensing/faq-license-distribution.png)](../assets/images/en/maintenance-and-operation/licensing/faq-license-distribution.png)
 
 ### The license is valid but i-doit shows that it is not licensed?
 
-!!! success "Open the Tenant tab in the Admin-Center and click on **Save license settings**."
-    [![faq-license-settings](../assets/images/en/maintenance-and-operation/licensing/faq-license-settings)](../assets/images/en/maintenance-and-operation/licensing/faq-license-settings)
+Open the Tenant tab in the Admin-Center and click on **Save license settings**.
+
+!!! success ""
+    [![faq-license-settings](../assets/images/en/maintenance-and-operation/licensing/faq-license-settings.png)](../assets/images/en/maintenance-and-operation/licensing/faq-license-settings.png)
