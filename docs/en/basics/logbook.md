@@ -71,7 +71,7 @@ Whether older entries are to be archived or not can be configured via **Extras â
 
 [![Archiving and Restoring Older Entries](../assets/images/en/basics/logbook/8-lb.png)](../assets/images/en/basics/logbook/8-lb.png)
 
-Archiving is performed via the [i-doit Console](../i-doit-add-ons/api/index.md). This step can therefore also be automated. A corresponding example of a call and a [list of parameters](../automation-and-integration/cli/console/options-and-parameters-cli.md) can be found in the corresponding article for the [logbook-archive](../automation-and-integration/cli/console/options-and-parameters-cli.md#logbook-archive) option.
+Archiving is performed via the [i-doit Console](../i-doit-add-ons/api/index.md). This step can therefore also be automated. A corresponding example of a call and a [list of parameters](../automation-and-integration/cli/console/commands-and-options.md) can be found in the corresponding article for the [logbook-archive](../automation-and-integration/cli/console/commands-and-options.md#logbook-archive) option.
 
 Example:
 

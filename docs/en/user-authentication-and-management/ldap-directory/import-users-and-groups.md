@@ -107,7 +107,7 @@ For example, if the users differ by having two objectClass attributes (e.g. pers
 
 ## Which other attributes can be imported via ldap.ini
 
--   The post [ldap.ini Configuration](../../automation-and-integration/cli/console/options-and-parameters-cli.md#ldap-sync) should be known.
+-   The post [ldap.ini Configuration](../../automation-and-integration/cli/console/commands-and-options.md#ldap-sync) should be known.
 -   An .ini file can be created for the import, with this additional attributes can be imported.
 -   The [Category Extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md) should already be configured.
 -   We use the .ini section
@@ -118,16 +118,16 @@ For example, if the users differ by having two objectClass attributes (e.g. pers
 
 Here again as a table
 
-| Field title | Attribut | Mapping with |
-| --- | --- | --- |
-| Field title 1 | objectSid | Key: custom_1 |
+| Field title   | Attribut   | Mapping with  |
+| ------------- | ---------- | ------------- |
+| Field title 1 | objectSid  | Key: custom_1 |
 | Field title 2 | objectGUID | Key: custom_2 |
-| Field title 3 | - | Key: custom_3 |
-| Field title 4 | - | Key: custom_4 |
-| Field title 5 | - | Key: custom_5 |
-| Field title 6 | - | Key: custom_6 |
-| Field title 7 | - | Key: custom_7 |
-| Field title 8 | - | Key: custom_8 |
+| Field title 3 | -          | Key: custom_3 |
+| Field title 4 | -          | Key: custom_4 |
+| Field title 5 | -          | Key: custom_5 |
+| Field title 6 | -          | Key: custom_6 |
+| Field title 7 | -          | Key: custom_7 |
+| Field title 8 | -          | Key: custom_8 |
 
 * * *
 

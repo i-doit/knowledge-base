@@ -97,11 +97,11 @@ Im linken Navigationsbaum können die jeweiligen Vorlagen für die Benachrichtig
 
 ## Konfiguration des Aufrufs mit CLI
 
-Damit die eingerichteten Benachrichtigungen auch regelmäßig überprüft werden, muss die i-doit [CLI](../automatisierung-und-integration/cli/console/index.md) mit dem Command **[notifications-send](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#OptionenundParameterderConsole-notifications-send)** zum Beispiel als [Cronjob](../wartung-und-betrieb/cronjobs-einrichten.md) ausgeführt werden. Es lässt sich jede Benachrichtigung einzeln abrufen. Sinnvoll ist es, zu überlegen, wie oft maximal geprüft werden soll. Bewährt hat es sich unserer Erfahrung nach täglich kurz vor Arbeitsbeginn zu prüfen, damit morgens sofort klar ist, womit man sich den Tag über beschäftigen sollte.
+Damit die eingerichteten Benachrichtigungen auch regelmäßig überprüft werden, muss die i-doit [CLI](../automatisierung-und-integration/cli/console/index.md) mit dem Command **[notifications-send](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#OptionenundParameterderConsole-notifications-send)** zum Beispiel als [Cronjob](../wartung-und-betrieb/cronjobs-einrichten.md) ausgeführt werden. Es lässt sich jede Benachrichtigung einzeln abrufen. Sinnvoll ist es, zu überlegen, wie oft maximal geprüft werden soll. Bewährt hat es sich unserer Erfahrung nach täglich kurz vor Arbeitsbeginn zu prüfen, damit morgens sofort klar ist, womit man sich den Tag über beschäftigen sollte.
 
 !!! info "Ohne einen Aufruf des Commands über die i-doit CLI findet **kein** Versand der Benachrichtigungen statt!"
 
-Die Möglichen Parameter sowie ein Beispielaufruf für den Versand der Benachrichtigungen sind im [entsprechenden Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) für den Command **[notifications-send](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#notifications-send)** zu finden.
+Die Möglichen Parameter sowie ein Beispielaufruf für den Versand der Benachrichtigungen sind im [entsprechenden Artikel](../automatisierung-und-integration/cli/console/befehle-und-optionen.md) für den Command **[notifications-send](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#notifications-send)** zu finden.
 
 !!! info "Mit dem Benachrichtigungsmodul lassen sich Eskalationsstufen abbilden. Dazu ist nötig, für dieselben Benachrichtigungsarten mehrere Benachrichtigungen mit verschiedenen Empfängerkreisen und Schwellwerten einzurichten."
 
@@ -113,4 +113,4 @@ sudo -u www-data php console.php notifications-send --user admin --password admi
 
 ## Logging
 
-Beim Aufruf des CLI Befehls [notifications-send](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#notifications-send) wird eine Logdatei erstellt. Die Datei mit der Bezeichnung `notifications_YYYY-MM-DD.log` ist im i-doit `log` Ordner zu finden.
+Beim Aufruf des CLI Befehls [notifications-send](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#notifications-send) wird eine Logdatei erstellt. Die Datei mit der Bezeichnung `notifications_YYYY-MM-DD.log` ist im i-doit `log` Ordner zu finden.

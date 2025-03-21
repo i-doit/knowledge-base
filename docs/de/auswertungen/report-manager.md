@@ -56,14 +56,14 @@ Essentiell ist der Titel und die Kategorie. Zudem ist es oftmals hilfreich eine 
 
 Es gibt folgende erweiterte Optionen.
 
-| Option | Beschreibung |
-| --- | --- |
-| **Zeige HTML** | Wenn die Option auf Ja gesetzt ist wird in Reports auch HTML angezeigt. |
-| **Gruppierte Multivalue-Darstellung** | Diese Option gruppiert Multi-Value Einträge zu einem Objekt untereinander |
+| Option                                         | Beschreibung                                                                                                                                                                                                                                                                                                   |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Zeige HTML**                                 | Wenn die Option auf Ja gesetzt ist wird in Reports auch HTML angezeigt.                                                                                                                                                                                                                                        |
+| **Gruppierte Multivalue-Darstellung**          | Diese Option gruppiert Multi-Value Einträge zu einem Objekt untereinander                                                                                                                                                                                                                                      |
 | **Objekte mit leeren Verknüpfungen anzeigen?** | Diese Option bezieht sich auf Unterabfragen zu Objekten, die in Beziehung stehen. Sollte das Attribut, das diese Beziehung repräsentiert, leer sein, d. h., es steht kein Objekt in Beziehung, wird das Ergebnis leer sein, wenn die Option auf **Nein** steht. Andernfalls bleibt die Zelle im Ergebnis leer. |
-| **Beziehungsobjekte mit ausgeben?** | Hinter jeder Beziehung zwischen zwei Objekten steht ein Beziehungsobjekt. Wenn diese Option auf **Ja** steht, wird das Beziehungsobjekt ebenfalls im Ergebnis angezeigt. |
-| **Sortierung** | Nach einigen ausgewählten Attributen kann automatisch sortiert werden, sobald der Report ausgeführt wird. Mit dieser Option lässt sich zusätzlich einstellen, ob die Sortierung auf- oder absteigend geschieht. |
-| **Statusfilter für Multi-Value Kategorien** | Sollen archivierte, gelöschte, normale, unfertige oder Alle Multi-Value Einträge aus Kategorien angezeigt werden? |
+| **Beziehungsobjekte mit ausgeben?**            | Hinter jeder Beziehung zwischen zwei Objekten steht ein Beziehungsobjekt. Wenn diese Option auf **Ja** steht, wird das Beziehungsobjekt ebenfalls im Ergebnis angezeigt.                                                                                                                                       |
+| **Sortierung**                                 | Nach einigen ausgewählten Attributen kann automatisch sortiert werden, sobald der Report ausgeführt wird. Mit dieser Option lässt sich zusätzlich einstellen, ob die Sortierung auf- oder absteigend geschieht.                                                                                                |
+| **Statusfilter für Multi-Value Kategorien**    | Sollen archivierte, gelöschte, normale, unfertige oder Alle Multi-Value Einträge aus Kategorien angezeigt werden?                                                                                                                                                                                              |
 
 #### Ausgabe
 
@@ -143,7 +143,7 @@ Auswahl von nützlichen **Report Views**:
 
 ## Reports automatisiert exportieren
 
-Bestehende Reports können automatisiert als Datei exportiert werden, ohne das ein Benutzer manuell eingreifen muss. Dies geschieht über das Kommandozeilen-Werkzeug von _i-doit_, der [console.php](../automatisierung-und-integration/cli/console/index.md) via [report-export](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#report-export).
+Bestehende Reports können automatisiert als Datei exportiert werden, ohne das ein Benutzer manuell eingreifen muss. Dies geschieht über das Kommandozeilen-Werkzeug von _i-doit_, der [console.php](../automatisierung-und-integration/cli/console/index.md) via [report-export](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#report-export).
 
 ```shell
     sudo -u www-data php console.php report-export --help

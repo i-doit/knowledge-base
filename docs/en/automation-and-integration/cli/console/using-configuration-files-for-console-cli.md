@@ -17,7 +17,7 @@ You can then save these newly created files under /i-doit/src/handler/config/ fo
     ```
 
 This saves you from typing the password in plain text. into the console.<br>
-The [Console Command](./options-and-parameters-cli.md) uses .ini files.<br>
+The [Console Command](./commands-and-options.md) uses .ini files.<br>
 The [Controller Command](../../../automation-and-integration/cli/console/index.md) uses .inc.php files. However, this method is outdated and should not be used.
 
 The configuration file is used with `--config /path/to/config.ini or with -c /path/to/config.ini`
@@ -35,21 +35,21 @@ Currently none available.
     tenantId=1
 
 Here you can add the options of the Console Command. These options must be written in the “long form”.<br>
-For more options see [Optionen und Parameter der Console](./options-and-parameters-cli.md).
+For more options see [Optionen und Parameter der Console](./commands-and-options.md).
 
     [additional]
 
 Special parameters are entered below.<br>
-At the moment these are available for the [ldapServerId](../../../user-authentication-and-management/ldap-directory/index.md) and for [import-syslog](./options-and-parameters-cli.md#import-ocs).
+At the moment these are available for the [ldapServerId](../../../user-authentication-and-management/ldap-directory/index.md) and for [import-syslog](./commands-and-options.md#import-ocs).
 
 * * *
 
-Example for the command [search-index](./options-and-parameters-cli.md#search-index)
+Example for the command [search-index](./commands-and-options.md#search-index)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 First the .ini file has to be created.<br>
-We use here additionally [update](./options-and-parameters-cli.md#search-index) to overwrite and create the search index.<br>
-Additionally we use [quiet](./options-and-parameters-cli.md#search-index) to shorten the output and save some memory, which can be used for indexing.
+We use here additionally [update](./commands-and-options.md#search-index) to overwrite and create the search index.<br>
+Additionally we use [quiet](./commands-and-options.md#search-index) to shorten the output and save some memory, which can be used for indexing.
 
     [commandArguments]
     [commandOptions]
@@ -69,9 +69,9 @@ To use the configuration we execute the console command and specify the path to 
 
 * * *
 
-\## Example for the command [notifications-send](./options-and-parameters-cli.md#notifications-send)
+\## Example for the command [notifications-send](./commands-and-options.md#notifications-send)
 
-There are no further options for this command so we only need the following options [user](./options-and-parameters-cli.md#notifications-send), [password](./options-and-parameters-cli.md#-notifications-send).
+There are no further options for this command so we only need the following options [user](./commands-and-options.md#notifications-send), [password](./commands-and-options.md#-notifications-send).
 
     [commandArguments]
     [commandOptions]
@@ -89,12 +89,12 @@ To use the configuration file we execute the console command and specify the pat
 
 * * *
 
-Example for the command [ldap-sync](./options-and-parameters-cli.md#ldap-sync)
+Example for the command [ldap-sync](./commands-and-options.md#ldap-sync)
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This command offers the following additional options: [ldapServerId](./options-and-parameters-cli.md#ldap-sync) and [dumpConfig](./options-and-parameters-cli.md#ldap-sync).<br>
-The [ldapServerId](./options-and-parameters-cli.md#ldap-sync) option specifies the ldap server to use. Here the ID of the entry must be specified.<br>
-With [dumpConfig](./options-and-parameters-cli.md#ldap-sync) no synchronization is executed! Only the configuration is output. Should therefore only be used for debugging.
+This command offers the following additional options: [ldapServerId](./commands-and-options.md#ldap-sync) and [dumpConfig](./commands-and-options.md#ldap-sync).<br>
+The [ldapServerId](./commands-and-options.md#ldap-sync) option specifies the ldap server to use. Here the ID of the entry must be specified.<br>
+With [dumpConfig](./commands-and-options.md#ldap-sync) no synchronization is executed! Only the configuration is output. Should therefore only be used for debugging.
 
     [commandArguments]
     [commandOptions]
@@ -163,10 +163,10 @@ List of command options and a short explanation
 
 * * *
 
-Example for the command [import-syslog](./options-and-parameters-cli.md#import-syslog)
+Example for the command [import-syslog](./commands-and-options.md#import-syslog)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-There are no further options for this command so we only need the following options [user](./options-and-parameters-cli.md#import-syslog), [password](./options-and-parameters-cli.md#import-syslog) und [tenantId](./options-and-parameters-cli.md#import-syslog).
+There are no further options for this command so we only need the following options [user](./commands-and-options.md#import-syslog), [password](./commands-and-options.md#import-syslog) und [tenantId](./commands-and-options.md#import-syslog).
 
     [commandArguments]
     [commandOptions]

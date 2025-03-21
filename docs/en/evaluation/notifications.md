@@ -95,11 +95,11 @@ The templates matching the corresponding notifications can be selected and adjus
 
 ## Configuration of the call with the CLI
 
-To ensure that the set-up notifications are also checked regularly, the i-doit [CLI](../console/../automation-and-integration/cli/index.md) must be executed with the command **[notifications-send](../automation-and-integration/cli/console/options-and-parameters-cli.md#notifications-send)**, for example as a cron job. It is not possible to call up each notification individually, but all notifications are always checked automatically one after the other. It makes sense to consider how often the maximum number of checks should be. In our experience, it has proven useful to check every day shortly before starting work, so that it is immediately clear in the morning what you should deal with during the day.
+To ensure that the set-up notifications are also checked regularly, the i-doit [CLI](../console/../automation-and-integration/cli/index.md) must be executed with the command **[notifications-send](../automation-and-integration/cli/console/commands-and-options.md#notifications-send)**, for example as a cron job. It is not possible to call up each notification individually, but all notifications are always checked automatically one after the other. It makes sense to consider how often the maximum number of checks should be. In our experience, it has proven useful to check every day shortly before starting work, so that it is immediately clear in the morning what you should deal with during the day.
 
 !!! info "Without a call of the command via the i-doit CLI **no** dispatch of the notifications takes place!"
 
-The possible parameters as well as an example call for sending notifications can be found in the [corresponding article](,/../notifications.md) for the command **[notifications-send](../automation-and-integration/cli/console/options-and-parameters-cli.md#notifications-send)**.
+The possible parameters as well as an example call for sending notifications can be found in the [corresponding article](,/../notifications.md) for the command **[notifications-send](../automation-and-integration/cli/console/commands-and-options.md#notifications-send)**.
 
 !!! info "You can map escalation levels by using the notification module. For this, you need to set up multiple notifications with different recipient groups and threshold values for the same notification types."
 
@@ -111,4 +111,4 @@ sudo -u www-data php console.php notifications-send --user admin --password admi
 
 ## Logging
 
-When the CLI command [notifications-send](../automation-and-integration/cli/console/options-and-parameters-cli.md#notifications-send) is called, a log file is created. The file with the name `notifications_YYYY-MM-DD.log` can be found in the i-doit `log` folder. If a person is not notified, the reason can be found in the log file.
+When the CLI command [notifications-send](../automation-and-integration/cli/console/commands-and-options.md#notifications-send) is called, a log file is created. The file with the name `notifications_YYYY-MM-DD.log` can be found in the i-doit `log` folder. If a person is not notified, the reason can be found in the log file.

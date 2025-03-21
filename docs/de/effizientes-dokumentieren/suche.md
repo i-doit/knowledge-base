@@ -39,16 +39,16 @@ Automatische Deep Search
 
 Sollte die Suche im voreingestellten Modus (siehe oben) kein oder ein unzureichendes Ergebnis liefern, kann automatisch die **Deep Search** ausgeführt werden. Dieses Verhalten wird unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Suche → Automatische DeepSearch** konfiguriert:
 
-| Option | Beschreibung |
-| --- | --- |
-| **Aktiv** | Die Such-Ergebnisse werden durch eine zusätzliche **Deep Search** ergänzt. |
+| Option                                           | Beschreibung                                                                                |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| **Aktiv**                                        | Die Such-Ergebnisse werden durch eine zusätzliche **Deep Search** ergänzt.                  |
 | **Aktiv, wenn keine Ergebnisse gefunden werden** | Die zusätzliche **Deep Search** wird gestartet, wenn keine Ergebnisse gefunden worden sind. |
-| **Deaktiviert** | Die zusätzliche **Deep Search** wird nicht berücksichtigt. |
+| **Deaktiviert**                                  | Die zusätzliche **Deep Search** wird nicht berücksichtigt.                                  |
 
 Indexierung
 -----------
 
-Initial wird der Suchindex automatisch beim Update und der Installation erzeugt. Nur in sehr großen Datenbanken mit mehr als 500.000 Objekten muss dieser manuell erzeugt werden, damit die Suche performant läuft und gute Ergebnisse liefert. Der Index kann unabhängig von Benutzer-Interaktionen im Hintergrund erstellt bzw. aktualisiert werden. Angestoßen wird diese Aktion über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md). Ein Beispielaufruf sowie Erklärungen zu den möglichen Parametern können dem [entsprechenden Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) entnommen werden.
+Initial wird der Suchindex automatisch beim Update und der Installation erzeugt. Nur in sehr großen Datenbanken mit mehr als 500.000 Objekten muss dieser manuell erzeugt werden, damit die Suche performant läuft und gute Ergebnisse liefert. Der Index kann unabhängig von Benutzer-Interaktionen im Hintergrund erstellt bzw. aktualisiert werden. Angestoßen wird diese Aktion über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md). Ein Beispielaufruf sowie Erklärungen zu den möglichen Parametern können dem [entsprechenden Artikel](../automatisierung-und-integration/cli/console/befehle-und-optionen.md) entnommen werden.
 
 ```shell
 php console.php search-index -uadmin -padmin -i 1
@@ -62,7 +62,7 @@ Alternativ kann der Reindex auch in der i-doit Verwaltung unter **Systemtools** 
 Über die Konsole suchen
 -----------------------
 
-Die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) erlaubt auch das Suchen über die Kommandozeile. Die nötige Option heißt **search**. Ein Beispielaufruf ist im Artikel zu finden, der näher auf die [Optionen und Parameter](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md) der i-doit Console eingeht.
+Die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) erlaubt auch das Suchen über die Kommandozeile. Die nötige Option heißt **search**. Ein Beispielaufruf ist im Artikel zu finden, der näher auf die [Optionen und Parameter](../automatisierung-und-integration/cli/console/befehle-und-optionen.md) der i-doit Console eingeht.
 
 ```shell
     sudo -u www-data php console.php search -uadmin -padmin --searchString=acme
@@ -212,6 +212,6 @@ Dieses Limit dient der Performance. Um dieses Limit zu erhöhen muss eine Expert
 
 Hier ein Beispiel bei dem das Limit auf 5000 Ergenisse gesetzt wurde.
 
-| Key | Value | Type |
-| --- | --- | --- |
-| search.limit | 5000 | Tenant-wide |
+| Key          | Value | Type        |
+| ------------ | ----- | ----------- |
+| search.limit | 5000  | Tenant-wide |

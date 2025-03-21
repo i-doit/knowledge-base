@@ -15,7 +15,7 @@ Das Admin-Center ist eine in i-doit integrierte separate Administrations-Oberfl�
 ## Zugangsdaten
 
 !!! attention "Achtung!"
-    Sollten Sie sich nicht mehr einloggen können, dann kann das Passwort nur über die [CLI](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#admin-center-password-reset) geändert werden!
+    Sollten Sie sich nicht mehr einloggen können, dann kann das Passwort nur über die [CLI](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#admin-center-password-reset) geändert werden!
 
 Für das Admin-Center gelten **separate Zugangsdaten**. Diese können bei der [Installation von i-doit](../installation/manuelle-installation/setup.md) festgelegt werden. Sollte dieser Schritt übersprungen werden, ist erst einmal kein Zugang zum Admin-Center möglich.
 
