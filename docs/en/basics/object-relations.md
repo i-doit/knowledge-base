@@ -46,7 +46,7 @@ As it is already obvious, an object relation consists of a master and a slave ob
 
 The direction of the relation (which object is the master and which one is the slave) has consequences for the [CMDB explorer](../evaluation/cmdb-explorer/index.md). Object relations are displayed recursively either upwards or downwards in the tree view. Master objects are below the slave objects in the [standard profile](../evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer.md).
 
-!!! info "Relation objects do not require a [license](../maintenance-and-operation/activate-license.md)."
+!!! info "Relation objects do not require a [license](../maintenance-and-operation/licensing.md)."
 
 ## Relations Category
 

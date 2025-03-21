@@ -1,5 +1,5 @@
 # IT spricht eine eigene Sprache. Damit man weiß, was hinter den Begriffen in _i-doit_ steckt, hilft dieses Glossar
-
+<!-- cSpell:disable -->
 | Begriff | Erklärung |
 | --- | --- |
 | **Allgemeine Kategorie**{#allgemeine-kategorie} | Die Kategorie "Allgemein" gehört zu jenen [Kategorien](#kategorie), die fester Bestandteil eines jeden [Objekts](#objekt) sind. Daher lässt sie sich pro [Objekttyp](#objekttyp) nicht als ungewünscht abwählen. In dieser Kategorien werden wichtige [Attribute](#attribut) festgehalten wie der [Objekt-Titel](#objekt-titel), [SYS-ID](#sys-id), [CMDB-Status](#cmdb-status) und [Zustand](#zustand). |

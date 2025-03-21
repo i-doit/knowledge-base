@@ -188,7 +188,7 @@ sudo -u www-data php console.php tenant-create --root-user mysqlrootuser --root-
 
 ## Weitere Schritte
 
--   [Lizenz herunterladen und einspielen](../../wartung-und-betrieb/lizenz-aktivieren.md)
+-   [Lizenz herunterladen und einspielen](../../wartung-und-betrieb/lizenzierung.md)
 -   [Backup einrichten](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
 -   [Cronjobs einrichten](../../wartung-und-betrieb/cronjobs-einrichten.md)
 -   [Erstanmeldung](../../grundlagen/erstanmeldung.md)

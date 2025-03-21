@@ -61,6 +61,9 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       strict: false
+  - redirects:
+      redirect_maps:
+        'maintenance-and-operation/activate-license.md': 'maintenance-and-operation/licensing.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -88,8 +91,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
-      auto_append:
-        - overrides/assets/glossary-en.md
   - pymdownx.tasklist:
       custom_checkbox: true
 extra:
@@ -262,7 +263,7 @@ nav:
           - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
   - Maintenance and operation:
       - maintenance-and-operation/index.md
-      - Activate license: maintenance-and-operation/activate-license.md
+      - Licensing: maintenance-and-operation/licensing.md
       - Backup and recovery:
           - maintenance-and-operation/backup-and-recovery/index.md
           - Backup script for data and files: maintenance-and-operation/backup-and-recovery/backup-script-for-data-and-files.md
@@ -455,8 +456,8 @@ nav:
           - Two-factor Authentication: system-administration/administration/two-factor-authentication.md
           - Download Center: system-administration/administration/download-center.md
           - Contract details: system-administration/administration/contract-details.md
-      - Admin-Center: system-administration/admin-center.md
       - Add-on & Subscription Center: system-administration/add-on-and-subscription-center.md
+      - Admin-Center: system-administration/admin-center.md
       - Customer portal: system-administration/customer-portal.md
       - Localization: system-administration/localization.md
       - Multi-Tenants: system-administration/multi-tenant.md

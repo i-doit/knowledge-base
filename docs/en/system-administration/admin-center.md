@@ -45,7 +45,7 @@ Tenants are administrated in the **Tenants** section. This, however, is only rel
 
 ## Licenses
 
-[Licenses](../maintenance-and-operation/activate-license.md) for i-doit can be installed via the **Licenses** section.
+[Licenses](../maintenance-and-operation/licensing.md) for i-doit can be installed via the **Licenses** section.
 
 [![Licenses](../assets/images/en/system-administration/admin-center/5-ac.png)](../assets/images/en/system-administration/admin-center/5-ac.png)
 

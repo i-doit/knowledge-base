@@ -30,14 +30,14 @@ You can configure the IP address via the console (see below).
 
 ## Credentials
 
-| Tool | Username | Password |
-| --- | --- | --- |
-| i-doit Web GUI | **admin** | **admin** |
-| i-doit Web GUI | **controller** | **controller** |
-| [i-doit Admin-Center](../../system-administration/admin-center.md) | **admin** | **idoit** |
-| SSH | **idoitadm** | **idoit** |
-| MySQL (i-doit) | **idoit** | **idoit** |
-| MySQL (Systemuser) | **root** | **idoit** |
+| Tool                                                               | Username       | Password       |
+| ------------------------------------------------------------------ | -------------- | -------------- |
+| i-doit Web GUI                                                     | **admin**      | **admin**      |
+| i-doit Web GUI                                                     | **controller** | **controller** |
+| [i-doit Admin-Center](../../system-administration/admin-center.md) | **admin**      | **idoit**      |
+| SSH                                                                | **idoitadm**   | **idoit**      |
+| MySQL (i-doit)                                                     | **idoit**      | **idoit**      |
+| MySQL (Systemuser)                                                 | **root**       | **idoit**      |
 
 Additionally, there are some [pre-defined persons and person groups](../../basics/initial-login.md) in i-doit.
 
@@ -47,30 +47,30 @@ The configuration of the appliance can be carried out via the console. After log
 
 [![SSH menu](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)](../../assets/images/en/installation/manual-installation/virtual-appliance/2-va.png)
 
-| Shortcut | Menu item | Function |
-| --- | --- | --- |
-| 1 | **Configure networking** | Set network connection; the network configuration is set to DHCP by default. |
-| 2 | **Proxy configuration** | Set HTTP proxy for the system |
-| 3 | **E-Mail configuration** | E-mail settings |
-| 4 | **Timezone** | Set the time zone |
-| 5 | **Keyboard layout** | Keyboard layout; de is set as default |
-| 6 | **Change idoitadm user password** | Change the password of the User idoitadm |
-| 7 | **i-doit scripting configuration** | Change settings for CLI, [cronjobs](../../maintenance-and-operation/cronjob-setup.md), [backup and restore](../../maintenance-and-operation/backup-and-recovery/index.md) |
-| 8 | **Reboot system** | Reboot system |
-| 9 | **Shutdown system** | System shutdown |
-| 0 | **Launch shell** | Open the shell for further action |
-| A | **Logout** | Log out the user idoitadm off the system |
+| Shortcut | Menu item                          | Function                                                                                                                                                                  |
+| -------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1        | **Configure networking**           | Set network connection; the network configuration is set to DHCP by default.                                                                                              |
+| 2        | **Proxy configuration**            | Set HTTP proxy for the system                                                                                                                                             |
+| 3        | **E-Mail configuration**           | E-mail settings                                                                                                                                                           |
+| 4        | **Timezone**                       | Set the time zone                                                                                                                                                         |
+| 5        | **Keyboard layout**                | Keyboard layout; de is set as default                                                                                                                                     |
+| 6        | **Change idoitadm user password**  | Change the password of the User idoitadm                                                                                                                                  |
+| 7        | **i-doit scripting configuration** | Change settings for CLI, [cronjobs](../../maintenance-and-operation/cronjob-setup.md), [backup and restore](../../maintenance-and-operation/backup-and-recovery/index.md) |
+| 8        | **Reboot system**                  | Reboot system                                                                                                                                                             |
+| 9        | **Shutdown system**                | System shutdown                                                                                                                                                           |
+| 0        | **Launch shell**                   | Open the shell for further action                                                                                                                                         |
+| A        | **Logout**                         | Log out the user idoitadm off the system                                                                                                                                  |
 
 ## Scripts and Cronjobs
 
 The appliance is equipped with various scripts and cronjobs.
 
-| Script | Purpose |
-| --- | --- |
-| **idoit** | i-doit CLI |
-| **idoit-backup** | Run backup manually |
-| **idoit-restore** | Restore |
-| **idoit-jobs** | Run cronjobs manually |
+| Script            | Purpose               |
+| ----------------- | --------------------- |
+| **idoit**         | i-doit CLI            |
+| **idoit-backup**  | Run backup manually   |
+| **idoit-restore** | Restore               |
+| **idoit-jobs**    | Run cronjobs manually |
 
 The scripts are located at `/usr/local/bin/`.
 
@@ -82,19 +82,19 @@ Every night the files of i-doit are saved locally. The storage period is one wee
 
 The following overview shows you the purpose of the directories:
 
-| Directory | Purpose |
-| --- | --- |
-| **/var/www/html/** | Installation directory of i-doit |
-| **/etc/apache2/** | Configuration of the Apache web server |
-| **/etc/php/7.0/** | Configuration of PHP |
-| **/etc/mysql/** | Configuration of MariaDB |
-| **/var/log/apache2/** | Logs of the Apache web server |
-| **/var/backups/i-doit** | Backups |
+| Directory               | Purpose                                |
+| ----------------------- | -------------------------------------- |
+| **/var/www/html/**      | Installation directory of i-doit       |
+| **/etc/apache2/**       | Configuration of the Apache web server |
+| **/etc/php/7.0/**       | Configuration of PHP                   |
+| **/etc/mysql/**         | Configuration of MariaDB               |
+| **/var/log/apache2/**   | Logs of the Apache web server          |
+| **/var/backups/i-doit** | Backups                                |
 
 ## Follow-up
 
 The appliance provides a "naked" installation of i-doit. This means that neither demo files nor additional [add-ons](../../i-doit-add-ons/index.md) are included.<br>
-When logging in the first time, i-doit requests a valid [license](../../maintenance-and-operation/activate-license.md) which needs to be activated in order to have all features available.<br>
+When logging in the first time, i-doit requests a valid [license](../../maintenance-and-operation/licensing.md) which needs to be activated in order to have all features available.<br>
 Further information for first steps with i-doit are also described in the knowledge base under [Basics](../../basics/index.md).
 
 ## Troubleshooting

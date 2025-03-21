@@ -1,7 +1,7 @@
 ---
 title: Upgrade from i-doit open to i-doit
 description: Upgrade from i-doit open to i-doit
-icon: fontawesome/brands/linux
+icon: material/arrow-up-bold-hexagon-outline
 status:
 lang: en
 ---
@@ -31,7 +31,7 @@ Here is a quick overview about the necessary steps before going further into det
 Preparation
 -----------
 
-Important: This procedure is irreversible. It is essential to create a [backup](../maintenance-and-operation/backup-and-recovery/index.md)! After upgrading, a valid [license for _i-doit_](../maintenance-and-operation/activate-license.md) is required. The [system requirements](../installation/system-requirements.md) and [system settings](../installation/manual-installation/system-settings.md) must also be met.
+Important: This procedure is irreversible. It is essential to create a [backup](../maintenance-and-operation/backup-and-recovery/index.md)! After upgrading, a valid [license for _i-doit_](../maintenance-and-operation/licensing.md) is required. The [system requirements](../installation/system-requirements.md) and [system settings](../installation/manual-installation/system-settings.md) must also be met.
 
 Should you use an older version of the _i-doit open_ installation, you have to bear the following facts in mind:
 
@@ -56,12 +56,12 @@ After upgrading to the version you have to install the addon. The addon is avail
 License Activation
 ------------------
 
-The upgrade is completed now and the last step is the activation of a valid license. You can activate it directly in the [Admin-Center under **Licenses**](../maintenance-and-operation/activate-license.md).
+The upgrade is completed now and the last step is the activation of a valid license. You can activate it directly in the [Admin-Center under **Licenses**](../maintenance-and-operation/licensing.md).
 
 Clear Cache
 -----------
 
-Now we log off from the Admin-Center and log in again to _i-doit_. Now we click through  **Administration** → **System tools → Cache / Database** to the button **Clear complete Cache**. We clear the browser cache by pressing **CTRL+F5**.
+Now we log off from the Admin-Center and log in again to _i-doit_. Now we click through **Administration** → **System tools → Cache / Database** to the button **Clear complete Cache**. We clear the browser cache by pressing **CTRL+F5**.
 
 Configure Permissions
 ---------------------

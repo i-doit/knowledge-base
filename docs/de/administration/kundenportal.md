@@ -8,7 +8,7 @@ lang: de
 
 # Kundenportal
 
-Für Benutzer von i-doit existiert eine zentrale Anlaufstelle. Dort befinden sich zum Beispiel [Installationspakete](../installation/index.md) und die derzeit gültige [offline token](../wartung-und-betrieb/lizenz-aktivieren.md) zum Download. Zudem werden die Subskriptions- bzw. Kauf-Produkte (beispielsweise [i-doit Add-ons](../i-doit-add-ons/i-diary.md)) aufgelistet. Erreicht werden kann das Kundenportal unter folgender Adresse:
+Für Benutzer von i-doit existiert eine zentrale Anlaufstelle. Dort befinden sich zum Beispiel [Installationspakete](../installation/index.md) und die derzeit gültige [offline token](../wartung-und-betrieb/lizenzierung.md) zum Download. Zudem werden die Subskriptions- bzw. Kauf-Produkte (beispielsweise [i-doit Add-ons](../i-doit-add-ons/i-diary.md)) aufgelistet. Erreicht werden kann das Kundenportal unter folgender Adresse:
 
 **[Add-on & Subscription Center](https://center.i-doit.com/)**
 
