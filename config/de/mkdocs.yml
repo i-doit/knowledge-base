@@ -64,6 +64,7 @@ plugins:
   - redirects:
       redirect_maps:
         'wartung-und-betrieb/lizenz-aktivieren.md': 'wartung-und-betrieb/lizenzierung.md'
+        'automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md': 'automatisierung-und-integration/cli/console/befehle-und-optionen.md'
 markdown_extensions:
   - abbr
   - admonition
