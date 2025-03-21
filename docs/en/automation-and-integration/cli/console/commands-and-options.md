@@ -1,4 +1,12 @@
-# Options and parameters for the console
+---
+title: Commands and options
+description: Commands and options
+icon: material/console
+status:
+lang: en
+---
+
+# Commands and options
 
 !!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
 
@@ -67,6 +75,9 @@
 | [uninstall](#uninstall)                                                   | Uninstalls i-doit                                                                                                                  |
 | [update](#update)                                                         | Installs an update for i-doit                                                                                                      |
 | [idoit:feature-manager](#idoitfeature-manager)                            | Activates features for i-doit                                                                                                      |
+| [idoit:set-env-var](#idoitset-env-var)                                    | With this command it will be possible to set environmental variables for i-doit.                                                   |
+| [idoit:set-update-capability](#idoitset-update-capability)                | Dis- and enable the i-doit update capability                                                                                       |
+| [system:tenant-export](#systemtenant-export)                              | Export your tenant data including uploaded files in a ZIP package.                                                                 |
 
 !!! attention "Configuration file and parameters --config"
     It is possible to pass additional content to the call via a configuration file. This file must be stored in the i-doit directory src/handler/config/. An example in the form of the file "isys\_handler\_ldap.ini" can be found in the directory src/handler/config/examples/.<br>
@@ -192,7 +203,7 @@ Uninstall add-on
 **Example of use**
 
 ```shell
-sudo -u www-data php console.php addon-uninstall -u admin -p admin -a document
+sudo -u www-data php console.php addon-uninstall --user admin --password admin -a document
 ```
 
 ### admin-center-password-reset
@@ -594,7 +605,7 @@ sudo -u www-data php console.php install
 
 Creates a JDisc server, based on given input.
 
-**Optionen:**
+**Options:**
 
 | Parameter (Kurzform) | Parameter (Langform)              | Beschreibung                                                                                 |
 | -------------------- | --------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -618,7 +629,7 @@ Creates a JDisc server, based on given input.
 **Example of use**
 
 ```shell
-sudo -u www-data php console.php jdisc-create-server -u admin -p admin --default --title JDisc Server --jdisc-host localhost --jdisc-port 25321
+sudo -u www-data php console.php jdisc-create-server --user admin --password admin --default --title JDisc Server --jdisc-host localhost --jdisc-port 25321
 ```
 
 ### ldap-sync
@@ -1222,31 +1233,6 @@ Executes the location correction from the GUI in the console
 sudo -u www-data php console.php system-location-fix --user admin --password admin --tenantId 1 --config /path/to/config/file
 ```
 
-### system-maintenancecontract
-
-Sends an e-mail notification for maintenance contacts.
-
-**Options:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
-
-**Example of use**
-
-```shell
-sudo -u www-data php console.php system-maintenancecontract --user admin --password admin --tenantId 1
-```
-
 ### system-objectcleanup
 
 Cleans all objects with a self-defined status.
@@ -1349,7 +1335,7 @@ Enables Admin-Center settings to be set via the CLI.
 **Example of use**
 
 ```shell
-sudo -u www-data php system-set-settings -u admin -p admin --settings="{\"proxy.active\":1,\"proxy.host\":\"http://myproxy.net\",\"unknown-setting\": 4}" -n
+sudo -u www-data php system-set-settings --user admin --password admin --settings="{\"proxy.active\":1,\"proxy.host\":\"http://myproxy.net\",\"unknown-setting\": 4}" -n
 ```
 
 ### tenant-create
@@ -1528,22 +1514,22 @@ sudo -u www-data php console.php update --user admin --password admin --zip /pat
 
 Activates features of i-doit
 
-**Optionen**
+**Options**
 
 | Parameter (short version) | Parameter (long version) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
 |                           | --unset-cloud            | Deactivate if application is cloud instance                                                  |
 |                           | --set-cloud              | Activate if application is cloud instance                                                    |
-| -e                        | --enable=ENABLE          | Enable features                                                                              |
-| -d                        | --disable=DISABLE        | Disable features                                                                             |
-| -r                        | --replace=REPLACE        | Replace current features                                                                     |
+| -e                        | --enable=[ENABLE]        | Enable features                                                                              |
+| -d                        | --disable=[DISABLE]      | Disable features                                                                             |
+| -r                        | --replace=[REPLACE]      | Replace current features                                                                     |
 | -c                        | --cloudable              | Only cloudable features will be considered                                                   |
 | -f                        | --noncloudable           | Only non-cloudable features will be considered                                               |
 |                           | --wizard                 | Interactive mode to activate or deactivate features                                          |
 | -l                        | --list                   | Shows all available features                                                                 |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
+| -u                        | --user=[USERNAME]        | Username of a user who is authorized to execute                                              |
+| -p                        | --password=[PASSWORD]    | Password for authentication of the previously specified user                                 |
+| -i                        | --tenantId=[TENANT-ID]   | Tenant ID of the tenant to be used (default: 1)                                              |
 | -h                        | --help                   | Help message for displaying further information                                              |
 | -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
 | -V                        | --version                | Output of the i-doit Console version                                                         |
@@ -1555,4 +1541,79 @@ Activates features of i-doit
 
 ```shell
 sudo -u www-data php console.php idoit:feature-manager --enable update-gui --user admin --password admin
+```
+
+### idoit:set-env-var
+
+With this command it will be possible to set environmental variables for i-doit.
+
+**Options**
+
+| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
+| -k                        | --key-pair=[KEY-PAIR]    | Comma separated list of key pairs which will be included as environmental variable           |
+| -s                        | --show-variables         | Show all defined environmental variables                                                     |
+| -l                        | --list-variables         | Show all possible environmental variables                                                    |
+| -u                        | --user=[USERNAME]        | Username of a user who is authorized to execute                                              |
+| -p                        | --password=[PASSWORD]    | Password for authentication of the previously specified user                                 |
+| -i                        | --tenantId=[TENANT-ID]   | Tenant ID of the tenant to be used (default: 1)                                              |
+| -h                        | --help                   | Help message for displaying further information                                              |
+| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php idoit:set-env-var -k "IDOIT_APP_URL=localhost" --user admin --password admin
+```
+
+### idoit:set-update-capability
+
+Dis- and enable the i-doit update capability
+
+**Options**
+
+| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
+| -u                        | --user=[USERNAME]        | Username of a user who is authorized to execute                                              |
+| -p                        | --password=[PASSWORD]    | Password for authentication of the previously specified user                                 |
+| -i                        | --tenantId=[TENANT-ID]   | Tenant ID of the tenant to be used (default: 1)                                              |
+| -h                        | --help                   | Help message for displaying further information                                              |
+| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php idoit:set-update-capability enable --user admin --password admin
+```
+
+### system:tenant-export
+
+Export your tenant data including uploaded files in a ZIP package.
+
+**Options**
+
+| Parameter (short version) | Parameter (long version) | Description                                                                                  |
+| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
+| -u                        | --user=[USERNAME]        | Username of a user who is authorized to execute                                              |
+| -p                        | --password=[PASSWORD]    | Password for authentication of the previously specified user                                 |
+| -i                        | --tenantId=[TENANT-ID]   | Tenant ID of the tenant to be used (default: 1)                                              |
+| -h                        | --help                   | Help message for displaying further information                                              |
+| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php system:tenant-export --user admin --password admin
 ```

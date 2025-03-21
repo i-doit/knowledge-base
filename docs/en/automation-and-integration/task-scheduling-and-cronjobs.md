@@ -22,7 +22,7 @@ To create a batch file, you must open an editor program and create a new file. T
 
 [![batch-create](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/1-auc.png)](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/1-auc.png)
 
-Once the file has been created, we can fill the file with commands from the [CLI](./cli/console/options-and-parameters-cli.md).
+Once the file has been created, we can fill the file with commands from the [CLI](./cli/console/commands-and-options.md).
 
 The batch file can be filled with the following content:
 
@@ -48,7 +48,7 @@ C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\consol
 
 ### Automate JDisc import and LDAP sync
 
-If you also want to automate the JDisc import or the LDAP sync, you can use the commands for the [JDisc import](../automation-and-integration/cli/console/options-and-parameters-cli.md#import-jdisc) or the [LDAP sync](../automation-and-integration/cli/console/options-and-parameters-cli.md#ldap-sync) in the same way as the other commands from the example above, simply add them to the batch file.
+If you also want to automate the JDisc import or the LDAP sync, you can use the commands for the [JDisc import](./cli/console/commands-and-options.md#import-jdisc) or the [LDAP sync](./cli/console/commands-and-options.md#ldap-sync) in the same way as the other commands from the example above, simply add them to the batch file.
 
 ### Setting up a task
 

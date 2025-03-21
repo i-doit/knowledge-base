@@ -410,7 +410,7 @@ nav:
           - automatisierung-und-integration/cli/index.md
           - Console:
               - automatisierung-und-integration/cli/console/index.md
-              - Optionen und Parameter der Console: automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md
+              - Befehle und Optionen: automatisierung-und-integration/cli/console/befehle-und-optionen.md
               - Verwendung von Konfigurationsdateien für Console Commands: automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md
       - Network Monitoring:
           - automatisierung-und-integration/network-monitoring/index.md

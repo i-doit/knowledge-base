@@ -195,7 +195,7 @@ Die Kategorie können Sie über die Objekttyp Konfiguration des Objekttyps hinzu
 
 ## Import über die i-doit Console
 
-Der Import der Daten aus JDisc nach i-doit ist nicht nur manuell über die Oberfläche möglich. Er kann ebenfalls über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) ausgeführt und somit **automatisiert** werden. Wie der entsprechende Aufruf erzeugt wird, finden Sie im [zugehörigen Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#import-jdisc) mit einem Beispiel für die Option **import-jdisc**.
+Der Import der Daten aus JDisc nach i-doit ist nicht nur manuell über die Oberfläche möglich. Er kann ebenfalls über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) ausgeführt und somit **automatisiert** werden. Wie der entsprechende Aufruf erzeugt wird, finden Sie im [zugehörigen Artikel](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#import-jdisc) mit einem Beispiel für die Option **import-jdisc**.
 
 Für den Import lässt sich die ID des gewünschten Profils angeben. Die ID ist in der Liste der Profile zu finden:
 

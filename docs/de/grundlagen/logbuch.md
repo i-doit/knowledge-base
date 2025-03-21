@@ -71,7 +71,7 @@ Das Logbuch nimmt neue Einträge aus Dritt-Systemen entgegen, beispielsweise dur
 
 [![einträge-wiederherstellen](../assets/images/de/grundlagen/logbuch/8-lb.png)](../assets/images/de/grundlagen/logbuch/8-lb.png)
 
-Über die [i-doit Console](../automatisierung-und-integration/cli/index.md) wird die Archivierung ausgeführt. Dieser Schritt kann daher auch automatisieren werden. Ein entsprechendes Beispiel für einen Aufruf sowie eine Auflistung der Parameter lässt sich im [zugehörigen Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#OptionenundParameterderConsole-logbook-archive) für die Option **logbook-archive** finden.
+Über die [i-doit Console](../automatisierung-und-integration/cli/index.md) wird die Archivierung ausgeführt. Dieser Schritt kann daher auch automatisieren werden. Ein entsprechendes Beispiel für einen Aufruf sowie eine Auflistung der Parameter lässt sich im [zugehörigen Artikel](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#OptionenundParameterderConsole-logbook-archive) für die Option **logbook-archive** finden.
 
 Beispiel:
 
