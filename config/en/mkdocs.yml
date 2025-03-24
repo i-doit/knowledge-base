@@ -482,6 +482,7 @@ nav:
           - MySQL/MariaDB does not start after changing innodb_log_file_size: system-administration/troubleshooting/mysql-mariadb-does-not-start.md
           - Row size too large: system-administration/troubleshooting/row-size-too-large.md
           - Location cannot be saved: system-administration/troubleshooting/location-cannot-be-saved.md
+          - MariaDB database corruption erros: system-administration/troubleshooting/mariadb-database-corruption.md
       - Hotfixes:
           - system-administration/hotfixes/index.md
           - i-doit 1.12.2 Update-Button funktionslos: system-administration/hotfixes/i-doit-1.12.2-update-button-does-not-work.md

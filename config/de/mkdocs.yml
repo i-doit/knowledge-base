@@ -516,6 +516,7 @@ nav:
           - MySQL/MariaDB startet nach Änderung der Einstellung innodb_log_file_size nicht: administration/troubleshooting/mysql-mariadb-startet-nicht.md
           - Row size too large: administration/troubleshooting/row-size-too-large.md
           - Standort kann nicht gespeichert werden: administration/troubleshooting/standort-kann-nicht-gespeichert-werden.md
+          - MariaDB Dantenbank Korruptions Fehler: administration/troubleshooting/mariadb-database-corruption.md
       - Hotfixes:
           - administration/hotfixes/index.md
           - i-doit 1.12.2 Update-Button funktionslos: administration/hotfixes/i-doit-1.12.2-update-button-funktionslos.md
