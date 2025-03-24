@@ -15,7 +15,7 @@ _i-doit_ is capable of sending e-mails automatically in the case of specific eve
 
 The integration of a mail server is possible in the **Administration** at **Import and interfaces → SMTP configuration (e-mail)**. A configuration mask with the following fields is available there:
 
-[![smtp-konfiguration](../assets/images/en/automation-and-integration/smtp/1.png)](../assets/images/en/automation-and-integration/smtp/1.png)
+[![smtp-konfiguration](../assets/images/en/automation-and-integration/smtp-1.png)](../assets/images/en/automation-and-integration/smtp-1.png)
 
 | Field                                          | Description                                                                                                                                                                                                                   |
 | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

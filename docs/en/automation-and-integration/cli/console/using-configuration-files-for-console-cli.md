@@ -72,7 +72,7 @@ sudo -u www-data php console.php search-index -c /var/www/html/i-doit/src/handle
 
 ## Example for the command [notifications-send](commands-and-options.md#notifications-send)
 
-There are no further options for this command so we only need the following options [user](commands-and-options.md#notifications-send), [password](commands-and-options.md#-notifications-send).
+There are no further options for this command so we only need the following options [user](commands-and-options.md#notifications-send), [password](commands-and-options.md#notifications-send).
 
 ```ini title="notifications-send.ini"
 [commandArguments]
