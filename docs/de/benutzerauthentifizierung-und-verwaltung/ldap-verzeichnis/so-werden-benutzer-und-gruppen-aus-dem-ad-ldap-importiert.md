@@ -7,7 +7,7 @@ lang: de
 
 !!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
 
-Der Import von Benutzern und Gruppen aus dem Active Directory in i-doit findet immer über den [console.php](../../automatisierung-und-integration/cli/console/index.md) Befehl statt. Dazu benutzen wir das Kommando [ldap-sync](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#ldap-sync).<br>
+Der Import von Benutzern und Gruppen aus dem Active Directory in i-doit findet immer über den [console.php](../../automatisierung-und-integration/cli/console/index.md) Befehl statt. Dazu benutzen wir das Kommando [ldap-sync](../../automatisierung-und-integration/cli/console/befehle-und-optionen.md#ldap-sync).<br>
 Am Ende des Artikels ist ein komplettes Beispiel der erstellten erweiterten Konfiguration zu finden.
 
 Der Artikel zur Konfiguration vom [LDAP-Verzeichnis/Active Directory](../ldap-verzeichnis/index.md) sollte vorher jedem bekannt sein.<br>

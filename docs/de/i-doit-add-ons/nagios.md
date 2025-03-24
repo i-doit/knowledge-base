@@ -54,7 +54,7 @@ Die Validierung überprüft grundlegende Abhängigkeiten, ob beispielsweise eine
 
 Die Konfigurationsdateien werden gemäß dem konfigurierten Pfad auf dem Dateisystem abgelegt und entsprechen den in den Kategorien konfigurierten Werten.
 
-Selbstverständlich lässt sich der Export der Dateien auch über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) automatisieren. Eine Beschreibung der einzelnen Parameter sowie ein Beispiel sind im [entsprechenden Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#nagios-export) für die Option **Exportkonfiguration** zu finden.
+Selbstverständlich lässt sich der Export der Dateien auch über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) automatisieren. Eine Beschreibung der einzelnen Parameter sowie ein Beispiel sind im [entsprechenden Artikel](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#nagios-export) für die Option **Exportkonfiguration** zu finden.
 
 ## CLI Console Commands und Optionen
 
