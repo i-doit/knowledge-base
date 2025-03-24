@@ -8,6 +8,14 @@ lang: de
 
 In diesem Artikel werden wir alle bekannten Probleme beim Update von oder auf eine bestimmte i-doit Version auflisten.
 
+## Version 34
+
+Aktuell ist SM-View `2024.3.0.2708` nicht kompatibel und es wird nach dem Update auf i-doit 34 ein `HTTP 500` Server error geworfen. Das [deaktivieren des Add-ons](../../i-doit-add-ons/index.md#de-aktivieren) im [Admin-Center](../admin-center.md) erlaubt das weiter arbeiten mit i-doit. Die entsprechenden Fehlermeldung im Webserver Log sieht so aus:
+
+```log
+PHP Fatal error: Declaration of Symfony\Component\HttpFoundation\ResponseHeaderBag::all(?string $key = null) must be compatible with Symfony\Component\HttpFoundation\HeaderBag::all(?string $key = null): array in /var/www/html/src/classes/modules/shd_smview_connect/vendor/symfony/http-foundation/ResponseHeaderBag.php on line 91
+```
+
 ## Version 33
 
 Es kann vorkommen, dass nach dem update einige Funktionen verschwinden. Wie zum Beispiel die Update Funktion oder die LDAP Funktion. Um das Problem zu lösen muss in der Datei `.../i-doit/src/config.inc.php`
