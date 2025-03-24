@@ -1,3 +1,11 @@
+---
+title: Verwendung von Konfigurationsdateien für Console Commands
+description: Verwendung von Konfigurationsdateien für Console Commands
+icon:
+status:
+lang: de
+---
+
 # Verwendung von Konfigurationsdateien für Console Commands
 
 !!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
@@ -5,18 +13,9 @@
 Wenn Sie eine Konfigurationsdateien verwenden, können Sie dort für die Console Command die Optionen unterbringen.
 Speichern können Sie diese neu erstellten Dateien dann z.B. unter /i-doit/src/handler/config/.
 
-!!! warning "Zugriff auf .ini Dateien"
-    Wird die Konfigurationsdatei im i-doit Verzeichnis abgelegt muss die .htaccess angepasst werden.
-    Es sollte dieser code hinzugefügt werden:
-    ```shell
-    ## Deny access to all ini files...
-    <Files "*.ini">
-        Require all denied
-    </Files>
-    ```
-
 Damit Sie z.B. Passwörter nicht im Klartext in die Console tippen müssen.
-Der [Console Command](./befehle-und-optionen.md) verwendet .ini Dateien.
+Der [Console Command](../console/optionen-und-parameter-der-console.md) verwendet .ini Dateien.
+Der [Controller Command](../controller.md) verwendet .inc.php Dateien. Diese Methode ist allerdings veraltet und sollte nicht verwendet werden.
 
 Verwendet wird die Konfigurationsdatei mit `--config /pfad/zur/config.ini oder mit -c /pfad/zur/config.ini`
 
@@ -36,22 +35,22 @@ tenantId=1
 ```
 
 Hier können die Optionen des Console Command hinzugefügt werden. Diese Optionen müssen in der "Langform" geschrieben werden.
-Weitere Optionen finden Sie unter [Optionen und Parameter der Console](./befehle-und-optionen.md).
+Weitere Optionen finden Sie unter [Optionen und Parameter der Console](../console/optionen-und-parameter-der-console.md).
 
 ```ini
 [additional]
 ```
 
 Hierunter werden spezielle Parameter eingetragen.
-Zur Zeit gibt es diese für den [ldapServerId](./befehle-und-optionen.md#ldap-sync) sowie für [import-syslog](./befehle-und-optionen.md#import-syslog).
+Zur Zeit gibt es diese für den [ldapServerId](../console/optionen-und-parameter-der-console.md#ldap-sync) sowie für [import-syslog](../console/optionen-und-parameter-der-console.md#import-syslog).
 
 * * *
 
-## Beispiel für den Command [search-index](./befehle-und-optionen.md#search-index)
+## Beispiel für den Command [search-index](../console/optionen-und-parameter-der-console.md#search-index)
 
 Als erstes wird die .ini Datei erstellt.
-Wir verwenden hier zusätzlich [update](./befehle-und-optionen.md#search-index) damit wird der Suchindex überschrieben.
-Zusätzlich verwenden wir [quiet](./befehle-und-optionen.md#search-index) damit wird die Ausgabe gekürzt und zusätzlich sparen wir etwas speicher, welcher dann für die Indexierung verwendet werden kann.
+Wir verwenden hier zusätzlich [update](../console/optionen-und-parameter-der-console.md#search-index) damit wird der Suchindex überschrieben.
+Zusätzlich verwenden wir [quiet](../console/optionen-und-parameter-der-console.md#search-index) damit wird die Ausgabe gekürzt und zusätzlich sparen wir etwas speicher, welcher dann für die Indexierung verwendet werden kann.
 
 ```ini
 [commandArguments]
@@ -74,9 +73,9 @@ sudo -u www-data php console.php search-index -c /var/www/html/i-doit/src/handle
 
 * * *
 
-## Beispiel für den Command [notifications-send](./befehle-und-optionen.md#notifications-send)
+## Beispiel für den Command [notifications-send](../console/optionen-und-parameter-der-console.md#notifications-send)
 
-Für diesen Command gibt es keine eigenen Optionen daher verwenden wir nur die benötigten Optionen [user](./befehle-und-optionen.md#notifications-send), [password](./befehle-und-optionen.md#notifications-send) und [tenantId](./befehle-und-optionen.md#notifications-send).
+Für diesen Command gibt es keine eigenen Optionen daher verwenden wir nur die benötigten Optionen [user](../console/optionen-und-parameter-der-console.md#notifications-send), [password](../console/optionen-und-parameter-der-console.md#notifications-send) und [tenantId](../console/optionen-und-parameter-der-console.md#notifications-send).
 
 ```ini
 [commandArguments]
@@ -97,11 +96,11 @@ sudo -u www-data php console.php notifications-send -c /var/www/html/i-doit/src/
 
 * * *
 
-## Beispiel für den Command [ldap-sync](./befehle-und-optionen.md#ldap-sync)
+## Beispiel für den Command [ldap-sync](../console/optionen-und-parameter-der-console.md#ldap-sync)
 
-Dieser Command bietet folgende zusätzliche Optionen an: [ldapServerId](./befehle-und-optionen.md#ldap-sync) und [dumpConfig](./befehle-und-optionen.md#ldap-sync).
-Die Option [ldapServerId](./befehle-und-optionen.md#ldap-sync) gibt den zu verwenden ldap Server an. Hier muss die ID des Eintrages angegeben werden
-Mit [dumpConfig](./befehle-und-optionen.md#ldap-sync) wird keine Synchronisation ausgeführt! Es wird nur die Konfiguration ausgegeben. Sollte demnach nur fürs Debugging verwendet werden.
+Dieser Command bietet folgende zusätzliche Optionen an: [ldapServerId](../console/optionen-und-parameter-der-console.md#ldap-sync) und [dumpConfig](../console/optionen-und-parameter-der-console.md#ldap-sync).
+Die Option [ldapServerId](../console/optionen-und-parameter-der-console.md#ldap-sync) gibt den zu verwenden ldap Server an. Hier muss die ID des Eintrages angegeben werden
+Mit [dumpConfig](../console/optionen-und-parameter-der-console.md#ldap-sync) wird keine Synchronisation ausgeführt! Es wird nur die Konfiguration ausgegeben. Sollte demnach nur fürs Debugging verwendet werden.
 
 ```ini
 [commandArguments]
@@ -174,9 +173,9 @@ Liste der Command Optionen und eine kurze Erklärung
 
 * * *
 
-## Beispiel für den Command [import-syslog](./befehle-und-optionen.md#import-syslog)
+## Beispiel für den Command [import-syslog](../console/optionen-und-parameter-der-console.md#import-syslog)
 
-Für diesen Command gibt es keine eigenen Optionen daher verwenden wir nur die benötigten Optionen [user](./befehle-und-optionen.md#import-syslog), [password](./befehle-und-optionen.md#import-syslog) und [tenantId](./befehle-und-optionen.md#import-syslog).
+Für diesen Command gibt es keine eigenen Optionen daher verwenden wir nur die benötigten Optionen [user](../console/optionen-und-parameter-der-console.md#import-syslog), [password](../console/optionen-und-parameter-der-console.md#import-syslog) und [tenantId](../console/optionen-und-parameter-der-console.md#import-syslog).
 
 ```ini
 [commandArguments]
