@@ -416,7 +416,7 @@ nav:
       - Network Monitoring:
           - automatisierung-und-integration/network-monitoring/index.md
           - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md
-      - Service Desk:
+      - Trouble Ticket System (TTS):
           - automatisierung-und-integration/service-desk/index.md
           - Request Tracker (RT): automatisierung-und-integration/service-desk/request-tracker.md
           - ((OTRS)) Community Edition Help Desk: automatisierung-und-integration/service-desk/otrscommunity-help-desk.md
