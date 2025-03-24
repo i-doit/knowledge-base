@@ -412,7 +412,7 @@ nav:
           - Console:
               - automatisierung-und-integration/cli/console/index.md
               - Befehle und Optionen: automatisierung-und-integration/cli/console/befehle-und-optionen.md
-              - Verwendung von Konfigurationsdateien für Console Commands: automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md
+              - Konfigurationsdateien für Console Commands: automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md
       - Network Monitoring:
           - automatisierung-und-integration/network-monitoring/index.md
           - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md

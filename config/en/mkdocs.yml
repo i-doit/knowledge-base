@@ -378,11 +378,11 @@ nav:
           - Console:
               - automation-and-integration/cli/console/index.md
               - Commands and options: automation-and-integration/cli/console/commands-and-options.md
-              - Using configuration files for console commands: automation-and-integration/cli/console/using-configuration-files-for-console-cli.md
+              - Configuration files for console commands: automation-and-integration/cli/console/using-configuration-files-for-console-cli.md
       - Network Monitoring:
           - automation-and-integration/network-monitoring/index.md
           - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md
-      -Trouble Ticket System (TTS):
+      - Trouble Ticket System (TTS):
           - automation-and-integration/service-desk/index.md
           - Request Tracker (RT): automation-and-integration/service-desk/request-tracker.md
           - ((OTRS)) Community Edition Help Desk: automation-and-integration/service-desk/otrscommunity-help-desk.md
