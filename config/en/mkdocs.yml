@@ -382,7 +382,7 @@ nav:
       - Network Monitoring:
           - automation-and-integration/network-monitoring/index.md
           - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md
-      - Service Desk:
+      -Trouble Ticket System (TTS):
           - automation-and-integration/service-desk/index.md
           - Request Tracker (RT): automation-and-integration/service-desk/request-tracker.md
           - ((OTRS)) Community Edition Help Desk: automation-and-integration/service-desk/otrscommunity-help-desk.md
