@@ -1,12 +1,12 @@
 ---
-title: Using Configuration Files for Console Commands
-description: Using Configuration Files for Console Commands
+title: Configuration files for console commands
+description: Using Configuration files for Console Commands
 icon:
 status:
 lang: en
 ---
 
-# Using Configuration Files for Console Commands
+# Configuration files for console commands
 
 !!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
 
@@ -14,10 +14,7 @@ If you use a configuration file, you can specify the options for the console com
 You can then save these newly created files under /i-doit/src/handler/config/ for example.
 
 This saves you from typing the password in plain text. into the console.
-The [Console Command](./options-and-parameters-cli.md) uses .ini files.
-The [Controller Command](../../../automation-and-integration/cli/console/index.md) uses .inc.php files. However, this method is outdated and should not be used.
-
-The configuration file is used with `--config /path/to/config.ini or with -c /path/to/config.ini`
+The [Console Command](commands-and-options.md) uses .ini files. The configuration file is used with `--config /path/to/config.ini or with -c /path/to/config.ini`
 
 ## The structure of the .ini
 
@@ -34,25 +31,25 @@ password=pass
 tenantId=1
 ```
 
-Here you can add the options of the Console Command. These options must be written in the “long form”.
-For more options see [Optionen und Parameter der Console](./options-and-parameters-cli.md).
+Here you can add the options of the Console Command. These options must be written in the "long form".
+For more options see [Optionen und Parameter der Console](commands-and-options.md).
 
 ```ini
 [additional]
 ```
 
 Special parameters are entered below.
-At the moment these are available for the [ldapServerId](../../../user-authentication-and-management/ldap-directory/index.md) and for [import-syslog](./options-and-parameters-cli.md#import-ocs).
+At the moment these are available for the [ldapServerId](../../../user-authentication-and-management/ldap-directory/index.md) and for [import-syslog](commands-and-options.md#import-syslog).
 
 * * *
 
-## Example for the command [search-index](./options-and-parameters-cli.md#search-index)
+## Example for the command [search-index](commands-and-options.md#search-index)
 
 First the .ini file has to be created.
-We use here additionally [update](./options-and-parameters-cli.md#search-index) to overwrite and create the search index.
-Additionally we use [quiet](./options-and-parameters-cli.md#search-index) to shorten the output and save some memory, which can be used for indexing.
+We use here additionally [update](commands-and-options.md#search-index) to overwrite and create the search index.
+Additionally we use [quiet](commands-and-options.md#search-index) to shorten the output and save some memory, which can be used for indexing.
 
-```ini
+```ini title="search-index.ini"
 [commandArguments]
 [commandOptions]
 user=admin
@@ -69,15 +66,15 @@ To use the configuration we execute the console command and specify the path to 
 sudo -u www-data php console.php search-index -c /var/www/html/i-doit/src/handler/config/examples/search-index.ini
 ```
 
-[example-seach_index.ini :material-file-download:](../../../assets/images/en/automation-and-integration/cli/console/example-search_index.ini){ .md-button .md-button--primary }
+[example-search_index.ini :material-file-download:](../../../assets/images/en/automation-and-integration/cli/console/example-search_index.ini){ .md-button .md-button--primary }
 
 * * *
 
-## Example for the command [notifications-send](./options-and-parameters-cli.md#notifications-send)
+## Example for the command [notifications-send](commands-and-options.md#notifications-send)
 
-There are no further options for this command so we only need the following options [user](./options-and-parameters-cli.md#notifications-send), [password](./options-and-parameters-cli.md#-notifications-send).
+There are no further options for this command so we only need the following options [user](commands-and-options.md#notifications-send), [password](commands-and-options.md#-notifications-send).
 
-```ini
+```ini title="notifications-send.ini"
 [commandArguments]
 [commandOptions]
 user=admin
@@ -96,13 +93,13 @@ sudo -u www-data php console.php notifications-send -c /var/www/html/i-doit/src/
 
 * * *
 
-## Example for the command [ldap-sync](./options-and-parameters-cli.md#ldap-sync)
+## Example for the command [ldap-sync](commands-and-options.md#ldap-sync)
 
-This command offers the following additional options: [ldapServerId](./options-and-parameters-cli.md#ldap-sync) and [dumpConfig](./options-and-parameters-cli.md#ldap-sync).
-The [ldapServerId](./options-and-parameters-cli.md#ldap-sync) option specifies the ldap server to use. Here the ID of the entry must be specified.
-With [dumpConfig](./options-and-parameters-cli.md#ldap-sync) no synchronization is executed! Only the configuration is output. Should therefore only be used for debugging.
+This command offers the following additional options: [ldapServerId](commands-and-options.md#ldap-sync) and [dumpConfig](commands-and-options.md#ldap-sync).
+The [ldapServerId](commands-and-options.md#ldap-sync) option specifies the ldap server to use. Here the ID of the entry must be specified.
+With [dumpConfig](commands-and-options.md#ldap-sync) no synchronization is executed! Only the configuration is output. Should therefore only be used for debugging.
 
-```ini
+```ini title="ldap-sync.ini"
 [commandArguments]
 [commandOptions]
 user=admin
@@ -162,22 +159,22 @@ List of command options and a short explanation
 | defaultCompany=""              | "Name of Organisation"                  | Default Organization to be entered, leave empty if nothing should be changed                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | deletedUsersBehaviour=         | archive, delete or disable\_login       | Behavior for deleted LDAP users. Should these be archived, deleted or the login deactivated                                                                                                                                                                                                                                                                                                                                                                                                    |
 | disabledUsersBehaviour=        | archive, delete or disable\_login       | Behavior for disabled LDAP users. Should these be archived, deleted or the login deactivated                                                                                                                                                                                                                                                                                                                                                                                                   |
-| rooms\[\]=""                   | \[“Room 01”\]=“userPrincipalName”       | Here your room is statically assigned to an LDAP user                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| rooms\[\]=""                   | \["Room 01"\]="userPrincipalName"       | Here your room is statically assigned to an LDAP user                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | attributes\[\]=                | attributes\[i-doit field\]=AD Attribute | Possible i-doit fields: academic\_degree, function, service\_designation, street, city, zip\_code, phone\_company, phone\_home, phone\_mobile, fax, pager, personnel\_number, department, company, office, ldap\_id, ldap\_dn, description. If user-defined information is to be stored here, the [Category extension](../../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md) can be activated. Then the fields: custom\_1 - custom\_8 are available |
 | autoReactivateUsers=           | true or false                           | All users are automatically set to normal status before they are synced. This function is only necessary for OpenLDAP and NDS, because it is always enabled in the Active Directory                                                                                                                                                                                                                                                                                                            |
-| ignoreUsersWithAttributes\[\]= | ignoreUsersWithAttributes\[\]=“sn”      | Disables the synchronization of users where e.g. the sn(Last Name) in AD is empty. Several AD attributes can be used here, see example                                                                                                                                                                                                                                                                                                                                                         |
-| ignoreFunction=                | empty\*, !empty, isset\*, !isset        | The check function for “ignoreUsersWithAttributes”. If the value is set to “empty”, the function checks if the specified “ignoreUsersWithAttributes” value is empty. If this is the case the user will not be synchronized.                                                                                                                                                                                                                                                                    |
+| ignoreUsersWithAttributes\[\]= | ignoreUsersWithAttributes\[\]="sn"      | Disables the synchronization of users where e.g. the sn(Last Name) in AD is empty. Several AD attributes can be used here, see example                                                                                                                                                                                                                                                                                                                                                         |
+| ignoreFunction=                | empty\*, !empty, isset\*, !isset        | The check function for "ignoreUsersWithAttributes". If the value is set to "empty", the function checks if the specified "ignoreUsersWithAttributes" value is empty. If this is the case the user will not be synchronized.                                                                                                                                                                                                                                                                    |
 
 \*empty - Checks if a variable contains a value
 \*isset - Checks if a variable exists and if it is not NULL
 
 * * *
 
-## Example for the command [import-syslog](./options-and-parameters-cli.md#import-syslog)
+## Example for the command [import-syslog](commands-and-options.md#import-syslog)
 
-There are no further options for this command so we only need the following options [user](./options-and-parameters-cli.md#import-syslog), [password](./options-and-parameters-cli.md#import-syslog) und [tenantId](./options-and-parameters-cli.md#import-syslog).
+There are no further options for this command so we only need the following options [user](commands-and-options.md#import-syslog), [password](commands-and-options.md#import-syslog) und [tenantId](commands-and-options.md#import-syslog).
 
-```ini
+```ini title="import-syslog.ini"
 [commandArguments]
 [commandOptions]
 user=admin
@@ -188,7 +185,7 @@ tenantId=1
 ; "/(^[a-zA-Z]{3}[ ]+[\d]+ [\d\:\d]+) " .  /* date / time */
 ; "(([.\-0-9a-zA-Z]+)*" .                  /* hostname */
 ; "(\b(?:\d{1,3}\.){3}\d{1,3}\b)*)+ " .    /* IP-Address */
-; "([a-zA-Z0-9-_\/\[\]:]+) " .             /* Processname */
+; "([a-zA-Z0-9-_\/\[\]:]+) " .             /* Process name */
 ; "(.*)/";                                 /* Syslog-Message */
 regexSplitSyslogLine="/(^[a-zA-Z]{3}[ ]+[\d]+ [\d\:\d]+) (([.\-0-9a-zA-Z]+)*(\b(?:\d{1,3}\.){3}\d{1,3}\b)*)+ ([a-zA-Z0-9-_\/\[\]:]+) (.*)/";
 priorities[]=Emergency
