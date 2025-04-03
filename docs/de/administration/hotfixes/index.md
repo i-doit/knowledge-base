@@ -47,9 +47,17 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
+### File assignment via list edit not working (ID-10914)
+
+[i-doit_34_hotfix_ID-10914_912c7a0.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-10914_912c7a0.zip){ .md-button .md-button--primary }
+
 ### Sorting for a rack causes vertical slots to be seen already taken when importing via csv import (ID-11522)
 
 [i-doit_34_hotfix_ID-11522_dc34840.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11522_dc34840.zip){ .md-button .md-button--primary }
+
+### Configured user language is ignored (ID-11738)
+
+[i-doit_34_hotfix_ID-11738_2fe864f.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11738_2fe864f.zip){ .md-button .md-button--primary }
 
 ### Trying to assign a object causes 500 error (ID-11743)
 
@@ -60,13 +68,21 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_34_hotfix_ID-11743_71ff22b.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11743_71ff22b.zip){ .md-button .md-button--primary }
 
-### Configured user language is ignored (ID-11738)
+### OPENldap error when ldap-sync is triggered via console (ID-11758)
 
-[i-doit_34_hotfix_ID-11738_2fe864f.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11738_2fe864f.zip){ .md-button .md-button--primary }
+[i-doit_34_hotfix_ID-11758_c026dfa.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11758_c026dfa.zip){ .md-button .md-button--primary }
 
-### File assignment via list edit not working (ID-10914)
+### Do not use constants from PHP module pcntl (ID-11770)
 
-[i-doit_34_hotfix_ID-10914_912c7a0.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-10914_912c7a0.zip){ .md-button .md-button--primary }
+[i-doit_34_hotfix_ID-11770_d3d1569.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11770_d3d1569.zip){ .md-button .md-button--primary }
+
+### Pager does not work for the Object browser configuration (ID-11788)
+
+[i-doit_34_hotfix_ID-11788_bbefcb3.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11788_bbefcb3.zip){ .md-button .md-button--primary }
+
+### Hotfix PHP Fatal Error when saving "Multiselect" fields (ID-11804)
+
+[i-doit_34_hotfix_ID-11804_7790fe9.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11804_7790fe9.zip){ .md-button .md-button--primary }
 
 ## API Add-on
 
