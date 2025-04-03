@@ -22,8 +22,8 @@ Der **License Token** wird per E-Mail zugeschickt. Die **offline license** wird 
 -   [Wie aktiviere ich die i-doit eval/trial, wenn i-doit **Zugriff auf das Internet hat**?](#wie-aktiviere-ich-die-i-doit-evaltrial-online)
 -   [Wie aktiviere ich die i-doit eval/trial, wenn i-doit **keinen Zugriff auf das Internet hat**?](#wie-aktiviere-ich-die-i-doit-evaltrial-offline)
 
--   [Wie ändere oder aktualisiere ich den i-doit license Token, wenn i-doit **Zugriff auf das Internet hat**?](#wie-ändere-oder-aktualisiere-ich-den-i-doit-license-token-online)
--   [Wie ändere oder aktualisiere ich den i-doit license Token, wenn i-doit **keinen Zugriff auf das Internet hat**?](#wie-ändere-oder-aktualisiere-ich-den-i-doit-license-token-offline)
+-   [Wie ändere oder aktualisiere ich den i-doit license Token, wenn i-doit **Zugriff auf das Internet hat**?](#wie-andere-oder-aktualisiere-ich-den-i-doit-license-token-online)
+-   [Wie ändere oder aktualisiere ich den i-doit license Token, wenn i-doit **keinen Zugriff auf das Internet hat**?](#wie-andere-oder-aktualisiere-ich-den-i-doit-license-token-offline)
 
 -   [Häufig gestellte fragen](#faq)
 
@@ -36,6 +36,7 @@ Der **License Token** wird per E-Mail zugeschickt. Die **offline license** wird 
 1. Rufe die i-doit Installation über den Browser auf und logge dich mit den standard Benutzerdaten ein. Infos unter [Erstanmeldung](../grundlagen/erstanmeldung.md)
 
 2. Nach dem Login erscheint ein Popup Fenster, dort wird der license Token eingetragen, der per E-Mail erhalten wurde.
+
     [![Eval Token popup](../assets/images/de/wartung-und-betrieb/lizenzierung/eval-license-popup-online.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/eval-license-popup-online.png)
 
 </div>
@@ -141,16 +142,9 @@ Der **License Token** wird per E-Mail zugeschickt. Die **offline license** wird 
 
 Um das Add-on & Subscription Center in i-doit zu verwenden sind womöglich einige Freigaben in der Firewall notwendig. Welche Hostnamen und IP-Adressen i-doit verwendet, wird im Artikel [Sicherheit und Schutz](../wartung-und-betrieb/sicherheit-und-schutz.md#firewall-und-offene-ports) beschrieben.
 
-### Automatische Lizenzverteilung
-
-Bitte beachte, dass im Reiter **Tenants** konfiguriert werden kann, wie viele Objektlizenzen einem Mandanten zugewiesen werden. Auch wenn nur ein einzelner Mandant existiert, kann eine ausgeschaltete automatische Lizenzverteilung dafür sorgen, dass nicht alle Objektlizenzen genutzt werden. Sollte dies der Fall sein, kann diese einfach aktiviert werden und wird mit einem Klick auf Speichern übernommen.
-
-!!! success ""
-    [![faq-license-distribution](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-distribution.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-distribution.png)
-
 ### Die Lizenz ist gültig aber i-doit zeigt an, dass es nicht lizenziert ist?
 
-Öffne den Reiter Tenant im Admin-Center und klicke auf **Save license settings**.
+Öffne den Reiter **Tenants** im Admin-Center. Bitte beachte, dass im Reiter **Tenants** konfiguriert werden kann, wie viele Objektlizenzen einem Mandanten zugewiesen werden. Auch wenn nur ein einzelner Mandant existiert, kann eine ausgeschaltete automatische Lizenzverteilung dafür sorgen, dass nicht alle Objektlizenzen genutzt werden. Sollte dies der Fall sein, kann diese einfach aktiviert werden und wird mit einem Klick auf Speichern übernommen.
 
 !!! success ""
     [![faq-license-settings](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-settings.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-settings.png)
