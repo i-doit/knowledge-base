@@ -17,6 +17,8 @@ Die folgenden Fehlermeldungen können unter den verschiedensten Umständen auftr
 
 ## Möglicher Lösungsansatz
 
+!!! warning "Wir übernehmen keine Verantwortung für diese Lösungsansätze und können nicht garantieren, dass die Fehler durch die Lösungsansätze behoben werden! Stellen Sie sicher, dass Sie vorher ein Backup oder einen Snapshot erstellt haben."
+
 Diese Fehler können behoben werden, indem Sie die Datenbank Dateien (ib_logfile0 and ib_logfile1) in einen anderen Standort verschieben.
 Diese Dateien sind System tablespaces für die InnoDB Infrastruktur und enthalten wichtige Classes für InnoDB.
 Mehr Informationen über diese Dateien finden Sie [**hier**](https://dba.stackexchange.com/questions/27083/what-exactly-are-iblog-files-in-mysql).

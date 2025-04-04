@@ -17,6 +17,8 @@ The following error messages can occur under various circumstances. Due to a pow
 
 ## Possible solution
 
+!!! warning "We assume no responsibility for these solutions and cannot guarantee that the errors will be solved by the solutions! Be sure to create a backup or snapshot beforehand"
+
 These errors can be fixed by moving the database files (ib_logfile0 and ib_logfile1) to another location.
 These files are system tablespaces for the InnoDB infrastructure and contain important classes for InnoDB.
 More information about these files can be found [**here**](https://dba.stackexchange.com/questions/27083/what-exactly-are-iblog-files-in-mysql).
