@@ -70,7 +70,7 @@ Insert the following configuration directives based on the example:
 </Location>
 ```
 
-## Apache2 Konfiguration
+## Apache2 Configuration
 
 First we create a self signed certificate "name can be individual".
 
