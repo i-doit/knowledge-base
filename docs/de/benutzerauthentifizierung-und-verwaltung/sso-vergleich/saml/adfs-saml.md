@@ -248,7 +248,7 @@ Nach der erfolgreichen Anmeldung sollten wir folgende Ausgabe erhalten.
 
 ## Installation i-doit
 
-Die Installation kann wie im KB-Artikel für Debian beschrieben installiert werden.
+Die Installation kann wie im KB-Artikel für [Debian](../../../installation/manuelle-installation/debian/index.md) beschrieben installiert werden.
 
 ## Anmeldung SSO für i-doit
 
