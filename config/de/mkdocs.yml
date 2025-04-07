@@ -627,14 +627,10 @@ nav:
           - i-doit 33 update und Flows installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
           - i-doit-add-ons/forms/index.md
-          - Installation Forms Add-on: i-doit-add-ons/forms/installation-forms-add-on.md
-          - Installation MongoDB v5: i-doit-add-ons/forms/installation-mongodb-v5.md
-          - Installation NodeJS: i-doit-add-ons/forms/installation-nodejs.md
-          - Konfiguration das Forms Backend: i-doit-add-ons/forms/konfiguration-des-forms-backend.md
-          - Konfiguration in i-doit: i-doit-add-ons/forms/konfiguration-in-i-doit.md
-          - Forms verwenden: i-doit-add-ons/forms/forms-verwenden.md
-          - Formulare publishen: i-doit-add-ons/forms/formulare-publishen.md
-          - Formular ausfuellen: i-doit-add-ons/forms/formulare-ausfuellen.md
+          - Installation des Forms Add-on: i-doit-add-ons/forms/forms-installation.md
+          - Formulare erstellen: i-doit-add-ons/forms/forms-verwenden.md
+          - Formulare veröffenlichen: i-doit-add-ons/forms/formulare-publishen.md
+          - Formular ausfüllen: i-doit-add-ons/forms/formulare-ausfuellen.md
           - Verwendung der Forms API: i-doit-add-ons/forms/verwenden-der-forms-api.md
       - i-diary: i-doit-add-ons/i-diary.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md

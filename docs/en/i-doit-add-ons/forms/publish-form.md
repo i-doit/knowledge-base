@@ -1,53 +1,41 @@
 # Publish Forms
 
-To publish a form there are these possibilities.
+To publish a form use the **Save and Publish** button in the form is clicked directly.
 
-Either the [![icon](../../assets/images/en/i-doit-add-ons/forms/publish-forms/1-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/1-pf.png) button in the form is clicked directly.
-
-[![](../../assets/images/en/i-doit-add-ons/forms/publish-forms/2-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/2-pf.png)
+[![Publish-in-edit-form](../../assets/images/en/i-doit-add-ons/forms/publish-forms/save-and-publish-in-edit.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/save-and-publish-in-edit.png)
 
 The publish status is also displayed.
 
-[![publish status](../../assets/images/en/i-doit-add-ons/forms/publish-forms/3-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/3-pf.png)
+[![publish-status-in-edit-form](../../assets/images/en/i-doit-add-ons/forms/publish-forms/publish-status-in-edit.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/publish-status-in-edit.png)
 
-Or on the overview page of the forms. The [![icon](../../assets/images/en/i-doit-add-ons/forms/publish-forms/4-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/4-pf.png) button is also displayed there by clicking on the [![icon](../../assets/images/en/i-doit-add-ons/forms/publish-forms/5-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/5-pf.png) More actions menu.
+Or on the overview page of the forms. The **Publish** button is also displayed there by clicking on the button in the **"3 dot"** menu.
 
-[![publish status](../../assets/images/en/i-doit-add-ons/forms/publish-forms/6-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/6-pf.png)
+[![publish-status](../../assets/images/en/i-doit-add-ons/forms/publish-forms/publish-in-overview.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/publish-in-overview.png)
 
 Also here is the status displayed
 
-[![publish status](../../assets/images/en/i-doit-add-ons/forms/publish-forms/7-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/7-pf.png)
+[![publish status](../../assets/images/en/i-doit-add-ons/forms/publish-forms/publish-status-in-overview.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/publish-status-in-overview.png)
 
 After the click, a popup will appear with the indication that anyone with the link of the form has access to it.
 
-[![popup](../../assets/images/en/i-doit-add-ons/forms/publish-forms/8-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/8-pf.png)
+[![popup](../../assets/images/en/i-doit-add-ons/forms/publish-forms/publish-popup.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/publish-popup.png)
 
-Once we have confirmed the hint, we receive a success message. The [![icon](../../assets/images/en/i-doit-add-ons/forms/publish-forms/9-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/9-pf.png) button opens the form in the browser and the [![icon](../../assets/images/en/i-doit-add-ons/forms/publish-forms/10-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/10-pf.png) button copies the link to the form to the clipboard.
+Once we have confirmed the hint, we receive a success message. The **Open** button opens the form in the browser and the **Copy** button copies the link to the form to the clipboard.
 
-[![publish](../../assets/images/en/i-doit-add-ons/forms/publish-forms/11-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/11-pf.png)
+[![publish](../../assets/images/en/i-doit-add-ons/forms/publish-forms/publish-success.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/publish-success.png)
 
 ## Unpublish forms
 
-To cancel the release of a form we have these options.
+To cancel the release of the form we use the **Unpublish** button in the form.
 
-To cancel the release of the form we use the [![icon](../../assets/images/en/i-doit-add-ons/forms/publish-forms/12-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/12-pf.png) button in the form.
+[![cancel](../../assets/images/en/i-doit-add-ons/forms/publish-forms/save-and-unpublish-in-edit.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/save-and-unpublish-in-edit.png)
 
-[![cancel](../../assets/images/en/i-doit-add-ons/forms/publish-forms/13-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/13-pf.png)
+Or on the overview page of the forms. The **Unpublish** button is also displayed there by clicking on the **"3 dot"** menu.
 
-Or on the overview page of the forms. The [![icon](../../assets/images/en/i-doit-add-ons/forms/publish-forms/14-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/14-pf.png) button is also displayed there by clicking on the [![icon](../../assets/images/en/i-doit-add-ons/forms/publish-forms/15-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/15-pf.png) More actions menu.
-
-[![Unpublish forms](../../assets/images/en/i-doit-add-ons/forms/publish-forms/16-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/16-pf.png)
+[![Unpublish forms](../../assets/images/en/i-doit-add-ons/forms/publish-forms/unpublish-in-overview.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/unpublish-in-overview.png)
 
 After the click, a popup appears with a notice that the form is no longer accessible via the link.
 
-[![Unpublish forms](../../assets/images/en/i-doit-add-ons/forms/publish-forms/17-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/17-pf.png)
-
-If the form is saved using the [![icon](../../assets/images/en/i-doit-add-ons/forms/publish-forms/18-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/18-pf.png) button, a success message appears.
-
-[![Unpublish forms](../../assets/images/en/i-doit-add-ons/forms/publish-forms/19-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/19-pf.png)
-
-If the form could not be saved, we receive an error message.
-
-[![Unpublish forms](../../assets/images/en/i-doit-add-ons/forms/publish-forms/20-pf.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/20-pf.png)
+[![Unpublish forms](../../assets/images/en/i-doit-add-ons/forms/publish-forms/unpublish-popup.png)](../../assets/images/en/i-doit-add-ons/forms/publish-forms/unpublish-popup.png)
 
 [Continue to fill out form](./fill-out-forms.md){ .md-button .md-button--primary }

@@ -591,12 +591,8 @@ nav:
           - i-doit 33 update and Flows installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
           - i-doit-add-ons/forms/index.md
-          - Install Forms Add-on: i-doit-add-ons/forms/install-forms-addon.md
-          - Install MongoDB v5: i-doit-add-ons/forms/install-mongodb.md
-          - Install NodeJS: i-doit-add-ons/forms/install-nodejs.md
-          - Configure the Forms Backend: i-doit-add-ons/forms/configure-forms-backend.md
-          - Configuration in i-doit: i-doit-add-ons/forms/configuration-in-i-doit.md
-          - Use forms: i-doit-add-ons/forms/use-forms.md
+          - Installing the Forms add-on: i-doit-add-ons/forms/install-forms-addon.md
+          - Create forms: i-doit-add-ons/forms/use-forms.md
           - Publish forms: i-doit-add-ons/forms/publish-form.md
           - Fill out form: i-doit-add-ons/forms/fill-out-forms.md
           - Using Forms Add-on API: i-doit-add-ons/forms/using-forms-api.md
