@@ -2,31 +2,21 @@
 
 ## Aufruf des Add-ons
 
-Nachdem alle Vorbereitungen abgeschlossen sind, ist der Zugriff auf das Add-on über `Extras > Forms` möglich.
-
-[![Aufruf des Add-ons](../../assets/images/de/i-doit-add-ons/forms/verwenden/1-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/1-fv.png)
+Nachdem alle Vorbereitungen abgeschlossen sind, ist der Zugriff auf das Add-on über das Menü **Add-ons → Forms** möglich.
 
 ## Formulare erstellen
 
-Erstellt wird ein Formular über den [![Formulare erstellen](../../assets/images/de/i-doit-add-ons/forms/verwenden/2-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/2-fv.png) Button.
+Erstellt wird ein Formular über den **Add form** Button. Begonnen wird dann mit der Vergabe des Formular Titels. Dann wird ein Objekttyp gewählt der durch das Formular bzw. durch die Eingaben der Benutzer erstellt wird. Nun können wir Elemente hinzufügen die im Formular dargestellt werden sollen. Mögliche Element sind **Attribute**, **Headlines**, **Texte** und **Dividing Lines**.
 
-Begonnen wird dann mit der Vergabe des Formular Titels.<br>
-Dann wird ein Objekttyp gewählt der durch das Formular bzw. durch die Eingaben der Benutzer erstellt wird.
+[![Elemente hinzufügen](../../assets/images/de/i-doit-add-ons/forms/verwenden/3-fv.gif)](../../assets/images/de/i-doit-add-ons/forms/verwenden/3-fv.gif)
 
-Nun können wir Elemente hinzufügen die im Formular dargestellt werden sollen.<br>
-Mögliche Element sind _Attribute_, _Headlines_, _Texte_ und _Dividing Lines_.
+Die Reihenfolge der Elemente kann im Nachhinein, via **Drag&Drop**, verändert werden.
 
-[![elemente hinzufügen](../../assets/images/de/i-doit-add-ons/forms/verwenden/3-fv.gif)](../../assets/images/de/i-doit-add-ons/forms/verwenden/3-fv.gif)
+[![Reihenfolge](../../assets/images/de/i-doit-add-ons/forms/verwenden/4-fv.gif)](../../assets/images/de/i-doit-add-ons/forms/verwenden/4-fv.gif)
 
-Die Reihenfolge der Elemente kann im nachhinein, via Drag&Drop, verändert werden.
+Bereits erstellte Elemente können **gelöscht** oder **dupliziert** werden. Natürlich kann man das Formular auch auf mehrere Seiten **Pages** verteilen. Die Seiten lassen sich wie die anderen Elemente auch verschieben und löschen.
 
-[![reihenfolge](../../assets/images/de/i-doit-add-ons/forms/verwenden/4-fv.gif)](../../assets/images/de/i-doit-add-ons/forms/verwenden/4-fv.gif)
-
-Bereits erstellte Elemente können gelöscht [![remove](../../assets/images/de/i-doit-add-ons/forms/verwenden/5-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/5-fv.png) oder dupliziert! [![diplicate](../../assets/images/de/i-doit-add-ons/forms/verwenden/6-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/6-fv.png) werden.<br>
-Natürlich kann man das Formular auch auf mehrere Seiten (_Pages_) verteilen.<br>
-Die Seiten lassen sich wie die anderen Elemente auch verschieben und löschen.
-
-[![create form](../../assets/images/de/i-doit-add-ons/forms/verwenden/7-fv.gif)](../../assets/images/de/i-doit-add-ons/forms/verwenden/7-fv.gif)
+[![Create form](../../assets/images/de/i-doit-add-ons/forms/verwenden/7-fv.gif)](../../assets/images/de/i-doit-add-ons/forms/verwenden/7-fv.gif)
 
 ## Verfügbare Elemente
 
@@ -50,37 +40,28 @@ Hier wird eine Trennlinie (Dividing Line) dargestellt.
 
 ### Attribute
 
-Wird ein solches Element hinzugefügt öffnet sich direkt die Attributauswahl.<br>
-Hier werden alle Kategorien dargestellt. die dem Objekttyp in i-doit zugewiesenen sind.
+Wird ein solches Element hinzugefügt öffnet sich direkt die Attribute Auswahl. Hier werden alle Kategorien dargestellt, die dem Objekttyp in i-doit zugewiesenen sind.
 
 [![Attribute](../../assets/images/de/i-doit-add-ons/forms/verwenden/11-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/11-fv.png)
 
 [![Attribute](../../assets/images/de/i-doit-add-ons/forms/verwenden/12-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/12-fv.png)
 
-Bei dem Element kann der _Field name_ geändert werden.<br>
-Außerdem kann eine _Pre-defined value_ hinterlegt werden, dieser Value wird dann vorausgefüllt
+Bei dem Element kann der **Field name** geändert werden. Außerdem kann eine **Pre-defined value** hinterlegt werden, dieser Wert wird dann bei vor befüllt.
 
 [![eye](../../assets/images/de/i-doit-add-ons/forms/verwenden/13-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/13-fv.png)
 
-Die Einstellung _Hide element for recipients_ wird dazu verwendet um Felder für Benutzer auszublenden.<br>
-Dadurch kann das Formular vom Ersteller festgelegte Werte (_Pre-defined values)_ mit in das zu erstellende Objekt übernehmen.<br>
+Die Einstellung **Hide element for recipients** wird dazu verwendet um Felder für Benutzer auszublenden. Dadurch kann das Formular vom Ersteller festgelegte Werte **Pre-defined values** mit in das zu erstellende Objekt übernehmen.
 
 [![settings](../../assets/images/de/i-doit-add-ons/forms/verwenden/14-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/14-fv.png)
 
-Ist die Einstellung aktiviert wird dies durch ein durchgestrichenes [![hide](../../assets/images/de/i-doit-add-ons/forms/verwenden/16-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/16-fv.png) Auge visualisiert.
-
-
-
-Zusätzlich können diese Elemente als _Mark as required Field can not be blank_ markiert werden.<br>
-Diese Attribute Elemente dürfen dann nicht leer sein. Dies wird durch den Schriftzug [![settings](../../assets/images/de/i-doit-add-ons/forms/verwenden/15-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/15-fv.png) _REQUIRED_ verdeutlicht.
+Ist die Einstellung aktiviert wird dies durch ein durchgestrichenes **Auge** visualisiert. Zusätzlich können diese Elemente als _Mark as required Field can not be blank_ markiert werden. Diese Attribute Elemente dürfen dann nicht leer sein. Dies wird durch den Schriftzug **REQUIRED** verdeutlicht.
 
 [![settings](../../assets/images/de/i-doit-add-ons/forms/verwenden/17-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/17-fv.png)
 
 ## Vorschau (Preview)
 
-Bevor man das Formular auf die Benutzer loslässt möchte man sich dies natürlich anschauen.<br>
-Genau dafür haben wir die _Preview_ eingebaut! Zum öffnen den [![](../../assets/images/de/i-doit-add-ons/forms/verwenden/18-fv.png)](../../assets/images/de/i-doit-add-ons/forms/verwenden/18-fv.png) Button klicken
+Bevor man das Formular auf die Benutzer loslässt möchte man sich dies natürlich anschauen. Genau dafür haben wir die **Preview** eingebaut! Zum öffnen den **Preview** Button klicken.
 
 [![Vorschau](../../assets/images/de/i-doit-add-ons/forms/verwenden/19-fv.gif)](../../assets/images/de/i-doit-add-ons/forms/verwenden/19-fv.gif)
 
-[Weiter zum Formulare publishen](./formulare-publishen.md){ .md-button .md-button--primary }
+[Weiter zum Formulare freigeben](./formulare-publishen.md){ .md-button .md-button--primary }
