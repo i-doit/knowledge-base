@@ -249,7 +249,7 @@ The installation can be installed as described in the KB article for [Debian](..
 
 ## SSO login for i-doit
 
-For this we have to go to **System settings** tab of the [Admin Center](../../../system-administration/admin-center.md) and adjust the configuration as follows.
+For this we have to go to **System settings** tab of the [Admin-Center](../../../system-administration/admin-center.md) and adjust the configuration as follows.
 
 !!! attention "Important information about contacts"
 

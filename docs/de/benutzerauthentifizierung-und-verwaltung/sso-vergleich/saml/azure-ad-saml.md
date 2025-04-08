@@ -121,7 +121,7 @@ Beispiel:
 
 ## Anmeldung SSO für i-doit aktivieren
 
-Hierzu müssen wir in den **System settings** Tab des [Admin Centers](../../../administration/admin-center.md) und passen die dortige Konfiguration wie folgt an.
+Hierzu müssen wir in den **System settings** Tab des [Admin-Center](../../../administration/admin-center.md) und passen die dortige Konfiguration wie folgt an.
 
 !!! attention "Wichtige Information zu Kontakten"
 

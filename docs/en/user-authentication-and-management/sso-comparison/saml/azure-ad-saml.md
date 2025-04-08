@@ -119,7 +119,7 @@ Example:
 
 ## Activate i-doit SSO
 
-Now we have to go to the **System settings** tab of the [Admin Center](../../../system-administration/admin-center.md) and adjust the configuration as follows.
+Now we have to go to the **System settings** tab of the [Admin-Center](../../../system-administration/admin-center.md) and adjust the configuration as follows.
 
 !!! attention "Important information about contacts"
 
