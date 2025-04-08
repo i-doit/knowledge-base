@@ -34,7 +34,7 @@ With the following command we create our Mellon metadata "Customize URLs to your
 /usr/sbin/mellon_create_metadata https://tu2-samlsso.synetics.test/ "https://tu2-samlsso.synetics.test/mellon"
 ```
 
-The command now the following files:
+The command will now create the following files:
 
     https_tu2_samlsso.synetics.test_.cert
     https_tu2_samlsso.synetics.test_.key
@@ -67,7 +67,7 @@ First we create a self signed certificate "name can be individual".
 openssl req -newkey rsa:3072 -new -x509 -days 3652 -nodes -out /etc/ssl/certs/mywebserver.pem -keyout /etc/ssl/private/mywebserver.key
 ```
 
-Beispiel:
+Example:
 
 ```shell
 Country Name (2 letter code) [AU]:Your_Country
@@ -119,7 +119,7 @@ Example:
 
 ## Activate i-doit SSO
 
-Now we have to go to administration -> system settings and adjust the configuration as follows.
+Now we have to go to the **System settings** tab of the [Admin-Center](../../../system-administration/admin-center.md) and adjust the configuration as follows.
 
 !!! attention "Important information about contacts"
 

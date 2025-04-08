@@ -248,12 +248,15 @@ Nach der erfolgreichen Anmeldung sollten wir folgende Ausgabe erhalten.
 
 ## Installation i-doit
 
-Die Installation kann wie im KB-Artikel für Debian beschrieben installiert werden.
+Die Installation kann wie im KB-Artikel für [Debian](../../../installation/manuelle-installation/debian/index.md) beschrieben installiert werden.
 
 ## Anmeldung SSO für i-doit
 
-Hierzu müssen wir einmal in die Administration -> System settings und passen die Konfiguration wie folgt an.
-**Wichtige Information zu Kontakten:****Es muss zwingend die E-Mail Adresse des jeweiligen Benutzers als Login im i-doit hinterlegt sein!**
+Hierzu müssen wir in den **System settings** Tab des [Admin-Center](../../../administration/admin-center.md) und passen die dortige Konfiguration wie folgt an.
+
+!!! attention "Wichtige Information zu Kontakten"
+
+    Es muss zwingend die E-Mail Adresse des jeweiligen Benutzers als Login im i-doit hinterlegt sein!
 
 [![i-doit SSO setting](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-17.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-17.png)
 

@@ -24,7 +24,7 @@ sudo apt -y install openssl libapache2-mod-auth-mellon ntpdate
 
 The system architecture should be x86 in 64bit.
 
-## Mellon Konfiguration
+## Mellon Configuration
 
 We are creating a directory for this under `/etc/apache2` and store our configuration data here.
 
@@ -70,7 +70,7 @@ Insert the following configuration directives based on the example:
 </Location>
 ```
 
-## Apache2 Konfiguration
+## Apache2 Configuration
 
 First we create a self signed certificate "name can be individual".
 
@@ -171,7 +171,7 @@ sudo ntpdate -u tu2-dc2.tu-synetics.test
 
 At this point, we are done with the configuration of the Linux server for the time being and can now turn our attention to our AD.
 
-## Konfiguration AD-FS
+## Configuration AD-FS
 
 First download the file `mellon_metadata.xml` from the Linux server e.g. via WinSCP and save it.
 
@@ -249,8 +249,11 @@ The installation can be installed as described in the KB article for [Debian](..
 
 ## SSO login for i-doit
 
-For this we have to go to the Administration -> System settings and adjust the configuration as follows.
-Important information about contacts: **It is mandatory that the e-mail address of the respective user is stored as login in i-doit!**
+For this we have to go to **System settings** tab of the [Admin-Center](../../../system-administration/admin-center.md) and adjust the configuration as follows.
+
+!!! attention "Important information about contacts"
+
+    It is mandatory that the e-mail address of the respective user is stored as login in i-doit!
 
 [![i-doit SSO setting]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)
 

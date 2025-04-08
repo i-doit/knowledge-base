@@ -121,7 +121,7 @@ Beispiel:
 
 ## Anmeldung SSO für i-doit aktivieren
 
-Hierzu müssen wir einmal in die Administration -> System settings und passen die Konfiguration wie folgt an.
+Hierzu müssen wir in den **System settings** Tab des [Admin-Center](../../../administration/admin-center.md) und passen die dortige Konfiguration wie folgt an.
 
 !!! attention "Wichtige Information zu Kontakten"
 
@@ -135,13 +135,13 @@ Solange die Konfigurationen auf dem Linux Server noch nicht aktiviert wurde, kö
 
 Damit wir nun noch die benötigte XML für die Mellon Konfiguration erhalten, müssen wir folgende Schritte ausführen (Beispiel):
 
-### Erstellen einer benutzerfedinierten Unternehmensanwendung
+### Erstellen einer benutzerdefinierten Unternehmensanwendung
 
 Wir melden uns im Azure AD und gehen dann auf Unternehmensanwendungen.
 
 [![Azure-AD-Unternehmensanwendung](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen.png)
 
-Erstellen einer eigene benutzerdefiniere Anwendung.
+Erstellen einer eigene benutzerdefinierte Anwendung.
 
 [![Azure-AD-Unternehmensanwendung-2](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-2.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-2.png)
 
