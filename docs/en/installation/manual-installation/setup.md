@@ -89,19 +89,19 @@ The setup is launched automatically as soon as i-doit is opened (example <http:/
 
 Important system settings are prompted in the first step. The user will be notified if something is not okay.
 
-[![System check](../../assets/images/en/installation/manual-installation/setup/1-setup.png)](../../assets/images/en/installation/manual-installation/setup/1-setup.png)
+[![System check](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_01_system_check.png)](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_01_system_check.png)
 
 #### Directory Configuration
 
 Here the paths are requested where the installation files or user specific files are going to be stored. You can accept the suggested options.
 
-[![Directory configuration](../../assets/images/en/installation/manual-installation/setup/2-setup.png)](../../assets/images/en/installation/manual-installation/setup/2-setup.png)
+[![Directory configuration](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_02_directory_configuration.png)](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_02_directory_configuration.png)
 
 #### Database Configuration
 
 Important credentials and settings need to be entered for the database connection. At least two databases and one special user are created for i-doit.
 
-[![Database configuration](../../assets/images/en/installation/manual-installation/setup/3-setup.png)](../../assets/images/en/installation/manual-installation/setup/3-setup.png)
+[![Database configuration](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_03_database_configuration.png)](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_03_database_configuration.png)
 
 -   **Connection settings**
     -   **Host:** Generally the host itself, so localhost or 127.0.0.1
@@ -120,9 +120,9 @@ Important credentials and settings need to be entered for the database connectio
     -   **Start value for object/configuration item IDs:** Normally 1
 
 !!! success "Unix Socket vs. Network Port"
-    PHP is able to connect to MariaDB/MySQL in two ways: For one thing, per Unix Socket, and secondly via TCP/IP. For performance reasons we recommend using the Unix Socket. The use of the Unix Socket is enforced by entering the **localhost** value in the above mentioned host configuration. Other specifications (**127.0.0.1**, FQDN or the like) result in the use of TCP/IP.
+    PHP is able to connect to MariaDB/MySQL in two ways: For one thing, per Unix Socket, and secondly via TCP/IP. For performance reasons we recommend using the Unix Socket. The use of the Unix Socket is enforced by entering the **localhost** value in the above mentioned host configuration. Other specifications (**127.0.0.1**, FQDN or the like) result in the use of TCP/IP.<br>
     Usually, MariaDB/MySQL opens a Unix Socket when a service is started. In the **socket** settings you specify the path, an example under Debian GNU/Linux is `/var/run/mysqld/mysqld.sock`.  This value has to be known to PHP so that i-doit can establish a connection to MariaDB/MySQL.
-    The corresponding PHP setting is `mysqli.default_socket`. When you have followed the installation instructions, you can supplement the created PHP configuration file by this setting, for example, `mysqli.default_socket = /var/run/mysqld/mysqld.sock`.
+    The corresponding PHP setting is `mysqli.default_socket`. When you have followed the installation instructions, you can supplement the created PHP configuration file by this setting, for example, `mysqli.default_socket = /var/run/mysqld/mysqld.sock`.<br>
     Subsequent changes to the PHP settings will only become effective when the Apache HTTP Server service is restarted. Example for Debian GNU/Linux: `sudo systemctl reload apache2.service`
     This tip refers to Unix-like operating systems; it does not apply to Windows.
 
@@ -130,7 +130,7 @@ Important credentials and settings need to be entered for the database connectio
 
 There are separate credentials in i-doit to access the i-doit [Admin-Center](../../system-administration/admin-center.md). They can be specified here and we recommend using this option.
 
-[![Framework configuration](../../assets/images/en/installation/manual-installation/setup/4-setup.png)](../../assets/images/en/installation/manual-installation/setup/4-setup.png)
+[![Framework configuration](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_04_framework_configuration.png)](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_04_framework_configuration.png)
 
 #### Config Check
 
