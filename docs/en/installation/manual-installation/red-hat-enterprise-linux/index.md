@@ -6,13 +6,13 @@ status:
 lang: en
 ---
 
-This article describes which packages need to be installed and configured.
+!!! note "Tested with i-doit **34** and RHEL 9.5"
+
+In this article, we explain in a few steps which packages need to be installed and configured.
 
 ## System requirements
 
-The general [system requirements](../../system-requirements.md) apply.
-
-To determine which version is used, this command can be executed on the console:
+The general [system requirements](../../system-requirements.md) apply. To determine which version is used, this command can be executed on the console:
 
 ```sh
 cat /etc/os-release
@@ -49,35 +49,37 @@ sudo dnf module install php:8.2 mariadb:10.11 -y
 ```
 
 Further packages are installed afterwards:
-
+<!-- cSpell:disable -->
 ```sh
 sudo dnf install httpd boost-program-options memcached unzip php php-{bcmath,curl,gd,json,ldap,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,zip} -y
 ```
+<!-- cSpell:enable -->
+!!! info "Für die PHP extension memcached sind weitere Schritte notwendig: <https://access.redhat.com/solutions/7002155>. i-doit funktioniert auch ohne."
 
 These commands are required so that the Apache HTTP server, MariaDB, PHP-FPM and memcached are also started at boot time:
-
+<!-- cSpell:disable -->
 ```sh
 sudo systemctl enable httpd mariadb php-fpm memcached
 ```
-
+<!-- cSpell:enable -->
 The services are then started:
-
+<!-- cSpell:disable -->
 ```sh
 sudo systemctl start httpd mariadb php-fpm memcached
 ```
-
+<!-- cSpell:enable -->
 Furthermore, the standard HTTP port 80 is permitted via the firewall. This must be restarted after the adjustment:
-
+<!-- cSpell:disable -->
 ```sh
 sudo firewall-cmd --permanent --add-service=http
 sudo systemctl restart firewalld.service
 ```
-
+<!-- cSpell:enable -->
 !!! info "For HTTPS, further steps must be carried out which are not covered here, see [Security and protection](../../../maintenance-and-operation/security-and-protection.md)"
 
 ## Configuration
 
-The installed packages for Apache HTTP Server, PHP and MariaDB already include configuration files. It is recommended to save deviating settings in separate files instead of adapting the existing configuration files. With every package upgrade, the deviating settings would be rejected or overwritten. The settings of the standard configuration are supplemented or overwritten by the user-defined settings.
+The installed packages for Apache HTTP Server, PHP and MariaDB already include configuration files. **It is recommended to save deviating settings in separate files** instead of adapting the existing configuration files. The settings of the standard configuration are supplemented or overwritten by the user-defined settings.
 
 ### PHP-FPM Configuration
 
@@ -88,14 +90,14 @@ sudo mv /etc/php-fpm.d/www.conf{,.bak}
 ```
 
 and then create a new file and fill it with the settings:
-
+<!-- cSpell:disable -->
 ```sh
 sudo nano /etc/php-fpm.d/i-doit.conf
 ```
 
 ```ini
 [i-doit]
-listen = /var/run/php-fpm/i-doit.sock
+listen = /var/run/php-fpm/php-fpm.sock
 user = apache
 group = apache
 listen.owner = apache
@@ -107,7 +109,7 @@ pm.min_spare_servers = 5
 pm.max_spare_servers = 35
 security.limit_extensions = .php
 ```
-
+<!-- cSpell:enable -->
 ### PHP Configuration
 
 First, a new file is created and filled with the necessary settings:
@@ -117,7 +119,7 @@ sudo nano /etc/php.d/i-doit.ini
 ```
 
 !!! example "This file contains the following content specified by us. For more information on the parameters, see [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php)"
-
+<!-- cSpell:disable -->
 ```ini
 allow_url_fopen = Yes
 file_uploads = On
@@ -143,7 +145,7 @@ session.gc_maxlifetime = 604800
 session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
-
+<!-- cSpell:enable -->
 The `memory_limit` must be increased if necessary, e.g. for very large reports or extensive documents.
 The value (in seconds) of **session.gc_maxlifetime** should be greater than or equal to the **session timeout** in the [system settings](../system-settings.md) of i-doit.
 The **date.timezone** parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/de/timezones.php)).
@@ -164,7 +166,7 @@ sudo nano /etc/httpd/conf.d/i-doit.conf
 ```
 
 This file contains the following content:
-
+<!-- cSpell:disable -->
 ```ini
 DirectoryIndex index.php
 DocumentRoot /var/www/html/i-doit
@@ -306,27 +308,27 @@ ProxyTimeout 600
 
 <FilesMatch "\\.php$">
     <If "-f %{REQUEST_FILENAME}">
-        SetHandler "proxy:unix:/var/run/php-fpm/i-doit.sock|fcgi://localhost"
+        SetHandler "proxy:unix:/var/run/php-fpm/php-fpm.sock|fcgi://localhost"
     </If>
 </FilesMatch>
 ```
-
+<!-- cSpell:enable -->
 !!! note "i-doit provides different Apache settings in files with the name **.htaccess**. These must be checked after each update and updated in the VirtualHost configuration."
 
 In the next step, the Apache HTTP server is restarted:
-
+<!-- cSpell:disable -->
 ```sh
 sudo systemctl restart httpd php-fpm
 ```
-
+<!-- cSpell:enable -->
 In order for Apache to have read and write permissions in the future installation directory of i-doit, this must be permitted by **SELinux**:
-
+<!-- cSpell:disable -->
 ```sh
 sudo chown apache:apache -R /var/www/html
 sudo chcon -t httpd_sys_content_t "/var/www/html/" -R
 sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 ```
-
+<!-- cSpell:enable -->
 ### MariaDB configuration
 
 To ensure that MariaDB delivers good performance and can be operated securely, a few steps are necessary that should be carried out meticulously. This starts with a secure installation. **The recommendations should be followed**. The user **root** should be given a secure password:
@@ -336,20 +338,20 @@ mysql_secure_installation
 ```
 
 MariaDB is then stopped and set to [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown):
-
+<!-- cSpell:disable -->
 ```sh
 mysql -u root -p -e"SET GLOBAL innodb_fast_shutdown = 0"
 sudo systemctl stop mariadb.service
 ```
-
+<!-- cSpell:enable -->
 A new file is created for the different configuration settings:
-
+<!-- cSpell:disable -->
 ```sh
 sudo nano /etc/my.cnf.d/99-i-doit.cnf
 ```
-
+<!-- cSpell:enable -->
 This file contains the new configuration settings. **For optimum performance, these settings should be adapted to the (virtual) hardware**:
-
+<!-- cSpell:disable -->
 ```sh
 [mysqld]
 # This is the number 1 setting to look at for any performance optimization
@@ -388,7 +390,7 @@ table_open_cache = 2048
 innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
-
+<!-- cSpell:enable -->
 Finally, MariaDB is restarted:
 
 ```sh
@@ -396,11 +398,11 @@ sudo systemctl restart mariadb.service
 ```
 
 Finally, we need to configure SELinux:
-
+<!-- cSpell:disable -->
 ```sh
 sudo setsebool -P httpd_can_network_connect_db 1
 ```
-
+<!-- cSpell:enable -->
 ## Next Step
 
 The operating system is now prepared so that i-doit can be installed:
