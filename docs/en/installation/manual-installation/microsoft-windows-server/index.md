@@ -30,8 +30,8 @@ After clicking Install, all the required items will be installed in the backgrou
 The following will be installed:
 
 -   **Apache 2.4**
--   **PHP 8.X**
--   **MariaDB 10.X**
+-   **PHP 8.2**
+-   **MariaDB 10.6**
 -   **i-doit**
 
 !!! info "If the Windows Firewall is activated, you will be asked if want to trust the application"
@@ -74,7 +74,7 @@ The following instructions show you how to set up SSL for Windows with i-doit. O
 
 First you need a valid certificate in `.crt` and `.key` format. You can create this with OpenSSL. You can download and install OpenSSL here: [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html). Once OpenSSL is installed, you can open Win64 OpenSSL Command Prompt via the Windows search bar by searching for "OpenSSL". Now enter the following command to create the certificate:
 
-```winbatch
+```batch
 OpenSSL req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt
 ```
 
@@ -85,7 +85,7 @@ The certificate and the private key have now been created in the folder in which
 #### 1. **Creating the ssl.conf file**
 
 Navigate to your i-doit folder under `ProgramData\i-doit\apache-2.4\conf\extra\` and create the file `ssl.conf`. The file should have the following content:
-
+<!-- cSpell:disable -->
 ```conf
 <VirtualHost *:443>
    DocumentRoot "${SRVROOT}/htdocs"
@@ -115,7 +115,7 @@ Navigate to your i-doit folder under `ProgramData\i-doit\apache-2.4\conf\extra\`
    </IfModule>
 </VirtualHost>
 ```
-
+<!-- cSpell:enable -->
 **Note:** Customize the paths and configuration settings according to your own environment and make sure that your certificate and private key are located in the specified paths.
 
 #### 2. **Adjustments in the httpd.conf**
@@ -126,7 +126,7 @@ Edit the `httpd.conf` file located under `i-doit\apache-2.4\conf\` and add the f
 -   Also add the following lines: `LoadModule ssl_module modules/mod_ssl.so` and `Include conf/extra/ssl.conf`
 
 The file should then look like this if nothing has been changed beforehand:
-
+<!-- cSpell:disable -->
 ```conf
 Define SRVROOT "C:/ProgramData/i-doit/apache-2.4"
 
@@ -238,7 +238,7 @@ LogLevel warn
     SSLRandomSeed connect builtin
 </IfModule>
 ```
-
+<!-- cSpell:enable -->
 #### 3. **Restart Apache-Webserver**
 
 -   Press ++windows+r++ , type `cmd` and press Enter
@@ -246,7 +246,7 @@ LogLevel warn
 
 Enter the following command to restart the Apache web server:
 
-```winbatch
+```batch
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k restart
 ```
 
@@ -258,13 +258,13 @@ That's it! Your i-doit installation is now configured for SSL on Windows.
 
 To uninstall i-doit, the Apache2 service must be stopped first. For this we enter the following command in the command prompt:
 
-```winbatch
+```batch
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k stop
 ```
 
 Once the Apache2 service is stopped, Apache2 can be uninstalled:
 
-```winbatch
+```batch
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
@@ -301,8 +301,8 @@ After clicking Install, all the required items will be installed in the backgrou
 The following will be installed:
 
 -   **Apache 2.4**
--   **PHP 8.X**
--   **MariaDB 10.X**
+-   **PHP 8.2**
+-   **MariaDB 10.6**
 -   **i-doit**
 -   **JDisc 5.X**
 -   **JDisc JDisc Discovery Dependency Mapping 5.X(Add-on)**
@@ -334,7 +334,7 @@ To configure PHP, MariaDB or Apache, you can find the respective config files in
 ## Credentials
 
 The following credentials are set by the installer.
-
+<!-- cSpell:disable -->
 | What                      | Username                        | Password       |
 | ------------------------- | ------------------------------- | -------------- |
 | MariaDB root              | root                            | idoit          |
@@ -343,20 +343,20 @@ The following credentials are set by the installer.
 | JDisc Database            | postgres                        | idoitdiscovery |
 | JDisc Database (readonly) | postgresro                      | idoit          |
 | Install Directory         | C:\ProgramData\i-doit-discovery | -              |
-
+<!-- cSpell:enable -->
 For i-doit Login credentials see [here](../../../basics/initial-login.md).
 
 ### Uninstallation
 
 To uninstall i-doit-discovery, the Apache2 service must be stopped first. For this we enter the following command in the command prompt:
 
-```winbatch
+```batch
 C:\ProgramData\i-doit-discovery\apache-2.4\bin\httpd.exe -k stop
 ```
 
 Once the Apache2 service is stopped, Apache2 can be uninstalled:
 
-```winbatch
+```batch
 C:\ProgramData\i-doit-discovery\apache-2.4\bin\httpd.exe -k uninstall
 ```
 
@@ -373,3 +373,14 @@ Additionally JDisc and it's respective add-ons need to be removed under **Add or
 Now the i-doit-discovery folder must be deleted and the PHP `PATH` must be removed from the environment variables:
 
 [![Uninstall PHP](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)
+
+## FAQ
+
+### Improved loading of the website
+
+Under Windows, i-doit takes longer to load in the browser. This is usually due to the configuration of the virus scanner under Windows; you should make an exception for the following i-doit directories: the following i-doit directories:
+
+-   [Path](#configuration)`\htdocs\admin`
+-   [Path](#configuration)`\htdocs\images`
+-   [Path](#configuration)`\htdocs\log`
+-   [Path](#configuration)`\htdocs\src`
