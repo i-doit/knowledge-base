@@ -51,18 +51,19 @@ The old system should not be used productively during the migration process anym
 
     === "ZIP"
 
-    ```shell
-    cd /var/www/html
-    zip -rq /tmp/i-doit-migration.zip .
-    ```
+        ```shell
+        cd /var/www/html
+        zip -rq /tmp/i-doit-migration.zip .
+        ```
 
     === "TAR"
-    <!-- cSpell:disable -->
-    ```shell
-    cd /var/www/html
-    tar -czvf /tmp/i-doit-migration.tar.gz .
-    ```
-    <!-- cSpell:enable -->
+
+        <!-- cSpell:disable -->
+        ```shell
+        cd /var/www/html
+        tar -czvf /tmp/i-doit-migration.tar.gz .
+        ```
+        <!-- cSpell:enable -->
 
 2. Dump the databases into a file and pack them with gz:
 
@@ -76,19 +77,19 @@ The old system should not be used productively during the migration process anym
 
     === "ZIP"
 
-    <!-- cSpell:disable -->
-    ```shell
-    scp /tmp/i-doit-migration.zip user@newsystem:/tmp/
-    scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
-    ```
+        <!-- cSpell:disable -->
+        ```shell
+        scp /tmp/i-doit-migration.zip user@newsystem:/tmp/
+        scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
+        ```
 
     === "TAR"
 
-    ```shell
-    scp /tmp/i-doit-migration.tar.gz user@newsystem:/tmp/
-    scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
-    ```
-    <!-- cSpell:enable -->
+        ```shell
+        scp /tmp/i-doit-migration.tar.gz user@newsystem:/tmp/
+        scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
+        ```
+        <!-- cSpell:enable -->
 
 </div>
 
@@ -100,19 +101,19 @@ The old system should not be used productively during the migration process anym
 
     === "ZIP"
 
-    ```shell
-    cd /var/www/html
-    unzip /tmp/i-doit-migration.zip
-    ```
+        ```shell
+        cd /var/www/html
+        unzip /tmp/i-doit-migration.zip
+        ```
 
     === "TAR"
 
-    <!-- cSpell:disable -->
-    ```shell
-    cd /var/www/html
-    tar -xzvf /tmp/i-doit-migration.tar.gz
-    ```
-    <!-- cSpell:enable -->
+        <!-- cSpell:disable -->
+        ```shell
+        cd /var/www/html
+        tar -xzvf /tmp/i-doit-migration.tar.gz
+        ```
+        <!-- cSpell:enable -->
 
 2. Import database:
 
