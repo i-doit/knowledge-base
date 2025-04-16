@@ -124,18 +124,20 @@ Hier finden Sie v2 API-Anfragen mit ihren Anfragetypen, Antworttypen, Argumenten
 
 ## Clients und Libraries
 
+!!! warning "Diese Bibliotheken werden von der Community betrieben und nicht offiziell unterstützt! Verwendung auf eigene Gefahr."
+
 Es gibt bereits zahlreiche Projekte und Produkte, die die API von i-doit benutzen. Einige Clients und Libraries stellen wir an dieser Stelle vor:
 
-| Name              | Website                                                                                              | Programming language | License |
-| ----------------- | ---------------------------------------------------------------------------------------------------- | -------------------- | ------- |
-| Idoit.API.Client  | [https://github.com/OKT90/Idoit.API.Client](https://github.com/OKT90/Idoit.API.Client)               | C#                   | MIT     |
-| i-doit API client | [https://github.com/bheisig/i-doit-api-client-php](https://github.com/bheisig/i-doit-api-client-php) | PHP                  | AGPLv3  |
-| i-doit CLI        | [https://github.com/bheisig/i-doit-cli](https://github.com/bheisig/i-doit-cli)                       | PHP                  | AGPLv3  |
-| i-doit-go-api     | [https://github.com/cseeger-epages/i-doit-go-api](https://github.com/cseeger-epages/i-doit-go-api)   | Go                   | GPLv3   |
-| i-doit-python     | <https://github.com/ScaleUp-Technologies/i-doit-python>                                              | Python               | MIT     |
-| ansible-i-doit    | <https://github.com/ScaleUp-Technologies/ansible-i-doit>                                             | Python               | MIT     |
-| i-doit_API        | <https://github.com/mvorl/i-doit_API>                                                                | Python               | AGPLv3  |
-| i-doit-js         | <https://github.com/Hildebrand-S/i-doit-js>                                                          | JavaScript           | MIT     |
+| Name              | Website                                                  | Programming language | License |
+| ----------------- | -------------------------------------------------------- | -------------------- | ------- |
+| Idoit.API.Client  | <https://github.com/OKT90/Idoit.API.Client>              | C#                   | MIT     |
+| i-doit API client | <https://github.com/bheisig/i-doit-api-client-php>       | PHP                  | AGPLv3  |
+| i-doit CLI        | <https://github.com/bheisig/i-doit-cli>                  | PHP                  | AGPLv3  |
+| i-doit-go-api     | <https://github.com/cseeger-epages/i-doit-go-api>        | Go                   | GPLv3   |
+| i-doit-python     | <https://github.com/ScaleUp-Technologies/i-doit-python>  | Python               | MIT     |
+| ansible-i-doit    | <https://github.com/ScaleUp-Technologies/ansible-i-doit> | Python               | MIT     |
+| i-doit_API        | <https://github.com/mvorl/i-doit_API>                    | Python               | AGPLv3  |
+| i-doit-js         | <https://github.com/Hildebrand-S/i-doit-js>              | JavaScript           | MIT     |
 
 !!! info "Feedback"
     Sollte ein Client oder eine Library in diesem Artikel noch nicht aufgeführt sein, freuen wir uns über eine kurze Nachricht an [feedback@i-doit.com](mailto:feedback@i-doit.com).
