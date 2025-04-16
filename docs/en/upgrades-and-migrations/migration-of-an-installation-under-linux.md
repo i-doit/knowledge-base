@@ -29,7 +29,7 @@ First of all, it is necessary to prepare the new systems as far as possible by o
 1. The system requirements correspond to the version used, see the [Compatibility matrix](../installation/system-requirements.md#compatibility-matrix).
 2. The [system settings](../installation/manual-installation/system-settings.md) have been configured on the new operating system.
 
-## Closing Down the Old System
+## Closing down the old system
 
 The old system should not be used productively during the migration process anymore:
 
@@ -43,7 +43,7 @@ The old system should not be used productively during the migration process anym
     sudo systemctl stop apache2
     ```
 
-## Move old system
+## On the old system
 
 <div class="steps" markdown>
 
@@ -51,18 +51,19 @@ The old system should not be used productively during the migration process anym
 
     === "ZIP"
 
-    ```shell
-    cd /var/www/html
-    zip -rq /tmp/i-doit-migration.zip .
-    ```
+        ```shell
+        cd /var/www/html
+        zip -rq /tmp/i-doit-migration.zip .
+        ```
 
-    === "TAR"
-    <!-- cSpell:disable -->
-    ```shell
-    cd /var/www/html
-    tar -czvf /tmp/i-doit-migration.tar.gz .
-    ```
-    <!-- cSpell:enable -->
+    === "or TAR"
+
+        <!-- cSpell:disable -->
+        ```shell
+        cd /var/www/html
+        tar -czvf /tmp/i-doit-migration.tar.gz .
+        ```
+        <!-- cSpell:enable -->
 
 2. Dump the databases into a file and pack them with gz:
 
@@ -76,19 +77,19 @@ The old system should not be used productively during the migration process anym
 
     === "ZIP"
 
-    <!-- cSpell:disable -->
-    ```shell
-    scp /tmp/i-doit-migration.zip user@newsystem:/tmp/
-    scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
-    ```
+        <!-- cSpell:disable -->
+        ```shell
+        scp /tmp/i-doit-migration.zip user@newsystem:/tmp/
+        scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
+        ```
 
-    === "TAR"
+    === "or TAR"
 
-    ```shell
-    scp /tmp/i-doit-migration.tar.gz user@newsystem:/tmp/
-    scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
-    ```
-    <!-- cSpell:enable -->
+        ```shell
+        scp /tmp/i-doit-migration.tar.gz user@newsystem:/tmp/
+        scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
+        ```
+        <!-- cSpell:enable -->
 
 </div>
 
@@ -100,19 +101,19 @@ The old system should not be used productively during the migration process anym
 
     === "ZIP"
 
-    ```shell
-    cd /var/www/html
-    unzip /tmp/i-doit-migration.zip
-    ```
+        ```shell
+        cd /var/www/html
+        unzip /tmp/i-doit-migration.zip
+        ```
 
-    === "TAR"
+    === "or TAR"
 
-    <!-- cSpell:disable -->
-    ```shell
-    cd /var/www/html
-    tar -xzvf /tmp/i-doit-migration.tar.gz
-    ```
-    <!-- cSpell:enable -->
+        <!-- cSpell:disable -->
+        ```shell
+        cd /var/www/html
+        tar -xzvf /tmp/i-doit-migration.tar.gz
+        ```
+        <!-- cSpell:enable -->
 
 2. Import database:
 

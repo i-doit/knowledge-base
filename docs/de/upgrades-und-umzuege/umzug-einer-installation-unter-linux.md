@@ -43,7 +43,7 @@ Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwende
     sudo systemctl stop apache2
     ```
 
-## Umzug altes System
+## Auf dem alten System
 
 <div class="steps" markdown>
 
@@ -51,18 +51,19 @@ Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwende
 
     === "ZIP"
 
-    ```shell
-    cd /var/www/html
-    zip -rq /tmp/i-doit-migration.zip .
-    ```
+        ```shell
+        cd /var/www/html
+        zip -rq /tmp/i-doit-migration.zip .
+        ```
 
-    === "TAR"
-    <!-- cSpell:disable -->
-    ```shell
-    cd /var/www/html
-    tar -czvf /tmp/i-doit-migration.tar.gz .
-    ```
-    <!-- cSpell:enable -->
+    === "oder TAR"
+
+        <!-- cSpell:disable -->
+        ```shell
+        cd /var/www/html
+        tar -czvf /tmp/i-doit-migration.tar.gz .
+        ```
+        <!-- cSpell:enable -->
 
 2. Die Datenbanken in eine Datei speichern "dumpen" und mit gz packen:
 
@@ -76,19 +77,19 @@ Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwende
 
     === "ZIP"
 
-    <!-- cSpell:disable -->
-    ```shell
-    scp /tmp/i-doit-migration.zip user@newsystem:/tmp/
-    scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
-    ```
+        <!-- cSpell:disable -->
+        ```shell
+        scp /tmp/i-doit-migration.zip user@newsystem:/tmp/
+        scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
+        ```
 
-    === "TAR"
+    === "oder TAR"
 
-    ```shell
-    scp /tmp/i-doit-migration.tar.gz user@newsystem:/tmp/
-    scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
-    ```
-    <!-- cSpell:enable -->
+        ```shell
+        scp /tmp/i-doit-migration.tar.gz user@newsystem:/tmp/
+        scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
+        ```
+        <!-- cSpell:enable -->
 
 </div>
 
@@ -100,19 +101,19 @@ Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwende
 
     === "ZIP"
 
-    ```shell
-    cd /var/www/html
-    unzip /tmp/i-doit-migration.zip
-    ```
+        ```shell
+        cd /var/www/html
+        unzip /tmp/i-doit-migration.zip
+        ```
 
-    === "TAR"
+    === "oder TAR"
 
-    <!-- cSpell:disable -->
-    ```shell
-    cd /var/www/html
-    tar -xzvf /tmp/i-doit-migration.tar.gz
-    ```
-    <!-- cSpell:enable -->
+        <!-- cSpell:disable -->
+        ```shell
+        cd /var/www/html
+        tar -xzvf /tmp/i-doit-migration.tar.gz
+        ```
+        <!-- cSpell:enable -->
 
 2. Datenbank importieren:
 
