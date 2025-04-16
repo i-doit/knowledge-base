@@ -109,12 +109,12 @@ Deshalb stehen die einzelnen Arbeitsplätze in der CSV Datei auch an erster Stel
 
 Für den Import begeben wir uns wieder in den CSV Import Bereich. Die Einstellungen im oberen Bereich bleiben auf den Standard Einstellungen und wir klicken auf Mapping vorbereiten.
 
-[![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/1-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/1-csva.png)
+[![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/1-csvap.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/1-csvap.png)
 
 Jetzt können wir im unteren Bereich die Import Konfiguration wie folgt vornehmen, und danach den Import Vorgang starten:
 
-[![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/2-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/2-csva.png)
+[![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/2-csvap.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/2-csvap.png)
 
 Sollten wir alles richtig gemacht haben, erscheinen nun die einzelnen Arbeitsplätze, sind einem Standort zugeordnet und unter jedem Arbeitsplatz finden wir einen zugeordneten Client, Bildschirm und Drucker.
 
-[![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/3-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/3-csva.png)
+[![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/3-csvap.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/3-csvap.png)
