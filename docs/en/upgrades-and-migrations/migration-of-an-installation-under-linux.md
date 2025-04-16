@@ -29,7 +29,7 @@ First of all, it is necessary to prepare the new systems as far as possible by o
 1. The system requirements correspond to the version used, see the [Compatibility matrix](../installation/system-requirements.md#compatibility-matrix).
 2. The [system settings](../installation/manual-installation/system-settings.md) have been configured on the new operating system.
 
-## Closing Down the Old System
+## Closing down the old system
 
 The old system should not be used productively during the migration process anymore:
 
@@ -43,7 +43,7 @@ The old system should not be used productively during the migration process anym
     sudo systemctl stop apache2
     ```
 
-## Move old system
+## On the old system
 
 <div class="steps" markdown>
 
@@ -56,7 +56,7 @@ The old system should not be used productively during the migration process anym
         zip -rq /tmp/i-doit-migration.zip .
         ```
 
-    === "TAR"
+    === "or TAR"
 
         <!-- cSpell:disable -->
         ```shell
@@ -83,7 +83,7 @@ The old system should not be used productively during the migration process anym
         scp /tmp/idoit-backup.sql.gz user@newsystem:/tmp/
         ```
 
-    === "TAR"
+    === "or TAR"
 
         ```shell
         scp /tmp/i-doit-migration.tar.gz user@newsystem:/tmp/
@@ -106,7 +106,7 @@ The old system should not be used productively during the migration process anym
         unzip /tmp/i-doit-migration.zip
         ```
 
-    === "TAR"
+    === "or TAR"
 
         <!-- cSpell:disable -->
         ```shell
