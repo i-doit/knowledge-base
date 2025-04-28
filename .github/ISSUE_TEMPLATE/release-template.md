@@ -1,79 +1,81 @@
 ---
-name: i-doit release
-description: Template for releases.
-title: "i-doit release vXX"
+name: i-doit Release Preparation
+about: Checklist for preparing a new i-doit release in the Knowledge Base
+title: "[RELEASE] i-doit vXX"
+labels: update, documentation
 assignees: ''
-
 ---
 
-### Check new features/fixes to document:
+# 📦 Release Preparation Checklist
 
-- [ ] New ISSUE
+## 1. Review New Features and Fixes
 
-## System requirements:
+- [ ] Create separate issue(s) for documenting new features or important fixes.
 
-- [ ] New ISSUE
+## 2. System Requirements Update
 
-### GER
+- [ ] Create separate issue(s) if system requirements need updating.
 
-- [ ] update Current version
-- [ ] update LAMP / WAMP Stack
-- [ ] update recommended usage
-- [ ] update Compatibility matrix
+### German (GER)
 
-### EN
+- [ ] Update current version reference
+- [ ] Update LAMP/WAMP stack requirements
+- [ ] Update recommended system usage
+- [ ] Update compatibility matrix
 
-- [ ] update Current version
-- [ ] update LAMP / WAMP Stack
-- [ ] update recommended usage
-- [ ] update Compatibility matrix
+### English (EN)
 
-##  Update release notes and changelog:
+- [ ] Update current version reference
+- [ ] Update LAMP/WAMP stack requirements
+- [ ] Update recommended system usage
+- [ ] Update compatibility matrix
 
-- [ ] New ISSUE
+## 3. Update Release Notes and Changelog
 
-### GER
+- [ ] Create separate issue(s) if needed.
 
-- [ ] create docs/de/versionshistorie/changelogs/changelog-XX.md
-- [ ] update docs/de/versionshistorie/changelogs/index.md
-- [ ] create docs/de/versionshistorie/release-notes/release-notes-XX.md
-- [ ] update docs/de/versionshistorie/release-notes/index.md
-- [ ] update docs/de/versionshistorie/index.md
-- [ ] update config/de/mkdocs.yml
+### German (GER)
 
-### EN
+- [ ] Create `docs/de/versionshistorie/changelogs/changelog-XX.md`
+- [ ] Update `docs/de/versionshistorie/changelogs/index.md`
+- [ ] Create `docs/de/versionshistorie/release-notes/release-notes-XX.md`
+- [ ] Update `docs/de/versionshistorie/release-notes/index.md`
+- [ ] Update `docs/de/versionshistorie/index.md`
+- [ ] Update `config/de/mkdocs.yml`
 
-- [ ] create docs/en/version-history/changelogs/changelog-XX.md
-- [ ] update docs/en/version-history/changelogs/index.md
-- [ ] create docs/en/version-history/release-notes/release-notes-XX.md
-- [ ] update docs/en/version-history/release-notes/index.md
-- [ ] update docs/en/version-history/index.md
-- [ ] update config/en/mkdocs.yml
+### English (EN)
 
-## Archive hotfix page and create new:
+- [ ] Create `docs/en/version-history/changelogs/changelog-XX.md`
+- [ ] Update `docs/en/version-history/changelogs/index.md`
+- [ ] Create `docs/en/version-history/release-notes/release-notes-XX.md`
+- [ ] Update `docs/en/version-history/release-notes/index.md`
+- [ ] Update `docs/en/version-history/index.md`
+- [ ] Update `config/en/mkdocs.yml`
 
-- [ ] New ISSUE
+## 4. Archive and Create New Hotfix Pages
 
-### GER
+- [ ] Create separate issue(s) if needed.
 
-- [ ] create docs/de/administration/hotfixes/hotfix-archive/vXX.md
-      - copy & paste docs/de/administration/hotfixes/index.md into new file
-      - add additional ../ to every link
-- [ ] update docs/de/administration/hotfixes/index.md
-      - remove old hotfixes (Add-on hotfixes only get removed if new version is released) 
-- [ ] update de/administration/hotfixes/hotfix-archiv/index.html
-- [ ] update config/de/mkdocs.yml
+### German (GER)
 
-### EN
+- [ ] Create `docs/de/administration/hotfixes/hotfix-archive/vXX.md`
+  - Copy content from `docs/de/administration/hotfixes/index.md`
+  - Adjust links (add `../` where necessary)
+- [ ] Update `docs/de/administration/hotfixes/index.md`
+  - Remove outdated hotfix entries (only remove add-on hotfixes if the add-on is released separately)
+- [ ] Update `docs/de/administration/hotfixes/hotfix-archiv/index.html`
+- [ ] Update `config/de/mkdocs.yml`
 
-- [ ] create docs/en/system-administration/hotfixes/hotfix-archive/v34.md
-      - copy & paste docs/en/system-administration/hotfixes/index.md into new file
-      - add additional ../ to every link
-- [ ] update docs/en/system-administration/hotfixes/index.md
-      - remove old hotfixes (Add-on hotfixes only get removed if new version is released) 
-- [ ] update en/system-administration/hotfixes/hotfix-archive/index.html
-- [ ] update config/de/mkdocs.yml
+### English (EN)
 
-## Add changelogs from updated Add-ons:
+- [ ] Create `docs/en/system-administration/hotfixes/hotfix-archive/vXX.md`
+  - Copy content from `docs/en/system-administration/hotfixes/index.md`
+  - Adjust links (add `../` where necessary)
+- [ ] Update `docs/en/system-administration/hotfixes/index.md`
+  - Remove outdated hotfix entries (only remove add-on hotfixes if the add-on is released separately)
+- [ ] Update `docs/en/system-administration/hotfixes/hotfix-archive/index.html`
+- [ ] Update `config/en/mkdocs.yml`
 
-- [ ] New ISSUE per Add-on
+## 5. Add Changelogs for Updated Add-ons
+
+- [ ] Create separate issue(s) for each updated add-on.
