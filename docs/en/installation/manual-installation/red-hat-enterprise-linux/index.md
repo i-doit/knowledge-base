@@ -1,6 +1,6 @@
 ---
-title: Red Hat Enterprise Linux 9.4
-description: i-doit installation auf RHEL 9.4
+title: Red Hat Enterprise Linux 9.5
+description: i-doit installation auf RHEL 9.5
 icon: material/redhat
 status:
 lang: en
