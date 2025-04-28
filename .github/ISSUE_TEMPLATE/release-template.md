@@ -10,11 +10,11 @@ assignees: ''
 
 ## 1. Review New Features and Fixes
 
-- [ ] Create separate issue(s) for documenting new features or important fixes.
+- [ ] Create separate sub issue(s) for documenting new features or important fixes.
 
 ## 2. System Requirements Update
 
-- [ ] Create separate issue(s) if system requirements need updating.
+- [ ] Create separate sub issue(s) if system requirements need updating.
 
 ### German (GER)
 
@@ -32,7 +32,7 @@ assignees: ''
 
 ## 3. Update Release Notes and Changelog
 
-- [ ] Create separate issue(s) if needed.
+- [ ] Create separate sub issue(s) if needed.
 
 ### German (GER)
 
@@ -54,7 +54,7 @@ assignees: ''
 
 ## 4. Archive and Create New Hotfix Pages
 
-- [ ] Create separate issue(s) if needed.
+- [ ] Create separate sub issue(s) if needed.
 
 ### German (GER)
 
@@ -78,4 +78,4 @@ assignees: ''
 
 ## 5. Add Changelogs for Updated Add-ons
 
-- [ ] Create separate issue(s) for each updated add-on.
+- [ ] Create separate sub issue(s) for each updated add-on.
