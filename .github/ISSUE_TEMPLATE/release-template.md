@@ -1,7 +1,7 @@
 ---
-name: i-doit release
-description: Template for releases.
-title: "i-doit release vXX"
+name: "i-doit release"
+about: "Template for releases."
+title: "[RELEASE] i-doit vXX"
 assignees: ''
 
 ---
