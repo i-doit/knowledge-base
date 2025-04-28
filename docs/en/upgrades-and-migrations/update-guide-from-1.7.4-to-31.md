@@ -1,5 +1,5 @@
 ---
-title: Update Guide from i-doit 1.7.4 to 31
+title: Update Guide from i-doit 1.7.4 to 34
 description: i-doit update guide
 icon: fontawesome/brands/linux
 status:
@@ -841,19 +841,19 @@ Restart MariaDB afterwards
 sudo systemctl start mysql.service
 ```
 
-## Updating 29 to 31
+## Updating 29 to 34
 
 First, you need to prepare the update via CLI by open the i-doit Folder at `/var/www/html/` and unzip the idoit update package with
 
 ```sh
-sudo -u www-data unzip idoit-31-update.zip
+sudo -u www-data unzip idoit-34-update.zip
 ```
 
 If you are asked, overwrite everything by typing **A**.
 
-In the Web Interface Updater check if the Update to Version 31 is displayed and selected, then do the update.
+In the Web Interface Updater check if the Update to Version 34 is displayed and selected, then do the update.
 
-[![Updating 29 to 31](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)
+[![Updating 29 to 34](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)
 
 !!! success "**Check the update Logs**"
     Please take the time to Scroll down the logs and check if a error occurred
