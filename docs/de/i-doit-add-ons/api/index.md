@@ -28,7 +28,7 @@ API-Aufrufe können asynchron erfolgen, ohne den Zusammenhang zwischen Requests 
 
 ## Download
 
-Die API wird für die pro-Variante als kostenloses [Add-on](../index.md) im [Kundenportal](../../administration/kundenportal.md) zum Download angeboten. Benutzern der open-Variante steht es ebenfalls kostenlos über die Website [i-doit.org](https://i-doit.org/) zur Verfügung. Die [Installation](../index.md) folgt demselben Prinzip der anderen Add-ons für i-doit.
+Die API wird für die pro-Variante als kostenloses [Add-on](../index.md) im [Kundenportal](../../administration/kundenportal.md) zum Download angeboten.
 
 ## Konfiguration
 
