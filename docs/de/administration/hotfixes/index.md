@@ -70,7 +70,7 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ### OPENldap error when ldap-sync is triggered via console (ID-11758)
 
-[i-doit_34_hotfix_ID-11758_c026dfa.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11758_c026dfa.zip){ .md-button .md-button--primary }
+[i-doit_34_hotfix_ID-11758_41dee07.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11758_41dee07.zip){ .md-button .md-button--primary }
 
 ### Do not use constants from PHP module pcntl (ID-11770)
 
