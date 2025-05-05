@@ -28,8 +28,7 @@ API queries can take place in an asynchronous way without losing the relation be
 
 ## Download
 
-In the [customer portal](../../system-administration/customer-portal.md) you can download the API for the pro version as [add-on](./../index.md) for free. Users of the open version can also download it for free via [i-doit.org](https://i-doit.org/). The [installation](./../index.md) is in line with the same principles of other i-doit add-ons.
-
+In the [customer portal](../../system-administration/customer-portal.md) you can download the API for the pro version as [add-on](./../index.md) for free.
 ## Configuration
 
 The API is configured via the [Web GUI](../../basics/web-gui.md) of i-doit and can be found at **Administration → Add-ons → JSON-RPC API**.
