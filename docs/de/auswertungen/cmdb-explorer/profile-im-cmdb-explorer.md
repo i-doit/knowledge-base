@@ -1,3 +1,11 @@
+---
+title: Profile im CMDB-Explorer
+description:
+icon:
+status:
+lang: en
+---
+
 # Profile im CMDB-Explorer
 
 Um die Ansicht individuell zu gestalten kannst du im [CMDB-Explorer](../../auswertungen/cmdb-explorer/index.md) Profile erzeugen, die dir die bestmögliche Übersicht über die Abhängigkeiten in deiner [IT-Dokumentation](../../glossar.md#it-dokumentation) bietet.
@@ -6,12 +14,9 @@ Um die Ansicht individuell zu gestalten kannst du im [CMDB-Explorer](../../auswe
 
 i-doit liefert bereits vorkonfigurierte Profile mit. Diese können nachträglich nicht direkt bearbeitet, aber kopiert und anschließend bearbeitet werden.
 
-*   **Standard Profil**:<br>
-    Es werden alle Beziehungen visualisiert. Es findet keine Filterung statt. Zu jedem Objekt werden verschiedene Informationen dargestellt.
-*   **Mikro Profil**:<br>
-    Die Darstellung wird auf die Objekttyp-Icons reduziert.
-*   **Netz Profil**:<br>
-    Dieses Profil dient für die Graphen-Ansicht, steht demnach nicht für die Baum-Ansicht zur Verfügung.
+-   **Standard Profil**: Es werden alle Beziehungen visualisiert. Es findet keine Filterung statt. Zu jedem Objekt werden verschiedene Informationen dargestellt.
+-   **Mikro Profil**: Die Darstellung wird auf die Objekttyp-Icons reduziert.
+-   **Netz Profil**: Dieses Profil dient für die Graphen-Ansicht, steht demnach nicht für die Baum-Ansicht zur Verfügung.
 
 ## Erstellen und Bearbeiten eines Profils
 

@@ -1,12 +1,17 @@
-**Contents**
+---
+title: Profiles in the CMDB-Explorer
+description:
+icon:
+status:
+lang: en
+---
 
-*   1 [Preconfigured Profiles](./profiles-in-the-cmdb-explorer.md)
-*   2 [Creating and Editing a Profile](./profiles-in-the-cmdb-explorer.md)
+# Profiles in the CMDB-Explorer
 
-In order to customize the view, profiles can be created in the [CMDB explorer](./index.md), which offer the best possible overview of the dependencies in your [IT documentation](../../glossary.md).
+In order to customize the view, profiles can be created in the [CMDB-Explorer](./index.md), which offer the best possible overview of the dependencies in your [IT documentation](../../glossary.md).
 
-Preconfigured Profiles
-----------------------
+## Preconfigured profiles
+
 
 _i-doit_ provides preconfigured profiles. These cannot directly be edited, but copies can be made and edited.
 
@@ -14,10 +19,9 @@ _i-doit_ provides preconfigured profiles. These cannot directly be edited, but c
 *   **Micro profile**: The representation is reduced to object type icons.
 *   **Network profil**e: This profile is used for the diagram view and is therefore not available for the tree view.
 
-Creating and Editing a Profile
-------------------------------
+## Creating and Editing a Profile
 
-Existing profiles can be edited or copied and new profiles can be added via the pencil icon next to the selection field of the active profile in the [toolbar](./index.md). The button next to each profile lets you set that profile as default, so its settings are immediately used when opening an [object](../../glossary.md) in the CMDB explorer. A green dot indicates that the profile is the activated default profile.
+Existing profiles can be edited or copied and new profiles can be added via the pencil icon next to the selection field of the active profile in the [toolbar](./index.md). The button next to each profile lets you set that profile as default, so its settings are immediately used when opening an [object](../../glossary.md) in the CMDB-Explorer. A green dot indicates that the profile is the activated default profile.
 
 General settings are set in the upper area of the edit view. This view is opened via a click on the pencil icon in the line of the desired profile. Next to the title of the profile you can determine whether the representation of the path to the root object will be activated, whether the tooltip is to be displayed and what orientation will be used. A preview of the configuration is shown on the right side of the general settings.
 
