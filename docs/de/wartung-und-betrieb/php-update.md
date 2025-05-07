@@ -113,7 +113,6 @@ Sichern Sie mindestens:
 *   PHP-Konfiguration: `/etc/php/` (falls vorhanden)
 *   Ihre Webseiten-Daten (z.B. `/var/www/html/`)
 
-
 ## PHP aktualisieren
 
 :material-numeric-1-circle-outline: Verfügbare PHP-Version in den offiziellen Repositories prüfen

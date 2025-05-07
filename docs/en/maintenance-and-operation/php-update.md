@@ -264,7 +264,6 @@ sudo systemctl restart phpX.Y-fpm # Replace X.Y with the new PHP version
 sudo systemctl restart apache2
 ```
 
-
 ## Migrate and check configuration
 
 :material-numeric-1-circle-outline: Migration of the php.ini settings
