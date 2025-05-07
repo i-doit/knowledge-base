@@ -268,12 +268,13 @@ nav:
   - Maintenance and operation:
       - maintenance-and-operation/index.md
       - Licensing: maintenance-and-operation/licensing.md
+      - Cronjobs setup: maintenance-and-operation/cronjob-setup.md
       - Backup and recovery:
           - maintenance-and-operation/backup-and-recovery/index.md
           - Backup script for data and files: maintenance-and-operation/backup-and-recovery/backup-script-for-data-and-files.md
-      - Cronjobs setup: maintenance-and-operation/cronjob-setup.md
-      - Security and protection: maintenance-and-operation/security-and-protection.md
       - Update: maintenance-and-operation/update.md
+      - Security and protection: maintenance-and-operation/security-and-protection.md
+      - PHP update: maintenance-and-operation/php-update.md
   - Upgrades and migrations:
       - upgrades-and-migrations/index.md
       - Migration from Windows to Linux: upgrades-and-migrations/migration-from-windows-to-linux.md
