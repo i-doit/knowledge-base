@@ -493,7 +493,6 @@ nav:
                   - administration/verwaltung/add-ons/geraetetausch/index.md
                   - Konfiguration: administration/verwaltung/add-ons/geraetetausch/konfiguration.md
           - Zwei-Faktor-Authentisierung: administration/verwaltung/zwei-faktor-authentisierung.md
-          - Vertragsdaten: administration/verwaltung/vertragsdaten.md
       - Add-on & Subscription Center: administration/add-on-and-subscription-center.md
       - Admin Center: administration/admin-center.md
       - Kundenportal: administration/kundenportal.md
