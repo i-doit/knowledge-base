@@ -20,7 +20,6 @@ Zu erreichen ist die Verwaltung über das Zahnrad-Icon in deinem User Bereich, d
 -   [Import und Schnittstellen](import-und-schnittstellen/index.md)
 -   [Add-ons](add-ons/index.md)
 -   [Zwei-Faktor-Authentisierung](zwei-faktor-authentisierung.md)
--   [Download Center](download-center.md)
 -   [Vertragsdaten](vertragsdaten.md)
 
 [![Verwaltung Liste](../../assets/images/de/administration/verwaltung/verwaltung-2.png)](../../assets/images/de/administration/verwaltung/verwaltung-2.png){ align=right }
