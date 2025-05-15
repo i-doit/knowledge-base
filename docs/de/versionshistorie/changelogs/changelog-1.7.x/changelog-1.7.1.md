@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.7.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Neue Funktion] Api: Möglichkeit zum Archivieren eines Objektes (Parameter "status" in Methode cmdb.object.delete)<br>
 [Neue Funktion] Neue Felder "Freier-" und "Belegter Speicher" in Kategorie Laufwerk<br>
 [Neue Funktion] JDisc-Import: Berücksichtigung von freiem und benutzem Speicherplatz beim Import von Laufwerken<br>

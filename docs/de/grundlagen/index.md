@@ -19,4 +19,3 @@ Das [theoretische Wissen](../glossar.md) sitzt und i-doit ist [installiert](../i
 *   [Eindeutige Referenzierungen](eindeutige-referenzierungen.md)
 *   [Web GUI](web-gui.md)
 *   [Benutzerdefinierte Zähler](benutzerdefinierte-zaehler.md)
-*   [Attributsichtbarkeit](attributsichtbarkeit.md)

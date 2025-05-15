@@ -1,4 +1,5 @@
 # IP-Listen
+
 Eine zentrale Frage stellt sich dem Admin immer wieder: Welche IP-Adressen sind an welchen Host vergeben und welche sind noch frei? Die IP-Listen in i-doit helfen da weiter.
 
 Einen breiter aufgestellten Einblick in die Materie bietet der Anwendungsfall zum [IP Address Management (IPAM)](../anwendungsfaelle/ip-adress-management.md).
@@ -39,7 +40,7 @@ Eine weitere Tabelle auf der rechten Seite fasst wichtige Informationen des Netz
 *   Netzadresse
 *   Subnetzmaske
 *   Default Gateway
-*   Adressebereich
+*   Adressbereich
 *   Übergeordnetes Supernetze (Objekttyp **Supernet**)
 *   Zugeordnete VLANs (Objekttyp **Layer-2-Netz**)
 
@@ -49,8 +50,58 @@ Die Liste kann um weitere Objekte erweitert werden, ohne die Kategorie **Hostadr
 
 ## IP-Adressen überprüfen
 
-Die Kategorie **IP-Liste** bietet eine Möglichkeit zum Abgleich zwischen Soll- und Ist-Zustand: Um zu prüfen, ob die dokumentierten IP-Adressen und Hostnames tatsächlich vergeben sind, kann i-doit ICMP-Pakete ("Pings") versenden und einen NSLOOKUP starten. Dazu benötigt die i-doit Zugriff auf das Netz. Es gibt die Möglichkeit, einzelne Einträge oder alle Einträge nacheinander prüfen zu lassen. Unter **Verwaltung → Systemeinstellungen → Mandanteneinstellungen → Optionen für IP-Liste** lässt sich einstellen, welche Kommandozeilen-Tools verwendet werden. Diese muss der Benutzer/die Gruppe des Apache Webservers aufrufen dürfen.
+Die Kategorie **IP-Liste** bietet eine Möglichkeit zum Abgleich zwischen Soll- und Ist-Zustand: Um zu prüfen, ob die dokumentierten IP-Adressen und Hostnames tatsächlich vergeben sind, kann i-doit ICMP-Pakete ("Pings") versenden und einen NSLOOKUP starten. Dazu benötigt die i-doit Zugriff auf das Netz. Es gibt die Möglichkeit, einzelne Einträge oder alle Einträge nacheinander prüfen zu lassen. Unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Optionen für IP-Liste** lässt sich einstellen, welche Kommandozeilen-Tools verwendet werden. Diese muss der Benutzer/die Gruppe des Apache Webservers aufrufen dürfen.
 
 *   **Ping**: ICMP-Paket an IP-Adresse schicken
 *   **NSLOOKUP**: IP-Adresse zum Hostname bestimmen
 *   **Reverse NSLOOKUP**: Hostname zur IP-Adresse bestimmen
+
+## Nmap Installation
+
+### Windows
+
+Lade die neueste stable Version von Nmap auf <https://nmap.org/download.html> herunter und führe die Installation aus.
+
+Falls du die Datei aus irgendeinem Grund nicht direkt herunterladen kannst, kannst du die Kommandozeile verwenden.<br>
+Öffne die Eingabeaufforderung und benutze `bitsadmin`, um das Nmap-Zip-Archiv herunterzuladen
+
+```cmd
+bitsadmin /transfer nmapDownloadJob /download /priority normal https://nmap.org/dist/nmap-7.92-win32.zip C:\nmap-7.92-win32.zip
+```
+
+!!! attention "Aktuell ist die letzte Zip-Datei nicht die neueste stable Version."
+
+Sobald Nmap installiert ist, füge das Nmap-Verzeichnis zur Systemumgebungsvariablen PATH hinzu
+
+```cmd
+setx PATH "%PATH%;C:\nmap"
+```
+
+!!! warning "Stelle sicher, dass der Pfad dem Verzeichnis entspricht, in dem du Nmap extrahiert hast"
+
+### Unix
+
+#### Debian or Ubuntu
+
+```sh
+sudo apt update
+sudo apt install nmap
+```
+
+#### Red Hat Enterprise Linux (RHEL)
+
+```sh
+sudo dnf install nmap
+```
+
+or
+
+```sh
+sudo yum install nmap
+```
+
+## IP-Listen Ping
+
+Sobald Nmap installiert ist, steht die Ping Funktion zur Verfügung.
+
+[![Ping Button in IP list](../assets/images/de/auswertungen/ip-listen/ip-liste-2.png)](../assets/images/de/auswertungen/ip-listen/ip-liste-2.png)

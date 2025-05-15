@@ -1,15 +1,20 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.12.1
-
-[Bug][CMDB] Unauthenticated SQL-Injection in i-doit during login  
-[Bug][CMDB] Via the URL parameter "objectGroupId" it was possible to inject SQL Injections.  
-[Bug][Code (internal)] Arbitrary File Download Security Vulnerability  
-[Bug][CSV Import] Import object assignments via CSV  
-[Bug][Custom categories] Editing of custom categories overwrites existing categories  
-[Bug][Search] Opening an object via location view with active result list from search reopens search instead of the chosen object  
-[Bug][List editing] Edit values in the Contract category in list editing  
-[Bug][List editing] Edit attributes in list editing  
-[Bug][Admincenter] Open the Admin Center with i-doit Cache  
-[Bug][Console] Exit codes for the console.php  
-[Bug][Categories] Create a report with service assignment as condition  
-[Bug][Authorization system] Right to create a new report can be avoided when using a second tenant  
-[Bug][Report-Manager] Deploy connected to attribute from all parent categories  
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
+[Bug][CMDB] Unauthenticated SQL-Injection in i-doit während Login<br>
+[Bug][CMDB] Über den URL Parameter "objectGroupId" war es möglich SQL Injections einzuschleusen.<br>
+[Bug][Code] Arbitrary File Download Security Vulnerability<br>
+[Bug][CSV] Importiere Objektzuweisungen per CSV<br>
+[Bug][Benutzerdefinierte Kategorien] Benutzerdefinierte Kategorien bearbeiten überschreibt vorhandene Kategorien<br>
+[Bug][Suche] Aufruf eines Objekts über die Standortsicht bei aufgerufener Ergebnisliste der Suche führt dazu, dass die Suche statt des Objekts geöffnet wird<br>
+[Bug][Listeneditierung] Editiere Werte in der Kategorie Vertrag in der Listeneditierung<br>
+[Bug][Listeneditierung] Editiere Werte in der Listeneditierung<br>
+[Bug][Admincenter] Rufe das Admin-Center mit i-doit Cache auf<br>
+[Bug][Console] Exitcodes für die console.php<br>
+[Bug][Kategorien] Erstelle einen Report mit Servicezuweisung als Bedingung<br>
+[Bug][Rechtesystem] Recht zur Erstellung eines Reports kann mit zweitem Mandanten umgangen werden<br>
+[Bug][Report-Manager] Attribut "Verbunden mit" aus allen übergeordneten Kategorien bereitstellen<br>

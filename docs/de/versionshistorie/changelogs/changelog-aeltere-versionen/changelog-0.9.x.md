@@ -1,27 +1,32 @@
+---
+search:
+  exclude: true
+---
 # Changelog 0.9.X
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 0.9.9-9<br>
 Erweiterungen:<br>
 
-- Listeneditierung für bestehende Kategorieeinträge<br>
-- Massenänderungen für Objekte<br>
-- Benutzerdefinierte Pflichtfelder für Kategorien (Verwaltung/Module/CMDB/Kategorie-Validierung)<br>
-- Benutzerdefinierte Objektlisten<br>
- - mit schnellerem Seitenwechsel<br>
- - und einstellbaren Spalten (Verwaltung/Module/CMDB/Objekt-Listen)<br>
-- Der Query Builder im Report Modul wurde komplett überarbeitet<br>
-- Neues System zur E-Mail Benachrichtigung mit grafischer Konfiguration<br>
- - Neben einem neuen Design stehen neue Felder und Bedingungen zur Auswahl<br>
-- Neue Platzhalter für Objektnamen im Template System (%SYSID%)<br>
-- Wartungsverträge werden zu allgemeinen Verträgen<br>
- - und erhalten überarbeitete Logik<br>
- - Neue Systemrollen für Verträge<br>
-- schreibende sowie lesende JSON-RPC Schnittstelle für Logbuch Einträge aus externen Quellen<br>
-- Spracheinstellungen werden nun pro User im System gespeichert<br>
-- Neugestaltetes Ticket System Modul<br>
- - für eine verbesserte Live-Anbindung an Request Tracker<br>
- - und zur Vorbereitung für eine OTRS Integration<br>
-- Das Verfahren zur Generierung von SYS-IDs ist nun über die Objekttypkonfiguration steuerbar<br>
+-   Listeneditierung für bestehende Kategorieeinträge<br>
+-   Massenänderungen für Objekte<br>
+-   Benutzerdefinierte Pflichtfelder für Kategorien (Verwaltung/Module/CMDB/Kategorie-Validierung)<br>
+-   Benutzerdefinierte Objektlisten<br>
+-   mit schnellerem Seitenwechsel<br>
+-   und einstellbaren Spalten (Verwaltung/Module/CMDB/Objekt-Listen)<br>
+-   Der Query Builder im Report Modul wurde komplett überarbeitet<br>
+-   Neues System zur E-Mail Benachrichtigung mit grafischer Konfiguration<br>
+-   Neben einem neuen Design stehen neue Felder und Bedingungen zur Auswahl<br>
+-   Neue Platzhalter für Objektnamen im Template System (%SYSID%)<br>
+-   Wartungsverträge werden zu allgemeinen Verträgen<br>
+-   und erhalten überarbeitete Logik<br>
+-   Neue Systemrollen für Verträge<br>
+-   schreibende sowie lesende JSON-RPC Schnittstelle für Logbuch Einträge aus externen Quellen<br>
+-   Spracheinstellungen werden nun pro User im System gespeichert<br>
+-   Neugestaltetes Ticket System Modul<br>
+-   für eine verbesserte Live-Anbindung an Request Tracker<br>
+-   und zur Vorbereitung für eine OTRS Integration<br>
+-   Das Verfahren zur Generierung von SYS-IDs ist nun über die Objekttypkonfiguration steuerbar<br>
 
 Fixes:
 
@@ -59,44 +64,44 @@ Fixes:
 0.9.9-8<br>
 Extensions:
 
-- Enhanced network documentation<br>
-- Validation and maintenance of IPv4 and IPv6 addresses<br>
-- Validation of layer 3 networks<br>
-- Various accessibility help<br>
-- IPv4 address management<br>
-- IPv6 address management<br>
-- VLANs (layer 2 networks)<br>
-- Layer 2 and layer 3 reports<br>
-- Category "routing"<br>
-- Category "switch"<br>
-- Category "net" -> port overview<br>
-- Revised interface to Request Tracker (module: TTS)<br>
-- Incl. live queries<br>
-- New object type "workstation"<br>
-- Category "assigned logical units"<br>
-- Category "assigned workstation"<br>
-- Creation of logical structures/locations (tree view)<br>
-- Renaming "logical interfaces" to "logical ports"<br>
-- Link from layer 3 net into logical ports<br>
-- Note: By changing the functionality of the category "logical interfaces"<br>
+-   Enhanced network documentation<br>
+-   Validation and maintenance of IPv4 and IPv6 addresses<br>
+-   Validation of layer 3 networks<br>
+-   Various accessibility help<br>
+-   IPv4 address management<br>
+-   IPv6 address management<br>
+-   VLANs (layer 2 networks)<br>
+-   Layer 2 and layer 3 reports<br>
+-   Category "routing"<br>
+-   Category "switch"<br>
+-   Category "net" -> port overview<br>
+-   Revised interface to Request Tracker (module: TTS)<br>
+-   Incl. live queries<br>
+-   New object type "workstation"<br>
+-   Category "assigned logical units"<br>
+-   Category "assigned workstation"<br>
+-   Creation of logical structures/locations (tree view)<br>
+-   Renaming "logical interfaces" to "logical ports"<br>
+-   Link from layer 3 net into logical ports<br>
+-   Note: By changing the functionality of the category "logical interfaces"<br>
 this version only links layer 3 networks. Therefore all layer 2 network<br>
 assignments are lost.<br>
-- Coupling of manufacturers to model in the category "model"<br>
-- Network mask in "hostaddresses" and layer 3 network and optionally in bit<br>
+-   Coupling of manufacturers to model in the category "model"<br>
+-   Network mask in "hostaddresses" and layer 3 network and optionally in bit<br>
 notation<br>
-- In the category "net" there must be a field of "reverse DNS".<br>
-- New object type: "layer 2 networks"<br>
-- Category "port": new field "layer 2 network"<br>
-- Category "port": new field "port mode"<br>
-- New category: "layer 2 net"<br>
-- New category: assigned objects<br>
-- Category "hostaddresses": new field "assigned port"<br>
-- Layer 3 net address and host extensions<br>
-- New category: "ip addresses"<br>
-- New category: "port overview"<br>
-- New category: "audit"<br>
-- Extension of category "switch"<br>
-- Extension of category "routers"<br>
+-   In the category "net" there must be a field of "reverse DNS".<br>
+-   New object type: "layer 2 networks"<br>
+-   Category "port": new field "layer 2 network"<br>
+-   Category "port": new field "port mode"<br>
+-   New category: "layer 2 net"<br>
+-   New category: assigned objects<br>
+-   Category "hostaddresses": new field "assigned port"<br>
+-   Layer 3 net address and host extensions<br>
+-   New category: "ip addresses"<br>
+-   New category: "port overview"<br>
+-   New category: "audit"<br>
+-   Extension of category "switch"<br>
+-   Extension of category "routers"<br>
 
 Fixes:
 
@@ -138,282 +143,293 @@ Fixes:
 [Bugfix] - After using the CMDB explorer, there is no scroll bar in i-doit anymore.<br>
 
 0.9.9-7<br>
-- Überarbeitung der Druckansichten<br>
-- Abrundung Im- und Export, Duplizierung und Template-System<br>
- - Komplettierung fehlender Kategorien<br>
- - Verbesserung des CSV Imports<br>
- - Export von benutzerdefinierten Kategorien<br>
- - verbesserter Umgang mit Referenzen beim Import/Templating/Duplizieren<br>
-- Verbesserung der CMDB Browser<br>
- - Neuer Objektbrowser für Verknüpfung von CMDB Objekten<br>
- - Neuer Anschlussbrowser für die Verbindung von Geräten (Netzwerk, Storage, ..)<br>
-- Neuer Objekttyp SIM-Karte<br>
- - Neue Kategorie SIM-Karte<br>
-- Neuer Objekttyp Kryprokarte<br>
- - Neue Kategorie Kryptokarte<br>
- - Neue Kategorie TSI-Service<br>
-- Verbindung der Mobilkarten mit Mobiltelefonen<br>
-- Abschaffung des Menüpunkts Module; Ersetzt durch: Extras<br>
-- Verlagerung der Modulkonfiguration in "Verwaltung"<br>
-- Verbesserung der Änderungshistorie im Logbuch<br>
-- Fehlerbehebungen<br>
+
+-   Überarbeitung der Druckansichten<br>
+-   Abrundung Im- und Export, Duplizierung und Template-System<br>
+-   Komplettierung fehlender Kategorien<br>
+-   Verbesserung des CSV Imports<br>
+-   Export von benutzerdefinierten Kategorien<br>
+-   verbesserter Umgang mit Referenzen beim Import/Templating/Duplizieren<br>
+-   Verbesserung der CMDB Browser<br>
+-   Neuer Objektbrowser für Verknüpfung von CMDB Objekten<br>
+-   Neuer Anschlussbrowser für die Verbindung von Geräten (Netzwerk, Storage, ..)<br>
+-   Neuer Objekttyp SIM-Karte<br>
+-   Neue Kategorie SIM-Karte<br>
+-   Neuer Objekttyp Kryprokarte<br>
+-   Neue Kategorie Kryptokarte<br>
+-   Neue Kategorie TSI-Service<br>
+-   Verbindung der Mobilkarten mit Mobiltelefonen<br>
+-   Abschaffung des Menüpunkts Module; Ersetzt durch: Extras<br>
+-   Verlagerung der Modulkonfiguration in "Verwaltung"<br>
+-   Verbesserung der Änderungshistorie im Logbuch<br>
+-   Fehlerbehebungen<br>
 
 0.9.9-6<br>
-- Neues Navigationselement: CMDB-Explorer<br>
- - mit folgenden Darstellungsfunktionen:<br>
-- IT Servicesicht<br>
-- Clustersicht<br>
-- Virtualisierungssicht<br>
-- Standortsicht<br>
-- CMDB-Status für Objekte zur Abbildung des ITIL Lebenszyklus<br>
-- Der Systemstatus von i-doit wurde umbenannt in Zustand<br>
-- Vorausplanung und Dokumentation von Statuswechsel, "Gültigkeitszeitraum"<br>
-- Abschaffung Abhängigkeiten; neues überarbeitetes Beziehungsmodell<br>
- - Hauptmenüpunkt Abhängigkeiten wird zu Beziehungen<br>
-- Gleichgerichtete Beziehungen (z.B. Cluster)<br>
-- IT-Grundschutzmodul<br>
- - Import IT-Grundschutzkatalog<br>
- - diverse Auswertungen<br>
-- Generischer CSV-Import<br>
-- Neue Objekttypen<br>
- - Middleware (und SOA Applikationen)<br>
- - Replikation<br>
- - Datenbankinstanz<br>
-- Neue konfigurierbare Standardfarben für Objekttypen<br>
-- Autosuggestion im Textfeld für Objektverknüpfungen<br>
-- Neue Gruppierungskategorie im IT Service: IT-Service Typ<br>
-- globale Beziehungssicht im IT Service für dessen Komponenten<br>
-- gruppiertes Logbuch im IT Service<br>
-- Entferunung der Hintergrundfarbe von Kategorie-icons<br>
-- Behobene von Fehlern<br>
- - beim Browsen im Logbuch<br>
- - bei der Zuordnung von Partitionen zu Software RAID<br>
- - beim Duplizieren<br>
- - beim Importierten von Software über OCS<br>
- - beim Filtern von Objekten im Objekt-Browser<br>
-- Bessere Darstellung dess Namens für verbundene Anschlüsse<br>
-- Hostadresse hat einen Leereintrag auf Übersichtsseite beim<br>
+
+-   Neues Navigationselement: CMDB-Explorer<br>
+-   mit folgenden Darstellungsfunktionen:<br>
+-   IT Servicesicht<br>
+-   Clustersicht<br>
+-   Virtualisierungssicht<br>
+-   Standortsicht<br>
+-   CMDB-Status für Objekte zur Abbildung des ITIL Lebenszyklus<br>
+-   Der Systemstatus von i-doit wurde umbenannt in Zustand<br>
+-   Vorausplanung und Dokumentation von Statuswechsel, "Gültigkeitszeitraum"<br>
+-   Abschaffung Abhängigkeiten; neues überarbeitetes Beziehungsmodell<br>
+-   Hauptmenüpunkt Abhängigkeiten wird zu Beziehungen<br>
+-   Gleichgerichtete Beziehungen (z.B. Cluster)<br>
+-   IT-Grundschutzmodul<br>
+-   Import IT-Grundschutzkatalog<br>
+-   diverse Auswertungen<br>
+-   Generischer CSV-Import<br>
+-   Neue Objekttypen<br>
+-   Middleware (und SOA Applikationen)<br>
+-   Replikation<br>
+-   Datenbankinstanz<br>
+-   Neue konfigurierbare Standardfarben für Objekttypen<br>
+-   Autosuggestion im Textfeld für Objektverknüpfungen<br>
+-   Neue Gruppierungskategorie im IT Service: IT-Service Typ<br>
+-   globale Beziehungssicht im IT Service für dessen Komponenten<br>
+-   gruppiertes Logbuch im IT Service<br>
+-   Entferunung der Hintergrundfarbe von Kategorie-icons<br>
+-   Behobene von Fehlern<br>
+-   beim Browsen im Logbuch<br>
+-   bei der Zuordnung von Partitionen zu Software RAID<br>
+-   beim Duplizieren<br>
+-   beim Importierten von Software über OCS<br>
+-   beim Filtern von Objekten im Objekt-Browser<br>
+-   Bessere Darstellung dess Namens für verbundene Anschlüsse<br>
+-   Hostadresse hat einen Leereintrag auf Übersichtsseite beim<br>
 Nichtausfüllen erzeugt<br>
-- verbesserte Berechnung der CPU Frequenz in Objekt- und Clustervitalität<br>
-- Verbesserung bei Selectfeldern in Änderungshistorie<br>
-- diverse kleine Fehlerbehebungen<br>
-- erhöhte Stabilität<br>
+-   verbesserte Berechnung der CPU Frequenz in Objekt- und Clustervitalität<br>
+-   Verbesserung bei Selectfeldern in Änderungshistorie<br>
+-   diverse kleine Fehlerbehebungen<br>
+-   erhöhte Stabilität<br>
 
 0.9.9-5<br>
-- Many many bugfixes!<br>
 
-- New ajax location browser (much fuster, no freeze anymore)<br>
-- Categories are now sorted alphanumerically<br>
-- Category group colors were removed<br>
-- New object type DBMS<br>
- - New categories for DBMS<br>
-- DBMS<br>
-- Database instance (practicable for oracle databases)<br>
+-   Many many bugfixes!<br>
 
-- New object type Database schema<br>
- - New categories for database schema<br>
-- database schema<br>
-- database links<br>
-- Fixed different h-inventory problems where XML Import results in a parse error<br>
-- New category IT Service components<br>
-- New category computing resources<br>
-- New category object vitality<br>
-- The objecttypes are now shown as a row in an object group list<br>
-- Special character problem (öäü broken) after duplicating fixed<br>
-- Virtual machines are now able to get assigned to a cluster<br>
-- Fixed HTTP Port problem in Internet Explorer<br>
-- Duplicated objects don't get an own sys-id<br>
-- Javascript error fixed in shared storage<br>
-- Search now works with special characters<br>
-- Sorting a search result works now<br>
-- The Port -> Interface list now also display the interfaces slot number<br>
-- Duplicating a template creates a new regular object instead of a template<br>
-- Archiving and deleting now works for ports and fc-ports<br>
-- Right groups can now only be edited by an admin<br>
+-   New ajax location browser (much fuster, no freeze anymore)<br>
+-   Categories are now sorted alphanumerically<br>
+-   Category group colors were removed<br>
+-   New object type DBMS<br>
+-   New categories for DBMS<br>
+-   DBMS<br>
+-   Database instance (practicable for oracle databases)<br>
+
+-   New object type Database schema<br>
+-   New categories for database schema<br>
+-   database schema<br>
+-   database links<br>
+-   Fixed different h-inventory problems where XML Import results in a parse error<br>
+-   New category IT Service components<br>
+-   New category computing resources<br>
+-   New category object vitality<br>
+-   The objecttypes are now shown as a row in an object group list<br>
+-   Special character problem (öäü broken) after duplicating fixed<br>
+-   Virtual machines are now able to get assigned to a cluster<br>
+-   Fixed HTTP Port problem in Internet Explorer<br>
+-   Duplicated objects don't get an own sys-id<br>
+-   Javascript error fixed in shared storage<br>
+-   Search now works with special characters<br>
+-   Sorting a search result works now<br>
+-   The Port -> Interface list now also display the interfaces slot number<br>
+-   Duplicating a template creates a new regular object instead of a template<br>
+-   Archiving and deleting now works for ports and fc-ports<br>
+-   Right groups can now only be edited by an admin<br>
 
 0.9.9-4<br>
-- Extended documenattion of virtualized environments<br>
- - New object type virtual host<br>
- - New object type virtual server<br>
- - New object type virtual client<br>
- - New categories for virtual machines:<br>
-- Virtual host<br>
-- Virtual devices<br>
-- Virtual witch<br>
-- Shared virtual switches<br>
-- Documentation of clusters and cluster servies<br>
- - New object type cluster<br>
- - New object tyoe cluster-service<br>
-- New category cluster<br>
-- New category cluster-service<br>
-- New category cluster members<br>
-- New category shared storage<br>
-- New category cluster vitality<br>
-- New category cluster ressources<br>
-- Duplication of objects<br>
-- New category shares<br>
-- Empty categories now look a bit palish<br>
-- Mass completion of workflows<br>
+
+-   Extended documenattion of virtualized environments<br>
+-   New object type virtual host<br>
+-   New object type virtual server<br>
+-   New object type virtual client<br>
+-   New categories for virtual machines:<br>
+-   Virtual host<br>
+-   Virtual devices<br>
+-   Virtual witch<br>
+-   Shared virtual switches<br>
+-   Documentation of clusters and cluster servies<br>
+-   New object type cluster<br>
+-   New object tyoe cluster-service<br>
+-   New category cluster<br>
+-   New category cluster-service<br>
+-   New category cluster members<br>
+-   New category shared storage<br>
+-   New category cluster vitality<br>
+-   New category cluster ressources<br>
+-   Duplication of objects<br>
+-   New category shares<br>
+-   Empty categories now look a bit palish<br>
+-   Mass completion of workflows<br>
 
 Bugfixes:<br>
-- Fixed: Search doesn't work in redbox theme<br>
-- Fixed: Search didn't escape special chars<br>
-- Several IE-specific issues<br>
+
+-   Fixed: Search doesn't work in redbox theme<br>
+-   Fixed: Search didn't escape special chars<br>
+-   Several IE-specific issues<br>
 
 0.9.9-3<br>
-- Komplettüberarbeitung der i-doit Kontakte<br>
- - Kontakte sind nun richtige Objekte (Configuration Items)<br>
-- Neuer Objekttyp Person<br>
-- Neuer Objekttyp Organisation<br>
-- Neuer Objekttyp Personengruppe<br>
- - Trennung von Login und Stammdaten einer Person<br>
-- Überarbeitung Storage (Bildung von SAN-Zonen, Abbildung komplexer SAN Strukturen)<br>
- - Neuer Objekttyp San-Zone<br>
-- Neue Kategorie Lokaler Massenspeicher zur Gruppierung von<br>
- - Speicher Geräten<br>
- - Controller<br>
- - Raid Verbund<br>
-- Neue Kategorie Speichernetze (Netzwerkspeicher) zur Gruppierung von<br>
- - Logischen Geräten (LDEV Server)<br>
- - Logischen Geräten (LDEV Client)<br>
- - FC-Ports<br>
- - Hostadapter (HBA)<br>
-- Umbenennung SAN-Pool in Speichersystem<br>
-- Die Sprachauswahl beim Login wurde von den Mandanten getrennt<br>
-- Bookmark Link zur aktuellen Seite in der Navigationszeile der Listen<br>
-- Jedes i-dot Objekt ist nun mit einem QR Code ausgestattet, welcher den aktuellen Link beinhaltet<br>
-- Barcode sind nun (über einen Klick auf das Bild) druckbar<br>
- - Der Standard Barcode ist nun QR. In der src/constants.in.php in<br>
+
+-   Komplettüberarbeitung der i-doit Kontakte<br>
+-   Kontakte sind nun richtige Objekte (Configuration Items)<br>
+-   Neuer Objekttyp Person<br>
+-   Neuer Objekttyp Organisation<br>
+-   Neuer Objekttyp Personengruppe<br>
+-   Trennung von Login und Stammdaten einer Person<br>
+-   Überarbeitung Storage (Bildung von SAN-Zonen, Abbildung komplexer SAN Strukturen)<br>
+-   Neuer Objekttyp San-Zone<br>
+-   Neue Kategorie Lokaler Massenspeicher zur Gruppierung von<br>
+-   Speicher Geräten<br>
+-   Controller<br>
+-   Raid Verbund<br>
+-   Neue Kategorie Speichernetze (Netzwerkspeicher) zur Gruppierung von<br>
+-   Logischen Geräten (LDEV Server)<br>
+-   Logischen Geräten (LDEV Client)<br>
+-   FC-Ports<br>
+-   Hostadapter (HBA)<br>
+-   Umbenennung SAN-Pool in Speichersystem<br>
+-   Die Sprachauswahl beim Login wurde von den Mandanten getrennt<br>
+-   Bookmark Link zur aktuellen Seite in der Navigationszeile der Listen<br>
+-   Jedes i-dot Objekt ist nun mit einem QR Code ausgestattet, welcher den aktuellen Link beinhaltet<br>
+-   Barcode sind nun (über einen Klick auf das Bild) druckbar<br>
+-   Der Standard Barcode ist nun QR. In der src/constants.in.php in<br>
  Zeile 35 kann der gewohnte Code39 wieder aktiviert werden<br>
-- Neue Mandantenverwaltung, erreichbar über /admin<br>
- - Aktivierung und setzen des Passworts in config.inc.php : $g_admin_auth<br>
+-   Neue Mandantenverwaltung, erreichbar über /admin<br>
+-   Aktivierung und setzen des Passworts in config.inc.php : $g_admin_auth<br>
 
 Bugfixes:<br>
-- Fehler beim Filtern einiger Listen<br>
-- Kontakte können nicht archiviert und gelöscht werden<br>
-- Lizenz Handler verschickte bei Überschreitung mail imt "allen" Lizenzen<br>
-- Problem beim Import über OCS wurde beseitigt<br>
-- Anschluss Browser zeigt alle Anschlüsse als Ausgänge an<br>
-- Import von Kategorie Buchhaltung funktioniert nicht zu 100%<br>
-- Organisationen und Gruppen können im Kontakt Browser nicht abgewählt werden<br>
-- Anschlüsse: Anschlusspärchen wird falsch exportiert<br>
-- Anschlüsse: Ein Klick auf das Anschlusspärchen im edit mode lädt i-doit ohne Stylesheet<br>
+
+-   Fehler beim Filtern einiger Listen<br>
+-   Kontakte können nicht archiviert und gelöscht werden<br>
+-   Lizenz Handler verschickte bei Überschreitung mail imt "allen" Lizenzen<br>
+-   Problem beim Import über OCS wurde beseitigt<br>
+-   Anschluss Browser zeigt alle Anschlüsse als Ausgänge an<br>
+-   Import von Kategorie Buchhaltung funktioniert nicht zu 100%<br>
+-   Organisationen und Gruppen können im Kontakt Browser nicht abgewählt werden<br>
+-   Anschlüsse: Anschlusspärchen wird falsch exportiert<br>
+-   Anschlüsse: Ein Klick auf das Anschlusspärchen im edit mode lädt i-doit ohne Stylesheet<br>
 
 0.9.9-2<br>
-- Anbindung an OCS Datenbank<br>
- - Import von inventarisierten OCS Objekten<br>
-- Komplett überarbeitete Verwaltung von Stromobjekten (Vorhandene Stromdaten werden weitgehend migriert)<br>
- - Neuer Objekttyp: Energieversorgungsunternehmen<br>
- - Neuer Objekttyp: Netzersatzanlage<br>
- - Neuer Objekttyp: Verteilerkasten<br>
- - Neuer Objekttyp: Unterbrechungsfreie Stromversorgung<br>
- - Neuer Objekttyp: Steckdosenleiste<br>
- - Neue Kategorie: Stromverbraucher<br>
- - Import / Export von Stromobjekten<br>
- - Neue Visualisierung von verschachtelten Kabelwegen (insb. bei Mehrfachsteckdosen)<br>
-- Übernahme von Netzinformationen bei Zuweisung eines Layer-3-Netzes unter Hostadresse<br>
-- DNS Server und Domäne unter Hostadresse verwenden nun Dialog+ des Layer-3-Netzes<br>
-- Die Standort Kategorie ermöglicht nun das beidseitige Positionieren eines Geräts im Rack ("Einschub: vorne und hinten")<br>
-- Sortieren von Standorten in der Listenansicht<br>
-- JSON Schnittstelle zur Abrufung von Kategorie Inhalten<br>
-- In der Kabelliste werden die unmittelbar Verbundenen Anschlüsse dargestellt<br>
-- Kategorie Version nun exportierbar<br>
+
+-   Anbindung an OCS Datenbank<br>
+-   Import von inventarisierten OCS Objekten<br>
+-   Komplett überarbeitete Verwaltung von Stromobjekten (Vorhandene Stromdaten werden weitgehend migriert)<br>
+-   Neuer Objekttyp: Energieversorgungsunternehmen<br>
+-   Neuer Objekttyp: Netzersatzanlage<br>
+-   Neuer Objekttyp: Verteilerkasten<br>
+-   Neuer Objekttyp: Unterbrechungsfreie Stromversorgung<br>
+-   Neuer Objekttyp: Steckdosenleiste<br>
+-   Neue Kategorie: Stromverbraucher<br>
+-   Import / Export von Stromobjekten<br>
+-   Neue Visualisierung von verschachtelten Kabelwegen (insb. bei Mehrfachsteckdosen)<br>
+-   Übernahme von Netzinformationen bei Zuweisung eines Layer-3-Netzes unter Hostadresse<br>
+-   DNS Server und Domäne unter Hostadresse verwenden nun Dialog+ des Layer-3-Netzes<br>
+-   Die Standort Kategorie ermöglicht nun das beidseitige Positionieren eines Geräts im Rack ("Einschub: vorne und hinten")<br>
+-   Sortieren von Standorten in der Listenansicht<br>
+-   JSON Schnittstelle zur Abrufung von Kategorie Inhalten<br>
+-   In der Kabelliste werden die unmittelbar Verbundenen Anschlüsse dargestellt<br>
+-   Kategorie Version nun exportierbar<br>
 
 Bugfixes (gekürzt):<br>
-- Fehler beim Auslesen der Höheneinheiten eines Geräts (Schrankansicht)<br>
-- Fehler beim Eintragen eines Netzes<br>
-- Datenbank Exception beim Exportieren einer NAGIOS Konfiguration<br>
-- Quickinfo Fenster bleiben unter einigen Umständen im Firefox hängen<br>
-- In der Logbuch Detailansicht fehlen die geänderten Werte<br>
-- Authoren sollten Templates anwenden können<br>
-- Der Listenfilter filtert nur nach Textfeldern (wie z.B. Objekt namen), nicht aber nach z.B. Standorten<br>
-- Bei Umbenennung eines Ports oder einer Schnittstelle wird der zugehörige Anschluss nicht umbenannt<br>
-- Bei Ablauf der Session werden temporäre Tabellen nicht gelöscht<br>
-- Layer 3 Netz: Adressbereich wird bei DHCP Auswahl aus- bzw. eingeblendet<br>
-- Unter einigen Umständen können keine Kontakte zugewiesen werden<br>
-- i-doit Logo ist in Exceptions nicht sichtbar<br>
-- Archivierte und gelöschte Objekte verschwinden nicht aus der Schrankansicht<br>
-- NAGIOS: n/a Werte werden im i-doit als 01.01.1970 dargestellt<br>
+
+-   Fehler beim Auslesen der Höheneinheiten eines Geräts (Schrankansicht)<br>
+-   Fehler beim Eintragen eines Netzes<br>
+-   Datenbank Exception beim Exportieren einer NAGIOS Konfiguration<br>
+-   Quickinfo Fenster bleiben unter einigen Umständen im Firefox hängen<br>
+-   In der Logbuch Detailansicht fehlen die geänderten Werte<br>
+-   Authoren sollten Templates anwenden können<br>
+-   Der Listenfilter filtert nur nach Textfeldern (wie z.B. Objekt namen), nicht aber nach z.B. Standorten<br>
+-   Bei Umbenennung eines Ports oder einer Schnittstelle wird der zugehörige Anschluss nicht umbenannt<br>
+-   Bei Ablauf der Session werden temporäre Tabellen nicht gelöscht<br>
+-   Layer 3 Netz: Adressbereich wird bei DHCP Auswahl aus- bzw. eingeblendet<br>
+-   Unter einigen Umständen können keine Kontakte zugewiesen werden<br>
+-   i-doit Logo ist in Exceptions nicht sichtbar<br>
+-   Archivierte und gelöschte Objekte verschwinden nicht aus der Schrankansicht<br>
+-   NAGIOS: n/a Werte werden im i-doit als 01.01.1970 dargestellt<br>
 
 0.9.9-1<br>
-- Kabel und Patch Management<br>
- - Neuer Objekttyp: Kabel<br>
- - Neuer Objekttyp: Verstärker<br>
- - Neuer Objekttyp: Patchfeld (Patchpanel)<br>
- - Neuer Objekttyp: Leitungsnetz<br>
- - Neuer Objekttyp: Konverter<br>
- - Kategorie Anschlüsse und Verbindungslogik<br>
- - Anschlussbrowser<br>
-- Kategorie Rechnungen<br>
-- Erweiterung der Kategorie Wartungsverträge<br>
-- Neuer Objekttyp: IT-Service<br>
-- Anbindung an Ticket System: Request Tracker über Modul<br>
- - Cron synchronisation von Tickets<br>
- - Neue Kategorie Tickets<br>
-- Nahtloser Wechsel zwischen Mandanten inmitten einer aktiven Session über<br>
+
+-   Kabel und Patch Management<br>
+-   Neuer Objekttyp: Kabel<br>
+-   Neuer Objekttyp: Verstärker<br>
+-   Neuer Objekttyp: Patchfeld (Patchpanel)<br>
+-   Neuer Objekttyp: Leitungsnetz<br>
+-   Neuer Objekttyp: Konverter<br>
+-   Kategorie Anschlüsse und Verbindungslogik<br>
+-   Anschlussbrowser<br>
+-   Kategorie Rechnungen<br>
+-   Erweiterung der Kategorie Wartungsverträge<br>
+-   Neuer Objekttyp: IT-Service<br>
+-   Anbindung an Ticket System: Request Tracker über Modul<br>
+-   Cron synchronisation von Tickets<br>
+-   Neue Kategorie Tickets<br>
+-   Nahtloser Wechsel zwischen Mandanten inmitten einer aktiven Session über<br>
 einen "Mouse Over" des Mandanten Namen (links oben)<br>
-- Plausibilitätsprüfungen in der Kategorie Hostadresse (Konfigurierbar<br>
+-   Plausibilitätsprüfungen in der Kategorie Hostadresse (Konfigurierbar<br>
 in config.inc.php):<br>
- - Prüfung auf Doppelvergabe von IP-Adressen.<br>
- - Prüfung auf Verfügbarkeit einer IP-Adresse im zugewiesenen Netz über<br>
+-   Prüfung auf Doppelvergabe von IP-Adressen.<br>
+-   Prüfung auf Verfügbarkeit einer IP-Adresse im zugewiesenen Netz über<br>
  einen Refresh Knopf neben der IP-Adresse<br>
- - Prüfung auf Doppelvergabe von Objektnamen (z.B. Servername).<br>
-- Verwaltung von IPv6 Adressen.<br>
-- Entwicklung einer neuen "Custom-Value" Kategorie, welche es ermöglicht Werte<br>
+-   Prüfung auf Doppelvergabe von Objektnamen (z.B. Servername).<br>
+-   Verwaltung von IPv6 Adressen.<br>
+-   Entwicklung einer neuen "Custom-Value" Kategorie, welche es ermöglicht Werte<br>
 zu frei definierbaren Feldern hinzuzufügen. Custom Kategorien können über<br>
 das unter Module befindliche Modul "Benutzerdefinierte Kategorie" erzeugt<br>
 und zu Objekt Typen zugewiesen werden.<br>
-- Das Logbuch ermöglicht die Suche nach CMDB Änderungen (Sowohl Global als auch<br>
+-   Das Logbuch ermöglicht die Suche nach CMDB Änderungen (Sowohl Global als auch<br>
 in der Kategorie Logbuch)<br>
-- Ebenso wurde das Logbuch um eine Funktion für Freitext Meldungen erweitert<br>
-- Report Browser<br>
-- ausführbare Standard Reports<br>
-- Tag Zuordnung für eine Kontaktzuweisung in der Kategorie Kontakte<br>
+-   Ebenso wurde das Logbuch um eine Funktion für Freitext Meldungen erweitert<br>
+-   Report Browser<br>
+-   ausführbare Standard Reports<br>
+-   Tag Zuordnung für eine Kontaktzuweisung in der Kategorie Kontakte<br>
 
-- Bugfixes<br>
+-   Bugfixes<br>
 
 0.9.9<br>
-- Unzählige Verbesserungen im Datenbank Model, was impliziet folgende<br>
+
+-   Unzählige Verbesserungen im Datenbank Model, was impliziet folgende<br>
  Auswirkungen auf den Umgang mit i-doit hat:<br>
-- Höhere Datenverfügbarkeit<br>
-- Erhöhung der Performance in größeren Umgebungen<br>
-- Einfachereres Reporting<br>
-- Vereinfachung von CMDB Abfragen<br>
- - Rationalisierungen innerhalb der Mandanten und System Datenbank<br>
- - Neue globale Kategorie: IP Adresse<br>
-- Zuweisung zu allen Objekttypen unabhänging von der Netzwerk Kategorie<br>
- - Neuer Objekttyp: Host<br>
- - Dashboard & Widget System als Willkommensseite<br>
- - Widget: Quicklaunch<br>
- - Widget: Tipps<br>
- - Widget: My latest changes<br>
- - Ablösung der Sprachverwaltung innerhalb der Datenbank<br>
-- Sprachkonstanten werden von nun an in Dateien verwaltet (src/lang/*.inc.php).<br>
-- Neue Möglichkeit für "Custom" Sprachsets (src/lang/*_custom.inc.php)<br>
- - Neue erweiterte Suche innerhalb der CMDB<br>
- - Wechseln der Sprache ohne Logout<br>
- - Entfernung der dynamischen und Port Kategorien (Bis auf IP)<br>
+-   Höhere Datenverfügbarkeit<br>
+-   Erhöhung der Performance in größeren Umgebungen<br>
+-   Einfachereres Reporting<br>
+-   Vereinfachung von CMDB Abfragen<br>
+-   Rationalisierungen innerhalb der Mandanten und System Datenbank<br>
+-   Neue globale Kategorie: IP Adresse<br>
+-   Zuweisung zu allen Objekttypen unabhänging von der Netzwerk Kategorie<br>
+-   Neuer Objekttyp: Host<br>
+-   Dashboard & Widget System als Willkommensseite<br>
+-   Widget: Quicklaunch<br>
+-   Widget: Tipps<br>
+-   Widget: My latest changes<br>
+-   Ablösung der Sprachverwaltung innerhalb der Datenbank<br>
+-   Sprachkonstanten werden von nun an in Dateien verwaltet (src/lang/*.inc.php).<br>
+-   Neue Möglichkeit für "Custom" Sprachsets (src/lang/*_custom.inc.php)<br>
+-   Neue erweiterte Suche innerhalb der CMDB<br>
+-   Wechseln der Sprache ohne Logout<br>
+-   Entfernung der dynamischen und Port Kategorien (Bis auf IP)<br>
 ---> ACHTUNG: Datenverlust möglich <---<br>
 
- - Updated database model, which implicitly means<br>
-- Higher data availability<br>
-- Increasing performance in large environments<br>
-- Easier reporting<br>
-- Simplification of CMDB queries<br>
- - Streamlining of mandator and system database<br>
- - New global category: IP-Address<br>
-- Assignment to all objecttypes independent of the network category<br>
- - New objecttype: Host<br>
- - Dashboard and widget system as welcome page<br>
-- Widget: Quicklaunch<br>
-- Widget: Tips<br>
-- Widget: My latest changes<br>
- - Replacement of the old language administration inside the system database<br>
-- Language constants are administarted inside files from now on (src/lang/*.inc.php)<br>
-- New possibility to add custom language sets (src/lang/*_custom.inc.php)<br>
- - New extended search within the CMDB<br>
- - Changing language without logging out<br>
- - Remove of dynamic and port categories (Except IP)<br>
+-   Updated database model, which implicitly means<br>
+-   Higher data availability<br>
+-   Increasing performance in large environments<br>
+-   Easier reporting<br>
+-   Simplification of CMDB queries<br>
+-   Streamlining of mandator and system database<br>
+-   New global category: IP-Address<br>
+-   Assignment to all objecttypes independent of the network category<br>
+-   New objecttype: Host<br>
+-   Dashboard and widget system as welcome page<br>
+-   Widget: Quicklaunch<br>
+-   Widget: Tips<br>
+-   Widget: My latest changes<br>
+-   Replacement of the old language administration inside the system database<br>
+-   Language constants are administarted inside files from now on (src/lang/*.inc.php)<br>
+-   New possibility to add custom language sets (src/lang/*_custom.inc.php)<br>
+-   New extended search within the CMDB<br>
+-   Changing language without logging out<br>
+-   Remove of dynamic and port categories (Except IP)<br>
 ---> ATTENTION: Data loss possible <---<br>
 
 Additional Changes:<br>
@@ -783,9 +799,9 @@ Additional Changes:<br>
  [Fixed] - Port connections could be unstable<br>
 
 0.9.2<br>
-[Enhancement] - Count licences on the basis of the connection to servers and clients_ not applications<br>
+[Enhancement] - Count licences on the basis of the connection to servers and clients_not applications<br>
  [Enhancement] - Editable workflows<br>
- [Enhancement] - In licences in use_ show name(s) of user(s)_ which are using the corresponding licence<br>
+ [Enhancement] - In licences in use_ show name(s) of user(s)_which are using the corresponding licence<br>
  [Enhancement] - Port list: Name of destination device has also to be shown<br>
  [Fixed] - Port type cannot be deleted<br>
  [Fixed] - Error in former connected port when deleting a port<br>
@@ -805,7 +821,7 @@ Additional Changes:<br>
 0.9.1 rev 2916<br>
 [Task]- Replace all language specific words with LCs<br>
  [Enhancement] - Extend right system to NavBar buttons<br>
- [Enhancement] - Distributor updated_ object view now faster<br>
+ [Enhancement] - Distributor updated_object view now faster<br>
  [Enhancement] - New login procedure (AJAX)<br>
  [Enhancement] - Display a message when session timed out<br>
  [Enhancement] - Easier and faster setup<br>
@@ -850,7 +866,7 @@ Additional Changes:<br>
  [Fixed] - Image title in object image is not saved<br>
  [Fixed] - Access url in category access is converted to integer<br>
  [Fixed] - Incorrect integer value: '' for column 'isys_catg_stor_list__capacity'<br>
- [Fixed] - When a cpu or port gets created_ the data of it is not directly shown in view/list mode<br>
+ [Fixed] - When a cpu or port gets created_the data of it is not directly shown in view/list mode<br>
  [Fixed] - When a cpu gets created_ the data of it is not directly shown in view mode<br>
  [Fixed] - Security fix: Show smarty debug console only on localhost<br>
  [Fixed] - Error when detaching a newly created building<br>
@@ -908,153 +924,163 @@ Additional Changes:<br>
 
 0.9 rev 2409<br>
 Bugfixes<br>
-- Access point can't be created<br>
-- SAN can't be created on some systems<br>
-- Can't open input plug in power object<br>
-- Port detail view is not shown correctly<br>
-- Link in overview page of ports not working correctly<br>
-- Login problems<br>
-- Ports are not created correctly if values are missing<br>
-- The global debugger instance is not available on some systems<br>
-- WAP can't be saved correctly<br>
-- Not possible to change themes<br>
-- Licences can't be deleted correctly<br>
-- Number of used licences is not calculated correctly<br>
-- The port browser doesn't work in IE<br>
-- FC ports can't be selected<br>
-- Storage: Partition can't be connected to a device<br>
-- Contact groups can't be created<br>
-- Link in IP list not working correctly (in ports)<br>
-- Files from file category can't be downloaded<br>
+
+-   Access point can't be created<br>
+-   SAN can't be created on some systems<br>
+-   Can't open input plug in power object<br>
+-   Port detail view is not shown correctly<br>
+-   Link in overview page of ports not working correctly<br>
+-   Login problems<br>
+-   Ports are not created correctly if values are missing<br>
+-   The global debugger instance is not available on some systems<br>
+-   WAP can't be saved correctly<br>
+-   Not possible to change themes<br>
+-   Licences can't be deleted correctly<br>
+-   Number of used licences is not calculated correctly<br>
+-   The port browser doesn't work in IE<br>
+-   FC ports can't be selected<br>
+-   Storage: Partition can't be connected to a device<br>
+-   Contact groups can't be created<br>
+-   Link in IP list not working correctly (in ports)<br>
+-   Files from file category can't be downloaded<br>
 
 0.9<br>
 New features<br>
-- Search<br>
-- Workflow management system (Tasks, checklists and self-defined objects)<br>
-- Link to our documentary<br>
-- You can switch between different date, time and numerical formats<br>
-- You can switch the 'QuickSave' functionality on or off (Without QuickSave<br>
+
+-   Search<br>
+-   Workflow management system (Tasks, checklists and self-defined objects)<br>
+-   Link to our documentary<br>
+-   You can switch between different date, time and numerical formats<br>
+-   You can switch the 'QuickSave' functionality on or off (Without QuickSave<br>
 the user has to fill in a description for his changes in a pop-up window)<br>
-- Additional description for logbook entries, see also 'QuickSave' for that<br>
-- New category 'Overview' with values from some selected categories<br>
-- Updated category 'Air Conditioning'<br>
-- Updated category 'Printer'<br>
-- Updated category 'Monitor'<br>
-- Updated category 'Access Point'<br>
-- Updated category 'FC Switch'<br>
-- Updated category 'Client'<br>
-- Updated category 'Backup'<br>
-- Updated category 'Power'<br>
-- Updated category 'Enclosure'<br>
-- Updated category 'Formfactor'<br>
-- Updated category 'Emergency plan'<br>
-- Updated category 'SAN'<br>
-- Updated category 'Switch'<br>
+-   Additional description for logbook entries, see also 'QuickSave' for that<br>
+-   New category 'Overview' with values from some selected categories<br>
+-   Updated category 'Air Conditioning'<br>
+-   Updated category 'Printer'<br>
+-   Updated category 'Monitor'<br>
+-   Updated category 'Access Point'<br>
+-   Updated category 'FC Switch'<br>
+-   Updated category 'Client'<br>
+-   Updated category 'Backup'<br>
+-   Updated category 'Power'<br>
+-   Updated category 'Enclosure'<br>
+-   Updated category 'Formfactor'<br>
+-   Updated category 'Emergency plan'<br>
+-   Updated category 'SAN'<br>
+-   Updated category 'Switch'<br>
 
 Bugfixes<br>
-- Object image cannot be deleted<br>
-- Text is 'escaped' everywhere where it's written into the database<br>
-- Date and time is in the wrong format in english<br>
-- Repaired JavaScript enhanced categories<br>
-- Temporary tables are not always deleted<br>
-- many more...<br>
+
+-   Object image cannot be deleted<br>
+-   Text is 'escaped' everywhere where it's written into the database<br>
+-   Date and time is in the wrong format in english<br>
+-   Repaired JavaScript enhanced categories<br>
+-   Temporary tables are not always deleted<br>
+-   many more...<br>
 
 0.9 beta2<br>
 Bugfixes<br>
-- closed 523: Network: IP-Adresse wird als primär angezeigt<br>
-- closed 538: Storage: After creating fc-ports the new view is not the list<br>
+
+-   closed 523: Network: IP-Adresse wird als primär angezeigt<br>
+-   closed 538: Storage: After creating fc-ports the new view is not the list<br>
 view<br>
-- closed 531: Storage: JS isn't initially working at the start of the page<br>
-- closed 530: Tooltips for all icons<br>
-- closed 534: Storage: Kleine Ãnderungen<br>
-- closed 537: JavaScript-generated date cannot be formatted<br>
-- closed 449: objecttype: cellphone<br>
-- closed 314: Dialog+ fields change the actual selected value after adding new<br>
+-   closed 531: Storage: JS isn't initially working at the start of the page<br>
+-   closed 530: Tooltips for all icons<br>
+-   closed 534: Storage: Kleine Ãnderungen<br>
+-   closed 537: JavaScript-generated date cannot be formatted<br>
+-   closed 449: objecttype: cellphone<br>
+-   closed 314: Dialog+ fields change the actual selected value after adding new<br>
 list elements<br>
-- closed 100003: Files: Name of downloaded file should be changeable<br>
-- closed 532: Storage: Benennungen der Geräte<br>
-- closed 528: Network: Port Kategorien lassen sich nicht speichern<br>
-- closed 525: Network: Port-Kategorien werden nicht referenziell gelöscht<br>
-- closed 526: Network: Statusänderungen bei Ports müssen verhindert werden<br>
-- closed 511: Themes cannot be changed<br>
-- closed 519: Network: 'Standard'-not connected to port and interface as well<br>
-- closed 501: Alt+S doesn't save an object :(<br>
-- closed 517: Breadcrumb strings have to be translated<br>
-- closed 2: Ermittlung des Installationsverzeichnisses<br>
-- closed 510: Checking for rights in action processor<br>
-- closed 505: Exchange current plain JS buildup-routine<br>
-- closed 504: The language constant editor has too many delete buttons<br>
-- closed 495: Category Memory: Row 'unit' is redundant<br>
-- closed 493: Title for save button too long<br>
-- closed 489: Duplicate button is without function<br>
-- closed 498: Maintenance contract fixup / Emergency plan incomplete<br>
-- closed 280: Missing script to delete old temporary tables<br>
-- closed 485: Temporary tables are always newly created<br>
-- closed 486: It is possible to log in to i-doit without password!!!<br>
-- closed 483: Temporary tables are not deleted automatically<br>
-- closed 467: Description of an object can't be saved<br>
-- closed 474: You can't save a storage drive when there is no connected<br>
+-   closed 100003: Files: Name of downloaded file should be changeable<br>
+-   closed 532: Storage: Benennungen der Geräte<br>
+-   closed 528: Network: Port Kategorien lassen sich nicht speichern<br>
+-   closed 525: Network: Port-Kategorien werden nicht referenziell gelöscht<br>
+-   closed 526: Network: Statusänderungen bei Ports müssen verhindert werden<br>
+-   closed 511: Themes cannot be changed<br>
+-   closed 519: Network: 'Standard'-not connected to port and interface as well<br>
+-   closed 501: Alt+S doesn't save an object :(<br>
+-   closed 517: Breadcrumb strings have to be translated<br>
+-   closed 2: Ermittlung des Installationsverzeichnisses<br>
+-   closed 510: Checking for rights in action processor<br>
+-   closed 505: Exchange current plain JS buildup-routine<br>
+-   closed 504: The language constant editor has too many delete buttons<br>
+-   closed 495: Category Memory: Row 'unit' is redundant<br>
+-   closed 493: Title for save button too long<br>
+-   closed 489: Duplicate button is without function<br>
+-   closed 498: Maintenance contract fixup / Emergency plan incomplete<br>
+-   closed 280: Missing script to delete old temporary tables<br>
+-   closed 485: Temporary tables are always newly created<br>
+-   closed 486: It is possible to log in to i-doit without password!!!<br>
+-   closed 483: Temporary tables are not deleted automatically<br>
+-   closed 467: Description of an object can't be saved<br>
+-   closed 474: You can't save a storage drive when there is no connected<br>
 manufacturer<br>
-- closed 478: List views generate SQL-Error<br>
-- closed 3: Dienste zu Server hinzufügen fehlerhaft<br>
-- closed 362: Date and time in header?<br>
-- closed 476: PHPInfo doesn't show up<br>
-- closed 475: Logbook navigation does not work - jumping through pages is<br>
+-   closed 478: List views generate SQL-Error<br>
+-   closed 3: Dienste zu Server hinzufügen fehlerhaft<br>
+-   closed 362: Date and time in header?<br>
+-   closed 476: PHPInfo doesn't show up<br>
+-   closed 475: Logbook navigation does not work - jumping through pages is<br>
 impossible<br>
-- closed 249: Deletion of temporary directory / caches<br>
-- closed 462: Allowed php memory size of 8MB is too low<br>
-- closed 473: Add framework button as link to our support-forum<br>
-- closed 463: Licences: SQL error when clicking on folder<br>
-- closed 207: Tooltip-JS doesn't use via JS changed title attributes<br>
-- closed 267: Wrong link in logbook list view<br>
-- closed 311: login (back to viewed page)<br>
-- closed 317: Status texts are not translated<br>
-- closed 401: New CMDB: Highlights in the menutree<br>
-- closed 432: Navbar buttons in lists have to be activated correctly<br>
-- closed 63: Elementeigenschaften: Speichern beim Wechsel zwischen Unterpunkten<br>
-- closed 238: Button-Icons im NavBar haben keine einheitliche Logik<br>
-- closed 250: Default tooltips in main navigation<br>
-- closed 263: "Edit" button is active in list view<br>
-- closed 264: "Delete" button is active in "edit" mode<br>
-- closed 278: i18n: New language constants<br>
-- closed 289: Editor: HTML chars in text fields<br>
+-   closed 249: Deletion of temporary directory / caches<br>
+-   closed 462: Allowed php memory size of 8MB is too low<br>
+-   closed 473: Add framework button as link to our support-forum<br>
+-   closed 463: Licences: SQL error when clicking on folder<br>
+-   closed 207: Tooltip-JS doesn't use via JS changed title attributes<br>
+-   closed 267: Wrong link in logbook list view<br>
+-   closed 311: login (back to viewed page)<br>
+-   closed 317: Status texts are not translated<br>
+-   closed 401: New CMDB: Highlights in the menutree<br>
+-   closed 432: Navbar buttons in lists have to be activated correctly<br>
+-   closed 63: Elementeigenschaften: Speichern beim Wechsel zwischen Unterpunkten<br>
+-   closed 238: Button-Icons im NavBar haben keine einheitliche Logik<br>
+-   closed 250: Default tooltips in main navigation<br>
+-   closed 263: "Edit" button is active in list view<br>
+-   closed 264: "Delete" button is active in "edit" mode<br>
+-   closed 278: i18n: New language constants<br>
+-   closed 289: Editor: HTML chars in text fields<br>
 
 Feature updates<br>
-- CMDB: Storage management finished<br>
-- CMDB: Network management finished<br>
-- CMDB: Licence management fixed<br>
-- CMDB: File management fixed<br>
-- CMDB: Navigation tree for (network-)port categories<br>
-- CMDB: Adding contacts to objects (according to contact management)<br>
-- Framework: Environment for theme development<br>
-- Framework: Patch-Engine<br>
-- Framework: Support for localization (according to UNIX Locale specs)<br>
-- ... and many, many more ...<br>
+
+-   CMDB: Storage management finished<br>
+-   CMDB: Network management finished<br>
+-   CMDB: Licence management fixed<br>
+-   CMDB: File management fixed<br>
+-   CMDB: Navigation tree for (network-)port categories<br>
+-   CMDB: Adding contacts to objects (according to contact management)<br>
+-   Framework: Environment for theme development<br>
+-   Framework: Patch-Engine<br>
+-   Framework: Support for localization (according to UNIX Locale specs)<br>
+-   ... and many, many more ...<br>
 
 0.9 beta<br>
-+ Storage management in beta state<br>
-- Controllers (Fibre-Channel, SCSI, ATA, FD etc.)<br>
-- Devices / Drives<br>
-- SAN-Pools / RAID-Groups<br>
-- Contact management / Address book for companies, persons and Groups<br>
-- Task management for work orders and checklists<br>
-- Web-Installer<br>
+
+-   Storage management in beta state<br>
+
+-   Controllers (Fibre-Channel, SCSI, ATA, FD etc.)<br>
+-   Devices / Drives<br>
+-   SAN-Pools / RAID-Groups<br>
+-   Contact management / Address book for companies, persons and Groups<br>
+-   Task management for work orders and checklists<br>
+-   Web-Installer<br>
 
 0.9 prebeta<br>
-- Licence management (as Objecttype in CMDB/Other)<br>
-- Network management in beta state (as global category)<br>
-- Rights system - rudimentary handling of rights (without User-interface)<br>
-- my-doit area which will act as personal bookmark manager initially<br>
-- Breadcrumb navigation<br>
-- New objecttype configuration<br>
-- Objecttype "Cellphone"<br>
+
+-   Licence management (as Objecttype in CMDB/Other)<br>
+-   Network management in beta state (as global category)<br>
+-   Rights system - rudimentary handling of rights (without User-interface)<br>
+-   my-doit area which will act as personal bookmark manager initially<br>
+-   Breadcrumb navigation<br>
+-   New objecttype configuration<br>
+-   Objecttype "Cellphone"<br>
 
 0.9 PR3<br>
-+ Added file management, which includes ...<br>
-- a file manager component with client-independant up-/download<br>
+
+-   Added file management, which includes ...<br>
+
+-   a file manager component with client-independant up-/download<br>
 features<br>
-- a global CMDB file category in order to attach / detach a file object<br>
-- a specific CMDB file category. We have implemented versioning features<br>
+-   a global CMDB file category in order to attach / detach a file object<br>
+-   a specific CMDB file category. We have implemented versioning features<br>
 into this manager.<br>
-- Added power management<br>
-- Added logbook<br>
+-   Added power management<br>
+-   Added logbook<br>

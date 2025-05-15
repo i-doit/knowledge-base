@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.4
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Erweiterung]   "Report Modul" wird zu "Report Manager"<br>
 [Erweiterung]       Bearbeitung von Reports, welche mit dem Abfrage Editor erstellt wurden<br>
 [Erweiterung]       Unterstützung von Benutzerdefinierten Kategorien<br>
@@ -8,7 +13,7 @@
 [Erweiterung]       Reports lassen sich nun kategorisieren<br>
 [Erweiterung]   i-doit Api<br>
 [Erweiterung]       Neue JSON-RPC Login Möglichkeiten zur Authentifizierung gegen die i-doit API (siehe JSON-RPC Doku 1.4)<br>
-[Erweiterung]        JSON-RPC Batch requests (http://www.jsonrpc.org/specification#batch)<br>
+[Erweiterung]        JSON-RPC Batch requests (<http://www.jsonrpc.org/specification#batch>)<br>
 [Erweiterung]       Möglichkeit zur Zählung von Objekten in Api Abfrage cmdb.object_types<br>
 [Erweiterung]       Api Methode cmdb.object.read liefert nunmehr direkt das angefragt Objekt anstatt Array mit nur einem Key "0"<br>
 [Erweiterung]   Export von Check MK Konfigurationen<br>
@@ -23,7 +28,7 @@
 [Erweiterung]   Anzeige der Beziehungsart im Quickinfo Overlay<br>
 [Erweiterung]   Die Beziehungsarten erhalten eine angepasste Oberfläche zum definieren der "Standard"-Gewichtung<br>
 [Erweiterung]   Möglichkeit zur Anzeige von Inventarnummern im QR Code<br>
-[Erweiterung]   Deinstallation von Modulen im Admin Center<br>
+[Erweiterung]   Deinstallation von Modulen im Admin-Center<br>
 [Erweiterung]   Angabe eines Default VLANs in der Kategorie Netzwerk -> Port<br>
 [Erweiterung]   Neues Modul: IT Service<br>
 [Erweiterung]   OCS Inventory NG: Oberfläche modernisiert<br>

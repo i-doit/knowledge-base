@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Erweiterung]    Rundum erneurtes granulares Rechtesystem<br>
 [Erweiterung]    CMDB Rechtestrukturen auf Basis von Objekttypen, Objekten und Kategorien<br>
 [Erweiterung]    Rechtestrukturen für Module: Reports, Dialog-Admin, Im-/Export, Logbuch, Nagios, globale Suche, Templates & Verwaltung<br>
@@ -14,7 +19,7 @@
 [Erweiterung]   Quick-Info Fenster zeigen mehr Inhalte an<br>
 [Erweiterung]   Neue Buttons und Teilweise verbesserte Rückgabewerte unter "Cache / Datenbank"<br>
 [Erweiterung]   Aufgehübschte und technisch neue "Dialog Listen" (Sehr viel platzsparender und Benutzerfreundlicher)<br>
-[Erweiterung]    Modul Installation/ Updates im Admin Center<br>
+[Erweiterung]    Modul Installation/ Updates im Admin-Center<br>
 [Erweiterung]   Wenn Kontakte exportiert werden, muss man die Wahl haben, entweder den Kontaktanemen oder den Loginnamen zu exportieren.<br>
 [Erweiterung]    Neuer  Objekttyp "Service Templates"<br>
 [Erweiterung]    Neuer  Objekttyp "Host Templates"<br>

@@ -6,12 +6,12 @@ Supported Applications
 
 The i-doit default installation provides interfaces to several applications from the service desk field:
 
-*   [OTRS Help Desk](./otrs-help-desk.md)
+*   [((OTRS)) Community Edition Help Desk](./otrscommunity-help-desk.md)
 *   [Request Tracker (RT)](./request-tracker.md)
 
 … and iTop.
 
-The specific installation and use of extensions (RT) and modules (OTRS) is described in the corresponding articles or the relevant links are included. In the following text we concentrate on the configuration and functions of i-doit.
+The specific installation and use of extensions (RT) and modules (((OTRS)) Community Edition) is described in the corresponding articles or the relevant links are included. In the following text we concentrate on the configuration and functions of i-doit.
 
 Configuration
 -------------

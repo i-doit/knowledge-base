@@ -8,10 +8,10 @@ Um den Vertrag zu verlängern, machen wir uns den Befehl `extend-contracts` zu n
 
 ## Schritt 1: Den Vertrag `extend-contract` fähig machen
 
-Damit ein Vertrag mit dem Befehl `extend-contracts` verlängert werden kann, muss er ein paar Vorraussetzungen erfüllen.<br>
-Dafür müssen wir den bestehenden Vertrag erstmal editieren.<br>
+Damit ein Vertrag mit dem Befehl `extend-contracts` verlängert werden kann, muss er ein paar Voraussetzungen erfüllen.<br>
+Dafür müssen wir den bestehenden Vertrag erst mal editieren.<br>
 
-Die benötigten Einstellungen finden wir in der Objektansicht des gewüschten Vertrags,
+Die benötigten Einstellungen finden wir in der Objektansicht des gewünschten Vertrags,
 
 **Vertrag → Vertragsinformationen**
 
@@ -26,7 +26,7 @@ welche wir anschließend editieren:
 
 [![vertragsverlaengerung-config](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/2-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/2-avv-uc.png)
 
-!!! info "Die Vorraussetzungen um den Befehl ausführen zu können lauten wie folgt:"
+!!! info "Die Voraussetzungen um den Befehl ausführen zu können lauten wie folgt:"
 
     * **Vertragslaufzeitperiode** muss ausgefüllt sein
     * **Vertragsende durch** muss auf Kündigung gestellt sein
@@ -65,4 +65,4 @@ In diesen Cronjob fügen wir folgenden Code ein:
 ```
 
 Mit diesem Code, wird der Cronjob jeden Tag um 6:15 Uhr ausgeführt und verlängert die Verträge automatisch, falls sie den Voraussetzungen entsprechen.<br>
-Wichtig ist nur das der Pfad zur [Console](../automatisierung-und-integration/cli/console/index.md) richtig angegeben ist und das man den **Username** und das **Passwort** der Idoit-Instanz nutzt.
+Der Pfad zur [Console](../automatisierung-und-integration/cli/console/index.md) muss vollständig angegeben werden und der **Username** und das **Passwort** des Benutzer der i-doit Instanz.

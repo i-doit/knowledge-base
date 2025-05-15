@@ -64,4 +64,4 @@ Um eine Datei mit einem Objekt zu verknüpfen, ist man nicht auf die Standard-Ka
 
 !!! success "Dokumente-Modul"
 
-    Wer Betriebshandbücher, Notfallpläne & Co. direkt aus der IT-Dokumentation generieren möchte, sollte den Einsatz des [Dokumente-Moduls](../i-doit-pro-add-ons/documents/index.md) für i-doit in Betracht ziehen. Hierüber lassen sich umfangreiche Textdokumente mit [Attributen](../grundlagen/struktur-it-dokumentation.md), Bildern und [Reports](../auswertungen/report-manager.md) aus i-doit anreichern.
+    Wer Betriebshandbücher, Notfallpläne & Co. direkt aus der IT-Dokumentation generieren möchte, sollte den Einsatz des [Dokumente-Moduls](../i-doit-add-ons/documents/index.md) für i-doit in Betracht ziehen. Hierüber lassen sich umfangreiche Textdokumente mit [Attributen](../grundlagen/struktur-it-dokumentation.md), Bildern und [Reports](../auswertungen/report-manager.md) aus i-doit anreichern.

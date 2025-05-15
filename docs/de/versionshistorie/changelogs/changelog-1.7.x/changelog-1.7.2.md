@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.7.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  Überarbeitete Workflow E-Mail Texte<br>
 [Verbesserung]  Kategorie Bilder: Upload über die JSON-RPC API<br>
 [Verbesserung]  Neues Recht für Objektlistenkonfiguration<br>

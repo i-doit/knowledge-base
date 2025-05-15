@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.18.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Code (internal)]                           Change all database tables to "Row Format: Dynamic" in fresh installations<br>
 [Improvement][CSV Import]                         The object browser of a custom category should be able to use a special assignment via the model > serial number<br>
 [Improvement][Logbook]                            Anonymize logbook entries<br>

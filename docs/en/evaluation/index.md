@@ -6,6 +6,6 @@ Documenting with _i-doit_ is not meant as an end in itself. In the following art
 *   [Variable Reports](./variable-reports.md)
 *   [Notifications](./notifications.md)
 *   [CMDB Explorer](./cmdb-explorer/index.md)
-*   [i-doit QR-Code Printer](./../i-doit-pro-add-ons/i-doit-qr-code-printer.md)
+*   [i-doit QR-Code Printer](./../i-doit-add-ons/i-doit-qr-code-printer.md)
 *   [Rack View](./rack-view.md)
 *   [IP List](./ip-list.md)

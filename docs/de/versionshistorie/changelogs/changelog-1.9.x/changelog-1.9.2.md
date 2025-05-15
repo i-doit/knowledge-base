@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.9.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  Neues Feld in Kategorie "Vertrag" zur Angabe der Kostenberechnung<br>
 [Verbesserung]  Optionale Aktualisierung des Objekttyps von Modulen im JDisc-Import<br>
 [Verbesserung]  Suche: Einstellung zur Änderung des Highlightings<br>

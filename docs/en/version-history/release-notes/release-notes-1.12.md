@@ -2,24 +2,19 @@ System requirements
 -------------------
 
 *   i-doit 1.12 supports PHP 5.6, 7.0, 7.1 and 7.2.
-    
+
 *   The use of PHP 5.6 is deprecated in i-doit 1.12 and will be unsupported starting with i-doit 1.13.
-    
 
 Notes
 -----
 
 *   The Check\_MK, Nagios export and Workflow features are now available as separate (free to use) add-ons.
-    
 
-*   When starting with a fresh installation, they need to be installed via the Admin Center.
-    
+*   When starting with a fresh installation, they need to be installed via the Admin-Center.
+
 *   When updating i-doit, you do not need to do anything. They will show up as add-ons in the Admin-Center automatically.
-    
 
 *   Category-constants containing the string “SUBCAT” will be renamed (Beware if you are using the i-doit API)  
-      
-    
 
 |     |     |
 | C\_\_CMDB\_\_SUBCAT\_\_NETWORK\_PORT | C\_\_CATG\_\_NETWORK\_PORT |

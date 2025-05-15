@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.15
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][JDisc] JDisc import of data from the Cloud category<br>
 [Improvement][JDisc] JDISC: Advanced "Naming Rules" for imported devices<br>
 [Improvement][JDisc] JDISC: Import only new devices<br>

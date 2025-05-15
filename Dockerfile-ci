@@ -1,4 +1,4 @@
-FROM ubuntu:22.10
+FROM ubuntu:24.04
 
 LABEL org.opencontainers.image.vendor="synetics GmbH"
 LABEL org.opencontainers.image.title="i-doit knowledge base"
@@ -37,22 +37,28 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 # Run this container as current host user:
-ARG USER_ID
-ARG GROUP_ID
-RUN groupadd -g "${GROUP_ID}" docs; \
-    useradd -l -u "${USER_ID}" -g docs docs; \
+ARG USER_ID=1000
+ARG GROUP_ID=1000
+
+RUN touch /var/mail/ubuntu; \
+    chown ubuntu /var/mail/ubuntu; \
+    userdel -r ubuntu; \
+    groupadd -g "${GROUP_ID}" docs; \
+    useradd -l -u "${USER_ID}" -g "${GROUP_ID}" docs; \
     install -d -m 0750 -o docs -g docs /home/docs; \
     chown "${USER_ID}":"${GROUP_ID}" -R /home/docs
 
 WORKDIR /tmp/
 
 # Node.js and NPM:
-RUN curl -OfsSL \
-        https://raw.githubusercontent.com/tj/n/master/bin/n; \
-    install -m 0755 -o root -g root n /usr/local/bin/; \
-    rm n; \
-    n lts; \
-    npm install -g npm@latest
+ARG NODE_VERSION=20.16.0
+ARG NPM_VERSION=10.9.0
+RUN curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n \
+    -o /usr/local/bin/n; \
+    chmod 0755 /usr/local/bin/n; \
+    n "$NODE_VERSION"; \
+    npm install -g "npm@$NPM_VERSION"; \
+    npm completion > /etc/bash_completion.d/npm
 
 # hadolint:
 ARG HADOLINT_VERSION=2.12.0
@@ -95,7 +101,7 @@ RUN groupadd -g "${DOCKER_GROUP_ID}" docker; \
     chown root:docker /var/run/docker.sock
 
 # Docker Compose:
-ARG DOCKER_COMPOSE_VERSION=2.16.0
+ARG DOCKER_COMPOSE_VERSION=2.23.0
 RUN curl -OfsSL \
         "https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-linux-x86_64"; \
     curl -OfsSL \
@@ -110,7 +116,7 @@ RUN curl -OfsSL \
         checksums.txt
 
 # editorconfig-checker (ec):
-ARG EC_VERSION=2.7.0
+ARG EC_VERSION=2.7.2
 RUN curl -OfsSL \
         "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/${EC_VERSION}/ec-linux-amd64.tar.gz"; \
     tar -xzf ec-linux-amd64.tar.gz; \
@@ -120,27 +126,26 @@ RUN curl -OfsSL \
         bin/
 
 # Upgrade pip:
-RUN pip3 install --upgrade --no-cache-dir \
-        pip \
+RUN dpkg -r --force-depends python3-wheel \
+    ; \
+    pip3 install --upgrade --no-cache-dir --break-system-packages \
         setuptools \
-        wheel \
-    ; \
-    apt-get remove -y \
-        python3-pip \
-        python3-setuptools \
-        python3-wheel \
-    ; \
-    apt-get autoremove -y
+        wheel
 
 # pip (common):
 COPY requirements.txt /tmp/
-RUN pip3 install --upgrade --no-cache-dir --requirement requirements.txt; \
-    rm requirements.txt
 
-USER docs
+RUN pip3 install --upgrade --no-cache-dir --break-system-packages --requirement requirements.txt; \
+    rm requirements.txt \
+    ; \
+    ln -s /usr/bin/python3 /usr/bin/python
 
-ENV PATH="/home/docs/.local/bin:${PATH}"
+RUN echo "source /usr/share/bash-completion/bash_completion" >> /etc/bash.bashrc
+
+ENV PATH="/home/docs/.local/bin:/docs/node_modules/.bin:${PATH}"
 
 WORKDIR /docs
+
+USER docs
 
 CMD ["bash"]

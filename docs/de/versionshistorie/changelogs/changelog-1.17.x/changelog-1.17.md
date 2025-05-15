@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.17
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Categories] New license type "CPU core-based"<br>
 [Improvement][Categories] Calculation for licenses of type "CPU core based"<br>
 [Improvement][Custom categories] Configuration to manually design the structure of labels and fiels of custom categories<br>

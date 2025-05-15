@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.12.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Aufgabe][Code] Entfernen aller Polyfills für mbstring extension<br>
 [Verbesserung][CMDB] Speicher den CMDB Status Filter<br>
 [Verbesserung][LDAP] SYNC: Import von mehr als 1000 Benutzern<br>

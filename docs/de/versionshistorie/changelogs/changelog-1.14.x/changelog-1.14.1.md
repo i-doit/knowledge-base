@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.14.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Objects] Tenant ID in URL and links to objects<br>
 [Improvement][Validation] Enable image pasting into description fields<br>
 [Improvement][Validation] Improve data sanitazion<br>

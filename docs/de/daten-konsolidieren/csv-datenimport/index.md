@@ -1,4 +1,6 @@
-## CSV-Datenimport
+# CSV-Datenimport
+
+!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
 
 !!! example ""
     Ein Praxisbeispiel für den automatisierten Datenimport finden Sie auf unserem [Blog](https://www.i-doit.com/blog/automatisierter-csv-import-mit-i-doit/)
@@ -25,7 +27,7 @@ Wenn die .csv\-Datei soweit vorbereitet ist, kann der Datenimport beginnen.
 
 ## Datei hochladen
 
-Der CSV-Datenimport befindet sich unter **Extras → CMDB → Import** → **CSV Import**. Eine Konfiguration vorab ist nicht notwendig.
+Der CSV-Datenimport befindet sich unter **Extras → Import** → **CSV Import**. Eine Konfiguration vorab ist nicht notwendig.
 
 Im ersten Schritt wird eine .csv\-Datei über den Button **Durchsuchen…** ausgewählt und hochgeladen. Anschließend wird die Datei in der Liste angezeigt und sobald man mit der Maus über die Zeile der Datei fährt, kann man zwischen den Aktionen **Für Import verwenden**, **Datei herunterladen** und **Datei löschen** wählen.
 
@@ -106,6 +108,16 @@ Nachdem der Import abgeschlossen wurde, werden die Informationen zum Import sowi
 
 [![Liste der importierten Objekte](../../assets/images/de/daten-konsolidieren/csv-import/8-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/8-csvi.png)
 
+## Überschreiben von Objekttypen beim CSV Import
+
+Mit der Option **Der CSV Import kann den Objekttyp überschreiben?** können auch bei einem CSV Import die Objekttypen geändert bzw. Überschrieben werden.
+
+[![Überschreiben Option](../../assets/images/de/daten-konsolidieren/csv-import/11-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/11-csvi.png)
+
+Diese Option ist in den Experteneinstellungen als **import.csv.overwrite-objecttype** zu finden.
+
+!!! warning "Diese Option wird durch eine weitere Option blockiert, wenn Sie das überschreiben der Objekttypen aktivieren, müssen Sie die Option **SYS-ID nur lesbar** auf **Nein** stellen. In den Experteneinstellungen ist diese Option als **cmdb.registry.sysid_readonly**"
+
 ## Import von Beziehungen (Verknüpfen von Objekten)
 
 Der CSV-Datenimport ist in der Lage, Verknüpfungen von Objekten ([Beziehungen](../../grundlagen/objekt-beziehungen.md)) zu erzeugen, wenn diese über eine Kategorie gepflegt werden. Das zu verknüpfende Objekt kann ebenfalls in einer Spalte der .csv\-Datei hinterlegt und das Feld zur Verknüpfung als zuzuweisendes Attribut angeben werden. Ein Beispiel zur Angabe des physikalischen Standorts in Spalte H:
@@ -123,12 +135,12 @@ Während des Mappings kann man, nachdem das Feld ausgewählt wurde, angeben, ob 
 
 Einige Attribute beinhalten aus Werten und Einheiten. In den jeweiligen Formularen der Web GUI sind diese jeweils voneinander getrennt anzugeben. Beispielsweise besteht in der Kategorie **Monitor** das Attribut **Display** aus dem Feld für den Wert und aus dem Feld für die Einheit (Zoll, cm, usw.). Um dieses Attribut sinngemäß über den CSV-Datenimport zu importieren, müssen Wert und Einheit zusammen in einer Zelle stehen. Beispiele:
 
-| Kategorie | Attribut | Zuweisung beim CSV-Datenimport | Zelle in CSV-Datei |
-| --- | --- | --- | --- |
-| **CPU** | **CPU-Frequenz** | **CPU-Frequenz (Einheit)** | 2.5 GHz |
-| **Lokaler Massenspeicher → Gerät** | **Kapazität** | **Kapazität (Einheit)** | 4 TB |
-| **Monitor** | **Display** | **Display (Einheit)** | 24 Inch |
+| Kategorie                          | Attribut         | Zuweisung beim CSV-Datenimport | Zelle in CSV-Datei |
+| ---------------------------------- | ---------------- | ------------------------------ | ------------------ |
+| **CPU**                            | **CPU-Frequenz** | **CPU-Frequenz (Einheit)**     | 2.5 GHz            |
+| **Lokaler Massenspeicher → Gerät** | **Kapazität**    | **Kapazität (Einheit)**        | 4 TB               |
+| **Monitor**                        | **Display**      | **Display (Einheit)**          | 24 Inch            |
 
 ## CSV-Dateien über die i-doit Console importieren
 
-Der Import von CSV-Dateien ist nicht nur manuell über die Benutzeroberfläche möglich, sondern kann auch mit der i-doit [Console](../../automatisierung-und-integration/cli/console/index.md) umgesetzt werden. Dies erlaubt die Automatisierung des Imports, mit dem regelmäßig Informationen aktualisiert werden können. Eine Beschreibung aller Parameter ist im [entsprechenden Artikel](../../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#import-csv) inklusive eines Beispiels unter der Option **import-csv** zu finden. Weiterhin kann die ID eines zuvor erstellten Import-Profils im Aufruf angegeben werden. Diese IDs lassen sich mit der Option **import-csvprofiles** auslesen. Die Verwendung dieser Option ist ebenfalls im genannten Artikel beschrieben.
+Der Import von CSV-Dateien ist nicht nur manuell über die Benutzeroberfläche möglich, sondern kann auch mit der i-doit [Console](../../automatisierung-und-integration/cli/console/index.md) umgesetzt werden. Dies erlaubt die Automatisierung des Imports, mit dem regelmäßig Informationen aktualisiert werden können. Eine Beschreibung aller Parameter ist im [entsprechenden Artikel](../../automatisierung-und-integration/cli/console/befehle-und-optionen.md#import-csv) inklusive eines Beispiels unter der Option **import-csv** zu finden. Weiterhin kann die ID eines zuvor erstellten Import-Profils im Aufruf angegeben werden. Diese IDs lassen sich mit der Option **import-csvprofiles** auslesen. Die Verwendung dieser Option ist ebenfalls im genannten Artikel beschrieben.

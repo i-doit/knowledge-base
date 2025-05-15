@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.6.4
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Bug]           Aufbau der Beziehungsliste innerhalb eines Objektes sehr langsam in größeren Umgebungen<br>
 [Bug]           Schaltfläche "Speichern" in der Konfiguration von Report-Kategorien hat keine Auswirkungen<br>
 [Bug]           Schriftausrichtung wird im CMDB-Explorer-Profil nicht berücksichtigt<br>

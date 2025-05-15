@@ -1,6 +1,11 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.3
-
-[Erweiterung]  Schnittstelle zum IT Monitoring System Check_MK (http://mathias-kettner.de/check_mk.html)<br>
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
+[Erweiterung]  Schnittstelle zum IT Monitoring System Check_MK (<http://mathias-kettner.de/check_mk.html>)<br>
 [Erweiterung]  Check_MK: Validierung von Exports<br>
 [Erweiterung]  Neue Kategorie für N:M Beziehung für Software und Check_MK Services<br>
 [Erweiterung]  Vererbte Ansicht in der Softwarezuweisung für Check_MK Services<br>

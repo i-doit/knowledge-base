@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.5.6
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Bug]           Fehlerhafte Übersetzung bei Workflow-Checklisten<br>
 [Bug]           Fehlerhafte Übersetzung in englisch-sprachigen Reports<br>
 [Bug]           JDisc Discovery Log aus der Kategorie "JDisc Discovery" wird beim IE 9 nicht korrekt ausgegeben.<br>

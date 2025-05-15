@@ -5,7 +5,7 @@ The location of hardware and other components is an essential part of i-doit. Th
 Overview
 --------
 
-In the default installation i-doit already supplies [object types](../basics/structure-of-the-it-documentation.md) which are suitable for the documentation of locations - you can use them or hide them:
+In the default installation i-doit already supplies [object types](../basics/structure-of-the-it-documentation.md) which are suitable for the documentation of locations - you can use them or hide them:
 
 *   **Country**
 *   **City**
@@ -27,11 +27,11 @@ On top is the **Root Location** object and all other locations are subordinate t
 
 We use a printer as an example, it is located in an office room and the office room is assigned to a building:
 
-1.  Create a building and allocate it to the **Root Location** via the **Location** category.
+1.  Create a building and allocate it to the **Root Location** via the **Location** category.
 2.  Create a room and assign it to the building via the **Location** category.
 3.  Create printer and assign it to the room via the **Location** category.
 
-With this method you generate a so-called location path: **Root Location → Building → Room → Printer**.
+With this method you generate a so-called location path: **Root Location → Building → Room → Printer**.
 
 [![locations-path](../assets/images/en/use-cases/locations/1-loc.png)](../assets/images/en/use-cases/locations/1-loc.png)
 
@@ -42,7 +42,7 @@ With every location object the associated subordinated object is displayed in th
 Define an Object as Location
 ----------------------------
 
-When you want to define an object – for example, a room – also as a location for other objects, you have to activate their corresponding object type. This can be carried out under **Administration→ CMDB settings → Object type configuration → <Object type group> → <Object type> → Location**. For the above mentioned object types, the option is already set to **Yes**.
+When you want to define an object – for example, a room – also as a location for other objects, you have to activate their corresponding object type. This can be carried out under **Administration→ CMDB settings → Object type configuration → <Object type group> → <Object type> → Location**. For the above mentioned object types, the option is already set to **Yes**.
 
 Configuration of the Location Path
 ----------------------------------
@@ -51,9 +51,9 @@ You can configure the location path for each tenant.
 
 | Option | Data type | Default value | Description |
 | --- | --- | --- | --- |
-| ****Administration** → System settings → Tenantsettings → Graphical interface → String for separation of locations  <br>** | String | **>** | Which string shall be used to separate the objects of a location path from one another? |
-| ******Administration** → System settings → Tenantsettings** → Maximum lengths → Object title in location path  <br>** | Positive integer | **16** | How many characters per object are allowed for an object title in the location path? A longer string of characters is cut off. |
-| ******Administration** → System settings → Tenantsettings** → Maximum lengths → Full Length location path** | Positive integer | **40** | How many characters are allowed for the location path? A longer string of characters is cut off. |
+| **Administration** → System settings → Tenantsettings → Graphical interface → String for separation of locations  <br>** | String | **>** | Which string shall be used to separate the objects of a location path from one another? |
+| **Administration** → System settings → Tenantsettings** → Maximum lengths → Object title in location path  <br>** | Positive integer | **16** | How many characters per object are allowed for an object title in the location path? A longer string of characters is cut off. |
+| **Administration** → System settings → Tenantsettings** → Maximum lengths → Full Length location path** | Positive integer | **40** | How many characters are allowed for the location path? A longer string of characters is cut off. |
 
 Positioning of Hardware in the Rack
 -----------------------------------
@@ -68,12 +68,12 @@ A similar method is used in order to equip chassis with the corresponding module
 *   **Blade Chassis** and **Blade Server** as well as
 *   **Switch Chassis** and **Switch** (as module)
 
-The actual documentation is carried out in the **Chassis** category folder. By allocating a module in the **Chassis → Assigned devices** category, you also generate a location relation.
+The actual documentation is carried out in the **Chassis** category folder. By allocating a module in the  **Chassis → Assigned devices** category, you also generate a location relation.
 
 Geographical Coordinates
 ------------------------
 
-In the **Location** category you can store [geographical coordinates with latitude and longitude](./geo-coordinates.md). In this way links to the known map services are generated and the object is located on their maps.
+In the **Location** category you can store [geographical coordinates with latitude and longitude](./geo-coordinates.md). In this way links to the known map services are generated and the object is located on their maps.
 
 Location View
 -------------
@@ -85,12 +85,12 @@ You can navigate through all location paths with the left navigation menu under 
 Logical Locations
 -----------------
 
-A documented workplace receives a person as logical location. You can also assign workplaces to physical locations. The **Location View** (see above) can either represent physical or logical locations or a combination of both. This option is a [user-defined](./creating-a-local-user.md) option.
+A documented workplace receives a person as logical location. You can also assign workplaces to physical locations. The **Location View** (see above) can either represent physical or logical locations or a combination of both. This option is a [user-defined](../user-authentication-and-management/builtin-authentication/creating-a-local-user.md) option.
 
 Floor Plan
 ----------
 
-The [Floorplan](../i-doit-pro-add-ons/floorplan.md) add-on is suitable for creating two-dimensional plans on basis of the location paths.
+The [Floorplan](../i-doit-add-ons/floorplan.md) add-on is suitable for creating two-dimensional plans on basis of the location paths.
 
 User Rights for Locations
 -------------------------

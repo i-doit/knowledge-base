@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.14
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Code (internal)] Compatibility for PHP 7.4<br>
 [Improvement][Code (internal)] i-doit no longer supports PHP 7.0, minimum requirement is PHP 7.1<br>
 [Improvement][Code (internal)] Remove unnecessary WYSIWYG formatting options<br>
@@ -47,7 +52,7 @@
 [Bug][Code (internal)] Create import and upload folders for each client<br>
 [Bug][Update] Recursively create folders for uploading files<br>
 [Bug][Update] Migration of reports not possible 1.13 > 1.13.1-2<br>
-[Bug][Admincenter] Admin Center login does not work after updating to i-doit 1.13.2<br>
+[Bug][Admincenter] Admin-Center login does not work after updating to i-doit 1.13.2<br>
 [Bug][Console] Relationships are misrepresented when using php console.php system-objectrelations<br>
 [Bug][Search] Memory exception when creating search index<br>
 [Bug][Licence settings] License widget: color of remaining term not according to definition<br>

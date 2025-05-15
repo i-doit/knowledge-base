@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.12.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Bug][CMDB] Unauthenticated SQL-Injection in i-doit während Login<br>
 [Bug][CMDB] Über den URL Parameter "objectGroupId" war es möglich SQL Injections einzuschleusen.<br>
 [Bug][Code] Arbitrary File Download Security Vulnerability<br>

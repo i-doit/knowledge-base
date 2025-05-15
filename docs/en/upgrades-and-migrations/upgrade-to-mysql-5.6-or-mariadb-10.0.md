@@ -1,6 +1,14 @@
+---
+title: Upgrade to MySQL 5.6 or MariaDB 10.0
+description: Upgrade to MySQL 5.6 or MariaDB 10.0
+icon: fontawesome/brands/linux
+status:
+lang: en
+---
+
 # Upgrade to MySQL 5.6 or MariaDB 10.0
 
-Beginning with version 1.7 of i-doit the [system requirements](../installation/system-requirements.md) for the database back end change. While version 1.6 required at least MySQL 5.5 or MariaDB 5.5, version 1.7 requires MySQL 5.6 or MariaDB 10.0. This may also entail changes to the [operating systems](../installation/manual-installation/index.md) which are supported by synetics. This article describes the most important details to ensure that i-doit continues to function completely.
+Beginning with version 1.7 of i-doit the [system requirements](../installation/system-requirements.md) for the database back end change. While version 1.6 required at least MySQL 5.5 or MariaDB 5.5, version 1.7 requires MySQL 5.6 or MariaDB 10.0. This may also entail changes to the [operating systems](../installation/manual-installation/index.md) which are supported by synetics. This article describes the most important details to ensure that i-doit continues to function completely.
 
 In order to determine which version is in use, the following command can be executed in the command line (this works with both MySQL and MariaDB):
 
@@ -8,23 +16,23 @@ In order to determine which version is in use, the following command can be exec
 
 For each operating system there may be multiple upgrade paths. We recommend the use of those, which, from our point of view, have the least impact on the system:
 
-| **Operating System** | **Version** | **Old Database Back End** | **New Database Back End** |
-| --- | --- | --- | --- |  
-| Debian GNU/Linux | 8   | MySQL 5.5, MariaDB 10.0 | MariaDB 10.0 |
-|     | 7.8 | MySQL 5.5 | MariaDB 10.0 |
-| Ubuntu | 14.04 LTS | MySQL 5.5, MySQL 5.6, MariaDB 5.5 | MySQL 5.6 |
-|     | 12.04 LTS | MySQL 5.5 | MariaDB 10.0 |
-| Red Hat Enterprise Linux (RHEL) | 7.1 | MariaDB 5.5 | MariaDB 10.0 |
-|     | 6.7 | MySQL 5.1 | MariaDB 10.0 |
-| SUSE Linux Enterprise Server (SLES) | 12  | MariaDB 10.0 | MariaDB 10.0 |
-| Windows Server | 2008/2012 | depending on XAMPP version | MariaDB 10.0 |
+| **Operating System**                | **Version** | **Old Database Back End**         | **New Database Back End** |
+| ----------------------------------- | ----------- | --------------------------------- | ------------------------- |
+| Debian GNU/Linux                    | 8           | MySQL 5.5, MariaDB 10.0           | MariaDB 10.0              |
+|                                     | 7.8         | MySQL 5.5                         | MariaDB 10.0              |
+| Ubuntu                              | 14.04 LTS   | MySQL 5.5, MySQL 5.6, MariaDB 5.5 | MySQL 5.6                 |
+|                                     | 12.04 LTS   | MySQL 5.5                         | MariaDB 10.0              |
+| Red Hat Enterprise Linux (RHEL)     | 7.1         | MariaDB 5.5                       | MariaDB 10.0              |
+|                                     | 6.7         | MySQL 5.1                         | MariaDB 10.0              |
+| SUSE Linux Enterprise Server (SLES) | 12          | MariaDB 10.0                      | MariaDB 10.0              |
+| Windows Server                      | 2008/2012   | depending on XAMPP version        | MariaDB 10.0              |
 
 !!! attention "Before you carry out changes to the system it is absolutely vital to [secure the data](../maintenance-and-operation/backup-and-recovery/index.md). Since the duration of the upgrade process varies depending on the operating system, all users of _i-doit_ should be informed in advance."
 
 Debian GNU/Linux 8
 ------------------
 
-Version 8 of [Debian GNU/Linux](../installation/manual-installation/debian.md) contains MySQL 5.5 and MariaDB 10.0 in the standard packages. If MySQL is installed, it is sufficient to install the MariaDB package. In doing so, MySQL is replaced with MariaDB:
+Version 8 of Debian GNU/Linux contains MySQL 5.5 and MariaDB 10.0 in the standard packages. If MySQL is installed, it is sufficient to install the MariaDB package. In doing so, MySQL is replaced with MariaDB:
 
     sudo apt-get update
     sudo apt-get install mariadb-server php5-mysqlnd
@@ -32,7 +40,7 @@ Version 8 of [Debian GNU/Linux](../installation/manual-installation/debian.md) c
 Debian GNU/Linux 7.8
 --------------------
 
-Version 7.8 of [Debian GNU/Linux](../installation/manual-installation/debian.md) contains MySQL 5.5 in the standard packages, but not MariaDB. To use MariaDB the [official repository for MariaDB can be downloaded and installed](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=Debian&distro_release=wheezy--wheezy&version=10.0). Caution: Third-party repositories may impair the system. MySQL is replaced by MariaDB when installing the latter:
+Version 7.8 of Debian GNU/Linux contains MySQL 5.5 in the standard packages, but not MariaDB. To use MariaDB the [official repository for MariaDB can be downloaded and installed](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=Debian&distro_release=wheezy--wheezy&version=10.0). Caution: Third-party repositories may impair the system. MySQL is replaced by MariaDB when installing the latter:
 
     sudo apt-get update
     sudo apt-get install python-software-properties
@@ -44,7 +52,7 @@ Version 7.8 of [Debian GNU/Linux](../installation/manual-installation/debian.md)
 Ubuntu 14.04 LTS
 ----------------
 
-Version 14.04 LTS of [Ubuntu](../installation/manual-installation/ubuntu-linux/index.md) contains MySQL 5.5, 5.6 and MariaDB 5.5 in the standard packages. Because of this we recommend using MySQL 5.6. Should MySQL 5.5 or MariaDB 5.5 be already installed, then these are replaced by MySQL 5.6:
+Version 14.04 LTS of [Ubuntu](../installation/manual-installation/ubuntu/index.md) contains MySQL 5.5, 5.6 and MariaDB 5.5 in the standard packages. Because of this we recommend using MySQL 5.6. Should MySQL 5.5 or MariaDB 5.5 be already installed, then these are replaced by MySQL 5.6:
 
     sudo apt-get update
     sudo apt-get install mysql-server-5.6 php5-mysqlnd mysql-client-core-5.6 mysql-client-5.6
@@ -52,7 +60,7 @@ Version 14.04 LTS of [Ubuntu](../installation/manual-installation/ubuntu-linux/i
 Ubuntu 12.04 LTS
 ----------------
 
-Version 12.04 LTS of [Ubuntu](../installation/manual-installation/ubuntu-linux/index.md) contains MySQL 5.5 in the standard packages but no MariaDB. Since this version of the operating system contains very old packages for MySQL, PHP and Apache Webserver, we do not recommend its usage and instead advise to upgrade to version 14.04 LTS. If this is not feasible, a change to MariaDB 10.0 can be made by [downloading and installing the official repository for MariaDB](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=Ubuntu&distro_release=precise--ubuntu_precise&version=10.0). Caution: Third-party repositories may impair the system. MySQL is replaced with the installation of MariaDB:
+Version 12.04 LTS of [Ubuntu](../installation/manual-installation/ubuntu/index.md) contains MySQL 5.5 in the standard packages but no MariaDB. Since this version of the operating system contains very old packages for MySQL, PHP and Apache Webserver, we do not recommend its usage and instead advise to upgrade to version 14.04 LTS. If this is not feasible, a change to MariaDB 10.0 can be made by [downloading and installing the official repository for MariaDB](https://downloads.mariadb.org/mariadb/repositories/#mirror=23Media&distro=Ubuntu&distro_release=precise--ubuntu_precise&version=10.0). Caution: Third-party repositories may impair the system. MySQL is replaced with the installation of MariaDB:
 
     sudo apt-get update
     sudo apt-get install python-software-properties
@@ -64,7 +72,7 @@ Version 12.04 LTS of [Ubuntu](../installation/manual-installation/ubuntu-linux/i
 Red Hat Enterprise Linux 7.1
 ----------------------------
 
-Version 7.1 of [Red Hat Enterprise Linux (RHEL)](../installation/manual-installation/red-hat-enterprise-linux/index.md) contains MariaDB 5.5 in the standard packages but no MySQL. To change to MariaDB 10.0, only a few steps are needed [according to a blog entry from MariaDB](https://mariadb.com/blog/installing-mariadb-10-centos-7-rhel-7).  In this way, MariaDB 5.5 is replaced by 10.0. Caution: Third-party repositories may impair the system.
+Version 7.1 of [Red Hat Enterprise Linux (RHEL)](../installation/manual-installation/red-hat-enterprise-linux/index.md) contains MariaDB 5.5 in the standard packages but no MySQL. To change to MariaDB 10.0, only a few steps are needed [according to a blog entry from MariaDB](https://mariadb.com/blog/installing-mariadb-10-centos-7-rhel-7). In this way, MariaDB 5.5 is replaced by 10.0. Caution: Third-party repositories may impair the system.
 
 !!! attention "This upgrade path refers to the 64bit variant of the operating system."
 
@@ -121,7 +129,7 @@ Finally, the package is installed:
 SUSE Linux Enterprise Server 12
 -------------------------------
 
-Version 12 of [SUSE Linux Enterprise Server (SLES)](../installation/manual-installation/suse-linux-enterprise-server.md) already contains MariaDB 10.0 in the standard packages but not MySQL. Therefore no upgrade is needed.
+Version 12 of [SUSE Linux Enterprise Server (SLES)](../installation/manual-installation/suse/index.md) already contains MariaDB 10.0 in the standard packages but not MySQL. Therefore no upgrade is needed.
 
 Windows Server 2008/2012
 ------------------------
@@ -132,24 +140,16 @@ XAMPP is recommended if [Windows Server 2008/2012](../installation/manual-instal
 
 The following steps are needed if a version of XAMPP without MariaDB 10.0 is applied:
 
-1.  Copy the XAMPP folder, in most cases in C:\xampp\
-    
-2.  Download the latest version of XAMPP from the [official website](https://www.apachefriends.org/index.html)
-    
-3.  Uninstall the present XAMPP version
-    
-4.  Delete the XAMPP folder
-    
-5.  Install the new XAMPP version in the same folder
-    
-6.  Restore the folders htdocs and mysql\data from the copy of the XAMPP folder, do no overwrite existing files
-    
-7.  Adjust the configuration files, so that they meet the required [system settings](../installation/manual-installation/system-settings.md)
-    
-8.  Start Apache Webserver and MariaDB5
-    
-9.  Perform tests
-    
+1. Copy the XAMPP folder, in most cases in C:\xampp\
+2. Download the latest version of XAMPP from the [official website](https://www.apachefriends.org/index.html)
+3. Uninstall the present XAMPP version
+4. Delete the XAMPP folder
+5. Install the new XAMPP version in the same folder
+6. Restore the folders htdocs and mysql\data from the copy of the XAMPP folder, do no overwrite existing files
+7. Adjust the configuration files, so that they meet the required [system settings](../installation/manual-installation/system-settings.md)
+8. Start Apache Webserver and MariaDB5
+9. Perform tests
+
 Troubleshooting
 ---------------
 

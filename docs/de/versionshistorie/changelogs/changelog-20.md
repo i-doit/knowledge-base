@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 20
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][Code (Internal)]             Change versioning schema<br>
 [Task][Code (Internal)]             Remove callables from smarty plugin parameters 'modify' and 'p_func'<br>
 [Improvement][Application Redesign] Allow user to define the category field margin<br>

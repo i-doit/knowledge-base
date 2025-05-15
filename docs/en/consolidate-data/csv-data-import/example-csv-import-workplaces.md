@@ -1,5 +1,7 @@
 # Example of CSV import - Workplaces
 
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
 In this example we build on the [CSV import of locations](example-csv-import-creating-locations.md) and want to import workplaces.  
 These are to be assigned to a room as a location and furthermore we want to assign clients, monitors and printers to the workplaces.
 
@@ -7,17 +9,16 @@ These are to be assigned to a room as a location and furthermore we want to assi
 
 For the import we need the following information:
 
--  Object title → the name of the workstation, client, screen or printer.
--  Location → under which location the object should be located
--  Object type → what type of object it should be
--  Workplaces assignment → to which workstation the component should be assigned
+-   Object title → the name of the workstation, client, screen or printer.
+-   Location → under which location the object should be located
+-   Object type → what type of object it should be
+-   Workplaces assignment → to which workstation the component should be assigned
 
 Example CSV file for this import:
 
 [Import-Workplaces.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/Import-Workplaces.csv){ .md-button .md-button--primary }
 
 ??? example "Import Workplaces.csv"
-
     ```text
     Object title;Location;Object type;Workplace assignment
     AP0001;Room 1.001;C__OBJTYPE__WORKSTATION;;
@@ -116,4 +117,4 @@ Now we can make the import configuration in the lower area as follows, and then 
 
 If we have done everything correctly, the individual workstations will now appear, are assigned to a location and under each workstation we will find an assigned client, monitor and printer.
 
-[![idividual-workstations](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/3-csv-i-w.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/3-csv-i-w.png)
+[![individual-workstations](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/3-csv-i-w.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-workplaces/3-csv-i-w.png)

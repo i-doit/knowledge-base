@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.9.4
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung] Neue TTS Schnittstelle zu Zammad<br>
 [Verbesserung] Massenlöschung in der Massenänderung<br>
 [Verbesserung] Das Check_MK transfer Skript erzeugt Änderungen in Check_MK 1.4<br>

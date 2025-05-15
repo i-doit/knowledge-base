@@ -31,11 +31,11 @@ Ein Endgerät kann stets nur einem Arbeitsplatz zugeordnet werden. Welcher Arbei
 Standort eines Arbeitsplatzes
 -----------------------------
 
-Zu guter Letzt kann ein Arbeitsplatz ebenfalls physikalisch verortet werden, beispielsweise in einem Büroraum. Mit dem Add-on [**Raumplan**](../i-doit-pro-add-ons/floorplan.md) kann dieser Raum anschließend visualisiert werden.
+Zu guter Letzt kann ein Arbeitsplatz ebenfalls physikalisch verortet werden, beispielsweise in einem Büroraum. Mit dem Add-on [**Raumplan**](../i-doit-add-ons/floorplan.md) kann dieser Raum anschließend visualisiert werden.
 
 [![Raumplan](../assets/images/de/anwendungsfaelle/arbeitsplaetze/6-ap.png)](../assets/images/de/anwendungsfaelle/arbeitsplaetze/6-ap.png)
 
 Umzug eines Arbeitsplatzes
 --------------------------
 
-Sollte eine Person intern den Platz wechseln, kann diese inklusive Arbeitsplatz und ausgewählten Endgeräten umziehen. Eine komfortable Funktion bietet das Add-on **[Relocate-CI](../i-doit-pro-add-ons/relocate-ci.md)**.
+Sollte eine Person intern den Platz wechseln, kann diese inklusive Arbeitsplatz und ausgewählten Endgeräten umziehen. Eine komfortable Funktion bietet das Add-on **[Relocate-CI](../i-doit-add-ons/relocate-ci.md)**.

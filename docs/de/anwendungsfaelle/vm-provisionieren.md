@@ -1,49 +1,46 @@
 # VM provisionieren (veraltet)
 
+!!! warning "Veraltet"
+
 In diesem Artikel beleuchten wir den [Anwendungsfall](./index.md), virtuelle Maschinen (VM) über i-doit zu provisionieren. Dazu machen wir uns eine gepflegte [IT-Dokumentation](../grundlagen/struktur-it-dokumentation.md) zunutze, gepaart mit wenigen Scripts, um diesen [Automatismus](../automatisierung-und-integration/index.md) Wirklichkeit werden zu lassen.
 
-Problemstellung
----------------
+## Problemstellung
 
 Bisher wird strikt zwischen Dokumentations- und Konfigurationsdaten unterschieden: In i-doit wird die organisationsweite IT dokumentiert inklusive einem Virtualisierungs-Cluster, bestehend aus mehreren Virtualisierungs-Hosts (Wirtsysteme) und den darauf laufenden virtuellen Maschinen (Gastsysteme). Die Konfiguration jeder VM, also das Anlegen einer neuen VM mit bestimmten Angaben zu CPU, Arbeitsspeicher, Netzwerk, Plattenplatz usw., erfolgt innerhalb der Administrationsoberfläche des Clusters. Diesen Vorgang nennt man auch Provisionierung.
 
 Im Alltag sieht der Prozess daher so aus, dass über ein dediziertes Tool eine neue VM angelegt wird und die erledigte Arbeit nachträglich in i-doit dokumentiert wird:
 
-1.  Starten des Konfigurations-Tools des Virtualisierungs-Clusters
-2.  Anlegen und Konfiguration einer neuen VM
-3.  Wechsel in die IT-Dokumentation (i-doit)
-4.  Anlegen einer neuen VM, Konfiguration in den entsprechenden [Kategorien](../grundlagen/struktur-it-dokumentation.md) ablegen, VM dem Cluster zuordnen
+1. Starten des Konfigurations-Tools des Virtualisierungs-Clusters
+2. Anlegen und Konfiguration einer neuen VM
+3. Wechsel in die IT-Dokumentation (i-doit)
+4. Anlegen einer neuen VM, Konfiguration in den entsprechenden [Kategorien](../grundlagen/struktur-it-dokumentation.md) ablegen, VM dem Cluster zuordnen
 
 Ein Datenaustausch zwischen dem genutzten Tool und i-doit findet nicht statt, sodass die VM-Konfiguration zweimal erledigt werden muss. Fehler beim Übertragen der Konfiguration sind hierbei nicht ausgeschlossen. Die redundante Pflege von Konfigurationsdaten ist also eine denkbar undankbare Aufgabe für den Admin.
 
 !!! attention "Dieser Artikel ist veraltet und nicht mehr aktuell"
     Bitte beachten Sie, dass das hier dargestellte vorgehen bereits veraltet sein kann.
 
-
-Lösung
-------
+## Lösung
 
 Wir möchten diesen Prozess optimieren, indem wir die in i-doit vorhandenen Konfigurationsdaten nutzen und einige Schritte automatisieren. Dazu stellen wir den Prozess um:
 
-1.  Öffnen der IT-Dokumentation (i-doit)
-2.  Anlegen einer neuen VM, Konfiguration in den entsprechenden [Kategorien](../grundlagen/struktur-it-dokumentation.md) ablegen, VM dem Cluster zuordnen
-3.  Die VM wird automatisch im Konfiguration-Tools des Virtualisierungs-Clusters erstellt und provisioniert.
+1. Öffnen der IT-Dokumentation (i-doit)
+2. Anlegen einer neuen VM, Konfiguration in den entsprechenden [Kategorien](../grundlagen/struktur-it-dokumentation.md) ablegen, VM dem Cluster zuordnen
+3. Die VM wird automatisch im Konfiguration-Tools des Virtualisierungs-Clusters erstellt und provisioniert.
 
 Aus 4 manuellen Schritten werden 2. Der dritte Schritt geschieht automatisiert im Hintergrund. Für den Admin entfällt die doppelte Pflege der Konfigurationsdaten. Fehlerquellen werden eliminiert. Der Admin ist zufrieden.
 
-Annahmen
---------
+## Annahmen
 
 Diesen Anwendungsfall spielen wir einmal komplett an einem Beispiel durch. Es soll das prinzipielle Vorgehen darstellen und lässt sich problemlos auf andere Umgebungen übertragen. Für den Lösungsweg nehmen wir an:
 
-1.  Der Virtualisierungs-Cluster basiert auf [VMware vSphere](https://de.wikipedia.org/wiki/VMware_vSphere) in Version 5.
-2.  i-doit ist auf [Debian GNU/Linux](../installation/manuelle-installation/debian.md) 8.5 installiert. Hierzu bedienen wir uns der der [Eval Appliance](../installation/i-doit-virtual-eval-appliance/index.md). Die Distributionspakete sollten mit apt auf den neusten Stand gebracht werden.
-3.  Die Version von i-doit beträgt mindestens Version [1.7.1](../versionshistorie/index.md). Der i-doit Host ist über den FQDN i-doit.example.net erreichbar.
-4.  Zum Kontrollieren der Automatisierung nutzen wir den VMware vSphere Client.
-5.  Es existiert ein User in VMware vSphere, der VMs provisionieren darf. Dieser User heißt in diesem Beispiel vmprovision mit dem Passwort vmprovision.
+1. Der Virtualisierungs-Cluster basiert auf [VMware vSphere](https://de.wikipedia.org/wiki/VMware_vSphere) in Version 5.
+2. i-doit ist auf Debian GNU/Linux 8.5 installiert. Hierzu bedienen wir uns der der [Eval Appliance](../installation/i-doit-virtual-eval-appliance/index.md). Die Distributionspakete sollten mit apt auf den neusten Stand gebracht werden.
+3. Die Version von i-doit beträgt mindestens Version [1.7.1](../versionshistorie/index.md). Der i-doit Host ist über den FQDN i-doit.example.net erreichbar.
+4. Zum Kontrollieren der Automatisierung nutzen wir den VMware vSphere Client.
+5. Es existiert ein User in VMware vSphere, der VMs provisionieren darf. Dieser User heißt in diesem Beispiel vmprovision mit dem Passwort vmprovision.
 
-Konfiguration
--------------
+## Konfiguration
 
 Beginnen wir zunächst mit den Vorarbeiten, damit beide Systeme überhaupt miteinander kommunizieren können.
 
@@ -91,7 +88,7 @@ An dieser Stelle sind wir mit der Installation des SDKs durch. Wir haben uns fre
 
 ### i-doit API
 
-Die Kommunikation zwischen i-doit und VMware findet unter anderem über die [API von i-doit](../i-doit-pro-add-ons/api/index.md) statt. Diese muss aktiviert und der API Key bekannt sein. Um die API komfortabel zu nutzen, verwenden wir den [Referenz-Client für PHP](https://bitbucket.org/dstuecken/i-doit-api-clients/wiki/PHP):
+Die Kommunikation zwischen i-doit und VMware findet unter anderem über die [API von i-doit](../i-doit-add-ons/api/index.md) statt. Diese muss aktiviert und der API Key bekannt sein. Um die API komfortabel zu nutzen, verwenden wir den [Referenz-Client für PHP](https://bitbucket.org/dstuecken/i-doit-api-clients/wiki/PHP):
 
     cd /usr/local/share/
     git clone https://bitbucket.org/dstuecken/i-doit-api-clients.git
@@ -411,7 +408,7 @@ Die beiden [CMDB-Status](../grundlagen/lebens-und-dokumentationszyklus.md)\-Anga
 
 ### Event konfigurieren
 
-Nun müssen wir in i-doit noch konfigurieren, dass bei bestimmten Änderungen des Script aufgerufen wird. Dazu verwenden wir die [Event-Steuerung](../i-doit-pro-add-ons/floorplan.md) und legen dort einen neuen Hook an:
+Nun müssen wir in i-doit noch konfigurieren, dass bei bestimmten Änderungen des Script aufgerufen wird. Dazu verwenden wir die [Event-Steuerung](../i-doit-add-ons/floorplan.md) und legen dort einen neuen Hook an:
 
 *   **Event**: **Category: (arbitrary sources) Speichern**
 *   **Description**: **VM provisioning**
@@ -431,7 +428,7 @@ Schauen wir uns nach der ausgiebigen, zum Glück einmaligen Konfiguration an, wi
 
 ### Virtuelle Umgebung in i-doit dokumentieren
 
-Es exisitiert bereits ein vSphere Cluster (Objekttyp **Cluster**) mit einigen ESX-Hosts (Objekttyp **Virtueller Host**). Der Objekt-Titel des Clusters entspricht dem des Datencenters in vSphere. Die Objekt-Titel der ESX-Hosts sind die Hostnamen, die auch in vSphere angezeigt werden.
+Es existiert bereits ein vSphere Cluster (Objekttyp **Cluster**) mit einigen ESX-Hosts (Objekttyp **Virtueller Host**). Der Objekt-Titel des Clusters entspricht dem des Datencenters in vSphere. Die Objekt-Titel der ESX-Hosts sind die Hostnamen, die auch in vSphere angezeigt werden.
 
 [![Cluster](../assets/images/de/anwendungsfaelle/vm-provisionieren-veraltet/5-vmpv.png)](../assets/images/de/anwendungsfaelle/vm-provisionieren-veraltet/5-vmpv.png)
 
@@ -497,4 +494,4 @@ Ist die Provisionierung erfolgreich durchgelaufen, ändert sich der CMDB-Status 
 
 [![provisioned](../assets/images/de/anwendungsfaelle/vm-provisionieren-veraltet/18-vmpv.png)](../assets/images/de/anwendungsfaelle/vm-provisionieren-veraltet/18-vmpv.png)
 
-Die Kommunikation zwischen i-doit und vSphere wird unter **Verwaltung → CMDB Einstellungen → Events → Historie (Log)** angezeigt.
+Die Kommunikation zwischen i-doit und vSphere wird unter **Verwaltung → Add-ons → Events → Historie (Log)** angezeigt.

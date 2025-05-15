@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.5.3
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  Nutzung der eingestellten Benutzersprache bei Verbindungen über die API<br>
 [Verbesserung]  Einstellbares Default Profil im CMDB Explorer<br>
 [Verbesserung]  JDisc: Import von Gastsysteme bei einem Virtuellen Host<br>

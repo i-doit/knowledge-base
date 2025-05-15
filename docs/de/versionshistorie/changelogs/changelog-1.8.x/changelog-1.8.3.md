@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.8.3
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  Objektlisten: Performance des Attributs "Betriebssystem" aus der Kategorie "Betriebssystem" verbessert<br>
 [Verbesserung]  Im CMDB-Explorer werden die Beziehungsrichtungen nun besser dargestellt<br>
 [Verbesserung]  Es werden alle Referenzen des angeklickten Objekts im CMDB-Explorer markiert<br>

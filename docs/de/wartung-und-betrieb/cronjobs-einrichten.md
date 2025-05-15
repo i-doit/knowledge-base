@@ -95,7 +95,7 @@ Das Script wird anschließend ausführbar gemacht:
 
         usermod -aG sudo "$(whoami)"
 
-    Unter [SLES](../installation/manuelle-installation/suse-linux-enterprise-server.md) ist die Option **Defaults targetpw** gesetzt, die diesen Mechanismus verhindert. Daher muss diese Option in der Datei **/etc/sudoers** auskommentiert werden.
+    Unter [SLES](../installation/manuelle-installation/suse/index.md) ist die Option **Defaults targetpw** gesetzt, die diesen Mechanismus verhindert. Daher muss diese Option in der Datei **/etc/sudoers** auskommentiert werden.
 
 Ab dann kann es von jedem User verwendet werden:
 
@@ -234,7 +234,6 @@ Wird das Script ausgeführt werden folgende Arbeiten erledigt:
 *   Der [Suchindex](../effizientes-dokumentieren/suche.md) wird neu aufgebaut.
 *   [Benachrichtigungen](../auswertungen/benachrichtigungen.md) werden per E-Mail versendet.
 
-
 Aufruf der Jobs automatisieren
 ------------------------------
 
@@ -256,7 +255,7 @@ Damit ggf. Fehler abgefangen und an den zuständigen Systemadministrator gemelde
 
 !!! attention "chronic unter SLES"
 
-    Das Paket **moreutils** und somit das Tool **chronic** sind kein Bestandteil von [SLES](../installation/manuelle-installation/suse-linux-enterprise-server.md). Daher muss **chronic** manuell von der Website heruntergeladen werden:
+    Das Paket **moreutils** und somit das Tool **chronic** sind kein Bestandteil von [SLES](../installation/manuelle-installation/suse/index.md). Daher muss **chronic** manuell von der Website heruntergeladen werden:
 
         wget https://git.joeyh.name/index.cgi/moreutils.git/plain/chronic
         chmod +x chronic

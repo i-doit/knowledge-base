@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.11
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Aufgabe][Code]                                 "Events" Add-on aus dem Kern gelöst<br>
 [Aufgabe][Import]                               Entfernen des Loginventory Imports inkl. DB, Modul etc.<br>
 [Verbesserung][CMDB]                            Extras-Menü wird bei einem Klick in den freien Bereich nicht geschlossen<br>

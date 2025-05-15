@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.7
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Neue Funktion] Globale Suchfunktion über die JSON-RPC API (Methode idoit.search)<br>
 [Neue Funktion] Check_MK: Export um "Sites" und "Distributed Monitoring" erweitern<br>
 [Neue Funktion] Suchindizierung als Controller Script (search_index)<br>

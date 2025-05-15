@@ -15,11 +15,11 @@ Per Drag'n'Drop zieht man das Objekt zum gewünschten Objekttypen im linken Men�
 
 [![objekt-liste-3](../../assets/images/de/grundlagen/objekt-listen/3-ol.gif)](../../assets/images/de/grundlagen/objekt-listen/3-ol.gif)
 
-Dazu muss die [Allgemeine Konfiguration](../../administration/verwaltung/cmdb-einstellungen.md) Drag 'n' Drop von Objekten auf Ja stehen.
+Dazu muss die [oberflächendarstellung](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#oberflächendarstellung) Drag 'n' Drop von Objekten auf Ja stehen.
 
 Welche weiteren Funktionen und Anpassungen für die Objekt-Liste genutzt werden können, verraten folgende Artikel:
 
-- **[Aktionsleiste](aktionsleiste.md)** Im oberen Bereich befinden sich die einzelnen Buttons zur  Durchführung verschiedener Aktionen. Rechts dieser Buttons ist ein Drop-Down-Menü zum Wechseln des [Zustands](../lebens-und-dokumentationszyklus.md) zu finden.
-- **[Navigieren und filtern](navigieren-und-filtern.md)** Um den Überblick bei langen Listen nicht zu verlieren, kann man über mehrere Seiten navigieren und die Liste nach Attributen filtern.
-- **[Listenansicht konfigurieren](listenansicht-konfigurieren.md)** Jede Objekt-Liste lässt sich pro Benutzer anpassen. Es lassen sich aber auch Vorgaben für bestehende und neue Benutzer machen, wie die Objekt-Listen auszusehen haben.
-- **[Erweiterte Einstellungen](erweiterte-einstellungen.md)** Das letzte Quäntchen aus den Objekt-Listen herausholen? Kein Problem.
+-   **[Aktionsleiste](aktionsleiste.md)** Im oberen Bereich befinden sich die einzelnen Buttons zur  Durchführung verschiedener Aktionen. Rechts dieser Buttons ist ein Drop-Down-Menü zum Wechseln des [Zustands](../lebens-und-dokumentationszyklus.md) zu finden.
+-   **[Navigieren und filtern](navigieren-und-filtern.md)** Um den Überblick bei langen Listen nicht zu verlieren, kann man über mehrere Seiten navigieren und die Liste nach Attributen filtern.
+-   **[Listenansicht konfigurieren](listenansicht-konfigurieren.md)** Jede Objekt-Liste lässt sich pro Benutzer anpassen. Es lassen sich aber auch Vorgaben für bestehende und neue Benutzer machen, wie die Objekt-Listen auszusehen haben.
+-   **[Erweiterte Einstellungen](erweiterte-einstellungen.md)** Das letzte Quäntchen aus den Objekt-Listen herausholen? Kein Problem.

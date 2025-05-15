@@ -1,12 +1,20 @@
+---
+title: System settings
+description: System settings
+icon: material/wrench-cog
+status:
+lang: en
+---
+
 # System settings
 
 For the configuration of the operating system we recommend a series of settings with regard to PHP, Apache Webserver and MySQL/MariaDB. These are based on the [system requirements](../system-requirements.md) for i-doit. The settings vary depending on the operating system therefore please refer to the corresponding articles for further information:
 
-*   [Debian GNU/Linux](debian.md)
-*   [Red Hat Enterprise Linux (RHEL)](red-hat-enterprise-linux/index.md)
-*   [Suse Linux Enterprise Server (SLES)](suse-linux-enterprise-server.md)
-*   [Ubuntu Linux](ubuntu-linux/index.md)
-*   [Microsoft Windows Server](microsoft-windows-server/index.md)
+-   [Debian GNU/Linux](debian/index.md)
+-   [Red Hat Enterprise Linux (RHEL)](red-hat-enterprise-linux/index.md)
+-   [SUSE Linux Enterprise Server (SLES)](suse/index.md)
+-   [Ubuntu Linux](ubuntu/index.md)
+-   [Microsoft Windows Server](microsoft-windows-server/index.md)
 
 ## PHP
 
@@ -16,9 +24,9 @@ At this point we would like to address a few features of PHP which supplement th
 
 i-doit possesses its own caching strategies to answer requests as fast as possible. So-called Opcode Caches for PHP and key-value storages can be additionally used to achieve further improvements of performance. Here the following order is taken into account:
 
-1.  memcached
-2.  APC(u)
-3.  Filesystem
+1. memcached
+2. APC(u)
+3. Filesystem
 
 We recommend the use of _either_ **memcached** _or_ **APC/APCu**. We lean towards the usage of **memcached**. Instructions for the installation (except for Windows) can be found in the above mentioned articles.
 

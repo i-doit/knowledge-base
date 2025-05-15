@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.6.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Neue Funktion] JDisc-Profile: Kategorie-Auswahl Erweiterung um "FC-Ports".<br>
 [Verbesserung]  Neues Readonly Feld "Verwaltungsinstanz" in Kategorie Virtuelle Maschine<br>
 [Verbesserung]  Neue Einheiten: "Foot", "Meter" und "Kilometer"<br>

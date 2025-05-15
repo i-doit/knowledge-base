@@ -1,10 +1,10 @@
 # H-Inventory
 
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+
 h-inventory is an open source software for automatic inventory of hardware and software components as well as entire networks. The software is available on SourceForge at [http://sourceforge.net/projects/h-inventory/](http://sourceforge.net/projects/h-inventory/) for various operating systems.
 
 i-doit is able to import data from the inventory tool h-inventory. The data exported there in XML format is prepared during import to such an extent that the information necessary for a CMDB can be taken over as far as possible. In this way, a lot of essential information can be collected automatically as the basis for a CMDB or IT documentation, in order to be manually enriched with further information in a later step.
-
-  
 
 **The following data can be transferred from h-inventory:**
 
@@ -45,9 +45,7 @@ Import with "Next "".
 
 The imported client is now available
 
-  
-
 Import eines H-Inventory Exports per Konsole
 --------------------------------------------
 
-Besides the possibility to upload the XML file via the i-doit interface and import the information, this process can also be automated. The i-doit [Console](../automation-and-integration/cli/console/index.md) is used for this purpose. Before the import can be executed, it must be ensured that the XML file is available to the system. To do this, the XML file must be copied to the i-doit directory imports or stored there directly. Afterwards the import can be started via the console. A description of the possible parameters and an example call can be found in the [corresponding article](../automation-and-integration/cli/console/options-and-parameters-cli.md) for the import-hinventory command.
+Besides the possibility to upload the XML file via the i-doit interface and import the information, this process can also be automated. The i-doit [Console](../automation-and-integration/cli/console/index.md) is used for this purpose. Before the import can be executed, it must be ensured that the XML file is available to the system. To do this, the XML file must be copied to the i-doit directory imports or stored there directly. Afterwards the import can be started via the console. A description of the possible parameters and an example call can be found in the [corresponding article](../automation-and-integration/cli/console/commands-and-options.md) for the import-hinventory command.

@@ -1,91 +1,96 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.8.3
-
-[Improvement]   Object lists: Improve performance of the operating system attribute from the category Operating System  
-[Improvement]   The relation direction will now bedisplayed better in the CMDB-Explorer  
-[Improvement]   Highlight all references of the currently active object in the CMDB-Explorer  
-[Improvement]   Button "Set substring matching in object lists as default" under tools / database in administration  
-[Improvement]   JDISC import option "update object types"  
-[Improvement]   Connected cables can be saved, when no connection exists  
-[Bug]           Radio buttons are displayed correctly in newer browsers  
-[Bug]           Unable to select contract's start and end dates as conditions  
-[Bug]           Loading profile in Quick Configuration Wizard throws error  
-[Bug]           The columns of an object list have not been updated after they have been edited via the object list configuration  
-[Bug]           No entry in category "current file" after import/API call  
-[Bug]           DB Error Message after Click on "Check_MK:Tags" under Dialog-Admin  
-[Bug]           Numbers in input fields will be displayed again  
-[Bug]           Geo-information can not be imported via csv import  
-[Bug]           The logical ports are getting displayed again in the "assigned port" attribute  
-[Bug]           Persons that have been created via the contact assignment can not be found in the global search  
-[Bug]           Design broken by Wiki link  
-[Bug]           The port category will issue an error message if the i-doit MySQL user has no execution privileges to perform procedures  
-[Bug]           Comma behind the template name  
-[Bug]           post_max_size is displayed twice in the system overview  
-[Bug]           New entries in the category 'host address' are always being labelled as primary  
-[Bug]           Model is no longer filled out when the content comes from JDisc  
-[Bug]           LDAP: When logging in via LDAP user, the default LDAP group is always assigned to the user  
-[Bug]           Monitoring instance can not be set to "-"  
-[Bug]           Conditions for "Assembly" are not handled correctly  
-[Bug]           Deleting cables leaves the relationship between the wired objects  
-[Bug]           Session timeout value of <= 0 or >= 99999[..] leads to inability to log in to i-doit  
-[Bug]           Removing a slot assignment does not delete the physical location  
-[Bug]           Attribut selection for category "operating system" empty in report manager  
-[Bug]           Swiching from search result to CMDB Explorer opens search mask  
-[Bug]           Report Manager: Comma and point are swapped in currency fields  
-[Bug]           Report Manager: Layer-3 network details are not displayed when a custom category is polled  
-[Bug]           File versions: If the latest version is deleted, the previous version is not offered  
-[Bug]           Incorrect translation in custom categories  
-[Bug]           Wiring system does not appear in object browers  
-[Bug]           Wrong presentation of dates in category "contract assignment"  
-[Bug]           The create right on "Objects of type" (all) will no longer display additional objects in the object list  
-[Bug]           Searchstring is being manipulated while searching  
-[Bug]           API-logs are written, even when disabled in the settings  
-[Bug]           Remove "Root" from the location path inside object lists  
-[Bug]           Maintenance module: Multiple salutations when choosing multiple objects  
-[Bug]           Raid capacity is always displayed in GB  
-[Bug]           Impossible to logout when using SSO  
-[Bug]           Field in LDAP configuration shown as empty in edit mode  
-[Bug]           Login into AdminCenter without password possible with any account - except for admin  
-[Bug]           PHP error while invoking the PDU category after a flawed SNMP call  
-[Bug]           Contract dates are not being updated after a CSV import  
-[Bug]           Geo Coordinates Are Cut to Integer Using Komma as Separator  
-[Bug]           OCS: Port description is not imported  
-[Bug]           Incorrect logbook content, if an object is placed into another hight unit within the rack
-[Bug]           JDisc Import: In the "Update (New Inventory)" mode, newly scanned devices are not imported correctly when they are assigned to a JDisc group  
-[Bug]           The link to a mobile phone can not be removed via the overview page  
-[Bug]           Special characters are not stored in the password category "<>"  
-[Bug]           CSV import: file extension .csv can not contain uppercase letters  
-[Bug]           Notification "Changed Objects": Threshold does not affect the notification  
-[Bug]           Category "DHCP" is missing in list edit  
-[Bug]           Category "DHCP" is missing in CSV-import  
-[Bug]           Notifications: Days behave differently than months  
-[Bug]           JDisc Import: Controller call generates incomprehensible error message if no default server is defined  
-[Bug]           Objects are unnecessarily blocked several times  
-[Bug]           Legend in cabling view superimposed information  
-[Bug]           Wrong presentation of icons in list browser  
-[Bug]           Attributes selection incorrect in Check_MK Host tags  
-[Bug]           The arrow for sorting does not sort  
-[Bug]           CMDB-Explorer crashes when exploring a location with sub-objects without any rights to  
-[Bug]           Clicking "Search" in the breadcrumb line displays a blank page  
-[Bug]           Incorrect number of objects to display  
-[Bug]           Changes to the attribute "Insertion" via CSV import in logbook not traceable  
-[Bug]           Expert setting "auth.use-in-location-tree" deactivates root location in site browser for all users  
-[Bug]           Tags are not found in global search  
-[Bug]           Each login-authorized user is allowed to perform an update from i-doit  
-[Bug]           Object relationship (Multiple objects) is not accepted for mass changes  
-[Bug]           Positions in racks are selectable if if they are occupied  
-[Bug]           Language constants are translated in editing mode for category extensions  
-[Bug]           Error calculating raid capacity in list local storage -> device  
-[Bug]           LIMIT in reports is ignored while exporting them  
-[Bug]           Name of the validated field may be ambiguous in the error message  
-[Bug]           Status of entries in dialog admin are displayed translated by mistake  
-[Bug]           Needless scroll bar in list editing  
-[Bug]           System error message when exporting without a location object  
-[Bug]           Chart types in the "Chart" widget swapped to selection  
-[Bug]           Memory unit display in widget "Calculator" for "RAID capacity" is not adjusted  
-[Bug]           Internal "I-doit status" can be selected as a filter under "CMDB status"  
-[Bug]           First workflow parameter is overwritten after creation of another parameter  
-[Bug]           No status selection is possible under "Workflows->Workflows"  
-[Bug]           Button "Cancel" is missing from "Create new e-mail template"  
-[Bug]           Wrong Screens or Button after Click On "Cancel" And "Save" Editing A Notification or Email Template  
-[Bug]           Report category is stil displayed in the treebrowser even though it was deleted  
-[Bug]           Missing "Cancel" button in Report Manager's Query Editor  
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
+[Verbesserung]  Objektlisten: Performance des Attributs "Betriebssystem" aus der Kategorie "Betriebssystem" verbessert<br>
+[Verbesserung]  Im CMDB-Explorer werden die Beziehungsrichtungen nun besser dargestellt<br>
+[Verbesserung]  Es werden alle Referenzen des angeklickten Objekts im CMDB-Explorer markiert<br>
+[Verbesserung]  Button "Teilstring Suche in Objektlisten als Standard setzen" unter Tools / Datenbank in der Verwaltung<br>
+[Verbesserung]  Button zum Entfernen eines Filters in den Objektlisten<br>
+[Verbesserung]  JDISC Import Option "Objekttyp aktualisieren"<br>
+[Verbesserung]  Verbundene Kabel können gespeichert werden, wenn kein Anschluss definiert ist<br>
+[Bug]           Vertragsbeginn und -ende lassen sich nicht als Bedingung auswählen<br>
+[Bug]           Einspielen eines Profils im Quick Configuration Wizard wirft Fehlermeldung<br>
+[Bug]           Die Spalten einer Objekt-Liste wurde nicht aktualisiert nachdem diese über die Objekt-Listen Konfiguration bearbeitet wurde<br>
+[Bug]           Importe/API erstellen keinen Eintrag in Kategorie "Aktuelle Datei"<br>
+[Bug]           DB-Fehler nach Klick auf "Check_MK:Hostmerkmale" unter Dialog-Admin<br>
+[Bug]           Eingegebene Zahlen in Textfeldern werden wieder dargestellt<br>
+[Bug]           Breiten- und Längengrad können nicht über den CSV-Import importiert werden<br>
+[Bug]           In der Hostadresse werden die logischen Ports im Feld "Verknüpfter Port" wieder dargestellt<br>
+[Bug]           Über die Kontaktzuweisung erstellte Personen werden nicht in der globalen Suche gefunden<br>
+[Bug]           Wiki-Link wird bei verborgenen Feldern nicht länger dargestellt<br>
+[Bug]           Bei der Port Kategorie wird eine Fehlermeldung ausgegeben wenn der i-doit MySQL-Benutzer keine Ausführungsrechte besitzt um Prozeduren auszuführen<br>
+[Bug]           Kommas hinter den Template-Namen<br>
+[Bug]           post_max_size wird zwei Mal in der Systemübersicht angezeigt<br>
+[Bug]           Neue Einträge in der Kategorie "Hostadresse" werden immer als Primär gekenntzeichnet<br>
+[Bug]           Modell ist beim Editieren nicht mehr ausgefüllt, wenn der Inhalt aus JDisc stammt<br>
+[Bug]           LDAP: Beim einloggen eines LDAP Benutzers wird dieser immer der eingestellten LDAP Standardgruppe hinzugefügt<br>
+[Bug]           Monitoring Instanz kann nicht auf "-" gesetzt werden<br>
+[Bug]           Bedingungen auf das Attribut "Einschub" werden im Report-Manager nicht korrekt umgesetzt<br>
+[Bug]           Löschen von Kabel hinterlässt Beziehung zwischen den verkabelten Objekten<br>
+[Bug]           Session Timeout-Wert von <= 0 oder >= 99999[..] führt dazu, dass man sich nicht mehr einloggen kann<br>
+[Bug]           Entfernen einer Slotzuweisung lässt einen Eintrag in "räumlich zugeordnete Objekte" zurück<br>
+[Bug]           Attributsauswahl für Kategorie "Betriebssystem" im Report-Manager leer<br>
+[Bug]           Wechsel von Suchergebnis auf CMDB-Explorer öffnet Suchmaske<br>
+[Bug]           Report Manager: Komma und Punkt wird in Währungsfeldern vertauscht<br>
+[Bug]           Report Manager: Layer-3-Netzdetails werden nicht angezeigt, wenn über eine benutzerdefinierte Kategorie hinweg abgefragt wird<br>
+[Bug]           Dateiversionen: Wird die aktuellste Version gelöscht, wird nicht die vorherige Version angeboten<br>
+[Bug]           Falsche Übersetzung in benutzerdefinierten Kategorien<br>
+[Bug]           Leitungsnetz wird im Objekt Browser nicht angezeigt<br>
+[Bug]           Falsches Datumsformat in Kategorie "Vertragszuweisung"<br>
+[Bug]           Das Erstellen Recht auf "Objekte vom Typ" (Alle) zeigt nun keine weiteren Objekte in der Objektliste an<br>
+[Bug]           Suchstring wird fehlerhaft manipuliert beim suchen<br>
+[Bug]           API-Logs werden auch geschrieben, wenn die Einstellung hierzu deaktiviert wurde<br>
+[Bug]           "Root" im Standortpfad der Objektlisten ausblenden<br>
+[Bug]           Wartungs-Modul: Mehrfache Anrede bei Auswahl von mehreren Objekten<br>
+[Bug]           Raid-Kapazität in Speichersystemen wird immer in GB dargestellt<br>
+[Bug]           Logout nicht möglich bei der Verwendung von SSO<br>
+[Bug]           Felder in der LDAP-Konfiguration beim Aufruf der Bearbeitungsansicht leer<br>
+[Bug]           Login im AdminCenter mit belliebigem Account - außer admin - ohne Paswort möglich<br>
+[Bug]           PHP-Error beim Aufruf der PDU-Kategorie nach fehlerhafter SNMP-Abfrage<br>
+[Bug]           Vertragsdaten werden bei CSV-Import nicht aktualisiert<br>
+[Bug]           Bei Geo-Koordinaten wird der Nach-Komma-Anteil abgeschnitten bei Verwendung von Komma<br>
+[Bug]           OCS: Port-Beschreibung wird nicht importiert<br>
+[Bug]           Falsche Logbuch-Informationen zu Schränken, wenn ein Objekt umpositioniert wird<br>
+[Bug]           JDisc Import: Beim Modus "Aktualisieren (Neu Inventarisiert)" werden neu gescannte Geräte nicht richtig importiert wenn diese in einer JDisc-Gruppe zugewiesen sind<br>
+[Bug]           Über die Übersichtsseite kann die Verknüpfung zu einem Mobiltelefon nicht entfernt werden<br>
+[Bug]           Sonderzeichen werden in der Passwort Kategorie nicht gespeichert "<>"<br>
+[Bug]           CSV-Import: Dateiendung .csv darf keine Großbuchstaben haben<br>
+[Bug]           Benachrichtigung "Veränderte Objekte": Schwellwert hat keinen Einfluss auf die Benachrichtigung<br>
+[Bug]           Kategorie "DHCP" fehlt in der Listeneditierung<br>
+[Bug]           Kategorie "DHCP" fehlt im CSV-Import<br>
+[Bug]           Benachrichtigungen: Tage verhalten sich anders als Monate<br>
+[Bug]           JDisc Import: Controller Aufruf erzeugt eine unverständliche Felermeldung wenn kein Standard Server definiert ist<br>
+[Bug]           Objekte werden unnötig mehrfach gesperrt<br>
+[Bug]           Legende in Verkabelungsansicht überlagert Informationen<br>
+[Bug]           Fehlerhafte Darstellung von Icons im Listenbrowser<br>
+[Bug]           Attribute-Darstellung inkorrekt bei Check_MK-Host-Tags<br>
+[Bug]           Pfeil für die Sortierung sortiert nicht<br>
+[Bug]           CMDB-Explorer hängt sich bei Standort-Objekten auf, wenn nur auf diese eine Berechtigung zum Ansehen besteht<br>
+[Bug]           Bei Klick auf "Suche" in der Breadcrumb-Zeile wird eine leere Seite angezeigt<br>
+[Bug]           Anzahl anzuzeigender Objekte fehlerhaft<br>
+[Bug]           Änderungen am Attribut "Einschub" über den CSV-Import im Logbuch nicht nachvollziehbar<br>
+[Bug]           Experteneinstellung "auth.use-in-location-tree" deaktiviert für alle User die Root-Lokation im Standort-Browser<br>
+[Bug]           Tags werden nicht in der Suche gefunden<br>
+[Bug]           Jeder Login-berechtigte Benutzer darf ein Update von i-doit durchführen<br>
+[Bug]           Objekt-Beziehung (Mehrere Objekte) wird bei Massenänderung nicht übernommen<br>
+[Bug]           Positionen im Schrank zur Auswahl, die belegt sind<br>
+[Bug]           Sprachkonstanten werden im Editiermodus bei Kategorieerweiterungen übersetzt<br>
+[Bug]           Fehler bei Berechnung der Raid Kapazität in der Liste Lokaler Massenspeicher -> Gerät<br>
+[Bug]           LIMIT in Report wird beim Export ignoriert<br>
+[Bug]           Name des validierten Feldes in der Fehlermeldung unter Umständen uneindeutig<br>
+[Bug]           Status der Einträge im Dialog-Admin werden übersetzt dargestellt<br>
+[Bug]           Überflüssiger Scrollbalken in der Listeneditierung<br>
+[Bug]           Systemfehlermeldung bei Exportieren ohne Standortobjekt<br>
+[Bug]           Diagrammtypen im Widget "Diagramm" in Auswahl vertauscht<br>
+[Bug]           Speichereinheit-Anzeige in Widget "Rechner" in "RAID Kapazität" wird nicht angepasst<br>
+[Bug]           Interner "i-doit Status" kann fälschlicherweise als Filter unter "CMDB-Status" ausgewählt werden<br>
+[Bug]           Erster Workflow-Parameter wird überschrieben nach Neuerstellung eines anderen Parameters<br>
+[Bug]           Keine Status-Auswahl unter "Workflows->Workflows" möglich<br>
+[Bug]           Button "Abbrechen" fehlt bei "Neue E-Mail-Vorlage erstellen"<br>
+[Bug]           Falsche Anzeige des Screens oder der Button nach "Abbrechen" oder "Speichern" einer Benachrichtigungs- oder E-Mail-Vorlage<br>
+[Bug]           Gelöschte Report-Kategorie wird im Treebrowser weiter angezeigt<br>
+[Bug]           Fehlender "Abbrechen"-Button im Abfrage-Editor des Report-Managers<br>

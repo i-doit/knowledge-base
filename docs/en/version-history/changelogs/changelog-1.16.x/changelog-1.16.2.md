@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.16.2
-
-[Bug][CMDB] Detach connections under Cabling -> Connectors deletes all connections  
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
+[Bug][CMDB] Detach connections under Cabling -> Connectors deletes all connections<br>

@@ -1,102 +1,107 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.10.1
-
-[Improvement]   New attributes in category "Check_MK (Host) > Export Parameter"  
-[Improvement]   Total capacity of drives in the Report Manager  
-[Improvement]   List view with more than ten columns  
-[Improvement]   More Placeholders for notifications: model and manufacturer  
-[Improvement]   JDISC import of software: optionally use software family instead of software version as the object title  
-[Improvement]   Cannot copy IPs from IP lists  
-[Improvement]   Update the GUI of category contract assignment  
-[Improvement]   JDisc Import: Import of the attribute SNMP Syslocation into the location category  
-[Improvement]   The fuzzy suggestion can now be configured  
-[Improvement]   Validation of user settings  
-[Improvement]   Rack: object link for unpositioned objects  
-[Improvement]   Self-defined column width for tables  
-[Improvement]   Templates: No presorting when creating an object with the selected object type  
-[Improvement]   Modify warning to update the object list configuration  
-[Improvement]   Search: Not possible to use the search with less than three characters  
-[Improvement]   Support for Explicit Relationships in Custom Categories for fieldtype Relationship Browser  
-[Improvement]   GUI component to select intervals  
-[Improvement]   Configuration of objects as "positionable in rack" for new installations/tenants  
-[Improvement]   JDISC: Field with label for different locations from JDISC  
-[Improvement]   Export CMDB explorer as PNG or JPG  
-[Improvement]   CMDB Explorer: Legend only shows object types, which includes objects  
-[Change]        Save smarty cache files to the i-doit cache directory  
-[Change]        Removed old files and directories  
-[Bug]           Using new console from other locations  
-[Bug]           Location changes will not be passed to the chassis overview  
-[Bug]           Speech constants are displayed in the I-Doit Open  
-[Bug]           Reports are called in Custom Categories when at least one object browser type is configured  
-[Bug]           Placeholders "Model" and "Service Tag" are missing in the QR code reader  
-[Bug]           Duplicating an object does not duplicate the contact assignment  
-[Bug]           Attributes of the category "Direct Attached Storage" cannot be shown on the overview page  
-[Bug]           When opening a monitoring configuration, the selection for "active" is always preset, no matter if it was active (yes/no) before  
-[Bug]           While duplicating a object (chassis) some categories get duplicated as well, even if they were not selected  
-[Bug]           CSV export of values with units from object lists create wrong output  
-[Bug]           Cannot show attributes "variant" and "version number" of category "operating system" in lists  
-[Bug]           Import of XML files not possible  
-[Bug]           JDisc import allocates cluster members and deletes them after the import  
-[Bug]           Bug while using the JDisc handler via console  
-[Bug]           Description text is not being displayed on the overview page of an object  
-[Bug]           return value for attach_person via API  
-[Bug]           API: C__CATG__IMAGE: image_selection holds wrong data type  
-[Bug]           Setting an unvalid cmdb status constant leads to the object being deleted  
-[Bug]           XML import via console does not work  
-[Bug]           Editing software assignment via list edit deletes content of category "Operating system"  
-[Bug]           API: cmdb.category.read fetches only first value of a custom dialog+ field (multiple)  
-[Bug]           Livestatus leads to long waiting times in object lists  
-[Bug]           API: Logs are created, even with disabled setting  
-[Bug]           API: Cannot change category host address  
-[Bug]           API: The field LDAP-DN can not be saved  
-[Bug]           API: Wrong data type (C__CATG__IMAGE/image)  
-[Bug]           API: Purge request output Database error  
-[Bug]           API: Setting an unvalid cmdb status constant leads to the object being deleted  
-[Bug]           Apache configuration in [I-DOIT]/.htaccess not suitable for version 2.4  
-[Bug]           CMDB Explorer: Export of SVGs only works in Firefox  
-[Bug]           Dialog-Admin: Custom dialog fields appear multiple times  
-[Bug]           Wrong output when using ldap-sync via console  
-[Bug]           Variable report on dashboard creates error  
-[Bug]           Error when using console: Column 'isys_obj__id' in where clause is ambiguous  
-[Bug]           Field "Tags" is not availalable in Report-Manager  
-[Bug]           Archiving/Deleting a softwareassignment keeps a relationship in condition "normal"  
-[Bug]           Category "host address" creates unfinished entry if it is used on overview page  
-[Bug]           Lists: Not possible to sort after column Scope in Net zones  
-[Bug]           Database error when installing a license file within a tenant  
-[Bug]           Pagenavigation changes condition selection  
-[Bug]           Editing category "passwords" via list edit saves passwords encrypted in the frontend  
-[Bug]           Can not delete a larger number (> 500) of objects  
-[Bug]           Contract assignment: Date is displayed in the Customer number field  
-[Bug]           List editing: Specific category cabinet is missing  
-[Bug]           JDisc: Standard template is not completely applied during import  
-[Bug]           Report Manager: Missing attribute Layer-2 network mapping  
-[Bug]           Incorrect assignment of JDisc information to VMware cluster services  
-[Bug]           Dialogue-Field of attribute "service category" can not be edited in dialogue admin  
-[Bug]           JDisc: Discovery uses host name instead of FQDN  
-[Bug]           Import of warranty via CSV not possible  
-[Bug]           PHP 7.1: Error in Report Manager  
-[Bug]           Selecting rights for specifi controller handlers not possible  
-[Bug]           Multiple clicks on buttons to archive/delete skips other states  
-[Bug]           Error Message After Entering First Entry In Category Database assignment  
-[Bug]           OCS-Import of domain not possible  
-[Bug]           Some Dialogue- and Dialogue-Plus-Fields also allow to select archived/deleted objects  
-[Bug]           Locations: Sort incorrectly if the path is too long  
-[Bug]           Reports: attribute state incomplete  
-[Bug]           Sort by date in multi-value incorrect  
-[Bug]           Templates: No sorting visible, possible  
-[Bug]           Logbook: Changes to the chassis position etc. on the device are not entered in the logbook  
-[Bug]           Duplicated chassis will be duplicated with chassis contents  
-[Bug]           Variable% OBJID% takes last created object as id  
-[Bug]           Report Manager: Online Repository report 'Logbook' shows object name of 'C__LOGBOOK_EVENT__OBJECT_PURGED' in column 'Category'  
-[Bug]           Wrong presentation of rights in category "rights"  
-[Bug]           Identical name for different categories (service assignment)  
-[Bug]           Widget "my changed objects" builds incorrect link when using a proxy configuration  
-[Bug]           JDisc-Import deletes layer-2-net-assignment to ports  
-[Bug]           Category "Database assignment" not printed bold, when filled with content  
-[Bug]           Sorting By Assigned net Wrong In Category Host adress  
-[Bug]           Umlauts are not displayed correctly in the license overview  
-[Bug]           Option pane does not get closed after duplicating an object  
-[Bug]           Cannot Export SVG Grafics With CMDB Explorer In Chrome  
-[Bug]           Selection of multiple objects via checkboxes in i-doit open is possible  
-[Bug]           JDISC: Import overwrites the form factor of objects  
-[Bug]           Wide colums cause columns to be cut off  
-[Bug]           List Editing clears connection with port when editing the interface  
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
+[Verbesserung]  Neue Attribute in Kategorie "Check_MK (Host) > Export Parameter"  <br>
+[Verbesserung]  Gesamtkapazität von Festplatten im Report Manager  <br>
+[Verbesserung]  Listenansicht mit mehr als zehn Spalten  <br>
+[Verbesserung]  Weitere Platzhalter für Benachrichtigungen: Modell und Hersteller  <br>
+[Verbesserung]  JDISC Import von Software: Optional Software Family anstatt Software Version für Objekttitel verwenden  <br>
+[Verbesserung]  IP-Listen lassen sich markieren und kopieren  <br>
+[Verbesserung]  Oberfläche der Kategorie Vertragszuweisung aktualisieren  <br>
+[Verbesserung]  JDisc Import: Import des Attributes SNMP Syslocation in die Standort Kategorie  <br>
+[Verbesserung]  Die Fuzzy-Suggestion ist nun konfigurierbar  <br>
+[Verbesserung]  Validierung der Benutzereinstellungen  <br>
+[Verbesserung]  Rack: Objektlink für unpositionierte Objekte  <br>
+[Verbesserung]  Benutzerdefinierte Spaltenbreite für Tabellen  <br>
+[Verbesserung]  Templates: Keine Vorsortierung bei anlegen eines Objektes mit gewähltem Objekttypen  <br>
+[Verbesserung]  Warnhinweis zum aktualisieren der Konfiguration der Objektliste abändern  <br>
+[Verbesserung]  Suche: Verwenden der Suche mit weniger als drei Zeichen nicht möglich  <br>
+[Verbesserung]  Unterstützung von Expliziten Beziehungen bei Benutzerdefinierten Kategorien für den Felttyp Beziehungs-Browser  <br>
+[Verbesserung]  GUI Komponente zum auswählen von Intervallen  <br>
+[Verbesserung]  Konfiguration von Objekten als "positionierbar im Schrank" für neue Installationen/Mandanten  <br>
+[Verbesserung]  JDISC: Feld mit Bezeichnung für verschiedene Standorte aus JDISC  <br>
+[Verbesserung]  Export des CMDB-Explorers nach PNG oder JPG  <br>
+[Verbesserung]  CMDB-Explorer: Legende zeigt nur Typen, welche auch Objekte beinhalten  <br>
+[Änderung]      Smarty Cache-Daten in den i-doit Cache Ordner speichern  <br>
+[Änderung]      Veraltete Dateien und Verzeichnisse entfernt  <br>
+[Bug]           Aufruf der neuen Console aus anderen Verzeichnissen  <br>
+[Bug]           Standortänderungen werden nicht an die Chassiübersicht übergeben  <br>
+[Bug]           Sprachkonstanten werden in der I-Doit Open angezeigt  <br>
+[Bug]           Reports werden in Benutzerdefinierte Kategorien aufgerufen wenn mindestens ein Objekt-Browser Typ konfiguriert ist  <br>
+[Bug]           Platzhalter "Modell" und "Service Tag" aus Kategorie "Modell" fehlen beim QR-Code-Reader  <br>
+[Bug]           Duplizieren berücksichtigt selbst bei expliziter Auswahl nicht die Kontaktzuweisung  <br>
+[Bug]           Attribute der Kategorie "Lokaler Massenspeicher" kann auf der Übersichtssseite nicht angezeigt werden  <br>
+[Bug]           Beim Aufruf einer Monitoring-Konfiguration wird die Auswahl "Aktiv" im Standard immer auf Ja gesetzt  <br>
+[Bug]           Beim duplizieren werden Kategorien dupliziert die nicht angehakt wurden (bei Chassis?)  <br>
+[Bug]           CSV-Export von Werten mit Einheiten aus Objektlisten heraus erzeugt falsche Ausgabe  <br>
+[Bug]           In Kategorie "Betriebssystem" lassen sich Attribute "Variante" und "Versionsnummer" nicht in Listen einblenden  <br>
+[Bug]           Import von XML-Dateien nicht möglich  <br>
+[Bug]           JDisc-Import weist Clustermitgliedschaften erst zu und löscht diese dann  <br>
+[Bug]           Bug beim Import via Console mit JDisc-Import  <br>
+[Bug]           Beschreibungstext einer Personengruppe wird nicht auf der Übersichtsseite angezeigt  <br>
+[Bug]           Rückgabewert für attach_person via API  <br>
+[Bug]           API: C__CATG__IMAGE: image_selection besitzt falschen Datentyp  <br>
+[Bug]           Setzen einer ungültigen CMDB-Status-Konstante führt zur vermeintlichen Löschung des Objektes  <br>
+[Bug]           XML-Import per Console funktioniert nicht  <br>
+[Bug]           Bearbeiten der Softwarezuweisung über die Listeneditierung löscht Informationen der Kategorie "Betriebssystem"  <br>
+[Bug]           API: cmdb.category.read liest nur den ersten Wert bei benutzerdefinierten Mehrfach-Dialog-Feldern  <br>
+[Bug]           Livestatus führt zu langen Wartezeiten in Objektlisten  <br>
+[Bug]           API: Logs werden auch mit deaktivierter Option geschrieben  <br>
+[Bug]           API: Änderungen der Kategorie Hostadresse nicht möglich  <br>
+[Bug]           API: Das Feld LDAP-DN kann nicht gespeichert werden  <br>
+[Bug]           API: Falscher DatenTyp (C__CATG__IMAGE/image)  <br>
+[Bug]           API: Purge request meldet Database error  <br>
+[Bug]           API: Setzen einer ungültigen CMDB-Status-Konstante führt zur vermeintlichen Löschung des Objektes  <br>
+[Bug]           Apache-Konfiguration in [I-DOIT]/.htaccess greift nicht für Version 2.4  <br>
+[Bug]           CMDB Explorer: Export von SVG funktioniert nur mit Firefox  <br>
+[Bug]           Dialog-Admin: Benutzerdefinierte Dialoge tauchen mehrfach auf  <br>
+[Bug]           Fehlerhafte Ausgabe bei Console ldap-sync  <br>
+[Bug]           Variabler Report auf Dashboard erzeugt Fehler  <br>
+[Bug]           Fehler beim Aufruf der Console: Column 'isys_obj__id' in where clause is ambiguous  <br>
+[Bug]           Feld "Tags" steht im Report-Manager nicht zur Verfügung  <br>
+[Bug]           Archivieren/Löschen einer Softwarezuweisung aus der Kategorie "Installation" lässt eine Beziehung im Zustand "Normal" zurück  <br>
+[Bug]           Kategorie "Hostadresse" erzeugt unfertigen Eintrag, wenn diese auf der Übersichtsseite verwendet wird  <br>
+[Bug]           Listen: Sortieren nach Spalte Bereiche in Netzbereichen nicht möglich  <br>
+[Bug]           Datenbankfehler bei der Installation einer Lizenz innerhalb eines Mandanten  <br>
+[Bug]           Seitennavigation wechselt teilweise auch die Zustandsansicht  <br>
+[Bug]           Bearbeiten der Kategorie "Passwörter" über die Listeneditierung speichert das Passwort auch verschlüsselt auf der Oberfläche  <br>
+[Bug]           Löschen einer größeren Anzahl (>500) von Objekten nicht möglich  <br>
+[Bug]           Vertragszuweisung: Datum wird im Feld Kundennummer angezeigt  <br>
+[Bug]           Listeneditierung: Spezifische Kategorie Schrank fehlt  <br>
+[Bug]           JDisc: Standardtemplate wird bei Import nicht vollständig angewandt  <br>
+[Bug]           Report Manager: Fehlende Attribut Layer-2 Netzzuordnung  <br>
+[Bug]           Falsche Zuweisung von JDisc Informationen bei VMware Cluster-Diensten  <br>
+[Bug]           Dialog-Feld des Attributs "Service-Kategorie" kann nicht im Dialog-Admin bearbeitet werden.  <br>
+[Bug]           JDisc: Discovery verwendet Hostnamen anstatt FQDN  <br>
+[Bug]           Import des Garantiezeitraums über CSV nicht möglich  <br>
+[Bug]           PHP 7.1: Fehler im Reportmanager  <br>
+[Bug]           Auswahl der Rechte für einzelne Controller Handler nicht möglich  <br>
+[Bug]           Mehrfacher Klick auf die Buttons zum Archivieren/Löschen erlaubt das Überspringen von Zuständen  <br>
+[Bug]           Validierungsfehlermeldung nach Eingabe des ersten Eintrags der Kategorie Datenbankzuweisung  <br>
+[Bug]           OCS-Import des Attributs "Domäne" ist nicht möglich  <br>
+[Bug]           Einige Dialog- und Dialog-Plus-Felder bieten auch archivierte/gelöschte Objekte zur Auswahl an  <br>
+[Bug]           Standorte: Sortierung nicht korrekt wenn der Pfad zu lang ist  <br>
+[Bug]           Reports: Attribut Zustand unvollständig  <br>
+[Bug]           Sortierung nach Datum in Multi-Value inkorrekt  <br>
+[Bug]           Templates: Keine Sortierung ersichtlich, möglich  <br>
+[Bug]           Logbuch: Änderungen der Chassiposition etc. am Gerät wird nicht im Logbuch eingetragen  <br>
+[Bug]           Duplizierte Chassis werden Chassiinhalte mit dupliziert  <br>
+[Bug]           Variable %OBJID% nimmt letztes erstelltes Objekt als ID  <br>
+[Bug]           Report Manager: Report "Logbook" aus Online Repository zeigt Objektname bei "C__LOGBOOK_EVENT__OBJECT_PURGED" in Spalte "Category"  <br>
+[Bug]           Falsche Darstellung von Rechten in Kategorie "Rechtevergabe"  <br>
+[Bug]           Identischer Name unterschiedlicher Kategorien (Servicezuweisung)  <br>
+[Bug]           Widget "Meine geänderten Objekte" baut inkorrekten Link bei Verwendung eines Proxys auf  <br>
+[Bug]           JDisc-Import löst Layer-2-Netzzzuweisung zu Ports  <br>
+[Bug]           Kategorie "Datenbankzuweisung" nicht fett hervorgehoben, wenn Einträge enthalten  <br>
+[Bug]           Fehlerhafte Sortierung nach ObjID anstatt nach dem angezeigten Text  <br>
+[Bug]           Umlaute werden in der Lizenzübersicht nicht korrekt dargestellt  <br>
+[Bug]           Beim Duplizieren eines Objektes wird das Options-Fenster nicht geschlossen  <br>
+[Bug]           Mit CMDB-Explorer kann man in Chrome keine SVG-Grafik exportieren  <br>
+[Bug]           Auswahl mehrerer Objekte über Checkboxen in i-doit open möglich  <br>
+[Bug]           JDISC: Import überschreibt den Formfaktor von Objekten  <br>
+[Bug]           Breite Spalten in der Kategorie Kontaktzuweisung verschieben die Informationen aus dem angezeigten Bereich  <br>
+[Bug]           Listeneditierung löscht Verbindung mit Anschluss wenn das Interface bearbeitet wird  <br>

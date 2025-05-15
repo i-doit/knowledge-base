@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.11.1
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Aufgabe][Admincenter]                   AdminCenter: Fatal Error bei dem Aufruf von Add-Ons ohne valide i-doit Login Session<br>
 [Verbesserung][Report-Manager]           Anwendungen: Zugewiesener Lizenzschlüssel<br>
 [Verbesserung][Report-Manager]           Report-Manager, Attribut Tags in der kategorie Allgemein hinzufügen<br>

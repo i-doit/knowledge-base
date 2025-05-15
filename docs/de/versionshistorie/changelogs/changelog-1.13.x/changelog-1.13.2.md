@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.13.2
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Improvement][Relations] Custom relation types should have own constants<br>
 [Improvement][LDAP] LDAP synchronization with other attributes than names<br>
 [Improvement][Report-Manager] New dynamic properties for all categories<br>

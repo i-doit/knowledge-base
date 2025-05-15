@@ -25,7 +25,7 @@
 > API
 > ---
 >
-> Die API ist nicht mehr Teil des offiziellen Pakets und wird ab sofort als separates Modul veröffentlicht. Weitere Informationen hierzu erhalten Sie in unserem Knowledge Base Eintrag: [API](../../i-doit-pro-add-ons/api/index.md)
+> Die API ist nicht mehr Teil des offiziellen Pakets und wird ab sofort als separates Modul veröffentlicht. Weitere Informationen hierzu erhalten Sie in unserem Knowledge Base Eintrag: [API](../../i-doit-add-ons/api/index.md)
 >
 > Erweiterung Floorplan
 > ---------------------

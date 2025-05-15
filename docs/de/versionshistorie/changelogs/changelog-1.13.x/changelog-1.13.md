@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.13
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Task][List editing] Multiple hardware RAIDS appear in list edit although none were created<br>
 [Improvement][Code (internal)] Securiy update for external libraries<br>
 [Improvement][Code (internal)] i-doit no longer supports PHP 5.6, minimum requirement is PHP 7<br>

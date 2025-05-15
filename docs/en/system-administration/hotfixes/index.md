@@ -1,44 +1,142 @@
+---
+title: Hotfixes
+description: Hotfixes for the most recent i-doit version
+icon: fontawesome/solid/bug-slash
+lang: en
+---
+
 # Hotfixes
 
-About
------
+!!! success "Hotfixes for version **34**"
 
-Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP file is unpacked in the i-doit installation directory. Confirm the question whether you want to overwrite files during unpacking (**Y** key for "yes" or **A** key for "all"). Here you can find an example:
+A hotfix fixes a specific error and is usually made available as a ZIP file. The ZIP file is extracted in the **installation directory** of i-doit. The prompt asking whether files should be overwritten when unpacking must be confirmed.
 
-```shell
+If a hotfix is required to update an older version, this can be found in the [Hotfix archive](hotfix-archive/index.md).
+
+As these are hotfixes, we recommend that you only install them if they are necessary for the proper operation of your installation or if you are requested to do so by support. Please ensure that a [backup of i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) has been created before using these hotfixes.
+
+If you contact support after using the hotfixes, please add the reference to their use.
+
+!!! warning "**Declaration of consent**"
+    By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
+
+## Application with GNU/Linux
+
+```sh
 sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
 cd /var/www/html/i-doit/
 sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 ```
 
-!!! attention "Please note"
+## Application with Windows
 
-    Please use hotfixes exclusively with the specified version. Hotfixes will be included in newer versions so that a renewed installation is not necessary.
-    Should you use an older i-doit version it is essential to make an update to the latest version first.
+[![Extract](../../assets/images/en/system-administration/hotfixes/example-windows-zip.png)](../../assets/images/en/system-administration/hotfixes/example-windows-zip.png)
 
-    If a hotfix is required to update an older version, it can be found in the hotfix subchapters here in the Knowledge Base.
+Path for the **i-doit Windows installer**:
 
-    As these are hotfixes we recommend installing them only when the adjustments are necessary for a flawless operation of your installation or you are requested by the support team to use them. Please ensure that you made a [backup of i-doit](../../maintenance-and-operation/backup-and-recovery/index.md) before you use any hotfix.
+```txt
+C:\ProgramData\i-doit\apache-2.4\htdocs
+```
 
-    Please inform us about the use of hotfixes should you contact our support team afterwards.
+Path for the **i-doit Discovery installer**:
 
-!!! info "Current version"
+```txt
+C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
+```
 
-    The requirements shown below apply to the current version of i-doit, in this case **24** These requirements are adjusted for each release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+## i-doit core
 
-!!! attention "Declaration of consent"
+### File assignment via list edit not working (ID-10914)
 
-    By downloading a hotfix you declare that you have read and understood the above mentioned notes completely.
+[i-doit_34_hotfix_ID-10914_912c7a0.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-10914_912c7a0.zip){ .md-button .md-button--primary }
 
-## i-doit Core
+### Sorting for a rack causes vertical slots to be seen already taken when importing via csv import (ID-11522)
 
-### SQL query is wrongly created when using Assigned workstation -> Parent object
+[i-doit_34_hotfix_ID-11522_dc34840.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11522_dc34840.zip){ .md-button .md-button--primary }
 
-[I-doit_24_hotfix_ID-9315.zip :material-file-download:](../../assets/downloads/hotfixes/24/i-doit_24_hotfix_ID-9315.zip){ .md-button .md-button--primary }
+### Configured user language is ignored (ID-11738)
 
-## Analyze Add-on 1.3
+[i-doit_34_hotfix_ID-11738_2fe864f.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11738_2fe864f.zip){ .md-button .md-button--primary }
 
-### Service assignment is not displayed in data quality
+### Trying to assign a object causes 500 error (ID-11743)
 
-[Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip :material-file-download:](../../assets/downloads/hotfixes/analyze/Analysis_1.3_hotfix_ANALYSE-76_aa07fc2.zip){ .md-button .md-button--primary }
+!!! info "If error.log contains an error like this:"
+    ```bash
+    PHP Fatal error:  Declaration of idoit\\Module\\Cmdb\\Component\\Browser\\Filter\\AuthFilter::getQueryCondition() must be compatible with idoit\\Component\\Browser\\Filter::getQueryCondition(): string in /var/www/html/idoit/src/classes/modules/cmdb/src/Component/Browser/Filter/AuthFilter.php on line 20, referer: .../idoit/?objID=18138&mNavID=2&lang=de&viewMode=1002&tvMode=1006&catgID=12
+    ```
+
+[i-doit_34_hotfix_ID-11743_71ff22b.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11743_71ff22b.zip){ .md-button .md-button--primary }
+
+### OPENldap error when ldap-sync is triggered via console (ID-11758)
+
+[i-doit_34_hotfix_ID-11758_41dee07.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11758_41dee07.zip){ .md-button .md-button--primary }
+
+### Do not use constants from PHP module pcntl (ID-11770)
+
+[i-doit_34_hotfix_ID-11770_d3d1569.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11770_d3d1569.zip){ .md-button .md-button--primary }
+
+### Pager does not work for the Object browser configuration (ID-11788)
+
+[i-doit_34_hotfix_ID-11788_bbefcb3.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11788_bbefcb3.zip){ .md-button .md-button--primary }
+
+### Hotfix PHP Fatal Error when saving "Multiselect" fields (ID-11804)
+
+[i-doit_34_hotfix_ID-11804_7790fe9.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11804_7790fe9.zip){ .md-button .md-button--primary }
+
+## API Add-on
+
+### Saving field vlan_id does remove selected Layer-3 nets (API-604)
+
+[api_2.2-2.3_hotfix_API-604_7210da7.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.2-2.3_hotfix_API-604_7210da7.zip){ .md-button .md-button--primary }
+
+### Reading a SQL Report without result (API-551)
+
+[api_2.2_hotfix_API-551_08fc1cb.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.2_hotfix_API-551_08fc1cb.zip){ .md-button .md-button--primary }
+
+## Forms Add-on
+
+### Object is not created when a attribute validation is used and no error is displayed (AOF-38)
+
+[forms_1.2.0_hotfix_AOF-38_69144fc.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2.0_hotfix_AOF-38_69144fc.zip){ .md-button .md-button--primary }
+
+### Using Forms to create an object bypasses validation "unique" check (AOF-54)
+
+!!! info "The only exception to unique checks are IPv4 addresses"
+
+[forms_1.2_hotfix_AOF-54-43.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2_hotfix_AOF-54-43.zip){ .md-button .md-button--primary }
+
+## Workflow Add-on
+
+### Workflow Checklist is inaccessible after workflow is accepted (WORKFLOW-52)
+
+??? info "Error message found in the Webserver logs"
+    ```
+    Something went wrong while executing the current action/component with message: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
+    ```
+
+[workflow_1.2_1.3_hotfix_WORKFLOW-52_21fd9c0.zip :material-file-download:](../../assets/downloads/hotfixes/workflow/workflow_1.2_1.3_hotfix_WORKFLOW-52_21fd9c0.zip){ .md-button .md-button--primary }
+
+## Floorplan Add-on
+
+### Hide/unhide Object Button does not hide or unhide the object (FP-140)
+
+[floorplan_1.8_hotfix_FP-140_2e1ca1e.zip :material-file-download:](../../assets/downloads/hotfixes/floorplan/floorplan_1.8_hotfix_FP-140_2e1ca1e.zip){ .md-button .md-button--primary }
+
+## Replacement
+
+### TypeErrors when selecting objects to swap
+
+[Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip :material-file-download:](../../assets/downloads/hotfixes/swap-ci/Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip){ .md-button .md-button--primary }
+
+## Maintenance Add-on
+
+### Option 'Send multiple notifications for each maintenance?' automatically sets to 'Yes' after finishing an upcoming maintenance [WARTUNG-97]
+
+[i-doit_maintenance-1.5_hotfix_WARTUNG-97_6cab331.zip :material-file-download:](../../assets/downloads/hotfixes/maintenance/i-doit_maintenance-1.5_hotfix_WARTUNG-97_6cab331.zip){ .md-button .md-button--primary }
+
+## Documents Add-on
+
+### Rights for Templates in categories are not checked [DOKU-502]
+
+[Documents_1.10_hotfix_DOKU-502_f8a6ec2.zip :material-file-download:](../../assets/downloads/hotfixes/documents/Documents_1.10_hotfix_DOKU-502_f8a6ec2.zip){ .md-button .md-button--primary }

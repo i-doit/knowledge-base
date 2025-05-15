@@ -68,7 +68,7 @@ Der Legacy-Autoloader wird folgendermaßen in der init.php registriert:
         spl_autoload_register('isys_module_example_autoload::init');
     }
 
-Systemeinstellungen erweitern
+Einstellungen für [Mandanten-Name] erweitern
 -----------------------------
 
-Die dargestellten Systemeinstellungen unter **Verwaltung → Systemeinstellungen** können mittels Add-on erweitert werden. Weitere Informationen hierzu befinden sich im Artikel [Systemeinstellungen erweitern](systemeinstellungen-erweitern.md).
+Die dargestellten Einstellungen für [Mandanten-Name] unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name]** können mittels Add-on erweitert werden. Weitere Informationen hierzu befinden sich im Artikel [Systemeinstellungen erweitern](systemeinstellungen-erweitern.md).

@@ -1,137 +1,142 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.11.1
-
-[Task][Admincenter]                      AdminCenter: Fatal error while opening Add-Ons without valid i-doit login session  
-[Improvement][Report-Manager]            Applications: assigned license key  
-[Improvement][Report-Manager]            Report-Manager, attribute tags in the General category  
-[Improvement][Code (internal)]           Extending of existing object lock for object independent locks  
-[Bug][Objects]                           Object browser: Instance / Oracle Database "DBMS" Selectable object types  
-[Bug][Objects]                           Losing category "Instance / Oracle database" information when duplicating an object  
-[Bug][Objects]                           Object Browser: Instance / Oracle database "DBMS" performance issues  
-[Bug][Objects]                           Access URL won't be displayed as link in object list  
-[Bug][Objects]                           No pre-selection by object type in object browser  
-[Bug][Objects]                           Incorrect object is displayed in the Object Browser input field  
-[Bug][Objects]                           Apostroph in object title causes javascript error on save  
-[Bug][Objects]                           Passwords are not being duplicated  
-[Bug][Objects]                           Object Browser: "Service» Service Components "changes are ignored  
-[Bug][Objects]                           Category "Cabinets" only considers the object type Cabinet  
-[Bug][Objects]                           Allocation of the last port is lost with duplicate saving in the connection category  
-[Bug][Custom categories]                 Inkonsistent behaviour of yes/no fields  
-[Bug][Report-Manager]                    Feature "Grouped multivalue presentation" in report manager set to "No" as deafult  
-[Bug][Report-Manager]                    Attribute "Database instance" (Category: "Database schema") not available in Report Manager  
-[Bug][Report-Manager]                    Report-Manager: Conditions are missing comparison operators  
-[Bug][Report-Manager]                    Variable report results in an sql error message in a custom category  
-[Bug][Report-Manager]                    SLA time values not usable in report manager  
-[Bug][Report-Manager]                    Second vertical scrollbar in report result list when using a description  
-[Bug][Report-Manager]                    Error when executing a report with empty result  
-[Bug][Report-Manager]                    Report with data of the categories Software assignment and Operating system delivers corrupted results  
-[Bug][Report-Manager]                    Cost values of 0,00 are shown as empty result in reports  
-[Bug][Report-Manager]                    Report Manager: Attribut "Host in cluster" not read properly  
-[Bug][Report-Manager]                    Click on variable report always leads to the referring object  
-[Bug][Report-Manager]                    Location paths from reports flawed when calling via API  
-[Bug][Report-Manager]                    Report contains no results if query retrieves information from categories  'Contact assignment' and 'Service assignment'  
-[Bug][Report-Manager]                    Sorting after ID in Report Manager defective  
-[Bug][Report-Manager]                    Report Manager: Database Used Database field of the Database Assignment category causes SQL errors  
-[Bug][Report-Manager]                    Selection of some attributes in report manager may cause an empty result under some circumstances  
-[Bug][Check_MK]                          New API function for reading host tags  
-[Bug][Check_MK]                          Check-MK: Limitation is missing when exporting dynamic host features  
-[Bug][Check_MK]                          Check-MK: export of dynamic host tagswithout manual saving of the category "host tgs"  
-[Bug][Analytics]                         Missing objects when displaying the detailed information of custom categories  
-[Bug][Templates]                         Overview of the usable placeholders in templates  
-[Bug][Search]                            Auomatic refresh of search index locks table of search index and causes long wait times  
-[Bug][Search]                            Performance problems when using custom categories while saving/duplicating  
-[Bug][Search]                            Attribute "firmware" from category "model" can not be found via search  
-[Bug][Search]                            Attribute "serial number" from category "model" can not be found via search  
-[Bug][Search]                            Search index is not refreshed when saving content in UI  
-[Bug][Search]                            Information in search results is shortened untipically  
-[Bug][Search]                            Language setting does not affect information within search results  
-[Bug][Search]                            Search results from category host address are always shown as primary  
-[Bug][Search]                            Hightlighting of search results not highlighting correct content  
-[Bug][Search]                            Search results not logical, if less than three characters  are used  
-[Bug][Search]                            Formatting is carried to preview of search results  
-[Bug][Search]                            While indexing dialog(+) fields a message in log will be displayed  
-[Bug][LDAP]                              LDAP sync duration distinctly longer  
-[Bug][LDAP]                              LDAP-SYNC / Auth is case-sensitive and creates duplicate contacts  
-[Bug][Export]                            CSV export from custom categories shows no results  
-[Bug][JDisc]                             Error when using JDisc import mode "overwrite"  
-[Bug][JDisc]                             Scan new and update from JDisc no import  
-[Bug][JDisc]                             Wrong counting during JDisc import of objects via console  
-[Bug][Lists]                             In the search filter within the object lists, the condition "and" is ignored  
-[Bug][Lists]                             Sorting attribute "Host in cluster" causes error  
-[Bug][Lists]                             Wrong sorting through setting "Display of grouped data"  
-[Bug][Lists]                             Error when sorting attributes from categorie "JDisc custom attributes"  
-[Bug][Lists]                             Error when using category "version" of category "operating system" in list view  
-[Bug][Lists]                             Field "Headquarter" causes error in list view  
-[Bug][Lists]                             Attributes of category "cluster memberships" can not be selected for display in object lists  
-[Bug][Lists]                             Filtering in object list Relations still shows paging  
-[Bug][Lists]                             Not all attributes of category "Memory" are availbable to be shown in lists  
-[Bug][Lists]                             Archived and deleted database assignments being shown in object lists  
-[Bug][Lists]                             Drag 'n' Drop not working with some browsers  
-[Bug][Lists]                             Sort by VLAN ID incorrect  
-[Bug][Lists]                             List view automatically switches to first page after exiting an object  
-[Bug][Lists]                             Listen: Long column titles lead to unwanted breaks in filters  
-[Bug][Categories]                        Status dropdown in category "Network - Port" not available  
-[Bug][Categories]                        Category Access: SSH connections with more than one digit in one of the octets and user allocation are faulted  
-[Bug][Categories]                        Sub category Connections, attribute Connected with shows error "General error: Object ID missing!", while no object was connected  
-[Bug][Categories]                        Attribute "Conntected with" shows that a connection will be deleted, even if there's no concurrent connection available  
-[Bug][Categories]                        Objects in categorie "relations" can not be clicked and do not deliver a quick info  
-[Bug][Categories]                        Special characters in objects which are not assigned in a net cause the IP-list being not able to be loaded  
-[Bug][Categories]                        Selecting version number in operating system assignment offers wrong versions  
-[Bug][Categories]                        Cannot create an entry into the password category without username or title  
-[Bug][Categories]                        Field "host in cluster" does not appear during object creation on overview page  
-[Bug][Categories]                        Date fields can not be cleared  
-[Bug][Categories]                        Saving of attribute "Parallel relations > objects" not possible  
-[Bug][Categories]                        Duplicating objects with contact assignment, not containing a space in object title adds a space at the end of the name of the assigned object  
-[Bug][Categories]                        Cabling of objects via connector overview creates a new cable instead of using the already selected cable  
-[Bug][Categories]                        After archiving/deleting an object, the object-list view of application shows a wrong count of installations  
-[Bug][Categories]                        Archived database schemes are still being displayed in the print view  
-[Bug][Categories]                        Cannot reset height units of racks  
-[Bug][Categories]                        Line breaks from multiple row text fields are being deleted in the print view  
-[Bug][Categories]                        Adding a port to a Layer-2-Net resets tag information of every related port  
-[Bug][Categories]                        Statistics of racks in a room do not include values of the rack itself  
-[Bug][Documents]                         The category "Organization" => "Person" is missing in the property selector  
-[Bug][Documents]                         Cannot create documents when one or multiple attribute assignments are missing  
-[Bug][Console]                           Console: Entering false user credentials does not lead to an error message  
-[Bug][Console]                           Commands: No message indicating faulty login  
-[Bug][CSV]                               CSV import: Cannot set attributes Runtime and Cancellation period  
-[Bug][CSV]                               CSV Import: Allocation partially shows language constants  
-[Bug][CSV]                               CSV import creates objects with empty titles  
-[Bug][CSV]                               Blank values do not overwrite current values  
-[Bug][CSV]                               CSV Import cannot write information into attribute Assigned licence  
-[Bug][CSV]                               CSV Import ignores default-template  
-[Bug][CSV]                               Passwords are being reset when setting another attribute of the category 'Login' when importing via CSV  
-[Bug][API]                               API: Modifying of used cable in port category without specifying a connector not possible  
-[Bug][API]                               Changing of connected connector by the API causes a sql error  
-[Bug][API]                               Modifying object image category over the api is not possible  
-[Bug][API]                               Attribute 'On device' (Category 'Drive') cannot be written via API  
-[Bug][API]                               Editing of file category not possible via the API  
-[Bug][API]                               Unable to create or update connected cables via API  
-[Bug][System settings]                   Editing list view for custom categories not possible  
-[Bug][System settings]                   Hyperlinks in welcome message contains HTML  
-[Bug][System settings]                   Expert settings display internal settings despite blacklist  
-[Bug][Update]                            Wrong MySQL/MariaDB version number in update GUI  
-[Bug][Update]                            Smarty Memcache check breaks i-doit  
-[Bug][Code (internal)]                   Popups are being displayed in wrong size at wrong position  
-[Bug][Code (internal)]                   Error message is thrown "default theme smarty cache" isn't writable  
-[Bug][Code (internal)]                   Faulty check for free memory space in cases of unlimited (-1) memory limit in php.ini  
-[Bug][Code (internal)]                   Duplicate: Category status-planning is duplicate  
-[Bug][Validation]                        Global Category Operating System is missing in the category validation  
-[Bug][Validation]                        Category validation does not work in category "General" when using templates  
-[Bug][Print view]                        Information about licenses not correct in print view  
-[Bug][CMDB-Explorer]                     CMDB Explorer: Export of SVGs only works in Firefox  
-[Bug][OCS]                               OCS import causes empty database entries  
-[Bug][List editing]                      List edit does not save entries in categorie 'Assignes workplace', if records already exist  
-[Bug][List editing]                      Misspelling in the list edit  
-[Bug][List editing]                      Object group assignments cannot be edited via the list edit  
-[Bug][List editing]                      categories for "logical devices" not avilable in list edit  
-[Bug][List editing]                      List Editing: Filtering in user-defined single-value categories results in an SQL error  
-[Bug][CMDB]                              Cannot use line breaks in CSV files and GUI  
-[Bug][Authorization system]              Rights are not used additively  
-[Bug][Authorization system]              Rights are not fully accessible on the main page of an object  
-[Bug][Object type configuration]         Attribute "model" is not used from default template  
-[Bug][Logbook]                           Logbook: Category "Accounting" the attribute "Guarantee period" is displayed incorrectly  
-[Bug][Licence settings]                  License Management: Can not delete an existing license  
-[Bug][Relations]                         Relationships of clusters to cluster services are not correctly if state is archived/deleted  
-[Bug][Notifications]                     Notifications: Incorrect URL in notifications via console  
-[Bug][Notifications]                     Cannot choose templates in notifications  
-[Bug][Systemtools]                       mod_rewrite check in system overview not correct when using https  
-[Change][Code (internal)]                Archiving default accounts  
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
+[Aufgabe][Admincenter]                   AdminCenter: Fatal Error bei dem Aufruf von Add-Ons ohne valide i-doit Login Session<br>
+[Verbesserung][Report-Manager]           Anwendungen: Zugewiesener Lizenzschlüssel<br>
+[Verbesserung][Report-Manager]           Report-Manager, Attribut Tags in der kategorie Allgemein hinzufügen<br>
+[Verbesserung][Code]                     Erweiterung der bestehenden Objektsperre Logik für Objektunabhängige Sperrungen<br>
+[Bug][Objekte]                           Objekt-Browser: Instanz / Oracle Datenbank "DBMS" auswähbare Objekttypen<br>
+[Bug][Objekte]                           Beim Duplizieren von Objekten gehen im bestehenden Objekt Informationen aus der Kategorie "Instanz / Oracle Datenbank" verloren<br>
+[Bug][Objekte]                           Objekt-Browser: Instanz / Oracle Datenbank "DBMS" Performanceprobleme<br>
+[Bug][Objekte]                           Zugriffs-URL wird in Objektliste nicht als Link dargestellt<br>
+[Bug][Objekte]                           Keine Vorselektierung nach Objekttyp im Objekt-Browser<br>
+[Bug][Objekte]                           Falsches Objekt wird im Objektbrowser Inputfeld angezeigt<br>
+[Bug][Objekte]                           Apostroph im Objekt-Titel führt zu Javascript-Fehler nach der Speicherung<br>
+[Bug][Objekte]                           Passwörter werden nicht dupliziert<br>
+[Bug][Objekte]                           Objekt-Browser: "Service » Service Komponenten" werden Änderungen ignoriert<br>
+[Bug][Objekte]                           Kategorie "Schränke" berücksichtigt nur den Objekttypen Schrank<br>
+[Bug][Objekte]                           Zuweisung des letzten Ports geht bei doppelten speichern in der Anschlusskategorie verloren<br>
+[Bug][Benutzerdefinierte Kategorien]     Inkonsistentes Verhalten von Ja/Nein-Feldern<br>
+[Bug][Report-Manager]                    Feature "Gruppierte Multivalue-Darstellung" im Report Manager per default auf "Nein"<br>
+[Bug][Report-Manager]                    Attribut "Datenbankinstanz" (Kategorie: "Datenbankschema") nicht im Report Manager verfügbar<br>
+[Bug][Report-Manager]                    Report-Manager: Bedingungen fehlen Vergleichsoperatoren<br>
+[Bug][Report-Manager]                    Variabler-Report führt zu einer SQL-Fehlermeldung in einer Benutzerdefinierten Kategorie<br>
+[Bug][Report-Manager]                    SLA Zeiten im Report Manager nicht verfügbar<br>
+[Bug][Report-Manager]                    Zweiter vertikaler Scrollbalken in der Ergebnisliste von Reports bei Verwendung einer Beschreibung<br>
+[Bug][Report-Manager]                    Fehlermeldung beim Ausführen eines Reports ohne Ergebnisse<br>
+[Bug][Report-Manager]                    Report mit Daten aus den Kategorien Softwarezuweisung und Betriebssystem liefert falsche Ergebnisse<br>
+[Bug][Report-Manager]                    Kosten mit einem Wert von 0,00 werden im Report als leeres Ergebnis angezeigt<br>
+[Bug][Report-Manager]                    Report Manager: Attribut "Host im Cluster" wird nicht ausgelesen<br>
+[Bug][Report-Manager]                    Klick auf variablen Report führt immer wieder zum referenzierenden Objekt<br>
+[Bug][Report-Manager]                    Standort-Pfade aus Reports bei Ausgabe über API fehlerhaft<br>
+[Bug][Report-Manager]                    Report liefert keine Ergebnisse bei gleichzeitiger Einbindung von Kontaktzuweisung und Servicezuweisung<br>
+[Bug][Report-Manager]                    Falsche Sortierung nach ID im Report Manager<br>
+[Bug][Report-Manager]                    Report-Manager: Feld "verwendetes Datenbankschema" der Kategorie "Datenbankzuweisung" verursacht SQL-Fehler<br>
+[Bug][Report-Manager]                    Auswahl bestimmter Attribute im Report-Manager führt unter Umständen zu leeren Ergebnissen<br>
+[Bug][Check_MK]                          Neue API Funktion zum auslesen von Hostmerkmalen<br>
+[Bug][Check_MK]                          Check_MK: Limitierung fehlt bei Export von dynamischen Hostmerkmalen<br>
+[Bug][Check_MK]                          Check_MK: Export dynamischer Hostmerkmale ohne manuellen speichern der Kategorie "Hostmerkmale"<br>
+[Bug][Analyse]                           Fehlende Objekte beim Anzeigen der detaillierten Informationen von benutzerdefinierte Kategorien<br>
+[Bug][Templates]                         Übersicht der zu verwendenden Platzhalter in Templates<br>
+[Bug][Suche]                             Automatische Erneuerung des Suchindex sperrt Tabelle des Suchindex und verursacht hohe Wartezeiten<br>
+[Bug][Suche]                             Performance Einbrüche bei Verwendung von Benutzerdefinierten-Kategorien beim Speichern/Duplizieren<br>
+[Bug][Suche]                             Attribut "Firmware" aus Kategorie "Modell" kann nicht über die Suche gefunden werden<br>
+[Bug][Suche]                             Attribut "Seriennummer" aus Kategorie "Modell" kann nicht über die Suche gefunden werden<br>
+[Bug][Suche]                             Suchindex wird beim Speichern auf der Benutzeroberfläche nicht sauber aktualisiert<br>
+[Bug][Suche]                             Informationen der Ergebnisliste der Suche werden untypisch abgekürzt<br>
+[Bug][Suche]                             Einstellung der Sprache hat keine Auswirkung auf die Informationen in den Suchergebnissen<br>
+[Bug][Suche]                             Über die Suche gefundene Inhalte der Kategorie "Hostadresse" werden generell als primär bezeichnet<br>
+[Bug][Suche]                             Highlighting der gefundenen Suchtreffer highlightet nicht alle Treffer korrekt<br>
+[Bug][Suche]                             Suchergebnis nich nachvollziehbar, wenn weniger als drei Zeichen verwendet werden<br>
+[Bug][Suche]                             Formatierung wird in Vorschau der Suchergebnisse übernommen<br>
+[Bug][Suche]                             Beim Indexieren von Dialog(+) Feldern wird im Log eine Fehlermeldung dargestellt<br>
+[Bug][LDAP]                              LDAP Sync braucht vielfaches an Laufzeit<br>
+[Bug][LDAP]                              LDAP-SYNC/Auth ist case-sensitive und erzeugt duplizierte Kontakte<br>
+[Bug][Export]                            CSV Export aus benutzerdefinierten Kategorien bleibt leer<br>
+[Bug][JEDI/Jdisc]                        Fehler bei der Verwendung des JDisc-Import Modus "Überschreiben"<br>
+[Bug][JEDI/Jdisc]                        Neu scannen und aktualisieren aus JDISC führt keinen Import aus<br>
+[Bug][JEDI/Jdisc]                        Falsche Zählung beim JDisc-Import von Objekten über die Console<br>
+[Bug][Listen]                            Im Suchfilter innerhalb der Objektlisten wird die Bedingung "und" ignoriert<br>
+[Bug][Listen]                            Sortieren des Attributs "Host in Cluster" führt zu Fehler<br>
+[Bug][Listen]                            Falsche Sortierung durch Einstellung "Gruppierte Daten darstellen als"<br>
+[Bug][Listen]                            Fehler beim Sortieren nach Attributen aus Kategorie "JDisc Custom Attributes"<br>
+[Bug][Listen]                            Fehler bei Verwendung des Attributs "Versionsnummer" aus Kategorie "Betriebssystem" in Listenansicht<br>
+[Bug][Listen]                            Feld "Zentrale" aus Kategorie Stammdaten von Organisationen führt in Listenansicht zu Fehler<br>
+[Bug][Listen]                            Attribute der Kategorie "Clustermitgliedschaften" können nicht in Objektliste angezeigt werden<br>
+[Bug][Listen]                            Filtern in Beziehungen zeigt trotzdem noch alle Einträge zum Paging<br>
+[Bug][Listen]                            Attribute der Kategorie "Speicher" fehlen zur Darstellung in Objektlisten<br>
+[Bug][Listen]                            Archivierte und gelöschte Datenbankzuweisungen werden in Objektlisten angezeigt<br>
+[Bug][Listen]                            Drag 'n' Drop in einigen Browsern nicht möglich<br>
+[Bug][Listen]                            Sortierung nach VLAN-ID inkorrekt<br>
+[Bug][Listen]                            Listenansicht springt auf Seite 1 nachdem man aus Objekt springt<br>
+[Bug][Listen]                            Listen: Lange Spaltentitel führen zu ungewollten Umbrüchen im Filter<br>
+[Bug][Kategorien]                        Status-Dropdown in Kategorie "Netzwerk - Port" nicht verfügbar<br>
+[Bug][Kategorien]                        Kategorie Zugriff: SSH-Verbindungen mit mehr als einer Ziffer in einem der Oktette und Benutzerzuweisung werden falsch ausgegeben<br>
+[Bug][Kategorien]                        Subkategorie Anschlüsse zeigt bei Attribut Verbunden mit "General error: Object ID missing!", obwohl kein Objekt verbunden wurde<br>
+[Bug][Kategorien]                        Attribut "Verbunden mit" zeigt trotz keiner Verbindung, dass eine Verbindung gelöst würde<br>
+[Bug][Kategorien]                        Objekte in Kategorie "Beziehungen" können nicht angeklickt werden und geben keine Quickinfo<br>
+[Bug][Kategorien]                        Sonderzeichen in nicht zugewiesenen Objekten eines Netzes führen dazu, dass die IP-Liste nicht geladen werden kann<br>
+[Bug][Kategorien]                        Auswahl der Versionsnummer in Betriebssystemzuweisung fehlerhaft<br>
+[Bug][Kategorien]                        Anlage eines Eintrags in der Passwort-Kategorie ohne Titel oder Benutzername nicht möglich<br>
+[Bug][Kategorien]                        Feld "Host in Cluster" taucht nicht bei initialer Objekterstellung auf der Übersichtsseite auf<br>
+[Bug][Kategorien]                        Datumsfelder können nicht geleert werden<br>
+[Bug][Kategorien]                        Speicherung des Felds "Gleichgerichtete Beziehungen > Objekte" nicht möglich<br>
+[Bug][Kategorien]                        Duplizieren von Objekten mit Kontaktzuweisung deren Name keine Leerzeichen enthält ergänzt ein Leerzeichen am Ende der Objektbezeichnung<br>
+[Bug][Kategorien]                        Verkabelung von Objekten über Anschlussübersicht erzeugt ein neues Kabel statt das bereits gewählte zu verwenden<br>
+[Bug][Kategorien]                        Nach dem archivieren/löschen eines Objektes wird in der Objektlisten-Ansicht der Anwendungen eine falsche Anzahl an Installationen ausgegeben<br>
+[Bug][Kategorien]                        Archivierte Datenbankschemata werden trotzdem noch in Druckansicht angezeigt<br>
+[Bug][Kategorien]                        Höheneinheiten von Schränken lassen sich nicht zurücksetzen<br>
+[Bug][Kategorien]                        Zeilenumbrüche aus mehrzeiligen Textfeldern werden in Druckansicht entfernt<br>
+[Bug][Kategorien]                        Hinzufügen eines Ports zu einem Layer-2-Netz setzt Tag-Informationen aller zugehörigen Ports zurück<br>
+[Bug][Kategorien]                        Statistik der Schränke im Raum beachtet nicht die Werte des Schranks selbst<br>
+[Bug][Dokumente]                         Im Property Selector steht die Kategorie "Organisation" => "Personen" nicht zur Verfügung<br>
+[Bug][Dokumente]                         Dokumente können nicht mit fehlenden Attributszuweisungen erstellt werden<br>
+[Bug][Console]                           Console: Angabe von falschen Credentials gibt keine Fehlermeldung aus<br>
+[Bug][Console]                           Commands: Fehlgeschlagene Logins werden nicht kenntlich dargestellt<br>
+[Bug][CSV]                               CSV-Import: Setzen der Laufzeit und Kündigungsfrist nicht möglich<br>
+[Bug][CSV]                               CSV-Import: Zuweisung zeigt zum Teil Sprachkonstanten<br>
+[Bug][CSV]                               CSV-Import erstellt Objekte mit leerer Bezeichnung<br>
+[Bug][CSV]                               Leerwerte überschreiben aktuelle Werte nicht<br>
+[Bug][CSV]                               Attribut Zugewiesene Lizenz nicht per CSV Import befüllbar<br>
+[Bug][CSV]                               CSV-Import ignoriert Default-Template<br>
+[Bug][CSV]                               Passwörter werden beim Setzen eines Attributs per CSV-Import aus der Login-Kategorie zurückgesetzt<br>
+[Bug][API]                               API: Veränderung des verwendeten Kabels bei Ports ohne Angabe des Anschlusses nicht möglich<br>
+[Bug][API]                               Veränderung des verbundenen Anschlusses über die API führt zu einem SQL-Error<br>
+[Bug][API]                               Veränderung der Objektbild-Kategorie über die API nicht möglich<br>
+[Bug][API]                               Attribut "Auf Gerät" (Kategorie "Laufwerk") kann nicht per API definiert werden<br>
+[Bug][API]                               Datei-Kategorie kann nicht über die API angepasst werden.<br>
+[Bug][API]                               Erstellen und Aktualisieren von Kabeln in Kategorie "Anschlüsse" über die API funktioniert nicht<br>
+[Bug][Systemeinstellungen]               Bebarbeitung der Listenansicht für benutzerdefinierte Kategorien nicht möglich<br>
+[Bug][Systemeinstellungen]               Hyperlinks in Willkommensnachricht für Login fehlerhaft<br>
+[Bug][Systemeinstellungen]               Experteneinstellungen stellen interne Einstellungen trotz Blackliste dar<br>
+[Bug][Update]                            Falsche Versionsnummer von MySQL/MariaDB in Update GUI<br>
+[Bug][Update]                            Smarty Memcache überprüfung sorgt für absturz<br>
+[Bug][Code]                              Popups werden in falscher Größe an falscher Position dargestellt<br>
+[Bug][Code]                              Fehlermeldung erscheint, "Default Theme Smarty Cache" wäre nicht schreibbar<br>
+[Bug][Code]                              Falsche Prüfung auf freien Speicher bei unlimitiertem (-1) Memory-Limit in der php.ini<br>
+[Bug][Code]                              Duplizieren: Kategorie Status-Planung ist doppelt<br>
+[Bug][Validierung]                       Globale Kategorie Betriebssystem fehlt in Kategorievalidierung<br>
+[Bug][Validierung]                       Kategorie-Validierung auf Kategorie "Allgemein" greift nicht beim Anlegen via Templates<br>
+[Bug][Druckansicht]                      Lizenzinformationen in Druckansicht nicht korrekt<br>
+[Bug][CMDB-Explorer]                     CMDB Explorer: Export von SVG funktioniert mit Internet Explorer nicht<br>
+[Bug][OCS]                               OCS-Import verursacht leere Datenbankeinträge<br>
+[Bug][Listeneditierung]                  Listeneditierung speichert Kategorie "Zugewiesener Arbeitsplatz" nicht, wenn bereits Datensätze bestehen<br>
+[Bug][Listeneditierung]                  Rechtschreibfehler in der Listeneditierung<br>
+[Bug][Listeneditierung]                  Gruppenmitgliedschaften können nicht über die Listeneditierung bearbeitet werden<br>
+[Bug][Listeneditierung]                  Kategorie "logische Geräte" nicht in Listeneditierung verfügbar<br>
+[Bug][Listeneditierung]                  Listeneditierung: Filtern in Benutzerdefinierten single-value Kategorien führt zu einem SQL-Fehler<br>
+[Bug][CMDB]                              Verwendung von Zeilenumbrüchen in CSV-Dateien und GUI nicht möglich<br>
+[Bug][Rechtesystem]                      Rechte werden nicht additiv vergeben<br>
+[Bug][Rechtesystem]                      Rechte greifen nicht vollständig auf der Übersichtsseite eines Objektes<br>
+[Bug][Objekttypkonfiguration]            Attribut "Modell" wird nicht aus Default Template übernommen<br>
+[Bug][Logbuch]                           Logbuch: In Kategorie "Buchhaltung" wird das Attribut "Garantiezeitraum" falsch ausgegeben<br>
+[Bug][Lizenzverwaltung]                  Lizenzverwaltung: Löschen einer vorhandenen Lizenz nicht möglich<br>
+[Bug][Beziehungen]                       Beziehungen von Clustern zu Clusterdiensten nicht korrekt im Zustand archiviert/gelöscht<br>
+[Bug][Benachrichtigungen]                Benachrichtigungen: Falsche URL in Benachrichtigungen via console<br>
+[Bug][Benachrichtigungen]                Auswahl von Templates in Benachrichtigungen nicht möglich<br>
+[Bug][Systemtools]                       mod_rewrite Check in der Systemübersicht bei https nicht korrekt<br>
+[Änderung][Code]                         Standard Accounts archiviert<br>

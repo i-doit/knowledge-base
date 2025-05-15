@@ -1,5 +1,10 @@
+---
+search:
+  exclude: true
+---
 # Changelog 1.9.3
-
+<!-- cSpell:disable -->
+<!-- markdownlint-disable MD052 -->
 [Verbesserung]  Option zum UTF8 dekodieren exportierter Check_MK Dateien<br>
 [Verbesserung]  Neue Konfiguration für den Umgang bei Validierungsfehlern während der Duplizierung von Objekten<br>
 [Verbesserung]  Verbesserung der Suchindexierung zur Erhöhung der Performance<br>
