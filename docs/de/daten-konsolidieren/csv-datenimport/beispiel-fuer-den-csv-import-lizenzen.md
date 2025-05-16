@@ -2,7 +2,7 @@
 
 !!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
 
-!!! note "Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft"
+!!! note "Dieser Artikel wurde zuletzt für i-doit Version 34 geprüft"
 
 In diesem Beispiel bauen wir auf den [CSV Import von Anwendungen](beispiel-fuer-den-csv-import-anwendungen.md) auf und wollen Lizenzen importieren.
 
@@ -18,7 +18,7 @@ Für den Import benötigen wir folgende Informationen:
 -   Lizenzzuweisung: Lizenzschlüssel - Ablaufdatum → Wann läuft die Lizenz ab?
 -   Lizenzzuweisung: Lizenzschlüssel - Einzelpreis → Was kostet eine Lizenz?
 
-!!! note "Bei jedem Import muss auch die Darstellung der Daten beachtet werden."
+!!! note "Bei jedem Import müssen auch die Datenformate beachtet werden."
 
 Zum Beispiel:
 
