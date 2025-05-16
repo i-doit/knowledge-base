@@ -59,3 +59,20 @@ Außerdem sind die Kategorien Lizenzzuweisung und Lizenzzuweisung: Lizenzschlüs
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/5-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/5-csv-lic.png)
 
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/6-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/6-csv-lic.png)
+
+## Import von Objekten mit Volumenlizenzen über Softwarezuweisung
+
+Wenn Sie ein Objekt importieren möchten, welches eine Volumenlizenz mitsamt Key über die Softwarezuweisung zugewiesen haben soll, muss die Syntax der CSV Datei wie folgt aussehen:
+
+??? example "Volumenlizenz.csv"
+    ```text
+    Titel;"Anwendung";Lizenz Schlüssel
+    DESKTOP-XMS3R8;"Windows 8 Development Essentials";"Development;MDW-4253-1257"
+    DESKTOP-DK2MD9L;"Windows 10 Pro";"Professional;EVT-2024-9931"
+    ```
+
+Das Mapping der CSV Datei sollte dann wie folgt in i-doit vorgenommen werden:
+
+[![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/7-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/7-csv-lic.png)
+
+[![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/8-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/8-csv-lic.png)
