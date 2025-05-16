@@ -68,9 +68,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_34_hotfix_ID-11743_71ff22b.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11743_71ff22b.zip){ .md-button .md-button--primary }
 
-### OPENldap error when ldap-sync is triggered via console (ID-11758)
+### OPENldap error when ldap-sync is triggered via console (ID-11758)<br>
+### Ldap-sync can not update person object (ID-11764)
 
-[i-doit_34_hotfix_ID-11758_41dee07.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11758_41dee07.zip){ .md-button .md-button--primary }
+[i-doit_34_hotfix_ID-11758_ID-11764.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11758_ID-11764.zip){ .md-button .md-button--primary }
 
 ### Do not use constants from PHP module pcntl (ID-11770)
 
