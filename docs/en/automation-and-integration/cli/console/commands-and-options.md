@@ -53,6 +53,7 @@ lang: en
 | [notifications-list](#notifications-list)                                 | Lists all notification types and notifications for later usage                                                                     |
 | [notifications-send](#notifications-send)                                 | Send notifications by e-mail (notifications are configured in the GUI)                                                             |
 | [report-export](#report-export)                                           | Exporting a report as a file                                                                                                       |
+| [report-refresher](#report-refresher)                                     | Refreshes one or all reports.                                                                                                      |
 | [search](#search)                                                         | Search in i-doit                                                                                                                   |
 | [search-index](#search-index)                                             | Create/renew search index                                                                                                          |
 | [strip-description-html](#strip-description-html)                         | With this command you can strip html tags in description field of all categories and objects                                       |
@@ -979,8 +980,35 @@ Exports a report to the desired file format.
 **Example of use**
 
 ```shell
-sudo -u www-data php console.php report-export --user admin --password admin --tenantId 1 --reportId 27 --exportPath /var/www/exported-reports/ --exportFilename Report-Buchhaltung-November-2019 --exportFileType csv
+sudo -u www-data php console.php report-export --user admin --password admin --tenantId 1 --reportId 27 --exportPath /var/www/exported-reports/ --exportFilename Report-Buchhaltung-November-2025 --exportFileType csv
 ```
+
+### report-refresher
+
+Refreshes one or all reports.
+
+**Options:**
+
+| Parameter (Kurzform) | Parameter (Langform)  | Beschreibung                                                                                 |
+| -------------------- | --------------------- | -------------------------------------------------------------------------------------------- |
+| -r                   | --reportId=[REPORTID] | ID of the report                                                                             |
+| -u                   | --user=USERNAME       | Username of a user who is authorized to execute                                              |
+| -p                   | --password=PASSWORD   | Password for authentication of the previously specified user                                 |
+| -i                   | --tenantId=TENANT-ID  | Tenant ID of the tenant to be used (default: 1)                                              |
+| -c                   | --config=CONFIG-FILE  | Specifying the path to the configuration file                                                |
+| -h                   | --help                | Help message for displaying further information                                              |
+| -q                   | --quiet               | Quiet-Mode to deactivate output                                                              |
+| -V                   | --version             | Output of the i-doit Console version                                                         |
+|                      | --ansi<br>--no-ansi   | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                   | --no-interaction      | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv      | --verbose             | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php report-refresher --user admin --password admin --tenantId 1 --reportId 27
+```
+
 
 ### search
 

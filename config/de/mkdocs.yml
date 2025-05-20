@@ -307,7 +307,7 @@ nav:
       - Daten sichern und wiederherstellen:
           - wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md
           - Backup-Script für Daten und Dateien: wartung-und-betrieb/daten-sichern-und-wiederherstellen/backup-script-fuer-daten-und-dateien.md
-      - Update einspielen: wartung-und-betrieb/update-einspielen.md
+      - i-doit Update: wartung-und-betrieb/update-einspielen.md
       - Sicherheit und Schutz: wartung-und-betrieb/sicherheit-und-schutz.md
       - PHP update: wartung-und-betrieb/php-update.md
   - Upgrades und Umzüge:

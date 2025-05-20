@@ -1,10 +1,10 @@
-# Update einspielen
+# Update i-doit
 
 _i-doit_ sollte immer in der aktuellsten Version betrieben werden. In Minor-Releases befinden sich immer zahlreiche Bugfixes, in Major-Releases dazu dann noch neue Funktionen und Verbesserungen von bestehenden Funktionen. Minor-Releases erscheinen ungefähr alle vier Wochen, Major-Releases alle sechs Monate. Das Update kann [über die Web-Oberfläche von i-doit durchgeführt werden](#update-uber-die-web-oberflache), setzt jedoch einen Internetzugang (gegebenenfalls über einen HTTP-Proxy) voraus. Alternativ kann das Update [über die Konsole vorbereitet](#update-uber-die-konsole-vorbereiten) und anschließend über die Web-Oberfläche fortgeführt werden.
 
 === "Release überspringen ab version 20"
     !!! attention "Release überspringen ab version 20"
-        Wenn du direkt auf eine neuere Version, z.B. 26, springen möchtest, kannst du das neueste Update-Paket aus dem [Kundenportal](../administration/kundenportal.md) herunterladen und im i-doit Ordner entpacken. Die notwendigen Schritte findest du [hier](#update-über-die-konsole-vorbereiten).
+        Wenn du direkt auf eine neuere Version, z.B. 26, springen möchtest, kannst du das neueste Update-Paket aus dem [Kundenportal](../administration/kundenportal.md) herunterladen und im i-doit Ordner entpacken. Die notwendigen Schritte findest du unter [updates über die Konsole vorbereiten](#update-über-die-konsole-vorbereiten).
         Ab Version **25** mit [Hotfix](../administration/hotfixes/hotfix-archiv/index.md), wird auch die Version 27 beim update check für den download angeboten.
 
 === "Releases überspringen vor version 20"
@@ -21,11 +21,11 @@ _i-doit_ sollte immer in der aktuellsten Version betrieben werden. In Minor-Rele
 
 Das Update erreichst du entweder unter **Verwaltung → [Mandanten-Name] Verwaltung → i-doit Update**, über das Quicklaunch-Widget auf dem Dashboard oder über die URL <http://i-doit-host/i-doit/?load=update>
 
-[![update-quicklaunch](../assets/images/de/wartung-und-betrieb/update/1-update.png)](../assets/images/de/wartung-und-betrieb/update/1-update.png)
+[![Update via Dashboard](../assets/images/de/wartung-und-betrieb/update/1-update.png)](../assets/images/de/wartung-und-betrieb/update/1-update.png)
 
-Nach dem Aufruf öffnet sich eine eigene Oberfläche, in der geprüft wird, wie der aktuelle Zustand des Systems ist. In unserem Screenshot sehen wir, dass unter anderem die PHP-Extension mcrypt nicht gefunden wurde. Sollte solch eine Meldung ausgegeben werden, ist es sehr wichtig, das System dementsprechend anzupassen. Schaue hier am besten in unsere [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) bzw. in unsere [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md). Nach der Anpassung der Umgebung sollte alles grün abgehakt bzw. auf "OK" stehen.
+Nach dem Aufruf öffnet sich eine eigene Oberfläche, in der geprüft wird, wie der aktuelle Zustand des Systems ist. Bei Problemen schau am besten in unsere [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) bzw. in unsere [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md). Nach der Anpassung der Umgebung sollte alles grün abgehakt bzw. auf "OK" stehen.
 
-### Schritt 1: i-doit update und compatibility check
+### Schritt 1: i-doit update und Kompatibilität check
 
 [![i-doit update](../assets/images/de/wartung-und-betrieb/update/2-update.png)](../assets/images/en/maintenance-and-operation/update/2-update.png)
 
@@ -119,12 +119,12 @@ Nun kannst du in unserer Anleitung für das [Update über die Web-Oberfläche](#
     Vor dem Update sollte unbedingt ein [Backup](daten-sichern-und-wiederherstellen/index.md) angefertigt werden.
 
 Möchte man das Update über die Konsole ausführen wird die console.php verwendet.
-Dazu verwenden wir den den [update](../wartung-und-betrieb/update-einspielen.md) Befehl der [console.php](../automatisierung-und-integration/cli/index.md).
+Dazu verwenden wir den den Update Befehl der [console.php](../automatisierung-und-integration/cli/index.md).
 
 Zuerst wechseln wir in das i-doit root Verzeichnis:
 
 ```shell
-cd /var/www/html/i-doit/
+cd /var/www/html/
 ```
 
 Dann führen wir den Update Befehl aus und müssen noch Interaktiv einige Fragen beantworten davor das Update durchgeführt werden kann:
@@ -133,44 +133,14 @@ Dann führen wir den Update Befehl aus und müssen noch Interaktiv einige Fragen
 sudo -u www-data php console.php update
 ```
 
-Wir können dem Befehl auch direkt alle notwendigen Parameter mitgeben.
-Für ein Update von i-doit Version 1.17 oder 1.17.2 auf Version 1.18 sieht der Befehl wie folgt aus:
+Wir können dem Befehl auch direkt alle notwendigen Parameter mitgeben. Für ein Update von i-doit Version **35** auf Version **36** sieht der Befehl wie folgt aus:
 
 ```shell
-sudo -u www-data php console.php update -u BENUTZERNAME -p PASSWORT -z /var/www/html/i-doit/idoit-1.18-update.zip --v 1.18
+sudo -u www-data php console.php update -u {benutzername} -p {passwort} -z /var/www/html/idoit-36-update.zip --v 36
 ```
 
-Die Ausgabe kann dann z.B. so aussehen:
+## Nach dem Update
 
-| Message                                                                                           | Result |
-| ------------------------------------------------------------------------------------------------- | ------ |
-| i-doit update                                                                                     | OK     |
-| Environment Check                                                                                 | OK     |
-| PHP Check                                                                                         | OK     |
-| Configuration                                                                                     | OK     |
-| Ini Setting: max\_input\_vars > 10000: failed                                                     | WARN   |
-| Ini Setting: post\_max\_size > 128M: failed                                                       | WARN   |
-| php-ext: mod\_rewrite: failed                                                                     | WARN   |
-| Sql Check                                                                                         | OK     |
-| Process update                                                                                    | OK     |
-| File: /var/www/html/i-doit/updates/versions/v1.18.1/update\_sys.xml should exist: failed          | OK     |
-| File: /var/www/html/i-doit/updates/versions/v1.18.1/config\_template.inc.php should exist: failed | OK     |
-| Upgrade config                                                                                    | OK     |
+Nach dem Update den [Cache](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) leeren und den [Suche-index](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) erneuern.
 
-| Message                                                                                                                             | Result |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| i-doit update                                                                                                                       | OK     |
-| Process update                                                                                                                      | OK     |
-| Update \idoit\_system\_i-doit\\ with /var/www/html/i-doit/updates/versions/v1.18.1/update\_sys.xml: Update is successful            | OK     |
-| Update tenant databases                                                                                                             | OK     |
-| Update \idoit\_data\_i-doit\\ with /var/www/html/i-doit/updates/versions/v1.18.1/update\_data.xml: Update is successful             | OK     |
-| Remove update files using /var/www/html/i-doit/updates/versions/v1.18.1/update\_files.xml: Removing done                            | OK     |
-| Update \idoit\_system\_i-doit\\ with /var/www/html/i-doit/src/classes/modules/pro/install/update\_sys.xml: Update is successful     | OK     |
-| Update tenant databases                                                                                                             | OK     |
-| Update \idoit\_data\_i-doit\\ with /var/www/html/i-doit/src/classes/modules/pro/install/update\_data.xml: Update is successful      | OK     |
-| Migrate tenant databases                                                                                                            | OK     |
-| Migrate properties of \idoit\_data\_i-doit\\ with /var/www/html/i-doit/updates/versions/v1.18.1/migration/: Migration is successful | OK     |
-| Clear caches                                                                                                                        | OK     |
-
-Anschließend kann i-doit verwendet werden.
-Nach dem Update sollte der [Cache](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) geleert und der [Suche-index](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) erneuert werden.
+Außerdem sollten die Reporte aktualisiert werden. Mehr dazu ist unter [Report Manager](../auswertungen/report-manager.md#aktualisieren-der-reports-nach-einem-update) zu finden.
