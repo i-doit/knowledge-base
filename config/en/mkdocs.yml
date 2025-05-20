@@ -292,11 +292,10 @@ nav:
       - Dashboard and widgets: basics/dashboard-and-widgets.md
       - Object list:
           - basics/object-list/index.md
-          - Actions in object lists: basics/object-list/actions-in-object-lists.md
+          - Actions in Object lists: basics/object-list/actions-in-object-lists.md
           - Navigation and filtering: basics/object-list/navigation-and-filtering.md
-          - Configuration of the list view: basics/object-list/configuration-of-the-list-view.md
+          - Configuration of the Object list view: basics/object-list/configuration-of-the-list-view.md
           - Advanced settings: basics/object-list/advanced-settings.md
-          - Configure object lists: basics/object-list/configure-object-lists.md
       - Attribute fields: basics/attribute-fields.md
       - Dialog-Admin: basics/dialog-admin.md
       - Object types: basics/object-types.md
