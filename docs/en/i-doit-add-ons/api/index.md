@@ -135,6 +135,7 @@ There are numerous projects and products applying the API by i-doit. We would li
 | ansible-i-doit    | <https://github.com/ScaleUp-Technologies/ansible-i-doit> | Python               | MIT     |
 | i-doit_API        | <https://github.com/mvorl/i-doit_API>                    | Python               | AGPLv3  |
 | i-doit-js         | <https://github.com/Hildebrand-S/i-doit-js>              | JavaScript           | MIT     |
+| i-doit_powershell | <https://github.com/l-gosling/i-doit_powershell>         | PowerShell           | MIT     |
 
 !!! info "Feedback"
 
