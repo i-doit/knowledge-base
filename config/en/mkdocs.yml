@@ -272,7 +272,7 @@ nav:
       - Backup and recovery:
           - maintenance-and-operation/backup-and-recovery/index.md
           - Backup script for data and files: maintenance-and-operation/backup-and-recovery/backup-script-for-data-and-files.md
-      - Update: maintenance-and-operation/update.md
+      - i-doit update: maintenance-and-operation/update.md
       - Security and protection: maintenance-and-operation/security-and-protection.md
       - PHP update: maintenance-and-operation/php-update.md
   - Upgrades and migrations:
