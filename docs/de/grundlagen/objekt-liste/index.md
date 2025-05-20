@@ -1,3 +1,11 @@
+---
+title: Objekt-Liste
+description:
+icon:
+status:
+lang: de
+---
+
 # Objekt-Liste
 
 Die Objekt-Listen in i-doit dienen nicht nur der reinen Auflistung von [Objekten](../struktur-it-dokumentation.md), sondern stellen auch eine Vielzahl von Funktionen zur Verfügung und lassen sich nahezu vollständig individualisieren.

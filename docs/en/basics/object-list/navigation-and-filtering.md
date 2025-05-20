@@ -11,15 +11,14 @@ Longer object lists are distributed over several pages through which you can nav
 For each user you can determine [how many objects per page](./advanced-settings.md) you want to display. Additionally, you can skip this setting via a drop-down menu and thus display 50, 100 or even all objects on one page.
 
 !!! success "Keyboard commands"
-
     You can operate the object list with your keyboard with the following commands:
 
-    |   Key  |   Action  |
-    | --- | --- |
-    | **Down** | Jump to the next line |
-    | **Up** | Jump to the previous line |
-    | **Space key** | Select an object, i.e. select the respective checkbox |
-    | **Shift+space key** | Select an area of objects |
+    | Key                 | Action                                                |
+    | ------------------- | ----------------------------------------------------- |
+    | **Down**            | Jump to the next line                                 |
+    | **Up**              | Jump to the previous line                             |
+    | **Space key**       | Select an object, i.e. select the respective checkbox |
+    | **Shift+space key** | Select an area of objects                             |
 
     You can also use the shift key in combination with the left mouse button to select an area of objects.
 
@@ -33,14 +32,14 @@ Additionally, you can filter for several attributes simultaneously via drop-down
 
 [![Filtering](../../assets/images/en/basics/object-list/navigation-and-filtering/3-naf.png)](../../assets/images/en/basics/object-list/navigation-and-filtering/3-naf.png)
 
-You can [pre-filter](./configuration-of-the-list-view.md) the object list already during loading.
+You can [filter](./configuration-of-the-list-view.md) the object list already during loading.
 
-## Additional Functions
+## Additional functions
 
 Additional functions can be accessed via the navigation and filter bar:
 
-|   Icon  |   Function  |
-| --- | --- |
-| [![fullscreen-window-filled.](../../assets/images/en/basics/object-list/navigation-and-filtering/fullscreen-window-filled.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/fullscreen-window-filled.svg) | Fit the column list to screen |
-| [![separator-vertical-filled](../../assets/images/en/basics/object-list/navigation-and-filtering/separator-vertical-filled.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/separator-vertical-filled.svg) | Restore default colimn width |
-| [![gear](../../assets/images/en/basics/object-list/navigation-and-filtering/gear.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/gear.svg) | [Configuration of the list view](./configuration-of-the-list-view.md). |
+| Icon                                                                                                                                                                                                                               | Function                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [![full-screen-window-filled.](../../assets/images/en/basics/object-list/navigation-and-filtering/fullscreen-window-filled.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/fullscreen-window-filled.svg)  | Fit the column list to screen                                          |
+| [![separator-vertical-filled](../../assets/images/en/basics/object-list/navigation-and-filtering/separator-vertical-filled.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/separator-vertical-filled.svg) | Restore default column width                                           |
+| [![gear](../../assets/images/en/basics/object-list/navigation-and-filtering/gear.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/gear.svg)                                                                | [Configuration of the list view](./configuration-of-the-list-view.md). |
