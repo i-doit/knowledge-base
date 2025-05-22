@@ -124,10 +124,10 @@ Der CSV-Datenimport ist in der Lage, Verknüpfungen von Objekten ([Beziehungen](
 
 [![Verknüpfen von Beziehungen](../../assets/images/de/daten-konsolidieren/csv-import/9-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/9-csvi.png)
 
-Während des Mappings kann man, nachdem das Feld ausgewählt wurde, angeben, ob die Auswahl des zu verknüpfenden Objekts uneingeschränkt erfolgen soll oder eine Eingrenzung auf einen festgelegten Objekttyp stattfindet. Weiterhin können Objekte, die nicht gefunden wurden, automatisch erstellt werden. In diesem Fall ist die Angabe des Objekttyps der verknüpften Objekte notwendig, damit ein Objekt dieses Typs erstellt wird. Bei einigen Verknüpfungsarten kann in der Sonderzuweisung festlegt werden, über welches Attribut die Identifikation des zu verknüpfenden Objekts erfolgen soll. Im Standard wird hier der Objekt-Titel verwendet.
+Während des Mappings kann man, nachdem das Feld ausgewählt wurde, angeben, ob die Auswahl des zu verknüpfenden Objekts uneingeschränkt erfolgen soll oder eine Eingrenzung auf einen festgelegten Objekttyp stattfindet. Weiterhin können Objekte, die nicht gefunden wurden, automatisch erstellt werden. In diesem Fall ist die Angabe des Objekttyps der verknüpften Objekte notwendig, damit ein Objekt dieses Typs erstellt wird. Bei einigen Verknüpfungen kann in der Sonderzuweisung festlegt werden, über welches Attribut die Identifikation des zu verknüpfenden Objekts erfolgen soll. Im Standard wird hier der Objekt-Titel verwendet.
 
 !!! note "Hinweis"
-    Die Sonderzuweisung ist nicht bei allen Verknüpfungsfeldern verfügbar. In diesem Fall wird ausschließlich der Objekt-Titel zur Identifikation des zu aktualisierenden Objekts verwendet.
+    Die Sonderzuweisung ist nicht bei allen Feldern verfügbar. In diesem Fall wird ausschließlich der Objekt-Titel zur Identifikation des zu aktualisierenden Objekts verwendet.
 
 [![Sonderzuweisung](../../assets/images/de/daten-konsolidieren/csv-import/10-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/10-csvi.png)
 
@@ -140,6 +140,12 @@ Einige Attribute beinhalten aus Werten und Einheiten. In den jeweiligen Formular
 | **CPU**                            | **CPU-Frequenz** | **CPU-Frequenz (Einheit)**     | 2.5 GHz            |
 | **Lokaler Massenspeicher → Gerät** | **Kapazität**    | **Kapazität (Einheit)**        | 4 TB               |
 | **Monitor**                        | **Display**      | **Display (Einheit)**          | 24 Inch            |
+
+### Weitere Sonderfälle
+
+| Kategorie          | Attribut                       | Zuweisung beim CSV-Datenimport          | Zelle in CSV-Datei |
+| ------------------ | ------------------------------ | --------------------------------------- | ------------------ |
+| **Betriebssystem** | **<Variante> (<Bezeichnung>)** | **Betriebssystem > Variante (Variant)** | DE (Sprache)       |
 
 ## CSV-Dateien über die i-doit Console importieren
 
