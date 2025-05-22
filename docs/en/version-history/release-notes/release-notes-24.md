@@ -5,7 +5,7 @@ We're happy to announce i-doit 24. As always, we will provide you with bugfixes 
 ## Highlights in this release
 
 *   MariaDB 10.6 is officially supported with i-doit 24.
-*   [JDisc](../../consolidate-data/jdisc-discovery.md) profiles can now be **exported** and **imported** to transfer them with ease between different installations/tenants of i-doit.
+*   [JDisc](../../jdisc/index.md) profiles can now be **exported** and **imported** to transfer them with ease between different installations/tenants of i-doit.
 *   The [Setting](../../system-administration/administration/user-settings/user-interface/index.md) for more compact menu trees has a new option for medium spacing.
 *   Information about **assemblance** can now be edited via the [list edit](../../efficient-documentation/list-editing.md) feature.
 *   The [list edit](../../efficient-documentation/list-editing.md) has been improved to show more entries per page and fix scroll bars permanently to the screen size.

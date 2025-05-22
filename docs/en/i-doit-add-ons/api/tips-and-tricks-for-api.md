@@ -5,12 +5,12 @@ For this article we collected many tips and tricks regarding efficient handling 
 Don't Repeat Yourself (DRY)
 ---------------------------
 
-You do not have to reinvent the wheel. To control the API you can use the several libraries and clients which are available at present. If you cannot find your favourite programming language, however, you may of course remedy this.
+You do not have to reinvent the wheel. To control the API you can use the several libraries and clients which are available at present. If you cannot find your favorite programming language, however, you may of course remedy this.
 
 Keep It Simple, Stupid (KISS)
 -----------------------------
 
-This is a widely known paradigm from the field of software development. Each script to control the API should only perform one task. One tool, one job -  this philosophy borrowed from the Unix world also applies to IT Service Management (ITSM). You should reduce complexity as far as possible, otherwise maintenance of the script will only be impeded.
+This is a widely known paradigm from the field of software development. Each script to control the API should only perform one task. One tool, one job - this philosophy borrowed from the Unix world also applies to IT Service Management (ITSM). You should reduce complexity as far as possible, otherwise maintenance of the script will only be impeded.
 
 Use the API Instead of SQL
 --------------------------
@@ -30,7 +30,7 @@ With regard to exporting data, you can use the API in a flexible way. The API is
 Use the API for Data Collection
 -------------------------------
 
-There is no question that the automated collection of information with a Network Discovery facilitates the maintenance of the IT documentation tremendously. i-doit already provides interfaces to [JDisc Discovery](../../consolidate-data/jdisc-discovery.md), [OCS Inventory NG](./../ocs-inventory-ng.md) and others. Should an interface be missing, the API can help.
+There is no question that the automated collection of information with a Network Discovery facilitates the maintenance of the IT documentation tremendously. i-doit already provides interfaces to [JDisc Discovery](../../jdisc/index.md), [OCS Inventory NG](./../ocs-inventory-ng.md) and others. Should an interface be missing, the API can help.
 
 Use the Two-Factor-Authentication
 ---------------------------------
@@ -60,7 +60,7 @@ At the moment, the API bypasses the [rights management](../../efficient-document
 Log On and Log Off Again
 ------------------------
 
-When the script carries out several API calls, we recommend an explicit login. With the **idoit.login**  method a new session is created which can be reused for all other API calls. At the end, you can terminate the session with the  **idoit.logout** method. In this way, you can save numerous sessions which PHP only deletes by and by, sometimes only after weeks.
+When the script carries out several API calls, we recommend an explicit login. With the **idoit.login** method a new session is created which can be reused for all other API calls. At the end, you can terminate the session with the **idoit.logout** method. In this way, you can save numerous sessions which PHP only deletes by and by, sometimes only after weeks.
 
 Use Batch Requests
 ------------------
