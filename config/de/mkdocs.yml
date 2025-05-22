@@ -404,8 +404,8 @@ nav:
       - CSV-Datenexport: daten-konsolidieren/csv-datenexport.md
       - h-inventory: daten-konsolidieren/h-inventory.md
       - JDisc Discovery:
-        - daten-konsolidieren/jdisc/index.md
-        - Erweiterte Optionen für JDisc-Importprofile: daten-konsolidieren/jdisc/advanced-options.md
+          - daten-konsolidieren/jdisc/index.md
+          - Erweiterte Optionen für JDisc-Importprofile: daten-konsolidieren/jdisc/advanced-options.md
       - Objekte identifizieren bei Importen: daten-konsolidieren/objekt-identifizieren-bei-importen.md
   - Automatisierung und Integration:
       - automatisierung-und-integration/index.md

@@ -7,7 +7,7 @@ i-doit verfügt über ein Kommandozeilen-Werkzeug namens Controller.
 
 ## Erste Schritte
 
-Der Controller befindet sich im Hauptverzeichnis von i-doit. Wenn Du laut [Installationsanleitung](.) vorgegangen bist, befindet sich das Hauptverzeichnis bei Debian-basierten Betriebssystemen unter **/var/www/html/i-doit/**:
+Der Controller befindet sich im Hauptverzeichnis von i-doit. Wenn Du laut [Installationsanleitung]() vorgegangen bist, befindet sich das Hauptverzeichnis bei Debian-basierten Betriebssystemen unter **/var/www/html/i-doit/**:
 
 ```sh
 $ ll /var/www/html/i-doit/controller

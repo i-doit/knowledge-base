@@ -369,8 +369,8 @@ nav:
       - CSV data export: consolidate-data/csv-data-export.md
       - h-inventory: consolidate-data/h-inventory.md
       - JDisc Discovery:
-        - consolidate-data/jdisc/index.md
-        - Erweiterte Optionen für JDisc-Importprofile: consolidate-data/jdisc/advanced-options.md
+          - consolidate-data/jdisc/index.md
+          - Erweiterte Optionen für JDisc-Importprofile: consolidate-data/jdisc/advanced-options.md
       - LOGINventory: consolidate-data/loginventory.md
       - Object identification during imports: consolidate-data/object-identification-during-imports.md
   - Automation and integration:
