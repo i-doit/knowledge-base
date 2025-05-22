@@ -142,4 +142,4 @@ sudo -u www-data php console.php update -u {username} -p {password} -z /var/www/
 
 After the update, clear the [cache](../system-administration/administration/tenant-management/repair-and-clean-up.md#cache) and refresh the [search index](../system-administration/administration/tenant-management/repair-and-clean-up.md#other).
 
-The reports should also be updated. More information can be found under [Report Manager](../evaluation/report-manager.md#refresh-reports).
+The reports should also be updated. More information can be found under [Report Manager](../evaluation/report-manager.md#updating-reports-after-an-update).

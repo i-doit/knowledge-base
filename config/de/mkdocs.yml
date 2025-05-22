@@ -65,6 +65,7 @@ plugins:
       redirect_maps:
         'wartung-und-betrieb/lizenz-aktivieren.md': 'wartung-und-betrieb/lizenzierung.md'
         'automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md': 'automatisierung-und-integration/cli/console/befehle-und-optionen.md'
+        'daten-konsolidieren/jdisc-discovery.md': 'daten-konsolidieren/jdisc/index.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -312,7 +313,7 @@ nav:
       - PHP update: wartung-und-betrieb/php-update.md
   - Upgrades und Umzüge:
       - upgrades-und-umzuege/index.md
-      - Update Anleitung i-doit 1.7.4 bis 34: upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md
+      - i-doit update Anleitung: upgrades-und-umzuege/update-anleitung.md
       - Upgrade von i-doit open auf i-doit: upgrades-und-umzuege/upgrade-von-open-auf-i-doit.md
       - Update von i-doit open 1.4.8 auf 1.8: upgrades-und-umzuege/update-von-open-1.4.8-auf-1.8.md
       - Upgrade zu MySQL 5.6 oder MariaDB 10.0: upgrades-und-umzuege/upgrade-zu-mysql-5.6-oder-mariadb-10.0.md

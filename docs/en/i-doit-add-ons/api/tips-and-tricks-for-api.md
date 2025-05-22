@@ -30,7 +30,7 @@ With regard to exporting data, you can use the API in a flexible way. The API is
 Use the API for Data Collection
 -------------------------------
 
-There is no question that the automated collection of information with a Network Discovery facilitates the maintenance of the IT documentation tremendously. i-doit already provides interfaces to [JDisc Discovery](../../jdisc/index.md), [OCS Inventory NG](./../ocs-inventory-ng.md) and others. Should an interface be missing, the API can help.
+There is no question that the automated collection of information with a Network Discovery facilitates the maintenance of the IT documentation tremendously. i-doit already provides interfaces to [JDisc Discovery](../../consolidate-data/jdisc/index.md), [OCS Inventory NG](./../ocs-inventory-ng.md) and others. Should an interface be missing, the API can help.
 
 Use the Two-Factor-Authentication
 ---------------------------------

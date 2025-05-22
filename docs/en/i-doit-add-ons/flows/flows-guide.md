@@ -111,7 +111,7 @@ Now the file permissions are adjusted so that the web server has read and write 
 
 ## 2. Flows Add-on installation
 <!--//TODO add a selection -->
-With i-doit 33, the [Add-on & Subscription Center](../../system-administration/add-on-and-subscription-center.md) feature was added, which can also be used to install Add-ons directly. However, the Flows Add-on can also be installed as usual via the [Admin-Center](#22-offline-install-flows-add-on-via-the-admin-center).
+With i-doit 33, the [Add-on & Subscription Center](../../system-administration/add-on-and-subscription-center.md) feature was added, which can also be used to install Add-ons directly. However, the Flows Add-on can also be installed as usual via the [Admin-Center](#offline-install-flows-add-on-via-the-admin-center).
 
 ### (Online) install Flows Add-on via Add-on & Subscription Center
 

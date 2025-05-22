@@ -65,6 +65,7 @@ plugins:
       redirect_maps:
         'maintenance-and-operation/activate-license.md': 'maintenance-and-operation/licensing.md'
         'automation-and-integration/cli/console/options-and-parameters-cli.md': 'automation-and-integration/cli/console/commands-and-options.md'
+        'consolidate-data/jdisc-discovery.md': 'consolidate-data/jdisc/index.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -280,7 +281,7 @@ nav:
       - Migration from Windows to Linux: upgrades-and-migrations/migration-from-windows-to-linux.md
       - Migration from Linux to Windows: upgrades-and-migrations/migration-from-linux-to-windows.md
       - Migration of an Installation under GNU/Linux: upgrades-and-migrations/migration-of-an-installation-under-linux.md
-      - Update guide from i-doit 1.7.4 to 34: upgrades-and-migrations/update-guide-from-1.7.4-to-31.md
+      - i-doit Update guide: upgrades-and-migrations/update-guide.md
       - Update of i-doit open 1.4.8 to 1.8: upgrades-and-migrations/update-of-i-doit-open-1.4.8-to-1.8.md
       - Upgrade from i-doit open to i-doit: upgrades-and-migrations/upgrade-from-open-to-i-doit.md
       - Upgrade to MySQL 5.6 or MariaDB 10.0: upgrades-and-migrations/upgrade-to-mysql-5.6-or-mariadb-10.0.md
