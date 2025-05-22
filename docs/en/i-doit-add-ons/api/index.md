@@ -138,7 +138,6 @@ There are numerous projects and products applying the API by i-doit. We would li
 | i-doit_powershell | <https://github.com/l-gosling/i-doit_powershell>         | PowerShell           | MIT     |
 
 !!! info "Feedback"
-
     Should a client or a library be missing in this article, we appreciate a short message to [feedback@i-doit.com](mailto:feedback@i-doit.com).
 
 ## Documentation for Download

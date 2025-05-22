@@ -530,6 +530,7 @@ nav:
           - Methods:
               - v1:
                   - i-doit-add-ons/api/methods/index.md
+                  - cmdb.cabling: i-doit-add-ons/api/methods/cmdb.cabling.md
                   - cmdb.categories: i-doit-add-ons/api/methods/cmdb.categories.md
                   - cmdb.category_info: i-doit-add-ons/api/methods/cmdb.category_info.md
                   - cmdb.category: i-doit-add-ons/api/methods/cmdb.category.md

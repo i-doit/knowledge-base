@@ -12,8 +12,7 @@ lang: de
 
 ## cmdb.categories.read
 
-Retrieve multiple categories by one request.<br>
-Before you start, you should use [cmdb.object_type_categories](cmdb.object_type_categories.md#cmdbobject_type_categories) to get available categories and the cats/catg id.
+Um mehrere Kategorien mit einer Anfrage abzurufen, solltest du die Methode `cmdb.categories.read` verwenden. Wie in der Aufgabenstellung erwähnt, ist es hilfreich, `cmdb.object_type_categories` im Voraus zu verwenden, um die verfügbaren catgID (globale Kategorien) und catsID (spezifische Kategorien) zu erhalten.
 
 ### Request parameters
 
