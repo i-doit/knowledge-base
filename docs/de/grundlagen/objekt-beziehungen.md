@@ -26,7 +26,7 @@ Bereits dokumentierte Objekt-Beziehungen werden unter **Extras → CMDB → Bezi
 
 ## Beziehungs-Objekte
 
-Wird eine Beziehung zwischen zwei Objekten erstellt, wird automatisch im Hintergrund ein drittes Objekt vom [Typ](struktur-it-dokumentation.md) **Beziehungen** erstellt. Dieses erhält als Objekt-Titel von Objekt-Titel des Master-Objekts, gefolgt von der Beschreibung und dem Objekt-Titel des Slave-Objekts.
+Wenn eine Beziehung zwischen zwei Objekten erstellt wird, wird im Hintergrund automatisch ein drittes Objekt vom [Typ](struktur-it-dokumentation.md) **Beziehungen** angelegt. Dieses erhält den Objekt-Titel des Master-Objekts, gefolgt von der Beschreibung und dem Objekt-Titel des Slave-Objekts.
 
 Beispiel:
 
@@ -94,3 +94,9 @@ In [benutzerdefinierten Kategorien](benutzerdefinierte-kategorien.md) können Ob
 
 !!! success "Objekt-Browser oder -Beziehung?"
     Wie bei den impliziten und expliziten Beziehungen stellt sich hier ebenfalls die Frage: Welcher Feldtyp ist besser? Auch hier fällt die Antwort wieder eindeutig aus: Die **Objekt-Beziehung** hat einen zusätzlichen Nutzen und ist daher dem Feldtyp **Objekt-Browser** zu bevorzugen.
+
+## FAQs
+
+### Richtung der Beziehung
+
+In `v35` wird die Richtung der Beziehung durch die Objekttyp Konfiguration bestimmt. Dort wird Konfiguriert ob ein Objekt der [Beziehungsmaster](./benutzerdefinierte-objekttypen.md#felder-in-der-konfiguration) ist oder nicht. Diese Einstellung wird die Einstellung [Standard Richtung](#objekt-beziehungsarten) überschreiben.

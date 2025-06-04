@@ -95,3 +95,9 @@ Object relations can be documented in [custom categories](custom-categories.md).
 
 !!! success "Object browser or object relation?"
     As with implicit and explicit relationships, the question here is also: Which field type is better? Here too, the answer is clear: The **object relationship** has an additional benefit and is therefore preferable to the **object browser** field type.
+
+## FAQs
+
+### Direction of the relationship
+
+In `v35`, the direction of the relationship is determined by the object type configuration. There, you can configure whether an object is a [relationship master](custom-object-types.md#fields-in-the-configuration) or not. This setting will override the [Default direction](#object-relations) setting.
