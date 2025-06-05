@@ -66,6 +66,7 @@ plugins:
         'wartung-und-betrieb/lizenz-aktivieren.md': 'wartung-und-betrieb/lizenzierung.md'
         'automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md': 'automatisierung-und-integration/cli/console/befehle-und-optionen.md'
         'daten-konsolidieren/jdisc-discovery.md': 'daten-konsolidieren/jdisc/index.md'
+        'upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md': 'upgrades-und-umzuege/update-anleitung.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -524,6 +525,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
           - Hotfix Archiv:
               - administration/hotfixes/hotfix-archiv/index.md
+              - Version 34: administration/hotfixes/hotfix-archiv/v34.md
               - Version 33: administration/hotfixes/hotfix-archiv/v33.md
               - Version 32: administration/hotfixes/hotfix-archiv/v32.md
               - Version 31: administration/hotfixes/hotfix-archiv/v31.md
