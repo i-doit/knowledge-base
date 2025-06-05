@@ -30,14 +30,15 @@ Die IP-Adresse kann über die Konsole konfiguriert werden (siehe weiter unten).
 
 ## Zugangsdaten
 
-| Tool                                                        | Benutzername   | Passwort       |
-| ----------------------------------------------------------- | -------------- | -------------- |
-| i-doit Web GUI                                              | **admin**      | **admin**      |
-| i-doit Web GUI                                              | **controller** | **controller** |
-| [i-doit Admin-Center](../../administration/admin-center.md) | **admin**      | **idoit**      |
-| SSH                                                         | **idoitadm**   | **idoit**      |
-| MySQL (i-doit)                                              | **idoit**      | **idoit**      |
-| MySQL (Systemuser)                                          | **root**       | **idoit**      |
+| Tool                                                        | Benutzername   | Passwort                 |
+| ----------------------------------------------------------- | -------------- | ------------------------ |
+| i-doit Web GUI                                              | **admin**      | **admin**                |
+| i-doit Web GUI                                              | **controller** | **controller**           |
+| [i-doit Admin-Center](../../administration/admin-center.md) | **admin**      | **idoit**                |
+| SSH                                                         | **idoitadm**   | **idoit**                |
+| MySQL (i-doit)                                              | **idoit**      | **idoit**                |
+| MySQL (Systemuser)                                          | **root**       | **idoit**                |
+| Forms Add-on API                                            | **idoit**      | **SrUBXhaop0bp4dgdtiMY** |
 
 Weiterhin existieren [die vordefinierten Personen- und Personengruppen](../../grundlagen/erstanmeldung.md) in i-doit.
 

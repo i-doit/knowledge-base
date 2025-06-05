@@ -1,3 +1,11 @@
+---
+title: Erweiterte Einstellungen
+description:
+icon:
+status:
+lang: de
+---
+
 # Erweiterte Einstellungen
 
 Viele Parameter bezüglich der [Objekt-Listen](index.md) lassen sich gemäß den Anforderungen anpassen. Dies steigert die Übersichtlichkeit und sichert die Möglichkeit, schnell Zugriff auf die gewünschten Inhalte zu erhalten.

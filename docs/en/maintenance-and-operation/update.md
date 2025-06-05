@@ -23,7 +23,7 @@ The update can be accessed either through **Administration → [Tenant-Name] man
 
 [![Update via Dashboard](../assets/images/en/maintenance-and-operation/update/1-update.png)](../assets/images/en/maintenance-and-operation/update/1-update.png)
 
-Upon launching an interface appears in which the current status of the system is examined. We can see in our screenshot that the PHP-extension mcrypt has not been found. If such a status message is displayed, it is very important to adjust the system appropriately. For this you should look at our [system requirements](../installation/system-requirements.md) and [tenant mangement](../system-administration/administration/tenant-management/index.md). After adjusting the environment, everything should be checked with a green mark or marked with an "OK".
+After launching the program, a separate interface will open to check the current status of your system. If you encounter any problems, please refer to our . [system requirements](../installation/system-requirements.md) section and [tenant management](../system-administration/administration/tenant-management/index.md). After adjusting the environment, everything should be checked with a green mark or marked with an "OK".
 
 ### Step 1: i-doit update and compatibility check
 
@@ -88,14 +88,14 @@ The update can be prepared, but not executed via the console. For the preparatio
 The update package can be stored on the server (for example, via [WinSCP](https://winscp.net/eng/index.php)). Move the package to the main folder of i-doit afterwards, if you didn't already put it there. This can be carried out by using the following command:
 
 ```shell
-mv idoit-26-update.zip /var/www/html/i-doit/
+mv idoit-36-update.zip /var/www/html/
 ```
 
 Then the package needs to be extracted and all existing files need to be overwritten.
 
 ```shell
-cd /var/www/html/i-doit
-unzip idoit-26-update.zip
+cd /var/www/html/
+unzip idoit-36-update.zip
 ```
 
 Now the file permissions are being adjusted in order to give the Webserver both reading access as well as writing access to i-doit.
@@ -105,10 +105,41 @@ Now the file permissions are being adjusted in order to give the Webserver both 
     If another operating system is used, the used user:group combination must be adapted.
 
 ```shell
-cd /var/www/html/i-doit/
+cd /var/www/html/
 sudo chown www-data:www-data -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
 ```
 
-Now you can have a look at our instructions for the [update via the web interface](./update.md) and skip the steps regarding the download of the newest package.
+Now you can have a look at our instructions for the [update via the web interface](#update-via-the-web-interface) and skip the steps regarding the download of the newest package.
+
+## Update über die Konsole via console.php
+
+!!! attention "Backup"
+    Before updating, it is essential to make a [backup](backup-and-recovery/index.md).
+
+If you want to run the update via the console, use console.php. To do this, use the update command with [console.php](../automation-and-integration/cli/index.md).
+
+First, we switch to the i-doit root directory:
+
+```shell
+cd /var/www/html/
+```
+
+Then we execute the update command and have to answer a few interactive questions before the update can be carried out:
+
+```shell
+sudo -u www-data php console.php update
+```
+
+We can also provide the command with all necessary parameters directly. To update i-doit version **35** to version **36**, the command is as follows:
+
+```shell
+sudo -u www-data php console.php update -u {username} -p {password} -z /var/www/html/i-doit/idoit-36-update.zip --v 36
+```
+
+## Nach dem Update
+
+After the update, clear the [cache](../system-administration/administration/tenant-management/repair-and-clean-up.md#cache) and refresh the [search index](../system-administration/administration/tenant-management/repair-and-clean-up.md#other).
+
+The reports should also be updated. More information can be found under [Report Manager](../evaluation/report-manager.md#updating-reports-after-an-update).

@@ -30,7 +30,7 @@ Umgekehrt kann die API flexibler verwendet werden, wenn es um den Datenexport ge
 Benutze die API für das Sammeln von Daten
 -----------------------------------------
 
-Keine Frage: Das automatisierte Sammeln von Informationen durch ein Network Discovery erleichtert die Pflege der IT-Dokumentation ungemein. i-doit bietet hier bereits Schnittstellen zu [JDisc Discovery](../../daten-konsolidieren/jdisc-discovery.md), [OCS Inventory NG](../ocs-inventory-ng.md) und weitere. Sollte eine Schnittstelle fehlen, hilft die API weiter.
+Keine Frage: Das automatisierte Sammeln von Informationen durch ein Network Discovery erleichtert die Pflege der IT-Dokumentation ungemein. i-doit bietet hier bereits Schnittstellen zu [JDisc Discovery](../../_archiv/jdisc-discovery.md), [OCS Inventory NG](../ocs-inventory-ng.md) und weitere. Sollte eine Schnittstelle fehlen, hilft die API weiter.
 
 Benutze die Zwei-Faktor-Authentifizierung
 -----------------------------------------

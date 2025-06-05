@@ -65,6 +65,8 @@ plugins:
       redirect_maps:
         'wartung-und-betrieb/lizenz-aktivieren.md': 'wartung-und-betrieb/lizenzierung.md'
         'automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md': 'automatisierung-und-integration/cli/console/befehle-und-optionen.md'
+        'daten-konsolidieren/jdisc-discovery.md': 'daten-konsolidieren/jdisc/index.md'
+        'upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md': 'upgrades-und-umzuege/update-anleitung.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -137,6 +139,7 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 35: versionshistorie/release-notes/release-notes-35.md
           - Release Notes 34: versionshistorie/release-notes/release-notes-34.md
           - Release Notes 33: versionshistorie/release-notes/release-notes-33.md
           - Release Notes 32: versionshistorie/release-notes/release-notes-32.md
@@ -166,6 +169,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 35: versionshistorie/changelogs/changelog-35.md
           - Changelog 34: versionshistorie/changelogs/changelog-34.md
           - Changelog 33: versionshistorie/changelogs/changelog-33.md
           - Changelog 32: versionshistorie/changelogs/changelog-32.md
@@ -307,12 +311,12 @@ nav:
       - Daten sichern und wiederherstellen:
           - wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md
           - Backup-Script für Daten und Dateien: wartung-und-betrieb/daten-sichern-und-wiederherstellen/backup-script-fuer-daten-und-dateien.md
-      - Update einspielen: wartung-und-betrieb/update-einspielen.md
+      - i-doit Update: wartung-und-betrieb/update-einspielen.md
       - Sicherheit und Schutz: wartung-und-betrieb/sicherheit-und-schutz.md
       - PHP update: wartung-und-betrieb/php-update.md
   - Upgrades und Umzüge:
       - upgrades-und-umzuege/index.md
-      - Update Anleitung i-doit 1.7.4 bis 34: upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md
+      - i-doit update Anleitung: upgrades-und-umzuege/update-anleitung.md
       - Upgrade von i-doit open auf i-doit: upgrades-und-umzuege/upgrade-von-open-auf-i-doit.md
       - Update von i-doit open 1.4.8 auf 1.8: upgrades-und-umzuege/update-von-open-1.4.8-auf-1.8.md
       - Upgrade zu MySQL 5.6 oder MariaDB 10.0: upgrades-und-umzuege/upgrade-zu-mysql-5.6-oder-mariadb-10.0.md
@@ -331,7 +335,6 @@ nav:
           - Navigieren und filtern: grundlagen/objekt-liste/navigieren-und-filtern.md
           - Listenansicht Konfigurieren: grundlagen/objekt-liste/listenansicht-konfigurieren.md
           - Erweiterte Einstellungen: grundlagen/objekt-liste/erweiterte-einstellungen.md
-          - Objekt Listen konfigurieren: grundlagen/objekt-liste/objekt-listen-konfigurieren.md
       - Attributfelder: grundlagen/attributfelder.md
       - Dialog-Admin: grundlagen/dialog-admin.md
       - Objekttypen: grundlagen/objekttypen.md
@@ -403,7 +406,9 @@ nav:
           - Beispiel für den CSV Import - Standorte erstellen: daten-konsolidieren/csv-datenimport/beispiel-fuer-den-csv-import-standorte-erstellen.md
       - CSV-Datenexport: daten-konsolidieren/csv-datenexport.md
       - h-inventory: daten-konsolidieren/h-inventory.md
-      - JDisc Discovery: daten-konsolidieren/jdisc-discovery.md
+      - JDisc Discovery:
+          - daten-konsolidieren/jdisc/index.md
+          - Erweiterte Optionen für JDisc-Importprofile: daten-konsolidieren/jdisc/advanced-options.md
       - Objekte identifizieren bei Importen: daten-konsolidieren/objekt-identifizieren-bei-importen.md
   - Automatisierung und Integration:
       - automatisierung-und-integration/index.md
@@ -493,8 +498,6 @@ nav:
                   - administration/verwaltung/add-ons/geraetetausch/index.md
                   - Konfiguration: administration/verwaltung/add-ons/geraetetausch/konfiguration.md
           - Zwei-Faktor-Authentisierung: administration/verwaltung/zwei-faktor-authentisierung.md
-          - Download Center: administration/verwaltung/download-center.md
-          - Vertragsdaten: administration/verwaltung/vertragsdaten.md
       - Add-on & Subscription Center: administration/add-on-and-subscription-center.md
       - Admin Center: administration/admin-center.md
       - Kundenportal: administration/kundenportal.md
@@ -524,6 +527,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
           - Hotfix Archiv:
               - administration/hotfixes/hotfix-archiv/index.md
+              - Version 34: administration/hotfixes/hotfix-archiv/v34.md
               - Version 33: administration/hotfixes/hotfix-archiv/v33.md
               - Version 32: administration/hotfixes/hotfix-archiv/v32.md
               - Version 31: administration/hotfixes/hotfix-archiv/v31.md
@@ -566,6 +570,7 @@ nav:
           - Methoden:
               - v1:
                   - i-doit-add-ons/api/methoden/v1/index.md
+                  - cmdb.cabling: i-doit-add-ons/api/methoden/v1/cmdb.cabling.md
                   - cmdb.categories: i-doit-add-ons/api/methoden/v1/cmdb.categories.md
                   - cmdb.category_info: i-doit-add-ons/api/methoden/v1/cmdb.category_info.md
                   - cmdb.category: i-doit-add-ons/api/methoden/v1/cmdb.category.md

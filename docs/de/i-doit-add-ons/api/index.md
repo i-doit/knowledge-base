@@ -19,7 +19,7 @@ Die API von i-doit bringt typische [CRUD](https://de.wikipedia.org/wiki/CRUD)-Fu
 *   aktualisiert (**U**pdate) und
 *   gelöscht (**D**elete) werden.
 <!-- cSpell:enable -->
-Ein Client (beispielsweise in Form eines Scripts) sendet dazu einen Request an den Server (i-doit), um eine Methode auf dem Server ausführen zu lasen. Diese Vorgehensweise nennt man [Remote Procedure Call (RPC)](https://de.wikipedia.org/wiki/Remote_Procedure_Call). Das Ergebnis der Methode wird an den Client als Antwort (Response) zurückgegeben. Die API von i-doit stützt sich bei dieser Kommunikation auf das Protokoll [JSON-RPC](http://www.jsonrpc.org/) in Version 2.0. Es verwendet als höheres Protokoll HTTP und als Austauschformat [JavaScript Objekt Notation (JSON)](https://de.wikipedia.org/wiki/JavaScript_Object_Notation). Per HTTP POST wird ein Request im JSON-Format an den Server geschickt. Die Response erfolgt ebenfalls im JSON-Format.
+Ein Client (beispielsweise in Form eines Scripts) sendet dazu einen Request an den Server (i-doit), um eine Methode auf dem Server ausführen zu lasen. Diese Vorgehensweise nennt man [Remote Procedure Call (RPC)](https://de.wikipedia.org/wiki/Remote_Procedure_Call). Das Ergebnis der Methode wird an den Client als Antwort (Response) zurückgegeben. Die API von i-doit stützt sich bei dieser Kommunikation auf das Protokoll [JSON-RPC](http://www.jsonrpc.org/) in Version 2.0. Es verwendet als höheres Protokoll HTTP und als Austauschformat [JavaScript Objekt Notation (JSON)](https://de.wikipedia.org/wiki/JavaScript_Object_Notation). Per **HTTP POST** wird ein Request im JSON-Format an den Server geschickt. Die Response erfolgt ebenfalls im JSON-Format.
 
 API-Aufrufe können asynchron erfolgen, ohne den Zusammenhang zwischen Requests und Responses zu verlieren. Die verwendete Programmiersprache kann frei gewählt werden.
 
@@ -43,17 +43,11 @@ Zu beachten ist, dass das Logging von API Requests bei jedem Request eine Datei 
 
 ## Zugriff
 
-Um die API von i-doit anzusprechen, gibt es eine spezielle URL. Der Basis-URL wird ein src/jsonrpc.php angehängt:
-
-```text
-https://demo.i-doit.com/src/jsonrpc.php
-```
+Der Zugriff auf die i-doit API erfolgt über eine spezielle URL. An die Basis-URL der i-doit Instanz wird `src/jsonrpc.php` angehängt. Beispiel: <https://demo.i-doit.com/src/jsonrpc.php>.
 
 ### Authentifizierung und Autorisierung
 
-Damit Requests von der API verarbeitet werden, ist ein API Key erforderlich. Mit dem API Key wird der **Mandant** identifiziert.
-Zudem kann aktiviert werden, dass ein dedizierter Benutzer-Account für die Anmeldung verwendet wird. Für diesen können wie gewohnt Rechte vergeben werden. Andernfalls stehen über die API alle Rechte zur Verfügung.
-Zusätzlicher Vorteil ist, dass man pro Dritt-System/Script einen dedizierten Benutzer angeben kann, um einfach nachvollziehen zu können, welche Datenflüsse von wo nach wo stattfinden.
+Für die Verarbeitung von Anfragen durch die API ist ein API-Schlüssel zwingend erforderlich. Dieser Schlüssel dient zur Identifizierung des Mandanten. Zusätzlich kann die Verwendung eines dedizierten Benutzerkontos für die Anmeldung aktiviert werden, für das wie üblich Rechte vergeben werden können. Die Verwendung eines dedizierten Benutzers für jedes Drittsystem oder Skript ermöglicht eine einfache Nachverfolgung des Datenflusses. Bei einer sehr großen Anzahl von Anfragen (Tausende) wird empfohlen, die API-Methode idoit.login für eine einmalige Authentifizierung zu verwenden. Andernfalls könnten zu viele Sitzungen in kurzer Zeit erstellt und nicht geschlossen werden, was dazu führen kann, dass i-doit nicht mehr funktioniert. Der Standardbenutzer für API-Aktionen ist "Api System", der unter "Kontakte → Personen" zu finden ist, falls kein spezifischer Benutzername/Passwort verwendet wird. Wenn dieser Benutzer archiviert oder gelöscht wird, kann die API ohne Authentifizierung nicht mehr verwendet werden. In der Zammad-Integration wird der API-Token beispielsweise in den Einstellungen hinterlegt.
 
 !!! success "Senden vieler Requests"
     Werden sehr viele Requests von einem Client aus gesendet (wir sprechen hier von tausenden), lohnt es sich, die API-Methode idoit.login zu nutzen, um sich lediglich einmal zu authentifizieren.<br>
@@ -65,13 +59,19 @@ Zusätzlicher Vorteil ist, dass man pro Dritt-System/Script einen dedizierten Be
     Dieser wird nur verwendet wenn kein Benutzername/Passwort für die Verbindung zur API Schnittstelle verwendet wird.<br>
     **Wird dieses Personen Objekt archiviert/gelöscht, kann die API nicht mehr ohne Authentifizierung genutzt werden.**<br>
 
-### Beispiel
+## Request-Format (JSON-RPC)
 
-Anhand eines simplen Beispiels wird ein neues Objekt vom Typ **Server** mit dem Objekt-Titel "My little server" über die API erstellt.
+Eine Anfrage an die i-doit API ist ein JSON-Objekt mit einer spezifischen Struktur, die dem JSON-RPC 2.0 Standard folgt.
+Die wesentlichen Felder sind:
 
-Request an den Server:
+-   **"jsonrpc"**: Eine Zeichenkette, die die Version des JSON-RPC-Protokolls angibt, typischerweise "2.0".
+-   **"method"**: Eine Zeichenkette, die den Namen der aufzurufenden Methode enthält (z.B. "cmdb.object.create").
+-   **"params"**: Ein strukturiertes Objekt oder Array, das die an die Methode zu übergebenden Parameter enthält. Dies schließt den "apikey" für die Authentifizierung sowie methodenspezifische Parameter ein.
+-   **"id"**: Ein eindeutiger Identifikator für die Anfrage, der vom Client generiert wird. Er kann eine Zeichenkette, eine Zahl oder null sein. Der Server verwendet diesen Wert, um die Antwort der Anfrage zuzuordnen. Wenn id null ist oder fehlt, handelt es sich um eine Notification, für die keine Antwort erwartet wird.
 
-```json
+Beispiel einer einfachen Anfrage:
+
+```json title="Anfrage"
 {
     "jsonrpc": "2.0",
     "method": "cmdb.object.create",
@@ -84,18 +84,18 @@ Request an den Server:
 }
 ```
 
-Diesen Request kann man für Testzwecke via cURL absenden:
+## Response-Format (JSON-RPC)
 
-```shell
-curl \
---data '{"jsonrpc":"2.0","method":"cmdb.object.create","params":{"type":"C__OBJTYPE__SERVER","title":"My little server","apikey":"c1ia5q"},"id":1}' \
---header "Content-Type: application/json" \
-https://demo.i-doit.com/src/jsonrpc.php
-```
+Die Antwort des Servers auf eine API-Anfrage ist ebenfalls ein JSON-Objekt.
 
-Die Response vom Server:
+-   **"jsonrpc"**: Zeichenkette mit der JSON-RPC-Protokollversion ("2.0").
+-   **"result"**: Dieses Feld ist bei erfolgreicher Ausführung der Methode vorhanden und enthält das Ergebnis der Methode. Der Inhalt ist methodenspezifisch.
+-   **"error"**: Dieses Feld ist vorhanden, wenn während der Verarbeitung der Anfrage ein Fehler aufgetreten ist. Es enthält ein Fehlerobjekt (siehe Abschnitt Fehlerbehandlung). Entweder "result" oder "error" ist vorhanden, aber niemals beide.
+-   **"id"**: Dieser Wert entspricht dem "id"-Wert der ursprünglichen Anfrage.
 
-```json
+Beispiel einer erfolgreichen Antwort:
+
+```json title="Antwort"
 {
     "jsonrpc": "2.0",
     "result": {
@@ -107,14 +107,37 @@ Die Response vom Server:
 }
 ```
 
-## Attribut Dokumentation
+## Fehlerbehandlung (JSON-RPC)
+
+Die Fehlerbehandlung in JSON-RPC 2.0 ist standardisiert. Ein Fehlerobjekt innerhalb der Antwort enthält typischerweise die folgenden Felder:
+
+-   **"code"**: Eine Ganzzahl, die den Fehlertyp angibt.
+    *   Standardisierte Codes sind z.B. `-32700` (Parse error), `-32600` (Invalid Request), `-32601` (Method not found), `-32602` (Invalid params), `-32603` (Internal error).
+-   **"message"**: Eine kurze, prägnante Zeichenkette, die den Fehler beschreibt.
+-   **"data"** (optional): Zusätzliche, anwendungsspezifische Informationen zum Fehler.
+
+i-doit kann neben den Standard-JSON-RPC-Fehlern auch spezifische Fehlermeldungen zurückgeben. Beispielsweise werden Fehler wie "Usersettings are only available after logging in" oder "Could not connect tenant database" genannt, wenn der "Api System" Benutzer archiviert oder gelöscht wurde. Die Dokumentation einer neuen Methode sollte alle spezifischen Fehler auflisten, die diese Methode auslösen kann.
+
+## Nutzung der i-doit Attributdokumentation
 
 Eine hilfreiche Auflistung aller in i-doit verwendeten Kategorien und Attribute finden Sie in der Verwaltung:
 
 [![Kategorien in der IT-Dokumentation](../../assets/images/de/i-doit-add-ons/api/2-api.png)](../../assets/images/de/i-doit-add-ons/api/2-api.png)
 
-Dort wird beispielsweise aufgelistet, unter welchem Namen Kategorien und Attribute angesprochen werden können und welche Datentypen die jeweiligen Attribute erwarten.<br>
-Für [benutzerdefinierte Kategorien](../../grundlagen/benutzerdefinierte-kategorien.md) bzw. Attribute finden Sie die technischen Schlüssel in der jeweiliges benutzerdefinierten Kategorie. Dort ist es möglich die technisches Schlüssel neu zu benennen.
+i-doit stellt eine "Attributdokumentation" zur Verfügung, die eine Auflistung aller Kategorien und Attribute sowie deren erwartete Datentypen enthält. Diese ist die maßgebliche Quelle für das Verständnis der Datenelemente des i-doit CMDB-Modells, insbesondere wenn Parameter oder Antwortfelder i-doit-spezifische Konstanten oder Eigenschaftsschlüssel verwenden. Für benutzerdefinierte Kategorien und Attribute finden sich die technischen Schlüssel direkt in der i-doit Weboberfläche in der jeweiligen benutzerdefinierten Kategorie.
+
+Finden von i-doit Konstanten und Eigenschaftsschlüsseln
+
+| Informationstyp                             | Fundort in i-doit / Knowledge Base                                                                 | Beispiel                              |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| Konstante für Objekttyp                     | i-doit GUI (Objekttyp-Konfiguration), Verwaltung → Add-ons → JSON-RPC API → Attribut Dokumentation | `C__OBJTYPE__SERVER`                  |
+| Konstante für globale Kategorie (catg)      | i-doit GUI (Verwaltung → Add-ons → JSON-RPC API → Attribut Dokumentation)                          | `C__CATG__NETWORK_PORT`               |
+| Konstante für spezifische Kategorie (cats)  | i-doit GUI (Verwaltung → Add-ons → JSON-RPC API → Attribut Dokumentation)                          | `C__CATS__NET_IP_ADDRESSES`           |
+| Eigenschaftsschlüssel für Kategorieattribut | i-doit GUI (Verwaltung → Add-ons → JSON-RPC API → Attribut Dokumentation)                          | `title`, `ip_address`, `manufacturer` |
+| ID für Dialog+ Feld Wert (Dropdown)         | i-doit GUI (Verwaltung → Vordefinierte Inhalte → Dialog-Admin), API-Methoden wie dialog.read       | `12` (für z.B. "Aktiv")               |
+| Konstante für CMDB-Status                   | i-doit GUI (Verwaltung → Vordefinierte Inhalte → CMDB-Status)                                      | `C__CMDB_STATUS__IN_OPERATION`        |
+
+Diese Tabelle dient als Orientierungshilfe wo die benötigten Identifikatoren und Konstanten für die API-Nutzung gefunden werden können.
 
 ## Endpunkt Dokumentation v2
 
@@ -138,6 +161,7 @@ Es gibt bereits zahlreiche Projekte und Produkte, die die API von i-doit benutze
 | ansible-i-doit    | <https://github.com/ScaleUp-Technologies/ansible-i-doit> | Python               | MIT     |
 | i-doit_API        | <https://github.com/mvorl/i-doit_API>                    | Python               | AGPLv3  |
 | i-doit-js         | <https://github.com/Hildebrand-S/i-doit-js>              | JavaScript           | MIT     |
+| i-doit_powershell | <https://github.com/l-gosling/i-doit_powershell>         | PowerShell           | MIT     |
 
 !!! info "Feedback"
     Sollte ein Client oder eine Library in diesem Artikel noch nicht aufgeführt sein, freuen wir uns über eine kurze Nachricht an [feedback@i-doit.com](mailto:feedback@i-doit.com).

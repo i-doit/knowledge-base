@@ -30,14 +30,15 @@ You can configure the IP address via the console (see below).
 
 ## Credentials
 
-| Tool                                                               | Username       | Password       |
-| ------------------------------------------------------------------ | -------------- | -------------- |
-| i-doit Web GUI                                                     | **admin**      | **admin**      |
-| i-doit Web GUI                                                     | **controller** | **controller** |
-| [i-doit Admin-Center](../../system-administration/admin-center.md) | **admin**      | **idoit**      |
-| SSH                                                                | **idoitadm**   | **idoit**      |
-| MySQL (i-doit)                                                     | **idoit**      | **idoit**      |
-| MySQL (Systemuser)                                                 | **root**       | **idoit**      |
+| Tool                                                               | Username       | Password                 |
+| ------------------------------------------------------------------ | -------------- | ------------------------ |
+| i-doit Web GUI                                                     | **admin**      | **admin**                |
+| i-doit Web GUI                                                     | **controller** | **controller**           |
+| [i-doit Admin-Center](../../system-administration/admin-center.md) | **admin**      | **idoit**                |
+| SSH                                                                | **idoitadm**   | **idoit**                |
+| MySQL (i-doit)                                                     | **idoit**      | **idoit**                |
+| MySQL (Systemuser)                                                 | **root**       | **idoit**                |
+| Forms Add-on API                                                   | **idoit**      | **SrUBXhaop0bp4dgdtiMY** |
 
 Additionally, there are some [pre-defined persons and person groups](../../basics/initial-login.md) in i-doit.
 

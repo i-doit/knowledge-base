@@ -65,6 +65,8 @@ plugins:
       redirect_maps:
         'maintenance-and-operation/activate-license.md': 'maintenance-and-operation/licensing.md'
         'automation-and-integration/cli/console/options-and-parameters-cli.md': 'automation-and-integration/cli/console/commands-and-options.md'
+        'consolidate-data/jdisc-discovery.md': 'consolidate-data/jdisc/index.md'
+        'upgrades-and-migrations/update-guide-from-1.7.4-to-31.md': 'upgrades-and-migrations/update-guide.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -137,6 +139,7 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release Notes 35: version-history/release-notes/release-notes-35.md
           - Release Notes 34: version-history/release-notes/release-notes-34.md
           - Release Notes 33: version-history/release-notes/release-notes-33.md
           - Release Notes 32: version-history/release-notes/release-notes-32.md
@@ -166,6 +169,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 35: version-history/changelogs/changelog-35.md
           - Changelog 34: version-history/changelogs/changelog-34.md
           - Changelog 33: version-history/changelogs/changelog-33.md
           - Changelog 32: version-history/changelogs/changelog-32.md
@@ -272,7 +276,7 @@ nav:
       - Backup and recovery:
           - maintenance-and-operation/backup-and-recovery/index.md
           - Backup script for data and files: maintenance-and-operation/backup-and-recovery/backup-script-for-data-and-files.md
-      - Update: maintenance-and-operation/update.md
+      - i-doit update: maintenance-and-operation/update.md
       - Security and protection: maintenance-and-operation/security-and-protection.md
       - PHP update: maintenance-and-operation/php-update.md
   - Upgrades and migrations:
@@ -280,7 +284,7 @@ nav:
       - Migration from Windows to Linux: upgrades-and-migrations/migration-from-windows-to-linux.md
       - Migration from Linux to Windows: upgrades-and-migrations/migration-from-linux-to-windows.md
       - Migration of an Installation under GNU/Linux: upgrades-and-migrations/migration-of-an-installation-under-linux.md
-      - Update guide from i-doit 1.7.4 to 34: upgrades-and-migrations/update-guide-from-1.7.4-to-31.md
+      - i-doit Update guide: upgrades-and-migrations/update-guide.md
       - Update of i-doit open 1.4.8 to 1.8: upgrades-and-migrations/update-of-i-doit-open-1.4.8-to-1.8.md
       - Upgrade from i-doit open to i-doit: upgrades-and-migrations/upgrade-from-open-to-i-doit.md
       - Upgrade to MySQL 5.6 or MariaDB 10.0: upgrades-and-migrations/upgrade-to-mysql-5.6-or-mariadb-10.0.md
@@ -292,11 +296,10 @@ nav:
       - Dashboard and widgets: basics/dashboard-and-widgets.md
       - Object list:
           - basics/object-list/index.md
-          - Actions in object lists: basics/object-list/actions-in-object-lists.md
+          - Actions in Object lists: basics/object-list/actions-in-object-lists.md
           - Navigation and filtering: basics/object-list/navigation-and-filtering.md
-          - Configuration of the list view: basics/object-list/configuration-of-the-list-view.md
+          - Configuration of the Object list view: basics/object-list/configuration-of-the-list-view.md
           - Advanced settings: basics/object-list/advanced-settings.md
-          - Configure object lists: basics/object-list/configure-object-lists.md
       - Attribute fields: basics/attribute-fields.md
       - Dialog-Admin: basics/dialog-admin.md
       - Object types: basics/object-types.md
@@ -368,7 +371,9 @@ nav:
           - Example CSV import - Locations: consolidate-data/csv-data-import/example-csv-import-creating-locations.md
       - CSV data export: consolidate-data/csv-data-export.md
       - h-inventory: consolidate-data/h-inventory.md
-      - JDisc Discovery: consolidate-data/jdisc-discovery.md
+      - JDisc Discovery:
+          - consolidate-data/jdisc/index.md
+          - Erweiterte Optionen für JDisc-Importprofile: consolidate-data/jdisc/advanced-options.md
       - LOGINventory: consolidate-data/loginventory.md
       - Object identification during imports: consolidate-data/object-identification-during-imports.md
   - Automation and integration:
@@ -459,8 +464,6 @@ nav:
                   - system-administration/administration/add-ons/replacement/index.md
                   - Configuration: system-administration/administration/add-ons/replacement/configuration/index.md
           - Two-factor Authentication: system-administration/administration/two-factor-authentication.md
-          - Download Center: system-administration/administration/download-center.md
-          - Contract details: system-administration/administration/contract-details.md
       - Add-on & Subscription Center: system-administration/add-on-and-subscription-center.md
       - Admin-Center: system-administration/admin-center.md
       - Customer portal: system-administration/customer-portal.md
@@ -490,6 +493,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
           - Hotfix archive:
               - system-administration/hotfixes/hotfix-archive/index.md
+              - Version 34: system-administration/hotfixes/hotfix-archive/v34.md
               - Version 33: system-administration/hotfixes/hotfix-archive/v33.md
               - Version 32: system-administration/hotfixes/hotfix-archive/v32.md
               - Version 31: system-administration/hotfixes/hotfix-archive/v31.md
@@ -530,6 +534,7 @@ nav:
           - Methods:
               - v1:
                   - i-doit-add-ons/api/methods/index.md
+                  - cmdb.cabling: i-doit-add-ons/api/methods/cmdb.cabling.md
                   - cmdb.categories: i-doit-add-ons/api/methods/cmdb.categories.md
                   - cmdb.category_info: i-doit-add-ons/api/methods/cmdb.category_info.md
                   - cmdb.category: i-doit-add-ons/api/methods/cmdb.category.md

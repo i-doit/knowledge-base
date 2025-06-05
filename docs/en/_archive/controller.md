@@ -6,12 +6,12 @@ i-doit possesses a command line tool called controller.
 
 !!! attention "Deprecated"
 
-    Since version 1.10 the controller is marked as outdated and will be removed in one of the next releases. The [console](../automation-and-integration/cli/index.md) is the alternative choice.
+    Since version 1.10 the controller is marked as outdated and will be removed in one of the next releases. The [console] is the alternative choice.
 
 First Steps
 -----------
 
-The controller is located in the main folder of _i-doit_. If you have followed the [installation guide,](../installation/manual-installation/setup.md) then the main folder will be located at /var/www/html/i-doit/ for Debian-based operating systems:
+The controller is located in the main folder of _i-doit_. If you have followed the [installation guide,] then the main folder will be located at /var/www/html/i-doit/ for Debian-based operating systems:
 
     $ ll /var/www/html/i-doit/controller
     -rwxrwxr-- 1 www-data www-data 314 Jul 7 14:23 /var/www/html/i-doit/controller
@@ -35,7 +35,7 @@ In order to avoid errors it is important to execute the controller with the same
     HANDLER can be one of the following availlable handlers:
     addldapdn, archivelog, cleanup_auth, cleanup_objects, csv_import, import, isc_dhcpd, jdisc, jdisc_discovery, ldap, maintenance, nagios, nagios_export, notifications, ocs, regenerate_relations, report, syslog, tenants, updatecheck, workflow
 
-This script has to be executed in a slightly different manner in [Windows](../installation/manual-installation/microsoft-windows-server/index.md) operating systems since they cannot handle the bash script of the controller:
+This script has to be executed in a slightly different manner in [Windows] operating systems since they cannot handle the bash script of the controller:
 
     php.exe controller.php
 
@@ -66,35 +66,35 @@ The controller is capable of performing various actions. These in turn are repre
 
 ### List of Handlers
 
-[**Documents**](../i-doit-add-ons/documents/index.md)
+[**Documents**]
 
-| Handler                                                                        | pro version | open version | Add-on                                                | Description                                                                             |
-| ------------------------------------------------------------------------------ | ----------- | ------------ | ----------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| **[addldapdn](../user-authentication-and-management/ldap-directory/index.md)** | yes         | yes          | -                                                     | Synchronize the distinguished name (DN) of users from a LDAP/AD (see **LDAP** category) |
-| **[archivelog](../basics/logbook.md)**                                         | yes         | yes          | -                                                     | Archive logbook entries                                                                 |
-| **[check_mk](../i-doit-add-ons/checkmk.md)**                                   | yes         | yes          | -                                                     | Write the actual status from network monitoring into logbook                            |
-| **[cleanup_auth](../efficient-documentation/rights-management/index.md)**      | yes         | yes          | -                                                     | Clean up the authorization system                                                       |
-| **[cleanup_objects](../basics/life-and-documentation-cycle.md)**               | yes         | yes          | -                                                     | Clean up objects                                                                        |
-| **[csv_import](../consolidate-data/csv-data-import/index.md)**                 | yes         | -            | -                                                     | Import data from a CSV file                                                             |
-| [**document**](../i-doit-add-ons/documents/index.md)                           | -           | -            | **[Documents](../i-doit-add-ons/documents/index.md)** | Create a new revision of a document                                                     |
-| **import**                                                                     | yes         | yes          | -                                                     | Import i-doit XML or [h-inventory XML](../consolidate-data/h-inventory.md)              |
-| **increment_config**                                                           | yes         | yes          | -                                                     | Set auto_increment of MariaDB / MySQL tables to a positive integer value                |
-| **isc_dhcpd**                                                                  | yes         | yes          | -                                                     | Export configuration for ISC DHCPD                                                      |
-| **[jdisc](../consolidate-data/jdisc-discovery.md)**                            | yes         | yes          | -                                                     | Import files from JDisc                                                                 |
-| **[jdisc_discovery](../consolidate-data/jdisc-discovery.md)**                  | yes         | yes          | -                                                     | Activate a discovery job at JDisc                                                       |
-| **[ldap](../user-authentication-and-management/ldap-directory/index.md)**      | yes         | yes          | -                                                     | Import data from a LDAP directory or Active Directory (AD)                              |
-| **[maintenance](../i-doit-add-ons/maintenance.md)**                            | -           | -            | **[Maintenance](../i-doit-add-ons/maintenance.md)**   | Send e-mails with planned maintenance works                                             |
-| **[nagios](../i-doit-add-ons/nagios.md)****                                    | yes         | yes          | -                                                     | Write the actual status from network monitoring into logbook                            |
-| **[nagios_export](../i-doit-add-ons/nagios.md)**                               | yes         | yes          | -                                                     | Export Nagios configuration                                                             |
-| **[notifications](../evaluation/notifications.md)**                            | yes         | yes          | -                                                     | Send notifications per e-mail                                                           |
-| **[ocs](../i-doit-add-ons/ocs-inventory-ng.md)**                               | yes         | yes          | -                                                     | Import data from OCS Inventory NG                                                       |
-| **[regenerate_relations](../basics/object-relations.md)**                      | yes         | yes          | -                                                     | Recreate object relations                                                               |
-| **[report](../evaluation/report-manager.md)**                                  | yes         | -            | -                                                     | Export a report as file                                                                 |
-| **[search_index](../efficient-documentation/search.md)**                       | yes         | yes          | -                                                     | Search in i-doit or create/renew search index                                           |
-| **syslog**                                                                     | yes         | yes          | -                                                     | Import data from Syslog in i-doit logbook                                               |
-| **[tenants](#mandantund-credentials)**                                         | yes         | yes          | -                                                     | List, activate and deactivate tenants                                                   |
-| **[updatecheck](../maintenance-and-operation/update.md)**                      | yes         | yes          | -                                                     | Search for updates in i-doit                                                            |
-| **workflow**                                                                   | yes         | yes          | -                                                     | Send Workflow notifications per e-mail                                                  |
+| Handler                    | pro version | open version | Add-on            | Description                                                                             |
+| -------------------------- | ----------- | ------------ | ----------------- | --------------------------------------------------------------------------------------- |
+| **[addldapdn]**            | yes         | yes          | -                 | Synchronize the distinguished name (DN) of users from a LDAP/AD (see **LDAP** category) |
+| **[archivelog]**           | yes         | yes          | -                 | Archive logbook entries                                                                 |
+| **[check_mk]**             | yes         | yes          | -                 | Write the actual status from network monitoring into logbook                            |
+| **[cleanup_auth]**         | yes         | yes          | -                 | Clean up the authorization system                                                       |
+| **[cleanup_objects]**      | yes         | yes          | -                 | Clean up objects                                                                        |
+| **[csv_import]**           | yes         | -            | -                 | Import data from a CSV file                                                             |
+| **[document]**             | -           | -            | **[Documents]**   | Create a new revision of a document                                                     |
+| **[import]**               | yes         | yes          | -                 | Import i-doit XML or [h-inventory XML]                                                  |
+| **[increment_config]**     | yes         | yes          | -                 | Set auto_increment of MariaDB / MySQL tables to a positive integer value                |
+| **[isc_dhcpd]**            | yes         | yes          | -                 | Export configuration for ISC DHCPD                                                      |
+| **[jdisc]**                | yes         | yes          | -                 | Import files from JDisc                                                                 |
+| **[jdisc_discovery]**      | yes         | yes          | -                 | Activate a discovery job at JDisc                                                       |
+| **[ldap]**                 | yes         | yes          | -                 | Import data from a LDAP directory or Active Directory (AD)                              |
+| **[maintenance]**          | -           | -            | **[Maintenance]** | Send e-mails with planned maintenance works                                             |
+| **[nagios]****             | yes         | yes          | -                 | Write the actual status from network monitoring into logbook                            |
+| **[nagios_export]**        | yes         | yes          | -                 | Export Nagios configuration                                                             |
+| **[notifications]**        | yes         | yes          | -                 | Send notifications per e-mail                                                           |
+| **[ocs]**                  | yes         | yes          | -                 | Import data from OCS Inventory NG                                                       |
+| **[regenerate_relations]** | yes         | yes          | -                 | Recreate object relations                                                               |
+| **[report]**               | yes         | -            | -                 | Export a report as file                                                                 |
+| **[search_index]**         | yes         | yes          | -                 | Search in i-doit or create/renew search index                                           |
+| **[syslog]**               | yes         | yes          | -                 | Import data from Syslog in i-doit logbook                                               |
+| **[tenants]**              | yes         | yes          | -                 | List, activate and deactivate tenants                                                   |
+| **[updatecheck]**          | yes         | yes          | -                 | Search for updates in i-doit                                                            |
+| **[workflow]**             | yes         | yes          | -                 | Send Workflow notifications per e-mail                                                  |
 
 ### Configuration of Handlers
 
