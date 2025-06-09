@@ -1,4 +1,4 @@
-FROM python:3.13.3-bookworm AS i-doit-kb-build
+FROM python:3.13.4-bookworm AS i-doit-kb-build
 
 RUN apt-get update && \
     apt-get full-upgrade -y && \
