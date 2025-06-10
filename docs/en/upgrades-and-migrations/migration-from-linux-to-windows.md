@@ -101,7 +101,7 @@ mysql -uroot -p idoit_data < C:\idoit_data.sql
 mysql -uroot -p idoit_system < C:\idoit_system.sql
 ```
 
-??? danger "If the error **`ERROR at line 1: Unknown command '\-'`** occurs:"
+!!! danger "If the error **`ERROR at line 1: Unknown command '\-'`** occurs:"
     If the above error occurs, you have dumped the database with a MariaDB version that writes a "sandbox command" in the first line of the dump.
     This line can only be interpreted by certain MariaDB versions, which does not apply to the MariaDB version installed with the Windows installer (see [list](#export-the-database-from-linux)).
     The line causing the error is `/*!999999\- enable the sandbox mode */`, this line must either be removed manually from the dump or you can switch to a different MariaDB version and perform the dump again.
