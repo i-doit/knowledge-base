@@ -153,7 +153,7 @@ lang: en
 
 | Add-on    | Version | Download-Link                                                                                        |
 | :-------- | :------ | :--------------------------------------------------------------------------------------------------- |
-| **Forms** | 1.2.1   | [:material-file-download: Download](assets/downloads/dl-archive/i-doit-forms-1.2.1.zip){ .md-button} |
+| **Forms** | 1.2.1   | [:material-file-download: Download](assets/downloads/dl-archive/idoit-forms-1.2.1.zip){ .md-button}  |
 |           | 1.2.0   | [:material-file-download: Download](assets/downloads/dl-archive/i-doit-forms-1.2.0.zip){ .md-button} |
 |           | 1.1.0   | [:material-file-download: Download](assets/downloads/dl-archive/i-doit-forms-1.1.0.zip){ .md-button} |
 
