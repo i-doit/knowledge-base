@@ -39,6 +39,19 @@ scp -r user@linuxsystem:/var/www/html/i-doit/i-doit.zip C:\
 
 ## Datenbank aus Linux exportieren
 
+!!! warning "Bitte beachten Sie, dass bei einem SQL Dump unter Verwendung der folgenden MariaDB-Versionen zu einem Fehler beim importieren des Dumps unter Windows kommen wird:"
+    - 10.5.25
+    - 10.6.18
+    - 10.11.8
+    - 11.0.6
+    - 11.1.5
+    - 11.2.4
+    - 11.4.2
+
+    Die aufgelisteten Versionen setzen bei einem SQL Dump ein "Sandbox command" in die erste Zeile des Dumps.
+    Dadurch kann dieser Dump dann nur noch mit den gelisteten MariaDB Versionen importiert werden, da die mitgelieferte MariaDB Version vom Windows installer keine der gelisteten Versionen ist, wird man beim Import auf den Fehler **`ERROR at line 1: Unknown command '\-'`** stoßen.
+    Wir empfehlen daher für den Dump eine andere MariaDB Version zu nutzen, welche nicht oben aufgelistet ist!
+
 Als nächstes müssen wir die Datenbank exportieren und ebenfalls auf den Windows Server transferieren. Um die Datenbank erfolgreich zu exportieren müssen folgende Befehle ausgeführt werden:
 
 ```shell
@@ -87,6 +100,11 @@ Jetzt können wir die Datenbanken aus der alten Instanz einspielen:
 mysql -uroot -p idoit_data < C:\idoit_data.sql
 mysql -uroot -p idoit_system < C:\idoit_system.sql
 ```
+
+!!! danger "Wenn der Fehler **`ERROR at line 1: Unknown command '\-'`** auftritt:"
+    Wenn der obige Fehler auftritt, haben Sie den SQL Dump mit einer MariaDB Version durchgeführt, welche ein "Sandbox Command" in die erste Zeile des Dumps schreibt.
+    Diese Zeile kann nur von bestimmten MariaDB Versionen interpretiert werden, was auf die mitgelieferte MariaDB Version des Windows installers nicht zutrifft (Siehe [Liste](#datenbank-aus-linux-exportieren)).
+    Die Fehler-verursachende Zeile ist `/*!999999\- enable the sandbox mode */`, diese muss entweder manuell aus dem Dump entfernt werden oder Sie wechseln auf eine andere MariaDB Version und führen den Dump erneut durch.
 
 Zusätzlich berechtigen wir den idoit User für die neuen Datenbanken:
 
