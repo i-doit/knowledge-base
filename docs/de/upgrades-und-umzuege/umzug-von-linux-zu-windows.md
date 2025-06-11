@@ -68,6 +68,19 @@ scp -r user@linuxsystem:/tmp/idoit_data.sql C:\
 
 Damit liegen die SQL Dateien nun auf dem Windows Server unter C:\
 
+## MariaDB Pfad in Windows setzen
+
+Damit wir in den nächsten Schritten die MySQL Befehle in der Eingabeaufforderung ausführen können, ohne uns vorher in die MySQL Oberfläche anmelden zu müssen, werden wir den Pfad zu MariaDB in die Umgebungsvariablen eintragen.
+
+Zuerst suchen Sie über die Windows Suche nach "Erweiterte Systemeinstellungen" und klicken Sie auf den "Umgebungsvariablen..." Button.
+
+[![Umgebungsvariablen](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/1-uvlzw.png)](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/1-uvlzw.png)
+
+Danach sollte sich ein neues Fenster öffnen in welchem oben die Benutzervariablen und unten die Systemvariablen angezeigt werden.
+Wählen Sie anschließend die Variable "Path" aus und klicken Sie auf "Bearbeiten":
+
+[![Umgebungsvariablen](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/2-uvlzw.png)](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/2s-uvlzw.png)
+
 ## Daten nach Windows umziehen
 
 Entpacken Sie zuerst die von Ihnen erstellte ZIP Datei unter dem folgenden Pfad und überschreiben Sie alle Dateien falls notwendig:
