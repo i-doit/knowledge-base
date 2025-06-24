@@ -233,7 +233,7 @@ sudo -u www-data php console.php admin-center-password-reset --user admin --pass
 
 ### auth-cleanup
 
-Leert den Cache des Rechtesystems, damit die derzeit konfigurierten Rechte aktuell sind bzw. aktualisiert werden.
+Bereinigt potenziell verwaiste Einträge im Rechtssystem, dies geschieht pro Modul. In der CMDB werden beispielsweise Rechte aus Kategorien, Objekten und Objekttypen entfernt, die nicht mehr existieren.
 
 **Optionen:**
 

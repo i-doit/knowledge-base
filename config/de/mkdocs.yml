@@ -630,6 +630,8 @@ nav:
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
           - i-doit-add-ons/flows/index.md
+          - Aktionen:
+              - Befehl ausführen: i-doit-add-ons/flows/actions/call-command.md
           - i-doit 33 update und Flows installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
           - i-doit-add-ons/forms/index.md
