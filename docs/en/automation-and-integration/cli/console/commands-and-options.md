@@ -234,7 +234,7 @@ sudo -u www-data php console.php admin-center-password-reset --user admin --pass
 
 ### auth-cleanup
 
-Cleanup all auth paths
+Cleanup all auth paths. It cleans up potentially orphaned rights system entries on a per-module basis. In the CMDB, for instance, permissions are removed from categories, objects and object types that no longer exist.
 
 **Options:**
 

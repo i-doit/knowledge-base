@@ -240,5 +240,6 @@
         "zeitbasierten",
         "zeitbasierter",
         "zypper"
-    ]
+    ],
+    "editor.renderWhitespace": "trailing"
 }
