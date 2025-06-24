@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Untransparent behaviour in i-doit. An error! How to deal with it? Please read on! It could be useful.
+Unpredictable behaviour in i-doit. An error! How to deal with it? Please read on! It could be useful.
 
 ## Do Not Panic
 
