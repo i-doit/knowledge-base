@@ -47,17 +47,37 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
-## Ldap-sync can not update person object \[ID-11764\]
+### LDAP sync can not update person object \[ID-11764\]
 
 [i-doit_35_hotfix_ID-11764_700a05e.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11764_700a05e.zip){ .md-button .md-button--primary }
 
-## Category is not displayed or the category list is empty and a PHP Fatal error is logged \[ID-11972\]
+### CSV import does not work when using object type assignment with the object type constant \[ID-11793\]
+
+[i-doit_35_hotfix_ID-11973_ec07c28.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11973_ec07c28.zip){ .md-button .md-button--primary }
+
+??? info "Error message found in the Webserver log"
+    ```
+    You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'under_location '38' ) ) ORDER BY obj_main.isys_obj__title DESC' at line 12
+    ```
+
+### Category is not displayed or the category list is empty and a PHP Fatal error is logged \[ID-11972\]
 
 [i-doit_35_hotfix_ID-11972_553b6c1.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11972_553b6c1.zip){ .md-button .md-button--primary }
 
-## CSV import does not work when using object type assignment with the object type constant \[ID-11793\]
+### PHP error while updating to i-doit 35 \[ID-11978\]
 
-[i-doit_35_hotfix_ID-11973_ec07c28.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11973_ec07c28.zip){ .md-button .md-button--primary }
+[i-doit_35_hotfix_ID-11978_migration-of-crypto-hashes.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11978_migration-of-crypto-hashes.zip){ .md-button .md-button--primary }
+
+## API Add-on
+
+### Compatibility to Monolog 3 \[API-596\]
+
+??? info "Error message found in the Webserver log"
+    ```
+    Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: idoit\\Module\\Cmdb\\Component\\SyncNormalizer\\Config::__construct(): Argument #2 ($data) must be of type array, string given, called in
+    ```
+
+[api_2.3_hotfix_API-596_426c958.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.3_hotfix_API-596_426c958.zip){ .md-button .md-button--primary }
 
 ## Flows Add-on
 
