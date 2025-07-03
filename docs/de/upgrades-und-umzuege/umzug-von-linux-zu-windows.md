@@ -79,7 +79,15 @@ Zuerst suchen Sie über die Windows Suche nach "Erweiterte Systemeinstellungen" 
 Danach sollte sich ein neues Fenster öffnen in welchem oben die Benutzervariablen und unten die Systemvariablen angezeigt werden.
 Wählen Sie anschließend die Variable "Path" aus und klicken Sie auf "Bearbeiten":
 
-[![Umgebungsvariablen](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/2-uvlzw.png)](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/2s-uvlzw.png)
+[![Umgebungsvariablen](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/2-uvlzw.png)](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/2-uvlzw.png)
+
+Dadurch öffnet sich eine Liste an Umgebungsvariablen. Erstellen Sie einen neuen Eintrag und fügen Sie dort den Pfad zu dem **bin** Ordner von MariaDB ein.
+Der i-doit Windows installer sollte diesen Ordner unter dem Pfad **C:\ProgramData\MariaDB\bin** angelegt haben.
+
+[![Umgebungsvariablen](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/3-uvlzw.png)](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/3-uvlzw.png)
+
+Nachdem der Pfad gesetzt ist sollten Sie nun die SQL Befehle auch in der Eingabeaufforderung nutzen können.
+Eventuell muss das Fenster erst einmal neugestartet werden.
 
 ## Daten nach Windows umziehen
 

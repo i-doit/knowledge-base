@@ -68,6 +68,27 @@ scp -r user@linuxsystem:/tmp/idoit_data.sql C:\
 
 The SQL files are now located on the Windows server under C:\
 
+## Set MariaDB path in Windows
+
+So that we can execute the MySQL commands in the command prompt in the next steps without having to log into the MySQL interface first, we will enter the path to MariaDB in the environment variables.
+
+First, search for "Advanced system settings" via the Windows search and click on the "Environment variables..." button.
+
+[![Environment variables](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/1-uvlzw.png)](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/1-uvlzw.png)
+
+A new window should then open which will show the user variables at the top and the system variables at the bottom.
+Then select the "Path" variable and click on "Edit":
+
+[![Environment variables](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/2-uvlzw.png)](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/2-uvlzw.png)
+
+This opens a list of environment variables. Create a new entry and add the path to the **bin** folder of MariaDB.
+The i-doit Windows installer should have created this folder under the path **C:\ProgramData\MariaDB\bin**.
+
+[![Environment variables](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/3-uvlzw.png)](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/3-uvlzw.png)
+
+Once the path has been set, you should now be able to use the SQL commands in the command prompt.
+It may be necessary to restart the window first.
+
 ## Migrate Data to Windows
 
 First unpack the ZIP file you have created under the following path and overwrite all files if necessary:
