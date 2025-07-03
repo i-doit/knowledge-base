@@ -64,8 +64,8 @@ Hier finden Sie die wichtigsten Eckdaten zu Ihrer i-doit Cloud Instanz.
 
 * **Instanz-Größe**: Ausgelegt für bis zu 50.000 Objekte.
 * **Speicherplatz**: 1 GB dedizierter Datenspeicherplatz.
-* **Sicherheit**: Inklusive SSL-Verschlüsselung über eine `*.i-doit.online` Subdomain.
-* **Domain**: Der Name Ihrer Subdomain ist frei wählbar (z.B. `ihr-firmenname.i-doit.online`).
+* **Sicherheit**: Inklusive SSL-Verschlüsselung über eine `*.i-doit.cloud` Subdomain.
+* **Domain**: Der Name Ihrer Subdomain ist frei wählbar (z.B. `ihr-firmenname.i-doit.cloud`).
 * **Mandantenfähigkeit**: Pro Cloud-Instanz ist ein Mandant vorgesehen.
 * **Bereitstellung**: Ihre Instanz ist innerhalb von 24 Stunden (werktags, Mo.-Fr.) einsatzbereit.
 * **Add-on Kompatibilität**: Ein Großteil der [i-doit Add-ons](https://www.i-doit.com/i-doit/add-ons/){:target="_blank"} ist kompatibel.
@@ -153,7 +153,7 @@ Ihre i-doit Cloud-Instanz ist unter festen IP-Adressen erreichbar (Ingress) und 
 
 #### Ingress: Erreichbarkeit Ihrer Instanz von außen
 
-Wenn Sie in Ihrem Netzwerk den Zugriff auf `*.i-doit.online` einschränken, geben Sie bitte die folgenden IP-Adressen für eingehende Verbindungen frei:
+Wenn Sie in Ihrem Netzwerk den Zugriff auf `*.i-doit.cloud` einschränken, geben Sie bitte die folgenden IP-Adressen für eingehende Verbindungen frei:
 
 * **IPv4:**
     * `159.69.103.121`

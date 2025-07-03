@@ -64,8 +64,8 @@ Here you'll find the most important key data for your i-doit cloud instance.
 
 * **Instance Size**: Designed for up to 50,000 objects.
 * **Storage Space**: 1 GB of dedicated data storage.
-* **Security**: Includes SSL encryption via a `*.i-doit.online` subdomain.
-* **Domain**: The name of your subdomain can be freely chosen (e.g., `your-company-name.i-doit.online`).
+* **Security**: Includes SSL encryption via a `*.i-doit.cloud` subdomain.
+* **Domain**: The name of your subdomain can be freely chosen (e.g., `your-company-name.i-doit.cloud`).
 * **Tenancy**: Each cloud instance is designed for a single tenant.
 * **Provisioning**: Your instance will be ready within 24 hours (on workdays, Mon-Fri).
 * **Add-on Compatibility**: A majority of [i-doit add-ons](https://www.i-doit.com/en/i-doit/add-ons/){:target="_blank"} are compatible.
@@ -153,7 +153,7 @@ Your i-doit cloud instance is reachable at static IP addresses (Ingress) and als
 
 #### Ingress: Reachability of Your Instance from the Outside
 
-If you restrict access to `*.i-doit.online` in your network, please allow the following IP addresses for incoming connections:
+If you restrict access to `*.i-doit.cloud` in your network, please allow the following IP addresses for incoming connections:
 
 * **IPv4:**
     * `159.69.103.121`
