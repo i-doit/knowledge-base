@@ -9,53 +9,6 @@ lang: de
 
 Entdecken Sie die Vorteile unserer gemanagten i-doit Cloud-Lösung. Wir kümmern uns um die Technik im Hintergrund, damit Sie sich voll und ganz auf Ihre IT-Dokumentation konzentrieren können. Sicher, performant und immer aktuell.
 
-## Unsere Services im Überblick
-
-Wir bieten Ihnen ein Rundum-sorglos-Paket für Ihre i-doit Instanz.
-
-<div class="grid cards" markdown>
-
--   **Datensicherheit an erster Stelle** :material-shield-check:
-
-    ---
-
-    Ihre Daten werden nach modernsten Standards mit Verschlüsselungstechnologien und strengen Sicherheitsprotokollen vor unbefugtem Zugriff geschützt.
-
--   **Wartung und Aktualisierungen** :material-update:
-
-    ---
-
-    Unsere Experten halten Ihre i-doit Instanz und Add-ons stets auf dem neuesten Stand für optimale Leistung, Sicherheit und Kompatibilität.
-
--   **Professionelle Backup-Lösungen** :material-database-sync:
-
-    ---
-
-    Wir sichern Ihre Daten in kurzen, regelmäßigen Intervallen, um im Fall der Fälle eine schnelle und zuverlässige Wiederherstellung zu gewährleisten.
-
-</div>
-<div class="grid cards" markdown>
-
--   **Garantierte Erreichbarkeit** :material-server-network:
-
-    ---
-
-    Wir garantieren eine hohe Verfügbarkeit Ihrer Anwendung. Unser Support-Team steht bereit, um bei eventuellen Störungen schnell einzugreifen.
-
--   **Performance-Optimierung** :material-rocket-launch:
-
-    ---
-
-    Durch kontinuierliches Monitoring und gezielte Feinabstimmung sorgen wir dafür, dass Ihre Anwendung schnell und reaktionsschnell bleibt.
-
--   **Skalierbarkeit und Anpassung** :material-chart-timeline-variant:
-
-    ---
-
-    Ihre Anforderungen wachsen? Wir helfen Ihnen bei der reibungslosen Skalierung Ihrer Plattform, damit diese mit Ihrem Unternehmen Schritt hält.
-
-</div>
-
 ---
 
 ## Leistungsumfang & Technische Details
@@ -64,12 +17,12 @@ Hier finden Sie die wichtigsten Eckdaten zu Ihrer i-doit Cloud Instanz.
 
 * **Instanz-Größe**: Ausgelegt für bis zu 50.000 Objekte.
 * **Speicherplatz**: 1 GB dedizierter Datenspeicherplatz.
-* **Sicherheit**: Inklusive SSL-Verschlüsselung über eine `*.i-doit.cloud` Subdomain.
-* **Domain**: Der Name Ihrer Subdomain ist frei wählbar (z.B. `ihr-firmenname.i-doit.cloud`).
-* **Mandantenfähigkeit**: Pro Cloud-Instanz ist ein Mandant vorgesehen.
-* **Bereitstellung**: Ihre Instanz ist innerhalb von 24 Stunden (werktags, Mo.-Fr.) einsatzbereit.
+* **Sicherheit**: Ihre Daten werden verschlüsselt gespeichert.
+* **Domain**: Der Name Ihrer Subdomain ist frei wählbar (z.B. `firmenname.i-doit.cloud`).
+* **Bereitstellung**: Die Bereitstellung dauert ungefähr 15 Minuten.
+* **Backup**: Automatisierte und engmaschige Backups.
 * **Add-on Kompatibilität**: Ein Großteil der [i-doit Add-ons](https://www.i-doit.com/i-doit/add-ons/){:target="_blank"} ist kompatibel.
-* **Serverstandort**: Alle unsere Server befinden sich in Deutschland und arbeiten DSGVO-konform.
+* **Serverstandort**: Alle unsere Server befinden sich in Deutschland und sind ISO27000 Zertifiziert.
 
 !!! warning "Kein Shell-Zugriff"
     Aus Sicherheits- und Stabilitätsgründen ist ein direkter SSH- oder Dateisystem-Zugriff auf die Server nicht möglich.

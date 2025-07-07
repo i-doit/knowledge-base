@@ -9,53 +9,6 @@ lang: en
 
 Discover the advantages of our managed i-doit cloud solution. We handle the technology in the background, so you can fully concentrate on your IT documentation. Secure, performant, and always up-to-date.
 
-## Our Services at a Glance
-
-We offer you an all-inclusive, worry-free package for your i-doit instance.
-
-<div class="grid cards" markdown>
-
--   **Security First** :material-shield-check:
-
-    ---
-
-    Your data is protected from unauthorized access using state-of-the-art encryption technologies and strict security protocols.
-
--   **Maintenance and Updates** :material-update:
-
-    ---
-
-    Our experts keep your i-doit instance and add-ons up-to-date for optimal performance, security, and compatibility.
-
--   **Professional Backup Solutions** :material-database-sync:
-
-    ---
-
-    We back up your data at short, regular intervals to ensure a quick and reliable recovery in case of an unforeseen event.
-
-</div>
-<div class="grid cards" markdown>
-
--   **Guaranteed Availability** :material-server-network:
-
-    ---
-
-    We guarantee high availability for your application. Our support team is ready to intervene quickly in the event of any disruptions.
-
--   **Performance Optimization** :material-rocket-launch:
-
-    ---
-
-    Through continuous monitoring and targeted fine-tuning, we ensure that your application remains fast and responsive.
-
--   **Scalability and Customization** :material-chart-timeline-variant:
-
-    ---
-
-    Your requirements are growing? We'll help you seamlessly scale your platform to keep pace with your business.
-
-</div>
-
 ---
 
 ## Scope of Services & Technical Details
