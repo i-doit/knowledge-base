@@ -26,7 +26,7 @@ Fatal error: Uncaught ArgumentCountError: 4 arguments are required, 2 given in /
 
 Benutzen Sie diesen Hotfix in der **34** um auf die **35** zu aktualisieren zu können.
 
-[i-doit_34_ID-11978_migration-of-crypto-hashes.zip :material-file-download:](../../../assets/downloads/hotfixes/34/i-doit_34_ID-11978_migration-of-crypto-hashes.zip){ .md-button .md-button--primary }
+[i-doit_34_ID-11978_migration-of-crypto-hashes.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_ID-11978_migration-of-crypto-hashes.zip){ .md-button .md-button--primary }
 
 ## Version 33
 
