@@ -16,6 +16,18 @@ Currently SM-View `2024.3.0.2708` is not compatible and a `HTTP 500` server erro
 PHP Fatal error: Declaration of Symfony\Component\HttpFoundation\ResponseHeaderBag::all(?string $key = null) must be compatible with Symfony\Component\HttpFoundation\HeaderBag::all(?string $key = null): array in /var/www/html/src/classes/modules/shd_smview_connect/vendor/symfony/http-foundation/ResponseHeaderBag.php on line 91
 ```
 
+---
+
+If the following error message is logged when updating to 35:
+
+```log
+Fatal error: Uncaught ArgumentCountError: 4 arguments are required, 2 given in /var/www/html/i-doit/updates/versions/35/migration/migrate-system-crypto-hash-to-tenant.php:28 Stack trace: #0 /var/www/html/i-doit/updates/versions/35/migration/migrate-system-crypto-hash-to-tenant.php(28): sprintf() #1 /var/www/html/i-doit/updates/classes/isys_update_migration.class.php(109): include('...') #2 /var/www/html/i-doit/updates/update.inc.php(1050): isys_update_migration->migrate() #3 /var/www/html/i-doit/src/hypergate.inc.php(229): include_once('...') #4 /var/www/html/i-doit/index.php(263): include_once('...') #5 {main} thrown in /var/www/html/i-doit/updates/versions/35/migration/migrate-system-crypto-hash-to-tenant.php on line 28
+```
+
+Use this hotfix in **34** to update to **35**.
+
+[i-doit_34_ID-11978_migration-of-crypto-hashes.zip :material-file-download:](../../../assets/downloads/hotfixes/34/i-doit_34_ID-11978_migration-of-crypto-hashes.zip){ .md-button .md-button--primary }
+
 ## Version 33
 
 It may happen that some functions disappear after the update. For example, the update function or the LDAP function. To solve the problem, in the file `.../i-doit/src/config.inc.php` the value `$g_is_cloud = '0'` must be set.
