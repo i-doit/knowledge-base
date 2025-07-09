@@ -63,10 +63,6 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_35_hotfix_ID-11972_553b6c1.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11972_553b6c1.zip){ .md-button .md-button--primary }
 
-### PHP error while updating to i-doit 35 (ID-11978)
-
-[i-doit_35_hotfix_ID-11978_migration-of-crypto-hashes.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11978_migration-of-crypto-hashes.zip){ .md-button .md-button--primary }
-
 ## API Add-on
 
 ### Compatibility to Monolog 3 (API-596)
