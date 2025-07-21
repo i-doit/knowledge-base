@@ -51,7 +51,15 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_35_hotfix_ID-11764_700a05e.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11764_700a05e.zip){ .md-button .md-button--primary }
 
-### CSV import does not work when using object type assignment with the object type constant (ID-11793)
+### Category is not displayed or the category list is empty and a PHP Fatal error is logged (ID-11972)
+
+!!! info "Error message found in the Webserver log"
+
+    PHP Fatal error: Uncaught TypeError: isys_component_list::getTenantTableConfig(): Return value must be of type ?idoit\\Module\\Cmdb\\Model\\Ci\\Table\\Config, string returned in /var/www/html/src/classes/components/isys_component_list.class.php:1313\nStack trace:\n#0 /var/www/html/src/classes/components/isys_component_list.class.php(1326): isys_component_list->getTenantTableConfig()
+
+[i-doit_35_hotfix_ID-11972_553b6c1.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11972_553b6c1.zip){ .md-button .md-button--primary }
+
+### CSV import does not work when using object type assignment with the object type constant (ID-11973)
 
 [i-doit_35_hotfix_ID-11973_ec07c28.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11973_ec07c28.zip){ .md-button .md-button--primary }
 
@@ -59,9 +67,14 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
     You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'under_location '38' ) ) ORDER BY obj_main.isys_obj__title DESC' at line 12
 
-### Category is not displayed or the category list is empty and a PHP Fatal error is logged (ID-11972)
+### When saving Database hierarchy - Database information entry the title is empty which leads to a PHP fatal error (ID-12004)
 
-[i-doit_35_hotfix_ID-11972_553b6c1.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11972_553b6c1.zip){ .md-button .md-button--primary }
+[i-doit_35_hotfix_ID-12004_760461e.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-12004_760461e.zip){ .md-button .md-button--primary }
+
+!!! info "Error message found in the Webserver log"
+
+     Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: idoit\\Component\\Helper\\Purify::formatUrlPart(): Argument #1 ($url) must be of type string, null given, called in /var/www/html/src/classes/ajax/handler/isys_ajax_handler_quick_info.class.php on line 256 and defined in /var/www/html/src/idoit/Component/Helper/Purify.php:254
+
 
 ## API Add-on
 
