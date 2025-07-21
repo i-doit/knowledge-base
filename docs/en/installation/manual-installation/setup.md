@@ -172,7 +172,7 @@ sudo -u www-data php console.php create-tenant
 sudo -u www-data php console.php install --root-user mysqlrootuser --root-password mysqlrootpassword --host localhost --port 3306 --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --admin-password admincenterpw --no-interaction
 ```
 <!-- cSpell:enable -->
-Nun wurde i-doit installiert. Wir benötigen noch einen [Mandant](../../system-administration/multi-tenant.md). Diesen erstellen wir auch über die [i-doit console utility](../../automation-and-integration/cli/index.md):
+Now i-doit has been installed. We still need a [tenant](../../system-administration/multi-tenant.md). This can also be created using the [i-doit console utility](../../automation-and-integration/cli/index.md):
 <!-- cSpell:disable -->
 ```shell
 sudo -u www-data php console.php tenant-create --root-user mysqlrootuser --root-password mysqlrootpassword --database idoit_system --user mysqlidoituser --password mysqlidoitpassword --no-interaction --title "CMDB"

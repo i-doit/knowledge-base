@@ -163,7 +163,7 @@ A logfile named ldap_debug.txt can be found within log/ in the i-doit installati
 Running the ldap-sync
 ---------------------
 
-The ldap-sync can only be executed via the console of the server. To be able to use the console properly, you should know the [i-doit console utility](../../automation-and-integration/cli//index.md) about it. A simple synchronization without the advanced configuration serves the option ldap-sync. A description of the parameters can be found in the [corresponding chapter](../../automation-and-integration/cli/index.md).
+The ldap-sync can only be executed via the console of the server. To be able to use the console properly, you should know the [i-doit console utility](../../automation-and-integration/cli/index.md) about it. A simple synchronization without the advanced configuration serves the option ldap-sync. A description of the parameters can be found in the [corresponding chapter](../../automation-and-integration/cli/index.md).
 
 **Example**
 
