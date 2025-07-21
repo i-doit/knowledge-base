@@ -27,6 +27,6 @@ You can find a practical example, in german, on our [Blog](https://www.i-doit.co
     Please extend the curl so that you can authenticate.
 
 
-???+ question "**"Authentication error: System setting 'api.authenticated-users-only' is enabled. Please provide valid user credentials by http basic auth or use an existing session id.**"
+???+ question "**Authentication error: System setting 'api.authenticated-users-only' is enabled. Please provide valid user credentials by http basic auth or use an existing session id.**"
 
     This setting can be found in the Admin-Center under System settings > [Expert settings](../../system-administration/admin-center.md#expert-settings-system-related) as "api.authenticated-users-only" and must be set to "0" for Zammad.
