@@ -6,7 +6,7 @@ status:
 lang: de
 ---
 
-Die folgenden [console commands](../../../automatisierung-und-integration/cli/console/index.md) sind im Add-on verfügbar. Diese Funktionen können anstelle eines Cronjobs verwendet werden.
+Die folgenden [console commands](../../../automatisierung-und-integration/cli/index.md) sind im Add-on verfügbar. Diese Funktionen können anstelle eines Cronjobs verwendet werden.
 
 | Console command                                                   | Options                                                                                                                          | Beschreibung                                                                                                      |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |

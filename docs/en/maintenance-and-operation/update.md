@@ -113,7 +113,7 @@ sudo find . -type f -exec chmod 664 {} \;
 
 Now you can have a look at our instructions for the [update via the web interface](#update-via-the-web-interface) and skip the steps regarding the download of the newest package.
 
-## Update über die Konsole via console.php
+## Update via console.php
 
 !!! attention "Backup"
     Before updating, it is essential to make a [backup](backup-and-recovery/index.md).
@@ -138,7 +138,7 @@ We can also provide the command with all necessary parameters directly. To updat
 sudo -u www-data php console.php update -u {username} -p {password} -z /var/www/html/i-doit/idoit-36-update.zip --v 36
 ```
 
-## Nach dem Update
+## After the update
 
 After the update, clear the [cache](../system-administration/administration/tenant-management/repair-and-clean-up.md#cache) and refresh the [search index](../system-administration/administration/tenant-management/repair-and-clean-up.md#other).
 

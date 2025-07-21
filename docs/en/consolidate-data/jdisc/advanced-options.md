@@ -105,5 +105,5 @@ Through mapping, you define **which data from JDisc is written into which catego
 ## See also
 
 * [JDisc Discovery - Main Article](index.md)
-* [Console import with profiles](../../automation-and-integration/cli/console/commands-and-options.md#import-jdisc)
-* [Usage of INI files](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md)
+* [Console import with profiles](../../automation-and-integration/cli/index.md#import-jdisc)
+* [Usage of INI files](../../automation-and-integration/cli/configuration-files.md)

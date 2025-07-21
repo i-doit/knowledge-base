@@ -4,7 +4,7 @@
 
 In diesem Abschnitt zeigen wir Ihnen, wie Sie über die Aufgabenplanung unter Windows i-doit automatisieren können.
 
-### Vorabinformationen
+### Voraussetzung
 
 In unserem Beispiel zur Aufgabenplanung für i-doit unter Windows benutzen wir eine i-doit Instanz, welche mit dem [i-doit Windows Installer](../installation/manuelle-installation/microsoft-windows-server/index.md) aufgesetzt wurde.
 
@@ -16,7 +16,7 @@ Um eine Batch Datei zu erstellen müssen Sie ein Editor Programm öffnen und ein
 
 [![batch-erstellen](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/1-auc.png)](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/1-auc.png)
 
-Ist die Datei erstellt, können wir die Datei mit Befehlen der [CLI](./cli/console/befehle-und-optionen.md) befüllen.
+Ist die Datei erstellt, können die Dateien mit Befehlen über das [i-doit console utility](../automatisierung-und-integration/cli/index.md) befüllen.
 
 Die Batch Datei kann bspw. mit folgendem Inhalt befüllt werden:
 
@@ -42,7 +42,7 @@ C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\consol
 
 ### JDisc import und LDAP sync automatisieren
 
-Wenn Sie den JDisc import oder den LDAP sync ebenfalls automatisieren möchten, können Sie die Befehle für den [JDisc import](./cli/console/befehle-und-optionen.md#import-jdisc) oder den [LDAP sync](./cli/console/befehle-und-optionen.md#ldap-sync) in der gleichen schreibweise wie die anderen Befehle aus dem obigen Beispiel, einfach in die Batch Datei einfügen.
+Wenn Sie den JDisc import oder den LDAP sync ebenfalls automatisieren möchten, können Sie die Befehle für den [JDisc import](../automatisierung-und-integration/cli/index.md) oder den [LDAP sync](../automatisierung-und-integration/cli/index.md) in der gleichen schreibweise wie die anderen Befehle aus dem obigen Beispiel, einfach in die Batch Datei einfügen.
 
 ### Einrichten der Aufgabenplanung
 

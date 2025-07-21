@@ -1,18 +1,32 @@
+---
+title: Zammad
+description: Zammad configuration and faq
+icon:
+status:
+lang: en
+---
+
 # Zammad
 
-[Zammad](https://zammad.com/) is a Web application suited for your service desk. It will display information about i-doit objects and connect tickets with objects. For more information about its configuration and usage, please contact the vendor behind Zammad.
+[Zammad](https://zammad.com/) is a web application for the service desk. It is able to access information about objects from i-doit and link it to tickets. For more information on configuring and using Zammad, please contact the manufacturer.
 
-After a regular installation i-doit is already able to [access Zammad tickets](./index.md).
+The standard installation of i-doit already includes all the functions required to access tickets in Zammad.
 
-https://zammad.com/
+You can find a practical example, in german, on our [Blog](https://www.i-doit.com/blog/zammad-intuitiver-service-desk-mit-anbindung-an-i-doit/).
 
-FAQ:
-----
+## FAQ:
 
-One important thing that is often forgotten is that elasticsearch must be installed and working on the Zammad server, without this service i-doit cannot retrieve the tickets.
+???+ question "**i-doit cannot retrieve tickets from Zammad**"
 
-To test the connection from the i-doit server to the Zammad server a curl can be used:
+    One important thing that is often forgotten is that elasticsearch must be installed and working on the Zammad server, without this service i-doit cannot retrieve the tickets. To test the connection from the i-doit server to the Zammad server a curl can be used:
 
-    curl -u user@domain.de -X POST http://myzammadserver/api/v1/tickets/search -d 'query=preferences.idoit.object_ids:myobjectid' -d 'limit=10'
+    ```shell
+    curl -u user@domain.de -X POST http://myzammadserver/api/v1/tickets/search -d 'query=preferences.idoit.object_ids:myobjectid' -d 'limit=10'
+    ```
 
-Please extend the curl so that you can authenticate.
+    Please extend the curl so that you can authenticate.
+
+
+???+ question "**"Authentication error: System setting 'api.authenticated-users-only' is enabled. Please provide valid user credentials by http basic auth or use an existing session id.**"
+
+    This setting can be found in the Admin-Center under System settings > [Expert settings](../../system-administration/admin-center.md#expert-settings-system-related) as "api.authenticated-users-only" and must be set to "0" for Zammad.

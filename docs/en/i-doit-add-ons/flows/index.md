@@ -16,7 +16,7 @@ Detailed descriptions regarding download, installation, updates etc. can be foun
 
 ## Needed CLI Commands
 
-!!! success "If the command is to be executed for a Tenant other than the first Tenant, the corresponding [Tenant ID](../../automation-and-integration/cli/console/commands-and-options.md#tenant-list) must be passed."
+!!! success "If the command is to be executed for a Tenant other than the first Tenant, the corresponding [Tenant ID](../../automation-and-integration/cli/index.md#tenant-list) must be passed."
 
 The Flows Add-on comes with two [CLI commands](../../automation-and-integration/cli/index.md). Both commands are needed to make the Flows Add-on work completely. There are two option to set up the CLI Commands. The Commands can be executed by a **Crontab**. We also have created a Service installation Script called **create-daemon.sh**, which can be found in the Flows Add-on folder `i-doit/src/classes/modules/synetics_flows/`.
 
@@ -34,7 +34,7 @@ Now the file can be executed to create a system service. **This needs to be done
 
 -   `-u` i-doit person with administrator rights
 -   `-p` the password for the person
--   `-i` tenant ID in which the person is used, can be viewed via console command [tenant-list](../../automation-and-integration/cli/console/commands-and-options.md#tenant-list)
+-   `-i` tenant ID in which the person is used, can be viewed via console command [tenant-list](../../automation-and-integration/cli/index.md#tenant-list)
 
 ```shell
 src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
