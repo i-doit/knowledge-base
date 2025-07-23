@@ -158,7 +158,7 @@ detailedLogging=3
 regenerateSearchIndex
 ```
 
-:material-arrow-right: Details zur Konfiguration: [Verwendung von INI-Dateien](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md)
+:material-arrow-right: Details zur Konfiguration: [Verwendung von INI-Dateien](../../automatisierung-und-integration/cli/configuration-files.md)
 
 ## Report Views
 
@@ -191,5 +191,5 @@ system.memory-limit.jdisc = 3G
 Weitere Informationen zu Matching-Profilen, Kategorie-Mapping und erweiterten Optionen findest du in den nachgelagerten Artikeln. Diese werden nach Bedarf verlinkt oder modular erweitert.
 
 * [Erweiterte Optionen für JDisc-Importprofile](advanced-options.md)
-* [Console Import mit Profilen](../../automatisierung-und-integration/cli/console/befehle-und-optionen.md#import-jdisc)
-* [Verwendung von INI-Dateien](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md)
+* [i-doit console utility Import](../../automatisierung-und-integration/cli/index.md)
+* [Verwendung von INI-Dateien](../../automatisierung-und-integration/cli/configuration-files.md)

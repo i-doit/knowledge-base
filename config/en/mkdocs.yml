@@ -64,7 +64,9 @@ plugins:
   - redirects:
       redirect_maps:
         'maintenance-and-operation/activate-license.md': 'maintenance-and-operation/licensing.md'
-        'automation-and-integration/cli/console/options-and-parameters-cli.md': 'automation-and-integration/cli/console/commands-and-options.md'
+        'automation-and-integration/cli/console/options-and-parameters-cli.md': 'automation-and-integration/cli/index.md'
+        'automation-and-integration/cli/console/commands-and-options.md': 'automation-and-integration/cli/index.md'
+        'automation-and-integration/cli/console/using-configuration-files-for-console-cli.md': 'automation-and-integration/cli/configuration-files.md'
         'consolidate-data/jdisc-discovery.md': 'consolidate-data/jdisc/index.md'
         'upgrades-and-migrations/update-guide-from-1.7.4-to-31.md': 'upgrades-and-migrations/update-guide.md'
 markdown_extensions:
@@ -379,12 +381,9 @@ nav:
   - Automation and integration:
       - automation-and-integration/index.md
       - E-Mail (SMTP): automation-and-integration/e-mail.md
-      - CLI:
+      - i-doit console utility:
           - automation-and-integration/cli/index.md
-          - Console:
-              - automation-and-integration/cli/console/index.md
-              - Commands and options: automation-and-integration/cli/console/commands-and-options.md
-              - Configuration files for console commands: automation-and-integration/cli/console/using-configuration-files-for-console-cli.md
+          - Configuration files: automation-and-integration/cli/configuration-files.md
       - Network Monitoring:
           - automation-and-integration/network-monitoring/index.md
           - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md

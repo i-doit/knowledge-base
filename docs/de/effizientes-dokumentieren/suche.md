@@ -48,7 +48,7 @@ Sollte die Suche im voreingestellten Modus (siehe oben) kein oder ein unzureiche
 Indexierung
 -----------
 
-Initial wird der Suchindex automatisch beim Update und der Installation erzeugt. Nur in sehr großen Datenbanken mit mehr als 500.000 Objekten muss dieser manuell erzeugt werden, damit die Suche performant läuft und gute Ergebnisse liefert. Der Index kann unabhängig von Benutzer-Interaktionen im Hintergrund erstellt bzw. aktualisiert werden. Angestoßen wird diese Aktion über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md). Ein Beispielaufruf sowie Erklärungen zu den möglichen Parametern können dem [entsprechenden Artikel](../automatisierung-und-integration/cli/console/befehle-und-optionen.md) entnommen werden.
+Initial wird der Suchindex automatisch beim Update und der Installation erzeugt. Nur in sehr großen Datenbanken mit mehr als 500.000 Objekten muss dieser manuell erzeugt werden, damit die Suche performant läuft und gute Ergebnisse liefert. Der Index kann unabhängig von Benutzer-Interaktionen im Hintergrund erstellt bzw. aktualisiert werden. Angestoßen wird diese Aktion über das [i-doit console utility](../automatisierung-und-integration/cli/index.md).
 
 ```shell
 php console.php search-index -uadmin -padmin -i 1
@@ -62,7 +62,7 @@ Alternativ kann der Reindex auch in der i-doit Verwaltung unter **Systemtools** 
 Über die Konsole suchen
 -----------------------
 
-Die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) erlaubt auch das Suchen über die Kommandozeile. Die nötige Option heißt **search**. Ein Beispielaufruf ist im Artikel zu finden, der näher auf die [Optionen und Parameter](../automatisierung-und-integration/cli/console/befehle-und-optionen.md) der i-doit Console eingeht.
+Das [i-doit console utility](../automatisierung-und-integration/cli/index.md) erlaubt auch das Suchen über die Kommandozeile.
 
 ```shell
     sudo -u www-data php console.php search -uadmin -padmin --searchString=acme
@@ -207,7 +207,7 @@ Zum Schluss muss eine Neu-Indexing über die i-doit Console oder die i-doit Verw
 
 ### Das Limit von 2500 Ergenissen erhöhen
 
-Wenn Objekte fortlaufend benannt werden z.B. 123456-00001 bis 123456-99999 so können mit normalen Sucheinstellungen nur Objekte bis 123456-2500 gefunden werden.  
+Wenn Objekte fortlaufend benannt werden z.B. 123456-00001 bis 123456-99999 so können mit normalen Sucheinstellungen nur Objekte bis 123456-2500 gefunden werden.
 Dieses Limit dient der Performance. Um dieses Limit zu erhöhen muss eine Experteneinstellung hinzugefügt werden.
 
 Hier ein Beispiel bei dem das Limit auf 5000 Ergenisse gesetzt wurde.

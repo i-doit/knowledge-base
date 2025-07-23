@@ -4,9 +4,9 @@ Nobody is an island... Especially with the topic of IT documentation/ CMDB you a
 
 The described interfaces are already included in _i-doit_:
 
-*   [CLI](./cli/index.md)
+*   [E-Mail (SMTP)](./e-mail.md)
+*   [i-doit console utility](./cli/index.md)
 *   [Network Monitoring](./network-monitoring/index.md)
-*   [Service Desk](./service-desk/index.md)
-*   [Email (SMTP)](./e-mail.md)
+*   [Trouble Ticket System (TTS)](./service-desk/index.md)
 *   [SNMP](./snmp.md)
 *   [Task scheduling & Cronjobs](./task-scheduling-and-cronjobs.md)

@@ -16,7 +16,7 @@ Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen
 
 ## Benötigte CLI Commands
 
-!!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende [Mandanten ID](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#tenant-list) zu übergeben."
+!!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende [Mandanten ID](../automatisierung-und-integration/cli/index.md) zu übergeben."
 
 Das Flows Add-on wird mit zwei [CLI-Befehlen](../automatisierung-und-integration/cli/index.md) geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
 
@@ -34,7 +34,7 @@ Nun kann die Datei ausgeführt werden, um einen Systemdienst zu erstellen. **Die
 
 -   `-u` i-doit Person mit Administrator rechten
 -   `-p` das Passwort für die Person
--   `-i` Mandanten ID in dem die Person verwendet wird, kann über Konsolenbefehl eingesehen werden [tenant-list](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#tenant-list)
+-   `-i` Mandanten ID in dem die Person verwendet wird, kann über Konsolenbefehl eingesehen werden [tenant-list](../automatisierung-und-integration/cli/index.md)
 
 ```shell
 src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1

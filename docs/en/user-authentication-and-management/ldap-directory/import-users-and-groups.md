@@ -1,10 +1,10 @@
 # How To import users and groups from AD/LDAP (advanced configuration)
 
-Importing users and groups from Active Directory into i-doit always takes place via the [console.php](../../automation-and-integration/cli/console/index.md) command. For this we use the [ldap-sync](./index.md) command.<br>
+Importing users and groups from Active Directory into i-doit always takes place via the [i-doit console utility](../../automation-and-integration/cli/index.md) command. For this we use the [ldap-sync](./index.md) command.<br>
 At the end of the article there is a complete example of the created advanced configuration.
 
 The article about configuration of [LDAP directory/Active Directory](../index.md) should be known to everyone before.<br>
-Here we will go through different LDAP filters and a complete [ldap.ini configuration](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md).<br>
+Here we will go through different LDAP filters and a complete [ldap.ini configuration](../../automation-and-integration/cli/configuration-files.md).<br>
 The goal is to synchronize all users and groups from AD/LDAP with i-doit, as well as their memberships.
 
 I assume a basic knowledge of AD/LDAP.<br>
@@ -107,7 +107,7 @@ For example, if the users differ by having two objectClass attributes (e.g. pers
 
 ## Which other attributes can be imported via ldap.ini
 
--   The post [ldap.ini Configuration](../../automation-and-integration/cli/console/commands-and-options.md#ldap-sync) should be known.
+-   The post [ldap.ini Configuration](../../automation-and-integration/cli/index.md#ldap-sync) should be known.
 -   An .ini file can be created for the import, with this additional attributes can be imported.
 -   The [Category Extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md) should already be configured.
 -   We use the .ini section
@@ -290,7 +290,7 @@ syncEmptyAttributes=true
 ### The complete ldap.ini
 
 Here is a finished ini. file which can of course be edited.
-The first part of the ldap.ini is obtained from [Using Configuration Files for Console Commands](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md).
+The first part of the ldap.ini is obtained from [Using Configuration Files for Console Commands](../../automation-and-integration/cli/configuration-files.md).
 
 ```ini
 [commandArguments]
