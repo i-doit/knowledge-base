@@ -100,30 +100,24 @@ Die Strategie zur Auflösung von Personengruppen bietet folgende Optionen:
 
 Im linken Navigationsbaum unter **E-Mail-Vorlagen** können Sie den Inhalt der Benachrichtigungen global anpassen. Die Auswahl der Sprache (Deutsch/Englisch) richtet sich nach der im Kontaktobjekt eingestellten Sprache des Empfängers.
 
-| Einstellung               | Beschreibung                                                                                                                                                               |
-| :------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Sprache**               | Zeigt die aktuell bearbeitete Sprache an.                                                                                                                                  |
-| **Betreff**               | Der Betreff der E-Mail. Kann mit Platzhaltern dynamisch gestaltet werden.                                                                                                  |
-| **Benachrichtigungstext** | Der Inhalt der E-Mail, ebenfalls mit Platzhaltern anpassbar.                                                                                                               |
-| **Report**                | Optional kann hier ein Report ausgewählt werden. Dessen Ergebnis (die gefundenen Objekte mit den ausgewählten Attributen) wird dann als Tabelle in die E-Mail eingebettet. |
+| Einstellungen         | Beschreibung                                                                                                                                           |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Sprache               | Es wird die Sprache angezeigt, die gerade bearbeitet wird.                                                                                             |
+| Betreff               | Der Betreff der zu verschickenden Nachricht kann mit Platzhaltern aus dem unteren Bereich der Oberfläche selbst definiert werden.                      |
+| Benachrichtigungstext | Der Text kann, wie auch der Betreff, mit Platzhaltern zusammengestellt werden.                                                                         |
+| Report                | Ein Report kann hier definiert werden, mit dem in der E-Mail die in der Benachrichtigung gefundenen Objektinformationen aufbereitet verschickt werden. |
 
-### Verfügbare Platzhalter
+## Konfiguration des Aufrufs mit CLI
 
-Um E-Mails dynamisch zu gestalten, können Sie Platzhalter im Betreff und Text verwenden. Alle Platzhalter können in i-doit eingesehen werden.
+Damit die eingerichteten Benachrichtigungen auch regelmäßig überprüft werden, muss das [i-doit console utility](../automatisierung-und-integration/cli/index.md) mit dem Command `notifications-send`, zum Beispiel als [Cronjob](../wartung-und-betrieb/cronjobs-einrichten.md) ausgeführt werden. Es lässt sich jede Benachrichtigung einzeln abrufen. Sinnvoll ist es, zu überlegen, wie oft maximal geprüft werden soll. Bewährt hat es sich unserer Erfahrung nach täglich kurz vor Arbeitsbeginn zu prüfen, damit morgens sofort klar ist, womit man sich den Tag über beschäftigen sollte.
 
----
+!!! info "Ohne einen Aufruf des Commands über das i-doit console utility findet **kein** Versand der Benachrichtigungen statt!"
 
-## Automatisierung per Cronjob (CLI)
+Die Möglichen Parameter sind über die `--help` Option abrufbar. Weitere Informationen sind im [entsprechenden Artikel](../automatisierung-und-integration/cli/index.md) zu finden.
 
-Eine eingerichtete Benachrichtigung wird nicht von selbst aktiv. Sie muss regelmäßig durch einen automatisierten Aufruf über das i-doit console utility ausgelöst werden.
+!!! info "Mit dem Benachrichtigungsmodul lassen sich Eskalationsstufen abbilden. Dazu ist nötig, für dieselben Benachrichtigungsarten mehrere Benachrichtigungen mit verschiedenen Empfängerkreisen und Schwellwerten einzurichten."
 
-!!! danger "Ohne Cronjob kein Versand!"
-    Ohne die regelmäßige Ausführung des `notifications-send` Befehls per Cronjob oder geplantem Task findet **kein** Versand der Benachrichtigungen statt.
-
-Die Einrichtung erfolgt z. B. über einen [Cronjob unter Linux](../wartung-und-betrieb/cronjobs-einrichten.md) oder einen geplanten [Task unter Windows](../automatisierung-und-integration/automatisierung-und-cronjobs.md). Ein bewährter Rhythmus ist die tägliche Ausführung am frühen Morgen.
-
-**Beispielaufruf:**
-Dieser Befehl führt alle aktiven Benachrichtigungen für den Mandanten mit der ID 1 aus.
+**Beispiel zur Verwendung**
 
 ```shell
 sudo -u www-data php /var/www/html/console.php notifications-send --user admin --password admin --tenantId 1
@@ -135,4 +129,4 @@ sudo -u www-data php /var/www/html/console.php notifications-send --user admin -
 
 ## Logging
 
-Jeder Aufruf des `notifications-send` Befehls erzeugt eine Logdatei im Format `notifications_YYYY-MM-DD.log` im `log`-Verzeichnis Ihrer i-doit-Installation. Dort können Sie Details zu durchgeführten Prüfungen und versendeten E-Mails einsehen.
+Beim Aufruf des i-doit console utility Befehls `notifications-send` wird eine Logdatei erstellt. Die Datei mit der Bezeichnung `notifications_YYYY-MM-DD.log` ist im i-doit `log` Ordner zu finden.

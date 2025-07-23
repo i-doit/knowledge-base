@@ -35,7 +35,7 @@ welche wir anschließend editieren:
 
 ## Schritt 2: `extend-contracts` anwenden
 
-Um den Befehl `extend-contracts` anwenden zu können, müssen wir in die [Console](../automatisierung-und-integration/cli/console/index.md).
+Um den Befehl `extend-contracts` anwenden zu können, müssen wir in die [Console](../automatisierung-und-integration/cli/index.md).
 
 Der Befehl sieht wie folgt aus:
 
@@ -43,7 +43,7 @@ Der Befehl sieht wie folgt aus:
     sudo -u www-data php console.php extend-contracts --user user --password password
 ```
 
-Ist der Vertrag richtig konfiguriert, wird in der [Console](../automatisierung-und-integration/cli/console/index.md) angezeigt, dass der Vertrag um 1 Jahr verlängert wurde. 
+Ist der Vertrag richtig konfiguriert, wird in der [Console](../automatisierung-und-integration/cli/index.md) angezeigt, dass der Vertrag um 1 Jahr verlängert wurde.
 
 [![vertragsverlaengerung-console](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/3-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/3-avv-uc.png)
 
@@ -65,4 +65,4 @@ In diesen Cronjob fügen wir folgenden Code ein:
 ```
 
 Mit diesem Code, wird der Cronjob jeden Tag um 6:15 Uhr ausgeführt und verlängert die Verträge automatisch, falls sie den Voraussetzungen entsprechen.<br>
-Der Pfad zur [Console](../automatisierung-und-integration/cli/console/index.md) muss vollständig angegeben werden und der **Username** und das **Passwort** des Benutzer der i-doit Instanz.
+Der Pfad zur [Console](../automatisierung-und-integration/cli/index.md) muss vollständig angegeben werden und der **Username** und das **Passwort** des Benutzer der i-doit Instanz.

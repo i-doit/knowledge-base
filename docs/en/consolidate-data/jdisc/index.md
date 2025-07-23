@@ -161,7 +161,7 @@ detailedLogging=3
 regenerateSearchIndex
 ```
 
-:material-arrow-right: More details: [Using INI files](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md)
+:material-arrow-right: More details: [Using INI files](../../automation-and-integration/cli/configuration-files.md)
 
 ## Report views
 
@@ -192,5 +192,5 @@ system.memory-limit.jdisc = 3G
 For advanced topics such as matching profiles, category mapping, and additional options, refer to the related articles.
 
 * [Advanced Options for JDisc Import Profiles](advanced-options.md)
-* [Console import with profiles](../../automation-and-integration/cli/console/commands-and-options.md#import-jdisc)
-* [Usage of INI files](../../automation-and-integration/cli/console/using-configuration-files-for-console-cli.md)
+* [Console import with profiles](../../automation-and-integration/cli/index.md#import-jdisc)
+* [Usage of INI files](../../automation-and-integration/cli/configuration-files.md)

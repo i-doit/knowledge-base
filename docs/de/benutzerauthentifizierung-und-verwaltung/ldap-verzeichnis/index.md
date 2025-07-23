@@ -132,11 +132,11 @@ Es ist auch möglich, eigene Attribute aus dem LDAP über den Import von Persone
 
 ### Regelmäßige Synchronisation
 
-Die dafür benötigte Konfiguration wurde in den vorherigen Schritten bereits vorgenommen. Für die Synchronisation muss nun noch der passende [CLI](../../automatisierung-und-integration/cli/index.md) Befehl eingerichtet werden. Außerdem können noch weitere zu synchronisierende Felder konfiguriert werden.
+Die dafür benötigte Konfiguration wurde in den vorherigen Schritten bereits vorgenommen. Für die Synchronisation muss nun noch der passende [i-doit console utility](../../automatisierung-und-integration/cli/index.md) Befehl eingerichtet werden. Außerdem können noch weitere zu synchronisierende Felder konfiguriert werden.
 
 ### Erweiterte Konfiguration
 
-Die Konfiguration muss in der [CLI-Konfiguration](../../automatisierung-und-integration/index.md) vorgenommen werden. Ein Beispiel dazu ist [Hier](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md) zu finden i-doit < 1.15. Diese Datei kann mit Login-Daten, Tenant und Attributen erweitert und angepasst werden. Die Konfigurationsdatei wird dann nach i-doit/src/handler/config/ verschoben. Damit diese Datei z.B. beim ldap-sync Command berücksichtig wird, muss diese beim sync über einen weiteren Parameter (-c /pfad/) mit angegeben werden (weitere Informationen zur [Console](../../automatisierung-und-integration/cli/console/befehle-und-optionen.md)).
+Ein Beispiel dazu ist [hier](../../automatisierung-und-integration/cli/configuration-files.md) zu finden. Diese Datei kann mit Login-Daten, Tenant und anderen Optionen erweitert und angepasst werden. Damit diese Datei z.B. beim `ldap-sync` Befehl berücksichtigt wird, muss diese über einen weiteren Parameter `-c /pfad/` mit angegeben werden (weitere Informationen zur [i-doit console utility](../../automatisierung-und-integration/cli/index.md).
 
 | Parameter                     | Zweck                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -175,10 +175,29 @@ Unterhalb von log/ im Installationsverzeichnis von i-doit befindet sich ein Logf
 
 ## Den ldap-sync ausführen
 
-Der ldap-sync lässt sich nur über die Console des Servers ausführen. Um die Console richtig bedienen zu können, sollte der [Artikel](../../automatisierung-und-integration/cli/console/index.md) dazu bekannt sein. Eine einfache Synchronisation ohne die erweiterte Konfiguration dient die Option **ldap-sync**. Eine Beschreibung der Parameter ist im entsprechenden [Kapitel](../../automatisierung-und-integration/cli/console/befehle-und-optionen.md) zu finden.
+Der ldap-sync lässt sich nur über die Console des Servers ausführen. Um die Console richtig bedienen zu können, sollte der [Artikel](../../automatisierung-und-integration/cli/index.md) dazu bekannt sein. Für eine einfache Synchronisation ohne die erweiterte Konfiguration dient der Befehl `ldap-sync`. Eine Beschreibung der Parameter ist im entsprechenden für das[i-doit console utility](../../automatisierung-und-integration/cli/index.md) zu finden.
 
 **Beispiel zur Verwendung**
 
 ```shell
 sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1
 ```
+
+### Benötigte Rechte für den LDAP-Sync
+
+Ein Benutzer für den `ldap-sync` Befehl benötigt folgende Mindestberechtigungen:
+
+**1. Verwaltung (Befehl ausführen)**
+* Bedingung **Commands** und `Alle` Rechte für den Parameter `SyncCommand`.
+
+**2. CMDB (Objekte & Gruppen bearbeiten)**
+* Bedingung **Kategorie in Objekttyp "Personen"**: Rechte auf die Kategorien:
+    * Personen
+    * Personen - Stammdaten
+    * Personen - Login
+    * Personen - Gruppenmitgliedschaften
+
+* **Objekttyp Kategorie in Objekttyp "Personengruppen"**: Rechte auf die Kategorien:
+    * Personengruppen
+    * Personengruppen - Stammdaten
+    * Personengruppen - Gruppenmitgliedschaften

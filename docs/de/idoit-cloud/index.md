@@ -54,10 +54,7 @@ Unser Experten-Team steht Ihnen für alle Anliegen rund um Ihre Cloud-Instanz zu
 
 ## Migration: Umzug in die Cloud
 
-Wir unterstützen Sie aktiv beim Umzug Ihrer bestehenden On-Premise-Installation in die i-doit Cloud.
-
-!!! info "Kostenloser Umzugsservice"
-    Derzeit bieten wir den kompletten Umzug Ihrer Altdaten (Datenbank und Dateien) von On-Premise in die Cloud als kostenlosen Service an.
+Wir unterstützen Sie aktiv beim Umzug Ihrer bestehenden On-Premise Installation in die i-doit Cloud.
 
 **Ablauf der Migration:**
 

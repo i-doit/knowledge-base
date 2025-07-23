@@ -10,7 +10,7 @@ lang: en
 
 In this section, we will show you how to automate a i-doit windows installation using the windows task scheduler.
 
-### Preliminary information
+### Prerequisites
 
 In our example of task scheduling for i-doit under Windows, we use an i-doit instance that was set up using the [i-doit Windows Installer](../installation/manual-installation/microsoft-windows-server/index.md).
 
@@ -22,7 +22,7 @@ To create a batch file, you must open an editor program and create a new file. T
 
 [![batch-create](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/1-auc.png)](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/1-auc.png)
 
-Once the file has been created, we can fill the file with commands from the [CLI](./cli/console/commands-and-options.md).
+Once the file has been created, we can fill the file with commands from the [CLI](./cli/index.md).
 
 The batch file can be filled with the following content:
 
@@ -48,7 +48,7 @@ C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\consol
 
 ### Automate JDisc import and LDAP sync
 
-If you also want to automate the JDisc import or the LDAP sync, you can use the commands for the [JDisc import](./cli/console/commands-and-options.md#import-jdisc) or the [LDAP sync](./cli/console/commands-and-options.md#ldap-sync) in the same way as the other commands from the example above, simply add them to the batch file.
+If you also want to automate the JDisc import or the LDAP sync, you can use the commands for the [JDisc import](./cli/index.md#import-jdisc) or the [LDAP sync](./cli/index.md#ldap-sync) in the same way as the other commands from the example above, simply add them to the batch file.
 
 ### Setting up a task
 

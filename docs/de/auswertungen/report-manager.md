@@ -97,7 +97,7 @@ Möchte man Bedingungen setzen, die auf Attribute von Objekten, die in Beziehung
 
 #### Aktualisieren der Reports nach einem Update
 
-Durch i-doit updates kann sich auch der Abfrage-Editor ändern, sodass Abfragen anders aufgebaut werden als zuvor. Damit die Reporte immer die aktuelle Logik verwenden, ist es notwendig diese Abfragen aktualisieren zu lassen. Entweder ist dies über die [Verwaltung](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) möglich oder über eine [CLI Befehl](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#report-refresher).
+Durch i-doit updates kann sich auch der Abfrage-Editor ändern, sodass Abfragen anders aufgebaut werden als zuvor. Damit die Reporte immer die aktuelle Logik verwenden, ist es notwendig diese Abfragen aktualisieren zu lassen. Entweder ist dies über die [Verwaltung](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) möglich oder über das [i-doit console utility](../automatisierung-und-integration/cli/index.md).
 
 [![Reporte aktualisieren](../assets/images/de/auswertungen/report-manager/15-rm.png)](../assets/images/de/auswertungen/report-manager/15-rm.png)
 
@@ -160,7 +160,7 @@ Auswahl von nützlichen **Report Views**:
 
 ## Reports automatisiert exportieren
 
-Bestehende Reports können automatisiert als Datei exportiert werden, ohne das ein Benutzer manuell eingreifen muss. Dies geschieht über das Kommandozeilen-Werkzeug von _i-doit_, der [console.php](../automatisierung-und-integration/cli/console/index.md) via [report-export](../automatisierung-und-integration/cli/console/befehle-und-optionen.md#report-export).
+Bestehende Reports können automatisiert als Datei exportiert werden, ohne das ein Benutzer manuell eingreifen muss. Dies geschieht über das [i-doit console utility](../automatisierung-und-integration/cli/index.md) via `report-export`.
 
 ```shell
 sudo -u www-data php console.php report-export --help

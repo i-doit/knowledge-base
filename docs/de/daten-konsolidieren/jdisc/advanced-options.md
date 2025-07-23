@@ -122,5 +122,5 @@ Eine vollständige Liste der Filter findest du im Dialog "Zusätzliche Optionen"
 ## Siehe auch
 
 * [JDisc Discovery - Hauptartikel](index.md)
-* [Console Import mit Profilen](../../automatisierung-und-integration/cli/console/befehle-und-optionen.md#import-jdisc)
-* [Verwendung von INI-Dateien](../../automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md)
+* [i-doit console utility Import](../../automatisierung-und-integration/cli/index.md)
+* [Verwendung von INI-Dateien](../../automatisierung-und-integration/cli/configuration-files.md)

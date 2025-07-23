@@ -56,7 +56,7 @@ Alternatively, the Reindex can also be executed in the i-doit administration at 
 
 ## Search via the Console
 
-The [CLI tool](../automation-and-integration/cli/console/commands-and-options.md#search) allows you to search via the command line. An example:
+The [CLI tool](../automation-and-integration/cli/index.md#search) allows you to search via the command line. An example:
 
 ```shell
 sudo -u www-data php console.php search -uadmin -padmin --searchString=acme

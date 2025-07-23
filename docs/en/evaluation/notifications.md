@@ -100,30 +100,24 @@ The strategy for resolving person groups offers the following options:
 
 In the left navigation tree under **Email Templates**, you can globally customize the content of the notifications. The choice of language (German/English) depends on the language set in the recipient's contact object.
 
-| Setting               | Description                                                                                                                                           |
-| :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Language**          | Displays the language currently being edited.                                                                                                         |
-| **Subject**           | The subject of the email to be sent. Can be dynamically designed with placeholders.                                                                   |
-| **Notification text** | The content of the email, also customizable with placeholders.                                                                                        |
-| **Report**            | Optionally, a report can be selected here. Its result (the found objects with the selected attributes) will then be embedded as a table in the email. |
+| Setting           | Description                                                                                                                   |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Language          | The language that is currently being edited is displayed.                                                                     |
+| Subject           | The subject of the message can be customized with placeholders from the bottom section of the interface.                      |
+| Notification text | The text can be assembled with placeholders just like the subject.                                                            |
+| Report            | A report for the e-mail can be defined here, which is then used to organize the object information found in the notification. |
 
-### Available Placeholders
+## Configuration of the call with the CLI
 
-To design emails dynamically, you can use placeholders in the subject and text. All placeholders can be viewed in i-doit.
+To ensure that the set-up notifications are also checked regularly, the i-doit [CLI](../console/../automation-and-integration/cli/index.md) must be executed with the command **[notifications-send](../automation-and-integration/cli/index.md#notifications-send)**, for example as a cron job. It is not possible to call up each notification individually, but all notifications are always checked automatically one after the other. It makes sense to consider how often the maximum number of checks should be. In our experience, it has proven useful to check every day shortly before starting work, so that it is immediately clear in the morning what you should deal with during the day.
 
----
+!!! info "Without a call of the command via the i-doit CLI **no** dispatch of the notifications takes place!"
 
-## Automation via Cronjob (CLI)
+The possible parameters as well as an example call for sending notifications can be found in the [corresponding article](,/../notifications.md) for the command **[notifications-send](../automation-and-integration/cli/index.md#notifications-send)**.
 
-A configured notification does not become active on its own. It must be regularly triggered by an automated call via the i-doit console utility.
+!!! info "You can map escalation levels by using the notification module. For this, you need to set up multiple notifications with different recipient groups and threshold values for the same notification types."
 
-!!! danger "No dispatch without a cronjob!"
-    Without the regular execution of the `notifications-send` command via a cronjob or scheduled task, **no** notifications will be sent.
-
-The setup is done, for example, via a [cronjob on Linux](../maintenance-and-operation/cronjob-setup.md) or a scheduled [task on Windows](../automation-and-integration/task-scheduling-and-cronjobs.md). A proven rhythm is daily execution in the early morning.
-
-**Example call:**
-This command executes all active notifications for the tenant with ID 1.
+**Example of use**
 
 ```shell
 sudo -u www-data php /var/w/html/console.php notifications-send --user admin --password admin --tenantId 1
@@ -135,4 +129,4 @@ sudo -u www-data php /var/w/html/console.php notifications-send --user admin --p
 
 ## Logging
 
-Every call of the `notifications-send` command creates a log file in the format `notifications_YYYY-MM-DD.log` in the `log` directory of your i-doit installation. There you can view details about performed checks and sent emails.
+When the CLI command [notifications-send](../automation-and-integration/cli/index.md#notifications-send) is called, a log file is created. The file with the name `notifications_YYYY-MM-DD.log` can be found in the i-doit `log` folder. If a person is not notified, the reason can be found in the log file.

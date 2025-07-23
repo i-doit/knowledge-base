@@ -171,7 +171,7 @@ sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
 
 Nun kann **create-daemon.sh** ausgeführt werden, um einen Dienst für die automatische Ausführung der flows zu erstellen und zu aktivieren. **Jeder Mandant benötigt einen eigenen Service**
 
--   `-i` benötigt eine Mandanten-ID, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/console/befehle-und-optionen.md#tenant-list)
+-   `-i` benötigt eine Mandanten-ID, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/index.md)
 -   `-u` braucht einen **i-doit admin-user** im ausgewählten Mandant
 -   `-p` benötigt ein **i-doit admin-user-passwort** im ausgewählten Mandant
 
