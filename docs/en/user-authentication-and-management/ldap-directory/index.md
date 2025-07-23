@@ -168,3 +168,22 @@ The ldap-sync can only be executed via the console of the server. To be able to 
 **Example**
 
     sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1
+
+### Required Permissions for the LDAP Sync
+
+A user for the `ldap-sync` command requires the following minimum permissions:
+
+**1. Administration (Execute Command)**
+* Condition **Commands**: `All` permissions for the `SyncCommand` parameter.
+
+**2. CMDB (Edit Objects & Groups)**
+* Condition **Category in Object Type "Persons"**: Permissions for the categories:
+    * Persons
+    * Person - Master Data
+    * Person - Login
+    * Person - Group Memberships
+
+* Condition **Category in Object Type "Person groups"**: Permissions for the categories:
+    * Person groups
+    * Person groups - Master Data
+    * Person groups - Memberships
