@@ -56,9 +56,6 @@ Our team of experts is available to assist you with any matters concerning your 
 
 We actively support you in migrating your existing on-premise installation to the i-doit cloud.
 
-!!! info "Free Migration Service"
-    We currently offer the complete migration of your existing data (database and files) from on-premise to the cloud as a free service.
-
 **The Migration Process:**
 
 1.  **Scheduling an Appointment**: We'll schedule an initial meeting to check the prerequisites for the migration.
