@@ -7,8 +7,8 @@ Niemand ist eine Insel... Gerade mit dem Thema IT-Dokumentation/CMDB befindet ma
 Die beschriebenen Schnittstellen sind bereits in _i-doit_ enthalten:
 
 *   [E-Mail (SMTP)](../automatisierung-und-integration/e-mail.md)
-*   [CLI](../automatisierung-und-integration/cli/index.md)
+*   [i-doit console utility](../automatisierung-und-integration/cli/index.md)
 *   [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md)
-*   [Service Desk](../automatisierung-und-integration/service-desk/index.md)
+*   [Trouble Ticket System (TTS)](../automatisierung-und-integration/service-desk/index.md)
 *   [SNMP](../automatisierung-und-integration/snmp.md)
-*   [Automatisierung und Cronjobs](../automatisierung-und-integration/automatisierung-und-cronjobs.md)
+*   [Aufgabenplanung & Cron-Jobs](../automatisierung-und-integration/automatisierung-und-cronjobs.md)

@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Untransparent behaviour in i-doit. An error! How to deal with it? Please read on! It could be useful.
+Unpredictable behaviour in i-doit. An error! How to deal with it? Please read on! It could be useful.
 
 ## Do Not Panic
 
@@ -45,3 +45,82 @@ Within a short period of time we will get back to customers with a support contr
 ## Is Everything Fine?
 
 We are happy about your feedback once you tried a proposed solution (fix, workaround, etc.). Did it work? Fantastic. Does the problem persist? Alright, we will try different ways then. A follow-up issue did arise? Do not panic, we will go through all the steps again until all issues are recognized and hopefully resolved. And do not forget: You will never walk alone.
+
+## Opening and Using the Browser's Developer Console
+
+For a detailed error analysis in the web browser or for support requests from the i-doit team, it is often necessary to open the browser's developer console. It displays important information such as JavaScript errors, failed resource loading attempts, or details about network requests.
+
+This guide describes how to open the developer console in the most common web browsers and how to extract the information relevant for support.
+
+### Step 1: Open the Developer Console
+
+Choose the guide for your browser.
+
+#### Google Chrome
+
+-   **Via Keyboard Shortcut (recommended)**: `F12` or `Ctrl` + `Shift` + `I` (macOS: `Cmd` + `Option` + `I`).
+-   **Via the Browser Menu**: Three-dot menu (`⋮`) → **More Tools** → **Developer Tools**.
+
+#### Mozilla Firefox
+
+-   **Via Keyboard Shortcut (recommended)**: `F12` or `Ctrl` + `Shift` + `I` (macOS: `Cmd` + `Option` + `I`).
+-   **Via the Browser Menu**: "Hamburger" menu (`≡`) → **More Tools** → **Web Developer Tools**.
+
+#### Microsoft Edge
+
+-   **Via Keyboard Shortcut (recommended)**: `F12` or `Ctrl` + `Shift` + `I` (macOS: `Cmd` + `Option` + `I`).
+-   **Via the Browser Menu**: Three-dot menu (`...`) → **More Tools** → **Developer Tools**.
+
+#### Apple Safari
+
+1.  **Enable the "Develop" Menu (one-time setup)**: In the menu bar, go to **Safari** → **Settings...** → **Advanced** → Check the box at the bottom for **Show Develop menu in menu bar**.
+2.  **Open the Console**: `Cmd` + `Option` + `I` or via the menu **Develop** → **Show Web Inspector**.
+
+### Step 2: Gather Relevant Information for Support
+
+After opening the developer tools, you will see several tabs. Depending on the type of issue, different information is important.
+
+#### The "Console" Tab
+
+**When is this needed?**
+Whenever an action in the i-doit user interface does not work as expected. For example:
+-   Clicking a button (e.g., "Save") has no effect.
+-   A dialog window does not open or closes unexpectedly.
+-   Lists or content are not loading correctly.
+
+**How to provide the right information:**
+
+1.  Open the developer tools and switch to the **Console** tab.
+2.  Clear all previous entries. Click the "clear" icon (`🚫`) or use the shortcut `Ctrl` + `L`. This ensures that only relevant errors are recorded.
+3.  **Now, perform the action in i-doit that causes the error.**
+4.  Look for new entries in the console. **Errors are almost always marked in red** and contain keywords like `Error`, `Exception`, or `failed`.
+5.  **Take a screenshot.** Make sure the **entire error message** is visible. Sometimes you may need to click on small triangles (`▶`) to expand the full error message.
+6.  **Even better than a screenshot:** Right-click on the error message and select "Copy message" or a similar option. Paste this text into your support request.
+
+#### The "Network" Tab
+
+**When is this needed?**
+When actions take a very long time, loading bars don't disappear, or data seems to be lost after clicking "Save". This tab shows the communication between your browser and the i-doit server.
+
+**How to provide the right information:**
+
+1.  Open the developer tools and switch to the **Network** tab.
+2.  Check the box for the **Persist logs** option. This prevents the recording from being lost if the page reloads.
+3.  Clear the previous recording by clicking the "clear" icon (`🚫`).
+4.  **Now, perform the slow or failing action in i-doit.**
+5.  Observe the list of requests. Look for rows that are highlighted in red or have a **Status** code like `404` (Not Found), `403` (Forbidden), or `500` (Internal Server Error).
+    - *Tip:* You can often filter the list for `Fetch/XHR` requests, as these are responsible for dynamically loading data in i-doit.
+6.  **Click on the failing request** (the red row). A new pane with details about this request will open to the right or below the list.
+7.  In this detail pane, switch to the **Response** tab. This often contains the exact error message from the i-doit server.
+8.  **Take a screenshot of this view**, showing both the list of requests (with the red row highlighted) and the details including the server's **Response**.
+
+#### The "Elements" Tab
+
+**When is this needed?**
+This tab is needed less frequently. It is useful for issues related to the display of content (e.g., a field is misplaced or not visible). Typically, the i-doit support team will specifically ask you to look here. It allows you to inspect the live HTML and CSS structure of the page.
+
+!!! tip "Summary for i-doit Support"
+A good error description is the key to a quick solution. By following the steps above, you provide our support team with the exact technical details needed for analysis.
+
+- For **functional errors**: Send us the output from the **Console**.
+- For **loading issues or "silent" errors**: Send us a screenshot of the **Network** tab, including the **Response** of the failing request.

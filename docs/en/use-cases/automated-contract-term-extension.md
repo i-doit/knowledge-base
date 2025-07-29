@@ -35,7 +35,7 @@ Which we subsequently edit:
 
 ## Step 2: Apply `extend-contracts`
 
-To be able to apply the `extend-contracts` command, we need to go to the [Console](../automation-and-integration/cli/console/index.md).
+To be able to apply the `extend-contracts` command, we need to go to the [i-doit console utility](../automation-and-integration/cli/index.md).
 
 The command should look like this:
 
@@ -43,7 +43,7 @@ The command should look like this:
     sudo -u www-data php console.php extend-contracts --user user --password password
 ```
 
-If the contract is configured correctly, the [Console](../automation-and-integration/cli/console/index.md) will show that the contract has been extended by 1 year. 
+If the contract is configured correctly, the [i-doit console utility](../automation-and-integration/cli/index.md) will show that the contract has been extended by 1 year.
 
 [![contract-extension-console](../assets/images/en/use-cases/automated-contract-extension/3-avv-uc.png)](../assets/images/en/use-cases/automated-contract-extension/3-avv-uc.png)
 
@@ -65,4 +65,4 @@ In this cronjob we add the following code:
 ```
 
 With this code, the cronjob will run every day at 6:15 *am* and will automatically extend the contracts if they meet the requirements.<br>
-The only important thing is, that the path to the [Console](../automation-and-integration/cli/console/index.md) is correct and that you use the **username** and **password** of the idoit instance.
+The only important thing is, that the path to the [i-doit console utility](../automation-and-integration/cli/index.md) is correct and that you use the **username** and **password** of the idoit instance.

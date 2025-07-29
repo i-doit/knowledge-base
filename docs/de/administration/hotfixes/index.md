@@ -7,7 +7,7 @@ lang: de
 
 # Hotfixes
 
-!!! success "Hotfixes für Version **34**"
+!!! success "Hotfixes für Version **35**"
 
 Ein Hotfix beseitigt einen bestimmten Fehler und werden in der Regel als ZIP-Datei zur Verfügung gestellt. Die ZIP-Datei wird im **Installationsverzeichnis** von i-doit entpackt. Die Abfrage, ob Dateien beim Entpacken überschrieben werden sollen, muss bestätigt werden.
 
@@ -47,96 +47,58 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
-### File assignment via list edit not working (ID-10914)
+### LDAP sync can not update person object (ID-11764)
 
-[i-doit_34_hotfix_ID-10914_912c7a0.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-10914_912c7a0.zip){ .md-button .md-button--primary }
+[i-doit_35_hotfix_ID-11764_700a05e.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11764_700a05e.zip){ .md-button .md-button--primary }
 
-### Sorting for a rack causes vertical slots to be seen already taken when importing via csv import (ID-11522)
+### Category is not displayed or the category list is empty and a PHP Fatal error is logged (ID-11972)
 
-[i-doit_34_hotfix_ID-11522_dc34840.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11522_dc34840.zip){ .md-button .md-button--primary }
+!!! info "Error message found in the Webserver log"
 
-### Configured user language is ignored (ID-11738)
+    PHP Fatal error: Uncaught TypeError: isys_component_list::getTenantTableConfig(): Return value must be of type ?idoit\\Module\\Cmdb\\Model\\Ci\\Table\\Config, string returned in /var/www/html/src/classes/components/isys_component_list.class.php:1313\nStack trace:\n#0 /var/www/html/src/classes/components/isys_component_list.class.php(1326): isys_component_list->getTenantTableConfig()
 
-[i-doit_34_hotfix_ID-11738_2fe864f.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11738_2fe864f.zip){ .md-button .md-button--primary }
+[i-doit_35_hotfix_ID-11972_553b6c1.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11972_553b6c1.zip){ .md-button .md-button--primary }
 
-### Trying to assign a object causes 500 error (ID-11743)
+### CSV import does not work when using object type assignment with the object type constant (ID-11973)
 
-!!! info "If error.log contains an error like this:"
-    ```bash
-    PHP Fatal error:  Declaration of idoit\\Module\\Cmdb\\Component\\Browser\\Filter\\AuthFilter::getQueryCondition() must be compatible with idoit\\Component\\Browser\\Filter::getQueryCondition(): string in /var/www/html/idoit/src/classes/modules/cmdb/src/Component/Browser/Filter/AuthFilter.php on line 20, referer: .../idoit/?objID=18138&mNavID=2&lang=de&viewMode=1002&tvMode=1006&catgID=12
-    ```
+[i-doit_35_hotfix_ID-11973_ec07c28.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-11973_ec07c28.zip){ .md-button .md-button--primary }
 
-[i-doit_34_hotfix_ID-11743_71ff22b.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11743_71ff22b.zip){ .md-button .md-button--primary }
+!!! info "Error message found in the Webserver log"
 
-### OPENldap error when ldap-sync is triggered via console (ID-11758)
+    You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'under_location '38' ) ) ORDER BY obj_main.isys_obj__title DESC' at line 12
 
-[i-doit_34_hotfix_ID-11758_41dee07.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11758_41dee07.zip){ .md-button .md-button--primary }
+### When saving Database hierarchy - Database information entry the title is empty which leads to a PHP fatal error (ID-12004)
 
-### Do not use constants from PHP module pcntl (ID-11770)
+[i-doit_35_hotfix_ID-12004_760461e.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-12004_760461e.zip){ .md-button .md-button--primary }
 
-[i-doit_34_hotfix_ID-11770_d3d1569.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11770_d3d1569.zip){ .md-button .md-button--primary }
+!!! info "Error message found in the Webserver log"
 
-### Pager does not work for the Object browser configuration (ID-11788)
-
-[i-doit_34_hotfix_ID-11788_bbefcb3.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11788_bbefcb3.zip){ .md-button .md-button--primary }
-
-### Hotfix PHP Fatal Error when saving "Multiselect" fields (ID-11804)
-
-[i-doit_34_hotfix_ID-11804_7790fe9.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_hotfix_ID-11804_7790fe9.zip){ .md-button .md-button--primary }
+     Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: idoit\\Component\\Helper\\Purify::formatUrlPart(): Argument #1 ($url) must be of type string, null given, called in /var/www/html/src/classes/ajax/handler/isys_ajax_handler_quick_info.class.php on line 256 and defined in /var/www/html/src/idoit/Component/Helper/Purify.php:254
 
 ## API Add-on
 
-### Saving field vlan_id does remove selected Layer-3 nets (API-604)
+### Compatibility to Monolog 3 (API-596)
 
-[api_2.2-2.3_hotfix_API-604_7210da7.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.2-2.3_hotfix_API-604_7210da7.zip){ .md-button .md-button--primary }
+!!! info "Error message found in the Webserver log"
 
-### Reading a SQL Report without result (API-551)
+    Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: idoit\\Module\\Cmdb\\Component\\SyncNormalizer\\Config::__construct(): Argument #2 ($data) must be of type array, string given, called in
 
-[api_2.2_hotfix_API-551_08fc1cb.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.2_hotfix_API-551_08fc1cb.zip){ .md-button .md-button--primary }
+[api_2.3_hotfix_API-596_426c958.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.3_hotfix_API-596_426c958.zip){ .md-button .md-button--primary }
 
-## Forms Add-on
+## Flows Add-on
 
-### Object is not created when a attribute validation is used and no error is displayed (AOF-38)
+### Flows does not work with MySQL (Flow-385)
 
-[forms_1.2.0_hotfix_AOF-38_69144fc.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2.0_hotfix_AOF-38_69144fc.zip){ .md-button .md-button--primary }
-
-### Using Forms to create an object bypasses validation "unique" check (AOF-54)
-
-!!! info "The only exception to unique checks are IPv4 addresses"
-
-[forms_1.2_hotfix_AOF-54-43.zip :material-file-download:](../../assets/downloads/hotfixes/forms/forms_1.2_hotfix_AOF-54-43.zip){ .md-button .md-button--primary }
-
-## Workflow Add-on
-
-### Workflow Checklist is inaccessible after workflow is accepted (WORKFLOW-52)
-
-??? info "Error message found in the Webserver logs"
-    ```
-    Something went wrong while executing the current action/component with message: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
-    ```
-
-[workflow_1.2_1.3_hotfix_WORKFLOW-52_21fd9c0.zip :material-file-download:](../../assets/downloads/hotfixes/workflow/workflow_1.2_1.3_hotfix_WORKFLOW-52_21fd9c0.zip){ .md-button .md-button--primary }
-
-## Floorplan Add-on
-
-### 'Hide / unhide Object' Button does not hide or unhide the object (FP-140)
-
-[floorplan_1.8_hotfix_FP-140_2e1ca1e.zip :material-file-download:](../../assets/downloads/hotfixes/floorplan/floorplan_1.8_hotfix_FP-140_2e1ca1e.zip){ .md-button .md-button--primary }
-
-## Replacement Add-on
-
-### TypeErrors when selecting objects to swap
-
-[Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip :material-file-download:](../../assets/downloads/hotfixes/swap-ci/Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip){ .md-button .md-button--primary }
-
-## Maintenance Add-on
-
-### Option 'Send multiple notifications for each maintenance?' automatically sets to 'Yes' after finishing an upcoming maintenance [WARTUNG-97]
-
-[i-doit_maintenance-1.5_hotfix_WARTUNG-97_6cab331.zip :material-file-download:](../../assets/downloads/hotfixes/maintenance/i-doit_maintenance-1.5_hotfix_WARTUNG-97_6cab331.zip){ .md-button .md-button--primary }
+[Flows_1.1.0_hotfix_FLOW-385_5973795.zip :material-file-download:](../../assets/downloads/hotfixes/flows/Flows_1.1.0_hotfix_FLOW-385_5973795.zip){ .md-button .md-button--primary }
 
 ## Documents Add-on
 
-### Rights for Templates in categories are not checked [DOKU-502]
+### Rights for Templates in categories are not checked (DOKU-502)
 
 [Documents_1.10_hotfix_DOKU-502_f8a6ec2.zip :material-file-download:](../../assets/downloads/hotfixes/documents/Documents_1.10_hotfix_DOKU-502_f8a6ec2.zip){ .md-button .md-button--primary }
+
+## Replacement Add-on
+
+### TypeErrors when selecting objects to swap (SWAPCI-47)
+
+[Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip :material-file-download:](../../assets/downloads/hotfixes/swap-ci/Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip){ .md-button .md-button--primary }

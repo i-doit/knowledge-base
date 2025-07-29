@@ -1,10 +1,16 @@
-# Example of CSV import - Licenses
+---
+title: Example of CSV import - Licenses
+description: Example of CSV import - Licenses
+icon:
+status:
+lang: en
+---
 
 !!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
 
 In this example we build on the [CSV import of applications](example-csv-import-applications.md) and want to import licenses.
 
-!!! info "This article was last checked for i-doit version 1.17.2"
+!!! info "This article was last checked for i-doit version 34"
 
 For the import we need the following information:
 
@@ -18,7 +24,7 @@ For the import we need the following information:
 -   License assignment: License key - Expiration date → When does the license expire?
 -   License assignment: License key - Unit price → What does a license cost?
 
-!!! info "With each import, the representation of the data must also be taken into account."
+!!! info "With each import, the data format must also be taken into account."
 
 For example:
 
@@ -59,3 +65,26 @@ Also, the License Assignment and License Assignment: License Key categories are 
 [![license-key](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/5-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/5-csv-i-l.png)
 
 [![license-key](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/6-csv-i-l.png)
+
+## Importing objects with volume licenses
+
+If you want to import an object that is supposed to have a volume license and license key assigned, you can achieve this by using the software assignment category and changing the csv syntax as follows:
+
+[Volume-Licenses.csv :material-file-download:](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/Volume-Licenses.csv){ .md-button .md-button--primary }
+
+??? example "Volume-License.csv"
+    ```text
+    Title; "Application";License key
+    DESKTOP-XMS3R8;"Windows 8 Development Essentials";"Development;MDW-4253-1257"
+    DESKTOP-DK2MD9L;"Windows 10 Pro";"Professional;EVT-2024-9931"
+    ```
+
+The mapping for the csv-file should be set as follows:
+
+[![license-key](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/7-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/7-csv-i-l.png)
+
+[![license-key](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/8-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/8-csv-i-l.png)
+
+Once the import has been successfully completed, a new entry can be found in the Software assignment category of the imported object, in which both the license and the key are specified.
+
+[![license-key](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/9-csv-i-l.png)](../../assets/images/en/consolidate-data/csv-data-import/csv-import-licenses/9-csv-i-l.png)

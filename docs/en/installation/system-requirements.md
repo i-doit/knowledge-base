@@ -3,7 +3,7 @@
 In order to guarantee the operation of all functionalities of i-doit, some requirements must be met by the underlying system.
 
 !!! info "Current version"
-    The requirements shown below apply to the current version of i-doit, in this case **34**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case **35**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 ## Minimum Requirements
 
@@ -25,8 +25,8 @@ For Windows, the [general Windows system requirements](https://learn.microsoft.c
 
 -   GNU/Linux in the 64bit variant (amd64) or Windows Server 2022 in the 64bit variant (amd64)
 -   Apache Webserver **2.4**
--   MariaDB 10.4 (deprecated), 10.5 (deprecated), **10.6** (recommended), 10.11 or MySQL 5.7 or 8.0.
--   PHP 8.1, **8.2** (recommended) and 8.3.
+-   MariaDB 10.5 (deprecated), **10.6** (recommended), 10.11, 11.4 or MySQL 5.7 or 8.0.
+-   PHP 8.1 (deprecated), 8.2 and 8.3 (recommended).
 -   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, xmlwriter, zip
 
 We recommend the usage of **Apache Webserver 2.4, PHP 8.2 and MariaDB 10.6**.
@@ -48,10 +48,9 @@ We recommend the usage of **Apache Webserver 2.4, PHP 8.2 and MariaDB 10.6**.
 
     -   Apache 2.4.x (default package)
     -   MariaDB 10.6.x (default package)
-    -   PHP 8.2.x (default package)
+    -   PHP 8.3.x (default package)
 
     !!! note Note
-
         Because i-doit is a database application, it intensively uses the hard drive. Since the I/O throughput strongly determines the performance, a fast hard drive is recommended.<br>
         The need for disc space can increase with intense usage of file or image storage in i-doit.<br>
         The value of 50 GB is solely geared to the maximal size of the database, which can be achieved by full usage, updates and similar operations.
@@ -66,6 +65,16 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 -   Apple Safari
 
 ## Compatibility matrix
+
+=== "35"
+
+    | **i-doit Version**   | 35                                                                                            |
+    | -------------------- | --------------------------------------------------------------------------------------------- |
+    | **Release**          | 2025-06                                                                                       |
+    | **Apache Webserver** | 2.4                                                                                           |
+    | **PHP**              | 8.1 {++(deprecated)++}<br>8.2 {--(recommended)--}<br>{++==8.3== (recommended)++}              |
+    | **MySQL**            | 5.7<br>8.0                                                                                    |
+    | **MariaDB**          | {--10.4 (deprecated)--}<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>{++11.4++} |
 
 === "34"
 

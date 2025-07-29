@@ -33,7 +33,7 @@ Created templates can be used to create documents for objects in the documentati
 | Command                                 | Interne Beschreibung                                           |
 | --------------------------------------- | -------------------------------------------------------------- |
 | [compile-documents](#compile-documents) | Allows to compile one or multiple documents                    |
-| [documents](#documents-1)               | Allows to create revisions or export one or multiple documents |
+| [documents](#documents)                 | Allows to create revisions or export one or multiple documents |
 
 !!! info "These commands are only available if the Documents add-on is installed"
 

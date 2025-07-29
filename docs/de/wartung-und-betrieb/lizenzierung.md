@@ -7,15 +7,15 @@ lang: de
 usedBy: sfm + eval-addon
 ---
 
-Die Lizenzierung von i-doit und Add-ons erfolgt über einen License Token. Der License Token wird per E-Mail verschickt. Solltest du den License Token nicht mehr wiederfinden, schau dir bitte den Artikel [Den Lizenz Token finden oder zurücksetzen](../administration/reset-token.md) an.
+Die Lizenzierung von i-doit und Add-ons erfolgt über einen license Token. Der license Token wird per E-Mail verschickt. Solltest du den license Token nicht mehr wiederfinden, schau dir bitte den Artikel [Den Lizenz Token finden oder zurücksetzen](../administration/reset-token.md) an.
 
 * * *
 
-## Wie erhält man den License Token und wie die offline license?
+## Wie erhalte ich den lizenz Token und die offline Lizenz?
 
-!!! hint "Wenn du i-doit evaluierst, kontaktiere uns bitte über [help.i-doit.com](https://help.i-doit.com){: target="_blank" } oder <mailto:help@i-doit.com>, um die **offline license** zu erhalten"
+!!! hint "Wenn du i-doit evaluierst, kontaktiere uns bitte über [help.i-doit.com](https://help.i-doit.com){: target="_blank" } oder <mailto:help@i-doit.com>, um die **offline License** zu erhalten"
 
-Der **License Token** wird per E-Mail zugeschickt. Die **offline license** wird im [Kundenportal](../administration/kundenportal.md) unter <https://center.i-doit.com/portal/advanced> abgerufen.
+Der **license Token** wird per E-Mail zugeschickt. Die **offline License** wird im [Kundenportal](../administration/kundenportal.md) unter <https://center.i-doit.com/portal/advanced> abgerufen.
 
 * * *
 
@@ -29,7 +29,7 @@ Der **License Token** wird per E-Mail zugeschickt. Die **offline license** wird 
 
 * * *
 
-## Wie aktiviere ich die i-doit eval/trial (Online)
+## Wie aktiviere ich die i-doit eval/trial (online)
 
 <div class="steps" markdown>
 
@@ -43,7 +43,7 @@ Der **License Token** wird per E-Mail zugeschickt. Die **offline license** wird 
 
 * * *
 
-## Wie aktiviere ich die i-doit eval/trial (Offline)
+## Wie aktiviere ich die i-doit eval/trial (offline)
 
 <div class="steps" markdown>
 
@@ -62,7 +62,7 @@ Der **License Token** wird per E-Mail zugeschickt. Die **offline license** wird 
 
 * * *
 
-## Wie ändere oder aktualisiere ich den i-doit license Token? (Online)
+## Wie ändere oder aktualisiere ich den i-doit license Token? (online)
 
 <div class="steps" markdown>
 
@@ -88,7 +88,7 @@ Der **License Token** wird per E-Mail zugeschickt. Die **offline license** wird 
 
 * * *
 
-## Wie ändere oder aktualisiere ich den i-doit license Token? (Offline)
+## Wie ändere oder aktualisiere ich den i-doit license Token? (offline)
 
 <div class="steps" markdown>
 
@@ -116,13 +116,13 @@ Der **License Token** wird per E-Mail zugeschickt. Die **offline license** wird 
 7. Nachdem der License Token gespeichert wurde, klicke auf den **Install new license** Button.
     [![07-update-offline-install-new-license](../assets/images/de/wartung-und-betrieb/lizenzierung/07-update-offline-install-new-license.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/07-update-offline-install-new-license.png)
 
-8. Hier wird das Feld angezeigt, in das die gesamte **offline License** kopiert werden muss. Woher du die **offline License** bekommst. kannst du [hier](#wie-erhält-man-den-license-token-und-wie-die-offline-license) nachlesen.
+8. Hier wird das Feld angezeigt, in das die gesamte **offline License** kopiert werden muss. Woher du die **offline License** bekommst. kannst du [hier](#wie-erhalte-ich-den-lizenz-token-und-die-offline-lizenz) nachlesen.
     [![08-update-offline-insert-offline-license](../assets/images/de/wartung-und-betrieb/lizenzierung/08-update-offline-insert-offline-license.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/08-update-offline-insert-offline-license.png)
 
 9. Anschließend auf den **Add license** Button klicken.
     [![09-update-offline-insert-offline-license-add-license](../assets/images/de/wartung-und-betrieb/lizenzierung/09-update-offline-insert-offline-license-add-license.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/09-update-offline-insert-offline-license-add-license.png)
 
-10. Der License Token wird mit dem **offline license** verifiziert und es werden alle damit verbundenen Lizenzen angezeigt.
+10. Der License Token wird mit dem **offline License** verifiziert und es werden alle damit verbundenen Lizenzen angezeigt.
     [![10-update-offline-done](../assets/images/de/wartung-und-betrieb/lizenzierung/10-update-offline-done.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/10-update-offline-done.png)
 
 </div>
@@ -147,4 +147,4 @@ Um das Add-on & Subscription Center in i-doit zu verwenden sind womöglich einig
 Öffne den Reiter **Tenants** im Admin-Center. Bitte beachte, dass im Reiter **Tenants** konfiguriert werden kann, wie viele Objektlizenzen einem Mandanten zugewiesen werden. Auch wenn nur ein einzelner Mandant existiert, kann eine ausgeschaltete automatische Lizenzverteilung dafür sorgen, dass nicht alle Objektlizenzen genutzt werden. Sollte dies der Fall sein, kann diese einfach aktiviert werden und wird mit einem Klick auf Speichern übernommen.
 
 !!! success ""
-    [![faq-license-settings](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-settings.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-settings.png)
+    [![FAQ-license-settings](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-settings.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/faq-license-settings.png)

@@ -8,7 +8,7 @@ Systemvoraussetzungen
 Hinweise
 --------
 
-*   Generieren Sie bitte nach der Installation mithilfe des [Kommandozeilen-Tools Console](../../automatisierung-und-integration/cli/console/index.md) den Suchindex neu. Beispielaufruf:
+*   Generieren Sie bitte nach der Installation mithilfe des [Kommandozeilen-Tools Console](../../automatisierung-und-integration/cli/index.md) den Suchindex neu. Beispielaufruf:
 
     cd /var/www/html/
     sudo -u www-data php console.php search-index --user admin --password admin --tenantId 1

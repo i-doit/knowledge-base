@@ -7,11 +7,11 @@ lang: en
 usedBy: sfm + eval-addon
 ---
 
-The licensing of i-doit and add-ons takes place via a licence token. The licence token is sent by e-mail. If you can no longer find it, see [Find or reset the licence token](../system-administration/reset-token.md)
+The licensing of i-doit and add-ons takes place via a License token. The License token is sent by e-mail. If you can no longer find it, see [Find or reset the License token](../system-administration/reset-token.md)
 
 * * *
 
-## How to obtain the licence token and the offline licence?
+## How to obtain the License token and the offline License?
 
 !!! hint "If you are evaluation i-doit please contact us via [help.i-doit.com](https://help.i-doit.com){: target="_blank" } or <mailto:help@i-doit.com> to get your offline license token"
 
@@ -22,7 +22,7 @@ The **License Token** will be sent by e-mail. The **Offline License** can be acc
 -   [How do I activate the i-doit eval/trial if i-doit has **access to the Internet**?](#how-do-i-activate-the-i-doit-evaltrial-online)
 -   [How do I activate the i-doit eval/trial if i-doit has **no access to the Internet**?](#how-do-i-activate-the-i-doit-evaltrial-offline)
 
--   [How do I change or update the i-doit license token if i-doit **has access to the Internet**?](#how-do-i-change-or-update-the-i-doit-licence-token-online)
+-   [How do I change or update the i-doit license token if i-doit **has access to the Internet**?](#how-do-i-change-or-update-the-i-doit-License-token-online)
 -   [How do I change or update the i-doit license token if i-doit **has no access to the Internet**?](#how-do-i-change-or-update-the-i-doit-license-token-offline)
 
 -   [Frequently asked questions](#faq)
@@ -63,7 +63,7 @@ The **License Token** will be sent by e-mail. The **Offline License** can be acc
 
 * * *
 
-## How do I change or update the i-doit licence token? (Online)
+## How do I change or update the i-doit License token? (Online)
 
 <div class="steps" markdown>
 
@@ -127,7 +127,7 @@ The **License Token** will be sent by e-mail. The **Offline License** can be acc
 
     [![07-update-offline-install-new-license](../assets/images/de/wartung-und-betrieb/lizenzierung/07-update-offline-install-new-license.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/07-update-offline-install-new-license.png)
 
-8. The field into which the entire **offline license** must be copied is displayed here. You can find out where to get the **offline license** [here](#how-to-obtain-the-licence-token-and-the-offline-licence).
+8. The field into which the entire **offline license** must be copied is displayed here. You can find out where to get the **offline license** [here](#how-to-obtain-the-License-token-and-the-offline-License).
 
     [![08-update-offline-insert-offline-license](../assets/images/de/wartung-und-betrieb/lizenzierung/08-update-offline-insert-offline-license.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/08-update-offline-insert-offline-license.png)
 
@@ -163,5 +163,5 @@ In order to use the **Add-on & Subscription Center** in i-doit, some firewall pe
 Open the Tenant tab in the [Admin-Center](../system-administration/admin-center.md). Please note that in the **Tenants** tab you can configure how many object licenses can be assigned to a client. Even if only a single client exists, a switched off automatic license distribution can ensure that not all object licenses are used. If this is the case, it can simply be activated and applied with a click on save.
 
 !!! success ""
-    [![faq-license-settings](../assets/images/en/maintenance-and-operation/licensing/faq-license-settings.png)](../assets/images/en/maintenance-and-operation/licensing/faq-license-settings.png)
+    [![FAQ-license-settings](../assets/images/en/maintenance-and-operation/licensing/faq-license-settings.png)](../assets/images/en/maintenance-and-operation/licensing/faq-license-settings.png)
 
