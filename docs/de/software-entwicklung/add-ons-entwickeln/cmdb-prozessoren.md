@@ -1,120 +1,165 @@
 # CMDB Prozessoren
 
-In diesem Artikel wird darauf eingegangen, wie das i-doit-interne routing funktioniert und wir damit eine eigene GUI realisieren können.
+Bei den CMDB-Prozessoren handelt es sich um interne Schnittstellen, um mit Objekten, Objekttypen und Objekttyp Gruppen zu arbeiten.
+Diese Prozessoren verfügen jeweils über einfache Methoden zum lesen, erstellen, verändern und ranken.
+Dabei berücksichtigen sie alle notwendigen Schritte der internen Logiken:
 
-## CMDB Factory
+- Rechteprüfung
+- Daten normalisieren
+- Daten validieren
+- Auslösen notwendiger “pre” Events / Signale
+- Vorbereiten der Daten für das Logbuch
+- Daten schreiben
+- Änderungen loggen
+- Auslösen notwendiger “post” Events / Signale
 
-Die verschiedenen Prozessoren müssen über die "CMDB Factory" Klasse geholt werden. Diese bereitet die Prozssoren intern vor
-und liegt im Service Container. Die CMDB Factory kann demnach folgendermaßen geholt werden:
+Diese neue Logik setzt auf DTO-Objekte. Das macht die Schritte wie zum Beispiel Validierung einfacher und bietet uns Entwicklern
+den Vorteil der Code-Vervollständigung, da wir hier mit Objekten anstelle von assoziativen Arrays arbeiten.
+
+In dieser ersten Version gibt es noch keine Architektur für Kategorien. Wir arbeiten daran, die Funktion nachzureichen :)
+
+**Wichtig!** Bei den CMDB Prozessoren handelt es sich um ein neues Feature, das ab i-doit 36 zur verfügung steht.
+Bitte beachtet das die Prozessoren aktuell nur die folgenden Bereiche abdeckt:
+
+- Objekttyp Gruppen
+- Objekttypen
+- Objekte
+
+Die Kategorien lassen sich aktuell noch nicht nutzen.
+
+## Quickstart
+
+Die Prozessoren sind über eine einheitliche Schnittstelle, die CMDB Factory zu beziehen. Diese Komponente liegt als Service in
+unserem Dependency-Injection Container:
 
 ```php
-/** @var \idoit\Component\Factory\CmdbFactory $factory */
-$factory = isys_application::instance()->container->get('cmdb.factory');
+// Aus dem Container können wir die CMDB Factory holen
+$factory = isys_application::instance()->container->get(‘cmdb.factory’);
 
-// ...
+// Diese kann wiederum verwendet werden um die zuständigen Prozessoren zu holen:
+$objectProcessor = $factory->getObjectProcessor();
+$objectTypeProcessor = $factory->getObjectTypeProcessor();
+$objectTypeGroupProcessor = $factory->getObjectTypeGroupProcessor();
 ```
 
-Aus der `$factory` Instanz können nun die verschiedenen Prozessoren geholt werden. Bitte berücksichtigt, 
-das der Kategorie Prozessor zum Zeitpunkt von i-doit 35 noch nicht einsatzbereit ist. Ihr werdet daher eine Exception erhalten
-wenn ihr probiert diesen zu nutzen.
+Die einzelnen Prozessoren verfügen über wiederkehrende Methoden um die Benutzung so einfach wie möglich zu gestalten – 
+je nach Prozessor existieren die folgenden Methoden
 
-Diese Prozessoren stellen eine interne Schnittstelle (API) dar, die von Entwicklern genutzt werden soll um sowohl die Arbeit
-zu erleichtern als auch eine einheitliche Datenverarbeitung zu gewährleisten.
+- `archive` – Parameter ist eine ID (als Integer), Rückgabe ist ein “RankResponse DTO”
+- `create` – Parameter ist ein “CreateRequest DTO”, Rückgabe ist ein “CreateResponse DTO”
+- `delete` – Parameter ist eine ID (als Integer), Rückgabe ist ein “RankResponse DTO”
+- `purge` – Parameter ist eine ID (als Integer), Rückgabe ist ein “RankResponse DTO”
+- `read` – Parameter ist ein “ReadRequest DTO” mit verschiedenen Filtern, Rückgabe ist ein “ReadResponse DTO”
+- `readById` – Parameter ist eine ID (als Integer), Rückgabe ist ein “ReadResponse DTO”
+- `restore` – Parameter ist eine ID (als Integer), Rückgabe ist ein “RankResponse DTO”
+- `update` – Parameter ist ein “UpdateRequest DTO”, Rückgabe ist ein “UpdateResponse DTO”
 
-Die Prozessoren übernehmen dabei alle nötigen Schritte die z.B. beim erstellen eines Objekts nötig sind:
+## Request DTOs
 
-- Korrekte Events/Signale werden getriggert
-- Validierung der Daten
-- Prüfung der Rechte (die Prozessoren arbeiten immer im Kontext des aktuell eingeloggten Nutzers)
-- Schreiben von Logbucheinträgen
+Die Request DTOs sind “immutable”, das heißt sie können nach erstellung nicht mehr geändert werden. Die Parameter können einmalig 
+im Konstruktor übergeben werden. Die verschiedenen Request DTOs verfügen über eine interne Validierung die vom jeweiligen Prozessor 
+angestoßen wird, bevor die jeweilige Aktion ausgeführt wird.
 
-## Nutzung von DTO Klassen
+Die jeweiligen Validierungsregeln kann man in der DTO Klasse sehen. Jeder Parameter verfügt über typen und optionale Attribute 
+(siehe [PHP Dokumentation](https://www.php.net/manual/de/language.attributes.overview.php)). Die Attribute sind sprechend gewählt 
+und können etwa so aussehen (Beispiel aus `idoit\Component\Processor\Dto\ObjectTypeGroup\CreateRequest`):
 
-Um "komplexere" Aktionen auszuführen, die auch Datenvalidierung beinhalten, nutzen wir **DTO** Klassen (Data Transfer Object).
-Diese sind Immutable, verfügen über typisierte Parameter und können die gegebenen Daten automatisch Validierung.
-Für die verschiedenen Aktionen "lesen", "schreiben" und "bearbeiten" gibt es jeweils pro Bereich "Objekttyp Gruppe", "Objekttyp"
-und "Objekt" eigene Request DTO Klassen.
+```php
+#[Required]  
+public readonly string $title; 
+ 
+#[OrX(new IsNull(), new IsValidConstantString('C__OBJTYPE_GROUP__'))]  
+public readonly string|null $constant = null; 
+ 
+public readonly int $sort = 0; 
+ 
+#[OrX(new IsNull(), new OneOf([C__RECORD_STATUS__BIRTH, C__RECORD_STATUS__NORMAL]))] 
+public readonly int|null $status = null; 
+```
 
-Die Ergebnisse der jeweiligen Prozessor Methoden werden eine Instanz einer korrespondierenden Response DTO Klasse zurückliefern. 
+Wir sehen hier dass der “title” Parameter ein Pflichtfeld vom Typ string ist. \
+Die "constant” ist Optional und muss, wenn gegeben, vom Typ string sein und mit “C__OBJTYPE_GROUP__” beginnen. \
+Der “sort” Parameter muss numerisch sein – keine weiteren Regeln. \
+Der Status ist Optional und muss, wenn gegeben, entweder dem Inhalt der Konstante `C__RECORD_STATUS__BIRTH` oder `C__RECORD_STATUS__NORMAL` beinhalten.
 
-Beispiele findet ihr weiter unten in den jeweiligen Bereichen.
+Die anderen Request DTOs sind sehr ähnlich aufgebaut.
+
+Für einige "einfache" Aktionen, wie zum Beispiel archivieren, löschen, purgen oder archivieren, werden keine DTOs benötigt.
+Hier ist es ausreichend die gewünschte ID als Integer zu übergeben.
+
+## Response DTOs
+
+Wie auch die Request DTOs sind die Response DTOs immutable. Die Inhalte werden einmalig vom System, beim erstellen der Objekte, übergeben.
+
+Als Entwickler können diese Werte lediglich ausgelesen werden.
+
+Je nach Aktion werden verschiedene Response DTOs an den Entwickler übergeben.
+Die Auswahl beschränkt sich aktuell auf die folgenden:
+
+### Create Response
+
+Die `CreateResponse` Klasse erbt von der allgemeinen `AbstractCreateResponse` und beinhaltet lediglich die ID des neu erstellten Datensatzes.
+
+### Rank Response
+
+Die `RankResponse` Klasse erbt von der allgemeinen `AbstractRankResponse` und beinhaltet lediglich die ID des
+betroffenen Datensatzes. Diese Response wird für archive, delete, purge und restore verwendet.
+
+### Read Response
+
+Die `ReadResponse` Klasse erbt von der allgemeinen `AbstractReadResponse` und beinhaltet eine Kollektion der gelesenen Datensätze
+als DTO Instanzen in der `$entries` Variable. Die Response verfügt außerdem über die folgenden Methoden:
+
+- `first(): ?object` liefert die erste DTO Instanz oder `null` zurück
+- `last(): ?object` liefert die letzte DTO Instanz oder `null` zurück
+- `total(): int` liefert die Anzahl der DTO Instanzen als Integer
+
+### Update Response
+
+Die `UpdateResponse` Klasse erbt von der allgemeinen `AbstractUpdateResponse` und beinhaltet lediglich die ID des bearbeiteten Datensatzes.
 
 ## Fehlerbehandlung
 
-Die CMDB Prozessoren sollen die Arbeit erleichtern und arbeiten daher mit den folgenden Exceptions:
+Die CMDB Prozessoren sollen die Arbeit erleichtern und arbeiten daher nur mit den folgenden drei Exceptions:
 
 - `\idoit\Dto\Exception\AuthorizationException` bei Berechtigungsfehlern (die Prozessoren arbeiten immer im Kontext des aktuell eingeloggten Nutzers)
 - `\idoit\Dto\Exception\InternalSystemException` bei internen Fehlern
 - `\idoit\Dto\Exception\ValidationException` bei Validierungsfehlern
 
-## Objekttyp Gruppen
+Diese Exceptions müssen im eigenen Code abgefangen und verarbeitet werden um unschöne PHP Fehlermeldungen, weiße Seiten oder 
+ungewünschte Seiteneffekte zu verhindern.
 
-Der Prozessor für Objekttyp Gruppen kann folgendermaßen aus der CMDB Factory geladen werden: 
+## Prozessoren im Überblick
 
-```php
-/** @var \idoit\Component\Processor\ObjectTypeGroup\ObjectTypeGroupProcessor $processor */
-$processor = $factory->getObjectTypeGroupProcessor();
-```
+### Objekttyp Gruppen
 
-Die `ObjectTypeGroupProcessor` Klasse bietet die folgenden Methoden um Objekttyp Gruppen zu verarbeiten:
+Die `ObjectTypeGroupProcessor` Klasse bietet die folgenden Methoden um mit Objekttyp Gruppen zu arbeiten:
 
-- `read(ReadRequest $dto)`
-- `readById(int $id)`
-- `create(CreateRequest $dto)`
-- `update(UpdateRequest $dto)`
-- `purge(int $id)`
+- `create(CreateRequest $dto): CreateResponse`
+- `purge(int $id): RankResponse`
+- `read(ReadRequest $dto): ReadResponse`
+- `readById(int $id): ReadResponse`
+- `update(UpdateRequest $dto): UpdateResponse`
 
-### Existierende Objekttyp Gruppe(n) lesen (read, readById)
+### Objekttypen
 
-Zum lesen gibt es zwei Methoden:
+Die `ObjectTypeProcessor` Klasse bietet die folgenden Methoden um mit Objekttyp Gruppen zu arbeiten:
 
-- `read` benötigt eine `\idoit\Component\Processor\Dto\Object\ReadRequest` Instanz. Diese ermöglicht das lesen mehrerer Einträge auf Basis von IDs oder Status
-- `readById` benötigt lediglich eine ID als integer.
+- `create(CreateRequest $dto): CreateResponse`
+- `purge(int $id): RankResponse`
+- `read(ReadRequest $dto): ReadResponse`
+- `readById(int $id): ReadResponse`
+- `update(UpdateRequest $dto): UpdateResponse`
 
-```php
-/** @var \idoit\Component\Processor\Dto\ObjectTypeGroup\ReadResponse $response */
-$response = $processor->read(new ReadRequest([123], [C__RECORD_STATUS__NORMAL]));
-$response = $processor->readById(123);
-```
+### Objekte
 
-Die `\idoit\Component\Processor\Dto\ObjectTypeGroup\ReadResponse` beinhaltet Instanzen von 
-`idoit\Component\Processor\Dto\ObjectTypeGroup\Dto` Klassen.
+Die `ObjectProcessor` Klasse bietet die folgenden Methoden um mit Objekttyp Gruppen zu arbeiten:
 
-### Neue Objekttyp Gruppe erstellen (create)
-### Existierende Objekttyp Gruppe bearbeiten (update)
-### Existierende Objekttyp Gruppe löschen (purge)
-
-Da hier keine spezifischen Daten benötigt werden, genügt es die jeweilige ID als integer der zu löschenden Objekttyp Gruppe zu übergeben.
-
-```php
-/** @var \idoit\Component\Processor\Dto\ObjectTypeGroup\RankResponse $response */
-$response = $processor->purge(123);
-```
-
-## Objekttypen
-
-Text
-
-```php
-use Symfony\Component\Config\FileLocator;
-use Symfony\Component\Routing\Loader\PhpFileLoader;
-
-isys_application::instance()->container->get('routes')
-    ->addCollection((new PhpFileLoader(new FileLocator(__DIR__)))->load('config/routes.php'));
-```
-
-## Objekte
-
-Text
-
-```php
-use Symfony\Component\Config\FileLocator;
-use Symfony\Component\Routing\Loader\PhpFileLoader;
-
-isys_application::instance()->container->get('routes')
-    ->addCollection((new PhpFileLoader(new FileLocator(__DIR__)))->load('config/routes.php'));
-```
-
-## Kategorien
-
-TODO
+- `archive(int $id): RankResponse`
+- `create(CreateRequest $dto): CreateResponse`
+- `delete(int $id): RankResponse`
+- `purge(int $id): RankResponse`
+- `read(ReadRequest $dto): ReadResponse`
+- `readById(int $id): ReadResponse`
+- `restore(int $id): RankResponse`
+- `update(UpdateRequest $dto): UpdateResponse`

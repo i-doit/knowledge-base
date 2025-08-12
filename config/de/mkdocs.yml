@@ -679,6 +679,7 @@ nav:
           - Add-ons installieren, aktualisieren und aktivieren: software-entwicklung/add-ons-entwickeln/add-ons-installieren-aktualisieren-und-entwickeln.md
           - Datei- und Ordnerstruktur eines Add-on: software-entwicklung/add-ons-entwickeln/datei-und-ordnerstruktur-eines-add-ons.md
           - Bootstrapping eines Add-ons (init.php): software-entwicklung/add-ons-entwickeln/boostraping-eines-add-ons.md
+          - CMDB Prozessoren: software-entwicklung/add-ons-entwickeln/cmdb-prozessoren.md
           - Metadaten eines Add-ons (package.json): software-entwicklung/add-ons-entwickeln/metadaten-eines-add-ons.md
           - Lokalisierung: software-entwicklung/add-ons-entwickeln/lokalisierung.md
           - Routing und MVC: software-entwicklung/add-ons-entwickeln/routing-und-mvc.md
