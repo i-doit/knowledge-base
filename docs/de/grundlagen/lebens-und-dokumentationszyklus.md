@@ -101,7 +101,7 @@ Fast immer sind unfertige Objekte unerwünscht, denn sie sind nicht sichtbar und
 
 #### Automatisches Löschen
 
-Die i-doit [Console](../automatisierung-und-integration/cli/index.md) bietet ebenfalls eine Möglichkeit, gewisse unerwünschte Objekte unwiderruflich zu löschen.  Ein Beispiel für einen Aufruf sowie die möglichen Parameter können im [dazugehörigen Artikel](../automatisierung-und-integration/cli/console/befehle-und-optionen.md) für die Option **system-objectcleanup** eingesehen werden.
+Das [i-doit console utility](../automatisierung-und-integration/cli/index.md) bietet ebenfalls eine Möglichkeit, unerwünschte Objekte unwiderruflich zu löschen. Weitere Optionen können über die `--help` Option für den Befehl eingesehen werden.
 
 ```shell
 sudo -u www-data console.php system-objectcleanup -u admin -p admin -i 1 --objectStatus 3

@@ -39,6 +39,19 @@ scp -r user@linuxsystem:/var/www/html/i-doit/i-doit.zip C:\
 
 ## Export the Database from Linux
 
+!!! warning "Please note that if you are using the following MariaDB versions to dump the database, it will result in an error when importing the dump under Windows:"
+    - 10.5.25
+    - 10.6.18
+    - 10.11.8
+    - 11.0.6
+    - 11.1.5
+    - 11.2.4
+    - 11.4.2
+
+    The listed versions write a "Sandbox command" in the first line of an SQL dump.
+    This means that this dump can only be imported with the listed MariaDB versions, as the MariaDB version installed with the Windows installer is not one of the listed versions, you will encounter the error **`ERROR at line 1: Unknown command '\-'`** when importing.
+    We therefore recommend using a different MariaDB version for the dump, which is not listed above!
+
 Next, we need to export the database and transfer it to the Windows server as well. To export the database successfully, the following commands must be executed:
 
 ```shell
@@ -54,6 +67,27 @@ scp -r user@linuxsystem:/tmp/idoit_data.sql C:\
 ```
 
 The SQL files are now located on the Windows server under C:\
+
+## Set MariaDB path in Windows
+
+So that we can execute the MySQL commands in the command prompt in the next steps without having to log into the MySQL interface first, we will enter the path to MariaDB in the environment variables.
+
+First, search for "Advanced system settings" via the Windows search and click on the "Environment variables..." button.
+
+[![Environment variables](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/1-uvlzw.png)](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/1-uvlzw.png)
+
+A new window should then open which will show the user variables at the top and the system variables at the bottom.
+Then select the "Path" variable and click on "Edit":
+
+[![Environment variables](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/2-uvlzw.png)](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/2-uvlzw.png)
+
+This opens a list of environment variables. Create a new entry and add the path to the **bin** folder of MariaDB.
+The i-doit Windows installer should have created this folder under the path **C:\ProgramData\MariaDB\bin**.
+
+[![Environment variables](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/3-uvlzw.png)](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/3-uvlzw.png)
+
+Once the path has been set, you should now be able to use the SQL commands in the command prompt.
+It may be necessary to restart the window first.
 
 ## Migrate Data to Windows
 
@@ -87,6 +121,11 @@ Now we can import the databases from the old instance:
 mysql -uroot -p idoit_data < C:\idoit_data.sql
 mysql -uroot -p idoit_system < C:\idoit_system.sql
 ```
+
+!!! danger "If the error **`ERROR at line 1: Unknown command '\-'`** occurs:"
+    If the above error occurs, you have dumped the database with a MariaDB version that writes a "sandbox command" in the first line of the dump.
+    This line can only be interpreted by certain MariaDB versions, which does not apply to the MariaDB version installed with the Windows installer (see [list](#export-the-database-from-linux)).
+    The line causing the error is `/*!999999\- enable the sandbox mode */`, this line must either be removed manually from the dump or you can switch to a different MariaDB version and perform the dump again.
 
 We also authorize the idoit user for the new databases:
 

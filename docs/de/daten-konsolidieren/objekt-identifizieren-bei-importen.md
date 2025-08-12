@@ -9,7 +9,7 @@ i-doit verfügt über diverse Datenimporte. Bestehende Daten in der [IT-Dokument
 Betrachtet werden in diesem Artikel folgende Datenimporte:
 
 *   [CSV-Datenimport](csv-datenimport/index.md)
-*   [JDisc Discovery](jdisc-discovery.md)
+*   [JDisc Discovery](jdisc/index.md)
 *   [OCS Inventory NG](../i-doit-add-ons/ocs-inventory-ng.md)
 *   [h-inventory](h-inventory.md)
 

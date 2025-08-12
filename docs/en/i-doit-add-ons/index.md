@@ -26,7 +26,7 @@ The [IT documentation](../basics/structure-of-the-it-documentation.md) and the [
 | **[Documents](./documents/index.md)**                                             | yes                 |
 | **[Events](./events.md)**                                                         | no                  |
 | **[Floorplan](./floorplan.md)**                                                   | no                  |
-| **[Flows](flows/index.md)**                                                       | yes                 |
+| **[Flows](flows/index.md)**                                                       | yes/no              |
 | **[Forms](forms/index.md)**                                                       | yes                 |
 | **HomeOffice ([GER](https://www.i-doit.com/blog/i-doit-home-office-add-on/))**    | no                  |
 | **[i-diary](./i-diary/index.md)**                                                 | no                  |
@@ -48,7 +48,9 @@ Add-ons are available as ZIP-files. These are installed via the [Admin Center](.
 
 ## Installation
 
-All add-ons are installed via the [Admin-Center](../system-administration/admin-center.md). After successfully logging in to the Admin-Center, just change to the **Modules** tab and use the **Install/update module** button.
+Installation is possible with the implemented [Add-on & Subscription center](../system-administration/add-on-and-subscription-center.md).
+
+Also add-ons are installable via the [Admin-Center](../system-administration/admin-center.md). After successfully logging in to the Admin-Center, just change to the **Add-ons** tab and use the **Install/update module** button.
 
 [![Installation](../assets/images/en/i-doit-add-ons/1-iao.png)](../assets/images/en/i-doit-add-ons/1-iao.png)
 
@@ -71,13 +73,11 @@ Each add-on has its own rights which are assigned per person or person group. Af
 
 ## Update
 
-Once a new version of an add-on is available you can perform an update without the need to completely install it again. All existing data persist during this process.
-
-The required steps are similar to the installation process: Upload and install the new ZIP file via the **Install/update module** button. Alternatively, for some add-ons the **Update / Re-Install** button in the respective list can be clicked to perform the update process if the system has a internet connection. The ZIP file will be uploaded and installed automatically. Please note that this function is not available for all add-ons.
+The required steps are similar to the installation process: Upload and install the new ZIP file via the **Install/update module** button.
 
 ## Uninstall
 
-You can uninstall an add-on with the above mentioned list by activating the checkbox and then using the **Uninstall selected module** button. A dialogue will ask you to confirm this action. All files and user data associated with the add-on will be **deleted irreversibly**. The Uninstallation will be tenant-wide. By clicking various checkboxes you can uninstall several add-ons simultaneously.
+You can uninstall an add-on with the above mentioned list by activating the checkbox and then using the **Uninstall selected module** button. A dialogue will ask you to confirm this action. All files and user data associated with the add-on will be **deleted irreversibly**. The Uninstallation will be **system-wide**. By clicking various checkboxes you can uninstall several add-ons simultaneously.
 
 ## (De)activation
 

@@ -9,6 +9,7 @@ lang: en
 
 Here we find the archive of old hotfix pages.
 
+-   [Version 34](v34.md)
 -   [Version 33](v33.md)
 -   [Version 32](v32.md)
 -   [Version 31](v31.md)

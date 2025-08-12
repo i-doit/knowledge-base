@@ -3,7 +3,7 @@
 Um den Betrieb aller Funktionalitäten von i-doit zu gewährleisten, existieren für das darunter liegende System Voraussetzungen, die erfüllt sein müssen.
 
 !!! info "Aktualität"
-    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **34**. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
+    Die unten genannten Systemvoraussetzungen beziehen sich auf die aktuelle Version von i-doit, in diesem Fall **35**. Zu jedem Major Release von i-doit werden diese Angaben angepasst. Wer die Angaben für ältere Versionen von i-doit benötigt, kann die Änderungshistorie dieser Seite verfolgen.
 
 ## Mindestanforderungen an das System
 
@@ -25,8 +25,8 @@ Für Windows sind die [generellen Windows Systemvoraussetzungen](https://learn.m
 
 -   GNU/Linux in der 64bit Variante (amd64) oder Windows Server 2022 in der 64bit Variante(amd64)
 -   Apache Webserver **2.4**
--   MariaDB 10.4 (veraltet), 10.5 (veraltet), **10.6** (empfohlen), 10.11 oder MySQL 5.7 oder 8.0 _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
--   PHP 8.1, **8.2** (empfohlen) oder PHP 8.3
+-   MariaDB 10.5 (veraltet), **10.6** (empfohlen), 10.11, 11.4 oder MySQL 5.7 oder 8.0 _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
+-   PHP 8.1 (veraltet), 8.2 oder **PHP 8.3** (empfohlen)
 -   PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, xmlwriter, zip
 
 Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.2 und MariaDB 10.6**.
@@ -46,12 +46,11 @@ Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.2 und MariaDB 10.6**
 
     ### LAMP Stack
 
-    - Apache 2.4.x(Standardpaket)
+    - Apache 2.4.x (Standardpaket)
     - MariaDB 10.6.x (Standardpaket)
-    - PHP 8.2.x (Standardpaket)
+    - PHP 8.3.x (Standardpaket)
 
     !!! info "Hinweis"
-
         i-doit ist eine Datenbankanwendung und daher intensiver Festplattennutzer. Ein schneller Festplattenspeicher wird empfohlen, da I/O-Verkehr maßgeblich die Performance bestimmt.<br>
         Die Festplattenbedarf kann sich bei intensiver Nutzung der Datei- oder Bildablage in i-doit erhöhen.<br>
         Der Wert von 50 GB orientiert sich nur an der maximalen Datenbankgröße, die bei voller Nutzung und bei Updates oder ähnlichen Operationen erreicht werden kann.
@@ -66,6 +65,16 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 -   Apple Safari
 
 ## Kompatibilitätsmatrix
+
+=== "35"
+
+    | **i-doit Version**   | 35                                                                                      |
+    | -------------------- | --------------------------------------------------------------------------------------- |
+    | **Release**          | 2025-06                                                                                 |
+    | **Apache Webserver** | 2.4                                                                                     |
+    | **PHP**              | 8.1 {++(veraltet)++}<br>8.2 {--(empfohlen)--}<br>{++==8.3== (empfohlen)++}              |
+    | **MySQL**            | 5.7<br>8.0                                                                              |
+    | **MariaDB**          | {--10.4 (veraltet)--}<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>{++11.4++} |
 
 === "34"
 

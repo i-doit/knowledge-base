@@ -29,11 +29,11 @@ Wenn die .csv\-Datei soweit vorbereitet ist, kann der Datenimport beginnen.
 
 Der CSV-Datenimport befindet sich unter **Extras → Import** → **CSV Import**. Eine Konfiguration vorab ist nicht notwendig.
 
-Im ersten Schritt wird eine .csv\-Datei über den Button **Durchsuchen…** ausgewählt und hochgeladen. Anschließend wird die Datei in der Liste angezeigt und sobald man mit der Maus über die Zeile der Datei fährt, kann man zwischen den Aktionen **Für Import verwenden**, **Datei herunterladen** und **Datei löschen** wählen.
+Im ersten Schritt wird eine .csv\-Datei über den Button **Datei auswählen** ausgewählt und hochgeladen. Anschließend wird die Datei in der Liste angezeigt und sobald man mit der Maus über die Zeile der Datei fährt, kann man zwischen den Aktionen **Für Import verwenden**, **Datei herunterladen** und **Datei löschen** wählen.
 
 [![CSV für den Import verwenden](../../assets/images/de/daten-konsolidieren/csv-import/4-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/4-csvi.png)
 
-Um zum nächsten Schritt des Datenimports zu gelangen, klickt man auf den Button **Für Import verwenden**.
+Um zum nächsten Schritt des Datenimports zu gelangen, klickt man auf den Button **Für Import verwenden**. Der Button erscheint nur wenn der Mauszeiger auf die Zeile bewegt wird.
 
 ## Optionen festlegen
 
@@ -47,11 +47,7 @@ Wenn man im Drown-Down-Menü unter **Globaler Objekttyp** einen [Objekttypen](..
 
 ### Trennzeichen, Überschriften und Default-Template berücksichtigen
 
-Solltest du ein anderes **Trennzeichen** anstelle des Semikolons (;) verwenden, ist es möglich, das genutzte Trennzeichen anzugeben.
-
-Falls du keine Überschriften-Zeile nutzt, kannst du die Überschriften-Zeile deaktivieren, sodass die erste Zeile der .csv\-Datei als das erste Objekt interpretiert wird.
-
-Die Objekte werden mit den Daten aus dem [default Template](../../effizientes-dokumentieren/templates.md) angelegt.
+Solltest du ein anderes **Trennzeichen** anstelle des Semikolons (;) verwenden, ist es möglich, das genutzte Trennzeichen anzugeben. Falls du keine Überschriften-Zeile nutzt, kannst du die Überschriften-Zeile deaktivieren, sodass die erste Zeile der .csv\-Datei als das erste Objekt interpretiert wird. Die Objekte werden mit den Daten aus dem [default Template](../../effizientes-dokumentieren/templates.md) angelegt.
 
 ### Leerwerte
 
@@ -88,9 +84,9 @@ Jede Spalte erhält im Mapping eine eigene Zeile. So kann jede Zeile der .csv\-D
 
 [![Zuweisungen von Attributen](../../assets/images/de/daten-konsolidieren/csv-import/7-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/7-csvi.png)
 
-Pflichtangaben
+## Pflichtangaben
 
-Bei der Angabe von Objekt-Titel _und_ Objekttyp handelt es sich um Pflichtangaben_._ Wenn in den Optionen des Datenimports ein globaler Objekttyp definiert ist, muss im Mapping lediglich der [Objekt-Titel](../objekt-identifizieren-bei-importen.md) mit einer Spalte verknüpft werden. Sollte kein globaler Objekttyp festgelegt sind, muss ebenfalls der Objekttyp in einer Spalte repräsentiert sein. Andernfalls ist es nicht möglich, den Import durchzuführen. Die Angabe des Objekttyps erfolgt über dessen Datenbank-Konstante (zum Beispiel **C\_\_OBJTYPE\_\_SERVER**). Die Angabe der Bezeichnung des Objekttyps (z. B. **Server**) ist **nicht** ausreichend.
+Bei der Angabe von Objekt-Titel _und_ Objekttyp handelt es sich um Pflichtangaben. Wenn in den Optionen des Datenimports ein globaler Objekttyp definiert ist, muss im Mapping lediglich der [Objekt-Titel](../objekt-identifizieren-bei-importen.md) mit einer Spalte verknüpft werden. Sollte kein globaler Objekttyp festgelegt sind, muss ebenfalls der Objekttyp in einer Spalte repräsentiert sein. Andernfalls ist es nicht möglich, den Import durchzuführen. Die Angabe des Objekttyps erfolgt über dessen Datenbank-Konstante (zum Beispiel **C\_\_OBJTYPE\_\_SERVER**). Die Angabe der Bezeichnung des Objekttyps (z. B. **Server**) ist **nicht** ausreichend.
 
 ## Profil anlegen
 
@@ -114,9 +110,9 @@ Mit der Option **Der CSV Import kann den Objekttyp überschreiben?** können auc
 
 [![Überschreiben Option](../../assets/images/de/daten-konsolidieren/csv-import/11-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/11-csvi.png)
 
-Diese Option ist in den Experteneinstellungen als **import.csv.overwrite-objecttype** zu finden.
+!!! note "Diese Option ist in den Experteneinstellungen als `import.csv.overwrite-objecttype` zu finden."
 
-!!! warning "Diese Option wird durch eine weitere Option blockiert, wenn Sie das überschreiben der Objekttypen aktivieren, müssen Sie die Option **SYS-ID nur lesbar** auf **Nein** stellen. In den Experteneinstellungen ist diese Option als **cmdb.registry.sysid_readonly**"
+!!! warning "Diese Option wird durch eine weitere Option blockiert, wenn Sie das überschreiben der Objekttypen aktivieren, müssen Sie die Option **SYS-ID nur lesbar** auf **Nein** stellen. In den Experteneinstellungen ist diese Option als `cmdb.registry.sysid_readonly`"
 
 ## Import von Beziehungen (Verknüpfen von Objekten)
 
@@ -124,10 +120,10 @@ Der CSV-Datenimport ist in der Lage, Verknüpfungen von Objekten ([Beziehungen](
 
 [![Verknüpfen von Beziehungen](../../assets/images/de/daten-konsolidieren/csv-import/9-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/9-csvi.png)
 
-Während des Mappings kann man, nachdem das Feld ausgewählt wurde, angeben, ob die Auswahl des zu verknüpfenden Objekts uneingeschränkt erfolgen soll oder eine Eingrenzung auf einen festgelegten Objekttyp stattfindet. Weiterhin können Objekte, die nicht gefunden wurden, automatisch erstellt werden. In diesem Fall ist die Angabe des Objekttyps der verknüpften Objekte notwendig, damit ein Objekt dieses Typs erstellt wird. Bei einigen Verknüpfungsarten kann in der Sonderzuweisung festlegt werden, über welches Attribut die Identifikation des zu verknüpfenden Objekts erfolgen soll. Im Standard wird hier der Objekt-Titel verwendet.
+Während des Mappings kann man, nachdem das Feld ausgewählt wurde, angeben, ob die Auswahl des zu verknüpfenden Objekts uneingeschränkt erfolgen soll oder eine Eingrenzung auf einen festgelegten Objekttyp stattfindet. Weiterhin können Objekte, die nicht gefunden wurden, automatisch erstellt werden. In diesem Fall ist die Angabe des Objekttyps der verknüpften Objekte notwendig, damit ein Objekt dieses Typs erstellt wird. Bei einigen Verknüpfungen kann in der Sonderzuweisung festlegt werden, über welches Attribut die Identifikation des zu verknüpfenden Objekts erfolgen soll. Im Standard wird hier der Objekt-Titel verwendet.
 
 !!! note "Hinweis"
-    Die Sonderzuweisung ist nicht bei allen Verknüpfungsfeldern verfügbar. In diesem Fall wird ausschließlich der Objekt-Titel zur Identifikation des zu aktualisierenden Objekts verwendet.
+    Die Sonderzuweisung ist nicht bei allen Feldern verfügbar. In diesem Fall wird ausschließlich der Objekt-Titel zur Identifikation des zu aktualisierenden Objekts verwendet.
 
 [![Sonderzuweisung](../../assets/images/de/daten-konsolidieren/csv-import/10-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/10-csvi.png)
 
@@ -141,6 +137,12 @@ Einige Attribute beinhalten aus Werten und Einheiten. In den jeweiligen Formular
 | **Lokaler Massenspeicher → Gerät** | **Kapazität**    | **Kapazität (Einheit)**        | 4 TB               |
 | **Monitor**                        | **Display**      | **Display (Einheit)**          | 24 Inch            |
 
+### Weitere Sonderfälle
+
+| Kategorie          | Attribut                       | Zuweisung beim CSV-Datenimport          | Zelle in CSV-Datei |
+| ------------------ | ------------------------------ | --------------------------------------- | ------------------ |
+| **Betriebssystem** | **<Variante> (<Bezeichnung>)** | **Betriebssystem > Variante (Variant)** | DE (Sprache)       |
+
 ## CSV-Dateien über die i-doit Console importieren
 
-Der Import von CSV-Dateien ist nicht nur manuell über die Benutzeroberfläche möglich, sondern kann auch mit der i-doit [Console](../../automatisierung-und-integration/cli/console/index.md) umgesetzt werden. Dies erlaubt die Automatisierung des Imports, mit dem regelmäßig Informationen aktualisiert werden können. Eine Beschreibung aller Parameter ist im [entsprechenden Artikel](../../automatisierung-und-integration/cli/console/befehle-und-optionen.md#import-csv) inklusive eines Beispiels unter der Option **import-csv** zu finden. Weiterhin kann die ID eines zuvor erstellten Import-Profils im Aufruf angegeben werden. Diese IDs lassen sich mit der Option **import-csvprofiles** auslesen. Die Verwendung dieser Option ist ebenfalls im genannten Artikel beschrieben.
+Der Import von CSV-Dateien ist nicht nur manuell über die Benutzeroberfläche möglich, sondern kann auch mit dem [i-doit console utility](../../automatisierung-und-integration/cli/index.md) umgesetzt werden. Dies erlaubt die Automatisierung des Imports, mit dem regelmäßig Informationen aktualisiert werden können. Diese IDs lassen sich mit dem Befehl `import-csvprofiles` auslesen.

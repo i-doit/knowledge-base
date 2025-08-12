@@ -25,7 +25,7 @@ Once the .CSV file has been prepared to this point, you can begin the import.
 
 Under **Extras → Import → CSV Import** you can find the CSV import. You don't need to configure it in advance.
 
-Choose your .csv file in the first step by using the **Browse...** button and upload the file from your system. Now the file is shown in the list and you can choose the actions **Use for import**, **Download file** and **Delete file** when hovering over the row of the file with the mouse cursor.
+Choose your .csv file in the first step by using the **Choose File** button and upload the file from your system. Now the file is shown in the list and you can choose the actions **Use for import**, **Download file** and **Delete file** when hovering over the row of the file with the mouse cursor.
 
 [![upload-file](../../assets/images/en/consolidate-data/csv-data-import/4-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/4-csvi.png)
 
@@ -43,11 +43,7 @@ When you select an [object type](../../basics/structure-of-the-it-documentation.
 
 ### Separators, Headers and Consider default template
 
-If you use a different **separator** than the semicolon (;), it is possible to specify the used separator.
-
-If you do not use a header line, you can deactivate the header so that the first line in the .csv file will be interpreted as the first object.
-
-The objects are created with the data from the [default template](../../efficient-documentation/templates.md).
+If you use a different **separator** than the semicolon (;), it is possible to specify the used separator. If you do not use a header line, you can deactivate the header so that the first line in the .csv file will be interpreted as the first object. The objects are created with the data from the [default template](../../efficient-documentation/templates.md).
 
 ### Empty Values
 
@@ -84,8 +80,9 @@ Each column receives its own row in the mapping. This way you can link each row 
 
 [![attributes](../../assets/images/en/consolidate-data/csv-data-import/7-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/7-csvi.png)
 
-!!! info Mandatory details
-    Stating the object title _and_ the object type is both _mandatory_. If you defined a global object type in the data import options, you just have to link the object title with a column in the mapping. If you did not set a global object type, then a link to a column as object type will also be required. Otherwise it is not possible to start the import function. Setting the object type is carried out via its database constant (for example **C_OBJTYPE_SERVER**). Setting the name of the object type (e.g. **Server**) is **not** sufficient.
+## Mandatory details
+
+Stating the object title _and_ the object type is both _mandatory_. If you defined a global object type in the data import options, you just have to link the object title with a column in the mapping. If you did not set a global object type, then a link to a column as object type will also be required. Otherwise it is not possible to start the import function. Setting the object type is carried out via its database constant (for example **C_OBJTYPE_SERVER**). Setting the name of the object type (e.g. **Server**) is **not** sufficient.
 
 ## Creating a Profile
 
@@ -109,9 +106,9 @@ With the option **The CSV import can overwrite the objecttype?** the object type
 
 [![overwrite option](../../assets/images/en/consolidate-data/csv-data-import/11-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/11-csvi.png)
 
-This option can be found in the expert settings as **import.csv.overwrite-objecttype**.
+!!! note "This option can be found in the expert settings as `import.csv.overwrite-objecttype`."
 
-!!! warning "This option is blocked by another option, if you activate the overwriting of the object types, you must set the option **SYS-ID read only** to **No**. In the expert settings, this option is named **cmdb.registry.sysid_readonly**"
+!!! warning "This option is blocked by another option, if you activate the overwriting of the object types, you must set the option **SYS-ID read only** to **No**. In the expert settings, this option is named `cmdb.registry.sysid_readonly`"
 
 ## Import of Relations (Linking of Objects)
 
@@ -129,12 +126,19 @@ After selecting the field during the mapping, you can decide whether the selecti
 
 Some attributes contain values and units. You have to enter them separately in the corresponding forms of the Web GUI. For example, in the category **Monitor** the **Display** attribute consists of the field for the value and the field for the unit (inch, cm etc.). In order to import this attribute analogous via CSV file import, value and unit have to be together in one cell. Examples:
 
-| Category                        | Attribute         | Assignment with CSV file import | Cell in CSV file |
-| ------------------------------- | ----------------- | ------------------------------- | ---------------- |
-| **CPU**                         | **CPU frequency** | **CPU frequency (unit)**        | 2.5 GHz          |
-| **Local mass storage → Device** | **Capacity**      | **Capacity (unit)**             | 4 TB             |
-| **Monitor**                     | **Display**       | **Display (unit)**              | 24 Inch          |
+| Category                        | Attribute         | Assignment during CSV data import | Cell in CSV file |
+| ------------------------------- | ----------------- | --------------------------------- | ---------------- |
+| **CPU**                         | **CPU frequency** | **CPU frequency (unit)**          | 2.5 GHz          |
+| **Local mass storage → Device** | **Capacity**      | **Capacity (unit)**               | 4 TB             |
+| **Monitor**                     | **Display**       | **Display (unit)**                | 24 Inch          |
+
+
+### Further Special Cases
+
+| Category             | Attribute                     | Assignment during CSV data import        | Cell in CSV File |
+| -------------------- | ----------------------------- | ---------------------------------------- | ---------------- |
+| **Operating System** | **<Variant> (<Description>)** | **Operating System > Variant (Variant)** | EN (Language)    |
 
 ## Automated Import of CSV Files
 
-Importing CSV files is not only possible manually via the user interface, but can also be implemented using the i-doit Console. This allows automating the import, which can be used to update information on a regular basis. A description of all parameters can be found in the corresponding article including an example under the [import-csv](../../automation-and-integration/cli/console/commands-and-options.md#import-csv) option. Furthermore, the ID of a previously created import profile can be specified in the call. These ID can be read out with the [import-csvprofiles](../../automation-and-integration/cli/console/commands-and-options.md#import-csvprofiles) option. The use of this option is also described in the mentioned article.
+Importing CSV files is not only possible manually via the user interface, but can also be implemented using the i-doit Console. This allows automating the import, which can be used to update information on a regular basis. A description of all parameters can be found in the corresponding article including an example under the [import-csv](../../automation-and-integration/cli/index.md#import-csv) option. Furthermore, the ID of a previously created import profile can be specified in the call. These ID can be read out with the [import-csvprofiles](../../automation-and-integration/cli/index.md#import-csvprofiles) option. The use of this option is also described in the mentioned article.

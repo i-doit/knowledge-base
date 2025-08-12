@@ -10,7 +10,7 @@ Hier wird festgelegt für welchen Zeitraum Einträge im Logbuch vorgehalten werd
 
 [![Archivieren](../../../assets/images/de/administration/verwaltung/logbuch/2-l.png)](../../../assets/images/de/administration/verwaltung/logbuch/2-l.png)
 
-Damit das das Logbuch archiviert wird, muss der [logbook-archive](../../../automatisierung-und-integration/cli/console/befehle-und-optionen.md#logbook-archive) CLI Befehl ausgeführt werden.
+Damit das das Logbuch archiviert wird, muss der [logbook-archive](../../../automatisierung-und-integration/cli/index.md) Befehl ausgeführt werden.
 
 ## Listenansicht Logbuch
 

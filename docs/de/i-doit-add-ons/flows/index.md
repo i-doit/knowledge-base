@@ -8,6 +8,8 @@ lang: de
 
 Das Flows Add-on für i-doit ist ein leistungsstarkes Werkzeug zur Automatisierung von Prozessen innerhalb des CMDB-Systems. Es ermöglicht die Erstellung von automatisierten Flows basierend auf Triggern und definierten Bedingungen. Mit Flows können Benutzer repetitive Aufgaben und manuelle Schritte automatisieren, indem sie Regeln festlegen, die durch bestimmte Ereignisse oder Zustände (z. B. eine Änderung in der CMDB) ausgelöst werden. Das Add-on hilft, Arbeitsabläufe effizienter zu gestalten, Fehler zu reduzieren und die Verwaltung komplexer IT-Umgebungen zu vereinfachen, indem es Routineprozesse ohne Benutzerinteraktion abwickelt.
 
+!!! tip "Sie können dieses Add-on testen: Installieren Sie dazu einfach das Add-on.<br>Das Flows Add-on kann ohne Lizenz genutzt werden. In diesem Fall stehen Ihnen allerdings nur der Auslöser **Zeitbasiert** (Time based) und die Aktion **Befehl aufrufen** (Call command) zur Verfügung."
+
 ## Download und Installation
 
 Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel [i-doit Add-ons](../index.md).
@@ -16,7 +18,7 @@ Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen
 
 ## Benötigte CLI Commands
 
-!!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende [Mandanten ID](../../automatisierung-und-integration/cli/console/befehle-und-optionen.md#tenant-list) zu übergeben."
+!!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende ID des Mandanten zu übergeben."
 
 Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
 
@@ -34,7 +36,7 @@ Nun kann die Datei ausgeführt werden, um einen Systemdienst zu erstellen. **Die
 
 -   `-u` i-doit Person mit Administrator rechten
 -   `-p` das Passwort für die Person
--   `-i` Mandanten ID in dem die Person verwendet wird, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/console/befehle-und-optionen.md#tenant-list)
+-   `-i` Mandanten ID in dem die Person verwendet wird, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/index.md)
 
 ```shell
 src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
@@ -75,7 +77,7 @@ Unter **Verwaltung → Berechtigungen → Flows** können [Rechte für Personen 
 
 Um einen Flow zu erstellen wird das Flows Add-on aufgerufen, dies erfolgt über **Add-ons → Flows**. Anschließend wird über den **Add** Button ein neuer Flow erstellt. Ein Flow muss einen Namen, einen Trigger und eine oder mehrere Actions definiert haben um vollständig zu sein. Zu guter Letzt muss der Flow über den Button noch aktiviert werden.
 
-### Auslöser Typ
+### Auslöser
 
 Trigger bestimmen wann ein Flow ausgeführt wird. Es ist nur ein Trigger pro Flow möglich.
 
@@ -89,7 +91,7 @@ Trigger bestimmen wann ein Flow ausgeführt wird. Es ist nur ein Trigger pro Flo
     === "Kategorie Ereignis"
         Die Aktion wird ausgeführt, wenn Kategorien oder Einträge bearbeitet werden. Wird **NICHT** ausgelöst, wenn Kategoriedaten durch Importe oder API-Interaktion geändert werden.
 
-### Konditionstypen
+### Konditionen
 
 Es muss keine Konditionen gewählt werden. Außerdem können conditions mit **UND** sowie **ODER** verknüpft und verschachtelt werden.
 
@@ -116,6 +118,8 @@ Es muss mindestens eine Aktion definiert werden.
         Die Aktion erstellt ein neues Objekt. Es ist möglich Attribute für Kategorien zu hinterlegen.
     === "Objekt aktualisieren"
         Die Aktion aktualisiert Attribute in Objekten.
+    === "Befehl ausführen"
+        Rufen Sie einen i-doit-Konsolenbefehl auf. Weitere Informationen zu [Befehl ausführen](actions/call-command.md)
 
 ## Logs
 
@@ -134,18 +138,18 @@ Führt Ausführungen durch.
 
 **Optionen:**
 
-| Parameter (Kurzversion) | Parameter (Langversion) | Beschreibung                                                                                            |
-| ----------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------- |
-| -u                      | --user=BENUTZERNAME     | Benutzername eines autorisierten Benutzers zur Ausführung                                               |
-| -p                      | --password=PASSWORT     | Passwort zur Authentifizierung des angegebenen Benutzers                                                |
-| -i                      | --tenant=MANDANTID      | Mandanten-ID des zu verwendenden Mandanten (Standard: 1)                                                |
-| -c                      | --config=KONFIGURATION  | Konfigurationsdatei                                                                                     |
-| -h                      | --help                  | Hilfetext zur Anzeige weiterer Informationen                                                            |
-| -q                      | --quiet                 | Quiet-Modus zur Deaktivierung der Ausgabe                                                               |
-| -V                      | --version               | Gibt die Version der i-doit Konsole aus                                                                 |
-|                         | --ansi<br>--no-ansi     | Erzwingt (oder deaktiviert mit --no-ansi) ANSI-Ausgabe                                                  |
-| -n                      | --no-interaction        | Deaktiviert alle Interaktionsfragen der i-doit Konsole                                                  |
-| -v / -vv / -vvv         | --verbose               | Erhöht die Ausführlichkeit der Ausgabe (1 = normale Ausgabe, 2 = detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzversion) | Parameter (Langversion)  | Beschreibung                                                                                            |
+| ----------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------- |
+| -u                      | --user={BENUTZERNAME}    | Benutzername eines autorisierten Benutzers zur Ausführung                                               |
+| -p                      | --password={PASSWORT}    | Passwort zur Authentifizierung des angegebenen Benutzers                                                |
+| -i                      | --tenant={MANDANTID}     | Mandanten-ID des zu verwendenden Mandanten (Standard: 1)                                                |
+| -c                      | --config={KONFIGURATION} | Konfigurationsdatei                                                                                     |
+| -h                      | --help                   | Hilfetext zur Anzeige weiterer Informationen                                                            |
+| -q                      | --quiet                  | Quiet-Modus zur Deaktivierung der Ausgabe                                                               |
+| -V                      | --version                | Gibt die Version der i-doit Konsole aus                                                                 |
+|                         | --ansi<br>--no-ansi      | Erzwingt (oder deaktiviert mit --no-ansi) ANSI-Ausgabe                                                  |
+| -n                      | --no-interaction         | Deaktiviert alle Interaktionsfragen der i-doit Konsole                                                  |
+| -v / -vv / -vvv         | --verbose                | Erhöht die Ausführlichkeit der Ausgabe (1 = normale Ausgabe, 2 = detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Anwendungsbeispiel**
 
@@ -159,79 +163,20 @@ Löst die Ausführung der Zeitautomatisierung aus.
 
 **Optionen:**
 
-| Parameter (Kurzversion) | Parameter (Langversion) | Beschreibung                                                                                            |
-| ----------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------- |
-| -u                      | --user=BENUTZERNAME     | Benutzername eines autorisierten Benutzers zur Ausführung                                               |
-| -p                      | --password=PASSWORT     | Passwort zur Authentifizierung des angegebenen Benutzers                                                |
-| -i                      | --tenant=MANDANTID      | Mandanten-ID des zu verwendenden Mandanten (Standard: 1)                                                |
-| -c                      | --config=KONFIGURATION  | Konfigurationsdatei                                                                                     |
-| -h                      | --help                  | Hilfetext zur Anzeige weiterer Informationen                                                            |
-| -q                      | --quiet                 | Quiet-Modus zur Deaktivierung der Ausgabe                                                               |
-| -V                      | --version               | Gibt die Version der i-doit Konsole aus                                                                 |
-|                         | --ansi<br>--no-ansi     | Erzwingt (oder deaktiviert mit --no-ansi) ANSI-Ausgabe                                                  |
-| -n                      | --no-interaction        | Deaktiviert alle Interaktionsfragen der i-doit Konsole                                                  |
-| -v / -vv / -vvv         | --verbose               | Erhöht die Ausführlichkeit der Ausgabe (1 = normale Ausgabe, 2 = detaillierte Ausgabe, 3 = Debug-Level) |
+| Parameter (Kurzversion) | Parameter (Langversion)  | Beschreibung                                                                                            |
+| ----------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------- |
+| -u                      | --user={BENUTZERNAME}    | Benutzername eines autorisierten Benutzers zur Ausführung                                               |
+| -p                      | --password={PASSWORT}    | Passwort zur Authentifizierung des angegebenen Benutzers                                                |
+| -i                      | --tenant={MANDANTID}     | Mandanten-ID des zu verwendenden Mandanten (Standard: 1)                                                |
+| -c                      | --config={KONFIGURATION} | Konfigurationsdatei                                                                                     |
+| -h                      | --help                   | Hilfetext zur Anzeige weiterer Informationen                                                            |
+| -q                      | --quiet                  | Quiet-Modus zur Deaktivierung der Ausgabe                                                               |
+| -V                      | --version                | Gibt die Version der i-doit Konsole aus                                                                 |
+|                         | --ansi<br>--no-ansi      | Erzwingt (oder deaktiviert mit --no-ansi) ANSI-Ausgabe                                                  |
+| -n                      | --no-interaction         | Deaktiviert alle Interaktionsfragen der i-doit Konsole                                                  |
+| -v / -vv / -vvv         | --verbose                | Erhöht die Ausführlichkeit der Ausgabe (1 = normale Ausgabe, 2 = detaillierte Ausgabe, 3 = Debug-Level) |
 
 **Anwendungsbeispiel**
-
-```shell
-sudo -u www-data php console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
-```
-
-## CLI console commands and options
-
-| Befehl                                   | Beschreibung                         |
-| ---------------------------------------- | ------------------------------------ |
-| [flows:perform](#flowsperform)           | Perform executions                   |
-| [flows:time-trigger](#flowstime-trigger) | Trigger execution of time automation |
-
-!!! info "These commands are only available if the Documents add-on is installed"
-
-### flows:perform
-
-Perform executions
-
-**Optionen:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                                      |
-| ------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------ |
-| -u                        | --user=[USERNAME]        | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
-| -p                        | --password=[PASSWORD]    | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
-| -i                        | --tenant=[TENANT-ID]     | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
-| -c                        | --config=[CONFIG]        | Angabe des Pfades zur Konfigurationsdatei                                                        |
-| -h                        | --help                   | Hilfenachricht zur Einblendung weiterer Informationen                                            |
-| -q                        | --quiet                  | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
-| -V                        | --version                | Ausgabe der Version der i-doit Console                                                           |
-|                           | --ansi<br>--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                        | --no-interaction         | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
-| -v / -vv / -vvv           | --verbose                | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
-
-**Beispiel**
-
-```shell
-sudo -u www-data php console.php flows:perform --user admin-user --password admin-user-password --tenantId 1
-```
-
-### flows:time-trigger
-
-Trigger execution of time automation
-
-**Optionen:**
-
-| Parameter (short version) | Parameter (long version) | Description                                                                                      |
-| ------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------ |
-| -u                        | --user=[USERNAME]        | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
-| -p                        | --password=[PASSWORD]    | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
-| -i                        | --tenant=[TENANT-ID]     | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
-| -c                        | --config=[CONFIG]        | Angabe des Pfades zur Konfigurationsdatei                                                        |
-| -h                        | --help                   | Hilfenachricht zur Einblendung weiterer Informationen                                            |
-| -q                        | --quiet                  | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
-| -V                        | --version                | Ausgabe der Version der i-doit Console                                                           |
-|                           | --ansi<br>--no-ansi      | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                         |
-| -v / -vv / -vvv           | --verbose                | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
-
-**Beispiel**
 
 ```shell
 sudo -u www-data php console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
@@ -243,7 +188,8 @@ Anwendungsfälle sind in unserer [Demo](https://demo.i-doit.com) zu finden und k
 
 ## Releases
 <!-- cSpell:disable -->
-| Version | Datum      | Changelog                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.0.1   | 24.02.2025 | [Task] Make symfony 6.4 compatible[Task]<br><br>[Task]Open "last execution" details in new tab<br>[Task]Allow access to object type information in placeholder<br>[Improvement] Export Flows to file<br>[Improvement] Allow usage of detailed information of assets<br>[Improvement] Import Flows from file<br>[Bug] Trigger is not performed when using a category event for a list category<br>[Bug] Attribute condition should not be available for change in action "update object"<br>[Bug] Not selected attribute value is displayed in the overview of a flow<br>[Bug]Creation date and Date of change are not available in object based conditions<br>[Bug] SQL error in object when an object based condition is configured for a location matches a title<br>[Bug] Selected custom attributes set as a trigger do not trigger the flow<br>[Bug] Selection of the object ID as a variable not possible<br>[Bug] Search popup is hard to read |
-| 1.0     | 10.10.2024 | Initiales Release                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Version | Date       | Changelog                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.1.0   | 2025-04-24 | \[Improvement\] Upgrade now from Flows Console Command<br>\[Improvement\] Flows Lite: Command Alternative for extend-contracts<br>\[Improvement\] Flows Lite: Command Alternative for import-jdisc<br>\[Improvement\] Flows Lite: Command Alternative for import-jdiscdiscovery<br>\[Improvement\] Flows Lite: Command Alternative for ldap-sync<br>\[Improvement\] Flows Lite: Command Alternative for ldap-syncdn<br>\[Improvement\] Flows Lite: Command Alternative for notifications-send<br>\[Improvement\] Flows Lite: Command Alternative for search-index<br>\[Improvement\] Flows Lite: Command Alternative for system-objectrelations<br>\[Improvement\] Flows Lite: Command Alternative for sync-dynamic-groups<br>\[Improvement\] Flows Lite: Command Alternative for import-csv<br>\[Improvement\] Flows Lite: Command Alternative for import-xml<br>\[Improvement\] Flows Lite: Command Alternative for report-export<br>\[Improvement\] Flows Lite: Command Alternative for import-hinventory<br>\[Task\] Make sure the correct Action and Trigger are shown if no valid license is installed<br>\[Task\] Allow user to use Flows in Lite variant if the add-on is not licensed<br>\[Task\] Implement validation for dynamic option types<br>\[Task\] Adjust option description view<br>\[Bug\] Sort commands in select command on Create/Edit command action<br>\[Bug\] Unable to generate url with route cmdb.object-type.icon<br>\[Bug\] Object browser icon should not overlap the field input<br>\[Bug\] Unable to select assigned licenses for operating system category at flow action<br>\[Bug\] Specific category Net doesnt validate passed data correctly<br>\[Bug\] Correct text of object event trigger<br> |
+| 1.0.1   | 2025-02-24 | \[Task\] Make symfony 6.4 compatible<br>\[Task\] Integrate validation of the CMDB criteria<br>\[Task]() Open "last execution" details in new tab<br>\[Task\] Allow access to object type information in placeholder<br>\[Improvement]() Export Flows to file<br>\[Improvement\] Allow usage of detailed information of assets<br>\[Improvement\] Import Flows from file<br>\[Bug\] Trigger is not performed when using a category event for a list category<br>\[Bug\] Attribute condition should not be available for change in action "update object"<br>\[Bug\] Not selected attribute value is displayed in the overview of a flow<br>\[Bug\] Creation date and Date of change are not available in object based conditions<br>\[Bug\] SQL error in object when an object based condition is configured for a location matches a title<br>\[Bug\] Selected custom attributes set as a trigger do not trigger the flow<br>\[Bug\] Selection of the object ID as a variable not possible<br>\[Bug\] Search popup is hard to read                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 1.0     | 2024-10-10 | Initiales Release                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |

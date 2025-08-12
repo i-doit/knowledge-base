@@ -292,9 +292,9 @@ Sind eine oder mehrere Schnittstellen zu Dritt-Applikationen konfiguriert, muss 
 | [Livestatus](../automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md)                                                                                                            | **Livestatus** | **6557**       |
 | [NDOUtils/IDOUtils](../automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md)                                                                                                     | **MySQL**      | **3306**       |
 | [((OTRS)) Community Edition Help Desk](../automatisierung-und-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automatisierung-und-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443**     |
-| [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md)                                                                                                                                                    | **PostgreSQL** | **25321**      |
-| [JDisc Discovery](../daten-konsolidieren/jdisc-discovery.md)                                                                                                                                                    | **HTTP**       | **9000**       |
-| [JDisc Discovery GraphQL](../daten-konsolidieren/jdisc-discovery.md)                                                                                                                                            | **HTTPs**      | **443**        |
+| [JDisc Discovery](../_archiv/jdisc-discovery.md)                                                                                                                                                                | **PostgreSQL** | **25321**      |
+| [JDisc Discovery](../_archiv/jdisc-discovery.md)                                                                                                                                                                | **HTTP**       | **9000**       |
+| [JDisc Discovery GraphQL](../_archiv/jdisc-discovery.md)                                                                                                                                                        | **HTTPs**      | **443**        |
 | [OCS Inventory NG](../i-doit-add-ons/ocs-inventory-ng.md)                                                                                                                                                       | **MySQL**      | **3306**       |
 
 ### Sicherheits-Frameworks
@@ -420,7 +420,7 @@ Neben dem Network Monitoring bieten sich noch weitere Dienste an, die **Logs üb
 
 i-doit produziert ebenfalls laufend Log-Dateien. Im Installationsverzeichnis befinden sie sich unterhalb vom Verzeichnis log/. Eine (regelmäßige) Auswertung lohnt sich nicht nur bei der [Suche nach Fehlern](../administration/troubleshooting/index.md).
 
-Nachdem [Cronjobs einmal eingerichtet](../automatisierung-und-integration/cli/console/index.md) worden sind, interessiert sich niemand mehr dafür. Das ist fatal, wenn beim automatischen Ausführen etwas schief geht und niemand etwas mitbekommt. Es ist demnach ratsam, die **Ausgaben von laufenden Jobs in Log-Dateien umzuleiten** und bei Bedarf E-Mails zu verschicken.
+Nachdem [Cronjobs einmal eingerichtet](../automatisierung-und-integration/cli/index.md) worden sind, interessiert sich niemand mehr dafür. Das ist fatal, wenn beim automatischen Ausführen etwas schief geht und niemand etwas mitbekommt. Es ist demnach ratsam, die **Ausgaben von laufenden Jobs in Log-Dateien umzuleiten** und bei Bedarf E-Mails zu verschicken.
 
 Apropos E-Mail: Wenn das System E-Mails verschicken soll (wie es Logwatch täglich tut), sollte man dies vorher testen. Ein passender SMTP-Server sollte erreichbar sein. Eventuell hilft es, einen simplen Dienst wie [sSMTP](https://wiki.debian.org/sSMTP) als Relay-Server zu verwenden.
 

@@ -7,7 +7,7 @@ i-doitvides various data imports. Existing data in the [IT documentation](../glo
 The following data imports are considered in this article:
 
 *   [CSV file import](./csv-data-import/index.md)
-*   [JDisc Discovery](jdisc-discovery.md)
+*   [JDisc Discovery](jdisc/index.md)
 *   [h-inventory](h-inventory.md)
 
 Other data imports might have another way of proceeding.
