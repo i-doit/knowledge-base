@@ -1,73 +1,146 @@
+---
+title: Systemeinstellungen erweitern
+description: Systemeinstellungen erweitern
+icon:
+status:
+lang: de
+---
+
 # Systemeinstellungen erweitern
 
-i-doits Systemeinstellungen sind ein hierarchisches System kaskadierender Einstellungsparameter. Diese Hierarchie wird aus insgesamt drei verschiedenen Ebenen zusammengesetzt. Alle verfügbaren Einstellungsparameter können innerhalb dieser Ebenen existieren und werden je nach Bedarf gelesen.
+i-doits Systemeinstellungen sind ein hierarchisches System kaskadierender Einstellungsparameter. 
+Diese Hierarchie wird aus insgesamt drei verschiedenen Ebenen zusammengesetzt. 
+Alle verfügbaren Einstellungsparameter können innerhalb dieser Ebenen existieren und werden je nach Bedarf gelesen.
 
-Die erste Instanz stellt die benutzerspezifische Ebene dar. In dieser Ebene werden unmittelbar vom Benutzer vorgenommene Parameter hinterlegt. Wird ein Parameter abgerufen, der vom Benutzer nicht gepflegt wurde, stellt die "mandantenweite" Ebene einen Standardwert bereit. Je nach Parameter kann es sein, dass die Bereitstellung einer mandantenspezifischen Einstellung keinen Sinn macht. Daher wird in letzter Instanz der systemweite Einstellungspool abgerufen.
+Die erste Instanz stellt die benutzerspezifische Ebene dar. 
+In dieser Ebene werden unmittelbar vom Benutzer vorgenommene Parameter hinterlegt. 
+Wird ein Parameter abgerufen, der vom Benutzer nicht gepflegt wurde, stellt die "mandantenweite" Ebene einen Standardwert bereit. 
+Je nach Parameter kann es sein, dass die Bereitstellung einer mandantenspezifischen Einstellung keinen Sinn macht. 
+Daher wird in letzter Instanz der systemweite Einstellungspool abgerufen.
 
-Dieses hierarchische System stellt sicher, dass i-doit hochgradig personalisierbar bleibt und weiterhin einen leichten Einstieg mit bestmöglichen Standardeinstellungen bietet.
+Dieses hierarchische System stellt sicher, 
+dass i-doit hochgradig personalisierbar bleibt und weiterhin einen leichten Einstieg mit bestmöglichen Standardeinstellungen bietet.
 
-Die i-doit-Systemeinstellungen können von Add-ons um eigene Konfigurationen erweitert werden. Dadurch wird auch automatisch das Formular in der GUI unter **Verwaltung → Systemeinstellungen** erweitert. Falls einzelne Einstellungen nicht in der GUI dargestellt werden sollen, brauchen sie nicht registriert, sondern lediglich im Code "benutzt" werden. Solche implizite Einstellungen können nur über die Experteneinstellungen konfiguriert werden.
+Die i-doit-Systemeinstellungen können von Add-ons um eigene Konfigurationen erweitert werden. 
+Dadurch wird auch automatisch das Formular in der GUI unter **Verwaltung → {mandant} Verwaltung → Einstellungen für {mandant}** erweitert. 
+Falls einzelne Einstellungen nicht in der GUI dargestellt werden sollen, brauchen sie nicht registriert, 
+sondern lediglich im Code "benutzt" werden.
+Solche implizite Einstellungen können nur über die Experteneinstellungen konfiguriert werden.
 
-Systemeinstellungen können für drei Schichten definiert werden: System, Mandanten oder Benutzer.
+Systemeinstellungen können für drei Schichten definiert werden: System, Mandant oder Benutzer.
 
 Der dahinterliegende Code ist beinahe identisch und unterscheidet sich nur in der genutzten Klasse:
 
-*   Systemweite Einstellungen: isys_settings
-*   Mandantenweite Einstellungen: isys_tenantsettings
-*   Einstellungen je Benutzer: isys_usersettings
+* Systemweite Einstellungen: `isys_settings`
+* Mandantenweite Einstellungen: `isys_tenantsettings`
+* Einstellungen je Benutzer: `isys_usersettings`
 
-Jede dieser drei Klassen liefert die statische Methode extend, die benutzt werden muss, um eine Einstellungen (für die GUI) zu registrieren. Dies muss in der init.php geschehen und kann folgendermaßen aussehen:
+## Einstellungen auslesen
 
-    isys_settings::extend([
-        'LC__EXAMPLE__SETTINGS' => [
-            'example.text'          => [
-                'title'       => 'LC__EXAMPLE__SETTINGS__SIMPLE_SELECT',
-                'description' => 'LC__EXAMPLE__SETTINGS__SIMPLE_SELECT_DESCRIPTION',
-                'type'        => 'text',
-                'placeholder' => 'Placeholder text',
-                'default'     => '',
-            ],
-            'example.simple-select' => [
-                'title'       => 'LC__EXAMPLE__SETTINGS__SIMPLE_SELECT',
-                'description' => 'LC__EXAMPLE__SETTINGS__SIMPLE_SELECT_DESCRIPTION',
-                'type'        => 'select',
-                'options'     => [
-                    'a' => 'Option A',
-                    'b' => 'Option B',
-                    'c' => 'Option C',
-                ],
-                'default'     => 'a'
-            ],
-            'example.yes-no-select' => [
-                'title'       => 'LC__EXAMPLE__SETTINGS__YES_NO_SELECT',
-                'description' => 'LC__EXAMPLE__SETTINGS__YES_NO_SELECT_DESCRIPTION',
-                'type'        => 'select',
-                'options'     => get_smarty_arr_YES_NO(),
-                'default'     => '0',
-            ],
-            'example.integer'       => [
-                'title'       => 'LC__EXAMPLE__SETTINGS__INTEGER',
-                'description' => 'LC__EXAMPLE__SETTINGS__INTEGER_DESCRIPTION',
-                'type'        => 'int',
-                'placeholder' => 1,
-                'default'     => 1
-            ],
-            'example.float'         => [
-                'title'       => 'LC__EXAMPLE__SETTINGS__FLOAT',
-                'description' => 'LC__EXAMPLE__SETTINGS__FLOAT_DESCRIPTION',
-                'type'        => 'float',
-                'placeholder' => 1.0,
-                'default'     => 1.0
-            ]
-        ]
-    ]);
+Um System-, Mandant- oder Benutzerspezifische Einstellungen zu lesen kann der folgende Code benutzt werden:
 
-In diesem Code-Beispiel ist jeder Einstellungstyp (text, select, int, ...) vertreten. Weitere Typen werden derzeit (Stand i-doit 1.11.x) nicht unterstützt.
+```php
+// System Einstellung:
+$value = isys_settings::get('example.key', 'Default value');
 
-Die entsprechenden Settings sind anschließend über ihre Schlüssel im Code verfügbar:
+// Mandanten Einstellung:
+$value = isys_tenantsettings::get('example.key', 'Default value');
 
-    $textValue = isys_settings::get('example.text', 'Default');
-    $simpleSelectValue = isys_settings::get('example.simple-select', 'c');
-    $floatValue = isys_settings::get('example.float', 1.0);
+// Benutzer Einstellung:
+$value = isys_usersettings::get('example.key', 'Default value');
+```
 
-Es muss darauf geachtet werden, die korrekte Klasse bei der Abfrage der Einstellungen zu benutzen.
+Die Klassen sind auch im Dependency-Injection-Container verfügbar:
+
+```php
+// System Einstellung:
+$value = isys_application::instance()->container->get('settingsSystem')->get('example.key', 'Default value');
+
+// Mandanten Einstellung:
+$value = isys_application::instance()->container->get('settingsTenant')->get('example.key', 'Default value');
+
+// Benutzer Einstellung:
+$value = isys_application::instance()->container->get('settingsUser')->get('example.key', 'Default value');
+```
+
+## Einstellungen in der GUI erweitern
+
+Um Einstellungen innerhalb der Oberfläche zu erweitern muss ab i-doit 36 das Event-System genutzt werden.
+Für jede Ebene existiert dabei ein eigenes Event:
+
+* `idoit\Event\System\Settings\ExtendSystemSettings` zum erweitern von System Einstellungen
+* `idoit\Event\System\Settings\ExtendTenantSettings` zum erweitern von Mandanten Einstellungen
+* `idoit\Event\System\Settings\ExtendUserSettings` zum erweitern von Benutzer Einstellungen
+
+Durch das registrieren von Events kann die performance geschont werden, da zum Beispiel ressourcenintensive prozesse
+im Callback ausgeführt werden - undzwar nur dann, wenn es wirklich notwendig ist anstatt bei jedem Request.
+
+```php 
+use idoit\Event\System\Settings\ExtendTenantSettings;
+
+// In der add-on 'init.php'.
+
+if (isys_module_manager::instance()->is_active('example_addon')) {
+    // ...
+    
+    isys_application::instance()->container->get('event_dispatcher')
+        ->addListener(ExtendTenantSettings::NAME, ['isys_module_example', 'extendTenantSettings']);
+        
+    // ...
+}
+```
+
+Der Callback muss dabei eine statische öffentliche Methode sein, als Parameter wird das Event übergeben.
+Innerhalb des Codes können die Einstellungen mit Objekten ergänzt werden:
+
+```php
+use idoit\Component\Settings\SettingsCollection;
+use idoit\Component\Settings\Types\SelectSetting;
+use idoit\Event\System\Settings\ExtendTenantSettings;
+
+class isys_module_example 
+{
+    // ...
+
+    public static function extendTenantSettings(ExtendTenantSettings $event): void
+    {
+        $event->addSettingsCollection(
+            new SettingsCollection('Überschrift für den Einstellungs-Block', [
+                new SelectSetting(
+                    'example.key',
+                    'Name der Einstellung',
+                    'Detaillierte Beschreibung der Einstellung',
+                    '0',
+                    [
+                        '0' => 'LC__UNIVERSAL__NO',
+                        '1' => 'LC__UNIVERSAL__YES'
+                    ]
+                )
+            ])
+        );
+    }
+}
+```
+
+Einstellungen können um neue Setting-Collections ergänzt werden. Diese bestehen aus einem Titel und einem Array an `Setting` Klassen.
+Zum Stand von i-doit 36 existieren die folgenden Setting-Typen:
+
+* `idoit\Component\Settings\Types\IntSetting` für Zahlenwerte
+* `idoit\Component\Settings\Types\PasswordSetting` für Passwörter
+* `idoit\Component\Settings\Types\SelectSetting` für ein Dialogfeld mit definierten Inhalten
+* `idoit\Component\Settings\Types\TextareaSetting` für ein mehrzeiliges Textfeld
+* `idoit\Component\Settings\Types\TextSetting` für ein einzeiliges Textfeld
+
+Jeder dieser Typen erbt von `idoit\Component\Settings\Types\AbstractSetting` und erhält dadurch die folgenden Standardparameter:
+
+* `protected string $key;` der "Schlüssel" der Einstellung, der auch zum abfragen benutzt werden muss
+* `protected string $name;` der Name der Einstellung, der in der GUI dargestellt wird
+* `protected ?string $description = null;` die (optionale) Erklärung der Einstellung, die in der GUI dargestellt wird
+* `protected mixed $default = null;` der (optionale) Standardwert, der in der GUI dargestellt wird
+
+Verschiedene Setting-Typen können, wenn nötig, noch eigene Parameter definieren.
+
+Innerhalb des Callbacks können beliebig viele Setting Collections hinzugefügt werden.
+
+**Wichtig!** die Event Callbacks werden nur dann aufgerufen, wenn die entsprechende GUI aufbereitet wird.
+Dadurch wird im laufenden Betrieb die performance von i-doit nicht negativ beeinflusst.
