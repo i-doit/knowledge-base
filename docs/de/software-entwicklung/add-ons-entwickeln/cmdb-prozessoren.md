@@ -168,13 +168,13 @@ Die `ObjectProcessor`-Klasse bietet die folgenden Methoden, um mit Objekten zu a
 * `restore(int $id): RankResponse`
 * `update(UpdateRequest $dto): UpdateResponse`
 
-## Code Beispiele
+## Code-Beispiele
 
-Abschließend einige lauffähige Code Beispiele:
+Abschließend einige lauffähige Code-Beispiele:
 
 ### Objekttyp-Gruppen lesen
 
-In diesem Beispiel lesen wir die Objekttyp-Gruppen mit ID 1, 2 und 3 aus und stellen diese dar.
+In diesem Beispiel lesen wir die Objekttyp-Gruppen mit den IDs 1, 2 und 3 aus und stellen diese dar.
 
 ```php
 use idoit\Component\Processor\Dto\ObjectTypeGroup\Dto;
@@ -182,7 +182,7 @@ use idoit\Component\Processor\Dto\ObjectTypeGroup\ReadRequest;
 
 $factory = isys_application::instance()->container->get('cmdb.factory');
 $processor = $factory->getObjectTypeGroupProcessor();
-$response = $processor->read(new ReadRequest([1,2,3]));
+$response = $processor->read(new ReadRequest([1, 2, 3]));
 
 echo 'Got ' . $response->total() . ' object type groups!' . PHP_EOL;
 foreach ($response->entries as $entry) {
@@ -193,9 +193,9 @@ foreach ($response->entries as $entry) {
 
 ### Objekttyp erstellen
 
-Hier erstellen wir einen neuen Objekttypen. Wir verwenden in diesem Beispiel *named properties* um den Konstruktor übersichtlich
-zu halten. Wir fangen außerdem potentielle Exceptions ab.
-
+Hier erstellen wir einen neuen Objekttyp.
+Wir verwenden in diesem Beispiel *named properties*, um den Konstruktor übersichtlich zu halten.
+Außerdem fangen wir potenzielle Exceptions ab.
 
 ```php
 use idoit\Component\Processor\Dto\ObjectType\CreateRequest;
@@ -215,6 +215,6 @@ try {
     $newObjectTypeId = $processor->create($createRequest)->id;
     echo 'Created a new object type with ID ' . $newObjectTypeId;
 } catch (\Throwable $e) {
-    echo 'Something went wrong:' . $e->getMessage();
+    echo 'Something went wrong: ' . $e->getMessage();
 }
 ```
