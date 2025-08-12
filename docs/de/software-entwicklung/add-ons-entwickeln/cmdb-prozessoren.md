@@ -1,3 +1,11 @@
+---
+title: CMDB-Prozessoren
+description: CMDB-Prozessoren
+icon:
+status:
+lang: de
+---
+
 # CMDB-Prozessoren
 
 Bei den CMDB-Prozessoren handelt es sich um interne Schnittstellen, um mit Objekten, Objekttypen und Objekttyp-Gruppen zu arbeiten.
@@ -15,8 +23,6 @@ Dabei berücksichtigen sie alle notwendigen Schritte der internen Logiken:
 
 Diese neue Logik setzt auf DTO-Objekte. Das macht Schritte wie beispielsweise die Validierung einfacher und bietet uns Entwicklern
 den Vorteil der Code-Vervollständigung, da wir hier mit Objekten anstelle von assoziativen Arrays arbeiten.
-
-In dieser ersten Version gibt es noch keine Architektur für Kategorien. Wir arbeiten daran, diese Funktion nachzureichen. 🙂
 
 **Wichtig!** Bei den CMDB-Prozessoren handelt es sich um ein neues Feature, das ab *i-doit 36* zur Verfügung steht.
 Bitte beachtet, dass die Prozessoren aktuell nur die folgenden Bereiche abdecken:
