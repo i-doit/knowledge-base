@@ -4,6 +4,10 @@
 
 This version brings important improvements and new functions to make the use of Checkmk 2 more efficient and future-proof.
 
+!!! tip "This add-on is developed by the [SHD System-Haus-Dresden GmbH](https://www.shd-online.de/)"
+
+!!! hint "This documentation may be outdated"
+
 ### Compatibility with PHP 8.2
 
 -   Checkmk 2 now supports all PHP versions from 7.4 to 8.2.
