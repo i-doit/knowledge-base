@@ -1,8 +1,8 @@
 ---
-title: Ubuntu 22.04 GNU/Linux
-description: i-doit installation auf Ubuntu 22.04
+title: Ubuntu 24.04.1 GNU/Linux
+description: i-doit installation auf Ubuntu 24.04.1
 icon: material/ubuntu
-#status: new
+status:
 lang: de
 ---
 
@@ -15,7 +15,7 @@ Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenige
 
 Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md).
 
-Dieser Artikel bezieht sich auf **Ubuntu 22.04 "Jammy Jellyfish"**. Um zu bestimmen, welche Ubuntu Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
+Dieser Artikel bezieht sich auf **Ubuntu 24.04.1 "Noble Numcat"**. Um zu bestimmen, welche Ubuntu Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
 ```shell
 cat /etc/os-release
@@ -34,31 +34,62 @@ uname -m
 Die Standard-Repositories von Ubuntu GNU/Linux bringen bereits alle nötigen Pakete mit, um
 
 -   den **Apache** Webserver 2.4,
--   die Script-Sprache **PHP** 8.1,
--   das Datenbankmanagementsystem **MariaDB** 10.6 und
+-   die Script-Sprache **PHP** 8.3,
+-   das Datenbankmanagementsystem **MariaDB** 10.11 und
 -   den Caching-Server **memcached**
 
 zu installieren:
 
 ```shell
 apt update
-apt install apache2 libapache2-mod-php mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,gd,imagick,json,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
+apt install apache2 libapache2-mod-fcgid mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,fpm,gd,ldap,mbstring,memcached,mysql,opcache,pgsql,soap,xml,zip}
 ```
 
 ## Konfiguration
 
 Die installierten Pakete für Apache Webserver, PHP und MariaDB bringen bereits Konfigurationsdateien mit. Es empfiehlt sich, abweichende Einstellungen in gesonderten Dateien zu speichern, anstatt die vorhandenen Konfigurationsdateien anzupassen. Bei jedem Paket-Upgrade würden die abweichenden Einstellungen bemängelt oder überschrieben werden. Die Einstellungen der Standardkonfiguration werden durch die benutzerdefinierten ergänzt bzw. überschrieben.
 
+### PHP-FPM
+
+Zunächst wird die alte Konfiguration, durch umbenennen, deaktiviert:
+
+```sh
+sudo mv /etc/php/8.3/fpm/pool.d/www.conf{,.bak}
+```
+
+und anschließend eine neue Datei erstellt und mit den Einstellungen befüllt:
+<!-- cSpell:disable -->
+```sh
+sudo nano /etc/php/8.3/fpm/pool.d/i-doit.conf
+```
+
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
+
+```ini
+[i-doit]
+listen = /var/run/php/php8.3-fpm.sock
+user = www-data
+group = www-data
+listen.owner = www-data
+listen.group = www-data
+pm = dynamic
+pm.max_children = 50
+pm.start_servers = 5
+pm.min_spare_servers = 5
+pm.max_spare_servers = 35
+security.limit_extensions = .php
+```
+<!-- cSpell:enable -->
 ### PHP
 
 Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befüllt:
 
-```shell
-sudo nano /etc/php/8.1/mods-available/i-doit.ini
+```sh
+sudo nano /etc/php/8.3/mods-available/i-doit.ini
 ```
 
 !!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/de/ini.core.php) vorbei"
-
+<!-- cSpell:disable -->
 ```ini
 allow_url_fopen = Yes
 file_uploads = On
@@ -82,23 +113,16 @@ default_socket_timeout = 60
 date.timezone = Europe/Berlin
 session.gc_maxlifetime = 604800
 session.cookie_lifetime = 0
-mysqli.default_socket = /var/run/mysqld/mysqld.sock
+mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
-
-Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.<br>
-Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.<br>
+<!-- cSpell:enable -->
+Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
+Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
 Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
-Anschließend werden die benötigten PHP-Module aktiviert und der Apache Webserver neu gestartet:
+### Apache HTTP Server
 
-```shell
-sudo phpenmod i-doit memcached
-sudo systemctl restart apache2.service
-```
-
-### Apache Webserver
-
-Der Default-VHost wird deaktiviert und ein neuer angelegt:
+Der standard Virtual Host wird deaktiviert und ein neuer angelegt:
 
 ```shell
 sudo a2dissite 000-default
@@ -112,24 +136,162 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
         ServerAdmin i-doit@example.net
 
         DocumentRoot /var/www/html/
-        <Directory /var/www/html/>
-                AllowOverride All
-                Require all granted
-        </Directory>
+DirectoryIndex index.php
+DocumentRoot /var/www/html
 
-        LogLevel warn
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
+    <Directory /var/www/html>
+        ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
+        AllowOverride None
+
+        ## Apache Web server configuration file for i-doit
+        ##
+        ## This file requires:
+        ##
+        ## - Apache HTTPD >= 2.4 with enabled modules:
+        ##   - rewrite
+        ##   - expires
+        ##   - headers
+        ##   - authz_core
+        ##
+        ## For performance and security reasons we put these settings
+        ## directly into the VirtualHost configuration and explicitly set
+        ## "AllowOverride None". After each i-doit update check if the .htaccess file, in the i-doit directory,
+        ## has changed and add the changes in the VirtualHost configuration.
+        ##
+        ## See the i-doit Knowledge Base for more details:
+        ## <https://kb.i-doit.com/>
+
+        ## Disable directory indexes:
+        Options -Indexes +SymLinksIfOwnerMatch
+
+        <IfModule mod_authz_core.c>
+            RewriteCond %{REQUEST_METHOD}  =GET
+            RewriteRule "^$" "/index.php"
+
+            ## Deny access to meta files:
+            <Files "*.yml">
+                Require all denied
+            </Files>
+
+            ## Deny access to hidden files:
+            <FilesMatch "^\.">
+                Require all denied
+            </FilesMatch>
+
+            ## Deny access to bash scripts:
+            <FilesMatch "^(controller|.*\.sh)$">
+                Require all denied
+            </FilesMatch>
+
+            ## Deny access to all PHP files…
+            <Files "*.php">
+                Require all denied
+            </Files>
+
+            ## Deny access to wrongly created config backup files like ...inc.php.0123123 instead of ...inc.012341.php
+            <FilesMatch "\.php\.\d+$">
+                Require all denied
+            </FilesMatch>
+
+            ## …except some PHP files in root directory:
+            <FilesMatch "^(index\.php|controller\.php|proxy\.php)$">
+                <IfModule mod_auth_kerb.c>
+                    Require valid-user
+                </IfModule>
+                <IfModule !mod_auth_kerb.c>
+                    Require all granted
+                </IfModule>
+            </FilesMatch>
+
+            ## …except some PHP files in src/:
+            <Files "jsonrpc.php">
+                Require all granted
+            </Files>
+
+            ## …except some PHP files in src/tools/php/:
+            <FilesMatch "^(rt\.php|barcode_window\.php|barcode\.php)$">
+                Require all granted
+            </FilesMatch>
+
+            ## …except some PHP files in src/tools/php/qr/:
+            <FilesMatch "^(qr\.php|qr_img\.php)$">
+                Require all granted
+            </FilesMatch>
+
+            ## …except some PHP files in src/tools/js/:
+            <FilesMatch "^js\.php$">
+                Require all granted
+            </FilesMatch>
+        </IfModule>
+
+        ## Deny access to some directories:
+        <IfModule mod_alias.c>
+            RedirectMatch 403 /imports/.*$
+            RedirectMatch 403 /log/.*$
+            RedirectMatch 403 /temp/.*(?<!\.(css|xsl))$
+            RedirectMatch 403 /upload/files/.*$
+            RedirectMatch 403 /upload/images/.*$
+            RedirectMatch 403 /vendor/.*$
+        </IfModule>
+
+        ## Cache static files:
+        <IfModule mod_expires.c>
+            ExpiresActive On
+            # A2592000 = 30 days
+            ExpiresByType image/svg+xml A2592000
+            ExpiresByType image/gif A2592000
+            ExpiresByType image/png A2592000
+            ExpiresByType image/jpg A2592000
+            ExpiresByType image/jpeg A2592000
+            ExpiresByType image/ico A2592000
+            ExpiresByType text/css A2592000
+            ExpiresByType text/javascript A2592000
+            ExpiresByType image/x-icon "access 1 year"
+            ExpiresDefault "access 2 week"
+
+            <IfModule mod_headers.c>
+                Header append Cache-Control "public"
+            </IfModule>
+        </IfModule>
+
+        ## Pretty URLs:
+        <IfModule mod_rewrite.c>
+            RewriteEngine On
+            RewriteRule favicon\.ico$ images/favicon.ico [L]
+            RewriteCond %{REQUEST_FILENAME} !-l
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteRule .* index.php [L,QSA]
+        </IfModule>
+
+        ## Deny access to all ini files…
+        <Files "*.ini">
+            Require all denied
+        </Files>
+
+    </Directory>
+
+    TimeOut 600
+    ProxyTimeout 600
+
+    <FilesMatch "\\.php$">
+        <If "-f %{REQUEST_FILENAME}">
+            SetHandler "proxy:unix:/var/run/php/php8.3-fpm.sock|fcgi://localhost"
+        </If>
+    </FilesMatch>
+
+    LogLevel warn
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
+<!-- cSpell:enable -->
+!!! note "i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Diese müssen nach jedem Update geprüft und in der VirtualHost Konfiguration aktualisiert werden."
 
-i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Damit diese Einstellungen berücksichtigt werden, ist die Einstellung **AllowOverride All** nötig.<br>
 Im nächsten Schritt werden der neue VHost und das nötige Apache-Modul **rewrite** aktiviert sowie der Apache Webserver neu gestartet:
 
 ```shell
-sudo a2ensite i-doit
-sudo a2enmod rewrite
-sudo systemctl restart apache2.service
+sudo a2ensite i-doit && sudo a2enmod rewrite proxy_fcgi setenvif && sudo systemctl restart apache2 php8.3-fpm
 ```
 
 ### MariaDB
