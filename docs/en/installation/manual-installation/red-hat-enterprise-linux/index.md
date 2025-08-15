@@ -158,10 +158,9 @@ The Welcome Page is deactivated by renaming it:
 sudo mv /etc/httpd/conf.d/welcome.conf{,.bak}
 ```
 
-The default VirtualHost is deactivated and a new one is created:
+Now a new virtual host is created for i-doit:
 
 ```sh
-sudo mv /etc/php-fpm.d/www.conf{,.bak}
 sudo nano /etc/httpd/conf.d/i-doit.conf
 ```
 
